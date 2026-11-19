@@ -1,25 +1,25 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  38766: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => tD
+  38389: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => oi
     });
-    const FY = [0, 90, 180, 270],
-      AY = "plotsblueprint";
-    var IY = DY(61),
-      RY = DY(36032),
-      OY = DY(19),
-      gY = DY(1619),
-      aY = DY(1699),
-      vY = DY(25);
-    const uY = [
+    const iT = [0, 90, 180, 270],
+      zT = "plotsblueprint";
+    var kT = IT(46),
+      WT = IT(35599),
+      XT = IT(12),
+      BT = IT(1585),
+      FT = IT(1665),
+      ST = IT(16);
+    const DT = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      sY = {
+      LT = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -93,18 +93,18 @@ export const modules = {
           tier: "large"
         }
       },
-      iY = ["small", "medium", "large"].flatMap((YY => uY.flat().filter((rY => sY[rY].tier === YY))));
+      xT = ["small", "medium", "large"].flatMap((TT => DT.flat().filter((oT => LT[oT].tier === TT))));
 
-    function yY(YY) {
-      return sY[YY]
+    function cT(TT) {
+      return LT[TT]
     }
-    const QY = new Map(uY.flatMap((YY => YY.slice(1).map(((rY, DY) => [rY, YY[DY]])))));
+    const KT = new Map(DT.flatMap((TT => TT.slice(1).map(((oT, IT) => [oT, TT[IT]])))));
 
-    function oY(YY) {
-      var rY;
-      return null !== (rY = QY.get(YY)) && void 0 !== rY ? rY : null
+    function MT(TT) {
+      var oT;
+      return null !== (oT = KT.get(TT)) && void 0 !== oT ? oT : null
     }
-    const WY = {
+    const rT = {
       farm_hut: "plotsGame:journalNoteFarmHut",
       rusticHome_tent: "plotsGame:journalNoteRusticHomeTent",
       castle_tower: "plotsGame:journalNoteCastleTower",
@@ -112,180 +112,180 @@ export const modules = {
       farm_barn: "plotsGame:journalNoteFarmBarn"
     };
 
-    function EY(YY, rY) {
-      const DY = new Set(YY),
-        FY = function(YY) {
-          const rY = new Set(YY);
-          return new Set(iY.filter((YY => {
-            const DY = oY(YY);
-            return null === DY || rY.has(DY)
+    function AT(TT, oT) {
+      const IT = new Set(TT),
+        iT = function(TT) {
+          const oT = new Set(TT);
+          return new Set(xT.filter((TT => {
+            const IT = MT(TT);
+            return null === IT || oT.has(IT)
           })))
-        }(DY);
-      return iY.map((YY => {
-        const AY = YY === rY;
-        return DY.has(YY) ? {
-          id: YY,
-          active: AY,
+        }(IT);
+      return xT.map((TT => {
+        const zT = TT === oT;
+        return IT.has(TT) ? {
+          id: TT,
+          active: zT,
           state: "completed",
           unlockedBy: null
-        } : FY.has(YY) ? {
-          id: YY,
-          active: AY,
+        } : iT.has(TT) ? {
+          id: TT,
+          active: zT,
           state: "open",
           unlockedBy: null
         } : {
-          id: YY,
-          active: AY,
+          id: TT,
+          active: zT,
           state: "locked",
-          unlockedBy: oY(YY)
+          unlockedBy: MT(TT)
         }
       }))
     }
-    const mY = "plotsJournalChanged";
-    class VY {
-      constructor(YY, rY) {
-        this.api = YY, this.placement = rY, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.gy("journal_opened")
-        }, this.build = YY => {
-          this.gy("placement_started"), this.placement.start(YY), (0, RY.f)()
+    const gT = "plotsJournalChanged";
+    class hT {
+      constructor(TT, oT) {
+        this.api = TT, this.placement = oT, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.Bc("journal_opened")
+        }, this.build = TT => {
+          this.Bc("placement_started"), this.placement.start(TT), (0, WT.e)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${AY} cancel`)
+          this.api.sendCommand(`${zT} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      Cy(YY) {
-        let [, rY, DY] = YY;
-        this.pages = EY(rY, DY), vY.g.vo(mY, this.pages, !0)
+      Jc(TT) {
+        let [, oT, IT] = TT;
+        this.pages = AT(oT, IT), ST.h.XM(gT, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.Zu()
+        this.openRequested = !0, this.dD()
       }
-      Zu() {
-        this.openRequested && !OY.b.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, gY.p)() || (0, aY.isTypingInInput)() || null !== this.placement.getView() || (0, RY.o)())
+      dD() {
+        this.openRequested && !XT.c.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, BT.t)() || (0, FT.isTypingInInput)() || null !== this.placement.getView() || (0, WT.o)())
       }
-      gy(YY) {
-        this.reported.has(YY) || (this.reported.add(YY), this.api.sendCommand(`${AY} report ${YY}`))
+      Bc(TT) {
+        this.reported.has(TT) || (this.reported.add(TT), this.api.sendCommand(`${zT} report ${TT}`))
       }
     }
-    var SY = DY(1092),
-      lY = DY.n(SY),
-      TY = DY(1098),
-      eY = DY(1437),
-      NY = DY(4086),
-      BY = DY(2973),
-      cY = DY(1430),
-      KY = DY(1943),
-      HY = DY(1211),
-      zY = DY(8830);
-    const ZY = [0, 90, 180, 270],
-      CY = /^(meta\|rot\d)\|([lrud]+)$/,
-      fY = "nesw",
-      jY = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      hY = function(YY) {
-        const rY = new WeakMap;
-        return (DY, FY) => {
-          let AY = rY.get(DY);
-          return void 0 === AY && (AY = YY(DY, FY), rY.set(DY, AY)), AY
+    var wT = IT(1042),
+      mT = IT.n(wT),
+      eT = IT(1055),
+      RT = IT(1408),
+      uT = IT(4050),
+      vT = IT(2969),
+      ET = IT(1403),
+      fT = IT(1896),
+      CT = IT(1171),
+      jT = IT(8829);
+    const JT = [0, 90, 180, 270],
+      UT = /^(meta\|rot\d)\|([lrud]+)$/,
+      aT = "nesw",
+      YT = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      QT = function(TT) {
+        const oT = new WeakMap;
+        return (IT, iT) => {
+          let zT = oT.get(IT);
+          return void 0 === zT && (zT = TT(IT, iT), oT.set(IT, zT)), zT
         }
-      }((YY => new dY(YY)));
-    class dY {
-      constructor(YY) {
-        this.blockMetadata = YY, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const rY = new Set(Object.keys(YY).map((rY => YY[rY].id)));
-        rY.add(0), this.maxBlockId = Math.max(...rY)
+      }((TT => new OT(TT)));
+    class OT {
+      constructor(TT) {
+        this.blockMetadata = TT, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const oT = new Set(Object.keys(TT).map((oT => TT[oT].id)));
+        oT.add(0), this.maxBlockId = Math.max(...oT)
       }
       static
-      for (YY) {
-        return hY(YY)
+      for (TT) {
+        return QT(TT)
       }
-      getBlockIdMapping(YY, rY) {
-        const DY = this.getBlockIdMappingKey(YY, rY);
-        let FY = this.blockIdMappings.get(DY);
-        return void 0 === FY && ZY.includes(YY) && (FY = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, YY, rY), this.blockIdMappings.set(DY, FY)), FY
+      getBlockIdMapping(TT, oT) {
+        const IT = this.getBlockIdMappingKey(TT, oT);
+        let iT = this.blockIdMappings.get(IT);
+        return void 0 === iT && JT.includes(TT) && (iT = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, TT, oT), this.blockIdMappings.set(IT, iT)), iT
       }
-      turnBlockId(YY, rY, DY) {
-        return this.mapBlockId(this.blockMetadata[YY], rY, this.getRotationMapping(rY, DY), DY)
+      turnBlockId(TT, oT, IT) {
+        return this.mapBlockId(this.blockMetadata[TT], oT, this.getRotationMapping(oT, IT), IT)
       }
-      getBlockIdMappingKey(YY, rY) {
-        return `r${YY}|m${Number(rY)}`
+      getBlockIdMappingKey(TT, oT) {
+        return `r${TT}|m${Number(oT)}`
       }
-      createBlockIdMapping(YY, rY, DY, FY) {
-        const AY = new Uint16Array(rY + 1),
-          IY = this.getRotationMapping(DY, FY);
-        for (const RY in YY) {
-          const rY = YY[RY];
-          AY[rY.id] = this.mapBlockId(rY, DY, IY, FY)
+      createBlockIdMapping(TT, oT, IT, iT) {
+        const zT = new Uint16Array(oT + 1),
+          kT = this.getRotationMapping(IT, iT);
+        for (const WT in TT) {
+          const oT = TT[WT];
+          zT[oT.id] = this.mapBlockId(oT, IT, kT, iT)
         }
-        return AY
+        return zT
       }
-      getRotationMapping(YY, rY) {
-        const DY = Math.round(YY / 90),
-          FY = new Uint8Array(4);
-        for (let AY = 0; AY < 4; AY++) FY[AY] = (4 + AY - DY) % 4;
-        if (rY) {
-          let YY = FY[0];
-          FY[0] = FY[1], FY[1] = YY, YY = FY[2], FY[2] = FY[3], FY[3] = YY
+      getRotationMapping(TT, oT) {
+        const IT = Math.round(TT / 90),
+          iT = new Uint8Array(4);
+        for (let zT = 0; zT < 4; zT++) iT[zT] = (4 + zT - IT) % 4;
+        if (oT) {
+          let TT = iT[0];
+          iT[0] = iT[1], iT[1] = TT, TT = iT[2], iT[2] = iT[3], iT[3] = TT
         }
-        return FY
+        return iT
       }
-      mapBlockId(YY, rY, DY, FY) {
-        var AY;
+      mapBlockId(TT, oT, IT, iT) {
+        var zT;
         const {
-          blockMetadata: IY
-        } = this, RY = Math.round(rY / 90), {
-          id: OY,
-          meta: gY
-        } = YY, {
-          rot: aY,
-          rootName: vY,
-          metaStr: uY
-        } = gY;
-        let sY;
-        const [, iY, yY] = null !== (AY = jY.exec(uY)) && void 0 !== AY ? AY : [];
-        if (void 0 !== iY) {
-          var QY, oY;
-          sY = null !== (QY = null === (oY = IY[`${vY}|meta|${[fY.split("").filter(((YY,rY)=>iY.split("").some((YY=>{const DY=fY.indexOf(YY);return((FY?3-DY:DY)+RY)%4===rY})))).join(""),yY].filter(Boolean).join("|")}`]) || void 0 === oY ? void 0 : oY.id) && void 0 !== QY ? QY : OY
-        } else if (null === aY) sY = OY;
+          blockMetadata: kT
+        } = this, WT = Math.round(oT / 90), {
+          id: XT,
+          meta: BT
+        } = TT, {
+          rot: FT,
+          rootName: ST,
+          metaStr: DT
+        } = BT;
+        let LT;
+        const [, xT, cT] = null !== (zT = YT.exec(DT)) && void 0 !== zT ? zT : [];
+        if (void 0 !== xT) {
+          var KT, MT;
+          LT = null !== (KT = null === (MT = kT[`${ST}|meta|${[aT.split("").filter(((TT,oT)=>xT.split("").some((TT=>{const IT=aT.indexOf(TT);return((iT?3-IT:IT)+WT)%4===oT})))).join(""),cT].filter(Boolean).join("|")}`]) || void 0 === MT ? void 0 : MT.id) && void 0 !== KT ? KT : XT
+        } else if (null === FT) LT = XT;
         else {
-          var WY, EY;
-          const YY = DY[aY - 1] + 1;
-          let rY = uY.replace(`rot${aY}`, `rot${YY}`);
-          FY && gY.stairsCorner && (rY = rY.replace(/(Left|Right)$/, (YY => "Left" === YY ? "Right" : "Left"))), FY && "Chest" === vY && (rY = rY.replace(/\|(left|right)$/, ((YY, rY) => "left" === rY ? "|right" : "|left")));
-          const AY = CY.exec(rY);
-          if (FY && null !== AY) {
-            const YY = "lrud".split("").filter((YY => AY[2].includes("l" === YY ? "r" : "r" === YY ? "l" : YY)));
-            rY = `${AY[1]}|${YY.join("")}`
+          var rT, AT;
+          const TT = IT[FT - 1] + 1;
+          let oT = DT.replace(`rot${FT}`, `rot${TT}`);
+          iT && BT.stairsCorner && (oT = oT.replace(/(Left|Right)$/, (TT => "Left" === TT ? "Right" : "Left"))), iT && "Chest" === ST && (oT = oT.replace(/\|(left|right)$/, ((TT, oT) => "left" === oT ? "|right" : "|left")));
+          const zT = UT.exec(oT);
+          if (iT && null !== zT) {
+            const TT = "lrud".split("").filter((TT => zT[2].includes("l" === TT ? "r" : "r" === TT ? "l" : TT)));
+            oT = `${zT[1]}|${TT.join("")}`
           }
-          const RY = `${vY}|${rY}`;
-          if (sY = null !== (WY = null === (EY = IY[RY]) || void 0 === EY ? void 0 : EY.id) && void 0 !== WY ? WY : null, null === sY) {
-            const YY = IY[vY];
-            sY = YY.rootMetaDesc === RY ? YY.id : OY
+          const WT = `${ST}|${oT}`;
+          if (LT = null !== (rT = null === (AT = kT[WT]) || void 0 === AT ? void 0 : AT.id) && void 0 !== rT ? rT : null, null === LT) {
+            const TT = kT[ST];
+            LT = TT.rootMetaDesc === WT ? TT.id : XT
           }
         }
-        return sY
+        return LT
       }
     }
 
-    function JY(YY, rY, DY) {
+    function HT(TT, oT, IT) {
       let {
-        xRotationMappedOrigin: FY,
-        shouldSwapXZ: AY
-      } = DY;
-      const IY = AY ? rY : YY;
-      return null === FY ? IY : FY - IY
+        xRotationMappedOrigin: iT,
+        shouldSwapXZ: zT
+      } = IT;
+      const kT = zT ? oT : TT;
+      return null === iT ? kT : iT - kT
     }
 
-    function MY(YY, rY, DY) {
+    function nT(TT, oT, IT) {
       let {
-        zRotationMappedOrigin: FY,
-        shouldSwapXZ: AY
-      } = DY;
-      const IY = AY ? YY : rY;
-      return null === FY ? IY : FY - IY
+        zRotationMappedOrigin: iT,
+        shouldSwapXZ: zT
+      } = IT;
+      const kT = zT ? TT : oT;
+      return null === iT ? kT : iT - kT
     }
-    const wY = {
+    const qT = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      bY = new Map;
+      ZT = new Map;
 
-    function XY(YY, rY) {
-      const DY = `${YY}|${rY}`;
-      let FY = bY.get(DY);
-      if (void 0 === FY) {
+    function lT(TT, oT) {
+      const IT = `${TT}|${oT}`;
+      let iT = ZT.get(IT);
+      if (void 0 === iT) {
         const {
-          size: AY,
-          palette: IY,
-          layers: RY
-        } = wY[YY], OY = 90 === rY || 270 === rY, [gY, aY] = OY ? [AY[2], AY[0]] : [AY[0], AY[2]], vY = function(YY, rY, DY) {
-          let FY = null,
-            AY = null,
-            IY = !1;
-          switch (YY) {
+          size: zT,
+          palette: kT,
+          layers: WT
+        } = qT[TT], XT = 90 === oT || 270 === oT, [BT, FT] = XT ? [zT[2], zT[0]] : [zT[0], zT[2]], ST = function(TT, oT, IT) {
+          let iT = null,
+            zT = null,
+            kT = !1;
+          switch (TT) {
             case 0:
               break;
             case 90:
-              FY = rY - 1, IY = !0;
+              iT = oT - 1, kT = !0;
               break;
             case 180:
-              FY = rY - 1, AY = DY - 1;
+              iT = oT - 1, zT = IT - 1;
               break;
             case 270:
-              AY = DY - 1, IY = !0;
+              zT = IT - 1, kT = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${YY}`)
+              throw new Error(`Invalid rotation: ${TT}`)
           }
           return {
-            xRotationMappedOrigin: FY,
-            zRotationMappedOrigin: AY,
-            shouldSwapXZ: IY
+            xRotationMappedOrigin: iT,
+            zRotationMappedOrigin: zT,
+            shouldSwapXZ: kT
           }
-        }(rY, gY, aY), uY = dY.for(zY.h), sY = IY.map((YY => (0, zY.f)(uY.turnBlockId((0, zY.k)(YY), rY, !1)))), iY = [];
-        RY.forEach(((YY, rY) => {
-          YY.split(" ").forEach(((YY, DY) => {
-            for (let FY = 0; FY < YY.length; FY++)
-              if ("." !== YY[FY]) {
-                const AY = [JY(FY, DY, vY), rY, MY(FY, DY, vY)];
-                iY.push({
-                  offset: AY,
-                  block: sY[YY.charCodeAt(FY) - "a".charCodeAt(0)]
+        }(oT, BT, FT), DT = OT.for(jT.j), LT = kT.map((TT => (0, jT.f)(DT.turnBlockId((0, jT.m)(TT), oT, !1)))), xT = [];
+        WT.forEach(((TT, oT) => {
+          TT.split(" ").forEach(((TT, IT) => {
+            for (let iT = 0; iT < TT.length; iT++)
+              if ("." !== TT[iT]) {
+                const zT = [HT(iT, IT, ST), oT, nT(iT, IT, ST)];
+                xT.push({
+                  offset: zT,
+                  block: LT[TT.charCodeAt(iT) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), FY = {
-          size: [gY, AY[1], aY],
-          cells: iY
-        }, bY.set(DY, FY)
+        })), iT = {
+          size: [BT, zT[1], FT],
+          cells: xT
+        }, ZT.set(IT, iT)
       }
-      return FY
+      return iT
     }
-    const qY = {
-      farm_hut: DY.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-      farm_house: DY.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-      farm_barn: DY.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-      rusticHome_tent: DY.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-      rusticHome_cabin: DY.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-      rusticHome_house: DY.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-      market_stand: DY.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-      market_stall: DY.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-      market_shop: DY.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-      castle_wall: DY.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-      castle_gate: DY.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-      castle_tower: DY.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    const sT = {
+      farm_hut: IT.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+      farm_house: IT.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+      farm_barn: IT.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+      rusticHome_tent: IT.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+      rusticHome_cabin: IT.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+      rusticHome_house: IT.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+      market_stand: IT.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+      market_stall: IT.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+      market_shop: IT.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+      castle_wall: IT.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+      castle_gate: IT.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+      castle_tower: IT.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
     };
-    var pY = DY(1125);
-    const kY = {
+    var tT = IT(1083);
+    const GT = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function GY(YY) {
+    function pT(TT) {
       let {
-        page: rY,
-        building: DY,
-        onBuild: FY,
-        onPutAway: AY
-      } = YY;
+        page: oT,
+        building: IT,
+        onBuild: iT,
+        onPutAway: zT
+      } = TT;
       const {
-        t: IY
-      } = (0, HY.C)(), {
-        displayName: RY,
-        tier: OY
-      } = yY(rY.id), gY = XY(rY.id, 0).cells.length, aY = WY[rY.id], vY = "locked" === rY.state, uY = DY ? eY.f : eY.n;
-      return (0, pY.jsxs)("article", {
-        className: lY()("PlotsJournalPage", {
-          Locked: vY
+        t: kT
+      } = (0, CT.t)(), {
+        displayName: WT,
+        tier: XT
+      } = cT(oT.id), BT = lT(oT.id, 0).cells.length, FT = rT[oT.id], ST = "locked" === oT.state, DT = IT ? RT.e : RT.m;
+      return (0, tT.jsxs)("article", {
+        className: mT()("PlotsJournalPage", {
+          Locked: ST
         }),
-        children: [(0, pY.jsx)("h3", {
+        children: [(0, tT.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: IY(RY.translationKey)
-        }), (0, pY.jsxs)("div", {
+          children: kT(WT.translationKey)
+        }), (0, tT.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [IY(kY[OY]), " \xb7 ", IY("plotsGame:journalBlocks", {
-            blocks: String(gY)
+          children: [kT(GT[XT]), " \xb7 ", kT("plotsGame:journalBlocks", {
+            blocks: String(BT)
           })]
-        }), (0, pY.jsxs)("div", {
+        }), (0, tT.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [iY.map((YY => (0, pY.jsx)("img", {
-            className: lY()({
-              Shown: YY === rY.id
+          children: [xT.map((TT => (0, tT.jsx)("img", {
+            className: mT()({
+              Shown: TT === oT.id
             }),
-            src: qY[YY],
+            src: sT[TT],
             alt: "",
             draggable: !1
-          }, YY))), "completed" === rY.state && (0, pY.jsx)("span", {
+          }, TT))), "completed" === oT.state && (0, tT.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: IY("plotsGame:journalBuilt")
-          }), vY && (0, pY.jsx)("span", {
+            children: kT("plotsGame:journalBuilt")
+          }), ST && (0, tT.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, pY.jsx)(TY.e, {
+            children: (0, tT.jsx)(eT.e, {
               name: "lock"
             })
           })]
-        }), void 0 !== aY && "completed" !== rY.state && (0, pY.jsx)("p", {
+        }), void 0 !== FT && "completed" !== oT.state && (0, tT.jsx)("p", {
           className: "PlotsJournalNote",
-          children: IY(aY)
-        }), (0, pY.jsxs)("div", {
+          children: kT(FT)
+        }), (0, tT.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === rY.state && (0, pY.jsx)("p", {
+          children: ["locked" === oT.state && (0, tT.jsx)("p", {
             className: "PlotsJournalHint",
-            children: IY("plotsGame:journalLocked", {
-              name: IY(yY(rY.unlockedBy).displayName.translationKey)
+            children: kT("plotsGame:journalLocked", {
+              name: kT(cT(oT.unlockedBy).displayName.translationKey)
             })
-          }), rY.active && (0, pY.jsxs)(pY.Fragment, {
-            children: [(0, pY.jsx)("p", {
+          }), oT.active && (0, tT.jsxs)(tT.Fragment, {
+            children: [(0, tT.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: IY("plotsGame:journalBuilding")
-            }), (0, pY.jsx)(eY.j, {
-              onClick: AY,
-              children: IY("plotsGame:journalPutAway")
+              children: kT("plotsGame:journalBuilding")
+            }), (0, tT.jsx)(RT.i, {
+              onClick: zT,
+              children: kT("plotsGame:journalPutAway")
             })]
-          }), !vY && !rY.active && (0, pY.jsx)(uY, {
+          }), !ST && !oT.active && (0, tT.jsx)(DT, {
             onClick: () => {
-              FY(rY.id)
+              iT(oT.id)
             },
-            children: IY("plotsGame:placementBuild")
+            children: kT("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function xY(YY) {
+    function bT(TT) {
       let {
-        className: rY,
-        page: DY,
-        hidden: FY,
-        building: AY,
-        journal: IY
-      } = YY;
-      return (0, pY.jsxs)("div", {
-        ref: YY => {
-          null !== YY && (YY.inert = FY)
+        className: oT,
+        page: IT,
+        hidden: iT,
+        building: zT,
+        journal: kT
+      } = TT;
+      return (0, tT.jsxs)("div", {
+        ref: TT => {
+          null !== TT && (TT.inert = iT)
         },
-        className: lY()("PlotsJournalSide", rY),
-        children: [void 0 !== DY && (0, pY.jsx)(GY, {
-          page: DY,
-          building: AY,
-          onBuild: IY.build,
-          onPutAway: IY.putAway
-        }), void 0 === DY && (0, pY.jsx)("div", {
+        className: mT()("PlotsJournalSide", oT),
+        children: [void 0 !== IT && (0, tT.jsx)(pT, {
+          page: IT,
+          building: zT,
+          onBuild: kT.build,
+          onPutAway: kT.putAway
+        }), void 0 === IT && (0, tT.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var nY = DY(341),
-      PY = DY(1774);
+    var yT = IT(314),
+      NT = IT(1724);
 
-    function UY(YY) {
-      return Math.cos((0, PY.q)(YY))
+    function PT(TT) {
+      return Math.cos((0, NT.m)(TT))
     }
 
-    function LY(YY) {
-      return (0, PY.K)(Math.acos(nY.c.clamp(YY, -1, 1)))
+    function dT(TT) {
+      return (0, NT.B)(Math.acos(yT.e.clamp(TT, -1, 1)))
     }
 
-    function tY(YY, rY, DY, FY, AY) {
-      const IY = Math.abs(rY - YY),
-        RY = (0, PY.K)(AY / (DY * Math.abs(Math.sin((0, PY.q)(YY))))),
-        OY = 450 * Math.min(1, IY / FY),
-        gY = RY > 0 ? 3 * IY / RY : 1 / 0;
-      return Math.round(Math.max(120, Math.min(OY, gY)))
+    function VT(TT, oT, IT, iT, zT) {
+      const kT = Math.abs(oT - TT),
+        WT = (0, NT.B)(zT / (IT * Math.abs(Math.sin((0, NT.m)(TT))))),
+        XT = 450 * Math.min(1, kT / iT),
+        BT = WT > 0 ? 3 * kT / WT : 1 / 0;
+      return Math.round(Math.max(120, Math.min(XT, BT)))
     }
-    class Yr {
+    class To {
       constructor() {
         this.samples = []
       }
-      add(YY, rY) {
+      add(TT, oT) {
         for (this.samples.push({
-            x: YY,
-            at: rY
-          }); rY - this.samples[0].at > 100;) this.samples.shift()
+            x: TT,
+            at: oT
+          }); oT - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const YY = this.samples[0],
-          rY = this.samples[this.samples.length - 1];
-        return rY.at > YY.at ? (rY.x - YY.x) / (rY.at - YY.at) : 0
+        const TT = this.samples[0],
+          oT = this.samples[this.samples.length - 1];
+        return oT.at > TT.at ? (oT.x - TT.x) / (oT.at - TT.at) : 0
       }
     }
 
-    function rr(YY, rY) {
-      return YY > rY && YY >= 600
+    function oo(TT, oT) {
+      return TT > oT && TT >= 600
     }
 
-    function Dr(YY) {
-      return LY(new DOMMatrixReadOnly(getComputedStyle(YY).transform).m11)
+    function Io(TT) {
+      return dT(new DOMMatrixReadOnly(getComputedStyle(TT).transform).m11)
     }
 
-    function Fr(YY, rY) {
-      YY.style.transform = `rotateY(${-rY}deg)`, YY.classList.add("Turning")
+    function io(TT, oT) {
+      TT.style.transform = `rotateY(${-oT}deg)`, TT.classList.add("Turning")
     }
 
-    function Ar(YY) {
+    function zo(TT) {
       let {
-        journal: rY
-      } = YY;
+        journal: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, HY.C)(), FY = (0, cY.k)(mY, rY.getPages()), AY = (0, KY.d)(rr), [OY, gY] = (0, IY.useState)((() => function(YY) {
-        const rY = YY.findIndex((YY => YY.active));
-        return -1 !== rY ? rY : Math.max(0, YY.findIndex((YY => "open" === YY.state)))
-      }(FY))), vY = (0, IY.useRef)(null), uY = (0, IY.useRef)(null), sY = (0, IY.useRef)({
+        t: IT
+      } = (0, CT.t)(), iT = (0, ET.i)(gT, oT.getPages()), zT = (0, fT.e)(oo), [XT, BT] = (0, kT.useState)((() => function(TT) {
+        const oT = TT.findIndex((TT => TT.active));
+        return -1 !== oT ? oT : Math.max(0, TT.findIndex((TT => "open" === TT.state)))
+      }(iT))), ST = (0, kT.useRef)(null), DT = (0, kT.useRef)(null), LT = (0, kT.useRef)({
         Forward: null,
         Back: null
-      }), iY = AY ? 2 : 1, yY = AY ? 180 : 90, QY = OY - OY % iY, oY = QY > 0, WY = QY + iY < FY.length, EY = (0, IY.useCallback)((() => {
-        const YY = uY.current;
-        return null === YY ? QY : (uY.current = null, YY.animation.cancel(), (rY = sY.current[YY.direction]).style.transform = "", rY.classList.remove("Turning"), null === YY.next ? QY : (gY(YY.next), YY.next));
-        var rY
-      }), [QY]), VY = (0, IY.useCallback)(((YY, rY, DY, FY) => {
-        const AY = sY.current[YY],
-          IY = Dr(AY),
-          RY = rY === ("Forward" === YY) ? yY : 0;
-        Fr(AY, RY);
-        const OY = AY.animate([{
-          transform: `rotateY(${-IY}deg)`
+      }), xT = zT ? 2 : 1, cT = zT ? 180 : 90, KT = XT - XT % xT, MT = KT > 0, rT = KT + xT < iT.length, AT = (0, kT.useCallback)((() => {
+        const TT = DT.current;
+        return null === TT ? KT : (DT.current = null, TT.animation.cancel(), (oT = LT.current[TT.direction]).style.transform = "", oT.classList.remove("Turning"), null === TT.next ? KT : (BT(TT.next), TT.next));
+        var oT
+      }), [KT]), hT = (0, kT.useCallback)(((TT, oT, IT, iT) => {
+        const zT = LT.current[TT],
+          kT = Io(zT),
+          WT = oT === ("Forward" === TT) ? cT : 0;
+        io(zT, WT);
+        const XT = zT.animate([{
+          transform: `rotateY(${-kT}deg)`
         }, {
-          transform: `rotateY(${-RY}deg)`
+          transform: `rotateY(${-WT}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : tY(IY, RY, AY.offsetWidth, yY, RY > IY ? -DY : DY),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : VT(kT, WT, zT.offsetWidth, cT, WT > kT ? -IT : IT),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        uY.current = {
-          direction: YY,
-          animation: OY,
-          next: rY ? FY + ("Forward" === YY ? iY : -iY) : null
-        }, OY.onfinish = () => {
-          var YY;
-          (null === (YY = uY.current) || void 0 === YY ? void 0 : YY.animation) === OY && EY()
+        DT.current = {
+          direction: TT,
+          animation: XT,
+          next: oT ? iT + ("Forward" === TT ? xT : -xT) : null
+        }, XT.onfinish = () => {
+          var TT;
+          (null === (TT = DT.current) || void 0 === TT ? void 0 : TT.animation) === XT && AT()
         }
-      }), [iY, yY, EY]), SY = (0, IY.useCallback)((YY => {
-        if (null !== vY.current) return;
-        const rY = EY();
-        ("Forward" === YY ? rY + iY < FY.length : rY > 0) && VY(YY, !0, 0, rY)
-      }), [EY, VY, iY, FY.length]);
-      (0, IY.useEffect)((() => {
-        rY.onOpened()
-      }), [rY]), (0, IY.useEffect)((() => () => {
-        var YY;
-        null === (YY = uY.current) || void 0 === YY || YY.animation.cancel()
-      }), []), (0, IY.useEffect)((() => {
-        const YY = YY => {
-          var rY;
-          YY.pointerId !== (null === (rY = vY.current) || void 0 === rY ? void 0 : rY.pointerId) || vY.current.following || (vY.current = null)
+      }), [xT, cT, AT]), wT = (0, kT.useCallback)((TT => {
+        if (null !== ST.current) return;
+        const oT = AT();
+        ("Forward" === TT ? oT + xT < iT.length : oT > 0) && hT(TT, !0, 0, oT)
+      }), [AT, hT, xT, iT.length]);
+      (0, kT.useEffect)((() => {
+        oT.onOpened()
+      }), [oT]), (0, kT.useEffect)((() => () => {
+        var TT;
+        null === (TT = DT.current) || void 0 === TT || TT.animation.cancel()
+      }), []), (0, kT.useEffect)((() => {
+        const TT = TT => {
+          var oT;
+          TT.pointerId !== (null === (oT = ST.current) || void 0 === oT ? void 0 : oT.pointerId) || ST.current.following || (ST.current = null)
         };
-        return window.addEventListener("pointerup", YY), () => {
-          window.removeEventListener("pointerup", YY)
+        return window.addEventListener("pointerup", TT), () => {
+          window.removeEventListener("pointerup", TT)
         }
-      }), []), (0, BY.e)((YY => ("ArrowLeft" === YY.code || "ArrowRight" === YY.code) && !(0, aY.isTypingInInput)()), (YY => {
-        YY.stopPropagation(), SY("ArrowLeft" === YY.code ? "Back" : "Forward")
+      }), []), (0, vT.b)((TT => ("ArrowLeft" === TT.code || "ArrowRight" === TT.code) && !(0, FT.isTypingInInput)()), (TT => {
+        TT.stopPropagation(), wT("ArrowLeft" === TT.code ? "Back" : "Forward")
       }));
-      const TY = (YY, rY, DY) => {
-          const FY = function(YY, rY, DY, FY) {
-            return (YY < 0 ? DY : FY) ? nY.c.clampAbs(YY, rY) : Math.sign(YY) * rY * (1 - 1 / (.55 * Math.abs(YY) / rY + 1))
-          }(YY.base + DY, iY * YY.width, WY, oY);
-          return "Forward" === rY ? Math.min(FY, 0) : Math.max(FY, 0)
+      const eT = (TT, oT, IT) => {
+          const iT = function(TT, oT, IT, iT) {
+            return (TT < 0 ? IT : iT) ? yT.e.clampAbs(TT, oT) : Math.sign(TT) * oT * (1 - 1 / (.55 * Math.abs(TT) / oT + 1))
+          }(TT.base + IT, xT * TT.width, rT, MT);
+          return "Forward" === oT ? Math.min(iT, 0) : Math.max(iT, 0)
         },
-        zY = (YY, rY) => {
-          const DY = vY.current;
-          if (vY.current = null, null === DY.direction) return;
-          DY.speed.add(YY, rY);
-          const FY = DY.speed.get(),
-            AY = TY(DY, DY.direction, YY - DY.x);
-          VY(DY.direction, null !== function(YY, rY, DY, FY, AY) {
-            if (Math.abs(rY) >= .3 ? Math.sign(rY) !== Math.sign(YY) : Math.abs(YY) < .5 * DY) return null;
-            const IY = YY < 0 ? "Forward" : "Back";
-            return ("Forward" === IY ? FY : AY) ? IY : null
-          }(AY, FY, iY * DY.width, WY, oY), FY, QY)
+        jT = (TT, oT) => {
+          const IT = ST.current;
+          if (ST.current = null, null === IT.direction) return;
+          IT.speed.add(TT, oT);
+          const iT = IT.speed.get(),
+            zT = eT(IT, IT.direction, TT - IT.x);
+          hT(IT.direction, null !== function(TT, oT, IT, iT, zT) {
+            if (Math.abs(oT) >= .3 ? Math.sign(oT) !== Math.sign(TT) : Math.abs(TT) < .5 * IT) return null;
+            const kT = TT < 0 ? "Forward" : "Back";
+            return ("Forward" === kT ? iT : zT) ? kT : null
+          }(zT, iT, xT * IT.width, rT, MT), iT, KT)
         },
-        ZY = FY.some((YY => YY.active)),
-        CY = (YY, DY, AY) => (0, pY.jsx)(xY, {
-          className: YY,
-          page: DY >= 0 && DY < FY.length ? FY[DY] : void 0,
-          hidden: AY,
-          building: ZY,
-          journal: rY
+        JT = iT.some((TT => TT.active)),
+        UT = (TT, IT, zT) => (0, tT.jsx)(bT, {
+          className: TT,
+          page: IT >= 0 && IT < iT.length ? iT[IT] : void 0,
+          hidden: zT,
+          building: JT,
+          journal: oT
         });
-      return (0, pY.jsx)(NY.e, {
-        close: RY.h,
+      return (0, tT.jsx)(uT.e, {
+        close: WT.h,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, pY.jsxs)("section", {
-          className: lY()("PlotsJournal", {
-            Spread: AY
+        children: (0, tT.jsxs)("section", {
+          className: mT()("PlotsJournal", {
+            Spread: zT
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": DY("plotsGame:journalTitle"),
-          children: [(0, pY.jsx)(eY.k, {
+          "aria-label": IT("plotsGame:journalTitle"),
+          children: [(0, tT.jsx)(RT.j, {
             className: "PlotsJournalClose",
-            onClick: RY.h
-          }), (0, pY.jsx)(Ir, {
+            onClick: WT.h
+          }), (0, tT.jsx)(ko, {
             direction: "Back",
-            disabled: !oY,
-            onTurn: SY
-          }), (0, pY.jsx)("div", {
+            disabled: !MT,
+            onTurn: wT
+          }), (0, tT.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: YY => {
-              var rY;
-              if (!YY.isPrimary || 0 !== YY.button || null !== uY.current && null !== YY.target.closest("button")) return;
-              const DY = new Yr;
-              DY.add(YY.clientX, YY.timeStamp);
-              const FY = sY.current.Forward.offsetWidth,
-                AY = uY.current;
-              uY.current = null;
-              let IY = 0;
-              if (null !== AY) {
-                const rY = sY.current[AY.direction],
-                  DY = Dr(rY);
-                AY.animation.cancel(), Fr(rY, DY), IY = function(YY, rY, DY, FY) {
-                  return (YY < 0 ? DY : FY) ? YY : Math.sign(YY) * rY * (1 / (1 - Math.min(Math.abs(YY) / rY, .99)) - 1) / .55
-                }(function(YY, rY, DY, FY) {
-                  return DY * (UY(rY) - UY("Forward" === YY ? 0 : FY))
-                }(AY.direction, DY, FY, yY), iY * FY, WY, oY), YY.currentTarget.setPointerCapture(YY.pointerId)
+            onPointerDown: TT => {
+              var oT;
+              if (!TT.isPrimary || 0 !== TT.button || null !== DT.current && null !== TT.target.closest("button")) return;
+              const IT = new To;
+              IT.add(TT.clientX, TT.timeStamp);
+              const iT = LT.current.Forward.offsetWidth,
+                zT = DT.current;
+              DT.current = null;
+              let kT = 0;
+              if (null !== zT) {
+                const oT = LT.current[zT.direction],
+                  IT = Io(oT);
+                zT.animation.cancel(), io(oT, IT), kT = function(TT, oT, IT, iT) {
+                  return (TT < 0 ? IT : iT) ? TT : Math.sign(TT) * oT * (1 / (1 - Math.min(Math.abs(TT) / oT, .99)) - 1) / .55
+                }(function(TT, oT, IT, iT) {
+                  return IT * (PT(oT) - PT("Forward" === TT ? 0 : iT))
+                }(zT.direction, IT, iT, cT), xT * iT, rT, MT), TT.currentTarget.setPointerCapture(TT.pointerId)
               }
-              vY.current = {
-                pointerId: YY.pointerId,
-                x: YY.clientX,
-                y: YY.clientY,
-                base: IY,
-                width: FY,
-                following: null !== AY,
-                direction: null !== (rY = null === AY || void 0 === AY ? void 0 : AY.direction) && void 0 !== rY ? rY : null,
-                speed: DY
+              ST.current = {
+                pointerId: TT.pointerId,
+                x: TT.clientX,
+                y: TT.clientY,
+                base: kT,
+                width: iT,
+                following: null !== zT,
+                direction: null !== (oT = null === zT || void 0 === zT ? void 0 : zT.direction) && void 0 !== oT ? oT : null,
+                speed: IT
               }
             },
-            onPointerMove: YY => {
-              const rY = vY.current;
-              if (null === rY || YY.pointerId !== rY.pointerId) return;
-              if (0 === YY.buttons) return void zY(YY.clientX, YY.timeStamp);
-              const DY = YY.clientX - rY.x;
-              !rY.following && function(YY, rY) {
-                return Math.abs(YY) > 8 && Math.abs(YY) > Math.abs(rY)
-              }(DY, YY.clientY - rY.y) && (rY.following = !0, rY.direction = DY < 0 ? "Forward" : "Back", YY.currentTarget.setPointerCapture(YY.pointerId)), null !== rY.direction && (rY.speed.add(YY.clientX, YY.timeStamp), Fr(sY.current[rY.direction], function(YY, rY, DY, FY) {
-                const AY = DY * UY("Forward" === YY ? 0 : FY) + rY;
-                return nY.c.clamp(LY(AY / DY), 0, FY)
-              }(rY.direction, TY(rY, rY.direction, DY), rY.width, yY)))
+            onPointerMove: TT => {
+              const oT = ST.current;
+              if (null === oT || TT.pointerId !== oT.pointerId) return;
+              if (0 === TT.buttons) return void jT(TT.clientX, TT.timeStamp);
+              const IT = TT.clientX - oT.x;
+              !oT.following && function(TT, oT) {
+                return Math.abs(TT) > 8 && Math.abs(TT) > Math.abs(oT)
+              }(IT, TT.clientY - oT.y) && (oT.following = !0, oT.direction = IT < 0 ? "Forward" : "Back", TT.currentTarget.setPointerCapture(TT.pointerId)), null !== oT.direction && (oT.speed.add(TT.clientX, TT.timeStamp), io(LT.current[oT.direction], function(TT, oT, IT, iT) {
+                const zT = IT * PT("Forward" === TT ? 0 : iT) + oT;
+                return yT.e.clamp(dT(zT / IT), 0, iT)
+              }(oT.direction, eT(oT, oT.direction, IT), oT.width, cT)))
             },
-            onPointerUp: YY => {
-              var rY;
-              YY.pointerId === (null === (rY = vY.current) || void 0 === rY ? void 0 : rY.pointerId) && zY(YY.clientX, YY.timeStamp)
+            onPointerUp: TT => {
+              var oT;
+              TT.pointerId === (null === (oT = ST.current) || void 0 === oT ? void 0 : oT.pointerId) && jT(TT.clientX, TT.timeStamp)
             },
-            onPointerCancel: YY => {
-              const rY = vY.current;
-              YY.pointerId === (null === rY || void 0 === rY ? void 0 : rY.pointerId) && (vY.current = null, null !== rY.direction && VY(rY.direction, !1, 0, QY))
+            onPointerCancel: TT => {
+              const oT = ST.current;
+              TT.pointerId === (null === oT || void 0 === oT ? void 0 : oT.pointerId) && (ST.current = null, null !== oT.direction && hT(oT.direction, !1, 0, KT))
             },
-            children: (0, pY.jsxs)("div", {
+            children: (0, tT.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [AY && CY("Left", QY - 2, !0), CY("Right", QY + 2 * iY - 1, !0), (0, pY.jsxs)("div", {
-                ref: YY => {
-                  sY.current.Back = YY
+              children: [zT && UT("Left", KT - 2, !0), UT("Right", KT + 2 * xT - 1, !0), (0, tT.jsxs)("div", {
+                ref: TT => {
+                  LT.current.Back = TT
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [CY("Recto", QY - 1, !0), AY && CY("Verso", QY, !1)]
-              }), (0, pY.jsxs)("div", {
-                ref: YY => {
-                  sY.current.Forward = YY
+                children: [UT("Recto", KT - 1, !0), zT && UT("Verso", KT, !1)]
+              }), (0, tT.jsxs)("div", {
+                ref: TT => {
+                  LT.current.Forward = TT
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [CY("Recto", QY + iY - 1, !1), AY && CY("Verso", QY + iY, !0)]
+                children: [UT("Recto", KT + xT - 1, !1), zT && UT("Verso", KT + xT, !0)]
               })]
             })
-          }), (0, pY.jsx)(Ir, {
+          }), (0, tT.jsx)(ko, {
             direction: "Forward",
-            disabled: !WY,
-            onTurn: SY
+            disabled: !rT,
+            onTurn: wT
           })]
         })
       })
     }
 
-    function Ir(YY) {
+    function ko(TT) {
       let {
-        direction: rY,
-        disabled: DY,
-        onTurn: FY
-      } = YY;
+        direction: oT,
+        disabled: IT,
+        onTurn: iT
+      } = TT;
       const {
-        t: AY
-      } = (0, HY.C)();
-      return (0, pY.jsx)("div", {
-        className: lY()("PlotsJournalArrow", rY),
-        children: (0, pY.jsx)(eY.f, {
-          disabled: DY,
-          ariaLabel: AY("Forward" === rY ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: zT
+      } = (0, CT.t)();
+      return (0, tT.jsx)("div", {
+        className: mT()("PlotsJournalArrow", oT),
+        children: (0, tT.jsx)(RT.e, {
+          disabled: IT,
+          ariaLabel: zT("Forward" === oT ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            FY(rY)
+            iT(oT)
           },
-          children: (0, pY.jsx)(TY.e, {
+          children: (0, tT.jsx)(eT.e, {
             name: "angle-up"
           })
         })
       })
     }
-    var Rr = DY(36025),
-      Or = DY(1793),
-      gr = DY(1842);
-    const ar = "plotsStepChanged",
-      vr = "plotsPlotChanged";
-    class ur {
+    var Wo = IT(35594),
+      Xo = IT(1747),
+      Bo = IT(1787);
+    const Fo = "plotsStepChanged",
+      So = "plotsPlotChanged";
+    class Do {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(YY) {
-        this.step = YY, vY.g.vo(ar, YY, !0)
+      receiveStep(TT) {
+        this.step = TT, ST.h.XM(Fo, TT, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(YY) {
-        this.plot = YY, vY.g.vo(vr, YY, !0)
+      receivePlot(TT) {
+        this.plot = TT, ST.h.XM(So, TT, !0)
       }
     }
-    const sr = "KeyJ";
+    const Lo = "KeyJ";
 
-    function ir(YY) {
+    function xo(TT) {
       let {
-        hud: rY,
-        journal: DY
-      } = YY;
-      const FY = (0, cY.k)(mY, DY.getPages()),
-        AY = (0, cY.k)(ar, rY.getStep()),
+        hud: oT,
+        journal: IT
+      } = TT;
+      const iT = (0, ET.i)(gT, IT.getPages()),
+        zT = (0, ET.i)(Fo, oT.getStep()),
         {
-          isTouchScreen: IY
-        } = (0, OY.j)(["isTouchScreen"]),
+          isTouchScreen: kT
+        } = (0, XT.k)(["isTouchScreen"]),
         {
-          t: vY
-        } = (0, HY.C)(),
-        uY = null !== FY && "none" === AY[0];
-      return (0, BY.e)((YY => null !== FY && YY.code === sr && !YY.repeat && !(0, aY.isTypingInInput)()), (YY => {
-        (0, gY.z)(YY, uY, RY.o)
-      })), uY ? (0, pY.jsx)(Rr.e, {
+          t: ST
+        } = (0, CT.t)(),
+        DT = null !== iT && "none" === zT[0];
+      return (0, vT.b)((TT => null !== iT && TT.code === Lo && !TT.repeat && !(0, FT.isTypingInInput)()), (TT => {
+        (0, BT.E)(TT, DT, WT.o)
+      })), DT ? (0, tT.jsx)(Wo.e, {
         placement: "topRight",
-        children: (0, pY.jsx)("div", {
+        children: (0, tT.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, pY.jsxs)("button", {
+          children: (0, tT.jsxs)("button", {
             type: "button",
-            className: lY()("PlotsJournalButton SmallTextBold", {
-              Touch: IY
+            className: mT()("PlotsJournalButton SmallTextBold", {
+              Touch: kT
             }),
-            onClick: RY.o,
-            children: [(0, pY.jsx)("span", {
+            onClick: WT.o,
+            children: [(0, tT.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, pY.jsx)(Or.c, {
+              children: (0, tT.jsx)(Xo.c, {
                 itemName: "Book",
                 amount: 0
               })
-            }), vY("plotsGame:journalButton"), !IY && (0, pY.jsx)(gr.d, {
+            }), ST("plotsGame:journalButton"), !kT && (0, tT.jsx)(Bo.e, {
               className: "PlotsJournalButtonKey",
-              keyCode: sr
+              keyCode: Lo
             })]
           })
         })
       }) : null
     }
-    var yr = DY(37798),
-      Qr = DY(37570),
-      or = DY(36314),
-      Wr = DY(8862),
-      Er = DY(8873),
-      mr = DY(37146);
-    const Vr = new Map([
+    var co = IT(37390),
+      Ko = IT(37183),
+      Mo = IT(35877),
+      ro = IT(8853),
+      Ao = IT(8876),
+      go = IT(36753);
+    const ho = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -858,775 +858,775 @@ export const modules = {
         ["White Concrete", [.89, .894, .894]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      Sr = [...or.c.blockRemoveActionRoots, ...Qr.b, ...Wr.h, "Board", "Code Block", "Custom Lobby Block"],
-      lr = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let Tr = null;
+      wo = [...Mo.d.blockRemoveActionRoots, ...Ko.e, ...ro.g, "Board", "Code Block", "Custom Lobby Block"],
+      mo = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let eo = null;
 
-    function er() {
-      return Tr ??= function() {
-        const YY = Nr(),
-          rY = Math.max(...YY.map((YY => zY.h[YY].id))) + 1,
-          DY = new Int32Array(rY),
-          FY = new Int32Array(rY),
-          AY = new Uint8Array(rY).fill(1),
-          IY = new Uint8Array(rY),
-          RY = new Uint8Array(rY),
-          OY = new Array(rY).fill("Air"),
-          gY = new Map,
-          aY = YY => {
-            let rY = gY.get(YY);
-            return void 0 === rY && (rY = gY.size + 1, gY.set(YY, rY)), rY
+    function Ro() {
+      return eo ??= function() {
+        const TT = uo(),
+          oT = Math.max(...TT.map((TT => jT.j[TT].id))) + 1,
+          IT = new Int32Array(oT),
+          iT = new Int32Array(oT),
+          zT = new Uint8Array(oT).fill(1),
+          kT = new Uint8Array(oT),
+          WT = new Uint8Array(oT),
+          XT = new Array(oT).fill("Air"),
+          BT = new Map,
+          FT = TT => {
+            let oT = BT.get(TT);
+            return void 0 === oT && (oT = BT.size + 1, BT.set(TT, oT)), oT
           },
-          vY = new Set(Sr);
-        for (const sY of YY) {
-          var uY;
+          ST = new Set(wo);
+        for (const LT of TT) {
+          var DT;
           const {
-            id: YY,
-            meta: rY,
-            altActionable: gY,
-            canBePlacedOver: iY
-          } = zY.h[sY];
-          DY[YY] = aY(Br(sY));
-          const yY = rY.stairsCorner;
-          if (null === yY) FY[YY] = DY[YY];
+            id: TT,
+            meta: oT,
+            altActionable: BT,
+            canBePlacedOver: xT
+          } = jT.j[LT];
+          IT[TT] = FT(vo(LT));
+          const cT = oT.stairsCorner;
+          if (null === cT) iT[TT] = IT[TT];
           else {
-            const DY = yY.endsWith("Right");
-            FY[YY] = aY(`${rY.rootName}|rot${DY?rY.rot%4+1:rY.rot}|${rY.halfblockPlacement}|${yY.replace("Right","Left")}`)
+            const IT = cT.endsWith("Right");
+            iT[TT] = FT(`${oT.rootName}|rot${IT?oT.rot%4+1:oT.rot}|${oT.halfblockPlacement}|${cT.replace("Right","Left")}`)
           }
-          AY[YY] = iY ? 1 : 0, IY[YY] = gY || null !== rY.open || sY in mr.d || vY.has(rY.rootName) || void 0 !== (0, Qr.f)(rY.rootName) ? 1 : 0;
+          zT[TT] = xT ? 1 : 0, kT[TT] = BT || null !== oT.open || LT in go.b || ST.has(oT.rootName) || void 0 !== (0, Ko.i)(oT.rootName) ? 1 : 0;
           const {
-            rootName: QY
-          } = rY;
-          RY[YY] = null !== rY.open || Qr.b.includes(QY) || QY.includes("Bookshelf") || QY.includes("Mailbox") ? 1 : 0, OY[YY] = null !== (uY = (0, yr.g)(YY)) && void 0 !== uY ? uY : QY
+            rootName: KT
+          } = oT;
+          WT[TT] = null !== oT.open || Ko.e.includes(KT) || KT.includes("Bookshelf") || KT.includes("Mailbox") ? 1 : 0, XT[TT] = null !== (DT = (0, co.f)(TT)) && void 0 !== DT ? DT : KT
         }
         return {
-          kinds: DY,
-          shapes: FY,
-          empty: AY,
-          inUse: IY,
-          ownAltActionMessage: RY,
-          placingItems: OY
+          kinds: IT,
+          shapes: iT,
+          empty: zT,
+          inUse: kT,
+          ownAltActionMessage: WT,
+          placingItems: XT
         }
-      }(), Tr
+      }(), eo
     }
 
-    function Nr() {
-      return Object.keys(zY.h).filter((YY => zY.h[YY].name === YY))
+    function uo() {
+      return Object.keys(jT.j).filter((TT => jT.j[TT].name === TT))
     }
 
-    function Br(YY) {
-      var rY;
-      const DY = zY.h[YY],
+    function vo(TT) {
+      var oT;
+      const IT = jT.j[TT],
         {
-          rootName: FY,
-          rot: AY
-        } = DY.meta,
-        [, ...IY] = (null !== (rY = DY.rootMetaDesc) && void 0 !== rY ? rY : YY).split("|"),
-        RY = IY.filter((YY => !("meta" === YY || lr.test(YY) || (0, Er.B)(DY) && /^[nesw]+$/.test(YY) || Wr.h.includes(FY) && /^[lrud]+$/.test(YY) || nY.I.includes(FY) && /^(left|right)$/.test(YY))));
-      return [FY, ...RY].map((YY => "fenceGate" === DY.model && YY === `rot${AY}` ? "rot" + ((AY - 1) % 2 + 1) : YY)).join("|")
+          rootName: iT,
+          rot: zT
+        } = IT.meta,
+        [, ...kT] = (null !== (oT = IT.rootMetaDesc) && void 0 !== oT ? oT : TT).split("|"),
+        WT = kT.filter((TT => !("meta" === TT || mo.test(TT) || (0, Ao.D)(IT) && /^[nesw]+$/.test(TT) || ro.g.includes(iT) && /^[lrud]+$/.test(TT) || yT.H.includes(iT) && /^(left|right)$/.test(TT))));
+      return [iT, ...WT].map((TT => "fenceGate" === IT.model && TT === `rot${zT}` ? "rot" + ((zT - 1) % 2 + 1) : TT)).join("|")
     }
 
-    function cr(YY, rY) {
+    function Eo(TT, oT) {
       const {
-        kinds: DY,
-        shapes: FY
-      } = er();
-      return DY[YY] === DY[rY] || FY[YY] === FY[rY]
+        kinds: IT,
+        shapes: iT
+      } = Ro();
+      return IT[TT] === IT[oT] || iT[TT] === iT[oT]
     }
 
-    function Kr(YY) {
-      return 1 === er().empty[YY]
+    function fo(TT) {
+      return 1 === Ro().empty[TT]
     }
 
-    function Hr(YY) {
-      return er().placingItems[YY]
+    function Co(TT) {
+      return Ro().placingItems[TT]
     }
 
-    function zr(YY) {
-      return Vr.get(zY.h[YY].meta.rootName)
+    function jo(TT) {
+      return ho.get(jT.j[TT].meta.rootName)
     }
-    var Zr = DY(8860),
-      Cr = DY(8870);
-    const fr = [0, 0, 0, 1, 1, 1],
-      jr = (0, Zr.d)([
+    var Jo = IT(8850),
+      Uo = IT(8869);
+    const ao = [0, 0, 0, 1, 1, 1],
+      Yo = (0, Jo.b)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      hr = (0, Zr.d)([
+      Qo = (0, Jo.b)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      dr = (0, Zr.d)([
+      Oo = (0, Jo.b)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      Jr = [0, 1, 2, 3].map((YY => (0, Zr.d)((0, Zr.t)([
+      Ho = [0, 1, 2, 3].map((TT => (0, Jo.b)((0, Jo.l)([
         [3, 2, 0, 5, 7, 3]
-      ], YY))));
+      ], TT))));
 
-    function Mr(YY) {
+    function no(TT) {
       const {
-        ns: rY,
-        model: DY,
-        blockModel: FY,
-        meta: AY
-      } = zY.h[YY];
-      return void 0 !== rY ? rY : "CentreCross" === DY ? jr : null !== FY && void 0 !== FY && FY.startsWith("torch") ? AY.halfblockPlacement === Cr.e.side ? Jr[AY.rot - 1] : AY.halfblockPlacement === Cr.e.top ? dr : hr : fr
+        FM: oT,
+        model: IT,
+        blockModel: iT,
+        meta: zT
+      } = jT.j[TT];
+      return void 0 !== oT ? oT : "CentreCross" === IT ? Yo : null !== iT && void 0 !== iT && iT.startsWith("torch") ? zT.halfblockPlacement === Uo.b.side ? Ho[zT.rot - 1] : zT.halfblockPlacement === Uo.b.top ? Oo : Qo : ao
     }
-    var wr = DY(36277);
-    var br = DY(213);
+    var qo = IT(35852);
+    var Zo = IT(193);
 
-    function Xr(YY, rY) {
-      const DY = br.d.fW / 2;
-      return YY[0] < rY[0] + DY && YY[0] + 1 > rY[0] - DY && YY[1] < rY[1] + br.d.jW && YY[1] + 1 > rY[1] && YY[2] < rY[2] + DY && YY[2] + 1 > rY[2] - DY
-    }
-
-    function qr(YY) {
-      return YY + 1
+    function so(TT, oT) {
+      const IT = Zo.c.Iw / 2;
+      return TT[0] < oT[0] + IT && TT[0] + 1 > oT[0] - IT && TT[1] < oT[1] + Zo.c.Xw && TT[1] + 1 > oT[1] && TT[2] < oT[2] + IT && TT[2] + 1 > oT[2] - IT
     }
 
-    function pr(YY, rY, DY, FY, AY) {
-      const IY = Math.hypot(...rY.dir);
-      if (!Number.isFinite(IY) || 0 === IY) return -1;
+    function to(TT) {
+      return TT + 1
+    }
+
+    function Go(TT, oT, IT, iT, zT) {
+      const kT = Math.hypot(...oT.dir);
+      if (!Number.isFinite(kT) || 0 === kT) return -1;
       const {
-        from: RY,
-        reach: OY,
-        solid: gY
-      } = rY, aY = [rY.dir[0] / IY, rY.dir[1] / IY, rY.dir[2] / IY], vY = null === gY ? OY : Math.min(OY, function(YY, rY, DY) {
-        const FY = kr(YY, rY, DY);
-        if (FY !== 1 / 0) return FY;
-        return (DY[0] + .5 - YY[0]) * rY[0] + (DY[1] + .5 - YY[1]) * rY[1] + (DY[2] + .5 - YY[2]) * rY[2]
-      }(RY, aY, gY) + .75);
-      let uY = -1,
-        sY = 1 / 0,
-        iY = 1 / 0;
-      for (let yY = 0; yY < YY.length; yY += 4) {
-        const rY = [YY[yY], YY[yY + 1], YY[yY + 2]],
-          IY = AY(yY) ? OY : vY;
-        let gY = -1,
-          QY = kr(RY, aY, rY);
-        if (QY > IY) {
-          const YY = [rY[0] + .5 - RY[0], rY[1] + .5 - RY[1], rY[2] + .5 - RY[2]];
-          if (QY = YY[0] * aY[0] + YY[1] * aY[1] + YY[2] * aY[2], QY <= 0 || QY > IY) continue;
-          if (gY = Math.hypot(YY[0] - QY * aY[0], YY[1] - QY * aY[1], YY[2] - QY * aY[2]), gY > .7 || !FY(yY)) continue
-        }(gY < sY || gY === sY && QY < iY) && DY(yY) && (uY = yY, sY = gY, iY = QY)
+        from: WT,
+        reach: XT,
+        solid: BT
+      } = oT, FT = [oT.dir[0] / kT, oT.dir[1] / kT, oT.dir[2] / kT], ST = null === BT ? XT : Math.min(XT, function(TT, oT, IT) {
+        const iT = po(TT, oT, IT);
+        if (iT !== 1 / 0) return iT;
+        return (IT[0] + .5 - TT[0]) * oT[0] + (IT[1] + .5 - TT[1]) * oT[1] + (IT[2] + .5 - TT[2]) * oT[2]
+      }(WT, FT, BT) + .75);
+      let DT = -1,
+        LT = 1 / 0,
+        xT = 1 / 0;
+      for (let cT = 0; cT < TT.length; cT += 4) {
+        const oT = [TT[cT], TT[cT + 1], TT[cT + 2]],
+          kT = zT(cT) ? XT : ST;
+        let BT = -1,
+          KT = po(WT, FT, oT);
+        if (KT > kT) {
+          const TT = [oT[0] + .5 - WT[0], oT[1] + .5 - WT[1], oT[2] + .5 - WT[2]];
+          if (KT = TT[0] * FT[0] + TT[1] * FT[1] + TT[2] * FT[2], KT <= 0 || KT > kT) continue;
+          if (BT = Math.hypot(TT[0] - KT * FT[0], TT[1] - KT * FT[1], TT[2] - KT * FT[2]), BT > .7 || !iT(cT)) continue
+        }(BT < LT || BT === LT && KT < xT) && IT(cT) && (DT = cT, LT = BT, xT = KT)
       }
-      return uY
+      return DT
     }
 
-    function kr(YY, rY, DY) {
-      let FY = 0,
-        AY = 1 / 0;
-      for (let IY = 0; IY < 3; IY++) {
-        const RY = DY[IY] - YY[IY];
-        if (0 === rY[IY]) {
-          if (RY > 0 || RY + 1 < 0) return 1 / 0;
+    function po(TT, oT, IT) {
+      let iT = 0,
+        zT = 1 / 0;
+      for (let kT = 0; kT < 3; kT++) {
+        const WT = IT[kT] - TT[kT];
+        if (0 === oT[kT]) {
+          if (WT > 0 || WT + 1 < 0) return 1 / 0;
           continue
         }
-        const OY = RY / rY[IY],
-          gY = (RY + 1) / rY[IY];
-        FY = Math.max(FY, Math.min(OY, gY)), AY = Math.min(AY, Math.max(OY, gY))
+        const XT = WT / oT[kT],
+          BT = (WT + 1) / oT[kT];
+        iT = Math.max(iT, Math.min(XT, BT)), zT = Math.min(zT, Math.max(XT, BT))
       }
-      return FY <= AY ? FY : 1 / 0
+      return iT <= zT ? iT : 1 / 0
     }
-    var Gr = DY(37399),
-      xr = DY(37894);
-    const nr = [1, 1, 1];
-    class Pr {
-      constructor(YY) {
-        this.api = YY, this.meshes = null, this.shown = null
+    var bo = IT(37012),
+      yo = IT(37491);
+    const No = [1, 1, 1];
+    class Po {
+      constructor(TT) {
+        this.api = TT, this.meshes = null, this.shown = null
       }
-      show(YY) {
-        if (!(0, wr.g)(YY, this.shown))
-          if (this.shown = null === YY ? null : [YY[0], YY[1], YY[2]], null !== this.meshes)
-            for (const rY of this.meshes) this.api.setGameMesh(rY, null === YY ? {
+      show(TT) {
+        if (!(0, qo.c)(TT, this.shown))
+          if (this.shown = null === TT ? null : [TT[0], TT[1], TT[2]], null !== this.meshes)
+            for (const oT of this.meshes) this.api.setGameMesh(oT, null === TT ? {
               visible: !1
             } : {
-              anchor: YY,
+              anchor: TT,
               visible: !0
             });
-          else if (null !== YY) {
-          const rY = [Gr.i, Gr.i, Gr.i, 0, 0, 0];
-          this.meshes = [this.build([rY], Gr.l, YY), this.build((0, Gr.e)(), Gr.s, YY)]
+          else if (null !== TT) {
+          const oT = [bo.h, bo.h, bo.h, 0, 0, 0];
+          this.meshes = [this.build([oT], bo.j, TT), this.build((0, bo.d)(), bo.m, TT)]
         }
       }
       dispose() {
-        for (const rY of null !== (YY = this.meshes) && void 0 !== YY ? YY : []) {
-          var YY;
-          this.api.disposeGameMesh(rY)
+        for (const oT of null !== (TT = this.meshes) && void 0 !== TT ? TT : []) {
+          var TT;
+          this.api.disposeGameMesh(oT)
         }
         this.meshes = null, this.shown = null
       }
-      build(YY, rY, DY) {
-        const FY = [],
-          AY = [];
-        for (const [IY, RY, OY, gY, aY, vY] of YY)(0, xr.f)(FY, AY, [gY + .5, aY + .5, vY + .5], [IY, RY, OY]);
+      build(TT, oT, IT) {
+        const iT = [],
+          zT = [];
+        for (const [kT, WT, XT, BT, FT, ST] of TT)(0, yo.i)(iT, zT, [BT + .5, FT + .5, ST + .5], [kT, WT, XT]);
         return this.api.createGameMesh({
-          positions: FY,
-          indices: AY
+          positions: iT,
+          indices: zT
         }, {
-          rgb: nr,
-          alpha: rY,
+          rgb: No,
+          alpha: oT,
           onTop: !0
-        }, DY)
+        }, IT)
       }
     }
-    class Ur {
-      constructor(YY) {
-        this.api = YY, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class Vo {
+      constructor(TT) {
+        this.api = TT, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(YY) {
-        const rY = br.d.Jy;
+      watch(TT) {
+        const oT = Zo.c.Yc;
         this.chunks = [];
-        for (let DY = 0; DY < YY.length; DY += 3) {
-          const FY = Math.floor(YY[DY] / rY),
-            AY = Math.floor(YY[DY + 1] / rY),
-            IY = Math.floor(YY[DY + 2] / rY);
-          this.watches(FY, AY, IY) || this.chunks.push(FY, AY, IY)
+        for (let IT = 0; IT < TT.length; IT += 3) {
+          const iT = Math.floor(TT[IT] / oT),
+            zT = Math.floor(TT[IT + 1] / oT),
+            kT = Math.floor(TT[IT + 2] / oT);
+          this.watches(iT, zT, kT) || this.chunks.push(iT, zT, kT)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const YY = performance.now();
-        if (YY - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = YY;
-        let rY = !1;
-        for (let DY = 0; DY < this.chunks.length; DY += 3) {
-          const YY = this.api.getChunkVersion(this.chunks[DY], this.chunks[DY + 1], this.chunks[DY + 2]);
-          this.versions[DY / 3] !== YY && (this.versions[DY / 3] = YY, rY = !0)
+        const TT = performance.now();
+        if (TT - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = TT;
+        let oT = !1;
+        for (let IT = 0; IT < this.chunks.length; IT += 3) {
+          const TT = this.api.getChunkVersion(this.chunks[IT], this.chunks[IT + 1], this.chunks[IT + 2]);
+          this.versions[IT / 3] !== TT && (this.versions[IT / 3] = TT, oT = !0)
         }
-        return rY
+        return oT
       }
-      watches(YY, rY, DY) {
-        for (let FY = 0; FY < this.chunks.length; FY += 3)
-          if (this.chunks[FY] === YY && this.chunks[FY + 1] === rY && this.chunks[FY + 2] === DY) return !0;
+      watches(TT, oT, IT) {
+        for (let iT = 0; iT < this.chunks.length; iT += 3)
+          if (this.chunks[iT] === TT && this.chunks[iT + 1] === oT && this.chunks[iT + 2] === IT) return !0;
         return !1
       }
     }
-    const Lr = .35,
-      tr = {
+    const TI = .35,
+      oI = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      YD = {
+      II = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      rD = [.95, .2, .15];
-    class DD {
+      iI = [.95, .2, .15];
+    class zI {
       constructor() {
         this.groups = []
       }
-      add(YY, rY, DY, FY, AY) {
-        let IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : fr;
-        for (const RY of this.groups)
-          if (ID(RY, FY, AY)) return RY.cells.push(YY, rY, DY), void RY.boxes.push(IY);
+      add(TT, oT, IT, iT, zT) {
+        let kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : ao;
+        for (const WT of this.groups)
+          if (XI(WT, iT, zT)) return WT.cells.push(TT, oT, IT), void WT.boxes.push(kT);
         this.groups.push({
-          rgb: FY,
-          look: AY,
-          cells: [YY, rY, DY],
-          boxes: [IY]
+          rgb: iT,
+          look: zT,
+          cells: [TT, oT, IT],
+          boxes: [kT]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class FD {
-      constructor(YY) {
-        this.api = YY, this.shown = []
+    class kI {
+      constructor(TT) {
+        this.api = TT, this.shown = []
       }
-      show(YY) {
-        const rY = [];
-        for (const DY of YY) {
-          const YY = this.shown.findIndex((YY => {
+      show(TT) {
+        const oT = [];
+        for (const IT of TT) {
+          const TT = this.shown.findIndex((TT => {
             let {
-              group: rY
-            } = YY;
-            return ID(rY, DY.rgb, DY.look) && RD(rY, DY)
-          })); - 1 === YY ? rY.push(this.build(DY)) : (rY.push(this.shown[YY]), this.shown.splice(YY, 1))
+              group: oT
+            } = TT;
+            return XI(oT, IT.rgb, IT.look) && BI(oT, IT)
+          })); - 1 === TT ? oT.push(this.build(IT)) : (oT.push(this.shown[TT]), this.shown.splice(TT, 1))
         }
-        this.dispose(), this.shown = rY
+        this.dispose(), this.shown = oT
       }
       dispose() {
         for (const {
-            meshes: YY
+            meshes: TT
           }
           of this.shown)
-          for (const rY of YY) this.api.disposeGameMesh(rY);
+          for (const oT of TT) this.api.disposeGameMesh(oT);
         this.shown = []
       }
-      build(YY) {
+      build(TT) {
         const {
-          rgb: rY,
-          look: DY,
-          boxes: FY
-        } = YY, AY = [rY[0] + (1 - rY[0]) * Lr, rY[1] + (1 - rY[1]) * Lr, rY[2] + (1 - rY[2]) * Lr], IY = [this.buildMesh(YY.cells, rY, DY.alpha, ((YY, rY, AY, IY) => {
-          AD(YY, rY, AY, FY[IY], DY.size, !1)
-        })), this.buildMesh(YY.cells, AY, DY.alpha, ((YY, rY, AY, IY) => {
-          AD(YY, rY, AY, FY[IY], DY.size, !0)
+          rgb: oT,
+          look: IT,
+          boxes: iT
+        } = TT, zT = [oT[0] + (1 - oT[0]) * TI, oT[1] + (1 - oT[1]) * TI, oT[2] + (1 - oT[2]) * TI], kT = [this.buildMesh(TT.cells, oT, IT.alpha, ((TT, oT, zT, kT) => {
+          WI(TT, oT, zT, iT[kT], IT.size, !1)
+        })), this.buildMesh(TT.cells, zT, IT.alpha, ((TT, oT, zT, kT) => {
+          WI(TT, oT, zT, iT[kT], IT.size, !0)
         }))];
-        return DY.crossed && IY.push(this.buildMesh(YY.cells, rY, .9, ((YY, rY, FY) => {
-          (0, xr.g)(YY, rY, FY, DY.size + .01, .12)
+        return IT.crossed && kT.push(this.buildMesh(TT.cells, oT, .9, ((TT, oT, iT) => {
+          (0, yo.m)(TT, oT, iT, IT.size + .01, .12)
         }))), {
-          group: YY,
-          meshes: IY
+          group: TT,
+          meshes: kT
         }
       }
-      buildMesh(YY, rY, DY, FY) {
-        const AY = [YY[0], YY[1], YY[2]],
-          IY = [],
-          RY = [];
-        for (let OY = 0; OY < YY.length; OY += 3) FY(IY, RY, [YY[OY] - AY[0] + .5, YY[OY + 1] - AY[1] + .5, YY[OY + 2] - AY[2] + .5], OY / 3);
+      buildMesh(TT, oT, IT, iT) {
+        const zT = [TT[0], TT[1], TT[2]],
+          kT = [],
+          WT = [];
+        for (let XT = 0; XT < TT.length; XT += 3) iT(kT, WT, [TT[XT] - zT[0] + .5, TT[XT + 1] - zT[1] + .5, TT[XT + 2] - zT[2] + .5], XT / 3);
         return this.api.createGameMesh({
-          positions: IY,
-          indices: RY
+          positions: kT,
+          indices: WT
         }, {
-          rgb: [rY[0], rY[1], rY[2]],
-          alpha: DY
-        }, AY)
+          rgb: [oT[0], oT[1], oT[2]],
+          alpha: IT
+        }, zT)
       }
     }
 
-    function AD(YY, rY, DY, FY, AY, IY) {
-      for (let RY = 0; RY < FY.length; RY += 6) {
-        const OY = [0, 0, 0],
-          gY = [0, 0, 0];
-        for (let YY = 0; YY < 3; YY++) OY[YY] = DY[YY] + ((FY[RY + YY] + FY[RY + YY + 3]) / 2 - .5) * AY, gY[YY] = (FY[RY + YY + 3] - FY[RY + YY]) * AY;
-        (0, xr.c)(YY, rY, OY, gY, IY)
+    function WI(TT, oT, IT, iT, zT, kT) {
+      for (let WT = 0; WT < iT.length; WT += 6) {
+        const XT = [0, 0, 0],
+          BT = [0, 0, 0];
+        for (let TT = 0; TT < 3; TT++) XT[TT] = IT[TT] + ((iT[WT + TT] + iT[WT + TT + 3]) / 2 - .5) * zT, BT[TT] = (iT[WT + TT + 3] - iT[WT + TT]) * zT;
+        (0, yo.e)(TT, oT, XT, BT, kT)
       }
     }
 
-    function ID(YY, rY, DY) {
-      return YY.rgb[0] === rY[0] && YY.rgb[1] === rY[1] && YY.rgb[2] === rY[2] && YY.look === DY
+    function XI(TT, oT, IT) {
+      return TT.rgb[0] === oT[0] && TT.rgb[1] === oT[1] && TT.rgb[2] === oT[2] && TT.look === IT
     }
 
-    function RD(YY, rY) {
-      if (YY.cells.length !== rY.cells.length) return !1;
-      for (let DY = 0; DY < YY.cells.length; DY++)
-        if (YY.cells[DY] !== rY.cells[DY]) return !1;
-      return YY.boxes.every(((YY, DY) => YY === rY.boxes[DY]))
+    function BI(TT, oT) {
+      if (TT.cells.length !== oT.cells.length) return !1;
+      for (let IT = 0; IT < TT.cells.length; IT++)
+        if (TT.cells[IT] !== oT.cells[IT]) return !1;
+      return TT.boxes.every(((TT, IT) => TT === oT.boxes[IT]))
     }
-    class OD {
-      constructor(YY, rY, DY) {
-        this.api = YY, this.localPlayerId = rY, this.pickNext = DY, this.turning = null, this.pending = null, this.tap = null, this.heading = [0, 1]
+    class FI {
+      constructor(TT, oT, IT) {
+        this.api = TT, this.localPlayerId = oT, this.pickNext = IT, this.turning = null, this.pending = null, this.tap = null, this.heading = [0, 1]
       }
-      look(YY) {
-        const [rY, , DY] = YY.cameraDirection, FY = Math.hypot(rY, DY);
-        FY > .001 && (this.heading = [rY / FY, DY / FY])
+      look(TT) {
+        const [oT, , IT] = TT.cameraDirection, iT = Math.hypot(oT, IT);
+        iT > .001 && (this.heading = [oT / iT, IT / iT])
       }
-      tapped(YY, rY, DY) {
-        const FY = qr(this.api.getClientOption(this.localPlayerId, "blockReach")),
+      tapped(TT, oT, IT) {
+        const iT = to(this.api.getClientOption(this.localPlayerId, "blockReach")),
           {
-            origin: AY,
-            direction: IY
+            origin: zT,
+            direction: kT
           } = this.api.getActionRay(),
-          RY = [...AY],
-          OY = [
-            [RY, [RY[0] + IY[0] * FY, RY[1] + IY[1] * FY, RY[2] + IY[2] * FY]]
+          WT = [...zT],
+          XT = [
+            [WT, [WT[0] + kT[0] * iT, WT[1] + kT[1] * iT, WT[2] + kT[2] * iT]]
           ];
-        null !== YY && OY.push([RY, (0, wr.c)(YY)]), this.tap = {
-          lines: OY,
-          next: rY,
-          ms: DY
+        null !== TT && XT.push([WT, (0, qo.b)(TT)]), this.tap = {
+          lines: XT,
+          next: oT,
+          ms: IT
         }
       }
-      filled(YY, rY) {
+      filled(TT, oT) {
         this.tap = null, this.pending = {
-          from: YY,
-          ms: rY
-        }, this.retry(rY)
+          from: TT,
+          ms: oT
+        }, this.retry(oT)
       }
-      arrived(YY, rY) {
+      arrived(TT, oT) {
         const {
-          tap: DY
+          tap: IT
         } = this;
-        if (null === DY || rY - DY.ms > 1500) return null;
-        const FY = (0, wr.c)(YY);
-        return (0, wr.g)(DY.next, YY) || DY.lines.some((YY => {
-          let [rY, DY] = YY;
-          return function(YY, rY, DY) {
-            const FY = [DY[0] - rY[0], DY[1] - rY[1], DY[2] - rY[2]],
-              AY = [YY[0] - rY[0], YY[1] - rY[1], YY[2] - rY[2]],
-              IY = FY[0] ** 2 + FY[1] ** 2 + FY[2] ** 2,
-              RY = 0 === IY ? 0 : Math.min(1, Math.max(0, (AY[0] * FY[0] + AY[1] * FY[1] + AY[2] * FY[2]) / IY));
-            return Math.hypot(AY[0] - FY[0] * RY, AY[1] - FY[1] * RY, AY[2] - FY[2] * RY)
-          }(FY, rY, DY) <= .9
+        if (null === IT || oT - IT.ms > 1500) return null;
+        const iT = (0, qo.b)(TT);
+        return (0, qo.c)(IT.next, TT) || IT.lines.some((TT => {
+          let [oT, IT] = TT;
+          return function(TT, oT, IT) {
+            const iT = [IT[0] - oT[0], IT[1] - oT[1], IT[2] - oT[2]],
+              zT = [TT[0] - oT[0], TT[1] - oT[1], TT[2] - oT[2]],
+              kT = iT[0] ** 2 + iT[1] ** 2 + iT[2] ** 2,
+              WT = 0 === kT ? 0 : Math.min(1, Math.max(0, (zT[0] * iT[0] + zT[1] * iT[1] + zT[2] * iT[2]) / kT));
+            return Math.hypot(zT[0] - iT[0] * WT, zT[1] - iT[1] * WT, zT[2] - iT[2] * WT)
+          }(iT, oT, IT) <= .9
         })) ? (this.tap = null, this.pending = {
-          from: YY,
-          ms: rY
-        }, DY.ms) : null
+          from: TT,
+          ms: oT
+        }, IT.ms) : null
       }
-      retry(YY) {
+      retry(TT) {
         const {
-          pending: rY
+          pending: oT
         } = this;
-        if (null === rY) return;
-        if (YY - rY.ms > 1500) return void(this.pending = null);
-        const DY = this.pickNext((0, wr.c)(rY.from), (YY => (0, wr.g)(YY, rY.from)));
-        if (null === DY) return;
+        if (null === oT) return;
+        if (TT - oT.ms > 1500) return void(this.pending = null);
+        const IT = this.pickNext((0, qo.b)(oT.from), (TT => (0, qo.c)(TT, oT.from)));
+        if (null === IT) return;
         this.pending = null;
         const {
-          turning: FY
+          turning: iT
         } = this;
-        if (null !== FY && YY < FY.endMs && (0, wr.g)(FY.to, DY)) return;
-        const AY = this.api.getActionRay().origin,
-          IY = [DY[0] + .5 - AY[0], DY[1] + .5 - AY[1], DY[2] + .5 - AY[2]],
-          RY = Math.hypot(IY[0], IY[2]);
-        if (RY < .3) {
-          const YY = Math.max(RY, .001);
-          IY[0] = this.heading[0] * YY, IY[2] = this.heading[1] * YY
+        if (null !== iT && TT < iT.endMs && (0, qo.c)(iT.to, IT)) return;
+        const zT = this.api.getActionRay().origin,
+          kT = [IT[0] + .5 - zT[0], IT[1] + .5 - zT[1], IT[2] + .5 - zT[2]],
+          WT = Math.hypot(kT[0], kT[2]);
+        if (WT < .3) {
+          const TT = Math.max(WT, .001);
+          kT[0] = this.heading[0] * TT, kT[2] = this.heading[1] * TT
         }
-        this.api.turnCamera(IY, 250), this.turning = {
-          to: DY,
-          endMs: YY + 250
+        this.api.turnCamera(kT, 250), this.turning = {
+          to: IT,
+          endMs: TT + 250
         }
       }
     }
-    class gD {
-      constructor(YY, rY, DY) {
-        this.api = YY, this.localPlayerId = rY, this.juice = DY, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.pressMs = null, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Ur(YY), this.meshes = new FD(YY), this.outline = new Pr(YY), this.turn = new OD(YY, rY, ((YY, rY) => this.pickNext(YY, rY)))
+    class SI {
+      constructor(TT, oT, IT) {
+        this.api = TT, this.localPlayerId = oT, this.juice = IT, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.pressMs = null, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Vo(TT), this.meshes = new kI(TT), this.outline = new Po(TT), this.turn = new FI(TT, oT, ((TT, oT) => this.pickNext(TT, oT)))
       }
-      Cy(YY) {
-        const rY = "active" === YY[0] ? `${YY[1]}|${YY[3]}|${YY[4]}|${YY[5]}|${YY[6]}` : "";
-        if ("active" !== YY[0]) "built" === YY[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      Jc(TT) {
+        const oT = "active" === TT[0] ? `${TT[1]}|${TT[3]}|${TT[4]}|${TT[5]}|${TT[6]}` : "";
+        if ("active" !== TT[0]) "built" === TT[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , DY, FY, AY, IY] = YY;
-          rY !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = DY) : DY === this.layerY ? this.burstUnlisted(FY) : DY > this.layerY && this.finishLayer(DY), this.layerY = DY, this.layerCells.has(DY) || this.layerCells.set(DY, FY.filter(vD)), this.ghostCells = FY, this.palette = AY, this.occupiedCells = IY
+          const [, , , , , , , IT, iT, zT, kT] = TT;
+          oT !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = IT) : IT === this.layerY ? this.burstUnlisted(iT) : IT > this.layerY && this.finishLayer(IT), this.layerY = IT, this.layerCells.has(IT) || this.layerCells.set(IT, iT.filter(LI)), this.ghostCells = iT, this.palette = zT, this.occupiedCells = kT
         }
-        rY !== this.blueprint && (this.blueprint = rY, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((YY => this.api.blockNameToBlockId(YY))), this.chunkWatch.watch([...this.ghostCells.filter(vD), ...this.occupiedCells]), this.refresh()
+        oT !== this.blueprint && (this.blueprint = oT, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((TT => this.api.blockNameToBlockId(TT))), this.chunkWatch.watch([...this.ghostCells.filter(LI), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(YY) {
-        this.burstUnlisted([]), YY > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = YY)
+      finishLayer(TT) {
+        this.burstUnlisted([]), TT > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = TT)
       }
-      Zu() {
+      dD() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const YY = performance.now();
-        let rY = !1;
-        for (const [AY, IY] of this.foreseen) {
-          var DY;
-          if (YY - IY > 1e3) this.foreseen.delete(AY), rY = !0, (null === (DY = this.lastFilled) || void 0 === DY ? void 0 : DY.join()) === AY && (this.lastFilled = this.lastSeenFilled)
+        const TT = performance.now();
+        let oT = !1;
+        for (const [zT, kT] of this.foreseen) {
+          var IT;
+          if (TT - kT > 1e3) this.foreseen.delete(zT), oT = !0, (null === (IT = this.lastFilled) || void 0 === IT ? void 0 : IT.join()) === zT && (this.lastFilled = this.lastSeenFilled)
         }
-        const FY = aD(this.api.getPositionView(this.localPlayerId));
-        (rY || FY.some(((YY, rY) => YY !== this.playerCells[rY]))) && this.showNext()
+        const iT = DI(this.api.getPositionView(this.localPlayerId));
+        (oT || iT.some(((TT, oT) => TT !== this.playerCells[oT]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(YY) {
-        const rY = new Set;
-        for (let AY = 0; AY < YY.length; AY += 4) rY.add(`${YY[AY]},${YY[AY+1]},${YY[AY+2]}`);
-        const DY = [],
+      burstUnlisted(TT) {
+        const oT = new Set;
+        for (let zT = 0; zT < TT.length; zT += 4) oT.add(`${TT[zT]},${TT[zT+1]},${TT[zT+2]}`);
+        const IT = [],
           {
-            ghostCells: FY
+            ghostCells: iT
           } = this;
-        for (let AY = 0; AY < FY.length; AY += 4) {
-          const YY = `${FY[AY]},${FY[AY+1]},${FY[AY+2]}`;
-          !rY.has(YY) && this.open.delete(YY) && DY.push(this.filledCell(AY))
+        for (let zT = 0; zT < iT.length; zT += 4) {
+          const TT = `${iT[zT]},${iT[zT+1]},${iT[zT+2]}`;
+          !oT.has(TT) && this.open.delete(TT) && IT.push(this.filledCell(zT))
         }
-        this.burst(DY)
+        this.burst(IT)
       }
       refresh() {
         const {
-          ghostCells: YY,
-          palette: rY,
-          occupiedCells: DY
-        } = this, FY = new DD, AY = new Set, IY = [], RY = [];
-        for (let OY = 0; OY < YY.length; OY += 4) {
-          const [DY, gY, aY, vY] = [YY[OY], YY[OY + 1], YY[OY + 2], YY[OY + 3]], uY = this.api.getBlockId(DY, gY, aY), sY = `${DY},${gY},${aY}`, iY = cr(this.blockIds[vY], uY);
-          !iY && Kr(uY) ? FY.add(DY, gY, aY, zr(rY[vY]), tr, Mr(rY[vY])) : iY ? this.open.has(sY) && IY.push(this.filledCell(OY)) : FY.add(DY, gY, aY, rD, YD), !iY && this.api.isBlockInLoadedChunk(DY, gY, aY) && (AY.add(sY), RY.push(DY, gY, aY, Kr(uY) ? 0 : 1))
+          ghostCells: TT,
+          palette: oT,
+          occupiedCells: IT
+        } = this, iT = new zI, zT = new Set, kT = [], WT = [];
+        for (let XT = 0; XT < TT.length; XT += 4) {
+          const [IT, BT, FT, ST] = [TT[XT], TT[XT + 1], TT[XT + 2], TT[XT + 3]], DT = this.api.getBlockId(IT, BT, FT), LT = `${IT},${BT},${FT}`, xT = Eo(this.blockIds[ST], DT);
+          !xT && fo(DT) ? iT.add(IT, BT, FT, jo(oT[ST]), oI, no(oT[ST])) : xT ? this.open.has(LT) && kT.push(this.filledCell(XT)) : iT.add(IT, BT, FT, iI, II), !xT && this.api.isBlockInLoadedChunk(IT, BT, FT) && (zT.add(LT), WT.push(IT, BT, FT, fo(DT) ? 0 : 1))
         }
-        this.open = AY, this.nextCells = RY;
-        for (let OY = 0; OY < DY.length; OY += 3) {
-          const [YY, rY, AY] = [DY[OY], DY[OY + 1], DY[OY + 2]];
-          Kr(this.api.getBlockId(YY, rY, AY)) || FY.add(YY, rY, AY, rD, YD)
+        this.open = zT, this.nextCells = WT;
+        for (let XT = 0; XT < IT.length; XT += 3) {
+          const [TT, oT, zT] = [IT[XT], IT[XT + 1], IT[XT + 2]];
+          fo(this.api.getBlockId(TT, oT, zT)) || iT.add(TT, oT, zT, iI, II)
         }
-        this.meshes.show(FY.toArray()), this.burst(IY), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(iT.toArray()), this.burst(kT), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(YY) {
-        const rY = performance.now(),
-          DY = [];
-        for (const [FY, AY, IY] of YY) {
-          const YY = [FY, AY, IY];
-          this.lastSeenFilled = YY, this.foreseen.delete(YY.join()) || DY.push(YY)
+      burst(TT) {
+        const oT = performance.now(),
+          IT = [];
+        for (const [iT, zT, kT] of TT) {
+          const TT = [iT, zT, kT];
+          this.lastSeenFilled = TT, this.foreseen.delete(TT.join()) || IT.push(TT)
         }
-        for (const FY of DY) {
-          this.lastFilled = FY;
-          const YY = this.turn.arrived(FY, rY);
-          if (null !== YY)
-            for (const [rY, DY] of this.foreseen) DY <= YY && this.foreseen.delete(rY)
+        for (const iT of IT) {
+          this.lastFilled = iT;
+          const TT = this.turn.arrived(iT, oT);
+          if (null !== TT)
+            for (const [oT, IT] of this.foreseen) IT <= TT && this.foreseen.delete(oT)
         }
-        this.juice.filled(YY)
+        this.juice.filled(TT)
       }
       showNext() {
-        var YY;
-        const rY = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...aD(rY));
-        const DY = this.lastFilled;
-        this.nextCell = this.pickNext(null === DY ? [rY[0], rY[1] + 1, rY[2]] : (0, wr.c)(DY), (() => !1)), this.outline.show(null !== (YY = this.aimed) && void 0 !== YY ? YY : this.nextCell)
+        var TT;
+        const oT = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...DI(oT));
+        const IT = this.lastFilled;
+        this.nextCell = this.pickNext(null === IT ? [oT[0], oT[1] + 1, oT[2]] : (0, qo.b)(IT), (() => !1)), this.outline.show(null !== (TT = this.aimed) && void 0 !== TT ? TT : this.nextCell)
       }
-      pickNext(YY, rY) {
-        const DY = this.api.getPositionView(this.localPlayerId),
+      pickNext(TT, oT) {
+        const IT = this.api.getPositionView(this.localPlayerId),
           {
-            nextCells: FY
+            nextCells: iT
           } = this,
-          AY = function(YY, rY, DY, FY, AY) {
-            let IY = -1,
-              RY = !1,
-              OY = 1 / 0;
-            for (let gY = 0; gY < YY.length; gY += rY) {
-              const rY = FY(gY);
-              if (RY && !rY || AY(gY)) continue;
-              const aY = (YY[gY] + .5 - DY[0]) ** 2 + (YY[gY + 1] + .5 - DY[1]) ** 2 + (YY[gY + 2] + .5 - DY[2]) ** 2;
-              (rY && !RY || aY < OY) && (IY = gY, RY = rY, OY = aY)
+          zT = function(TT, oT, IT, iT, zT) {
+            let kT = -1,
+              WT = !1,
+              XT = 1 / 0;
+            for (let BT = 0; BT < TT.length; BT += oT) {
+              const oT = iT(BT);
+              if (WT && !oT || zT(BT)) continue;
+              const FT = (TT[BT] + .5 - IT[0]) ** 2 + (TT[BT + 1] + .5 - IT[1]) ** 2 + (TT[BT + 2] + .5 - IT[2]) ** 2;
+              (oT && !WT || FT < XT) && (kT = BT, WT = oT, XT = FT)
             }
-            return IY
-          }(FY, 4, YY, (YY => 1 === FY[YY + 3]), (YY => {
-            const AY = [FY[YY], FY[YY + 1], FY[YY + 2]];
-            return Xr(AY, DY) || this.foreseen.has(AY.join()) || rY(AY)
+            return kT
+          }(iT, 4, TT, (TT => 1 === iT[TT + 3]), (TT => {
+            const zT = [iT[TT], iT[TT + 1], iT[TT + 2]];
+            return so(zT, IT) || this.foreseen.has(zT.join()) || oT(zT)
           }));
-        return -1 === AY ? null : [FY[AY], FY[AY + 1], FY[AY + 2]]
+        return -1 === zT ? null : [iT[zT], iT[zT + 1], iT[zT + 2]]
       }
-      afterRender(YY) {
-        var rY;
-        this.turn.look(YY);
-        const DY = this.api.getTargetedBlock();
-        this.aimed = this.findAimed(null === DY ? null : DY.position), this.outline.show(null !== (rY = this.aimed) && void 0 !== rY ? rY : this.nextCell)
+      afterRender(TT) {
+        var oT;
+        this.turn.look(TT);
+        const IT = this.api.getTargetedBlock();
+        this.aimed = this.findAimed(null === IT ? null : IT.position), this.outline.show(null !== (oT = this.aimed) && void 0 !== oT ? oT : this.nextCell)
       }
-      attemptAltAction(YY) {
-        const rY = performance.now(),
-          DY = this.findAimed(YY);
-        if (null === DY && null !== this.nextCell && this.turn.tapped(YY, this.nextCell, rY), null !== DY || !(null === this.pressMs || rY - this.pressMs > 500)) return null !== DY && (this.foreseen.set(DY.join(), rY), this.lastFilled = DY, this.aimed = null, this.showNext(), this.turn.filled(DY, rY)), this.pressMs = rY, "preventPlacement";
+      attemptAltAction(TT) {
+        const oT = performance.now(),
+          IT = this.findAimed(TT);
+        if (null === IT && null !== this.nextCell && this.turn.tapped(TT, this.nextCell, oT), null !== IT || !(null === this.pressMs || oT - this.pressMs > 500)) return null !== IT && (this.foreseen.set(IT.join(), oT), this.lastFilled = IT, this.aimed = null, this.showNext(), this.turn.filled(IT, oT)), this.pressMs = oT, "preventPlacement";
         this.pressMs = null
       }
-      findAimed(YY) {
-        return function(YY, rY, DY, FY, AY, IY, RY) {
-          const OY = YY.rrY(rY),
-            gY = null === OY || null === YY.blockNameToBlockId(OY.name, !0) ? null : OY.name,
-            aY = YY.getPositionView(rY),
+      findAimed(TT) {
+        return function(TT, oT, IT, iT, zT, kT, WT) {
+          const XT = TT.eoT(oT),
+            BT = null === XT || null === TT.blockNameToBlockId(XT.name, !0) ? null : XT.name,
+            FT = TT.getPositionView(oT),
             {
-              origin: vY,
-              direction: uY
-            } = YY.getActionRay(),
-            sY = pr(FY, {
-              from: vY,
-              dir: uY,
-              reach: qr(YY.getClientOption(rY, "blockReach")),
-              solid: DY
-            }, (rY => {
-              const DY = [FY[rY], FY[rY + 1], FY[rY + 2]];
-              return !cr(AY[FY[rY + 3]], YY.getBlockId(...DY)) && !RY.has(DY.join()) && YY.isBlockInLoadedChunk(...DY) && !Xr(DY, aY)
-            }), (YY => null === gY || gY === Hr(AY[FY[YY + 3]])), (YY => null !== IY && FY[YY] === IY[0] && FY[YY + 1] === IY[1] && FY[YY + 2] === IY[2]));
-          return -1 === sY ? null : [FY[sY], FY[sY + 1], FY[sY + 2]]
-        }(this.api, this.localPlayerId, YY, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: ST,
+              direction: DT
+            } = TT.getActionRay(),
+            LT = Go(iT, {
+              from: ST,
+              dir: DT,
+              reach: to(TT.getClientOption(oT, "blockReach")),
+              solid: IT
+            }, (oT => {
+              const IT = [iT[oT], iT[oT + 1], iT[oT + 2]];
+              return !Eo(zT[iT[oT + 3]], TT.getBlockId(...IT)) && !WT.has(IT.join()) && TT.isBlockInLoadedChunk(...IT) && !so(IT, FT)
+            }), (TT => null === BT || BT === Co(zT[iT[TT + 3]])), (TT => null !== kT && iT[TT] === kT[0] && iT[TT + 1] === kT[1] && iT[TT + 2] === kT[2]));
+          return -1 === LT ? null : [iT[LT], iT[LT + 1], iT[LT + 2]]
+        }(this.api, this.localPlayerId, TT, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.pressMs = null
       }
-      filledCell(YY) {
+      filledCell(TT) {
         const {
-          ghostCells: rY
-        } = this, [DY, FY, AY] = zr(this.palette[rY[YY + 3]]);
-        return [rY[YY], rY[YY + 1], rY[YY + 2], DY, FY, AY]
+          ghostCells: oT
+        } = this, [IT, iT, zT] = jo(this.palette[oT[TT + 3]]);
+        return [oT[TT], oT[TT + 1], oT[TT + 2], IT, iT, zT]
       }
     }
 
-    function aD(YY) {
-      let [rY, DY, FY] = YY;
-      const AY = br.d.fW / 2;
-      return [Math.floor(rY), Math.floor(DY), Math.floor(FY), Math.floor(rY - AY), Math.floor(rY + AY), Math.floor(DY + br.d.jW), Math.floor(FY - AY), Math.floor(FY + AY)]
+    function DI(TT) {
+      let [oT, IT, iT] = TT;
+      const zT = Zo.c.Iw / 2;
+      return [Math.floor(oT), Math.floor(IT), Math.floor(iT), Math.floor(oT - zT), Math.floor(oT + zT), Math.floor(IT + Zo.c.Xw), Math.floor(iT - zT), Math.floor(iT + zT)]
     }
 
-    function vD(YY, rY) {
-      return rY % 4 !== 3
+    function LI(TT, oT) {
+      return oT % 4 !== 3
     }
 
-    function uD(YY, rY, DY, FY, AY) {
-      if (!YY.isBlockInLoadedChunk(rY, FY - 6, DY) || !YY.isBlockInLoadedChunk(rY, FY + 6 + AY, DY) || !YY.canModifyBlockAt(rY, FY, DY)) return NaN;
-      let IY = FY - 1;
-      if (0 !== YY.getBlockId(rY, IY, DY)) {
-        for (; IY < FY + 6 && 0 !== YY.getBlockId(rY, IY + 1, DY);) IY++;
-        return IY
+    function xI(TT, oT, IT, iT, zT) {
+      if (!TT.isBlockInLoadedChunk(oT, iT - 6, IT) || !TT.isBlockInLoadedChunk(oT, iT + 6 + zT, IT) || !TT.canModifyBlockAt(oT, iT, IT)) return NaN;
+      let kT = iT - 1;
+      if (0 !== TT.getBlockId(oT, kT, IT)) {
+        for (; kT < iT + 6 && 0 !== TT.getBlockId(oT, kT + 1, IT);) kT++;
+        return kT
       }
-      for (; IY > FY - 6;)
-        if (IY--, 0 !== YY.getBlockId(rY, IY, DY)) return IY;
+      for (; kT > iT - 6;)
+        if (kT--, 0 !== TT.getBlockId(oT, kT, IT)) return kT;
       return NaN
     }
 
-    function sD(YY, rY, DY, FY, AY) {
-      let IY = 0;
-      for (let RY = FY + 1; RY <= FY + AY; RY++) 0 !== YY.getBlockId(rY, RY, DY) && IY++;
-      return IY
+    function cI(TT, oT, IT, iT, zT) {
+      let kT = 0;
+      for (let WT = iT + 1; WT <= iT + zT; WT++) 0 !== TT.getBlockId(oT, WT, IT) && kT++;
+      return kT
     }
 
-    function iD(YY) {
-      const rY = new Map;
-      for (const RY of YY) {
-        var DY;
-        if (Number.isNaN(RY)) return null;
-        rY.set(RY, (null !== (DY = rY.get(RY)) && void 0 !== DY ? DY : 0) + 1)
+    function KI(TT) {
+      const oT = new Map;
+      for (const WT of TT) {
+        var IT;
+        if (Number.isNaN(WT)) return null;
+        oT.set(WT, (null !== (IT = oT.get(WT)) && void 0 !== IT ? IT : 0) + 1)
       }
-      let FY = NaN,
-        AY = 0;
-      for (const [RY, OY] of rY)(OY > AY || OY === AY && RY < FY) && (FY = RY, AY = OY);
-      let IY = 0;
-      for (const RY of YY) IY += Math.abs(RY - FY);
-      return IY
+      let iT = NaN,
+        zT = 0;
+      for (const [WT, XT] of oT)(XT > zT || XT === zT && WT < iT) && (iT = WT, zT = XT);
+      let kT = 0;
+      for (const WT of TT) kT += Math.abs(WT - iT);
+      return kT
     }
 
-    function yD(YY, rY, DY, FY) {
+    function MI(TT, oT, IT, iT) {
       const {
-        eye: AY,
-        forward: IY,
-        tanHalfFovX: RY,
-        tanHalfFovY: OY
-      } = YY, [gY, aY] = function(YY) {
-        let [rY, DY, FY] = YY;
-        const AY = Math.hypot(rY, FY),
-          [IY, RY] = [FY / AY, -rY / AY];
+        eye: zT,
+        forward: kT,
+        tanHalfFovX: WT,
+        tanHalfFovY: XT
+      } = TT, [BT, FT] = function(TT) {
+        let [oT, IT, iT] = TT;
+        const zT = Math.hypot(oT, iT),
+          [kT, WT] = [iT / zT, -oT / zT];
         return [
-          [IY, 0, RY],
-          [DY * RY, FY * IY - rY * RY, -DY * IY]
+          [kT, 0, WT],
+          [IT * WT, iT * kT - oT * WT, -IT * kT]
         ]
-      }(IY), [vY, uY] = [rY * RY, DY * OY], sY = IY[0] + vY * gY[0] + uY * aY[0], iY = IY[1] + uY * aY[1], yY = IY[2] + vY * gY[2] + uY * aY[2], QY = (FY - AY[1]) / iY;
-      return QY > 0 && QY < 1 / 0 ? [AY[0] + QY * sY, AY[2] + QY * yY] : null
+      }(kT), [ST, DT] = [oT * WT, IT * XT], LT = kT[0] + ST * BT[0] + DT * FT[0], xT = kT[1] + DT * FT[1], cT = kT[2] + ST * BT[2] + DT * FT[2], KT = (iT - zT[1]) / xT;
+      return KT > 0 && KT < 1 / 0 ? [zT[0] + KT * LT, zT[2] + KT * cT] : null
     }
-    const QD = "plotsBlueprintPlacementChanged",
-      oD = {
+    const rI = "plotsBlueprintPlacementChanged",
+      AI = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class WD {
-      constructor(YY, rY) {
-        this.api = YY, this.localPlayerId = rY, this.placing = null, this.view = null, this.camera = {
+    class gI {
+      constructor(TT, oT) {
+        this.api = TT, this.localPlayerId = oT, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = YY => {
-          var rY, DY, FY, IY;
-          const RY = null !== (rY = null === (DY = this.placing) || void 0 === DY ? void 0 : DY.rotation) && void 0 !== rY ? rY : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = TT => {
+          var oT, IT, iT, kT;
+          const WT = null !== (oT = null === (IT = this.placing) || void 0 === IT ? void 0 : IT.rotation) && void 0 !== oT ? oT : 0,
             {
-              size: OY
-            } = XY(YY, RY),
-            gY = this.api.lE(this.localPlayerId),
-            [aY, vY] = null !== (FY = null !== (IY = function(YY, rY, DY) {
-              const [FY, AY, IY] = rY, [RY, OY, gY] = [Math.floor(DY[0]), Math.floor(DY[1]), Math.floor(DY[2])], aY = 6 + Math.max(FY, IY) / 2, [vY, uY] = [Math.ceil(aY + FY / 2), Math.ceil(aY + IY / 2)], [sY, iY] = [RY - vY, gY - uY], [yY, QY] = [2 * vY + 1, 2 * uY + 1], oY = new Float64Array(yY * QY), WY = new Uint16Array(yY * QY);
-              for (let SY = 0; SY < yY; SY++)
-                for (let rY = 0; rY < QY; rY++) {
-                  const DY = uD(YY, sY + SY, iY + rY, OY, AY);
-                  oY[SY * QY + rY] = DY, Number.isNaN(DY) || (WY[SY * QY + rY] = sD(YY, sY + SY, iY + rY, DY, AY))
+              size: XT
+            } = lT(TT, WT),
+            BT = this.api.Wm(this.localPlayerId),
+            [FT, ST] = null !== (iT = null !== (kT = function(TT, oT, IT) {
+              const [iT, zT, kT] = oT, [WT, XT, BT] = [Math.floor(IT[0]), Math.floor(IT[1]), Math.floor(IT[2])], FT = 6 + Math.max(iT, kT) / 2, [ST, DT] = [Math.ceil(FT + iT / 2), Math.ceil(FT + kT / 2)], [LT, xT] = [WT - ST, BT - DT], [cT, KT] = [2 * ST + 1, 2 * DT + 1], MT = new Float64Array(cT * KT), rT = new Uint16Array(cT * KT);
+              for (let wT = 0; wT < cT; wT++)
+                for (let oT = 0; oT < KT; oT++) {
+                  const IT = xI(TT, LT + wT, xT + oT, XT, zT);
+                  MT[wT * KT + oT] = IT, Number.isNaN(IT) || (rT[wT * KT + oT] = cI(TT, LT + wT, xT + oT, IT, zT))
                 }
-              const EY = [];
-              let mY = null,
-                VY = 1 / 0;
-              for (let SY = 0; SY + FY <= yY; SY++)
-                for (let YY = 0; YY + IY <= QY; YY++) {
-                  const [rY, AY] = [sY + SY, iY + YY], OY = Math.hypot(rY + FY / 2 - DY[0], AY + IY / 2 - DY[2]);
-                  if (OY > aY || RY >= rY - 2 && RY < rY + FY + 2 && gY >= AY - 2 && gY < AY + IY + 2) continue;
-                  EY.length = 0;
-                  let vY = 0;
-                  for (let DY = 0; DY < FY; DY++)
-                    for (let rY = 0; rY < IY; rY++) EY.push(oY[(SY + DY) * QY + YY + rY]), vY += WY[(SY + DY) * QY + YY + rY];
-                  const uY = iD(EY);
-                  if (null === uY) continue;
-                  const yY = OY + 3 * (uY + vY);
-                  yY < VY && (VY = yY, mY = [rY, AY])
+              const AT = [];
+              let gT = null,
+                hT = 1 / 0;
+              for (let wT = 0; wT + iT <= cT; wT++)
+                for (let TT = 0; TT + kT <= KT; TT++) {
+                  const [oT, zT] = [LT + wT, xT + TT], XT = Math.hypot(oT + iT / 2 - IT[0], zT + kT / 2 - IT[2]);
+                  if (XT > FT || WT >= oT - 2 && WT < oT + iT + 2 && BT >= zT - 2 && BT < zT + kT + 2) continue;
+                  AT.length = 0;
+                  let ST = 0;
+                  for (let IT = 0; IT < iT; IT++)
+                    for (let oT = 0; oT < kT; oT++) AT.push(MT[(wT + IT) * KT + TT + oT]), ST += rT[(wT + IT) * KT + TT + oT];
+                  const DT = KI(AT);
+                  if (null === DT) continue;
+                  const cT = XT + 3 * (DT + ST);
+                  cT < hT && (hT = cT, gT = [oT, zT])
                 }
-              return mY
-            }(this.api, OY, gY)) && void 0 !== IY ? IY : this.cornerOnTarget(OY)) && void 0 !== FY ? FY : [Math.floor(gY[0]) + 2, Math.floor(gY[2])];
+              return gT
+            }(this.api, XT, BT)) && void 0 !== kT ? kT : this.cornerOnTarget(XT)) && void 0 !== iT ? iT : [Math.floor(BT[0]) + 2, Math.floor(BT[2])];
           this.placing = {
-            id: YY,
-            rotation: RY,
-            corner: [aY, this.playerLevel(), vY],
+            id: TT,
+            rotation: WT,
+            corner: [FT, this.playerLevel(), ST],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${AY} preview`)
+          }, this.update(), this.api.sendCommand(`${zT} preview`)
         }, this.rotate = () => {
           const {
-            id: YY,
-            rotation: rY,
-            corner: DY
-          } = this.placing, AY = FY[(FY.indexOf(rY) + 1) % FY.length], [IY, , RY] = XY(YY, rY).size, [OY, , gY] = XY(YY, AY).size;
-          this.moveTo(DY[0] + Math.floor(IY / 2) - Math.floor(OY / 2), DY[2] + Math.floor(RY / 2) - Math.floor(gY / 2), AY)
-        }, this.hoverAt = (YY, rY) => {
-          this.placing.hover = [YY, rY], this.moveCentreTo(this.camera, YY, rY)
+            id: TT,
+            rotation: oT,
+            corner: IT
+          } = this.placing, zT = iT[(iT.indexOf(oT) + 1) % iT.length], [kT, , WT] = lT(TT, oT).size, [XT, , BT] = lT(TT, zT).size;
+          this.moveTo(IT[0] + Math.floor(kT / 2) - Math.floor(XT / 2), IT[2] + Math.floor(WT / 2) - Math.floor(BT / 2), zT)
+        }, this.hoverAt = (TT, oT) => {
+          this.placing.hover = [TT, oT], this.moveCentreTo(this.camera, TT, oT)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (YY, rY) => {
-          const DY = this.placing,
+        }, this.beginDrag = (TT, oT) => {
+          const IT = this.placing,
             {
-              eye: FY,
-              forward: AY,
-              tanHalfFovX: IY,
-              tanHalfFovY: RY
+              eye: iT,
+              forward: zT,
+              tanHalfFovX: kT,
+              tanHalfFovY: WT
             } = this.camera,
-            OY = {
-              eye: [FY[0], FY[1], FY[2]],
-              forward: [AY[0], AY[1], AY[2]],
-              tanHalfFovX: IY,
-              tanHalfFovY: RY
+            XT = {
+              eye: [iT[0], iT[1], iT[2]],
+              forward: [zT[0], zT[1], zT[2]],
+              tanHalfFovX: kT,
+              tanHalfFovY: WT
             },
-            gY = DY.corner[1],
-            aY = yD(OY, YY, rY, gY);
-          DY.hover = null, DY.drag = aY && {
-            view: OY,
-            ground: aY,
-            corner: [DY.corner[0], DY.corner[2]],
-            level: gY
+            BT = IT.corner[1],
+            FT = MI(XT, TT, oT, BT);
+          IT.hover = null, IT.drag = FT && {
+            view: XT,
+            ground: FT,
+            corner: [IT.corner[0], IT.corner[2]],
+            level: BT
           }
-        }, this.dragTo = (YY, rY) => {
-          const DY = this.placing.drag,
-            FY = DY && yD(DY.view, YY, rY, DY.level);
-          null !== DY && null !== FY && this.moveTo(DY.corner[0] + Math.round(FY[0] - DY.ground[0]), DY.corner[1] + Math.round(FY[1] - DY.ground[1]))
+        }, this.dragTo = (TT, oT) => {
+          const IT = this.placing.drag,
+            iT = IT && MI(IT.view, TT, oT, IT.level);
+          null !== IT && null !== iT && this.moveTo(IT.corner[0] + Math.round(iT[0] - IT.ground[0]), IT.corner[1] + Math.round(iT[1] - IT.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const YY = this.view;
-          YY.waiting || (YY.blocked ? this.vo({
-            ...YY,
+          const TT = this.view;
+          TT.waiting || (TT.blocked ? this.XM({
+            ...TT,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const YY = this.placing,
+          const TT = this.placing,
             {
-              id: rY,
-              rotation: DY,
-              corner: FY
-            } = YY;
-          this.api.sendCommand(`${AY} place ${rY} ${FY.join(" ")} ${DY}`), YY.sent = {
+              id: oT,
+              rotation: IT,
+              corner: iT
+            } = TT;
+          this.api.sendCommand(`${zT} place ${oT} ${iT.join(" ")} ${IT}`), TT.sent = {
             atMs: performance.now(),
-            corner: [...FY],
-            rotation: DY,
+            corner: [...iT],
+            rotation: IT,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${AY} preview off`))
-        }, this.chunkWatch = new Ur(YY), this.meshes = new FD(YY)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${zT} preview off`))
+        }, this.chunkWatch = new Vo(TT), this.meshes = new kI(TT)
       }
       getView() {
         return this.view
       }
-      Zu() {
-        const YY = this.placing;
-        null !== YY && (null !== YY.sent && !YY.sent.timedOut && performance.now() - YY.sent.atMs > 3e3 ? (YY.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(YY) || this.chunkWatch.changed()) && this.update())
+      dD() {
+        const TT = this.placing;
+        null !== TT && (null !== TT.sent && !TT.sent.timedOut && performance.now() - TT.sent.atMs > 3e3 ? (TT.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(TT) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(YY) {
-        const rY = this.placing;
-        null !== rY && (! function(YY, rY) {
-          for (let DY = 0; DY < 3; DY++) rY.eye[DY] = YY.cameraPosition[DY], rY.forward[DY] = YY.cameraDirection[DY];
-          rY.tanHalfFovX = YY.tanHalfFovX, rY.tanHalfFovY = YY.tanHalfFovY
-        }(YY, this.camera), null !== rY.hover && this.moveCentreTo(this.camera, rY.hover[0], rY.hover[1]))
+      afterRender(TT) {
+        const oT = this.placing;
+        null !== oT && (! function(TT, oT) {
+          for (let IT = 0; IT < 3; IT++) oT.eye[IT] = TT.cameraPosition[IT], oT.forward[IT] = TT.cameraDirection[IT];
+          oT.tanHalfFovX = TT.tanHalfFovX, oT.tanHalfFovY = TT.tanHalfFovY
+        }(TT, this.camera), null !== oT.hover && this.moveCentreTo(this.camera, oT.hover[0], oT.hover[1]))
       }
-      Cy(YY) {
-        const rY = this.placing;
-        if (null === rY || null === rY.sent || "active" !== YY[0]) return;
+      Jc(TT) {
+        const oT = this.placing;
+        if (null === oT || null === oT.sent || "active" !== TT[0]) return;
         const {
-          sent: DY
-        } = rY, [, FY, AY, IY, RY, OY, gY] = YY;
-        AY && FY === rY.id && gY === DY.rotation && IY === DY.corner[0] && RY === DY.corner[1] && OY === DY.corner[2] && this.close()
+          sent: IT
+        } = oT, [, iT, zT, kT, WT, XT, BT] = TT;
+        zT && iT === oT.id && BT === IT.rotation && kT === IT.corner[0] && WT === IT.corner[1] && XT === IT.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1634,142 +1634,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(YY) {
-        let [rY, , DY] = YY;
-        const FY = this.api.getTargetedBlock();
-        if (null === FY) return null;
-        const [AY, , IY] = FY.position;
-        return [AY - Math.floor(rY / 2), IY - Math.floor(DY / 2)]
+      cornerOnTarget(TT) {
+        let [oT, , IT] = TT;
+        const iT = this.api.getTargetedBlock();
+        if (null === iT) return null;
+        const [zT, , kT] = iT.position;
+        return [zT - Math.floor(oT / 2), kT - Math.floor(IT / 2)]
       }
       playerLevel() {
-        var YY;
-        const [rY, DY, FY] = this.api.lE(this.localPlayerId);
-        if (null !== (YY = this.api.getLocalPlayerMovement()) && void 0 !== YY && YY.onGround) return Math.ceil(DY - .01);
-        const [AY, IY, RY] = [Math.floor(rY), Math.floor(DY), Math.floor(FY)];
-        for (let OY = IY; OY >= IY - 2; OY--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(AY, OY, RY))) return OY + 1;
-        return IY
+        var TT;
+        const [oT, IT, iT] = this.api.Wm(this.localPlayerId);
+        if (null !== (TT = this.api.getLocalPlayerMovement()) && void 0 !== TT && TT.onGround) return Math.ceil(IT - .01);
+        const [zT, kT, WT] = [Math.floor(oT), Math.floor(IT), Math.floor(iT)];
+        for (let XT = kT; XT >= kT - 2; XT--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(zT, XT, WT))) return XT + 1;
+        return kT
       }
-      followPlayerLevel(YY) {
-        if (ED(YY)) return !1;
-        const rY = this.playerLevel();
-        return rY !== YY.corner[1] && (YY.corner[1] = rY, !0)
+      followPlayerLevel(TT) {
+        if (hI(TT)) return !1;
+        const oT = this.playerLevel();
+        return oT !== TT.corner[1] && (TT.corner[1] = oT, !0)
       }
-      moveCentreTo(YY, rY, DY) {
-        const FY = this.placing,
-          AY = yD(YY, rY, DY, FY.corner[1]);
-        if (null !== AY) {
-          const [YY, , rY] = XY(FY.id, FY.rotation).size;
-          this.moveTo(Math.round(AY[0] - YY / 2), Math.round(AY[1] - rY / 2))
+      moveCentreTo(TT, oT, IT) {
+        const iT = this.placing,
+          zT = MI(TT, oT, IT, iT.corner[1]);
+        if (null !== zT) {
+          const [TT, , oT] = lT(iT.id, iT.rotation).size;
+          this.moveTo(Math.round(zT[0] - TT / 2), Math.round(zT[1] - oT / 2))
         }
       }
-      moveTo(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const FY = this.placing;
-        if (ED(FY)) return;
-        const [AY, IY, RY] = FY.corner;
-        if (this.centreOnPlot(AY, RY) && !this.centreOnPlot(YY, rY, DY))
-          if (this.centreOnPlot(YY, RY, DY)) rY = RY;
+      moveTo(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const iT = this.placing;
+        if (hI(iT)) return;
+        const [zT, kT, WT] = iT.corner;
+        if (this.centreOnPlot(zT, WT) && !this.centreOnPlot(TT, oT, IT))
+          if (this.centreOnPlot(TT, WT, IT)) oT = WT;
           else {
-            if (!this.centreOnPlot(AY, rY, DY)) return;
-            YY = AY
-          } YY === AY && rY === RY && DY === FY.rotation || (FY.rotation = DY, FY.corner = [YY, IY, rY], this.update())
+            if (!this.centreOnPlot(zT, oT, IT)) return;
+            TT = zT
+          } TT === zT && oT === WT && IT === iT.rotation || (iT.rotation = IT, iT.corner = [TT, kT, oT], this.update())
       }
-      centreOnPlot(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: FY,
-          corner: AY
-        } = this.placing, [IY, , RY] = XY(FY, DY).size;
-        return this.api.canModifyBlockAt(YY + Math.floor(IY / 2), AY[1], rY + Math.floor(RY / 2))
+          id: iT,
+          corner: zT
+        } = this.placing, [kT, , WT] = lT(iT, IT).size;
+        return this.api.canModifyBlockAt(TT + Math.floor(kT / 2), zT[1], oT + Math.floor(WT / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.vo(null)
+        this.placing = null, this.meshes.dispose(), this.XM(null)
       }
       update() {
         const {
-          id: YY,
-          rotation: rY,
-          corner: DY,
-          refusals: FY
-        } = this.placing, AY = new DD, IY = [];
-        let RY = !1,
-          OY = 0;
+          id: TT,
+          rotation: oT,
+          corner: IT,
+          refusals: iT
+        } = this.placing, zT = new zI, kT = [];
+        let WT = !1,
+          XT = 0;
         for (const {
-            offset: vY,
-            block: uY
+            offset: ST,
+            block: DT
           }
-          of XY(YY, rY).cells) {
-          const [YY, rY, FY] = [DY[0] + vY[0], DY[1] + vY[1], DY[2] + vY[2]];
-          IY.push(YY, rY, FY);
-          const gY = !this.api.canModifyBlockAt(YY, rY, FY),
-            aY = this.api.getBlockId(YY, rY, FY),
-            sY = !Kr(aY) && !cr(this.api.blockNameToBlockId(uY), aY);
-          RY ||= gY, OY += sY ? 1 : 0, gY || sY ? AY.add(YY, rY, FY, rD, YD) : AY.add(YY, rY, FY, zr(uY), oD, Mr(uY))
+          of lT(TT, oT).cells) {
+          const [TT, oT, iT] = [IT[0] + ST[0], IT[1] + ST[1], IT[2] + ST[2]];
+          kT.push(TT, oT, iT);
+          const BT = !this.api.canModifyBlockAt(TT, oT, iT),
+            FT = this.api.getBlockId(TT, oT, iT),
+            LT = !fo(FT) && !Eo(this.api.blockNameToBlockId(DT), FT);
+          WT ||= BT, XT += LT ? 1 : 0, BT || LT ? zT.add(TT, oT, iT, iI, II) : zT.add(TT, oT, iT, jo(DT), AI, no(DT))
         }
-        this.chunkWatch.watch(IY), this.meshes.show(AY.toArray());
-        const gY = this.view,
-          aY = ED(this.placing);
-        (null === gY || void 0 === gY ? void 0 : gY.id) === YY && gY.blocked === RY && gY.toClear === OY && gY.waiting === aY && gY.refusals === FY || this.vo({
-          id: YY,
-          blocked: RY,
-          toClear: OY,
-          waiting: aY,
-          refusals: FY
+        this.chunkWatch.watch(kT), this.meshes.show(zT.toArray());
+        const BT = this.view,
+          FT = hI(this.placing);
+        (null === BT || void 0 === BT ? void 0 : BT.id) === TT && BT.blocked === WT && BT.toClear === XT && BT.waiting === FT && BT.refusals === iT || this.XM({
+          id: TT,
+          blocked: WT,
+          toClear: XT,
+          waiting: FT,
+          refusals: iT
         })
       }
-      vo(YY) {
-        this.view = YY, vY.g.vo(QD, YY, !0)
+      XM(TT) {
+        this.view = TT, ST.h.XM(rI, TT, !0)
       }
     }
 
-    function ED(YY) {
+    function hI(TT) {
       let {
-        sent: rY
-      } = YY;
-      return null !== rY && !rY.timedOut
+        sent: oT
+      } = TT;
+      return null !== oT && !oT.timedOut
     }
-    var mD = DY(3815),
-      VD = DY(38493);
+    var wI = IT(3811),
+      mI = IT(38100);
 
-    function SD(YY, rY, DY) {
-      const FY = [255 * YY, 255 * rY, 255 * DY],
-        [AY, IY, RY] = FY.map((YY => YY + .4 * (255 - YY)));
+    function eI(TT, oT, IT) {
+      const iT = [255 * TT, 255 * oT, 255 * IT],
+        [zT, kT, WT] = iT.map((TT => TT + .4 * (255 - TT)));
       return {
         texture: "square_particle",
-        gu: 48,
-        minLifeTime: .3 / VD.b,
-        maxLifeTime: .55 / VD.b,
+        fD: 48,
+        minLifeTime: .3 / mI.c,
+        maxLifeTime: .55 / mI.c,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * VD.b * VD.b, 0],
+        gravity: [0, -14 * mI.c * mI.c, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...FY, 1],
-          maxColor: [AY, IY, RY, 1]
+          minColor: [...iT, 1],
+          maxColor: [zT, kT, WT, 1]
         }, {
           timeFraction: 1,
-          minColor: [...FY, 0],
-          maxColor: [AY, IY, RY, 0]
+          minColor: [...iT, 0],
+          maxColor: [zT, kT, WT, 0]
         }],
-        blendMode: mD.g.Standard
+        blendMode: wI.h.Standard
       }
     }
-    const lD = {
+    const RI = {
       texture: "glint",
       mipmaps: !1,
-      gu: 96,
-      minLifeTime: .5 / VD.b,
-      maxLifeTime: .9 / VD.b,
+      fD: 96,
+      minLifeTime: .5 / mI.c,
+      maxLifeTime: .9 / mI.c,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * VD.b * VD.b, 0],
+      gravity: [0, 2 * mI.c * mI.c, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1778,601 +1778,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: mD.g.OneOne
+      blendMode: wI.h.OneOne
     };
-    class TD {
-      constructor(YY, rY) {
-        this.api = YY, this.localPlayerId = rY, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class uI {
+      constructor(TT, oT) {
+        this.api = TT, this.localPlayerId = oT, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(YY) {
+      filled(TT) {
         if (this.api.particlesEnabled())
-          for (const [rY, DY, FY, AY, IY, RY] of YY.slice(0, 3)) {
-            const YY = `${AY},${IY},${RY}`;
-            let OY = this.chips.get(YY);
-            void 0 === OY && (OY = this.api.createParticles(SD(AY, IY, RY), {
-              pos: [rY + .5, DY + .5, FY + .5]
-            }), this.chips.set(YY, OY));
-            for (let rY = 0; rY < 8; rY++) this.setPoint(rY, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            OY.emitPoints([rY + .5, DY + .5, FY + .5], this.points, 8)
+          for (const [oT, IT, iT, zT, kT, WT] of TT.slice(0, 3)) {
+            const TT = `${zT},${kT},${WT}`;
+            let XT = this.chips.get(TT);
+            void 0 === XT && (XT = this.api.createParticles(eI(zT, kT, WT), {
+              pos: [oT + .5, IT + .5, iT + .5]
+            }), this.chips.set(TT, XT));
+            for (let oT = 0; oT < 8; oT++) this.setPoint(oT, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            XT.emitPoints([oT + .5, IT + .5, iT + .5], this.points, 8)
           }
       }
-      layerDone(YY) {
+      layerDone(TT) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const rY = YY.length / 3;
-        if (0 === rY || !this.api.particlesEnabled()) return;
-        const DY = Math.min(rY, 48),
-          [FY, AY, IY] = [YY[0] + .5, YY[1] + 1, YY[2] + .5];
-        let RY = 0;
-        for (let OY = 0; OY < DY; OY++) {
-          const gY = 3 * Math.floor(OY * rY / DY);
-          for (let rY = 0; rY < 2; rY++) this.setPoint(RY++, YY[gY] + Math.random() - FY, YY[gY + 1] + 1 - AY, YY[gY + 2] + Math.random() - IY, .6 + .8 * Math.random())
+        const oT = TT.length / 3;
+        if (0 === oT || !this.api.particlesEnabled()) return;
+        const IT = Math.min(oT, 48),
+          [iT, zT, kT] = [TT[0] + .5, TT[1] + 1, TT[2] + .5];
+        let WT = 0;
+        for (let XT = 0; XT < IT; XT++) {
+          const BT = 3 * Math.floor(XT * oT / IT);
+          for (let oT = 0; oT < 2; oT++) this.setPoint(WT++, TT[BT] + Math.random() - iT, TT[BT + 1] + 1 - zT, TT[BT + 2] + Math.random() - kT, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(lD, {
-          pos: [FY, AY, IY]
-        }), this.sparkles.emitPoints([FY, AY, IY], this.points, RY)
+        this.sparkles ??= this.api.createParticles(RI, {
+          pos: [iT, zT, kT]
+        }), this.sparkles.emitPoints([iT, zT, kT], this.points, WT)
       }
       dispose() {
-        var YY;
-        for (const rY of this.chips.values()) rY.stop();
-        this.chips.clear(), null === (YY = this.sparkles) || void 0 === YY || YY.stop(), this.sparkles = null
+        var TT;
+        for (const oT of this.chips.values()) oT.stop();
+        this.chips.clear(), null === (TT = this.sparkles) || void 0 === TT || TT.stop(), this.sparkles = null
       }
-      setPoint(YY, rY, DY, FY, AY) {
-        const IY = 4 * YY;
-        this.points[IY] = rY, this.points[IY + 1] = DY, this.points[IY + 2] = FY, this.points[IY + 3] = AY
+      setPoint(TT, oT, IT, iT, zT) {
+        const kT = 4 * TT;
+        this.points[kT] = oT, this.points[kT + 1] = IT, this.points[kT + 2] = iT, this.points[kT + 3] = zT
       }
     }
-    var eD = DY(1851);
-    const ND = "SpecialAction1",
-      BD = "KeyY",
-      cD = "KeyX";
+    var vI = IT(1794);
+    const EI = "SpecialAction1",
+      fI = "KeyY",
+      CI = "KeyX";
 
-    function KD(YY) {
+    function jI(TT) {
       let {
-        placement: rY
-      } = YY;
-      const DY = (0, cY.k)(QD, rY.getView()),
+        placement: oT
+      } = TT;
+      const IT = (0, ET.i)(rI, oT.getView()),
         {
-          t: FY
-        } = (0, HY.C)(),
+          t: iT
+        } = (0, CT.t)(),
         {
-          isTouchScreen: AY
-        } = (0, OY.j)(["isTouchScreen"]),
-        IY = null !== DY,
-        RY = IY && !DY.blocked && !DY.waiting;
-      if ((0, BY.e)((YY => IY && !YY.repeat && !(0, aY.isTypingInInput)() && !(0, gY.p)() && !AY), (YY => {
-          const DY = function(YY, rY, DY) {
-            if (YY === cD) return rY.stop;
-            if (YY === BD) return DY ? rY.build : zD;
-            return eD.u[ND].includes(YY) ? rY.rotate : null
-          }(YY.code, rY, RY);
-          null !== DY && (YY.stopPropagation(), DY())
-        })), !IY) return null;
-      let vY = AY ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return DY.blocked ? vY = "plotsGame:placementOffPlot" : DY.toClear > 0 && (vY = "plotsGame:placementClear"), (0, pY.jsx)(Rr.e, {
+          isTouchScreen: zT
+        } = (0, XT.k)(["isTouchScreen"]),
+        kT = null !== IT,
+        WT = kT && !IT.blocked && !IT.waiting;
+      if ((0, vT.b)((TT => kT && !TT.repeat && !(0, FT.isTypingInInput)() && !(0, BT.t)() && !zT), (TT => {
+          const IT = function(TT, oT, IT) {
+            if (TT === CI) return oT.stop;
+            if (TT === fI) return IT ? oT.build : UI;
+            return vI.z[EI].includes(TT) ? oT.rotate : null
+          }(TT.code, oT, WT);
+          null !== IT && (TT.stopPropagation(), IT())
+        })), !kT) return null;
+      let ST = zT ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return IT.blocked ? ST = "plotsGame:placementOffPlot" : IT.toClear > 0 && (ST = "plotsGame:placementClear"), (0, tT.jsx)(Wo.e, {
         placement: "bottom",
-        children: (0, pY.jsxs)("div", {
+        children: (0, tT.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, pY.jsx)("div", {
+          children: [(0, tT.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: FY(yY(DY.id).displayName.translationKey)
-          }), (0, pY.jsx)("div", {
-            className: lY()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: DY.refusals > 0
+            children: iT(cT(IT.id).displayName.translationKey)
+          }), (0, tT.jsx)("div", {
+            className: mT()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: IT.refusals > 0
             }),
-            children: FY(vY)
-          }, DY.refusals), (0, pY.jsxs)("div", {
+            children: iT(ST)
+          }, IT.refusals), (0, tT.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, pY.jsxs)(eY.f, {
-              onClick: rY.rotate,
-              children: [(0, pY.jsx)(HD, {
-                noaAction: ND
-              }), FY("plotsGame:placementRotate")]
-            }), (0, pY.jsxs)(eY.D, {
-              onClick: rY.stop,
-              children: [(0, pY.jsx)(HD, {
-                keyCode: cD
-              }), FY("general:cancel")]
-            }), (0, pY.jsxs)(eY.n, {
-              disabled: !RY,
-              onClick: rY.build,
-              children: [(0, pY.jsx)(HD, {
-                keyCode: BD
-              }), FY("plotsGame:placementBuild")]
+            children: [(0, tT.jsxs)(RT.e, {
+              onClick: oT.rotate,
+              children: [(0, tT.jsx)(JI, {
+                noaAction: EI
+              }), iT("plotsGame:placementRotate")]
+            }), (0, tT.jsxs)(RT.C, {
+              onClick: oT.stop,
+              children: [(0, tT.jsx)(JI, {
+                keyCode: CI
+              }), iT("general:cancel")]
+            }), (0, tT.jsxs)(RT.m, {
+              disabled: !WT,
+              onClick: oT.build,
+              children: [(0, tT.jsx)(JI, {
+                keyCode: fI
+              }), iT("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function HD(YY) {
-      return (0, pY.jsx)(gr.d, {
+    function JI(TT) {
+      return (0, tT.jsx)(Bo.e, {
         className: "PlotsPlacementKey",
-        ...YY
+        ...TT
       })
     }
 
-    function zD() {}
-    var ZD = DY(4097);
-    class CD {
-      constructor(YY) {
-        this.placement = YY, this.press = null
+    function UI() {}
+    var aI = IT(4061);
+    class YI {
+      constructor(TT) {
+        this.placement = TT, this.press = null
       }
-      down(YY) {
+      down(TT) {
         if (null !== this.press) return !1;
         const {
-          id: rY,
-          mouse: DY,
-          x: FY,
-          y: AY,
-          atMs: IY
-        } = YY;
+          id: oT,
+          mouse: IT,
+          x: iT,
+          y: zT,
+          atMs: kT
+        } = TT;
         return this.press = {
-          id: rY,
-          mouse: DY,
-          x: FY,
-          y: AY,
-          atMs: IY,
+          id: oT,
+          mouse: IT,
+          x: iT,
+          y: zT,
+          atMs: kT,
           moved: !1
-        }, DY || this.placement.beginDrag(YY.ndcX, YY.ndcY), !0
+        }, IT || this.placement.beginDrag(TT.ndcX, TT.ndcY), !0
       }
-      move(YY) {
-        const rY = this.press;
-        null !== rY && rY.id === YY.id && (rY.moved ||= Math.hypot(YY.x - rY.x, YY.y - rY.y) > 8), YY.mouse ? this.placement.hoverAt(YY.ndcX, YY.ndcY) : (null === rY || void 0 === rY ? void 0 : rY.id) === YY.id && this.placement.dragTo(YY.ndcX, YY.ndcY)
+      move(TT) {
+        const oT = this.press;
+        null !== oT && oT.id === TT.id && (oT.moved ||= Math.hypot(TT.x - oT.x, TT.y - oT.y) > 8), TT.mouse ? this.placement.hoverAt(TT.ndcX, TT.ndcY) : (null === oT || void 0 === oT ? void 0 : oT.id) === TT.id && this.placement.dragTo(TT.ndcX, TT.ndcY)
       }
-      up(YY) {
-        const rY = this.press;
-        (null === rY || void 0 === rY ? void 0 : rY.id) === YY.id && (this.move(YY), this.end(), !rY.moved && (rY.mouse || YY.atMs - rY.atMs <= 250) && this.placement.tap())
+      up(TT) {
+        const oT = this.press;
+        (null === oT || void 0 === oT ? void 0 : oT.id) === TT.id && (this.move(TT), this.end(), !oT.moved && (oT.mouse || TT.atMs - oT.atMs <= 250) && this.placement.tap())
       }
-      cancel(YY) {
-        var rY;
-        (null === (rY = this.press) || void 0 === rY ? void 0 : rY.id) === YY && this.end()
+      cancel(TT) {
+        var oT;
+        (null === (oT = this.press) || void 0 === oT ? void 0 : oT.id) === TT && this.end()
       }
-      leave(YY) {
+      leave(TT) {
         let {
-          id: rY,
-          mouse: DY
-        } = YY;
-        DY && this.placement.endHover(), this.cancel(rY)
+          id: oT,
+          mouse: IT
+        } = TT;
+        IT && this.placement.endHover(), this.cancel(oT)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function fD(YY) {
+    function QI(TT) {
       let {
-        placement: rY
-      } = YY;
-      return null === (0, cY.k)(QD, rY.getView()) ? null : (0, pY.jsx)(jD, {
-        placement: rY
+        placement: oT
+      } = TT;
+      return null === (0, ET.i)(rI, oT.getView()) ? null : (0, tT.jsx)(OI, {
+        placement: oT
       })
     }
 
-    function jD(YY) {
+    function OI(TT) {
       let {
-        placement: rY
-      } = YY;
-      (0, ZD.b)(!0, !0, "PlotsPlacementLayer");
-      const DY = (0, IY.useMemo)((() => new CD(rY)), [rY]);
-      return (0, pY.jsx)("div", {
+        placement: oT
+      } = TT;
+      (0, aI.d)(!0, !0, "PlotsPlacementLayer");
+      const IT = (0, kT.useMemo)((() => new YI(oT)), [oT]);
+      return (0, tT.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: YY => {
-          "mouse" === YY.pointerType && 0 !== YY.button || !DY.down(hD(YY)) || YY.currentTarget.setPointerCapture(YY.pointerId)
+        onPointerDown: TT => {
+          "mouse" === TT.pointerType && 0 !== TT.button || !IT.down(HI(TT)) || TT.currentTarget.setPointerCapture(TT.pointerId)
         },
-        onPointerMove: YY => {
-          DY.move(hD(YY))
+        onPointerMove: TT => {
+          IT.move(HI(TT))
         },
-        onPointerUp: YY => {
-          DY.up(hD(YY))
+        onPointerUp: TT => {
+          IT.up(HI(TT))
         },
-        onPointerCancel: YY => {
-          DY.cancel(YY.pointerId)
+        onPointerCancel: TT => {
+          IT.cancel(TT.pointerId)
         },
-        onLostPointerCapture: YY => {
-          DY.cancel(YY.pointerId)
+        onLostPointerCapture: TT => {
+          IT.cancel(TT.pointerId)
         },
-        onPointerLeave: YY => {
-          DY.leave(hD(YY))
+        onPointerLeave: TT => {
+          IT.leave(HI(TT))
         },
         "aria-hidden": !0
       })
     }
 
-    function hD(YY) {
+    function HI(TT) {
       const {
-        left: rY,
-        top: DY,
-        width: FY,
-        height: AY
-      } = YY.currentTarget.getBoundingClientRect();
+        left: oT,
+        top: IT,
+        width: iT,
+        height: zT
+      } = TT.currentTarget.getBoundingClientRect();
       return {
-        id: YY.pointerId,
-        mouse: "mouse" === YY.pointerType,
-        x: YY.clientX,
-        y: YY.clientY,
-        ndcX: (YY.clientX - rY) / FY * 2 - 1,
-        ndcY: 1 - (YY.clientY - DY) / AY * 2,
-        atMs: YY.timeStamp
+        id: TT.pointerId,
+        mouse: "mouse" === TT.pointerType,
+        x: TT.clientX,
+        y: TT.clientY,
+        ndcX: (TT.clientX - oT) / iT * 2 - 1,
+        ndcY: 1 - (TT.clientY - IT) / zT * 2,
+        atMs: TT.timeStamp
       }
     }
-    var dD = DY(2219),
-      JD = DY(36130),
-      MD = DY(1834),
-      wD = DY(1267);
-    const bD = {
+    var nI = IT(2176),
+      qI = IT(35692),
+      ZI = IT(1784),
+      lI = IT(1231);
+    const sI = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function XD(YY) {
+    function tI(TT) {
       let {
-        hud: rY
-      } = YY;
-      const DY = (0, cY.k)(vr, rY.getPlot()),
-        [FY, AY] = (0, IY.useState)(null),
-        RY = (0, JD.l)(FY);
-      if ("none" === DY[0]) return null;
-      const [, OY, gY, aY, vY, uY] = DY;
-      return (0, pY.jsx)("div", {
-        className: lY()("PlotsPlotBannerContainer", {
-          Below: RY
+        hud: oT
+      } = TT;
+      const IT = (0, ET.i)(So, oT.getPlot()),
+        [iT, zT] = (0, kT.useState)(null),
+        WT = (0, qI.l)(iT);
+      if ("none" === IT[0]) return null;
+      const [, XT, BT, FT, ST, DT] = IT;
+      return (0, tT.jsx)("div", {
+        className: mT()("PlotsPlotBannerContainer", {
+          Below: WT
         }),
-        children: (0, pY.jsx)(qD, {
-          plotX: OY,
-          plotZ: gY,
-          ownerName: aY,
-          ownerId: vY,
-          relation: uY,
-          plaqueRef: AY
-        }, `${OY},${gY}`)
+        children: (0, tT.jsx)(GI, {
+          plotX: XT,
+          plotZ: BT,
+          ownerName: FT,
+          ownerId: ST,
+          relation: DT,
+          plaqueRef: zT
+        }, `${XT},${BT}`)
       })
     }
 
-    function qD(YY) {
-      var rY, DY;
+    function GI(TT) {
+      var oT, IT;
       let {
-        plotX: FY,
-        plotZ: AY,
-        ownerName: IY,
-        ownerId: RY,
-        relation: OY,
-        plaqueRef: gY
-      } = YY;
+        plotX: iT,
+        plotZ: zT,
+        ownerName: kT,
+        ownerId: WT,
+        relation: XT,
+        plaqueRef: BT
+      } = TT;
       const {
-        t: aY
-      } = (0, HY.C)(), vY = (0, MD.h)("hiddenPlayerNames"), uY = (0, MD.h)("players"), sY = null === RY ? null : null !== (rY = null === (DY = uY.byId[RY]) || void 0 === DY ? void 0 : DY.cosmetics) && void 0 !== rY ? rY : null, iY = aY("plotsGame:plotBannerCoords", {
-        x: FY,
-        z: AY
-      }), yY = "own" === OY || null !== IY;
-      return (0, pY.jsxs)("div", {
-        ref: gY,
-        className: lY()("PlotsPlotBanner", {
-          Own: "own" === OY,
-          Shared: "shared" === OY
+        t: FT
+      } = (0, CT.t)(), ST = (0, ZI.f)("hiddenPlayerNames"), DT = (0, ZI.f)("players"), LT = null === WT ? null : null !== (oT = null === (IT = DT.byId[WT]) || void 0 === IT ? void 0 : IT.cosmetics) && void 0 !== oT ? oT : null, xT = FT("plotsGame:plotBannerCoords", {
+        x: iT,
+        z: zT
+      }), cT = "own" === XT || null !== kT;
+      return (0, tT.jsxs)("div", {
+        ref: BT,
+        className: mT()("PlotsPlotBanner", {
+          Own: "own" === XT,
+          Shared: "shared" === XT
         }),
         role: "status",
-        children: [(0, pY.jsxs)("span", {
-          className: lY()("PlotsPlotBannerSeal", {
-            Face: null !== sY
+        children: [(0, tT.jsxs)("span", {
+          className: mT()("PlotsPlotBannerSeal", {
+            Face: null !== LT
           }),
-          children: [null !== sY && (0, pY.jsx)(dD.c, {
-            cosmetics: sY
-          }), null === sY && (0, pY.jsx)(TY.e, {
-            name: bD[OY]
+          children: [null !== LT && (0, tT.jsx)(nI.b, {
+            cosmetics: LT
+          }), null === LT && (0, tT.jsx)(eT.e, {
+            name: sI[XT]
           })]
-        }), (0, pY.jsxs)("div", {
+        }), (0, tT.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, pY.jsxs)("div", {
+          children: [(0, tT.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === OY && aY("plotsGame:plotBannerYours"), "own" !== OY && null !== IY && aY("plotsGame:plotBannerOwner", {
-              name: (0, wD.g)(IY, vY)
-            }), !yY && iY]
-          }), yY && (0, pY.jsxs)("div", {
+            children: ["own" === XT && FT("plotsGame:plotBannerYours"), "own" !== XT && null !== kT && FT("plotsGame:plotBannerOwner", {
+              name: (0, lI.f)(kT, ST)
+            }), !cT && xT]
+          }), cT && (0, tT.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [iY, "shared" === OY && (0, pY.jsx)("span", {
+            children: [xT, "shared" === XT && (0, tT.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: aY("plotsGame:plotBannerShared")
+              children: FT("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function pD(YY) {
+    function pI(TT) {
       let {
-        progress: rY,
-        goal: DY
-      } = YY;
-      const FY = Math.min(rY, DY);
-      return (0, pY.jsxs)("div", {
+        progress: oT,
+        goal: IT
+      } = TT;
+      const iT = Math.min(oT, IT);
+      return (0, tT.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, pY.jsx)("div", {
+        children: [(0, tT.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": DY,
-          "aria-valuenow": FY,
-          children: (0, pY.jsx)("div", {
+          "aria-valuemax": IT,
+          "aria-valuenow": iT,
+          children: (0, tT.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${FY/DY})`
+              transform: `scaleX(${iT/IT})`
             }
           })
-        }), (0, pY.jsxs)("span", {
+        }), (0, tT.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [FY, "/", DY]
+          children: [iT, "/", IT]
         })]
       })
     }
 
-    function kD(YY) {
+    function bI(TT) {
       return {
-        translationKey: `plotsGame:${YY}`,
+        translationKey: `plotsGame:${TT}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const GD = {
+    const yI = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: kD("starterLotHouseHint", ["alt-fire"]),
-        touch: kD("starterLotHouseHint", ["alt-fire"]),
+        desktop: bI("starterLotHouseHint", ["alt-fire"]),
+        touch: bI("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: kD("starterLotGardenHint", ["alt-fire"]),
-        touch: kD("starterLotGardenHint", ["alt-fire"]),
+        desktop: bI("starterLotGardenHint", ["alt-fire"]),
+        touch: bI("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: kD("starterLotBreakHint", ["primary-fire"]),
-        touch: kD("starterLotBreakHintTouch"),
+        desktop: bI("starterLotBreakHint", ["primary-fire"]),
+        touch: bI("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: kD("starterLotFlyHint", ["jump"]),
-        touch: kD("starterLotFlyHintTouch"),
+        desktop: bI("starterLotFlyHint", ["jump"]),
+        touch: bI("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: kD("starterLotBackpackHint", ["OpenInventory"]),
-        touch: kD("starterLotBackpackHintTouch"),
+        desktop: bI("starterLotBackpackHint", ["OpenInventory"]),
+        touch: bI("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: kD("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: kD("starterLotNeighbourHintTouch"),
+        desktop: bI("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: bI("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function xD(YY, rY, DY) {
+    function NI(TT, oT, IT) {
       const {
-        translationKey: FY,
-        actions: AY
-      } = DY ? rY.touch : rY.desktop;
-      if (0 === AY.length) return YY(FY);
-      const IY = [];
-      for (const RY of AY) {
-        const FY = (0, eD.q)(RY, DY),
-          AY = eD.u[RY][0];
-        if (null === FY && void 0 === AY) return YY(rY.plainKey);
-        IY.push(null === FY ? (0, eD.n)(AY) : YY(FY.translationKey))
+        translationKey: iT,
+        actions: zT
+      } = IT ? oT.touch : oT.desktop;
+      if (0 === zT.length) return TT(iT);
+      const kT = [];
+      for (const WT of zT) {
+        const iT = (0, vI.x)(WT, IT),
+          zT = vI.z[WT][0];
+        if (null === iT && void 0 === zT) return TT(oT.plainKey);
+        kT.push(null === iT ? (0, vI.s)(zT) : TT(iT.translationKey))
       }
-      return YY(FY, {
-        key: IY.join("")
+      return TT(iT, {
+        key: kT.join("")
       })
     }
 
-    function nD(YY) {
+    function PI(TT) {
       let {
-        hud: rY
-      } = YY;
-      const DY = (0, cY.k)(ar, rY.getStep()),
+        hud: oT
+      } = TT;
+      const IT = (0, ET.i)(Fo, oT.getStep()),
         {
-          t: FY
-        } = (0, HY.C)();
-      return (0, pY.jsxs)(Rr.e, {
+          t: iT
+        } = (0, CT.t)();
+      return (0, tT.jsxs)(Wo.e, {
         placement: "bottom",
-        children: ["step" === DY[0] && (0, pY.jsx)(PD, {
-          step: DY[1],
-          progress: DY[2],
-          goal: DY[3]
-        }, DY[1]), "celebrate" === DY[0] && (0, pY.jsx)(UD, {
-          className: lY()("Celebrate", {
-            Gold: "house" === DY[1]
+        children: ["step" === IT[0] && (0, tT.jsx)(dI, {
+          step: IT[1],
+          progress: IT[2],
+          goal: IT[3]
+        }, IT[1]), "celebrate" === IT[0] && (0, tT.jsx)(VI, {
+          className: mT()("Celebrate", {
+            Gold: "house" === IT[1]
           }),
           icon: "star",
-          title: FY("house" === DY[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${DY[1]}`)]
+          title: iT("house" === IT[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${IT[1]}`)]
       })
     }
 
-    function PD(YY) {
+    function dI(TT) {
       let {
-        step: rY,
-        progress: DY,
-        goal: FY
-      } = YY;
+        step: oT,
+        progress: IT,
+        goal: iT
+      } = TT;
       const {
-        isTouchScreen: AY
-      } = (0, OY.j)(["isTouchScreen"]), {
-        t: IY
-      } = (0, HY.C)(), RY = GD[rY];
-      return (0, pY.jsxs)(UD, {
-        icon: RY.icon,
-        title: IY(RY.titleKey),
-        children: [(0, pY.jsx)("div", {
+        isTouchScreen: zT
+      } = (0, XT.k)(["isTouchScreen"]), {
+        t: kT
+      } = (0, CT.t)(), WT = yI[oT];
+      return (0, tT.jsxs)(VI, {
+        icon: WT.icon,
+        title: kT(WT.titleKey),
+        children: [(0, tT.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: xD(IY, RY, AY)
-        }), FY > 1 && (0, pY.jsx)(pD, {
-          progress: DY,
-          goal: FY
-        }), "backpack" === rY && AY && (0, pY.jsx)(LD, {})]
+          children: NI(kT, WT, zT)
+        }), iT > 1 && (0, tT.jsx)(pI, {
+          progress: IT,
+          goal: iT
+        }), "backpack" === oT && zT && (0, tT.jsx)(Ti, {})]
       })
     }
 
-    function UD(YY) {
+    function VI(TT) {
       let {
-        className: rY,
-        icon: DY,
-        title: FY,
-        children: AY
-      } = YY;
-      return (0, pY.jsxs)("div", {
-        className: lY()("PlotsStepCard", rY),
+        className: oT,
+        icon: IT,
+        title: iT,
+        children: zT
+      } = TT;
+      return (0, tT.jsxs)("div", {
+        className: mT()("PlotsStepCard", oT),
         role: "status",
-        children: [(0, pY.jsx)("span", {
+        children: [(0, tT.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, pY.jsx)(TY.e, {
-            name: DY
+          children: (0, tT.jsx)(eT.e, {
+            name: IT
           })
-        }), (0, pY.jsxs)("div", {
+        }), (0, tT.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, pY.jsx)("div", {
+          children: [(0, tT.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: FY
-          }), AY]
+            children: iT
+          }), zT]
         })]
       })
     }
 
-    function LD() {
-      return (0, IY.useEffect)((() => (OY.b.set({
+    function Ti() {
+      return (0, kT.useEffect)((() => (XT.c.set({
         backpackPointerRequested: !0
       }), () => {
-        OY.b.set({
+        XT.c.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const tD = function(YY, rY, DY, FY) {
+    const oi = function(TT, oT, IT, iT) {
       let {
-        localPlayerId: AY
-      } = FY;
-      const OY = new ur;
-      let gY = null,
-        aY = null,
-        vY = null,
-        uY = null,
-        sY = null;
-      const iY = [];
+        localPlayerId: zT
+      } = iT;
+      const XT = new Do;
+      let BT = null,
+        FT = null,
+        ST = null,
+        DT = null,
+        LT = null;
+      const xT = [];
       return {
-        onCreate: YY => {
-          gY = new TD(YY, AY), aY = new gD(YY, AY, gY), vY = new gD(YY, AY, gY), uY = new WD(YY, AY), sY = new VY(YY, uY), iY.push((0, RY.q)((0, IY.createElement)(IY.Fragment, null, (0, IY.createElement)(XD, {
-            hud: OY
-          }), (0, IY.createElement)(nD, {
-            hud: OY
-          }), (0, IY.createElement)(ir, {
-            hud: OY,
-            journal: sY
-          }), (0, IY.createElement)(fD, {
-            placement: uY
-          }), (0, IY.createElement)(KD, {
-            placement: uY
+        onCreate: TT => {
+          BT = new uI(TT, zT), FT = new SI(TT, zT, BT), ST = new SI(TT, zT, BT), DT = new gI(TT, zT), LT = new hT(TT, DT), xT.push((0, WT.u)((0, kT.createElement)(kT.Fragment, null, (0, kT.createElement)(tI, {
+            hud: XT
+          }), (0, kT.createElement)(PI, {
+            hud: XT
+          }), (0, kT.createElement)(xo, {
+            hud: XT,
+            journal: LT
+          }), (0, kT.createElement)(QI, {
+            placement: DT
+          }), (0, kT.createElement)(jI, {
+            placement: DT
           })), {
-            content: (0, IY.createElement)(Ar, {
-              journal: sY
+            content: (0, kT.createElement)(zo, {
+              journal: LT
             })
           }))
         },
-        Zu: () => {
-          aY.Zu(), vY.Zu(), uY.Zu(), sY.Zu()
+        dD: () => {
+          FT.dD(), ST.dD(), DT.dD(), LT.dD()
         },
-        onPlayerAttemptAltAction: (YY, rY, DY, FY, AY, IY) => {
-          var RY;
-          if (null !== IY) return;
-          const OY = void 0 === rY ? null : [rY, DY, FY];
-          return null !== (RY = aY.attemptAltAction(OY)) && void 0 !== RY ? RY : vY.attemptAltAction(OY)
+        onPlayerAttemptAltAction: (TT, oT, IT, iT, zT, kT) => {
+          var WT;
+          if (null !== kT) return;
+          const XT = void 0 === oT ? null : [oT, IT, iT];
+          return null !== (WT = FT.attemptAltAction(XT)) && void 0 !== WT ? WT : ST.attemptAltAction(XT)
         },
         onPlayerClickUp: () => {
-          aY.endPress(), vY.endPress()
+          FT.endPress(), ST.endPress()
         },
-        onAfterRender: (YY, rY) => {
-          uY.afterRender(rY), aY.afterRender(rY), vY.afterRender(rY)
+        onAfterRender: (TT, oT) => {
+          DT.afterRender(oT), FT.afterRender(oT), ST.afterRender(oT)
         },
         onClose: () => {
-          for (const YY of iY) YY();
-          gY.dispose(), aY.dispose(), vY.dispose(), uY.dispose(), gY = null, aY = null, vY = null, uY = null, sY = null
+          for (const TT of xT) TT();
+          BT.dispose(), FT.dispose(), ST.dispose(), DT.dispose(), BT = null, FT = null, ST = null, DT = null, LT = null
         },
-        onReceivedMessageFromServer: (YY, rY) => {
-          if ("plotsStarterLot" === YY) OY.receiveStep(rY);
-          else if ("plotsPlot" === YY) OY.receivePlot(rY);
-          else if ("plotsStarterHouse" === YY) aY.Cy(rY);
-          else if ("plotsBlueprint" === YY) {
-            const YY = rY;
-            vY.Cy(YY), uY.Cy(YY)
-          } else "plotsJournal" === YY ? sY.Cy(rY) : "plotsJournalOpen" === YY ? sY.openFromServer() : "plotsPreviewEnd" === YY && uY.endFromServer()
+        onReceivedMessageFromServer: (TT, oT) => {
+          if ("plotsStarterLot" === TT) XT.receiveStep(oT);
+          else if ("plotsPlot" === TT) XT.receivePlot(oT);
+          else if ("plotsStarterHouse" === TT) FT.Jc(oT);
+          else if ("plotsBlueprint" === TT) {
+            const TT = oT;
+            ST.Jc(TT), DT.Jc(TT)
+          } else "plotsJournal" === TT ? LT.Jc(oT) : "plotsJournalOpen" === TT ? LT.openFromServer() : "plotsPreviewEnd" === TT && DT.endFromServer()
         }
       }
     }
   },
-  38493: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      c: () => IY
+  38100: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => iT,
+      e: () => kT
     });
-    const FY = 1 / .6,
-      AY = {
+    const iT = 1 / .6,
+      zT = {
         kind: "smokePuff"
       };
-    class IY {
-      constructor(YY, rY, DY) {
-        this.style = YY, this.gu = rY, this.half = DY, this.particles = null, this.lastFrame = -1
+    class kT {
+      constructor(TT, oT, IT) {
+        this.style = TT, this.fD = oT, this.half = IT, this.particles = null, this.lastFrame = -1
       }
-      emit(YY, rY, DY) {
-        let IY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return DY !== this.lastFrame && (this.lastFrame = DY, this.particles || (this.particles = YY.createParticles(function(YY, rY) {
+      emit(TT, oT, IT) {
+        let kT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return IT !== this.lastFrame && (this.lastFrame = IT, this.particles || (this.particles = TT.createParticles(function(TT, oT) {
           const [
-            [DY, IY, RY],
-            [OY, gY, aY]
-          ] = YY.colours;
+            [IT, kT, WT],
+            [XT, BT, FT]
+          ] = TT.colours;
           return {
-            texture: YY.soft ? AY : "square_particle",
-            gu: rY,
-            minLifeTime: YY.life[0] / FY,
-            maxLifeTime: YY.life[1] / FY,
-            minEmitPower: YY.power[0] * FY,
-            maxEmitPower: YY.power[1] * FY,
-            minSize: YY.size[0],
-            maxSize: YY.size[1],
+            texture: TT.soft ? zT : "square_particle",
+            fD: oT,
+            minLifeTime: TT.life[0] / iT,
+            maxLifeTime: TT.life[1] / iT,
+            minEmitPower: TT.power[0] * iT,
+            maxEmitPower: TT.power[1] * iT,
+            minSize: TT.size[0],
+            maxSize: TT.size[1],
             emitRate: 0,
-            gravity: [0, YY.lift * FY * FY, 0],
-            dir1: [-YY.spread, 1, -YY.spread],
-            dir2: [YY.spread, 1, YY.spread],
+            gravity: [0, TT.lift * iT * iT, 0],
+            dir1: [-TT.spread, 1, -TT.spread],
+            dir2: [TT.spread, 1, TT.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [DY, IY, RY, YY.alpha],
-              maxColor: [OY, gY, aY, YY.alpha]
+              minColor: [IT, kT, WT, TT.alpha],
+              maxColor: [XT, BT, FT, TT.alpha]
             }, {
               timeFraction: 1,
-              minColor: [DY, IY, RY, 0],
-              maxColor: [OY, gY, aY, 0]
+              minColor: [IT, kT, WT, 0],
+              maxColor: [XT, BT, FT, 0]
             }],
-            blendMode: YY.blendMode
+            blendMode: TT.blendMode
           }
-        }(this.style, this.gu), {
-          pos: rY,
+        }(this.style, this.fD), {
+          pos: oT,
           half: this.half
-        })), this.particles.moveTo(rY, this.half), this.particles.emit(IY), !0)
+        })), this.particles.moveTo(oT, this.half), this.particles.emit(kT), !0)
       }
       dispose() {
-        var YY;
-        null === (YY = this.particles) || void 0 === YY || YY.stop(), this.particles = null
+        var TT;
+        null === (TT = this.particles) || void 0 === TT || TT.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

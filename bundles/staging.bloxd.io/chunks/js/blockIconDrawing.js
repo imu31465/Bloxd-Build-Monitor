@@ -1,449 +1,449 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  35808: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      drawBlockIcon: () => VY,
-      drawBlockIconUrl: () => SY,
-      getDrawnBlockIcon: () => mY
+  35392: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      drawBlockIcon: () => hT,
+      drawBlockIconUrl: () => wT,
+      getDrawnBlockIcon: () => gT
     });
-    var FY = DY(35813);
-    const AY = Math.SQRT1_2,
-      IY = Math.sqrt(3) / 2,
-      RY = .5,
-      OY = {
+    var iT = IT(35400);
+    const zT = Math.SQRT1_2,
+      kT = Math.sqrt(3) / 2,
+      WT = .5,
+      XT = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      gY = {
+      BT = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      aY = {
+      FT = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const vY = 1e-6;
+    const ST = 1e-6;
 
-    function uY(YY, rY, DY, FY) {
+    function DT(TT, oT, IT, iT) {
       let {
-        origin: AY,
-        across: IY,
-        down: RY,
-        texture: OY,
-        rect: [gY, aY, uY, sY],
-        shade: iY
-      } = FY;
-      const yY = IY.x * RY.y - IY.y * RY.x;
-      if (Math.abs(yY) < 1e-9) return;
-      const QY = [AY.x, AY.x + IY.x, AY.x + RY.x, AY.x + IY.x + RY.x],
-        oY = [AY.y, AY.y + IY.y, AY.y + RY.y, AY.y + IY.y + RY.y],
-        WY = Math.max(0, Math.floor(Math.min(...QY))),
-        EY = Math.min(DY - 1, Math.ceil(Math.max(...QY))),
-        mY = Math.max(0, Math.floor(Math.min(...oY))),
-        VY = Math.min(DY - 1, Math.ceil(Math.max(...oY)));
-      for (let SY = mY; SY <= VY; SY++)
-        for (let FY = WY; FY <= EY; FY++) {
-          const QY = FY + .5 - AY.x,
-            oY = SY + .5 - AY.y,
-            WY = (QY * RY.y - oY * RY.x) / yY,
-            EY = (IY.x * oY - IY.y * QY) / yY;
-          if (WY < -vY || WY > 1 + vY || EY < -vY || EY > 1 + vY) continue;
-          const mY = SY * DY + FY;
-          rY[mY] = 1;
-          const VY = gY + Math.min(Math.max(WY, 0), 1) * (uY - gY),
-            lY = aY + Math.min(Math.max(EY, 0), 1) * (sY - aY),
-            TY = Math.min(OY.width - 1, Math.floor(VY * OY.width)),
-            eY = 4 * (Math.min(OY.height - 1, Math.floor(lY * OY.height)) * OY.width + TY),
-            NY = OY.pixels[eY + 3] / 255;
-          if (0 === NY) continue;
-          const BY = 4 * mY,
-            cY = YY[BY + 3] / 255 * (1 - NY),
-            KY = NY + cY;
-          for (let rY = 0; rY < 3; rY++) YY[BY + rY] = (OY.pixels[eY + rY] * iY * NY + YY[BY + rY] * cY) / KY;
-          YY[BY + 3] = 255 * KY
+        origin: zT,
+        across: kT,
+        down: WT,
+        texture: XT,
+        rect: [BT, FT, DT, LT],
+        shade: xT
+      } = iT;
+      const cT = kT.x * WT.y - kT.y * WT.x;
+      if (Math.abs(cT) < 1e-9) return;
+      const KT = [zT.x, zT.x + kT.x, zT.x + WT.x, zT.x + kT.x + WT.x],
+        MT = [zT.y, zT.y + kT.y, zT.y + WT.y, zT.y + kT.y + WT.y],
+        rT = Math.max(0, Math.floor(Math.min(...KT))),
+        AT = Math.min(IT - 1, Math.ceil(Math.max(...KT))),
+        gT = Math.max(0, Math.floor(Math.min(...MT))),
+        hT = Math.min(IT - 1, Math.ceil(Math.max(...MT)));
+      for (let wT = gT; wT <= hT; wT++)
+        for (let iT = rT; iT <= AT; iT++) {
+          const KT = iT + .5 - zT.x,
+            MT = wT + .5 - zT.y,
+            rT = (KT * WT.y - MT * WT.x) / cT,
+            AT = (kT.x * MT - kT.y * KT) / cT;
+          if (rT < -ST || rT > 1 + ST || AT < -ST || AT > 1 + ST) continue;
+          const gT = wT * IT + iT;
+          oT[gT] = 1;
+          const hT = BT + Math.min(Math.max(rT, 0), 1) * (DT - BT),
+            mT = FT + Math.min(Math.max(AT, 0), 1) * (LT - FT),
+            eT = Math.min(XT.width - 1, Math.floor(hT * XT.width)),
+            RT = 4 * (Math.min(XT.height - 1, Math.floor(mT * XT.height)) * XT.width + eT),
+            uT = XT.pixels[RT + 3] / 255;
+          if (0 === uT) continue;
+          const vT = 4 * gT,
+            ET = TT[vT + 3] / 255 * (1 - uT),
+            fT = uT + ET;
+          for (let oT = 0; oT < 3; oT++) TT[vT + oT] = (XT.pixels[RT + oT] * xT * uT + TT[vT + oT] * ET) / fT;
+          TT[vT + 3] = 255 * fT
         }
     }
-    var sY = DY(35817);
-    const iY = new Map,
-      yY = new Map,
-      QY = new Map,
-      oY = new Map;
+    var LT = IT(35405);
+    const xT = new Map,
+      cT = new Map,
+      KT = new Map,
+      MT = new Map;
 
-    function WY(YY, rY, DY) {
-      return `${rY}|${DY}|${YY}`
+    function rT(TT, oT, IT) {
+      return `${oT}|${IT}|${TT}`
     }
 
-    function EY(YY, rY, DY) {
-      let FY = YY.get(rY);
-      return void 0 === FY && (FY = DY().catch((DY => {
-        throw YY.delete(rY), DY
-      })), YY.set(rY, FY)), FY
+    function AT(TT, oT, IT) {
+      let iT = TT.get(oT);
+      return void 0 === iT && (iT = IT().catch((IT => {
+        throw TT.delete(oT), IT
+      })), TT.set(oT, iT)), iT
     }
 
-    function mY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return yY.get(WY(YY, rY, DY))
+    function gT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return cT.get(rT(TT, oT, IT))
     }
 
-    function VY(YY, rY, DY, FY) {
-      const AY = WY(YY, rY, DY);
-      return EY(iY, AY, (async () => {
-        const IY = await TY(FY(YY), rY, lY(DY));
-        return yY.set(AY, IY), IY
+    function hT(TT, oT, IT, iT) {
+      const zT = rT(TT, oT, IT);
+      return AT(xT, zT, (async () => {
+        const kT = await eT(iT(TT), oT, mT(IT));
+        return cT.set(zT, kT), kT
       }))
     }
 
-    function SY(YY, rY, DY, FY) {
-      return EY(QY, WY(YY, rY, DY), (async () => {
-        var AY;
-        const IY = FY(YY),
-          RY = lY(DY);
-        return null !== (AY = await (0, sY.d)(IY, rY, RY)) && void 0 !== AY ? AY : (await TY(IY, rY, RY)).toDataURL()
+    function wT(TT, oT, IT, iT) {
+      return AT(KT, rT(TT, oT, IT), (async () => {
+        var zT;
+        const kT = iT(TT),
+          WT = mT(IT);
+        return null !== (zT = await (0, LT.b)(kT, oT, WT)) && void 0 !== zT ? zT : (await eT(kT, oT, WT)).toDataURL()
       }))
     }
 
-    function lY(YY) {
-      return Math.max(1, Math.round(YY))
+    function mT(TT) {
+      return Math.max(1, Math.round(TT))
     }
-    async function TY(YY, rY, DY) {
+    async function eT(TT, oT, IT) {
       let {
-        top: vY,
-        left: sY,
-        right: iY,
-        itemType: yY
-      } = YY;
-      const [QY, oY, WY] = await Promise.all([eY(vY), eY(sY), eY(iY)]), EY = function(YY, rY, DY, OY) {
-        const gY = .6 * DY,
-          aY = gY * AY,
-          vY = gY * AY * RY,
-          sY = gY * IY,
-          iY = Math.max(...rY.boxes.map((YY => YY[4]))),
-          yY = aY / 2 + (DY - aY) / 2,
-          QY = vY + (DY - vY - vY - iY * sY) / 2,
-          oY = (YY, rY, DY) => ({
-            x: yY + (YY - DY) * aY,
-            y: QY - vY + (YY + DY) * vY + (iY - rY) * sY
+        top: ST,
+        left: LT,
+        right: xT,
+        itemType: cT
+      } = TT;
+      const [KT, MT, rT] = await Promise.all([RT(ST), RT(LT), RT(xT)]), AT = function(TT, oT, IT, XT) {
+        const BT = .6 * IT,
+          FT = BT * zT,
+          ST = BT * zT * WT,
+          LT = BT * kT,
+          xT = Math.max(...oT.boxes.map((TT => TT[4]))),
+          cT = FT / 2 + (IT - FT) / 2,
+          KT = ST + (IT - ST - ST - xT * LT) / 2,
+          MT = (TT, oT, IT) => ({
+            x: cT + (TT - IT) * FT,
+            y: KT - ST + (TT + IT) * ST + (xT - oT) * LT
           }),
-          WY = (YY, DY, FY, AY, IY, RY) => ({
-            origin: YY,
+          rT = (TT, IT, iT, zT, kT, WT) => ({
+            origin: TT,
             across: {
-              x: DY.x - YY.x,
-              y: DY.y - YY.y
+              x: IT.x - TT.x,
+              y: IT.y - TT.y
             },
             down: {
-              x: FY.x - YY.x,
-              y: FY.y - YY.y
+              x: iT.x - TT.x,
+              y: iT.y - TT.y
             },
-            texture: AY,
-            rect: rY.cropFaces ? IY : [0, 0, 1, 1],
-            shade: RY
+            texture: zT,
+            rect: oT.cropFaces ? kT : [0, 0, 1, 1],
+            shade: WT
           }),
-          EY = new Uint8ClampedArray(DY * DY * 4),
-          mY = new Uint8Array(DY * DY),
-          VY = FY.c;
-        for (const [FY, AY, IY, RY, SY, lY] of rY.boxes) {
-          const rY = WY(oY(RY, SY, lY), oY(RY, SY, IY), oY(RY, AY, lY), YY.right, [1 - lY, 1 - SY, 1 - IY, 1 - AY], VY.right),
-            OY = WY(oY(FY, SY, lY), oY(RY, SY, lY), oY(FY, AY, lY), YY.left, [FY, 1 - SY, RY, 1 - AY], VY.left),
-            gY = WY(oY(FY, SY, IY), oY(RY, SY, IY), oY(FY, SY, lY), YY.top, [FY, IY, RY, lY], VY.top);
-          for (const YY of [rY, OY, gY]) uY(EY, mY, DY, YY)
+          AT = new Uint8ClampedArray(IT * IT * 4),
+          gT = new Uint8Array(IT * IT),
+          hT = iT.e;
+        for (const [iT, zT, kT, WT, wT, mT] of oT.boxes) {
+          const oT = rT(MT(WT, wT, mT), MT(WT, wT, kT), MT(WT, zT, mT), TT.right, [1 - mT, 1 - wT, 1 - kT, 1 - zT], hT.right),
+            XT = rT(MT(iT, wT, mT), MT(WT, wT, mT), MT(iT, zT, mT), TT.left, [iT, 1 - wT, WT, 1 - zT], hT.left),
+            BT = rT(MT(iT, wT, kT), MT(WT, wT, kT), MT(iT, wT, mT), TT.top, [iT, kT, WT, mT], hT.top);
+          for (const TT of [oT, XT, BT]) DT(AT, gT, IT, TT)
         }
-        return (0, FY.g)(EY, DY, OY, (YY => 1 === mY[YY])), EY
+        return (0, iT.i)(AT, IT, XT, (TT => 1 === gT[TT])), AT
       }({
-        top: QY,
-        left: oY,
-        right: WY
-      }, function(YY) {
-        return "SlabBlock" === YY ? gY : "StairsBlock" === YY ? aY : OY
-      }(yY), rY, DY), mY = document.createElement("canvas");
-      mY.width = rY, mY.height = rY;
-      const VY = mY.getContext("2d");
-      if (!VY) throw new Error("Failed to get 2D context");
-      return VY.putImageData(new ImageData(EY, rY, rY), 0, 0), mY
+        top: KT,
+        left: MT,
+        right: rT
+      }, function(TT) {
+        return "SlabBlock" === TT ? BT : "StairsBlock" === TT ? FT : XT
+      }(cT), oT, IT), gT = document.createElement("canvas");
+      gT.width = oT, gT.height = oT;
+      const hT = gT.getContext("2d");
+      if (!hT) throw new Error("Failed to get 2D context");
+      return hT.putImageData(new ImageData(AT, oT, oT), 0, 0), gT
     }
 
-    function eY(YY) {
-      return EY(oY, YY, (async () => {
-        const rY = await (0, sY.h)(YY),
-          DY = document.createElement("canvas");
-        DY.width = rY.width, DY.height = rY.height;
-        const FY = DY.getContext("2d");
-        if (!FY) throw new Error("Failed to get 2D context");
-        return FY.drawImage(rY, 0, 0), {
-          width: rY.width,
-          height: rY.height,
-          pixels: FY.getImageData(0, 0, rY.width, rY.height).data
+    function RT(TT) {
+      return AT(MT, TT, (async () => {
+        const oT = await (0, LT.g)(TT),
+          IT = document.createElement("canvas");
+        IT.width = oT.width, IT.height = oT.height;
+        const iT = IT.getContext("2d");
+        if (!iT) throw new Error("Failed to get 2D context");
+        return iT.drawImage(oT, 0, 0), {
+          width: oT.width,
+          height: oT.height,
+          pixels: iT.getImageData(0, 0, oT.width, oT.height).data
         }
       }))
     }
   },
-  35817: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => BY,
-      g: () => cY,
-      h: () => mY
+  35405: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => vT,
+      e: () => ET,
+      g: () => gT
     });
-    var FY = DY(309),
-      AY = DY(99);
-    const IY = new(DY(35826).d)(new URL(DY.p + DY.u(3), DY.b), {
+    var iT = IT(289),
+      zT = IT(90);
+    const kT = new(IT(35408).e)(new URL(IT.p + IT.u(3), IT.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var RY = DY(1744),
-      OY = DY(2789);
-    const gY = 1e4,
-      aY = 3e4;
-    let vY = null,
-      uY = null,
-      sY = null,
-      iY = !1,
-      yY = 0;
-    const QY = new Map;
-    let oY = null;
-    const WY = new Map,
-      EY = new Map;
+    var WT = IT(1693),
+      XT = IT(2752);
+    const BT = 1e4,
+      FT = 3e4;
+    let ST = null,
+      DT = null,
+      LT = null,
+      xT = !1,
+      cT = 0;
+    const KT = new Map;
+    let MT = null;
+    const rT = new Map,
+      AT = new Map;
 
-    function mY(YY) {
-      const rY = new Promise(((rY, DY) => {
-        const FY = new Image;
-        FY.crossOrigin = "anonymous", FY.fetchPriority = "high", FY.onload = () => {
-          rY(FY)
-        }, FY.onerror = () => {
-          DY(new Error(`A block icon's texture did not load: ${YY.slice(0,100)}`))
-        }, FY.src = YY
+    function gT(TT) {
+      const oT = new Promise(((oT, IT) => {
+        const iT = new Image;
+        iT.crossOrigin = "anonymous", iT.fetchPriority = "high", iT.onload = () => {
+          oT(iT)
+        }, iT.onerror = () => {
+          IT(new Error(`A block icon's texture did not load: ${TT.slice(0,100)}`))
+        }, iT.src = TT
       }));
-      return (0, OY.g)(rY)
+      return (0, XT.e)(oT)
     }
 
-    function VY(YY) {
-      var rY, DY;
-      iY || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${YY}`), iY = !0, null === (rY = vY) || void 0 === rY || rY.terminate(), vY = null, uY = null, WY.clear(), EY.clear();
-      for (const FY of QY.values()) FY(null);
-      QY.clear(), null === (DY = oY) || void 0 === DY || DY()
+    function hT(TT) {
+      var oT, IT;
+      xT || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${TT}`), xT = !0, null === (oT = ST) || void 0 === oT || oT.terminate(), ST = null, DT = null, rT.clear(), AT.clear();
+      for (const iT of KT.values()) iT(null);
+      KT.clear(), null === (IT = MT) || void 0 === IT || IT()
     }
 
-    function SY() {
-      return sY ??= async function() {
+    function wT() {
+      return LT ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === FY.e.ios_icon_worker_v1 && (0, AY.isWebKit)()) return;
+        if ("page" === iT.c.ios_icon_worker_v1 && (0, zT.isWebKit)()) return;
         try {
-          vY = await async function() {
-            return await IY.ready(), IY.start()
+          ST = await async function() {
+            return await kT.ready(), kT.start()
           }()
-        } catch (OY) {
-          return void VY(`did not start (${String(OY)})`)
+        } catch (XT) {
+          return void hT(`did not start (${String(XT)})`)
         }
-        let YY = () => {};
-        const rY = new Promise((rY => {
-          YY = rY
+        let TT = () => {};
+        const oT = new Promise((oT => {
+          TT = oT
         }));
-        vY.onmessage = rY => {
+        ST.onmessage = oT => {
           let {
-            data: DY
-          } = rY;
-          if ("started" === DY.type) uY = vY, YY();
-          else if ("failed" === DY.type) VY(`failed a draw (${DY.message})`);
+            data: IT
+          } = oT;
+          if ("started" === IT.type) DT = ST, TT();
+          else if ("failed" === IT.type) hT(`failed a draw (${IT.message})`);
           else {
-            var FY, AY;
-            null === (FY = QY.get(DY.id)) || void 0 === FY || FY(DY.url), QY.delete(DY.id), null === (AY = oY) || void 0 === AY || AY()
+            var iT, zT;
+            null === (iT = KT.get(IT.id)) || void 0 === iT || iT(IT.url), KT.delete(IT.id), null === (zT = MT) || void 0 === zT || zT()
           }
-        }, vY.onerror = rY => {
-          rY.preventDefault(), VY(`stopped (${rY.message||"its script did not load or run"})`), YY()
+        }, ST.onerror = oT => {
+          oT.preventDefault(), hT(`stopped (${oT.message||"its script did not load or run"})`), TT()
         };
-        const DY = `did not start in ${aY/1e3} s`;
-        await (0, RY.k)(rY, aY, DY).catch((() => {
-          VY(DY)
+        const IT = `did not start in ${FT/1e3} s`;
+        await (0, WT.k)(oT, FT, IT).catch((() => {
+          hT(IT)
         }))
-      }(), sY
+      }(), LT
     }
 
-    function lY() {
-      if (null !== oY || 0 === QY.size) return;
-      const YY = new Promise((YY => {
-          oY = YY
+    function mT() {
+      if (null !== MT || 0 === KT.size) return;
+      const TT = new Promise((TT => {
+          MT = TT
         })),
-        rY = `did not answer in ${gY/1e3} s`;
-      (0, RY.k)(YY, gY, rY).then((() => {
-        oY = null, lY()
+        oT = `did not answer in ${BT/1e3} s`;
+      (0, WT.k)(TT, BT, oT).then((() => {
+        MT = null, mT()
       }), (() => {
-        oY = null, VY(rY)
+        MT = null, hT(oT)
       }))
     }
 
-    function TY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      YY.postMessage(rY, DY)
+    function eT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      TT.postMessage(oT, IT)
     }
 
-    function eY(YY, rY, DY, FY) {
-      let AY = rY.get(DY);
-      return void 0 === AY && (AY = FY().then((async rY => {
+    function RT(TT, oT, IT, iT) {
+      let zT = oT.get(IT);
+      return void 0 === zT && (zT = iT().then((async oT => {
         let {
-          image: DY,
-          request: FY
-        } = rY;
+          image: IT,
+          request: iT
+        } = oT;
         try {
-          const rY = await createImageBitmap(DY);
-          TY(YY, FY(rY), [rY])
-        } catch (AY) {
-          VY(`could not take an image (${String(AY)})`)
+          const oT = await createImageBitmap(IT);
+          eT(TT, iT(oT), [oT])
+        } catch (zT) {
+          hT(`could not take an image (${String(zT)})`)
         }
-      })), AY.catch((() => {
-        rY.get(DY) === AY && rY.delete(DY)
-      })), rY.set(DY, AY)), AY
+      })), zT.catch((() => {
+        oT.get(IT) === zT && oT.delete(IT)
+      })), oT.set(IT, zT)), zT
     }
-    async function NY(YY, rY) {
-      SY();
-      const DY = uY;
-      if (null === DY) return null;
-      if (await YY(DY), uY !== DY) return null;
-      const FY = ++yY;
-      return new Promise((YY => {
-        QY.set(FY, YY), TY(DY, rY(FY)), lY()
+    async function uT(TT, oT) {
+      wT();
+      const IT = DT;
+      if (null === IT) return null;
+      if (await TT(IT), DT !== IT) return null;
+      const iT = ++cT;
+      return new Promise((TT => {
+        KT.set(iT, TT), eT(IT, oT(iT)), mT()
       }))
     }
 
-    function BY(YY, rY, DY) {
-      return NY((rY => Promise.all([YY.top, YY.left, YY.right].map((YY => function(YY, rY) {
-        return eY(YY, WY, rY, (async () => ({
-          image: await mY(rY),
-          request: YY => ({
+    function vT(TT, oT, IT) {
+      return uT((oT => Promise.all([TT.top, TT.left, TT.right].map((TT => function(TT, oT) {
+        return RT(TT, rT, oT, (async () => ({
+          image: await gT(oT),
+          request: TT => ({
             type: "texture",
-            url: rY,
-            bitmap: YY
+            url: oT,
+            bitmap: TT
           })
         })))
-      }(rY, YY))))), (FY => ({
+      }(oT, TT))))), (iT => ({
         type: "draw",
-        id: FY,
-        ...YY,
-        size: rY,
-        outlineWidth: DY
+        id: iT,
+        ...TT,
+        size: oT,
+        outlineWidth: IT
       })))
     }
 
-    function cY(YY, rY, DY, FY) {
-      return NY((DY => function(YY, rY, DY) {
-        return eY(YY, EY, rY, (async () => {
+    function ET(TT, oT, IT, iT) {
+      return uT((IT => function(TT, oT, IT) {
+        return RT(TT, AT, oT, (async () => {
           const {
-            texture: YY,
-            ...FY
-          } = await DY();
+            texture: TT,
+            ...iT
+          } = await IT();
           return {
-            image: await mY(YY),
-            request: YY => ({
+            image: await gT(TT),
+            request: TT => ({
               type: "model",
-              name: rY,
-              bitmap: YY,
-              geometry: FY
+              name: oT,
+              bitmap: TT,
+              geometry: iT
             })
           }
         }))
-      }(DY, YY, rY)), (rY => ({
+      }(IT, TT, oT)), (oT => ({
         type: "drawModel",
-        id: rY,
-        name: YY,
-        size: DY,
-        outlineWidth: FY
+        id: oT,
+        name: TT,
+        size: IT,
+        outlineWidth: iT
       })))
     }
   },
-  35813: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY,
-      g: () => OY,
-      j: () => RY
+  35400: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      i: () => XT,
+      k: () => WT
     });
-    const FY = 1 / 32,
-      AY = [15, 15, 15],
-      IY = {
+    const iT = 1 / 32,
+      zT = [15, 15, 15],
+      kT = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function RY(YY, rY, DY, AY) {
+    function WT(TT, oT, IT, zT) {
       const {
-        vertices: IY,
-        uvs: RY,
-        indices: gY,
-        shades: aY
-      } = YY, vY = DY * FY, uY = DY - 2 * vY, sY = new Float32Array(IY.length);
-      for (let FY = 0; FY < IY.length; FY += 3) sY[FY] = vY + IY[FY] * uY, sY[FY + 1] = vY + IY[FY + 1] * uY, sY[FY + 2] = IY[FY + 2];
-      const iY = new Float32Array(DY * DY).fill(-1 / 0),
-        yY = new Uint8ClampedArray(DY * DY * 4),
-        QY = 255 * YY.alphaCutoff;
-      for (let FY = 0; FY < gY.length; FY += 3) {
-        const [YY, AY, IY] = [gY[FY], gY[FY + 1], gY[FY + 2]], [OY, vY, uY] = [3 * YY, 3 * AY, 3 * IY], [oY, WY, EY, mY, VY, SY] = [sY[OY], sY[OY + 1], sY[vY], sY[vY + 1], sY[uY], sY[uY + 1]], lY = (EY - oY) * (SY - WY) - (VY - oY) * (mY - WY);
-        if (Math.abs(lY) < 1e-9) continue;
-        const TY = aY[FY / 3],
-          [eY, NY, BY, cY, KY, HY] = [RY[2 * YY], RY[2 * YY + 1], RY[2 * AY], RY[2 * AY + 1], RY[2 * IY], RY[2 * IY + 1]],
-          zY = Math.max(0, Math.floor(Math.min(oY, EY, VY))),
-          ZY = Math.min(DY - 1, Math.ceil(Math.max(oY, EY, VY))),
-          CY = Math.max(0, Math.floor(Math.min(WY, mY, SY))),
-          fY = Math.min(DY - 1, Math.ceil(Math.max(WY, mY, SY)));
-        for (let FY = CY; FY <= fY; FY++)
-          for (let YY = zY; YY <= ZY; YY++) {
-            const [AY, IY] = [YY + .5, FY + .5], RY = ((AY - oY) * (SY - WY) - (VY - oY) * (IY - WY)) / lY, gY = ((EY - oY) * (IY - WY) - (AY - oY) * (mY - WY)) / lY, aY = 1 - RY - gY;
-            if (aY < 0 || RY < 0 || gY < 0) continue;
-            const zY = aY * sY[OY + 2] + RY * sY[vY + 2] + gY * sY[uY + 2],
-              ZY = FY * DY + YY;
-            if (zY <= iY[ZY]) continue;
-            const CY = Math.max(0, Math.min(rY.width - 1, Math.floor((aY * eY + RY * BY + gY * KY) * rY.width))),
-              fY = 4 * (Math.max(0, Math.min(rY.height - 1, Math.floor((aY * NY + RY * cY + gY * HY) * rY.height))) * rY.width + CY);
-            rY.pixels[fY + 3] < QY || (iY[ZY] = zY, yY[4 * ZY] = rY.pixels[fY] * TY, yY[4 * ZY + 1] = rY.pixels[fY + 1] * TY, yY[4 * ZY + 2] = rY.pixels[fY + 2] * TY, yY[4 * ZY + 3] = 255)
+        vertices: kT,
+        uvs: WT,
+        indices: BT,
+        shades: FT
+      } = TT, ST = IT * iT, DT = IT - 2 * ST, LT = new Float32Array(kT.length);
+      for (let iT = 0; iT < kT.length; iT += 3) LT[iT] = ST + kT[iT] * DT, LT[iT + 1] = ST + kT[iT + 1] * DT, LT[iT + 2] = kT[iT + 2];
+      const xT = new Float32Array(IT * IT).fill(-1 / 0),
+        cT = new Uint8ClampedArray(IT * IT * 4),
+        KT = 255 * TT.alphaCutoff;
+      for (let iT = 0; iT < BT.length; iT += 3) {
+        const [TT, zT, kT] = [BT[iT], BT[iT + 1], BT[iT + 2]], [XT, ST, DT] = [3 * TT, 3 * zT, 3 * kT], [MT, rT, AT, gT, hT, wT] = [LT[XT], LT[XT + 1], LT[ST], LT[ST + 1], LT[DT], LT[DT + 1]], mT = (AT - MT) * (wT - rT) - (hT - MT) * (gT - rT);
+        if (Math.abs(mT) < 1e-9) continue;
+        const eT = FT[iT / 3],
+          [RT, uT, vT, ET, fT, CT] = [WT[2 * TT], WT[2 * TT + 1], WT[2 * zT], WT[2 * zT + 1], WT[2 * kT], WT[2 * kT + 1]],
+          jT = Math.max(0, Math.floor(Math.min(MT, AT, hT))),
+          JT = Math.min(IT - 1, Math.ceil(Math.max(MT, AT, hT))),
+          UT = Math.max(0, Math.floor(Math.min(rT, gT, wT))),
+          aT = Math.min(IT - 1, Math.ceil(Math.max(rT, gT, wT)));
+        for (let iT = UT; iT <= aT; iT++)
+          for (let TT = jT; TT <= JT; TT++) {
+            const [zT, kT] = [TT + .5, iT + .5], WT = ((zT - MT) * (wT - rT) - (hT - MT) * (kT - rT)) / mT, BT = ((AT - MT) * (kT - rT) - (zT - MT) * (gT - rT)) / mT, FT = 1 - WT - BT;
+            if (FT < 0 || WT < 0 || BT < 0) continue;
+            const jT = FT * LT[XT + 2] + WT * LT[ST + 2] + BT * LT[DT + 2],
+              JT = iT * IT + TT;
+            if (jT <= xT[JT]) continue;
+            const UT = Math.max(0, Math.min(oT.width - 1, Math.floor((FT * RT + WT * vT + BT * fT) * oT.width))),
+              aT = 4 * (Math.max(0, Math.min(oT.height - 1, Math.floor((FT * uT + WT * ET + BT * CT) * oT.height))) * oT.width + UT);
+            oT.pixels[aT + 3] < KT || (xT[JT] = jT, cT[4 * JT] = oT.pixels[aT] * eT, cT[4 * JT + 1] = oT.pixels[aT + 1] * eT, cT[4 * JT + 2] = oT.pixels[aT + 2] * eT, cT[4 * JT + 3] = 255)
           }
       }
-      return OY(yY, DY, AY), yY
+      return XT(cT, IT, zT), cT
     }
 
-    function OY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rY => 0 !== YY[4 * rY + 3];
-      const IY = (YY, DY) => YY < 0 || DY < 0 || YY >= rY || DY >= rY || !FY(DY * rY + YY),
-        RY = [];
-      for (let AY = 0; AY < rY; AY++)
-        for (let YY = 0; YY < rY; YY++)
-          if (!IY(YY, AY)) YY: for (let FY = -DY; FY <= DY; FY++) {
-            const OY = DY - Math.abs(FY);
-            for (let DY = -OY; DY <= OY; DY++)
-              if (IY(YY + DY, AY + FY)) {
-                RY.push(AY * rY + YY);
-                break YY
+    function XT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : oT => 0 !== TT[4 * oT + 3];
+      const kT = (TT, IT) => TT < 0 || IT < 0 || TT >= oT || IT >= oT || !iT(IT * oT + TT),
+        WT = [];
+      for (let zT = 0; zT < oT; zT++)
+        for (let TT = 0; TT < oT; TT++)
+          if (!kT(TT, zT)) TT: for (let iT = -IT; iT <= IT; iT++) {
+            const XT = IT - Math.abs(iT);
+            for (let IT = -XT; IT <= XT; IT++)
+              if (kT(TT + IT, zT + iT)) {
+                WT.push(zT * oT + TT);
+                break TT
               }
           }
-      for (const OY of RY) YY.set(AY, 4 * OY), YY[4 * OY + 3] = 255
+      for (const XT of WT) TT.set(zT, 4 * XT), TT[4 * XT + 3] = 255
     }
   },
-  35826: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY
+  35408: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => zT
     });
-    const FY = {
-      wait: function(YY) {
-        return new Promise((rY => {
-          setTimeout(rY, YY)
+    const iT = {
+      wait: function(TT) {
+        return new Promise((oT => {
+          setTimeout(oT, TT)
         }))
       },
       stallMs: 2e4
     };
-    class AY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : FY;
-        this.url = YY, this.options = rY, this.timing = DY, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = YY
+    class zT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : iT;
+        this.url = TT, this.options = oT, this.timing = IT, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = TT
       }
       ready() {
         if (null === this.fetched) {
-          const YY = new AbortController;
-          this.fetchAbort = YY, this.fetched = this.fetchWithRetries(YY.signal).finally((() => {
-            this.fetchAbort === YY && (this.fetchAbort = null)
+          const TT = new AbortController;
+          this.fetchAbort = TT, this.fetched = this.fetchWithRetries(TT.signal).finally((() => {
+            this.fetchAbort === TT && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -454,51 +454,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(YY) {
-        for (let rY = 0;; rY++) {
-          const DY = new URL(this.url);
-          if (rY > 0 && DY.searchParams.set("cache-bust", `${Date.now()}-${rY}`), await this.fetchWhole(DY, YY)) return void(this.scriptUrl = DY);
-          if (rY >= 3 || YY.aborted) return;
-          if (await this.timing.wait(500 * 2 ** rY), YY.aborted) return
+      async fetchWithRetries(TT) {
+        for (let oT = 0;; oT++) {
+          const IT = new URL(this.url);
+          if (oT > 0 && IT.searchParams.set("cache-bust", `${Date.now()}-${oT}`), await this.fetchWhole(IT, TT)) return void(this.scriptUrl = IT);
+          if (oT >= 3 || TT.aborted) return;
+          if (await this.timing.wait(500 * 2 ** oT), TT.aborted) return
         }
       }
-      async fetchWhole(YY, rY) {
-        const DY = new AbortController;
-        let FY;
-        const AY = () => {
-            clearTimeout(FY), FY = setTimeout((() => {
-              DY.abort()
+      async fetchWhole(TT, oT) {
+        const IT = new AbortController;
+        let iT;
+        const zT = () => {
+            clearTimeout(iT), iT = setTimeout((() => {
+              IT.abort()
             }), this.timing.stallMs)
           },
-          IY = () => {
-            DY.abort()
+          kT = () => {
+            IT.abort()
           };
-        rY.addEventListener("abort", IY, {
+        oT.addEventListener("abort", kT, {
           once: !0
-        }), AY();
+        }), zT();
         try {
-          var RY;
-          const rY = await fetch(YY, {
-            signal: DY.signal
+          var WT;
+          const oT = await fetch(TT, {
+            signal: IT.signal
           });
-          if (!rY.ok) return !1;
-          const FY = null === (RY = rY.body) || void 0 === RY ? void 0 : RY.getReader();
-          if (!FY) return !1;
+          if (!oT.ok) return !1;
+          const iT = null === (WT = oT.body) || void 0 === WT ? void 0 : WT.getReader();
+          if (!iT) return !1;
           for (;;) {
             const {
-              done: YY
-            } = await FY.read();
-            if (YY) return !0;
-            AY()
+              done: TT
+            } = await iT.read();
+            if (TT) return !0;
+            zT()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(FY), rY.removeEventListener("abort", IY)
+          clearTimeout(iT), oT.removeEventListener("abort", kT)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

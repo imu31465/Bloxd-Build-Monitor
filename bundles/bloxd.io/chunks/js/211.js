@@ -1,319 +1,319 @@
 export const id = 211;
 export const ids = [211];
 export const modules = {
-  38927: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      e: () => AY
+  38557: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT,
+      f: () => zT
     });
-    const FY = "The world isn't loaded, so no blocks can be seen.",
-      AY = "The world isn't loaded, so nothing in it can be seen."
+    const iT = "The world isn't loaded, so no blocks can be seen.",
+      zT = "The world isn't loaded, so nothing in it can be seen."
   },
-  36187: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => IY,
-      d: () => AY
+  35750: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT,
+      e: () => zT
     });
-    let FY = () => null;
+    let iT = () => null;
 
-    function AY(YY) {
-      FY = YY
+    function zT(TT) {
+      iT = TT
     }
 
-    function IY(YY, rY) {
-      return FY(YY, rY)
+    function kT(TT, oT) {
+      return iT(TT, oT)
     }
   },
-  39708: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => QY,
-      f: () => mY,
-      i: () => EY,
-      k: () => oY
+  39383: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => KT,
+      f: () => gT,
+      i: () => AT,
+      j: () => MT
     });
-    var FY = DY(25),
-      AY = DY(39717),
-      IY = DY(39693),
-      RY = DY(39725),
-      OY = DY(39699),
-      gY = DY(39728),
-      aY = DY(39739);
+    var iT = IT(16),
+      zT = IT(39386),
+      kT = IT(39371),
+      WT = IT(39392),
+      XT = IT(39379),
+      BT = IT(39400),
+      FT = IT(39415);
 
-    function vY(YY) {
-      var rY, DY;
-      const FY = (0, IY.g)();
-      return FY ? null === (rY = (0, AY.d)(FY.api, YY[0], YY[1], YY[2])) || void 0 === rY || null === (DY = rY.persisted) || void 0 === DY ? void 0 : DY.shared : void 0
+    function ST(TT) {
+      var oT, IT;
+      const iT = (0, kT.i)();
+      return iT ? null === (oT = (0, zT.d)(iT.api, TT[0], TT[1], TT[2])) || void 0 === oT || null === (IT = oT.persisted) || void 0 === IT ? void 0 : IT.shared : void 0
     }
 
-    function uY(YY) {
-      return `${YY[0]},${YY[1]},${YY[2]}`
+    function DT(TT) {
+      return `${TT[0]},${TT[1]},${TT[2]}`
     }
-    const sY = new Map;
-    let iY = null,
-      yY = 0;
+    const LT = new Map;
+    let xT = null,
+      cT = 0;
 
-    function QY() {
-      return yY
+    function KT() {
+      return cT
     }
 
-    function oY(YY) {
-      const rY = null !== iY && iY.key === uY(YY.pos) ? iY.type : null;
-      if (null === rY) return YY;
-      let DY = null;
-      if ("Iron" === rY) {
+    function MT(TT) {
+      const oT = null !== xT && xT.key === DT(TT.pos) ? xT.type : null;
+      if (null === oT) return TT;
+      let IT = null;
+      if ("Iron" === oT) {
         const {
-          cachedPasskey: rY,
-          ...FY
-        } = WY(YY.pos);
-        DY = {
-          kI: null !== rY && void 0 !== rY ? rY : [0, 0, 0, 0],
-          ...FY
+          cachedPasskey: oT,
+          ...iT
+        } = rT(TT.pos);
+        IT = {
+          cW: null !== oT && void 0 !== oT ? oT : [0, 0, 0, 0],
+          ...iT
         }
       }
       return {
-        ...YY,
-        type: rY,
-        ironChest: DY
+        ...TT,
+        type: oT,
+        ironChest: IT
       }
     }
 
-    function WY(YY) {
-      const rY = vY(YY),
-        DY = null === rY || void 0 === rY ? void 0 : rY.ownerDbId,
-        FY = function(YY) {
-          var rY;
-          let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vY(YY);
-          const FY = uY(YY),
-            AY = sY.get(FY);
-          return AY ? AY.lastOpened < (null !== (rY = null === DY || void 0 === DY ? void 0 : DY.passkeyLastUpdated) && void 0 !== rY ? rY : 0) ? (sY.delete(FY), null) : [...AY.kI] : null
-        }(YY, rY);
-      return void 0 === DY ? {
-        cachedPasskey: FY
+    function rT(TT) {
+      const oT = ST(TT),
+        IT = null === oT || void 0 === oT ? void 0 : oT.ownerDbId,
+        iT = function(TT) {
+          var oT;
+          let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ST(TT);
+          const iT = DT(TT),
+            zT = LT.get(iT);
+          return zT ? zT.lastOpened < (null !== (oT = null === IT || void 0 === IT ? void 0 : IT.passkeyLastUpdated) && void 0 !== oT ? oT : 0) ? (LT.delete(iT), null) : [...zT.cW] : null
+        }(TT, oT);
+      return void 0 === IT ? {
+        cachedPasskey: iT
       } : {
-        ownerDbId: DY,
-        cachedPasskey: FY
+        ownerDbId: IT,
+        cachedPasskey: iT
       }
-    }(0, aY.l)(RY.e, (YY => {
-      const rY = (0, gY.f)(RY.e, YY);
-      if (!(0, gY.c)(rY) || rY.eF) return;
-      if (yY++, !rY.mF || null === rY.lF) return void(iY = null);
-      const DY = uY(rY.lF);
-      iY = {
-        key: DY,
-        type: rY.SF
-      }, null !== rY.TF && sY.set(DY, {
-        kI: [...rY.TF],
+    }(0, FT.i)(WT.e, (TT => {
+      const oT = (0, BT.h)(WT.e, TT);
+      if (!(0, BT.d)(oT) || oT.Qi) return;
+      if (cT++, !oT.ji || null === oT.ai) return void(xT = null);
+      const IT = DT(oT.ai);
+      xT = {
+        key: IT,
+        type: oT.Ui
+      }, null !== oT.Yi && LT.set(IT, {
+        cW: [...oT.Yi],
         lastOpened: Date.now()
       })
-    })), (0, aY.g)((() => {
-      sY.clear(), iY = null, yY++
-    })), (0, aY.h)((() => {
-      null !== iY && (iY = null, yY++, FY.g.vo("chestToggleFromServer", !1, !0))
+    })), (0, FT.e)((() => {
+      LT.clear(), xT = null, cT++
+    })), (0, FT.h)((() => {
+      null !== xT && (xT = null, cT++, iT.h.XM("chestToggleFromServer", !1, !0))
     }));
-    const EY = {
+    const AT = {
         boardEditRequested: {
-          watch: YY => (0, FY.j)("EditBoard", (rY => {
+          watch: TT => (0, iT.k)("EditBoard", (oT => {
             let {
-              pos: DY
-            } = rY;
-            if (null === DY) return void YY(null);
-            const FY = (0, IY.g)(),
-              AY = (0, IY.v)();
-            FY && AY && YY(AY.readBoardToEdit(FY.api, FY.chunks, DY))
+              pos: IT
+            } = oT;
+            if (null === IT) return void TT(null);
+            const iT = (0, kT.i)(),
+              zT = (0, kT.p)();
+            iT && zT && TT(zT.readBoardToEdit(iT.api, iT.chunks, IT))
           }))
         },
         ironChestOpenRequested: {
-          watch: YY => (0, FY.j)("OpenIronChest", (rY => {
+          watch: TT => (0, iT.k)("OpenIronChest", (oT => {
             let {
-              pos: DY
-            } = rY;
-            YY(function(YY) {
+              pos: IT
+            } = oT;
+            TT(function(TT) {
               return {
-                pos: YY,
-                ...WY(YY)
+                pos: TT,
+                ...rT(TT)
               }
-            }(DY))
+            }(IT))
           }))
         }
       },
-      mY = {
-        writeOnBoard(YY) {
-          var rY;
+      gT = {
+        writeOnBoard(TT) {
+          var oT;
           let {
-            pos: DY,
-            text: FY,
-            textSize: AY
-          } = YY;
-          null === (rY = (0, IY.g)()) || void 0 === rY || rY.send(OY.d.UpdateBoard, (0, OY.X)({
-            DO: DY,
-            FO: FY,
-            IO: AY
+            pos: IT,
+            text: iT,
+            textSize: zT
+          } = TT;
+          null === (oT = (0, kT.i)()) || void 0 === oT || oT.send(XT.b.UpdateBoard, (0, XT.W)({
+            eX: IT,
+            RX: iT,
+            uX: zT
           }))
         },
-        writeBook(YY) {
-          var rY;
+        writeBook(TT) {
+          var oT;
           let {
-            pages: DY,
-            title: FY,
-            published: AY
-          } = YY;
-          null === (rY = (0, IY.g)()) || void 0 === rY || rY.send(OY.d.UpdateBook, (0, OY.Y)({
-            UR: DY,
-            LR: FY,
-            tR: AY
+            pages: IT,
+            title: iT,
+            published: zT
+          } = TT;
+          null === (oT = (0, kT.i)()) || void 0 === oT || oT.send(XT.b.UpdateBook, (0, XT.Z)({
+            AX: IT,
+            gX: iT,
+            hX: zT
           }))
         },
-        writeNameTag(YY) {
-          var rY;
-          null === (rY = (0, IY.g)()) || void 0 === rY || rY.send(OY.d.UpdateNameTag, YY)
+        writeNameTag(TT) {
+          var oT;
+          null === (oT = (0, kT.i)()) || void 0 === oT || oT.send(XT.b.UpdateNameTag, TT)
         },
-        setCustomLobbyBlock(YY) {
+        setCustomLobbyBlock(TT) {
           let {
-            pos: rY,
-            blockName: DY
-          } = YY;
-          const FY = (0, IY.v)(),
-            AY = (0, IY.g)();
-          FY && AY && AY.send(OY.d.SetCustomLobbyBlock, (0, OY.K)({
-            rv: FY.blockIdOf(DY),
-            Yv: rY
+            pos: oT,
+            blockName: IT
+          } = TT;
+          const iT = (0, kT.p)(),
+            zT = (0, kT.i)();
+          iT && zT && zT.send(XT.b.SetCustomLobbyBlock, (0, XT.L)({
+            mS: iT.blockIdOf(IT),
+            wS: oT
           }))
         }
       }
   },
-  39752: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => gY,
-      e: () => RY,
-      g: () => OY
+  39429: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => BT,
+      h: () => WT,
+      k: () => XT
     });
-    var FY = DY(39683),
-      AY = DY(4365),
-      IY = DY(39693);
+    var iT = IT(39354),
+      zT = IT(4269),
+      kT = IT(39371);
 
-    function RY() {
-      var YY;
-      const rY = null === (YY = (0, IY.g)()) || void 0 === YY ? void 0 : YY.api.localId;
-      return void 0 === rY || rY === FY.Yc ? null : String(rY)
+    function WT() {
+      var TT;
+      const oT = null === (TT = (0, kT.i)()) || void 0 === TT ? void 0 : TT.api.localId;
+      return void 0 === oT || oT === iT.Yc ? null : String(oT)
     }
 
-    function OY(YY) {
-      const rY = (0, IY.g)();
-      if (null !== rY) return YY(rY);
-      let DY = null;
-      const FY = (0, AY.s)((() => {
-        const rY = (0, IY.g)();
-        null !== rY && null === DY && (FY(), DY = YY(rY))
+    function XT(TT) {
+      const oT = (0, kT.i)();
+      if (null !== oT) return TT(oT);
+      let IT = null;
+      const iT = (0, zT.u)((() => {
+        const oT = (0, kT.i)();
+        null !== oT && null === IT && (iT(), IT = TT(oT))
       }));
       return () => {
-        var YY;
-        FY(), null === (YY = DY) || void 0 === YY || YY()
+        var TT;
+        iT(), null === (TT = IT) || void 0 === TT || TT()
       }
     }
 
-    function gY(YY, rY, DY) {
+    function BT(TT, oT, IT) {
       return {
         current: () => {
-          const DY = (0, IY.g)();
-          return null === DY ? rY : YY(DY)()
+          const IT = (0, kT.i)();
+          return null === IT ? oT : TT(IT)()
         },
-        watch: rY => OY((FY => {
-          const AY = YY(FY);
-          let IY = AY();
-          return rY(IY), DY((() => {
-            const YY = AY();
-            YY !== IY && (IY = YY, rY(YY))
+        watch: oT => XT((iT => {
+          const zT = TT(iT);
+          let kT = zT();
+          return oT(kT), IT((() => {
+            const TT = zT();
+            TT !== kT && (kT = TT, oT(TT))
           }))
         }))
       }
     }
   },
-  39747: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => aY
+  39426: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => FT
     });
-    var FY = DY(39693),
-      AY = DY(39752),
-      IY = DY(39759);
+    var iT = IT(39371),
+      zT = IT(39429),
+      kT = IT(39436);
 
-    function RY() {
-      var YY, rY;
-      return null !== (YY = null === (rY = (0, FY.g)()) || void 0 === rY ? void 0 : rY.itemBridgeSources) && void 0 !== YY ? YY : IY.e
+    function WT() {
+      var TT, oT;
+      return null !== (TT = null === (oT = (0, iT.i)()) || void 0 === oT ? void 0 : oT.itemBridgeSources) && void 0 !== TT ? TT : kT.c
     }
 
-    function OY(YY) {
+    function XT(TT) {
       return {
-        current: () => RY().states[YY].current(),
-        watch: rY => (0, AY.g)((DY => {
-          const FY = DY.itemBridgeSources.states[YY];
-          return rY(FY.current()), FY.watch(rY)
+        current: () => WT().states[TT].current(),
+        watch: oT => (0, zT.k)((IT => {
+          const iT = IT.itemBridgeSources.states[TT];
+          return oT(iT.current()), iT.watch(oT)
         }))
       }
     }
 
-    function gY(YY) {
+    function BT(TT) {
       return {
-        watch: rY => (0, AY.g)((DY => DY.itemBridgeSources.events[YY].watch(rY)))
+        watch: oT => (0, zT.k)((IT => IT.itemBridgeSources.events[TT].watch(oT)))
       }
     }
-    const aY = {
+    const FT = {
       states: {
-        inventory: OY("inventory"),
-        hotbar: OY("hotbar"),
-        crafting: OY("crafting"),
-        heldItemAim: OY("heldItemAim")
+        inventory: XT("inventory"),
+        hotbar: XT("hotbar"),
+        crafting: XT("crafting"),
+        heldItemAim: XT("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: gY("hotbarSlotRequested"),
-        hotbarScrolled: gY("hotbarScrolled"),
-        numberKeyPressed: gY("numberKeyPressed"),
-        inventoryDropRequested: gY("inventoryDropRequested"),
-        chestToggled: gY("chestToggled"),
-        chestRefreshed: gY("chestRefreshed"),
-        inventorySynced: gY("inventorySynced"),
-        enchantingTableOpened: gY("enchantingTableOpened")
+        hotbarSlotRequested: BT("hotbarSlotRequested"),
+        hotbarScrolled: BT("hotbarScrolled"),
+        numberKeyPressed: BT("numberKeyPressed"),
+        inventoryDropRequested: BT("inventoryDropRequested"),
+        chestToggled: BT("chestToggled"),
+        chestRefreshed: BT("chestRefreshed"),
+        inventorySynced: BT("inventorySynced"),
+        enchantingTableOpened: BT("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: YY => RY().commands.selectHotbarSlot(YY),
-        removeInventoryItem: YY => RY().commands.removeInventoryItem(YY),
-        swapInventorySlots: YY => RY().commands.swapInventorySlots(YY),
-        moveInventoryItem: YY => RY().commands.moveInventoryItem(YY),
-        quickMoveInventoryItem: YY => RY().commands.quickMoveInventoryItem(YY),
-        closeChest: YY => RY().commands.closeChest(YY),
-        focusCrafting: YY => RY().commands.focusCrafting(YY),
-        craftRecipe: YY => RY().commands.craftRecipe(YY),
-        salvageItem: YY => RY().commands.salvageItem(YY),
-        enchantItem: YY => RY().commands.enchantItem(YY)
+        selectHotbarSlot: TT => WT().commands.selectHotbarSlot(TT),
+        removeInventoryItem: TT => WT().commands.removeInventoryItem(TT),
+        swapInventorySlots: TT => WT().commands.swapInventorySlots(TT),
+        moveInventoryItem: TT => WT().commands.moveInventoryItem(TT),
+        quickMoveInventoryItem: TT => WT().commands.quickMoveInventoryItem(TT),
+        closeChest: TT => WT().commands.closeChest(TT),
+        focusCrafting: TT => WT().commands.focusCrafting(TT),
+        craftRecipe: TT => WT().commands.craftRecipe(TT),
+        salvageItem: TT => WT().commands.salvageItem(TT),
+        enchantItem: TT => WT().commands.enchantItem(TT)
       },
       queries: {
-        enchantingOffer: YY => RY().queries.enchantingOffer(YY)
+        enchantingOffer: TT => WT().queries.enchantingOffer(TT)
       }
     }
   },
-  39759: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => OY
+  39436: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT
     });
-    var FY = DY(38927);
+    var iT = IT(38557);
 
-    function AY(YY) {
+    function zT(TT) {
       return {
-        current: () => YY,
+        current: () => TT,
         watch: () => () => {}
       }
     }
 
-    function IY() {}
-    const RY = Object.freeze([0, 0, 0]),
-      OY = {
+    function kT() {}
+    const WT = Object.freeze([0, 0, 0]),
+      XT = {
         states: {
-          health: AY({
+          health: zT({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: AY({
+          inventory: zT({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -321,63 +321,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: AY({
+          hotbar: zT({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: AY({
+          stationItems: zT({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: AY({}),
-          creativeVisibility: AY({
+          itemInfo: zT({}),
+          creativeVisibility: zT({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: AY(null),
-          heldItemAim: AY({
+          aura: zT(null),
+          heldItemAim: zT({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: AY(!1),
-          gliderBoostFuel: AY(0),
-          flight: AY({
+          crouching: zT(!1),
+          gliderBoostFuel: zT(0),
+          flight: zT({
             canFly: !1,
             flying: !1
           }),
-          crafting: AY({
+          crafting: zT({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: AY({
+          players: zT({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: AY({}),
-          fullInventory: AY(!1),
-          crosshairTarget: AY({
+          lobbyLeaderboardRows: zT({}),
+          fullInventory: zT(!1),
+          crosshairTarget: zT({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: AY(!0),
-          freeCamera: AY({
+          localPlayerAlive: zT(!0),
+          freeCamera: zT({
             allowed: !1,
             movesFly: !1
           }),
-          replay: AY(null),
-          replayEdits: AY(null),
-          replayRecorder: AY({
+          replay: zT(null),
+          replayEdits: zT(null),
+          replayRecorder: zT({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: AY(!1)
+          replayVideoExporting: zT(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -439,86 +439,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: IY,
+          selectHotbarSlot: kT,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: IY,
-          setInventoryOpen: IY,
-          changeIronChestPasskey: IY,
-          dragReplayCamera: IY,
-          applyTemporaryThirdPerson: IY,
-          holdEmoteWheel: IY,
-          recordFlyingMiddleText: IY,
-          focusCrafting: IY,
+          closeChest: kT,
+          setInventoryOpen: kT,
+          changeIronChestPasskey: kT,
+          dragReplayCamera: kT,
+          applyTemporaryThirdPerson: kT,
+          holdEmoteWheel: kT,
+          recordFlyingMiddleText: kT,
+          focusCrafting: kT,
           craftRecipe: () => ({
-            Ev: 0,
-            da: null,
+            qS: 0,
+            XS: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: IY,
-          setShopOpen: IY,
-          buyShopItem: IY,
-          sendChatMessage: IY,
-          ignorePlayer: IY,
-          reportPlayer: IY,
-          reportWorldCodeChat: IY,
-          requestDiscordReportKey: IY,
-          reportLobbyOrGame: IY,
-          playEmote: IY,
-          updateMyCosmetic: IY,
-          writeOnBoard: IY,
-          writeBook: IY,
-          writeNameTag: IY,
-          setCustomLobbyBlock: IY,
-          openIronChest: IY,
-          sendCodeCollab: IY,
-          clickCodeBlock: IY,
-          bindCustomButtonKeys: IY,
-          pressCustomButton: IY,
-          moveReplayFreecam: IY,
-          holdReplayFreecamVertical: IY,
-          respawn: IY,
-          wakeUp: IY,
-          requestLeaderboard: IY,
-          completeTask: IY,
-          setServerCookie: IY,
-          answerUiRequest: IY,
-          chooseRewardedAd: IY,
-          setCameraZoom: IY,
-          setFreeCameraMovesFly: IY,
-          setBlockHighlight: IY,
-          setCrosshairInteractPrompt: IY,
-          setLookSensitivity: IY,
-          replayAction: IY,
-          setReplayPlaying: IY,
-          seekReplay: IY,
-          setReplayCameraMode: IY,
-          syncReplayCameraMode: IY,
-          setReplayCameraKeyframe: IY,
-          moveReplayCameraKeyframe: IY,
-          deleteReplayCameraKeyframes: IY,
-          setReplayPlaybackMark: IY,
+          enchantItem: kT,
+          setShopOpen: kT,
+          buyShopItem: kT,
+          sendChatMessage: kT,
+          ignorePlayer: kT,
+          reportPlayer: kT,
+          reportWorldCodeChat: kT,
+          requestDiscordReportKey: kT,
+          reportLobbyOrGame: kT,
+          playEmote: kT,
+          updateMyCosmetic: kT,
+          writeOnBoard: kT,
+          writeBook: kT,
+          writeNameTag: kT,
+          setCustomLobbyBlock: kT,
+          openIronChest: kT,
+          sendCodeCollab: kT,
+          clickCodeBlock: kT,
+          bindCustomButtonKeys: kT,
+          pressCustomButton: kT,
+          moveReplayFreecam: kT,
+          holdReplayFreecamVertical: kT,
+          respawn: kT,
+          wakeUp: kT,
+          requestLeaderboard: kT,
+          completeTask: kT,
+          setServerCookie: kT,
+          answerUiRequest: kT,
+          chooseRewardedAd: kT,
+          setCameraZoom: kT,
+          setFreeCameraMovesFly: kT,
+          setBlockHighlight: kT,
+          setCrosshairInteractPrompt: kT,
+          setLookSensitivity: kT,
+          replayAction: kT,
+          setReplayPlaying: kT,
+          seekReplay: kT,
+          setReplayCameraMode: kT,
+          syncReplayCameraMode: kT,
+          setReplayCameraKeyframe: kT,
+          moveReplayCameraKeyframe: kT,
+          deleteReplayCameraKeyframes: kT,
+          setReplayPlaybackMark: kT,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: IY,
-          exportReplayVideo: IY,
-          toggleRecording: IY,
-          saveClip: IY,
-          setRecorderPrefs: IY,
-          setReplayViewerOpen: IY
+          holdReplayForShaderPackFailure: kT,
+          exportReplayVideo: kT,
+          toggleRecording: kT,
+          saveClip: kT,
+          setRecorderPrefs: kT,
+          setReplayViewerOpen: kT
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => FY.b,
-          worldCodeAiGameState: () => FY.e
+          worldCodeAiChunk: () => iT.e,
+          worldCodeAiGameState: () => iT.f
         },
         lookups: {
-          localPos: () => RY,
+          localPos: () => WT,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -536,321 +536,321 @@ export const modules = {
         }
       }
   },
-  39686: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => NY,
-      e: () => eY,
-      h: () => BY,
-      i: () => TY,
-      j: () => SY
+  39362: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => uT,
+      h: () => RT,
+      l: () => vT,
+      o: () => eT,
+      q: () => wT
     });
-    var FY = DY(38568),
-      AY = DY(1231),
-      IY = DY(1823),
-      RY = DY(1830),
-      OY = DY(2864),
-      gY = DY(36187),
-      aY = DY(1322),
-      vY = DY(39693),
-      uY = DY(4396),
-      sY = DY(2251),
-      iY = DY(39699),
-      yY = DY(39708),
-      QY = DY(39747);
-    let oY = null;
+    var iT = IT(38180),
+      zT = IT(1193),
+      kT = IT(1770),
+      WT = IT(1780),
+      XT = IT(2844),
+      BT = IT(35750),
+      FT = IT(1293),
+      ST = IT(39371),
+      DT = IT(4299),
+      LT = IT(2201),
+      xT = IT(39379),
+      cT = IT(39383),
+      KT = IT(39426);
+    let MT = null;
 
-    function WY(YY) {
-      const rY = new Map,
-        DY = DY => {
-          if ("string" !== typeof DY) return;
-          let FY = rY.get(DY);
-          return void 0 === FY && (FY = YY(DY), void 0 !== FY && rY.set(DY, FY)), FY
+    function rT(TT) {
+      const oT = new Map,
+        IT = IT => {
+          if ("string" !== typeof IT) return;
+          let iT = oT.get(IT);
+          return void 0 === iT && (iT = TT(IT), void 0 !== iT && oT.set(IT, iT)), iT
         };
       return new Proxy({}, {
-        get: (YY, rY) => DY(rY),
-        has: (YY, rY) => void 0 !== DY(rY)
+        get: (TT, oT) => IT(oT),
+        has: (TT, oT) => void 0 !== IT(oT)
       })
     }
 
-    function EY(YY) {
-      const rY = (0, OY.b)(YY);
-      return void 0 !== rY && (0, OY.e)(rY) === YY
+    function AT(TT) {
+      const oT = (0, XT.d)(TT);
+      return void 0 !== oT && (0, XT.g)(oT) === TT
     }
 
-    function mY(YY) {
-      var rY;
-      const DY = null === (rY = (0, vY.g)()) || void 0 === rY ? void 0 : rY.tables;
-      if (void 0 === DY || !EY(YY)) return;
-      const FY = {
-          displayName: DY.getDisplayName(YY)
+    function gT(TT) {
+      var oT;
+      const IT = null === (oT = (0, ST.i)()) || void 0 === oT ? void 0 : oT.tables;
+      if (void 0 === IT || !AT(TT)) return;
+      const iT = {
+          displayName: IT.getDisplayName(TT)
         },
-        AY = DY.getItemStat(YY, "description");
-      void 0 !== AY && null !== AY && (FY.description = AY);
+        zT = IT.getItemStat(TT, "description");
+      void 0 !== zT && null !== zT && (iT.description = zT);
       const {
-        rootName: IY
-      } = DY.getMetaInfo(YY);
-      IY !== YY && (FY.rootName = IY);
-      const RY = DY.getItemStat(YY, "armourReduction");
-      return void 0 !== RY && null !== RY && (FY.armourReduction = RY), FY
-    }(0, vY.z)((YY => {
-      oY = YY
+        rootName: kT
+      } = IT.getMetaInfo(TT);
+      kT !== TT && (iT.rootName = kT);
+      const WT = IT.getItemStat(TT, "armourReduction");
+      return void 0 !== WT && null !== WT && (iT.armourReduction = WT), iT
+    }(0, ST.s)((TT => {
+      MT = TT
     }));
-    const VY = (0, RY.g)("DisplayName", "Description");
+    const hT = (0, WT.g)("DisplayName", "Description");
 
-    function SY() {
-      return Boolean(IY.b.get("useInventory") && IY.b.get("useFullInventory"))
+    function wT() {
+      return Boolean(kT.e.get("useInventory") && kT.e.get("useFullInventory"))
     }
-    let lY = null;
-    const TY = {
+    let mT = null;
+    const eT = {
         inventory: function() {
-          const YY = QY.d.states.inventory;
-          let rY = null;
-          const DY = YY => {
-            var DY;
-            return null === YY.chest ? YY : ((null === (DY = rY) || void 0 === DY ? void 0 : DY.from) === YY && rY.chestVersion === (0, yY.b)() || (rY = {
-              from: YY,
-              chestVersion: (0, yY.b)(),
+          const TT = KT.e.states.inventory;
+          let oT = null;
+          const IT = TT => {
+            var IT;
+            return null === TT.chest ? TT : ((null === (IT = oT) || void 0 === IT ? void 0 : IT.from) === TT && oT.chestVersion === (0, cT.d)() || (oT = {
+              from: TT,
+              chestVersion: (0, cT.d)(),
               view: {
-                ...YY,
-                chest: (0, yY.k)(YY.chest)
+                ...TT,
+                chest: (0, cT.j)(TT.chest)
               }
-            }), rY.view)
+            }), oT.view)
           };
           return {
-            current: () => DY(YY.current()),
-            watch: rY => YY.watch((YY => {
-              rY(DY(YY))
+            current: () => IT(TT.current()),
+            watch: oT => TT.watch((TT => {
+              oT(IT(TT))
             }))
           }
         }(),
-        crafting: QY.d.states.crafting,
+        crafting: KT.e.states.crafting,
         stationItems: {
           current() {
-            var YY;
-            return (null === (YY = lY) || void 0 === YY ? void 0 : YY.namesVersion) !== (0, OY.i)() && (lY = {
-              namesVersion: (0, OY.i)(),
+            var TT;
+            return (null === (TT = mT) || void 0 === TT ? void 0 : TT.namesVersion) !== (0, XT.h)() && (mT = {
+              namesVersion: (0, XT.h)(),
               items: {
-                enchantable: WY((YY => {
-                  const rY = (0, OY.b)(YY);
-                  return void 0 !== rY && null !== oY && oY.enchantmentPerksOf(rY).length > 0 || void 0
+                enchantable: rT((TT => {
+                  const oT = (0, XT.d)(TT);
+                  return void 0 !== oT && null !== MT && MT.enchantmentPerksOf(oT).length > 0 || void 0
                 })),
-                salvageable: WY((YY => !(!EY(YY) || null === (0, gY.b)(YY)) || void 0))
+                salvageable: rT((TT => !(!AT(TT) || null === (0, BT.c)(TT)) || void 0))
               }
-            }), lY.items
+            }), mT.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let YY = null;
-          const rY = () => {
-            var rY;
-            return (null === (rY = YY) || void 0 === rY ? void 0 : rY.namesVersion) !== (0, OY.i)() && (YY = {
-              namesVersion: (0, OY.i)(),
-              infos: WY(mY)
-            }), YY.infos
+          let TT = null;
+          const oT = () => {
+            var oT;
+            return (null === (oT = TT) || void 0 === oT ? void 0 : oT.namesVersion) !== (0, XT.h)() && (TT = {
+              namesVersion: (0, XT.h)(),
+              infos: rT(gT)
+            }), TT.infos
           };
           return {
-            current: rY,
-            watch: DY => (0, RY.o)((FY => {
-              FY.some(VY) && (YY = null, DY(rY()))
+            current: oT,
+            watch: IT => (0, WT.p)((iT => {
+              iT.some(hT) && (TT = null, IT(oT()))
             }))
           }
         }(),
-        creativeVisibility: (0, RY.k)((function() {
-          const YY = {};
-          for (const AY of null !== (rY = null === (DY = oY) || void 0 === DY ? void 0 : DY.creativeItemIds()) && void 0 !== rY ? rY : []) {
-            var rY, DY, RY, gY;
-            const aY = (0, OY.e)(AY);
-            if (void 0 === aY) continue;
-            const vY = null !== (RY = IY.b.get((0, FY.f)(aY, "showInCreativeInven"))) && void 0 !== RY ? RY : null === (gY = oY) || void 0 === gY ? void 0 : gY.showInCreativeInvenOf(AY);
-            "boolean" === typeof vY && (YY[aY] = vY)
+        creativeVisibility: (0, WT.l)((function() {
+          const TT = {};
+          for (const zT of null !== (oT = null === (IT = MT) || void 0 === IT ? void 0 : IT.creativeItemIds()) && void 0 !== oT ? oT : []) {
+            var oT, IT, WT, BT;
+            const FT = (0, XT.g)(zT);
+            if (void 0 === FT) continue;
+            const ST = null !== (WT = kT.e.get((0, iT.f)(FT, "showInCreativeInven"))) && void 0 !== WT ? WT : null === (BT = MT) || void 0 === BT ? void 0 : BT.showInCreativeInvenOf(zT);
+            "boolean" === typeof ST && (TT[FT] = ST)
           }
           return {
-            publicLobby: (0, AY.P)((0, aY.b)().lobbyName),
-            shownInGame: YY
+            publicLobby: (0, zT.L)((0, FT.e)().lobbyName),
+            shownInGame: TT
           }
-        }), ["connectedGameChanged"], (0, RY.g)("ShowInCreativeInven")),
-        fullInventory: (0, RY.k)(SY, [], (0, RY.i)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, WT.g)("ShowInCreativeInven")),
+        fullInventory: (0, WT.l)(wT, [], (0, WT.i)("useInventory", "useFullInventory"))
       },
-      eY = {
-        inventoryDropRequested: QY.d.events.inventoryDropRequested,
-        chestToggled: QY.d.events.chestToggled,
-        chestRefreshed: QY.d.events.chestRefreshed,
-        inventorySynced: QY.d.events.inventorySynced,
-        enchantingTableOpened: QY.d.events.enchantingTableOpened
+      RT = {
+        inventoryDropRequested: KT.e.events.inventoryDropRequested,
+        chestToggled: KT.e.events.chestToggled,
+        chestRefreshed: KT.e.events.chestRefreshed,
+        inventorySynced: KT.e.events.inventorySynced,
+        enchantingTableOpened: KT.e.events.enchantingTableOpened
       },
-      NY = {
-        removeInventoryItem: QY.d.commands.removeInventoryItem,
-        swapInventorySlots: QY.d.commands.swapInventorySlots,
-        moveInventoryItem: QY.d.commands.moveInventoryItem,
-        quickMoveInventoryItem: QY.d.commands.quickMoveInventoryItem,
-        closeChest: QY.d.commands.closeChest,
-        setInventoryOpen(YY) {
-          (0, uY.k)(sY.w.InventoryOpen, YY ? sY.w.InventoryOpen : 0)
+      uT = {
+        removeInventoryItem: KT.e.commands.removeInventoryItem,
+        swapInventorySlots: KT.e.commands.swapInventorySlots,
+        moveInventoryItem: KT.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: KT.e.commands.quickMoveInventoryItem,
+        closeChest: KT.e.commands.closeChest,
+        setInventoryOpen(TT) {
+          (0, DT.g)(LT.A.InventoryOpen, TT ? LT.A.InventoryOpen : 0)
         },
-        focusCrafting: QY.d.commands.focusCrafting,
-        craftRecipe: QY.d.commands.craftRecipe,
-        salvageItem: QY.d.commands.salvageItem,
-        enchantItem: QY.d.commands.enchantItem,
-        changeIronChestPasskey(YY) {
-          var rY;
+        focusCrafting: KT.e.commands.focusCrafting,
+        craftRecipe: KT.e.commands.craftRecipe,
+        salvageItem: KT.e.commands.salvageItem,
+        enchantItem: KT.e.commands.enchantItem,
+        changeIronChestPasskey(TT) {
+          var oT;
           let {
-            pos: DY,
-            kI: FY
-          } = YY;
-          null === (rY = (0, vY.g)()) || void 0 === rY || rY.send(iY.d.ChangeIronChestPasskey, (0, iY.i)({
-            lF: DY,
-            kI: FY
+            pos: IT,
+            cW: iT
+          } = TT;
+          null === (oT = (0, ST.i)()) || void 0 === oT || oT.send(xT.b.ChangeIronChestPasskey, (0, xT.g)({
+            ai: IT,
+            cW: iT
           }))
         },
-        openIronChest(YY) {
-          var rY;
+        openIronChest(TT) {
+          var oT;
           let {
-            pos: DY,
-            kI: FY
-          } = YY;
-          null === (rY = (0, vY.g)()) || void 0 === rY || rY.send(iY.d.OpenIronChest, (0, iY.C)({
-            lF: DY,
-            kI: FY
+            pos: IT,
+            cW: iT
+          } = TT;
+          null === (oT = (0, ST.i)()) || void 0 === oT || oT.send(xT.b.OpenIronChest, (0, xT.z)({
+            ai: IT,
+            cW: iT
           }))
         }
       },
-      BY = {
-        enchantingOffer: QY.d.queries.enchantingOffer
+      vT = {
+        enchantingOffer: KT.e.queries.enchantingOffer
       }
   },
-  39744: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY,
-      e: () => uY,
-      f: () => OY,
-      g: () => IY,
-      i: () => AY,
-      m: () => gY,
-      o: () => vY
+  39420: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT,
+      c: () => DT,
+      f: () => XT,
+      i: () => kT,
+      j: () => zT,
+      m: () => BT,
+      q: () => ST
     });
-    class FY extends Error {
+    class iT extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function AY(YY) {
-      return YY instanceof RangeError && /call stack/i.test(YY.message) || YY instanceof Error && "InternalError" === YY.name && /recursion/i.test(YY.message)
+    function zT(TT) {
+      return TT instanceof RangeError && /call stack/i.test(TT.message) || TT instanceof Error && "InternalError" === TT.name && /recursion/i.test(TT.message)
     }
 
-    function IY(YY) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(YY))
+    function kT(TT) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(TT))
     }
-    const RY = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const WT = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function OY(YY) {
-      var rY;
-      return YY instanceof WebAssembly.RuntimeError || YY instanceof FY || AY(YY) && RY.test(null !== (rY = YY.stack) && void 0 !== rY ? rY : "")
-    }
-
-    function gY(YY, rY) {
-      if (OY(YY)) throw YY;
-      console.error(rY, YY)
+    function XT(TT) {
+      var oT;
+      return TT instanceof WebAssembly.RuntimeError || TT instanceof iT || zT(TT) && WT.test(null !== (oT = TT.stack) && void 0 !== oT ? oT : "")
     }
 
-    function aY(YY, rY, DY, AY, IY) {
-      if (rY % AY !== 0 || rY + DY > YY.byteLength) throw new FY(`${IY}: ${DY} bytes at ${rY}, ${AY}-aligned, outside ${YY.byteLength} bytes of memory`)
+    function BT(TT, oT) {
+      if (XT(TT)) throw TT;
+      console.error(oT, TT)
     }
 
-    function vY(YY, rY, DY, FY, AY) {
-      return 0 === DY ? null : (aY(rY, DY, FY * YY.BYTES_PER_ELEMENT, YY.BYTES_PER_ELEMENT, AY), new YY(rY, DY, FY))
+    function FT(TT, oT, IT, zT, kT) {
+      if (oT % zT !== 0 || oT + IT > TT.byteLength) throw new iT(`${kT}: ${IT} bytes at ${oT}, ${zT}-aligned, outside ${TT.byteLength} bytes of memory`)
     }
 
-    function uY(YY, rY, DY, FY, AY) {
-      return 0 === rY ? null : (aY(YY, rY, DY, FY, AY), new DataView(YY, rY, DY))
+    function ST(TT, oT, IT, iT, zT) {
+      return 0 === IT ? null : (FT(oT, IT, iT * TT.BYTES_PER_ELEMENT, TT.BYTES_PER_ELEMENT, zT), new TT(oT, IT, iT))
+    }
+
+    function DT(TT, oT, IT, iT, zT) {
+      return 0 === oT ? null : (FT(TT, oT, IT, iT, zT), new DataView(TT, oT, IT))
     }
   },
-  39693: (YY, rY, DY) => {
-    DY.d(rY, {
-      A: () => yY,
-      e: () => FY,
-      f: () => WY,
-      g: () => QY,
-      k: () => oY,
-      n: () => sY,
-      r: () => iY,
-      v: () => vY,
-      z: () => uY
+  39371: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT,
+      e: () => rT,
+      i: () => KT,
+      k: () => MT,
+      l: () => LT,
+      n: () => xT,
+      p: () => ST,
+      s: () => DT,
+      w: () => cT
     });
-    class FY extends Error {
-      constructor(YY) {
-        super(`the join's code did not load: ${YY instanceof Error?YY.message:String(YY)}`, {
-          cause: YY
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === YY || void 0 === YY ? void 0 : YY.request
+    class iT extends Error {
+      constructor(TT) {
+        super(`the join's code did not load: ${TT instanceof Error?TT.message:String(TT)}`, {
+          cause: TT
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === TT || void 0 === TT ? void 0 : TT.request
       }
     }
-    let AY = null,
-      IY = null,
-      RY = null;
-    const OY = [];
-    let gY = null;
+    let zT = null,
+      kT = null,
+      WT = null;
+    const XT = [];
+    let BT = null;
 
-    function aY(YY, rY) {
+    function FT(TT, oT) {
       try {
-        YY(rY)
-      } catch (DY) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", DY)
+        TT(oT)
+      } catch (IT) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", IT)
       }
     }
 
-    function vY() {
-      return gY
+    function ST() {
+      return BT
     }
 
-    function uY(YY) {
-      OY.push(YY), null !== gY && aY(YY, gY)
+    function DT(TT) {
+      XT.push(TT), null !== BT && FT(TT, BT)
     }
 
-    function sY(YY) {
-      return AY ??= Promise.all([DY.e(69), DY.e(95), DY.e(209), DY.e(74), DY.e(186), DY.e(230), DY.e(210), DY.e(258), DY.e(92), DY.e(261), DY.e(237), DY.e(185), DY.e(195), DY.e(137), DY.e(85), DY.e(115), DY.e(235), DY.e(53)]).then((() => DY(41621))).then((rY => {
-        rY.loadAudio(YY), gY = rY;
-        for (const YY of OY) aY(YY, rY);
-        return rY
-      })).catch((YY => {
-        throw AY = null, YY
-      })), AY
+    function LT(TT) {
+      return zT ??= Promise.all([IT.e(69), IT.e(95), IT.e(209), IT.e(74), IT.e(186), IT.e(230), IT.e(210), IT.e(258), IT.e(92), IT.e(261), IT.e(237), IT.e(185), IT.e(195), IT.e(137), IT.e(85), IT.e(115), IT.e(235), IT.e(53)]).then((() => IT(41382))).then((oT => {
+        oT.loadAudio(TT), BT = oT;
+        for (const TT of XT) FT(TT, oT);
+        return oT
+      })).catch((TT => {
+        throw zT = null, TT
+      })), zT
     }
-    async function iY(YY, rY) {
+    async function xT(TT, oT) {
       try {
-        const DY = await sY(YY);
-        await DY.loadClientGame(rY)
-      } catch (DY) {
-        throw new FY(DY)
+        const IT = await LT(TT);
+        await IT.loadClientGame(oT)
+      } catch (IT) {
+        throw new iT(IT)
       }
     }
 
-    function yY(YY, rY) {
-      IY = {
-        running: YY,
-        shell: rY
+    function cT(TT, oT) {
+      kT = {
+        running: TT,
+        shell: oT
       }
     }
 
-    function QY() {
-      return RY
+    function KT() {
+      return WT
     }
-    async function oY(YY) {
-      const rY = IY;
-      if ((null === rY || void 0 === rY ? void 0 : rY.running) !== YY) throw new Error("the core's session has ended");
-      const DY = await sY(rY.shell.audio).catch((YY => {
-        throw new FY(YY)
+    async function MT(TT) {
+      const oT = kT;
+      if ((null === oT || void 0 === oT ? void 0 : oT.running) !== TT) throw new Error("the core's session has ended");
+      const IT = await LT(oT.shell.audio).catch((TT => {
+        throw new iT(TT)
       }));
-      if (null !== RY) return RY;
-      if (IY !== rY || YY.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (RY = DY.startGameHost(YY, rY.shell), null === RY) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return RY
+      if (null !== WT) return WT;
+      if (kT !== oT || TT.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (WT = IT.startGameHost(TT, oT.shell), null === WT) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return WT
     }
 
-    function WY() {
-      null !== RY && (null !== gY ? gY.endGameHost(RY) : RY.closeGame()), RY = null, IY = null
+    function rT() {
+      null !== WT && (null !== BT ? BT.endGameHost(WT) : WT.closeGame()), WT = null, kT = null
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

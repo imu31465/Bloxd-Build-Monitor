@@ -1,57 +1,57 @@
-/*! For license information please see zyyatq.wasmMatchmaking.2d148955.chunk.js.LICENSE.txt */
+/*! For license information please see qsji88.wasmMatchmaking.a0385d85.chunk.js.LICENSE.txt */
 export const id = 59;
 export const ids = [59];
 export const modules = {
-  36116: YY => {
-    YY.exports = function YY(rY, DY) {
-      if (rY === DY) return !0;
-      if (rY && DY && "object" == typeof rY && "object" == typeof DY) {
-        if (rY.constructor !== DY.constructor) return !1;
-        var FY, AY, IY;
-        if (Array.isArray(rY)) {
-          if ((FY = rY.length) != DY.length) return !1;
-          for (AY = FY; 0 !== AY--;)
-            if (!YY(rY[AY], DY[AY])) return !1;
+  35680: TT => {
+    TT.exports = function TT(oT, IT) {
+      if (oT === IT) return !0;
+      if (oT && IT && "object" == typeof oT && "object" == typeof IT) {
+        if (oT.constructor !== IT.constructor) return !1;
+        var iT, zT, kT;
+        if (Array.isArray(oT)) {
+          if ((iT = oT.length) != IT.length) return !1;
+          for (zT = iT; 0 !== zT--;)
+            if (!TT(oT[zT], IT[zT])) return !1;
           return !0
         }
-        if (rY.constructor === RegExp) return rY.source === DY.source && rY.flags === DY.flags;
-        if (rY.valueOf !== Object.prototype.valueOf) return rY.valueOf() === DY.valueOf();
-        if (rY.toString !== Object.prototype.toString) return rY.toString() === DY.toString();
-        if ((FY = (IY = Object.keys(rY)).length) !== Object.keys(DY).length) return !1;
-        for (AY = FY; 0 !== AY--;)
-          if (!Object.prototype.hasOwnProperty.call(DY, IY[AY])) return !1;
-        for (AY = FY; 0 !== AY--;) {
-          var RY = IY[AY];
-          if (!YY(rY[RY], DY[RY])) return !1
+        if (oT.constructor === RegExp) return oT.source === IT.source && oT.flags === IT.flags;
+        if (oT.valueOf !== Object.prototype.valueOf) return oT.valueOf() === IT.valueOf();
+        if (oT.toString !== Object.prototype.toString) return oT.toString() === IT.toString();
+        if ((iT = (kT = Object.keys(oT)).length) !== Object.keys(IT).length) return !1;
+        for (zT = iT; 0 !== zT--;)
+          if (!Object.prototype.hasOwnProperty.call(IT, kT[zT])) return !1;
+        for (zT = iT; 0 !== zT--;) {
+          var WT = kT[zT];
+          if (!TT(oT[WT], IT[WT])) return !1
         }
         return !0
       }
-      return rY !== rY && DY !== DY
+      return oT !== oT && IT !== IT
     }
   },
-  35974: (YY, rY) => {
-    function DY(YY) {
-      if (YY && "object" === typeof YY) {
-        var rY = YY.which || YY.keyCode || YY.charCode;
-        rY && (YY = rY)
+  35546: (TT, oT) => {
+    function IT(TT) {
+      if (TT && "object" === typeof TT) {
+        var oT = TT.which || TT.keyCode || TT.charCode;
+        oT && (TT = oT)
       }
-      if ("number" === typeof YY) return RY[YY];
-      var DY, IY = String(YY);
-      return (DY = FY[IY.toLowerCase()]) ? DY : (DY = AY[IY.toLowerCase()]) || (1 === IY.length ? IY.charCodeAt(0) : void 0)
+      if ("number" === typeof TT) return WT[TT];
+      var IT, kT = String(TT);
+      return (IT = iT[kT.toLowerCase()]) ? IT : (IT = zT[kT.toLowerCase()]) || (1 === kT.length ? kT.charCodeAt(0) : void 0)
     }
-    DY.isEventKey = function(YY, rY) {
-      if (YY && "object" === typeof YY) {
-        var DY = YY.which || YY.keyCode || YY.charCode;
-        if (null === DY || void 0 === DY) return !1;
-        if ("string" === typeof rY) {
-          var IY;
-          if (IY = FY[rY.toLowerCase()]) return IY === DY;
-          if (IY = AY[rY.toLowerCase()]) return IY === DY
-        } else if ("number" === typeof rY) return rY === DY;
+    IT.isEventKey = function(TT, oT) {
+      if (TT && "object" === typeof TT) {
+        var IT = TT.which || TT.keyCode || TT.charCode;
+        if (null === IT || void 0 === IT) return !1;
+        if ("string" === typeof oT) {
+          var kT;
+          if (kT = iT[oT.toLowerCase()]) return kT === IT;
+          if (kT = zT[oT.toLowerCase()]) return kT === IT
+        } else if ("number" === typeof oT) return oT === IT;
         return !1
       }
     };
-    var FY = (rY = YY.exports = DY).code = rY.codes = {
+    var iT = (oT = TT.exports = IT).code = oT.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -96,7 +96,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      AY = rY.aliases = {
+      zT = oT.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -118,47 +118,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (IY = 97; IY < 123; IY++) FY[String.fromCharCode(IY)] = IY - 32;
-    for (var IY = 48; IY < 58; IY++) FY[IY - 48] = IY;
-    for (IY = 1; IY < 13; IY++) FY["f" + IY] = IY + 111;
-    for (IY = 0; IY < 10; IY++) FY["numpad " + IY] = IY + 96;
-    var RY = rY.names = rY.title = {};
-    for (IY in FY) RY[FY[IY]] = IY;
-    for (var OY in AY) FY[OY] = AY[OY]
+    for (kT = 97; kT < 123; kT++) iT[String.fromCharCode(kT)] = kT - 32;
+    for (var kT = 48; kT < 58; kT++) iT[kT - 48] = kT;
+    for (kT = 1; kT < 13; kT++) iT["f" + kT] = kT + 111;
+    for (kT = 0; kT < 10; kT++) iT["numpad " + kT] = kT + 96;
+    var WT = oT.names = oT.title = {};
+    for (kT in iT) WT[iT[kT]] = kT;
+    for (var XT in zT) iT[XT] = zT[XT]
   },
-  36135: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => RY
+  35700: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT
     });
-    var FY = DY(61);
-    const AY = FY.useLayoutEffect;
-    const IY = function(YY) {
-      var rY = (0, FY.useRef)(YY);
-      return AY((function() {
-        rY.current = YY
-      })), rY
+    var iT = IT(46);
+    const zT = iT.useLayoutEffect;
+    const kT = function(TT) {
+      var oT = (0, iT.useRef)(TT);
+      return zT((function() {
+        oT.current = TT
+      })), oT
     };
-    var RY = function(YY) {
-      var rY = IY(YY);
-      (0, FY.useEffect)((function() {
-        var YY = function(YY) {
-          var DY;
-          if (null != rY.current && (DY = rY.current(YY)), YY.defaultPrevented && (YY.returnValue = ""), "string" === typeof DY) return YY.returnValue = DY, DY
+    var WT = function(TT) {
+      var oT = kT(TT);
+      (0, iT.useEffect)((function() {
+        var TT = function(TT) {
+          var IT;
+          if (null != oT.current && (IT = oT.current(TT)), TT.defaultPrevented && (TT.returnValue = ""), "string" === typeof IT) return TT.returnValue = IT, IT
         };
-        return window.addEventListener("beforeunload", YY),
+        return window.addEventListener("beforeunload", TT),
           function() {
-            window.removeEventListener("beforeunload", YY)
+            window.removeEventListener("beforeunload", TT)
           }
       }), [])
     }
   },
-  36008: YY => {
-    var rY, DY = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      FY = /OS X/.test(DY),
-      AY = /Opera/.test(DY),
-      IY = !/like Gecko/.test(DY) && !AY,
-      RY = YY.exports = {
-        0: FY ? "<menu>" : "<UNK>",
+  35587: TT => {
+    var oT, IT = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      iT = /OS X/.test(IT),
+      zT = /Opera/.test(IT),
+      kT = !/like Gecko/.test(IT) && !zT,
+      WT = TT.exports = {
+        0: iT ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -201,7 +201,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: FY ? "<meta>" : "<menu>",
+        93: iT ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -224,7 +224,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: FY && IY ? "-" : "<volume-mute>",
+        173: iT && kT ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -250,7 +250,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: AY ? "`" : "<unicode>",
+        231: zT ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -261,171 +261,171 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (rY = 58; rY < 65; ++rY) RY[rY] = String.fromCharCode(rY);
-    for (rY = 48; rY < 58; ++rY) RY[rY] = rY - 48 + "";
-    for (rY = 65; rY < 91; ++rY) RY[rY] = String.fromCharCode(rY);
-    for (rY = 96; rY < 106; ++rY) RY[rY] = "<num-" + (rY - 96) + ">";
-    for (rY = 112; rY < 136; ++rY) RY[rY] = "F" + (rY - 111)
+    for (oT = 58; oT < 65; ++oT) WT[oT] = String.fromCharCode(oT);
+    for (oT = 48; oT < 58; ++oT) WT[oT] = oT - 48 + "";
+    for (oT = 65; oT < 91; ++oT) WT[oT] = String.fromCharCode(oT);
+    for (oT = 96; oT < 106; ++oT) WT[oT] = "<num-" + (oT - 96) + ">";
+    for (oT = 112; oT < 136; ++oT) WT[oT] = "F" + (oT - 111)
   },
-  6230: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY,
-      e: () => IY
+  6158: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT,
+      e: () => kT
     });
-    var FY = DY(40);
-    const AY = "shaderPack";
-    async function IY() {
-      var YY;
-      let rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (YY = await FY.i.getItem(AY, rY)) && void 0 !== YY ? YY : null
-    }
-  },
-  8309: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => IY,
-      h: () => AY
-    });
-    let FY = !1;
-
-    function AY() {
-      FY = !0
-    }
-
-    function IY() {
-      return FY
+    var iT = IT(26);
+    const zT = "shaderPack";
+    async function kT() {
+      var TT;
+      let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (TT = await iT.c.getItem(zT, oT)) && void 0 !== TT ? TT : null
     }
   },
-  35873: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      InGameUi: () => mY.c,
-      LobbyLeaderboard: () => VY.c,
-      loadCharacterCustomisationUI: () => SY,
-      loadCharacterPreview: () => lY,
-      matchmakeAndPlay: () => BY,
-      setUpGame: () => TY
+  8329: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      f: () => zT
     });
-    var FY = DY(1253),
-      AY = DY(183),
-      IY = DY(19),
-      RY = DY(35881),
-      OY = DY(35886),
-      gY = DY(1823),
-      aY = DY(35921);
+    let iT = !1;
 
-    function vY() {
-      return !1 !== gY.b.get("canCustomiseChar")
-    }
-    let uY = !1;
-    var sY = DY(1322),
-      iY = DY(1256),
-      yY = DY(713),
-      QY = DY(8309);
-    var oY = DY(8307),
-      WY = DY(3168),
-      EY = DY(1762);
-    var mY = DY(35935),
-      VY = DY(36372);
-
-    function SY() {
-      return Promise.all([DY.e(279), DY.e(387)]).then((() => DY(40271)))
+    function zT() {
+      iT = !0
     }
 
-    function lY() {
-      return DY.e(280).then((() => DY(40276)))
+    function kT() {
+      return iT
+    }
+  },
+  35449: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      InGameUi: () => gT.e,
+      LobbyLeaderboard: () => hT.b,
+      loadCharacterCustomisationUI: () => wT,
+      loadCharacterPreview: () => mT,
+      matchmakeAndPlay: () => vT,
+      setUpGame: () => eT
+    });
+    var iT = IT(1216),
+      zT = IT(159),
+      kT = IT(12),
+      WT = IT(35451),
+      XT = IT(35458),
+      BT = IT(1770),
+      FT = IT(35490);
+
+    function ST() {
+      return !1 !== BT.e.get("canCustomiseChar")
+    }
+    let DT = !1;
+    var LT = IT(1293),
+      xT = IT(1220),
+      cT = IT(690),
+      KT = IT(8329);
+    var MT = IT(8325),
+      rT = IT(3138),
+      AT = IT(1706);
+    var gT = IT(35503),
+      hT = IT(35974);
+
+    function wT() {
+      return Promise.all([IT.e(279), IT.e(387)]).then((() => IT(39967)))
     }
 
-    function TY() {
-      return (0, oY.f)()
+    function mT() {
+      return IT.e(280).then((() => IT(39976)))
     }
-    uY || (uY = !0, document.addEventListener("keydown", (YY => {
-        (0, aY.e)(YY, vY)
+
+    function eT() {
+      return (0, MT.e)()
+    }
+    DT || (DT = !0, document.addEventListener("keydown", (TT => {
+        (0, FT.c)(TT, ST)
       }))),
-      function(YY) {
-        var rY;
-        return !0 !== (null === YY || void 0 === YY ? void 0 : YY.saveData) && !/2g$/.test(null !== (rY = null === YY || void 0 === YY ? void 0 : YY.effectiveType) && void 0 !== rY ? rY : "")
-      }(navigator.connection) && (0, yY.d)((() => {
-        (0, QY.e)() || Promise.all([DY.e(74), DY.e(133), DY.e(87), DY.e(55)]).then((() => DY(39865))).then((YY => {
-          (0, QY.e)() || YY.startLoadAheadOfJoin({
-            joinStarted: QY.e,
-            language: iY.h.get().getCurrentLanguageCode()
+      function(TT) {
+        var oT;
+        return !0 !== (null === TT || void 0 === TT ? void 0 : TT.saveData) && !/2g$/.test(null !== (oT = null === TT || void 0 === TT ? void 0 : TT.effectiveType) && void 0 !== oT ? oT : "")
+      }(navigator.connection) && (0, cT.b)((() => {
+        (0, KT.e)() || Promise.all([IT.e(74), IT.e(133), IT.e(87), IT.e(55)]).then((() => IT(39544))).then((TT => {
+          (0, KT.e)() || TT.startLoadAheadOfJoin({
+            joinStarted: KT.e,
+            language: xT.d.get().getCurrentLanguageCode()
           })
-        }), (YY => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", YY)
+        }), (TT => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", TT)
         }))
       }));
-    const eY = IY.b.get("router");
-    null === eY ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function YY(rY) {
-      if ((0, EY.d)(rY.state.location.pathname)) return void(0, oY.e)().catch((() => {}));
-      const DY = rY.subscribe((FY => {
-        (0, EY.d)(FY.location.pathname) && (DY(), (0, WY.b)().then((() => {
-          YY(rY)
+    const RT = kT.c.get("router");
+    null === RT ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function TT(oT) {
+      if ((0, AT.c)(oT.state.location.pathname)) return void(0, MT.c)().catch((() => {}));
+      const IT = oT.subscribe((iT => {
+        (0, AT.c)(iT.location.pathname) && (IT(), (0, rT.c)().then((() => {
+          TT(oT)
         })))
       }))
-    }(eY), (0, RY.d)();
-    const NY = (0, OY.d)((async function(YY, rY) {
+    }(RT), (0, WT.e)();
+    const uT = (0, XT.d)((async function(TT, oT) {
       let {
-        place: DY,
-        userContext: IY,
-        direct: RY,
-        rematch: OY
-      } = YY;
-      const gY = RY ? 1 / 0 : performance.now();
-      let aY;
+        place: IT,
+        userContext: kT,
+        direct: WT,
+        rematch: XT
+      } = TT;
+      const BT = WT ? 1 / 0 : performance.now();
+      let FT;
       try {
-        aY = await (0, oY.e)()
-      } catch (vY) {
-        return console.error("The wasm client did not load:", vY), (0, sY.n)({
+        FT = await (0, MT.c)()
+      } catch (ST) {
+        return console.error("The wasm client did not load:", ST), (0, LT.o)({
           websocketUrl: null
-        }), FY.e.errorWithCode(String(vY), AY.l.CONNECT_TO_GAME_SERVER, {
-          error: vY,
-          severity: rY.aborted ? "low" : "medium",
-          Hr: rY.aborted
+        }), iT.b.errorWithCode(String(ST), zT.j.CONNECT_TO_GAME_SERVER, {
+          error: ST,
+          severity: oT.aborted ? "low" : "medium",
+          Jo: oT.aborted
         })
       }
-      return aY.playWasmGame({
-        userContext: IY,
-        place: DY,
-        matchedAt: gY,
-        rematch: OY
-      }, rY)
+      return FT.playWasmGame({
+        userContext: kT,
+        place: IT,
+        matchedAt: BT,
+        rematch: XT
+      }, oT)
     }));
 
-    function BY() {
-      return (0, oY.e)().catch((() => {})), NY(...arguments)
+    function vT() {
+      return (0, MT.c)().catch((() => {})), uT(...arguments)
     }
   },
-  8307: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => vY,
-      f: () => uY
+  8325: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => ST,
+      e: () => DT
     });
-    var FY = DY(2743),
-      AY = DY(2137),
-      IY = DY(2785),
-      RY = DY(4220),
-      OY = DY(3082),
-      gY = DY(8309);
-    let aY = null;
+    var iT = IT(2710),
+      zT = IT(2089),
+      kT = IT(2750),
+      WT = IT(4152),
+      XT = IT(3061),
+      BT = IT(8329);
+    let FT = null;
 
-    function vY() {
-      return RY.e.cancelDownloadForJoin(), (0, OY.b)(), (0, AY.c)(), (0, gY.h)(), (0, IY.i)(), Promise.all([DY.e(69), DY.e(72), DY.e(71), DY.e(70), DY.e(83), DY.e(258), DY.e(237), DY.e(211), DY.e(235), DY.e(207), DY.e(46)]).then((() => DY(39778))).catch((() => {})), Promise.all([DY.e(74), DY.e(133), DY.e(87), DY.e(55)]).then((() => DY(39865))).then((YY => {
+    function ST() {
+      return WT.b.cancelDownloadForJoin(), (0, XT.e)(), (0, zT.d)(), (0, BT.f)(), (0, kT.i)(), Promise.all([IT.e(69), IT.e(72), IT.e(71), IT.e(70), IT.e(83), IT.e(258), IT.e(237), IT.e(211), IT.e(235), IT.e(207), IT.e(46)]).then((() => IT(39457))).catch((() => {})), Promise.all([IT.e(74), IT.e(133), IT.e(87), IT.e(55)]).then((() => IT(39544))).then((TT => {
         let {
-          startJoinLoad: rY
-        } = YY;
-        rY()
-      }), (() => {})), aY ??= Promise.all([DY.e(71), DY.e(74), DY.e(130), DY.e(73), DY.e(133), DY.e(261), DY.e(185), DY.e(87), DY.e(86), DY.e(85), DY.e(207), DY.e(60)]).then((() => DY(39960))).then((YY => (YY.startWasmPlay(), YY.followPageUiPack((YY => {
-        FY.d.showGamePack(YY)
-      })), YY)), (YY => {
-        throw aY = null, YY
-      })), aY
+          startJoinLoad: oT
+        } = TT;
+        oT()
+      }), (() => {})), FT ??= Promise.all([IT.e(71), IT.e(74), IT.e(130), IT.e(73), IT.e(133), IT.e(261), IT.e(185), IT.e(87), IT.e(86), IT.e(85), IT.e(207), IT.e(60)]).then((() => IT(39647))).then((TT => (TT.startWasmPlay(), TT.followPageUiPack((TT => {
+        iT.e.showGamePack(TT)
+      })), TT)), (TT => {
+        throw FT = null, TT
+      })), FT
     }
 
-    function uY() {
-      return Promise.all([DY.e(71), DY.e(74), DY.e(130), DY.e(73), DY.e(133), DY.e(261), DY.e(185), DY.e(87), DY.e(86), DY.e(85), DY.e(207), DY.e(60)]).then((() => DY(39960))).then((YY => {
-        YY.startWasmPreviews(), YY.prefetchWasmPreviews()
+    function DT() {
+      return Promise.all([IT.e(71), IT.e(74), IT.e(130), IT.e(73), IT.e(133), IT.e(261), IT.e(185), IT.e(87), IT.e(86), IT.e(85), IT.e(207), IT.e(60)]).then((() => IT(39647))).then((TT => {
+        TT.startWasmPreviews(), TT.prefetchWasmPreviews()
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

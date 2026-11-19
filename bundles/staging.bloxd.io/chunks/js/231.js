@@ -1,78 +1,78 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  37399: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => aY,
-      i: () => FY,
-      l: () => OY,
-      o: () => AY,
-      s: () => RY,
-      w: () => IY
+  37012: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => FT,
+      h: () => iT,
+      j: () => XT,
+      l: () => zT,
+      m: () => WT,
+      n: () => kT
     });
-    const FY = 1.001,
-      AY = .501,
-      IY = .025,
-      RY = .75,
-      OY = .08,
-      gY = 4;
+    const iT = 1.001,
+      zT = .501,
+      kT = .025,
+      WT = .75,
+      XT = .08,
+      BT = 4;
 
-    function aY() {
-      const YY = AY,
-        rY = IY,
-        DY = YY - rY / 2,
-        FY = (2 * YY - 2 * rY) / (2 * gY - 1),
-        RY = [];
-      for (const AY of [-DY, DY])
-        for (const IY of [-DY, DY])
-          for (let DY = 0; DY < gY; DY++) {
-            const OY = -YY + rY + FY * (2 * DY + .5);
-            RY.push([FY, rY, rY, OY, AY, IY]), RY.push([rY, FY, rY, AY, OY, IY]), RY.push([rY, rY, FY, AY, IY, OY])
+    function FT() {
+      const TT = zT,
+        oT = kT,
+        IT = TT - oT / 2,
+        iT = (2 * TT - 2 * oT) / (2 * BT - 1),
+        WT = [];
+      for (const zT of [-IT, IT])
+        for (const kT of [-IT, IT])
+          for (let IT = 0; IT < BT; IT++) {
+            const XT = -TT + oT + iT * (2 * IT + .5);
+            WT.push([iT, oT, oT, XT, zT, kT]), WT.push([oT, iT, oT, zT, XT, kT]), WT.push([oT, oT, iT, zT, kT, XT])
           }
-      for (const AY of [-DY, DY])
-        for (const YY of [-DY, DY])
-          for (const FY of [-DY, DY]) RY.push([rY, rY, rY, AY, YY, FY]);
-      return RY
+      for (const zT of [-IT, IT])
+        for (const TT of [-IT, IT])
+          for (const iT of [-IT, IT]) WT.push([oT, oT, oT, zT, TT, iT]);
+      return WT
     }
   },
-  37812: (YY, rY, DY) => {
-    DY.d(rY, {
-      C: () => lY,
-      D: () => eY,
-      F: () => SY,
-      G: () => VY,
-      H: () => sY,
-      L: () => QY,
-      M: () => WY,
-      Q: () => AY,
-      b: () => vY,
-      e: () => gY,
-      h: () => mY,
-      l: () => aY,
-      o: () => OY,
-      r: () => RY,
-      s: () => IY,
-      w: () => TY,
-      z: () => iY
+  37405: (TT, oT, IT) => {
+    IT.d(oT, {
+      B: () => mT,
+      C: () => RT,
+      E: () => wT,
+      F: () => hT,
+      G: () => LT,
+      J: () => KT,
+      L: () => rT,
+      O: () => zT,
+      b: () => ST,
+      d: () => BT,
+      h: () => gT,
+      k: () => FT,
+      n: () => XT,
+      r: () => WT,
+      s: () => kT,
+      v: () => eT,
+      x: () => xT
     });
-    var FY = DY(8903);
+    var iT = IT(8907);
 
-    function AY(YY) {
-      return Math.floor(YY).toLocaleString("en-US")
+    function zT(TT) {
+      return Math.floor(TT).toLocaleString("en-US")
     }
-    const IY = 2e3,
-      RY = .005,
-      OY = .001,
-      gY = 2,
-      aY = "Fluid Tank",
-      vY = "Coolant Mixer",
-      uY = 144;
+    const kT = 2e3,
+      WT = .005,
+      XT = .001,
+      BT = 2,
+      FT = "Fluid Tank",
+      ST = "Coolant Mixer",
+      DT = 144;
 
-    function sY(YY) {
-      const rY = YY.split("|")[0];
-      return (0, FY.h)(rY) ? rY === FY.c ? "cryo" : "water" : null
+    function LT(TT) {
+      const oT = TT.split("|")[0];
+      return (0, iT.k)(oT) ? oT === iT.d ? "cryo" : "water" : null
     }
-    const iY = [
+    const xT = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      yY = 63;
+      cT = 63;
 
-    function QY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const DY = rY ? function(YY, rY, DY) {
-        const FY = iY.findIndex((FY => {
-          let [AY, IY, RY] = FY;
-          return AY === YY && IY === rY && RY === DY
+    function KT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const IT = oT ? function(TT, oT, IT) {
+        const iT = xT.findIndex((iT => {
+          let [zT, kT, WT] = iT;
+          return zT === TT && kT === oT && WT === IT
         }));
-        return FY < 0 ? 0 : 1 << FY
-      }(rY[0], rY[1], rY[2]) : 0;
-      return "maker" === YY ? {
-        kind: YY,
-        faces: DY
-      } : "user" === YY ? {
-        kind: YY,
-        faces: yY & ~DY
+        return iT < 0 ? 0 : 1 << iT
+      }(oT[0], oT[1], oT[2]) : 0;
+      return "maker" === TT ? {
+        kind: TT,
+        faces: IT
+      } : "user" === TT ? {
+        kind: TT,
+        faces: cT & ~IT
       } : {
-        kind: YY,
-        faces: yY
+        kind: TT,
+        faces: cT
       }
     }
 
-    function oY(YY) {
-      return "pipe" === YY || "tank" === YY || "maker" === YY
+    function MT(TT) {
+      return "pipe" === TT || "tank" === TT || "maker" === TT
     }
 
-    function WY(YY, rY, DY) {
-      return 0 !== (YY.faces & 1 << DY) && 0 !== (rY.faces & 1 << (1 ^ DY)) && (oY(YY.kind) || oY(rY.kind))
+    function rT(TT, oT, IT) {
+      return 0 !== (TT.faces & 1 << IT) && 0 !== (oT.faces & 1 << (1 ^ IT)) && (MT(TT.kind) || MT(oT.kind))
     }
-    const EY = (YY, rY, DY, FY) => ({
-        input: YY,
-        inputAmount: FY,
-        output: rY,
-        outputAmount: DY
+    const AT = (TT, oT, IT, iT) => ({
+        input: TT,
+        inputAmount: iT,
+        output: oT,
+        outputAmount: IT
       }),
-      mY = {
+      gT = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [EY("Uranium Grit", "Uranium Pellet", 1, 12), EY("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [AT("Uranium Grit", "Uranium Pellet", 1, 12), AT("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [EY("Biomass", "", 0, 1)],
+          recipes: [AT("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: uY,
+          cryoMade: DT,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function VY(YY, rY) {
-      return 1e3 * (null !== rY && void 0 !== rY ? rY : 0) / YY.opMs
+    function hT(TT, oT) {
+      return 1e3 * (null !== oT && void 0 !== oT ? oT : 0) / TT.opMs
     }
 
-    function SY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const DY = VY(mY["Coolant Mixer"], uY) * rY;
-      return YY <= 0 ? 0 : Math.ceil(YY / DY - 1e-9)
+    function wT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const IT = hT(gT["Coolant Mixer"], DT) * oT;
+      return TT <= 0 ? 0 : Math.ceil(TT / IT - 1e-9)
     }
-    const lY = "baf2Water",
-      TY = "baf2waterclose",
-      eY = "baf2wateropen"
+    const mT = "baf2Water",
+      eT = "baf2waterclose",
+      RT = "baf2wateropen"
   },
-  37798: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => CY,
-      g: () => fY
+  37390: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => UT,
+      f: () => aT
     });
-    var FY = DY(8830),
-      AY = DY(8862);
-    const IY = [
+    var iT = IT(8829),
+      zT = IT(8853);
+    const kT = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var RY = DY(8873),
-      OY = DY(37605),
-      gY = DY(8870);
-    const aY = {
+    var WT = IT(8876),
+      XT = IT(37221),
+      BT = IT(8869);
+    const FT = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function vY(YY) {
-      let [rY, DY] = YY;
-      return [-DY, rY]
+    function ST(TT) {
+      let [oT, IT] = TT;
+      return [-IT, oT]
     }
 
-    function uY(YY, rY) {
-      return YY[0] === rY[0] && YY[1] === rY[1]
+    function DT(TT, oT) {
+      return TT[0] === oT[0] && TT[1] === oT[1]
     }
 
-    function sY(YY, rY) {
-      return YY[0] * rY[0] + YY[1] * rY[1] === 0
+    function LT(TT, oT) {
+      return TT[0] * oT[0] + TT[1] * oT[1] === 0
     }
-    const iY = [
+    const xT = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var yY = DY(8900);
+    var cT = IT(8901);
 
-    function QY(YY, rY, DY, FY, AY) {
-      return rY < yY.s || rY >= yY.s + yY.v || Math.floor(YY / yY.A) === Math.floor(FY / yY.A) && Math.floor(DY / yY.A) === Math.floor(AY / yY.A)
+    function KT(TT, oT, IT, iT, zT) {
+      return oT < cT.s || oT >= cT.s + cT.v || Math.floor(TT / cT.B) === Math.floor(iT / cT.B) && Math.floor(IT / cT.B) === Math.floor(zT / cT.B)
     }
-    const oY = "Splitter",
-      WY = "Sorting Gate",
-      EY = new Set(yY.P),
-      mY = new Set([...yY.P, "Belt Loader", "Fast Loader", WY]),
-      VY = new Set(yY.z),
-      SY = [
+    const MT = "Splitter",
+      rT = "Sorting Gate",
+      AT = new Set(cT.J),
+      gT = new Set([...cT.J, "Belt Loader", "Fast Loader", rT]),
+      hT = new Set(cT.y),
+      wT = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,260 +240,260 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function lY(YY) {
-      var rY, DY;
-      return null !== (rY = null === (DY = FY.h[YY]) || void 0 === DY ? void 0 : DY.meta.rootName) && void 0 !== rY ? rY : ""
+    function mT(TT) {
+      var oT, IT;
+      return null !== (oT = null === (IT = iT.j[TT]) || void 0 === IT ? void 0 : IT.meta.rootName) && void 0 !== oT ? oT : ""
     }
 
-    function TY(YY) {
-      return lY(YY) === yY.k && (0, yY.Y)(FY.h[YY].name)
+    function eT(TT) {
+      return mT(TT) === cT.h && (0, cT.V)(iT.j[TT].name)
     }
-    var eY = DY(8865),
-      NY = DY(8884);
-    const BY = [
+    var RT = IT(8860),
+      uT = IT(8882);
+    const vT = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function cY(YY) {
-      var rY, DY;
-      const AY = null === (rY = FY.h[YY]) || void 0 === rY ? void 0 : rY.meta;
-      return (null === AY || void 0 === AY ? void 0 : AY.rootName) !== NY.m ? null : {
-        rot: null !== (DY = AY.rot) && void 0 !== DY ? DY : 1,
-        half: (0, NY.d)(AY.rootName, AY.metaStr)
+    function ET(TT) {
+      var oT, IT;
+      const zT = null === (oT = iT.j[TT]) || void 0 === oT ? void 0 : oT.meta;
+      return (null === zT || void 0 === zT ? void 0 : zT.rootName) !== uT.k ? null : {
+        rot: null !== (IT = zT.rot) && void 0 !== IT ? IT : 1,
+        half: (0, uT.e)(zT.rootName, zT.metaStr)
       }
     }
 
-    function KY(YY, rY, DY, FY) {
-      return cY(YY(rY, DY, FY))
+    function fT(TT, oT, IT, iT) {
+      return ET(TT(oT, IT, iT))
     }
 
-    function HY(YY, rY, DY, FY, AY) {
+    function CT(TT, oT, IT, iT, zT) {
       let {
-        rot: IY,
-        half: RY
-      } = AY;
-      const [OY, gY] = (0, NY.k)(IY, RY), aY = KY(YY, rY + OY, DY, FY + gY);
-      return null !== aY && aY.rot === IY && aY.half === NY.q[RY]
+        rot: kT,
+        half: WT
+      } = zT;
+      const [XT, BT] = (0, uT.j)(kT, WT), FT = fT(TT, oT + XT, IT, iT + BT);
+      return null !== FT && FT.rot === kT && FT.half === uT.o[WT]
     }
-    var zY = DY(37805);
-    const ZY = [new class {
+    var jT = IT(37399);
+    const JT = [new class {
       constructor() {
-        this.reshapeOffsets = iY
+        this.reshapeOffsets = xT
       }
-      handles(YY) {
-        var rY;
-        return "Stairs" === (null === (rY = FY.h[YY]) || void 0 === rY ? void 0 : rY.model)
+      handles(TT) {
+        var oT;
+        return "Stairs" === (null === (oT = iT.j[TT]) || void 0 === oT ? void 0 : oT.model)
       }
-      affects(YY) {
-        return this.handles(YY)
+      affects(TT) {
+        return this.handles(TT)
       }
-      shape(YY, rY, DY, AY, IY) {
-        const RY = this.stairsOf(IY),
-          OY = this.cornerAt(YY, rY, DY, AY, RY),
-          aY = RY.half === gY.e.top ? "top" : "bot";
-        return (0, FY.k)(`${FY.h[IY].meta.rootName}|meta|rot${RY.rot}|${aY}${null===OY?"":`|${OY}`}`)
+      shape(TT, oT, IT, zT, kT) {
+        const WT = this.stairsOf(kT),
+          XT = this.cornerAt(TT, oT, IT, zT, WT),
+          FT = WT.half === BT.b.top ? "top" : "bot";
+        return (0, iT.m)(`${iT.j[kT].meta.rootName}|meta|rot${WT.rot}|${FT}${null===XT?"":`|${XT}`}`)
       }
-      stairsOf(YY) {
+      stairsOf(TT) {
         const {
-          rot: rY,
-          halfblockPlacement: DY
-        } = FY.h[YY].meta;
+          rot: oT,
+          halfblockPlacement: IT
+        } = iT.j[TT].meta;
         return {
-          rot: rY,
-          half: DY
+          rot: oT,
+          half: IT
         }
       }
-      stairsAt(YY, rY, DY, FY) {
-        const AY = YY(rY, DY, FY);
-        return this.handles(AY) ? this.stairsOf(AY) : null
+      stairsAt(TT, oT, IT, iT) {
+        const zT = TT(oT, IT, iT);
+        return this.handles(zT) ? this.stairsOf(zT) : null
       }
-      cornerAt(YY, rY, DY, FY, AY) {
+      cornerAt(TT, oT, IT, iT, zT) {
         let {
-          rot: IY,
-          half: RY
-        } = AY;
-        const OY = aY[IY],
-          gY = AY => {
-            let [OY, gY] = AY;
-            const aY = this.stairsAt(YY, rY + OY, DY, FY + gY);
-            return null !== aY && aY.rot === IY && aY.half === RY
+          rot: kT,
+          half: WT
+        } = zT;
+        const XT = FT[kT],
+          BT = zT => {
+            let [XT, BT] = zT;
+            const FT = this.stairsAt(TT, oT + XT, IT, iT + BT);
+            return null !== FT && FT.rot === kT && FT.half === WT
           },
-          iY = this.stairsAt(YY, rY + OY[0], DY, FY + OY[1]);
-        if (null !== iY && iY.half === RY) {
-          const YY = aY[iY.rot];
-          if (sY(OY, YY) && !gY([-YY[0], -YY[1]])) return uY(YY, vY(OY)) ? "outerLeft" : "outerRight"
+          xT = this.stairsAt(TT, oT + XT[0], IT, iT + XT[1]);
+        if (null !== xT && xT.half === WT) {
+          const TT = FT[xT.rot];
+          if (LT(XT, TT) && !BT([-TT[0], -TT[1]])) return DT(TT, ST(XT)) ? "outerLeft" : "outerRight"
         }
-        const yY = this.stairsAt(YY, rY - OY[0], DY, FY - OY[1]);
-        if (null !== yY && yY.half === RY) {
-          const YY = aY[yY.rot];
-          if (sY(OY, YY) && !gY(YY)) return uY(YY, vY(OY)) ? "innerLeft" : "innerRight"
+        const cT = this.stairsAt(TT, oT - XT[0], IT, iT - XT[1]);
+        if (null !== cT && cT.half === WT) {
+          const TT = FT[cT.rot];
+          if (LT(XT, TT) && !BT(TT)) return DT(TT, ST(XT)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = IY, this.rootIds = new Set(AY.h.map((YY => (0, FY.k)(YY))))
+        this.reshapeOffsets = kT, this.rootIds = new Set(zT.g.map((TT => (0, iT.m)(TT))))
       }
-      handles(YY) {
-        var rY;
-        const DY = null === (rY = FY.h[YY]) || void 0 === rY ? void 0 : rY.meta;
-        return void 0 !== DY && this.rootIds.has(DY.rootId)
+      handles(TT) {
+        var oT;
+        const IT = null === (oT = iT.j[TT]) || void 0 === oT ? void 0 : oT.meta;
+        return void 0 !== IT && this.rootIds.has(IT.rootId)
       }
-      affects(YY) {
-        return this.handles(YY)
+      affects(TT) {
+        return this.handles(TT)
       }
-      placedBy(YY) {
-        return FY.h[YY].meta.rootName === AY.n ? null : AY.n
+      placedBy(TT) {
+        return iT.j[TT].meta.rootName === zT.k ? null : zT.k
       }
-      shape(YY, rY, DY, IY, RY) {
+      shape(TT, oT, IT, kT, WT) {
         const {
-          rootId: OY,
-          rootName: gY,
-          rot: aY
-        } = FY.h[RY].meta;
-        let vY = 0;
-        return AY.w[aY].forEach(((AY, RY) => {
-          var gY;
-          let [uY, sY, iY] = AY;
-          const yY = null === (gY = FY.h[YY(rY + uY, DY + sY, IY + iY)]) || void 0 === gY ? void 0 : gY.meta;
-          (null === yY || void 0 === yY ? void 0 : yY.rootId) === OY && yY.rot === aY && (vY |= 1 << RY)
-        })), (0, FY.k)((0, AY.f)(gY, aY, vY))
+          rootId: XT,
+          rootName: BT,
+          rot: FT
+        } = iT.j[WT].meta;
+        let ST = 0;
+        return zT.u[FT].forEach(((zT, WT) => {
+          var BT;
+          let [DT, LT, xT] = zT;
+          const cT = null === (BT = iT.j[TT(oT + DT, IT + LT, kT + xT)]) || void 0 === BT ? void 0 : BT.meta;
+          (null === cT || void 0 === cT ? void 0 : cT.rootId) === XT && cT.rot === FT && (ST |= 1 << WT)
+        })), (0, iT.m)((0, zT.e)(BT, FT, ST))
       }
-    }, ...RY.e.map((YY => new OY.d(YY))), new class {
+    }, ...WT.e.map((TT => new XT.e(TT))), new class {
       constructor() {
-        this.reshapeOffsets = SY
+        this.reshapeOffsets = wT
       }
-      handles(YY) {
-        const rY = lY(YY);
-        return EY.has(rY) || rY === yY.k
+      handles(TT) {
+        const oT = mT(TT);
+        return AT.has(oT) || oT === cT.h
       }
-      affects(YY) {
-        const rY = lY(YY);
-        return mY.has(rY) || VY.has(rY) || rY === oY || rY === yY.k || void 0 !== yY.c[rY]
+      affects(TT) {
+        const oT = mT(TT);
+        return gT.has(oT) || hT.has(oT) || oT === MT || oT === cT.h || void 0 !== cT.c[oT]
       }
-      shape(YY, rY, DY, AY, IY, RY) {
+      shape(TT, oT, IT, zT, kT, WT) {
         const {
-          rootName: OY,
-          rot: gY
-        } = FY.h[IY].meta;
-        return OY === yY.k ? RY ? IY : function(YY, rY, DY, AY, IY) {
-          const [RY, OY] = yY.g[IY - 1];
-          for (let gY = 1; gY <= yY.L; gY++) {
-            const [aY, vY] = [rY - RY * gY, AY - OY * gY], uY = YY(aY, DY, vY);
-            if (lY(uY) === yY.k && FY.h[uY].meta.rot === IY && QY(rY, DY, AY, aY, vY)) return (0, FY.k)((0, yY.cb)(IY, !TY(uY)))
+          rootName: XT,
+          rot: BT
+        } = iT.j[kT].meta;
+        return XT === cT.h ? WT ? kT : function(TT, oT, IT, zT, kT) {
+          const [WT, XT] = cT.g[kT - 1];
+          for (let BT = 1; BT <= cT.I; BT++) {
+            const [FT, ST] = [oT - WT * BT, zT - XT * BT], DT = TT(FT, IT, ST);
+            if (mT(DT) === cT.h && iT.j[DT].meta.rot === kT && KT(oT, IT, zT, FT, ST)) return (0, iT.m)((0, cT.db)(kT, !eT(DT)))
           }
-          return (0, FY.k)((0, yY.cb)(IY, !1))
-        }(YY, rY, DY, AY, gY) : (0, FY.k)((0, yY.R)(OY, gY, function(YY, rY, DY, AY, IY) {
-          const [RY, OY] = yY.g[IY - 1], gY = (IY, gY) => function(YY, rY, DY, AY, IY) {
-            var RY;
-            const OY = null === (RY = FY.h[YY]) || void 0 === RY ? void 0 : RY.meta;
-            if (!OY) return !1;
-            const gY = OY.rootName,
-              aY = mY.has(gY) || TY(YY);
-            if (!aY && !VY.has(gY) && gY !== oY) return !1;
-            const [vY, uY] = yY.g[OY.rot - 1];
-            return aY ? vY === -rY && uY === -DY : VY.has(gY) ? vY === rY && uY === DY : (0, yY.$)(FY.h[YY].name, vY, uY).some((YY => {
-              let [FY, AY] = YY;
-              return FY === -rY && AY === -DY
-            })) && !(AY === rY && IY === DY)
-          }(YY(rY + IY, DY, AY + gY), IY, gY, RY, OY), aY = YY(rY - RY, DY, AY - OY), vY = lY(aY) === oY && FY.h[aY].meta.rot === IY, uY = 1 === yY.c[lY(YY(rY, DY - 1, AY))] || -1 === yY.c[lY(YY(rY, DY + 1, AY))];
-          if (uY || vY || function(YY, rY, DY) {
-              if (lY(YY) !== WY) return !1;
-              const [AY, IY] = yY.g[FY.h[YY].meta.rot - 1], [RY, OY] = (0, yY.U)(FY.h[YY].name, AY, IY);
-              return rY === RY && DY === OY
-            }(aY, RY, OY) || gY(-RY, -OY)) return null;
-          const sY = gY(-OY, RY),
-            iY = gY(OY, -RY);
-          if (sY === iY) return null;
-          return sY ? "turnLeft" : "turnRight"
-        }(YY, rY, DY, AY, gY)))
+          return (0, iT.m)((0, cT.db)(kT, !1))
+        }(TT, oT, IT, zT, BT) : (0, iT.m)((0, cT.M)(XT, BT, function(TT, oT, IT, zT, kT) {
+          const [WT, XT] = cT.g[kT - 1], BT = (kT, BT) => function(TT, oT, IT, zT, kT) {
+            var WT;
+            const XT = null === (WT = iT.j[TT]) || void 0 === WT ? void 0 : WT.meta;
+            if (!XT) return !1;
+            const BT = XT.rootName,
+              FT = gT.has(BT) || eT(TT);
+            if (!FT && !hT.has(BT) && BT !== MT) return !1;
+            const [ST, DT] = cT.g[XT.rot - 1];
+            return FT ? ST === -oT && DT === -IT : hT.has(BT) ? ST === oT && DT === IT : (0, cT.$)(iT.j[TT].name, ST, DT).some((TT => {
+              let [iT, zT] = TT;
+              return iT === -oT && zT === -IT
+            })) && !(zT === oT && kT === IT)
+          }(TT(oT + kT, IT, zT + BT), kT, BT, WT, XT), FT = TT(oT - WT, IT, zT - XT), ST = mT(FT) === MT && iT.j[FT].meta.rot === kT, DT = 1 === cT.c[mT(TT(oT, IT - 1, zT))] || -1 === cT.c[mT(TT(oT, IT + 1, zT))];
+          if (DT || ST || function(TT, oT, IT) {
+              if (mT(TT) !== rT) return !1;
+              const [zT, kT] = cT.g[iT.j[TT].meta.rot - 1], [WT, XT] = (0, cT.P)(iT.j[TT].name, zT, kT);
+              return oT === WT && IT === XT
+            }(FT, WT, XT) || BT(-WT, -XT)) return null;
+          const LT = BT(-XT, WT),
+            xT = BT(XT, -WT);
+          if (LT === xT) return null;
+          return LT ? "turnLeft" : "turnRight"
+        }(TT, oT, IT, zT, BT)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = BY, this.rootId = (0, FY.k)(NY.m)
+        this.reshapeOffsets = vT, this.rootId = (0, iT.m)(uT.k)
       }
-      handles(YY) {
-        var rY;
-        return (null === (rY = FY.h[YY]) || void 0 === rY ? void 0 : rY.meta.rootId) === this.rootId
+      handles(TT) {
+        var oT;
+        return (null === (oT = iT.j[TT]) || void 0 === oT ? void 0 : oT.meta.rootId) === this.rootId
       }
-      affects(YY) {
-        return this.handles(YY)
+      affects(TT) {
+        return this.handles(TT)
       }
-      shape(YY, rY, DY, AY, IY, RY) {
-        const OY = cY(IY);
-        return (0, FY.k)((gY = OY.rot, null !== (aY = RY ? this.reshapedHalf(YY, rY, DY, AY, OY) : this.placedHalf(YY, rY, DY, AY, OY.rot)) ? (0, NY.c)(NY.m, gY, aY) : 1 === gY ? NY.m : `${NY.m}|meta|rot${gY}`));
-        var gY, aY
+      shape(TT, oT, IT, zT, kT, WT) {
+        const XT = ET(kT);
+        return (0, iT.m)((BT = XT.rot, null !== (FT = WT ? this.reshapedHalf(TT, oT, IT, zT, XT) : this.placedHalf(TT, oT, IT, zT, XT.rot)) ? (0, uT.c)(uT.k, BT, FT) : 1 === BT ? uT.k : `${uT.k}|meta|rot${BT}`));
+        var BT, FT
       }
-      placedHalf(YY, rY, DY, FY, AY) {
-        const [IY, RY] = eY.d[AY];
-        for (const [OY, gY] of [
+      placedHalf(TT, oT, IT, iT, zT) {
+        const [kT, WT] = RT.d[zT];
+        for (const [XT, BT] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const aY = rY + gY * IY,
-            vY = FY + gY * RY,
-            uY = KY(YY, aY, DY, vY);
-          if (null !== uY && uY.rot === AY && (null === uY.half || !HY(YY, aY, DY, vY, uY))) return OY
+          const FT = oT + BT * kT,
+            ST = iT + BT * WT,
+            DT = fT(TT, FT, IT, ST);
+          if (null !== DT && DT.rot === zT && (null === DT.half || !CT(TT, FT, IT, ST, DT))) return XT
         }
         return null
       }
-      reshapedHalf(YY, rY, DY, FY, AY) {
-        if (null !== AY.half && HY(YY, rY, DY, FY, AY)) return AY.half;
-        for (const IY of ["right", "left"]) {
-          const [RY, OY] = (0, NY.k)(AY.rot, IY), gY = KY(YY, rY + RY, DY, FY + OY);
-          if (null !== gY && gY.rot === AY.rot && gY.half === NY.q[IY]) return IY
+      reshapedHalf(TT, oT, IT, iT, zT) {
+        if (null !== zT.half && CT(TT, oT, IT, iT, zT)) return zT.half;
+        for (const kT of ["right", "left"]) {
+          const [WT, XT] = (0, uT.j)(zT.rot, kT), BT = fT(TT, oT + WT, IT, iT + XT);
+          if (null !== BT && BT.rot === zT.rot && BT.half === uT.o[kT]) return kT
         }
         return null
       }
-    }, new zY.d];
+    }, new jT.e];
 
-    function CY(YY, rY, DY, FY, AY) {
-      let IY = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const RY of ZY)
-        if (RY.handles(AY)) return RY.shape(YY, rY, DY, FY, AY, IY);
-      return AY
+    function UT(TT, oT, IT, iT, zT) {
+      let kT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const WT of JT)
+        if (WT.handles(zT)) return WT.shape(TT, oT, IT, iT, zT, kT);
+      return zT
     }
 
-    function fY(YY) {
-      for (const FY of ZY) {
-        var rY, DY;
-        if (FY.handles(YY)) return null !== (rY = null === (DY = FY.placedBy) || void 0 === DY ? void 0 : DY.call(FY, YY)) && void 0 !== rY ? rY : null
+    function aT(TT) {
+      for (const iT of JT) {
+        var oT, IT;
+        if (iT.handles(TT)) return null !== (oT = null === (IT = iT.placedBy) || void 0 === IT ? void 0 : IT.call(iT, TT)) && void 0 !== oT ? oT : null
       }
       return null
     }
   },
-  37805: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => NY,
-      g: () => VY,
-      h: () => mY
+  37399: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => uT,
+      h: () => hT,
+      l: () => gT
     });
-    var FY = DY(8830),
-      AY = DY(8851),
-      IY = DY(8903),
-      RY = DY(37812),
-      OY = DY(8900);
-    const gY = (0, RY.L)("pipe"),
-      aY = (0, RY.L)("tank"),
-      vY = (0, RY.L)("port"),
-      uY = "Reactor Port";
+    var iT = IT(8829),
+      zT = IT(8846),
+      kT = IT(8907),
+      WT = IT(37405),
+      XT = IT(8901);
+    const BT = (0, WT.J)("pipe"),
+      FT = (0, WT.J)("tank"),
+      ST = (0, WT.J)("port"),
+      DT = "Reactor Port";
 
-    function sY(YY, rY, DY) {
-      const FY = new Set([IY.e, IY.c, uY, ...rY, ...DY, ...YY ? [RY.l] : []]);
+    function LT(TT, oT, IT) {
+      const iT = new Set([kT.f, kT.d, DT, ...oT, ...IT, ...TT ? [WT.k] : []]);
       return {
-        makers: new Set(rY),
-        roots: FY
+        makers: new Set(oT),
+        roots: iT
       }
     }
-    const iY = {
-        water: sY(!0, ["Condenser"], ["Centrifuge", "Synthesizer", RY.b]),
-        cryo: sY(!1, [RY.b], [])
+    const xT = {
+        water: LT(!0, ["Condenser"], ["Centrifuge", "Synthesizer", WT.b]),
+        cryo: LT(!1, [WT.b], [])
       },
-      yY = new Set([...iY.water.roots, ...iY.cryo.roots]),
-      QY = {
+      cT = new Set([...xT.water.roots, ...xT.cryo.roots]),
+      KT = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -501,127 +501,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      oY = AY.e.map((YY => QY[YY])),
-      WY = oY.map((YY => {
-        let [rY, DY, FY] = YY;
-        return RY.z.findIndex((YY => {
-          let [AY, IY, RY] = YY;
-          return AY === rY && IY === DY && RY === FY
+      MT = zT.h.map((TT => KT[TT])),
+      rT = MT.map((TT => {
+        let [oT, IT, iT] = TT;
+        return WT.x.findIndex((TT => {
+          let [zT, kT, WT] = TT;
+          return zT === oT && kT === IT && WT === iT
         }))
       }));
 
-    function EY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const DY = FY.h[YY],
-        AY = null === DY || void 0 === DY ? void 0 : DY.meta.rootName,
-        sY = iY[rY];
-      if (!AY || !sY.roots.has(AY)) return null;
-      if ((0, IY.h)(AY)) return (0, RY.H)(DY.name) === rY ? gY : null;
-      if (AY === RY.l) return aY;
-      if (AY === uY) return DY.name.endsWith("|Water") ? vY : null;
-      const [yY, QY] = OY.g[(DY.meta.rot || 1) - 1];
-      return (0, RY.L)(sY.makers.has(AY) ? "maker" : "user", [-yY, 0, -QY])
+    function AT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const IT = iT.j[TT],
+        zT = null === IT || void 0 === IT ? void 0 : IT.meta.rootName,
+        LT = xT[oT];
+      if (!zT || !LT.roots.has(zT)) return null;
+      if ((0, kT.k)(zT)) return (0, WT.G)(IT.name) === oT ? BT : null;
+      if (zT === WT.k) return FT;
+      if (zT === DT) return IT.name.endsWith("|Water") ? ST : null;
+      const [cT, KT] = XT.g[(IT.meta.rot || 1) - 1];
+      return (0, WT.J)(LT.makers.has(zT) ? "maker" : "user", [-cT, 0, -KT])
     }
 
-    function mY(YY, rY, DY, AY) {
-      let IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function gT(TT, oT, IT, zT) {
+      let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: OY
-      } = iY[IY];
-      return oY.some(((aY, vY) => {
-        var uY, sY;
-        let [iY, yY, QY] = aY;
-        const oY = YY(rY + iY, DY + yY, AY + QY),
-          mY = EY(oY, IY);
-        return null !== mY && OY.has(null !== (uY = null === (sY = FY.h[oY]) || void 0 === sY ? void 0 : sY.meta.rootName) && void 0 !== uY ? uY : "") && !(0, RY.M)(gY, mY, WY[vY])
+        makers: XT
+      } = xT[kT];
+      return MT.some(((FT, ST) => {
+        var DT, LT;
+        let [xT, cT, KT] = FT;
+        const MT = TT(oT + xT, IT + cT, zT + KT),
+          gT = AT(MT, kT);
+        return null !== gT && XT.has(null !== (DT = null === (LT = iT.j[MT]) || void 0 === LT ? void 0 : LT.meta.rootName) && void 0 !== DT ? DT : "") && !(0, WT.L)(BT, gT, rT[ST])
       }))
     }
 
-    function VY(YY) {
-      const rY = FY.h[YY];
-      return rY ? (0, RY.H)(rY.name) : null
+    function hT(TT) {
+      const oT = iT.j[TT];
+      return oT ? (0, WT.G)(oT.name) : null
     }
-    let SY = null;
+    let wT = null;
 
-    function lY(YY) {
-      if (!SY) {
-        SY = new Map;
-        for (const YY of ["water", "cryo"])
-          for (let rY = 0; rY < 64; rY++)
-            for (const DY of [!1, !0]) SY.set((0, IY.j)(YY, rY, DY), {
-              ui: YY,
-              mask: rY,
-              full: DY
+    function mT(TT) {
+      if (!wT) {
+        wT = new Map;
+        for (const TT of ["water", "cryo"])
+          for (let oT = 0; oT < 64; oT++)
+            for (const IT of [!1, !0]) wT.set((0, kT.l)(TT, oT, IT), {
+              Sx: TT,
+              mask: oT,
+              full: IT
             })
       }
-      return SY.get(YY)
+      return wT.get(TT)
     }
-    const TY = new Map(Array.from({
-      length: IY.g + 1
-    }, ((YY, rY) => [(0, IY.l)(rY), rY])));
+    const eT = new Map(Array.from({
+      length: kT.g + 1
+    }, ((TT, oT) => [(0, kT.o)(oT), oT])));
 
-    function eY(YY, rY, DY, AY, IY, RY) {
-      return oY.some(((OY, gY) => {
-        var aY, vY, uY;
-        let [sY, iY, yY] = OY;
-        if (0 === (RY >> gY & 1)) return !1;
-        const QY = null !== (aY = null === (vY = FY.h[YY(rY + sY, DY + iY, AY + yY)]) || void 0 === vY ? void 0 : vY.name) && void 0 !== aY ? aY : "",
-          oY = lY(QY);
-        return oY ? oY.ui === IY && oY.full : (null !== (uY = function(YY) {
-          var rY;
-          return null !== (rY = TY.get(YY)) && void 0 !== rY ? rY : null
-        }(QY)) && void 0 !== uY ? uY : 0) > 0
+    function RT(TT, oT, IT, zT, kT, WT) {
+      return MT.some(((XT, BT) => {
+        var FT, ST, DT;
+        let [LT, xT, cT] = XT;
+        if (0 === (WT >> BT & 1)) return !1;
+        const KT = null !== (FT = null === (ST = iT.j[TT(oT + LT, IT + xT, zT + cT)]) || void 0 === ST ? void 0 : ST.name) && void 0 !== FT ? FT : "",
+          MT = mT(KT);
+        return MT ? MT.Sx === kT && MT.full : (null !== (DT = function(TT) {
+          var oT;
+          return null !== (oT = eT.get(TT)) && void 0 !== oT ? oT : null
+        }(KT)) && void 0 !== DT ? DT : 0) > 0
       }))
     }
-    class NY {
+    class uT {
       constructor() {
-        this.reshapeOffsets = oY
+        this.reshapeOffsets = MT
       }
-      handles(YY) {
-        return null !== VY(YY)
+      handles(TT) {
+        return null !== hT(TT)
       }
-      affects(YY) {
-        var rY, DY;
-        return yY.has(null !== (rY = null === (DY = FY.h[YY]) || void 0 === DY ? void 0 : DY.meta.rootName) && void 0 !== rY ? rY : "")
+      affects(TT) {
+        var oT, IT;
+        return cT.has(null !== (oT = null === (IT = iT.j[TT]) || void 0 === IT ? void 0 : IT.meta.rootName) && void 0 !== oT ? oT : "")
       }
-      placedBy(YY) {
-        var rY;
-        return (null === (rY = FY.h[YY]) || void 0 === rY ? void 0 : rY.meta.rootName) === IY.c ? IY.e : null
+      placedBy(TT) {
+        var oT;
+        return (null === (oT = iT.j[TT]) || void 0 === oT ? void 0 : oT.meta.rootName) === kT.d ? kT.f : null
       }
-      shape(YY, rY, DY, AY, OY, aY) {
-        var vY, uY, sY;
-        const iY = null !== (vY = null === (uY = FY.h[OY]) || void 0 === uY ? void 0 : uY.name) && void 0 !== vY ? vY : "",
-          yY = aY || iY !== IY.e ? null !== (sY = (0, RY.H)(iY)) && void 0 !== sY ? sY : "water" : function(YY, rY, DY, FY) {
-            return oY.some(((AY, IY) => {
-              let [OY, aY, vY] = AY;
-              const uY = EY(YY(rY + OY, DY + aY, FY + vY), "cryo");
-              return null !== uY && "port" !== uY.kind && (0, RY.M)(gY, uY, WY[IY])
+      shape(TT, oT, IT, zT, XT, FT) {
+        var ST, DT, LT;
+        const xT = null !== (ST = null === (DT = iT.j[XT]) || void 0 === DT ? void 0 : DT.name) && void 0 !== ST ? ST : "",
+          cT = FT || xT !== kT.f ? null !== (LT = (0, WT.G)(xT)) && void 0 !== LT ? LT : "water" : function(TT, oT, IT, iT) {
+            return MT.some(((zT, kT) => {
+              let [XT, FT, ST] = zT;
+              const DT = AT(TT(oT + XT, IT + FT, iT + ST), "cryo");
+              return null !== DT && "port" !== DT.kind && (0, WT.L)(BT, DT, rT[kT])
             })) ? "cryo" : "water"
-          }(YY, rY, DY, AY),
-          QY = function(YY, rY, DY, FY) {
-            let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              IY = 0;
-            return oY.forEach(((OY, aY) => {
-              let [vY, uY, sY] = OY;
-              const iY = EY(YY(rY + vY, DY + uY, FY + sY), AY);
-              iY && (0, RY.M)(gY, iY, WY[aY]) && (IY |= 1 << aY)
-            })), IY
-          }(YY, rY, DY, AY, yY),
-          mY = aY ? function(YY) {
-            var rY;
-            return !0 === (null === (rY = lY(YY)) || void 0 === rY ? void 0 : rY.full)
-          }(iY) : eY(YY, rY, DY, AY, yY, QY);
-        return (0, FY.k)((0, IY.j)(yY, QY, mY))
+          }(TT, oT, IT, zT),
+          KT = function(TT, oT, IT, iT) {
+            let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              kT = 0;
+            return MT.forEach(((XT, FT) => {
+              let [ST, DT, LT] = XT;
+              const xT = AT(TT(oT + ST, IT + DT, iT + LT), zT);
+              xT && (0, WT.L)(BT, xT, rT[FT]) && (kT |= 1 << FT)
+            })), kT
+          }(TT, oT, IT, zT, cT),
+          gT = FT ? function(TT) {
+            var oT;
+            return !0 === (null === (oT = mT(TT)) || void 0 === oT ? void 0 : oT.full)
+          }(xT) : RT(TT, oT, IT, zT, cT, KT);
+        return (0, iT.m)((0, kT.l)(cT, KT, gT))
       }
     }
   },
-  37570: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      f: () => IY
+  37183: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT,
+      i: () => kT
     });
-    const FY = ["Chest", "Loot Chest", "Moonstone Chest"],
-      AY = [{
+    const iT = ["Chest", "Loot Chest", "Moonstone Chest"],
+      zT = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -641,10 +641,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function IY(YY) {
-      return AY.find((rY => rY.exactMatch ? YY === rY.name : YY.includes(rY.name)))
+    function kT(TT) {
+      return zT.find((oT => oT.exactMatch ? TT === oT.name : TT.includes(oT.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

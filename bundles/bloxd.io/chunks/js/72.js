@@ -1,18 +1,18 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  36421: (YY, rY, DY) => {
-    if (DY.d(rY, {
-        d: () => gY,
-        e: () => AY,
-        h: () => RY,
-        i: () => IY,
-        m: () => SY,
-        q: () => WY
-      }), 39 == DY.j) var FY = DY(36427);
-    const AY = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      IY = ["Blade", "Guard", "Handle"],
-      RY = {
+  36014: (TT, oT, IT) => {
+    if (IT.d(oT, {
+        b: () => BT,
+        e: () => zT,
+        f: () => WT,
+        g: () => kT,
+        j: () => wT,
+        m: () => rT
+      }), 39 == IT.j) var iT = IT(36017);
+    const zT = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      kT = ["Blade", "Guard", "Handle"],
+      WT = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      OY = 4,
-      gY = "Coal",
-      aY = {
+      XT = 4,
+      BT = "Coal",
+      FT = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      vY = 1.15,
-      uY = 1.35,
-      sY = .06,
-      iY = {
+      ST = 1.15,
+      DT = 1.35,
+      LT = .06,
+      xT = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: YY => `${eY(.06*YY)} less damage taken`
+          describe: TT => `${RT(.06*TT)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: YY => `Mobs you slay drop ${Math.round(4*YY)}+ extra coins`
+          describe: TT => `Mobs you slay drop ${Math.round(4*TT)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: YY => `${eY(.12*YY)} chance to strike for +60% damage`
+          describe: TT => `${RT(.12*TT)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: YY => `+${eY(.2*YY)} damage to bosses`
+          describe: TT => `+${RT(.2*TT)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: YY => `${eY(.15*YY)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: TT => `${RT(.15*TT)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: YY => `Heal ${eY(.06*YY)} of the damage you deal`
+          describe: TT => `Heal ${RT(.06*TT)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: YY => `${eY(.1*YY)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: TT => `${RT(.1*TT)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      yY = {
+      cT = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      QY = 39 == DY.j ? FY.d : null,
-      oY = "skyblock:forged:";
+      KT = 39 == IT.j ? iT.b : null,
+      MT = "skyblock:forged:";
 
-    function WY(YY, rY) {
-      return `${YY} ${rY}`
+    function rT(TT, oT) {
+      return `${TT} ${oT}`
     }
-    AY.flatMap((YY => IY.map((rY => WY(YY, rY)))));
+    zT.flatMap((TT => kT.map((oT => rT(TT, oT)))));
 
-    function EY(YY) {
+    function AT(TT) {
       let {
-        blade: rY,
-        guard: DY,
-        handle: FY
-      } = YY;
-      return `${oY}${rY.toLowerCase()}-${DY.toLowerCase()}-${FY.toLowerCase()}`
+        blade: oT,
+        guard: IT,
+        handle: iT
+      } = TT;
+      return `${MT}${oT.toLowerCase()}-${IT.toLowerCase()}-${iT.toLowerCase()}`
     }
 
-    function mY(YY) {
-      if (! function(YY) {
-          return "string" === typeof YY && YY.startsWith(oY)
-        }(YY)) return null;
-      const rY = YY.slice(oY.length).split("-").map((YY => AY.find((rY => rY.toLowerCase() === YY))));
-      return 3 !== rY.length || rY.includes(void 0) ? null : {
-        blade: rY[0],
-        guard: rY[1],
-        handle: rY[2]
+    function gT(TT) {
+      if (! function(TT) {
+          return "string" === typeof TT && TT.startsWith(MT)
+        }(TT)) return null;
+      const oT = TT.slice(MT.length).split("-").map((TT => zT.find((oT => oT.toLowerCase() === TT))));
+      return 3 !== oT.length || oT.includes(void 0) ? null : {
+        blade: oT[0],
+        guard: oT[1],
+        handle: oT[2]
       }
     }
-    const VY = new Map;
+    const hT = new Map;
 
-    function SY(YY) {
-      var rY;
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QY;
-      const FY = "string" === typeof YY ? mY(YY) : YY;
-      if (null === FY) return null;
-      const AY = EY(FY),
-        gY = DY === QY ? VY.get(AY) : void 0;
-      if (void 0 !== gY) return gY;
-      const oY = function(YY, rY) {
-        var DY, FY, AY, gY, QY, oY, WY, mY, VY;
+    function wT(TT) {
+      var oT;
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : KT;
+      const iT = "string" === typeof TT ? gT(TT) : TT;
+      if (null === iT) return null;
+      const zT = AT(iT),
+        BT = IT === KT ? hT.get(zT) : void 0;
+      if (void 0 !== BT) return BT;
+      const MT = function(TT, oT) {
+        var IT, iT, zT, BT, KT, MT, rT, gT, hT;
         const {
-          blade: SY,
-          guard: BY,
-          handle: cY
-        } = YY, KY = RY, HY = SY === BY && BY === cY, zY = TY((1 + KY[SY].bladeDamage) * (HY ? 1 + sY : 1)), ZY = null !== (DY = rY.damageMultiplier) && void 0 !== DY ? DY : zY, CY = null !== (FY = rY.cooldownMultiplier) && void 0 !== FY ? FY : KY[cY].handleCooldown, fY = null !== (AY = rY.knockbackMultiplier) && void 0 !== AY ? AY : TY(1 + KY[cY].handleKnockback), jY = null !== (gY = rY.reachBonus) && void 0 !== gY ? gY : KY[cY].handleReach, hY = null !== (QY = rY.damageReduction) && void 0 !== QY ? QY : KY[BY].guardReduction, dY = null !== (oY = rY.traits) && void 0 !== oY ? oY : function(YY) {
-          const rY = {},
-            DY = {};
-          for (const OY of IY) {
-            var FY, AY;
-            const IY = RY[lY(YY, OY)].trait;
-            null !== IY && (rY[IY] = (null !== (FY = rY[IY]) && void 0 !== FY ? FY : 0) + aY[OY], DY[IY] = (null !== (AY = DY[IY]) && void 0 !== AY ? AY : 0) + 1)
+          blade: wT,
+          guard: vT,
+          handle: ET
+        } = TT, fT = WT, CT = wT === vT && vT === ET, jT = eT((1 + fT[wT].bladeDamage) * (CT ? 1 + LT : 1)), JT = null !== (IT = oT.damageMultiplier) && void 0 !== IT ? IT : jT, UT = null !== (iT = oT.cooldownMultiplier) && void 0 !== iT ? iT : fT[ET].handleCooldown, aT = null !== (zT = oT.knockbackMultiplier) && void 0 !== zT ? zT : eT(1 + fT[ET].handleKnockback), YT = null !== (BT = oT.reachBonus) && void 0 !== BT ? BT : fT[ET].handleReach, QT = null !== (KT = oT.damageReduction) && void 0 !== KT ? KT : fT[vT].guardReduction, OT = null !== (MT = oT.traits) && void 0 !== MT ? MT : function(TT) {
+          const oT = {},
+            IT = {};
+          for (const XT of kT) {
+            var iT, zT;
+            const kT = WT[mT(TT, XT)].trait;
+            null !== kT && (oT[kT] = (null !== (iT = oT[kT]) && void 0 !== iT ? iT : 0) + FT[XT], IT[kT] = (null !== (zT = IT[kT]) && void 0 !== zT ? zT : 0) + 1)
           }
-          for (const IY of Object.keys(rY)) {
-            const YY = 3 === DY[IY] ? uY : 2 === DY[IY] ? vY : 1;
-            rY[IY] = TY(rY[IY] * YY)
+          for (const kT of Object.keys(oT)) {
+            const TT = 3 === IT[kT] ? DT : 2 === IT[kT] ? ST : 1;
+            oT[kT] = eT(oT[kT] * TT)
           }
-          return rY
-        }(YY), JY = null !== (WY = rY.ability) && void 0 !== WY ? WY : null, MY = void 0 !== rY.name, wY = null !== (mY = rY.name) && void 0 !== mY ? mY : HY ? `Pure ${SY} Sword` : `${KY[BY].epithet} ${SY} Sword`, bY = null !== (VY = rY.lore) && void 0 !== VY ? VY : `Forged by the Forge Mother from a ${SY.toLowerCase()} blade, ${BY.toLowerCase()} guard and ${cY.toLowerCase()} handle.`, XY = function(YY) {
+          return oT
+        }(TT), HT = null !== (rT = oT.ability) && void 0 !== rT ? rT : null, nT = void 0 !== oT.name, qT = null !== (gT = oT.name) && void 0 !== gT ? gT : CT ? `Pure ${wT} Sword` : `${fT[vT].epithet} ${wT} Sword`, ZT = null !== (hT = oT.lore) && void 0 !== hT ? hT : `Forged by the Forge Mother from a ${wT.toLowerCase()} blade, ${vT.toLowerCase()} guard and ${ET.toLowerCase()} handle.`, lT = function(TT) {
           let {
-            blade: rY,
-            guard: DY,
-            handle: FY
-          } = YY;
-          const AY = RY;
-          return OY * (AY[rY].value + AY[DY].value + AY[FY].value)
-        }(YY), qY = KY[SY].value + KY[BY].value + KY[cY].value, pY = MY ? "Tier 5" : qY <= 4 ? "Tier 1" : qY <= 8 ? "Tier 2" : qY <= 14 ? "Tier 3" : qY <= 22 ? "Tier 4" : "Tier 5", kY = [];
-        1 !== ZY && kY.push(`${NY(ZY-1)} damage`);
-        1 !== CY && kY.push(`${eY(1/CY-1)} faster strikes`);
-        1 !== fY && kY.push(`${NY(fY-1)} knockback`);
-        jY > 0 && kY.push(`+${jY} reach`);
-        hY > 0 && kY.push(`${eY(hY)} less damage taken while held`);
-        const GY = [];
-        for (const IY of Object.keys(dY)) GY.push(`${iY[IY].name}: ${iY[IY].describe(dY[IY])}`);
-        null !== JY && GY.push(`${yY[JY].name}: ${yY[JY].description}`);
-        return kY.push(...GY), {
-          id: EY(YY),
-          parts: YY,
-          baseSword: KY[SY].baseSword,
-          displayName: wY,
-          lore: bY,
-          properties: kY,
-          effects: GY,
-          named: MY,
-          damageMultiplier: ZY,
-          cooldownMultiplier: CY,
-          knockbackMultiplier: fY,
-          reachBonus: jY,
-          damageReduction: hY,
-          traits: dY,
-          ability: JY,
-          coalCost: XY,
-          enchantmentTier: pY,
-          powerMultiplier: TY(ZY / CY)
+            blade: oT,
+            guard: IT,
+            handle: iT
+          } = TT;
+          const zT = WT;
+          return XT * (zT[oT].value + zT[IT].value + zT[iT].value)
+        }(TT), sT = fT[wT].value + fT[vT].value + fT[ET].value, tT = nT ? "Tier 5" : sT <= 4 ? "Tier 1" : sT <= 8 ? "Tier 2" : sT <= 14 ? "Tier 3" : sT <= 22 ? "Tier 4" : "Tier 5", GT = [];
+        1 !== JT && GT.push(`${uT(JT-1)} damage`);
+        1 !== UT && GT.push(`${RT(1/UT-1)} faster strikes`);
+        1 !== aT && GT.push(`${uT(aT-1)} knockback`);
+        YT > 0 && GT.push(`+${YT} reach`);
+        QT > 0 && GT.push(`${RT(QT)} less damage taken while held`);
+        const pT = [];
+        for (const kT of Object.keys(OT)) pT.push(`${xT[kT].name}: ${xT[kT].describe(OT[kT])}`);
+        null !== HT && pT.push(`${cT[HT].name}: ${cT[HT].description}`);
+        return GT.push(...pT), {
+          id: AT(TT),
+          parts: TT,
+          baseSword: fT[wT].baseSword,
+          displayName: qT,
+          lore: ZT,
+          properties: GT,
+          effects: pT,
+          named: nT,
+          damageMultiplier: JT,
+          cooldownMultiplier: UT,
+          knockbackMultiplier: aT,
+          reachBonus: YT,
+          damageReduction: QT,
+          traits: OT,
+          ability: HT,
+          coalCost: lT,
+          enchantmentTier: tT,
+          powerMultiplier: eT(JT / UT)
         }
-      }(FY, null !== (rY = DY[AY]) && void 0 !== rY ? rY : {});
-      return DY === QY && VY.set(AY, oY), oY
+      }(iT, null !== (oT = IT[zT]) && void 0 !== oT ? oT : {});
+      return IT === KT && hT.set(zT, MT), MT
     }
 
-    function lY(YY, rY) {
-      return "Blade" === rY ? YY.blade : "Guard" === rY ? YY.guard : YY.handle
+    function mT(TT, oT) {
+      return "Blade" === oT ? TT.blade : "Guard" === oT ? TT.guard : TT.handle
     }
 
-    function TY(YY) {
-      return Math.round(100 * YY) / 100
+    function eT(TT) {
+      return Math.round(100 * TT) / 100
     }
 
-    function eY(YY) {
-      return `${Math.round(100*YY)}%`
+    function RT(TT) {
+      return `${Math.round(100*TT)}%`
     }
 
-    function NY(YY) {
-      return `${YY>=0?"+":""}${eY(YY)}`
+    function uT(TT) {
+      return `${TT>=0?"+":""}${RT(TT)}`
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

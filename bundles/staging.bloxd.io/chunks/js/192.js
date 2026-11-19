@@ -1,106 +1,106 @@
 export const id = 192;
 export const ids = [192];
 export const modules = {
-  37066: (YY, rY, DY) => {
-    var FY = DY(37072);
+  36674: (TT, oT, IT) => {
+    var iT = IT(36678);
 
-    function AY(YY) {
-      for (var rY, DY, AY = 0, IY = YY.length, RY = 0; RY < YY.length;) {
-        for (rY = YY[RY], DY = 0; RY < IY && YY[RY] === rY;) ++RY, ++DY;
-        AY += FY.log2(DY) / 7 | 0, AY += FY.log2(rY >>> 0) / 7 | 0, AY += 2
+    function zT(TT) {
+      for (var oT, IT, zT = 0, kT = TT.length, WT = 0; WT < TT.length;) {
+        for (oT = TT[WT], IT = 0; WT < kT && TT[WT] === oT;) ++WT, ++IT;
+        zT += iT.log2(IT) / 7 | 0, zT += iT.log2(oT >>> 0) / 7 | 0, zT += 2
       }
-      return AY
+      return zT
     }
-    rY.size = AY, rY.encode = function(YY, rY) {
-      rY || (rY = new Uint8Array(AY(YY)));
-      for (var DY, FY, IY = 0, RY = rY.length, OY = 0; OY < YY.length;) {
-        for (DY = YY[OY], FY = 0; OY < YY.length && YY[OY] === DY;) ++OY, ++FY;
-        for (; IY < RY && FY >= 128;) rY[IY++] = 128 + (127 & FY), FY >>>= 7;
-        if (IY >= RY) throw new Error("RLE buffer overflow");
-        for (rY[IY++] = FY, DY >>>= 0; IY < RY && DY >= 128;) rY[IY++] = 128 + (127 & DY), DY >>>= 7;
-        if (IY >= RY) throw new Error("RLE buffer overflow");
-        rY[IY++] = DY
+    oT.size = zT, oT.encode = function(TT, oT) {
+      oT || (oT = new Uint8Array(zT(TT)));
+      for (var IT, iT, kT = 0, WT = oT.length, XT = 0; XT < TT.length;) {
+        for (IT = TT[XT], iT = 0; XT < TT.length && TT[XT] === IT;) ++XT, ++iT;
+        for (; kT < WT && iT >= 128;) oT[kT++] = 128 + (127 & iT), iT >>>= 7;
+        if (kT >= WT) throw new Error("RLE buffer overflow");
+        for (oT[kT++] = iT, IT >>>= 0; kT < WT && IT >= 128;) oT[kT++] = 128 + (127 & IT), IT >>>= 7;
+        if (kT >= WT) throw new Error("RLE buffer overflow");
+        oT[kT++] = IT
       }
-      return rY
-    }, rY.decode = function(YY, rY) {
-      for (var DY, FY, AY, IY, RY = rY.length, OY = YY.length, gY = 0, aY = 0; aY < OY;) {
-        for (DY = 0, FY = 0; aY < OY && YY[aY] >= 128;) DY += (127 & YY[aY++]) << FY, FY += 7;
-        if (DY += YY[aY++] << FY, aY >= OY) throw new Error("RLE buffer underrun");
-        if (gY + DY > RY) throw new Error("Chunk buffer overflow");
-        for (AY = 0, FY = 0; aY < OY && YY[aY] >= 128;) AY += (127 & YY[aY++]) << FY, FY += 7;
-        if (aY >= OY) throw new Error("RLE buffer underrun");
-        for (AY += YY[aY++] << FY, IY = 0; IY < DY; ++IY) rY[gY++] = AY
+      return oT
+    }, oT.decode = function(TT, oT) {
+      for (var IT, iT, zT, kT, WT = oT.length, XT = TT.length, BT = 0, FT = 0; FT < XT;) {
+        for (IT = 0, iT = 0; FT < XT && TT[FT] >= 128;) IT += (127 & TT[FT++]) << iT, iT += 7;
+        if (IT += TT[FT++] << iT, FT >= XT) throw new Error("RLE buffer underrun");
+        if (BT + IT > WT) throw new Error("Chunk buffer overflow");
+        for (zT = 0, iT = 0; FT < XT && TT[FT] >= 128;) zT += (127 & TT[FT++]) << iT, iT += 7;
+        if (FT >= XT) throw new Error("RLE buffer underrun");
+        for (zT += TT[FT++] << iT, kT = 0; kT < IT; ++kT) oT[BT++] = zT
       }
-      return rY
+      return oT
     }
   },
-  37072: (YY, rY) => {
-    function DY(YY) {
-      var rY = 32;
-      return (YY &= -YY) && rY--, 65535 & YY && (rY -= 16), 16711935 & YY && (rY -= 8), 252645135 & YY && (rY -= 4), 858993459 & YY && (rY -= 2), 1431655765 & YY && (rY -= 1), rY
+  36678: (TT, oT) => {
+    function IT(TT) {
+      var oT = 32;
+      return (TT &= -TT) && oT--, 65535 & TT && (oT -= 16), 16711935 & TT && (oT -= 8), 252645135 & TT && (oT -= 4), 858993459 & TT && (oT -= 2), 1431655765 & TT && (oT -= 1), oT
     }
-    rY.INT_BITS = 32, rY.INT_MAX = 2147483647, rY.INT_MIN = -1 << 31, rY.sign = function(YY) {
-      return (YY > 0) - (YY < 0)
-    }, rY.abs = function(YY) {
-      var rY = YY >> 31;
-      return (YY ^ rY) - rY
-    }, rY.min = function(YY, rY) {
-      return rY ^ (YY ^ rY) & -(YY < rY)
-    }, rY.max = function(YY, rY) {
-      return YY ^ (YY ^ rY) & -(YY < rY)
-    }, rY.isPow2 = function(YY) {
-      return !(YY & YY - 1) && !!YY
-    }, rY.log2 = function(YY) {
-      var rY, DY;
-      return rY = (YY > 65535) << 4, rY |= DY = ((YY >>>= rY) > 255) << 3, rY |= DY = ((YY >>>= DY) > 15) << 2, (rY |= DY = ((YY >>>= DY) > 3) << 1) | (YY >>>= DY) >> 1
-    }, rY.log10 = function(YY) {
-      return YY >= 1e9 ? 9 : YY >= 1e8 ? 8 : YY >= 1e7 ? 7 : YY >= 1e6 ? 6 : YY >= 1e5 ? 5 : YY >= 1e4 ? 4 : YY >= 1e3 ? 3 : YY >= 100 ? 2 : YY >= 10 ? 1 : 0
-    }, rY.popCount = function(YY) {
-      return 16843009 * ((YY = (858993459 & (YY -= YY >>> 1 & 1431655765)) + (YY >>> 2 & 858993459)) + (YY >>> 4) & 252645135) >>> 24
-    }, rY.countTrailingZeros = DY, rY.nextPow2 = function(YY) {
-      return YY += 0 === YY, --YY, YY |= YY >>> 1, YY |= YY >>> 2, YY |= YY >>> 4, YY |= YY >>> 8, (YY |= YY >>> 16) + 1
-    }, rY.prevPow2 = function(YY) {
-      return YY |= YY >>> 1, YY |= YY >>> 2, YY |= YY >>> 4, YY |= YY >>> 8, (YY |= YY >>> 16) - (YY >>> 1)
-    }, rY.parity = function(YY) {
-      return YY ^= YY >>> 16, YY ^= YY >>> 8, YY ^= YY >>> 4, 27030 >>> (YY &= 15) & 1
+    oT.INT_BITS = 32, oT.INT_MAX = 2147483647, oT.INT_MIN = -1 << 31, oT.sign = function(TT) {
+      return (TT > 0) - (TT < 0)
+    }, oT.abs = function(TT) {
+      var oT = TT >> 31;
+      return (TT ^ oT) - oT
+    }, oT.min = function(TT, oT) {
+      return oT ^ (TT ^ oT) & -(TT < oT)
+    }, oT.max = function(TT, oT) {
+      return TT ^ (TT ^ oT) & -(TT < oT)
+    }, oT.isPow2 = function(TT) {
+      return !(TT & TT - 1) && !!TT
+    }, oT.log2 = function(TT) {
+      var oT, IT;
+      return oT = (TT > 65535) << 4, oT |= IT = ((TT >>>= oT) > 255) << 3, oT |= IT = ((TT >>>= IT) > 15) << 2, (oT |= IT = ((TT >>>= IT) > 3) << 1) | (TT >>>= IT) >> 1
+    }, oT.log10 = function(TT) {
+      return TT >= 1e9 ? 9 : TT >= 1e8 ? 8 : TT >= 1e7 ? 7 : TT >= 1e6 ? 6 : TT >= 1e5 ? 5 : TT >= 1e4 ? 4 : TT >= 1e3 ? 3 : TT >= 100 ? 2 : TT >= 10 ? 1 : 0
+    }, oT.popCount = function(TT) {
+      return 16843009 * ((TT = (858993459 & (TT -= TT >>> 1 & 1431655765)) + (TT >>> 2 & 858993459)) + (TT >>> 4) & 252645135) >>> 24
+    }, oT.countTrailingZeros = IT, oT.nextPow2 = function(TT) {
+      return TT += 0 === TT, --TT, TT |= TT >>> 1, TT |= TT >>> 2, TT |= TT >>> 4, TT |= TT >>> 8, (TT |= TT >>> 16) + 1
+    }, oT.prevPow2 = function(TT) {
+      return TT |= TT >>> 1, TT |= TT >>> 2, TT |= TT >>> 4, TT |= TT >>> 8, (TT |= TT >>> 16) - (TT >>> 1)
+    }, oT.parity = function(TT) {
+      return TT ^= TT >>> 16, TT ^= TT >>> 8, TT ^= TT >>> 4, 27030 >>> (TT &= 15) & 1
     };
-    var FY = new Array(256);
-    ! function(YY) {
-      for (var rY = 0; rY < 256; ++rY) {
-        var DY = rY,
-          FY = rY,
-          AY = 7;
-        for (DY >>>= 1; DY; DY >>>= 1) FY <<= 1, FY |= 1 & DY, --AY;
-        YY[rY] = FY << AY & 255
+    var iT = new Array(256);
+    ! function(TT) {
+      for (var oT = 0; oT < 256; ++oT) {
+        var IT = oT,
+          iT = oT,
+          zT = 7;
+        for (IT >>>= 1; IT; IT >>>= 1) iT <<= 1, iT |= 1 & IT, --zT;
+        TT[oT] = iT << zT & 255
       }
-    }(FY), rY.reverse = function(YY) {
-      return FY[255 & YY] << 24 | FY[YY >>> 8 & 255] << 16 | FY[YY >>> 16 & 255] << 8 | FY[YY >>> 24 & 255]
-    }, rY.interleave2 = function(YY, rY) {
-      return (YY = 1431655765 & ((YY = 858993459 & ((YY = 252645135 & ((YY = 16711935 & ((YY &= 65535) | YY << 8)) | YY << 4)) | YY << 2)) | YY << 1)) | (rY = 1431655765 & ((rY = 858993459 & ((rY = 252645135 & ((rY = 16711935 & ((rY &= 65535) | rY << 8)) | rY << 4)) | rY << 2)) | rY << 1)) << 1
-    }, rY.deinterleave2 = function(YY, rY) {
-      return (YY = 65535 & ((YY = 16711935 & ((YY = 252645135 & ((YY = 858993459 & ((YY = YY >>> rY & 1431655765) | YY >>> 1)) | YY >>> 2)) | YY >>> 4)) | YY >>> 16)) << 16 >> 16
-    }, rY.interleave3 = function(YY, rY, DY) {
-      return YY = 1227133513 & ((YY = 3272356035 & ((YY = 251719695 & ((YY = 4278190335 & ((YY &= 1023) | YY << 16)) | YY << 8)) | YY << 4)) | YY << 2), (YY |= (rY = 1227133513 & ((rY = 3272356035 & ((rY = 251719695 & ((rY = 4278190335 & ((rY &= 1023) | rY << 16)) | rY << 8)) | rY << 4)) | rY << 2)) << 1) | (DY = 1227133513 & ((DY = 3272356035 & ((DY = 251719695 & ((DY = 4278190335 & ((DY &= 1023) | DY << 16)) | DY << 8)) | DY << 4)) | DY << 2)) << 2
-    }, rY.deinterleave3 = function(YY, rY) {
-      return (YY = 1023 & ((YY = 4278190335 & ((YY = 251719695 & ((YY = 3272356035 & ((YY = YY >>> rY & 1227133513) | YY >>> 2)) | YY >>> 4)) | YY >>> 8)) | YY >>> 16)) << 22 >> 22
-    }, rY.nextCombination = function(YY) {
-      var rY = YY | YY - 1;
-      return rY + 1 | (~rY & -~rY) - 1 >>> DY(YY) + 1
+    }(iT), oT.reverse = function(TT) {
+      return iT[255 & TT] << 24 | iT[TT >>> 8 & 255] << 16 | iT[TT >>> 16 & 255] << 8 | iT[TT >>> 24 & 255]
+    }, oT.interleave2 = function(TT, oT) {
+      return (TT = 1431655765 & ((TT = 858993459 & ((TT = 252645135 & ((TT = 16711935 & ((TT &= 65535) | TT << 8)) | TT << 4)) | TT << 2)) | TT << 1)) | (oT = 1431655765 & ((oT = 858993459 & ((oT = 252645135 & ((oT = 16711935 & ((oT &= 65535) | oT << 8)) | oT << 4)) | oT << 2)) | oT << 1)) << 1
+    }, oT.deinterleave2 = function(TT, oT) {
+      return (TT = 65535 & ((TT = 16711935 & ((TT = 252645135 & ((TT = 858993459 & ((TT = TT >>> oT & 1431655765) | TT >>> 1)) | TT >>> 2)) | TT >>> 4)) | TT >>> 16)) << 16 >> 16
+    }, oT.interleave3 = function(TT, oT, IT) {
+      return TT = 1227133513 & ((TT = 3272356035 & ((TT = 251719695 & ((TT = 4278190335 & ((TT &= 1023) | TT << 16)) | TT << 8)) | TT << 4)) | TT << 2), (TT |= (oT = 1227133513 & ((oT = 3272356035 & ((oT = 251719695 & ((oT = 4278190335 & ((oT &= 1023) | oT << 16)) | oT << 8)) | oT << 4)) | oT << 2)) << 1) | (IT = 1227133513 & ((IT = 3272356035 & ((IT = 251719695 & ((IT = 4278190335 & ((IT &= 1023) | IT << 16)) | IT << 8)) | IT << 4)) | IT << 2)) << 2
+    }, oT.deinterleave3 = function(TT, oT) {
+      return (TT = 1023 & ((TT = 4278190335 & ((TT = 251719695 & ((TT = 3272356035 & ((TT = TT >>> oT & 1227133513) | TT >>> 2)) | TT >>> 4)) | TT >>> 8)) | TT >>> 16)) << 22 >> 22
+    }, oT.nextCombination = function(TT) {
+      var oT = TT | TT - 1;
+      return oT + 1 | (~oT & -~oT) - 1 >>> IT(TT) + 1
     }
   },
-  38953: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      emptyColumnHeight: () => VY,
-      loadHeatmapSchematic: () => SY,
-      readSchematicBlocks: () => lY
+  38579: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      emptyColumnHeight: () => hT,
+      loadHeatmapSchematic: () => wT,
+      readSchematicBlocks: () => mT
     });
-    var FY = DY(3371),
-      AY = DY.n(FY),
-      IY = DY(3353),
-      RY = DY(37066),
-      OY = DY(213),
-      gY = DY(8830);
-    const aY = [{
+    var iT = IT(3336),
+      zT = IT.n(iT),
+      kT = IT(3316),
+      WT = IT(36674),
+      XT = IT(193),
+      BT = IT(8829);
+    const FT = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      vY = [{
+      ST = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: aY
+          fields: FT
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: aY
+          fields: FT
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...aY, {
+            fields: [...FT, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      uY = AY().Type.forSchema({
+      DT = zT().Type.forSchema({
         type: "record",
-        fields: vY
+        fields: ST
       }),
-      sY = AY().Type.forSchema({
+      LT = zT().Type.forSchema({
         type: "record",
-        fields: [...vY, {
+        fields: [...ST, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...aY, {
+              fields: [...FT, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: aY
+            fields: FT
           }
         }]
       }),
-      iY = 2,
-      yY = 6,
-      QY = {
+      xT = 2,
+      cT = 6,
+      KT = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      oY = [150, 150, 150],
-      WY = 16,
-      EY = 4096,
-      mY = OY.d.Jy,
-      VY = -2147483648;
-    async function SY(YY) {
-      const rY = await lY(new Uint8Array(await YY.arrayBuffer()), await async function() {
+      MT = [150, 150, 150],
+      rT = 16,
+      AT = 4096,
+      gT = XT.c.Yc,
+      hT = -2147483648;
+    async function wT(TT) {
+      const oT = await mT(new Uint8Array(await TT.arrayBuffer()), await async function() {
         const {
-          averageColors: YY
-        } = await DY.e(196).then((() => DY(33702))), rY = new Map;
-        return DY => {
-          var FY, AY, IY, RY, OY;
-          const aY = rY.get(DY);
-          if (void 0 !== aY) return aY;
-          const vY = null !== (FY = null === (AY = gY.h[DY]) || void 0 === AY ? void 0 : AY.name) && void 0 !== FY ? FY : "",
-            uY = null !== (IY = YY[vY]) && void 0 !== IY ? IY : YY[vY.split("|")[0]],
-            sY = QY[vY.split("|")[0]],
-            iY = null !== (RY = null !== (OY = null === uY || void 0 === uY ? void 0 : uY[0]) && void 0 !== OY ? OY : sY) && void 0 !== RY ? RY : 0 === (null === uY || void 0 === uY ? void 0 : uY.length) ? null : oY;
-          return rY.set(DY, iY), iY
+          averageColors: TT
+        } = await IT.e(196).then((() => IT(33287))), oT = new Map;
+        return IT => {
+          var iT, zT, kT, WT, XT;
+          const FT = oT.get(IT);
+          if (void 0 !== FT) return FT;
+          const ST = null !== (iT = null === (zT = BT.j[IT]) || void 0 === zT ? void 0 : zT.name) && void 0 !== iT ? iT : "",
+            DT = null !== (kT = TT[ST]) && void 0 !== kT ? kT : TT[ST.split("|")[0]],
+            LT = KT[ST.split("|")[0]],
+            xT = null !== (WT = null !== (XT = null === DT || void 0 === DT ? void 0 : DT[0]) && void 0 !== XT ? XT : LT) && void 0 !== WT ? WT : 0 === (null === DT || void 0 === DT ? void 0 : DT.length) ? null : MT;
+          return oT.set(IT, xT), xT
         }
       }());
       return {
-        surface: rY.surface,
-        topDown: eY(rY.columnTops)
+        surface: oT.surface,
+        topDown: RT(oT.columnTops)
       }
     }
-    async function lY(YY, rY) {
-      var DY;
-      if (YY.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const FY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength).getUint32(0, !0);
-      if (FY > yY) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const AY = (FY >= iY ? sY : uY).decode(IY.Ny.from(YY.subarray(4)), 0).value;
-      if (!AY) throw new Error("The file isn't a schematic.");
-      if (0 === AY.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const OY = null !== (DY = AY.pasteOffset) && void 0 !== DY ? DY : {
+    async function mT(TT, oT) {
+      var IT;
+      if (TT.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const iT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength).getUint32(0, !0);
+      if (iT > cT) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const zT = (iT >= xT ? LT : DT).decode(kT.vc.from(TT.subarray(4)), 0).value;
+      if (!zT) throw new Error("The file isn't a schematic.");
+      if (0 === zT.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const XT = null !== (IT = zT.pasteOffset) && void 0 !== IT ? IT : {
           x: 0,
           y: 0,
           z: 0
         },
-        gY = [OY.x, OY.y, OY.z].map((YY => Math.floor(YY / mY))),
-        aY = AY.chunkData.map((YY => ({
-          x: YY.x + gY[0],
-          y: YY.y + gY[1],
-          z: YY.z + gY[2],
-          rle: YY.rle
+        BT = [XT.x, XT.y, XT.z].map((TT => Math.floor(TT / gT))),
+        FT = zT.chunkData.map((TT => ({
+          x: TT.x + BT[0],
+          y: TT.y + BT[1],
+          z: TT.z + BT[2],
+          rle: TT.rle
         }))),
-        vY = new Map;
-      for (const [IY, uY] of aY.entries()) {
-        const YY = new Uint16Array(mY ** 3);
-        RY.decode(uY.rle, YY), vY.set(`${uY.x},${uY.y},${uY.z}`, YY), IY % WY === WY - 1 && await NY()
+        ST = new Map;
+      for (const [kT, DT] of FT.entries()) {
+        const TT = new Uint16Array(gT ** 3);
+        WT.decode(DT.rle, TT), ST.set(`${DT.x},${DT.y},${DT.z}`, TT), kT % rT === rT - 1 && await uT()
       }
-      const QY = (YY, rY, DY) => YY * mY * mY + rY * mY + DY,
-        oY = (YY, rY, DY) => {
-          var FY, AY;
-          const IY = Math.floor(YY / mY),
-            RY = Math.floor(rY / mY),
-            OY = Math.floor(DY / mY);
-          return null !== (FY = null === (AY = vY.get(`${IY},${RY},${OY}`)) || void 0 === AY ? void 0 : AY[QY(YY - IY * mY, rY - RY * mY, DY - OY * mY)]) && void 0 !== FY ? FY : 0
+      const KT = (TT, oT, IT) => TT * gT * gT + oT * gT + IT,
+        MT = (TT, oT, IT) => {
+          var iT, zT;
+          const kT = Math.floor(TT / gT),
+            WT = Math.floor(oT / gT),
+            XT = Math.floor(IT / gT);
+          return null !== (iT = null === (zT = ST.get(`${kT},${WT},${XT}`)) || void 0 === zT ? void 0 : zT[KT(TT - kT * gT, oT - WT * gT, IT - XT * gT)]) && void 0 !== iT ? iT : 0
         },
-        EY = new Map,
-        SY = [],
-        lY = [];
-      for (const [IY, RY] of aY.entries()) {
-        const YY = vY.get(`${RY.x},${RY.y},${RY.z}`),
-          DY = [RY.x * mY, RY.y * mY, RY.z * mY],
-          FY = (rY, FY, AY) => rY < 0 || FY < 0 || AY < 0 || rY >= mY || FY >= mY || AY >= mY ? oY(DY[0] + rY, DY[1] + FY, DY[2] + AY) : YY[QY(rY, FY, AY)],
-          AY = `${RY.x},${RY.z}`;
-        let OY = EY.get(AY);
-        void 0 === OY && (OY = {
-          chunkX: RY.x,
-          chunkZ: RY.z,
-          heights: new Int32Array(mY * mY).fill(VY),
-          colours: new Uint8Array(mY * mY * 3)
-        }, EY.set(AY, OY));
-        for (let IY = 0; IY < mY; IY++)
-          for (let AY = 0; AY < mY; AY++)
-            for (let RY = 0; RY < mY; RY++) {
-              const gY = YY[QY(IY, AY, RY)];
-              if (0 === gY) continue;
-              const aY = DY[0] + IY,
-                vY = DY[1] + AY,
-                uY = DY[2] + RY,
-                sY = rY(gY);
-              if (null === sY) continue;
-              const iY = RY * mY + IY;
-              vY > OY.heights[iY] && (OY.heights[iY] = vY, OY.colours.set(sY, 3 * iY));
-              !TY(gY) && (TY(FY(IY + 1, AY, RY)) || TY(FY(IY - 1, AY, RY)) || TY(FY(IY, AY + 1, RY)) || TY(FY(IY, AY - 1, RY)) || TY(FY(IY, AY, RY + 1)) || TY(FY(IY, AY, RY - 1))) && (SY.push(aY, vY, uY), lY.push(sY[0], sY[1], sY[2]))
+        AT = new Map,
+        wT = [],
+        mT = [];
+      for (const [kT, WT] of FT.entries()) {
+        const TT = ST.get(`${WT.x},${WT.y},${WT.z}`),
+          IT = [WT.x * gT, WT.y * gT, WT.z * gT],
+          iT = (oT, iT, zT) => oT < 0 || iT < 0 || zT < 0 || oT >= gT || iT >= gT || zT >= gT ? MT(IT[0] + oT, IT[1] + iT, IT[2] + zT) : TT[KT(oT, iT, zT)],
+          zT = `${WT.x},${WT.z}`;
+        let XT = AT.get(zT);
+        void 0 === XT && (XT = {
+          chunkX: WT.x,
+          chunkZ: WT.z,
+          heights: new Int32Array(gT * gT).fill(hT),
+          colours: new Uint8Array(gT * gT * 3)
+        }, AT.set(zT, XT));
+        for (let kT = 0; kT < gT; kT++)
+          for (let zT = 0; zT < gT; zT++)
+            for (let WT = 0; WT < gT; WT++) {
+              const BT = TT[KT(kT, zT, WT)];
+              if (0 === BT) continue;
+              const FT = IT[0] + kT,
+                ST = IT[1] + zT,
+                DT = IT[2] + WT,
+                LT = oT(BT);
+              if (null === LT) continue;
+              const xT = WT * gT + kT;
+              ST > XT.heights[xT] && (XT.heights[xT] = ST, XT.colours.set(LT, 3 * xT));
+              !eT(BT) && (eT(iT(kT + 1, zT, WT)) || eT(iT(kT - 1, zT, WT)) || eT(iT(kT, zT + 1, WT)) || eT(iT(kT, zT - 1, WT)) || eT(iT(kT, zT, WT + 1)) || eT(iT(kT, zT, WT - 1))) && (wT.push(FT, ST, DT), mT.push(LT[0], LT[1], LT[2]))
             }
-        IY % WY === WY - 1 && await NY()
+        kT % rT === rT - 1 && await uT()
       }
-      if (0 === SY.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === wT.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: AY.name,
+        name: zT.name,
         surface: {
-          positions: Int32Array.from(SY),
-          colours: Uint8Array.from(lY),
-          count: SY.length / 3
+          positions: Int32Array.from(wT),
+          colours: Uint8Array.from(mT),
+          count: wT.length / 3
         },
-        columnTops: [...EY.values()]
+        columnTops: [...AT.values()]
       }
     }
 
-    function TY(YY) {
-      if (0 === YY) return !0;
-      const rY = gY.h[YY];
-      return void 0 === rY || rY.ui || rY.transTex || !1 === rY.solid
+    function eT(TT) {
+      if (0 === TT) return !0;
+      const oT = BT.j[TT];
+      return void 0 === oT || oT.Sx || oT.transTex || !1 === oT.solid
     }
 
-    function eY(YY) {
-      let rY = 1 / 0,
-        DY = -1 / 0,
-        FY = 1 / 0,
-        AY = -1 / 0;
+    function RT(TT) {
+      let oT = 1 / 0,
+        IT = -1 / 0,
+        iT = 1 / 0,
+        zT = -1 / 0;
       for (const {
-          chunkX: yY,
-          chunkZ: QY,
-          heights: oY
+          chunkX: cT,
+          chunkZ: KT,
+          heights: MT
         }
-        of YY) oY.forEach(((YY, IY) => {
-        if (YY === VY) return;
-        const RY = yY * mY + IY % mY,
-          OY = QY * mY + Math.floor(IY / mY);
-        rY = Math.min(rY, RY), DY = Math.max(DY, RY), FY = Math.min(FY, OY), AY = Math.max(AY, OY)
+        of TT) MT.forEach(((TT, kT) => {
+        if (TT === hT) return;
+        const WT = cT * gT + kT % gT,
+          XT = KT * gT + Math.floor(kT / gT);
+        oT = Math.min(oT, WT), IT = Math.max(IT, WT), iT = Math.min(iT, XT), zT = Math.max(zT, XT)
       }));
-      const IY = DY - rY + 1,
-        RY = AY - FY + 1,
-        OY = Math.max(1, Math.ceil(IY / EY), Math.ceil(RY / EY)),
-        gY = Math.ceil(IY / OY),
-        aY = Math.ceil(RY / OY),
-        vY = document.createElement("canvas");
-      vY.width = gY, vY.height = aY;
-      const uY = vY.getContext("2d");
-      if (!uY) throw new Error("Couldn't draw the schematic from above.");
-      const sY = uY.createImageData(gY, aY),
-        iY = new Int32Array(gY * aY).fill(VY);
+      const kT = IT - oT + 1,
+        WT = zT - iT + 1,
+        XT = Math.max(1, Math.ceil(kT / AT), Math.ceil(WT / AT)),
+        BT = Math.ceil(kT / XT),
+        FT = Math.ceil(WT / XT),
+        ST = document.createElement("canvas");
+      ST.width = BT, ST.height = FT;
+      const DT = ST.getContext("2d");
+      if (!DT) throw new Error("Couldn't draw the schematic from above.");
+      const LT = DT.createImageData(BT, FT),
+        xT = new Int32Array(BT * FT).fill(hT);
       for (const {
-          chunkX: yY,
-          chunkZ: QY,
-          heights: oY,
-          colours: WY
+          chunkX: cT,
+          chunkZ: KT,
+          heights: MT,
+          colours: rT
         }
-        of YY) oY.forEach(((YY, rY) => {
-        const AY = yY * mY + rY % mY,
-          IY = QY * mY + Math.floor(rY / mY),
-          RY = Math.floor((IY - FY) / OY) * gY + Math.floor((DY - AY) / OY);
-        YY === VY || YY <= iY[RY] || (iY[RY] = YY, sY.data.set(WY.subarray(3 * rY, 3 * rY + 3), 4 * RY), sY.data[4 * RY + 3] = 255)
+        of TT) MT.forEach(((TT, oT) => {
+        const zT = cT * gT + oT % gT,
+          kT = KT * gT + Math.floor(oT / gT),
+          WT = Math.floor((kT - iT) / XT) * BT + Math.floor((IT - zT) / XT);
+        TT === hT || TT <= xT[WT] || (xT[WT] = TT, LT.data.set(rT.subarray(3 * oT, 3 * oT + 3), 4 * WT), LT.data[4 * WT + 3] = 255)
       }));
-      return uY.putImageData(sY, 0, 0), {
-        maxX: DY,
-        minZ: FY,
-        width: gY * OY,
-        depth: aY * OY,
-        canvas: vY
+      return DT.putImageData(LT, 0, 0), {
+        maxX: IT,
+        minZ: iT,
+        width: BT * XT,
+        depth: FT * XT,
+        canvas: ST
       }
     }
 
-    function NY() {
-      return new Promise((YY => {
-        setTimeout(YY, 0)
+    function uT() {
+      return new Promise((TT => {
+        setTimeout(TT, 0)
       }))
     }
   },
-  8908: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY,
-      g: () => IY
+  8914: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT,
+      d: () => kT
     });
-    var FY = DY(8870);
-    const AY = "Air",
-      IY = Object.freeze(new FY.h(AY, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var iT = IT(8869);
+    const zT = "Air",
+      kT = Object.freeze(new iT.f(zT, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

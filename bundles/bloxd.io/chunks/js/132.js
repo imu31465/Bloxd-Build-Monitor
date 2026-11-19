@@ -1,757 +1,757 @@
 export const id = 132;
 export const ids = [132];
 export const modules = {
-  6182: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      loadPageShaderPackCompiler: () => sr
+  6114: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      loadPageShaderPackCompiler: () => Lo
     });
-    var FY = {};
-    DY.r(FY), DY.d(FY, {
-      QFY: () => AY,
-      I6: () => IY,
-      default: () => pY,
-      oFY: () => RY,
-      WFY: () => OY,
-      initSync: () => qY,
-      kv: () => gY,
-      FDY: () => aY,
-      EFY: () => vY,
-      mFY: () => uY,
-      lT: () => sY,
-      VFY: () => iY,
-      aT: () => yY,
-      SFY: () => QY
+    var iT = {};
+    IT.r(iT), IT.d(iT, {
+      siT: () => zT,
+      v_: () => kT,
+      default: () => tT,
+      tiT: () => WT,
+      GiT: () => XT,
+      initSync: () => sT,
+      LD: () => BT,
+      EIT: () => FT,
+      piT: () => ST,
+      biT: () => DT,
+      lC: () => LT,
+      yiT: () => xT,
+      ZC: () => cT,
+      NiT: () => KT
     });
-    class AY {
-      static __wrap(YY) {
-        const rY = Object.create(AY.prototype);
-        return rY.__wbg_ptr = YY, WY.register(rY, rY.__wbg_ptr, rY), rY
+    class zT {
+      static __wrap(TT) {
+        const oT = Object.create(zT.prototype);
+        return oT.__wbg_ptr = TT, rT.register(oT, oT.__wbg_ptr, oT), oT
       }
       __destroy_into_raw() {
-        const YY = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, WY.unregister(this), YY
+        const TT = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, rT.unregister(this), TT
       }
       free() {
-        const YY = this.__destroy_into_raw();
-        wY.Pi5D(YY, 0)
+        const TT = this.__destroy_into_raw();
+        qT.fObX(TT, 0)
       }
       get errorsJson() {
-        let YY, rY;
+        let TT, oT;
         try {
-          const DY = wY.X4tm(this.__wbg_ptr);
-          return YY = DY[0], rY = DY[1], TY(DY[0], DY[1])
+          const IT = qT.Iyh0(this.__wbg_ptr);
+          return TT = IT[0], oT = IT[1], eT(IT[0], IT[1])
         } finally {
-          wY.M5co(YY, rY, 1)
+          qT.NMYn(TT, oT, 1)
         }
       }
       get features() {
-        const YY = wY.c1ZH(this.__wbg_ptr);
-        var rY = mY(YY[0], YY[1]);
-        return wY.M5co(YY[0], 4 * YY[1], 4), rY
+        const TT = qT.Lnbn(this.__wbg_ptr);
+        var oT = gT(TT[0], TT[1]);
+        return qT.NMYn(TT[0], 4 * TT[1], 4), oT
       }
       get hooks() {
-        const YY = wY.ToEK(this.__wbg_ptr);
-        var rY = VY(YY[0], YY[1]).slice();
-        return wY.M5co(YY[0], 1 * YY[1], 1), rY
+        const TT = qT.y2Qx(this.__wbg_ptr);
+        var oT = hT(TT[0], TT[1]).slice();
+        return qT.NMYn(TT[0], 1 * TT[1], 1), oT
       }
-      mapValidationMessage(YY, rY, DY, FY, AY) {
-        let IY, RY;
+      mapValidationMessage(TT, oT, IT, iT, zT) {
+        let kT, WT;
         try {
-          const aY = wY.YKyR(this.__wbg_ptr, YY, rY, DY, EY(FY), EY(AY));
-          var OY = aY[0],
-            gY = aY[1];
-          if (aY[3]) throw OY = 0, gY = 0, CY(aY[2]);
-          return IY = OY, RY = gY, TY(OY, gY)
+          const FT = qT.TVcu(this.__wbg_ptr, TT, oT, IT, AT(iT), AT(zT));
+          var XT = FT[0],
+            BT = FT[1];
+          if (FT[3]) throw XT = 0, BT = 0, UT(FT[2]);
+          return kT = XT, WT = BT, eT(XT, BT)
         } finally {
-          wY.M5co(IY, RY, 1)
+          qT.NMYn(kT, WT, 1)
         }
       }
       get moduleCodes() {
-        const YY = wY.LZLi(this.__wbg_ptr);
-        var rY = mY(YY[0], YY[1]);
-        return wY.M5co(YY[0], 4 * YY[1], 4), rY
+        const TT = qT.AcDQ(this.__wbg_ptr);
+        var oT = gT(TT[0], TT[1]);
+        return qT.NMYn(TT[0], 4 * TT[1], 4), oT
       }
       get offInStrictJson() {
-        let YY, rY;
+        let TT, oT;
         try {
-          const DY = wY.DerO(this.__wbg_ptr);
-          return YY = DY[0], rY = DY[1], TY(DY[0], DY[1])
+          const IT = qT.BhE8(this.__wbg_ptr);
+          return TT = IT[0], oT = IT[1], eT(IT[0], IT[1])
         } finally {
-          wY.M5co(YY, rY, 1)
+          qT.NMYn(TT, oT, 1)
         }
       }
       get reads() {
-        const YY = wY.vDQV(this.__wbg_ptr);
-        var rY = mY(YY[0], YY[1]);
-        return wY.M5co(YY[0], 4 * YY[1], 4), rY
+        const TT = qT.AVgB(this.__wbg_ptr);
+        var oT = gT(TT[0], TT[1]);
+        return qT.NMYn(TT[0], 4 * TT[1], 4), oT
       }
       get validationModuleCodes() {
-        const YY = wY.TS88(this.__wbg_ptr);
-        var rY = mY(YY[0], YY[1]);
-        return wY.M5co(YY[0], 4 * YY[1], 4), rY
+        const TT = qT.n9M4(this.__wbg_ptr);
+        var oT = gT(TT[0], TT[1]);
+        return qT.NMYn(TT[0], 4 * TT[1], 4), oT
       }
       get validationModuleKeys() {
-        const YY = wY.ZKa4(this.__wbg_ptr);
-        var rY = VY(YY[0], YY[1]).slice();
-        return wY.M5co(YY[0], 1 * YY[1], 1), rY
+        const TT = qT.CEGz(this.__wbg_ptr);
+        var oT = hT(TT[0], TT[1]).slice();
+        return qT.NMYn(TT[0], 1 * TT[1], 1), oT
       }
       get variantFlags() {
-        const YY = wY.Vw4S(this.__wbg_ptr);
-        var rY = VY(YY[0], YY[1]).slice();
-        return wY.M5co(YY[0], 1 * YY[1], 1), rY
+        const TT = qT.BCra(this.__wbg_ptr);
+        var oT = hT(TT[0], TT[1]).slice();
+        return qT.NMYn(TT[0], 1 * TT[1], 1), oT
       }
     }
 
-    function IY(YY, rY, DY, FY, IY, RY, OY) {
-      const gY = ZY(YY, wY.vG3a),
-        aY = bY,
-        vY = ZY(rY, wY.vG3a),
-        uY = bY,
-        sY = ZY(DY, wY.vG3a),
-        iY = bY,
-        yY = zY(FY, wY.vG3a),
-        QY = bY,
-        oY = ZY(IY, wY.vG3a),
-        WY = bY,
-        EY = ZY(RY, wY.vG3a),
-        mY = bY,
-        VY = ZY(OY, wY.vG3a),
-        SY = bY,
-        lY = wY.OGiE(gY, aY, vY, uY, sY, iY, yY, QY, oY, WY, EY, mY, VY, SY);
-      if (lY[2]) throw CY(lY[1]);
-      return AY.__wrap(lY[0])
+    function kT(TT, oT, IT, iT, kT, WT, XT) {
+      const BT = JT(TT, qT.bjBQ),
+        FT = ZT,
+        ST = JT(oT, qT.bjBQ),
+        DT = ZT,
+        LT = JT(IT, qT.bjBQ),
+        xT = ZT,
+        cT = jT(iT, qT.bjBQ),
+        KT = ZT,
+        MT = JT(kT, qT.bjBQ),
+        rT = ZT,
+        AT = JT(WT, qT.bjBQ),
+        gT = ZT,
+        hT = JT(XT, qT.bjBQ),
+        wT = ZT,
+        mT = qT.W6f5(BT, FT, ST, DT, LT, xT, cT, KT, MT, rT, AT, gT, hT, wT);
+      if (mT[2]) throw UT(mT[1]);
+      return zT.__wrap(mT[0])
     }
 
-    function RY() {
-      const YY = wY.p9p8();
-      var rY = mY(YY[0], YY[1]);
-      return wY.M5co(YY[0], 4 * YY[1], 4), rY
+    function WT() {
+      const TT = qT.Zfoq();
+      var oT = gT(TT[0], TT[1]);
+      return qT.NMYn(TT[0], 4 * TT[1], 4), oT
     }
 
-    function OY() {
-      const YY = wY.I4kq();
-      var rY = mY(YY[0], YY[1]);
-      return wY.M5co(YY[0], 4 * YY[1], 4), rY
+    function XT() {
+      const TT = qT.TL2u();
+      var oT = gT(TT[0], TT[1]);
+      return qT.NMYn(TT[0], 4 * TT[1], 4), oT
     }
 
-    function gY() {
-      wY.WzA4()
+    function BT() {
+      qT.JBhT()
     }
 
-    function aY(YY, rY, DY, FY, AY) {
-      let IY, RY;
+    function FT(TT, oT, IT, iT, zT) {
+      let kT, WT;
       try {
-        const aY = ZY(YY, wY.vG3a),
-          vY = bY,
-          uY = zY(rY, wY.vG3a),
-          sY = bY,
-          iY = ZY(DY, wY.vG3a),
-          yY = bY,
-          QY = zY(FY, wY.vG3a),
-          oY = bY,
-          WY = function(YY, rY) {
-            const DY = rY(1 * YY.length, 1) >>> 0;
-            return BY().set(YY, DY / 1), bY = YY.length, DY
-          }(AY, wY.vG3a),
-          EY = bY,
-          mY = wY.YGSA(aY, vY, uY, sY, iY, yY, QY, oY, WY, EY);
-        var OY = mY[0],
-          gY = mY[1];
-        if (mY[3]) throw OY = 0, gY = 0, CY(mY[2]);
-        return IY = OY, RY = gY, TY(OY, gY)
+        const FT = JT(TT, qT.bjBQ),
+          ST = ZT,
+          DT = jT(oT, qT.bjBQ),
+          LT = ZT,
+          xT = JT(IT, qT.bjBQ),
+          cT = ZT,
+          KT = jT(iT, qT.bjBQ),
+          MT = ZT,
+          rT = function(TT, oT) {
+            const IT = oT(1 * TT.length, 1) >>> 0;
+            return vT().set(TT, IT / 1), ZT = TT.length, IT
+          }(zT, qT.bjBQ),
+          AT = ZT,
+          gT = qT.KkGR(FT, ST, DT, LT, xT, cT, KT, MT, rT, AT);
+        var XT = gT[0],
+          BT = gT[1];
+        if (gT[3]) throw XT = 0, BT = 0, UT(gT[2]);
+        return kT = XT, WT = BT, eT(XT, BT)
       } finally {
-        wY.M5co(IY, RY, 1)
+        qT.NMYn(kT, WT, 1)
       }
     }
 
-    function vY() {
-      let YY, rY;
+    function ST() {
+      let TT, oT;
       try {
-        const DY = wY.mHJw();
-        return YY = DY[0], rY = DY[1], TY(DY[0], DY[1])
+        const IT = qT.metN();
+        return TT = IT[0], oT = IT[1], eT(IT[0], IT[1])
       } finally {
-        wY.M5co(YY, rY, 1)
+        qT.NMYn(TT, oT, 1)
       }
     }
 
-    function uY(YY) {
-      let rY, DY;
+    function DT(TT) {
+      let oT, IT;
       try {
-        const IY = wY.u6E9(YY);
-        var FY = IY[0],
-          AY = IY[1];
-        if (IY[3]) throw FY = 0, AY = 0, CY(IY[2]);
-        return rY = FY, DY = AY, TY(FY, AY)
+        const kT = qT.sJ1V(TT);
+        var iT = kT[0],
+          zT = kT[1];
+        if (kT[3]) throw iT = 0, zT = 0, UT(kT[2]);
+        return oT = iT, IT = zT, eT(iT, zT)
       } finally {
-        wY.M5co(rY, DY, 1)
+        qT.NMYn(oT, IT, 1)
       }
     }
 
-    function sY() {
-      return wY.pKqj() >>> 0
+    function LT() {
+      return qT.mN6U() >>> 0
     }
 
-    function iY() {
-      let YY, rY;
+    function xT() {
+      let TT, oT;
       try {
-        const DY = wY.iAIc();
-        return YY = DY[0], rY = DY[1], TY(DY[0], DY[1])
+        const IT = qT.Yf7m();
+        return TT = IT[0], oT = IT[1], eT(IT[0], IT[1])
       } finally {
-        wY.M5co(YY, rY, 1)
+        qT.NMYn(TT, oT, 1)
       }
     }
 
-    function yY(YY, rY) {
-      let DY, FY;
+    function cT(TT, oT) {
+      let IT, iT;
       try {
-        const RY = ZY(YY, wY.vG3a),
-          OY = bY,
-          gY = zY(rY, wY.vG3a),
-          aY = bY,
-          vY = wY.XJsh(RY, OY, gY, aY);
-        var AY = vY[0],
-          IY = vY[1];
-        if (vY[3]) throw AY = 0, IY = 0, CY(vY[2]);
-        return DY = AY, FY = IY, TY(AY, IY)
+        const WT = JT(TT, qT.bjBQ),
+          XT = ZT,
+          BT = jT(oT, qT.bjBQ),
+          FT = ZT,
+          ST = qT.UqiY(WT, XT, BT, FT);
+        var zT = ST[0],
+          kT = ST[1];
+        if (ST[3]) throw zT = 0, kT = 0, UT(ST[2]);
+        return IT = zT, iT = kT, eT(zT, kT)
       } finally {
-        wY.M5co(DY, FY, 1)
+        qT.NMYn(IT, iT, 1)
       }
     }
 
-    function QY(YY) {
-      let rY, DY;
+    function KT(TT) {
+      let oT, IT;
       try {
-        const IY = wY.oRez(EY(YY));
-        var FY = IY[0],
-          AY = IY[1];
-        if (IY[3]) throw FY = 0, AY = 0, CY(IY[2]);
-        return rY = FY, DY = AY, TY(FY, AY)
+        const kT = qT.UagZ(AT(TT));
+        var iT = kT[0],
+          zT = kT[1];
+        if (kT[3]) throw iT = 0, zT = 0, UT(kT[2]);
+        return oT = iT, IT = zT, eT(iT, zT)
       } finally {
-        wY.M5co(rY, DY, 1)
+        qT.NMYn(oT, IT, 1)
       }
     }
 
-    function oY() {
+    function MT() {
       return {
         __proto__: null,
-        z1XG: {
+        PfmH: {
           __proto__: null,
-          UPjL: function(YY, rY) {
-            return EY(Error(TY(YY, rY)))
+          dxwq: function(TT, oT) {
+            return AT(Error(eT(TT, oT)))
           },
-          vcjQ: function(YY) {
-            return null === cY(YY)
+          n0Se: function(TT) {
+            return null === ET(TT)
           },
-          jKgx: function(YY) {
-            return "string" === typeof cY(YY)
+          DZIL: function(TT) {
+            return "string" === typeof ET(TT)
           },
-          W2eo: function(YY, rY) {
-            const DY = cY(rY),
-              FY = "string" === typeof DY ? DY : void 0;
-            var AY, IY = void 0 === (AY = FY) || null === AY ? 0 : function(YY, rY, DY) {
-                if (void 0 === DY) {
-                  const DY = dY.encode(YY),
-                    FY = rY(DY.length, 1) >>> 0;
-                  return BY().subarray(FY, FY + DY.length).set(DY), bY = DY.length, FY
+          bsV5: function(TT, oT) {
+            const IT = ET(oT),
+              iT = "string" === typeof IT ? IT : void 0;
+            var zT, kT = void 0 === (zT = iT) || null === zT ? 0 : function(TT, oT, IT) {
+                if (void 0 === IT) {
+                  const IT = OT.encode(TT),
+                    iT = oT(IT.length, 1) >>> 0;
+                  return vT().subarray(iT, iT + IT.length).set(IT), ZT = IT.length, iT
                 }
-                let FY = YY.length,
-                  AY = rY(FY, 1) >>> 0;
-                const IY = BY();
-                let RY = 0;
-                for (; RY < FY; RY++) {
-                  const rY = YY.charCodeAt(RY);
-                  if (rY > 127) break;
-                  IY[AY + RY] = rY
+                let iT = TT.length,
+                  zT = oT(iT, 1) >>> 0;
+                const kT = vT();
+                let WT = 0;
+                for (; WT < iT; WT++) {
+                  const oT = TT.charCodeAt(WT);
+                  if (oT > 127) break;
+                  kT[zT + WT] = oT
                 }
-                if (RY !== FY) {
-                  0 !== RY && (YY = YY.slice(RY)), AY = DY(AY, FY, FY = RY + 3 * YY.length, 1) >>> 0;
-                  const rY = BY().subarray(AY + RY, AY + FY);
-                  RY += dY.encodeInto(YY, rY).written, AY = DY(AY, FY, RY, 1) >>> 0
+                if (WT !== iT) {
+                  0 !== WT && (TT = TT.slice(WT)), zT = IT(zT, iT, iT = WT + 3 * TT.length, 1) >>> 0;
+                  const oT = vT().subarray(zT + WT, zT + iT);
+                  WT += OT.encodeInto(TT, oT).written, zT = IT(zT, iT, WT, 1) >>> 0
                 }
-                return bY = RY, AY
-              }(FY, wY.vG3a, wY.eQmX),
-              RY = bY;
-            lY().setInt32(YY + 4, RY, !0), lY().setInt32(YY + 0, IY, !0)
+                return ZT = WT, zT
+              }(iT, qT.bjBQ, qT.L3ZI),
+              WT = ZT;
+            mT().setInt32(TT + 4, WT, !0), mT().setInt32(TT + 0, kT, !0)
           },
-          ybcu: function(YY, rY) {
-            throw new Error(TY(YY, rY))
+          EtYL: function(TT, oT) {
+            throw new Error(eT(TT, oT))
           },
-          owZk: function(YY, rY) {
-            return cY(YY).charCodeAt(rY >>> 0)
+          DSlm: function(TT, oT) {
+            return ET(TT).charCodeAt(oT >>> 0)
           },
-          duBV: function(YY, rY) {
-            console.error(TY(YY, rY))
+          Op0B: function(TT, oT) {
+            console.error(eT(TT, oT))
           },
-          qg4H: function(YY) {
-            return cY(YY).length
+          TZF6: function(TT) {
+            return ET(TT).length
           },
-          Y7Gu: function(YY, rY) {
-            return EY(TY(YY, rY))
+          yTm2: function(TT, oT) {
+            return AT(eT(TT, oT))
           },
-          rfgG: function(YY) {
-            CY(YY)
+          aYsb: function(TT) {
+            UT(TT)
           }
         }
       }
     }
-    Symbol.dispose && (AY.prototype[Symbol.dispose] = AY.prototype.free);
-    const WY = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (zT.prototype[Symbol.dispose] = zT.prototype.free);
+    const rT = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((YY => wY.Pi5D(YY, 1)));
+    } : new FinalizationRegistry((TT => qT.fObX(TT, 1)));
 
-    function EY(YY) {
-      HY === KY.length && KY.push(KY.length + 1);
-      const rY = HY;
-      return HY = KY[rY], KY[rY] = YY, rY
+    function AT(TT) {
+      CT === fT.length && fT.push(fT.length + 1);
+      const oT = CT;
+      return CT = fT[oT], fT[oT] = TT, oT
     }
 
-    function mY(YY, rY) {
-      YY >>>= 0;
-      const DY = lY(),
-        FY = [];
-      for (let AY = YY; AY < YY + 4 * rY; AY += 4) FY.push(CY(DY.getUint32(AY, !0)));
-      return FY
+    function gT(TT, oT) {
+      TT >>>= 0;
+      const IT = mT(),
+        iT = [];
+      for (let zT = TT; zT < TT + 4 * oT; zT += 4) iT.push(UT(IT.getUint32(zT, !0)));
+      return iT
     }
 
-    function VY(YY, rY) {
-      return YY >>>= 0, BY().subarray(YY / 1, YY / 1 + rY)
+    function hT(TT, oT) {
+      return TT >>>= 0, vT().subarray(TT / 1, TT / 1 + oT)
     }
-    let SY = null;
+    let wT = null;
 
-    function lY() {
-      return (null === SY || !0 === SY.buffer.detached || void 0 === SY.buffer.detached && SY.buffer !== wY.memory.buffer) && (SY = new DataView(wY.memory.buffer)), SY
+    function mT() {
+      return (null === wT || !0 === wT.buffer.detached || void 0 === wT.buffer.detached && wT.buffer !== qT.memory.buffer) && (wT = new DataView(qT.memory.buffer)), wT
     }
 
-    function TY(YY, rY) {
-      return function(YY, rY) {
-        hY += rY, hY >= jY && (fY = new TextDecoder("utf-8", {
+    function eT(TT, oT) {
+      return function(TT, oT) {
+        QT += oT, QT >= YT && (aT = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), fY.decode(), hY = rY);
-        return fY.decode(BY().subarray(YY, YY + rY))
-      }(YY >>> 0, rY)
+        }), aT.decode(), QT = oT);
+        return aT.decode(vT().subarray(TT, TT + oT))
+      }(TT >>> 0, oT)
     }
-    let eY = null;
-    let NY = null;
+    let RT = null;
+    let uT = null;
 
-    function BY() {
-      return null !== NY && 0 !== NY.byteLength || (NY = new Uint8Array(wY.memory.buffer)), NY
-    }
-
-    function cY(YY) {
-      return KY[YY]
-    }
-    let KY = new Array(1024).fill(void 0);
-    KY.push(void 0, null, !0, !1);
-    let HY = KY.length;
-
-    function zY(YY, rY) {
-      const DY = rY(4 * YY.length, 4) >>> 0;
-      return (null !== eY && 0 !== eY.byteLength || (eY = new Uint32Array(wY.memory.buffer)), eY).set(YY, DY / 4), bY = YY.length, DY
+    function vT() {
+      return null !== uT && 0 !== uT.byteLength || (uT = new Uint8Array(qT.memory.buffer)), uT
     }
 
-    function ZY(YY, rY) {
-      const DY = rY(4 * YY.length, 4) >>> 0,
-        FY = lY();
-      for (let AY = 0; AY < YY.length; AY++) FY.setUint32(DY + 4 * AY, EY(YY[AY]), !0);
-      return bY = YY.length, DY
+    function ET(TT) {
+      return fT[TT]
+    }
+    let fT = new Array(1024).fill(void 0);
+    fT.push(void 0, null, !0, !1);
+    let CT = fT.length;
+
+    function jT(TT, oT) {
+      const IT = oT(4 * TT.length, 4) >>> 0;
+      return (null !== RT && 0 !== RT.byteLength || (RT = new Uint32Array(qT.memory.buffer)), RT).set(TT, IT / 4), ZT = TT.length, IT
     }
 
-    function CY(YY) {
-      const rY = cY(YY);
-      return function(YY) {
-        YY < 1028 || (KY[YY] = HY, HY = YY)
-      }(YY), rY
+    function JT(TT, oT) {
+      const IT = oT(4 * TT.length, 4) >>> 0,
+        iT = mT();
+      for (let zT = 0; zT < TT.length; zT++) iT.setUint32(IT + 4 * zT, AT(TT[zT]), !0);
+      return ZT = TT.length, IT
     }
-    let fY = new TextDecoder("utf-8", {
+
+    function UT(TT) {
+      const oT = ET(TT);
+      return function(TT) {
+        TT < 1028 || (fT[TT] = CT, CT = TT)
+      }(TT), oT
+    }
+    let aT = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    fY.decode();
-    const jY = 2146435072;
-    let hY = 0;
-    const dY = new TextEncoder;
-    "encodeInto" in dY || (dY.encodeInto = function(YY, rY) {
-      const DY = dY.encode(YY);
-      return rY.set(DY), {
-        read: YY.length,
-        written: DY.length
+    aT.decode();
+    const YT = 2146435072;
+    let QT = 0;
+    const OT = new TextEncoder;
+    "encodeInto" in OT || (OT.encodeInto = function(TT, oT) {
+      const IT = OT.encode(TT);
+      return oT.set(IT), {
+        read: TT.length,
+        written: IT.length
       }
     });
-    let JY, MY, wY, bY = 0;
+    let HT, nT, qT, ZT = 0;
 
-    function XY(YY, rY) {
-      return MY = YY, wY = YY.exports, JY = rY, SY = null, eY = null, NY = null, wY.sih7(), wY
+    function lT(TT, oT) {
+      return nT = TT, qT = TT.exports, HT = oT, wT = null, RT = null, uT = null, qT.YjjA(), qT
     }
 
-    function qY(YY) {
-      if (void 0 !== wY) return wY;
-      void 0 !== YY && (Object.getPrototypeOf(YY) === Object.prototype ? ({
-        module: YY
-      } = YY) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const rY = oY();
-      YY instanceof WebAssembly.Module || (YY = new WebAssembly.Module(YY));
-      return XY(new WebAssembly.Instance(YY, rY), YY)
+    function sT(TT) {
+      if (void 0 !== qT) return qT;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module: TT
+      } = TT) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const oT = MT();
+      TT instanceof WebAssembly.Module || (TT = new WebAssembly.Module(TT));
+      return lT(new WebAssembly.Instance(TT, oT), TT)
     }
-    async function pY(YY) {
-      if (void 0 !== wY) return wY;
-      void 0 !== YY && (Object.getPrototypeOf(YY) === Object.prototype ? ({
-        module_or_path: YY
-      } = YY) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const rY = oY();
-      ("string" === typeof YY || "function" === typeof Request && YY instanceof Request || "function" === typeof URL && YY instanceof URL) && (YY = fetch(YY));
+    async function tT(TT) {
+      if (void 0 !== qT) return qT;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module_or_path: TT
+      } = TT) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const oT = MT();
+      ("string" === typeof TT || "function" === typeof Request && TT instanceof Request || "function" === typeof URL && TT instanceof URL) && (TT = fetch(TT));
       const {
-        instance: DY,
-        module: FY
-      } = await async function(YY, rY) {
-        if ("function" === typeof Response && YY instanceof Response) {
-          if (!YY.ok) throw new Error(`failed to fetch Wasm: ${YY.status} ${YY.statusText} fetching '${YY.url}'`);
+        instance: IT,
+        module: iT
+      } = await async function(TT, oT) {
+        if ("function" === typeof Response && TT instanceof Response) {
+          if (!TT.ok) throw new Error(`failed to fetch Wasm: ${TT.status} ${TT.statusText} fetching '${TT.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(YY, rY)
-          } catch (DY) {
-            if (! function(YY) {
-                switch (YY) {
+            return await WebAssembly.instantiateStreaming(TT, oT)
+          } catch (IT) {
+            if (! function(TT) {
+                switch (TT) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(YY.type) || "application/wasm" === YY.headers.get("Content-Type")) throw DY;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", DY)
+              }(TT.type) || "application/wasm" === TT.headers.get("Content-Type")) throw IT;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", IT)
           }
-          const FY = await YY.arrayBuffer();
-          return await WebAssembly.instantiate(FY, rY)
+          const iT = await TT.arrayBuffer();
+          return await WebAssembly.instantiate(iT, oT)
         } {
-          const DY = await WebAssembly.instantiate(YY, rY);
-          return DY instanceof WebAssembly.Instance ? {
-            instance: DY,
-            module: YY
-          } : DY
+          const IT = await WebAssembly.instantiate(TT, oT);
+          return IT instanceof WebAssembly.Instance ? {
+            instance: IT,
+            module: TT
+          } : IT
         }
-      }(await YY, rY);
-      return XY(DY, FY)
+      }(await TT, oT);
+      return lT(IT, iT)
     }
-    var kY = DY(3316),
-      GY = DY(6185);
-    class xY extends Error {
+    var GT = IT(3280),
+      pT = IT(6123);
+    class bT extends Error {
       stage;
-      constructor(YY, rY) {
-        super((0, kY.z)(YY, rY), {
-          cause: rY
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = YY
+      constructor(TT, oT) {
+        super((0, GT.G)(TT, oT), {
+          cause: oT
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = TT
       }
     }
-    let nY = null,
-      PY = null;
+    let yT = null,
+      NT = null;
 
-    function UY() {
-      return nY ? Promise.resolve(nY) : (PY || (PY = async function() {
-        let YY;
+    function PT() {
+      return yT ? Promise.resolve(yT) : (NT || (NT = async function() {
+        let TT;
         try {
-          YY = await (0, kY.C)(new DY.U(DY(6190)), (0, GY.d)("bloxd_wasm_shader_pack"))
-        } catch (rY) {
-          throw new xY((0, kY.E)(rY), rY)
+          TT = await (0, GT.J)(new IT.U(IT(6130)), (0, pT.c)("bloxd_wasm_shader_pack"))
+        } catch (oT) {
+          throw new bT((0, GT.N)(oT), oT)
         }
         try {
-          await pY({
-            module_or_path: YY
+          await tT({
+            module_or_path: TT
           })
-        } catch (rY) {
-          throw new xY("instantiate", rY)
+        } catch (oT) {
+          throw new bT("instantiate", oT)
         }
-        return nY = FY, nY
-      }(), PY.then(void 0, (() => {
-        PY = null
-      }))), PY)
+        return yT = iT, yT
+      }(), NT.then(void 0, (() => {
+        NT = null
+      }))), NT)
     }
-    var LY = DY(6200);
+    var dT = IT(6141);
 
-    function tY(YY) {
-      let [rY, DY, FY, AY] = YY;
-      const IY = {
-        file: rY,
-        line: DY,
-        message: FY
+    function VT(TT) {
+      let [oT, IT, iT, zT] = TT;
+      const kT = {
+        file: oT,
+        line: IT,
+        message: iT
       };
-      return AY && (IY.variants = AY.map(LY.m)), IY
+      return zT && (kT.variants = zT.map(dT.n)), kT
     }
 
-    function Yr(YY) {
-      return JSON.parse(YY).map(tY)
+    function To(TT) {
+      return JSON.parse(TT).map(VT)
     }
 
-    function rr(YY, rY) {
-      if (!Number.isInteger(YY) || YY < 0 || YY > 4294967295) throw new Error(`${rY} ${YY} is not a whole number from 0 to 4294967295`);
-      return YY
+    function oo(TT, oT) {
+      if (!Number.isInteger(TT) || TT < 0 || TT > 4294967295) throw new Error(`${oT} ${TT} is not a whole number from 0 to 4294967295`);
+      return TT
     }
 
-    function Dr(YY) {
-      return [YY.named.map((YY => YY.name)), Uint32Array.from(YY.named, (YY => rr(YY.id, "Texture ID")))]
+    function Io(TT) {
+      return [TT.named.map((TT => TT.name)), Uint32Array.from(TT.named, (TT => oo(TT.id, "Texture ID")))]
     }
-    const Fr = new WeakMap;
-    const Ar = new WeakMap,
-      Ir = new WeakSet;
+    const io = new WeakMap;
+    const zo = new WeakMap,
+      ko = new WeakSet;
 
-    function Rr(YY, rY) {
-      if (Ir.has(YY)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function Wo(TT, oT) {
+      if (ko.has(TT)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return rY()
-      } catch (DY) {
-        throw DY instanceof WebAssembly.RuntimeError && Ir.add(YY), DY
+        return oT()
+      } catch (IT) {
+        throw IT instanceof WebAssembly.RuntimeError && ko.add(TT), IT
       }
     }
 
-    function Or(YY) {
-      let rY = Ar.get(YY);
-      if (!rY) {
-        let DY, FY;
-        rY = {
-          I6: (rY, DY) => Rr(YY, (() => function(YY, rY, DY) {
-            const FY = YY.I6(rY.map((YY => YY.path)), rY.map((YY => YY.source)), ...Dr(DY), DY.aliases.map((YY => YY.name)), DY.aliases.map((YY => YY.texture)), DY.aliases.map((YY => YY.kind)));
-            let AY = !1;
+    function Xo(TT) {
+      let oT = zo.get(TT);
+      if (!oT) {
+        let IT, iT;
+        oT = {
+          v_: (oT, IT) => Wo(TT, (() => function(TT, oT, IT) {
+            const iT = TT.v_(oT.map((TT => TT.path)), oT.map((TT => TT.source)), ...Io(IT), IT.aliases.map((TT => TT.name)), IT.aliases.map((TT => TT.texture)), IT.aliases.map((TT => TT.kind)));
+            let zT = !1;
             try {
-              const YY = FY.validationModuleCodes,
-                rY = Array.from(FY.validationModuleKeys, ((rY, DY) => ({
-                  key: (0, LY.m)(rY),
-                  code: YY[DY]
+              const TT = iT.validationModuleCodes,
+                oT = Array.from(iT.validationModuleKeys, ((oT, IT) => ({
+                  key: (0, dT.n)(oT),
+                  code: TT[IT]
                 }))),
-                DY = {
-                  errors: Yr(FY.errorsJson),
-                  offInStrict: Yr(FY.offInStrictJson),
-                  variants: (0, LY.f)(FY),
-                  validationModules: rY,
-                  features: FY.features
+                IT = {
+                  errors: To(iT.errorsJson),
+                  offInStrict: To(iT.offInStrictJson),
+                  variants: (0, dT.g)(iT),
+                  validationModules: oT,
+                  features: iT.features
                 };
-              return rY.forEach(((YY, rY) => {
-                Fr.set(YY, {
-                  pack: FY,
-                  index: rY
+              return oT.forEach(((TT, oT) => {
+                io.set(TT, {
+                  pack: iT,
+                  index: oT
                 })
-              })), AY = rY.length > 0, DY
+              })), zT = oT.length > 0, IT
             } finally {
-              AY || FY.free()
+              zT || iT.free()
             }
-          }(YY, rY, DY))),
-          mapValidationMessage: (rY, DY) => {
-            const FY = Fr.get(rY);
-            if (!FY) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return tY(JSON.parse(Rr(YY, (() => FY.pack.mapValidationMessage(FY.index, DY.lineNum, DY.linePos, DY.message, DY.type)))))
+          }(TT, oT, IT))),
+          mapValidationMessage: (oT, IT) => {
+            const iT = io.get(oT);
+            if (!iT) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return VT(JSON.parse(Wo(TT, (() => iT.pack.mapValidationMessage(iT.index, IT.lineNum, IT.linePos, IT.message, IT.type)))))
           },
-          FDY: rY => Rr(YY, (() => function(YY, rY) {
-            const DY = new Int32Array(rY.length),
-              FY = [];
-            return rY.forEach(((YY, rY) => {
-              DY[rY] = YY.variants ? YY.variants.length : -1;
-              for (const DY of YY.variants ?? []) FY.push((0, LY.i)(DY))
-            })), Yr(YY.FDY(rY.map((YY => YY.file)), Uint32Array.from(rY, (YY => rr(YY.line, "Diagnostic line"))), rY.map((YY => YY.message)), DY, Uint8Array.from(FY)))
-          }(YY, rY))),
-          aT: rY => Rr(YY, (() => YY.aT(...Dr(rY)))),
+          EIT: oT => Wo(TT, (() => function(TT, oT) {
+            const IT = new Int32Array(oT.length),
+              iT = [];
+            return oT.forEach(((TT, oT) => {
+              IT[oT] = TT.variants ? TT.variants.length : -1;
+              for (const IT of TT.variants ?? []) iT.push((0, dT.j)(IT))
+            })), To(TT.EIT(oT.map((TT => TT.file)), Uint32Array.from(oT, (TT => oo(TT.line, "Diagnostic line"))), oT.map((TT => TT.message)), IT, Uint8Array.from(iT)))
+          }(TT, oT))),
+          ZC: oT => Wo(TT, (() => TT.ZC(...Io(oT)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return DY ??= Rr(YY, (() => YY.VFY())), DY
+            return IT ??= Wo(TT, (() => TT.yiT())), IT
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return FY ??= Rr(YY, (() => {
-              const rY = YY.WFY();
-              return YY.oFY().map(((YY, DY) => ({
-                path: YY,
-                source: rY[DY]
+            return iT ??= Wo(TT, (() => {
+              const oT = TT.GiT();
+              return TT.tiT().map(((TT, IT) => ({
+                path: TT,
+                source: oT[IT]
               })))
-            })), FY
+            })), iT
           },
-          SFY: rY => Rr(YY, (() => YY.SFY(rY))),
-          resolveHeader: rY => Rr(YY, (() => YY.mFY((0, LY.i)(rY)))),
-          EFY: () => Rr(YY, (() => YY.EFY()))
-        }, Ar.set(YY, rY)
+          NiT: oT => Wo(TT, (() => TT.NiT(oT))),
+          resolveHeader: oT => Wo(TT, (() => TT.biT((0, dT.j)(oT)))),
+          piT: () => Wo(TT, (() => TT.piT()))
+        }, zo.set(TT, oT)
       }
-      return rY
+      return oT
     }
-    var gr = DY(2812),
-      ar = DY(6194);
-    const vr = "bloxdShaderPackWasmFailureReported";
-    let ur = null;
+    var Bo = IT(2785),
+      Fo = IT(6138);
+    const So = "bloxdShaderPackWasmFailureReported";
+    let Do = null;
 
-    function sr() {
-      return ur ??= async function() {
-        if ("undefined" === typeof WebAssembly) return ir("unsupported", "This browser has no WebAssembly"), null;
-        const YY = (0, ar.loadShaderPackTextures)().then((() => !0), (YY => (console.error("Could not load the shader pack textures, so shader packs can't run", YY), !1)));
+    function Lo() {
+      return Do ??= async function() {
+        if ("undefined" === typeof WebAssembly) return xo("unsupported", "This browser has no WebAssembly"), null;
+        const TT = (0, Fo.loadShaderPackTextures)().then((() => !0), (TT => (console.error("Could not load the shader pack textures, so shader packs can't run", TT), !1)));
         try {
-          const rY = await async function() {
-            let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : UY;
-            return Or(await YY())
+          const oT = await async function() {
+            let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PT;
+            return Xo(await TT())
           }();
-          return await YY ? rY : null
-        } catch (rY) {
-          const YY = rY instanceof Error ? rY.message : String(rY);
-          return ir(gr.c[rY instanceof xY ? rY.stage : "instantiate"], YY), null
+          return await TT ? oT : null
+        } catch (oT) {
+          const TT = oT instanceof Error ? oT.message : String(oT);
+          return xo(Bo.e[oT instanceof bT ? oT.stage : "instantiate"], TT), null
         }
-      }(), ur
+      }(), Do
     }
 
-    function ir(YY, rY) {
-      (0, gr.g)(vr, `Shader pack wasm ${YY}, so shader packs can't run: ${rY}`, rY, `shader_pack_${YY}`)
+    function xo(TT, oT) {
+      (0, Bo.k)(So, `Shader pack wasm ${TT}, so shader packs can't run: ${oT}`, oT, `shader_pack_${TT}`)
     }
   },
-  6190: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/bloxd_wasm_shader_pack_bg.597717e8810c05eda113.wasm"
+  6130: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/bloxd_wasm_shader_pack_bg.b28011e8ebeb1f2a26f2.wasm"
   },
-  6185: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => RY
+  6123: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => WT
     });
-    var FY = DY(3316);
-    const AY = {
-      bloxd_wasm: () => "903337e90214806242ef5ad341398181be3c87ea5226f5d308c1f706cca47468",
-      bloxd_wasm_client: () => "d9f45f5c46370841da4c8574a141121ea34c64a996f4d1841ecd95c2e1c42524",
-      bloxd_wasm_workers: () => "e832a210d1a00892314a96a90d4a810c538ccaba01655c65f515d94a02133b57",
-      bloxd_wasm_models: () => "2f768b4533240fc126cb3ccd5bdd269ed4498ed1fa63eed4e2b125cc3c87dc9b",
-      bloxd_wasm_webgpu: () => "13ae76830081d62490819e5586d96d611b16f3d36319392e7684b387dbb9a0ed",
-      bloxd_wasm_webgl: () => "75d934553815430308e568d5596dcf3cbeac88e44101ca29221bb1053d751211",
-      bloxd_wasm_webgl1: () => "b26fe3e2f92ba241e60c4d5654b9403c8c421137a13bbf9dcd393877458f3414",
-      bloxd_wasm_replay: () => "48557d8c4d7642abff5e313d857ceb9ccf1d9842abaebd08aa0b5e4cbb90872b",
-      bloxd_wasm_recorder: () => "68796f2c46f67a890c7e7a667a741a45748b338eb4307c043ddd50d779195794",
-      bloxd_wasm_anim: () => "64d4b11d72243c88f5656437b1d8dfffaf2dae8a64597e8568942258a1cd2cc6",
-      bloxd_wasm_textures: () => "129a63db7ae9f368dd82ca48a44da3bbf65d4eca5fdba1989a22ec841eb964c3",
-      bloxd_wasm_shader_pack: () => "907c252f98c6434be7b5e8e7e6ecbbf37da692dc3544d16a95f87d273dc21da1"
+    var iT = IT(3280);
+    const zT = {
+      bloxd_wasm: () => "891b125e1fa53c747db8046ca1a7828990783e6318b475060b2689b2c62ec64b",
+      bloxd_wasm_client: () => "afe376ddb7e074ef28dc003cae65be2019ba85870176102f5c99327651531a90",
+      bloxd_wasm_workers: () => "bdacf110fdd54ff050ae9c3d3c9c40fa9932196a316574c38050f09f93d5d4d0",
+      bloxd_wasm_models: () => "d431807fb8651e0a5be03886feec149ab2c5d8f7292513bb4f5f6f8198ccd3fa",
+      bloxd_wasm_webgpu: () => "36744cc13e8d59f3d9a2cc30379d81ca4b0e563c1ccd9032a15b3d5d2fd1f9b1",
+      bloxd_wasm_webgl: () => "d7f8f069066a9513edfd41a54bdc46943132c54fd47d41226907a9c5957c5a3e",
+      bloxd_wasm_webgl1: () => "1f274f498c33507fd74ae865400b574dec316d2e2535b8bdd60f2679aec71305",
+      bloxd_wasm_replay: () => "308a6b9500ce1acc37831e57249009d9c05a3a9b3821582ea4fe8330d515270a",
+      bloxd_wasm_recorder: () => "c2dd3c772eaa41d9a4cfcd9261204dae143353c48db7c49556d0089946997bff",
+      bloxd_wasm_anim: () => "92da9dc930879a101e815385ac8673ac818daddd3cc10a9e6f242c32dd68abe8",
+      bloxd_wasm_textures: () => "de7050a0a81f4523efadc506fed6ff11ef5e5819f30494428008fcaceee90545",
+      bloxd_wasm_shader_pack: () => "012d029967fec4420d84f73dad4d7e807ec1901518f66edd03a82520f373fb43"
     };
-    var IY = DY(4269);
+    var kT = IT(4191);
 
-    function RY(YY) {
-      const rY = Object.prototype.hasOwnProperty.call(AY, YY) ? AY[YY]() : void 0;
-      if (void 0 !== rY) return {
-        sha256: rY,
-        onMismatch: IY.z
+    function WT(TT) {
+      const oT = Object.prototype.hasOwnProperty.call(zT, TT) ? zT[TT]() : void 0;
+      if (void 0 !== oT) return {
+        sha256: oT,
+        onMismatch: kT.y
       };
-      throw new FY.h(`${YY} has no release digest, so this build refuses it`)
+      throw new iT.k(`${TT} has no release digest, so this build refuses it`)
     }
   },
-  6200: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => VY,
-      f: () => SY,
-      i: () => EY,
-      m: () => WY
+  6141: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => hT,
+      g: () => wT,
+      j: () => AT,
+      n: () => rT
     });
-    var FY = DY(6208);
-    const AY = 6,
-      IY = 3,
-      RY = 1,
-      OY = 2,
-      gY = 4,
-      aY = 8,
-      vY = 16,
-      uY = 32,
-      sY = 64,
-      iY = 128,
-      yY = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var iT = IT(6143);
+    const zT = 6,
+      kT = 3,
+      WT = 1,
+      XT = 2,
+      BT = 4,
+      FT = 8,
+      ST = 16,
+      DT = 32,
+      LT = 64,
+      xT = 128,
+      cT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function QY(YY) {
-      if (!YY) return 0;
-      const rY = yY.indexOf(YY);
-      if (rY <= 0) throw new Error(`"${YY}" is not a shader pack hook function`);
-      return rY
+    function KT(TT) {
+      if (!TT) return 0;
+      const oT = cT.indexOf(TT);
+      if (oT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
+      return oT
     }
 
-    function oY(YY) {
-      if (0 === YY) return null;
-      const rY = yY[YY];
-      if (void 0 === rY) throw new Error(`${YY} is not a shader pack hook function id`);
-      return rY
+    function MT(TT) {
+      if (0 === TT) return null;
+      const oT = cT[TT];
+      if (void 0 === oT) throw new Error(`${TT} is not a shader pack hook function id`);
+      return oT
     }
 
-    function WY(YY) {
-      const rY = FY.c.length;
+    function rT(TT) {
+      const oT = iT.d.length;
       return {
-        strict: YY >= rY,
-        program: FY.c[YY % rY]
+        strict: TT >= oT,
+        program: iT.d[TT % oT]
       }
     }
 
-    function EY(YY) {
-      return Number(YY.strict) * FY.c.length + FY.c.indexOf(YY.program)
+    function AT(TT) {
+      return Number(TT.strict) * iT.d.length + iT.d.indexOf(TT.program)
     }
 
-    function mY(YY) {
-      return "" === YY ? [] : YY.split(" ")
+    function gT(TT) {
+      return "" === TT ? [] : TT.split(" ")
     }
 
-    function VY(YY) {
-      const rY = {
-        variantFlags: new Uint8Array(AY),
-        hooks: new Uint8Array(AY * IY),
-        moduleCodes: Array(AY).fill(""),
-        reads: Array(2 * AY).fill("")
+    function hT(TT) {
+      const oT = {
+        variantFlags: new Uint8Array(zT),
+        hooks: new Uint8Array(zT * kT),
+        moduleCodes: Array(zT).fill(""),
+        reads: Array(2 * zT).fill("")
       };
-      for (const DY of YY) {
-        const YY = EY(DY.key),
-          FY = (YY, rY) => null === DY.hooks.surface || DY.reads.fragment.includes(YY) ? 0 : rY;
-        rY.variantFlags[YY] = (DY.sceneDepth ? RY : 0) | (DY.movesVertices ? OY : 0) | (DY.sunShadow ? gY : 0) | (DY.airShadow ? aY : 0) | (DY.discards ? vY : 0) | FY("localPosition", uY) | FY("enchantSpeed", sY) | FY("enchantTier", iY), rY.hooks[YY * IY] = QY(DY.hooks.vertex), rY.hooks[YY * IY + 1] = QY(DY.hooks.surface), rY.hooks[YY * IY + 2] = QY(DY.hooks.light), rY.moduleCodes[YY] = DY.moduleCode, rY.reads[2 * YY] = DY.reads.vertex.join(" "), rY.reads[2 * YY + 1] = DY.reads.fragment.join(" ")
+      for (const IT of TT) {
+        const TT = AT(IT.key),
+          iT = (TT, oT) => null === IT.hooks.surface || IT.reads.fragment.includes(TT) ? 0 : oT;
+        oT.variantFlags[TT] = (IT.sceneDepth ? WT : 0) | (IT.movesVertices ? XT : 0) | (IT.sunShadow ? BT : 0) | (IT.airShadow ? FT : 0) | (IT.discards ? ST : 0) | iT("localPosition", DT) | iT("enchantSpeed", LT) | iT("enchantTier", xT), oT.hooks[TT * kT] = KT(IT.hooks.vertex), oT.hooks[TT * kT + 1] = KT(IT.hooks.surface), oT.hooks[TT * kT + 2] = KT(IT.hooks.light), oT.moduleCodes[TT] = IT.moduleCode, oT.reads[2 * TT] = IT.reads.vertex.join(" "), oT.reads[2 * TT + 1] = IT.reads.fragment.join(" ")
       }
-      return rY
+      return oT
     }
 
-    function SY(YY) {
+    function wT(TT) {
       const {
-        hooks: rY,
-        moduleCodes: DY,
-        reads: FY
-      } = YY;
-      return Array.from(YY.variantFlags, ((YY, AY) => {
-        const uY = AY * IY;
+        hooks: oT,
+        moduleCodes: IT,
+        reads: iT
+      } = TT;
+      return Array.from(TT.variantFlags, ((TT, zT) => {
+        const DT = zT * kT;
         return {
-          key: WY(AY),
+          key: rT(zT),
           hooks: {
-            vertex: oY(rY[uY]),
-            surface: oY(rY[uY + 1]),
-            light: oY(rY[uY + 2])
+            vertex: MT(oT[DT]),
+            surface: MT(oT[DT + 1]),
+            light: MT(oT[DT + 2])
           },
-          moduleCode: DY[AY],
-          sceneDepth: 0 !== (YY & RY),
-          sunShadow: 0 !== (YY & gY),
-          airShadow: 0 !== (YY & aY),
-          movesVertices: 0 !== (YY & OY),
-          discards: 0 !== (YY & vY),
+          moduleCode: IT[zT],
+          sceneDepth: 0 !== (TT & WT),
+          sunShadow: 0 !== (TT & BT),
+          airShadow: 0 !== (TT & FT),
+          movesVertices: 0 !== (TT & XT),
+          discards: 0 !== (TT & ST),
           reads: {
-            vertex: mY(FY[2 * AY]),
-            fragment: mY(FY[2 * AY + 1])
+            vertex: gT(iT[2 * zT]),
+            fragment: gT(iT[2 * zT + 1])
           }
         }
       }))
     }
   },
-  6208: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => FY,
-      e: () => RY,
-      h: () => OY,
-      l: () => AY,
-      o: () => IY
+  6143: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT,
+      g: () => WT,
+      h: () => XT,
+      k: () => zT,
+      l: () => kT
     });
-    const FY = ["terrain", "liquid", "model"];
+    const iT = ["terrain", "liquid", "model"];
 
-    function AY() {
-      const YY = [];
-      for (const rY of [!1, !0])
-        for (const DY of FY) YY.push({
-          strict: rY,
-          program: DY
+    function zT() {
+      const TT = [];
+      for (const oT of [!1, !0])
+        for (const IT of iT) TT.push({
+          strict: oT,
+          program: IT
         });
-      return YY
+      return TT
     }
 
-    function IY(YY) {
-      return `${YY.strict?"strict":"allow"}.${YY.program}`
+    function kT(TT) {
+      return `${TT.strict?"strict":"allow"}.${TT.program}`
     }
 
-    function RY(YY) {
-      return !YY.hooks.vertex && !YY.hooks.surface && !YY.hooks.light
+    function WT(TT) {
+      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
     }
 
-    function OY(YY, rY) {
-      return "off" !== rY && (null === YY || YY.some((YY => YY.key.strict === ("strict" === rY) && !RY(YY))))
+    function XT(TT, oT) {
+      return "off" !== oT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === oT) && !WT(TT))))
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,128 +1,128 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  38927: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      e: () => AY
+  38557: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT,
+      f: () => zT
     });
-    const FY = "The world isn't loaded, so no blocks can be seen.",
-      AY = "The world isn't loaded, so nothing in it can be seen."
+    const iT = "The world isn't loaded, so no blocks can be seen.",
+      zT = "The world isn't loaded, so nothing in it can be seen."
   },
-  38453: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => QY,
-      c: () => oY,
-      e: () => yY
+  38061: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => KT,
+      d: () => MT,
+      e: () => cT
     });
-    var FY = DY(2565);
-    const AY = 0,
-      IY = 2,
-      RY = 3,
-      OY = 4;
-    class gY {
-      constructor(YY, rY) {
-        this.width = YY, this.gu = rY, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(YY * rY)
+    var iT = IT(2541);
+    const zT = 0,
+      kT = 2,
+      WT = 3,
+      XT = 4;
+    class BT {
+      constructor(TT, oT) {
+        this.width = TT, this.fD = oT, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(TT * oT)
       }
-      push(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const DY = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
-        for (let FY = 0; FY < this.width; FY++) DY[FY] = YY[rY + FY];
-        return this.next = (this.next + 1) % this.gu, this.size = Math.min(this.size + 1, this.gu), DY
+      push(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const IT = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
+        for (let iT = 0; iT < this.width; iT++) IT[iT] = TT[oT + iT];
+        return this.next = (this.next + 1) % this.fD, this.size = Math.min(this.size + 1, this.fD), IT
       }
       lines() {
-        const YY = [],
-          rY = (this.next - this.size + this.gu) % this.gu;
-        for (let DY = 0; DY < this.size; DY++) {
-          const FY = (rY + DY) % this.gu * this.width;
-          YY.push(Array.from(this.data.subarray(FY, FY + this.width)).join(","))
+        const TT = [],
+          oT = (this.next - this.size + this.fD) % this.fD;
+        for (let IT = 0; IT < this.size; IT++) {
+          const iT = (oT + IT) % this.fD * this.width;
+          TT.push(Array.from(this.data.subarray(iT, iT + this.width)).join(","))
         }
-        return YY
+        return TT
       }
     }
 
-    function aY(YY) {
-      return Number.isFinite(YY) ? String(Math.round(10 * YY) / 10) : String(YY)
+    function FT(TT) {
+      return Number.isFinite(TT) ? String(Math.round(10 * TT) / 10) : String(TT)
     }
 
-    function vY(YY) {
-      return Number.isFinite(YY) ? YY.toFixed(1) : String(YY)
+    function ST(TT) {
+      return Number.isFinite(TT) ? TT.toFixed(1) : String(TT)
     }
-    class uY {
+    class DT {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.fC = 0, this.pastLimit = 0, this.lockSkips = 0, this.fi = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.zq = 0, this.pastLimit = 0, this.lockSkips = 0, this.xM = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
     }
-    class sY {
+    class LT {
       constructor() {
-        var YY = this;
-        this.tally = new uY, this.records = new gY(10, 3600), this.events = new gY(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(rY) {
-          let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          const [FY, gY, uY, sY, iY, yY, QY, oY, WY, EY] = YY.records.push(rY, DY), mY = YY.tally;
-          switch (mY.frames++, QY) {
-            case AY:
-              return void mY.idle++;
-            case OY:
-              return void mY.fi++;
-            case RY:
-              return mY.lockSkips++, void(0 === uY && 0 === sY || YY.outlier(`lock skip dropped raw (${aY(uY)}, ${aY(sY)}) at ${vY(FY)} ms`))
+        var TT = this;
+        this.tally = new DT, this.records = new BT(10, 3600), this.events = new BT(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(oT) {
+          let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          const [iT, BT, DT, LT, xT, cT, KT, MT, rT, AT] = TT.records.push(oT, IT), gT = TT.tally;
+          switch (gT.frames++, KT) {
+            case zT:
+              return void gT.idle++;
+            case XT:
+              return void gT.xM++;
+            case WT:
+              return gT.lockSkips++, void(0 === DT && 0 === LT || TT.outlier(`lock skip dropped raw (${FT(DT)}, ${FT(LT)}) at ${ST(iT)} ms`))
           }
-          mY.looked++, Number.isFinite(gY) && (mY.dtMin = Math.min(mY.dtMin, gY), mY.dtMax = Math.max(mY.dtMax, gY), mY.dtSum += gY, gY > 0 && (mY.peakRate = Math.max(mY.peakRate, Math.hypot(iY, yY) / gY))), mY.raw[0] += uY, mY.raw[1] += sY, mY.turned[0] += iY, mY.turned[1] += yY;
-          const VY = Math.abs(uY) > EY || Math.abs(sY) > EY,
-            SY = `raw (${aY(uY)}, ${aY(sY)}) over ${vY(gY)} ms, limit ${aY(EY)}, filter v (${oY.toFixed(3)}, ${WY.toFixed(3)}) px/ms, at ${vY(FY)} ms`;
-          QY === IY ? (mY.fC++, YY.outlier(`spike put right: ${SY} -> turned (${aY(iY)}, ${aY(yY)})`)) : VY ? (mY.pastLimit++, YY.outlier(`kept past limit: ${SY}`)) : gY > 50 && (mY.longFrames++, YY.outlier(`long frame: ${SY}, turned in full`))
-        }, this.onMouseMove = YY => {
-          const rY = this.tally,
+          gT.looked++, Number.isFinite(BT) && (gT.dtMin = Math.min(gT.dtMin, BT), gT.dtMax = Math.max(gT.dtMax, BT), gT.dtSum += BT, BT > 0 && (gT.peakRate = Math.max(gT.peakRate, Math.hypot(xT, cT) / BT))), gT.raw[0] += DT, gT.raw[1] += LT, gT.turned[0] += xT, gT.turned[1] += cT;
+          const hT = Math.abs(DT) > AT || Math.abs(LT) > AT,
+            wT = `raw (${FT(DT)}, ${FT(LT)}) over ${ST(BT)} ms, limit ${FT(AT)}, filter v (${MT.toFixed(3)}, ${rT.toFixed(3)}) px/ms, at ${ST(iT)} ms`;
+          KT === kT ? (gT.zq++, TT.outlier(`spike put right: ${wT} -> turned (${FT(xT)}, ${FT(cT)})`)) : hT ? (gT.pastLimit++, TT.outlier(`kept past limit: ${wT}`)) : BT > 50 && (gT.longFrames++, TT.outlier(`long frame: ${wT}, turned in full`))
+        }, this.onMouseMove = TT => {
+          const oT = this.tally,
             {
-              movementX: DY,
-              movementY: FY
-            } = YY;
-          rY.events++;
-          const AY = Math.max(Math.abs(DY), Math.abs(FY));
-          rY.eventMax = Math.max(rY.eventMax, AY);
-          const IY = null !== document.pointerLockElement,
-            RY = this.event;
-          RY[0] = YY.timeStamp, RY[1] = DY, RY[2] = FY, RY[3] = IY ? 1 : 0, this.events.push(RY), AY >= 200 && (rY.bigEvents++, this.eventOutlier(`big mousemove (${DY}, ${FY}) at ${vY(YY.timeStamp)} ms, lock ${IY?"ja":"free"}`))
+              movementX: IT,
+              movementY: iT
+            } = TT;
+          oT.events++;
+          const zT = Math.max(Math.abs(IT), Math.abs(iT));
+          oT.eventMax = Math.max(oT.eventMax, zT);
+          const kT = null !== document.pointerLockElement,
+            WT = this.event;
+          WT[0] = TT.timeStamp, WT[1] = IT, WT[2] = iT, WT[3] = kT ? 1 : 0, this.events.push(WT), zT >= 200 && (oT.bigEvents++, this.eventOutlier(`big mousemove (${IT}, ${iT}) at ${ST(TT.timeStamp)} ms, lock ${kT?"kS":"free"}`))
         }, this.onLockChange = () => {
-          const YY = document.pointerLockElement;
-          (0, FY.n)("look", `pointer lock ${YY?`gained (${YY.tagName.toLowerCase()})`:"lost"} at ${vY(performance.now())} ms`)
+          const TT = document.pointerLockElement;
+          (0, iT.l)("look", `pointer lock ${TT?`gained (${TT.tagName.toLowerCase()})`:"lost"} at ${ST(performance.now())} ms`)
         }, this.onLockError = () => {
-          (0, FY.n)("look", `pointer lock request failed at ${vY(performance.now())} ms`)
+          (0, iT.l)("look", `pointer lock request failed at ${ST(performance.now())} ms`)
         }, this.onVisibility = () => {
-          (0, FY.n)("look", `page ${document.visibilityState} at ${vY(performance.now())} ms`)
+          (0, iT.l)("look", `page ${document.visibilityState} at ${ST(performance.now())} ms`)
         }, this.flush = () => {
           this.takeRecords();
-          const YY = this.tally;
-          if (this.tally = new uY, 0 === YY.events && 0 === YY.raw[0] && 0 === YY.raw[1] && 0 === YY.lockSkips && 0 === YY.fC && 0 === YY.dropped) return;
-          const rY = YY.looked > 0 ? YY.dtSum / YY.looked : NaN,
-            DY = [`${YY.frames} frames (${YY.looked} looked, ${YY.idle} idle${"wasm"===this.client?`, ${YY.fi} carried`:""})`, `dt avg ${vY(rY)} min ${vY(YY.dtMin)} max ${vY(YY.dtMax)}, ${YY.longFrames} long`, `${YY.events} mousemoves (max ${aY(YY.eventMax)} px, ${YY.bigEvents} big)`, `raw (${aY(YY.raw[0])}, ${aY(YY.raw[1])}) turned (${aY(YY.turned[0])}, ${aY(YY.turned[1])})`, `peak ${YY.peakRate.toFixed(2)} px/ms`, `put right ${YY.fC}, past limit ${YY.pastLimit}, lock skips ${YY.lockSkips}`, "lock " + (document.pointerLockElement ? "ja" : "free")];
-          YY.dropped > 0 && DY.push(`${YY.dropped} doubled spike copies dropped`), YY.lost > 0 && DY.push(`${YY.lost} records lost`), YY.suppressed > 0 && DY.push(`${YY.suppressed} outlier lines not shown`), (0, FY.n)("look", `1s: ${DY.join("; ")}`)
+          const TT = this.tally;
+          if (this.tally = new DT, 0 === TT.events && 0 === TT.raw[0] && 0 === TT.raw[1] && 0 === TT.lockSkips && 0 === TT.zq && 0 === TT.dropped) return;
+          const oT = TT.looked > 0 ? TT.dtSum / TT.looked : NaN,
+            IT = [`${TT.frames} frames (${TT.looked} looked, ${TT.idle} idle${"wasm"===this.client?`, ${TT.xM} carried`:""})`, `dt avg ${ST(oT)} min ${ST(TT.dtMin)} max ${ST(TT.dtMax)}, ${TT.longFrames} long`, `${TT.events} mousemoves (max ${FT(TT.eventMax)} px, ${TT.bigEvents} big)`, `raw (${FT(TT.raw[0])}, ${FT(TT.raw[1])}) turned (${FT(TT.turned[0])}, ${FT(TT.turned[1])})`, `peak ${TT.peakRate.toFixed(2)} px/ms`, `put right ${TT.zq}, past limit ${TT.pastLimit}, lock skips ${TT.lockSkips}`, "lock " + (document.pointerLockElement ? "kS" : "free")];
+          TT.dropped > 0 && IT.push(`${TT.dropped} doubled spike copies dropped`), TT.lost > 0 && IT.push(`${TT.lost} records lost`), TT.suppressed > 0 && IT.push(`${TT.suppressed} outlier lines not shown`), (0, iT.l)("look", `1s: ${IT.join("; ")}`)
         }, this.dump = () => [`look records (${this.client}): nowMs,dtMs,rawX,rawY,turnedX,turnedY,outcome,vX,vY,limit`, ...this.records.lines(), "mousemove events: timeStamp,movementX,movementY,locked", ...this.events.lines()].join("\n")
       }
-      start(YY, rY) {
-        this.client = YY, this.take = rY;
+      start(TT, oT) {
+        this.client = TT, this.take = oT;
         const {
-          screen: DY
+          screen: IT
         } = window;
-        (0, FY.n)("look", `start: ${YY} client, dpr ${window.devicePixelRatio}, screen ${DY.width}x${DY.height}, pointer lock ${document.pointerLockElement?"ja":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
+        (0, iT.l)("look", `start: ${TT} client, dpr ${window.devicePixelRatio}, screen ${IT.width}x${IT.height}, pointer lock ${document.pointerLockElement?"kS":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, FY.k)("look", this.dump))
+        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, iT.j)("look", this.dump))
       }
-      outlier(YY) {
-        const rY = this.tally;
-        rY.outliers >= 20 ? rY.suppressed++ : (rY.outliers++, (0, FY.n)("look", YY))
+      outlier(TT) {
+        const oT = this.tally;
+        oT.outliers >= 20 ? oT.suppressed++ : (oT.outliers++, (0, iT.l)("look", TT))
       }
-      eventOutlier(YY) {
-        const rY = this.tally;
-        rY.eventLines >= 10 ? rY.suppressed++ : (rY.eventLines++, (0, FY.n)("look", YY))
+      eventOutlier(TT) {
+        const oT = this.tally;
+        oT.eventLines >= 10 ? oT.suppressed++ : (oT.eventLines++, (0, iT.l)("look", TT))
       }
       takeRecords() {
-        var YY;
-        const rY = null === (YY = this.take) || void 0 === YY ? void 0 : YY.call(this);
-        if (rY && rY.length >= 2) {
-          this.tally.lost += rY[0], this.tally.dropped += rY[1];
-          for (let YY = 2; YY + 10 <= rY.length; YY += 10) this.record(rY, YY)
+        var TT;
+        const oT = null === (TT = this.take) || void 0 === TT ? void 0 : TT.call(this);
+        if (oT && oT.length >= 2) {
+          this.tally.lost += oT[0], this.tally.dropped += oT[1];
+          for (let TT = 2; TT + 10 <= oT.length; TT += 10) this.record(oT, TT)
         }
       }
       droppedCopy() {
@@ -132,126 +132,126 @@ export const modules = {
         this.takeRecords(), this.take = null
       }
     }
-    let iY = null;
+    let xT = null;
 
-    function yY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return iY ??= new sY, iY.start(YY, rY), iY.record
+    function cT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return xT ??= new LT, xT.start(TT, oT), xT.record
     }
 
-    function QY() {
-      var YY;
-      null === (YY = iY) || void 0 === YY || YY.endTake()
+    function KT() {
+      var TT;
+      null === (TT = xT) || void 0 === TT || TT.endTake()
     }
 
-    function oY() {
-      var YY;
-      null === (YY = iY) || void 0 === YY || YY.droppedCopy()
+    function MT() {
+      var TT;
+      null === (TT = xT) || void 0 === TT || TT.droppedCopy()
     }
   },
-  8647: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  8649: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT
     });
-    const FY = new Set(["chunkBorders"])
+    const iT = new Set(["chunkBorders"])
   },
-  36231: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY,
-      c: () => gY
+  35801: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      f: () => BT
     });
-    const FY = {
+    const iT = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      AY = {
-        player: FY,
+      zT = {
+        player: iT,
         store: {
-          ...FY,
+          ...iT,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function IY(YY, rY) {
-      YY instanceof Promise ? YY.then(rY).catch((YY => {
-        console.error("Couldn't open the preview", YY)
-      })) : rY(YY)
+    function kT(TT, oT) {
+      TT instanceof Promise ? TT.then(oT).catch((TT => {
+        console.error("Couldn't open the preview", TT)
+      })) : oT(TT)
     }
-    class RY {
-      constructor(YY) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, IY(YY, (YY => {
-          this.closed ? YY.close() : (this.opened = YY, null !== this.size && YY.resize(this.size.width, this.size.height), null !== this.view && YY.show(this.view))
+    class WT {
+      constructor(TT) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, kT(TT, (TT => {
+          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height), null !== this.view && TT.show(this.view))
         }))
       }
-      show(YY) {
-        var rY;
-        this.view = YY, null === (rY = this.opened) || void 0 === rY || rY.show(YY)
+      show(TT) {
+        var oT;
+        this.view = TT, null === (oT = this.opened) || void 0 === oT || oT.show(TT)
       }
-      resize(YY, rY) {
-        var DY;
+      resize(TT, oT) {
+        var IT;
         this.size = {
-          width: YY,
-          height: rY
-        }, null === (DY = this.opened) || void 0 === DY || DY.resize(YY, rY)
+          width: TT,
+          height: oT
+        }, null === (IT = this.opened) || void 0 === IT || IT.resize(TT, oT)
       }
       close() {
-        var YY;
-        this.closed = !0, null === (YY = this.opened) || void 0 === YY || YY.close(), this.opened = null
+        var TT;
+        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
       }
     }
-    class OY {
-      constructor(YY) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(YY).then((YY => YY.ready)), IY(YY, (YY => {
-          this.closed ? YY.close() : (this.opened = YY, null !== this.size && YY.resize(this.size.width, this.size.height))
+    class XT {
+      constructor(TT) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(TT).then((TT => TT.ready)), kT(TT, (TT => {
+          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var YY, rY;
-        return null !== (YY = null === (rY = this.opened) || void 0 === rY ? void 0 : rY.isReady()) && void 0 !== YY && YY
+        var TT, oT;
+        return null !== (TT = null === (oT = this.opened) || void 0 === oT ? void 0 : oT.isReady()) && void 0 !== TT && TT
       }
-      setCosmetic(YY, rY) {
-        var DY;
-        null === (DY = this.opened) || void 0 === DY || DY.setCosmetic(YY, rY)
+      setCosmetic(TT, oT) {
+        var IT;
+        null === (IT = this.opened) || void 0 === IT || IT.setCosmetic(TT, oT)
       }
-      playEmote(YY) {
-        var rY;
-        null === (rY = this.opened) || void 0 === rY || rY.playEmote(YY)
+      playEmote(TT) {
+        var oT;
+        null === (oT = this.opened) || void 0 === oT || oT.playEmote(TT)
       }
       resetCamera() {
-        var YY;
-        null === (YY = this.opened) || void 0 === YY || YY.resetCamera()
+        var TT;
+        null === (TT = this.opened) || void 0 === TT || TT.resetCamera()
       }
-      async untilDrawn(YY) {
-        var rY;
-        await this.ready, await (null === (rY = this.opened) || void 0 === rY ? void 0 : rY.untilDrawn(YY))
+      async untilDrawn(TT) {
+        var oT;
+        await this.ready, await (null === (oT = this.opened) || void 0 === oT ? void 0 : oT.untilDrawn(TT))
       }
-      resize(YY, rY) {
-        var DY;
+      resize(TT, oT) {
+        var IT;
         this.size = {
-          width: YY,
-          height: rY
-        }, null === (DY = this.opened) || void 0 === DY || DY.resize(YY, rY)
+          width: TT,
+          height: oT
+        }, null === (IT = this.opened) || void 0 === IT || IT.resize(TT, oT)
       }
       close() {
-        var YY;
-        this.closed = !0, null === (YY = this.opened) || void 0 === YY || YY.close(), this.opened = null
+        var TT;
+        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
       }
     }
-    const gY = new class {
+    const BT = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(YY) {
-        this.host = YY
+      setHost(TT) {
+        this.host = TT
       }
-      setDefaultHost(YY) {
-        this.makeDefault = YY
+      setDefaultHost(TT) {
+        this.makeDefault = TT
       }
       current() {
         if (null === this.host) {
@@ -260,79 +260,79 @@ export const modules = {
         }
         return this.host
       }
-      openMob(YY) {
-        return new RY(this.current().openMob(YY))
+      openMob(TT) {
+        return new WT(this.current().openMob(TT))
       }
-      openPet(YY) {
-        return new RY(this.current().openPet(YY))
+      openPet(TT) {
+        return new WT(this.current().openPet(TT))
       }
-      openMobLineup(YY) {
-        return new RY(this.current().openMobLineup(YY))
+      openMobLineup(TT) {
+        return new WT(this.current().openMobLineup(TT))
       }
-      openCharacter(YY, rY) {
-        return new OY(this.current().openCharacter(YY, rY))
+      openCharacter(TT, oT) {
+        return new XT(this.current().openCharacter(TT, oT))
       }
     }
   },
-  38585: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => uY,
-      f: () => sY
+  38198: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => DT,
+      f: () => LT
     });
-    var FY = DY(183),
-      AY = DY(205),
-      IY = DY(1461),
-      RY = DY(2817),
-      OY = DY(1471),
-      gY = DY(35903),
-      aY = DY(668),
-      vY = DY(38553);
+    var iT = IT(159),
+      zT = IT(187),
+      kT = IT(1438),
+      WT = IT(2788),
+      XT = IT(1451),
+      BT = IT(35468),
+      FT = IT(648),
+      ST = IT(38159);
 
-    function uY(YY) {
-      (0, RY.e)("matchmake_failed", YY, FY.l[FY.l.SHADER_PACK])
+    function DT(TT) {
+      (0, WT.i)("matchmake_failed", TT, iT.j[iT.j.SHADER_PACK])
     }
-    async function sY(YY, rY) {
-      var DY;
-      const FY = null === (DY = await vY.shaderPackPage.preload()) || void 0 === DY ? void 0 : DY.listing,
-        RY = (0, gY.b)();
-      FY && null !== RY && await OY.e.reportShaderPackSession(YY, {
-        packId: FY.packId,
-        sourceHash: FY.sourceHash,
-        game: (0, IY.d)(rY, AY.w, "other"),
-        playSessionId: RY,
-        visitSessionId: (0, aY.d)()
+    async function LT(TT, oT) {
+      var IT;
+      const iT = null === (IT = await ST.shaderPackPage.preload()) || void 0 === IT ? void 0 : IT.listing,
+        WT = (0, BT.e)();
+      iT && null !== WT && await XT.e.reportShaderPackSession(TT, {
+        packId: iT.packId,
+        sourceHash: iT.sourceHash,
+        game: (0, kT.g)(oT, zT.B, "other"),
+        playSessionId: WT,
+        visitSessionId: (0, FT.e)()
       })
     }
   },
-  38405: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => OY
+  38010: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => XT
     });
-    var FY = DY(25),
-      AY = DY(1287),
-      IY = DY(3036);
-    const RY = "Reconnecting";
-    class OY {
-      constructor(YY) {
-        this.hooks = YY, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var iT = IT(16),
+      zT = IT(1253),
+      kT = IT(3022);
+    const WT = "Reconnecting";
+    class XT {
+      constructor(TT) {
+        this.hooks = TT, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = YY => {
-          YY.persisted || this.leave()
-        }, this.controller = new IY.e((rY => YY.reconnect(rY)), {
-          isSessionLive: () => !this.ended && YY.isLive(),
-          onPhaseChanged: YY => {
-            this.onPhaseChanged(YY)
+        }, this.onPageHide = TT => {
+          TT.persisted || this.leave()
+        }, this.controller = new kT.b((oT => TT.reconnect(oT)), {
+          isSessionLive: () => !this.ended && TT.isLive(),
+          onPhaseChanged: TT => {
+            this.onPhaseChanged(TT)
           },
-          onReconnected: rY => {
-            YY.onReconnected(rY)
+          onReconnected: oT => {
+            TT.onReconnected(oT)
           },
-          onGaveUp: rY => {
-            !this.ended && YY.isLive() && YY.onGaveUp(this.sessionBased, rY)
+          onGaveUp: oT => {
+            !this.ended && TT.isLive() && TT.onGaveUp(this.sessionBased, oT)
           }
         })
       }
-      onInitialInfo(YY, rY) {
-        this.graceMs = YY, this.sessionBased = rY
+      onInitialInfo(TT, oT) {
+        this.graceMs = TT, this.sessionBased = oT
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -340,8 +340,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(YY) {
-        this.ended || this.controller.onConnectionLost(YY, this.graceMs)
+      onConnectionLost(TT) {
+        this.ended || this.controller.onConnectionLost(TT, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -350,38 +350,38 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const YY = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          rY = this.controller.heldToken;
-        this.end(), YY && "" !== rY && this.hooks.releaseSeat(rY)
+        const TT = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          oT = this.controller.heldToken;
+        this.end(), TT && "" !== oT && this.hooks.releaseSeat(oT)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(YY) {
-        const rY = "frozen" === YY || "resuming" === YY;
-        rY !== this.stopped && (this.stopped = rY, this.hooks.freeze(rY));
-        const DY = "frozen" === YY || "resuming" === YY && this.frozen;
-        DY && !this.frozen ? (0, AY.k)(RY) : !DY && this.frozen && (0, AY.j)(RY), this.frozen = DY, this.setListening("connected" !== YY), FY.g.vo(IY.l, DY ? "frozen" : YY)
+      onPhaseChanged(TT) {
+        const oT = "frozen" === TT || "resuming" === TT;
+        oT !== this.stopped && (this.stopped = oT, this.hooks.freeze(oT));
+        const IT = "frozen" === TT || "resuming" === TT && this.frozen;
+        IT && !this.frozen ? (0, zT.o)(WT) : !IT && this.frozen && (0, zT.n)(WT), this.frozen = IT, this.setListening("connected" !== TT), iT.h.XM(kT.k, IT ? "frozen" : TT)
       }
-      setListening(YY) {
-        YY !== this.listening && (this.listening = YY, YY ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(TT) {
+        TT !== this.listening && (this.listening = TT, TT ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  38410: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY
+  38012: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT
     });
-    class FY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = YY, this.now = rY, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const YY = this.now(),
-            rY = YY - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = YY;
-          const DY = "visible" === document.visibilityState;
-          !DY || rY && this.wasVisible || (this.resumedAt = YY), this.wasVisible = DY, DY && YY - this.lastHeardAt > 12e3 && YY - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = rY(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class iT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = TT, this.now = oT, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const TT = this.now(),
+            oT = TT - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = TT;
+          const IT = "visible" === document.visibilityState;
+          !IT || oT && this.wasVisible || (this.resumedAt = TT), this.wasVisible = IT, IT && TT - this.lastHeardAt > 12e3 && TT - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = oT(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -391,28 +391,28 @@ export const modules = {
       }
     }
   },
-  8677: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  8680: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT
     });
-    var FY = DY(1113);
+    var iT = IT(1071);
 
-    function AY() {
-      var YY, rY;
-      return null !== (YY = null === (rY = screen.orientation) || void 0 === rY ? void 0 : rY.type) && void 0 !== YY ? YY : innerWidth > innerHeight ? "landscape" : "portrait"
+    function zT() {
+      var TT, oT;
+      return null !== (TT = null === (oT = screen.orientation) || void 0 === oT ? void 0 : oT.type) && void 0 !== TT ? TT : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const IY = new class {
+    const kT = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && AY() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && zT() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = AY(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, FY.jQ)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = zT(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, iT.JK)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -420,305 +420,305 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const YY of this.resizers) YY()
+            for (const TT of this.resizers) TT()
           }
         }), 1e3)
       }
-      heldSizer(YY) {
-        let rY = !1;
+      heldSizer(TT) {
+        let oT = !1;
         return () => {
-          if (rY && this.isHeld()) return null;
-          const DY = YY();
-          return rY ||= null !== DY, DY
+          if (oT && this.isHeld()) return null;
+          const IT = TT();
+          return oT ||= null !== IT, IT
         }
       }
-      onRelease(YY) {
-        return this.resizers.add(YY), () => {
-          this.resizers.delete(YY)
+      onRelease(TT) {
+        return this.resizers.add(TT), () => {
+          this.resizers.delete(TT)
         }
       }
     }
   },
-  38572: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY
+  38188: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT
     });
-    let FY = !1;
-    async function AY(YY, rY) {
-      if (!FY) {
-        FY = !0;
+    let iT = !1;
+    async function zT(TT, oT) {
+      if (!iT) {
+        iT = !0;
         try {
           const [{
-            reloadBloxd: FY
+            reloadBloxd: iT
           }, {
-            NotificationProvider: AY
-          }] = await Promise.all([Promise.resolve().then((() => DY(1699))), Promise.resolve().then((() => DY(1346)))]);
-          if (!YY || !0 === await AY.showPromptPopup({
+            NotificationProvider: zT
+          }] = await Promise.all([Promise.resolve().then((() => IT(1665))), Promise.resolve().then((() => IT(1325)))]);
+          if (!TT || !0 === await zT.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void FY(rY)
-        } catch (AY) {
-          console.error("Leaving the replay failed", AY)
+            }).getResult()) return void iT(oT)
+        } catch (zT) {
+          console.error("Leaving the replay failed", zT)
         }
-        FY = !1
+        iT = !1
       }
     }
   },
-  38420: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => aY,
-      g: () => vY
+  38029: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => FT,
+      e: () => ST
     });
-    var FY = DY(1683),
-      AY = DY(213),
-      IY = DY(1665),
-      RY = DY(1735),
-      OY = DY(1222),
-      gY = DY(1159);
-    async function aY(YY, rY) {
-      return function(YY) {
-        return "object" === typeof YY && null !== YY && YY.code === AY.c.VpnIp.code
-      }(rY) && function(YY) {
-        return IY.e.supports("appCheck") && YY.isLoggedIn() && !YY.hasTriedAppAttestation()
-      }(YY) && await async function(YY) {
+    var iT = IT(1651),
+      zT = IT(193),
+      kT = IT(1635),
+      WT = IT(1688),
+      XT = IT(1183),
+      BT = IT(1117);
+    async function FT(TT, oT) {
+      return function(TT) {
+        return "object" === typeof TT && null !== TT && TT.code === zT.b.VpnIp.code
+      }(oT) && function(TT) {
+        return kT.c.supports("appCheck") && TT.isLoggedIn() && !TT.hasTriedAppAttestation()
+      }(TT) && await async function(TT) {
         try {
           const {
-            token: rY
-          } = await (0, RY.c)(), {
-            "3PSIDMCPP": DY
-          } = await (0, gY.postJsonWithMetricsCookiesAndJsonResponse)(`${OY.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: rY
+            token: oT
+          } = await (0, WT.c)(), {
+            "3PSIDMCPP": IT
+          } = await (0, BT.postJsonWithMetricsCookiesAndJsonResponse)(`${XT.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: oT
           }, {
             retries: 0
-          }, YY.getMetricsCookies());
-          return YY.setAppAttestedAuthJwt(DY), !0
-        } catch (rY) {
-          return rY instanceof FY.e && "failed" === rY.code ? (console.warn("The app couldn't get an App Check token:", rY), YY.markAppAttestationTried()) : console.error("Failed to attest the app:", rY), !1
+          }, TT.getMetricsCookies());
+          return TT.setAppAttestedAuthJwt(IT), !0
+        } catch (oT) {
+          return oT instanceof iT.e && "failed" === oT.code ? (console.warn("The app couldn't get an App Check token:", oT), TT.markAppAttestationTried()) : console.error("Failed to attest the app:", oT), !1
         }
-      }(YY)
+      }(TT)
     }
-    async function vY(YY, rY) {
+    async function ST(TT, oT) {
       try {
-        return await rY()
-      } catch (DY) {
-        if (!await aY(YY, DY)) throw DY
+        return await oT()
+      } catch (IT) {
+        if (!await FT(TT, IT)) throw IT
       }
-      return rY()
+      return oT()
     }
   },
-  40147: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => gY
+  39829: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => BT
     });
-    var FY = DY(1716);
-    const AY = 33177600,
-      IY = 3e4;
-    let RY = !1;
+    var iT = IT(1679);
+    const zT = 33177600,
+      kT = 3e4;
+    let WT = !1;
 
-    function OY(YY, rY, DY) {
-      if (!YY.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (RY) return Promise.reject(new Error("A screenshot is already being taken"));
-      RY = !0;
-      const FY = function(YY, rY, DY) {
-        const FY = Math.max(1, YY),
-          IY = Math.max(1, rY),
-          RY = Math.min(1, DY / Math.max(FY, IY), Math.sqrt(AY / (FY * IY)));
+    function XT(TT, oT, IT) {
+      if (!TT.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (WT) return Promise.reject(new Error("A screenshot is already being taken"));
+      WT = !0;
+      const iT = function(TT, oT, IT) {
+        const iT = Math.max(1, TT),
+          kT = Math.max(1, oT),
+          WT = Math.min(1, IT / Math.max(iT, kT), Math.sqrt(zT / (iT * kT)));
         return {
-          width: Math.max(1, Math.floor(FY * RY)),
-          height: Math.max(1, Math.floor(IY * RY))
+          width: Math.max(1, Math.floor(iT * WT)),
+          height: Math.max(1, Math.floor(kT * WT))
         }
-      }(rY, DY, YY.maxTextureSize);
-      return YY.resize(FY.width, FY.height), new Promise(((rY, DY) => {
-        let FY, AY = 2,
-          OY = null;
-        const gY = () => {
-          var rY;
-          RY = !1, null === (rY = OY) || void 0 === rY || rY(), clearTimeout(FY), YY.restoreSize()
+      }(oT, IT, TT.maxTextureSize);
+      return TT.resize(iT.width, iT.height), new Promise(((oT, IT) => {
+        let iT, zT = 2,
+          XT = null;
+        const BT = () => {
+          var oT;
+          WT = !1, null === (oT = XT) || void 0 === oT || oT(), clearTimeout(iT), TT.restoreSize()
         };
-        FY = setTimeout((() => {
-          gY(), DY(new Error("No frame was drawn to capture"))
-        }), IY), OY = YY.onFrameDrawn((() => {
-          if (AY--, AY > 0) return;
+        iT = setTimeout((() => {
+          BT(), IT(new Error("No frame was drawn to capture"))
+        }), kT), XT = TT.onFrameDrawn((() => {
+          if (zT--, zT > 0) return;
           const {
-            canvas: FY
-          } = YY, IY = {
-            width: FY.width,
-            height: FY.height
+            canvas: iT
+          } = TT, kT = {
+            width: iT.width,
+            height: iT.height
           };
           try {
-            FY.toBlob((YY => {
-              YY ? rY({
-                blob: YY,
-                ...IY
-              }) : DY(new Error("The canvas gave no image"))
+            iT.toBlob((TT => {
+              TT ? oT({
+                blob: TT,
+                ...kT
+              }) : IT(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (RY) {
-            DY(RY)
+          } catch (WT) {
+            IT(WT)
           } finally {
-            gY()
+            BT()
           }
         }))
       }))
     }
-    async function gY(YY, rY, DY) {
+    async function BT(TT, oT, IT) {
       try {
-        const AY = await OY(YY, rY, DY);
-        (0, FY.d)(AY.blob, `bloxd-screenshot-${AY.width}x${AY.height}-${Date.now()}.png`)
-      } catch (AY) {
-        console.error("Error taking screenshot:", AY)
+        const zT = await XT(TT, oT, IT);
+        (0, iT.d)(zT.blob, `bloxd-screenshot-${zT.width}x${zT.height}-${Date.now()}.png`)
+      } catch (zT) {
+        console.error("Error taking screenshot:", zT)
       }
     }
   },
-  38418: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => uY,
-      f: () => aY
+  38020: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => DT,
+      g: () => FT
     });
-    var FY = DY(213),
-      AY = DY(4227),
-      IY = DY(3258);
-    const RY = [250, 500, 1e3, 2e3, 1250],
-      OY = 406;
+    var iT = IT(193),
+      zT = IT(4161),
+      kT = IT(3210);
+    const WT = [250, 500, 1e3, 2e3, 1250],
+      XT = 406;
 
-    function gY(YY) {
-      if ("object" !== typeof YY || null === YY) return !1;
+    function BT(TT) {
+      if ("object" !== typeof TT || null === TT) return !1;
       const {
-        code: rY,
-        message: DY
-      } = YY, AY = FY.c.duplicateLobbyNameError;
-      return (rY === AY.code || rY === OY) && (DY === AY.text || DY === AY.text + FY.h)
+        code: oT,
+        message: IT
+      } = TT, zT = iT.b.duplicateLobbyNameError;
+      return (oT === zT.code || oT === XT) && (IT === zT.text || IT === zT.text + iT.k)
     }
-    async function aY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AY.c;
-      for (let AY = 0;; AY++) {
-        let OY;
-        (0, IY.q)(rY);
+    async function FT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zT.c;
+      for (let zT = 0;; zT++) {
+        let XT;
+        (0, kT.o)(oT);
         try {
-          return await YY()
-        } catch (FY) {
-          if (OY = RY[AY], void 0 === OY || !gY(FY)) throw FY
+          return await TT()
+        } catch (iT) {
+          if (XT = WT[zT], void 0 === XT || !BT(iT)) throw iT
         }
-        await DY(OY, rY)
+        await IT(XT, oT)
       }
     }
-    const vY = new Set([FY.c.duplicateLobbyNameError.code, FY.c.lobbyCantBeCreated.code, FY.c.roomDisposedEarlyError.code, FY.c.roomDisposedLateError.code, FY.c.serverRoomLimitReached.code]);
+    const ST = new Set([iT.b.duplicateLobbyNameError.code, iT.b.lobbyCantBeCreated.code, iT.b.roomDisposedEarlyError.code, iT.b.roomDisposedLateError.code, iT.b.serverRoomLimitReached.code]);
 
-    function uY(YY) {
-      if (gY(YY)) return !0;
-      const rY = "object" === typeof YY && null !== YY ? YY.code : void 0;
-      return "number" === typeof rY && vY.has(rY)
+    function DT(TT) {
+      if (BT(TT)) return !0;
+      const oT = "object" === typeof TT && null !== TT ? TT.code : void 0;
+      return "number" === typeof oT && ST.has(oT)
     }
   },
-  38501: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => RY
+  38112: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT
     });
-    var FY = DY(332),
-      AY = DY(144),
-      IY = DY(40);
+    var iT = IT(306),
+      zT = IT(139),
+      kT = IT(26);
 
-    function RY() {
-      IY.m.setItem(FY.Ib, IY.m.getItem(FY.Ib) + 1), (0, AY.h)() && IY.m.setItem(FY.Hb, IY.m.getItem(FY.Hb) + 1)
+    function WT() {
+      kT.e.setItem(iT.Ib, kT.e.getItem(iT.Ib) + 1), (0, zT.j)() && kT.e.setItem(iT.Hb, kT.e.getItem(iT.Hb) + 1)
     }
   },
-  35894: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => EY,
-      d: () => mY
+  35465: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => AT,
+      i: () => gT
     });
-    var FY = DY(1057),
-      AY = DY(631),
-      IY = DY(341),
-      RY = DY(1064),
-      OY = DY(649),
-      gY = DY(680),
-      aY = DY(4070),
-      vY = DY(99),
-      uY = DY(144),
-      sY = DY(1699),
-      iY = DY(117),
-      yY = DY(35903),
-      QY = DY(40),
-      oY = DY(668),
-      WY = DY(35907);
+    var iT = IT(1007),
+      zT = IT(623),
+      kT = IT(314),
+      WT = IT(1014),
+      XT = IT(637),
+      BT = IT(661),
+      FT = IT(4041),
+      ST = IT(90),
+      DT = IT(139),
+      LT = IT(1665),
+      xT = IT(112),
+      cT = IT(35468),
+      KT = IT(26),
+      MT = IT(648),
+      rT = IT(35475);
 
-    function EY() {
-      var YY, rY;
-      return [...null !== (YY = navigator.languages) && void 0 !== YY ? YY : [null !== (rY = navigator.language) && void 0 !== rY ? rY : "none"], "EN-gb"]
+    function AT() {
+      var TT, oT;
+      return [...null !== (TT = navigator.languages) && void 0 !== TT ? TT : [null !== (oT = navigator.language) && void 0 !== oT ? oT : "none"], "EN-gb"]
     }
 
-    function mY(YY, rY, DY, mY, VY) {
-      const SY = (0, FY.l)(rY) ? (0, FY.r)(rY) : null,
-        lY = {
-          cookies: (0, sY.getAllCookiesForGameNameWithVariation)(rY),
-          isMobile: (0, vY.isMobile)(),
-          isUsingCustomGameTexturePack: null !== SY && VY(SY),
+    function gT(TT, oT, IT, gT, hT) {
+      const wT = (0, iT.m)(oT) ? (0, iT.p)(oT) : null,
+        mT = {
+          cookies: (0, LT.getAllCookiesForGameNameWithVariation)(oT),
+          isMobile: (0, ST.isMobile)(),
+          isUsingCustomGameTexturePack: null !== wT && hT(wT),
           generalCookies: {
-            joinDiscord: !!QY.m.getItem("DiscordPressed"),
-            newGo: aY.d,
-            ...YY.getMetricsCookies(),
-            trafficCode: mY,
-            compliance: vY.compliance
+            joinDiscord: !!KT.e.getItem("DiscordPressed"),
+            newGo: FT.b,
+            ...TT.getMetricsCookies(),
+            trafficCode: gT,
+            compliance: ST.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, vY.getBrowserName)(),
-            version: (0, vY.getBrowserVersion)(),
+            name: (0, ST.getBrowserName)(),
+            version: (0, ST.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, vY.getPlatformType)(),
-            deviceType: (0, iY.d)()
+            platformType: (0, ST.getPlatformType)(),
+            deviceType: (0, xT.b)()
           },
-          isLoggedIn: YY.isLoggedIn(),
-          lobbyName: DY,
-          languages: EY(),
-          version: AY.d,
-          siteUsed: uY.s,
-          subsiteUsed: uY.C,
-          playSessionId: (0, yY.d)(rY),
-          visitSessionId: (0, oY.d)(),
-          clientReason: OY.i.reason,
-          budgetBasis: (0, WY.e)(),
-          ...null !== gY.p && {
-            diagClaim: gY.p.claimId
+          isLoggedIn: TT.isLoggedIn(),
+          lobbyName: IT,
+          languages: AT(),
+          version: zT.c,
+          siteUsed: DT.p,
+          subsiteUsed: DT.w,
+          playSessionId: (0, cT.j)(oT),
+          visitSessionId: (0, MT.e)(),
+          clientReason: XT.n.reason,
+          budgetBasis: (0, rT.h)(),
+          ...null !== BT.t && {
+            diagClaim: BT.t.claimId
           }
         };
-      return null !== SY && (0, IY.Cc)(SY) ? (lY.lobbyName = (0, FY.i)(SY, (0, FY.p)(rY), DY), {
-        roomName: `classic_${RY.f}`,
-        joinOptions: lY
+      return null !== wT && (0, kT.rc)(wT) ? (mT.lobbyName = (0, iT.j)(wT, (0, iT.n)(oT), IT), {
+        roomName: `classic_${WT.d}`,
+        joinOptions: mT
       }) : {
-        roomName: rY,
-        joinOptions: lY
+        roomName: oT,
+        joinOptions: mT
       }
     }
   },
-  39759: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => OY
+  39436: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT
     });
-    var FY = DY(38927);
+    var iT = IT(38557);
 
-    function AY(YY) {
+    function zT(TT) {
       return {
-        current: () => YY,
+        current: () => TT,
         watch: () => () => {}
       }
     }
 
-    function IY() {}
-    const RY = Object.freeze([0, 0, 0]),
-      OY = {
+    function kT() {}
+    const WT = Object.freeze([0, 0, 0]),
+      XT = {
         states: {
-          health: AY({
+          health: zT({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: AY({
+          inventory: zT({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -726,63 +726,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: AY({
+          hotbar: zT({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: AY({
+          stationItems: zT({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: AY({}),
-          creativeVisibility: AY({
+          itemInfo: zT({}),
+          creativeVisibility: zT({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: AY(null),
-          heldItemAim: AY({
+          aura: zT(null),
+          heldItemAim: zT({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: AY(!1),
-          gliderBoostFuel: AY(0),
-          flight: AY({
+          crouching: zT(!1),
+          gliderBoostFuel: zT(0),
+          flight: zT({
             canFly: !1,
             flying: !1
           }),
-          crafting: AY({
+          crafting: zT({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: AY({
+          players: zT({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: AY({}),
-          fullInventory: AY(!1),
-          crosshairTarget: AY({
+          lobbyLeaderboardRows: zT({}),
+          fullInventory: zT(!1),
+          crosshairTarget: zT({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: AY(!0),
-          freeCamera: AY({
+          localPlayerAlive: zT(!0),
+          freeCamera: zT({
             allowed: !1,
             movesFly: !1
           }),
-          replay: AY(null),
-          replayEdits: AY(null),
-          replayRecorder: AY({
+          replay: zT(null),
+          replayEdits: zT(null),
+          replayRecorder: zT({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: AY(!1)
+          replayVideoExporting: zT(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -844,86 +844,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: IY,
+          selectHotbarSlot: kT,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: IY,
-          setInventoryOpen: IY,
-          changeIronChestPasskey: IY,
-          dragReplayCamera: IY,
-          applyTemporaryThirdPerson: IY,
-          holdEmoteWheel: IY,
-          recordFlyingMiddleText: IY,
-          focusCrafting: IY,
+          closeChest: kT,
+          setInventoryOpen: kT,
+          changeIronChestPasskey: kT,
+          dragReplayCamera: kT,
+          applyTemporaryThirdPerson: kT,
+          holdEmoteWheel: kT,
+          recordFlyingMiddleText: kT,
+          focusCrafting: kT,
           craftRecipe: () => ({
-            Ev: 0,
-            da: null,
+            qS: 0,
+            XS: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: IY,
-          setShopOpen: IY,
-          buyShopItem: IY,
-          sendChatMessage: IY,
-          ignorePlayer: IY,
-          reportPlayer: IY,
-          reportWorldCodeChat: IY,
-          requestDiscordReportKey: IY,
-          reportLobbyOrGame: IY,
-          playEmote: IY,
-          updateMyCosmetic: IY,
-          writeOnBoard: IY,
-          writeBook: IY,
-          writeNameTag: IY,
-          setCustomLobbyBlock: IY,
-          openIronChest: IY,
-          sendCodeCollab: IY,
-          clickCodeBlock: IY,
-          bindCustomButtonKeys: IY,
-          pressCustomButton: IY,
-          moveReplayFreecam: IY,
-          holdReplayFreecamVertical: IY,
-          respawn: IY,
-          wakeUp: IY,
-          requestLeaderboard: IY,
-          completeTask: IY,
-          setServerCookie: IY,
-          answerUiRequest: IY,
-          chooseRewardedAd: IY,
-          setCameraZoom: IY,
-          setFreeCameraMovesFly: IY,
-          setBlockHighlight: IY,
-          setCrosshairInteractPrompt: IY,
-          setLookSensitivity: IY,
-          replayAction: IY,
-          setReplayPlaying: IY,
-          seekReplay: IY,
-          setReplayCameraMode: IY,
-          syncReplayCameraMode: IY,
-          setReplayCameraKeyframe: IY,
-          moveReplayCameraKeyframe: IY,
-          deleteReplayCameraKeyframes: IY,
-          setReplayPlaybackMark: IY,
+          enchantItem: kT,
+          setShopOpen: kT,
+          buyShopItem: kT,
+          sendChatMessage: kT,
+          ignorePlayer: kT,
+          reportPlayer: kT,
+          reportWorldCodeChat: kT,
+          requestDiscordReportKey: kT,
+          reportLobbyOrGame: kT,
+          playEmote: kT,
+          updateMyCosmetic: kT,
+          writeOnBoard: kT,
+          writeBook: kT,
+          writeNameTag: kT,
+          setCustomLobbyBlock: kT,
+          openIronChest: kT,
+          sendCodeCollab: kT,
+          clickCodeBlock: kT,
+          bindCustomButtonKeys: kT,
+          pressCustomButton: kT,
+          moveReplayFreecam: kT,
+          holdReplayFreecamVertical: kT,
+          respawn: kT,
+          wakeUp: kT,
+          requestLeaderboard: kT,
+          completeTask: kT,
+          setServerCookie: kT,
+          answerUiRequest: kT,
+          chooseRewardedAd: kT,
+          setCameraZoom: kT,
+          setFreeCameraMovesFly: kT,
+          setBlockHighlight: kT,
+          setCrosshairInteractPrompt: kT,
+          setLookSensitivity: kT,
+          replayAction: kT,
+          setReplayPlaying: kT,
+          seekReplay: kT,
+          setReplayCameraMode: kT,
+          syncReplayCameraMode: kT,
+          setReplayCameraKeyframe: kT,
+          moveReplayCameraKeyframe: kT,
+          deleteReplayCameraKeyframes: kT,
+          setReplayPlaybackMark: kT,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: IY,
-          exportReplayVideo: IY,
-          toggleRecording: IY,
-          saveClip: IY,
-          setRecorderPrefs: IY,
-          setReplayViewerOpen: IY
+          holdReplayForShaderPackFailure: kT,
+          exportReplayVideo: kT,
+          toggleRecording: kT,
+          saveClip: kT,
+          setRecorderPrefs: kT,
+          setReplayViewerOpen: kT
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => FY.b,
-          worldCodeAiGameState: () => FY.e
+          worldCodeAiChunk: () => iT.e,
+          worldCodeAiGameState: () => iT.f
         },
         lookups: {
-          localPos: () => RY,
+          localPos: () => WT,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -941,148 +941,148 @@ export const modules = {
         }
       }
   },
-  35907: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => lY,
-      e: () => SY,
-      h: () => VY
+  35475: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => mT,
+      h: () => wT,
+      j: () => hT
     });
-    var FY = DY(213),
-      AY = DY(99),
-      IY = DY(2575),
-      RY = DY(3942),
-      OY = DY(656),
-      gY = DY(35913);
-    const aY = 1048576,
-      vY = 1024 * aY,
-      uY = 400 * aY,
-      sY = 147456,
-      iY = .5,
-      yY = 1.5 * vY,
-      QY = 768 * aY;
+    var iT = IT(193),
+      zT = IT(90),
+      kT = IT(2552),
+      WT = IT(3916),
+      XT = IT(641),
+      BT = IT(35479);
+    const FT = 1048576,
+      ST = 1024 * FT,
+      DT = 400 * FT,
+      LT = 147456,
+      xT = .5,
+      cT = 1.5 * ST,
+      KT = 768 * FT;
 
-    function oY(YY) {
-      return uY + YY * sY
+    function MT(TT) {
+      return DT + TT * LT
     }
 
-    function WY(YY, rY, DY) {
-      var AY, RY;
+    function rT(TT, oT, IT) {
+      var zT, WT;
       let {
-        footprintBytes: OY,
-        basis: aY,
-        namesLimit: WY
-      } = function(YY) {
+        footprintBytes: XT,
+        basis: FT,
+        namesLimit: rT
+      } = function(TT) {
         const {
-          os: rY,
-          deviceMemory: DY
-        } = YY;
-        if ("ios" === rY) switch ((0, IY.e)(YY)) {
+          os: oT,
+          deviceMemory: IT
+        } = TT;
+        if ("ios" === oT) switch ((0, kT.i)(TT)) {
           case "ipad_m":
             return {
-              footprintBytes: oY(gY.b), basis: "ipad-m", namesLimit: !1
+              footprintBytes: MT(BT.c), basis: "ipad-m", namesLimit: !1
             };
           case "ipad":
             return {
-              footprintBytes: QY, basis: "ipad", namesLimit: !0
+              footprintBytes: KT, basis: "ipad", namesLimit: !0
             };
           case "iphone_6gb":
             return {
-              footprintBytes: yY, basis: "iphone-6gb", namesLimit: !0
+              footprintBytes: cT, basis: "iphone-6gb", namesLimit: !0
             };
           case "iphone":
             return {
-              footprintBytes: QY, basis: "iphone", namesLimit: !0
+              footprintBytes: KT, basis: "iphone", namesLimit: !0
             }
         }
-        return "number" === typeof DY && Number.isFinite(DY) && DY > 0 ? {
-          footprintBytes: DY * vY * iY,
-          basis: `memory-${DY}`,
+        return "number" === typeof IT && Number.isFinite(IT) && IT > 0 ? {
+          footprintBytes: IT * ST * xT,
+          basis: `memory-${IT}`,
           namesLimit: !0
-        } : "android" === rY ? {
-          footprintBytes: QY,
+        } : "android" === oT ? {
+          footprintBytes: KT,
           basis: "android",
           namesLimit: !0
         } : {
-          footprintBytes: oY(gY.h),
+          footprintBytes: MT(BT.g),
           basis: "unreported",
           namesLimit: !1
         }
-      }(YY);
-      if (DY) {
-        const YY = Math.min(OY, oY(gY.b));
-        OY = uY + Math.max(0, YY - uY) / 2, aY += "+killed", WY = !0
+      }(TT);
+      if (IT) {
+        const TT = Math.min(XT, MT(BT.c));
+        XT = DT + Math.max(0, TT - DT) / 2, FT += "+killed", rT = !0
       }
-      null !== rY && oY(rY) < OY && (OY = oY(rY), aY += "+learned", WY = !0);
-      const EY = function(YY) {
-          const rY = Math.floor((YY - uY) / sY);
-          return Math.min(gY.b, Math.max(gY.f, rY))
-        }(OY),
-        mY = (0, gY.n)(EY);
+      null !== oT && MT(oT) < XT && (XT = MT(oT), FT += "+learned", rT = !0);
+      const AT = function(TT) {
+          const oT = Math.floor((TT - DT) / LT);
+          return Math.min(BT.c, Math.max(BT.f, oT))
+        }(XT),
+        gT = (0, BT.i)(AT);
       return {
-        footprintBytes: OY,
-        shedFootprintBytes: WY ? Math.max(OY, oY(EY)) : null,
-        chunkCap: EY,
-        maxHorizDistance: null !== (AY = null === mY || void 0 === mY ? void 0 : mY.horizontal) && void 0 !== AY ? AY : FY.d.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (RY = null === mY || void 0 === mY ? void 0 : mY.vertical) && void 0 !== RY ? RY : FY.d.maxChunkVertAddDistance,
-        basis: aY
+        footprintBytes: XT,
+        shedFootprintBytes: rT ? Math.max(XT, MT(AT)) : null,
+        chunkCap: AT,
+        maxHorizDistance: null !== (zT = null === gT || void 0 === gT ? void 0 : gT.horizontal) && void 0 !== zT ? zT : iT.c.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (WT = null === gT || void 0 === gT ? void 0 : gT.vertical) && void 0 !== WT ? WT : iT.c.maxChunkVertAddDistance,
+        basis: FT
       }
     }
-    let EY = null;
+    let AT = null;
 
-    function mY() {
-      return WY({
-        os: (0, AY.getOperatingSystem)(),
+    function gT() {
+      return rT({
+        os: (0, zT.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, IY.h)()
-      }, (0, RY.f)(), (0, OY.A)("wasm").length > 0)
+        ...(0, kT.l)()
+      }, (0, WT.g)(), (0, XT.F)("wasm").length > 0)
     }
 
-    function VY() {
-      return EY ??= mY(), EY
+    function hT() {
+      return AT ??= gT(), AT
     }
 
-    function SY() {
-      var YY;
-      return (null !== (YY = EY) && void 0 !== YY ? YY : mY()).basis
+    function wT() {
+      var TT;
+      return (null !== (TT = AT) && void 0 !== TT ? TT : gT()).basis
     }
 
-    function lY(YY, rY) {
-      return YY.setChunkCap(rY.chunkCap)
+    function mT(TT, oT) {
+      return TT.setChunkCap(oT.chunkCap)
     }
   },
-  40145: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => RY,
-      f: () => IY
+  39821: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => WT,
+      c: () => kT
     });
-    var FY = DY(2755),
-      AY = DY(1057);
+    var iT = IT(2715),
+      zT = IT(1007);
 
-    function IY(YY, rY) {
-      return null !== YY.gameSource && (0, FY.l)(rY, YY.gameSource)
+    function kT(TT, oT) {
+      return null !== TT.gameSource && (0, iT.k)(oT, TT.gameSource)
     }
 
-    function RY(YY, rY) {
-      if (null === YY.gameSource || "" === YY.gameSource || null === rY) return !0;
-      const DY = (0, AY.l)(rY) ? (0, AY.r)(rY) : null;
-      return null !== DY && IY(YY, DY)
+    function WT(TT, oT) {
+      if (null === TT.gameSource || "" === TT.gameSource || null === oT) return !0;
+      const IT = (0, zT.m)(oT) ? (0, zT.p)(oT) : null;
+      return null !== IT && kT(TT, IT)
     }
   },
-  40129: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => IY,
-      d: () => QY,
-      f: () => aY,
-      i: () => vY,
-      j: () => yY
+  39803: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      f: () => KT,
+      g: () => FT,
+      k: () => ST,
+      n: () => cT
     });
-    var FY = DY(40082),
-      AY = DY(40132);
-    const IY = 396,
-      RY = 1,
-      OY = 2,
-      gY = 3,
-      aY = {
+    var iT = IT(39762),
+      zT = IT(39807);
+    const kT = 396,
+      WT = 1,
+      XT = 2,
+      BT = 3,
+      FT = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -1092,37 +1092,37 @@ export const modules = {
         AttachmentImage: 7,
         BlockImage: 8
       },
-      vY = {
+      ST = {
         File: 0,
         Item: 1
       },
-      uY = 0,
-      sY = 1,
-      iY = 2;
+      DT = 0,
+      LT = 1,
+      xT = 2;
 
-    function yY(YY) {
-      const rY = (0, FY.n)();
-      rY.catch((() => {}));
-      let AY = null;
+    function cT(TT) {
+      const oT = (0, iT.p)();
+      oT.catch((() => {}));
+      let zT = null;
       return {
-        glbUrl: YY,
-        lifeformAtlasUrl: async YY => (await rY).lifeformAtlasUrl(YY),
-        armourAtlasUrl: async () => (await DY.e(196).then((() => DY(33702)))).armourAtlasUrl,
-        capeUrl: async YY => (await rY).capeUrl(YY),
-        attachmentImageUrl: async YY => (await rY).attachmentImageUrl(YY),
-        blockImageUrl: async YY => (await rY).blockImageUrl(YY),
-        groupAtlasUrl: async YY => (await rY).groupAtlasUrl(YY),
-        particleTextureUrl: async YY => (await rY).particleTextureUrl(YY),
-        particleItemUrl: async YY => (AY ??= DY.e(38).then((() => DY(50679))).catch((YY => {
-          throw AY = null, YY
-        })), (await AY).particleItemUrl(YY))
+        glbUrl: TT,
+        lifeformAtlasUrl: async TT => (await oT).lifeformAtlasUrl(TT),
+        armourAtlasUrl: async () => (await IT.e(196).then((() => IT(33287)))).armourAtlasUrl,
+        capeUrl: async TT => (await oT).capeUrl(TT),
+        attachmentImageUrl: async TT => (await oT).attachmentImageUrl(TT),
+        blockImageUrl: async TT => (await oT).blockImageUrl(TT),
+        groupAtlasUrl: async TT => (await oT).groupAtlasUrl(TT),
+        particleTextureUrl: async TT => (await oT).particleTextureUrl(TT),
+        particleItemUrl: async TT => (zT ??= IT.e(38).then((() => IT(50372))).catch((TT => {
+          throw zT = null, TT
+        })), (await zT).particleItemUrl(TT))
       }
     }
-    class QY {
-      constructor(YY, rY) {
-        var DY, IY, RY;
-        let OY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = YY, this.onFailure = rY, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.Ky = !1, this.load = null !== (DY = OY.load) && void 0 !== DY ? DY : (YY, rY) => (0, AY.j)(YY, OY.fetchImage, rY), this.release = null !== (IY = OY.release) && void 0 !== IY ? IY : AY.o, this.fetchFile = null !== (RY = OY.fetchFile) && void 0 !== RY ? RY : YY => (0, FY.j)(YY)
+    class KT {
+      constructor(TT, oT) {
+        var IT, kT, WT;
+        let XT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = TT, this.onFailure = oT, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.Ec = !1, this.load = null !== (IT = XT.load) && void 0 !== IT ? IT : (TT, oT) => (0, zT.f)(TT, XT.fetchImage, oT), this.release = null !== (kT = XT.release) && void 0 !== kT ? kT : zT.k, this.fetchFile = null !== (WT = XT.fetchFile) && void 0 !== WT ? WT : TT => (0, iT.j)(TT)
       }
       get waiting() {
         return this.ready.length
@@ -1130,236 +1130,236 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(YY, rY) {
-        this.glbWrittenImages.set(YY, lY(rY))
+      glbWritten(TT, oT) {
+        this.glbWrittenImages.set(TT, mT(oT))
       }
-      glbTaken(YY, rY) {
-        const DY = this.glbWrittenImages.get(YY);
-        this.glbWrittenImages.delete(YY), rY && this.setGlbImages(YY, void 0 !== DY && DY.length > 0 ? DY : void 0)
+      glbTaken(TT, oT) {
+        const IT = this.glbWrittenImages.get(TT);
+        this.glbWrittenImages.delete(TT), oT && this.setGlbImages(TT, void 0 !== IT && IT.length > 0 ? IT : void 0)
       }
-      setGlbImages(YY, rY) {
-        var DY;
-        this.glbTakenCount.set(YY, (null !== (DY = this.glbTakenCount.get(YY)) && void 0 !== DY ? DY : 0) + 1), void 0 === rY ? this.glbImages.delete(YY) : this.glbImages.set(YY, rY);
-        const FY = [];
+      setGlbImages(TT, oT) {
+        var IT;
+        this.glbTakenCount.set(TT, (null !== (IT = this.glbTakenCount.get(TT)) && void 0 !== IT ? IT : 0) + 1), void 0 === oT ? this.glbImages.delete(TT) : this.glbImages.set(TT, oT);
+        const iT = [];
         for (const {
-            key: AY
+            key: zT
           }
-          of this.loading.values()) AY.kind === aY.Glb && AY.word === YY && FY.push(AY);
-        for (let AY = this.ready.length - 1; AY >= 0; AY--) {
+          of this.loading.values()) zT.kind === FT.Glb && zT.word === TT && iT.push(zT);
+        for (let zT = this.ready.length - 1; zT >= 0; zT--) {
           const {
-            key: rY,
-            id: DY
-          } = this.ready[AY];
-          rY.kind === aY.Glb && rY.word === YY && (this.ready.splice(AY, 1), null !== DY && (this.answered.delete(DY), this.release(DY)), FY.push(rY))
+            key: oT,
+            id: IT
+          } = this.ready[zT];
+          oT.kind === FT.Glb && oT.word === TT && (this.ready.splice(zT, 1), null !== IT && (this.answered.delete(IT), this.release(IT)), iT.push(oT))
         }
-        this.loadAgain(FY)
+        this.loadAgain(iT)
       }
-      onEvent(YY) {
-        if (this.Ky) return;
-        const rY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
-        for (let DY = 0; DY + 8 <= YY.byteLength; DY += 8) {
-          const YY = rY.getUint8(DY),
-            FY = rY.getUint32(DY + 4, !0);
-          if (YY === gY) {
-            this.answered.delete(FY), this.release(FY);
+      onEvent(TT) {
+        if (this.Ec) return;
+        const oT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+        for (let IT = 0; IT + 8 <= TT.byteLength; IT += 8) {
+          const TT = oT.getUint8(IT),
+            iT = oT.getUint32(IT + 4, !0);
+          if (TT === BT) {
+            this.answered.delete(iT), this.release(iT);
             continue
           }
-          const AY = {
-            kind: rY.getUint8(DY + 1),
-            index: rY.getUint8(DY + 2),
-            word: FY
+          const zT = {
+            kind: oT.getUint8(IT + 1),
+            index: oT.getUint8(IT + 2),
+            word: iT
           };
-          YY === RY ? this.want(AY) : YY === OY && this.loading.delete(oY(AY))
+          TT === WT ? this.want(zT) : TT === XT && this.loading.delete(MT(zT))
         }
       }
-      reload(YY, rY) {
-        const DY = DY => YY.includes(DY.kind) && (void 0 === rY || rY(DY)),
-          FY = new Map;
-        for (const AY of this.answered.values()) DY(AY) && FY.set(oY(AY), AY);
-        for (const [AY, {
-            key: IY
-          }] of this.loading) DY(IY) && FY.set(AY, IY);
-        this.loadAgain(FY.values())
+      reload(TT, oT) {
+        const IT = IT => TT.includes(IT.kind) && (void 0 === oT || oT(IT)),
+          iT = new Map;
+        for (const zT of this.answered.values()) IT(zT) && iT.set(MT(zT), zT);
+        for (const [zT, {
+            key: kT
+          }] of this.loading) IT(kT) && iT.set(zT, kT);
+        this.loadAgain(iT.values())
       }
-      loadAgain(YY) {
-        for (const rY of YY) this.loading.delete(oY(rY)), this.want(rY)
+      loadAgain(TT) {
+        for (const oT of TT) this.loading.delete(MT(oT)), this.want(oT)
       }
-      drain(YY) {
-        if (null !== YY)
+      drain(TT) {
+        if (null !== TT)
           for (; this.ready.length > 0;) {
-            if (!YY(IY, 0, this.ready[0].record)) return;
+            if (!TT(kT, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.Ky = !0, this.loading.clear(), this.ready.length = 0;
-        for (const YY of this.answered.keys()) this.release(YY);
+        this.Ec = !0, this.loading.clear(), this.ready.length = 0;
+        for (const TT of this.answered.keys()) this.release(TT);
         this.answered.clear()
       }
-      want(YY) {
-        const rY = oY(YY);
-        if (this.loading.has(rY)) return;
-        const DY = {
-          key: YY
+      want(TT) {
+        const oT = MT(TT);
+        if (this.loading.has(oT)) return;
+        const IT = {
+          key: TT
         };
-        this.loading.set(rY, DY), this.loadKey(YY).then((FY => {
-          this.Ky || this.loading.get(rY) !== DY ? this.release(FY.id) : (this.loading.delete(rY), this.answered.set(FY.id, YY), this.ready.push({
-            record: EY(YY, uY, FY),
-            key: YY,
-            id: FY.id
+        this.loading.set(oT, IT), this.loadKey(TT).then((iT => {
+          this.Ec || this.loading.get(oT) !== IT ? this.release(iT.id) : (this.loading.delete(oT), this.answered.set(iT.id, TT), this.ready.push({
+            record: AT(TT, DT, iT),
+            key: TT,
+            id: iT.id
           }))
-        }), (FY => {
-          if (this.Ky || this.loading.get(rY) !== DY) return;
-          this.loading.delete(rY), this.onFailure({
-            key: YY,
-            error: FY
+        }), (iT => {
+          if (this.Ec || this.loading.get(oT) !== IT) return;
+          this.loading.delete(oT), this.onFailure({
+            key: TT,
+            error: iT
           });
-          const IY = FY instanceof AY.c && "decode" === FY.stage ? sY : iY;
+          const kT = iT instanceof zT.b && "decode" === iT.stage ? LT : xT;
           this.ready.push({
-            record: EY(YY, IY, null),
-            key: YY,
+            record: AT(TT, kT, null),
+            key: TT,
             id: null
           })
         }))
       }
-      async loadKey(YY) {
-        switch (YY.kind) {
-          case aY.Glb:
-            return this.load(await this.glbImage(YY), "none");
-          case aY.LifeformAtlas:
-            return this.load(WY(await this.sources.lifeformAtlasUrl(YY.word), YY), "none");
-          case aY.ArmourAtlas:
-            return this.load(WY(await this.sources.armourAtlasUrl(), YY), "none");
-          case aY.Cape:
-            return this.load(WY(await this.sources.capeUrl(YY.word), YY), "none");
-          case aY.AttachmentImage:
-            return this.load(WY(await this.sources.attachmentImageUrl(YY.word), YY), "none");
-          case aY.GroupAtlas:
-            return this.load(WY(await this.sources.groupAtlasUrl(YY.word), YY), "none");
-          case aY.BlockImage:
-            return this.load(WY(await this.sources.blockImageUrl(YY.word), YY), "none");
-          case aY.Particle: {
-            const rY = await (YY.index === vY.Item ? this.sources.particleItemUrl(YY.word) : this.sources.particleTextureUrl(YY.word));
-            return this.load(WY(rY, YY), "flipY")
+      async loadKey(TT) {
+        switch (TT.kind) {
+          case FT.Glb:
+            return this.load(await this.glbImage(TT), "none");
+          case FT.LifeformAtlas:
+            return this.load(rT(await this.sources.lifeformAtlasUrl(TT.word), TT), "none");
+          case FT.ArmourAtlas:
+            return this.load(rT(await this.sources.armourAtlasUrl(), TT), "none");
+          case FT.Cape:
+            return this.load(rT(await this.sources.capeUrl(TT.word), TT), "none");
+          case FT.AttachmentImage:
+            return this.load(rT(await this.sources.attachmentImageUrl(TT.word), TT), "none");
+          case FT.GroupAtlas:
+            return this.load(rT(await this.sources.groupAtlasUrl(TT.word), TT), "none");
+          case FT.BlockImage:
+            return this.load(rT(await this.sources.blockImageUrl(TT.word), TT), "none");
+          case FT.Particle: {
+            const oT = await (TT.index === ST.Item ? this.sources.particleItemUrl(TT.word) : this.sources.particleTextureUrl(TT.word));
+            return this.load(rT(oT, TT), "flipY")
           }
           default:
-            throw new AY.c("fetch", `image kind ${YY.kind}`, {
+            throw new zT.b("fetch", `image kind ${TT.kind}`, {
               cause: null
             })
         }
       }
-      async glbImage(YY) {
-        var rY;
-        let DY = this.glbImages.get(YY.word);
-        if (void 0 === DY) {
-          const rY = this.glbTakenCount.get(YY.word),
-            FY = WY(await this.sources.glbUrl(YY.word), YY);
+      async glbImage(TT) {
+        var oT;
+        let IT = this.glbImages.get(TT.word);
+        if (void 0 === IT) {
+          const oT = this.glbTakenCount.get(TT.word),
+            iT = rT(await this.sources.glbUrl(TT.word), TT);
           try {
-            DY = lY(await this.fetchFile(FY))
-          } catch (IY) {
-            throw new AY.c("fetch", FY, {
-              cause: IY
+            IT = mT(await this.fetchFile(iT))
+          } catch (kT) {
+            throw new zT.b("fetch", iT, {
+              cause: kT
             })
           }
-          this.glbTakenCount.get(YY.word) === rY && this.glbImages.set(YY.word, DY)
+          this.glbTakenCount.get(TT.word) === oT && this.glbImages.set(TT.word, IT)
         }
-        const FY = null === (rY = DY) || void 0 === rY ? void 0 : rY[YY.index];
-        if (!FY) throw new AY.c("decode", `image ${YY.index} of file ${2147483647&YY.word}`, {
+        const iT = null === (oT = IT) || void 0 === oT ? void 0 : oT[TT.index];
+        if (!iT) throw new zT.b("decode", `image ${TT.index} of file ${2147483647&TT.word}`, {
           cause: null
         });
-        return FY
+        return iT
       }
     }
 
-    function oY(YY) {
+    function MT(TT) {
       let {
-        kind: rY,
-        index: DY,
-        word: FY
-      } = YY;
-      return `${rY}:${DY}:${FY}`
+        kind: oT,
+        index: IT,
+        word: iT
+      } = TT;
+      return `${oT}:${IT}:${iT}`
     }
 
-    function WY(YY, rY) {
-      if (null === YY) throw new AY.c("fetch", `no URL for image ${oY(rY)}`, {
+    function rT(TT, oT) {
+      if (null === TT) throw new zT.b("fetch", `no URL for image ${MT(oT)}`, {
         cause: null
       });
-      return YY
+      return TT
     }
 
-    function EY(YY, rY, DY) {
-      var FY, AY, IY;
-      const RY = new Uint8Array(16),
-        OY = new DataView(RY.buffer);
-      return OY.setUint8(0, YY.kind), OY.setUint8(1, YY.index), OY.setUint8(2, rY), OY.setUint32(4, YY.word, !0), OY.setUint32(8, null !== (FY = null === DY || void 0 === DY ? void 0 : DY.id) && void 0 !== FY ? FY : 0, !0), OY.setUint16(12, Math.min(null !== (AY = null === DY || void 0 === DY ? void 0 : DY.width) && void 0 !== AY ? AY : 0, 65535), !0), OY.setUint16(14, Math.min(null !== (IY = null === DY || void 0 === DY ? void 0 : DY.height) && void 0 !== IY ? IY : 0, 65535), !0), RY
+    function AT(TT, oT, IT) {
+      var iT, zT, kT;
+      const WT = new Uint8Array(16),
+        XT = new DataView(WT.buffer);
+      return XT.setUint8(0, TT.kind), XT.setUint8(1, TT.index), XT.setUint8(2, oT), XT.setUint32(4, TT.word, !0), XT.setUint32(8, null !== (iT = null === IT || void 0 === IT ? void 0 : IT.id) && void 0 !== iT ? iT : 0, !0), XT.setUint16(12, Math.min(null !== (zT = null === IT || void 0 === IT ? void 0 : IT.width) && void 0 !== zT ? zT : 0, 65535), !0), XT.setUint16(14, Math.min(null !== (kT = null === IT || void 0 === IT ? void 0 : IT.height) && void 0 !== kT ? kT : 0, 65535), !0), WT
     }
-    const mY = 1179937895,
-      VY = 1313821514,
-      SY = 5130562;
+    const gT = 1179937895,
+      hT = 1313821514,
+      wT = 5130562;
 
-    function lY(YY) {
-      var rY;
-      const DY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
-      if (YY.byteLength < 20 || DY.getUint32(0, !0) !== mY || DY.getUint32(16, !0) !== VY) return [];
-      let FY, AY = 20 + DY.getUint32(12, !0);
+    function mT(TT) {
+      var oT;
+      const IT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      if (TT.byteLength < 20 || IT.getUint32(0, !0) !== gT || IT.getUint32(16, !0) !== hT) return [];
+      let iT, zT = 20 + IT.getUint32(12, !0);
       try {
-        FY = JSON.parse((new TextDecoder).decode(YY.subarray(20, AY)))
+        iT = JSON.parse((new TextDecoder).decode(TT.subarray(20, zT)))
       } catch {
         return []
       }
-      for (; AY + 8 <= YY.byteLength && DY.getUint32(AY + 4, !0) !== SY;) AY += 8 + DY.getUint32(AY, !0);
-      const IY = null !== (rY = FY.images) && void 0 !== rY ? rY : [];
-      if (0 === IY.length || AY + 8 > YY.byteLength) return IY.map((() => null));
-      const RY = YY.subarray(AY + 8, Math.min(YY.byteLength, AY + 8 + DY.getUint32(AY, !0)));
-      return IY.map((YY => {
-        var rY, DY, AY;
-        const IY = void 0 === YY.bufferView || null === (rY = FY.bufferViews) || void 0 === rY ? void 0 : rY[YY.bufferView];
-        if (!IY || 0 !== (null !== (DY = IY.buffer) && void 0 !== DY ? DY : 0) || void 0 === IY.byteLength) return null;
-        const OY = null !== (AY = IY.byteOffset) && void 0 !== AY ? AY : 0,
-          gY = OY + IY.byteLength;
-        return gY <= RY.byteLength ? RY.slice(OY, gY) : null
+      for (; zT + 8 <= TT.byteLength && IT.getUint32(zT + 4, !0) !== wT;) zT += 8 + IT.getUint32(zT, !0);
+      const kT = null !== (oT = iT.images) && void 0 !== oT ? oT : [];
+      if (0 === kT.length || zT + 8 > TT.byteLength) return kT.map((() => null));
+      const WT = TT.subarray(zT + 8, Math.min(TT.byteLength, zT + 8 + IT.getUint32(zT, !0)));
+      return kT.map((TT => {
+        var oT, IT, zT;
+        const kT = void 0 === TT.bufferView || null === (oT = iT.bufferViews) || void 0 === oT ? void 0 : oT[TT.bufferView];
+        if (!kT || 0 !== (null !== (IT = kT.buffer) && void 0 !== IT ? IT : 0) || void 0 === kT.byteLength) return null;
+        const XT = null !== (zT = kT.byteOffset) && void 0 !== zT ? zT : 0,
+          BT = XT + kT.byteLength;
+        return BT <= WT.byteLength ? WT.slice(XT, BT) : null
       }))
     }
   },
-  39761: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => RY,
-      g: () => IY,
-      j: () => AY
+  39445: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT,
+      e: () => kT,
+      f: () => zT
     });
-    let FY = null;
+    let iT = null;
 
-    function AY(YY) {
-      FY = YY
+    function zT(TT) {
+      iT = TT
     }
 
-    function IY(YY) {
-      FY === YY && (FY = null)
+    function kT(TT) {
+      iT === TT && (iT = null)
     }
 
-    function RY() {
-      var YY;
-      null === (YY = FY) || void 0 === YY || YY()
+    function WT() {
+      var TT;
+      null === (TT = iT) || void 0 === TT || TT()
     }
   },
-  36016: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => vY,
-      f: () => sY,
-      j: () => WY,
-      m: () => aY
+  35591: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => ST,
+      d: () => LT,
+      h: () => rT,
+      l: () => FT
     });
-    var FY = DY(19),
-      AY = DY(2251),
-      IY = DY(2256),
-      RY = DY(2262),
-      OY = DY(3955),
-      gY = DY(25);
+    var iT = IT(12),
+      zT = IT(2201),
+      kT = IT(2204),
+      WT = IT(2210),
+      XT = IT(3932),
+      BT = IT(16);
 
-    function aY(YY, rY) {
-      return (!(0, RY.d)() || 0 === YY && 0 === rY) && (0, IY.B)(AY.j.Joystick, 0, YY, rY, 0)
+    function FT(TT, oT) {
+      return (!(0, WT.e)() || 0 === TT && 0 === oT) && (0, kT.w)(zT.j.Joystick, 0, TT, oT, 0)
     }
-    const vY = {
+    const ST = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1369,592 +1369,592 @@ export const modules = {
       Boost: 7
     };
 
-    function uY(YY) {
-      return YY.classList.contains("TouchKeyHit") && iY() ? null : YY.firstElementChild
+    function DT(TT) {
+      return TT.classList.contains("TouchKeyHit") && xT() ? null : TT.firstElementChild
     }
 
-    function sY(YY) {
-      return YY.classList.contains("TouchKeyHit") && !YY.classList.contains("CanvasZone") ? {
-        whole: !iY(),
+    function LT(TT) {
+      return TT.classList.contains("TouchKeyHit") && !TT.classList.contains("CanvasZone") ? {
+        whole: !xT(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: yY(uY(YY))
+        keyBox: cT(DT(TT))
       }
     }
 
-    function iY() {
-      return document.documentElement.classList.contains(OY.k)
+    function xT() {
+      return document.documentElement.classList.contains(XT.k)
     }
 
-    function yY(YY) {
-      return !(YY instanceof HTMLElement) || YY.offsetWidth <= 0 || YY.offsetHeight <= 0 ? null : {
-        width: YY.offsetWidth,
-        height: YY.offsetHeight
+    function cT(TT) {
+      return !(TT instanceof HTMLElement) || TT.offsetWidth <= 0 || TT.offsetHeight <= 0 ? null : {
+        width: TT.offsetWidth,
+        height: TT.offsetHeight
       }
     }
 
-    function QY(YY, rY) {
-      const DY = YY => Math.min(65535, Math.round(4 * YY));
-      return (DY(YY) | DY(rY) << 16) >>> 0
+    function KT(TT, oT) {
+      const IT = TT => Math.min(65535, Math.round(4 * TT));
+      return (IT(TT) | IT(oT) << 16) >>> 0
     }
 
-    function oY(YY) {
+    function MT(TT) {
       return {
-        x: YY.left + YY.width / 2,
-        y: YY.top + YY.height / 2,
-        radius: Math.min(YY.width, YY.height) / 2
+        x: TT.left + TT.width / 2,
+        y: TT.top + TT.height / 2,
+        radius: Math.min(TT.width, TT.height) / 2
       }
     }
-    const WY = new class {
-      constructor(YY) {
-        this.write = YY, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
+    const rT = new class {
+      constructor(TT) {
+        this.write = TT, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        rY ? this.elements.set(YY, {
-          element: rY,
-          hidden: DY
-        }) : this.elements.delete(YY), this.measureOne(YY)
+      set(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        oT ? this.elements.set(TT, {
+          element: oT,
+          hidden: IT
+        }) : this.elements.delete(TT), this.measureOne(TT)
       }
       measure() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           left: this.canvasLeft,
           top: this.canvasTop
         };
-        this.canvasLeft = YY.left, this.canvasTop = YY.top;
-        for (const rY of this.elements.keys()) this.measureOne(rY)
+        this.canvasLeft = TT.left, this.canvasTop = TT.top;
+        for (const oT of this.elements.keys()) this.measureOne(oT)
       }
-      hitZone(YY, rY) {
-        let DY = null,
-          FY = 1;
-        for (const AY of this.elements.keys()) {
-          const IY = this.shown(AY);
-          if (!IY) continue;
+      hitZone(TT, oT) {
+        let IT = null,
+          iT = 1;
+        for (const zT of this.elements.keys()) {
+          const kT = this.shown(zT);
+          if (!kT) continue;
           const {
-            rect: RY,
-            element: OY
-          } = IY, gY = oY(RY), aY = Math.max(0, RY.width / 2 - gY.radius), vY = Math.max(0, RY.height / 2 - gY.radius), sY = Math.max(0, Math.abs(YY - gY.x) - aY), iY = Math.max(0, Math.abs(rY - gY.y) - vY), QY = OY.firstElementChild;
-          let WY = Math.hypot(sY, iY) / gY.radius;
-          const EY = yY(uY(OY));
-          EY && (WY = Math.min(WY, Math.max(2 * Math.abs(YY - gY.x) / EY.width, 2 * Math.abs(rY - gY.y) / EY.height))), WY < FY && (DY = {
-            code: AY,
-            element: OY,
-            key: QY,
-            ...gY
-          }, FY = WY)
+            rect: WT,
+            element: XT
+          } = kT, BT = MT(WT), FT = Math.max(0, WT.width / 2 - BT.radius), ST = Math.max(0, WT.height / 2 - BT.radius), LT = Math.max(0, Math.abs(TT - BT.x) - FT), xT = Math.max(0, Math.abs(oT - BT.y) - ST), KT = XT.firstElementChild;
+          let rT = Math.hypot(LT, xT) / BT.radius;
+          const AT = cT(DT(XT));
+          AT && (rT = Math.min(rT, Math.max(2 * Math.abs(TT - BT.x) / AT.width, 2 * Math.abs(oT - BT.y) / AT.height))), rT < iT && (IT = {
+            code: zT,
+            element: XT,
+            key: KT,
+            ...BT
+          }, iT = rT)
         }
-        return DY
+        return IT
       }
-      measureOne(YY) {
-        const rY = this.shown(YY);
-        if (!rY) return void this.write(AY.j.TouchZone, YY, 0, 0, 0);
+      measureOne(TT) {
+        const oT = this.shown(TT);
+        if (!oT) return void this.write(zT.j.TouchZone, TT, 0, 0, 0);
         const {
-          rect: DY,
-          element: FY
-        } = rY, IY = oY(DY);
-        this.write(AY.j.TouchZone, YY, IY.x - this.canvasLeft, IY.y - this.canvasTop, QY(DY.width, DY.height));
-        const RY = yY(uY(FY));
-        this.write(AY.j.TouchZone, 256 | YY, 0, 0, RY ? QY(RY.width, RY.height) : 0)
+          rect: IT,
+          element: iT
+        } = oT, kT = MT(IT);
+        this.write(zT.j.TouchZone, TT, kT.x - this.canvasLeft, kT.y - this.canvasTop, KT(IT.width, IT.height));
+        const WT = cT(DT(iT));
+        this.write(zT.j.TouchZone, 256 | TT, 0, 0, WT ? KT(WT.width, WT.height) : 0)
       }
-      shown(YY) {
-        const rY = this.elements.get(YY),
-          DY = FY.b.get("worldPanelHud");
-        if (!rY || rY.hidden || "none" === DY) return null;
-        const AY = rY.element.getBoundingClientRect();
-        return AY.width <= 0 || AY.height <= 0 ? null : {
-          rect: AY,
-          element: rY.element
+      shown(TT) {
+        const oT = this.elements.get(TT),
+          IT = iT.c.get("worldPanelHud");
+        if (!oT || oT.hidden || "none" === IT) return null;
+        const zT = oT.element.getBoundingClientRect();
+        return zT.width <= 0 || zT.height <= 0 ? null : {
+          rect: zT,
+          element: oT.element
         }
       }
-    }(IY.B);
-    (0, gY.j)(OY.e, (() => {
-      WY.measure()
+    }(kT.w);
+    (0, BT.k)(XT.g, (() => {
+      rT.measure()
     }))
   },
-  39990: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => gY,
-      d: () => aY
+  39682: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => BT,
+      f: () => FT
     });
-    var FY = DY(39997),
-      AY = DY(38420),
-      IY = DY(35894),
-      RY = DY(39924),
-      OY = DY(39969);
-    const gY = FY.b.timeForPlayerToConnect - 1e4;
-    async function aY(YY, rY, DY, FY) {
-      let gY;
+    var iT = IT(39691),
+      zT = IT(38029),
+      kT = IT(35465),
+      WT = IT(39593),
+      XT = IT(39662);
+    const BT = iT.e.timeForPlayerToConnect - 1e4;
+    async function FT(TT, oT, IT, iT) {
+      let BT;
       try {
-        gY = await YY.getTrafficCode()
-      } catch (yY) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", yY), new OY.A(yY)
+        BT = await TT.getTrafficCode()
+      } catch (cT) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", cT), new XT.B(cT)
       }
       const {
-        gameNameWithVariation: aY,
-        lobbyName: vY
-      } = rY, uY = () => {
-        const rY = (0, IY.d)(YY, aY, vY, gY, (YY => {
-          var rY;
-          return null !== (rY = null === DY || void 0 === DY ? void 0 : DY.isUsingCustomGameTexturePack(YY)) && void 0 !== rY && rY
+        gameNameWithVariation: FT,
+        lobbyName: ST
+      } = oT, DT = () => {
+        const oT = (0, kT.i)(TT, FT, ST, BT, (TT => {
+          var oT;
+          return null !== (oT = null === IT || void 0 === IT ? void 0 : IT.isUsingCustomGameTexturePack(TT)) && void 0 !== oT && oT
         }));
-        rY.joinOptions.wasmClient = !0;
-        const AY = (0, RY.G)();
-        return null !== AY && (rY.joinOptions.renderBackend = AY), rY.joinOptions.joinAdHold = FY, rY
+        oT.joinOptions.wasmClient = !0;
+        const zT = (0, WT.z)();
+        return null !== zT && (oT.joinOptions.renderBackend = zT), oT.joinOptions.joinAdHold = iT, oT
       }, {
-        roomName: sY,
-        joinOptions: iY
-      } = uY();
+        roomName: LT,
+        joinOptions: xT
+      } = DT();
       return {
-        endpoint: rY.endpoint,
-        roomName: sY,
-        joinOptions: iY,
+        endpoint: oT.endpoint,
+        roomName: LT,
+        joinOptions: xT,
         session: {
-          gameNameWithVariation: aY,
-          lobbyName: vY,
-          playerDbId: YY.whamm
+          gameNameWithVariation: FT,
+          lobbyName: ST,
+          playerDbId: TT.whamm
         },
-        optionsAfterRefusal: async rY => await (0, AY.c)(YY, rY) ? uY().joinOptions : null
+        optionsAfterRefusal: async oT => await (0, zT.b)(TT, oT) ? DT().joinOptions : null
       }
     }
   },
-  4619: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => OY,
-      f: () => RY
+  4521: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => XT,
+      i: () => WT
     });
-    var FY = DY(2755),
-      AY = DY(4623);
-    let IY = null;
+    var iT = IT(2715),
+      zT = IT(4523);
+    let kT = null;
 
-    function RY(YY, rY) {
-      IY = {
-        pack: YY.metaData.id === FY.d ? null : YY,
-        prompt: rY
+    function WT(TT, oT) {
+      kT = {
+        pack: TT.metaData.id === iT.d ? null : TT,
+        prompt: oT
       }
     }
 
-    function OY(YY, rY) {
-      const DY = IY;
-      null !== DY && (0, AY.c)(DY.pack, YY) && (IY = null, rY && DY.prompt())
+    function XT(TT, oT) {
+      const IT = kT;
+      null !== IT && (0, zT.c)(IT.pack, TT) && (kT = null, oT && IT.prompt())
     }
   },
-  40139: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => vY,
-      i: () => IY,
-      k: () => uY,
-      o: () => RY
+  39815: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => ST,
+      f: () => kT,
+      g: () => DT,
+      k: () => WT
     });
-    var FY = DY(40129),
-      AY = DY(40082);
-    const IY = new class {
+    var iT = IT(39803),
+      zT = IT(39762);
+    const kT = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
       get current() {
         return void 0 === this.session ? this.page : this.session
       }
-      setPageFiles(YY) {
+      setPageFiles(TT) {
         this.change((() => {
-          this.page = YY
+          this.page = TT
         }))
       }
-      setSessionFiles(YY) {
-        const rY = void 0 !== this.session && void 0 === YY;
+      setSessionFiles(TT) {
+        const oT = void 0 !== this.session && void 0 === TT;
         if (this.change((() => {
-            this.session = YY
-          })), rY)
-          for (const DY of [...this.pageListeners]) DY()
+            this.session = TT
+          })), oT)
+          for (const IT of [...this.pageListeners]) IT()
       }
       showsPage() {
         return void 0 === this.session
       }
-      onPageShown(YY) {
-        return this.pageListeners.add(YY), () => {
-          this.pageListeners.delete(YY)
+      onPageShown(TT) {
+        return this.pageListeners.add(TT), () => {
+          this.pageListeners.delete(TT)
         }
       }
-      setFollower(YY) {
-        this.follower = YY, this.startFollower()
+      setFollower(TT) {
+        this.follower = TT, this.startFollower()
       }
       wanted() {
         this.isWanted = !0;
-        for (const YY of [...this.wantedListeners]) YY();
+        for (const TT of [...this.wantedListeners]) TT();
         this.startFollower()
       }
-      onWanted(YY) {
-        return this.wantedListeners.add(YY), () => {
-          this.wantedListeners.delete(YY)
+      onWanted(TT) {
+        return this.wantedListeners.add(TT), () => {
+          this.wantedListeners.delete(TT)
         }
       }
-      onChange(YY) {
-        return this.listeners.add(YY), () => {
-          this.listeners.delete(YY)
+      onChange(TT) {
+        return this.listeners.add(TT), () => {
+          this.listeners.delete(TT)
         }
       }
       startFollower() {
-        const YY = this.follower;
-        this.isWanted && null !== YY && (this.follower = null, YY((() => {
-          this.follower = YY
+        const TT = this.follower;
+        this.isWanted && null !== TT && (this.follower = null, TT((() => {
+          this.follower = TT
         })))
       }
-      change(YY) {
-        const rY = this.current;
-        if (YY(), this.current !== rY)
-          for (const DY of this.listeners) DY()
+      change(TT) {
+        const oT = this.current;
+        if (TT(), this.current !== oT)
+          for (const IT of this.listeners) IT()
       }
     };
 
-    function RY(YY, rY) {
+    function WT(TT, oT) {
       return {
-        ...YY,
+        ...TT,
         armourAtlasUrl: () => {
-          var DY, FY;
-          return null !== (DY = null === (FY = rY()) || void 0 === FY ? void 0 : FY.armourAtlasUrl()) && void 0 !== DY ? DY : YY.armourAtlasUrl()
+          var IT, iT;
+          return null !== (IT = null === (iT = oT()) || void 0 === iT ? void 0 : iT.armourAtlasUrl()) && void 0 !== IT ? IT : TT.armourAtlasUrl()
         },
-        lifeformAtlasUrl: DY => gY(rY(), (YY => YY.LIFEFORM_ATLAS_PATHS[DY]), (() => YY.lifeformAtlasUrl(DY))),
-        groupAtlasUrl: DY => gY(rY(), (YY => YY.GROUP_ATLAS_PATHS[DY]), (() => YY.groupAtlasUrl(DY))),
-        particleItemUrl: FY => aY(rY(), (async () => {
-          const YY = await DY.e(38).then((() => DY(50679))).catch((() => null));
-          return (null === YY || void 0 === YY ? void 0 : YY.particleItemSprite(FY)) || null
-        }), (() => YY.particleItemUrl(FY))),
-        blockImageUrl: DY => aY(rY(), (async () => {
-          var YY, rY;
-          return null !== (YY = null === (rY = await OY()) || void 0 === rY ? void 0 : rY.blockImageName(DY)) && void 0 !== YY ? YY : null
-        }), (() => YY.blockImageUrl(DY)))
+        lifeformAtlasUrl: IT => BT(oT(), (TT => TT.LIFEFORM_ATLAS_PATHS[IT]), (() => TT.lifeformAtlasUrl(IT))),
+        groupAtlasUrl: IT => BT(oT(), (TT => TT.GROUP_ATLAS_PATHS[IT]), (() => TT.groupAtlasUrl(IT))),
+        particleItemUrl: iT => FT(oT(), (async () => {
+          const TT = await IT.e(38).then((() => IT(50372))).catch((() => null));
+          return (null === TT || void 0 === TT ? void 0 : TT.particleItemSprite(iT)) || null
+        }), (() => TT.particleItemUrl(iT))),
+        blockImageUrl: IT => FT(oT(), (async () => {
+          var TT, oT;
+          return null !== (TT = null === (oT = await XT()) || void 0 === oT ? void 0 : oT.blockImageName(IT)) && void 0 !== TT ? TT : null
+        }), (() => TT.blockImageUrl(IT)))
       }
     }
 
-    function OY() {
-      return (0, AY.n)().catch((() => null))
+    function XT() {
+      return (0, zT.p)().catch((() => null))
     }
 
-    function gY(YY, rY, DY) {
-      return aY(YY, (async () => {
-        var YY;
-        const DY = await OY(),
-          FY = null === DY ? null : rY(DY),
-          AY = null !== (YY = null === FY || void 0 === FY ? void 0 : FY.slice(FY.lastIndexOf("/") + 1)) && void 0 !== YY ? YY : null;
-        return "Player_Atlas" === AY ? null : AY
-      }), DY)
+    function BT(TT, oT, IT) {
+      return FT(TT, (async () => {
+        var TT;
+        const IT = await XT(),
+          iT = null === IT ? null : oT(IT),
+          zT = null !== (TT = null === iT || void 0 === iT ? void 0 : iT.slice(iT.lastIndexOf("/") + 1)) && void 0 !== TT ? TT : null;
+        return "Player_Atlas" === zT ? null : zT
+      }), IT)
     }
-    async function aY(YY, rY, DY) {
-      if (null !== YY) {
-        const DY = await rY(),
-          FY = null === DY ? null : YY.textureUrl(DY);
-        if (null !== FY) return FY
+    async function FT(TT, oT, IT) {
+      if (null !== TT) {
+        const IT = await oT(),
+          iT = null === IT ? null : TT.textureUrl(IT);
+        if (null !== iT) return iT
       }
-      return DY()
+      return IT()
     }
-    const vY = 0;
+    const ST = 0;
 
-    function uY(YY) {
-      const rY = [FY.f.ArmourAtlas, FY.f.LifeformAtlas, FY.f.GroupAtlas, FY.f.BlockImage, FY.f.Particle];
-      YY.reload(rY, (YY => {
-        switch (YY.kind) {
-          case FY.f.Particle:
-            return YY.index === FY.i.Item;
-          case FY.f.LifeformAtlas:
-            return YY.word !== vY;
+    function DT(TT) {
+      const oT = [iT.g.ArmourAtlas, iT.g.LifeformAtlas, iT.g.GroupAtlas, iT.g.BlockImage, iT.g.Particle];
+      TT.reload(oT, (TT => {
+        switch (TT.kind) {
+          case iT.g.Particle:
+            return TT.index === iT.k.Item;
+          case iT.g.LifeformAtlas:
+            return TT.word !== ST;
           default:
             return !0
         }
       }))
     }
   },
-  40004: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      f: () => OY,
-      h: () => RY,
-      j: () => AY,
-      l: () => IY
+  39694: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT,
+      d: () => XT,
+      f: () => WT,
+      j: () => zT,
+      n: () => kT
     });
-    const FY = 1e3;
+    const iT = 1e3;
 
-    function AY() {
-      gY((() => {
+    function zT() {
+      BT((() => {
         window.location.reload()
       }))
     }
 
-    function IY() {
+    function kT() {
       return new Promise((() => {}))
     }
 
-    function RY(YY) {
-      gY((() => {
-        window.location.replace(YY(window.location.href))
+    function WT(TT) {
+      BT((() => {
+        window.location.replace(TT(window.location.href))
       }))
     }
 
-    function OY(YY) {
-      Promise.resolve().then((() => DY(115))).then((rY => {
+    function XT(TT) {
+      Promise.resolve().then((() => IT(104))).then((oT => {
         let {
-          currentUrl: DY
-        } = rY;
-        RY((() => DY.mergeSearchParamsInto(YY)))
+          currentUrl: IT
+        } = oT;
+        WT((() => IT.mergeSearchParamsInto(TT)))
       }), (() => {
-        RY((() => YY))
+        WT((() => TT))
       }))
     }
 
-    function gY(YY) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => DY(1699))).then((rY => {
+    function BT(TT) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => IT(1665))).then((oT => {
         let {
-          prepareForUnloadWithoutConfirmation: DY
-        } = rY;
+          prepareForUnloadWithoutConfirmation: IT
+        } = oT;
         try {
-          DY()
-        } catch (FY) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", FY), window.onbeforeunload = null
+          IT()
+        } catch (iT) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", iT), window.onbeforeunload = null
         }
-        YY()
+        TT()
       }), (() => {
-        window.onbeforeunload = null, YY()
-      })) : YY()
+        window.onbeforeunload = null, TT()
+      })) : TT()
     }
   },
-  4623: (YY, rY, DY) => {
-    function FY(YY, rY) {
-      return AY(YY, rY)
+  4523: (TT, oT, IT) => {
+    function iT(TT, oT) {
+      return zT(TT, oT)
     }
 
-    function AY(YY, rY) {
-      if (YY === rY) return !0;
-      if ("object" !== typeof YY || "object" !== typeof rY || null === YY || null === rY || Array.isArray(YY) !== Array.isArray(rY)) return !1;
-      const DY = YY,
-        FY = rY,
-        IY = Object.keys(DY);
-      return IY.length === Object.keys(FY).length && IY.every((YY => Object.prototype.hasOwnProperty.call(FY, YY) && AY(DY[YY], FY[YY])))
+    function zT(TT, oT) {
+      if (TT === oT) return !0;
+      if ("object" !== typeof TT || "object" !== typeof oT || null === TT || null === oT || Array.isArray(TT) !== Array.isArray(oT)) return !1;
+      const IT = TT,
+        iT = oT,
+        kT = Object.keys(IT);
+      return kT.length === Object.keys(iT).length && kT.every((TT => Object.prototype.hasOwnProperty.call(iT, TT) && zT(IT[TT], iT[TT])))
     }
-    DY.d(rY, {
-      c: () => FY
+    IT.d(oT, {
+      c: () => iT
     })
   },
-  40039: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => TY,
-      e: () => SY,
-      g: () => oY,
-      j: () => QY
+  39741: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => eT,
+      c: () => wT,
+      d: () => MT,
+      h: () => KT
     });
-    var FY = DY(4227),
-      AY = DY(3258),
-      IY = DY(38418),
-      RY = DY(38427),
-      OY = DY(1744),
-      gY = DY(39966),
-      aY = DY(39969);
-    const vY = {
+    var iT = IT(4161),
+      zT = IT(3210),
+      kT = IT(38020),
+      WT = IT(38038),
+      XT = IT(1693),
+      BT = IT(39656),
+      FT = IT(39662);
+    const ST = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      uY = 3,
-      sY = [500, 1500];
+      DT = 3,
+      LT = [500, 1500];
 
-    function iY(YY) {
-      const rY = new URL(YY);
+    function xT(TT) {
+      const oT = new URL(TT);
       return {
-        secure: "https:" === rY.protocol || "wss:" === rY.protocol,
-        host: rY.host,
-        pathname: rY.pathname.replace(/\/+$/, ""),
-        search: rY.searchParams.toString()
+        secure: "https:" === oT.protocol || "wss:" === oT.protocol,
+        host: oT.host,
+        pathname: oT.pathname.replace(/\/+$/, ""),
+        search: oT.searchParams.toString()
       }
     }
 
-    function yY(YY, rY, DY) {
+    function cT(TT, oT, IT) {
       const {
-        secure: FY,
-        host: AY,
-        pathname: IY,
-        search: RY
-      } = iY(YY);
-      return `${FY?"https":"http"}://${AY}${IY}/matchmake/${rY}/${encodeURIComponent(DY)}${RY?`?${RY}`:""}`
+        secure: iT,
+        host: zT,
+        pathname: kT,
+        search: WT
+      } = xT(TT);
+      return `${iT?"https":"http"}://${zT}${kT}/matchmake/${oT}/${encodeURIComponent(IT)}${WT?`?${WT}`:""}`
     }
 
-    function QY(YY, rY) {
-      var DY;
-      const FY = null !== (DY = rY.protocol) && void 0 !== DY ? DY : "ws";
-      if ("ws" !== FY) throw new Error(`seat reservation asks for the ${FY} transport`);
+    function KT(TT, oT) {
+      var IT;
+      const iT = null !== (IT = oT.protocol) && void 0 !== IT ? IT : "ws";
+      if ("ws" !== iT) throw new Error(`seat reservation asks for the ${iT} transport`);
       const {
-        secure: AY,
-        host: IY,
-        pathname: RY,
-        search: OY
-      } = iY(YY), gY = new URLSearchParams(OY);
-      gY.append("sessionId", rY.sessionId), rY.reconnectionToken && gY.append("reconnectionToken", rY.reconnectionToken);
-      return `${AY?"wss":"ws"}://${rY.room.publicAddress||`${IY}${RY}`}/${rY.room.processId}/${rY.room.roomId}?${gY.toString()}`
+        secure: zT,
+        host: kT,
+        pathname: WT,
+        search: XT
+      } = xT(TT), BT = new URLSearchParams(XT);
+      BT.append("sessionId", oT.sessionId), oT.reconnectionToken && BT.append("reconnectionToken", oT.reconnectionToken);
+      return `${zT?"wss":"ws"}://${oT.room.publicAddress||`${kT}${WT}`}/${oT.room.processId}/${oT.room.roomId}?${BT.toString()}`
     }
-    async function oY(YY, rY, DY) {
-      var gY;
-      let vY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const iY = null !== (gY = vY.sleep) && void 0 !== gY ? gY : FY.c,
-        QY = new AY.e(vY.signal),
-        oY = new OY.e(RY.b, (() => {
-          (0, AY.l)(QY.controller, new RY.e)
+    async function MT(TT, oT, IT) {
+      var BT;
+      let ST = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const xT = null !== (BT = ST.sleep) && void 0 !== BT ? BT : iT.c,
+        KT = new zT.b(ST.signal),
+        MT = new XT.d(WT.b, (() => {
+          (0, zT.i)(KT.controller, new WT.f)
         })),
         {
-          signal: VY
-        } = QY;
+          signal: hT
+        } = KT;
       try {
-        return await (0, IY.f)((() => async function(YY, rY, DY, FY) {
-          var IY;
+        return await (0, kT.g)((() => async function(TT, oT, IT, iT) {
+          var kT;
           const {
-            signal: RY,
-            sleep: OY
-          } = FY, gY = yY(YY, "joinOrCreate", rY), vY = JSON.stringify(DY);
-          let iY = null;
-          for (let yY = 0; yY < uY; yY++) {
-            var QY;
-            if (yY > 0) await OY(null !== (QY = sY[yY - 1]) && void 0 !== QY ? QY : 1500, RY);
-            let YY;
-            (0, AY.q)(RY);
+            signal: WT,
+            sleep: XT
+          } = iT, BT = cT(TT, "joinOrCreate", oT), ST = JSON.stringify(IT);
+          let xT = null;
+          for (let cT = 0; cT < DT; cT++) {
+            var KT;
+            if (cT > 0) await XT(null !== (KT = LT[cT - 1]) && void 0 !== KT ? KT : 1500, WT);
+            let TT;
+            (0, zT.o)(WT);
             try {
-              YY = await EY(gY, vY, FY)
-            } catch (oY) {
-              (0, AY.q)(RY), iY = WY(oY);
+              TT = await AT(BT, ST, iT)
+            } catch (MT) {
+              (0, zT.o)(WT), xT = rT(MT);
               continue
             }
             const {
-              response: rY,
-              answer: DY,
-              refusal: IY,
-              lost: uY
-            } = YY;
-            if (null === uY) {
-              if (null !== IY) throw mY(IY, DY);
-              if (rY.ok && null !== DY && eY(DY)) return DY;
-              iY = new aY.w(`seat request answered HTTP ${rY.status}${null===DY?" without JSON":" without a seat"}`, !1)
-            } else iY = WY(uY.error)
+              response: oT,
+              answer: IT,
+              refusal: kT,
+              lost: DT
+            } = TT;
+            if (null === DT) {
+              if (null !== kT) throw gT(kT, IT);
+              if (oT.ok && null !== IT && RT(IT)) return IT;
+              xT = new FT.x(`seat request answered HTTP ${oT.status}${null===IT?" without JSON":" without a seat"}`, !1)
+            } else xT = rT(DT.error)
           }
-          throw null !== (IY = iY) && void 0 !== IY ? IY : new aY.w("seat request made no attempt", !1)
-        }(YY, rY, DY, {
-          ...vY,
-          signal: VY,
-          sleep: iY
-        })), VY, iY)
+          throw null !== (kT = xT) && void 0 !== kT ? kT : new FT.x("seat request made no attempt", !1)
+        }(TT, oT, IT, {
+          ...ST,
+          signal: hT,
+          sleep: xT
+        })), hT, xT)
       } finally {
-        oY.stop(), QY.unfollow()
+        MT.stop(), KT.unfollow()
       }
     }
 
-    function WY(YY) {
-      return new aY.w(YY instanceof Error ? YY.message : String(YY), !0, YY)
+    function rT(TT) {
+      return new FT.x(TT instanceof Error ? TT.message : String(TT), !0, TT)
     }
-    async function EY(YY, rY, DY) {
-      var FY;
+    async function AT(TT, oT, IT) {
+      var iT;
       const {
-        signal: IY
-      } = DY, RY = null !== (FY = DY.fetch) && void 0 !== FY ? FY : fetch, OY = await RY(YY, {
+        signal: kT
+      } = IT, WT = null !== (iT = IT.fetch) && void 0 !== iT ? iT : fetch, XT = await WT(TT, {
         method: "POST",
         headers: {
-          ...vY,
+          ...ST,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: rY,
+        body: oT,
         credentials: "include",
-        signal: IY
+        signal: kT
       }), {
-        answer: gY,
-        lost: aY
-      } = await async function(YY) {
+        answer: BT,
+        lost: FT
+      } = await async function(TT) {
         try {
-          const rY = await YY.json();
+          const oT = await TT.json();
           return {
-            answer: "object" === typeof rY && null !== rY ? rY : null,
+            answer: "object" === typeof oT && null !== oT ? oT : null,
             lost: null
           }
-        } catch (rY) {
+        } catch (oT) {
           return {
             answer: null,
-            lost: rY instanceof SyntaxError ? null : {
-              error: rY
+            lost: oT instanceof SyntaxError ? null : {
+              error: oT
             }
           }
         }
-      }(OY), uY = null !== gY && "string" === typeof gY.error ? gY.error : null;
-      var sY;
-      null !== uY && (null === (sY = DY.onRefusal) || void 0 === sY || sY.call(DY));
-      return (0, AY.q)(IY), {
-        response: OY,
-        answer: gY,
-        refusal: uY,
-        lost: aY
+      }(XT), DT = null !== BT && "string" === typeof BT.error ? BT.error : null;
+      var LT;
+      null !== DT && (null === (LT = IT.onRefusal) || void 0 === LT || LT.call(IT));
+      return (0, zT.o)(kT), {
+        response: XT,
+        answer: BT,
+        refusal: DT,
+        lost: FT
       }
     }
 
-    function mY(YY, rY) {
-      return new aY.m(YY, "number" === typeof(null === rY || void 0 === rY ? void 0 : rY.code) ? rY.code : 0, (0, gY.m)(YY).text)
+    function gT(TT, oT) {
+      return new FT.r(TT, "number" === typeof(null === oT || void 0 === oT ? void 0 : oT.code) ? oT.code : 0, (0, BT.q)(TT).text)
     }
-    class VY extends Error {
-      constructor(YY, rY) {
-        super(YY), this.code = rY, this.name = "SeatHttpError"
+    class hT extends Error {
+      constructor(TT, oT) {
+        super(TT), this.code = oT, this.name = "SeatHttpError"
       }
     }
-    async function SY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function wT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: AY,
-        answer: IY,
-        refusal: RY,
-        lost: OY
-      } = await EY(yY(YY, "reconnect", rY), JSON.stringify({
-        reconnectionToken: DY
-      }), FY);
-      if (null !== OY) throw OY.error;
-      if (!AY.ok) {
-        const YY = null !== IY && "number" === typeof IY.code && 0 !== IY.code ? IY.code : AY.status;
-        throw new VY(`the seat's reconnect was refused: ${null!==RY&&void 0!==RY?RY:`HTTP ${AY.status}`}`, YY)
+        response: zT,
+        answer: kT,
+        refusal: WT,
+        lost: XT
+      } = await AT(cT(TT, "reconnect", oT), JSON.stringify({
+        reconnectionToken: IT
+      }), iT);
+      if (null !== XT) throw XT.error;
+      if (!zT.ok) {
+        const TT = null !== kT && "number" === typeof kT.code && 0 !== kT.code ? kT.code : zT.status;
+        throw new hT(`the seat's reconnect was refused: ${null!==WT&&void 0!==WT?WT:`HTTP ${zT.status}`}`, TT)
       }
-      if (null !== RY) throw mY(RY, IY);
-      if (null === IY || !eY(IY)) throw new Error("the seat's reconnect answered " + (null === IY ? "without JSON" : "without a seat"));
+      if (null !== WT) throw gT(WT, kT);
+      if (null === kT || !RT(kT)) throw new Error("the seat's reconnect answered " + (null === kT ? "without JSON" : "without a seat"));
       return {
-        ...IY,
-        reconnectionToken: DY
+        ...kT,
+        reconnectionToken: IT
       }
     }
-    const lY = 10;
+    const mT = 10;
 
-    function TY(YY) {
-      if (YY.byteLength < 2 || YY[0] !== lY) return null;
-      const rY = 2 + YY[1];
-      return rY > YY.byteLength ? null : (new TextDecoder).decode(YY.subarray(2, rY))
+    function eT(TT) {
+      if (TT.byteLength < 2 || TT[0] !== mT) return null;
+      const oT = 2 + TT[1];
+      return oT > TT.byteLength ? null : (new TextDecoder).decode(TT.subarray(2, oT))
     }
 
-    function eY(YY) {
-      const rY = YY.room;
-      return "string" === typeof YY.sessionId && "object" === typeof rY && null !== rY && "string" === typeof rY.roomId && "string" === typeof rY.processId && "string" === typeof rY.name
+    function RT(TT) {
+      const oT = TT.room;
+      return "string" === typeof TT.sessionId && "object" === typeof oT && null !== oT && "string" === typeof oT.roomId && "string" === typeof oT.processId && "string" === typeof oT.name
     }
   },
-  39699: (YY, rY, DY) => {
-    DY.d(rY, {
-      $: () => mY,
-      B: () => TY,
-      C: () => HY,
-      F: () => VY,
-      H: () => SY,
-      K: () => oY,
-      O: () => BY,
-      P: () => ZY,
-      T: () => yY,
-      V: () => fY,
-      X: () => EY,
-      Y: () => WY,
-      ab: () => lY,
-      d: () => AY,
-      g: () => CY,
-      i: () => zY,
-      j: () => iY,
-      n: () => QY,
-      r: () => KY,
-      u: () => eY,
-      w: () => cY,
-      z: () => NY
+  39379: (TT, oT, IT) => {
+    IT.d(oT, {
+      D: () => hT,
+      H: () => wT,
+      L: () => MT,
+      N: () => vT,
+      R: () => JT,
+      T: () => cT,
+      V: () => aT,
+      W: () => AT,
+      Z: () => rT,
+      ab: () => gT,
+      b: () => zT,
+      c: () => UT,
+      cb: () => mT,
+      g: () => jT,
+      j: () => xT,
+      k: () => KT,
+      n: () => fT,
+      o: () => RT,
+      q: () => ET,
+      u: () => uT,
+      w: () => eT,
+      z: () => CT
     });
-    var FY = DY(2610);
-    const AY = {
+    var iT = IT(2597);
+    const zT = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1982,217 +1982,217 @@ export const modules = {
       UpdateNameTag: 53
     };
 
-    function IY(YY, rY) {
-      return !ArrayBuffer.isView(YY) || YY instanceof DataView ? Array.isArray(YY) ? YY.map((YY => rY(YY))) : YY : Array.from(YY, (YY => rY(YY)))
+    function kT(TT, oT) {
+      return !ArrayBuffer.isView(TT) || TT instanceof DataView ? Array.isArray(TT) ? TT.map((TT => oT(TT))) : TT : Array.from(TT, (TT => oT(TT)))
     }
 
-    function RY(YY) {
-      if ("string" !== typeof YY) return YY;
-      for (let rY = 0; rY < YY.length; rY++) {
-        const DY = YY.charCodeAt(rY);
-        if (DY >= 55296 && DY <= 57343) return gY.decode(OY.encode(YY))
+    function WT(TT) {
+      if ("string" !== typeof TT) return TT;
+      for (let oT = 0; oT < TT.length; oT++) {
+        const IT = TT.charCodeAt(oT);
+        if (IT >= 55296 && IT <= 57343) return BT.decode(XT.encode(TT))
       }
-      return YY
+      return TT
     }
-    const OY = new TextEncoder,
-      gY = new TextDecoder;
+    const XT = new TextEncoder,
+      BT = new TextDecoder;
 
-    function aY(YY) {
-      return YY
+    function FT(TT) {
+      return TT
     }
-    let vY;
+    let ST;
 
-    function uY(YY) {
-      return null === YY || "object" !== typeof YY ? YY : [RY(YY.Qa), RY(YY.oa)]
-    }
-
-    function sY(YY) {
-      return null === YY || "object" !== typeof YY ? YY : [IY(YY.lF, aY), IY(YY.kI, aY)]
+    function DT(TT) {
+      return null === TT || "object" !== typeof TT ? TT : [WT(TT.QF), WT(TT.HF)]
     }
 
-    function iY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [RY(rY.vv), RY(rY.sv)];
-      var rY
+    function LT(TT) {
+      return null === TT || "object" !== typeof TT ? TT : [kT(TT.ai, FT), kT(TT.cW, FT)]
     }
 
-    function yY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [rY.id, rY.ga];
-      var rY
+    function xT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [WT(oT.US), WT(oT.aS)];
+      var oT
     }
 
-    function QY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [rY.br, RY(rY.Xr), rY.qr, RY(rY.nr), rY.tr, rY.YD, rY.Va, RY(rY.Sa), RY(rY.la)];
-      var rY
+    function cT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [oT.id, oT.fF];
+      var oT
     }
 
-    function oY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [IY(rY.Yv, aY), rY.rv];
-      var rY
+    function KT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [oT.po, WT(oT.bo), oT.yo, WT(oT.TI), oT.zI, oT.kI, oT.lF, WT(oT.sF), WT(oT.tF)];
+      var oT
     }
 
-    function WY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [IY(rY.UR, (YY => RY(YY))), RY(rY.LR), rY.tR];
-      var rY
+    function MT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [kT(oT.wS, FT), oT.mS];
+      var oT
     }
 
-    function EY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [IY(rY.DO, aY), RY(rY.FO), rY.IO];
-      var rY
+    function rT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [kT(oT.AX, (TT => WT(TT))), WT(oT.gX), oT.hX];
+      var oT
     }
 
-    function mY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [RY(rY.rY), RY(rY.DY)];
-      var rY
+    function AT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [kT(oT.eX, FT), WT(oT.RX), oT.uX];
+      var oT
     }
 
-    function VY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [RY(rY.YO)];
-      var rY
+    function gT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [WT(oT.oT), WT(oT.IT)];
+      var oT
     }
 
-    function SY(YY) {
-      return RY(YY)
+    function hT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [WT(oT.wX)];
+      var oT
     }
 
-    function lY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [RY(rY.ia), RY(rY.ya), RY(rY.Qa), RY(rY.oa)];
-      var rY
+    function wT(TT) {
+      return WT(TT)
     }
 
-    function TY(YY) {
-      return uY(YY)
+    function mT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [WT(oT.aF), WT(oT.YF), WT(oT.QF), WT(oT.HF)];
+      var oT
     }
 
-    function eY(YY) {
-      return uY(YY)
+    function eT(TT) {
+      return DT(TT)
     }
 
-    function NY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [RY(rY.ua)];
-      var rY
+    function RT(TT) {
+      return DT(TT)
     }
 
-    function BY(YY) {
-      return YY
+    function uT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [WT(oT.JF)];
+      var oT
     }
 
-    function cY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [RY(rY.ng), RY(rY.Pg)];
-      var rY
+    function vT(TT) {
+      return TT
     }
 
-    function KY(YY) {
-      return RY(YY)
+    function ET(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [WT(oT.KF), WT(oT.MF)];
+      var oT
     }
 
-    function HY(YY) {
-      return sY(YY)
+    function fT(TT) {
+      return WT(TT)
     }
 
-    function zY(YY) {
-      return sY(YY)
+    function CT(TT) {
+      return LT(TT)
     }
 
-    function ZY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [RY(rY.eR)];
-      var rY
+    function jT(TT) {
+      return LT(TT)
     }
 
-    function CY(YY) {
-      return (vY ??= (0, FY.e)().map((YY => YY.name)), vY).map((rY => {
-        return "string" === typeof(DY = YY[rY]) ? RY(DY) : IY(DY, aY);
-        var DY
+    function JT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [WT(oT.pW)];
+      var oT
+    }
+
+    function UT(TT) {
+      return (ST ??= (0, iT.f)().map((TT => TT.name)), ST).map((oT => {
+        return "string" === typeof(IT = TT[oT]) ? WT(IT) : kT(IT, FT);
+        var IT
       }))
     }
 
-    function fY(YY) {
-      return null === (rY = YY) || "object" !== typeof rY ? rY : [rY.za, rY.Za, rY.Ca];
-      var rY
+    function aT(TT) {
+      return null === (oT = TT) || "object" !== typeof oT ? oT : [oT.VF, oT.oS, oT.iS];
+      var oT
     }
   },
-  40142: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY
+  39819: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT
     });
-    var FY = DY(40145),
-      AY = DY(40139);
-    const IY = new class {
-      constructor(YY) {
-        this.pack = YY, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, YY.onWanted((() => {
+    var iT = IT(39821),
+      zT = IT(39815);
+    const kT = new class {
+      constructor(TT) {
+        this.pack = TT, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, TT.onWanted((() => {
           this.release()
         }))
       }
-      setGame(YY) {
-        if (void 0 === YY && null !== this.hold) return void(this.endedWhileHeld = !0);
+      setGame(TT) {
+        if (void 0 === TT && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const rY = this.inGame();
-        if (this.game = YY, this.update(), this.inGame() !== rY)
-          for (const DY of this.gameListeners) DY()
+        const oT = this.inGame();
+        if (this.game = TT, this.update(), this.inGame() !== oT)
+          for (const IT of this.gameListeners) IT()
       }
       inGame() {
         return void 0 !== this.game
       }
-      onGameChange(YY) {
-        return this.gameListeners.add(YY), () => {
-          this.gameListeners.delete(YY)
+      onGameChange(TT) {
+        return this.gameListeners.add(TT), () => {
+          this.gameListeners.delete(TT)
         }
       }
-      unwantedLeave(YY) {
-        YY && void 0 !== this.game ? this.hold = {
+      unwantedLeave(TT) {
+        TT && void 0 !== this.game ? this.hold = {
           game: this.game
         } : this.release()
       }
       rejoinHold() {
         return this.hold
       }
-      releaseHold(YY) {
-        null !== YY && YY === this.hold && this.release()
+      releaseHold(TT) {
+        null !== TT && TT === this.hold && this.release()
       }
       release() {
         if (null === this.hold) return;
-        const YY = this.endedWhileHeld;
-        this.hold = null, this.endedWhileHeld = !1, YY && this.setGame(void 0)
+        const TT = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, TT && this.setGame(void 0)
       }
-      setSettled(YY) {
-        this.settle = YY, this.update()
+      setSettled(TT) {
+        this.settle = TT, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, FY.e)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, iT.b)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(AY.i)
+    }(zT.f)
   },
-  39960: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      followPageUiPack: () => Na,
-      packForGame: () => ea,
-      playWasmGame: () => Ja,
-      prefetchWasmPreviews: () => dO,
-      setGamePackConfirm: () => kg,
-      startWasmPlay: () => za,
-      startWasmPreviews: () => hO
+  39647: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      followPageUiPack: () => JF,
+      packForGame: () => jF,
+      playWasmGame: () => tF,
+      prefetchWasmPreviews: () => sX,
+      setGamePackConfirm: () => dB,
+      startWasmPlay: () => OF,
+      startWasmPreviews: () => lX
     });
-    var FY = DY(213),
-      AY = DY(1253),
-      IY = DY(183),
-      RY = DY(38437),
-      OY = DY(1808),
-      gY = DY(25),
-      aY = DY(4252),
-      vY = DY(1314),
-      uY = DY(1692),
-      sY = DY(1322),
-      iY = DY(38572),
-      yY = DY(38585),
-      QY = DY(38501),
-      oY = DY(35903),
-      WY = DY(38418),
-      EY = DY(38427),
-      mY = DY(39785),
-      VY = DY(4365),
-      SY = DY(39693),
-      lY = DY(39759),
-      TY = DY(39699);
-    const eY = {
+    var iT = IT(193),
+      zT = IT(1216),
+      kT = IT(159),
+      WT = IT(38044),
+      XT = IT(1751),
+      BT = IT(16),
+      FT = IT(4181),
+      ST = IT(1280),
+      DT = IT(1658),
+      LT = IT(1293),
+      xT = IT(38188),
+      cT = IT(38198),
+      KT = IT(38112),
+      MT = IT(35468),
+      rT = IT(38020),
+      AT = IT(38038),
+      gT = IT(39465),
+      hT = IT(4269),
+      wT = IT(39371),
+      mT = IT(39436),
+      eT = IT(39379);
+    const RT = {
       states: {
         health: !0,
         aura: !0,
@@ -2314,350 +2314,350 @@ export const modules = {
       }
     };
 
-    function NY(YY) {
-      const rY = {
-        ...lY.e[YY]
+    function uT(TT) {
+      const oT = {
+        ...mT.c[TT]
       };
-      for (const DY of Object.keys(eY[YY])) delete rY[DY];
-      return rY
+      for (const IT of Object.keys(RT[TT])) delete oT[IT];
+      return oT
     }
 
-    function BY() {
-      var YY, rY;
-      return null === (YY = null === (rY = (0, SY.g)()) || void 0 === rY ? void 0 : rY.localPlayerAlive()) || void 0 === YY || YY
+    function vT() {
+      var TT, oT;
+      return null === (TT = null === (oT = (0, wT.i)()) || void 0 === oT ? void 0 : oT.localPlayerAlive()) || void 0 === TT || TT
     }
 
-    function cY() {
-      var YY, rY;
-      return null !== (YY = null === (rY = (0, SY.g)()) || void 0 === rY ? void 0 : rY.localDeaths()) && void 0 !== YY ? YY : null
+    function ET() {
+      var TT, oT;
+      return null !== (TT = null === (oT = (0, wT.i)()) || void 0 === oT ? void 0 : oT.localDeaths()) && void 0 !== TT ? TT : null
     }
-    const KY = {
-        current: BY,
-        watch: YY => {
-          let rY = BY(),
-            DY = cY();
-          return (0, VY.w)((() => {
-            const FY = BY(),
-              AY = cY(),
-              IY = null !== AY && null !== DY && AY !== DY;
-            DY = AY, IY ? (rY || YY(!0), YY(!1), FY && YY(!0), rY = FY) : FY !== rY && (rY = FY, YY(FY))
+    const fT = {
+        current: vT,
+        watch: TT => {
+          let oT = vT(),
+            IT = ET();
+          return (0, hT.y)((() => {
+            const iT = vT(),
+              zT = ET(),
+              kT = null !== zT && null !== IT && zT !== IT;
+            IT = zT, kT ? (oT || TT(!0), TT(!1), iT && TT(!0), oT = iT) : iT !== oT && (oT = iT, TT(iT))
           }))
         }
       },
-      HY = {
+      CT = {
         states: {
-          ...NY("states"),
-          localPlayerAlive: KY
+          ...uT("states"),
+          localPlayerAlive: fT
         },
         events: {
-          ...NY("events"),
+          ...uT("events"),
           localPlayerAliveSet: {
-            watch: KY.watch
+            watch: fT.watch
           }
         },
         commands: {
-          ...NY("commands"),
+          ...uT("commands"),
           respawn: () => {
-            var YY;
-            null === (YY = (0, SY.g)()) || void 0 === YY || YY.respawn()
+            var TT;
+            null === (TT = (0, wT.i)()) || void 0 === TT || TT.respawn()
           },
-          playEmote: YY => {
-            var rY;
-            null === (rY = (0, SY.g)()) || void 0 === rY || rY.send(TY.d.PlayEmote, (0, TY.F)({
-              YO: YY
+          playEmote: TT => {
+            var oT;
+            null === (oT = (0, wT.i)()) || void 0 === oT || oT.send(eT.b.PlayEmote, (0, eT.D)({
+              wX: TT
             }))
           },
-          applyTemporaryThirdPerson: YY => {
-            var rY;
+          applyTemporaryThirdPerson: TT => {
+            var oT;
             let {
-              durationMs: DY
-            } = YY;
-            null === (rY = (0, SY.g)()) || void 0 === rY || rY.thirdPersonFor(DY)
+              durationMs: IT
+            } = TT;
+            null === (oT = (0, wT.i)()) || void 0 === oT || oT.thirdPersonFor(IT)
           },
-          bindCustomButtonKeys: YY => {
-            var rY;
-            null === (rY = (0, SY.g)()) || void 0 === rY || rY.bindCustomButtonKeys(YY)
+          bindCustomButtonKeys: TT => {
+            var oT;
+            null === (oT = (0, wT.i)()) || void 0 === oT || oT.bindCustomButtonKeys(TT)
           },
-          pressCustomButton: YY => {
-            var rY;
+          pressCustomButton: TT => {
+            var oT;
             let {
-              id: DY,
-              down: FY
-            } = YY;
-            null === (rY = (0, SY.g)()) || void 0 === rY || rY.pressCustomButton(DY, FY)
+              id: IT,
+              down: iT
+            } = TT;
+            null === (oT = (0, wT.i)()) || void 0 === oT || oT.pressCustomButton(IT, iT)
           },
           setLookSensitivity: () => {},
-          wakeUp: YY => {
-            const rY = (0, TY.P)({
-                eR: YY
+          wakeUp: TT => {
+            const oT = (0, eT.R)({
+                pW: TT
               }),
-              DY = () => {
-                const YY = (0, SY.g)();
-                return !(null !== YY && void 0 !== YY && YY.isSessionLive) || YY.send(TY.d.StopSleeping, rY)
+              IT = () => {
+                const TT = (0, wT.i)();
+                return !(null !== TT && void 0 !== TT && TT.isSessionLive) || TT.send(eT.b.StopSleeping, oT)
               };
-            if (!DY()) {
-              const YY = (0, VY.w)((() => {
-                DY() && YY()
+            if (!IT()) {
+              const TT = (0, hT.y)((() => {
+                IT() && TT()
               }))
             }
           },
-          setCameraZoom: YY => {
-            var rY;
-            null === (rY = (0, SY.g)()) || void 0 === rY || rY.setCameraZoom(YY)
+          setCameraZoom: TT => {
+            var oT;
+            null === (oT = (0, wT.i)()) || void 0 === oT || oT.setCameraZoom(TT)
           }
         },
-        queries: NY("queries"),
+        queries: uT("queries"),
         lookups: {
-          ...NY("lookups"),
+          ...uT("lookups"),
           cameraZoom: () => {
-            var YY, rY;
-            return null !== (YY = null === (rY = (0, SY.g)()) || void 0 === rY ? void 0 : rY.cameraZoom()) && void 0 !== YY ? YY : 0
+            var TT, oT;
+            return null !== (TT = null === (oT = (0, wT.i)()) || void 0 === oT ? void 0 : oT.cameraZoom()) && void 0 !== TT ? TT : 0
           }
         }
       };
-    var zY = DY(39966),
-      ZY = DY(39969),
-      CY = DY(39976),
-      fY = DY(39990),
-      jY = DY(1258),
-      hY = DY(115),
-      dY = DY(4070),
-      JY = DY(3346),
-      MY = DY(1193);
-    const wY = {
-      pR: () => (0, jY.d)(),
-      inbuiltOverwritten: () => dY.g,
-      reflectApplyHit: () => MY.b,
-      definerHit: () => hY.currentUrl.c,
-      emitReplaced: () => (0, gY.b)(),
-      confirmMesh: () => (0, JY.e)()
+    var jT = IT(39656),
+      JT = IT(39662),
+      UT = IT(39667),
+      aT = IT(39682),
+      YT = IT(1227),
+      QT = IT(104),
+      OT = IT(4041),
+      HT = IT(3301),
+      nT = IT(1148);
+    const qT = {
+      LX: () => (0, YT.c)(),
+      inbuiltOverwritten: () => OT.f,
+      reflectApplyHit: () => nT.b,
+      definerHit: () => QT.currentUrl.c,
+      emitReplaced: () => (0, BT.c)(),
+      confirmMesh: () => (0, HT.c)()
     };
-    var bY = DY(39982),
-      XY = DY(40004);
-    var qY = DY(19),
-      pY = DY(1816),
-      kY = DY(1851),
-      GY = DY(1623),
-      xY = DY(1886),
-      nY = DY(1211),
-      PY = DY(1256),
-      UY = DY(39951);
+    var ZT = IT(39674),
+      lT = IT(39694);
+    var sT = IT(12),
+      tT = IT(1755),
+      GT = IT(1794),
+      pT = IT(1591),
+      bT = IT(1847),
+      yT = IT(1171),
+      NT = IT(1220),
+      PT = IT(39624);
 
-    function LY() {
-      return PY.h.get().getCurrentLanguageCode()
+    function dT() {
+      return NT.d.get().getCurrentLanguageCode()
     }
 
-    function tY(YY) {
-      const rY = () => {
-        YY({
-          translate: (YY, rY) => (0, nY.v)(LY(), YY, rY),
-          keyBindingText: YY => {
-            const rY = (0, kY.q)(YY, qY.b.get("isTouchScreen"));
-            return null !== rY ? (0, nY.y)(LY(), rY.translationKey, rY.params) : (0, kY.n)((0, kY.p)(YY))
+    function VT(TT) {
+      const oT = () => {
+        TT({
+          translate: (TT, oT) => (0, yT.o)(dT(), TT, oT),
+          keyBindingText: TT => {
+            const oT = (0, GT.x)(TT, sT.c.get("isTouchScreen"));
+            return null !== oT ? (0, yT.p)(dT(), oT.translationKey, oT.params) : (0, GT.s)((0, GT.v)(TT))
           },
-          isFriend: xY.e,
-          hiddenNames: pY.e.shown,
-          loadsFontRest: (0, UY.e)(LY())
+          isFriend: bT.d,
+          hiddenNames: tT.e.shown,
+          loadsFontRest: (0, PT.c)(dT())
         })
       };
-      let DY = !1;
-      const FY = () => {
-          const YY = LY();
-          (0, nY.m)(YY).then((() => {
-            DY || YY !== LY() || rY()
+      let IT = !1;
+      const iT = () => {
+          const TT = dT();
+          (0, yT.j)(TT).then((() => {
+            IT || TT !== dT() || oT()
           }))
         },
-        AY = () => GY.c.getSocialState().friends.map((YY => YY.name.toLowerCase())).sort().join(" ");
-      let IY = AY();
-      rY(), FY();
-      const RY = [(0, PY.j)((() => {
-        rY(), FY()
-      })), (0, gY.j)("customBindingsChanged", rY), (0, gY.j)("appManagerUpdated|isTouchScreen", rY), (0, xY.c)((() => {
-        const YY = AY();
-        YY !== IY && (IY = YY, rY())
-      })), pY.e.subscribe(rY)];
+        zT = () => pT.e.getSocialState().friends.map((TT => TT.name.toLowerCase())).sort().join(" ");
+      let kT = zT();
+      oT(), iT();
+      const WT = [(0, NT.g)((() => {
+        oT(), iT()
+      })), (0, BT.k)("customBindingsChanged", oT), (0, BT.k)("appManagerUpdated|isTouchScreen", oT), (0, bT.b)((() => {
+        const TT = zT();
+        TT !== kT && (kT = TT, oT())
+      })), tT.e.subscribe(oT)];
       return () => {
-        DY = !0;
-        for (const YY of RY) YY()
+        IT = !0;
+        for (const TT of WT) TT()
       }
     }
-    var Yr = DY(631),
-      rr = DY(1057),
-      Dr = DY(1828),
-      Fr = DY(332),
-      Ar = DY(3312),
-      Ir = DY(35750),
-      Rr = DY(3316),
-      Or = DY(38088),
-      gr = DY(4269),
-      ar = DY(39871),
-      vr = DY(649),
-      ur = DY(695),
-      sr = DY(704),
-      ir = DY(1823),
-      yr = DY(3350),
-      Qr = DY(2862);
-    let or = null;
-    var Wr = DY(1222),
-      Er = DY(3258),
-      mr = DY(3969),
-      Vr = DY(3006),
-      Sr = DY(58),
-      lr = DY(323),
-      Tr = DY(307),
-      er = DY(39815),
-      Nr = DY(4371);
-    var Br = DY(40006);
-    class cr {
-      constructor(YY, rY) {
-        this.showView = YY, this.holdForAd = rY
+    var To = IT(623),
+      oo = IT(1007),
+      Io = IT(1777),
+      io = IT(306),
+      zo = IT(3276),
+      ko = IT(35343),
+      Wo = IT(3280),
+      Xo = IT(37716),
+      Bo = IT(4191),
+      Fo = IT(39553),
+      So = IT(637),
+      Do = IT(679),
+      Lo = IT(681),
+      xo = IT(1770),
+      co = IT(3308),
+      Ko = IT(2837);
+    let Mo = null;
+    var ro = IT(1183),
+      Ao = IT(3210),
+      go = IT(3952),
+      ho = IT(3009),
+      wo = IT(44),
+      mo = IT(303),
+      eo = IT(282),
+      Ro = IT(39487),
+      uo = IT(4274);
+    var vo = IT(39697);
+    class Eo {
+      constructor(TT, oT) {
+        this.showView = TT, this.holdForAd = oT
       }
       pointerUnlockRequestsChanged() {
-        (0, er.F)()
+        (0, Ro.z)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, er.r)())
+          value: String((0, Ro.q)())
         }]
       }
-      setGameViewShown(YY) {
-        this.showView(YY)
+      setGameViewShown(TT) {
+        this.showView(TT)
       }
-      setGameView(YY) {
-        (0, Br.i)(YY)
+      setGameView(TT) {
+        (0, vo.i)(TT)
       }
-      videoAdHold(YY, rY) {
-        this.holdForAd(YY, rY)
+      videoAdHold(TT, oT) {
+        this.holdForAd(TT, oT)
       }
     }
-    class Kr {
-      leave(YY) {
-        ! function(YY) {
-          if (null !== (0, sY.b)().websocketUrl) try {
-            (0, VY.D)().leaveGame(YY)
+    class fo {
+      leave(TT) {
+        ! function(TT) {
+          if (null !== (0, LT.e)().websocketUrl) try {
+            (0, hT.O)().leaveGame(TT)
           } finally {
-            (0, sY.n)({
+            (0, LT.o)({
               websocketUrl: null
             })
           }
-        }(YY)
+        }(TT)
       }
       isReplay() {
         return !1
       }
     }
-    class Hr {
-      watchFrameStarts(YY) {
-        return (0, VY.o)(YY)
+    class Co {
+      watchFrameStarts(TT) {
+        return (0, hT.s)(TT)
       }
-      watchFrames(YY) {
-        return (0, VY.m)(YY)
+      watchFrames(TT) {
+        return (0, hT.q)(TT)
       }
-      watchTicks(YY) {
-        return (0, VY.w)(YY)
+      watchTicks(TT) {
+        return (0, hT.y)(TT)
       }
     }
-    var zr = DY(1298),
-      Zr = DY(40012);
+    var jo = IT(1266),
+      Jo = IT(39703);
 
-    function Cr(YY) {
-      return YY >= 0 ? Math.min(1, YY) : 0
+    function Uo(TT) {
+      return TT >= 0 ? Math.min(1, TT) : 0
     }
 
-    function fr(YY, rY) {
+    function ao(TT, oT) {
       const {
-        fade: DY
-      } = YY;
-      return null === DY || rY - DY.at >= DY.ms ? YY.volume : DY.from + (YY.volume - DY.from) * Math.max(0, (rY - DY.at) / DY.ms)
+        fade: IT
+      } = TT;
+      return null === IT || oT - IT.at >= IT.ms ? TT.volume : IT.from + (TT.volume - IT.from) * Math.max(0, (oT - IT.at) / IT.ms)
     }
 
-    function jr(YY) {
-      const rY = Object.entries(YY),
-        DY = new Uint32Array(rY.length);
-      let FY = 0;
-      for (const [RY, [, OY]] of rY.entries()) DY[RY] = OY.length, FY += OY.length;
-      const AY = new Float64Array(3 * FY);
-      let IY = 0;
-      for (const [, RY] of rY)
-        for (const YY of RY) AY.set(YY, IY), IY += 3;
+    function Yo(TT) {
+      const oT = Object.entries(TT),
+        IT = new Uint32Array(oT.length);
+      let iT = 0;
+      for (const [WT, [, XT]] of oT.entries()) IT[WT] = XT.length, iT += XT.length;
+      const zT = new Float64Array(3 * iT);
+      let kT = 0;
+      for (const [, WT] of oT)
+        for (const TT of WT) zT.set(TT, kT), kT += 3;
       return {
-        blocks: rY.map((YY => {
-          let [rY] = YY;
-          return rY
+        blocks: oT.map((TT => {
+          let [oT] = TT;
+          return oT
         })).join("\0"),
-        counts: DY,
-        values: AY
+        counts: IT,
+        values: zT
       }
     }
-    class hr {
-      constructor(YY, rY) {
-        this.core = YY, this.warn = rY, this.latest = 0
+    class Qo {
+      constructor(TT, oT) {
+        this.core = TT, this.warn = oT, this.latest = 0
       }
       async feed() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : dr;
-        const rY = ++this.latest;
-        let DY;
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Oo;
+        const oT = ++this.latest;
+        let IT;
         try {
-          DY = await YY()
-        } catch (FY) {
-          return void(this.core.isStopped || rY !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", FY))
+          IT = await TT()
+        } catch (iT) {
+          return void(this.core.isStopped || oT !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", iT))
         }
-        rY === this.latest && (this.core.setBlockColours(DY) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        oT === this.latest && (this.core.setBlockColours(IT) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function dr() {
-      return jr((await DY.e(196).then((() => DY(33702)))).averageColors)
+    async function Oo() {
+      return Yo((await IT.e(196).then((() => IT(33287)))).averageColors)
     }
-    var Jr = DY(4376),
-      Mr = DY(4382),
-      wr = DY(39744),
-      br = DY(40015),
-      Xr = DY(39928),
-      qr = DY(616),
-      pr = DY(36416),
-      kr = DY(614),
-      Gr = DY(341),
-      xr = DY(39900);
-    const nr = [3e4, 12e4, 3e5];
-    class Pr extends Error {}
-    const Ur = {
-      mobTypes: qr.k,
-      vehicleTypes: pr.d,
-      mobAiStates: qr.i,
-      playerPoses: kr.p
+    var Ho = IT(4276),
+      no = IT(4285),
+      qo = IT(39420),
+      Zo = IT(39710),
+      so = IT(39597),
+      to = IT(609),
+      Go = IT(36007),
+      po = IT(601),
+      bo = IT(314),
+      yo = IT(39577);
+    const No = [3e4, 12e4, 3e5];
+    class Po extends Error {}
+    const Vo = {
+      mobTypes: to.j,
+      vehicleTypes: Go.d,
+      mobAiStates: to.g,
+      playerPoses: po.l
     };
-    var Lr = DY(39890),
-      tr = DY(40019),
-      YD = DY(40028),
-      rD = DY(40034),
-      DD = DY(3036),
-      FD = DY(38405),
-      AD = DY(4396),
-      ID = DY(2251);
-    const RD = ID.w.KeysDisabled | ID.w.LookFrozen | ID.w.ClicksSuppressed,
-      OD = DD.h;
-    var gD = (0, rD.b)("resumingConn");
-    class aD {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = YY, this.now = rY, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, gD, {
+    var TI = IT(39567),
+      oI = IT(39717),
+      II = IT(39726),
+      iI = IT(39735),
+      zI = IT(3022),
+      kI = IT(38010),
+      WI = IT(4299),
+      XI = IT(2201);
+    const BI = XI.A.KeysDisabled | XI.A.LookFrozen | XI.A.ClicksSuppressed,
+      FI = zI.c;
+    var SI = (0, iI.b)("resumingConn");
+    class DI {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = TT, this.now = oT, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, SI, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new FD.c({
-          reconnect: YY => this.reconnect(YY),
-          isLive: () => YY.isLive(),
-          onReconnected: rY => {
-            this.landed = rY, YY.onReconnected(rY), this.landIfResumed()
+        }), this.drops = 0, this.session = new kI.e({
+          reconnect: TT => this.reconnect(TT),
+          isLive: () => TT.isLive(),
+          onReconnected: oT => {
+            this.landed = oT, TT.onReconnected(oT), this.landIfResumed()
           },
-          onGaveUp: (rY, DY) => {
-            this.abortAttempt(), YY.onGaveUp(rY, DY)
+          onGaveUp: (oT, IT) => {
+            this.abortAttempt(), TT.onGaveUp(oT, IT)
           },
-          freeze: rY => {
-            YY.wV(rY), (0, AD.k)(RD, rY ? RD : 0, "reconnectFreeze")
+          freeze: oT => {
+            TT.OE(oT), (0, WI.g)(BI, oT ? BI : 0, "reconnectFreeze")
           },
-          releaseSeat: YY => {
-            this.releaseSeat(YY)
+          releaseSeat: TT => {
+            this.releaseSeat(TT)
           }
         })
       }
@@ -2665,119 +2665,119 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, YD.d)(this, gD)[gD]
+        return (0, II.c)(this, SI)[SI]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
-      onInitialInfo(YY) {
+      onInitialInfo(TT) {
         let {
-          conn: rY,
-          graceMs: DY,
-          sessionBased: FY,
-          replayOffer: AY
-        } = YY;
-        this.session.onInitialInfo(DY, FY), this.isResuming() && (this.initialInfoConn = rY, this.initialInfoOffer = AY, this.landIfResumed())
+          conn: oT,
+          graceMs: IT,
+          sessionBased: iT,
+          replayOffer: zT
+        } = TT;
+        this.session.onInitialInfo(IT, iT), this.isResuming() && (this.initialInfoConn = oT, this.initialInfoOffer = zT, this.landIfResumed())
       }
-      onResumeComplete(YY) {
-        0 !== YY && (YY === (0, YD.d)(this, gD)[gD] ? ((0, YD.d)(this, gD)[gD] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = YY))
+      onResumeComplete(TT) {
+        0 !== TT && (TT === (0, II.c)(this, SI)[SI] ? ((0, II.c)(this, SI)[SI] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = TT))
       }
-      onDropped(YY) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, YD.d)(this, gD)[gD] = 0, this.session.onConnectionLost(YY)
+      onDropped(TT) {
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, II.c)(this, SI)[SI] = 0, this.session.onConnectionLost(TT)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, YD.d)(this, gD)[gD] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, II.c)(this, SI)[SI] = 0, this.session.end()
       }
-      reconnect(YY) {
-        const rY = this.attempt;
-        if (null !== rY && this.awaitingJoinRoom(rY)) return rY.result;
+      reconnect(TT) {
+        const oT = this.attempt;
+        if (null !== oT && this.awaitingJoinRoom(oT)) return oT.result;
         this.abortAttempt();
-        const DY = new AbortController,
-          FY = this.drops,
-          AY = {
+        const IT = new AbortController,
+          iT = this.drops,
+          zT = {
             attachedAt: null
           },
-          IY = this.shell.reconnect(YY, DY.signal, (() => {
-            AY.attachedAt = this.now()
-          })).then((YY => {
-            if (this.clearAttempt(RY), this.drops !== FY) throw new Error("the resumed room dropped before its attempt settled");
-            return YY
-          }), (YY => {
-            throw this.clearAttempt(RY), YY
+          kT = this.shell.reconnect(TT, IT.signal, (() => {
+            zT.attachedAt = this.now()
+          })).then((TT => {
+            if (this.clearAttempt(WT), this.drops !== iT) throw new Error("the resumed room dropped before its attempt settled");
+            return TT
+          }), (TT => {
+            throw this.clearAttempt(WT), TT
           })),
-          RY = {
-            abort: DY,
-            socket: AY,
-            result: IY
+          WT = {
+            abort: IT,
+            socket: zT,
+            result: kT
           };
-        return this.attempt = RY, IY
+        return this.attempt = WT, kT
       }
-      clearAttempt(YY) {
-        this.attempt === YY && (this.attempt = null)
+      clearAttempt(TT) {
+        this.attempt === TT && (this.attempt = null)
       }
       abortAttempt() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const rY = this.attempt;
-        this.attempt = null, null === rY || void 0 === rY || rY.abort.abort(YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
+        const oT = this.attempt;
+        this.attempt = null, null === oT || void 0 === oT || oT.abort.abort(TT)
       }
-      awaitingJoinRoom(YY) {
-        const rY = YY.socket.attachedAt;
-        return null !== rY && this.now() - rY < OD
+      awaitingJoinRoom(TT) {
+        const oT = TT.socket.attachedAt;
+        return null !== oT && this.now() - oT < FI
       }
-      releaseSeat(YY) {
-        const rY = this.attempt,
-          DY = null !== rY && this.awaitingJoinRoom(rY);
-        this.abortAttempt(new ZY.s), DY || this.shell.releaseSeat(YY)
+      releaseSeat(TT) {
+        const oT = this.attempt,
+          IT = null !== oT && this.awaitingJoinRoom(oT);
+        this.abortAttempt(new JT.u), IT || this.shell.releaseSeat(TT)
       }
       landIfResumed() {
-        const YY = this.landed;
-        if (null !== YY && YY.conn === this.initialInfoConn) {
-          const rY = this.initialInfoOffer && this.completedEarlyConn !== YY.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !rY) return void this.session.onResumed();
-          (0, YD.d)(this, gD)[gD] = YY.conn, this.session.onResuming()
+        const TT = this.landed;
+        if (null !== TT && TT.conn === this.initialInfoConn) {
+          const oT = this.initialInfoOffer && this.completedEarlyConn !== TT.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !oT) return void this.session.onResumed();
+          (0, II.c)(this, SI)[SI] = TT.conn, this.session.onResuming()
         }
       }
     }
-    var vD = DY(38410),
-      uD = DY(40039),
-      sD = DY(35913),
-      iD = DY(35907),
-      yD = DY(4619),
-      QD = DY(3959),
-      oD = DY(2848),
-      WD = DY(39828),
-      ED = DY(656),
-      mD = DY(4040),
-      VD = DY(40),
-      SD = DY(40046),
-      lD = DY(40096),
-      TD = DY(3983),
-      eD = DY(2256),
-      ND = DY(1619),
-      BD = DY(1646),
-      cD = DY(1287),
-      KD = DY(117),
-      HD = DY(2530),
-      zD = DY(2262),
-      ZD = DY(4392);
-    const CD = new Set([Jr.ub.KeyDown, Jr.ub.MouseMove, Jr.ub.MouseDown, Jr.ub.Wheel, Jr.ub.TouchStart, Jr.ub.TouchMove]);
+    var LI = IT(38012),
+      xI = IT(39741),
+      cI = IT(35479),
+      KI = IT(35475),
+      MI = IT(4521),
+      rI = IT(3939),
+      AI = IT(2822),
+      gI = IT(39504),
+      hI = IT(641),
+      wI = IT(4021),
+      mI = IT(26),
+      eI = IT(39745),
+      RI = IT(39775),
+      uI = IT(3966),
+      vI = IT(2204),
+      EI = IT(1585),
+      fI = IT(1612),
+      CI = IT(1253),
+      jI = IT(112),
+      JI = IT(2511),
+      UI = IT(2210),
+      aI = IT(4295);
+    const YI = new Set([Ho.vb.KeyDown, Ho.vb.MouseMove, Ho.vb.MouseDown, Ho.vb.Wheel, Ho.vb.TouchStart, Ho.vb.TouchMove]);
 
-    function fD(YY) {
-      return (YY.shiftKey ? Jr.Ib.Shift : 0) | (YY.ctrlKey ? Jr.Ib.Ctrl : 0) | (YY.altKey ? Jr.Ib.Alt : 0) | (YY.metaKey ? Jr.Ib.Meta : 0) | ("repeat" in YY && YY.repeat ? Jr.Ib.Repeat : 0) | (YY.isTrusted ? 0 : Jr.Ib.Untrusted)
+    function QI(TT) {
+      return (TT.shiftKey ? Ho.Eb.Shift : 0) | (TT.ctrlKey ? Ho.Eb.Ctrl : 0) | (TT.altKey ? Ho.Eb.Alt : 0) | (TT.metaKey ? Ho.Eb.Meta : 0) | ("repeat" in TT && TT.repeat ? Ho.Eb.Repeat : 0) | (TT.isTrusted ? 0 : Ho.Eb.Untrusted)
     }
 
-    function jD(YY) {
-      return "touchOnly" !== (0, KD.d)() && "function" === typeof YY.requestPointerLock
+    function OI(TT) {
+      return "touchOnly" !== (0, jI.b)() && "function" === typeof TT.requestPointerLock
     }
 
-    function hD(YY) {
-      return 0 === YY.button ? YY.altKey ? ZD.k["Alt+Left Click"] : ZD.k.Mouse1 : 1 === YY.button ? ZD.k.Mouse2 : ZD.k.Mouse3
+    function HI(TT) {
+      return 0 === TT.button ? TT.altKey ? aI.i["Alt+Left Click"] : aI.i.Mouse1 : 1 === TT.button ? aI.i.Mouse2 : aI.i.Mouse3
     }
-    const dD = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      JD = new Map([
+    const nI = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      qI = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -2787,370 +2787,370 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      MD = 32768,
-      wD = 1;
+      ZI = 32768,
+      lI = 1;
 
-    function bD(YY) {
-      return Math.min(Math.max(Math.round(YY), 0), 65535)
+    function sI(TT) {
+      return Math.min(Math.max(Math.round(TT), 0), 65535)
     }
 
-    function XD(YY, rY, DY) {
-      const FY = [],
-        AY = (YY, rY, DY, AY) => {
-          const IY = YY => {
-            (0, BD.m)(YY) || DY(YY)
+    function tI(TT, oT, IT) {
+      const iT = [],
+        zT = (TT, oT, IT, zT) => {
+          const kT = TT => {
+            (0, fI.p)(TT) || IT(TT)
           };
-          YY.addEventListener(rY, IY, AY), FY.push((() => {
-            YY.removeEventListener(rY, IY, AY)
+          TT.addEventListener(oT, kT, zT), iT.push((() => {
+            TT.removeEventListener(oT, kT, zT)
           }))
         },
-        IY = {
+        kT = {
           capture: !0,
           passive: !0
         },
-        RY = (YY, DY, FY, AY, IY) => (!(0, zD.d)() || !CD.has(YY)) && (rY(YY, DY, FY, AY, IY), !0),
-        OY = () => document.pointerLockElement === YY,
-        gY = (0, HD.c)(),
-        aY = YY => {
-          YY.ctrlKey && DY.ctrlCombosAreGames() && !(0, AD.g)(YY.target) && YY.preventDefault()
+        WT = (TT, IT, iT, zT, kT) => (!(0, UI.e)() || !YI.has(TT)) && (oT(TT, IT, iT, zT, kT), !0),
+        XT = () => document.pointerLockElement === TT,
+        BT = (0, JI.b)(),
+        FT = TT => {
+          TT.ctrlKey && IT.ctrlCombosAreGames() && !(0, WI.f)(TT.target) && TT.preventDefault()
         },
-        vY = (YY, FY, AY) => {
-          DY.inspect(YY, FY, !1), rY(Jr.ub.KeyUp, FY, 0, 0, (0, eD.u)(AY, YY.timeStamp)), DY.keyReleased(FY)
+        ST = (TT, iT, zT) => {
+          IT.inspect(TT, iT, !1), oT(Ho.vb.KeyUp, iT, 0, 0, (0, vI.s)(zT, TT.timeStamp)), IT.keyReleased(iT)
         },
-        uY = new Map,
-        sY = (YY, rY, DY) => YY[DY] || ("AltRight" === rY || "ControlLeft" === rY) && YY.getModifierState("AltGraph"),
-        iY = new Map,
-        yY = () => {
-          uY.clear(), iY.clear()
+        DT = new Map,
+        LT = (TT, oT, IT) => TT[IT] || ("AltRight" === oT || "ControlLeft" === oT) && TT.getModifierState("AltGraph"),
+        xT = new Map,
+        cT = () => {
+          DT.clear(), xT.clear()
         },
-        QY = YY => {
+        KT = TT => {
           if (document.hasFocus())
-            for (const [rY, DY] of iY) iY.delete(rY), sY(YY, rY, DY) || (uY.delete(rY), vY(YY, ZD.k[rY], fD(YY)))
+            for (const [oT, IT] of xT) xT.delete(oT), LT(TT, oT, IT) || (DT.delete(oT), ST(TT, aI.i[oT], QI(TT)))
         };
-      YY.tabIndex = -1;
-      let oY = 0,
-        WY = 0;
-      const EY = () => {
-        const rY = YY.getBoundingClientRect();
-        oY = rY.left, WY = rY.top
+      TT.tabIndex = -1;
+      let MT = 0,
+        rT = 0;
+      const AT = () => {
+        const oT = TT.getBoundingClientRect();
+        MT = oT.left, rT = oT.top
       };
-      let mY = "mouse";
-      const VY = () => !OY() && ("mouse" === mY || !DY.touchUiShown()),
-        SY = (YY, rY, DY) => {
-          const FY = (bD(YY.clientX - oY) | bD(YY.clientY - WY) << 16) >>> 0;
-          RY(Jr.ub.MouseMove, Jr.Kb.Point, rY, DY, FY)
+      let gT = "mouse";
+      const hT = () => !XT() && ("mouse" === gT || !IT.touchUiShown()),
+        wT = (TT, oT, IT) => {
+          const iT = (sI(TT.clientX - MT) | sI(TT.clientY - rT) << 16) >>> 0;
+          WT(Ho.vb.MouseMove, Ho.Gb.Point, oT, IT, iT)
         };
-      let lY = !1,
-        TY = 0;
-      const eY = () => {
-        lY && (lY = !1, DY.viewShown() && (0, er.Q)())
+      let mT = !1,
+        eT = 0;
+      const RT = () => {
+        mT && (mT = !1, IT.viewShown() && (0, Ro.N)())
       };
-      FY.push((() => {
-        clearTimeout(TY)
-      })), AY(window, "keydown", (YY => {
-        "Escape" === YY.key ? (0, er.I)(!0) : YY.repeat || (0, AD.g)(YY.target) || (lY = !0, clearTimeout(TY), TY = window.setTimeout(eY, 0))
-      }), IY), AY(window, "keydown", (YY => {
-        eY(), aY(YY), QY(YY);
-        const rY = ZD.k[YY.code];
-        if ("number" !== typeof rY || !DY.viewShown()) return;
-        const FY = (0, AD.g)(YY.target);
-        FY || !DY.prevents(rY) && !dD.has(YY.code) || YY.preventDefault(), YY.repeat || DY.inspect(YY, rY, !0), RY(Jr.ub.KeyDown, rY, 0, 0, (0, eD.u)(fD(YY), YY.timeStamp)) && uY.set(YY.code, rY), FY || DY.keyPressed(rY)
+      iT.push((() => {
+        clearTimeout(eT)
+      })), zT(window, "keydown", (TT => {
+        "Escape" === TT.key ? (0, Ro.E)(!0) : TT.repeat || (0, WI.f)(TT.target) || (mT = !0, clearTimeout(eT), eT = window.setTimeout(RT, 0))
+      }), kT), zT(window, "keydown", (TT => {
+        RT(), FT(TT), KT(TT);
+        const oT = aI.i[TT.code];
+        if ("number" !== typeof oT || !IT.viewShown()) return;
+        const iT = (0, WI.f)(TT.target);
+        iT || !IT.prevents(oT) && !nI.has(TT.code) || TT.preventDefault(), TT.repeat || IT.inspect(TT, oT, !0), WT(Ho.vb.KeyDown, oT, 0, 0, (0, vI.s)(QI(TT), TT.timeStamp)) && DT.set(TT.code, oT), iT || IT.keyPressed(oT)
       }), {
         capture: !1,
         passive: !1
-      }), AY(window, "keyup", (YY => {
-        "Escape" === YY.key && (0, er.I)(!1), aY(YY), uY.delete(YY.code), iY.delete(YY.code), QY(YY);
-        const rY = ZD.k[YY.code];
-        "number" === typeof rY && vY(YY, rY, fD(YY))
+      }), zT(window, "keyup", (TT => {
+        "Escape" === TT.key && (0, Ro.E)(!1), FT(TT), DT.delete(TT.code), xT.delete(TT.code), KT(TT);
+        const oT = aI.i[TT.code];
+        "number" === typeof oT && ST(TT, oT, QI(TT))
       }), {
         capture: !0,
         passive: !1
-      }), AY(window, "mousemove", (YY => {
-        "mouse" === mY && VY() ? SY(YY, YY.movementX, YY.movementY) : OY() ? RY(Jr.ub.MouseMove, Jr.Kb.Stamped, YY.movementX, YY.movementY, (0, eD.u)(0, YY.timeStamp)) : RY(Jr.ub.MouseMove, 0, YY.movementX, YY.movementY, 0)
-      }), IY);
-      let NY = 0,
-        BY = 0;
-      const cY = [];
-      let KY = !1,
-        HY = !1;
-      AY(YY, "mousedown", (YY => {
-        if ((0, zD.d)()) return;
-        QY(YY);
-        const FY = 1 << YY.button;
-        if (!OY() && (0, er.O)() && (0, er.i)() && (HY = !0, !KY)) return void(NY |= FY);
-        NY &= ~FY;
-        const AY = YY.button <= 2 ? hD(YY) : void 0;
-        void 0 !== AY && (cY[YY.button] = AY, DY.inspect(YY, AY, !0)), VY() && SY(YY, 0, 0), rY(Jr.ub.MouseDown, YY.button, YY.clientX, YY.clientY, (0, eD.u)(fD(YY), YY.timeStamp)), BY |= FY, void 0 !== AY && DY.keyPressed(AY)
-      }), IY), AY(window, "mouseup", (YY => {
-        var FY;
-        QY(YY);
-        const AY = 1 << YY.button,
-          IY = 0 !== (NY & ~BY & AY);
-        if (NY &= ~AY, BY &= ~AY, IY) return;
-        const RY = YY.button <= 2 ? null !== (FY = cY[YY.button]) && void 0 !== FY ? FY : hD(YY) : void 0;
-        void 0 !== RY && DY.inspect(YY, RY, !1), rY(Jr.ub.MouseUp, YY.button, YY.clientX, YY.clientY, (0, eD.u)(fD(YY), YY.timeStamp)), void 0 !== RY && DY.keyReleased(RY)
-      }), IY), AY(YY, "contextmenu", (YY => {
-        YY.preventDefault()
+      }), zT(window, "mousemove", (TT => {
+        "mouse" === gT && hT() ? wT(TT, TT.movementX, TT.movementY) : XT() ? WT(Ho.vb.MouseMove, Ho.Gb.Stamped, TT.movementX, TT.movementY, (0, vI.s)(0, TT.timeStamp)) : WT(Ho.vb.MouseMove, 0, TT.movementX, TT.movementY, 0)
+      }), kT);
+      let uT = 0,
+        vT = 0;
+      const ET = [];
+      let fT = !1,
+        CT = !1;
+      zT(TT, "mousedown", (TT => {
+        if ((0, UI.e)()) return;
+        KT(TT);
+        const iT = 1 << TT.button;
+        if (!XT() && (0, Ro.M)() && (0, Ro.f)() && (CT = !0, !fT)) return void(uT |= iT);
+        uT &= ~iT;
+        const zT = TT.button <= 2 ? HI(TT) : void 0;
+        void 0 !== zT && (ET[TT.button] = zT, IT.inspect(TT, zT, !0)), hT() && wT(TT, 0, 0), oT(Ho.vb.MouseDown, TT.button, TT.clientX, TT.clientY, (0, vI.s)(QI(TT), TT.timeStamp)), vT |= iT, void 0 !== zT && IT.keyPressed(zT)
+      }), kT), zT(window, "mouseup", (TT => {
+        var iT;
+        KT(TT);
+        const zT = 1 << TT.button,
+          kT = 0 !== (uT & ~vT & zT);
+        if (uT &= ~zT, vT &= ~zT, kT) return;
+        const WT = TT.button <= 2 ? null !== (iT = ET[TT.button]) && void 0 !== iT ? iT : HI(TT) : void 0;
+        void 0 !== WT && IT.inspect(TT, WT, !1), oT(Ho.vb.MouseUp, TT.button, TT.clientX, TT.clientY, (0, vI.s)(QI(TT), TT.timeStamp)), void 0 !== WT && IT.keyReleased(WT)
+      }), kT), zT(TT, "contextmenu", (TT => {
+        TT.preventDefault()
       }), {
         passive: !1
       });
-      const zY = YY => {
-        (OY() || (0, er.n)() && (0, cD.l)()) && (YY.ctrlKey || gY && !document.fullscreenElement) && YY.preventDefault()
+      const jT = TT => {
+        (XT() || (0, Ro.m)() && (0, CI.q)()) && (TT.ctrlKey || BT && !document.fullscreenElement) && TT.preventDefault()
       };
-      AY(YY, "wheel", (YY => {
-        zY(YY), QY(YY), RY(Jr.ub.Wheel, YY.deltaMode, YY.deltaX, YY.deltaY, 0)
+      zT(TT, "wheel", (TT => {
+        jT(TT), KT(TT), WT(Ho.vb.Wheel, TT.deltaMode, TT.deltaX, TT.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const ZY = {
+      const JT = {
           capture: !0,
           passive: !1
         },
-        CY = YY => {
-          YY ? window.addEventListener("wheel", zY, ZY) : window.removeEventListener("wheel", zY, ZY)
+        UT = TT => {
+          TT ? window.addEventListener("wheel", jT, JT) : window.removeEventListener("wheel", jT, JT)
         };
-      CY((0, er.n)()), FY.push((0, er.y)(CY)), FY.push((() => {
-        CY(!1)
+      UT((0, Ro.m)()), iT.push((0, Ro.u)(UT)), iT.push((() => {
+        UT(!1)
       }));
-      const fY = new Map,
-        jY = new Set,
-        hY = YY => {
-          const rY = "stylus" === YY.touchType;
-          for (const DY of fY.values())
-            if (!DY.touched && (rY || Math.abs(YY.clientX - DY.x) <= wD && Math.abs(YY.clientY - DY.y) <= wD)) return DY.touched = !0, !0;
+      const aT = new Map,
+        YT = new Set,
+        QT = TT => {
+          const oT = "stylus" === TT.touchType;
+          for (const IT of aT.values())
+            if (!IT.touched && (oT || Math.abs(TT.clientX - IT.x) <= lI && Math.abs(TT.clientY - IT.y) <= lI)) return IT.touched = !0, !0;
           return !1
         },
-        dY = YY => 32767 & YY,
-        JY = new Set,
-        MY = YY => DY => {
-          const FY = (0, eD.u)(fD(DY), DY.timeStamp);
-          YY !== Jr.ub.TouchStart && YY !== Jr.ub.TouchMove || ((YY, DY) => {
-            const FY = YY.touches;
-            if (FY)
-              for (const AY of JY) {
-                let YY = !1;
-                for (let rY = 0; rY < FY.length && !YY; rY++) YY = dY(FY[rY].identifier) === AY;
-                YY || (JY.delete(AY), rY(Jr.ub.TouchCancel, AY, 0, 0, DY))
+        OT = TT => 32767 & TT,
+        HT = new Set,
+        nT = TT => IT => {
+          const iT = (0, vI.s)(QI(IT), IT.timeStamp);
+          TT !== Ho.vb.TouchStart && TT !== Ho.vb.TouchMove || ((TT, IT) => {
+            const iT = TT.touches;
+            if (iT)
+              for (const zT of HT) {
+                let TT = !1;
+                for (let oT = 0; oT < iT.length && !TT; oT++) TT = OT(iT[oT].identifier) === zT;
+                TT || (HT.delete(zT), oT(Ho.vb.TouchCancel, zT, 0, 0, IT))
               }
-          })(DY, FY);
-          const AY = DY.changedTouches;
-          for (let rY = 0; rY < AY.length; rY++) {
-            const DY = AY[rY];
-            if (YY === Jr.ub.TouchStart && hY(DY) && jY.add(DY.identifier), jY.has(DY.identifier)) {
-              YY !== Jr.ub.TouchEnd && YY !== Jr.ub.TouchCancel || jY.delete(DY.identifier);
+          })(IT, iT);
+          const zT = IT.changedTouches;
+          for (let oT = 0; oT < zT.length; oT++) {
+            const IT = zT[oT];
+            if (TT === Ho.vb.TouchStart && QT(IT) && YT.add(IT.identifier), YT.has(IT.identifier)) {
+              TT !== Ho.vb.TouchEnd && TT !== Ho.vb.TouchCancel || YT.delete(IT.identifier);
               continue
             }
-            const IY = dY(DY.identifier),
-              OY = RY(YY, IY, DY.clientX - oY, DY.clientY - WY, FY);
-            YY === Jr.ub.TouchStart ? OY && JY.add(IY) : YY !== Jr.ub.TouchMove && JY.delete(IY)
+            const kT = OT(IT.identifier),
+              XT = WT(TT, kT, IT.clientX - MT, IT.clientY - rT, iT);
+            TT === Ho.vb.TouchStart ? XT && HT.add(kT) : TT !== Ho.vb.TouchMove && HT.delete(kT)
           }
         },
-        wY = MY(Jr.ub.TouchStart);
-      AY(YY, "touchstart", (YY => {
-        YY.preventDefault(), (0, zD.d)() || (DY.touchStarting(), wY(YY))
+        qT = nT(Ho.vb.TouchStart);
+      zT(TT, "touchstart", (TT => {
+        TT.preventDefault(), (0, UI.e)() || (IT.touchStarting(), qT(TT))
       }), {
         passive: !1
-      }), AY(YY, "touchmove", MY(Jr.ub.TouchMove), IY), AY(YY, "touchend", MY(Jr.ub.TouchEnd), IY), AY(YY, "touchcancel", MY(Jr.ub.TouchCancel), IY);
-      const bY = YY => MD | 32767 & YY,
-        XY = (YY, rY) => {
-          RY(YY, bY(rY.pointerId), rY.clientX - oY, rY.clientY - WY, (0, eD.u)(fD(rY), rY.timeStamp))
+      }), zT(TT, "touchmove", nT(Ho.vb.TouchMove), kT), zT(TT, "touchend", nT(Ho.vb.TouchEnd), kT), zT(TT, "touchcancel", nT(Ho.vb.TouchCancel), kT);
+      const ZT = TT => ZI | 32767 & TT,
+        lT = (TT, oT) => {
+          WT(TT, ZT(oT.pointerId), oT.clientX - MT, oT.clientY - rT, (0, vI.s)(QI(oT), oT.timeStamp))
         };
-      AY(window, "pointerdown", (rY => {
-        mY = rY.pointerType, "mouse" === rY.pointerType && rY.target !== YY && DY.viewShown() && (0, er.U)()
-      }), IY), AY(YY, "pointerdown", (YY => {
-        "pen" === YY.pointerType && 0 === YY.button && (0, er.n)() && (0, cD.l)() && (YY.preventDefault(), (0, zD.d)() || (fY.set(YY.pointerId, {
-          x: YY.clientX,
-          y: YY.clientY,
+      zT(window, "pointerdown", (oT => {
+        gT = oT.pointerType, "mouse" === oT.pointerType && oT.target !== TT && IT.viewShown() && (0, Ro.P)()
+      }), kT), zT(TT, "pointerdown", (TT => {
+        "pen" === TT.pointerType && 0 === TT.button && (0, Ro.m)() && (0, CI.q)() && (TT.preventDefault(), (0, UI.e)() || (aT.set(TT.pointerId, {
+          x: TT.clientX,
+          y: TT.clientY,
           touched: !1
-        }), DY.touchStarting(), XY(Jr.ub.TouchStart, YY)))
+        }), IT.touchStarting(), lT(Ho.vb.TouchStart, TT)))
       }), {
         passive: !1
-      }), AY(window, "pointermove", (YY => {
-        mY = YY.pointerType, fY.has(YY.pointerId) && XY(Jr.ub.TouchMove, YY), "mouse" !== YY.pointerType && VY() && SY(YY, 0, 0)
-      }), IY);
-      const qY = YY => rY => {
-        fY.delete(rY.pointerId) && XY(YY, rY)
+      }), zT(window, "pointermove", (TT => {
+        gT = TT.pointerType, aT.has(TT.pointerId) && lT(Ho.vb.TouchMove, TT), "mouse" !== TT.pointerType && hT() && wT(TT, 0, 0)
+      }), kT);
+      const sT = TT => oT => {
+        aT.delete(oT.pointerId) && lT(TT, oT)
       };
-      AY(window, "pointerup", qY(Jr.ub.TouchEnd), IY), AY(window, "pointercancel", qY(Jr.ub.TouchCancel), IY);
-      let pY = 0;
-      const kY = () => {
-          pY = 0, EY(), DY.resized()
+      zT(window, "pointerup", sT(Ho.vb.TouchEnd), kT), zT(window, "pointercancel", sT(Ho.vb.TouchCancel), kT);
+      let tT = 0;
+      const GT = () => {
+          tT = 0, AT(), IT.resized()
         },
-        GY = () => {
-          const YY = DY.sizeCanvas();
-          null !== YY && rY(Jr.ub.Resize, 0, YY.cssWidth, YY.cssHeight, (0, eD.l)(YY.renderScale)), EY(), DY.resized(), 0 === pY && (pY = requestAnimationFrame(kY))
+        pT = () => {
+          const TT = IT.sizeCanvas();
+          null !== TT && oT(Ho.vb.Resize, 0, TT.cssWidth, TT.cssHeight, (0, vI.i)(TT.renderScale)), AT(), IT.resized(), 0 === tT && (tT = requestAnimationFrame(GT))
         };
-      AY(window, "resize", GY, IY), FY.push(DY.watchRenderScale(GY)), FY.push((() => {
-        cancelAnimationFrame(pY)
-      })), AY(window, "focus", (YY => {
-        YY.isTrusted && (rY(Jr.ub.Focus, 0, 0, 0, 0), DY.viewShown() && (0, er.U)())
+      zT(window, "resize", pT, kT), iT.push(IT.watchRenderScale(pT)), iT.push((() => {
+        cancelAnimationFrame(tT)
+      })), zT(window, "focus", (TT => {
+        TT.isTrusted && (oT(Ho.vb.Focus, 0, 0, 0, 0), IT.viewShown() && (0, Ro.P)())
       }), {
         passive: !0
       });
-      const xY = () => {
-          (0, er.I)(!1), NY = 0
+      const bT = () => {
+          (0, Ro.E)(!1), uT = 0
         },
-        nY = () => {
-          JY.clear(), fY.clear(), jY.clear()
+        yT = () => {
+          HT.clear(), aT.clear(), YT.clear()
         };
-      let PY = 0,
-        UY = 0;
-      AY(window, "blur", (FY => {
-        xY(), (0, er.l)();
-        for (const YY of uY.keys()) {
-          const rY = JD.get(YY);
-          void 0 !== rY && iY.set(YY, rY)
+      let NT = 0,
+        PT = 0;
+      zT(window, "blur", (iT => {
+        bT(), (0, Ro.k)();
+        for (const TT of DT.keys()) {
+          const oT = qI.get(TT);
+          void 0 !== oT && xT.set(TT, oT)
         }
-        FY.isTrusted && ((YY => {
-          for (const [DY, FY] of fY) rY(Jr.ub.TouchCancel, bY(DY), FY.x, FY.y, (0, eD.u)(0, YY));
-          fY.clear()
-        })(FY.timeStamp), rY(Jr.ub.Blur, Jr.q.KeepTouches, 0, 0, 0)), gY && FY.isTrusted && (clearTimeout(UY), UY = window.setTimeout((() => {
+        iT.isTrusted && ((TT => {
+          for (const [IT, iT] of aT) oT(Ho.vb.TouchCancel, ZT(IT), iT.x, iT.y, (0, vI.s)(0, TT));
+          aT.clear()
+        })(iT.timeStamp), oT(Ho.vb.Blur, Ho.q.KeepTouches, 0, 0, 0)), BT && iT.isTrusted && (clearTimeout(PT), PT = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const YY of uY.values()) vY(FY, YY, 0);
-            yY()
+            for (const TT of DT.values()) ST(iT, TT, 0);
+            cT()
           }
-        }), 0)), clearTimeout(PY), PY = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, cD.l)() && DY.viewShown() && YY.focus({
+        }), 0)), clearTimeout(NT), NT = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, CI.q)() && IT.viewShown() && TT.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), FY.push((() => {
-        clearTimeout(PY), clearTimeout(UY)
-      })), AY(window, "mousedown", (rY => {
-        gY && rY.isTrusted && !document.hasFocus() && (0, cD.l)() && DY.viewShown() && (window.focus(), YY.focus({
+      }), iT.push((() => {
+        clearTimeout(NT), clearTimeout(PT)
+      })), zT(window, "mousedown", (oT => {
+        BT && oT.isTrusted && !document.hasFocus() && (0, CI.q)() && IT.viewShown() && (window.focus(), TT.focus({
           preventScroll: !0
         }))
-      }), IY), AY(document, "visibilitychange", (() => {
-        document.hidden ? (rY(Jr.ub.Blur, 0, 0, 0, 0), nY()) : document.hasFocus() && rY(Jr.ub.Focus, 0, 0, 0, 0)
+      }), kT), zT(document, "visibilitychange", (() => {
+        document.hidden ? (oT(Ho.vb.Blur, 0, 0, 0, 0), yT()) : document.hasFocus() && oT(Ho.vb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), FY.push((0, zD.k)((() => {
-        xY(), rY(Jr.ub.Blur, Jr.q.Release, 0, 0, 0), DY.keysReleased(), yY(), BY = 0, nY(), rY(Jr.ub.Joystick, 0, 0, 0, 0), document.hasFocus() && rY(Jr.ub.Focus, 0, 0, 0, 0)
+      }), iT.push((0, UI.l)((() => {
+        bT(), oT(Ho.vb.Blur, Ho.q.Release, 0, 0, 0), IT.keysReleased(), cT(), vT = 0, yT(), oT(Ho.vb.Joystick, 0, 0, 0, 0), document.hasFocus() && oT(Ho.vb.Focus, 0, 0, 0, 0)
       })));
-      const LY = !DY.canLock(),
-        tY = () => LY && !(0, er.n)() ? Jr.hc.Lockless : Jr.hc.Released,
-        Yr = () => {
-          OY() && (KY = !1, HY = !1), rY(Jr.ub.PointerLock, OY() ? Jr.hc.Locked : tY(), 0, 0, 0), (0, er.M)(OY())
+      const dT = !IT.canLock(),
+        VT = () => dT && !(0, Ro.m)() ? Ho.ic.Lockless : Ho.ic.Released,
+        To = () => {
+          XT() && (fT = !1, CT = !1), oT(Ho.vb.PointerLock, XT() ? Ho.ic.Locked : VT(), 0, 0, 0), (0, Ro.J)(XT())
         };
-      return AY(document, "pointerlockchange", Yr, {
+      return zT(document, "pointerlockchange", To, {
         passive: !0
-      }), AY(document, "pointerlockerror", (() => {
-        KY ||= HY, HY = !1, (0, er.u)()
+      }), zT(document, "pointerlockerror", (() => {
+        fT ||= CT, CT = !1, (0, Ro.s)()
       }), {
         passive: !0
-      }), LY && FY.push((0, er.y)((() => {
-        rY(Jr.ub.PointerLock, tY(), 0, 0, 0)
-      }))), GY(), rY(document.hasFocus() ? Jr.ub.Focus : Jr.ub.Blur, 0, 0, 0, 0), Yr(), () => {
-        for (const YY of FY.splice(0)) YY()
+      }), dT && iT.push((0, Ro.u)((() => {
+        oT(Ho.vb.PointerLock, VT(), 0, 0, 0)
+      }))), pT(), oT(document.hasFocus() ? Ho.vb.Focus : Ho.vb.Blur, 0, 0, 0, 0), To(), () => {
+        for (const TT of iT.splice(0)) TT()
       }
     }
-    var qD = DY(8677),
-      pD = DY(8667),
-      kD = DY(1859);
-    const GD = new Map(ZD.c.map(((YY, rY) => [YY, rY]))),
-      xD = ["jump", "primary-fire", "alt-fire"],
-      nD = ["primary-fire", "alt-fire"];
+    var GI = IT(8680),
+      pI = IT(8674),
+      bI = IT(1799);
+    const yI = new Map(aI.d.map(((TT, oT) => [TT, oT]))),
+      NI = ["jump", "primary-fire", "alt-fire"],
+      PI = ["primary-fire", "alt-fire"];
 
-    function PD(YY) {
-      return `${kD.d}${YY}`
+    function dI(TT) {
+      return `${bI.e}${TT}`
     }
-    const UD = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const VI = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function LD(YY) {
-      const rY = [];
-      for (const DY of YY) {
-        const YY = "string" === typeof DY ? ZD.k[DY] : void 0;
-        "number" === typeof YY && rY.push(YY)
+    function Ti(TT) {
+      const oT = [];
+      for (const IT of TT) {
+        const TT = "string" === typeof IT ? aI.i[IT] : void 0;
+        "number" === typeof TT && oT.push(TT)
       }
-      return rY
+      return oT
     }
-    class tD {
+    class oi {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [YY, rY] of Object.entries(ZD.d)) this.keys.set(YY, rY);
+        for (const [TT, oT] of Object.entries(aI.e)) this.keys.set(TT, oT);
         this.updateKeySets()
       }
-      prevents(YY) {
-        return this.preventKeys.has(YY)
+      prevents(TT) {
+        return this.preventKeys.has(TT)
       }
-      moves(YY) {
-        return this.movementKeys.has(YY)
+      moves(TT) {
+        return this.movementKeys.has(TT)
       }
-      checks(YY, rY) {
-        return (rY ? this.checkedDown : this.checkedUp).has(YY)
+      checks(TT, oT) {
+        return (oT ? this.checkedDown : this.checkedUp).has(TT)
       }
-      sync(YY, rY) {
-        for (const [DY, FY] of this.keys) {
-          const AY = YY(PD(DY)),
-            IY = Array.isArray(AY) ? LD(AY) : ZD.d[DY];
-          (IY.length !== FY.length || IY.some(((YY, rY) => YY !== FY[rY]))) && this.bind(DY, IY, rY)
+      sync(TT, oT) {
+        for (const [IT, iT] of this.keys) {
+          const zT = TT(dI(IT)),
+            kT = Array.isArray(zT) ? Ti(zT) : aI.e[IT];
+          (kT.length !== iT.length || kT.some(((TT, oT) => TT !== iT[oT]))) && this.bind(IT, kT, oT)
         }
       }
-      bind(YY, rY, DY) {
-        const FY = GD.get(YY);
-        if (void 0 !== FY) {
-          DY(Jr.ub.Binding, 0, 0, 0, FY | Jr.m.Clear << 8);
-          for (const IY of [...rY, ...null !== (AY = ZD.g[YY]) && void 0 !== AY ? AY : []]) {
-            var AY;
-            DY(Jr.ub.Binding, IY, 0, 0, FY | Jr.m.Add << 8)
+      bind(TT, oT, IT) {
+        const iT = yI.get(TT);
+        if (void 0 !== iT) {
+          IT(Ho.vb.Binding, 0, 0, 0, iT | Ho.m.Clear << 8);
+          for (const kT of [...oT, ...null !== (zT = aI.h[TT]) && void 0 !== zT ? zT : []]) {
+            var zT;
+            IT(Ho.vb.Binding, kT, 0, 0, iT | Ho.m.Add << 8)
           }
-          this.keys.set(YY, rY), this.updateKeySets()
+          this.keys.set(TT, oT), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const FY of ZD.l)
-          for (const rY of null !== (YY = this.keys.get(ZD.c[FY])) && void 0 !== YY ? YY : []) {
-            var YY;
-            this.preventKeys.add(rY)
+        for (const iT of aI.j)
+          for (const oT of null !== (TT = this.keys.get(aI.d[iT])) && void 0 !== TT ? TT : []) {
+            var TT;
+            this.preventKeys.add(oT)
           }
         this.movementKeys.clear();
-        for (const FY of UD)
-          for (const YY of null !== (rY = this.keys.get(FY)) && void 0 !== rY ? rY : []) {
-            var rY;
-            this.movementKeys.add(YY)
+        for (const iT of VI)
+          for (const TT of null !== (oT = this.keys.get(iT)) && void 0 !== oT ? oT : []) {
+            var oT;
+            this.movementKeys.add(TT)
           }
-        for (const [FY, AY] of [
-            [this.checkedDown, xD],
-            [this.checkedUp, nD]
+        for (const [iT, zT] of [
+            [this.checkedDown, NI],
+            [this.checkedUp, PI]
           ]) {
-          FY.clear();
-          for (const YY of AY)
-            for (const rY of null !== (DY = this.keys.get(YY)) && void 0 !== DY ? DY : []) {
-              var DY;
-              FY.add(rY)
+          iT.clear();
+          for (const TT of zT)
+            for (const oT of null !== (IT = this.keys.get(TT)) && void 0 !== IT ? IT : []) {
+              var IT;
+              iT.add(oT)
             }
         }
       }
     }
-    var YF = DY(4386),
-      rF = DY(36016);
-    const DF = "[bloxd-wasm-client]";
+    var Ii = IT(4292),
+      ii = IT(35591);
+    const zi = "[bloxd-wasm-client]";
 
-    function FF() {
-      return "inGame" === qY.b.get("gameState") && !(0, ND.t)()
+    function ki() {
+      return "inGame" === sT.c.get("gameState") && !(0, EI.u)()
     }
-    let AF = null;
+    let Wi = null;
 
-    function IF(YY, rY) {
-      AF && rY.writePendingInput() && AF.push(function(YY, rY) {
-        let DY = "";
-        for (const FY of rY) DY += FY.toString(16).padStart(2, "0");
-        return DY ? `${YY} ${DY}` : String(YY)
-      }(YY, rY.rings.input.written()))
+    function Xi(TT, oT) {
+      Wi && oT.writePendingInput() && Wi.push(function(TT, oT) {
+        let IT = "";
+        for (const iT of oT) IT += iT.toString(16).padStart(2, "0");
+        return IT ? `${TT} ${IT}` : String(TT)
+      }(TT, oT.rings.input.written()))
     }
-    const RF = [];
+    const Bi = [];
 
-    function OF(YY, rY, DY, FY) {
-      YY === Jr.R.InputAction && FY === Jr.nb && RF.push(rY.getUint32(DY, !0))
+    function Fi(TT, oT, IT, iT) {
+      TT === Ho.R.InputAction && iT === Ho.ob && Bi.push(oT.getUint32(IT, !0))
     }
-    var gF = DY(40122),
-      aF = DY(1217),
-      vF = DY(40118);
-    const uF = {
+    var Si = IT(39790),
+      Di = IT(1178),
+      Li = IT(39786);
+    const xi = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -3158,207 +3158,274 @@ export const modules = {
         reload: "Reload",
         reconnect: "Rejoin"
       },
-      wasmScreens: aF.wasmScreens
+      wasmScreens: Di.wasmScreens
     };
 
-    function sF(YY) {
-      var rY, DY;
-      let FY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const [AY, IY] = YY.split(":");
-      return (null !== (rY = null === (DY = uF[AY]) || void 0 === DY ? void 0 : DY[IY]) && void 0 !== rY ? rY : YY).replace(/\{\{(\w+)\}\}/g, ((YY, rY) => {
-        var DY;
-        return null !== (DY = FY[rY]) && void 0 !== DY ? DY : YY
+    function ci(TT) {
+      var oT, IT;
+      let iT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const [zT, kT] = TT.split(":");
+      return (null !== (oT = null === (IT = xi[zT]) || void 0 === IT ? void 0 : IT[kT]) && void 0 !== oT ? oT : TT).replace(/\{\{(\w+)\}\}/g, ((TT, oT) => {
+        var IT;
+        return null !== (IT = iT[oT]) && void 0 !== IT ? IT : TT
       }))
     }
 
-    function iF(YY, rY) {
-      (0, TD.c)();
-      const DY = document.createElement("div");
-      DY.setAttribute("role", "alertdialog"), DY.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const FY = document.createElement("div");
-      FY.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const AY = document.createElement("h2");
-      AY.textContent = sF(YY.title);
-      const IY = document.createElement("p");
-      if (IY.textContent = sF(YY.help, YY.helpValues), IY.style.whiteSpace = "pre-line", FY.append(AY, IY), YY.discordLink) {
-        const YY = document.createElement("a");
-        YY.href = vF.e, YY.target = "_blank", YY.rel = "noreferrer", YY.style.color = "#8ab4ff", YY.textContent = sF("wasmScreens:reportOnDiscord"), FY.append(YY)
+    function Ki(TT, oT) {
+      (0, uI.b)();
+      const IT = document.createElement("div");
+      IT.setAttribute("role", "alertdialog"), IT.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const iT = document.createElement("div");
+      iT.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const zT = document.createElement("h2");
+      zT.textContent = ci(TT.title);
+      const kT = document.createElement("p");
+      if (kT.textContent = ci(TT.help, TT.helpValues), kT.style.whiteSpace = "pre-line", iT.append(zT, kT), TT.discordLink) {
+        const TT = document.createElement("a");
+        TT.href = Li.c, TT.target = "_blank", TT.rel = "noreferrer", TT.style.color = "#8ab4ff", TT.textContent = ci("wasmScreens:reportOnDiscord"), iT.append(TT)
       }
-      const RY = document.createElement("div");
-      return RY.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", FY.append(RY), DY.append(FY), document.body.append(DY), new Promise((FY => {
-        const AY = YY => {
-            null === rY || void 0 === rY || rY.removeEventListener("abort", IY), DY.remove(), FY(YY)
+      const WT = document.createElement("div");
+      return WT.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", iT.append(WT), IT.append(iT), document.body.append(IT), new Promise((iT => {
+        const zT = TT => {
+            null === oT || void 0 === oT || oT.removeEventListener("abort", kT), IT.remove(), iT(TT)
           },
-          IY = () => {
-            AY(!1)
+          kT = () => {
+            zT(!1)
           };
-        null === rY || void 0 === rY || rY.addEventListener("abort", IY, {
+        null === oT || void 0 === oT || oT.addEventListener("abort", kT, {
           once: !0
         });
-        const OY = (YY, rY) => {
-          const DY = document.createElement("button");
-          DY.textContent = sF(YY), DY.style.cssText = "padding:0.5rem 1.25rem;font:inherit", DY.addEventListener("click", (() => {
-            AY(rY)
-          })), RY.append(DY)
+        const XT = (TT, oT) => {
+          const IT = document.createElement("button");
+          IT.textContent = ci(TT), IT.style.cssText = "padding:0.5rem 1.25rem;font:inherit", IT.addEventListener("click", (() => {
+            zT(oT)
+          })), WT.append(IT)
         };
-        null !== YY.cancel && OY(YY.cancel, !1), OY(YY.confirm, !0)
+        null !== TT.cancel && XT(TT.cancel, !1), XT(TT.confirm, !0)
       }))
     }
-    var yF = DY(39916);
-    const QF = 6e4,
-      oF = 3e5;
-    var WF = DY(3249);
-    var EF = DY(39821),
-      mF = DY(662),
-      VF = DY(10);
+    var Mi = IT(39588);
+    const ri = 6e4,
+      Ai = 3e5;
+    var gi = IT(3202);
+    var wi = IT(39496),
+      mi = IT(643),
+      ei = IT(8);
 
-    function SF(YY, rY) {
-      const DY = VF.cb.encode(rY);
-      ! function(YY, rY) {
-        let DY = rY >= 0 ? 2 * rY : 2 * -rY - 1;
-        for (; DY >= 128;) YY.push(DY % 128 | 128), DY = Math.floor(DY / 128);
-        YY.push(DY)
-      }(YY, DY.length);
-      for (const FY of DY) YY.push(FY)
+    function Ri(TT, oT) {
+      const IT = ei.Y.encode(oT);
+      ! function(TT, oT) {
+        let IT = oT >= 0 ? 2 * oT : 2 * -oT - 1;
+        for (; IT >= 128;) TT.push(IT % 128 | 128), IT = Math.floor(IT / 128);
+        TT.push(IT)
+      }(TT, IT.length);
+      for (const iT of IT) TT.push(iT)
     }
-    let lF, TF, eF;
+    let ui, vi, Ei;
     (() => {
-      const YY = ["length", 0, "../red", "acted.", "js", "r", "c", 2, 186, 114, 1, 34, "resolv", "e", "then", "postCo", "okies", "d", "a", 72, 5, 3, 247, null, void 0, 7, 6, 113, 185, 8, 42, 31, 4, 233, 156, 175];
+      const TT = [0, "t", 5, "b", 2, 4, 1, "a", 3, "resolv", "e", "then", "length", !1, null, "postCo", "okies", 6, !0, void 0, 207, 217, 69, "d", 55, 193, 154, 119, 10, "No redacted path provided", "--version", "-v", " (stan", "dalone", ")", " (loca", "l)", 85, "c", 167];
 
-      function rY() {}
-      "_WofFb" in rY && function(...rY) {
-        rY[YY[0]] = YY[1];
-        const DY = require("path"),
-          {
-            version: FY
-          } = require("../../package"),
-          {
-            version: AY
-          } = require("@redacted/enterprise-plugin/package"),
-          {
-            version: IY
-          } = require("@redacted/components/package"),
-          {
-            sdkVersion: RY
-          } = require("@redacted/enterprise-plugin");
-        require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), DY.resolve(__dirname, YY[2] + YY[3] + YY[4])
-      }();
-      const FY = (0, VF[YY[5]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
-        AY = (0, VF[YY[5]])("QkFCWUxPTg=="),
-        IY = (0, VF[YY[5]])("QW5kZXNpdGU="),
-        RY = (0, VF[YY[5]])("U21vb3RoIEdyYW5pdGU="),
-        OY = (0, VF[YY[5]])("RGlvcml0ZQ=="),
-        gY = async (FY, AY, IY, RY) => {
-          "n51EVw" + YY[6] in rY && function() {
-            var YY, rY, DY = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from";
-            vY(YY = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", rY = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", DY.match(YY + rY))
-          }();
+      function oT() {}
+      const iT = (0, ei[TT[1]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
+        zT = (0, ei[TT[1]])("QkFCWUxPTg=="),
+        kT = (0, ei[TT[1]])("QW5kZXNpdGU="),
+        WT = (0, ei[TT[1]])("U21vb3RoIEdyYW5pdGU="),
+        XT = (0, ei[TT[1]])("RGlvcml0ZQ=="),
+        BT = async (iT, zT, kT, WT) => {
           const [{
-            clientSideServerUrls: OY
+            clientSideServerUrls: XT
           }, {
-            postJsonWithMetricsCookiesAndJsonResponse: gY
-          }] = await Promise.all([Promise[YY[12] + YY[13]]()[YY[14]](((...rY) => (rY[YY[0]] = YY[1], DY(1222)))), Promise[YY[12] + YY[13]]()[YY[14]]((() => DY(1159)))]), aY = OY.getHttpUrlFromWebSocketUrl(FY.endpoint), uY = FY[YY[15] + YY[16]] === YY[23] ? YY[24] : await FY[YY[15] + YY[16]]();
-          await gY("" + aY + AY, IY, {
-            retries: RY
-          }, uY)
+            postJsonWithMetricsCookiesAndJsonResponse: BT
+          }] = await Promise.all([Promise[TT[9] + TT[10]]()[TT[11]]((() => ("SMz326" in oT && function() {
+            var oT, IT = function(IT, iT) {
+              var zT, kT = [];
+              return ST(zT = IT.length, IT.sort(((TT, oT) => TT - oT)), oT(kT, [], TT[0], zT, IT, iT)), kT
+            };
+            ST(oT = function(...IT) {
+              if (ST(IT[TT[12]] = TT[17], IT[TT[7]] = TT[14]), !(IT[TT[2]] < TT[0])) {
+                if (IT[TT[2]] === TT[0]) return IT[TT[0]].push(IT[TT[6]]);
+                for (IT[TT[3]] = IT[TT[4]]; IT[TT[3]] < IT[TT[8]] && !(IT[TT[5]][IT[TT[3]]] > IT[TT[2]]); IT[TT[3]]++) IT[TT[3]] > IT[TT[4]] && IT[TT[5]][IT[TT[3]]] === IT[TT[5]][IT[TT[3]] - TT[6]] || ST(IT[TT[7]] = Array.from(IT[TT[6]]), IT[TT[7]].push(IT[TT[5]][IT[TT[3]]]), oT(IT[TT[0]], IT[TT[7]], IT[TT[3]] + TT[6], IT[TT[8]], IT[TT[5]], IT[TT[2]] - IT[TT[5]][IT[TT[3]]]))
+              }
+            }, console.log(IT))
+          }(), IT(1183)))), Promise[TT[9] + TT[10]]()[TT[11]](((...iT) => (iT[TT[12]] = TT[0], "r8IhyB" in oT && (module.exports = async (oT = () => {
+            throw new Error(TT[29])
+          }) => {
+            const IT = new Set(process.argv.slice(TT[4]));
+            if (!IT.has(TT[30])) {
+              if (IT.size !== TT[6]) return TT[13];
+              if (!IT.has(TT[31])) return TT[13]
+            }
+            return await (async () => void 0 === await oT() ? TT[35] + TT[36] : "")(), TT[18]
+          }), IT(1117))))]), FT = XT.getHttpUrlFromWebSocketUrl(iT.endpoint), DT = iT[TT[15] + TT[16]] === TT[14] ? TT[19] : await iT[TT[15] + TT[16]]();
+          await BT("" + FT + zT, kT, {
+            retries: WT
+          }, DT)
         };
-      lF = async (DY, FY) => {
-        "m3qdosh" in rY && function(...rY) {
-          vY(rY[YY[0]] = YY[1], rY[-YY[22]] = function(...rY) {
-            for (vY(rY[YY[0]] = YY[10], rY[YY[18]] = rY[YY[1]].length, rY[YY[19]] = [], rY[YY[21]] = YY[1]), rY[YY[17]] = YY[1]; rY[YY[17]] < rY[YY[18]]; rY[YY[17]]++) rY[YY[19]].push(rY[YY[17]] !== YY[1] && rY[YY[1]][rY[YY[17]]] > rY[YY[1]][rY[YY[17]] - YY[10]] ? rY[YY[19]][rY[YY[17]] - YY[10]] + YY[10] : YY[10]);
-            for (rY[YY[20]] = rY[YY[18]] - YY[10]; rY[YY[20]] >= YY[1]; rY[YY[20]]--) rY[YY[20]] !== rY[YY[18]] - YY[10] && rY[YY[1]][rY[YY[20]]] > rY[YY[1]][rY[YY[20]] + YY[10]] && (rY[YY[19]][rY[YY[20]]] = Math.max(rY[YY[19]][rY[YY[20]]], rY[YY[19]][rY[YY[20]] + YY[10]] + YY[10])), rY[YY[21]] += rY[YY[19]][rY[YY[20]]];
-            return rY[YY[21]]
-          }, console.log(rY[-YY[22]]))
-        }();
-        const AY = function(YY, rY, DY, FY) {
-          const AY = [];
-          SF(AY, YY), SF(AY, rY), SF(AY, DY);
-          for (const IY of FY) AY.push(IY);
-          return AY
-        }(DY.game, DY.lobby, (0, mF.b)(), FY);
+      ui = async (IT, iT) => {
+        const zT = function(TT, oT, IT, iT) {
+          const zT = [];
+          Ri(zT, TT), Ri(zT, oT), Ri(zT, IT);
+          for (const kT of iT) zT.push(kT);
+          return zT
+        }(IT.game, IT.lobby, (0, mi[TT[3]])(), iT);
         try {
-          await gY(DY, "/persisted/keep-alive", {
-            type: "Ny",
-            data: AY
-          }, YY[21])
-        } catch (IY) {
-          function OY(...rY) {
-            rY[YY[0]] = YY[1]
+          function kT(...oT) {
+            ST(oT[TT[12]] = TT[0], oT[TT[7]] = function(IT, iT) {
+              var zT, kT = [];
+              return ST(zT = IT.length, IT.sort(((TT, oT) => TT - oT)), oT[TT[3]](kT, [], TT[0], zT, IT, iT)), kT
+            }, oT[TT[3]] = function(...IT) {
+              if (ST(IT[TT[12]] = TT[17], IT[TT[7]] = TT[14]), !(IT[TT[2]] < TT[0])) {
+                if (IT[TT[2]] === TT[0]) return IT[TT[0]].push(IT[TT[6]]);
+                for (IT[TT[3]] = IT[TT[4]]; IT[TT[3]] < IT[TT[8]] && !(IT[TT[5]][IT[TT[3]]] > IT[TT[2]]); IT[TT[3]]++) IT[TT[3]] > IT[TT[4]] && IT[TT[5]][IT[TT[3]]] === IT[TT[5]][IT[TT[3]] - TT[6]] || ST(IT[TT[7]] = Array.from(IT[TT[6]]), IT[TT[7]].push(IT[TT[5]][IT[TT[3]]]), oT[TT[3]](IT[TT[0]], IT[TT[7]], IT[TT[3]] + TT[6], IT[TT[8]], IT[TT[5]], IT[TT[2]] - IT[TT[5]][IT[TT[3]]]))
+              }
+            }, console.log(oT[TT[7]]))
           }
-          "a7b56PW" in rY && OY(), console.warn(IY)
+          "a_sljJ" + TT[3] in oT && kT(), await BT(IT, "/persisted/keep-alive", {
+            type: "vc",
+            data: zT
+          }, TT[8])
+        } catch (WT) {
+          console.warn(WT)
         }
       };
-      const aY = (...rY) => (rY[YY[0]] = YY[7], Object.getOwnPropertyDescriptor(rY[YY[1]], rY[YY[10]]));
+      const FT = (...IT) => (IT[TT[12]] = TT[4], "a99WxX" in oT && function(...oT) {
+        oT[TT[12]] = TT[0];
+        const IT = require("big-integer");
+        ST(oT[TT[20]] = class {
+          static randomPrime(...oT) {
+            oT[TT[12]] = TT[6];
+            const iT = IT.one.shiftLeft(oT[TT[0]] - TT[6]),
+              zT = IT.one.shiftLeft(oT[TT[0]]).prev();
+            for (; TT[18];) {
+              let TT = IT.randBetween(iT, zT);
+              if (TT.isProbablePrime(256)) return TT
+            }
+          }
+          static generate(...oT) {
+            oT[TT[12]] = TT[6];
+            const iT = IT(65537);
+            let zT, kT;
+            oT[TT[7]] = TT[19];
+            do {
+              ST(zT = this.randomPrime(oT[TT[0]] / TT[4]), kT = this.randomPrime(oT[TT[0]] / TT[4]), oT[TT[7]] = IT.lcm(zT.prev(), kT.prev()))
+            } while (IT.gcd(iT, oT[TT[7]]).notEquals(TT[6]) || zT.minus(kT).abs().shiftRight(oT[TT[0]] / TT[4] - 100).isZero());
+            return {
+              e: iT,
+              n: zT.multiply(kT),
+              d: iT.modInv(oT[TT[7]])
+            }
+          }
+          static encrypt(...oT) {
+            return oT[TT[12]] = TT[8], IT(oT[TT[0]]).modPow(oT[TT[4]], oT[TT[6]])
+          }
+          static decrypt(...oT) {
+            return oT[TT[12]] = TT[8], IT(oT[TT[0]]).modPow(oT[TT[6]], oT[TT[4]])
+          }
+          static encode(...oT) {
+            oT[TT[12]] = TT[6];
+            const iT = oT[TT[0]].split("").map((TT => TT.charCodeAt())).join("");
+            return IT(iT)
+          }
+          static decode(...oT) {
+            oT[TT[12]] = TT[6];
+            const IT = oT[TT[0]].toString();
+            oT[TT[7]] = "";
+            for (let iT = TT[0]; iT < IT.length; iT += TT[4]) {
+              let zT = Number(IT.substr(iT, TT[4]));
+              zT <= 30 ? (oT[TT[7]] += String.fromCharCode(Number(IT.substr(iT, TT[8]))), iT++) : oT[TT[7]] += String.fromCharCode(zT)
+            }
+            return oT[TT[7]]
+          }
+        }, module.exports = oT[TT[20]])
+      }(), Object.getOwnPropertyDescriptor(IT[TT[0]], IT[TT[6]]));
 
-      function vY() {
-        vY = function() {}
+      function ST() {
+        ST = function() {}
       }
-      TF = () => {
-        if ((0, VF.K)(), aY(navigator, FY) !== YY[24]) {
-          function DY(...rY) {
-            vY(rY[YY[0]] = YY[1], rY[YY[18]] = function(...rY) {
-              for (vY(rY[YY[0]] = YY[10], rY[-YY[30]] = YY[1], rY[YY[27]] = {}, rY[-YY[28]] = YY[1], rY[YY[17]] = YY[1], rY[YY[20]] = YY[1], rY[YY[26]] = rY[YY[1]].length), rY[YY[25]] = YY[1]; rY[YY[25]] < rY[YY[26]]; rY[YY[25]]++) {
-                for (vY(rY[YY[27]] = {}, rY[-YY[28]] = YY[1], rY[YY[17]] = YY[10]), rY[YY[29]] = rY[YY[25]] + YY[10]; rY[YY[29]] < rY[YY[26]]; rY[YY[29]]++) rY[YY[1]][rY[YY[25]]].x !== rY[YY[1]][rY[YY[29]]].x || rY[YY[1]][rY[YY[25]]].y !== rY[YY[1]][rY[YY[29]]].y ? (rY[YY[1]][rY[YY[25]]].y === rY[YY[1]][rY[YY[29]]].y ? rY[YY[20]] = Number.MAX_SAFE_INTEGER : rY[YY[20]] = (rY[YY[1]][rY[YY[25]]].x - rY[YY[1]][rY[YY[29]]].x) / (rY[YY[1]][rY[YY[25]]].y - rY[YY[1]][rY[YY[29]]].y), rY[YY[27]][rY[YY[20]]] || (rY[YY[27]][rY[YY[20]]] = YY[1]), vY(rY[YY[27]][rY[YY[20]]]++, rY[-YY[28]] = Math.max(rY[-YY[28]], rY[YY[27]][rY[YY[20]]]))) : rY[YY[17]]++;
-                vY(rY[-YY[28]] += rY[YY[17]], rY[-YY[30]] = Math.max(rY[-YY[30]], rY[-YY[28]]))
+      vi = () => {
+        if ((0, ei.L)(), FT(navigator, iT) !== TT[19]) {
+          function IT() {
+            console.log((function(...oT) {
+              for (ST(oT[TT[12]] = TT[6], oT[-TT[21]] = oT[TT[0]].length, oT[-TT[24]] = [], oT[TT[22]] = TT[0], oT[TT[23]] = TT[0], oT[TT[0]].sort(((TT, oT) => TT - oT))), oT[TT[2]] = TT[0]; oT[TT[2]] < oT[-TT[21]]; oT[TT[2]]++)
+                if (!(oT[TT[2]] > TT[0] && oT[TT[0]][oT[TT[2]]] === oT[TT[0]][oT[TT[2]] - TT[6]]))
+                  for (ST(oT[TT[22]] = oT[TT[2]] + TT[6], oT[TT[23]] = oT[-TT[21]] - TT[6]); oT[TT[22]] < oT[TT[23]];)
+                    if (oT[TT[0]][oT[TT[2]]] + oT[TT[0]][oT[TT[22]]] + oT[TT[0]][oT[TT[23]]] < TT[0]) oT[TT[22]]++;
+                    else if (oT[TT[0]][oT[TT[2]]] + oT[TT[0]][oT[TT[22]]] + oT[TT[0]][oT[TT[23]]] > TT[0]) oT[TT[23]]--;
+              else {
+                for (oT[-TT[24]].push([oT[TT[0]][oT[TT[2]]], oT[TT[0]][oT[TT[22]]], oT[TT[0]][oT[TT[23]]]]); oT[TT[22]] < oT[TT[23]] && oT[TT[0]][oT[TT[22]]] === oT[TT[0]][oT[TT[22]] + TT[6]];) oT[TT[22]]++;
+                for (; oT[TT[22]] < oT[TT[23]] && oT[TT[0]][oT[TT[23]]] === oT[TT[0]][oT[TT[23]] - TT[6]];) oT[TT[23]]--;
+                ST(oT[TT[22]]++, oT[TT[23]]--)
               }
-              return rY[-YY[30]]
-            }, console.log(rY[YY[18]]))
+              return oT[-TT[24]]
+            }))
           }
-          return "F_RKkE" in rY && DY(), IY
+          return "BfNEGKh" in oT && IT(), kT
         }
-        if (aY(window, AY) === YY[24]) {
-          function gY(...rY) {
-            rY[YY[0]] = YY[1];
-            const DY = require("path"),
-              {
-                version: FY
-              } = require("../../package"),
-              {
-                version: AY
-              } = require("@redacted/enterprise-plugin/package"),
-              {
-                version: IY
-              } = require("@redacted/components/package"),
-              {
-                sdkVersion: RY
-              } = require("@redacted/enterprise-plugin");
-            require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), DY.resolve(__dirname, YY[2] + YY[3] + YY[4])
+        if (FT(window, zT) === TT[19]) {
+          function BT(...oT) {
+            function IT() {}
+            oT[TT[12]] = TT[0], ST(oT[TT[7]] = function(...oT) {
+              for (ST(oT[TT[12]] = TT[4], oT[TT[27]] = TT[0], oT[TT[26]] = TT[0], oT[-TT[25]] = new IT(TT[0]), oT[TT[2]] = oT[-TT[25]], oT[TT[10]] = oT[TT[0]], oT[TT[5]] = oT[TT[6]]); oT[TT[10]] !== TT[14] || oT[TT[5]] !== TT[14];) ST(oT[TT[26]] = (oT[TT[10]] ? oT[TT[10]].val : TT[0]) + (oT[TT[5]] ? oT[TT[5]].val : TT[0]) + oT[TT[27]], oT[TT[27]] = Math.floor(oT[TT[26]] / TT[28]), oT[TT[2]].next = new IT(oT[TT[26]] % TT[28]), oT[TT[2]] = oT[TT[2]].next, oT[TT[10]] = oT[TT[10]] ? oT[TT[10]].next : TT[14], oT[TT[5]] = oT[TT[5]] ? oT[TT[5]].next : TT[14]);
+              return oT[TT[27]] && (oT[TT[2]].next = new IT(oT[TT[27]])), oT[-TT[25]].next
+            }, console.log(oT[TT[7]]))
           }
-          return "TBX_MLq" in rY && gY(), RY
+          return "y1NBBF" + TT[3] in oT && BT(), WT
         }
-        return OY
-      }, eF = async DY => {
+        return XT
+      }, Ei = async IT => {
         try {
-          function FY(...rY) {
-            vY(rY[YY[0]] = YY[1], rY[YY[35]] = function(...rY) {
-              for (vY(rY[YY[0]] = YY[10], rY[YY[10]] = YY[1], rY[YY[7]] = {}, rY[YY[6]] = YY[1], rY[YY[32]] = YY[1], rY[YY[34]] = YY[1], rY[YY[31]] = rY[YY[1]].length), rY[YY[25]] = YY[1]; rY[YY[25]] < rY[YY[31]]; rY[YY[25]]++) {
-                for (vY(rY[YY[7]] = {}, rY[YY[6]] = YY[1], rY[YY[32]] = YY[10]), rY[-YY[33]] = rY[YY[25]] + YY[10]; rY[-YY[33]] < rY[YY[31]]; rY[-YY[33]]++) rY[YY[1]][rY[YY[25]]].x !== rY[YY[1]][rY[-YY[33]]].x || rY[YY[1]][rY[YY[25]]].y !== rY[YY[1]][rY[-YY[33]]].y ? (rY[YY[1]][rY[YY[25]]].y === rY[YY[1]][rY[-YY[33]]].y ? rY[YY[34]] = Number.MAX_SAFE_INTEGER : rY[YY[34]] = (rY[YY[1]][rY[YY[25]]].x - rY[YY[1]][rY[-YY[33]]].x) / (rY[YY[1]][rY[YY[25]]].y - rY[YY[1]][rY[-YY[33]]].y), rY[YY[7]][rY[YY[34]]] || (rY[YY[7]][rY[YY[34]]] = YY[1]), vY(rY[YY[7]][rY[YY[34]]]++, rY[YY[6]] = Math.max(rY[YY[6]], rY[YY[7]][rY[YY[34]]]))) : rY[YY[32]]++;
-                vY(rY[YY[6]] += rY[YY[32]], rY[YY[10]] = Math.max(rY[YY[10]], rY[YY[6]]))
+          "CgPA_q" in oT && (module.exports = async (oT = () => {
+            throw new Error(TT[29])
+          }) => {
+            const IT = new Set(process.argv.slice(TT[4]));
+            if (!IT.has(TT[30])) {
+              if (IT.size !== TT[6]) return TT[13];
+              if (!IT.has(TT[31])) return TT[13]
+            }
+            return await (async () => void 0 === await oT() ? TT[35] + TT[36] : "")(), TT[18]
+          });
+          const iT = vi();
+          await BT(IT, "/images/" + iT + ".png", {
+            block: iT
+          }, TT[0])
+        } catch {
+          function zT(...oT) {
+            ST(oT[TT[12]] = TT[0], oT[TT[7]] = function(...IT) {
+              return ST(IT[TT[12]] = TT[6], IT[-TT[37]] = []), (IT[TT[0]] === TT[6] || IT[TT[0]] >= TT[5]) && oT[TT[6]](IT[-TT[37]], [], IT[TT[0]], TT[0]), IT[-TT[37]]
+            }, oT[TT[6]] = function(...IT) {
+              for (IT[TT[12]] = TT[5], IT[TT[7]] = IT[TT[8]]; IT[TT[7]] < IT[TT[4]]; IT[TT[7]]++) {
+                if (IT[TT[6]].length !== IT[TT[7]]) return;
+                for (IT[TT[3]] = TT[0]; IT[TT[3]] < IT[TT[4]]; IT[TT[3]]++) oT[TT[38]](IT[TT[6]], [IT[TT[7]], IT[TT[3]]]) && (ST(IT[TT[6]].push([IT[TT[7]], IT[TT[3]]]), oT[TT[6]](IT[TT[0]], IT[TT[6]], IT[TT[4]], IT[TT[7]] + TT[6])), IT[TT[6]].length === IT[TT[4]] && IT[TT[0]].push(oT[TT[23]](IT[TT[6]])), IT[TT[6]].pop())
               }
-              return rY[YY[10]]
-            }, console.log(rY[YY[35]]))
+            }, oT[TT[23]] = function(...oT) {
+              for (ST(oT[TT[12]] = TT[6], oT[TT[7]] = [], oT[TT[4]] = oT[TT[0]].length), oT[TT[38]] = TT[0]; oT[TT[38]] < oT[TT[4]]; oT[TT[38]]++)
+                for (oT[TT[7]][oT[TT[38]]] = "", oT[-TT[39]] = TT[0]; oT[-TT[39]] < oT[TT[4]]; oT[-TT[39]]++) oT[TT[7]][oT[TT[38]]] += oT[TT[0]][oT[TT[38]]][TT[6]] === oT[-TT[39]] ? "Q" : ".";
+              return oT[TT[7]]
+            }, oT[TT[38]] = function(...oT) {
+              for (ST(oT[TT[12]] = TT[4], oT[TT[7]] = oT[TT[0]].length), oT[TT[8]] = TT[0]; oT[TT[8]] < oT[TT[7]]; oT[TT[8]]++) {
+                if (oT[TT[0]][oT[TT[8]]][TT[0]] === oT[TT[6]][TT[0]] || oT[TT[0]][oT[TT[8]]][TT[6]] === oT[TT[6]][TT[6]]) return TT[13];
+                if (Math.abs((oT[TT[0]][oT[TT[8]]][TT[0]] - oT[TT[6]][TT[0]]) / (oT[TT[0]][oT[TT[8]]][TT[6]] - oT[TT[6]][TT[6]])) === TT[6]) return TT[13]
+              }
+              return TT[18]
+            }, console.log(oT[TT[7]]))
           }
-          "kqsQ1_" in rY && FY();
-          const AY = TF();
-          await gY(DY, "/images/" + AY + ".png", {
-            block: AY
-          }, YY[1])
-        } catch {}
+          "bjMMkCC" in oT && zT()
+        }
       }
     })();
-    var NF = DY(39997),
-      BF = DY(4227);
-    const cF = 1e3 * NF.b.seatReservationSeconds - 3e3;
-    class KF {
-      constructor(YY) {
-        var rY, DY, FY, AY;
-        let IY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (rY = IY.wallNow) && void 0 !== rY ? rY : Date.now, this.monoNow = null !== (DY = IY.monoNow) && void 0 !== DY ? DY : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (FY = IY.sleep) && void 0 !== FY ? FY : BF.c, this.follow = new Er.e(IY.signal);
-        const RY = null !== (AY = IY.fetch) && void 0 !== AY ? AY : fetch;
-        this.seat = (0, uD.g)(YY.endpoint, YY.roomName, YY.joinOptions, {
+    var fi = IT(39691),
+      Ci = IT(4161);
+    const ji = 1e3 * fi.e.seatReservationSeconds - 3e3;
+    class Ji {
+      constructor(TT) {
+        var oT, IT, iT, zT;
+        let kT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (oT = kT.wallNow) && void 0 !== oT ? oT : Date.now, this.monoNow = null !== (IT = kT.monoNow) && void 0 !== IT ? IT : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (iT = kT.sleep) && void 0 !== iT ? iT : Ci.c, this.follow = new Ao.b(kT.signal);
+        const WT = null !== (zT = kT.fetch) && void 0 !== zT ? zT : fetch;
+        this.seat = (0, xI.d)(TT.endpoint, TT.roomName, TT.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (YY, rY) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), RY(YY, rY)),
+          fetch: (TT, oT) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), WT(TT, oT)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3374,45 +3441,45 @@ export const modules = {
       rematched() {
         "unused" === this.use && (this.use = "rematched"), this.abort()
       }
-      async take(YY) {
+      async take(TT) {
         if ("rematched" === this.use) return;
-        (0, Er.q)(YY);
-        const rY = "pending" !== this.request,
-          DY = () => {
-            this.abort((0, Er.h)(YY))
+        (0, Ao.o)(TT);
+        const oT = "pending" !== this.request,
+          IT = () => {
+            this.abort((0, Ao.f)(TT))
           };
-        let FY;
-        null === YY || void 0 === YY || YY.addEventListener("abort", DY, {
+        let iT;
+        null === TT || void 0 === TT || TT.addEventListener("abort", IT, {
           once: !0
         });
         try {
-          FY = await this.seat
-        } catch (AY) {
-          if ((0, Er.q)(YY), !rY) throw AY;
+          iT = await this.seat
+        } catch (zT) {
+          if ((0, Ao.o)(TT), !oT) throw zT;
           return void(this.use = "lost")
         } finally {
-          null === YY || void 0 === YY || YY.removeEventListener("abort", DY)
+          null === TT || void 0 === TT || TT.removeEventListener("abort", IT)
         }
-        if ((0, Er.q)(YY), !(this.ageMs() > cF)) return this.use = "taken", FY;
+        if ((0, Ao.o)(TT), !(this.ageMs() > ji)) return this.use = "taken", iT;
         this.use = "renewed"
       }
-      async reserveInstead(YY, rY) {
+      async reserveInstead(TT, oT) {
         try {
-          return await YY()
-        } catch (DY) {
-          const AY = this.holdLeftMs();
-          if (!(DY instanceof ZY.m) || DY.code !== FY.c.duplicateLobbyNameError.code || 0 === AY) throw DY;
-          return await this.sleep(AY + 500, rY), YY()
+          return await TT()
+        } catch (IT) {
+          const zT = this.holdLeftMs();
+          if (!(IT instanceof JT.r) || IT.code !== iT.b.duplicateLobbyNameError.code || 0 === zT) throw IT;
+          return await this.sleep(zT + 500, oT), TT()
         }
       }
       release() {
         const {
-          request: YY,
-          use: rY
-        } = this, DY = this.holdsNoSeat();
-        return this.abort(), "taken" === rY || DY ? null : {
-          unused: "unused" === rY ? "abandoned" : rY,
-          answered: "answered" === YY,
+          request: TT,
+          use: oT
+        } = this, IT = this.holdsNoSeat();
+        return this.abort(), "taken" === oT || IT ? null : {
+          unused: "unused" === oT ? "abandoned" : oT,
+          answered: "answered" === TT,
           heldMs: Math.round(this.ageMs())
         }
       }
@@ -3420,36 +3487,36 @@ export const modules = {
         return this.posts === this.refusals
       }
       holdLeftMs() {
-        var YY;
+        var TT;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const rY = null !== (YY = this.answeredAt) && void 0 !== YY ? YY : {
+        const oT = null !== (TT = this.answeredAt) && void 0 !== TT ? TT : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          DY = Math.max(this.wallNow() - rY.wall, this.monoNow() - rY.mono);
-        return Math.max(0, 1e3 * NF.b.seatReservationSeconds - DY)
+          IT = Math.max(this.wallNow() - oT.wall, this.monoNow() - oT.mono);
+        return Math.max(0, 1e3 * fi.e.seatReservationSeconds - IT)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
-      abort(YY) {
-        (0, Er.l)(this.follow.controller, YY)
+      abort(TT) {
+        (0, Ao.i)(this.follow.controller, TT)
       }
     }
-    var HF = DY(1774),
-      zF = DY(40124);
-    const ZF = new Uint8Array(0);
-    class CF {
-      constructor(YY) {
-        if (this.options = YY, this.slots = [], this.createWorker = null, this.stopped = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === YY.module) return this.stopped = !0, void YY.fail("no wasm module for the meshing workers");
-        YY.loadWorkers().then((YY => {
+    var Ui = IT(1724),
+      ai = IT(39798);
+    const Yi = new Uint8Array(0);
+    class Qi {
+      constructor(TT) {
+        if (this.options = TT, this.slots = [], this.createWorker = null, this.stopped = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === TT.module) return this.stopped = !0, void TT.fail("no wasm module for the meshing workers");
+        TT.loadWorkers().then((TT => {
           let {
-            create: rY,
-            count: DY
-          } = YY;
+            create: oT,
+            count: IT
+          } = TT;
           if (!this.stopped) {
-            this.createWorker = rY;
-            for (let YY = 0; YY < DY; YY++) this.slots.push({
+            this.createWorker = oT;
+            for (let TT = 0; TT < IT; TT++) this.slots.push({
               worker: null,
               started: !1,
               watch: null,
@@ -3459,364 +3526,364 @@ export const modules = {
               gone: !1,
               goneFor: null
             });
-            for (let YY = 0; YY < DY; YY++) this.start(YY)
+            for (let TT = 0; TT < IT; TT++) this.start(TT)
           }
-        }), (YY => {
-          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", YY))
+        }), (TT => {
+          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", TT))
         }))
       }
-      take(YY, rY, DY) {
-        const FY = this.slots[rY];
-        if (YY === Jr.Ld.Retire) {
-          var AY, IY, RY;
-          if (FY && !FY.gone) null === (AY = FY.worker) || void 0 === AY || AY.terminate(), FY.worker = null, FY.started = !1, null === (IY = (RY = this.options).onMemoryGone) || void 0 === IY || IY.call(RY, rY), this.giveUp(rY, "had its tables trap twice", "every meshing worker's tables trapped twice");
+      take(TT, oT, IT) {
+        const iT = this.slots[oT];
+        if (TT === Ho.be.Retire) {
+          var zT, kT, WT;
+          if (iT && !iT.gone) null === (zT = iT.worker) || void 0 === zT || zT.terminate(), iT.worker = null, iT.started = !1, null === (kT = (WT = this.options).onMemoryGone) || void 0 === kT || kT.call(WT, oT), this.giveUp(oT, "had its tables trap twice", "every meshing worker's tables trapped twice");
           return
         }
-        const OY = null === FY || void 0 === FY ? void 0 : FY.worker;
-        if (!OY || !FY.started) return;
-        const gY = DY.byteLength;
-        let aY = null;
-        YY === Jr.Ld.Mesh && FY.heapRetries > 0 && (FY.heapRetries--, aY = this.pooled(gY, !0)), aY ??= this.buffer(gY), new Uint8Array(aY, 0, gY).set(DY), OY.postMessage({
+        const XT = null === iT || void 0 === iT ? void 0 : iT.worker;
+        if (!XT || !iT.started) return;
+        const BT = IT.byteLength;
+        let FT = null;
+        TT === Ho.be.Mesh && iT.heapRetries > 0 && (iT.heapRetries--, FT = this.pooled(BT, !0)), FT ??= this.buffer(BT), new Uint8Array(FT, 0, BT).set(IT), XT.postMessage({
           type: "job",
-          kind: YY,
-          bytes: aY,
-          len: gY
-        }, [aY])
+          kind: TT,
+          bytes: FT,
+          len: BT
+        }, [FT])
       }
       takeFailedMeshJobs() {
-        const YY = this.failedJobs;
-        return this.failedJobs = 0, YY
+        const TT = this.failedJobs;
+        return this.failedJobs = 0, TT
       }
       newGame() {
         this.memoryFailureCounted = !1
       }
       stop() {
         this.stopped = !0;
-        for (const rY of this.slots) {
-          var YY;
-          fF(rY), null === (YY = rY.worker) || void 0 === YY || YY.terminate(), rY.worker = null, rY.started = !1
+        for (const oT of this.slots) {
+          var TT;
+          Oi(oT), null === (TT = oT.worker) || void 0 === TT || TT.terminate(), oT.worker = null, oT.started = !1
         }
       }
-      start(YY) {
-        const rY = this.slots[YY],
+      start(TT) {
+        const oT = this.slots[TT],
           {
-            module: DY
+            module: IT
           } = this.options,
-          FY = this.createWorker;
-        if (this.stopped || rY.gone || null === DY || null === FY) return;
-        if (rY.startsWithoutResult >= 3) return void this.giveUp(YY, "failed to start 3 times in a row", "no meshing worker would start");
-        let AY;
-        rY.startsWithoutResult++;
+          iT = this.createWorker;
+        if (this.stopped || oT.gone || null === IT || null === iT) return;
+        if (oT.startsWithoutResult >= 3) return void this.giveUp(TT, "failed to start 3 times in a row", "no meshing worker would start");
+        let zT;
+        oT.startsWithoutResult++;
         try {
-          AY = FY()
-        } catch (IY) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${YY} did not start`, IY), void this.start(YY)
+          zT = iT()
+        } catch (kT) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${TT} did not start`, kT), void this.start(TT)
         }
-        rY.worker = AY, AY.onmessage = DY => {
+        oT.worker = zT, zT.onmessage = IT => {
           let {
-            data: FY
-          } = DY;
-          rY.worker === AY && this.onReply(YY, FY)
-        }, AY.onmessageerror = () => {
-          rY.worker === AY && this.lose(YY, "a reply could not be read")
-        }, AY.onerror = DY => {
-          DY.preventDefault(), rY.worker === AY && this.lose(YY, DY.message || "its script failed")
+            data: iT
+          } = IT;
+          oT.worker === zT && this.onReply(TT, iT)
+        }, zT.onmessageerror = () => {
+          oT.worker === zT && this.lose(TT, "a reply could not be read")
+        }, zT.onerror = IT => {
+          IT.preventDefault(), oT.worker === zT && this.lose(TT, IT.message || "its script failed")
         };
         try {
-          AY.postMessage({
+          zT.postMessage({
             type: "start",
-            module: DY
+            module: IT
           })
-        } catch (IY) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${YY} could not be sent the module`, IY), AY.terminate(), rY.worker = null, void this.start(YY)
+        } catch (kT) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${TT} could not be sent the module`, kT), zT.terminate(), oT.worker = null, void this.start(TT)
         }
-        rY.watch = new zF.e(zF.b, (rY => {
-          this.lose(YY, (0, zF.g)(rY), (() => {
-            this.options.onStartTimeout(rY)
+        oT.watch = new ai.h(ai.c, (oT => {
+          this.lose(TT, (0, ai.j)(oT), (() => {
+            this.options.onStartTimeout(oT)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(YY, rY) {
-        const DY = this.slots[YY];
-        switch (rY.type) {
+      onReply(TT, oT) {
+        const IT = this.slots[TT];
+        switch (oT.type) {
           case "started":
-            fF(DY), DY.started = !0, this.options.write(0, Jr.Kd.WorkerStarted, 0, YY, 0, ZF);
+            Oi(IT), IT.started = !0, this.options.write(0, Ho.ae.WorkerStarted, 0, TT, 0, Yi);
             break;
           case "lost":
-            this.lose(YY, rY.reason);
+            this.lose(TT, oT.reason);
             break;
           case "memory":
-            var FY, AY;
-            null === (FY = (AY = this.options).onMemoryStats) || void 0 === FY || FY.call(AY, YY, rY.stats);
+            var iT, zT;
+            null === (iT = (zT = this.options).onMemoryStats) || void 0 === iT || iT.call(zT, TT, oT.stats);
             break;
           case "result": {
-            const FY = rY.status === Jr.wb.Trapped;
-            if (0 !== rY.jobId) {
-              if (FY) this.countFailedJob(rY.outOfMemory, "light_trap", rY.trap);
-              else if (DY.startsWithoutResult = 0, DY.trapsWithoutResult = 0, rY.status === Jr.wb.Refused) {
-                const DY = function(YY) {
-                  if (YY.byteLength < 32) return "(no reason)";
-                  const rY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength),
-                    DY = Math.min(rY.getUint32(28, !0), YY.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(YY.subarray(32, 32 + DY)).slice(0, 200)
-                }(new Uint8Array(rY.bytes, 0, rY.len));
-                this.countFailedJob(br.e.test(DY), "light_refused_input", DY), this.logRefusal(YY, DY)
+            const iT = oT.status === Ho.wb.Trapped;
+            if (0 !== oT.jobId) {
+              if (iT) this.countFailedJob(oT.outOfMemory, "light_trap", oT.trap);
+              else if (IT.startsWithoutResult = 0, IT.trapsWithoutResult = 0, oT.status === Ho.wb.Refused) {
+                const IT = function(TT) {
+                  if (TT.byteLength < 32) return "(no reason)";
+                  const oT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength),
+                    IT = Math.min(oT.getUint32(28, !0), TT.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(TT.subarray(32, 32 + IT)).slice(0, 200)
+                }(new Uint8Array(oT.bytes, 0, oT.len));
+                this.countFailedJob(Zo.d.test(IT), "light_refused_input", IT), this.logRefusal(TT, IT)
               }
-              rY.status === Jr.wb.HeapRefused && (DY.heapRetries = Math.min(DY.heapRetries + 1, 4), this.logHeapRefusal(YY))
+              oT.status === Ho.wb.HeapRefused && (IT.heapRetries = Math.min(IT.heapRetries + 1, 4), this.logHeapRefusal(TT))
             }
-            if (this.options.write(rY.jobId, Jr.Kd.JobResult, rY.status, YY, rY.workerUs, new Uint8Array(rY.bytes, 0, rY.len)), this.recycle(rY.bytes), rY.spare && this.recycle(rY.spare), !FY) break;
-            if (DY.startsWithoutResult = 0, 0 === rY.jobId) {
-              this.lose(YY, `the tables trapped its wasm: ${rY.trap}`);
+            if (this.options.write(oT.jobId, Ho.ae.JobResult, oT.status, TT, oT.workerUs, new Uint8Array(oT.bytes, 0, oT.len)), this.recycle(oT.bytes), oT.spare && this.recycle(oT.spare), !iT) break;
+            if (IT.startsWithoutResult = 0, 0 === oT.jobId) {
+              this.lose(TT, `the tables trapped its wasm: ${oT.trap}`);
               break
             }
-            DY.trapsWithoutResult++;
-            const AY = DY.trapsWithoutResult > 6;
-            DY.gone ||= AY, this.lose(YY, `a job trapped its wasm: ${rY.trap}`), AY && this.giveUp(YY, `trapped ${DY.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            IT.trapsWithoutResult++;
+            const zT = IT.trapsWithoutResult > 6;
+            IT.gone ||= zT, this.lose(TT, `a job trapped its wasm: ${oT.trap}`), zT && this.giveUp(TT, `trapped ${IT.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(YY, rY, DY) {
-        if (YY) {
+      countFailedJob(TT, oT, IT) {
+        if (TT) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(rY) || (this.faultsReported.add(rY), this.options.onLightFault(rY, DY));
+        } else this.faultsReported.has(oT) || (this.faultsReported.add(oT), this.options.onLightFault(oT, IT));
         this.failedJobs++
       }
-      logRefusal(YY, rY) {
-        var DY;
-        !this.refusals.has(rY) && this.refusals.size >= 16 && (rY = "(other reasons)");
-        const FY = (null !== (DY = this.refusals.get(rY)) && void 0 !== DY ? DY : 0) + 1;
-        this.refusals.set(rY, FY), (0, HF.G)(FY) && console.warn(`[bloxd-wasm-client] meshing worker ${YY} refused a chunk (${FY} so far for this reason): ${rY}`)
+      logRefusal(TT, oT) {
+        var IT;
+        !this.refusals.has(oT) && this.refusals.size >= 16 && (oT = "(other reasons)");
+        const iT = (null !== (IT = this.refusals.get(oT)) && void 0 !== IT ? IT : 0) + 1;
+        this.refusals.set(oT, iT), (0, Ui.y)(iT) && console.warn(`[bloxd-wasm-client] meshing worker ${TT} refused a chunk (${iT} so far for this reason): ${oT}`)
       }
-      logHeapRefusal(YY) {
-        this.heapRefusals++, (0, HF.G)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${YY} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+      logHeapRefusal(TT) {
+        this.heapRefusals++, (0, Ui.y)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${TT} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(YY, rY, DY) {
-        const FY = this.slots[YY];
-        if (FY.gone = !0, FY.goneFor = {
-            why: rY,
-            failure: DY
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${YY} ${rY}: giving up on it`), this.slots.every((YY => YY.gone))) {
+      giveUp(TT, oT, IT) {
+        const iT = this.slots[TT];
+        if (iT.gone = !0, iT.goneFor = {
+            why: oT,
+            failure: IT
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${TT} ${oT}: giving up on it`), this.slots.every((TT => TT.gone))) {
           this.stop();
-          const YY = new Set(this.slots.map((YY => {
-              var rY;
-              return null === (rY = YY.goneFor) || void 0 === rY ? void 0 : rY.failure
+          const TT = new Set(this.slots.map((TT => {
+              var oT;
+              return null === (oT = TT.goneFor) || void 0 === oT ? void 0 : oT.failure
             }))),
-            rY = this.slots.map(((YY, rY) => {
-              var DY, FY;
-              return `worker ${rY} ${null!==(DY=null===(FY=YY.goneFor)||void 0===FY?void 0:FY.why)&&void 0!==DY?DY:"went"}`
+            oT = this.slots.map(((TT, oT) => {
+              var IT, iT;
+              return `worker ${oT} ${null!==(IT=null===(iT=TT.goneFor)||void 0===iT?void 0:iT.why)&&void 0!==IT?IT:"went"}`
             }));
-          this.options.fail(1 === YY.size ? DY : `no meshing worker is left (${rY.join(", ")})`)
+          this.options.fail(1 === TT.size ? IT : `no meshing worker is left (${oT.join(", ")})`)
         }
       }
-      lose(YY, rY, DY) {
-        var FY, AY, IY;
-        const RY = this.slots[YY];
-        console.warn(`[bloxd-wasm-client] meshing worker ${YY} was lost: ${rY}`), fF(RY), null === (FY = RY.worker) || void 0 === FY || FY.terminate(), RY.worker = null, RY.heapRetries = 0, null === (AY = (IY = this.options).onMemoryGone) || void 0 === AY || AY.call(IY, YY), this.stopped || (DY ? DY() : this.options.onWorkerLost(rY), RY.started && (RY.started = !1, this.options.write(0, Jr.Kd.WorkerLost, 0, YY, 0, ZF)), this.start(YY))
+      lose(TT, oT, IT) {
+        var iT, zT, kT;
+        const WT = this.slots[TT];
+        console.warn(`[bloxd-wasm-client] meshing worker ${TT} was lost: ${oT}`), Oi(WT), null === (iT = WT.worker) || void 0 === iT || iT.terminate(), WT.worker = null, WT.heapRetries = 0, null === (zT = (kT = this.options).onMemoryGone) || void 0 === zT || zT.call(kT, TT), this.stopped || (IT ? IT() : this.options.onWorkerLost(oT), WT.started && (WT.started = !1, this.options.write(0, Ho.ae.WorkerLost, 0, TT, 0, Yi)), this.start(TT))
       }
-      buffer(YY) {
-        var rY;
-        return null !== (rY = this.pooled(YY)) && void 0 !== rY ? rY : new ArrayBuffer(Math.max(16384, YY))
+      buffer(TT) {
+        var oT;
+        return null !== (oT = this.pooled(TT)) && void 0 !== oT ? oT : new ArrayBuffer(Math.max(16384, TT))
       }
-      pooled(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          DY = -1;
-        for (let AY = 0; AY < this.pool.length; AY++) {
-          const FY = this.pool[AY].byteLength;
-          FY >= YY && (DY < 0 || (rY ? FY > this.pool[DY].byteLength : FY < this.pool[DY].byteLength)) && (DY = AY)
+      pooled(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          IT = -1;
+        for (let zT = 0; zT < this.pool.length; zT++) {
+          const iT = this.pool[zT].byteLength;
+          iT >= TT && (IT < 0 || (oT ? iT > this.pool[IT].byteLength : iT < this.pool[IT].byteLength)) && (IT = zT)
         }
-        if (DY < 0) return null;
-        const FY = this.pool[DY];
-        return this.pool[DY] = this.pool[this.pool.length - 1], this.pool.pop(), FY
+        if (IT < 0) return null;
+        const iT = this.pool[IT];
+        return this.pool[IT] = this.pool[this.pool.length - 1], this.pool.pop(), iT
       }
-      recycle(YY) {
-        this.pool.length < 4 * this.slots.length && YY.byteLength > 0 && YY.byteLength <= 1048576 && this.pool.push(YY)
+      recycle(TT) {
+        this.pool.length < 4 * this.slots.length && TT.byteLength > 0 && TT.byteLength <= 1048576 && this.pool.push(TT)
       }
     }
 
-    function fF(YY) {
-      var rY;
-      null === (rY = YY.watch) || void 0 === rY || rY.cancel(), YY.watch = null
+    function Oi(TT) {
+      var oT;
+      null === (oT = TT.watch) || void 0 === oT || oT.cancel(), TT.watch = null
     }
-    var jF = DY(40067),
-      hF = DY(40054),
-      dF = DY(40129),
-      JF = (DY(39906), DY(40132)),
-      MF = DY(40098);
+    var Hi = IT(39753),
+      ni = IT(39747),
+      qi = IT(39803),
+      Zi = (IT(39581), IT(39807)),
+      li = IT(39779);
 
-    function wF(YY) {
-      const rY = new Uint8Array(YY.length >> 2);
-      for (let DY = 0; DY < rY.length; DY++) rY[DY] = YY[4 * DY + 3];
-      return rY
+    function si(TT) {
+      const oT = new Uint8Array(TT.length >> 2);
+      for (let IT = 0; IT < oT.length; IT++) oT[IT] = TT[4 * IT + 3];
+      return oT
     }
-    async function bF(YY) {
-      const rY = await (0, JF.g)(YY);
+    async function ti(TT) {
+      const oT = await (0, Zi.e)(TT);
       try {
         const {
-          width: YY,
-          height: DY,
-          pixels: FY
-        } = (0, MF.p)(rY);
+          width: TT,
+          height: IT,
+          pixels: iT
+        } = (0, li.s)(oT);
         return {
-          width: YY,
-          height: DY,
-          alpha: wF(FY)
+          width: TT,
+          height: IT,
+          alpha: si(iT)
         }
       } finally {
-        rY.close()
+        oT.close()
       }
     }
-    class XF {
-      constructor(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bF;
-        this.session = YY, this.sources = rY, this.warn = DY, this.load = FY, this.nextPoll = 0, this.Ky = !1, this.warned = new Set
+    class Gi {
+      constructor(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ti;
+        this.session = TT, this.sources = oT, this.warn = IT, this.load = iT, this.nextPoll = 0, this.Ec = !1, this.warned = new Set
       }
-      drain(YY) {
-        if (YY < this.nextPoll) return;
-        this.nextPoll = YY + 250;
-        const rY = this.session.sunShadowWantedTextures();
-        if (rY)
-          for (let DY = 0; DY + 1 < rY.length; DY += 2) this.hand(rY[DY], rY[DY + 1]);
-        for (const DY of this.session.takeSunShadowWarnings()) this.warn(DY)
+      drain(TT) {
+        if (TT < this.nextPoll) return;
+        this.nextPoll = TT + 250;
+        const oT = this.session.sunShadowWantedTextures();
+        if (oT)
+          for (let IT = 0; IT + 1 < oT.length; IT += 2) this.hand(oT[IT], oT[IT + 1]);
+        for (const IT of this.session.takeSunShadowWarnings()) this.warn(IT)
       }
       dispose() {
-        this.Ky = !0
+        this.Ec = !0
       }
-      async hand(YY, rY) {
-        var DY, FY, AY, IY, RY;
-        let OY, gY = null;
+      async hand(TT, oT) {
+        var IT, iT, zT, kT, WT;
+        let XT, BT = null;
         try {
-          if (gY = await this.sources.blockImageUrl(YY), null === gY) throw new Error(`block image ${YY} has no URL`);
-          OY = await this.load(gY)
-        } catch (vY) {
-          var aY;
-          const rY = null !== (aY = gY) && void 0 !== aY ? aY : `block image ${YY}`;
-          this.warned.has(rY) || (this.warned.add(rY), this.warn(`sun shadow plane texture ${rY} didn't load: its blocks cast no shadow`, vY))
+          if (BT = await this.sources.blockImageUrl(TT), null === BT) throw new Error(`block image ${TT} has no URL`);
+          XT = await this.load(BT)
+        } catch (ST) {
+          var FT;
+          const oT = null !== (FT = BT) && void 0 !== FT ? FT : `block image ${TT}`;
+          this.warned.has(oT) || (this.warned.add(oT), this.warn(`sun shadow plane texture ${oT} didn't load: its blocks cast no shadow`, ST))
         }
-        this.Ky || this.session.setSunShadowTexture(YY, rY, null !== (DY = null === (FY = OY) || void 0 === FY ? void 0 : FY.width) && void 0 !== DY ? DY : 0, null !== (AY = null === (IY = OY) || void 0 === IY ? void 0 : IY.height) && void 0 !== AY ? AY : 0, null === (RY = OY) || void 0 === RY ? void 0 : RY.alpha)
+        this.Ec || this.session.setSunShadowTexture(TT, oT, null !== (IT = null === (iT = XT) || void 0 === iT ? void 0 : iT.width) && void 0 !== IT ? IT : 0, null !== (zT = null === (kT = XT) || void 0 === kT ? void 0 : kT.height) && void 0 !== zT ? zT : 0, null === (WT = XT) || void 0 === WT ? void 0 : WT.alpha)
       }
     }
-    var qF = DY(40074),
-      pF = DY(40139),
-      kF = DY(40142),
-      GF = DY(40082),
-      xF = DY(40090),
-      nF = DY(36231),
-      PF = DY(8647),
-      UF = DY(40147);
-    const LF = 8192,
-      tF = new Set;
-    const YA = new Set([...PF.d, "sceneDownload"]);
-    var rA = DY(39924),
-      DA = DY(39790);
-    const FA = new Uint8Array(0);
-    let AA = null;
+    var bi = IT(39760),
+      yi = IT(39815),
+      Ni = IT(39819),
+      Pi = IT(39762),
+      di = IT(39768),
+      Vi = IT(35801),
+      Tz = IT(8649),
+      oz = IT(39829);
+    const Iz = 8192,
+      iz = new Set;
+    const zz = new Set([...Tz.e, "sceneDownload"]);
+    var kz = IT(39593),
+      Wz = IT(39471);
+    const Xz = new Uint8Array(0);
+    let Bz = null;
 
-    function IA(YY) {
+    function Fz(TT) {
       return {
-        aux: Jr.Xb.AdStart | (YY ? Jr.Xb.PreventMovement : 0),
-        payload: FA
+        aux: Ho.Vb.AdStart | (TT ? Ho.Vb.PreventMovement : 0),
+        payload: Xz
       }
     }
-    var RA = DY(2523),
-      OA = DY(2526);
-    const gA = "__bloxdSceneCapture";
-    var aA = DY(1759),
-      vA = DY(2589);
-    let uA = null,
-      sA = null,
-      iA = null,
-      yA = !1;
+    var Sz = IT(2494),
+      Dz = IT(2502);
+    const Lz = "__bloxdSceneCapture";
+    var xz = IT(1697),
+      cz = IT(2568);
+    let Kz = null,
+      Mz = null,
+      rz = null,
+      Az = !1;
 
-    function QA() {
-      uA ??= performance.now()
+    function gz() {
+      Kz ??= performance.now()
     }
-    var oA = DY(40149);
-    class WA {
-      constructor(YY) {
-        var rY, DY;
-        this.host = YY, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((YY => {
-          this.landRequest = YY
-        })), this.follow = YY => {
-          let rY = YY;
+    var hz = IT(39834);
+    class wz {
+      constructor(TT) {
+        var oT, IT;
+        this.host = TT, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((TT => {
+          this.landRequest = TT
+        })), this.follow = TT => {
+          let oT = TT;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const YY = null === this.requested && null !== rY;
-            var DY;
-            YY && (null === (DY = rY) || void 0 === DY || DY(null));
-            const FY = await this.landing;
-            var AY;
-            null === FY && YY || (null === (AY = rY) || void 0 === AY || AY(FY))
+            const TT = null === this.requested && null !== oT;
+            var IT;
+            TT && (null === (IT = oT) || void 0 === IT || IT(null));
+            const iT = await this.landing;
+            var zT;
+            null === iT && TT || (null === (zT = oT) || void 0 === zT || zT(iT))
           })), () => {
-            rY = null
+            oT = null
           }
-        }, this.startRead = (DY = YY.store, DY.keys().then((YY => ({
-          own: YY.includes(oD.b),
-          oneShot: YY.includes(oD.e)
+        }, this.startRead = (IT = TT.store, IT.keys().then((TT => ({
+          own: TT.includes(AI.e),
+          oneShot: TT.includes(AI.h)
         })), (() => ({
           own: !0,
           oneShot: !0
-        })))).then((YY => {
+        })))).then((TT => {
           let {
-            own: rY,
-            oneShot: DY
-          } = YY;
-          this.oneShotStored = DY, (rY || DY) && this.request()
-        })), this.channel = (null !== (rY = YY.openChannel) && void 0 !== rY ? rY : oD.r)(), null !== this.channel && (this.channel.onmessage = () => {
+            own: oT,
+            oneShot: IT
+          } = TT;
+          this.oneShotStored = IT, (oT || IT) && this.request()
+        })), this.channel = (null !== (oT = TT.openChannel) && void 0 !== oT ? oT : AI.v)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
       request() {
-        var YY;
+        var TT;
         if (null !== this.requested) return this.requested;
-        null === (YY = this.channel) || void 0 === YY || YY.close(), this.channel = null;
-        const rY = this.oneShotStored;
-        return this.requested = function(YY, rY, DY) {
-          return new Promise((rY => {
-            rY(YY())
-          })).catch((YY => (null !== rY && (0, oD.o)(rY), DY(YY), null)))
-        }((() => this.host.load(rY).then((YY => (YY.setGamePackConfirm(this.confirm), this.landed = YY, YY)))), rY ? this.host.store : null, this.host.gy), this.landRequest(this.requested), this.requested
+        null === (TT = this.channel) || void 0 === TT || TT.close(), this.channel = null;
+        const oT = this.oneShotStored;
+        return this.requested = function(TT, oT, IT) {
+          return new Promise((oT => {
+            oT(TT())
+          })).catch((TT => (null !== oT && (0, AI.q)(oT), IT(TT), null)))
+        }((() => this.host.load(oT).then((TT => (TT.setGamePackConfirm(this.confirm), this.landed = TT, TT)))), oT ? this.host.store : null, this.host.Bc), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
       }
       forJoin() {
         return null !== this.requested ? this.requested : Promise.race([this.startRead, this.landing]).then((() => {
-          var YY;
-          return null !== (YY = this.requested) && void 0 !== YY ? YY : null
+          var TT;
+          return null !== (TT = this.requested) && void 0 !== TT ? TT : null
         }))
       }
-      setGamePackConfirm(YY) {
-        var rY;
-        this.confirm = YY, null === (rY = this.landed) || void 0 === rY || rY.setGamePackConfirm(YY)
+      setGamePackConfirm(TT) {
+        var oT;
+        this.confirm = TT, null === (oT = this.landed) || void 0 === oT || oT.setGamePackConfirm(TT)
       }
     }
-    var EA = DY(35916);
-    const mA = 216 * EA.f,
-      VA = 92 * EA.e,
-      SA = 64 * EA.f,
-      lA = 16 * EA.f;
+    var mz = IT(35488);
+    const ez = 216 * mz.f,
+      Rz = 92 * mz.e,
+      uz = 64 * mz.f,
+      vz = 16 * mz.f;
 
-    function TA() {
-      var YY, rY;
-      return null !== (YY = null === (rY = performance.memory) || void 0 === rY ? void 0 : rY.OE) && void 0 !== YY ? YY : null
+    function Ez() {
+      var TT, oT;
+      return null !== (TT = null === (oT = performance.memory) || void 0 === oT ? void 0 : oT.Cw) && void 0 !== TT ? TT : null
     }
-    class eA {
-      constructor(YY, rY) {
-        this.budgetBytes = YY, this.reads = rY, this.estimate = null, this.shedAt = null
+    class fz {
+      constructor(TT, oT) {
+        this.budgetBytes = TT, this.reads = oT, this.estimate = null, this.shedAt = null
       }
-      read(YY) {
-        var rY;
-        const DY = this.reads.storedChunks(),
-          FY = this.reads.gpuBytes(),
-          AY = Math.max(null !== (rY = this.reads.jsHeapBytes()) && void 0 !== rY ? rY : 0, SA),
-          IY = mA + YY + AY + FY + DY * VA;
+      read(TT) {
+        var oT;
+        const IT = this.reads.storedChunks(),
+          iT = this.reads.gpuBytes(),
+          zT = Math.max(null !== (oT = this.reads.jsHeapBytes()) && void 0 !== oT ? oT : 0, uz),
+          kT = ez + TT + zT + iT + IT * Rz;
         this.estimate = {
-          wasmBytes: YY,
-          jsHeapBytes: AY,
-          gpuBytes: FY,
-          storedChunks: DY,
-          totalBytes: IY
+          wasmBytes: TT,
+          jsHeapBytes: zT,
+          gpuBytes: iT,
+          storedChunks: IT,
+          totalBytes: kT
         }
       }
       last() {
@@ -3824,347 +3891,347 @@ export const modules = {
       }
       takeShed() {
         const {
-          estimate: YY,
-          budgetBytes: rY,
-          shedAt: DY
+          estimate: TT,
+          budgetBytes: oT,
+          shedAt: IT
         } = this;
-        return !(null === YY || null === rY || YY.totalBytes < rY || null !== DY && YY.totalBytes < DY + lA) && (this.shedAt = YY.totalBytes, !0)
+        return !(null === TT || null === oT || TT.totalBytes < oT || null !== IT && TT.totalBytes < IT + vz) && (this.shedAt = TT.totalBytes, !0)
       }
       describe() {
         const {
-          estimate: YY,
-          budgetBytes: rY
+          estimate: TT,
+          budgetBytes: oT
         } = this;
-        return null === YY ? null : `estimate ${(0,EA.g)(YY.totalBytes)} MiB of budget ${null===rY?"none":(0,EA.g)(rY)}: wasm ${(0,EA.g)(YY.wasmBytes)} js ${(0,EA.g)(YY.jsHeapBytes)} gpu ${(0,EA.g)(YY.gpuBytes)} chunks ${YY.storedChunks}`
+        return null === TT ? null : `estimate ${(0,mz.h)(TT.totalBytes)} MiB of budget ${null===oT?"none":(0,mz.h)(oT)}: wasm ${(0,mz.h)(TT.wasmBytes)} js ${(0,mz.h)(TT.jsHeapBytes)} gpu ${(0,mz.h)(TT.gpuBytes)} chunks ${TT.storedChunks}`
       }
       snapshot() {
         const {
-          estimate: YY,
-          budgetBytes: rY
+          estimate: TT,
+          budgetBytes: oT
         } = this;
         return {
-          ...null === YY ? {} : {
-            footprintMiB: Number((0, EA.g)(YY.totalBytes)),
-            gpuMiB: Number((0, EA.g)(YY.gpuBytes)),
-            storedChunks: YY.storedChunks
+          ...null === TT ? {} : {
+            footprintMiB: Number((0, mz.h)(TT.totalBytes)),
+            gpuMiB: Number((0, mz.h)(TT.gpuBytes)),
+            storedChunks: TT.storedChunks
           },
-          footprintBudgetMiB: null === rY ? -1 : Number((0, EA.g)(rY))
+          footprintBudgetMiB: null === oT ? -1 : Number((0, mz.h)(oT))
         }
       }
     }
-    var NA = DY(2565),
-      BA = DY(4063),
-      cA = DY(38453),
-      KA = DY(37279);
-    const HA = Mr.T + 1,
-      zA = 4096 * HA;
-    class ZA {
-      constructor(YY, rY) {
-        this.log = YY, this.take = rY, this.ja = [], this.unshown = new Map, this.latest = new Map
+    var Cz = IT(2541),
+      jz = IT(4034),
+      Jz = IT(38061),
+      Uz = IT(36890);
+    const az = no.W + 1,
+      Yz = 4096 * az;
+    class Qz {
+      constructor(TT, oT) {
+        this.log = TT, this.take = oT, this.kS = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(YY, rY) {
-        const DY = this.take();
-        DY.length >= Mr.R && DY[0] > 0 && (0, NA.n)("remesh", `${DY[0]} core records lost to a full log`);
-        const FY = this.ja;
-        for (let AY = Mr.R; AY + Mr.T <= DY.length; AY += Mr.T) {
-          for (let YY = AY; YY < AY + Mr.T; YY++) FY.push(DY[YY]);
-          FY.push(YY)
+      afterFrame(TT, oT) {
+        const IT = this.take();
+        IT.length >= no.T && IT[0] > 0 && (0, Cz.l)("remesh", `${IT[0]} core records lost to a full log`);
+        const iT = this.kS;
+        for (let zT = no.T; zT + no.W <= IT.length; zT += no.W) {
+          for (let TT = zT; TT < zT + no.W; TT++) iT.push(IT[TT]);
+          iT.push(TT)
         }
-        if (rY || !(FY.length < zA)) {
-          for (let rY = 0; rY < FY.length; rY += HA) this.feed(rY, YY);
-          FY.length = 0, rY && this.log.frame(YY)
+        if (oT || !(iT.length < Yz)) {
+          for (let oT = 0; oT < iT.length; oT += az) this.feed(oT, TT);
+          iT.length = 0, oT && this.log.frame(TT)
         }
       }
-      feed(YY, rY) {
-        var DY;
-        const FY = this.ja,
-          AY = (0, KA.e)(FY[YY + 1], FY[YY + 2], FY[YY + 3]),
-          IY = FY[YY + 4],
-          RY = FY[YY + Mr.T];
-        switch (FY[YY]) {
-          case Mr.vb.Edit:
-            this.log.edit(AY, RY);
+      feed(TT, oT) {
+        var IT;
+        const iT = this.kS,
+          zT = (0, Uz.h)(iT[TT + 1], iT[TT + 2], iT[TT + 3]),
+          kT = iT[TT + 4],
+          WT = iT[TT + no.W];
+        switch (iT[TT]) {
+          case no.Ab.Edit:
+            this.log.edit(zT, WT);
             break;
-          case Mr.vb.Sent:
-            this.latest.set(AY, IY), this.log.sent(AY, IY, FY[YY + 5], FY[YY + 6], FY[YY + 7], null !== (DY = this.unshown.get(AY)) && void 0 !== DY ? DY : KA.b, RY);
+          case no.Ab.Sent:
+            this.latest.set(zT, kT), this.log.sent(zT, kT, iT[TT + 5], iT[TT + 6], iT[TT + 7], null !== (IT = this.unshown.get(zT)) && void 0 !== IT ? IT : Uz.e, WT);
             break;
-          case Mr.vb.Done: {
-            this.log.received(IY, FY[YY + 5] / 1e3, RY);
-            const rY = this.unshown.get(AY);
-            void 0 === rY ? this.unshown.set(AY, [IY]) : rY.push(IY);
+          case no.Ab.Done: {
+            this.log.received(kT, iT[TT + 5] / 1e3, WT);
+            const oT = this.unshown.get(zT);
+            void 0 === oT ? this.unshown.set(zT, [kT]) : oT.push(kT);
             break
           }
-          case Mr.vb.Failed: {
-            const YY = this.latest.get(AY);
-            void 0 !== YY && YY !== IY ? this.log.reassign(AY, IY, YY) : this.log.failed(IY), this.ended(AY, IY);
+          case no.Ab.Failed: {
+            const TT = this.latest.get(zT);
+            void 0 !== TT && TT !== kT ? this.log.reassign(zT, kT, TT) : this.log.failed(kT), this.ended(zT, kT);
             break
           }
-          case Mr.vb.Shown:
-            this.log.applied(AY, IY, rY), this.ended(AY, IY);
+          case no.Ab.Shown:
+            this.log.applied(zT, kT, oT), this.ended(zT, kT);
             break;
-          case Mr.vb.Replaced:
-            this.log.reassign(AY, IY, FY[YY + 5]), this.ended(AY, IY);
+          case no.Ab.Replaced:
+            this.log.reassign(zT, kT, iT[TT + 5]), this.ended(zT, kT);
             break;
-          case Mr.vb.Emptied:
-            this.log.emptied(AY, rY);
+          case no.Ab.Emptied:
+            this.log.emptied(zT, oT);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${FY[YY]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${iT[TT]}`)
         }
       }
-      ended(YY, rY) {
-        this.latest.get(YY) === rY && this.latest.delete(YY);
-        const DY = this.unshown.get(YY);
-        if (void 0 === DY) return;
-        const FY = DY.indexOf(rY);
-        FY >= 0 && DY.splice(FY, 1), 0 === DY.length && this.unshown.delete(YY)
+      ended(TT, oT) {
+        this.latest.get(TT) === oT && this.latest.delete(TT);
+        const IT = this.unshown.get(TT);
+        if (void 0 === IT) return;
+        const iT = IT.indexOf(oT);
+        iT >= 0 && IT.splice(iT, 1), 0 === IT.length && this.unshown.delete(TT)
       }
     }
-    let CA = null;
-    var fA = DY(2834);
-    const jA = new Uint8Array(0);
-    class hA {
-      constructor(YY) {
-        this.options = YY, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.ja = [], this.startsWithoutResult = 0, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== YY.module ? YY.write(0, Jr.Kd.WorldgenStarted, 0, 0, jA) : this.giveUp()
+    let Oz = null;
+    var Hz = IT(2801);
+    const nz = new Uint8Array(0);
+    class qz {
+      constructor(TT) {
+        this.options = TT, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.kS = [], this.startsWithoutResult = 0, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== TT.module ? TT.write(0, Ho.ae.WorldgenStarted, 0, 0, nz) : this.giveUp()
       }
-      take(YY, rY) {
-        if (!(this.gone || null === this.worker && null === this.ja))
-          if (YY === Jr.Ld.WorldgenSeed) {
-            const YY = 0 === rY.byteLength ? null : this.options.decodeSettings(rY);
-            null === YY || function(YY, rY) {
-              if ((null === YY || void 0 === YY ? void 0 : YY.byteLength) !== rY.byteLength) return !1;
-              for (let DY = 0; DY < YY.byteLength; DY++)
-                if (YY[DY] !== rY[DY]) return !1;
+      take(TT, oT) {
+        if (!(this.gone || null === this.worker && null === this.kS))
+          if (TT === Ho.be.WorldgenSeed) {
+            const TT = 0 === oT.byteLength ? null : this.options.decodeSettings(oT);
+            null === TT || function(TT, oT) {
+              if ((null === TT || void 0 === TT ? void 0 : TT.byteLength) !== oT.byteLength) return !1;
+              for (let IT = 0; IT < TT.byteLength; IT++)
+                if (TT[IT] !== oT[IT]) return !1;
               return !0
-            }(this.seed, rY) || (this.seed = rY.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, oT) || (this.seed = oT.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
-              settings: YY
-            }, []), null !== YY ? this.load() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (YY === Jr.Ld.Generate) {
-          var DY;
-          const YY = new DataView(rY.buffer, rY.byteOffset, Jr.Cd),
-            FY = null !== (DY = this.pool.pop()) && void 0 !== DY ? DY : new ArrayBuffer(8192);
+              settings: TT
+            }, []), null !== TT ? this.load() : this.loading || this.options.onMapWithoutWorldgen()
+          } else if (TT === Ho.be.Generate) {
+          var IT;
+          const TT = new DataView(oT.buffer, oT.byteOffset, Ho.Vd),
+            iT = null !== (IT = this.pool.pop()) && void 0 !== IT ? IT : new ArrayBuffer(8192);
           this.post({
             type: "generate",
-            ticket: YY.getUint32(0, !0),
-            x: YY.getInt32(4, !0),
-            y: YY.getInt32(8, !0),
-            z: YY.getInt32(12, !0),
-            bytes: FY
-          }, [FY])
+            ticket: TT.getUint32(0, !0),
+            x: TT.getInt32(4, !0),
+            y: TT.getInt32(8, !0),
+            z: TT.getInt32(12, !0),
+            bytes: iT
+          }, [iT])
         }
       }
       stop() {
-        var YY;
-        this.gone = !0, this.dropHeld(), this.endWatch(), null === (YY = this.worker) || void 0 === YY || YY.terminate(), this.worker = null
+        var TT;
+        this.gone = !0, this.dropHeld(), this.endWatch(), null === (TT = this.worker) || void 0 === TT || TT.terminate(), this.worker = null
       }
-      post(YY, rY) {
-        var DY;
-        null !== this.ja ? this.ja.push({
-          message: YY,
-          transfer: rY
-        }) : null === (DY = this.worker) || void 0 === DY || DY.postMessage(YY, rY)
+      post(TT, oT) {
+        var IT;
+        null !== this.kS ? this.kS.push({
+          message: TT,
+          transfer: oT
+        }) : null === (IT = this.worker) || void 0 === IT || IT.postMessage(TT, oT)
       }
       load() {
-        this.loading || (this.loading = !0, this.options.loadWorker().then((YY => {
-          this.createWorker = YY, this.start()
-        }), (YY => {
-          this.gone || (this.giveUp(), this.options.onLoadFailed(YY))
+        this.loading || (this.loading = !0, this.options.loadWorker().then((TT => {
+          this.createWorker = TT, this.start()
+        }), (TT => {
+          this.gone || (this.giveUp(), this.options.onLoadFailed(TT))
         })))
       }
       start() {
         const {
-          module: YY
-        } = this.options, rY = this.createWorker;
-        if (this.gone || null === YY || null === rY) return;
+          module: TT
+        } = this.options, oT = this.createWorker;
+        if (this.gone || null === TT || null === oT) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let DY;
+        let IT;
         this.startsWithoutResult++;
         try {
-          DY = rY()
-        } catch (AY) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", AY), this.lastLoss = `it did not start (${String(AY)})`, void this.start()
+          IT = oT()
+        } catch (zT) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", zT), this.lastLoss = `it did not start (${String(zT)})`, void this.start()
         }
-        this.worker = DY, DY.onmessage = YY => {
+        this.worker = IT, IT.onmessage = TT => {
           let {
-            data: rY
-          } = YY;
-          this.worker === DY && this.onReply(DY, rY)
-        }, DY.onerror = YY => {
-          YY.preventDefault(), this.worker === DY && this.lose(YY.message || "its script failed")
+            data: oT
+          } = TT;
+          this.worker === IT && this.onReply(IT, oT)
+        }, IT.onerror = TT => {
+          TT.preventDefault(), this.worker === IT && this.lose(TT.message || "its script failed")
         };
         try {
-          DY.postMessage({
+          IT.postMessage({
             type: "start",
-            module: YY,
-            Jy: FY.d.Jy
+            module: TT,
+            Yc: iT.c.Yc
           })
-        } catch (AY) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", AY), this.lastLoss = `it could not be sent the module (${String(AY)})`, DY.terminate(), this.worker = null, void this.start()
+        } catch (zT) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", zT), this.lastLoss = `it could not be sent the module (${String(zT)})`, IT.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new zF.e(zF.c, (YY => {
-          this.lose((0, zF.g)(YY), (() => {
-            this.options.onStartTimeout(YY)
+        this.watch = new ai.h(ai.e, (TT => {
+          this.lose((0, ai.j)(TT), (() => {
+            this.options.onStartTimeout(TT)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(YY, rY) {
-        switch (rY.type) {
+      onReply(TT, oT) {
+        switch (oT.type) {
           case "started": {
             this.endWatch();
-            const rY = this.ja;
-            if (null === rY) {
-              this.options.write(0, Jr.Kd.WorldgenStarted, 0, 0, jA);
+            const oT = this.kS;
+            if (null === oT) {
+              this.options.write(0, Ho.ae.WorldgenStarted, 0, 0, nz);
               break
             }
-            this.ja = null;
+            this.kS = null;
             for (const {
-                message: DY,
-                transfer: FY
+                message: IT,
+                transfer: iT
               }
-              of rY) YY.postMessage(DY, FY);
+              of oT) TT.postMessage(IT, iT);
             break
           }
           case "lost":
-            this.lose(rY.reason);
+            this.lose(oT.reason);
             break;
           case "memory":
-            var DY, FY;
-            null === (DY = (FY = this.options).onMemoryStats) || void 0 === DY || DY.call(FY, rY.stats);
+            var IT, iT;
+            null === (IT = (iT = this.options).onMemoryStats) || void 0 === IT || IT.call(iT, oT.stats);
             break;
           case "result":
-            rY.status !== Jr.wb.Trapped && (this.startsWithoutResult = 0), this.options.write(rY.ticket, Jr.Kd.WorldgenResult, rY.status, rY.workerUs, new Uint8Array(rY.bytes, 0, rY.len)), this.recycle(rY.bytes), rY.spare && this.recycle(rY.spare)
+            oT.status !== Ho.wb.Trapped && (this.startsWithoutResult = 0), this.options.write(oT.ticket, Ho.ae.WorldgenResult, oT.status, oT.workerUs, new Uint8Array(oT.bytes, 0, oT.len)), this.recycle(oT.bytes), oT.spare && this.recycle(oT.spare)
         }
       }
-      lose(YY, rY) {
-        var DY, FY, AY;
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${YY}`), this.lastLoss = YY, this.endWatch(), null === (DY = this.worker) || void 0 === DY || DY.terminate(), this.worker = null, null === (FY = (AY = this.options).onMemoryGone) || void 0 === FY || FY.call(AY), this.gone || (rY ? rY() : this.options.onWorkerLost(YY), this.dropHeld(), this.ja = null, this.options.write(0, Jr.Kd.WorldgenLost, Jr.Od.Lost, 0, jA), this.start())
+      lose(TT, oT) {
+        var IT, iT, zT;
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${TT}`), this.lastLoss = TT, this.endWatch(), null === (IT = this.worker) || void 0 === IT || IT.terminate(), this.worker = null, null === (iT = (zT = this.options).onMemoryGone) || void 0 === iT || iT.call(zT), this.gone || (oT ? oT() : this.options.onWorkerLost(TT), this.dropHeld(), this.kS = null, this.options.write(0, Ho.ae.WorldgenLost, Ho.ce.Lost, 0, nz), this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, Jr.Kd.WorldgenLost, Jr.Od.Gone, 0, jA)
+        this.gone = !0, this.dropHeld(), this.options.write(0, Ho.ae.WorldgenLost, Ho.ce.Gone, 0, nz)
       }
       endWatch() {
-        var YY;
-        null === (YY = this.watch) || void 0 === YY || YY.cancel(), this.watch = null
+        var TT;
+        null === (TT = this.watch) || void 0 === TT || TT.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.ja) {
+        if (null !== this.kS) {
           for (const {
-              message: YY
+              message: TT
             }
-            of this.ja) "generate" === YY.type && this.recycle(YY.bytes);
-          this.ja.length = 0
+            of this.kS) "generate" === TT.type && this.recycle(TT.bytes);
+          this.kS.length = 0
         }
       }
-      recycle(YY) {
-        this.pool.length < 16 && YY.byteLength > 0 && YY.byteLength <= 16384 && this.pool.push(YY)
+      recycle(TT) {
+        this.pool.length < 16 && TT.byteLength > 0 && TT.byteLength <= 16384 && this.pool.push(TT)
       }
     }
-    var dA = DY(37081),
-      JA = DY(3338),
-      MA = DY(39761),
-      wA = DY(40152),
-      bA = DY(40021);
-    const XA = /[(@\s]([^\s(@]+)$/,
-      qA = /:\d/;
+    var Zz = IT(36687),
+      lz = IT(3293),
+      sz = IT(39445),
+      tz = IT(39839),
+      Gz = IT(39721);
+    const pz = /[(@\s]([^\s(@]+)$/,
+      bz = /:\d/;
 
-    function pA(YY, rY) {
-      for (let DY = 0; DY + rY.length <= YY.length; DY++) {
-        let FY = 0;
-        for (; FY < rY.length && YY[DY + FY] === rY[FY];) FY++;
-        if (FY === rY.length) return DY
+    function yz(TT, oT) {
+      for (let IT = 0; IT + oT.length <= TT.length; IT++) {
+        let iT = 0;
+        for (; iT < oT.length && TT[IT + iT] === oT[iT];) iT++;
+        if (iT === oT.length) return IT
       }
       return -1
     }
 
-    function kA(YY) {
-      return "(" === YY || ")" === YY || "@" === YY || "," === YY || " " === YY || "\t" === YY
+    function Nz(TT) {
+      return "(" === TT || ")" === TT || "@" === TT || "," === TT || " " === TT || "\t" === TT
     }
 
-    function GA(YY, rY) {
-      let DY = rY;
-      for (; DY > 0 && !kA(YY[DY - 1]);) DY--;
-      let FY = rY;
-      for (; FY < YY.length && !kA(YY[FY]);) FY++;
-      let AY = "";
-      for (let IY = DY; IY < FY; IY++) AY += YY[IY];
-      return AY
+    function Pz(TT, oT) {
+      let IT = oT;
+      for (; IT > 0 && !Nz(TT[IT - 1]);) IT--;
+      let iT = oT;
+      for (; iT < TT.length && !Nz(TT[iT]);) iT++;
+      let zT = "";
+      for (let kT = IT; kT < iT; kT++) zT += TT[kT];
+      return zT
     }
-    const xA = (YY, rY) => YY.includes(rY),
-      nA = YY => {
+    const dz = (TT, oT) => TT.includes(oT),
+      Vz = TT => {
         try {
-          return YY()
+          return TT()
         } catch {
           return !1
         }
       },
-      PA = -1,
-      UA = YY => {
+      Tk = -1,
+      Ik = TT => {
         try {
-          return YY()
+          return TT()
         } catch {
-          return PA
+          return Tk
         }
       };
 
-    function LA(YY, rY) {
+    function ik(TT, oT) {
       return {
-        probe: (DY, FY, AY) => {
+        probe: (IT, iT, zT) => {
           try {
-            return ((DY, FY, AY) => {
-              switch (DY) {
-                case Jr.kc.StackCheck:
-                  return rY.stackCheck() ? 1 : 0;
-                case Jr.kc.ConfirmMesh:
-                  return rY.confirmMesh();
-                case Jr.kc.IndexPassReplaced:
-                  return rY.indexPassReplaced() ? 1 : 0;
-                case Jr.kc.ProductSubChanged:
-                  return rY.productSubChanged() ? 1 : 0;
-                case Jr.kc.RenderStatus:
-                  return rY.Tv();
-                case Jr.kc.Held:
-                  return rY.ja();
-                case Jr.kc.PlayerKilledSubs:
-                  return rY.playerKilledSubs();
-                case Jr.cb: {
-                  const DY = rY.getComplete();
-                  return null === DY ? 0 : (0, VF.o)(VF.x, VF.cb, [DY, new VF.d((0, VF.H)(YY()), FY, AY)]).written
+            return ((IT, iT, zT) => {
+              switch (IT) {
+                case Ho.lc.StackCheck:
+                  return oT.stackCheck() ? 1 : 0;
+                case Ho.lc.ConfirmMesh:
+                  return oT.confirmMesh();
+                case Ho.lc.IndexPassReplaced:
+                  return oT.indexPassReplaced() ? 1 : 0;
+                case Ho.lc.ProductSubChanged:
+                  return oT.productSubChanged() ? 1 : 0;
+                case Ho.lc.RenderStatus:
+                  return oT.GS();
+                case Ho.lc.Held:
+                  return oT.kS();
+                case Ho.lc.PlayerKilledSubs:
+                  return oT.playerKilledSubs();
+                case Ho.bb: {
+                  const IT = oT.getComplete();
+                  return null === IT ? 0 : (0, ei.o)(ei.y, ei.Y, [IT, new ei.e((0, ei.J)(TT()), iT, zT)]).written
                 }
                 default:
                   return 0
               }
-            })(DY, FY, AY)
+            })(IT, iT, zT)
           } catch {
-            return Jr.ac
+            return Ho.bc
           }
         }
       }
     }
-    class tA {
-      constructor(YY) {
-        this.write = YY, this.flagsWritten = 0, this.written = (0, VF.p)(null)
+    class zk {
+      constructor(TT) {
+        this.write = TT, this.flagsWritten = 0, this.written = (0, ei.r)(null)
       }
-      Zu(YY) {
+      dD(TT) {
         let {
-          flags: rY,
-          values: DY
-        } = YY;
-        for (let FY = 0; FY < DY.length; FY++) this.value(DY[FY][0], DY[FY][1]);
-        this.setFlags(rY | Jr.f.Ready)
+          flags: oT,
+          values: IT
+        } = TT;
+        for (let iT = 0; iT < IT.length; iT++) this.value(IT[iT][0], IT[iT][1]);
+        this.setFlags(oT | Ho.g.Ready)
       }
-      value(YY, rY) {
-        this.written[YY] !== rY && this.write(YY, rY, 0) && (this.written[YY] = rY)
+      value(TT, oT) {
+        this.written[TT] !== oT && this.write(TT, oT, 0) && (this.written[TT] = oT)
       }
-      setFlags(YY) {
-        const rY = YY & ~this.flagsWritten;
-        0 !== rY && this.write(Jr.i.Flags, rY, rY) && (this.flagsWritten |= rY)
+      setFlags(TT) {
+        const oT = TT & ~this.flagsWritten;
+        0 !== oT && this.write(Ho.h.Flags, oT, oT) && (this.flagsWritten |= oT)
       }
       originStackHit() {
-        return this.write(Jr.i.Flags, Jr.f.OriginStackHit, Jr.f.OriginStackHit)
+        return this.write(Ho.h.Flags, Ho.g.OriginStackHit, Ho.g.OriginStackHit)
       }
     }
-    const YI = {
+    const kk = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4176,872 +4243,1041 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      rI = 1e3;
+      Wk = 1e3;
 
-    function DI(YY, rY) {
-      const DY = new tA(rY);
-      let FY = !1;
-      DY.Zu(YY.Zu());
-      const AY = (0, VF.T)((() => {
-          DY.Zu(YY.Zu())
-        }), rI),
-        IY = () => {
-          YY.checks.stackCheck() && (FY = !0)
+    function Xk(TT, oT) {
+      const IT = new zk(oT);
+      let iT = !1;
+      IT.dD(TT.dD());
+      const zT = (0, ei.R)((() => {
+          IT.dD(TT.dD())
+        }), Wk),
+        kT = () => {
+          TT.checks.stackCheck() && (iT = !0)
         };
-      (0, wA.h)(IY);
-      const RY = () => {
-        const rY = YY.checkPadCall();
-        0 !== rY && DY.setFlags(rY)
+      (0, tz.i)(kT);
+      const WT = () => {
+        const oT = TT.checkPadCall();
+        0 !== oT && IT.setFlags(oT)
       };
-      return (0, MA.j)(RY), {
-        onInput: rY => {
-          (function(YY) {
-            switch (YY) {
-              case Jr.ub.KeyDown:
-              case Jr.ub.KeyUp:
-              case Jr.ub.MouseDown:
-              case Jr.ub.MouseUp:
-              case Jr.ub.Wheel:
-              case Jr.ub.TouchStart:
-              case Jr.ub.TouchEnd:
-              case Jr.ub.TouchButton:
-              case Jr.ub.PadAction:
+      return (0, sz.f)(WT), {
+        onInput: oT => {
+          (function(TT) {
+            switch (TT) {
+              case Ho.vb.KeyDown:
+              case Ho.vb.KeyUp:
+              case Ho.vb.MouseDown:
+              case Ho.vb.MouseUp:
+              case Ho.vb.Wheel:
+              case Ho.vb.TouchStart:
+              case Ho.vb.TouchEnd:
+              case Ho.vb.TouchButton:
+              case Ho.vb.PadAction:
                 return !0;
               default:
                 return !1
             }
-          })(rY) && YY.checks.stackCheck() && (FY = !0)
+          })(oT) && TT.checks.stackCheck() && (iT = !0)
         },
-        onSend: IY,
+        onSend: kT,
         beforeFrame: () => {
-          FY && DY.originStackHit() && (FY = !1)
+          iT && IT.originStackHit() && (iT = !1)
         },
-        onEvent: rY => {
-          const FY = YY.checkEvent(rY);
-          DY.value(Jr.i.ProbeUsedProp, YY.usedProp()), 0 !== FY && DY.setFlags(FY)
+        onEvent: oT => {
+          const iT = TT.checkEvent(oT);
+          IT.value(Ho.h.ProbeUsedProp, TT.usedProp()), 0 !== iT && IT.setFlags(iT)
         },
         stop: () => {
-          (0, VF.X)(AY), (0, wA.e)(IY), (0, MA.g)(RY)
+          (0, ei.S)(zT), (0, tz.e)(kT), (0, sz.e)(WT)
         }
       }
     }
-    let FI;
-    const AI = ["length", 0, 1, "b", 102, 8, 7, 141, 4, "e", "k", 109, "j", "a", 2, void 0, null, 3, "r", "c3RhY2", "cw==", 1e5, !1, "stack", "name", !0, 210, 5, 6, 68, 114, 73, "c", 117, 206, 10, "p", 70, "No redacted path provided", "--version", "-v", " (stan", "dalone", ")", " (loca", "l)", "string", "i", "t", 71, "M", 33554432, 67108864, 222, "functi", "on", "f", 45, "o", 55, 91, 232, 1023, 62, 65536, 55296, 56320, 12, 63, 128, 189, 192, "Invalid byte index", 216, 255, 224, 31, "Invalid continuation byte", 240, 76, 15, 18, "g", 144, "h", "d", 223, 145, 39, 194, 106, 171, 129, "protot", "ype", "decode", 56319, 230, 64512, 90, 65535, 57343, "Lone s", "urroga", "te U+", 16, " is no", "t a sc", "alar v", "alue", 4294967168, 4294965248, 4294901760, 4292870144, 243, 167, 13, 2048, 248, 137, 1114111, "Invalid UTF-8 detected", 162, 160, "3.0.0", "undefi", "ned", 52, 207, "I=", "eTR5bm", "F", "ud", "s", "chEven", "dispat", "w", "now", 140, "confir", "mMesh", "produc", "player", "Killed", "number", "toString", "get", "v", "q", "None", 11, "En", "tOverw", "ritten", "plete"];
+    let Bk;
+    const Fk = ["length", 0, 2, "a", 1, null, void 0, 3, "t", "c3RhY2", "cw==", 161, 158, 134, 4, 8, 5, 26, 1e5, 120, 60, "s=", "b", "string", 75, "h", 99, "f", 90, "e", 232, "i", "j", "stack", "name", "=", 146, ";", !1, 133, 155, !0, 53, 223, 24, 1e3, "expire", 45, ";path=", "/", 16, "Tsd35c", "8", 512, 256, 108, "012345", 15, 66, "c", 6, 110, 72, 88, 1023, 63, 128, 12, 189, 255, 104, 204, 32, 7, 18, 10, 19, 64, 238, 65535, "r", "Invalid data key provided (not type string)", "Invalid data key provided (empty string)", "Serialization error for data '", "': ", "d", 122, " ", "abc", 909522486, 1549556828, "6789AB", "CDEF", "6789ab", "cdef", 220, 234, 91, 30, 14, 55296, 56319, 56320, 57343, 65536, 127, 2047, 192, 31, 224, 2097151, 240, 124, 113, 13, 22, 11, 25, 17, 28, 34, 39, 41, 61, 1116352408, 1899447441, 1245643825, 373957723, 961987163, 1508970993, 1841331548, 1424204075, 670586216, 310598401, 607225278, 1426881987, 1925078388, 2132889090, 1680079193, 1046744716, 459576895, 272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 1740746414, 1473132947, 1341970488, 1084653625, 958395405, 710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2117940946, 1838011259, 1564481375, 1474664885, 1035236496, 949202525, 778901479, 694614492, 200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2067236844, 1933114872, 1866530822, 1538233109, 1090935817, 965641998, 1779033703, 1150833019, 1013904242, 1521486534, 1359893119, 1694144372, 528734635, 1541459225, 9, 211, 199, "o", 65537, 80, 100, 190, "q", "l", "functi", "on", "protot", "ype", "decode", 93, "5", "I=", "p", "eTR5bm", "s", "u", 21, "E", "Hd", "O", "chEven", "dispat", "w", "now", "confir", "mMesh", "produc", "player", "Killed", "number", "toString", "g", "get", "v", "Q", 48, "None", "En", "tOverw", "ritten", "plete"];
 
-    function II() {}
-
-    function RI() {
-      RI = function() {}
+    function Sk(...TT) {
+      if (TT[Fk[0]] = Fk[7], TT[Fk[1]] === Fk[51] + Fk[52]) return TT[Fk[4]] + TT[Fk[2]]
     }
-    FI = function(YY) {
-      let rY = arguments[AI[0]] > AI[2] && arguments[AI[2]] !== AI[15] ? arguments[AI[2]] : () => AI[16],
-        DY = arguments[AI[0]] > AI[14] && arguments[AI[14]] !== AI[15] ? arguments[AI[14]] : AI[16],
-        FY = arguments[AI[0]] > AI[17] && arguments[AI[17]] !== AI[15] ? arguments[AI[17]] : "";
-      const AY = window,
-        IY = (0, VF[AI[18]])("RXJyb3" + AI[129]),
-        RY = (0, VF[AI[18]])(AI[19] + "s="),
-        OY = (0, VF[AI[18]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        aY = (0, VF[AI[18]])(AI[19] + "tUcmFjZUxpbWl0"),
-        vY = (0, VF[AI[18]])("bmF0aXZl"),
-        uY = [(0, VF[AI[18]])("bWFpbi5qcw=="), (0, VF[AI[18]])("aW5kZXguanM="), (0, VF[AI[18]])("dXNlcnNjcmlwdA=="), (0, VF[AI[18]])("Y29udGVudC5q" + AI[20]), (0, VF[AI[18]])("b3B0aW9ucy5q" + AI[20]), (0, VF[AI[18]])("cG9wdXAuanM="), (0, VF[AI[18]])("LnVzZXIuanM="), (0, VF[AI[18]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        sY = (...YY) => {
-          YY[AI[0]] = AI[2];
-          const rY = AY[IY],
-            DY = rY;
-          DY[aY] < AI[21] && (DY[aY] = AI[21]);
-          const FY = "string" === typeof(sY = (new rY)[RY]) ? sY : `${sY}`,
-            gY = {},
-            vY = DY[OY];
-          var sY;
-          typeof vY === AI[54] + AI[55] && (0, VF[AI[58]])(vY, rY, [gY]);
-          const iY = gY[RY],
-            yY = YY[AI[1]] ? uY[AI[0]] : uY[AI[0]] - AI[2];
-          for (let AY = AI[1]; AY < yY; AY++) {
-            if (xA(FY, uY[AY])) {
-              return "JqIAqg" in II && (module.exports = async (YY = () => {
-                throw new Error(AI[38])
-              }) => {
-                const rY = new Set(process.argv.slice(AI[14]));
-                if (!rY.has(AI[39])) {
-                  if (rY.size !== AI[2]) return AI[22];
-                  if (!rY.has(AI[40])) return AI[22]
+
+    function Dk() {}
+
+    function Lk() {
+      Lk = function() {}
+    }
+    Bk = function(TT) {
+      let oT = arguments[Fk[0]] > Fk[4] && arguments[Fk[4]] !== Fk[6] ? arguments[Fk[4]] : () => Fk[5],
+        IT = arguments[Fk[0]] > Fk[2] && arguments[Fk[2]] !== Fk[6] ? arguments[Fk[2]] : Fk[5],
+        iT = arguments[Fk[0]] > Fk[7] && arguments[Fk[7]] !== Fk[6] ? arguments[Fk[7]] : "";
+      const zT = window,
+        kT = (0, ei[Fk[8]])("RXJyb3" + Fk[213]),
+        WT = (0, ei[Fk[8]])(Fk[9] + Fk[21]),
+        XT = (0, ei[Fk[8]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        FT = (0, ei[Fk[8]])(Fk[9] + "tUcmFjZUxpbWl0"),
+        ST = (0, ei[Fk[8]])("bmF0aXZl"),
+        DT = [(0, ei[Fk[8]])("bWFpbi5qcw=="), (0, ei[Fk[8]])("aW5kZXguanM="), (0, ei[Fk[8]])("dXNlcnNjcmlwdA=="), (0, ei[Fk[8]])("Y29udGVudC5q" + Fk[10]), (0, ei[Fk[8]])("b3B0aW9ucy5q" + Fk[10]), (0, ei[Fk[8]])("cG9wdXAuanM="), (0, ei[Fk[8]])("LnVzZXIuanM="), (0, ei[Fk[8]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        LT = (...TT) => {
+          TT[Fk[0]] = Fk[4];
+          const oT = zT[kT],
+            IT = oT;
+          if (IT[FT] < Fk[18]) {
+            function KT(...TT) {
+              Lk(TT[Fk[0]] = Fk[1], TT[Fk[17]] = function(...TT) {
+                for (Lk(TT[Fk[0]] = Fk[4], TT[Fk[4]] = Fk[1], TT[-Fk[13]] = {}, TT[Fk[7]] = Fk[1], TT[Fk[14]] = Fk[1], TT[Fk[16]] = Fk[1], TT[-Fk[12]] = TT[Fk[1]].length), TT[Fk[11]] = Fk[1]; TT[Fk[11]] < TT[-Fk[12]]; TT[Fk[11]]++) {
+                  for (Lk(TT[-Fk[13]] = {}, TT[Fk[7]] = Fk[1], TT[Fk[14]] = Fk[4]), TT[Fk[15]] = TT[Fk[11]] + Fk[4]; TT[Fk[15]] < TT[-Fk[12]]; TT[Fk[15]]++) TT[Fk[1]][TT[Fk[11]]].x !== TT[Fk[1]][TT[Fk[15]]].x || TT[Fk[1]][TT[Fk[11]]].y !== TT[Fk[1]][TT[Fk[15]]].y ? (TT[Fk[1]][TT[Fk[11]]].y === TT[Fk[1]][TT[Fk[15]]].y ? TT[Fk[16]] = Number.MAX_SAFE_INTEGER : TT[Fk[16]] = (TT[Fk[1]][TT[Fk[11]]].x - TT[Fk[1]][TT[Fk[15]]].x) / (TT[Fk[1]][TT[Fk[11]]].y - TT[Fk[1]][TT[Fk[15]]].y), TT[-Fk[13]][TT[Fk[16]]] || (TT[-Fk[13]][TT[Fk[16]]] = Fk[1]), Lk(TT[-Fk[13]][TT[Fk[16]]]++, TT[Fk[7]] = Math.max(TT[Fk[7]], TT[-Fk[13]][TT[Fk[16]]]))) : TT[Fk[14]]++;
+                  Lk(TT[Fk[7]] += TT[Fk[14]], TT[Fk[4]] = Math.max(TT[Fk[4]], TT[Fk[7]]))
                 }
-                return await (async () => void 0 === await YY() ? AI[44] + AI[45] : "")(), AI[25]
-              }), {
-                [AI[23]]: FY,
-                [AI[24]]: uY[AY]
+                return TT[Fk[4]]
+              }, console.log(TT[Fk[17]]))
+            }
+            "EUQZHX" + Fk[214] in Dk && KT(), IT[FT] = Fk[18]
+          }
+          const iT = "string" === typeof(LT = (new oT)[WT]) ? LT : `${LT}`,
+            BT = {},
+            ST = IT[XT];
+          var LT;
+          if (typeof ST === Fk[206] + Fk[207]) {
+            function MT(...TT) {
+              TT[Fk[0]] = Fk[1]
+            }
+            "y1lFx1" in Dk && MT(), (0, ei[Fk[199]])(ST, oT, [BT])
+          }
+          const xT = BT[WT],
+            cT = TT[Fk[1]] ? DT[Fk[0]] : DT[Fk[0]] - Fk[4];
+          for (let rT = Fk[1]; rT < cT; rT++) {
+            if (dz(iT, DT[rT])) return {
+              [Fk[33]]: iT,
+              [Fk[34]]: DT[rT]
+            };
+            if (typeof xT === Fk[23] && dz(xT, DT[rT])) {
+              function AT(...TT) {
+                Lk(TT[Fk[0]] = Fk[1], TT[-Fk[7]] = function(...TT) {
+                  if (Lk(TT[Fk[0]] = Fk[4], TT[Fk[4]] = TT[Fk[1]].length), TT[Fk[4]] < Fk[2]) return Fk[1];
+                  if (Lk(TT[-Fk[12]] = Math.max(...TT[Fk[1]]), TT[Fk[24]] = Math.min(...TT[Fk[1]])), TT[-Fk[12]] === TT[Fk[24]]) return Fk[1];
+                  for (Lk(TT[-Fk[28]] = Array(TT[Fk[4]] - Fk[4]).fill(Number.MAX_SAFE_INTEGER), TT[Fk[29]] = Array(TT[Fk[4]] - Fk[4]).fill(Number.MIN_SAFE_INTEGER), TT[Fk[27]] = Math.ceil((TT[-Fk[12]] - TT[Fk[24]]) / (TT[Fk[4]] - Fk[4])), TT[Fk[26]] = Fk[1]), TT[Fk[25]] = Fk[1]; TT[Fk[25]] < TT[Fk[4]]; TT[Fk[25]]++) TT[Fk[1]][TT[Fk[25]]] !== TT[Fk[24]] && TT[Fk[1]][TT[Fk[25]]] !== TT[-Fk[12]] && Lk(TT[Fk[26]] = Math.floor((TT[Fk[1]][TT[Fk[25]]] - TT[Fk[24]]) / TT[Fk[27]]), TT[-Fk[28]][TT[Fk[26]]] = Math.min(TT[-Fk[28]][TT[Fk[26]]], TT[Fk[1]][TT[Fk[25]]]), TT[Fk[29]][TT[Fk[26]]] = Math.max(TT[Fk[29]][TT[Fk[26]]], TT[Fk[1]][TT[Fk[25]]]));
+                  for (Lk(TT[Fk[31]] = Number.MIN_SAFE_INTEGER, TT[Fk[32]] = TT[Fk[24]]), TT[-Fk[30]] = Fk[1]; TT[-Fk[30]] < TT[Fk[4]] - Fk[4]; TT[-Fk[30]]++) TT[-Fk[28]][TT[-Fk[30]]] === Number.MAX_SAFE_INTEGER && TT[Fk[29]][TT[-Fk[30]]] === Number.MIN_SAFE_INTEGER || Lk(TT[Fk[31]] = Math.max(TT[Fk[31]], TT[-Fk[28]][TT[-Fk[30]]] - TT[Fk[32]]), TT[Fk[32]] = TT[Fk[29]][TT[-Fk[30]]]);
+                  return TT[Fk[31]] = Math.max(TT[Fk[31]], TT[-Fk[12]] - TT[Fk[32]]), TT[Fk[31]]
+                }, console.log(TT[-Fk[7]]))
+              }
+              return "yMQg1R" in Dk && AT(), {
+                [Fk[33]]: xT,
+                [Fk[34]]: DT[rT]
               }
             }
-            if (typeof iY === AI[46] && xA(iY, uY[AY])) return {
-              [AI[23]]: iY,
-              [AI[24]]: uY[AY]
-            }
           }
-          return AI[16]
+          return Fk[5]
         },
-        iY = (...YY) => (YY[AI[0]] = AI[2], sY(YY[AI[1]]) !== AI[16]);
-      let yY = AI[16],
-        QY = AI[16];
-      const oY = (...YY) => {
-        YY[AI[0]] = AI[2];
+        xT = TT => ("WS9hLh" + Fk[8] in Dk && function(...TT) {
+          TT[Fk[0]] = Fk[1]
+        }(), LT(TT) !== Fk[5]);
+      let cT = Fk[5],
+        KT = Fk[5];
+      const MT = (...TT) => {
+        TT[Fk[0]] = Fk[4];
         try {
-          return YY[AI[1]]()
+          return TT[Fk[1]]()
         } catch {
-          return AI[25]
+          return Fk[41]
         }
       };
-      let WY = AI[22];
-      const EY = () => {
-          if (!WY && (0, VF[AI[48]])()) {
-            function YY(...YY) {
-              RI(YY[AI[0]] = AI[1], YY[-AI[30]] = function(...rY) {
-                return RI(rY[AI[0]] = AI[17], rY[AI[17]] = {}), rY[AI[14]].length !== rY[AI[1]].length + rY[AI[2]].length ? AI[22] : YY[AI[26]](rY[AI[1]], rY[AI[2]], rY[AI[14]], AI[1], AI[1], AI[1], rY[AI[17]])
-              }, YY[AI[26]] = function(...rY) {
-                return RI(rY[AI[0]] = AI[6], rY[-AI[29]] = AI[22]), rY[AI[27]] >= rY[AI[14]].length ? AI[25] : rY[AI[28]]["" + rY[AI[17]] + rY[AI[8]] + rY[AI[27]]] !== AI[15] ? rY[AI[28]]["" + rY[AI[17]] + rY[AI[8]] + rY[AI[27]]] : (rY[AI[14]][rY[AI[27]]] === rY[AI[1]][rY[AI[17]]] && rY[AI[14]][rY[AI[27]]] === rY[AI[2]][rY[AI[8]]] ? rY[-AI[29]] = YY[AI[26]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]] + AI[2], rY[AI[8]], rY[AI[27]] + AI[2], rY[AI[28]]) || YY[AI[26]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]], rY[AI[8]] + AI[2], rY[AI[27]] + AI[2], rY[AI[28]]) : rY[AI[14]][rY[AI[27]]] === rY[AI[1]][rY[AI[17]]] ? rY[-AI[29]] = YY[AI[26]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]] + AI[2], rY[AI[8]], rY[AI[27]] + AI[2], rY[AI[28]]) : rY[AI[14]][rY[AI[27]]] === rY[AI[2]][rY[AI[8]]] && (rY[-AI[29]] = YY[AI[26]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]], rY[AI[8]] + AI[2], rY[AI[27]] + AI[2], rY[AI[28]])), rY[AI[28]]["" + rY[AI[17]] + rY[AI[8]] + rY[AI[27]]] = rY[-AI[29]], rY[-AI[29]])
-              }, console.log(YY[-AI[30]]))
+      let rT = Fk[38];
+      const AT = (...TT) => {
+          if (TT[Fk[0]] = Fk[1], "YPx2w8" + Fk[216] in Dk && function(...TT) {
+              Lk(TT[Fk[0]] = Fk[1], TT[Fk[39]] = function(TT) {
+                var oT, IT, iT, zT, kT = TT.length;
+                for (Lk(oT = [], IT = Fk[1]), iT = Fk[1]; iT < kT; iT++) oT.push(iT !== Fk[1] && TT[iT] > TT[iT - Fk[4]] ? oT[iT - Fk[4]] + Fk[4] : Fk[4]);
+                for (zT = kT - Fk[4]; zT >= Fk[1]; zT--) zT !== kT - Fk[4] && TT[zT] > TT[zT + Fk[4]] && (oT[zT] = Math.max(oT[zT], oT[zT + Fk[4]] + Fk[4])), IT += oT[zT];
+                return IT
+              }, console.log(TT[Fk[39]]))
+            }(), !rT && (0, ei[Fk[224]])()) {
+            function oT(...TT) {
+              TT[Fk[0]] = Fk[1]
             }
-            "_q1P6d" + AI[50] in II && YY(), WY = AI[25]
+            "OsXpS5" in Dk && oT(), rT = Fk[41]
           }
         },
-        mY = (...YY) => {
-          YY[AI[0]] = AI[2], "fgUkJv" in II && function(...YY) {
-            RI(YY[AI[0]] = AI[1], YY[AI[33]] = function(...YY) {
-              for (RI(YY[AI[0]] = AI[2], YY[AI[13]] = YY[AI[1]].length, YY[AI[14]] = [], YY[AI[32]] = AI[1], YY[AI[8]] = AI[1], YY[AI[1]].sort(((YY, rY) => YY - rY))), YY[AI[31]] = AI[1]; YY[AI[31]] < YY[AI[13]]; YY[AI[31]]++)
-                if (!(YY[AI[31]] > AI[1] && YY[AI[1]][YY[AI[31]]] === YY[AI[1]][YY[AI[31]] - AI[2]]))
-                  for (RI(YY[AI[32]] = YY[AI[31]] + AI[2], YY[AI[8]] = YY[AI[13]] - AI[2]); YY[AI[32]] < YY[AI[8]];)
-                    if (YY[AI[1]][YY[AI[31]]] + YY[AI[1]][YY[AI[32]]] + YY[AI[1]][YY[AI[8]]] < AI[1]) YY[AI[32]]++;
-                    else if (YY[AI[1]][YY[AI[31]]] + YY[AI[1]][YY[AI[32]]] + YY[AI[1]][YY[AI[8]]] > AI[1]) YY[AI[8]]--;
-              else {
-                for (YY[AI[14]].push([YY[AI[1]][YY[AI[31]]], YY[AI[1]][YY[AI[32]]], YY[AI[1]][YY[AI[8]]]]); YY[AI[32]] < YY[AI[8]] && YY[AI[1]][YY[AI[32]]] === YY[AI[1]][YY[AI[32]] + AI[2]];) YY[AI[32]]++;
-                for (; YY[AI[32]] < YY[AI[8]] && YY[AI[1]][YY[AI[8]]] === YY[AI[1]][YY[AI[8]] - AI[2]];) YY[AI[8]]--;
-                RI(YY[AI[32]]++, YY[AI[8]]--)
+        gT = (...TT) => {
+          TT[Fk[0]] = Fk[4], "quJkqa" in Dk && function(...TT) {
+            TT[Fk[0]] = Fk[1];
+            const oT = require("big-integer");
+            Lk(TT[-Fk[17]] = class {
+              static randomPrime(...TT) {
+                TT[Fk[0]] = Fk[4];
+                const IT = oT.one.shiftLeft(TT[Fk[1]] - Fk[4]),
+                  iT = oT.one.shiftLeft(TT[Fk[1]]).prev();
+                for (; Fk[41];) {
+                  let TT = oT.randBetween(IT, iT);
+                  if (TT.isProbablePrime(Fk[54])) return TT
+                }
               }
-              return YY[AI[14]]
-            }, console.log(YY[AI[33]]))
+              static generate(...TT) {
+                TT[Fk[0]] = Fk[4];
+                const IT = oT(Fk[200]);
+                let iT, zT;
+                TT[Fk[42]] = Fk[6];
+                do {
+                  Lk(iT = this.randomPrime(TT[Fk[1]] / Fk[2]), zT = this.randomPrime(TT[Fk[1]] / Fk[2]), TT[Fk[42]] = oT.lcm(iT.prev(), zT.prev()))
+                } while (oT.gcd(IT, TT[Fk[42]]).notEquals(Fk[4]) || iT.minus(zT).abs().shiftRight(TT[Fk[1]] / Fk[2] - Fk[202]).isZero());
+                return {
+                  e: IT,
+                  n: iT.multiply(zT),
+                  d: IT.modInv(TT[Fk[42]])
+                }
+              }
+              static encrypt(...TT) {
+                return TT[Fk[0]] = Fk[7], oT(TT[Fk[1]]).modPow(TT[Fk[2]], TT[Fk[4]])
+              }
+              static decrypt(...TT) {
+                return TT[Fk[0]] = Fk[7], oT(TT[Fk[1]]).modPow(TT[Fk[4]], TT[Fk[2]])
+              }
+              static encode(TT) {
+                const IT = TT.split("").map((TT => TT.charCodeAt())).join("");
+                return oT(IT)
+              }
+              static decode(...TT) {
+                TT[Fk[0]] = Fk[4];
+                const oT = TT[Fk[1]].toString();
+                TT[-Fk[43]] = "";
+                for (let IT = Fk[1]; IT < oT.length; IT += Fk[2]) {
+                  let iT = Number(oT.substr(IT, Fk[2]));
+                  iT <= Fk[98] ? (TT[-Fk[43]] += String.fromCharCode(Number(oT.substr(IT, Fk[7]))), IT++) : TT[-Fk[43]] += String.fromCharCode(iT)
+                }
+                return TT[-Fk[43]]
+              }
+            }, module.exports = TT[-Fk[17]])
           }();
           try {
-            function rY(...YY) {
-              YY[AI[0]] = AI[1];
-              const rY = require("big-integer");
-              RI(YY[-AI[35]] = class {
-                static randomPrime(...YY) {
-                  YY[AI[0]] = AI[2];
-                  const DY = rY.one.shiftLeft(YY[AI[1]] - AI[2]),
-                    FY = rY.one.shiftLeft(YY[AI[1]]).prev();
-                  for (; AI[25];) {
-                    let YY = rY.randBetween(DY, FY);
-                    if (YY.isProbablePrime(256)) return YY
-                  }
-                }
-                static generate(...YY) {
-                  YY[AI[0]] = AI[2];
-                  const DY = rY(65537);
-                  let FY, AY;
-                  YY[-AI[34]] = AI[15];
-                  do {
-                    RI(FY = this.randomPrime(YY[AI[1]] / AI[14]), AY = this.randomPrime(YY[AI[1]] / AI[14]), YY[-AI[34]] = rY.lcm(FY.prev(), AY.prev()))
-                  } while (rY.gcd(DY, YY[-AI[34]]).notEquals(AI[2]) || FY.minus(AY).abs().shiftRight(YY[AI[1]] / AI[14] - 100).isZero());
-                  return {
-                    e: DY,
-                    n: FY.multiply(AY),
-                    d: DY.modInv(YY[-AI[34]])
-                  }
-                }
-                static encrypt(...YY) {
-                  return YY[AI[0]] = AI[17], rY(YY[AI[1]]).modPow(YY[AI[14]], YY[AI[2]])
-                }
-                static decrypt(...YY) {
-                  return YY[AI[0]] = AI[17], rY(YY[AI[1]]).modPow(YY[AI[2]], YY[AI[14]])
-                }
-                static encode(...YY) {
-                  YY[AI[0]] = AI[2];
-                  const DY = YY[AI[1]].split("").map((YY => YY.charCodeAt())).join("");
-                  return rY(DY)
-                }
-                static decode(...YY) {
-                  YY[AI[0]] = AI[2];
-                  const rY = YY[AI[1]].toString();
-                  YY[AI[2]] = "";
-                  for (let DY = AI[1]; DY < rY.length; DY += AI[14]) {
-                    let FY = Number(rY.substr(DY, AI[14]));
-                    FY <= 30 ? (YY[AI[2]] += String.fromCharCode(Number(rY.substr(DY, AI[17]))), DY++) : YY[AI[2]] += String.fromCharCode(FY)
-                  }
-                  return YY[AI[2]]
-                }
-              }, module.exports = YY[-AI[35]])
+            function oT(...TT) {
+              TT[Fk[0]] = Fk[1]
             }
-            return "LREI24D" in II && rY(), YY[AI[1]]()
+            return "wpsdxVH" in Dk && oT(), TT[Fk[1]]()
           } catch {
-            return AI[15]
+            return Fk[6]
           }
         },
-        VY = (...YY) => {
-          YY[AI[0]] = AI[2];
+        hT = (...TT) => {
+          TT[Fk[0]] = Fk[4];
           try {
-            return YY[AI[1]](), AI[25]
-          } catch {
-            return AI[22]
-          }
-        },
-        SY = (0, VF[AI[18]])("a29qbzYzb25i"),
-        lY = (0, VF[AI[36]])(AI[16]);
-      let TY = AI[16],
-        eY = AI[22],
-        NY = AI[22];
-      const BY = (0, VF[AI[36]])(AI[16]);
-      let cY = AI[1];
-      const KY = (0, VF[AI[36]])(AI[16]);
-      let HY = AI[1];
-      const zY = (0, VF[AI[36]])(AI[16]);
-      let ZY = AI[22],
-        CY = AI[22];
-      const fY = (...rY) => {
-          if (rY[AI[0]] = AI[14], rY[AI[1]] === YY) {
-            if (TY === AI[16]) {
-              function AY(...YY) {
-                RI(YY[AI[0]] = AI[1], YY[AI[3]] = function(...rY) {
-                  return RI(rY[AI[0]] = AI[17], rY[AI[13]] = {}), rY[AI[14]].length !== rY[AI[1]].length + rY[AI[2]].length ? AI[22] : YY[AI[2]](rY[AI[1]], rY[AI[2]], rY[AI[14]], AI[1], AI[1], AI[1], rY[AI[13]])
-                }, YY[AI[2]] = function(...rY) {
-                  return RI(rY[AI[0]] = AI[6], rY[AI[37]] = AI[22]), rY[AI[27]] >= rY[AI[14]].length ? AI[25] : rY[AI[28]]["" + rY[AI[17]] + rY[AI[8]] + rY[AI[27]]] !== AI[15] ? rY[AI[28]]["" + rY[AI[17]] + rY[AI[8]] + rY[AI[27]]] : (rY[AI[14]][rY[AI[27]]] === rY[AI[1]][rY[AI[17]]] && rY[AI[14]][rY[AI[27]]] === rY[AI[2]][rY[AI[8]]] ? rY[AI[37]] = YY[AI[2]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]] + AI[2], rY[AI[8]], rY[AI[27]] + AI[2], rY[AI[28]]) || YY[AI[2]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]], rY[AI[8]] + AI[2], rY[AI[27]] + AI[2], rY[AI[28]]) : rY[AI[14]][rY[AI[27]]] === rY[AI[1]][rY[AI[17]]] ? rY[AI[37]] = YY[AI[2]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]] + AI[2], rY[AI[8]], rY[AI[27]] + AI[2], rY[AI[28]]) : rY[AI[14]][rY[AI[27]]] === rY[AI[2]][rY[AI[8]]] && (rY[AI[37]] = YY[AI[2]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[AI[17]], rY[AI[8]] + AI[2], rY[AI[27]] + AI[2], rY[AI[28]])), rY[AI[28]]["" + rY[AI[17]] + rY[AI[8]] + rY[AI[27]]] = rY[AI[37]], rY[AI[37]])
-                }, console.log(YY[AI[3]]))
-              }
-              "_Pm2JVI" in II && AY(), TY = typeof rY[AI[2]] === AI[144] ? rY[AI[2]] : -AI[2]
-            } else eY = AI[25];
-            return
-          }
-          const DY = lY[rY[AI[1]]];
-          if (!rY[AI[2]]) {
-            if (DY) {
-              "uzXEaA" in II && (module.exports = async (YY = () => {
-                throw new Error(AI[38])
-              }) => {
-                const rY = new Set(process.argv.slice(AI[14]));
-                if (!rY.has(AI[39])) {
-                  if (rY.size !== AI[2]) return AI[22];
-                  if (!rY.has(AI[40])) return AI[22]
+            function oT() {
+              var TT = function(...TT) {
+                function oT(...TT) {
+                  return TT[Fk[0]] = Fk[2], WT(zT(XT(TT[Fk[1]]), XT(TT[Fk[4]])))
                 }
-                return await (async () => void 0 === await YY() ? AI[44] + AI[45] : "")(), AI[25]
-              }), NY = AI[25]
-            }
-            return
-          }
-          if (rY[AI[1]] !== SY) return void(lY[rY[AI[1]]] = rY[AI[2]]);
-          lY[rY[AI[1]]] = AI[25];
-          const FY = typeof rY[AI[2]] === AI[46] ? rY[AI[2]] : "" + rY[AI[2]];
-          if (!zY[FY])
-            if ((0, dA.m)(FY)) CY = AI[25];
-            else if ((0, dA[AI[36]])(FY)) cY < 8 ? RI(zY[FY] = AI[25], BY[cY++] = FY, ZY ||= (0, dA[AI[47]])(FY)) : !ZY && (0, dA[AI[47]])(FY) && RI(zY[FY] = AI[25], BY[8 - AI[2]] = FY, ZY = AI[25]);
-          else {
-            function IY(...YY) {
-              var rY;
-              RI(YY[AI[0]] = AI[1], rY = function(...YY) {
-                RI(YY[AI[0]] = AI[2], this.gu = YY[AI[1]], this.length = AI[1], this.map = {}, this.head = AI[16], this.tail = AI[16])
-              }, rY.prototype.get = function(...YY) {
-                var rY;
-                return RI(YY[AI[0]] = AI[2], rY = this.map[YY[AI[1]]]), rY ? (this.remove(rY), this.insert(rY.key, rY.val), rY.val) : -AI[2]
-              }, rY.prototype.put = function(...YY) {
-                RI(YY[AI[0]] = AI[14], this.map[YY[AI[1]]] ? (this.remove(this.map[YY[AI[1]]]), this.insert(YY[AI[1]], YY[AI[2]])) : this.length === this.gu ? (this.remove(this.head), this.insert(YY[AI[1]], YY[AI[2]])) : (this.insert(YY[AI[1]], YY[AI[2]]), this.length++))
-              }, rY.prototype.remove = function(...YY) {
-                RI(YY[AI[0]] = AI[2], YY[AI[2]] = YY[AI[1]].prev, YY[AI[14]] = YY[AI[1]].next), YY[AI[14]] && (YY[AI[14]].prev = YY[AI[2]]), YY[AI[2]] && (YY[AI[2]].next = YY[AI[14]]), this.head === YY[AI[1]] && (this.head = YY[AI[14]]), this.tail === YY[AI[1]] && (this.tail = YY[AI[2]]), delete this.map[YY[AI[1]].key]
-              }, rY.prototype.insert = function(...YY) {
-                RI(YY[AI[0]] = AI[14], YY[AI[14]] = new List(YY[AI[1]], YY[AI[2]]), this.tail ? (this.tail.next = YY[AI[14]], YY[AI[14]].prev = this.tail, this.tail = YY[AI[14]]) : (this.tail = YY[AI[14]], this.head = YY[AI[14]]), this.map[YY[AI[1]]] = YY[AI[14]])
-              }, console.log(rY))
-            }
-            if ("QbGqEX" + AI[48] in II && IY(), HY < 4) {
-              function RY(...YY) {
-                YY[AI[0]] = AI[1]
-              }
-              "hK_BGc8" in II && RY(), RI(zY[FY] = AI[25], KY[HY++] = FY)
-            }
-          }
-        },
-        jY = (0, JA[AI[82]])(YY),
-        hY = jY ? jY.replaced : (() => {
-          try {
-            function rY(...YY) {
-              function rY(...YY) {
-                return YY[AI[0]] = AI[2], YY[AI[1]][AI[2]] * AI[52] + (YY[AI[1]][AI[1]] < AI[1] ? AI[51] | YY[AI[1]][AI[1]] : YY[AI[1]][AI[1]])
-              }
 
-              function DY(...YY) {
-                switch (YY[AI[0]] = AI[2], ((YY[AI[1]] & AI[51]) !== AI[1]) * AI[2] + (YY[AI[1]] < AI[1]) * AI[14]) {
-                  case AI[1]:
-                    return [YY[AI[1]] % AI[51], Math.trunc(YY[AI[1]] / AI[52])];
-                  case AI[2]:
-                    return [YY[AI[1]] % AI[51] - AI[51], Math.trunc(YY[AI[1]] / AI[52]) + AI[2]];
-                  case AI[14]:
-                    return [((YY[AI[1]] + AI[51]) % AI[51] + AI[51]) % AI[51], Math.round(YY[AI[1]] / AI[52])];
-                  case AI[17]:
-                    return [YY[AI[1]] % AI[51], Math.trunc(YY[AI[1]] / AI[52])]
+                function iT(TT, oT, IT) {
+                  return function(...TT) {
+                    var oT, IT, iT, zT;
+                    for (Lk(TT[Fk[0]] = Fk[2], TT[Fk[3]] = TT[Fk[4]].length, TT[Fk[61]] = Array()), TT[Fk[59]] = Array(Math.ceil(TT[Fk[1]].length / Fk[2])), oT = Fk[1]; oT < TT[Fk[59]].length; oT++) TT[Fk[59]][oT] = TT[Fk[1]].charCodeAt(oT * Fk[2]) << Fk[15] | TT[Fk[1]].charCodeAt(oT * Fk[2] + Fk[4]);
+                    for (; TT[Fk[59]].length > Fk[1];) {
+                      for (Lk(zT = Array(), iT = Fk[1]), oT = Fk[1]; oT < TT[Fk[59]].length; oT++) Lk(iT = (iT << Fk[50]) + TT[Fk[59]][oT], IT = Math.floor(iT / TT[Fk[3]]), iT -= IT * TT[Fk[3]]), (zT.length > Fk[1] || IT > Fk[1]) && (zT[zT.length] = IT);
+                      Lk(TT[Fk[61]][TT[Fk[61]].length] = iT, TT[Fk[59]] = zT)
+                    }
+                    for (TT[-Fk[62]] = "", oT = TT[Fk[61]].length - Fk[4]; oT >= Fk[1]; oT--) TT[-Fk[62]] += TT[Fk[4]].charAt(TT[Fk[61]][oT]);
+                    for (TT[Fk[29]] = Math.ceil(TT[Fk[1]].length * Fk[15] / (Math.log(TT[Fk[4]].length) / Math.log(Fk[2]))), oT = TT[-Fk[62]].length; oT < TT[Fk[29]]; oT++) TT[-Fk[62]] = TT[Fk[4]][Fk[1]] + TT[-Fk[62]];
+                    return TT[-Fk[62]]
+                  }(zT(XT(TT), XT(oT)), IT)
                 }
-              }
-              YY[AI[0]] = AI[1], RI(YY[AI[13]] = rY([AI[14], AI[8]]), YY[AI[2]] = rY([AI[2], AI[14]]), YY[AI[14]] = YY[AI[13]] + YY[AI[2]], YY[-AI[53]] = YY[AI[14]] - YY[AI[2]], YY[AI[8]] = YY[-AI[53]] * AI[14], YY[AI[17]] = YY[AI[8]] / AI[14], console.log(DY(YY[AI[14]])), console.log(DY(YY[-AI[53]])), console.log(DY(YY[AI[8]])), console.log(DY(YY[AI[17]])))
+
+                function zT(TT, oT) {
+                  var IT, iT, zT = BT(TT);
+                  zT.length > Fk[50] && (zT = AT(zT, TT.length * Fk[15]));
+                  var kT = Array(Fk[50]),
+                    WT = Array(Fk[50]);
+                  for (IT = Fk[1]; IT < Fk[50]; IT++) Lk(kT[IT] = zT[IT] ^ Fk[89], WT[IT] = zT[IT] ^ Fk[90]);
+                  return iT = AT(kT.concat(BT(oT)), Fk[53] + oT.length * Fk[15]), FT(AT(WT.concat(iT), Sk(Fk[51] + Fk[52], Fk[53], Fk[54])))
+                }
+
+                function kT(oT) {
+                  var IT, iT, kT, WT;
+                  try {
+                    TT[-Fk[55]]
+                  } catch (zT) {
+                    TT[-Fk[55]] = Fk[1]
+                  }
+                  for (Lk(IT = TT[-Fk[55]] ? Fk[56] + Fk[91] + Fk[92] : Fk[56] + Fk[93] + Fk[94], iT = "", kT = void 0), WT = Fk[1]; WT < oT.length; WT++) Lk(kT = oT.charCodeAt(WT), iT += IT.charAt(kT >>> Fk[14] & Fk[57]) + IT.charAt(kT & Fk[57]));
+                  return iT
+                }
+
+                function WT(...oT) {
+                  oT[Fk[0]] = Fk[4];
+                  try {
+                    TT[Fk[4]]
+                  } catch (IT) {
+                    TT[Fk[4]] = ""
+                  }
+                  for (Lk(oT[Fk[3]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+" + Fk[49], oT[Fk[22]] = "", oT[Fk[59]] = oT[Fk[1]].length), oT[Fk[58]] = Fk[1]; oT[Fk[58]] < oT[Fk[59]]; oT[Fk[58]] += Fk[7])
+                    for (oT[Fk[16]] = oT[Fk[1]].charCodeAt(oT[Fk[58]]) << Fk[50] | (oT[Fk[58]] + Fk[4] < oT[Fk[59]] ? oT[Fk[1]].charCodeAt(oT[Fk[58]] + Fk[4]) << Fk[15] : Fk[1]) | (oT[Fk[58]] + Fk[2] < oT[Fk[59]] ? oT[Fk[1]].charCodeAt(oT[Fk[58]] + Fk[2]) : Fk[1]), oT[Fk[60]] = Fk[1]; oT[Fk[60]] < Fk[14]; oT[Fk[60]]++) oT[Fk[58]] * Fk[15] + oT[Fk[60]] * Fk[60] > oT[Fk[1]].length * Fk[15] ? oT[Fk[22]] += TT[Fk[4]] : oT[Fk[22]] += oT[Fk[3]].charAt(oT[Fk[16]] >>> Fk[60] * (Fk[7] - oT[Fk[60]]) & Fk[65]);
+                  return oT[Fk[22]]
+                }
+
+                function XT(...TT) {
+                  var oT, IT;
+                  for (Lk(TT[Fk[0]] = Fk[4], TT[Fk[4]] = "", TT[-Fk[63]] = -Fk[4]); ++TT[-Fk[63]] < TT[Fk[1]].length;) Lk(oT = TT[Fk[1]].charCodeAt(TT[-Fk[63]]), IT = TT[-Fk[63]] + Fk[4] < TT[Fk[1]].length ? TT[Fk[1]].charCodeAt(TT[-Fk[63]] + Fk[4]) : Fk[1]), Fk[100] <= oT && oT <= Fk[101] && Fk[102] <= IT && IT <= Fk[103] && Lk(oT = Fk[104] + ((oT & Fk[64]) << Fk[75]) + (IT & Fk[64]), TT[-Fk[63]]++), oT <= Fk[105] ? TT[Fk[4]] += String.fromCharCode(oT) : oT <= Fk[106] ? TT[Fk[4]] += String.fromCharCode(Fk[107] | oT >>> Fk[60] & Fk[108], Fk[66] | oT & Fk[65]) : oT <= Fk[79] ? TT[Fk[4]] += String.fromCharCode(Fk[109] | oT >>> Fk[67] & Fk[57], Fk[66] | oT >>> Fk[60] & Fk[65], Fk[66] | oT & Fk[65]) : oT <= Fk[110] && (TT[Fk[4]] += String.fromCharCode(Fk[111] | oT >>> Fk[74] & Fk[73], Fk[66] | oT >>> Fk[67] & Fk[65], Fk[66] | oT >>> Fk[60] & Fk[65], Fk[66] | oT & Fk[65]));
+                  return TT[Fk[4]]
+                }
+
+                function BT(...TT) {
+                  for (Lk(TT[Fk[0]] = Fk[4], TT[-Fk[71]] = Array(TT[Fk[1]].length >> Fk[2])), TT[Fk[2]] = Fk[1]; TT[Fk[2]] < TT[-Fk[71]].length; TT[Fk[2]]++) TT[-Fk[71]][TT[Fk[2]]] = Fk[1];
+                  for (TT[Fk[2]] = Fk[1]; TT[Fk[2]] < TT[Fk[1]].length * Fk[15]; TT[Fk[2]] += Fk[15]) TT[-Fk[71]][TT[Fk[2]] >> Fk[16]] |= (TT[Fk[1]].charCodeAt(TT[Fk[2]] / Fk[15]) & Fk[69]) << Fk[44] - TT[Fk[2]] % Fk[72];
+                  return TT[-Fk[71]]
+                }
+
+                function FT(...TT) {
+                  for (Lk(TT[Fk[0]] = Fk[4], TT[Fk[3]] = ""), TT[Fk[19]] = Fk[1]; TT[Fk[19]] < TT[Fk[1]].length * Fk[72]; TT[Fk[19]] += Fk[15]) TT[Fk[3]] += String.fromCharCode(TT[Fk[1]][TT[Fk[19]] >> Fk[16]] >>> Fk[44] - TT[Fk[19]] % Fk[72] & Fk[69]);
+                  return TT[Fk[3]]
+                }
+
+                function ST(...TT) {
+                  return TT[Fk[0]] = Fk[2], TT[Fk[1]] >>> TT[Fk[4]] | TT[Fk[1]] << Fk[72] - TT[Fk[4]]
+                }
+
+                function DT(TT, oT) {
+                  return TT >>> oT
+                }
+
+                function LT(...TT) {
+                  return TT[Fk[0]] = Fk[7], TT[Fk[1]] & TT[Fk[4]] ^ ~TT[Fk[1]] & TT[Fk[2]]
+                }
+
+                function xT(...TT) {
+                  return TT[Fk[0]] = Fk[7], TT[Fk[1]] & TT[Fk[4]] ^ TT[Fk[1]] & TT[Fk[2]] ^ TT[Fk[4]] & TT[Fk[2]]
+                }
+
+                function cT(TT) {
+                  return ST(TT, Fk[2]) ^ ST(TT, Fk[114]) ^ ST(TT, Fk[115])
+                }
+
+                function KT(...TT) {
+                  return TT[Fk[0]] = Fk[4], ST(TT[Fk[1]], Fk[60]) ^ ST(TT[Fk[1]], Fk[116]) ^ ST(TT[Fk[1]], Fk[117])
+                }
+
+                function MT(...TT) {
+                  return TT[Fk[0]] = Fk[4], ST(TT[Fk[1]], Fk[73]) ^ ST(TT[Fk[1]], Fk[74]) ^ DT(TT[Fk[1]], Fk[7])
+                }
+
+                function rT(...TT) {
+                  return TT[Fk[0]] = Fk[4], ST(TT[Fk[1]], Fk[118]) ^ ST(TT[Fk[1]], Fk[76]) ^ DT(TT[Fk[1]], Fk[75])
+                }
+
+                function AT(...oT) {
+                  var IT, iT, zT, kT, WT, XT, BT, FT, ST, DT, AT, hT;
+                  for (Lk(oT[Fk[0]] = Fk[2], oT[Fk[2]] = new Array(Fk[188], -Fk[189], Fk[190], -Fk[191], Fk[192], -Fk[193], Fk[194], Fk[195]), oT[Fk[78]] = new Array(Fk[77])), Lk(oT[Fk[1]][oT[Fk[4]] >> Fk[16]] |= Fk[66] << Fk[44] - oT[Fk[4]] % Fk[72], oT[Fk[1]][(oT[Fk[4]] + Fk[77] >> Fk[196] << Fk[14]) + Fk[57]] = oT[Fk[4]]), ST = Fk[1]; ST < oT[Fk[1]].length; ST += Fk[50]) {
+                    for (Lk(IT = oT[Fk[2]][Fk[1]], iT = oT[Fk[2]][Fk[4]], zT = oT[Fk[2]][Fk[2]], kT = oT[Fk[2]][Fk[7]], WT = oT[Fk[2]][Fk[14]], XT = oT[Fk[2]][Fk[16]], BT = oT[Fk[2]][Fk[60]], FT = oT[Fk[2]][Fk[73]]), DT = Fk[1]; DT < Fk[77]; DT++) Lk(oT[Fk[78]][DT] = DT < Fk[50] ? oT[Fk[1]][DT + ST] : gT(gT(gT(rT(oT[Fk[78]][DT - Fk[2]]), oT[Fk[78]][DT - Fk[73]]), MT(oT[Fk[78]][DT - Fk[57]])), oT[Fk[78]][DT - Fk[50]]), AT = gT(gT(gT(gT(FT, KT(WT)), LT(WT, XT, BT)), TT[Fk[2]][DT]), oT[Fk[78]][DT]), hT = gT(cT(IT), xT(IT, iT, zT)), FT = BT, BT = XT, XT = WT, WT = gT(kT, AT), kT = zT, zT = iT, iT = IT, IT = gT(AT, hT));
+                    Lk(oT[Fk[2]][Fk[1]] = gT(IT, oT[Fk[2]][Fk[1]]), oT[Fk[2]][Fk[4]] = gT(iT, oT[Fk[2]][Fk[4]]), oT[Fk[2]][Fk[2]] = gT(zT, oT[Fk[2]][Fk[2]]), oT[Fk[2]][Fk[7]] = gT(kT, oT[Fk[2]][Fk[7]]), oT[Fk[2]][Fk[14]] = gT(WT, oT[Fk[2]][Fk[14]]), oT[Fk[2]][Fk[16]] = gT(XT, oT[Fk[2]][Fk[16]]), oT[Fk[2]][Fk[60]] = gT(BT, oT[Fk[2]][Fk[60]]), oT[Fk[2]][Fk[73]] = gT(FT, oT[Fk[2]][Fk[73]]))
+                  }
+                  return oT[Fk[2]]
+                }
+
+                function gT(...TT) {
+                  return Lk(TT[Fk[0]] = Fk[2], TT[Fk[3]] = (TT[Fk[1]] & Fk[79]) + (TT[Fk[4]] & Fk[79]), TT[Fk[7]] = (TT[Fk[1]] >> Fk[50]) + (TT[Fk[4]] >> Fk[50]) + (TT[Fk[3]] >> Fk[50])), TT[Fk[7]] << Fk[50] | TT[Fk[3]] & Fk[79]
+                }
+                return Lk(TT[Fk[0]] = Fk[1], TT[-Fk[55]] = Fk[1], TT[Fk[4]] = ""), TT[Fk[2]] = new Array(Fk[124], Fk[125], -Fk[126], -Fk[127], Fk[128], Fk[129], -Fk[130], -Fk[131], -Fk[132], Fk[133], Fk[134], Fk[135], Fk[136], -Fk[137], -Fk[138], -Fk[139], -Fk[140], -Fk[141], Fk[142], Fk[143], Fk[144], Fk[145], Fk[146], Fk[147], -Fk[148], -Fk[149], -Fk[150], -Fk[151], -Fk[152], -Fk[153], Fk[154], Fk[155], Fk[156], Fk[157], Fk[158], Fk[159], Fk[160], Fk[161], -Fk[162], -Fk[163], -Fk[164], -Fk[165], -Fk[166], -Fk[167], -Fk[168], -Fk[169], -Fk[170], Fk[171], Fk[172], Fk[173], Fk[174], Fk[175], Fk[176], Fk[177], Fk[178], Fk[179], Fk[180], Fk[181], -Fk[182], -Fk[183], -Fk[184], -Fk[185], -Fk[186], -Fk[187]), {
+                  hex: function(TT) {
+                    return kT(function(...TT) {
+                      return TT[Fk[0]] = Fk[4], FT(AT(BT(TT[Fk[1]]), TT[Fk[1]].length * Fk[15]))
+                    }(XT(TT)))
+                  },
+                  b64: oT,
+                  any: iT,
+                  hex_hmac: function(...TT) {
+                    return TT[Fk[0]] = Fk[2], kT(zT(XT(TT[Fk[1]]), XT(TT[Fk[4]])))
+                  },
+                  b64_hmac: oT,
+                  any_hmac: iT
+                }
+              }();
+              console.log(TT)
             }
-            return "GoP8N9" + AI[50] in II && rY(), AY[YY]
+            return "jQ0xUHn" in Dk && oT(), TT[Fk[1]](), Fk[41]
           } catch {
-            return AI[15]
+            return Fk[38]
+          }
+        },
+        wT = (0, ei[Fk[8]])("a29qbzYzb25i"),
+        mT = (0, ei[Fk[80]])(Fk[5]);
+      let eT = Fk[5],
+        RT = Fk[38],
+        uT = Fk[38];
+      const vT = (0, ei[Fk[80]])(Fk[5]);
+      let ET = Fk[1];
+      const fT = (0, ei[Fk[80]])(Fk[5]);
+      let CT = Fk[1];
+      const jT = (0, ei[Fk[80]])(Fk[5]);
+      let JT = Fk[38],
+        UT = Fk[38];
+      const aT = (...oT) => {
+          if (oT[Fk[0]] = Fk[2], "XxyR4n" in Dk && function(...TT) {
+              TT[Fk[0]] = Fk[1]
+            }(), oT[Fk[1]] === TT) {
+            if (eT === Fk[5]) {
+              function kT(...TT) {
+                Lk(TT[Fk[0]] = Fk[1], TT[Fk[86]] = function(...TT) {
+                  for (Lk(TT[Fk[0]] = Fk[4], TT[Fk[3]] = TT[Fk[1]].length, TT[Fk[2]] = [], TT[Fk[59]] = Fk[1]), TT[Fk[85]] = Fk[1]; TT[Fk[85]] < TT[Fk[3]]; TT[Fk[85]]++) TT[Fk[2]].push(TT[Fk[85]] !== Fk[1] && TT[Fk[1]][TT[Fk[85]]] > TT[Fk[1]][TT[Fk[85]] - Fk[4]] ? TT[Fk[2]][TT[Fk[85]] - Fk[4]] + Fk[4] : Fk[4]);
+                  for (TT[Fk[29]] = TT[Fk[3]] - Fk[4]; TT[Fk[29]] >= Fk[1]; TT[Fk[29]]--) TT[Fk[29]] !== TT[Fk[3]] - Fk[4] && TT[Fk[1]][TT[Fk[29]]] > TT[Fk[1]][TT[Fk[29]] + Fk[4]] && (TT[Fk[2]][TT[Fk[29]]] = Math.max(TT[Fk[2]][TT[Fk[29]]], TT[Fk[2]][TT[Fk[29]] + Fk[4]] + Fk[4])), TT[Fk[59]] += TT[Fk[2]][TT[Fk[29]]];
+                  return TT[Fk[59]]
+                }, console.log(TT[Fk[86]]))
+              }
+              "rAcfGo" in Dk && kT(), eT = typeof oT[Fk[4]] === Fk[231] ? oT[Fk[4]] : -Fk[4]
+            } else RT = Fk[41];
+            return
+          }
+          const IT = mT[oT[Fk[1]]];
+          if (!oT[Fk[4]]) {
+            function WT(...TT) {
+              TT[Fk[0]] = Fk[1]
+            }
+            if ("IvoepK" + Fk[212] in Dk && WT(), IT) {
+              function XT(...TT) {
+                Lk(TT[Fk[0]] = Fk[1], TT[Fk[198]] = function(...TT) {
+                  function oT(...TT) {
+                    return TT[Fk[0]] = Fk[2], WT(zT(XT(TT[Fk[1]]), XT(TT[Fk[4]])))
+                  }
+
+                  function IT(...TT) {
+                    return TT[Fk[0]] = Fk[7],
+                      function(...TT) {
+                        var oT, IT, iT, zT;
+                        for (Lk(TT[Fk[0]] = Fk[2], TT[Fk[3]] = TT[Fk[4]].length, TT[Fk[7]] = Array()), TT[Fk[99]] = Array(Math.ceil(TT[Fk[1]].length / Fk[2])), oT = Fk[1]; oT < TT[Fk[99]].length; oT++) TT[Fk[99]][oT] = TT[Fk[1]].charCodeAt(oT * Fk[2]) << Fk[15] | TT[Fk[1]].charCodeAt(oT * Fk[2] + Fk[4]);
+                        for (; TT[Fk[99]].length > Fk[1];) {
+                          for (Lk(zT = Array(), iT = Fk[1]), oT = Fk[1]; oT < TT[Fk[99]].length; oT++) Lk(iT = (iT << Fk[50]) + TT[Fk[99]][oT], IT = Math.floor(iT / TT[Fk[3]]), iT -= IT * TT[Fk[3]]), (zT.length > Fk[1] || IT > Fk[1]) && (zT[zT.length] = IT);
+                          Lk(TT[Fk[7]][TT[Fk[7]].length] = iT, TT[Fk[99]] = zT)
+                        }
+                        for (TT[Fk[85]] = "", oT = TT[Fk[7]].length - Fk[4]; oT >= Fk[1]; oT--) TT[Fk[85]] += TT[Fk[4]].charAt(TT[Fk[7]][oT]);
+                        for (TT[Fk[29]] = Math.ceil(TT[Fk[1]].length * Fk[15] / (Math.log(TT[Fk[4]].length) / Math.log(Fk[2]))), oT = TT[Fk[85]].length; oT < TT[Fk[29]]; oT++) TT[Fk[85]] = TT[Fk[4]][Fk[1]] + TT[Fk[85]];
+                        return TT[Fk[85]]
+                      }(zT(XT(TT[Fk[1]]), XT(TT[Fk[4]])), TT[Fk[2]])
+                  }
+
+                  function zT(TT, oT) {
+                    var IT, iT, zT = BT(TT);
+                    zT.length > Fk[50] && (zT = AT(zT, TT.length * Fk[15]));
+                    var kT = Array(Fk[50]),
+                      WT = Array(Fk[50]);
+                    for (IT = Fk[1]; IT < Fk[50]; IT++) Lk(kT[IT] = zT[IT] ^ Fk[89], WT[IT] = zT[IT] ^ Fk[90]);
+                    return iT = AT(kT.concat(BT(oT)), Fk[53] + oT.length * Fk[15]), FT(AT(WT.concat(iT), Sk(Fk[51] + Fk[52], Fk[53], Fk[54])))
+                  }
+
+                  function kT(...oT) {
+                    oT[Fk[0]] = Fk[4];
+                    try {
+                      TT[Fk[28]]
+                    } catch (iT) {
+                      TT[Fk[28]] = Fk[1]
+                    }
+                    for (Lk(oT[Fk[3]] = TT[Fk[28]] ? Fk[56] + Fk[91] + Fk[92] : Fk[56] + Fk[93] + Fk[94], oT[Fk[22]] = "", oT[Fk[59]] = Fk[6]), oT[Fk[95]] = Fk[1]; oT[Fk[95]] < oT[Fk[1]].length; oT[Fk[95]]++) Lk(oT[Fk[59]] = oT[Fk[1]].charCodeAt(oT[Fk[95]]), oT[Fk[22]] += oT[Fk[3]].charAt(oT[Fk[59]] >>> Fk[14] & Fk[57]) + oT[Fk[3]].charAt(oT[Fk[59]] & Fk[57]));
+                    return oT[Fk[22]]
+                  }
+
+                  function WT(...oT) {
+                    oT[Fk[0]] = Fk[4];
+                    try {
+                      TT[Fk[96]]
+                    } catch (iT) {
+                      TT[Fk[96]] = ""
+                    }
+                    for (Lk(oT[Fk[4]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", oT[Fk[22]] = "", oT[Fk[97]] = oT[Fk[1]].length), oT[Fk[85]] = Fk[1]; oT[Fk[85]] < oT[Fk[97]]; oT[Fk[85]] += Fk[7])
+                      for (oT[Fk[16]] = oT[Fk[1]].charCodeAt(oT[Fk[85]]) << Fk[50] | (oT[Fk[85]] + Fk[4] < oT[Fk[97]] ? oT[Fk[1]].charCodeAt(oT[Fk[85]] + Fk[4]) << Fk[15] : Fk[1]) | (oT[Fk[85]] + Fk[2] < oT[Fk[97]] ? oT[Fk[1]].charCodeAt(oT[Fk[85]] + Fk[2]) : Fk[1]), oT[-Fk[98]] = Fk[1]; oT[-Fk[98]] < Fk[14]; oT[-Fk[98]]++) oT[Fk[85]] * Fk[15] + oT[-Fk[98]] * Fk[60] > oT[Fk[1]].length * Fk[15] ? oT[Fk[22]] += TT[Fk[96]] : oT[Fk[22]] += oT[Fk[4]].charAt(oT[Fk[16]] >>> Fk[60] * (Fk[7] - oT[-Fk[98]]) & Fk[65]);
+                    return oT[Fk[22]]
+                  }
+
+                  function XT(...TT) {
+                    var oT, IT;
+                    for (Lk(TT[Fk[0]] = Fk[4], TT[Fk[4]] = "", TT[Fk[72]] = -Fk[4]); ++TT[Fk[72]] < TT[Fk[1]].length;) Lk(oT = TT[Fk[1]].charCodeAt(TT[Fk[72]]), IT = TT[Fk[72]] + Fk[4] < TT[Fk[1]].length ? TT[Fk[1]].charCodeAt(TT[Fk[72]] + Fk[4]) : Fk[1]), Fk[100] <= oT && oT <= Fk[101] && Fk[102] <= IT && IT <= Fk[103] && Lk(oT = Fk[104] + ((oT & Fk[64]) << Fk[75]) + (IT & Fk[64]), TT[Fk[72]]++), oT <= Fk[105] ? TT[Fk[4]] += String.fromCharCode(oT) : oT <= Fk[106] ? TT[Fk[4]] += String.fromCharCode(Fk[107] | oT >>> Fk[60] & Fk[108], Fk[66] | oT & Fk[65]) : oT <= Fk[79] ? TT[Fk[4]] += String.fromCharCode(Fk[109] | oT >>> Fk[67] & Fk[57], Fk[66] | oT >>> Fk[60] & Fk[65], Fk[66] | oT & Fk[65]) : oT <= Fk[110] && (TT[Fk[4]] += String.fromCharCode(Fk[111] | oT >>> Fk[74] & Fk[73], Fk[66] | oT >>> Fk[67] & Fk[65], Fk[66] | oT >>> Fk[60] & Fk[65], Fk[66] | oT & Fk[65]));
+                    return TT[Fk[4]]
+                  }
+
+                  function BT(...TT) {
+                    for (Lk(TT[Fk[0]] = Fk[4], TT[Fk[3]] = Array(TT[Fk[1]].length >> Fk[2])), TT[Fk[22]] = Fk[1]; TT[Fk[22]] < TT[Fk[3]].length; TT[Fk[22]]++) TT[Fk[3]][TT[Fk[22]]] = Fk[1];
+                    for (TT[Fk[22]] = Fk[1]; TT[Fk[22]] < TT[Fk[1]].length * Fk[15]; TT[Fk[22]] += Fk[15]) TT[Fk[3]][TT[Fk[22]] >> Fk[16]] |= (TT[Fk[1]].charCodeAt(TT[Fk[22]] / Fk[15]) & Fk[69]) << Fk[44] - TT[Fk[22]] % Fk[72];
+                    return TT[Fk[3]]
+                  }
+
+                  function FT(...TT) {
+                    for (Lk(TT[Fk[0]] = Fk[4], TT[-Fk[113]] = ""), TT[Fk[2]] = Fk[1]; TT[Fk[2]] < TT[Fk[1]].length * Fk[72]; TT[Fk[2]] += Fk[15]) TT[-Fk[113]] += String.fromCharCode(TT[Fk[1]][TT[Fk[2]] >> Fk[16]] >>> Fk[44] - TT[Fk[2]] % Fk[72] & Fk[69]);
+                    return TT[-Fk[113]]
+                  }
+
+                  function ST(...TT) {
+                    return TT[Fk[0]] = Fk[2], TT[Fk[1]] >>> TT[Fk[4]] | TT[Fk[1]] << Fk[72] - TT[Fk[4]]
+                  }
+
+                  function DT(TT, oT) {
+                    return TT >>> oT
+                  }
+
+                  function LT(...TT) {
+                    return TT[Fk[0]] = Fk[7], TT[Fk[1]] & TT[Fk[4]] ^ ~TT[Fk[1]] & TT[Fk[2]]
+                  }
+
+                  function xT(...TT) {
+                    return TT[Fk[0]] = Fk[7], TT[Fk[1]] & TT[Fk[4]] ^ TT[Fk[1]] & TT[Fk[2]] ^ TT[Fk[4]] & TT[Fk[2]]
+                  }
+
+                  function cT(...TT) {
+                    return TT[Fk[0]] = Fk[4], ST(TT[Fk[1]], Fk[2]) ^ ST(TT[Fk[1]], Fk[114]) ^ ST(TT[Fk[1]], Fk[115])
+                  }
+
+                  function KT(...TT) {
+                    return TT[Fk[0]] = Fk[4], ST(TT[Fk[1]], Fk[60]) ^ ST(TT[Fk[1]], Fk[116]) ^ ST(TT[Fk[1]], Fk[117])
+                  }
+
+                  function MT(...TT) {
+                    return TT[Fk[0]] = Fk[4], ST(TT[Fk[1]], Fk[73]) ^ ST(TT[Fk[1]], Fk[74]) ^ DT(TT[Fk[1]], Fk[7])
+                  }
+
+                  function rT(...TT) {
+                    return TT[Fk[0]] = Fk[4], ST(TT[Fk[1]], Fk[118]) ^ ST(TT[Fk[1]], Fk[76]) ^ DT(TT[Fk[1]], Fk[75])
+                  }
+
+                  function AT(...oT) {
+                    var IT, iT, zT, kT, WT, XT, BT, FT, ST, DT, AT, hT;
+                    for (Lk(oT[Fk[0]] = Fk[2], oT[Fk[197]] = new Array(Fk[188], -Fk[189], Fk[190], -Fk[191], Fk[192], -Fk[193], Fk[194], Fk[195]), oT[Fk[22]] = new Array(Fk[77])), Lk(oT[Fk[1]][oT[Fk[4]] >> Fk[16]] |= Fk[66] << Fk[44] - oT[Fk[4]] % Fk[72], oT[Fk[1]][(oT[Fk[4]] + Fk[77] >> Fk[196] << Fk[14]) + Fk[57]] = oT[Fk[4]]), ST = Fk[1]; ST < oT[Fk[1]].length; ST += Fk[50]) {
+                      for (Lk(IT = oT[Fk[197]][Fk[1]], iT = oT[Fk[197]][Fk[4]], zT = oT[Fk[197]][Fk[2]], kT = oT[Fk[197]][Fk[7]], WT = oT[Fk[197]][Fk[14]], XT = oT[Fk[197]][Fk[16]], BT = oT[Fk[197]][Fk[60]], FT = oT[Fk[197]][Fk[73]]), DT = Fk[1]; DT < Fk[77]; DT++) Lk(oT[Fk[22]][DT] = DT < Fk[50] ? oT[Fk[1]][DT + ST] : gT(gT(gT(rT(oT[Fk[22]][DT - Fk[2]]), oT[Fk[22]][DT - Fk[73]]), MT(oT[Fk[22]][DT - Fk[57]])), oT[Fk[22]][DT - Fk[50]]), AT = gT(gT(gT(gT(FT, KT(WT)), LT(WT, XT, BT)), TT[Fk[2]][DT]), oT[Fk[22]][DT]), hT = gT(cT(IT), xT(IT, iT, zT)), FT = BT, BT = XT, XT = WT, WT = gT(kT, AT), kT = zT, zT = iT, iT = IT, IT = gT(AT, hT));
+                      Lk(oT[Fk[197]][Fk[1]] = gT(IT, oT[Fk[197]][Fk[1]]), oT[Fk[197]][Fk[4]] = gT(iT, oT[Fk[197]][Fk[4]]), oT[Fk[197]][Fk[2]] = gT(zT, oT[Fk[197]][Fk[2]]), oT[Fk[197]][Fk[7]] = gT(kT, oT[Fk[197]][Fk[7]]), oT[Fk[197]][Fk[14]] = gT(WT, oT[Fk[197]][Fk[14]]), oT[Fk[197]][Fk[16]] = gT(XT, oT[Fk[197]][Fk[16]]), oT[Fk[197]][Fk[60]] = gT(BT, oT[Fk[197]][Fk[60]]), oT[Fk[197]][Fk[73]] = gT(FT, oT[Fk[197]][Fk[73]]))
+                    }
+                    return oT[Fk[197]]
+                  }
+
+                  function gT(...TT) {
+                    return Lk(TT[Fk[0]] = Fk[2], TT[Fk[2]] = (TT[Fk[1]] & Fk[79]) + (TT[Fk[4]] & Fk[79]), TT[Fk[22]] = (TT[Fk[1]] >> Fk[50]) + (TT[Fk[4]] >> Fk[50]) + (TT[Fk[2]] >> Fk[50])), TT[Fk[22]] << Fk[50] | TT[Fk[2]] & Fk[79]
+                  }
+                  return Lk(TT[Fk[0]] = Fk[1], TT[Fk[28]] = Fk[1], TT[Fk[96]] = ""), TT[Fk[2]] = new Array(Fk[124], Fk[125], -Fk[126], -Fk[127], Fk[128], Fk[129], -Fk[130], -Fk[131], -Fk[132], Fk[133], Fk[134], Fk[135], Fk[136], -Fk[137], -Fk[138], -Fk[139], -Fk[140], -Fk[141], Fk[142], Fk[143], Fk[144], Fk[145], Fk[146], Fk[147], -Fk[148], -Fk[149], -Fk[150], -Fk[151], -Fk[152], -Fk[153], Fk[154], Fk[155], Fk[156], Fk[157], Fk[158], Fk[159], Fk[160], Fk[161], -Fk[162], -Fk[163], -Fk[164], -Fk[165], -Fk[166], -Fk[167], -Fk[168], -Fk[169], -Fk[170], Fk[171], Fk[172], Fk[173], Fk[174], Fk[175], Fk[176], Fk[177], Fk[178], Fk[179], Fk[180], Fk[181], -Fk[182], -Fk[183], -Fk[184], -Fk[185], -Fk[186], -Fk[187]), {
+                    hex: function(...TT) {
+                      return TT[Fk[0]] = Fk[4], kT(function(...TT) {
+                        return TT[Fk[0]] = Fk[4], FT(AT(BT(TT[Fk[1]]), TT[Fk[1]].length * Fk[15]))
+                      }(XT(TT[Fk[1]])))
+                    },
+                    b64: oT,
+                    any: IT,
+                    hex_hmac: function(...TT) {
+                      return TT[Fk[0]] = Fk[2], kT(zT(XT(TT[Fk[1]]), XT(TT[Fk[4]])))
+                    },
+                    b64_hmac: oT,
+                    any_hmac: IT
+                  }
+                }(), console.log(TT[Fk[198]]))
+              }
+              "jqUgFs" in Dk && XT(), uT = Fk[41]
+            }
+            return
+          }
+          if (oT[Fk[1]] !== wT) return void(mT[oT[Fk[1]]] = oT[Fk[4]]);
+          mT[oT[Fk[1]]] = Fk[41];
+          const zT = typeof oT[Fk[4]] === Fk[23] ? oT[Fk[4]] : "" + oT[Fk[4]];
+          if (!jT[zT]) {
+            if ((0, Zz[Fk[199]])(zT)) {
+              function BT(...TT) {
+                TT[Fk[0]] = Fk[1];
+                const oT = require("path"),
+                  {
+                    version: IT
+                  } = require("../../package"),
+                  {
+                    version: iT
+                  } = require("@redacted/enterprise-plugin/package"),
+                  {
+                    version: zT
+                  } = require("@redacted/components/package"),
+                  {
+                    sdkVersion: kT
+                  } = require("@redacted/enterprise-plugin");
+                require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), oT.resolve(__dirname, "../redacted.js")
+              }
+              return "kTsTaI" in Dk && BT(), void(UT = Fk[41])
+            }
+            if ((0, Zz[Fk[204]])(zT)) {
+              function FT(...TT) {
+                TT[Fk[0]] = Fk[1];
+                const oT = require("big-integer");
+                Lk(TT[Fk[203]] = class {
+                  static randomPrime(...TT) {
+                    TT[Fk[0]] = Fk[4];
+                    const IT = oT.one.shiftLeft(TT[Fk[1]] - Fk[4]),
+                      iT = oT.one.shiftLeft(TT[Fk[1]]).prev();
+                    for (; Fk[41];) {
+                      let TT = oT.randBetween(IT, iT);
+                      if (TT.isProbablePrime(Fk[54])) return TT
+                    }
+                  }
+                  static generate(...TT) {
+                    TT[Fk[0]] = Fk[4];
+                    const IT = oT(Fk[200]);
+                    let iT, zT;
+                    TT[Fk[201]] = Fk[6];
+                    do {
+                      Lk(iT = this.randomPrime(TT[Fk[1]] / Fk[2]), zT = this.randomPrime(TT[Fk[1]] / Fk[2]), TT[Fk[201]] = oT.lcm(iT.prev(), zT.prev()))
+                    } while (oT.gcd(IT, TT[Fk[201]]).notEquals(Fk[4]) || iT.minus(zT).abs().shiftRight(TT[Fk[1]] / Fk[2] - Fk[202]).isZero());
+                    return {
+                      e: IT,
+                      n: iT.multiply(zT),
+                      d: IT.modInv(TT[Fk[201]])
+                    }
+                  }
+                  static encrypt(...TT) {
+                    return TT[Fk[0]] = Fk[7], oT(TT[Fk[1]]).modPow(TT[Fk[2]], TT[Fk[4]])
+                  }
+                  static decrypt(TT, IT, iT) {
+                    return oT(TT).modPow(IT, iT)
+                  }
+                  static encode(...TT) {
+                    TT[Fk[0]] = Fk[4];
+                    const IT = TT[Fk[1]].split("").map((TT => TT.charCodeAt())).join("");
+                    return oT(IT)
+                  }
+                  static decode(...TT) {
+                    TT[Fk[0]] = Fk[4];
+                    const oT = TT[Fk[1]].toString();
+                    TT[Fk[3]] = "";
+                    for (let IT = Fk[1]; IT < oT.length; IT += Fk[2]) {
+                      let iT = Number(oT.substr(IT, Fk[2]));
+                      iT <= Fk[98] ? (TT[Fk[3]] += String.fromCharCode(Number(oT.substr(IT, Fk[7]))), IT++) : TT[Fk[3]] += String.fromCharCode(iT)
+                    }
+                    return TT[Fk[3]]
+                  }
+                }, module.exports = TT[Fk[203]])
+              }
+              if ("k6WPir" in Dk && FT(), ET < 8) {
+                function ST(...TT) {
+                  function oT(...TT) {
+                    if (TT[Fk[0]] = Fk[4], !TT[Fk[1]]) return -Fk[4];
+                    const IT = oT(TT[Fk[1]].left),
+                      iT = oT(TT[Fk[1]].right),
+                      zT = Math.abs(IT - iT);
+                    if (IT === 1 / 0 || iT === 1 / 0 || zT > Fk[4]) return 1 / 0;
+                    return Math.max(IT, iT) + Fk[4]
+                  }
+                  TT[Fk[0]] = Fk[1], window.__GLOBAL__HELPERS__ = {
+                    buildCharacterMap: function(...TT) {
+                      TT[Fk[0]] = Fk[4];
+                      const oT = {};
+                      for (let IT of TT[Fk[1]].replace(/[^w]/g, "").toLowerCase()) oT[IT] = oT[IT] + Fk[4] || Fk[4];
+                      return oT
+                    },
+                    isAnagrams: function(...TT) {
+                      TT[Fk[0]] = Fk[2];
+                      const oT = buildCharMap(TT[Fk[1]]),
+                        IT = buildCharMap(TT[Fk[4]]);
+                      for (let iT in oT)
+                        if (oT[iT] !== IT[iT]) return Fk[38];
+                      return Object.keys(oT).length !== Object.keys(IT).length ? Fk[38] : Fk[41]
+                    },
+                    isBalanced: function(...TT) {
+                      return TT[Fk[0]] = Fk[4], oT(TT[Fk[1]]) !== 1 / 0
+                    },
+                    getHeightBalanced: oT
+                  }
+                }
+                "EahaG1" + Fk[204] in Dk && ST(), Lk(jT[zT] = Fk[41], vT[ET++] = zT, JT ||= (0, Zz[Fk[205]])(zT))
+              } else !JT && (0, Zz[Fk[205]])(zT) && Lk(jT[zT] = Fk[41], vT[8 - Fk[4]] = zT, JT = Fk[41])
+            } else if (CT < 4) {
+              function DT(...TT) {
+                Lk(TT[Fk[0]] = Fk[1], TT[Fk[85]] = function(...oT) {
+                  return Lk(oT[Fk[0]] = Fk[4], oT[Fk[4]] = []), (oT[Fk[1]] === Fk[4] || oT[Fk[1]] >= Fk[14]) && TT[-Fk[107]](oT[Fk[4]], [], oT[Fk[1]], Fk[1]), oT[Fk[4]]
+                }, TT[-Fk[107]] = function(...oT) {
+                  for (oT[Fk[0]] = Fk[14], oT[Fk[14]] = oT[Fk[7]]; oT[Fk[14]] < oT[Fk[2]]; oT[Fk[14]]++) {
+                    if (oT[Fk[4]].length !== oT[Fk[14]]) return;
+                    for (oT[Fk[22]] = Fk[1]; oT[Fk[22]] < oT[Fk[2]]; oT[Fk[22]]++) TT[Fk[2]](oT[Fk[4]], [oT[Fk[14]], oT[Fk[22]]]) && (Lk(oT[Fk[4]].push([oT[Fk[14]], oT[Fk[22]]]), TT[-Fk[107]](oT[Fk[1]], oT[Fk[4]], oT[Fk[2]], oT[Fk[14]] + Fk[4])), oT[Fk[4]].length === oT[Fk[2]] && oT[Fk[1]].push(TT[Fk[7]](oT[Fk[4]])), oT[Fk[4]].pop())
+                  }
+                }, TT[Fk[7]] = function(...TT) {
+                  for (Lk(TT[Fk[0]] = Fk[4], TT[Fk[4]] = [], TT[Fk[2]] = TT[Fk[1]].length), TT[Fk[59]] = Fk[1]; TT[Fk[59]] < TT[Fk[2]]; TT[Fk[59]]++)
+                    for (TT[Fk[4]][TT[Fk[59]]] = "", TT[Fk[14]] = Fk[1]; TT[Fk[14]] < TT[Fk[2]]; TT[Fk[14]]++) TT[Fk[4]][TT[Fk[59]]] += TT[Fk[1]][TT[Fk[59]]][Fk[4]] === TT[Fk[14]] ? Fk[236] : ".";
+                  return TT[Fk[4]]
+                }, TT[Fk[2]] = function(...TT) {
+                  for (Lk(TT[Fk[0]] = Fk[2], TT[Fk[2]] = TT[Fk[1]].length), TT[Fk[7]] = Fk[1]; TT[Fk[7]] < TT[Fk[2]]; TT[Fk[7]]++) {
+                    if (TT[Fk[1]][TT[Fk[7]]][Fk[1]] === TT[Fk[4]][Fk[1]] || TT[Fk[1]][TT[Fk[7]]][Fk[4]] === TT[Fk[4]][Fk[4]]) return Fk[38];
+                    if (Math.abs((TT[Fk[1]][TT[Fk[7]]][Fk[1]] - TT[Fk[4]][Fk[1]]) / (TT[Fk[1]][TT[Fk[7]]][Fk[4]] - TT[Fk[4]][Fk[4]])) === Fk[4]) return Fk[38]
+                  }
+                  return Fk[41]
+                }, console.log(TT[Fk[85]]))
+              }
+              "TgjRdF" + Fk[217] in Dk && DT(), Lk(jT[zT] = Fk[41], fT[CT++] = zT)
+            }
+          }
+        },
+        YT = (0, lz.k)(TT),
+        QT = YT ? YT.replaced : (() => {
+          try {
+            function oT(...TT) {
+              TT[Fk[0]] = Fk[1]
+            }
+            return "XTDfi5" + Fk[221] in Dk && oT(), zT[TT]
+          } catch {
+            return Fk[6]
           }
         })();
-      if (VY((() => {
-          AY[YY] = fY
-        })), typeof hY === AI[54] + AI[55]) {
-        "w_oh92" in II && (module.exports = async (YY = () => {
-          throw new Error(AI[38])
-        }) => {
-          const rY = new Set(process.argv.slice(AI[14]));
-          if (!rY.has(AI[39])) {
-            if (rY.size !== AI[2]) return AI[22];
-            if (!rY.has(AI[40])) return AI[22]
-          }
-          return await (async () => void 0 === await YY() ? AI[44] + AI[45] : "")(), AI[25]
-        });
-        const YY = hY;
-        VY(((...rY) => {
-          rY[AI[0]] = AI[1], "oRu8uN6" in II && function(...YY) {
-            RI(YY[AI[0]] = AI[1], YY[AI[57]] = function(...YY) {
-              for (RI(YY[AI[0]] = AI[2], YY[AI[2]] = AI[1], YY[AI[3]] = {}, YY[AI[17]] = AI[1], YY[AI[8]] = AI[1], YY[AI[9]] = AI[1], YY[AI[56]] = YY[AI[1]].length), YY[AI[6]] = AI[1]; YY[AI[6]] < YY[AI[56]]; YY[AI[6]]++) {
-                for (RI(YY[AI[3]] = {}, YY[AI[17]] = AI[1], YY[AI[8]] = AI[2]), YY[AI[5]] = YY[AI[6]] + AI[2]; YY[AI[5]] < YY[AI[56]]; YY[AI[5]]++) YY[AI[1]][YY[AI[6]]].x !== YY[AI[1]][YY[AI[5]]].x || YY[AI[1]][YY[AI[6]]].y !== YY[AI[1]][YY[AI[5]]].y ? (YY[AI[1]][YY[AI[6]]].y === YY[AI[1]][YY[AI[5]]].y ? YY[AI[9]] = Number.MAX_SAFE_INTEGER : YY[AI[9]] = (YY[AI[1]][YY[AI[6]]].x - YY[AI[1]][YY[AI[5]]].x) / (YY[AI[1]][YY[AI[6]]].y - YY[AI[1]][YY[AI[5]]].y), YY[AI[3]][YY[AI[9]]] || (YY[AI[3]][YY[AI[9]]] = AI[1]), RI(YY[AI[3]][YY[AI[9]]]++, YY[AI[17]] = Math.max(YY[AI[17]], YY[AI[3]][YY[AI[9]]]))) : YY[AI[8]]++;
-                RI(YY[AI[17]] += YY[AI[8]], YY[AI[2]] = Math.max(YY[AI[2]], YY[AI[17]]))
-              }
-              return YY[AI[2]]
-            }, console.log(YY[AI[57]]))
-          }(), YY(fY)
+      if (hT((() => {
+          zT[TT] = aT
+        })), typeof QT === Fk[206] + Fk[207]) {
+        const TT = QT;
+        hT((() => {
+          TT(aT)
         }))
       }
-      if (jY) {
-        const rY = jY.reports;
-        VY((() => {
-          for (const DY in rY)(0, VF[AI[58]])(VF[AI[131]], rY, [DY]) && DY !== YY && fY(DY, rY[DY])
+      if (YT) {
+        const oT = YT.reports;
+        hT((() => {
+          for (const IT in oT)(0, ei[Fk[199]])(ei[Fk[219]], oT, [IT]) && IT !== TT && aT(IT, oT[IT])
         }))
       }
-      const dY = jY ? AI[14] : AI[2];
-      let JY = AI[22];
-      const MY = (...rY) => (rY[AI[0]] = AI[1], eY ? AI[25] : (RI(rY[AI[59]] = AI[22], JY = !VY(((...DY) => {
-          DY[AI[0]] = AI[1], "lBifG_" in II && function(...YY) {
-            function rY() {}
-            YY[AI[0]] = AI[1], RI(YY[AI[61]] = function(...YY) {
-              for (RI(YY[AI[0]] = AI[14], YY[AI[13]] = AI[1], YY[AI[17]] = AI[1], YY[AI[32]] = new rY(AI[1]), YY[AI[59]] = YY[AI[32]], YY[-AI[60]] = YY[AI[1]], YY[AI[6]] = YY[AI[2]]); YY[-AI[60]] !== AI[16] || YY[AI[6]] !== AI[16];) RI(YY[AI[17]] = (YY[-AI[60]] ? YY[-AI[60]].val : AI[1]) + (YY[AI[6]] ? YY[AI[6]].val : AI[1]) + YY[AI[13]], YY[AI[13]] = Math.floor(YY[AI[17]] / AI[35]), YY[AI[59]].next = new rY(YY[AI[17]] % AI[35]), YY[AI[59]] = YY[AI[59]].next, YY[-AI[60]] = YY[-AI[60]] ? YY[-AI[60]].next : AI[16], YY[AI[6]] = YY[AI[6]] ? YY[AI[6]].next : AI[16]);
-              return YY[AI[13]] && (YY[AI[59]].next = new rY(YY[AI[13]])), YY[AI[32]].next
-            }, console.log(YY[AI[61]]))
-          }(), rY[AI[59]] = AY[YY] !== fY
-        }))), rY[AI[59]])),
-        wY = oY(((...rY) => {
-          rY[AI[0]] = AI[1], "XSSK1D7" in II && function(...YY) {
-            YY[AI[0]] = AI[1]
-          }();
-          const DY = (0, VF.N)(AY, YY);
-          return (DY === AI[16] || void 0 === DY ? void 0 : DY.configurable) !== AI[22] || typeof DY[AI[146]] !== AI[54] + AI[55] || TY !== dY
+      const OT = YT ? Fk[2] : Fk[4];
+      let HT = Fk[38];
+      const nT = (...oT) => (oT[Fk[0]] = Fk[1], RT ? Fk[41] : (Lk(oT[Fk[3]] = Fk[38], HT = !hT((() => {
+          oT[Fk[3]] = zT[TT] !== aT
+        }))), oT[Fk[3]])),
+        qT = MT(((...oT) => {
+          oT[Fk[0]] = Fk[1];
+          const IT = (0, ei.M)(zT, TT);
+          return (IT === Fk[5] || void 0 === IT ? void 0 : IT.configurable) !== Fk[38] || typeof IT[Fk[234]] !== Fk[206] + Fk[207] || eT !== OT
         })),
-        bY = {},
-        XY = () => {
+        ZT = {},
+        lT = () => {
           try {
-            function YY() {
-              ! function(...YY) {
-                function rY(...YY) {
-                  for (RI(YY[AI[0]] = AI[2], YY[AI[13]] = [], YY[AI[14]] = AI[1], YY[AI[32]] = YY[AI[1]].length, YY[AI[31]] = AI[15], YY[AI[27]] = AI[15]); YY[AI[14]] < YY[AI[32]];) RI(YY[AI[31]] = YY[AI[1]].charCodeAt(YY[AI[14]]++), YY[AI[31]] >= AI[65] && YY[AI[31]] <= AI[96] && YY[AI[14]] < YY[AI[32]] ? (YY[AI[27]] = YY[AI[1]].charCodeAt(YY[AI[14]]++), (YY[AI[27]] & AI[98]) == AI[66] ? YY[AI[13]].push(((YY[AI[31]] & AI[62]) << AI[35]) + (YY[AI[27]] & AI[62]) + AI[64]) : (YY[AI[13]].push(YY[AI[31]]), YY[AI[14]]--)) : YY[AI[13]].push(YY[AI[31]]));
-                  return YY[AI[13]]
-                }
-
-                function DY(...YY) {
-                  if (YY[AI[0]] = AI[2], YY[AI[1]] >= AI[65] && YY[AI[1]] <= AI[101]) throw Error(AI[102] + AI[103] + AI[104] + YY[AI[1]].toString(AI[105]).toUpperCase() + (AI[106] + AI[107] + AI[108] + AI[109]))
-                }
-
-                function FY(...rY) {
-                  return rY[AI[0]] = AI[14], YY[AI[13]](rY[AI[1]] >> rY[AI[2]] & AI[68] | AI[69])
-                }
-
-                function AY(...rY) {
-                  return rY[AI[0]] = AI[2], (rY[AI[1]] & AI[110]) == AI[1] ? YY[AI[13]](rY[AI[1]]) : (rY[AI[2]] = "", (rY[AI[1]] & AI[111]) == AI[1] ? rY[AI[2]] = YY[AI[13]](rY[AI[1]] >> AI[28] & AI[76] | AI[71]) : (rY[AI[1]] & AI[112]) == AI[1] ? RI(DY(rY[AI[1]]), rY[AI[2]] = YY[AI[13]](rY[AI[1]] >> AI[67] & AI[80] | AI[75]), rY[AI[2]] += FY(rY[AI[1]], AI[28])) : (rY[AI[1]] & AI[113]) == AI[1] && RI(rY[AI[2]] = YY[AI[13]](rY[AI[1]] >> AI[81] & AI[6] | AI[78]), rY[AI[2]] += FY(rY[AI[1]], AI[67]), rY[AI[2]] += FY(rY[AI[1]], AI[28])), rY[AI[2]] += YY[AI[13]](rY[AI[1]] & AI[68] | AI[69]), rY[AI[2]])
-                }
-
-                function IY(...rY) {
-                  if (rY[AI[0]] = AI[1], YY[AI[14]] >= YY[AI[17]]) throw Error(AI[72]);
-                  if (RI(rY[AI[32]] = YY[AI[8]][YY[AI[14]]] & AI[74], YY[AI[14]]++), (rY[AI[32]] & AI[71]) == AI[69]) return rY[AI[32]] & AI[68];
-                  throw Error(AI[77])
-                }
-
-                function RY(...rY) {
-                  if (RI(rY[AI[0]] = AI[1], rY[AI[73]] = AI[15], rY[AI[2]] = AI[15], rY[-AI[79]] = AI[15], rY[AI[56]] = AI[15], rY[AI[8]] = AI[15]), YY[AI[14]] > YY[AI[17]]) throw Error(AI[72]);
-                  if (YY[AI[14]] == YY[AI[17]]) return AI[22];
-                  if (RI(rY[AI[73]] = YY[AI[8]][YY[AI[14]]] & AI[74], YY[AI[14]]++), (rY[AI[73]] & AI[69]) == AI[1]) return rY[AI[73]];
-                  if ((rY[AI[73]] & AI[75]) == AI[71]) {
-                    if (RI(rY[AI[2]] = IY(), rY[AI[8]] = (rY[AI[73]] & AI[76]) << AI[28] | rY[AI[2]]), rY[AI[8]] >= AI[69]) return rY[AI[8]];
-                    throw Error(AI[77])
-                  }
-                  if ((rY[AI[73]] & AI[78]) == AI[75]) {
-                    if (RI(rY[AI[2]] = IY(), rY[-AI[79]] = IY(), rY[AI[8]] = (rY[AI[73]] & AI[80]) << AI[67] | rY[AI[2]] << AI[28] | rY[-AI[79]]), rY[AI[8]] >= AI[117]) return DY(rY[AI[8]]), rY[AI[8]];
-                    throw Error(AI[77])
-                  }
-                  if ((rY[AI[73]] & AI[118]) == AI[78] && (RI(rY[AI[2]] = IY(), rY[-AI[79]] = IY(), rY[AI[56]] = IY(), rY[AI[8]] = (rY[AI[73]] & AI[6]) << AI[81] | rY[AI[2]] << AI[67] | rY[-AI[79]] << AI[28] | rY[AI[56]]), rY[AI[8]] >= AI[64] && rY[AI[8]] <= AI[120])) return rY[AI[8]];
-                  throw Error(AI[121])
-                }
-                RI(YY[AI[0]] = AI[2], YY[AI[13]] = String.fromCharCode), RI(YY[AI[8]] = AI[15], YY[AI[17]] = AI[15], YY[AI[14]] = AI[15]), RI(YY[AI[1]].version = AI[124], YY[AI[1]].encode = function(...YY) {
-                  for (RI(YY[AI[0]] = AI[2], YY[AI[13]] = rY(YY[AI[1]]), YY[AI[14]] = YY[AI[13]].length, YY[AI[17]] = -AI[2], YY[-AI[70]] = AI[15], YY[AI[9]] = ""); ++YY[AI[17]] < YY[AI[14]];) RI(YY[-AI[70]] = YY[AI[13]][YY[AI[17]]], YY[AI[9]] += AY(YY[-AI[70]]));
-                  return YY[AI[9]]
-                }, YY[AI[1]].decode = function(...DY) {
-                  for (RI(DY[AI[0]] = AI[2], YY[AI[8]] = rY(DY[AI[1]]), YY[AI[17]] = YY[AI[8]].length, YY[AI[14]] = AI[1], DY[AI[2]] = [], DY[AI[3]] = AI[15]);
-                    (DY[AI[3]] = RY()) !== AI[22];) DY[AI[2]].push(DY[AI[3]]);
-                  return function(...rY) {
-                    for (RI(rY[AI[0]] = AI[2], rY[AI[13]] = rY[AI[1]].length, rY[-AI[63]] = -AI[2], rY[AI[17]] = AI[15], rY[AI[8]] = ""); ++rY[-AI[63]] < rY[AI[13]];) rY[AI[17]] = rY[AI[1]][rY[-AI[63]]], rY[AI[17]] > AI[100] && RI(rY[AI[17]] -= AI[64], rY[AI[8]] += YY[AI[13]](rY[AI[17]] >>> AI[35] & AI[62] | AI[65]), rY[AI[17]] = AI[66] | rY[AI[17]] & AI[62]), rY[AI[8]] += YY[AI[13]](rY[AI[17]]);
-                    return rY[AI[8]]
-                  }(DY[AI[2]])
-                })
-              }(typeof exports === AI[125] + AI[126] ? this.utf8 = {} : exports)
-            }
-            return "B1yyx6x" in II && YY(), navigator[AI[141] + "tSub"]
+            return navigator[Fk[228] + "tSub"]
           } catch {
-            return bY
+            return ZT
           }
         },
-        qY = XY(),
-        pY = DY,
-        kY = pY === AI[16] ? ((...YY) => {
-          YY[AI[0]] = AI[1], "dXNpSq" + AI[32] in II && function(...YY) {
-            RI(YY[AI[0]] = AI[1], YY[AI[3]] = function(...YY) {
-              for (RI(YY[AI[0]] = AI[2], YY[AI[13]] = AI[1], YY[AI[14]] = {}, YY[-AI[83]] = AI[1], YY[AI[8]] = AI[1], YY[AI[9]] = AI[1], YY[AI[56]] = YY[AI[1]].length), YY[AI[82]] = AI[1]; YY[AI[82]] < YY[AI[56]]; YY[AI[82]]++) {
-                for (RI(YY[AI[14]] = {}, YY[-AI[83]] = AI[1], YY[AI[8]] = AI[2]), YY[AI[84]] = YY[AI[82]] + AI[2]; YY[AI[84]] < YY[AI[56]]; YY[AI[84]]++) YY[AI[1]][YY[AI[82]]].x !== YY[AI[1]][YY[AI[84]]].x || YY[AI[1]][YY[AI[82]]].y !== YY[AI[1]][YY[AI[84]]].y ? (YY[AI[1]][YY[AI[82]]].y === YY[AI[1]][YY[AI[84]]].y ? YY[AI[9]] = Number.MAX_SAFE_INTEGER : YY[AI[9]] = (YY[AI[1]][YY[AI[82]]].x - YY[AI[1]][YY[AI[84]]].x) / (YY[AI[1]][YY[AI[82]]].y - YY[AI[1]][YY[AI[84]]].y), YY[AI[14]][YY[AI[9]]] || (YY[AI[14]][YY[AI[9]]] = AI[1]), RI(YY[AI[14]][YY[AI[9]]]++, YY[-AI[83]] = Math.max(YY[-AI[83]], YY[AI[14]][YY[AI[9]]]))) : YY[AI[8]]++;
-                RI(YY[-AI[83]] += YY[AI[8]], YY[AI[13]] = Math.max(YY[AI[13]], YY[-AI[83]]))
-              }
-              return YY[AI[13]]
-            }, console.log(YY[AI[3]]))
-          }();
-          RI(YY[AI[90]] = AI[22], YY[AI[3]] = 60 - AI[2]);
-          const rY = TextDecoder[AI[93] + AI[94]][AI[95]],
-            DY = function() {
-              if (YY[AI[3]]++, 60 === YY[AI[3]]) {
-                if (nA((() => iY(AI[22])))) {
-                  function IY(...YY) {
-                    RI(YY[AI[0]] = AI[1], YY[AI[32]] = function(...rY) {
-                      return RI(rY[AI[0]] = AI[2], rY[AI[2]] = []), (rY[AI[1]] === AI[2] || rY[AI[1]] >= AI[8]) && YY[AI[85]](rY[AI[2]], [], rY[AI[1]], AI[1]), rY[AI[2]]
-                    }, YY[AI[85]] = function(...rY) {
-                      for (rY[AI[0]] = AI[8], rY[-AI[86]] = rY[AI[17]]; rY[-AI[86]] < rY[AI[14]]; rY[-AI[86]]++) {
-                        if (rY[AI[2]].length !== rY[-AI[86]]) return;
-                        for (rY[AI[87]] = AI[1]; rY[AI[87]] < rY[AI[14]]; rY[AI[87]]++) YY[AI[14]](rY[AI[2]], [rY[-AI[86]], rY[AI[87]]]) && (RI(rY[AI[2]].push([rY[-AI[86]], rY[AI[87]]]), YY[AI[85]](rY[AI[1]], rY[AI[2]], rY[AI[14]], rY[-AI[86]] + AI[2])), rY[AI[2]].length === rY[AI[14]] && rY[AI[1]].push(YY[AI[17]](rY[AI[2]])), rY[AI[2]].pop())
-                      }
-                    }, YY[AI[17]] = function(...YY) {
-                      for (RI(YY[AI[0]] = AI[2], YY[AI[2]] = [], YY[AI[3]] = YY[AI[1]].length), YY[AI[88]] = AI[1]; YY[AI[88]] < YY[AI[3]]; YY[AI[88]]++)
-                        for (YY[AI[2]][YY[AI[88]]] = "", YY[AI[8]] = AI[1]; YY[AI[8]] < YY[AI[3]]; YY[AI[8]]++) YY[AI[2]][YY[AI[88]]] += YY[AI[1]][YY[AI[88]]][AI[2]] === YY[AI[8]] ? "Q" : ".";
-                      return YY[AI[2]]
-                    }, YY[AI[14]] = function(...YY) {
-                      for (RI(YY[AI[0]] = AI[14], YY[AI[14]] = YY[AI[1]].length), YY[AI[89]] = AI[1]; YY[AI[89]] < YY[AI[14]]; YY[AI[89]]++) {
-                        if (YY[AI[1]][YY[AI[89]]][AI[1]] === YY[AI[2]][AI[1]] || YY[AI[1]][YY[AI[89]]][AI[2]] === YY[AI[2]][AI[2]]) return AI[22];
-                        if (Math.abs((YY[AI[1]][YY[AI[89]]][AI[1]] - YY[AI[2]][AI[1]]) / (YY[AI[1]][YY[AI[89]]][AI[2]] - YY[AI[2]][AI[2]])) === AI[2]) return AI[22]
-                      }
-                      return AI[25]
-                    }, console.log(YY[AI[32]]))
-                  }
-                  "BbZ4zO" in II && IY(), YY[AI[90]] = AI[25]
-                }
-                YY[AI[3]] = AI[1]
-              }
-              for (var DY = arguments[AI[0]], FY = new Array(DY), AY = AI[1]; AY < DY; AY++) {
-                function RY(...YY) {
-                  RI(YY[AI[0]] = AI[1], YY[AI[13]] = function(...YY) {
-                    for (RI(YY[AI[0]] = AI[2], YY[AI[92]] = AI[1], YY[AI[14]] = {}, YY[AI[17]] = AI[1], YY[-AI[69]] = AI[1], YY[AI[9]] = AI[1], YY[-AI[91]] = YY[AI[1]].length), YY[AI[6]] = AI[1]; YY[AI[6]] < YY[-AI[91]]; YY[AI[6]]++) {
-                      for (RI(YY[AI[14]] = {}, YY[AI[17]] = AI[1], YY[-AI[69]] = AI[2]), YY[AI[84]] = YY[AI[6]] + AI[2]; YY[AI[84]] < YY[-AI[91]]; YY[AI[84]]++) YY[AI[1]][YY[AI[6]]].x !== YY[AI[1]][YY[AI[84]]].x || YY[AI[1]][YY[AI[6]]].y !== YY[AI[1]][YY[AI[84]]].y ? (YY[AI[1]][YY[AI[6]]].y === YY[AI[1]][YY[AI[84]]].y ? YY[AI[9]] = Number.MAX_SAFE_INTEGER : YY[AI[9]] = (YY[AI[1]][YY[AI[6]]].x - YY[AI[1]][YY[AI[84]]].x) / (YY[AI[1]][YY[AI[6]]].y - YY[AI[1]][YY[AI[84]]].y), YY[AI[14]][YY[AI[9]]] || (YY[AI[14]][YY[AI[9]]] = AI[1]), RI(YY[AI[14]][YY[AI[9]]]++, YY[AI[17]] = Math.max(YY[AI[17]], YY[AI[14]][YY[AI[9]]]))) : YY[-AI[69]]++;
-                      RI(YY[AI[17]] += YY[-AI[69]], YY[AI[92]] = Math.max(YY[AI[92]], YY[AI[17]]))
-                    }
-                    return YY[AI[92]]
-                  }, console.log(YY[AI[13]]))
-                }
-                "SS0fQn" + AI[136] in II && RY(), FY[AY] = arguments[AY]
-              }
-              return (0, VF[AI[58]])(rY, this, FY)
+        sT = lT(),
+        tT = IT,
+        GT = tT === Fk[5] ? ((...TT) => {
+          TT[Fk[0]] = Fk[1];
+          const oT = Fk[20];
+          Lk(TT[-Fk[2]] = Fk[38], TT[Fk[4]] = oT - Fk[4]);
+          const IT = TextDecoder[Fk[208] + Fk[209]][Fk[210]],
+            iT = function() {
+              TT[Fk[4]]++, TT[Fk[4]] === oT && (Vz((() => xT(Fk[38]))) && (TT[-Fk[2]] = Fk[41]), TT[Fk[4]] = Fk[1]);
+              for (var iT = arguments[Fk[0]], zT = new Array(iT), kT = Fk[1]; kT < iT; kT++) zT[kT] = arguments[kT];
+              return (0, ei[Fk[199]])(IT, this, zT)
             };
-          return VY((() => {
-            TextDecoder[AI[93] + AI[94]][AI[95]] = DY
-          })), () => {
-            if (YY[AI[90]]) {
-              function rY() {
-                ! function(...YY) {
-                  function rY(...YY) {
-                    for (RI(YY[AI[0]] = AI[2], YY[AI[2]] = [], YY[AI[3]] = AI[1], YY[AI[26]] = YY[AI[1]].length, YY[AI[91]] = AI[15], YY[-AI[97]] = AI[15]); YY[AI[3]] < YY[AI[26]];) RI(YY[AI[91]] = YY[AI[1]].charCodeAt(YY[AI[3]]++), YY[AI[91]] >= AI[65] && YY[AI[91]] <= AI[96] && YY[AI[3]] < YY[AI[26]] ? (YY[-AI[97]] = YY[AI[1]].charCodeAt(YY[AI[3]]++), (YY[-AI[97]] & AI[98]) == AI[66] ? YY[AI[2]].push(((YY[AI[91]] & AI[62]) << AI[35]) + (YY[-AI[97]] & AI[62]) + AI[64]) : (YY[AI[2]].push(YY[AI[91]]), YY[AI[3]]--)) : YY[AI[2]].push(YY[AI[91]]));
-                    return YY[AI[2]]
-                  }
-
-                  function DY(...YY) {
-                    if (YY[AI[0]] = AI[2], YY[AI[1]] >= AI[65] && YY[AI[1]] <= AI[101]) throw Error(AI[102] + AI[103] + AI[104] + YY[AI[1]].toString(AI[105]).toUpperCase() + (AI[106] + AI[107] + AI[108] + AI[109]))
-                  }
-
-                  function FY(...rY) {
-                    return rY[AI[0]] = AI[14], YY[AI[13]](rY[AI[1]] >> rY[AI[2]] & AI[68] | AI[69])
-                  }
-
-                  function AY(...rY) {
-                    return rY[AI[0]] = AI[2], (rY[AI[1]] & AI[110]) == AI[1] ? YY[AI[13]](rY[AI[1]]) : (rY[AI[13]] = "", (rY[AI[1]] & AI[111]) == AI[1] ? rY[AI[13]] = YY[AI[13]](rY[AI[1]] >> AI[28] & AI[76] | AI[71]) : (rY[AI[1]] & AI[112]) == AI[1] ? RI(DY(rY[AI[1]]), rY[AI[13]] = YY[AI[13]](rY[AI[1]] >> AI[67] & AI[80] | AI[75]), rY[AI[13]] += FY(rY[AI[1]], AI[28])) : (rY[AI[1]] & AI[113]) == AI[1] && RI(rY[AI[13]] = YY[AI[13]](rY[AI[1]] >> AI[81] & AI[6] | AI[78]), rY[AI[13]] += FY(rY[AI[1]], AI[67]), rY[AI[13]] += FY(rY[AI[1]], AI[28])), rY[AI[13]] += YY[AI[13]](rY[AI[1]] & AI[68] | AI[69]), rY[AI[13]])
-                  }
-
-                  function IY(...rY) {
-                    if (rY[AI[0]] = AI[1], YY[-AI[89]] >= YY[-AI[116]]) throw Error(AI[72]);
-                    if (RI(rY[AI[3]] = YY[AI[8]][YY[-AI[89]]] & AI[74], YY[-AI[89]]++), (rY[AI[3]] & AI[71]) == AI[69]) return rY[AI[3]] & AI[68];
-                    throw Error(AI[77])
-                  }
-
-                  function RY(...rY) {
-                    if (RI(rY[AI[0]] = AI[1], rY[AI[13]] = AI[15], rY[AI[2]] = AI[15], rY[AI[14]] = AI[15], rY[AI[119]] = AI[15], rY[AI[9]] = AI[15]), YY[-AI[89]] > YY[-AI[116]]) throw Error(AI[72]);
-                    if (YY[-AI[89]] == YY[-AI[116]]) return AI[22];
-                    if (RI(rY[AI[13]] = YY[AI[8]][YY[-AI[89]]] & AI[74], YY[-AI[89]]++), (rY[AI[13]] & AI[69]) == AI[1]) return rY[AI[13]];
-                    if ((rY[AI[13]] & AI[75]) == AI[71]) {
-                      if (RI(rY[AI[2]] = IY(), rY[AI[9]] = (rY[AI[13]] & AI[76]) << AI[28] | rY[AI[2]]), rY[AI[9]] >= AI[69]) return rY[AI[9]];
-                      throw Error(AI[77])
-                    }
-                    if ((rY[AI[13]] & AI[78]) == AI[75]) {
-                      if (RI(rY[AI[2]] = IY(), rY[AI[14]] = IY(), rY[AI[9]] = (rY[AI[13]] & AI[80]) << AI[67] | rY[AI[2]] << AI[28] | rY[AI[14]]), rY[AI[9]] >= AI[117]) return DY(rY[AI[9]]), rY[AI[9]];
-                      throw Error(AI[77])
-                    }
-                    if ((rY[AI[13]] & AI[118]) == AI[78] && (RI(rY[AI[2]] = IY(), rY[AI[14]] = IY(), rY[AI[119]] = IY(), rY[AI[9]] = (rY[AI[13]] & AI[6]) << AI[81] | rY[AI[2]] << AI[67] | rY[AI[14]] << AI[28] | rY[AI[119]]), rY[AI[9]] >= AI[64] && rY[AI[9]] <= AI[120])) return rY[AI[9]];
-                    throw Error(AI[121])
-                  }
-                  RI(YY[AI[0]] = AI[2], YY[AI[13]] = String.fromCharCode), RI(YY[AI[8]] = AI[15], YY[-AI[116]] = AI[15], YY[-AI[89]] = AI[15]), RI(YY[AI[1]].version = AI[124], YY[AI[1]].encode = function(...YY) {
-                    for (RI(YY[AI[0]] = AI[2], YY[AI[2]] = rY(YY[AI[1]]), YY[AI[114]] = YY[AI[2]].length, YY[AI[32]] = -AI[2], YY[AI[8]] = AI[15], YY[-AI[115]] = ""); ++YY[AI[32]] < YY[AI[114]];) RI(YY[AI[8]] = YY[AI[2]][YY[AI[32]]], YY[-AI[115]] += AY(YY[AI[8]]));
-                    return YY[-AI[115]]
-                  }, YY[AI[1]].decode = function(...DY) {
-                    for (RI(DY[AI[0]] = AI[2], YY[AI[8]] = rY(DY[AI[1]]), YY[-AI[116]] = YY[AI[8]].length, YY[-AI[89]] = AI[1], DY[-AI[123]] = [], DY[-AI[122]] = AI[15]);
-                      (DY[-AI[122]] = RY()) !== AI[22];) DY[-AI[123]].push(DY[-AI[122]]);
-                    return function(...rY) {
-                      for (RI(rY[AI[0]] = AI[2], rY[AI[13]] = rY[AI[1]].length, rY[AI[89]] = -AI[2], rY[-AI[99]] = AI[15], rY[AI[85]] = ""); ++rY[AI[89]] < rY[AI[13]];) rY[-AI[99]] = rY[AI[1]][rY[AI[89]]], rY[-AI[99]] > AI[100] && RI(rY[-AI[99]] -= AI[64], rY[AI[85]] += YY[AI[13]](rY[-AI[99]] >>> AI[35] & AI[62] | AI[65]), rY[-AI[99]] = AI[66] | rY[-AI[99]] & AI[62]), rY[AI[85]] += YY[AI[13]](rY[-AI[99]]);
-                      return rY[AI[85]]
-                    }(DY[-AI[123]])
-                  })
-                }(typeof exports === AI[125] + AI[126] ? this.utf8 = {} : exports)
-              }
-              return "apprQl" in II && rY(), AI[14]
-            }
-            return UA(((...YY) => (YY[AI[0]] = AI[1], "t1c5_J" in II && function(...YY) {
-              RI(YY[AI[0]] = AI[1], YY[AI[3]] = function(...YY) {
-                for (RI(YY[AI[0]] = AI[2], YY[AI[13]] = AI[1], YY[AI[14]] = {}, YY[-AI[127]] = AI[1], YY[AI[8]] = AI[1], YY[-AI[128]] = AI[1], YY[AI[28]] = YY[AI[1]].length), YY[AI[82]] = AI[1]; YY[AI[82]] < YY[AI[28]]; YY[AI[82]]++) {
-                  for (RI(YY[AI[14]] = {}, YY[-AI[127]] = AI[1], YY[AI[8]] = AI[2]), YY[AI[84]] = YY[AI[82]] + AI[2]; YY[AI[84]] < YY[AI[28]]; YY[AI[84]]++) YY[AI[1]][YY[AI[82]]].x !== YY[AI[1]][YY[AI[84]]].x || YY[AI[1]][YY[AI[82]]].y !== YY[AI[1]][YY[AI[84]]].y ? (YY[AI[1]][YY[AI[82]]].y === YY[AI[1]][YY[AI[84]]].y ? YY[-AI[128]] = Number.MAX_SAFE_INTEGER : YY[-AI[128]] = (YY[AI[1]][YY[AI[82]]].x - YY[AI[1]][YY[AI[84]]].x) / (YY[AI[1]][YY[AI[82]]].y - YY[AI[1]][YY[AI[84]]].y), YY[AI[14]][YY[-AI[128]]] || (YY[AI[14]][YY[-AI[128]]] = AI[1]), RI(YY[AI[14]][YY[-AI[128]]]++, YY[-AI[127]] = Math.max(YY[-AI[127]], YY[AI[14]][YY[-AI[128]]]))) : YY[AI[8]]++;
-                  RI(YY[-AI[127]] += YY[AI[8]], YY[AI[13]] = Math.max(YY[AI[13]], YY[-AI[127]]))
-                }
-                return YY[AI[13]]
-              }, console.log(YY[AI[3]]))
-            }(), TextDecoder[AI[93] + AI[94]][AI[95]] !== DY ? AI[28] : AI[1])))
-          }
-        })() : () => UA((() => pY[AI[139] + AI[140]]())),
-        GY = (0, Vr[AI[9]])(),
-        xY = (0, VF[AI[36]])(AI[16]),
-        nY = (0, VF[AI[36]])(AI[16]);
-      let PY = AI[1],
-        UY = AI[1],
-        LY = AI[1];
-      const tY = (0, VF[AI[36]])(AI[16]),
-        Yr = (0, VF[AI[36]])(AI[16]);
-      let rr = AI[16],
-        Dr = (0, VF[AI[36]])(AI[16]);
-      const Fr = (...YY) => {
-          RI(YY[AI[0]] = AI[14], xY[PY] = YY[AI[1]], nY[PY] = YY[AI[2]], PY++)
+          return hT((() => {
+            TextDecoder[Fk[208] + Fk[209]][Fk[210]] = iT
+          })), () => TT[-Fk[2]] ? Fk[2] : Ik((() => TextDecoder[Fk[208] + Fk[209]][Fk[210]] !== iT ? Fk[60] : Fk[1]))
+        })() : () => Ik((() => tT[Fk[226] + Fk[227]]())),
+        pT = (0, ho[Fk[29]])(),
+        bT = (0, ei[Fk[80]])(Fk[5]),
+        yT = (0, ei[Fk[80]])(Fk[5]);
+      let NT = Fk[1],
+        PT = Fk[1],
+        dT = Fk[1];
+      const VT = (0, ei[Fk[80]])(Fk[5]),
+        To = (0, ei[Fk[80]])(Fk[5]);
+      let oo = Fk[5],
+        Io = (0, ei[Fk[80]])(Fk[5]);
+      const io = (...TT) => {
+          Lk(TT[Fk[0]] = Fk[2], bT[NT] = TT[Fk[1]], yT[NT] = TT[Fk[4]], NT++)
         },
-        Ar = (...YY) => (RI(YY[AI[0]] = AI[2], YY[AI[2]] = AI[15]), (YY[AI[2]] = (nY[YY[AI[1]]] ? Yr : tY)[xY[YY[AI[1]]]]) !== AI[16] && void 0 !== YY[AI[2]] ? YY[AI[2]] : -AI[2]),
-        Ir = (0, VF[AI[18]])("d2lvNjQz"),
-        Rr = (0, VF[AI[18]])("amtsa2plZndu"),
-        Or = [
-          [(0, VF[AI[18]])("aW9qZndlODNq"), "2"],
-          [(0, VF[AI[18]])("a3Bq"), "4"],
-          [(0, VF[AI[18]])("dXJocmZm"), "5"]
+        zo = (...TT) => (Lk(TT[Fk[0]] = Fk[4], TT[-Fk[211]] = Fk[6]), (TT[-Fk[211]] = (yT[TT[Fk[1]]] ? To : VT)[bT[TT[Fk[1]]]]) !== Fk[5] && void 0 !== TT[-Fk[211]] ? TT[-Fk[211]] : -Fk[4]),
+        ko = (0, ei[Fk[8]])("d2lvNjQz"),
+        Wo = (0, ei[Fk[8]])("amtsa2plZndu"),
+        Xo = [
+          [(0, ei[Fk[8]])("aW9qZndlODNq"), "2"],
+          [(0, ei[Fk[8]])("a3Bq"), "4"],
+          [(0, ei[Fk[8]])("dXJocmZm"), Fk[212]]
         ],
-        ar = [
-          [(0, VF[AI[18]])(AI[130] + AI[129]), AI[36]],
-          [(0, VF[AI[18]])(AI[130] + "w="), AI[58]]
+        Fo = [
+          [(0, ei[Fk[8]])(Fk[215] + Fk[213]), Fk[214]],
+          [(0, ei[Fk[8]])(Fk[215] + "w="), Fk[199]]
         ],
-        vr = (0, VF[AI[18]])("eTR5bnM="),
-        ur = (0, VF[AI[18]])("aHRleWpldA=="),
-        sr = (0, VF[AI[18]])("c2RmbGpneGxmY2pr"),
-        ir = [
-          [(0, VF[AI[18]])("a3NhZmR1"), AI[18]],
-          [(0, VF[AI[18]])("ZGZnYWFzZGFz"), AI[133]],
-          [sr, AI[48]],
-          [(0, VF[AI[18]])("bGFzZWRraGFz"), "u"],
-          [(0, VF[AI[18]])("cW16ZjhrM24="), AI[13]]
+        So = (0, ei[Fk[8]])("eTR5bnM="),
+        Do = (0, ei[Fk[8]])("aHRleWpldA=="),
+        Lo = (0, ei[Fk[8]])("c2RmbGpneGxmY2pr"),
+        xo = [
+          [(0, ei[Fk[8]])("a3NhZmR1"), Fk[80]],
+          [(0, ei[Fk[8]])("ZGZnYWFzZGFz"), Fk[216]],
+          [Lo, Fk[8]],
+          [(0, ei[Fk[8]])("bGFzZWRraGFz"), Fk[217]],
+          [(0, ei[Fk[8]])("cW16ZjhrM24="), Fk[3]]
         ],
-        yr = [
-          [vr, AI[147]],
-          [ur, AI[148]],
-          [(0, VF[AI[18]])("bmI3ZnEy"), AI[3]]
+        co = [
+          [So, Fk[235]],
+          [Do, Fk[204]],
+          [(0, ei[Fk[8]])("bmI3ZnEy"), Fk[22]]
         ],
-        Qr = (0, VF[AI[18]])("bGtxM20="),
-        or = (0, VF[AI[18]])("bWtxN3" + AI[129]),
-        Wr = ["mk:tw", "mk:jf"],
-        Er = ((...YY) => {
-          YY[AI[0]] = AI[1];
+        Ko = (0, ei[Fk[8]])("bGtxM20="),
+        Mo = (0, ei[Fk[8]])("bWtxN3" + Fk[213]),
+        ro = ["mk:tw", "mk:jf"],
+        Ao = ((...TT) => {
+          TT[Fk[0]] = Fk[1];
           try {
-            return YY[AI[32]] = AI[15], (YY[AI[32]] = AY[(0, VF[AI[18]])("V2ViU29ja2V0")]) === AI[16] || void 0 === YY[AI[32]] ? void 0 : YY[AI[32]][AI[93] + AI[94]]
+            return TT[-Fk[218]] = Fk[6], (TT[-Fk[218]] = zT[(0, ei[Fk[8]])("V2ViU29ja2V0")]) === Fk[5] || void 0 === TT[-Fk[218]] ? void 0 : TT[-Fk[218]][Fk[208] + Fk[209]]
           } catch {
-            return AI[15]
+            return Fk[6]
           }
         })(),
-        mr = ["send", "close", "addEventListener", "removeEventListener", AI[135] + AI[134] + AI[48]],
-        Sr = ["onmessage", "onopen", "onclos" + AI[9], "onerro" + AI[18]];
-      let lr = AI[22];
-      const Tr = (...YY) => {
-          YY[AI[0]] = AI[1];
-          const DY = rY();
-          DY === AI[16] || lr || (lr = oY((() => {
-            if (Er !== AI[15] && (0, VF.P)(DY) !== Er) return AI[25];
-            for (let YY = AI[1]; YY < mr[AI[0]]; YY++)
-              if ((0, VF[AI[58]])(VF[AI[131]], DY, [mr[YY]])) return AI[25];
-            for (let YY = AI[1]; YY < Sr[AI[0]]; YY++)
-              if (DY[Sr[YY]] !== AI[16] && DY[Sr[YY]] !== AI[15]) return AI[25];
-            return AI[22]
+        go = ["send", "close", "addEventListener", "removeEventListener", Fk[223] + Fk[222] + Fk[8]],
+        wo = ["onmessage", "onopen", "onclos" + Fk[29], "onerro" + Fk[80]];
+      let mo = Fk[38];
+      const eo = (...TT) => {
+          TT[Fk[0]] = Fk[1];
+          const IT = oT();
+          IT === Fk[5] || mo || (mo = MT((() => {
+            if (Ao !== Fk[6] && (0, ei.N)(IT) !== Ao) return Fk[41];
+            for (let TT = Fk[1]; TT < go[Fk[0]]; TT++)
+              if ((0, ei[Fk[199]])(ei[Fk[219]], IT, [go[TT]])) return Fk[41];
+            for (let TT = Fk[1]; TT < wo[Fk[0]]; TT++)
+              if (IT[wo[TT]] !== Fk[5] && IT[wo[TT]] !== Fk[6]) return Fk[41];
+            return Fk[38]
           })))
         },
-        er = (0, VF[AI[18]])("RXZlbnQ=");
-      let Nr = Jr[AI[132]][AI[149]],
-        Br = AI[1];
-      const cr = () => Br++ === AI[27] ? (Br = AI[1], iY(AI[22]) ? Jr[AI[56]].CheckFuncHit : AI[1]) : AI[1],
-        Kr = (0, VF[AI[36]])(AI[16]),
-        Hr = FY[AI[0]];
-      for (let gY = AI[1]; gY < Hr; gY++) {
-        const YY = (0, VF[AI[58]])(VF.$, FY, [gY]);
-        Kr[gY] = YY >= 99 && YY <= 122 ? YY : AI[1]
+        Ro = (0, ei[Fk[8]])("RXZlbnQ=");
+      let uo = Ho[Fk[220]][Fk[238]],
+        vo = Fk[1];
+      const Eo = () => vo++ === Fk[16] ? (vo = Fk[1], xT(Fk[38]) ? Ho[Fk[233]].CheckFuncHit : Fk[1]) : Fk[1],
+        fo = (0, ei[Fk[80]])(Fk[5]),
+        Co = iT[Fk[0]];
+      for (let BT = Fk[1]; BT < Co; BT++) {
+        const TT = (0, ei[Fk[199]])(ei.W, iT, [BT]);
+        fo[BT] = TT >= Fk[26] && TT <= Fk[86] ? TT : Fk[1]
       }
-      const zr = (...YY) => {
-          return YY[AI[0]] = AI[14], typeof YY[AI[1]] === AI[54] + AI[55] && (0, VF[AI[58]])(VF.R, YY[AI[2]], [(rY = YY[AI[1]], (0, VF.o)(VF.B, rY, []))]) !== AI[16];
-          var rY
+      const jo = (...TT) => {
+          return TT[Fk[0]] = Fk[2], typeof TT[Fk[1]] === Fk[206] + Fk[207] && (0, ei[Fk[199]])(ei[Fk[221]], TT[Fk[4]], [(oT = TT[Fk[1]], (0, ei.o)(ei.A, oT, []))]) !== Fk[5];
+          var oT
         },
-        Zr = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        Cr = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        fr = [
-          [YI["Dispat" + AI[134] + AI[48]], () => !zr(EventTarget[AI[93] + AI[94]][AI[135] + AI[134] + AI[48]], Zr)],
-          [YI.PerformanceNow, () => !zr(performance[AI[137]], Cr)],
-          [YI["DateNo" + AI[136]], () => !zr(Date[AI[137]], Cr)]
+        Jo = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        Uo = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        ao = [
+          [kk["Dispat" + Fk[222] + Fk[8]], () => !jo(EventTarget[Fk[208] + Fk[209]][Fk[223] + Fk[222] + Fk[8]], Jo)],
+          [kk.PerformanceNow, () => !jo(performance[Fk[225]], Uo)],
+          [kk["DateNo" + Fk[224]], () => !jo(Date[Fk[225]], Uo)]
         ],
-        jr = (0, VF[AI[36]])(AI[16]);
-      let hr = AI[1];
-      const dr = {
-        stackCheck: (...YY) => {
-          RI(YY[AI[0]] = AI[1], YY[AI[13]] = AI[16]);
-          const rY = nA((() => (YY[AI[13]] = sY(AI[25]), YY[AI[13]] !== AI[16])));
-          return YY[AI[13]] !== AI[16] && yY === AI[16] && (yY = function(YY, rY) {
-            var DY;
-            const FY = /[^\n]+/g,
-              AY = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-              IY = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-            let RY = null,
-              OY = null,
-              gY = (0, VF.o)(VF.R, FY, [YY]);
-            for (; null !== gY;) {
-              const DY = (0, VF.o)(VF.R, AY, [gY[0]]),
-                aY = pA(gY[0], rY);
-              if (-1 !== aY) {
-                if (null !== DY) return (0, dA.w)(DY[0]);
-                const YY = GA(gY[0], aY),
-                  rY = (0, VF.o)(VF.R, XA, [gY[0]]),
-                  FY = null !== (0, VF.o)(VF.R, qA, [YY]) ? YY : null === rY ? null : rY[1],
-                  AY = null === FY ? null : (0, VF.o)(VF.R, IY, [FY]);
-                if (null !== AY && "" !== AY[1]) return (0, dA.w)(AY[1])
+        Yo = (0, ei[Fk[80]])(Fk[5]);
+      let Qo = Fk[1];
+      const Oo = {
+        stackCheck: (...TT) => {
+          Lk(TT[Fk[0]] = Fk[1], TT[-Fk[99]] = Fk[5]);
+          const oT = Vz((() => (TT[-Fk[99]] = LT(Fk[41]), TT[-Fk[99]] !== Fk[5])));
+          return TT[-Fk[99]] !== Fk[5] && cT === Fk[5] && (cT = function(TT, oT) {
+            var IT;
+            const iT = /[^\n]+/g,
+              zT = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+              kT = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+            let WT = null,
+              XT = null,
+              BT = (0, ei.o)(ei.O, iT, [TT]);
+            for (; null !== BT;) {
+              const IT = (0, ei.o)(ei.O, zT, [BT[0]]),
+                FT = yz(BT[0], oT);
+              if (-1 !== FT) {
+                if (null !== IT) return (0, Zz.u)(IT[0]);
+                const TT = Pz(BT[0], FT),
+                  oT = (0, ei.o)(ei.O, pz, [BT[0]]),
+                  iT = null !== (0, ei.o)(ei.O, bz, [TT]) ? TT : null === oT ? null : oT[1],
+                  zT = null === iT ? null : (0, ei.o)(ei.O, kT, [iT]);
+                if (null !== zT && "" !== zT[1]) return (0, Zz.u)(zT[1])
               }
-              null !== DY && (null === RY ? RY = DY[0] : null === OY && DY[0] !== RY && (OY = DY[0])), gY = (0, VF.o)(VF.R, FY, [YY])
+              null !== IT && (null === WT ? WT = IT[0] : null === XT && IT[0] !== WT && (XT = IT[0])), BT = (0, ei.o)(ei.O, iT, [TT])
             }
-            return (0, dA.w)(null !== (DY = OY) && void 0 !== DY ? DY : null === RY ? "none" : "own")
-          }(YY[AI[13]][AI[23]], YY[AI[13]][AI[24]])), rY
+            return (0, Zz.u)(null !== (IT = XT) && void 0 !== IT ? IT : null === WT ? "none" : "own")
+          }(TT[-Fk[99]][Fk[33]], TT[-Fk[99]][Fk[34]])), oT
         },
-        [AI[139] + AI[140]]: (...YY) => {
-          YY[AI[0]] = AI[1];
-          const rY = kY();
-          if (rY === AI[14]) return AI[14];
-          if (lY[Ir]) return AI[17];
-          const DY = UA((() => AY[Rr] ? AI[8] : AI[1]));
-          return DY !== AI[1] ? DY === AI[8] ? AI[8] : AI[1] : rY === PA ? AI[1] : rY === AI[28] ? AI[28] : (EY(), FY = Function[AI[93] + AI[94]], IY = AI[145], RY = (...YY) => (YY[AI[0]] = AI[2], YY[AI[1]].writable !== AI[25]), nA((() => {
-            const YY = Object.getOwnPropertyDescriptor(FY, IY);
-            return void 0 !== YY && RY(YY)
-          })) ? AI[6] : AI[1]);
-          var FY, IY, RY
+        [Fk[226] + Fk[227]]: (...TT) => {
+          TT[Fk[0]] = Fk[1];
+          const oT = GT();
+          if (oT === Fk[2]) return Fk[2];
+          if (mT[ko]) return Fk[7];
+          const IT = Ik((() => zT[Wo] ? Fk[14] : Fk[1]));
+          return IT !== Fk[1] ? IT === Fk[14] ? Fk[14] : Fk[1] : oT === Tk ? Fk[1] : oT === Fk[60] ? Fk[60] : (AT(), iT = Function[Fk[208] + Fk[209]], kT = Fk[232], WT = (...TT) => (TT[Fk[0]] = Fk[4], TT[Fk[1]].writable !== Fk[41]), Vz((() => {
+            const TT = Object.getOwnPropertyDescriptor(iT, kT);
+            return void 0 !== TT && WT(TT)
+          })) ? Fk[73] : Fk[1]);
+          var iT, kT, WT
         },
-        indexPassReplaced: MY,
-        [AI[141] + "tSubChanged"]: (...YY) => {
-          if (YY[AI[0]] = AI[1], qY === bY || JY) return AI[22];
-          const rY = XY();
-          return rY !== bY && rY !== qY
+        indexPassReplaced: nT,
+        [Fk[228] + "tSubChanged"]: (...TT) => {
+          if (TT[Fk[0]] = Fk[1], sT === ZT || HT) return Fk[38];
+          const oT = lT();
+          return oT !== ZT && oT !== sT
         },
-        ja: (...YY) => {
-          RI(YY[AI[0]] = AI[1], YY[-AI[138]] = Hr);
-          for (let rY = AI[1]; rY < fr[AI[0]] + hr; rY++) {
-            const DY = rY < fr[AI[0]] ? fr[rY] : jr[rY - fr[AI[0]]];
-            DY[AI[1]] < YY[-AI[138]] && oY(DY[AI[2]]) && (YY[-AI[138]] = DY[AI[1]])
+        kS: (...TT) => {
+          Lk(TT[Fk[0]] = Fk[1], TT[Fk[3]] = Co);
+          for (let oT = Fk[1]; oT < ao[Fk[0]] + Qo; oT++) {
+            const IT = oT < ao[Fk[0]] ? ao[oT] : Yo[oT - ao[Fk[0]]];
+            IT[Fk[1]] < TT[Fk[3]] && MT(IT[Fk[4]]) && (TT[Fk[3]] = IT[Fk[1]])
           }
-          return YY[-AI[138]] < Hr ? Kr[YY[-AI[138]]] : AI[1]
+          return TT[Fk[3]] < Co ? fo[TT[Fk[3]]] : Fk[1]
         },
-        Tv: () => GY ? Vr[AI[84]] : AI[5],
-        [AI[142] + AI[143] + "Subs"]: (...YY) => {
-          YY[AI[0]] = AI[1];
-          const rY = gY[AI[82]].FW[AI[142] + AI[143]];
-          return typeof rY === AI[144] && rY > AI[1] ? rY > AI[100] ? AI[100] : rY : AI[1]
+        GS: () => pT ? ho[Fk[31]] : Fk[15],
+        [Fk[229] + Fk[230] + "Subs"]: (...TT) => {
+          TT[Fk[0]] = Fk[1];
+          const oT = BT[Fk[25]].Kr[Fk[229] + Fk[230]];
+          return typeof oT === Fk[231] && oT > Fk[1] ? oT > Fk[79] ? Fk[79] : oT : Fk[1]
         },
-        ["getCom" + AI[154]]: (...YY) => {
-          RI(YY[AI[0]] = AI[1], YY[AI[13]] = AI[15], PY = AI[1]);
-          for (let DY = AI[1]; DY < cY; DY++) Fr(BY[DY], AI[25]);
-          for (let DY = AI[1]; DY < Or[AI[0]]; DY++) lY[Or[DY][AI[1]]] && Fr(Or[DY][AI[2]], AI[25]);
-          const rY = UA((() => xA(atob[AI[145]](), vY) ? AI[1] : AI[2]));
-          rY === AI[2] && Fr(AI[82], AI[25]), EY();
-          const FY = rY === PA ? PA : UA(((...YY) => {
-            YY[AI[0]] = AI[1];
-            const rY = Object.getOwnPropertyDescriptor(window, "atob");
-            return rY === AI[15] ? PA : rY[AI[146]] !== AI[15] ? AI[2] : AI[1]
+        ["getCom" + Fk[242]]: (...TT) => {
+          Lk(TT[Fk[0]] = Fk[1], TT[Fk[3]] = Fk[6], NT = Fk[1]);
+          for (let IT = Fk[1]; IT < ET; IT++) io(vT[IT], Fk[41]);
+          for (let IT = Fk[1]; IT < Xo[Fk[0]]; IT++) mT[Xo[IT][Fk[1]]] && io(Xo[IT][Fk[4]], Fk[41]);
+          const oT = Ik((() => dz(atob[Fk[232]](), ST) ? Fk[1] : Fk[4]));
+          oT === Fk[4] && io(Fk[233], Fk[41]), AT();
+          const iT = oT === Tk ? Tk : Ik(((...TT) => {
+            TT[Fk[0]] = Fk[1];
+            const oT = Object.getOwnPropertyDescriptor(window, "atob");
+            return oT === Fk[6] ? Tk : oT[Fk[234]] !== Fk[6] ? Fk[4] : Fk[1]
           }));
-          FY === AI[2] && Fr(AI[56], AI[25]);
-          const AY = FY === PA;
-          for (let DY = AI[1]; DY < ar[AI[0]] && !AY; DY++) lY[ar[DY][AI[1]]] && Fr(ar[DY][AI[2]], AI[25]);
-          const IY = PY > cY;
-          YY[AI[2]] = AI[16], cY === AI[1] && (HY > AI[1] ? YY[AI[2]] = KY[AI[1]] : CY ? YY[AI[2]] = "fp" : IY || (YY[AI[2]] = lY[vr] ? AI[147] : lY[ur] ? AI[148] : AI[16]));
-          for (let DY = AI[1]; DY < ir[AI[0]] && !AY; DY++) lY[ir[DY][AI[1]]] && Fr(ir[DY][AI[2]], AI[25]);
-          const RY = PY,
-            OY = (0, bA[AI[9]])(),
-            gY = OY !== AI[16] && (0, gr[AI[58]])(OY);
-          gY && !AY && Fr(OY, AI[22]), wY && Fr("ix", AI[22]), NY && Fr("il", AI[22]);
-          for (let DY = AI[1]; DY < HY; DY++) Fr(KY[DY], AI[25]);
-          for (let DY = AI[1]; DY < yr[AI[0]]; DY++) lY[yr[DY][AI[1]]] && Fr(yr[DY][AI[2]], AI[25]);
-          lY[Qr] && Fr("mk:lk", AI[25]);
-          const aY = ((...YY) => {
-            YY[AI[0]] = AI[2];
-            for (let rY = AI[1]; rY < Wr[AI[0]]; rY++)
-              if (YY[AI[1]] === Wr[rY]) return Wr[rY];
-            return AI[16]
-          })(lY[or]);
-          if (aY !== AI[16] && Fr(aY, AI[25]), DY !== AI[16] && mY(DY.emitReplaced) === AI[25] && Fr("mk:em", AI[25]), lr && Fr("3s", AI[22]), VF.S && Fr("3b", AI[22]), EY(), WY && Fr("3d", AI[22]), AY && Fr("3g", AI[22]), OY === AI[16] || gY || Fr(OY, AI[22]), yY !== AI[16] && Fr(yY, AI[22]), QY === AI[16] && Vr[AI[3]] !== AI[16] && (QY = function(YY) {
-              const rY = /[^\n]+/g,
-                DY = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)/i;
-              let FY = null,
-                AY = "",
-                IY = !1,
-                RY = (0, VF.o)(VF.R, rY, [YY]);
-              for (; null !== RY;) {
-                const OY = (0, VF.o)(VF.R, DY, [RY[0]]),
-                  gY = null === OY ? (0, VF.o)(VF.R, XA, [RY[0]]) : null,
-                  aY = null !== gY && null !== (0, VF.o)(VF.R, qA, [gY[1]]) && 0 !== pA(gY[1], "wasm:") ? gY[1] : null;
-                if (null === FY) null !== OY ? (FY = OY[2], AY = OY[4]) : null !== aY && (FY = "");
-                else if (null !== OY) {
-                  IY = !0;
-                  const YY = OY[2] === FY;
-                  if ("" !== OY[1] || !YY || OY[4] !== AY) {
-                    const rY = "moz-extension" === OY[3] || "safari-web-extension" === OY[3];
-                    return (0, dA.f)("" !== OY[1] || YY ? "inline" : rY ? OY[3] : OY[2])
+          iT === Fk[4] && io(Fk[27], Fk[41]);
+          const zT = iT === Tk;
+          for (let IT = Fk[1]; IT < Fo[Fk[0]] && !zT; IT++) mT[Fo[IT][Fk[1]]] && io(Fo[IT][Fk[4]], Fk[41]);
+          const kT = NT > ET;
+          TT[Fk[22]] = Fk[5], ET === Fk[1] && (CT > Fk[1] ? TT[Fk[22]] = fT[Fk[1]] : UT ? TT[Fk[22]] = "fp" : kT || (TT[Fk[22]] = mT[So] ? Fk[235] : mT[Do] ? Fk[204] : Fk[5]));
+          for (let IT = Fk[1]; IT < xo[Fk[0]] && !zT; IT++) mT[xo[IT][Fk[1]]] && io(xo[IT][Fk[4]], Fk[41]);
+          const WT = NT,
+            XT = (0, Gz[Fk[59]])(),
+            BT = XT !== Fk[5] && (0, Bo[Fk[214]])(XT);
+          BT && !zT && io(XT, Fk[38]), qT && io("ix", Fk[38]), uT && io("il", Fk[38]);
+          for (let IT = Fk[1]; IT < CT; IT++) io(fT[IT], Fk[41]);
+          for (let IT = Fk[1]; IT < co[Fk[0]]; IT++) mT[co[IT][Fk[1]]] && io(co[IT][Fk[4]], Fk[41]);
+          mT[Ko] && io("mk:lk", Fk[41]);
+          const FT = ((...TT) => {
+            TT[Fk[0]] = Fk[4];
+            for (let oT = Fk[1]; oT < ro[Fk[0]]; oT++)
+              if (TT[Fk[1]] === ro[oT]) return ro[oT];
+            return Fk[5]
+          })(mT[Mo]);
+          if (FT !== Fk[5] && io(FT, Fk[41]), IT !== Fk[5] && gT(IT.emitReplaced) === Fk[41] && io("mk:em", Fk[41]), mo && io("3s", Fk[38]), ei[Fk[236]] && io("3b", Fk[38]), AT(), rT && io("3d", Fk[38]), zT && io("3g", Fk[38]), XT === Fk[5] || BT || io(XT, Fk[38]), cT !== Fk[5] && io(cT, Fk[38]), KT === Fk[5] && ho[Fk[59]] !== Fk[5] && (KT = function(TT) {
+              const oT = /[^\n]+/g,
+                IT = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)/i;
+              let iT = null,
+                zT = "",
+                kT = !1,
+                WT = (0, ei.o)(ei.O, oT, [TT]);
+              for (; null !== WT;) {
+                const XT = (0, ei.o)(ei.O, IT, [WT[0]]),
+                  BT = null === XT ? (0, ei.o)(ei.O, pz, [WT[0]]) : null,
+                  FT = null !== BT && null !== (0, ei.o)(ei.O, bz, [BT[1]]) && 0 !== yz(BT[1], "wasm:") ? BT[1] : null;
+                if (null === iT) null !== XT ? (iT = XT[2], zT = XT[4]) : null !== FT && (iT = "");
+                else if (null !== XT) {
+                  kT = !0;
+                  const TT = XT[2] === iT;
+                  if ("" !== XT[1] || !TT || XT[4] !== zT) {
+                    const oT = "moz-extension" === XT[3] || "safari-web-extension" === XT[3];
+                    return (0, Zz.h)("" !== XT[1] || TT ? "inline" : oT ? XT[3] : XT[2])
                   }
-                } else if (null !== aY) {
-                  const YY = -1 !== pA(RY[0], "userscript") || -1 !== pA(RY[0], ".user.js");
-                  return (0, dA.f)(YY ? "userscript" : "inline")
+                } else if (null !== FT) {
+                  const TT = -1 !== yz(WT[0], "userscript") || -1 !== yz(WT[0], ".user.js");
+                  return (0, Zz.h)(TT ? "userscript" : "inline")
                 }
-                RY = (0, VF.o)(VF.R, rY, [YY])
+                WT = (0, ei.o)(ei.O, oT, [TT])
               }
-              return (0, dA.f)(IY ? "own" : "unknown")
-            }(Vr[AI[3]])), QY !== AI[16] && Fr(QY, AI[22]), PY === AI[1]) return AI[16];
-          if (YY[AI[2]] === AI[16] && nY[AI[1]] && !(0, dA[AI[47]])(xY[AI[1]]))
-            for (let DY = AI[2]; DY < RY; DY++)
-              if (nY[DY] && (0, dA[AI[47]])(xY[DY])) {
-                const YY = xY[DY];
-                for (let rY = DY; rY > AI[1]; rY--) RI(xY[rY] = xY[rY - AI[2]], nY[rY] = nY[rY - AI[2]]);
-                RI(xY[AI[1]] = YY, nY[AI[1]] = AI[25]);
+              return (0, Zz.h)(kT ? "own" : "unknown")
+            }(ho[Fk[59]])), KT !== Fk[5] && io(KT, Fk[38]), NT === Fk[1]) return Fk[5];
+          if (TT[Fk[22]] === Fk[5] && yT[Fk[1]] && !(0, Zz[Fk[205]])(bT[Fk[1]]))
+            for (let IT = Fk[4]; IT < WT; IT++)
+              if (yT[IT] && (0, Zz[Fk[205]])(bT[IT])) {
+                const TT = bT[IT];
+                for (let oT = IT; oT > Fk[1]; oT--) Lk(bT[oT] = bT[oT - Fk[4]], yT[oT] = yT[oT - Fk[4]]);
+                Lk(bT[Fk[1]] = TT, yT[Fk[1]] = Fk[41]);
                 break
-              } if (RI(YY[AI[32]] = AI[1], YY[AI[85]] = YY[AI[2]] === AI[16] ? AI[1] : RY), YY[AI[85]] > AI[1] && OY !== AI[16] && gY && !AY) {
-            for (let rY = YY[AI[85]]; rY > AI[1]; rY--) RI(xY[rY] = xY[rY - AI[2]], nY[rY] = nY[rY - AI[2]]);
-            RI(xY[AI[1]] = OY, nY[AI[1]] = AI[22], YY[AI[32]] = AI[2], YY[AI[85]]++)
+              } if (Lk(TT[Fk[2]] = Fk[1], TT[Fk[85]] = TT[Fk[22]] === Fk[5] ? Fk[1] : WT), TT[Fk[85]] > Fk[1] && XT !== Fk[5] && BT && !zT) {
+            for (let oT = TT[Fk[85]]; oT > Fk[1]; oT--) Lk(bT[oT] = bT[oT - Fk[4]], yT[oT] = yT[oT - Fk[4]]);
+            Lk(bT[Fk[1]] = XT, yT[Fk[1]] = Fk[38], TT[Fk[2]] = Fk[4], TT[Fk[85]]++)
           }
-          if (YY[AI[9]] = AI[1], UY++ % AI[14] === AI[2])
-            for (let DY = AI[2]; DY < PY; DY++) Ar(DY) < Ar(YY[AI[9]]) && (YY[AI[9]] = DY);
-          const uY = xY[YY[AI[9]]];
-          (nY[YY[AI[9]]] ? Yr : tY)[uY] = LY++;
-          const sY = YY[AI[9]] >= YY[AI[32]] && YY[AI[9]] < YY[AI[85]];
-          if (!nY[YY[AI[9]]] || uY === YY[AI[2]] || YY[AI[9]] === AI[1] && !sY) return uY === AI[48] ? (0, dA.y)(lY[sr], dA[AI[32]]) : uY;
-          const iY = (YY[AI[13]] = YY[AI[2]]) !== AI[16] && void 0 !== YY[AI[13]] ? YY[AI[13]] : xY[AI[1]];
-          return iY !== rr && RI(rr = iY, Dr = (0, VF[AI[36]])(AI[16])), Dr[uY] ??= (0, dA[AI[48]])(uY, iY)
+          if (TT[-Fk[237]] = Fk[1], PT++ % Fk[2] === Fk[4])
+            for (let IT = Fk[4]; IT < NT; IT++) zo(IT) < zo(TT[-Fk[237]]) && (TT[-Fk[237]] = IT);
+          const DT = bT[TT[-Fk[237]]];
+          (yT[TT[-Fk[237]]] ? To : VT)[DT] = dT++;
+          const LT = TT[-Fk[237]] >= TT[Fk[2]] && TT[-Fk[237]] < TT[Fk[85]];
+          if (!yT[TT[-Fk[237]]] || DT === TT[Fk[22]] || TT[-Fk[237]] === Fk[1] && !LT) return DT === Fk[8] ? (0, Zz.x)(mT[Lo], Zz[Fk[29]]) : DT;
+          const xT = (TT[Fk[3]] = TT[Fk[22]]) !== Fk[5] && void 0 !== TT[Fk[3]] ? TT[Fk[3]] : bT[Fk[1]];
+          return xT !== oo && Lk(oo = xT, Io = (0, ei[Fk[80]])(Fk[5])), Io[DT] ??= (0, Zz[Fk[216]])(DT, xT)
         }
       };
-      let Mr = Jr[AI[132]][AI[149]];
-      const wr = () => Nr !== Jr[AI[132]][AI[149]] ? Nr : Mr;
-      let br = AI[1],
-        Xr = AI[14],
-        qr = AI[1],
-        pr = AI[1];
+      let no = Ho[Fk[220]][Fk[238]];
+      const qo = () => uo !== Ho[Fk[220]][Fk[238]] ? uo : no;
+      let Zo = Fk[1],
+        so = Fk[2],
+        to = Fk[1],
+        Go = Fk[1];
       return {
-        checks: dr,
-        checkEvent: (...YY) => {
-          YY[AI[0]] = AI[2];
+        checks: Oo,
+        checkEvent: (...TT) => {
+          TT[Fk[0]] = Fk[4];
           try {
-            const rY = AY[er];
-            if (typeof rY === AI[54] + AI[55] && !(YY[AI[1]] instanceof rY) && !(0, VF.G)(YY[AI[1]])) return Nr = Jr[AI[132]].NotEvent, AI[1];
-            if (YY[AI[1]].isTrusted === AI[22]) return AI[1];
-            let DY = AI[1];
-            for (const FY in YY[AI[1]]) DY++;
-            return DY < AI[35] ? (Nr = Jr[AI[132]]["FewPropertie" + AI[133]], AI[1]) : cr()
+            const oT = zT[Ro];
+            if (typeof oT === Fk[206] + Fk[207] && !(TT[Fk[1]] instanceof oT) && !(0, ei.F)(TT[Fk[1]])) return uo = Ho[Fk[220]].NotEvent, Fk[1];
+            if (TT[Fk[1]].isTrusted === Fk[38]) return Fk[1];
+            let IT = Fk[1];
+            for (const iT in TT[Fk[1]]) IT++;
+            return IT < Fk[75] ? (uo = Ho[Fk[220]]["FewPropertie" + Fk[216]], Fk[1]) : Eo()
           } catch {}
-          return AI[1]
+          return Fk[1]
         },
         checkPadCall: () => {
           try {
-            return cr()
+            return Eo()
           } catch {
-            return AI[1]
+            return Fk[1]
           }
         },
-        usedProp: wr,
-        watchHeld: (...YY) => {
-          RI(YY[AI[0]] = AI[14], YY[AI[13]] = AI[15]);
-          const rY = VY((() => {
-            YY[AI[13]] = YY[AI[2]]()
+        usedProp: qo,
+        watchHeld: (...TT) => {
+          Lk(TT[Fk[0]] = Fk[2], TT[Fk[2]] = Fk[6]);
+          const oT = hT((() => {
+            TT[Fk[2]] = TT[Fk[4]]()
           }));
-          jr[hr++] = [YY[AI[1]], () => !rY || YY[AI[2]]() !== YY[AI[13]]]
+          Yo[Qo++] = [TT[Fk[1]], () => !oT || TT[Fk[4]]() !== TT[Fk[2]]]
         },
-        Zu: (...YY) => {
-          YY[AI[0]] = AI[1];
-          const rY = MY();
-          return ((...YY) => {
-            if (RI(YY[AI[0]] = AI[2], YY[AI[13]] = AI[15], YY[AI[3]] = AI[15]), DY !== AI[16]) {
-              const rY = mY(DY.pR),
-                FY = "v3" === rY ? AI[17] : "v5" === rY ? AI[27] : "v6" === rY ? AI[28] : AI[14];
-              FY !== AI[14] && (Xr = FY);
-              const AY = mY(DY["inbuil" + AI[152] + AI[153]]);
-              typeof AY === AI[144] && AY >= AI[1] && AY <= AI[150] && (AY | AI[1]) === AY && (qr = AY), RI(YY[AI[13]] = mY(DY.reflectApplyHit), YY[AI[3]] = mY(DY.definerHit))
+        dD: (...TT) => {
+          TT[Fk[0]] = Fk[1];
+          const oT = nT();
+          return (TT => {
+            let oT = Fk[6],
+              iT = Fk[6];
+            if (IT !== Fk[5]) {
+              const TT = gT(IT.LX),
+                zT = "v3" === TT ? Fk[7] : "v5" === TT ? Fk[16] : "v6" === TT ? Fk[60] : Fk[2];
+              zT !== Fk[2] && (so = zT);
+              const kT = gT(IT["inbuil" + Fk[240] + Fk[241]]);
+              typeof kT === Fk[231] && kT >= Fk[1] && kT <= Fk[116] && (kT | Fk[1]) === kT && (to = kT), Lk(oT = gT(IT.reflectApplyHit), iT = gT(IT.definerHit))
             }
-            const rY = YY[AI[1]] ? AI[80] : "11" === YY[AI[3]] ? AI[150] : "13" === YY[AI[3]] ? AI[116] : YY[AI[13]] !== AI[15] && YY[AI[13]] !== AI[16] ? AI[14] : "10" === YY[AI[3]] ? AI[35] : "12" === YY[AI[3]] ? AI[67] : AI[1];
-            rY !== AI[1] && (pr = rY)
-          })(rY), br++ % 10 === AI[1] && (Tr(), nA((() => !xA(AY[IY][AI[145]][AI[145]](), vY))) && (Mr = Mr === Jr[AI[132]][AI[151]] ? Jr[AI[132]][AI[151]] : Jr[AI[132]].Fr), nA((() => !xA(AY[IY][AI[145]](), vY))) && (Mr = Jr[AI[132]][AI[151]])), {
-            flags: rY ? Jr[AI[56]].Butto : AI[1],
+            const zT = TT ? Fk[57] : "11" === iT ? Fk[116] : "13" === iT ? Fk[114] : oT !== Fk[6] && oT !== Fk[5] ? Fk[2] : "10" === iT ? Fk[75] : "12" === iT ? Fk[67] : Fk[1];
+            zT !== Fk[1] && (Go = zT)
+          })(oT), Zo++ % 10 === Fk[1] && (eo(), Vz((() => !dz(zT[kT][Fk[232]][Fk[232]](), ST))) && (no = no === Ho[Fk[220]][Fk[239]] ? Ho[Fk[220]][Fk[239]] : Ho[Fk[220]].Fr), Vz((() => !dz(zT[kT][Fk[232]](), ST))) && (no = Ho[Fk[220]][Fk[239]])), {
+            flags: oT ? Ho[Fk[233]].Butto : Fk[1],
             values: [
-              [Jr[AI[47]].PhysicsVersion, Xr],
-              [Jr[AI[47]]["Inbuil" + AI[152] + AI[153]], qr],
-              [Jr[AI[47]]["AltCom" + AI[154]], pr],
-              [Jr[AI[47]]["ProbeUsedPro" + AI[36]], wr()]
+              [Ho[Fk[25]].PhysicsVersion, so],
+              [Ho[Fk[25]]["Inbuil" + Fk[240] + Fk[241]], to],
+              [Ho[Fk[25]]["AltCom" + Fk[242]], Go],
+              [Ho[Fk[25]]["ProbeUsedPro" + Fk[214]], qo()]
             ]
           }
         }
       }
     };
-    const OI = "[bloxd-wasm-client]",
-      gI = "bloxdWasmDownloadFailed",
-      aI = Lr.b,
-      vI = "boot",
-      uI = "playSources",
-      sI = "wasmBuild",
-      iI = "bloxd-wasm-joined",
-      yI = "bloxd-wasm-first-view",
-      QI = "bloxd-wasm-playable-legacy",
-      oI = 1048576,
-      WI = 8 * oI,
-      EI = 8,
-      mI = 1006,
-      VI = 1e3,
-      SI = "You lost connection to the server.",
-      lI = "general:lostConnection",
-      TI = 1048576,
-      eI = 5e3,
-      NI = 100,
-      BI = [2e3, 1e4, 3e4],
-      cI = 3e4;
-    let KI = null,
-      HI = null,
-      zI = !1,
-      ZI = !1,
-      CI = !1,
-      fI = null,
-      jI = null,
-      hI = null,
-      dI = null,
-      JI = null,
-      MI = null,
-      wI = null;
-    const bI = new class {
-      constructor(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = YY, this.soundOn = rY, this.now = DY, this.player = null, this.local = [], this.stopped = !1
+    const xk = "[bloxd-wasm-client]",
+      ck = "bloxdWasmDownloadFailed",
+      Kk = TI.d,
+      Mk = "boot",
+      rk = "playSources",
+      Ak = "wasmBuild",
+      gk = "bloxd-wasm-joined",
+      hk = "bloxd-wasm-first-view",
+      wk = "bloxd-wasm-playable-legacy",
+      mk = 1048576,
+      ek = 8 * mk,
+      Rk = 8,
+      uk = 1006,
+      vk = 1e3,
+      Ek = "You lost connection to the server.",
+      fk = "general:lostConnection",
+      Ck = 1048576,
+      jk = 5e3,
+      Jk = 100,
+      Uk = [2e3, 1e4, 3e4],
+      ak = 3e4;
+    let Yk = null,
+      Qk = null,
+      Ok = !1,
+      Hk = !1,
+      nk = !1,
+      qk = null,
+      Zk = null,
+      lk = null,
+      sk = null,
+      tk = null,
+      Gk = null,
+      pk = null;
+    const bk = new class {
+      constructor(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = TT, this.soundOn = oT, this.now = IT, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5050,2472 +5286,2472 @@ export const modules = {
         return this.local.length
       }
       prepare() {
-        var YY;
-        null === (YY = this.player) || void 0 === YY || YY.prepare()
+        var TT;
+        null === (TT = this.player) || void 0 === TT || TT.prepare()
       }
-      preload(YY) {
-        var rY;
-        this.stopped || (null === (rY = this.player) || void 0 === rY || rY.preload(YY))
+      preload(TT) {
+        var oT;
+        this.stopped || (null === (oT = this.player) || void 0 === oT || oT.preload(TT))
       }
       cancelPreload() {
-        var YY;
-        null === (YY = this.player) || void 0 === YY || YY.cancelPreload()
+        var TT;
+        null === (TT = this.player) || void 0 === TT || TT.cancelPreload()
       }
-      load(YY) {
+      load(TT) {
         if (null !== this.player || this.stopped) return;
-        this.player = YY, YY.setMaster(this.master, this.soundOn);
-        const rY = this.now(),
-          DY = this.local;
+        this.player = TT, TT.setMaster(this.master, this.soundOn);
+        const oT = this.now(),
+          IT = this.local;
         this.local = [];
-        for (const AY of DY)
-          if (!(AY.stopped || !AY.loop && rY - AY.at >= 300)) try {
-            this.start(AY, YY, rY)
-          } catch (FY) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", FY)
+        for (const zT of IT)
+          if (!(zT.stopped || !zT.loop && oT - zT.at >= 300)) try {
+            this.start(zT, TT, oT)
+          } catch (iT) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", iT)
           }
       }
-      start(YY, rY, DY) {
+      start(TT, oT, IT) {
         const {
-          name: FY,
-          pos: AY,
-          ear: IY,
-          maxHearDist: RY,
-          refDistance: OY,
-          loop: gY,
-          fade: aY
-        } = YY, vY = rY.playGame(FY, fr(YY, DY), AY, IY, RY, OY, gY);
-        if (YY.sound = vY, 1 !== YY.rate && vY.rate(YY.rate), null !== YY.panner && vY.setPannerAttr(YY.panner), null !== YY.moved && vY.setPosition(YY.moved), null !== aY && DY - aY.at < aY.ms) {
-          const rY = Cr(this.master);
-          rY > 0 ? vY.fade(0, YY.volume * rY, aY.at + aY.ms - DY) : vY.setRelativeVolume(YY.volume)
+          name: iT,
+          pos: zT,
+          ear: kT,
+          maxHearDist: WT,
+          refDistance: XT,
+          loop: BT,
+          fade: FT
+        } = TT, ST = oT.playGame(iT, ao(TT, IT), zT, kT, WT, XT, BT);
+        if (TT.sound = ST, 1 !== TT.rate && ST.rate(TT.rate), null !== TT.panner && ST.setPannerAttr(TT.panner), null !== TT.moved && ST.setPosition(TT.moved), null !== FT && IT - FT.at < FT.ms) {
+          const oT = Uo(this.master);
+          oT > 0 ? ST.fade(0, TT.volume * oT, FT.at + FT.ms - IT) : ST.setRelativeVolume(TT.volume)
         }
       }
-      onAudioEvent(YY, rY, DY, FY) {
-        var AY, IY;
-        return null === (AY = null === (IY = this.player) || void 0 === IY ? void 0 : IY.onAudioEvent(YY, rY, DY, FY)) || void 0 === AY || AY
+      onAudioEvent(TT, oT, IT, iT) {
+        var zT, kT;
+        return null === (zT = null === (kT = this.player) || void 0 === kT ? void 0 : kT.onAudioEvent(TT, oT, IT, iT)) || void 0 === zT || zT
       }
-      applyListener(YY) {
-        var rY;
-        null === (rY = this.player) || void 0 === rY || rY.applyListener(YY)
+      applyListener(TT) {
+        var oT;
+        null === (oT = this.player) || void 0 === oT || oT.applyListener(TT)
       }
-      playGame(YY, rY, DY, FY, AY, IY, RY) {
-        if (this.stopped) return Zr.b;
-        if (this.player) return this.player.playGame(YY, rY, DY, FY, AY, IY, RY);
-        const OY = this.now();
-        this.local = this.local.filter((YY => !YY.stopped && (YY.loop || OY - YY.at < 300)));
-        const gY = {
-          name: YY,
-          volume: Cr(rY),
+      playGame(TT, oT, IT, iT, zT, kT, WT) {
+        if (this.stopped) return Jo.b;
+        if (this.player) return this.player.playGame(TT, oT, IT, iT, zT, kT, WT);
+        const XT = this.now();
+        this.local = this.local.filter((TT => !TT.stopped && (TT.loop || XT - TT.at < 300)));
+        const BT = {
+          name: TT,
+          volume: Uo(oT),
           fade: null,
-          pos: DY && [DY[0], DY[1], DY[2]],
-          ear: FY && [FY[0], FY[1], FY[2]],
-          maxHearDist: AY,
-          refDistance: IY,
-          loop: RY,
+          pos: IT && [IT[0], IT[1], IT[2]],
+          ear: iT && [iT[0], iT[1], iT[2]],
+          maxHearDist: zT,
+          refDistance: kT,
+          loop: WT,
           rate: 1,
           panner: null,
           moved: null,
-          at: OY,
+          at: XT,
           stopped: !1,
           sound: null
         };
-        this.local.push(gY);
-        const aY = {
+        this.local.push(BT);
+        const FT = {
           stop: () => {
-            var YY;
-            return gY.stopped = !0, null === (YY = gY.sound) || void 0 === YY || YY.stop(), aY
+            var TT;
+            return BT.stopped = !0, null === (TT = BT.sound) || void 0 === TT || TT.stop(), FT
           },
-          fade: (YY, rY, DY) => {
-            if (gY.sound) return gY.sound.fade(YY, rY, DY), aY;
-            const FY = Cr(this.master),
-              AY = Cr(FY > 0 ? rY / FY : rY > 0 ? gY.volume : 0),
-              IY = this.now(),
-              RY = fr(gY, IY);
-            return gY.volume = AY, gY.fade = DY > 0 && RY !== AY ? {
-              from: RY,
-              at: IY,
-              ms: DY
-            } : null, aY
+          fade: (TT, oT, IT) => {
+            if (BT.sound) return BT.sound.fade(TT, oT, IT), FT;
+            const iT = Uo(this.master),
+              zT = Uo(iT > 0 ? oT / iT : oT > 0 ? BT.volume : 0),
+              kT = this.now(),
+              WT = ao(BT, kT);
+            return BT.volume = zT, BT.fade = IT > 0 && WT !== zT ? {
+              from: WT,
+              at: kT,
+              ms: IT
+            } : null, FT
           },
-          rate: YY => (gY.sound ? gY.sound.rate(YY) : gY.rate = YY, aY),
-          getVolume: () => gY.sound ? gY.sound.getVolume() : gY.volume * Cr(this.master),
-          getRelativeVolume: () => gY.sound ? gY.sound.getRelativeVolume() : gY.volume,
-          setRelativeVolume: YY => (gY.sound ? gY.sound.setRelativeVolume(YY) : (gY.volume = Cr(YY), gY.fade = null), aY),
-          setPannerAttr: YY => (gY.sound ? gY.sound.setPannerAttr(YY) : gY.panner = {
-            ...YY
-          }, aY),
-          setPosition: YY => (gY.sound ? gY.sound.setPosition(YY) : gY.moved = [YY[0], YY[1], YY[2]], aY)
+          rate: TT => (BT.sound ? BT.sound.rate(TT) : BT.rate = TT, FT),
+          getVolume: () => BT.sound ? BT.sound.getVolume() : BT.volume * Uo(this.master),
+          getRelativeVolume: () => BT.sound ? BT.sound.getRelativeVolume() : BT.volume,
+          setRelativeVolume: TT => (BT.sound ? BT.sound.setRelativeVolume(TT) : (BT.volume = Uo(TT), BT.fade = null), FT),
+          setPannerAttr: TT => (BT.sound ? BT.sound.setPannerAttr(TT) : BT.panner = {
+            ...TT
+          }, FT),
+          setPosition: TT => (BT.sound ? BT.sound.setPosition(TT) : BT.moved = [TT[0], TT[1], TT[2]], FT)
         };
-        return aY
+        return FT
       }
-      setMaster(YY, rY) {
-        var DY;
-        this.master = YY, this.soundOn = rY, null === (DY = this.player) || void 0 === DY || DY.setMaster(YY, rY)
+      setMaster(TT, oT) {
+        var IT;
+        this.master = TT, this.soundOn = oT, null === (IT = this.player) || void 0 === IT || IT.setMaster(TT, oT)
       }
       stop() {
-        var YY;
-        this.stopped = !0, null === (YY = this.player) || void 0 === YY || YY.stopAll();
-        for (const rY of this.local) rY.stopped = !0;
+        var TT;
+        this.stopped = !0, null === (TT = this.player) || void 0 === TT || TT.stopAll();
+        for (const oT of this.local) oT.stopped = !0;
         this.local = []
       }
-    }((0, Sr.d)(), !0);
-    let XI = {
+    }((0, wo.b)(), !0);
+    let yk = {
         wasm: "unknown",
-        client: String(Yr.d)
+        client: String(To.c)
       },
-      qI = null,
-      pI = () => {};
-    const kI = new Promise((YY => {
-      pI = YY
+      Nk = null,
+      Pk = () => {};
+    const dk = new Promise((TT => {
+      Pk = TT
     }));
-    let GI = () => {};
-    const xI = new Promise((YY => {
-      GI = YY
+    let Vk = () => {};
+    const TW = new Promise((TT => {
+      Vk = TT
     }));
-    let nI, PI = null,
-      UI = null,
-      LI = null,
-      tI = null,
-      YR = null,
-      rR = null,
-      DR = null,
-      FR = null,
-      AR = null,
-      IR = null,
-      RR = null,
-      OR = null,
-      gR = null,
-      aR = null,
-      vR = null,
-      uR = null,
-      sR = null,
-      iR = null,
-      yR = !1,
-      QR = null;
-    const oR = new Set,
-      WR = new Set;
+    let oW, IW = null,
+      iW = null,
+      zW = null,
+      kW = null,
+      WW = null,
+      XW = null,
+      BW = null,
+      FW = null,
+      SW = null,
+      DW = null,
+      LW = null,
+      xW = null,
+      cW = null,
+      KW = null,
+      MW = null,
+      rW = null,
+      AW = null,
+      gW = null,
+      hW = !1,
+      wW = null;
+    const mW = new Set,
+      eW = new Set;
 
-    function ER(YY) {
-      if (!oR.has(YY)) {
-        oR.add(YY);
-        for (const DY of WR) try {
-          DY(YY)
-        } catch (rY) {
-          console.error(`${OI} a startup listener threw`, rY)
+    function RW(TT) {
+      if (!mW.has(TT)) {
+        mW.add(TT);
+        for (const IT of eW) try {
+          IT(TT)
+        } catch (oT) {
+          console.error(`${xk} a startup listener threw`, oT)
         }
       }
     }
 
-    function mR(YY) {
-      yR = !0, YY.isStopped || ER("texturesIn")
+    function uW(TT) {
+      hW = !0, TT.isStopped || RW("texturesIn")
     }
-    let VR = 1,
-      SR = -1 / 0,
-      lR = !1,
-      TR = !1,
-      eR = 0,
-      NR = null,
-      BR = !1;
-    const cR = {
+    let vW = 1,
+      EW = -1 / 0,
+      fW = !1,
+      CW = !1,
+      jW = 0,
+      JW = null,
+      UW = !1;
+    const aW = {
       dropped: -1 / 0,
       pause: -1 / 0
     };
-    let KR = 0,
-      HR = 0,
-      zR = null,
-      ZR = null,
-      CR = null,
-      fR = null;
-    const jR = new WeakMap;
-    let hR = null,
-      dR = null,
-      JR = null,
-      MR = null,
-      wR = null,
-      bR = null,
-      XR = null,
-      qR = 0,
-      pR = null,
-      kR = null,
-      GR = null,
-      xR = null,
-      nR = -1 / 0,
-      PR = null;
-    const UR = new Set;
-    let LR = !1,
-      tR = null;
-    const YO = new Map,
-      rO = new Set;
-    let DO = !1;
-    const FO = {
+    let YW = 0,
+      QW = 0,
+      OW = null,
+      HW = null,
+      nW = null,
+      qW = null;
+    const ZW = new WeakMap;
+    let lW = null,
+      sW = null,
+      tW = null,
+      GW = null,
+      pW = null,
+      bW = null,
+      yW = null,
+      NW = 0,
+      PW = null,
+      dW = null,
+      VW = null,
+      TX = null,
+      oX = -1 / 0,
+      IX = null;
+    const iX = new Set;
+    let zX = !1,
+      kX = null;
+    const WX = new Map,
+      XX = new Set;
+    let BX = !1;
+    const FX = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
-    let AO = null,
-      IO = () => [0, 0],
-      RO = () => {},
-      OO = () => {},
-      gO = null,
-      aO = null;
-    const vO = new class {
-      constructor(YY) {
-        this.reached = YY, this.next = 1
+    let SX = null,
+      DX = () => [0, 0],
+      LX = () => {},
+      xX = () => {},
+      cX = null,
+      KX = null;
+    const MX = new class {
+      constructor(TT) {
+        this.reached = TT, this.next = 1
       }
-      observe(YY) {
-        if (!(YY < this.next)) {
-          for (; this.next <= YY;) this.next *= 2;
-          this.reached(YY)
+      observe(TT) {
+        if (!(TT < this.next)) {
+          for (; this.next <= TT;) this.next *= 2;
+          this.reached(TT)
         }
       }
-    }((YY => {
-      console.warn(`${OI} chunk cancels from the server this session: ${YY}`)
+    }((TT => {
+      console.warn(`${xk} chunk cancels from the server this session: ${TT}`)
     }));
-    let uO = 1,
-      sO = null,
-      iO = null,
-      yO = null,
-      QO = null,
-      oO = null,
-      WO = !1,
-      EO = !1,
-      mO = 0,
-      VO = null,
-      SO = !1,
-      lO = null,
-      TO = null,
-      eO = !1;
-    const NO = new class {
-      constructor(YY) {
-        this.vo = YY, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
+    let rX = 1,
+      AX = null,
+      gX = null,
+      hX = null,
+      wX = null,
+      mX = null,
+      eX = !1,
+      RX = !1,
+      uX = 0,
+      vX = null,
+      EX = !1,
+      fX = null,
+      CX = null,
+      jX = !1;
+    const JX = new class {
+      constructor(TT) {
+        this.XM = TT, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
       }
       deviceLost() {
         this.lossPending = !0
       }
-      frame(YY, rY, DY) {
-        (0, Nr.e)(YY) && (this.lossPending = !1);
-        const FY = DY - this.lastFrameMs;
-        this.lastFrameMs = DY, this.lossPending && rY && (0, Nr.j)(YY) ? (null === this.undrawnSinceMs || FY > 1e3) && (this.undrawnSinceMs = DY) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && DY - this.undrawnSinceMs >= 2e3)
+      frame(TT, oT, IT) {
+        (0, uo.e)(TT) && (this.lossPending = !1);
+        const iT = IT - this.lastFrameMs;
+        this.lastFrameMs = IT, this.lossPending && oT && (0, uo.j)(TT) ? (null === this.undrawnSinceMs || iT > 1e3) && (this.undrawnSinceMs = IT) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && IT - this.undrawnSinceMs >= 2e3)
       }
       stop() {
         this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
       }
-      show(YY) {
-        YY !== this.shown && (this.shown = YY, this.vo(YY))
+      show(TT) {
+        TT !== this.shown && (this.shown = TT, this.XM(TT))
       }
-    }((YY => {
-      gY.g.vo(zr.d, YY)
+    }((TT => {
+      BT.h.XM(jo.b, TT)
     }));
-    let BO = !1,
-      cO = !0,
-      KO = null,
-      HO = !1,
-      zO = !1,
-      ZO = !1;
+    let UX = !1,
+      aX = !0,
+      YX = null,
+      QX = !1,
+      OX = !1,
+      HX = !1;
 
-    function CO() {
-      return hI ??= Promise.all([DY.e(186), DY.e(137), DY.e(56)]).then((() => DY(42332))).then((YY => (jI = YY, Object.assign(globalThis, {
-        bloxdPreviewPage: YY.pagePreviews()
-      }), YY)), (YY => {
-        throw hI = null, YY
-      })), hI
+    function nX() {
+      return lk ??= Promise.all([IT.e(186), IT.e(137), IT.e(56)]).then((() => IT(42097))).then((TT => (Zk = TT, Object.assign(globalThis, {
+        bloxdPreviewPage: TT.pagePreviews()
+      }), TT)), (TT => {
+        throw lk = null, TT
+      })), lk
     }
 
-    function fO() {
-      return fI ??= DY.e(54).then((() => DY(42348))).catch((YY => {
-        throw fI = null, new SY.e(YY)
-      })), fI
+    function qX() {
+      return qk ??= IT.e(54).then((() => IT(42109))).catch((TT => {
+        throw qk = null, new wT.b(TT)
+      })), qk
     }
-    class jO {
+    class ZX {
       constructor() {
         this.host = null
       }
-      open(YY) {
-        return null !== this.host ? YY(this.host) : CO().then((rY => (this.host ??= new rY.WasmPreviewHost(rY.pagePreviews()), YY(this.host))))
+      open(TT) {
+        return null !== this.host ? TT(this.host) : nX().then((oT => (this.host ??= new oT.WasmPreviewHost(oT.pagePreviews()), TT(this.host))))
       }
-      openMob(YY) {
-        return this.open((rY => rY.openMob(YY)))
+      openMob(TT) {
+        return this.open((oT => oT.openMob(TT)))
       }
-      openPet(YY) {
-        return this.open((rY => rY.openPet(YY)))
+      openPet(TT) {
+        return this.open((oT => oT.openPet(TT)))
       }
-      openMobLineup(YY) {
-        return this.open((rY => rY.openMobLineup(YY)))
+      openMobLineup(TT) {
+        return this.open((oT => oT.openMobLineup(TT)))
       }
-      openCharacter(YY, rY) {
-        return this.open((DY => DY.openCharacter(YY, rY)))
+      openCharacter(TT, oT) {
+        return this.open((IT => IT.openCharacter(TT, oT)))
       }
     }
 
-    function hO() {
-      CI || (CI = !0, nF.c.setHost(new jO), (0, oD.n)(), pF.i.setFollower(Jg), Object.assign(globalThis, {
-        bloxdPreviews: nF.c
+    function lX() {
+      nk || (nk = !0, Vi.f.setHost(new ZX), (0, AI.n)(), yi.f.setFollower(tB), Object.assign(globalThis, {
+        bloxdPreviews: Vi.f
       }))
     }
 
-    function dO() {
-      CO().then((YY => {
-        YY.pagePreviews().prefetch()
+    function sX() {
+      nX().then((TT => {
+        TT.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function JO() {
-      let YY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (ZI) return;
-      ZI = !0, BO = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), cO = !BO, console.info(`${OI} starting`), zI || (zI = !0, (0, zr.L)(new cr(Fg, ug)), (0, sY.k)(new Kr), (0, zr.I)(new Hr), (0, zr.D)()), hO(), (0, SD.setCrashScreen)((YY => {
+    function tX() {
+      let TT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (Hk) return;
+      Hk = !0, UX = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), aX = !UX, console.info(`${xk} starting`), Ok || (Ok = !0, (0, jo.F)(new Eo(FB, rB)), (0, LT.m)(new fo), (0, jo.D)(new Co), (0, jo.y)()), lX(), (0, eI.setCrashScreen)((TT => {
         let {
-          text: rY,
-          reload: DY
-        } = YY;
-        ! function(YY, rY) {
-          var DY, FY;
-          if (HO) return;
-          HO = !0, (0, ED.e)(), null === (DY = PR) || void 0 === DY || DY.abort(), PR = null, kF.d.release();
-          const AY = BO ? null !== (FY = YY.cancel) && void 0 !== FY ? FY : "general:back" : null;
-          iF({
-            ...YY,
-            cancel: AY
-          }).then((YY => {
-            YY && rY && zO ? ((0, vr.l)("reloadOntoJs"), (0, XY.h)(vr.t)) : YY && rY ? (0, XY.j)() : BO && (0, XY.f)("/")
+          text: oT,
+          reload: IT
+        } = TT;
+        ! function(TT, oT) {
+          var IT, iT;
+          if (QX) return;
+          QX = !0, (0, hI.e)(), null === (IT = IX) || void 0 === IT || IT.abort(), IX = null, Ni.e.release();
+          const zT = UX ? null !== (iT = TT.cancel) && void 0 !== iT ? iT : "general:back" : null;
+          Ki({
+            ...TT,
+            cancel: zT
+          }).then((TT => {
+            TT && oT && OX ? ((0, So.r)("reloadOntoJs"), (0, lT.f)(So.w)) : TT && oT ? (0, lT.j)() : UX && (0, lT.d)("/")
           }))
-        }(rY, DY)
-      })), (0, hF.k)(), (0, Vr.e)();
-      let rY = null;
+        }(oT, IT)
+      })), (0, ni.m)(), (0, ho.e)();
+      let oT = null;
       try {
-        rY = FI("ywuxgx1bcuj", (() => {
-          var YY, rY;
-          return null !== (YY = null === (rY = PI) || void 0 === rY ? void 0 : rY.ws) && void 0 !== YY ? YY : null
-        }), YY, "pfichwnumq")
-      } catch (AY) {
-        console.error(`${OI} probes`, AY)
+        oT = Bk("375za7fwxsy", (() => {
+          var TT, oT;
+          return null !== (TT = null === (oT = IW) || void 0 === oT ? void 0 : oT.ws) && void 0 !== TT ? TT : null
+        }), TT, "pfichwnumq")
+      } catch (zT) {
+        console.error(`${xk} probes`, zT)
       }
-      const FY = function() {
-        const YY = (0, WF.o)(),
-          rY = (0, WF.j)();
-        let DY = !1;
-        return FY => {
-          YY && !DY && (DY = !0, (0, SD.reportStaleBuildReload)(YY, rY, FY))
+      const iT = function() {
+        const TT = (0, gi.j)(),
+          oT = (0, gi.g)();
+        let IT = !1;
+        return iT => {
+          TT && !IT && (IT = !0, (0, eI.reportStaleBuildReload)(TT, oT, iT))
         }
       }();
-      wg(), BO || function() {
-        const YY = function(YY) {
-          var rY;
-          const DY = new URLSearchParams(YY),
-            FY = DY.get("game");
-          return FY ? {
-            game: FY,
-            lobby: null !== (rY = DY.get("lobby")) && void 0 !== rY ? rY : null
+      pB(), UX || function() {
+        const TT = function(TT) {
+          var oT;
+          const IT = new URLSearchParams(TT),
+            iT = IT.get("game");
+          return iT ? {
+            game: iT,
+            lobby: null !== (oT = IT.get("lobby")) && void 0 !== oT ? oT : null
           } : null
         }(window.location.search);
-        if (YY) return (0, rr.l)(YY.game) && wg().request(), void bO(YY.game, YY.lobby);
-        const rY = new URLSearchParams(window.location.search).get("ws");
-        if (!rY) return;
-        kI.then((YY => {
-          YY && async function(YY, rY) {
+        if (TT) return (0, oo.m)(TT.game) && pB().request(), void bX(TT.game, TT.lobby);
+        const oT = new URLSearchParams(window.location.search).get("ws");
+        if (!oT) return;
+        dk.then((TT => {
+          TT && async function(TT, oT) {
             try {
-              await (0, SY.k)(YY), dR = og(new WebSocket(rY)), null !== dR && kF.d.setGame(null), MO()
-            } catch (AY) {
-              console.error(`${OI} ?ws=${rY} did not attach`, AY)
+              await (0, wT.k)(TT), sW = mB(new WebSocket(oT)), null !== sW && Ni.e.setGame(null), GX()
+            } catch (zT) {
+              console.error(`${xk} ?ws=${oT} did not attach`, zT)
             }
-          }(YY, rY)
+          }(TT, oT)
         }))
-      }(), async function(YY) {
-        var rY, FY, IY, RY, OY;
-        if ("undefined" === typeof WebAssembly) return zg("noWebAssembly", "This browser has no WebAssembly"), null;
-        const aY = await (0, rA.L)();
-        if ((0, SD.setCrashBackend)((0, Lr.l)(aY) ? "unsupported" : null !== (rY = null === aY || void 0 === aY ? void 0 : aY.backend) && void 0 !== rY ? rY : "none"), (0, Lr.l)(aY)) return zg("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${aY.missing.join(", ")}`, {
-          missing: aY.missing.join(",")
+      }(), async function(TT) {
+        var oT, iT, kT, WT, XT;
+        if ("undefined" === typeof WebAssembly) return OB("noWebAssembly", "This browser has no WebAssembly"), null;
+        const FT = await (0, kz.F)();
+        if ((0, eI.setCrashBackend)((0, TI.r)(FT) ? "unsupported" : null !== (oT = null === FT || void 0 === FT ? void 0 : FT.backend) && void 0 !== oT ? oT : "none"), (0, TI.r)(FT)) return OB("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${FT.missing.join(", ")}`, {
+          missing: FT.missing.join(",")
         }), null;
-        if ((0, NA.q)("render")) try {
+        if ((0, Cz.r)("render")) try {
           const {
-            startRenderDebug: YY
-          } = await Promise.all([DY.e(74), DY.e(47)]).then((() => DY(4260)));
-          YY(aY)
-        } catch (cr) {
-          console.warn("The render debug topic didn't load", cr)
+            startRenderDebug: TT
+          } = await Promise.all([IT.e(74), IT.e(47)]).then((() => IT(4183)));
+          TT(FT)
+        } catch (Eo) {
+          console.warn("The render debug topic didn't load", Eo)
         }
-        if ((0, NA.q)("renderlite")) try {
+        if ((0, Cz.r)("renderlite")) try {
           const {
-            startRenderLite: YY
-          } = await Promise.all([DY.e(258), DY.e(48)]).then((() => DY(42369)));
-          yO = YY(aY)
-        } catch (cr) {
-          console.warn("The renderlite debug topic didn't load", cr)
+            startRenderLite: TT
+          } = await Promise.all([IT.e(258), IT.e(48)]).then((() => IT(42123)));
+          hX = TT(FT)
+        } catch (Eo) {
+          console.warn("The renderlite debug topic didn't load", Eo)
         }
-        let vY = null;
-        if (null !== aY && Zg()) {
-          const YY = (0, yF.e)(aY, !0);
-          "webgl" === aY.backend && null !== YY && (0, sr.l)(YY, SD.reportGpuWasmPopulation), null !== YY && (0, ur.p)(YY), vY = (0, yF.b)(aY, YY)
+        let ST = null;
+        if (null !== FT && HB()) {
+          const TT = (0, Mi.f)(FT, !0);
+          "webgl" === FT.backend && null !== TT && (0, Lo.n)(TT, eI.reportGpuWasmPopulation), null !== TT && (0, Do.q)(TT), ST = (0, Mi.d)(FT, TT)
         }
-        if (null !== aY && null !== vY) return (0, SD.reportGpuFallback)(vY, aY.backend), Cg(`the wasm client's renderer plays this GPU (${vY}) on ${aY.backend} worse than the JS client`, "gpu"), null;
-        const uY = null !== (FY = null === aY || void 0 === aY ? void 0 : aY.backend) && void 0 !== FY ? FY : null;
-        FO.adapter = null !== (IY = null === aY || void 0 === aY ? void 0 : aY.adapter) && void 0 !== IY ? IY : null, FO.boundAtMs = null, FO.indirectHangs = null;
-        const sY = !(0, Lr.S)();
-        null !== aY && "none" !== aY.reason && console.info(`${OI} drawing with ${aY.backend}: ${aY.reason}`);
-        const iY = (0, rA.C)();
-        GI(!0), (0, SY.z)((YY => {
+        if (null !== FT && null !== ST) return (0, eI.reportGpuFallback)(ST, FT.backend), nB(`the wasm client's renderer plays this GPU (${ST}) on ${FT.backend} worse than the JS client`, "gpu"), null;
+        const DT = null !== (iT = null === FT || void 0 === FT ? void 0 : FT.backend) && void 0 !== iT ? iT : null;
+        FX.adapter = null !== (kT = null === FT || void 0 === FT ? void 0 : FT.adapter) && void 0 !== kT ? kT : null, FX.boundAtMs = null, FX.indirectHangs = null;
+        const LT = !(0, TI.U)();
+        null !== FT && "none" !== FT.reason && console.info(`${xk} drawing with ${FT.backend}: ${FT.reason}`);
+        const xT = (0, kz.x)();
+        Vk(!0), (0, wT.s)((TT => {
           try {
-            null !== uY && (gO = YY.startSkyFeed, jg(), function(YY) {
-              var rY, DY;
-              IO = YY.rasterText, MR = YY.setTextLocalPlayer, YY.setTextLocalPlayer(null !== (rY = null === (DY = JR) || void 0 === DY ? void 0 : DY.info.playerDbId) && void 0 !== rY ? rY : null), RO = YY.drainTextRerasters, OO = YY.loadTextIcons, YY.warmText((() => WO)), YY.textChanged(), WO && setTimeout(OO, 0)
-            }(YY), aO = YY.startShellAnalytics, Gg())
+            null !== DT && (cX = TT.startSkyFeed, ZB(), function(TT) {
+              var oT, IT;
+              DX = TT.rasterText, GW = TT.setTextLocalPlayer, TT.setTextLocalPlayer(null !== (oT = null === (IT = tW) || void 0 === IT ? void 0 : IT.info.playerDbId) && void 0 !== oT ? oT : null), LX = TT.drainTextRerasters, xX = TT.loadTextIcons, TT.warmText((() => eX)), TT.textChanged(), eX && setTimeout(xX, 0)
+            }(TT), KX = TT.startShellAnalytics, VB())
           } finally {
-            ZO || (QO = YY.followMenuPrefs({
-              setSoundPrefs: ig,
-              setEnvPrefs: yg,
-              setUiPrefs: sg,
-              setLookPrefs: Qg
+            HX || (wX = TT.followMenuPrefs({
+              setSoundPrefs: gB,
+              setEnvPrefs: hB,
+              setUiPrefs: AB,
+              setLookPrefs: wB
             }))
           }
-        })), (0, SY.n)(bI).catch((YY => {
-          console.warn(`${OI} the game code did not load: a join asks again`, YY)
+        })), (0, wT.l)(bk).catch((TT => {
+          console.warn(`${xk} the game code did not load: a join asks again`, TT)
         }));
-        const yY = (0, rA.i)(aY);
-        let QY, oY;
-        yY.catch((() => {})), "loading" === (0, Ar.B)() && QA();
+        const cT = (0, kz.i)(FT);
+        let KT, MT;
+        cT.catch((() => {})), "loading" === (0, zo.w)() && gz();
         try {
-          QY = function(YY) {
-            const rY = null !== YY && void 0 !== YY ? YY : document.createElement("canvas");
-            rY.id = "wasm-game-canvas", (0, OA.l)();
-            const DY = (0, Br.e)(),
-              FY = (0, Br.f)(DY);
-            return rY.style.cssText = "position:fixed;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, RA.g)(rY, FY), (0, Br.c)(rY, DY), rY.width = FY.bufferWidth, rY.height = FY.bufferHeight, Ag(rY, cO), KO = rY, document.body.append(rY), rY
-          }(null === uY ? null : await (await CO()).pagePreviews().beginSession())
-        } catch (AY) {
-          return await la({
-            site: sI,
-            error: AY
+          KT = function(TT) {
+            const oT = null !== TT && void 0 !== TT ? TT : document.createElement("canvas");
+            oT.id = "wasm-game-canvas", (0, Dz.l)();
+            const IT = (0, vo.g)(),
+              iT = (0, vo.h)(IT);
+            return oT.style.cssText = "position:fixed;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, Sz.i)(oT, iT), (0, vo.d)(oT, IT), oT.width = iT.bufferWidth, oT.height = iT.bufferHeight, SB(oT, aX), YX = oT, document.body.append(oT), oT
+          }(null === DT ? null : await (await nX()).pagePreviews().beginSession())
+        } catch (zT) {
+          return await fF({
+            site: Ak,
+            error: zT
           }, (() => {
-            (0, SD.showUnsupported)((0, vF.n)("fetch"), fA.c.fetch, `the previews did not load: ${String(AY)}`)
+            (0, eI.showUnsupported)((0, Li.k)("fetch"), Hz.h.fetch, `the previews did not load: ${String(zT)}`)
           })), null
         }
-        QA();
+        gz();
         try {
-          oY = await yY
-        } catch (AY) {
-          return await la({
-            site: sI,
-            error: AY
+          MT = await cT
+        } catch (zT) {
+          return await fF({
+            site: Ak,
+            error: zT
           }, (() => {
-            (0, SD.showUnsupported)((0, vF.n)("fetch"), fA.c.fetch, `the ${null!==uY&&void 0!==uY?uY:"client"} build did not load: ${String(AY)}`)
+            (0, eI.showUnsupported)((0, Li.k)("fetch"), Hz.h.fetch, `the ${null!==DT&&void 0!==DT?DT:"client"} build did not load: ${String(zT)}`)
           })), null
         }
-        const WY = (0, rA.g)(),
-          EY = !WY && !0 !== VD.q.getItem(gI),
-          mY = !WY && "loading" === (0, Ar.B)();
-        await (0, Ir.h)(oY, ar.f, {
-          reloadFailedDownload: EY
-        }), mY && !(0, Ar.Q)() && await (0, Ir.h)(oY, ar.f, {
-          reloadFailedDownload: EY
+        const rT = (0, kz.e)(),
+          AT = !rT && !0 !== mI.h.getItem(ck),
+          gT = !rT && "loading" === (0, zo.w)();
+        await (0, ko.h)(MT, Fo.c, {
+          reloadFailedDownload: AT
+        }), gT && !(0, zo.L)() && await (0, ko.h)(MT, Fo.c, {
+          reloadFailedDownload: AT
         });
-        sA = performance.now();
-        const lY = XI;
-        if (!(0, Ar.Q)()) {
-          (0, Ar.P)() && VD.q.setItem(gI, !0);
-          const YY = (0, Ar.r)();
-          if ("call" === YY) sa({
-            site: tr.t,
-            error: (0, Ar.n)(),
+        Mz = performance.now();
+        const mT = yk;
+        if (!(0, zo.L)()) {
+          (0, zo.K)() && mI.h.setItem(ck, !0);
+          const TT = (0, zo.n)();
+          if ("call" === TT) AF({
+            site: oI.u,
+            error: (0, zo.j)(),
             header: null
-          }, lY);
+          }, mT);
           else {
-            const rY = null !== YY && void 0 !== YY ? YY : "instantiate",
-              DY = () => {
-                (0, SD.showUnsupported)((0, vF.n)(rY), fA.c[rY], (0, Ar.i)())
+            const oT = null !== TT && void 0 !== TT ? TT : "instantiate",
+              IT = () => {
+                (0, eI.showUnsupported)((0, Li.k)(oT), Hz.h[oT], (0, zo.g)())
               };
-            if ("compile" !== YY && "instantiate" !== YY || !Zg())
-              if ("fetch" === rY) {
-                const YY = [oY.url().href, ar.f.url().href];
-                await la({
-                  site: sI,
-                  error: (0, Ar.i)(),
-                  urls: YY
-                }, DY)
-              } else DY();
+            if ("compile" !== TT && "instantiate" !== TT || !HB())
+              if ("fetch" === oT) {
+                const TT = [MT.url().href, Fo.c.url().href];
+                await fF({
+                  site: Ak,
+                  error: (0, zo.g)(),
+                  urls: TT
+                }, IT)
+              } else IT();
             else {
-              const rY = (0, Ar.i)(),
-                DY = (0, wr.g)((0, Ar.n)());
-              (0, SD.reportCountedLoadFallback)((0, vF.n)(YY), fA.c[YY], rY, DY), Cg(`the wasm client did not ${YY} here (${rY})`, DY ? "oom" : null)
+              const oT = (0, zo.g)(),
+                IT = (0, qo.i)((0, zo.j)());
+              (0, eI.reportCountedLoadFallback)((0, Li.k)(TT), Hz.h[TT], oT, IT), nB(`the wasm client did not ${TT} here (${oT})`, IT ? "oom" : null)
             }
           }
           return null
-        }(0, Rr.L)(oY.url()) && (0, SD.reportUnstreamedCoreLoad)();
-        const TY = (0, Ar.D)();
-        let eY, NY = lY;
+        }(0, Wo.U)(MT.url()) && (0, eI.reportUnstreamedCoreLoad)();
+        const eT = (0, zo.z)();
+        let RT, uT = mT;
         try {
-          NY = {
-            ...lY,
-            wasm: TY.Iu()
+          uT = {
+            ...mT,
+            wasm: eT.uD()
           };
           const {
-            Ko: YY
-          } = oY.bindings, rY = YY.aDY();
-          if (rY !== Jr.x) return sa({
-            site: tr.c,
-            error: `core ABI ${rY}, page ABI ${Jr.x}`,
+            vM: TT
+          } = MT.bindings, oT = TT.YIT();
+          if (oT !== Ho.B) return AF({
+            site: oI.b,
+            error: `core ABI ${oT}, page ABI ${Ho.B}`,
             header: null
-          }, NY), null;
-          const [DY, FY] = (0, Jr.ae)();
-          eY = new YY(DY, FY)
-        } catch (AY) {
-          return sa({
-            site: tr.c,
-            error: AY,
+          }, uT), null;
+          const [IT, iT] = (0, Ho.qe)();
+          RT = new TT(IT, iT)
+        } catch (zT) {
+          return AF({
+            site: oI.b,
+            error: zT,
             header: null
-          }, NY), null
+          }, uT), null
         }
-        XI = NY, qI = oY.bindings;
-        const BY = new tr.g(eY, Ar.x, {
-          onCrash: YY => {
-            var rY;
-            null === (rY = yO) || void 0 === rY || rY.crashed(YY), sY && function(YY, rY, DY) {
-              if ("webgpu" !== rY || (0, rA.d)()) return !1;
-              const FY = function(YY) {
-                if (YY.site === tr.f && (0, Lr.n)(YY.error)) return "frames_refused";
-                return YY.site === aI && (0, Lr.o)(YY.error) ? "start_failed" : null
-              }(YY);
-              if (null === FY || !(0, Lr.P)(FY)) return !1;
-              return (0, SD.reportRenderReload)("webgpu", "start_failed" === FY ? 0 : 1, DY, {
-                cause: FY,
-                error: YY.error,
-                context: FO,
-                session: Qa(null)
-              }), Lg(), !0
-            }(YY, uY, NY) || sa(YY, NY)
+        yk = uT, Nk = MT.bindings;
+        const vT = new oI.i(RT, zo.t, {
+          onCrash: TT => {
+            var oT;
+            null === (oT = hX) || void 0 === oT || oT.crashed(TT), LT && function(TT, oT, IT) {
+              if ("webgpu" !== oT || (0, kz.d)()) return !1;
+              const iT = function(TT) {
+                if (TT.site === oI.e && (0, TI.s)(TT.error)) return "frames_refused";
+                return TT.site === Kk && (0, TI.u)(TT.error) ? "start_failed" : null
+              }(TT);
+              if (null === iT || !(0, TI.O)(iT)) return !1;
+              return (0, eI.reportRenderReload)("webgpu", "start_failed" === iT ? 0 : 1, IT, {
+                cause: iT,
+                error: TT.error,
+                context: FX,
+                session: wF(null)
+              }), zF(), !0
+            }(TT, DT, uT) || AF(TT, uT)
           },
-          onNetEvent: Ug,
-          onReconnectGrace: cg,
-          onCoreErrors: (YY, rY) => {
-            var DY, FY;
-            YY.some((YY => {
+          onNetEvent: iF,
+          onReconnectGrace: aB,
+          onCoreErrors: (TT, oT) => {
+            var IT, iT;
+            TT.some((TT => {
               let {
-                code: rY
-              } = YY;
-              return rY === Jr.G.RenderDeviceLost
-            })) && ((0, rA.x)(), NO.deviceLost()), null === (DY = yO) || void 0 === DY || DY.coreErrors(YY), (0, SD.reportCoreErrors)(YY, rY, NY, ((YY, rY) => {
-              var DY;
-              return null === (DY = AO) || void 0 === DY ? void 0 : DY.vDY(YY, rY)
-            })), null === (FY = QR) || void 0 === FY || FY.coreErrors(YY)
+                code: oT
+              } = TT;
+              return oT === Ho.I.RenderDeviceLost
+            })) && ((0, kz.s)(), JX.deviceLost()), null === (IT = hX) || void 0 === IT || IT.coreErrors(TT), (0, eI.reportCoreErrors)(TT, oT, uT, ((TT, oT) => {
+              var IT;
+              return null === (IT = SX) || void 0 === IT ? void 0 : IT.QIT(TT, oT)
+            })), null === (iT = wW) || void 0 === iT || iT.coreErrors(TT)
           },
-          onRenderReload: (YY, rY, DY) => {
-            ! function(YY, rY, DY, FY, AY, IY) {
-              var RY;
-              if ((0, rA.d)()) return;
-              const OY = rY === Jr.Tc.WEBGPU,
-                gY = FY === Jr.Tc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                aY = (0, Lr.R)(AO);
-              null === (RY = yO) || void 0 === RY || RY.reload(OY, DY, gY, null === aY || void 0 === aY ? void 0 : aY.message);
-              const vY = OY ? (0, Lr.O)(gY, AY) : null;
-              if (null !== vY) {
-                const rY = void 0 === aY ? "" : ` (${aY.message})`;
-                return void YY.crash(SD.RENDER_RELOAD_SITE, new Error(`${(0,SD.renderReloadMessage)("webgpu",gY,DY)} and ${vY}${rY}`))
+          onRenderReload: (TT, oT, IT) => {
+            ! function(TT, oT, IT, iT, zT, kT) {
+              var WT;
+              if ((0, kz.d)()) return;
+              const XT = oT === Ho.$c.WEBGPU,
+                BT = iT === Ho.$c.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                FT = (0, TI.R)(SX);
+              null === (WT = hX) || void 0 === WT || WT.reload(XT, IT, BT, null === FT || void 0 === FT ? void 0 : FT.message);
+              const ST = XT ? (0, TI.M)(BT, zT) : null;
+              if (null !== ST) {
+                const oT = void 0 === FT ? "" : ` (${FT.message})`;
+                return void TT.crash(eI.RENDER_RELOAD_SITE, new Error(`${(0,eI.renderReloadMessage)("webgpu",BT,IT)} and ${ST}${oT}`))
               }
-              const uY = OY ? "webgpu" : "webgl1" === IY ? "webgl1" : "webgl";
-              "lost" === gY && (0, rA.x)();
-              (0, SD.reportRenderReload)(uY, DY, XI, {
-                cause: gY,
-                error: aY,
-                context: FO,
-                session: Qa(YY.sunShadowsHeld())
-              }), Lg()
-            }(BY, YY, rY, DY, sY, uY)
+              const DT = XT ? "webgpu" : "webgl1" === kT ? "webgl1" : "webgl";
+              "lost" === BT && (0, kz.s)();
+              (0, eI.reportRenderReload)(DT, IT, yk, {
+                cause: BT,
+                error: FT,
+                context: FX,
+                session: wF(TT.sunShadowsHeld())
+              }), zF()
+            }(vT, TT, oT, IT, LT, DT)
           },
-          onEnvEvent: YY => {
-            var rY;
-            YY.kind === Jr.R.SkyImages && (null === (rY = uR) || void 0 === rY || rY.onEvent(YY.payload))
+          onEnvEvent: TT => {
+            var oT;
+            TT.kind === Ho.R.SkyImages && (null === (oT = rW) || void 0 === oT || oT.onEvent(TT.payload))
           },
-          onImages: YY => {
-            var rY;
-            null === (rY = sR) || void 0 === rY || rY.onEvent(YY)
+          onImages: TT => {
+            var oT;
+            null === (oT = AW) || void 0 === oT || oT.onEvent(TT)
           },
-          onModelRequest: YY => {
-            var rY;
-            null === (rY = gR) || void 0 === rY || rY.request(YY)
+          onModelRequest: TT => {
+            var oT;
+            null === (oT = cW) || void 0 === oT || oT.request(TT)
           },
-          onModelTaken: (YY, rY) => {
-            var DY;
-            null === (DY = gR) || void 0 === DY || DY.taken(YY, rY)
+          onModelTaken: (TT, oT) => {
+            var IT;
+            null === (IT = cW) || void 0 === IT || IT.taken(TT, oT)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(YY, rY) {
-                const DY = wI;
-                if (null === DY || YY.isStopped) return;
-                DY.restore((YY => {
-                  (0, SD.reportTerrainTextureFailure)(YY, rY)
-                })).then((rY => {
-                  !1 !== rY || YY.isStopped ? !0 === rY && console.info(`${OI} terrain textures handed over again after the renderer lost them`) : console.warn(`${OI} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(TT, oT) {
+                const IT = pk;
+                if (null === IT || TT.isStopped) return;
+                IT.restore((TT => {
+                  (0, eI.reportTerrainTextureFailure)(TT, oT)
+                })).then((oT => {
+                  !1 !== oT || TT.isStopped ? !0 === oT && console.info(`${xk} terrain textures handed over again after the renderer lost them`) : console.warn(`${xk} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(BY, NY)
+              }(vT, uT)
             }))
           },
-          onKeepAlive: YY => {
-            const rY = null === fR ? void 0 : jR.get(fR);
-            void 0 !== rY && lF(rY, YY)
+          onKeepAlive: TT => {
+            const oT = null === qW ? void 0 : ZW.get(qW);
+            void 0 !== oT && ui(oT, TT)
           }
         });
-        if (dI = BY, null !== YY) {
-          BY.setAntiCheatProbes(LA(Ar.x, YY.checks)), YY.watchHeld(YI.CoreFrame, (() => BY.frame)), YY.watchHeld(YI.GlueFrame, (() => eY.frame));
-          const rY = DI(YY, ((YY, rY, DY) => {
-            let FY = !1;
-            return Ea(BY, (() => {
-              FY = BY.rings.input.writeRecord(Jr.ub.AntiCheat, YY, rY, DY, 0)
-            })), FY
+        if (sk = vT, null !== TT) {
+          vT.setAntiCheatProbes(ik(zo.t, TT.checks)), TT.watchHeld(kk.CoreFrame, (() => vT.frame)), TT.watchHeld(kk.GlueFrame, (() => RT.frame));
+          const oT = Xk(TT, ((TT, oT, IT) => {
+            let iT = !1;
+            return RF(vT, (() => {
+              iT = vT.rings.input.writeRecord(Ho.vb.AntiCheat, TT, oT, IT, 0)
+            })), iT
           }));
-          BY.isStopped ? rY.stop() : RR = rY
+          vT.isStopped ? oT.stop() : LW = oT
         }
-        KI = (YY, rY, DY) => BY.rings.cmd.writeCmd(YY, rY, DY), HI = YY => BY.rings.cmd.growForCmd(YY), BR = !1, jg(), (0, SY.A)(BY, {
-          core: eY,
-          memory: Ar.x,
-          staleOr: (YY, rY, DY) => la({
-            site: YY,
-            error: rY
-          }, DY),
-          reportReplayFault: (YY, rY) => {
-            (0, SD.reportReplayFault)(YY, rY, XI)
+        Yk = (TT, oT, IT) => vT.rings.cmd.writeCmd(TT, oT, IT), Qk = TT => vT.rings.cmd.growForCmd(TT), UW = !1, ZB(), (0, wT.w)(vT, {
+          core: RT,
+          memory: zo.t,
+          staleOr: (TT, oT, IT) => fF({
+            site: TT,
+            error: oT
+          }, IT),
+          reportReplayFault: (TT, oT) => {
+            (0, eI.reportReplayFault)(TT, oT, yk)
           },
-          audio: bI,
-          options: ir.b,
-          onNetEvent: Ug,
-          sessionInfo: YY => {
-            var rY;
-            return (null === (rY = JR) || void 0 === rY ? void 0 : rY.conn) === YY ? JR.info : null
+          audio: bk,
+          options: xo.e,
+          onNetEvent: iF,
+          sessionInfo: TT => {
+            var oT;
+            return (null === (oT = tW) || void 0 === oT ? void 0 : oT.conn) === TT ? tW.info : null
           },
-          onEventOverflow: rg,
-          replayShaderPack: YY => {
-            var rY;
-            null === (rY = QR) || void 0 === rY || rY.replay(YY)
+          onEventOverflow: XB,
+          replayShaderPack: TT => {
+            var oT;
+            null === (oT = wW) || void 0 === oT || oT.replay(TT)
           },
-          hasPackModel: YY => {
-            var rY, DY;
-            return null !== (null !== (rY = null === (DY = hg()) || void 0 === DY ? void 0 : DY.modelUrl(YY)) && void 0 !== rY ? rY : null)
+          hasPackModel: TT => {
+            var oT, IT;
+            return null !== (null !== (oT = null === (IT = lB()) || void 0 === IT ? void 0 : IT.modelUrl(TT)) && void 0 !== oT ? oT : null)
           },
-          beforeWrite: () => (!lR && BY.rings.net.cursor > 0 && ra(BY, !1, "all"), !BY.isStopped),
-          beforeOp: () => (!lR && BY.netWrittenSinceFrame > 0 && ra(BY, !1, "budget"), !BY.isStopped)
-        }), (0, VY.C)({
+          beforeWrite: () => (!fW && vT.rings.net.cursor > 0 && XF(vT, !1, "all"), !vT.isStopped),
+          beforeOp: () => (!fW && vT.netWrittenSinceFrame > 0 && XF(vT, !1, "budget"), !vT.isStopped)
+        }), (0, hT.M)({
           lockPointer: () => {
-            if (!jD(QY)) return !1;
+            if (!OI(KT)) return !1;
             try {
-              Promise.resolve(QY.requestPointerLock()).catch((() => {}))
+              Promise.resolve(KT.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, TD.c)()
+            (0, uI.b)()
           },
           leaveGame: () => {
-            Yg()
+            WB()
           },
-          canvas: () => QY
-        }), OR = (0, VY.w)((() => {
-          var YY;
-          const rY = (0, SY.g)();
-          null === (YY = (0, SY.v)()) || void 0 === YY || YY.followCursorAim(!0 === (null === rY || void 0 === rY ? void 0 : rY.isSessionLive) ? rY : null)
-        })), zR && BY.setUiPrefs(zR);
-        ZR && BY.setEnvPrefs(ZR);
-        CR && BY.setLookPrefs(CR);
-        const cY = AA ? IA(AA.preventMovement) : null;
-        cY && vg(cY);
-        const KY = (0, iD.h)(),
-          HY = (0, iD.d)(BY, KY);
-        AR = KY.basis, (0, mD.i)(null === HY ? null : (0, sD.n)(HY)), FR = HY;
-        const zY = (0, Or.d)();
-        let ZY = 1 / 0,
-          CY = !0,
-          fY = KY.shedFootprintBytes;
-        const jY = new jF.e(zY, (() => eY.ho()), (YY => {
-          BY.crash(tr.l, YY)
+          canvas: () => KT
+        }), xW = (0, hT.y)((() => {
+          var TT;
+          const oT = (0, wT.i)();
+          null === (TT = (0, wT.p)()) || void 0 === TT || TT.followCursorAim(!0 === (null === oT || void 0 === oT ? void 0 : oT.isSessionLive) ? oT : null)
+        })), OW && vT.setUiPrefs(OW);
+        HW && vT.setEnvPrefs(HW);
+        nW && vT.setLookPrefs(nW);
+        const ET = Bz ? Fz(Bz.preventMovement) : null;
+        ET && MB(ET);
+        const fT = (0, KI.j)(),
+          CT = (0, KI.e)(vT, fT);
+        SW = fT.basis, (0, wI.d)(null === CT ? null : (0, cI.i)(CT)), FW = CT;
+        const jT = (0, Xo.e)();
+        let JT = 1 / 0,
+          UT = !0,
+          aT = fT.shedFootprintBytes;
+        const YT = new Hi.b(jT, (() => RT.aM()), (TT => {
+          vT.crash(oI.l, TT)
         }));
-        rR = jY, DR = jY, null !== HY && jY.setCeiling(Math.min((0, jF.o)(HY), ZY));
-        if (CY) {
-          jY.setShed((YY => {
-            const rY = BY.shedMemory("joinReserve" !== YY);
-            return null !== rY && (null === FR || rY < FR) && (FR = rY, (0, mD.i)((0, sD.n)(rY))), rY
-          }), ((YY, rY, DY) => {
-            1 === rY ? (0, SD.reportMemoryShed)(YY, DY, XI) : console.warn(`${OI} wasm memory: shed again (${YY}): shed ${rY}`, DY.wasmMemoryShed)
-          }), (() => BY.addDistanceInUse()));
-          const YY = (0, Lr.D)(TY);
-          jY.setFootprint(new eA(fY, {
-            storedChunks: () => eY.uDY(),
+        XW = YT, BW = YT, null !== CT && YT.setCeiling(Math.min((0, Hi.n)(CT), JT));
+        if (UT) {
+          YT.setShed((TT => {
+            const oT = vT.shedMemory("joinReserve" !== TT);
+            return null !== oT && (null === FW || oT < FW) && (FW = oT, (0, wI.d)((0, cI.i)(oT))), oT
+          }), ((TT, oT, IT) => {
+            1 === oT ? (0, eI.reportMemoryShed)(TT, IT, yk) : console.warn(`${xk} wasm memory: shed again (${TT}): shed ${oT}`, IT.wasmMemoryShed)
+          }), (() => vT.addDistanceInUse()));
+          const TT = (0, TI.I)(eT);
+          YT.setFootprint(new fz(aT, {
+            storedChunks: () => RT.HIT(),
             gpuBytes: () => {
-              var rY;
-              return null !== (rY = null === YY || void 0 === YY ? void 0 : YY.sDY()) && void 0 !== rY ? rY : 0
+              var oT;
+              return null !== (oT = null === TT || void 0 === TT ? void 0 : TT.nIT()) && void 0 !== oT ? oT : 0
             },
-            jsHeapBytes: TA
+            jsHeapBytes: Ez
           }))
         }
         window.addEventListener("pagehide", (() => {
-          rR === jY && (jY.refreshStats(), Wa(jY))
-        })), window.addEventListener("pagehide", tg), window.addEventListener("pagehide", Ya), !1;
-        const [hY, dY] = (0, QD.g)();
-        oO = (0, WD.f)((YY => BY.setChunkAddDistance(YY.horizontal, YY.vertical)), {
-          horizontal: hY,
-          vertical: dY
-        }), BY.setAmbientOcclusion(!0 !== VD.m.getItem("disableAmbientOcclusion")), BY.setPoseLod(!0 !== VD.m.getItem(Fr.Q)), (0, NA.q)("look") && (BY.setDebugLog(Jr.I.Look, !0), (0, cA.e)("wasm", (() => BY.takeDebugLog(Jr.I.Look))));
-        (0, NA.q)("remesh") && (BY.setDebugLog(Jr.I.Remesh, !0), JY = () => BY.takeDebugLog(Jr.I.Remesh), CA = new ZA((0, KA.o)(), JY));
-        var JY;
-        const MY = function(YY, rY, DY, FY) {
-          const AY = new tD,
-            IY = YY => VD.m.getItem(YY);
-          AY.sync(IY, rY), (0, er.X)();
-          const RY = (0, gY.j)("customBindingsChanged", (() => {
-            AY.sync(IY, rY)
+          XW === YT && (YT.refreshStats(), eF(YT))
+        })), window.addEventListener("pagehide", kF), window.addEventListener("pagehide", WF), !1;
+        const [QT, OT] = (0, rI.e)();
+        mX = (0, gI.d)((TT => vT.setChunkAddDistance(TT.horizontal, TT.vertical)), {
+          horizontal: QT,
+          vertical: OT
+        }), vT.setAmbientOcclusion(!0 !== mI.e.getItem("disableAmbientOcclusion")), vT.setPoseLod(!0 !== mI.e.getItem(io.O)), (0, Cz.r)("look") && (vT.setDebugLog(Ho.K.Look, !0), (0, Jz.e)("wasm", (() => vT.takeDebugLog(Ho.K.Look))));
+        (0, Cz.r)("remesh") && (vT.setDebugLog(Ho.K.Remesh, !0), HT = () => vT.takeDebugLog(Ho.K.Remesh), Oz = new Qz((0, Uz.m)(), HT));
+        var HT;
+        const nT = function(TT, oT, IT, iT) {
+          const zT = new oi,
+            kT = TT => mI.e.getItem(TT);
+          zT.sync(kT, oT), (0, Ro.Q)();
+          const WT = (0, BT.k)("customBindingsChanged", (() => {
+            zT.sync(kT, oT)
           }));
-          (0, eD.t)(rY);
-          const OY = new Set,
-            aY = (0, VY.w)((() => {
-              var YY;
-              OY.size > 0 && FF() && !0 === (null === (YY = (0, SY.g)()) || void 0 === YY ? void 0 : YY.localPlayerAlive()) && gY.g.vo("usedKeyboard")
+          (0, vI.o)(oT);
+          const XT = new Set,
+            FT = (0, hT.y)((() => {
+              var TT;
+              XT.size > 0 && ki() && !0 === (null === (TT = (0, wT.i)()) || void 0 === TT ? void 0 : TT.localPlayerAlive()) && BT.h.XM("usedKeyboard")
             })),
-            vY = qD.c.heldSizer((() => (0, Br.m)(YY))),
-            uY = XD(YY, rY, {
-              prevents: YY => AY.prevents(YY),
-              keyPressed: YY => {
-                AY.moves(YY) && (OY.add(YY), FF() && gY.g.vo("usedKeyboard"))
+            ST = GI.e.heldSizer((() => (0, vo.m)(TT))),
+            DT = tI(TT, oT, {
+              prevents: TT => zT.prevents(TT),
+              keyPressed: TT => {
+                zT.moves(TT) && (XT.add(TT), ki() && BT.h.XM("usedKeyboard"))
               },
-              keyReleased: YY => {
-                OY.delete(YY)
+              keyReleased: TT => {
+                XT.delete(TT)
               },
               keysReleased: () => {
-                OY.clear()
+                XT.clear()
               },
               resized: () => {
-                rF.j.measure(YY.getBoundingClientRect()), (0, pD.l)()
+                ii.h.measure(TT.getBoundingClientRect()), (0, pI.n)()
               },
-              sizeCanvas: vY,
-              watchRenderScale: rY => {
-                const DY = (0, Br.n)(YY, rY),
-                  FY = qD.c.onRelease(rY);
+              sizeCanvas: ST,
+              watchRenderScale: oT => {
+                const IT = (0, vo.o)(TT, oT),
+                  iT = GI.e.onRelease(oT);
                 return () => {
-                  DY(), FY()
+                  IT(), iT()
                 }
               },
               touchStarting: () => {
-                rF.j.measure(YY.getBoundingClientRect())
+                ii.h.measure(TT.getBoundingClientRect())
               },
-              viewShown: DY,
-              touchUiShown: () => qY.b.get("isTouchScreen"),
-              ctrlCombosAreGames: FF,
-              inspect: (YY, rY, DY) => {
-                AY.checks(rY, DY) && FY(YY)
+              viewShown: IT,
+              touchUiShown: () => sT.c.get("isTouchScreen"),
+              ctrlCombosAreGames: ki,
+              inspect: (TT, oT, IT) => {
+                zT.checks(oT, IT) && iT(TT)
               },
-              canLock: () => jD(YY)
+              canLock: () => OI(TT)
             }),
-            sY = (0, AD.d)(rY);
+            LT = (0, WI.c)(oT);
           return () => {
-            RY(), aY(), (0, eD.t)(null), sY(), uY()
+            WT(), FT(), (0, vI.o)(null), LT(), DT()
           }
-        }(QY, ((YY, rY, DY, FY, AY) => {
-          var IY;
-          Ea(BY, (() => {
-            BY.rings.input.writeRecord(YY, rY, DY, FY, AY)
-          })), null === (IY = RR) || void 0 === IY || IY.onInput(YY), !TR && (0, gF.f)(YY, AY) && (0, gF.d)((() => {
-            dI !== BY || ZO || BY.isStopped || !Oa() || ra(BY, !1, "budget", !1)
+        }(KT, ((TT, oT, IT, iT, zT) => {
+          var kT;
+          RF(vT, (() => {
+            vT.rings.input.writeRecord(TT, oT, IT, iT, zT)
+          })), null === (kT = LW) || void 0 === kT || kT.onInput(TT), !CW && (0, Si.f)(TT, zT) && (0, Si.d)((() => {
+            sk !== vT || HX || vT.isStopped || !xF() || XF(vT, !1, "budget", !1)
           }))
-        }), (() => cO), (YY => {
-          var rY;
-          null === (rY = RR) || void 0 === rY || rY.onEvent(YY)
+        }), (() => aX), (TT => {
+          var oT;
+          null === (oT = LW) || void 0 === oT || oT.onEvent(TT)
         }));
-        if (BY.isStopped) return MY(), null;
-        UI = MY;
-        const wY = () => !BY.isStopped && !HO;
-        if (BY.isStopped) return null;
-        (0, Ar.V)((() => {
-          "call" === (0, Ar.r)() && BY.crash(tr.t, (0, Ar.n)())
+        if (vT.isStopped) return nT(), null;
+        iW = nT;
+        const qT = () => !vT.isStopped && !QX;
+        if (vT.isStopped) return null;
+        (0, zo.Q)((() => {
+          "call" === (0, zo.n)() && vT.crash(oI.u, (0, zo.j)())
         }));
-        const pY = (0, tr.O)(BY.rings.worker, (() => {
-          ra(BY, !1, "budget")
+        const tT = (0, oI.K)(vT.rings.worker, (() => {
+          XF(vT, !1, "budget")
         }));
-        LI = function(YY, rY) {
-          return ma().then((YY => {
+        zW = function(TT, oT) {
+          return uF().then((TT => {
             let {
-              prefetchWorldgenWorker: rY
-            } = YY;
-            rY()
-          }), (() => {})), new hA({
-            module: (0, Ar.z)(),
-            decodeSettings: YY => {
-              const rY = (0, SY.v)();
-              if (null === rY) throw new Error("no game code to decode the world-gen seed with");
-              return rY.decodeMapSettings(YY)
+              prefetchWorldgenWorker: oT
+            } = TT;
+            oT()
+          }), (() => {})), new qz({
+            module: (0, zo.v)(),
+            decodeSettings: TT => {
+              const oT = (0, wT.p)();
+              if (null === oT) throw new Error("no game code to decode the world-gen seed with");
+              return oT.decodeMapSettings(TT)
             },
-            loadWorker: Va,
+            loadWorker: vF,
             onMapWithoutWorldgen: () => {
-              Sa((YY => {
+              EF((TT => {
                 let {
-                  stopWorldgenWorkerPrefetch: rY
-                } = YY;
-                rY()
+                  stopWorldgenWorkerPrefetch: oT
+                } = TT;
+                oT()
               }))
             },
-            onLoadFailed: YY => {
-              (0, SD.reportWorldgenLoadFailure)(YY, XI)
+            onLoadFailed: TT => {
+              (0, eI.reportWorldgenLoadFailure)(TT, yk)
             },
-            onWorkerLost: YY => {
-              (0, SD.reportWorkerLost)(tr.C, YY, XI)
+            onWorkerLost: TT => {
+              (0, eI.reportWorkerLost)(oI.A, TT, yk)
             },
-            onStartTimeout: YY => {
-              (0, SD.reportWorkerStartTimeout)(tr.C, YY, XI)
+            onStartTimeout: TT => {
+              (0, eI.reportWorkerStartTimeout)(oI.A, TT, yk)
             },
-            onGaveUp: YY => {
-              (0, SD.reportWorldgenGaveUp)(YY, XI)
+            onGaveUp: TT => {
+              (0, eI.reportWorldgenGaveUp)(TT, yk)
             },
-            onMemoryStats: YY => {
-              var rY;
-              null === (rY = rR) || void 0 === rY || rY.noteWorldgen(YY)
+            onMemoryStats: TT => {
+              var oT;
+              null === (oT = XW) || void 0 === oT || oT.noteWorldgen(TT)
             },
             onMemoryGone: () => {
-              var YY;
-              null === (YY = rR) || void 0 === YY || YY.worldgenGone()
+              var TT;
+              null === (TT = XW) || void 0 === TT || TT.worldgenGone()
             },
-            write: (DY, FY, AY, IY, RY) => {
-              Ea(YY, (() => {
-                YY.rings.worker.writeWorkerRecord(DY, FY, AY, 0, IY, RY) || YY.crash(tr.C, `a world-gen record of kind ${FY} did not fit the worker-in ring`)
-              })), rY()
+            write: (IT, iT, zT, kT, WT) => {
+              RF(TT, (() => {
+                TT.rings.worker.writeWorkerRecord(IT, iT, zT, 0, kT, WT) || TT.crash(oI.A, `a world-gen record of kind ${iT} did not fit the worker-in ring`)
+              })), oT()
             }
           })
-        }(BY, pY), YR = function(YY, rY) {
-          return new CF({
-            module: (0, Ar.z)(),
+        }(vT, tT), WW = function(TT, oT) {
+          return new Qi({
+            module: (0, zo.v)(),
             loadWorkers: async () => {
               const [{
-                createMeshWorker: YY
-              }, rY] = await Promise.all([DY.e(40).then((() => DY(42405))), Promise.resolve().then((() => DY(99))).then((YY => {
+                createMeshWorker: TT
+              }, oT] = await Promise.all([IT.e(40).then((() => IT(42153))), Promise.resolve().then((() => IT(90))).then((TT => {
                 let {
-                  isMobile: rY
-                } = YY;
-                return rY()
+                  isMobile: oT
+                } = TT;
+                return oT()
               }), (() => !1))]);
               return {
-                create: YY,
-                count: (0, mr.d)(navigator.hardwareConcurrency, rY)
+                create: TT,
+                count: (0, go.c)(navigator.hardwareConcurrency, oT)
               }
             },
-            write: (DY, FY, AY, IY, RY, OY) => {
-              (0, pD.j)(), Ea(YY, (() => {
-                YY.rings.worker.writeWorkerRecord(DY, FY, AY, IY, RY, OY) || YY.crash(tr.o, `a meshing record of kind ${FY} did not fit the worker-in ring`)
-              })), rY()
+            write: (IT, iT, zT, kT, WT, XT) => {
+              (0, pI.m)(), RF(TT, (() => {
+                TT.rings.worker.writeWorkerRecord(IT, iT, zT, kT, WT, XT) || TT.crash(oI.m, `a meshing record of kind ${iT} did not fit the worker-in ring`)
+              })), oT()
             },
-            onWorkerLost: YY => {
-              (0, SD.reportWorkerLost)(tr.o, YY, XI)
+            onWorkerLost: TT => {
+              (0, eI.reportWorkerLost)(oI.m, TT, yk)
             },
-            onLightFault: (YY, rY) => {
-              (0, SD.reportLightFault)(YY, rY, XI)
+            onLightFault: (TT, oT) => {
+              (0, eI.reportLightFault)(TT, oT, yk)
             },
-            onStartTimeout: YY => {
-              (0, SD.reportWorkerStartTimeout)(tr.o, YY, XI)
+            onStartTimeout: TT => {
+              (0, eI.reportWorkerStartTimeout)(oI.m, TT, yk)
             },
-            onMemoryStats: (YY, rY) => {
-              var DY;
-              null === (DY = rR) || void 0 === DY || DY.noteMeshWorker(YY, rY)
+            onMemoryStats: (TT, oT) => {
+              var IT;
+              null === (IT = XW) || void 0 === IT || IT.noteMeshWorker(TT, oT)
             },
-            onMemoryGone: YY => {
-              var rY;
-              null === (rY = rR) || void 0 === rY || rY.meshWorkerGone(YY)
+            onMemoryGone: TT => {
+              var oT;
+              null === (oT = XW) || void 0 === oT || oT.meshWorkerGone(TT)
             },
-            fail: (rY, DY) => {
-              const FY = () => {
-                YY.crash(tr.o, void 0 === DY ? rY : new Error(rY, {
-                  cause: DY
+            fail: (oT, IT) => {
+              const iT = () => {
+                TT.crash(oI.m, void 0 === IT ? oT : new Error(oT, {
+                  cause: IT
                 }))
               };
-              void 0 !== DY ? la({
-                site: tr.o,
-                error: DY
-              }, FY) : FY()
+              void 0 !== IT ? fF({
+                site: oI.m,
+                error: IT
+              }, iT) : iT()
             }
           })
-        }(BY, pY);
-        const kY = (0, GF.r)(Wr.clientSideServerUrls.staticUrl, {
-            onTableFailed: YY => {
-              la({
-                site: SD.MODEL_FEED_SITE,
-                error: YY
-              }, (() => {}), wY)
+        }(vT, tT);
+        const GT = (0, Pi.t)(ro.clientSideServerUrls.staticUrl, {
+            onTableFailed: TT => {
+              fF({
+                site: eI.MODEL_FEED_SITE,
+                error: TT
+              }, (() => {}), qT)
             },
-            packUrl: YY => {
-              var rY, DY;
-              return null !== (rY = null === (DY = hg()) || void 0 === DY ? void 0 : DY.modelUrl(YY)) && void 0 !== rY ? rY : null
+            packUrl: TT => {
+              var oT, IT;
+              return null !== (oT = null === (IT = lB()) || void 0 === IT ? void 0 : IT.modelUrl(TT)) && void 0 !== oT ? oT : null
             }
           }),
-          GY = function(YY, rY, DY) {
-            const FY = DY => {
-              var FY, AY;
-              return null !== (FY = null === (AY = rY()) || void 0 === AY ? void 0 : AY.drawnUrl(DY)) && void 0 !== FY ? FY : YY.url(DY)
+          pT = function(TT, oT, IT) {
+            const iT = IT => {
+              var iT, zT;
+              return null !== (iT = null === (zT = oT()) || void 0 === zT ? void 0 : zT.drawnUrl(IT)) && void 0 !== iT ? iT : TT.url(IT)
             };
-            return (0, pF.o)((0, dF.j)(FY), DY)
-          }(kY, (() => gR), hg),
-          xY = new dF.d(GY, (YY => {
-            console.warn(`${OI} image ${YY.key.kind}:${YY.key.index}:${YY.key.word} failed`, YY.error)
+            return (0, yi.k)((0, qi.n)(iT), IT)
+          }(GT, (() => cW), lB),
+          bT = new qi.f(pT, (TT => {
+            console.warn(`${xk} image ${TT.key.kind}:${TT.key.index}:${TT.key.word} failed`, TT.error)
           }));
-        sR = xY, iR = new XF(BY, GY, ((YY, rY) => {
-          void 0 === rY ? console.warn(`${OI} ${YY}`) : Mg(YY, rY)
+        AW = bT, gW = new Gi(vT, pT, ((TT, oT) => {
+          void 0 === oT ? console.warn(`${xk} ${TT}`) : GB(TT, oT)
         }));
-        const nY = new qF.h(kY, function(YY, rY) {
-          let FY = !1,
-            AY = null,
-            IY = null;
-          const RY = {
-              onUnavailable: (DY, FY) => {
-                IY ??= la({
-                  site: SD.MODEL_POOL_SITE,
-                  error: DY,
-                  urls: FY
+        const yT = new bi.g(GT, function(TT, oT) {
+          let iT = !1,
+            zT = null,
+            kT = null;
+          const WT = {
+              onUnavailable: (IT, iT) => {
+                kT ??= fF({
+                  site: eI.MODEL_POOL_SITE,
+                  error: IT,
+                  urls: iT
                 }, (() => {
-                  (0, SD.reportModelPoolFailure)(DY, YY)
-                }), rY)
+                  (0, eI.reportModelPoolFailure)(IT, TT)
+                }), oT)
               },
-              onDecoderFailed: (DY, FY) => {
-                const AY = () => {
-                  (0, SD.reportDracoDecoderFailure)(DY, YY)
+              onDecoderFailed: (IT, iT) => {
+                const zT = () => {
+                  (0, eI.reportDracoDecoderFailure)(IT, TT)
                 };
-                void 0 !== FY ? la({
-                  site: SD.MODEL_POOL_SITE,
-                  error: DY,
-                  urls: FY
-                }, AY, rY) : AY()
+                void 0 !== iT ? fF({
+                  site: eI.MODEL_POOL_SITE,
+                  error: IT,
+                  urls: iT
+                }, zT, oT) : zT()
               },
-              onWorkerLost: rY => {
-                (0, SD.reportWorkerLost)(SD.MODEL_POOL_SITE, rY, YY)
+              onWorkerLost: oT => {
+                (0, eI.reportWorkerLost)(eI.MODEL_POOL_SITE, oT, TT)
               },
-              onModuleRetry: (rY, DY) => {
-                (0, SD.reportModelsModuleRetry)(rY, DY, YY)
+              onModuleRetry: (oT, IT) => {
+                (0, eI.reportModelsModuleRetry)(oT, IT, TT)
               }
             },
-            OY = DY.e(42).then((() => DY(42414))).then((YY => {
+            XT = IT.e(42).then((() => IT(42162))).then((TT => {
               let {
-                pageModelPool: rY
-              } = YY;
-              if (FY) return null;
-              const DY = rY(RY);
-              return AY = DY.unlisten, aR = DY.pool, DY.pool
-            }), (YY => (FY || RY.onUnavailable(YY, void 0), null)));
-          return vR = () => {
-            var YY;
-            FY = !0, null === (YY = AY) || void 0 === YY || YY(), aR = null
-          }, (YY, rY) => OY.then((DY => {
-            var FY;
-            return null !== (FY = null === DY || void 0 === DY ? void 0 : DY.build(YY, rY)) && void 0 !== FY ? FY : (0, xF.t)(YY, "the model workers did not load")
-          })).then((YY => null !== IY && (0, xF.l)(YY) ? IY.then((() => YY)) : YY))
-        }(NY, wY), (YY => {
-          YY.startup ? (ua(), la({
-            site: SD.MODEL_FEED_SITE,
-            error: YY.error,
-            urls: "" === YY.url ? void 0 : [YY.url]
+                pageModelPool: oT
+              } = TT;
+              if (iT) return null;
+              const IT = oT(WT);
+              return zT = IT.unlisten, KW = IT.pool, IT.pool
+            }), (TT => (iT || WT.onUnavailable(TT, void 0), null)));
+          return MW = () => {
+            var TT;
+            iT = !0, null === (TT = zT) || void 0 === TT || TT(), KW = null
+          }, (TT, oT) => XT.then((IT => {
+            var iT;
+            return null !== (iT = null === IT || void 0 === IT ? void 0 : IT.build(TT, oT)) && void 0 !== iT ? iT : (0, di.w)(TT, "the model workers did not load")
+          })).then((TT => null !== kT && (0, di.l)(TT) ? kT.then((() => TT)) : TT))
+        }(uT, qT), (TT => {
+          TT.startup ? (rF(), fF({
+            site: eI.MODEL_FEED_SITE,
+            error: TT.error,
+            urls: "" === TT.url ? void 0 : [TT.url]
           }, (() => {
-            (0, SD.reportModelFailure)(YY, NY)
-          }))) : (0, SD.reportModelFailure)(YY, NY)
+            (0, eI.reportModelFailure)(TT, uT)
+          }))) : (0, eI.reportModelFailure)(TT, uT)
         }), {
-          onWritten: (YY, rY) => {
-            xY.glbWritten(YY, rY)
+          onWritten: (TT, oT) => {
+            bT.glbWritten(TT, oT)
           },
-          onTaken: (YY, rY) => {
-            xY.glbTaken(YY, rY)
+          onTaken: (TT, oT) => {
+            bT.glbTaken(TT, oT)
           },
-          onPackFileFailed: (YY, rY) => {
-            console.warn(`${OI} the texture pack's model file ${YY} failed: the shipped one loads`, rY)
+          onPackFileFailed: (TT, oT) => {
+            console.warn(`${xk} the texture pack's model file ${TT} failed: the shipped one loads`, oT)
           }
         });
-        gR = nY;
-        const PY = new MF.h(BY);
-        wI = PY, PY.swap((YY => {
-          const rY = () => {
-            (0, SD.reportTerrainTextureFailure)(YY, NY)
+        cW = yT;
+        const NT = new li.d(vT);
+        pk = NT, NT.swap((TT => {
+          const oT = () => {
+            (0, eI.reportTerrainTextureFailure)(TT, uT)
           };
-          if (WO) return void rY();
-          const DY = () => !WO,
-            FY = null === YY.url ? void 0 : [YY.url];
-          la({
-            site: tr.z,
-            error: YY.error,
-            urls: FY
-          }, rY, DY)
-        })).then((YY => {
-          null !== YY && (YY || BY.isStopped || console.warn(`${OI} the core refused the terrain textures: terrain draws untextured`), mR(BY))
+          if (eX) return void oT();
+          const IT = () => !eX,
+            iT = null === TT.url ? void 0 : [TT.url];
+          fF({
+            site: oI.x,
+            error: TT.error,
+            urls: iT
+          }, oT, IT)
+        })).then((TT => {
+          null !== TT && (TT || vT.isStopped || console.warn(`${xk} the core refused the terrain textures: terrain draws untextured`), uW(vT))
         }));
-        const UY = new hr(BY, ((YY, rY) => {
-          console.warn(`${OI} ${YY}`, ...void 0 === rY ? [] : [rY])
+        const PT = new Qo(vT, ((TT, oT) => {
+          console.warn(`${xk} ${TT}`, ...void 0 === oT ? [] : [oT])
         }));
-        UY.feed(), null !== uY && function(YY, rY, FY, AY, IY, RY) {
-          let OY = null,
-            gY = null,
-            aY = !1;
-          const vY = {
+        PT.feed(), null !== DT && function(TT, oT, iT, zT, kT, WT) {
+          let XT = null,
+            BT = null,
+            FT = !1;
+          const ST = {
             textures: null,
             stop: () => {
-              var YY, rY;
-              aY = !0, null === (YY = gY) || void 0 === YY || YY(), null === (rY = OY) || void 0 === rY || rY(), kF.d.setSettled(null), null !== qI && wO.clear(qI)
+              var TT, oT;
+              FT = !0, null === (TT = BT) || void 0 === TT || TT(), null === (oT = XT) || void 0 === oT || oT(), Ni.e.setSettled(null), null !== Nk && pX.clear(Nk)
             }
           };
-          MI = vY, gY = wg().follow((gY => {
-            null !== gY && Promise.all([DY.e(188), DY.e(45)]).then((() => DY(42374))).then((DY => {
+          Gk = ST, BT = pB().follow((BT => {
+            null !== BT && Promise.all([IT.e(188), IT.e(45)]).then((() => IT(42131))).then((IT => {
               let {
-                PackTextures: uY
-              } = DY;
-              if (aY || YY.isStopped) return;
-              const sY = new uY({
-                feed: gY,
-                terrain: rY,
-                backend: FY,
-                stopped: () => YY.isStopped,
+                PackTextures: DT
+              } = IT;
+              if (FT || TT.isStopped) return;
+              const LT = new DT({
+                feed: BT,
+                terrain: oT,
+                backend: iT,
+                stopped: () => TT.isStopped,
                 landed: () => {
-                  mR(YY)
+                  uW(TT)
                 },
                 packSwapped: () => {
-                  (0, pF.k)(AY), RY.feed((() => async function(YY) {
-                    const rY = null === YY ? null : await YY.averageColours;
-                    return null === rY ? dr() : jr(rY)
-                  }(sY.assets))), dg(sY.iconOverrides()), IY.refresh().then((YY => {
-                    null !== YY && console.info(`${OI} texture pack models: ${YY.resent} of ${YY.delivered} files written again, ${YY.refetched} refetched`)
+                  (0, yi.g)(zT), WT.feed((() => async function(TT) {
+                    const oT = null === TT ? null : await TT.averageColours;
+                    return null === oT ? Oo() : Yo(oT)
+                  }(LT.assets))), sB(LT.iconOverrides()), kT.refresh().then((TT => {
+                    null !== TT && console.info(`${xk} texture pack models: ${TT.resent} of ${TT.delivered} files written again, ${TT.refetched} refetched`)
                   }))
                 },
-                settled: (YY, rY, DY) => {
-                  var FY;
-                  (kF.d.setSettled({
-                    state: YY,
-                    files: rY
-                  }), null === YY.gameSource && (0, yD.e)(YY.pack, DY), DY) || function(YY) {
-                    const rY = qI;
-                    null !== rY && wO.apply(rY, YY).then((rY => {
-                      rY && YY && console.info(`${OI} the texture pack's animations are in (${Object.keys(YY).length} files)`)
+                settled: (TT, oT, IT) => {
+                  var iT;
+                  (Ni.e.setSettled({
+                    state: TT,
+                    files: oT
+                  }), null === TT.gameSource && (0, MI.e)(TT.pack, IT), IT) || function(TT) {
+                    const oT = Nk;
+                    null !== oT && pX.apply(oT, TT).then((oT => {
+                      oT && TT && console.info(`${xk} the texture pack's animations are in (${Object.keys(TT).length} files)`)
                     }))
-                  }(null === (FY = YY.pack) || void 0 === FY ? void 0 : FY.animations)
+                  }(null === (iT = TT.pack) || void 0 === iT ? void 0 : iT.animations)
                 },
                 settling: () => {
-                  kF.d.setSettled(null)
+                  Ni.e.setSettled(null)
                 },
-                warn: Mg,
-                maxTextureSize: () => Promise.resolve((0, Lr.U)(document.createElement("canvas")))
+                warn: GB,
+                maxTextureSize: () => Promise.resolve((0, TI.W)(document.createElement("canvas")))
               });
-              vY.textures = sY, OY = sY.start()
-            }), (YY => {
-              console.warn(`${OI} the texture pack's terrain didn't load: the built atlas stays`, YY)
+              ST.textures = LT, XT = LT.start()
+            }), (TT => {
+              console.warn(`${xk} the texture pack's terrain didn't load: the built atlas stays`, TT)
             }))
           }))
-        }(BY, PY, uY, xY, nY, UY);
-        const LY = () => {
-            BY.setTextureLayers("")
+        }(vT, NT, DT, bT, yT, PT);
+        const dT = () => {
+            vT.setTextureLayers("")
           },
-          tY = YY => {
-            (or ??= DY.e(50).then((() => DY(42421))).then((YY => {
+          VT = TT => {
+            (Mo ??= IT.e(50).then((() => IT(42168))).then((TT => {
               let {
-                TEXTURE_NAMES: rY
-              } = YY;
-              return rY
-            }), (YY => {
-              throw or = null, YY
-            })), or).then((YY => {
-              BY.setTextureLayers(YY) || BY.isStopped || (console.warn(`${OI} the core refused the texture names: textured Boxes draw textureNotFound`), LY())
-            }), (rY => {
-              if (BY.isStopped) return;
-              const [DY, ...FY] = YY;
-              void 0 === DY ? la({
-                site: SD.TEXTURE_NAMES_SITE,
-                error: rY
+                TEXTURE_NAMES: oT
+              } = TT;
+              return oT
+            }), (TT => {
+              throw Mo = null, TT
+            })), Mo).then((TT => {
+              vT.setTextureLayers(TT) || vT.isStopped || (console.warn(`${xk} the core refused the texture names: textured Boxes draw textureNotFound`), dT())
+            }), (oT => {
+              if (vT.isStopped) return;
+              const [IT, ...iT] = TT;
+              void 0 === IT ? fF({
+                site: eI.TEXTURE_NAMES_SITE,
+                error: oT
               }, (() => {
-                console.warn(`${OI} the texture names didn't load, so textured Boxes draw textureNotFound`, rY), LY()
-              }), wY) : setTimeout((() => {
-                tY(FY)
-              }), DY)
+                console.warn(`${xk} the texture names didn't load, so textured Boxes draw textureNotFound`, oT), dT()
+              }), qT) : setTimeout((() => {
+                VT(iT)
+              }), IT)
             }))
           };
-        if (tY(BI), null !== uY && !await async function(YY, rY, DY, FY, IY, RY) {
-            var OY;
-            const gY = (0, Lr.D)(DY);
-            if (null === gY) return YY.crash(aI, new Error(`this ${FY} build has no openRenderer`)), !1;
-            let aY;
-            AO = gY;
+        if (VT(Uk), null !== DT && !await async function(TT, oT, IT, iT, kT, WT) {
+            var XT;
+            const BT = (0, TI.I)(IT);
+            if (null === BT) return TT.crash(Kk, new Error(`this ${iT} build has no openRenderer`)), !1;
+            let FT;
+            SX = BT;
             try {
-              var vY, uY, sY, iY;
-              const AY = null !== (vY = null === (uY = jI) || void 0 === uY ? void 0 : uY.pagePreviews()) && void 0 !== vY ? vY : null,
-                OY = null !== (sY = null === (iY = jI) || void 0 === iY ? void 0 : iY.previewModule(DY)) && void 0 !== sY ? sY : null;
-              if (null === AY || null === OY) {
-                null === AY || void 0 === AY || AY.endSession(!1), aY = (0, Br.e)().sampleCount, await (0, Lr.f)(rY, gY, RY, fg, aY, await IY);
-                const YY = (0, Lr.i)(DY);
-                null === YY && console.warn(`${OI} this ${FY} build has no image registry: sky and model images won't show`), (0, JF.d)(YY)
+              var ST, DT, LT, xT;
+              const zT = null !== (ST = null === (DT = Zk) || void 0 === DT ? void 0 : DT.pagePreviews()) && void 0 !== ST ? ST : null,
+                XT = null !== (LT = null === (xT = Zk) || void 0 === xT ? void 0 : xT.previewModule(IT)) && void 0 !== LT ? LT : null;
+              if (null === zT || null === XT) {
+                null === zT || void 0 === zT || zT.endSession(!1), FT = (0, vo.g)().sampleCount, await (0, TI.g)(oT, BT, WT, qB, FT, await kT);
+                const TT = (0, TI.n)(IT);
+                null === TT && console.warn(`${xk} this ${iT} build has no image registry: sky and model images won't show`), (0, Zi.c)(TT)
               } else {
-                (0, rA.d)() && await (0, XY.l)();
-                const DY = (0, rA.H)();
-                if (null !== DY) {
-                  const rY = (0, Lr.R)(gY);
-                  return YY.crash(SD.RENDER_RELOAD_SITE, new Error(`${DY}${void 0===rY?"":` (${rY.message})`}`)), !1
+                (0, kz.d)() && await (0, lT.n)();
+                const IT = (0, kz.A)();
+                if (null !== IT) {
+                  const oT = (0, TI.R)(BT);
+                  return TT.crash(eI.RENDER_RELOAD_SITE, new Error(`${IT}${void 0===oT?"":` (${oT.message})`}`)), !1
                 }
-                aY = await AY.bindSession(OY, rY, (async YY => (0, Lr.s)(gY, aI, RY, YY, fg, await IY)))
+                FT = await zT.bindSession(XT, oT, (async TT => (0, TI.x)(BT, Kk, WT, TT, qB, await kT)))
               }
-            } catch (AY) {
-              return YY.crash(aI, AY), !1
-            }(function(YY, rY) {
-              const DY = YY,
+            } catch (zT) {
+              return TT.crash(Kk, zT), !1
+            }(function(TT, oT) {
+              const IT = TT,
                 {
-                  requestCapture: FY,
-                  takeCapture: AY
-                } = DY;
-              if ("function" !== typeof FY || "function" !== typeof AY) return;
-              const IY = {
+                  requestCapture: iT,
+                  takeCapture: zT
+                } = IT;
+              if ("function" !== typeof iT || "function" !== typeof zT) return;
+              const kT = {
                 request() {
-                  FY.call(DY, rY)
+                  iT.call(IT, oT)
                 },
                 take() {
-                  var YY;
-                  return null !== (YY = AY.call(DY)) && void 0 !== YY ? YY : null
+                  var TT;
+                  return null !== (TT = zT.call(IT)) && void 0 !== TT ? TT : null
                 }
               };
-              window[gA] = IY
-            })(rY, aY), uO = aY, DO = !0;
-            const yY = performance.now();
-            return FO.boundAtMs = null !== (OY = (0, rA.K)()) && void 0 !== OY ? OY : yY, FO.indirectHangs = (0, rA.B)(), console.info(`${OI} ${FY} renderer bound at ${Math.round(yY)} ms`), !YY.isStopped
-          }(BY, eY, TY, uY, iY, QY)) return null;
-        if (null !== uY) {
-          var Yr, rr, Dr;
-          (0, gr.K)(uY);
-          const YY = () => !BY.isStopped && Ra();
-          DY.e(184).then((() => DY(8643))).then((rY => {
+              window[Lz] = kT
+            })(oT, FT), rX = FT, BX = !0;
+            const cT = performance.now();
+            return FX.boundAtMs = null !== (XT = (0, kz.E)()) && void 0 !== XT ? XT : cT, FX.indirectHangs = (0, kz.u)(), console.info(`${xk} ${iT} renderer bound at ${Math.round(cT)} ms`), !TT.isStopped
+          }(vT, RT, eT, DT, xT, KT)) return null;
+        if (null !== DT) {
+          var To, oo, Io;
+          (0, Bo.G)(DT);
+          const TT = () => !vT.isStopped && LF();
+          IT.e(184).then((() => IT(8647))).then((oT => {
             let {
-              devTools: DY
-            } = rY;
-            BY.isStopped || DY.setHost(function(YY) {
+              devTools: IT
+            } = oT;
+            vT.isStopped || IT.setHost(function(TT) {
               return {
-                tools: YA,
-                async downloadScene(rY, DY) {
+                tools: zz,
+                async downloadScene(oT, IT) {
                   let {
-                    width: FY,
-                    height: AY,
-                    colouring: IY
-                  } = DY;
-                  "screenshot" === rY && null === IY ? await (0, UF.e)(YY, FY, AY) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: iT,
+                    height: zT,
+                    colouring: kT
+                  } = IT;
+                  "screenshot" === oT && null === kT ? await (0, oz.d)(TT, iT, zT) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve())
               }
-            }(function(YY, rY) {
+            }(function(TT, oT) {
               return {
-                canvas: YY,
-                maxTextureSize: LF,
-                drawing: rY,
-                resize: (YY, rY) => {
-                  (0, eD.B)(Jr.ub.Resize, 0, YY, rY, (0, eD.l)(1))
+                canvas: TT,
+                maxTextureSize: Iz,
+                drawing: oT,
+                resize: (TT, oT) => {
+                  (0, vI.w)(Ho.vb.Resize, 0, TT, oT, (0, vI.i)(1))
                 },
                 restoreSize: () => {
-                  const rY = (0, Br.m)(YY);
-                  null !== rY && (0, eD.B)(Jr.ub.Resize, 0, rY.cssWidth, rY.cssHeight, (0, eD.l)(rY.renderScale))
+                  const oT = (0, vo.m)(TT);
+                  null !== oT && (0, vI.w)(Ho.vb.Resize, 0, oT.cssWidth, oT.cssHeight, (0, vI.i)(oT.renderScale))
                 },
-                onFrameDrawn: YY => (tF.add(YY), () => {
-                  tF.delete(YY)
+                onFrameDrawn: TT => (iz.add(TT), () => {
+                  iz.delete(TT)
                 })
               }
-            }(QY, YY)))
-          }), (YY => {
-            console.warn(`${OI} the developer tools didn't load: no captures this session`, YY)
+            }(KT, TT)))
+          }), (TT => {
+            console.warn(`${xk} the developer tools didn't load: no captures this session`, TT)
           }));
-          const rY = "webgpu" === uY && null !== (Yr = null === aY || void 0 === aY || null === (rr = aY.adapter) || void 0 === rr ? void 0 : rr.vendor) && void 0 !== Yr ? Yr : null;
-          sO = {
-            backend: uY,
-            canvas: QY,
-            fallbackReason: null !== (Dr = null === aY || void 0 === aY ? void 0 : aY.reason) && void 0 !== Dr ? Dr : null,
-            adapterVendor: rY
-          }, Gg();
+          const oT = "webgpu" === DT && null !== (To = null === FT || void 0 === FT || null === (oo = FT.adapter) || void 0 === oo ? void 0 : oo.vendor) && void 0 !== To ? To : null;
+          AX = {
+            backend: DT,
+            canvas: KT,
+            fallbackReason: null !== (Io = null === FT || void 0 === FT ? void 0 : FT.reason) && void 0 !== Io ? Io : null,
+            adapterVendor: oT
+          }, VB();
           try {
-            (0, pD.r)(uY, QY, rY)
-          } catch (AY) {
-            (0, pD.u)(), console.error(`${OI} the quality steps didn't start`, AY)
+            (0, pI.r)(DT, KT, oT)
+          } catch (zT) {
+            (0, pI.v)(), console.error(`${xk} the quality steps didn't start`, zT)
           }
         }
         const {
-          storagePullBreaks: vr,
-          splitPassBreaks: yr
-        } = await iY;
-        yr && console.warn(`${OI} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const Qr = vr ? bY.d : (0, bY.h)(aY, (0, Tr.i)());
-        if ((0, NA.q)("webgpuloss")) {
-          var Er, Vr;
-          const YY = {
-            backend: uY,
-            reason: null !== (Er = null === aY || void 0 === aY ? void 0 : aY.reason) && void 0 !== Er ? Er : null,
-            source: null !== (Vr = null === aY || void 0 === aY ? void 0 : aY.source) && void 0 !== Vr ? Vr : null,
-            storagePullBreaks: vr,
-            noWebGpu: Qr.messageKey
+          storagePullBreaks: So,
+          splitPassBreaks: co
+        } = await xT;
+        co && console.warn(`${xk} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const Ko = So ? ZT.d : (0, ZT.f)(FT, (0, eo.h)());
+        if ((0, Cz.r)("webgpuloss")) {
+          var Ao, ho;
+          const TT = {
+            backend: DT,
+            reason: null !== (Ao = null === FT || void 0 === FT ? void 0 : FT.reason) && void 0 !== Ao ? Ao : null,
+            source: null !== (ho = null === FT || void 0 === FT ? void 0 : FT.source) && void 0 !== ho ? ho : null,
+            storagePullBreaks: So,
+            noWebGpu: Ko.messageKey
           };
-          (0, BA.c)((rY => {
-            rY.noteWasmPick(YY)
+          (0, jz.e)((oT => {
+            oT.noteWasmPick(TT)
           }))
         }
-        const Sr = "webgpu" === uY && !vr;
-        if (QR = (0, bY.j)(Sr ? BY : null, Sr && null !== (RY = null === (OY = jI) || void 0 === OY ? void 0 : OY.pagePreviews().vy) && void 0 !== RY ? RY : null, Qr, Mg), ZO) return null;
-        if (jY.reserveAtJoin((0, jF.k)(null !== HY && void 0 !== HY ? HY : sD.f)), BY.isStopped) return null;
-        const lr = YY => {
-          if (null !== iO) try {
-            iO.animationFrame(YY)
-          } catch (AY) {
-            Pg(AY)
+        const wo = "webgpu" === DT && !So;
+        if (wW = (0, ZT.g)(wo ? vT : null, wo && null !== (WT = null === (XT = Zk) || void 0 === XT ? void 0 : XT.pagePreviews().Fc) && void 0 !== WT ? WT : null, Ko, GB), HX) return null;
+        if (YT.reserveAtJoin((0, Hi.j)(null !== CT && void 0 !== CT ? CT : cI.f)), vT.isStopped) return null;
+        const mo = TT => {
+          if (null !== gX) try {
+            gX.animationFrame(TT)
+          } catch (zT) {
+            IF(zT)
           }
-          if (function(YY, rY) {
-              return rY && !ZO && !TR && Oa() && Ra() && YY.framePaces(performance.now())
-            }(BY, cO)) return BY.writePendingInput(), (0, VY.f)(YY, Da), xg(!1, YY), void requestAnimationFrame(lr);
-          ra(BY, cO, "budget") && ((0, Nr.j)(BY.lastFrameKind) && Ra() && (0, VY.f)(YY, Da), xg(cO && eO, YY), NO.frame(BY.lastFrameKind, cO && Ra(), YY), ia(BY), jY.afterFrame(), requestAnimationFrame(lr))
+          if (function(TT, oT) {
+              return oT && !HX && !CW && xF() && LF() && TT.framePaces(performance.now())
+            }(vT, aX)) return vT.writePendingInput(), (0, hT.e)(TT, BF), TF(!1, TT), void requestAnimationFrame(mo);
+          XF(vT, aX, "budget") && ((0, uo.j)(vT.lastFrameKind) && LF() && (0, hT.e)(TT, BF), TF(aX && jX, TT), JX.frame(vT.lastFrameKind, aX && LF(), TT), gF(vT), YT.afterFrame(), requestAnimationFrame(mo))
         };
-        requestAnimationFrame(lr);
-        return function(YY) {
-          if (YY.has("inputLog") && (0, YF.h)((YY => {
+        requestAnimationFrame(mo);
+        return function(TT) {
+          if (TT.has("inputLog") && (0, Ii.f)((TT => {
               let {
-                action: rY,
-                down: DY,
-                press: FY
-              } = YY;
-              console.info(`${DF} input ${rY} ${DY?"down":"up"} press ${FY} at ${performance.now().toFixed(1)}`)
-            })), YY.has("inputDump")) {
-            const YY = [];
-            AF = YY, Object.assign(window, {
-              bloxdInputDump: () => YY.join("\n")
+                action: oT,
+                down: IT,
+                press: iT
+              } = TT;
+              console.info(`${zi} input ${oT} ${IT?"down":"up"} press ${iT} at ${performance.now().toFixed(1)}`)
+            })), TT.has("inputDump")) {
+            const TT = [];
+            Wi = TT, Object.assign(window, {
+              bloxdInputDump: () => TT.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), IR = function(YY, rY) {
-          let DY = null;
-          const FY = () => {
-              null !== DY && (clearInterval(DY), DY = null)
+        }(new URLSearchParams(window.location.search)), DW = function(TT, oT) {
+          let IT = null;
+          const iT = () => {
+              null !== IT && (clearInterval(IT), IT = null)
             },
-            AY = () => {
-              document.hidden ? DY ??= setInterval((() => {
-                ra(YY, !1, "budget") ? (ia(YY), rY.afterFrame()) : FY()
-              }), NI) : FY()
+            zT = () => {
+              document.hidden ? IT ??= setInterval((() => {
+                XF(TT, !1, "budget") ? (gF(TT), oT.afterFrame()) : iT()
+              }), Jk) : iT()
             };
-          return document.addEventListener("visibilitychange", AY), AY(), () => {
-            FY(), document.removeEventListener("visibilitychange", AY)
+          return document.addEventListener("visibilitychange", zT), zT(), () => {
+            iT(), document.removeEventListener("visibilitychange", zT)
           }
-        }(BY, jY), BY
-      }(rY).then((YY => {
-        var rY;
-        (FY(XI), GI(null !== YY), null !== YY && (iA = performance.now()), pI(YY), null === YY) ? null === (rY = jI) || void 0 === rY || rY.pagePreviews().endSession(null === (0, Ar.r)()): ER("booted")
-      }), (YY => {
-        FY(XI), GI(!1), pI(null), sa({
-          site: vI,
-          error: YY,
+        }(vT, YT), vT
+      }(oT).then((TT => {
+        var oT;
+        (iT(yk), Vk(null !== TT), null !== TT && (rz = performance.now()), Pk(TT), null === TT) ? null === (oT = Zk) || void 0 === oT || oT.pagePreviews().endSession(null === (0, zo.n)()): RW("booted")
+      }), (TT => {
+        iT(yk), Vk(!1), Pk(null), AF({
+          site: Mk,
+          error: TT,
           header: null
-        }, XI)
+        }, yk)
       }))
     }
 
-    function MO() {
-      const YY = qI;
-      null !== YY && CO().then((rY => {
+    function GX() {
+      const TT = Nk;
+      null !== TT && nX().then((oT => {
         let {
-          pageBuiltInAnimationPack: DY
-        } = rY;
-        DY().provide(YY)
-      }), (YY => {
-        console.warn(`${OI} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, YY)
+          pageBuiltInAnimationPack: IT
+        } = oT;
+        IT().provide(TT)
+      }), (TT => {
+        console.warn(`${xk} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, TT)
       }))
     }
-    const wO = new class {
-      constructor(YY) {
-        this.deps = YY, this.latest = 0, this.ja = null
+    const pX = new class {
+      constructor(TT) {
+        this.deps = TT, this.latest = 0, this.kS = null
       }
-      apply(YY, rY) {
-        return this.load(YY, rY, 0)
+      apply(TT, oT) {
+        return this.load(TT, oT, 0)
       }
-      async load(YY, rY, DY) {
-        var FY;
-        const AY = ++this.latest,
-          IY = this.deps.compiler;
-        if (void 0 === rY || null === rY || "object" !== typeof rY || 0 === Object.keys(rY).length || null === IY) return this.drop(YY), !1;
-        if ((null === (FY = this.ja) || void 0 === FY ? void 0 : FY.module) === YY && (0, Gr.Zd)(this.ja.files, rY)) return !1;
+      async load(TT, oT, IT) {
+        var iT;
+        const zT = ++this.latest,
+          kT = this.deps.compiler;
+        if (void 0 === oT || null === oT || "object" !== typeof oT || 0 === Object.keys(oT).length || null === kT) return this.drop(TT), !1;
+        if ((null === (iT = this.kS) || void 0 === iT ? void 0 : iT.module) === TT && (0, bo.Vd)(this.kS.files, oT)) return !1;
         try {
-          const [DY, FY] = await Promise.all([IY(), this.deps.builtIns()]);
-          if (AY !== this.latest) return !1;
-          const RY = await DY(rY, Ur, {
-            builtIns: FY
+          const [IT, iT] = await Promise.all([kT(), this.deps.builtIns()]);
+          if (zT !== this.latest) return !1;
+          const WT = await IT(oT, Vo, {
+            builtIns: iT
           });
-          if (AY !== this.latest) return !1;
-          const OY = this.call(YY, RY);
-          if (void 0 === OY) throw new Pr("the compiled animations didn't read against the built-in pack");
-          return this.ja = {
-              module: YY,
-              files: rY
+          if (zT !== this.latest) return !1;
+          const XT = this.call(TT, WT);
+          if (void 0 === XT) throw new Po("the compiled animations didn't read against the built-in pack");
+          return this.kS = {
+              module: TT,
+              files: oT
             },
-            function(YY) {
-              for (let rY = 0; rY + 2 < YY.length; rY += 3) {
-                ("error" === YY[rY] ? console.error : console.warn)(`Animation for the texture pack: ${YY[rY+1]}: ${YY[rY+2]}`)
+            function(TT) {
+              for (let oT = 0; oT + 2 < TT.length; oT += 3) {
+                ("error" === TT[oT] ? console.error : console.warn)(`Animation for the texture pack: ${TT[oT+1]}: ${TT[oT+2]}`)
               }
-            }(OY), !0
-        } catch (OY) {
-          var RY;
-          if (AY !== this.latest) return !1;
-          this.drop(YY), 0 === DY && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", OY);
-          const FY = (null !== (RY = this.deps.retryAfterMs) && void 0 !== RY ? RY : nr)[DY];
-          return void 0 === FY || OY instanceof Pr || (0, xr.k)(YY) || setTimeout((() => {
-            AY === this.latest && this.load(YY, rY, DY + 1)
-          }), FY), !1
+            }(XT), !0
+        } catch (XT) {
+          var WT;
+          if (zT !== this.latest) return !1;
+          this.drop(TT), 0 === IT && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", XT);
+          const iT = (null !== (WT = this.deps.retryAfterMs) && void 0 !== WT ? WT : No)[IT];
+          return void 0 === iT || XT instanceof Po || (0, yo.i)(TT) || setTimeout((() => {
+            zT === this.latest && this.load(TT, oT, IT + 1)
+          }), iT), !1
         }
       }
-      call(YY, rY) {
+      call(TT, oT) {
         try {
-          return YY.gDY(rY)
-        } catch (DY) {
-          throw (0, xr.m)(YY, DY), DY
+          return TT.aIT(oT)
+        } catch (IT) {
+          throw (0, yo.m)(TT, IT), IT
         }
       }
-      clear(YY) {
-        this.latest++, this.drop(YY)
+      clear(TT) {
+        this.latest++, this.drop(TT)
       }
-      drop(YY) {
-        const rY = this.ja;
-        if (this.ja = null, (null === rY || void 0 === rY ? void 0 : rY.module) === YY && !(0, xr.k)(YY)) try {
-          this.call(YY, null)
+      drop(TT) {
+        const oT = this.kS;
+        if (this.kS = null, (null === oT || void 0 === oT ? void 0 : oT.module) === TT && !(0, yo.i)(TT)) try {
+          this.call(TT, null)
         } catch {}
       }
     }({
-      compiler: Xr.d,
+      compiler: so.b,
       builtIns: async () => {
         const {
-          pageBuiltInAnimationPack: YY
-        } = await CO();
-        return YY().whenSet()
+          pageBuiltInAnimationPack: TT
+        } = await nX();
+        return TT().whenSet()
       },
-      warn: Mg
+      warn: GB
     });
-    async function bO(YY, rY) {
-      let FY = !1;
-      await XO({
+    async function bX(TT, oT) {
+      let iT = !1;
+      await yX({
         matchmake: async () => {
           const {
-            guestJoinTarget: AY,
-            guestJoinWithPack: IY
-          } = await DY.e(342).then((() => DY(42356)));
-          return FY ? AY(YY, rY, Xg()) : (FY = !0, IY(YY, rY, (rY => qg(YY, rY)), Xg))
+            guestJoinTarget: zT,
+            guestJoinWithPack: kT
+          } = await IT.e(342).then((() => IT(42116)));
+          return iT ? zT(TT, oT, yB()) : (iT = !0, kT(TT, oT, (oT => NB(TT, oT)), yB))
         },
-        onFailure: YY => {
-          (0, SD.showJoinFailure)(YY, XI)
+        onFailure: TT => {
+          (0, eI.showJoinFailure)(TT, yk)
         },
-        rejoin: Ig,
-        invalidateTrafficCode: Rg
+        rejoin: DB,
+        invalidateTrafficCode: LB
       })
     }
-    async function XO(YY) {
+    async function yX(TT) {
       let {
-        matchmake: rY,
-        onFailure: DY,
-        rejoin: AY,
-        invalidateTrafficCode: IY,
-        pageReady: RY,
-        signal: OY
-      } = YY;
-      const gY = () => !0 === (null === OY || void 0 === OY ? void 0 : OY.aborted);
-      let aY;
-      const vY = kF.d.rejoinHold(),
-        uY = (0, ED.H)("wasm", oa);
-      let sY = !1,
-        iY = performance.now();
+        matchmake: oT,
+        onFailure: IT,
+        rejoin: zT,
+        invalidateTrafficCode: kT,
+        pageReady: WT,
+        signal: XT
+      } = TT;
+      const BT = () => !0 === (null === XT || void 0 === XT ? void 0 : XT.aborted);
+      let FT;
+      const ST = Ni.e.rejoinHold(),
+        DT = (0, hI.N)("wasm", mF);
+      let LT = !1,
+        xT = performance.now();
       try {
-        if (!await xI) return {
+        if (!await TW) return {
           kind: "stopped"
         };
-        if (gY()) return {
-          kind: "Hr"
+        if (BT()) return {
+          kind: "Jo"
         };
-        fO().catch((() => {}));
-        let YY = await rY();
-        iY = performance.now();
-        const DY = () => performance.now() - YY.matchedAt <= YY.freshMs,
-          FY = pO(YY.target).catch((() => {}));
-        DY() && !gY() && (aY = new KF(YY.target, {
-          signal: OY
+        qX().catch((() => {}));
+        let TT = await oT();
+        xT = performance.now();
+        const IT = () => performance.now() - TT.matchedAt <= TT.freshMs,
+          iT = PX(TT.target).catch((() => {}));
+        IT() && !BT() && (FT = new Ji(TT.target, {
+          signal: XT
         }));
-        const IY = performance.now();
-        if (null === await kI) return {
+        const kT = performance.now();
+        if (null === await dk) return {
           kind: "stopped"
         };
-        var yY;
-        if (function(YY) {
-            var rY, DY;
-            if (aA.e.markGameEngineConstructed(), yA) return;
-            yA = !0;
-            const FY = Math.max(YY, null !== (rY = uA) && void 0 !== rY ? rY : YY);
-            (0, vA.f)("ready", Math.max(0, (null !== (DY = sA) && void 0 !== DY ? DY : FY) - FY) / 1e3)
-          }(IY), gY() || (null !== sA && null !== iA ? ((0, zr.l)("wasm_loaded", sA), (0, zr.l)("wasm_core_ready", iA)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps")), await FY, !DY() && !gY()) null === (yY = aY) || void 0 === yY || yY.rematched(), YY = await rY(), iY = performance.now();
-        if (gY()) return {
-          kind: "Hr"
+        var cT;
+        if (function(TT) {
+            var oT, IT;
+            if (xz.d.markGameEngineConstructed(), Az) return;
+            Az = !0;
+            const iT = Math.max(TT, null !== (oT = Kz) && void 0 !== oT ? oT : TT);
+            (0, cz.h)("ready", Math.max(0, (null !== (IT = Mz) && void 0 !== IT ? IT : iT) - iT) / 1e3)
+          }(kT), BT() || (null !== Mz && null !== rz ? ((0, jo.j)("wasm_loaded", Mz), (0, jo.j)("wasm_core_ready", rz)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps")), await iT, !IT() && !BT()) null === (cT = FT) || void 0 === cT || cT.rematched(), TT = await oT(), xT = performance.now();
+        if (BT()) return {
+          kind: "Jo"
         };
-        const vY = await async function(YY) {
-          var rY, DY, FY;
+        const ST = await async function(TT) {
+          var oT, IT, iT;
           let {
-            signal: AY,
-            rejoin: IY = null,
-            early: RY,
-            pageReady: OY
+            signal: zT,
+            rejoin: kT = null,
+            early: WT,
+            pageReady: XT
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== AY && void 0 !== AY && AY.aborted) throw new DOMException("the join was left", "AbortError");
-          const gY = (aY = kR, vY = performance.now(), null !== aY && vY - aY < QF);
-          var aY, vY;
-          kR = null;
-          const uY = new AbortController;
-          nO({
-            controller: uY,
-            game: null !== (rY = null === (DY = YY.session) || void 0 === DY ? void 0 : DY.gameNameWithVariation) && void 0 !== rY ? rY : null
-          }), GR = null, null === (FY = PR) || void 0 === FY || FY.abort(), PR = null, LR = !1, tR = null, YO.clear();
-          const sY = () => {
-            (0, Er.l)(uY, (0, Er.h)(AY))
+          if (null !== zT && void 0 !== zT && zT.aborted) throw new DOMException("the join was left", "AbortError");
+          const BT = (FT = dW, ST = performance.now(), null !== FT && ST - FT < ri);
+          var FT, ST;
+          dW = null;
+          const DT = new AbortController;
+          oB({
+            controller: DT,
+            game: null !== (oT = null === (IT = TT.session) || void 0 === IT ? void 0 : IT.gameNameWithVariation) && void 0 !== oT ? oT : null
+          }), VW = null, null === (iT = IX) || void 0 === iT || iT.abort(), IX = null, zX = !1, kX = null, WX.clear();
+          const LT = () => {
+            (0, Ao.i)(DT, (0, Ao.f)(zT))
           };
-          null === AY || void 0 === AY || AY.addEventListener("abort", sY, {
+          null === zT || void 0 === zT || zT.addEventListener("abort", LT, {
             once: !0
           });
           try {
-            var iY, yY, QY;
-            const rY = await kI;
-            if (null === rY || rY.isStopped || ZO) throw new Error("no core is running to join a game with");
-            if (YY.session && null !== QR) {
-              const rY = await kO(QR.join(YY.session.gameNameWithVariation), uY.signal);
-              if ((0, NA.q)("webgpuloss")) {
-                const DY = YY.session.gameNameWithVariation,
-                  FY = QR.couldntRunInJoinedGame();
-                (0, BA.c)((YY => YY.noteWasmJoin(DY, rY, FY)))
+            var xT, cT, KT;
+            const oT = await dk;
+            if (null === oT || oT.isStopped || HX) throw new Error("no core is running to join a game with");
+            if (TT.session && null !== wW) {
+              const oT = await dX(wW.join(TT.session.gameNameWithVariation), DT.signal);
+              if ((0, Cz.r)("webgpuloss")) {
+                const IT = TT.session.gameNameWithVariation,
+                  iT = wW.couldntRunInJoinedGame();
+                (0, jz.e)((TT => TT.noteWasmJoin(IT, oT, iT)))
               }
-              if (null !== rY) throw new bY.g(rY)
+              if (null !== oT) throw new ZT.e(oT)
             }
             const [, , , {
-              joinRoom: DY
-            }] = await kO(Promise.all([(0, SY.k)(rY), pO(YY), null === OY || void 0 === OY ? void 0 : OY(), fO()]), uY.signal), FY = YY.session, AY = FY ? {
-              ...ag,
-              attachSocket: rY => {
-                const DY = og(rY, YY.endpoint);
-                var AY;
-                null !== DY && (JR = {
-                  conn: DY,
-                  info: FY
-                }, null === (AY = MR) || void 0 === AY || AY(FY.playerDbId));
-                return DY
+              joinRoom: IT
+            }] = await dX(Promise.all([(0, wT.k)(oT), PX(TT), null === XT || void 0 === XT ? void 0 : XT(), qX()]), DT.signal), iT = TT.session, zT = iT ? {
+              ...KB,
+              attachSocket: oT => {
+                const IT = mB(oT, TT.endpoint);
+                var zT;
+                null !== IT && (tW = {
+                  conn: IT,
+                  info: iT
+                }, null === (zT = GW) || void 0 === zT || zT(iT.playerDbId));
+                return IT
               }
-            } : ag, aY = await DY(AY, YY, {
-              signal: uY.signal,
-              early: RY
-            }).catch((YY => {
-              throw function(YY) {
-                if (!(YY instanceof ZY.c)) return YY;
-                if ("roomError" === YY.stage && null !== tR) return qO(new ZY.c(YY.message, YY.stage, YY.code, tR), YY);
-                const rY = "closed" === YY.stage && null !== xR ? YO.get(xR.conn) : void 0;
-                return void 0 === rY ? YY : qO(new ZY.c(YY.message, YY.stage, rY.code), YY)
-              }(YY)
+            } : KB, FT = await IT(zT, TT, {
+              signal: DT.signal,
+              early: WT
+            }).catch((TT => {
+              throw function(TT) {
+                if (!(TT instanceof JT.e)) return TT;
+                if ("roomError" === TT.stage && null !== kX) return NX(new JT.e(TT.message, TT.stage, TT.code, kX), TT);
+                const oT = "closed" === TT.stage && null !== TX ? WX.get(TX.conn) : void 0;
+                return void 0 === oT ? TT : NX(new JT.e(TT.message, TT.stage, oT.code), TT)
+              }(TT)
             }));
-            if (hR !== uY) throw aY.leave(), new DOMException("the join was left", "AbortError");
-            UO(aY), null === (iY = YR) || void 0 === iY || iY.newGame();
-            const vY = function(YY) {
-              var rY, DY;
+            if (lW !== DT) throw FT.leave(), new DOMException("the join was left", "AbortError");
+            iB(FT), null === (xT = WW) || void 0 === xT || xT.newGame();
+            const ST = function(TT) {
+              var oT, IT;
               const {
-                session: FY
-              } = YY, AY = void 0 === FY ? YY.joinOptions.lobbyName : FY.lobbyName;
+                session: iT
+              } = TT, zT = void 0 === iT ? TT.joinOptions.lobbyName : iT.lobbyName;
               return {
-                endpoint: YY.endpoint,
-                game: null !== (rY = null === FY || void 0 === FY ? void 0 : FY.gameNameWithVariation) && void 0 !== rY ? rY : YY.roomName,
-                lobby: String(null !== AY && void 0 !== AY ? AY : null),
-                postCookies: null !== (DY = YY.postCookies) && void 0 !== DY ? DY : null
+                endpoint: TT.endpoint,
+                game: null !== (oT = null === iT || void 0 === iT ? void 0 : iT.gameNameWithVariation) && void 0 !== oT ? oT : TT.roomName,
+                lobby: String(null !== zT && void 0 !== zT ? zT : null),
+                postCookies: null !== (IT = TT.postCookies) && void 0 !== IT ? IT : null
               }
-            }(YY);
-            jR.set(aY, vY), eF(vY);
-            const sY = performance.now(),
-              oY = {
-                conn: aY.conn,
-                rejoin: IY,
-                game: null !== (yY = null === (QY = YY.session) || void 0 === QY ? void 0 : QY.gameNameWithVariation) && void 0 !== yY ? yY : "",
-                joinedAt: sY,
-                rejoinedAt: gY ? sY : null,
+            }(TT);
+            ZW.set(FT, ST), Ei(ST);
+            const LT = performance.now(),
+              MT = {
+                conn: FT.conn,
+                rejoin: kT,
+                game: null !== (cT = null === (KT = TT.session) || void 0 === KT ? void 0 : KT.gameNameWithVariation) && void 0 !== cT ? cT : "",
+                joinedAt: LT,
+                rejoinedAt: BT ? LT : null,
                 overflow: null
               };
-            wR = oY,
-              function(YY, rY) {
-                eg();
-                const DY = {
-                  endpoint: rY,
-                  roomId: YY.seat.room.roomId,
+            pW = MT,
+              function(TT, oT) {
+                jB();
+                const IT = {
+                  endpoint: oT,
+                  roomId: TT.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new aD({
-                    reconnect: (YY, rY, FY) => async function(YY, rY, DY, FY) {
+                  resume: new DI({
+                    reconnect: (TT, oT, iT) => async function(TT, oT, IT, iT) {
                       const {
-                        roomId: AY,
-                        roomToken: IY
-                      } = Bg(YY, rY), RY = dI;
-                      if (null === RY || RY.isStopped || ZO) throw new Error("no core is running to resume the game on");
+                        roomId: zT,
+                        roomToken: kT
+                      } = UB(TT, oT), WT = sk;
+                      if (null === WT || WT.isStopped || HX) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: OY
-                      } = await kO(fO(), DY), gY = {
-                        ...ag,
-                        attachSocket: rY => bR !== YY || 0 === YY.heldConn ? (rY.close(), null) : og(rY, YY.endpoint, !0)
+                        resumeRoom: XT
+                      } = await dX(qX(), IT), BT = {
+                        ...KB,
+                        attachSocket: oT => bW !== TT || 0 === TT.heldConn ? (oT.close(), null) : mB(oT, TT.endpoint, !0)
                       };
-                      return OY(gY, YY.endpoint, AY, IY, {
-                        signal: DY,
-                        onAttached: FY
+                      return XT(BT, TT.endpoint, zT, kT, {
+                        signal: IT,
+                        onAttached: iT
                       })
-                    }(DY, YY, rY, FY),
-                    releaseSeat: YY => {
-                      !async function(YY, rY) {
+                    }(IT, TT, oT, iT),
+                    releaseSeat: TT => {
+                      !async function(TT, oT) {
                         const {
-                          roomId: DY,
-                          roomToken: FY
-                        } = Bg(YY, rY);
+                          roomId: IT,
+                          roomToken: iT
+                        } = UB(TT, oT);
                         try {
                           const {
-                            leaveHeldSeat: rY
-                          } = await fO();
-                          await rY(YY.endpoint, DY, FY)
-                        } catch (AY) {
-                          console.warn(`${OI} the held seat of a game left while it reconnected couldn't be released`, AY)
+                            leaveHeldSeat: oT
+                          } = await qX();
+                          await oT(TT.endpoint, IT, iT)
+                        } catch (zT) {
+                          console.warn(`${xk} the held seat of a game left while it reconnected couldn't be released`, zT)
                         }
-                      }(DY, YY)
+                      }(IT, TT)
                     },
-                    isLive: () => bR === DY && null !== wR && !ZO,
-                    wV: YY => {
-                      pR = YY, Tg()
+                    isLive: () => bW === IT && null !== pW && !HX,
+                    OE: TT => {
+                      PW = TT, CB()
                     },
-                    onReconnected: YY => {
-                      ! function(YY) {
-                        const rY = fR;
-                        if (null !== rY && rY !== YY) {
-                          const DY = jR.get(rY);
-                          void 0 !== DY && jR.set(YY, DY), TO === rY && (TO = YY), rY.detach()
+                    onReconnected: TT => {
+                      ! function(TT) {
+                        const oT = qW;
+                        if (null !== oT && oT !== TT) {
+                          const IT = ZW.get(oT);
+                          void 0 !== IT && ZW.set(TT, IT), CX === oT && (CX = TT), oT.detach()
                         }
-                        UO(YY)
-                      }(YY)
+                        iB(TT)
+                      }(TT)
                     },
-                    onGaveUp: (YY, rY) => {
-                      ! function(YY, rY, DY) {
-                        var FY, AY;
-                        console.warn(`${OI} gave up reconnecting (${DY.reason}, ${DY.attempts} attempts)`, DY.lastError), (0, SD.reportReconnectGaveUp)(DY, XI);
-                        const IY = null !== (FY = null === (AY = wR) || void 0 === AY ? void 0 : AY.rejoin) && void 0 !== FY ? FY : null;
-                        Ng(YY, "gaveUp"), tO();
-                        const RY = {
-                          code: YY.dropCode,
+                    onGaveUp: (TT, oT) => {
+                      ! function(TT, oT, IT) {
+                        var iT, zT;
+                        console.warn(`${xk} gave up reconnecting (${IT.reason}, ${IT.attempts} attempts)`, IT.lastError), (0, eI.reportReconnectGaveUp)(IT, yk);
+                        const kT = null !== (iT = null === (zT = pW) || void 0 === zT ? void 0 : zT.rejoin) && void 0 !== iT ? iT : null;
+                        JB(TT, "gaveUp"), kB();
+                        const WT = {
+                          code: TT.dropCode,
                           name: null,
-                          reason: SI,
-                          canReconnect: !rY,
+                          reason: Ek,
+                          canReconnect: !oT,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        gg(RY, rY ? null : IY, !1, {
-                          reasonKey: lI,
-                          canPlayAgain: rY
+                        cB(WT, oT ? null : kT, !1, {
+                          reasonKey: fk,
+                          canPlayAgain: oT
                         })
-                      }(DY, YY, rY)
+                      }(IT, TT, oT)
                     }
                   })
                 };
-                bR = DY, null !== XR && XR.conn === YY.conn && DY.resume.onInitialInfo(XR)
-              }(aY, YY.endpoint), performance.mark(iI), (0, zr.l)("wasm_joined", sY), setTimeout((() => {
-                fR === aY && (0, zr.e)()
-              }), 0), MO(), console.info(`${OI} joined ${YY.roomName} as ${aY.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const WY = GR;
-            GR = null, null !== WY && Dg(oY, WY.mask, WY.frames);
-            const EY = YO.get(aY.conn);
-            return YO.clear(), void 0 !== EY && (UO(null), Og(aY.conn, EY.code, EY.reason)), aY
+                bW = IT, null !== yW && yW.conn === TT.conn && IT.resume.onInitialInfo(yW)
+              }(FT, TT.endpoint), performance.mark(gk), (0, jo.j)("wasm_joined", LT), setTimeout((() => {
+                qW === FT && (0, jo.d)()
+              }), 0), GX(), console.info(`${xk} joined ${TT.roomName} as ${FT.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const rT = VW;
+            VW = null, null !== rT && BB(MT, rT.mask, rT.frames);
+            const AT = WX.get(FT.conn);
+            return WX.clear(), void 0 !== AT && (iB(null), xB(FT.conn, AT.code, AT.reason)), FT
           } finally {
-            var oY;
-            null === AY || void 0 === AY || AY.removeEventListener("abort", sY), hR === uY && PO(fR, null), (null === (oY = xR) || void 0 === oY ? void 0 : oY.join) === uY && (xR = null)
+            var MT;
+            null === zT || void 0 === zT || zT.removeEventListener("abort", LT), lW === DT && IB(qW, null), (null === (MT = TX) || void 0 === MT ? void 0 : MT.join) === DT && (TX = null)
           }
-        }(YY.target, {
-          signal: OY,
-          rejoin: AY(YY.target),
-          early: aY,
-          pageReady: RY
+        }(TT.target, {
+          signal: XT,
+          rejoin: zT(TT.target),
+          early: FT,
+          pageReady: WT
         });
-        return sY = !0, {
+        return LT = !0, {
           kind: "joined",
-          game: vY
+          game: ST
         }
-      } catch (oY) {
-        if (oY instanceof DOMException && "AbortError" === oY.name || gY()) return {
-          kind: "Hr"
+      } catch (MT) {
+        if (MT instanceof DOMException && "AbortError" === MT.name || BT()) return {
+          kind: "Jo"
         };
-        if (ZO) return {
+        if (HX) return {
           kind: "stopped"
         };
-        if (LR && (LR = !1, await IY().catch((YY => {
-            console.warn(`${OI} the cached traffic code could not be dropped`, YY)
-          }))), null === await kI) return {
+        if (zX && (zX = !1, await kT().catch((TT => {
+            console.warn(`${xk} the cached traffic code could not be dropped`, TT)
+          }))), null === await dk) return {
           kind: "stopped"
         };
-        if (oY instanceof bY.g) return DY(oY, performance.now() - iY), {
+        if (MT instanceof ZT.e) return IT(MT, performance.now() - xT), {
           kind: "failed",
-          error: oY,
+          error: MT,
           reloading: !1
         };
-        if (oY instanceof ZY.c && oY.code === FY.c.wasmClientNotAllowed.code && BO) return Cg("this server refused the wasm client to this account", "refused"), {
+        if (MT instanceof JT.e && MT.code === iT.b.wasmClientNotAllowed.code && UX) return nB("this server refused the wasm client to this account", "refused"), {
           kind: "failed",
-          error: oY,
+          error: MT,
           reloading: !0
         };
-        const YY = oY instanceof ZY.c && oY.code === FY.c.outdatedVersion.code,
-          rY = () => null === fR,
-          AY = await la({
-            site: SD.JOIN_SITE,
-            error: oY,
-            outdated: YY
+        const TT = MT instanceof JT.e && MT.code === iT.b.outdatedVersion.code,
+          oT = () => null === qW,
+          zT = await fF({
+            site: eI.JOIN_SITE,
+            error: MT,
+            outdated: TT
           }, (() => {
-            DY(oY, performance.now() - iY)
-          }), rY);
+            IT(MT, performance.now() - xT)
+          }), oT);
         return {
           kind: "failed",
-          error: oY,
-          reloading: AY
+          error: MT,
+          reloading: zT
         }
       } finally {
-        var QY;
-        sY || uY.end(), kF.d.releaseHold(vY);
-        const YY = null === (QY = aY) || void 0 === QY ? void 0 : QY.release();
-        YY && (0, SD.reportUnusedSeat)(YY, XI)
+        var KT;
+        LT || DT.end(), Ni.e.releaseHold(ST);
+        const TT = null === (KT = FT) || void 0 === KT ? void 0 : KT.release();
+        TT && (0, eI.reportUnusedSeat)(TT, yk)
       }
     }
 
-    function qO(YY, rY) {
-      return YY.stack = rY.stack, YY
+    function NX(TT, oT) {
+      return TT.stack = oT.stack, TT
     }
 
-    function pO(YY) {
-      return YY.session ? (0, SY.r)(bI, YY.session.gameNameWithVariation) : Promise.resolve()
+    function PX(TT) {
+      return TT.session ? (0, wT.n)(bk, TT.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function kO(YY, rY) {
-      return (0, Er.q)(rY), new Promise(((DY, FY) => {
-        const AY = () => {
-          FY((0, Er.h)(rY))
+    function dX(TT, oT) {
+      return (0, Ao.o)(oT), new Promise(((IT, iT) => {
+        const zT = () => {
+          iT((0, Ao.f)(oT))
         };
-        rY.addEventListener("abort", AY, {
+        oT.addEventListener("abort", zT, {
           once: !0
-        }), YY.then((YY => {
-          rY.removeEventListener("abort", AY), DY(YY)
-        }), (YY => {
-          rY.removeEventListener("abort", AY), FY(YY)
+        }), TT.then((TT => {
+          oT.removeEventListener("abort", zT), IT(TT)
+        }), (TT => {
+          oT.removeEventListener("abort", zT), iT(TT)
         }))
       }))
     }
 
-    function GO() {
-      var YY, rY;
-      return null !== (YY = null === (rY = QR) || void 0 === rY ? void 0 : rY.runsInJoinedGame()) && void 0 !== YY && YY
+    function VX() {
+      var TT, oT;
+      return null !== (TT = null === (oT = wW) || void 0 === oT ? void 0 : oT.runsInJoinedGame()) && void 0 !== TT && TT
     }
 
-    function xO() {
-      nO(null)
+    function TB() {
+      oB(null)
     }
 
-    function nO(YY) {
-      var rY, DY, FY;
+    function oB(TT) {
+      var oT, IT, iT;
       (function() {
-        const YY = bR;
-        null !== YY && Ng(YY, "left")
-      }(), null === PI || PI.left) || (PI.left = !0, null === (FY = (0, SY.g)()) || void 0 === FY || FY.socketLeft(), (0, sY.n)({
+        const TT = bW;
+        null !== TT && JB(TT, "left")
+      }(), null === IW || IW.left) || (IW.left = !0, null === (iT = (0, wT.i)()) || void 0 === iT || iT.socketLeft(), (0, LT.o)({
         websocketUrl: null
       }));
-      hR && (0, Er.l)(hR, new DOMException("the join was left", "AbortError")), tO(null !== YY), null === (rY = QR) || void 0 === rY || rY.leave();
-      const AY = fR;
-      null !== YY && kF.d.setGame(YY.game), PO(null, null !== (DY = null === YY || void 0 === YY ? void 0 : YY.controller) && void 0 !== DY ? DY : null), null === AY || void 0 === AY || AY.leave(), LO(0), (0, yr.f)()
+      lW && (0, Ao.i)(lW, new DOMException("the join was left", "AbortError")), kB(null !== TT), null === (oT = wW) || void 0 === oT || oT.leave();
+      const zT = qW;
+      null !== TT && Ni.e.setGame(TT.game), IB(null, null !== (IT = null === TT || void 0 === TT ? void 0 : TT.controller) && void 0 !== IT ? IT : null), null === zT || void 0 === zT || zT.leave(), zB(0), (0, co.f)()
     }
 
-    function PO(YY, rY) {
-      fR = YY, hR = rY, null === fR && null === hR && kF.d.setGame(void 0)
+    function IB(TT, oT) {
+      qW = TT, lW = oT, null === qW && null === lW && Ni.e.setGame(void 0)
     }
 
-    function UO(YY) {
-      PO(YY, hR)
+    function iB(TT) {
+      IB(TT, lW)
     }
 
-    function LO(YY) {
-      const rY = dI;
-      return null !== KI && !ZO && null !== rY && !rY.isStopped && (!!KI(ZY.f, 0, (0, ZY.D)(YY)) && (BR = !0, 0 === YY || TR || ra(rY, !1, "all"), !0))
+    function zB(TT) {
+      const oT = sk;
+      return null !== Yk && !HX && null !== oT && !oT.isStopped && (!!Yk(JT.l, 0, (0, JT.E)(TT)) && (UW = !0, 0 === TT || CW || XF(oT, !1, "all"), !0))
     }
 
-    function tO() {
-      var YY, rY;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, ED.e)();
-      const DY = null !== (YY = null === (rY = wR) || void 0 === rY ? void 0 : rY.overflow) && void 0 !== YY ? YY : null;
-      wR = null, null !== DY && (0, SD.reportEventOverflow)(DY, XI)
+    function kB() {
+      var TT, oT;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, hI.e)();
+      const IT = null !== (TT = null === (oT = pW) || void 0 === oT ? void 0 : oT.overflow) && void 0 !== TT ? TT : null;
+      pW = null, null !== IT && (0, eI.reportEventOverflow)(IT, yk)
     }
 
-    function Yg() {
-      null !== fR || null !== hR ? xO() : Wg()
+    function WB() {
+      null !== qW || null !== lW ? TB() : eB()
     }
 
-    function rg(YY, rY) {
-      console.warn(`${OI} the event buffer refused records in ${rY} frames (categories ${YY})`), ZO || (null !== wR ? Dg(wR, YY, rY) : null !== hR && function(YY, rY, DY) {
-        var FY;
-        const AY = function(YY, rY) {
-          return null === YY ? "drop" : YY.activated ? "keep" : 0 !== (rY & Mr.p.NetSession) ? "fail" : "drop"
-        }((null === (FY = xR) || void 0 === FY ? void 0 : FY.join) === YY ? xR : null, rY);
-        "keep" === AY ? GR = {
-          mask: rY,
-          frames: DY
-        } : "fail" === AY && (0, Er.l)(YY, new Error("the join's net session was lost to an event overflow"))
-      }(hR, YY, rY))
+    function XB(TT, oT) {
+      console.warn(`${xk} the event buffer refused records in ${oT} frames (categories ${TT})`), HX || (null !== pW ? BB(pW, TT, oT) : null !== lW && function(TT, oT, IT) {
+        var iT;
+        const zT = function(TT, oT) {
+          return null === TT ? "drop" : TT.activated ? "keep" : 0 !== (oT & no.n.NetSession) ? "fail" : "drop"
+        }((null === (iT = TX) || void 0 === iT ? void 0 : iT.join) === TT ? TX : null, oT);
+        "keep" === zT ? VW = {
+          mask: oT,
+          frames: IT
+        } : "fail" === zT && (0, Ao.i)(TT, new Error("the join's net session was lost to an event overflow"))
+      }(lW, TT, oT))
     }
 
-    function Dg(YY, rY, DY) {
-      const FY = YY.overflow ??= {
+    function BB(TT, oT, IT) {
+      const iT = TT.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      FY.frames += DY, FY.acks++, FY.mask |= rY;
-      const AY = function(YY, rY, DY) {
-        if (0 === (YY & Mr.p.NetSession)) return "none";
-        const FY = null !== rY.rejoinedAt && DY - rY.rejoinedAt < oF;
-        return null === rY.rejoin || FY ? "fail" : "rejoin"
-      }(rY, YY, performance.now());
-      "none" !== AY && queueMicrotask((() => {
-        if (wR !== YY) return;
-        const rY = "rejoin" === AY && performance.now() - nR >= zY.g;
-        FY.outcome = rY ? "rejoined" : "failed", gg(function(YY, rY) {
+      iT.frames += IT, iT.acks++, iT.mask |= oT;
+      const zT = function(TT, oT, IT) {
+        if (0 === (TT & no.n.NetSession)) return "none";
+        const iT = null !== oT.rejoinedAt && IT - oT.rejoinedAt < Ai;
+        return null === oT.rejoin || iT ? "fail" : "rejoin"
+      }(oT, TT, performance.now());
+      "none" !== zT && queueMicrotask((() => {
+        if (pW !== TT) return;
+        const oT = "rejoin" === zT && performance.now() - oX >= jT.e;
+        iT.outcome = oT ? "rejoined" : "failed", cB(function(TT, oT) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
-            canReconnect: YY,
-            automaticallyReconnect: rY,
+            canReconnect: TT,
+            automaticallyReconnect: oT,
             requiresRefresh: !1
           }
-        }(null !== YY.rejoin, rY), YY.rejoin, rY), xO(), rY && (kR = performance.now())
+        }(null !== TT.rejoin, oT), TT.rejoin, oT), TB(), oT && (dW = performance.now())
       }))
     }
 
-    function Fg(YY) {
-      cO = YY, KO && Ag(KO, YY)
+    function FB(TT) {
+      aX = TT, YX && SB(YX, TT)
     }
 
-    function Ag(YY, rY) {
-      YY.style.visibility = rY ? "visible" : "hidden"
+    function SB(TT, oT) {
+      TT.style.visibility = oT ? "visible" : "hidden"
     }
 
-    function Ig(YY) {
-      var rY;
-      const DY = YY.roomName,
-        FY = null !== (rY = YY.joinOptions.lobbyName) && void 0 !== rY ? rY : null;
+    function DB(TT) {
+      var oT;
+      const IT = TT.roomName,
+        iT = null !== (oT = TT.joinOptions.lobbyName) && void 0 !== oT ? oT : null;
       return () => {
-        bO(DY, FY)
+        bX(IT, iT)
       }
     }
 
-    function Rg() {
-      return DY.e(342).then((() => DY(42356))).then((YY => {
+    function LB() {
+      return IT.e(342).then((() => IT(42116))).then((TT => {
         let {
-          invalidateGuestTrafficCode: rY
-        } = YY;
-        return rY()
-      })).catch((YY => {
-        console.warn(`${OI} the cached traffic code could not be dropped`, YY)
+          invalidateGuestTrafficCode: oT
+        } = TT;
+        return oT()
+      })).catch((TT => {
+        console.warn(`${xk} the cached traffic code could not be dropped`, TT)
       }))
     }
 
-    function Og(YY, rY, DY) {
-      var AY, IY;
-      let RY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (ZO) return;
-      if ((null === (AY = wR) || void 0 === AY ? void 0 : AY.conn) !== YY) return void(null !== hR && YO.set(YY, {
-        code: rY,
-        reason: DY
+    function xB(TT, oT, IT) {
+      var zT, kT;
+      let WT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (HX) return;
+      if ((null === (zT = pW) || void 0 === zT ? void 0 : zT.conn) !== TT) return void(null !== lW && WX.set(TT, {
+        code: oT,
+        reason: IT
       }));
       const {
-        rejoin: OY,
-        game: gY,
-        joinedAt: aY
-      } = wR;
-      tO(), eg();
-      const vY = (0, zY.j)(rY, (0, EF.f)(YY));
-      if (console.info(`${OI} the game's connection closed with code ${rY} (${null!==(IY=vY.name)&&void 0!==IY?IY:"unrecognised"})`), rY === FY.c.gameOrPluginKick.code || RY || (0, SD.reportDisconnect)(vY, XI, {
-          closeReason: DY,
-          sinceJoinedMs: performance.now() - aY,
-          game: gY
-        }), vY.requiresRefresh) {
-        const YY = "outdatedVersion" === vY.name,
-          DY = new Error(`the game's connection closed with code ${rY}`),
-          FY = () => null === wR && null === hR;
-        return void la({
-          site: SD.JOIN_SITE,
-          error: DY,
-          outdated: YY
+        rejoin: XT,
+        game: BT,
+        joinedAt: FT
+      } = pW;
+      kB(), jB();
+      const ST = (0, jT.k)(oT, (0, wi.h)(TT));
+      if (console.info(`${xk} the game's connection closed with code ${oT} (${null!==(kT=ST.name)&&void 0!==kT?kT:"unrecognised"})`), oT === iT.b.gameOrPluginKick.code || WT || (0, eI.reportDisconnect)(ST, yk, {
+          closeReason: IT,
+          sinceJoinedMs: performance.now() - FT,
+          game: BT
+        }), ST.requiresRefresh) {
+        const TT = "outdatedVersion" === ST.name,
+          IT = new Error(`the game's connection closed with code ${oT}`),
+          iT = () => null === pW && null === lW;
+        return void fF({
+          site: eI.JOIN_SITE,
+          error: IT,
+          outdated: TT
         }, (() => {
-          FY() && gg(vY, null, !1)
-        }), FY)
+          iT() && cB(ST, null, !1)
+        }), iT)
       }
-      const uY = vY.canReconnect ? OY : null,
-        sY = null !== uY && vY.automaticallyReconnect && performance.now() - nR >= zY.g;
-      gg(vY, uY, sY)
+      const DT = ST.canReconnect ? XT : null,
+        LT = null !== DT && ST.automaticallyReconnect && performance.now() - oX >= jT.e;
+      cB(ST, DT, LT)
     }
 
-    function gg(YY, rY, DY) {
-      var FY;
-      let AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function cB(TT, oT, IT) {
+      var iT;
+      let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (HO) return;
-      kF.d.unwantedLeave(DY && null !== rY && 0 === UR.size), null === (FY = PR) || void 0 === FY || FY.abort();
-      const IY = new AbortController;
-      PR = IY;
-      const RY = null === rY ? null : () => {
-        IY.signal.aborted || (IY.abort(), rY())
+      if (QX) return;
+      Ni.e.unwantedLeave(IT && null !== oT && 0 === iX.size), null === (iT = IX) || void 0 === iT || iT.abort();
+      const kT = new AbortController;
+      IX = kT;
+      const WT = null === oT ? null : () => {
+        kT.signal.aborted || (kT.abort(), oT())
       };
-      if (DY && null !== RY) {
-        nR = performance.now();
-        const YY = setTimeout(RY, zY.d);
-        IY.signal.addEventListener("abort", (() => {
-          clearTimeout(YY)
+      if (IT && null !== WT) {
+        oX = performance.now();
+        const TT = setTimeout(WT, jT.b);
+        kT.signal.addEventListener("abort", (() => {
+          clearTimeout(TT)
         }))
       }
-      const OY = {
-        code: YY.code,
-        name: YY.name,
-        reason: YY.reason,
-        reasonKey: AY.reasonKey,
-        reconnect: RY,
-        reconnecting: DY,
-        requiresRefresh: YY.requiresRefresh,
-        canPlayAgain: AY.canPlayAgain
+      const XT = {
+        code: TT.code,
+        name: TT.name,
+        reason: TT.reason,
+        reasonKey: zT.reasonKey,
+        reconnect: WT,
+        reconnecting: IT,
+        requiresRefresh: TT.requiresRefresh,
+        canPlayAgain: zT.canPlayAgain
       };
-      if (UR.size > 0)
-        for (const aY of [...UR]) try {
-          aY(OY)
-        } catch (gY) {
-          console.error(`${OI} an unwanted-leave listener threw`, gY)
-        } else iF((0, vF.j)(YY, null !== RY, DY), IY.signal).then((rY => {
-          rY && (null !== RY ? RY() : YY.requiresRefresh && (0, XY.j)())
+      if (iX.size > 0)
+        for (const FT of [...iX]) try {
+          FT(XT)
+        } catch (BT) {
+          console.error(`${xk} an unwanted-leave listener threw`, BT)
+        } else Ki((0, Li.g)(TT, null !== WT, IT), kT.signal).then((oT => {
+          oT && (null !== WT ? WT() : TT.requiresRefresh && (0, lT.j)())
         }))
     }
-    const ag = {
-      attachSocket: YY => og(YY),
-      onConnection: YY => (rO.add(YY), () => {
-        rO.delete(YY)
+    const KB = {
+      attachSocket: TT => mB(TT),
+      onConnection: TT => (XX.add(TT), () => {
+        XX.delete(TT)
       }),
-      sendRaw: (YY, rY) => {
-        const DY = PI;
-        return null !== DY && DY.conn === YY && va(DY, rY)
+      sendRaw: (TT, oT) => {
+        const IT = IW;
+        return null !== IT && IT.conn === TT && MF(IT, oT)
       },
-      leaveRoom: LO,
-      closeSocket: YY => {
-        var rY;
-        (null === (rY = PI) || void 0 === rY ? void 0 : rY.conn) === YY && Wg()
+      leaveRoom: zB,
+      closeSocket: TT => {
+        var oT;
+        (null === (oT = IW) || void 0 === oT ? void 0 : oT.conn) === TT && eB()
       },
-      flushNet: Eg
+      flushNet: RB
     };
 
-    function vg(YY) {
-      var rY;
+    function MB(TT) {
+      var oT;
       let {
-        aux: DY,
-        payload: FY
-      } = YY;
-      null === (rY = dI) || void 0 === rY || rY.queueOptions(DY, FY)
+        aux: IT,
+        payload: iT
+      } = TT;
+      null === (oT = sk) || void 0 === oT || oT.queueOptions(IT, iT)
     }
 
-    function ug(YY, rY) {
-      vg(function(YY, rY) {
-        return AA = YY ? {
-          preventMovement: rY
-        } : null, YY ? IA(rY) : {
-          aux: Jr.Xb.AdEnd,
-          payload: FA
+    function rB(TT, oT) {
+      MB(function(TT, oT) {
+        return Bz = TT ? {
+          preventMovement: oT
+        } : null, TT ? Fz(oT) : {
+          aux: Ho.Vb.AdEnd,
+          payload: Xz
         }
-      }(YY, rY))
+      }(TT, oT))
     }
 
-    function sg(YY) {
-      var rY;
-      zR = YY, null === (rY = dI) || void 0 === rY || rY.setUiPrefs(YY)
+    function AB(TT) {
+      var oT;
+      OW = TT, null === (oT = sk) || void 0 === oT || oT.setUiPrefs(TT)
     }
 
-    function ig(YY, rY) {
-      bI.setMaster(YY, rY)
+    function gB(TT, oT) {
+      bk.setMaster(TT, oT)
     }
 
-    function yg(YY) {
-      var rY;
-      ZR = YY, null === (rY = dI) || void 0 === rY || rY.setEnvPrefs(YY)
+    function hB(TT) {
+      var oT;
+      HW = TT, null === (oT = sk) || void 0 === oT || oT.setEnvPrefs(TT)
     }
 
-    function Qg(YY) {
-      var rY;
-      CR = YY, null === (rY = dI) || void 0 === rY || rY.setLookPrefs(YY)
+    function wB(TT) {
+      var oT;
+      nW = TT, null === (oT = sk) || void 0 === oT || oT.setLookPrefs(TT)
     }
 
-    function og(YY) {
-      var rY;
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(YY.url).origin,
-        FY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (YY.readyState === WebSocket.CLOSING || YY.readyState === WebSocket.CLOSED) return console.warn(`${OI} a closing or closed socket can't be attached`), null;
-      const AY = dI;
-      if (!AY || AY.isStopped) return console.warn(`${OI} no core is running to attach a socket to`), YY.close(), null;
-      if (null === (0, SY.g)()) return console.warn(`${OI} the game has not started to attach a socket to`), YY.close(), null;
-      if (VR > Jr.u) return console.warn(`${OI} this core has attached all the sockets it can; reload to play on`), YY.close(), null;
-      if (BR && !TR && (ra(AY, !1, "all"), AY.isStopped || ZO)) return YY.close(), null;
-      Wg();
-      const IY = VR++;
-      if (!Hg(AY, "open", IY, FY ? Jr.Wb.Resume : 0)) return YY.close(), null;
-      FY || ir.b.reset(), xR = null === hR ? null : {
-        join: hR,
-        conn: IY,
+    function mB(TT) {
+      var oT;
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(TT.url).origin,
+        iT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (TT.readyState === WebSocket.CLOSING || TT.readyState === WebSocket.CLOSED) return console.warn(`${xk} a closing or closed socket can't be attached`), null;
+      const zT = sk;
+      if (!zT || zT.isStopped) return console.warn(`${xk} no core is running to attach a socket to`), TT.close(), null;
+      if (null === (0, wT.i)()) return console.warn(`${xk} the game has not started to attach a socket to`), TT.close(), null;
+      if (vW > Ho.y) return console.warn(`${xk} this core has attached all the sockets it can; reload to play on`), TT.close(), null;
+      if (UW && !CW && (XF(zT, !1, "all"), zT.isStopped || HX)) return TT.close(), null;
+      eB();
+      const kT = vW++;
+      if (!QB(zT, "open", kT, iT ? Ho.Sb.Resume : 0)) return TT.close(), null;
+      iT || xo.e.reset(), TX = null === lW ? null : {
+        join: lW,
+        conn: kT,
         activated: !1
-      }, YY.binaryType = "arraybuffer";
-      const RY = new vD.b((() => {
-          ! function(YY, rY) {
-            if (PI !== rY || YY.isStopped || null === Sg(rY, mI)) return;
-            rY.detach(), PI = null, Vg(YY, rY, mI, "", !0), rY.ws.close()
-          }(AY, OY)
+      }, TT.binaryType = "arraybuffer";
+      const WT = new LI.e((() => {
+          ! function(TT, oT) {
+            if (IW !== oT || TT.isStopped || null === EB(oT, uk)) return;
+            oT.detach(), IW = null, vB(TT, oT, uk, "", !0), oT.ws.close()
+          }(zT, XT)
         })),
-        OY = {
-          ws: YY,
-          conn: IY,
+        XT = {
+          ws: TT,
+          conn: kT,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: FY,
+          resume: iT,
           token: null,
           detach: () => {
-            RY.dispose(), YY.removeEventListener("message", gY), YY.removeEventListener("open", aY), YY.removeEventListener("close", vY)
+            WT.dispose(), TT.removeEventListener("message", BT), TT.removeEventListener("open", FT), TT.removeEventListener("close", ST)
           }
         },
-        gY = YY => {
-          if (YY.data instanceof ArrayBuffer) {
-            var rY;
-            const DY = new Uint8Array(YY.data);
-            RY.heard(), OY.token = null !== (rY = (0, uD.b)(DY)) && void 0 !== rY ? rY : OY.token,
-              function(YY, rY, DY) {
-                Ea(YY, (() => {
-                  YY.rings.net.writeFrame(rY, DY) || YY.crash(tr.s, `a socket frame of ${DY.byteLength} bytes did not fit the net-in ring`)
+        BT = TT => {
+          if (TT.data instanceof ArrayBuffer) {
+            var oT;
+            const IT = new Uint8Array(TT.data);
+            WT.heard(), XT.token = null !== (oT = (0, xI.b)(IT)) && void 0 !== oT ? oT : XT.token,
+              function(TT, oT, IT) {
+                RF(TT, (() => {
+                  TT.rings.net.writeFrame(oT, IT) || TT.crash(oI.q, `a socket frame of ${IT.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const FY = YY.rings.net.cursor >= WI;
-                (FY || YY.netWrittenSinceFrame >= oI || document.hidden && performance.now() - SR >= NI) && ra(YY, !1, "budget")
-              }(AY, IY, DY)
+                const iT = TT.rings.net.cursor >= ek;
+                (iT || TT.netWrittenSinceFrame >= mk || document.hidden && performance.now() - EW >= Jk) && XF(TT, !1, "budget")
+              }(zT, kT, IT)
           }
         },
-        aY = () => {
-          FY || (0, zr.l)("wasm_socket_open", performance.now());
-          for (const rY of OY.pending.splice(0)) YY.send(rY);
-          OY.pendingBytes = 0
+        FT = () => {
+          iT || (0, jo.j)("wasm_socket_open", performance.now());
+          for (const oT of XT.pending.splice(0)) TT.send(oT);
+          XT.pendingBytes = 0
         },
-        vY = YY => {
-          if (PI === OY && AY.rings.net.cursor > 0 && ra(AY, !1, "all"), PI === OY) {
-            if (OY.detach(), PI = null, Vg(AY, OY, YY.code, YY.reason) || mg(AY, OY)) return;
-            Hg(AY, "close", IY), lg(IY, OY.left), Og(IY, YY.code, YY.reason)
+        ST = TT => {
+          if (IW === XT && zT.rings.net.cursor > 0 && XF(zT, !1, "all"), IW === XT) {
+            if (XT.detach(), IW = null, vB(zT, XT, TT.code, TT.reason) || uB(zT, XT)) return;
+            QB(zT, "close", kT), fB(kT, XT.left), xB(kT, TT.code, TT.reason)
           }
         };
-      return YY.addEventListener("message", gY), YY.addEventListener("open", aY), YY.addEventListener("close", vY), PI = OY, null === (rY = (0, SY.g)()) || void 0 === rY || rY.socketAttached(IY), (0, sY.n)({
-        websocketUrl: DY
-      }), IY
+      return TT.addEventListener("message", BT), TT.addEventListener("open", FT), TT.addEventListener("close", ST), IW = XT, null === (oT = (0, wT.i)()) || void 0 === oT || oT.socketAttached(kT), (0, LT.o)({
+        websocketUrl: IT
+      }), kT
     }
 
-    function Wg() {
-      const YY = PI;
-      if (!YY) return;
-      const rY = dI,
-        DY = YY.resume;
-      DY && (Eg(), PI !== YY) || (PI = null, YY.detach(), YY.ws.close(), null !== rY && (mg(rY, YY) || DY && Vg(rY, YY, VI)) || (null !== rY && Hg(rY, "close", YY.conn), lg(YY.conn, YY.left)))
+    function eB() {
+      const TT = IW;
+      if (!TT) return;
+      const oT = sk,
+        IT = TT.resume;
+      IT && (RB(), IW !== TT) || (IW = null, TT.detach(), TT.ws.close(), null !== oT && (uB(oT, TT) || IT && vB(oT, TT, vk)) || (null !== oT && QB(oT, "close", TT.conn), fB(TT.conn, TT.left)))
     }
 
-    function Eg() {
-      const YY = dI;
-      null !== YY && !YY.isStopped && !ZO && !TR && YY.rings.net.cursor > 0 && ra(YY, !1, "all")
+    function RB() {
+      const TT = sk;
+      null !== TT && !TT.isStopped && !HX && !CW && TT.rings.net.cursor > 0 && XF(TT, !1, "all")
     }
 
-    function mg(YY, rY) {
-      var DY;
-      if (!rY.resume) return !1;
-      const FY = bR;
-      return null !== FY && null !== rY.token && "" !== rY.token && (FY.pendingHold = {
-        conn: rY.conn,
-        token: `${FY.roomId}:${rY.token}`
-      }), Hg(YY, "close", rY.conn), null === (DY = (0, SY.g)()) || void 0 === DY || DY.socketDetached(rY.conn), !0
+    function uB(TT, oT) {
+      var IT;
+      if (!oT.resume) return !1;
+      const iT = bW;
+      return null !== iT && null !== oT.token && "" !== oT.token && (iT.pendingHold = {
+        conn: oT.conn,
+        token: `${iT.roomId}:${oT.token}`
+      }), QB(TT, "close", oT.conn), null === (IT = (0, wT.i)()) || void 0 === IT || IT.socketDetached(oT.conn), !0
     }
 
-    function Vg(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const IY = Sg(rY, DY);
-      if (null === IY) return !1;
+    function vB(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const kT = EB(oT, IT);
+      if (null === kT) return !1;
       const {
-        ja: RY,
-        token: OY,
-        game: gY,
-        joinedAt: aY
-      } = IY;
-      if (!Hg(YY, "close", rY.conn, Jr.A.Held)) return !0;
-      console.warn(`${OI} the game's connection ${AY?"went silent":`dropped with code ${DY}`}, holding it`);
-      const vY = {
-        closeReason: FY,
-        sinceJoinedMs: performance.now() - aY,
-        game: gY
+        kS: WT,
+        token: XT,
+        game: BT,
+        joinedAt: FT
+      } = kT;
+      if (!QB(TT, "close", oT.conn, Ho.D.Held)) return !0;
+      console.warn(`${xk} the game's connection ${zT?"went silent":`dropped with code ${IT}`}, holding it`);
+      const ST = {
+        closeReason: iT,
+        sinceJoinedMs: performance.now() - FT,
+        game: BT
       };
-      return (0, SD.reportDisconnect)((0, zY.j)(DY), XI, vY, AY ? "silent" : void 0), RY.heldConn = rY.conn, RY.dropCode = DY, RY.pendingHold = {
-        conn: rY.conn,
-        token: `${RY.roomId}:${OY}`
-      }, TR || ra(YY, !1, "all"), !0
+      return (0, eI.reportDisconnect)((0, jT.k)(IT), yk, ST, zT ? "silent" : void 0), WT.heldConn = oT.conn, WT.dropCode = IT, WT.pendingHold = {
+        conn: oT.conn,
+        token: `${WT.roomId}:${XT}`
+      }, CW || XF(TT, !1, "all"), !0
     }
 
-    function Sg(YY, rY) {
-      const DY = bR,
-        AY = wR,
-        IY = YY.token;
-      return null === DY || null === AY || ZO || YY.left || AY.conn !== YY.conn || null === IY || "" === IY ? null : (0, FY.e)(rY) && DY.resume.canHoldSeat() ? {
-        ja: DY,
-        token: IY,
-        game: AY.game,
-        joinedAt: AY.joinedAt
+    function EB(TT, oT) {
+      const IT = bW,
+        zT = pW,
+        kT = TT.token;
+      return null === IT || null === zT || HX || TT.left || zT.conn !== TT.conn || null === kT || "" === kT ? null : (0, iT.g)(oT) && IT.resume.canHoldSeat() ? {
+        kS: IT,
+        token: kT,
+        game: zT.game,
+        joinedAt: zT.joinedAt
       } : null
     }
 
-    function lg(YY, rY) {
-      var DY;
-      null === (DY = (0, SY.g)()) || void 0 === DY || DY.closeGame(YY), (0, DA.d)().close(YY), rY || (0, sY.n)({
+    function fB(TT, oT) {
+      var IT;
+      null === (IT = (0, wT.i)()) || void 0 === IT || IT.closeGame(TT), (0, Wz.e)().close(TT), oT || (0, LT.o)({
         websocketUrl: null
       })
     }
 
-    function Tg() {
-      const YY = pR;
-      if (null === YY) return;
-      const rY = (0, SY.g)();
-      ZO || null === rY || rY.wV(YY) ? pR = null : performance.now() - cR.pause >= eI && (cR.pause = performance.now(), console.warn(`${OI} the cmd ring had no room for SetPaused(${YY}): written before the next frame`))
+    function CB() {
+      const TT = PW;
+      if (null === TT) return;
+      const oT = (0, wT.i)();
+      HX || null === oT || oT.OE(TT) ? PW = null : performance.now() - aW.pause >= jk && (aW.pause = performance.now(), console.warn(`${xk} the cmd ring had no room for SetPaused(${TT}): written before the next frame`))
     }
 
-    function eg() {
-      const YY = bR;
-      bR = null, null === YY || void 0 === YY || YY.resume.dispose()
+    function jB() {
+      const TT = bW;
+      bW = null, null === TT || void 0 === TT || TT.resume.dispose()
     }
 
-    function Ng(YY, rY) {
-      var DY, FY;
+    function JB(TT, oT) {
+      var IT, iT;
       const {
-        heldConn: AY
-      } = YY, IY = YY.resume.resumingConn;
-      YY.heldConn = 0, YY.pendingHold = null, bR === YY && (bR = null), "left" === rY ? YY.resume.leave() : YY.resume.dispose(), 0 === qR || (null === (DY = PI) || void 0 === DY ? void 0 : DY.conn) !== qR || "left" === rY && (null === (FY = fR) || void 0 === FY ? void 0 : FY.conn) === qR || Kg(qR), "gaveUp" === rY && 0 !== IY && Kg(IY), 0 !== AY && "refused" !== rY && (console.info(`${OI} the game held through its drop ${"left"===rY?"was left":"is given up"}`), null === dI || dI.isStopped || Hg(dI, "close", AY), lg(AY, !1))
+        heldConn: zT
+      } = TT, kT = TT.resume.resumingConn;
+      TT.heldConn = 0, TT.pendingHold = null, bW === TT && (bW = null), "left" === oT ? TT.resume.leave() : TT.resume.dispose(), 0 === NW || (null === (IT = IW) || void 0 === IT ? void 0 : IT.conn) !== NW || "left" === oT && (null === (iT = qW) || void 0 === iT ? void 0 : iT.conn) === NW || YB(NW), "gaveUp" === oT && 0 !== kT && YB(kT), 0 !== zT && "refused" !== oT && (console.info(`${xk} the game held through its drop ${"left"===oT?"was left":"is given up"}`), null === sk || sk.isStopped || QB(sk, "close", zT), fB(zT, !1))
     }
 
-    function Bg(YY, rY) {
-      const DY = rY.indexOf(":");
+    function UB(TT, oT) {
+      const IT = oT.indexOf(":");
       return {
-        roomId: DY < 0 ? YY.roomId : rY.slice(0, DY),
-        roomToken: rY.slice(DY + 1)
+        roomId: IT < 0 ? TT.roomId : oT.slice(0, IT),
+        roomToken: oT.slice(IT + 1)
       }
     }
 
-    function cg(YY) {
-      var rY;
-      XR = YY, YY.conn === qR && (qR = 0);
-      const DY = bR;
-      null !== DY && (null === (rY = wR) || void 0 === rY ? void 0 : rY.conn) === YY.conn && DY.resume.onInitialInfo(YY)
+    function aB(TT) {
+      var oT;
+      yW = TT, TT.conn === NW && (NW = 0);
+      const IT = bW;
+      null !== IT && (null === (oT = pW) || void 0 === oT ? void 0 : oT.conn) === TT.conn && IT.resume.onInitialInfo(TT)
     }
 
-    function Kg(YY) {
-      var rY;
-      const DY = PI;
-      (null === DY || void 0 === DY ? void 0 : DY.conn) === YY && (DY.left = !0, null === (rY = (0, SY.g)()) || void 0 === rY || rY.socketLeft(), (0, sY.n)({
+    function YB(TT) {
+      var oT;
+      const IT = IW;
+      (null === IT || void 0 === IT ? void 0 : IT.conn) === TT && (IT.left = !0, null === (oT = (0, wT.i)()) || void 0 === oT || oT.socketLeft(), (0, LT.o)({
         websocketUrl: null
-      }), LO(YY) ? setTimeout((() => {
-        PI === DY && Wg()
-      }), ZY.d) : Wg())
+      }), zB(TT) ? setTimeout((() => {
+        IW === IT && eB()
+      }), JT.h) : eB())
     }
 
-    function Hg(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        AY = !1;
-      return Ea(YY, (() => {
+    function QB(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        zT = !1;
+      return RF(TT, (() => {
         const {
-          net: IY
-        } = YY.rings;
-        AY = "open" === rY ? IY.writeOpen(DY, FY) : IY.writeClose(DY, FY), AY || YY.crash(tr.s, `a socket ${rY} did not fit the net-in ring`)
-      })), AY
+          net: kT
+        } = TT.rings;
+        zT = "open" === oT ? kT.writeOpen(IT, iT) : kT.writeClose(IT, iT), zT || TT.crash(oI.q, `a socket ${oT} did not fit the net-in ring`)
+      })), zT
     }
 
-    function zg(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      if (Zg()) {
-        const FY = "browser" === YY && (0, rA.R)() ? "blockedAfterLoss" : "unsupported";
-        return (0, SD.reportUnsupportedFallback)(YY, FY, rY, DY), void Cg(`the wasm client can't run here (${rY}; ${FY})`, FY)
-      }(0, SD.showUnsupported)(YY, "unsupported", rY, DY)
+    function OB(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      if (HB()) {
+        const iT = "browser" === TT && (0, kz.L)() ? "blockedAfterLoss" : "unsupported";
+        return (0, eI.reportUnsupportedFallback)(TT, iT, oT, IT), void nB(`the wasm client can't run here (${oT}; ${iT})`, iT)
+      }(0, eI.showUnsupported)(TT, "unsupported", oT, IT)
     }
 
-    function Zg() {
-      return BO && "wasm" !== (0, vr.f)(window.location.search)
+    function HB() {
+      return UX && "wasm" !== (0, So.g)(window.location.search)
     }
 
-    function Cg(YY, rY) {
-      console.warn(`${OI} ${YY}: reloading on the JS client`), null !== rY && (0, vr.n)(rY), (0, vr.l)(null === rY ? "reloadOntoJs" : "decline");
-      const DY = () => {
-        (0, XY.h)(vr.t)
+    function nB(TT, oT) {
+      console.warn(`${xk} ${TT}: reloading on the JS client`), null !== oT && (0, So.s)(oT), (0, So.r)(null === oT ? "reloadOntoJs" : "decline");
+      const IT = () => {
+        (0, lT.f)(So.w)
       };
-      (0, SD.flushCrashReports)(XY.b).then(DY, DY)
+      (0, eI.flushCrashReports)(lT.b).then(IT, IT)
     }
 
-    function fg(YY, rY, DY, FY) {
-      return IO(YY, rY, DY, FY)
+    function qB(TT, oT, IT, iT) {
+      return DX(TT, oT, IT, iT)
     }
 
-    function jg() {
-      null === gO || null === dI || dI.isStopped || ZO || null !== uR || null === KI || (uR = gO(KI, Mg, wg().follow))
+    function ZB() {
+      null === cX || null === sk || sk.isStopped || HX || null !== rW || null === Yk || (rW = cX(Yk, GB, pB().follow))
     }
 
-    function hg() {
-      var YY, rY, DY;
-      return null !== (YY = null === (rY = MI) || void 0 === rY || null === (DY = rY.textures) || void 0 === DY ? void 0 : DY.files()) && void 0 !== YY ? YY : null
+    function lB() {
+      var TT, oT, IT;
+      return null !== (TT = null === (oT = Gk) || void 0 === oT || null === (IT = oT.textures) || void 0 === IT ? void 0 : IT.files()) && void 0 !== TT ? TT : null
     }
 
-    function dg(YY) {
-      DY.e(259).then((() => DY(39842))).then((rY => {
+    function sB(TT) {
+      IT.e(259).then((() => IT(39520))).then((oT => {
         let {
-          setIconFileOverrides: DY
-        } = rY;
-        DY(YY)
-      }), (YY => {
-        console.warn(`${OI} the item icons couldn't take the texture pack's files`, YY)
+          setIconFileOverrides: IT
+        } = oT;
+        IT(TT)
+      }), (TT => {
+        console.warn(`${xk} the item icons couldn't take the texture pack's files`, TT)
       }))
     }
 
-    function Jg(YY) {
-      wg().follow((rY => {
-        null !== rY && Promise.all([Promise.all([DY.e(188), DY.e(45)]).then((() => DY(42389))), (0, rA.L)()]).then((YY => {
+    function tB(TT) {
+      pB().follow((oT => {
+        null !== oT && Promise.all([Promise.all([IT.e(188), IT.e(45)]).then((() => IT(42144))), (0, kz.F)()]).then((TT => {
           let [{
-            followPagePackFiles: DY
-          }, FY] = YY;
-          const AY = null === FY || (0, Lr.l)(FY) ? "webgl" : FY.backend;
-          DY(rY, pF.i, AY, (YY => {
-            pF.i.setPageFiles(YY)
-          }), Mg)
-        }), (rY => {
-          console.warn(`${OI} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, rY), YY()
+            followPagePackFiles: IT
+          }, iT] = TT;
+          const zT = null === iT || (0, TI.r)(iT) ? "webgl" : iT.backend;
+          IT(oT, yi.f, zT, (TT => {
+            yi.f.setPageFiles(TT)
+          }), GB)
+        }), (oT => {
+          console.warn(`${xk} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, oT), TT()
         }))
       }))
     }
 
-    function Mg(YY, rY) {
-      console.warn(`${OI} ${YY}`, rY)
+    function GB(TT, oT) {
+      console.warn(`${xk} ${TT}`, oT)
     }
 
-    function wg() {
-      return JI ??= new WA({
-        load: YY => Promise.all([DY.e(188), DY.e(51)]).then((() => DY(42394))).then((rY => {
+    function pB() {
+      return tk ??= new wz({
+        load: TT => Promise.all([IT.e(188), IT.e(51)]).then((() => IT(42147))).then((oT => {
           let {
-            startPageTexturePackFeed: DY
-          } = rY;
-          return DY(Mg, YY)
+            startPageTexturePackFeed: IT
+          } = oT;
+          return IT(GB, TT)
         })),
-        store: VD.i,
-        gy: YY => {
-          kI.then((() => {
-            (0, SD.reportTexturePackFeedLoadFailure)(YY, XI)
+        store: mI.c,
+        Bc: TT => {
+          dk.then((() => {
+            (0, eI.reportTexturePackFeedLoadFailure)(TT, yk)
           }))
         }
-      }), JI
+      }), tk
     }
-    const bg = YY => wg().follow(YY);
+    const bB = TT => pB().follow(TT);
 
-    function Xg() {
-      return wg().loaded()
+    function yB() {
+      return pB().loaded()
     }
-    const qg = function(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          AY = 0;
-        return async function(IY, RY) {
-          let OY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const gY = ++AY,
-            aY = FY() + rY,
-            vY = await
-          function(YY, rY) {
-            let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((FY => {
-              const AY = setTimeout((() => {
-                FY(null), YY.then((YY => {
-                  null !== YY && (YY.joinedWithout(), DY(YY))
+    const NB = function(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          zT = 0;
+        return async function(kT, WT) {
+          let XT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const BT = ++zT,
+            FT = iT() + oT,
+            ST = await
+          function(TT, oT) {
+            let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((iT => {
+              const zT = setTimeout((() => {
+                iT(null), TT.then((TT => {
+                  null !== TT && (TT.joinedWithout(), IT(TT))
                 }))
-              }), rY);
-              YY.then((YY => {
-                clearTimeout(AY), FY(YY)
+              }), oT);
+              TT.then((TT => {
+                clearTimeout(zT), iT(TT)
               }))
             }))
-          }(YY(IY), rY, (YY => {
-            gY === AY && OY() && RY(YY, FY() + rY).catch((YY => {
-              DY("the texture pack step after the join failed", YY)
+          }(TT(kT), oT, (TT => {
+            BT === zT && XT() && WT(TT, iT() + oT).catch((TT => {
+              IT("the texture pack step after the join failed", TT)
             }))
           }));
-          return null === vY ? null : RY(vY, aY)
+          return null === ST ? null : WT(ST, FT)
         }
-      }((YY => (0, rr.l)(YY) ? wg().request() : wg().forJoin()), oA.c, Mg),
-      pg = function(YY, rY) {
-        let DY = !1;
+      }((TT => (0, oo.m)(TT) ? pB().request() : pB().forJoin()), hz.d, GB),
+      PB = function(TT, oT) {
+        let IT = !1;
         return {
-          setGamePackConfirm: YY => {
-            DY = null !== YY, rY(YY)
+          setGamePackConfirm: TT => {
+            IT = null !== TT, oT(TT)
           },
-          packStep: (rY, FY, AY) => YY(rY, FY, (() => DY && AY()))
+          packStep: (oT, iT, zT) => TT(oT, iT, (() => IT && zT()))
         }
-      }(qg, (YY => {
-        wg().setGamePackConfirm(YY)
+      }(NB, (TT => {
+        pB().setGamePackConfirm(TT)
       }));
 
-    function kg(YY) {
-      pg.setGamePackConfirm(YY)
+    function dB(TT) {
+      PB.setGamePackConfirm(TT)
     }
 
-    function Gg() {
-      if (ZO || null !== iO || null === aO || null === sO) return;
+    function VB() {
+      if (HX || null !== gX || null === KX || null === AX) return;
       const {
-        backend: YY,
-        canvas: rY,
-        fallbackReason: DY,
-        adapterVendor: FY
-      } = sO, AY = aO;
-      aO = null;
+        backend: TT,
+        canvas: oT,
+        fallbackReason: IT,
+        adapterVendor: iT
+      } = AX, zT = KX;
+      KX = null;
       try {
-        iO = AY({
-          backend: YY,
-          canvas: rY,
-          fallbackReason: DY,
-          adapterVendor: FY,
-          joinedGame: () => ZO ? null : fR,
-          inGame: ng,
-          shaderPackRuns: GO,
-          msaa: () => uO > 1,
-          writeCmd: (YY, rY, DY) => null !== KI && KI(YY, rY, DY),
+        gX = zT({
+          backend: TT,
+          canvas: oT,
+          fallbackReason: IT,
+          adapterVendor: iT,
+          joinedGame: () => HX ? null : qW,
+          inGame: oF,
+          shaderPackRuns: VX,
+          msaa: () => rX > 1,
+          writeCmd: (TT, oT, IT) => null !== Yk && Yk(TT, oT, IT),
           takeFailedMeshJobs: () => {
-            var YY, rY;
-            return null !== (YY = null === (rY = YR) || void 0 === rY ? void 0 : rY.takeFailedMeshJobs()) && void 0 !== YY ? YY : 0
+            var TT, oT;
+            return null !== (TT = null === (oT = WW) || void 0 === oT ? void 0 : oT.takeFailedMeshJobs()) && void 0 !== TT ? TT : 0
           }
         })
-      } catch (IY) {
-        console.error(`${OI} the frame telemetry didn't start`, IY)
+      } catch (kT) {
+        console.error(`${xk} the frame telemetry didn't start`, kT)
       }
     }
 
-    function xg(YY, rY) {
+    function TF(TT, oT) {
       try {
-        var DY, FY, AY;
-        const IY = DO && null !== (DY = null === (FY = dI) || void 0 === FY || null === (AY = FY.lastHeader) || void 0 === AY ? void 0 : AY.renderPending) && void 0 !== DY ? DY : 0;
-        (0, pD.f)(rY, YY, ng() && !(null !== AA), IY)
-      } catch (IY) {
-        (0, pD.u)(), console.error(`${OI} the quality steps stopped`, IY)
+        var IT, iT, zT;
+        const kT = BX && null !== (IT = null === (iT = sk) || void 0 === iT || null === (zT = iT.lastHeader) || void 0 === zT ? void 0 : zT.renderPending) && void 0 !== IT ? IT : 0;
+        (0, pI.j)(oT, TT, oF() && !(null !== Bz), kT)
+      } catch (kT) {
+        (0, pI.v)(), console.error(`${xk} the quality steps stopped`, kT)
       }
     }
 
-    function ng() {
-      return null !== fR && TO === fR && !ZO
+    function oF() {
+      return null !== qW && CX === qW && !HX
     }
 
-    function Pg(YY) {
-      const rY = iO;
-      iO = null;
+    function IF(TT) {
+      const oT = gX;
+      gX = null;
       try {
-        null === rY || void 0 === rY || rY.stop()
+        null === oT || void 0 === oT || oT.stop()
       } catch {}
-      console.error(`${OI} the frame telemetry threw: it stops`, YY)
+      console.error(`${xk} the frame telemetry threw: it stops`, TT)
     }
 
-    function Ug(YY) {
-      var rY, DY, FY, AY;
-      if ((0, DA.d)().fire(YY), "message" === YY.type) {
-        if (eR++, YY.vv === Jr.Ec.ERROR && null !== hR) {
-          var IY;
+    function iF(TT) {
+      var oT, IT, iT, zT;
+      if ((0, Wz.e)().fire(TT), "message" === TT.type) {
+        if (jW++, TT.US === Ho.Kc.ERROR && null !== lW) {
+          var kT;
           const {
-            text: rY,
-            dropsCache: DY
-          } = (0, zY.m)((new TextDecoder).decode(YY.payload));
-          LR ||= DY, (null === (IY = xR) || void 0 === IY ? void 0 : IY.conn) === YY.conn && (tR = rY)
-        } else if (YY.vv === Mr._b.ResumeComplete) {
-          var RY;
-          null === (RY = bR) || void 0 === RY || RY.resume.onResumeComplete(YY.conn)
+            text: oT,
+            dropsCache: IT
+          } = (0, jT.q)((new TextDecoder).decode(TT.payload));
+          zX ||= IT, (null === (kT = TX) || void 0 === kT ? void 0 : kT.conn) === TT.conn && (kX = oT)
+        } else if (TT.US === no.$b.ResumeComplete) {
+          var WT;
+          null === (WT = bW) || void 0 === WT || WT.resume.onResumeComplete(TT.conn)
         }
         return
       }
-      YY.phase === Jr.C.Left ? NR = YY.conn : YY.phase === Jr.C.Activated && (null === (rY = xR) || void 0 === rY ? void 0 : rY.conn) === YY.conn ? xR.activated = !0 : YY.phase === Jr.C.Resumed ? function(YY) {
-        var rY, DY;
-        qR = YY;
-        const FY = bR;
-        if (null === FY || 0 === FY.heldConn || (null === (rY = PI) || void 0 === rY ? void 0 : rY.conn) !== YY || !PI.resume || null === wR) return;
-        console.info(`${OI} the game resumed on conn ${YY}, waiting for its InitialInfo`);
-        const AY = FY.heldConn;
-        FY.heldConn = 0, PI.resume = !1, wR.conn = YY, (null === (DY = JR) || void 0 === DY ? void 0 : DY.conn) === AY && (JR = {
-          conn: YY,
-          info: JR.info
-        }), ir.b.apply({
+      TT.phase === Ho.F.Left ? JW = TT.conn : TT.phase === Ho.F.Activated && (null === (oT = TX) || void 0 === oT ? void 0 : oT.conn) === TT.conn ? TX.activated = !0 : TT.phase === Ho.F.Resumed ? function(TT) {
+        var oT, IT;
+        NW = TT;
+        const iT = bW;
+        if (null === iT || 0 === iT.heldConn || (null === (oT = IW) || void 0 === oT ? void 0 : oT.conn) !== TT || !IW.resume || null === pW) return;
+        console.info(`${xk} the game resumed on conn ${TT}, waiting for its InitialInfo`);
+        const zT = iT.heldConn;
+        iT.heldConn = 0, IW.resume = !1, pW.conn = TT, (null === (IT = tW) || void 0 === IT ? void 0 : IT.conn) === zT && (tW = {
+          conn: TT,
+          info: tW.info
+        }), xo.e.apply({
           shopInfo: null,
-          _shopVersion: Dr.e
+          _shopVersion: Io.e
         })
-      }(YY.conn) : YY.phase === Jr.C.Held ? function(YY) {
-        var rY;
-        const DY = bR,
-          FY = null !== (rY = null === DY || void 0 === DY ? void 0 : DY.pendingHold) && void 0 !== rY ? rY : null;
-        if (null !== DY && null !== FY && FY.conn === YY) return DY.pendingHold = null, DY.heldConn = YY, qR = 0, console.warn(`${OI} the core holds the game, reconnecting`), void DY.resume.onDropped(FY.token);
-        if (YY === qR) {
-          qR = 0;
-          const rY = dI;
-          null === rY || rY.isStopped || (console.info(`${OI} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), Hg(rY, "close", YY))
+      }(TT.conn) : TT.phase === Ho.F.Held ? function(TT) {
+        var oT;
+        const IT = bW,
+          iT = null !== (oT = null === IT || void 0 === IT ? void 0 : IT.pendingHold) && void 0 !== oT ? oT : null;
+        if (null !== IT && null !== iT && iT.conn === TT) return IT.pendingHold = null, IT.heldConn = TT, NW = 0, console.warn(`${xk} the core holds the game, reconnecting`), void IT.resume.onDropped(iT.token);
+        if (TT === NW) {
+          NW = 0;
+          const oT = sk;
+          null === oT || oT.isStopped || (console.info(`${xk} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), QB(oT, "close", TT))
         }
-      }(YY.conn) : YY.phase === Jr.C.Closed && (null === (DY = bR) || void 0 === DY || null === (FY = DY.pendingHold) || void 0 === FY ? void 0 : FY.conn) === YY.conn && (bR.heldConn === YY.conn ? function(YY) {
-        const rY = YY.heldConn,
-          DY = YY.dropCode;
-        Ng(YY, "refused"), console.info(`${OI} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          lg(rY, !1), Og(rY, DY, "", !0)
+      }(TT.conn) : TT.phase === Ho.F.Closed && (null === (IT = bW) || void 0 === IT || null === (iT = IT.pendingHold) || void 0 === iT ? void 0 : iT.conn) === TT.conn && (bW.heldConn === TT.conn ? function(TT) {
+        const oT = TT.heldConn,
+          IT = TT.dropCode;
+        JB(TT, "refused"), console.info(`${xk} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          fB(oT, !1), xB(oT, IT, "", !0)
         }))
-      }(bR) : bR.pendingHold = null);
-      const OY = Object.keys(Jr.C).find((rY => Jr.C[rY] === YY.phase)),
-        gY = 0 === YY.code ? "" : ` (code ${YY.code})`;
-      console.info(`${OI} conn ${YY.conn}: ${null!==OY&&void 0!==OY?OY:YY.phase}${gY}, ${eR} raw messages so far`), (null === (AY = fR) || void 0 === AY ? void 0 : AY.conn) !== YY.conn || YY.phase !== Jr.C.Left && YY.phase !== Jr.C.Closed || UO(null), dR !== YY.conn || YY.phase !== Jr.C.Left && YY.phase !== Jr.C.Closed || (dR = null, null === fR && null === hR && kF.d.setGame(void 0));
-      for (const vY of [...rO]) try {
-        vY(YY.conn, YY.phase, YY.code)
-      } catch (aY) {
-        (0, wr.m)(aY, `${OI} a connection listener threw`)
+      }(bW) : bW.pendingHold = null);
+      const XT = Object.keys(Ho.F).find((oT => Ho.F[oT] === TT.phase)),
+        BT = 0 === TT.code ? "" : ` (code ${TT.code})`;
+      console.info(`${xk} conn ${TT.conn}: ${null!==XT&&void 0!==XT?XT:TT.phase}${BT}, ${jW} raw messages so far`), (null === (zT = qW) || void 0 === zT ? void 0 : zT.conn) !== TT.conn || TT.phase !== Ho.F.Left && TT.phase !== Ho.F.Closed || iB(null), sW !== TT.conn || TT.phase !== Ho.F.Left && TT.phase !== Ho.F.Closed || (sW = null, null === qW && null === lW && Ni.e.setGame(void 0));
+      for (const ST of [...XX]) try {
+        ST(TT.conn, TT.phase, TT.code)
+      } catch (FT) {
+        (0, qo.m)(FT, `${xk} a connection listener threw`)
       }
     }
 
-    function Lg() {
-      (0, rA.m)(), queueMicrotask((() => {
+    function zF() {
+      (0, kz.n)(), queueMicrotask((() => {
         try {
-          ua()
-        } catch (YY) {
-          console.warn(`${OI} stopping before the reload threw`, YY)
-        }(0, SD.flushCrashReports)(XY.b).then(XY.j, XY.j)
+          rF()
+        } catch (TT) {
+          console.warn(`${xk} stopping before the reload threw`, TT)
+        }(0, eI.flushCrashReports)(lT.b).then(lT.j, lT.j)
       }))
     }
 
-    function tg() {
-      const YY = dI;
-      null === YY || YY.isStopped || null === PI || TR || !YY.hasPendingCommands() || ra(YY, !1, "budget")
+    function kF() {
+      const TT = sk;
+      null === TT || TT.isStopped || null === IW || CW || !TT.hasPendingCommands() || XF(TT, !1, "budget")
     }
 
-    function Ya(YY) {
-      var rY;
-      const DY = fR;
-      YY.persisted || null === DY || (null === (rY = PI) || void 0 === rY ? void 0 : rY.conn) !== DY.conn || PI.left || DY.leave()
+    function WF(TT) {
+      var oT;
+      const IT = qW;
+      TT.persisted || null === IT || (null === (oT = IW) || void 0 === oT ? void 0 : oT.conn) !== IT.conn || IW.left || IT.leave()
     }
 
-    function ra(YY, rY, FY) {
-      let AY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const IY = TR;
-      TR = !0;
+    function XF(TT, oT, iT) {
+      let zT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const kT = CW;
+      CW = !0;
       try {
-        return function(YY, rY, FY, AY) {
-          var IY, RY, OY, gY;
-          if (ZO) return !1;
-          if (Ea(YY, Fa), ZO || YY.isStopped) return !1;
-          ga() && ER("modelsIn");
-          Tg(), SR = performance.now(), NR = null, BR = !1, (0, VY.H)(), null === (IY = RR) || void 0 === IY || IY.beforeFrame(), IF(SR, YY), (0, VY.B)(SR, Aa), lR = !0;
-          const aY = rY && Oa();
-          let vY;
+        return function(TT, oT, iT, zT) {
+          var kT, WT, XT, BT;
+          if (HX) return !1;
+          if (RF(TT, FF), HX || TT.isStopped) return !1;
+          cF() && RW("modelsIn");
+          CB(), EW = performance.now(), JW = null, UW = !1, (0, hT.S)(), null === (kT = LW) || void 0 === kT || kT.beforeFrame(), Xi(EW, TT), (0, hT.J)(EW, SF), fW = !0;
+          const FT = oT && xF();
+          let ST;
           try {
-            vY = YY.frame(SR, aY, FY)
+            ST = TT.frame(EW, FT, iT)
           } finally {
-            lR = !1
+            fW = !1
           }
-          if (!vY) return !1;
-          vO.observe(null !== (RY = null === (OY = YY.lastHeader) || void 0 === OY ? void 0 : OY.chunksCancelled) && void 0 !== RY ? RY : 0);
-          const uY = YY.lastFrameKind,
-            sY = (0, Nr.e)(uY);
-          (function(YY) {
-            null !== CA && CA.afterFrame(performance.now(), YY)
-          })(sY), null === (gY = yO) || void 0 === gY || gY.frame(YY, SR, uY), rY && (eO = sY);
-          sY && (0, lr.d)(SR);
-          if (null !== iO) try {
-            iO.frameRan(YY, SR, performance.now(), uY)
-          } catch (yY) {
-            Pg(yY)
+          if (!ST) return !1;
+          MX.observe(null !== (WT = null === (XT = TT.lastHeader) || void 0 === XT ? void 0 : XT.chunksCancelled) && void 0 !== WT ? WT : 0);
+          const DT = TT.lastFrameKind,
+            LT = (0, uo.e)(DT);
+          (function(TT) {
+            null !== Oz && Oz.afterFrame(performance.now(), TT)
+          })(LT), null === (BT = hX) || void 0 === BT || BT.frame(TT, EW, DT), oT && (jX = LT);
+          LT && (0, mo.e)(EW);
+          if (null !== gX) try {
+            gX.frameRan(TT, EW, performance.now(), DT)
+          } catch (cT) {
+            IF(cT)
           }
-          "drawn" === uY && Ra() && function() {
-            for (const YY of [...tF]) YY()
+          "drawn" === DT && LF() && function() {
+            for (const TT of [...iz]) TT()
           }();
-          YY.forEachNetOut(aa);
-          const iY = PI;
-          null !== NR && (null === iY || void 0 === iY ? void 0 : iY.conn) === NR && va(iY, ZY.j);
-          (function(YY) {
-            var rY;
-            if (WO) return;
-            null === VO && Oa() && (VO = performance.now());
-            if (null === hR && null === fR) return;
-            null === VO || SO || (SO = !0, (0, zr.l)("wasm_startup_loaded", VO));
-            let DY = 0;
-            null !== fR ? DY = -1 : !0 === (null === (rY = xR) || void 0 === rY ? void 0 : rY.activated) && (DY = ~Mr.J.TerrainDrawn);
-            const FY = YY.headerWord(Mr.B.LoadSteps) & DY & ~mO;
-            if (0 === FY) return;
-            mO |= FY;
-            const AY = performance.now();
-            for (const [IY, RY] of Object.entries(Ia)) 0 !== (FY & Mr.J[IY]) && (0, zr.l)(RY, AY)
-          })(YY), rY && function(YY) {
-            var rY, FY, AY;
-            if (null === fR || !Oa()) return;
-            null === lO || TO === fR && !lO.frame(SR, 0 !== (YY.headerWord(Mr.B.LoadSteps) & Mr.J.TerrainDrawn)) || (lO = null);
-            const IY = YY.lastHeader,
-              RY = !DO || 0 === (null === IY || void 0 === IY ? void 0 : IY.renderPending);
-            !EO && RY && (EO = !0, performance.mark(QI));
-            if (TO === fR) return;
-            const OY = null !== (rY = null === IY || void 0 === IY ? void 0 : IY.firstView) && void 0 !== rY ? rY : Jr.S.NotYet;
-            if (DO && OY === Jr.S.NotYet) return;
-            if (WO && (!0 !== (null === (FY = (0, SY.g)()) || void 0 === FY ? void 0 : FY.isSessionLive) || !RY)) return;
-            TO = fR;
-            const gY = fR;
+          TT.forEachNetOut(KF);
+          const xT = IW;
+          null !== JW && (null === xT || void 0 === xT ? void 0 : xT.conn) === JW && MF(xT, JT.o);
+          (function(TT) {
+            var oT;
+            if (eX) return;
+            null === vX && xF() && (vX = performance.now());
+            if (null === lW && null === qW) return;
+            null === vX || EX || (EX = !0, (0, jo.j)("wasm_startup_loaded", vX));
+            let IT = 0;
+            null !== qW ? IT = -1 : !0 === (null === (oT = TX) || void 0 === oT ? void 0 : oT.activated) && (IT = ~no.J.TerrainDrawn);
+            const iT = TT.headerWord(no.A.LoadSteps) & IT & ~uX;
+            if (0 === iT) return;
+            uX |= iT;
+            const zT = performance.now();
+            for (const [kT, WT] of Object.entries(DF)) 0 !== (iT & no.J[kT]) && (0, jo.j)(WT, zT)
+          })(TT), oT && function(TT) {
+            var oT, iT, zT;
+            if (null === qW || !xF()) return;
+            null === fX || CX === qW && !fX.frame(EW, 0 !== (TT.headerWord(no.A.LoadSteps) & no.J.TerrainDrawn)) || (fX = null);
+            const kT = TT.lastHeader,
+              WT = !BX || 0 === (null === kT || void 0 === kT ? void 0 : kT.renderPending);
+            !RX && WT && (RX = !0, performance.mark(wk));
+            if (CX === qW) return;
+            const XT = null !== (oT = null === kT || void 0 === kT ? void 0 : kT.firstView) && void 0 !== oT ? oT : Ho.V.NotYet;
+            if (BX && XT === Ho.V.NotYet) return;
+            if (eX && (!0 !== (null === (iT = (0, wT.i)()) || void 0 === iT ? void 0 : iT.isSessionLive) || !WT)) return;
+            CX = qW;
+            const BT = qW;
             if (setTimeout((() => {
-                fR === gY && (0, zr.i)()
-              }), 0), null === (AY = QR) || void 0 === AY || AY.playable(), function() {
-                clearTimeout(nI), nI = setTimeout((() => {
-                  ng() && Sa((YY => {
+                qW === BT && (0, jo.g)()
+              }), 0), null === (zT = wW) || void 0 === zT || zT.playable(), function() {
+                clearTimeout(oW), oW = setTimeout((() => {
+                  oF() && EF((TT => {
                     let {
-                      prefetchWorldgenWorker: rY
-                    } = YY;
-                    rY()
+                      prefetchWorldgenWorker: oT
+                    } = TT;
+                    oT()
                   }))
-                }), cI)
-              }(), WO) return;
-            WO = !0, performance.mark(yI), (0, NA.q)("render") && Promise.all([DY.e(74), DY.e(47)]).then((() => DY(4260))).then((YY => {
+                }), ak)
+              }(), eX) return;
+            eX = !0, performance.mark(hk), (0, Cz.r)("render") && Promise.all([IT.e(74), IT.e(47)]).then((() => IT(4183))).then((TT => {
               let {
-                renderDebugPlayable: rY
-              } = YY;
-              rY()
-            }), (YY => {
-              console.warn("The render debug topic didn't load", YY)
+                renderDebugPlayable: oT
+              } = TT;
+              oT()
+            }), (TT => {
+              console.warn("The render debug topic didn't load", TT)
             }));
-            const aY = Math.round(performance.now());
-            if (DO && OY !== Jr.S.Drawn) {
-              const YY = OY === Jr.S.HeldBackstop ? "held_draws" : "long";
-              if (console.warn(`${OI} playable at ${aY} ms on the first view's ${YY} backstop: it wasn't drawn whole in time`), (0, zr.l)("wasm_view_backstop", aY, YY), "long" === YY) {
-                var vY, uY;
-                const YY = null !== (vY = null === (uY = wR) || void 0 === uY ? void 0 : uY.game) && void 0 !== vY ? vY : "";
-                lO = new lD.b((() => {
-                  (0, SD.reportFirstViewNoTerrain)(YY, XI)
+            const FT = Math.round(performance.now());
+            if (BX && XT !== Ho.V.Drawn) {
+              const TT = XT === Ho.V.HeldBackstop ? "held_draws" : "long";
+              if (console.warn(`${xk} playable at ${FT} ms on the first view's ${TT} backstop: it wasn't drawn whole in time`), (0, jo.j)("wasm_view_backstop", FT, TT), "long" === TT) {
+                var ST, DT;
+                const TT = null !== (ST = null === (DT = pW) || void 0 === DT ? void 0 : DT.game) && void 0 !== ST ? ST : "";
+                fX = new RI.c((() => {
+                  (0, eI.reportFirstViewNoTerrain)(TT, yk)
                 }))
               }
-            } else console.info(`${OI} playable at ${aY} ms${DO?"":" (no renderer)"}`);
-            setTimeout(OO, 0), (0, Qr.e)().catch((YY => {
-              console.error(`${OI} item sprites didn't load, so item particles show the missing texture`, YY)
+            } else console.info(`${xk} playable at ${FT} ms${BX?"":" (no renderer)"}`);
+            setTimeout(xX, 0), (0, Ko.h)().catch((TT => {
+              console.error(`${xk} item sprites didn't load, so item particles show the missing texture`, TT)
             }))
-          }(YY);
-          (0, tr.K)(YY, {
-            worldgen: LI,
-            mesh: YR
+          }(TT);
+          (0, oI.J)(TT, {
+            worldgen: zW,
+            mesh: WW
           }),
-          function(YY) {
-            YY.forEachEvent(OF);
-            for (const rY of RF) try {
-              (0, YF.c)(rY)
-            } catch (yY) {
-              if ((0, wr.f)(yY)) {
-                YY.crashOn(tr.j, yY);
+          function(TT) {
+            TT.forEachEvent(Fi);
+            for (const oT of Bi) try {
+              (0, Ii.c)(oT)
+            } catch (cT) {
+              if ((0, qo.f)(cT)) {
+                TT.crashOn(oI.j, cT);
                 break
               }
-              console.error(`${DF} an input action listener threw`, yY)
+              console.error(`${zi} an input action listener threw`, cT)
             }
-            RF.length = 0
-          }(YY), AY && (0, er.e)();
-          return !YY.isStopped
-        }(YY, rY, "all" === FY || YY.rings.net.cursor >= WI || YY.netKeptFrames >= EI, AY)
+            Bi.length = 0
+          }(TT), zT && (0, Ro.e)();
+          return !TT.isStopped
+        }(TT, oT, "all" === iT || TT.rings.net.cursor >= ek || TT.netKeptFrames >= Rk, zT)
       } finally {
-        TR = IY
+        CW = kT
       }
     }
 
-    function Da(YY) {
-      console.error(`${OI} a frame-start listener threw`, YY)
+    function BF(TT) {
+      console.error(`${xk} a frame-start listener threw`, TT)
     }
 
-    function Fa() {
-      var YY, rY, DY, FY;
-      null === (YY = gR) || void 0 === YY || YY.drain(KI, HI), null === (rY = sR) || void 0 === rY || rY.drain(KI), null === (DY = iR) || void 0 === DY || DY.drain(performance.now()), RO(KI), null === (FY = uR) || void 0 === FY || FY.drain()
+    function FF() {
+      var TT, oT, IT, iT;
+      null === (TT = cW) || void 0 === TT || TT.drain(Yk, Qk), null === (oT = AW) || void 0 === oT || oT.drain(Yk), null === (IT = gW) || void 0 === IT || IT.drain(performance.now()), LX(Yk), null === (iT = rW) || void 0 === iT || iT.drain()
     }
 
-    function Aa(YY) {
-      console.error(`${OI} a before-frame listener threw`, YY)
+    function SF(TT) {
+      console.error(`${xk} a before-frame listener threw`, TT)
     }
-    const Ia = {
+    const DF = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -7523,448 +7759,448 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function Ra() {
-      return DO && Oa()
+    function LF() {
+      return BX && xF()
     }
 
-    function Oa() {
-      return yR && ga()
+    function xF() {
+      return hW && cF()
     }
 
-    function ga() {
-      return null === gR || gR.startupDone
+    function cF() {
+      return null === cW || cW.startupDone
     }
 
-    function aa(YY, rY) {
-      const DY = PI;
-      (null === DY || void 0 === DY ? void 0 : DY.conn) === YY ? va(DY, rY) : HR++
+    function KF(TT, oT) {
+      const IT = IW;
+      (null === IT || void 0 === IT ? void 0 : IT.conn) === TT ? MF(IT, oT) : QW++
     }
 
-    function va(YY, rY) {
+    function MF(TT, oT) {
       const {
-        ws: DY
-      } = YY;
-      return DY.readyState === WebSocket.OPEN ? (DY.send(rY), !0) : DY.readyState === WebSocket.CONNECTING && YY.pendingBytes + rY.byteLength <= TI ? (YY.pending.push(rY.slice()), YY.pendingBytes += rY.byteLength, !0) : (HR++, !1)
+        ws: IT
+      } = TT;
+      return IT.readyState === WebSocket.OPEN ? (IT.send(oT), !0) : IT.readyState === WebSocket.CONNECTING && TT.pendingBytes + oT.byteLength <= Ck ? (TT.pending.push(oT.slice()), TT.pendingBytes += oT.byteLength, !0) : (QW++, !1)
     }
 
-    function ua() {
-      var YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY;
-      ZO = !0, NO.stop(), (0, cA.b)(), CA = null, eg(), (0, VY.D)().unlockPointer(), (0, VY.C)(null), null === (YY = OR) || void 0 === YY || YY(), OR = null, null === (rY = (0, SY.v)()) || void 0 === rY || rY.followCursorAim(null), (0, er.H)(), (0, SY.f)(), bI.stop(), null === (DY = QO) || void 0 === DY || DY(), QO = null, null === (FY = oO) || void 0 === FY || FY(), oO = null, null === (AY = iO) || void 0 === AY || AY.stop(), iO = null, (0, eD.t)(null), null === (IY = UI) || void 0 === IY || IY(), UI = null, null === (RY = LI) || void 0 === RY || RY.stop(), LI = null, null === (OY = YR) || void 0 === OY || OY.stop(), YR = null, null !== (gY = MI) && void 0 !== gY && null !== (aY = gY.textures) && void 0 !== aY && aY.assets && dg(null), null === (vY = MI) || void 0 === vY || vY.stop(), MI = null, wI = null;
-      const WY = rR;
-      rR = null, WY && (WY.stop(), Wa(WY)), null === (uY = sR) || void 0 === uY || uY.dispose(), sR = null, null === (sY = iR) || void 0 === sY || sY.dispose(), iR = null, gR = null, null === (iY = vR) || void 0 === iY || iY(), vR = null, null === (yY = IR) || void 0 === yY || yY(), IR = null, null === (QY = RR) || void 0 === QY || QY.stop(), RR = null, xO(), kF.d.release(), Wg();
-      const EY = uR;
-      uR = null;
+    function rF() {
+      var TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT;
+      HX = !0, JX.stop(), (0, Jz.b)(), Oz = null, jB(), (0, hT.O)().unlockPointer(), (0, hT.M)(null), null === (TT = xW) || void 0 === TT || TT(), xW = null, null === (oT = (0, wT.p)()) || void 0 === oT || oT.followCursorAim(null), (0, Ro.B)(), (0, wT.e)(), bk.stop(), null === (IT = wX) || void 0 === IT || IT(), wX = null, null === (iT = mX) || void 0 === iT || iT(), mX = null, null === (zT = gX) || void 0 === zT || zT.stop(), gX = null, (0, vI.o)(null), null === (kT = iW) || void 0 === kT || kT(), iW = null, null === (WT = zW) || void 0 === WT || WT.stop(), zW = null, null === (XT = WW) || void 0 === XT || XT.stop(), WW = null, null !== (BT = Gk) && void 0 !== BT && null !== (FT = BT.textures) && void 0 !== FT && FT.assets && sB(null), null === (ST = Gk) || void 0 === ST || ST.stop(), Gk = null, pk = null;
+      const rT = XW;
+      XW = null, rT && (rT.stop(), eF(rT)), null === (DT = AW) || void 0 === DT || DT.dispose(), AW = null, null === (LT = gW) || void 0 === LT || LT.dispose(), gW = null, cW = null, null === (xT = MW) || void 0 === xT || xT(), MW = null, null === (cT = DW) || void 0 === cT || cT(), DW = null, null === (KT = LW) || void 0 === KT || KT.stop(), LW = null, TB(), Ni.e.release(), eB();
+      const AT = rW;
+      rW = null;
       try {
-        null === EY || void 0 === EY || EY.dispose()
-      } catch (mY) {
-        console.warn(`${OI} the sky's images didn't release`, mY)
-      }(0, JF.d)(null), null === (oY = jI) || void 0 === oY || oY.pagePreviews().endSession(null === (0, Ar.r)())
+        null === AT || void 0 === AT || AT.dispose()
+      } catch (gT) {
+        console.warn(`${xk} the sky's images didn't release`, gT)
+      }(0, Zi.c)(null), null === (MT = Zk) || void 0 === MT || MT.pagePreviews().endSession(null === (0, zo.n)())
     }
 
-    function sa(YY, rY) {
-      var DY, FY;
-      const AY = null !== (DY = null === (FY = rR) || void 0 === FY ? void 0 : FY.details()) && void 0 !== DY ? DY : {},
-        IY = YY.site === aI || YY.site === vI || YY.site === SD.RENDER_RELOAD_SITE || YY.site === uI ? YY.error instanceof WebAssembly.RuntimeError || YY.error instanceof xr.e : !(0, Lr.n)(YY.error) && (0, tr.F)(YY);
-      IY && YY.error instanceof Error && (0, Ar.R)(YY.error);
-      const RY = IY || YY.site === tr.t ? (0, SD.readTrap)(YY.error) : null,
-        OY = null !== RY && (0, br.h)(RY.kind, RY.refusedBytes) ? RY.refusedBytes : 0,
-        gY = null === DR ? (0, jF.r)(function() {
+    function AF(TT, oT) {
+      var IT, iT;
+      const zT = null !== (IT = null === (iT = XW) || void 0 === iT ? void 0 : iT.details()) && void 0 !== IT ? IT : {},
+        kT = TT.site === Kk || TT.site === Mk || TT.site === eI.RENDER_RELOAD_SITE || TT.site === rk ? TT.error instanceof WebAssembly.RuntimeError || TT.error instanceof yo.d : !(0, TI.s)(TT.error) && (0, oI.C)(TT);
+      kT && TT.error instanceof Error && (0, zo.N)(TT.error);
+      const WT = kT || TT.site === oI.u ? (0, eI.readTrap)(TT.error) : null,
+        XT = null !== WT && (0, Zo.f)(WT.kind, WT.refusedBytes) ? WT.refusedBytes : 0,
+        BT = null === BW ? (0, Hi.o)(function() {
           try {
-            return (0, Ar.x)().buffer.byteLength
+            return (0, zo.t)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), OY, null) : DR.ceilingMayRefuse(OY),
-        aY = OY > 0 && !gY && Zg();
-      var vY;
-      if (aY && ((0, vr.n)("oom"), (0, vr.l)("decline"), zO = !0), ua(), (0, rA.d)()) return console.warn(`${OI} the session stopped at ${YY.site} as the page reloads`, YY.error), void((0, Lr.n)(YY.error) || (null === (vY = YY.header) || void 0 === vY ? void 0 : vY.lastError) === Jr.G.CoreBusy || (0, SD.reportStoppedCore)(YY, rY, RY, {
-        memoryDetails: AY,
-        declined: aY
+        }(), XT, null) : BW.ceilingMayRefuse(XT),
+        FT = XT > 0 && !BT && HB();
+      var ST;
+      if (FT && ((0, So.s)("oom"), (0, So.r)("decline"), OX = !0), rF(), (0, kz.d)()) return console.warn(`${xk} the session stopped at ${TT.site} as the page reloads`, TT.error), void((0, TI.s)(TT.error) || (null === (ST = TT.header) || void 0 === ST ? void 0 : ST.lastError) === Ho.I.CoreBusy || (0, eI.reportStoppedCore)(TT, oT, WT, {
+        memoryDetails: zT,
+        declined: FT
       }));
-      (0, SD.showCrash)(YY, rY, RY, {
-        memoryDetails: AY,
-        declined: aY
+      (0, eI.showCrash)(TT, oT, WT, {
+        memoryDetails: zT,
+        declined: FT
       })
     }
 
-    function ia(YY) {
+    function gF(TT) {
       const {
-        input: rY,
-        net: DY,
-        worker: FY
-      } = YY.rings, AY = YY.optionsDropped, IY = rY.dropped + AY + DY.dropped + FY.dropped + HR;
-      IY !== KR && function(YY, rY) {
-        const DY = performance.now();
-        return !(DY - cR[YY] < eI) && (cR[YY] = DY, console.warn(`${OI} ${rY}`), !0)
-      }("dropped", `${IY} records dropped so far (input ${rY.dropped}, options ${AY}, net ${DY.dropped}, worker ${FY.dropped}, net-out ${HR})`) && (KR = IY)
+        input: oT,
+        net: IT,
+        worker: iT
+      } = TT.rings, zT = TT.optionsDropped, kT = oT.dropped + zT + IT.dropped + iT.dropped + QW;
+      kT !== YW && function(TT, oT) {
+        const IT = performance.now();
+        return !(IT - aW[TT] < jk) && (aW[TT] = IT, console.warn(`${xk} ${oT}`), !0)
+      }("dropped", `${kT} records dropped so far (input ${oT.dropped}, options ${zT}, net ${IT.dropped}, worker ${iT.dropped}, net-out ${QW})`) && (YW = kT)
     }
 
-    function ya() {
-      var YY, rY;
-      const DY = (0, WD.d)();
-      if (null === DY) return null;
-      const FY = (0, mD.l)(DY);
+    function hF() {
+      var TT, oT;
+      const IT = (0, gI.c)();
+      if (null === IT) return null;
+      const iT = (0, wI.g)(IT);
       return {
-        ...FY,
-        horizontal: Math.min(FY.horizontal, null !== (YY = null === (rY = rR) || void 0 === rY ? void 0 : rY.shedDistanceInUse()) && void 0 !== YY ? YY : 1 / 0)
+        ...iT,
+        horizontal: Math.min(iT.horizontal, null !== (TT = null === (oT = XW) || void 0 === oT ? void 0 : oT.shedDistanceInUse()) && void 0 !== TT ? TT : 1 / 0)
       }
     }
 
-    function Qa(YY) {
-      var rY, DY;
+    function wF(TT) {
+      var oT, IT;
       return {
-        samples: DO ? uO : null,
-        sunShadows: YY,
-        renderDistance: null !== (rY = null === (DY = ya()) || void 0 === DY ? void 0 : DY.horizontal) && void 0 !== rY ? rY : null
+        samples: BX ? rX : null,
+        sunShadows: TT,
+        renderDistance: null !== (oT = null === (IT = hF()) || void 0 === IT ? void 0 : IT.horizontal) && void 0 !== oT ? oT : null
       }
     }
 
-    function oa() {
-      var YY, rY, DY;
-      const FY = ya();
+    function mF() {
+      var TT, oT, IT;
+      const iT = hF();
       return {
-        ...null === (YY = rR) || void 0 === YY ? void 0 : YY.pageKillSnapshot(),
-        renderDistance: null !== (rY = null === FY || void 0 === FY ? void 0 : FY.horizontal) && void 0 !== rY ? rY : null,
-        renderDistanceVertical: null !== (DY = null === FY || void 0 === FY ? void 0 : FY.vertical) && void 0 !== DY ? DY : null,
-        chunkCap: FR,
-        budgetBasis: AR,
-        renderBackend: (0, rA.G)()
+        ...null === (TT = XW) || void 0 === TT ? void 0 : TT.pageKillSnapshot(),
+        renderDistance: null !== (oT = null === iT || void 0 === iT ? void 0 : iT.horizontal) && void 0 !== oT ? oT : null,
+        renderDistanceVertical: null !== (IT = null === iT || void 0 === iT ? void 0 : iT.vertical) && void 0 !== IT ? IT : null,
+        chunkCap: FW,
+        budgetBasis: SW,
+        renderBackend: (0, kz.z)()
       }
     }
 
-    function Wa(YY) {
-      console.info(`${OI} wasm memory at the session's end`, YY.details())
+    function eF(TT) {
+      console.info(`${xk} wasm memory at the session's end`, TT.details())
     }
 
-    function Ea(YY, rY) {
-      if (!YY.isStopped) try {
-        rY()
-      } catch (DY) {
-        YY.crash(tr.v, DY)
+    function RF(TT, oT) {
+      if (!TT.isStopped) try {
+        oT()
+      } catch (IT) {
+        TT.crash(oI.v, IT)
       }
     }
 
-    function ma() {
-      return tI ??= DY.e(68).then((() => DY(42400))).catch((YY => {
-        throw tI = null, YY
-      })), tI
+    function uF() {
+      return kW ??= IT.e(68).then((() => IT(42151))).catch((TT => {
+        throw kW = null, TT
+      })), kW
     }
-    async function Va() {
+    async function vF() {
       const {
-        createWorldgenWorker: YY,
-        worldgenWorkerReady: rY
-      } = await ma();
-      return await rY(), YY
+        createWorldgenWorker: TT,
+        worldgenWorkerReady: oT
+      } = await uF();
+      return await oT(), TT
     }
 
-    function Sa(YY) {
-      var rY;
-      null === (rY = tI) || void 0 === rY || rY.then(YY, (() => {}))
+    function EF(TT) {
+      var oT;
+      null === (oT = kW) || void 0 === oT || oT.then(TT, (() => {}))
     }
 
-    function la(YY, rY, DY) {
-      return async function(YY, rY, DY) {
+    function fF(TT, oT, IT) {
+      return async function(TT, oT, IT) {
         let {
-          stop: FY,
-          stillWanted: AY
-        } = DY;
-        const IY = await (0, WF.m)(YY, {
-          stillWanted: AY,
+          stop: iT,
+          stillWanted: zT
+        } = IT;
+        const kT = await (0, gi.h)(TT, {
+          stillWanted: zT,
           beforeReload: async () => {
-            FY(), await (0, SD.flushCrashReports)(XY.b)
+            iT(), await (0, eI.flushCrashReports)(lT.b)
           },
-          reload: XY.j
+          reload: lT.j
         });
-        return IY || rY(), IY
-      }(YY, rY, {
-        stop: ua,
-        stillWanted: DY
+        return kT || oT(), kT
+      }(TT, oT, {
+        stop: rF,
+        stillWanted: IT
       })
     }
-    let Ta = !1;
+    let CF = !1;
 
-    function ea() {
-      return Ta = !0, async function(YY, rY, FY) {
+    function jF() {
+      return CF = !0, async function(TT, oT, iT) {
         const {
-          gamePackSource: AY
-        } = await DY.e(343).then((() => DY(42364)));
-        await pg.packStep(YY, ((DY, FY) => DY.packForGame(YY, AY(rY), FY)), FY)
+          gamePackSource: zT
+        } = await IT.e(343).then((() => IT(42118)));
+        await PB.packStep(TT, ((IT, iT) => IT.packForGame(TT, zT(oT), iT)), iT)
       }(...arguments)
     }
 
-    function Na(YY) {
-      ! function(YY, rY) {
-        YY((YY => {
-          null === YY || void 0 === YY || YY.subscribe((YY => {
+    function JF(TT) {
+      ! function(TT, oT) {
+        TT((TT => {
+          null === TT || void 0 === TT || TT.subscribe((TT => {
             let {
-              pack: DY,
-              gameSource: FY
-            } = YY;
-            rY(null === FY || null === DY ? null : {
-              pack: DY,
-              source: "" === FY ? null : FY
+              pack: IT,
+              gameSource: iT
+            } = TT;
+            oT(null === iT || null === IT ? null : {
+              pack: IT,
+              source: "" === iT ? null : iT
             })
           }))
         }))
-      }(bg, YY)
+      }(bB, TT)
     }
-    let Ba = !1,
-      ca = null,
-      Ka = !1,
-      Ha = !1;
+    let UF = !1,
+      aF = null,
+      YF = !1,
+      QF = !1;
 
-    function za() {
-      var YY;
-      Ba || (Ba = !0, JO("play", wY), (0, sY.k)(new qa), OY.gameBridge.attach(HY), da().catch((() => {})), (0, SY.z)((YY => {
-        tY(YY.setTextHost)
-      })), YY = fa, UR.add(YY), function(YY) {
-        for (const rY of oR) YY(rY);
-        WR.add(YY)
-      }((YY => {
-        Ca(Za[YY])
+    function OF() {
+      var TT;
+      UF || (UF = !0, tX("play", qT), (0, LT.m)(new NF), XT.gameBridge.attach(CT), sF().catch((() => {})), (0, wT.s)((TT => {
+        VT(TT.setTextHost)
+      })), TT = qF, iX.add(TT), function(TT) {
+        for (const oT of mW) TT(oT);
+        eW.add(TT)
+      }((TT => {
+        nF(HF[TT])
       })))
     }
-    const Za = {
-      booted: IY.l.INITIALISE_NOA,
-      texturesIn: IY.l.REGISTRATION,
-      modelsIn: IY.l.SETUP_LIFEFORMS
+    const HF = {
+      booted: kT.j.INITIALISE_NOA,
+      texturesIn: kT.j.REGISTRATION,
+      modelsIn: kT.j.SETUP_LIFEFORMS
     };
 
-    function Ca(YY) {
-      gY.g.vo("matchmakeAndPlayStepCompleted", {
-        step: YY,
+    function nF(TT) {
+      BT.h.XM("matchmakeAndPlayStepCompleted", {
+        step: TT,
         totalSubSteps: 1
       })
     }
 
-    function fa(YY) {
-      if (!Ka) return;
+    function qF(TT) {
+      if (!YF) return;
       const {
-        gameNameWithVariation: rY,
-        lobbyName: DY
-      } = (0, sY.b)();
-      if (YY.code === FY.c.serverUpdating.code) return (new qa).leaveLive(), void ha(rY, DY);
-      gY.g.vo("unwantedLeftGame", {
-        reason: ja(YY),
-        requiresRefresh: YY.requiresRefresh,
-        canReconnect: null !== YY.reconnect,
-        automaticallyReconnect: YY.reconnecting,
-        canPlayAgain: YY.canPlayAgain,
-        gameNameWithVariation: rY,
-        lobbyName: DY
-      }), (new qa).leaveLive()
+        gameNameWithVariation: oT,
+        lobbyName: IT
+      } = (0, LT.e)();
+      if (TT.code === iT.b.serverUpdating.code) return (new NF).leaveLive(), void lF(oT, IT);
+      BT.h.XM("unwantedLeftGame", {
+        reason: ZF(TT),
+        requiresRefresh: TT.requiresRefresh,
+        canReconnect: null !== TT.reconnect,
+        automaticallyReconnect: TT.reconnecting,
+        canPlayAgain: TT.canPlayAgain,
+        gameNameWithVariation: oT,
+        lobbyName: IT
+      }), (new NF).leaveLive()
     }
 
-    function ja(YY) {
-      return null !== YY.reasonKey ? {
-        translationKey: YY.reasonKey
-      } : "gameOrPluginKick" === YY.name ? YY.reason : `You have disconnected from the server.\n${YY.reason}`
+    function ZF(TT) {
+      return null !== TT.reasonKey ? {
+        translationKey: TT.reasonKey
+      } : "gameOrPluginKick" === TT.name ? TT.reason : `You have disconnected from the server.\n${TT.reason}`
     }
 
-    function ha(YY, rY) {
-      var FY;
-      FY = (0, aY.C)(YY, rY), Promise.resolve().then((() => DY(1488))).then((YY => {
+    function lF(TT, oT) {
+      var iT;
+      iT = (0, FT.E)(TT, oT), Promise.resolve().then((() => IT(1468))).then((TT => {
         let {
-          navigatePreserveSearch: rY
-        } = YY;
-        rY(FY)
-      })).catch((YY => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", YY), (0, XY.f)(FY)
+          navigatePreserveSearch: oT
+        } = TT;
+        oT(iT)
+      })).catch((TT => {
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", TT), (0, lT.d)(iT)
       }))
     }
 
-    function da() {
-      return ca ??= Promise.all([DY.e(69), DY.e(72), DY.e(71), DY.e(70), DY.e(83), DY.e(258), DY.e(237), DY.e(211), DY.e(235), DY.e(207), DY.e(46)]).then((() => DY(39778))).then((YY => {
+    function sF() {
+      return aF ??= Promise.all([IT.e(69), IT.e(72), IT.e(71), IT.e(70), IT.e(83), IT.e(258), IT.e(237), IT.e(211), IT.e(235), IT.e(207), IT.e(46)]).then((() => IT(39457))).then((TT => {
         try {
-          YY.attachPlayGameSources()
-        } catch (rY) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", rY),
-            function(YY) {
-              kI.then((rY => {
-                null === rY || rY.isStopped || ZO ? console.warn(`${OI} the play sources threw as they attached, after the client stopped`, YY) : sa({
-                  site: uI,
-                  error: YY,
+          TT.attachPlayGameSources()
+        } catch (oT) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", oT),
+            function(TT) {
+              dk.then((oT => {
+                null === oT || oT.isStopped || HX ? console.warn(`${xk} the play sources threw as they attached, after the client stopped`, TT) : AF({
+                  site: rk,
+                  error: TT,
                   header: null
-                }, XI)
+                }, yk)
               }))
-            }(rY), rY
+            }(oT), oT
         }
-      }), (YY => {
-        throw ca = null, new SY.e(YY)
-      })), ca
+      }), (TT => {
+        throw aF = null, new wT.b(TT)
+      })), aF
     }
-    async function Ja(YY, rY) {
-      za(), Ta = !0, Ka = !0;
-      let DY = {
-          place: YY.place,
-          matchedAt: YY.matchedAt
+    async function tF(TT, oT) {
+      OF(), CF = !0, YF = !0;
+      let IT = {
+          place: TT.place,
+          matchedAt: TT.matchedAt
         },
-        RY = YY.place.gameNameWithVariation;
-      const OY = (0, uY.g)();
-      let gY = null;
-      const aY = await XO({
+        WT = TT.place.gameNameWithVariation;
+      const XT = (0, DT.e)();
+      let BT = null;
+      const FT = await yX({
         matchmake: async () => {
-          let rY = DY;
-          if (DY = null, null === rY) {
-            const DY = await YY.rematch();
-            if (DY.isError()) throw gY = DY.asError().forward(), new Error(DY.asError().message);
-            rY = {
-              place: DY.getValue(),
+          let oT = IT;
+          if (IT = null, null === oT) {
+            const IT = await TT.rematch();
+            if (IT.isError()) throw BT = IT.asError().forward(), new Error(IT.asError().message);
+            oT = {
+              place: IT.getValue(),
               matchedAt: performance.now()
             }
           }
-          RY = rY.place.gameNameWithVariation;
+          WT = oT.place.gameNameWithVariation;
           return {
-            target: await (0, fY.d)(YY.userContext, rY.place, Xg(), OY),
-            matchedAt: rY.matchedAt,
-            freshMs: fY.c
+            target: await (0, aT.f)(TT.userContext, oT.place, yB(), XT),
+            matchedAt: oT.matchedAt,
+            freshMs: aT.d
           }
         },
-        pageReady: da,
-        onFailure: (YY, rY) => {
-          null === gY && function(YY, rY) {
-            (0, SD.reportPageJoinFailure)(YY, XI, rY)
-          }(YY, {
-            sinceJoinStartMs: rY,
-            game: RY
+        pageReady: sF,
+        onFailure: (TT, oT) => {
+          null === BT && function(TT, oT) {
+            (0, eI.reportPageJoinFailure)(TT, yk, oT)
+          }(TT, {
+            sinceJoinStartMs: oT,
+            game: WT
           })
         },
         rejoin: () => () => {},
-        invalidateTrafficCode: () => YY.userContext.invalidateTrafficCode(),
-        signal: rY
+        invalidateTrafficCode: () => TT.userContext.invalidateTrafficCode(),
+        signal: oT
       });
-      switch (aY.kind) {
+      switch (FT.kind) {
         case "joined":
-          if (OY) {
+          if (XT) {
             const {
-              game: YY
-            } = aY;
-            (0, uY.o)((() => {
-              YY.endJoinAd()
+              game: TT
+            } = FT;
+            (0, DT.o)((() => {
+              TT.endJoinAd()
             }))
           }
-          return Ha || (Ha = !0, (0, QY.c)()), Ka ? (Ca(IY.l.CONNECT_TO_GAME_SERVER), Ca(IY.l.SHADER_PACK), GO() && (0, yY.f)(YY.userContext, RY).catch((YY => {
-            console.error("Failed to report the shader pack session", YY)
+          return QF || (QF = !0, (0, KT.d)()), YF ? (nF(kT.j.CONNECT_TO_GAME_SERVER), nF(kT.j.SHADER_PACK), VX() && (0, cT.f)(TT.userContext, WT).catch((TT => {
+            console.error("Failed to report the shader pack session", TT)
           })), function() {
-            const YY = function() {
-              var YY, rY;
-              return null !== (YY = null === (rY = QR) || void 0 === rY ? void 0 : rY.couldntRunInJoinedGame()) && void 0 !== YY ? YY : null
+            const TT = function() {
+              var TT, oT;
+              return null !== (TT = null === (oT = wW) || void 0 === oT ? void 0 : oT.couldntRunInJoinedGame()) && void 0 !== TT ? TT : null
             }();
-            null !== YY && (0, yY.b)(YY)
-          }(), AY.e.value(void 0)) : Xa("The server ended the game as it joined");
+            null !== TT && (0, cT.e)(TT)
+          }(), zT.b.value(void 0)) : yF("The server ended the game as it joined");
         case "failed":
-          if (!aY.reloading) {
-            if (null !== gY) return gY;
-            if ((aY.error instanceof ZY.m || aY.error instanceof ZY.c) && aY.error.code === FY.c.serverUpdating.code) {
-              if (rY.aborted) return Xa("Left the game while it loaded");
+          if (!FT.reloading) {
+            if (null !== BT) return BT;
+            if ((FT.error instanceof JT.r || FT.error instanceof JT.e) && FT.error.code === iT.b.serverUpdating.code) {
+              if (oT.aborted) return yF("Left the game while it loaded");
               const {
-                gameNameWithVariation: YY,
-                lobbyName: DY
-              } = (0, sY.b)();
-              return ha(YY, DY), Xa("The server is updating")
+                gameNameWithVariation: TT,
+                lobbyName: IT
+              } = (0, LT.e)();
+              return lF(TT, IT), yF("The server is updating")
             }
-            return aY.error instanceof bY.g ? AY.e.errorWithCode(aY.error.messageKey, IY.l.SHADER_PACK, {
+            return FT.error instanceof ZT.e ? zT.b.errorWithCode(FT.error.messageKey, kT.j.SHADER_PACK, {
               severity: "medium"
-            }) : AY.e.errorWithCode(function(YY) {
-              if (YY instanceof ZY.A || YY instanceof EY.e) return YY.message;
-              if (Ma(YY)) return (0, zY.k)(YY.code, YY.serverText);
-              return zY.i
-            }(aY.error), IY.l.CONNECT_TO_GAME_SERVER, {
-              error: wa(aY.error) ? aY.error : void 0,
-              severity: ba(aY.error),
-              gameServerUnreachable: (0, CY.d)(aY.error),
-              rematch: (0, WY.d)(aY.error)
+            }) : zT.b.errorWithCode(function(TT) {
+              if (TT instanceof JT.B || TT instanceof AT.f) return TT.message;
+              if (GF(TT)) return (0, jT.n)(TT.code, TT.serverText);
+              return jT.h
+            }(FT.error), kT.j.CONNECT_TO_GAME_SERVER, {
+              error: pF(FT.error) ? FT.error : void 0,
+              severity: bF(FT.error),
+              gameServerUnreachable: (0, UT.c)(FT.error),
+              rematch: (0, rT.e)(FT.error)
             })
           }
-          return Xa("Reloading into the new build");
+          return yF("Reloading into the new build");
         case "stopped":
-          return Xa("The game client stopped, and shows why");
-        case "Hr":
-          return Xa("Left the game while it loaded")
+          return yF("The game client stopped, and shows why");
+        case "Jo":
+          return yF("Left the game while it loaded")
       }
     }
 
-    function Ma(YY) {
-      return YY instanceof ZY.m || YY instanceof ZY.c && "attach" !== YY.stage
+    function GF(TT) {
+      return TT instanceof JT.r || TT instanceof JT.e && "attach" !== TT.stage
     }
 
-    function wa(YY) {
-      return !(YY instanceof ZY.A) && !Ma(YY) && void 0 === (0, CY.d)(YY)
+    function pF(TT) {
+      return !(TT instanceof JT.B) && !GF(TT) && void 0 === (0, UT.c)(TT)
     }
 
-    function ba(YY) {
-      return Ma(YY) ? YY instanceof ZY.c && (0, zY.j)(YY.code).requiresRefresh ? "medium" : "low" : wa(YY) || YY instanceof ZY.A ? "medium" : "low"
+    function bF(TT) {
+      return GF(TT) ? TT instanceof JT.e && (0, jT.k)(TT.code).requiresRefresh ? "medium" : "low" : pF(TT) || TT instanceof JT.B ? "medium" : "low"
     }
 
-    function Xa(YY) {
-      return AY.e.errorWithCode(YY, IY.l.CONNECT_TO_GAME_SERVER, {
+    function yF(TT) {
+      return zT.b.errorWithCode(TT, kT.j.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        Hr: !0
+        Jo: !0
       })
     }
-    class qa {
-      leave(YY) {
-        if ((0, mY.b)()) {
-          var rY, DY;
-          if ((0, RY.d)()) return;
-          (0, iY.c)(!0 === (null === (rY = (0, mY.m)()) || void 0 === rY || null === (DY = rY.currentViewer) || void 0 === DY ? void 0 : DY.unsavedChanges), YY)
+    class NF {
+      leave(TT) {
+        if ((0, gT.b)()) {
+          var oT, IT;
+          if ((0, WT.e)()) return;
+          (0, xT.b)(!0 === (null === (oT = (0, gT.j)()) || void 0 === oT || null === (IT = oT.currentViewer) || void 0 === IT ? void 0 : IT.unsavedChanges), TT)
         } else this.leaveLive()
       }
       leaveLive() {
-        var YY;
-        Ta && (null === (YY = Xg()) || void 0 === YY || YY.endGamePack());
-        if (!Ka) return;
-        Ka = !1, (0, oY.c)();
+        var TT;
+        CF && (null === (TT = yB()) || void 0 === TT || TT.endGamePack());
+        if (!YF) return;
+        YF = !1, (0, MT.i)();
         try {
-          var rY;
-          null === (rY = (0, SY.v)()) || void 0 === rY || rY.clearWasmCameraScreen()
-        } catch (FY) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", FY)
+          var oT;
+          null === (oT = (0, wT.p)()) || void 0 === oT || oT.clearWasmCameraScreen()
+        } catch (iT) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", iT)
         }
         const {
-          gameNameWithVariation: DY
-        } = (0, sY.b)();
+          gameNameWithVariation: IT
+        } = (0, LT.e)();
         try {
-          Yg()
+          WB()
         } finally {
-          (0, sY.n)({
+          (0, LT.o)({
             websocketUrl: null
-          }), gY.g.vo("leaveGame", {
-            gameNameWithVariation: DY
-          }), (0, vY.J)()
+          }), BT.h.XM("leaveGame", {
+            gameNameWithVariation: IT
+          }), (0, ST.R)()
         }
       }
       isReplay() {
-        return (0, mY.b)()
+        return (0, gT.b)()
       }
     }
   },
-  40124: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY,
-      c: () => FY,
-      e: () => OY,
-      g: () => RY
+  39798: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT,
+      e: () => iT,
+      h: () => XT,
+      j: () => WT
     });
-    const FY = 12e4,
-      AY = 3e4,
-      IY = {
+    const iT = 12e4,
+      zT = 3e4,
+      kT = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: YY => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", YY), () => {
-          document.removeEventListener("visibilitychange", YY)
+        listen: TT => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", TT), () => {
+          document.removeEventListener("visibilitychange", TT)
         })
       };
 
-    function RY(YY) {
-      return `it sent no start within ${Math.round(YY)} ms`
+    function WT(TT) {
+      return `it sent no start within ${Math.round(TT)} ms`
     }
-    class OY {
-      constructor(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : IY;
-        this.timeoutMs = YY, this.onTimeout = rY, this.now = DY, this.visibility = FY, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = FY.listen((() => {
+    class XT {
+      constructor(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kT;
+        this.timeoutMs = TT, this.onTimeout = oT, this.now = IT, this.visibility = iT, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = iT.listen((() => {
           this.onVisibility()
-        })), FY.hidden() || this.next()
+        })), iT.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -7973,37 +8209,37 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const YY = this.step;
-        return null === YY ? 0 : Math.min(this.now() - YY.at, YY.ms)
+        const TT = this.step;
+        return null === TT ? 0 : Math.min(this.now() - TT.at, TT.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const YY = this.timeoutMs - this.counted;
-        if (YY <= 0) return void this.arm(1e3, (() => {
+        const TT = this.timeoutMs - this.counted;
+        if (TT <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const rY = Math.min(YY, 5e3);
+        const oT = Math.min(TT, 5e3);
         this.step = {
           at: this.now(),
-          ms: rY
-        }, this.arm(rY, (() => {
+          ms: oT
+        }, this.arm(oT, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(YY, rY) {
+      arm(TT, oT) {
         this.timer = setTimeout((() => {
-          this.timer = null, rY()
-        }), YY)
+          this.timer = null, oT()
+        }), TT)
       }
     }
   },
-  39997: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY
+  39691: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT
     });
-    const FY = {
+    const iT = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -8027,51 +8263,51 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  38088: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY
+  37716: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT
     });
-    var FY = DY(3312);
-    const AY = ["none", "idle", "now"];
+    var iT = IT(3276);
+    const zT = ["none", "idle", "now"];
 
-    function IY() {
-      const YY = () => (0, FY.D)();
+    function kT() {
+      const TT = () => (0, iT.z)();
       return {
-        memoryBytes: () => (0, FY.x)().buffer.byteLength,
-        reserveUpFront: rY => YY().nv(rY),
-        reserveAhead: rY => YY().xv(rY),
-        setCeiling: rY => {
-          YY().Pv(rY)
+        memoryBytes: () => (0, iT.t)().buffer.byteLength,
+        reserveUpFront: oT => TT().KD(oT),
+        reserveAhead: oT => TT().cD(oT),
+        setCeiling: oT => {
+          TT().MD(oT)
         },
-        lowWater: () => AY[YY().Gv()] ?? "none",
-        stats: () => function(YY) {
-          const rY = new Uint32Array((0, FY.x)().buffer, YY, 17),
-            DY = YY => rY[YY] ?? 0,
-            AY = YY => ({
-              upFront: DY(YY),
-              ahead: DY(YY + 1),
-              onDemandInFrame: DY(YY + 2),
-              onDemand: DY(YY + 3)
+        lowWater: () => zT[TT().xD()] ?? "none",
+        stats: () => function(TT) {
+          const oT = new Uint32Array((0, iT.t)().buffer, TT, 17),
+            IT = TT => oT[TT] ?? 0,
+            zT = TT => ({
+              upFront: IT(TT),
+              ahead: IT(TT + 1),
+              onDemandInFrame: IT(TT + 2),
+              onDemand: IT(TT + 3)
             });
           return {
-            memoryBytes: DY(0),
-            initialBytes: DY(1),
-            liveBytes: DY(2),
-            peakLiveBytes: DY(3),
-            headroomBytes: DY(4),
-            unusedBytes: DY(5),
-            ceilingBytes: DY(6),
-            reservesRefused: DY(7),
-            grows: AY(8),
-            grownBytes: AY(12),
-            allocationsRefused: DY(16)
+            memoryBytes: IT(0),
+            initialBytes: IT(1),
+            liveBytes: IT(2),
+            peakLiveBytes: IT(3),
+            headroomBytes: IT(4),
+            unusedBytes: IT(5),
+            ceilingBytes: IT(6),
+            reservesRefused: IT(7),
+            grows: zT(8),
+            grownBytes: zT(12),
+            allocationsRefused: IT(16)
           }
-        }(YY().Uv()),
-        takeBallast: () => YY().Lv(),
-        takePressure: () => YY().tv()
+        }(TT().rD()),
+        takeBallast: () => TT().AD(),
+        takePressure: () => TT().gD()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

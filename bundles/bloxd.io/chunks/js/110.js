@@ -1,685 +1,685 @@
 export const id = 110;
 export const ids = [110];
 export const modules = {
-  4580: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => yY,
-      f: () => mY,
-      j: () => QY,
-      m: () => EY
+  4481: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => cT,
+      h: () => gT,
+      k: () => KT,
+      n: () => AT
     });
-    var FY = DY(61),
-      AY = DY(4589),
-      IY = DY(3920),
-      RY = DY(1354),
-      OY = DY(4608),
-      gY = DY(1092),
-      aY = DY.n(gY),
-      vY = DY(1346),
-      uY = DY(1699),
-      sY = DY(4613),
-      iY = DY(1125);
+    var iT = IT(46),
+      zT = IT(4483),
+      kT = IT(3899),
+      WT = IT(1337),
+      XT = IT(4509),
+      BT = IT(1042),
+      FT = IT.n(BT),
+      ST = IT(1325),
+      DT = IT(1665),
+      LT = IT(4514),
+      xT = IT(1083);
 
-    function yY(YY) {
+    function cT(TT) {
       let {
-        label: rY,
-        onClick: DY,
-        checked: FY,
-        circleInfoText: AY,
-        className: OY,
-        disabled: gY,
-        note: vY
-      } = YY;
-      return (0, iY.jsxs)("div", {
-        "aria-disabled": gY || void 0,
+        label: oT,
+        onClick: IT,
+        checked: iT,
+        circleInfoText: zT,
+        className: XT,
+        disabled: BT,
+        note: ST
+      } = TT;
+      return (0, xT.jsxs)("div", {
+        "aria-disabled": BT || void 0,
         "data-pad-focusable": !0,
-        className: aY()("SettingBox CheckboxContainer", {
-          [OY]: OY,
-          SettingBoxDisabled: gY
+        className: FT()("SettingBox CheckboxContainer", {
+          [XT]: XT,
+          SettingBoxDisabled: BT
         }),
         onClick: () => {
-          gY || DY(!FY)
+          BT || IT(!iT)
         },
-        children: [(0, iY.jsxs)("div", {
+        children: [(0, xT.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, iY.jsx)("label", {
+          children: [(0, xT.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, iY.jsx)(IY.d, {
+            children: (0, xT.jsx)(kT.d, {
               className: "SettingsCheckbox",
-              checked: FY,
-              disabled: gY,
+              checked: iT,
+              disabled: BT,
               onChange: () => {}
             })
-          }), (0, iY.jsxs)("div", {
+          }), (0, xT.jsxs)("div", {
             className: "CheckboxText",
-            children: [rY, AY && (0, iY.jsx)("span", {
-              onClick: YY => YY.stopPropagation(),
-              children: (0, iY.jsx)(RY.d, {
+            children: [oT, zT && (0, xT.jsx)("span", {
+              onClick: TT => TT.stopPropagation(),
+              children: (0, xT.jsx)(WT.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: AY
+                hoverInfo: zT
               })
             })]
           })]
-        }), vY && (0, iY.jsx)("div", {
+        }), ST && (0, xT.jsx)("div", {
           className: "SettingNote",
-          children: vY
+          children: ST
         })]
       })
     }
 
-    function QY(YY) {
+    function KT(TT) {
       let {
-        name: rY,
-        onChange: DY,
-        min: AY,
-        max: IY,
-        step: OY,
-        initValue: gY,
-        circleInfoText: vY,
-        format: uY,
-        className: sY,
-        padStep: yY,
-        disabled: QY = !1,
-        selectableMax: oY,
-        cappedNote: EY,
-        onChangeComplete: mY
-      } = YY;
-      const [VY, SY] = (0, FY.useState)(gY), lY = (0, FY.useRef)(gY);
-      (0, FY.useEffect)((() => {
-        lY.current = gY, SY(gY)
-      }), [gY]);
-      const TY = void 0 !== oY && oY < IY,
-        eY = TY ? {
-          "--slider-selectable": (oY - AY) / (IY - AY)
+        name: oT,
+        onChange: IT,
+        min: zT,
+        max: kT,
+        step: XT,
+        initValue: BT,
+        circleInfoText: ST,
+        format: DT,
+        className: LT,
+        padStep: cT,
+        disabled: KT = !1,
+        selectableMax: MT,
+        cappedNote: AT,
+        onChangeComplete: gT
+      } = TT;
+      const [hT, wT] = (0, iT.useState)(BT), mT = (0, iT.useRef)(BT);
+      (0, iT.useEffect)((() => {
+        mT.current = BT, wT(BT)
+      }), [BT]);
+      const eT = void 0 !== MT && MT < kT,
+        RT = eT ? {
+          "--slider-selectable": (MT - zT) / (kT - zT)
         } : void 0;
-      return (0, iY.jsxs)("div", {
-        className: aY()("SettingBox SettingsSliderDiv", {
-          [sY]: sY,
-          SettingBoxDisabled: QY,
-          SliderCapped: TY
+      return (0, xT.jsxs)("div", {
+        className: FT()("SettingBox SettingsSliderDiv", {
+          [LT]: LT,
+          SettingBoxDisabled: KT,
+          SliderCapped: eT
         }),
-        style: eY,
-        children: [(0, iY.jsxs)("div", {
+        style: RT,
+        children: [(0, xT.jsxs)("div", {
           className: "SliderText",
-          children: [`${rY}: ${uY?uY(VY):VY}`, vY && (0, iY.jsx)(RY.d, {
+          children: [`${oT}: ${DT?DT(hT):hT}`, ST && (0, xT.jsx)(WT.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: vY
+            hoverInfo: ST
           })]
-        }), (0, iY.jsx)("div", {
+        }), (0, xT.jsx)("div", {
           className: "SliderDiv",
-          children: (0, iY.jsx)(WY, {
-            value: VY,
-            min: AY,
-            max: IY,
-            step: OY,
-            onChange: YY => {
-              if (TY && YY >= oY && VY === oY) return;
-              const rY = TY ? Math.min(YY, oY) : YY;
-              lY.current = rY, SY(rY), DY(rY)
+          children: (0, xT.jsx)(rT, {
+            value: hT,
+            min: zT,
+            max: kT,
+            step: XT,
+            onChange: TT => {
+              if (eT && TT >= MT && hT === MT) return;
+              const oT = eT ? Math.min(TT, MT) : TT;
+              mT.current = oT, wT(oT), IT(oT)
             },
-            onChangeComplete: mY && (() => {
-              mY(lY.current)
+            onChangeComplete: gT && (() => {
+              gT(mT.current)
             }),
-            format: uY,
-            padStep: yY,
-            disabled: QY
+            format: DT,
+            padStep: cT,
+            disabled: KT
           })
-        }), TY && EY && (0, iY.jsx)("div", {
+        }), eT && AT && (0, xT.jsx)("div", {
           className: "SettingNote",
-          children: EY
+          children: AT
         })]
       })
     }
-    const oY = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const MT = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function WY(YY) {
-      var rY;
+    function rT(TT) {
+      var oT;
       let {
-        value: DY,
-        min: IY,
-        max: RY,
-        step: OY,
-        onChange: gY,
-        orientation: aY,
-        reverse: vY,
-        setIsChanging: uY,
-        tooltip: yY,
-        labels: QY,
-        handleLabel: WY,
-        format: EY,
-        onChangeStart: mY,
-        onChangeComplete: VY,
-        padStep: SY,
-        disabled: lY = !1
-      } = YY;
-      const TY = (0, FY.useRef)(null),
-        eY = (0, FY.useRef)(null);
-      (0, FY.useLayoutEffect)((() => {
-        var YY, rY, DY;
-        const FY = null !== (YY = null === (rY = TY.current) || void 0 === rY ? void 0 : rY.querySelector(".rangeslider")) && void 0 !== YY ? YY : null;
-        null === FY || void 0 === FY || FY.setAttribute("data-pad-slider", ""), null === FY || void 0 === FY || FY.setAttribute("data-pad-focusable", ""), null === FY || void 0 === FY || null === (DY = FY.querySelector(".rangeslider__handle")) || void 0 === DY || DY.setAttribute("data-pad-slider-handle", ""), eY.current = FY
-      }), []), (0, FY.useLayoutEffect)((() => {
-        var YY, rY;
-        lY ? null === (YY = eY.current) || void 0 === YY || YY.setAttribute("aria-disabled", "true") : null === (rY = eY.current) || void 0 === rY || rY.removeAttribute("aria-disabled")
-      }), [lY]);
-      const NY = (null !== (rY = String(OY).split(".")[1]) && void 0 !== rY ? rY : "").length,
-        BY = YY => {
-          const rY = Number((Math.round((YY - IY) / OY) * OY + IY).toFixed(NY));
-          return Math.min(RY, Math.max(IY, rY))
+        value: IT,
+        min: kT,
+        max: WT,
+        step: XT,
+        onChange: BT,
+        orientation: FT,
+        reverse: ST,
+        setIsChanging: DT,
+        tooltip: cT,
+        labels: KT,
+        handleLabel: rT,
+        format: AT,
+        onChangeStart: gT,
+        onChangeComplete: hT,
+        padStep: wT,
+        disabled: mT = !1
+      } = TT;
+      const eT = (0, iT.useRef)(null),
+        RT = (0, iT.useRef)(null);
+      (0, iT.useLayoutEffect)((() => {
+        var TT, oT, IT;
+        const iT = null !== (TT = null === (oT = eT.current) || void 0 === oT ? void 0 : oT.querySelector(".rangeslider")) && void 0 !== TT ? TT : null;
+        null === iT || void 0 === iT || iT.setAttribute("data-pad-slider", ""), null === iT || void 0 === iT || iT.setAttribute("data-pad-focusable", ""), null === iT || void 0 === iT || null === (IT = iT.querySelector(".rangeslider__handle")) || void 0 === IT || IT.setAttribute("data-pad-slider-handle", ""), RT.current = iT
+      }), []), (0, iT.useLayoutEffect)((() => {
+        var TT, oT;
+        mT ? null === (TT = RT.current) || void 0 === TT || TT.setAttribute("aria-disabled", "true") : null === (oT = RT.current) || void 0 === oT || oT.removeAttribute("aria-disabled")
+      }), [mT]);
+      const uT = (null !== (oT = String(XT).split(".")[1]) && void 0 !== oT ? oT : "").length,
+        vT = TT => {
+          const oT = Number((Math.round((TT - kT) / XT) * XT + kT).toFixed(uT));
+          return Math.min(WT, Math.max(kT, oT))
         },
-        cY = (0, FY.useRef)(VY);
-      cY.current = VY, (0, FY.useEffect)((() => {
-        const YY = TY.current;
-        if (!YY) return;
-        const rY = YY => {
-          var rY;
-          oY.has(YY.key) && (null === (rY = cY.current) || void 0 === rY || rY.call(cY))
+        ET = (0, iT.useRef)(hT);
+      ET.current = hT, (0, iT.useEffect)((() => {
+        const TT = eT.current;
+        if (!TT) return;
+        const oT = TT => {
+          var oT;
+          MT.has(TT.key) && (null === (oT = ET.current) || void 0 === oT || oT.call(ET))
         };
-        return YY.addEventListener("keyup", rY), () => {
-          YY.removeEventListener("keyup", rY)
+        return TT.addEventListener("keyup", oT), () => {
+          TT.removeEventListener("keyup", oT)
         }
       }), []);
-      const KY = (0, FY.useRef)(!1);
-      return (0, sY.d)(eY, {
-        adjust: YY => {
-          if (lY) return;
-          const rY = null !== SY && void 0 !== SY ? SY : Math.max(OY, Math.round((RY - IY) / 20 / OY) * OY),
-            FY = BY(DY + YY * rY * (vY ? -1 : 1));
-          FY !== DY && (null === mY || void 0 === mY || mY(), gY(FY), null === VY || void 0 === VY || VY())
+      const fT = (0, iT.useRef)(!1);
+      return (0, LT.d)(RT, {
+        adjust: TT => {
+          if (mT) return;
+          const oT = null !== wT && void 0 !== wT ? wT : Math.max(XT, Math.round((WT - kT) / 20 / XT) * XT),
+            iT = vT(IT + TT * oT * (ST ? -1 : 1));
+          iT !== IT && (null === gT || void 0 === gT || gT(), BT(iT), null === hT || void 0 === hT || hT())
         },
-        setFraction: YY => {
-          if (lY) return;
-          const rY = BY(IY + (vY ? 1 - YY : YY) * (RY - IY));
-          rY !== DY && (KY.current || (KY.current = !0, null === mY || void 0 === mY || mY()), gY(rY))
+        setFraction: TT => {
+          if (mT) return;
+          const oT = vT(kT + (ST ? 1 - TT : TT) * (WT - kT));
+          oT !== IT && (fT.current || (fT.current = !0, null === gT || void 0 === gT || gT()), BT(oT))
         },
         endDrag: () => {
-          KY.current && (KY.current = !1, null === VY || void 0 === VY || VY())
+          fT.current && (fT.current = !1, null === hT || void 0 === hT || hT())
         }
-      }), (0, iY.jsx)("div", {
-        ref: TY,
+      }), (0, xT.jsx)("div", {
+        ref: eT,
         style: {
           display: "contents"
         },
-        children: (0, iY.jsx)(AY.b, {
-          value: DY,
-          min: IY,
-          max: RY,
-          step: OY,
-          onChange: gY,
-          orientation: aY,
-          reverse: vY,
-          tooltip: yY,
-          labels: QY,
-          handleLabel: WY,
-          format: EY,
+        children: (0, xT.jsx)(zT.d, {
+          value: IT,
+          min: kT,
+          max: WT,
+          step: XT,
+          onChange: BT,
+          orientation: FT,
+          reverse: ST,
+          tooltip: cT,
+          labels: KT,
+          handleLabel: rT,
+          format: AT,
           onChangeStart: () => {
-            null === mY || void 0 === mY || mY(), null === uY || void 0 === uY || uY(!0)
+            null === gT || void 0 === gT || gT(), null === DT || void 0 === DT || DT(!0)
           },
           onChangeComplete: () => {
-            null === uY || void 0 === uY || uY(!1), null === VY || void 0 === VY || VY()
+            null === DT || void 0 === DT || DT(!1), null === hT || void 0 === hT || hT()
           }
         })
       })
     }
-    async function EY() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const rY = vY.NotificationProvider.showPromptPopup({
+    async function AT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const oT = ST.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: YY
+        unlockPointerKey: TT
       });
-      !0 === await rY.getResult() && (0, uY.reloadBloxd)()
+      !0 === await oT.getResult() && (0, DT.reloadBloxd)()
     }
 
-    function mY(YY) {
+    function gT(TT) {
       let {
-        label: rY,
-        options: DY,
-        value: FY,
-        onChange: AY,
-        circleInfoText: IY
-      } = YY;
-      return (0, iY.jsxs)("div", {
+        label: oT,
+        options: IT,
+        value: iT,
+        onChange: zT,
+        circleInfoText: kT
+      } = TT;
+      return (0, xT.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, iY.jsxs)("div", {
+        children: [(0, xT.jsxs)("div", {
           className: "SliderText",
-          children: [rY, IY && (0, iY.jsx)(RY.d, {
+          children: [oT, kT && (0, xT.jsx)(WT.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: IY
+            hoverInfo: kT
           })]
-        }), (0, iY.jsx)(OY.d, {
-          ariaLabel: rY,
-          options: DY,
-          value: FY,
-          onChange: AY
+        }), (0, xT.jsx)(XT.e, {
+          ariaLabel: oT,
+          options: IT,
+          value: iT,
+          onChange: zT
         })]
       })
     }
   },
-  6233: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => nY
+  6160: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => yT
     });
-    var FY = DY(61),
-      AY = DY(1501),
-      IY = DY(6112),
-      RY = DY(1231),
-      OY = DY(341),
-      gY = DY(1337),
-      aY = DY(1488),
-      vY = DY(1437),
-      uY = DY(1354),
-      sY = DY(2353),
-      iY = DY(2466),
-      yY = DY(4113),
-      QY = DY(1152),
-      oY = DY(1471),
-      WY = DY(99),
-      EY = DY(1211);
-    const mY = DY.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var VY = DY(1092),
-      SY = DY.n(VY),
-      lY = DY(1098),
-      TY = DY(1346),
-      eY = DY(6108),
-      NY = DY(1125);
-    const BY = (0, FY.lazy)((() => Promise.all([DY.e(106), DY.e(74), DY.e(132), DY.e(126), DY.e(125)]).then((() => DY(6144))).then((YY => ({
-      default: YY.ShaderPackPublishForm
+    var iT = IT(46),
+      zT = IT(1484),
+      kT = IT(6045),
+      WT = IT(1193),
+      XT = IT(314),
+      BT = IT(1310),
+      FT = IT(1468),
+      ST = IT(1408),
+      DT = IT(1337),
+      LT = IT(2303),
+      xT = IT(2429),
+      cT = IT(4068),
+      KT = IT(1110),
+      MT = IT(1451),
+      rT = IT(90),
+      AT = IT(1171);
+    const gT = IT.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var hT = IT(1042),
+      wT = IT.n(hT),
+      mT = IT(1055),
+      eT = IT(1325),
+      RT = IT(6042),
+      uT = IT(1083);
+    const vT = (0, iT.lazy)((() => Promise.all([IT.e(106), IT.e(74), IT.e(132), IT.e(126), IT.e(125)]).then((() => IT(6085))).then((TT => ({
+      default: TT.ShaderPackPublishForm
     })))));
 
-    function cY(YY) {
+    function ET(TT) {
       let {
-        details: rY,
-        owner: DY,
-        onChanged: AY
-      } = YY;
+        details: oT,
+        owner: IT,
+        onChanged: zT
+      } = TT;
       const {
-        t: RY
-      } = (0, EY.C)(), OY = (0, aY.useNavigatePreserveSearch)(), {
-        userContext: uY
-      } = (0, QY.d)(), [sY, iY] = (0, FY.useState)(!1), [yY, WY] = (0, FY.useState)(null), [mY, VY] = (0, FY.useState)(!1), {
-        packId: cY,
-        name: KY,
-        description: HY,
-        live: zY
-      } = rY;
-      async function ZY(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AY;
-        iY(!0), WY(null);
+        t: WT
+      } = (0, AT.t)(), XT = (0, FT.useNavigatePreserveSearch)(), {
+        userContext: DT
+      } = (0, KT.b)(), [LT, xT] = (0, iT.useState)(!1), [cT, rT] = (0, iT.useState)(null), [gT, hT] = (0, iT.useState)(!1), {
+        packId: ET,
+        name: fT,
+        description: CT,
+        live: jT
+      } = oT;
+      async function JT(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT;
+        xT(!0), rT(null);
         try {
-          await YY(), rY()
-        } catch (DY) {
-          console.error("Failed to change a shader pack", DY), WY((0, eY.y)(DY, RY, "shaderPackListing:ownerActionFailed"))
+          await TT(), oT()
+        } catch (IT) {
+          console.error("Failed to change a shader pack", IT), rT((0, RT.A)(IT, WT, "shaderPackListing:ownerActionFailed"))
         } finally {
-          iY(!1)
+          xT(!1)
         }
       }
-      const CY = (0, eY.s)(uY);
-      return (0, NY.jsxs)("section", {
+      const UT = (0, RT.u)(DT);
+      return (0, uT.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, NY.jsx)("h2", {
+        children: [(0, uT.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: RY("general:manage")
-        }), (0, eY.V)(DY, !(null === zY || void 0 === zY || !zY.renderId), Date.now(), RY).map((YY => (0, NY.jsxs)("div", {
-          className: SY()("ShaderPackOwnerNotice", {
-            Warning: "warning" === YY.tone
+          children: WT("general:manage")
+        }), (0, RT.Y)(IT, !(null === jT || void 0 === jT || !jT.renderId), Date.now(), WT).map((TT => (0, uT.jsxs)("div", {
+          className: wT()("ShaderPackOwnerNotice", {
+            Warning: "warning" === TT.tone
           }),
-          children: [(0, NY.jsx)(lY.e, {
-            name: "warning" === YY.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, NY.jsxs)("div", {
-            children: [YY.text, YY.detail && (0, NY.jsx)("pre", {
+          children: [(0, uT.jsx)(mT.e, {
+            name: "warning" === TT.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, uT.jsxs)("div", {
+            children: [TT.text, TT.detail && (0, uT.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: YY.detail
+              children: TT.detail
             })]
           })]
-        }, YY.text))), rY.ban && (0, NY.jsxs)("div", {
+        }, TT.text))), oT.ban && (0, uT.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, NY.jsx)(lY.e, {
+          children: [(0, uT.jsx)(mT.e, {
             name: "ban"
-          }), (0, NY.jsxs)("div", {
-            children: ["Banned by ", rY.ban.byName, " on ", new Date(rY.ban.at).toLocaleString()]
+          }), (0, uT.jsxs)("div", {
+            children: ["Banned by ", oT.ban.byName, " on ", new Date(oT.ban.at).toLocaleString()]
           })]
-        }), yY && (0, NY.jsx)("div", {
+        }), cT && (0, uT.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: yY
-        }), (0, NY.jsxs)("div", {
+          children: cT
+        }), (0, uT.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, NY.jsxs)(vY.J, {
-            disabled: sY,
+          children: [(0, uT.jsxs)(ST.J, {
+            disabled: LT,
             onClick: () => {
               !async function() {
-                const YY = await TY.NotificationProvider.showInputPopup({
+                const TT = await eT.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: KY,
-                  maxLength: IY.D,
+                  initialValue: fT,
+                  maxLength: kT.E,
                   submitText: "general:save",
-                  validate: YY => YY.trim().length < IY.G ? RY("shaderPackListing:nameTooShort", {
-                    min: String(IY.G)
+                  validate: TT => TT.trim().length < kT.I ? WT("shaderPackListing:nameTooShort", {
+                    min: String(kT.I)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== YY && "submit" === (null === YY || void 0 === YY ? void 0 : YY.type) && YY.value.trim() !== KY && await ZY((() => oY.e.updateShaderPack(uY, {
-                  packId: cY,
-                  name: YY.value.trim()
+                "notificationTornDown" !== TT && "submit" === (null === TT || void 0 === TT ? void 0 : TT.type) && TT.value.trim() !== fT && await JT((() => MT.e.updateShaderPack(DT, {
+                  packId: ET,
+                  name: TT.value.trim()
                 })))
               }()
             },
-            children: [(0, NY.jsx)(lY.e, {
+            children: [(0, uT.jsx)(mT.e, {
               name: "pen"
-            }), " ", RY("shaderPackListing:rename")]
-          }), (0, NY.jsxs)(vY.J, {
-            disabled: sY,
+            }), " ", WT("shaderPackListing:rename")]
+          }), (0, uT.jsxs)(ST.J, {
+            disabled: LT,
             onClick: () => {
               !async function() {
-                const YY = await TY.NotificationProvider.showInputPopup({
+                const TT = await eT.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: HY,
-                  maxLength: IY.t,
+                  initialValue: CT,
+                  maxLength: kT.s,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== YY && "submit" === (null === YY || void 0 === YY ? void 0 : YY.type) && YY.value.trim() !== HY && await ZY((() => oY.e.updateShaderPack(uY, {
-                  packId: cY,
-                  description: YY.value.trim()
+                "notificationTornDown" !== TT && "submit" === (null === TT || void 0 === TT ? void 0 : TT.type) && TT.value.trim() !== CT && await JT((() => MT.e.updateShaderPack(DT, {
+                  packId: ET,
+                  description: TT.value.trim()
                 })))
               }()
             },
-            children: [(0, NY.jsx)(lY.e, {
+            children: [(0, uT.jsx)(mT.e, {
               name: "file-lines"
-            }), " ", RY("shaderPackListing:editDescription")]
-          }), (0, NY.jsxs)(vY.J, {
-            disabled: sY || DY.isBanned && !DY.listed,
+            }), " ", WT("shaderPackListing:editDescription")]
+          }), (0, uT.jsxs)(ST.J, {
+            disabled: LT || IT.isBanned && !IT.listed,
             onClick: () => {
-              ZY((() => oY.e.updateShaderPack(uY, {
-                packId: cY,
-                listed: !DY.listed
+              JT((() => MT.e.updateShaderPack(DT, {
+                packId: ET,
+                listed: !IT.listed
               })))
             },
-            children: [(0, NY.jsx)(lY.e, {
-              name: DY.listed ? "eye-slash" : "eye"
-            }), " ", RY(DY.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !DY.isBanned && (0, NY.jsxs)(vY.f, {
-            disabled: sY,
+            children: [(0, uT.jsx)(mT.e, {
+              name: IT.listed ? "eye-slash" : "eye"
+            }), " ", WT(IT.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !IT.isBanned && (0, uT.jsxs)(ST.e, {
+            disabled: LT,
             onClick: () => {
-              VY(!mY)
+              hT(!gT)
             },
-            children: [(0, NY.jsx)(lY.e, {
+            children: [(0, uT.jsx)(mT.e, {
               name: "upload"
-            }), " ", RY("shaderPackListing:uploadVersion")]
-          }), (0, NY.jsxs)(vY.E, {
-            disabled: sY || DY.isBanned,
+            }), " ", WT("shaderPackListing:uploadVersion")]
+          }), (0, uT.jsxs)(ST.F, {
+            disabled: LT || IT.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await TY.NotificationProvider.showPromptPopup({
+                !0 === await eT.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await ZY((() => oY.e.deleteShaderPack(uY, cY)), (() => {
-                  OY(`${eY.R}?section=mine`, {
+                }).getResult() && await JT((() => MT.e.deleteShaderPack(DT, ET)), (() => {
+                  XT(`${RT.V}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, NY.jsx)(lY.e, {
+            children: [(0, uT.jsx)(mT.e, {
               name: "trash-can"
-            }), " ", RY("general:delete")]
-          }), CY && (0, NY.jsxs)(vY.E, {
-            disabled: sY,
+            }), " ", WT("general:delete")]
+          }), UT && (0, uT.jsxs)(ST.F, {
+            disabled: LT,
             onClick: () => {
-              ZY((() => oY.e.setShaderPackBanned(uY, cY, !DY.isBanned)))
+              JT((() => MT.e.setShaderPackBanned(DT, ET, !IT.isBanned)))
             },
-            children: [(0, NY.jsx)(lY.e, {
-              name: DY.isBanned ? "circle-check" : "ban"
-            }), " ", DY.isBanned ? "Unban" : "Ban"]
+            children: [(0, uT.jsx)(mT.e, {
+              name: IT.isBanned ? "circle-check" : "ban"
+            }), " ", IT.isBanned ? "Unban" : "Ban"]
           })]
-        }), mY && (0, NY.jsx)(FY.Suspense, {
-          fallback: (0, NY.jsx)(gY.c, {}),
-          children: (0, NY.jsx)(BY, {
+        }), gT && (0, uT.jsx)(iT.Suspense, {
+          fallback: (0, uT.jsx)(BT.d, {}),
+          children: (0, uT.jsx)(vT, {
             existing: {
-              packId: cY,
-              name: KY,
-              description: HY
+              packId: ET,
+              name: fT,
+              description: CT
             },
             onPublished: () => {
-              VY(!1), AY()
+              hT(!1), zT()
             }
           })
         })]
       })
     }
-    var KY = DY(76),
-      HY = DY(1774),
-      zY = DY(1284),
-      ZY = DY(4613),
-      CY = DY(1222),
-      fY = DY(6123),
-      jY = DY(6118),
-      hY = DY(6136);
+    var fT = IT(68),
+      CT = IT(1724),
+      jT = IT(1249),
+      JT = IT(4514),
+      UT = IT(1183),
+      aT = IT(6059),
+      YT = IT(6052),
+      QT = IT(6069);
 
-    function dY(YY) {
+    function OT(TT) {
       let {
-        item: rY
-      } = YY;
+        item: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, EY.C)(), [AY] = (0, fY.f)(), [RY, OY] = (0, FY.useState)(AY), [gY, aY] = (0, FY.useState)(!1), [vY, uY] = (0, FY.useState)(!1), {
-        s3Url: sY
-      } = CY.clientSideServerUrls, {
-        width: iY,
-        height: yY
-      } = IY.u.large, QY = (0, IY.x)(sY, rY, RY, "large"), {
-        renderVersion: oY
-      } = rY;
-      return (0, NY.jsxs)("div", {
+        t: IT
+      } = (0, AT.t)(), [zT] = (0, aT.g)(), [WT, XT] = (0, iT.useState)(zT), [BT, FT] = (0, iT.useState)(!1), [ST, DT] = (0, iT.useState)(!1), {
+        s3Url: LT
+      } = UT.clientSideServerUrls, {
+        width: xT,
+        height: cT
+      } = kT.v.large, KT = (0, kT.y)(LT, oT, WT, "large"), {
+        renderVersion: MT
+      } = oT;
+      return (0, uT.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, NY.jsx)(hY.d, {
-          selected: RY,
-          onSelect: YY => {
-            OY(YY), aY(!1)
+        children: [(0, uT.jsx)(QT.d, {
+          selected: WT,
+          onSelect: TT => {
+            XT(TT), FT(!1)
           },
-          imageUrl: YY => (0, IY.x)(sY, rY, YY, "thumb")
-        }), (0, NY.jsxs)("div", {
+          imageUrl: TT => (0, kT.y)(LT, oT, TT, "thumb")
+        }), (0, uT.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!gY && (0, NY.jsxs)("button", {
+          children: [!BT && (0, uT.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === oY ? void 0 : DY("shaderPackListing:fullSize"),
-            disabled: null === oY,
+            title: null === MT ? void 0 : IT("shaderPackListing:fullSize"),
+            disabled: null === MT,
             onClick: () => {
-              uY(!0)
+              DT(!0)
             },
-            children: [(0, NY.jsx)("img", {
-              src: QY,
-              width: iY,
-              height: yY,
-              alt: DY(eY.eb[RY]),
+            children: [(0, uT.jsx)("img", {
+              src: KT,
+              width: xT,
+              height: cT,
+              alt: IT(RT.jb[WT]),
               draggable: !1
-            }), (0, NY.jsx)(jY.c, {
-              item: rY
+            }), (0, uT.jsx)(YT.c, {
+              item: oT
             })]
-          }), !gY && null !== oY && (0, NY.jsxs)(bY, {
+          }), !BT && null !== MT && (0, uT.jsxs)(ZT, {
             side: "Right",
             onClick: () => {
-              aY(!0)
+              FT(!0)
             },
-            children: [(0, NY.jsx)(lY.e, {
+            children: [(0, uT.jsx)(mT.e, {
               name: "arrows-left-right"
-            }), " ", DY("shaderPackListing:compare")]
-          }), gY && null !== oY && (0, NY.jsx)(wY, {
-            item: rY,
-            packUrl: QY,
-            baselineUrl: (0, IY.q)(sY, oY, RY, "large")
-          }), gY && (0, NY.jsx)(bY, {
+            }), " ", IT("shaderPackListing:compare")]
+          }), BT && null !== MT && (0, uT.jsx)(qT, {
+            item: oT,
+            packUrl: KT,
+            baselineUrl: (0, kT.o)(LT, MT, WT, "large")
+          }), BT && (0, uT.jsx)(ZT, {
             side: "Left",
             onClick: () => {
-              aY(!1)
+              FT(!1)
             },
-            children: DY("shaderPackListing:withPack")
-          }), gY && (0, NY.jsx)(bY, {
+            children: IT("shaderPackListing:withPack")
+          }), BT && (0, uT.jsx)(ZT, {
             side: "Right",
             onClick: () => {
-              aY(!1)
+              FT(!1)
             },
-            children: DY("shaderPackListing:withoutPack")
+            children: IT("shaderPackListing:withoutPack")
           })]
-        }), vY && (0, NY.jsx)(JY, {
-          fullUrl: (0, IY.x)(sY, rY, RY, "full"),
-          largeUrl: QY,
-          alt: DY(eY.eb[RY]),
+        }), ST && (0, uT.jsx)(HT, {
+          fullUrl: (0, kT.y)(LT, oT, WT, "full"),
+          largeUrl: KT,
+          alt: IT(RT.jb[WT]),
           onClose: () => {
-            uY(!1)
+            DT(!1)
           }
         })]
       })
     }
 
-    function JY(YY) {
+    function HT(TT) {
       let {
-        fullUrl: rY,
-        largeUrl: DY,
-        alt: AY,
-        onClose: IY
-      } = YY;
-      const RY = (0, FY.useRef)(null);
-      return (0, zY.t)("popup", RY, IY), (0, FY.useEffect)((() => {
-        function YY(YY) {
-          "Escape" === YY.key && (YY.stopPropagation(), IY())
+        fullUrl: oT,
+        largeUrl: IT,
+        alt: zT,
+        onClose: kT
+      } = TT;
+      const WT = (0, iT.useRef)(null);
+      return (0, jT.s)("popup", WT, kT), (0, iT.useEffect)((() => {
+        function TT(TT) {
+          "Escape" === TT.key && (TT.stopPropagation(), kT())
         }
-        return window.addEventListener("keydown", YY, !0), () => {
-          window.removeEventListener("keydown", YY, !0)
+        return window.addEventListener("keydown", TT, !0), () => {
+          window.removeEventListener("keydown", TT, !0)
         }
-      }), [IY]), (0, KY.createPortal)((0, NY.jsxs)("div", {
-        ref: RY,
+      }), [kT]), (0, fT.createPortal)((0, uT.jsxs)("div", {
+        ref: WT,
         className: "ShaderPackFullSize",
-        onClick: IY,
-        children: [(0, NY.jsx)("img", {
+        onClick: kT,
+        children: [(0, uT.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: rY,
-          alt: AY,
+          src: oT,
+          alt: zT,
           draggable: !1,
           style: {
-            backgroundImage: `url(${DY})`
+            backgroundImage: `url(${IT})`
           }
-        }), (0, NY.jsx)(vY.k, {
+        }), (0, uT.jsx)(ST.j, {
           className: "ShaderPackFullSizeClose",
-          onClick: IY
+          onClick: kT
         })]
       }), document.body)
     }
-    const MY = 5;
+    const nT = 5;
 
-    function wY(YY) {
+    function qT(TT) {
       let {
-        item: rY,
-        packUrl: DY,
-        baselineUrl: AY
-      } = YY;
+        item: oT,
+        packUrl: IT,
+        baselineUrl: zT
+      } = TT;
       const {
-        t: RY
-      } = (0, EY.C)(), [OY, gY] = (0, FY.useState)(50), aY = (0, FY.useRef)(!1), vY = (0, FY.useRef)(null), {
-        width: uY,
-        height: sY
-      } = IY.u.large;
+        t: WT
+      } = (0, AT.t)(), [XT, BT] = (0, iT.useState)(50), FT = (0, iT.useRef)(!1), ST = (0, iT.useRef)(null), {
+        width: DT,
+        height: LT
+      } = kT.v.large;
 
-      function iY(YY) {
-        gY((rY => (0, HY.i)(rY + YY, 0, 100)))
+      function xT(TT) {
+        BT((oT => (0, CT.g)(oT + TT, 0, 100)))
       }
 
-      function yY(YY) {
-        const rY = YY.currentTarget.getBoundingClientRect();
-        gY((0, HY.i)((YY.clientX - rY.left) / rY.width * 100, 0, 100))
+      function cT(TT) {
+        const oT = TT.currentTarget.getBoundingClientRect();
+        BT((0, CT.g)((TT.clientX - oT.left) / oT.width * 100, 0, 100))
       }
-      return (0, ZY.d)(vY, {
-        adjust: YY => {
-          iY(YY * MY)
+      return (0, JT.d)(ST, {
+        adjust: TT => {
+          xT(TT * nT)
         },
-        setFraction: YY => {
-          gY(100 * YY)
+        setFraction: TT => {
+          BT(100 * TT)
         },
         endDrag: () => {}
-      }), (0, NY.jsxs)("div", {
-        ref: vY,
+      }), (0, uT.jsxs)("div", {
+        ref: ST,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": RY("shaderPackListing:compare"),
+        "aria-label": WT("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(OY),
+        "aria-valuenow": Math.round(XT),
         style: {
-          "--split": `${OY}%`
+          "--split": `${XT}%`
         },
-        onKeyDown: function(YY) {
-          const rY = "ArrowLeft" === YY.key ? -MY : "ArrowRight" === YY.key ? MY : 0;
-          0 !== rY && (YY.preventDefault(), iY(rY))
+        onKeyDown: function(TT) {
+          const oT = "ArrowLeft" === TT.key ? -nT : "ArrowRight" === TT.key ? nT : 0;
+          0 !== oT && (TT.preventDefault(), xT(oT))
         },
-        onPointerDown: YY => {
-          aY.current = !0, YY.currentTarget.setPointerCapture(YY.pointerId), yY(YY)
+        onPointerDown: TT => {
+          FT.current = !0, TT.currentTarget.setPointerCapture(TT.pointerId), cT(TT)
         },
-        onPointerMove: YY => {
-          aY.current && yY(YY)
+        onPointerMove: TT => {
+          FT.current && cT(TT)
         },
         onPointerUp: () => {
-          aY.current = !1
+          FT.current = !1
         },
         onPointerCancel: () => {
-          aY.current = !1
+          FT.current = !1
         },
-        children: [(0, NY.jsx)("img", {
+        children: [(0, uT.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: AY,
-          width: uY,
-          height: sY,
+          src: zT,
+          width: DT,
+          height: LT,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${DY})`
+            backgroundImage: `url(${IT})`
           }
-        }), (0, NY.jsx)("div", {
+        }), (0, uT.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, NY.jsx)("img", {
+        }), (0, uT.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: DY,
-          width: uY,
-          height: sY,
+          src: IT,
+          width: DT,
+          height: LT,
           alt: "",
           draggable: !1
-        }), (0, NY.jsx)(jY.c, {
-          item: rY,
+        }), (0, uT.jsx)(YT.c, {
+          item: oT,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function bY(YY) {
+    function ZT(TT) {
       let {
-        side: rY,
-        onClick: DY,
-        children: FY
-      } = YY;
-      return (0, NY.jsx)("button", {
+        side: oT,
+        onClick: IT,
+        children: iT
+      } = TT;
+      return (0, uT.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${rY}`,
-        onClick: DY,
-        children: (0, NY.jsx)("span", {
+        className: `ShaderPackStageButton ${oT}`,
+        onClick: IT,
+        children: (0, uT.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: FY
+          children: iT
         })
       })
     }
-    var XY = DY(4580),
-      qY = DY(307),
-      pY = DY(6230);
-    const kY = {
+    var lT = IT(4481),
+      sT = IT(282),
+      tT = IT(6158);
+    const GT = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -688,391 +688,391 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function GY(YY) {
+    function pT(TT) {
       const {
-        userContext: rY
-      } = (0, QY.d)(), [AY, IY] = (0, FY.useState)(null), [RY, OY] = (0, FY.useState)(!1), [gY, aY] = (0, FY.useState)(!1), [vY, uY] = (0, FY.useState)(null), sY = null === YY || void 0 === YY ? void 0 : YY.packId, iY = null === YY || void 0 === YY ? void 0 : YY.sourceHash;
-      return (0, FY.useEffect)((() => {
-        if (OY(!1), uY(null), void 0 === sY) return;
-        let YY = !1;
-        return Promise.all([(0, WY.hasUsableWebGpuAdapter)(), (0, pY.e)()]).then((rY => {
-          let [DY, FY] = rY;
-          var AY;
-          YY || (IY(DY), OY((null === FY || void 0 === FY || null === (AY = FY.listing) || void 0 === AY ? void 0 : AY.packId) === sY && FY.listing.sourceHash === iY))
-        })).catch((rY => {
-          console.error("Failed to check whether this shader pack can be used", rY), YY || IY(!1)
+        userContext: oT
+      } = (0, KT.b)(), [zT, kT] = (0, iT.useState)(null), [WT, XT] = (0, iT.useState)(!1), [BT, FT] = (0, iT.useState)(!1), [ST, DT] = (0, iT.useState)(null), LT = null === TT || void 0 === TT ? void 0 : TT.packId, xT = null === TT || void 0 === TT ? void 0 : TT.sourceHash;
+      return (0, iT.useEffect)((() => {
+        if (XT(!1), DT(null), void 0 === LT) return;
+        let TT = !1;
+        return Promise.all([(0, rT.hasUsableWebGpuAdapter)(), (0, tT.e)()]).then((oT => {
+          let [IT, iT] = oT;
+          var zT;
+          TT || (kT(IT), XT((null === iT || void 0 === iT || null === (zT = iT.listing) || void 0 === zT ? void 0 : zT.packId) === LT && iT.listing.sourceHash === xT))
+        })).catch((oT => {
+          console.error("Failed to check whether this shader pack can be used", oT), TT || kT(!1)
         })), () => {
-          YY = !0
+          TT = !0
         }
-      }), [sY, iY]), {
-        webGpuUsable: AY,
-        inUse: RY,
-        busy: gY,
-        errorKey: vY,
+      }), [LT, xT]), {
+        webGpuUsable: zT,
+        inUse: WT,
+        busy: BT,
+        errorKey: ST,
         use: () => {
-          null !== YY && async function(YY) {
-            aY(!0), uY(null);
+          null !== TT && async function(TT) {
+            FT(!0), DT(null);
             try {
               const {
-                installListedShaderPack: FY
-              } = await Promise.all([DY.e(74), DY.e(132), DY.e(127)]).then((() => DY(39614))), AY = await FY({
-                packId: YY.packId,
-                sourceHash: YY.sourceHash,
-                name: YY.name,
-                ownerName: YY.ownerName,
-                description: YY.description
+                installListedShaderPack: iT
+              } = await Promise.all([IT.e(74), IT.e(132), IT.e(127)]).then((() => IT(39280))), zT = await iT({
+                packId: TT.packId,
+                sourceHash: TT.sourceHash,
+                name: TT.name,
+                ownerName: TT.ownerName,
+                description: TT.description
               });
-              if ("failed" === AY.kind) return void uY(kY[AY.reason]);
-              OY(!0), oY.e.recordShaderPackDownload(rY, YY.packId).catch((YY => {
-                console.error("Failed to count a shader pack's download", YY)
-              })), (0, XY.m)()
-            } catch (FY) {
-              console.error("Failed to use the shader pack", FY), uY("shaderPack:unexpectedError")
+              if ("failed" === zT.kind) return void DT(GT[zT.reason]);
+              XT(!0), MT.e.recordShaderPackDownload(oT, TT.packId).catch((TT => {
+                console.error("Failed to count a shader pack's download", TT)
+              })), (0, lT.n)()
+            } catch (iT) {
+              console.error("Failed to use the shader pack", iT), DT("shaderPack:unexpectedError")
             } finally {
-              aY(!1)
+              FT(!1)
             }
-          }(YY)
+          }(TT)
         }
       }
     }
 
-    function xY(YY) {
+    function bT(TT) {
       let {
-        packUse: rY
-      } = YY;
+        packUse: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, EY.C)(), {
-        webGpuUsable: FY,
-        inUse: AY,
-        busy: IY,
-        errorKey: RY,
-        use: OY
-      } = rY;
-      return (0, NY.jsxs)("div", {
+        t: IT
+      } = (0, AT.t)(), {
+        webGpuUsable: iT,
+        inUse: zT,
+        busy: kT,
+        errorKey: WT,
+        use: XT
+      } = oT;
+      return (0, uT.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, NY.jsxs)(vY.n, {
-          disabled: !0 !== FY || AY,
-          loading: IY,
-          onClick: OY,
-          children: [(0, NY.jsx)(lY.e, {
-            name: AY ? "check" : "download"
-          }), " ", DY(AY ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === FY && (0, NY.jsx)("div", {
+        children: [(0, uT.jsxs)(ST.m, {
+          disabled: !0 !== iT || zT,
+          loading: kT,
+          onClick: XT,
+          children: [(0, uT.jsx)(mT.e, {
+            name: zT ? "check" : "download"
+          }), " ", IT(zT ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === iT && (0, uT.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: DY((0, qY.i)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), RY && (0, NY.jsx)("div", {
+          children: IT((0, sT.h)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), WT && (0, uT.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: DY(RY)
+          children: IT(WT)
         })]
       })
     }
 
-    function nY() {
-      var YY;
+    function yT() {
+      var TT;
       const {
-        t: rY
-      } = (0, EY.C)(), DY = (0, aY.useNavigatePreserveSearch)(), {
-        packId: IY
-      } = (0, AY.D)(), {
-        userContext: RY,
-        isUserContextUpdating: OY
-      } = (0, QY.d)(), [uY, sY] = (0, FY.useState)(null), [iY, WY] = (0, FY.useState)(null), [mY, VY] = (0, FY.useState)(0), SY = (0, FY.useRef)(0);
+        t: oT
+      } = (0, AT.t)(), IT = (0, FT.useNavigatePreserveSearch)(), {
+        packId: kT
+      } = (0, zT.C)(), {
+        userContext: WT,
+        isUserContextUpdating: XT
+      } = (0, KT.b)(), [DT, LT] = (0, iT.useState)(null), [xT, rT] = (0, iT.useState)(null), [gT, hT] = (0, iT.useState)(0), wT = (0, iT.useRef)(0);
 
-      function lY() {
-        var YY;
-        null !== (YY = (0, aY.getPreviousLocation)()) && void 0 !== YY && YY.startsWith(eY.R) ? DY(-1) : DY(eY.R)
-      }(0, yY.d)(lY), (0, fY.d)(), (0, FY.useEffect)((() => {
-        if (OY || void 0 === IY) return;
-        const YY = ++SY.current;
-        WY(null), oY.e.getShaderPack(RY, IY).then((rY => {
-          SY.current === YY && sY(rY)
-        })).catch((rY => {
-          SY.current === YY && (console.error("Failed to get the shader pack", rY), sY(null), WY({
-            error: rY
+      function mT() {
+        var TT;
+        null !== (TT = (0, FT.getPreviousLocation)()) && void 0 !== TT && TT.startsWith(RT.V) ? IT(-1) : IT(RT.V)
+      }(0, cT.e)(mT), (0, aT.b)(), (0, iT.useEffect)((() => {
+        if (XT || void 0 === kT) return;
+        const TT = ++wT.current;
+        rT(null), MT.e.getShaderPack(WT, kT).then((oT => {
+          wT.current === TT && LT(oT)
+        })).catch((oT => {
+          wT.current === TT && (console.error("Failed to get the shader pack", oT), LT(null), rT({
+            error: oT
           }))
         }))
-      }), [IY, RY, OY, mY]);
-      const TY = () => {
-          VY((YY => YY + 1))
+      }), [kT, WT, XT, gT]);
+      const eT = () => {
+          hT((TT => TT + 1))
         },
-        BY = (null === uY || void 0 === uY ? void 0 : uY.packId) === IY ? uY : null,
-        KY = (0, fY.h)(),
-        HY = GY(null !== (YY = null === BY || void 0 === BY ? void 0 : BY.live) && void 0 !== YY ? YY : null),
-        zY = null !== BY && void 0 !== BY && BY.live ? (0, NY.jsx)(PY, {
-          item: BY.live,
-          favourites: KY,
-          packUse: HY
+        vT = (null === DT || void 0 === DT ? void 0 : DT.packId) === kT ? DT : null,
+        fT = (0, aT.i)(),
+        CT = pT(null !== (TT = null === vT || void 0 === vT ? void 0 : vT.live) && void 0 !== TT ? TT : null),
+        jT = null !== vT && void 0 !== vT && vT.live ? (0, uT.jsx)(NT, {
+          item: vT.live,
+          favourites: fT,
+          packUse: CT
         }) : null;
-      return (0, NY.jsxs)("article", {
+      return (0, uT.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [(0, NY.jsx)(vY.b, {
-          onClick: lY,
-          children: rY("shaderPackListing:backToPacks")
-        }), null === BY && null === iY && (0, NY.jsx)("div", {
+        children: [(0, uT.jsx)(ST.c, {
+          onClick: mT,
+          children: oT("shaderPackListing:backToPacks")
+        }), null === vT && null === xT && (0, uT.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, NY.jsx)(gY.c, {})
-        }), null !== iY && (0, NY.jsxs)("div", {
+          children: (0, uT.jsx)(BT.d, {})
+        }), null !== xT && (0, uT.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, eY.y)(iY.error, rY, "shaderPackListing:loadPackFailed"), (0, NY.jsx)(vY.f, {
-            onClick: TY,
-            children: rY("general:tryAgain")
+          children: [(0, RT.A)(xT.error, oT, "shaderPackListing:loadPackFailed"), (0, uT.jsx)(ST.e, {
+            onClick: eT,
+            children: oT("general:tryAgain")
           })]
-        }), null !== BY && null === iY && (0, NY.jsxs)("div", {
+        }), null !== vT && null === xT && (0, uT.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, NY.jsxs)("header", {
+          children: [(0, uT.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, NY.jsx)("h1", {
+            children: [(0, uT.jsx)("h1", {
               className: "FullyFancyText",
-              children: BY.name
-            }), zY]
-          }), BY.live && (0, NY.jsx)(dY, {
-            item: BY.live
-          }), BY.live && (0, NY.jsx)(UY, {
-            item: BY.live,
-            ownerPreview: BY.ownerPreview,
-            bloxdhubSlug: BY.bloxdhubSlug,
-            actions: zY
-          }), BY.owner && (0, NY.jsx)(cY, {
-            details: BY,
-            owner: BY.owner,
-            onChanged: TY
+              children: vT.name
+            }), jT]
+          }), vT.live && (0, uT.jsx)(OT, {
+            item: vT.live
+          }), vT.live && (0, uT.jsx)(PT, {
+            item: vT.live,
+            ownerPreview: vT.ownerPreview,
+            bloxdhubSlug: vT.bloxdhubSlug,
+            actions: jT
+          }), vT.owner && (0, uT.jsx)(ET, {
+            details: vT,
+            owner: vT.owner,
+            onChanged: eT
           })]
         })]
       })
     }
 
-    function PY(YY) {
+    function NT(TT) {
       let {
-        item: rY,
-        favourites: DY,
-        packUse: FY
-      } = YY;
-      const AY = DY.isFavourite(rY.packId);
-      return (0, NY.jsxs)("div", {
+        item: oT,
+        favourites: IT,
+        packUse: iT
+      } = TT;
+      const zT = IT.isFavourite(oT.packId);
+      return (0, uT.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [WY.featureFlags.settings.canUseShaderPacks && (0, NY.jsx)(xY, {
-          packUse: FY
-        }), (0, NY.jsx)(vY.q, {
+        children: [rT.featureFlags.settings.canUseShaderPacks && (0, uT.jsx)(bT, {
+          packUse: iT
+        }), (0, uT.jsx)(ST.t, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            DY.toggle(rY.packId)
+            IT.toggle(oT.packId)
           },
-          isLiked: !0 === AY,
-          isLoading: null === AY
+          isLiked: !0 === zT,
+          isLoading: null === zT
         })]
       })
     }
 
-    function UY(YY) {
+    function PT(TT) {
       let {
-        item: rY,
-        ownerPreview: DY,
-        bloxdhubSlug: FY,
-        actions: AY
-      } = YY;
+        item: oT,
+        ownerPreview: IT,
+        bloxdhubSlug: iT,
+        actions: zT
+      } = TT;
       const {
-        t: OY
-      } = (0, EY.C)(), gY = (0, iY.m)(), vY = null === FY ? null : (0, IY.e)(FY);
-      return (0, NY.jsxs)("div", {
+        t: XT
+      } = (0, AT.t)(), BT = (0, xT.h)(), ST = null === iT ? null : (0, kT.g)(iT);
+      return (0, uT.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [rY.description && (0, NY.jsx)("p", {
+        children: [oT.description && (0, uT.jsx)("p", {
           className: "ShaderPackDescription",
-          children: rY.description
-        }), (0, NY.jsxs)("div", {
+          children: oT.description
+        }), (0, uT.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== DY || null !== vY) && (0, NY.jsx)("div", {
+          children: [(null !== IT || null !== ST) && (0, uT.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== DY ? (0, NY.jsxs)(NY.Fragment, {
-              children: [(0, NY.jsx)(sY.g, {
-                playerSocialPreview: DY,
+            children: null !== IT ? (0, uT.jsxs)(uT.Fragment, {
+              children: [(0, uT.jsx)(LT.g, {
+                playerSocialPreview: IT,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== vY && (0, NY.jsx)("a", {
+              }), null !== ST && (0, uT.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: vY,
+                href: ST,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, NY.jsx)("img", {
-                  src: mY,
-                  alt: IY.d
+                children: (0, uT.jsx)("img", {
+                  src: gT,
+                  alt: kT.c
                 })
               })]
-            }) : (0, NY.jsxs)("a", {
+            }) : (0, uT.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: vY,
+              href: ST,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [IY.d, (0, NY.jsx)("img", {
-                src: mY,
+              children: [kT.c, (0, uT.jsx)("img", {
+                src: gT,
                 alt: ""
               })]
             })
-          }), eY.z.filter((YY => rY.features.includes(YY))).map((YY => (0, NY.jsx)(aY.LinkPreserveSearch, {
+          }), RT.D.filter((TT => oT.features.includes(TT))).map((TT => (0, uT.jsx)(FT.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, eY.I)(YY),
-            children: OY(eY.J[YY])
-          }, YY)))]
-        }), AY, (0, NY.jsxs)("dl", {
+            to: (0, RT.L)(TT),
+            children: XT(RT.N[TT])
+          }, TT)))]
+        }), zT, (0, uT.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, NY.jsxs)("div", {
-            children: [(0, NY.jsx)("dt", {
-              children: OY("shaderPackListing:downloads")
-            }), (0, NY.jsx)("dd", {
-              children: (0, RY.S)(rY.downloads)
+          children: [(0, uT.jsxs)("div", {
+            children: [(0, uT.jsx)("dt", {
+              children: XT("shaderPackListing:downloads")
+            }), (0, uT.jsx)("dd", {
+              children: (0, WT.S)(oT.downloads)
             })]
-          }), (0, NY.jsx)(LY, {
-            label: OY("shaderPackListing:updated"),
-            time: rY.listedUpdatedAt,
-            now: gY
-          }), (0, NY.jsx)(LY, {
-            label: OY("shaderPackListing:created"),
-            time: rY.publishedAt,
-            now: gY
-          }), null !== rY.gpuCost && (0, NY.jsxs)("div", {
-            children: [(0, NY.jsx)("dt", {
-              children: OY("shaderPackListing:lag")
-            }), (0, NY.jsx)("dd", {
-              children: OY("shaderPackListing:lagPercent", {
-                percent: String((0, eY.Q)(rY.gpuCost))
+          }), (0, uT.jsx)(dT, {
+            label: XT("shaderPackListing:updated"),
+            time: oT.listedUpdatedAt,
+            now: BT
+          }), (0, uT.jsx)(dT, {
+            label: XT("shaderPackListing:created"),
+            time: oT.publishedAt,
+            now: BT
+          }), null !== oT.gpuCost && (0, uT.jsxs)("div", {
+            children: [(0, uT.jsx)("dt", {
+              children: XT("shaderPackListing:lag")
+            }), (0, uT.jsx)("dd", {
+              children: XT("shaderPackListing:lagPercent", {
+                percent: String((0, RT.S)(oT.gpuCost))
               })
             })]
-          }), (0, NY.jsxs)("div", {
-            children: [(0, NY.jsx)("dt", {
-              children: OY("shaderPackListing:size")
-            }), (0, NY.jsx)("dd", {
-              children: OY("shaderPackListing:sizeValue", {
-                kilobytes: String((0, eY.N)(rY.sourceBytes))
+          }), (0, uT.jsxs)("div", {
+            children: [(0, uT.jsx)("dt", {
+              children: XT("shaderPackListing:size")
+            }), (0, uT.jsx)("dd", {
+              children: XT("shaderPackListing:sizeValue", {
+                kilobytes: String((0, RT.P)(oT.sourceBytes))
               })
             })]
-          }), (0, NY.jsxs)("div", {
-            children: [(0, NY.jsx)("dt", {
-              children: OY("shaderPackListing:files")
-            }), (0, NY.jsx)("dd", {
-              children: rY.fileCount
+          }), (0, uT.jsxs)("div", {
+            children: [(0, uT.jsx)("dt", {
+              children: XT("shaderPackListing:files")
+            }), (0, uT.jsx)("dd", {
+              children: oT.fileCount
             })]
           })]
         })]
       })
     }
 
-    function LY(YY) {
+    function dT(TT) {
       let {
-        label: rY,
-        time: DY,
-        now: FY
-      } = YY;
+        label: oT,
+        time: IT,
+        now: iT
+      } = TT;
       const {
-        t: AY,
-        selectedLanguage: IY
-      } = (0, EY.C)(), RY = new Date(DY);
-      let gY = RY.toLocaleDateString();
-      if (FY - DY <= 30 * OY.f) {
-        const YY = (0, EY.q)(IY.code, "shaderPackListing:timeAgo");
-        gY = AY("shaderPackListing:timeAgo", {
-          time: (0, OY.fb)(YY, DY, FY)
+        t: zT,
+        selectedLanguage: kT
+      } = (0, AT.t)(), WT = new Date(IT);
+      let BT = WT.toLocaleDateString();
+      if (iT - IT <= 30 * XT.j) {
+        const TT = (0, AT.l)(kT.code, "shaderPackListing:timeAgo");
+        BT = zT("shaderPackListing:timeAgo", {
+          time: (0, XT.cb)(TT, IT, iT)
         })
       }
-      return (0, NY.jsx)(uY.g, {
-        tooltipInner: RY.toLocaleString(),
-        children: (0, NY.jsxs)("div", {
-          children: [(0, NY.jsx)("dt", {
-            children: rY
-          }), (0, NY.jsx)("dd", {
-            children: gY
+      return (0, uT.jsx)(DT.e, {
+        tooltipInner: WT.toLocaleString(),
+        children: (0, uT.jsxs)("div", {
+          children: [(0, uT.jsx)("dt", {
+            children: oT
+          }), (0, uT.jsx)("dd", {
+            children: BT
           })]
         })
       })
     }
   },
-  4608: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => RY
+  4509: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => WT
     });
-    var FY = DY(1092),
-      AY = DY.n(FY),
-      IY = DY(1125);
+    var iT = IT(1042),
+      zT = IT.n(iT),
+      kT = IT(1083);
 
-    function RY(YY) {
+    function WT(TT) {
       let {
-        options: rY,
-        value: DY,
-        onChange: FY,
-        ariaLabel: RY,
-        className: OY,
-        reselectable: gY = !1,
-        keepsFocus: aY = !1
-      } = YY;
-      return (0, IY.jsx)("div", {
-        className: AY()("SegmentedToggle", OY),
+        options: oT,
+        value: IT,
+        onChange: iT,
+        ariaLabel: WT,
+        className: XT,
+        reselectable: BT = !1,
+        keepsFocus: FT = !1
+      } = TT;
+      return (0, kT.jsx)("div", {
+        className: zT()("SegmentedToggle", XT),
         role: "group",
-        "aria-label": RY,
-        children: rY.map((YY => {
-          const rY = YY.value === DY;
-          return (0, IY.jsx)("button", {
+        "aria-label": WT,
+        children: oT.map((TT => {
+          const oT = TT.value === IT;
+          return (0, kT.jsx)("button", {
             type: "button",
-            "aria-pressed": rY,
-            "aria-label": YY.ariaLabel,
-            title: YY.ariaLabel,
-            className: AY()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: rY
+            "aria-pressed": oT,
+            "aria-label": TT.ariaLabel,
+            title: TT.ariaLabel,
+            className: zT()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: oT
             }),
-            onMouseDown: aY ? YY => {
-              YY.preventDefault()
+            onMouseDown: FT ? TT => {
+              TT.preventDefault()
             } : void 0,
             onClick: () => {
-              rY && !gY || FY(YY.value)
+              oT && !BT || iT(TT.value)
             },
-            children: YY.label
-          }, YY.value)
+            children: TT.label
+          }, TT.value)
         }))
       })
     }
   },
-  4613: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY,
-      d: () => RY
+  4514: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT,
+      d: () => WT
     });
-    var FY = DY(61);
-    const AY = new WeakMap,
-      IY = YY => {
-        var rY;
-        const DY = YY.closest("[data-pad-slider]");
-        return DY && null !== (rY = AY.get(DY)) && void 0 !== rY ? rY : null
+    var iT = IT(46);
+    const zT = new WeakMap,
+      kT = TT => {
+        var oT;
+        const IT = TT.closest("[data-pad-slider]");
+        return IT && null !== (oT = zT.get(IT)) && void 0 !== oT ? oT : null
       },
-      RY = (YY, rY) => {
-        const DY = (0, FY.useRef)(rY);
-        DY.current = rY, (0, FY.useEffect)((() => {
-          if (YY.current) return ((YY, rY) => (AY.set(YY, rY), () => {
-            AY.get(YY) === rY && AY.delete(YY)
-          }))(YY.current, {
-            adjust: YY => {
-              DY.current.adjust(YY)
+      WT = (TT, oT) => {
+        const IT = (0, iT.useRef)(oT);
+        IT.current = oT, (0, iT.useEffect)((() => {
+          if (TT.current) return ((TT, oT) => (zT.set(TT, oT), () => {
+            zT.get(TT) === oT && zT.delete(TT)
+          }))(TT.current, {
+            adjust: TT => {
+              IT.current.adjust(TT)
             },
-            setFraction: YY => {
-              DY.current.setFraction(YY)
+            setFraction: TT => {
+              IT.current.setFraction(TT)
             },
             endDrag: () => {
-              DY.current.endDrag()
+              IT.current.endDrag()
             }
           })
-        }), [YY])
+        }), [TT])
       }
   },
-  6230: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY,
-      e: () => IY
+  6158: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT,
+      e: () => kT
     });
-    var FY = DY(40);
-    const AY = "shaderPack";
-    async function IY() {
-      var YY;
-      let rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (YY = await FY.i.getItem(AY, rY)) && void 0 !== YY ? YY : null
+    var iT = IT(26);
+    const zT = "shaderPack";
+    async function kT() {
+      var TT;
+      let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (TT = await iT.c.getItem(zT, oT)) && void 0 !== TT ? TT : null
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

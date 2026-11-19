@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36025: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => iY,
-      e: () => yY,
-      g: () => sY,
-      h: () => uY
+  35594: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => xT,
+      e: () => cT,
+      h: () => LT,
+      l: () => DT
     });
-    var FY = DY(8745),
-      AY = DY(36032),
-      IY = DY(36034),
-      RY = DY(8111),
-      OY = DY(1430),
-      gY = DY(61),
-      aY = DY(76),
-      vY = DY(1125);
+    var iT = IT(8743),
+      zT = IT(35599),
+      kT = IT(35601),
+      WT = IT(8139),
+      XT = IT(1403),
+      BT = IT(46),
+      FT = IT(68),
+      ST = IT(1083);
 
-    function uY() {
-      var YY;
-      return (0, OY.k)(AY.d, (0, AY.n)()), (0, vY.jsx)(vY.Fragment, {
-        children: null === (YY = (0, AY.n)()) || void 0 === YY ? void 0 : YY.content
+    function DT() {
+      var TT;
+      return (0, XT.i)(zT.c, (0, zT.k)()), (0, ST.jsx)(ST.Fragment, {
+        children: null === (TT = (0, zT.k)()) || void 0 === TT ? void 0 : TT.content
       })
     }
 
-    function sY(YY) {
-      var rY;
+    function LT(TT) {
+      var oT;
       let {
-        show: DY
-      } = YY;
-      (0, OY.k)(AY.d, (0, AY.n)());
-      const aY = null === (rY = (0, AY.n)()) || void 0 === rY ? void 0 : rY.menu;
-      return (0, gY.useEffect)((() => {
-        var YY;
-        DY || (null === aY || void 0 === aY || null === (YY = aY.onClose) || void 0 === YY || YY.call(aY), (0, IY.t)())
-      }), [DY, aY]), (0, gY.useEffect)((() => DY ? (0, RY.f)(IY.y, IY.i) : void 0), [DY]), (0, vY.jsx)(FY.d, {
-        showing: DY,
+        show: IT
+      } = TT;
+      (0, XT.i)(zT.c, (0, zT.k)());
+      const FT = null === (oT = (0, zT.k)()) || void 0 === oT ? void 0 : oT.menu;
+      return (0, BT.useEffect)((() => {
+        var TT;
+        IT || (null === FT || void 0 === FT || null === (TT = FT.onClose) || void 0 === TT || TT.call(FT), (0, kT.r)())
+      }), [IT, FT]), (0, BT.useEffect)((() => IT ? (0, WT.f)(kT.x, kT.g) : void 0), [IT]), (0, ST.jsx)(iT.c, {
+        showing: IT,
         globallyUniqueKey: "clientGameMenu",
-        children: null === aY || void 0 === aY ? void 0 : aY.content
+        children: null === FT || void 0 === FT ? void 0 : FT.content
       })
     }
 
-    function iY(YY) {
+    function xT(TT) {
       let {
-        placement: rY = "bottom"
-      } = YY;
-      return (0, vY.jsx)("div", {
-        id: `clientGameHud-${rY}`,
+        placement: oT = "bottom"
+      } = TT;
+      return (0, ST.jsx)("div", {
+        id: `clientGameHud-${oT}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function yY(YY) {
+    function cT(TT) {
       let {
-        children: rY,
-        placement: DY = "bottom"
-      } = YY;
-      const [FY, AY] = (0, gY.useState)(null);
-      return (0, gY.useEffect)((() => {
-        AY(document.getElementById(`clientGameHud-${DY}`))
-      }), [DY]), FY ? (0, aY.createPortal)(rY, FY) : null
+        children: oT,
+        placement: IT = "bottom"
+      } = TT;
+      const [iT, zT] = (0, BT.useState)(null);
+      return (0, BT.useEffect)((() => {
+        zT(document.getElementById(`clientGameHud-${IT}`))
+      }), [IT]), iT ? (0, FT.createPortal)(oT, iT) : null
     }
   },
-  8745: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY
+  8743: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT
     });
-    var FY = DY(4093),
-      AY = DY(4097);
+    var iT = IT(4057),
+      zT = IT(4061);
 
-    function IY(YY) {
+    function kT(TT) {
       let {
-        children: rY,
-        showing: DY,
-        globallyUniqueKey: IY,
-        alwaysMountChildren: RY = !1,
-        doGameplayStartStopOnShow: OY = !0,
-        keepsMovement: gY = !1
-      } = YY;
-      return (0, AY.b)(!0, DY, IY, gY), (0, FY.c)(OY, DY), DY || RY ? rY : null
+        children: oT,
+        showing: IT,
+        globallyUniqueKey: kT,
+        alwaysMountChildren: WT = !1,
+        doGameplayStartStopOnShow: XT = !0,
+        keepsMovement: BT = !1
+      } = TT;
+      return (0, zT.d)(!0, IT, kT, BT), (0, iT.e)(XT, IT), IT || WT ? oT : null
     }
   },
-  36130: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY,
-      h: () => RY,
-      j: () => OY,
-      l: () => gY
+  35692: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      g: () => WT,
+      k: () => XT,
+      l: () => BT
     });
-    var FY = DY(61),
-      AY = DY(1143);
-    const IY = 8,
-      RY = "InGameHeaderContainer",
-      OY = "TopRightElements";
+    var iT = IT(46),
+      zT = IT(1108);
+    const kT = 8,
+      WT = "InGameHeaderContainer",
+      XT = "TopRightElements";
 
-    function gY(YY) {
-      const [rY] = (0, AY.c)(), [DY, gY] = (0, FY.useState)(!1);
-      return (0, FY.useLayoutEffect)((() => {
-        if (!YY) return;
-        const rY = document.querySelector(`.${RY}`),
-          DY = document.querySelector(`.${OY}`),
-          FY = () => {
-            const FY = YY.getBoundingClientRect(),
-              AY = rY ? rY.getBoundingClientRect().right : 0,
-              RY = DY ? DY.getBoundingClientRect().left : window.innerWidth,
-              OY = FY.left < AY + IY,
-              aY = FY.right > RY - IY;
-            gY(OY || aY)
+    function BT(TT) {
+      const [oT] = (0, zT.e)(), [IT, BT] = (0, iT.useState)(!1);
+      return (0, iT.useLayoutEffect)((() => {
+        if (!TT) return;
+        const oT = document.querySelector(`.${WT}`),
+          IT = document.querySelector(`.${XT}`),
+          iT = () => {
+            const iT = TT.getBoundingClientRect(),
+              zT = oT ? oT.getBoundingClientRect().right : 0,
+              WT = IT ? IT.getBoundingClientRect().left : window.innerWidth,
+              XT = iT.left < zT + kT,
+              FT = iT.right > WT - kT;
+            BT(XT || FT)
           };
-        FY();
-        const AY = new ResizeObserver(FY);
-        return AY.observe(YY), rY && AY.observe(rY), DY && AY.observe(DY), () => {
-          AY.disconnect()
+        iT();
+        const zT = new ResizeObserver(iT);
+        return zT.observe(TT), oT && zT.observe(oT), IT && zT.observe(IT), () => {
+          zT.disconnect()
         }
-      }), [YY, rY]), DY
+      }), [TT, oT]), IT
     }
   },
-  36123: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY
+  35686: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT
     });
-    const FY = [{
+    const iT = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function AY(YY, rY, DY) {
-      const AY = Math.abs(YY - rY),
-        IY = Date.now() - DY;
-      for (const RY of FY)
-        if (YY < RY.maxDist) return AY >= RY.hardUpdateDist || IY > RY.timeBetweenSoftChecks && AY >= RY.softUpdateDist;
+    function zT(TT, oT, IT) {
+      const zT = Math.abs(TT - oT),
+        kT = Date.now() - IT;
+      for (const WT of iT)
+        if (TT < WT.maxDist) return zT >= WT.hardUpdateDist || kT > WT.timeBetweenSoftChecks && zT >= WT.softUpdateDist;
       return !1
     }
   },
-  8111: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY,
-      f: () => AY
+  8139: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT,
+      f: () => zT
     });
-    let FY = null;
-    const AY = function(YY) {
-        const rY = {
-          cycle: YY,
+    let iT = null;
+    const zT = function(TT) {
+        const oT = {
+          cycle: TT,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return FY = rY, () => {
-          FY === rY && (FY = null)
+        return iT = oT, () => {
+          iT === oT && (iT = null)
         }
       },
-      IY = () => {
-        var YY;
-        return null !== (YY = FY) && void 0 !== YY && YY.canCycle() ? FY.cycle : null
+      kT = () => {
+        var TT;
+        return null !== (TT = iT) && void 0 !== TT && TT.canCycle() ? iT.cycle : null
       }
   },
-  37914: (YY, rY, DY) => {
-    function FY(YY, rY, DY) {
-      var FY;
+  37514: (TT, oT, IT) => {
+    function iT(TT, oT, IT) {
+      var iT;
       const {
-        width: AY,
-        height: IY
-      } = DY, RY = null !== (FY = YY.text) && void 0 !== FY ? FY : YY, OY = (RY.x / 100 - .5) * AY, gY = (RY.y / 100 - .5) * IY, aY = AY / 2 - rY.x;
-      if (null !== YY.text && Math.abs(OY) <= aY && gY >= rY.top - IY / 2 && gY <= IY / 2 - rY.bottom) return {
-        x: RY.x,
-        y: RY.y
+        width: zT,
+        height: kT
+      } = IT, WT = null !== (iT = TT.text) && void 0 !== iT ? iT : TT, XT = (WT.x / 100 - .5) * zT, BT = (WT.y / 100 - .5) * kT, FT = zT / 2 - oT.x;
+      if (null !== TT.text && Math.abs(XT) <= FT && BT >= oT.top - kT / 2 && BT <= kT / 2 - oT.bottom) return {
+        x: WT.x,
+        y: WT.y
       };
-      const vY = Math.min(0 === OY ? 1 / 0 : aY / Math.abs(OY), gY > 0 ? (IY / 2 - rY.bottom) / gY : gY < 0 ? (rY.top - IY / 2) / gY : 1 / 0);
-      return !Number.isFinite(vY) || vY < 0 ? {
+      const ST = Math.min(0 === XT ? 1 / 0 : FT / Math.abs(XT), BT > 0 ? (kT / 2 - oT.bottom) / BT : BT < 0 ? (oT.top - kT / 2) / BT : 1 / 0);
+      return !Number.isFinite(ST) || ST < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + OY * vY / AY * 100,
-        y: 50 + gY * vY / IY * 100
+        x: 50 + XT * ST / zT * 100,
+        y: 50 + BT * ST / kT * 100
       }
     }
-    DY.d(rY, {
-      b: () => FY
+    IT.d(oT, {
+      d: () => iT
     })
   },
-  36034: (YY, rY, DY) => {
-    DY.d(rY, {
-      C: () => EY,
-      e: () => IY,
-      i: () => QY,
-      l: () => oY,
-      n: () => OY,
-      r: () => sY,
-      t: () => WY,
-      v: () => uY,
-      x: () => mY,
-      y: () => yY
+  35601: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => kT,
+      g: () => KT,
+      j: () => MT,
+      m: () => XT,
+      n: () => LT,
+      r: () => rT,
+      s: () => DT,
+      w: () => gT,
+      x: () => cT,
+      y: () => AT
     });
-    var FY = DY(19),
-      AY = DY(25);
-    const IY = "clientGameInventoryButtonsChanged",
-      RY = new Map;
+    var iT = IT(12),
+      zT = IT(16);
+    const kT = "clientGameInventoryButtonsChanged",
+      WT = new Map;
 
-    function OY() {
-      return [...RY.values()].sort(((YY, rY) => {
-        var DY, FY;
-        return (null !== (DY = YY.order) && void 0 !== DY ? DY : 0) - (null !== (FY = rY.order) && void 0 !== FY ? FY : 0)
+    function XT() {
+      return [...WT.values()].sort(((TT, oT) => {
+        var IT, iT;
+        return (null !== (IT = TT.order) && void 0 !== IT ? IT : 0) - (null !== (iT = oT.order) && void 0 !== iT ? iT : 0)
       }))
     }
-    let gY = null;
+    let BT = null;
 
-    function aY(YY) {
-      gY = YY
+    function FT(TT) {
+      BT = TT
     }
-    let vY = !1;
+    let ST = !1;
 
-    function uY(YY) {
-      vY = !0;
+    function DT(TT) {
+      ST = !0;
       try {
-        YY.onClick()
+        TT.onClick()
       } finally {
-        vY = !1
+        ST = !1
       }
-      YY.panel && "clientGame" === FY.b.get("openInGameMenuName") && aY(YY.id)
+      TT.panel && "clientGame" === iT.c.get("openInGameMenuName") && FT(TT.id)
     }
 
-    function sY() {
-      return vY
+    function LT() {
+      return ST
     }
 
-    function iY() {
-      return OY().filter((YY => YY.panel && !YY.disabled))
+    function xT() {
+      return XT().filter((TT => TT.panel && !TT.disabled))
     }
 
-    function yY(YY) {
-      const rY = iY(),
-        DY = rY.findIndex((YY => YY.id === gY));
-      return !(DY < 0 || rY.length < 2) && (uY(rY[(DY + YY + rY.length) % rY.length]), !0)
+    function cT(TT) {
+      const oT = xT(),
+        IT = oT.findIndex((TT => TT.id === BT));
+      return !(IT < 0 || oT.length < 2) && (DT(oT[(IT + TT + oT.length) % oT.length]), !0)
     }
 
-    function QY() {
-      return null !== gY && iY().length > 1
+    function KT() {
+      return null !== BT && xT().length > 1
     }
 
-    function oY() {
-      aY(null)
+    function MT() {
+      FT(null)
     }
 
-    function WY() {
-      "inventory" !== FY.b.get("openInGameMenuName") && aY(null)
+    function rT() {
+      "inventory" !== iT.c.get("openInGameMenuName") && FT(null)
     }
 
-    function EY() {
-      const YY = gY;
-      return aY(null), YY
+    function AT() {
+      const TT = BT;
+      return FT(null), TT
     }
 
-    function mY(YY) {
-      return RY.set(YY.id, YY), AY.g.vo(IY, OY(), !0), () => {
-        RY.get(YY.id) === YY && (RY.delete(YY.id), AY.g.vo(IY, OY()))
+    function gT(TT) {
+      return WT.set(TT.id, TT), zT.h.XM(kT, XT(), !0), () => {
+        WT.get(TT.id) === TT && (WT.delete(TT.id), zT.h.XM(kT, XT()))
       }
     }
   },
-  36032: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => OY,
-      f: () => oY,
-      h: () => WY,
-      j: () => sY,
-      n: () => aY,
-      o: () => QY,
-      p: () => iY,
-      q: () => vY
+  35599: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT,
+      e: () => MT,
+      h: () => rT,
+      i: () => LT,
+      k: () => FT,
+      o: () => KT,
+      s: () => xT,
+      u: () => ST
     });
-    var FY = DY(19),
-      AY = DY(25),
-      IY = DY(1287),
-      RY = DY(36034);
-    const OY = "clientGameUiChanged";
-    let gY = null;
+    var iT = IT(12),
+      zT = IT(16),
+      kT = IT(1253),
+      WT = IT(35601);
+    const XT = "clientGameUiChanged";
+    let BT = null;
 
-    function aY() {
-      return gY
+    function FT() {
+      return BT
     }
 
-    function vY(YY, rY) {
-      const DY = {
-        content: YY,
-        menu: rY
+    function ST(TT, oT) {
+      const IT = {
+        content: TT,
+        menu: oT
       };
-      return gY = DY, AY.g.vo(OY, gY, !0), () => {
-        gY === DY && (gY = null, yY = !1, oY(), AY.g.vo(OY, null))
+      return BT = IT, zT.h.XM(XT, BT, !0), () => {
+        BT === IT && (BT = null, cT = !1, MT(), zT.h.XM(XT, null))
       }
     }
-    let uY = null;
+    let DT = null;
 
-    function sY() {
-      return uY
+    function LT() {
+      return DT
     }
 
-    function iY(YY) {
-      return uY = YY, () => {
-        uY === YY && (uY = null)
+    function xT(TT) {
+      return DT = TT, () => {
+        DT === TT && (DT = null)
       }
     }
-    let yY = !1;
+    let cT = !1;
 
-    function QY() {
-      const YY = FY.b.get("openInGameMenuName");
-      "clientGame" !== YY && (yY = "inventory" === YY), (0, RY.r)() || (0, RY.l)(), (0, IY.k)(IY.d), FY.b.set({
+    function KT() {
+      const TT = iT.c.get("openInGameMenuName");
+      "clientGame" !== TT && (cT = "inventory" === TT), (0, WT.n)() || (0, WT.j)(), (0, kT.o)(kT.c), iT.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function oY() {
-      EY(!1)
+    function MT() {
+      AT(!1)
     }
 
-    function WY() {
-      EY(yY)
+    function rT() {
+      AT(cT)
     }
 
-    function EY(YY) {
-      "clientGame" === FY.b.get("openInGameMenuName") && FY.b.set({
-        openInGameMenuName: YY ? "inventory" : null
-      }), YY || (0, RY.l)(), yY = !1
+    function AT(TT) {
+      "clientGame" === iT.c.get("openInGameMenuName") && iT.c.set({
+        openInGameMenuName: TT ? "inventory" : null
+      }), TT || (0, WT.j)(), cT = !1
     }
   },
-  38743: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => or
+  38356: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => Mo
     });
-    const FY = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var AY = DY(61),
-      IY = DY(36032),
-      RY = DY(36400),
-      OY = DY(36048),
-      gY = DY(1699),
-      aY = DY(25);
-    const vY = {
+    const iT = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var zT = IT(46),
+      kT = IT(35599),
+      WT = IT(35995),
+      XT = IT(35618),
+      BT = IT(1665),
+      FT = IT(16);
+    const ST = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const uY = 32;
+    const DT = 32;
 
-    function sY(YY, rY, DY, FY) {
+    function LT(TT, oT, IT, iT) {
       return {
         tag: "line",
         attrs: {
-          x1: YY,
-          y1: rY,
-          x2: DY,
-          y2: FY,
+          x1: TT,
+          y1: oT,
+          x2: IT,
+          y2: iT,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function iY(YY) {
+    function xT(TT) {
       return {
         tag: "circle",
         attrs: {
-          cx: uY,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uY,
-          r: YY,
+          cx: DT,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DT,
+          r: TT,
           class: "Fill"
         }
       }
     }
 
-    function yY(YY, rY) {
+    function cT(TT, oT) {
       return {
         tag: "path",
         attrs: {
-          d: YY,
-          "stroke-width": rY
+          d: TT,
+          "stroke-width": oT
         }
       }
     }
 
-    function QY(YY, rY, DY) {
+    function KT(TT, oT, IT) {
       return {
         tag: "circle",
         attrs: {
-          cx: uY,
-          cy: uY,
-          r: YY,
-          "stroke-width": rY,
-          class: DY
+          cx: DT,
+          cy: DT,
+          r: TT,
+          "stroke-width": oT,
+          class: IT
         }
       }
     }
 
-    function oY(YY, rY, DY) {
+    function MT(TT, oT, IT) {
       return {
         tag: "text",
         attrs: {
-          x: YY,
-          y: rY,
+          x: TT,
+          y: oT,
           class: "Fill Label"
         },
-        text: DY
+        text: IT
       }
     }
-    const WY = {
-      pistol: YY => [sY(uY, uY - YY - 5, uY, uY - YY), sY(uY - YY - 5, uY, uY - YY, uY), sY(uY + YY, uY, uY + YY + 5, uY), iY(1.4)],
-      rifle: YY => [sY(uY, uY - YY - 8, uY, uY - YY), sY(uY, uY + YY, uY, uY + YY + 8), sY(uY - YY - 8, uY, uY - YY, uY), sY(uY + YY, uY, uY + YY + 8, uY), iY(1)],
-      smg: YY => {
-        const rY = Math.PI / 2,
-          DY = [];
-        for (let RY = 0; RY < 4; RY++) DY.push((AY = RY * rY + .35, IY = (RY + 1) * rY - .35, yY(`M${uY+(FY=6+YY)*Math.cos(AY)} ${uY+FY*Math.sin(AY)} A${FY} ${FY} 0 0 1 ${uY+FY*Math.cos(IY)} ${uY+FY*Math.sin(IY)}`, 2)));
-        var FY, AY, IY;
-        return [...DY, iY(1.4)]
+    const rT = {
+      pistol: TT => [LT(DT, DT - TT - 5, DT, DT - TT), LT(DT - TT - 5, DT, DT - TT, DT), LT(DT + TT, DT, DT + TT + 5, DT), xT(1.4)],
+      rifle: TT => [LT(DT, DT - TT - 8, DT, DT - TT), LT(DT, DT + TT, DT, DT + TT + 8), LT(DT - TT - 8, DT, DT - TT, DT), LT(DT + TT, DT, DT + TT + 8, DT), xT(1)],
+      smg: TT => {
+        const oT = Math.PI / 2,
+          IT = [];
+        for (let WT = 0; WT < 4; WT++) IT.push((zT = WT * oT + .35, kT = (WT + 1) * oT - .35, cT(`M${DT+(iT=6+TT)*Math.cos(zT)} ${DT+iT*Math.sin(zT)} A${iT} ${iT} 0 0 1 ${DT+iT*Math.cos(kT)} ${DT+iT*Math.sin(kT)}`, 2)));
+        var iT, zT, kT;
+        return [...IT, xT(1.4)]
       },
-      shotgun: YY => [QY(YY, 3, "Ring Outline"), QY(YY, 1.5, "Ring")],
-      marksman: YY => [yY(`M${26-YY/2} ${39+YY/2} L32 33 L${38+YY/2} ${39+YY/2}`, 2), sY(14 - YY, uY, 24 - YY, uY, 1.5), sY(40 + YY, uY, 50 + YY, uY, 1.5), sY(14 - YY, 30, 14 - YY, 34, 1.5), sY(50 + YY, 30, 50 + YY, 34, 1.5)],
-      machineGun: YY => {
-        const rY = 10 + YY,
-          DY = [];
-        for (const [FY, AY] of [
+      shotgun: TT => [KT(TT, 3, "Ring Outline"), KT(TT, 1.5, "Ring")],
+      marksman: TT => [cT(`M${26-TT/2} ${39+TT/2} L32 33 L${38+TT/2} ${39+TT/2}`, 2), LT(14 - TT, DT, 24 - TT, DT, 1.5), LT(40 + TT, DT, 50 + TT, DT, 1.5), LT(14 - TT, 30, 14 - TT, 34, 1.5), LT(50 + TT, 30, 50 + TT, 34, 1.5)],
+      machineGun: TT => {
+        const oT = 10 + TT,
+          IT = [];
+        for (const [iT, zT] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) DY.push(yY(`M${uY+FY*rY} ${uY+AY*(rY-5)} L${uY+FY*rY} ${uY+AY*rY} L${uY+FY*(rY-5)} ${uY+AY*rY}`, 2));
-        return [...DY, sY(uY, 28, uY, 36, 1.5), sY(28, uY, 36, uY, 1.5)]
+          ]) IT.push(cT(`M${DT+iT*oT} ${DT+zT*(oT-5)} L${DT+iT*oT} ${DT+zT*oT} L${DT+iT*(oT-5)} ${DT+zT*oT}`, 2));
+        return [...IT, LT(DT, 28, DT, 36, 1.5), LT(28, DT, 36, DT, 1.5)]
       },
-      launcher: () => [sY(14, 30, 50, 30, 1.5), sY(uY, 24, uY, 52, 1.5), sY(28, 38, 36, 38, 1.5), sY(29, 44, 35, 44, 1.5), sY(30, 50, 34, 50, 1.5), oY(38, 40, "100"), oY(37, 46, "200"), iY(1.4, 30)],
-      melee: () => [yY("M32 26 L38 32 L32 38 L26 32 Z", 1.5), iY(1.2)],
-      throwable: () => [iY(1.6)]
+      launcher: () => [LT(14, 30, 50, 30, 1.5), LT(DT, 24, DT, 52, 1.5), LT(28, 38, 36, 38, 1.5), LT(29, 44, 35, 44, 1.5), LT(30, 50, 34, 50, 1.5), MT(38, 40, "100"), MT(37, 46, "200"), xT(1.4, 30)],
+      melee: () => [cT("M32 26 L38 32 L32 38 L26 32 Z", 1.5), xT(1.2)],
+      throwable: () => [xT(1.6)]
     };
 
-    function EY(YY) {
+    function AT(TT) {
       let {
-        tag: rY,
-        attrs: DY,
-        text: FY
-      } = YY, AY = `<${rY}`;
-      for (const [IY, RY] of Object.entries(DY)) AY += ` ${IY}="${RY}"`;
-      return void 0 === FY ? `${AY}/>` : `${AY}>${FY}</${rY}>`
+        tag: oT,
+        attrs: IT,
+        text: iT
+      } = TT, zT = `<${oT}`;
+      for (const [kT, WT] of Object.entries(IT)) zT += ` ${kT}="${WT}"`;
+      return void 0 === iT ? `${zT}/>` : `${zT}>${iT}</${oT}>`
     }
-    class mY {
-      constructor(YY, rY) {
-        this.api = YY, this.localPlayerId = rY, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = YY => {
-          this.element = YY, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, YY && !this.enabled && (YY.style.display = "none")
+    class gT {
+      constructor(TT, oT) {
+        this.api = TT, this.localPlayerId = oT, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = TT => {
+          this.element = TT, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, TT && !this.enabled && (TT.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, gY.getRemInPx)()))
-        }, this.tokens = [aY.g.subscribe("aimingOverlay", (YY => {
-          this.sniperOverlay = "sniper" === YY
-        })), aY.g.subscribe("mouseState", (YY => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, BT.getRemInPx)()))
+        }, this.tokens = [FT.h.subscribe("aimingOverlay", (TT => {
+          this.sniperOverlay = "sniper" === TT
+        })), FT.h.subscribe("mouseState", (TT => {
           let {
-            isDown: rY
-          } = YY;
-          this.mouseDown = rY
+            isDown: oT
+          } = TT;
+          this.mouseDown = oT
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      mV(YY) {
-        YY !== this.enabled && (this.enabled = YY, this.drawnVisible = null, YY || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      Fv(TT) {
+        TT !== this.enabled && (this.enabled = TT, this.drawnVisible = null, TT || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(YY, rY) {
-        var DY, FY;
+      frame(TT, oT) {
+        var IT, iT;
         if (!this.enabled) return;
         const {
-          api: AY
-        } = this, IY = AY.isAlive(this.localPlayerId) && null !== (DY = null === (FY = AY.rrY(this.localPlayerId)) || void 0 === FY ? void 0 : FY.name) && void 0 !== DY ? DY : null, RY = (OY = IY) && vY[OY] || null;
-        var OY;
-        if (this.setOwnsCrosshair(null !== RY), !this.element) return;
-        const gY = AY.getHeldGunInaccuracy(),
-          aY = null !== gY,
-          uY = null !== RY && !this.sniperOverlay && AY.isCrosshairShown();
-        if (uY !== this.drawnVisible && (this.drawnVisible = uY, this.element.style.display = uY ? "block" : "none"), !uY) return;
-        const sY = aY ? function(YY) {
-            return "launcher" === YY || "melee" === YY || "throwable" === YY ? "none" : "shotgun" === YY ? "cone" : "offset"
-          }(RY) : "none",
-          iY = null !== gY && void 0 !== gY ? gY : 0;
-        "cone" === sY ? this.drawCone(RY, this.coneRadiusVh(iY, rY) * this.gapPerVh, YY) : (this.coneDrawn = !1, this.draw(RY, "none" === sY ? 2 : this.offsetGap(iY)));
-        const yY = !aY && this.mouseDown;
-        yY !== this.drawnPressed && (this.drawnPressed = yY, this.element.classList.toggle("Pressed", yY))
+          api: zT
+        } = this, kT = zT.isAlive(this.localPlayerId) && null !== (IT = null === (iT = zT.eoT(this.localPlayerId)) || void 0 === iT ? void 0 : iT.name) && void 0 !== IT ? IT : null, WT = (XT = kT) && ST[XT] || null;
+        var XT;
+        if (this.setOwnsCrosshair(null !== WT), !this.element) return;
+        const BT = zT.getHeldGunInaccuracy(),
+          FT = null !== BT,
+          DT = null !== WT && !this.sniperOverlay && zT.isCrosshairShown();
+        if (DT !== this.drawnVisible && (this.drawnVisible = DT, this.element.style.display = DT ? "block" : "none"), !DT) return;
+        const LT = FT ? function(TT) {
+            return "launcher" === TT || "melee" === TT || "throwable" === TT ? "none" : "shotgun" === TT ? "cone" : "offset"
+          }(WT) : "none",
+          xT = null !== BT && void 0 !== BT ? BT : 0;
+        "cone" === LT ? this.drawCone(WT, this.coneRadiusVh(xT, oT) * this.gapPerVh, TT) : (this.coneDrawn = !1, this.draw(WT, "none" === LT ? 2 : this.offsetGap(xT)));
+        const cT = !FT && this.mouseDown;
+        cT !== this.drawnPressed && (this.drawnPressed = cT, this.element.classList.toggle("Pressed", cT))
       }
       dispose() {
-        for (const YY of this.tokens) aY.g.unsubscribe(YY);
+        for (const TT of this.tokens) FT.h.unsubscribe(TT);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(YY, rY) {
-        var DY, FY;
-        YY !== this.drawnFamily ? (this.drawnFamily = YY, this.drawnGap = rY, this.element.innerHTML = function(YY, rY) {
-          return `<svg viewBox="0 0 64 64">${WY[YY](rY).map(EY).join("")}</svg>`
-        }(YY, rY), this.shapes = Array.from(null !== (DY = null === (FY = this.element.firstElementChild) || void 0 === FY ? void 0 : FY.children) && void 0 !== DY ? DY : [])) : rY !== this.drawnGap && (this.drawnGap = rY, function(YY, rY, DY) {
-          const FY = WY[rY](DY);
-          for (let AY = 0; AY < FY.length; AY++)
-            for (const [rY, DY] of Object.entries(FY[AY].attrs)) {
-              const FY = String(DY);
-              YY[AY].getAttribute(rY) !== FY && YY[AY].setAttribute(rY, FY)
+      draw(TT, oT) {
+        var IT, iT;
+        TT !== this.drawnFamily ? (this.drawnFamily = TT, this.drawnGap = oT, this.element.innerHTML = function(TT, oT) {
+          return `<svg viewBox="0 0 64 64">${rT[TT](oT).map(AT).join("")}</svg>`
+        }(TT, oT), this.shapes = Array.from(null !== (IT = null === (iT = this.element.firstElementChild) || void 0 === iT ? void 0 : iT.children) && void 0 !== IT ? IT : [])) : oT !== this.drawnGap && (this.drawnGap = oT, function(TT, oT, IT) {
+          const iT = rT[oT](IT);
+          for (let zT = 0; zT < iT.length; zT++)
+            for (const [oT, IT] of Object.entries(iT[zT].attrs)) {
+              const iT = String(IT);
+              TT[zT].getAttribute(oT) !== iT && TT[zT].setAttribute(oT, iT)
             }
-        }(this.shapes, YY, rY))
+        }(this.shapes, TT, oT))
       }
-      drawCone(YY, rY, DY) {
-        YY === this.drawnFamily && this.coneDrawn ? this.shownRadius += (rY - this.shownRadius) * (1 - Math.exp(-DY / 80)) : this.shownRadius = rY, this.coneDrawn = !0, this.draw(YY, Math.round(4 * this.shownRadius) / 4)
+      drawCone(TT, oT, IT) {
+        TT === this.drawnFamily && this.coneDrawn ? this.shownRadius += (oT - this.shownRadius) * (1 - Math.exp(-IT / 80)) : this.shownRadius = oT, this.coneDrawn = !0, this.draw(TT, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(YY, rY) {
-        if (!(rY > 0)) return 1;
-        const DY = YY * RY.i / 2;
-        return Math.max(50 * Math.tan(DY) / rY, 1)
+      coneRadiusVh(TT, oT) {
+        if (!(oT > 0)) return 1;
+        const IT = TT * WT.m / 2;
+        return Math.max(50 * Math.tan(IT) / oT, 1)
       }
-      offsetGap(YY) {
-        const rY = 2 + ((0, OY.g)(YY) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * rY) / 2)
+      offsetGap(TT) {
+        const oT = 2 + ((0, XT.c)(TT) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * oT) / 2)
       }
-      setOwnsCrosshair(YY) {
-        YY !== this.ownsCrosshair && (this.ownsCrosshair = YY, document.body.classList.toggle("FrontlineCustomCrosshair", YY))
+      setOwnsCrosshair(TT) {
+        TT !== this.ownsCrosshair && (this.ownsCrosshair = TT, document.body.classList.toggle("FrontlineCustomCrosshair", TT))
       }
     }
-    const VY = "FrontlineCustomDamage",
-      SY = .45,
-      lY = .2;
-    class TY {
-      constructor(YY, rY) {
-        this.api = YY, this.localPlayerId = rY, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const hT = "FrontlineCustomDamage",
+      wT = .45,
+      mT = .2;
+    class eT {
+      constructor(TT, oT) {
+        this.api = TT, this.localPlayerId = oT, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.EY = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = YY => {
-          var rY, DY;
-          this.clearHits(), this.root = YY, this.lowLayer = null !== (rY = null === YY || void 0 === YY ? void 0 : YY.querySelector(".FrontlineDamageLow")) && void 0 !== rY ? rY : null, this.arcLayer = null !== (DY = null === YY || void 0 === YY ? void 0 : YY.querySelector(".FrontlineDamageArcs")) && void 0 !== DY ? DY : null, this.showRoot(), this.drawLow()
-        }, this.token = aY.g.subscribe("damagedByOtherPlayer", (YY => {
+        }, this.maxHealth = null, this.AT = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = TT => {
+          var oT, IT;
+          this.clearHits(), this.root = TT, this.lowLayer = null !== (oT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".FrontlineDamageLow")) && void 0 !== oT ? oT : null, this.arcLayer = null !== (IT = null === TT || void 0 === TT ? void 0 : TT.querySelector(".FrontlineDamageArcs")) && void 0 !== IT ? IT : null, this.showRoot(), this.drawLow()
+        }, this.token = FT.h.subscribe("damagedByOtherPlayer", (TT => {
           let {
-            direction: rY,
-            oY: DY
-          } = YY;
-          this.onHurt(rY, DY)
-        })), this.syncHealth(), document.body.classList.add(VY)
+            direction: oT,
+            MT: IT
+          } = TT;
+          this.onHurt(oT, IT)
+        })), this.syncHealth(), document.body.classList.add(hT)
       }
-      mV(YY) {
-        YY !== this.enabled && (this.enabled = YY, document.body.classList.toggle(VY, YY), YY || this.clearHits(), this.showRoot())
+      Fv(TT) {
+        TT !== this.enabled && (this.enabled = TT, document.body.classList.toggle(hT, TT), TT || this.clearHits(), this.showRoot())
       }
-      frame(YY) {
-        this.syncHealth(), this.cameraHeading = YY;
-        for (const rY of this.arcs) this.drawArcAngle(rY)
+      frame(TT) {
+        this.syncHealth(), this.cameraHeading = TT;
+        for (const oT of this.arcs) this.drawArcAngle(oT)
       }
       dispose() {
-        aY.g.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(VY)
+        FT.h.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(hT)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const YY = this.api.getClientOption(this.localPlayerId, "_health"),
-          rY = this.api.getClientOption(this.localPlayerId, "_shield"),
-          DY = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(YY, this.readHealth) && Object.is(rY, this.readShield) && Object.is(DY, this.readMaxHealth)) return;
-        if (this.readHealth = YY, this.readShield = rY, this.readMaxHealth = DY, null === YY || void 0 === YY || !DY) return this.lastHealthPool = null, this.maxHealth = null, this.EY = 1, this.dead = !1, void this.drawLow();
-        const FY = YY + (null !== rY && void 0 !== rY ? rY : 0);
-        if (null !== this.lastHealthPool && FY < this.lastHealthPool) {
-          const YY = performance.now(),
-            rY = (this.lastHealthPool - FY) / DY;
-          this.lastDrop = YY - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + rY,
+        const TT = this.api.getClientOption(this.localPlayerId, "_health"),
+          oT = this.api.getClientOption(this.localPlayerId, "_shield"),
+          IT = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(TT, this.readHealth) && Object.is(oT, this.readShield) && Object.is(IT, this.readMaxHealth)) return;
+        if (this.readHealth = TT, this.readShield = oT, this.readMaxHealth = IT, null === TT || void 0 === TT || !IT) return this.lastHealthPool = null, this.maxHealth = null, this.AT = 1, this.dead = !1, void this.drawLow();
+        const iT = TT + (null !== oT && void 0 !== oT ? oT : 0);
+        if (null !== this.lastHealthPool && iT < this.lastHealthPool) {
+          const TT = performance.now(),
+            oT = (this.lastHealthPool - iT) / IT;
+          this.lastDrop = TT - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + oT,
             at: this.lastDrop.at
           } : {
-            frac: rY,
-            at: YY
+            frac: oT,
+            at: TT
           }
         }
-        this.dead = YY <= 0, this.dead && this.clearHits(), this.lastHealthPool = FY, this.maxHealth = DY, this.EY = YY > 0 ? YY / DY : 1, this.drawLow()
+        this.dead = TT <= 0, this.dead && this.clearHits(), this.lastHealthPool = iT, this.maxHealth = IT, this.AT = TT > 0 ? TT / IT : 1, this.drawLow()
       }
-      onHurt(YY, rY) {
+      onHurt(TT, oT) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const DY = Math.min(1, this.takeDamageFrac(rY) / .3);
-        null !== YY && this.showArc(YY, DY), this.flashEdge(null === YY ? null : YY - this.cameraHeading, .4 + .6 * DY)
+        const IT = Math.min(1, this.takeDamageFrac(oT) / .3);
+        null !== TT && this.showArc(TT, IT), this.flashEdge(null === TT ? null : TT - this.cameraHeading, .4 + .6 * IT)
       }
-      takeDamageFrac(YY) {
-        if (void 0 !== YY && this.maxHealth) return YY / this.maxHealth;
+      takeDamageFrac(TT) {
+        if (void 0 !== TT && this.maxHealth) return TT / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: rY
+          frac: oT
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, rY
+        }, oT
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const YY = NY((SY - this.EY) / .25),
-          rY = NY((lY - this.EY) / .15000000000000002),
-          DY = this.EY < SY;
-        this.lowLayer.classList.toggle("Active", DY), this.lowLayer.classList.toggle("Critical", this.EY < lY), this.lowLayer.style.opacity = String(DY ? .55 + .3 * YY + .15 * rY : 0)
+        const TT = uT((wT - this.AT) / .25),
+          oT = uT((mT - this.AT) / .15000000000000002),
+          IT = this.AT < wT;
+        this.lowLayer.classList.toggle("Active", IT), this.lowLayer.classList.toggle("Critical", this.AT < mT), this.lowLayer.style.opacity = String(IT ? .55 + .3 * TT + .15 * oT : 0)
       }
-      showArc(YY, rY) {
-        var DY, FY;
+      showArc(TT, oT) {
+        var IT, iT;
         if (!this.arcLayer) return;
-        let AY = this.arcs.find((rY => eY(rY.direction, YY) < .6));
-        if (!AY) {
-          const rY = document.createElement("div");
-          rY.className = "FrontlineDamageArc", rY.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(rY), AY = {
-            element: rY,
-            direction: YY,
+        let zT = this.arcs.find((oT => RT(oT.direction, TT) < .6));
+        if (!zT) {
+          const oT = document.createElement("div");
+          oT.className = "FrontlineDamageArc", oT.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(oT), zT = {
+            element: oT,
+            direction: TT,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(AY)
+          }, this.arcs.push(zT)
         }
-        AY.direction = YY, this.drawArcAngle(AY);
-        const IY = AY.fade ? Number(getComputedStyle(AY.element).opacity) : 0;
-        null === (DY = AY.fade) || void 0 === DY || DY.cancel(), null === (FY = AY.pop) || void 0 === FY || FY.cancel(), AY.element.style.opacity = "1";
-        const RY = AY.element.animate([{
-          opacity: IY
+        zT.direction = TT, this.drawArcAngle(zT);
+        const kT = zT.fade ? Number(getComputedStyle(zT.element).opacity) : 0;
+        null === (IT = zT.fade) || void 0 === IT || IT.cancel(), null === (iT = zT.pop) || void 0 === iT || iT.cancel(), zT.element.style.opacity = "1";
+        const WT = zT.element.animate([{
+          opacity: kT
         }, {
           opacity: 1
         }], 144);
-        AY.fade = RY, AY.pop = AY.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * rY
+        zT.fade = WT, zT.pop = zT.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * oT
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const OY = AY;
-        RY.onfinish = () => {
-          if (OY.fade !== RY) return;
-          const YY = OY.element.animate([{
+        const XT = zT;
+        WT.onfinish = () => {
+          if (XT.fade !== WT) return;
+          const TT = XT.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          YY.startTime = RY.startTime, OY.fade = YY, YY.onfinish = () => {
-            OY.fade === YY && (OY.element.remove(), BY(this.arcs, OY))
+          TT.startTime = WT.startTime, XT.fade = TT, TT.onfinish = () => {
+            XT.fade === TT && (XT.element.remove(), vT(this.arcs, XT))
           }
         }
       }
-      drawArcAngle(YY) {
-        const rY = YY.direction - this.cameraHeading;
-        (null === YY.drawnAngle || Math.abs(rY - YY.drawnAngle) > .005) && (YY.drawnAngle = rY, YY.element.style.rotate = `${rY}rad`)
+      drawArcAngle(TT) {
+        const oT = TT.direction - this.cameraHeading;
+        (null === TT.drawnAngle || Math.abs(oT - TT.drawnAngle) > .005) && (TT.drawnAngle = oT, TT.element.style.rotate = `${oT}rad`)
       }
-      flashEdge(YY, rY) {
-        var DY, FY, AY;
+      flashEdge(TT, oT) {
+        var IT, iT, zT;
         if (!this.root) return;
-        let IY = this.flashes.find((rY => null === rY.angle || null === YY ? rY.angle === YY : eY(rY.angle, YY) < .5));
-        if (!IY) {
-          const rY = document.createElement("div");
-          rY.className = "FrontlineDamageFlash";
-          const DY = rY.appendChild(document.createElement("div"));
-          DY.className = "FrontlineDamageFlashGlow", this.root.insertBefore(rY, this.arcLayer), IY = {
-            element: rY,
-            glow: DY,
-            angle: YY,
+        let kT = this.flashes.find((oT => null === oT.angle || null === TT ? oT.angle === TT : RT(oT.angle, TT) < .5));
+        if (!kT) {
+          const oT = document.createElement("div");
+          oT.className = "FrontlineDamageFlash";
+          const IT = oT.appendChild(document.createElement("div"));
+          IT.className = "FrontlineDamageFlashGlow", this.root.insertBefore(oT, this.arcLayer), kT = {
+            element: oT,
+            glow: IT,
+            angle: TT,
             level: 0,
             animation: null
-          }, this.flashes.push(IY)
+          }, this.flashes.push(kT)
         }
-        const RY = null === (DY = IY.animation) || void 0 === DY || null === (FY = DY.effect) || void 0 === FY ? void 0 : FY.getComputedTiming().progress,
-          OY = null === RY || void 0 === RY ? 0 : IY.level * (1 - RY);
-        IY.level = Math.min(1, Math.max(rY, OY + .6 * rY)), IY.angle = YY;
+        const WT = null === (IT = kT.animation) || void 0 === IT || null === (iT = IT.effect) || void 0 === iT ? void 0 : iT.getComputedTiming().progress,
+          XT = null === WT || void 0 === WT ? 0 : kT.level * (1 - WT);
+        kT.level = Math.min(1, Math.max(oT, XT + .6 * oT)), kT.angle = TT;
         const {
-          x: gY,
-          y: aY,
-          rx: vY,
-          ry: uY
-        } = function(YY, rY) {
-          const DY = window.innerWidth,
-            FY = window.innerHeight;
-          if (null === YY) return {
-            x: DY / 2,
-            y: FY / 2,
+          x: BT,
+          y: FT,
+          rx: ST,
+          ry: DT
+        } = function(TT, oT) {
+          const IT = window.innerWidth,
+            iT = window.innerHeight;
+          if (null === TT) return {
+            x: IT / 2,
+            y: iT / 2,
             rx: 0,
             ry: 0
           };
-          const AY = Math.sin(YY),
-            IY = -Math.cos(YY),
-            RY = DY / 2 / Math.max(1e-6, Math.abs(AY)),
-            OY = FY / 2 / Math.max(1e-6, Math.abs(IY)),
-            gY = Math.min(RY, OY),
-            aY = Math.round(DY / 2 + AY * gY),
-            vY = Math.round(FY / 2 + IY * gY),
-            uY = FY / 100 * (.85 + .25 * rY),
-            sY = RY <= OY,
-            iY = Math.round((sY ? 30 : 74) * uY),
-            yY = Math.round((sY ? 58 : 26) * uY);
+          const zT = Math.sin(TT),
+            kT = -Math.cos(TT),
+            WT = IT / 2 / Math.max(1e-6, Math.abs(zT)),
+            XT = iT / 2 / Math.max(1e-6, Math.abs(kT)),
+            BT = Math.min(WT, XT),
+            FT = Math.round(IT / 2 + zT * BT),
+            ST = Math.round(iT / 2 + kT * BT),
+            DT = iT / 100 * (.85 + .25 * oT),
+            LT = WT <= XT,
+            xT = Math.round((LT ? 30 : 74) * DT),
+            cT = Math.round((LT ? 58 : 26) * DT);
           return {
-            x: aY,
-            y: vY,
-            rx: iY,
-            ry: yY
+            x: FT,
+            y: ST,
+            rx: xT,
+            ry: cT
           }
-        }(YY, IY.level), {
-          style: sY
-        } = IY.glow;
-        IY.glow.classList.toggle("Everywhere", null === YY), sY.setProperty("--glowX", `${gY}px`), sY.setProperty("--glowY", `${aY}px`), sY.setProperty("--glowRx", `${vY}px`), sY.setProperty("--glowRy", `${uY}px`), IY.element.style.transformOrigin = `${gY}px ${aY}px`, null === (AY = IY.animation) || void 0 === AY || AY.cancel();
-        const iY = IY.element.animate([{
+        }(TT, kT.level), {
+          style: LT
+        } = kT.glow;
+        kT.glow.classList.toggle("Everywhere", null === TT), LT.setProperty("--glowX", `${BT}px`), LT.setProperty("--glowY", `${FT}px`), LT.setProperty("--glowRx", `${ST}px`), LT.setProperty("--glowRy", `${DT}px`), kT.element.style.transformOrigin = `${BT}px ${FT}px`, null === (zT = kT.animation) || void 0 === zT || zT.cancel();
+        const xT = kT.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: IY.level,
+          opacity: kT.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * IY.level,
+          opacity: .8 * kT.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * IY.level
+          duration: 520 + 180 * kT.level
         });
-        IY.animation = iY;
-        const yY = IY;
-        iY.onfinish = () => {
-          yY.animation === iY && (yY.element.remove(), BY(this.flashes, yY))
+        kT.animation = xT;
+        const cT = kT;
+        xT.onfinish = () => {
+          cT.animation === xT && (cT.element.remove(), vT(this.flashes, cT))
         }
       }
       clearHits() {
-        for (const FY of this.arcs) {
-          var YY, rY;
-          null === (YY = FY.fade) || void 0 === YY || YY.cancel(), FY.fade = null, null === (rY = FY.pop) || void 0 === rY || rY.cancel(), FY.element.remove()
+        for (const iT of this.arcs) {
+          var TT, oT;
+          null === (TT = iT.fade) || void 0 === TT || TT.cancel(), iT.fade = null, null === (oT = iT.pop) || void 0 === oT || oT.cancel(), iT.element.remove()
         }
         this.arcs.length = 0;
-        for (const FY of this.flashes) {
-          var DY;
-          null === (DY = FY.animation) || void 0 === DY || DY.cancel(), FY.element.remove()
+        for (const iT of this.flashes) {
+          var IT;
+          null === (IT = iT.animation) || void 0 === IT || IT.cancel(), iT.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function eY(YY, rY) {
-      return Math.abs(Math.atan2(Math.sin(YY - rY), Math.cos(YY - rY)))
+    function RT(TT, oT) {
+      return Math.abs(Math.atan2(Math.sin(TT - oT), Math.cos(TT - oT)))
     }
 
-    function NY(YY) {
-      return Math.max(0, Math.min(1, YY))
+    function uT(TT) {
+      return Math.max(0, Math.min(1, TT))
     }
 
-    function BY(YY, rY) {
-      const DY = YY.indexOf(rY); - 1 !== DY && YY.splice(DY, 1)
+    function vT(TT, oT) {
+      const IT = TT.indexOf(oT); - 1 !== IT && TT.splice(IT, 1)
     }
-    var cY = DY(1092),
-      KY = DY.n(cY),
-      HY = DY(36025),
-      zY = DY(36130),
-      ZY = DY(1211),
-      CY = DY(1430);
-    const fY = "frontlineHudChanged",
-      jY = "frontlineScoreboardChanged";
-    class hY {
+    var ET = IT(1042),
+      fT = IT.n(ET),
+      CT = IT(35594),
+      jT = IT(35692),
+      JT = IT(1171),
+      UT = IT(1403);
+    const aT = "frontlineHudChanged",
+      YT = "frontlineScoreboardChanged";
+    class QT {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      Cy(YY) {
-        this.wire = YY, aY.g.vo(fY, YY, !0)
+      Jc(TT) {
+        this.wire = TT, FT.h.XM(aT, TT, !0)
       }
-      receiveScoreboard(YY) {
-        let rY = "scoreboard" === YY[0] ? performance.now() + YY[5] : 0;
-        const DY = this.scoreboard.endsAt;
-        0 !== rY && 0 !== DY && Math.abs(rY - DY) < 1e3 && (rY = DY), this.scoreboard = {
-          wire: YY,
-          endsAt: rY
-        }, aY.g.vo(jY, this.scoreboard, !0)
+      receiveScoreboard(TT) {
+        let oT = "scoreboard" === TT[0] ? performance.now() + TT[5] : 0;
+        const IT = this.scoreboard.endsAt;
+        0 !== oT && 0 !== IT && Math.abs(oT - IT) < 1e3 && (oT = IT), this.scoreboard = {
+          wire: TT,
+          endsAt: oT
+        }, FT.h.XM(YT, this.scoreboard, !0)
       }
     }
-    var dY = DY(1125);
-    const JY = {
+    var OT = IT(1083);
+    const HT = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function MY(YY) {
-      const [rY, DY] = (0, AY.useState)((() => (YY - performance.now()) / 1e3));
-      return (0, AY.useEffect)((() => {
-        if (0 === YY) return;
-        const rY = () => {
-          DY((YY - performance.now()) / 1e3)
+    function nT(TT) {
+      const [oT, IT] = (0, zT.useState)((() => (TT - performance.now()) / 1e3));
+      return (0, zT.useEffect)((() => {
+        if (0 === TT) return;
+        const oT = () => {
+          IT((TT - performance.now()) / 1e3)
         };
-        rY();
-        const FY = window.setInterval(rY, 250);
+        oT();
+        const iT = window.setInterval(oT, 250);
         return () => {
-          window.clearInterval(FY)
+          window.clearInterval(iT)
         }
-      }), [YY]), rY
+      }), [TT]), oT
     }
 
-    function wY(YY) {
+    function qT(TT) {
       let {
-        className: rY,
-        point: DY
-      } = YY;
-      const [FY, AY, IY, RY, OY, gY] = DY;
-      return (0, dY.jsxs)("div", {
-        className: KY()(rY, `Owner-${AY||"None"}`, `Leader-${RY||"None"}`, {
-          Contested: OY,
-          Here: gY
+        className: oT,
+        point: IT
+      } = TT;
+      const [iT, zT, kT, WT, XT, BT] = IT;
+      return (0, OT.jsxs)("div", {
+        className: fT()(oT, `Owner-${zT||"None"}`, `Leader-${WT||"None"}`, {
+          Contested: XT,
+          Here: BT
         }),
-        children: [(0, dY.jsx)("span", {
+        children: [(0, OT.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: FY
-        }), (0, dY.jsx)("i", {
+          children: iT
+        }), (0, OT.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${IY}%`
+            width: `${kT}%`
           }
         })]
       })
     }
-    const bY = (0, AY.memo)((function(YY) {
+    const ZT = (0, zT.memo)((function(TT) {
         let {
-          points: rY,
-          markers: DY
-        } = YY;
+          points: oT,
+          markers: IT
+        } = TT;
         const {
-          t: FY
-        } = (0, ZY.C)();
-        return rY ? (0, dY.jsx)("div", {
+          t: iT
+        } = (0, JT.t)();
+        return oT ? (0, OT.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: rY.map((YY => {
-            const [rY, , , , , , , AY] = YY;
-            return (0, dY.jsxs)("div", {
-              ref: DY.bindMarker(rY),
+          children: oT.map((TT => {
+            const [oT, , , , , , , zT] = TT;
+            return (0, OT.jsxs)("div", {
+              ref: IT.bindMarker(oT),
               className: "FrontlinePointMarker",
-              children: [(0, dY.jsx)(wY, {
+              children: [(0, OT.jsx)(qT, {
                 className: "FrontlinePointMarkerTile",
-                point: YY
-              }), (0, dY.jsxs)("div", {
+                point: TT
+              }), (0, OT.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [AY && (0, dY.jsx)("span", {
-                  className: KY()("FrontlinePointMarkerHomeTurf", `Team-${AY}`),
-                  children: FY("frontlineHud:homeTurf", {
-                    team: FY(JY[AY])
+                children: [zT && (0, OT.jsx)("span", {
+                  className: fT()("FrontlinePointMarkerHomeTurf", `Team-${zT}`),
+                  children: iT("frontlineHud:homeTurf", {
+                    team: iT(HT[zT])
                   })
-                }), (0, dY.jsx)("span", {
+                }), (0, OT.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, rY)
+            }, oT)
           }))
         }) : null
       })),
-      XY = {
+      lT = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      qY = {
+      sT = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function pY(YY) {
+    function tT(TT) {
       let {
-        hud: rY,
-        crosshair: DY,
-        damage: FY,
-        markers: AY
-      } = YY;
-      const IY = (0, CY.k)(fY, rY.getWire()),
-        RY = (0, CY.k)(jY, rY.getScoreboard());
-      return (0, dY.jsxs)(dY.Fragment, {
-        children: [(0, dY.jsx)(kY, {
-          damage: FY
-        }), (0, dY.jsx)(bY, {
-          points: "scoreboard" === RY.wire[0] ? RY.wire[6] : null,
-          markers: AY
-        }), (0, dY.jsx)(xY, {
-          view: RY
-        }), (0, dY.jsx)("div", {
+        hud: oT,
+        crosshair: IT,
+        damage: iT,
+        markers: zT
+      } = TT;
+      const kT = (0, UT.i)(aT, oT.getWire()),
+        WT = (0, UT.i)(YT, oT.getScoreboard());
+      return (0, OT.jsxs)(OT.Fragment, {
+        children: [(0, OT.jsx)(GT, {
+          damage: iT
+        }), (0, OT.jsx)(ZT, {
+          points: "scoreboard" === WT.wire[0] ? WT.wire[6] : null,
+          markers: zT
+        }), (0, OT.jsx)(bT, {
+          view: WT
+        }), (0, OT.jsx)("div", {
           className: "FrontlineReticle",
-          ref: DY.bindElement
-        }), (0, dY.jsx)(HY.e, {
-          children: (0, dY.jsx)(GY, {
-            wire: IY
+          ref: IT.bindElement
+        }), (0, OT.jsx)(CT.e, {
+          children: (0, OT.jsx)(pT, {
+            wire: kT
           })
         })]
       })
     }
-    const kY = (0, AY.memo)((function(YY) {
+    const GT = (0, zT.memo)((function(TT) {
         let {
-          damage: rY
-        } = YY;
-        return (0, dY.jsxs)("div", {
+          damage: oT
+        } = TT;
+        return (0, OT.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: rY.bindElement,
-          children: [(0, dY.jsx)("div", {
+          ref: oT.bindElement,
+          children: [(0, OT.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, dY.jsx)("div", {
+            children: (0, OT.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, dY.jsx)("div", {
+          }), (0, OT.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      GY = (0, AY.memo)((function(YY) {
+      pT = (0, zT.memo)((function(TT) {
         let {
-          wire: rY
-        } = YY;
+          wire: oT
+        } = TT;
         const {
-          t: DY
-        } = (0, ZY.C)();
-        if ("capture" === rY[0]) {
-          const [, YY, FY, AY, IY, RY, OY] = rY, gY = Math.round(AY / 100 * 24);
-          return (0, dY.jsxs)("div", {
-            className: KY()("FrontlinePlate", `Status-${FY}`, `Leader-${IY||"None"}`),
-            children: [(0, dY.jsx)(LY, {}), (0, dY.jsxs)("div", {
+          t: IT
+        } = (0, JT.t)();
+        if ("capture" === oT[0]) {
+          const [, TT, iT, zT, kT, WT, XT] = oT, BT = Math.round(zT / 100 * 24);
+          return (0, OT.jsxs)("div", {
+            className: fT()("FrontlinePlate", `Status-${iT}`, `Leader-${kT||"None"}`),
+            children: [(0, OT.jsx)(dT, {}), (0, OT.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, dY.jsx)("span", {
+              children: [(0, OT.jsx)("span", {
                 className: "FrontlineObjective",
-                children: YY
-              }), (0, dY.jsxs)("div", {
+                children: TT
+              }), (0, OT.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, dY.jsx)("div", {
+                children: [(0, OT.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: DY("frontlineHud:objective", {
-                    point: YY,
-                    friendly: RY,
-                    enemy: OY
+                  children: IT("frontlineHud:objective", {
+                    point: TT,
+                    friendly: WT,
+                    enemy: XT
                   })
-                }), (0, dY.jsx)("div", {
+                }), (0, OT.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: DY(XY[FY])
+                  children: IT(lT[iT])
                 })]
-              }), (0, dY.jsxs)("span", {
+              }), (0, OT.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(AY).padStart(3, "0"), (0, dY.jsx)("small", {
+                children: [String(zT).padStart(3, "0"), (0, OT.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, dY.jsx)(PY, {
+            }), (0, OT.jsx)(NT, {
               segments: 24,
-              lit: gY
+              lit: BT
             })]
           })
         }
-        if ("alert" === rY[0]) {
-          const [, YY, FY, AY] = rY;
-          return (0, dY.jsxs)("div", {
-            className: KY()("FrontlinePlate", "FrontlineAlert", `Tone-${AY}`),
-            children: [(0, dY.jsx)(LY, {}), (0, dY.jsx)("div", {
+        if ("alert" === oT[0]) {
+          const [, TT, iT, zT] = oT;
+          return (0, OT.jsxs)("div", {
+            className: fT()("FrontlinePlate", "FrontlineAlert", `Tone-${zT}`),
+            children: [(0, OT.jsx)(dT, {}), (0, OT.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: DY(qY[YY])
-            }), (0, dY.jsx)("div", {
+              children: IT(sT[TT])
+            }), (0, OT.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: FY
+              children: iT
             })]
           })
         }
         return null
       })),
-      xY = (0, AY.memo)((function(YY) {
+      bT = (0, zT.memo)((function(TT) {
         let {
-          view: rY
-        } = YY;
+          view: oT
+        } = TT;
         const {
-          t: DY
-        } = (0, ZY.C)(), FY = (0, AY.useRef)(null), IY = function(YY, rY) {
-          const [DY, FY] = (0, AY.useState)(!1);
-          return (0, AY.useLayoutEffect)((() => {
-            const rY = YY.current;
-            if (!rY) return;
-            const DY = document.querySelector(`.${zY.h}`),
-              AY = document.querySelector(`.${zY.j}`),
-              IY = () => {
-                var YY;
-                const IY = rY.querySelector(".FrontlineTeamTrack"),
-                  RY = (0, gY.getRemInPx)(),
-                  OY = rY.getBoundingClientRect().width - 2 * (null !== (YY = null === IY || void 0 === IY ? void 0 : IY.getBoundingClientRect().width) && void 0 !== YY ? YY : 0),
-                  aY = window.innerWidth / 2,
-                  vY = DY ? DY.getBoundingClientRect().right : 0,
-                  uY = AY ? AY.getBoundingClientRect().left : window.innerWidth,
-                  sY = Math.min(aY - vY, uY - aY) - zY.d - OY / 2,
-                  iY = sY < 6 * RY,
-                  yY = iY ? (window.innerWidth - OY) / 2 - zY.d : sY;
-                rY.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(yY,14*RY)))}px`), FY(iY)
+          t: IT
+        } = (0, JT.t)(), iT = (0, zT.useRef)(null), kT = function(TT, oT) {
+          const [IT, iT] = (0, zT.useState)(!1);
+          return (0, zT.useLayoutEffect)((() => {
+            const oT = TT.current;
+            if (!oT) return;
+            const IT = document.querySelector(`.${jT.g}`),
+              zT = document.querySelector(`.${jT.k}`),
+              kT = () => {
+                var TT;
+                const kT = oT.querySelector(".FrontlineTeamTrack"),
+                  WT = (0, BT.getRemInPx)(),
+                  XT = oT.getBoundingClientRect().width - 2 * (null !== (TT = null === kT || void 0 === kT ? void 0 : kT.getBoundingClientRect().width) && void 0 !== TT ? TT : 0),
+                  FT = window.innerWidth / 2,
+                  ST = IT ? IT.getBoundingClientRect().right : 0,
+                  DT = zT ? zT.getBoundingClientRect().left : window.innerWidth,
+                  LT = Math.min(FT - ST, DT - FT) - jT.e - XT / 2,
+                  xT = LT < 6 * WT,
+                  cT = xT ? (window.innerWidth - XT) / 2 - jT.e : LT;
+                oT.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(cT,14*WT)))}px`), iT(xT)
               };
-            IY();
-            const RY = new ResizeObserver(IY);
-            for (const YY of [rY, DY, AY]) YY && RY.observe(YY);
-            return window.addEventListener("resize", IY), () => {
-              RY.disconnect(), window.removeEventListener("resize", IY)
+            kT();
+            const WT = new ResizeObserver(kT);
+            for (const TT of [oT, IT, zT]) TT && WT.observe(TT);
+            return window.addEventListener("resize", kT), () => {
+              WT.disconnect(), window.removeEventListener("resize", kT)
             }
-          }), [YY, rY]), DY
-        }(FY, "scoreboard" === rY.wire[0]);
-        if ("scoreboard" !== rY.wire[0]) return null;
-        const [, RY, OY, aY, vY, , uY] = rY.wire, sY = "Red" === RY ? "Blue" : "Red";
-        return (0, dY.jsxs)("div", {
-          className: KY()("FrontlineScoreboardContainer", {
-            Below: IY
+          }), [TT, oT]), IT
+        }(iT, "scoreboard" === oT.wire[0]);
+        if ("scoreboard" !== oT.wire[0]) return null;
+        const [, WT, XT, FT, ST, , DT] = oT.wire, LT = "Red" === WT ? "Blue" : "Red";
+        return (0, OT.jsxs)("div", {
+          className: fT()("FrontlineScoreboardContainer", {
+            Below: kT
           }),
-          children: [(0, dY.jsxs)("div", {
-            ref: FY,
+          children: [(0, OT.jsxs)("div", {
+            ref: iT,
             className: "FrontlineScoreboard",
-            children: [(0, dY.jsx)(LY, {}), (0, dY.jsx)(nY, {
-              team: RY,
-              tickets: OY,
-              goal: vY,
+            children: [(0, OT.jsx)(dT, {}), (0, OT.jsx)(yT, {
+              team: WT,
+              tickets: XT,
+              goal: ST,
               side: "Friendly"
-            }), (0, dY.jsx)("div", {
+            }), (0, OT.jsx)("div", {
               className: "FrontlinePoints",
-              children: uY.map((YY => (0, dY.jsx)(wY, {
+              children: DT.map((TT => (0, OT.jsx)(qT, {
                 className: "FrontlinePoint",
-                point: YY
-              }, YY[0])))
-            }), (0, dY.jsx)(nY, {
-              team: sY,
-              tickets: aY,
-              goal: vY,
+                point: TT
+              }, TT[0])))
+            }), (0, OT.jsx)(yT, {
+              team: LT,
+              tickets: FT,
+              goal: ST,
               side: "Enemy"
             })]
-          }), (0, dY.jsxs)("div", {
+          }), (0, OT.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, dY.jsx)(UY, {
-              endsAt: rY.endsAt
-            }), (0, dY.jsx)("div", {
+            children: [(0, OT.jsx)(PT, {
+              endsAt: oT.endsAt
+            }), (0, OT.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: DY("frontlineHud:ticketGoal", {
-                goal: vY
+              children: IT("frontlineHud:ticketGoal", {
+                goal: ST
               })
             })]
           })]
         })
       }));
 
-    function nY(YY) {
+    function yT(TT) {
       let {
-        team: rY,
-        tickets: DY,
-        goal: FY,
-        side: AY
-      } = YY;
+        team: oT,
+        tickets: IT,
+        goal: iT,
+        side: zT
+      } = TT;
       const {
-        t: IY
-      } = (0, ZY.C)(), RY = String(DY).padStart(3, "0"), OY = RY.search(/[1-9]/), gY = -1 === OY ? RY : RY.slice(0, OY), aY = Math.min(20, Math.floor(DY / FY * 20));
-      return (0, dY.jsxs)("div", {
-        className: KY()("FrontlineTeamScore", AY, `Team-${rY}`),
-        children: [(0, dY.jsxs)("div", {
+        t: kT
+      } = (0, JT.t)(), WT = String(IT).padStart(3, "0"), XT = WT.search(/[1-9]/), BT = -1 === XT ? WT : WT.slice(0, XT), FT = Math.min(20, Math.floor(IT / iT * 20));
+      return (0, OT.jsxs)("div", {
+        className: fT()("FrontlineTeamScore", zT, `Team-${oT}`),
+        children: [(0, OT.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, dY.jsx)("span", {
+          children: [(0, OT.jsx)("span", {
             className: "Lead",
-            children: gY
-          }), -1 !== OY && RY.slice(OY)]
-        }), (0, dY.jsxs)("div", {
+            children: BT
+          }), -1 !== XT && WT.slice(XT)]
+        }), (0, OT.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, dY.jsx)("div", {
+          children: [(0, OT.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: IY(JY[rY])
-          }), (0, dY.jsx)(PY, {
+            children: kT(HT[oT])
+          }), (0, OT.jsx)(NT, {
             segments: 20,
-            lit: aY
+            lit: FT
           })]
         })]
       })
     }
 
-    function PY(YY) {
+    function NT(TT) {
       let {
-        segments: rY,
-        lit: DY
-      } = YY;
-      return (0, dY.jsx)("div", {
+        segments: oT,
+        lit: IT
+      } = TT;
+      return (0, OT.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: rY
-        }, ((YY, rY) => (0, dY.jsx)("i", {
-          className: KY()({
-            Lit: rY < DY
+          length: oT
+        }, ((TT, oT) => (0, OT.jsx)("i", {
+          className: fT()({
+            Lit: oT < IT
           })
-        }, rY)))
+        }, oT)))
       })
     }
 
-    function UY(YY) {
+    function PT(TT) {
       let {
-        endsAt: rY
-      } = YY;
-      const DY = Math.max(0, Math.ceil(MY(rY)));
-      return (0, dY.jsxs)("div", {
-        className: KY()("FrontlineClock", {
-          Urgent: DY <= 60
+        endsAt: oT
+      } = TT;
+      const IT = Math.max(0, Math.ceil(nT(oT)));
+      return (0, OT.jsxs)("div", {
+        className: fT()("FrontlineClock", {
+          Urgent: IT <= 60
         }),
-        children: [Math.floor(DY / 60), ":", String(DY % 60).padStart(2, "0")]
+        children: [Math.floor(IT / 60), ":", String(IT % 60).padStart(2, "0")]
       })
     }
 
-    function LY() {
-      return (0, dY.jsxs)(dY.Fragment, {
-        children: [(0, dY.jsx)("i", {
+    function dT() {
+      return (0, OT.jsxs)(OT.Fragment, {
+        children: [(0, OT.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, dY.jsx)("i", {
+        }), (0, OT.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var tY = DY(36123),
-      Yr = DY(1256),
-      rr = DY(37879),
-      Dr = DY(37914);
-    class Fr {
-      constructor(YY) {
-        var rY;
-        this.hud = YY, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var VT = IT(35686),
+      To = IT(1220),
+      oo = IT(37475),
+      Io = IT(37514);
+    class io {
+      constructor(TT) {
+        var oT;
+        this.hud = TT, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.Ky = !1, this.QE = () => {
+        }, this.render = null, this.Ec = !1, this.Tm = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.QE), null === (rY = window.visualViewport) || void 0 === rY || rY.addEventListener("resize", this.QE)
+        }, window.addEventListener("resize", this.Tm), null === (oT = window.visualViewport) || void 0 === oT || oT.addEventListener("resize", this.Tm)
       }
-      bindMarker(YY) {
-        let rY = this.refs.get(YY);
-        return rY || (rY = rY => {
-          var DY;
-          null === (DY = this.markers.get(YY)) || void 0 === DY || DY.stopObserving(), this.markers.delete(YY), rY && !this.Ky && this.markers.set(YY, this.mount(rY))
-        }, this.refs.set(YY, rY)), rY
+      bindMarker(TT) {
+        let oT = this.refs.get(TT);
+        return oT || (oT = oT => {
+          var IT;
+          null === (IT = this.markers.get(TT)) || void 0 === IT || IT.stopObserving(), this.markers.delete(TT), oT && !this.Ec && this.markers.set(TT, this.mount(oT))
+        }, this.refs.set(TT, oT)), oT
       }
-      frame(YY, rY) {
-        this.render = YY;
-        const DY = this.hud.getScoreboard().wire;
-        if ("scoreboard" === DY[0] && 0 !== this.markers.size)
-          for (const [FY, , , , , , AY] of DY[6]) {
-            const YY = this.markers.get(FY);
-            YY && AY && (YY.target ??= [0, 0, 0], YY.target[0] = AY[0], YY.target[1] = AY[1] + 2.5, YY.target[2] = AY[2], this.place(YY), this.aY(YY, rY && Math.hypot(AY[0] - rY[0], AY[1] - rY[1], AY[2] - rY[2])))
+      frame(TT, oT) {
+        this.render = TT;
+        const IT = this.hud.getScoreboard().wire;
+        if ("scoreboard" === IT[0] && 0 !== this.markers.size)
+          for (const [iT, , , , , , zT] of IT[6]) {
+            const TT = this.markers.get(iT);
+            TT && zT && (TT.target ??= [0, 0, 0], TT.target[0] = zT[0], TT.target[1] = zT[1] + 2.5, TT.target[2] = zT[2], this.place(TT), this.FT(TT, oT && Math.hypot(zT[0] - oT[0], zT[1] - oT[1], zT[2] - oT[2])))
           }
       }
       dispose() {
-        var YY;
-        this.Ky = !0, window.removeEventListener("resize", this.QE), null === (YY = window.visualViewport) || void 0 === YY || YY.removeEventListener("resize", this.QE);
-        for (const rY of this.markers.values()) rY.stopObserving();
+        var TT;
+        this.Ec = !0, window.removeEventListener("resize", this.Tm), null === (TT = window.visualViewport) || void 0 === TT || TT.removeEventListener("resize", this.Tm);
+        for (const oT of this.markers.values()) oT.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(YY) {
+      place(TT) {
         const {
-          render: rY,
-          viewport: DY
+          render: oT,
+          viewport: IT
         } = this;
-        if (!rY || !YY.target) return;
-        const FY = (50 - rY.screenBandPct.y) / 100 * DY.height,
-          AY = {
-            x: YY.halfSize.width + 8,
-            top: YY.halfSize.height + 8,
-            bottom: YY.halfSize.height + YY.labelsBelow + FY
+        if (!oT || !TT.target) return;
+        const iT = (50 - oT.screenBandPct.y) / 100 * IT.height,
+          zT = {
+            x: TT.halfSize.width + 8,
+            top: TT.halfSize.height + 8,
+            bottom: TT.halfSize.height + TT.labelsBelow + iT
           },
-          IY = rY.projectWorldPosToViewport(YY.target),
-          RY = null !== IY && void 0 !== IY ? IY : rY.projectWorldPosToScreenPos(YY.target),
-          OY = (0, Dr.b)({
-            x: RY.x,
-            y: RY.y,
-            text: IY
-          }, AY, DY);
-        (0, rr.c)(YY.root, Math.round(100 * OY.x) / 100, Math.round(100 * OY.y) / 100)
+          kT = oT.projectWorldPosToViewport(TT.target),
+          WT = null !== kT && void 0 !== kT ? kT : oT.projectWorldPosToScreenPos(TT.target),
+          XT = (0, Io.d)({
+            x: WT.x,
+            y: WT.y,
+            text: kT
+          }, zT, IT);
+        (0, oo.c)(TT.root, Math.round(100 * XT.x) / 100, Math.round(100 * XT.y) / 100)
       }
-      aY(YY, rY) {
-        if (null === rY) return void(null !== YY.metres && (YY.metres = null, YY.distance.textContent = ""));
-        const DY = Date.now();
-        (null === YY.metres || (0, tY.c)(rY, YY.metres, YY.metresShownAt)) && (YY.metres = Math.round(rY), YY.metresShownAt = DY, YY.distance.textContent = (0, ZY.y)(Yr.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(YY.metres)
+      FT(TT, oT) {
+        if (null === oT) return void(null !== TT.metres && (TT.metres = null, TT.distance.textContent = ""));
+        const IT = Date.now();
+        (null === TT.metres || (0, VT.c)(oT, TT.metres, TT.metresShownAt)) && (TT.metres = Math.round(oT), TT.metresShownAt = IT, TT.distance.textContent = (0, JT.p)(To.d.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(TT.metres)
         }))
       }
-      mount(YY) {
-        const rY = {
-            root: YY,
-            distance: YY.querySelector(".FrontlinePointMarkerDistance"),
+      mount(TT) {
+        const oT = {
+            root: TT,
+            distance: TT.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          DY = YY.querySelector(".FrontlinePointMarkerLabels"),
-          FY = new ResizeObserver((() => {
-            rY.halfSize = {
-              width: Math.max(YY.offsetWidth, DY.offsetWidth) / 2,
-              height: YY.offsetHeight / 2
-            }, rY.labelsBelow = DY.offsetTop + DY.offsetHeight - YY.offsetHeight, this.place(rY)
+          IT = TT.querySelector(".FrontlinePointMarkerLabels"),
+          iT = new ResizeObserver((() => {
+            oT.halfSize = {
+              width: Math.max(TT.offsetWidth, IT.offsetWidth) / 2,
+              height: TT.offsetHeight / 2
+            }, oT.labelsBelow = IT.offsetTop + IT.offsetHeight - TT.offsetHeight, this.place(oT)
           }));
-        return FY.observe(YY, {
+        return iT.observe(TT, {
           box: "border-box"
-        }), FY.observe(DY, {
+        }), iT.observe(IT, {
           box: "border-box"
-        }), rY.stopObserving = () => {
-          FY.disconnect()
-        }, rY
+        }), oT.stopObserving = () => {
+          iT.disconnect()
+        }, oT
       }
     }
-    var Ar = DY(6005),
-      Ir = DY(2368);
-    const Rr = "frontlineRoundEndChanged";
-    class Or {
+    var zo = IT(5934),
+      ko = IT(2327);
+    const Wo = "frontlineRoundEndChanged";
+    class Xo {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      Cy(YY) {
-        const rY = "roundEnd" === YY[0] ? performance.now() + YY[5] : 0;
+      Jc(TT) {
+        const oT = "roundEnd" === TT[0] ? performance.now() + TT[5] : 0;
         this.view = {
-          wire: YY,
+          wire: TT,
           key: this.view.key + 1,
-          endsAt: rY
-        }, aY.g.vo(Rr, this.view, !0)
+          endsAt: oT
+        }, FT.h.XM(Wo, this.view, !0)
       }
     }
-    const gr = (0, AY.lazy)((() => (0, Ir.d)(DY.e(212).then((() => DY(40815))), (YY => YY.FrontlineMvpLineup)))),
-      ar = [4800, 4e3, 3200],
-      vr = [1, 0, 2],
-      ur = {
+    const Bo = (0, zT.lazy)((() => (0, ko.e)(IT.e(212).then((() => IT(40583))), (TT => TT.FrontlineMvpLineup)))),
+      Fo = [4800, 4e3, 3200],
+      So = [1, 0, 2],
+      Do = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      sr = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      Lo = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function ir(YY) {
+    function xo(TT) {
       let {
-        controller: rY
-      } = YY;
-      const DY = (0, CY.k)(Rr, rY.getView()),
-        FY = MY(DY.endsAt);
-      return "roundEnd" !== DY.wire[0] || 1e3 * FY < -2e3 ? null : (0, dY.jsx)(yr, {
-        wire: DY.wire,
-        secondsLeft: Math.max(0, Math.ceil(FY))
-      }, DY.key)
+        controller: oT
+      } = TT;
+      const IT = (0, UT.i)(Wo, oT.getView()),
+        iT = nT(IT.endsAt);
+      return "roundEnd" !== IT.wire[0] || 1e3 * iT < -2e3 ? null : (0, OT.jsx)(co, {
+        wire: IT.wire,
+        secondsLeft: Math.max(0, Math.ceil(iT))
+      }, IT.key)
     }
-    const yr = (0, AY.memo)((function(YY) {
+    const co = (0, zT.memo)((function(TT) {
       let {
-        wire: rY,
-        secondsLeft: DY
-      } = YY;
+        wire: oT,
+        secondsLeft: IT
+      } = TT;
       const {
-        t: IY
-      } = (0, ZY.C)(), [, RY, OY, gY, aY, , vY, uY] = rY, sY = (0, AY.useMemo)((() => vr.filter((YY => YY < uY.length))), [uY]), iY = (0, AY.useMemo)((() => sY.map((YY => {
-        const [, , , , , rY, DY] = uY[YY];
+        t: kT
+      } = (0, JT.t)(), [, WT, XT, BT, FT, , ST, DT] = oT, LT = (0, zT.useMemo)((() => So.filter((TT => TT < DT.length))), [DT]), xT = (0, zT.useMemo)((() => LT.map((TT => {
+        const [, , , , , oT, IT] = DT[TT];
         return {
-          cosmetics: FY.map(((YY, DY) => [YY, rY[DY]])),
-          size: 0 === YY ? 1.15 : .85,
+          cosmetics: iT.map(((TT, IT) => [TT, oT[IT]])),
+          size: 0 === TT ? 1.15 : .85,
           heldGun: {
-            name: DY,
-            aimed: 0 === YY
+            name: IT,
+            aimed: 0 === TT
           },
-          showAfterMs: ar[YY]
+          showAfterMs: Fo[TT]
         }
-      }))), [uY, sY]);
-      return (0, dY.jsxs)("div", {
-        className: KY()("FrontlineRoundEnd", `Result-${RY}`),
+      }))), [DT, LT]);
+      return (0, OT.jsxs)("div", {
+        className: fT()("FrontlineRoundEnd", `Result-${WT}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, dY.jsx)("div", {
+        children: [(0, OT.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, dY.jsxs)("div", {
+        }), (0, OT.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, dY.jsxs)("div", {
+          children: [(0, OT.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, dY.jsx)("i", {
+            children: [(0, OT.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, dY.jsx)("i", {
+            }), (0, OT.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (yY = IY(ur[RY]), /\p{Script=Arabic}/u.test(yY) ? [yY] : (0, Ar.b)(yY)).map(((YY, rY) => (0, dY.jsx)("span", {
+            }), (cT = kT(Do[WT]), /\p{Script=Arabic}/u.test(cT) ? [cT] : (0, zo.d)(cT)).map(((TT, oT) => (0, OT.jsx)("span", {
               style: {
-                "--letter": rY
+                "--letter": oT
               },
-              children: YY
-            }, rY)))]
-          }), (0, dY.jsxs)("div", {
+              children: TT
+            }, oT)))]
+          }), (0, OT.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [OY && "victory" === RY && (0, dY.jsx)("span", {
+            children: [XT && "victory" === WT && (0, OT.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: IY("frontlineRoundEnd:comeback")
-            }), (0, dY.jsxs)("span", {
+              children: kT("frontlineRoundEnd:comeback")
+            }), (0, OT.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, dY.jsx)("b", {
+              children: [(0, OT.jsx)("b", {
                 className: "Friendly",
-                children: gY
-              }), " \u2013 ", (0, dY.jsx)("b", {
+                children: BT
+              }), " \u2013 ", (0, OT.jsx)("b", {
                 className: "Enemy",
-                children: aY
+                children: FT
               })]
             })]
           })]
-        }), sY.length > 0 && (0, dY.jsxs)("div", {
+        }), LT.length > 0 && (0, OT.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": sY.length
+            "--columns": LT.length
           },
-          children: [(0, dY.jsx)(AY.Suspense, {
+          children: [(0, OT.jsx)(zT.Suspense, {
             fallback: null,
-            children: (0, dY.jsx)(gr, {
+            children: (0, OT.jsx)(Bo, {
               className: "FrontlineRoundEndLineup",
-              players: iY
+              players: xT
             })
-          }), sY.map((YY => (0, dY.jsx)(Qr, {
-            mvp: uY[YY],
-            place: YY
-          }, YY)))]
-        }), (0, dY.jsx)("div", {
+          }), LT.map((TT => (0, OT.jsx)(Ko, {
+            mvp: DT[TT],
+            place: TT
+          }, TT)))]
+        }), (0, OT.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: IY("frontlineRoundEnd:nextFront", {
-            map: vY,
-            seconds: String(DY)
+          children: kT("frontlineRoundEnd:nextFront", {
+            map: ST,
+            seconds: String(IT)
           })
         })]
       });
-      var yY
+      var cT
     }));
 
-    function Qr(YY) {
+    function Ko(TT) {
       let {
-        mvp: rY,
-        place: DY
-      } = YY;
+        mvp: oT,
+        place: IT
+      } = TT;
       const {
-        t: FY
-      } = (0, ZY.C)(), [AY, IY, RY, OY, gY] = rY, [aY, vY] = FY(function(YY, rY) {
-        return 1 === rY && "damage" !== YY ? `frontlineRoundEnd:${YY}One` : `frontlineRoundEnd:${YY}`
-      }(RY, OY), {
+        t: iT
+      } = (0, JT.t)(), [zT, kT, WT, XT, BT] = oT, [FT, ST] = iT(function(TT, oT) {
+        return 1 === oT && "damage" !== TT ? `frontlineRoundEnd:${TT}One` : `frontlineRoundEnd:${TT}`
+      }(WT, XT), {
         name: "\0",
-        count: OY.toLocaleString()
+        count: XT.toLocaleString()
       }).split("\0");
-      return (0, dY.jsxs)("div", {
-        className: KY()("FrontlineMvpCard", `Place-${DY+1}`, `Team-${IY}`),
+      return (0, OT.jsxs)("div", {
+        className: fT()("FrontlineMvpCard", `Place-${IT+1}`, `Team-${kT}`),
         style: {
-          "--revealMs": `${ar[DY]}ms`
+          "--revealMs": `${Fo[IT]}ms`
         },
-        children: [(0, dY.jsx)("i", {
+        children: [(0, OT.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, dY.jsx)("i", {
+        }), (0, OT.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, dY.jsx)("div", {
+        }), (0, OT.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: FY(sr[DY])
-        }), (0, dY.jsxs)("div", {
+          children: iT(Lo[IT])
+        }), (0, OT.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [aY, (0, dY.jsx)("span", {
+          children: [FT, (0, OT.jsx)("span", {
             className: "FrontlineMvpName",
-            children: AY
-          }), vY]
-        }), (0, dY.jsx)("div", {
+            children: zT
+          }), ST]
+        }), (0, OT.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: gY
+          children: BT
         })]
       })
     }
-    const or = function(YY, rY, DY, FY) {
+    const Mo = function(TT, oT, IT, iT) {
       let {
-        localPlayerId: RY
-      } = FY;
-      const OY = new hY,
-        gY = new Or;
-      let aY = null,
-        vY = null,
-        uY = null,
-        sY = null,
-        iY = null,
-        yY = [!1, !1];
-      const QY = () => {
-        var YY, rY;
-        const [DY, FY] = yY;
-        null === (YY = vY) || void 0 === YY || YY.mV(!DY), null === (rY = uY) || void 0 === rY || rY.mV(!FY)
+        localPlayerId: WT
+      } = iT;
+      const XT = new QT,
+        BT = new Xo;
+      let FT = null,
+        ST = null,
+        DT = null,
+        LT = null,
+        xT = null,
+        cT = [!1, !1];
+      const KT = () => {
+        var TT, oT;
+        const [IT, iT] = cT;
+        null === (TT = ST) || void 0 === TT || TT.Fv(!IT), null === (oT = DT) || void 0 === oT || oT.Fv(!iT)
       };
       return {
-        onCreate: YY => {
-          aY = YY, vY = new mY(YY, RY), uY = new TY(YY, RY), sY = new Fr(OY), QY(), iY = (0, IY.q)((0, AY.createElement)(AY.Fragment, null, (0, AY.createElement)(pY, {
-            hud: OY,
-            crosshair: vY,
-            damage: uY,
-            markers: sY
-          }), (0, AY.createElement)(ir, {
-            controller: gY
+        onCreate: TT => {
+          FT = TT, ST = new gT(TT, WT), DT = new eT(TT, WT), LT = new io(XT), KT(), xT = (0, kT.u)((0, zT.createElement)(zT.Fragment, null, (0, zT.createElement)(tT, {
+            hud: XT,
+            crosshair: ST,
+            damage: DT,
+            markers: LT
+          }), (0, zT.createElement)(xo, {
+            controller: BT
           })))
         },
         onClose: () => {
-          var YY, rY, DY, FY;
-          null === (YY = iY) || void 0 === YY || YY(), null === (rY = vY) || void 0 === rY || rY.dispose(), vY = null, null === (DY = uY) || void 0 === DY || DY.dispose(), uY = null, null === (FY = sY) || void 0 === FY || FY.dispose(), sY = null, aY = null
+          var TT, oT, IT, iT;
+          null === (TT = xT) || void 0 === TT || TT(), null === (oT = ST) || void 0 === oT || oT.dispose(), ST = null, null === (IT = DT) || void 0 === IT || IT.dispose(), DT = null, null === (iT = LT) || void 0 === iT || iT.dispose(), LT = null, FT = null
         },
-        onAfterRender: (YY, rY) => {
-          var DY, FY, AY, IY;
-          null === (DY = vY) || void 0 === DY || DY.frame(YY, rY.tanHalfFovY), null === (FY = uY) || void 0 === FY || FY.frame(rY.cameraHeading), null === (AY = sY) || void 0 === AY || AY.frame(rY, null !== (IY = aY) && void 0 !== IY && IY.checkValid(RY) ? aY.lE(RY) : null)
+        onAfterRender: (TT, oT) => {
+          var IT, iT, zT, kT;
+          null === (IT = ST) || void 0 === IT || IT.frame(TT, oT.tanHalfFovY), null === (iT = DT) || void 0 === iT || iT.frame(oT.cameraHeading), null === (zT = LT) || void 0 === zT || zT.frame(oT, null !== (kT = FT) && void 0 !== kT && kT.checkValid(WT) ? FT.Wm(WT) : null)
         },
-        onReceivedMessageFromServer: (YY, rY) => {
-          "frontlineHud" === YY ? OY.Cy(rY) : "frontlineScoreboard" === YY ? OY.receiveScoreboard(rY) : "frontlineRoundEnd" === YY ? gY.Cy(rY) : "frontlinePrefs" === YY && (yY = rY, QY())
+        onReceivedMessageFromServer: (TT, oT) => {
+          "frontlineHud" === TT ? XT.Jc(oT) : "frontlineScoreboard" === TT ? XT.receiveScoreboard(oT) : "frontlineRoundEnd" === TT ? BT.Jc(oT) : "frontlinePrefs" === TT && (cT = oT, KT())
         }
       }
     }
   },
-  6005: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY
+  5934: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT
     });
-    const FY = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const iT = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function AY(YY) {
-      return null === FY ? Array.from(YY) : Array.from(FY.segment(YY), (YY => {
+    function zT(TT) {
+      return null === iT ? Array.from(TT) : Array.from(iT.segment(TT), (TT => {
         let {
-          segment: rY
-        } = YY;
-        return rY
+          segment: oT
+        } = TT;
+        return oT
       }))
     }
   },
-  37879: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => RY,
-      g: () => IY
+  37475: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => WT,
+      d: () => kT
     });
-    const FY = new WeakMap;
+    const iT = new WeakMap;
 
-    function AY(YY) {
-      let rY = FY.get(YY);
-      return rY || (rY = {
-        hidden: YY.hidden,
+    function zT(TT) {
+      let oT = iT.get(TT);
+      return oT || (oT = {
+        hidden: TT.hidden,
         x: NaN,
         y: NaN
-      }, FY.set(YY, rY)), rY
+      }, iT.set(TT, oT)), oT
     }
 
-    function IY(YY, rY) {
-      const DY = AY(YY);
-      DY.hidden !== rY && (DY.hidden = rY, YY.hidden = rY)
+    function kT(TT, oT) {
+      const IT = zT(TT);
+      IT.hidden !== oT && (IT.hidden = oT, TT.hidden = oT)
     }
 
-    function RY(YY, rY, DY) {
-      const FY = AY(YY);
-      FY.x === rY && FY.y === DY || (FY.x = rY, FY.y = DY, YY.style.translate = `${rY}vw ${DY}vh`)
+    function WT(TT, oT, IT) {
+      const iT = zT(TT);
+      iT.x === oT && iT.y === IT || (iT.x = oT, iT.y = IT, TT.style.translate = `${oT}vw ${IT}vh`)
     }
   },
-  36427: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  36017: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT
     });
-    const FY = {
+    const iT = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

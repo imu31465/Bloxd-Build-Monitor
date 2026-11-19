@@ -1,54 +1,54 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  4382: (YY, rY, DY) => {
-    DY.d(rY, {
-      Ab: () => SY,
-      B: () => IY,
-      C: () => yY,
-      Cb: () => zY,
-      F: () => kY,
-      Gb: () => JY,
-      J: () => aY,
-      Jb: () => CY,
-      L: () => QY,
-      Mb: () => jY,
-      O: () => gY,
-      Ob: () => hY,
-      Qb: () => mY,
-      R: () => sY,
-      Sb: () => VY,
-      T: () => uY,
-      U: () => TY,
-      Ub: () => wY,
-      Wb: () => AY,
-      Y: () => NY,
-      _: () => BY,
-      _b: () => pY,
-      ab: () => eY,
-      d: () => qY,
-      db: () => cY,
-      f: () => XY,
-      fb: () => MY,
-      j: () => vY,
-      jb: () => dY,
-      l: () => EY,
-      lb: () => fY,
-      nb: () => KY,
-      o: () => bY,
-      p: () => WY,
-      pb: () => ZY,
-      rb: () => HY,
-      s: () => oY,
-      u: () => RY,
-      vb: () => iY,
-      y: () => OY,
-      yb: () => lY,
-      z: () => FY
+  4285: (TT, oT, IT) => {
+    IT.d(oT, {
+      $b: () => tT,
+      A: () => kT,
+      Ab: () => xT,
+      Bb: () => mT,
+      C: () => cT,
+      F: () => GT,
+      Fb: () => wT,
+      Gb: () => jT,
+      J: () => FT,
+      Jb: () => HT,
+      Kb: () => UT,
+      N: () => KT,
+      Nb: () => YT,
+      P: () => BT,
+      Pb: () => QT,
+      Rb: () => gT,
+      T: () => LT,
+      Tb: () => hT,
+      Ub: () => qT,
+      W: () => DT,
+      Yb: () => zT,
+      _: () => eT,
+      bb: () => uT,
+      c: () => sT,
+      d: () => lT,
+      eb: () => vT,
+      f: () => ST,
+      gb: () => RT,
+      hb: () => ET,
+      j: () => AT,
+      kb: () => nT,
+      l: () => ZT,
+      mb: () => OT,
+      n: () => rT,
+      o: () => MT,
+      qb: () => aT,
+      r: () => WT,
+      u: () => XT,
+      ub: () => fT,
+      vb: () => JT,
+      xb: () => CT,
+      y: () => iT
     });
-    const FY = 32,
-      AY = 33.333333333333336,
-      IY = {
+    const iT = 32,
+      zT = 33.333333333333336,
+      kT = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -82,18 +82,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      RY = {
+      WT = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      OY = {
+      XT = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      gY = {
+      BT = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -101,20 +101,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      aY = {
+      FT = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      vY = {
+      ST = {
         Look: 0,
         Remesh: 1
       },
-      uY = 8,
-      sY = 1,
-      iY = {
+      DT = 8,
+      LT = 1,
+      xT = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -123,7 +123,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      yY = {
+      cT = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -151,12 +151,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      QY = {
+      KT = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      oY = {
+      MT = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -208,7 +208,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      WY = {
+      rT = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -218,10 +218,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      EY = 4,
-      mY = 4,
-      VY = 65535,
-      SY = {
+      AT = 4,
+      gT = 4,
+      hT = 65535,
+      wT = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -234,7 +234,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      lY = {
+      mT = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -242,12 +242,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      TY = 88,
-      eY = 0,
-      NY = 24,
-      BY = 48,
-      cY = 80,
-      KY = {
+      eT = 88,
+      RT = 0,
+      uT = 24,
+      vT = 48,
+      ET = 80,
+      fT = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -258,18 +258,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      HY = {
+      CT = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      zY = {
+      jT = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      ZY = {
+      JT = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -287,34 +287,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      CY = {
+      UT = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      fY = 65535,
-      jY = {
+      aT = 65535,
+      YT = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      hY = {
+      QT = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      dY = 2,
-      JY = {
+      OT = 2,
+      HT = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      MY = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      wY = {
+      nT = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      qT = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -326,7 +326,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      bY = {
+      ZT = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -353,7 +353,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      XY = {
+      lT = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -511,8 +511,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      qY = 8,
-      pY = {
+      sT = 8,
+      tT = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -537,147 +537,147 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      kY = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      GT = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  39913: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => OY
+  39586: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => XT
     });
-    const FY = 1 << 20,
-      AY = 1 << 21,
-      IY = 1024,
-      RY = 2048;
+    const iT = 1 << 20,
+      zT = 1 << 21,
+      kT = 1024,
+      WT = 2048;
 
-    function OY(YY, rY, DY) {
-      const OY = YY + FY,
-        gY = rY + IY,
-        aY = DY + FY;
-      return OY < 0 || OY >= AY || aY < 0 || aY >= AY || gY < 0 || gY >= RY ? -1 : (OY * AY + aY) * RY + gY
+    function XT(TT, oT, IT) {
+      const XT = TT + iT,
+        BT = oT + kT,
+        FT = IT + iT;
+      return XT < 0 || XT >= zT || FT < 0 || FT >= zT || BT < 0 || BT >= WT ? -1 : (XT * zT + FT) * WT + BT
     }
   },
-  39906: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      d: () => RY,
-      e: () => AY,
-      h: () => IY,
-      k: () => vY,
-      m: () => aY,
-      o: () => gY,
-      s: () => OY
+  39581: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => iT,
+      e: () => WT,
+      f: () => zT,
+      h: () => kT,
+      j: () => ST,
+      l: () => FT,
+      n: () => BT,
+      r: () => XT
     });
-    DY(3022);
-    DY(39913);
+    IT(3014);
+    IT(39586);
 
-    function FY(YY) {}
+    function iT(TT) {}
 
-    function AY(YY) {}
+    function zT(TT) {}
 
-    function IY(YY) {}
+    function kT(TT) {}
 
-    function RY(YY) {}
+    function WT(TT) {}
 
-    function OY(YY) {}
+    function XT(TT) {}
 
-    function gY(YY, rY, DY) {}
+    function BT(TT, oT, IT) {}
 
-    function aY(YY) {}
+    function FT(TT) {}
 
-    function vY(YY) {}
+    function ST(TT) {}
   },
-  39890: (YY, rY, DY) => {
-    DY.d(rY, {
-      A: () => qY,
-      D: () => Yr,
-      G: () => bY,
-      K: () => wY,
-      O: () => GY,
-      P: () => kY,
-      R: () => Dr,
-      S: () => PY,
-      U: () => cY,
-      b: () => rr,
-      f: () => Rr,
-      h: () => nY,
-      i: () => tY,
-      l: () => pY,
-      n: () => LY,
-      o: () => UY,
-      s: () => Ir,
-      w: () => JY,
-      x: () => MY
+  39567: (TT, oT, IT) => {
+    IT.d(oT, {
+      B: () => HT,
+      E: () => nT,
+      F: () => sT,
+      I: () => To,
+      J: () => ZT,
+      K: () => qT,
+      M: () => pT,
+      O: () => GT,
+      R: () => Io,
+      U: () => NT,
+      W: () => ET,
+      d: () => oo,
+      g: () => Wo,
+      k: () => yT,
+      n: () => VT,
+      r: () => tT,
+      s: () => dT,
+      u: () => PT,
+      x: () => ko
     });
-    var FY = DY(332),
-      AY = DY(290),
-      IY = DY(293),
-      RY = DY(19),
-      OY = DY(2565),
-      gY = DY(680),
-      aY = DY(4063),
-      vY = DY(2521),
-      uY = DY(3015),
-      sY = DY(99),
-      iY = DY(323),
-      yY = DY(40),
-      QY = DY(307),
-      oY = DY(121),
-      WY = DY(640),
-      EY = DY(138),
-      mY = DY(129),
-      VY = DY(4382),
-      SY = DY(39893),
-      lY = DY(1744),
-      TY = DY(39900);
-    const eY = "bloxd-webgpuOffAfterLoss",
-      NY = "context:webgl",
-      BY = "probe:threw";
+    var iT = IT(306),
+      zT = IT(263),
+      kT = IT(270),
+      WT = IT(12),
+      XT = IT(2541),
+      BT = IT(661),
+      FT = IT(4034),
+      ST = IT(2486),
+      DT = IT(3012),
+      LT = IT(90),
+      xT = IT(303),
+      cT = IT(26),
+      KT = IT(282),
+      MT = IT(120),
+      rT = IT(632),
+      AT = IT(134),
+      gT = IT(126),
+      hT = IT(4285),
+      wT = IT(39572),
+      mT = IT(1693),
+      eT = IT(39577);
+    const RT = "bloxd-webgpuOffAfterLoss",
+      uT = "context:webgl",
+      vT = "probe:threw";
 
-    function cY(YY) {
-      let rY;
+    function ET(TT) {
+      let oT;
       try {
-        rY = YY.getContext("webgl", {
-          powerPreference: EY.e
+        oT = TT.getContext("webgl", {
+          powerPreference: AT.e
         })
       } catch {
-        rY = null
+        oT = null
       }
-      if (null === rY) return null;
-      let DY = null;
+      if (null === oT) return null;
+      let IT = null;
       try {
-        const YY = rY.getParameter(rY.MAX_TEXTURE_SIZE);
-        DY = "number" === typeof YY && YY > 0 ? YY : null
+        const TT = oT.getParameter(oT.MAX_TEXTURE_SIZE);
+        IT = "number" === typeof TT && TT > 0 ? TT : null
       } catch {
-        DY = null
+        IT = null
       }
       try {
-        var FY;
-        null === (FY = rY.getExtension("WEBGL_lose_context")) || void 0 === FY || FY.loseContext()
+        var iT;
+        null === (iT = oT.getExtension("WEBGL_lose_context")) || void 0 === iT || iT.loseContext()
       } catch {}
-      return DY
+      return IT
     }
-    const KY = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
-      HY = "mali_valhall",
-      zY = new Set(["nvidia_pre_turing"]);
+    const fT = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
+      CT = "mali_valhall",
+      jT = new Set(["nvidia_pre_turing"]);
 
-    function ZY(YY) {
-      return function(YY) {
+    function JT(TT) {
+      return function(TT) {
         try {
-          return YY()
+          return TT()
         } catch {
           return null
         }
       }((() => {
-        var rY, DY, FY, RY;
-        const OY = null !== (rY = null === (DY = YY.info) || void 0 === DY ? void 0 : DY.vendor) && void 0 !== rY ? rY : "";
-        return "windows" === (0, sY.getOperatingSystem)() && "" !== OY && "intel" !== (0, sY.normaliseGpuVendor)(OY) ? null : ((0, sY.seedGpuVendor)(OY), gY = (0, AY.i)(), aY = (0, IY.c)(OY, null !== (FY = null === (RY = YY.info) || void 0 === RY ? void 0 : RY.architecture) && void 0 !== FY ? FY : ""), KY.has(gY) ? "android_arm" === gY && aY === HY ? "webgpu_default" : "webgl_default" : null);
-        var gY, aY
+        var oT, IT, iT, WT;
+        const XT = null !== (oT = null === (IT = TT.info) || void 0 === IT ? void 0 : IT.vendor) && void 0 !== oT ? oT : "";
+        return "windows" === (0, LT.getOperatingSystem)() && "" !== XT && "intel" !== (0, LT.normaliseGpuVendor)(XT) ? null : ((0, LT.seedGpuVendor)(XT), BT = (0, zT.h)(), FT = (0, kT.f)(XT, null !== (iT = null === (WT = TT.info) || void 0 === WT ? void 0 : WT.architecture) && void 0 !== iT ? iT : ""), fT.has(BT) ? "android_arm" === BT && FT === CT ? "webgpu_default" : "webgl_default" : null);
+        var BT, FT
       }))
     }
 
-    function CY() {
-      var YY;
+    function UT() {
+      var TT;
       return {
-        gpu: null !== (YY = navigator.gpu) && void 0 !== YY ? YY : null,
+        gpu: null !== (TT = navigator.gpu) && void 0 !== TT ? TT : null,
         webgl2: () => {
           try {
             return null !== document.createElement("canvas").getContext("webgl2")
@@ -685,317 +685,317 @@ export const modules = {
             return !1
           }
         },
-        webgl1: () => function(YY) {
-          let rY, DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SY.d;
+        webgl1: () => function(TT) {
+          let oT, IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wT.d;
           try {
-            rY = YY.getContext("webgl")
+            oT = TT.getContext("webgl")
           } catch {
-            rY = null
+            oT = null
           }
-          if (null === rY) return [NY];
-          const FY = [];
+          if (null === oT) return [uT];
+          const iT = [];
           try {
-            for (const AY of DY.extensions) null === rY.getExtension(AY) && FY.push(AY);
-            for (const [AY, IY] of Object.entries(DY.limits)) {
-              const YY = rY[AY],
-                DY = "number" === typeof YY ? rY.getParameter(YY) : null;
-              ("number" !== typeof DY || DY < IY) && FY.push(`limit:${AY}`)
+            for (const zT of IT.extensions) null === oT.getExtension(zT) && iT.push(zT);
+            for (const [zT, kT] of Object.entries(IT.limits)) {
+              const TT = oT[zT],
+                IT = "number" === typeof TT ? oT.getParameter(TT) : null;
+              ("number" !== typeof IT || IT < kT) && iT.push(`limit:${zT}`)
             }
-            const YY = rY.getShaderPrecisionFormat(rY.VERTEX_SHADER, rY.HIGH_FLOAT);
-            (null === YY || YY.precision < DY.vertexHighFloatBits) && FY.push("precision:vertex_high_float")
+            const TT = oT.getShaderPrecisionFormat(oT.VERTEX_SHADER, oT.HIGH_FLOAT);
+            (null === TT || TT.precision < IT.vertexHighFloatBits) && iT.push("precision:vertex_high_float")
           } catch {
-            FY.push(BY)
+            iT.push(vT)
           }
           try {
-            var AY;
-            null === (AY = rY.getExtension("WEBGL_lose_context")) || void 0 === AY || AY.loseContext()
+            var zT;
+            null === (zT = oT.getExtension("WEBGL_lose_context")) || void 0 === zT || zT.loseContext()
           } catch {}
-          return FY
+          return iT
         }(document.createElement("canvas")),
-        offAfterLoss: YY => fY((() => YY ? (0, QY.A)() : RY.b.isWebGpuOffAfterLoss())),
-        oldIntelDriver: YY => fY((() => (0, oY.f)(YY))),
-        intelGen9: YY => fY((() => (0, oY.q)(YY))),
-        gpuClassWebGlArm: ZY,
-        storeGpuClassVerdict: YY => {
-          yY.m.setItem(oY.K, YY)
+        offAfterLoss: TT => aT((() => TT ? (0, KT.C)() : WT.c.isWebGpuOffAfterLoss())),
+        oldIntelDriver: TT => aT((() => (0, MT.e)(TT))),
+        intelGen9: TT => aT((() => (0, MT.n)(TT))),
+        gpuClassWebGlArm: JT,
+        storeGpuClassVerdict: TT => {
+          cT.e.setItem(MT.B, TT)
         },
-        gpuClassOnWebGl: YY => (0, WY.e)(YY),
+        gpuClassOnWebGl: TT => (0, rT.c)(TT),
         override: () => function() {
-          if ((0, OY.q)("render") && "webgl1" === (0, OY.p)("renderer")) return "webgl1";
-          const YY = [() => new URLSearchParams(window.location.search).get(vY.e), () => yY.m.getItem(vY.f), () => {
-            const YY = localStorage.getItem(eY);
-            return null !== YY && localStorage.removeItem(eY), "1" === YY ? "webgl2" : null
+          if ((0, XT.r)("render") && "webgl1" === (0, XT.n)("renderer")) return "webgl1";
+          const TT = [() => new URLSearchParams(window.location.search).get(ST.d), () => cT.e.getItem(ST.h), () => {
+            const TT = localStorage.getItem(RT);
+            return null !== TT && localStorage.removeItem(RT), "1" === TT ? "webgl2" : null
           }];
-          for (const rY of YY) {
-            let YY = null;
+          for (const oT of TT) {
+            let TT = null;
             try {
-              YY = jY(rY())
+              TT = YT(oT())
             } catch {}
-            if (null !== YY) return YY
+            if (null !== TT) return TT
           }
           return null
         }(),
-        claimed: () => jY((0, gY.l)()),
+        claimed: () => YT((0, BT.n)()),
         webGpuSetting: () => {
-          const YY = yY.m.getItem(FY.ic);
-          return "boolean" === typeof YY ? YY : null
+          const TT = cT.e.getItem(iT.hc);
+          return "boolean" === typeof TT ? TT : null
         },
-        heldBack: () => WY.g,
-        storeHoldbackSpared: YY => {
-          yY.m.setItem(oY.G, YY)
+        heldBack: () => rT.g,
+        storeHoldbackSpared: TT => {
+          cT.e.setItem(MT.y, TT)
         },
-        intelGen9OnWebGl: () => WY.k,
-        vy: () => fY((() => (0, uY.c)(sY.featureFlags.settings.canUseShaderPacks))),
-        windows: () => fY((() => "windows" === (0, sY.getOperatingSystem)()))
+        intelGen9OnWebGl: () => rT.k,
+        Fc: () => aT((() => (0, DT.i)(LT.featureFlags.settings.canUseShaderPacks))),
+        windows: () => aT((() => "windows" === (0, LT.getOperatingSystem)()))
       }
     }
 
-    function fY(YY) {
+    function aT(TT) {
       try {
-        return YY()
+        return TT()
       } catch {
         return !1
       }
     }
 
-    function jY(YY) {
-      return "lite" === YY ? "webgpu" : "webgl2" === YY || "babylon" === YY ? "webgl" : null
+    function YT(TT) {
+      return "lite" === TT ? "webgpu" : "webgl2" === TT || "babylon" === TT ? "webgl" : null
     }
-    async function hY() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : CY();
-      const rY = await async function(YY) {
-        const rY = function(YY) {
-            const rY = YY.override(),
-              DY = YY.webGpuSetting(),
-              FY = null === rY && !0 !== DY && YY.vy(),
-              AY = null !== rY || null !== DY || FY ? null : YY.claimed(),
-              IY = null !== rY ? "override" : !0 === DY ? "setting" : FY ? "pack" : !1 === DY ? "setting" : null !== AY ? "claim" : "default",
-              RY = function(YY) {
-                return "override" === YY || "setting" === YY
-              }(IY);
-            if ("webgl" === rY || "webgl1" === rY || "webgl" === AY || "setting" === IY && !1 === DY) return {
-              source: IY,
-              asked: RY,
+    async function QT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : UT();
+      const oT = await async function(TT) {
+        const oT = function(TT) {
+            const oT = TT.override(),
+              IT = TT.webGpuSetting(),
+              iT = null === oT && !0 !== IT && TT.Fc(),
+              zT = null !== oT || null !== IT || iT ? null : TT.claimed(),
+              kT = null !== oT ? "override" : !0 === IT ? "setting" : iT ? "pack" : !1 === IT ? "setting" : null !== zT ? "claim" : "default",
+              WT = function(TT) {
+                return "override" === TT || "setting" === TT
+              }(kT);
+            if ("webgl" === oT || "webgl1" === oT || "webgl" === zT || "setting" === kT && !1 === IT) return {
+              source: kT,
+              asked: WT,
               refused: "not_requested"
             };
-            if (!YY.gpu) return {
-              source: IY,
-              asked: RY,
+            if (!TT.gpu) return {
+              source: kT,
+              asked: WT,
               refused: "no_webgpu_api"
             };
-            const OY = "default" === IY && YY.heldBack();
-            if (OY && !YY.windows()) return {
-              source: IY,
-              asked: RY,
+            const XT = "default" === kT && TT.heldBack();
+            if (XT && !TT.windows()) return {
+              source: kT,
+              asked: WT,
               refused: "webgl_holdback"
             };
-            if (!RY && YY.offAfterLoss("pack" === IY)) return {
-              source: IY,
-              asked: RY,
-              refused: OY ? "webgl_holdback" : "off_after_loss"
+            if (!WT && TT.offAfterLoss("pack" === kT)) return {
+              source: kT,
+              asked: WT,
+              refused: XT ? "webgl_holdback" : "off_after_loss"
             };
             return {
-              source: IY,
-              asked: RY,
-              heldBack: OY,
-              gpu: YY.gpu
+              source: kT,
+              asked: WT,
+              heldBack: XT,
+              gpu: TT.gpu
             }
-          }(YY),
+          }(TT),
           {
-            source: DY
-          } = rY,
-          FY = !rY.asked,
-          AY = "gpu" in rY && rY.heldBack,
-          RY = function(YY) {
-            return AY && "none" !== YY ? {
+            source: IT
+          } = oT,
+          iT = !oT.asked,
+          zT = "gpu" in oT && oT.heldBack,
+          WT = function(TT) {
+            return zT && "none" !== TT ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: DY
+              source: IT
             } : {
-              reason: YY,
+              reason: TT,
               adapter: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              source: DY
+              source: IT
             }
           };
-        if (!("gpu" in rY)) return RY(rY.refused);
-        let OY;
+        if (!("gpu" in oT)) return WT(oT.refused);
+        let XT;
         try {
-          OY = await (0, lY.k)((0, mY.m)(rY.gpu), Fr, `requestAdapter didn't settle in ${Fr/1e3} s`)
+          XT = await (0, mT.k)((0, gT.n)(oT.gpu), io, `requestAdapter didn't settle in ${io/1e3} s`)
         } catch {
-          return RY("adapter_error")
+          return WT("adapter_error")
         }
-        if ("string" === typeof OY) return RY(OY);
-        const gY = (0, mY.b)(OY);
-        if ((0, mY.f)(OY)) return RY("software_adapter", gY);
-        const aY = YY.windows() && function(YY) {
-          return zY.has((0, IY.c)(YY.vendor, YY.architecture))
-        }(gY);
-        if (YY.storeHoldbackSpared(aY), AY && !aY) return RY("webgl_holdback");
-        const vY = YY.intelGen9(OY),
-          uY = vY ? null : YY.gpuClassWebGlArm(OY);
-        if (YY.storeGpuClassVerdict(null !== uY && void 0 !== uY && uY), FY && YY.oldIntelDriver(OY)) return RY("old_intel_driver", gY);
-        if ("default" === DY && YY.intelGen9OnWebGl() && vY) return RY("intel_gen9", gY);
-        if ("default" === DY && null !== uY && YY.gpuClassOnWebGl(uY)) return RY("gpu_class_webgl", gY);
-        return RY("none", gY)
-      }(YY);
-      if ("none" === rY.reason) return {
+        if ("string" === typeof XT) return WT(XT);
+        const BT = (0, gT.e)(XT);
+        if ((0, gT.i)(XT)) return WT("software_adapter", BT);
+        const FT = TT.windows() && function(TT) {
+          return jT.has((0, kT.f)(TT.vendor, TT.architecture))
+        }(BT);
+        if (TT.storeHoldbackSpared(FT), zT && !FT) return WT("webgl_holdback");
+        const ST = TT.intelGen9(XT),
+          DT = ST ? null : TT.gpuClassWebGlArm(XT);
+        if (TT.storeGpuClassVerdict(null !== DT && void 0 !== DT && DT), iT && TT.oldIntelDriver(XT)) return WT("old_intel_driver", BT);
+        if ("default" === IT && TT.intelGen9OnWebGl() && ST) return WT("intel_gen9", BT);
+        if ("default" === IT && null !== DT && TT.gpuClassOnWebGl(DT)) return WT("gpu_class_webgl", BT);
+        return WT("none", BT)
+      }(TT);
+      if ("none" === oT.reason) return {
         backend: "webgpu",
-        ...rY
+        ...oT
       };
-      if ("webgl1" !== YY.override() && YY.webgl2()) return {
+      if ("webgl1" !== TT.override() && TT.webgl2()) return {
         backend: "webgl",
-        ...rY
+        ...oT
       };
-      const DY = YY.webgl1();
-      return 0 === DY.length ? {
+      const IT = TT.webgl1();
+      return 0 === IT.length ? {
         backend: "webgl1",
-        ...rY
+        ...oT
       } : {
-        missing: DY
+        missing: IT
       }
     }
-    let dY = !1;
-    async function JY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CY();
-      if (null === YY) return null;
-      const DY = await hY(rY);
-      return dY = !("missing" in DY) && "webgpu" === DY.backend && "claim" === DY.source, "missing" in DY ? DY : {
-        ...DY,
-        load: YY[DY.backend]
+    let OT = !1;
+    async function HT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UT();
+      if (null === TT) return null;
+      const IT = await QT(oT);
+      return OT = !("missing" in IT) && "webgpu" === IT.backend && "claim" === IT.source, "missing" in IT ? IT : {
+        ...IT,
+        load: TT[IT.backend]
       }
     }
-    async function MY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : CY().gpu,
-        FY = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== YY.backend) return !1;
-      const AY = XY(rY, "indirectDraws", "off", "on");
-      if (null !== AY) return AY;
-      if (null !== YY.adapter && (0, oY.u)(YY.adapter, FY)) return !0;
-      if (null === DY) return !1;
+    async function nT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UT().gpu,
+        iT = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== TT.backend) return !1;
+      const zT = lT(oT, "indirectDraws", "off", "on");
+      if (null !== zT) return zT;
+      if (null !== TT.adapter && (0, MT.q)(TT.adapter, iT)) return !0;
+      if (null === IT) return !1;
       try {
-        var IY;
-        const YY = await (0, lY.k)(DY.requestAdapter({
+        var kT;
+        const TT = await (0, mT.k)(IT.requestAdapter({
           powerPreference: "low-power"
-        }), Fr, `the low-power requestAdapter didn't settle in ${Fr/1e3} s`);
-        return (0, oY.u)(null !== (IY = null === YY || void 0 === YY ? void 0 : YY.info) && void 0 !== IY ? IY : {}, FY)
-      } catch (RY) {
-        return RY instanceof lY.f
+        }), io, `the low-power requestAdapter didn't settle in ${io/1e3} s`);
+        return (0, MT.q)(null !== (kT = null === TT || void 0 === TT ? void 0 : TT.info) && void 0 !== kT ? kT : {}, iT)
+      } catch (WT) {
+        return WT instanceof mT.e
       }
     }
 
-    function wY(YY, rY, DY) {
-      if ("webgpu" !== YY.backend) return !1;
-      const FY = XY(rY, "terrainFetch", "texture", "storage");
-      return null !== FY ? FY : null !== YY.adapter && (0, oY.j)(YY.adapter, DY)
+    function qT(TT, oT, IT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const iT = lT(oT, "terrainFetch", "texture", "storage");
+      return null !== iT ? iT : null !== TT.adapter && (0, MT.i)(TT.adapter, IT)
     }
 
-    function bY(YY, rY, DY) {
-      if ("webgpu" !== YY.backend) return !1;
-      const FY = XY(rY, "sceneDepth", "off", "on");
-      return null !== FY ? FY : null !== YY.adapter && (0, oY.m)(YY.adapter, DY)
+    function ZT(TT, oT, IT) {
+      if ("webgpu" !== TT.backend) return !1;
+      const iT = lT(oT, "sceneDepth", "off", "on");
+      return null !== iT ? iT : null !== TT.adapter && (0, MT.k)(TT.adapter, IT)
     }
 
-    function XY(YY, rY, DY, FY) {
-      const AY = new URLSearchParams(YY).get(rY),
-        IY = null !== AY && void 0 !== AY ? AY : (0, gY.g)(rY);
-      return IY !== DY && IY !== FY ? null : (dY ||= null === AY, IY === DY)
+    function lT(TT, oT, IT, iT) {
+      const zT = new URLSearchParams(TT).get(oT),
+        kT = null !== zT && void 0 !== zT ? zT : (0, BT.h)(oT);
+      return kT !== IT && kT !== iT ? null : (OT ||= null === zT, kT === IT)
     }
 
-    function qY(YY, rY) {
-      return "webgl" === YY.backend && (0, IY.l)(rY)
+    function sT(TT, oT) {
+      return "webgl" === TT.backend && (0, kT.m)(oT)
     }
 
-    function pY(YY) {
-      return null !== YY && "missing" in YY
+    function tT(TT) {
+      return null !== TT && "missing" in TT
     }
 
-    function kY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RY.b;
+    function GT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WT.c;
       try {
-        const DY = "start_failed" === YY || "pipeline_failed" === YY,
-          FY = rY.turnOffWebGpuAfterDeviceLoss(DY ? "visible" : (0, QY.j)((0, iY.f)()));
-        return !dY || FY && !rY.isWebGpuOffAfterLoss() || (0, gY.w)("webgpuLoss"), rY.isWebGpuOffAfterLoss() && "webgpu" === jY(yY.m.getItem(vY.f)) && yY.m.removeItem(vY.f), (0, OY.q)("webgpuloss") && (0, aY.c)((rY => {
-          rY.noteWebGpuLoss("wasm", FY ? YY : `${YY}, which storage didn't keep`, null)
-        })), FY
+        const IT = "start_failed" === TT || "pipeline_failed" === TT,
+          iT = oT.turnOffWebGpuAfterDeviceLoss(IT ? "visible" : (0, KT.k)((0, xT.g)()));
+        return !OT || iT && !oT.isWebGpuOffAfterLoss() || (0, BT.z)("webgpuLoss"), oT.isWebGpuOffAfterLoss() && "webgpu" === YT(cT.e.getItem(ST.h)) && cT.e.removeItem(ST.h), (0, XT.r)("webgpuloss") && (0, FT.e)((oT => {
+          oT.noteWebGpuLoss("wasm", iT ? TT : `${TT}, which storage didn't keep`, null)
+        })), iT
       } catch {
         return !1
       }
     }
 
-    function GY(YY) {
-      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !PY()) ? kY(YY) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+    function pT(TT) {
+      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !NT()) ? GT(TT) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const xY = "framePacing";
+    const bT = "framePacing";
 
-    function nY(YY) {
-      const rY = new URLSearchParams(YY).get(xY);
-      return null !== rY && /^\d{1,9}$/.test(rY) ? Number(rY) : void 0
+    function yT(TT) {
+      const oT = new URLSearchParams(TT).get(bT);
+      return null !== oT && /^\d{1,9}$/.test(oT) ? Number(oT) : void 0
     }
 
-    function PY() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function NT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === jY(new URLSearchParams(YY).get(vY.e))
+        return "webgpu" === YT(new URLSearchParams(TT).get(ST.d))
       } catch {
         return !1
       }
     }
 
-    function UY(YY) {
-      return !!LY(YY) || YY instanceof Error && !(YY instanceof WebAssembly.RuntimeError) && YY.message.startsWith(`${VY.f.RenderSurfaceUnusable}:`)
+    function PT(TT) {
+      return !!dT(TT) || TT instanceof Error && !(TT instanceof WebAssembly.RuntimeError) && TT.message.startsWith(`${hT.d.RenderSurfaceUnusable}:`)
     }
 
-    function LY(YY) {
+    function dT(TT) {
       const {
-        name: rY,
-        message: DY
-      } = null !== YY && void 0 !== YY ? YY : {};
-      return "InvalidStateError" === rY && "string" === typeof DY && DY.startsWith("GPUDevice.")
+        name: oT,
+        message: IT
+      } = null !== TT && void 0 !== TT ? TT : {};
+      return "InvalidStateError" === oT && "string" === typeof IT && IT.startsWith("GPUDevice.")
     }
 
-    function tY(YY) {
-      const rY = YY;
-      return "function" === typeof rY.IDY && "function" === typeof rY.RDY ? rY : null
+    function VT(TT) {
+      const oT = TT;
+      return "function" === typeof oT.CIT && "function" === typeof oT.jIT ? oT : null
     }
 
-    function Yr(YY) {
-      return "function" === typeof YY.iDY ? YY : null
+    function To(TT) {
+      return "function" === typeof TT.qIT ? TT : null
     }
-    const rr = "openRenderer";
+    const oo = "openRenderer";
 
-    function Dr(YY) {
-      const rY = null === YY || void 0 === YY ? void 0 : YY.NAY();
-      return void 0 === rY ? void 0 : new Error(rY)
+    function Io(TT) {
+      const oT = null === TT || void 0 === TT ? void 0 : TT.zkT();
+      return void 0 === oT ? void 0 : new Error(oT)
     }
-    const Fr = 5e3,
-      Ar = 15e3;
+    const io = 5e3,
+      zo = 15e3;
 
-    function Ir(YY, rY, DY, FY, AY, IY) {
-      return (0, lY.k)(function(YY, rY, DY, FY, AY, IY) {
-        return (0, TY.g)(YY, rY, (() => YY.iDY(DY, FY, AY, IY.indirectHangs, IY.storagePullBreaks, IY.splitPassBreaks, IY.framesAhead, IY.instancedTerrainSlow)))
-      }(YY, rY, DY, FY, AY, IY), Ar, `${VY.f.RenderSurfaceUnusable}: the renderer didn't open in ${Ar/1e3} s`, Or)
+    function ko(TT, oT, IT, iT, zT, kT) {
+      return (0, mT.k)(function(TT, oT, IT, iT, zT, kT) {
+        return (0, eT.g)(TT, oT, (() => TT.qIT(IT, iT, zT, kT.indirectHangs, kT.storagePullBreaks, kT.splitPassBreaks, kT.framesAhead, kT.instancedTerrainSlow)))
+      }(TT, oT, IT, iT, zT, kT), zo, `${hT.d.RenderSurfaceUnusable}: the renderer didn't open in ${zo/1e3} s`, Xo)
     }
-    async function Rr(YY, rY, DY, FY, AY, IY) {
-      if ("function" !== typeof YY.iIY) throw new Error("this core has no set_renderer");
-      const RY = await Ir(rY, rr, DY, AY, FY, IY);
+    async function Wo(TT, oT, IT, iT, zT, kT) {
+      if ("function" !== typeof TT.GkT) throw new Error("this core has no set_renderer");
+      const WT = await ko(oT, oo, IT, zT, iT, kT);
       try {
-        YY.iIY(RY)
-      } catch (OY) {
-        throw Or(RY), OY
+        TT.GkT(WT)
+      } catch (XT) {
+        throw Xo(WT), XT
       }
     }
 
-    function Or(YY) {
+    function Xo(TT) {
       try {
-        YY.free()
+        TT.free()
       } catch {}
     }
   },
-  39893: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  39572: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT
     });
-    const FY = {
+    const iT = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -1008,389 +1008,389 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  39916: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => gY,
-      e: () => OY
+  39588: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => BT,
+      f: () => XT
     });
-    var FY = DY(695),
-      AY = DY(704);
+    var iT = IT(679),
+      zT = IT(681);
 
-    function IY(YY, rY) {
-      const DY = null === rY ? void 0 : FY.e.get(rY);
-      return "all" === DY || "webgl" === DY && "webgpu" !== YY.backend ? rY : null
+    function kT(TT, oT) {
+      const IT = null === oT ? void 0 : iT.d.get(oT);
+      return "all" === IT || "webgl" === IT && "webgpu" !== TT.backend ? oT : null
     }
 
-    function RY(YY) {
-      return "software_adapter" === YY.reason ? null : YY.adapter
+    function WT(TT) {
+      return "software_adapter" === TT.reason ? null : TT.adapter
     }
 
-    function OY(YY, rY) {
-      const DY = (0, FY.q)();
-      return null === DY ? null : (0, FY.g)(RY(YY), DY, rY ? FY.k : FY.h)
+    function XT(TT, oT) {
+      const IT = (0, iT.t)();
+      return null === IT ? null : (0, iT.h)(WT(TT), IT, oT ? iT.m : iT.j)
     }
 
-    function gY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AY.j;
-      const FY = IY(YY, rY);
-      return null !== FY && "webgl" === YY.backend && DY(FY) ? null : FY
+    function BT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zT.l;
+      const iT = kT(TT, oT);
+      return null !== iT && "webgl" === TT.backend && IT(iT) ? null : iT
     }
   },
-  39900: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => AY,
-      g: () => vY,
-      k: () => RY,
-      m: () => gY
+  39577: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT,
+      g: () => ST,
+      i: () => WT,
+      m: () => BT
     });
-    var FY = DY(39904);
-    class AY extends Error {
-      constructor(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${YY}: the module trapped${DY?" in an earlier call":""}: ${String(rY)}`, {
-          cause: rY
-        }), this.site = YY, this.trap = rY, this.earlier = DY, this.name = "ModuleTrapError", rY instanceof Error && void 0 !== rY.stack && (this.stack = `${this.name}: ${this.message}\n${rY.stack}`)
+    var iT = IT(39579);
+    class zT extends Error {
+      constructor(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${TT}: the module trapped${IT?" in an earlier call":""}: ${String(oT)}`, {
+          cause: oT
+        }), this.site = TT, this.trap = oT, this.earlier = IT, this.name = "ModuleTrapError", oT instanceof Error && void 0 !== oT.stack && (this.stack = `${this.name}: ${this.message}\n${oT.stack}`)
       }
     }
-    const IY = new WeakMap;
+    const kT = new WeakMap;
 
-    function RY(YY) {
-      return IY.has(YY)
+    function WT(TT) {
+      return kT.has(TT)
     }
 
-    function OY(YY, rY) {
-      IY.has(YY) || IY.set(YY, rY)
+    function XT(TT, oT) {
+      kT.has(TT) || kT.set(TT, oT)
     }
 
-    function gY(YY, rY) {
-      return !!(0, FY.b)(rY) && (OY(YY, rY), !0)
+    function BT(TT, oT) {
+      return !!(0, iT.d)(oT) && (XT(TT, oT), !0)
     }
-    const aY = [
-      ["error", YY => YY.error],
-      ["unhandledrejection", YY => YY.reason]
+    const FT = [
+      ["error", TT => TT.error],
+      ["unhandledrejection", TT => TT.reason]
     ];
 
-    function vY(YY, rY, DY) {
-      let RY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return IY.has(YY) ? Promise.reject(new AY(rY, IY.get(YY), !0)) : new Promise(((IY, gY) => {
-        const vY = DY => {
-            OY(YY, DY), iY(), gY(new AY(rY, DY))
+    function ST(TT, oT, IT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return kT.has(TT) ? Promise.reject(new zT(oT, kT.get(TT), !0)) : new Promise(((kT, BT) => {
+        const ST = IT => {
+            XT(TT, IT), xT(), BT(new zT(oT, IT))
           },
-          uY = YY => {
-            YY instanceof WebAssembly.RuntimeError ? vY(YY) : (iY(), gY(YY))
+          DT = TT => {
+            TT instanceof WebAssembly.RuntimeError ? ST(TT) : (xT(), BT(TT))
           },
-          sY = aY.map((YY => {
-            let [rY, DY] = YY;
-            return [rY, YY => {
-              const rY = DY(YY);
-              (0, FY.b)(rY) && vY(rY)
+          LT = FT.map((TT => {
+            let [oT, IT] = TT;
+            return [oT, TT => {
+              const oT = IT(TT);
+              (0, iT.d)(oT) && ST(oT)
             }]
           })),
-          iY = () => {
-            for (const [YY, rY] of sY) null === RY || void 0 === RY || RY.removeEventListener(YY, rY)
+          xT = () => {
+            for (const [TT, oT] of LT) null === WT || void 0 === WT || WT.removeEventListener(TT, oT)
           };
-        for (const [YY, rY] of sY) null === RY || void 0 === RY || RY.addEventListener(YY, rY);
-        let yY;
+        for (const [TT, oT] of LT) null === WT || void 0 === WT || WT.addEventListener(TT, oT);
+        let cT;
         try {
-          yY = DY()
-        } catch (QY) {
-          return void uY(QY)
+          cT = IT()
+        } catch (KT) {
+          return void DT(KT)
         }
-        yY.then((YY => {
-          iY(), IY(YY)
-        }), uY)
+        cT.then((TT => {
+          xT(), kT(TT)
+        }), DT)
       }))
     }
   },
-  39924: (YY, rY, DY) => {
-    DY.d(rY, {
-      B: () => wY,
-      C: () => MY,
-      G: () => CY,
-      H: () => eY,
-      K: () => zY,
-      L: () => ZY,
-      P: () => jY,
-      R: () => HY,
-      d: () => TY,
-      g: () => VY,
-      h: () => hY,
-      i: () => fY,
-      k: () => mY,
-      m: () => lY,
-      p: () => WY,
-      t: () => BY,
-      x: () => KY
+  39593: (TT, oT, IT) => {
+    IT.d(oT, {
+      A: () => RT,
+      E: () => jT,
+      F: () => JT,
+      H: () => YT,
+      L: () => CT,
+      d: () => eT,
+      e: () => hT,
+      h: () => QT,
+      i: () => aT,
+      l: () => gT,
+      n: () => mT,
+      o: () => rT,
+      p: () => vT,
+      s: () => fT,
+      u: () => qT,
+      x: () => nT,
+      z: () => UT
     });
-    var FY = DY(229),
-      AY = DY(293),
-      IY = DY(19),
-      RY = DY(323),
-      OY = DY(40),
-      gY = DY(39890),
-      aY = DY(39916),
-      vY = DY(39928),
-      uY = (DY(39906), DY(39937)),
-      sY = DY(39945);
-    const iY = "wasmJoinBuild";
-    let yY = null,
-      QY = null,
-      oY = null;
+    var iT = IT(199),
+      zT = IT(270),
+      kT = IT(12),
+      WT = IT(303),
+      XT = IT(26),
+      BT = IT(39567),
+      FT = IT(39588),
+      ST = IT(39597),
+      DT = (IT(39581), IT(39606)),
+      LT = IT(39615);
+    const xT = "wasmJoinBuild";
+    let cT = null,
+      KT = null,
+      MT = null;
 
-    function WY(YY) {
-      oY = YY
+    function rT(TT) {
+      MT = TT
     }
-    let EY = !1;
+    let AT = !1;
 
-    function mY() {
-      EY = !0
-    }
-
-    function VY() {
-      return EY
-    }
-    let SY = !1;
-
-    function lY() {
-      SY = !0
+    function gT() {
+      AT = !0
     }
 
-    function TY() {
-      return SY
+    function hT() {
+      return AT
+    }
+    let wT = !1;
+
+    function mT() {
+      wT = !0
     }
 
-    function eY() {
-      return oY
-    }
-    let NY = null;
-
-    function BY(YY) {
-      NY = YY, (0, RY.d)(YY)
-    }
-    const cY = "wasmClientRenderLost";
-
-    function KY() {
-      OY.q.setItem(cY, !0)
+    function eT() {
+      return wT
     }
 
-    function HY() {
-      return !0 === OY.q.getItem(cY)
+    function RT() {
+      return MT
+    }
+    let uT = null;
+
+    function vT(TT) {
+      uT = TT, (0, WT.e)(TT)
+    }
+    const ET = "wasmClientRenderLost";
+
+    function fT() {
+      XT.h.setItem(ET, !0)
     }
 
-    function zY() {
-      return NY
+    function CT() {
+      return !0 === XT.h.getItem(ET)
     }
 
-    function ZY() {
-      return null === yY && (OY.m.removeItem("wasmLastPick"), OY.m.removeItem("wasmGuessVerdict"), (0, RY.j)(), yY = (0, gY.w)(vY.h).then((YY => (null === YY || (0, gY.l)(YY) || (QY = uY.b[YY.backend], IY.b.followGameGpu("webgpu" === YY.backend ? YY.adapter : null), "webgpu" === YY.backend && (0, sY.g)()), YY)))), yY
+    function jT() {
+      return uT
     }
 
-    function CY() {
-      return QY
+    function JT() {
+      return null === cT && (XT.e.removeItem("wasmLastPick"), XT.e.removeItem("wasmGuessVerdict"), (0, WT.j)(), cT = (0, BT.B)(ST.f).then((TT => (null === TT || (0, BT.r)(TT) || (KT = DT.c[TT.backend], kT.c.followGameGpu("webgpu" === TT.backend ? TT.adapter : null), "webgpu" === TT.backend && (0, LT.d)()), TT)))), cT
     }
 
-    function fY(YY) {
-      return YY ? YY.load() : Promise.resolve().then((function() {
-        var YY = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw YY.code = "MODULE_NOT_FOUND", YY
-      })).then((YY => YY.bloxdWasmClient))
+    function UT() {
+      return KT
     }
 
-    function jY(YY) {
-      OY.m.setItem(iY, YY)
+    function aT(TT) {
+      return TT ? TT.load() : Promise.resolve().then((function() {
+        var TT = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw TT.code = "MODULE_NOT_FOUND", TT
+      })).then((TT => TT.bloxdWasmClient))
     }
-    async function hY() {
-      if (null === vY.h) return fY(null);
-      const YY = OY.m.getItem(iY);
-      let rY = "none" === YY ? null : "webgl";
-      return null !== YY && "none" !== YY && ("string" === typeof YY && void 0 !== (0, FY.c)(vY.h, YY) ? rY = YY : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(YY)}, is none of this client's: guessing WebGL2's`)), null === rY ? null : vY.h[rY]()
-    }
-    let dY = null,
-      JY = null;
 
-    function MY() {
-      return dY ??= ZY().then((async YY => {
-        var rY;
-        const DY = null !== YY && !(0, gY.l)(YY),
-          FY = {
-            indirectHangs: DY && await (0, gY.x)(YY, window.location.search),
-            storagePullBreaks: DY && (0, gY.K)(YY, window.location.search),
-            splitPassBreaks: DY && (0, gY.G)(YY, window.location.search),
-            framesAhead: (0, gY.h)(window.location.search),
-            instancedTerrainSlow: DY && (0, gY.A)(YY, null !== (rY = (0, aY.e)(YY, !1)) && void 0 !== rY ? rY : (0, AY.b)())
+    function YT(TT) {
+      XT.e.setItem(xT, TT)
+    }
+    async function QT() {
+      if (null === ST.f) return aT(null);
+      const TT = XT.e.getItem(xT);
+      let oT = "none" === TT ? null : "webgl";
+      return null !== TT && "none" !== TT && ("string" === typeof TT && void 0 !== (0, iT.b)(ST.f, TT) ? oT = TT : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(TT)}, is none of this client's: guessing WebGL2's`)), null === oT ? null : ST.f[oT]()
+    }
+    let OT = null,
+      HT = null;
+
+    function nT() {
+      return OT ??= JT().then((async TT => {
+        var oT;
+        const IT = null !== TT && !(0, BT.r)(TT),
+          iT = {
+            indirectHangs: IT && await (0, BT.E)(TT, window.location.search),
+            storagePullBreaks: IT && (0, BT.K)(TT, window.location.search),
+            splitPassBreaks: IT && (0, BT.J)(TT, window.location.search),
+            framesAhead: (0, BT.k)(window.location.search),
+            instancedTerrainSlow: IT && (0, BT.F)(TT, null !== (oT = (0, FT.f)(TT, !1)) && void 0 !== oT ? oT : (0, zT.c)())
           };
-        return JY = FY.indirectHangs, FY
-      })), dY
+        return HT = iT.indirectHangs, iT
+      })), OT
     }
 
-    function wY() {
-      return JY
+    function qT() {
+      return HT
     }
   },
-  39937: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY
+  39606: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => iT
     });
-    const FY = {
+    const iT = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  39928: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY,
-      h: () => FY
+  39597: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      f: () => iT
     });
-    const FY = {
-        webgpu: async () => (await DY.e(8).then((() => DY(42298)))).bloxdWasmWebgpu,
-        webgl: async () => (await DY.e(6).then((() => DY(42306)))).bloxdWasmWebgl,
-        webgl1: async () => (await DY.e(7).then((() => DY(42314)))).bloxdWasmWebgl1
+    const iT = {
+        webgpu: async () => (await IT.e(8).then((() => IT(42064)))).bloxdWasmWebgpu,
+        webgl: async () => (await IT.e(6).then((() => IT(42077)))).bloxdWasmWebgl,
+        webgl1: async () => (await IT.e(7).then((() => IT(42083)))).bloxdWasmWebgl1
       },
-      AY = async () => (await DY.e(5).then((() => DY(42327)))).compileAnimationPackInWasm
+      zT = async () => (await IT.e(5).then((() => IT(42093)))).compileAnimationPackInWasm
   },
-  39951: (YY, rY, DY) => {
-    function FY() {
-      return DY(39955)
+  39624: (TT, oT, IT) => {
+    function iT() {
+      return IT(39631)
     }
 
-    function AY() {
-      return DY(39957)
+    function zT() {
+      return IT(39640)
     }
 
-    function IY(YY) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(YY)
+    function kT(TT) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(TT)
     }
-    DY.d(rY, {
-      e: () => IY,
-      h: () => FY,
-      l: () => AY
+    IT.d(oT, {
+      c: () => kT,
+      d: () => iT,
+      g: () => zT
     })
   },
-  39904: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY,
-      f: () => RY
+  39579: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT,
+      h: () => WT
     });
-    const FY = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    const iT = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function AY(YY) {
-      if (YY instanceof WebAssembly.RuntimeError) return !0;
-      const rY = YY instanceof Error ? YY.stack : void 0;
-      return "string" === typeof rY && FY.test(rY)
+    function zT(TT) {
+      if (TT instanceof WebAssembly.RuntimeError) return !0;
+      const oT = TT instanceof Error ? TT.stack : void 0;
+      return "string" === typeof oT && iT.test(oT)
     }
-    const IY = 500;
+    const kT = 500;
 
-    function RY(YY) {
-      let rY = "[object Object]";
+    function WT(TT) {
+      let oT = "[object Object]";
       try {
-        rY = String(YY)
+        oT = String(TT)
       } catch {}
-      if ("[object Object]" !== rY) return rY;
+      if ("[object Object]" !== oT) return oT;
       try {
-        var DY, FY;
-        return null !== (DY = null === (FY = JSON.stringify(YY)) || void 0 === FY ? void 0 : FY.slice(0, IY)) && void 0 !== DY ? DY : rY
+        var IT, iT;
+        return null !== (IT = null === (iT = JSON.stringify(TT)) || void 0 === iT ? void 0 : iT.slice(0, kT)) && void 0 !== IT ? IT : oT
       } catch {
-        return rY
+        return oT
       }
     }
   },
-  39945: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => OY,
-      g: () => gY
+  39615: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT,
+      d: () => BT
     });
-    var FY = DY(99);
-    const AY = "webgpuPipeline";
+    var iT = IT(90);
+    const zT = "webgpuPipeline";
 
-    function IY(YY) {
-      return YY.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function kT(TT) {
+      return TT.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let RY = null;
+    let WT = null;
 
-    function OY() {
-      if (null === RY) try {
-        YY = (0, FY.getBrowserName)(), rY = (0, FY.getBrowserVersion)(), DY = (0, FY.getOperatingSystem)(), AY = (0, FY.getOperatingSystemVersion)(), RY = `${YY.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===rY?"unknown":IY(rY)}-${DY}${void 0===AY?"":`_${IY(AY)}`}`
-      } catch (OY) {
-        console.warn("The user agent couldn't be read for its browser code", OY), RY = "unknown"
+    function XT() {
+      if (null === WT) try {
+        TT = (0, iT.getBrowserName)(), oT = (0, iT.getBrowserVersion)(), IT = (0, iT.getOperatingSystem)(), zT = (0, iT.getOperatingSystemVersion)(), WT = `${TT.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===oT?"unknown":kT(oT)}-${IT}${void 0===zT?"":`_${kT(zT)}`}`
+      } catch (XT) {
+        console.warn("The user agent couldn't be read for its browser code", XT), WT = "unknown"
       }
-      var YY, rY, DY, AY;
-      return RY
+      var TT, oT, IT, zT;
+      return WT
     }
 
-    function gY() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const rY = `WGPU-${OY()}`,
-        FY = (YY, FY) => {
+    function BT() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const oT = `WGPU-${XT()}`,
+        iT = (TT, iT) => {
           const {
-            reason: IY,
-            message: RY
-          } = FY, OY = {
-            pipeline: null !== YY && void 0 !== YY ? YY : "",
-            reason: String(IY),
-            browserMessage: String(RY)
+            reason: kT,
+            message: WT
+          } = iT, XT = {
+            pipeline: null !== TT && void 0 !== TT ? TT : "",
+            reason: String(kT),
+            browserMessage: String(WT)
           };
-          Promise.all([DY.e(261), DY.e(86)]).then((() => DY(40046))).then((YY => {
+          Promise.all([IT.e(261), IT.e(86)]).then((() => IT(39745))).then((TT => {
             let {
-              reportCrash: DY
-            } = YY;
-            DY({
+              reportCrash: IT
+            } = TT;
+            IT({
               kind: "coreError",
-              code: rY,
-              site: AY,
+              code: oT,
+              site: zT,
               fatal: !1,
-              message: `${OY.pipeline} ${OY.reason}: ${OY.browserMessage}`,
-              details: OY,
-              error: FY
+              message: `${XT.pipeline} ${XT.reason}: ${XT.browserMessage}`,
+              details: XT,
+              error: iT
             })
-          })).catch((YY => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", YY)
+          })).catch((TT => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", TT)
           }))
         },
-        IY = YY.createRenderPipelineAsync;
-      YY.createRenderPipelineAsync = function(YY) {
-        return IY.call(this, YY).catch((rY => {
-          throw FY(YY.label, rY), rY
+        kT = TT.createRenderPipelineAsync;
+      TT.createRenderPipelineAsync = function(TT) {
+        return kT.call(this, TT).catch((oT => {
+          throw iT(TT.label, oT), oT
         }))
       };
-      const RY = YY.createComputePipelineAsync;
-      YY.createComputePipelineAsync = function(YY) {
-        return RY.call(this, YY).catch((rY => {
-          throw FY(YY.label, rY), rY
+      const WT = TT.createComputePipelineAsync;
+      TT.createComputePipelineAsync = function(TT) {
+        return WT.call(this, TT).catch((oT => {
+          throw iT(TT.label, oT), oT
         }))
       }
     }
   },
-  39882: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/bloxd_wasm_models_bg.eb067ed06c6f9109e2ec.wasm"
+  39561: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/bloxd_wasm_models_bg.87b170210f13f7b7bd81.wasm"
   },
-  39873: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/bloxd_wasm_workers_bg.673ba79f832578127320.wasm"
+  39556: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/bloxd_wasm_workers_bg.74497504dfda1ff0ba97.wasm"
   },
-  39955: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  39631: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  39957: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  39640: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   },
-  39871: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY,
-      f: () => FY
+  39553: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      c: () => iT
     });
-    const FY = {
+    const iT = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new DY.U(DY(39873))
+        return new IT.U(IT(39556))
       }
     };
-    const AY = {
+    const zT = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new DY.U(DY(39882))
+        return new IT.U(IT(39561))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

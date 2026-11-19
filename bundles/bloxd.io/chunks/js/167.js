@@ -1,11 +1,11 @@
 export const id = 167;
 export const ids = [167];
 export const modules = {
-  8394: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      pageBody: () => FY
+  8390: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      pageBody: () => iT
     });
-    const FY = {
+    const iT = {
       whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
       howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
       features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
@@ -37,4 +37,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12];
 export const modules = {
-  37882: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => RY
+  37478: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => WT
     });
-    var FY = DY(37886);
-    const AY = [0, 0, 0];
-    class IY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AY;
-        this.pool = YY, this.origin = rY, this.count = 0, this.free = []
+    var iT = IT(37483);
+    const zT = [0, 0, 0];
+    class kT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT;
+        this.pool = TT, this.origin = oT, this.count = 0, this.free = []
       }
       take() {
-        var YY;
-        const rY = null !== (YY = this.free.pop()) && void 0 !== YY ? YY : this.count++;
-        return rY >= this.pool.gu && this.pool.grow(Math.max(2 * this.pool.gu, rY + 1)), this.hide(rY), rY
+        var TT;
+        const oT = null !== (TT = this.free.pop()) && void 0 !== TT ? TT : this.count++;
+        return oT >= this.pool.fD && this.pool.grow(Math.max(2 * this.pool.fD, oT + 1)), this.hide(oT), oT
       }
-      release(YY) {
-        this.hide(YY), this.free.push(YY)
+      release(TT) {
+        this.hide(TT), this.free.push(TT)
       }
-      write(YY, rY, DY, AY) {
+      write(TT, oT, IT, zT) {
         const {
-          records: IY
+          records: kT
         } = this.pool, {
-          origin: RY
-        } = this, OY = YY * FY.b;
-        IY[OY] = rY - RY[0], IY[OY + 1] = DY - RY[1], IY[OY + 2] = AY - RY[2], IY[OY + FY.d] = 0, this.pool.markDirty(YY)
+          origin: WT
+        } = this, XT = TT * iT.d;
+        kT[XT] = oT - WT[0], kT[XT + 1] = IT - WT[1], kT[XT + 2] = zT - WT[2], kT[XT + iT.h] = 0, this.pool.markDirty(TT)
       }
-      hide(YY) {
-        this.pool.records[YY * FY.b + FY.d] = 1, this.pool.markDirty(YY)
+      hide(TT) {
+        this.pool.records[TT * iT.d + iT.h] = 1, this.pool.markDirty(TT)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,159 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class RY {
-      constructor(YY, rY, DY) {
-        this.api = YY, this.model = rY, this.initialCapacity = DY, this.kinds = new Map, this.origin = [0, 0, 0]
+    class WT {
+      constructor(TT, oT, IT) {
+        this.api = TT, this.model = oT, this.initialCapacity = IT, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(YY) {
-        let rY = this.kinds.get(YY);
-        if (void 0 === rY) {
-          const DY = this.api.createInstancePool({
+      kindOf(TT) {
+        let oT = this.kinds.get(TT);
+        if (void 0 === oT) {
+          const IT = this.api.createInstancePool({
             ...this.model,
-            item: YY
+            item: TT
           }, this.initialCapacity);
-          null === DY || void 0 === DY || DY.setOrigin(this.origin[0], this.origin[1], this.origin[2]), rY = DY && new IY(DY, this.origin), this.kinds.set(YY, rY)
+          null === IT || void 0 === IT || IT.setOrigin(this.origin[0], this.origin[1], this.origin[2]), oT = IT && new kT(IT, this.origin), this.kinds.set(TT, oT)
         }
-        return rY
+        return oT
       }
-      follow(YY) {
+      follow(TT) {
         const {
-          origin: rY
+          origin: oT
         } = this;
-        if (Math.abs(YY[0] - rY[0]) <= 512 && Math.abs(YY[1] - rY[1]) <= 512 && Math.abs(YY[2] - rY[2]) <= 512) return !1;
-        rY[0] = Math.floor(YY[0]), rY[1] = Math.floor(YY[1]), rY[2] = Math.floor(YY[2]);
-        for (const DY of this.kinds.values()) null === DY || void 0 === DY || DY.pool.setOrigin(rY[0], rY[1], rY[2]);
+        if (Math.abs(TT[0] - oT[0]) <= 512 && Math.abs(TT[1] - oT[1]) <= 512 && Math.abs(TT[2] - oT[2]) <= 512) return !1;
+        oT[0] = Math.floor(TT[0]), oT[1] = Math.floor(TT[1]), oT[2] = Math.floor(TT[2]);
+        for (const IT of this.kinds.values()) null === IT || void 0 === IT || IT.pool.setOrigin(oT[0], oT[1], oT[2]);
         return !0
       }
       commit() {
-        for (const YY of this.kinds.values()) null === YY || void 0 === YY || YY.commit()
+        for (const TT of this.kinds.values()) null === TT || void 0 === TT || TT.commit()
       }
       dispose() {
-        for (const YY of this.kinds.values()) null === YY || void 0 === YY || YY.dispose();
+        for (const TT of this.kinds.values()) null === TT || void 0 === TT || TT.dispose();
         this.kinds.clear()
       }
     }
   },
-  38597: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => uY
+  38223: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => DT
     });
-    const FY = "Pipe",
-      AY = "Extractor Pipe",
-      IY = (new Set([FY, AY]), new Set([FY, AY, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var RY = DY(37882);
-    class OY {
-      constructor(YY) {
-        this.api = YY, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new RY.d(YY, {
+    const iT = "Pipe",
+      zT = "Extractor Pipe",
+      kT = (new Set([iT, zT]), new Set([iT, zT, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var WT = IT(37478);
+    class XT {
+      constructor(TT) {
+        this.api = TT, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new WT.b(TT, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(YY) {
-        if (YY.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${YY.id} with < 2 waypoints`);
-        const rY = this.kinds.kindOf(YY.itemName);
-        if (!rY) return void(this.unshown.has(YY.itemName) || (this.unshown.add(YY.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${YY.itemName}"`)));
-        this.remove(YY.id);
-        const DY = function(YY) {
-          return (YY.waypoints.length - 1) / 2 * 1e3
-        }(YY);
-        if (Date.now() - YY.startTimeMs > DY + 2e3) return;
-        const FY = rY.take();
-        this.items.set(YY.id, {
-          kind: rY,
-          slot: FY,
-          waypoints: YY.waypoints,
-          startTimeMs: YY.startTimeMs,
-          durationMs: DY
+      onSpawn(TT) {
+        if (TT.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${TT.id} with < 2 waypoints`);
+        const oT = this.kinds.kindOf(TT.itemName);
+        if (!oT) return void(this.unshown.has(TT.itemName) || (this.unshown.add(TT.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${TT.itemName}"`)));
+        this.remove(TT.id);
+        const IT = function(TT) {
+          return (TT.waypoints.length - 1) / 2 * 1e3
+        }(TT);
+        if (Date.now() - TT.startTimeMs > IT + 2e3) return;
+        const iT = oT.take();
+        this.items.set(TT.id, {
+          kind: oT,
+          slot: iT,
+          waypoints: TT.waypoints,
+          startTimeMs: TT.startTimeMs,
+          durationMs: IT
         })
       }
-      onEnd(YY) {
-        this.remove(YY.id)
+      onEnd(TT) {
+        this.remove(TT.id)
       }
-      yE() {
+      pw() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const YY = Date.now();
+        const TT = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [rY, DY] of this.items) YY - DY.startTimeMs > DY.durationMs + 2e3 ? this.remove(rY) : this.write(DY, YY);
+        for (const [oT, IT] of this.items) TT - IT.startTimeMs > IT.durationMs + 2e3 ? this.remove(oT) : this.write(IT, TT);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(YY) {
-        const rY = this.items.get(YY);
-        rY && (rY.kind.release(rY.slot), this.items.delete(YY))
+      remove(TT) {
+        const oT = this.items.get(TT);
+        oT && (oT.kind.release(oT.slot), this.items.delete(TT))
       }
-      write(YY, rY) {
-        const DY = YY.waypoints.length - 1;
-        let FY = (rY - YY.startTimeMs) / YY.durationMs;
-        FY < 0 ? FY = 0 : FY > 1 && (FY = 1);
-        const AY = FY * DY;
-        let IY = Math.floor(AY);
-        IY >= DY && (IY = DY - 1);
-        const RY = AY - IY,
-          [OY, gY, aY] = YY.waypoints[IY],
-          [vY, uY, sY] = YY.waypoints[IY + 1];
-        YY.kind.write(YY.slot, OY + (vY - OY) * RY + .5, gY + (uY - gY) * RY + .5, aY + (sY - aY) * RY + .5)
+      write(TT, oT) {
+        const IT = TT.waypoints.length - 1;
+        let iT = (oT - TT.startTimeMs) / TT.durationMs;
+        iT < 0 ? iT = 0 : iT > 1 && (iT = 1);
+        const zT = iT * IT;
+        let kT = Math.floor(zT);
+        kT >= IT && (kT = IT - 1);
+        const WT = zT - kT,
+          [XT, BT, FT] = TT.waypoints[kT],
+          [ST, DT, LT] = TT.waypoints[kT + 1];
+        TT.kind.write(TT.slot, XT + (ST - XT) * WT + .5, BT + (DT - BT) * WT + .5, FT + (LT - FT) * WT + .5)
       }
     }
-    const gY = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      aY = new Set(gY);
-    class vY {
+    const BT = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      FT = new Set(BT);
+    class ST {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(YY) {
-        this.api = YY, this.pipeVisualizer = new OY(YY)
+      onCreate(TT) {
+        this.api = TT, this.pipeVisualizer = new XT(TT)
       }
       onClose() {
-        var YY;
-        null === (YY = this.pipeVisualizer) || void 0 === YY || YY.dispose(), this.pipeVisualizer = null
+        var TT;
+        null === (TT = this.pipeVisualizer) || void 0 === TT || TT.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(YY, rY) {
+      onReceivedMessageFromServer(TT, oT) {
         const {
-          pipeVisualizer: DY
+          pipeVisualizer: IT
         } = this;
-        if (DY)
-          if ("pipeItemSpawnBatch" === YY)
-            for (const FY of rY.items) DY.onSpawn(FY);
-          else if ("pipeItemEndBatch" === YY)
-          for (const FY of rY.items) DY.onEnd(FY)
+        if (IT)
+          if ("pipeItemSpawnBatch" === TT)
+            for (const iT of oT.items) IT.onSpawn(iT);
+          else if ("pipeItemEndBatch" === TT)
+          for (const iT of oT.items) IT.onEnd(iT)
       }
-      yE() {
-        var YY;
-        null === (YY = this.pipeVisualizer) || void 0 === YY || YY.yE()
+      pw() {
+        var TT;
+        null === (TT = this.pipeVisualizer) || void 0 === TT || TT.pw()
       }
-      onPlayerAttemptAltAction(YY, rY, DY, FY, AY, RY) {
-        var OY;
-        if (!aY.has(this.api.getMetaInfo(AY).rootName)) return;
-        const gY = null === (OY = this.api.rrY(YY)) || void 0 === OY ? void 0 : OY.name;
-        return void 0 !== gY && IY.has(gY) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(TT, oT, IT, iT, zT, WT) {
+        var XT;
+        if (!FT.has(this.api.getMetaInfo(zT).rootName)) return;
+        const BT = null === (XT = this.api.eoT(TT)) || void 0 === XT ? void 0 : XT.name;
+        return void 0 !== BT && kT.has(BT) ? "preventAction" : void 0
       }
     }
-    const uY = function(YY, rY, DY) {
-      if ("survivalFactory" !== DY && "survivalFactoryPersistent" !== DY) {
+    const DT = function(TT, oT, IT) {
+      if ("survivalFactory" !== IT && "survivalFactoryPersistent" !== IT) {
         return {}
       }
-      const FY = new vY;
+      const iT = new ST;
       return {
-        onCreate: YY => {
-          FY.onCreate(YY)
+        onCreate: TT => {
+          iT.onCreate(TT)
         },
         onClose: () => {
-          FY.onClose()
+          iT.onClose()
         },
-        onReceivedMessageFromServer: (YY, rY) => {
-          FY.onReceivedMessageFromServer(YY, rY)
+        onReceivedMessageFromServer: (TT, oT) => {
+          iT.onReceivedMessageFromServer(TT, oT)
         },
-        Zu: () => {
-          FY.yE()
+        dD: () => {
+          iT.pw()
         },
-        altVetoBlocks: gY,
-        onPlayerAttemptAltAction: (YY, rY, DY, AY, IY, RY) => FY.onPlayerAttemptAltAction(YY, rY, DY, AY, IY, RY)
+        altVetoBlocks: BT,
+        onPlayerAttemptAltAction: (TT, oT, IT, zT, kT, WT) => iT.onPlayerAttemptAltAction(TT, oT, IT, zT, kT, WT)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

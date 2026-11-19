@@ -1,158 +1,158 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  7532: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      BloxdFirebaseSdk: () => aY
+  7533: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      BloxdFirebaseSdk: () => FT
     });
-    var FY = DY(1769),
-      AY = DY(2579),
-      IY = DY(115),
-      RY = DY(99),
-      OY = DY(1665),
-      gY = DY(1906);
-    class aY {
+    var iT = IT(1715),
+      zT = IT(2556),
+      kT = IT(104),
+      WT = IT(90),
+      XT = IT(1635),
+      BT = IT(1860);
+    class FT {
       constructor() {}
       static async setup() {
         try {
-          return await aY.setupInternal()
-        } catch (YY) {
-          return console.error("Failed to setup Firebase SDK:", YY), null
+          return await FT.setupInternal()
+        } catch (TT) {
+          return console.error("Failed to setup Firebase SDK:", TT), null
         }
       }
       static async setupInternal() {
-        const YY = await Promise.all([DY.e(255), DY.e(254)]).then((() => DY(39623))),
-          rY = await Promise.all([DY.e(255), DY.e(256)]).then((() => DY(39643))),
-          uY = await Promise.all([DY.e(255), DY.e(257)]).then((() => DY(39647))),
-          sY = YY.initializeApp(vY);
-        (0, AY.A)(), window.gtag("config", vY.measurementId), (0, AY.v)(), window.gtag("config", "AW-16469618203");
-        const iY = rY.getAnalytics(sY),
-          yY = {
-            portal: IY.currentUrl.getSearchParam("portal") || "root",
+        const TT = await Promise.all([IT.e(255), IT.e(254)]).then((() => IT(39283))),
+          oT = await Promise.all([IT.e(255), IT.e(256)]).then((() => IT(39309))),
+          DT = await Promise.all([IT.e(255), IT.e(257)]).then((() => IT(39311))),
+          LT = TT.initializeApp(ST);
+        (0, zT.E)(), window.gtag("config", ST.measurementId), (0, zT.B)(), window.gtag("config", "AW-16469618203");
+        const xT = oT.getAnalytics(LT),
+          cT = {
+            portal: kT.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        rY.setUserProperties(iY, yY);
-        const QY = uY.getAuth();
-        uY.useDeviceLanguage(QY);
-        const oY = new uY.GoogleAuthProvider;
-        oY.setCustomParameters({
+        oT.setUserProperties(xT, cT);
+        const KT = DT.getAuth();
+        DT.useDeviceLanguage(KT);
+        const MT = new DT.GoogleAuthProvider;
+        MT.setCustomParameters({
           prompt: "select_account"
         });
-        const WY = new uY.OAuthProvider(FY.i[FY.b.APPLE]),
-          EY = new uY.OAuthProvider(FY.i[FY.b.MICROSOFT]);
-        EY.setCustomParameters({
+        const rT = new DT.OAuthProvider(iT.f[iT.b.APPLE]),
+          AT = new DT.OAuthProvider(iT.f[iT.b.MICROSOFT]);
+        AT.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const mY = {
-          [FY.b.GOOGLE]: oY,
-          [FY.b.APPLE]: WY,
-          [FY.b.MICROSOFT]: EY
+        const gT = {
+          [iT.b.GOOGLE]: MT,
+          [iT.b.APPLE]: rT,
+          [iT.b.MICROSOFT]: AT
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((YY => {
-          const rY = uY.onIdTokenChanged(QY, (DY => {
-            rY(), YY()
+        }), await new Promise((TT => {
+          const oT = DT.onIdTokenChanged(KT, (IT => {
+            oT(), TT()
           }))
         }));
-        class VY extends aY {
-          setUserProperties(YY) {
-            rY.setUserProperties(iY, YY)
+        class hT extends FT {
+          setUserProperties(TT) {
+            oT.setUserProperties(xT, TT)
           }
-          onIdTokenChanged(YY) {
-            uY.onIdTokenChanged(QY, YY)
+          onIdTokenChanged(TT) {
+            DT.onIdTokenChanged(KT, TT)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(YY) {
-            var rY;
-            const DY = await uY.signInWithPopup(QY, mY[YY]);
-            return null !== (rY = null === DY || void 0 === DY ? void 0 : DY.user) && void 0 !== rY ? rY : null
+          async signInWithPopup(TT) {
+            var oT;
+            const IT = await DT.signInWithPopup(KT, gT[TT]);
+            return null !== (oT = null === IT || void 0 === IT ? void 0 : IT.user) && void 0 !== oT ? oT : null
           }
-          async getCurrentUser(YY) {
-            const rY = QY.currentUser;
-            if (!rY) return null;
+          async getCurrentUser(TT) {
+            const oT = KT.currentUser;
+            if (!oT) return null;
             const {
-              signInProvider: DY
-            } = await rY.getIdTokenResult(!1);
-            return DY === FY.i[YY] ? rY : null
+              signInProvider: IT
+            } = await oT.getIdTokenResult(!1);
+            return IT === iT.f[TT] ? oT : null
           }
-          async signOut(YY) {
-            null !== await this.getCurrentUser(YY) && await uY.signOut(QY)
+          async signOut(TT) {
+            null !== await this.getCurrentUser(TT) && await DT.signOut(KT)
           }
         }
-        async function SY(YY, rY) {
-          const DY = await OY.e.request(`${YY}.${rY}`, {});
-          if (null === DY) return null;
-          const FY = "google" === YY ? uY.GoogleAuthProvider.credential(DY.idToken) : WY.credential({
-            idToken: DY.idToken
+        async function wT(TT, oT) {
+          const IT = await XT.c.request(`${TT}.${oT}`, {});
+          if (null === IT) return null;
+          const iT = "google" === TT ? DT.GoogleAuthProvider.credential(IT.idToken) : rT.credential({
+            idToken: IT.idToken
           });
-          return (await uY.signInWithCredential(QY, FY)).user
+          return (await DT.signInWithCredential(KT, iT)).user
         }
-        class lY extends aY {
-          setUserProperties(YY) {
-            rY.setUserProperties(iY, YY)
+        class mT extends FT {
+          setUserProperties(TT) {
+            oT.setUserProperties(xT, TT)
           }
-          onIdTokenChanged(YY) {
-            uY.onIdTokenChanged(QY, YY)
+          onIdTokenChanged(TT) {
+            DT.onIdTokenChanged(KT, TT)
           }
-          canSignIn(YY) {
-            return null !== (0, gY.e)(YY)
+          canSignIn(TT) {
+            return null !== (0, BT.e)(TT)
           }
-          async signInWithPopup(YY) {
-            const rY = (0, gY.e)(YY);
-            if (null === rY) return console.warn(`The app can't sign in with ${YY}; check canSignIn first`), null;
+          async signInWithPopup(TT) {
+            const oT = (0, BT.e)(TT);
+            if (null === oT) return console.warn(`The app can't sign in with ${TT}; check canSignIn first`), null;
             try {
-              return await SY(rY, "signIn")
-            } catch (DY) {
-              return console.error(`Failed to sign in with ${YY} in the app:`, DY), null
+              return await wT(oT, "signIn")
+            } catch (IT) {
+              return console.error(`Failed to sign in with ${TT} in the app:`, IT), null
             }
           }
-          async getCurrentUser(YY) {
-            const rY = QY.currentUser;
-            if (rY) {
+          async getCurrentUser(TT) {
+            const oT = KT.currentUser;
+            if (oT) {
               const {
-                signInProvider: DY
-              } = await rY.getIdTokenResult(!1);
-              if (DY === FY.i[YY]) return rY
+                signInProvider: IT
+              } = await oT.getIdTokenResult(!1);
+              if (IT === iT.f[TT]) return oT
             }
-            const DY = (0, gY.e)(YY);
-            if (null === DY) return null;
+            const IT = (0, BT.e)(TT);
+            if (null === IT) return null;
             try {
-              return await SY(DY, "getCurrentUser")
-            } catch (AY) {
-              return console.error(`Failed to get the current ${YY} user from the app:`, AY), null
+              return await wT(IT, "getCurrentUser")
+            } catch (zT) {
+              return console.error(`Failed to get the current ${TT} user from the app:`, zT), null
             }
           }
-          async signOut(YY) {
-            const rY = (0, gY.e)(YY);
-            null !== rY && OY.e.request(`${rY}.signOut`, {}).catch((rY => {
-              console.error(`Failed to sign out of ${YY} in the app:`, rY)
+          async signOut(TT) {
+            const oT = (0, BT.e)(TT);
+            null !== oT && XT.c.request(`${oT}.signOut`, {}).catch((oT => {
+              console.error(`Failed to sign out of ${TT} in the app:`, oT)
             }));
-            const DY = QY.currentUser;
-            if (DY) {
+            const IT = KT.currentUser;
+            if (IT) {
               const {
-                signInProvider: rY
-              } = await DY.getIdTokenResult(!1);
-              rY === FY.i[YY] && await uY.signOut(QY)
+                signInProvider: oT
+              } = await IT.getIdTokenResult(!1);
+              oT === iT.f[TT] && await DT.signOut(KT)
             }
           }
         }
-        return (0, RY.isMobileApp)() ? (await OY.e.ready, new lY) : new VY
+        return (0, WT.isMobileApp)() ? (await XT.c.ready, new mT) : new hT
       }
     }
-    const vY = {
+    const ST = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
       storageBucket: "bloxd-ee1aa.appspot.com",
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97",
-      measurementId: AY.b
+      measurementId: zT.d
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

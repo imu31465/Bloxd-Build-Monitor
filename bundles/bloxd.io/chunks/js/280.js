@@ -1,124 +1,124 @@
 export const id = 280;
 export const ids = [280];
 export const modules = {
-  40276: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      CharacterPreview: () => vY
+  39976: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      CharacterPreview: () => ST
     });
-    var FY = DY(61),
-      AY = DY(2486),
-      IY = DY(1244),
-      RY = DY(8236),
-      OY = DY(36228),
-      gY = DY(3235),
-      aY = DY(1125);
-    const vY = (0, FY.memo)((0, FY.forwardRef)((function(YY, rY) {
+    var iT = IT(46),
+      zT = IT(2451),
+      kT = IT(1214),
+      WT = IT(8248),
+      XT = IT(35795),
+      BT = IT(3186),
+      FT = IT(1083);
+    const ST = (0, iT.memo)((0, iT.forwardRef)((function(TT, oT) {
       let {
-        onReady: DY,
-        onDrawn: vY,
-        owner: uY = "other",
-        framing: sY = "player",
-        forcedCosmetics: iY,
-        YO: yY,
-        emotePlaySeq: QY
-      } = YY;
-      const oY = (0, FY.useRef)(null),
+        onReady: IT,
+        onDrawn: ST,
+        owner: DT = "other",
+        framing: LT = "player",
+        forcedCosmetics: xT,
+        wX: cT,
+        emotePlaySeq: KT
+      } = TT;
+      const MT = (0, iT.useRef)(null),
         {
-          width: WY,
-          height: EY
-        } = (0, AY.d)(oY),
-        mY = (0, FY.useRef)(null),
-        VY = (0, FY.useRef)({}),
-        SY = (0, FY.useRef)({}),
-        [lY, TY] = (0, FY.useState)(!1),
-        eY = (0, FY.useRef)(DY);
-      eY.current = DY;
-      const NY = (0, FY.useRef)(vY);
-      NY.current = vY;
-      const BY = (0, FY.useRef)(null),
-        cY = (0, FY.useRef)(!1),
-        KY = (0, FY.useRef)(!1),
-        HY = (0, FY.useCallback)((() => {
-          const YY = mY.current;
-          if (!YY || !NY.current || cY.current || !KY.current) return;
-          const rY = {};
-          BY.current = rY, queueMicrotask((() => {
-            if (BY.current !== rY) return;
-            const DY = Promise.all(IY.u.map((rY => YY.untilDrawn(rY)))).catch((YY => {
-                console.error("Failed to draw the character preview", YY)
+          width: rT,
+          height: AT
+        } = (0, zT.d)(MT),
+        gT = (0, iT.useRef)(null),
+        hT = (0, iT.useRef)({}),
+        wT = (0, iT.useRef)({}),
+        [mT, eT] = (0, iT.useState)(!1),
+        RT = (0, iT.useRef)(IT);
+      RT.current = IT;
+      const uT = (0, iT.useRef)(ST);
+      uT.current = ST;
+      const vT = (0, iT.useRef)(null),
+        ET = (0, iT.useRef)(!1),
+        fT = (0, iT.useRef)(!1),
+        CT = (0, iT.useCallback)((() => {
+          const TT = gT.current;
+          if (!TT || !uT.current || ET.current || !fT.current) return;
+          const oT = {};
+          vT.current = oT, queueMicrotask((() => {
+            if (vT.current !== oT) return;
+            const IT = Promise.all(kT.v.map((oT => TT.untilDrawn(oT)))).catch((TT => {
+                console.error("Failed to draw the character preview", TT)
               })),
-              FY = new Promise((YY => {
-                setTimeout(YY, 1e4)
+              iT = new Promise((TT => {
+                setTimeout(TT, 1e4)
               }));
-            Promise.race([DY, FY]).then((() => {
-              var DY;
-              mY.current !== YY || BY.current !== rY || cY.current || (cY.current = !0, null === (DY = NY.current) || void 0 === DY || DY.call(NY))
+            Promise.race([IT, iT]).then((() => {
+              var IT;
+              gT.current !== TT || vT.current !== oT || ET.current || (ET.current = !0, null === (IT = uT.current) || void 0 === IT || IT.call(uT))
             }))
           }))
         }), []);
-      return (0, FY.useImperativeHandle)(rY, (() => {
-        const YY = (YY, rY) => {
-          var DY;
-          (VY.current[YY] = rY, null !== iY && void 0 !== iY && iY[YY]) || (null === (DY = mY.current) || void 0 === DY || DY.setCosmetic(YY, rY), HY())
+      return (0, iT.useImperativeHandle)(oT, (() => {
+        const TT = (TT, oT) => {
+          var IT;
+          (hT.current[TT] = oT, null !== xT && void 0 !== xT && xT[TT]) || (null === (IT = gT.current) || void 0 === IT || IT.setCosmetic(TT, oT), CT())
         };
         return {
-          updateCosmetic: YY,
-          setAllCosmetics(rY) {
-            for (const FY of IY.u) {
-              var DY;
-              YY(FY, null !== (DY = rY[FY]) && void 0 !== DY ? DY : (0, RY.b)(FY))
+          updateCosmetic: TT,
+          setAllCosmetics(oT) {
+            for (const iT of kT.v) {
+              var IT;
+              TT(iT, null !== (IT = oT[iT]) && void 0 !== IT ? IT : (0, WT.d)(iT))
             }
           },
           isReady() {
-            var YY, rY;
-            return null !== (YY = null === (rY = mY.current) || void 0 === rY ? void 0 : rY.isReady()) && void 0 !== YY && YY
+            var TT, oT;
+            return null !== (TT = null === (oT = gT.current) || void 0 === oT ? void 0 : oT.isReady()) && void 0 !== TT && TT
           },
           resetCamera() {
-            var YY;
-            null === (YY = mY.current) || void 0 === YY || YY.resetCamera()
+            var TT;
+            null === (TT = gT.current) || void 0 === TT || TT.resetCamera()
           },
-          async ensureReadyForCapture(YY) {
-            var rY;
-            await (null === (rY = mY.current) || void 0 === rY ? void 0 : rY.untilDrawn(YY))
+          async ensureReadyForCapture(TT) {
+            var oT;
+            await (null === (oT = gT.current) || void 0 === oT ? void 0 : oT.untilDrawn(TT))
           },
           getDevTools() {
-            var YY;
-            return null !== (YY = mY.current) && void 0 !== YY && YY.isReady() ? mY.current.dev : null
+            var TT;
+            return null !== (TT = gT.current) && void 0 !== TT && TT.isReady() ? gT.current.dev : null
           }
         }
-      }), [iY, HY]), (0, FY.useEffect)((() => {
-        const YY = gY.c.register(uY),
-          rY = OY.b.openCharacter(oY.current, sY);
-        mY.current = rY;
-        let DY = !0;
-        return rY.ready.then((() => {
-          DY && (TY(!0), eY.current())
-        })).catch((YY => {
-          console.error("Failed to set up the character preview", YY)
+      }), [xT, CT]), (0, iT.useEffect)((() => {
+        const TT = BT.b.register(DT),
+          oT = XT.b.openCharacter(MT.current, LT);
+        gT.current = oT;
+        let IT = !0;
+        return oT.ready.then((() => {
+          IT && (eT(!0), RT.current())
+        })).catch((TT => {
+          console.error("Failed to set up the character preview", TT)
         })), () => {
-          DY = !1, YY(), rY.close(), mY.current = null
+          IT = !1, TT(), oT.close(), gT.current = null
         }
-      }), []), (0, FY.useEffect)((() => {
-        WY <= 0 || EY <= 0 || mY.current.resize(WY, EY)
-      }), [WY, EY]), (0, FY.useEffect)((() => {
-        if (!lY) return;
-        const YY = SY.current;
-        for (const rY of IY.u) {
-          const DY = null === iY || void 0 === iY ? void 0 : iY[rY],
-            FY = YY[rY];
-          DY && DY !== FY ? mY.current.setCosmetic(rY, DY) : !DY && FY && VY.current[rY] && mY.current.setCosmetic(rY, VY.current[rY])
+      }), []), (0, iT.useEffect)((() => {
+        rT <= 0 || AT <= 0 || gT.current.resize(rT, AT)
+      }), [rT, AT]), (0, iT.useEffect)((() => {
+        if (!mT) return;
+        const TT = wT.current;
+        for (const oT of kT.v) {
+          const IT = null === xT || void 0 === xT ? void 0 : xT[oT],
+            iT = TT[oT];
+          IT && IT !== iT ? gT.current.setCosmetic(oT, IT) : !IT && iT && hT.current[oT] && gT.current.setCosmetic(oT, hT.current[oT])
         }
-        SY.current = {
-          ...iY
-        }, KY.current = !0, HY()
-      }), [iY, lY, HY]), (0, FY.useEffect)((() => {
-        lY && mY.current.playEmote(null !== yY && void 0 !== yY ? yY : null)
-      }), [yY, QY, lY]), (0, aY.jsx)("div", {
+        wT.current = {
+          ...xT
+        }, fT.current = !0, CT()
+      }), [xT, mT, CT]), (0, iT.useEffect)((() => {
+        mT && gT.current.playEmote(null !== cT && void 0 !== cT ? cT : null)
+      }), [cT, KT, mT]), (0, FT.jsx)("div", {
         className: "CharCustomisationPreview",
-        ref: oY
+        ref: MT
       })
     })))
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

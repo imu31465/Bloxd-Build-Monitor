@@ -1,279 +1,279 @@
 export const id = 259;
 export const ids = [259];
 export const modules = {
-  39849: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => IY,
-      e: () => RY
+  39524: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT,
+      e: () => WT
     });
-    var FY = DY(1818);
-    let AY = !1;
+    var iT = IT(1762);
+    let zT = !1;
 
-    function IY() {
-      AY = !0
+    function kT() {
+      zT = !0
     }
 
-    function RY() {
-      AY && (AY = !1, (0, FY.e)())
+    function WT() {
+      zT && (zT = !1, (0, iT.d)())
     }
   },
-  39862: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => OY,
-      h: () => RY
+  39541: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => XT,
+      f: () => WT
     });
-    var FY = DY(2866);
-    let AY = null,
-      IY = null;
+    var iT = IT(2848);
+    let zT = null,
+      kT = null;
 
-    function RY() {
-      return IY ??= DY.e(203).then((() => DY(35761))).then((YY => {
+    function WT() {
+      return kT ??= IT.e(203).then((() => IT(35350))).then((TT => {
         let {
-          ITEM_SPRITES: rY,
-          ITEM_SPRITES_WITHOUT_FILE: DY,
-          ITEM_FILES_WITHOUT_SPRITE: IY
-        } = YY;
-        AY = function(YY, rY, DY) {
-          const AY = new Set,
-            IY = (0, FY.w)(rY);
-          let RY = 0;
-          for (const [FY, OY] of YY.entries()) FY === IY[RY] ? RY++ : AY.add(OY);
-          if ("" !== DY)
-            for (const OY of DY.split(FY.s)) AY.add(OY);
-          return AY
-        }(rY.split(FY.s), DY, IY)
-      }), (YY => {
-        throw IY = null, YY
-      })), IY
+          ITEM_SPRITES: oT,
+          ITEM_SPRITES_WITHOUT_FILE: IT,
+          ITEM_FILES_WITHOUT_SPRITE: kT
+        } = TT;
+        zT = function(TT, oT, IT) {
+          const zT = new Set,
+            kT = (0, iT.u)(oT);
+          let WT = 0;
+          for (const [iT, XT] of TT.entries()) iT === kT[WT] ? WT++ : zT.add(XT);
+          if ("" !== IT)
+            for (const XT of IT.split(iT.s)) zT.add(XT);
+          return zT
+        }(oT.split(iT.s), IT, kT)
+      }), (TT => {
+        throw kT = null, TT
+      })), kT
     }
 
-    function OY(YY) {
-      var rY, DY;
-      return null !== (rY = null === (DY = AY) || void 0 === DY ? void 0 : DY.has(YY)) && void 0 !== rY && rY
+    function XT(TT) {
+      var oT, IT;
+      return null !== (oT = null === (IT = zT) || void 0 === IT ? void 0 : IT.has(TT)) && void 0 !== oT && oT
     }
   },
-  39842: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      loadIcons: () => cY,
-      setIconFileOverrides: () => KY,
-      wasmIconLookups: () => JY,
-      wasmIconQueries: () => dY
+  39520: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      loadIcons: () => ET,
+      setIconFileOverrides: () => fT,
+      wasmIconLookups: () => HT,
+      wasmIconQueries: () => OT
     });
-    var FY = DY(4038),
-      AY = DY(4010),
-      IY = DY(39849),
-      RY = DY(1818),
-      OY = DY(1808),
-      gY = DY(2864),
-      aY = DY(2866);
-    let vY = null,
-      uY = null;
+    var iT = IT(4014),
+      zT = IT(3989),
+      kT = IT(39524),
+      WT = IT(1762),
+      XT = IT(1751),
+      BT = IT(2844),
+      FT = IT(2848);
+    let ST = null,
+      DT = null;
 
-    function sY(YY) {
-      const rY = YY.startsWith(aY.j),
-        [DY, FY = DY, AY = DY] = (rY ? YY.slice(aY.j.length) : YY).split(aY.f);
+    function LT(TT) {
+      const oT = TT.startsWith(FT.i),
+        [IT, iT = IT, zT = IT] = (oT ? TT.slice(FT.i.length) : TT).split(FT.g);
       return {
-        top: DY,
-        left: FY,
-        right: AY,
-        half: rY
+        top: IT,
+        left: iT,
+        right: zT,
+        half: oT
       }
     }
 
-    function iY(YY) {
-      const rY = null === vY ? void 0 : (0, gY.b)(YY),
-        DY = void 0 === rY ? 0 : vY.codes[rY];
-      return 0 === DY ? void 0 : vY.pool[DY - 1]
+    function xT(TT) {
+      const oT = null === ST ? void 0 : (0, BT.d)(TT),
+        IT = void 0 === oT ? 0 : ST.codes[oT];
+      return 0 === IT ? void 0 : ST.pool[IT - 1]
     }
-    var yY = DY(2862),
-      QY = DY(3992),
-      oY = DY(4035),
-      WY = DY(39858);
-    const EY = "item:";
-    let mY = null,
-      VY = null,
-      SY = null,
-      lY = null,
-      TY = !1,
-      eY = !1,
-      NY = null,
-      BY = 0;
+    var cT = IT(2837),
+      KT = IT(3983),
+      MT = IT(4011),
+      rT = IT(39533);
+    const AT = "item:";
+    let gT = null,
+      hT = null,
+      wT = null,
+      mT = null,
+      eT = !1,
+      RT = !1,
+      uT = null,
+      vT = 0;
 
-    function cY() {
-      return eY || (eY = !0, (0, oY.i)().then((YY => {
-        YY && (0, RY.e)()
-      }))), SY ??= Promise.all([(0, yY.e)(), (uY ??= DY.e(1).then((() => DY(41667))).then((YY => {
+    function ET() {
+      return RT || (RT = !0, (0, MT.h)().then((TT => {
+        TT && (0, WT.d)()
+      }))), wT ??= Promise.all([(0, cT.h)(), (DT ??= IT.e(1).then((() => IT(41422))).then((TT => {
         let {
-          BLOCK_FACE_RUNS: rY,
-          BLOCK_FACES: DY,
-          MAX_FACE_ITEM_ID: FY
-        } = YY;
-        vY = {
-          codes: (0, aY.y)(rY, FY + 1),
-          pool: DY.split(aY.s).map(sY)
+          BLOCK_FACE_RUNS: oT,
+          BLOCK_FACES: IT,
+          MAX_FACE_ITEM_ID: iT
+        } = TT;
+        ST = {
+          codes: (0, FT.w)(oT, iT + 1),
+          pool: IT.split(FT.s).map(LT)
         }
-      }), (YY => {
-        throw uY = null, YY
-      })), uY), (0, WY.i)(), DY.e(186).then((() => DY(8770)))]).then((YY => {
-        let [, , rY, DY] = YY;
-        rY.followBundledTextures(), mY = rY, VY = DY, (0, RY.e)()
-      }), (YY => {
-        SY = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", YY)
-      })), SY
+      }), (TT => {
+        throw DT = null, TT
+      })), DT), (0, rT.g)(), IT.e(186).then((() => IT(8763)))]).then((TT => {
+        let [, , oT, IT] = TT;
+        oT.followBundledTextures(), gT = oT, hT = IT, (0, WT.d)()
+      }), (TT => {
+        wT = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", TT)
+      })), wT
     }
 
-    function KY(YY) {
-      NY = YY, BY++, (0, RY.e)()
+    function fT(TT) {
+      uT = TT, vT++, (0, WT.d)()
     }
 
-    function HY(YY) {
-      var rY, DY;
-      return null !== (rY = null === (DY = NY) || void 0 === DY ? void 0 : DY.itemSprite(YY)) && void 0 !== rY ? rY : mY.itemSpriteUrl(YY)
+    function CT(TT) {
+      var oT, IT;
+      return null !== (oT = null === (IT = uT) || void 0 === IT ? void 0 : IT.itemSprite(TT)) && void 0 !== oT ? oT : gT.itemSpriteUrl(TT)
     }
 
-    function zY(YY) {
-      var rY, DY;
-      return null !== (rY = null === (DY = NY) || void 0 === DY ? void 0 : DY.blockTexture(YY)) && void 0 !== rY ? rY : mY.blockTextureUrl(YY)
+    function jT(TT) {
+      var oT, IT;
+      return null !== (oT = null === (IT = uT) || void 0 === IT ? void 0 : IT.blockTexture(TT)) && void 0 !== oT ? oT : gT.blockTextureUrl(TT)
     }
 
-    function ZY(YY) {
-      var rY;
-      return null !== (rY = (0, yY.b)(YY)) && void 0 !== rY ? rY : YY
+    function JT(TT) {
+      var oT;
+      return null !== (oT = (0, cT.e)(TT)) && void 0 !== oT ? oT : TT
     }
 
-    function CY(YY, rY) {
-      var DY, FY, AY;
-      return null !== (DY = null !== (FY = null !== (AY = zY(YY)) && void 0 !== AY ? AY : null === rY || void 0 === rY ? void 0 : rY.rotated[YY]) && void 0 !== FY ? FY : null === rY || void 0 === rY ? void 0 : rY.animated[YY]) && void 0 !== DY ? DY : mY.notFoundUrl()
+    function UT(TT, oT) {
+      var IT, iT, zT;
+      return null !== (IT = null !== (iT = null !== (zT = jT(TT)) && void 0 !== zT ? zT : null === oT || void 0 === oT ? void 0 : oT.rotated[TT]) && void 0 !== iT ? iT : null === oT || void 0 === oT ? void 0 : oT.animated[TT]) && void 0 !== IT ? IT : gT.notFoundUrl()
     }
 
-    function fY(YY) {
-      return void 0 !== (0, gY.b)(YY) ? YY : /^[1-9][0-9]*$/.test(YY) ? (0, gY.e)(Number(YY)) : void 0
+    function aT(TT) {
+      return void 0 !== (0, BT.d)(TT) ? TT : /^[1-9][0-9]*$/.test(TT) ? (0, BT.g)(Number(TT)) : void 0
     }
 
-    function jY(YY) {
-      var rY;
-      if (YY.startsWith(EY)) {
-        var DY;
-        const rY = (0, yY.b)(YY.slice(5));
-        return null !== (DY = void 0 === rY ? null : HY(rY)) && void 0 !== DY ? DY : mY.notFoundUrl()
+    function YT(TT) {
+      var oT;
+      if (TT.startsWith(AT)) {
+        var IT;
+        const oT = (0, cT.e)(TT.slice(5));
+        return null !== (IT = void 0 === oT ? null : CT(oT)) && void 0 !== IT ? IT : gT.notFoundUrl()
       }
-      return null !== (rY = mY.particleUrl(YY)) && void 0 !== rY ? rY : mY.notFoundUrl()
+      return null !== (oT = gT.particleUrl(TT)) && void 0 !== oT ? oT : gT.notFoundUrl()
     }
 
-    function hY(YY, rY) {
-      return "StairsBlock" === YY ? YY : rY ? "SlabBlock" : "CubeBlock"
+    function QT(TT, oT) {
+      return "StairsBlock" === TT ? TT : oT ? "SlabBlock" : "CubeBlock"
     }
-    const dY = {
-        async blockIcon(YY) {
-          var rY;
+    const OT = {
+        async blockIcon(TT) {
+          var oT;
           let {
-            name: FY,
-            size: AY,
-            lineWidth: IY
-          } = YY;
-          await cY();
-          const OY = null !== (rY = fY(FY)) && void 0 !== rY ? rY : FY,
-            aY = (0, oY.b)(OY, AY, IY);
-          if (null !== aY) return aY;
-          const vY = iY(OY),
-            uY = (0, gY.b)(OY),
-            sY = void 0 === uY || null === VY ? void 0 : VY.itemTypeNameOf(uY);
-          if (null === mY || void 0 === vY) return "";
-          const yY = [vY.top, vY.left, vY.right].some((YY => null === zY(YY))),
-            WY = yY ? await (lY ??= DY.e(196).then((() => DY(33702))).then((YY => (TY && (TY = !1, (0, RY.e)()), {
-              rotated: YY.rotatedBlockTextures,
-              animated: YY.animatedBlockTextures
-            })), (YY => (lY = null, TY = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", YY), null))), lY) : null;
-          if (yY && null === WY) return "";
-          const EY = {
-              top: CY(vY.top, WY),
-              left: CY(vY.left, WY),
-              right: CY(vY.right, WY),
-              itemType: hY(sY, vY.half)
+            name: iT,
+            size: zT,
+            lineWidth: kT
+          } = TT;
+          await ET();
+          const XT = null !== (oT = aT(iT)) && void 0 !== oT ? oT : iT,
+            FT = (0, MT.d)(XT, zT, kT);
+          if (null !== FT) return FT;
+          const ST = xT(XT),
+            DT = (0, BT.d)(XT),
+            LT = void 0 === DT || null === hT ? void 0 : hT.itemTypeNameOf(DT);
+          if (null === gT || void 0 === ST) return "";
+          const cT = [ST.top, ST.left, ST.right].some((TT => null === jT(TT))),
+            rT = cT ? await (mT ??= IT.e(196).then((() => IT(33287))).then((TT => (eT && (eT = !1, (0, WT.d)()), {
+              rotated: TT.rotatedBlockTextures,
+              animated: TT.animatedBlockTextures
+            })), (TT => (mT = null, eT = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", TT), null))), mT) : null;
+          if (cT && null === rT) return "";
+          const AT = {
+              top: UT(ST.top, rT),
+              left: UT(ST.left, rT),
+              right: UT(ST.right, rT),
+              itemType: QT(LT, ST.half)
             },
-            SY = 0 === BY ? OY : `${OY}#${BY}`;
-          return (await (0, QY.b)()).drawBlockIconUrl(SY, AY, IY, (() => EY))
+            wT = 0 === vT ? XT : `${XT}#${vT}`;
+          return (await (0, KT.d)()).drawBlockIconUrl(wT, zT, kT, (() => AT))
         }
       },
-      JY = {
-        itemIcon: function(YY) {
-          var rY, DY;
-          if (null === mY) return cY(), OY.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(YY);
-          if ((0, AY.i)(YY)) return {
+      HT = {
+        itemIcon: function(TT) {
+          var oT, IT;
+          if (null === gT) return ET(), XT.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(TT);
+          if ((0, zT.m)(TT)) return {
             kind: "icon",
-            url: null !== (DY = mY.ingameIconUrl(YY)) && void 0 !== DY ? DY : mY.notFoundUrl()
+            url: null !== (IT = gT.ingameIconUrl(TT)) && void 0 !== IT ? IT : gT.notFoundUrl()
           };
-          if (YY.startsWith(AY.c)) return {
+          if (TT.startsWith(zT.e)) return {
             kind: "icon",
-            url: jY(YY.slice(AY.c.length))
+            url: YT(TT.slice(zT.e.length))
           };
-          if (0 === (0, gY.i)()) return (0, IY.b)(), OY.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(YY);
-          const RY = null !== (rY = fY(YY)) && void 0 !== rY ? rY : YY,
-            aY = (0, gY.b)(RY),
-            vY = void 0 === aY ? void 0 : VY.itemTypeNameOf(aY);
-          if (void 0 !== iY(RY)) return {
+          if (0 === (0, BT.h)()) return (0, kT.c)(), XT.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(TT);
+          const WT = null !== (oT = aT(TT)) && void 0 !== oT ? oT : TT,
+            FT = (0, BT.d)(WT),
+            ST = void 0 === FT ? void 0 : hT.itemTypeNameOf(FT);
+          if (void 0 !== xT(WT)) return {
             kind: "drawnBlock"
           };
-          const uY = function(YY) {
-            var rY;
-            return null !== (rY = HY(ZY(YY))) && void 0 !== rY ? rY : mY.notFoundUrl()
-          }(RY);
-          if ((0, oY.e)(RY) && ! function(YY) {
-              return null !== NY && (null !== NY.itemSprite(ZY(YY)) || null !== NY.model(YY))
-            }(RY)) return {
+          const DT = function(TT) {
+            var oT;
+            return null !== (oT = CT(JT(TT))) && void 0 !== oT ? oT : gT.notFoundUrl()
+          }(WT);
+          if ((0, MT.e)(WT) && ! function(TT) {
+              return null !== uT && (null !== uT.itemSprite(JT(TT)) || null !== uT.model(TT))
+            }(WT)) return {
             kind: "model",
-            url: uY
+            url: DT
           };
-          if ("Gun" === vY) return {
+          if ("Gun" === ST) return {
             kind: "gun",
-            url: uY
+            url: DT
           };
-          if (void 0 !== aY && "GrayscaleArmour" === VY.itemTypeOf(aY) || Object.hasOwn(FY.b, RY)) {
-            var sY;
-            const rY = null !== (sY = (0, FY.e)(YY)) && void 0 !== sY ? sY : (0, FY.e)(RY);
-            if (rY) return {
+          if (void 0 !== FT && "GrayscaleArmour" === hT.itemTypeOf(FT) || Object.hasOwn(iT.e, WT)) {
+            var LT;
+            const oT = null !== (LT = (0, iT.f)(TT)) && void 0 !== LT ? LT : (0, iT.f)(WT);
+            if (oT) return {
               kind: "item",
-              url: uY,
-              tint: rY
+              url: DT,
+              tint: oT
             }
           }
           return {
             kind: "item",
-            url: uY
+            url: DT
           }
         },
-        hasIcon: function(YY) {
-          return void 0 !== fY(YY) || (0, AY.i)(YY) || YY.startsWith(AY.c)
+        hasIcon: function(TT) {
+          return void 0 !== aT(TT) || (0, zT.m)(TT) || TT.startsWith(zT.e)
         },
-        isItemName: function(YY) {
-          return void 0 !== fY(YY)
+        isItemName: function(TT) {
+          return void 0 !== aT(TT)
         }
       }
   },
-  39858: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => RY,
-      i: () => OY
+  39533: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT,
+      g: () => XT
     });
-    var FY = DY(39862);
-    let AY = null,
-      IY = null;
+    var iT = IT(39541);
+    let zT = null,
+      kT = null;
 
-    function RY() {
-      return AY ??= DY.e(58).then((() => DY(41672))).catch((YY => {
-        throw AY = null, YY
-      })), AY
+    function WT() {
+      return zT ??= IT.e(58).then((() => IT(41429))).catch((TT => {
+        throw zT = null, TT
+      })), zT
     }
 
-    function OY() {
-      return IY ??= Promise.all([RY(), (0, FY.h)()]).then((YY => {
-        let [rY] = YY;
-        return rY
-      }), (YY => {
-        throw IY = null, YY
-      })), IY
+    function XT() {
+      return kT ??= Promise.all([WT(), (0, iT.f)()]).then((TT => {
+        let [oT] = TT;
+        return oT
+      }), (TT => {
+        throw kT = null, TT
+      })), kT
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

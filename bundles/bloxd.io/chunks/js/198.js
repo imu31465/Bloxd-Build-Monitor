@@ -1,144 +1,144 @@
 export const id = 198;
 export const ids = [198];
 export const modules = {
-  40551: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      loadGlbAsset: () => mr,
-      loadGlbTree: () => Er
+  40312: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      loadGlbAsset: () => go,
+      loadGlbTree: () => Ao
     });
-    var FY = DY(37242),
-      AY = DY(40555),
-      IY = DY(35721),
-      RY = DY.n(IY);
+    var iT = IT(36851),
+      zT = IT(40319),
+      kT = IT(35305),
+      WT = IT.n(kT);
 
-    function OY() {
-      return RY()('(()=>{class YY extends Error{}function rY(rY,DY){const FY=rY._malloc(DY);if(0===FY)throw new YY(`Draco: the decoder\'s heap refused ${DY} bytes`);return FY}function DY(YY){return{[YY.DT_FLOAT32]:[Float32Array,5126],[YY.DT_INT8]:[Int8Array,5120],[YY.DT_INT16]:[Int16Array,5122],[YY.DT_INT32]:[Int32Array,5124],[YY.DT_UINT8]:[Uint8Array,5121],[YY.DT_UINT16]:[Uint16Array,5123],[YY.DT_UINT32]:[Uint32Array,5125]}}function FY(rY,FY,AY,IY,RY){let OY=null,gY=null,aY=null;try{OY=new rY.Decoder,gY=new rY.DecoderBuffer,gY.Init(FY,FY.byteLength);let vY=0;const uY=OY.GetEncodedGeometryType(gY);if(uY===rY.TRIANGULAR_MESH){const DY=new rY.Mesh;aY=DY;const FY=OY.DecodeBufferToMesh(gY,DY);if(!FY.ok()||0===DY.ptr)throw new YY(FY.error_msg());vY=3*DY.num_faces()}else{if(uY!==rY.POINT_CLOUD)throw new YY(`Draco: Cannot decode invalid geometry type ${uY}`);{const DY=new rY.PointCloud;aY=DY;const FY=OY.DecodeBufferToPointCloud(gY,DY);if(!FY.ok()||!DY.ptr)throw new YY(FY.error_msg())}}const sY=aY.num_points();if(sY!==IY.vertices||vY!==IY.indices)throw new YY(`Draco: decoded ${sY} vertices and ${vY} indices, the accessors declare ${IY.vertices} and ${IY.indices}`);const iY=DY(rY),yY=[];for(const{kind:rY,id:DY,components:FY}of AY){const AY=OY.GetAttributeByUniqueId(aY,DY);if(!AY||0===AY.ptr)throw new YY(`Draco: no attribute with id ${DY} (${rY})`);const IY=AY.data_type();if(!iY[IY])throw new YY(`Draco: Cannot decode invalid data type ${IY}`);if(AY.num_components()!==FY)throw new YY(`Draco: ${rY} decodes to ${AY.num_components()} components, its accessor declares ${FY}`);yY.push([rY,AY,IY])}return RY({dracoDecoder:OY,geometry:aY,triangles:uY===rY.TRIANGULAR_MESH,numPoints:sY,numIndices:vY,attributes:yY})}finally{aY&&rY.destroy(aY),gY&&rY.destroy(gY),OY&&rY.destroy(OY)}}const AY=self;let IY=null;self.onmessage=YY=>{let{data:RY}=YY;if("init"===RY.id){try{importScripts(RY.url),IY=DracoDecoderModule({wasmBinary:RY.wasmBinary}),AY.postMessage({id:"initDone"})}catch(uY){AY.postMessage({id:"initError",message:uY instanceof Error?uY.message:String(uY)})}return}const{seq:OY,data:gY,attributeIds:aY,expected:vY}=RY;IY?IY.then((YY=>{try{const IY=function(YY,AY,IY,RY){const OY=Object.keys(IY).map((YY=>({kind:YY,id:IY[YY],components:RY.components[YY]})));return FY(YY,AY,OY,RY,(FY=>{let{dracoDecoder:AY,geometry:IY,triangles:RY,numPoints:OY,numIndices:gY,attributes:aY}=FY;const vY=DY(YY);let uY=null;if(RY){const DY=4*gY,FY=rY(YY,DY);try{AY.GetTrianglesUInt32Array(IY,DY,FY),uY=new Uint32Array(gY),uY.set(new Uint32Array(YY.HEAPF32.buffer,FY,gY))}finally{YY._free(FY)}}const sY=[];for(const[DY,iY,yY]of aY){const[FY]=vY[yY],RY=iY.num_components(),gY=OY*RY,aY=gY*FY.BYTES_PER_ELEMENT,uY=rY(YY,aY);try{AY.GetAttributeDataArrayForAllPoints(IY,iY,yY,aY,uY),sY.push({kind:DY,data:new FY(YY.HEAPF32.buffer,uY,gY).slice(),size:RY,byteOffset:iY.byte_offset(),byteStride:iY.byte_stride(),normalized:iY.normalized()})}finally{YY._free(uY)}}return{indices:uY,attributes:sY,totalVertices:OY}}))}(YY,gY,aY,vY),RY=IY.attributes.map((YY=>YY.data.buffer));IY.indices&&RY.push(IY.indices.buffer),AY.postMessage({id:"decoded",seq:OY,...IY},RY)}catch(uY){AY.postMessage({id:"decodeError",seq:OY,message:uY instanceof Error?uY.message:String(uY)})}}),(YY=>{AY.postMessage({id:"decodeError",seq:OY,message:YY instanceof Error?YY.message:String(YY)})})):AY.postMessage({id:"decodeError",seq:OY,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, DY.p + "dracoDecode.worker.10342655.worker.js")
+    function XT() {
+      return WT()('(()=>{class TT extends Error{}function oT(oT,IT){const iT=oT._malloc(IT);if(0===iT)throw new TT(`Draco: the decoder\'s heap refused ${IT} bytes`);return iT}function IT(TT){return{[TT.DT_FLOAT32]:[Float32Array,5126],[TT.DT_INT8]:[Int8Array,5120],[TT.DT_INT16]:[Int16Array,5122],[TT.DT_INT32]:[Int32Array,5124],[TT.DT_UINT8]:[Uint8Array,5121],[TT.DT_UINT16]:[Uint16Array,5123],[TT.DT_UINT32]:[Uint32Array,5125]}}function iT(oT,iT,zT,kT,WT){let XT=null,BT=null,FT=null;try{XT=new oT.Decoder,BT=new oT.DecoderBuffer,BT.Init(iT,iT.byteLength);let ST=0;const DT=XT.GetEncodedGeometryType(BT);if(DT===oT.TRIANGULAR_MESH){const IT=new oT.Mesh;FT=IT;const iT=XT.DecodeBufferToMesh(BT,IT);if(!iT.ok()||0===IT.ptr)throw new TT(iT.error_msg());ST=3*IT.num_faces()}else{if(DT!==oT.POINT_CLOUD)throw new TT(`Draco: Cannot decode invalid geometry type ${DT}`);{const IT=new oT.PointCloud;FT=IT;const iT=XT.DecodeBufferToPointCloud(BT,IT);if(!iT.ok()||!IT.ptr)throw new TT(iT.error_msg())}}const LT=FT.num_points();if(LT!==kT.vertices||ST!==kT.indices)throw new TT(`Draco: decoded ${LT} vertices and ${ST} indices, the accessors declare ${kT.vertices} and ${kT.indices}`);const xT=IT(oT),cT=[];for(const{kind:oT,id:IT,components:iT}of zT){const zT=XT.GetAttributeByUniqueId(FT,IT);if(!zT||0===zT.ptr)throw new TT(`Draco: no attribute with id ${IT} (${oT})`);const kT=zT.data_type();if(!xT[kT])throw new TT(`Draco: Cannot decode invalid data type ${kT}`);if(zT.num_components()!==iT)throw new TT(`Draco: ${oT} decodes to ${zT.num_components()} components, its accessor declares ${iT}`);cT.push([oT,zT,kT])}return WT({dracoDecoder:XT,geometry:FT,triangles:DT===oT.TRIANGULAR_MESH,numPoints:LT,numIndices:ST,attributes:cT})}finally{FT&&oT.destroy(FT),BT&&oT.destroy(BT),XT&&oT.destroy(XT)}}const zT=self;let kT=null;self.onmessage=TT=>{let{data:WT}=TT;if("init"===WT.id){try{importScripts(WT.url),kT=DracoDecoderModule({wasmBinary:WT.wasmBinary}),zT.postMessage({id:"initDone"})}catch(DT){zT.postMessage({id:"initError",message:DT instanceof Error?DT.message:String(DT)})}return}const{seq:XT,data:BT,attributeIds:FT,expected:ST}=WT;kT?kT.then((TT=>{try{const kT=function(TT,zT,kT,WT){const XT=Object.keys(kT).map((TT=>({kind:TT,id:kT[TT],components:WT.components[TT]})));return iT(TT,zT,XT,WT,(iT=>{let{dracoDecoder:zT,geometry:kT,triangles:WT,numPoints:XT,numIndices:BT,attributes:FT}=iT;const ST=IT(TT);let DT=null;if(WT){const IT=4*BT,iT=oT(TT,IT);try{zT.GetTrianglesUInt32Array(kT,IT,iT),DT=new Uint32Array(BT),DT.set(new Uint32Array(TT.HEAPF32.buffer,iT,BT))}finally{TT._free(iT)}}const LT=[];for(const[IT,xT,cT]of FT){const[iT]=ST[cT],WT=xT.num_components(),BT=XT*WT,FT=BT*iT.BYTES_PER_ELEMENT,DT=oT(TT,FT);try{zT.GetAttributeDataArrayForAllPoints(kT,xT,cT,FT,DT),LT.push({kind:IT,data:new iT(TT.HEAPF32.buffer,DT,BT).slice(),size:WT,byteOffset:xT.byte_offset(),byteStride:xT.byte_stride(),normalized:xT.normalized()})}finally{TT._free(DT)}}return{indices:DT,attributes:LT,totalVertices:XT}}))}(TT,BT,FT,ST),WT=kT.attributes.map((TT=>TT.data.buffer));kT.indices&&WT.push(kT.indices.buffer),zT.postMessage({id:"decoded",seq:XT,...kT},WT)}catch(DT){zT.postMessage({id:"decodeError",seq:XT,message:DT instanceof Error?DT.message:String(DT)})}}),(TT=>{zT.postMessage({id:"decodeError",seq:XT,message:TT instanceof Error?TT.message:String(TT)})})):zT.postMessage({id:"decodeError",seq:XT,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, IT.p + "dracoDecode.worker.88155a62.worker.js")
     }
-    var gY = DY(99);
-    const aY = 1e3;
-    let vY = null,
-      uY = null;
-    const sY = [],
-      iY = [];
-    let yY = 0;
-    const QY = {
+    var BT = IT(90);
+    const FT = 1e3;
+    let ST = null,
+      DT = null;
+    const LT = [],
+      xT = [];
+    let cT = 0;
+    const KT = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      oY = function(YY, rY) {
-        const DY = YY ? Math.max(1, Math.min(Math.floor(.5 * YY), 4)) : 1;
-        return rY ? Math.min(DY, 2) : DY
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, gY.isMobile)());
+      MT = function(TT, oT) {
+        const IT = TT ? Math.max(1, Math.min(Math.floor(.5 * TT), 4)) : 1;
+        return oT ? Math.min(IT, 2) : IT
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, BT.isMobile)());
 
-    function WY() {
-      if (!vY) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function rT() {
+      if (!ST) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: YY,
-        wasmBinaryUrl: rY
-      } = vY;
-      return uY ??= fetch(rY).then((YY => {
-        if (!YY.ok) throw new Error(`Draco: fetching ${rY} failed: ${YY.status}`);
-        return YY.arrayBuffer()
-      })), uY.catch((() => {
-        uY = null
-      })), QY.workersStarted++, uY.then((rY => new Promise(((DY, FY) => {
-        const AY = new OY;
-        AY.onerror = YY => {
-          AY.onmessage = null, AY.onerror = null, AY.terminate(), FY(new Error("Draco: the decode worker failed to start" + (YY.message ? `: ${YY.message}` : " (its script did not load)")))
-        }, AY.onmessage = YY => {
+        scriptUrl: TT,
+        wasmBinaryUrl: oT
+      } = ST;
+      return DT ??= fetch(oT).then((TT => {
+        if (!TT.ok) throw new Error(`Draco: fetching ${oT} failed: ${TT.status}`);
+        return TT.arrayBuffer()
+      })), DT.catch((() => {
+        DT = null
+      })), KT.workersStarted++, DT.then((oT => new Promise(((IT, iT) => {
+        const zT = new XT;
+        zT.onerror = TT => {
+          zT.onmessage = null, zT.onerror = null, zT.terminate(), iT(new Error("Draco: the decode worker failed to start" + (TT.message ? `: ${TT.message}` : " (its script did not load)")))
+        }, zT.onmessage = TT => {
           let {
-            data: rY
-          } = YY;
-          AY.onmessage = null, AY.onerror = null, "initDone" === rY.id ? DY(AY) : (AY.terminate(), FY(new Error(`Draco: ${"initError"===rY.id?rY.message:"the worker did not start"}`)))
+            data: oT
+          } = TT;
+          zT.onmessage = null, zT.onerror = null, "initDone" === oT.id ? IT(zT) : (zT.terminate(), iT(new Error(`Draco: ${"initError"===oT.id?oT.message:"the worker did not start"}`)))
         };
-        const IY = rY.slice(0),
-          RY = {
+        const kT = oT.slice(0),
+          WT = {
             id: "init",
-            url: YY,
-            wasmBinary: IY
+            url: TT,
+            wasmBinary: kT
           };
-        AY.postMessage(RY, [IY])
+        zT.postMessage(WT, [kT])
       }))))
     }
 
-    function EY(YY) {
-      const rY = sY.indexOf(YY); - 1 !== rY && sY.splice(rY, 1);
-      const DY = iY.shift();
-      DY && VY(DY)
+    function AT(TT) {
+      const oT = LT.indexOf(TT); - 1 !== oT && LT.splice(oT, 1);
+      const IT = xT.shift();
+      IT && hT(IT)
     }
 
-    function mY(YY, rY) {
-      YY.busy = !0, YY.releaseTimer && (clearTimeout(YY.releaseTimer), YY.releaseTimer = null);
-      YY.worker.then((DY => {
-        const FY = yY++;
-        DY.onmessage = AY => {
+    function gT(TT, oT) {
+      TT.busy = !0, TT.releaseTimer && (clearTimeout(TT.releaseTimer), TT.releaseTimer = null);
+      TT.worker.then((IT => {
+        const iT = cT++;
+        IT.onmessage = zT => {
           let {
-            data: IY
-          } = AY;
-          if (("decoded" === IY.id || "decodeError" === IY.id) && IY.seq === FY) {
-            if (DY.onmessage = null, DY.onerror = null, "decoded" === IY.id) return QY.decodes++, rY.resolve({
-              indices: IY.indices,
-              attributes: IY.attributes,
-              totalVertices: IY.totalVertices
+            data: kT
+          } = zT;
+          if (("decoded" === kT.id || "decodeError" === kT.id) && kT.seq === iT) {
+            if (IT.onmessage = null, IT.onerror = null, "decoded" === kT.id) return KT.decodes++, oT.resolve({
+              indices: kT.indices,
+              attributes: kT.attributes,
+              totalVertices: kT.totalVertices
             }), void(() => {
-              const rY = iY.shift();
-              rY ? mY(YY, rY) : (YY.busy = !1, YY.releaseTimer = setTimeout((() => {
-                const rY = sY.indexOf(YY); - 1 !== rY && sY.splice(rY, 1), YY.worker.then((YY => {
-                  YY.terminate()
+              const oT = xT.shift();
+              oT ? gT(TT, oT) : (TT.busy = !1, TT.releaseTimer = setTimeout((() => {
+                const oT = LT.indexOf(TT); - 1 !== oT && LT.splice(oT, 1), TT.worker.then((TT => {
+                  TT.terminate()
                 }))
-              }), aY))
+              }), FT))
             })();
-            DY.terminate(), rY.reject(new Error(IY.message)), EY(YY)
+            IT.terminate(), oT.reject(new Error(kT.message)), AT(TT)
           }
-        }, DY.onerror = FY => {
-          DY.onmessage = null, DY.onerror = null, DY.terminate(), rY.reject(new Error(`Draco: the decode worker failed: ${FY.message}`)), EY(YY)
+        }, IT.onerror = iT => {
+          IT.onmessage = null, IT.onerror = null, IT.terminate(), oT.reject(new Error(`Draco: the decode worker failed: ${iT.message}`)), AT(TT)
         };
-        const AY = {
+        const zT = {
           id: "decode",
-          seq: FY,
-          data: rY.data,
-          attributeIds: rY.attributeIds,
-          expected: rY.expected
+          seq: iT,
+          data: oT.data,
+          attributeIds: oT.attributeIds,
+          expected: oT.expected
         };
-        DY.postMessage(AY, [rY.data.buffer])
-      }), (DY => {
-        rY.reject(DY instanceof Error ? DY : new Error(String(DY))), EY(YY)
+        IT.postMessage(zT, [oT.data.buffer])
+      }), (IT => {
+        oT.reject(IT instanceof Error ? IT : new Error(String(IT))), AT(TT)
       }))
     }
 
-    function VY(YY) {
-      const rY = sY.find((YY => !YY.busy));
-      if (rY) mY(rY, YY);
+    function hT(TT) {
+      const oT = LT.find((TT => !TT.busy));
+      if (oT) gT(oT, TT);
       else {
-        if (sY.length < oY) {
-          const rY = {
-            worker: WY(),
+        if (LT.length < MT) {
+          const oT = {
+            worker: rT(),
             busy: !0,
             releaseTimer: null
           };
-          return sY.push(rY), QY.mostWorkers = Math.max(QY.mostWorkers, sY.length), void mY(rY, YY)
+          return LT.push(oT), KT.mostWorkers = Math.max(KT.mostWorkers, LT.length), void gT(oT, TT)
         }
-        iY.push(YY)
+        xT.push(TT)
       }
     }
 
-    function SY(YY, rY, DY) {
-      return new Promise(((FY, AY) => {
-        VY({
-          data: new Int8Array(YY.buffer, YY.byteOffset, YY.byteLength).slice(),
-          attributeIds: rY,
-          expected: DY,
-          resolve: FY,
-          reject: AY
+    function wT(TT, oT, IT) {
+      return new Promise(((iT, zT) => {
+        hT({
+          data: new Int8Array(TT.buffer, TT.byteOffset, TT.byteLength).slice(),
+          attributeIds: oT,
+          expected: IT,
+          resolve: iT,
+          reject: zT
         })
       }))
     }
-    var lY = DY(36725),
-      TY = DY(36739),
-      eY = DY(8809),
-      NY = DY(8807);
-    const BY = {
+    var mT = IT(36317),
+      eT = IT(36325),
+      RT = IT(8805),
+      uT = IT(8801);
+    const vT = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,323 +146,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function cY(YY) {
-      const rY = (0, NY.j)(YY.byteLength);
-      if (rY) throw new eY.p(rY);
+    function ET(TT) {
+      const oT = (0, uT.g)(TT.byteLength);
+      if (oT) throw new RT.q(oT);
       const {
-        json: DY,
-        bin: FY
-      } = (0, eY.B)(YY), AY = (0, NY.h)(DY, FY);
-      if (AY) throw new eY.p(AY);
+        json: IT,
+        bin: iT
+      } = (0, RT.B)(TT), zT = (0, uT.e)(IT, iT);
+      if (zT) throw new RT.q(zT);
       try {
-        return function(YY, rY) {
-          var DY, FY, AY, IY, RY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY;
-          const WY = new Map,
-            EY = DY => {
-              let FY = WY.get(DY);
-              if (!FY) {
-                var AY;
-                const IY = YY.bufferViews[DY],
-                  RY = null !== (AY = IY.byteOffset) && void 0 !== AY ? AY : 0;
-                FY = {
-                  index: DY,
-                  bytes: rY.subarray(RY, RY + IY.byteLength),
-                  byteStride: IY.byteStride
-                }, WY.set(DY, FY)
+        return function(TT, oT) {
+          var IT, iT, zT, kT, WT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT;
+          const rT = new Map,
+            AT = IT => {
+              let iT = rT.get(IT);
+              if (!iT) {
+                var zT;
+                const kT = TT.bufferViews[IT],
+                  WT = null !== (zT = kT.byteOffset) && void 0 !== zT ? zT : 0;
+                iT = {
+                  index: IT,
+                  bytes: oT.subarray(WT, WT + kT.byteLength),
+                  byteStride: kT.byteStride
+                }, rT.set(IT, iT)
               }
-              return FY
+              return iT
             },
-            mY = new Map,
-            VY = rY => {
-              let DY = mY.get(rY);
-              if (!DY) {
-                var FY;
-                const AY = YY.accessors[rY];
-                DY = {
-                  index: rY,
-                  count: AY.count,
-                  type: AY.type,
-                  numComponents: eY.t[AY.type],
-                  componentType: AY.componentType,
-                  normalized: null !== (FY = AY.normalized) && void 0 !== FY && FY,
-                  byteOffset: AY.byteOffset,
-                  bufferView: void 0 === AY.bufferView ? null : EY(AY.bufferView),
-                  min: AY.min,
-                  max: AY.max
-                }, mY.set(rY, DY)
+            gT = new Map,
+            hT = oT => {
+              let IT = gT.get(oT);
+              if (!IT) {
+                var iT;
+                const zT = TT.accessors[oT];
+                IT = {
+                  index: oT,
+                  count: zT.count,
+                  type: zT.type,
+                  numComponents: RT.s[zT.type],
+                  componentType: zT.componentType,
+                  normalized: null !== (iT = zT.normalized) && void 0 !== iT && iT,
+                  byteOffset: zT.byteOffset,
+                  bufferView: void 0 === zT.bufferView ? null : AT(zT.bufferView),
+                  min: zT.min,
+                  max: zT.max
+                }, gT.set(oT, IT)
               }
-              return DY
+              return IT
             },
-            SY = null !== (DY = null === (FY = YY.extensionsUsed) || void 0 === FY ? void 0 : FY.includes("KHR_draco_mesh_compression")) && void 0 !== DY && DY,
-            lY = (null !== (AY = YY.meshes) && void 0 !== AY ? AY : []).map(((rY, DY) => {
-              const FY = rY.primitives.map(((rY, DY) => {
-                var FY, AY, IY;
-                const RY = SY ? null === (FY = rY.extensions) || void 0 === FY ? void 0 : FY.KHR_draco_mesh_compression : void 0;
-                let OY = null;
-                const gY = [];
-                if (RY) {
-                  const DY = {
-                    vertices: YY.accessors[rY.attributes.POSITION].count,
-                    indices: void 0 === rY.indices ? 0 : YY.accessors[rY.indices].count,
+            wT = null !== (IT = null === (iT = TT.extensionsUsed) || void 0 === iT ? void 0 : iT.includes("KHR_draco_mesh_compression")) && void 0 !== IT && IT,
+            mT = (null !== (zT = TT.meshes) && void 0 !== zT ? zT : []).map(((oT, IT) => {
+              const iT = oT.primitives.map(((oT, IT) => {
+                var iT, zT, kT;
+                const WT = wT ? null === (iT = oT.extensions) || void 0 === iT ? void 0 : iT.KHR_draco_mesh_compression : void 0;
+                let XT = null;
+                const BT = [];
+                if (WT) {
+                  const IT = {
+                    vertices: TT.accessors[oT.attributes.POSITION].count,
+                    indices: void 0 === oT.indices ? 0 : TT.accessors[oT.indices].count,
                     components: {}
                   };
-                  OY = {
-                    bufferView: EY(RY.bufferView),
+                  XT = {
+                    bufferView: AT(WT.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: DY
+                    expected: IT
                   };
-                  for (const [FY, AY] of eY.i) {
-                    const IY = RY.attributes[FY];
-                    if (void 0 === IY) continue;
-                    OY.attributeIds[AY] = IY;
-                    const gY = rY.attributes[FY];
-                    var aY;
-                    if (void 0 !== gY) OY.normalized[AY] = null !== (aY = YY.accessors[gY].normalized) && void 0 !== aY && aY, DY.components[AY] = eY.t[YY.accessors[gY].type]
+                  for (const [iT, zT] of RT.k) {
+                    const kT = WT.attributes[iT];
+                    if (void 0 === kT) continue;
+                    XT.attributeIds[zT] = kT;
+                    const BT = oT.attributes[iT];
+                    var FT;
+                    if (void 0 !== BT) XT.normalized[zT] = null !== (FT = TT.accessors[BT].normalized) && void 0 !== FT && FT, IT.components[zT] = RT.s[TT.accessors[BT].type]
                   }
                 } else
-                  for (const [YY, vY] of eY.i) {
-                    const DY = rY.attributes[YY];
-                    void 0 !== DY && gY.push({
-                      semantic: YY,
-                      kind: vY,
-                      accessor: VY(DY)
+                  for (const [TT, ST] of RT.k) {
+                    const IT = oT.attributes[TT];
+                    void 0 !== IT && BT.push({
+                      semantic: TT,
+                      kind: ST,
+                      accessor: hT(IT)
                     })
                   }
                 return {
-                  index: DY,
-                  mode: null !== (AY = rY.mode) && void 0 !== AY ? AY : 4,
-                  attributes: gY,
-                  indices: RY || void 0 === rY.indices ? null : VY(rY.indices),
-                  position: void 0 === rY.attributes.POSITION ? null : VY(rY.attributes.POSITION),
-                  material: null !== (IY = rY.material) && void 0 !== IY ? IY : null,
-                  draco: OY
+                  index: IT,
+                  mode: null !== (zT = oT.mode) && void 0 !== zT ? zT : 4,
+                  attributes: BT,
+                  indices: WT || void 0 === oT.indices ? null : hT(oT.indices),
+                  position: void 0 === oT.attributes.POSITION ? null : hT(oT.attributes.POSITION),
+                  material: null !== (kT = oT.material) && void 0 !== kT ? kT : null,
+                  draco: XT
                 }
               }));
               return {
-                index: DY,
-                name: rY.name,
-                primitives: FY,
-                extras: rY.extras
+                index: IT,
+                name: oT.name,
+                primitives: iT,
+                extras: oT.extras
               }
             })),
-            TY = (null !== (IY = YY.nodes) && void 0 !== IY ? IY : []).map(((YY, rY) => {
-              var DY, FY;
+            eT = (null !== (kT = TT.nodes) && void 0 !== kT ? kT : []).map(((TT, oT) => {
+              var IT, iT;
               return {
-                index: rY,
-                name: YY.name,
-                children: null !== (DY = YY.children) && void 0 !== DY ? DY : [],
-                mesh: null !== (FY = YY.mesh) && void 0 !== FY ? FY : null,
-                translation: YY.translation,
-                rotation: YY.rotation,
-                scale: YY.scale,
-                hasCamera: void 0 !== YY.camera,
-                extras: YY.extras
+                index: oT,
+                name: TT.name,
+                children: null !== (IT = TT.children) && void 0 !== IT ? IT : [],
+                mesh: null !== (iT = TT.mesh) && void 0 !== iT ? iT : null,
+                translation: TT.translation,
+                rotation: TT.rotation,
+                scale: TT.scale,
+                hasCamera: void 0 !== TT.camera,
+                extras: TT.extras
               }
             })),
-            NY = null !== (RY = null === (OY = YY.extensionsUsed) || void 0 === OY ? void 0 : OY.includes("KHR_materials_unlit")) && void 0 !== RY && RY,
-            cY = null !== (gY = null === (aY = YY.extensionsUsed) || void 0 === aY ? void 0 : aY.includes("KHR_texture_transform")) && void 0 !== gY && gY,
-            KY = (null !== (vY = YY.materials) && void 0 !== vY ? vY : []).map(((YY, rY) => {
-              var DY, FY, AY, IY;
-              const RY = YY.pbrMetallicRoughness,
-                OY = null === RY || void 0 === RY ? void 0 : RY.baseColorTexture;
+            uT = null !== (WT = null === (XT = TT.extensionsUsed) || void 0 === XT ? void 0 : XT.includes("KHR_materials_unlit")) && void 0 !== WT && WT,
+            ET = null !== (BT = null === (FT = TT.extensionsUsed) || void 0 === FT ? void 0 : FT.includes("KHR_texture_transform")) && void 0 !== BT && BT,
+            fT = (null !== (ST = TT.materials) && void 0 !== ST ? ST : []).map(((TT, oT) => {
+              var IT, iT, zT, kT;
+              const WT = TT.pbrMetallicRoughness,
+                XT = null === WT || void 0 === WT ? void 0 : WT.baseColorTexture;
               return {
-                index: rY,
-                name: YY.name,
-                extras: YY.extras,
-                unlit: NY && void 0 !== (null === (DY = YY.extensions) || void 0 === DY ? void 0 : DY.KHR_materials_unlit),
-                pbr: RY ? {
-                  baseColorFactor: RY.baseColorFactor,
-                  metallicFactor: RY.metallicFactor,
-                  roughnessFactor: RY.roughnessFactor
+                index: oT,
+                name: TT.name,
+                extras: TT.extras,
+                unlit: uT && void 0 !== (null === (IT = TT.extensions) || void 0 === IT ? void 0 : IT.KHR_materials_unlit),
+                pbr: WT ? {
+                  baseColorFactor: WT.baseColorFactor,
+                  metallicFactor: WT.metallicFactor,
+                  roughnessFactor: WT.roughnessFactor
                 } : null,
-                baseColorTexture: OY ? {
-                  texture: OY.index,
-                  transform: cY && (null === (FY = OY.extensions) || void 0 === FY ? void 0 : FY.KHR_texture_transform) || null
+                baseColorTexture: XT ? {
+                  texture: XT.index,
+                  transform: ET && (null === (iT = XT.extensions) || void 0 === iT ? void 0 : iT.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: YY.emissiveFactor,
-                alphaMode: null !== (AY = YY.alphaMode) && void 0 !== AY ? AY : "OPAQUE",
-                alphaCutoff: YY.alphaCutoff,
-                doubleSided: null !== (IY = YY.doubleSided) && void 0 !== IY && IY
+                emissiveFactor: TT.emissiveFactor,
+                alphaMode: null !== (zT = TT.alphaMode) && void 0 !== zT ? zT : "OPAQUE",
+                alphaCutoff: TT.alphaCutoff,
+                doubleSided: null !== (kT = TT.doubleSided) && void 0 !== kT && kT
               }
             })),
-            HY = (null !== (uY = YY.textures) && void 0 !== uY ? uY : []).map(((rY, DY) => {
-              var FY, AY;
-              const IY = void 0 === rY.sampler ? BY : {
-                index: rY.sampler,
-                ...null === (FY = YY.samplers) || void 0 === FY ? void 0 : FY[rY.sampler]
+            CT = (null !== (DT = TT.textures) && void 0 !== DT ? DT : []).map(((oT, IT) => {
+              var iT, zT;
+              const kT = void 0 === oT.sampler ? vT : {
+                index: oT.sampler,
+                ...null === (iT = TT.samplers) || void 0 === iT ? void 0 : iT[oT.sampler]
               };
               return {
-                index: DY,
+                index: IT,
                 sampler: {
-                  index: IY.index,
-                  magFilter: IY.magFilter,
-                  minFilter: IY.minFilter,
-                  wrapS: IY.wrapS,
-                  wrapT: IY.wrapT
+                  index: kT.index,
+                  magFilter: kT.magFilter,
+                  minFilter: kT.minFilter,
+                  wrapS: kT.wrapS,
+                  wrapT: kT.wrapT
                 },
-                image: null !== (AY = rY.source) && void 0 !== AY ? AY : -1
+                image: null !== (zT = oT.source) && void 0 !== zT ? zT : -1
               }
             })),
-            zY = (null !== (sY = YY.images) && void 0 !== sY ? sY : []).map(((YY, rY) => ({
-              index: rY,
-              name: YY.name,
-              mimeType: YY.mimeType,
-              bufferView: EY(YY.bufferView)
+            jT = (null !== (LT = TT.images) && void 0 !== LT ? LT : []).map(((TT, oT) => ({
+              index: oT,
+              name: TT.name,
+              mimeType: TT.mimeType,
+              bufferView: AT(TT.bufferView)
             }))),
-            ZY = null !== (iY = (0, eY.A)(YY)) && void 0 !== iY ? iY : 0;
+            JT = null !== (xT = (0, RT.z)(TT)) && void 0 !== xT ? xT : 0;
           return {
-            json: YY,
-            rootNodes: null !== (yY = null === (QY = YY.scenes) || void 0 === QY || null === (oY = QY[ZY]) || void 0 === oY ? void 0 : oY.nodes) && void 0 !== yY ? yY : [],
-            nodes: TY,
-            meshes: lY,
-            materials: KY,
-            textures: HY,
-            images: zY
+            json: TT,
+            rootNodes: null !== (cT = null === (KT = TT.scenes) || void 0 === KT || null === (MT = KT[JT]) || void 0 === MT ? void 0 : MT.nodes) && void 0 !== cT ? cT : [],
+            nodes: eT,
+            meshes: mT,
+            materials: fT,
+            textures: CT,
+            images: jT
           }
-        }(DY, FY)
-      } catch (IY) {
-        throw IY instanceof eY.l ? IY : new eY.l(`reading the GLB failed: ${IY instanceof Error?IY.message:String(IY)}`)
+        }(IT, iT)
+      } catch (kT) {
+        throw kT instanceof RT.m ? kT : new RT.m(`reading the GLB failed: ${kT instanceof Error?kT.message:String(kT)}`)
       }
     }
-    async function KY(YY, rY) {
-      var DY, FY;
-      const AY = YY.draco;
-      if (!AY) throw new eY.l("not a Draco primitive");
-      let IY;
+    async function fT(TT, oT) {
+      var IT, iT;
+      const zT = TT.draco;
+      if (!zT) throw new RT.m("not a Draco primitive");
+      let kT;
       try {
-        IY = await rY(AY.bufferView.bytes, AY.attributeIds, AY.expected)
-      } catch (aY) {
-        throw new eY.l(`Draco decoding failed: ${aY instanceof Error?aY.message:String(aY)}`)
+        kT = await oT(zT.bufferView.bytes, zT.attributeIds, zT.expected)
+      } catch (FT) {
+        throw new RT.m(`Draco decoding failed: ${FT instanceof Error?FT.message:String(FT)}`)
       }
       const {
-        vertices: RY,
-        indices: OY,
-        components: gY
-      } = AY.expected;
-      if (IY.totalVertices !== RY || (null !== (DY = null === (FY = IY.indices) || void 0 === FY ? void 0 : FY.length) && void 0 !== DY ? DY : 0) !== OY || IY.attributes.some((YY => YY.size !== gY[YY.kind] || YY.data.length !== RY * YY.size))) throw new eY.l("Draco decoding gave other counts than the accessors declare");
-      for (const vY of IY.attributes) {
-        const YY = AY.normalized[vY.kind];
-        void 0 !== YY && (vY.normalized = YY)
+        vertices: WT,
+        indices: XT,
+        components: BT
+      } = zT.expected;
+      if (kT.totalVertices !== WT || (null !== (IT = null === (iT = kT.indices) || void 0 === iT ? void 0 : iT.length) && void 0 !== IT ? IT : 0) !== XT || kT.attributes.some((TT => TT.size !== BT[TT.kind] || TT.data.length !== WT * TT.size))) throw new RT.m("Draco decoding gave other counts than the accessors declare");
+      for (const ST of kT.attributes) {
+        const TT = zT.normalized[ST.kind];
+        void 0 !== TT && (ST.normalized = TT)
       }
-      return IY
+      return kT
     }
-    const HY = new WeakMap;
+    const CT = new WeakMap;
 
-    function zY(YY, rY) {
-      var DY;
-      const FY = null !== (DY = HY.get(YY)) && void 0 !== DY ? DY : rY(YY);
-      return HY.set(YY, FY), FY
-    }
-
-    function ZY(YY) {
-      const rY = YY.bufferView,
-        DY = 5125 === YY.componentType ? Uint32Array : Uint16Array,
-        FY = rY.bytes.buffer,
-        AY = rY.bytes.byteOffset + (YY.byteOffset || 0);
-      return AY % DY.BYTES_PER_ELEMENT !== 0 ? new DY(FY.slice(AY, AY + YY.count * DY.BYTES_PER_ELEMENT), 0) : new DY(FY, AY, YY.count)
+    function jT(TT, oT) {
+      var IT;
+      const iT = null !== (IT = CT.get(TT)) && void 0 !== IT ? IT : oT(TT);
+      return CT.set(TT, iT), iT
     }
 
-    function CY(YY, rY) {
-      if (YY.min && YY.max) return [new Float64Array(YY.min), new Float64Array(YY.max)];
-      const DY = rY.find((YY => {
+    function JT(TT) {
+      const oT = TT.bufferView,
+        IT = 5125 === TT.componentType ? Uint32Array : Uint16Array,
+        iT = oT.bytes.buffer,
+        zT = oT.bytes.byteOffset + (TT.byteOffset || 0);
+      return zT % IT.BYTES_PER_ELEMENT !== 0 ? new IT(iT.slice(zT, zT + TT.count * IT.BYTES_PER_ELEMENT), 0) : new IT(iT, zT, TT.count)
+    }
+
+    function UT(TT, oT) {
+      if (TT.min && TT.max) return [new Float64Array(TT.min), new Float64Array(TT.max)];
+      const IT = oT.find((TT => {
           let {
-            kind: rY
-          } = YY;
-          return "position" === rY
+            kind: oT
+          } = TT;
+          return "position" === oT
         })),
-        FY = DY ? (0, TY.i)(DY, YY.count) : new Float32Array(0);
-      return (0, TY.p)(FY.length / 3, ((YY, rY) => FY[3 * YY + rY]))
+        iT = IT ? (0, eT.i)(IT, TT.count) : new Float32Array(0);
+      return (0, eT.u)(iT.length / 3, ((TT, oT) => iT[3 * TT + oT]))
     }
 
-    function fY(YY) {
-      const rY = YY.attributes.map((YY => {
-          var rY, DY;
+    function aT(TT) {
+      const oT = TT.attributes.map((TT => {
+          var oT, IT;
           let {
-            kind: FY,
-            accessor: AY
-          } = YY;
+            kind: iT,
+            accessor: zT
+          } = TT;
           const {
-            bufferView: IY,
-            numComponents: RY
-          } = AY;
-          if (!IY) {
+            bufferView: kT,
+            numComponents: WT
+          } = zT;
+          if (!kT) {
             return {
-              kind: FY,
-              data: zY(AY, (() => new Float32Array(RY * AY.count))),
+              kind: iT,
+              data: jT(zT, (() => new Float32Array(WT * zT.count))),
               offset: 0,
-              stride: 4 * RY,
-              components: RY,
+              stride: 4 * WT,
+              components: WT,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const OY = null !== (rY = IY.byteStride) && void 0 !== rY ? rY : RY * eY.d[AY.componentType];
+          const XT = null !== (oT = kT.byteStride) && void 0 !== oT ? oT : WT * RT.e[zT.componentType];
           return {
-            kind: FY,
-            data: IY.bytes,
-            offset: null !== (DY = AY.byteOffset) && void 0 !== DY ? DY : 0,
-            stride: OY,
-            components: RY,
-            glType: AY.componentType,
-            isNormalized: AY.normalized
+            kind: iT,
+            data: kT.bytes,
+            offset: null !== (IT = zT.byteOffset) && void 0 !== IT ? IT : 0,
+            stride: XT,
+            components: WT,
+            glType: zT.componentType,
+            isNormalized: zT.normalized
           }
         })),
-        DY = YY.indices,
-        FY = DY && zY(DY, ZY),
-        AY = YY.position;
-      return new TY.f(rY, FY, AY.count, ...CY(AY, rY))
+        IT = TT.indices,
+        iT = IT && jT(IT, JT),
+        zT = TT.position;
+      return new eT.g(oT, iT, zT.count, ...UT(zT, oT))
     }
-    const jY = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const YT = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function hY(YY, rY) {
-      const DY = rY.attributes.map((YY => {
+    function QT(TT, oT) {
+      const IT = oT.attributes.map((TT => {
         let {
-          kind: rY,
-          data: DY,
-          size: FY,
-          byteOffset: AY,
-          byteStride: IY,
-          normalized: RY
-        } = YY;
+          kind: oT,
+          data: IT,
+          size: iT,
+          byteOffset: zT,
+          byteStride: kT,
+          normalized: WT
+        } = TT;
         return {
-          kind: rY,
-          data: DY,
-          offset: AY,
-          stride: IY,
-          components: FY,
-          glType: 5120 + jY.indexOf(DY.constructor),
-          isNormalized: RY
+          kind: oT,
+          data: IT,
+          offset: zT,
+          stride: kT,
+          components: iT,
+          glType: 5120 + YT.indexOf(IT.constructor),
+          isNormalized: WT
         }
       }));
-      return new TY.f(DY, rY.indices, rY.totalVertices, ...CY(YY.position, DY))
+      return new eT.g(IT, oT.indices, oT.totalVertices, ...UT(TT.position, IT))
     }
 
-    function dY(YY) {
-      const rY = YY.lastIndexOf("/");
-      return rY < 0 ? YY : YY.substring(rY + 1)
+    function OT(TT) {
+      const oT = TT.lastIndexOf("/");
+      return oT < 0 ? TT : TT.substring(oT + 1)
     }
 
-    function JY(YY) {
-      const rY = YY.lastIndexOf("/");
-      return rY < 0 ? "" : YY.substring(0, rY + 1)
+    function HT(TT) {
+      const oT = TT.lastIndexOf("/");
+      return oT < 0 ? "" : TT.substring(0, oT + 1)
     }
 
-    function MY(YY) {
-      return YY.name || `node${YY.index}`
+    function nT(TT) {
+      return TT.name || `node${TT.index}`
     }
-    const wY = {
+    const qT = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      bY = {
+      ZT = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      XY = {
+      lT = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -471,353 +471,353 @@ export const modules = {
         9987: 6
       };
 
-    function qY(YY) {
-      var rY, DY, FY, AY;
-      const IY = null !== (rY = YY.minFilter) && void 0 !== rY ? rY : 9987;
-      return 9729 === (null !== (DY = YY.magFilter) && void 0 !== DY ? DY : 9729) ? null !== (FY = bY[IY]) && void 0 !== FY ? FY : 3 : null !== (AY = XY[IY]) && void 0 !== AY ? AY : 4
+    function sT(TT) {
+      var oT, IT, iT, zT;
+      const kT = null !== (oT = TT.minFilter) && void 0 !== oT ? oT : 9987;
+      return 9729 === (null !== (IT = TT.magFilter) && void 0 !== IT ? IT : 9729) ? null !== (iT = ZT[kT]) && void 0 !== iT ? iT : 3 : null !== (zT = lT[kT]) && void 0 !== zT ? zT : 4
     }
-    const pY = {
+    const tT = {
       33071: 0,
       33648: 2
     };
 
-    function kY(YY) {
-      var rY;
-      return null !== (rY = pY[null !== YY && void 0 !== YY ? YY : 10497]) && void 0 !== rY ? rY : 1
+    function GT(TT) {
+      var oT;
+      return null !== (oT = tT[null !== TT && void 0 !== TT ? TT : 10497]) && void 0 !== oT ? oT : 1
     }
 
-    function GY(YY) {
-      return 9728 === YY.minFilter || 9729 === YY.minFilter
+    function pT(TT) {
+      return 9728 === TT.minFilter || 9729 === TT.minFilter
     }
 
-    function xY(YY) {
-      var rY, DY, FY;
-      const AY = Float64Array.from(null !== (rY = YY.scale) && void 0 !== rY ? rY : [1, 1, 1]);
-      return YY.hasCamera && (AY[0] = -1), {
-        translation: Float64Array.from(null !== (DY = YY.translation) && void 0 !== DY ? DY : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (FY = YY.rotation) && void 0 !== FY ? FY : [0, 0, 0, 1]),
-        scale: AY
+    function bT(TT) {
+      var oT, IT, iT;
+      const zT = Float64Array.from(null !== (oT = TT.scale) && void 0 !== oT ? oT : [1, 1, 1]);
+      return TT.hasCamera && (zT[0] = -1), {
+        translation: Float64Array.from(null !== (IT = TT.translation) && void 0 !== IT ? IT : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (iT = TT.rotation) && void 0 !== iT ? iT : [0, 0, 0, 1]),
+        scale: zT
       }
     }
 
-    function nY(YY, rY) {
+    function yT(TT, oT) {
       let {
-        translation: DY,
-        rotation: FY,
-        scale: AY
-      } = YY;
-      const IY = new Float32Array(16);
-      return (0, lY.b)(AY, 0, FY, 0, DY, 0, IY), rY && (0, lY.j)(IY, rY, 0, IY), IY
+        translation: IT,
+        rotation: iT,
+        scale: zT
+      } = TT;
+      const kT = new Float32Array(16);
+      return (0, mT.c)(zT, 0, iT, 0, IT, 0, kT), oT && (0, mT.l)(kT, oT, 0, kT), kT
     }
-    class PY {
-      constructor(YY, rY, DY, FY) {
-        this.model = YY, this.decode = rY, this.fileInfo = DY, this.uniqueRootUrl = FY, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const AY = new Set,
-          IY = (rY, DY) => {
-            const FY = YY.nodes[rY];
-            if (this.parents.has(FY)) throw new eY.l(`/nodes/${rY}: Invalid recursive node hierarchy`);
-            this.parents.set(FY, DY);
-            const RY = null === FY.mesh ? [] : YY.meshes[FY.mesh].primitives,
-              OY = RY.map((YY => {
-                const rY = RY.length > 1;
+    class NT {
+      constructor(TT, oT, IT, iT) {
+        this.model = TT, this.decode = oT, this.fileInfo = IT, this.uniqueRootUrl = iT, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const zT = new Set,
+          kT = (oT, IT) => {
+            const iT = TT.nodes[oT];
+            if (this.parents.has(iT)) throw new RT.m(`/nodes/${oT}: Invalid recursive node hierarchy`);
+            this.parents.set(iT, IT);
+            const WT = null === iT.mesh ? [] : TT.meshes[iT.mesh].primitives,
+              XT = WT.map((TT => {
+                const oT = WT.length > 1;
                 return {
-                  name: rY ? `${MY(FY)}_primitive${YY.index}` : MY(FY),
-                  node: FY,
-                  primitive: YY,
-                  part: rY,
+                  name: oT ? `${nT(iT)}_primitive${TT.index}` : nT(iT),
+                  node: iT,
+                  primitive: TT,
+                  part: oT,
                   geometry: null
                 }
               }));
-            this.uses.set(FY, OY);
-            const gY = null !== FY.mesh && AY.has(FY.mesh);
-            AY.add(FY.mesh), this.own.set(FY, gY ? [] : OY);
-            for (const YY of FY.children) IY(YY, FY)
+            this.uses.set(iT, XT);
+            const BT = null !== iT.mesh && zT.has(iT.mesh);
+            zT.add(iT.mesh), this.own.set(iT, BT ? [] : XT);
+            for (const TT of iT.children) kT(TT, iT)
           };
-        for (const RY of YY.rootNodes) IY(RY, null);
-        this.primitives = YY.nodes.flatMap((YY => {
-          var rY;
-          return null !== (rY = this.own.get(YY)) && void 0 !== rY ? rY : []
+        for (const WT of TT.rootNodes) kT(WT, null);
+        this.primitives = TT.nodes.flatMap((TT => {
+          var oT;
+          return null !== (oT = this.own.get(TT)) && void 0 !== oT ? oT : []
         }))
       }
       decodeGeometries() {
-        const YY = new Map;
-        return Promise.all(this.primitives.map((async rY => {
+        const TT = new Map;
+        return Promise.all(this.primitives.map((async oT => {
           const {
-            primitive: DY
-          } = rY, FY = DY.draco;
-          let AY = FY ? YY.get(FY.bufferView.index) : Promise.resolve(fY(DY));
-          AY || (AY = KY(DY, this.decode).then((YY => hY(DY, YY))), YY.set(FY.bufferView.index, AY)), rY.geometry = await AY
+            primitive: IT
+          } = oT, iT = IT.draco;
+          let zT = iT ? TT.get(iT.bufferView.index) : Promise.resolve(aT(IT));
+          zT || (zT = fT(IT, this.decode).then((TT => QT(IT, TT))), TT.set(iT.bufferView.index, zT)), oT.geometry = await zT
         })))
       }
-      parentOf(YY) {
-        var rY;
-        return null !== (rY = this.parents.get(YY)) && void 0 !== rY ? rY : null
+      parentOf(TT) {
+        var oT;
+        return null !== (oT = this.parents.get(TT)) && void 0 !== oT ? oT : null
       }
-      meshesUnder(YY) {
-        const rY = this.model.nodes.filter((YY => this.uses.has(YY)));
-        for (const FY of rY) {
-          const rY = this.uses.get(FY),
-            DY = rY.find((rY => rY.name === YY));
-          if (DY) return 1 === rY.length ? this.subtree(FY) : this.own.get(FY).includes(DY) ? [DY] : []
+      meshesUnder(TT) {
+        const oT = this.model.nodes.filter((TT => this.uses.has(TT)));
+        for (const iT of oT) {
+          const oT = this.uses.get(iT),
+            IT = oT.find((oT => oT.name === TT));
+          if (IT) return 1 === oT.length ? this.subtree(iT) : this.own.get(iT).includes(IT) ? [IT] : []
         }
-        const DY = rY.find((rY => 1 !== this.uses.get(rY).length && MY(rY) === YY));
-        return DY ? this.subtree(DY) : null
+        const IT = oT.find((oT => 1 !== this.uses.get(oT).length && nT(oT) === TT));
+        return IT ? this.subtree(IT) : null
       }
-      subtree(YY) {
-        return [...this.own.get(YY), ...YY.children.flatMap((YY => this.subtree(this.model.nodes[YY])))]
+      subtree(TT) {
+        return [...this.own.get(TT), ...TT.children.flatMap((TT => this.subtree(this.model.nodes[TT])))]
       }
-      worldMatrix(YY, rY, DY) {
-        let FY = nY(xY(rY ? wY : {}), null);
-        const AY = [];
-        for (let RY = YY.part ? YY.node : this.parentOf(YY.node); RY; RY = this.parentOf(RY)) AY.unshift(RY);
-        for (const RY of AY) FY = nY(xY(RY), FY);
-        const IY = xY(YY.part ? {} : YY.node);
-        return void 0 !== DY && IY.scale.fill(DY), nY(IY, FY)
+      worldMatrix(TT, oT, IT) {
+        let iT = yT(bT(oT ? qT : {}), null);
+        const zT = [];
+        for (let WT = TT.part ? TT.node : this.parentOf(TT.node); WT; WT = this.parentOf(WT)) zT.unshift(WT);
+        for (const WT of zT) iT = yT(bT(WT), iT);
+        const kT = bT(TT.part ? {} : TT.node);
+        return void 0 !== IT && kT.scale.fill(IT), yT(kT, iT)
       }
-      floats(YY) {
+      floats(TT) {
         const {
-          vertexAttributes: rY,
-          vertexCount: DY
-        } = YY.geometry;
-        return new Map(rY.map((YY => [YY.kind, (0, TY.i)(YY, DY)])))
+          vertexAttributes: oT,
+          vertexCount: IT
+        } = TT.geometry;
+        return new Map(oT.map((TT => [TT.kind, (0, eT.i)(TT, IT)])))
       }
-      imageUrl(YY) {
-        return function(YY, rY, DY) {
+      imageUrl(TT) {
+        return function(TT, oT, IT) {
           let {
-            name: FY
-          } = rY;
-          return `data:${YY}${FY}#image${DY}`
-        }(this.uniqueRootUrl, this.fileInfo, YY)
+            name: iT
+          } = oT;
+          return `data:${TT}${iT}#image${IT}`
+        }(this.uniqueRootUrl, this.fileInfo, TT)
       }
-      textureDesc(YY, rY) {
-        var DY;
+      textureDesc(TT, oT) {
+        var IT;
         let {
-          texture: FY,
-          transform: AY
-        } = YY;
+          texture: iT,
+          transform: zT
+        } = TT;
         const {
-          sampler: IY,
-          image: RY
-        } = this.model.textures[FY], {
-          bufferView: OY,
-          mimeType: gY,
-          name: aY
-        } = this.model.images[RY], vY = AY && {
-          ...AY.offset ? {
-            uOffset: AY.offset[0],
-            vOffset: AY.offset[1]
+          sampler: kT,
+          image: WT
+        } = this.model.textures[iT], {
+          bufferView: XT,
+          mimeType: BT,
+          name: FT
+        } = this.model.images[WT], ST = zT && {
+          ...zT.offset ? {
+            uOffset: zT.offset[0],
+            vOffset: zT.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...AY.rotation ? {
-            wAng: -AY.rotation
+          ...zT.rotation ? {
+            wAng: -zT.rotation
           } : {},
-          ...AY.scale ? {
-            uScale: AY.scale[0],
-            vScale: AY.scale[1]
+          ...zT.scale ? {
+            uScale: zT.scale[0],
+            vScale: zT.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(RY),
-          noMipmap: GY(IY),
+          url: this.imageUrl(WT),
+          noMipmap: pT(kT),
           invertY: !1,
-          samplingMode: qY(IY),
+          samplingMode: sT(kT),
           data: {
-            bytes: OY.bytes,
-            mimeType: gY,
-            label: aY,
-            context: `/textures/${FY}`
+            bytes: XT.bytes,
+            mimeType: BT,
+            label: FT,
+            context: `/textures/${iT}`
           },
           sets: {
-            wrapU: kY(IY.wrapS),
-            wrapV: kY(IY.wrapT),
-            ...vY,
-            coordinatesIndex: null !== (DY = null === AY || void 0 === AY ? void 0 : AY.texCoord) && void 0 !== DY ? DY : 0,
-            hasAlpha: rY
+            wrapU: GT(kT.wrapS),
+            wrapV: GT(kT.wrapT),
+            ...ST,
+            coordinatesIndex: null !== (IT = null === zT || void 0 === zT ? void 0 : zT.texCoord) && void 0 !== IT ? IT : 0,
+            hasAlpha: oT
           }
         }
       }
     }
-    async function UY(YY, rY, DY, FY, AY, IY) {
-      let RY = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const OY = function(YY, rY, DY) {
-          return "string" !== typeof rY ? {
+    async function PT(TT, oT, IT, iT, zT, kT) {
+      let WT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const XT = function(TT, oT, IT) {
+          return "string" !== typeof oT ? {
             url: "",
-            rootUrl: YY,
-            name: DY()
-          } : rY ? rY.startsWith("data:") ? {
-            url: rY,
-            rootUrl: YY,
+            rootUrl: TT,
+            name: IT()
+          } : oT ? oT.startsWith("data:") ? {
+            url: oT,
+            rootUrl: TT,
             name: ""
-          } : YY ? {
-            url: YY + rY,
-            rootUrl: YY,
-            name: rY
+          } : TT ? {
+            url: TT + oT,
+            rootUrl: TT,
+            name: oT
           } : {
-            url: rY,
-            rootUrl: JY(rY),
-            name: dY(rY)
+            url: oT,
+            rootUrl: HT(oT),
+            name: OT(oT)
           } : {
-            url: YY,
-            rootUrl: JY(YY),
-            name: dY(YY)
+            url: TT,
+            rootUrl: HT(TT),
+            name: OT(TT)
           }
-        }(DY, YY, AY),
-        gY = {};
-      rY.addPendingData(gY);
+        }(IT, TT, zT),
+        BT = {};
+      oT.addPendingData(BT);
       try {
-        const DY = cY(await async function(YY, rY) {
-            return "string" !== typeof rY ? rY : YY.url.startsWith("data:") ? (0, eY.u)(YY.url) : await (0, eY.x)(YY.url)
-          }(OY, YY)),
-          gY = new PY(DY, FY, OY, function(YY, rY) {
+        const IT = ET(await async function(TT, oT) {
+            return "string" !== typeof oT ? oT : TT.url.startsWith("data:") ? (0, RT.w)(TT.url) : await (0, RT.x)(TT.url)
+          }(XT, TT)),
+          BT = new NT(IT, iT, XT, function(TT, oT) {
             let {
-              rootUrl: DY,
-              name: FY
-            } = YY;
-            return !DY.startsWith("file:") && FY ? DY : `${DY}${rY()}/`
-          }(OY, AY));
-        return await IY(gY), rY.importedMeshesFiles && (rY.loadingPluginName = "Ul", RY && rY.importedMeshesFiles.push(OY.url)), gY
+              rootUrl: IT,
+              name: iT
+            } = TT;
+            return !IT.startsWith("file:") && iT ? IT : `${IT}${oT()}/`
+          }(XT, zT));
+        return await kT(BT), oT.importedMeshesFiles && (oT.loadingPluginName = "nC", WT && oT.importedMeshesFiles.push(XT.url)), BT
       } finally {
-        rY.removePendingData(gY)
+        oT.removePendingData(BT)
       }
     }
-    var LY = DY(36851),
-      tY = DY(36700),
-      Yr = DY(37231);
+    var dT = IT(36439),
+      VT = IT(36288),
+      To = IT(36839);
 
-    function rr(YY) {
-      if (null === YY || void 0 === YY || !YY.min || !YY.max) return null;
-      const [rY, DY, FY] = YY.min, [AY, IY, RY] = YY.max, {
-        BoundingInfo: OY,
-        xy: gY
-      } = (0, LY.b)();
-      return new OY(new gY(rY, DY, FY), new gY(AY, IY, RY))
+    function oo(TT) {
+      if (null === TT || void 0 === TT || !TT.min || !TT.max) return null;
+      const [oT, IT, iT] = TT.min, [zT, kT, WT] = TT.max, {
+        BoundingInfo: XT,
+        sc: BT
+      } = (0, dT.e)();
+      return new XT(new BT(oT, IT, iT), new BT(zT, kT, WT))
     }
 
-    function Dr(YY) {
-      (0, tY.g)(YY) || (YY.geometry && YY.geometry.useBoundingInfoFromGeometry ? YY._updateBoundingInfo() : YY.refreshBoundingInfo(!0, !0))
+    function Io(TT) {
+      (0, VT.i)(TT) || (TT.geometry && TT.geometry.useBoundingInfoFromGeometry ? TT._updateBoundingInfo() : TT.refreshBoundingInfo(!0, !0))
     }
-    class Fr {
-      constructor(YY, rY) {
-        this.LQ = YY, this.decode = rY, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class io {
+      constructor(TT, oT) {
+        this.NK = TT, this.decode = oT, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(YY) {
-        let rY = this.viewData.get(YY.index);
-        return rY || (rY = this.bufferData.then((() => YY.bytes)), this.viewData.set(YY.index, rY)), rY
+      viewBytes(TT) {
+        let oT = this.viewData.get(TT.index);
+        return oT || (oT = this.bufferData.then((() => TT.bytes)), this.viewData.set(TT.index, oT)), oT
       }
-      viewBuffer(YY) {
-        let rY = this.viewBuffers.get(YY.index);
-        return rY || (rY = this.viewBytes(YY).then((YY => new((0, LY.b)().Ny)(this.LQ.ky(), YY, !1))), this.viewBuffers.set(YY.index, rY)), rY
+      viewBuffer(TT) {
+        let oT = this.viewBuffers.get(TT.index);
+        return oT || (oT = this.viewBytes(TT).then((TT => new((0, dT.e)().vc)(this.NK.Zc(), TT, !1))), this.viewBuffers.set(TT.index, oT)), oT
       }
-      vertexBuffer(YY, rY) {
+      vertexBuffer(TT, oT) {
         const {
-          kind: DY,
-          data: FY
-        } = rY, AY = `${YY.index}:${DY}`;
-        let IY = this.vertexBuffers.get(AY);
-        if (!IY) {
-          const RY = YY.bufferView;
-          IY = RY ? this.viewBuffer(RY).then((YY => this.layoutVertexBuffer(YY, rY))) : Promise.resolve(FY).then((YY => new((0, LY.b)().VertexBuffer)(this.LQ.ky(), YY, DY, !1))), this.vertexBuffers.set(AY, IY)
+          kind: IT,
+          data: iT
+        } = oT, zT = `${TT.index}:${IT}`;
+        let kT = this.vertexBuffers.get(zT);
+        if (!kT) {
+          const WT = TT.bufferView;
+          kT = WT ? this.viewBuffer(WT).then((TT => this.layoutVertexBuffer(TT, oT))) : Promise.resolve(iT).then((TT => new((0, dT.e)().VertexBuffer)(this.NK.Zc(), TT, IT, !1))), this.vertexBuffers.set(zT, kT)
         }
-        return IY
+        return kT
       }
-      layoutVertexBuffer(YY, rY) {
+      layoutVertexBuffer(TT, oT) {
         let {
-          kind: DY,
-          offset: FY,
-          stride: AY,
-          components: IY,
-          glType: RY,
-          isNormalized: OY
-        } = rY;
-        const gY = this.LQ.ky();
-        return new((0, LY.b)().VertexBuffer)(gY, YY, DY, !1, void 0, AY, void 0, FY, IY, RY, OY, !0, void 0, !0)
+          kind: IT,
+          offset: iT,
+          stride: zT,
+          components: kT,
+          glType: WT,
+          isNormalized: XT
+        } = oT;
+        const BT = this.NK.Zc();
+        return new((0, dT.e)().VertexBuffer)(BT, TT, IT, !1, void 0, zT, void 0, iT, kT, WT, XT, !0, void 0, !0)
       }
-      load(YY, rY, DY) {
-        const FY = (0, tY.g)(DY),
-          AY = YY => {
-            FY || (DY._delayInfo = DY._delayInfo || [], -1 === DY._delayInfo.indexOf(YY) && DY._delayInfo.push(YY))
+      load(TT, oT, IT) {
+        const iT = (0, VT.i)(IT),
+          zT = TT => {
+            iT || (IT._delayInfo = IT._delayInfo || [], -1 === IT._delayInfo.indexOf(TT) && IT._delayInfo.push(TT))
           },
-          IY = rY.draco;
-        if (IY) {
-          for (const YY in IY.attributeIds) AY(YY);
-          let RY = this.dracoGeometry.get(IY.bufferView.index);
-          return RY || (RY = this.viewBytes(IY.bufferView).then((async () => {
-            let AY;
+          kT = oT.draco;
+        if (kT) {
+          for (const TT in kT.attributeIds) zT(TT);
+          let WT = this.dracoGeometry.get(kT.bufferView.index);
+          return WT || (WT = this.viewBytes(kT.bufferView).then((async () => {
+            let zT;
             try {
-              AY = await KY(rY, this.decode)
-            } catch (gY) {
-              throw new eY.l(`${YY}: ${gY instanceof Error?gY.message:String(gY)}`)
+              zT = await fT(oT, this.decode)
+            } catch (BT) {
+              throw new RT.m(`${TT}: ${BT instanceof Error?BT.message:String(BT)}`)
             }
-            const IY = hY(rY, AY);
-            if (FY) return IY;
-            const RY = rr(rY.position),
-              OY = new((0, LY.b)().MirroredGeometry)(DY.name, this.LQ);
-            RY && (OY._boundingInfo = RY, OY.useBoundingInfoFromGeometry = !0), IY.indexData && OY.setIndices(IY.indexData);
-            for (const YY of IY.vertexAttributes) OY.setVerticesBuffer(this.layoutVertexBuffer(YY.data, YY), IY.vertexCount);
-            return OY.link(IY), OY
-          })), this.dracoGeometry.set(IY.bufferView.index, RY)), RY
+            const kT = QT(oT, zT);
+            if (iT) return kT;
+            const WT = oo(oT.position),
+              XT = new((0, dT.e)().MirroredGeometry)(IT.name, this.NK);
+            WT && (XT._boundingInfo = WT, XT.useBoundingInfoFromGeometry = !0), kT.indexData && XT.setIndices(kT.indexData);
+            for (const TT of kT.vertexAttributes) XT.setVerticesBuffer(this.layoutVertexBuffer(TT.data, TT), kT.vertexCount);
+            return XT.link(kT), XT
+          })), this.dracoGeometry.set(kT.bufferView.index, WT)), WT
         }
-        const RY = [],
-          OY = fY(rY);
-        if (FY) return DY.isUnIndexed = !OY.indexData, DY.hasVertexAlpha = (0, Yr.e)(rY), Promise.resolve(OY);
-        const gY = new((0, LY.b)().MirroredGeometry)(DY.name, this.LQ),
+        const WT = [],
+          XT = aT(oT);
+        if (iT) return IT.isUnIndexed = !XT.indexData, IT.hasVertexAlpha = (0, To.f)(oT), Promise.resolve(XT);
+        const BT = new((0, dT.e)().MirroredGeometry)(IT.name, this.NK),
           {
-            indexData: aY
-          } = OY;
-        aY ? RY.push(this.viewBytes(rY.indices.bufferView).then((() => {
-          gY.setIndices(aY)
-        }))) : DY.isUnIndexed = !0;
-        for (const [vY, {
-            kind: uY,
-            accessor: sY
-          }] of rY.attributes.entries()) AY(uY), RY.push(this.vertexBuffer(sY, OY.vertexAttributes[vY]).then((YY => {
-          if ("position" === YY.getKind()) {
-            const YY = rr(sY);
-            YY && (gY._boundingInfo = YY, gY.useBoundingInfoFromGeometry = !0)
+            indexData: FT
+          } = XT;
+        FT ? WT.push(this.viewBytes(oT.indices.bufferView).then((() => {
+          BT.setIndices(FT)
+        }))) : IT.isUnIndexed = !0;
+        for (const [ST, {
+            kind: DT,
+            accessor: LT
+          }] of oT.attributes.entries()) zT(DT), WT.push(this.vertexBuffer(LT, XT.vertexAttributes[ST]).then((TT => {
+          if ("position" === TT.getKind()) {
+            const TT = oo(LT);
+            TT && (BT._boundingInfo = TT, BT.useBoundingInfoFromGeometry = !0)
           }
-          gY.setVerticesBuffer(YY, OY.vertexCount)
+          BT.setVerticesBuffer(TT, XT.vertexCount)
         })));
-        return (0, Yr.e)(rY) && (DY.hasVertexAlpha = !0), Promise.all(RY).then((() => (gY.link(OY), gY)))
+        return (0, To.f)(oT) && (IT.hasVertexAlpha = !0), Promise.all(WT).then((() => (BT.link(XT), BT)))
       }
     }
-    var Ar, Ir = DY(36633),
-      Rr = DY(36518),
-      Or = DY(37239),
-      gr = DY(36577),
-      ar = DY(36615),
-      vr = DY(2501),
-      ur = DY(36607);
+    var zo, ko = IT(36221),
+      Wo = IT(36114),
+      Xo = IT(36847),
+      Bo = IT(36172),
+      Fo = IT(36205),
+      So = IT(2465),
+      Do = IT(36194);
 
-    function sr(YY, rY) {
-      YY.metadata = YY.metadata || {};
-      const DY = YY._internalMetadata = YY._internalMetadata || {},
-        FY = DY.Ul = DY.Ul || {};
-      (FY.pointers = FY.pointers || []).push(rY)
+    function Lo(TT, oT) {
+      TT.metadata = TT.metadata || {};
+      const IT = TT._internalMetadata = TT._internalMetadata || {},
+        iT = IT.nC = IT.nC || {};
+      (iT.pointers = iT.pointers || []).push(oT)
     }
 
-    function ir(YY, rY) {
-      if (rY && Object.keys(rY).length > 0) {
-        const DY = YY.metadata = YY.metadata || {};
-        (DY.Ul = DY.Ul || {}).extras = rY
+    function xo(TT, oT) {
+      if (oT && Object.keys(oT).length > 0) {
+        const IT = TT.metadata = TT.metadata || {};
+        (IT.nC = IT.nC || {}).extras = oT
       }
     }
 
-    function yr(YY, rY) {
-      rY.position = YY.translation ? Rr.xy.FromArray(YY.translation) : Rr.xy.Zero(), rY.rotationQuaternion = YY.rotation ? Rr.Quaternion.FromArray(YY.rotation) : Rr.Quaternion.Identity(), rY.pa = YY.scale ? Rr.xy.FromArray(YY.scale) : Rr.xy.One()
+    function co(TT, oT) {
+      oT.position = TT.translation ? Wo.sc.FromArray(TT.translation) : Wo.sc.Zero(), oT.rotationQuaternion = TT.rotation ? Wo.Quaternion.FromArray(TT.rotation) : Wo.Quaternion.Identity(), oT.ti = TT.scale ? Wo.sc.FromArray(TT.scale) : Wo.sc.One()
     }
-    class Qr {
-      constructor(YY, rY) {
-        if (this.LQ = YY, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, rY) {
-          const rY = YY.ky(),
-            DY = YY.wT.add((() => {
+    class Ko {
+      constructor(TT, oT) {
+        if (this.NK = TT, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, oT) {
+          const oT = TT.Zc(),
+            IT = TT.bC.add((() => {
               this.dispose()
             })),
-            FY = rY.onContextRestoredObservable.add((() => {
-              for (const YY of [...this.geometries, ...this.meshes, ...this.textures]) YY._rebuild()
+            iT = oT.onContextRestoredObservable.add((() => {
+              for (const TT of [...this.geometries, ...this.meshes, ...this.textures]) TT._rebuild()
             }));
           this.release = () => {
-            YY.wT.remove(DY), rY.onContextRestoredObservable.remove(FY)
+            TT.bC.remove(IT), oT.onContextRestoredObservable.remove(iT)
           }
         }
       }
@@ -827,267 +827,267 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const YY of this.meshes) this.LQ.WDY(YY);
-          for (const YY of this.materials) this.LQ.addMaterial(YY);
-          for (const YY of this.geometries) this.LQ.addGeometry(YY);
-          for (const YY of this.transformNodes) this.LQ.addTransformNode(YY);
-          for (const YY of this.textures) this.LQ.addTexture(YY)
+          for (const TT of this.meshes) this.NK.tIT(TT);
+          for (const TT of this.materials) this.NK.addMaterial(TT);
+          for (const TT of this.geometries) this.NK.addGeometry(TT);
+          for (const TT of this.transformNodes) this.NK.addTransformNode(TT);
+          for (const TT of this.textures) this.NK.addTexture(TT)
         }
       }
       dispose() {
-        var YY;
-        for (const rY of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const YY of rY.slice()) YY.dispose();
-          rY.length = 0
+        var TT;
+        for (const oT of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const TT of oT.slice()) TT.dispose();
+          oT.length = 0
         }
-        null === (YY = this.release) || void 0 === YY || YY.call(this), this.release = null
+        null === (TT = this.release) || void 0 === TT || TT.call(this), this.release = null
       }
     }
-    class or {
-      constructor(YY, rY, DY, FY, AY, IY, RY) {
-        this.asset = YY, this.LQ = rY, this.tree = DY, this.geometryData = AY, this.materials = IY, this.lite = RY, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = FY ? DY : null
+    class Mo {
+      constructor(TT, oT, IT, iT, zT, kT, WT) {
+        this.asset = TT, this.NK = oT, this.tree = IT, this.geometryData = zT, this.materials = kT, this.lite = WT, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = iT ? IT : null
       }
-      create(YY) {
-        if (this.lite) return YY();
-        const rY = this.LQ;
-        rY._blockEntityCollection = !!this.container;
+      create(TT) {
+        if (this.lite) return TT();
+        const oT = this.NK;
+        oT._blockEntityCollection = !!this.container;
         try {
-          const rY = YY();
-          return this.container && (rY._parentContainer = this.container), rY
+          const oT = TT();
+          return this.container && (oT._parentContainer = this.container), oT
         } finally {
-          rY._blockEntityCollection = !1
+          oT._blockEntityCollection = !1
         }
       }
-      node(YY, rY) {
-        return this.create((() => this.lite ? rY ? (0, Or.f)(this.lite, YY) : (0, Or.x)(this.lite, YY) : rY ? new((0, LY.b)().Mesh)(YY, this.LQ) : new((0, LY.b)().TransformNode)(YY, this.LQ)))
+      node(TT, oT) {
+        return this.create((() => this.lite ? oT ? (0, Xo.h)(this.lite, TT) : (0, Xo.w)(this.lite, TT) : oT ? new((0, dT.e)().Mesh)(TT, this.NK) : new((0, dT.e)().TransformNode)(TT, this.NK)))
       }
       async load() {
-        var YY;
+        var TT;
         this.asset.model.json.nodes && this.createRoot();
-        const rY = this.lite ? null : this.LQ,
-          DY = null !== (YY = null === rY || void 0 === rY ? void 0 : rY.blockMaterialDirtyMechanism) && void 0 !== YY && YY;
-        let FY;
-        rY && (rY.blockMaterialDirtyMechanism = !0);
+        const oT = this.lite ? null : this.NK,
+          IT = null !== (TT = null === oT || void 0 === oT ? void 0 : oT.blockMaterialDirtyMechanism) && void 0 !== TT && TT;
+        let iT;
+        oT && (oT.blockMaterialDirtyMechanism = !0);
         try {
-          FY = this.loadScene()
+          iT = this.loadScene()
         } finally {
-          null === rY || void 0 === rY || rY._forceBlockMaterialDirtyMechanism(DY)
+          null === oT || void 0 === oT || oT._forceBlockMaterialDirtyMechanism(IT)
         }
-        await FY;
+        await iT;
         const {
-          root: AY,
-          tree: IY
+          root: zT,
+          tree: kT
         } = this;
-        AY && (AY.mV(!0), IY.meshes.push(AY), IY.rootNodes.push(AY));
-        for (const OY of this.asset.model.nodes) {
-          const YY = this.nodeObjects.get(OY.index);
-          YY && ["TransformNode", "LiteNode"].includes(YY.getClassName()) && IY.transformNodes.push(YY);
-          for (const rY of null !== (RY = this.nodePrimitives.get(OY.index)) && void 0 !== RY ? RY : []) {
-            var RY;
-            IY.meshes.push(rY);
-            const YY = rY.geometry;
-            YY && !IY.geometries.includes(YY) && IY.geometries.push(YY)
+        zT && (zT.Fv(!0), kT.meshes.push(zT), kT.rootNodes.push(zT));
+        for (const XT of this.asset.model.nodes) {
+          const TT = this.nodeObjects.get(XT.index);
+          TT && ["TransformNode", "LiteNode"].includes(TT.getClassName()) && kT.transformNodes.push(TT);
+          for (const oT of null !== (WT = this.nodePrimitives.get(XT.index)) && void 0 !== WT ? WT : []) {
+            var WT;
+            kT.meshes.push(oT);
+            const TT = oT.geometry;
+            TT && !kT.geometries.includes(TT) && kT.geometries.push(TT)
           }
         }
       }
       createRoot() {
-        const YY = this.node("__root__", !0);
-        this.root = YY, YY.mV(!1), this.LQ.useRightHandedSystem || yr(wY, YY)
+        const TT = this.node("__root__", !0);
+        this.root = TT, TT.Fv(!1), this.NK.useRightHandedSystem || co(qT, TT)
       }
       loadScene() {
-        const YY = [];
-        for (const rY of this.asset.model.rootNodes) YY.push(this.loadNode(this.asset.model.nodes[rY], (YY => {
-          YY.parent = this.root
+        const TT = [];
+        for (const oT of this.asset.model.rootNodes) TT.push(this.loadNode(this.asset.model.nodes[oT], (TT => {
+          TT.parent = this.root
         })));
-        return YY.push(Promise.resolve()), Promise.all(YY).then((() => {}))
+        return TT.push(Promise.resolve()), Promise.all(TT).then((() => {}))
       }
-      loadNode(YY, rY) {
-        const DY = `/nodes/${YY.index}`,
-          FY = [],
-          AY = AY => {
-            if (sr(AY, DY), yr(YY, AY), YY.hasCamera && !this.LQ.useRightHandedSystem) {
+      loadNode(TT, oT) {
+        const IT = `/nodes/${TT.index}`,
+          iT = [],
+          zT = zT => {
+            if (Lo(zT, IT), co(TT, zT), TT.hasCamera && !this.NK.useRightHandedSystem) {
               const {
-                pa: YY
-              } = AY;
-              YY.set(-1, YY.y, YY.z)
+                ti: TT
+              } = zT;
+              TT.set(-1, TT.y, TT.z)
             }
-            for (const rY of YY.children) FY.push(this.loadNode(this.asset.model.nodes[rY], (YY => {
-              YY.parent = AY
+            for (const oT of TT.children) iT.push(this.loadNode(this.asset.model.nodes[oT], (TT => {
+              TT.parent = zT
             })));
-            (DY => {
-              ir(DY, YY.extras), rY(DY)
-            })(AY)
+            (IT => {
+              xo(IT, TT.extras), oT(IT)
+            })(zT)
           };
-        if (null === YY.mesh) {
-          const rY = this.node(MY(YY), !1);
-          this.nodeObjects.set(YY.index, rY), AY(rY)
+        if (null === TT.mesh) {
+          const oT = this.node(nT(TT), !1);
+          this.nodeObjects.set(TT.index, oT), zT(oT)
         } else {
-          const rY = this.asset.model.meshes[YY.mesh];
-          FY.push(this.loadMesh(`/meshes/${rY.index}`, YY, rY, AY))
+          const oT = this.asset.model.meshes[TT.mesh];
+          iT.push(this.loadMesh(`/meshes/${oT.index}`, TT, oT, zT))
         }
-        return Promise.all(FY).then((() => {
-          for (const DY of null !== (rY = this.nodePrimitives.get(YY.index)) && void 0 !== rY ? rY : []) {
-            var rY;
-            Dr(DY)
+        return Promise.all(iT).then((() => {
+          for (const IT of null !== (oT = this.nodePrimitives.get(TT.index)) && void 0 !== oT ? oT : []) {
+            var oT;
+            Io(IT)
           }
-          return this.nodeObjects.get(YY.index)
+          return this.nodeObjects.get(TT.index)
         }))
       }
-      loadMesh(YY, rY, DY, FY) {
-        const AY = [],
-          IY = MY(rY);
-        if (1 === DY.primitives.length) {
-          const FY = DY.primitives[0];
-          AY.push(this.loadPrimitive(`${YY}/primitives/${FY.index}`, IY, FY, (YY => {
-            this.nodeObjects.set(rY.index, YY), this.nodePrimitives.set(rY.index, [YY])
+      loadMesh(TT, oT, IT, iT) {
+        const zT = [],
+          kT = nT(oT);
+        if (1 === IT.primitives.length) {
+          const iT = IT.primitives[0];
+          zT.push(this.loadPrimitive(`${TT}/primitives/${iT.index}`, kT, iT, (TT => {
+            this.nodeObjects.set(oT.index, TT), this.nodePrimitives.set(oT.index, [TT])
           })))
         } else {
-          const FY = this.node(IY, !1);
-          this.nodeObjects.set(rY.index, FY);
-          const RY = [];
-          this.nodePrimitives.set(rY.index, RY);
-          for (const rY of DY.primitives) AY.push(this.loadPrimitive(`${YY}/primitives/${rY.index}`, `${IY}_primitive${rY.index}`, rY, (YY => {
-            YY.parent = FY, RY.push(YY)
+          const iT = this.node(kT, !1);
+          this.nodeObjects.set(oT.index, iT);
+          const WT = [];
+          this.nodePrimitives.set(oT.index, WT);
+          for (const oT of IT.primitives) zT.push(this.loadPrimitive(`${TT}/primitives/${oT.index}`, `${kT}_primitive${oT.index}`, oT, (TT => {
+            TT.parent = iT, WT.push(TT)
           })))
         }
-        const RY = this.nodeObjects.get(rY.index);
-        return FY(RY), Promise.all(AY).then((() => RY))
+        const WT = this.nodeObjects.get(oT.index);
+        return iT(WT), Promise.all(zT).then((() => WT))
       }
-      loadPrimitive(YY, rY, DY, FY) {
-        const AY = [],
-          IY = this.node(rY, !0);
-        if (IY.sideOrientation = this.LQ.useRightHandedSystem ? gr.b.CounterClockWiseSideOrientation : gr.b.ClockWiseSideOrientation, AY.push(this.geometryData.load(YY, DY, IY).then((YY => {
-            if ((0, tY.g)(IY)) {
-              var rY, DY;
-              const FY = YY;
-              IY.replaceModel(FY, Int32Array.of(0, null !== (rY = null === (DY = FY.indexData) || void 0 === DY ? void 0 : DY.length) && void 0 !== rY ? rY : FY.vertexCount, 0, FY.vertexCount))
-            } else this.create((() => (YY.applyToMesh(IY), YY)))
+      loadPrimitive(TT, oT, IT, iT) {
+        const zT = [],
+          kT = this.node(oT, !0);
+        if (kT.sideOrientation = this.NK.useRightHandedSystem ? Bo.e.CounterClockWiseSideOrientation : Bo.e.ClockWiseSideOrientation, zT.push(this.geometryData.load(TT, IT, kT).then((TT => {
+            if ((0, VT.i)(kT)) {
+              var oT, IT;
+              const iT = TT;
+              kT.replaceModel(iT, Int32Array.of(0, null !== (oT = null === (IT = iT.indexData) || void 0 === IT ? void 0 : IT.length) && void 0 !== oT ? oT : iT.vertexCount, 0, iT.vertexCount))
+            } else this.create((() => (TT.applyToMesh(kT), TT)))
           }))), this.materials) {
-          const YY = 0 === DY.mode ? gr.b.PointListDrawMode : gr.b.TriangleFillMode,
-            rY = null === DY.material ? null : this.asset.model.materials[DY.material];
-          AY.push(this.loadMaterial(rY, YY, (YY => {
-            IY.material = YY
+          const TT = 0 === IT.mode ? Bo.e.PointListDrawMode : Bo.e.TriangleFillMode,
+            oT = null === IT.material ? null : this.asset.model.materials[IT.material];
+          zT.push(this.loadMaterial(oT, TT, (TT => {
+            kT.material = TT
           })))
         }
-        return sr(IY, YY), FY(IY), Promise.all(AY).then((() => IY))
+        return Lo(kT, TT), iT(kT), Promise.all(zT).then((() => kT))
       }
-      loadMaterial(YY, rY, DY) {
-        var FY;
-        const AY = `${null!==(FY=null===YY||void 0===YY?void 0:YY.index)&&void 0!==FY?FY:"default"}:${rY}`;
-        let IY = this.materialData.get(AY);
-        return IY || (IY = this.createMaterial(YY, rY), this.materialData.set(AY, IY)), DY(IY.material), IY.promise
+      loadMaterial(TT, oT, IT) {
+        var iT;
+        const zT = `${null!==(iT=null===TT||void 0===TT?void 0:TT.index)&&void 0!==iT?iT:"default"}:${oT}`;
+        let kT = this.materialData.get(zT);
+        return kT || (kT = this.createMaterial(TT, oT), this.materialData.set(zT, kT)), IT(kT.material), kT.promise
       }
-      createMaterial(YY, rY) {
-        const DY = YY ? YY.name || `material${YY.index}` : "__GLTFLoader._default",
+      createMaterial(TT, oT) {
+        const IT = TT ? TT.name || `material${TT.index}` : "__GLTFLoader._default",
           {
-            style: FY,
-            unlit: AY
+            style: iT,
+            unlit: zT
           } = this.materials;
-        let IY;
-        const RY = this.create((() => {
-          const RY = (0, ur.c)({
-            name: DY,
-            LQ: this.LQ,
+        let kT;
+        const WT = this.create((() => {
+          const WT = (0, Do.d)({
+            name: IT,
+            NK: this.NK,
             sets: {
-              ...(0, Yr.b)(this.asset, YY, FY, AY),
-              fillMode: rY
+              ...(0, To.c)(this.asset, TT, iT, zT),
+              fillMode: oT
             },
             unrendered: !0
           });
-          return IY = RY.model, RY.mirror
+          return kT = WT.model, WT.mirror
         }));
-        let OY = Promise.resolve();
-        if (YY) {
-          const rY = `/materials/${YY.index}`,
-            FY = IY.diffuseTexture;
-          if (FY && !FY.mirror) OY = new Promise((YY => setTimeout(YY)));
-          else if (FY) {
-            const AY = FY.mirror;
-            AY._parentContainer = this.container, AY.name = `${DY} (Base Color)`, sr(AY, `${rY}${YY.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(AY), OY = (0, ar.x)(FY)
+        let XT = Promise.resolve();
+        if (TT) {
+          const oT = `/materials/${TT.index}`,
+            iT = kT.diffuseTexture;
+          if (iT && !iT.mirror) XT = new Promise((TT => setTimeout(TT)));
+          else if (iT) {
+            const zT = iT.mirror;
+            zT._parentContainer = this.container, zT.name = `${IT} (Base Color)`, Lo(zT, `${oT}${TT.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(zT), XT = (0, Fo.k)(iT)
           }
-          ir(RY, YY.extras), sr(RY, rY)
+          xo(WT, TT.extras), Lo(WT, oT)
         }
-        return this.tree.materials.push(RY), {
-          material: RY,
-          promise: OY
+        return this.tree.materials.push(WT), {
+          material: WT,
+          promise: XT
         }
       }
     }
 
-    function Wr() {
-      Ir.g.dracoDecodes = QY.decodes, Ir.g.dracoWorkersStarted = QY.workersStarted, Ir.g.dracoMostWorkers = QY.mostWorkers
+    function ro() {
+      ko.f.dracoDecodes = KT.decodes, ko.f.dracoWorkersStarted = KT.workersStarted, ko.f.dracoMostWorkers = KT.mostWorkers
     }
-    async function Er(YY, rY, DY, AY, IY) {
+    async function Ao(TT, oT, IT, zT, kT) {
       try {
-        return await async function(YY, rY, DY, AY, IY, RY) {
-          var OY;
-          let gY;
-          const aY = null === (OY = (0, vr.e)()) || void 0 === OY ? void 0 : OY.sQ,
-            vY = null !== aY && void 0 !== aY && aY.iQ && rY === aY.hT() ? aY : null,
-            uY = IY && !vY;
-          return await UY(YY, rY, DY, AY, FY.c, (YY => (gY = new Qr(rY, uY), new or(YY, rY, gY, uY, new Fr(rY, AY), RY, vY).load())), !IY), gY
-        }(YY, rY, DY, SY, AY, IY)
+        return await async function(TT, oT, IT, zT, kT, WT) {
+          var XT;
+          let BT;
+          const FT = null === (XT = (0, So.i)()) || void 0 === XT ? void 0 : XT.FK,
+            ST = null !== FT && void 0 !== FT && FT.SK && oT === FT.pC() ? FT : null,
+            DT = kT && !ST;
+          return await PT(TT, oT, IT, zT, iT.e, (TT => (BT = new Ko(oT, DT), new Mo(TT, oT, BT, DT, new io(oT, zT), WT, ST).load())), !kT), BT
+        }(TT, oT, IT, wT, zT, kT)
       } finally {
-        Wr()
+        ro()
       }
     }
-    async function mr(YY, rY, DY, AY) {
+    async function go(TT, oT, IT, zT) {
       try {
-        return await UY(YY, rY, DY, SY, FY.c, (YY => AY(YY, new Fr(rY, SY))))
+        return await PT(TT, oT, IT, wT, iT.e, (TT => zT(TT, new io(oT, wT))))
       } finally {
-        Wr()
+        ro()
       }
     }
-    Ar = AY.d, vY || (vY = {
-      scriptUrl: new URL(Ar.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(Ar.wasmBinaryUrl, location.href).href
+    zo = zT.e, ST || (ST = {
+      scriptUrl: new URL(zo.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(zo.wasmBinaryUrl, location.href).href
     })
   },
-  40555: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => RY
+  40319: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => WT
     });
-    var FY = DY(144),
-      AY = DY(1224);
+    var iT = IT(139),
+      zT = IT(1185);
 
-    function IY(YY) {
-      return (0, FY.b)() ? `https://${AY.e.discordDomain}/${YY.href}` : YY.href
+    function kT(TT) {
+      return (0, iT.c)() ? `https://${zT.c.discordDomain}/${TT.href}` : TT.href
     }
-    const RY = {
-      scriptUrl: IY(new DY.U(DY(40561))),
-      wasmBinaryUrl: IY(new DY.U(DY(40567)))
+    const WT = {
+      scriptUrl: kT(new IT.U(IT(40324))),
+      wasmBinaryUrl: kT(new IT.U(IT(40327)))
     }
   },
-  35721: YY => {
-    YY.exports = function(YY, rY, DY, FY) {
-      var AY = self || window;
+  35305: TT => {
+    TT.exports = function(TT, oT, IT, iT) {
+      var zT = self || window;
       try {
         try {
-          var IY;
+          var kT;
           try {
-            IY = new AY.Blob([YY])
-          } catch (aY) {
-            (IY = new(AY.BlobBuilder || AY.WebKitBlobBuilder || AY.MozBlobBuilder || AY.MSBlobBuilder)).append(YY), IY = IY.getBlob()
+            kT = new zT.Blob([TT])
+          } catch (FT) {
+            (kT = new(zT.BlobBuilder || zT.WebKitBlobBuilder || zT.MozBlobBuilder || zT.MSBlobBuilder)).append(TT), kT = kT.getBlob()
           }
-          var RY = AY.URL || AY.webkitURL,
-            OY = RY.createObjectURL(IY),
-            gY = new AY[rY](OY, DY);
-          return RY.revokeObjectURL(OY), gY
-        } catch (aY) {
-          return new AY[rY]("data:application/javascript,".concat(encodeURIComponent(YY)), DY)
+          var WT = zT.URL || zT.webkitURL,
+            XT = WT.createObjectURL(kT),
+            BT = new zT[oT](XT, IT);
+          return WT.revokeObjectURL(XT), BT
+        } catch (FT) {
+          return new zT[oT]("data:application/javascript,".concat(encodeURIComponent(TT)), IT)
         }
-      } catch (aY) {
-        if (!FY) throw Error("Inline worker is not supported");
-        return new AY[rY](FY, DY)
+      } catch (FT) {
+        if (!iT) throw Error("Inline worker is not supported");
+        return new zT[oT](iT, IT)
       }
     }
   },
-  40567: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  40324: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  40561: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  40327: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

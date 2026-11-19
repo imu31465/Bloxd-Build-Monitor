@@ -1,157 +1,157 @@
 export const id = 258;
 export const ids = [258];
 export const modules = {
-  39683: (YY, rY, DY) => {
-    DY.d(rY, {
-      $b: () => ZY,
-      $c: () => eY,
-      $e: () => KD,
-      $f: () => yD,
-      Ab: () => Or,
-      Af: () => rF,
-      B: () => Gr,
-      Bb: () => AY,
-      Bc: () => Fr,
-      Be: () => jD,
-      C: () => sY,
-      Cb: () => WY,
-      Cc: () => ur,
-      Cd: () => gY,
-      D: () => Ar,
-      Db: () => Er,
-      Dc: () => BY,
-      Df: () => xD,
-      F: () => cY,
-      Fe: () => fD,
-      Ff: () => lD,
-      Gd: () => vY,
-      Gf: () => oD,
-      Hb: () => PY,
-      Hc: () => ar,
-      Id: () => or,
-      Ie: () => PD,
-      If: () => nD,
-      J: () => HY,
-      Jd: () => kr,
-      Jf: () => dD,
-      Kb: () => YD,
-      Kc: () => gr,
-      Kf: () => JD,
-      Le: () => ZD,
-      Lf: () => mD,
-      Mb: () => zY,
-      Mf: () => QD,
-      N: () => KY,
-      Nd: () => wY,
-      Nf: () => hD,
-      O: () => Xr,
-      Ob: () => LY,
-      Oc: () => Dr,
-      Od: () => sr,
-      Oe: () => MD,
-      Of: () => TD,
-      P: () => iY,
-      Pf: () => VD,
-      Q: () => qY,
-      Qb: () => UY,
-      Qd: () => nr,
-      Qf: () => kD,
-      Rb: () => rr,
-      Rc: () => NY,
-      Re: () => zD,
-      Rf: () => ED,
-      T: () => IF,
-      Td: () => wr,
-      Te: () => XD,
-      Tf: () => qD,
-      V: () => tr,
-      Vb: () => Qr,
-      Vc: () => VY,
-      Wd: () => Yr,
-      X: () => nY,
-      Xe: () => bD,
-      Xf: () => sD,
-      Y: () => Ur,
-      Yb: () => GY,
-      Yc: () => FY,
-      Ye: () => wD,
-      Zd: () => tY,
-      Ze: () => AF,
-      _: () => Lr,
-      _e: () => eD,
-      ae: () => XY,
-      af: () => ND,
-      b: () => IY,
-      bd: () => Rr,
-      cb: () => xY,
-      cd: () => oY,
-      d: () => RY,
-      dc: () => Ir,
-      de: () => SY,
-      df: () => HD,
-      eb: () => Pr,
-      ed: () => QY,
-      f: () => TY,
-      fb: () => JY,
-      gd: () => yY,
-      ge: () => uY,
-      gf: () => cD,
-      h: () => dY,
-      hc: () => EY,
-      i: () => aD,
-      if: () => BD,
-      jb: () => FD,
-      jc: () => mY,
-      je: () => gD,
-      kc: () => vr,
-      kd: () => ID,
-      lb: () => AD,
-      le: () => DF,
-      m: () => OD,
-      mb: () => MY,
-      md: () => RD,
-      mf: () => FF,
-      ne: () => WD,
-      nf: () => LD,
-      o: () => OY,
-      oc: () => aY,
-      od: () => lY,
-      pe: () => SD,
-      qb: () => DD,
-      qc: () => pr,
-      re: () => iD,
-      rf: () => YF,
-      s: () => br,
-      sd: () => fY,
-      tc: () => bY,
-      te: () => GD,
-      ub: () => rD,
-      ud: () => CY,
-      uf: () => UD,
-      v: () => qr,
-      vc: () => kY,
-      vd: () => hY,
-      wb: () => ir,
-      we: () => pD,
-      wf: () => tD,
-      xc: () => xr,
-      xd: () => jY,
-      y: () => pY,
-      yd: () => yr,
-      ye: () => CD
+  39354: (TT, oT, IT) => {
+    IT.d(oT, {
+      $b: () => Ko,
+      $c: () => Wo,
+      $d: () => lT,
+      A: () => zo,
+      Ab: () => xo,
+      Af: () => VI,
+      Bd: () => co,
+      Be: () => yI,
+      C: () => ET,
+      Cb: () => Xo,
+      Cc: () => yo,
+      Cd: () => BT,
+      Db: () => zT,
+      Eb: () => rT,
+      Ee: () => pI,
+      Ef: () => oi,
+      Fc: () => io,
+      G: () => CT,
+      Gb: () => Ao,
+      Gc: () => Do,
+      Gd: () => ST,
+      Hb: () => NT,
+      He: () => YI,
+      Hf: () => ii,
+      I: () => fT,
+      Id: () => Mo,
+      Je: () => OI,
+      Kc: () => vT,
+      Kd: () => po,
+      Ke: () => QI,
+      Kf: () => NI,
+      L: () => so,
+      Lb: () => II,
+      M: () => xT,
+      Mc: () => Fo,
+      Me: () => dI,
+      Ob: () => jT,
+      Oc: () => Bo,
+      Od: () => qT,
+      Oe: () => aI,
+      Of: () => RI,
+      P: () => sT,
+      Q: () => Xi,
+      Qc: () => Io,
+      Rc: () => uT,
+      Rd: () => Lo,
+      Re: () => ZI,
+      Rf: () => AI,
+      Sb: () => dT,
+      Sf: () => PI,
+      Td: () => No,
+      U: () => oI,
+      V: () => yT,
+      Vb: () => PT,
+      Vc: () => hT,
+      Ve: () => UI,
+      Wd: () => qo,
+      We: () => tI,
+      Wf: () => nI,
+      Xd: () => To,
+      Xe: () => sI,
+      Y: () => Vo,
+      Yb: () => oo,
+      Yc: () => iT,
+      Yd: () => VT,
+      Ye: () => lI,
+      Zc: () => RT,
+      _e: () => Wi,
+      _f: () => qI,
+      ab: () => TI,
+      bd: () => MT,
+      be: () => wT,
+      bg: () => wI,
+      c: () => kT,
+      cd: () => KT,
+      cf: () => vI,
+      db: () => bT,
+      dc: () => pT,
+      dg: () => rI,
+      ed: () => cT,
+      eg: () => HI,
+      f: () => WT,
+      fc: () => JT,
+      fe: () => DT,
+      gb: () => Po,
+      gf: () => jI,
+      hc: () => ko,
+      hd: () => XI,
+      hg: () => uI,
+      id: () => BI,
+      j: () => eT,
+      je: () => SI,
+      jf: () => EI,
+      k: () => OT,
+      kb: () => HT,
+      kc: () => AT,
+      kf: () => JI,
+      kg: () => mI,
+      lg: () => bI,
+      mb: () => kI,
+      mc: () => gT,
+      md: () => mT,
+      mf: () => CI,
+      nc: () => So,
+      ne: () => zi,
+      nf: () => fI,
+      ng: () => hI,
+      o: () => DI,
+      pg: () => GI,
+      q: () => FI,
+      qb: () => WI,
+      qc: () => FT,
+      qd: () => aT,
+      r: () => XT,
+      rc: () => Go,
+      re: () => gI,
+      rf: () => ki,
+      rg: () => cI,
+      s: () => Zo,
+      sb: () => nT,
+      sg: () => MI,
+      ud: () => UT,
+      uf: () => Ti,
+      v: () => to,
+      vc: () => ZT,
+      ve: () => eI,
+      wb: () => zI,
+      x: () => tT,
+      xd: () => QT,
+      xf: () => Ii,
+      y: () => bo,
+      yc: () => GT,
+      ye: () => KI,
+      z: () => LT,
+      zb: () => iI,
+      zd: () => YT
     });
-    const FY = -2147483648,
-      AY = 12,
-      IY = 12,
-      RY = 4095,
-      OY = {
+    const iT = -2147483648,
+      zT = 12,
+      kT = 12,
+      WT = 4095,
+      XT = {
         Lifeform: 1,
         Throwable: 2,
         Mesh: 3,
         Audio: 4,
         Item: 5
       },
-      gY = {
+      BT = {
         Alive: 1,
         Crouching: 2,
         OnGround: 4,
@@ -172,7 +172,7 @@ export const modules = {
         DropAhead: 131072,
         FreeCamMoves: 262144
       },
-      aY = {
+      FT = {
         None: 0,
         Entity: 1,
         Open: 2,
@@ -184,21 +184,21 @@ export const modules = {
         Feed: 8,
         Ride: 9
       },
-      vY = {
+      ST = {
         Off: 0,
         Key: 1,
         Touch: 2
       },
-      uY = {
+      DT = {
         Alive: 16
       },
-      sY = 32,
-      iY = {
+      LT = 32,
+      xT = {
         Stored: 1,
         Unloaded: 2,
         ResetAll: 4
       },
-      yY = {
+      cT = {
         opacity: 0,
         zIndex: 1,
         overlayColour: 2,
@@ -229,31 +229,31 @@ export const modules = {
         _protectionEnchantSum: 27,
         _receivingDamageMultiplier: 28
       },
-      QY = 4294967295,
-      oY = 0,
-      WY = 4294967295,
-      EY = 4,
-      mY = 123,
-      VY = -2147483648,
-      SY = {
+      KT = 4294967295,
+      MT = 0,
+      rT = 4294967295,
+      AT = 4,
+      gT = 123,
+      hT = -2147483648,
+      wT = {
         Off: 0,
         All: 1,
         Filter: 2
       },
-      lY = 51,
-      TY = 5,
-      eY = 4294967295,
-      NY = 4294967295,
-      BY = 128,
-      cY = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
-      KY = 16,
-      HY = 255,
-      zY = {
+      mT = 51,
+      eT = 5,
+      RT = 4294967295,
+      uT = 4294967295,
+      vT = 128,
+      ET = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
+      fT = 16,
+      CT = 255,
+      jT = {
         Off: 0,
         On: 1,
         Keep: 2
       },
-      ZY = {
+      JT = {
         AltVeto: 1,
         AltAction: 2,
         Click: 3,
@@ -264,20 +264,20 @@ export const modules = {
         Create: 8,
         Director: 11
       },
-      CY = {
+      UT = {
         Hotbar: 256,
         Drop: 257
       },
-      fY = {
+      aT = {
         Down: 1,
         Next: 2,
         Stack: 4
       },
-      jY = {
+      YT = {
         Rate: 0,
         Gyro: 1
       },
-      hY = {
+      QT = {
         Active: 1,
         JumpHeld: 2,
         JumpPressed: 4,
@@ -288,24 +288,24 @@ export const modules = {
         Peek: 128,
         EndToggle: 256
       },
-      dY = {
+      OT = {
         Prevent: 0,
         Allow: 1,
         PreventPlacement: 2
       },
-      JY = {
+      HT = {
         None: 0,
         Pose: 1,
         FaceMovement: 2,
         FaceCamera: 3,
         FaceCursor: 4
       },
-      MY = {
+      nT = {
         LookPointed: 1,
         Held: 2
       },
-      wY = 3,
-      bY = {
+      qT = 3,
+      ZT = {
         Synced: 0,
         ChestOpened: 1,
         ChestClosed: 2,
@@ -316,7 +316,7 @@ export const modules = {
         NumberKey: 7,
         DropRequested: 8
       },
-      XY = {
+      lT = {
         ToggleMenu: 0,
         EditBoard: 1,
         EditCodeBlock: 2,
@@ -337,82 +337,82 @@ export const modules = {
         EmoteWheelClose: 17,
         BlockMined: 18
       },
-      qY = {
+      sT = {
         Alt: 1,
         Up: 2,
         HasPos: 4,
         AttackOnly: 8
       },
-      pY = {
+      tT = {
         Solid: 1,
         Fluid: 2,
         PlaceOver: 4
       },
-      kY = {
+      GT = {
         Stackable: 1
       },
-      GY = {
+      pT = {
         granule: 1,
         wood: 2,
         rock: 3,
         cuttable: 4
       },
-      xY = {
+      bT = {
         Detail: 1,
         RoomForOne: 2
       },
-      nY = {
+      yT = {
         HaveIngredients: 1,
         Listed: 2
       },
-      PY = {
+      NT = {
         HasOpts: 1
       },
-      UY = {
+      PT = {
         Flat: 0,
         Chevrons: 1,
         FurnaceFire: 2,
         FlatOpaque: 3,
         FlatOnTop: 4
       },
-      LY = {
+      dT = {
         Up: 1,
         Down: 2
       },
-      tY = {
+      VT = {
         TwoD: 1,
         Loop: 2
       },
-      Yr = {
+      To = {
         StopAfter: 1
       },
-      rr = {
+      oo = {
         Anchor: 1,
         Visible: 2,
         UvOffset: 4,
         Visibility: 8,
         Scale: 16
       },
-      Dr = {
+      Io = {
         Pose: 1,
         Visible: 2
       },
-      Fr = 255,
-      Ar = 65535,
-      Ir = 255,
-      Rr = 65535,
-      Or = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
-      gr = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
-      ar = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
-      vr = {
+      io = 255,
+      zo = 65535,
+      ko = 255,
+      Wo = 65535,
+      Xo = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
+      Bo = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
+      Fo = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
+      So = {
         Bytes: 16,
         Hidden: 2147483648,
         Max: 262144
       },
-      ur = 4294967295,
-      sr = 4294967295,
-      ir = 255,
-      yr = {
+      Do = 4294967295,
+      Lo = 4294967295,
+      xo = 255,
+      co = {
         PresetNone: 65535,
         HasBox: 1,
         Anchored: 1,
@@ -423,328 +423,328 @@ export const modules = {
         MaxKey: 1073741823,
         MaxLiveKeys: 256
       },
-      Qr = {
+      Ko = {
         critical: 123
       },
-      or = 4294967295,
-      Wr = {
+      Mo = 4294967295,
+      ro = {
         BYTES: 4,
-        Zu: (YY, rY) => YY.getUint32(rY + 0, !0)
+        dD: (TT, oT) => TT.getUint32(oT + 0, !0)
       },
-      Er = {
+      Ao = {
         BYTES: 12,
-        serverId: (YY, rY) => YY.getInt32(rY + 0, !0),
-        index: (YY, rY) => YY.getUint32(rY + 4, !0),
-        kind: (YY, rY) => YY.getUint16(rY + 8, !0)
+        serverId: (TT, oT) => TT.getInt32(oT + 0, !0),
+        index: (TT, oT) => TT.getUint32(oT + 4, !0),
+        kind: (TT, oT) => TT.getUint16(oT + 8, !0)
       },
-      mr = {
+      go = {
         BYTES: 20,
-        pos: (YY, rY, DY) => YY.getInt32(rY + 0 + 4 * DY, !0),
-        actual: (YY, rY) => YY.getUint32(rY + 12, !0),
-        dataLen: (YY, rY) => YY.getUint32(rY + 16, !0)
+        pos: (TT, oT, IT) => TT.getInt32(oT + 0 + 4 * IT, !0),
+        actual: (TT, oT) => TT.getUint32(oT + 12, !0),
+        dataLen: (TT, oT) => TT.getUint32(oT + 16, !0)
       },
-      Vr = {
+      ho = {
         BYTES: 20,
-        what: (YY, rY) => YY.getUint8(rY + 0),
-        value: (YY, rY) => YY.getInt16(rY + 2, !0),
-        pos: (YY, rY, DY) => YY.getInt32(rY + 4 + 4 * DY, !0),
-        block: (YY, rY) => YY.getUint32(rY + 16, !0)
+        what: (TT, oT) => TT.getUint8(oT + 0),
+        value: (TT, oT) => TT.getInt16(oT + 2, !0),
+        pos: (TT, oT, IT) => TT.getInt32(oT + 4 + 4 * IT, !0),
+        block: (TT, oT) => TT.getUint32(oT + 16, !0)
       },
-      Sr = {
+      wo = {
         BYTES: 4,
-        item: (YY, rY) => YY.getUint16(rY + 0, !0),
-        slot: (YY, rY) => YY.getUint8(rY + 2)
+        item: (TT, oT) => TT.getUint16(oT + 0, !0),
+        slot: (TT, oT) => TT.getUint8(oT + 2)
       },
-      lr = {
+      mo = {
         BYTES: 16,
-        target: (YY, rY) => YY.getInt32(rY + 0, !0),
-        damage: (YY, rY) => YY.getFloat32(rY + 4, !0),
-        distance: (YY, rY) => YY.getFloat32(rY + 8, !0),
-        crit: (YY, rY) => YY.getUint8(rY + 12)
+        target: (TT, oT) => TT.getInt32(oT + 0, !0),
+        damage: (TT, oT) => TT.getFloat32(oT + 4, !0),
+        distance: (TT, oT) => TT.getFloat32(oT + 8, !0),
+        crit: (TT, oT) => TT.getUint8(oT + 12)
       },
-      Tr = {
+      eo = {
         BYTES: 4,
-        slot: (YY, rY) => YY.getUint16(rY + 0, !0)
+        slot: (TT, oT) => TT.getUint16(oT + 0, !0)
       },
-      er = {
+      Ro = {
         BYTES: 20,
-        what: (YY, rY) => YY.getUint8(rY + 0),
-        value: (YY, rY) => YY.getInt16(rY + 2, !0),
-        pos: (YY, rY, DY) => YY.getInt32(rY + 4 + 4 * DY, !0),
-        block: (YY, rY) => YY.getUint32(rY + 16, !0)
+        what: (TT, oT) => TT.getUint8(oT + 0),
+        value: (TT, oT) => TT.getInt16(oT + 2, !0),
+        pos: (TT, oT, IT) => TT.getInt32(oT + 4 + 4 * IT, !0),
+        block: (TT, oT) => TT.getUint32(oT + 16, !0)
       },
-      Nr = {
+      uo = {
         BYTES: 12,
-        serverId: (YY, rY) => YY.getInt32(rY + 0, !0),
-        index: (YY, rY) => YY.getUint32(rY + 4, !0),
-        what: (YY, rY) => YY.getUint16(rY + 8, !0)
+        serverId: (TT, oT) => TT.getInt32(oT + 0, !0),
+        index: (TT, oT) => TT.getUint32(oT + 4, !0),
+        what: (TT, oT) => TT.getUint16(oT + 8, !0)
       },
-      Br = {
+      vo = {
         BYTES: 24,
-        cx: (YY, rY) => YY.getInt32(rY + 0, !0),
-        cy: (YY, rY) => YY.getInt32(rY + 4, !0),
-        cz: (YY, rY) => YY.getInt32(rY + 8, !0),
-        slot: (YY, rY) => YY.getUint32(rY + 12, !0),
-        generation: (YY, rY) => YY.getUint32(rY + 16, !0),
-        flags: (YY, rY) => YY.getUint32(rY + 20, !0)
+        cx: (TT, oT) => TT.getInt32(oT + 0, !0),
+        cy: (TT, oT) => TT.getInt32(oT + 4, !0),
+        cz: (TT, oT) => TT.getInt32(oT + 8, !0),
+        slot: (TT, oT) => TT.getUint32(oT + 12, !0),
+        generation: (TT, oT) => TT.getUint32(oT + 16, !0),
+        flags: (TT, oT) => TT.getUint32(oT + 20, !0)
       },
-      cr = {
+      Eo = {
         BYTES: 44,
-        pos: (YY, rY, DY) => YY.getFloat64(rY + 0 + 8 * DY, !0),
-        sound: (YY, rY) => YY.getUint16(rY + 24, !0),
-        flags: (YY, rY) => YY.getUint16(rY + 26, !0),
-        handle: (YY, rY) => YY.getUint32(rY + 28, !0),
-        volume: (YY, rY) => YY.getFloat32(rY + 32, !0),
-        rate: (YY, rY) => YY.getFloat32(rY + 36, !0),
-        refDist: (YY, rY) => YY.getFloat32(rY + 40, !0)
+        pos: (TT, oT, IT) => TT.getFloat64(oT + 0 + 8 * IT, !0),
+        sound: (TT, oT) => TT.getUint16(oT + 24, !0),
+        flags: (TT, oT) => TT.getUint16(oT + 26, !0),
+        handle: (TT, oT) => TT.getUint32(oT + 28, !0),
+        volume: (TT, oT) => TT.getFloat32(oT + 32, !0),
+        rate: (TT, oT) => TT.getFloat32(oT + 36, !0),
+        refDist: (TT, oT) => TT.getFloat32(oT + 40, !0)
       },
-      Kr = {
+      fo = {
         BYTES: 28,
-        pos: (YY, rY, DY) => YY.getFloat64(rY + 0 + 8 * DY, !0),
-        handle: (YY, rY) => YY.getUint32(rY + 24, !0)
+        pos: (TT, oT, IT) => TT.getFloat64(oT + 0 + 8 * IT, !0),
+        handle: (TT, oT) => TT.getUint32(oT + 24, !0)
       },
-      Hr = {
+      Co = {
         BYTES: 16,
-        handle: (YY, rY) => YY.getUint32(rY + 0, !0),
-        volume: (YY, rY) => YY.getFloat32(rY + 4, !0),
-        rate: (YY, rY) => YY.getFloat32(rY + 8, !0),
-        refDist: (YY, rY) => YY.getFloat32(rY + 12, !0)
+        handle: (TT, oT) => TT.getUint32(oT + 0, !0),
+        volume: (TT, oT) => TT.getFloat32(oT + 4, !0),
+        rate: (TT, oT) => TT.getFloat32(oT + 8, !0),
+        refDist: (TT, oT) => TT.getFloat32(oT + 12, !0)
       },
-      zr = {
+      jo = {
         BYTES: 12,
-        handle: (YY, rY) => YY.getUint32(rY + 0, !0),
-        to: (YY, rY) => YY.getFloat32(rY + 4, !0),
-        ms: (YY, rY) => YY.getUint16(rY + 8, !0),
-        flags: (YY, rY) => YY.getUint16(rY + 10, !0)
+        handle: (TT, oT) => TT.getUint32(oT + 0, !0),
+        to: (TT, oT) => TT.getFloat32(oT + 4, !0),
+        ms: (TT, oT) => TT.getUint16(oT + 8, !0),
+        flags: (TT, oT) => TT.getUint16(oT + 10, !0)
       },
-      Zr = {
+      Jo = {
         BYTES: 4,
-        handle: (YY, rY) => YY.getUint32(rY + 0, !0)
+        handle: (TT, oT) => TT.getUint32(oT + 0, !0)
       },
-      Cr = {
+      Uo = {
         BYTES: 4,
-        reason: (YY, rY) => YY.getUint8(rY + 0),
-        code: (YY, rY) => YY.getUint8(rY + 1)
+        reason: (TT, oT) => TT.getUint8(oT + 0),
+        code: (TT, oT) => TT.getUint8(oT + 1)
       },
-      fr = {
+      ao = {
         BYTES: 4,
-        key: (YY, rY) => YY.getUint8(rY + 0),
-        tag: (YY, rY) => YY.getUint8(rY + 1)
+        key: (TT, oT) => TT.getUint8(oT + 0),
+        tag: (TT, oT) => TT.getUint8(oT + 1)
       },
-      jr = {
+      Yo = {
         BYTES: 16,
-        save: (YY, rY) => YY.getUint32(rY + 0, !0),
-        index: (YY, rY) => YY.getUint32(rY + 4, !0),
-        ptr: (YY, rY) => YY.getUint32(rY + 8, !0),
-        len: (YY, rY) => YY.getUint32(rY + 12, !0)
+        save: (TT, oT) => TT.getUint32(oT + 0, !0),
+        index: (TT, oT) => TT.getUint32(oT + 4, !0),
+        ptr: (TT, oT) => TT.getUint32(oT + 8, !0),
+        len: (TT, oT) => TT.getUint32(oT + 12, !0)
       },
-      hr = {
+      Qo = {
         BYTES: 16,
-        save: (YY, rY) => YY.getUint32(rY + 0, !0),
-        kind: (YY, rY) => YY.getUint8(rY + 4),
-        parts: (YY, rY) => YY.getUint32(rY + 8, !0),
-        bytes: (YY, rY) => YY.getUint32(rY + 12, !0)
+        save: (TT, oT) => TT.getUint32(oT + 0, !0),
+        kind: (TT, oT) => TT.getUint8(oT + 4),
+        parts: (TT, oT) => TT.getUint32(oT + 8, !0),
+        bytes: (TT, oT) => TT.getUint32(oT + 12, !0)
       },
-      dr = {
+      Oo = {
         BYTES: 4,
-        totalTicks: (YY, rY) => YY.getUint32(rY + 0, !0)
+        totalTicks: (TT, oT) => TT.getUint32(oT + 0, !0)
       },
-      Jr = {
+      Ho = {
         BYTES: 24,
-        what: (YY, rY) => YY.getUint8(rY + 0),
-        int: (YY, rY) => YY.getInt32(rY + 4, !0),
-        x: (YY, rY) => YY.getFloat64(rY + 8, !0),
-        y: (YY, rY) => YY.getFloat64(rY + 16, !0)
+        what: (TT, oT) => TT.getUint8(oT + 0),
+        int: (TT, oT) => TT.getInt32(oT + 4, !0),
+        x: (TT, oT) => TT.getFloat64(oT + 8, !0),
+        y: (TT, oT) => TT.getFloat64(oT + 16, !0)
       },
-      Mr = {
+      no = {
         BYTES: 8,
-        what: (YY, rY) => YY.getUint8(rY + 0),
-        kind: (YY, rY) => YY.getUint8(rY + 1),
-        save: (YY, rY) => YY.getUint32(rY + 4, !0)
+        what: (TT, oT) => TT.getUint8(oT + 0),
+        kind: (TT, oT) => TT.getUint8(oT + 1),
+        save: (TT, oT) => TT.getUint32(oT + 4, !0)
       },
-      wr = {
+      qo = {
         BYTES: 4,
-        vv: (YY, rY) => YY.getUint16(rY + 0, !0)
+        US: (TT, oT) => TT.getUint16(oT + 0, !0)
       },
-      br = {
+      Zo = {
         BYTES: 360,
-        eye: (YY, rY, DY) => YY.getFloat64(rY + 0 + 8 * DY, !0),
-        localPos: (YY, rY, DY) => YY.getFloat64(rY + 24 + 8 * DY, !0),
-        K8: (YY, rY, DY) => YY.getFloat64(rY + 48 + 8 * DY, !0),
-        viewProj: (YY, rY, DY) => YY.getFloat32(rY + 72 + 4 * DY, !0),
-        origin: (YY, rY, DY) => YY.getInt32(rY + 136 + 4 * DY, !0),
-        heading: (YY, rY) => YY.getFloat32(rY + 148, !0),
-        pitch: (YY, rY) => YY.getFloat32(rY + 152, !0),
-        tanHalfFovX: (YY, rY) => YY.getFloat32(rY + 156, !0),
-        tanHalfFovY: (YY, rY) => YY.getFloat32(rY + 160, !0),
-        viewportCss: (YY, rY, DY) => YY.getFloat32(rY + 164 + 4 * DY, !0),
-        localVel: (YY, rY, DY) => YY.getFloat32(rY + 172 + 4 * DY, !0),
-        actionDir: (YY, rY, DY) => YY.getFloat32(rY + 184 + 4 * DY, !0),
-        localId: (YY, rY) => YY.getInt32(rY + 196, !0),
-        playerFlags: (YY, rY) => YY.getUint32(rY + 200, !0),
-        targetBlock: (YY, rY, DY) => YY.getInt32(rY + 204 + 4 * DY, !0),
-        targetAdjacent: (YY, rY, DY) => YY.getInt32(rY + 216 + 4 * DY, !0),
-        targetBlockId: (YY, rY) => YY.getUint32(rY + 228, !0),
-        targetNormal: (YY, rY, DY) => YY.getInt8(rY + 232 + 1 * DY),
-        targetFlags: (YY, rY) => YY.getUint8(rY + 235),
-        pickedEntity: (YY, rY) => YY.getInt32(rY + 236, !0),
-        breakingPos: (YY, rY, DY) => YY.getInt32(rY + 240 + 4 * DY, !0),
-        breakingProgress: (YY, rY) => YY.getFloat32(rY + 252, !0),
-        RV: (YY, rY) => YY.getUint16(rY + 256, !0),
-        selectedSlot: (YY, rY) => YY.getUint8(rY + 258),
-        heldFlags: (YY, rY) => YY.getUint8(rY + 259),
-        heldAttrVersion: (YY, rY) => YY.getUint32(rY + 260, !0),
-        inventoryVersion: (YY, rY) => YY.getUint32(rY + 264, !0),
-        effectsVersion: (YY, rY) => YY.getUint32(rY + 268, !0),
-        entitiesVersion: (YY, rY) => YY.getUint32(rY + 272, !0),
-        entRenderPtr: (YY, rY) => YY.getUint32(rY + 276, !0),
-        entCapacity: (YY, rY) => YY.getUint32(rY + 280, !0),
-        frameMs: (YY, rY) => YY.getFloat32(rY + 284, !0),
-        fps: (YY, rY) => YY.getFloat32(rY + 288, !0),
-        entVisPtr: (YY, rY) => YY.getUint32(rY + 292, !0),
-        momentumFrac: (YY, rY) => YY.getFloat32(rY + 296, !0),
-        chunkSlotsPtr: (YY, rY) => YY.getUint32(rY + 300, !0),
-        chunkSlotsLen: (YY, rY) => YY.getUint32(rY + 304, !0),
-        walkThroughPtr: (YY, rY) => YY.getUint32(rY + 308, !0),
-        walkThroughLen: (YY, rY) => YY.getUint32(rY + 312, !0),
-        audioViewPtr: (YY, rY) => YY.getUint32(rY + 316, !0),
-        inventoryViewPtr: (YY, rY) => YY.getUint32(rY + 320, !0),
-        eventOverflowGen: (YY, rY) => YY.getUint32(rY + 324, !0),
-        eventOverflowMask: (YY, rY) => YY.getUint32(rY + 328, !0),
-        promptEntity: (YY, rY) => YY.getInt32(rY + 332, !0),
-        replayViewPtr: (YY, rY) => YY.getUint32(rY + 336, !0),
-        slotIcon: (YY, rY) => YY.getUint32(rY + 340, !0),
-        localDeaths: (YY, rY) => YY.getUint32(rY + 344, !0),
-        cameraFar: (YY, rY) => YY.getFloat32(rY + 348, !0),
-        gliderBoostFuel: (YY, rY) => YY.getUint32(rY + 352, !0),
-        interactLabel: (YY, rY) => YY.getUint16(rY + 356, !0),
-        interactIcon: (YY, rY) => YY.getUint16(rY + 358, !0)
+        eye: (TT, oT, IT) => TT.getFloat64(oT + 0 + 8 * IT, !0),
+        localPos: (TT, oT, IT) => TT.getFloat64(oT + 24 + 8 * IT, !0),
+        MTT: (TT, oT, IT) => TT.getFloat64(oT + 48 + 8 * IT, !0),
+        viewProj: (TT, oT, IT) => TT.getFloat32(oT + 72 + 4 * IT, !0),
+        origin: (TT, oT, IT) => TT.getInt32(oT + 136 + 4 * IT, !0),
+        heading: (TT, oT) => TT.getFloat32(oT + 148, !0),
+        pitch: (TT, oT) => TT.getFloat32(oT + 152, !0),
+        tanHalfFovX: (TT, oT) => TT.getFloat32(oT + 156, !0),
+        tanHalfFovY: (TT, oT) => TT.getFloat32(oT + 160, !0),
+        viewportCss: (TT, oT, IT) => TT.getFloat32(oT + 164 + 4 * IT, !0),
+        localVel: (TT, oT, IT) => TT.getFloat32(oT + 172 + 4 * IT, !0),
+        actionDir: (TT, oT, IT) => TT.getFloat32(oT + 184 + 4 * IT, !0),
+        localId: (TT, oT) => TT.getInt32(oT + 196, !0),
+        playerFlags: (TT, oT) => TT.getUint32(oT + 200, !0),
+        targetBlock: (TT, oT, IT) => TT.getInt32(oT + 204 + 4 * IT, !0),
+        targetAdjacent: (TT, oT, IT) => TT.getInt32(oT + 216 + 4 * IT, !0),
+        targetBlockId: (TT, oT) => TT.getUint32(oT + 228, !0),
+        targetNormal: (TT, oT, IT) => TT.getInt8(oT + 232 + 1 * IT),
+        targetFlags: (TT, oT) => TT.getUint8(oT + 235),
+        pickedEntity: (TT, oT) => TT.getInt32(oT + 236, !0),
+        breakingPos: (TT, oT, IT) => TT.getInt32(oT + 240 + 4 * IT, !0),
+        breakingProgress: (TT, oT) => TT.getFloat32(oT + 252, !0),
+        Tu: (TT, oT) => TT.getUint16(oT + 256, !0),
+        selectedSlot: (TT, oT) => TT.getUint8(oT + 258),
+        heldFlags: (TT, oT) => TT.getUint8(oT + 259),
+        heldAttrVersion: (TT, oT) => TT.getUint32(oT + 260, !0),
+        inventoryVersion: (TT, oT) => TT.getUint32(oT + 264, !0),
+        effectsVersion: (TT, oT) => TT.getUint32(oT + 268, !0),
+        entitiesVersion: (TT, oT) => TT.getUint32(oT + 272, !0),
+        entRenderPtr: (TT, oT) => TT.getUint32(oT + 276, !0),
+        entCapacity: (TT, oT) => TT.getUint32(oT + 280, !0),
+        frameMs: (TT, oT) => TT.getFloat32(oT + 284, !0),
+        fps: (TT, oT) => TT.getFloat32(oT + 288, !0),
+        entVisPtr: (TT, oT) => TT.getUint32(oT + 292, !0),
+        momentumFrac: (TT, oT) => TT.getFloat32(oT + 296, !0),
+        chunkSlotsPtr: (TT, oT) => TT.getUint32(oT + 300, !0),
+        chunkSlotsLen: (TT, oT) => TT.getUint32(oT + 304, !0),
+        walkThroughPtr: (TT, oT) => TT.getUint32(oT + 308, !0),
+        walkThroughLen: (TT, oT) => TT.getUint32(oT + 312, !0),
+        audioViewPtr: (TT, oT) => TT.getUint32(oT + 316, !0),
+        inventoryViewPtr: (TT, oT) => TT.getUint32(oT + 320, !0),
+        eventOverflowGen: (TT, oT) => TT.getUint32(oT + 324, !0),
+        eventOverflowMask: (TT, oT) => TT.getUint32(oT + 328, !0),
+        promptEntity: (TT, oT) => TT.getInt32(oT + 332, !0),
+        replayViewPtr: (TT, oT) => TT.getUint32(oT + 336, !0),
+        slotIcon: (TT, oT) => TT.getUint32(oT + 340, !0),
+        localDeaths: (TT, oT) => TT.getUint32(oT + 344, !0),
+        cameraFar: (TT, oT) => TT.getFloat32(oT + 348, !0),
+        gliderBoostFuel: (TT, oT) => TT.getUint32(oT + 352, !0),
+        interactLabel: (TT, oT) => TT.getUint16(oT + 356, !0),
+        interactIcon: (TT, oT) => TT.getUint16(oT + 358, !0)
       },
-      Xr = {
+      so = {
         BYTES: 16,
-        voxelsPtr: (YY, rY) => YY.getUint32(rY + 0, !0),
-        version: (YY, rY) => YY.getUint32(rY + 4, !0),
-        generation: (YY, rY) => YY.getUint32(rY + 8, !0),
-        ja: (YY, rY) => YY.getUint32(rY + 12, !0)
+        voxelsPtr: (TT, oT) => TT.getUint32(oT + 0, !0),
+        version: (TT, oT) => TT.getUint32(oT + 4, !0),
+        generation: (TT, oT) => TT.getUint32(oT + 8, !0),
+        kS: (TT, oT) => TT.getUint32(oT + 12, !0)
       },
-      qr = {
+      to = {
         BYTES: 56,
-        listener: (YY, rY, DY) => YY.getFloat64(rY + 0 + 8 * DY, !0),
-        forward: (YY, rY, DY) => YY.getFloat32(rY + 24 + 4 * DY, !0),
-        up: (YY, rY, DY) => YY.getFloat32(rY + 36 + 4 * DY, !0),
-        dropped: (YY, rY) => YY.getUint32(rY + 48, !0),
-        unfollowed: (YY, rY) => YY.getUint32(rY + 52, !0)
+        listener: (TT, oT, IT) => TT.getFloat64(oT + 0 + 8 * IT, !0),
+        forward: (TT, oT, IT) => TT.getFloat32(oT + 24 + 4 * IT, !0),
+        up: (TT, oT, IT) => TT.getFloat32(oT + 36 + 4 * IT, !0),
+        dropped: (TT, oT) => TT.getUint32(oT + 48, !0),
+        unfollowed: (TT, oT) => TT.getUint32(oT + 52, !0)
       },
-      pr = {
+      Go = {
         BYTES: 8,
-        item: (YY, rY) => YY.getUint16(rY + 0, !0),
-        amount: (YY, rY) => YY.getUint16(rY + 2, !0),
-        attrVersion: (YY, rY) => YY.getUint32(rY + 4, !0)
+        item: (TT, oT) => TT.getUint16(oT + 0, !0),
+        amount: (TT, oT) => TT.getUint16(oT + 2, !0),
+        attrVersion: (TT, oT) => TT.getUint32(oT + 4, !0)
       },
-      kr = {
+      po = {
         BYTES: 76,
-        version: (YY, rY) => YY.getUint32(rY + 0, !0),
-        state: (YY, rY) => YY.getUint8(rY + 4),
-        cameraMode: (YY, rY) => YY.getUint8(rY + 5),
-        Zu: (YY, rY) => YY.getUint32(rY + 8, !0),
-        totalTicks: (YY, rY) => YY.getUint32(rY + 12, !0),
-        speed: (YY, rY) => YY.getFloat32(rY + 16, !0),
-        markIn: (YY, rY) => YY.getUint32(rY + 20, !0),
-        markOut: (YY, rY) => YY.getUint32(rY + 24, !0),
-        editVersion: (YY, rY) => YY.getUint32(rY + 28, !0),
-        drops: (YY, rY, DY) => YY.getUint32(rY + 32 + 4 * DY, !0)
+        version: (TT, oT) => TT.getUint32(oT + 0, !0),
+        state: (TT, oT) => TT.getUint8(oT + 4),
+        cameraMode: (TT, oT) => TT.getUint8(oT + 5),
+        dD: (TT, oT) => TT.getUint32(oT + 8, !0),
+        totalTicks: (TT, oT) => TT.getUint32(oT + 12, !0),
+        speed: (TT, oT) => TT.getFloat32(oT + 16, !0),
+        markIn: (TT, oT) => TT.getUint32(oT + 20, !0),
+        markOut: (TT, oT) => TT.getUint32(oT + 24, !0),
+        editVersion: (TT, oT) => TT.getUint32(oT + 28, !0),
+        drops: (TT, oT, IT) => TT.getUint32(oT + 32 + 4 * IT, !0)
       },
-      Gr = {
+      bo = {
         BYTES: 6,
-        flags: (YY, rY) => YY.getUint8(rY + 0),
-        harvestType: (YY, rY) => YY.getUint8(rY + 1),
-        harvestLevel: (YY, rY) => YY.getUint8(rY + 2),
-        attachedTop: (YY, rY) => YY.getUint16(rY + 4, !0)
+        flags: (TT, oT) => TT.getUint8(oT + 0),
+        harvestType: (TT, oT) => TT.getUint8(oT + 1),
+        harvestLevel: (TT, oT) => TT.getUint8(oT + 2),
+        attachedTop: (TT, oT) => TT.getUint16(oT + 4, !0)
       },
-      xr = {
+      yo = {
         BYTES: 3,
-        flags: (YY, rY) => YY.getUint8(rY + 0),
-        harvests: (YY, rY) => YY.getUint8(rY + 1),
-        level: (YY, rY) => YY.getUint8(rY + 2)
+        flags: (TT, oT) => TT.getUint8(oT + 0),
+        harvests: (TT, oT) => TT.getUint8(oT + 1),
+        level: (TT, oT) => TT.getUint8(oT + 2)
       },
-      nr = {
+      No = {
         BYTES: 12,
-        item: (YY, rY) => YY.getUint32(rY + 0, !0),
-        amount: (YY, rY) => YY.getFloat64(rY + 4, !0)
+        item: (TT, oT) => TT.getUint32(oT + 0, !0),
+        amount: (TT, oT) => TT.getFloat64(oT + 4, !0)
       },
-      Pr = {
+      Po = {
         BYTES: 16,
-        recipes: (YY, rY) => YY.getUint32(rY + 0, !0),
-        ingredients: (YY, rY) => YY.getUint32(rY + 4, !0),
-        craftAllTimes: (YY, rY) => YY.getUint32(rY + 8, !0),
-        flags: (YY, rY) => YY.getUint32(rY + 12, !0)
+        recipes: (TT, oT) => TT.getUint32(oT + 0, !0),
+        ingredients: (TT, oT) => TT.getUint32(oT + 4, !0),
+        craftAllTimes: (TT, oT) => TT.getUint32(oT + 8, !0),
+        flags: (TT, oT) => TT.getUint32(oT + 12, !0)
       },
-      Ur = {
+      Vo = {
         BYTES: 10,
-        item: (YY, rY) => YY.getUint16(rY + 0, !0),
-        recipe: (YY, rY) => YY.getUint16(rY + 2, !0),
-        produces: (YY, rY) => YY.getUint16(rY + 4, !0),
-        requires: (YY, rY) => YY.getUint16(rY + 6, !0),
-        flags: (YY, rY) => YY.getUint8(rY + 8)
+        item: (TT, oT) => TT.getUint16(oT + 0, !0),
+        recipe: (TT, oT) => TT.getUint16(oT + 2, !0),
+        produces: (TT, oT) => TT.getUint16(oT + 4, !0),
+        requires: (TT, oT) => TT.getUint16(oT + 6, !0),
+        flags: (TT, oT) => TT.getUint8(oT + 8)
       },
-      Lr = {
+      TI = {
         BYTES: 4,
-        amount: (YY, rY) => YY.getUint16(rY + 0, !0),
-        items: (YY, rY) => YY.getUint16(rY + 2, !0)
+        amount: (TT, oT) => TT.getUint16(oT + 0, !0),
+        items: (TT, oT) => TT.getUint16(oT + 2, !0)
       },
-      tr = {
+      oI = {
         BYTES: 8,
-        amount: (YY, rY) => YY.getUint32(rY + 0, !0),
-        item: (YY, rY) => YY.getUint16(rY + 4, !0),
-        from: (YY, rY) => YY.getUint16(rY + 6, !0)
+        amount: (TT, oT) => TT.getUint32(oT + 0, !0),
+        item: (TT, oT) => TT.getUint16(oT + 4, !0),
+        from: (TT, oT) => TT.getUint16(oT + 6, !0)
       },
-      YD = {
+      II = {
         BYTES: 16,
-        serverId: (YY, rY) => YY.getInt32(rY + 0, !0),
-        len: (YY, rY) => YY.getUint32(rY + 4, !0),
-        kind: (YY, rY) => YY.getUint16(rY + 8, !0),
-        variation: (YY, rY) => YY.getUint16(rY + 10, !0),
-        pose: (YY, rY) => YY.getUint8(rY + 12),
-        meta: (YY, rY) => YY.getUint8(rY + 13),
-        mesh: (YY, rY) => YY.getUint8(rY + 14),
-        flags: (YY, rY) => YY.getUint8(rY + 15)
+        serverId: (TT, oT) => TT.getInt32(oT + 0, !0),
+        len: (TT, oT) => TT.getUint32(oT + 4, !0),
+        kind: (TT, oT) => TT.getUint16(oT + 8, !0),
+        variation: (TT, oT) => TT.getUint16(oT + 10, !0),
+        pose: (TT, oT) => TT.getUint8(oT + 12),
+        meta: (TT, oT) => TT.getUint8(oT + 13),
+        mesh: (TT, oT) => TT.getUint8(oT + 14),
+        flags: (TT, oT) => TT.getUint8(oT + 15)
       },
-      rD = {
+      iI = {
         BYTES: 40,
-        terrainOpaque: (YY, rY) => YY.getUint32(rY + 0, !0),
-        terrainTransparent: (YY, rY) => YY.getUint32(rY + 4, !0),
-        terrainPack: (YY, rY) => YY.getUint32(rY + 8, !0),
-        earthSky: (YY, rY) => YY.getUint32(rY + 12, !0),
-        skyMeshes: (YY, rY) => YY.getUint32(rY + 16, !0),
-        regular: (YY, rY) => YY.getUint32(rY + 20, !0),
-        thin: (YY, rY) => YY.getUint32(rY + 24, !0),
-        line: (YY, rY) => YY.getUint32(rY + 28, !0),
-        text: (YY, rY) => YY.getUint32(rY + 32, !0),
-        particles: (YY, rY) => YY.getUint32(rY + 36, !0)
+        terrainOpaque: (TT, oT) => TT.getUint32(oT + 0, !0),
+        terrainTransparent: (TT, oT) => TT.getUint32(oT + 4, !0),
+        terrainPack: (TT, oT) => TT.getUint32(oT + 8, !0),
+        earthSky: (TT, oT) => TT.getUint32(oT + 12, !0),
+        skyMeshes: (TT, oT) => TT.getUint32(oT + 16, !0),
+        regular: (TT, oT) => TT.getUint32(oT + 20, !0),
+        thin: (TT, oT) => TT.getUint32(oT + 24, !0),
+        line: (TT, oT) => TT.getUint32(oT + 28, !0),
+        text: (TT, oT) => TT.getUint32(oT + 32, !0),
+        particles: (TT, oT) => TT.getUint32(oT + 36, !0)
       },
-      DD = {
+      zI = {
         BYTES: 16,
-        fov: (YY, rY) => YY.getFloat32(rY + 0, !0),
-        baseFov: (YY, rY) => YY.getFloat32(rY + 4, !0),
-        aspect: (YY, rY) => YY.getFloat32(rY + 8, !0),
-        bodyHeading: (YY, rY) => YY.getFloat32(rY + 12, !0)
+        fov: (TT, oT) => TT.getFloat32(oT + 0, !0),
+        baseFov: (TT, oT) => TT.getFloat32(oT + 4, !0),
+        aspect: (TT, oT) => TT.getFloat32(oT + 8, !0),
+        bodyHeading: (TT, oT) => TT.getFloat32(oT + 12, !0)
       },
-      FD = {
+      kI = {
         BYTES: 32,
-        eye: (YY, rY, DY) => YY.getFloat64(rY + 0 + 8 * DY, !0),
-        heading: (YY, rY) => YY.getFloat32(rY + 24, !0),
-        pitch: (YY, rY) => YY.getFloat32(rY + 28, !0)
+        eye: (TT, oT, IT) => TT.getFloat64(oT + 0 + 8 * IT, !0),
+        heading: (TT, oT) => TT.getFloat32(oT + 24, !0),
+        pitch: (TT, oT) => TT.getFloat32(oT + 28, !0)
       },
-      AD = {
+      WI = {
         BYTES: 40,
-        feet: (YY, rY, DY) => YY.getFloat64(rY + 0 + 8 * DY, !0),
-        eyeHeight: (YY, rY) => YY.getFloat32(rY + 24, !0),
-        heading: (YY, rY) => YY.getFloat32(rY + 28, !0),
-        headingIsDrawn: (YY, rY) => YY.getUint32(rY + 32, !0)
+        feet: (TT, oT, IT) => TT.getFloat64(oT + 0 + 8 * IT, !0),
+        eyeHeight: (TT, oT) => TT.getFloat32(oT + 24, !0),
+        heading: (TT, oT) => TT.getFloat32(oT + 28, !0),
+        headingIsDrawn: (TT, oT) => TT.getUint32(oT + 32, !0)
       },
-      ID = 32,
-      RD = 63,
-      OD = {
+      XI = 32,
+      BI = 63,
+      FI = {
         TickEnd: 32,
         EntitySpawned: 33,
         EntityDespawned: 34,
@@ -772,64 +772,64 @@ export const modules = {
         RecorderEvent: 62
       };
 
-    function gD(YY, rY, DY, FY, AY) {
-      var IY, RY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY, WY, EY, mY, VY, SY, lY, TY, eY, NY, BY, cY, KY, HY;
-      switch (YY) {
+    function SI(TT, oT, IT, iT, zT) {
+      var kT, WT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT, rT, AT, gT, hT, wT, mT, eT, RT, uT, vT, ET, fT, CT;
+      switch (TT) {
         case 32:
-          return 4 === FY && (null === (IY = AY.tickEnd) || void 0 === IY || IY.call(AY, Wr.Zu(rY, DY)), !0);
+          return 4 === iT && (null === (kT = zT.tickEnd) || void 0 === kT || kT.call(zT, ro.dD(oT, IT)), !0);
         case 33:
-          return 12 === FY && (null === (RY = AY.entitySpawned) || void 0 === RY || RY.call(AY, Er.serverId(rY, DY), Er.index(rY, DY), Er.kind(rY, DY)), !0);
+          return 12 === iT && (null === (WT = zT.entitySpawned) || void 0 === WT || WT.call(zT, Ao.serverId(oT, IT), Ao.index(oT, IT), Ao.kind(oT, IT)), !0);
         case 34:
-          return 12 === FY && (null === (OY = AY.entityDespawned) || void 0 === OY || OY.call(AY, Er.serverId(rY, DY), Er.index(rY, DY), Er.kind(rY, DY)), !0);
+          return 12 === iT && (null === (XT = zT.entityDespawned) || void 0 === XT || XT.call(zT, Ao.serverId(oT, IT), Ao.index(oT, IT), Ao.kind(oT, IT)), !0);
         case 39:
-          return !(FY < 20) && (null === (gY = AY.changeBlockFail) || void 0 === gY || gY.call(AY, mr.pos(rY, DY, 0), mr.pos(rY, DY, 1), mr.pos(rY, DY, 2), mr.actual(rY, DY), mr.dataLen(rY, DY), DY + 20, FY - 20), !0);
+          return !(iT < 20) && (null === (BT = zT.changeBlockFail) || void 0 === BT || BT.call(zT, go.pos(oT, IT, 0), go.pos(oT, IT, 1), go.pos(oT, IT, 2), go.actual(oT, IT), go.dataLen(oT, IT), IT + 20, iT - 20), !0);
         case 46:
-          return 0 === FY && (null === (aY = AY.changeBlockFailEnd) || void 0 === aY || aY.call(AY), !0);
+          return 0 === iT && (null === (FT = zT.changeBlockFailEnd) || void 0 === FT || FT.call(zT), !0);
         case 48:
-          return 20 === FY && (null === (vY = AY.inventoryEvent) || void 0 === vY || vY.call(AY, Vr.what(rY, DY), Vr.value(rY, DY), Vr.pos(rY, DY, 0), Vr.pos(rY, DY, 1), Vr.pos(rY, DY, 2), Vr.block(rY, DY)), !0);
+          return 20 === iT && (null === (ST = zT.inventoryEvent) || void 0 === ST || ST.call(zT, ho.what(oT, IT), ho.value(oT, IT), ho.pos(oT, IT, 0), ho.pos(oT, IT, 1), ho.pos(oT, IT, 2), ho.block(oT, IT)), !0);
         case 49:
-          return 4 === FY && (null === (uY = AY.heldItemChanged) || void 0 === uY || uY.call(AY, Sr.item(rY, DY), Sr.slot(rY, DY)), !0);
+          return 4 === iT && (null === (DT = zT.heldItemChanged) || void 0 === DT || DT.call(zT, wo.item(oT, IT), wo.slot(oT, IT)), !0);
         case 50:
-          return 16 === FY && (null === (sY = AY.shotDamage) || void 0 === sY || sY.call(AY, lr.target(rY, DY), lr.damage(rY, DY), lr.distance(rY, DY), lr.crit(rY, DY)), !0);
+          return 16 === iT && (null === (LT = zT.shotDamage) || void 0 === LT || LT.call(zT, mo.target(oT, IT), mo.damage(oT, IT), mo.distance(oT, IT), mo.crit(oT, IT)), !0);
         case 51:
-          return !(FY < 4) && (null === (iY = AY.enchantOffer) || void 0 === iY || iY.call(AY, Tr.slot(rY, DY), DY + 4, FY - 4), !0);
+          return !(iT < 4) && (null === (xT = zT.enchantOffer) || void 0 === xT || xT.call(zT, eo.slot(oT, IT), IT + 4, iT - 4), !0);
         case 52:
-          return !(FY < 20) && (null === (yY = AY.uiEvent) || void 0 === yY || yY.call(AY, er.what(rY, DY), er.value(rY, DY), er.pos(rY, DY, 0), er.pos(rY, DY, 1), er.pos(rY, DY, 2), er.block(rY, DY), DY + 20, FY - 20), !0);
+          return !(iT < 20) && (null === (cT = zT.uiEvent) || void 0 === cT || cT.call(zT, Ro.what(oT, IT), Ro.value(oT, IT), Ro.pos(oT, IT, 0), Ro.pos(oT, IT, 1), Ro.pos(oT, IT, 2), Ro.block(oT, IT), IT + 20, iT - 20), !0);
         case 53:
-          return 12 === FY && (null === (QY = AY.entityInfoChanged) || void 0 === QY || QY.call(AY, Nr.serverId(rY, DY), Nr.index(rY, DY), Nr.what(rY, DY)), !0);
+          return 12 === iT && (null === (KT = zT.entityInfoChanged) || void 0 === KT || KT.call(zT, uo.serverId(oT, IT), uo.index(oT, IT), uo.what(oT, IT)), !0);
         case 55:
-          return 24 === FY && (null === (oY = AY.chunkSlot) || void 0 === oY || oY.call(AY, Br.cx(rY, DY), Br.cy(rY, DY), Br.cz(rY, DY), Br.slot(rY, DY), Br.generation(rY, DY), Br.flags(rY, DY)), !0);
+          return 24 === iT && (null === (MT = zT.chunkSlot) || void 0 === MT || MT.call(zT, vo.cx(oT, IT), vo.cy(oT, IT), vo.cz(oT, IT), vo.slot(oT, IT), vo.generation(oT, IT), vo.flags(oT, IT)), !0);
         case 40:
-          return 44 === FY && (null === (WY = AY.playSound) || void 0 === WY || WY.call(AY, cr.pos(rY, DY, 0), cr.pos(rY, DY, 1), cr.pos(rY, DY, 2), cr.sound(rY, DY), cr.flags(rY, DY), cr.handle(rY, DY), cr.volume(rY, DY), cr.rate(rY, DY), cr.refDist(rY, DY)), !0);
+          return 44 === iT && (null === (rT = zT.playSound) || void 0 === rT || rT.call(zT, Eo.pos(oT, IT, 0), Eo.pos(oT, IT, 1), Eo.pos(oT, IT, 2), Eo.sound(oT, IT), Eo.flags(oT, IT), Eo.handle(oT, IT), Eo.volume(oT, IT), Eo.rate(oT, IT), Eo.refDist(oT, IT)), !0);
         case 41:
-          return 28 === FY && (null === (EY = AY.soundPos) || void 0 === EY || EY.call(AY, Kr.pos(rY, DY, 0), Kr.pos(rY, DY, 1), Kr.pos(rY, DY, 2), Kr.handle(rY, DY)), !0);
+          return 28 === iT && (null === (AT = zT.soundPos) || void 0 === AT || AT.call(zT, fo.pos(oT, IT, 0), fo.pos(oT, IT, 1), fo.pos(oT, IT, 2), fo.handle(oT, IT)), !0);
         case 42:
-          return 16 === FY && (null === (mY = AY.soundSet) || void 0 === mY || mY.call(AY, Hr.handle(rY, DY), Hr.volume(rY, DY), Hr.rate(rY, DY), Hr.refDist(rY, DY)), !0);
+          return 16 === iT && (null === (gT = zT.soundSet) || void 0 === gT || gT.call(zT, Co.handle(oT, IT), Co.volume(oT, IT), Co.rate(oT, IT), Co.refDist(oT, IT)), !0);
         case 43:
-          return 12 === FY && (null === (VY = AY.soundFade) || void 0 === VY || VY.call(AY, zr.handle(rY, DY), zr.to(rY, DY), zr.ms(rY, DY), zr.flags(rY, DY)), !0);
+          return 12 === iT && (null === (hT = zT.soundFade) || void 0 === hT || hT.call(zT, jo.handle(oT, IT), jo.to(oT, IT), jo.ms(oT, IT), jo.flags(oT, IT)), !0);
         case 44:
-          return 4 === FY && (null === (SY = AY.soundStop) || void 0 === SY || SY.call(AY, Zr.handle(rY, DY)), !0);
+          return 4 === iT && (null === (wT = zT.soundStop) || void 0 === wT || wT.call(zT, Jo.handle(oT, IT)), !0);
         case 45:
-          return 0 === FY && (null === (lY = AY.soundReset) || void 0 === lY || lY.call(AY), !0);
+          return 0 === iT && (null === (mT = zT.soundReset) || void 0 === mT || mT.call(zT), !0);
         case 56:
-          return 4 === FY && (null === (TY = AY.replayFailed) || void 0 === TY || TY.call(AY, Cr.reason(rY, DY), Cr.code(rY, DY)), !0);
+          return 4 === iT && (null === (eT = zT.replayFailed) || void 0 === eT || eT.call(zT, Uo.reason(oT, IT), Uo.code(oT, IT)), !0);
         case 57:
-          return !(FY < 4) && (null === (eY = AY.replayOption) || void 0 === eY || eY.call(AY, fr.key(rY, DY), fr.tag(rY, DY), DY + 4, FY - 4), !0);
+          return !(iT < 4) && (null === (RT = zT.replayOption) || void 0 === RT || RT.call(zT, ao.key(oT, IT), ao.tag(oT, IT), IT + 4, iT - 4), !0);
         case 58:
-          return 16 === FY && (null === (NY = AY.replayFilePart) || void 0 === NY || NY.call(AY, jr.save(rY, DY), jr.index(rY, DY), jr.ptr(rY, DY), jr.len(rY, DY)), !0);
+          return 16 === iT && (null === (uT = zT.replayFilePart) || void 0 === uT || uT.call(zT, Yo.save(oT, IT), Yo.index(oT, IT), Yo.ptr(oT, IT), Yo.len(oT, IT)), !0);
         case 59:
-          return 16 === FY && (null === (BY = AY.replayFileReady) || void 0 === BY || BY.call(AY, hr.save(rY, DY), hr.kind(rY, DY), hr.parts(rY, DY), hr.bytes(rY, DY)), !0);
+          return 16 === iT && (null === (vT = zT.replayFileReady) || void 0 === vT || vT.call(zT, Qo.save(oT, IT), Qo.kind(oT, IT), Qo.parts(oT, IT), Qo.bytes(oT, IT)), !0);
         case 60:
-          return !(FY < 4) && (null === (cY = AY.replayOpened) || void 0 === cY || cY.call(AY, dr.totalTicks(rY, DY), DY + 4, FY - 4), !0);
+          return !(iT < 4) && (null === (ET = zT.replayOpened) || void 0 === ET || ET.call(zT, Oo.totalTicks(oT, IT), IT + 4, iT - 4), !0);
         case 61:
-          return !(FY < 24) && (null === (KY = AY.replayUiEvent) || void 0 === KY || KY.call(AY, Jr.what(rY, DY), Jr.int(rY, DY), Jr.x(rY, DY), Jr.y(rY, DY), DY + 24, FY - 24), !0);
+          return !(iT < 24) && (null === (fT = zT.replayUiEvent) || void 0 === fT || fT.call(zT, Ho.what(oT, IT), Ho.int(oT, IT), Ho.x(oT, IT), Ho.y(oT, IT), IT + 24, iT - 24), !0);
         case 62:
-          return 8 === FY && (null === (HY = AY.recorderEvent) || void 0 === HY || HY.call(AY, Mr.what(rY, DY), Mr.kind(rY, DY), Mr.save(rY, DY)), !0);
+          return 8 === iT && (null === (CT = zT.recorderEvent) || void 0 === CT || CT.call(zT, no.what(oT, IT), no.kind(oT, IT), no.save(oT, IT)), !0);
         default:
           return !1
       }
     }
-    const aD = {
+    const DI = {
       SetChunkAddDistance: 2,
       WatchEntityInfo: 66,
       EventResync: 67,
@@ -881,483 +881,483 @@ export const modules = {
       PressCustomButton: 578,
       PadMove: 579
     };
-    let vD = new Uint8Array(0);
+    let LI = new Uint8Array(0);
 
-    function uD(YY) {
-      return vD.buffer !== YY.buffer && (vD = new Uint8Array(YY.buffer)), vD
+    function xI(TT) {
+      return LI.buffer !== TT.buffer && (LI = new Uint8Array(TT.buffer)), LI
     }
 
-    function sD(YY, rY, DY) {
-      const FY = YY.Ei(66, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint8(FY + 0, DY), !0
+    function cI(TT, oT, IT) {
+      const iT = TT.hx(66, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint8(iT + 0, IT), !0
     }
 
-    function iD(YY, rY, DY) {
-      const FY = YY.Ei(67, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint32(FY + 0, DY, !0), !0
+    function KI(TT, oT, IT) {
+      const iT = TT.hx(67, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint32(iT + 0, IT, !0), !0
     }
 
-    function yD(YY, rY, DY) {
-      const FY = YY.Ei(68, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint8(FY + 0, DY), !0
+    function MI(TT, oT, IT) {
+      const iT = TT.hx(68, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint8(iT + 0, IT), !0
     }
 
-    function QD(YY, rY, DY, FY) {
-      const AY = YY.Ei(69, rY, 4 + FY.length);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setUint8(AY + 0, DY), uD(IY).set(FY, IY.byteOffset + AY + 4), !0
+    function rI(TT, oT, IT, iT) {
+      const zT = TT.hx(69, oT, 4 + iT.length);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setUint8(zT + 0, IT), xI(kT).set(iT, kT.byteOffset + zT + 4), !0
     }
 
-    function oD(YY, rY, DY, FY, AY) {
-      const IY = YY.Ei(128, rY, 4 + AY.length);
-      if (IY < 0) return !1;
-      const RY = YY.view;
-      return RY.setUint8(IY + 0, DY), RY.setUint16(IY + 2, FY, !0), uD(RY).set(AY, RY.byteOffset + IY + 4), !0
+    function AI(TT, oT, IT, iT, zT) {
+      const kT = TT.hx(128, oT, 4 + zT.length);
+      if (kT < 0) return !1;
+      const WT = TT.view;
+      return WT.setUint8(kT + 0, IT), WT.setUint16(kT + 2, iT, !0), xI(WT).set(zT, WT.byteOffset + kT + 4), !0
     }
 
-    function WD(YY, rY, DY) {
-      const FY = YY.Ei(131, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setInt32(FY + 0, DY, !0), !0
+    function gI(TT, oT, IT) {
+      const iT = TT.hx(131, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setInt32(iT + 0, IT, !0), !0
     }
 
-    function ED(YY, rY, DY) {
-      const FY = YY.Ei(132, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint32(FY + 0, DY, !0), !0
+    function hI(TT, oT, IT) {
+      const iT = TT.hx(132, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint32(iT + 0, IT, !0), !0
     }
 
-    function mD(YY, rY, DY) {
-      const FY = YY.Ei(133, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint32(FY + 0, DY, !0), !0
+    function wI(TT, oT, IT) {
+      const iT = TT.hx(133, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint32(iT + 0, IT, !0), !0
     }
 
-    function VD(YY, rY, DY) {
-      const FY = YY.Ei(144, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint8(FY + 0, DY), !0
+    function mI(TT, oT, IT) {
+      const iT = TT.hx(144, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint8(iT + 0, IT), !0
     }
 
-    function SD(YY, rY, DY, FY, AY) {
-      const IY = YY.Ei(145, rY, 12);
-      if (IY < 0) return !1;
-      const RY = YY.view;
-      return RY.setInt32(IY + 0, DY, !0), RY.setInt32(IY + 4, FY, !0), RY.setInt32(IY + 8, AY, !0), !0
+    function eI(TT, oT, IT, iT, zT) {
+      const kT = TT.hx(145, oT, 12);
+      if (kT < 0) return !1;
+      const WT = TT.view;
+      return WT.setInt32(kT + 0, IT, !0), WT.setInt32(kT + 4, iT, !0), WT.setInt32(kT + 8, zT, !0), !0
     }
 
-    function lD(YY, rY, DY, FY) {
-      const AY = YY.Ei(256, rY, 4 + FY.length);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setUint16(AY + 0, DY, !0), uD(IY).set(FY, IY.byteOffset + AY + 4), !0
+    function RI(TT, oT, IT, iT) {
+      const zT = TT.hx(256, oT, 4 + iT.length);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setUint16(zT + 0, IT, !0), xI(kT).set(iT, kT.byteOffset + zT + 4), !0
     }
 
-    function TD(YY, rY, DY) {
-      const FY = YY.Ei(258, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint8(FY + 0, DY), !0
+    function uI(TT, oT, IT) {
+      const iT = TT.hx(258, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint8(iT + 0, IT), !0
     }
 
-    function eD(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
-      const aY = YY.Ei(320, rY, 48 + gY.length);
-      if (aY < 0) return !1;
-      const vY = YY.view;
-      vY.setUint32(aY + 0, DY, !0), vY.setUint16(aY + 4, FY, !0), vY.setUint16(aY + 6, AY, !0), vY.setUint32(aY + 8, IY, !0);
-      for (let uY = 0; uY < 3; uY++) vY.setFloat64(aY + 12 + 8 * uY, RY[uY], !0);
-      for (let uY = 0; uY < 3; uY++) vY.setFloat32(aY + 36 + 4 * uY, OY[uY], !0);
-      return uD(vY).set(gY, vY.byteOffset + aY + 48), !0
+    function vI(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
+      const FT = TT.hx(320, oT, 48 + BT.length);
+      if (FT < 0) return !1;
+      const ST = TT.view;
+      ST.setUint32(FT + 0, IT, !0), ST.setUint16(FT + 4, iT, !0), ST.setUint16(FT + 6, zT, !0), ST.setUint32(FT + 8, kT, !0);
+      for (let DT = 0; DT < 3; DT++) ST.setFloat64(FT + 12 + 8 * DT, WT[DT], !0);
+      for (let DT = 0; DT < 3; DT++) ST.setFloat32(FT + 36 + 4 * DT, XT[DT], !0);
+      return xI(ST).set(BT, ST.byteOffset + FT + 48), !0
     }
 
-    function ND(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
-      const aY = YY.Ei(321, rY, 48 + gY.length);
-      if (aY < 0) return !1;
-      const vY = YY.view;
-      vY.setUint32(aY + 0, DY, !0), vY.setInt32(aY + 4, FY, !0), vY.setUint16(aY + 8, AY, !0), vY.setUint16(aY + 10, IY, !0);
-      for (let uY = 0; uY < 3; uY++) vY.setFloat64(aY + 12 + 8 * uY, RY[uY], !0);
-      for (let uY = 0; uY < 3; uY++) vY.setFloat32(aY + 36 + 4 * uY, OY[uY], !0);
-      return uD(vY).set(gY, vY.byteOffset + aY + 48), !0
+    function EI(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
+      const FT = TT.hx(321, oT, 48 + BT.length);
+      if (FT < 0) return !1;
+      const ST = TT.view;
+      ST.setUint32(FT + 0, IT, !0), ST.setInt32(FT + 4, iT, !0), ST.setUint16(FT + 8, zT, !0), ST.setUint16(FT + 10, kT, !0);
+      for (let DT = 0; DT < 3; DT++) ST.setFloat64(FT + 12 + 8 * DT, WT[DT], !0);
+      for (let DT = 0; DT < 3; DT++) ST.setFloat32(FT + 36 + 4 * DT, XT[DT], !0);
+      return xI(ST).set(BT, ST.byteOffset + FT + 48), !0
     }
 
-    function BD(YY, rY, DY, FY, AY, IY, RY) {
-      const OY = YY.Ei(322, rY, 44 + RY.length);
-      if (OY < 0) return !1;
-      const gY = YY.view;
-      gY.setUint32(OY + 0, DY, !0), gY.setUint32(OY + 4, FY, !0);
-      for (let aY = 0; aY < 3; aY++) gY.setFloat64(OY + 8 + 8 * aY, AY[aY], !0);
-      for (let aY = 0; aY < 3; aY++) gY.setFloat32(OY + 32 + 4 * aY, IY[aY], !0);
-      return uD(gY).set(RY, gY.byteOffset + OY + 44), !0
+    function fI(TT, oT, IT, iT, zT, kT, WT) {
+      const XT = TT.hx(322, oT, 44 + WT.length);
+      if (XT < 0) return !1;
+      const BT = TT.view;
+      BT.setUint32(XT + 0, IT, !0), BT.setUint32(XT + 4, iT, !0);
+      for (let FT = 0; FT < 3; FT++) BT.setFloat64(XT + 8 + 8 * FT, zT[FT], !0);
+      for (let FT = 0; FT < 3; FT++) BT.setFloat32(XT + 32 + 4 * FT, kT[FT], !0);
+      return xI(BT).set(WT, BT.byteOffset + XT + 44), !0
     }
 
-    function cD(YY, rY, DY) {
-      const FY = YY.Ei(323, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint32(FY + 0, DY, !0), !0
+    function CI(TT, oT, IT) {
+      const iT = TT.hx(323, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint32(iT + 0, IT, !0), !0
     }
 
-    function KD(YY, rY, DY, FY, AY, IY) {
-      const RY = YY.Ei(324, rY, 32 + IY.length);
-      if (RY < 0) return !1;
-      const OY = YY.view;
-      OY.setUint32(RY + 0, DY, !0), OY.setUint32(RY + 4, FY, !0);
-      for (let gY = 0; gY < 3; gY++) OY.setFloat64(RY + 8 + 8 * gY, AY[gY], !0);
-      return uD(OY).set(IY, OY.byteOffset + RY + 32), !0
+    function jI(TT, oT, IT, iT, zT, kT) {
+      const WT = TT.hx(324, oT, 32 + kT.length);
+      if (WT < 0) return !1;
+      const XT = TT.view;
+      XT.setUint32(WT + 0, IT, !0), XT.setUint32(WT + 4, iT, !0);
+      for (let BT = 0; BT < 3; BT++) XT.setFloat64(WT + 8 + 8 * BT, zT[BT], !0);
+      return xI(XT).set(kT, XT.byteOffset + WT + 32), !0
     }
 
-    function HD(YY, rY) {
-      return !(YY.Ei(325, rY, 0) < 0)
+    function JI(TT, oT) {
+      return !(TT.hx(325, oT, 0) < 0)
     }
 
-    function zD(YY, rY, DY, FY, AY, IY) {
-      const RY = YY.Ei(384, rY, 16);
-      if (RY < 0) return !1;
-      const OY = YY.view;
-      return OY.setUint32(RY + 0, DY, !0), OY.setUint32(RY + 4, FY, !0), OY.setFloat32(RY + 8, AY, !0), OY.setFloat32(RY + 12, IY, !0), !0
+    function UI(TT, oT, IT, iT, zT, kT) {
+      const WT = TT.hx(384, oT, 16);
+      if (WT < 0) return !1;
+      const XT = TT.view;
+      return XT.setUint32(WT + 0, IT, !0), XT.setUint32(WT + 4, iT, !0), XT.setFloat32(WT + 8, zT, !0), XT.setFloat32(WT + 12, kT, !0), !0
     }
 
-    function ZD(YY, rY, DY, FY, AY, IY, RY) {
-      const OY = YY.Ei(385, rY, 36 + RY.length);
-      if (OY < 0) return !1;
-      const gY = YY.view;
-      gY.setUint32(OY + 0, DY, !0), gY.setUint32(OY + 4, FY, !0);
-      for (let aY = 0; aY < 3; aY++) gY.setFloat64(OY + 8 + 8 * aY, AY[aY], !0);
-      return gY.setUint32(OY + 32, IY, !0), uD(gY).set(RY, gY.byteOffset + OY + 36), !0
+    function aI(TT, oT, IT, iT, zT, kT, WT) {
+      const XT = TT.hx(385, oT, 36 + WT.length);
+      if (XT < 0) return !1;
+      const BT = TT.view;
+      BT.setUint32(XT + 0, IT, !0), BT.setUint32(XT + 4, iT, !0);
+      for (let FT = 0; FT < 3; FT++) BT.setFloat64(XT + 8 + 8 * FT, zT[FT], !0);
+      return BT.setUint32(XT + 32, kT, !0), xI(BT).set(WT, BT.byteOffset + XT + 36), !0
     }
 
-    function CD(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
-      const aY = YY.Ei(386, rY, 56 + gY.length);
-      if (aY < 0) return !1;
-      const vY = YY.view;
-      vY.setUint32(aY + 0, DY, !0), vY.setUint8(aY + 4, FY);
-      for (let uY = 0; uY < 4; uY++) vY.setFloat32(aY + 8 + 4 * uY, AY[uY], !0);
-      for (let uY = 0; uY < 3; uY++) vY.setFloat64(aY + 24 + 8 * uY, IY[uY], !0);
-      return vY.setUint32(aY + 48, RY, !0), vY.setUint32(aY + 52, OY, !0), uD(vY).set(gY, vY.byteOffset + aY + 56), !0
+    function YI(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
+      const FT = TT.hx(386, oT, 56 + BT.length);
+      if (FT < 0) return !1;
+      const ST = TT.view;
+      ST.setUint32(FT + 0, IT, !0), ST.setUint8(FT + 4, iT);
+      for (let DT = 0; DT < 4; DT++) ST.setFloat32(FT + 8 + 4 * DT, zT[DT], !0);
+      for (let DT = 0; DT < 3; DT++) ST.setFloat64(FT + 24 + 8 * DT, kT[DT], !0);
+      return ST.setUint32(FT + 48, WT, !0), ST.setUint32(FT + 52, XT, !0), xI(ST).set(BT, ST.byteOffset + FT + 56), !0
     }
 
-    function fD(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
-      const aY = YY.Ei(387, rY, 56);
-      if (aY < 0) return !1;
-      const vY = YY.view;
-      vY.setUint32(aY + 0, DY, !0), vY.setUint16(aY + 4, FY, !0), vY.setUint8(aY + 6, AY);
-      for (let uY = 0; uY < 3; uY++) vY.setFloat64(aY + 8 + 8 * uY, IY[uY], !0);
-      for (let uY = 0; uY < 2; uY++) vY.setFloat32(aY + 32 + 4 * uY, RY[uY], !0);
-      vY.setFloat32(aY + 40, OY, !0);
-      for (let uY = 0; uY < 3; uY++) vY.setFloat32(aY + 44 + 4 * uY, gY[uY], !0);
+    function QI(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
+      const FT = TT.hx(387, oT, 56);
+      if (FT < 0) return !1;
+      const ST = TT.view;
+      ST.setUint32(FT + 0, IT, !0), ST.setUint16(FT + 4, iT, !0), ST.setUint8(FT + 6, zT);
+      for (let DT = 0; DT < 3; DT++) ST.setFloat64(FT + 8 + 8 * DT, kT[DT], !0);
+      for (let DT = 0; DT < 2; DT++) ST.setFloat32(FT + 32 + 4 * DT, WT[DT], !0);
+      ST.setFloat32(FT + 40, XT, !0);
+      for (let DT = 0; DT < 3; DT++) ST.setFloat32(FT + 44 + 4 * DT, BT[DT], !0);
       return !0
     }
 
-    function jD(YY, rY, DY) {
-      const FY = YY.Ei(388, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint32(FY + 0, DY, !0), !0
+    function OI(TT, oT, IT) {
+      const iT = TT.hx(388, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint32(iT + 0, IT, !0), !0
     }
 
-    function hD(YY, rY, DY, FY) {
-      const AY = YY.Ei(389, rY, 8);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setInt32(AY + 0, DY, !0), IY.setFloat32(AY + 4, FY, !0), !0
+    function HI(TT, oT, IT, iT) {
+      const zT = TT.hx(389, oT, 8);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setInt32(zT + 0, IT, !0), kT.setFloat32(zT + 4, iT, !0), !0
     }
 
-    function dD(YY, rY, DY, FY) {
-      const AY = YY.Ei(390, rY, 8);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setInt32(AY + 0, DY, !0), IY.setFloat32(AY + 4, FY, !0), !0
+    function nI(TT, oT, IT, iT) {
+      const zT = TT.hx(390, oT, 8);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setInt32(zT + 0, IT, !0), kT.setFloat32(zT + 4, iT, !0), !0
     }
 
-    function JD(YY, rY, DY, FY, AY, IY) {
-      const RY = YY.Ei(391, rY, 12);
-      if (RY < 0) return !1;
-      const OY = YY.view;
-      return OY.setFloat32(RY + 0, DY, !0), OY.setFloat32(RY + 4, FY, !0), OY.setUint8(RY + 8, AY), OY.setUint8(RY + 9, IY), !0
+    function qI(TT, oT, IT, iT, zT, kT) {
+      const WT = TT.hx(391, oT, 12);
+      if (WT < 0) return !1;
+      const XT = TT.view;
+      return XT.setFloat32(WT + 0, IT, !0), XT.setFloat32(WT + 4, iT, !0), XT.setUint8(WT + 8, zT), XT.setUint8(WT + 9, kT), !0
     }
 
-    function MD(YY, rY, DY) {
-      const FY = YY.Ei(392, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint32(FY + 0, DY, !0), !0
+    function ZI(TT, oT, IT) {
+      const iT = TT.hx(392, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint32(iT + 0, IT, !0), !0
     }
 
-    function wD(YY, rY, DY, FY, AY) {
-      const IY = YY.Ei(393, rY, 12);
-      if (IY < 0) return !1;
-      const RY = YY.view;
-      return RY.setUint32(IY + 0, DY, !0), RY.setUint16(IY + 4, FY, !0), RY.setFloat32(IY + 8, AY, !0), !0
+    function lI(TT, oT, IT, iT, zT) {
+      const kT = TT.hx(393, oT, 12);
+      if (kT < 0) return !1;
+      const WT = TT.view;
+      return WT.setUint32(kT + 0, IT, !0), WT.setUint16(kT + 4, iT, !0), WT.setFloat32(kT + 8, zT, !0), !0
     }
 
-    function bD(YY, rY, DY, FY, AY, IY, RY) {
-      const OY = YY.Ei(394, rY, 36);
-      if (OY < 0) return !1;
-      const gY = YY.view;
-      gY.setUint32(OY + 0, DY, !0), gY.setUint16(OY + 4, FY, !0), gY.setUint8(OY + 6, AY);
-      for (let aY = 0; aY < 3; aY++) gY.setFloat64(OY + 8 + 8 * aY, IY[aY], !0);
-      return gY.setFloat32(OY + 32, RY, !0), !0
+    function sI(TT, oT, IT, iT, zT, kT, WT) {
+      const XT = TT.hx(394, oT, 36);
+      if (XT < 0) return !1;
+      const BT = TT.view;
+      BT.setUint32(XT + 0, IT, !0), BT.setUint16(XT + 4, iT, !0), BT.setUint8(XT + 6, zT);
+      for (let FT = 0; FT < 3; FT++) BT.setFloat64(XT + 8 + 8 * FT, kT[FT], !0);
+      return BT.setFloat32(XT + 32, WT, !0), !0
     }
 
-    function XD(YY, rY, DY) {
-      const FY = YY.Ei(398, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setUint32(FY + 0, DY, !0), !0
+    function tI(TT, oT, IT) {
+      const iT = TT.hx(398, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setUint32(iT + 0, IT, !0), !0
     }
 
-    function qD(YY, rY, DY) {
-      const FY = YY.Ei(448, rY, 4);
-      if (FY < 0) return !1;
-      return YY.view.setFloat32(FY + 0, DY, !0), !0
+    function GI(TT, oT, IT) {
+      const iT = TT.hx(448, oT, 4);
+      if (iT < 0) return !1;
+      return TT.view.setFloat32(iT + 0, IT, !0), !0
     }
 
-    function pD(YY, rY, DY, FY) {
-      const AY = YY.Ei(450, rY, 12);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      for (let RY = 0; RY < 2; RY++) IY.setFloat32(AY + 0 + 4 * RY, DY[RY], !0);
-      return IY.setUint8(AY + 8, FY), !0
+    function pI(TT, oT, IT, iT) {
+      const zT = TT.hx(450, oT, 12);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      for (let WT = 0; WT < 2; WT++) kT.setFloat32(zT + 0 + 4 * WT, IT[WT], !0);
+      return kT.setUint8(zT + 8, iT), !0
     }
 
-    function kD(YY, rY, DY, FY) {
-      const AY = YY.Ei(452, rY, 8);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setFloat32(AY + 0, DY, !0), IY.setUint8(AY + 4, FY), !0
+    function bI(TT, oT, IT, iT) {
+      const zT = TT.hx(452, oT, 8);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setFloat32(zT + 0, IT, !0), kT.setUint8(zT + 4, iT), !0
     }
 
-    function GD(YY, rY, DY, FY, AY) {
-      const IY = YY.Ei(454, rY, 4);
-      if (IY < 0) return !1;
-      const RY = YY.view;
-      return RY.setUint8(IY + 0, DY), RY.setUint8(IY + 1, FY), RY.setUint8(IY + 2, AY), !0
+    function yI(TT, oT, IT, iT, zT) {
+      const kT = TT.hx(454, oT, 4);
+      if (kT < 0) return !1;
+      const WT = TT.view;
+      return WT.setUint8(kT + 0, IT), WT.setUint8(kT + 1, iT), WT.setUint8(kT + 2, zT), !0
     }
 
-    function xD(YY, rY, DY, FY) {
-      const AY = YY.Ei(455, rY, 40);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      for (let RY = 0; RY < 9; RY++) IY.setInt32(AY + 0 + 4 * RY, DY[RY], !0);
-      return IY.setUint32(AY + 36, FY, !0), !0
+    function NI(TT, oT, IT, iT) {
+      const zT = TT.hx(455, oT, 40);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      for (let WT = 0; WT < 9; WT++) kT.setInt32(zT + 0 + 4 * WT, IT[WT], !0);
+      return kT.setUint32(zT + 36, iT, !0), !0
     }
 
-    function nD(YY, rY, DY, FY) {
-      const AY = YY.Ei(456, rY, 8);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setFloat32(AY + 0, DY, !0), IY.setUint8(AY + 4, FY), !0
+    function PI(TT, oT, IT, iT) {
+      const zT = TT.hx(456, oT, 8);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setFloat32(zT + 0, IT, !0), kT.setUint8(zT + 4, iT), !0
     }
 
-    function PD(YY, rY, DY, FY, AY) {
-      const IY = YY.Ei(457, rY, 16);
-      if (IY < 0) return !1;
-      const RY = YY.view;
-      for (let OY = 0; OY < 3; OY++) RY.setInt32(IY + 0 + 4 * OY, DY[OY], !0);
-      for (let OY = 0; OY < 3; OY++) RY.setInt8(IY + 12 + 1 * OY, FY[OY]);
-      return RY.setUint8(IY + 15, AY), !0
+    function dI(TT, oT, IT, iT, zT) {
+      const kT = TT.hx(457, oT, 16);
+      if (kT < 0) return !1;
+      const WT = TT.view;
+      for (let XT = 0; XT < 3; XT++) WT.setInt32(kT + 0 + 4 * XT, IT[XT], !0);
+      for (let XT = 0; XT < 3; XT++) WT.setInt8(kT + 12 + 1 * XT, iT[XT]);
+      return WT.setUint8(kT + 15, zT), !0
     }
 
-    function UD(YY, rY, DY, FY) {
-      const AY = YY.Ei(530, rY, 4 + FY.length);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setUint8(AY + 0, DY), uD(IY).set(FY, IY.byteOffset + AY + 4), !0
+    function VI(TT, oT, IT, iT) {
+      const zT = TT.hx(530, oT, 4 + iT.length);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setUint8(zT + 0, IT), xI(kT).set(iT, kT.byteOffset + zT + 4), !0
     }
 
-    function LD(YY, rY, DY, FY, AY, IY) {
-      const RY = YY.Ei(531, rY, 12 + IY.length);
-      if (RY < 0) return !1;
-      const OY = YY.view;
-      return OY.setFloat32(RY + 0, DY, !0), OY.setFloat32(RY + 4, FY, !0), OY.setUint32(RY + 8, AY, !0), uD(OY).set(IY, OY.byteOffset + RY + 12), !0
+    function Ti(TT, oT, IT, iT, zT, kT) {
+      const WT = TT.hx(531, oT, 12 + kT.length);
+      if (WT < 0) return !1;
+      const XT = TT.view;
+      return XT.setFloat32(WT + 0, IT, !0), XT.setFloat32(WT + 4, iT, !0), XT.setUint32(WT + 8, zT, !0), xI(XT).set(kT, XT.byteOffset + WT + 12), !0
     }
 
-    function tD(YY, rY, DY, FY, AY, IY) {
-      const RY = YY.Ei(532, rY, 12 + IY.length);
-      if (RY < 0) return !1;
-      const OY = YY.view;
-      return OY.setInt32(RY + 0, DY, !0), OY.setInt32(RY + 4, FY, !0), OY.setUint32(RY + 8, AY, !0), uD(OY).set(IY, OY.byteOffset + RY + 12), !0
+    function oi(TT, oT, IT, iT, zT, kT) {
+      const WT = TT.hx(532, oT, 12 + kT.length);
+      if (WT < 0) return !1;
+      const XT = TT.view;
+      return XT.setInt32(WT + 0, IT, !0), XT.setInt32(WT + 4, iT, !0), XT.setUint32(WT + 8, zT, !0), xI(XT).set(kT, XT.byteOffset + WT + 12), !0
     }
 
-    function YF(YY, rY, DY, FY, AY) {
-      const IY = YY.Ei(533, rY, 8 + AY.length);
-      if (IY < 0) return !1;
-      const RY = YY.view;
-      return RY.setInt32(IY + 0, DY, !0), RY.setInt32(IY + 4, FY, !0), uD(RY).set(AY, RY.byteOffset + IY + 8), !0
+    function Ii(TT, oT, IT, iT, zT) {
+      const kT = TT.hx(533, oT, 8 + zT.length);
+      if (kT < 0) return !1;
+      const WT = TT.view;
+      return WT.setInt32(kT + 0, IT, !0), WT.setInt32(kT + 4, iT, !0), xI(WT).set(zT, WT.byteOffset + kT + 8), !0
     }
 
-    function rF(YY, rY) {
-      return !(YY.Ei(576, rY, 0) < 0)
+    function ii(TT, oT) {
+      return !(TT.hx(576, oT, 0) < 0)
     }
 
-    function DF(YY, rY, DY, FY, AY, IY) {
-      const RY = YY.Ei(577, rY, 36 + IY.length);
-      if (RY < 0) return !1;
-      const OY = YY.view;
-      OY.setUint8(RY + 0, DY);
-      for (let gY = 0; gY < 16; gY++) OY.setUint8(RY + 4 + 1 * gY, FY[gY]);
-      for (let gY = 0; gY < 16; gY++) OY.setUint8(RY + 20 + 1 * gY, AY[gY]);
-      return uD(OY).set(IY, OY.byteOffset + RY + 36), !0
+    function zi(TT, oT, IT, iT, zT, kT) {
+      const WT = TT.hx(577, oT, 36 + kT.length);
+      if (WT < 0) return !1;
+      const XT = TT.view;
+      XT.setUint8(WT + 0, IT);
+      for (let BT = 0; BT < 16; BT++) XT.setUint8(WT + 4 + 1 * BT, iT[BT]);
+      for (let BT = 0; BT < 16; BT++) XT.setUint8(WT + 20 + 1 * BT, zT[BT]);
+      return xI(XT).set(kT, XT.byteOffset + WT + 36), !0
     }
 
-    function FF(YY, rY, DY, FY) {
-      const AY = YY.Ei(578, rY, 4 + FY.length);
-      if (AY < 0) return !1;
-      const IY = YY.view;
-      return IY.setUint8(AY + 0, DY), uD(IY).set(FY, IY.byteOffset + AY + 4), !0
+    function ki(TT, oT, IT, iT) {
+      const zT = TT.hx(578, oT, 4 + iT.length);
+      if (zT < 0) return !1;
+      const kT = TT.view;
+      return kT.setUint8(zT + 0, IT), xI(kT).set(iT, kT.byteOffset + zT + 4), !0
     }
 
-    function AF(YY, rY, DY, FY, AY, IY, RY, OY) {
-      const gY = YY.Ei(579, rY, 36);
-      if (gY < 0) return !1;
-      const aY = YY.view;
-      return aY.setFloat64(gY + 0, DY, !0), aY.setFloat64(gY + 8, FY, !0), aY.setFloat64(gY + 16, AY, !0), aY.setFloat64(gY + 24, IY, !0), aY.setUint16(gY + 32, RY, !0), aY.setUint8(gY + 34, OY), !0
+    function Wi(TT, oT, IT, iT, zT, kT, WT, XT) {
+      const BT = TT.hx(579, oT, 36);
+      if (BT < 0) return !1;
+      const FT = TT.view;
+      return FT.setFloat64(BT + 0, IT, !0), FT.setFloat64(BT + 8, iT, !0), FT.setFloat64(BT + 16, zT, !0), FT.setFloat64(BT + 24, kT, !0), FT.setUint16(BT + 32, WT, !0), FT.setUint8(BT + 34, XT), !0
     }
-    class IF {
-      constructor(YY, rY) {
-        this.core = YY, this.afterCall = rY
+    class Xi {
+      constructor(TT, oT) {
+        this.core = TT, this.afterCall = oT
       }
-      canModify(YY, rY, DY) {
-        const FY = this.core.HAY(YY, rY, DY);
-        return this.afterCall(), FY
+      canModify(TT, oT, IT) {
+        const iT = this.core.BkT(TT, oT, IT);
+        return this.afterCall(), iT
       }
-      terrainBlocked(YY, rY, DY, FY, AY) {
-        const IY = this.core.SIY(YY, rY, DY, FY, AY);
-        return this.afterCall(), IY
+      terrainBlocked(TT, oT, IT, iT, zT) {
+        const kT = this.core.TWT(TT, oT, IT, iT, zT);
+        return this.afterCall(), kT
       }
-      Rl(YY, rY, DY, FY) {
-        const AY = this.core.Fi(YY, rY, DY, FY);
-        return this.afterCall(), AY
+      gC(TT, oT, IT, iT) {
+        const zT = this.core.ix(TT, oT, IT, iT);
+        return this.afterCall(), zT
       }
-      blockData(YY, rY, DY) {
-        const FY = this.core.cAY(YY, rY, DY);
-        return this.afterCall(), FY
+      blockData(TT, oT, IT) {
+        const iT = this.core.WkT(TT, oT, IT);
+        return this.afterCall(), iT
       }
-      cameraSweep(YY, rY, DY, FY, AY, IY, RY) {
-        const OY = this.core.NFY(YY, rY, DY, FY, AY, IY, RY);
-        return this.afterCall(), OY
+      cameraSweep(TT, oT, IT, iT, zT, kT, WT) {
+        const XT = this.core.ozT(TT, oT, IT, iT, zT, kT, WT);
+        return this.afterCall(), XT
       }
-      hasServerTarget(YY) {
-        const rY = this.core.qAY(YY);
-        return this.afterCall(), rY
+      hasServerTarget(TT) {
+        const oT = this.core.hkT(TT);
+        return this.afterCall(), oT
       }
-      entityInteractable(YY) {
-        const rY = this.core.dAY(YY);
-        return this.afterCall(), rY
+      entityInteractable(TT) {
+        const oT = this.core.KkT(TT);
+        return this.afterCall(), oT
       }
-      entityCrouching(YY) {
-        const rY = this.core.hAY(YY);
-        return this.afterCall(), rY
+      entityCrouching(TT) {
+        const oT = this.core.ckT(TT);
+        return this.afterCall(), oT
       }
-      predictServerPosition(YY, rY, DY, FY) {
-        const AY = this.core.rIY(YY, rY, DY, FY);
-        return this.afterCall(), AY
+      predictServerPosition(TT, oT, IT, iT) {
+        const zT = this.core.UkT(TT, oT, IT, iT);
+        return this.afterCall(), zT
       }
-      setOtherEntitySetting(YY, rY, DY) {
-        const FY = this.core.zFY(YY, rY, DY);
-        return this.afterCall(), FY
+      setOtherEntitySetting(TT, oT, IT) {
+        const iT = this.core.XzT(TT, oT, IT);
+        return this.afterCall(), iT
       }
-      entityInfoBatch(YY) {
-        const rY = this.core.fFY(YY);
-        return this.afterCall(), rY
+      entityInfoBatch(TT) {
+        const oT = this.core.DzT(TT);
+        return this.afterCall(), oT
       }
-      entityName(YY) {
-        const rY = this.core.JAY(YY);
-        return this.afterCall(), rY
+      entityName(TT) {
+        const oT = this.core.MkT(TT);
+        return this.afterCall(), oT
       }
-      hasEffect(YY, rY) {
-        const DY = this.core.XAY(YY, rY);
-        return this.afterCall(), DY
+      hasEffect(TT, oT) {
+        const IT = this.core.gkT(TT, oT);
+        return this.afterCall(), IT
       }
       scratchPtr() {
-        const YY = this.core.lFY();
-        return this.afterCall(), YY
+        const TT = this.core.PiT();
+        return this.afterCall(), TT
       }
-      invSwap(YY, rY) {
-        const DY = this.core.PAY(YY, rY);
-        return this.afterCall(), DY
+      invSwap(TT, oT) {
+        const IT = this.core.EkT(TT, oT);
+        return this.afterCall(), IT
       }
-      invMove(YY, rY, DY) {
-        const FY = this.core.GAY(YY, rY, DY);
-        return this.afterCall(), FY
+      invMove(TT, oT, IT) {
+        const iT = this.core.ekT(TT, oT, IT);
+        return this.afterCall(), iT
       }
-      invQuickMove(YY, rY, DY, FY) {
-        const AY = this.core.xAY(YY, rY, DY, FY);
-        return this.afterCall(), AY
+      invQuickMove(TT, oT, IT, iT) {
+        const zT = this.core.RkT(TT, oT, IT, iT);
+        return this.afterCall(), zT
       }
-      invRemove(YY, rY, DY) {
-        const FY = this.core.nAY(YY, rY, DY);
-        return this.afterCall(), FY
+      invRemove(TT, oT, IT) {
+        const iT = this.core.vkT(TT, oT, IT);
+        return this.afterCall(), iT
       }
-      invEnchant(YY, rY, DY, FY, AY) {
-        const IY = this.core.kAY(YY, rY, DY, FY, AY);
-        return this.afterCall(), IY
+      invEnchant(TT, oT, IT, iT, zT) {
+        const kT = this.core.mkT(TT, oT, IT, iT, zT);
+        return this.afterCall(), kT
       }
-      craft(YY, rY, DY) {
-        const FY = this.core.craft(YY, rY, DY);
-        return this.afterCall(), FY
+      craft(TT, oT, IT) {
+        const iT = this.core.craft(TT, oT, IT);
+        return this.afterCall(), iT
       }
-      salvage(YY, rY, DY) {
-        const FY = this.core.salvage(YY, rY, DY);
-        return this.afterCall(), FY
+      salvage(TT, oT, IT) {
+        const iT = this.core.salvage(TT, oT, IT);
+        return this.afterCall(), iT
       }
-      selectSlot(YY) {
-        const rY = this.core.IIY(YY);
-        return this.afterCall(), rY
+      selectSlot(TT) {
+        const oT = this.core.OkT(TT);
+        return this.afterCall(), oT
       }
       closeChest() {
-        const YY = this.core.zAY();
-        return this.afterCall(), YY
+        const TT = this.core.FkT();
+        return this.afterCall(), TT
       }
-      itemAttributesBatch(YY) {
-        const rY = this.core.CFY(YY);
-        return this.afterCall(), rY
+      itemAttributesBatch(TT) {
+        const oT = this.core.SzT(TT);
+        return this.afterCall(), oT
       }
       itemNames() {
-        const YY = this.core.iV();
-        return this.afterCall(), YY
+        const TT = this.core.Eu();
+        return this.afterCall(), TT
       }
       blockProps() {
-        const YY = this.core.KAY();
-        return this.afterCall(), YY
+        const TT = this.core.XkT();
+        return this.afterCall(), TT
       }
       itemProps() {
-        const YY = this.core.UAY();
-        return this.afterCall(), YY
+        const TT = this.core.fkT();
+        return this.afterCall(), TT
       }
-      salvageRecipe(YY) {
-        const rY = this.core.hFY(YY);
-        return this.afterCall(), rY
+      salvageRecipe(TT) {
+        const oT = this.core.xzT(TT);
+        return this.afterCall(), oT
       }
-      craftingView(YY, rY, DY) {
-        const FY = this.core.ZFY(YY, rY, DY);
-        return this.afterCall(), FY
+      craftingView(TT, oT, IT) {
+        const iT = this.core.FzT(TT, oT, IT);
+        return this.afterCall(), iT
       }
       directorView() {
-        const YY = this.core.eFY();
-        return this.afterCall(), YY
+        const TT = this.core.ViT();
+        return this.afterCall(), TT
       }
       directorDefaultPose() {
-        const YY = this.core.BFY();
-        return this.afterCall(), YY
+        const TT = this.core.IzT();
+        return this.afterCall(), TT
       }
-      directorEntity(YY) {
-        const rY = this.core.cFY(YY);
-        return this.afterCall(), rY
+      directorEntity(TT) {
+        const oT = this.core.izT(TT);
+        return this.afterCall(), oT
       }
-      directorPose(YY, rY, DY, FY, AY, IY) {
-        const RY = this.core.KFY(YY, rY, DY, FY, AY, IY);
-        return this.afterCall(), RY
+      directorPose(TT, oT, IT, iT, zT, kT) {
+        const WT = this.core.kzT(TT, oT, IT, iT, zT, kT);
+        return this.afterCall(), WT
       }
-      passTimings(YY) {
-        const rY = this.core.YIY(YY);
-        return this.afterCall(), rY
+      passTimings(TT) {
+        const oT = this.core.JkT(TT);
+        return this.afterCall(), oT
       }
       drawCensus() {
-        const YY = this.core.jAY();
-        return this.afterCall(), YY
+        const TT = this.core.xkT();
+        return this.afterCall(), TT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  42329: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/bloxd_wasm_anim_bg.1c10e4dc4bc0f74381c8.wasm"
+  42095: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/bloxd_wasm_anim_bg.27943341851d95a4a103.wasm"
   },
-  42327: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      BloxdAnimWasmError: () => jY,
-      compileAnimationPackInWasm: () => MY
+  42093: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      BloxdAnimWasmError: () => YT,
+      compileAnimationPackInWasm: () => nT
     });
-    var FY = {};
+    var iT = {};
 
-    function AY(YY, rY, DY, FY, AY, IY) {
-      const RY = EY(YY, cY.vEFZ),
-        OY = KY,
-        gY = EY(rY, cY.vEFZ),
-        aY = KY,
-        vY = EY(DY, cY.vEFZ),
-        uY = KY,
-        sY = EY(FY, cY.vEFZ),
-        yY = KY,
-        QY = EY(AY, cY.vEFZ),
-        oY = KY;
-      var mY = WY(IY) ? 0 : function(YY, rY) {
-          const DY = rY(1 * YY.length, 1) >>> 0;
-          return iY().set(YY, DY / 1), KY = YY.length, DY
-        }(IY, cY.vEFZ),
-        SY = KY;
-      const lY = cY.UsyN(RY, OY, gY, aY, vY, uY, sY, yY, QY, oY, mY, SY);
-      if (lY[3]) throw VY(lY[2]);
-      var TY, eY, NY = (TY = lY[0], eY = lY[1], TY >>>= 0, iY().subarray(TY / 1, TY / 1 + eY)).slice();
-      return cY.DqQT(lY[0], 1 * lY[1], 1), NY
+    function zT(TT, oT, IT, iT, zT, kT) {
+      const WT = AT(TT, ET.uzBX),
+        XT = fT,
+        BT = AT(oT, ET.uzBX),
+        FT = fT,
+        ST = AT(IT, ET.uzBX),
+        DT = fT,
+        LT = AT(iT, ET.uzBX),
+        cT = fT,
+        KT = AT(zT, ET.uzBX),
+        MT = fT;
+      var gT = rT(kT) ? 0 : function(TT, oT) {
+          const IT = oT(1 * TT.length, 1) >>> 0;
+          return xT().set(TT, IT / 1), fT = TT.length, IT
+        }(kT, ET.uzBX),
+        wT = fT;
+      const mT = ET.ELqP(WT, XT, BT, FT, ST, DT, LT, cT, KT, MT, gT, wT);
+      if (mT[3]) throw hT(mT[2]);
+      var eT, RT, uT = (eT = mT[0], RT = mT[1], eT >>>= 0, xT().subarray(eT / 1, eT / 1 + RT)).slice();
+      return ET.p3CH(mT[0], 1 * mT[1], 1), uT
     }
 
-    function IY(YY, rY) {
-      const DY = mY(YY, cY.vEFZ, cY.EsKd),
-        FY = KY,
-        AY = cY.Fke2(DY, FY, rY);
-      if (AY[1]) throw VY(AY[0])
+    function kT(TT, oT) {
+      const IT = gT(TT, ET.uzBX, ET.IX8T),
+        iT = fT,
+        zT = ET.rYAm(IT, iT, oT);
+      if (zT[1]) throw hT(zT[0])
     }
 
-    function RY() {
-      cY.q5F1()
+    function WT() {
+      ET.nwri()
     }
 
-    function OY() {
+    function XT() {
       return {
         __proto__: null,
-        vjKU: {
+        z7Wl: {
           __proto__: null,
-          qQR5: function(YY, rY) {
-            return gY(Error(uY(YY, rY)))
+          hWXl: function(TT, oT) {
+            return BT(Error(DT(TT, oT)))
           },
-          pyqD: function(YY, rY) {
-            const DY = yY(rY),
-              FY = "string" === typeof DY ? DY : void 0;
-            var AY = WY(FY) ? 0 : mY(FY, cY.vEFZ, cY.EsKd),
-              IY = KY;
-            vY().setInt32(YY + 4, IY, !0), vY().setInt32(YY + 0, AY, !0)
+          Ib1k: function(TT, oT) {
+            const IT = cT(oT),
+              iT = "string" === typeof IT ? IT : void 0;
+            var zT = rT(iT) ? 0 : gT(iT, ET.uzBX, ET.IX8T),
+              kT = fT;
+            ST().setInt32(TT + 4, kT, !0), ST().setInt32(TT + 0, zT, !0)
           },
-          u5SX: function(YY, rY) {
-            throw new Error(uY(YY, rY))
+          TRlG: function(TT, oT) {
+            throw new Error(DT(TT, oT))
           },
-          lDVn: function(YY, rY) {
-            console.error(uY(YY, rY))
+          eqvw: function(TT, oT) {
+            console.error(DT(TT, oT))
           },
-          j9QL: function(YY) {
-            VY(YY)
+          Ukis: function(TT) {
+            hT(TT)
           }
         }
       }
     }
 
-    function gY(YY) {
-      oY === QY.length && QY.push(QY.length + 1);
-      const rY = oY;
-      return oY = QY[rY], QY[rY] = YY, rY
+    function BT(TT) {
+      MT === KT.length && KT.push(KT.length + 1);
+      const oT = MT;
+      return MT = KT[oT], KT[oT] = TT, oT
     }
-    DY.r(FY), DY.d(FY, {
-      bIY: () => AY,
-      qv: () => IY,
-      default: () => ZY,
-      initSync: () => zY,
-      kv: () => RY
+    IT.r(iT), IT.d(iT, {
+      gWT: () => zT,
+      DD: () => kT,
+      default: () => JT,
+      initSync: () => jT,
+      LD: () => WT
     });
-    let aY = null;
+    let FT = null;
 
-    function vY() {
-      return (null === aY || !0 === aY.buffer.detached || void 0 === aY.buffer.detached && aY.buffer !== cY.memory.buffer) && (aY = new DataView(cY.memory.buffer)), aY
+    function ST() {
+      return (null === FT || !0 === FT.buffer.detached || void 0 === FT.buffer.detached && FT.buffer !== ET.memory.buffer) && (FT = new DataView(ET.memory.buffer)), FT
     }
 
-    function uY(YY, rY) {
-      return function(YY, rY) {
-        TY += rY, TY >= lY && (SY = new TextDecoder("utf-8", {
+    function DT(TT, oT) {
+      return function(TT, oT) {
+        eT += oT, eT >= mT && (wT = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), SY.decode(), TY = rY);
-        return SY.decode(iY().subarray(YY, YY + rY))
-      }(YY >>> 0, rY)
+        }), wT.decode(), eT = oT);
+        return wT.decode(xT().subarray(TT, TT + oT))
+      }(TT >>> 0, oT)
     }
-    let sY = null;
+    let LT = null;
 
-    function iY() {
-      return null !== sY && 0 !== sY.byteLength || (sY = new Uint8Array(cY.memory.buffer)), sY
-    }
-
-    function yY(YY) {
-      return QY[YY]
-    }
-    let QY = new Array(1024).fill(void 0);
-    QY.push(void 0, null, !0, !1);
-    let oY = QY.length;
-
-    function WY(YY) {
-      return void 0 === YY || null === YY
+    function xT() {
+      return null !== LT && 0 !== LT.byteLength || (LT = new Uint8Array(ET.memory.buffer)), LT
     }
 
-    function EY(YY, rY) {
-      const DY = rY(4 * YY.length, 4) >>> 0,
-        FY = vY();
-      for (let AY = 0; AY < YY.length; AY++) FY.setUint32(DY + 4 * AY, gY(YY[AY]), !0);
-      return KY = YY.length, DY
+    function cT(TT) {
+      return KT[TT]
+    }
+    let KT = new Array(1024).fill(void 0);
+    KT.push(void 0, null, !0, !1);
+    let MT = KT.length;
+
+    function rT(TT) {
+      return void 0 === TT || null === TT
     }
 
-    function mY(YY, rY, DY) {
-      if (void 0 === DY) {
-        const DY = eY.encode(YY),
-          FY = rY(DY.length, 1) >>> 0;
-        return iY().subarray(FY, FY + DY.length).set(DY), KY = DY.length, FY
+    function AT(TT, oT) {
+      const IT = oT(4 * TT.length, 4) >>> 0,
+        iT = ST();
+      for (let zT = 0; zT < TT.length; zT++) iT.setUint32(IT + 4 * zT, BT(TT[zT]), !0);
+      return fT = TT.length, IT
+    }
+
+    function gT(TT, oT, IT) {
+      if (void 0 === IT) {
+        const IT = RT.encode(TT),
+          iT = oT(IT.length, 1) >>> 0;
+        return xT().subarray(iT, iT + IT.length).set(IT), fT = IT.length, iT
       }
-      let FY = YY.length,
-        AY = rY(FY, 1) >>> 0;
-      const IY = iY();
-      let RY = 0;
-      for (; RY < FY; RY++) {
-        const rY = YY.charCodeAt(RY);
-        if (rY > 127) break;
-        IY[AY + RY] = rY
+      let iT = TT.length,
+        zT = oT(iT, 1) >>> 0;
+      const kT = xT();
+      let WT = 0;
+      for (; WT < iT; WT++) {
+        const oT = TT.charCodeAt(WT);
+        if (oT > 127) break;
+        kT[zT + WT] = oT
       }
-      if (RY !== FY) {
-        0 !== RY && (YY = YY.slice(RY)), AY = DY(AY, FY, FY = RY + 3 * YY.length, 1) >>> 0;
-        const rY = iY().subarray(AY + RY, AY + FY);
-        RY += eY.encodeInto(YY, rY).written, AY = DY(AY, FY, RY, 1) >>> 0
+      if (WT !== iT) {
+        0 !== WT && (TT = TT.slice(WT)), zT = IT(zT, iT, iT = WT + 3 * TT.length, 1) >>> 0;
+        const oT = xT().subarray(zT + WT, zT + iT);
+        WT += RT.encodeInto(TT, oT).written, zT = IT(zT, iT, WT, 1) >>> 0
       }
-      return KY = RY, AY
+      return fT = WT, zT
     }
 
-    function VY(YY) {
-      const rY = yY(YY);
-      return function(YY) {
-        YY < 1028 || (QY[YY] = oY, oY = YY)
-      }(YY), rY
+    function hT(TT) {
+      const oT = cT(TT);
+      return function(TT) {
+        TT < 1028 || (KT[TT] = MT, MT = TT)
+      }(TT), oT
     }
-    let SY = new TextDecoder("utf-8", {
+    let wT = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    SY.decode();
-    const lY = 2146435072;
-    let TY = 0;
-    const eY = new TextEncoder;
-    "encodeInto" in eY || (eY.encodeInto = function(YY, rY) {
-      const DY = eY.encode(YY);
-      return rY.set(DY), {
-        read: YY.length,
-        written: DY.length
+    wT.decode();
+    const mT = 2146435072;
+    let eT = 0;
+    const RT = new TextEncoder;
+    "encodeInto" in RT || (RT.encodeInto = function(TT, oT) {
+      const IT = RT.encode(TT);
+      return oT.set(IT), {
+        read: TT.length,
+        written: IT.length
       }
     });
-    let NY, BY, cY, KY = 0;
+    let uT, vT, ET, fT = 0;
 
-    function HY(YY, rY) {
-      return BY = YY, cY = YY.exports, NY = rY, aY = null, sY = null, cY.gjkQ(), cY
+    function CT(TT, oT) {
+      return vT = TT, ET = TT.exports, uT = oT, FT = null, LT = null, ET.xBHt(), ET
     }
 
-    function zY(YY) {
-      if (void 0 !== cY) return cY;
-      void 0 !== YY && (Object.getPrototypeOf(YY) === Object.prototype ? ({
-        module: YY
-      } = YY) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const rY = OY();
-      YY instanceof WebAssembly.Module || (YY = new WebAssembly.Module(YY));
-      return HY(new WebAssembly.Instance(YY, rY), YY)
+    function jT(TT) {
+      if (void 0 !== ET) return ET;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module: TT
+      } = TT) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const oT = XT();
+      TT instanceof WebAssembly.Module || (TT = new WebAssembly.Module(TT));
+      return CT(new WebAssembly.Instance(TT, oT), TT)
     }
-    async function ZY(YY) {
-      if (void 0 !== cY) return cY;
-      void 0 !== YY && (Object.getPrototypeOf(YY) === Object.prototype ? ({
-        module_or_path: YY
-      } = YY) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const rY = OY();
-      ("string" === typeof YY || "function" === typeof Request && YY instanceof Request || "function" === typeof URL && YY instanceof URL) && (YY = fetch(YY));
+    async function JT(TT) {
+      if (void 0 !== ET) return ET;
+      void 0 !== TT && (Object.getPrototypeOf(TT) === Object.prototype ? ({
+        module_or_path: TT
+      } = TT) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const oT = XT();
+      ("string" === typeof TT || "function" === typeof Request && TT instanceof Request || "function" === typeof URL && TT instanceof URL) && (TT = fetch(TT));
       const {
-        instance: DY,
-        module: FY
-      } = await async function(YY, rY) {
-        if ("function" === typeof Response && YY instanceof Response) {
-          if (!YY.ok) throw new Error(`failed to fetch Wasm: ${YY.status} ${YY.statusText} fetching '${YY.url}'`);
+        instance: IT,
+        module: iT
+      } = await async function(TT, oT) {
+        if ("function" === typeof Response && TT instanceof Response) {
+          if (!TT.ok) throw new Error(`failed to fetch Wasm: ${TT.status} ${TT.statusText} fetching '${TT.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(YY, rY)
-          } catch (DY) {
-            if (! function(YY) {
-                switch (YY) {
+            return await WebAssembly.instantiateStreaming(TT, oT)
+          } catch (IT) {
+            if (! function(TT) {
+                switch (TT) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(YY.type) || "application/wasm" === YY.headers.get("Content-Type")) throw DY;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", DY)
+              }(TT.type) || "application/wasm" === TT.headers.get("Content-Type")) throw IT;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", IT)
           }
-          const FY = await YY.arrayBuffer();
-          return await WebAssembly.instantiate(FY, rY)
+          const iT = await TT.arrayBuffer();
+          return await WebAssembly.instantiate(iT, oT)
         } {
-          const DY = await WebAssembly.instantiate(YY, rY);
-          return DY instanceof WebAssembly.Instance ? {
-            instance: DY,
-            module: YY
-          } : DY
+          const IT = await WebAssembly.instantiate(TT, oT);
+          return IT instanceof WebAssembly.Instance ? {
+            instance: IT,
+            module: TT
+          } : IT
         }
-      }(await YY, rY);
-      return HY(DY, FY)
+      }(await TT, oT);
+      return CT(IT, iT)
     }
-    var CY = DY(3316),
-      fY = DY(6185);
-    class jY extends Error {
+    var UT = IT(3280),
+      aT = IT(6123);
+    class YT extends Error {
       stage;
-      constructor(YY, rY) {
-        super((0, CY.z)(YY, rY), {
-          cause: rY
-        }), this.name = "BloxdAnimWasmError", this.stage = YY
+      constructor(TT, oT) {
+        super((0, UT.G)(TT, oT), {
+          cause: oT
+        }), this.name = "BloxdAnimWasmError", this.stage = TT
       }
     }
-    let hY = null,
-      dY = null;
+    let QT = null,
+      OT = null;
 
-    function JY() {
-      if (dY) throw dY
+    function HT() {
+      if (OT) throw OT
     }
-    async function MY(YY, rY, AY) {
-      JY();
-      const IY = await (hY ??= (async () => {
-        let YY;
+    async function nT(TT, oT, zT) {
+      HT();
+      const kT = await (QT ??= (async () => {
+        let TT;
         try {
-          YY = await (0, CY.C)(new DY.U(DY(42329)), (0, fY.d)("bloxd_wasm_anim"))
-        } catch (rY) {
-          throw new jY((0, CY.E)(rY), rY)
+          TT = await (0, UT.J)(new IT.U(IT(42095)), (0, aT.c)("bloxd_wasm_anim"))
+        } catch (oT) {
+          throw new YT((0, UT.N)(oT), oT)
         }
         try {
-          await ZY({
-            module_or_path: YY
+          await JT({
+            module_or_path: TT
           })
-        } catch (rY) {
-          throw new jY("instantiate", rY)
+        } catch (oT) {
+          throw new YT("instantiate", oT)
         }
-        return FY
-      })(), hY.catch((() => {
-        hY = null
-      })), hY);
-      JY();
+        return iT
+      })(), QT.catch((() => {
+        QT = null
+      })), QT);
+      HT();
       try {
-        return IY.bIY(Object.entries(YY).flat(), [...rY.mobTypes], [...rY.vehicleTypes], [...rY.mobAiStates], [...rY.playerPoses], "builtIns" in AY ? AY.builtIns : void 0)
-      } catch (RY) {
-        const YY = new jY("call", RY);
-        throw RY instanceof WebAssembly.RuntimeError && (dY = YY), YY
+        return kT.gWT(Object.entries(TT).flat(), [...oT.mobTypes], [...oT.vehicleTypes], [...oT.mobAiStates], [...oT.playerPoses], "builtIns" in zT ? zT.builtIns : void 0)
+      } catch (WT) {
+        const TT = new YT("call", WT);
+        throw WT instanceof WebAssembly.RuntimeError && (OT = TT), TT
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

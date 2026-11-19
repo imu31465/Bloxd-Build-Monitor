@@ -1,77 +1,77 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  38475: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => FY
+  38089: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT
     });
-    class FY {
-      constructor(YY, rY) {
-        this.read = YY, this.apply = rY, this.release = null
+    class iT {
+      constructor(TT, oT) {
+        this.read = TT, this.apply = oT, this.release = null
       }
-      turn(YY, rY) {
-        const DY = null === this.release ? this.read() : this.release.transitionMs;
+      turn(TT, oT) {
+        const IT = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: rY,
-          forcedCameraDirection: [YY[0], YY[1], YY[2]]
+          forcedCameraDirectionTransitionMs: oT,
+          forcedCameraDirection: [TT[0], TT[1], TT[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), rY + 100),
-          transitionMs: DY
+          }), oT + 100),
+          transitionMs: IT
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(YY) {
-        null !== this.release && (clearTimeout(this.release.timer), YY && this.apply({
+      stop(TT) {
+        null !== this.release && (clearTimeout(this.release.timer), TT && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38011: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => IY,
-      f: () => AY
+  37636: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      g: () => zT
     });
-    const FY = new Map;
+    const iT = new Map;
 
-    function AY(YY, rY) {
-      FY.set(YY, rY)
+    function zT(TT, oT) {
+      iT.set(TT, oT)
     }
 
-    function IY(YY) {
-      return YY ? FY.get(YY) : void 0
+    function kT(TT) {
+      return TT ? iT.get(TT) : void 0
     }
   },
-  38902: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY
+  38532: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT
     });
-    var FY = DY(37599);
+    var iT = IT(37215);
 
-    function AY(YY, rY, DY) {
-      var AY, IY, RY, OY, gY, aY, vY;
-      const uY = (0, FY.e)(YY, rY, DY[0], DY[1], DY[2]),
-        sY = uY ? null !== (AY = uY.textCell) && void 0 !== AY ? AY : uY.rect.anchor : DY,
-        iY = rY(sY[0], sY[1], sY[2]);
+    function zT(TT, oT, IT) {
+      var zT, kT, WT, XT, BT, FT, ST;
+      const DT = (0, iT.b)(TT, oT, IT[0], IT[1], IT[2]),
+        LT = DT ? null !== (zT = DT.textCell) && void 0 !== zT ? zT : DT.rect.anchor : IT,
+        xT = oT(LT[0], LT[1], LT[2]);
       return {
-        pos: [DY[0], DY[1], DY[2]],
-        noticeboardSpan: uY && {
-          width: uY.rect.width,
-          height: uY.rect.height
+        pos: [IT[0], IT[1], IT[2]],
+        noticeboardSpan: DT && {
+          width: DT.rect.width,
+          height: DT.rect.height
         },
-        text: null !== (IY = null === iY || void 0 === iY || null === (RY = iY.persisted) || void 0 === RY || null === (OY = RY.shared) || void 0 === OY ? void 0 : OY.text) && void 0 !== IY ? IY : "",
-        textSize: null !== (gY = null === iY || void 0 === iY || null === (aY = iY.persisted) || void 0 === aY || null === (vY = aY.shared) || void 0 === vY ? void 0 : vY.textSize) && void 0 !== gY ? gY : null
+        text: null !== (kT = null === xT || void 0 === xT || null === (WT = xT.persisted) || void 0 === WT || null === (XT = WT.shared) || void 0 === XT ? void 0 : XT.text) && void 0 !== kT ? kT : "",
+        textSize: null !== (BT = null === xT || void 0 === xT || null === (FT = xT.persisted) || void 0 === FT || null === (ST = FT.shared) || void 0 === ST ? void 0 : ST.textSize) && void 0 !== BT ? BT : null
       }
     }
   },
-  37886: (YY, rY, DY) => {
-    function FY(YY) {
-      switch (YY.kind) {
+  37483: (TT, oT, IT) => {
+    function iT(TT) {
+      switch (TT.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    DY.d(rY, {
-      b: () => AY,
-      d: () => IY,
-      f: () => FY
+    IT.d(oT, {
+      d: () => zT,
+      h: () => kT,
+      j: () => iT
     });
-    const AY = 4,
-      IY = 3
+    const zT = 4,
+      kT = 3
   },
-  38495: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY,
-      e: () => IY
+  38107: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT,
+      e: () => kT
     });
-    var FY = DY(341);
-    const AY = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class IY {
-      constructor(YY) {
-        this.importGame = YY, this.loads = new Map, this.loaded = new Map
+    var iT = IT(314);
+    const zT = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class kT {
+      constructor(TT) {
+        this.importGame = TT, this.loads = new Map, this.loaded = new Map
       }
-      load(YY) {
-        const rY = (0, FY.Pb)(YY);
-        if (!AY.has(rY)) return Promise.resolve(void 0);
-        let DY = this.loads.get(rY);
-        return DY || (DY = this.importGame(rY).then((YY => {
-          const DY = YY.default;
-          if ("function" !== typeof DY) throw new Error(`${rY}'s client code has no default-exported factory`);
-          return this.loaded.set(rY, DY), DY
-        })).catch((YY => {
-          throw this.loads.delete(rY), YY
-        })), this.loads.set(rY, DY)), DY
+      load(TT) {
+        const oT = (0, iT.Ib)(TT);
+        if (!zT.has(oT)) return Promise.resolve(void 0);
+        let IT = this.loads.get(oT);
+        return IT || (IT = this.importGame(oT).then((TT => {
+          const IT = TT.default;
+          if ("function" !== typeof IT) throw new Error(`${oT}'s client code has no default-exported factory`);
+          return this.loaded.set(oT, IT), IT
+        })).catch((TT => {
+          throw this.loads.delete(oT), TT
+        })), this.loads.set(oT, IT)), IT
       }
-      loadedFactory(YY) {
-        const rY = (0, FY.Pb)(YY);
-        if (!AY.has(rY)) return;
-        const DY = this.loaded.get(rY);
-        if (!DY) throw new Error(`${rY}'s client code started before it loaded`);
-        return DY
+      loadedFactory(TT) {
+        const oT = (0, iT.Ib)(TT);
+        if (!zT.has(oT)) return;
+        const IT = this.loaded.get(oT);
+        if (!IT) throw new Error(`${oT}'s client code started before it loaded`);
+        return IT
       }
     }
   },
-  38907: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => RY
+  38537: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => WT
     });
-    var FY = DY(8908),
-      AY = DY(8770),
-      IY = DY(2864);
+    var iT = IT(8914),
+      zT = IT(8763),
+      kT = IT(2844);
 
-    function RY(YY) {
-      if (YY === FY.d) return 0;
-      const rY = (0, IY.b)(YY);
-      if (void 0 !== rY && rY <= AY.MAX_BLOCK_ID) return rY;
-      const DY = (0, IY.b)(YY.split("|")[0]);
-      if (void 0 !== DY && DY <= AY.MAX_BLOCK_ID && (0, AY.rootMetaDescOf)(DY) === YY) return DY;
-      throw new Error(`Invalid block name. You sent ${YY}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function WT(TT) {
+      if (TT === iT.c) return 0;
+      const oT = (0, kT.d)(TT);
+      if (void 0 !== oT && oT <= zT.MAX_BLOCK_ID) return oT;
+      const IT = (0, kT.d)(TT.split("|")[0]);
+      if (void 0 !== IT && IT <= zT.MAX_BLOCK_ID && (0, zT.rootMetaDescOf)(IT) === TT) return IT;
+      throw new Error(`Invalid block name. You sent ${TT}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  38547: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => AY
+  38150: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT
     });
-    var FY = DY(19);
-    class AY {
-      constructor(YY) {
-        this.screen = YY, this.hidesHud = !1
+    var iT = IT(12);
+    class zT {
+      constructor(TT) {
+        this.screen = TT, this.hidesHud = !1
       }
-      show(YY, rY) {
-        this.screen.setFade(YY.colour, YY.alpha), this.screen.setLetterbox(!0 === rY.letterbox, YY.alpha < 1), this.setHudHidden(!0 === rY.hideHud)
+      show(TT, oT) {
+        this.screen.setFade(TT.colour, TT.alpha), this.screen.setLetterbox(!0 === oT.letterbox, TT.alpha < 1), this.setHudHidden(!0 === oT.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(YY) {
-        this.hidesHud !== YY && (this.hidesHud = YY, FY.b.set({
-          isUiHiddenByCamera: YY
+      setHudHidden(TT) {
+        this.hidesHud !== TT && (this.hidesHud = TT, iT.c.set({
+          isUiHiddenByCamera: TT
         }))
       }
     }
   },
-  38513: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => FY,
-      h: () => sY,
-      i: () => uY,
-      k: () => RY,
-      m: () => yY,
-      q: () => gY,
-      r: () => QY,
-      t: () => aY,
-      v: () => OY,
-      y: () => vY
+  38124: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT,
+      i: () => LT,
+      k: () => DT,
+      l: () => WT,
+      m: () => cT,
+      o: () => BT,
+      p: () => KT,
+      t: () => FT,
+      u: () => XT,
+      v: () => ST
     });
-    const FY = Math.PI / 2 - .001,
-      AY = 2 * Math.PI,
-      IY = 1e-9;
+    const iT = Math.PI / 2 - .001,
+      zT = 2 * Math.PI,
+      kT = 1e-9;
 
-    function RY(YY, rY) {
-      rY.heading = YY.heading, rY.pitch = YY.pitch
+    function WT(TT, oT) {
+      oT.heading = TT.heading, oT.pitch = TT.pitch
     }
 
-    function OY(YY, rY) {
-      const DY = rY - YY;
-      return DY - AY * Math.floor((DY + Math.PI) / AY)
+    function XT(TT, oT) {
+      const IT = oT - TT;
+      return IT - zT * Math.floor((IT + Math.PI) / zT)
     }
 
-    function gY(YY, rY, DY) {
-      return YY + OY(YY, rY) * DY
+    function BT(TT, oT, IT) {
+      return TT + XT(TT, oT) * IT
     }
 
-    function aY(YY) {
-      if (!Number.isFinite(YY)) return YY;
-      const rY = YY - AY * Math.floor(YY / AY);
-      return rY < AY ? rY : 0
+    function FT(TT) {
+      if (!Number.isFinite(TT)) return TT;
+      const oT = TT - zT * Math.floor(TT / zT);
+      return oT < zT ? oT : 0
     }
 
-    function vY(YY, rY) {
-      return YY + OY(YY, rY)
+    function ST(TT, oT) {
+      return TT + XT(TT, oT)
     }
 
-    function uY(YY) {
-      return Math.max(-FY, Math.min(FY, YY))
+    function DT(TT) {
+      return Math.max(-iT, Math.min(iT, TT))
     }
 
-    function sY(YY, rY, DY) {
-      const FY = Math.cos(rY);
-      return DY[0] = FY * Math.sin(YY), DY[1] = -Math.sin(rY), DY[2] = FY * Math.cos(YY), DY
+    function LT(TT, oT, IT) {
+      const iT = Math.cos(oT);
+      return IT[0] = iT * Math.sin(TT), IT[1] = -Math.sin(oT), IT[2] = iT * Math.cos(TT), IT
     }
 
-    function iY(YY, rY, DY, FY) {
-      const AY = Math.sqrt(YY * YY + DY * DY);
-      return AY < IY && Math.abs(rY) < IY || (AY >= IY && (FY.heading = Math.atan2(YY, DY)), FY.pitch = uY(Math.atan2(-rY, AY) + 0)), FY
+    function xT(TT, oT, IT, iT) {
+      const zT = Math.sqrt(TT * TT + IT * IT);
+      return zT < kT && Math.abs(oT) < kT || (zT >= kT && (iT.heading = Math.atan2(TT, IT)), iT.pitch = DT(Math.atan2(-oT, zT) + 0)), iT
     }
 
-    function yY(YY, rY) {
-      return iY(YY[0], YY[1], YY[2], rY)
+    function cT(TT, oT) {
+      return xT(TT[0], TT[1], TT[2], oT)
     }
 
-    function QY(YY, rY, DY) {
-      return iY(rY[0] - YY[0], rY[1] - YY[1], rY[2] - YY[2], DY)
+    function KT(TT, oT, IT) {
+      return xT(oT[0] - TT[0], oT[1] - TT[1], oT[2] - TT[2], IT)
     }
   },
-  38539: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => IY,
-      d: () => AY
+  38147: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => kT,
+      e: () => zT
     });
-    var FY = DY(38513);
+    var iT = IT(38124);
 
-    function AY(YY) {
-      var rY;
-      const DY = "default" === YY.mode ? "movement" : null !== (rY = YY.playerFacing) && void 0 !== rY ? rY : "movement";
-      return "cursor" === DY ? {
-        facing: DY,
+    function zT(TT) {
+      var oT;
+      const IT = "default" === TT.mode ? "movement" : null !== (oT = TT.playerFacing) && void 0 !== oT ? oT : "movement";
+      return "cursor" === IT ? {
+        facing: IT,
         mouseTurns: null
       } : {
-        facing: DY,
-        mouseTurns: "default" !== YY.mode && void 0 !== YY.playerLook ? "look" : "view"
+        facing: IT,
+        mouseTurns: "default" !== TT.mode && void 0 !== TT.playerLook ? "look" : "view"
       }
     }
 
-    function IY(YY, rY, DY, AY, IY, RY) {
-      return RY.Tl = 0, RY.Bl = 0, RY.pointedAt = void 0, void 0 !== AY ? IY ? (RY.pointedAt = AY, YY) : (0, FY.t)(AY.heading) : IY ? (RY.Tl = rY, RY.Bl = DY, YY) : (0, FY.t)(YY + rY)
+    function kT(TT, oT, IT, zT, kT, WT) {
+      return WT.RC = 0, WT.uC = 0, WT.pointedAt = void 0, void 0 !== zT ? kT ? (WT.pointedAt = zT, TT) : (0, iT.t)(zT.heading) : kT ? (WT.RC = oT, WT.uC = IT, TT) : (0, iT.t)(TT + oT)
     }
   },
-  38524: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => XY
+  38133: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => lT
     });
-    var FY = DY(38533),
-      AY = DY(38513),
-      IY = DY(36359);
+    var iT = IT(38136),
+      zT = IT(38124),
+      kT = IT(35948);
 
-    function RY(YY, rY, DY, FY) {
-      if (!(FY > 0)) return rY;
-      const AY = rY > YY ? Math.min(rY, YY + DY / FY) : Math.max(rY, YY - DY / FY);
-      return Math.abs(rY - AY) < 1e-9 ? rY : AY
+    function WT(TT, oT, IT, iT) {
+      if (!(iT > 0)) return oT;
+      const zT = oT > TT ? Math.min(oT, TT + IT / iT) : Math.max(oT, TT - IT / iT);
+      return Math.abs(oT - zT) < 1e-9 ? oT : zT
     }
-    class OY {
+    class XT {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: FY.d,
+          colour: iT.g,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(YY) {
-        !this.isGoingOut() && this.sinceTurnMs < FY.j.minFadeTurnMs ? this.waiting = {
+      fadeOut(TT) {
+        !this.isGoingOut() && this.sinceTurnMs < iT.o.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: YY
-        } : (this.waiting = null, this.startOut(YY))
+          transition: TT
+        } : (this.waiting = null, this.startOut(TT))
       }
-      fadeIn(YY) {
-        this.isGoingOut() ? this.sinceTurnMs < FY.j.minFadeTurnMs ? this.waiting = {
+      fadeIn(TT) {
+        this.isGoingOut() ? this.sinceTurnMs < iT.o.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: YY
-        } : (this.waiting = null, this.startIn(YY)) : this.waiting = null
+          minMs: TT
+        } : (this.waiting = null, this.startIn(TT)) : this.waiting = null
       }
-      advance(YY) {
-        const rY = this.waiting;
-        if (null === rY) return this.step(YY);
-        const DY = FY.j.minFadeTurnMs - this.sinceTurnMs;
-        if (DY > YY) return this.step(YY);
-        const AY = this.step(DY);
-        return this.waiting = null, "out" === rY.turn ? this.startOut(rY.transition) : this.startIn(rY.minMs), this.step(YY - DY) || AY
+      advance(TT) {
+        const oT = this.waiting;
+        if (null === oT) return this.step(TT);
+        const IT = iT.o.minFadeTurnMs - this.sinceTurnMs;
+        if (IT > TT) return this.step(TT);
+        const zT = this.step(IT);
+        return this.waiting = null, "out" === oT.turn ? this.startOut(oT.transition) : this.startIn(oT.minMs), this.step(TT - IT) || zT
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(YY) {
-        ("in" === this.phase || null === this.phase && this.clearMs < FY.j.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = YY.colour), this.outMs = YY.outMs, this.holdMs = YY.holdMs, this.inMs = YY.inMs
+      startOut(TT) {
+        ("in" === this.phase || null === this.phase && this.clearMs < iT.o.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = TT.colour), this.outMs = TT.outMs, this.holdMs = TT.holdMs, this.inMs = TT.inMs
       }
-      startIn(YY) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(YY, this.inMs)
+      startIn(TT) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(TT, this.inMs)
       }
-      step(YY) {
-        const rY = this.screen;
-        this.sinceTurnMs += YY, null === this.phase && (this.clearMs += YY);
-        let DY = !1,
-          AY = YY;
+      step(TT) {
+        const oT = this.screen;
+        this.sinceTurnMs += TT, null === this.phase && (this.clearMs += TT);
+        let IT = !1,
+          zT = TT;
         if ("out" === this.phase) {
-          const FY = (1 - rY.alpha) * this.outMs;
-          if (rY.alpha = RY(rY.alpha, 1, YY, this.outMs), rY.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, AY = Math.max(0, YY - FY), DY = !0
+          const iT = (1 - oT.alpha) * this.outMs;
+          if (oT.alpha = WT(oT.alpha, 1, TT, this.outMs), oT.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, zT = Math.max(0, TT - iT), IT = !0
         }
-        let IY = YY;
+        let kT = TT;
         if ("hold" === this.phase) {
-          this.heldMs += AY;
-          const YY = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - FY.j.minFadeTurnMs);
-          if (YY < 0 || DY) return DY;
-          this.phase = "in", this.sinceTurnMs = YY, IY = YY
+          this.heldMs += zT;
+          const TT = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - iT.o.minFadeTurnMs);
+          if (TT < 0 || IT) return IT;
+          this.phase = "in", this.sinceTurnMs = TT, kT = TT
         }
-        return "in" === this.phase && (rY.alpha = RY(rY.alpha, 0, IY, this.inMs), rY.alpha <= 0 && (this.phase = null, this.clearMs = 0)), DY
+        return "in" === this.phase && (oT.alpha = WT(oT.alpha, 0, kT, this.inMs), oT.alpha <= 0 && (this.phase = null, this.clearMs = 0)), IT
       }
     }
-    var gY = DY(38504),
-      aY = DY(38536),
-      vY = DY(1774),
-      uY = DY(35999);
+    var BT = IT(38120),
+      FT = IT(38138),
+      ST = IT(1724),
+      DT = IT(35574);
 
-    function sY(YY, rY) {
-      for (let DY = 0; DY < rY.length; DY++) rY[DY] = YY[DY]
+    function LT(TT, oT) {
+      for (let IT = 0; IT < oT.length; IT++) oT[IT] = TT[IT]
     }
 
-    function iY(YY, rY) {
-      var DY;
-      return null !== (DY = YY.fov) && void 0 !== DY ? DY : rY.getDefaultFov()
+    function xT(TT, oT) {
+      var IT;
+      return null !== (IT = TT.fov) && void 0 !== IT ? IT : oT.getDefaultFov()
     }
 
-    function yY(YY, rY, DY, FY, AY) {
-      const IY = 2 / FY,
-        RY = Math.exp(-IY * AY);
-      for (let OY = 0; OY < YY.length; OY++) {
-        const FY = YY[OY] - DY[OY],
-          gY = (rY[OY] + IY * FY) * AY;
-        YY[OY] = DY[OY] + (FY + gY) * RY, rY[OY] = (rY[OY] - IY * gY) * RY
+    function cT(TT, oT, IT, iT, zT) {
+      const kT = 2 / iT,
+        WT = Math.exp(-kT * zT);
+      for (let XT = 0; XT < TT.length; XT++) {
+        const iT = TT[XT] - IT[XT],
+          BT = (oT[XT] + kT * iT) * zT;
+        TT[XT] = IT[XT] + (iT + BT) * WT, oT[XT] = (oT[XT] - kT * BT) * WT
       }
     }
-    class QY {
-      constructor(YY, rY, DY, FY) {
-        var IY, RY, OY, gY, aY;
-        this.settings = YY, this.Mu = rY, this.targets = DY, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.ci = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class KT {
+      constructor(TT, oT, IT, iT) {
+        var kT, WT, XT, BT, FT;
+        this.settings = TT, this.iL = oT, this.targets = IT, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.LM = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, AY.t)((0, vY.q)(null !== (IY = YY.viewHeading) && void 0 !== IY ? IY : 0)),
-          pitch: (0, AY.i)((0, vY.q)(null !== (RY = YY.viewElevation) && void 0 !== RY ? RY : 45))
-        }, this.closestDistance = null !== (OY = YY.closestDistance) && void 0 !== OY ? OY : Math.min(6, null !== (gY = YY.furthestDistance) && void 0 !== gY ? gY : 1 / 0), this.furthestDistance = null !== (aY = YY.furthestDistance) && void 0 !== aY ? aY : Math.max(64, this.closestDistance);
-        const uY = (0, AY.h)(this.base.heading, this.base.pitch, this.forward),
-          sY = FY.position,
-          iY = this.closestDistance;
-        this.goal = [sY[0] + uY[0] * iY, sY[1] + uY[1] * iY, sY[2] + uY[2] * iY, iY, this.base.heading, this.base.pitch]
+          heading: (0, zT.t)((0, ST.m)(null !== (kT = TT.viewHeading) && void 0 !== kT ? kT : 0)),
+          pitch: (0, zT.k)((0, ST.m)(null !== (WT = TT.viewElevation) && void 0 !== WT ? WT : 45))
+        }, this.closestDistance = null !== (XT = TT.closestDistance) && void 0 !== XT ? XT : Math.min(6, null !== (BT = TT.furthestDistance) && void 0 !== BT ? BT : 1 / 0), this.furthestDistance = null !== (FT = TT.furthestDistance) && void 0 !== FT ? FT : Math.max(64, this.closestDistance);
+        const DT = (0, zT.i)(this.base.heading, this.base.pitch, this.forward),
+          LT = iT.position,
+          xT = this.closestDistance;
+        this.goal = [LT[0] + DT[0] * xT, LT[1] + DT[1] * xT, LT[2] + DT[2] * xT, xT, this.base.heading, this.base.pitch]
       }
-      update(YY, rY, DY) {
-        var FY, IY;
-        this.placeGoal(null !== (FY = this.settings.fov) && void 0 !== FY ? FY : this.Mu.getBaseFov()), this.goal[4] = (0, AY.y)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const RY = null !== (IY = this.settings.smoothMs) && void 0 !== IY ? IY : 400;
-        !this.started || RY < 1 ? (sY(this.goal, this.smoothed), this.ci.fill(0), this.started = !0) : yY(this.smoothed, this.ci, this.goal, RY, YY), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, AY.i)(this.smoothed[5]), rY.apply(this.angles, DY);
-        const OY = (0, AY.h)(DY.heading, DY.pitch, this.forward);
-        for (let AY = 0; AY < 3; AY++) DY.position[AY] = this.smoothed[AY] - OY[AY] * this.smoothed[3];
-        DY.fov = iY(this.settings, this.Mu)
+      update(TT, oT, IT) {
+        var iT, kT;
+        this.placeGoal(null !== (iT = this.settings.fov) && void 0 !== iT ? iT : this.iL.getBaseFov()), this.goal[4] = (0, zT.v)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const WT = null !== (kT = this.settings.smoothMs) && void 0 !== kT ? kT : 400;
+        !this.started || WT < 1 ? (LT(this.goal, this.smoothed), this.LM.fill(0), this.started = !0) : cT(this.smoothed, this.LM, this.goal, WT, TT), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, zT.k)(this.smoothed[5]), oT.apply(this.angles, IT);
+        const XT = (0, zT.i)(IT.heading, IT.pitch, this.forward);
+        for (let zT = 0; zT < 3; zT++) IT.position[zT] = this.smoothed[zT] - XT[zT] * this.smoothed[3];
+        IT.fov = xT(this.settings, this.iL)
       }
-      continueFrom(YY) {
-        YY instanceof QY && (sY(YY.goal, this.goal), sY(YY.smoothed, this.smoothed), sY(YY.ci, this.ci), this.framedTargets = YY.framedTargets, this.started = YY.started)
+      continueFrom(TT) {
+        TT instanceof KT && (LT(TT.goal, this.goal), LT(TT.smoothed, this.smoothed), LT(TT.LM, this.LM), this.framedTargets = TT.framedTargets, this.started = TT.started)
       }
       reset() {
-        this.ci.fill(0), this.started = !1
+        this.LM.fill(0), this.started = !1
       }
-      placeGoal(YY) {
-        var rY;
-        let DY = 0;
-        for (const vY of this.settings.targets) {
-          const YY = this.targets.currentAimPoint(vY);
-          YY && (0, gY.i)(YY, this.pointAt(DY++))
+      placeGoal(TT) {
+        var oT;
+        let IT = 0;
+        for (const ST of this.settings.targets) {
+          const TT = this.targets.currentAimPoint(ST);
+          TT && (0, BT.g)(TT, this.pointAt(IT++))
         }
-        if (DY > 0) this.framedTargets = !0;
+        if (IT > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const YY = this.targets.aimPoint(this.Mu.localPlayerId);
-          YY && (0, gY.i)(YY, this.pointAt(DY++))
+          const TT = this.targets.aimPoint(this.iL.localPlayerId);
+          TT && (0, BT.g)(TT, this.pointAt(IT++))
         }
-        const FY = this.goal;
-        if (0 === DY) return void(FY[3] = this.withinDistances(FY[3]));
-        for (let gY = 0; gY < 3; gY++) {
-          let YY = 1 / 0,
-            rY = -1 / 0;
-          for (let FY = 0; FY < DY; FY++) YY = Math.min(YY, this.points[FY][gY]), rY = Math.max(rY, this.points[FY][gY]);
-          FY[gY] = (YY + rY) / 2
+        const iT = this.goal;
+        if (0 === IT) return void(iT[3] = this.withinDistances(iT[3]));
+        for (let BT = 0; BT < 3; BT++) {
+          let TT = 1 / 0,
+            oT = -1 / 0;
+          for (let iT = 0; iT < IT; iT++) TT = Math.min(TT, this.points[iT][BT]), oT = Math.max(oT, this.points[iT][BT]);
+          iT[BT] = (TT + oT) / 2
         }
-        let AY = 0;
-        for (let gY = 0; gY < DY; gY++) {
-          const YY = this.points[gY];
-          AY = Math.max(AY, Math.hypot(YY[0] - FY[0], YY[1] - FY[1], YY[2] - FY[2]))
+        let zT = 0;
+        for (let BT = 0; BT < IT; BT++) {
+          const TT = this.points[BT];
+          zT = Math.max(zT, Math.hypot(TT[0] - iT[0], TT[1] - iT[1], TT[2] - iT[2]))
         }
-        const IY = Math.tan((0, vY.q)(YY) / 2),
-          RY = Math.atan(IY * (!0 === this.settings.letterbox ? uY.d : 1)),
-          OY = Math.atan(IY * this.Mu.getAspectRatio()),
-          aY = (AY + (null !== (rY = this.settings.padding) && void 0 !== rY ? rY : 2)) / Math.sin(Math.min(RY, OY));
-        FY[3] = this.withinDistances(aY)
+        const kT = Math.tan((0, ST.m)(TT) / 2),
+          WT = Math.atan(kT * (!0 === this.settings.letterbox ? DT.g : 1)),
+          XT = Math.atan(kT * this.iL.getAspectRatio()),
+          FT = (zT + (null !== (oT = this.settings.padding) && void 0 !== oT ? oT : 2)) / Math.sin(Math.min(WT, XT));
+        iT[3] = this.withinDistances(FT)
       }
-      withinDistances(YY) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, YY))
+      withinDistances(TT) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, TT))
       }
-      pointAt(YY) {
-        return YY === this.points.length && this.points.push([0, 0, 0]), this.points[YY]
+      pointAt(TT) {
+        return TT === this.points.length && this.points.push([0, 0, 0]), this.points[TT]
       }
     }
-    class oY {
-      constructor(YY) {
-        this.limits = YY, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class MT {
+      constructor(TT) {
+        this.limits = TT, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(YY) {
-        this.limits && (this.yawOffset = YY.yawOffset, this.pitchOffset = YY.pitchOffset, this.idleMs = YY.idleMs)
+      continueFrom(TT) {
+        this.limits && (this.yawOffset = TT.yawOffset, this.pitchOffset = TT.pitchOffset, this.idleMs = TT.idleMs)
       }
-      update(YY, rY) {
-        const DY = this.limits;
-        if (!DY) return;
-        const FY = Number.isFinite(rY.Tl) ? rY.Tl : 0,
-          AY = Number.isFinite(rY.Bl) ? rY.Bl : 0;
-        if (rY.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: rY.pointedAt.heading,
-          pitch: rY.pointedAt.pitch
+      update(TT, oT) {
+        const IT = this.limits;
+        if (!IT) return;
+        const iT = Number.isFinite(oT.RC) ? oT.RC : 0,
+          zT = Number.isFinite(oT.uC) ? oT.uC : 0;
+        if (oT.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: oT.pointedAt.heading,
+          pitch: oT.pointedAt.pitch
         };
-        else if (0 !== FY || 0 !== AY) this.idleMs = 0, this.yawOffset += FY, this.pitchOffset += AY;
+        else if (0 !== iT || 0 !== zT) this.idleMs = 0, this.yawOffset += iT, this.pitchOffset += zT;
         else {
-          const rY = Math.max(0, this.idleMs + YY - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += YY, void 0 !== DY.returnMs && rY > 0) {
-            const YY = DY.returnMs > 0 ? Math.exp(-3 * rY / DY.returnMs) : 0;
-            this.yawOffset *= YY, this.pitchOffset *= YY
+          const oT = Math.max(0, this.idleMs + TT - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += TT, void 0 !== IT.returnMs && oT > 0) {
+            const TT = IT.returnMs > 0 ? Math.exp(-3 * oT / IT.returnMs) : 0;
+            this.yawOffset *= TT, this.pitchOffset *= TT
           }
         }
-        this.clampOffsets(DY)
+        this.clampOffsets(IT)
       }
-      clampOffsets(YY) {
-        if (YY.maxYaw >= 180) this.yawOffset = (0, AY.v)(0, this.yawOffset);
+      clampOffsets(TT) {
+        if (TT.maxYaw >= 180) this.yawOffset = (0, zT.u)(0, this.yawOffset);
         else {
-          const rY = (0, vY.q)(YY.maxYaw);
-          this.yawOffset = Math.max(-rY, Math.min(rY, this.yawOffset))
+          const oT = (0, ST.m)(TT.maxYaw);
+          this.yawOffset = Math.max(-oT, Math.min(oT, this.yawOffset))
         }
-        const rY = (0, vY.q)(YY.maxPitch);
-        this.pitchOffset = Math.max(-rY, Math.min(rY, this.pitchOffset))
+        const oT = (0, ST.m)(TT.maxPitch);
+        this.pitchOffset = Math.max(-oT, Math.min(oT, this.pitchOffset))
       }
-      apply(YY, rY) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, AY.v)(YY.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - YY.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const DY = (0, AY.i)(YY.pitch + this.pitchOffset);
-        this.pitchOffset = DY - YY.pitch, rY.heading = (0, AY.t)(YY.heading + this.yawOffset), rY.pitch = DY
+      apply(TT, oT) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, zT.u)(TT.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - TT.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const IT = (0, zT.k)(TT.pitch + this.pitchOffset);
+        this.pitchOffset = IT - TT.pitch, oT.heading = (0, zT.t)(TT.heading + this.yawOffset), oT.pitch = IT
       }
-      unapply(YY, rY) {
-        rY.heading = (0, AY.t)(YY.heading - this.yawOffset), rY.pitch = (0, AY.i)(YY.pitch - this.pitchOffset)
+      unapply(TT, oT) {
+        oT.heading = (0, zT.t)(TT.heading - this.yawOffset), oT.pitch = (0, zT.k)(TT.pitch - this.pitchOffset)
       }
     }
-    const WY = 1e-6;
+    const rT = 1e-6;
 
-    function EY(YY) {
-      return Math.sqrt(YY[0] * YY[0] + YY[1] * YY[1] + YY[2] * YY[2])
+    function AT(TT) {
+      return Math.sqrt(TT[0] * TT[0] + TT[1] * TT[1] + TT[2] * TT[2])
     }
 
-    function mY(YY, rY, DY, FY, AY) {
-      const IY = AY * AY,
-        RY = IY * AY;
-      return (2 * RY - 3 * IY + 1) * YY + (RY - 2 * IY + AY) * rY + (-2 * RY + 3 * IY) * DY + (RY - IY) * FY
+    function gT(TT, oT, IT, iT, zT) {
+      const kT = zT * zT,
+        WT = kT * zT;
+      return (2 * WT - 3 * kT + 1) * TT + (WT - 2 * kT + zT) * oT + (-2 * WT + 3 * kT) * IT + (WT - kT) * iT
     }
 
-    function VY(YY, rY, DY, FY, AY) {
-      const IY = AY * AY;
-      return (6 * IY - 6 * AY) * YY + (3 * IY - 4 * AY + 1) * rY + (-6 * IY + 6 * AY) * DY + (3 * IY - 2 * AY) * FY
+    function hT(TT, oT, IT, iT, zT) {
+      const kT = zT * zT;
+      return (6 * kT - 6 * zT) * TT + (3 * kT - 4 * zT + 1) * oT + (-6 * kT + 6 * zT) * IT + (3 * kT - 2 * zT) * iT
     }
 
-    function SY(YY, rY) {
-      const DY = rY[0] - YY[0],
-        FY = rY[1] - YY[1],
-        AY = rY[2] - YY[2];
-      return Math.sqrt(DY * DY + FY * FY + AY * AY)
+    function wT(TT, oT) {
+      const IT = oT[0] - TT[0],
+        iT = oT[1] - TT[1],
+        zT = oT[2] - TT[2];
+      return Math.sqrt(IT * IT + iT * iT + zT * zT)
     }
 
-    function lY(YY, rY, DY, FY, AY, IY) {
-      for (let RY = 0; RY < 3; RY++) IY[RY] = AY ? YY[RY] * FY : DY[RY] - rY[RY];
-      return AY && function(YY, rY) {
-        const DY = EY(YY);
-        if (DY > rY) {
-          const FY = rY / DY;
-          YY[0] *= FY, YY[1] *= FY, YY[2] *= FY
+    function mT(TT, oT, IT, iT, zT, kT) {
+      for (let WT = 0; WT < 3; WT++) kT[WT] = zT ? TT[WT] * iT : IT[WT] - oT[WT];
+      return zT && function(TT, oT) {
+        const IT = AT(TT);
+        if (IT > oT) {
+          const iT = oT / IT;
+          TT[0] *= iT, TT[1] *= iT, TT[2] *= iT
         }
-      }(IY, 3 * SY(rY, DY)), IY
+      }(kT, 3 * wT(oT, IT)), kT
     }
 
-    function TY(YY, rY, DY, FY) {
-      for (let AY = 0; AY < 3; AY++) FY[AY] = 6 * (rY[AY] - YY[AY]) - 2 * DY[AY];
-      if (EY(FY) < WY)
-        for (let AY = 0; AY < 3; AY++) FY[AY] = rY[AY] - YY[AY];
-      return FY
+    function eT(TT, oT, IT, iT) {
+      for (let zT = 0; zT < 3; zT++) iT[zT] = 6 * (oT[zT] - TT[zT]) - 2 * IT[zT];
+      if (AT(iT) < rT)
+        for (let zT = 0; zT < 3; zT++) iT[zT] = oT[zT] - TT[zT];
+      return iT
     }
 
-    function eY(YY, rY) {
-      return [2 * rY[0] - YY[0], 2 * rY[1] - YY[1], 2 * rY[2] - YY[2]]
+    function RT(TT, oT) {
+      return [2 * oT[0] - TT[0], 2 * oT[1] - TT[1], 2 * oT[2] - TT[2]]
     }
 
-    function NY(YY, rY, DY, FY, AY, IY, RY) {
-      if (!IY && !RY) return 0;
-      const OY = IY ? YY : 2 * rY - DY,
-        gY = RY ? DY : 2 * rY - YY,
-        aY = IY ? FY : AY,
-        vY = RY ? AY : FY,
-        uY = (rY - OY) / aY,
-        sY = (gY - rY) / vY;
-      if (uY * sY <= 0) return 0;
-      const iY = (gY - OY) / (aY + vY),
-        yY = 3 * Math.min(Math.abs(uY), Math.abs(sY));
-      return Math.max(-yY, Math.min(yY, iY))
+    function uT(TT, oT, IT, iT, zT, kT, WT) {
+      if (!kT && !WT) return 0;
+      const XT = kT ? TT : 2 * oT - IT,
+        BT = WT ? IT : 2 * oT - TT,
+        FT = kT ? iT : zT,
+        ST = WT ? zT : iT,
+        DT = (oT - XT) / FT,
+        LT = (BT - oT) / ST;
+      if (DT * LT <= 0) return 0;
+      const xT = (BT - XT) / (FT + ST),
+        cT = 3 * Math.min(Math.abs(DT), Math.abs(LT));
+      return Math.max(-cT, Math.min(cT, xT))
     }
 
-    function BY(YY, rY, DY, FY, AY, IY, RY) {
+    function vT(TT, oT, IT, iT, zT, kT, WT) {
       const {
-        u: OY,
-        segmentMs: gY
-      } = YY;
-      if (!YY.curved) return DY + (FY - DY) * OY;
-      return mY(DY, NY(rY, DY, FY, YY.beforeMs, gY, IY, !0) * gY, FY, NY(DY, FY, AY, gY, YY.afterMs, !0, RY) * gY, OY)
+        u: XT,
+        segmentMs: BT
+      } = TT;
+      if (!TT.curved) return IT + (iT - IT) * XT;
+      return gT(IT, uT(oT, IT, iT, TT.beforeMs, BT, kT, !0) * BT, iT, uT(IT, iT, zT, BT, TT.afterMs, !0, WT) * BT, XT)
     }
 
-    function cY(YY) {
-      return Math.abs(YY.pitch) >= AY.e
+    function ET(TT) {
+      return Math.abs(TT.pitch) >= zT.e
     }
-    class KY {
-      constructor(YY, rY, DY, FY, AY) {
-        this.nodes = YY, this.prevNodes = DY, this.nextNodes = FY, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class fT {
+      constructor(TT, oT, IT, iT, zT) {
+        this.nodes = TT, this.prevNodes = IT, this.nextNodes = iT, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = YY.map(((YY, DY) => this.nodeTangent(rY, AY, DY)))
+        }, this.tangents = TT.map(((TT, IT) => this.nodeTangent(oT, zT, IT)))
       }
-      sample(YY, rY, DY) {
+      sample(TT, oT, IT) {
         const {
-          index: FY,
-          toIndex: IY,
-          segmentMs: RY,
-          curved: OY
-        } = YY, gY = this.fromAngles, aY = this.toAngles, vY = this.nodeAngles(FY, DY.position, rY, gY), uY = this.nodeAngles(IY, DY.position, rY, aY);
-        if (RY > 0 && "aim" !== vY && "aim" !== uY && this.liveTangent(YY, gY)) return DY.heading = (0, AY.t)(gY.heading), void(DY.pitch = gY.pitch);
-        if ("none" === vY && "none" === uY) return;
-        !OY && RY > 0 && ("tangent" === vY && this.liveTangent(YY, gY), "tangent" === uY && this.liveTangent(YY, aY)), "none" === vY ? (0, AY.k)(aY, gY) : "none" === uY && (0, AY.k)(gY, aY);
-        const sY = OY && YY.beforeIndex >= 0 && "none" !== this.nodeAngles(YY.beforeIndex, DY.position, rY, this.beforeAngles),
-          iY = OY && YY.afterIndex >= 0 && "none" !== this.nodeAngles(YY.afterIndex, DY.position, rY, this.afterAngles),
-          yY = (0, AY.y)(gY.heading, aY.heading),
-          QY = BY(YY, sY ? (0, AY.y)(gY.heading, this.beforeAngles.heading) : 0, gY.heading, yY, iY ? (0, AY.y)(yY, this.afterAngles.heading) : 0, sY, iY);
-        DY.heading = (0, AY.t)(QY), DY.pitch = (0, AY.i)(BY(YY, this.beforeAngles.pitch, gY.pitch, aY.pitch, this.afterAngles.pitch, sY, iY))
+          index: iT,
+          toIndex: kT,
+          segmentMs: WT,
+          curved: XT
+        } = TT, BT = this.fromAngles, FT = this.toAngles, ST = this.nodeAngles(iT, IT.position, oT, BT), DT = this.nodeAngles(kT, IT.position, oT, FT);
+        if (WT > 0 && "aim" !== ST && "aim" !== DT && this.liveTangent(TT, BT)) return IT.heading = (0, zT.t)(BT.heading), void(IT.pitch = BT.pitch);
+        if ("none" === ST && "none" === DT) return;
+        !XT && WT > 0 && ("tangent" === ST && this.liveTangent(TT, BT), "tangent" === DT && this.liveTangent(TT, FT)), "none" === ST ? (0, zT.l)(FT, BT) : "none" === DT && (0, zT.l)(BT, FT);
+        const LT = XT && TT.beforeIndex >= 0 && "none" !== this.nodeAngles(TT.beforeIndex, IT.position, oT, this.beforeAngles),
+          xT = XT && TT.afterIndex >= 0 && "none" !== this.nodeAngles(TT.afterIndex, IT.position, oT, this.afterAngles),
+          cT = (0, zT.v)(BT.heading, FT.heading),
+          KT = vT(TT, LT ? (0, zT.v)(BT.heading, this.beforeAngles.heading) : 0, BT.heading, cT, xT ? (0, zT.v)(cT, this.afterAngles.heading) : 0, LT, xT);
+        IT.heading = (0, zT.t)(KT), IT.pitch = (0, zT.k)(vT(TT, this.beforeAngles.pitch, BT.pitch, FT.pitch, this.afterAngles.pitch, LT, xT))
       }
-      nodeAngles(YY, rY, DY, FY) {
-        const AY = this.rawNodeAngles(YY, rY, DY, FY);
-        return "none" !== AY && cY(FY) && !this.borrowHeading(this.prevNodes[YY], rY, DY, FY) && this.borrowHeading(this.nextNodes[YY], rY, DY, FY), AY
+      nodeAngles(TT, oT, IT, iT) {
+        const zT = this.rawNodeAngles(TT, oT, IT, iT);
+        return "none" !== zT && ET(iT) && !this.borrowHeading(this.prevNodes[TT], oT, IT, iT) && this.borrowHeading(this.nextNodes[TT], oT, IT, iT), zT
       }
-      borrowHeading(YY, rY, DY, FY) {
-        const AY = this.borrowedAngles;
-        return !(YY < 0 || "none" === this.rawNodeAngles(YY, rY, DY, AY) || cY(AY)) && (FY.heading = AY.heading, !0)
+      borrowHeading(TT, oT, IT, iT) {
+        const zT = this.borrowedAngles;
+        return !(TT < 0 || "none" === this.rawNodeAngles(TT, oT, IT, zT) || ET(zT)) && (iT.heading = zT.heading, !0)
       }
-      rawNodeAngles(YY, rY, DY, FY) {
-        const IY = this.nodes[YY].keyframe;
-        if (IY.lookDirection) return (0, AY.m)(IY.lookDirection, FY), "aim";
-        if (void 0 !== IY.lookAt) {
-          const YY = DY(IY.lookAt);
-          if (YY) return (0, AY.r)(rY, YY, FY), "aim"
+      rawNodeAngles(TT, oT, IT, iT) {
+        const kT = this.nodes[TT].keyframe;
+        if (kT.lookDirection) return (0, zT.m)(kT.lookDirection, iT), "aim";
+        if (void 0 !== kT.lookAt) {
+          const TT = IT(kT.lookAt);
+          if (TT) return (0, zT.p)(oT, TT, iT), "aim"
         }
-        const RY = this.tangents[YY];
-        return RY ? ((0, AY.k)(RY, FY), "tangent") : "none"
+        const WT = this.tangents[TT];
+        return WT ? ((0, zT.l)(WT, iT), "tangent") : "none"
       }
-      liveTangent(YY, rY) {
-        const DY = this.nodes[YY.index].position,
-          FY = this.nodes[YY.toIndex].position,
-          IY = this.derivative;
-        for (let AY = 0; AY < 3; AY++) IY[AY] = VY(DY[AY], YY.fromTangent[AY], FY[AY], YY.toTangent[AY], YY.u);
-        return EY(IY) > 1e-9 ? ((0, AY.m)(IY, rY), !0) : !(SY(DY, FY) < WY) && ((0, AY.m)(TY(DY, FY, YY.u < .5 ? YY.toTangent : YY.fromTangent, IY), rY), !0)
+      liveTangent(TT, oT) {
+        const IT = this.nodes[TT.index].position,
+          iT = this.nodes[TT.toIndex].position,
+          kT = this.derivative;
+        for (let zT = 0; zT < 3; zT++) kT[zT] = hT(IT[zT], TT.fromTangent[zT], iT[zT], TT.toTangent[zT], TT.u);
+        return AT(kT) > 1e-9 ? ((0, zT.m)(kT, oT), !0) : !(wT(IT, iT) < rT) && ((0, zT.m)(eT(IT, iT, TT.u < .5 ? TT.toTangent : TT.fromTangent, kT), oT), !0)
       }
-      nodeTangent(YY, rY, DY) {
-        var FY;
-        const IY = YY[DY];
-        if (EY(IY) > 1e-9) return (0, AY.m)(IY, {
+      nodeTangent(TT, oT, IT) {
+        var iT;
+        const kT = TT[IT];
+        if (AT(kT) > 1e-9) return (0, zT.m)(kT, {
           heading: 0,
           pitch: 0
         });
-        const RY = null !== (FY = this.restDirectionTo(DY, DY + 1, YY, rY)) && void 0 !== FY ? FY : this.restDirectionTo(DY, DY - 1, YY, rY);
-        return RY ? (0, AY.m)(RY, {
+        const WT = null !== (iT = this.restDirectionTo(IT, IT + 1, TT, oT)) && void 0 !== iT ? iT : this.restDirectionTo(IT, IT - 1, TT, oT);
+        return WT ? (0, zT.m)(WT, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(YY, rY, DY, FY) {
-        const AY = this.nodes[YY],
-          IY = this.nodes[rY];
-        if (!IY || SY(AY.position, IY.position) < WY) return null;
-        const [RY, OY] = rY > YY ? [AY, IY] : [IY, AY], gY = lY(DY[rY], RY.position, OY.position, OY.timeMs - RY.timeMs, FY, [0, 0, 0]);
-        return TY(RY.position, OY.position, gY, [0, 0, 0])
+      restDirectionTo(TT, oT, IT, iT) {
+        const zT = this.nodes[TT],
+          kT = this.nodes[oT];
+        if (!kT || wT(zT.position, kT.position) < rT) return null;
+        const [WT, XT] = oT > TT ? [zT, kT] : [kT, zT], BT = mT(IT[oT], WT.position, XT.position, XT.timeMs - WT.timeMs, iT, [0, 0, 0]);
+        return eT(WT.position, XT.position, BT, [0, 0, 0])
       }
     }
 
-    function HY(YY, rY) {
-      const DY = YY.lookDirection || rY.lookDirection ? function(YY, rY) {
-        if (!YY || !rY) return YY === rY;
-        const DY = EY(YY),
-          FY = EY(rY);
-        return Math.hypot(YY[0] / DY - rY[0] / FY, YY[1] / DY - rY[1] / FY, YY[2] / DY - rY[2] / FY) < WY
-      }(YY.lookDirection, rY.lookDirection) : (FY = YY.lookAt, AY = rY.lookAt, "object" !== typeof FY || "object" !== typeof AY ? FY === AY : SY(FY, AY) < WY);
-      var FY, AY;
-      return SY(YY.position, rY.position) < WY && YY.fov === rY.fov && DY
+    function CT(TT, oT) {
+      const IT = TT.lookDirection || oT.lookDirection ? function(TT, oT) {
+        if (!TT || !oT) return TT === oT;
+        const IT = AT(TT),
+          iT = AT(oT);
+        return Math.hypot(TT[0] / IT - oT[0] / iT, TT[1] / IT - oT[1] / iT, TT[2] / IT - oT[2] / iT) < rT
+      }(TT.lookDirection, oT.lookDirection) : (iT = TT.lookAt, zT = oT.lookAt, "object" !== typeof iT || "object" !== typeof zT ? iT === zT : wT(iT, zT) < rT);
+      var iT, zT;
+      return wT(TT.position, oT.position) < rT && TT.fov === oT.fov && IT
     }
-    class zY {
-      constructor(YY, rY, DY) {
-        if (this.smooth = rY, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class jT {
+      constructor(TT, oT, IT) {
+        if (this.smooth = oT, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === YY.length) throw new Error("A camera path needs at least one keyframe");
-        for (let IY = 1; IY < YY.length; IY++)
-          if (!(YY[IY].timeMs > YY[IY - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = YY.map((YY => {
-          var rY;
+          }, 0 === TT.length) throw new Error("A camera path needs at least one keyframe");
+        for (let kT = 1; kT < TT.length; kT++)
+          if (!(TT[kT].timeMs > TT[kT - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = TT.map((TT => {
+          var oT;
           return {
-            timeMs: YY.timeMs,
-            position: [...YY.position],
-            keyframe: YY,
-            easing: (0, IY.k)(null !== (rY = YY.easing) && void 0 !== rY ? rY : "linear")
+            timeMs: TT.timeMs,
+            position: [...TT.position],
+            keyframe: TT,
+            easing: (0, kT.k)(null !== (oT = TT.easing) && void 0 !== oT ? oT : "linear")
           }
         }));
-        const FY = this.nodes[0],
-          AY = this.nodes[this.nodes.length - 1],
-          RY = DY && this.nodes.length > 1;
-        RY && !HY(FY.keyframe, AY.keyframe) && this.nodes.push({
-          ...FY,
-          timeMs: AY.timeMs + (AY.timeMs - FY.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = RY ? this.nodes[this.nodes.length - 1].timeMs - FY.timeMs : 0, this.prevNodes = this.nodes.map(((YY, rY) => this.neighbour(rY, -1))), this.nextNodes = this.nodes.map(((YY, rY) => this.neighbour(rY, 1))), this.prevGaps = this.prevNodes.map(((YY, rY) => YY >= 0 ? this.gapMs(rY, -1) : 0)), this.nextGaps = this.nextNodes.map(((YY, rY) => YY >= 0 ? this.gapMs(rY, 1) : 0)), this.velocities = this.nodes.map(((YY, rY) => {
-          const DY = this.prevNodes[rY],
-            FY = this.nextNodes[rY];
-          return function(YY, rY, DY, FY, AY, IY) {
-            if (IY[0] = 0, IY[1] = 0, IY[2] = 0, !YY && !DY) return IY;
-            const RY = null !== YY && void 0 !== YY ? YY : eY(null !== DY && void 0 !== DY ? DY : rY, rY),
-              OY = null !== DY && void 0 !== DY ? DY : eY(null !== YY && void 0 !== YY ? YY : rY, rY),
-              gY = YY ? FY : AY,
-              aY = DY ? AY : FY,
-              vY = SY(RY, rY),
-              uY = SY(rY, OY);
-            if (vY < WY || uY < WY) return IY;
-            const sY = Math.sqrt(vY),
-              iY = Math.sqrt(uY),
-              yY = (sY + iY) / (gY + aY);
-            for (let QY = 0; QY < 3; QY++) {
-              const YY = (rY[QY] - RY[QY]) / sY - (OY[QY] - RY[QY]) / (sY + iY) + (OY[QY] - rY[QY]) / iY;
-              IY[QY] = YY * yY
+        const iT = this.nodes[0],
+          zT = this.nodes[this.nodes.length - 1],
+          WT = IT && this.nodes.length > 1;
+        WT && !CT(iT.keyframe, zT.keyframe) && this.nodes.push({
+          ...iT,
+          timeMs: zT.timeMs + (zT.timeMs - iT.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = WT ? this.nodes[this.nodes.length - 1].timeMs - iT.timeMs : 0, this.prevNodes = this.nodes.map(((TT, oT) => this.neighbour(oT, -1))), this.nextNodes = this.nodes.map(((TT, oT) => this.neighbour(oT, 1))), this.prevGaps = this.prevNodes.map(((TT, oT) => TT >= 0 ? this.gapMs(oT, -1) : 0)), this.nextGaps = this.nextNodes.map(((TT, oT) => TT >= 0 ? this.gapMs(oT, 1) : 0)), this.velocities = this.nodes.map(((TT, oT) => {
+          const IT = this.prevNodes[oT],
+            iT = this.nextNodes[oT];
+          return function(TT, oT, IT, iT, zT, kT) {
+            if (kT[0] = 0, kT[1] = 0, kT[2] = 0, !TT && !IT) return kT;
+            const WT = null !== TT && void 0 !== TT ? TT : RT(null !== IT && void 0 !== IT ? IT : oT, oT),
+              XT = null !== IT && void 0 !== IT ? IT : RT(null !== TT && void 0 !== TT ? TT : oT, oT),
+              BT = TT ? iT : zT,
+              FT = IT ? zT : iT,
+              ST = wT(WT, oT),
+              DT = wT(oT, XT);
+            if (ST < rT || DT < rT) return kT;
+            const LT = Math.sqrt(ST),
+              xT = Math.sqrt(DT),
+              cT = (LT + xT) / (BT + FT);
+            for (let KT = 0; KT < 3; KT++) {
+              const TT = (oT[KT] - WT[KT]) / LT - (XT[KT] - WT[KT]) / (LT + xT) + (XT[KT] - oT[KT]) / xT;
+              kT[KT] = TT * cT
             }
-            return IY
-          }(DY >= 0 ? this.nodes[DY].position : null, YY.position, FY >= 0 ? this.nodes[FY].position : null, this.prevGaps[rY], this.nextGaps[rY], [0, 0, 0])
-        })), this.aim = new KY(this.nodes, this.velocities, this.prevNodes, this.nextNodes, rY)
+            return kT
+          }(IT >= 0 ? this.nodes[IT].position : null, TT.position, iT >= 0 ? this.nodes[iT].position : null, this.prevGaps[oT], this.nextGaps[oT], [0, 0, 0])
+        })), this.aim = new fT(this.nodes, this.velocities, this.prevNodes, this.nextNodes, oT)
       }
-      sample(YY, rY, DY, FY) {
-        const AY = this.findSegment(this.pathTime(YY));
-        this.samplePosition(AY, FY.position), this.aim.sample(AY, rY, FY);
+      sample(TT, oT, IT, iT) {
+        const zT = this.findSegment(this.pathTime(TT));
+        this.samplePosition(zT, iT.position), this.aim.sample(zT, oT, iT);
         const {
-          beforeIndex: IY,
-          afterIndex: RY
-        } = AY;
-        FY.fov = BY(AY, IY >= 0 ? this.fovAt(IY, DY) : 0, this.fovAt(AY.index, DY), this.fovAt(AY.toIndex, DY), RY >= 0 ? this.fovAt(RY, DY) : 0, IY >= 0, RY >= 0)
+          beforeIndex: kT,
+          afterIndex: WT
+        } = zT;
+        iT.fov = vT(zT, kT >= 0 ? this.fovAt(kT, IT) : 0, this.fovAt(zT.index, IT), this.fovAt(zT.toIndex, IT), WT >= 0 ? this.fovAt(WT, IT) : 0, kT >= 0, WT >= 0)
       }
-      pathTime(YY) {
-        const rY = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || YY <= rY) return YY;
-        const DY = YY - rY;
-        return rY + DY - this.loopMs * Math.floor(DY / this.loopMs)
+      pathTime(TT) {
+        const oT = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || TT <= oT) return TT;
+        const IT = TT - oT;
+        return oT + IT - this.loopMs * Math.floor(IT / this.loopMs)
       }
-      findSegment(YY) {
-        const rY = this.nodes,
-          DY = this.segment;
-        let FY = DY.index;
-        for (YY < rY[FY].timeMs && (FY = 0); FY < rY.length - 2 && rY[FY + 1].timeMs <= YY;) FY++;
-        const AY = Math.min(FY + 1, rY.length - 1),
-          RY = rY[AY].timeMs - rY[FY].timeMs;
-        return DY.index = FY, DY.toIndex = AY, DY.segmentMs = RY, DY.u = RY > 0 ? (0, IY.i)((YY - rY[FY].timeMs) / RY, rY[FY].easing) : 1, DY.curved = this.smooth && RY > 0, DY.beforeIndex = this.prevNodes[FY], DY.afterIndex = this.nextNodes[AY], DY.beforeMs = this.prevGaps[FY], DY.afterMs = this.nextGaps[AY], DY
+      findSegment(TT) {
+        const oT = this.nodes,
+          IT = this.segment;
+        let iT = IT.index;
+        for (TT < oT[iT].timeMs && (iT = 0); iT < oT.length - 2 && oT[iT + 1].timeMs <= TT;) iT++;
+        const zT = Math.min(iT + 1, oT.length - 1),
+          WT = oT[zT].timeMs - oT[iT].timeMs;
+        return IT.index = iT, IT.toIndex = zT, IT.segmentMs = WT, IT.u = WT > 0 ? (0, kT.j)((TT - oT[iT].timeMs) / WT, oT[iT].easing) : 1, IT.curved = this.smooth && WT > 0, IT.beforeIndex = this.prevNodes[iT], IT.afterIndex = this.nextNodes[zT], IT.beforeMs = this.prevGaps[iT], IT.afterMs = this.nextGaps[zT], IT
       }
-      samplePosition(YY, rY) {
+      samplePosition(TT, oT) {
         const {
-          fromTangent: DY,
-          toTangent: FY,
-          curved: AY
-        } = YY, IY = this.nodes[YY.index].position, RY = this.nodes[YY.toIndex].position;
-        lY(this.velocities[YY.index], IY, RY, YY.segmentMs, AY, DY), lY(this.velocities[YY.toIndex], IY, RY, YY.segmentMs, AY, FY);
-        const OY = YY.u;
-        for (let gY = 0; gY < 3; gY++) rY[gY] = AY ? mY(IY[gY], DY[gY], RY[gY], FY[gY], OY) : IY[gY] + (RY[gY] - IY[gY]) * OY
+          fromTangent: IT,
+          toTangent: iT,
+          curved: zT
+        } = TT, kT = this.nodes[TT.index].position, WT = this.nodes[TT.toIndex].position;
+        mT(this.velocities[TT.index], kT, WT, TT.segmentMs, zT, IT), mT(this.velocities[TT.toIndex], kT, WT, TT.segmentMs, zT, iT);
+        const XT = TT.u;
+        for (let BT = 0; BT < 3; BT++) oT[BT] = zT ? gT(kT[BT], IT[BT], WT[BT], iT[BT], XT) : kT[BT] + (WT[BT] - kT[BT]) * XT
       }
-      fovAt(YY, rY) {
-        var DY;
-        return null !== (DY = this.nodes[YY].keyframe.fov) && void 0 !== DY ? DY : rY
+      fovAt(TT, oT) {
+        var IT;
+        return null !== (IT = this.nodes[TT].keyframe.fov) && void 0 !== IT ? IT : oT
       }
-      neighbour(YY, rY) {
-        const DY = this.nodes.length - 1,
-          FY = YY + rY;
-        return FY >= 0 && FY <= DY ? FY : this.loopMs <= 0 || DY < 2 ? -1 : FY < 0 ? DY - 1 : 1
+      neighbour(TT, oT) {
+        const IT = this.nodes.length - 1,
+          iT = TT + oT;
+        return iT >= 0 && iT <= IT ? iT : this.loopMs <= 0 || IT < 2 ? -1 : iT < 0 ? IT - 1 : 1
       }
-      gapMs(YY, rY) {
-        const DY = this.nodes.length - 1;
-        if (1 === rY) {
-          const rY = YY === DY ? 0 : YY;
-          return this.nodes[rY + 1].timeMs - this.nodes[rY].timeMs
+      gapMs(TT, oT) {
+        const IT = this.nodes.length - 1;
+        if (1 === oT) {
+          const oT = TT === IT ? 0 : TT;
+          return this.nodes[oT + 1].timeMs - this.nodes[oT].timeMs
         }
-        const FY = 0 === YY ? DY : YY;
-        return this.nodes[FY].timeMs - this.nodes[FY - 1].timeMs
+        const iT = 0 === TT ? IT : TT;
+        return this.nodes[iT].timeMs - this.nodes[iT - 1].timeMs
       }
     }
-    class ZY {
-      constructor(YY) {
-        this.Mu = YY, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = rY => YY.getEntityPosition(rY), this.readAimPoint = rY => YY.getEntityAimPoint(rY)
+    class JT {
+      constructor(TT) {
+        this.iL = TT, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = oT => TT.getEntityPosition(oT), this.readAimPoint = oT => TT.getEntityAimPoint(oT)
       }
-      aimPoint(YY) {
-        return "string" !== typeof YY ? (0, gY.o)(YY, 3) ? YY : null : this.resolve(YY, this.readAimPoint, this.lastAimPoints)
+      aimPoint(TT) {
+        return "string" !== typeof TT ? (0, BT.o)(TT, 3) ? TT : null : this.resolve(TT, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(YY) {
-        const rY = "string" === typeof YY ? this.Mu.getEntityAimPoint(YY) : YY;
-        return rY && (0, gY.o)(rY, 3) ? rY : null
+      currentAimPoint(TT) {
+        const oT = "string" === typeof TT ? this.iL.getEntityAimPoint(TT) : TT;
+        return oT && (0, BT.o)(oT, 3) ? oT : null
       }
-      feetPosition(YY) {
-        return this.resolve(YY, this.readFeet, this.lastFeet)
+      feetPosition(TT) {
+        return this.resolve(TT, this.readFeet, this.lastFeet)
       }
-      heading(YY) {
-        const rY = this.Mu.getEntityHeading(YY);
-        if (null !== rY && Number.isFinite(rY)) return this.lastHeadings.set(YY, rY), rY;
-        const DY = this.lastHeadings.get(YY);
-        return void 0 !== DY ? DY : YY === this.Mu.localPlayerId ? 0 : this.heading(this.Mu.localPlayerId)
+      heading(TT) {
+        const oT = this.iL.getEntityHeading(TT);
+        if (null !== oT && Number.isFinite(oT)) return this.lastHeadings.set(TT, oT), oT;
+        const IT = this.lastHeadings.get(TT);
+        return void 0 !== IT ? IT : TT === this.iL.localPlayerId ? 0 : this.heading(this.iL.localPlayerId)
       }
-      resolve(YY, rY, DY) {
-        const FY = rY(YY);
-        let AY = DY.get(YY);
-        return FY && (0, gY.o)(FY, 3) ? (AY || (AY = [0, 0, 0], DY.set(YY, AY)), AY[0] = FY[0], AY[1] = FY[1], AY[2] = FY[2], AY) : AY || (YY === this.Mu.localPlayerId ? null : this.resolve(this.Mu.localPlayerId, rY, DY))
+      resolve(TT, oT, IT) {
+        const iT = oT(TT);
+        let zT = IT.get(TT);
+        return iT && (0, BT.o)(iT, 3) ? (zT || (zT = [0, 0, 0], IT.set(TT, zT)), zT[0] = iT[0], zT[1] = iT[1], zT[2] = iT[2], zT) : zT || (TT === this.iL.localPlayerId ? null : this.resolve(this.iL.localPlayerId, oT, IT))
       }
     }
 
-    function CY(YY) {
+    function UT(TT) {
       return {
-        heading: YY.heading,
-        pitch: YY.pitch
+        heading: TT.heading,
+        pitch: TT.pitch
       }
     }
 
-    function fY(YY, rY) {
-      Number.isFinite(YY.heading) && Number.isFinite(YY.pitch) || (0, AY.k)(rY, YY)
+    function aT(TT, oT) {
+      Number.isFinite(TT.heading) && Number.isFinite(TT.pitch) || (0, zT.l)(oT, TT)
     }
 
-    function jY(YY, rY, DY, FY, IY) {
-      if (rY) return void(0, AY.m)(rY, IY);
-      const RY = FY.aimPoint(DY);
-      RY && (0, AY.r)(YY, RY, IY)
+    function YT(TT, oT, IT, iT, kT) {
+      if (oT) return void(0, zT.m)(oT, kT);
+      const WT = iT.aimPoint(IT);
+      WT && (0, zT.p)(TT, WT, kT)
     }
-    class hY {
-      constructor(YY, rY, DY, FY) {
-        this.settings = YY, this.Mu = rY, this.targets = DY, this.base = void 0, this.base = CY(FY)
+    class QT {
+      constructor(TT, oT, IT, iT) {
+        this.settings = TT, this.iL = oT, this.targets = IT, this.base = void 0, this.base = UT(iT)
       }
-      update(YY, rY, DY) {
-        var FY;
-        const AY = this.settings;
-        (0, gY.i)(AY.position, DY.position), jY(AY.position, AY.lookDirection, null !== (FY = AY.lookAt) && void 0 !== FY ? FY : this.Mu.localPlayerId, this.targets, this.base), rY.apply(this.base, DY), DY.fov = iY(AY, this.Mu)
+      update(TT, oT, IT) {
+        var iT;
+        const zT = this.settings;
+        (0, BT.g)(zT.position, IT.position), YT(zT.position, zT.lookDirection, null !== (iT = zT.lookAt) && void 0 !== iT ? iT : this.iL.localPlayerId, this.targets, this.base), oT.apply(this.base, IT), IT.fov = xT(zT, this.iL)
       }
-      continueFrom(YY) {
-        YY instanceof hY && (0, AY.k)(YY.base, this.base)
+      continueFrom(TT) {
+        TT instanceof QT && (0, zT.l)(TT.base, this.base)
       }
-      reset(YY) {
-        fY(this.base, YY)
+      reset(TT) {
+        aT(this.base, TT)
       }
     }
-    class dY {
-      constructor(YY, rY, DY, FY) {
-        this.settings = YY, this.Mu = rY, this.targets = DY, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.ci = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = CY(FY), this.goal = [...FY.position]
+    class OT {
+      constructor(TT, oT, IT, iT) {
+        this.settings = TT, this.iL = oT, this.targets = IT, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.LM = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = UT(iT), this.goal = [...iT.position]
       }
-      update(YY, rY, DY) {
-        var FY, AY, IY;
-        const RY = this.settings,
-          OY = null !== (FY = RY.target) && void 0 !== FY ? FY : this.Mu.localPlayerId,
-          aY = this.targets.feetPosition(OY);
-        let vY = !1;
-        aY && (vY = this.foundFeet && SY(this.lastFeet, aY) > 32 + .1 * YY, (0, gY.i)(aY, this.lastFeet), this.foundFeet = !0, this.placeGoal(aY, OY));
-        const uY = null !== (AY = RY.smoothMs) && void 0 !== AY ? AY : 0;
-        !this.started || uY < 1 || vY ? ((0, gY.i)(this.goal, this.smoothed), this.ci.fill(0), this.started = !0) : yY(this.smoothed, this.ci, this.goal, uY, YY), vY && (this.distance = -1), (0, gY.i)(this.smoothed, DY.position);
-        const sY = !0 === RY.avoidTerrain ? this.pullIn(OY, YY, DY) : 1;
-        let QY = this.goal;
-        if ("target" === RY.offsetSpace) QY = DY.position;
-        else if (sY < 1) {
-          QY = this.aimOrigin;
-          for (let YY = 0; YY < 3; YY++) QY[YY] = DY.position[YY] + (this.goal[YY] - this.smoothed[YY]) * sY
+      update(TT, oT, IT) {
+        var iT, zT, kT;
+        const WT = this.settings,
+          XT = null !== (iT = WT.target) && void 0 !== iT ? iT : this.iL.localPlayerId,
+          FT = this.targets.feetPosition(XT);
+        let ST = !1;
+        FT && (ST = this.foundFeet && wT(this.lastFeet, FT) > 32 + .1 * TT, (0, BT.g)(FT, this.lastFeet), this.foundFeet = !0, this.placeGoal(FT, XT));
+        const DT = null !== (zT = WT.smoothMs) && void 0 !== zT ? zT : 0;
+        !this.started || DT < 1 || ST ? ((0, BT.g)(this.goal, this.smoothed), this.LM.fill(0), this.started = !0) : cT(this.smoothed, this.LM, this.goal, DT, TT), ST && (this.distance = -1), (0, BT.g)(this.smoothed, IT.position);
+        const LT = !0 === WT.avoidTerrain ? this.pullIn(XT, TT, IT) : 1;
+        let KT = this.goal;
+        if ("target" === WT.offsetSpace) KT = IT.position;
+        else if (LT < 1) {
+          KT = this.aimOrigin;
+          for (let TT = 0; TT < 3; TT++) KT[TT] = IT.position[TT] + (this.goal[TT] - this.smoothed[TT]) * LT
         }
-        jY(QY, RY.lookDirection, null !== (IY = RY.lookAt) && void 0 !== IY ? IY : OY, this.targets, this.base), rY.apply(this.base, DY), DY.fov = iY(RY, this.Mu)
+        YT(KT, WT.lookDirection, null !== (kT = WT.lookAt) && void 0 !== kT ? kT : XT, this.targets, this.base), oT.apply(this.base, IT), IT.fov = xT(WT, this.iL)
       }
-      continueFrom(YY) {
-        YY instanceof dY && (0, FY.m)(YY.settings.target, this.settings.target) && ((0, AY.k)(YY.base, this.base), (0, gY.i)(YY.goal, this.goal), (0, gY.i)(YY.lastFeet, this.lastFeet), this.foundFeet = YY.foundFeet, (0, gY.i)(YY.smoothed, this.smoothed), (0, gY.i)(YY.ci, this.ci), this.started = YY.started, !0 === YY.settings.avoidTerrain && (this.distance = YY.distance))
+      continueFrom(TT) {
+        TT instanceof OT && (0, iT.x)(TT.settings.target, this.settings.target) && ((0, zT.l)(TT.base, this.base), (0, BT.g)(TT.goal, this.goal), (0, BT.g)(TT.lastFeet, this.lastFeet), this.foundFeet = TT.foundFeet, (0, BT.g)(TT.smoothed, this.smoothed), (0, BT.g)(TT.LM, this.LM), this.started = TT.started, !0 === TT.settings.avoidTerrain && (this.distance = TT.distance))
       }
-      reset(YY) {
-        fY(this.base, YY), this.ci.fill(0), this.started = !1, this.distance = -1
+      reset(TT) {
+        aT(this.base, TT), this.LM.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(YY, rY, DY) {
-        const FY = this.targets.aimPoint(YY);
-        if (!FY) return 1;
-        const AY = DY.position,
-          IY = SY(FY, AY);
-        if (!(IY > 0)) return 1;
-        const RY = this.toCamera;
-        for (let gY = 0; gY < 3; gY++) RY[gY] = (AY[gY] - FY[gY]) / IY;
-        const OY = function(YY, rY, DY) {
-          return YY < 0 || rY < YY ? rY : rY + (YY - rY) * Math.exp(-DY / 150)
-        }(this.distance, function(YY, rY, DY, FY) {
-          const AY = YY.raycastTerrain(rY, DY, FY);
-          return null !== AY && Number.isFinite(AY) ? Math.min(FY, Math.max(0, AY - .2)) : FY
-        }(this.Mu, FY, RY, IY), rY);
-        if (IY - OY < .001) return this.distance = -1, 1;
-        this.distance = OY;
-        for (let gY = 0; gY < 3; gY++) AY[gY] = FY[gY] + RY[gY] * OY;
-        return OY / IY
+      pullIn(TT, oT, IT) {
+        const iT = this.targets.aimPoint(TT);
+        if (!iT) return 1;
+        const zT = IT.position,
+          kT = wT(iT, zT);
+        if (!(kT > 0)) return 1;
+        const WT = this.toCamera;
+        for (let BT = 0; BT < 3; BT++) WT[BT] = (zT[BT] - iT[BT]) / kT;
+        const XT = function(TT, oT, IT) {
+          return TT < 0 || oT < TT ? oT : oT + (TT - oT) * Math.exp(-IT / 150)
+        }(this.distance, function(TT, oT, IT, iT) {
+          const zT = TT.raycastTerrain(oT, IT, iT);
+          return null !== zT && Number.isFinite(zT) ? Math.min(iT, Math.max(0, zT - .2)) : iT
+        }(this.iL, iT, WT, kT), oT);
+        if (kT - XT < .001) return this.distance = -1, 1;
+        this.distance = XT;
+        for (let BT = 0; BT < 3; BT++) zT[BT] = iT[BT] + WT[BT] * XT;
+        return XT / kT
       }
-      placeGoal(YY, rY) {
-        const DY = this.settings.offset;
-        let FY = DY[0],
-          AY = DY[2];
+      placeGoal(TT, oT) {
+        const IT = this.settings.offset;
+        let iT = IT[0],
+          zT = IT[2];
         if ("target" === this.settings.offsetSpace) {
-          const YY = this.targets.heading(rY),
-            IY = Math.cos(YY),
-            RY = Math.sin(YY);
-          FY = DY[0] * IY + DY[2] * RY, AY = -DY[0] * RY + DY[2] * IY
+          const TT = this.targets.heading(oT),
+            kT = Math.cos(TT),
+            WT = Math.sin(TT);
+          iT = IT[0] * kT + IT[2] * WT, zT = -IT[0] * WT + IT[2] * kT
         }
-        this.goal[0] = YY[0] + FY, this.goal[1] = YY[1] + DY[1], this.goal[2] = YY[2] + AY
+        this.goal[0] = TT[0] + iT, this.goal[1] = TT[1] + IT[1], this.goal[2] = TT[2] + zT
       }
     }
-    class JY {
-      constructor(YY, rY, DY, FY) {
-        var AY, IY;
-        this.settings = YY, this.Mu = rY, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = YY.keyframes.length > 0 ? new zY(YY.keyframes, null === (AY = YY.smooth) || void 0 === AY || AY, null !== (IY = YY.loop) && void 0 !== IY && IY) : null, this.base = (0, gY.h)(FY, (0, gY.j)()), this.resolveTarget = YY => DY.aimPoint(YY)
+    class HT {
+      constructor(TT, oT, IT, iT) {
+        var zT, kT;
+        this.settings = TT, this.iL = oT, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = TT.keyframes.length > 0 ? new jT(TT.keyframes, null === (zT = TT.smooth) || void 0 === zT || zT, null !== (kT = TT.loop) && void 0 !== kT && kT) : null, this.base = (0, BT.e)(iT, (0, BT.i)()), this.resolveTarget = TT => IT.aimPoint(TT)
       }
-      update(YY, rY, DY) {
-        this.elapsedMs += YY;
-        const FY = iY(this.settings, this.Mu);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, FY, this.base) : this.base.fov = FY, (0, gY.i)(this.base.position, DY.position), DY.fov = this.base.fov, rY.apply(this.base, DY)
+      update(TT, oT, IT) {
+        this.elapsedMs += TT;
+        const iT = xT(this.settings, this.iL);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, iT, this.base) : this.base.fov = iT, (0, BT.g)(this.base.position, IT.position), IT.fov = this.base.fov, oT.apply(this.base, IT)
       }
-      continueFrom(YY) {
-        YY instanceof JY && (0, FY.m)(YY.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = YY.elapsedMs, (0, gY.h)(YY.base, this.base))
+      continueFrom(TT) {
+        TT instanceof HT && (0, iT.x)(TT.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = TT.elapsedMs, (0, BT.e)(TT.base, this.base))
       }
-      reset(YY) {
-        fY(this.base, YY), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(TT) {
+        aT(this.base, TT), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function MY(YY, rY) {
-      return (0, FY.n)(YY, rY)
+    function nT(TT, oT) {
+      return (0, iT.y)(TT, oT)
     }
-    class wY {
-      constructor(YY, rY, DY) {
-        var FY;
-        this.settings = YY, this.Mu = rY, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const AY = null !== DY && DY.settings.mode === YY.mode,
-          IY = AY ? DY.pose : rY.getDefaultPose();
-        this.pose = (0, gY.h)(IY, (0, gY.j)()), this.lastGoodPose = (0, gY.h)(AY ? DY.lastGoodPose : IY, (0, gY.j)()), this.look = new oY(YY.playerLook), this.targets = null !== (FY = null === DY || void 0 === DY ? void 0 : DY.targets) && void 0 !== FY ? FY : new ZY(rY);
-        const RY = (0, gY.h)(IY, (0, gY.j)());
-        AY && DY.look.unapply(RY, RY), this.mode = function(YY, rY, DY, FY) {
-          switch (YY.mode) {
+    class qT {
+      constructor(TT, oT, IT) {
+        var iT;
+        this.settings = TT, this.iL = oT, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const zT = null !== IT && IT.settings.mode === TT.mode,
+          kT = zT ? IT.pose : oT.getDefaultPose();
+        this.pose = (0, BT.e)(kT, (0, BT.i)()), this.lastGoodPose = (0, BT.e)(zT ? IT.lastGoodPose : kT, (0, BT.i)()), this.look = new MT(TT.playerLook), this.targets = null !== (iT = null === IT || void 0 === IT ? void 0 : IT.targets) && void 0 !== iT ? iT : new JT(oT);
+        const WT = (0, BT.e)(kT, (0, BT.i)());
+        zT && IT.look.unapply(WT, WT), this.mode = function(TT, oT, IT, iT) {
+          switch (TT.mode) {
             case "fixed":
-              return new hY(YY, rY, DY, FY);
+              return new QT(TT, oT, IT, iT);
             case "follow":
-              return new dY(YY, rY, DY, FY);
+              return new OT(TT, oT, IT, iT);
             case "path":
-              return new JY(YY, rY, DY, FY);
+              return new HT(TT, oT, IT, iT);
             case "frame":
-              return new QY(YY, rY, DY, FY)
+              return new KT(TT, oT, IT, iT)
           }
-        }(YY, rY, this.targets, RY), AY && (this.look.continueFrom(DY.look), this.mode.continueFrom(DY.mode))
+        }(TT, oT, this.targets, WT), zT && (this.look.continueFrom(IT.look), this.mode.continueFrom(IT.mode))
       }
-      update(YY, rY) {
-        return this.look.update(YY, rY), this.mode.update(YY, this.look, this.pose), (0, gY.n)(this.pose) ? (0, gY.h)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, gY.h)(this.lastGoodPose, this.pose), this.mode.reset((0, gY.n)(this.lastGoodPose) ? this.lastGoodPose : this.Mu.getDefaultPose())), this.pose
+      update(TT, oT) {
+        return this.look.update(TT, oT), this.mode.update(TT, this.look, this.pose), (0, BT.m)(this.pose) ? (0, BT.e)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, BT.e)(this.lastGoodPose, this.pose), this.mode.reset((0, BT.m)(this.lastGoodPose) ? this.lastGoodPose : this.iL.getDefaultPose())), this.pose
       }
     }
 
-    function bY(YY) {
-      return [0, 0, YY[2], YY[3]]
+    function ZT(TT) {
+      return [0, 0, TT[2], TT[3]]
     }
-    class XY {
-      constructor(YY) {
-        this.Mu = YY, this.settings = {
+    class lT {
+      constructor(TT) {
+        this.iL = TT, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new OY, this.shot = null, this.blend = null, this.mixed = (0, gY.j)(), this.output = (0, gY.j)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new XT, this.shot = null, this.blend = null, this.mixed = (0, BT.i)(), this.output = (0, BT.i)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(YY) {
-        const rY = (0, aY.c)(YY);
-        if ((0, FY.m)(rY, this.pending ? this.pending.settings : this.settings)) return;
-        const DY = MY(this.settings, rY);
-        if (void 0 !== rY.transition && !DY) return this.pending = {
-          settings: rY,
-          shot: "default" === rY.mode ? null : new wY(rY, this.Mu, null)
-        }, void this.fade.fadeOut(rY.transition);
-        const AY = null !== this.pending;
-        this.pending = null, !AY && DY || this.fade.fadeIn(FY.j.minTransitionFadeMs), this.show(rY, !1)
+      setSettings(TT) {
+        const oT = (0, FT.d)(TT);
+        if ((0, iT.x)(oT, this.pending ? this.pending.settings : this.settings)) return;
+        const IT = nT(this.settings, oT);
+        if (void 0 !== oT.transition && !IT) return this.pending = {
+          settings: oT,
+          shot: "default" === oT.mode ? null : new qT(oT, this.iL, null)
+        }, void this.fade.fadeOut(oT.transition);
+        const zT = null !== this.pending;
+        this.pending = null, !zT && IT || this.fade.fadeIn(iT.o.minTransitionFadeMs), this.show(oT, !1)
       }
-      show(YY, rY) {
-        var DY, AY;
-        if ((0, FY.m)(YY, this.settings)) return;
-        const RY = !rY && MY(this.settings, YY);
-        this.settings = YY;
-        const OY = null !== this.blend && this.blend.elapsedMs > 0,
-          aY = (0, gY.h)(this.hasOutput ? this.output : this.Mu.getDefaultPose(), (0, gY.j)());
-        if (this.shot = "default" === YY.mode ? null : new wY(YY, this.Mu, rY ? null : this.shot), RY) return;
-        const vY = rY || !this.shot && !this.hasOutput ? 0 : null !== (DY = YY.blendInMs) && void 0 !== DY ? DY : 0;
-        if (vY <= 0) return void(this.blend = null);
-        const uY = (0, IY.k)(null !== (AY = YY.blendEasing) && void 0 !== AY ? AY : "easeInOut");
+      show(TT, oT) {
+        var IT, zT;
+        if ((0, iT.x)(TT, this.settings)) return;
+        const WT = !oT && nT(this.settings, TT);
+        this.settings = TT;
+        const XT = null !== this.blend && this.blend.elapsedMs > 0,
+          FT = (0, BT.e)(this.hasOutput ? this.output : this.iL.getDefaultPose(), (0, BT.i)());
+        if (this.shot = "default" === TT.mode ? null : new qT(TT, this.iL, oT ? null : this.shot), WT) return;
+        const ST = oT || !this.shot && !this.hasOutput ? 0 : null !== (IT = TT.blendInMs) && void 0 !== IT ? IT : 0;
+        if (ST <= 0) return void(this.blend = null);
+        const DT = (0, kT.k)(null !== (zT = TT.blendEasing) && void 0 !== zT ? zT : "easeInOut");
         this.blend = {
-          from: aY,
+          from: FT,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: vY,
-          easing: OY ? bY(uY) : uY
+          durationMs: ST,
+          easing: XT ? ZT(DT) : DT
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(YY, rY) {
-        const DY = Number.isFinite(YY) && YY > 0 ? YY : 0;
-        if (this.fade.advance(DY) && null !== this.pending) {
+      update(TT, oT) {
+        const IT = Number.isFinite(TT) && TT > 0 ? TT : 0;
+        if (this.fade.advance(IT) && null !== this.pending) {
           const {
-            settings: YY
+            settings: TT
           } = this.pending;
-          this.pending = null, this.show(YY, !0)
+          this.pending = null, this.show(TT, !0)
         }
         this.loadingPositions.length = 0;
-        const FY = this.pending;
-        if (null !== FY && void 0 !== FY && FY.shot) {
-          const YY = "path" === FY.settings.mode ? 0 : DY;
-          this.noteLoadingPosition(FY.shot.update(YY, gY.d).position)
+        const iT = this.pending;
+        if (null !== iT && void 0 !== iT && iT.shot) {
+          const TT = "path" === iT.settings.mode ? 0 : IT;
+          this.noteLoadingPosition(iT.shot.update(TT, BT.b).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const RY = this.shot ? this.shot.update(DY, rY) : this.Mu.getDefaultPose();
-        this.shot && this.noteLoadingPosition(RY.position);
-        const OY = this.blend;
-        if (!OY) return this.writeOutput(RY);
-        OY.elapsedMs += DY;
-        const aY = Math.min(1, OY.elapsedMs / OY.durationMs);
-        if (OY.headingDelta = Number.isFinite(OY.headingDelta) ? (0, AY.y)(OY.headingDelta, RY.heading - OY.from.heading) : (0, AY.v)(OY.from.heading, RY.heading), (0, gY.s)(OY.from, RY, OY.headingDelta, (0, IY.i)(aY, OY.easing), this.mixed), aY >= 1) {
+        const WT = this.shot ? this.shot.update(IT, oT) : this.iL.getDefaultPose();
+        this.shot && this.noteLoadingPosition(WT.position);
+        const XT = this.blend;
+        if (!XT) return this.writeOutput(WT);
+        XT.elapsedMs += IT;
+        const FT = Math.min(1, XT.elapsedMs / XT.durationMs);
+        if (XT.headingDelta = Number.isFinite(XT.headingDelta) ? (0, zT.v)(XT.headingDelta, WT.heading - XT.from.heading) : (0, zT.u)(XT.from.heading, WT.heading), (0, BT.s)(XT.from, WT, XT.headingDelta, (0, kT.j)(FT, XT.easing), this.mixed), FT >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else OY.fromScripted && this.noteLoadingPosition(OY.from.position);
+        } else XT.fromScripted && this.noteLoadingPosition(XT.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(YY) {
-        if (YY.every(Number.isFinite)) {
-          const rY = this.loadingPositions;
-          rY.push((0, gY.i)(YY, this.loadingSlots[rY.length]))
+      noteLoadingPosition(TT) {
+        if (TT.every(Number.isFinite)) {
+          const oT = this.loadingPositions;
+          oT.push((0, BT.g)(TT, this.loadingSlots[oT.length]))
         }
       }
-      writeOutput(YY) {
-        const rY = this.output;
-        (0, gY.n)(YY) ? (0, gY.h)(YY, rY) : this.hasOutput || (0, gY.h)(this.Mu.getDefaultPose(), rY), rY.pitch = (0, AY.i)(rY.pitch);
-        const DY = this.Mu.getDefaultFov(),
-          IY = Number.isFinite(DY) && DY > 0 && DY < 180,
-          RY = IY ? Math.min(FY.j.minFov, DY) : FY.j.minFov,
-          OY = IY ? Math.max(FY.j.maxFov, DY) : FY.j.maxFov;
-        return rY.fov = Number.isFinite(rY.fov) ? Math.min(OY, Math.max(RY, rY.fov)) : OY, this.hasOutput = !0, rY
+      writeOutput(TT) {
+        const oT = this.output;
+        (0, BT.m)(TT) ? (0, BT.e)(TT, oT) : this.hasOutput || (0, BT.e)(this.iL.getDefaultPose(), oT), oT.pitch = (0, zT.k)(oT.pitch);
+        const IT = this.iL.getDefaultFov(),
+          kT = Number.isFinite(IT) && IT > 0 && IT < 180,
+          WT = kT ? Math.min(iT.o.minFov, IT) : iT.o.minFov,
+          XT = kT ? Math.max(iT.o.maxFov, IT) : iT.o.maxFov;
+        return oT.fov = Number.isFinite(oT.fov) ? Math.min(XT, Math.max(WT, oT.fov)) : XT, this.hasOutput = !0, oT
       }
     }
   },
-  38504: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY,
-      h: () => OY,
-      i: () => RY,
-      j: () => IY,
-      n: () => aY,
-      o: () => gY,
-      s: () => vY
+  38120: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      e: () => XT,
+      g: () => WT,
+      i: () => kT,
+      m: () => FT,
+      o: () => BT,
+      s: () => ST
     });
-    var FY = DY(38513);
-    const AY = {
-      Tl: 0,
-      Bl: 0
+    var iT = IT(38124);
+    const zT = {
+      RC: 0,
+      uC: 0
     };
 
-    function IY() {
+    function kT() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function RY(YY, rY) {
-      return rY[0] = YY[0], rY[1] = YY[1], rY[2] = YY[2], rY
+    function WT(TT, oT) {
+      return oT[0] = TT[0], oT[1] = TT[1], oT[2] = TT[2], oT
     }
 
-    function OY(YY, rY) {
-      return RY(YY.position, rY.position), rY.heading = YY.heading, rY.pitch = YY.pitch, rY.fov = YY.fov, rY
+    function XT(TT, oT) {
+      return WT(TT.position, oT.position), oT.heading = TT.heading, oT.pitch = TT.pitch, oT.fov = TT.fov, oT
     }
 
-    function gY(YY, rY) {
-      return Array.isArray(YY) && YY.length === rY && YY.every(Number.isFinite)
+    function BT(TT, oT) {
+      return Array.isArray(TT) && TT.length === oT && TT.every(Number.isFinite)
     }
 
-    function aY(YY) {
-      return gY(YY.position, 3) && Number.isFinite(YY.heading) && Number.isFinite(YY.pitch) && Number.isFinite(YY.fov)
+    function FT(TT) {
+      return BT(TT.position, 3) && Number.isFinite(TT.heading) && Number.isFinite(TT.pitch) && Number.isFinite(TT.fov)
     }
 
-    function vY(YY, rY, DY, AY, IY) {
-      for (let FY = 0; FY < 3; FY++) IY.position[FY] = YY.position[FY] + (rY.position[FY] - YY.position[FY]) * AY;
-      return IY.heading = (0, FY.t)(YY.heading + DY * AY), IY.pitch = YY.pitch + (rY.pitch - YY.pitch) * AY, IY.fov = YY.fov + (rY.fov - YY.fov) * AY, IY
+    function ST(TT, oT, IT, zT, kT) {
+      for (let iT = 0; iT < 3; iT++) kT.position[iT] = TT.position[iT] + (oT.position[iT] - TT.position[iT]) * zT;
+      return kT.heading = (0, iT.t)(TT.heading + IT * zT), kT.pitch = TT.pitch + (oT.pitch - TT.pitch) * zT, kT.fov = TT.fov + (oT.fov - TT.fov) * zT, kT
     }
   },
-  38536: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => TY,
-      g: () => sY
+  38138: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => eT,
+      e: () => LT
     });
-    var FY = DY(38533),
-      AY = DY(38504);
-    const IY = FY.g,
-      RY = FY.k;
+    var iT = IT(38136),
+      zT = IT(38120);
+    const kT = iT.k,
+      WT = iT.r;
 
-    function OY(YY, rY, DY, FY) {
-      return Number.isFinite(YY) ? Math.min(DY, Math.max(rY, YY)) : FY
+    function XT(TT, oT, IT, iT) {
+      return Number.isFinite(TT) ? Math.min(IT, Math.max(oT, TT)) : iT
     }
 
-    function gY(YY, rY, DY) {
-      return void 0 !== YY && Number.isFinite(YY) ? Math.min(DY, Math.max(rY, YY)) : void 0
+    function BT(TT, oT, IT) {
+      return void 0 !== TT && Number.isFinite(TT) ? Math.min(IT, Math.max(oT, TT)) : void 0
     }
 
-    function aY(YY) {
-      const rY = FY.j.maxCoordinate;
-      return [Math.min(rY, Math.max(-rY, YY[0])), Math.min(rY, Math.max(-rY, YY[1])), Math.min(rY, Math.max(-rY, YY[2]))]
+    function FT(TT) {
+      const oT = iT.o.maxCoordinate;
+      return [Math.min(oT, Math.max(-oT, TT[0])), Math.min(oT, Math.max(-oT, TT[1])), Math.min(oT, Math.max(-oT, TT[2]))]
     }
 
-    function vY(YY) {
-      return "string" === typeof YY ? YY : (0, AY.o)(YY, 3) ? aY(YY) : void 0
+    function ST(TT) {
+      return "string" === typeof TT ? TT : (0, zT.o)(TT, 3) ? FT(TT) : void 0
     }
-    const uY = new RegExp(FY.l);
+    const DT = new RegExp(iT.u);
 
-    function sY(YY) {
-      return "string" === typeof YY && uY.test(YY)
+    function LT(TT) {
+      return "string" === typeof TT && DT.test(TT)
     }
 
-    function iY(YY) {
-      const rY = [];
-      if (!Array.isArray(YY)) return rY;
-      for (const DY of YY.slice(0, FY.j.maxFrameTargets)) {
-        const YY = vY(DY);
-        void 0 === YY || "string" === typeof YY && !sY(YY) || rY.push(YY)
+    function xT(TT) {
+      const oT = [];
+      if (!Array.isArray(TT)) return oT;
+      for (const IT of TT.slice(0, iT.o.maxFrameTargets)) {
+        const TT = ST(IT);
+        void 0 === TT || "string" === typeof TT && !LT(TT) || oT.push(TT)
       }
-      return rY
+      return oT
     }
 
-    function yY(YY) {
-      if (!(0, AY.o)(YY, 3)) return;
-      const rY = Math.max(Math.abs(YY[0]), Math.abs(YY[1]), Math.abs(YY[2])),
-        DY = Math.hypot(YY[0] / rY, YY[1] / rY, YY[2] / rY);
-      return 0 === rY || rY * DY < FY.j.minDirectionLength ? void 0 : [YY[0] / rY / DY, YY[1] / rY / DY, YY[2] / rY / DY]
+    function cT(TT) {
+      if (!(0, zT.o)(TT, 3)) return;
+      const oT = Math.max(Math.abs(TT[0]), Math.abs(TT[1]), Math.abs(TT[2])),
+        IT = Math.hypot(TT[0] / oT, TT[1] / oT, TT[2] / oT);
+      return 0 === oT || oT * IT < iT.o.minDirectionLength ? void 0 : [TT[0] / oT / IT, TT[1] / oT / IT, TT[2] / oT / IT]
     }
 
-    function QY(YY) {
-      if (void 0 !== YY) return "string" === typeof YY ? IY.includes(YY) ? YY : void 0 : (0, AY.o)(YY, 4) ? [OY(YY[0], 0, 1, 0), OY(YY[1], FY.j.minEasingY, FY.j.maxEasingY, 0), OY(YY[2], 0, 1, 1), OY(YY[3], FY.j.minEasingY, FY.j.maxEasingY, 1)] : "linear"
+    function KT(TT) {
+      if (void 0 !== TT) return "string" === typeof TT ? kT.includes(TT) ? TT : void 0 : (0, zT.o)(TT, 4) ? [XT(TT[0], 0, 1, 0), XT(TT[1], iT.o.minEasingY, iT.o.maxEasingY, 0), XT(TT[2], 0, 1, 1), XT(TT[3], iT.o.minEasingY, iT.o.maxEasingY, 1)] : "linear"
     }
 
-    function oY(YY) {
-      if (YY) return {
-        maxYaw: OY(YY.maxYaw, 0, FY.j.maxPlayerLook, 0),
-        maxPitch: OY(YY.maxPitch, 0, FY.j.maxPlayerLook, 0),
-        returnMs: gY(YY.returnMs, 0, FY.j.maxReturnMs)
+    function MT(TT) {
+      if (TT) return {
+        maxYaw: XT(TT.maxYaw, 0, iT.o.maxPlayerLook, 0),
+        maxPitch: XT(TT.maxPitch, 0, iT.o.maxPlayerLook, 0),
+        returnMs: BT(TT.returnMs, 0, iT.o.maxReturnMs)
       }
     }
-    const WY = new RegExp(FY.c);
+    const rT = new RegExp(iT.c);
 
-    function EY(YY) {
-      var rY;
-      if ("object" !== typeof YY || null === YY) return;
-      const DY = FY.j.maxTransitionMs,
-        AY = FY.j.minTransitionFadeMs;
+    function AT(TT) {
+      var oT;
+      if ("object" !== typeof TT || null === TT) return;
+      const IT = iT.o.maxTransitionMs,
+        zT = iT.o.minTransitionFadeMs;
       return {
-        colour: "string" === typeof YY.colour && WY.test(YY.colour) ? YY.colour : FY.d,
-        outMs: OY(YY.outMs, AY, DY, AY),
-        holdMs: OY(null !== (rY = YY.holdMs) && void 0 !== rY ? rY : 0, 0, DY, 0),
-        inMs: OY(YY.inMs, AY, DY, AY)
+        colour: "string" === typeof TT.colour && rT.test(TT.colour) ? TT.colour : iT.g,
+        outMs: XT(TT.outMs, zT, IT, zT),
+        holdMs: XT(null !== (oT = TT.holdMs) && void 0 !== oT ? oT : 0, 0, IT, 0),
+        inMs: XT(TT.inMs, zT, IT, zT)
       }
     }
 
-    function mY(YY) {
-      return !0 === YY || void 0
+    function gT(TT) {
+      return !0 === TT || void 0
     }
 
-    function VY(YY) {
-      if ("object" !== typeof YY || null === YY) return !1;
-      const rY = YY.lookAt;
-      return Number.isFinite(YY.timeMs) && (0, AY.o)(YY.position, 3) && (void 0 === rY || "string" === typeof rY || (0, AY.o)(rY, 3))
+    function hT(TT) {
+      if ("object" !== typeof TT || null === TT) return !1;
+      const oT = TT.lookAt;
+      return Number.isFinite(TT.timeMs) && (0, zT.o)(TT.position, 3) && (void 0 === oT || "string" === typeof oT || (0, zT.o)(oT, 3))
     }
 
-    function SY(YY) {
+    function wT(TT) {
       return {
-        ...YY,
-        timeMs: OY(YY.timeMs, 0, FY.j.maxPathMs, 0),
-        position: aY(YY.position),
-        lookAt: vY(YY.lookAt),
-        lookDirection: yY(YY.lookDirection),
-        fov: gY(YY.fov, FY.j.minFov, FY.j.maxFov),
-        easing: QY(YY.easing)
+        ...TT,
+        timeMs: XT(TT.timeMs, 0, iT.o.maxPathMs, 0),
+        position: FT(TT.position),
+        lookAt: ST(TT.lookAt),
+        lookDirection: cT(TT.lookDirection),
+        fov: BT(TT.fov, iT.o.minFov, iT.o.maxFov),
+        easing: KT(TT.easing)
       }
     }
 
-    function lY(YY) {
-      const rY = [];
-      if (!Array.isArray(YY)) return rY;
-      for (const DY of YY.slice(0, FY.j.maxKeyframes)) {
-        if (!VY(DY)) continue;
-        const YY = SY(DY);
-        (0 === rY.length || YY.timeMs > rY[rY.length - 1].timeMs) && rY.push(YY)
+    function mT(TT) {
+      const oT = [];
+      if (!Array.isArray(TT)) return oT;
+      for (const IT of TT.slice(0, iT.o.maxKeyframes)) {
+        if (!hT(IT)) continue;
+        const TT = wT(IT);
+        (0 === oT.length || TT.timeMs > oT[oT.length - 1].timeMs) && oT.push(TT)
       }
-      return rY
+      return oT
     }
 
-    function TY(YY) {
-      if ("object" !== typeof YY || null === YY) return {
+    function eT(TT) {
+      if ("object" !== typeof TT || null === TT) return {
         mode: "default"
       };
-      const rY = {
-          blendInMs: gY(YY.blendInMs, 0, FY.j.maxBlendInMs),
-          blendEasing: QY(YY.blendEasing),
-          transition: EY(YY.transition),
-          letterbox: mY(YY.letterbox),
-          hideHud: mY(YY.hideHud)
+      const oT = {
+          blendInMs: BT(TT.blendInMs, 0, iT.o.maxBlendInMs),
+          blendEasing: KT(TT.blendEasing),
+          transition: AT(TT.transition),
+          letterbox: gT(TT.letterbox),
+          hideHud: gT(TT.hideHud)
         },
-        DY = {
+        IT = {
           mode: "default",
-          ...rY
+          ...oT
         };
-      if ("default" === YY.mode || "fixed" === YY.mode && !(0, AY.o)(YY.position, 3)) return DY;
-      const IY = {
-        ...rY,
-        fov: gY(YY.fov, FY.j.minFov, FY.j.maxFov),
-        playerFacing: (uY = YY.playerFacing, RY.includes(uY) ? uY : void 0),
-        playerLook: oY(YY.playerLook)
+      if ("default" === TT.mode || "fixed" === TT.mode && !(0, zT.o)(TT.position, 3)) return IT;
+      const kT = {
+        ...oT,
+        fov: BT(TT.fov, iT.o.minFov, iT.o.maxFov),
+        playerFacing: (DT = TT.playerFacing, WT.includes(DT) ? DT : void 0),
+        playerLook: MT(TT.playerLook)
       };
-      var uY, sY;
-      switch (YY.mode) {
+      var DT, LT;
+      switch (TT.mode) {
         case "fixed":
           return {
-            ...YY, ...IY, position: aY(YY.position), lookAt: vY(YY.lookAt), lookDirection: yY(YY.lookDirection)
+            ...TT, ...kT, position: FT(TT.position), lookAt: ST(TT.lookAt), lookDirection: cT(TT.lookDirection)
           };
         case "follow":
           return {
-            ...YY, ...IY, target: "string" === typeof YY.target ? YY.target : void 0, lookAt: vY(YY.lookAt), offset: (sY = YY.offset, Array.isArray(sY) ? [OY(sY[0], -FY.j.maxOffset, FY.j.maxOffset, 0), OY(sY[1], -FY.j.maxOffset, FY.j.maxOffset, 0), OY(sY[2], -FY.j.maxOffset, FY.j.maxOffset, 0)] : [0, 0, 0]), lookDirection: yY(YY.lookDirection), smoothMs: gY(YY.smoothMs, 0, FY.j.maxSmoothMs)
+            ...TT, ...kT, target: "string" === typeof TT.target ? TT.target : void 0, lookAt: ST(TT.lookAt), offset: (LT = TT.offset, Array.isArray(LT) ? [XT(LT[0], -iT.o.maxOffset, iT.o.maxOffset, 0), XT(LT[1], -iT.o.maxOffset, iT.o.maxOffset, 0), XT(LT[2], -iT.o.maxOffset, iT.o.maxOffset, 0)] : [0, 0, 0]), lookDirection: cT(TT.lookDirection), smoothMs: BT(TT.smoothMs, 0, iT.o.maxSmoothMs)
           };
         case "path":
           return {
-            ...YY, ...IY, keyframes: lY(YY.keyframes)
+            ...TT, ...kT, keyframes: mT(TT.keyframes)
           };
         case "frame":
           return {
-            ...YY, ...IY, targets: iY(YY.targets), viewHeading: gY(YY.viewHeading, -FY.j.maxFrameHeading, FY.j.maxFrameHeading), viewElevation: gY(YY.viewElevation, 0, FY.j.maxFrameElevation), padding: gY(YY.padding, 0, FY.j.maxFrameDistance), closestDistance: gY(YY.closestDistance, 0, FY.j.maxFrameDistance), furthestDistance: gY(YY.furthestDistance, 0, FY.j.maxFrameDistance), smoothMs: gY(YY.smoothMs, 0, FY.j.maxSmoothMs)
+            ...TT, ...kT, targets: xT(TT.targets), viewHeading: BT(TT.viewHeading, -iT.o.maxFrameHeading, iT.o.maxFrameHeading), viewElevation: BT(TT.viewElevation, 0, iT.o.maxFrameElevation), padding: BT(TT.padding, 0, iT.o.maxFrameDistance), closestDistance: BT(TT.closestDistance, 0, iT.o.maxFrameDistance), furthestDistance: BT(TT.furthestDistance, 0, iT.o.maxFrameDistance), smoothMs: BT(TT.smoothMs, 0, iT.o.maxSmoothMs)
           };
         default:
-          return DY
+          return IT
       }
     }
   },
-  38025: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => OY
+  37648: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT
     });
-    var FY = DY(1231);
+    var iT = IT(1193);
 
-    function AY(YY) {
-      const rY = /(\d*\.?\d+)px/.exec(YY);
-      return rY ? Number(rY[1]) : null
+    function zT(TT) {
+      const oT = /(\d*\.?\d+)px/.exec(TT);
+      return oT ? Number(oT[1]) : null
     }
 
-    function IY(YY) {
-      return YY.split(/[\s,]+/).pop()
+    function kT(TT) {
+      return TT.split(/[\s,]+/).pop()
     }
-    let RY = !1;
-    const OY = {
+    let WT = !1;
+    const XT = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,360 +1211,360 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(YY, rY, FY, OY, gY, aY) {
-        if (gY <= 0 || aY <= 0 || this.fontSize <= 0) return {
+      drawText: function(TT, oT, iT, XT, BT, FT) {
+        if (BT <= 0 || FT <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: vY,
-          fontVariant: uY,
-          fontWeight: sY,
-          fontSize: iY,
-          font: yY
-        } = this, QY = [vY, uY, sY, `${iY}px`, yY].filter(Boolean).join(" "), oY = [
-          [sY, `${iY}px`, IY(yY)].filter(Boolean).join(" "), `${iY}px sans-serif`
-        ], WY = YY.font, EY = function(YY, rY, DY) {
-          for (const FY of rY) {
-            YY.font = FY;
-            const rY = AY(YY.font),
-              RY = IY(FY);
-            if (null !== rY && Math.abs(rY - DY) <= .5 && YY.font.toLowerCase().includes(RY.toLowerCase())) return FY
+          fontStyle: ST,
+          fontVariant: DT,
+          fontWeight: LT,
+          fontSize: xT,
+          font: cT
+        } = this, KT = [ST, DT, LT, `${xT}px`, cT].filter(Boolean).join(" "), MT = [
+          [LT, `${xT}px`, kT(cT)].filter(Boolean).join(" "), `${xT}px sans-serif`
+        ], rT = TT.font, AT = function(TT, oT, IT) {
+          for (const iT of oT) {
+            TT.font = iT;
+            const oT = zT(TT.font),
+              WT = kT(iT);
+            if (null !== oT && Math.abs(oT - IT) <= .5 && TT.font.toLowerCase().includes(WT.toLowerCase())) return iT
           }
           return null
-        }(YY, [QY, ...oY], iY);
-        EY !== QY && function(YY, rY, FY) {
-          RY || (RY = !0, Promise.resolve().then((() => DY(1113))).then((DY => {
+        }(TT, [KT, ...MT], xT);
+        AT !== KT && function(TT, oT, iT) {
+          WT || (WT = !0, Promise.resolve().then((() => IT(1071))).then((IT => {
             let {
-              jQ: AY
-            } = DY;
-            AY(new Error("A canvas didn't take canvasTxt's font"), {
-              font: YY,
-              Mi: rY,
-              drawnWith: null !== FY && void 0 !== FY ? FY : "the kept font, scaled"
+              JK: zT
+            } = IT;
+            zT(new Error("A canvas didn't take canvasTxt's font"), {
+              font: TT,
+              qx: oT,
+              drawnWith: null !== iT && void 0 !== iT ? iT : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(QY, WY, EY);
-        const mY = AY(YY.font);
-        if (null === EY && null !== mY && mY > 0) {
-          const DY = iY / mY;
-          YY.save();
+        }(KT, rT, AT);
+        const gT = zT(TT.font);
+        if (null === AT && null !== gT && gT > 0) {
+          const IT = xT / gT;
+          TT.save();
           try {
-            return YY.scale(DY, DY), {
-              height: this.drawLines(YY, rY, FY / DY, OY / DY, gY / DY, aY / DY, mY).height * DY
+            return TT.scale(IT, IT), {
+              height: this.drawLines(TT, oT, iT / IT, XT / IT, BT / IT, FT / IT, gT).height * IT
             }
           } finally {
-            YY.restore()
+            TT.restore()
           }
         }
-        return this.drawLines(YY, rY, FY, OY, gY, aY, iY)
+        return this.drawLines(TT, oT, iT, XT, BT, FT, xT)
       },
-      drawLines: function(YY, rY, DY, AY, IY, RY, OY) {
-        const gY = DY + IY,
-          aY = AY + RY;
-        let vY, uY = AY + RY / 2 + OY / 2;
-        "right" === this.align ? (vY = gY, YY.textAlign = "right") : "left" === this.align ? (vY = DY, YY.textAlign = "left") : (vY = DY + IY / 2, YY.textAlign = "center");
-        for (const FY of rY) {
-          YY.measureText(FY).width >= IY && (rY = rY.replace(FY, ""))
+      drawLines: function(TT, oT, IT, zT, kT, WT, XT) {
+        const BT = IT + kT,
+          FT = zT + WT;
+        let ST, DT = zT + WT / 2 + XT / 2;
+        "right" === this.align ? (ST = BT, TT.textAlign = "right") : "left" === this.align ? (ST = IT, TT.textAlign = "left") : (ST = IT + kT / 2, TT.textAlign = "center");
+        for (const iT of oT) {
+          TT.measureText(iT).width >= kT && (oT = oT.replace(iT, ""))
         }
-        rY = (0, FY.U)(rY);
-        const sY = [],
-          iY = rY.split("\n"),
-          yY = this.justify ? YY.measureText("\u200a").width : 0;
-        iY.forEach((rY => {
-          let DY = YY.measureText(rY).width;
-          if (DY <= IY) sY.push(rY);
+        oT = (0, iT.U)(oT);
+        const LT = [],
+          xT = oT.split("\n"),
+          cT = this.justify ? TT.measureText("\u200a").width : 0;
+        xT.forEach((oT => {
+          let IT = TT.measureText(oT).width;
+          if (IT <= kT) LT.push(oT);
           else {
-            let FY = rY;
-            const AY = IY;
-            let RY, OY, gY;
-            for (DY = YY.measureText(FY).width; DY > AY;) {
-              for (RY = 0, OY = 0, gY = ""; OY < AY;) RY++, gY = FY.substr(0, RY), OY = YY.measureText(gY).width;
-              RY--, gY = gY.substr(0, RY);
-              const rY = RY;
-              if (" " !== FY.substr(RY, 1)) {
+            let iT = oT;
+            const zT = kT;
+            let WT, XT, BT;
+            for (IT = TT.measureText(iT).width; IT > zT;) {
+              for (WT = 0, XT = 0, BT = ""; XT < zT;) WT++, BT = iT.substr(0, WT), XT = TT.measureText(BT).width;
+              WT--, BT = BT.substr(0, WT);
+              const oT = WT;
+              if (" " !== iT.substr(WT, 1)) {
                 for (;
-                  " " !== FY.substr(RY, 1) && 0 !== RY;) RY--;
-                0 === RY && (RY = rY), gY = FY.substr(0, RY)
+                  " " !== iT.substr(WT, 1) && 0 !== WT;) WT--;
+                0 === WT && (WT = oT), BT = iT.substr(0, WT)
               }
-              gY = this.justify ? this.justifyLine(YY, gY, yY, "\u200a", IY) : gY, FY = FY.substr(RY), DY = YY.measureText(FY).width, sY.push(gY)
+              BT = this.justify ? this.justifyLine(TT, BT, cT, "\u200a", kT) : BT, iT = iT.substr(WT), IT = TT.measureText(iT).width, LT.push(BT)
             }
-            DY > 0 && sY.push(FY)
+            IT > 0 && LT.push(iT)
           }
         }));
-        const QY = this.lineHeight ? this.lineHeight : this.getTextHeight(YY, rY),
-          oY = QY * (sY.length - 1),
-          WY = oY / 2;
-        let EY = AY;
-        "top" === this.vAlign ? uY = AY + OY : "bottom" === this.vAlign ? (uY = aY - oY, EY = aY) : (EY = AY + RY / 2, uY -= WY), sY.forEach((rY => {
-          rY = rY.trim(), YY.fillText(rY, vY, uY), uY += QY
-        })), this.debug && (YY.lineWidth = 3, YY.strokeStyle = "#00909e", YY.strokeRect(DY, AY, IY, RY), YY.lineWidth = 2, YY.strokeStyle = "#f6d743", YY.beginPath(), YY.moveTo(vY, AY), YY.lineTo(vY, aY), YY.stroke(), YY.strokeStyle = "#ff6363", YY.beginPath(), YY.moveTo(DY, EY), YY.lineTo(gY, EY), YY.stroke());
+        const KT = this.lineHeight ? this.lineHeight : this.getTextHeight(TT, oT),
+          MT = KT * (LT.length - 1),
+          rT = MT / 2;
+        let AT = zT;
+        "top" === this.vAlign ? DT = zT + XT : "bottom" === this.vAlign ? (DT = FT - MT, AT = FT) : (AT = zT + WT / 2, DT -= rT), LT.forEach((oT => {
+          oT = oT.trim(), TT.fillText(oT, ST, DT), DT += KT
+        })), this.debug && (TT.lineWidth = 3, TT.strokeStyle = "#00909e", TT.strokeRect(IT, zT, kT, WT), TT.lineWidth = 2, TT.strokeStyle = "#f6d743", TT.beginPath(), TT.moveTo(ST, zT), TT.lineTo(ST, FT), TT.stroke(), TT.strokeStyle = "#ff6363", TT.beginPath(), TT.moveTo(IT, AT), TT.lineTo(BT, AT), TT.stroke());
         return {
-          height: oY + QY
+          height: MT + KT
         }
       },
-      getTextHeight: function(YY, rY) {
-        const DY = YY.textBaseline;
-        YY.textBaseline = "bottom";
+      getTextHeight: function(TT, oT) {
+        const IT = TT.textBaseline;
+        TT.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: FY
-        } = YY.measureText(rY);
-        return YY.textBaseline = DY, FY
+          actualBoundingBoxAscent: iT
+        } = TT.measureText(oT);
+        return TT.textBaseline = IT, iT
       },
-      justifyLine: function(YY, rY, DY, FY, AY) {
-        const IY = rY.trim(),
-          RY = YY.measureText(IY).width,
-          OY = IY.split(/\s+/).length - 1,
-          gY = Math.floor((AY - RY) / DY);
-        if (OY <= 0 || gY <= 0) return IY;
-        const aY = Math.floor(gY / OY);
-        let vY = gY - OY * aY,
-          uY = [];
-        for (let sY = 0; sY < aY; sY++) uY.push(FY);
-        uY = uY.join("");
-        return IY.replace(/\s+/g, (YY => {
-          const rY = vY > 0 ? uY + FY : uY;
-          return vY--, YY + rY
+      justifyLine: function(TT, oT, IT, iT, zT) {
+        const kT = oT.trim(),
+          WT = TT.measureText(kT).width,
+          XT = kT.split(/\s+/).length - 1,
+          BT = Math.floor((zT - WT) / IT);
+        if (XT <= 0 || BT <= 0) return kT;
+        const FT = Math.floor(BT / XT);
+        let ST = BT - XT * FT,
+          DT = [];
+        for (let LT = 0; LT < FT; LT++) DT.push(iT);
+        DT = DT.join("");
+        return kT.replace(/\s+/g, (TT => {
+          const oT = ST > 0 ? DT + iT : DT;
+          return ST--, TT + oT
         }))
       }
     }
   },
-  38466: (YY, rY, DY) => {
-    function FY(YY, rY) {
-      return rY.set(YY), rY
+  38080: (TT, oT, IT) => {
+    function iT(TT, oT) {
+      return oT.set(TT), oT
     }
-    DY.d(rY, {
-      d: () => FY
+    IT.d(oT, {
+      c: () => iT
     })
   },
-  38029: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => QY,
-      e: () => yY,
-      h: () => sY,
-      j: () => vY,
-      k: () => uY
+  37654: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => KT,
+      f: () => cT,
+      j: () => LT,
+      m: () => ST,
+      q: () => DT
     });
-    var FY = DY(3815),
-      AY = DY(341);
-    const IY = 1024,
-      RY = 1536,
-      OY = 2 * FY.l + 1,
-      gY = new Intl.NumberFormat("en", {
+    var iT = IT(3811),
+      zT = IT(314);
+    const kT = 1024,
+      WT = 1536,
+      XT = 2 * iT.p + 1,
+      BT = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      aY = 1.5;
+      FT = 1.5;
 
-    function vY(YY, rY, DY) {
-      if ("string" !== typeof YY) return rY;
+    function ST(TT, oT, IT) {
+      if ("string" !== typeof TT) return oT;
       try {
-        const DY = JSON.parse(YY);
-        return DY && "object" === typeof DY ? DY : rY
-      } catch (FY) {
-        return void 0 !== DY && console.error(`Couldn't parse ${DY}`, FY), rY
+        const IT = JSON.parse(TT);
+        return IT && "object" === typeof IT ? IT : oT
+      } catch (iT) {
+        return void 0 !== IT && console.error(`Couldn't parse ${IT}`, iT), oT
       }
     }
 
-    function uY(YY) {
-      return vY(YY, null, "a leaderboard's rows")
+    function DT(TT) {
+      return ST(TT, null, "a leaderboard's rows")
     }
 
-    function sY(YY, rY) {
-      var DY, FY;
-      return null !== rY && void 0 !== rY ? rY : {
-        status: null !== (DY = YY.status) && void 0 !== DY ? DY : "loading",
-        entries: null !== (FY = YY.entries) && void 0 !== FY ? FY : []
+    function LT(TT, oT) {
+      var IT, iT;
+      return null !== oT && void 0 !== oT ? oT : {
+        status: null !== (IT = TT.status) && void 0 !== IT ? IT : "loading",
+        entries: null !== (iT = TT.entries) && void 0 !== iT ? iT : []
       }
     }
 
-    function iY(YY, rY) {
-      return "number" === typeof YY && Number.isFinite(YY) && YY > 0 ? YY : rY
+    function xT(TT, oT) {
+      return "number" === typeof TT && Number.isFinite(TT) && TT > 0 ? TT : oT
     }
 
-    function yY(YY, rY) {
-      const DY = iY(YY.size, 1);
-      let FY = iY(YY.width, iY(2.5 * DY, 2.5)),
-        AY = iY(YY.height, iY(3.75 * DY, 3.75));
-      Number.isFinite(IY * AY / FY) && Number.isFinite(RY * FY / AY) || (FY = 2.5, AY = 3.75);
-      const OY = AY / FY,
-        gY = Math.max(1, Math.min(IY, rY / OY));
+    function cT(TT, oT) {
+      const IT = xT(TT.size, 1);
+      let iT = xT(TT.width, xT(2.5 * IT, 2.5)),
+        zT = xT(TT.height, xT(3.75 * IT, 3.75));
+      Number.isFinite(kT * zT / iT) && Number.isFinite(WT * iT / zT) || (iT = 2.5, zT = 3.75);
+      const XT = zT / iT,
+        BT = Math.max(1, Math.min(kT, oT / XT));
       return {
-        width: FY,
-        height: AY,
-        layoutWidth: Math.max(IY, RY / OY),
-        layoutHeight: Math.max(RY, IY * OY),
-        pixelWidth: Math.round(gY),
-        pixelHeight: Math.round(Math.max(1, Math.min(rY, gY * OY)))
+        width: iT,
+        height: zT,
+        layoutWidth: Math.max(kT, WT / XT),
+        layoutHeight: Math.max(WT, kT * XT),
+        pixelWidth: Math.round(BT),
+        pixelHeight: Math.round(Math.max(1, Math.min(oT, BT * XT)))
       }
     }
 
-    function QY(YY, rY, DY, RY, vY, uY) {
-      YY.setTransform(1, 0, 0, 1, 0, 0), YY.fillStyle = AY.K.defaultNameTagBackground, YY.fillRect(0, 0, rY, DY), YY.scale(rY / RY.layoutWidth, DY / RY.layoutHeight), YY.translate((RY.layoutWidth - IY) / 2, 0),
-        function(YY, rY, DY, IY) {
-          var RY, vY, uY, sY;
+    function KT(TT, oT, IT, WT, ST, DT) {
+      TT.setTransform(1, 0, 0, 1, 0, 0), TT.fillStyle = zT.L.defaultNameTagBackground, TT.fillRect(0, 0, oT, IT), TT.scale(oT / WT.layoutWidth, IT / WT.layoutHeight), TT.translate((WT.layoutWidth - kT) / 2, 0),
+        function(TT, oT, IT, kT) {
+          var WT, ST, DT, LT;
           const {
-            top: iY,
-            around: yY,
-            showPlayerText: QY,
-            localPlayerDbId: EY
-          } = DY, {
-            whiteUiText: mY,
-            grayUiText: VY,
-            yellowUiText: SY
-          } = AY.K;
-          YY.textBaseline = "middle";
-          const lY = function(rY, DY, FY, AY, IY, RY) {
-              let OY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              YY.font = `bold ${AY}px 'Jetbrains Mono', monospace`, YY.fillStyle = IY, YY.textAlign = OY;
-              let gY = rY.replace(/[\r\n\t]/g, " ");
-              if (YY.measureText(gY).width > RY) {
-                for (; gY.length > 0 && YY.measureText(`${gY}\u2026`).width > RY;) gY = gY.slice(0, -1);
-                gY += "\u2026"
+            top: xT,
+            around: cT,
+            showPlayerText: KT,
+            localPlayerDbId: AT
+          } = IT, {
+            whiteUiText: gT,
+            grayUiText: hT,
+            yellowUiText: wT
+          } = zT.L;
+          TT.textBaseline = "middle";
+          const mT = function(oT, IT, iT, zT, kT, WT) {
+              let XT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              TT.font = `bold ${zT}px 'Jetbrains Mono', monospace`, TT.fillStyle = kT, TT.textAlign = XT;
+              let BT = oT.replace(/[\r\n\t]/g, " ");
+              if (TT.measureText(BT).width > WT) {
+                for (; BT.length > 0 && TT.measureText(`${BT}\u2026`).width > WT;) BT = BT.slice(0, -1);
+                BT += "\u2026"
               }
-              YY.fillText(gY, DY, FY)
+              TT.fillText(BT, IT, iT)
             },
-            TY = rY => {
-              YY.fillStyle = mY, YY.globalAlpha = .15, YY.fillRect(24, rY, 976, 2), YY.globalAlpha = 1
+            eT = oT => {
+              TT.fillStyle = gT, TT.globalAlpha = .15, TT.fillRect(24, oT, 976, 2), TT.globalAlpha = 1
             },
-            eY = null === EY ? null : (0, AY.nc)(EY),
-            NY = YY => null !== eY && YY.playerHash === eY,
-            BY = oY(iY.entries, FY.o),
-            cY = "ready" === iY.status && BY.length > 0,
-            KY = null === yY ? [] : oY(yY.entries, OY),
-            HY = BY.some(NY),
-            zY = null === yY ? null : function(YY) {
-              const rY = YY;
-              if (!rY || !Number.isFinite(rY.rank) || !Number.isFinite(rY.tied) || !Number.isFinite(rY.total)) return null;
-              return rY
-            }(yY.standing),
-            ZY = KY.find(NY),
-            CY = BY.find(NY),
-            fY = null === zY || void 0 === ZY ? null : {
-              value: ZY.value,
-              rank: zY.rank
+            RT = null === AT ? null : (0, zT._b)(AT),
+            uT = TT => null !== RT && TT.playerHash === RT,
+            vT = MT(xT.entries, iT.q),
+            ET = "ready" === xT.status && vT.length > 0,
+            fT = null === cT ? [] : MT(cT.entries, XT),
+            CT = vT.some(uT),
+            jT = null === cT ? null : function(TT) {
+              const oT = TT;
+              if (!oT || !Number.isFinite(oT.rank) || !Number.isFinite(oT.tied) || !Number.isFinite(oT.total)) return null;
+              return oT
+            }(cT.standing),
+            JT = fT.find(uT),
+            UT = vT.find(uT),
+            aT = null === jT || void 0 === JT ? null : {
+              value: JT.value,
+              rank: jT.rank
             },
-            jY = WY(BY, void 0 === CY || CY.value === (null === fY || void 0 === fY ? void 0 : fY.value) ? fY : null),
-            hY = WY(KY, fY),
-            dY = (YY, rY) => {
-              const DY = YY.findIndex(NY);
-              return DY >= 0 ? rY[DY] : null
+            YT = rT(vT, void 0 === UT || UT.value === (null === aT || void 0 === aT ? void 0 : aT.value) ? aT : null),
+            QT = rT(fT, aT),
+            OT = (TT, oT) => {
+              const IT = TT.findIndex(uT);
+              return IT >= 0 ? oT[IT] : null
             },
-            JY = null !== (RY = null !== (vY = null === zY || void 0 === zY ? void 0 : zY.rank) && void 0 !== vY ? vY : dY(KY, hY)) && void 0 !== RY ? RY : dY(BY, jY);
-          YY.font = "bold 34px 'Jetbrains Mono', monospace";
-          const MY = [...cY ? jY : [], ...HY ? [] : hY],
-            wY = Math.min(280, Math.max(0, ...MY.map((rY => YY.measureText(gY.format(rY)).width)))),
-            bY = wY <= 80,
-            XY = bY ? 80 : 32 + wY,
-            qY = bY ? 148 : XY + 28,
-            pY = 660 - qY;
-          lY(`TOP ${FY.o}  /  ALL TIME`, 24, 52, 28, VY, 976), lY(QY ? String(null !== (uY = rY.title) && void 0 !== uY ? uY : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, mY, 976), lY("RANK", 32, 174, 28, VY, qY - 40), lY("PLAYER", qY, 174, 28, VY, pY), lY(QY ? String(null !== (sY = rY.scoreLabel) && void 0 !== sY ? sY : "Score").slice(0, 24) : "Score", 992, 174, 28, VY, 304, "right"), TY(202);
-          const kY = (IY - 232) / (FY.o + aY + OY),
-            GY = 208 + FY.o * kY,
-            xY = GY + aY * kY,
-            nY = (rY, DY, FY, AY) => {
-              const IY = NY(rY);
-              YY.fillStyle = IY ? SY : mY, YY.globalAlpha = IY ? .15 : AY ? .035 : 0, YY.fillRect(24, FY - kY / 2 + 1, 976, kY - 2), YY.globalAlpha = 1;
-              const RY = IY ? SY : mY;
-              lY(gY.format(DY), XY, FY, 34, RY, bY ? 80 : wY, bY ? "center" : "right"), lY(QY ? String(rY.name).slice(0, 64) : "Player", qY, FY, 34, RY, pY);
-              const OY = gY.format(rY.value);
-              lY(YY.measureText(OY).width > 304 ? rY.value.toExponential(6) : OY, 992, FY, 34, RY, 304, "right")
+            HT = null !== (WT = null !== (ST = null === jT || void 0 === jT ? void 0 : jT.rank) && void 0 !== ST ? ST : OT(fT, QT)) && void 0 !== WT ? WT : OT(vT, YT);
+          TT.font = "bold 34px 'Jetbrains Mono', monospace";
+          const nT = [...ET ? YT : [], ...CT ? [] : QT],
+            qT = Math.min(280, Math.max(0, ...nT.map((oT => TT.measureText(BT.format(oT)).width)))),
+            ZT = qT <= 80,
+            lT = ZT ? 80 : 32 + qT,
+            sT = ZT ? 148 : lT + 28,
+            tT = 660 - sT;
+          mT(`TOP ${iT.q}  /  ALL TIME`, 24, 52, 28, hT, 976), mT(KT ? String(null !== (DT = oT.title) && void 0 !== DT ? DT : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, gT, 976), mT("RANK", 32, 174, 28, hT, sT - 40), mT("PLAYER", sT, 174, 28, hT, tT), mT(KT ? String(null !== (LT = oT.scoreLabel) && void 0 !== LT ? LT : "Score").slice(0, 24) : "Score", 992, 174, 28, hT, 304, "right"), eT(202);
+          const GT = (kT - 232) / (iT.q + FT + XT),
+            pT = 208 + iT.q * GT,
+            bT = pT + FT * GT,
+            yT = (oT, IT, iT, zT) => {
+              const kT = uT(oT);
+              TT.fillStyle = kT ? wT : gT, TT.globalAlpha = kT ? .15 : zT ? .035 : 0, TT.fillRect(24, iT - GT / 2 + 1, 976, GT - 2), TT.globalAlpha = 1;
+              const WT = kT ? wT : gT;
+              mT(BT.format(IT), lT, iT, 34, WT, ZT ? 80 : qT, ZT ? "center" : "right"), mT(KT ? String(oT.name).slice(0, 64) : "Player", sT, iT, 34, WT, tT);
+              const XT = BT.format(oT.value);
+              mT(TT.measureText(XT).width > 304 ? oT.value.toExponential(6) : XT, 992, iT, 34, WT, 304, "right")
             };
-          if (cY)
-            for (const [FY, AY] of BY.entries()) nY(AY, jY[FY], 208 + (FY + .5) * kY, FY % 2 === 0);
+          if (ET)
+            for (const [iT, zT] of vT.entries()) yT(zT, YT[iT], 208 + (iT + .5) * GT, iT % 2 === 0);
           else {
-            const YY = "error" === iY.status,
-              rY = YY ? "Couldn't load leaderboard" : "ready" === iY.status ? "No scores yet" : "Loading leaderboard\u2026",
-              DY = YY ? "Trying again shortly" : "ready" === iY.status ? "Be the first on the board!" : "Fetching the top players",
-              FY = (208 + GY) / 2;
-            lY(rY, 512, FY - 28, 40, YY ? AY.K.redUiText : mY, 960, "center"), lY(DY, 512, FY + 27, 30, VY, 960, "center")
+            const TT = "error" === xT.status,
+              oT = TT ? "Couldn't load leaderboard" : "ready" === xT.status ? "No scores yet" : "Loading leaderboard\u2026",
+              IT = TT ? "Trying again shortly" : "ready" === xT.status ? "Be the first on the board!" : "Fetching the top players",
+              iT = (208 + pT) / 2;
+            mT(oT, 512, iT - 28, 40, TT ? zT.L.redUiText : gT, 960, "center"), mT(IT, 512, iT + 27, 30, hT, 960, "center")
           }
-          const PY = GY + aY * kY / 2;
-          if (null === JY) TY(PY);
+          const NT = pT + FT * GT / 2;
+          if (null === HT) eT(NT);
           else {
-            const rY = null === zY ? 0 : zY.tied - 1,
-              DY = `YOUR RANK #${gY.format(JY)}${null===zY?"":` of ${gY.format(zY.total)}`}`;
-            YY.font = "bold 36px 'Jetbrains Mono', monospace";
-            const FY = Math.max(20, Math.min(36, Math.floor(34560 / YY.measureText(DY).width)));
-            lY(DY, 512, PY - (rY > 0 ? 15 : 0), FY, SY, 960, "center"), rY > 0 && lY(`Tied with ${gY.format(rY)} other${1===rY?"":"s"}`, 512, PY + 24, 24, VY, 960, "center")
+            const oT = null === jT ? 0 : jT.tied - 1,
+              IT = `YOUR RANK #${BT.format(HT)}${null===jT?"":` of ${BT.format(jT.total)}`}`;
+            TT.font = "bold 36px 'Jetbrains Mono', monospace";
+            const iT = Math.max(20, Math.min(36, Math.floor(34560 / TT.measureText(IT).width)));
+            mT(IT, 512, NT - (oT > 0 ? 15 : 0), iT, wT, 960, "center"), oT > 0 && mT(`Tied with ${BT.format(oT)} other${1===oT?"":"s"}`, 512, NT + 24, 24, hT, 960, "center")
           }
-          if (null === yY) return;
-          const UY = xY + OY * kY / 2;
-          if (HY) lY(`You're in the top ${FY.o}!`, 512, UY, 40, SY, 960, "center");
-          else if (0 === KY.length) lY("You're not on this board yet", 512, UY, 34, VY, 960, "center");
+          if (null === cT) return;
+          const PT = bT + XT * GT / 2;
+          if (CT) mT(`You're in the top ${iT.q}!`, 512, PT, 40, wT, 960, "center");
+          else if (0 === fT.length) mT("You're not on this board yet", 512, PT, 34, hT, 960, "center");
           else
-            for (const [FY, AY] of KY.entries()) nY(AY, hY[FY], xY + (FY + .5) * kY, FY % 2 === 0)
-        }(YY, vY, uY, RY.layoutHeight)
+            for (const [iT, zT] of fT.entries()) yT(zT, QT[iT], bT + (iT + .5) * GT, iT % 2 === 0)
+        }(TT, ST, DT, WT.layoutHeight)
     }
 
-    function oY(YY, rY) {
-      return Array.isArray(YY) ? YY.slice(0, rY).filter((YY => YY && Number.isFinite(YY.rank) && Number.isFinite(YY.value))) : []
+    function MT(TT, oT) {
+      return Array.isArray(TT) ? TT.slice(0, oT).filter((TT => TT && Number.isFinite(TT.rank) && Number.isFinite(TT.value))) : []
     }
 
-    function WY(YY, rY) {
-      const DY = [];
-      let FY = !1;
-      return YY.forEach(((AY, IY) => {
-        if (null !== rY && AY.value === rY.value) return void DY.push(rY.rank);
-        const RY = IY > 0 && AY.value === YY[IY - 1].value;
-        RY || (FY = 0 === IY && 1 !== AY.rank), DY.push(RY && !FY ? DY[IY - 1] : AY.rank)
-      })), DY
+    function rT(TT, oT) {
+      const IT = [];
+      let iT = !1;
+      return TT.forEach(((zT, kT) => {
+        if (null !== oT && zT.value === oT.value) return void IT.push(oT.rank);
+        const WT = kT > 0 && zT.value === TT[kT - 1].value;
+        WT || (iT = 0 === kT && 1 !== zT.rank), IT.push(WT && !iT ? IT[kT - 1] : zT.rank)
+      })), IT
     }
   },
-  38229: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => AY,
-      g: () => IY
+  37844: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      e: () => kT
     });
-    const FY = 32;
+    const iT = 32;
 
-    function AY(YY) {
-      return Array.from(YY).length
+    function zT(TT) {
+      return Array.from(TT).length
     }
 
-    function IY(YY) {
-      const rY = [""];
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        AY = "";
-      const IY = () => {
-        rY.push(""), DY = 0, AY = ""
+    function kT(TT) {
+      const oT = [""];
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        zT = "";
+      const kT = () => {
+        oT.push(""), IT = 0, zT = ""
       };
-      for (const RY of YY.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(RY)) IY();
-        else if (/^\s+$/.test(RY)) AY += RY;
-      else if (RY.length > 0) {
-        const YY = Array.from(RY);
-        DY > 0 && DY + AY.length + YY.length > FY && IY(), rY[rY.length - 1] += AY, DY += AY.length, AY = "";
-        for (const AY of YY) DY >= FY && IY(), rY[rY.length - 1] += AY, DY++
+      for (const WT of TT.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(WT)) kT();
+        else if (/^\s+$/.test(WT)) zT += WT;
+      else if (WT.length > 0) {
+        const TT = Array.from(WT);
+        IT > 0 && IT + zT.length + TT.length > iT && kT(), oT[oT.length - 1] += zT, IT += zT.length, zT = "";
+        for (const zT of TT) IT >= iT && kT(), oT[oT.length - 1] += zT, IT++
       }
-      return rY[rY.length - 1] += AY, rY
+      return oT[oT.length - 1] += zT, oT
     }
   },
-  38464: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => RY
+  38071: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => WT
     });
-    var FY = DY(36058),
-      AY = DY.n(FY);
-    const IY = [1, 1, 1];
+    var iT = IT(35636),
+      zT = IT.n(iT);
+    const kT = [1, 1, 1];
 
-    function RY(YY) {
-      if (!YY) return [...IY];
+    function WT(TT) {
+      if (!TT) return [...kT];
       try {
-        const [rY, DY, FY] = AY()(YY).rgb().array();
-        return [rY / 255, DY / 255, FY / 255]
-      } catch (rY) {
-        return console.warn(`Invalid groundArrowPath colour "${YY}":`, rY), [...IY]
+        const [oT, IT, iT] = zT()(TT).rgb().array();
+        return [oT / 255, IT / 255, iT / 255]
+      } catch (oT) {
+        return console.warn(`Invalid groundArrowPath colour "${TT}":`, oT), [...kT]
       }
     }
   },
-  33695: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY,
-      h: () => OY,
-      l: () => RY,
-      p: () => AY,
-      s: () => FY
+  33283: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      g: () => XT,
+      h: () => WT,
+      k: () => zT,
+      m: () => iT
     });
-    const FY = {
+    const iT = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1651,41 +1651,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      AY = "/textures/dayNight/sun.png",
-      IY = "/textures/dayNight/moon.png",
-      RY = "/textures/dayNight/stars",
-      OY = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      zT = "/textures/dayNight/sun.png",
+      kT = "/textures/dayNight/moon.png",
+      WT = "/textures/dayNight/stars",
+      XT = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  38533: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => vY,
-      d: () => uY,
-      g: () => FY,
-      j: () => gY,
-      k: () => AY,
-      l: () => aY,
-      m: () => OY,
-      n: () => RY
+  38136: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => ST,
+      g: () => DT,
+      k: () => iT,
+      o: () => BT,
+      r: () => zT,
+      u: () => FT,
+      x: () => XT,
+      y: () => WT
     });
-    const FY = ["linear", "easeIn", "easeOut", "easeInOut"],
-      AY = ["movement", "camera", "cursor"],
-      IY = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const iT = ["linear", "easeIn", "easeOut", "easeInOut"],
+      zT = ["movement", "camera", "cursor"],
+      kT = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function RY(YY, rY) {
-      return OY(YY, rY, IY)
+    function WT(TT, oT) {
+      return XT(TT, oT, kT)
     }
 
-    function OY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (YY === rY || Number.isNaN(YY) && Number.isNaN(rY)) return !0;
-      if ("object" !== typeof YY || "object" !== typeof rY || null === YY || null === rY || Array.isArray(YY) !== Array.isArray(rY)) return !1;
-      const FY = YY,
-        AY = rY;
-      for (const IY of new Set([...Object.keys(FY), ...Object.keys(AY)]))
-        if (!DY.includes(IY) && !OY(FY[IY], AY[IY])) return !1;
+    function XT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (TT === oT || Number.isNaN(TT) && Number.isNaN(oT)) return !0;
+      if ("object" !== typeof TT || "object" !== typeof oT || null === TT || null === oT || Array.isArray(TT) !== Array.isArray(oT)) return !1;
+      const iT = TT,
+        zT = oT;
+      for (const kT of new Set([...Object.keys(iT), ...Object.keys(zT)]))
+        if (!IT.includes(kT) && !XT(iT[kT], zT[kT])) return !1;
       return !0
     }
-    const gY = {
+    const BT = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1707,10 +1707,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      aY = "^-[1-9][0-9]*$",
-      vY = "^#[0-9a-fA-F]{6}$",
-      uY = "#000000"
+      FT = "^-[1-9][0-9]*$",
+      ST = "^#[0-9a-fA-F]{6}$",
+      DT = "#000000"
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

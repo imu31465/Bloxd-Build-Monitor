@@ -1,495 +1,495 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40541: (YY, rY, DY) => {
-    async function FY(YY, rY) {
+  40290: (TT, oT, IT) => {
+    async function iT(TT, oT) {
       const [{
-        clientSideServerUrls: FY
+        clientSideServerUrls: iT
       }, {
-        postJsonWithMetricsCookiesAndJsonResponse: AY
+        postJsonWithMetricsCookiesAndJsonResponse: zT
       }, {
-        gameBridge: IY
-      }] = await Promise.all([Promise.resolve().then((() => DY(1222))), Promise.resolve().then((() => DY(1159))), Promise.resolve().then((() => DY(1808)))]), RY = IY.latest("connectedGame").websocketUrl;
-      if (!RY) throw new Error("AI Helper: not connected to a game server");
-      const OY = `${FY.getHttpUrlFromWebSocketUrl(RY)}${YY}`;
-      return await AY(OY, rY, {
+        gameBridge: kT
+      }] = await Promise.all([Promise.resolve().then((() => IT(1183))), Promise.resolve().then((() => IT(1117))), Promise.resolve().then((() => IT(1751)))]), WT = kT.latest("connectedGame").websocketUrl;
+      if (!WT) throw new Error("AI Helper: not connected to a game server");
+      const XT = `${iT.getHttpUrlFromWebSocketUrl(WT)}${TT}`;
+      return await zT(XT, oT, {
         retries: 0
       })
     }
-    DY.r(rY), DY.d(rY, {
-      postToGameServer: () => FY
+    IT.r(oT), IT.d(oT, {
+      postToGameServer: () => iT
     })
   },
-  40539: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      WorldCodeAiPanel: () => wu,
-      default: () => bu
+  40288: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      WorldCodeAiPanel: () => GD,
+      default: () => pD
     });
-    var FY = DY(61),
-      AY = DY(1092),
-      IY = DY.n(AY),
-      RY = DY(1125);
+    var iT = IT(46),
+      zT = IT(1042),
+      kT = IT.n(zT),
+      WT = IT(1083);
 
-    function OY(YY) {
+    function XT(TT) {
       let {
-        title: rY,
-        children: DY,
-        isCalm: AY = !1,
-        isElsewhere: OY = !1,
-        defaultOpen: gY = !1,
-        isOpen: aY,
-        onToggle: vY,
-        className: uY
-      } = YY;
-      const [sY, iY] = (0, FY.useState)(gY), yY = null !== aY && void 0 !== aY ? aY : sY;
-      return (0, RY.jsxs)("div", {
-        className: IY()("WorldCodeAiLog", AY && "WorldCodeAiLog-calm", OY && "WorldCodeAiLog-elsewhere", yY && "WorldCodeAiLog-open", uY),
-        children: [(0, RY.jsxs)("button", {
+        title: oT,
+        children: IT,
+        isCalm: zT = !1,
+        isElsewhere: XT = !1,
+        defaultOpen: BT = !1,
+        isOpen: FT,
+        onToggle: ST,
+        className: DT
+      } = TT;
+      const [LT, xT] = (0, iT.useState)(BT), cT = null !== FT && void 0 !== FT ? FT : LT;
+      return (0, WT.jsxs)("div", {
+        className: kT()("WorldCodeAiLog", zT && "WorldCodeAiLog-calm", XT && "WorldCodeAiLog-elsewhere", cT && "WorldCodeAiLog-open", DT),
+        children: [(0, WT.jsxs)("button", {
           className: "WorldCodeAiLogToggle",
-          "aria-expanded": yY,
+          "aria-expanded": cT,
           onClick: () => {
-            void 0 === aY && iY(!yY), null === vY || void 0 === vY || vY(!yY)
+            void 0 === FT && xT(!cT), null === ST || void 0 === ST || ST(!cT)
           },
-          children: [(0, RY.jsx)("span", {
+          children: [(0, WT.jsx)("span", {
             className: "WorldCodeAiLogChevron",
             "aria-hidden": "true",
-            children: yY ? "\u25be" : "\u25b8"
-          }), rY]
-        }), yY && (0, RY.jsx)("div", {
+            children: cT ? "\u25be" : "\u25b8"
+          }), oT]
+        }), cT && (0, WT.jsx)("div", {
           className: "WorldCodeAiLogBody",
-          children: DY
+          children: IT
         })]
       })
     }
-    var gY = DY(1808),
-      aY = DY(6061),
-      vY = DY(1437),
-      uY = DY(36271),
-      sY = DY(1098),
-      iY = DY(4322),
-      yY = DY(36293),
-      QY = DY(1560),
-      oY = DY(4405),
-      WY = DY(6050);
-    const EY = new URL(QY.e).host;
+    var BT = IT(1751),
+      FT = IT(6001),
+      ST = IT(1408),
+      DT = IT(35847),
+      LT = IT(1055),
+      xT = IT(4231),
+      cT = IT(35861),
+      KT = IT(1531),
+      MT = IT(4304),
+      rT = IT(5986);
+    const AT = new URL(KT.d).host;
 
-    function mY(YY) {
-      const rY = YY.trim();
-      let DY;
+    function gT(TT) {
+      const oT = TT.trim();
+      let IT;
       try {
-        const YY = /^docs\//i.test(rY) ? `${QY.e}/` : `${QY.e}/docs/`,
-          FY = rY.toLowerCase().replace(/^www\./, "").startsWith(`${EY}/`);
-        DY = new URL(FY ? `https://${rY}` : rY, YY)
+        const TT = /^docs\//i.test(oT) ? `${KT.d}/` : `${KT.d}/docs/`,
+          iT = oT.toLowerCase().replace(/^www\./, "").startsWith(`${AT}/`);
+        IT = new URL(iT ? `https://${oT}` : oT, TT)
       } catch {
         return null
       }
-      if ("https:" !== DY.protocol && "http:" !== DY.protocol || DY.host !== EY && DY.host !== `www.${EY}`) return null;
-      const FY = DY.pathname.toLowerCase();
-      return VY(FY) || null !== (0, oY.z)(FY) ? FY : (0, oY.y)(FY)
+      if ("https:" !== IT.protocol && "http:" !== IT.protocol || IT.host !== AT && IT.host !== `www.${AT}`) return null;
+      const iT = IT.pathname.toLowerCase();
+      return hT(iT) || null !== (0, MT.y)(iT) ? iT : (0, MT.x)(iT)
     }
 
-    function VY(YY) {
-      return YY === oY.i || YY === oY.n
+    function hT(TT) {
+      return TT === MT.j || TT === MT.o
     }
 
-    function SY(YY) {
-      const rY = mY(YY);
-      return null === rY ? YY : `${QY.e}${rY}`
+    function wT(TT) {
+      const oT = gT(TT);
+      return null === oT ? TT : `${KT.d}${oT}`
     }
-    var lY = DY(229),
-      TY = DY(40484),
-      eY = DY.n(TY);
+    var mT = IT(199),
+      eT = IT(40215),
+      RT = IT.n(eT);
 
-    function NY(YY) {
-      const rY = [];
-      let DY = 0;
-      return YY.split("\n").forEach(((YY, FY) => {
-        rY.push({
-          text: YY,
-          from: DY,
-          index: FY
-        }), DY += YY.length + 1
-      })), rY
-    }
-
-    function BY(YY) {
-      return YY.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    function uT(TT) {
+      const oT = [];
+      let IT = 0;
+      return TT.split("\n").forEach(((TT, iT) => {
+        oT.push({
+          text: TT,
+          from: IT,
+          index: iT
+        }), IT += TT.length + 1
+      })), oT
     }
 
-    function cY(YY, rY, DY) {
-      if (0 === rY.length) return null;
-      let FY = null;
-      for (let AY = 0; AY + rY.length <= YY.length; AY++) {
-        if (rY.every(((rY, FY) => DY(YY[AY + FY].text) === rY))) {
-          if (FY) return {
-            ...FY,
+    function vT(TT) {
+      return TT.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    }
+
+    function ET(TT, oT, IT) {
+      if (0 === oT.length) return null;
+      let iT = null;
+      for (let zT = 0; zT + oT.length <= TT.length; zT++) {
+        if (oT.every(((oT, iT) => IT(TT[zT + iT].text) === oT))) {
+          if (iT) return {
+            ...iT,
             isOnly: !1
           };
-          const DY = YY[AY + rY.length - 1];
-          FY = {
-            from: YY[AY].from,
-            to: DY.from + DY.text.length
+          const IT = TT[zT + oT.length - 1];
+          iT = {
+            from: TT[zT].from,
+            to: IT.from + IT.text.length
           }
         }
       }
-      return FY ? {
-        ...FY,
+      return iT ? {
+        ...iT,
         isOnly: !0
       } : null
     }
 
-    function KY(YY, rY) {
-      if ("" === rY.trim()) return null;
-      const DY = NY(YY),
-        FY = function(YY) {
-          return YY.split("\n").map((YY => YY.trim())).filter(((YY, rY, DY) => "" !== YY || rY > 0 && rY < DY.length - 1))
-        }(rY),
-        AY = cY(DY, FY, (YY => YY.trim()));
-      if (null !== AY) return {
-        from: AY.from,
-        to: AY.to,
-        isLoose: !AY.isOnly
+    function fT(TT, oT) {
+      if ("" === oT.trim()) return null;
+      const IT = uT(TT),
+        iT = function(TT) {
+          return TT.split("\n").map((TT => TT.trim())).filter(((TT, oT, IT) => "" !== TT || oT > 0 && oT < IT.length - 1))
+        }(oT),
+        zT = ET(IT, iT, (TT => TT.trim()));
+      if (null !== zT) return {
+        from: zT.from,
+        to: zT.to,
+        isLoose: !zT.isOnly
       };
-      const IY = YY => YY.trim().replace(/;+$/, ""),
-        RY = cY(DY, FY.map(IY), IY);
-      if (null !== RY) {
-        const DY = YY.indexOf(rY),
-          FY = -1 !== DY && (DY < RY.from || DY >= RY.to);
+      const kT = TT => TT.trim().replace(/;+$/, ""),
+        WT = ET(IT, iT.map(kT), kT);
+      if (null !== WT) {
+        const IT = TT.indexOf(oT),
+          iT = -1 !== IT && (IT < WT.from || IT >= WT.to);
         return {
-          from: RY.from,
-          to: RY.to,
-          isLoose: !RY.isOnly || FY
+          from: WT.from,
+          to: WT.to,
+          isLoose: !WT.isOnly || iT
         }
       }
-      const OY = YY.indexOf(rY);
-      if (-1 !== OY) {
-        var gY, aY, vY;
-        const DY = /\w/.test(rY[0]) && /\w/.test(null !== (gY = YY[OY - 1]) && void 0 !== gY ? gY : "") || /\w/.test(null !== (aY = rY.at(-1)) && void 0 !== aY ? aY : "") && /\w/.test(null !== (vY = YY[OY + rY.length]) && void 0 !== vY ? vY : "");
+      const XT = TT.indexOf(oT);
+      if (-1 !== XT) {
+        var BT, FT, ST;
+        const IT = /\w/.test(oT[0]) && /\w/.test(null !== (BT = TT[XT - 1]) && void 0 !== BT ? BT : "") || /\w/.test(null !== (FT = oT.at(-1)) && void 0 !== FT ? FT : "") && /\w/.test(null !== (ST = TT[XT + oT.length]) && void 0 !== ST ? ST : "");
         return {
-          from: OY,
-          to: OY + rY.length,
-          isLoose: DY || -1 !== YY.indexOf(rY, OY + 1)
+          from: XT,
+          to: XT + oT.length,
+          isLoose: IT || -1 !== TT.indexOf(oT, XT + 1)
         }
       }
-      const uY = rY.split("\n").map(BY).filter(Boolean),
-        sY = cY(DY.filter((YY => "" !== BY(YY.text))), uY, BY);
-      return null === sY ? null : {
-        from: sY.from,
-        to: sY.to,
+      const DT = oT.split("\n").map(vT).filter(Boolean),
+        LT = ET(IT.filter((TT => "" !== vT(TT.text))), DT, vT);
+      return null === LT ? null : {
+        from: LT.from,
+        to: LT.to,
         isLoose: !0
       }
     }
 
-    function HY(YY) {
-      var rY, DY;
-      return null !== (rY = null === (DY = /^[ \t]*/.exec(YY)) || void 0 === DY ? void 0 : DY[0]) && void 0 !== rY ? rY : ""
+    function CT(TT) {
+      var oT, IT;
+      return null !== (oT = null === (IT = /^[ \t]*/.exec(TT)) || void 0 === IT ? void 0 : IT[0]) && void 0 !== oT ? oT : ""
     }
 
-    function zY(YY, rY, DY, FY) {
-      if (rY.from > 0 && "\n" !== YY[rY.from - 1]) return FY;
-      const AY = YY.slice(rY.from, rY.to).split("\n").filter((YY => "" !== YY.trim())),
-        IY = DY.split("\n").filter((YY => "" !== YY.trim()));
-      if (0 === AY.length || 0 === IY.length) return FY;
-      const RY = HY(AY[0]),
-        OY = HY(IY[0]);
-      if (RY === OY) return FY;
-      const gY = IY.length > 1 && IY.length === AY.length && IY.slice(1).every(((YY, rY) => HY(YY) === HY(AY[rY + 1]))),
-        aY = FY.split("\n"),
-        vY = aY.findIndex((YY => "" !== YY.trim()));
-      if (-1 === vY || HY(aY[vY]) === RY) return FY;
-      let uY = !1;
-      return aY.map(((YY, rY) => {
-        var DY, FY;
-        const AY = uY;
-        return (null !== (DY = null === (FY = YY.replace(/\\`/g, "").match(/`/g)) || void 0 === FY ? void 0 : FY.length) && void 0 !== DY ? DY : 0) % 2 === 1 && (uY = !uY), AY || gY && rY !== vY ? YY : function(YY, rY, DY) {
-          if ("" === YY.trim()) return YY;
-          const FY = HY(YY);
-          return FY.startsWith(rY) ? DY + YY.slice(rY.length) : rY.startsWith(FY) ? DY.slice(0, Math.max(0, DY.length - (rY.length - FY.length))) + YY.trimStart() : YY
-        }(YY, OY, RY)
+    function jT(TT, oT, IT, iT) {
+      if (oT.from > 0 && "\n" !== TT[oT.from - 1]) return iT;
+      const zT = TT.slice(oT.from, oT.to).split("\n").filter((TT => "" !== TT.trim())),
+        kT = IT.split("\n").filter((TT => "" !== TT.trim()));
+      if (0 === zT.length || 0 === kT.length) return iT;
+      const WT = CT(zT[0]),
+        XT = CT(kT[0]);
+      if (WT === XT) return iT;
+      const BT = kT.length > 1 && kT.length === zT.length && kT.slice(1).every(((TT, oT) => CT(TT) === CT(zT[oT + 1]))),
+        FT = iT.split("\n"),
+        ST = FT.findIndex((TT => "" !== TT.trim()));
+      if (-1 === ST || CT(FT[ST]) === WT) return iT;
+      let DT = !1;
+      return FT.map(((TT, oT) => {
+        var IT, iT;
+        const zT = DT;
+        return (null !== (IT = null === (iT = TT.replace(/\\`/g, "").match(/`/g)) || void 0 === iT ? void 0 : iT.length) && void 0 !== IT ? IT : 0) % 2 === 1 && (DT = !DT), zT || BT && oT !== ST ? TT : function(TT, oT, IT) {
+          if ("" === TT.trim()) return TT;
+          const iT = CT(TT);
+          return iT.startsWith(oT) ? IT + TT.slice(oT.length) : oT.startsWith(iT) ? IT.slice(0, Math.max(0, IT.length - (oT.length - iT.length))) + TT.trimStart() : TT
+        }(TT, XT, WT)
       })).join("\n")
     }
 
-    function ZY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const FY = new Map;
-      for (const OY of YY.split("\n")) {
-        const YY = OY.trim(),
-          rY = YY.replace(/;$/, "");
-        "" === rY || YY.endsWith(";") || FY.has(rY) || FY.set(rY, YY)
+    function JT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const iT = new Map;
+      for (const XT of TT.split("\n")) {
+        const TT = XT.trim(),
+          oT = TT.replace(/;$/, "");
+        "" === oT || TT.endsWith(";") || iT.has(oT) || iT.set(oT, TT)
       }
-      const AY = rY.split("\n");
-      let IY = !1;
-      const RY = AY.map(((YY, rY) => {
-        var RY, OY, gY;
-        const aY = IY;
-        (null !== (RY = null === (OY = YY.replace(/\\`/g, "").match(/`/g)) || void 0 === OY ? void 0 : OY.length) && void 0 !== RY ? RY : 0) % 2 === 1 && (IY = !IY);
-        const vY = YY.trim(),
-          uY = FY.get(vY.replace(/;$/, ""));
-        if (void 0 === uY || uY === vY || aY || IY) return YY;
-        const sY = null !== (gY = AY.slice(rY + 1).find((YY => "" !== YY.trim()))) && void 0 !== gY ? gY : DY;
-        return /^(?:[([`+-]|\/(?![/*]))/.test(sY.trim()) ? YY : YY.slice(0, YY.length - YY.trimStart().length) + uY
+      const zT = oT.split("\n");
+      let kT = !1;
+      const WT = zT.map(((TT, oT) => {
+        var WT, XT, BT;
+        const FT = kT;
+        (null !== (WT = null === (XT = TT.replace(/\\`/g, "").match(/`/g)) || void 0 === XT ? void 0 : XT.length) && void 0 !== WT ? WT : 0) % 2 === 1 && (kT = !kT);
+        const ST = TT.trim(),
+          DT = iT.get(ST.replace(/;$/, ""));
+        if (void 0 === DT || DT === ST || FT || kT) return TT;
+        const LT = null !== (BT = zT.slice(oT + 1).find((TT => "" !== TT.trim()))) && void 0 !== BT ? BT : IT;
+        return /^(?:[([`+-]|\/(?![/*]))/.test(LT.trim()) ? TT : TT.slice(0, TT.length - TT.trimStart().length) + DT
       })).join("\n");
-      return RY.trim() === YY.trim() && rY.trim() !== YY.trim() ? rY : RY
+      return WT.trim() === TT.trim() && oT.trim() !== TT.trim() ? oT : WT
     }
 
-    function CY(YY) {
-      var rY;
-      return null !== (rY = YY.split("\n").find((YY => "" !== YY.trim()))) && void 0 !== rY ? rY : ""
+    function UT(TT) {
+      var oT;
+      return null !== (oT = TT.split("\n").find((TT => "" !== TT.trim()))) && void 0 !== oT ? oT : ""
     }
 
-    function fY(YY, rY) {
-      if (YY === rY) return 1;
-      if (YY.length < 2 || rY.length < 2) return 0;
-      const DY = new Map;
-      for (let RY = 0; RY < YY.length - 1; RY++) {
-        var FY;
-        const rY = YY.slice(RY, RY + 2);
-        DY.set(rY, (null !== (FY = DY.get(rY)) && void 0 !== FY ? FY : 0) + 1)
+    function aT(TT, oT) {
+      if (TT === oT) return 1;
+      if (TT.length < 2 || oT.length < 2) return 0;
+      const IT = new Map;
+      for (let WT = 0; WT < TT.length - 1; WT++) {
+        var iT;
+        const oT = TT.slice(WT, WT + 2);
+        IT.set(oT, (null !== (iT = IT.get(oT)) && void 0 !== iT ? iT : 0) + 1)
       }
-      let AY = 0;
-      for (let RY = 0; RY < rY.length - 1; RY++) {
-        var IY;
-        const YY = rY.slice(RY, RY + 2),
-          FY = null !== (IY = DY.get(YY)) && void 0 !== IY ? IY : 0;
-        FY > 0 && (DY.set(YY, FY - 1), AY++)
+      let zT = 0;
+      for (let WT = 0; WT < oT.length - 1; WT++) {
+        var kT;
+        const TT = oT.slice(WT, WT + 2),
+          iT = null !== (kT = IT.get(TT)) && void 0 !== kT ? kT : 0;
+        iT > 0 && (IT.set(TT, iT - 1), zT++)
       }
-      return 2 * AY / (YY.length + rY.length - 2)
+      return 2 * zT / (TT.length + oT.length - 2)
     }
 
-    function jY(YY, rY) {
-      const DY = rY.split("\n").map(BY).filter(Boolean),
-        FY = NY(YY).filter((YY => "" !== BY(YY.text)));
-      if (0 === DY.length || 0 === FY.length) return null;
-      const AY = Math.min(DY.length, FY.length);
-      let IY = null;
-      for (let OY = 0; OY + AY <= FY.length; OY++) {
-        let YY = 0;
-        for (let rY = 0; rY < AY; rY++) YY += fY(BY(FY[OY + rY].text), DY[rY]);
-        YY /= DY.length, (null === IY || YY > IY.score) && (IY = {
-          start: OY,
-          score: YY
+    function YT(TT, oT) {
+      const IT = oT.split("\n").map(vT).filter(Boolean),
+        iT = uT(TT).filter((TT => "" !== vT(TT.text)));
+      if (0 === IT.length || 0 === iT.length) return null;
+      const zT = Math.min(IT.length, iT.length);
+      let kT = null;
+      for (let XT = 0; XT + zT <= iT.length; XT++) {
+        let TT = 0;
+        for (let oT = 0; oT < zT; oT++) TT += aT(vT(iT[XT + oT].text), IT[oT]);
+        TT /= IT.length, (null === kT || TT > kT.score) && (kT = {
+          start: XT,
+          score: TT
         })
       }
-      if (null === IY || IY.score < .5) return null;
-      const RY = FY.slice(IY.start, IY.start + AY);
+      if (null === kT || kT.score < .5) return null;
+      const WT = iT.slice(kT.start, kT.start + zT);
       return {
-        line: RY[0].index + 1,
-        lastLine: RY[RY.length - 1].index + 1,
-        text: RY.map((YY => YY.text.trim())).join("\n")
+        line: WT[0].index + 1,
+        lastLine: WT[WT.length - 1].index + 1,
+        text: WT.map((TT => TT.text.trim())).join("\n")
       }
     }
 
-    function hY(YY) {
-      return eY().isFunctionExpression(YY) || eY().isArrowFunction(YY)
+    function QT(TT) {
+      return RT().isFunctionExpression(TT) || RT().isArrowFunction(TT)
     }
 
-    function dY(YY) {
-      return eY().isExpressionStatement(YY) && eY().isBinaryExpression(YY.expression) && eY().isPropertyAccessExpression(YY.expression.left) && ! function(YY) {
-        return eY().isIdentifier(YY) && ("globalThis" === YY.text || "window" === YY.text || "self" === YY.text)
-      }(YY.expression.left.expression)
+    function OT(TT) {
+      return RT().isExpressionStatement(TT) && RT().isBinaryExpression(TT.expression) && RT().isPropertyAccessExpression(TT.expression.left) && ! function(TT) {
+        return RT().isIdentifier(TT) && ("globalThis" === TT.text || "window" === TT.text || "self" === TT.text)
+      }(TT.expression.left.expression)
     }
 
-    function JY(YY, rY, DY) {
-      let FY = DY;
-      for (const IY of (null !== (AY = eY().getLeadingCommentRanges(YY, rY.getFullStart())) && void 0 !== AY ? AY : []).reverse()) {
-        var AY;
-        if (/\n[^\S\n]*\n/.test(YY.slice(IY.end, FY))) break;
-        FY = IY.pos
+    function HT(TT, oT, IT) {
+      let iT = IT;
+      for (const kT of (null !== (zT = RT().getLeadingCommentRanges(TT, oT.getFullStart())) && void 0 !== zT ? zT : []).reverse()) {
+        var zT;
+        if (/\n[^\S\n]*\n/.test(TT.slice(kT.end, iT))) break;
+        iT = kT.pos
       }
-      return FY
+      return iT
     }
 
-    function MY(YY) {
-      var rY;
+    function nT(TT) {
+      var oT;
       const {
-        parseDiagnostics: DY
-      } = YY;
-      return (null !== (rY = null === DY || void 0 === DY ? void 0 : DY.length) && void 0 !== rY ? rY : 0) > 0
+        parseDiagnostics: IT
+      } = TT;
+      return (null !== (oT = null === IT || void 0 === IT ? void 0 : IT.length) && void 0 !== oT ? oT : 0) > 0
     }
 
-    function wY(YY) {
-      const rY = eY().createSourceFile("worldCode.js", YY, eY().ScriptTarget.Latest, !1, eY().ScriptKind.JS),
-        DY = [],
-        FY = (AY, IY) => {
-          const RY = function(YY) {
-            var rY, DY;
-            if (eY().isFunctionDeclaration(YY)) return null !== (rY = null === (DY = YY.name) || void 0 === DY ? void 0 : DY.text) && void 0 !== rY ? rY : null;
-            if (eY().isVariableStatement(YY) && 1 === YY.declarationList.declarations.length) {
-              const rY = YY.declarationList.declarations[0];
-              return eY().isIdentifier(rY.name) && rY.initializer && hY(rY.initializer) ? rY.name.text : null
+    function qT(TT) {
+      const oT = RT().createSourceFile("worldCode.js", TT, RT().ScriptTarget.Latest, !1, RT().ScriptKind.JS),
+        IT = [],
+        iT = (zT, kT) => {
+          const WT = function(TT) {
+            var oT, IT;
+            if (RT().isFunctionDeclaration(TT)) return null !== (oT = null === (IT = TT.name) || void 0 === IT ? void 0 : IT.text) && void 0 !== oT ? oT : null;
+            if (RT().isVariableStatement(TT) && 1 === TT.declarationList.declarations.length) {
+              const oT = TT.declarationList.declarations[0];
+              return RT().isIdentifier(oT.name) && oT.initializer && QT(oT.initializer) ? oT.name.text : null
             }
-            if (eY().isExpressionStatement(YY) && eY().isBinaryExpression(YY.expression) && YY.expression.operatorToken.kind === eY().SyntaxKind.EqualsToken && hY(YY.expression.right)) {
-              const rY = YY.expression.left;
-              return eY().isIdentifier(rY) ? rY.text : eY().isPropertyAccessExpression(rY) ? rY.name.text : null
+            if (RT().isExpressionStatement(TT) && RT().isBinaryExpression(TT.expression) && TT.expression.operatorToken.kind === RT().SyntaxKind.EqualsToken && QT(TT.expression.right)) {
+              const oT = TT.expression.left;
+              return RT().isIdentifier(oT) ? oT.text : RT().isPropertyAccessExpression(oT) ? oT.name.text : null
             }
             return null
-          }(AY);
-          if (null !== RY) {
-            const FY = AY.getStart(rY);
-            DY.push({
-              name: RY,
-              from: FY,
-              to: AY.getEnd(),
-              commentFrom: JY(YY, AY, FY),
-              topLevel: IY,
-              isProperty: dY(AY)
+          }(zT);
+          if (null !== WT) {
+            const iT = zT.getStart(oT);
+            IT.push({
+              name: WT,
+              from: iT,
+              to: zT.getEnd(),
+              commentFrom: HT(TT, zT, iT),
+              topLevel: kT,
+              isProperty: OT(zT)
             })
           }
-          eY().forEachChild(AY, (YY => {
-            FY(YY, !1)
+          RT().forEachChild(zT, (TT => {
+            iT(TT, !1)
           }))
         };
-      for (const AY of rY.statements) FY(AY, !0);
+      for (const zT of oT.statements) iT(zT, !0);
       return {
-        functions: DY,
-        hasErrors: MY(rY)
+        functions: IT,
+        hasErrors: nT(oT)
       }
     }
 
-    function bY(YY) {
-      return wY(YY).functions
+    function ZT(TT) {
+      return qT(TT).functions
     }
 
-    function XY(YY) {
-      return YY.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
+    function lT(TT) {
+      return TT.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
     }
 
-    function qY(YY, rY) {
-      var DY;
-      const FY = YY.filter((YY => YY.name === rY)),
-        AY = FY.filter((YY => !YY.isProperty)),
-        IY = AY.length > 0 ? AY : FY;
-      return null !== (DY = IY.find((YY => YY.topLevel))) && void 0 !== DY ? DY : IY[0]
+    function sT(TT, oT) {
+      var IT;
+      const iT = TT.filter((TT => TT.name === oT)),
+        zT = iT.filter((TT => !TT.isProperty)),
+        kT = zT.length > 0 ? zT : iT;
+      return null !== (IT = kT.find((TT => TT.topLevel))) && void 0 !== IT ? IT : kT[0]
     }
 
-    function pY(YY, rY) {
-      return "" === YY.trim() ? `${rY.trim()}\n` : `${YY.replace(/\s*$/,"")}\n\n${rY.trim()}\n`
+    function tT(TT, oT) {
+      return "" === TT.trim() ? `${oT.trim()}\n` : `${TT.replace(/\s*$/,"")}\n\n${oT.trim()}\n`
     }
 
-    function kY(YY, rY, DY) {
-      var FY, AY;
-      const IY = wY(YY),
+    function GT(TT, oT, IT) {
+      var iT, zT;
+      const kT = qT(TT),
         {
-          functions: RY
-        } = IY,
-        OY = bY(DY),
-        gY = null !== (FY = OY.find((YY => YY.topLevel && !YY.isProperty))) && void 0 !== FY ? FY : OY.find((YY => YY.topLevel)),
-        aY = XY(rY),
-        vY = gY ? qY(RY, gY.name) : void 0,
-        uY = null !== (AY = void 0 !== vY && !OY.some((YY => YY.topLevel && YY.name === aY)) ? vY : qY(RY, aY)) && void 0 !== AY ? AY : vY;
-      return uY ? GY(YY, IY, uY, OY, DY) : pY(YY, DY)
+          functions: WT
+        } = kT,
+        XT = ZT(IT),
+        BT = null !== (iT = XT.find((TT => TT.topLevel && !TT.isProperty))) && void 0 !== iT ? iT : XT.find((TT => TT.topLevel)),
+        FT = lT(oT),
+        ST = BT ? sT(WT, BT.name) : void 0,
+        DT = null !== (zT = void 0 !== ST && !XT.some((TT => TT.topLevel && TT.name === FT)) ? ST : sT(WT, FT)) && void 0 !== zT ? zT : ST;
+      return DT ? pT(TT, kT, DT, XT, IT) : tT(TT, IT)
     }
 
-    function GY(YY, rY, DY, FY, AY) {
+    function pT(TT, oT, IT, iT, zT) {
       let {
-        functions: IY,
-        hasErrors: RY
-      } = rY;
-      const OY = IY.some((YY => YY.from > DY.from && YY.to <= DY.to && !FY.some((rY => rY.name === YY.name))));
-      if (RY && OY) return null;
-      const gY = /^\s*(?:\/\/|\/\*)/.test(AY) ? DY.commentFrom : DY.from;
-      return YY.slice(0, gY) + ZY(YY.slice(gY, DY.to), AY.trim(), CY(YY.slice(DY.to))) + YY.slice(DY.to)
+        functions: kT,
+        hasErrors: WT
+      } = oT;
+      const XT = kT.some((TT => TT.from > IT.from && TT.to <= IT.to && !iT.some((oT => oT.name === TT.name))));
+      if (WT && XT) return null;
+      const BT = /^\s*(?:\/\/|\/\*)/.test(zT) ? IT.commentFrom : IT.from;
+      return TT.slice(0, BT) + JT(TT.slice(BT, IT.to), zT.trim(), UT(TT.slice(IT.to))) + TT.slice(IT.to)
     }
 
-    function xY(YY, rY, DY, FY, AY) {
-      const IY = FY.trim();
-      if (IY.includes("\n") || !IY.endsWith("{")) return null;
-      const RY = wY(YY),
-        OY = RY.functions.find((FY => FY.topLevel && nY(YY, FY.from) <= rY && DY < FY.to && !YY.slice(FY.from, DY).includes("\n"))),
-        gY = wY(AY),
-        aY = gY.functions.filter((YY => YY.topLevel)),
-        vY = !gY.hasErrors && (1 === aY.length || aY.some((YY => YY.name === (null === OY || void 0 === OY ? void 0 : OY.name)))),
-        uY = 1 === aY.length && aY[0].name !== (null === OY || void 0 === OY ? void 0 : OY.name) ? aY[0].name : void 0,
-        sY = void 0 === uY ? void 0 : RY.functions.find((YY => YY.topLevel && YY.name === uY));
-      return OY && vY ? GY(YY, RY, null !== sY && void 0 !== sY ? sY : OY, gY.functions, AY) : function(YY, rY, DY, FY, AY) {
-        const IY = eY().createSourceFile("worldCode.js", YY, eY().ScriptTarget.Latest, !0, eY().ScriptKind.JS),
-          RY = IY.statements.find((FY => {
-            const AY = FY.getStart(IY);
-            return nY(YY, AY) <= rY && DY < FY.getEnd() && !YY.slice(AY, DY).includes("\n")
+    function bT(TT, oT, IT, iT, zT) {
+      const kT = iT.trim();
+      if (kT.includes("\n") || !kT.endsWith("{")) return null;
+      const WT = qT(TT),
+        XT = WT.functions.find((iT => iT.topLevel && yT(TT, iT.from) <= oT && IT < iT.to && !TT.slice(iT.from, IT).includes("\n"))),
+        BT = qT(zT),
+        FT = BT.functions.filter((TT => TT.topLevel)),
+        ST = !BT.hasErrors && (1 === FT.length || FT.some((TT => TT.name === (null === XT || void 0 === XT ? void 0 : XT.name)))),
+        DT = 1 === FT.length && FT[0].name !== (null === XT || void 0 === XT ? void 0 : XT.name) ? FT[0].name : void 0,
+        LT = void 0 === DT ? void 0 : WT.functions.find((TT => TT.topLevel && TT.name === DT));
+      return XT && ST ? pT(TT, WT, null !== LT && void 0 !== LT ? LT : XT, BT.functions, zT) : function(TT, oT, IT, iT, zT) {
+        const kT = RT().createSourceFile("worldCode.js", TT, RT().ScriptTarget.Latest, !0, RT().ScriptKind.JS),
+          WT = kT.statements.find((iT => {
+            const zT = iT.getStart(kT);
+            return yT(TT, zT) <= oT && IT < iT.getEnd() && !TT.slice(zT, IT).includes("\n")
           })),
-          OY = eY().createSourceFile("replace.js", AY.trim(), eY().ScriptTarget.Latest, !0, eY().ScriptKind.JS),
-          gY = 1 === OY.statements.length ? OY.statements[0] : void 0;
-        if (!RY || !gY || MY(OY) || gY.kind !== RY.kind || !gY.getText(OY).startsWith(FY)) return null;
-        const aY = RY.getStart(IY);
-        return YY.slice(0, aY) + AY.trim() + YY.slice(RY.getEnd())
-      }(YY, rY, DY, IY, AY)
+          XT = RT().createSourceFile("replace.js", zT.trim(), RT().ScriptTarget.Latest, !0, RT().ScriptKind.JS),
+          BT = 1 === XT.statements.length ? XT.statements[0] : void 0;
+        if (!WT || !BT || nT(XT) || BT.kind !== WT.kind || !BT.getText(XT).startsWith(iT)) return null;
+        const FT = WT.getStart(kT);
+        return TT.slice(0, FT) + zT.trim() + TT.slice(WT.getEnd())
+      }(TT, oT, IT, kT, zT)
     }
 
-    function nY(YY, rY) {
-      let DY = rY;
-      for (; DY > 0 && (" " === YY[DY - 1] || "\t" === YY[DY - 1]);) DY--;
-      return 0 === DY || "\n" === YY[DY - 1] ? DY : rY
+    function yT(TT, oT) {
+      let IT = oT;
+      for (; IT > 0 && (" " === TT[IT - 1] || "\t" === TT[IT - 1]);) IT--;
+      return 0 === IT || "\n" === TT[IT - 1] ? IT : oT
     }
 
-    function PY(YY, rY, DY) {
-      const FY = rY.trim().toLowerCase();
-      if ("" !== YY.trim() && ("top" === FY || "start" === FY)) return `${DY.trim()}\n\n${YY.replace(/^\s+/,"")}`;
-      const AY = "end" === FY ? void 0 : qY(bY(YY), XY(rY));
-      return AY ? `${YY.slice(0,AY.to)}\n\n${DY.trim()}${YY.slice(AY.to)}` : pY(YY, DY)
+    function NT(TT, oT, IT) {
+      const iT = oT.trim().toLowerCase();
+      if ("" !== TT.trim() && ("top" === iT || "start" === iT)) return `${IT.trim()}\n\n${TT.replace(/^\s+/,"")}`;
+      const zT = "end" === iT ? void 0 : sT(ZT(TT), lT(oT));
+      return zT ? `${TT.slice(0,zT.to)}\n\n${IT.trim()}${TT.slice(zT.to)}` : tT(TT, IT)
     }
 
-    function UY(YY) {
-      return [...new Set(bY(YY).filter((YY => YY.topLevel)).map((YY => YY.name)))]
+    function PT(TT) {
+      return [...new Set(ZT(TT).filter((TT => TT.topLevel)).map((TT => TT.name)))]
     }
-    const LY = 120,
-      tY = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
+    const dT = 120,
+      VT = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
 
-    function Yr(YY) {
-      let rY = YY.replace(/\s+/g, " ").trim();
-      if ("" === rY || tY.test(rY)) return null;
-      if (rY.length > LY) {
-        const YY = rY.slice(0, LY);
-        rY = `${YY.slice(0,Math.max(YY.lastIndexOf(" "),60)).trimEnd()}\u2026`
+    function To(TT) {
+      let oT = TT.replace(/\s+/g, " ").trim();
+      if ("" === oT || VT.test(oT)) return null;
+      if (oT.length > dT) {
+        const TT = oT.slice(0, dT);
+        oT = `${TT.slice(0,Math.max(TT.lastIndexOf(" "),60)).trimEnd()}\u2026`
       }
-      return rY.charAt(0).toUpperCase() + rY.slice(1)
+      return oT.charAt(0).toUpperCase() + oT.slice(1)
     }
-    const rr = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
+    const oo = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
 
-    function Dr(YY) {
-      var rY, DY;
-      const FY = null === (rY = /\(([^)]*)\)/.exec(YY)) || void 0 === rY || null === (DY = rY[1].split(",")[1]) || void 0 === DY ? void 0 : DY.trim();
-      return FY && /^[A-Za-z_$][\w$]*$/.test(FY) ? [...YY.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((YY => YY[2].split(",").some((YY => YY.trim() === FY)) ? [YY[1]] : [])) : []
+    function Io(TT) {
+      var oT, IT;
+      const iT = null === (oT = /\(([^)]*)\)/.exec(TT)) || void 0 === oT || null === (IT = oT[1].split(",")[1]) || void 0 === IT ? void 0 : IT.trim();
+      return iT && /^[A-Za-z_$][\w$]*$/.test(iT) ? [...TT.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((TT => TT[2].split(",").some((TT => TT.trim() === iT)) ? [TT[1]] : [])) : []
     }
 
-    function Fr(YY, rY) {
-      const DY = new Set,
-        FY = new Set,
-        AY = new Set,
-        IY = Object.values(YY).map((YY => {
-          const rY = bY(YY),
-            DY = rY.filter((YY => "playerCommand" === YY.name)).map((rY => YY.slice(rY.from, rY.to)));
+    function io(TT, oT) {
+      const IT = new Set,
+        iT = new Set,
+        zT = new Set,
+        kT = Object.values(TT).map((TT => {
+          const oT = ZT(TT),
+            IT = oT.filter((TT => "playerCommand" === TT.name)).map((oT => TT.slice(oT.from, oT.to)));
           return {
-            text: YY,
-            found: rY,
-            own: DY
+            text: TT,
+            found: oT,
+            own: IT
           }
         })),
-        RY = new Set(IY.flatMap((YY => {
+        WT = new Set(kT.flatMap((TT => {
           let {
-            own: rY
-          } = YY;
-          return rY.flatMap(Dr)
+            own: oT
+          } = TT;
+          return oT.flatMap(Io)
         })));
       for (const {
-          text: gY,
-          found: aY,
-          own: vY
+          text: BT,
+          found: FT,
+          own: ST
         }
-        of IY) {
-        for (const AY of UY(gY)) rY.has(AY) ? DY.add(AY) : FY.add(AY);
-        const YY = [...vY, ...aY.filter((YY => "playerCommand" !== YY.name && RY.has(YY.name))).map((YY => gY.slice(YY.from, YY.to)))],
-          IY = YY.length > 0 || !/\bplayerCommand\b/.test(gY) ? YY : [gY];
-        for (const rY of IY)
-          for (const YY of rY.matchAll(rr)) AY.add(`/${YY[1].split(/\s/)[0]}`)
+        of kT) {
+        for (const zT of PT(BT)) oT.has(zT) ? IT.add(zT) : iT.add(zT);
+        const TT = [...ST, ...FT.filter((TT => "playerCommand" !== TT.name && WT.has(TT.name))).map((TT => BT.slice(TT.from, TT.to)))],
+          kT = TT.length > 0 || !/\bplayerCommand\b/.test(BT) ? TT : [BT];
+        for (const oT of kT)
+          for (const TT of oT.matchAll(oo)) zT.add(`/${TT[1].split(/\s/)[0]}`)
       }
-      const OY = YY => [...YY].slice(0, 12);
+      const XT = TT => [...TT].slice(0, 12);
       return {
-        callbacks: OY(DY),
-        commands: OY(AY),
-        functions: OY(FY)
+        callbacks: XT(IT),
+        commands: XT(zT),
+        functions: XT(iT)
       }
     }
-    const Ar = new Map([
+    const zo = new Map([
       ["onPlayerJoin", "When a player joins"],
       ["onPlayerLeave", "When a player leaves"],
       ["onPlayerChat", "When a player chats"],
@@ -520,87 +520,87 @@ export const modules = {
       ["doPeriodicSave", "When the game saves"]
     ]);
 
-    function Ir(YY) {
-      const rY = Ar.get(YY);
-      if (rY) return rY;
-      return `When: ${YY.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
+    function ko(TT) {
+      const oT = zo.get(TT);
+      if (oT) return oT;
+      return `When: ${TT.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
     }
 
-    function Rr(YY) {
-      return Array.isArray(YY) && YY.every((YY => "string" === typeof YY))
+    function Wo(TT) {
+      return Array.isArray(TT) && TT.every((TT => "string" === typeof TT))
     }
-    const Or = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
-      gr = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
+    const Xo = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
+      Bo = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
 
-    function ar(YY) {
-      var rY, DY;
-      const FY = YY.trim().split(/\s+/).length,
-        AY = new Set((null !== (rY = YY.match(Or)) && void 0 !== rY ? rY : []).map((YY => YY.toLowerCase().replace(/s$/, "")))).size,
-        IY = (null !== (DY = YY.match(gr)) && void 0 !== DY ? DY : []).length;
-      return AY >= 2 && IY >= 2 || FY >= 30 && IY >= 3
-    }
-
-    function vr(YY) {
-      const rY = YY.split(/\n|\|/).map((YY => YY.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((YY => "" !== YY)).slice(0, 5).map((YY => YY.length > 90 ? `${YY.slice(0,89).trimEnd()}\u2026` : YY));
-      return rY.length >= 2 ? rY : []
-    }
-    var ur = DY(4443);
-
-    function sr(YY) {
-      return YY.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
+    function Fo(TT) {
+      var oT, IT;
+      const iT = TT.trim().split(/\s+/).length,
+        zT = new Set((null !== (oT = TT.match(Xo)) && void 0 !== oT ? oT : []).map((TT => TT.toLowerCase().replace(/s$/, "")))).size,
+        kT = (null !== (IT = TT.match(Bo)) && void 0 !== IT ? IT : []).length;
+      return zT >= 2 && kT >= 2 || iT >= 30 && kT >= 3
     }
 
-    function ir(YY) {
-      const rY = new Set;
-      for (const DY of YY.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) rY.add(DY[1]);
-      for (const DY of YY.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) rY.add(DY[1]);
-      return [...rY]
+    function So(TT) {
+      const oT = TT.split(/\n|\|/).map((TT => TT.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((TT => "" !== TT)).slice(0, 5).map((TT => TT.length > 90 ? `${TT.slice(0,89).trimEnd()}\u2026` : TT));
+      return oT.length >= 2 ? oT : []
+    }
+    var Do = IT(4355);
+
+    function Lo(TT) {
+      return TT.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
     }
 
-    function yr(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const FY = new Set(rY),
-        AY = new Map;
-      for (const uY of rY) {
-        var IY;
-        const YY = sr(uY);
-        AY.set(YY, [...null !== (IY = AY.get(YY)) && void 0 !== IY ? IY : [], uY])
+    function xo(TT) {
+      const oT = new Set;
+      for (const IT of TT.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) oT.add(IT[1]);
+      for (const IT of TT.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) oT.add(IT[1]);
+      return [...oT]
+    }
+
+    function co(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const iT = new Set(oT),
+        zT = new Map;
+      for (const DT of oT) {
+        var kT;
+        const TT = Lo(DT);
+        zT.set(TT, [...null !== (kT = zT.get(TT)) && void 0 !== kT ? kT : [], DT])
       }
-      const RY = ir(YY),
-        OY = new Set(ir(DY)),
-        gY = [];
-      let aY = YY;
-      for (const uY of RY) {
-        var vY;
-        if (FY.has(uY) || OY.has(uY) || !/^(on|player)[A-Z]/.test(uY)) continue;
-        const YY = null !== (vY = AY.get(sr(uY))) && void 0 !== vY ? vY : [];
-        1 !== YY.length || RY.includes(YY[0]) || (aY = (0, ur.C)(aY, new RegExp(`${uY}(?![\\w$])`, "g"), ur.q, (() => YY[0])), gY.push({
-          from: uY,
-          to: YY[0]
+      const WT = xo(TT),
+        XT = new Set(xo(IT)),
+        BT = [];
+      let FT = TT;
+      for (const DT of WT) {
+        var ST;
+        if (iT.has(DT) || XT.has(DT) || !/^(on|player)[A-Z]/.test(DT)) continue;
+        const TT = null !== (ST = zT.get(Lo(DT))) && void 0 !== ST ? ST : [];
+        1 !== TT.length || WT.includes(TT[0]) || (FT = (0, Do.r)(FT, new RegExp(`${DT}(?![\\w$])`, "g"), Do.k, (() => TT[0])), BT.push({
+          from: DT,
+          to: TT[0]
         }))
       }
       return {
-        code: aY,
-        renames: gY
+        code: FT,
+        renames: BT
       }
     }
-    const Qr = {
+    const Ko = {
         functions: "api",
         callbacks: "callback",
         "client options": "clientOption"
       },
-      or = Object.keys(Qr).map((YY => `"${YY}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
-      Wr = {
+      Mo = Object.keys(Ko).map((TT => `"${TT}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
+      ro = {
         type: "string",
         description: "A few plain words for the creator on what this change does, under 80 characters"
       },
-      Er = {
+      Ao = {
         readOnlyHint: !0,
         destructiveHint: !1,
         idempotentHint: !0,
         openWorldHint: !1
       },
-      mr = [{
+      go = [{
         name: "write_file",
         title: "Write a file",
         description: "Replaces a file with new code, or makes a new file",
@@ -611,7 +611,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: Wr,
+            why: ro,
             content: {
               type: "string",
               description: "The whole new file"
@@ -636,7 +636,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: Wr,
+            why: ro,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the current file"
@@ -669,7 +669,7 @@ export const modules = {
               type: "string",
               description: "The function's or callback's name, e.g. onPlayerJoin"
             },
-            why: Wr,
+            why: ro,
             code: {
               type: "string",
               description: "The whole new function"
@@ -698,7 +698,7 @@ export const modules = {
               type: "string",
               description: 'Where it goes: "top", "end", or the name of the function to put it after'
             },
-            why: Wr,
+            why: ro,
             code: {
               type: "string",
               description: "Only the new code"
@@ -731,7 +731,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: Wr
+            why: ro
           },
           required: ["name"]
         },
@@ -768,7 +768,7 @@ export const modules = {
         inputSchema: {
           type: "object",
           properties: {
-            why: Wr,
+            why: ro,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the open code"
@@ -906,7 +906,7 @@ export const modules = {
           },
           required: ["path"]
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -919,7 +919,7 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -937,7 +937,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -950,25 +950,25 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
       }, {
         name: "fetch_url",
         title: "Read a docs page",
-        description: `Reads a page of Bloxd's docs as Markdown. ${oY.l} lists every page with its link; then read the page, or the part of a long page, you need`,
+        description: `Reads a page of Bloxd's docs as Markdown. ${MT.n} lists every page with its link; then read the page, or the part of a long page, you need`,
         inputSchema: {
           type: "object",
           properties: {
             url: {
               type: "string",
-              description: `${oY.l}, or a page it links to`
+              description: `${MT.n}, or a page it links to`
             }
           },
           required: ["url"]
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -981,7 +981,7 @@ export const modules = {
           properties: {
             list: {
               type: "string",
-              description: `${or}, to list every one of them`
+              description: `${Mo}, to list every one of them`
             },
             name: {
               type: "string",
@@ -990,7 +990,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -1008,7 +1008,7 @@ export const modules = {
           },
           required: ["words"]
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -1026,7 +1026,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -1044,7 +1044,7 @@ export const modules = {
           },
           required: ["name"]
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
@@ -1057,290 +1057,290 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Er,
+        annotations: Ao,
         _meta: {
           isLookup: !0
         }
       }];
 
-    function Vr(YY) {
-      var rY;
-      return !0 === (null === (rY = Sr(YY)._meta) || void 0 === rY ? void 0 : rY.isLookup)
+    function ho(TT) {
+      var oT;
+      return !0 === (null === (oT = wo(TT)._meta) || void 0 === oT ? void 0 : oT.isLookup)
     }
 
-    function Sr(YY) {
-      const rY = mr.find((rY => rY.name === YY));
-      if (!rY) throw new Error(`No AI Helper tool ${YY}`);
-      return rY
+    function wo(TT) {
+      const oT = go.find((oT => oT.name === TT));
+      if (!oT) throw new Error(`No AI Helper tool ${TT}`);
+      return oT
     }
-    const lr = mr.map((YY => YY.name)).filter((YY => "plan" !== YY && "remember" !== YY)).join("|"),
-      Tr = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${lr})\b[^\n.]*\.?[ \t]*\n*)+`),
-      er = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${lr})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
-      Nr = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
+    const mo = go.map((TT => TT.name)).filter((TT => "plan" !== TT && "remember" !== TT)).join("|"),
+      eo = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${mo})\b[^\n.]*\.?[ \t]*\n*)+`),
+      Ro = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${mo})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
+      uo = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
 
-    function Br(YY) {
-      const rY = YY.trim();
-      return er.some((YY => YY.test(rY)))
+    function vo(TT) {
+      const oT = TT.trim();
+      return Ro.some((TT => TT.test(oT)))
     }
 
-    function cr(YY, rY) {
-      const DY = YY.replace(Tr, "");
-      return rY ? function(YY) {
-        const rY = YY.indexOf("```"),
-          DY = -1 === rY ? YY : YY.slice(0, rY);
-        let FY = -1,
-          AY = -1,
-          IY = 0;
-        for (const RY of DY.matchAll(Nr)) {
-          const YY = RY.index + RY[0].length;
-          Br(DY.slice(IY, YY)) && (FY = -1 === FY ? IY : FY, AY = YY), IY = YY
+    function Eo(TT, oT) {
+      const IT = TT.replace(eo, "");
+      return oT ? function(TT) {
+        const oT = TT.indexOf("```"),
+          IT = -1 === oT ? TT : TT.slice(0, oT);
+        let iT = -1,
+          zT = -1,
+          kT = 0;
+        for (const WT of IT.matchAll(uo)) {
+          const TT = WT.index + WT[0].length;
+          vo(IT.slice(kT, TT)) && (iT = -1 === iT ? kT : iT, zT = TT), kT = TT
         }
-        return -1 === AY ? YY : "" !== DY.slice(AY).trim() ? YY.slice(AY).trimStart() : `${YY.slice(0,FY).trimEnd()}\n${YY.slice(DY.length)}`.trim()
-      }(DY) : "" !== DY.trim() ? DY : YY
+        return -1 === zT ? TT : "" !== IT.slice(zT).trim() ? TT.slice(zT).trimStart() : `${TT.slice(0,iT).trimEnd()}\n${TT.slice(IT.length)}`.trim()
+      }(IT) : "" !== IT.trim() ? IT : TT
     }
-    const Kr = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
-      Hr = new Set(["content", "code"]);
+    const fo = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
+      Co = new Set(["content", "code"]);
 
-    function zr(YY) {
-      const rY = "string" === typeof YY ? YY.split(/[./:]/).pop() : void 0;
-      return function(YY) {
-        return mr.some((rY => rY.name === YY))
-      }(rY) ? rY : null
+    function jo(TT) {
+      const oT = "string" === typeof TT ? TT.split(/[./:]/).pop() : void 0;
+      return function(TT) {
+        return go.some((oT => oT.name === TT))
+      }(oT) ? oT : null
     }
 
-    function Zr(YY, rY) {
-      return DY => {
-        const FY = [];
-        let AY;
-        for (const gY of DY.matchAll(YY)) {
-          var IY;
-          const YY = zr(gY[1]);
-          if (null === YY) continue;
-          const aY = {};
-          for (const DY of gY[2].matchAll(rY)) {
-            var RY, OY;
-            aY[null !== (RY = DY[1]) && void 0 !== RY ? RY : DY[2]] = null !== (OY = DY[3]) && void 0 !== OY ? OY : DY[4]
-          }(null === (IY = AY) || void 0 === IY ? void 0 : IY.call.name) === YY && "" === DY.slice(AY.index + AY.call.source.length, gY.index).trim() ? FY[FY.length - 1] = {
+    function Jo(TT, oT) {
+      return IT => {
+        const iT = [];
+        let zT;
+        for (const BT of IT.matchAll(TT)) {
+          var kT;
+          const TT = jo(BT[1]);
+          if (null === TT) continue;
+          const FT = {};
+          for (const IT of BT[2].matchAll(oT)) {
+            var WT, XT;
+            FT[null !== (WT = IT[1]) && void 0 !== WT ? WT : IT[2]] = null !== (XT = IT[3]) && void 0 !== XT ? XT : IT[4]
+          }(null === (kT = zT) || void 0 === kT ? void 0 : kT.call.name) === TT && "" === IT.slice(zT.index + zT.call.source.length, BT.index).trim() ? iT[iT.length - 1] = {
             call: {
-              name: YY,
-              args: aY,
-              source: DY.slice(AY.index, gY.index + gY[0].length)
+              name: TT,
+              args: FT,
+              source: IT.slice(zT.index, BT.index + BT[0].length)
             },
-            index: AY.index
-          } : FY.push({
+            index: zT.index
+          } : iT.push({
             call: {
-              name: YY,
-              args: aY,
-              source: gY[0]
+              name: TT,
+              args: FT,
+              source: BT[0]
             },
-            index: gY.index
-          }), AY = "" === gY[2].trim() && Sr(YY).inputSchema.required.length > 0 ? FY.at(-1) : void 0
+            index: BT.index
+          }), zT = "" === BT[2].trim() && wo(TT).inputSchema.required.length > 0 ? iT.at(-1) : void 0
         }
-        return FY
+        return iT
       }
     }
 
-    function Cr(YY) {
-      return YY.replace(/\\(["\\nt])/g, ((YY, rY) => "n" === rY ? "\n" : "t" === rY ? "\t" : rY))
+    function Uo(TT) {
+      return TT.replace(/\\(["\\nt])/g, ((TT, oT) => "n" === oT ? "\n" : "t" === oT ? "\t" : oT))
     }
 
-    function fr(YY) {
-      let rY = null !== YY && void 0 !== YY ? YY : {};
-      if ("string" === typeof rY) try {
-        rY = JSON.parse("" === rY ? "{}" : rY)
+    function ao(TT) {
+      let oT = null !== TT && void 0 !== TT ? TT : {};
+      if ("string" === typeof oT) try {
+        oT = JSON.parse("" === oT ? "{}" : oT)
       } catch {
         return null
       }
-      if ("object" !== typeof rY || null === rY) return null;
-      const DY = {};
-      for (const [FY, AY] of Object.entries(rY)) "string" === typeof AY ? DY[FY] = Hr.has(FY) && Kr.test(AY) && !AY.includes("\n") ? Cr(AY) : AY : "boolean" === typeof AY || "number" === typeof AY ? DY[FY] = String(AY) : "object" !== typeof AY || null === AY || Array.isArray(AY) ? Array.isArray(AY) && AY.every((YY => "string" === typeof YY)) && (DY[FY] = AY.join("\n")) : DY[FY] = JSON.stringify(AY);
-      return DY
+      if ("object" !== typeof oT || null === oT) return null;
+      const IT = {};
+      for (const [iT, zT] of Object.entries(oT)) "string" === typeof zT ? IT[iT] = Co.has(iT) && fo.test(zT) && !zT.includes("\n") ? Uo(zT) : zT : "boolean" === typeof zT || "number" === typeof zT ? IT[iT] = String(zT) : "object" !== typeof zT || null === zT || Array.isArray(zT) ? Array.isArray(zT) && zT.every((TT => "string" === typeof TT)) && (IT[iT] = zT.join("\n")) : IT[iT] = JSON.stringify(zT);
+      return IT
     }
 
-    function jr(YY, rY) {
-      let DY = 0,
-        FY = !1;
-      for (let AY = rY; AY < YY.length; AY++) {
-        const rY = YY[AY];
-        if (FY) "\\" === rY ? AY++ : '"' === rY && (FY = !1);
-        else if ('"' === rY) FY = !0;
-        else if ("{" === rY) DY++;
-        else if ("}" === rY && (DY--, 0 === DY)) return AY + 1
+    function Yo(TT, oT) {
+      let IT = 0,
+        iT = !1;
+      for (let zT = oT; zT < TT.length; zT++) {
+        const oT = TT[zT];
+        if (iT) "\\" === oT ? zT++ : '"' === oT && (iT = !1);
+        else if ('"' === oT) iT = !0;
+        else if ("{" === oT) IT++;
+        else if ("}" === oT && (IT--, 0 === IT)) return zT + 1
       }
       return null
     }
 
-    function hr(YY, rY) {
-      let DY = YY;
+    function Qo(TT, oT) {
+      let IT = TT;
       for (const {
-          call: FY,
-          index: AY
+          call: iT,
+          index: zT
         }
-        of rY) DY = DY.slice(0, AY) + " ".repeat(FY.source.length) + DY.slice(AY + FY.source.length);
-      return DY
+        of oT) IT = IT.slice(0, zT) + " ".repeat(iT.source.length) + IT.slice(zT + iT.source.length);
+      return IT
     }
-    const dr = new RegExp(`\\b(${mr.map((YY=>YY.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
-    const Jr = {
-        formatCall: (YY, rY) => {
-          const DY = Object.fromEntries(Object.entries(rY).filter((YY => {
-            let [, rY] = YY;
-            return void 0 !== rY
+    const Oo = new RegExp(`\\b(${go.map((TT=>TT.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
+    const Ho = {
+        formatCall: (TT, oT) => {
+          const IT = Object.fromEntries(Object.entries(oT).filter((TT => {
+            let [, oT] = TT;
+            return void 0 !== oT
           })));
-          return `${YY}(${JSON.stringify(DY)})`
+          return `${TT}(${JSON.stringify(IT)})`
         },
-        declareTools: YY => YY,
+        declareTools: TT => TT,
         callStyle: "Make each call with function calling, its code in full: never write a call, or the code it carries, in your answer's words or in a code fence.",
-        fileResult: (YY, rY, DY) => `<file path="${YY}"${DY?' open_in_editor="true"':""}>\n${rY}\n</file>`,
-        editFailure: (YY, rY) => `${YY} failed: ${rY}`,
-        lookupResult: (YY, rY, DY) => `${YY} ${rY}:\n${DY}`
+        fileResult: (TT, oT, IT) => `<file path="${TT}"${IT?' open_in_editor="true"':""}>\n${oT}\n</file>`,
+        editFailure: (TT, oT) => `${TT} failed: ${oT}`,
+        lookupResult: (TT, oT, IT) => `${TT} ${oT}:\n${IT}`
       },
-      Mr = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
+      no = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
 
-    function wr(YY) {
-      const rY = [];
-      for (const AY of YY.matchAll(Mr)) {
-        const IY = zr(AY[1]),
-          RY = AY.index + AY[0].length,
-          OY = jr(YY, RY),
-          gY = null === OY ? null : fr(YY.slice(RY, OY));
-        if (null !== IY && null !== OY && null !== gY) {
-          var DY, FY;
-          const RY = null !== (DY = null === (FY = YY.slice(OY).match(/^\s*<\|call\|>/)) || void 0 === FY ? void 0 : FY[0]) && void 0 !== DY ? DY : "";
-          rY.push({
+    function qo(TT) {
+      const oT = [];
+      for (const zT of TT.matchAll(no)) {
+        const kT = jo(zT[1]),
+          WT = zT.index + zT[0].length,
+          XT = Yo(TT, WT),
+          BT = null === XT ? null : ao(TT.slice(WT, XT));
+        if (null !== kT && null !== XT && null !== BT) {
+          var IT, iT;
+          const WT = null !== (IT = null === (iT = TT.slice(XT).match(/^\s*<\|call\|>/)) || void 0 === iT ? void 0 : iT[0]) && void 0 !== IT ? IT : "";
+          oT.push({
             call: {
-              name: IY,
-              args: gY,
-              source: YY.slice(AY.index, OY + RY.length)
+              name: kT,
+              args: BT,
+              source: TT.slice(zT.index, XT + WT.length)
             },
-            index: AY.index
+            index: zT.index
           })
         }
       }
-      return rY
+      return oT
     }
 
-    function br(YY) {
-      var rY, DY, FY, AY;
-      let IY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      if ("object" !== typeof YY || null === YY) return [];
-      const RY = YY;
-      if (Array.isArray(RY.tool_calls)) return RY.tool_calls.flatMap((YY => br(YY, !0)));
-      if (void 0 !== RY.tool_call) return br(RY.tool_call, !0);
-      if (void 0 !== RY.function) return br(RY.function, !0);
-      const OY = null !== (rY = null !== (DY = null !== (FY = null !== (AY = RY.arguments) && void 0 !== AY ? AY : RY.params) && void 0 !== FY ? FY : RY.param) && void 0 !== DY ? DY : RY.args) && void 0 !== rY ? rY : RY.input,
-        gY = zr(RY.tool);
-      if (null !== gY) {
+    function Zo(TT) {
+      var oT, IT, iT, zT;
+      let kT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      if ("object" !== typeof TT || null === TT) return [];
+      const WT = TT;
+      if (Array.isArray(WT.tool_calls)) return WT.tool_calls.flatMap((TT => Zo(TT, !0)));
+      if (void 0 !== WT.tool_call) return Zo(WT.tool_call, !0);
+      if (void 0 !== WT.function) return Zo(WT.function, !0);
+      const XT = null !== (oT = null !== (IT = null !== (iT = null !== (zT = WT.arguments) && void 0 !== zT ? zT : WT.params) && void 0 !== iT ? iT : WT.param) && void 0 !== IT ? IT : WT.args) && void 0 !== oT ? oT : WT.input,
+        BT = jo(WT.tool);
+      if (null !== BT) {
         const {
-          tool: YY,
-          ...rY
-        } = RY, DY = fr(null !== OY && void 0 !== OY ? OY : rY);
-        return null === DY ? [] : [{
-          name: gY,
-          args: DY
+          tool: TT,
+          ...oT
+        } = WT, IT = ao(null !== XT && void 0 !== XT ? XT : oT);
+        return null === IT ? [] : [{
+          name: BT,
+          args: IT
         }]
       }
-      if (!IY && void 0 === OY) return [];
-      const aY = zr(RY.name),
-        vY = fr(OY);
-      return null === aY || null === vY ? [] : [{
-        name: aY,
-        args: vY
+      if (!kT && void 0 === XT) return [];
+      const FT = jo(WT.name),
+        ST = ao(XT);
+      return null === FT || null === ST ? [] : [{
+        name: FT,
+        args: ST
       }]
     }
 
-    function Xr(YY) {
-      const rY = [];
-      let DY = YY.indexOf("{");
-      for (; - 1 !== DY;) {
-        const FY = jr(YY, DY);
-        let AY = [];
-        if (null !== FY) try {
-          AY = br(JSON.parse(YY.slice(DY, FY)))
+    function so(TT) {
+      const oT = [];
+      let IT = TT.indexOf("{");
+      for (; - 1 !== IT;) {
+        const iT = Yo(TT, IT);
+        let zT = [];
+        if (null !== iT) try {
+          zT = Zo(JSON.parse(TT.slice(IT, iT)))
         } catch {}
-        if (null !== FY && AY.length > 0) {
-          const IY = YY.slice(DY, FY);
-          rY.push(...AY.map((YY => ({
+        if (null !== iT && zT.length > 0) {
+          const kT = TT.slice(IT, iT);
+          oT.push(...zT.map((TT => ({
             call: {
-              ...YY,
-              source: IY
+              ...TT,
+              source: kT
             },
-            index: DY
-          })))), DY = YY.indexOf("{", FY)
-        } else DY = YY.indexOf("{", DY + 1)
+            index: IT
+          })))), IT = TT.indexOf("{", iT)
+        } else IT = TT.indexOf("{", IT + 1)
       }
-      return rY
+      return oT
     }
 
-    function qr(YY) {
-      if (Array.isArray(YY)) return `[${YY.map(qr).join(", ")}]`;
-      if ("object" === typeof YY && null !== YY) {
-        return `{${Object.entries(YY).map((YY=>{let[rY,DY]=YY;return`${JSON.stringify(rY)}: ${qr(DY)}`})).join(", ")}}`
+    function to(TT) {
+      if (Array.isArray(TT)) return `[${TT.map(to).join(", ")}]`;
+      if ("object" === typeof TT && null !== TT) {
+        return `{${Object.entries(TT).map((TT=>{let[oT,IT]=TT;return`${JSON.stringify(oT)}: ${to(IT)}`})).join(", ")}}`
       }
-      return JSON.stringify(YY)
+      return JSON.stringify(TT)
     }
-    const pr = {
-        formatCall: (YY, rY) => `<tool_call>\n<function=${YY}>\n${Object.entries(rY).flatMap((YY=>{let[rY,DY]=YY;return void 0===DY?[]:[`<parameter=${rY}>\n${DY}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
-        declareTools: (YY, rY, DY) => DY || 0 === rY.length ? YY : `${function(YY){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${YY.map((YY=>`\n${qr({type:"function",function:{name:YY.name,description:YY.description,parameters:YY.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(rY)}\n\n${YY}`,
+    const Go = {
+        formatCall: (TT, oT) => `<tool_call>\n<function=${TT}>\n${Object.entries(oT).flatMap((TT=>{let[oT,IT]=TT;return void 0===IT?[]:[`<parameter=${oT}>\n${IT}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
+        declareTools: (TT, oT, IT) => IT || 0 === oT.length ? TT : `${function(TT){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${TT.map((TT=>`\n${to({type:"function",function:{name:TT.name,description:TT.description,parameters:TT.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(oT)}\n\n${TT}`,
         callStyle: "Write each call in your answer as a <tool_call> holding a <function=name> block with a <parameter=name> for each argument, the code inside as it is, not escaped and in full: never as JSON or inside a code fence.",
-        fileResult: (YY, rY, DY) => `<tool_response>\nview_file ${YY}${DY?" (open in the editor)":""}:\n${rY}\n</tool_response>`,
-        editFailure: (YY, rY) => `<tool_response>\nError: ${rY}\n</tool_response>`,
-        lookupResult: (YY, rY, DY) => `<tool_response>\n${YY} ${rY}:\n${DY}\n</tool_response>`
+        fileResult: (TT, oT, IT) => `<tool_response>\nview_file ${TT}${IT?" (open in the editor)":""}:\n${oT}\n</tool_response>`,
+        editFailure: (TT, oT) => `<tool_response>\nError: ${oT}\n</tool_response>`,
+        lookupResult: (TT, oT, IT) => `<tool_response>\n${TT} ${oT}:\n${IT}\n</tool_response>`
       },
-      kr = Zr(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
-      Gr = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
-      xr = {
-        formatCall: (YY, rY) => `<tool_call name="${YY}">\n${Object.entries(rY).flatMap((YY=>{let[rY,DY]=YY;return void 0===DY?[]:[`<param name="${rY}">${Gr.has(rY)?DY:`\n${DY}\n`}</param>\n`]})).join("")}</tool_call>`,
-        declareTools: YY => YY,
+      po = Jo(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
+      bo = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
+      yo = {
+        formatCall: (TT, oT) => `<tool_call name="${TT}">\n${Object.entries(oT).flatMap((TT=>{let[oT,IT]=TT;return void 0===IT?[]:[`<param name="${oT}">${bo.has(oT)?IT:`\n${IT}\n`}</param>\n`]})).join("")}</tool_call>`,
+        declareTools: TT => TT,
         callStyle: "Write each call in your answer as a <tool_call> with a <param> for each argument, the code inside as it is, not escaped and in full: never as JSON, a function call or inside a code fence.",
-        fileResult: (YY, rY, DY) => `<tool_result name="view_file" path="${YY}"${DY?' open_in_editor="true"':""}>\n${rY}\n</tool_result>`,
-        editFailure: (YY, rY) => `<tool_result name="${YY}" is_error="true">\n${rY}\n</tool_result>`,
-        lookupResult: (YY, rY, DY) => `<tool_result name="${YY}" about="${rY.replace(/"/g,"'")}">\n${DY}\n</tool_result>`
+        fileResult: (TT, oT, IT) => `<tool_result name="view_file" path="${TT}"${IT?' open_in_editor="true"':""}>\n${oT}\n</tool_result>`,
+        editFailure: (TT, oT) => `<tool_result name="${TT}" is_error="true">\n${oT}\n</tool_result>`,
+        lookupResult: (TT, oT, IT) => `<tool_result name="${TT}" about="${oT.replace(/"/g,"'")}">\n${IT}\n</tool_result>`
       },
-      nr = Zr(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
-      Pr = {
-        simple: xr,
-        qwenXml: pr,
-        deepseek: Jr
+      No = Jo(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
+      Po = {
+        simple: yo,
+        qwenXml: Go,
+        deepseek: Ho
       },
-      Ur = {
-        simple: nr,
-        qwenXml: kr,
-        deepseek: function(YY) {
-          const rY = [];
-          for (const OY of YY.matchAll(dr)) {
-            var DY, FY, AY, IY, RY;
-            const gY = zr(OY[1]),
-              aY = OY.index + OY[0].length,
-              vY = jr(YY, aY);
-            if (null === gY || null === vY || (null !== (DY = null === (FY = rY.at(-1)) || void 0 === FY ? void 0 : FY.index) && void 0 !== DY ? DY : -1) + (null !== (AY = null === (IY = rY.at(-1)) || void 0 === IY ? void 0 : IY.call.source.length) && void 0 !== AY ? AY : 0) > OY.index) continue;
-            const uY = fr(YY.slice(aY, vY));
-            if (null === uY) continue;
-            const sY = /^\s*\)/.exec(YY.slice(vY)),
-              iY = YY.slice(OY.index, vY + (null !== (RY = null === sY || void 0 === sY ? void 0 : sY[0].length) && void 0 !== RY ? RY : 0));
-            rY.push({
+      Vo = {
+        simple: No,
+        qwenXml: po,
+        deepseek: function(TT) {
+          const oT = [];
+          for (const XT of TT.matchAll(Oo)) {
+            var IT, iT, zT, kT, WT;
+            const BT = jo(XT[1]),
+              FT = XT.index + XT[0].length,
+              ST = Yo(TT, FT);
+            if (null === BT || null === ST || (null !== (IT = null === (iT = oT.at(-1)) || void 0 === iT ? void 0 : iT.index) && void 0 !== IT ? IT : -1) + (null !== (zT = null === (kT = oT.at(-1)) || void 0 === kT ? void 0 : kT.call.source.length) && void 0 !== zT ? zT : 0) > XT.index) continue;
+            const DT = ao(TT.slice(FT, ST));
+            if (null === DT) continue;
+            const LT = /^\s*\)/.exec(TT.slice(ST)),
+              xT = TT.slice(XT.index, ST + (null !== (WT = null === LT || void 0 === LT ? void 0 : LT[0].length) && void 0 !== WT ? WT : 0));
+            oT.push({
               call: {
-                name: gY,
-                args: uY,
-                source: iY
+                name: BT,
+                args: DT,
+                source: xT
               },
-              index: OY.index
+              index: XT.index
             })
           }
-          return rY
+          return oT
         }
       },
-      Lr = ["simple", "qwenXml"];
+      TI = ["simple", "qwenXml"];
 
-    function tr(YY) {
-      return "deepseek" === YY ? "simple" : YY
+    function oI(TT) {
+      return "deepseek" === TT ? "simple" : TT
     }
-    const YD = /<\|[a-z_]+\|>/g,
-      rD = /^[ \t]*`{1,2}[ \t]*$/gm,
-      DD = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
-      FD = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
-      AD = /```[\w-]*/g,
-      ID = /^[\s[\],]*$/,
-      RD = {
+    const II = /<\|[a-z_]+\|>/g,
+      iI = /^[ \t]*`{1,2}[ \t]*$/gm,
+      zI = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
+      kI = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
+      WI = /```[\w-]*/g,
+      XI = /^[\s[\],]*$/,
+      BI = {
         use_prefab: 0,
         add_world_code: 1,
         write_file: 2,
@@ -1365,823 +1365,823 @@ export const modules = {
         view_prefab: 21
       };
 
-    function OD(YY) {
-      return Sr(YY.name).inputSchema.required.every((rY => void 0 !== YY.args[rY]))
+    function FI(TT) {
+      return wo(TT.name).inputSchema.required.every((oT => void 0 !== TT.args[oT]))
     }
 
-    function gD(YY, rY) {
-      const DY = zr(YY),
-        FY = fr(rY);
-      return null === DY || null === FY ? null : {
-        name: DY,
-        args: FY
+    function SI(TT, oT) {
+      const IT = jo(TT),
+        iT = ao(oT);
+      return null === IT || null === iT ? null : {
+        name: IT,
+        args: iT
       }
     }
 
-    function aD(YY, rY) {
-      const DY = [];
-      for (const FY of function(YY) {
-          const rY = tr(YY),
-            DY = Lr.filter((YY => YY !== rY));
-          return [Ur[rY], ...YY === rY ? [] : [Ur[YY]], ...DY.map((YY => Ur[YY])), wr, Xr]
-        }(rY)) DY.push(...FY(hr(YY, DY)));
-      return DY.map((YY => {
+    function DI(TT, oT) {
+      const IT = [];
+      for (const iT of function(TT) {
+          const oT = oI(TT),
+            IT = TI.filter((TT => TT !== oT));
+          return [Vo[oT], ...TT === oT ? [] : [Vo[TT]], ...IT.map((TT => Vo[TT])), qo, so]
+        }(oT)) IT.push(...iT(Qo(TT, IT)));
+      return IT.map((TT => {
         let {
-          call: rY
-        } = YY;
-        return rY
+          call: oT
+        } = TT;
+        return oT
       }))
     }
 
-    function vD(YY, rY) {
-      return aD(YY, rY).sort(((YY, rY) => RD[YY.name] - RD[rY.name]))
+    function LI(TT, oT) {
+      return DI(TT, oT).sort(((TT, oT) => BI[TT.name] - BI[oT.name]))
     }
 
-    function uD(YY) {
-      return function(YY) {
-        const rY = [...YY.matchAll(AD)],
-          DY = [];
-        let FY = 0;
-        for (; FY < rY.length;) {
-          const AY = rY[FY],
-            IY = rY.at(FY + 1);
-          void 0 !== IY && "```" === IY[0] ? (ID.test(YY.slice(AY.index + AY[0].length, IY.index)) && DY.push({
-            from: AY.index,
-            to: IY.index + IY[0].length
-          }), FY += 2) : (DY.push({
-            from: AY.index,
-            to: AY.index + AY[0].length
-          }), FY++)
+    function xI(TT) {
+      return function(TT) {
+        const oT = [...TT.matchAll(WI)],
+          IT = [];
+        let iT = 0;
+        for (; iT < oT.length;) {
+          const zT = oT[iT],
+            kT = oT.at(iT + 1);
+          void 0 !== kT && "```" === kT[0] ? (XI.test(TT.slice(zT.index + zT[0].length, kT.index)) && IT.push({
+            from: zT.index,
+            to: kT.index + kT[0].length
+          }), iT += 2) : (IT.push({
+            from: zT.index,
+            to: zT.index + zT[0].length
+          }), iT++)
         }
-        let AY = YY;
+        let zT = TT;
         for (const {
-            from: IY,
-            to: RY
+            from: kT,
+            to: WT
           }
-          of DY.reverse()) AY = AY.slice(0, IY) + AY.slice(RY);
-        return AY
-      }(YY.replace(YD, "").replace(rD, "").replace(DD, "").replace(FD, ""))
+          of IT.reverse()) zT = zT.slice(0, kT) + zT.slice(WT);
+        return zT
+      }(TT.replace(II, "").replace(iI, "").replace(zI, "").replace(kI, ""))
     }
 
-    function sD(YY) {
-      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(YY)
+    function cI(TT) {
+      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(TT)
     }
-    const iD = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
-      yD = {
+    const KI = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
+      MI = {
         playerCommand: {
-          stopsWhen: YY => `${YY} !== undefined && ${YY} !== false`,
+          stopsWhen: TT => `${TT} !== undefined && ${TT} !== false`,
           passedOn: !1
         },
         onPlayerChat: {
-          stopsWhen: YY => `${YY} === false || ${YY} === null`,
+          stopsWhen: TT => `${TT} === false || ${TT} === null`,
           passedOn: !0
         },
         onPlayerDamagingOtherPlayer: {
-          stopsWhen: YY => `${YY} === "preventDamage"`,
+          stopsWhen: TT => `${TT} === "preventDamage"`,
           passedOn: !0
         }
       };
 
-    function QD(YY) {
-      var rY;
-      const DY = eY().createSourceFile("worldCode.js", YY, eY().ScriptTarget.Latest, !0, eY().ScriptKind.JS),
+    function rI(TT) {
+      var oT;
+      const IT = RT().createSourceFile("worldCode.js", TT, RT().ScriptTarget.Latest, !0, RT().ScriptKind.JS),
         {
-          parseDiagnostics: FY
-        } = DY;
+          parseDiagnostics: iT
+        } = IT;
       return {
-        file: DY,
-        hasErrors: (null !== (rY = null === FY || void 0 === FY ? void 0 : FY.length) && void 0 !== rY ? rY : 0) > 0
+        file: IT,
+        hasErrors: (null !== (oT = null === iT || void 0 === iT ? void 0 : iT.length) && void 0 !== oT ? oT : 0) > 0
       }
     }
 
-    function oD(YY) {
-      return void 0 !== YY && (eY().isFunctionExpression(YY) || eY().isArrowFunction(YY))
+    function AI(TT) {
+      return void 0 !== TT && (RT().isFunctionExpression(TT) || RT().isArrowFunction(TT))
     }
 
-    function WD(YY) {
-      if (eY().isFunctionDeclaration(YY) && YY.name) return {
-        iy: YY,
-        nameNode: YY.name
+    function gI(TT) {
+      if (RT().isFunctionDeclaration(TT) && TT.name) return {
+        Dc: TT,
+        nameNode: TT.name
       };
-      if (eY().isVariableStatement(YY) && 1 === YY.declarationList.declarations.length) {
-        const rY = YY.declarationList.declarations[0],
-          DY = rY.initializer && ED(rY.initializer);
-        if (eY().isIdentifier(rY.name) && oD(DY)) return {
-          iy: DY,
-          nameNode: rY.name
+      if (RT().isVariableStatement(TT) && 1 === TT.declarationList.declarations.length) {
+        const oT = TT.declarationList.declarations[0],
+          IT = oT.initializer && hI(oT.initializer);
+        if (RT().isIdentifier(oT.name) && AI(IT)) return {
+          Dc: IT,
+          nameNode: oT.name
         }
       }
-      const rY = mD(YY),
-        DY = rY && ED(rY.value);
-      return rY && oD(DY) ? {
-        iy: DY,
-        nameNode: rY.name
+      const oT = wI(TT),
+        IT = oT && hI(oT.value);
+      return oT && AI(IT) ? {
+        Dc: IT,
+        nameNode: oT.name
       } : null
     }
 
-    function ED(YY) {
-      return eY().isParenthesizedExpression(YY) ? ED(YY.expression) : YY
+    function hI(TT) {
+      return RT().isParenthesizedExpression(TT) ? hI(TT.expression) : TT
     }
 
-    function mD(YY) {
-      return eY().isExpressionStatement(YY) && eY().isBinaryExpression(YY.expression) && YY.expression.operatorToken.kind === eY().SyntaxKind.EqualsToken && eY().isIdentifier(YY.expression.left) ? {
-        name: YY.expression.left,
-        value: YY.expression.right
+    function wI(TT) {
+      return RT().isExpressionStatement(TT) && RT().isBinaryExpression(TT.expression) && TT.expression.operatorToken.kind === RT().SyntaxKind.EqualsToken && RT().isIdentifier(TT.expression.left) ? {
+        name: TT.expression.left,
+        value: TT.expression.right
       } : null
     }
 
-    function VD(YY) {
-      return eY().isIdentifier(YY) ? [YY.text] : YY.elements.flatMap((YY => eY().isOmittedExpression(YY) ? [] : VD(YY.name)))
+    function mI(TT) {
+      return RT().isIdentifier(TT) ? [TT.text] : TT.elements.flatMap((TT => RT().isOmittedExpression(TT) ? [] : mI(TT.name)))
     }
 
-    function SD(YY) {
-      if (!eY().isVariableStatement(YY)) return null;
-      const rY = YY.declarationList.declarations.find((YY => eY().isIdentifier(YY.name) && "CONFIG" === YY.name.text));
-      return null !== rY && void 0 !== rY && rY.initializer && eY().isObjectLiteralExpression(rY.initializer) ? rY.initializer : null
+    function eI(TT) {
+      if (!RT().isVariableStatement(TT)) return null;
+      const oT = TT.declarationList.declarations.find((TT => RT().isIdentifier(TT.name) && "CONFIG" === TT.name.text));
+      return null !== oT && void 0 !== oT && oT.initializer && RT().isObjectLiteralExpression(oT.initializer) ? oT.initializer : null
     }
 
-    function lD(YY, rY) {
-      return rY.statements.map((DY => {
-        var FY;
-        const AY = function(YY, rY, DY) {
-            let FY = DY.getStart(rY);
-            for (const IY of (null !== (AY = eY().getLeadingCommentRanges(YY, DY.getFullStart())) && void 0 !== AY ? AY : []).reverse()) {
-              var AY;
-              if (/\n[^\S\n]*\n/.test(YY.slice(IY.end, FY))) break;
-              FY = IY.pos
+    function RI(TT, oT) {
+      return oT.statements.map((IT => {
+        var iT;
+        const zT = function(TT, oT, IT) {
+            let iT = IT.getStart(oT);
+            for (const kT of (null !== (zT = RT().getLeadingCommentRanges(TT, IT.getFullStart())) && void 0 !== zT ? zT : []).reverse()) {
+              var zT;
+              if (/\n[^\S\n]*\n/.test(TT.slice(kT.end, iT))) break;
+              iT = kT.pos
             }
-            return FY
-          }(YY, rY, DY),
-          IY = WD(DY);
-        if (null !== IY && void 0 !== IY && IY.nameNode) {
-          const YY = IY.nameNode.text;
+            return iT
+          }(TT, oT, IT),
+          kT = gI(IT);
+        if (null !== kT && void 0 !== kT && kT.nameNode) {
+          const TT = kT.nameNode.text;
           return {
-            kind: sD(YY) ? "callback" : "function",
-            names: [YY],
-            from: AY,
-            to: DY.getEnd(),
-            node: DY
+            kind: cI(TT) ? "callback" : "function",
+            names: [TT],
+            from: zT,
+            to: IT.getEnd(),
+            node: IT
           }
         }
-        const RY = eY().isVariableStatement(DY) ? DY.declarationList.declarations.flatMap((YY => VD(YY.name))) : [];
-        if (SD(DY)) {
+        const WT = RT().isVariableStatement(IT) ? IT.declarationList.declarations.flatMap((TT => mI(TT.name))) : [];
+        if (eI(IT)) {
           return {
             kind: "config",
-            names: ["CONFIG", ...RY.filter((YY => "CONFIG" !== YY))],
-            from: AY,
-            to: DY.getEnd(),
-            node: DY
+            names: ["CONFIG", ...WT.filter((TT => "CONFIG" !== TT))],
+            from: zT,
+            to: IT.getEnd(),
+            node: IT
           }
         }
-        if (eY().isVariableStatement(DY)) return {
+        if (RT().isVariableStatement(IT)) return {
           kind: "variable",
-          names: RY,
-          from: AY,
-          to: DY.getEnd(),
-          node: DY
+          names: WT,
+          from: zT,
+          to: IT.getEnd(),
+          node: IT
         };
-        if (eY().isClassDeclaration(DY) && DY.name) return {
+        if (RT().isClassDeclaration(IT) && IT.name) return {
           kind: "function",
-          names: [DY.name.text],
-          from: AY,
-          to: DY.getEnd(),
-          node: DY
+          names: [IT.name.text],
+          from: zT,
+          to: IT.getEnd(),
+          node: IT
         };
-        const OY = null === (FY = mD(DY)) || void 0 === FY ? void 0 : FY.name.text;
+        const XT = null === (iT = wI(IT)) || void 0 === iT ? void 0 : iT.name.text;
         return {
           kind: "other",
-          names: void 0 !== OY && sD(OY) ? [OY] : [],
-          from: AY,
-          to: DY.getEnd(),
-          node: DY
+          names: void 0 !== XT && cI(XT) ? [XT] : [],
+          from: zT,
+          to: IT.getEnd(),
+          node: IT
         }
       }))
     }
 
-    function TD(YY) {
-      if (!eY().isPropertyAssignment(YY) && !eY().isShorthandPropertyAssignment(YY)) return null;
-      const rY = YY.name;
-      return eY().isIdentifier(rY) || eY().isStringLiteral(rY) ? rY.text : null
+    function uI(TT) {
+      if (!RT().isPropertyAssignment(TT) && !RT().isShorthandPropertyAssignment(TT)) return null;
+      const oT = TT.name;
+      return RT().isIdentifier(oT) || RT().isStringLiteral(oT) ? oT.text : null
     }
 
-    function eD(YY, rY) {
-      return YY.lastIndexOf("\n", rY - 1) + 1
+    function vI(TT, oT) {
+      return TT.lastIndexOf("\n", oT - 1) + 1
     }
 
-    function ND(YY, rY) {
-      var DY, FY;
-      const AY = YY.slice(eD(YY, rY), rY);
-      return /^\s*$/.test(AY) ? AY : `${null!==(DY=null===(FY=/^\s*/.exec(AY))||void 0===FY?void 0:FY[0])&&void 0!==DY?DY:""}\t`
+    function EI(TT, oT) {
+      var IT, iT;
+      const zT = TT.slice(vI(TT, oT), oT);
+      return /^\s*$/.test(zT) ? zT : `${null!==(IT=null===(iT=/^\s*/.exec(zT))||void 0===iT?void 0:iT[0])&&void 0!==IT?IT:""}\t`
     }
 
-    function BD(YY, rY, DY) {
-      const FY = YY.slice(eD(YY, rY.getStart(DY)), function(YY, rY) {
-          const DY = YY.indexOf("\n", rY);
-          return -1 === DY ? YY.length : DY
-        }(YY, rY.getEnd())),
-        AY = FY.trim(),
-        IY = /^[\w$"']+\s*:/.test(AY) && "" === YY.slice(eD(YY, rY.getStart(DY)), rY.getStart(DY)).trim() ? FY.replace(/^\s*/, "\t") : `\t${rY.getText(DY)},`;
-      return /,\s*(?:\/\/.*)?$/.test(IY) ? IY : IY.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
+    function fI(TT, oT, IT) {
+      const iT = TT.slice(vI(TT, oT.getStart(IT)), function(TT, oT) {
+          const IT = TT.indexOf("\n", oT);
+          return -1 === IT ? TT.length : IT
+        }(TT, oT.getEnd())),
+        zT = iT.trim(),
+        kT = /^[\w$"']+\s*:/.test(zT) && "" === TT.slice(vI(TT, oT.getStart(IT)), oT.getStart(IT)).trim() ? iT.replace(/^\s*/, "\t") : `\t${oT.getText(IT)},`;
+      return /,\s*(?:\/\/.*)?$/.test(kT) ? kT : kT.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
     }
 
-    function cD(YY, rY) {
-      let DY = YY;
-      for (const FY of [...rY].sort(((YY, rY) => rY.from - YY.from))) DY = DY.slice(0, FY.from) + FY.text + DY.slice(FY.to);
-      return DY
+    function CI(TT, oT) {
+      let IT = TT;
+      for (const iT of [...oT].sort(((TT, oT) => oT.from - TT.from))) IT = IT.slice(0, iT.from) + iT.text + IT.slice(iT.to);
+      return IT
     }
 
-    function KD(YY) {
-      return YY.charAt(0).toUpperCase() + YY.slice(1)
+    function jI(TT) {
+      return TT.charAt(0).toUpperCase() + TT.slice(1)
     }
 
-    function HD(YY) {
-      return YY.replace(/[^A-Za-z0-9]+(.)?/g, ((YY, rY) => rY ? rY.toUpperCase() : ""))
+    function JI(TT) {
+      return TT.replace(/[^A-Za-z0-9]+(.)?/g, ((TT, oT) => oT ? oT.toUpperCase() : ""))
     }
 
-    function zD(YY, rY) {
-      var DY, FY;
-      const AY = YY.filter((YY => YY.names.includes(rY))),
-        IY = AY.filter((YY => !eY().isFunctionDeclaration(YY.node) && function(YY, rY) {
-          return !eY().isVariableStatement(YY) || YY.declarationList.declarations.some((YY => void 0 !== YY.initializer && VD(YY.name).includes(rY)))
-        }(YY.node, rY))),
-        RY = null !== (DY = IY[IY.length - 1]) && void 0 !== DY ? DY : AY[AY.length - 1];
-      if ("callback" === (null === RY || void 0 === RY ? void 0 : RY.kind)) return WD(RY.node);
-      const OY = "other" === (null === RY || void 0 === RY ? void 0 : RY.kind) ? null === (FY = mD(RY.node)) || void 0 === FY ? void 0 : FY.value : void 0;
-      if (!OY || !eY().isIdentifier(OY)) return null;
-      const gY = YY.filter((YY => {
-          var rY;
-          const DY = null === (rY = mD(YY.node)) || void 0 === rY ? void 0 : rY.value;
-          return void 0 !== DY && eY().isIdentifier(DY) && DY.text === OY.text
+    function UI(TT, oT) {
+      var IT, iT;
+      const zT = TT.filter((TT => TT.names.includes(oT))),
+        kT = zT.filter((TT => !RT().isFunctionDeclaration(TT.node) && function(TT, oT) {
+          return !RT().isVariableStatement(TT) || TT.declarationList.declarations.some((TT => void 0 !== TT.initializer && mI(TT.name).includes(oT)))
+        }(TT.node, oT))),
+        WT = null !== (IT = kT[kT.length - 1]) && void 0 !== IT ? IT : zT[zT.length - 1];
+      if ("callback" === (null === WT || void 0 === WT ? void 0 : WT.kind)) return gI(WT.node);
+      const XT = "other" === (null === WT || void 0 === WT ? void 0 : WT.kind) ? null === (iT = wI(WT.node)) || void 0 === iT ? void 0 : iT.value : void 0;
+      if (!XT || !RT().isIdentifier(XT)) return null;
+      const BT = TT.filter((TT => {
+          var oT;
+          const IT = null === (oT = wI(TT.node)) || void 0 === oT ? void 0 : oT.value;
+          return void 0 !== IT && RT().isIdentifier(IT) && IT.text === XT.text
         })),
-        aY = YY.filter((YY => YY.names.includes(OY.text))),
-        vY = 1 === aY.length && "function" === aY[0].kind ? WD(aY[0].node) : null;
-      return 1 === gY.length ? vY : null
+        FT = TT.filter((TT => TT.names.includes(XT.text))),
+        ST = 1 === FT.length && "function" === FT[0].kind ? gI(FT[0].node) : null;
+      return 1 === BT.length ? ST : null
     }
 
-    function ZD(YY) {
-      return YY.parameters.map((YY => eY().isIdentifier(YY.name) ? YY.name.text : null))
+    function aI(TT) {
+      return TT.parameters.map((TT => RT().isIdentifier(TT.name) ? TT.name.text : null))
     }
 
-    function CD(YY, rY, DY, FY, AY, IY, RY) {
-      var OY;
-      let gY = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+    function YI(TT, oT, IT, iT, zT, kT, WT) {
+      var XT;
+      let BT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
       const {
-        iy: aY
-      } = DY, vY = aY.body;
-      if (!vY) return [];
-      const uY = [],
-        sY = ZD(aY),
-        iY = [],
-        yY = new Set([...sY.filter((YY => null !== YY)), ...hD(vY)]),
-        QY = (YY, rY) => {
-          let DY = YY;
-          for (let FY = rY; yY.has(DY); FY++) DY = `${YY}${FY}`;
-          return yY.add(DY), DY
+        Dc: FT
+      } = IT, ST = FT.body;
+      if (!ST) return [];
+      const DT = [],
+        LT = aI(FT),
+        xT = [],
+        cT = new Set([...LT.filter((TT => null !== TT)), ...HI(ST)]),
+        KT = (TT, oT) => {
+          let IT = TT;
+          for (let iT = oT; cT.has(IT); iT++) IT = `${TT}${iT}`;
+          return cT.add(IT), IT
         },
-        oY = [];
-      for (const [eY, cY] of IY.entries()) {
-        var WY;
-        const YY = sY[eY];
-        if (void 0 !== YY && null !== (WY = aY.parameters[eY]) && void 0 !== WY && WY.dotDotDotToken) {
-          iY.push(null === YY ? "undefined" : `...${YY}`);
+        MT = [];
+      for (const [RT, ET] of kT.entries()) {
+        var rT;
+        const TT = LT[RT];
+        if (void 0 !== TT && null !== (rT = FT.parameters[RT]) && void 0 !== rT && rT.dotDotDotToken) {
+          xT.push(null === TT ? "undefined" : `...${TT}`);
           break
         }
-        if (void 0 !== YY) {
-          iY.push(null !== YY && void 0 !== YY ? YY : "undefined");
+        if (void 0 !== TT) {
+          xT.push(null !== TT && void 0 !== TT ? TT : "undefined");
           continue
         }
-        const rY = QY(cY, eY);
-        oY.push(rY), iY.push(rY)
+        const oT = KT(ET, RT);
+        MT.push(oT), xT.push(oT)
       }
-      if (oY.length > 0) {
-        const YY = aY.getChildren(rY).find((YY => YY.kind === eY().SyntaxKind.CloseParenToken)),
-          DY = YY ? YY.getStart(rY) : -1;
-        if (-1 === DY) {
-          const YY = aY.parameters[0];
-          if (!YY) return [];
-          uY.push({
-            from: YY.getStart(rY),
-            to: YY.getEnd(),
-            text: `(${[YY.getText(rY),...oY].join(", ")})`
+      if (MT.length > 0) {
+        const TT = FT.getChildren(oT).find((TT => TT.kind === RT().SyntaxKind.CloseParenToken)),
+          IT = TT ? TT.getStart(oT) : -1;
+        if (-1 === IT) {
+          const TT = FT.parameters[0];
+          if (!TT) return [];
+          DT.push({
+            from: TT.getStart(oT),
+            to: TT.getEnd(),
+            text: `(${[TT.getText(oT),...MT].join(", ")})`
           })
         } else {
-          const YY = aY.parameters.hasTrailingComma ? " " : aY.parameters.length > 0 ? ", " : "";
-          uY.push({
-            from: DY,
-            to: DY,
-            text: `${YY}${oY.join(", ")}`
+          const TT = FT.parameters.hasTrailingComma ? " " : FT.parameters.length > 0 ? ", " : "";
+          DT.push({
+            from: IT,
+            to: IT,
+            text: `${TT}${MT.join(", ")}`
           })
         }
       }
-      const EY = `${AY}(${iY.join(", ")})`,
-        mY = QY(`${HD(RY)}Result`, 2),
-        VY = yD[FY],
-        SY = iD.has(FY) ? [EY] : VY ? [`const ${mY} = ${EY}`, `if (${VY.stopsWhen(mY)}) return ${mY}`] : [`const ${mY} = ${EY}`],
-        lY = !iD.has(FY) && (null === (OY = null === VY || void 0 === VY ? void 0 : VY.passedOn) || void 0 === OY || OY);
-      if (lY && eY().isBlock(vY)) {
-        const DY = function(YY, rY) {
-            const DY = new Set;
-            for (const FY of YY.statements) {
-              const YY = eY().isVariableStatement(FY) ? FY.declarationList.declarations[0] : void 0;
-              YY && eY().isIdentifier(YY.name) && YY.initializer && fD(YY.initializer, rY) && DY.add(YY.name.text)
+      const AT = `${zT}(${xT.join(", ")})`,
+        gT = KT(`${JI(WT)}Result`, 2),
+        hT = MI[iT],
+        wT = KI.has(iT) ? [AT] : hT ? [`const ${gT} = ${AT}`, `if (${hT.stopsWhen(gT)}) return ${gT}`] : [`const ${gT} = ${AT}`],
+        mT = !KI.has(iT) && (null === (XT = null === hT || void 0 === hT ? void 0 : hT.passedOn) || void 0 === XT || XT);
+      if (mT && RT().isBlock(ST)) {
+        const IT = function(TT, oT) {
+            const IT = new Set;
+            for (const iT of TT.statements) {
+              const TT = RT().isVariableStatement(iT) ? iT.declarationList.declarations[0] : void 0;
+              TT && RT().isIdentifier(TT.name) && TT.initializer && QI(TT.initializer, oT) && IT.add(TT.name.text)
             }
-            return DY
-          }(vY, FY),
-          AY = YY => {
-            if (!eY().isFunctionLike(YY) && ! function(YY, rY, DY) {
-                if (!eY().isIfStatement(YY) || !eY().isReturnStatement(YY.thenStatement) || !YY.thenStatement.expression) return !1;
-                const FY = YY.thenStatement.expression;
-                return eY().isIdentifier(FY) && rY.has(FY.text) && YY.expression.getText(DY).startsWith(`${FY.text} `)
-              }(YY, DY, rY)) {
-              if (eY().isReturnStatement(YY) && !YY.expression) uY.push({
-                from: YY.getStart(rY),
-                to: YY.getEnd(),
-                text: `return ${mY}`
+            return IT
+          }(ST, iT),
+          zT = TT => {
+            if (!RT().isFunctionLike(TT) && ! function(TT, oT, IT) {
+                if (!RT().isIfStatement(TT) || !RT().isReturnStatement(TT.thenStatement) || !TT.thenStatement.expression) return !1;
+                const iT = TT.thenStatement.expression;
+                return RT().isIdentifier(iT) && oT.has(iT.text) && TT.expression.getText(IT).startsWith(`${iT.text} `)
+              }(TT, IT, oT)) {
+              if (RT().isReturnStatement(TT) && !TT.expression) DT.push({
+                from: TT.getStart(oT),
+                to: TT.getEnd(),
+                text: `return ${gT}`
               });
-              else if (eY().isReturnStatement(YY) && YY.expression) {
-                const FY = jD(YY.expression, DY);
-                FY && uY.push({
-                  from: FY.getStart(rY),
-                  to: FY.getEnd(),
-                  text: `${FY.text} !== undefined ? ${FY.text} : ${mY}`
+              else if (RT().isReturnStatement(TT) && TT.expression) {
+                const iT = OI(TT.expression, IT);
+                iT && DT.push({
+                  from: iT.getStart(oT),
+                  to: iT.getEnd(),
+                  text: `${iT.text} !== undefined ? ${iT.text} : ${gT}`
                 })
               }
-              eY().forEachChild(YY, AY)
+              RT().forEachChild(TT, zT)
             }
           };
-        vY.statements.forEach(AY);
-        const IY = vY.statements[vY.statements.length - 1];
-        if (!IY || !eY().isReturnStatement(IY) && !eY().isThrowStatement(IY)) {
-          const DY = vY.getEnd() - 1,
-            FY = IY ? ND(YY, IY.getStart(rY)) : `${YY.slice(eD(YY,aY.getStart(rY)),aY.getStart(rY)).replace(/\S.*$/,"")}\t`,
-            AY = YY.slice(eD(YY, DY), DY),
-            RY = /^\s*$/.test(AY) ? `${FY}return ${mY}\n${AY}` : `\n${FY}return ${mY}\n`;
-          uY.push({
-            from: /^\s*$/.test(AY) ? eD(YY, DY) : DY,
-            to: DY,
-            text: RY
+        ST.statements.forEach(zT);
+        const kT = ST.statements[ST.statements.length - 1];
+        if (!kT || !RT().isReturnStatement(kT) && !RT().isThrowStatement(kT)) {
+          const IT = ST.getEnd() - 1,
+            iT = kT ? EI(TT, kT.getStart(oT)) : `${TT.slice(vI(TT,FT.getStart(oT)),FT.getStart(oT)).replace(/\S.*$/,"")}\t`,
+            zT = TT.slice(vI(TT, IT), IT),
+            WT = /^\s*$/.test(zT) ? `${iT}return ${gT}\n${zT}` : `\n${iT}return ${gT}\n`;
+          DT.push({
+            from: /^\s*$/.test(zT) ? vI(TT, IT) : IT,
+            to: IT,
+            text: WT
           })
         }
       }
-      const TY = eY().isBlock(vY) ? [...vY.statements] : [],
-        NY = TY.findIndex((YY => ! function(YY, rY) {
-          return eY().isExpressionStatement(YY) && fD(YY.expression, rY)
-        }(YY, FY))),
-        BY = TY[(-1 === NY ? TY.length : NY) - 1];
-      if (gY && iD.has(FY) && BY) uY.push({
-        from: BY.getEnd(),
-        to: BY.getEnd(),
-        text: `\n${ND(YY,BY.getStart(rY))}${EY}`
+      const eT = RT().isBlock(ST) ? [...ST.statements] : [],
+        uT = eT.findIndex((TT => ! function(TT, oT) {
+          return RT().isExpressionStatement(TT) && QI(TT.expression, oT)
+        }(TT, iT))),
+        vT = eT[(-1 === uT ? eT.length : uT) - 1];
+      if (BT && KI.has(iT) && vT) DT.push({
+        from: vT.getEnd(),
+        to: vT.getEnd(),
+        text: `\n${EI(TT,vT.getStart(oT))}${AT}`
       });
-      else if (eY().isBlock(vY)) {
-        const DY = vY.statements[0],
-          FY = DY ? ND(YY, DY.getStart(rY)) : `${YY.slice(eD(YY,aY.getStart(rY)),aY.getStart(rY)).replace(/\S.*$/,"")}\t`,
-          AY = vY.getStart(rY) + 1,
-          IY = void 0 !== DY && !YY.slice(AY, DY.getStart(rY)).includes("\n");
-        uY.push({
-          from: AY,
-          to: IY ? DY.getStart(rY) : AY,
-          text: `\n${SY.map((YY=>`${FY}${YY}`)).join("\n")}${DY?IY?`\n${FY}`:"":"\n"}`
+      else if (RT().isBlock(ST)) {
+        const IT = ST.statements[0],
+          iT = IT ? EI(TT, IT.getStart(oT)) : `${TT.slice(vI(TT,FT.getStart(oT)),FT.getStart(oT)).replace(/\S.*$/,"")}\t`,
+          zT = ST.getStart(oT) + 1,
+          kT = void 0 !== IT && !TT.slice(zT, IT.getStart(oT)).includes("\n");
+        DT.push({
+          from: zT,
+          to: kT ? IT.getStart(oT) : zT,
+          text: `\n${wT.map((TT=>`${iT}${TT}`)).join("\n")}${IT?kT?`\n${iT}`:"":"\n"}`
         })
       } else {
-        const DY = YY.slice(eD(YY, aY.getStart(rY)), aY.getStart(rY)).replace(/\S.*$/, ""),
-          FY = QY("ownResult", 2),
-          AY = lY ? [`const ${FY} = ${vY.getText(rY)}`, `return ${FY} !== undefined ? ${FY} : ${mY}`] : [`return ${vY.getText(rY)}`];
-        uY.push({
-          from: vY.getStart(rY),
-          to: vY.getEnd(),
-          text: `{\n${[...SY,...AY].map((YY=>`${DY}\t${YY}`)).join("\n")}\n${DY}}`
+        const IT = TT.slice(vI(TT, FT.getStart(oT)), FT.getStart(oT)).replace(/\S.*$/, ""),
+          iT = KT("ownResult", 2),
+          zT = mT ? [`const ${iT} = ${ST.getText(oT)}`, `return ${iT} !== undefined ? ${iT} : ${gT}`] : [`return ${ST.getText(oT)}`];
+        DT.push({
+          from: ST.getStart(oT),
+          to: ST.getEnd(),
+          text: `{\n${[...wT,...zT].map((TT=>`${IT}\t${TT}`)).join("\n")}\n${IT}}`
         })
       }
-      return uY
+      return DT
     }
 
-    function fD(YY, rY) {
-      return eY().isCallExpression(YY) && eY().isIdentifier(YY.expression) && YY.expression.text.endsWith(KD(rY)) && YY.expression.text !== KD(rY)
+    function QI(TT, oT) {
+      return RT().isCallExpression(TT) && RT().isIdentifier(TT.expression) && TT.expression.text.endsWith(jI(oT)) && TT.expression.text !== jI(oT)
     }
 
-    function jD(YY, rY) {
-      return eY().isIdentifier(YY) ? rY.has(YY.text) ? YY : null : eY().isConditionalExpression(YY) ? jD(YY.whenFalse, rY) : null
+    function OI(TT, oT) {
+      return RT().isIdentifier(TT) ? oT.has(TT.text) ? TT : null : RT().isConditionalExpression(TT) ? OI(TT.whenFalse, oT) : null
     }
 
-    function hD(YY) {
-      const rY = [],
-        DY = YY => {
-          eY().isIdentifier(YY) && rY.push(YY.text), eY().forEachChild(YY, DY)
+    function HI(TT) {
+      const oT = [],
+        IT = TT => {
+          RT().isIdentifier(TT) && oT.push(TT.text), RT().forEachChild(TT, IT)
         };
-      return DY(YY), rY
+      return IT(TT), oT
     }
 
-    function dD(YY, rY, DY) {
-      var FY, AY;
-      return (0, ur.g)(null !== (FY = null === (AY = YY.body) || void 0 === AY ? void 0 : AY.getText(rY)) && void 0 !== FY ? FY : "", new RegExp(`${DY}\\s*\\(`), ur.q).length > 0
+    function nI(TT, oT, IT) {
+      var iT, zT;
+      return (0, Do.f)(null !== (iT = null === (zT = TT.body) || void 0 === zT ? void 0 : zT.getText(oT)) && void 0 !== iT ? iT : "", new RegExp(`${IT}\\s*\\(`), Do.k).length > 0
     }
 
-    function JD(YY, rY, DY) {
-      var FY;
+    function qI(TT, oT, IT) {
+      var iT;
       const {
-        owner: AY,
-        heading: IY
-      } = DY, RY = null !== (FY = DY.overrides) && void 0 !== FY ? FY : new Set;
-      if ("" === YY.trim() && !0 !== DY.chainCallbacks) {
-        const YY = `${IY?`${IY}\n`:""}${rY.trim()}\n`,
+        owner: zT,
+        heading: kT
+      } = IT, WT = null !== (iT = IT.overrides) && void 0 !== iT ? iT : new Set;
+      if ("" === TT.trim() && !0 !== IT.chainCallbacks) {
+        const TT = `${kT?`${kT}\n`:""}${oT.trim()}\n`,
           {
-            file: DY,
-            hasErrors: FY
-          } = QD(YY);
-        if (FY) return null;
-        const AY = lD(YY, DY);
+            file: IT,
+            hasErrors: iT
+          } = rI(TT);
+        if (iT) return null;
+        const zT = RI(TT, IT);
         return {
-          text: YY,
-          added: AY.flatMap((YY => "config" === YY.kind ? [] : YY.names)),
+          text: TT,
+          added: zT.flatMap((TT => "config" === TT.kind ? [] : TT.names)),
           chained: [],
-          settings: AY.flatMap((YY => {
-            var rY;
-            const DY = "config" === YY.kind ? SD(YY.node) : null;
-            return (null !== (rY = null === DY || void 0 === DY ? void 0 : DY.properties) && void 0 !== rY ? rY : []).flatMap((YY => {
-              const rY = TD(YY);
-              return null === rY ? [] : [rY]
+          settings: zT.flatMap((TT => {
+            var oT;
+            const IT = "config" === TT.kind ? eI(TT.node) : null;
+            return (null !== (oT = null === IT || void 0 === IT ? void 0 : IT.properties) && void 0 !== oT ? oT : []).flatMap((TT => {
+              const oT = uI(TT);
+              return null === oT ? [] : [oT]
             }))
           }))
         }
       }
-      const OY = QD(YY),
-        gY = QD(rY);
-      if (OY.hasErrors || gY.hasErrors) return null;
-      const aY = lD(YY, OY.file),
-        vY = lD(rY, gY.file),
-        uY = new Set(aY.flatMap((YY => YY.names))),
-        sY = new Set(uY),
-        iY = [],
-        yY = [],
-        QY = [],
-        oY = [];
-      let WY = [];
-      const EY = vY.find((YY => "config" === YY.kind)),
-        mY = aY.find((YY => "config" === YY.kind));
-      if (EY) {
-        const DY = SD(EY.node),
-          FY = mY ? SD(mY.node) : null;
-        if (DY && FY) {
-          const AY = function(YY, rY, DY, FY, AY, IY, RY) {
-            const OY = new Map;
-            for (const mY of DY.properties) {
-              const YY = TD(mY);
-              null !== YY && OY.set(YY, mY)
+      const XT = rI(TT),
+        BT = rI(oT);
+      if (XT.hasErrors || BT.hasErrors) return null;
+      const FT = RI(TT, XT.file),
+        ST = RI(oT, BT.file),
+        DT = new Set(FT.flatMap((TT => TT.names))),
+        LT = new Set(DT),
+        xT = [],
+        cT = [],
+        KT = [],
+        MT = [];
+      let rT = [];
+      const AT = ST.find((TT => "config" === TT.kind)),
+        gT = FT.find((TT => "config" === TT.kind));
+      if (AT) {
+        const IT = eI(AT.node),
+          iT = gT ? eI(gT.node) : null;
+        if (IT && iT) {
+          const zT = function(TT, oT, IT, iT, zT, kT, WT) {
+            const XT = new Map;
+            for (const gT of IT.properties) {
+              const TT = uI(gT);
+              null !== TT && XT.set(TT, gT)
             }
-            const gY = [],
-              aY = [],
-              vY = [],
-              uY = new Map;
-            for (const mY of IY.properties) {
-              const YY = TD(mY);
-              if (null === YY) continue;
-              const DY = OY.get(YY);
-              if (DY) {
-                if (RY.has(YY) && eY().isPropertyAssignment(DY) && eY().isPropertyAssignment(mY)) {
-                  const FY = mY.initializer.getText(AY);
-                  DY.initializer.getText(rY) !== FY && (gY.push({
-                    from: DY.initializer.getStart(rY),
-                    to: DY.initializer.getEnd(),
-                    text: FY
-                  }), uY.set(DY, FY), aY.push(YY))
+            const BT = [],
+              FT = [],
+              ST = [],
+              DT = new Map;
+            for (const gT of kT.properties) {
+              const TT = uI(gT);
+              if (null === TT) continue;
+              const IT = XT.get(TT);
+              if (IT) {
+                if (WT.has(TT) && RT().isPropertyAssignment(IT) && RT().isPropertyAssignment(gT)) {
+                  const iT = gT.initializer.getText(zT);
+                  IT.initializer.getText(oT) !== iT && (BT.push({
+                    from: IT.initializer.getStart(oT),
+                    to: IT.initializer.getEnd(),
+                    text: iT
+                  }), DT.set(IT, iT), FT.push(TT))
                 }
-              } else vY.push(BD(FY, mY, AY)), aY.push(YY)
+              } else ST.push(fI(iT, gT, zT)), FT.push(TT)
             }
-            if (0 === vY.length) return {
-              edits: gY,
-              settings: aY
+            if (0 === ST.length) return {
+              edits: BT,
+              settings: FT
             };
-            const sY = DY.getEnd() - 1,
-              iY = DY.properties[DY.properties.length - 1];
-            if (!YY.slice(DY.getStart(rY), sY).includes("\n")) {
-              const YY = DY.properties.map((YY => {
-                const DY = uY.get(YY);
-                return eY().isPropertyAssignment(YY) && void 0 !== DY ? `\t${YY.name.getText(rY)}: ${DY},` : `\t${YY.getText(rY)},`
+            const LT = IT.getEnd() - 1,
+              xT = IT.properties[IT.properties.length - 1];
+            if (!TT.slice(IT.getStart(oT), LT).includes("\n")) {
+              const TT = IT.properties.map((TT => {
+                const IT = DT.get(TT);
+                return RT().isPropertyAssignment(TT) && void 0 !== IT ? `\t${TT.name.getText(oT)}: ${IT},` : `\t${TT.getText(oT)},`
               }));
               return {
                 edits: [{
-                  from: DY.getStart(rY),
-                  to: DY.getEnd(),
-                  text: `{\n${[...YY,...vY].join("\n")}\n}`
+                  from: IT.getStart(oT),
+                  to: IT.getEnd(),
+                  text: `{\n${[...TT,...ST].join("\n")}\n}`
                 }],
-                settings: aY
+                settings: FT
               }
             }
-            const yY = void 0 !== iY && !DY.properties.hasTrailingComma,
-              QY = eD(YY, sY),
-              oY = YY.slice(QY, sY);
-            if ("" === oY.trim()) return yY && gY.push({
-              from: iY.getEnd(),
-              to: iY.getEnd(),
+            const cT = void 0 !== xT && !IT.properties.hasTrailingComma,
+              KT = vI(TT, LT),
+              MT = TT.slice(KT, LT);
+            if ("" === MT.trim()) return cT && BT.push({
+              from: xT.getEnd(),
+              to: xT.getEnd(),
               text: ","
-            }), gY.push({
-              from: QY,
-              to: QY,
-              text: `${vY.join("\n")}\n`
+            }), BT.push({
+              from: KT,
+              to: KT,
+              text: `${ST.join("\n")}\n`
             }), {
-              edits: gY,
-              settings: aY
+              edits: BT,
+              settings: FT
             };
-            const WY = QY + oY.trimEnd().length,
-              EY = yY && iY.getEnd() === WY;
-            return yY && !EY && gY.push({
-              from: iY.getEnd(),
-              to: iY.getEnd(),
+            const rT = KT + MT.trimEnd().length,
+              AT = cT && xT.getEnd() === rT;
+            return cT && !AT && BT.push({
+              from: xT.getEnd(),
+              to: xT.getEnd(),
               text: ","
-            }), gY.push({
-              from: WY,
-              to: sY,
-              text: `${EY?",":""}\n${vY.join("\n")}\n`
+            }), BT.push({
+              from: rT,
+              to: LT,
+              text: `${AT?",":""}\n${ST.join("\n")}\n`
             }), {
-              edits: gY,
-              settings: aY
+              edits: BT,
+              settings: FT
             }
-          }(YY, OY.file, FY, rY, gY.file, DY, RY);
-          iY.push(...AY.edits), WY = AY.settings
-        } else if (DY) {
-          if (sY.has("CONFIG")) return null;
-          const FY = function(YY, rY) {
-              const DY = rY.statements[0];
-              return DY ? eD(YY, DY.getStart(rY)) : YY.length
-            }(YY, OY.file),
-            AY = FY > 0 && "\n" !== YY[FY - 1] ? "\n" : "";
-          iY.push({
-            from: FY,
-            to: FY,
-            text: `${AY}${rY.slice(EY.from,EY.to)}\n\n`
-          }), WY = DY.properties.flatMap((YY => {
-            const rY = TD(YY);
-            return null === rY ? [] : [rY]
+          }(TT, XT.file, iT, oT, BT.file, IT, WT);
+          xT.push(...zT.edits), rT = zT.settings
+        } else if (IT) {
+          if (LT.has("CONFIG")) return null;
+          const iT = function(TT, oT) {
+              const IT = oT.statements[0];
+              return IT ? vI(TT, IT.getStart(oT)) : TT.length
+            }(TT, XT.file),
+            zT = iT > 0 && "\n" !== TT[iT - 1] ? "\n" : "";
+          xT.push({
+            from: iT,
+            to: iT,
+            text: `${zT}${oT.slice(AT.from,AT.to)}\n\n`
+          }), rT = IT.properties.flatMap((TT => {
+            const oT = uI(TT);
+            return null === oT ? [] : [oT]
           }))
         }
       }
-      const VY = [],
-        SY = (YY, DY) => {
-          const FY = VY[VY.length - 1],
-            AY = void 0 !== FY && FY >= 0 && FY === DY - 1 && !/\n[^\S\n]*\n/.test(rY.slice(vY[FY].to, vY[DY].from)) ? "\n" : "\n\n";
-          yY.push(0 === yY.length ? YY : `${AY}${YY}`), VY.push(DY)
+      const hT = [],
+        wT = (TT, IT) => {
+          const iT = hT[hT.length - 1],
+            zT = void 0 !== iT && iT >= 0 && iT === IT - 1 && !/\n[^\S\n]*\n/.test(oT.slice(ST[iT].to, ST[IT].from)) ? "\n" : "\n\n";
+          cT.push(0 === cT.length ? TT : `${zT}${TT}`), hT.push(IT)
         };
-      for (const [TY, eY] of vY.entries()) {
-        if ("config" === eY.kind) continue;
-        const FY = rY.slice(eY.from, eY.to);
-        if ("callback" === eY.kind) {
-          const rY = eY.names[0],
-            IY = zD(aY, rY);
-          if (!IY && uY.has(rY)) {
-            if (!0 === DY.chainCallbacks) continue;
+      for (const [eT, RT] of ST.entries()) {
+        if ("config" === RT.kind) continue;
+        const iT = oT.slice(RT.from, RT.to);
+        if ("callback" === RT.kind) {
+          const oT = RT.names[0],
+            kT = UI(FT, oT);
+          if (!kT && DT.has(oT)) {
+            if (!0 === IT.chainCallbacks) continue;
             return null
           }
-          if (!IY && !0 !== DY.chainCallbacks) {
-            sY.has(rY) || (SY(FY, TY), QY.push(rY), sY.add(rY));
+          if (!kT && !0 !== IT.chainCallbacks) {
+            LT.has(oT) || (wT(iT, eT), KT.push(oT), LT.add(oT));
             continue
           }
-          const RY = `${HD(AY)}${KD(rY)}`,
-            vY = WD(eY.node);
-          if (null === vY || void 0 === vY || !vY.nameNode) continue;
-          if (!sY.has(RY)) {
-            const YY = vY.nameNode.getStart(gY.file) - eY.from,
-              rY = vY.nameNode.getEnd() - eY.from;
-            SY(FY.slice(0, YY) + RY + FY.slice(rY), TY), QY.push(RY), sY.add(RY)
+          const WT = `${JI(zT)}${jI(oT)}`,
+            ST = gI(RT.node);
+          if (null === ST || void 0 === ST || !ST.nameNode) continue;
+          if (!LT.has(WT)) {
+            const TT = ST.nameNode.getStart(BT.file) - RT.from,
+              oT = ST.nameNode.getEnd() - RT.from;
+            wT(iT.slice(0, TT) + WT + iT.slice(oT), eT), KT.push(WT), LT.add(WT)
           }
-          const yY = ZD(vY.iy).map(((YY, rY) => null !== YY && void 0 !== YY ? YY : `arg${rY}`));
-          if (!IY) {
-            const YY = `${RY}(${yY.join(", ")})`,
-              DY = `${HD(AY)}Result`;
-            SY(`function ${rY}(${yY.join(", ")}) {\n\t${iD.has(rY)?YY:`const ${DY} = ${YY}\n\treturn ${DY}`}\n}`, -1), QY.push(rY), sY.add(rY);
+          const cT = aI(ST.Dc).map(((TT, oT) => null !== TT && void 0 !== TT ? TT : `arg${oT}`));
+          if (!kT) {
+            const TT = `${WT}(${cT.join(", ")})`,
+              IT = `${JI(zT)}Result`;
+            wT(`function ${oT}(${cT.join(", ")}) {\n\t${KI.has(oT)?TT:`const ${IT} = ${TT}\n\treturn ${IT}`}\n}`, -1), KT.push(oT), LT.add(oT);
             continue
           }
-          dD(IY.iy, OY.file, RY) || (iY.push(...CD(YY, OY.file, IY, rY, RY, yY, AY, !0 === DY.runsLast)), oY.push(rY));
+          nI(kT.Dc, XT.file, WT) || (xT.push(...YI(TT, XT.file, kT, oT, WT, cT, zT, !0 === IT.runsLast)), MT.push(oT));
           continue
         }
-        const IY = eY.names.filter((YY => !sY.has(YY)));
-        if ("other" === eY.kind || eY.names.length > 0 && IY.length === eY.names.length) {
-          SY(FY, TY), QY.push(...IY);
-          for (const YY of IY) sY.add(YY)
+        const kT = RT.names.filter((TT => !LT.has(TT)));
+        if ("other" === RT.kind || RT.names.length > 0 && kT.length === RT.names.length) {
+          wT(iT, eT), KT.push(...kT);
+          for (const TT of kT) LT.add(TT)
         }
       }
-      let lY = cD(YY, iY);
-      if (yY.length > 0) {
-        const YY = lY.replace(/\s*$/, "");
-        lY = `${""===YY?"":`${YY}\n\n`}${IY?`${IY}\n`:""}${yY.join("")}\n`
+      let mT = CI(TT, xT);
+      if (cT.length > 0) {
+        const TT = mT.replace(/\s*$/, "");
+        mT = `${""===TT?"":`${TT}\n\n`}${kT?`${kT}\n`:""}${cT.join("")}\n`
       }
-      return QD(lY).hasErrors ? null : {
-        text: lY,
-        added: QY,
-        chained: oY,
-        settings: WY
+      return rI(mT).hasErrors ? null : {
+        text: mT,
+        added: KT,
+        chained: MT,
+        settings: rT
       }
     }
 
-    function MD(YY) {
+    function ZI(TT) {
       const {
-        file: rY
-      } = QD(YY);
-      return new Set(lD(YY, rY).flatMap((YY => YY.names)))
+        file: oT
+      } = rI(TT);
+      return new Set(RI(TT, oT).flatMap((TT => TT.names)))
     }
 
-    function wD(YY) {
+    function lI(TT) {
       const {
-        file: rY
-      } = QD(YY), DY = new Set, FY = YY => {
-        eY().isCallExpression(YY) && eY().isIdentifier(YY.expression) && DY.add(YY.expression.text), eY().forEachChild(YY, FY)
+        file: oT
+      } = rI(TT), IT = new Set, iT = TT => {
+        RT().isCallExpression(TT) && RT().isIdentifier(TT.expression) && IT.add(TT.expression.text), RT().forEachChild(TT, iT)
       };
-      return FY(rY), DY
+      return iT(oT), IT
     }
 
-    function bD(YY) {
-      return !QD(YY).hasErrors
+    function sI(TT) {
+      return !rI(TT).hasErrors
     }
 
-    function XD(YY, rY) {
-      return eY().isCallExpression(YY) && eY().isPropertyAccessExpression(YY.expression) && "api" === YY.expression.expression.getText(rY)
+    function tI(TT, oT) {
+      return RT().isCallExpression(TT) && RT().isPropertyAccessExpression(TT.expression) && "api" === TT.expression.expression.getText(oT)
     }
 
-    function qD(YY, rY) {
-      var DY;
-      const FY = YY.getPropertiesOfType(YY.getNonNullableType(rY)),
-        AY = null !== (DY = FY.find((YY => "color" === YY.name))) && void 0 !== DY ? DY : FY[0];
-      if (!AY) return;
-      const IY = YY.typeToString(YY.getNonNullableType(YY.getTypeOfSymbol(AY))),
-        RY = "color" === AY.name ? '"red"' : IY.includes("number") ? "1" : "boolean" === IY ? "true" : '"..."';
-      return `{ ${AY.name}: ${RY} }`
+    function GI(TT, oT) {
+      var IT;
+      const iT = TT.getPropertiesOfType(TT.getNonNullableType(oT)),
+        zT = null !== (IT = iT.find((TT => "color" === TT.name))) && void 0 !== IT ? IT : iT[0];
+      if (!zT) return;
+      const kT = TT.typeToString(TT.getNonNullableType(TT.getTypeOfSymbol(zT))),
+        WT = "color" === zT.name ? '"red"' : kT.includes("number") ? "1" : "boolean" === kT ? "true" : '"..."';
+      return `{ ${zT.name}: ${WT} }`
     }
 
-    function pD(YY) {
-      return YY.isUnion() ? YY.types.every((YY => 0 !== (YY.flags & eY().TypeFlags.Object))) : 0 !== (YY.flags & eY().TypeFlags.Object)
+    function pI(TT) {
+      return TT.isUnion() ? TT.types.every((TT => 0 !== (TT.flags & RT().TypeFlags.Object))) : 0 !== (TT.flags & RT().TypeFlags.Object)
     }
 
-    function kD(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const FY = YY.getNonNullableType(rY);
-      if (FY.isUnion()) {
-        const rY = [...new Set(FY.types.map((rY => kD(YY, rY, DY))))];
-        return rY.length > 7 ? `${rY.slice(0,7).join(" or ")} or ...` : rY.join(" or ")
+    function bI(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const iT = TT.getNonNullableType(oT);
+      if (iT.isUnion()) {
+        const oT = [...new Set(iT.types.map((oT => bI(TT, oT, IT))))];
+        return oT.length > 7 ? `${oT.slice(0,7).join(" or ")} or ...` : oT.join(" or ")
       }
-      if (FY.isStringLiteral()) return `"${FY.value}"`;
-      if (FY.isNumberLiteral()) return `${FY.value}`;
-      if (FY.flags & eY().TypeFlags.StringLike) return "text";
-      if (FY.flags & eY().TypeFlags.NumberLike) return "a number";
-      if (FY.flags & eY().TypeFlags.BooleanLike) return "true or false";
-      if (YY.isTupleType(FY)) {
-        return `[${YY.getTypeArguments(FY).map((rY=>kD(YY,rY,DY+1))).join(", ")}]`
+      if (iT.isStringLiteral()) return `"${iT.value}"`;
+      if (iT.isNumberLiteral()) return `${iT.value}`;
+      if (iT.flags & RT().TypeFlags.StringLike) return "text";
+      if (iT.flags & RT().TypeFlags.NumberLike) return "a number";
+      if (iT.flags & RT().TypeFlags.BooleanLike) return "true or false";
+      if (TT.isTupleType(iT)) {
+        return `[${TT.getTypeArguments(iT).map((oT=>bI(TT,oT,IT+1))).join(", ")}]`
       }
-      if (YY.isArrayType(FY)) {
-        if (DY > 1) return "a list";
-        const rY = kD(YY, YY.getTypeArguments(FY)[0], DY + 1);
-        return `a list of ${rY.includes(" or ")?`(${rY})`:rY}`
+      if (TT.isArrayType(iT)) {
+        if (IT > 1) return "a list";
+        const oT = bI(TT, TT.getTypeArguments(iT)[0], IT + 1);
+        return `a list of ${oT.includes(" or ")?`(${oT})`:oT}`
       }
-      if (FY.getCallSignatures().length > 0) return "a function";
-      const AY = YY.getPropertiesOfType(FY);
-      if (0 === AY.length || DY > 1) return "{ ... }";
-      return `{ ${AY.slice(0,10).map((YY=>`${YY.name}${YY.flags&eY().SymbolFlags.Optional?"?":""}`)).join(", ")}${AY.length>10?", ...":""} }`
+      if (iT.getCallSignatures().length > 0) return "a function";
+      const zT = TT.getPropertiesOfType(iT);
+      if (0 === zT.length || IT > 1) return "{ ... }";
+      return `{ ${zT.slice(0,10).map((TT=>`${TT.name}${TT.flags&RT().SymbolFlags.Optional?"?":""}`)).join(", ")}${zT.length>10?", ...":""} }`
     }
 
-    function GD(YY, rY, DY) {
-      const FY = (rY, DY) => YY.isTypeAssignableTo(rY, DY) || GD(YY, rY, DY),
-        AY = rY => YY.getTypeArguments(rY)[0];
-      if ("string | number" === YY.typeToString(rY)) return !0;
-      if (rY.isUnion() && !(rY.flags & eY().TypeFlags.Boolean)) return rY.types.every((YY => FY(YY, DY)));
-      const IY = YY.getNonNullableType(DY);
-      return (IY.isUnion() ? IY.types : [IY]).some((DY => YY.isTupleType(DY) ? YY.isArrayType(rY) && YY.getTypeArguments(DY).every((YY => FY(AY(rY), YY))) : YY.isArrayType(DY) ? YY.isArrayType(rY) && FY(AY(rY), AY(DY)) : DY.flags & (eY().TypeFlags.Object | eY().TypeFlags.Intersection) && 0 === DY.getCallSignatures().length ? !!(rY.flags & (eY().TypeFlags.Object | eY().TypeFlags.Intersection)) && !YY.isArrayType(rY) && !YY.isTupleType(rY) && YY.getPropertiesOfType(DY).every((YY => 0 !== (YY.flags & eY().SymbolFlags.Optional) || void 0 !== rY.getProperty(YY.name))) && YY.getPropertiesOfType(rY).every((rY => {
-        var AY;
-        if (YY.getTypeOfSymbol(rY).flags & eY().TypeFlags.Undefined) return !0;
-        const IY = DY.getProperty(rY.name),
-          RY = IY ? YY.getTypeOfSymbol(IY) : null === (AY = YY.getIndexInfoOfType(DY, eY().IndexKind.String)) || void 0 === AY ? void 0 : AY.type;
-        return void 0 !== RY && FY(YY.getTypeOfSymbol(rY), RY)
-      })) : DY.isNumberLiteral() && rY.flags === eY().TypeFlags.Number || DY.isStringLiteral() && rY.flags === eY().TypeFlags.String))
+    function yI(TT, oT, IT) {
+      const iT = (oT, IT) => TT.isTypeAssignableTo(oT, IT) || yI(TT, oT, IT),
+        zT = oT => TT.getTypeArguments(oT)[0];
+      if ("string | number" === TT.typeToString(oT)) return !0;
+      if (oT.isUnion() && !(oT.flags & RT().TypeFlags.Boolean)) return oT.types.every((TT => iT(TT, IT)));
+      const kT = TT.getNonNullableType(IT);
+      return (kT.isUnion() ? kT.types : [kT]).some((IT => TT.isTupleType(IT) ? TT.isArrayType(oT) && TT.getTypeArguments(IT).every((TT => iT(zT(oT), TT))) : TT.isArrayType(IT) ? TT.isArrayType(oT) && iT(zT(oT), zT(IT)) : IT.flags & (RT().TypeFlags.Object | RT().TypeFlags.Intersection) && 0 === IT.getCallSignatures().length ? !!(oT.flags & (RT().TypeFlags.Object | RT().TypeFlags.Intersection)) && !TT.isArrayType(oT) && !TT.isTupleType(oT) && TT.getPropertiesOfType(IT).every((TT => 0 !== (TT.flags & RT().SymbolFlags.Optional) || void 0 !== oT.getProperty(TT.name))) && TT.getPropertiesOfType(oT).every((oT => {
+        var zT;
+        if (TT.getTypeOfSymbol(oT).flags & RT().TypeFlags.Undefined) return !0;
+        const kT = IT.getProperty(oT.name),
+          WT = kT ? TT.getTypeOfSymbol(kT) : null === (zT = TT.getIndexInfoOfType(IT, RT().IndexKind.String)) || void 0 === zT ? void 0 : zT.type;
+        return void 0 !== WT && iT(TT.getTypeOfSymbol(oT), WT)
+      })) : IT.isNumberLiteral() && oT.flags === RT().TypeFlags.Number || IT.isStringLiteral() && oT.flags === RT().TypeFlags.String))
     }
 
-    function xD(YY, rY) {
-      return eY().isTypeReferenceNode(YY) && eY().isIdentifier(YY.typeName) && rY.has(YY.typeName.text) || !!eY().forEachChild(YY, (YY => xD(YY, rY) || void 0))
+    function NI(TT, oT) {
+      return RT().isTypeReferenceNode(TT) && RT().isIdentifier(TT.typeName) && oT.has(TT.typeName.text) || !!RT().forEachChild(TT, (TT => NI(TT, oT) || void 0))
     }
 
-    function nD(YY, rY) {
-      const DY = new Set,
-        FY = AY => {
-          if (XD(AY, YY)) {
-            var IY, RY, OY;
-            const FY = rY.getResolvedSignature(AY),
-              gY = null !== (IY = null === FY || void 0 === FY ? void 0 : FY.getParameters()) && void 0 !== IY ? IY : [],
-              aY = new Set((null !== (RY = null === FY || void 0 === FY || null === (OY = FY.getDeclaration()) || void 0 === OY ? void 0 : OY.typeParameters) && void 0 !== RY ? RY : []).map((YY => YY.name.text)));
-            AY.arguments.forEach(((rY, FY) => {
-              var IY;
-              const RY = null === (IY = gY[FY]) || void 0 === IY ? void 0 : IY.valueDeclaration,
-                OY = RY && eY().isParameter(RY) ? RY.type : void 0;
-              if (rY.kind === eY().SyntaxKind.NullKeyword && OY && !xD(OY, aY) && !/\b(?:null|any|unknown)\b/.test(OY.getText())) {
-                const rY = FY === AY.arguments.length - 1;
-                DY.add(`${AY.expression.getText(YY)} can't take null as ${gY[FY].name}: ${rY?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
+    function PI(TT, oT) {
+      const IT = new Set,
+        iT = zT => {
+          if (tI(zT, TT)) {
+            var kT, WT, XT;
+            const iT = oT.getResolvedSignature(zT),
+              BT = null !== (kT = null === iT || void 0 === iT ? void 0 : iT.getParameters()) && void 0 !== kT ? kT : [],
+              FT = new Set((null !== (WT = null === iT || void 0 === iT || null === (XT = iT.getDeclaration()) || void 0 === XT ? void 0 : XT.typeParameters) && void 0 !== WT ? WT : []).map((TT => TT.name.text)));
+            zT.arguments.forEach(((oT, iT) => {
+              var kT;
+              const WT = null === (kT = BT[iT]) || void 0 === kT ? void 0 : kT.valueDeclaration,
+                XT = WT && RT().isParameter(WT) ? WT.type : void 0;
+              if (oT.kind === RT().SyntaxKind.NullKeyword && XT && !NI(XT, FT) && !/\b(?:null|any|unknown)\b/.test(XT.getText())) {
+                const oT = iT === zT.arguments.length - 1;
+                IT.add(`${zT.expression.getText(TT)} can't take null as ${BT[iT].name}: ${oT?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
               }
             }))
           }
-          eY().forEachChild(AY, FY)
+          RT().forEachChild(zT, iT)
         };
-      return FY(YY), [...DY]
+      return iT(TT), [...IT]
     }
 
-    function PD(YY) {
-      return QD(YY).file
+    function dI(TT) {
+      return rI(TT).file
     }
 
-    function UD(YY) {
+    function VI(TT) {
       return {
-        from: YY.getFullStart(),
-        to: YY.getEnd()
+        from: TT.getFullStart(),
+        to: TT.getEnd()
       }
     }
 
-    function LD(YY) {
-      if (!/\buse_?prefab\s*\(/i.test(YY)) return {
-        code: YY,
+    function Ti(TT) {
+      if (!/\buse_?prefab\s*\(/i.test(TT)) return {
+        code: TT,
         calls: []
       };
-      const rY = PD(YY),
-        DY = function(YY) {
-          const rY = new Map;
-          for (const DY of YY.statements)
-            if (eY().isVariableStatement(DY))
-              for (const YY of DY.declarationList.declarations)
-                if (eY().isIdentifier(YY.name) && "CONFIG" === YY.name.text && YY.initializer && eY().isObjectLiteralExpression(YY.initializer))
-                  for (const DY of YY.initializer.properties) eY().isPropertyAssignment(DY) && (eY().isIdentifier(DY.name) || eY().isStringLiteral(DY.name)) && rY.set(DY.name.text, DY.initializer.getText());
-          return rY
-        }(rY),
-        FY = [],
-        AY = [],
-        IY = YY => {
-          var rY;
-          return eY().isPropertyAccessExpression(YY) && eY().isIdentifier(YY.expression) && "CONFIG" === YY.expression.text && null !== (rY = DY.get(YY.name.text)) && void 0 !== rY ? rY : YY.getText()
+      const oT = dI(TT),
+        IT = function(TT) {
+          const oT = new Map;
+          for (const IT of TT.statements)
+            if (RT().isVariableStatement(IT))
+              for (const TT of IT.declarationList.declarations)
+                if (RT().isIdentifier(TT.name) && "CONFIG" === TT.name.text && TT.initializer && RT().isObjectLiteralExpression(TT.initializer))
+                  for (const IT of TT.initializer.properties) RT().isPropertyAssignment(IT) && (RT().isIdentifier(IT.name) || RT().isStringLiteral(IT.name)) && oT.set(IT.name.text, IT.initializer.getText());
+          return oT
+        }(oT),
+        iT = [],
+        zT = [],
+        kT = TT => {
+          var oT;
+          return RT().isPropertyAccessExpression(TT) && RT().isIdentifier(TT.expression) && "CONFIG" === TT.expression.text && null !== (oT = IT.get(TT.name.text)) && void 0 !== oT ? oT : TT.getText()
         },
-        RY = YY => YY && (eY().isStringLiteral(YY) || eY().isNoSubstitutionTemplateLiteral(YY)) ? YY.text : YY && eY().isObjectLiteralExpression(YY) ? YY.properties.flatMap((YY => eY().isPropertyAssignment(YY) && (eY().isIdentifier(YY.name) || eY().isStringLiteral(YY.name)) ? [`${YY.name.text}: ${IY(YY.initializer)}`] : eY().isShorthandPropertyAssignment(YY) && DY.has(YY.name.text) ? [`${YY.name.text}: ${DY.get(YY.name.text)}`] : [])).join("\n") : "";
-      for (const OY of rY.statements) {
-        const YY = eY().isExpressionStatement(OY) ? OY.expression : null;
-        if (!YY || !eY().isCallExpression(YY) || !eY().isIdentifier(YY.expression) || !/^use_?prefab$/i.test(YY.expression.text)) continue;
-        const [rY, DY] = YY.arguments;
-        if (rY && (eY().isStringLiteral(rY) || eY().isNoSubstitutionTemplateLiteral(rY))) FY.push({
-          name: rY.text,
-          settings: RY(DY)
+        WT = TT => TT && (RT().isStringLiteral(TT) || RT().isNoSubstitutionTemplateLiteral(TT)) ? TT.text : TT && RT().isObjectLiteralExpression(TT) ? TT.properties.flatMap((TT => RT().isPropertyAssignment(TT) && (RT().isIdentifier(TT.name) || RT().isStringLiteral(TT.name)) ? [`${TT.name.text}: ${kT(TT.initializer)}`] : RT().isShorthandPropertyAssignment(TT) && IT.has(TT.name.text) ? [`${TT.name.text}: ${IT.get(TT.name.text)}`] : [])).join("\n") : "";
+      for (const XT of oT.statements) {
+        const TT = RT().isExpressionStatement(XT) ? XT.expression : null;
+        if (!TT || !RT().isCallExpression(TT) || !RT().isIdentifier(TT.expression) || !/^use_?prefab$/i.test(TT.expression.text)) continue;
+        const [oT, IT] = TT.arguments;
+        if (oT && (RT().isStringLiteral(oT) || RT().isNoSubstitutionTemplateLiteral(oT))) iT.push({
+          name: oT.text,
+          settings: WT(IT)
         });
         else {
-          if (!rY || !eY().isObjectLiteralExpression(rY)) continue;
+          if (!oT || !RT().isObjectLiteralExpression(oT)) continue;
           {
-            const YY = YY => {
-                var DY;
-                return null === (DY = rY.properties.find((rY => eY().isPropertyAssignment(rY) && eY().isIdentifier(rY.name) && rY.name.text === YY))) || void 0 === DY ? void 0 : DY.initializer
+            const TT = TT => {
+                var IT;
+                return null === (IT = oT.properties.find((oT => RT().isPropertyAssignment(oT) && RT().isIdentifier(oT.name) && oT.name.text === TT))) || void 0 === IT ? void 0 : IT.initializer
               },
-              DY = YY("name");
-            DY && eY().isStringLiteral(DY) && FY.push({
-              name: DY.text,
-              settings: RY(YY("settings"))
+              IT = TT("name");
+            IT && RT().isStringLiteral(IT) && iT.push({
+              name: IT.text,
+              settings: WT(TT("settings"))
             })
           }
         }
-        AY.push({
-          ...UD(OY),
+        zT.push({
+          ...VI(XT),
           text: ""
         })
       }
       return {
-        code: cD(YY, AY),
-        calls: FY
+        code: CI(TT, zT),
+        calls: iT
       }
     }
 
-    function tD(YY) {
-      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(YY)) return YY;
-      const rY = PD(YY),
-        DY = new Set(rY.statements.flatMap((YY => eY().isFunctionDeclaration(YY) && YY.name ? [YY.name.text] : []))),
-        FY = [];
-      for (const AY of rY.statements)
-        if (eY().isExpressionStatement(AY) && eY().isBinaryExpression(AY.expression) && AY.expression.operatorToken.kind === eY().SyntaxKind.EqualsToken && eY().isIdentifier(AY.expression.left) && DY.add(AY.expression.left.text), eY().isVariableStatement(AY))
-          for (const YY of AY.declarationList.declarations) {
-            const rY = YY.initializer;
-            rY && eY().isIdentifier(rY) && sD(rY.text) && !DY.has(rY.text) && FY.push({
-              from: rY.getStart(),
-              to: rY.getEnd(),
+    function oi(TT) {
+      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(TT)) return TT;
+      const oT = dI(TT),
+        IT = new Set(oT.statements.flatMap((TT => RT().isFunctionDeclaration(TT) && TT.name ? [TT.name.text] : []))),
+        iT = [];
+      for (const zT of oT.statements)
+        if (RT().isExpressionStatement(zT) && RT().isBinaryExpression(zT.expression) && zT.expression.operatorToken.kind === RT().SyntaxKind.EqualsToken && RT().isIdentifier(zT.expression.left) && IT.add(zT.expression.left.text), RT().isVariableStatement(zT))
+          for (const TT of zT.declarationList.declarations) {
+            const oT = TT.initializer;
+            oT && RT().isIdentifier(oT) && cI(oT.text) && !IT.has(oT.text) && iT.push({
+              from: oT.getStart(),
+              to: oT.getEnd(),
               text: "function () {}"
-            }), rY && eY().isIdentifier(YY.name) && DY.add(YY.name.text)
+            }), oT && RT().isIdentifier(TT.name) && IT.add(TT.name.text)
           }
-      return cD(YY, FY)
+      return CI(TT, iT)
     }
 
-    function YF(YY, rY) {
-      if (!YY.includes("api.setBlockRect(")) return YY;
-      const DY = PD(YY);
-      if (DY.statements.some((YY => {
-          var rY;
-          return eY().isFunctionDeclaration(YY) && "fillBox" === (null === (rY = YY.name) || void 0 === rY ? void 0 : rY.text) && 3 !== YY.parameters.length
-        }))) return YY;
-      const FY = [],
-        AY = YY => {
-          var IY;
-          eY().isFunctionDeclaration(YY) && "fillBox" === (null === (IY = YY.name) || void 0 === IY ? void 0 : IY.text) || (XD(YY, DY) && "setBlockRect" === YY.expression.name.text && 3 === YY.arguments.length && !rY.includes(YY.getText()) && FY.push({
-            from: YY.expression.getStart(),
-            to: YY.expression.getEnd(),
+    function Ii(TT, oT) {
+      if (!TT.includes("api.setBlockRect(")) return TT;
+      const IT = dI(TT);
+      if (IT.statements.some((TT => {
+          var oT;
+          return RT().isFunctionDeclaration(TT) && "fillBox" === (null === (oT = TT.name) || void 0 === oT ? void 0 : oT.text) && 3 !== TT.parameters.length
+        }))) return TT;
+      const iT = [],
+        zT = TT => {
+          var kT;
+          RT().isFunctionDeclaration(TT) && "fillBox" === (null === (kT = TT.name) || void 0 === kT ? void 0 : kT.text) || (tI(TT, IT) && "setBlockRect" === TT.expression.name.text && 3 === TT.arguments.length && !oT.includes(TT.getText()) && iT.push({
+            from: TT.expression.getStart(),
+            to: TT.expression.getEnd(),
             text: "fillBox"
-          }), eY().forEachChild(YY, AY))
+          }), RT().forEachChild(TT, zT))
         };
-      return AY(DY), cD(YY, FY)
+      return zT(IT), CI(TT, iT)
     }
-    const rF = [{
+    const ii = [{
         name: "parkour",
         kind: "game",
         title: "Parkour / obby",
@@ -4416,7 +4416,7 @@ export const modules = {
         }],
         setup: "Put your own Bloxd name in admins to get the admin commands, and set spawnPosition to where players should start."
       }],
-      DF = [{
+      zi = [{
         group: "timers",
         code: "// Ready-made timers: runLater(seconds, fn) runs fn once after some seconds, repeatEvery(seconds, fn) runs it every\n// few seconds, and cancelTimer(id) stops either. Time is counted in tick. The list is a var made on first use, so\n// they can be called from the top of the file, above this code.\nvar timerList\nvar nextTimerId\n\nfunction runLater(seconds, fn) {\n\treturn addToTimerList(seconds, 0, fn)\n}\n\nfunction repeatEvery(seconds, fn) {\n\treturn addToTimerList(seconds, Math.max(50, seconds * 1000), fn)\n}\n\nfunction addToTimerList(seconds, everyMs, fn) {\n\tif (!timerList) {\n\t\ttimerList = []\n\t\tnextTimerId = 1\n\t}\n\tconst id = nextTimerId++\n\ttimerList.push({ id: id, msLeft: seconds * 1000, everyMs: everyMs, fn: fn })\n\treturn id\n}\n\nfunction cancelTimer(id) {\n\tconst index = timerList ? timerList.findIndex((timer) => timer.id === id) : -1\n\tif (index !== -1) {\n\t\ttimerList.splice(index, 1)\n\t}\n}\n\nfunction tick(ms) {\n\tif (!timerList) {\n\t\treturn\n\t}\n\tfor (const timer of timerList.slice()) {\n\t\tif (!timerList.includes(timer)) {\n\t\t\tcontinue\n\t\t}\n\t\ttimer.msLeft -= ms\n\t\tif (timer.msLeft > 0) {\n\t\t\tcontinue\n\t\t}\n\t\tif (timer.everyMs > 0) {\n\t\t\ttimer.msLeft += timer.everyMs\n\t\t} else {\n\t\t\tcancelTimer(timer.id)\n\t\t}\n\t\ttimer.fn()\n\t}\n}",
         helpers: [{
@@ -5004,180 +5004,180 @@ export const modules = {
           about: "Stops a risingLava (the handle it returned). With clear true it also takes away the blocks it placed, and only those, e.g. for the next round. Returns nothing.",
           example: "stopLava(lava, true)"
         }]
-      }].flatMap((YY => YY.helpers.map((rY => ({
-        ...rY,
-        group: YY.group,
-        code: YY.code,
-        ...YY.uses ? {
-          uses: YY.uses
+      }].flatMap((TT => TT.helpers.map((oT => ({
+        ...oT,
+        group: TT.group,
+        code: TT.code,
+        ...TT.uses ? {
+          uses: TT.uses
         } : {}
       })))));
 
-    function FF(YY) {
+    function ki(TT) {
       const {
-        file: rY,
-        hasErrors: DY
-      } = QD(`(${YY})`), FY = rY.statements[0];
-      if (DY || 1 !== rY.statements.length || !FY || !eY().isExpressionStatement(FY)) return null;
-      const AY = FY.expression;
-      return eY().isParenthesizedExpression(AY) ? AY.expression : AY
+        file: oT,
+        hasErrors: IT
+      } = rI(`(${TT})`), iT = oT.statements[0];
+      if (IT || 1 !== oT.statements.length || !iT || !RT().isExpressionStatement(iT)) return null;
+      const zT = iT.expression;
+      return RT().isParenthesizedExpression(zT) ? zT.expression : zT
     }
 
-    function AF(YY) {
-      return !!(eY().isNumericLiteral(YY) || eY().isStringLiteral(YY) || eY().isNoSubstitutionTemplateLiteral(YY)) || (YY.kind === eY().SyntaxKind.TrueKeyword || YY.kind === eY().SyntaxKind.FalseKeyword || YY.kind === eY().SyntaxKind.NullKeyword || (!eY().isPrefixUnaryExpression(YY) || YY.operator !== eY().SyntaxKind.MinusToken && YY.operator !== eY().SyntaxKind.PlusToken ? eY().isArrayLiteralExpression(YY) ? YY.elements.every((YY => AF(YY))) : !!eY().isObjectLiteralExpression(YY) && YY.properties.every((YY => eY().isPropertyAssignment(YY) && (eY().isIdentifier(YY.name) || eY().isStringLiteral(YY.name)) && AF(YY.initializer))) : eY().isNumericLiteral(YY.operand)))
+    function Wi(TT) {
+      return !!(RT().isNumericLiteral(TT) || RT().isStringLiteral(TT) || RT().isNoSubstitutionTemplateLiteral(TT)) || (TT.kind === RT().SyntaxKind.TrueKeyword || TT.kind === RT().SyntaxKind.FalseKeyword || TT.kind === RT().SyntaxKind.NullKeyword || (!RT().isPrefixUnaryExpression(TT) || TT.operator !== RT().SyntaxKind.MinusToken && TT.operator !== RT().SyntaxKind.PlusToken ? RT().isArrayLiteralExpression(TT) ? TT.elements.every((TT => Wi(TT))) : !!RT().isObjectLiteralExpression(TT) && TT.properties.every((TT => RT().isPropertyAssignment(TT) && (RT().isIdentifier(TT.name) || RT().isStringLiteral(TT.name)) && Wi(TT.initializer))) : RT().isNumericLiteral(TT.operand)))
     }
 
-    function IF(YY) {
-      return eY().isNumericLiteral(YY) || eY().isPrefixUnaryExpression(YY) && eY().isNumericLiteral(YY.operand)
+    function Xi(TT) {
+      return RT().isNumericLiteral(TT) || RT().isPrefixUnaryExpression(TT) && RT().isNumericLiteral(TT.operand)
     }
 
-    function RF(YY) {
-      return eY().isStringLiteral(YY) || eY().isNoSubstitutionTemplateLiteral(YY) ? YY.text : null
+    function Bi(TT) {
+      return RT().isStringLiteral(TT) || RT().isNoSubstitutionTemplateLiteral(TT) ? TT.text : null
     }
-    const OF = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
+    const Fi = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
 
-    function gF(YY) {
-      const rY = YY.trim();
-      if ("" === rY) return [];
-      if (rY.startsWith("{")) try {
-        const YY = JSON.parse(rY);
-        if (YY && "object" === typeof YY && !Array.isArray(YY)) return Object.entries(YY).map((YY => {
-          let [rY, DY] = YY;
-          return [rY, JSON.stringify(DY)]
+    function Si(TT) {
+      const oT = TT.trim();
+      if ("" === oT) return [];
+      if (oT.startsWith("{")) try {
+        const TT = JSON.parse(oT);
+        if (TT && "object" === typeof TT && !Array.isArray(TT)) return Object.entries(TT).map((TT => {
+          let [oT, IT] = TT;
+          return [oT, JSON.stringify(IT)]
         }))
       } catch {}
-      const DY = function(YY) {
-        const rY = FF(YY);
-        if (!rY || !eY().isObjectLiteralExpression(rY)) return null;
-        const DY = [];
-        for (const FY of rY.properties) {
-          if (!eY().isPropertyAssignment(FY) || !eY().isIdentifier(FY.name) && !eY().isStringLiteral(FY.name)) return null;
-          DY.push([FY.name.text, FY.initializer.getText()])
+      const IT = function(TT) {
+        const oT = ki(TT);
+        if (!oT || !RT().isObjectLiteralExpression(oT)) return null;
+        const IT = [];
+        for (const iT of oT.properties) {
+          if (!RT().isPropertyAssignment(iT) || !RT().isIdentifier(iT.name) && !RT().isStringLiteral(iT.name)) return null;
+          IT.push([iT.name.text, iT.initializer.getText()])
         }
-        return DY
-      }(rY.startsWith("{") ? rY : `{${rY}}`);
-      if (DY) return DY;
-      const FY = [];
-      let AY = null,
-        IY = 0;
-      const RY = rY.startsWith("{") ? rY.replace(/^\{/, "").replace(/\}\s*$/, "") : rY;
-      for (const uY of RY.split("\n")) {
-        var OY, gY, aY, vY;
-        const YY = /\/\//.exec(uY.replace(OF, (YY => " ".repeat(YY.length)))),
-          rY = (YY ? uY.slice(0, YY.index) : uY).trim();
-        if ("" === rY) continue;
-        if (AY && IY > 0) AY[1] += `\n${rY}`;
+        return IT
+      }(oT.startsWith("{") ? oT : `{${oT}}`);
+      if (IT) return IT;
+      const iT = [];
+      let zT = null,
+        kT = 0;
+      const WT = oT.startsWith("{") ? oT.replace(/^\{/, "").replace(/\}\s*$/, "") : oT;
+      for (const DT of WT.split("\n")) {
+        var XT, BT, FT, ST;
+        const TT = /\/\//.exec(DT.replace(Fi, (TT => " ".repeat(TT.length)))),
+          oT = (TT ? DT.slice(0, TT.index) : DT).trim();
+        if ("" === oT) continue;
+        if (zT && kT > 0) zT[1] += `\n${oT}`;
         else {
-          const YY = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(rY.replace(/^[-*\u2022]\s*/, ""));
-          if (!YY) continue;
-          AY = [YY[1], YY[2]], FY.push(AY)
+          const TT = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(oT.replace(/^[-*\u2022]\s*/, ""));
+          if (!TT) continue;
+          zT = [TT[1], TT[2]], iT.push(zT)
         }
-        const DY = rY.replace(OF, "");
-        IY = Math.max(0, IY + (null !== (OY = null === (gY = DY.match(/[[{(]/g)) || void 0 === gY ? void 0 : gY.length) && void 0 !== OY ? OY : 0) - (null !== (aY = null === (vY = DY.match(/[\]})]/g)) || void 0 === vY ? void 0 : vY.length) && void 0 !== aY ? aY : 0))
+        const IT = oT.replace(Fi, "");
+        kT = Math.max(0, kT + (null !== (XT = null === (BT = IT.match(/[[{(]/g)) || void 0 === BT ? void 0 : BT.length) && void 0 !== XT ? XT : 0) - (null !== (FT = null === (ST = IT.match(/[\]})]/g)) || void 0 === ST ? void 0 : ST.length) && void 0 !== FT ? FT : 0))
       }
-      return FY.map((YY => {
-        let [rY, DY] = YY;
-        return [rY, DY.trim().replace(/[,;]\s*$/, "")]
+      return iT.map((TT => {
+        let [oT, IT] = TT;
+        return [oT, IT.trim().replace(/[,;]\s*$/, "")]
       }))
     }
 
-    function aF(YY, rY, DY) {
-      const FY = "string" === YY.kind || "block" === YY.kind || "item" === YY.kind || "mob" === YY.kind;
-      let AY = FF(rY),
-        IY = rY;
-      var RY;
-      if (AY && AF(AY) || !FY || (RY = rY, IY = JSON.stringify(RY.replace(/^["'`]|["'`]$/g, "")), AY = FF(IY)), !AY || !AF(AY)) return {
-        problem: `${YY.key} must be a plain value like ${YY.value}, not ${rY}`
+    function Di(TT, oT, IT) {
+      const iT = "string" === TT.kind || "block" === TT.kind || "item" === TT.kind || "mob" === TT.kind;
+      let zT = ki(oT),
+        kT = oT;
+      var WT;
+      if (zT && Wi(zT) || !iT || (WT = oT, kT = JSON.stringify(WT.replace(/^["'`]|["'`]$/g, "")), zT = ki(kT)), !zT || !Wi(zT)) return {
+        problem: `${TT.key} must be a plain value like ${TT.value}, not ${oT}`
       };
-      if ("number" === YY.kind && !IF(AY)) return {
-        problem: `${YY.key} must be a number, like ${YY.value}`
+      if ("number" === TT.kind && !Xi(zT)) return {
+        problem: `${TT.key} must be a number, like ${TT.value}`
       };
-      if ("boolean" === YY.kind && AY.kind !== eY().SyntaxKind.TrueKeyword && AY.kind !== eY().SyntaxKind.FalseKeyword) return {
-        problem: `${YY.key} must be true or false`
+      if ("boolean" === TT.kind && zT.kind !== RT().SyntaxKind.TrueKeyword && zT.kind !== RT().SyntaxKind.FalseKeyword) return {
+        problem: `${TT.key} must be true or false`
       };
-      if ("position" === YY.kind && ! function(YY) {
-          return eY().isArrayLiteralExpression(YY) && 3 === YY.elements.length && YY.elements.every(IF)
-        }(AY) && (AY.kind !== eY().SyntaxKind.NullKeyword || "null" !== YY.value)) return {
-        problem: `${YY.key} must be a position [x, y, z], like ${"null"===YY.value?"[0, 10, 0]":YY.value}`
+      if ("position" === TT.kind && ! function(TT) {
+          return RT().isArrayLiteralExpression(TT) && 3 === TT.elements.length && TT.elements.every(Xi)
+        }(zT) && (zT.kind !== RT().SyntaxKind.NullKeyword || "null" !== TT.value)) return {
+        problem: `${TT.key} must be a position [x, y, z], like ${"null"===TT.value?"[0, 10, 0]":TT.value}`
       };
-      if ("list" === YY.kind && !eY().isArrayLiteralExpression(AY)) return {
-        problem: `${YY.key} must be a list in [ ], like ${YY.value}`
+      if ("list" === TT.kind && !RT().isArrayLiteralExpression(zT)) return {
+        problem: `${TT.key} must be a list in [ ], like ${TT.value}`
       };
-      if ("list" === YY.kind && YY.names && DY && eY().isArrayLiteralExpression(AY)) return function(YY, rY, DY, FY) {
-        const AY = YY => YY.elements.flatMap(((rY, FY) => {
-            if (eY().isArrayLiteralExpression(rY)) return AY(rY);
-            if ("item" === DY && eY().isObjectLiteralExpression(rY)) return IY(rY);
-            const RY = YY.elements[FY + 1],
-              OY = void 0 !== RY && eY().isArrayLiteralExpression(RY);
-            return null === RF(rY) || OY ? [] : [rY]
+      if ("list" === TT.kind && TT.names && IT && RT().isArrayLiteralExpression(zT)) return function(TT, oT, IT, iT) {
+        const zT = TT => TT.elements.flatMap(((oT, iT) => {
+            if (RT().isArrayLiteralExpression(oT)) return zT(oT);
+            if ("item" === IT && RT().isObjectLiteralExpression(oT)) return kT(oT);
+            const WT = TT.elements[iT + 1],
+              XT = void 0 !== WT && RT().isArrayLiteralExpression(WT);
+            return null === Bi(oT) || XT ? [] : [oT]
           })),
-          IY = YY => YY.properties.flatMap((YY => {
-            if (!eY().isPropertyAssignment(YY) || !["item", "ammo", "projectile", "items"].includes(YY.name.getText().replace(/["']/g, ""))) return [];
-            const rY = YY.initializer;
-            return eY().isArrayLiteralExpression(rY) ? AY(rY) : null !== RF(rY) ? [rY] : []
+          kT = TT => TT.properties.flatMap((TT => {
+            if (!RT().isPropertyAssignment(TT) || !["item", "ammo", "projectile", "items"].includes(TT.name.getText().replace(/["']/g, ""))) return [];
+            const oT = TT.initializer;
+            return RT().isArrayLiteralExpression(oT) ? zT(oT) : null !== Bi(oT) ? [oT] : []
           })),
-          RY = AY(rY),
-          OY = rY.getStart();
-        let gY = rY.getText();
-        const aY = [],
-          vY = [],
-          uY = new Map([...YY.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((YY => [YY[2], YY[1]]))),
-          sY = YY => {
-            var rY;
-            const DY = YY.parent,
-              FY = null === DY || void 0 === DY ? void 0 : DY.parent;
-            if (!eY().isPropertyAssignment(DY) || "item" !== DY.name.getText().replace(/["']/g, "") || !FY || !eY().isObjectLiteralExpression(FY)) return;
-            const AY = YY => FY.properties.find((rY => eY().isPropertyAssignment(rY) && rY.name.getText().replace(/["']/g, "") === YY)),
-              IY = AY("action"),
-              RY = IY ? uY.get(null !== (rY = RF(IY.initializer)) && void 0 !== rY ? rY : "") : void 0;
-            return RY ? {
-              property: DY,
-              item: RY,
-              named: void 0 !== AY("name")
+          WT = zT(oT),
+          XT = oT.getStart();
+        let BT = oT.getText();
+        const FT = [],
+          ST = [],
+          DT = new Map([...TT.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((TT => [TT[2], TT[1]]))),
+          LT = TT => {
+            var oT;
+            const IT = TT.parent,
+              iT = null === IT || void 0 === IT ? void 0 : IT.parent;
+            if (!RT().isPropertyAssignment(IT) || "item" !== IT.name.getText().replace(/["']/g, "") || !iT || !RT().isObjectLiteralExpression(iT)) return;
+            const zT = TT => iT.properties.find((oT => RT().isPropertyAssignment(oT) && oT.name.getText().replace(/["']/g, "") === TT)),
+              kT = zT("action"),
+              WT = kT ? DT.get(null !== (oT = Bi(kT.initializer)) && void 0 !== oT ? oT : "") : void 0;
+            return WT ? {
+              property: IT,
+              item: WT,
+              named: void 0 !== zT("name")
             } : void 0
           };
-        for (const yY of [...RY].reverse()) {
-          var iY;
-          const YY = null !== (iY = RF(yY)) && void 0 !== iY ? iY : "",
-            rY = FY(DY, YY),
-            AY = null === rY ? sY(yY) : void 0;
-          if (AY) {
-            const rY = AY.named ? `item: ${JSON.stringify(AY.item)}` : `item: ${JSON.stringify(AY.item)}, name: ${JSON.stringify(YY)}`;
-            aY.unshift(`"${YY}" isn't an item, so it is a ${AY.item}${AY.named?"":` named "${YY}"`}`), gY = `${gY.slice(0,AY.property.getStart()-OY)}${rY}${gY.slice(AY.property.getEnd()-OY)}`
-          } else null === rY ? vY.unshift(`"${YY}"`) : rY !== YY && (aY.unshift(`"${YY}" is "${rY}"`), gY = `${gY.slice(0,yY.getStart()-OY)}${JSON.stringify(rY)}${gY.slice(yY.getEnd()-OY)}`)
+        for (const cT of [...WT].reverse()) {
+          var xT;
+          const TT = null !== (xT = Bi(cT)) && void 0 !== xT ? xT : "",
+            oT = iT(IT, TT),
+            zT = null === oT ? LT(cT) : void 0;
+          if (zT) {
+            const oT = zT.named ? `item: ${JSON.stringify(zT.item)}` : `item: ${JSON.stringify(zT.item)}, name: ${JSON.stringify(TT)}`;
+            FT.unshift(`"${TT}" isn't an item, so it is a ${zT.item}${zT.named?"":` named "${TT}"`}`), BT = `${BT.slice(0,zT.property.getStart()-XT)}${oT}${BT.slice(zT.property.getEnd()-XT)}`
+          } else null === oT ? ST.unshift(`"${TT}"`) : oT !== TT && (FT.unshift(`"${TT}" is "${oT}"`), BT = `${BT.slice(0,cT.getStart()-XT)}${JSON.stringify(oT)}${BT.slice(cT.getEnd()-XT)}`)
         }
-        if (vY.length > 0) return {
-          problem: `${vY.join(", ")} ${1===vY.length?"item"===DY?"isn't an":"isn't a":"aren't"} ${DY} name${1===vY.length?"":"s"}, so ${YY.key} kept ${YY.value}`
+        if (ST.length > 0) return {
+          problem: `${ST.join(", ")} ${1===ST.length?"item"===IT?"isn't an":"isn't a":"aren't"} ${IT} name${1===ST.length?"":"s"}, so ${TT.key} kept ${TT.value}`
         };
         return {
-          value: gY,
-          ...aY.length > 0 ? {
-            fixed: aY.join(", ")
+          value: BT,
+          ...FT.length > 0 ? {
+            fixed: FT.join(", ")
           } : {}
         }
-      }(YY, AY, YY.names, DY);
-      if (FY) {
-        const rY = RF(AY);
-        if (null === rY) return {
-          problem: `${YY.key} must be text in quotes, like ${YY.value}`
+      }(TT, zT, TT.names, IT);
+      if (iT) {
+        const oT = Bi(zT);
+        if (null === oT) return {
+          problem: `${TT.key} must be text in quotes, like ${TT.value}`
         };
-        if (("block" === YY.kind || "item" === YY.kind || "mob" === YY.kind) && DY) {
-          const FY = DY(YY.kind, rY);
-          if (null === FY) return {
-            problem: `"${rY}" isn't ${"item"===YY.kind?"an":"a"} ${YY.kind} name, so ${YY.key} kept ${YY.value}`
+        if (("block" === TT.kind || "item" === TT.kind || "mob" === TT.kind) && IT) {
+          const iT = IT(TT.kind, oT);
+          if (null === iT) return {
+            problem: `"${oT}" isn't ${"item"===TT.kind?"an":"a"} ${TT.kind} name, so ${TT.key} kept ${TT.value}`
           };
-          if (FY !== rY) return {
-            value: JSON.stringify(FY),
-            fixed: `"${rY}" is "${FY}"`
+          if (iT !== oT) return {
+            value: JSON.stringify(iT),
+            fixed: `"${oT}" is "${iT}"`
           }
         }
       }
       return {
-        value: AY.getText()
+        value: zT.getText()
       }
     }
-    const vF = rF,
-      uF = new Map([
+    const Li = ii,
+      xi = new Map([
         ["parkour", "parkour, obbies and races to a finish"],
         ["pvp", "fighting other players: arenas, kills, last one standing"],
         ["teams", "teams against each other"],
@@ -5191,707 +5191,707 @@ export const modules = {
         ["screen", "text on players' screens and announcements"]
       ]);
 
-    function sF(YY) {
-      return YY.toLowerCase().replace(/[^a-z0-9]/g, "")
+    function ci(TT) {
+      return TT.toLowerCase().replace(/[^a-z0-9]/g, "")
     }
 
-    function iF(YY) {
-      var rY;
-      const DY = sF(YY);
-      return null !== (rY = vF.find((YY => sF(YY.name) === DY || sF(YY.title) === DY))) && void 0 !== rY ? rY : null
+    function Ki(TT) {
+      var oT;
+      const IT = ci(TT);
+      return null !== (oT = Li.find((TT => ci(TT.name) === IT || ci(TT.title) === IT))) && void 0 !== oT ? oT : null
     }
 
-    function yF(YY) {
-      var rY;
-      return null !== (rY = DF.find((rY => rY.name === YY))) && void 0 !== rY ? rY : null
+    function Mi(TT) {
+      var oT;
+      return null !== (oT = zi.find((oT => oT.name === TT))) && void 0 !== oT ? oT : null
     }
 
-    function QF(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-      const DY = function(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return 0 === YY.length ? "" : `const CONFIG = {\n${YY.map((YY=>{var DY;return`\t${YY.key}: ${null!==(DY=rY.get(YY.key))&&void 0!==DY?DY:YY.value}, // ${YY.about}`})).join("\n")}\n}`
-      }(YY.settings, rY);
-      return `${""===DY?"":`${DY}\n\n`}${YY.code.trim()}\n`
+    function ri(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+      const IT = function(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return 0 === TT.length ? "" : `const CONFIG = {\n${TT.map((TT=>{var IT;return`\t${TT.key}: ${null!==(IT=oT.get(TT.key))&&void 0!==IT?IT:TT.value}, // ${TT.about}`})).join("\n")}\n}`
+      }(TT.settings, oT);
+      return `${""===IT?"":`${IT}\n\n`}${TT.code.trim()}\n`
     }
 
-    function oF(YY) {
-      const rY = [],
-        DY = new Set,
-        FY = YY => {
-          const AY = yF(YY);
-          if (AY && !DY.has(AY.group)) {
-            DY.add(AY.group);
-            for (const YY of null !== (IY = AY.uses) && void 0 !== IY ? IY : []) {
-              var IY;
-              FY(YY)
+    function Ai(TT) {
+      const oT = [],
+        IT = new Set,
+        iT = TT => {
+          const zT = Mi(TT);
+          if (zT && !IT.has(zT.group)) {
+            IT.add(zT.group);
+            for (const TT of null !== (kT = zT.uses) && void 0 !== kT ? kT : []) {
+              var kT;
+              iT(TT)
             }
-            rY.push(AY)
+            oT.push(zT)
           }
         };
-      for (const AY of YY) FY(AY);
-      return rY
+      for (const zT of TT) iT(zT);
+      return oT
     }
 
-    function WF(YY, rY) {
-      const DY = YY => YY.replace(/\s+/g, ""),
-        FY = new RegExp(`function ${rY.name}\\s*\\([^)]*\\)\\s*\\{`).exec(YY);
-      return !!FY && DY(rY.code).includes(DY(YY.slice(FY.index, FY.index + 200)).slice(0, 60))
+    function gi(TT, oT) {
+      const IT = TT => TT.replace(/\s+/g, ""),
+        iT = new RegExp(`function ${oT.name}\\s*\\([^)]*\\)\\s*\\{`).exec(TT);
+      return !!iT && IT(oT.code).includes(IT(TT.slice(iT.index, iT.index + 200)).slice(0, 60))
     }
 
-    function EF(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
-      if (!bD(YY)) return {
-        text: YY,
+    function wi(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
+      if (!sI(TT)) return {
+        text: TT,
         added: []
       };
-      let DY = YY;
-      const FY = [];
-      for (let AY = 0; AY < 4; AY++) {
-        const YY = MD(DY),
-          AY = [...wD(DY)].filter((FY => {
-            const AY = yF(FY);
-            return null !== AY && !rY.has(FY) && (!YY.has(FY) || WF(DY, AY))
+      let IT = TT;
+      const iT = [];
+      for (let zT = 0; zT < 4; zT++) {
+        const TT = ZI(IT),
+          zT = [...lI(IT)].filter((iT => {
+            const zT = Mi(iT);
+            return null !== zT && !oT.has(iT) && (!TT.has(iT) || gi(IT, zT))
           }));
-        let IY = !1;
-        for (const rY of oF(AY)) {
-          const RY = JD(DY, rY.code, {
-            owner: rY.group,
+        let kT = !1;
+        for (const oT of Ai(zT)) {
+          const WT = qI(IT, oT.code, {
+            owner: oT.group,
             chainCallbacks: !0
           });
-          RY && RY.text !== DY && (DY = RY.text, IY = !0, YY.has(rY.name) || FY.push(...DF.filter((YY => YY.group === rY.group && AY.includes(YY.name))).map((YY => YY.name))))
+          WT && WT.text !== IT && (IT = WT.text, kT = !0, TT.has(oT.name) || iT.push(...zi.filter((TT => TT.group === oT.group && zT.includes(TT.name))).map((TT => TT.name))))
         }
-        if (!IY) break
+        if (!kT) break
       }
       return {
-        text: DY,
-        added: [...new Set(FY)]
+        text: IT,
+        added: [...new Set(iT)]
       }
     }
 
-    function mF(YY, rY) {
-      const DY = [...MD(rY.code)].filter((YY => "CONFIG" !== YY && !sD(YY)));
-      if (0 === DY.length) return YY.includes(rY.code.trim().slice(0, 80));
-      const FY = bD(YY) ? MD(YY) : new Set;
-      return 2 * DY.filter((YY => FY.has(YY))).length >= DY.length
+    function mi(TT, oT) {
+      const IT = [...ZI(oT.code)].filter((TT => "CONFIG" !== TT && !cI(TT)));
+      if (0 === IT.length) return TT.includes(oT.code.trim().slice(0, 80));
+      const iT = sI(TT) ? ZI(TT) : new Set;
+      return 2 * IT.filter((TT => iT.has(TT))).length >= IT.length
     }
 
-    function VF(YY) {
-      const rY = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(YY.code);
-      return rY ? rY[1].split("\n").flatMap((YY => {
-        const rY = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(YY);
-        if (!rY) return [];
-        const [, DY, FY, AY] = rY;
+    function ei(TT) {
+      const oT = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(TT.code);
+      return oT ? oT[1].split("\n").flatMap((TT => {
+        const oT = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(TT);
+        if (!oT) return [];
+        const [, IT, iT, zT] = oT;
         return [{
-          key: DY,
-          kind: /^-?\d/.test(FY) ? "number" : "true" === FY || "false" === FY ? "boolean" : FY.startsWith("[") ? "list" : "string",
-          value: FY,
-          about: AY
+          key: IT,
+          kind: /^-?\d/.test(iT) ? "number" : "true" === iT || "false" === iT ? "boolean" : iT.startsWith("[") ? "list" : "string",
+          value: iT,
+          about: zT
         }]
       })) : []
     }
 
-    function SF(YY) {
-      const rY = new Set(YY.settings.map((YY => YY.key))),
-        DY = new Map;
-      for (const FY of oF(wD(YY.code)))
-        for (const YY of VF(FY)) rY.has(YY.key) || DY.set(YY.key, YY);
-      return [...DY.values()]
+    function Ri(TT) {
+      const oT = new Set(TT.settings.map((TT => TT.key))),
+        IT = new Map;
+      for (const iT of Ai(lI(TT.code)))
+        for (const TT of ei(iT)) oT.has(TT.key) || IT.set(TT.key, TT);
+      return [...IT.values()]
     }
 
-    function lF(YY, rY, DY, FY) {
-      const AY = SF(rY),
-        IY = function(YY, rY, DY) {
-          const FY = new Map,
-            AY = [],
-            IY = [],
-            RY = new Map(YY.settings.map((YY => [YY.key.toLowerCase(), YY])));
-          for (const [OY, gY] of gF(rY)) {
-            const rY = RY.get(OY.toLowerCase());
-            if (!rY) {
-              AY.push(`${YY.name} has no setting ${OY}`);
+    function ui(TT, oT, IT, iT) {
+      const zT = Ri(oT),
+        kT = function(TT, oT, IT) {
+          const iT = new Map,
+            zT = [],
+            kT = [],
+            WT = new Map(TT.settings.map((TT => [TT.key.toLowerCase(), TT])));
+          for (const [XT, BT] of Si(oT)) {
+            const oT = WT.get(XT.toLowerCase());
+            if (!oT) {
+              zT.push(`${TT.name} has no setting ${XT}`);
               continue
             }
-            if (/^CONFIG\.\w+$/.test(gY.trim())) continue;
-            const aY = aF(rY, gY, DY);
-            "problem" in aY ? AY.push(aY.problem) : (FY.set(rY.key, aY.value), aY.fixed && IY.push(aY.fixed))
+            if (/^CONFIG\.\w+$/.test(BT.trim())) continue;
+            const FT = Di(oT, BT, IT);
+            "problem" in FT ? zT.push(FT.problem) : (iT.set(oT.key, FT.value), FT.fixed && kT.push(FT.fixed))
           }
           return {
-            values: FY,
-            problems: AY,
-            fixed: IY
+            values: iT,
+            problems: zT,
+            fixed: kT
           }
         }({
-          ...rY,
-          settings: [...rY.settings, ...AY]
-        }, DY, FY),
-        RY = AY.filter((YY => IY.values.has(YY.key))),
-        OY = JD(YY, QF({
-          ...rY,
-          settings: [...rY.settings, ...RY]
-        }, IY.values), {
-          owner: rY.name,
-          overrides: new Set(IY.values.keys()),
-          heading: "" === YY.trim() ? void 0 : `// ---- ${rY.title} (ready-made) ----`
+          ...oT,
+          settings: [...oT.settings, ...zT]
+        }, IT, iT),
+        WT = zT.filter((TT => kT.values.has(TT.key))),
+        XT = qI(TT, ri({
+          ...oT,
+          settings: [...oT.settings, ...WT]
+        }, kT.values), {
+          owner: oT.name,
+          overrides: new Set(kT.values.keys()),
+          heading: "" === TT.trim() ? void 0 : `// ---- ${oT.title} (ready-made) ----`
         });
-      if (!OY) return {
-        error: bD(YY) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
+      if (!XT) return {
+        error: sI(TT) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
       };
-      const gY = EF(OY.text);
+      const BT = wi(XT.text);
       return {
-        prefab: rY,
-        text: gY.text,
-        problems: IY.problems,
-        fixed: IY.fixed,
-        chained: OY.chained,
-        helpers: gY.added
+        prefab: oT,
+        text: BT.text,
+        problems: kT.problems,
+        fixed: kT.fixed,
+        chained: XT.chained,
+        helpers: BT.added
       }
     }
 
-    function TF(YY) {
-      return `- ${YY.name}: ${YY.summary}. Settings: ${YY.settings.map((YY=>YY.key)).join(", ")}`
+    function vi(TT) {
+      return `- ${TT.name}: ${TT.summary}. Settings: ${TT.settings.map((TT=>TT.key)).join(", ")}`
     }
 
-    function eF(YY) {
-      var rY;
-      const DY = null !== (rY = null === YY || void 0 === YY ? void 0 : YY.trim().toLowerCase()) && void 0 !== rY ? rY : "",
-        FY = [...uF.keys()].find((YY => YY === DY)),
-        AY = FY ? vF.filter((YY => YY.category === FY)) : vF,
-        IY = FY ? DF.filter((YY => YY.category === FY)) : [];
-      return `${FY?`Prefabs for ${uF.get(FY)}:`:""===DY||"all"===DY?"Every prefab:":`There is no category ${YY}. Every prefab:`}\n${AY.length>0?AY.map(TF).join("\n"):"(none yet)"}${IY.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${IY.map((YY=>`- ${YY.signature}: ${YY.about}`)).join("\n")}`:""}${FY?"":`\nCategories: ${[...uF.keys()].join(", ")}`}`
+    function Ei(TT) {
+      var oT;
+      const IT = null !== (oT = null === TT || void 0 === TT ? void 0 : TT.trim().toLowerCase()) && void 0 !== oT ? oT : "",
+        iT = [...xi.keys()].find((TT => TT === IT)),
+        zT = iT ? Li.filter((TT => TT.category === iT)) : Li,
+        kT = iT ? zi.filter((TT => TT.category === iT)) : [];
+      return `${iT?`Prefabs for ${xi.get(iT)}:`:""===IT||"all"===IT?"Every prefab:":`There is no category ${TT}. Every prefab:`}\n${zT.length>0?zT.map(vi).join("\n"):"(none yet)"}${kT.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${kT.map((TT=>`- ${TT.signature}: ${TT.about}`)).join("\n")}`:""}${iT?"":`\nCategories: ${[...xi.keys()].join(", ")}`}`
     }
 
-    function NF(YY, rY) {
-      var DY;
-      const FY = [...YY.settings, ...SF(YY)].map((YY => `- ${YY.key} (${YY.kind}, default ${YY.value}): ${YY.about}`)).join("\n"),
-        AY = null !== (DY = YY.changeable) && void 0 !== DY && DY.length ? `\nFunctions to replace by name for a game of their own:\n${YY.changeable.map((YY=>`- ${YY.name}: ${YY.about}`)).join("\n")}` : "",
-        IY = rY ? `\nIts code, as it goes in with the default settings:\n${QF(YY)}` : "";
-      return `${YY.name} (${YY.title}): ${YY.summary}.\nHow it plays: ${YY.howItPlays}\nSettings:\n${FY}${AY}${YY.setup?`\nThe creator sets up: ${YY.setup}`:""}${IY}`
+    function fi(TT, oT) {
+      var IT;
+      const iT = [...TT.settings, ...Ri(TT)].map((TT => `- ${TT.key} (${TT.kind}, default ${TT.value}): ${TT.about}`)).join("\n"),
+        zT = null !== (IT = TT.changeable) && void 0 !== IT && IT.length ? `\nFunctions to replace by name for a game of their own:\n${TT.changeable.map((TT=>`- ${TT.name}: ${TT.about}`)).join("\n")}` : "",
+        kT = oT ? `\nIts code, as it goes in with the default settings:\n${ri(TT)}` : "";
+      return `${TT.name} (${TT.title}): ${TT.summary}.\nHow it plays: ${TT.howItPlays}\nSettings:\n${iT}${zT}${TT.setup?`\nThe creator sets up: ${TT.setup}`:""}${kT}`
     }
 
-    function BF(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
-      const DY = function(YY) {
-          return new Set(YY.toLowerCase().split(/[^a-z0-9]+/).filter((YY => YY.length > 1)))
-        }(YY),
-        FY = ` ${YY.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
-      return vF.map((YY => {
-        const rY = YY.keywords.map((YY => YY.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((YY => YY.includes(" ") ? FY.includes(` ${YY} `) : DY.has(YY))),
-          AY = Math.min(...rY.map((YY => FY.indexOf(` ${YY} `))));
+    function Ci(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
+      const IT = function(TT) {
+          return new Set(TT.toLowerCase().split(/[^a-z0-9]+/).filter((TT => TT.length > 1)))
+        }(TT),
+        iT = ` ${TT.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
+      return Li.map((TT => {
+        const oT = TT.keywords.map((TT => TT.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((TT => TT.includes(" ") ? iT.includes(` ${TT} `) : IT.has(TT))),
+          zT = Math.min(...oT.map((TT => iT.indexOf(` ${TT} `))));
         return {
-          prefab: YY,
-          score: rY.length,
-          first: AY
+          prefab: TT,
+          score: oT.length,
+          first: zT
         }
-      })).filter((YY => YY.score > 0)).sort(((YY, rY) => rY.score - YY.score || YY.first - rY.first)).slice(0, rY).map((YY => YY.prefab))
+      })).filter((TT => TT.score > 0)).sort(((TT, oT) => oT.score - TT.score || TT.first - oT.first)).slice(0, oT).map((TT => TT.prefab))
     }
-    const cF = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
+    const ji = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
 
-    function KF(YY) {
-      var rY, DY, FY, AY, IY, RY;
-      const OY = function(YY) {
-          var rY, DY;
-          const FY = null === (rY = YY.questions) || void 0 === rY ? void 0 : rY.trim();
-          if (null !== (DY = YY.question) && void 0 !== DY && DY.trim() || !FY) return YY;
-          const AY = {
-            ...YY,
-            question: FY
+    function Ji(TT) {
+      var oT, IT, iT, zT, kT, WT;
+      const XT = function(TT) {
+          var oT, IT;
+          const iT = null === (oT = TT.questions) || void 0 === oT ? void 0 : oT.trim();
+          if (null !== (IT = TT.question) && void 0 !== IT && IT.trim() || !iT) return TT;
+          const zT = {
+            ...TT,
+            question: iT
           };
-          if (!/^[[{]/.test(FY)) return AY;
+          if (!/^[[{]/.test(iT)) return zT;
           try {
-            const rY = JSON.parse(FY),
-              DY = Array.isArray(rY) ? rY[0] : rY;
-            if ("string" === typeof DY) {
-              const FY = Array.isArray(rY) ? rY.slice(1).filter((YY => "string" === typeof YY)) : [];
+            const oT = JSON.parse(iT),
+              IT = Array.isArray(oT) ? oT[0] : oT;
+            if ("string" === typeof IT) {
+              const iT = Array.isArray(oT) ? oT.slice(1).filter((TT => "string" === typeof TT)) : [];
               return {
-                ...YY,
-                question: DY,
-                ...FY.length > 0 && void 0 === YY.choices ? {
-                  choices: FY.join("\n")
+                ...TT,
+                question: IT,
+                ...iT.length > 0 && void 0 === TT.choices ? {
+                  choices: iT.join("\n")
                 } : {}
               }
             }
-            if ("object" !== typeof DY || null === DY) return AY;
-            const IY = DY,
-              RY = YY => "string" === typeof YY ? YY : "boolean" === typeof YY ? String(YY) : Array.isArray(YY) ? YY.filter((YY => "string" === typeof YY)).join("\n") : void 0,
-              OY = {
-                question: RY(IY.question),
-                choices: RY(IY.choices),
-                allow_other: RY(IY.allow_other)
+            if ("object" !== typeof IT || null === IT) return zT;
+            const kT = IT,
+              WT = TT => "string" === typeof TT ? TT : "boolean" === typeof TT ? String(TT) : Array.isArray(TT) ? TT.filter((TT => "string" === typeof TT)).join("\n") : void 0,
+              XT = {
+                question: WT(kT.question),
+                choices: WT(kT.choices),
+                allow_other: WT(kT.allow_other)
               };
             return {
-              ...YY,
-              ...Object.fromEntries(Object.entries(OY).filter((YY => {
-                let [, rY] = YY;
-                return void 0 !== rY
+              ...TT,
+              ...Object.fromEntries(Object.entries(XT).filter((TT => {
+                let [, oT] = TT;
+                return void 0 !== oT
               })))
             }
           } catch {
-            return FY.startsWith("[") ? AY : YY
+            return iT.startsWith("[") ? zT : TT
           }
-        }(YY),
-        gY = null !== (rY = null === (DY = OY.question) || void 0 === DY ? void 0 : DY.replace(/\s+/g, " ").trim()) && void 0 !== rY ? rY : "",
-        aY = (null !== (FY = OY.choices) && void 0 !== FY ? FY : "").includes("\n") ? (null !== (AY = OY.choices) && void 0 !== AY ? AY : "").split("\n") : (null !== (IY = OY.choices) && void 0 !== IY ? IY : "").split("|"),
-        vY = [...new Set(aY.map((YY => YY.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
-        uY = "false" !== (null === (RY = OY.allow_other) || void 0 === RY ? void 0 : RY.trim().toLowerCase());
-      return "" === gY || cF.test(gY) || vY.length < 2 && !uY ? null : {
-        question: gY,
-        choices: vY,
-        allowOther: uY
+        }(TT),
+        BT = null !== (oT = null === (IT = XT.question) || void 0 === IT ? void 0 : IT.replace(/\s+/g, " ").trim()) && void 0 !== oT ? oT : "",
+        FT = (null !== (iT = XT.choices) && void 0 !== iT ? iT : "").includes("\n") ? (null !== (zT = XT.choices) && void 0 !== zT ? zT : "").split("\n") : (null !== (kT = XT.choices) && void 0 !== kT ? kT : "").split("|"),
+        ST = [...new Set(FT.map((TT => TT.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
+        DT = "false" !== (null === (WT = XT.allow_other) || void 0 === WT ? void 0 : WT.trim().toLowerCase());
+      return "" === BT || ji.test(BT) || ST.length < 2 && !DT ? null : {
+        question: BT,
+        choices: ST,
+        allowOther: DT
       }
     }
-    const HF = /^\s*(?:\.\.\.|\u2026)\s*$/,
-      zF = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
+    const Ui = /^\s*(?:\.\.\.|\u2026)\s*$/,
+      ai = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
 
-    function ZF(YY, rY) {
-      if (HF.test(YY)) return !0;
-      const DY = new Set(rY.split("\n").map((YY => YY.trim())));
-      return YY.split("\n").some((YY => zF.test(YY) && !DY.has(YY.trim())))
+    function Yi(TT, oT) {
+      if (Ui.test(TT)) return !0;
+      const IT = new Set(oT.split("\n").map((TT => TT.trim())));
+      return TT.split("\n").some((TT => ai.test(TT) && !IT.has(TT.trim())))
     }
-    const CF = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
-      fF = String.raw`on[A-Z]\w*|tick|playerCommand`,
-      jF = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${fF})\s*\(|(?:${fF})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
-      hF = new RegExp(`^(?:${fF})$`),
-      dF = new RegExp(String.raw`^(${fF})(\s*\([^()\n]*\)\s*\{)`, "gm"),
-      JF = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${fF})\b|\buse_?prefab\s*\(`, "i");
+    const Qi = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
+      Oi = String.raw`on[A-Z]\w*|tick|playerCommand`,
+      Hi = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${Oi})\s*\(|(?:${Oi})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
+      ni = new RegExp(`^(?:${Oi})$`),
+      qi = new RegExp(String.raw`^(${Oi})(\s*\([^()\n]*\)\s*\{)`, "gm"),
+      Zi = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${Oi})\b|\buse_?prefab\s*\(`, "i");
 
-    function MF(YY) {
-      return YY.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
-    }
-
-    function wF(YY) {
-      return MF(YY).replace(/\s*$/, "\n")
+    function li(TT) {
+      return TT.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
     }
 
-    function bF(YY, rY) {
-      switch (YY) {
+    function si(TT) {
+      return li(TT).replace(/\s*$/, "\n")
+    }
+
+    function ti(TT, oT) {
+      switch (TT) {
         case "view_file":
-          return void 0 === rY.path ? rY : {
-            path: XF(rY.path)
+          return void 0 === oT.path ? oT : {
+            path: Gi(oT.path)
           };
         case "fetch_url":
-          return void 0 === rY.url ? rY : {
-            url: SY(rY.url)
+          return void 0 === oT.url ? oT : {
+            url: wT(oT.url)
           };
         default:
-          return rY
+          return oT
       }
     }
 
-    function XF(YY) {
-      return YY.trim().replace(/^\.?\//, "")
+    function Gi(TT) {
+      return TT.trim().replace(/^\.?\//, "")
     }
 
-    function qF(YY) {
-      return YY.replace(dF, "function $1$2")
+    function bi(TT) {
+      return TT.replace(qi, "function $1$2")
     }
 
-    function pF(YY) {
-      return YY.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
+    function yi(TT) {
+      return TT.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
     }
 
-    function kF(YY, rY, DY, FY) {
-      let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        IY = arguments.length > 5 ? arguments[5] : void 0,
-        RY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
-        OY = arguments.length > 7 ? arguments[7] : void 0,
-        gY = arguments.length > 8 ? arguments[8] : void 0;
-      const aY = {
-          ...DY
+    function Ni(TT, oT, IT, iT) {
+      let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        kT = arguments.length > 5 ? arguments[5] : void 0,
+        WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
+        XT = arguments.length > 7 ? arguments[7] : void 0,
+        BT = arguments.length > 8 ? arguments[8] : void 0;
+      const FT = {
+          ...IT
         },
-        vY = new Set,
-        uY = [];
-      let sY;
-      const iY = (YY, rY, DY, FY) => {
-        uY.push({
-          tool: YY,
-          path: rY,
-          reason: DY,
+        ST = new Set,
+        DT = [];
+      let LT;
+      const xT = (TT, oT, IT, iT) => {
+        DT.push({
+          tool: TT,
+          path: oT,
+          reason: IT,
           closest: null,
           functions: [],
-          ...FY,
-          ...sY ? {
-            call: sY
+          ...iT,
+          ...LT ? {
+            call: LT
           } : {}
         })
       };
-      let QY = YY;
-      const oY = Object.keys(DY).some(yY.e),
-        WY = YY => null !== YY && oY && (0, yY.e)(YY),
-        EY = YY => WY(YY) ? `${yY.g}${(0,yY.f)(YY)}` : null !== IY && void 0 !== IY ? IY : XF(YY),
-        mY = YY => void 0 === IY || WY(YY),
-        VY = YY => void 0 !== OY && !OY.has(YY),
-        SY = new Set,
-        lY = YY => JSON.stringify({
-          name: YY.name,
-          args: YY.args
+      let KT = TT;
+      const MT = Object.keys(IT).some(cT.f),
+        rT = TT => null !== TT && MT && (0, cT.f)(TT),
+        AT = TT => rT(TT) ? `${cT.l}${(0,cT.h)(TT)}` : null !== kT && void 0 !== kT ? kT : Gi(TT),
+        gT = TT => void 0 === kT || rT(TT),
+        hT = TT => void 0 !== XT && !XT.has(TT),
+        wT = new Set,
+        mT = TT => JSON.stringify({
+          name: TT.name,
+          args: TT.args
         }),
-        TY = YY => {
-          const rY = WY(YY) ? {
+        eT = TT => {
+          const oT = rT(TT) ? {
               name: "view_world_code",
               args: {}
             } : {
               name: "view_file",
               args: {
-                path: YY
+                path: TT
               }
             },
-            DY = sY ? {
-              ...rY,
-              call: sY
-            } : rY;
-          SY.add(lY(DY)), NY(DY)
+            IT = LT ? {
+              ...oT,
+              call: LT
+            } : oT;
+          wT.add(mT(IT)), uT(IT)
         },
-        eY = [],
-        NY = YY => {
-          const rY = lY(YY);
-          eY.length < 4 && !eY.some((YY => lY(YY) === rY)) && eY.push(YY)
+        RT = [],
+        uT = TT => {
+          const oT = mT(TT);
+          RT.length < 4 && !RT.some((TT => mT(TT) === oT)) && RT.push(TT)
         },
-        BY = [],
-        cY = [],
-        HY = [],
-        fY = new Map,
-        hY = new Map,
-        dY = (YY, rY, DY) => {
-          var FY;
-          const AY = function(YY) {
-              const rY = YY.replace(/\s+/g, " ").trim();
-              if (rY.length <= 80) return rY;
-              const DY = rY.slice(0, 80);
-              return `${DY.slice(0,Math.max(DY.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
-            }(null !== rY && void 0 !== rY ? rY : ""),
-            IY = null !== (FY = fY.get(YY)) && void 0 !== FY ? FY : [];
-          var RY;
-          ("" === AY || IY.includes(AY) || fY.set(YY, [...IY, AY]), "" !== AY) && hY.set(YY, [...null !== (RY = hY.get(YY)) && void 0 !== RY ? RY : [], {
-            why: AY,
-            code: DY
+        vT = [],
+        ET = [],
+        CT = [],
+        aT = new Map,
+        QT = new Map,
+        OT = (TT, oT, IT) => {
+          var iT;
+          const zT = function(TT) {
+              const oT = TT.replace(/\s+/g, " ").trim();
+              if (oT.length <= 80) return oT;
+              const IT = oT.slice(0, 80);
+              return `${IT.slice(0,Math.max(IT.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
+            }(null !== oT && void 0 !== oT ? oT : ""),
+            kT = null !== (iT = aT.get(TT)) && void 0 !== iT ? iT : [];
+          var WT;
+          ("" === zT || kT.includes(zT) || aT.set(TT, [...kT, zT]), "" !== zT) && QT.set(TT, [...null !== (WT = QT.get(TT)) && void 0 !== WT ? WT : [], {
+            why: zT,
+            code: IT
           }])
         },
-        JY = new Set,
-        MY = [],
-        wY = new Map,
-        bY = [];
-      let qY = null;
-      const pY = [];
-      let GY = [];
-      const nY = (YY, rY) => void 0 !== IY && !WY(YY) && (null === YY || XF(YY) !== IY) && jF.test(rY),
-        LY = (YY, rY, DY, FY) => {
-          var AY, IY;
-          const RY = function(YY, rY, DY, FY) {
-            const AY = iF(rY);
-            return AY ? lF(YY, AY, DY, FY) : {
-              error: `There is no prefab called ${rY}. The prefabs are: ${vF.map((YY=>YY.name)).join(", ")}.`
+        HT = new Set,
+        nT = [],
+        qT = new Map,
+        ZT = [];
+      let sT = null;
+      const tT = [];
+      let pT = [];
+      const yT = (TT, oT) => void 0 !== kT && !rT(TT) && (null === TT || Gi(TT) !== kT) && Hi.test(oT),
+        dT = (TT, oT, IT, iT) => {
+          var zT, kT;
+          const WT = function(TT, oT, IT, iT) {
+            const zT = Ki(oT);
+            return zT ? ui(TT, zT, IT, iT) : {
+              error: `There is no prefab called ${oT}. The prefabs are: ${Li.map((TT=>TT.name)).join(", ")}.`
             }
-          }(null !== (AY = aY[YY]) && void 0 !== AY ? AY : "", rY, DY, gY);
-          return "error" in RY ? (iY("use_prefab", YY, "prefab", {
-            detail: RY.error
-          }), !1) : (aY[YY] = RY.text, vY.add(YY), wY.set(YY, {
-            prefab: RY.prefab,
-            settings: DY
-          }), dY(YY, null !== FY && void 0 !== FY ? FY : RY.prefab.title, RY.text), MY.push({
-            name: RY.prefab.name,
-            title: RY.prefab.title,
-            path: YY,
-            problems: RY.problems,
-            fixed: RY.fixed,
-            setup: null !== (IY = RY.prefab.setup) && void 0 !== IY ? IY : null
+          }(null !== (zT = FT[TT]) && void 0 !== zT ? zT : "", oT, IT, BT);
+          return "error" in WT ? (xT("use_prefab", TT, "prefab", {
+            detail: WT.error
+          }), !1) : (FT[TT] = WT.text, ST.add(TT), qT.set(TT, {
+            prefab: WT.prefab,
+            settings: IT
+          }), OT(TT, null !== iT && void 0 !== iT ? iT : WT.prefab.title, WT.text), nT.push({
+            name: WT.prefab.name,
+            title: WT.prefab.title,
+            path: TT,
+            problems: WT.problems,
+            fixed: WT.fixed,
+            setup: null !== (kT = WT.prefab.setup) && void 0 !== kT ? kT : null
           }), !0)
         },
-        tY = (YY, rY, DY) => {
-          const FY = LD(rY);
-          if (0 === FY.calls.length) return !1;
-          aY[YY] = FY.code, vY.add(YY);
-          for (const AY of FY.calls) LY(YY, AY.name, AY.settings, DY);
-          return dY(YY, DY, FY.code), !0
+        VT = (TT, oT, IT) => {
+          const iT = Ti(oT);
+          if (0 === iT.calls.length) return !1;
+          FT[TT] = iT.code, ST.add(TT);
+          for (const zT of iT.calls) dT(TT, zT.name, zT.settings, IT);
+          return OT(TT, IT, iT.code), !0
         },
-        rr = YY => {
-          const rY = yr(qF(wF(YY)), AY);
-          BY.push(rY.code), HY.push(...rY.renames)
+        oo = TT => {
+          const oT = co(bi(si(TT)), zT);
+          vT.push(oT.code), CT.push(...oT.renames)
         },
-        Dr = vD(YY, rY),
-        Fr = new Map;
-      for (const yY of Dr) {
-        var Ar, Ir, Rr, Or;
-        const YY = null !== (Ar = Fr.get(yY.name)) && void 0 !== Ar ? Ar : 0;
-        Fr.set(yY.name, YY + 1), sY = {
-          name: yY.name,
-          nth: YY
+        Io = LI(TT, oT),
+        io = new Map;
+      for (const cT of Io) {
+        var zo, ko, Wo, Xo;
+        const TT = null !== (zo = io.get(cT.name)) && void 0 !== zo ? zo : 0;
+        io.set(cT.name, TT + 1), LT = {
+          name: cT.name,
+          nth: TT
         };
-        const rY = ("replace_function" === yY.name || "insert_code" === yY.name) && void 0 === yY.args.code && void 0 !== yY.args.content ? {
-            ...yY,
+        const oT = ("replace_function" === cT.name || "insert_code" === cT.name) && void 0 === cT.args.code && void 0 !== cT.args.content ? {
+            ...cT,
             args: {
-              ...yY.args,
-              code: yY.args.content,
-              path: null !== (Ir = null !== (Rr = null !== (Or = yY.args.path) && void 0 !== Or ? Or : IY) && void 0 !== Rr ? Rr : FY) && void 0 !== Ir ? Ir : void 0
+              ...cT.args,
+              code: cT.args.content,
+              path: null !== (ko = null !== (Wo = null !== (Xo = cT.args.path) && void 0 !== Xo ? Xo : kT) && void 0 !== Wo ? Wo : iT) && void 0 !== ko ? ko : void 0
             }
-          } : yY,
+          } : cT,
           {
-            path: AY,
-            content: RY,
-            search: OY,
-            replace: uY,
-            code: oY
-          } = rY.args,
-          WY = Sr(rY.name),
-          SY = `${rY.name}\n${JSON.stringify({...rY.args,why:void 0})}`,
-          lY = JY.has(SY);
-        if (WY.annotations.idempotentHint && lY) QY = QY.replace(rY.source, "");
+            path: zT,
+            content: WT,
+            search: XT,
+            replace: DT,
+            code: MT
+          } = oT.args,
+          rT = wo(oT.name),
+          wT = `${oT.name}\n${JSON.stringify({...oT.args,why:void 0})}`,
+          mT = HT.has(wT);
+        if (rT.annotations.idempotentHint && mT) KT = KT.replace(oT.source, "");
         else {
-          if (JY.add(SY), Vr(rY.name)) {
-            const YY = Object.fromEntries(Object.entries(rY.args).flatMap((YY => {
-              let [rY, DY] = YY;
-              return void 0 === DY || "" === DY.trim() ? [] : [
-                [rY, DY.trim()]
+          if (HT.add(wT), ho(oT.name)) {
+            const TT = Object.fromEntries(Object.entries(oT.args).flatMap((TT => {
+              let [oT, IT] = TT;
+              return void 0 === IT || "" === IT.trim() ? [] : [
+                [oT, IT.trim()]
               ]
             })));
-            NY({
-              name: rY.name,
-              args: bF(rY.name, YY),
-              call: sY
+            uT({
+              name: oT.name,
+              args: ti(oT.name, TT),
+              call: LT
             })
-          } else if ("add_world_code" === rY.name) {
-            if (void 0 === IY) continue;
-            void 0 !== oY ? rr(oY) : iY(rY.name, null, "missingArgs")
-          } else if ("use_prefab" === rY.name) {
-            const YY = void 0 !== AY && "" !== AY.trim() ? EY(AY) : void 0 === IY ? null !== FY && void 0 !== FY ? FY : "index.js" : null;
-            if (void 0 === rY.args.name || "" === rY.args.name.trim()) iY(rY.name, YY, "missingArgs");
-            else if (null !== YY && mY(YY)) {
-              var gr;
-              LY(YY, rY.args.name, null !== (gr = rY.args.settings) && void 0 !== gr ? gr : "", rY.args.why)
-            } else iY(rY.name, YY, "prefab", {
+          } else if ("add_world_code" === oT.name) {
+            if (void 0 === kT) continue;
+            void 0 !== MT ? oo(MT) : xT(oT.name, null, "missingArgs")
+          } else if ("use_prefab" === oT.name) {
+            const TT = void 0 !== zT && "" !== zT.trim() ? AT(zT) : void 0 === kT ? null !== iT && void 0 !== iT ? iT : "index.js" : null;
+            if (void 0 === oT.args.name || "" === oT.args.name.trim()) xT(oT.name, TT, "missingArgs");
+            else if (null !== TT && gT(TT)) {
+              var Bo;
+              dT(TT, oT.args.name, null !== (Bo = oT.args.settings) && void 0 !== Bo ? Bo : "", oT.args.why)
+            } else xT(oT.name, TT, "prefab", {
               detail: "A prefab goes in World Code, not in a code block."
             })
-          } else if ("ask_creator" === rY.name) qY ??= KF(rY.args);
-          else if ("plan" === rY.name) {
-            var ar;
-            if (0 === GY.length) GY = vr(null !== (ar = rY.args.steps) && void 0 !== ar ? ar : "")
-          } else if ("remember" === rY.name) {
-            var ur;
-            const YY = Yr(null !== (ur = rY.args.note) && void 0 !== ur ? ur : "");
-            null !== YY && 0 === pY.length && pY.push(YY)
-          } else if ("export_game" === rY.name || "switch_to_world_code" === rY.name) {
-            if ("switch_to_world_code" === rY.name && void 0 === IY) continue;
-            const YY = "export_game" === rY.name ? "exportGame" : "switchToWorldCode";
-            var sr;
-            if (!cY.some((rY => rY.kind === YY))) cY.push("export_game" === rY.name ? {
+          } else if ("ask_creator" === oT.name) sT ??= Ji(oT.args);
+          else if ("plan" === oT.name) {
+            var Fo;
+            if (0 === pT.length) pT = So(null !== (Fo = oT.args.steps) && void 0 !== Fo ? Fo : "")
+          } else if ("remember" === oT.name) {
+            var Do;
+            const TT = To(null !== (Do = oT.args.note) && void 0 !== Do ? Do : "");
+            null !== TT && 0 === tT.length && tT.push(TT)
+          } else if ("export_game" === oT.name || "switch_to_world_code" === oT.name) {
+            if ("switch_to_world_code" === oT.name && void 0 === kT) continue;
+            const TT = "export_game" === oT.name ? "exportGame" : "switchToWorldCode";
+            var Lo;
+            if (!ET.some((oT => oT.kind === TT))) ET.push("export_game" === oT.name ? {
               kind: "exportGame"
             } : {
               kind: "switchToWorldCode",
-              request: (null === (sr = rY.args.request) || void 0 === sr ? void 0 : sr.trim()) || null
+              request: (null === (Lo = oT.args.request) || void 0 === Lo ? void 0 : Lo.trim()) || null
             })
-          } else if ("write_file" === rY.name) {
-            var ir, Qr;
-            if (OD(rY))
-              if (void 0 === RY || "" !== RY.trim() && !ZF(MF(RY), void 0 === AY ? "" : null !== (ir = aY[EY(AY)]) && void 0 !== ir ? ir : "")) {
-                if (void 0 !== AY && void 0 !== RY && nY(AY, RY)) rr(RY);
-                else if (void 0 !== AY && VY(EY(AY)) && "" !== (null !== (Qr = DY[EY(AY)]) && void 0 !== Qr ? Qr : "").trim()) iY(rY.name, EY(AY), "unread", void 0 === RY ? void 0 : {
-                  code: wF(RY)
-                }), TY(EY(AY));
-                else if (void 0 !== AY && void 0 !== RY) {
-                  const YY = EY(AY),
-                    DY = tD(wF(RY));
-                  if (!mY(YY) || !tY(YY, DY, rY.args.why)) {
-                    const FY = wY.get(YY),
-                      AY = FY && !mF(DY, FY.prefab) ? lF(DY, FY.prefab, FY.settings, gY) : null;
-                    aY[YY] = AY && !("error" in AY) ? AY.text : DY, vY.add(YY), dY(YY, rY.args.why, RY)
+          } else if ("write_file" === oT.name) {
+            var xo, Ko;
+            if (FI(oT))
+              if (void 0 === WT || "" !== WT.trim() && !Yi(li(WT), void 0 === zT ? "" : null !== (xo = FT[AT(zT)]) && void 0 !== xo ? xo : "")) {
+                if (void 0 !== zT && void 0 !== WT && yT(zT, WT)) oo(WT);
+                else if (void 0 !== zT && hT(AT(zT)) && "" !== (null !== (Ko = IT[AT(zT)]) && void 0 !== Ko ? Ko : "").trim()) xT(oT.name, AT(zT), "unread", void 0 === WT ? void 0 : {
+                  code: si(WT)
+                }), eT(AT(zT));
+                else if (void 0 !== zT && void 0 !== WT) {
+                  const TT = AT(zT),
+                    IT = oi(si(WT));
+                  if (!gT(TT) || !VT(TT, IT, oT.args.why)) {
+                    const iT = qT.get(TT),
+                      zT = iT && !mi(IT, iT.prefab) ? ui(IT, iT.prefab, iT.settings, BT) : null;
+                    FT[TT] = zT && !("error" in zT) ? zT.text : IT, ST.add(TT), OT(TT, oT.args.why, WT)
                   }
                 }
-              } else iY(rY.name, void 0 === AY ? null : EY(AY), "placeholder");
-            else iY(rY.name, void 0 === AY ? null : EY(AY), "missingArgs")
-          } else if ("replace_function" === rY.name || "insert_code" === rY.name) {
-            var or, Wr, Er;
-            const YY = void 0 === AY ? null : EY(AY),
-              DY = "replace_function" === rY.name ? rY.args.name : rY.args.after,
-              FY = void 0 === DY ? void 0 : XY(DY),
-              IY = null === YY ? "" : null !== (or = aY[YY]) && void 0 !== or ? or : "",
-              RY = void 0 === oY ? "" : MF(oY),
-              OY = null === YY ? void 0 : wY.get(YY),
-              gY = "replace_function" === rY.name && void 0 !== OY && void 0 !== FY && hF.test(FY) && MD(OY.prefab.code).has(FY),
-              uY = null === YY || void 0 === oY || void 0 === DY ? null : gY ? null !== (Wr = null === (Er = JD(IY, RY, {
+              } else xT(oT.name, void 0 === zT ? null : AT(zT), "placeholder");
+            else xT(oT.name, void 0 === zT ? null : AT(zT), "missingArgs")
+          } else if ("replace_function" === oT.name || "insert_code" === oT.name) {
+            var Mo, ro, Ao;
+            const TT = void 0 === zT ? null : AT(zT),
+              IT = "replace_function" === oT.name ? oT.args.name : oT.args.after,
+              iT = void 0 === IT ? void 0 : lT(IT),
+              kT = null === TT ? "" : null !== (Mo = FT[TT]) && void 0 !== Mo ? Mo : "",
+              WT = void 0 === MT ? "" : li(MT),
+              XT = null === TT ? void 0 : qT.get(TT),
+              BT = "replace_function" === oT.name && void 0 !== XT && void 0 !== iT && ni.test(iT) && ZI(XT.prefab.code).has(iT),
+              DT = null === TT || void 0 === MT || void 0 === IT ? null : BT ? null !== (ro = null === (Ao = qI(kT, WT, {
                 owner: "extra",
                 runsLast: !0
-              })) || void 0 === Er ? void 0 : Er.text) && void 0 !== Wr ? Wr : null : "replace_function" === rY.name ? kY(IY, DY, RY) : PY(IY, DY, RY);
-            null === YY || null === uY ? iY(rY.name, YY, OD(rY) ? "brokenCode" : "missingArgs") : ZF(RY, IY) ? iY(rY.name, YY, "placeholder") : "replace_function" === rY.name && VY(YY) && UY(IY).includes(null !== FY && void 0 !== FY ? FY : "") ? (iY(rY.name, YY, "unread", {
-              code: wF(RY)
-            }), TY(YY)) : (aY[YY] = uY, vY.add(YY), dY(YY, rY.args.why, RY))
+              })) || void 0 === Ao ? void 0 : Ao.text) && void 0 !== ro ? ro : null : "replace_function" === oT.name ? GT(kT, IT, WT) : NT(kT, IT, WT);
+            null === TT || null === DT ? xT(oT.name, TT, FI(oT) ? "brokenCode" : "missingArgs") : Yi(WT, kT) ? xT(oT.name, TT, "placeholder") : "replace_function" === oT.name && hT(TT) && PT(kT).includes(null !== iT && void 0 !== iT ? iT : "") ? (xT(oT.name, TT, "unread", {
+              code: si(WT)
+            }), eT(TT)) : (FT[TT] = DT, ST.add(TT), OT(TT, oT.args.why, WT))
           } else {
-            var mr, lr;
-            const YY = !0 === (null === (mr = WY._meta) || void 0 === mr ? void 0 : mr.appliesAtOnce) ? null !== IY && void 0 !== IY ? IY : FY : void 0 === AY ? null : EY(AY),
-              DY = null === YY ? "" : null !== (lr = aY[YY]) && void 0 !== lr ? lr : "",
-              RY = OD(rY) && void 0 !== OY,
-              gY = RY ? KY(DY, OY) : null,
-              sY = null === gY && void 0 !== OY && OY.includes("\\n") ? KY(DY, Cr(OY)) : null,
-              yY = null !== gY && void 0 !== gY ? gY : sY,
-              QY = null !== sY ? Cr(null !== uY && void 0 !== uY ? uY : "") : null !== uY && void 0 !== uY ? uY : "",
-              oY = null === yY || void 0 === OY ? QY : ZY(DY.slice(yY.from, yY.to), zY(DY, yY, null !== sY ? Cr(OY) : OY, QY), CY(DY.slice(yY.to)));
-            if (null === YY || null === yY) iY(rY.name, YY, RY ? "noMatch" : "missingArgs", {
-              closest: RY ? jY(DY, OY) : null,
-              functions: mY(YY) ? UY(DY) : []
+            var go, mo;
+            const TT = !0 === (null === (go = rT._meta) || void 0 === go ? void 0 : go.appliesAtOnce) ? null !== kT && void 0 !== kT ? kT : iT : void 0 === zT ? null : AT(zT),
+              IT = null === TT ? "" : null !== (mo = FT[TT]) && void 0 !== mo ? mo : "",
+              WT = FI(oT) && void 0 !== XT,
+              BT = WT ? fT(IT, XT) : null,
+              LT = null === BT && void 0 !== XT && XT.includes("\\n") ? fT(IT, Uo(XT)) : null,
+              cT = null !== BT && void 0 !== BT ? BT : LT,
+              KT = null !== LT ? Uo(null !== DT && void 0 !== DT ? DT : "") : null !== DT && void 0 !== DT ? DT : "",
+              MT = null === cT || void 0 === XT ? KT : JT(IT.slice(cT.from, cT.to), jT(IT, cT, null !== LT ? Uo(XT) : XT, KT), UT(IT.slice(cT.to)));
+            if (null === TT || null === cT) xT(oT.name, TT, WT ? "noMatch" : "missingArgs", {
+              closest: WT ? YT(IT, XT) : null,
+              functions: gT(TT) ? PT(IT) : []
             });
-            else if (ZF(oY, DY.slice(yY.from, yY.to))) iY(rY.name, YY, "placeholder");
+            else if (Yi(MT, IT.slice(cT.from, cT.to))) xT(oT.name, TT, "placeholder");
             else {
-              const FY = mY(YY) ? xY(DY, yY.from, yY.to, null !== OY && void 0 !== OY ? OY : "", QY) : null;
-              aY[YY] = null !== FY && void 0 !== FY ? FY : DY.slice(0, yY.from) + oY + DY.slice(yY.to), vY.add(YY), dY(YY, rY.args.why, oY)
+              const iT = gT(TT) ? bT(IT, cT.from, cT.to, null !== XT && void 0 !== XT ? XT : "", KT) : null;
+              FT[TT] = null !== iT && void 0 !== iT ? iT : IT.slice(0, cT.from) + MT + IT.slice(cT.to), ST.add(TT), OT(TT, oT.args.why, MT)
             }
           }
-          QY = QY.replace(rY.source, "")
+          KT = KT.replace(oT.source, "")
         }
       }
-      if (sY = void 0, QY = cr(uD(QY), Dr.length > 0), 0 === Dr.length) {
-        var Tr, er;
-        const rY = [...YY.matchAll(CF)],
-          DY = 1 === rY.length ? rY[0][1] : null,
-          AY = null !== (Tr = null !== IY && void 0 !== IY ? IY : FY) && void 0 !== Tr ? Tr : "index.js";
-        if (null !== DY && nY(null, DY)) rr(DY), QY = QY.replace(rY[0][0], "");
-        else if (null !== DY && JF.test(DY) && !ZF(DY, null !== (er = aY[AY]) && void 0 !== er ? er : "")) {
-          const YY = tD(wF(DY));
-          mY(AY) && tY(AY, YY, void 0) || (aY[AY] = YY, vY.add(AY)), QY = QY.replace(rY[0][0], "")
+      if (LT = void 0, KT = Eo(xI(KT), Io.length > 0), 0 === Io.length) {
+        var eo, Ro;
+        const oT = [...TT.matchAll(Qi)],
+          IT = 1 === oT.length ? oT[0][1] : null,
+          zT = null !== (eo = null !== kT && void 0 !== kT ? kT : iT) && void 0 !== eo ? eo : "index.js";
+        if (null !== IT && yT(null, IT)) oo(IT), KT = KT.replace(oT[0][0], "");
+        else if (null !== IT && Zi.test(IT) && !Yi(IT, null !== (Ro = FT[zT]) && void 0 !== Ro ? Ro : "")) {
+          const TT = oi(si(IT));
+          gT(zT) && VT(zT, TT, void 0) || (FT[zT] = TT, ST.add(zT)), KT = KT.replace(oT[0][0], "")
         }
       }
-      for (const yY of vY) {
-        var Nr;
-        if (mY(yY)) {
-          var Br;
-          const YY = Object.values(aY).some((YY => /\brequire\s*\(/.test(YY)));
-          aY[yY] = YF(tD(YY ? aY[yY] : aY[yY].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (Br = DY[yY]) && void 0 !== Br ? Br : "");
-          const rY = new Set(Object.keys(aY).filter((YY => YY !== yY && mY(YY))).flatMap((YY => [...MD(aY[YY])]))),
-            FY = EF(aY[yY], rY);
-          aY[yY] = FY.text, bY.push(...FY.added)
+      for (const cT of ST) {
+        var uo;
+        if (gT(cT)) {
+          var vo;
+          const TT = Object.values(FT).some((TT => /\brequire\s*\(/.test(TT)));
+          FT[cT] = Ii(oi(TT ? FT[cT] : FT[cT].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (vo = IT[cT]) && void 0 !== vo ? vo : "");
+          const oT = new Set(Object.keys(FT).filter((TT => TT !== cT && gT(TT))).flatMap((TT => [...ZI(FT[TT])]))),
+            iT = wi(FT[cT], oT);
+          FT[cT] = iT.text, ZT.push(...iT.added)
         }
-        const YY = yr(pF(qF(aY[yY])), mY(yY) ? AY : [], null !== (Nr = DY[yY]) && void 0 !== Nr ? Nr : "");
-        aY[yY] = YY.code, HY.push(...YY.renames)
+        const TT = co(yi(bi(FT[cT])), gT(cT) ? zT : [], null !== (uo = IT[cT]) && void 0 !== uo ? uo : "");
+        FT[cT] = TT.code, CT.push(...TT.renames)
       }
-      for (const yY of MY) {
-        const YY = yY.problems.length > 0 ? ` Kept as it was: ${yY.problems.join("; ")}.` : "",
-          rY = yY.fixed.length > 0 ? ` Names changed to real ones: ${yY.fixed.join(", ")}.` : "";
-        QY += `\n\nThis uses the ready-made ${yY.title}.${rY}${YY}${yY.setup?` ${yY.setup}`:""}`
+      for (const cT of nT) {
+        const TT = cT.problems.length > 0 ? ` Kept as it was: ${cT.problems.join("; ")}.` : "",
+          oT = cT.fixed.length > 0 ? ` Names changed to real ones: ${cT.fixed.join(", ")}.` : "";
+        KT += `\n\nThis uses the ready-made ${cT.title}.${oT}${TT}${cT.setup?` ${cT.setup}`:""}`
       }
       for (const {
-          from: yY,
-          to: KY
+          from: cT,
+          to: fT
         }
-        of HY) QY += `\n\nI renamed \`${yY}\` to \`${KY}\`, the name World Code calls.`;
-      const Kr = [];
-      for (const yY of vY) {
-        var Hr;
-        const YY = null !== (Hr = DY[yY]) && void 0 !== Hr ? Hr : "";
-        if (aY[yY] !== YY) {
-          const rY = fY.get(yY);
-          Kr.push(rY ? {
-            path: yY,
-            before: YY,
-            after: aY[yY],
-            why: rY,
-            parts: hY.get(yY)
+        of CT) KT += `\n\nI renamed \`${cT}\` to \`${fT}\`, the name World Code calls.`;
+      const fo = [];
+      for (const cT of ST) {
+        var Co;
+        const TT = null !== (Co = IT[cT]) && void 0 !== Co ? Co : "";
+        if (FT[cT] !== TT) {
+          const oT = aT.get(cT);
+          fo.push(oT ? {
+            path: cT,
+            before: TT,
+            after: FT[cT],
+            why: oT,
+            parts: QT.get(cT)
           } : {
-            path: yY,
-            before: YY,
-            after: aY[yY]
+            path: cT,
+            before: TT,
+            after: FT[cT]
           })
         }
       }
-      const zr = "direct" === RY && Kr.length > 0,
-        Zr = Kr.length > 0 || BY.length > 0;
+      const jo = "direct" === WT && fo.length > 0,
+        Jo = fo.length > 0 || vT.length > 0;
       return {
-        text: QY.replace(/\n{3,}/g, "\n\n").trim(),
-        changes: Kr,
-        failedEdits: uY,
-        renamedCallbacks: HY,
-        worldCode: BY,
-        inPlace: zr,
-        actions: cY,
-        question: Zr ? null : qY,
-        notes: pY,
-        plan: Zr ? [] : GY,
-        lookups: Zr ? eY.filter((YY => SY.has(lY(YY)))) : null !== qY || GY.length > 0 ? [] : eY,
-        prefabs: MY,
-        helpersAdded: [...new Set(bY)]
+        text: KT.replace(/\n{3,}/g, "\n\n").trim(),
+        changes: fo,
+        failedEdits: DT,
+        renamedCallbacks: CT,
+        worldCode: vT,
+        inPlace: jo,
+        actions: ET,
+        question: Jo ? null : sT,
+        notes: tT,
+        plan: Jo ? [] : pT,
+        lookups: Jo ? RT.filter((TT => wT.has(mT(TT)))) : null !== sT || pT.length > 0 ? [] : RT,
+        prefabs: nT,
+        helpersAdded: [...new Set(ZT)]
       }
     }
 
-    function GF(YY, rY) {
-      const DY = "" === YY ? [] : YY.replace(/\n$/, "").split("\n"),
-        FY = "" === rY ? [] : rY.replace(/\n$/, "").split("\n");
-      let AY = 0;
-      for (; AY < DY.length && AY < FY.length && DY[AY] === FY[AY];) AY++;
-      let IY = DY.length,
-        RY = FY.length;
-      for (; IY > AY && RY > AY && DY[IY - 1] === FY[RY - 1];) IY--, RY--;
-      const OY = DY.slice(AY, IY),
-        gY = FY.slice(AY, RY),
-        aY = Array.from({
-          length: OY.length + 1
-        }, (() => new Array(gY.length + 1).fill(0)));
-      for (let iY = OY.length - 1; iY >= 0; iY--)
-        for (let YY = gY.length - 1; YY >= 0; YY--) aY[iY][YY] = OY[iY] === gY[YY] ? aY[iY + 1][YY + 1] + 1 : Math.max(aY[iY + 1][YY], aY[iY][YY + 1]);
-      const vY = DY.slice(0, AY).map((YY => ({
+    function Pi(TT, oT) {
+      const IT = "" === TT ? [] : TT.replace(/\n$/, "").split("\n"),
+        iT = "" === oT ? [] : oT.replace(/\n$/, "").split("\n");
+      let zT = 0;
+      for (; zT < IT.length && zT < iT.length && IT[zT] === iT[zT];) zT++;
+      let kT = IT.length,
+        WT = iT.length;
+      for (; kT > zT && WT > zT && IT[kT - 1] === iT[WT - 1];) kT--, WT--;
+      const XT = IT.slice(zT, kT),
+        BT = iT.slice(zT, WT),
+        FT = Array.from({
+          length: XT.length + 1
+        }, (() => new Array(BT.length + 1).fill(0)));
+      for (let xT = XT.length - 1; xT >= 0; xT--)
+        for (let TT = BT.length - 1; TT >= 0; TT--) FT[xT][TT] = XT[xT] === BT[TT] ? FT[xT + 1][TT + 1] + 1 : Math.max(FT[xT + 1][TT], FT[xT][TT + 1]);
+      const ST = IT.slice(0, zT).map((TT => ({
         kind: "same",
-        text: YY
+        text: TT
       })));
-      let uY = 0,
-        sY = 0;
-      for (; uY < OY.length || sY < gY.length;) uY < OY.length && sY < gY.length && OY[uY] === gY[sY] ? (vY.push({
+      let DT = 0,
+        LT = 0;
+      for (; DT < XT.length || LT < BT.length;) DT < XT.length && LT < BT.length && XT[DT] === BT[LT] ? (ST.push({
         kind: "same",
-        text: OY[uY]
-      }), uY++, sY++) : sY < gY.length && (uY === OY.length || aY[uY][sY + 1] > aY[uY + 1][sY]) ? (vY.push({
+        text: XT[DT]
+      }), DT++, LT++) : LT < BT.length && (DT === XT.length || FT[DT][LT + 1] > FT[DT + 1][LT]) ? (ST.push({
         kind: "added",
-        text: gY[sY]
-      }), sY++) : (vY.push({
+        text: BT[LT]
+      }), LT++) : (ST.push({
         kind: "removed",
-        text: OY[uY]
-      }), uY++);
-      for (const iY of DY.slice(IY)) vY.push({
+        text: XT[DT]
+      }), DT++);
+      for (const xT of IT.slice(kT)) ST.push({
         kind: "same",
-        text: iY
+        text: xT
       });
-      return vY
+      return ST
     }
-    const xF = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
+    const di = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
 
-    function nF(YY) {
-      return xF.test(YY)
+    function Vi(TT) {
+      return di.test(TT)
     }
-    const PF = {
+    const Tz = {
       worldCode: new Set(["write_file", "edit_file", "replace_function", "use_prefab", "edit_code_in_place", "export_game", "ask_creator", "plan", "remember", "view_file", "view_chunk", "view_game_state", "get_docs", "find_names", "view_prefab", "view_errors"]),
       codeBlock: new Set(["write_file", "edit_file", "replace_function", "add_world_code", "edit_code_in_place", "switch_to_world_code", "ask_creator", "view_world_code", "view_chunk", "view_game_state", "get_docs", "find_names", "view_errors"])
     };
 
-    function UF(YY, rY, DY) {
-      return Pr[YY].formatCall(rY, DY)
+    function oz(TT, oT, IT) {
+      return Po[TT].formatCall(oT, IT)
     }
 
-    function LF(YY, rY, DY, FY) {
-      return Pr[DY].declareTools(YY, rY, FY)
+    function Iz(TT, oT, IT, iT) {
+      return Po[IT].declareTools(TT, oT, iT)
     }
 
-    function tF(YY) {
-      const rY = null === YY.path ? YY.tool : `${YY.tool} ${YY.path}`;
-      var DY;
-      if ("prefab" === YY.reason) return `${rY}: ${null!==(DY=YY.detail)&&void 0!==DY?DY:"the prefab couldn't go in."} Nothing changed.`;
-      if ("missingArgs" === YY.reason) return `${rY}: the call was missing an argument it needs, so nothing changed.`;
-      if ("placeholder" === YY.reason) return "write_file" === YY.tool ? `${rY}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${rY}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
-      if ("unread" === YY.reason) return `${rY}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==YY.path&&(0,yY.e)(YY.path)?"view_world_code":"view_file"} shows.`;
-      if ("brokenCode" === YY.reason) return `${rY}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
-      return `${rY}: search matched nothing in the file, so nothing changed. ${YY.closest?`The closest lines (${YY.closest.line}-${YY.closest.lastLine}) are:\n${YY.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${YY.functions.length>0?`, or use replace_function with one of these names: ${YY.functions.join(", ")}`:""}.`
+    function iz(TT) {
+      const oT = null === TT.path ? TT.tool : `${TT.tool} ${TT.path}`;
+      var IT;
+      if ("prefab" === TT.reason) return `${oT}: ${null!==(IT=TT.detail)&&void 0!==IT?IT:"the prefab couldn't go in."} Nothing changed.`;
+      if ("missingArgs" === TT.reason) return `${oT}: the call was missing an argument it needs, so nothing changed.`;
+      if ("placeholder" === TT.reason) return "write_file" === TT.tool ? `${oT}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${oT}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
+      if ("unread" === TT.reason) return `${oT}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==TT.path&&(0,cT.f)(TT.path)?"view_world_code":"view_file"} shows.`;
+      if ("brokenCode" === TT.reason) return `${oT}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
+      return `${oT}: search matched nothing in the file, so nothing changed. ${TT.closest?`The closest lines (${TT.closest.line}-${TT.closest.lastLine}) are:\n${TT.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${TT.functions.length>0?`, or use replace_function with one of these names: ${TT.functions.join(", ")}`:""}.`
     }
-    const YA = {
+    const zz = {
         offer: "matched",
         list: "matched",
         categories: !1,
         helperIndex: !0
       },
-      rA = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
+      kz = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
 
-    function DA(YY) {
-      return Object.values(YY).some((YY => "" !== YY.trim()))
+    function Wz(TT) {
+      return Object.values(TT).some((TT => "" !== TT.trim()))
     }
-    const FA = {
+    const Xz = {
         format: "simple",
         nativeTools: !1
       },
-      AA = YY => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${YY?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true when you handled the command, so the player isn't told it is unknown.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${YY?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${YY?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
-      IA = YY => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${YY?"in the docs":"in the API list"}. Use only methods and client options that are ${YY?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
-      RA = {
+      Bz = TT => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${TT?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true when you handled the command, so the player isn't told it is unknown.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${TT?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${TT?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
+      Fz = TT => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${TT?"in the docs":"in the API list"}. Use only methods and client options that are ${TT?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
+      Sz = {
         search: "lines to find",
         replace: "lines to put instead",
         codeBlock: "...all of the code block's code...",
@@ -5899,324 +5899,324 @@ export const modules = {
         worldCode: "...only the World Code to add...",
         function: "function onPlayerJoin(playerId) {\n\t...the whole new function...\n}"
       },
-      OA = Object.values(RA);
-    const gA = `You looked at World Code: its files are below, their paths starting ${yY.g}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${yY.g}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${yY.b}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
+      Dz = Object.values(Sz);
+    const Lz = `You looked at World Code: its files are below, their paths starting ${cT.l}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${cT.l}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${cT.d}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
 
-    function aA(YY, rY, DY, FY) {
-      var AY, IY, RY, OY;
+    function xz(TT, oT, IT, iT) {
+      var zT, kT, WT, XT;
       let {
-        hasWorldCodeFiles: gY,
-        hasLookedUp: aY,
-        movesToWorldCode: vY,
-        listedPrefabs: uY,
-        guidesToPrefabs: sY
-      } = FY;
-      const iY = rY ? yY.b : "index.js",
-        QY = rY ? `${yY.g}index.js` : iY,
-        WY = (YY, rY) => UF(DY, YY, rY),
-        EY = rY => YY.some((YY => YY.name === rY)),
-        mY = YY.filter((YY => ["content", "replace", "code"].some((rY => rY in YY.inputSchema.properties)))),
-        VY = EY("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${WY("edit_code_in_place",{why:"what this fix does",search:RA.search,replace:RA.replace})}` : "",
-        SY = EY("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${WY("export_game",{})}` : "",
-        lY = EY("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${WY("replace_function",{path:QY,name:"onPlayerJoin",why:"what the new function does",code:RA.function})}` : "",
-        TY = EY("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${WY("edit_file",{path:iY,why:"what this part's change does",search:RA.search,replace:RA.replace})}` : "",
-        eY = rY ? `2. Then give the whole new code with a write_file call, exactly like this:\n${WY("write_file",{path:iY,why:"what the change does",content:RA.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${WY("write_file",{path:iY,why:"what the change does",content:RA.file})}`,
-        NY = rY ? "" : ` If there is no code yet, write it in ${iY}.`,
-        BY = WY("switch_to_world_code", {}),
-        cY = rY ? gY ? `\n${gA}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${WY("add_world_code",{code:RA.worldCode})}\n${vY?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${EY("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${WY("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${BY}` : "",
-        KY = sY && EY("use_prefab") && uY.length >= 2,
-        HY = KY ? uY.slice(0, 3).map((YY => YY.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
-        zY = KY ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
-        ZY = EY("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${zY}\n${WY("ask_creator",{question:"What kind of game should it be?",choices:HY,allow_other:"true"})}` : "",
-        CY = EY("plan") ? `\n${"deepseek"===DY?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${WY("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
-        fY = null !== (AY = uY[0]) && void 0 !== AY ? AY : iF("parkour"),
-        jY = (null !== (IY = null === fY || void 0 === fY ? void 0 : fY.settings) && void 0 !== IY ? IY : []).slice(0, 2).map((YY => `${YY.key}: ${YY.value}`)).join("\n");
-      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${eY}${lY}${TY}${VY}${cY}${EY("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${WY("use_prefab",{name:null!==(RY=null===fY||void 0===fY?void 0:fY.name)&&void 0!==RY?RY:"parkour",settings:jY,why:null!==(OY=null===fY||void 0===fY?void 0:fY.summary)&&void 0!==OY?OY:"a parkour course"})}`:""}${SY}${ZY}${CY}${EY("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${WY("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(YY,rY,DY){const FY=YY.some((YY=>"fetch_url"===YY.name)),AY={view_file:`To see another of their files from the list, before you change it:\n${rY("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${rY("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${rY("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${rY("view_game_state",{})}`,fetch_url:`To read the docs: ${oY.l} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${rY("fetch_url",{url:oY.l})}`,get_docs:FY?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${or}):\n${rY("get_docs",{name:"setClientOption"})}\n${rY("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${rY("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${rY("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${rY("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${rY("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${rY("view_prefab",{name:"parkour"})}`},IY=YY.flatMap((YY=>{const rY=AY[YY.name];return void 0===rY?[]:[rY]}));return 0===IY.length?DY?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
+        hasWorldCodeFiles: BT,
+        hasLookedUp: FT,
+        movesToWorldCode: ST,
+        listedPrefabs: DT,
+        guidesToPrefabs: LT
+      } = iT;
+      const xT = oT ? cT.d : "index.js",
+        KT = oT ? `${cT.l}index.js` : xT,
+        rT = (TT, oT) => oz(IT, TT, oT),
+        AT = oT => TT.some((TT => TT.name === oT)),
+        gT = TT.filter((TT => ["content", "replace", "code"].some((oT => oT in TT.inputSchema.properties)))),
+        hT = AT("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${rT("edit_code_in_place",{why:"what this fix does",search:Sz.search,replace:Sz.replace})}` : "",
+        wT = AT("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${rT("export_game",{})}` : "",
+        mT = AT("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${rT("replace_function",{path:KT,name:"onPlayerJoin",why:"what the new function does",code:Sz.function})}` : "",
+        eT = AT("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${rT("edit_file",{path:xT,why:"what this part's change does",search:Sz.search,replace:Sz.replace})}` : "",
+        RT = oT ? `2. Then give the whole new code with a write_file call, exactly like this:\n${rT("write_file",{path:xT,why:"what the change does",content:Sz.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${rT("write_file",{path:xT,why:"what the change does",content:Sz.file})}`,
+        uT = oT ? "" : ` If there is no code yet, write it in ${xT}.`,
+        vT = rT("switch_to_world_code", {}),
+        ET = oT ? BT ? `\n${Lz}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${rT("add_world_code",{code:Sz.worldCode})}\n${ST?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${AT("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${rT("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${vT}` : "",
+        fT = LT && AT("use_prefab") && DT.length >= 2,
+        CT = fT ? DT.slice(0, 3).map((TT => TT.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
+        jT = fT ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
+        JT = AT("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${jT}\n${rT("ask_creator",{question:"What kind of game should it be?",choices:CT,allow_other:"true"})}` : "",
+        UT = AT("plan") ? `\n${"deepseek"===IT?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${rT("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
+        aT = null !== (zT = DT[0]) && void 0 !== zT ? zT : Ki("parkour"),
+        YT = (null !== (kT = null === aT || void 0 === aT ? void 0 : aT.settings) && void 0 !== kT ? kT : []).slice(0, 2).map((TT => `${TT.key}: ${TT.value}`)).join("\n");
+      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${RT}${mT}${eT}${hT}${ET}${AT("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${rT("use_prefab",{name:null!==(WT=null===aT||void 0===aT?void 0:aT.name)&&void 0!==WT?WT:"parkour",settings:YT,why:null!==(XT=null===aT||void 0===aT?void 0:aT.summary)&&void 0!==XT?XT:"a parkour course"})}`:""}${wT}${JT}${UT}${AT("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${rT("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(TT,oT,IT){const iT=TT.some((TT=>"fetch_url"===TT.name)),zT={view_file:`To see another of their files from the list, before you change it:\n${oT("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${oT("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${oT("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${oT("view_game_state",{})}`,fetch_url:`To read the docs: ${MT.n} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${oT("fetch_url",{url:MT.n})}`,get_docs:iT?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${Mo}):\n${oT("get_docs",{name:"setClientOption"})}\n${oT("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${oT("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${oT("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${oT("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${oT("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${oT("view_prefab",{name:"parkour"})}`},kT=TT.flatMap((TT=>{const oT=zT[TT.name];return void 0===oT?[]:[oT]}));return 0===kT.length?IT?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
       nIf you need to see something before you can answer well, look it up first: answer with only look - up calls, no other words and no code, and you are asked again with what they found.$ {
-        FY ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
+        iT ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
       }\
       n$ {
-        IY.join("\n")
+        kT.join("\n")
       }
-      `}(YY,WY,aY)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${NY}\n4. If the request is not about their ${rY?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${mY.map((YY=>YY.name)).join(" or ")} calls. ${function(YY){return Pr[YY].callStyle}(DY)}`
+      `}(TT,rT,FT)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${uT}\n4. If the request is not about their ${oT?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${gT.map((TT=>TT.name)).join(" or ")} calls. ${function(TT){return Po[TT].callStyle}(IT)}`
     }
 
-    function vA(YY, rY, DY) {
-      return Object.keys(YY).filter((YY => !DY || !(0, yY.e)(YY))).sort(((YY, DY) => (DY === rY ? 1 : 0) - (YY === rY ? 1 : 0) || YY.localeCompare(DY)))
+    function cz(TT, oT, IT) {
+      return Object.keys(TT).filter((TT => !IT || !(0, cT.f)(TT))).sort(((TT, IT) => (IT === oT ? 1 : 0) - (TT === oT ? 1 : 0) || TT.localeCompare(IT)))
     }
 
-    function uA(YY, rY, DY) {
-      var FY;
-      const AY = vA(YY, rY, DY);
-      return null !== rY && AY.includes(rY) ? rY : null !== (FY = AY[0]) && void 0 !== FY ? FY : null
+    function Kz(TT, oT, IT) {
+      var iT;
+      const zT = cz(TT, oT, IT);
+      return null !== oT && zT.includes(oT) ? oT : null !== (iT = zT[0]) && void 0 !== iT ? iT : null
     }
 
-    function sA(YY) {
-      const rY = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${YY.includes("index.ts")?"index.ts":"index.js"}`;
-      return `Only ${rY} runs by itself: another file runs when ${rY} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${rY}.\n`
+    function Mz(TT) {
+      const oT = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${TT.includes("index.ts")?"index.ts":"index.js"}`;
+      return `Only ${oT} runs by itself: another file runs when ${oT} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${oT}.\n`
     }
 
-    function iA(YY, rY) {
-      var DY;
+    function rz(TT, oT) {
+      var IT;
       const {
-        files: FY,
-        activePath: AY
-      } = YY, IY = !0 === YY.codeBlock, RY = vA(FY, AY, IY);
-      if (0 === RY.length || RY.every((YY => "" === FY[YY].trim()))) return IY ? "There is no code yet: the code block is empty." : RY.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
-      const OY = null !== (DY = uA(FY, AY, IY)) && void 0 !== DY ? DY : RY[0];
-      return `${RY.length>1?`Their files:\n${RY.map((YY=>{const rY=""===(DY=FY[YY])?0:DY.replace(/\n$/,"").split("\n").length;var DY;return`- ${YY}: ${1===rY?"1 line":`${rY} lines`}${YY===OY?" (open in the editor, its code below)":""}`})).join("\n")}\n${IY?"":sA(RY)}\n`:""}${function(YY,rY,DY,FY){return rY.map((rY=>Pr[FY].fileResult(rY,YY[rY],rY===DY))).join("\n\n")}(FY,[OY],AY,rY)}`
+        files: iT,
+        activePath: zT
+      } = TT, kT = !0 === TT.codeBlock, WT = cz(iT, zT, kT);
+      if (0 === WT.length || WT.every((TT => "" === iT[TT].trim()))) return kT ? "There is no code yet: the code block is empty." : WT.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
+      const XT = null !== (IT = Kz(iT, zT, kT)) && void 0 !== IT ? IT : WT[0];
+      return `${WT.length>1?`Their files:\n${WT.map((TT=>{const oT=""===(IT=iT[TT])?0:IT.replace(/\n$/,"").split("\n").length;var IT;return`- ${TT}: ${1===oT?"1 line":`${oT} lines`}${TT===XT?" (open in the editor, its code below)":""}`})).join("\n")}\n${kT?"":Mz(WT)}\n`:""}${function(TT,oT,IT,iT){return oT.map((oT=>Po[iT].fileResult(oT,TT[oT],oT===IT))).join("\n\n")}(iT,[XT],zT,oT)}`
     }
 
-    function yA(YY) {
-      var rY, DY, FY, AY, IY, RY;
+    function Az(TT) {
+      var oT, IT, iT, zT, kT, WT;
       return {
-        codeBlock: !0 === YY.codeBlock,
-        hasCode: "" !== (null !== (rY = YY.files[null !== (DY = YY.activePath) && void 0 !== DY ? DY : ""]) && void 0 !== rY ? rY : "").trim(),
-        hasBigFile: Object.values(YY.files).some((YY => YY.length > 6e3)),
-        wantsExport: nF(YY.request),
-        canAsk: !0 === YY.canAsk,
-        canRemember: !0 === (null === (FY = YY.about) || void 0 === FY ? void 0 : FY.canRemember),
-        isBigRequest: ar(YY.request),
-        canLookUp: !0 === YY.canLookUp,
-        hasOtherFiles: Object.keys(YY.files).length > 1,
-        hasErrors: YY.errors.length > 0,
-        canChangeWorldCode: !0 === YY.canChangeWorldCode,
-        hasWorldCodeFiles: Object.keys(YY.files).some(yY.e),
-        offersPrefabs: (AY = YY.request, IY = YY.files, RY = QA(YY), "never" !== RY.offer && ("always" === RY.offer || BF(AY, 1).length > 0 || ar(AY) || !DA(IY) && rA.test(AY))),
-        listsPrefabs: QA(YY).categories,
-        looksUpDocs: !0 === YY.looksUpDocs
+        codeBlock: !0 === TT.codeBlock,
+        hasCode: "" !== (null !== (oT = TT.files[null !== (IT = TT.activePath) && void 0 !== IT ? IT : ""]) && void 0 !== oT ? oT : "").trim(),
+        hasBigFile: Object.values(TT.files).some((TT => TT.length > 6e3)),
+        wantsExport: Vi(TT.request),
+        canAsk: !0 === TT.canAsk,
+        canRemember: !0 === (null === (iT = TT.about) || void 0 === iT ? void 0 : iT.canRemember),
+        isBigRequest: Fo(TT.request),
+        canLookUp: !0 === TT.canLookUp,
+        hasOtherFiles: Object.keys(TT.files).length > 1,
+        hasErrors: TT.errors.length > 0,
+        canChangeWorldCode: !0 === TT.canChangeWorldCode,
+        hasWorldCodeFiles: Object.keys(TT.files).some(cT.f),
+        offersPrefabs: (zT = TT.request, kT = TT.files, WT = gz(TT), "never" !== WT.offer && ("always" === WT.offer || Ci(zT, 1).length > 0 || Fo(zT) || !Wz(kT) && kz.test(zT))),
+        listsPrefabs: gz(TT).categories,
+        looksUpDocs: !0 === TT.looksUpDocs
       }
     }
 
-    function QA(YY) {
-      var rY;
-      return null !== (rY = YY.prefabs) && void 0 !== rY ? rY : YA
+    function gz(TT) {
+      var oT;
+      return null !== (oT = TT.prefabs) && void 0 !== oT ? oT : zz
     }
 
-    function oA(YY, rY) {
-      return "deepseek" === rY ? function(YY) {
-        const rY = PF[YY ? "codeBlock" : "worldCode"];
-        return mr.filter((YY => rY.has(YY.name)))
-      }(!0 === YY.codeBlock) : function(YY) {
-        const rY = (YY.hasCode || YY.hasBigFile) && !YY.codeBlock || !0 === YY.hasWorldCodeFiles,
-          DY = !0 === YY.canLookUp,
-          FY = YY.codeBlock && !0 === YY.canChangeWorldCode && !0 !== YY.hasWorldCodeFiles && DY,
-          AY = {
+    function hz(TT, oT) {
+      return "deepseek" === oT ? function(TT) {
+        const oT = Tz[TT ? "codeBlock" : "worldCode"];
+        return go.filter((TT => oT.has(TT.name)))
+      }(!0 === TT.codeBlock) : function(TT) {
+        const oT = (TT.hasCode || TT.hasBigFile) && !TT.codeBlock || !0 === TT.hasWorldCodeFiles,
+          IT = !0 === TT.canLookUp,
+          iT = TT.codeBlock && !0 === TT.canChangeWorldCode && !0 !== TT.hasWorldCodeFiles && IT,
+          zT = {
             write_file: !0,
-            edit_file: YY.hasBigFile,
-            replace_function: rY,
+            edit_file: TT.hasBigFile,
+            replace_function: oT,
             insert_code: !1,
-            add_world_code: YY.codeBlock && !0 !== YY.hasWorldCodeFiles,
-            edit_code_in_place: YY.hasCode,
-            export_game: YY.wantsExport,
-            switch_to_world_code: YY.codeBlock,
-            ask_creator: YY.canAsk,
-            remember: !0 === YY.canRemember && !YY.codeBlock,
-            plan: !0 === YY.isBigRequest && YY.canAsk && !YY.codeBlock,
-            view_file: DY && !0 === YY.hasOtherFiles && !YY.codeBlock,
-            view_world_code: FY,
-            view_chunk: DY,
-            view_game_state: DY,
-            get_docs: DY,
-            fetch_url: DY && !0 === YY.looksUpDocs,
-            find_names: DY,
-            view_errors: DY && !0 === YY.hasErrors,
-            use_prefab: !0 === YY.offersPrefabs && !YY.codeBlock,
-            list_prefabs: DY && !0 === YY.listsPrefabs && !YY.codeBlock,
-            view_prefab: DY && !0 === YY.offersPrefabs && !YY.codeBlock
+            add_world_code: TT.codeBlock && !0 !== TT.hasWorldCodeFiles,
+            edit_code_in_place: TT.hasCode,
+            export_game: TT.wantsExport,
+            switch_to_world_code: TT.codeBlock,
+            ask_creator: TT.canAsk,
+            remember: !0 === TT.canRemember && !TT.codeBlock,
+            plan: !0 === TT.isBigRequest && TT.canAsk && !TT.codeBlock,
+            view_file: IT && !0 === TT.hasOtherFiles && !TT.codeBlock,
+            view_world_code: iT,
+            view_chunk: IT,
+            view_game_state: IT,
+            get_docs: IT,
+            fetch_url: IT && !0 === TT.looksUpDocs,
+            find_names: IT,
+            view_errors: IT && !0 === TT.hasErrors,
+            use_prefab: !0 === TT.offersPrefabs && !TT.codeBlock,
+            list_prefabs: IT && !0 === TT.listsPrefabs && !TT.codeBlock,
+            view_prefab: IT && !0 === TT.offersPrefabs && !TT.codeBlock
           };
-        let IY = mr.filter((YY => AY[YY.name]));
-        for (const RY of ["remember", "plan"]) IY.filter((YY => !Vr(YY.name))).length > 7 && (IY = IY.filter((YY => YY.name !== RY)));
-        return IY
-      }(yA(YY))
+        let kT = go.filter((TT => zT[TT.name]));
+        for (const WT of ["remember", "plan"]) kT.filter((TT => !ho(TT.name))).length > 7 && (kT = kT.filter((TT => TT.name !== WT)));
+        return kT
+      }(Az(TT))
     }
 
-    function WA(YY, rY) {
-      var DY, FY;
-      const AY = yA(YY),
-        IY = !0 === AY.canLookUp,
-        RY = (null !== (DY = null === (FY = YY.lookups) || void 0 === FY ? void 0 : FY.length) && void 0 !== DY ? DY : 0) > 0,
-        OY = !0 === AY.hasWorldCodeFiles,
-        gY = [AY.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", AY.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", IY ? "" : RY ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", IY && !0 !== AY.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...AY.codeBlock ? [AY.canAsk ? "" : "Build what they asked: don't call ask_creator.", OY ? `${gA} So don't call add_world_code or view_world_code.` : "", OY || !0 !== AY.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", OY || !0 === AY.canChangeWorldCode && IY ? "" : "Don't call view_world_code.", OY ? "" : "The code block has no functions, so don't call replace_function."] : [AY.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", AY.canAsk && !0 !== AY.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", AY.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === AY.canRemember ? "" : "Their AI notes are full, so don't call remember.", IY && !0 !== AY.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === AY.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", AY.canAsk && !0 === QA(YY).guide && rY.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${rY.slice(0,3).map((YY=>YY.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((YY => "" !== YY));
-      return gY.length > 0 ? `\n\nFor this request: ${gY.join(" ")}` : ""
+    function wz(TT, oT) {
+      var IT, iT;
+      const zT = Az(TT),
+        kT = !0 === zT.canLookUp,
+        WT = (null !== (IT = null === (iT = TT.lookups) || void 0 === iT ? void 0 : iT.length) && void 0 !== IT ? IT : 0) > 0,
+        XT = !0 === zT.hasWorldCodeFiles,
+        BT = [zT.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", zT.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", kT ? "" : WT ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", kT && !0 !== zT.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...zT.codeBlock ? [zT.canAsk ? "" : "Build what they asked: don't call ask_creator.", XT ? `${Lz} So don't call add_world_code or view_world_code.` : "", XT || !0 !== zT.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", XT || !0 === zT.canChangeWorldCode && kT ? "" : "Don't call view_world_code.", XT ? "" : "The code block has no functions, so don't call replace_function."] : [zT.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", zT.canAsk && !0 !== zT.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", zT.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === zT.canRemember ? "" : "Their AI notes are full, so don't call remember.", kT && !0 !== zT.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === zT.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", zT.canAsk && !0 === gz(TT).guide && oT.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${oT.slice(0,3).map((TT=>TT.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((TT => "" !== TT));
+      return BT.length > 0 ? `\n\nFor this request: ${BT.join(" ")}` : ""
     }
 
-    function EA(YY, rY) {
-      var DY, FY, AY, IY, RY, OY;
-      let gY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : FA,
+    function mz(TT, oT) {
+      var IT, iT, zT, kT, WT, XT;
+      let BT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Xz,
         {
-          docsInTurn: aY = !1,
-          fi: vY = !1
+          docsInTurn: FT = !1,
+          xM: ST = !1
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const uY = "deepseek" === gY.format,
-        sY = Object.values(rY.files).join("\n"),
-        iY = rY.history.slice(-2).map((YY => YY.text)).join("\n"),
-        yY = `${rY.request}\n${iY}\n${rY.errors.join("\n")}`,
-        QY = !0 === rY.looksUpDocs,
-        oY = QY && !0 === rY.canLookUp ? [] : YY.find(yY, sY, 12),
-        WY = YY.matchItemAndBlockNames(yY, 12),
-        EY = !0 === rY.codeBlock,
-        mY = EY ? "myId" : "playerId",
-        VY = oA(rY, gY.format),
-        SY = VY.some((YY => "use_prefab" === YY.name)),
-        lY = !SY || uY && !0 !== yA(rY).offersPrefabs ? [] : function(YY, rY, DY) {
-          if ("never" === DY.offer || "none" === DY.list) return [];
-          if ("all" === DY.list) return [...vF];
-          const FY = BF(YY, 4);
-          if (DA(rY) || !rA.test(YY) && !ar(YY)) return FY;
-          const AY = vF.filter((YY => "game" === YY.kind && !FY.includes(YY)));
-          return [...FY, ...AY]
-        }(rY.request, rY.files, QA(rY)),
-        TY = SY ? function(YY, rY, DY) {
-          const FY = rY ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...uF.keys()].join(", ")}).` : "";
-          if (0 === YY.length) return rY ? `## Prefabs (ready-made games)${FY}` : "";
-          const AY = DY && YY.includes(DY) ? `\nThis request fits ${DY.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${NF(DY,!1)}` : "";
-          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${YY.map(TF).join("\n")}${AY}${FY}`
-        }(lY, QA(rY).categories, BF(rY.request, 1)[0]) : "",
-        eY = EY || !0 !== QA(rY).inlineCode ? "" : function(YY) {
-          const rY = BF(YY, 1)[0];
-          if (!rY) return "";
-          const DY = EF(QF(rY)).text;
-          return `## Tested code for this kind of game (${rY.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${DY}\`\`\``
-        }(rY.request),
-        NY = [oY.length > 0 ? `## Docs for this request\n${oY.map((YY=>YY.text)).join("\n\n")}` : "", WY.length > 0 ? `## Exact item and block names that match the request\n${WY.join(", ")}` : ""].filter((YY => "" !== YY)),
-        BY = [{
+      const DT = "deepseek" === BT.format,
+        LT = Object.values(oT.files).join("\n"),
+        xT = oT.history.slice(-2).map((TT => TT.text)).join("\n"),
+        cT = `${oT.request}\n${xT}\n${oT.errors.join("\n")}`,
+        KT = !0 === oT.looksUpDocs,
+        MT = KT && !0 === oT.canLookUp ? [] : TT.find(cT, LT, 12),
+        rT = TT.matchItemAndBlockNames(cT, 12),
+        AT = !0 === oT.codeBlock,
+        gT = AT ? "myId" : "playerId",
+        hT = hz(oT, BT.format),
+        wT = hT.some((TT => "use_prefab" === TT.name)),
+        mT = !wT || DT && !0 !== Az(oT).offersPrefabs ? [] : function(TT, oT, IT) {
+          if ("never" === IT.offer || "none" === IT.list) return [];
+          if ("all" === IT.list) return [...Li];
+          const iT = Ci(TT, 4);
+          if (Wz(oT) || !kz.test(TT) && !Fo(TT)) return iT;
+          const zT = Li.filter((TT => "game" === TT.kind && !iT.includes(TT)));
+          return [...iT, ...zT]
+        }(oT.request, oT.files, gz(oT)),
+        eT = wT ? function(TT, oT, IT) {
+          const iT = oT ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...xi.keys()].join(", ")}).` : "";
+          if (0 === TT.length) return oT ? `## Prefabs (ready-made games)${iT}` : "";
+          const zT = IT && TT.includes(IT) ? `\nThis request fits ${IT.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${fi(IT,!1)}` : "";
+          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${TT.map(vi).join("\n")}${zT}${iT}`
+        }(mT, gz(oT).categories, Ci(oT.request, 1)[0]) : "",
+        RT = AT || !0 !== gz(oT).inlineCode ? "" : function(TT) {
+          const oT = Ci(TT, 1)[0];
+          if (!oT) return "";
+          const IT = wi(ri(oT)).text;
+          return `## Tested code for this kind of game (${oT.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${IT}\`\`\``
+        }(oT.request),
+        uT = [MT.length > 0 ? `## Docs for this request\n${MT.map((TT=>TT.text)).join("\n\n")}` : "", rT.length > 0 ? `## Exact item and block names that match the request\n${rT.join(", ")}` : ""].filter((TT => "" !== TT)),
+        vT = [{
           role: "system",
-          content: LF([EY ? IA(QY) : AA(QY), ...QY ? [] : [EY ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${YY.index("callback")}` : `## Callbacks (all of them)\n${YY.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${YY.index("api")}`, `## Client options (all of them, set with api.setClientOption(${mY}, name, value))\n${YY.index("clientOption")}`], ...aY ? [] : NY, YY.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${YY.mobTypes.join(", ")}` : "", uY ? "" : TY, !EY && QA(rY).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${DF.map((YY=>YY.signature)).join(", ")}` : "", uY ? "" : eY, aA(VY, EY, gY.format, uY ? {
+          content: Iz([AT ? Fz(KT) : Bz(KT), ...KT ? [] : [AT ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${TT.index("callback")}` : `## Callbacks (all of them)\n${TT.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${TT.index("api")}`, `## Client options (all of them, set with api.setClientOption(${gT}, name, value))\n${TT.index("clientOption")}`], ...FT ? [] : uT, TT.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${TT.mobTypes.join(", ")}` : "", DT ? "" : eT, !AT && gz(oT).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${zi.map((TT=>TT.signature)).join(", ")}` : "", DT ? "" : RT, xz(hT, AT, BT.format, DT ? {
             hasWorldCodeFiles: !1,
             hasLookedUp: !1,
             movesToWorldCode: !1,
             listedPrefabs: [],
             guidesToPrefabs: !1
           } : {
-            hasWorldCodeFiles: !0 === yA(rY).hasWorldCodeFiles,
-            hasLookedUp: (null !== (DY = null === (FY = rY.lookups) || void 0 === FY ? void 0 : FY.length) && void 0 !== DY ? DY : 0) > 0,
-            movesToWorldCode: !0 === rY.canChangeWorldCode,
-            listedPrefabs: lY,
-            guidesToPrefabs: !0 === QA(rY).guide
-          })].filter((YY => "" !== YY)).join("\n\n"), VY, gY.format, gY.nativeTools)
+            hasWorldCodeFiles: !0 === Az(oT).hasWorldCodeFiles,
+            hasLookedUp: (null !== (IT = null === (iT = oT.lookups) || void 0 === iT ? void 0 : iT.length) && void 0 !== IT ? IT : 0) > 0,
+            movesToWorldCode: !0 === oT.canChangeWorldCode,
+            listedPrefabs: mT,
+            guidesToPrefabs: !0 === gz(oT).guide
+          })].filter((TT => "" !== TT)).join("\n\n"), hT, BT.format, BT.nativeTools)
         }];
-      if (!uY)
-        for (const dY of rY.history) BY.push({
-          role: dY.role,
-          content: dY.text
+      if (!DT)
+        for (const OT of oT.history) vT.push({
+          role: OT.role,
+          content: OT.text
         });
-      const cY = uY && !vY && rY.history.length > 0 ? `Earlier in this chat:\n${rY.history.map((YY=>`${"user"===YY.role?"They asked":"You answered"}: ${YY.text}`)).join("\n")}\n\n` : "",
-        KY = null !== (AY = rY.about) && void 0 !== AY && AY.notes.length ? `AI notes (notes they kept):\n${rY.about.notes.map((YY=>`- ${YY}`)).join("\n")}\n\n` : "",
-        HY = null !== (IY = rY.about) && void 0 !== IY && IY.outline ? `Outline of their code:\n${rY.about.outline}\n\n` : "",
-        zY = rY.errors.length > 0 ? `\n\nErrors their world showed recently:\n${rY.errors.slice(-5).join("\n")}` : "",
-        ZY = null === (RY = rY.failedEdits) || void 0 === RY || !RY.length || uY && vY ? "" : `\n\nWhat happened to your last answer's changes:\n${function(YY,rY){return YY.map((YY=>Pr[rY].editFailure(YY.tool,tF(YY)))).join("\n\n")}(rY.failedEdits,gY.format)}`,
-        CY = [...aY ? NY : [], ...uY ? [TY, eY] : []].filter((YY => "" !== YY)).map((YY => `${YY}\n\n`)).join(""),
-        fY = null === (OY = rY.lookups) || void 0 === OY || !OY.length || uY && vY ? "" : `\n\nWhat you looked up for this request:\n${jY=rY.lookups,hY=gY.format,jY.map((YY=>Pr[hY].lookupResult(YY.tool,YY.about,YY.text))).join("\n\n")}`;
-      var jY, hY;
-      return BY.push({
+      const ET = DT && !ST && oT.history.length > 0 ? `Earlier in this chat:\n${oT.history.map((TT=>`${"user"===TT.role?"They asked":"You answered"}: ${TT.text}`)).join("\n")}\n\n` : "",
+        fT = null !== (zT = oT.about) && void 0 !== zT && zT.notes.length ? `AI notes (notes they kept):\n${oT.about.notes.map((TT=>`- ${TT}`)).join("\n")}\n\n` : "",
+        CT = null !== (kT = oT.about) && void 0 !== kT && kT.outline ? `Outline of their code:\n${oT.about.outline}\n\n` : "",
+        jT = oT.errors.length > 0 ? `\n\nErrors their world showed recently:\n${oT.errors.slice(-5).join("\n")}` : "",
+        JT = null === (WT = oT.failedEdits) || void 0 === WT || !WT.length || DT && ST ? "" : `\n\nWhat happened to your last answer's changes:\n${function(TT,oT){return TT.map((TT=>Po[oT].editFailure(TT.tool,iz(TT)))).join("\n\n")}(oT.failedEdits,BT.format)}`,
+        UT = [...FT ? uT : [], ...DT ? [eT, RT] : []].filter((TT => "" !== TT)).map((TT => `${TT}\n\n`)).join(""),
+        aT = null === (XT = oT.lookups) || void 0 === XT || !XT.length || DT && ST ? "" : `\n\nWhat you looked up for this request:\n${YT=oT.lookups,QT=BT.format,YT.map((TT=>Po[QT].lookupResult(TT.tool,TT.about,TT.text))).join("\n\n")}`;
+      var YT, QT;
+      return vT.push({
         role: "user",
-        content: `${CY}${KY}${HY}${cY}Their code now:\n${iA(rY,gY.format)}${zY}${ZY}${fY}${uY?WA(rY,lY):""}\n\nTheir request: ${rY.request}`
-      }), BY
+        content: `${UT}${fT}${CT}${ET}Their code now:\n${rz(oT,BT.format)}${jT}${JT}${aT}${DT?wz(oT,mT):""}\n\nTheir request: ${oT.request}`
+      }), vT
     }
-    var mA = DY(38924);
+    var ez = IT(38553);
 
-    function VA(YY) {
-      var rY, DY, FY, AY, IY, RY;
+    function Rz(TT) {
+      var oT, IT, iT, zT, kT, WT;
       const {
-        args: OY
-      } = YY;
-      switch (YY.name) {
+        args: XT
+      } = TT;
+      switch (TT.name) {
         case "view_file":
-          return null !== (rY = OY.path) && void 0 !== rY ? rY : "a file";
+          return null !== (oT = XT.path) && void 0 !== oT ? oT : "a file";
         case "view_world_code":
           return "your World Code";
         case "view_chunk":
-          return OY.position ? `the blocks near ${null!==(DY=null===(FY=(0,mA.i)(OY.position))||void 0===FY?void 0:FY.map(Math.floor).join(", "))&&void 0!==DY?DY:OY.position}` : "the blocks around you";
+          return XT.position ? `the blocks near ${null!==(IT=null===(iT=(0,ez.f)(XT.position))||void 0===iT?void 0:iT.map(Math.floor).join(", "))&&void 0!==IT?IT:XT.position}` : "the blocks around you";
         case "view_game_state":
           return "what you see in your world";
         case "get_docs":
-          return OY.name ? `the docs for ${OY.name}` : `the list of ${lA(null!==(AY=OY.list)&&void 0!==AY?AY:SA)}`;
+          return XT.name ? `the docs for ${XT.name}` : `the list of ${vz(null!==(zT=XT.list)&&void 0!==zT?zT:uz)}`;
         case "fetch_url":
-          return function(YY) {
-            const rY = void 0 === YY ? null : mY(YY);
-            if (null === rY) return null !== YY && void 0 !== YY ? YY : "a docs page";
-            return VY(rY) ? "the list of docs pages" : `the docs page ${function(YY){const rY=(0,oY.z)(YY);return null===rY?YY:`${rY.name}${null===rY.part?"":`/${rY.part}`}`}(rY)}`
-          }(OY.url);
+          return function(TT) {
+            const oT = void 0 === TT ? null : gT(TT);
+            if (null === oT) return null !== TT && void 0 !== TT ? TT : "a docs page";
+            return hT(oT) ? "the list of docs pages" : `the docs page ${function(TT){const oT=(0,MT.y)(TT);return null===oT?TT:`${oT.name}${null===oT.part?"":`/${oT.part}`}`}(oT)}`
+          }(XT.url);
         case "find_names":
-          return `names for "${null!==(IY=OY.words)&&void 0!==IY?IY:""}"`;
+          return `names for "${null!==(kT=XT.words)&&void 0!==kT?kT:""}"`;
         case "view_errors":
           return "your world's errors";
         case "list_prefabs":
-          return OY.category ? `the ready-made ${OY.category} games` : "the ready-made games";
+          return XT.category ? `the ready-made ${XT.category} games` : "the ready-made games";
         case "view_prefab":
-          return `the ready-made ${null!==(RY=OY.name)&&void 0!==RY?RY:"game"}`
+          return `the ready-made ${null!==(WT=XT.name)&&void 0!==WT?WT:"game"}`
       }
     }
-    const SA = "functions";
+    const uz = "functions";
 
-    function lA(YY) {
-      return YY.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
+    function vz(TT) {
+      return TT.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
     }
 
-    function TA(YY) {
-      return "get_docs" === YY.name || "fetch_url" === YY.name
+    function Ez(TT) {
+      return "get_docs" === TT.name || "fetch_url" === TT.name
     }
-    async function eA(YY, rY) {
-      var DY;
-      const FY = VA(YY),
-        AY = rY => ({
+    async function fz(TT, oT) {
+      var IT;
+      const iT = Rz(TT),
+        zT = oT => ({
           result: {
-            tool: YY.name,
-            about: FY,
-            text: rY
+            tool: TT.name,
+            about: iT,
+            text: oT
           }
         });
-      switch (YY.name) {
+      switch (TT.name) {
         case "view_file":
-          return AY((OY = YY.args.path, gY = rY.files, void 0 === OY ? "No path was given: give the path of a file from the list." : Object.hasOwn(gY, OY) ? "" === gY[OY] ? `${OY} is empty.` : gY[OY] : `There is no file called ${OY}. Their files are: ${Object.keys(gY).join(", ")}.`));
+          return zT((XT = TT.args.path, BT = oT.files, void 0 === XT ? "No path was given: give the path of a file from the list." : Object.hasOwn(BT, XT) ? "" === BT[XT] ? `${XT} is empty.` : BT[XT] : `There is no file called ${XT}. Their files are: ${Object.keys(BT).join(", ")}.`));
         case "view_world_code": {
-          const YY = rY.readWorldCode ? await rY.readWorldCode() : null;
-          if (null === YY) return AY("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
-          const DY = Object.keys(YY).sort(),
-            FY = Object.fromEntries(DY.map((rY => [`${yY.g}${rY}`, YY[rY]]))),
-            IY = DY.map((rY => `${yY.g}${rY}:\n${""===YY[rY]?"(empty)":YY[rY]}`)).join("\n\n"),
-            RY = DY.length > 1 ? `\n\n${sA(DY,yY.g)}` : "";
+          const TT = oT.readWorldCode ? await oT.readWorldCode() : null;
+          if (null === TT) return zT("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
+          const IT = Object.keys(TT).sort(),
+            iT = Object.fromEntries(IT.map((oT => [`${cT.l}${oT}`, TT[oT]]))),
+            kT = IT.map((oT => `${cT.l}${oT}:\n${""===TT[oT]?"(empty)":TT[oT]}`)).join("\n\n"),
+            WT = IT.length > 1 ? `\n\n${Mz(IT,cT.l)}` : "";
           return {
-            ...AY("" === IY ? `World Code has no code yet: ${yY.g}index.js is empty.` : `${IY}${RY}`),
-            worldCodeFiles: FY
+            ...zT("" === kT ? `World Code has no code yet: ${cT.l}index.js is empty.` : `${kT}${WT}`),
+            worldCodeFiles: iT
           }
         }
         case "view_chunk":
-          return AY(await rY.viewChunk((0, mA.i)(YY.args.position)));
+          return zT(await oT.viewChunk((0, ez.f)(TT.args.position)));
         case "view_game_state":
-          return AY(await rY.viewGameState());
+          return zT(await oT.viewGameState());
         case "get_docs":
-          return AY(function(YY, rY, DY) {
-            if (void 0 === YY) {
-              const YY = (0, lY.c)(Qr, lA(null !== rY && void 0 !== rY ? rY : SA));
-              return void 0 === YY ? `There is no list called ${rY}: ask for ${or}.` : DY.index(YY)
+          return zT(function(TT, oT, IT) {
+            if (void 0 === TT) {
+              const TT = (0, mT.b)(Ko, vz(null !== oT && void 0 !== oT ? oT : uz));
+              return void 0 === TT ? `There is no list called ${oT}: ask for ${Mo}.` : IT.index(TT)
             }
-            const FY = DY.section(YY);
-            if (FY) return FY.text;
-            const AY = DY.find(YY, "", 3).map((YY => YY.name)).join(", ");
-            return `Nothing is called ${YY}.${""===AY?"":` The closest names are: ${AY}.`}`
-          }(YY.args.name, YY.args.list, rY.docs));
+            const iT = IT.section(TT);
+            if (iT) return iT.text;
+            const zT = IT.find(TT, "", 3).map((TT => TT.name)).join(", ");
+            return `Nothing is called ${TT}.${""===zT?"":` The closest names are: ${zT}.`}`
+          }(TT.args.name, TT.args.list, oT.docs));
         case "fetch_url":
-          return AY(await rY.fetchDocsPage(null !== (DY = YY.args.url) && void 0 !== DY ? DY : ""));
+          return zT(await oT.fetchDocsPage(null !== (IT = TT.args.url) && void 0 !== IT ? IT : ""));
         case "find_names": {
-          var IY, RY;
-          const DY = rY.docs.searchNames(null !== (IY = YY.args.words) && void 0 !== IY ? IY : "", 20);
-          return AY(DY.length > 0 ? DY.join(", ") : `No block, item or mob name has any of the words "${null!==(RY=YY.args.words)&&void 0!==RY?RY:""}".`)
+          var kT, WT;
+          const IT = oT.docs.searchNames(null !== (kT = TT.args.words) && void 0 !== kT ? kT : "", 20);
+          return zT(IT.length > 0 ? IT.join(", ") : `No block, item or mob name has any of the words "${null!==(WT=TT.args.words)&&void 0!==WT?WT:""}".`)
         }
         case "view_errors":
-          return AY(rY.errors.length > 0 ? rY.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
+          return zT(oT.errors.length > 0 ? oT.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
         case "list_prefabs":
-          return AY(eF(YY.args.category));
+          return zT(Ei(TT.args.category));
         case "view_prefab":
-          return AY(function(YY, rY) {
-            const DY = void 0 === YY ? null : iF(YY);
-            return DY ? NF(DY, rY) : `There is no prefab called ${null!==YY&&void 0!==YY?YY:"that"}.\n${eF()}`
-          }(YY.args.name, !0 === rY.showPrefabCode))
+          return zT(function(TT, oT) {
+            const IT = void 0 === TT ? null : Ki(TT);
+            return IT ? fi(IT, oT) : `There is no prefab called ${null!==TT&&void 0!==TT?TT:"that"}.\n${Ei()}`
+          }(TT.args.name, !0 === oT.showPrefabCode))
       }
-      var OY, gY
+      var XT, BT
     }
-    const NA = [
+    const Cz = [
       [/\bme\b/gi, "the player"],
       [/\bmyself\b/gi, "the player"],
       [/\bmy\b/gi, "the player's"],
@@ -6242,206 +6242,206 @@ export const modules = {
       [/\bstolen\b/gi, "taken"]
     ];
 
-    function BA(YY) {
-      let rY = YY;
-      for (const [DY, FY] of NA) rY = rY.replace(DY, (YY => YY.length > 1 && YY[0] !== YY[0].toLowerCase() && YY.slice(1) === YY.slice(1).toLowerCase() ? FY[0].toUpperCase() + FY.slice(1) : FY));
-      return rY
+    function jz(TT) {
+      let oT = TT;
+      for (const [IT, iT] of Cz) oT = oT.replace(IT, (TT => TT.length > 1 && TT[0] !== TT[0].toLowerCase() && TT.slice(1) === TT.slice(1).toLowerCase() ? iT[0].toUpperCase() + iT.slice(1) : iT));
+      return oT
     }
-    const cA = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      KA = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
-      HA = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
-      zA = 12e3,
-      ZA = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
+    const Jz = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      Uz = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
+      az = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
+      Yz = 12e3,
+      Qz = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
 
-    function CA(YY) {
-      var rY, DY, FY;
-      const AY = null === (rY = /Safety:\s*(\w+)/.exec(YY)) || void 0 === rY ? void 0 : rY[1],
-        IY = null !== (DY = null === (FY = /Categories:\s*(.+)/.exec(YY)) || void 0 === FY ? void 0 : FY[1]) && void 0 !== DY ? DY : "";
-      return /PII/.test(IY) ? "personalInfo" : "Unsafe" === AY || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(IY) ? "unsafe" : "ok"
-    }
-
-    function fA(YY) {
-      var rY, DY, FY;
-      const AY = null === (rY = /Safety:\s*(\w+)/.exec(YY)) || void 0 === rY ? void 0 : rY[1];
-      if (!AY) return null;
-      const IY = (null !== (DY = null === (FY = /Categories:\s*(.+)/.exec(YY)) || void 0 === FY ? void 0 : FY[1]) && void 0 !== DY ? DY : "").split(",").map((YY => YY.trim())).filter((YY => "" !== YY && "None" !== YY));
-      return "Safe" !== AY && IY.some((YY => /Sexual/.test(YY))) ? "unsafe" : "Unsafe" !== AY ? "ok" : IY.length > 0 && IY.every((YY => ZA.has(YY))) ? "maybeGame" : "unsafe"
-    }
-    async function jA(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const FY = await rY(YY),
-        AY = null === FY ? null : fA(FY);
-      if (null === AY) return "unchecked";
-      if ("ok" === AY || "unsafe" === AY && (!DY || null === FY || /Sexual/.test(FY))) return AY;
-      const IY = BA(YY);
-      if (IY === YY) return "unsafe";
-      const RY = await rY(IY),
-        OY = null === RY ? null : fA(RY);
-      return null === OY ? "unchecked" : "ok" === OY ? "ok" : "unsafe"
+    function Oz(TT) {
+      var oT, IT, iT;
+      const zT = null === (oT = /Safety:\s*(\w+)/.exec(TT)) || void 0 === oT ? void 0 : oT[1],
+        kT = null !== (IT = null === (iT = /Categories:\s*(.+)/.exec(TT)) || void 0 === iT ? void 0 : iT[1]) && void 0 !== IT ? IT : "";
+      return /PII/.test(kT) ? "personalInfo" : "Unsafe" === zT || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(kT) ? "unsafe" : "ok"
     }
 
-    function hA(YY) {
-      const rY = [];
-      return wA(YY, 0, !1, rY), rY.map((YY => YY.trim())).filter((YY => "" !== YY))
+    function Hz(TT) {
+      var oT, IT, iT;
+      const zT = null === (oT = /Safety:\s*(\w+)/.exec(TT)) || void 0 === oT ? void 0 : oT[1];
+      if (!zT) return null;
+      const kT = (null !== (IT = null === (iT = /Categories:\s*(.+)/.exec(TT)) || void 0 === iT ? void 0 : iT[1]) && void 0 !== IT ? IT : "").split(",").map((TT => TT.trim())).filter((TT => "" !== TT && "None" !== TT));
+      return "Safe" !== zT && kT.some((TT => /Sexual/.test(TT))) ? "unsafe" : "Unsafe" !== zT ? "ok" : kT.length > 0 && kT.every((TT => Qz.has(TT))) ? "maybeGame" : "unsafe"
     }
-    const dA = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
-
-    function JA(YY, rY) {
-      let DY = rY - 1;
-      for (; DY >= 0 && /\s/.test(YY[DY]);) DY--;
-      if (DY < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(YY[DY])) return !0;
-      let FY = DY;
-      for (; FY > 0 && /[\w$]/.test(YY[FY - 1]);) FY--;
-      return dA.has(YY.slice(FY, DY + 1))
+    async function nz(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const iT = await oT(TT),
+        zT = null === iT ? null : Hz(iT);
+      if (null === zT) return "unchecked";
+      if ("ok" === zT || "unsafe" === zT && (!IT || null === iT || /Sexual/.test(iT))) return zT;
+      const kT = jz(TT);
+      if (kT === TT) return "unsafe";
+      const WT = await oT(kT),
+        XT = null === WT ? null : Hz(WT);
+      return null === XT ? "unchecked" : "ok" === XT ? "ok" : "unsafe"
     }
 
-    function MA(YY, rY) {
-      let DY = !1;
-      for (let FY = rY + 1; FY < YY.length; FY++) {
-        const rY = YY[FY];
-        if ("\\" === rY) FY++;
+    function qz(TT) {
+      const oT = [];
+      return tz(TT, 0, !1, oT), oT.map((TT => TT.trim())).filter((TT => "" !== TT))
+    }
+    const Zz = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
+
+    function lz(TT, oT) {
+      let IT = oT - 1;
+      for (; IT >= 0 && /\s/.test(TT[IT]);) IT--;
+      if (IT < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(TT[IT])) return !0;
+      let iT = IT;
+      for (; iT > 0 && /[\w$]/.test(TT[iT - 1]);) iT--;
+      return Zz.has(TT.slice(iT, IT + 1))
+    }
+
+    function sz(TT, oT) {
+      let IT = !1;
+      for (let iT = oT + 1; iT < TT.length; iT++) {
+        const oT = TT[iT];
+        if ("\\" === oT) iT++;
         else {
-          if ("\n" === rY) break;
-          if (DY) DY = "]" !== rY;
-          else if ("[" === rY) DY = !0;
-          else if ("/" === rY) return FY + 1
+          if ("\n" === oT) break;
+          if (IT) IT = "]" !== oT;
+          else if ("[" === oT) IT = !0;
+          else if ("/" === oT) return iT + 1
         }
       }
-      return rY + 1
+      return oT + 1
     }
 
-    function wA(YY, rY, DY, FY) {
-      let AY = rY,
-        IY = 0;
-      for (; AY < YY.length;) {
-        const rY = YY[AY],
-          RY = YY[AY + 1];
-        if ("/" === rY && "/" === RY) {
-          const rY = YY.indexOf("\n", AY);
-          FY.push(YY.slice(AY + 2, -1 === rY ? YY.length : rY)), AY = -1 === rY ? YY.length : rY
-        } else if ("/" === rY && "*" === RY) {
-          const rY = YY.indexOf("*/", AY + 2);
-          FY.push(YY.slice(AY + 2, -1 === rY ? YY.length : rY)), AY = -1 === rY ? YY.length : rY + 2
-        } else if ("/" === rY && JA(YY, AY)) AY = MA(YY, AY);
-        else if ('"' === rY || "'" === rY || "`" === rY) {
-          const DY = FY.length;
-          FY.push("");
-          let IY = "";
-          for (AY++; AY < YY.length && YY[AY] !== rY;) "\\" === YY[AY] ? (IY += YY.slice(AY, AY + 2), AY += 2) : "`" === rY && "$" === YY[AY] && "{" === YY[AY + 1] ? (IY += " ", AY = wA(YY, AY + 2, !0, FY)) : (IY += YY[AY], AY++);
-          FY[DY] = IY, AY++
+    function tz(TT, oT, IT, iT) {
+      let zT = oT,
+        kT = 0;
+      for (; zT < TT.length;) {
+        const oT = TT[zT],
+          WT = TT[zT + 1];
+        if ("/" === oT && "/" === WT) {
+          const oT = TT.indexOf("\n", zT);
+          iT.push(TT.slice(zT + 2, -1 === oT ? TT.length : oT)), zT = -1 === oT ? TT.length : oT
+        } else if ("/" === oT && "*" === WT) {
+          const oT = TT.indexOf("*/", zT + 2);
+          iT.push(TT.slice(zT + 2, -1 === oT ? TT.length : oT)), zT = -1 === oT ? TT.length : oT + 2
+        } else if ("/" === oT && lz(TT, zT)) zT = sz(TT, zT);
+        else if ('"' === oT || "'" === oT || "`" === oT) {
+          const IT = iT.length;
+          iT.push("");
+          let kT = "";
+          for (zT++; zT < TT.length && TT[zT] !== oT;) "\\" === TT[zT] ? (kT += TT.slice(zT, zT + 2), zT += 2) : "`" === oT && "$" === TT[zT] && "{" === TT[zT + 1] ? (kT += " ", zT = tz(TT, zT + 2, !0, iT)) : (kT += TT[zT], zT++);
+          iT[IT] = kT, zT++
         } else {
-          if (DY && "{" === rY) IY++;
-          else if (DY && "}" === rY) {
-            if (0 === IY) return AY + 1;
-            IY--
+          if (IT && "{" === oT) kT++;
+          else if (IT && "}" === oT) {
+            if (0 === kT) return zT + 1;
+            kT--
           }
-          AY++
+          zT++
         }
       }
-      return AY
+      return zT
     }
-    const bA = 4e5;
-    var XA = DY(40541);
-    const qA = 15e3;
-    let pA = [],
-      kA = null;
+    const Gz = 4e5;
+    var pz = IT(40290);
+    const bz = 15e3;
+    let yz = [],
+      Nz = null;
 
-    function GA(YY) {
-      return Math.ceil(YY.length / 4)
-    }
-
-    function xA(YY) {
-      return "number" === typeof YY && Number.isInteger(YY) && YY >= 0
+    function Pz(TT) {
+      return Math.ceil(TT.length / 4)
     }
 
-    function nA(YY, rY, DY) {
-      var FY;
-      let AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      ! function(YY) {
+    function dz(TT) {
+      return "number" === typeof TT && Number.isInteger(TT) && TT >= 0
+    }
+
+    function Vz(TT, oT, IT) {
+      var iT;
+      let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      ! function(TT) {
         if ("undefined" === typeof window) return;
-        if (pA.push(YY), pA.length >= 40) return void PA();
-        kA ??= setTimeout((() => {
-          PA()
-        }), qA)
-      }(null !== (FY = function(YY) {
-        if (null === YY || "object" !== typeof YY) return null;
+        if (yz.push(TT), yz.length >= 40) return void Tk();
+        Nz ??= setTimeout((() => {
+          Tk()
+        }), bz)
+      }(null !== (iT = function(TT) {
+        if (null === TT || "object" !== typeof TT) return null;
         const {
-          prompt_tokens: rY,
-          completion_tokens: DY,
-          prompt_tokens_details: FY
-        } = YY;
-        if (!xA(rY) || !xA(DY)) return null;
-        const AY = null !== FY && "object" === typeof FY ? FY.cached_tokens : void 0;
+          prompt_tokens: oT,
+          completion_tokens: IT,
+          prompt_tokens_details: iT
+        } = TT;
+        if (!dz(oT) || !dz(IT)) return null;
+        const zT = null !== iT && "object" === typeof iT ? iT.cached_tokens : void 0;
         return {
-          sent: rY,
-          cached: xA(AY) ? AY : 0,
-          received: DY
+          sent: oT,
+          cached: dz(zT) ? zT : 0,
+          received: IT
         }
-      }(YY)) && void 0 !== FY ? FY : {
-        sent: GA(JSON.stringify(rY)),
+      }(TT)) && void 0 !== iT ? iT : {
+        sent: Pz(JSON.stringify(oT)),
         cached: 0,
-        received: GA(DY) + AY
+        received: Pz(IT) + zT
       })
     }
-    async function PA() {
-      null !== kA && (clearTimeout(kA), kA = null);
-      const YY = pA.slice(0, 40);
-      if (pA = pA.slice(40), pA.length > 0 && (kA = setTimeout((() => {
-          PA()
-        }), qA)), 0 !== YY.length) try {
-        await (0, XA.postToGameServer)("/ai-helper/usage", {
-          calls: YY
+    async function Tk() {
+      null !== Nz && (clearTimeout(Nz), Nz = null);
+      const TT = yz.slice(0, 40);
+      if (yz = yz.slice(40), yz.length > 0 && (Nz = setTimeout((() => {
+          Tk()
+        }), bz)), 0 !== TT.length) try {
+        await (0, pz.postToGameServer)("/ai-helper/usage", {
+          calls: TT
         })
       } catch {}
     }
-    const UA = 6e4;
-    const LA = new class {
+    const Ik = 6e4;
+    const ik = new class {
         constructor() {
           this.calls = new Map, this.fullUntil = new Map
         }
-        record(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.calls.set(YY, [...this.recent(YY, rY), rY])
+        record(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.calls.set(TT, [...this.recent(TT, oT), oT])
         }
-        markFull(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.fullUntil.set(YY, rY + UA)
+        markFull(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.fullUntil.set(TT, oT + Ik)
         }
-        callsInLastMinute(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return this.recent(YY, rY).length
+        callsInLastMinute(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return this.recent(TT, oT).length
         }
-        freeAt(YY) {
-          var rY;
-          let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          const FY = this.recent(YY, DY),
-            AY = FY.length < 2 ? DY : FY[FY.length - 2] + UA;
-          return Math.max(AY, null !== (rY = this.fullUntil.get(YY)) && void 0 !== rY ? rY : 0, DY)
+        freeAt(TT) {
+          var oT;
+          let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          const iT = this.recent(TT, IT),
+            zT = iT.length < 2 ? IT : iT[iT.length - 2] + Ik;
+          return Math.max(zT, null !== (oT = this.fullUntil.get(TT)) && void 0 !== oT ? oT : 0, IT)
         }
-        firstFreeAt(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return Math.min(...YY.map((YY => this.freeAt(YY, rY))))
+        firstFreeAt(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return Math.min(...TT.map((TT => this.freeAt(TT, oT))))
         }
         clear() {
           this.calls.clear(), this.fullUntil.clear()
         }
-        recent(YY, rY) {
-          var DY;
-          return (null !== (DY = this.calls.get(YY)) && void 0 !== DY ? DY : []).filter((YY => rY - YY < UA))
+        recent(TT, oT) {
+          var IT;
+          return (null !== (IT = this.calls.get(TT)) && void 0 !== IT ? IT : []).filter((TT => oT - TT < Ik))
         }
       },
-      tA = /\n{3,}/,
-      YI = /<tool_call\b|<function=/;
+      zk = /\n{3,}/,
+      kk = /<tool_call\b|<function=/;
 
-    function rI(YY) {
-      const rY = YY.trimStart(),
-        DY = tA.exec(rY),
-        FY = YI.exec(rY);
-      if (null === DY || null !== FY && FY.index < DY.index) return null;
-      const AY = rY.slice(DY.index + DY[0].length);
-      return "" === AY.trim() ? null : AY
+    function Wk(TT) {
+      const oT = TT.trimStart(),
+        IT = zk.exec(oT),
+        iT = kk.exec(oT);
+      if (null === IT || null !== iT && iT.index < IT.index) return null;
+      const zT = oT.slice(IT.index + IT[0].length);
+      return "" === zT.trim() ? null : zT
     }
-    const DI = [{
+    const Xk = [{
       name: "Qwen3.8-27B",
       temperature: .6,
       nativeTools: !0,
@@ -6460,45 +6460,45 @@ export const modules = {
       temperature: 1,
       reasoningEffort: "high"
     }];
-    const FI = {
+    const Bk = {
       name: "Qwen3.6-27B",
       temperature: .6,
       nativeTools: !0,
       callFormat: "qwenXml"
     };
 
-    function AI(YY) {
-      return [...DI, FI].find((rY => rY.name === YY))
+    function Fk(TT) {
+      return [...Xk, Bk].find((oT => oT.name === TT))
     }
 
-    function II(YY) {
-      var rY, DY;
-      return null !== (rY = null === (DY = AI(YY)) || void 0 === DY ? void 0 : DY.callFormat) && void 0 !== rY ? rY : "simple"
+    function Sk(TT) {
+      var oT, IT;
+      return null !== (oT = null === (IT = Fk(TT)) || void 0 === IT ? void 0 : IT.callFormat) && void 0 !== oT ? oT : "simple"
     }
 
-    function RI(YY) {
-      var rY;
+    function Dk(TT) {
+      var oT;
       return {
-        format: null !== (rY = YY.callFormat) && void 0 !== rY ? rY : "simple",
-        nativeTools: !0 === YY.nativeTools
+        format: null !== (oT = TT.callFormat) && void 0 !== oT ? oT : "simple",
+        nativeTools: !0 === TT.nativeTools
       }
     }
 
-    function OI(YY, rY) {
-      return "function" === typeof YY ? YY(rY) : YY
+    function Lk(TT, oT) {
+      return "function" === typeof TT ? TT(oT) : TT
     }
-    const gI = "TOO_COMPLEX",
-      aI = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${gI} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${gI} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${gI} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${gI} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${gI} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
-      vI = 24e4,
-      uI = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
-    class sI extends Error {
-      constructor(YY) {
-        super(`World Code AI ${YY}`), this.reason = YY
+    const xk = "TOO_COMPLEX",
+      ck = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${xk} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${xk} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${xk} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${xk} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${xk} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
+      Kk = 24e4,
+      Mk = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
+    class rk extends Error {
+      constructor(TT) {
+        super(`World Code AI ${TT}`), this.reason = TT
       }
     }
 
-    function iI(YY) {
-      switch (YY) {
+    function Ak(TT) {
+      switch (TT) {
         case "busy":
           return "Bot.xd is busy right now.";
         case "tooLarge":
@@ -6511,421 +6511,421 @@ export const modules = {
       }
     }
 
-    function yI(YY, rY) {
-      var DY, FY, AY, IY, RY;
-      const OY = YY[null !== (DY = rY.index) && void 0 !== DY ? DY : 0] ??= {
+    function gk(TT, oT) {
+      var IT, iT, zT, kT, WT;
+      const XT = TT[null !== (IT = oT.index) && void 0 !== IT ? IT : 0] ??= {
         name: "",
         args: ""
       };
-      OY.name += null !== (FY = null === (AY = rY.function) || void 0 === AY ? void 0 : AY.name) && void 0 !== FY ? FY : "", OY.args += null !== (IY = null === (RY = rY.function) || void 0 === RY ? void 0 : RY.arguments) && void 0 !== IY ? IY : ""
+      XT.name += null !== (iT = null === (zT = oT.function) || void 0 === zT ? void 0 : zT.name) && void 0 !== iT ? iT : "", XT.args += null !== (kT = null === (WT = oT.function) || void 0 === WT ? void 0 : WT.arguments) && void 0 !== kT ? kT : ""
     }
 
-    function QI(YY) {
-      return "mcp" === YY ? "simple" : YY
+    function hk(TT) {
+      return "mcp" === TT ? "simple" : TT
     }
 
-    function oI(YY, rY, DY, FY) {
-      let AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      return WI(YY, rY, DY, QI(FY), AY).answer
+    function wk(TT, oT, IT, iT) {
+      let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      return mk(TT, oT, IT, hk(iT), zT).answer
     }
 
-    function WI(YY, rY, DY, FY, AY) {
-      const IY = DY.flatMap((YY => {
-        const rY = gD(YY.name, YY.args);
-        return null === rY ? [] : [UF(tr(FY), rY.name, rY.args)]
+    function mk(TT, oT, IT, iT, zT) {
+      const kT = IT.flatMap((TT => {
+        const oT = SI(TT.name, TT.args);
+        return null === oT ? [] : [oz(oI(iT), oT.name, oT.args)]
       }));
-      let RY = !1;
-      return 0 !== IY.length || 0 !== vD(YY, FY).length || YY.includes("```") || (IY.push(...AY ? [] : function(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        const FY = new Map;
-        for (const OY of aD(YY, rY)) {
-          const YY = Object.values(OY.args).some((YY => void 0 !== YY && DY.includes(YY.trim())));
-          var AY, IY, RY;
-          "export_game" === OY.name || "switch_to_world_code" === OY.name || Vr(OY.name) || YY || FY.set(`${OY.name} ${null!==(AY=OY.args.path)&&void 0!==AY?AY:""} ${null!==(IY=OY.args.search)&&void 0!==IY?IY:""} ${null!==(RY=OY.args.name)&&void 0!==RY?RY:""}`, OY.source)
+      let WT = !1;
+      return 0 !== kT.length || 0 !== LI(TT, iT).length || TT.includes("```") || (kT.push(...zT ? [] : function(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+        const iT = new Map;
+        for (const XT of DI(TT, oT)) {
+          const TT = Object.values(XT.args).some((TT => void 0 !== TT && IT.includes(TT.trim())));
+          var zT, kT, WT;
+          "export_game" === XT.name || "switch_to_world_code" === XT.name || ho(XT.name) || TT || iT.set(`${XT.name} ${null!==(zT=XT.args.path)&&void 0!==zT?zT:""} ${null!==(kT=XT.args.search)&&void 0!==kT?kT:""} ${null!==(WT=XT.args.name)&&void 0!==WT?WT:""}`, XT.source)
         }
-        return [...new Set(FY.values())]
-      }(rY, FY, OA)), RY = IY.length > 0), {
-        answer: [YY, ...IY].join("\n\n").trim(),
-        hasCallsFromReasoning: RY
+        return [...new Set(iT.values())]
+      }(oT, iT, Dz)), WT = kT.length > 0), {
+        answer: [TT, ...kT].join("\n\n").trim(),
+        hasCallsFromReasoning: WT
       }
     }
-    async function EI(YY, rY) {
-      const DY = YY.getReader(),
-        FY = new TextDecoder;
-      let AY = "";
+    async function ek(TT, oT) {
+      const IT = TT.getReader(),
+        iT = new TextDecoder;
+      let zT = "";
       for (;;) {
         const {
-          done: YY,
-          value: IY
-        } = await DY.read();
-        if (YY) break;
-        AY += FY.decode(IY, {
+          done: TT,
+          value: kT
+        } = await IT.read();
+        if (TT) break;
+        zT += iT.decode(kT, {
           stream: !0
         });
-        let RY = AY.indexOf("\n");
-        for (; - 1 !== RY;) {
-          const YY = AY.slice(0, RY).trim();
-          if (AY = AY.slice(RY + 1), RY = AY.indexOf("\n"), !YY.startsWith("data:")) continue;
-          const DY = YY.slice(5).trim();
-          if ("[DONE]" === DY) return;
-          let FY;
+        let WT = zT.indexOf("\n");
+        for (; - 1 !== WT;) {
+          const TT = zT.slice(0, WT).trim();
+          if (zT = zT.slice(WT + 1), WT = zT.indexOf("\n"), !TT.startsWith("data:")) continue;
+          const IT = TT.slice(5).trim();
+          if ("[DONE]" === IT) return;
+          let iT;
           try {
-            FY = JSON.parse(DY)
+            iT = JSON.parse(IT)
           } catch {
             continue
           }
-          rY(FY)
+          oT(iT)
         }
       }
     }
 
-    function mI(YY) {
-      return YY.map((YY => ({
+    function Rk(TT) {
+      return TT.map((TT => ({
         type: "function",
         function: {
-          name: YY.name,
-          description: YY.description,
-          parameters: YY.inputSchema
+          name: TT.name,
+          description: TT.description,
+          parameters: TT.inputSchema
         }
       })))
     }
 
-    function VI(YY) {
-      return "object" === typeof YY
+    function uk(TT) {
+      return "object" === typeof TT
     }
-    async function SI(YY, rY, DY, FY) {
-      var AY;
-      let IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-      if (LA.freeAt(YY.name) > Date.now()) return "busy";
-      LA.record(YY.name);
-      const RY = await fetch(cA, {
+    async function vk(TT, oT, IT, iT) {
+      var zT;
+      let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+      if (ik.freeAt(TT.name) > Date.now()) return "busy";
+      ik.record(TT.name);
+      const WT = await fetch(Jz, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: YY.name,
-          messages: rY,
+          model: TT.name,
+          messages: oT,
           max_tokens: 16e3,
-          temperature: YY.temperature,
-          reasoning_effort: YY.reasoningEffort,
+          temperature: TT.temperature,
+          reasoning_effort: TT.reasoningEffort,
           stream: !0,
           stream_options: {
             include_usage: !0
           },
-          ...YY.nativeTools && IY.length > 0 ? {
-            tools: mI(IY)
+          ...TT.nativeTools && kT.length > 0 ? {
+            tools: Rk(kT)
           } : {}
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: DY
+        signal: IT
       });
-      if (429 === RY.status) return LA.markFull(YY.name), "busy";
-      if (!RY.ok || !RY.body) return console.warn(`World Code AI: ${YY.name} answered ${RY.status}`), RY.ok ? "failed" : 429 === (OY = RY.status) ? "busy" : 400 === OY || 413 === OY ? "tooLarge" : 401 === OY || 403 === OY ? "turnedAway" : "failed";
-      var OY;
-      let gY = "",
-        aY = "";
-      const vY = [];
-      let uY = !1,
-        sY = !1,
-        iY = null;
+      if (429 === WT.status) return ik.markFull(TT.name), "busy";
+      if (!WT.ok || !WT.body) return console.warn(`World Code AI: ${TT.name} answered ${WT.status}`), WT.ok ? "failed" : 429 === (XT = WT.status) ? "busy" : 400 === XT || 413 === XT ? "tooLarge" : 401 === XT || 403 === XT ? "turnedAway" : "failed";
+      var XT;
+      let BT = "",
+        FT = "";
+      const ST = [];
+      let DT = !1,
+        LT = !1,
+        xT = null;
       try {
-        await async function(YY, rY, DY) {
-          await EI(YY, (YY => {
-            var FY;
-            const AY = YY,
-              IY = null === (FY = AY.choices) || void 0 === FY ? void 0 : FY[0];
-            var RY, OY;
-            IY && rY(null !== (RY = IY.delta) && void 0 !== RY ? RY : {}, null !== (OY = IY.finish_reason) && void 0 !== OY ? OY : null), AY.usage && (null === DY || void 0 === DY || DY(AY.usage))
+        await async function(TT, oT, IT) {
+          await ek(TT, (TT => {
+            var iT;
+            const zT = TT,
+              kT = null === (iT = zT.choices) || void 0 === iT ? void 0 : iT[0];
+            var WT, XT;
+            kT && oT(null !== (WT = kT.delta) && void 0 !== WT ? WT : {}, null !== (XT = kT.finish_reason) && void 0 !== XT ? XT : null), zT.usage && (null === IT || void 0 === IT || IT(zT.usage))
           }))
-        }(RY.body, ((rY, DY) => {
-          var AY, IY, RY, OY;
-          uY ||= "length" === DY, aY += null !== (AY = null !== (IY = rY.reasoning) && void 0 !== IY ? IY : rY.reasoning_content) && void 0 !== AY ? AY : "", gY += null !== (RY = rY.content) && void 0 !== RY ? RY : "";
-          for (const YY of null !== (iY = rY.tool_calls) && void 0 !== iY ? iY : []) {
-            var iY;
-            sY ||= "" !== aY && "" === gY.trim(), yI(vY, YY)
+        }(WT.body, ((oT, IT) => {
+          var zT, kT, WT, XT;
+          DT ||= "length" === IT, FT += null !== (zT = null !== (kT = oT.reasoning) && void 0 !== kT ? kT : oT.reasoning_content) && void 0 !== zT ? zT : "", BT += null !== (WT = oT.content) && void 0 !== WT ? WT : "";
+          for (const TT of null !== (xT = oT.tool_calls) && void 0 !== xT ? xT : []) {
+            var xT;
+            LT ||= "" !== FT && "" === BT.trim(), gk(ST, TT)
           }
-          const yY = YY.nativeTools && sY ? null !== (OY = rI(gY)) && void 0 !== OY ? OY : "" : gY;
-          null === FY || void 0 === FY || FY({
-            model: YY.name,
-            reasoningChars: aY.length,
-            answer: yY,
-            isCalling: vY.length > 0
+          const cT = TT.nativeTools && LT ? null !== (XT = Wk(BT)) && void 0 !== XT ? XT : "" : BT;
+          null === iT || void 0 === iT || iT({
+            model: TT.name,
+            reasoningChars: FT.length,
+            answer: cT,
+            isCalling: ST.length > 0
           })
-        }), (YY => {
-          iY = YY
+        }), (TT => {
+          xT = TT
         }))
       } finally {
-        nA(iY, rY, gY + aY, 20 * vY.length)
+        Vz(xT, oT, BT + FT, 20 * ST.length)
       }
-      return null !== (AY = lI(YY, gY, aY, vY, uY, sY)) && void 0 !== AY ? AY : "failed"
+      return null !== (zT = Ek(TT, BT, FT, ST, DT, LT)) && void 0 !== zT ? zT : "failed"
     }
 
-    function lI(YY, rY, DY, FY, AY) {
-      var IY;
-      let RY = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        OY = rY;
-      var gY;
-      YY.nativeTools && RY && (OY = null !== (gY = rI(OY)) && void 0 !== gY ? gY : OY);
-      OY = OY.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-      const aY = WI(OY, DY, FY, null !== (IY = YY.callFormat) && void 0 !== IY ? IY : "simple", AY);
-      return "" === aY.answer ? null : {
-        model: YY.name,
-        answer: aY.answer,
-        reasoning: DY,
-        isCutShort: AY,
-        hasCallsFromReasoning: aY.hasCallsFromReasoning
+    function Ek(TT, oT, IT, iT, zT) {
+      var kT;
+      let WT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        XT = oT;
+      var BT;
+      TT.nativeTools && WT && (XT = null !== (BT = Wk(XT)) && void 0 !== BT ? BT : XT);
+      XT = XT.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      const FT = mk(XT, IT, iT, null !== (kT = TT.callFormat) && void 0 !== kT ? kT : "simple", zT);
+      return "" === FT.answer ? null : {
+        model: TT.name,
+        answer: FT.answer,
+        reasoning: IT,
+        isCutShort: zT,
+        hasCallsFromReasoning: FT.hasCallsFromReasoning
       }
     }
 
-    function TI(YY) {
-      return YY.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
+    function fk(TT) {
+      return TT.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
     }
 
-    function eI(YY) {
-      return VI(YY) && !YY.isCutShort
+    function Ck(TT) {
+      return uk(TT) && !TT.isCutShort
     }
-    async function NI(YY, rY, DY, FY, AY) {
-      const IY = YY.map((() => new AbortController)),
-        RY = () => {
-          for (const YY of IY) YY.abort()
+    async function jk(TT, oT, IT, iT, zT) {
+      const kT = TT.map((() => new AbortController)),
+        WT = () => {
+          for (const TT of kT) TT.abort()
         };
-      null !== DY && void 0 !== DY && DY.aborted && RY(), null === DY || void 0 === DY || DY.addEventListener("abort", RY, {
+      null !== IT && void 0 !== IT && IT.aborted && WT(), null === IT || void 0 === IT || IT.addEventListener("abort", WT, {
         once: !0
       });
-      const OY = YY.map((() => {})),
-        gY = YY.map((() => {}));
-      let aY = null;
-      const vY = YY => void 0 !== YY && ("" !== TI(YY.answer).trim() || !0 === YY.isCalling);
-      let uY = () => {};
-      YY.forEach(((YY, DY) => {
-        const RY = (0, WY.d)(vI, IY[DY].signal);
-        SI(YY, OI(rY, YY), RY.signal, (YY => {
-          gY[DY] = YY, null === aY && vY(YY) && (aY = DY), aY === DY && (null === FY || void 0 === FY || FY(YY))
-        }), AY).catch((rY => {
-          if (IY[DY].signal.aborted) return "failed";
-          const FY = RY.signal.aborted;
-          return console.warn(`World Code AI: ${YY.name} ${FY?"took longer than 240 s":"couldn't be reached"}`, rY), FY ? "timeout" : "failed"
-        })).then((YY => {
-          RY.clear(), OY[DY] = YY, aY !== DY || eI(YY) || (aY = null), uY()
+      const XT = TT.map((() => {})),
+        BT = TT.map((() => {}));
+      let FT = null;
+      const ST = TT => void 0 !== TT && ("" !== fk(TT.answer).trim() || !0 === TT.isCalling);
+      let DT = () => {};
+      TT.forEach(((TT, IT) => {
+        const WT = (0, rT.c)(Kk, kT[IT].signal);
+        vk(TT, Lk(oT, TT), WT.signal, (TT => {
+          BT[IT] = TT, null === FT && ST(TT) && (FT = IT), FT === IT && (null === iT || void 0 === iT || iT(TT))
+        }), zT).catch((oT => {
+          if (kT[IT].signal.aborted) return "failed";
+          const iT = WT.signal.aborted;
+          return console.warn(`World Code AI: ${TT.name} ${iT?"took longer than 240 s":"couldn't be reached"}`, oT), iT ? "timeout" : "failed"
+        })).then((TT => {
+          WT.clear(), XT[IT] = TT, FT !== IT || Ck(TT) || (FT = null), DT()
         }))
       }));
-      const sY = () => {
-        var YY;
-        if (null !== aY) {
-          const YY = OY[aY];
-          return eI(YY) ? {
-            reply: YY
+      const LT = () => {
+        var TT;
+        if (null !== FT) {
+          const TT = XT[FT];
+          return Ck(TT) ? {
+            reply: TT
           } : void 0
         }
-        const rY = OY.find(eI);
-        if (rY) return {
-          reply: rY
+        const oT = XT.find(Ck);
+        if (oT) return {
+          reply: oT
         };
-        if (!OY.includes(void 0)) return {
-          reply: null !== (YY = OY.find(VI)) && void 0 !== YY ? YY : null
+        if (!XT.includes(void 0)) return {
+          reply: null !== (TT = XT.find(uk)) && void 0 !== TT ? TT : null
         };
         {
-          const YY = OY.findIndex(((YY, rY) => void 0 === YY && vY(gY[rY])));
-          if (-1 !== YY) {
-            aY = YY;
-            const rY = gY[YY];
-            rY && (null === FY || void 0 === FY || FY(rY))
+          const TT = XT.findIndex(((TT, oT) => void 0 === TT && ST(BT[oT])));
+          if (-1 !== TT) {
+            FT = TT;
+            const oT = BT[TT];
+            oT && (null === iT || void 0 === iT || iT(oT))
           }
         }
       };
       try {
         for (;;) {
-          if (null !== DY && void 0 !== DY && DY.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
-          const YY = sY();
-          if (YY) {
-            const rY = OY.filter((YY => "string" === typeof YY));
+          if (null !== IT && void 0 !== IT && IT.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
+          const TT = LT();
+          if (TT) {
+            const oT = XT.filter((TT => "string" === typeof TT));
             return {
-              reply: YY.reply,
-              failures: rY
+              reply: TT.reply,
+              failures: oT
             }
           }
-          await new Promise((YY => {
-            uY = YY
+          await new Promise((TT => {
+            DT = TT
           }))
         }
       } finally {
-        null === DY || void 0 === DY || DY.removeEventListener("abort", RY), RY()
+        null === IT || void 0 === IT || IT.removeEventListener("abort", WT), WT()
       }
     }
 
-    function BI() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-      return LA.firstFreeAt(DI.map((YY => YY.name)), YY)
+    function Jk() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
+      return ik.firstFreeAt(Xk.map((TT => TT.name)), TT)
     }
-    async function cI(YY) {
-      var rY;
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const FY = Date.now(),
-        AY = null !== (rY = DY.models) && void 0 !== rY ? rY : DI,
-        IY = void 0 === DY.models ? function(YY, rY) {
-          let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-          const FY = YY.map((YY => ({
-              model: YY,
-              key: DY()
-            }))).sort(((YY, rY) => YY.key - rY.key)).map((YY => {
+    async function Uk(TT) {
+      var oT;
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const iT = Date.now(),
+        zT = null !== (oT = IT.models) && void 0 !== oT ? oT : Xk,
+        kT = void 0 === IT.models ? function(TT, oT) {
+          let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+          const iT = TT.map((TT => ({
+              model: TT,
+              key: IT()
+            }))).sort(((TT, oT) => TT.key - oT.key)).map((TT => {
               let {
-                model: rY
-              } = YY;
-              return rY
+                model: oT
+              } = TT;
+              return oT
             })),
-            AY = [...FY.filter((YY => rY(YY))), ...FY.filter((YY => !rY(YY)))],
-            IY = [];
-          for (let RY = 0; RY < AY.length; RY += 2) IY.push(AY.slice(RY, RY + 2));
-          return IY
-        }(AY, (YY => LA.freeAt(YY.name) <= FY)) : AY.map((YY => [YY])),
-        RY = [];
-      for (const gY of IY) {
-        const rY = await NI(gY, YY, DY.signal, DY.onProgress, DY.tools);
-        if (null !== rY.reply) {
-          const AY = gY.find((YY => {
-            var DY;
-            return YY.name === (null === (DY = rY.reply) || void 0 === DY ? void 0 : DY.model)
+            zT = [...iT.filter((TT => oT(TT))), ...iT.filter((TT => !oT(TT)))],
+            kT = [];
+          for (let WT = 0; WT < zT.length; WT += 2) kT.push(zT.slice(WT, WT + 2));
+          return kT
+        }(zT, (TT => ik.freeAt(TT.name) <= iT)) : zT.map((TT => [TT])),
+        WT = [];
+      for (const BT of kT) {
+        const oT = await jk(BT, TT, IT.signal, IT.onProgress, IT.tools);
+        if (null !== oT.reply) {
+          const zT = BT.find((TT => {
+            var IT;
+            return TT.name === (null === (IT = oT.reply) || void 0 === IT ? void 0 : IT.model)
           }));
           return {
-            ...AY && !1 !== DY.canNudge ? await zI(AY, OI(YY, AY), rY.reply, DY.signal, DY.onProgress, DY.tools) : rY.reply,
-            ms: Date.now() - FY
+            ...zT && !1 !== IT.canNudge ? await Qk(zT, Lk(TT, zT), oT.reply, IT.signal, IT.onProgress, IT.tools) : oT.reply,
+            ms: Date.now() - iT
           }
         }
-        RY.push(...rY.failures)
+        WT.push(...oT.failures)
       }
-      const OY = uI.find((YY => RY.includes(YY)));
-      throw new sI(null !== OY && void 0 !== OY ? OY : "failed")
+      const XT = Mk.find((TT => WT.includes(TT)));
+      throw new rk(null !== XT && void 0 !== XT ? XT : "failed")
     }
-    const KI = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
+    const ak = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
 
-    function HI(YY) {
-      const rY = YY.trim();
-      return rY.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(rY) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(rY) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(rY)
+    function Yk(TT) {
+      const oT = TT.trim();
+      return oT.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(oT) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(oT) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(oT)
     }
-    async function zI(YY, rY, DY, FY, AY, IY) {
-      var RY;
-      let OY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : vI;
-      if (! function(YY, rY) {
-          return !YY.isCutShort && HI(YY.answer) && !YY.answer.includes("?") && 0 === vD(YY.answer, rY).length
-        }(DY, null !== (RY = YY.callFormat) && void 0 !== RY ? RY : "simple")) return DY;
-      const gY = [...rY, {
+    async function Qk(TT, oT, IT, iT, zT, kT) {
+      var WT;
+      let XT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Kk;
+      if (! function(TT, oT) {
+          return !TT.isCutShort && Yk(TT.answer) && !TT.answer.includes("?") && 0 === LI(TT.answer, oT).length
+        }(IT, null !== (WT = TT.callFormat) && void 0 !== WT ? WT : "simple")) return IT;
+      const BT = [...oT, {
           role: "assistant",
-          content: DY.answer
+          content: IT.answer
         }, {
           role: "user",
-          content: KI
+          content: ak
         }],
-        aY = (0, WY.d)(OY, FY);
+        FT = (0, rT.c)(XT, iT);
       try {
-        const rY = await SI(YY, gY, aY.signal, AY, IY);
-        return VI(rY) && "" !== rY.answer.trim() ? rY : DY
-      } catch (vY) {
-        if (null !== FY && void 0 !== FY && FY.aborted) throw vY;
-        return DY
+        const oT = await vk(TT, BT, FT.signal, zT, kT);
+        return uk(oT) && "" !== oT.answer.trim() ? oT : IT
+      } catch (ST) {
+        if (null !== iT && void 0 !== iT && iT.aborted) throw ST;
+        return IT
       } finally {
-        aY.clear()
+        FT.clear()
       }
     }
 
-    function ZI(YY) {
-      const rY = TI(YY);
-      return /too_complex/i.test(rY) || /^\W*too[\s_-]*complex\W*$/i.test(rY.trim())
+    function Ok(TT) {
+      const oT = fk(TT);
+      return /too_complex/i.test(oT) || /^\W*too[\s_-]*complex\W*$/i.test(oT.trim())
     }
 
-    function CI(YY) {
-      const rY = TI(YY).trim();
-      return rY.length > 19 && !/^\W*too[\s_-]*complex/i.test(rY)
+    function Hk(TT) {
+      const oT = fk(TT).trim();
+      return oT.length > 19 && !/^\W*too[\s_-]*complex/i.test(oT)
     }
 
-    function fI(YY) {
-      return YY.map(((YY, rY) => 0 === rY && "system" === YY.role ? {
-        ...YY,
-        content: YY.content + aI
-      } : YY))
+    function nk(TT) {
+      return TT.map(((TT, oT) => 0 === oT && "system" === TT.role ? {
+        ...TT,
+        content: TT.content + ck
+      } : TT))
     }
-    async function jI(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      for (const FY of KA) {
-        const DY = await hI(FY, [{
+    async function qk(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      for (const iT of Uz) {
+        const IT = await Zk(iT, [{
           role: "user",
-          content: YY
-        }], rY);
-        if (null !== DY && "busy" !== DY) return CA(DY)
+          content: TT
+        }], oT);
+        if (null !== IT && "busy" !== IT) return Oz(IT)
       }
-      return DY ? "unchecked" : "ok"
+      return IT ? "unchecked" : "ok"
     }
-    async function hI(YY, rY, DY) {
-      const FY = (0, WY.d)(2e4, DY);
-      LA.record(YY);
+    async function Zk(TT, oT, IT) {
+      const iT = (0, rT.c)(2e4, IT);
+      ik.record(TT);
       try {
-        var AY, IY, RY, OY;
-        const DY = await fetch(cA, {
+        var zT, kT, WT, XT;
+        const IT = await fetch(Jz, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: YY,
-            messages: rY,
+            model: TT,
+            messages: oT,
             max_tokens: 40
           }),
           credentials: "omit",
           referrerPolicy: "no-referrer",
-          signal: FY.signal
+          signal: iT.signal
         });
-        if (429 === DY.status) return LA.markFull(YY), "busy";
-        if (!DY.ok) return null;
-        const gY = await DY.json(),
-          aY = String(null !== (AY = null === (IY = gY.choices) || void 0 === IY || null === (RY = IY[0]) || void 0 === RY || null === (OY = RY.message) || void 0 === OY ? void 0 : OY.content) && void 0 !== AY ? AY : "");
-        return nA(gY.usage, rY, aY),
-          function(YY) {
-            return /Safety:/.test(YY)
-          }(aY) ? aY : null
-      } catch (gY) {
-        if (null !== DY && void 0 !== DY && DY.aborted) throw gY;
+        if (429 === IT.status) return ik.markFull(TT), "busy";
+        if (!IT.ok) return null;
+        const BT = await IT.json(),
+          FT = String(null !== (zT = null === (kT = BT.choices) || void 0 === kT || null === (WT = kT[0]) || void 0 === WT || null === (XT = WT.message) || void 0 === XT ? void 0 : XT.content) && void 0 !== zT ? zT : "");
+        return Vz(BT.usage, oT, FT),
+          function(TT) {
+            return /Safety:/.test(TT)
+          }(FT) ? FT : null
+      } catch (BT) {
+        if (null !== IT && void 0 !== IT && IT.aborted) throw BT;
         return null
       } finally {
-        FY.clear()
+        iT.clear()
       }
     }
-    var dI = DY(40);
-    const JI = "aiHelperDataSharing";
+    var lk = IT(26);
+    const sk = "aiHelperDataSharing";
 
-    function MI() {
-      const YY = dI.m.getItem(JI);
-      return null !== YY && "object" === typeof YY ? YY : {}
+    function tk() {
+      const TT = lk.e.getItem(sk);
+      return null !== TT && "object" === typeof TT ? TT : {}
     }
-    const wI = new class {
+    const Gk = new class {
       constructor() {
-        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = YY => (this.listen(), this.listeners.add(YY), () => {
-          this.listeners.delete(YY)
+        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = TT => (this.listen(), this.listeners.add(TT), () => {
+          this.listeners.delete(TT)
         })
       }
       get() {
-        var YY, rY;
-        return null === this.player ? null : null !== (YY = null !== (rY = this.unsaved.get(this.player)) && void 0 !== rY ? rY : MI()[this.player]) && void 0 !== YY ? YY : null
+        var TT, oT;
+        return null === this.player ? null : null !== (TT = null !== (oT = this.unsaved.get(this.player)) && void 0 !== oT ? oT : tk()[this.player]) && void 0 !== TT ? TT : null
       }
       getPlayer() {
         return this.player
       }
       async refresh() {
         this.listen();
-        const YY = await async function() {
-          var YY, rY;
+        const TT = await async function() {
+          var TT, oT;
           const {
-            userContextManager: FY
-          } = await Promise.resolve().then((() => DY(1159)));
-          return null !== (YY = null === (rY = FY.peekCurrentUserContext()) || void 0 === rY ? void 0 : rY.whamm) && void 0 !== YY ? YY : null
-        }().catch((YY => (console.error("AI Helper: couldn't look up the player for sharing chats", YY), null)));
-        return YY !== this.player && (this.player = YY, this.notify()), this.get()
+            userContextManager: iT
+          } = await Promise.resolve().then((() => IT(1117)));
+          return null !== (TT = null === (oT = iT.peekCurrentUserContext()) || void 0 === oT ? void 0 : oT.whamm) && void 0 !== TT ? TT : null
+        }().catch((TT => (console.error("AI Helper: couldn't look up the player for sharing chats", TT), null)));
+        return TT !== this.player && (this.player = TT, this.notify()), this.get()
       }
-      set(YY) {
-        null !== this.player && (dI.m.setItem(JI, {
-          ...MI(),
-          [this.player]: YY
-        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, YY), this.notify())
+      set(TT) {
+        null !== this.player && (lk.e.setItem(sk, {
+          ...tk(),
+          [this.player]: TT
+        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, TT), this.notify())
       }
       listen() {
         this.listening || (this.listening = !0, window.addEventListener("storage", (() => {
@@ -6933,133 +6933,133 @@ export const modules = {
         })))
       }
       notify() {
-        for (const YY of this.listeners) YY()
+        for (const TT of this.listeners) TT()
       }
     };
-    let bI = null,
-      XI = !1;
-    const qI = 4e5,
-      pI = 6e4,
-      kI = 12,
-      GI = 9e5;
+    let pk = null,
+      bk = !1;
+    const yk = 4e5,
+      Nk = 6e4,
+      Pk = 12,
+      dk = 9e5;
 
-    function xI(YY, rY) {
-      if (YY.length <= rY) return YY;
-      const DY = `\n[... ${YY.length-rY} more characters cut]`;
-      let FY = Math.max(0, rY - DY.length);
-      const AY = YY.charCodeAt(FY - 1);
-      return AY >= 55296 && AY <= 56319 && FY--, YY.slice(0, FY) + DY
+    function Vk(TT, oT) {
+      if (TT.length <= oT) return TT;
+      const IT = `\n[... ${TT.length-oT} more characters cut]`;
+      let iT = Math.max(0, oT - IT.length);
+      const zT = TT.charCodeAt(iT - 1);
+      return zT >= 55296 && zT <= 56319 && iT--, TT.slice(0, iT) + IT
     }
-    var nI = DY(631);
+    var TW = IT(623);
 
-    function PI(YY) {
-      var rY;
-      return "system" === (null === (rY = YY[0]) || void 0 === rY ? void 0 : rY.role) ? function(YY) {
-        let rY = 2166136261;
-        for (let DY = 0; DY < YY.length; DY++) rY ^= YY.charCodeAt(DY), rY = Math.imul(rY, 16777619);
-        return (rY >>> 0).toString(16).padStart(8, "0")
-      }(YY[0].content.split("\n\n## ")[0]) : ""
+    function oW(TT) {
+      var oT;
+      return "system" === (null === (oT = TT[0]) || void 0 === oT ? void 0 : oT.role) ? function(TT) {
+        let oT = 2166136261;
+        for (let IT = 0; IT < TT.length; IT++) oT ^= TT.charCodeAt(IT), oT = Math.imul(oT, 16777619);
+        return (oT >>> 0).toString(16).padStart(8, "0")
+      }(TT[0].content.split("\n\n## ")[0]) : ""
     }
 
-    function UI(YY, rY, DY) {
-      const FY = (AY = rY.input, JSON.stringify({
-        ...AY,
+    function IW(TT, oT, IT) {
+      const iT = (zT = oT.input, JSON.stringify({
+        ...zT,
         prefabs: void 0
       }));
-      var AY;
-      return FY.length > qI ? null : {
+      var zT;
+      return iT.length > yk ? null : {
         sentAt: Date.now(),
-        chatId: YY,
-        responder: rY.responder,
-        promptVersion: rY.promptVersion,
-        clientVersion: String(nI.d),
-        request: FY,
-        responses: [LI(DY)]
+        chatId: TT,
+        responder: oT.responder,
+        promptVersion: oT.promptVersion,
+        clientVersion: String(TW.c),
+        request: iT,
+        responses: [iW(IT)]
       }
     }
 
-    function LI(YY) {
+    function iW(TT) {
       return {
-        model: YY.model,
-        text: xI(YY.text, pI)
+        model: TT.model,
+        text: Vk(TT.text, Nk)
       }
     }
-    class tI {
+    class zW {
       constructor() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : FR;
-        this.gy = YY, this.chatId = function() {
-          const YY = new Uint8Array(12);
-          return crypto.getRandomValues(YY), Array.from(YY, (YY => YY.toString(16).padStart(2, "0"))).join("")
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BW;
+        this.Bc = TT, this.chatId = function() {
+          const TT = new Uint8Array(12);
+          return crypto.getRandomValues(TT), Array.from(TT, (TT => TT.toString(16).padStart(2, "0"))).join("")
         }(), this.open = new Map
       }
-      requestStarted(YY, rY) {
-        const DY = this.open.get(YY);
-        DY && (clearTimeout(DY.timer), rY || (this.open.delete(YY), this.send(DY.gy)))
+      requestStarted(TT, oT) {
+        const IT = this.open.get(TT);
+        IT && (clearTimeout(IT.timer), oT || (this.open.delete(TT), this.send(IT.Bc)))
       }
-      answered(YY, rY, DY) {
-        if ("" === DY.text.trim()) return;
-        const FY = this.open.get(YY);
-        if (FY) return void(FY.gy.responses.length < kI && FY.gy.responses.push(LI(DY)));
-        const AY = UI(this.chatId, rY, DY);
-        AY && this.open.set(YY, {
-          gy: AY
+      answered(TT, oT, IT) {
+        if ("" === IT.text.trim()) return;
+        const iT = this.open.get(TT);
+        if (iT) return void(iT.Bc.responses.length < Pk && iT.Bc.responses.push(iW(IT)));
+        const zT = IW(this.chatId, oT, IT);
+        zT && this.open.set(TT, {
+          Bc: zT
         })
       }
-      drop(YY) {
-        var rY;
-        clearTimeout(null === (rY = this.open.get(YY)) || void 0 === rY ? void 0 : rY.timer), this.open.delete(YY)
+      drop(TT) {
+        var oT;
+        clearTimeout(null === (oT = this.open.get(TT)) || void 0 === oT ? void 0 : oT.timer), this.open.delete(TT)
       }
-      requestEnded(YY) {
-        const rY = this.open.get(YY);
-        rY && (clearTimeout(rY.timer), rY.timer = setTimeout((() => {
-          this.open.delete(YY), this.send(rY.gy)
+      requestEnded(TT) {
+        const oT = this.open.get(TT);
+        oT && (clearTimeout(oT.timer), oT.timer = setTimeout((() => {
+          this.open.delete(TT), this.send(oT.Bc)
         }), 2e4))
       }
-      send(YY) {
-        (function(YY) {
-          return (new TextEncoder).encode(JSON.stringify(YY)).length <= GI
-        })(YY) && this.gy(YY)
+      send(TT) {
+        (function(TT) {
+          return (new TextEncoder).encode(JSON.stringify(TT)).length <= dk
+        })(TT) && this.Bc(TT)
       }
     }
-    const YR = [],
-      rR = 5;
-    let DR = !1;
+    const kW = [],
+      WW = 5;
+    let XW = !1;
 
-    function FR(YY) {
+    function BW(TT) {
       (async () => {
-        const rY = await wI.refresh(),
-          DY = wI.getPlayer();
-        "yes" === rY ? await IR([YY]) : null === rY && null !== DY && function(YY, rY) {
-          DR || (DR = !0, wI.subscribe(AR));
-          YR.push({
-            player: YY,
-            gy: rY
-          }), YR.length > rR && YR.shift()
-        }(DY, YY)
+        const oT = await Gk.refresh(),
+          IT = Gk.getPlayer();
+        "yes" === oT ? await SW([TT]) : null === oT && null !== IT && function(TT, oT) {
+          XW || (XW = !0, Gk.subscribe(FW));
+          kW.push({
+            player: TT,
+            Bc: oT
+          }), kW.length > WW && kW.shift()
+        }(IT, TT)
       })()
     }
 
-    function AR() {
-      const YY = wI.get();
-      if (null === YY) return;
-      const rY = wI.getPlayer(),
-        DY = YR.splice(0).filter((YY => YY.player === rY));
-      "yes" === YY && DY.length > 0 && IR(DY.map((YY => YY.gy)))
+    function FW() {
+      const TT = Gk.get();
+      if (null === TT) return;
+      const oT = Gk.getPlayer(),
+        IT = kW.splice(0).filter((TT => TT.player === oT));
+      "yes" === TT && IT.length > 0 && SW(IT.map((TT => TT.Bc)))
     }
-    async function IR(YY) {
-      const rY = Promise.resolve().then((() => DY(40541)));
-      for (const DY of YY) try {
+    async function SW(TT) {
+      const oT = Promise.resolve().then((() => IT(40290)));
+      for (const IT of TT) try {
         const {
-          postToGameServer: YY
-        } = await rY;
-        await YY("/ai-helper/turn", DY)
-      } catch (FY) {
-        console.warn("AI Helper: couldn't share a turn", FY)
+          postToGameServer: TT
+        } = await oT;
+        await TT("/ai-helper/turn", IT)
+      } catch (iT) {
+        console.warn("AI Helper: couldn't share a turn", iT)
       }
     }
-    var RR = DY(341),
-      OR = DY(183);
-    const gR = {
+    var DW = IT(314),
+      LW = IT(159);
+    const xW = {
         openrouter: {
           id: "openrouter",
           name: "OpenRouter",
@@ -7096,292 +7096,292 @@ export const modules = {
           keyPage: ""
         }
       },
-      aR = ["openrouter", "anthropic", "openai", "gemini", "custom"],
-      vR = new Set(Object.values(gR).flatMap((YY => "" === YY.baseUrl ? [] : [new URL(YY.baseUrl).host])));
+      cW = ["openrouter", "anthropic", "openai", "gemini", "custom"],
+      KW = new Set(Object.values(xW).flatMap((TT => "" === TT.baseUrl ? [] : [new URL(TT.baseUrl).host])));
 
-    function uR(YY) {
-      return YY.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
+    function MW(TT) {
+      return TT.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
     }
 
-    function sR(YY) {
-      return YY.startsWith("sk-or-") ? "openrouter" : YY.startsWith("sk-ant-") ? "anthropic" : YY.startsWith("AIza") ? "gemini" : YY.startsWith("sk-") ? "openai" : null
+    function rW(TT) {
+      return TT.startsWith("sk-or-") ? "openrouter" : TT.startsWith("sk-ant-") ? "anthropic" : TT.startsWith("AIza") ? "gemini" : TT.startsWith("sk-") ? "openai" : null
     }
 
-    function iR(YY) {
-      let rY;
+    function AW(TT) {
+      let oT;
       try {
-        rY = new URL(YY.trim())
+        oT = new URL(TT.trim())
       } catch {
         return null
       }
-      const DY = "localhost" === rY.hostname || "127.0.0.1" === rY.hostname;
-      return "https:" !== rY.protocol && ("http:" !== rY.protocol || !DY) || rY.username || rY.password || rY.search ? null : `${rY.origin}${rY.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
+      const IT = "localhost" === oT.hostname || "127.0.0.1" === oT.hostname;
+      return "https:" !== oT.protocol && ("http:" !== oT.protocol || !IT) || oT.username || oT.password || oT.search ? null : `${oT.origin}${oT.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
     }
 
-    function yR(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      return "custom" === YY && rY ? new URL(rY).host : DY ? gR[YY].shortName : gR[YY].name
+    function gW(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      return "custom" === TT && oT ? new URL(oT).host : IT ? xW[TT].shortName : xW[TT].name
     }
-    class QR extends Error {
-      constructor(YY, rY, DY, FY) {
-        super(`AI key request: ${YY}`), this.problem = YY, this.retryAfterMs = rY, this.status = DY, this.detail = FY
+    class hW extends Error {
+      constructor(TT, oT, IT, iT) {
+        super(`AI key request: ${TT}`), this.problem = TT, this.retryAfterMs = oT, this.status = IT, this.detail = iT
       }
     }
 
-    function oR(YY, rY) {
-      return ("" === rY ? YY : YY.split(rY).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
+    function wW(TT, oT) {
+      return ("" === oT ? TT : TT.split(oT).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
     }
 
-    function WR(YY, rY) {
-      const DY = "custom" === rY ? "That server" : gR[rY].shortName;
-      switch (YY) {
+    function mW(TT, oT) {
+      const IT = "custom" === oT ? "That server" : xW[oT].shortName;
+      switch (TT) {
         case "badKey":
-          return `${DY} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
+          return `${IT} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
         case "busy":
           return "Too many requests right now. Wait a minute and try again.";
         case "noModel":
-          return `${DY} can't find that model. Check its name.`;
+          return `${IT} can't find that model. Check its name.`;
         case "unreachable":
-          return "anthropic" === rY ? "Claude didn't accept your key: check it, or make a new one." : "custom" === rY ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${DY}. Check your internet and try again.`;
+          return "anthropic" === oT ? "Claude didn't accept your key: check it, or make a new one." : "custom" === oT ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${IT}. Check your internet and try again.`;
         case "noCredit":
-          return "custom" === rY ? "That server stopped your key for now: it has used all it can." : `${DY} stopped your key for now: it has used all it can. Check it on ${DY}'s website.`;
+          return "custom" === oT ? "That server stopped your key for now: it has used all it can." : `${IT} stopped your key for now: it has used all it can. Check it on ${IT}'s website.`;
         case "blocked":
-          return `${DY} doesn't work from where you are.`;
+          return `${IT} doesn't work from where you are.`;
         case "timeout":
           return "That took too long. Try again.";
         default:
-          return `${DY} had a problem with that. Try again in a minute.`
+          return `${IT} had a problem with that. Try again in a minute.`
       }
     }
 
-    function ER(YY) {
-      var rY;
-      const DY = YY.at(-1);
-      if (!DY || null !== gD(DY.name, DY.args) || function(YY) {
+    function eW(TT) {
+      var oT;
+      const IT = TT.at(-1);
+      if (!IT || null !== SI(IT.name, IT.args) || function(TT) {
           try {
-            return JSON.parse(YY), !0
+            return JSON.parse(TT), !0
           } catch {
             return !1
           }
-        }(DY.args)) return;
-      const FY = null === (rY = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(DY.args)) || void 0 === rY ? void 0 : rY[1];
+        }(IT.args)) return;
+      const iT = null === (oT = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(IT.args)) || void 0 === oT ? void 0 : oT[1];
       return {
-        name: DY.name || "write_file",
-        path: FY
+        name: IT.name || "write_file",
+        path: iT
       }
     }
-    const mR = 1e4,
-      VR = 3e5,
-      SR = 16e3;
-    async function lR(YY, rY, DY, FY) {
-      if ("custom" !== YY && ! function(YY) {
-          return vR.has(new URL(YY).host)
-        }(rY)) throw new Error(`AI key request to an unknown host for ${YY}`);
-      const AY = await fetch(rY, {
-        ...DY,
+    const RW = 1e4,
+      uW = 3e5,
+      vW = 16e3;
+    async function EW(TT, oT, IT, iT) {
+      if ("custom" !== TT && ! function(TT) {
+          return KW.has(new URL(TT).host)
+        }(oT)) throw new Error(`AI key request to an unknown host for ${TT}`);
+      const zT = await fetch(oT, {
+        ...IT,
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: FY
+        signal: iT
       });
-      if (!AY.ok) {
-        const rY = await AY.text().catch((() => ""));
-        throw console.warn(`AI key request: ${YY} answered ${AY.status}`), new QR(function(YY, rY, DY) {
-          const FY = !("gemini" === YY && 429 === rY) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(DY);
-          return 401 === rY ? "badKey" : 404 !== rY && 400 !== rY || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(DY) ? 402 === rY || (400 === rY || 403 === rY || 429 === rY) && FY && !/rate[ _-]?limit/i.test(DY) ? "noCredit" : 400 === rY && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(DY) ? "blocked" : 400 === rY && /api[ _-]?key/i.test(DY) ? "badKey" : 403 === rY ? /moderat|flagged/i.test(DY) ? "refused" : /region|country|territor|location/i.test(DY) ? "blocked" : "badKey" : 429 === rY ? "busy" : "failed" : "noModel"
-        }(YY, AY.status, rY), function(YY) {
-          const rY = YY.headers.get("retry-after");
-          if (!rY) return;
-          const DY = Number(rY);
-          return Number.isFinite(DY) ? 1e3 * DY : Math.max(0, Date.parse(rY) - Date.now()) || void 0
-        }(AY), AY.status, function(YY, rY) {
-          let DY = YY;
+      if (!zT.ok) {
+        const oT = await zT.text().catch((() => ""));
+        throw console.warn(`AI key request: ${TT} answered ${zT.status}`), new hW(function(TT, oT, IT) {
+          const iT = !("gemini" === TT && 429 === oT) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(IT);
+          return 401 === oT ? "badKey" : 404 !== oT && 400 !== oT || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(IT) ? 402 === oT || (400 === oT || 403 === oT || 429 === oT) && iT && !/rate[ _-]?limit/i.test(IT) ? "noCredit" : 400 === oT && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(IT) ? "blocked" : 400 === oT && /api[ _-]?key/i.test(IT) ? "badKey" : 403 === oT ? /moderat|flagged/i.test(IT) ? "refused" : /region|country|territor|location/i.test(IT) ? "blocked" : "badKey" : 429 === oT ? "busy" : "failed" : "noModel"
+        }(TT, zT.status, oT), function(TT) {
+          const oT = TT.headers.get("retry-after");
+          if (!oT) return;
+          const IT = Number(oT);
+          return Number.isFinite(IT) ? 1e3 * IT : Math.max(0, Date.parse(oT) - Date.now()) || void 0
+        }(zT), zT.status, function(TT, oT) {
+          let IT = TT;
           try {
-            const rY = JSON.parse(YY),
-              FY = rY.error && "object" === typeof rY.error ? rY.error.message : void 0,
-              AY = [rY.error, FY, rY.message].find((YY => "string" === typeof YY));
-            DY = "string" === typeof AY ? AY : YY
+            const oT = JSON.parse(TT),
+              iT = oT.error && "object" === typeof oT.error ? oT.error.message : void 0,
+              zT = [oT.error, iT, oT.message].find((TT => "string" === typeof TT));
+            IT = "string" === typeof zT ? zT : TT
           } catch {}
-          const FY = rY.reduce(((YY, rY) => oR(YY, rY)), DY.replace(/\s+/g, " ").trim()).slice(0, 200);
-          return "" === FY ? void 0 : FY
-        }(rY, function(YY) {
-          const rY = [];
-          return new Headers(YY.headers).forEach(((YY, DY) => {
-            /authorization|key/i.test(DY) && rY.push(YY, YY.replace(/^Bearer\s+/i, ""))
-          })), rY.filter((YY => YY.length >= 6))
-        }(DY)))
+          const iT = oT.reduce(((TT, oT) => wW(TT, oT)), IT.replace(/\s+/g, " ").trim()).slice(0, 200);
+          return "" === iT ? void 0 : iT
+        }(oT, function(TT) {
+          const oT = [];
+          return new Headers(TT.headers).forEach(((TT, IT) => {
+            /authorization|key/i.test(IT) && oT.push(TT, TT.replace(/^Bearer\s+/i, ""))
+          })), oT.filter((TT => TT.length >= 6))
+        }(IT)))
       }
-      return AY
+      return zT
     }
-    async function TR(YY, rY, DY) {
-      const FY = (0, WY.d)(YY, rY);
+    async function fW(TT, oT, IT) {
+      const iT = (0, rT.c)(TT, oT);
       try {
-        return await DY(FY.signal)
-      } catch (AY) {
-        if (AY instanceof QR || null !== rY && void 0 !== rY && rY.aborted) throw AY;
-        throw FY.signal.aborted || console.warn("AI key request couldn't be read", AY), new QR(FY.signal.aborted ? "timeout" : "unreachable")
+        return await IT(iT.signal)
+      } catch (zT) {
+        if (zT instanceof hW || null !== oT && void 0 !== oT && oT.aborted) throw zT;
+        throw iT.signal.aborted || console.warn("AI key request couldn't be read", zT), new hW(iT.signal.aborted ? "timeout" : "unreachable")
       } finally {
-        FY.clear()
+        iT.clear()
       }
     }
 
-    function eR(YY) {
-      let rY = YY.length;
-      const DY = YY.lastIndexOf("<tool_call"); - 1 === DY || YY.includes("</tool_call>", DY) || (rY = DY);
-      const FY = [...YY.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((rY => null === function(YY, rY) {
-        let DY = 0,
-          FY = !1;
-        for (let AY = rY; AY < YY.length; AY++) {
-          const rY = YY[AY];
-          if (FY) "\\" === rY ? AY++ : '"' === rY && (FY = !1);
-          else if ('"' === rY) FY = !0;
-          else if ("{" === rY) DY++;
-          else if ("}" === rY && (DY--, 0 === DY)) return AY + 1
+    function CW(TT) {
+      let oT = TT.length;
+      const IT = TT.lastIndexOf("<tool_call"); - 1 === IT || TT.includes("</tool_call>", IT) || (oT = IT);
+      const iT = [...TT.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((oT => null === function(TT, oT) {
+        let IT = 0,
+          iT = !1;
+        for (let zT = oT; zT < TT.length; zT++) {
+          const oT = TT[zT];
+          if (iT) "\\" === oT ? zT++ : '"' === oT && (iT = !1);
+          else if ('"' === oT) iT = !0;
+          else if ("{" === oT) IT++;
+          else if ("}" === oT && (IT--, 0 === IT)) return zT + 1
         }
         return null
-      }(YY, rY.index)));
-      return FY && FY.index < rY && (rY = FY.index), YY.slice(0, rY).replace(/```[\w-]*\s*$/, "").trim()
+      }(TT, oT.index)));
+      return iT && iT.index < oT && (oT = iT.index), TT.slice(0, oT).replace(/```[\w-]*\s*$/, "").trim()
     }
 
-    function NR(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
-        FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+    function jW(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
+        iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
       const {
-        answer: AY,
-        reasoning: IY,
-        mDY: RY,
-        isCutShort: OY,
-        nativeCalls: gY = []
-      } = rY, aY = AY.replace(/<think>[\s\S]*?<\/think>/g, ""), vY = "" === FY ? aY.trim() : function(YY, rY) {
-        var DY, FY;
-        const AY = rY.trimStart(),
-          IY = YY.trimStart();
-        if (IY.length >= 16 && AY.startsWith(IY.slice(0, 240))) return AY;
-        const RY = null !== (DY = null === (FY = YY.match(/```/g)) || void 0 === FY ? void 0 : FY.length) && void 0 !== DY ? DY : 0,
-          OY = eR(YY) !== YY.trim() || RY % 2 === 1 ? 48 : 16;
-        for (let gY = Math.min(YY.length, AY.length, 4e3); gY >= OY; gY--)
-          if (YY.endsWith(AY.slice(0, gY))) return YY + AY.slice(gY);
-        return YY + rY
-      }(FY, aY).trim(), uY = oI(vY, "", gY, DY), sY = oI(OY ? eR(vY) : vY, IY, gY, DY, OY), iY = OY ? ER(gY) : void 0;
-      if (RY && "" === sY) throw new QR("refused");
-      if ("" === sY && (!OY || "" === uY && !iY)) throw new QR("failed");
+        answer: zT,
+        reasoning: kT,
+        pIT: WT,
+        isCutShort: XT,
+        nativeCalls: BT = []
+      } = oT, FT = zT.replace(/<think>[\s\S]*?<\/think>/g, ""), ST = "" === iT ? FT.trim() : function(TT, oT) {
+        var IT, iT;
+        const zT = oT.trimStart(),
+          kT = TT.trimStart();
+        if (kT.length >= 16 && zT.startsWith(kT.slice(0, 240))) return zT;
+        const WT = null !== (IT = null === (iT = TT.match(/```/g)) || void 0 === iT ? void 0 : iT.length) && void 0 !== IT ? IT : 0,
+          XT = CW(TT) !== TT.trim() || WT % 2 === 1 ? 48 : 16;
+        for (let BT = Math.min(TT.length, zT.length, 4e3); BT >= XT; BT--)
+          if (TT.endsWith(zT.slice(0, BT))) return TT + zT.slice(BT);
+        return TT + oT
+      }(iT, FT).trim(), DT = wk(ST, "", BT, IT), LT = wk(XT ? CW(ST) : ST, kT, BT, IT, XT), xT = XT ? eW(BT) : void 0;
+      if (WT && "" === LT) throw new hW("refused");
+      if ("" === LT && (!XT || "" === DT && !xT)) throw new hW("failed");
       return {
-        model: YY,
-        answer: sY,
-        reasoning: IY,
-        isCutShort: OY,
-        written: OY ? uY : void 0,
-        cutCall: iY
+        model: TT,
+        answer: LT,
+        reasoning: kT,
+        isCutShort: XT,
+        written: XT ? DT : void 0,
+        cutCall: xT
       }
     }
 
-    function BR(YY) {
-      const rY = YY.findIndex((YY => "user" === YY.role));
-      return -1 === rY ? [] : YY.slice(rY)
+    function JW(TT) {
+      const oT = TT.findIndex((TT => "user" === TT.role));
+      return -1 === oT ? [] : TT.slice(oT)
     }
 
-    function cR(YY, rY) {
-      var DY;
-      const FY = null !== (DY = rY.tools) && void 0 !== DY ? DY : [];
-      if (0 === FY.length) return {};
-      switch (YY) {
+    function UW(TT, oT) {
+      var IT;
+      const iT = null !== (IT = oT.tools) && void 0 !== IT ? IT : [];
+      if (0 === iT.length) return {};
+      switch (TT) {
         case "openai":
           return {
-            tools: mI(FY)
+            tools: Rk(iT)
           };
         case "anthropic":
           return {
-            tools: FY.map((YY => ({
-              name: YY.name,
-              description: YY.description,
-              input_schema: YY.inputSchema
+            tools: iT.map((TT => ({
+              name: TT.name,
+              description: TT.description,
+              input_schema: TT.inputSchema
             })))
           };
         case "gemini":
           return {
             tools: [{
-              functionDeclarations: FY.map((YY => {
+              functionDeclarations: iT.map((TT => {
                 return {
-                  name: YY.name,
-                  description: YY.description,
-                  parameters: (rY = YY.inputSchema, {
+                  name: TT.name,
+                  description: TT.description,
+                  parameters: (oT = TT.inputSchema, {
                     type: "OBJECT",
-                    properties: Object.fromEntries(Object.entries(rY.properties).map((YY => {
-                      let [rY, DY] = YY;
-                      return [rY, {
+                    properties: Object.fromEntries(Object.entries(oT.properties).map((TT => {
+                      let [oT, IT] = TT;
+                      return [oT, {
                         type: "STRING",
-                        description: DY.description
+                        description: IT.description
                       }]
                     }))),
-                    required: rY.required
+                    required: oT.required
                   })
                 };
-                var rY
+                var oT
               }))
             }]
           }
       }
     }
-    class KR {
-      constructor(YY, rY, DY) {
-        this.provider = YY, this.baseUrl = rY, this.key = DY
+    class aW {
+      constructor(TT, oT, IT) {
+        this.provider = TT, this.baseUrl = oT, this.key = IT
       }
-      async check(YY) {
-        return TR(mR, YY, (async YY => {
-          var rY;
-          const DY = await lR(this.provider, `${this.baseUrl}/models`, {
+      async check(TT) {
+        return fW(RW, TT, (async TT => {
+          var oT;
+          const IT = await EW(this.provider, `${this.baseUrl}/models`, {
             headers: this.headers()
-          }, YY);
+          }, TT);
           return {
-            models: (null !== (rY = (await DY.json()).data) && void 0 !== rY ? rY : []).map((YY => ({
-              id: YY.id,
-              name: YY.name
+            models: (null !== (oT = (await IT.json()).data) && void 0 !== oT ? oT : []).map((TT => ({
+              id: TT.id,
+              name: TT.name
             })))
           }
         }))
       }
-      async ask(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return TR(VR, DY.signal, (async FY => {
-          var AY;
-          const IY = await lR(this.provider, `${this.baseUrl}/chat/completions`, {
+      async ask(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return fW(uW, IT.signal, (async iT => {
+          var zT;
+          const kT = await EW(this.provider, `${this.baseUrl}/chat/completions`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: YY,
-              messages: rY,
-              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: SR,
+              model: TT,
+              messages: oT,
+              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: vW,
               stream: !0,
-              ...cR("openai", DY)
+              ...UW("openai", IT)
             })
-          }, FY);
-          let RY = "",
-            OY = "",
-            gY = !1,
-            aY = !1;
-          const vY = [];
-          return await EI(null !== (AY = IY.body) && void 0 !== AY ? AY : new ReadableStream, (rY => {
-            var FY, AY, IY, uY, sY, iY, yY, QY;
-            const oY = rY;
-            if (oY.error) throw new QR(402 === Number(oY.error.code) ? "noCredit" : "failed");
-            const WY = null === (FY = oY.choices) || void 0 === FY ? void 0 : FY[0];
-            OY += null !== (AY = null !== (IY = null === WY || void 0 === WY || null === (uY = WY.delta) || void 0 === uY ? void 0 : uY.reasoning) && void 0 !== IY ? IY : null === WY || void 0 === WY || null === (sY = WY.delta) || void 0 === sY ? void 0 : sY.reasoning_content) && void 0 !== AY ? AY : "", RY += null !== (iY = null === WY || void 0 === WY || null === (yY = WY.delta) || void 0 === yY ? void 0 : yY.content) && void 0 !== iY ? iY : "";
-            for (const YY of null !== (EY = null === WY || void 0 === WY || null === (mY = WY.delta) || void 0 === mY ? void 0 : mY.tool_calls) && void 0 !== EY ? EY : []) {
-              var EY, mY;
-              yI(vY, YY)
+          }, iT);
+          let WT = "",
+            XT = "",
+            BT = !1,
+            FT = !1;
+          const ST = [];
+          return await ek(null !== (zT = kT.body) && void 0 !== zT ? zT : new ReadableStream, (oT => {
+            var iT, zT, kT, DT, LT, xT, cT, KT;
+            const MT = oT;
+            if (MT.error) throw new hW(402 === Number(MT.error.code) ? "noCredit" : "failed");
+            const rT = null === (iT = MT.choices) || void 0 === iT ? void 0 : iT[0];
+            XT += null !== (zT = null !== (kT = null === rT || void 0 === rT || null === (DT = rT.delta) || void 0 === DT ? void 0 : DT.reasoning) && void 0 !== kT ? kT : null === rT || void 0 === rT || null === (LT = rT.delta) || void 0 === LT ? void 0 : LT.reasoning_content) && void 0 !== zT ? zT : "", WT += null !== (xT = null === rT || void 0 === rT || null === (cT = rT.delta) || void 0 === cT ? void 0 : cT.content) && void 0 !== xT ? xT : "";
+            for (const TT of null !== (AT = null === rT || void 0 === rT || null === (gT = rT.delta) || void 0 === gT ? void 0 : gT.tool_calls) && void 0 !== AT ? AT : []) {
+              var AT, gT;
+              gk(ST, TT)
             }
-            gY ||= "content_filter" === (null === WY || void 0 === WY ? void 0 : WY.finish_reason), aY ||= "length" === (null === WY || void 0 === WY ? void 0 : WY.finish_reason), null === (QY = DY.onProgress) || void 0 === QY || QY.call(DY, {
-              model: YY,
-              reasoningChars: OY.length,
-              answer: RY,
-              isCalling: vY.length > 0
+            BT ||= "content_filter" === (null === rT || void 0 === rT ? void 0 : rT.finish_reason), FT ||= "length" === (null === rT || void 0 === rT ? void 0 : rT.finish_reason), null === (KT = IT.onProgress) || void 0 === KT || KT.call(IT, {
+              model: TT,
+              reasoningChars: XT.length,
+              answer: WT,
+              isCalling: ST.length > 0
             })
-          })), NR(YY, {
-            answer: RY,
-            reasoning: OY,
-            mDY: gY,
-            isCutShort: aY,
-            nativeCalls: vY
-          }, DY.callFormat, DY.continueFrom)
+          })), jW(TT, {
+            answer: WT,
+            reasoning: XT,
+            pIT: BT,
+            isCutShort: FT,
+            nativeCalls: ST
+          }, IT.callFormat, IT.continueFrom)
         }))
       }
       headers() {
@@ -7393,99 +7393,99 @@ export const modules = {
         }
       }
     }
-    class HR {
-      constructor(YY) {
-        this.key = YY, this.chat = void 0, this.chat = new KR("openrouter", gR.openrouter.baseUrl, YY)
+    class YW {
+      constructor(TT) {
+        this.key = TT, this.chat = void 0, this.chat = new aW("openrouter", xW.openrouter.baseUrl, TT)
       }
-      async check(YY) {
-        return await TR(mR, YY, (async YY => lR("openrouter", `${gR.openrouter.baseUrl}/key`, {
+      async check(TT) {
+        return await fW(RW, TT, (async TT => EW("openrouter", `${xW.openrouter.baseUrl}/key`, {
           headers: {
             Authorization: `Bearer ${this.key}`
           }
-        }, YY))), this.chat.check(YY)
+        }, TT))), this.chat.check(TT)
       }
-      ask(YY, rY, DY) {
-        return this.chat.ask(YY, rY, DY)
+      ask(TT, oT, IT) {
+        return this.chat.ask(TT, oT, IT)
       }
     }
-    class zR {
-      constructor(YY) {
-        this.key = YY, this.baseUrl = gR.anthropic.baseUrl
+    class QW {
+      constructor(TT) {
+        this.key = TT, this.baseUrl = xW.anthropic.baseUrl
       }
-      async check(YY) {
-        return TR(mR, YY, (async YY => {
-          var rY;
-          const DY = await lR("anthropic", `${this.baseUrl}/models?limit=1000`, {
+      async check(TT) {
+        return fW(RW, TT, (async TT => {
+          var oT;
+          const IT = await EW("anthropic", `${this.baseUrl}/models?limit=1000`, {
             headers: this.headers()
-          }, YY);
+          }, TT);
           return {
-            models: (null !== (rY = (await DY.json()).data) && void 0 !== rY ? rY : []).map((YY => ({
-              id: YY.id,
-              name: YY.display_name
+            models: (null !== (oT = (await IT.json()).data) && void 0 !== oT ? oT : []).map((TT => ({
+              id: TT.id,
+              name: TT.display_name
             })))
           }
         }))
       }
-      async ask(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const FY = rY.filter((YY => "system" === YY.role)).map((YY => YY.content)).join("\n\n"),
-          AY = BR(rY).map((YY => ({
-            role: YY.role,
-            content: YY.content
+      async ask(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const iT = oT.filter((TT => "system" === TT.role)).map((TT => TT.content)).join("\n\n"),
+          zT = JW(oT).map((TT => ({
+            role: TT.role,
+            content: TT.content
           })));
-        return TR(VR, DY.signal, (async rY => {
-          var IY;
-          const RY = await lR("anthropic", `${this.baseUrl}/messages`, {
+        return fW(uW, IT.signal, (async oT => {
+          var kT;
+          const WT = await EW("anthropic", `${this.baseUrl}/messages`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: YY,
-              max_tokens: SR,
-              system: FY,
-              messages: AY,
+              model: TT,
+              max_tokens: vW,
+              system: iT,
+              messages: zT,
               stream: !0,
-              ...cR("anthropic", DY)
+              ...UW("anthropic", IT)
             })
-          }, rY);
-          let OY = "",
-            gY = "",
-            aY = !1,
-            vY = !1;
-          const uY = new Map;
-          await EI(null !== (IY = RY.body) && void 0 !== IY ? IY : new ReadableStream, (rY => {
-            var FY, AY;
-            const IY = rY;
-            var RY, sY, iY, yY;
-            if ("error" === IY.type) throw new QR("overloaded_error" === (null === (RY = IY.error) || void 0 === RY ? void 0 : RY.type) || "rate_limit_error" === (null === (sY = IY.error) || void 0 === sY ? void 0 : sY.type) ? "busy" : "failed");
-            if ("content_block_start" === IY.type && "tool_use" === (null === (FY = IY.content_block) || void 0 === FY ? void 0 : FY.type)) uY.set(null !== (iY = IY.index) && void 0 !== iY ? iY : uY.size, {
-              name: null !== (yY = IY.content_block.name) && void 0 !== yY ? yY : "",
+          }, oT);
+          let XT = "",
+            BT = "",
+            FT = !1,
+            ST = !1;
+          const DT = new Map;
+          await ek(null !== (kT = WT.body) && void 0 !== kT ? kT : new ReadableStream, (oT => {
+            var iT, zT;
+            const kT = oT;
+            var WT, LT, xT, cT;
+            if ("error" === kT.type) throw new hW("overloaded_error" === (null === (WT = kT.error) || void 0 === WT ? void 0 : WT.type) || "rate_limit_error" === (null === (LT = kT.error) || void 0 === LT ? void 0 : LT.type) ? "busy" : "failed");
+            if ("content_block_start" === kT.type && "tool_use" === (null === (iT = kT.content_block) || void 0 === iT ? void 0 : iT.type)) DT.set(null !== (xT = kT.index) && void 0 !== xT ? xT : DT.size, {
+              name: null !== (cT = kT.content_block.name) && void 0 !== cT ? cT : "",
               args: ""
             });
-            else if ("content_block_delta" === IY.type) {
-              var QY, oY, WY, EY, mY, VY;
-              OY += null !== (QY = null === (oY = IY.delta) || void 0 === oY ? void 0 : oY.text) && void 0 !== QY ? QY : "", gY += null !== (WY = null === (EY = IY.delta) || void 0 === EY ? void 0 : EY.thinking) && void 0 !== WY ? WY : "";
-              const YY = uY.get(null !== (mY = IY.index) && void 0 !== mY ? mY : -1);
-              var SY;
-              if (YY && "input_json_delta" === (null === (VY = IY.delta) || void 0 === VY ? void 0 : VY.type)) YY.args += null !== (SY = IY.delta.partial_json) && void 0 !== SY ? SY : ""
-            } else if ("message_delta" === IY.type) {
-              var lY, TY;
-              aY ||= "refusal" === (null === (lY = IY.delta) || void 0 === lY ? void 0 : lY.stop_reason), vY ||= "max_tokens" === (null === (TY = IY.delta) || void 0 === TY ? void 0 : TY.stop_reason)
+            else if ("content_block_delta" === kT.type) {
+              var KT, MT, rT, AT, gT, hT;
+              XT += null !== (KT = null === (MT = kT.delta) || void 0 === MT ? void 0 : MT.text) && void 0 !== KT ? KT : "", BT += null !== (rT = null === (AT = kT.delta) || void 0 === AT ? void 0 : AT.thinking) && void 0 !== rT ? rT : "";
+              const TT = DT.get(null !== (gT = kT.index) && void 0 !== gT ? gT : -1);
+              var wT;
+              if (TT && "input_json_delta" === (null === (hT = kT.delta) || void 0 === hT ? void 0 : hT.type)) TT.args += null !== (wT = kT.delta.partial_json) && void 0 !== wT ? wT : ""
+            } else if ("message_delta" === kT.type) {
+              var mT, eT;
+              FT ||= "refusal" === (null === (mT = kT.delta) || void 0 === mT ? void 0 : mT.stop_reason), ST ||= "max_tokens" === (null === (eT = kT.delta) || void 0 === eT ? void 0 : eT.stop_reason)
             }
-            null === (AY = DY.onProgress) || void 0 === AY || AY.call(DY, {
-              model: YY,
-              reasoningChars: gY.length,
-              answer: OY,
-              isCalling: uY.size > 0
+            null === (zT = IT.onProgress) || void 0 === zT || zT.call(IT, {
+              model: TT,
+              reasoningChars: BT.length,
+              answer: XT,
+              isCalling: DT.size > 0
             })
           }));
-          const sY = [...uY.values()];
-          return NR(YY, {
-            answer: OY,
-            reasoning: gY,
-            mDY: aY,
-            isCutShort: vY,
-            nativeCalls: sY
-          }, DY.callFormat, DY.continueFrom)
+          const LT = [...DT.values()];
+          return jW(TT, {
+            answer: XT,
+            reasoning: BT,
+            pIT: FT,
+            isCutShort: ST,
+            nativeCalls: LT
+          }, IT.callFormat, IT.continueFrom)
         }))
       }
       headers() {
@@ -7497,90 +7497,90 @@ export const modules = {
         }
       }
     }
-    class ZR {
-      constructor(YY) {
-        this.key = YY, this.baseUrl = gR.gemini.baseUrl
+    class OW {
+      constructor(TT) {
+        this.key = TT, this.baseUrl = xW.gemini.baseUrl
       }
-      async check(YY) {
-        return TR(mR, YY, (async YY => {
-          var rY;
-          const DY = await lR("gemini", `${this.baseUrl}/models?pageSize=1000`, {
+      async check(TT) {
+        return fW(RW, TT, (async TT => {
+          var oT;
+          const IT = await EW("gemini", `${this.baseUrl}/models?pageSize=1000`, {
             headers: this.headers()
-          }, YY);
+          }, TT);
           return {
-            models: (null !== (rY = (await DY.json()).models) && void 0 !== rY ? rY : []).filter((YY => {
-              var rY, DY;
-              return null === (rY = null === (DY = YY.supportedGenerationMethods) || void 0 === DY ? void 0 : DY.includes("generateContent")) || void 0 === rY || rY
-            })).map((YY => ({
-              id: YY.name.replace(/^models\//, ""),
-              name: YY.displayName
+            models: (null !== (oT = (await IT.json()).models) && void 0 !== oT ? oT : []).filter((TT => {
+              var oT, IT;
+              return null === (oT = null === (IT = TT.supportedGenerationMethods) || void 0 === IT ? void 0 : IT.includes("generateContent")) || void 0 === oT || oT
+            })).map((TT => ({
+              id: TT.name.replace(/^models\//, ""),
+              name: TT.displayName
             })))
           }
         }))
       }
-      async ask(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const FY = rY.filter((YY => "system" === YY.role)).map((YY => ({
-            text: YY.content
+      async ask(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const iT = oT.filter((TT => "system" === TT.role)).map((TT => ({
+            text: TT.content
           }))),
-          AY = BR(rY).map((YY => ({
-            role: "assistant" === YY.role ? "model" : "user",
+          zT = JW(oT).map((TT => ({
+            role: "assistant" === TT.role ? "model" : "user",
             parts: [{
-              text: YY.content
+              text: TT.content
             }]
           })));
-        return TR(VR, DY.signal, (async rY => {
-          var IY;
-          const RY = await lR("gemini", `${this.baseUrl}/models/${encodeURIComponent(YY)}:streamGenerateContent?alt=sse`, {
+        return fW(uW, IT.signal, (async oT => {
+          var kT;
+          const WT = await EW("gemini", `${this.baseUrl}/models/${encodeURIComponent(TT)}:streamGenerateContent?alt=sse`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               systemInstruction: {
-                parts: FY
+                parts: iT
               },
-              contents: AY,
+              contents: zT,
               generationConfig: {
-                maxOutputTokens: SR
+                maxOutputTokens: vW
               },
-              ...cR("gemini", DY)
+              ...UW("gemini", IT)
             })
-          }, rY);
-          let OY = "",
-            gY = "",
-            aY = !1,
-            vY = !1;
-          const uY = [];
-          return await EI(null !== (IY = RY.body) && void 0 !== IY ? IY : new ReadableStream, (rY => {
-            var FY, AY, IY;
-            const RY = rY,
-              sY = null === (FY = RY.candidates) || void 0 === FY ? void 0 : FY[0];
-            for (const YY of null !== (iY = null === sY || void 0 === sY || null === (yY = sY.content) || void 0 === yY ? void 0 : yY.parts) && void 0 !== iY ? iY : []) {
-              var iY, yY, QY, oY;
-              if (YY.functionCall) uY.push({
-                name: null !== (QY = YY.functionCall.name) && void 0 !== QY ? QY : "",
-                args: JSON.stringify(null !== (oY = YY.functionCall.args) && void 0 !== oY ? oY : {})
+          }, oT);
+          let XT = "",
+            BT = "",
+            FT = !1,
+            ST = !1;
+          const DT = [];
+          return await ek(null !== (kT = WT.body) && void 0 !== kT ? kT : new ReadableStream, (oT => {
+            var iT, zT, kT;
+            const WT = oT,
+              LT = null === (iT = WT.candidates) || void 0 === iT ? void 0 : iT[0];
+            for (const TT of null !== (xT = null === LT || void 0 === LT || null === (cT = LT.content) || void 0 === cT ? void 0 : cT.parts) && void 0 !== xT ? xT : []) {
+              var xT, cT, KT, MT;
+              if (TT.functionCall) DT.push({
+                name: null !== (KT = TT.functionCall.name) && void 0 !== KT ? KT : "",
+                args: JSON.stringify(null !== (MT = TT.functionCall.args) && void 0 !== MT ? MT : {})
               });
-              else if (YY.thought) {
-                var WY;
-                gY += null !== (WY = YY.text) && void 0 !== WY ? WY : ""
+              else if (TT.thought) {
+                var rT;
+                BT += null !== (rT = TT.text) && void 0 !== rT ? rT : ""
               } else {
-                var EY;
-                OY += null !== (EY = YY.text) && void 0 !== EY ? EY : ""
+                var AT;
+                XT += null !== (AT = TT.text) && void 0 !== AT ? AT : ""
               }
             }
-            aY ||= void 0 !== (null === (AY = RY.promptFeedback) || void 0 === AY ? void 0 : AY.blockReason) || "SAFETY" === (null === sY || void 0 === sY ? void 0 : sY.finishReason) || "PROHIBITED_CONTENT" === (null === sY || void 0 === sY ? void 0 : sY.finishReason), vY ||= "MAX_TOKENS" === (null === sY || void 0 === sY ? void 0 : sY.finishReason), null === (IY = DY.onProgress) || void 0 === IY || IY.call(DY, {
-              model: YY,
-              reasoningChars: gY.length,
-              answer: OY,
-              isCalling: uY.length > 0
+            FT ||= void 0 !== (null === (zT = WT.promptFeedback) || void 0 === zT ? void 0 : zT.blockReason) || "SAFETY" === (null === LT || void 0 === LT ? void 0 : LT.finishReason) || "PROHIBITED_CONTENT" === (null === LT || void 0 === LT ? void 0 : LT.finishReason), ST ||= "MAX_TOKENS" === (null === LT || void 0 === LT ? void 0 : LT.finishReason), null === (kT = IT.onProgress) || void 0 === kT || kT.call(IT, {
+              model: TT,
+              reasoningChars: BT.length,
+              answer: XT,
+              isCalling: DT.length > 0
             })
-          })), NR(YY, {
-            answer: OY,
-            reasoning: gY,
-            mDY: aY,
-            isCutShort: vY,
-            nativeCalls: uY
-          }, DY.callFormat, DY.continueFrom)
+          })), jW(TT, {
+            answer: XT,
+            reasoning: BT,
+            pIT: FT,
+            isCutShort: ST,
+            nativeCalls: DT
+          }, IT.callFormat, IT.continueFrom)
         }))
       }
       headers() {
@@ -7591,26 +7591,26 @@ export const modules = {
       }
     }
 
-    function CR(YY, rY, DY) {
-      switch (YY) {
+    function HW(TT, oT, IT) {
+      switch (TT) {
         case "openrouter":
-          return new HR(rY);
+          return new YW(oT);
         case "anthropic":
-          return new zR(rY);
+          return new QW(oT);
         case "gemini":
-          return new ZR(rY);
+          return new OW(oT);
         case "openai":
-          return new KR("openai", gR.openai.baseUrl, rY);
+          return new aW("openai", xW.openai.baseUrl, oT);
         case "custom":
-          return new KR("custom", null !== DY && void 0 !== DY ? DY : "", rY)
+          return new aW("custom", null !== IT && void 0 !== IT ? IT : "", oT)
       }
     }
-    const fR = {
+    const nW = {
         fast: "Fast",
         smart: "Smart",
         smartest: "Smartest"
       },
-      jR = {
+      qW = {
         anthropic: {
           fast: [{
             id: "claude-haiku-5-5",
@@ -7717,436 +7717,436 @@ export const modules = {
         }
       };
 
-    function hR(YY) {
-      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(YY) ? "mcp" : "simple"
+    function ZW(TT) {
+      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(TT) ? "mcp" : "simple"
     }
 
-    function dR(YY, rY) {
-      return "custom" !== YY && /claude-|gpt-|gemini-/.test(rY)
+    function lW(TT, oT) {
+      return "custom" !== TT && /claude-|gpt-|gemini-/.test(oT)
     }
 
-    function JR(YY, rY, DY) {
-      var FY;
-      const AY = DY.find((YY => YY.id === rY));
+    function sW(TT, oT, IT) {
+      var iT;
+      const zT = IT.find((TT => TT.id === oT));
       return {
-        id: rY,
-        name: null !== (FY = null === AY || void 0 === AY ? void 0 : AY.name) && void 0 !== FY ? FY : rY,
-        callFormat: hR(rY),
-        nativeTools: dR(YY, rY)
+        id: oT,
+        name: null !== (iT = null === zT || void 0 === zT ? void 0 : zT.name) && void 0 !== iT ? iT : oT,
+        callFormat: ZW(oT),
+        nativeTools: lW(TT, oT)
       }
     }
 
-    function MR(YY, rY) {
-      return "custom" !== YY ? function(YY, rY) {
-        if ("custom" === YY) return [];
-        const DY = new Set(rY.map((YY => YY.id))),
-          FY = jR[YY];
-        return Object.keys(FY).flatMap((AY => {
-          const IY = FY[AY].find((YY => DY.has(YY.id)));
-          return IY ? [{
-            ...JR(YY, IY.id, rY),
-            name: IY.name,
-            tier: AY
+    function tW(TT, oT) {
+      return "custom" !== TT ? function(TT, oT) {
+        if ("custom" === TT) return [];
+        const IT = new Set(oT.map((TT => TT.id))),
+          iT = qW[TT];
+        return Object.keys(iT).flatMap((zT => {
+          const kT = iT[zT].find((TT => IT.has(TT.id)));
+          return kT ? [{
+            ...sW(TT, kT.id, oT),
+            name: kT.name,
+            tier: zT
           }] : []
         }))
-      }(YY, rY) : rY.slice(0, 20).map((DY => JR(YY, DY.id, rY)))
+      }(TT, oT) : oT.slice(0, 20).map((IT => sW(TT, IT.id, oT)))
     }
 
-    function wR(YY) {
-      var rY;
-      return null !== (rY = YY.find((YY => "smart" === YY.tier))) && void 0 !== rY ? rY : YY[0]
+    function GW(TT) {
+      var oT;
+      return null !== (oT = TT.find((TT => "smart" === TT.tier))) && void 0 !== oT ? oT : TT[0]
     }
 
-    function bR(YY) {
-      var rY;
-      let DY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return null !== (rY = YY.name) && void 0 !== rY ? rY : yR(YY.provider, YY.baseUrl, DY)
+    function pW(TT) {
+      var oT;
+      let IT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      return null !== (oT = TT.name) && void 0 !== oT ? oT : gW(TT.provider, TT.baseUrl, IT)
     }
-    const XR = "bloxdAiHelperKeys",
-      qR = {
+    const bW = "bloxdAiHelperKeys",
+      yW = {
         keys: [],
         selected: null,
         remember: !1
       };
 
-    function pR(YY, rY) {
-      return YY.id === rY.id || "custom" === YY.provider && "custom" === rY.provider && YY.baseUrl === rY.baseUrl
+    function NW(TT, oT) {
+      return TT.id === oT.id || "custom" === TT.provider && "custom" === oT.provider && TT.baseUrl === oT.baseUrl
     }
 
-    function kR(YY) {
-      if ("custom" !== YY.provider) return !0;
+    function PW(TT) {
+      if ("custom" !== TT.provider) return !0;
       try {
-        var rY;
-        return new URL(null !== (rY = YY.baseUrl) && void 0 !== rY ? rY : "").protocol.startsWith("http")
+        var oT;
+        return new URL(null !== (oT = TT.baseUrl) && void 0 !== oT ? oT : "").protocol.startsWith("http")
       } catch {
         return !1
       }
     }
 
-    function GR(YY) {
+    function dW(TT) {
       try {
-        return "undefined" === typeof window ? null : window[YY]
-      } catch (rY) {
-        return console.warn(`AI Helper: no ${YY}`, rY), null
+        return "undefined" === typeof window ? null : window[TT]
+      } catch (oT) {
+        return console.warn(`AI Helper: no ${TT}`, oT), null
       }
     }
-    const xR = new class {
-      constructor(YY, rY) {
-        var DY;
-        this.session = YY, this.local = rY, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = YY => (this.listeners.add(YY), () => {
-          this.listeners.delete(YY)
+    const VW = new class {
+      constructor(TT, oT) {
+        var IT;
+        this.session = TT, this.local = oT, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = TT => (this.listeners.add(TT), () => {
+          this.listeners.delete(TT)
         });
-        for (const IY of [YY, rY]) null !== IY && void 0 !== IY && IY.getItem(XR) && !this.read(IY) && IY.removeItem(XR);
-        const FY = this.read(YY),
-          AY = this.read(rY);
-        this.state = null !== FY && void 0 !== FY && FY.remember ? null !== AY && void 0 !== AY && AY.remember ? AY : {
-          ...FY,
+        for (const kT of [TT, oT]) null !== kT && void 0 !== kT && kT.getItem(bW) && !this.read(kT) && kT.removeItem(bW);
+        const iT = this.read(TT),
+          zT = this.read(oT);
+        this.state = null !== iT && void 0 !== iT && iT.remember ? null !== zT && void 0 !== zT && zT.remember ? zT : {
+          ...iT,
           remember: !1
-        } : null !== (DY = null !== FY && void 0 !== FY ? FY : AY) && void 0 !== DY ? DY : qR, this.ownsRemembered = this.state.remember && null !== AY
+        } : null !== (IT = null !== iT && void 0 !== iT ? iT : zT) && void 0 !== IT ? IT : yW, this.ownsRemembered = this.state.remember && null !== zT
       }
       nextUsedAt() {
         return this.lastUsedAt = Math.max(Date.now(), this.lastUsedAt + 1), this.lastUsedAt
       }
       activeKey() {
-        const YY = this.state.selected,
-          rY = YY ? this.state.keys.find((rY => rY.id === YY.keyId)) : void 0,
-          DY = null === rY || void 0 === rY ? void 0 : rY.models.find((rY => rY.id === (null === YY || void 0 === YY ? void 0 : YY.modelId)));
-        return rY && DY ? {
-          ...rY,
-          model: DY
+        const TT = this.state.selected,
+          oT = TT ? this.state.keys.find((oT => oT.id === TT.keyId)) : void 0,
+          IT = null === oT || void 0 === oT ? void 0 : oT.models.find((oT => oT.id === (null === TT || void 0 === TT ? void 0 : TT.modelId)));
+        return oT && IT ? {
+          ...oT,
+          model: IT
         } : null
       }
-      addKey(YY, rY, DY) {
-        var FY, AY, IY;
-        const RY = this.state.keys.find((rY => "custom" === rY.provider && rY.baseUrl === YY.baseUrl)),
-          OY = "custom" !== YY.provider ? YY.provider : null !== (FY = null === RY || void 0 === RY ? void 0 : RY.id) && void 0 !== FY ? FY : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
-          gY = void 0 === rY ? wR(YY.models) : null !== (AY = YY.models.find((YY => YY.id === rY))) && void 0 !== AY ? AY : YY.models[0],
-          aY = this.state.keys.find((YY => YY.id === OY)),
-          vY = {
-            ...YY,
-            id: OY,
+      addKey(TT, oT, IT) {
+        var iT, zT, kT;
+        const WT = this.state.keys.find((oT => "custom" === oT.provider && oT.baseUrl === TT.baseUrl)),
+          XT = "custom" !== TT.provider ? TT.provider : null !== (iT = null === WT || void 0 === WT ? void 0 : WT.id) && void 0 !== iT ? iT : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
+          BT = void 0 === oT ? GW(TT.models) : null !== (zT = TT.models.find((TT => TT.id === oT))) && void 0 !== zT ? zT : TT.models[0],
+          FT = this.state.keys.find((TT => TT.id === XT)),
+          ST = {
+            ...TT,
+            id: XT,
             usedAt: this.nextUsedAt(),
-            ...gY ? {
-              usedModelId: gY.id
+            ...BT ? {
+              usedModelId: BT.id
             } : {},
-            ...null !== aY && void 0 !== aY && aY.name && !YY.name ? {
-              name: aY.name
+            ...null !== FT && void 0 !== FT && FT.name && !TT.name ? {
+              name: FT.name
             } : {}
           },
-          uY = this.state.keys.every((YY => YY.id !== OY)),
-          sY = void 0 !== DY && DY !== OY && this.state.keys.some((YY => YY.id === DY)),
-          iY = sY ? this.state.keys.filter((YY => YY.id !== OY)).map((YY => YY.id === DY ? vY : YY)) : uY ? [...this.state.keys, vY] : this.state.keys.map((YY => YY.id === OY ? vY : YY)),
-          yY = gY ? {
-            keyId: OY,
-            modelId: gY.id
-          } : (null === (IY = this.state.selected) || void 0 === IY ? void 0 : IY.keyId) === DY && sY ? null : this.state.selected;
+          DT = this.state.keys.every((TT => TT.id !== XT)),
+          LT = void 0 !== IT && IT !== XT && this.state.keys.some((TT => TT.id === IT)),
+          xT = LT ? this.state.keys.filter((TT => TT.id !== XT)).map((TT => TT.id === IT ? ST : TT)) : DT ? [...this.state.keys, ST] : this.state.keys.map((TT => TT.id === XT ? ST : TT)),
+          cT = BT ? {
+            keyId: XT,
+            modelId: BT.id
+          } : (null === (kT = this.state.selected) || void 0 === kT ? void 0 : kT.keyId) === IT && LT ? null : this.state.selected;
         return this.update({
-          keys: iY,
-          selected: yY
-        }), OY
+          keys: xT,
+          selected: cT
+        }), XT
       }
-      renameKey(YY, rY) {
-        const DY = rY.replace(/\s+/g, " ").trim().slice(0, 30);
+      renameKey(TT, oT) {
+        const IT = oT.replace(/\s+/g, " ").trim().slice(0, 30);
         this.update({
-          keys: this.state.keys.map((rY => {
-            if (rY.id !== YY) return rY;
+          keys: this.state.keys.map((oT => {
+            if (oT.id !== TT) return oT;
             const {
-              name: FY,
-              ...AY
-            } = rY;
-            return "" === DY ? AY : {
-              ...AY,
-              name: DY
+              name: iT,
+              ...zT
+            } = oT;
+            return "" === IT ? zT : {
+              ...zT,
+              name: IT
             }
           }))
         })
       }
-      select(YY) {
-        const rY = this.nextUsedAt(),
-          DY = null === YY ? this.state.keys : this.state.keys.map((DY => DY.id === YY.keyId ? {
-            ...DY,
-            usedAt: rY,
-            usedModelId: YY.modelId
-          } : DY));
+      select(TT) {
+        const oT = this.nextUsedAt(),
+          IT = null === TT ? this.state.keys : this.state.keys.map((IT => IT.id === TT.keyId ? {
+            ...IT,
+            usedAt: oT,
+            usedModelId: TT.modelId
+          } : IT));
         this.update({
-          keys: DY,
-          selected: YY
+          keys: IT,
+          selected: TT
         })
       }
-      refreshModels(YY, rY, DY) {
-        const FY = this.state.keys.find((rY => rY.id === YY));
-        if (!FY || DY && (FY.key !== DY.key || FY.baseUrl !== DY.baseUrl)) return !1;
-        const AY = [...rY.map((YY => {
-            const rY = FY.models.find((rY => rY.id === YY.id));
+      refreshModels(TT, oT, IT) {
+        const iT = this.state.keys.find((oT => oT.id === TT));
+        if (!iT || IT && (iT.key !== IT.key || iT.baseUrl !== IT.baseUrl)) return !1;
+        const zT = [...oT.map((TT => {
+            const oT = iT.models.find((oT => oT.id === TT.id));
             return {
-              ...YY,
-              ...!1 === (null === rY || void 0 === rY ? void 0 : rY.nativeTools) ? {
+              ...TT,
+              ...!1 === (null === oT || void 0 === oT ? void 0 : oT.nativeTools) ? {
                 nativeTools: !1
               } : {},
-              ...null !== rY && void 0 !== rY && rY.typed ? {
+              ...null !== oT && void 0 !== oT && oT.typed ? {
                 typed: !0
               } : {}
             }
-          })), ...FY.models.filter((YY => YY.typed && !rY.some((rY => rY.id === YY.id))))],
-          IY = this.state.selected,
-          RY = (null === IY || void 0 === IY ? void 0 : IY.keyId) === YY && !AY.some((YY => YY.id === IY.modelId)),
-          OY = wR(AY);
+          })), ...iT.models.filter((TT => TT.typed && !oT.some((oT => oT.id === TT.id))))],
+          kT = this.state.selected,
+          WT = (null === kT || void 0 === kT ? void 0 : kT.keyId) === TT && !zT.some((TT => TT.id === kT.modelId)),
+          XT = GW(zT);
         return this.update({
-          keys: this.state.keys.map((rY => rY.id === YY ? {
-            ...rY,
-            models: AY
-          } : rY)),
-          selected: RY ? OY ? {
-            keyId: YY,
-            modelId: OY.id
-          } : null : IY
+          keys: this.state.keys.map((oT => oT.id === TT ? {
+            ...oT,
+            models: zT
+          } : oT)),
+          selected: WT ? XT ? {
+            keyId: TT,
+            modelId: XT.id
+          } : null : kT
         }), !0
       }
-      stopNativeTools(YY, rY) {
+      stopNativeTools(TT, oT) {
         this.update({
-          keys: this.state.keys.map((DY => {
-            if (DY.id !== YY) return DY;
-            const FY = DY.models.map((YY => YY.id === rY ? {
-              ...YY,
+          keys: this.state.keys.map((IT => {
+            if (IT.id !== TT) return IT;
+            const iT = IT.models.map((TT => TT.id === oT ? {
+              ...TT,
               nativeTools: !1
-            } : YY));
+            } : TT));
             return {
-              ...DY,
-              models: FY
+              ...IT,
+              models: iT
             }
           }))
         })
       }
-      removeKey(YY) {
-        var rY;
-        const DY = this.state,
-          FY = DY.keys.findIndex((rY => rY.id === YY)),
-          AY = DY.keys[FY];
-        if (!AY) return () => {};
-        const IY = DY.keys.filter((rY => rY.id !== YY)),
-          RY = (null === (rY = DY.selected) || void 0 === rY ? void 0 : rY.keyId) === YY ? null : DY.selected;
+      removeKey(TT) {
+        var oT;
+        const IT = this.state,
+          iT = IT.keys.findIndex((oT => oT.id === TT)),
+          zT = IT.keys[iT];
+        if (!zT) return () => {};
+        const kT = IT.keys.filter((oT => oT.id !== TT)),
+          WT = (null === (oT = IT.selected) || void 0 === oT ? void 0 : oT.keyId) === TT ? null : IT.selected;
         return this.update({
-          keys: IY,
-          selected: RY,
-          remember: IY.length > 0 && DY.remember
+          keys: kT,
+          selected: WT,
+          remember: kT.length > 0 && IT.remember
         }), () => {
-          var rY;
-          const IY = this.state.keys.some((YY => pR(YY, AY)));
-          if (IY) return;
-          const RY = [...this.state.keys];
-          RY.splice(Math.min(FY, RY.length), 0, AY);
-          const OY = (null === (rY = DY.selected) || void 0 === rY ? void 0 : rY.keyId) === YY && null === this.state.selected;
+          var oT;
+          const kT = this.state.keys.some((TT => NW(TT, zT)));
+          if (kT) return;
+          const WT = [...this.state.keys];
+          WT.splice(Math.min(iT, WT.length), 0, zT);
+          const XT = (null === (oT = IT.selected) || void 0 === oT ? void 0 : oT.keyId) === TT && null === this.state.selected;
           this.update({
-            keys: RY,
-            selected: OY ? DY.selected : this.state.selected,
-            remember: this.state.remember || DY.remember
+            keys: WT,
+            selected: XT ? IT.selected : this.state.selected,
+            remember: this.state.remember || IT.remember
           })
         }
       }
       removeAll() {
-        this.update(qR), this.local && null !== this.local.getItem(XR) && (this.local.setItem(XR, JSON.stringify(qR)), this.local.removeItem(XR))
+        this.update(yW), this.local && null !== this.local.getItem(bW) && (this.local.setItem(bW, JSON.stringify(yW)), this.local.removeItem(bW))
       }
-      setRemember(YY) {
-        var rY;
-        const DY = YY && !this.ownsRemembered ? this.read(this.local) : null,
-          FY = (null !== (rY = null === DY || void 0 === DY ? void 0 : DY.keys) && void 0 !== rY ? rY : []).filter((YY => this.state.keys.every((rY => !pR(rY, YY)))));
+      setRemember(TT) {
+        var oT;
+        const IT = TT && !this.ownsRemembered ? this.read(this.local) : null,
+          iT = (null !== (oT = null === IT || void 0 === IT ? void 0 : IT.keys) && void 0 !== oT ? oT : []).filter((TT => this.state.keys.every((oT => !NW(oT, TT)))));
         this.update({
-          remember: YY,
-          keys: [...FY, ...this.state.keys]
+          remember: TT,
+          keys: [...iT, ...this.state.keys]
         })
       }
-      otherTabChanged(YY) {
-        var rY;
+      otherTabChanged(TT) {
+        var oT;
         if (!this.state.remember) return;
-        const DY = YY ? this.parse(YY) : null;
-        DY ? (this.state = DY, this.ownsRemembered = DY.remember) : (this.ownsRemembered = !1, this.state = {
+        const IT = TT ? this.parse(TT) : null;
+        IT ? (this.state = IT, this.ownsRemembered = IT.remember) : (this.ownsRemembered = !1, this.state = {
           ...this.state,
           remember: !1
-        }), null === (rY = this.session) || void 0 === rY || rY.setItem(XR, JSON.stringify(this.state)), this.notify()
+        }), null === (oT = this.session) || void 0 === oT || oT.setItem(bW, JSON.stringify(this.state)), this.notify()
       }
       notify() {
-        for (const YY of this.listeners) YY()
+        for (const TT of this.listeners) TT()
       }
-      update(YY) {
-        var rY;
+      update(TT) {
+        var oT;
         this.state = {
           ...this.state,
-          ...YY
+          ...TT
         };
-        const DY = JSON.stringify(this.state);
-        var FY;
-        if (null === (rY = this.session) || void 0 === rY || rY.setItem(XR, DY), this.state.remember && this.state.keys.length > 0) null === (FY = this.local) || void 0 === FY || FY.setItem(XR, DY), this.ownsRemembered = !0;
+        const IT = JSON.stringify(this.state);
+        var iT;
+        if (null === (oT = this.session) || void 0 === oT || oT.setItem(bW, IT), this.state.remember && this.state.keys.length > 0) null === (iT = this.local) || void 0 === iT || iT.setItem(bW, IT), this.ownsRemembered = !0;
         else if (this.ownsRemembered) {
-          var AY, IY;
-          if (0 === this.state.keys.length) null === (IY = this.local) || void 0 === IY || IY.setItem(XR, JSON.stringify(qR));
-          null === (AY = this.local) || void 0 === AY || AY.removeItem(XR), this.ownsRemembered = !1
+          var zT, kT;
+          if (0 === this.state.keys.length) null === (kT = this.local) || void 0 === kT || kT.setItem(bW, JSON.stringify(yW));
+          null === (zT = this.local) || void 0 === zT || zT.removeItem(bW), this.ownsRemembered = !1
         }
         this.notify()
       }
-      read(YY) {
-        const rY = null === YY || void 0 === YY ? void 0 : YY.getItem(XR);
-        return rY ? this.parse(rY) : null
+      read(TT) {
+        const oT = null === TT || void 0 === TT ? void 0 : TT.getItem(bW);
+        return oT ? this.parse(oT) : null
       }
-      parse(YY) {
+      parse(TT) {
         try {
-          const rY = {
-            ...qR,
-            ...JSON.parse(YY)
+          const oT = {
+            ...yW,
+            ...JSON.parse(TT)
           };
-          return Array.isArray(rY.keys) && rY.keys.every(kR) ? rY : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
-        } catch (rY) {
-          return console.warn("AI Helper: saved keys couldn't be read", rY instanceof Error ? rY.name : "error"), null
+          return Array.isArray(oT.keys) && oT.keys.every(PW) ? oT : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
+        } catch (oT) {
+          return console.warn("AI Helper: saved keys couldn't be read", oT instanceof Error ? oT.name : "error"), null
         }
       }
-    }(GR("sessionStorage"), GR("localStorage"));
+    }(dW("sessionStorage"), dW("localStorage"));
 
-    function nR() {
-      const YY = function() {
-          const [YY, rY] = (0, FY.useState)(xR.getState);
-          return (0, FY.useEffect)((() => (rY(xR.getState()), xR.subscribe((() => {
-            rY(xR.getState())
-          })))), []), YY
+    function TX() {
+      const TT = function() {
+          const [TT, oT] = (0, iT.useState)(VW.getState);
+          return (0, iT.useEffect)((() => (oT(VW.getState()), VW.subscribe((() => {
+            oT(VW.getState())
+          })))), []), TT
         }(),
-        rY = xR.activeKey();
+        oT = VW.activeKey();
       return {
-        ...YY,
-        active: rY,
-        isSelected: DY => {
-          return (FY = rY ? YY.selected : null) === (AY = DY) || null !== FY && null !== AY && FY.keyId === AY.keyId && FY.modelId === AY.modelId;
-          var FY, AY
+        ...TT,
+        active: oT,
+        isSelected: IT => {
+          return (iT = oT ? TT.selected : null) === (zT = IT) || null !== iT && null !== zT && iT.keyId === zT.keyId && iT.modelId === zT.modelId;
+          var iT, zT
         },
-        select: YY => {
-          xR.select(YY)
+        select: TT => {
+          VW.select(TT)
         },
-        removeKey: YY => xR.removeKey(YY),
-        renameKey: (YY, rY) => {
-          xR.renameKey(YY, rY)
+        removeKey: TT => VW.removeKey(TT),
+        renameKey: (TT, oT) => {
+          VW.renameKey(TT, oT)
         },
-        setRemember: YY => {
-          xR.setRemember(YY)
+        setRemember: TT => {
+          VW.setRemember(TT)
         }
       }
     }
-    async function PR(YY, rY) {
-      var DY;
+    async function oX(TT, oT) {
+      var IT;
       let {
-        provider: FY,
-        key: AY,
-        baseUrl: IY,
-        modelName: RY
-      } = YY;
-      const OY = null !== (DY = null === RY || void 0 === RY ? void 0 : RY.trim()) && void 0 !== DY ? DY : "";
-      let gY = [];
+        provider: iT,
+        key: zT,
+        baseUrl: kT,
+        modelName: WT
+      } = TT;
+      const XT = null !== (IT = null === WT || void 0 === WT ? void 0 : WT.trim()) && void 0 !== IT ? IT : "";
+      let BT = [];
       try {
-        gY = (await CR(FY, AY, IY).check(rY)).models
-      } catch (aY) {
-        if (!("custom" === FY && aY instanceof QR && ("failed" === aY.problem || "noModel" === aY.problem))) throw aY
+        BT = (await HW(iT, zT, kT).check(oT)).models
+      } catch (FT) {
+        if (!("custom" === iT && FT instanceof hW && ("failed" === FT.problem || "noModel" === FT.problem))) throw FT
       }
-      if (null !== rY && void 0 !== rY && rY.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
-      return "" !== OY ? [{
-        ...JR(FY, OY, gY),
+      if (null !== oT && void 0 !== oT && oT.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
+      return "" !== XT ? [{
+        ...sW(iT, XT, BT),
         typed: !0
-      }] : MR(FY, gY)
+      }] : tW(iT, BT)
     }
-    "undefined" !== typeof window && window.addEventListener("storage", (YY => {
-      YY.storageArea === GR("localStorage") && YY.key === XR && xR.otherTabChanged(YY.newValue)
+    "undefined" !== typeof window && window.addEventListener("storage", (TT => {
+      TT.storageArea === dW("localStorage") && TT.key === bW && VW.otherTabChanged(TT.newValue)
     }));
-    async function UR(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const FY = CR(YY.provider, YY.key, YY.baseUrl);
-      let AY = {
-        ...DY,
-        callFormat: YY.model.callFormat,
-        tools: YY.model.nativeTools ? DY.tools : void 0
+    async function IX(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const iT = HW(TT.provider, TT.key, TT.baseUrl);
+      let zT = {
+        ...IT,
+        callFormat: TT.model.callFormat,
+        tools: TT.model.nativeTools ? IT.tools : void 0
       };
-      const IY = async () => {
+      const kT = async () => {
         try {
-          return await FY.ask(YY.model.id, rY, AY)
-        } catch (DY) {
-          if (! function(YY, rY) {
-              var DY, FY, AY;
-              return 0 !== (null !== (DY = null === (FY = rY.tools) || void 0 === FY ? void 0 : FY.length) && void 0 !== DY ? DY : 0) && YY instanceof QR && "failed" === YY.problem && (400 === YY.status || 404 === YY.status && /\btool/i.test(null !== (AY = YY.detail) && void 0 !== AY ? AY : ""))
-            }(DY, AY)) throw DY;
-          const IY = {
-              ...AY,
+          return await iT.ask(TT.model.id, oT, zT)
+        } catch (IT) {
+          if (! function(TT, oT) {
+              var IT, iT, zT;
+              return 0 !== (null !== (IT = null === (iT = oT.tools) || void 0 === iT ? void 0 : iT.length) && void 0 !== IT ? IT : 0) && TT instanceof hW && "failed" === TT.problem && (400 === TT.status || 404 === TT.status && /\btool/i.test(null !== (zT = TT.detail) && void 0 !== zT ? zT : ""))
+            }(IT, zT)) throw IT;
+          const kT = {
+              ...zT,
               tools: void 0
             },
-            RY = await FY.ask(YY.model.id, rY, IY);
-          return xR.stopNativeTools(YY.id, YY.model.id), AY = IY, RY
+            WT = await iT.ask(TT.model.id, oT, kT);
+          return VW.stopNativeTools(TT.id, TT.model.id), zT = kT, WT
         }
       };
       try {
-        return await IY()
-      } catch (uY) {
-        var RY, OY;
-        if (!((vY = uY) instanceof QR && void 0 !== vY.status && "noCredit" !== vY.problem && (429 === vY.status || 408 === vY.status || vY.status >= 500))) throw uY;
-        return await (gY = Math.min(null !== (RY = null !== (OY = uY.retryAfterMs) && void 0 !== OY ? OY : DY.retryWaitMs) && void 0 !== RY ? RY : 3e3, 2e4), aY = DY.signal, new Promise(((YY, rY) => {
-          if (null !== aY && void 0 !== aY && aY.aborted) return void rY(new DOMException("The AI key request was stopped", "AbortError"));
-          const DY = setTimeout(YY, gY);
-          null === aY || void 0 === aY || aY.addEventListener("abort", (() => {
-            clearTimeout(DY), rY(new DOMException("The AI key request was stopped", "AbortError"))
+        return await kT()
+      } catch (DT) {
+        var WT, XT;
+        if (!((ST = DT) instanceof hW && void 0 !== ST.status && "noCredit" !== ST.problem && (429 === ST.status || 408 === ST.status || ST.status >= 500))) throw DT;
+        return await (BT = Math.min(null !== (WT = null !== (XT = DT.retryAfterMs) && void 0 !== XT ? XT : IT.retryWaitMs) && void 0 !== WT ? WT : 3e3, 2e4), FT = IT.signal, new Promise(((TT, oT) => {
+          if (null !== FT && void 0 !== FT && FT.aborted) return void oT(new DOMException("The AI key request was stopped", "AbortError"));
+          const IT = setTimeout(TT, BT);
+          null === FT || void 0 === FT || FT.addEventListener("abort", (() => {
+            clearTimeout(IT), oT(new DOMException("The AI key request was stopped", "AbortError"))
           }), {
             once: !0
           })
-        }))), IY()
+        }))), kT()
       }
-      var gY, aY, vY
+      var BT, FT, ST
     }
-    var LR = DY(3240);
-    const tR = "Super Bot.xd",
-      YO = {
+    var iX = IT(3193);
+    const zX = "Super Bot.xd",
+      kX = {
         ovh: {
-          name: tR,
+          name: zX,
           temperature: .6,
           nativeTools: !0,
           callFormat: "qwenXml"
         },
         deepseek: {
-          name: tR,
+          name: zX,
           temperature: 1,
           nativeTools: !0,
           callFormat: "deepseek"
         }
       };
-    const rO = "bloxdAiHelperSuperBot",
-      DO = "bloxdAiHelperDeepSeekNotice";
+    const WX = "bloxdAiHelperSuperBot",
+      XX = "bloxdAiHelperDeepSeekNotice";
 
-    function FO(YY) {
-      if ("deepseek" !== YY) return !0;
+    function BX(TT) {
+      if ("deepseek" !== TT) return !0;
       try {
-        return "undefined" !== typeof window && "1" === window.localStorage.getItem(DO)
+        return "undefined" !== typeof window && "1" === window.localStorage.getItem(XX)
       } catch {
         return !1
       }
     }
 
-    function AO() {
+    function FX() {
       try {
-        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(rO)
+        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(WX)
       } catch {
         return !1
       }
     }
-    const IO = new class {
+    const SX = new class {
       constructor() {
-        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = YY => (this.listeners.add(YY), () => {
-          this.listeners.delete(YY)
+        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = TT => (this.listeners.add(TT), () => {
+          this.listeners.delete(TT)
         }), this.state = {
-          picked: AO(),
+          picked: FX(),
           status: null,
           canBuySuperRank: null
-        }, xR.subscribe((() => {
-          null !== xR.getState().selected && this.state.picked && this.update({
+        }, VW.subscribe((() => {
+          null !== VW.getState().selected && this.state.picked && this.update({
             picked: !1
           })
         }))
       }
       isAnswering() {
-        var YY;
-        return this.state.picked && "ok" === (null === (YY = this.state.status) || void 0 === YY ? void 0 : YY.availability)
+        var TT;
+        return this.state.picked && "ok" === (null === (TT = this.state.status) || void 0 === TT ? void 0 : TT.availability)
       }
-      Ps() {
-        xR.select(null), this.update({
+      PL() {
+        VW.select(null), this.update({
           picked: !0
         })
       }
@@ -8155,105 +8155,105 @@ export const modules = {
           picked: !1
         })
       }
-      setStatus(YY) {
-        const rY = this.state.picked && aO(YY, this.state.canBuySuperRank) && FO(YY.provider);
+      setStatus(TT) {
+        const oT = this.state.picked && cX(TT, this.state.canBuySuperRank) && BX(TT.provider);
         this.update({
-          status: YY,
-          picked: rY
+          status: TT,
+          picked: oT
         })
       }
-      setCanBuySuperRank(YY) {
+      setCanBuySuperRank(TT) {
         const {
-          status: rY
+          status: oT
         } = this.state;
         this.update({
-          canBuySuperRank: YY,
-          picked: this.state.picked && (null === rY || aO(rY, YY))
+          canBuySuperRank: TT,
+          picked: this.state.picked && (null === oT || cX(oT, TT))
         })
       }
       async refresh() {
-        return this.refreshing ??= (0, XA.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((YY => {
-          this.setStatus(YY)
-        })).catch((YY => {
-          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", YY)
+        return this.refreshing ??= (0, pz.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((TT => {
+          this.setStatus(TT)
+        })).catch((TT => {
+          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", TT)
         })).finally((() => {
           this.refreshing = null
         })), this.refreshing
       }
-      update(YY) {
+      update(TT) {
         this.state = {
           ...this.state,
-          ...YY
+          ...TT
         };
         try {
-          window.sessionStorage.setItem(rO, this.state.picked ? "1" : "0")
+          window.sessionStorage.setItem(WX, this.state.picked ? "1" : "0")
         } catch {}
-        for (const rY of this.listeners) rY()
+        for (const oT of this.listeners) oT()
       }
     };
 
-    function RO() {
-      const [YY, rY] = (0, FY.useState)(IO.getState);
-      return (0, FY.useEffect)((() => (rY(IO.getState()), IO.subscribe((() => {
-        rY(IO.getState())
-      })))), []), YY
+    function DX() {
+      const [TT, oT] = (0, iT.useState)(SX.getState);
+      return (0, iT.useEffect)((() => (oT(SX.getState()), SX.subscribe((() => {
+        oT(SX.getState())
+      })))), []), TT
     }
 
-    function OO(YY) {
-      var rY;
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-      if (null === YY) return "Checking whether Super Bot.xd can answer for you\u2026";
-      switch (YY.availability) {
+    function LX(TT) {
+      var oT;
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+      if (null === TT) return "Checking whether Super Bot.xd can answer for you\u2026";
+      switch (TT.availability) {
         case "ok":
           return null;
         case "guest":
           return "Log in to use Super Bot.xd.";
         case "tooNew":
-          return `Super Bot.xd opens once your account is a week old: ${QO((null!==(rY=YY.availableFrom)&&void 0!==rY?rY:DY)-DY)} to go.`;
+          return `Super Bot.xd opens once your account is a week old: ${hX((null!==(oT=TT.availableFrom)&&void 0!==oT?oT:IT)-IT)} to go.`;
         case "noUsageLeft":
-          return YY.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(YY,rY){const DY=Math.ceil((YY-rY)/36e5);if(DY<=24)return DY<=1?"within the hour":`in ${DY} hours`;return`in ${QO(YY-rY)}`}(YY.resetsAt,DY)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
+          return TT.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(TT,oT){const IT=Math.ceil((TT-oT)/36e5);if(IT<=24)return IT<=1?"within the hour":`in ${IT} hours`;return`in ${hX(TT-oT)}`}(TT.resetsAt,IT)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
         case "unavailable":
           return "Super Bot.xd can't answer right now. Try again later."
       }
     }
 
-    function gO(YY) {
-      return null !== YY && !YY.isSuper && "noUsageLeft" === YY.availability
+    function xX(TT) {
+      return null !== TT && !TT.isSuper && "noUsageLeft" === TT.availability
     }
 
-    function aO(YY, rY) {
-      return "ok" === YY.availability || !1 !== rY && gO(YY)
+    function cX(TT, oT) {
+      return "ok" === TT.availability || !1 !== oT && xX(TT)
     }
 
-    function vO(YY) {
-      return !0 === YY.canBuySuperRank && gO(YY.status)
+    function KX(TT) {
+      return !0 === TT.canBuySuperRank && xX(TT.status)
     }
 
-    function uO(YY) {
-      return vO(YY) ? null : OO(YY.status)
+    function MX(TT) {
+      return KX(TT) ? null : LX(TT.status)
     }
 
-    function sO(YY) {
-      return YY.picked && null === uO(YY)
+    function rX(TT) {
+      return TT.picked && null === MX(TT)
     }
 
-    function iO(YY) {
-      return YY.picked && vO(YY)
+    function AX(TT) {
+      return TT.picked && KX(TT)
     }
 
-    function yO(YY) {
-      return `Usage left: ${YY.left}`
+    function gX(TT) {
+      return `Usage left: ${TT.left}`
     }
 
-    function QO(YY) {
-      const rY = Math.max(1, Math.ceil(YY / RR.f));
-      return 1 === rY ? "1 day" : `${rY} days`
+    function hX(TT) {
+      const oT = Math.max(1, Math.ceil(TT / DW.j));
+      return 1 === oT ? "1 day" : `${oT} days`
     }
 
-    function oO(YY, rY) {
-      const DY = "unavailable" === YY ? OO(rY) : null;
-      if (DY) return `${DY} Bot.xd is answering instead.`;
-      switch (YY) {
+    function wX(TT, oT) {
+      const IT = "unavailable" === TT ? LX(oT) : null;
+      if (IT) return `${IT} Bot.xd is answering instead.`;
+      switch (TT) {
         case "busy":
           return "Super Bot.xd is busy, so Bot.xd is answering this one.";
         case "tooLong":
@@ -8268,91 +8268,91 @@ export const modules = {
           return "Super Bot.xd couldn't answer, so Bot.xd is answering this one."
       }
     }
-    async function WO(YY) {
-      if (function(YY) {
-          var rY, DY, FY, AY, IY, RY, OY;
-          return YY.messages.length > 12 || YY.messages.some((YY => YY.content.length > bA)) || (null !== (rY = null === (DY = YY.toolsJson) || void 0 === DY ? void 0 : DY.length) && void 0 !== rY ? rY : 0) > 1e5 || (null !== (FY = null === (AY = YY.request) || void 0 === AY ? void 0 : AY.length) && void 0 !== FY ? FY : 0) > bA || (null !== (IY = null === (RY = YY.code) || void 0 === RY ? void 0 : RY.length) && void 0 !== IY ? IY : 0) > bA || (null !== (OY = YY.toolResults) && void 0 !== OY ? OY : []).some((YY => YY.text.length > 1e5))
-        }(YY)) return {
+    async function mX(TT) {
+      if (function(TT) {
+          var oT, IT, iT, zT, kT, WT, XT;
+          return TT.messages.length > 12 || TT.messages.some((TT => TT.content.length > Gz)) || (null !== (oT = null === (IT = TT.toolsJson) || void 0 === IT ? void 0 : IT.length) && void 0 !== oT ? oT : 0) > 1e5 || (null !== (iT = null === (zT = TT.request) || void 0 === zT ? void 0 : zT.length) && void 0 !== iT ? iT : 0) > Gz || (null !== (kT = null === (WT = TT.code) || void 0 === WT ? void 0 : WT.length) && void 0 !== kT ? kT : 0) > Gz || (null !== (XT = TT.toolResults) && void 0 !== XT ? XT : []).some((TT => TT.text.length > 1e5))
+        }(TT)) return {
         outcome: "tooLarge"
       };
       try {
-        return await (0, XA.postToGameServer)("/ai-helper/super-bot-xd/ask", YY)
-      } catch (rY) {
-        if (rY instanceof OR.e && 413 === rY.httpCode) return {
+        return await (0, pz.postToGameServer)("/ai-helper/super-bot-xd/ask", TT)
+      } catch (oT) {
+        if (oT instanceof LW.d && 413 === oT.httpCode) return {
           outcome: "tooLarge"
         };
-        throw rY
+        throw oT
       }
     }
-    async function EO(YY, rY) {
-      return rY ? await new Promise(((DY, FY) => {
-        const AY = () => {
-          FY(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
+    async function eX(TT, oT) {
+      return oT ? await new Promise(((IT, iT) => {
+        const zT = () => {
+          iT(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
         };
-        rY.aborted ? AY() : (rY.addEventListener("abort", AY, {
+        oT.aborted ? zT() : (oT.addEventListener("abort", zT, {
           once: !0
-        }), YY.then(DY, FY).finally((() => {
-          rY.removeEventListener("abort", AY)
+        }), TT.then(IT, iT).finally((() => {
+          oT.removeEventListener("abort", zT)
         })))
-      })) : await YY
+      })) : await TT
     }
-    var mO = DY(25),
-      VO = DY(19),
-      SO = DY(2118);
-    let lO = null;
+    var RX = IT(16),
+      uX = IT(12),
+      vX = IT(2071);
+    let EX = null;
 
-    function TO() {
-      lO ??= Promise.resolve().then((() => DY(2129))), lO.then((YY => {
+    function fX() {
+      EX ??= Promise.resolve().then((() => IT(2084))), EX.then((TT => {
         let {
-          purchasesAllowed: rY
-        } = YY;
-        IO.setCanBuySuperRank(rY())
-      }), (YY => {
-        lO = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", YY)
+          purchasesAllowed: oT
+        } = TT;
+        SX.setCanBuySuperRank(oT())
+      }), (TT => {
+        EX = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", TT)
       }))
     }
-    let eO = !1,
-      NO = null;
-    async function BO() {
-      if (eO) return !0;
-      eO = !0;
+    let CX = !1,
+      jX = null;
+    async function JX() {
+      if (CX) return !0;
+      CX = !0;
       try {
-        var YY;
-        if (await IO.refresh(), !iO(IO.getState())) return !1;
+        var TT;
+        if (await SX.refresh(), !AX(SX.getState())) return !1;
         document.activeElement instanceof HTMLElement && document.activeElement.blur();
         const [{
-          NotificationProvider: rY
+          NotificationProvider: oT
         }, {
-          WorldCodeAiOutOfUsage: FY
-        }] = await Promise.all([Promise.resolve().then((() => DY(1346))), DY.e(346).then((() => DY(60237)))]);
-        null === (YY = NO) || void 0 === YY || YY.tearDownNotification();
-        const AY = rY.showCustomPopup({
-          body: YY => (0, RY.jsx)(FY, {
+          WorldCodeAiOutOfUsage: iT
+        }] = await Promise.all([Promise.resolve().then((() => IT(1325))), IT.e(346).then((() => IT(60034)))]);
+        null === (TT = jX) || void 0 === TT || TT.tearDownNotification();
+        const zT = oT.showCustomPopup({
+          body: TT => (0, WT.jsx)(iT, {
             onGetSuperRank: () => {
-              YY(),
+              TT(),
                 function() {
-                  mO.g.vo("OpenStoreFromCodeEditor"), (0, SO.f)({
+                  RX.h.XM("OpenStoreFromCodeEditor"), (0, vX.k)({
                     mode: "self",
                     source: "codeEditorAi",
                     openItem: "superRank"
                   });
-                  const YY = mO.g.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
-                    null === VO.b.get("openEverythingMenuName") && (mO.g.unsubscribe(YY), IO.refresh())
+                  const TT = RX.h.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
+                    null === uX.c.get("openEverythingMenuName") && (RX.h.unsubscribe(TT), SX.refresh())
                   }))
                 }()
             }
           })
         });
-        return NO = AY, AY.getResult().finally((() => {
-          NO === AY && (NO = null)
+        return jX = zT, zT.getResult().finally((() => {
+          jX === zT && (jX = null)
         })), !0
-      } catch (rY) {
-        return console.warn("AI Helper: the out of usage popup couldn't be opened", rY), !0
+      } catch (oT) {
+        return console.warn("AI Helper: the out of usage popup couldn't be opened", oT), !0
       } finally {
-        eO = !1
+        CX = !1
       }
     }
-    const cO = {
+    const UX = {
         wood: ["Maple Log"],
         log: ["Maple Log"],
         logs: ["Maple Log"],
@@ -8430,7 +8430,7 @@ export const modules = {
         glowstone: ["Glow Lamp"],
         "sea lantern": ["Glow Lamp", "Lantern"]
       },
-      KO = {
+      aX = {
         wooden: "wood",
         golden: "gold",
         oak: "maple",
@@ -8442,7 +8442,7 @@ export const modules = {
         egg: "orb",
         stained: ""
       },
-      HO = {
+      YX = {
         teleport: ["setPosition"],
         tp: ["setPosition"],
         heal: ["setHealth", "getHealth"],
@@ -8505,1240 +8505,1240 @@ export const modules = {
         green: ["sendMessage"],
         red: ["sendMessage"]
       },
-      zO = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
+      QX = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
 
-    function ZO(YY) {
-      return YY.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((YY => YY.length > 1))
+    function OX(TT) {
+      return TT.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((TT => TT.length > 1))
     }
 
-    function CO(YY) {
-      return YY.length > 4 && YY.endsWith("ies") ? `${YY.slice(0,-3)}y` : YY.length > 3 && YY.endsWith("s") && !YY.endsWith("ss") ? YY.slice(0, -1) : YY
+    function HX(TT) {
+      return TT.length > 4 && TT.endsWith("ies") ? `${TT.slice(0,-3)}y` : TT.length > 3 && TT.endsWith("s") && !TT.endsWith("ss") ? TT.slice(0, -1) : TT
     }
 
-    function fO(YY) {
-      return new Set(ZO(YY).map((YY => CO(YY))))
+    function nX(TT) {
+      return new Set(OX(TT).map((TT => HX(TT))))
     }
-    const jO = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
+    const qX = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
 
-    function hO(YY) {
-      return YY.split("\n").map((YY => YY.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (YY => YY.replace(/[^\n]/g, ""))).split("\n")
-    }
-
-    function dO(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const DY = [],
-        FY = new Set,
-        AY = hO(rY ? YY : (0, ur.C)(YY, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, ur.q, (() => "projectRequire"))),
-        IY = new Set([...AY.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((YY => YY[1])));
-      return AY.forEach(((YY, rY) => {
-        for (const AY of (0, ur.g)(YY, /(global|window|document|process|require)\b\s*[.([]/g, ur.q)) FY.has(AY[1]) || IY.has(AY[1]) || (FY.add(AY[1]), DY.push(`Line ${rY+1} uses "${AY[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
-      })), DY
+    function ZX(TT) {
+      return TT.split("\n").map((TT => TT.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (TT => TT.replace(/[^\n]/g, ""))).split("\n")
     }
 
-    function JO(YY) {
-      const rY = YY.split("\n"),
-        DY = [];
-      return rY.forEach(((YY, FY) => {
-        var AY, IY, RY, OY, gY;
-        const aY = YY.indexOf("api.setCurrency(");
-        if (-1 === aY) return;
-        const vY = rY.slice(FY, FY + 3).join(" ").slice(aY),
-          uY = vY.slice(0, vY.indexOf("}") + 1 || void 0),
-          sY = null === (AY = /amount\s*:\s*(\d+)/.exec(uY)) || void 0 === AY ? void 0 : AY[1];
-        if (!/persistent\s*:\s*true/.test(uY) || void 0 === sY) return;
-        const iY = [null !== (IY = rY[FY - 2]) && void 0 !== IY ? IY : "", null !== (RY = rY[FY - 1]) && void 0 !== RY ? RY : "", YY.slice(0, aY)].join(" ");
-        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(iY)) return;
-        const yY = null !== (OY = null === (gY = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(uY)) || void 0 === gY ? void 0 : gY[1]) && void 0 !== OY ? OY : "coins";
-        DY.push(`Line ${FY+1} sets the saved "${yY}" back to ${sY} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${yY}") is null.`)
-      })), DY
+    function lX(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const IT = [],
+        iT = new Set,
+        zT = ZX(oT ? TT : (0, Do.r)(TT, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, Do.k, (() => "projectRequire"))),
+        kT = new Set([...zT.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((TT => TT[1])));
+      return zT.forEach(((TT, oT) => {
+        for (const zT of (0, Do.f)(TT, /(global|window|document|process|require)\b\s*[.([]/g, Do.k)) iT.has(zT[1]) || kT.has(zT[1]) || (iT.add(zT[1]), IT.push(`Line ${oT+1} uses "${zT[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
+      })), IT
     }
 
-    function MO(YY) {
-      var rY, DY;
-      const FY = null !== (rY = null === (DY = YY.split("### Parameters:")[1]) || void 0 === DY ? void 0 : DY.split("###")[0]) && void 0 !== rY ? rY : "",
-        AY = [];
-      for (const IY of FY.split("\n")) {
-        const YY = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(IY);
-        YY && "Parameter" !== YY[1] && AY.push({
-          name: YY[1],
-          type: YY[2]
+    function sX(TT) {
+      const oT = TT.split("\n"),
+        IT = [];
+      return oT.forEach(((TT, iT) => {
+        var zT, kT, WT, XT, BT;
+        const FT = TT.indexOf("api.setCurrency(");
+        if (-1 === FT) return;
+        const ST = oT.slice(iT, iT + 3).join(" ").slice(FT),
+          DT = ST.slice(0, ST.indexOf("}") + 1 || void 0),
+          LT = null === (zT = /amount\s*:\s*(\d+)/.exec(DT)) || void 0 === zT ? void 0 : zT[1];
+        if (!/persistent\s*:\s*true/.test(DT) || void 0 === LT) return;
+        const xT = [null !== (kT = oT[iT - 2]) && void 0 !== kT ? kT : "", null !== (WT = oT[iT - 1]) && void 0 !== WT ? WT : "", TT.slice(0, FT)].join(" ");
+        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(xT)) return;
+        const cT = null !== (XT = null === (BT = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(DT)) || void 0 === BT ? void 0 : BT[1]) && void 0 !== XT ? XT : "coins";
+        IT.push(`Line ${iT+1} sets the saved "${cT}" back to ${LT} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${cT}") is null.`)
+      })), IT
+    }
+
+    function tX(TT) {
+      var oT, IT;
+      const iT = null !== (oT = null === (IT = TT.split("### Parameters:")[1]) || void 0 === IT ? void 0 : IT.split("###")[0]) && void 0 !== oT ? oT : "",
+        zT = [];
+      for (const kT of iT.split("\n")) {
+        const TT = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(kT);
+        TT && "Parameter" !== TT[1] && zT.push({
+          name: TT[1],
+          type: TT[2]
         })
       }
-      return AY
+      return zT
     }
 
-    function wO(YY) {
-      return MO(YY).map((YY => YY.name))
+    function GX(TT) {
+      return tX(TT).map((TT => TT.name))
     }
-    const bO = "(\"[^\"\\n]*\"|'[^'\\n]*')";
+    const pX = "(\"[^\"\\n]*\"|'[^'\\n]*')";
 
-    function XO(YY, rY) {
-      const DY = [];
-      let FY = 0,
-        AY = "",
-        IY = "",
-        RY = rY;
-      for (let OY = rY; OY < YY.length; OY++) {
-        const rY = YY[OY];
-        if (AY) "\\" === rY ? OY++ : rY === AY && (AY = "");
-        else if ("/" === rY && "/" === YY[OY + 1]) {
-          IY += YY.slice(RY, OY);
-          const rY = YY.indexOf("\n", OY);
-          OY = -1 === rY ? YY.length : rY, RY = OY
-        } else if ('"' === rY || "'" === rY || "`" === rY) AY = rY;
-        else if ("[" === rY || "{" === rY || "(" === rY) FY++;
-        else if (("]" === rY || "}" === rY || ")" === rY) && FY > 0) FY--;
+    function bX(TT, oT) {
+      const IT = [];
+      let iT = 0,
+        zT = "",
+        kT = "",
+        WT = oT;
+      for (let XT = oT; XT < TT.length; XT++) {
+        const oT = TT[XT];
+        if (zT) "\\" === oT ? XT++ : oT === zT && (zT = "");
+        else if ("/" === oT && "/" === TT[XT + 1]) {
+          kT += TT.slice(WT, XT);
+          const oT = TT.indexOf("\n", XT);
+          XT = -1 === oT ? TT.length : oT, WT = XT
+        } else if ('"' === oT || "'" === oT || "`" === oT) zT = oT;
+        else if ("[" === oT || "{" === oT || "(" === oT) iT++;
+        else if (("]" === oT || "}" === oT || ")" === oT) && iT > 0) iT--;
         else {
-          if (")" === rY) {
-            const rY = (IY + YY.slice(RY, OY)).trim();
-            return "" !== rY || DY.length > 0 ? [...DY, rY] : DY
+          if (")" === oT) {
+            const oT = (kT + TT.slice(WT, XT)).trim();
+            return "" !== oT || IT.length > 0 ? [...IT, oT] : IT
           }
-          "," === rY && 0 === FY && (DY.push((IY + YY.slice(RY, OY)).trim()), IY = "", RY = OY + 1)
+          "," === oT && 0 === iT && (IT.push((kT + TT.slice(WT, XT)).trim()), kT = "", WT = XT + 1)
         }
       }
       return []
     }
 
-    function qO(YY, rY) {
-      var DY;
-      if (!/^[A-Za-z_$][\w$]*$/.test(rY)) return;
-      const FY = rY.replaceAll("$", "\\$"),
-        AY = `\\((?:[^()]*[\\s,])?${FY}(?![\\w$])[^()]*\\)`,
-        IY = new RegExp(`(?:const|let|var)\\s+${FY}(?![\\w$])|${FY}\\s*(?:\\+?=(?![=>])|=>)|${AY}\\s*=>|function\\s*[\\w$]*\\s*${AY}`, "g");
-      return 1 === (0, ur.g)(YY, IY, ur.q).length ? null === (DY = new RegExp(`\\b(?:const|let|var)\\s+${FY}\\s*=\\s*${bO}\\s*(?:;|//|$)`, "m").exec(YY)) || void 0 === DY ? void 0 : DY[1] : void 0
+    function yX(TT, oT) {
+      var IT;
+      if (!/^[A-Za-z_$][\w$]*$/.test(oT)) return;
+      const iT = oT.replaceAll("$", "\\$"),
+        zT = `\\((?:[^()]*[\\s,])?${iT}(?![\\w$])[^()]*\\)`,
+        kT = new RegExp(`(?:const|let|var)\\s+${iT}(?![\\w$])|${iT}\\s*(?:\\+?=(?![=>])|=>)|${zT}\\s*=>|function\\s*[\\w$]*\\s*${zT}`, "g");
+      return 1 === (0, Do.f)(TT, kT, Do.k).length ? null === (IT = new RegExp(`\\b(?:const|let|var)\\s+${iT}\\s*=\\s*${pX}\\s*(?:;|//|$)`, "m").exec(TT)) || void 0 === IT ? void 0 : IT[1] : void 0
     }
 
-    function pO(YY, rY, DY) {
-      let FY;
-      const AY = function(YY) {
-        const rY = YY.split("\n").slice(1).map((YY => YY.trim())).find((YY => "" !== YY && !YY.startsWith("#") && !YY.startsWith("|") && !YY.startsWith("**") && !YY.startsWith("```")));
-        if (!rY) return "";
-        const DY = rY.search(/\.\s/),
-          FY = -1 === DY ? rY : rY.slice(0, DY + 1);
-        return FY.length > 110 ? `${FY.slice(0,107)}...` : FY
-      }(DY);
-      return FY = "api" === YY ? `api.${rY}(${wO(DY).join(", ")})${AY?` \u2014 ${AY}`:""}` : "callback" === YY ? `${rY}(${wO(DY).join(", ")})${AY?` \u2014 ${AY}`:""}` : "clientOption" === YY ? `${rY}: ${function(YY){var rY,DY;return null!==(rY=null===(DY=/\*\*Type:\*\*\s*`([^`]+)`/.exec(YY))||void 0===DY?void 0:DY[1])&&void 0!==rY?rY:""}(DY)}${AY?` \u2014 ${AY}`:""}`:rY,{kind:YY,name:rY,text:DY,line:FY,nameWords:fO(rY),textWords:fO(DY)}}function kO(YY){return YY.toLowerCase().split(/[^a-z0-9]+/).filter((YY=>""!==YY&&"of"!==YY&&"the"!==YY)).sort().join(" ")}const GO=new Set(["block","item"]);function xO(YY){let{names:rY,isSure:DY}=YY;return 0===rY.length?"":1!==rY.length||DY?`
+    function NX(TT, oT, IT) {
+      let iT;
+      const zT = function(TT) {
+        const oT = TT.split("\n").slice(1).map((TT => TT.trim())).find((TT => "" !== TT && !TT.startsWith("#") && !TT.startsWith("|") && !TT.startsWith("**") && !TT.startsWith("```")));
+        if (!oT) return "";
+        const IT = oT.search(/\.\s/),
+          iT = -1 === IT ? oT : oT.slice(0, IT + 1);
+        return iT.length > 110 ? `${iT.slice(0,107)}...` : iT
+      }(IT);
+      return iT = "api" === TT ? `api.${oT}(${GX(IT).join(", ")})${zT?` \u2014 ${zT}`:""}` : "callback" === TT ? `${oT}(${GX(IT).join(", ")})${zT?` \u2014 ${zT}`:""}` : "clientOption" === TT ? `${oT}: ${function(TT){var oT,IT;return null!==(oT=null===(IT=/\*\*Type:\*\*\s*`([^`]+)`/.exec(TT))||void 0===IT?void 0:IT[1])&&void 0!==oT?oT:""}(IT)}${zT?` \u2014 ${zT}`:""}`:oT,{kind:TT,name:oT,text:IT,line:iT,nameWords:nX(oT),textWords:nX(IT)}}function PX(TT){return TT.toLowerCase().split(/[^a-z0-9]+/).filter((TT=>""!==TT&&"of"!==TT&&"the"!==TT)).sort().join(" ")}const dX=new Set(["block","item"]);function VX(TT){let{names:oT,isSure:IT}=TT;return 0===oT.length?"":1!==oT.length||IT?`
       Did you mean $ {
-        rY.map((YY => `"${YY}"`)).join(" or ")
+        oT.map((TT => `"${TT}"`)).join(" or ")
       } ? `:`
-      The closest name is "${rY[0]}", which may be something
+      The closest name is "${oT[0]}", which may be something
       else.
-      `}function nO(YY){return YY.split("\n").slice(1).map((YY=>YY.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((YY=>""!==YY&&!YY.startsWith("#")))}class PO{constructor(YY){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(YY,rY)=>{if("mob"===YY){var DY;const YY=rY.trim().toLowerCase();return null!==(DY=this.mobTypes.find((rY=>rY.toLowerCase()===YY)))&&void 0!==DY?DY:null}const FY=this.suggestNames(rY),AY=FY.isSure?FY.names[0]:void 0;return void 0===AY||"item"!==YY&&!this.blockNames.has(AY)?null:AY};const rY=[],DY=(YY,DY)=>{for(const{name:FY,text:AY}of function(YY){const rY=[],DY=YY.split(/^## /m).slice(1);for(const FY of DY){const YY=FY.indexOf("\n"),DY=(-1===YY?FY:FY.slice(0,YY)).trim(),AY=`
+      `}function TB(TT){return TT.split("\n").slice(1).map((TT=>TT.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((TT=>""!==TT&&!TT.startsWith("#")))}class oB{constructor(TT){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(TT,oT)=>{if("mob"===TT){var IT;const TT=oT.trim().toLowerCase();return null!==(IT=this.mobTypes.find((oT=>oT.toLowerCase()===TT)))&&void 0!==IT?IT:null}const iT=this.suggestNames(oT),zT=iT.isSure?iT.names[0]:void 0;return void 0===zT||"item"!==TT&&!this.blockNames.has(zT)?null:zT};const oT=[],IT=(TT,IT)=>{for(const{name:iT,text:zT}of function(TT){const oT=[],IT=TT.split(/^## /m).slice(1);for(const iT of IT){const TT=iT.indexOf("\n"),IT=(-1===TT?iT:iT.slice(0,TT)).trim(),zT=`
       # # $ {
-        FY
+        iT
       }
-      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();rY.push({name:DY,text:AY})}return rY}(DY))rY.push(pO(YY,FY,AY))};DY("api",YY.apiReference),DY("callback",YY.callbacks),DY("clientOption",YY.clientOptions),DY("snippet",YY.snippets),DY("howTo",YY.howTo);const FY=function(){const YY=DF.map((YY=>`
+      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();oT.push({name:IT,text:zT})}return oT}(IT))oT.push(NX(TT,iT,zT))};IT("api",TT.apiReference),IT("callback",TT.callbacks),IT("clientOption",TT.clientOptions),IT("snippet",TT.snippets),IT("howTo",TT.howTo);const iT=function(){const TT=zi.map((TT=>`
       # # $ {
-        YY.name
+        TT.name
       }\
       nReady - made
       function($ {
-        YY.category
+        TT.category
       }) : call it as it is, without api.and without writing it;
       its code is added to the file by itself.\n$ {
-        YY.about
+        TT.about
       }\
-      n\ nUsage: \`${YY.signature}\`\n\n\`\`\`js\n${YY.example}\n\`\`\``)),
-  rY = vF.map((YY => `## ${YY.name}\nPrefab (${YY.kind}, ${YY.category}): put in with use_prefab. ${NF(YY,!1)}`));
+      n\ nUsage: \`${TT.signature}\`\n\n\`\`\`js\n${TT.example}\n\`\`\``)),
+  oT = Li.map((TT => `## ${TT.name}\nPrefab (${TT.kind}, ${TT.category}): put in with use_prefab. ${fi(TT,!1)}`));
   return {
-    helpers: `# Ready-made functions\n\n${YY.join("\n\n")}\n`,
-    prefabs: `# Prefabs\n\n${rY.join("\n\n")}\n`
+    helpers: `# Ready-made functions\n\n${TT.join("\n\n")}\n`,
+    prefabs: `# Prefabs\n\n${oT.join("\n\n")}\n`
   }
 }();
-DY("helper", FY.helpers), DY("prefab", FY.prefabs), this.sections = rY;
-for (const IY of rY) {
-  this.byName.has(IY.name) || this.byName.set(IY.name, IY);
-  for (const YY of IY.textWords) {
-    var AY;
-    this.wordCounts.set(YY, (null !== (AY = this.wordCounts.get(YY)) && void 0 !== AY ? AY : 0) + 1)
+IT("helper", iT.helpers), IT("prefab", iT.prefabs), this.sections = oT;
+for (const kT of oT) {
+  this.byName.has(kT.name) || this.byName.set(kT.name, kT);
+  for (const TT of kT.textWords) {
+    var zT;
+    this.wordCounts.set(TT, (null !== (zT = this.wordCounts.get(TT)) && void 0 !== zT ? zT : 0) + 1)
   }
 }
-this.itemAndBlockNames = [...new Set([...nO(YY.itemNames), ...nO(YY.blockNames)])], this.blockNames = new Set(nO(YY.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((YY => [YY.toLowerCase(), YY]))), this.mobTypes = function(YY) {
-  var rY, DY;
-  const FY = null !== (rY = null === (DY = YY.split("## Mob Variations")[1]) || void 0 === DY ? void 0 : DY.split("```")[1]) && void 0 !== rY ? rY : "",
-    AY = [];
-  for (const IY of FY.split("\n")) {
-    const YY = /^([A-Z][\w ]*?):\s*"/.exec(IY.trim());
-    YY && AY.push(YY[1])
+this.itemAndBlockNames = [...new Set([...TB(TT.itemNames), ...TB(TT.blockNames)])], this.blockNames = new Set(TB(TT.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((TT => [TT.toLowerCase(), TT]))), this.mobTypes = function(TT) {
+  var oT, IT;
+  const iT = null !== (oT = null === (IT = TT.split("## Mob Variations")[1]) || void 0 === IT ? void 0 : IT.split("```")[1]) && void 0 !== oT ? oT : "",
+    zT = [];
+  for (const kT of iT.split("\n")) {
+    const TT = /^([A-Z][\w ]*?):\s*"/.exec(kT.trim());
+    TT && zT.push(TT[1])
   }
-  return AY
-}(YY.mobSettings)
+  return zT
+}(TT.mobSettings)
 }
-index(YY) {
-  return this.sections.filter((rY => rY.kind === YY)).map((YY => YY.line)).join("\n")
+index(TT) {
+  return this.sections.filter((oT => oT.kind === TT)).map((TT => TT.line)).join("\n")
 }
 callbackNames() {
-  return this.sections.filter((YY => "callback" === YY.kind)).map((YY => YY.name))
+  return this.sections.filter((TT => "callback" === TT.kind)).map((TT => TT.name))
 }
-get(YY) {
-  return this.byName.get(YY)
+get(TT) {
+  return this.byName.get(TT)
 }
-unprefixedApiCalls(YY) {
-  const rY = hO(YY),
-    DY = rY.join("\n"),
-    FY = new Set([...DY.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((YY => {
-      var rY;
-      return null !== (rY = YY[1]) && void 0 !== rY ? rY : YY[2]
+unprefixedApiCalls(TT) {
+  const oT = ZX(TT),
+    IT = oT.join("\n"),
+    iT = new Set([...IT.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((TT => {
+      var oT;
+      return null !== (oT = TT[1]) && void 0 !== oT ? oT : TT[2]
     }))),
-    AY = [...DY.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...DY.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
-  for (const RY of AY)
-    for (const YY of RY[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) FY.add(YY[1]);
-  const IY = new Map;
-  return rY.forEach(((YY, rY) => {
-    for (const AY of (0, ur.g)(YY, /([\w$]+)\s*\(/g, ur.q)) {
-      var DY;
-      const RY = AY[1],
-        OY = /^\s*(?:async\s+)?$/.test(YY.slice(0, AY.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(YY.slice(AY.index));
-      IY.has(RY) || FY.has(RY) || OY || "api" !== (null === (DY = this.byName.get(RY)) || void 0 === DY ? void 0 : DY.kind) || IY.set(RY, `Line ${rY+1} calls ${RY} without "api.", so it throws there. Did you mean api.${RY}?`)
+    zT = [...IT.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...IT.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
+  for (const WT of zT)
+    for (const TT of WT[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) iT.add(TT[1]);
+  const kT = new Map;
+  return oT.forEach(((TT, oT) => {
+    for (const zT of (0, Do.f)(TT, /([\w$]+)\s*\(/g, Do.k)) {
+      var IT;
+      const WT = zT[1],
+        XT = /^\s*(?:async\s+)?$/.test(TT.slice(0, zT.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(TT.slice(zT.index));
+      kT.has(WT) || iT.has(WT) || XT || "api" !== (null === (IT = this.byName.get(WT)) || void 0 === IT ? void 0 : IT.kind) || kT.set(WT, `Line ${oT+1} calls ${WT} without "api.", so it throws there. Did you mean api.${WT}?`)
     }
-  })), [...IY.values()]
+  })), [...kT.values()]
 }
-unknownApiMethods(YY) {
-  return [...new Set([...YY.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((YY => YY[1])))].filter((YY => {
-    var rY;
-    return "api" !== (null === (rY = this.byName.get(YY)) || void 0 === rY ? void 0 : rY.kind)
-  })).map((YY => {
-    const rY = this.find(YY.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((YY => "api" === YY.kind)).slice(0, 2).map((YY => `api.${YY.name}`));
-    return `api.${YY} doesn't exist.${rY.length?` Did you mean ${rY.join(" or ")}?`:""}`
+unknownApiMethods(TT) {
+  return [...new Set([...TT.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((TT => TT[1])))].filter((TT => {
+    var oT;
+    return "api" !== (null === (oT = this.byName.get(TT)) || void 0 === oT ? void 0 : oT.kind)
+  })).map((TT => {
+    const oT = this.find(TT.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((TT => "api" === TT.kind)).slice(0, 2).map((TT => `api.${TT.name}`));
+    return `api.${TT} doesn't exist.${oT.length?` Did you mean ${oT.join(" or ")}?`:""}`
   }))
 }
-unknownItemNames(YY) {
-  const rY = new Set([...this.itemAndBlockNames, "Air"]),
-    DY = new Set;
-  for (const FY of YY.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
-    const AY = this.byName.get(FY[1]);
-    if ("api" !== (null === AY || void 0 === AY ? void 0 : AY.kind)) continue;
-    const IY = MO(AY.text).map((YY => {
+unknownItemNames(TT) {
+  const oT = new Set([...this.itemAndBlockNames, "Air"]),
+    IT = new Set;
+  for (const iT of TT.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
+    const zT = this.byName.get(iT[1]);
+    if ("api" !== (null === zT || void 0 === zT ? void 0 : zT.kind)) continue;
+    const kT = tX(zT.text).map((TT => {
         let {
-          type: rY
-        } = YY;
-        return void 0 !== rY && /^(ItemName|BlockName)\b/.test(rY)
+          type: oT
+        } = TT;
+        return void 0 !== oT && /^(ItemName|BlockName)\b/.test(oT)
       })),
-      RY = XO(YY, FY.index + FY[0].length);
-    RY.forEach(((FY, AY) => {
-      var OY, gY, aY, vY;
-      if (!IY[AY] && (AY !== RY.length - 1 || !IY[IY.length - 1])) return;
-      const uY = null === (OY = /^CONFIG\.([\w$]+)$/.exec(FY)) || void 0 === OY ? void 0 : OY[1],
-        sY = uY ? null === (gY = new RegExp(`(?:^|[{,])\\s*${uY.replaceAll("$","\\$")}\\s*:\\s*${bO}`, "m").exec(YY)) || void 0 === gY ? void 0 : gY[1] : void 0,
-        iY = qO(YY, FY),
-        yY = null !== (aY = null === (vY = new RegExp(`\\?\\s*${bO}\\s*:\\s*${bO}$`).exec(FY)) || void 0 === vY ? void 0 : vY.slice(1)) && void 0 !== aY ? aY : [];
-      for (const YY of [null !== (QY = null !== sY && void 0 !== sY ? sY : iY) && void 0 !== QY ? QY : FY, ...yY]) {
-        var QY;
-        const FY = /^(["'`])([^"'`]+)\1$/.exec(YY),
-          AY = "`" === (null === FY || void 0 === FY ? void 0 : FY[1]) && FY[2].includes("${");
-        !FY || AY || rY.has(FY[2]) || DY.add(FY[2])
+      WT = bX(TT, iT.index + iT[0].length);
+    WT.forEach(((iT, zT) => {
+      var XT, BT, FT, ST;
+      if (!kT[zT] && (zT !== WT.length - 1 || !kT[kT.length - 1])) return;
+      const DT = null === (XT = /^CONFIG\.([\w$]+)$/.exec(iT)) || void 0 === XT ? void 0 : XT[1],
+        LT = DT ? null === (BT = new RegExp(`(?:^|[{,])\\s*${DT.replaceAll("$","\\$")}\\s*:\\s*${pX}`, "m").exec(TT)) || void 0 === BT ? void 0 : BT[1] : void 0,
+        xT = yX(TT, iT),
+        cT = null !== (FT = null === (ST = new RegExp(`\\?\\s*${pX}\\s*:\\s*${pX}$`).exec(iT)) || void 0 === ST ? void 0 : ST.slice(1)) && void 0 !== FT ? FT : [];
+      for (const TT of [null !== (KT = null !== LT && void 0 !== LT ? LT : xT) && void 0 !== KT ? KT : iT, ...cT]) {
+        var KT;
+        const iT = /^(["'`])([^"'`]+)\1$/.exec(TT),
+          zT = "`" === (null === iT || void 0 === iT ? void 0 : iT[1]) && iT[2].includes("${");
+        !iT || zT || oT.has(iT[2]) || IT.add(iT[2])
       }
     }))
   }
-  return [...DY].map((YY => `"${YY}" isn't an item or block name.${xO(this.suggestNames(YY))}`))
+  return [...IT].map((TT => `"${TT}" isn't an item or block name.${VX(this.suggestNames(TT))}`))
 }
-reorderedComparedNames(YY) {
-  const rY = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    DY = new Map(this.itemAndBlockNames.map((YY => [kO(YY), YY]))),
-    FY = new Map,
-    AY = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
-  for (const OY of AY)
-    for (const AY of YY.matchAll(OY)) {
-      const YY = AY[2],
-        IY = rY.has(YY) || !/\s/.test(YY.trim()) ? void 0 : DY.get(kO(YY));
-      IY && FY.set(YY, IY)
+reorderedComparedNames(TT) {
+  const oT = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    IT = new Map(this.itemAndBlockNames.map((TT => [PX(TT), TT]))),
+    iT = new Map,
+    zT = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
+  for (const XT of zT)
+    for (const zT of TT.matchAll(XT)) {
+      const TT = zT[2],
+        kT = oT.has(TT) || !/\s/.test(TT.trim()) ? void 0 : IT.get(PX(TT));
+      kT && iT.set(TT, kT)
     }
-  const IY = [...FY].map((YY => {
-      let [rY, DY] = YY;
-      return `"${rY}" isn't a block or item name, so comparing with it is never true. Did you mean "${DY}"?`
+  const kT = [...iT].map((TT => {
+      let [oT, IT] = TT;
+      return `"${oT}" isn't a block or item name, so comparing with it is never true. Did you mean "${IT}"?`
     })),
-    RY = new Map;
-  for (const OY of YY.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
-    const rY = OY[2],
-      DY = this.blockNames.has(rY) || !this.itemAndBlockNames.includes(rY) ? void 0 : [`Block of ${rY}`, `${rY} Block`].find((YY => this.blockNames.has(YY)));
-    !DY || YY.includes(`"${DY}"`) || YY.includes(`'${DY}'`) || RY.set(rY, DY)
+    WT = new Map;
+  for (const XT of TT.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
+    const oT = XT[2],
+      IT = this.blockNames.has(oT) || !this.itemAndBlockNames.includes(oT) ? void 0 : [`Block of ${oT}`, `${oT} Block`].find((TT => this.blockNames.has(TT)));
+    !IT || TT.includes(`"${IT}"`) || TT.includes(`'${IT}'`) || WT.set(oT, IT)
   }
-  return [...IY, ...[...RY].map((YY => {
-    let [rY, DY] = YY;
-    return `"${rY}" is an item, not a block, so no block is ever called that. Did you mean "${DY}"?`
+  return [...kT, ...[...WT].map((TT => {
+    let [oT, IT] = TT;
+    return `"${oT}" is an item, not a block, so no block is ever called that. Did you mean "${IT}"?`
   }))]
 }
-unknownComparedBlockNames(YY) {
-  const rY = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    DY = new Set(this.itemAndBlockNames.map((YY => kO(YY)))),
-    FY = new Set;
-  for (const AY of YY.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) FY.add(AY[2]);
-  for (const AY of YY.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) FY.add(AY[2]);
-  return [...FY].filter((YY => !rY.has(YY) && !(/\s/.test(YY.trim()) && DY.has(kO(YY))))).map((YY => {
-    const rY = this.itemAndBlockNames.filter((rY => kO(rY) === kO(YY))),
-      DY = this.itemAndBlockNames.filter((rY => ZO(rY).includes(YY.toLowerCase()))),
-      FY = this.suggestNames(YY),
-      AY = rY.length > 0 ? {
-        names: rY,
-        isSure: 1 === rY.length,
+unknownComparedBlockNames(TT) {
+  const oT = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    IT = new Set(this.itemAndBlockNames.map((TT => PX(TT)))),
+    iT = new Set;
+  for (const zT of TT.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) iT.add(zT[2]);
+  for (const zT of TT.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) iT.add(zT[2]);
+  return [...iT].filter((TT => !oT.has(TT) && !(/\s/.test(TT.trim()) && IT.has(PX(TT))))).map((TT => {
+    const oT = this.itemAndBlockNames.filter((oT => PX(oT) === PX(TT))),
+      IT = this.itemAndBlockNames.filter((oT => OX(oT).includes(TT.toLowerCase()))),
+      iT = this.suggestNames(TT),
+      zT = oT.length > 0 ? {
+        names: oT,
+        isSure: 1 === oT.length,
         isDecided: !0
-      } : FY.names.length > 0 || FY.isDecided ? FY : {
-        names: DY.length <= 2 ? DY : [],
-        isSure: 1 === DY.length,
+      } : iT.names.length > 0 || iT.isDecided ? iT : {
+        names: IT.length <= 2 ? IT : [],
+        isSure: 1 === IT.length,
         isDecided: !1
       };
-    return `"${YY}" isn't a block or item name, so comparing a block with it is never true.${xO(AY)}`
+    return `"${TT}" isn't a block or item name, so comparing a block with it is never true.${VX(zT)}`
   }))
 }
-madeUpStopValues(YY) {
-  const rY = new Set;
+madeUpStopValues(TT) {
+  const oT = new Set;
   for (const {
-      name: DY,
-      body: FY
+      name: IT,
+      body: iT
     }
     of
-    function(YY) {
-      const rY = [...YY.matchAll(jO)];
-      return rY.map(((DY, FY) => {
-        var AY, IY, RY;
+    function(TT) {
+      const oT = [...TT.matchAll(qX)];
+      return oT.map(((IT, iT) => {
+        var zT, kT, WT;
         return {
-          name: null !== (AY = DY[1]) && void 0 !== AY ? AY : DY[2],
-          body: YY.slice(DY.index, null !== (IY = null === (RY = rY[FY + 1]) || void 0 === RY ? void 0 : RY.index) && void 0 !== IY ? IY : YY.length)
+          name: null !== (zT = IT[1]) && void 0 !== zT ? zT : IT[2],
+          body: TT.slice(IT.index, null !== (kT = null === (WT = oT[iT + 1]) || void 0 === WT ? void 0 : WT.index) && void 0 !== kT ? kT : TT.length)
         }
       }))
-    }(YY)) {
-    const YY = this.byName.get(DY);
-    if ("callback" === (null === YY || void 0 === YY ? void 0 : YY.kind))
-      for (const AY of FY.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
-        const FY = AY[1];
-        if (YY.text.includes(`"${FY}"`)) continue;
-        const IY = [...new Set([...YY.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((YY => YY[1])))],
-          RY = IY.length > 0 ? `Did you mean ${IY.map((YY=>`"${YY}"`)).join(" or ")}?` : /Return false/i.test(YY.text) ? `To stop it, return false instead of "${FY}".` : "Check Show Docs for what it can return.";
-        rY.add(`${DY} can't use "${FY}" to stop anything. ${RY}`)
+    }(TT)) {
+    const TT = this.byName.get(IT);
+    if ("callback" === (null === TT || void 0 === TT ? void 0 : TT.kind))
+      for (const zT of iT.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
+        const iT = zT[1];
+        if (TT.text.includes(`"${iT}"`)) continue;
+        const kT = [...new Set([...TT.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((TT => TT[1])))],
+          WT = kT.length > 0 ? `Did you mean ${kT.map((TT=>`"${TT}"`)).join(" or ")}?` : /Return false/i.test(TT.text) ? `To stop it, return false instead of "${iT}".` : "Check Show Docs for what it can return.";
+        oT.add(`${IT} can't use "${iT}" to stop anything. ${WT}`)
       }
   }
-  return [...rY]
+  return [...oT]
 }
-codeWarnings(YY) {
-  let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return [...this.unknownApiMethods(YY), ...this.unprefixedApiCalls(YY), ...this.unknownItemNames(YY), ...this.reorderedComparedNames(YY), ...this.unknownComparedBlockNames(YY), ...this.madeUpStopValues(YY), ...JO(YY), ...dO(YY, rY)]
+codeWarnings(TT) {
+  let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return [...this.unknownApiMethods(TT), ...this.unprefixedApiCalls(TT), ...this.unknownItemNames(TT), ...this.reorderedComparedNames(TT), ...this.unknownComparedBlockNames(TT), ...this.madeUpStopValues(TT), ...sX(TT), ...lX(TT, oT)]
 }
-suggestNames(YY) {
-  var rY;
-  const DY = YY.trim().toLowerCase().replace(/\s+/g, " "),
-    FY = Object.hasOwn(cO, DY) ? cO[DY] : void 0;
-  if (FY) {
-    const YY = FY.filter((YY => this.namesByLowerCase.has(YY.toLowerCase())));
+suggestNames(TT) {
+  var oT;
+  const IT = TT.trim().toLowerCase().replace(/\s+/g, " "),
+    iT = Object.hasOwn(UX, IT) ? UX[IT] : void 0;
+  if (iT) {
+    const TT = iT.filter((TT => this.namesByLowerCase.has(TT.toLowerCase())));
     return {
-      names: YY,
-      isSure: 1 === YY.length,
+      names: TT,
+      isSure: 1 === TT.length,
       isDecided: !0
     }
   }
-  const AY = YY.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((YY => Object.hasOwn(KO, YY) ? KO[YY] : YY)).filter(Boolean).join(" "),
-    IY = null !== (rY = this.namesByLowerCase.get(DY)) && void 0 !== rY ? rY : this.namesByLowerCase.get(AY);
-  if (IY) return {
-    names: [IY],
+  const zT = TT.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((TT => Object.hasOwn(aX, TT) ? aX[TT] : TT)).filter(Boolean).join(" "),
+    kT = null !== (oT = this.namesByLowerCase.get(IT)) && void 0 !== oT ? oT : this.namesByLowerCase.get(zT);
+  if (kT) return {
+    names: [kT],
     isSure: !0,
     isDecided: !0
   };
-  const RY = this.closestItemAndBlockNames(AY),
-    OY = YY => ZO(YY).filter((YY => !zO.has(YY) && !GO.has(YY))).map(CO),
-    gY = 1 === RY.length ? OY(RY[0]) : [];
+  const WT = this.closestItemAndBlockNames(zT),
+    XT = TT => OX(TT).filter((TT => !QX.has(TT) && !dX.has(TT))).map(HX),
+    BT = 1 === WT.length ? XT(WT[0]) : [];
   return {
-    names: RY,
-    isSure: 1 === RY.length && OY(AY).every((YY => gY.includes(YY))),
+    names: WT,
+    isSure: 1 === WT.length && XT(zT).every((TT => BT.includes(TT))),
     isDecided: !1
   }
 }
-closestItemAndBlockNames(YY) {
-  const rY = new Set(ZO(YY).filter((YY => !zO.has(YY))).map(CO)),
-    DY = this.itemAndBlockNames.map((YY => {
-      const DY = ZO(YY).filter((YY => !zO.has(YY))).map(CO),
-        FY = DY.filter((YY => rY.has(YY))).length;
+closestItemAndBlockNames(TT) {
+  const oT = new Set(OX(TT).filter((TT => !QX.has(TT))).map(HX)),
+    IT = this.itemAndBlockNames.map((TT => {
+      const IT = OX(TT).filter((TT => !QX.has(TT))).map(HX),
+        iT = IT.filter((TT => oT.has(TT))).length;
       return {
-        candidate: YY,
-        score: 2 * FY - (DY.length - FY)
+        candidate: TT,
+        score: 2 * iT - (IT.length - iT)
       }
-    })).filter((YY => YY.score > 0)),
-    FY = Math.max(...DY.map((YY => YY.score)));
-  return DY.filter((YY => YY.score === FY)).slice(0, 2).map((YY => YY.candidate))
+    })).filter((TT => TT.score > 0)),
+    iT = Math.max(...IT.map((TT => TT.score)));
+  return IT.filter((TT => TT.score === iT)).slice(0, 2).map((TT => TT.candidate))
 }
-find(YY, rY, DY) {
-  const FY = new Map,
-    AY = (YY, rY) => {
-      var DY;
-      YY && FY.set(YY, (null !== (DY = FY.get(YY)) && void 0 !== DY ? DY : 0) + rY)
+find(TT, oT, IT) {
+  const iT = new Map,
+    zT = (TT, oT) => {
+      var IT;
+      TT && iT.set(TT, (null !== (IT = iT.get(TT)) && void 0 !== IT ? IT : 0) + oT)
     },
-    IY = ZO(YY),
-    RY = IY.filter((YY => !zO.has(YY)));
-  for (const uY of IY)
-    for (const YY of Object.hasOwn(HO, uY) ? HO[uY] : []) AY(this.byName.get(YY), 6);
-  for (const uY of `${YY}\n${rY}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
-    var OY, gY;
-    AY(this.byName.get(null !== (OY = null !== (gY = uY[1]) && void 0 !== gY ? gY : uY[2]) && void 0 !== OY ? OY : uY[3]), uY[1] || uY[2] ? 4 : 2)
+    kT = OX(TT),
+    WT = kT.filter((TT => !QX.has(TT)));
+  for (const DT of kT)
+    for (const TT of Object.hasOwn(YX, DT) ? YX[DT] : []) zT(this.byName.get(TT), 6);
+  for (const DT of `${TT}\n${oT}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
+    var XT, BT;
+    zT(this.byName.get(null !== (XT = null !== (BT = DT[1]) && void 0 !== BT ? BT : DT[2]) && void 0 !== XT ? XT : DT[3]), DT[1] || DT[2] ? 4 : 2)
   }
-  for (const uY of (0, ur.g)(rY, /([A-Za-z_$][\w$]*)\s*\(/g, ur.q)) {
-    const YY = this.byName.get(uY[1]);
-    "helper" === (null === YY || void 0 === YY ? void 0 : YY.kind) && AY(YY, 3)
+  for (const DT of (0, Do.f)(oT, /([A-Za-z_$][\w$]*)\s*\(/g, Do.k)) {
+    const TT = this.byName.get(DT[1]);
+    "helper" === (null === TT || void 0 === TT ? void 0 : TT.kind) && zT(TT, 3)
   }
-  const aY = new Set(RY.map(CO));
-  for (const uY of this.sections) {
-    let YY = 0;
-    for (const rY of aY) {
-      var vY;
-      const DY = 1 / Math.log2(2 + (null !== (vY = this.wordCounts.get(rY)) && void 0 !== vY ? vY : 0));
-      uY.nameWords.has(rY) ? YY += 3 * DY : uY.textWords.has(rY) && (YY += DY)
+  const FT = new Set(WT.map(HX));
+  for (const DT of this.sections) {
+    let TT = 0;
+    for (const oT of FT) {
+      var ST;
+      const IT = 1 / Math.log2(2 + (null !== (ST = this.wordCounts.get(oT)) && void 0 !== ST ? ST : 0));
+      DT.nameWords.has(oT) ? TT += 3 * IT : DT.textWords.has(oT) && (TT += IT)
     }
-    AY(uY, YY)
+    zT(DT, TT)
   }
-  return [...FY.entries()].filter((YY => {
-    let [rY, DY] = YY;
-    return DY > .5 && "prefab" !== rY.kind
-  })).sort(((YY, rY) => rY[1] - YY[1])).slice(0, DY).map((YY => {
-    let [rY] = YY;
-    return rY
+  return [...iT.entries()].filter((TT => {
+    let [oT, IT] = TT;
+    return IT > .5 && "prefab" !== oT.kind
+  })).sort(((TT, oT) => oT[1] - TT[1])).slice(0, IT).map((TT => {
+    let [oT] = TT;
+    return oT
   }))
 }
-section(YY) {
-  var rY, DY;
-  const FY = YY.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
-    AY = FY.toLowerCase();
-  return null !== (rY = null !== (DY = this.byName.get(FY)) && void 0 !== DY ? DY : this.sections.find((YY => YY.name.toLowerCase() === AY))) && void 0 !== rY ? rY : null
+section(TT) {
+  var oT, IT;
+  const iT = TT.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
+    zT = iT.toLowerCase();
+  return null !== (oT = null !== (IT = this.byName.get(iT)) && void 0 !== IT ? IT : this.sections.find((TT => TT.name.toLowerCase() === zT))) && void 0 !== oT ? oT : null
 }
-searchNames(YY, rY) {
-  const DY = ZO(YY).filter((YY => !zO.has(YY))).map(CO);
-  if (0 === DY.length) return [];
-  const FY = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((YY => {
-      const rY = new Set(ZO(YY).map(CO)),
-        FY = DY.filter((YY => rY.has(YY))).length;
-      return 0 === FY ? [] : [{
-        name: YY,
-        found: FY,
-        length: rY.size
+searchNames(TT, oT) {
+  const IT = OX(TT).filter((TT => !QX.has(TT))).map(HX);
+  if (0 === IT.length) return [];
+  const iT = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((TT => {
+      const oT = new Set(OX(TT).map(HX)),
+        iT = IT.filter((TT => oT.has(TT))).length;
+      return 0 === iT ? [] : [{
+        name: TT,
+        found: iT,
+        length: oT.size
       }]
     })),
-    AY = Math.max(0, ...FY.map((YY => YY.found)));
-  return [...new Set(FY.filter((YY => YY.found === AY)).sort(((YY, rY) => YY.length - rY.length || YY.name.localeCompare(rY.name))).map((YY => YY.name)))].slice(0, rY)
+    zT = Math.max(0, ...iT.map((TT => TT.found)));
+  return [...new Set(iT.filter((TT => TT.found === zT)).sort(((TT, oT) => TT.length - oT.length || TT.name.localeCompare(oT.name))).map((TT => TT.name)))].slice(0, oT)
 }
-matchItemAndBlockNames(YY, rY) {
-  const DY = new Set(ZO(YY).map(CO)),
-    FY = [];
-  for (const AY of this.itemAndBlockNames) {
-    const YY = ZO(AY).filter((YY => !zO.has(YY))).map(CO);
-    YY.length > 0 && YY.every((YY => DY.has(YY))) && FY.push({
-      name: AY,
-      length: YY.length
+matchItemAndBlockNames(TT, oT) {
+  const IT = new Set(OX(TT).map(HX)),
+    iT = [];
+  for (const zT of this.itemAndBlockNames) {
+    const TT = OX(zT).filter((TT => !QX.has(TT))).map(HX);
+    TT.length > 0 && TT.every((TT => IT.has(TT))) && iT.push({
+      name: zT,
+      length: TT.length
     })
   }
-  return FY.sort(((YY, rY) => rY.length - YY.length)).slice(0, rY).map((YY => YY.name))
+  return iT.sort(((TT, oT) => oT.length - TT.length)).slice(0, oT).map((TT => TT.name))
 }
 }
 
-function UO(YY, rY) {
-  var DY;
-  const FY = LO(YY, !0),
-    AY = null === (DY = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(FY)) || void 0 === DY ? void 0 : DY[1],
-    IY = AY && void 0 !== rY ? function(YY, rY) {
-      const DY = rY.replace(/[$.]/g, "\\$&"),
-        FY = new RegExp(`(^|[^\\w$.])${DY}\\s*\\(`),
-        AY = YY.split("\n").flatMap(((YY, rY) => FY.test(YY) ? [rY + 1] : []));
-      return 1 === AY.length ? AY[0] : void 0
-    }(rY, AY) : void 0;
-  return IY ? {
-    text: LO(YY, !1),
-    line: IY
+function IB(TT, oT) {
+  var IT;
+  const iT = iB(TT, !0),
+    zT = null === (IT = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(iT)) || void 0 === IT ? void 0 : IT[1],
+    kT = zT && void 0 !== oT ? function(TT, oT) {
+      const IT = oT.replace(/[$.]/g, "\\$&"),
+        iT = new RegExp(`(^|[^\\w$.])${IT}\\s*\\(`),
+        zT = TT.split("\n").flatMap(((TT, oT) => iT.test(TT) ? [oT + 1] : []));
+      return 1 === zT.length ? zT[0] : void 0
+    }(oT, zT) : void 0;
+  return kT ? {
+    text: iB(TT, !1),
+    line: kT
   } : {
-    text: FY
+    text: iT
   }
 }
 
-function LO(YY, rY) {
-  const DY = YY.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
-    [FY, ...AY] = DY.split("\n"),
+function iB(TT, oT) {
+  const IT = TT.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
+    [iT, ...zT] = IT.split("\n"),
     {
-      when: IY,
-      rest: RY
-    } = function(YY) {
-      const rY = /^Error in world code init:\s*/.exec(YY);
-      if (rY) return {
+      when: kT,
+      rest: WT
+    } = function(TT) {
+      const oT = /^Error in world code init:\s*/.exec(TT);
+      if (oT) return {
         when: "when your world started",
-        rest: YY.slice(rY[0].length)
+        rest: TT.slice(oT[0].length)
       };
-      const DY = /^Error in (?:callback )?(\w+):\s*/.exec(YY);
-      return DY ? {
-        when: `in ${DY[1]}`,
-        rest: YY.slice(DY[0].length)
+      const IT = /^Error in (?:callback )?(\w+):\s*/.exec(TT);
+      return IT ? {
+        when: `in ${IT[1]}`,
+        rest: TT.slice(IT[0].length)
       } : {
         when: "",
-        rest: YY
+        rest: TT
       }
-    }(FY.trim()),
-    OY = IY && rY ? ` ${IY}` : "",
-    gY = /(?:ApiError:\s*)?(\w+) didn't work/.exec(RY);
-  if (gY) {
-    var aY, vY, uY, sY, iY;
-    const YY = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (aY = null === (vY = AY[0]) || void 0 === vY ? void 0 : vY.trim()) && void 0 !== aY ? aY : ""),
-      rY = null === (uY = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (sY = null === (iY = AY[1]) || void 0 === iY ? void 0 : iY.trim()) && void 0 !== sY ? sY : "")) || void 0 === uY ? void 0 : uY[1],
-      DY = rY ? function(YY) {
-        const rY = YY.split(/\s+or\s+/)[0].trim();
-        return /^(a|an|the)\s/i.test(rY) || !/^[a-z]/i.test(rY) ? rY : `${/^[aeiou]/i.test(rY)?"an":"a"} ${rY}`
-      }(rY) : void 0;
-    return DY && null !== YY && void 0 !== YY && YY[3] ? `api.${gY[1]} needs ${DY}, but it got ${YY[3]}${OY}.` : YY ? `api.${gY[1]} couldn't use its ${yY=Number(YY[1]),1===yY?"first":2===yY?"second":3===yY?"third":4===yY?"fourth":`#${yY}`} argument${OY}.${DY?` It needs ${DY}.`:""}` : `api.${gY[1]} didn't work${OY}.`
+    }(iT.trim()),
+    XT = kT && oT ? ` ${kT}` : "",
+    BT = /(?:ApiError:\s*)?(\w+) didn't work/.exec(WT);
+  if (BT) {
+    var FT, ST, DT, LT, xT;
+    const TT = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (FT = null === (ST = zT[0]) || void 0 === ST ? void 0 : ST.trim()) && void 0 !== FT ? FT : ""),
+      oT = null === (DT = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (LT = null === (xT = zT[1]) || void 0 === xT ? void 0 : xT.trim()) && void 0 !== LT ? LT : "")) || void 0 === DT ? void 0 : DT[1],
+      IT = oT ? function(TT) {
+        const oT = TT.split(/\s+or\s+/)[0].trim();
+        return /^(a|an|the)\s/i.test(oT) || !/^[a-z]/i.test(oT) ? oT : `${/^[aeiou]/i.test(oT)?"an":"a"} ${oT}`
+      }(oT) : void 0;
+    return IT && null !== TT && void 0 !== TT && TT[3] ? `api.${BT[1]} needs ${IT}, but it got ${TT[3]}${XT}.` : TT ? `api.${BT[1]} couldn't use its ${cT=Number(TT[1]),1===cT?"first":2===cT?"second":3===cT?"third":4===cT?"fourth":`#${cT}`} argument${XT}.${IT?` It needs ${IT}.`:""}` : `api.${BT[1]} didn't work${XT}.`
   }
-  var yY;
-  const QY = /TypeError:\s*(?:(.+?) is )?not a function/.exec(RY);
-  if (QY) return QY[1] ? `${QY[1]} isn't a function${OY}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${OY}. Check each name it calls is spelt exactly right.`;
-  const oY = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(RY);
-  if (oY) return `${oY[1]} isn't defined${OY}. Check the spelling, or create it before using it.`;
-  const WY = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(RY);
-  if (WY) {
-    var EY;
-    const YY = null !== (EY = WY[1]) && void 0 !== EY ? EY : WY[3];
-    return `Your code tried to read${YY?` .${YY}`:" something"} from ${WY[2]}${OY}: a value it expected wasn't there.`
+  var cT;
+  const KT = /TypeError:\s*(?:(.+?) is )?not a function/.exec(WT);
+  if (KT) return KT[1] ? `${KT[1]} isn't a function${XT}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${XT}. Check each name it calls is spelt exactly right.`;
+  const MT = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(WT);
+  if (MT) return `${MT[1]} isn't defined${XT}. Check the spelling, or create it before using it.`;
+  const rT = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(WT);
+  if (rT) {
+    var AT;
+    const TT = null !== (AT = rT[1]) && void 0 !== AT ? AT : rT[3];
+    return `Your code tried to read${TT?` .${TT}`:" something"} from ${rT[2]}${XT}: a value it expected wasn't there.`
   }
-  return `Your code hit an error${OY}: ${RY.replace(/^\w*Error:\s*/,"")}`
+  return `Your code hit an error${XT}: ${WT.replace(/^\w*Error:\s*/,"")}`
 }
-const tO = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
-  Yg = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
-  rg = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
-  Dg = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
-  Fg = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
-  Ag = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
-  Ig = /^Line \d+ uses "global", which World Code doesn't have\b/,
-  Rg = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
-  Og = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
+const zB = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
+  kB = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
+  WB = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
+  XB = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
+  BB = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
+  FB = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
+  SB = /^Line \d+ uses "global", which World Code doesn't have\b/,
+  DB = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
+  LB = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
 
-function gg(YY) {
-  const rY = Fg.exec(YY);
-  if (rY) return {
-    from: rY[1],
-    to: rY[2],
+function xB(TT) {
+  const oT = BB.exec(TT);
+  if (oT) return {
+    from: oT[1],
+    to: oT[2],
     kind: "call"
   };
-  const DY = Ag.exec(YY);
-  if (DY) return {
-    from: DY[1],
-    to: DY[2],
+  const IT = FB.exec(TT);
+  if (IT) return {
+    from: IT[1],
+    to: IT[2],
     kind: "variable"
   };
-  if (Ig.test(YY)) return {
+  if (SB.test(TT)) return {
     from: "global",
     to: "",
     kind: "export"
   };
-  const FY = Dg.exec(YY);
-  if (FY) return {
-    from: FY[2],
-    to: FY[3],
-    callback: FY[1]
+  const iT = XB.exec(TT);
+  if (iT) return {
+    from: iT[2],
+    to: iT[3],
+    callback: iT[1]
   };
-  const AY = Yg.exec(YY);
-  if (AY) return {
-    from: AY[1],
-    to: AY[2],
+  const zT = kB.exec(TT);
+  if (zT) return {
+    from: zT[1],
+    to: zT[2],
     kind: "compared"
   };
-  const IY = rg.exec(YY);
-  if (IY) return {
-    from: IY[1],
-    to: IY[2],
+  const kT = WB.exec(TT);
+  if (kT) return {
+    from: kT[1],
+    to: kT[2],
     kind: "comparedBlock"
   };
-  const RY = tO.exec(YY);
-  return RY ? {
-    from: RY[1],
-    to: RY[2]
+  const WT = zB.exec(TT);
+  return WT ? {
+    from: WT[1],
+    to: WT[2]
   } : void 0
 }
 
-function ag(YY) {
-  const rY = YY.map(gg);
-  return rY.length > 0 && !rY.includes(void 0) ? rY : void 0
+function cB(TT) {
+  const oT = TT.map(xB);
+  return oT.length > 0 && !oT.includes(void 0) ? oT : void 0
 }
 
-function vg(YY, rY, DY) {
-  return YY.replaceAll(`"${rY}"`, `"${DY}"`).replaceAll(`'${rY}'`, `'${DY}'`)
+function KB(TT, oT, IT) {
+  return TT.replaceAll(`"${oT}"`, `"${IT}"`).replaceAll(`'${oT}'`, `'${IT}'`)
 }
 
-function ug(YY, rY) {
-  const DY = YY => eY().isIdentifier(YY) ? YY.text === rY : YY.elements.some((YY => !eY().isOmittedExpression(YY) && DY(YY.name))),
-    FY = YY => void 0 !== YY && eY().isVariableDeclarationList(YY) && YY.declarations.some((YY => DY(YY.name))),
-    AY = YY => {
-      const rY = YY => !eY().isFunctionLike(YY) && !eY().isClassStaticBlockDeclaration(YY) && (!(!eY().isVariableDeclarationList(YY) || 0 !== (YY.flags & eY().NodeFlags.BlockScoped) || !FY(YY)) || !0 === eY().forEachChild(YY, rY));
-      return void 0 !== YY && !0 === eY().forEachChild(YY, rY)
+function MB(TT, oT) {
+  const IT = TT => RT().isIdentifier(TT) ? TT.text === oT : TT.elements.some((TT => !RT().isOmittedExpression(TT) && IT(TT.name))),
+    iT = TT => void 0 !== TT && RT().isVariableDeclarationList(TT) && TT.declarations.some((TT => IT(TT.name))),
+    zT = TT => {
+      const oT = TT => !RT().isFunctionLike(TT) && !RT().isClassStaticBlockDeclaration(TT) && (!(!RT().isVariableDeclarationList(TT) || 0 !== (TT.flags & RT().NodeFlags.BlockScoped) || !iT(TT)) || !0 === RT().forEachChild(TT, oT));
+      return void 0 !== TT && !0 === RT().forEachChild(TT, oT)
     };
-  var IY;
-  if (eY().isFunctionLike(YY)) return YY.parameters.some((YY => DY(YY.name))) || eY().isFunctionExpression(YY) && (null === (IY = YY.name) || void 0 === IY ? void 0 : IY.text) === rY || "body" in YY && AY(YY.body);
-  return !(!eY().isSourceFile(YY) || !AY(YY)) || (eY().isSourceFile(YY) || eY().isBlock(YY) || eY().isCaseClause(YY) || eY().isDefaultClause(YY) ? YY.statements.some((YY => {
-    var DY;
-    return eY().isVariableStatement(YY) && FY(YY.declarationList) || (eY().isFunctionDeclaration(YY) || eY().isClassDeclaration(YY)) && (null === (DY = YY.name) || void 0 === DY ? void 0 : DY.text) === rY || eY().isImportDeclaration(YY) && (YY => {
-      var DY;
-      const FY = null === YY || void 0 === YY ? void 0 : YY.namedBindings;
-      return (null === YY || void 0 === YY || null === (DY = YY.name) || void 0 === DY ? void 0 : DY.text) === rY || void 0 !== FY && (eY().isNamespaceImport(FY) ? FY.name.text === rY : FY.elements.some((YY => YY.name.text === rY)))
-    })(YY.importClause)
-  })) : eY().isForStatement(YY) || eY().isForInStatement(YY) || eY().isForOfStatement(YY) ? FY(YY.initializer) : eY().isCatchClause(YY) && void 0 !== YY.variableDeclaration && DY(YY.variableDeclaration.name))
+  var kT;
+  if (RT().isFunctionLike(TT)) return TT.parameters.some((TT => IT(TT.name))) || RT().isFunctionExpression(TT) && (null === (kT = TT.name) || void 0 === kT ? void 0 : kT.text) === oT || "body" in TT && zT(TT.body);
+  return !(!RT().isSourceFile(TT) || !zT(TT)) || (RT().isSourceFile(TT) || RT().isBlock(TT) || RT().isCaseClause(TT) || RT().isDefaultClause(TT) ? TT.statements.some((TT => {
+    var IT;
+    return RT().isVariableStatement(TT) && iT(TT.declarationList) || (RT().isFunctionDeclaration(TT) || RT().isClassDeclaration(TT)) && (null === (IT = TT.name) || void 0 === IT ? void 0 : IT.text) === oT || RT().isImportDeclaration(TT) && (TT => {
+      var IT;
+      const iT = null === TT || void 0 === TT ? void 0 : TT.namedBindings;
+      return (null === TT || void 0 === TT || null === (IT = TT.name) || void 0 === IT ? void 0 : IT.text) === oT || void 0 !== iT && (RT().isNamespaceImport(iT) ? iT.name.text === oT : iT.elements.some((TT => TT.name.text === oT)))
+    })(TT.importClause)
+  })) : RT().isForStatement(TT) || RT().isForInStatement(TT) || RT().isForOfStatement(TT) ? iT(TT.initializer) : RT().isCatchClause(TT) && void 0 !== TT.variableDeclaration && IT(TT.variableDeclaration.name))
 }
 
-function sg(YY, rY) {
-  return rY.reduce(((YY, rY) => {
+function rB(TT, oT) {
+  return oT.reduce(((TT, oT) => {
     let {
-      from: DY,
-      to: FY,
-      kind: AY,
-      callback: IY
-    } = rY;
-    if ("export" === AY) return YY.replace(Rg, "").replace(Og, "$1$2$3");
-    if ("call" === AY || "variable" === AY) return function(YY, rY, DY, FY) {
-      const AY = eY().createSourceFile("worldCode.js", YY, eY().ScriptTarget.Latest, !0, eY().ScriptKind.JS),
-        IY = [],
-        RY = (YY, OY) => {
-          const gY = OY || ug(YY, rY),
-            aY = YY.parent;
-          if (eY().isIdentifier(YY) && YY.text === rY && !gY && aY) {
-            const RY = eY().isBindingElement(aY) && aY.propertyName === YY || (eY().isPropertyAccessExpression(aY) || eY().isPropertyAssignment(aY) || eY().isMethodDeclaration(aY) || eY().isPropertyDeclaration(aY) || eY().isGetAccessorDeclaration(aY) || eY().isSetAccessorDeclaration(aY)) && aY.name === YY,
-              OY = eY().isCallExpression(aY) && aY.expression === YY;
-            RY || FY && !OY || IY.push({
-              at: YY.getStart(AY),
-              text: eY().isShorthandPropertyAssignment(aY) ? `${rY}: ${DY}` : DY
+      from: IT,
+      to: iT,
+      kind: zT,
+      callback: kT
+    } = oT;
+    if ("export" === zT) return TT.replace(DB, "").replace(LB, "$1$2$3");
+    if ("call" === zT || "variable" === zT) return function(TT, oT, IT, iT) {
+      const zT = RT().createSourceFile("worldCode.js", TT, RT().ScriptTarget.Latest, !0, RT().ScriptKind.JS),
+        kT = [],
+        WT = (TT, XT) => {
+          const BT = XT || MB(TT, oT),
+            FT = TT.parent;
+          if (RT().isIdentifier(TT) && TT.text === oT && !BT && FT) {
+            const WT = RT().isBindingElement(FT) && FT.propertyName === TT || (RT().isPropertyAccessExpression(FT) || RT().isPropertyAssignment(FT) || RT().isMethodDeclaration(FT) || RT().isPropertyDeclaration(FT) || RT().isGetAccessorDeclaration(FT) || RT().isSetAccessorDeclaration(FT)) && FT.name === TT,
+              XT = RT().isCallExpression(FT) && FT.expression === TT;
+            WT || iT && !XT || kT.push({
+              at: TT.getStart(zT),
+              text: RT().isShorthandPropertyAssignment(FT) ? `${oT}: ${IT}` : IT
             })
           }
-          eY().forEachChild(YY, (YY => {
-            RY(YY, gY)
+          RT().forEachChild(TT, (TT => {
+            WT(TT, BT)
           }))
         };
-      return RY(AY, !1), IY.reduceRight(((YY, DY) => YY.slice(0, DY.at) + DY.text + YY.slice(DY.at + rY.length)), YY)
-    }(YY, DY, FY, "call" === AY);
-    if ("compared" === AY || "comparedBlock" === AY) {
-      const rY = `(["'])${function(YY){return YY.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(DY)}\\1`;
-      return ("comparedBlock" === AY ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${rY}`, `${rY}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${rY}`, `${rY}\\s*[!=]==?`, `\\bcase\\s+${rY}\\s*:`, `\\.includes\\(\\s*${rY}\\s*\\)`]).reduce(((YY, rY) => YY.replace(new RegExp(rY, "g"), (YY => vg(YY, DY, FY)))), YY)
+      return WT(zT, !1), kT.reduceRight(((TT, IT) => TT.slice(0, IT.at) + IT.text + TT.slice(IT.at + oT.length)), TT)
+    }(TT, IT, iT, "call" === zT);
+    if ("compared" === zT || "comparedBlock" === zT) {
+      const oT = `(["'])${function(TT){return TT.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(IT)}\\1`;
+      return ("comparedBlock" === zT ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${oT}`, `${oT}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${oT}`, `${oT}\\s*[!=]==?`, `\\bcase\\s+${oT}\\s*:`, `\\.includes\\(\\s*${oT}\\s*\\)`]).reduce(((TT, oT) => TT.replace(new RegExp(oT, "g"), (TT => KB(TT, IT, iT)))), TT)
     }
-    if (void 0 !== IY) {
-      return bY(YY).filter((YY => YY.name === IY && YY.topLevel)).reduceRight(((YY, rY) => YY.slice(0, rY.from) + vg(YY.slice(rY.from, rY.to), DY, FY) + YY.slice(rY.to)), YY)
+    if (void 0 !== kT) {
+      return ZT(TT).filter((TT => TT.name === kT && TT.topLevel)).reduceRight(((TT, oT) => TT.slice(0, oT.from) + KB(TT.slice(oT.from, oT.to), IT, iT) + TT.slice(oT.to)), TT)
     }
-    return vg(YY, DY, FY)
-  }), YY)
+    return KB(TT, IT, iT)
+  }), TT)
 }
 
-function ig(YY) {
+function AB(TT) {
   let {
-    from: rY,
-    to: DY,
-    kind: FY
-  } = YY;
-  return "export" === FY ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${rY}" is now "${DY}".`
+    from: oT,
+    to: IT,
+    kind: iT
+  } = TT;
+  return "export" === iT ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${oT}" is now "${IT}".`
 }
-var yg = DY(40534);
+var gB = IT(40276);
 
-function Qg() {
-  return (0, RY.jsxs)("svg", {
+function hB() {
+  return (0, WT.jsxs)("svg", {
     className: "WorldCodeAiKeyIcon",
     viewBox: "0 0 16 16",
     "aria-hidden": "true",
-    children: [(0, RY.jsx)("circle", {
+    children: [(0, WT.jsx)("circle", {
       cx: "4.5",
       cy: "8",
       r: "3"
-    }), (0, RY.jsx)("path", {
+    }), (0, WT.jsx)("path", {
       d: "M7.5 8h7.5M12.5 8v3M15 8v2.5"
     })]
   })
 }
 
-function og(YY) {
+function wB(TT) {
   let {
-    detail: rY,
-    onOpen: DY
-  } = YY;
-  return (0, RY.jsxs)("details", {
+    detail: oT,
+    onOpen: IT
+  } = TT;
+  return (0, WT.jsxs)("details", {
     className: "WorldCodeAiKeyDetails",
-    onToggle: YY => {
-      YY.currentTarget.open && (null === DY || void 0 === DY || DY())
+    onToggle: TT => {
+      TT.currentTarget.open && (null === IT || void 0 === IT || IT())
     },
-    children: [(0, RY.jsx)("summary", {
+    children: [(0, WT.jsx)("summary", {
       children: "Details"
-    }), (0, RY.jsx)("p", {
-      children: rY
+    }), (0, WT.jsx)("p", {
+      children: oT
     })]
   })
 }
 
-function Wg(YY) {
+function mB(TT) {
   let {
-    answeredBy: rY
-  } = YY;
-  return "free" === rY ? (0, RY.jsx)("div", {
+    answeredBy: oT
+  } = TT;
+  return "free" === oT ? (0, WT.jsx)("div", {
     className: "WorldCodeAiAnsweredBy",
     children: "Bot.xd (free)"
-  }) : (0, RY.jsxs)("div", {
-    className: rY.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
-    children: [!rY.isSuperBot && (0, RY.jsx)(Qg, {}), rY.model]
+  }) : (0, WT.jsxs)("div", {
+    className: oT.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
+    children: [!oT.isSuperBot && (0, WT.jsx)(hB, {}), oT.model]
   })
 }
 
-function Eg(YY) {
+function eB(TT) {
   let {
-    notice: rY,
-    model: DY,
-    company: FY,
-    isServer: AY
-  } = YY;
-  switch (rY) {
+    notice: oT,
+    model: IT,
+    company: iT,
+    isServer: zT
+  } = TT;
+  switch (oT) {
     case "badKey":
-      return AY ? `${FY} didn't accept your key: it may be wrong or deleted.` : `${FY} didn't accept your key: it may be wrong or deleted. Check it on ${FY}'s website.`;
+      return zT ? `${iT} didn't accept your key: it may be wrong or deleted.` : `${iT} didn't accept your key: it may be wrong or deleted. Check it on ${iT}'s website.`;
     case "noCredit":
-      return AY ? `${FY} stopped your key for now: it has used all it can.` : `${FY} stopped your key for now: it has used all it can. Check it on ${FY}'s website.`;
+      return zT ? `${iT} stopped your key for now: it has used all it can.` : `${iT} stopped your key for now: it has used all it can. Check it on ${iT}'s website.`;
     case "busy":
-      return `Too many requests to ${DY} right now. Wait a minute and try again.`;
+      return `Too many requests to ${IT} right now. Wait a minute and try again.`;
     case "noModel":
-      return `${FY} can't find ${DY}. Pick another model, or press Check for new models in AI settings.`;
+      return `${iT} can't find ${IT}. Pick another model, or press Check for new models in AI settings.`;
     case "timeout":
-      return `${DY} took too long to answer.`;
+      return `${IT} took too long to answer.`;
     case "unreachable":
-      return AY ? `Couldn't reach ${FY}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${FY}. Check your internet and your key.`;
+      return zT ? `Couldn't reach ${iT}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${iT}. Check your internet and your key.`;
     case "blocked":
-      return `${FY} doesn't work from where you are.`;
+      return `${iT} doesn't work from where you are.`;
     case "unchecked":
       return "Bloxd's safety check didn't answer, so your key wasn't used.";
     default:
-      return `${DY} can't be used right now. Try again in a minute.`
+      return `${IT} can't be used right now. Try again in a minute.`
   }
 }
 
-function mg(YY) {
+function RB(TT) {
   let {
-    notice: rY,
-    model: DY,
-    company: FY
-  } = YY;
-  switch (rY) {
+    notice: oT,
+    model: IT,
+    company: iT
+  } = TT;
+  switch (oT) {
     case "badKey":
-      return `Not answered: ${FY} didn't accept your key.`;
+      return `Not answered: ${iT} didn't accept your key.`;
     case "noModel":
-      return `Not answered: ${FY} couldn't find ${DY}.`;
+      return `Not answered: ${iT} couldn't find ${IT}.`;
     case "noCredit":
-      return `Not answered: ${FY} stopped your key for now.`;
+      return `Not answered: ${iT} stopped your key for now.`;
     case "busy":
-      return `Not answered: too many requests to ${DY}.`;
+      return `Not answered: too many requests to ${IT}.`;
     case "timeout":
-      return `Not answered: ${DY} took too long.`;
+      return `Not answered: ${IT} took too long.`;
     case "unreachable":
-      return `Not answered: couldn't reach ${FY}.`;
+      return `Not answered: couldn't reach ${iT}.`;
     case "blocked":
-      return `Not answered: ${FY} doesn't work from where you are.`;
+      return `Not answered: ${iT} doesn't work from where you are.`;
     case "unchecked":
       return "Not answered: the safety check didn't answer.";
     default:
-      return `Not answered: ${DY} couldn't be used.`
+      return `Not answered: ${IT} couldn't be used.`
   }
 }
 
-function Vg(YY) {
-  return "busy" === YY || "timeout" === YY || "failed" === YY || "unchecked" === YY
+function uB(TT) {
+  return "busy" === TT || "timeout" === TT || "failed" === TT || "unchecked" === TT
 }
 
-function Sg(YY) {
+function vB(TT) {
   let {
-    notice: rY,
-    onRetry: DY,
-    onUseFree: FY,
-    onCheckKey: AY
-  } = YY;
-  return (0, RY.jsxs)("div", {
+    notice: oT,
+    onRetry: IT,
+    onUseFree: iT,
+    onCheckKey: zT
+  } = TT;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiKeyNoticeActions",
-    children: [(0, RY.jsx)("button", {
-      ...yg.e,
+    children: [(0, WT.jsx)("button", {
+      ...gB.h,
       className: "WorldCodeAiPrimaryButton",
-      onClick: FY,
+      onClick: iT,
       children: "Use Bot.xd for this one"
-    }), Vg(rY) && (0, RY.jsx)("button", {
+    }), uB(oT) && (0, WT.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: DY,
+      onClick: IT,
       children: "Try again"
-    }), "unchecked" !== rY && (0, RY.jsx)("button", {
+    }), "unchecked" !== oT && (0, WT.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: AY,
+      onClick: zT,
       children: "Open AI settings"
     })]
   })
 }
 
-function lg(YY) {
+function EB(TT) {
   let {
-    hasCode: rY,
-    canFinish: DY,
-    onFinish: FY
-  } = YY;
-  return (0, RY.jsxs)("div", {
+    hasCode: oT,
+    canFinish: IT,
+    onFinish: iT
+  } = TT;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiCutShort",
-    children: [(0, RY.jsx)("p", {
-      children: rY ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
-    }), DY && (0, RY.jsx)("button", {
+    children: [(0, WT.jsx)("p", {
+      children: oT ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
+    }), IT && (0, WT.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: FY,
+      onClick: iT,
       children: "Finish the answer"
     })]
   })
 }
-const Tg = "worldCodeAiAllowEdits";
+const fB = "worldCodeAiAllowEdits";
 
-function eg() {
+function CB() {
   try {
-    return "false" !== localStorage.getItem(Tg)
+    return "false" !== localStorage.getItem(fB)
   } catch {
     return !0
   }
 }
 
-function Ng(YY) {
+function jB(TT) {
   let {
-    allow: rY,
-    onChange: DY
-  } = YY;
-  return (0, RY.jsxs)("label", {
+    allow: oT,
+    onChange: IT
+  } = TT;
+  return (0, WT.jsxs)("label", {
     className: "WorldCodeAiAllowEdits",
-    children: [(0, RY.jsx)("input", {
+    children: [(0, WT.jsx)("input", {
       type: "checkbox",
       role: "switch",
-      checked: rY,
-      onChange: YY => {
-        DY(YY.target.checked)
+      checked: oT,
+      onChange: TT => {
+        IT(TT.target.checked)
       }
-    }), (0, RY.jsx)("span", {
+    }), (0, WT.jsx)("span", {
       children: "Allow AI to make edits to my code"
     })]
   })
 }
-const Bg = {
+const JB = {
   keyId: "bloxd",
   modelId: "superbotxd"
 };
 
-function cg(YY, rY) {
-  const DY = Array.from(YY.querySelectorAll(".WorldCodeAiModelGroup")),
-    FY = DY.findIndex((YY => YY.contains(rY)));
-  if (FY < 0) return !1;
-  const AY = YY.getBoundingClientRect(),
-    IY = rY => YY.scrollTop + rY.top - AY.top,
-    RY = IY(rY.getBoundingClientRect()) + rY.getBoundingClientRect().height,
-    OY = YY.scrollHeight - YY.clientHeight,
-    gY = DY.slice(0, FY + 1).map((YY => IY(YY.getBoundingClientRect()))).filter((YY => RY - YY <= AY.height + 1));
-  if (0 === gY.length) return !1;
-  const aY = gY.filter((YY => YY <= OY + 1)),
-    vY = aY.length > 0 ? Math.max(...aY) : Math.min(...gY);
-  return vY > OY && (YY.style.paddingBottom = (parseFloat(getComputedStyle(YY).paddingBottom) || 0) + vY - OY + "px"), YY.scrollTop = vY, !0
+function UB(TT, oT) {
+  const IT = Array.from(TT.querySelectorAll(".WorldCodeAiModelGroup")),
+    iT = IT.findIndex((TT => TT.contains(oT)));
+  if (iT < 0) return !1;
+  const zT = TT.getBoundingClientRect(),
+    kT = oT => TT.scrollTop + oT.top - zT.top,
+    WT = kT(oT.getBoundingClientRect()) + oT.getBoundingClientRect().height,
+    XT = TT.scrollHeight - TT.clientHeight,
+    BT = IT.slice(0, iT + 1).map((TT => kT(TT.getBoundingClientRect()))).filter((TT => WT - TT <= zT.height + 1));
+  if (0 === BT.length) return !1;
+  const FT = BT.filter((TT => TT <= XT + 1)),
+    ST = FT.length > 0 ? Math.max(...FT) : Math.min(...BT);
+  return ST > XT && (TT.style.paddingBottom = (parseFloat(getComputedStyle(TT).paddingBottom) || 0) + ST - XT + "px"), TT.scrollTop = ST, !0
 }
 
-function Kg(YY) {
+function aB(TT) {
   let {
-    keyName: rY,
-    placeholder: DY,
-    onDone: AY
-  } = YY;
-  const [IY, OY] = (0, FY.useState)(rY);
-  return (0, RY.jsxs)("form", {
+    keyName: oT,
+    placeholder: IT,
+    onDone: zT
+  } = TT;
+  const [kT, XT] = (0, iT.useState)(oT);
+  return (0, WT.jsxs)("form", {
     className: "WorldCodeAiKeyRename",
-    onSubmit: YY => {
-      YY.preventDefault(), AY(IY)
+    onSubmit: TT => {
+      TT.preventDefault(), zT(kT)
     },
-    children: [(0, RY.jsx)("input", {
+    children: [(0, WT.jsx)("input", {
       className: "WorldCodeAiAddKeyInput",
       "aria-label": "Name for this key",
-      value: IY,
+      value: kT,
       maxLength: 30,
-      placeholder: DY,
+      placeholder: IT,
       autoFocus: !0,
-      onChange: YY => {
-        OY(YY.target.value)
+      onChange: TT => {
+        XT(TT.target.value)
       },
-      onKeyDown: YY => {
-        YY.stopPropagation(), "Escape" === YY.key && (YY.preventDefault(), AY(null))
+      onKeyDown: TT => {
+        TT.stopPropagation(), "Escape" === TT.key && (TT.preventDefault(), zT(null))
       }
-    }), (0, RY.jsx)("button", {
+    }), (0, WT.jsx)("button", {
       type: "submit",
       className: "WorldCodeAiLinkButton",
       children: "Save"
-    }), (0, RY.jsx)("button", {
+    }), (0, WT.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
       onClick: () => {
-        AY(null)
+        zT(null)
       },
       children: "Cancel"
     })]
   })
 }
 
-function Hg(YY) {
+function YB(TT) {
   let {
-    savedKey: rY,
-    isInUse: DY,
-    onRename: FY,
-    onEdit: AY
-  } = YY;
-  const IY = bR(rY),
-    OY = yR(rY.provider, rY.baseUrl, !0),
-    gY = function(YY, rY) {
-      var DY, FY;
-      return "" === YY ? "no key needed" : YY.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === rY ? `key \u2026${YY.slice(-4)}` : `${(null!==(DY=null===(FY=/^[a-zA-Z]+-/.exec(YY))||void 0===FY?void 0:FY[0])&&void 0!==DY?DY:YY.slice(0,4)).slice(0,6)}\u2026${YY.slice(-4)}`
-    }(rY.key, rY.provider);
-  return (0, RY.jsxs)("span", {
+    savedKey: oT,
+    isInUse: IT,
+    onRename: iT,
+    onEdit: zT
+  } = TT;
+  const kT = pW(oT),
+    XT = gW(oT.provider, oT.baseUrl, !0),
+    BT = function(TT, oT) {
+      var IT, iT;
+      return "" === TT ? "no key needed" : TT.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === oT ? `key \u2026${TT.slice(-4)}` : `${(null!==(IT=null===(iT=/^[a-zA-Z]+-/.exec(TT))||void 0===iT?void 0:iT[0])&&void 0!==IT?IT:TT.slice(0,4)).slice(0,6)}\u2026${TT.slice(-4)}`
+    }(oT.key, oT.provider);
+  return (0, WT.jsxs)("span", {
     className: "WorldCodeAiModelGroupName",
-    title: rY.baseUrl,
-    children: [IY, " ", rY.name && (0, RY.jsxs)("span", {
+    title: oT.baseUrl,
+    children: [kT, " ", oT.name && (0, WT.jsxs)("span", {
       className: "WorldCodeAiModelHint",
-      children: ["\xb7 ", OY, " "]
-    }), "" === rY.key ? (0, RY.jsx)("span", {
+      children: ["\xb7 ", XT, " "]
+    }), "" === oT.key ? (0, WT.jsx)("span", {
       className: "WorldCodeAiModelHint",
-      children: gY
-    }) : (0, RY.jsx)("code", {
-      children: gY
-    }), DY && (0, RY.jsxs)(RY.Fragment, {
-      children: [" ", (0, RY.jsx)("span", {
+      children: BT
+    }) : (0, WT.jsx)("code", {
+      children: BT
+    }), IT && (0, WT.jsxs)(WT.Fragment, {
+      children: [" ", (0, WT.jsx)("span", {
         className: "WorldCodeAiInUseTag",
         children: "In use"
       })]
-    }), (AY || FY) && (0, RY.jsxs)("span", {
+    }), (zT || iT) && (0, WT.jsxs)("span", {
       className: "WorldCodeAiKeyLinks",
-      children: [AY && (0, RY.jsx)("button", {
+      children: [zT && (0, WT.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Edit ${IY} key`,
-        onClick: AY,
+        "aria-label": `Edit ${kT} key`,
+        onClick: zT,
         children: "Edit"
-      }), FY && (0, RY.jsx)("button", {
+      }), iT && (0, WT.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Rename ${IY} key`,
-        onClick: FY,
+        "aria-label": `Rename ${kT} key`,
+        onClick: iT,
         children: "Rename"
       })]
     })]
   })
 }
 
-function zg(YY) {
-  var rY, DY, AY, OY;
+function QB(TT) {
+  var oT, IT, zT, XT;
   let {
-    name: gY,
-    hint: aY,
-    choice: vY,
-    selected: uY,
-    radioName: sY,
-    onSelect: iY,
-    onChosen: yY,
-    disabledWhy: QY
-  } = YY;
-  const oY = (0, FY.useRef)(!1),
-    WY = `${sY}-${null!==(rY=null===vY||void 0===vY?void 0:vY.keyId)&&void 0!==rY?rY:"botxd"}-${null!==(DY=null===vY||void 0===vY?void 0:vY.modelId)&&void 0!==DY?DY:"botxd"}`.replace(/[^\w-]/g, "_"),
-    EY = !!QY;
-  return (0, RY.jsxs)("label", {
-    className: IY()("WorldCodeAiModelRow", uY && "Selected", EY && "Disabled"),
-    "data-key-id": null !== (AY = null === vY || void 0 === vY ? void 0 : vY.keyId) && void 0 !== AY ? AY : "botxd",
-    "data-model-id": null !== (OY = null === vY || void 0 === vY ? void 0 : vY.modelId) && void 0 !== OY ? OY : "botxd",
-    title: null !== QY && void 0 !== QY ? QY : void 0,
+    name: BT,
+    hint: FT,
+    choice: ST,
+    selected: DT,
+    radioName: LT,
+    onSelect: xT,
+    onChosen: cT,
+    disabledWhy: KT
+  } = TT;
+  const MT = (0, iT.useRef)(!1),
+    rT = `${LT}-${null!==(oT=null===ST||void 0===ST?void 0:ST.keyId)&&void 0!==oT?oT:"botxd"}-${null!==(IT=null===ST||void 0===ST?void 0:ST.modelId)&&void 0!==IT?IT:"botxd"}`.replace(/[^\w-]/g, "_"),
+    AT = !!KT;
+  return (0, WT.jsxs)("label", {
+    className: kT()("WorldCodeAiModelRow", DT && "Selected", AT && "Disabled"),
+    "data-key-id": null !== (zT = null === ST || void 0 === ST ? void 0 : ST.keyId) && void 0 !== zT ? zT : "botxd",
+    "data-model-id": null !== (XT = null === ST || void 0 === ST ? void 0 : ST.modelId) && void 0 !== XT ? XT : "botxd",
+    title: null !== KT && void 0 !== KT ? KT : void 0,
     onPointerDown: () => {
-      oY.current = !EY
+      MT.current = !AT
     },
-    children: [(0, RY.jsx)("input", {
+    children: [(0, WT.jsx)("input", {
       type: "radio",
-      name: sY,
-      "aria-label": gY,
-      "aria-describedby": aY ? WY : void 0,
-      checked: uY,
-      disabled: EY,
-      onChange: iY,
+      name: LT,
+      "aria-label": BT,
+      "aria-describedby": FT ? rT : void 0,
+      checked: DT,
+      disabled: AT,
+      onChange: xT,
       onClick: () => {
-        oY.current && (null === yY || void 0 === yY || yY()), oY.current = !1
+        MT.current && (null === cT || void 0 === cT || cT()), MT.current = !1
       },
-      onKeyDown: YY => {
-        "Enter" === YY.key && (null === yY || void 0 === yY || yY())
+      onKeyDown: TT => {
+        "Enter" === TT.key && (null === cT || void 0 === cT || cT())
       }
-    }), (0, RY.jsx)("span", {
+    }), (0, WT.jsx)("span", {
       className: "WorldCodeAiModelName",
-      children: gY
-    }), aY && (0, RY.jsx)("span", {
-      id: WY,
+      children: BT
+    }), FT && (0, WT.jsx)("span", {
+      id: rT,
       className: "WorldCodeAiModelHint",
-      children: aY
+      children: FT
     })]
   })
 }
 
-function Zg(YY) {
+function OB(TT) {
   let {
-    labelledBy: rY,
-    onPicked: AY,
-    canRename: IY = !1,
-    onEdit: OY,
-    kS: gY,
-    onRefresh: aY,
-    refreshingIds: vY,
-    keyNote: uY
-  } = YY;
+    labelledBy: oT,
+    onPicked: zT,
+    canRename: kT = !1,
+    onEdit: XT,
+    zC: BT,
+    onRefresh: FT,
+    refreshingIds: ST,
+    keyNote: DT
+  } = TT;
   const {
-    keys: sY,
-    isSelected: iY,
-    select: yY,
-    renameKey: QY
-  } = nR(), oY = RO();
-  (0, FY.useEffect)((() => {
-    IO.refresh(), TO()
+    keys: LT,
+    isSelected: xT,
+    select: cT,
+    renameKey: KT
+  } = TX(), MT = DX();
+  (0, iT.useEffect)((() => {
+    SX.refresh(), fX()
   }), []);
-  const WY = uO(oY),
-    [EY, mY] = (0, FY.useState)(null),
-    [VY, SY] = (0, FY.useState)(null),
-    [lY, TY] = (0, FY.useState)({}),
-    [eY] = (0, FY.useState)((() => function(YY) {
-      const rY = YY.map(((YY, rY) => {
-        var DY;
+  const rT = MX(MT),
+    [AT, gT] = (0, iT.useState)(null),
+    [hT, wT] = (0, iT.useState)(null),
+    [mT, eT] = (0, iT.useState)({}),
+    [RT] = (0, iT.useState)((() => function(TT) {
+      const oT = TT.map(((TT, oT) => {
+        var IT;
         return {
-          id: YY.id,
-          at: null !== (DY = YY.usedAt) && void 0 !== DY ? DY : 0,
-          i: rY
+          id: TT.id,
+          at: null !== (IT = TT.usedAt) && void 0 !== IT ? IT : 0,
+          i: oT
         }
-      })).sort(((YY, rY) => rY.at - YY.at || rY.i - YY.i));
-      return new Set(rY.slice(0, 2).map((YY => {
+      })).sort(((TT, oT) => oT.at - TT.at || oT.i - TT.i));
+      return new Set(oT.slice(0, 2).map((TT => {
         let {
-          id: rY
-        } = YY;
-        return rY
+          id: oT
+        } = TT;
+        return oT
       })))
-    }(sY))),
-    [NY, BY] = (0, FY.useState)(new Set),
-    cY = YY => YY.models.some((rY => iY({
-      keyId: YY.id,
-      modelId: rY.id
+    }(LT))),
+    [uT, vT] = (0, iT.useState)(new Set),
+    ET = TT => TT.models.some((oT => xT({
+      keyId: TT.id,
+      modelId: oT.id
     }))),
-    KY = YY => {
-      const rY = YY.closest(".WorldCodeAiModelGroupHeader");
-      SY(null), setTimeout((() => {
-        var YY;
-        null === rY || void 0 === rY || null === (YY = rY.querySelector(".WorldCodeAiModelRemove")) || void 0 === YY || YY.focus()
+    fT = TT => {
+      const oT = TT.closest(".WorldCodeAiModelGroupHeader");
+      wT(null), setTimeout((() => {
+        var TT;
+        null === oT || void 0 === oT || null === (TT = oT.querySelector(".WorldCodeAiModelRemove")) || void 0 === TT || TT.focus()
       }))
     },
-    HY = `${rY}-model`,
-    zY = (YY, rY, DY) => {
-      var FY;
-      return (0, RY.jsx)(zg, {
-        name: YY,
-        hint: rY,
-        choice: DY,
-        selected: iY(DY) && !(null === DY && oY.picked && null === WY),
-        radioName: HY,
+    CT = `${oT}-model`,
+    jT = (TT, oT, IT) => {
+      var iT;
+      return (0, WT.jsx)(QB, {
+        name: TT,
+        hint: oT,
+        choice: IT,
+        selected: xT(IT) && !(null === IT && MT.picked && null === rT),
+        radioName: CT,
         onSelect: () => {
-          yY(DY), IO.unpick()
+          cT(IT), SX.unpick()
         },
-        onChosen: AY
-      }, null !== (FY = null === DY || void 0 === DY ? void 0 : DY.modelId) && void 0 !== FY ? FY : "botxd")
+        onChosen: zT
+      }, null !== (iT = null === IT || void 0 === IT ? void 0 : IT.modelId) && void 0 !== iT ? iT : "botxd")
     };
-  return (0, RY.jsxs)("div", {
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiModelList",
     role: "radiogroup",
-    "aria-labelledby": rY,
-    children: [zY("Bot.xd (free)", "Bloxd's own AI.", null), (0, RY.jsx)(zg, {
-      name: tR,
-      hint: null !== WY && void 0 !== WY ? WY : `Bloxd's better AI. ${oY.status?yO(oY.status):""}`.trim(),
-      choice: Bg,
-      selected: oY.picked && null === WY,
-      radioName: HY,
+    "aria-labelledby": oT,
+    children: [jT("Bot.xd (free)", "Bloxd's own AI.", null), (0, WT.jsx)(QB, {
+      name: zX,
+      hint: null !== rT && void 0 !== rT ? rT : `Bloxd's better AI. ${MT.status?gX(MT.status):""}`.trim(),
+      choice: JB,
+      selected: MT.picked && null === rT,
+      radioName: CT,
       onSelect: () => {
-        var YY, rY;
-        FO(null !== (YY = null === (rY = oY.status) || void 0 === rY ? void 0 : rY.provider) && void 0 !== YY ? YY : "ovh") && IO.Ps()
+        var TT, oT;
+        BX(null !== (TT = null === (oT = MT.status) || void 0 === oT ? void 0 : oT.provider) && void 0 !== TT ? TT : "ovh") && SX.PL()
       },
       onChosen: () => {
-        (async function(YY) {
-          var rY;
-          if (FO(null !== (rY = null === YY || void 0 === YY ? void 0 : YY.provider) && void 0 !== rY ? rY : "ovh")) return IO.Ps(), !0;
-          if (Cg) return !1;
-          Cg = !0;
+        (async function(TT) {
+          var oT;
+          if (BX(null !== (oT = null === TT || void 0 === TT ? void 0 : TT.provider) && void 0 !== oT ? oT : "ovh")) return SX.PL(), !0;
+          if (HB) return !1;
+          HB = !0;
           try {
             const [{
-              NotificationProvider: YY
+              NotificationProvider: TT
             }, {
-              WorldCodeAiDeepSeekNotice: rY
-            }] = await Promise.all([Promise.resolve().then((() => DY(1346))), DY.e(347).then((() => DY(60239)))]), FY = YY.showPromptPopup({
+              WorldCodeAiDeepSeekNotice: oT
+            }] = await Promise.all([Promise.resolve().then((() => IT(1325))), IT.e(347).then((() => IT(60037)))]), iT = TT.showPromptPopup({
               title: "superBotXd:deepSeekTitle",
-              subtitle: (0, RY.jsx)(rY, {}),
+              subtitle: (0, WT.jsx)(oT, {}),
               confirmText: "superBotXd:use",
               cancelText: "general:cancel"
             });
-            fg = FY.tearDownNotification;
-            return !0 === await FY.getResult() && (function() {
+            nB = iT.tearDownNotification;
+            return !0 === await iT.getResult() && (function() {
               try {
-                window.localStorage.setItem(DO, "1")
+                window.localStorage.setItem(XX, "1")
               } catch {}
-            }(), IO.Ps(), !0)
+            }(), SX.PL(), !0)
           } finally {
-            Cg = !1, fg = null
+            HB = !1, nB = null
           }
-        })(oY.status).then((YY => {
-          YY && (null === AY || void 0 === AY || AY())
+        })(MT.status).then((TT => {
+          TT && (null === zT || void 0 === zT || zT())
         }))
       },
-      disabledWhy: WY
-    }), sY.map((YY => {
-      var rY, DY, FY, AY, yY;
-      const oY = bR(YY),
-        WY = sY.length >= 4 && !cY(YY) && !eY.has(YY.id) && !NY.has(YY.id),
-        HY = WY ? null !== (rY = YY.models.find((rY => rY.id === YY.usedModelId))) && void 0 !== rY ? rY : wR(YY.models) : void 0,
-        ZY = null !== (DY = null === (FY = lY[YY.id]) || void 0 === FY ? void 0 : FY.trim().toLowerCase()) && void 0 !== DY ? DY : "",
-        CY = HY ? [HY] : "" === ZY ? YY.models : YY.models.filter((rY => rY.name.toLowerCase().includes(ZY) || iY({
-          keyId: YY.id,
-          modelId: rY.id
+      disabledWhy: rT
+    }), LT.map((TT => {
+      var oT, IT, iT, zT, cT;
+      const MT = pW(TT),
+        rT = LT.length >= 4 && !ET(TT) && !RT.has(TT.id) && !uT.has(TT.id),
+        CT = rT ? null !== (oT = TT.models.find((oT => oT.id === TT.usedModelId))) && void 0 !== oT ? oT : GW(TT.models) : void 0,
+        JT = null !== (IT = null === (iT = mT[TT.id]) || void 0 === iT ? void 0 : iT.trim().toLowerCase()) && void 0 !== IT ? IT : "",
+        UT = CT ? [CT] : "" === JT ? TT.models : TT.models.filter((oT => oT.name.toLowerCase().includes(JT) || xT({
+          keyId: TT.id,
+          modelId: oT.id
         })));
-      return (0, RY.jsxs)("div", {
+      return (0, WT.jsxs)("div", {
         className: "WorldCodeAiModelGroup",
         role: "group",
-        "aria-label": oY,
-        "data-key-id": YY.id,
-        children: [(0, RY.jsxs)("div", {
+        "aria-label": MT,
+        "data-key-id": TT.id,
+        children: [(0, WT.jsxs)("div", {
           className: "WorldCodeAiModelGroupHeader",
-          children: [EY === YY.id ? (0, RY.jsx)(Kg, {
-            keyName: null !== (AY = YY.name) && void 0 !== AY ? AY : "",
-            placeholder: yR(YY.provider, YY.baseUrl),
-            onDone: rY => {
-              null !== rY && QY(YY.id, rY), mY(null)
+          children: [AT === TT.id ? (0, WT.jsx)(aB, {
+            keyName: null !== (zT = TT.name) && void 0 !== zT ? zT : "",
+            placeholder: gW(TT.provider, TT.baseUrl),
+            onDone: oT => {
+              null !== oT && KT(TT.id, oT), gT(null)
             }
-          }) : (0, RY.jsx)(Hg, {
-            savedKey: YY,
-            isInUse: cY(YY),
-            onEdit: OY ? () => {
-              OY(YY)
+          }) : (0, WT.jsx)(YB, {
+            savedKey: TT,
+            isInUse: ET(TT),
+            onEdit: XT ? () => {
+              XT(TT)
             } : void 0,
-            onRename: IY ? () => {
-              mY(YY.id)
+            onRename: kT ? () => {
+              gT(TT.id)
             } : void 0
-          }), aY && VY !== YY.id && (0, RY.jsx)("button", {
+          }), FT && hT !== TT.id && (0, WT.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRefresh",
-            "aria-label": `Check ${oY} for new models`,
-            disabled: null === vY || void 0 === vY ? void 0 : vY.has(YY.id),
+            "aria-label": `Check ${MT} for new models`,
+            disabled: null === ST || void 0 === ST ? void 0 : ST.has(TT.id),
             onClick: () => {
-              aY(YY)
+              FT(TT)
             },
-            children: null !== vY && void 0 !== vY && vY.has(YY.id) ? "Checking\u2026" : "Check for new models"
-          }), gY && VY !== YY.id && (0, RY.jsx)("button", {
+            children: null !== ST && void 0 !== ST && ST.has(TT.id) ? "Checking\u2026" : "Check for new models"
+          }), BT && hT !== TT.id && (0, WT.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-            "aria-label": `Remove ${oY} key`,
+            "aria-label": `Remove ${MT} key`,
             onClick: () => {
-              SY(YY.id)
+              wT(TT.id)
             },
             children: "Remove"
-          }), gY && VY === YY.id && (0, RY.jsxs)("span", {
+          }), BT && hT === TT.id && (0, WT.jsxs)("span", {
             className: "WorldCodeAiKeyConfirm",
             role: "group",
-            "aria-label": `Remove ${oY} key?`,
-            onKeyDown: YY => {
-              "Escape" === YY.key && (YY.stopPropagation(), YY.preventDefault(), KY(YY.currentTarget))
+            "aria-label": `Remove ${MT} key?`,
+            onKeyDown: TT => {
+              "Escape" === TT.key && (TT.stopPropagation(), TT.preventDefault(), fT(TT.currentTarget))
             },
-            children: ["Remove key?", (0, RY.jsx)("button", {
+            children: ["Remove key?", (0, WT.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-              "aria-label": `Yes, remove ${oY} key`,
+              "aria-label": `Yes, remove ${MT} key`,
               onClick: () => {
-                SY(null), gY(YY)
+                wT(null), BT(TT)
               },
               children: "Yes"
-            }), (0, RY.jsx)("button", {
+            }), (0, WT.jsx)("button", {
               className: "WorldCodeAiLinkButton",
-              "aria-label": `No, keep ${oY} key`,
+              "aria-label": `No, keep ${MT} key`,
               autoFocus: !0,
-              onClick: YY => {
-                KY(YY.currentTarget)
+              onClick: TT => {
+                fT(TT.currentTarget)
               },
               children: "No"
             })]
           })]
-        }), (null === uY || void 0 === uY ? void 0 : uY.keyId) === YY.id && (0, RY.jsx)("p", {
+        }), (null === DT || void 0 === DT ? void 0 : DT.keyId) === TT.id && (0, WT.jsx)("p", {
           className: "WorldCodeAiAiSettingsNote",
           role: "status",
-          children: uY.text
-        }), !WY && YY.models.length > 12 && (0, RY.jsx)("input", {
+          children: DT.text
+        }), !rT && TT.models.length > 12 && (0, WT.jsx)("input", {
           className: "WorldCodeAiAddKeyInput WorldCodeAiModelFilter",
-          "aria-label": `Find a model from ${oY}`,
-          placeholder: `Find a model (${YY.models.length})`,
-          value: null !== (yY = lY[YY.id]) && void 0 !== yY ? yY : "",
-          onKeyDown: YY => {
-            YY.stopPropagation()
+          "aria-label": `Find a model from ${MT}`,
+          placeholder: `Find a model (${TT.models.length})`,
+          value: null !== (cT = mT[TT.id]) && void 0 !== cT ? cT : "",
+          onKeyDown: TT => {
+            TT.stopPropagation()
           },
-          onChange: rY => {
-            const DY = rY.target.value;
-            TY((rY => ({
-              ...rY,
-              [YY.id]: DY
+          onChange: oT => {
+            const IT = oT.target.value;
+            eT((oT => ({
+              ...oT,
+              [TT.id]: IT
             })))
           }
-        }), CY.map((rY => zY(rY.name, rY.tier ? fR[rY.tier] : "", {
-          keyId: YY.id,
-          modelId: rY.id
-        }))), WY && YY.models.length > 1 && (0, RY.jsxs)("button", {
+        }), UT.map((oT => jT(oT.name, oT.tier ? nW[oT.tier] : "", {
+          keyId: TT.id,
+          modelId: oT.id
+        }))), rT && TT.models.length > 1 && (0, WT.jsxs)("button", {
           className: "WorldCodeAiKeyLearnMore WorldCodeAiModelUnfold",
-          "aria-label": `Show all ${oY} models`,
-          onClick: rY => {
-            const DY = rY.currentTarget.closest(".WorldCodeAiModelGroup");
-            BY((rY => new Set(rY).add(YY.id))), setTimeout((() => {
-              var YY;
-              null === DY || void 0 === DY || null === (YY = DY.querySelector("input")) || void 0 === YY || YY.focus()
+          "aria-label": `Show all ${MT} models`,
+          onClick: oT => {
+            const IT = oT.currentTarget.closest(".WorldCodeAiModelGroup");
+            vT((oT => new Set(oT).add(TT.id))), setTimeout((() => {
+              var TT;
+              null === IT || void 0 === IT || null === (TT = IT.querySelector("input")) || void 0 === TT || TT.focus()
             }))
           },
-          children: ["Show all ", YY.models.length, " models"]
+          children: ["Show all ", TT.models.length, " models"]
         })]
-      }, YY.id)
+      }, TT.id)
     }))]
   })
 }
-let Cg = !1,
-  fg = null;
+let HB = !1,
+  nB = null;
 
-function jg(YY) {
+function qB(TT) {
   let {
-    checked: rY,
-    onChange: DY,
-    title: FY,
-    onNote: AY,
-    offNote: IY
-  } = YY;
-  return (0, RY.jsxs)("label", {
+    checked: oT,
+    onChange: IT,
+    title: iT,
+    onNote: zT,
+    offNote: kT
+  } = TT;
+  return (0, WT.jsxs)("label", {
     className: "WorldCodeAiSettingSwitch",
-    children: [(0, RY.jsx)("input", {
+    children: [(0, WT.jsx)("input", {
       type: "checkbox",
-      checked: rY,
-      onChange: YY => {
-        DY(YY.target.checked)
+      checked: oT,
+      onChange: TT => {
+        IT(TT.target.checked)
       }
-    }), (0, RY.jsxs)("span", {
-      children: [FY, (0, RY.jsx)("span", {
+    }), (0, WT.jsxs)("span", {
+      children: [iT, (0, WT.jsx)("span", {
         className: "WorldCodeAiAiSettingsNote",
-        children: rY ? AY : IY
+        children: oT ? zT : kT
       })]
     })]
   })
 }
 
-function hg() {
+function ZB() {
   const {
-    remember: YY,
-    setRemember: rY
-  } = nR();
-  return (0, RY.jsx)(jg, {
-    checked: YY,
-    onChange: rY,
+    remember: TT,
+    setRemember: oT
+  } = TX();
+  return (0, WT.jsx)(qB, {
+    checked: TT,
+    onChange: oT,
     title: "Remember my keys in this browser",
     onNote: "On: saved only in this browser, not synced, for all your keys. Not for shared computers.",
     offNote: "Off: you'll paste your keys again next time. Best on shared computers."
   })
 }
 
-function dg() {
+function lB() {
   const {
-    answer: YY,
-    hasPlayer: rY
+    answer: TT,
+    hasPlayer: oT
   } = function() {
-    const YY = () => ({
-        answer: wI.get(),
-        hasPlayer: null !== wI.getPlayer()
+    const TT = () => ({
+        answer: Gk.get(),
+        hasPlayer: null !== Gk.getPlayer()
       }),
-      [rY, DY] = (0, FY.useState)(YY);
-    return (0, FY.useEffect)((() => {
-      const rY = wI.subscribe((() => {
-        DY(YY())
+      [oT, IT] = (0, iT.useState)(TT);
+    return (0, iT.useEffect)((() => {
+      const oT = Gk.subscribe((() => {
+        IT(TT())
       }));
-      return wI.refresh(), rY
-    }), []), rY
+      return Gk.refresh(), oT
+    }), []), oT
   }();
-  return rY ? (0, RY.jsx)("div", {
+  return oT ? (0, WT.jsx)("div", {
     className: "WorldCodeAiAiSettingsSection",
-    children: (0, RY.jsx)(jg, {
-      checked: "yes" === YY,
-      onChange: YY => {
-        wI.set(YY ? "yes" : "no")
+    children: (0, WT.jsx)(qB, {
+      checked: "yes" === TT,
+      onChange: TT => {
+        Gk.set(TT ? "yes" : "no")
       },
       title: "Help make the AI Helper better",
       onNote: "On: Bloxd keeps your questions, code and the AI's answers for 30 days to improve the AI Helper.",
@@ -9747,258 +9747,258 @@ function dg() {
   }) : null
 }
 
-function Jg(YY) {
+function sB(TT) {
   let {
-    allowEdits: rY,
-    onAllowEditsChange: DY,
-    onAddKey: AY,
-    onEditKey: IY
-  } = YY;
+    allowEdits: oT,
+    onAllowEditsChange: IT,
+    onAddKey: zT,
+    onEditKey: kT
+  } = TT;
   const {
-    keys: OY,
-    removeKey: gY
-  } = nR(), [aY, vY] = (0, FY.useState)(null), [uY, sY] = (0, FY.useState)(!1), [iY, yY] = (0, FY.useState)(!1), QY = (0, FY.useRef)(null);
-  (0, FY.useEffect)((() => {
-    var YY, rY;
-    (aY || iY) && (null === (YY = QY.current) || void 0 === YY || YY.scrollIntoView({
+    keys: XT,
+    removeKey: BT
+  } = TX(), [FT, ST] = (0, iT.useState)(null), [DT, LT] = (0, iT.useState)(!1), [xT, cT] = (0, iT.useState)(!1), KT = (0, iT.useRef)(null);
+  (0, iT.useEffect)((() => {
+    var TT, oT;
+    (FT || xT) && (null === (TT = KT.current) || void 0 === TT || TT.scrollIntoView({
       block: "nearest"
-    }), null === (rY = QY.current) || void 0 === rY || rY.focus({
+    }), null === (oT = KT.current) || void 0 === oT || oT.focus({
       preventScroll: !0
     }))
-  }), [aY, iY]);
-  const oY = (0, FY.useRef)(null),
-    WY = () => {
-      sY(!1), setTimeout((() => {
-        var YY;
-        null === (YY = oY.current) || void 0 === YY || YY.focus()
+  }), [FT, xT]);
+  const MT = (0, iT.useRef)(null),
+    rT = () => {
+      LT(!1), setTimeout((() => {
+        var TT;
+        null === (TT = MT.current) || void 0 === TT || TT.focus()
       }))
     },
-    [EY, mY] = (0, FY.useState)(new Set),
-    [VY, SY] = (0, FY.useState)(null);
-  return (0, RY.jsxs)("div", {
+    [AT, gT] = (0, iT.useState)(new Set),
+    [hT, wT] = (0, iT.useState)(null);
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiAiSettings",
-    children: [DY && (0, RY.jsxs)("div", {
+    children: [IT && (0, WT.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, RY.jsx)(Ng, {
-        allow: rY,
-        onChange: YY => {
-          vY(null), DY(YY)
+      children: [(0, WT.jsx)(jB, {
+        allow: oT,
+        onChange: TT => {
+          ST(null), IT(TT)
         }
-      }), (0, RY.jsx)("p", {
+      }), (0, WT.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
-        children: rY ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
+        children: oT ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
       })]
-    }), (0, RY.jsxs)("div", {
+    }), (0, WT.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, RY.jsxs)("div", {
+      children: [(0, WT.jsxs)("div", {
         className: "WorldCodeAiAiSettingsHeading",
-        children: [(0, RY.jsx)("h3", {
+        children: [(0, WT.jsx)("h3", {
           id: "WorldCodeAiModelTitle",
           className: "WorldCodeAiAiSettingsTitle",
           children: "AI model"
-        }), (0, RY.jsxs)("button", {
+        }), (0, WT.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
-          onClick: AY,
-          children: [(0, RY.jsx)("span", {
+          onClick: zT,
+          children: [(0, WT.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
         })]
-      }), 0 === OY.length && (0, RY.jsx)("p", {
+      }), 0 === XT.length && (0, WT.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
         children: "Use a stronger AI with your own key."
-      }), (0, RY.jsx)(hg, {}), OY.length > 0 && (0, RY.jsx)("p", {
+      }), (0, WT.jsx)(ZB, {}), XT.length > 0 && (0, WT.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote WorldCodeAiForgetAll",
-        children: uY ? (0, RY.jsxs)("span", {
+        children: DT ? (0, WT.jsxs)("span", {
           className: "WorldCodeAiKeyConfirm",
           role: "group",
           "aria-label": "Forget all keys?",
-          onKeyDown: YY => {
-            "Escape" === YY.key && (YY.stopPropagation(), YY.preventDefault(), WY())
+          onKeyDown: TT => {
+            "Escape" === TT.key && (TT.stopPropagation(), TT.preventDefault(), rT())
           },
-          children: [1 === OY.length ? "Forget your key" : `Forget all ${OY.length} keys`, " in this browser?", (0, RY.jsx)("button", {
+          children: [1 === XT.length ? "Forget your key" : `Forget all ${XT.length} keys`, " in this browser?", (0, WT.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
             onClick: () => {
-              xR.removeAll(), sY(!1), vY(null), yY(!0)
+              VW.removeAll(), LT(!1), ST(null), cT(!0)
             },
             children: "Yes"
-          }), (0, RY.jsx)("button", {
+          }), (0, WT.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             autoFocus: !0,
-            onClick: WY,
+            onClick: rT,
             children: "No"
           })]
-        }) : (0, RY.jsx)("button", {
-          ref: oY,
+        }) : (0, WT.jsx)("button", {
+          ref: MT,
           className: "WorldCodeAiKeyLearnMore",
           onClick: () => {
-            sY(!0)
+            LT(!0)
           },
           children: "Forget all keys"
         })
-      }), 0 === OY.length && iY && (0, RY.jsx)("p", {
-        ref: QY,
+      }), 0 === XT.length && xT && (0, WT.jsx)("p", {
+        ref: KT,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
         children: "All keys forgotten in this browser. Bot.xd answers now. To stop a key working everywhere, delete it on its company's website."
-      }), aY && (0, RY.jsxs)("p", {
-        ref: QY,
+      }), FT && (0, WT.jsxs)("p", {
+        ref: KT,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
-        children: [aY.name, " removed.", aY.wasInUse && " Bot.xd answers now.", aY.keyPage && (0, RY.jsxs)(RY.Fragment, {
-          children: [" ", "To stop it working everywhere, delete it on", " ", (0, RY.jsxs)("a", {
-            href: aY.keyPage,
+        children: [FT.name, " removed.", FT.wasInUse && " Bot.xd answers now.", FT.keyPage && (0, WT.jsxs)(WT.Fragment, {
+          children: [" ", "To stop it working everywhere, delete it on", " ", (0, WT.jsxs)("a", {
+            href: FT.keyPage,
             target: "_blank",
             rel: "noreferrer noopener",
-            children: [aY.label, "'s website"]
+            children: [FT.label, "'s website"]
           }), "."]
-        }), " ", (0, RY.jsx)("button", {
+        }), " ", (0, WT.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiModelUndo",
           onClick: () => {
-            aY.undo(), vY(null)
+            FT.undo(), ST(null)
           },
           children: "Undo"
         })]
-      }), (0, RY.jsx)(Zg, {
+      }), (0, WT.jsx)(OB, {
         labelledBy: "WorldCodeAiModelTitle",
         onPicked: () => {
-          vY(null), SY(null)
+          ST(null), wT(null)
         },
         canRename: !0,
-        onEdit: IY,
-        refreshingIds: EY,
-        keyNote: VY,
-        onRefresh: YY => {
-          (async YY => {
-            const rY = yR(YY.provider, YY.baseUrl, !0);
-            mY((rY => new Set(rY).add(YY.id))), SY(null);
+        onEdit: kT,
+        refreshingIds: AT,
+        keyNote: hT,
+        onRefresh: TT => {
+          (async TT => {
+            const oT = gW(TT.provider, TT.baseUrl, !0);
+            gT((oT => new Set(oT).add(TT.id))), wT(null);
             try {
-              const DY = await PR({
-                provider: YY.provider,
-                key: YY.key,
-                baseUrl: YY.baseUrl
+              const IT = await oX({
+                provider: TT.provider,
+                key: TT.key,
+                baseUrl: TT.baseUrl
               });
-              0 === DY.length ? SY({
-                keyId: YY.id,
-                text: `${rY} listed no models, so your models stay as they were.`
-              }) : xR.refreshModels(YY.id, DY, {
-                key: YY.key,
-                baseUrl: YY.baseUrl
-              }) && SY({
-                keyId: YY.id,
-                text: `${rY}'s models are up to date.`
+              0 === IT.length ? wT({
+                keyId: TT.id,
+                text: `${oT} listed no models, so your models stay as they were.`
+              }) : VW.refreshModels(TT.id, IT, {
+                key: TT.key,
+                baseUrl: TT.baseUrl
+              }) && wT({
+                keyId: TT.id,
+                text: `${oT}'s models are up to date.`
               })
-            } catch (DY) {
-              SY({
-                keyId: YY.id,
-                text: WR(DY instanceof QR ? DY.problem : "failed", YY.provider)
+            } catch (IT) {
+              wT({
+                keyId: TT.id,
+                text: mW(IT instanceof hW ? IT.problem : "failed", TT.provider)
               })
             }
-            mY((rY => {
-              const DY = new Set(rY);
-              return DY.delete(YY.id), DY
+            gT((oT => {
+              const IT = new Set(oT);
+              return IT.delete(TT.id), IT
             }))
-          })(YY)
+          })(TT)
         },
-        kS: YY => {
-          var rY;
-          const DY = (null === (rY = xR.activeKey()) || void 0 === rY ? void 0 : rY.id) === YY.id,
-            FY = gY(YY.id);
-          vY({
-            name: bR(YY, !0),
-            label: yR(YY.provider, YY.baseUrl, !0),
-            keyPage: gR[YY.provider].keyPage,
-            wasInUse: DY,
-            undo: FY
+        zC: TT => {
+          var oT;
+          const IT = (null === (oT = VW.activeKey()) || void 0 === oT ? void 0 : oT.id) === TT.id,
+            iT = BT(TT.id);
+          ST({
+            name: pW(TT, !0),
+            label: gW(TT.provider, TT.baseUrl, !0),
+            keyPage: xW[TT.provider].keyPage,
+            wasInUse: IT,
+            undo: iT
           })
         }
       })]
-    }), (0, RY.jsx)(dg, {})]
+    }), (0, WT.jsx)(lB, {})]
   })
 }
-const Mg = ["anthropic", "openai", "gemini", "openrouter"];
+const tB = ["anthropic", "openai", "gemini", "openrouter"];
 
-function wg(YY) {
+function GB(TT) {
   let {
-    provider: rY,
-    children: DY
-  } = YY;
-  return (0, RY.jsx)("a", {
-    href: gR[rY].keyPage,
+    provider: oT,
+    children: IT
+  } = TT;
+  return (0, WT.jsx)("a", {
+    href: xW[oT].keyPage,
     target: "_blank",
     rel: "noreferrer noopener",
-    children: DY
+    children: IT
   })
 }
 
-function bg() {
-  return (0, RY.jsxs)(RY.Fragment, {
-    children: [Mg.map(((YY, rY) => {
-      const DY = 0 === rY ? "" : rY === Mg.length - 1 ? " or " : ", ";
-      return (0, RY.jsxs)("span", {
-        children: [DY, (0, RY.jsx)(wg, {
-          provider: YY,
-          children: gR[YY].shortName
+function pB() {
+  return (0, WT.jsxs)(WT.Fragment, {
+    children: [tB.map(((TT, oT) => {
+      const IT = 0 === oT ? "" : oT === tB.length - 1 ? " or " : ", ";
+      return (0, WT.jsxs)("span", {
+        children: [IT, (0, WT.jsx)(GB, {
+          provider: TT,
+          children: xW[TT].shortName
         })]
-      }, YY)
+      }, TT)
     })), "'s website"]
   })
 }
 
-function Xg(YY) {
-  var rY;
+function bB(TT) {
+  var oT;
   let {
-    provider: DY
-  } = YY;
-  const [AY, IY] = (0, FY.useState)(!1), OY = (0, FY.useRef)(null);
-  if ((0, FY.useEffect)((() => {
-      if (AY) {
-        var YY, rY, DY;
-        const FY = null === (YY = OY.current) || void 0 === YY || null === (rY = YY.closest("form")) || void 0 === rY ? void 0 : rY.querySelector(".WorldCodeAiAddKeyActions");
-        null === (DY = null !== FY && void 0 !== FY ? FY : OY.current) || void 0 === DY || DY.scrollIntoView({
+    provider: IT
+  } = TT;
+  const [zT, kT] = (0, iT.useState)(!1), XT = (0, iT.useRef)(null);
+  if ((0, iT.useEffect)((() => {
+      if (zT) {
+        var TT, oT, IT;
+        const iT = null === (TT = XT.current) || void 0 === TT || null === (oT = TT.closest("form")) || void 0 === oT ? void 0 : oT.querySelector(".WorldCodeAiAddKeyActions");
+        null === (IT = null !== iT && void 0 !== iT ? iT : XT.current) || void 0 === IT || IT.scrollIntoView({
           block: "nearest",
           behavior: "smooth"
         })
       }
-    }), [AY]), "custom" === DY) return (0, RY.jsx)("div", {
+    }), [zT]), "custom" === IT) return (0, WT.jsx)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: (0, RY.jsx)("p", {
+    children: (0, WT.jsx)("p", {
       className: "WorldCodeAiAiSettingsNote",
       children: "Paste the key for that server, or leave it empty if it doesn't need one. It goes only to that server, never to Bloxd."
     })
   });
-  const gY = DY ? gR[DY] : null;
-  return (0, RY.jsxs)("div", {
+  const BT = IT ? xW[IT] : null;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: [(0, RY.jsxs)("ul", {
-      ref: OY,
+    children: [(0, WT.jsxs)("ul", {
+      ref: XT,
       id: "WorldCodeAiKeyExplainerLines",
       className: "WorldCodeAiKeyExplainerLines",
-      children: [(0, RY.jsx)("li", {
-        children: gY ? `An API key works like a password for ${gY.shortName}'s AI (it isn't your ${gY.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
-      }), (0, RY.jsxs)("li", {
-        children: ["You make it on ", gY ? `${gY.shortName}'s website` : (0, RY.jsx)(bg, {}), ", and see how much you've used or delete it there."]
-      }), AY && (0, RY.jsxs)("li", {
-        children: ["Your key stays in this browser and only goes to ", null !== (rY = null === gY || void 0 === gY ? void 0 : gY.shortName) && void 0 !== rY ? rY : "that company", ", never to Bloxd."]
-      }), (0, RY.jsx)("li", {
+      children: [(0, WT.jsx)("li", {
+        children: BT ? `An API key works like a password for ${BT.shortName}'s AI (it isn't your ${BT.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
+      }), (0, WT.jsxs)("li", {
+        children: ["You make it on ", BT ? `${BT.shortName}'s website` : (0, WT.jsx)(pB, {}), ", and see how much you've used or delete it there."]
+      }), zT && (0, WT.jsxs)("li", {
+        children: ["Your key stays in this browser and only goes to ", null !== (oT = null === BT || void 0 === BT ? void 0 : BT.shortName) && void 0 !== oT ? oT : "that company", ", never to Bloxd."]
+      }), (0, WT.jsx)("li", {
         className: "WorldCodeAiKeyExplainerMore",
-        children: (0, RY.jsx)("button", {
+        children: (0, WT.jsx)("button", {
           type: "button",
           className: "WorldCodeAiKeyLearnMore",
-          "aria-expanded": AY,
+          "aria-expanded": zT,
           "aria-controls": "WorldCodeAiKeyExplainerLines",
           onClick: () => {
-            IY(!AY)
+            kT(!zT)
           },
-          children: AY ? "Less about keys" : "More about keys"
+          children: zT ? "Less about keys" : "More about keys"
         })
       })]
-    }), gY && (0, RY.jsxs)("a", {
+    }), BT && (0, WT.jsxs)("a", {
       className: "WorldCodeAiKeyPageLink",
-      href: gY.keyPage,
+      href: BT.keyPage,
       target: "_blank",
       rel: "noreferrer noopener",
-      children: ["Get a key on ", gY.shortName, "'s website ", (0, RY.jsx)("span", {
+      children: ["Get a key on ", BT.shortName, "'s website ", (0, WT.jsx)("span", {
         "aria-hidden": "true",
         children: "\u2197"
       })]
@@ -10006,473 +10006,473 @@ function Xg(YY) {
   })
 }
 
-function qg() {
-  const [YY, rY] = (0, FY.useState)(!1);
-  return (0, RY.jsxs)("span", {
+function yB() {
+  const [TT, oT] = (0, iT.useState)(!1);
+  return (0, WT.jsxs)("span", {
     className: "WorldCodeAiAiSettingsNote",
-    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, RY.jsx)("button", {
+    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, WT.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
-      "aria-expanded": YY,
+      "aria-expanded": TT,
       onClick: () => {
-        rY(!YY)
+        oT(!TT)
       },
-      children: YY ? "Hide tips" : "Server tips"
-    }), YY && (0, RY.jsx)("span", {
+      children: TT ? "Hide tips" : "Server tips"
+    }), TT && (0, WT.jsx)("span", {
       className: "WorldCodeAiServerTips",
       children: "Use https://, or http:// for one on this computer, like http://localhost:1234/v1. It must allow web pages to use it: in LM Studio turn on CORS; for Ollama see its help."
     })]
   })
 }
 
-function pg(YY) {
-  YY.stopPropagation()
+function NB(TT) {
+  TT.stopPropagation()
 }
 
-function kg(YY) {
-  var rY, DY, AY, IY, OY;
+function PB(TT) {
+  var oT, IT, zT, kT, XT;
   let {
-    editing: gY,
-    onAdded: aY,
-    onOpenSettings: vY
-  } = YY;
+    editing: BT,
+    onAdded: FT,
+    onOpenSettings: ST
+  } = TT;
   const {
-    remember: uY
-  } = nR(), [sY, iY] = (0, FY.useState)(null !== (rY = null === gY || void 0 === gY ? void 0 : gY.provider) && void 0 !== rY ? rY : null), [yY, QY] = (0, FY.useState)(!!gY), [oY, WY] = (0, FY.useState)(""), EY = null !== (DY = null === gY || void 0 === gY ? void 0 : gY.key) && void 0 !== DY ? DY : "", [mY, VY] = (0, FY.useState)(!1), [SY, lY] = (0, FY.useState)(null !== (AY = null === gY || void 0 === gY ? void 0 : gY.baseUrl) && void 0 !== AY ? AY : ""), TY = YY => {
-    var rY, DY;
-    return YY === (null === gY || void 0 === gY ? void 0 : gY.provider) && ("custom" !== YY || (null !== (rY = iR(SY)) && void 0 !== rY ? rY : "") === (null !== (DY = gY.baseUrl) && void 0 !== DY ? DY : ""))
-  }, eY = "" !== EY && TY(sY), NY = function(YY) {
-    let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uR(oY);
-    return "" === rY && "" !== EY && TY(YY) ? EY : rY
-  }, [BY, cY] = (0, FY.useState)(""), [KY, HY] = (0, FY.useState)(null !== (IY = null === gY || void 0 === gY ? void 0 : gY.name) && void 0 !== IY ? IY : ""), [zY, ZY] = (0, FY.useState)(!1), [CY, fY] = (0, FY.useState)(null), [jY, hY] = (0, FY.useState)(""), [dY, JY] = (0, FY.useState)(!1), [MY, wY] = (0, FY.useState)(null), [bY, XY] = (0, FY.useState)(null), qY = "custom" === sY && "" === NY(sY), pY = (0, FY.useRef)(null), kY = (0, FY.useRef)(null), GY = (0, FY.useRef)(null);
-  (0, FY.useEffect)((() => {
-    var YY, rY;
-    CY && (null === (YY = kY.current) || void 0 === YY || YY.scrollIntoView({
+    remember: DT
+  } = TX(), [LT, xT] = (0, iT.useState)(null !== (oT = null === BT || void 0 === BT ? void 0 : BT.provider) && void 0 !== oT ? oT : null), [cT, KT] = (0, iT.useState)(!!BT), [MT, rT] = (0, iT.useState)(""), AT = null !== (IT = null === BT || void 0 === BT ? void 0 : BT.key) && void 0 !== IT ? IT : "", [gT, hT] = (0, iT.useState)(!1), [wT, mT] = (0, iT.useState)(null !== (zT = null === BT || void 0 === BT ? void 0 : BT.baseUrl) && void 0 !== zT ? zT : ""), eT = TT => {
+    var oT, IT;
+    return TT === (null === BT || void 0 === BT ? void 0 : BT.provider) && ("custom" !== TT || (null !== (oT = AW(wT)) && void 0 !== oT ? oT : "") === (null !== (IT = BT.baseUrl) && void 0 !== IT ? IT : ""))
+  }, RT = "" !== AT && eT(LT), uT = function(TT) {
+    let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MW(MT);
+    return "" === oT && "" !== AT && eT(TT) ? AT : oT
+  }, [vT, ET] = (0, iT.useState)(""), [fT, CT] = (0, iT.useState)(null !== (kT = null === BT || void 0 === BT ? void 0 : BT.name) && void 0 !== kT ? kT : ""), [jT, JT] = (0, iT.useState)(!1), [UT, aT] = (0, iT.useState)(null), [YT, QT] = (0, iT.useState)(""), [OT, HT] = (0, iT.useState)(!1), [nT, qT] = (0, iT.useState)(null), [ZT, lT] = (0, iT.useState)(null), sT = "custom" === LT && "" === uT(LT), tT = (0, iT.useRef)(null), GT = (0, iT.useRef)(null), pT = (0, iT.useRef)(null);
+  (0, iT.useEffect)((() => {
+    var TT, oT;
+    UT && (null === (TT = GT.current) || void 0 === TT || TT.scrollIntoView({
       block: "start"
-    }), null === (rY = GY.current) || void 0 === rY || rY.scrollIntoView({
+    }), null === (oT = pT.current) || void 0 === oT || oT.scrollIntoView({
       block: "nearest"
     }))
-  }), [CY]), (0, FY.useEffect)((() => () => {
-    var YY;
-    null === (YY = pY.current) || void 0 === YY || YY.abort()
-  }), []), (0, FY.useEffect)((() => {
-    var YY;
-    MY && (null === (YY = GY.current) || void 0 === YY || YY.scrollIntoView({
+  }), [UT]), (0, iT.useEffect)((() => () => {
+    var TT;
+    null === (TT = tT.current) || void 0 === TT || TT.abort()
+  }), []), (0, iT.useEffect)((() => {
+    var TT;
+    nT && (null === (TT = pT.current) || void 0 === TT || TT.scrollIntoView({
       block: "nearest"
     }))
-  }), [MY]);
-  const xY = () => {
-      var YY;
-      null === (YY = pY.current) || void 0 === YY || YY.abort(), JY(!1), fY(null), wY(null), XY(null)
+  }), [nT]);
+  const bT = () => {
+      var TT;
+      null === (TT = tT.current) || void 0 === TT || TT.abort(), HT(!1), aT(null), qT(null), lT(null)
     },
-    nY = null === CY || void 0 === CY ? void 0 : CY.find((YY => YY.id === jY));
-  return (0, RY.jsxs)("form", {
+    yT = null === UT || void 0 === UT ? void 0 : UT.find((TT => TT.id === YT));
+  return (0, WT.jsxs)("form", {
     className: "WorldCodeAiAddKey",
-    onSubmit: YY => {
-      YY.preventDefault(), CY ? (() => {
-        var YY;
-        if (!sY || !CY) return;
-        const rY = xR.addKey({
-          provider: sY,
-          key: NY(sY),
-          baseUrl: "custom" === sY && null !== (YY = iR(SY)) && void 0 !== YY ? YY : void 0,
-          models: CY
-        }, jY, null === gY || void 0 === gY ? void 0 : gY.id);
-        ("" !== KY.trim() || gY) && xR.renameKey(rY, KY), aY()
+    onSubmit: TT => {
+      TT.preventDefault(), UT ? (() => {
+        var TT;
+        if (!LT || !UT) return;
+        const oT = VW.addKey({
+          provider: LT,
+          key: uT(LT),
+          baseUrl: "custom" === LT && null !== (TT = AW(wT)) && void 0 !== TT ? TT : void 0,
+          models: UT
+        }, YT, null === BT || void 0 === BT ? void 0 : BT.id);
+        ("" !== fT.trim() || BT) && VW.renameKey(oT, fT), FT()
       })() : (async () => {
-        const rY = uR(oY);
-        WY(rY), XY(null);
-        const DY = null !== sY && void 0 !== sY ? sY : sR(rY),
-          FY = NY(DY, rY);
-        if ("" === FY && "custom" !== DY) return void wY("Paste your key first.");
-        if (!DY) return void wY("Pick the company your key is from.");
-        const AY = "custom" === DY ? iR(SY) : null;
-        if ("custom" === DY && null === AY) return void wY("That address doesn't look right. It should start with https://");
-        if (zY && "" === BY.trim()) return void wY("Type the name of the model to use.");
-        iY(DY), JY(!0), wY(null);
-        const IY = new AbortController;
-        pY.current = IY;
+        const oT = MW(MT);
+        rT(oT), lT(null);
+        const IT = null !== LT && void 0 !== LT ? LT : rW(oT),
+          iT = uT(IT, oT);
+        if ("" === iT && "custom" !== IT) return void qT("Paste your key first.");
+        if (!IT) return void qT("Pick the company your key is from.");
+        const zT = "custom" === IT ? AW(wT) : null;
+        if ("custom" === IT && null === zT) return void qT("That address doesn't look right. It should start with https://");
+        if (jT && "" === vT.trim()) return void qT("Type the name of the model to use.");
+        xT(IT), HT(!0), qT(null);
+        const kT = new AbortController;
+        tT.current = kT;
         try {
-          var RY, OY;
-          const YY = await PR({
-            provider: DY,
-            key: FY,
-            baseUrl: null !== AY && void 0 !== AY ? AY : void 0,
-            modelName: zY ? BY : void 0
-          }, IY.signal);
-          if (JY(!1), 0 === YY.length) return ZY(!0), void wY("custom" === DY ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
-          fY(YY);
-          const rY = xR.getState().selected,
-            aY = gY && (null === rY || void 0 === rY ? void 0 : rY.keyId) === gY.id ? YY.find((YY => YY.id === rY.modelId)) : void 0;
-          hY(null !== (RY = null === (OY = null !== aY && void 0 !== aY ? aY : wR(YY)) || void 0 === OY ? void 0 : OY.id) && void 0 !== RY ? RY : "")
-        } catch (YY) {
-          if (IY.signal.aborted) return;
-          JY(!1);
-          const AY = YY instanceof QR ? YY.problem : "failed";
-          if (XY(YY instanceof QR && YY.detail ? oR(YY.detail, FY) : null), "badKey" === AY && "" === FY) return void wY("This address needs a key.");
-          const RY = "badKey" !== AY || yY ? "" : ` If it isn't from ${gR[DY].shortName}, pick the company it's from.`;
-          wY(`${WR(AY,DY)}${RY}`)
+          var WT, XT;
+          const TT = await oX({
+            provider: IT,
+            key: iT,
+            baseUrl: null !== zT && void 0 !== zT ? zT : void 0,
+            modelName: jT ? vT : void 0
+          }, kT.signal);
+          if (HT(!1), 0 === TT.length) return JT(!0), void qT("custom" === IT ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
+          aT(TT);
+          const oT = VW.getState().selected,
+            FT = BT && (null === oT || void 0 === oT ? void 0 : oT.keyId) === BT.id ? TT.find((TT => TT.id === oT.modelId)) : void 0;
+          QT(null !== (WT = null === (XT = null !== FT && void 0 !== FT ? FT : GW(TT)) || void 0 === XT ? void 0 : XT.id) && void 0 !== WT ? WT : "")
+        } catch (TT) {
+          if (kT.signal.aborted) return;
+          HT(!1);
+          const zT = TT instanceof hW ? TT.problem : "failed";
+          if (lT(TT instanceof hW && TT.detail ? wW(TT.detail, iT) : null), "badKey" === zT && "" === iT) return void qT("This address needs a key.");
+          const WT = "badKey" !== zT || cT ? "" : ` If it isn't from ${xW[IT].shortName}, pick the company it's from.`;
+          qT(`${mW(zT,IT)}${WT}`)
         }
       })()
     },
-    children: [(0, RY.jsxs)("label", {
+    children: [(0, WT.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, RY.jsx)("span", {
+      children: [(0, WT.jsx)("span", {
         children: "Company"
-      }), (0, RY.jsxs)("select", {
+      }), (0, WT.jsxs)("select", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyCompany",
-        value: null !== sY && void 0 !== sY ? sY : "",
-        onChange: YY => {
-          iY(YY.target.value), QY(!0), ZY(!1), xY()
+        value: null !== LT && void 0 !== LT ? LT : "",
+        onChange: TT => {
+          xT(TT.target.value), KT(!0), JT(!1), bT()
         },
-        onKeyDown: pg,
-        children: [null === sY && (0, RY.jsx)("option", {
+        onKeyDown: NB,
+        children: [null === LT && (0, WT.jsx)("option", {
           value: "",
           disabled: !0,
           children: "Pick one, or paste your key below"
-        }), aR.map((YY => (0, RY.jsx)("option", {
-          value: YY,
-          children: gR[YY].name
-        }, YY)))]
+        }), cW.map((TT => (0, WT.jsx)("option", {
+          value: TT,
+          children: xW[TT].name
+        }, TT)))]
       })]
-    }), "custom" === sY && (0, RY.jsxs)("label", {
+    }), "custom" === LT && (0, WT.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, RY.jsx)("span", {
+      children: [(0, WT.jsx)("span", {
         children: "Server address"
-      }), (0, RY.jsx)("input", {
+      }), (0, WT.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyEndpoint",
-        value: SY,
+        value: wT,
         placeholder: "https://ai.example.com/v1",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: YY => {
-          lY(YY.target.value), ZY(!1), xY()
+        onChange: TT => {
+          mT(TT.target.value), JT(!1), bT()
         },
-        onKeyDown: pg
-      }), (!gY || SY !== (null !== (OY = gY.baseUrl) && void 0 !== OY ? OY : "")) && (0, RY.jsx)(qg, {})]
-    }), (0, RY.jsxs)("div", {
+        onKeyDown: NB
+      }), (!BT || wT !== (null !== (XT = BT.baseUrl) && void 0 !== XT ? XT : "")) && (0, WT.jsx)(yB, {})]
+    }), (0, WT.jsxs)("div", {
       className: "WorldCodeAiAddKeyField",
-      children: [eY && (0, RY.jsxs)("span", {
+      children: [RT && (0, WT.jsxs)("span", {
         className: "WorldCodeAiAddKeySavedKey",
-        children: ["Key ends ", (0, RY.jsxs)("code", {
-          children: ["\u2026", EY.slice(-4)]
+        children: ["Key ends ", (0, WT.jsxs)("code", {
+          children: ["\u2026", AT.slice(-4)]
         })]
-      }), (0, RY.jsx)("label", {
+      }), (0, WT.jsx)("label", {
         htmlFor: "WorldCodeAiAddKeyKey",
-        children: eY ? "Paste a new key to replace it (optional)" : "Your key"
-      }), (0, RY.jsxs)("span", {
+        children: RT ? "Paste a new key to replace it (optional)" : "Your key"
+      }), (0, WT.jsxs)("span", {
         className: "WorldCodeAiAddKeyPaste",
-        children: [(0, RY.jsx)("input", {
+        children: [(0, WT.jsx)("input", {
           id: "WorldCodeAiAddKeyKey",
           className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyKey",
-          type: mY ? "text" : "password",
-          value: oY,
-          placeholder: eY ? "Leave empty to keep it" : "custom" === sY ? "Paste the key, or leave empty" : "Paste the key here",
+          type: gT ? "text" : "password",
+          value: MT,
+          placeholder: RT ? "Leave empty to keep it" : "custom" === LT ? "Paste the key, or leave empty" : "Paste the key here",
           autoComplete: "off",
           spellCheck: !1,
-          onChange: YY => {
-            WY(YY.target.value), yY || iY(sR(uR(YY.target.value))), xY()
+          onChange: TT => {
+            rT(TT.target.value), cT || xT(rW(MW(TT.target.value))), bT()
           },
-          onKeyDown: pg
-        }), (0, RY.jsx)("button", {
+          onKeyDown: NB
+        }), (0, WT.jsx)("button", {
           type: "button",
           className: "WorldCodeAiSecondaryButton",
           onClick: () => {
-            VY(!mY)
+            hT(!gT)
           },
-          children: mY ? "Hide" : "Show"
+          children: gT ? "Hide" : "Show"
         })]
-      }), (0, RY.jsx)(Xg, {
-        provider: sY
+      }), (0, WT.jsx)(bB, {
+        provider: LT
       })]
-    }), !gY && (0, RY.jsxs)("p", {
+    }), !BT && (0, WT.jsxs)("p", {
       className: "WorldCodeAiAiSettingsNote WorldCodeAiAddKeyRemember",
-      children: [uY ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, RY.jsx)("button", {
+      children: [DT ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, WT.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
-        onClick: vY,
+        onClick: ST,
         children: "AI settings"
       }), "."]
-    }), zY && (0, RY.jsxs)("label", {
+    }), jT && (0, WT.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, RY.jsx)("span", {
+      children: [(0, WT.jsx)("span", {
         children: "Model name"
-      }), (0, RY.jsx)("input", {
+      }), (0, WT.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyModel",
-        value: BY,
+        value: vT,
         placeholder: "llama-3.3-70b-versatile",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: YY => {
-          cY(YY.target.value), xY()
+        onChange: TT => {
+          ET(TT.target.value), bT()
         },
-        onKeyDown: pg
+        onKeyDown: NB
       })]
-    }), CY && (0, RY.jsxs)("div", {
-      ref: kY,
+    }), UT && (0, WT.jsxs)("div", {
+      ref: GT,
       className: "WorldCodeAiModelList WorldCodeAiAddKeyModels",
       role: "radiogroup",
       "aria-labelledby": "WorldCodeAiAddKeyModelsTitle",
-      children: [(0, RY.jsxs)("p", {
+      children: [(0, WT.jsxs)("p", {
         id: "WorldCodeAiAddKeyModelsTitle",
         className: "WorldCodeAiAddKeyWorks",
-        children: ["" === NY(sY) ? "It works." : "Your key works.", " Pick a model:"]
-      }), CY.map((YY => (0, RY.jsx)(zg, {
-        name: YY.name,
-        hint: YY.tier ? fR[YY.tier] : "",
+        children: ["" === uT(LT) ? "It works." : "Your key works.", " Pick a model:"]
+      }), UT.map((TT => (0, WT.jsx)(QB, {
+        name: TT.name,
+        hint: TT.tier ? nW[TT.tier] : "",
         choice: {
-          keyId: null !== sY && void 0 !== sY ? sY : "",
-          modelId: YY.id
+          keyId: null !== LT && void 0 !== LT ? LT : "",
+          modelId: TT.id
         },
-        selected: YY.id === jY,
+        selected: TT.id === YT,
         radioName: "WorldCodeAiAddKeyModelPick",
         onSelect: () => {
-          hY(YY.id)
+          QT(TT.id)
         }
-      }, YY.id))), (0, RY.jsx)("button", {
+      }, TT.id))), (0, WT.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
         onClick: () => {
-          ZY(!0), xY()
+          JT(!0), bT()
         },
         children: "Type a model name yourself"
       })]
-    }), CY && (0, RY.jsxs)("label", {
+    }), UT && (0, WT.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, RY.jsx)("span", {
+      children: [(0, WT.jsx)("span", {
         children: "Name it (optional)"
-      }), (0, RY.jsx)("input", {
+      }), (0, WT.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyName",
-        value: KY,
+        value: fT,
         maxLength: 30,
-        placeholder: sY && "custom" !== sY ? `Like My ${gR[sY].shortName}` : "Like Home server",
+        placeholder: LT && "custom" !== LT ? `Like My ${xW[LT].shortName}` : "Like Home server",
         autoComplete: "off",
-        onChange: YY => {
-          HY(YY.target.value)
+        onChange: TT => {
+          CT(TT.target.value)
         },
-        onKeyDown: pg
+        onKeyDown: NB
       })]
-    }), (0, RY.jsxs)("div", {
-      ref: GY,
+    }), (0, WT.jsxs)("div", {
+      ref: pT,
       className: "WorldCodeAiAddKeyActions",
-      children: [MY && (0, RY.jsx)("p", {
+      children: [nT && (0, WT.jsx)("p", {
         className: "WorldCodeAiAddKeyError",
         role: "alert",
-        children: MY
-      }), MY && bY && (0, RY.jsx)(og, {
-        detail: bY,
+        children: nT
+      }), nT && ZT && (0, WT.jsx)(wB, {
+        detail: ZT,
         onOpen: () => {
-          var YY, rY;
-          null === (YY = GY.current) || void 0 === YY || null === (rY = YY.querySelector(".WorldCodeAiAddKeySave")) || void 0 === rY || rY.scrollIntoView({
+          var TT, oT;
+          null === (TT = pT.current) || void 0 === TT || null === (oT = TT.querySelector(".WorldCodeAiAddKeySave")) || void 0 === oT || oT.scrollIntoView({
             block: "nearest"
           })
         }
-      }), (0, RY.jsx)("button", {
+      }), (0, WT.jsx)("button", {
         type: "submit",
         className: "WorldCodeAiPrimaryButton WorldCodeAiAddKeySave",
-        disabled: dY,
-        children: dY ? qY ? "Testing the connection\u2026" : "Testing your key\u2026" : nY ? `Save and use ${nY.name}` : qY ? "Test connection" : "Test key"
+        disabled: OT,
+        children: OT ? sT ? "Testing the connection\u2026" : "Testing your key\u2026" : yT ? `Save and use ${yT.name}` : sT ? "Test connection" : "Test key"
       })]
     })]
   })
 }
-var Gg = DY(1211),
-  xg = DY(36268),
-  ng = DY(36263);
+var dB = IT(1171),
+  VB = IT(35842),
+  TF = IT(35839);
 
-function Pg(YY) {
+function oF(TT) {
   let {
-    step: rY,
-    placement: DY = "left",
-    onPrevious: FY,
-    children: AY
-  } = YY;
+    step: oT,
+    placement: IT = "left",
+    onPrevious: iT,
+    children: zT
+  } = TT;
   const {
-    t: IY
-  } = (0, Gg.C)();
-  return (0, RY.jsx)(ng.f, {
+    t: kT
+  } = (0, dB.t)();
+  return (0, WT.jsx)(TF.g, {
     tutorial: "aiHelperOverview",
-    step: rY,
-    text: IY(`codeEditorAiTutorial:${rY}`),
-    placement: DY,
-    onPrevious: FY,
-    children: AY
+    step: oT,
+    text: kT(`codeEditorAiTutorial:${oT}`),
+    placement: IT,
+    onPrevious: iT,
+    children: zT
   })
 }
 
-function Ug(YY, rY) {
-  if (YY.scrollHeight <= YY.clientHeight + 1) Lg(YY);
+function IF(TT, oT) {
+  if (TT.scrollHeight <= TT.clientHeight + 1) iF(TT);
   else {
-    if (!cg(YY, rY)) {
-      const DY = rY.getBoundingClientRect().bottom - YY.getBoundingClientRect().bottom;
-      DY > 0 && (YY.scrollTop += DY),
-        function(YY, rY) {
-          const DY = YY.getBoundingClientRect(),
-            FY = Math.max(DY.top, ...Array.from(YY.querySelectorAll(".WorldCodeAiModelGroupHeader"), (YY => {
-              const rY = YY.getBoundingClientRect();
-              return rY.top <= DY.top + 1 ? rY.bottom : DY.top
+    if (!UB(TT, oT)) {
+      const IT = oT.getBoundingClientRect().bottom - TT.getBoundingClientRect().bottom;
+      IT > 0 && (TT.scrollTop += IT),
+        function(TT, oT) {
+          const IT = TT.getBoundingClientRect(),
+            iT = Math.max(IT.top, ...Array.from(TT.querySelectorAll(".WorldCodeAiModelGroupHeader"), (TT => {
+              const oT = TT.getBoundingClientRect();
+              return oT.top <= IT.top + 1 ? oT.bottom : IT.top
             })));
-          if (FY <= DY.top) return;
-          const AY = rY.closest(".WorldCodeAiModelGroup"),
-            IY = AY && parseFloat(getComputedStyle(AY).rowGap) || 6,
-            RY = Array.from(YY.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((YY => {
-              const rY = YY.getBoundingClientRect();
-              return rY.top < FY + IY - 1 && rY.bottom > FY - IY
+          if (iT <= IT.top) return;
+          const zT = oT.closest(".WorldCodeAiModelGroup"),
+            kT = zT && parseFloat(getComputedStyle(zT).rowGap) || 6,
+            WT = Array.from(TT.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((TT => {
+              const oT = TT.getBoundingClientRect();
+              return oT.top < iT + kT - 1 && oT.bottom > iT - kT
             }));
-          if (!RY || RY === rY) return;
-          const OY = YY.scrollTop;
-          YY.scrollTop -= FY + IY - RY.getBoundingClientRect().top, rY.getBoundingClientRect().bottom > DY.bottom && (YY.scrollTop = OY, YY.scrollTop += Math.max(0, RY.getBoundingClientRect().bottom - FY))
-        }(YY, rY)
+          if (!WT || WT === oT) return;
+          const XT = TT.scrollTop;
+          TT.scrollTop -= iT + kT - WT.getBoundingClientRect().top, oT.getBoundingClientRect().bottom > IT.bottom && (TT.scrollTop = XT, TT.scrollTop += Math.max(0, WT.getBoundingClientRect().bottom - iT))
+        }(TT, oT)
     }
-    Lg(YY)
+    iF(TT)
   }
 }
 
-function Lg(YY) {
-  const rY = YY.getBoundingClientRect().top;
-  for (const DY of Array.from(YY.querySelectorAll(".WorldCodeAiModelGroup"))) {
-    const YY = DY.querySelector(".WorldCodeAiModelGroupHeader");
-    if (!YY) continue;
-    const FY = rY + YY.offsetHeight,
-      AY = Array.from(DY.querySelectorAll(".WorldCodeAiModelRow")).some((YY => YY.getBoundingClientRect().bottom > FY + 2));
-    YY.classList.toggle("Unpinned", !AY)
+function iF(TT) {
+  const oT = TT.getBoundingClientRect().top;
+  for (const IT of Array.from(TT.querySelectorAll(".WorldCodeAiModelGroup"))) {
+    const TT = IT.querySelector(".WorldCodeAiModelGroupHeader");
+    if (!TT) continue;
+    const iT = oT + TT.offsetHeight,
+      zT = Array.from(IT.querySelectorAll(".WorldCodeAiModelRow")).some((TT => TT.getBoundingClientRect().bottom > iT + 2));
+    TT.classList.toggle("Unpinned", !zT)
   }
 }
 
-function tg(YY) {
-  const rY = bR(YY, !0);
-  return YY.model.name.toLowerCase().startsWith(rY.toLowerCase()) ? YY.model.name : `${rY} \xb7 ${YY.model.name}`
+function zF(TT) {
+  const oT = pW(TT, !0);
+  return TT.model.name.toLowerCase().startsWith(oT.toLowerCase()) ? TT.model.name : `${oT} \xb7 ${TT.model.name}`
 }
 
-function Ya(YY) {
+function kF(TT) {
   let {
-    onAddKey: rY,
-    editsOn: DY,
-    freeOnce: AY = !1,
-    onFreeOnce: OY,
-    children: gY
-  } = YY;
+    onAddKey: oT,
+    editsOn: IT,
+    freeOnce: zT = !1,
+    onFreeOnce: XT,
+    children: BT
+  } = TT;
   const {
-    active: aY,
-    select: vY
-  } = nR(), uY = sO(RO());
-  (0, FY.useEffect)((() => {
-    IO.refresh(), TO()
+    active: FT,
+    select: ST
+  } = TX(), DT = rX(DX());
+  (0, iT.useEffect)((() => {
+    SX.refresh(), fX()
   }), []);
-  const [sY, iY] = (0, FY.useState)(!1), yY = (0, FY.useRef)(null), QY = (0, FY.useRef)(null), oY = (0, FY.useRef)(null), WY = () => {
-    var YY;
-    iY(!1), null === (YY = QY.current) || void 0 === YY || YY.focus()
+  const [LT, xT] = (0, iT.useState)(!1), cT = (0, iT.useRef)(null), KT = (0, iT.useRef)(null), MT = (0, iT.useRef)(null), rT = () => {
+    var TT;
+    xT(!1), null === (TT = KT.current) || void 0 === TT || TT.focus()
   };
-  (0, FY.useEffect)((() => {
-    var YY, rY;
-    if (!sY) return;
-    const DY = null === (YY = oY.current) || void 0 === YY ? void 0 : YY.querySelector("input:checked");
-    null === DY || void 0 === DY || DY.focus({
+  (0, iT.useEffect)((() => {
+    var TT, oT;
+    if (!LT) return;
+    const IT = null === (TT = MT.current) || void 0 === TT ? void 0 : TT.querySelector("input:checked");
+    null === IT || void 0 === IT || IT.focus({
       preventScroll: !0
     });
-    const FY = null === (rY = oY.current) || void 0 === rY ? void 0 : rY.querySelector(".WorldCodeAiModelMenuList"),
-      AY = null === DY || void 0 === DY ? void 0 : DY.closest(".WorldCodeAiModelRow");
-    FY && AY && Ug(FY, AY);
-    const IY = () => {
-      FY && Lg(FY)
+    const iT = null === (oT = MT.current) || void 0 === oT ? void 0 : oT.querySelector(".WorldCodeAiModelMenuList"),
+      zT = null === IT || void 0 === IT ? void 0 : IT.closest(".WorldCodeAiModelRow");
+    iT && zT && IF(iT, zT);
+    const kT = () => {
+      iT && iF(iT)
     };
-    null === FY || void 0 === FY || FY.addEventListener("scroll", IY, {
+    null === iT || void 0 === iT || iT.addEventListener("scroll", kT, {
       passive: !0
     });
-    const RY = YY => {
-        var rY;
-        null !== (rY = yY.current) && void 0 !== rY && rY.contains(YY.target) || iY(!1)
+    const WT = TT => {
+        var oT;
+        null !== (oT = cT.current) && void 0 !== oT && oT.contains(TT.target) || xT(!1)
       },
-      OY = YY => {
-        "Escape" === YY.key && (YY.stopPropagation(), YY.preventDefault(), fg && (fg(), 1) || WY())
+      XT = TT => {
+        "Escape" === TT.key && (TT.stopPropagation(), TT.preventDefault(), nB && (nB(), 1) || rT())
       };
-    return document.addEventListener("pointerdown", RY), document.addEventListener("keydown", OY, !0), () => {
-      null === FY || void 0 === FY || FY.removeEventListener("scroll", IY), document.removeEventListener("pointerdown", RY), document.removeEventListener("keydown", OY, !0)
+    return document.addEventListener("pointerdown", WT), document.addEventListener("keydown", XT, !0), () => {
+      null === iT || void 0 === iT || iT.removeEventListener("scroll", kT), document.removeEventListener("pointerdown", WT), document.removeEventListener("keydown", XT, !0)
     }
-  }), [sY]);
-  const EY = AY && null !== aY,
-    mY = EY ? "Bot.xd (free) \xb7 once" : aY ? tg(aY) : uY ? tR : "Bot.xd (free)";
-  return (0, RY.jsxs)("div", {
-    ref: yY,
+  }), [LT]);
+  const AT = zT && null !== FT,
+    gT = AT ? "Bot.xd (free) \xb7 once" : FT ? zF(FT) : DT ? zX : "Bot.xd (free)";
+  return (0, WT.jsxs)("div", {
+    ref: cT,
     className: "WorldCodeAiModelChipRow",
-    onBlur: YY => {
-      var rY;
-      !sY || !YY.relatedTarget || null !== (rY = yY.current) && void 0 !== rY && rY.contains(YY.relatedTarget) || iY(!1)
+    onBlur: TT => {
+      var oT;
+      !LT || !TT.relatedTarget || null !== (oT = cT.current) && void 0 !== oT && oT.contains(TT.relatedTarget) || xT(!1)
     },
-    children: [(0, RY.jsxs)("button", {
-      ref: QY,
-      className: IY()("WorldCodeAiModelChip", sY && "Open"),
-      "aria-expanded": sY,
-      "aria-label": `AI model: ${mY}`,
+    children: [(0, WT.jsxs)("button", {
+      ref: KT,
+      className: kT()("WorldCodeAiModelChip", LT && "Open"),
+      "aria-expanded": LT,
+      "aria-label": `AI model: ${gT}`,
       title: "Change AI model",
       onClick: () => {
-        iY(!sY)
+        xT(!LT)
       },
-      children: [aY && !EY && "" !== aY.key && (0, RY.jsx)(Qg, {}), (0, RY.jsx)("span", {
+      children: [FT && !AT && "" !== FT.key && (0, WT.jsx)(hB, {}), (0, WT.jsx)("span", {
         className: "WorldCodeAiModelChipName",
-        children: mY
-      }), (0, RY.jsx)("span", {
+        children: gT
+      }), (0, WT.jsx)("span", {
         className: "WorldCodeAiModelChipCaret",
         "aria-hidden": "true",
         children: "\u25be"
       })]
-    }), null !== DY && (0, RY.jsx)(Pg, {
+    }), null !== IT && (0, WT.jsx)(oF, {
       step: "aiEdits",
       placement: "top",
-      children: (0, RY.jsx)("span", {
-        className: IY()("WorldCodeAiEditsTag", !DY && "WorldCodeAiEditsTag-off"),
-        title: `Allow AI to make edits to my code is ${DY?"on":"off"}, in AI settings`,
-        children: DY ? "Edits on" : "Edits off"
+      children: (0, WT.jsx)("span", {
+        className: kT()("WorldCodeAiEditsTag", !IT && "WorldCodeAiEditsTag-off"),
+        title: `Allow AI to make edits to my code is ${IT?"on":"off"}, in AI settings`,
+        children: IT ? "Edits on" : "Edits off"
       })
-    }), (0, RY.jsx)("span", {
+    }), (0, WT.jsx)("span", {
       className: "WorldCodeAiModelChipStatus",
-      children: gY
-    }), sY && (0, RY.jsxs)("div", {
-      ref: oY,
+      children: BT
+    }), LT && (0, WT.jsxs)("div", {
+      ref: MT,
       className: "WorldCodeAiModelMenu",
       role: "dialog",
       "aria-labelledby": "WorldCodeAiModelMenuTitle",
-      children: [(0, RY.jsx)("h3", {
+      children: [(0, WT.jsx)("h3", {
         id: "WorldCodeAiModelMenuTitle",
         className: "WorldCodeAiAiSettingsTitle",
         children: "AI model"
-      }), (0, RY.jsx)("div", {
+      }), (0, WT.jsx)("div", {
         className: "WorldCodeAiModelMenuList",
-        children: (0, RY.jsx)(Zg, {
+        children: (0, WT.jsx)(OB, {
           labelledBy: "WorldCodeAiModelMenuTitle",
           onPicked: () => {
-            null === OY || void 0 === OY || OY(!1), WY()
+            null === XT || void 0 === XT || XT(!1), rT()
           }
         })
-      }), (0, RY.jsxs)("div", {
+      }), (0, WT.jsxs)("div", {
         className: "WorldCodeAiModelMenuActions",
-        children: [(0, RY.jsxs)("button", {
+        children: [(0, WT.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
           onClick: () => {
-            iY(!1), rY()
+            xT(!1), oT()
           },
-          children: [(0, RY.jsx)("span", {
+          children: [(0, WT.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
-        }), aY && (0, RY.jsxs)("span", {
+        }), FT && (0, WT.jsxs)("span", {
           className: "WorldCodeAiModelMenuBotxd",
-          children: [OY && (EY ? (0, RY.jsxs)("button", {
+          children: [XT && (AT ? (0, WT.jsxs)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              OY(!1), WY()
+              XT(!1), rT()
             },
-            children: ["Back to ", aY.model.name]
-          }) : (0, RY.jsx)("button", {
+            children: ["Back to ", FT.model.name]
+          }) : (0, WT.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              OY(!0), WY()
+              XT(!0), rT()
             },
             children: "Ask Bot.xd once"
-          })), (0, RY.jsx)("button", {
+          })), (0, WT.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              vY(null), WY()
+              ST(null), rT()
             },
             children: "Use Bot.xd from now on"
           })]
@@ -10481,379 +10481,379 @@ function Ya(YY) {
     })]
   })
 }
-const ra = "kv";
+const WF = "kv";
 
-function Da(YY) {
-  return new Promise(((rY, DY) => {
-    YY.oncomplete = () => {
-      rY()
-    }, YY.onerror = () => {
-      var rY;
-      DY(null !== (rY = YY.error) && void 0 !== rY ? rY : new Error("IndexedDB transaction failed"))
-    }, YY.onabort = () => {
-      var rY;
-      DY(null !== (rY = YY.error) && void 0 !== rY ? rY : new Error("IndexedDB transaction aborted"))
+function XF(TT) {
+  return new Promise(((oT, IT) => {
+    TT.oncomplete = () => {
+      oT()
+    }, TT.onerror = () => {
+      var oT;
+      IT(null !== (oT = TT.error) && void 0 !== oT ? oT : new Error("IndexedDB transaction failed"))
+    }, TT.onabort = () => {
+      var oT;
+      IT(null !== (oT = TT.error) && void 0 !== oT ? oT : new Error("IndexedDB transaction aborted"))
     }
   }))
 }
-var Fa = DY(36300);
-const Aa = (0, FY.memo)((function(YY) {
+var BF = IT(35869);
+const FF = (0, iT.memo)((function(TT) {
   let {
-    change: rY,
-    marked: DY
-  } = YY;
-  const AY = (0, FY.useMemo)((() => GF(rY.before, rY.after)), [rY]),
-    OY = [];
-  for (let FY = 0; FY < AY.length; FY++) {
-    if ("same" !== AY[FY].kind) {
-      OY.push(AY[FY]);
+    change: oT,
+    marked: IT
+  } = TT;
+  const zT = (0, iT.useMemo)((() => Pi(oT.before, oT.after)), [oT]),
+    XT = [];
+  for (let iT = 0; iT < zT.length; iT++) {
+    if ("same" !== zT[iT].kind) {
+      XT.push(zT[iT]);
       continue
     }
-    let YY = FY;
-    for (; YY + 1 < AY.length && "same" === AY[YY + 1].kind;) YY++;
-    const rY = AY.slice(FY, YY + 1),
-      DY = 0 === FY ? 0 : 2,
-      IY = YY === AY.length - 1 ? 0 : 2;
-    rY.length > DY + IY + 1 ? OY.push(...rY.slice(0, DY), {
+    let TT = iT;
+    for (; TT + 1 < zT.length && "same" === zT[TT + 1].kind;) TT++;
+    const oT = zT.slice(iT, TT + 1),
+      IT = 0 === iT ? 0 : 2,
+      kT = TT === zT.length - 1 ? 0 : 2;
+    oT.length > IT + kT + 1 ? XT.push(...oT.slice(0, IT), {
       kind: "fold",
-      count: rY.length - DY - IY
-    }, ...rY.slice(rY.length - IY)) : OY.push(...rY), FY = YY
+      count: oT.length - IT - kT
+    }, ...oT.slice(oT.length - kT)) : XT.push(...oT), iT = TT
   }
-  return (0, RY.jsx)("pre", {
+  return (0, WT.jsx)("pre", {
     className: "WorldCodeAiDiff",
-    children: OY.map(((YY, rY) => {
-      if ("fold" === YY.kind) return (0, RY.jsxs)("div", {
+    children: XT.map(((TT, oT) => {
+      if ("fold" === TT.kind) return (0, WT.jsxs)("div", {
         className: "WorldCodeAiDiffFold",
-        children: ["\u22ef ", YY.count, " unchanged lines"]
-      }, rY);
-      const FY = "added" === YY.kind ? function(YY, rY) {
-          if (rY) return YY.includes(`"${rY}"`) ? `"${rY}"` : YY.includes(rY) ? rY : void 0
-        }(YY.text, DY) : void 0,
-        AY = FY ? YY.text.indexOf(FY) : -1;
-      return (0, RY.jsxs)("div", {
-        className: IY()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${YY.kind}`, FY && "WorldCodeAiDiff-marked"),
-        children: [(0, RY.jsx)("span", {
+        children: ["\u22ef ", TT.count, " unchanged lines"]
+      }, oT);
+      const iT = "added" === TT.kind ? function(TT, oT) {
+          if (oT) return TT.includes(`"${oT}"`) ? `"${oT}"` : TT.includes(oT) ? oT : void 0
+        }(TT.text, IT) : void 0,
+        zT = iT ? TT.text.indexOf(iT) : -1;
+      return (0, WT.jsxs)("div", {
+        className: kT()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${TT.kind}`, iT && "WorldCodeAiDiff-marked"),
+        children: [(0, WT.jsx)("span", {
           className: "WorldCodeAiDiffMark",
-          children: "added" === YY.kind ? "+" : "removed" === YY.kind ? "\u2212" : " "
-        }), (0, RY.jsx)("span", {
+          children: "added" === TT.kind ? "+" : "removed" === TT.kind ? "\u2212" : " "
+        }), (0, WT.jsx)("span", {
           className: "WorldCodeAiDiffText",
-          children: FY ? (0, RY.jsxs)(RY.Fragment, {
-            children: [YY.text.slice(0, AY), (0, RY.jsx)("mark", {
-              children: FY
-            }), YY.text.slice(AY + FY.length)]
-          }) : YY.text || " "
+          children: iT ? (0, WT.jsxs)(WT.Fragment, {
+            children: [TT.text.slice(0, zT), (0, WT.jsx)("mark", {
+              children: iT
+            }), TT.text.slice(zT + iT.length)]
+          }) : TT.text || " "
         })]
-      }, rY)
+      }, oT)
     }))
   })
 }));
 
-function Ia(YY) {
-  var rY, DY;
+function SF(TT) {
+  var oT, IT;
   if ("undefined" === typeof BroadcastChannel) return;
-  const FY = new BroadcastChannel(YY);
-  return null === (rY = (DY = FY).unref) || void 0 === rY || rY.call(DY), {
-    post: YY => {
-      FY.postMessage(YY)
+  const iT = new BroadcastChannel(TT);
+  return null === (oT = (IT = iT).unref) || void 0 === oT || oT.call(IT), {
+    post: TT => {
+      iT.postMessage(TT)
     },
-    listen: YY => {
-      const rY = rY => {
-        "string" === typeof rY.data && YY(rY.data)
+    listen: TT => {
+      const oT = oT => {
+        "string" === typeof oT.data && TT(oT.data)
       };
-      return FY.addEventListener("message", rY), () => {
-        FY.removeEventListener("message", rY)
+      return iT.addEventListener("message", oT), () => {
+        iT.removeEventListener("message", oT)
       }
     }
   }
 }
 
-function Ra(YY) {
-  return Array.isArray(YY) && YY.every((YY => {
-    if ("object" !== typeof YY || null === YY || !("id" in YY) || !("at" in YY) || !("label" in YY) || !("files" in YY)) return !1;
-    const rY = YY.files;
-    return "object" === typeof rY && null !== rY && Object.values(rY).every((YY => "string" === typeof YY))
+function DF(TT) {
+  return Array.isArray(TT) && TT.every((TT => {
+    if ("object" !== typeof TT || null === TT || !("id" in TT) || !("at" in TT) || !("label" in TT) || !("files" in TT)) return !1;
+    const oT = TT.files;
+    return "object" === typeof oT && null !== oT && Object.values(oT).every((TT => "string" === typeof TT))
   }))
 }
 
-function Oa(YY, rY) {
-  return rY ? function(YY, rY) {
-    if (!rY) return [...YY];
-    const DY = new Map;
-    for (const FY of [...rY, ...YY]) DY.set(FY.id, FY);
-    return [...DY.values()].sort(((YY, rY) => YY.at - rY.at || YY.id - rY.id)).slice(-30)
-  }(rY, YY) : [...YY]
+function LF(TT, oT) {
+  return oT ? function(TT, oT) {
+    if (!oT) return [...TT];
+    const IT = new Map;
+    for (const iT of [...oT, ...TT]) IT.set(iT.id, iT);
+    return [...IT.values()].sort(((TT, oT) => TT.at - oT.at || TT.id - oT.id)).slice(-30)
+  }(oT, TT) : [...TT]
 }
 
-function ga(YY, rY) {
-  let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const FY = new Date(YY).toLocaleTimeString("en-US", {
+function xF(TT, oT) {
+  let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const iT = new Date(TT).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
-      ...DY ? {
+      ...IT ? {
         second: "2-digit"
       } : {}
     }).toLowerCase(),
-    AY = YY => new Date(YY).toDateString();
-  return AY(YY) === AY(rY) ? FY : AY(YY) === AY(rY - 864e5) ? `yesterday ${FY}` : function(YY, rY) {
-    const DY = Math.floor((rY - YY) / 6e4);
-    if (DY < 1) return "just now";
-    if (DY < 60) return `${DY} min ago`;
-    const FY = Math.floor(DY / 60);
-    if (FY < 24) return `${FY} h ago`;
-    const AY = Math.floor(FY / 24);
-    return 1 === AY ? "1 day ago" : `${AY} days ago`
-  }(YY, rY)
+    zT = TT => new Date(TT).toDateString();
+  return zT(TT) === zT(oT) ? iT : zT(TT) === zT(oT - 864e5) ? `yesterday ${iT}` : function(TT, oT) {
+    const IT = Math.floor((oT - TT) / 6e4);
+    if (IT < 1) return "just now";
+    if (IT < 60) return `${IT} min ago`;
+    const iT = Math.floor(IT / 60);
+    if (iT < 24) return `${iT} h ago`;
+    const zT = Math.floor(iT / 24);
+    return 1 === zT ? "1 day ago" : `${zT} days ago`
+  }(TT, oT)
 }
 
-function aa(YY, rY) {
-  return [...new Set([...Object.keys(rY), ...Object.keys(YY.files)])].flatMap((DY => {
-    var FY, AY;
-    const IY = null !== (FY = YY.files[DY]) && void 0 !== FY ? FY : "";
-    return (null !== (AY = rY[DY]) && void 0 !== AY ? AY : "") === IY ? [] : [{
-      path: DY,
-      text: IY
+function cF(TT, oT) {
+  return [...new Set([...Object.keys(oT), ...Object.keys(TT.files)])].flatMap((IT => {
+    var iT, zT;
+    const kT = null !== (iT = TT.files[IT]) && void 0 !== iT ? iT : "";
+    return (null !== (zT = oT[IT]) && void 0 !== zT ? zT : "") === kT ? [] : [{
+      path: IT,
+      text: kT
     }]
   }))
 }
 
-function va(YY) {
-  let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
-  if (YY.length <= rY) return null;
-  const DY = YY.slice(0, rY),
-    FY = DY.lastIndexOf(" ");
-  return `${(FY>rY/2?DY.slice(0,FY):DY).replace(/[\s,;:.]+$/,"")}\u2026`
+function KF(TT) {
+  let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
+  if (TT.length <= oT) return null;
+  const IT = TT.slice(0, oT),
+    iT = IT.lastIndexOf(" ");
+  return `${(iT>oT/2?IT.slice(0,iT):IT).replace(/[\s,;:.]+$/,"")}\u2026`
 }
 
-function ua(YY) {
+function MF(TT) {
   let {
-    snapshot: rY,
-    files: DY,
-    now: AY,
-    withSeconds: OY,
-    onRestore: gY
-  } = YY;
-  const [aY, vY] = (0, FY.useState)(!1), [uY, sY] = (0, FY.useState)(!1), iY = rY.did ? `Before: ${rY.did}` : rY.label, yY = va(iY), QY = rY.did && rY.label.startsWith('Before "') ? rY.label.slice(7) : null, oY = null === QY ? null : va(QY, 50), WY = null !== oY && null !== QY && void 0 !== QY && QY.startsWith('"') ? `${oY}"` : oY, EY = (0, FY.useRef)(null);
-  (0, FY.useEffect)((() => {
-    const YY = EY.current,
-      rY = null === YY || void 0 === YY ? void 0 : YY.closest(".WorldCodeAiMessages");
-    if (!aY || !YY || !rY) return;
-    const DY = rY.getBoundingClientRect(),
-      FY = YY.getBoundingClientRect(),
-      AY = FY.bottom - (DY.bottom - 28),
-      IY = FY.top - (DY.top + 16);
-    AY > 0 && rY.scrollBy({
-      top: Math.min(AY, IY),
+    snapshot: oT,
+    files: IT,
+    now: zT,
+    withSeconds: XT,
+    onRestore: BT
+  } = TT;
+  const [FT, ST] = (0, iT.useState)(!1), [DT, LT] = (0, iT.useState)(!1), xT = oT.did ? `Before: ${oT.did}` : oT.label, cT = KF(xT), KT = oT.did && oT.label.startsWith('Before "') ? oT.label.slice(7) : null, MT = null === KT ? null : KF(KT, 50), rT = null !== MT && null !== KT && void 0 !== KT && KT.startsWith('"') ? `${MT}"` : MT, AT = (0, iT.useRef)(null);
+  (0, iT.useEffect)((() => {
+    const TT = AT.current,
+      oT = null === TT || void 0 === TT ? void 0 : TT.closest(".WorldCodeAiMessages");
+    if (!FT || !TT || !oT) return;
+    const IT = oT.getBoundingClientRect(),
+      iT = TT.getBoundingClientRect(),
+      zT = iT.bottom - (IT.bottom - 28),
+      kT = iT.top - (IT.top + 16);
+    zT > 0 && oT.scrollBy({
+      top: Math.min(zT, kT),
       behavior: "smooth"
     })
-  }), [aY]);
-  const mY = (0, FY.useRef)(null),
-    [VY, SY] = (0, FY.useState)(!1),
-    lY = (0, FY.useCallback)((() => {
-      const YY = mY.current;
-      SY(null !== YY && YY.scrollTop + YY.clientHeight >= YY.scrollHeight - 24)
+  }), [FT]);
+  const gT = (0, iT.useRef)(null),
+    [hT, wT] = (0, iT.useState)(!1),
+    mT = (0, iT.useCallback)((() => {
+      const TT = gT.current;
+      wT(null !== TT && TT.scrollTop + TT.clientHeight >= TT.scrollHeight - 24)
     }), []);
-  (0, FY.useEffect)((() => {
-    aY && lY()
-  }), [aY, lY]);
-  const TY = (0, FY.useMemo)((() => [...new Set([...Object.keys(rY.files), ...Object.keys(DY)])].flatMap((YY => {
-    var FY, AY;
-    const IY = null !== (FY = rY.files[YY]) && void 0 !== FY ? FY : "",
-      RY = null !== (AY = DY[YY]) && void 0 !== AY ? AY : "";
-    return IY === RY ? [] : [{
-      path: YY,
-      before: IY,
-      after: RY
+  (0, iT.useEffect)((() => {
+    FT && mT()
+  }), [FT, mT]);
+  const eT = (0, iT.useMemo)((() => [...new Set([...Object.keys(oT.files), ...Object.keys(IT)])].flatMap((TT => {
+    var iT, zT;
+    const kT = null !== (iT = oT.files[TT]) && void 0 !== iT ? iT : "",
+      WT = null !== (zT = IT[TT]) && void 0 !== zT ? zT : "";
+    return kT === WT ? [] : [{
+      path: TT,
+      before: kT,
+      after: WT
     }]
-  }))), [rY, DY]);
-  return (0, RY.jsxs)("li", {
-    ref: EY,
+  }))), [oT, IT]);
+  return (0, WT.jsxs)("li", {
+    ref: AT,
     className: "WorldCodeAiSnapshot",
-    children: [(0, RY.jsxs)("div", {
+    children: [(0, WT.jsxs)("div", {
       className: "WorldCodeAiSnapshotRow",
-      children: [(0, RY.jsxs)("span", {
+      children: [(0, WT.jsxs)("span", {
         className: "WorldCodeAiSnapshotLabel",
-        children: [uY || !yY ? iY : yY, (yY || WY) && (0, RY.jsx)("button", {
+        children: [DT || !cT ? xT : cT, (cT || rT) && (0, WT.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiSnapshotMore",
-          "aria-expanded": uY,
+          "aria-expanded": DT,
           onClick: () => {
-            sY(!uY)
+            LT(!DT)
           },
-          children: uY ? "less" : "more"
-        }), (0, RY.jsxs)("span", {
+          children: DT ? "less" : "more"
+        }), (0, WT.jsxs)("span", {
           className: "WorldCodeAiSnapshotAge",
-          children: [" \xb7 ", ga(rY.at, AY, OY)]
-        }), null !== QY && (0, RY.jsxs)("span", {
+          children: [" \xb7 ", xF(oT.at, zT, XT)]
+        }), null !== KT && (0, WT.jsxs)("span", {
           className: "WorldCodeAiSnapshotAsked",
-          children: ["You asked: ", uY || !WY ? QY : WY]
+          children: ["You asked: ", DT || !rT ? KT : rT]
         })]
-      }), TY.length > 0 && (0, RY.jsx)("button", {
+      }), eT.length > 0 && (0, WT.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          vY(!aY)
+          ST(!FT)
         },
-        children: aY ? "Hide" : "Compare"
-      }), TY.length > 0 && gY && (0, RY.jsx)("button", {
+        children: FT ? "Hide" : "Compare"
+      }), eT.length > 0 && BT && (0, WT.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
-        onClick: gY,
+        onClick: BT,
         children: "Go back to this code"
-      }), 0 === TY.length && (0, RY.jsx)("span", {
+      }), 0 === eT.length && (0, WT.jsx)("span", {
         className: "WorldCodeAiSnapshotNow",
         children: "Same as your code now"
       })]
-    }), aY && (0, RY.jsxs)("div", {
+    }), FT && (0, WT.jsxs)("div", {
       className: "WorldCodeAiChanges",
-      children: [(0, RY.jsx)("p", {
+      children: [(0, WT.jsx)("p", {
         className: "WorldCodeAiSnapshotCompareNote",
         children: "What changed since then:"
-      }), (0, RY.jsx)("div", {
-        ref: mY,
-        className: IY()("WorldCodeAiSnapshotCompare", VY && "WorldCodeAiSnapshotCompare-end"),
-        onScroll: lY,
-        children: TY.map((YY => (0, RY.jsxs)("div", {
+      }), (0, WT.jsx)("div", {
+        ref: gT,
+        className: kT()("WorldCodeAiSnapshotCompare", hT && "WorldCodeAiSnapshotCompare-end"),
+        onScroll: mT,
+        children: eT.map((TT => (0, WT.jsxs)("div", {
           className: "WorldCodeAiChange",
-          children: [(0, RY.jsx)("div", {
+          children: [(0, WT.jsx)("div", {
             className: "WorldCodeAiChangeHeader",
-            children: (0, RY.jsx)("span", {
+            children: (0, WT.jsx)("span", {
               className: "WorldCodeAiChangePath",
-              children: YY.path
+              children: TT.path
             })
-          }), (0, RY.jsx)(Aa, {
-            change: YY
+          }), (0, WT.jsx)(FF, {
+            change: TT
           })]
-        }, YY.path)))
+        }, TT.path)))
       })]
     })]
   })
 }
 
-function sa(YY) {
+function rF(TT) {
   let {
-    snapshots: rY,
-    files: DY,
-    now: FY,
-    onRestore: AY
-  } = YY;
-  return (0, RY.jsxs)("div", {
+    snapshots: oT,
+    files: IT,
+    now: iT,
+    onRestore: zT
+  } = TT;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiHistory",
-    children: [(0, RY.jsx)("div", {
+    children: [(0, WT.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, RY.jsx)("span", {
+      children: (0, WT.jsx)("span", {
         children: "Your code before each change"
       })
-    }), 0 === rY.length ? (0, RY.jsx)("p", {
+    }), 0 === oT.length ? (0, WT.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing here yet. Each time a change goes into your code, your code from before it is kept here."
-    }) : (0, RY.jsx)("ul", {
+    }) : (0, WT.jsx)("ul", {
       className: "WorldCodeAiSnapshots",
-      children: [...rY].reverse().map((YY => {
-        const IY = rY.some((rY => rY.id !== YY.id && ga(rY.at, FY) === ga(YY.at, FY)));
-        return (0, RY.jsx)(ua, {
-          snapshot: YY,
-          files: DY,
-          now: FY,
-          withSeconds: IY,
-          onRestore: AY && (() => {
-            AY(YY)
+      children: [...oT].reverse().map((TT => {
+        const kT = oT.some((oT => oT.id !== TT.id && xF(oT.at, iT) === xF(TT.at, iT)));
+        return (0, WT.jsx)(MF, {
+          snapshot: TT,
+          files: IT,
+          now: iT,
+          withSeconds: kT,
+          onRestore: zT && (() => {
+            zT(TT)
           })
-        }, YY.id)
+        }, TT.id)
       }))
     })]
   })
 }
 
-function ia(YY) {
+function AF(TT) {
   let {
-    notes: rY,
-    outline: DY,
-    kE: AY,
-    onDelete: IY
-  } = YY;
-  const [OY, gY] = (0, FY.useState)(""), [aY, vY] = (0, FY.useState)(null), [uY, sY] = (0, FY.useState)(!1), iY = rY.length >= 8, yY = DY.callbacks.length + DY.commands.length + DY.functions.length > 0;
-  return (0, RY.jsxs)("div", {
+    notes: oT,
+    outline: IT,
+    Om: zT,
+    onDelete: kT
+  } = TT;
+  const [XT, BT] = (0, iT.useState)(""), [FT, ST] = (0, iT.useState)(null), [DT, LT] = (0, iT.useState)(!1), xT = oT.length >= 8, cT = IT.callbacks.length + IT.commands.length + IT.functions.length > 0;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiAbout",
-    children: [(0, RY.jsx)("div", {
+    children: [(0, WT.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, RY.jsx)("span", {
+      children: (0, WT.jsx)("span", {
         children: "AI notes"
       })
-    }), (0, RY.jsx)("p", {
+    }), (0, WT.jsx)("p", {
       className: "WorldCodeAiAboutNote",
       children: "The AI reads these notes with every request, so it remembers what your game is."
-    }), 0 === rY.length && (0, RY.jsx)("p", {
+    }), 0 === oT.length && (0, WT.jsx)("p", {
       className: "WorldCodeAiHint",
       children: 'No notes yet. Add one, like "Two teams, red and blue, race to the flag".'
-    }), (0, RY.jsx)("ul", {
+    }), (0, WT.jsx)("ul", {
       className: "WorldCodeAiAboutList",
-      children: rY.map((YY => (0, RY.jsxs)("li", {
-        children: [(0, RY.jsx)("span", {
-          children: YY
-        }), (0, RY.jsx)("button", {
+      children: oT.map((TT => (0, WT.jsxs)("li", {
+        children: [(0, WT.jsx)("span", {
+          children: TT
+        }), (0, WT.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          "aria-label": `Delete note: ${YY}`,
+          "aria-label": `Delete note: ${TT}`,
           onClick: () => {
-            IY(YY)
+            kT(TT)
           },
           children: "Delete"
         })]
-      }, YY)))
-    }), AY && !iY && (0, RY.jsxs)("form", {
+      }, TT)))
+    }), zT && !xT && (0, WT.jsxs)("form", {
       className: "WorldCodeAiQuestionOther",
-      onSubmit: YY => {
-        YY.preventDefault(), "" === OY.trim() || uY || (sY(!0), vY(null), AY(OY).then((YY => {
-          vY(YY), null === YY && gY("")
+      onSubmit: TT => {
+        TT.preventDefault(), "" === XT.trim() || DT || (LT(!0), ST(null), zT(XT).then((TT => {
+          ST(TT), null === TT && BT("")
         })).catch((() => {
-          vY("That note couldn't be kept. Try again.")
+          ST("That note couldn't be kept. Try again.")
         })).finally((() => {
-          sY(!1)
+          LT(!1)
         })))
       },
-      children: [(0, RY.jsx)("input", {
+      children: [(0, WT.jsx)("input", {
         className: "WorldCodeAiInput WorldCodeAiQuestionInput",
-        value: OY,
-        maxLength: LY,
+        value: XT,
+        maxLength: dT,
         placeholder: "Add a note about your game",
         "aria-label": "Add a note about your game",
-        onChange: YY => {
-          gY(YY.target.value)
+        onChange: TT => {
+          BT(TT.target.value)
         },
-        onKeyDown: YY => {
-          YY.stopPropagation()
+        onKeyDown: TT => {
+          TT.stopPropagation()
         }
-      }), (0, RY.jsx)("button", {
+      }), (0, WT.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         type: "submit",
-        disabled: "" === OY.trim() || uY,
-        children: uY ? "Adding\u2026" : "Add"
+        disabled: "" === XT.trim() || DT,
+        children: DT ? "Adding\u2026" : "Add"
       })]
-    }), iY && (0, RY.jsxs)("p", {
+    }), xT && (0, WT.jsxs)("p", {
       className: "WorldCodeAiHint",
       children: ["That's ", 8, " notes, the most it keeps: delete one to add another."]
-    }), aY && (0, RY.jsx)("p", {
+    }), FT && (0, WT.jsx)("p", {
       className: "WorldCodeAiAboutError",
-      children: aY
-    }), (0, RY.jsx)("p", {
+      children: FT
+    }), (0, WT.jsx)("p", {
       className: "WorldCodeAiAboutHeading",
       children: "In your code now"
-    }), yY ? (0, RY.jsxs)("ul", {
+    }), cT ? (0, WT.jsxs)("ul", {
       className: "WorldCodeAiOutline",
-      children: [DY.callbacks.map((YY => (0, RY.jsxs)("li", {
-        children: [Ir(YY), " ", (0, RY.jsx)("code", {
-          children: YY
+      children: [IT.callbacks.map((TT => (0, WT.jsxs)("li", {
+        children: [ko(TT), " ", (0, WT.jsx)("code", {
+          children: TT
         })]
-      }, YY))), DY.commands.length > 0 && (0, RY.jsxs)("li", {
-        children: ["Chat commands: ", DY.commands.join(", ")]
-      }), DY.functions.length > 0 && (0, RY.jsxs)("li", {
-        children: ["Your own functions: ", (0, RY.jsx)("code", {
-          children: DY.functions.join(", ")
+      }, TT))), IT.commands.length > 0 && (0, WT.jsxs)("li", {
+        children: ["Chat commands: ", IT.commands.join(", ")]
+      }), IT.functions.length > 0 && (0, WT.jsxs)("li", {
+        children: ["Your own functions: ", (0, WT.jsx)("code", {
+          children: IT.functions.join(", ")
         })]
       })]
-    }) : (0, RY.jsx)("p", {
+    }) : (0, WT.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing yet. Ask the AI to make something."
     })]
   })
 }
-const ya = {
+const gF = {
   asked: "Remember this about your game?",
   pending: "A note to remember, once the change is in",
   checking: "Saving a note\u2026",
@@ -10862,42 +10862,42 @@ const ya = {
   refused: "Note not saved"
 };
 
-function Qa(YY) {
+function hF(TT) {
   let {
-    note: rY,
-    status: DY,
-    onAnswer: FY,
-    isPartLeftOut: AY = !1,
-    defaultOpen: IY
-  } = YY;
-  const gY = AY && ("asked" === DY || "pending" === DY);
-  return (0, RY.jsxs)("div", {
+    note: oT,
+    status: IT,
+    onAnswer: iT,
+    isPartLeftOut: zT = !1,
+    defaultOpen: kT
+  } = TT;
+  const BT = zT && ("asked" === IT || "pending" === IT);
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, RY.jsxs)(OY, {
-      title: ya[DY],
-      isCalm: "refused" !== DY,
-      defaultOpen: IY,
-      children: [gY && (0, RY.jsx)("p", {
+    children: [(0, WT.jsxs)(XT, {
+      title: gF[IT],
+      isCalm: "refused" !== IT,
+      defaultOpen: kT,
+      children: [BT && (0, WT.jsx)("p", {
         children: "The note to remember is hidden while a part is unticked. Tick every part to see it."
-      }), !gY && (0, RY.jsxs)("p", {
-        children: ['"', rY, '"']
-      }), !gY && "pending" === DY && (0, RY.jsx)("p", {
+      }), !BT && (0, WT.jsxs)("p", {
+        children: ['"', oT, '"']
+      }), !BT && "pending" === IT && (0, WT.jsx)("p", {
         children: "It goes into AI notes once the change is in."
-      }), "refused" === DY && (0, RY.jsx)("p", {
+      }), "refused" === IT && (0, WT.jsx)("p", {
         children: "This note can't be saved. Notes are only about your game."
       })]
-    }), !gY && "asked" === DY && FY && (0, RY.jsxs)("div", {
+    }), !BT && "asked" === IT && iT && (0, WT.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, RY.jsx)("button", {
+      children: [(0, WT.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
         onClick: () => {
-          FY(!0)
+          iT(!0)
         },
         children: "Yes, remember it"
-      }), (0, RY.jsx)("button", {
+      }), (0, WT.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         onClick: () => {
-          FY(!1)
+          iT(!1)
         },
         children: "No"
       })]
@@ -10905,148 +10905,148 @@ function Qa(YY) {
   })
 }
 
-function oa(YY) {
+function wF(TT) {
   let {
-    steps: rY,
-    built: DY,
-    done: FY,
-    onBuild: AY
-  } = YY;
-  return (0, RY.jsxs)("div", {
+    steps: oT,
+    built: IT,
+    done: iT,
+    onBuild: zT
+  } = TT;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiQuestion WorldCodeAiPlan",
-    children: [(0, RY.jsx)("p", {
+    children: [(0, WT.jsx)("p", {
       className: "WorldCodeAiQuestionText",
       children: "The plan: one step at a time"
-    }), (0, RY.jsx)("ol", {
+    }), (0, WT.jsx)("ol", {
       className: "WorldCodeAiPlanSteps",
-      children: rY.map(((YY, rY) => (0, RY.jsxs)("li", {
-        className: rY < FY ? "WorldCodeAiPlanStep-built" : void 0,
-        children: [rY < FY && (0, RY.jsx)("span", {
+      children: oT.map(((TT, oT) => (0, WT.jsxs)("li", {
+        className: oT < iT ? "WorldCodeAiPlanStep-built" : void 0,
+        children: [oT < iT && (0, WT.jsx)("span", {
           className: "WorldCodeAiPlanTick",
           children: "\u2713 "
-        }), YY, rY < DY && rY >= FY && (0, RY.jsx)("span", {
+        }), TT, oT < IT && oT >= iT && (0, WT.jsx)("span", {
           className: "WorldCodeAiPlanAsked",
           children: " (apply it to tick it off)"
         })]
-      }, `${rY}:${YY}`)))
-    }), DY < rY.length && FY < DY && (0, RY.jsxs)("span", {
+      }, `${oT}:${TT}`)))
+    }), IT < oT.length && iT < IT && (0, WT.jsxs)("span", {
       className: "WorldCodeAiHint",
-      children: ["Apply ", DY - FY > 1 ? `steps ${FY+1} to ${DY}` : `step ${DY}`, " to your code and try it, then build step ", DY + 1, "."]
-    }), DY < rY.length && AY && (0, RY.jsx)("button", {
-      ...yg.e,
-      className: FY < DY ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+      children: ["Apply ", IT - iT > 1 ? `steps ${iT+1} to ${IT}` : `step ${IT}`, " to your code and try it, then build step ", IT + 1, "."]
+    }), IT < oT.length && zT && (0, WT.jsx)("button", {
+      ...gB.h,
+      className: iT < IT ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
       onClick: () => {
-        AY(DY)
+        zT(IT)
       },
-      children: FY < DY ? `Build step ${DY+1} anyway` : `Build step ${DY+1}`
-    }), DY < rY.length && DY > 0 && FY >= DY && (0, RY.jsx)("span", {
+      children: iT < IT ? `Build step ${IT+1} anyway` : `Build step ${IT+1}`
+    }), IT < oT.length && IT > 0 && iT >= IT && (0, WT.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Try each step in your world before the next."
-    }), DY === rY.length && (0, RY.jsx)("span", {
+    }), IT === oT.length && (0, WT.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Every step is asked for."
     })]
   })
 }
 
-function Wa(YY, rY, DY) {
-  return `${YY}\n\nYou asked me: "${rY}" ${null===DY?"I don't mind: choose what works best.":`My answer: ${DY.replace(/\.$/,"")}.`} Build it now, without asking again.`
+function mF(TT, oT, IT) {
+  return `${TT}\n\nYou asked me: "${oT}" ${null===IT?"I don't mind: choose what works best.":`My answer: ${IT.replace(/\.$/,"")}.`} Build it now, without asking again.`
 }
 
-function Ea(YY) {
+function eF(TT) {
   let {
-    question: rY,
-    onAnswer: DY,
-    ownAnswerBelow: AY = !1
-  } = YY;
-  const [IY, OY] = (0, FY.useState)("");
-  return (0, RY.jsxs)("div", {
+    question: oT,
+    onAnswer: IT,
+    ownAnswerBelow: zT = !1
+  } = TT;
+  const [kT, XT] = (0, iT.useState)("");
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiQuestion",
-    children: [(0, RY.jsx)("p", {
+    children: [(0, WT.jsx)("p", {
       className: "WorldCodeAiQuestionText",
-      children: rY.question
-    }), DY && (0, RY.jsxs)(RY.Fragment, {
-      children: [(0, RY.jsx)("div", {
+      children: oT.question
+    }), IT && (0, WT.jsxs)(WT.Fragment, {
+      children: [(0, WT.jsx)("div", {
         className: "WorldCodeAiQuestionChoices",
-        children: rY.choices.map(((YY, rY) => (0, FY.createElement)("button", {
-          ...yg.e,
-          key: `${rY}:${YY}`,
+        children: oT.choices.map(((TT, oT) => (0, iT.createElement)("button", {
+          ...gB.h,
+          key: `${oT}:${TT}`,
           className: "WorldCodeAiQuestionChoice",
           onClick: () => {
-            DY(YY, !1)
+            IT(TT, !1)
           }
-        }, YY)))
-      }), rY.allowOther && AY && (0, RY.jsx)("span", {
+        }, TT)))
+      }), oT.allowOther && zT && (0, WT.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Or type your own answer in the box below."
-      }), rY.allowOther && !AY && (0, RY.jsxs)("form", {
+      }), oT.allowOther && !zT && (0, WT.jsxs)("form", {
         className: "WorldCodeAiQuestionOther",
-        onSubmit: YY => {
-          YY.preventDefault(), "" !== IY.trim() && DY(IY.trim(), !0)
+        onSubmit: TT => {
+          TT.preventDefault(), "" !== kT.trim() && IT(kT.trim(), !0)
         },
-        children: [(0, RY.jsx)("input", {
+        children: [(0, WT.jsx)("input", {
           className: "WorldCodeAiInput",
-          value: IY,
+          value: kT,
           maxLength: 200,
           placeholder: "Or type your own answer",
           "aria-label": "Your own answer",
-          onChange: YY => {
-            OY(YY.target.value)
+          onChange: TT => {
+            XT(TT.target.value)
           },
-          onKeyDown: YY => {
-            YY.stopPropagation()
+          onKeyDown: TT => {
+            TT.stopPropagation()
           }
-        }), (0, RY.jsx)("button", {
+        }), (0, WT.jsx)("button", {
           className: "WorldCodeAiSecondaryButton",
           type: "submit",
-          disabled: "" === IY.trim(),
+          disabled: "" === kT.trim(),
           children: "Send"
         })]
-      }), (0, RY.jsx)("button", {
-        ...yg.e,
+      }), (0, WT.jsx)("button", {
+        ...gB.h,
         className: "WorldCodeAiSecondaryButton WorldCodeAiQuestionAiPicks",
         onClick: () => {
-          DY(null, !1)
+          IT(null, !1)
         },
         children: "Let the AI pick"
       })]
     })]
   })
 }
-const ma = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
+const RF = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
 
-function Va(YY, rY) {
-  let DY = 0;
-  for (; DY < rY;) {
-    const FY = YY[DY],
-      AY = YY[DY + 1];
-    let IY = DY + 1;
-    if ("/" === FY && "/" === AY) {
-      const rY = YY.indexOf("\n", DY);
-      IY = -1 === rY ? YY.length : rY
-    } else if ("/" === FY && "*" === AY) {
-      const rY = YY.indexOf("*/", DY + 2);
-      IY = -1 === rY ? YY.length : rY + 2
-    } else if ('"' === FY || "'" === FY || "`" === FY) {
-      for (IY = DY + 1; IY < YY.length && YY[IY] !== FY && ("`" === FY || "\n" !== YY[IY]);) IY += "\\" === YY[IY] ? 2 : 1;
-      IY++
+function uF(TT, oT) {
+  let IT = 0;
+  for (; IT < oT;) {
+    const iT = TT[IT],
+      zT = TT[IT + 1];
+    let kT = IT + 1;
+    if ("/" === iT && "/" === zT) {
+      const oT = TT.indexOf("\n", IT);
+      kT = -1 === oT ? TT.length : oT
+    } else if ("/" === iT && "*" === zT) {
+      const oT = TT.indexOf("*/", IT + 2);
+      kT = -1 === oT ? TT.length : oT + 2
+    } else if ('"' === iT || "'" === iT || "`" === iT) {
+      for (kT = IT + 1; kT < TT.length && TT[kT] !== iT && ("`" === iT || "\n" !== TT[kT]);) kT += "\\" === TT[kT] ? 2 : 1;
+      kT++
     }
-    if (IY > rY) return !0;
-    DY = IY
+    if (kT > oT) return !0;
+    IT = kT
   }
   return !1
 }
 
-function Sa(YY) {
-  const rY = YY.slice(1, -1);
-  let DY = "";
-  for (let FY = 0; FY < rY.length; FY++) {
-    if ("\\" !== rY[FY]) {
-      DY += rY[FY];
+function vF(TT) {
+  const oT = TT.slice(1, -1);
+  let IT = "";
+  for (let iT = 0; iT < oT.length; iT++) {
+    if ("\\" !== oT[iT]) {
+      IT += oT[iT];
       continue
     }
-    const YY = rY[++FY],
-      AY = {
+    const TT = oT[++iT],
+      zT = {
         n: "\n",
         t: "\t",
         r: "\r",
@@ -11054,223 +11054,223 @@ function Sa(YY) {
         '"': '"',
         "'": "'"
       },
-      IY = "u" === YY ? rY.slice(FY + 1, FY + 5) : "x" === YY ? rY.slice(FY + 1, FY + 3) : "";
-    if (YY in AY) DY += AY[YY];
+      kT = "u" === TT ? oT.slice(iT + 1, iT + 5) : "x" === TT ? oT.slice(iT + 1, iT + 3) : "";
+    if (TT in zT) IT += zT[TT];
     else {
-      if ("" === IY || !/^[\da-f]+$/i.test(IY) || IY.length !== ("u" === YY ? 4 : 2)) return null;
-      DY += String.fromCharCode(parseInt(IY, 16)), FY += IY.length
+      if ("" === kT || !/^[\da-f]+$/i.test(kT) || kT.length !== ("u" === TT ? 4 : 2)) return null;
+      IT += String.fromCharCode(parseInt(kT, 16)), iT += kT.length
     }
   }
-  return DY
+  return IT
 }
 
-function la(YY) {
-  const rY = function(YY) {
-    ma.lastIndex = 0;
-    for (let rY = ma.exec(YY); rY; rY = ma.exec(YY))
-      if (!Va(YY, rY.index)) return rY;
+function EF(TT) {
+  const oT = function(TT) {
+    RF.lastIndex = 0;
+    for (let oT = RF.exec(TT); oT; oT = RF.exec(TT))
+      if (!uF(TT, oT.index)) return oT;
     return null
-  }(YY);
-  if (!rY) return [];
-  const DY = function(YY, rY) {
-    const DY = [];
-    let FY = 0,
-      AY = rY;
-    for (; AY < YY.length;) {
-      var IY;
-      const rY = YY[AY];
-      if (/\s/.test(rY)) {
-        AY++;
+  }(TT);
+  if (!oT) return [];
+  const IT = function(TT, oT) {
+    const IT = [];
+    let iT = 0,
+      zT = oT;
+    for (; zT < TT.length;) {
+      var kT;
+      const oT = TT[zT];
+      if (/\s/.test(oT)) {
+        zT++;
         continue
       }
-      const RY = AY;
-      if ("/" === rY && "/" === YY[AY + 1]) {
-        const rY = YY.indexOf("\n", AY);
-        AY = -1 === rY ? YY.length : rY, DY.push({
+      const WT = zT;
+      if ("/" === oT && "/" === TT[zT + 1]) {
+        const oT = TT.indexOf("\n", zT);
+        zT = -1 === oT ? TT.length : oT, IT.push({
           type: "comment",
-          text: YY.slice(RY + 2, AY).trim(),
-          start: RY,
-          end: AY
+          text: TT.slice(WT + 2, zT).trim(),
+          start: WT,
+          end: zT
         });
         continue
       }
-      if ("/" === rY && "*" === YY[AY + 1]) {
-        const rY = YY.indexOf("*/", AY + 2);
-        if (-1 === rY) return null;
-        AY = rY + 2, DY.push({
+      if ("/" === oT && "*" === TT[zT + 1]) {
+        const oT = TT.indexOf("*/", zT + 2);
+        if (-1 === oT) return null;
+        zT = oT + 2, IT.push({
           type: "comment",
-          text: YY.slice(RY + 2, rY).trim(),
-          start: RY,
-          end: AY
+          text: TT.slice(WT + 2, oT).trim(),
+          start: WT,
+          end: zT
         });
         continue
       }
-      if ('"' === rY || "'" === rY || "`" === rY) {
-        for (AY++; AY < YY.length && YY[AY] !== rY;) {
-          if ("\\" === YY[AY]) AY++;
-          else if ("\n" === YY[AY] && "`" !== rY) return null;
-          AY++
+      if ('"' === oT || "'" === oT || "`" === oT) {
+        for (zT++; zT < TT.length && TT[zT] !== oT;) {
+          if ("\\" === TT[zT]) zT++;
+          else if ("\n" === TT[zT] && "`" !== oT) return null;
+          zT++
         }
-        if (AY >= YY.length) return null;
-        AY++, DY.push({
-          type: "`" === rY ? "template" : "string",
-          text: YY.slice(RY, AY),
-          start: RY,
-          end: AY
+        if (zT >= TT.length) return null;
+        zT++, IT.push({
+          type: "`" === oT ? "template" : "string",
+          text: TT.slice(WT, zT),
+          start: WT,
+          end: zT
         });
         continue
       }
-      const OY = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(YY.slice(AY, AY + 40));
-      if (OY && ("-" !== rY || ":" === (null === (IY = DY[DY.length - 1]) || void 0 === IY ? void 0 : IY.text))) {
-        AY += OY[0].length, DY.push({
+      const XT = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(TT.slice(zT, zT + 40));
+      if (XT && ("-" !== oT || ":" === (null === (kT = IT[IT.length - 1]) || void 0 === kT ? void 0 : kT.text))) {
+        zT += XT[0].length, IT.push({
           type: "number",
-          text: OY[0],
-          start: RY,
-          end: AY
+          text: XT[0],
+          start: WT,
+          end: zT
         });
         continue
       }
-      const gY = /^[A-Za-z_$][\w$]*/.exec(YY.slice(AY, AY + 80));
-      if (gY) AY += gY[0].length, DY.push({
+      const BT = /^[A-Za-z_$][\w$]*/.exec(TT.slice(zT, zT + 80));
+      if (BT) zT += BT[0].length, IT.push({
         type: "word",
-        text: gY[0],
-        start: RY,
-        end: AY
+        text: BT[0],
+        start: WT,
+        end: zT
       });
-      else if (AY++, DY.push({
+      else if (zT++, IT.push({
           type: "punct",
-          text: rY,
-          start: RY,
-          end: AY
-        }), "{[(".includes(rY)) FY++;
-      else if ("}])".includes(rY) && (FY--, 0 === FY)) return DY
+          text: oT,
+          start: WT,
+          end: zT
+        }), "{[(".includes(oT)) iT++;
+      else if ("}])".includes(oT) && (iT--, 0 === iT)) return IT
     }
     return null
-  }(YY, rY.index + rY[0].length - 1);
-  if (!DY) return [];
-  const FY = [];
-  let AY, IY = 1;
-  for (; IY < DY.length - 1;) {
-    var RY, OY, gY, aY, vY, uY;
-    const rY = DY[IY];
-    if ("comment" === rY.type) {
-      AY = rY.text, IY++;
+  }(TT, oT.index + oT[0].length - 1);
+  if (!IT) return [];
+  const iT = [];
+  let zT, kT = 1;
+  for (; kT < IT.length - 1;) {
+    var WT, XT, BT, FT, ST, DT;
+    const oT = IT[kT];
+    if ("comment" === oT.type) {
+      zT = oT.text, kT++;
       continue
     }
-    if ("," === rY.text) {
-      IY++;
+    if ("," === oT.text) {
+      kT++;
       continue
     }
-    const sY = rY,
-      iY = "word" === sY.type ? sY.text : "string" === sY.type ? Sa(sY.text) : null;
-    if (null === iY || ":" !== (null === (RY = DY[IY + 1]) || void 0 === RY ? void 0 : RY.text)) return [];
-    let yY = IY + 2,
-      QY = 0;
-    const oY = [];
-    for (; yY < DY.length - 1;) {
-      const YY = DY[yY];
-      if (0 === QY && "," === YY.text) break;
-      "punct" === YY.type && "{[(".includes(YY.text) ? QY++ : "punct" === YY.type && "}])".includes(YY.text) && QY--, "comment" !== YY.type && oY.push(YY), yY++
+    const LT = oT,
+      xT = "word" === LT.type ? LT.text : "string" === LT.type ? vF(LT.text) : null;
+    if (null === xT || ":" !== (null === (WT = IT[kT + 1]) || void 0 === WT ? void 0 : WT.text)) return [];
+    let cT = kT + 2,
+      KT = 0;
+    const MT = [];
+    for (; cT < IT.length - 1;) {
+      const TT = IT[cT];
+      if (0 === KT && "," === TT.text) break;
+      "punct" === TT.type && "{[(".includes(TT.text) ? KT++ : "punct" === TT.type && "}])".includes(TT.text) && KT--, "comment" !== TT.type && MT.push(TT), cT++
     }
-    const WY = oY.at(-1),
-      EY = "," === (null === (OY = DY[yY]) || void 0 === OY ? void 0 : OY.text) ? DY[yY + 1] : DY.slice(IY + 2, yY).find((YY => "comment" === YY.type && void 0 !== WY && YY.start >= WY.end)),
-      mY = "comment" !== (null === EY || void 0 === EY ? void 0 : EY.type) || void 0 === WY || YY.slice(WY.end, EY.start).includes("\n") ? void 0 : EY.text,
-      VY = 1 === oY.length ? oY[0] : void 0,
-      SY = null !== mY && void 0 !== mY ? mY : AY;
-    AY = void 0;
-    const lY = {
-      key: iY,
-      raw: null !== (gY = null === VY || void 0 === VY ? void 0 : VY.text) && void 0 !== gY ? gY : "",
-      start: null !== (aY = null === VY || void 0 === VY ? void 0 : VY.start) && void 0 !== aY ? aY : 0,
-      end: null !== (vY = null === VY || void 0 === VY ? void 0 : VY.end) && void 0 !== vY ? vY : 0,
-      ...SY ? {
-        comment: SY
+    const rT = MT.at(-1),
+      AT = "," === (null === (XT = IT[cT]) || void 0 === XT ? void 0 : XT.text) ? IT[cT + 1] : IT.slice(kT + 2, cT).find((TT => "comment" === TT.type && void 0 !== rT && TT.start >= rT.end)),
+      gT = "comment" !== (null === AT || void 0 === AT ? void 0 : AT.type) || void 0 === rT || TT.slice(rT.end, AT.start).includes("\n") ? void 0 : AT.text,
+      hT = 1 === MT.length ? MT[0] : void 0,
+      wT = null !== gT && void 0 !== gT ? gT : zT;
+    zT = void 0;
+    const mT = {
+      key: xT,
+      raw: null !== (BT = null === hT || void 0 === hT ? void 0 : hT.text) && void 0 !== BT ? BT : "",
+      start: null !== (FT = null === hT || void 0 === hT ? void 0 : hT.start) && void 0 !== FT ? FT : 0,
+      end: null !== (ST = null === hT || void 0 === hT ? void 0 : hT.end) && void 0 !== ST ? ST : 0,
+      ...wT ? {
+        comment: wT
       } : {}
     };
-    if ("number" === (null === VY || void 0 === VY ? void 0 : VY.type)) {
-      const YY = Number(VY.text.replace(/_/g, ""));
-      Number.isFinite(YY) && FY.push({
-        ...lY,
+    if ("number" === (null === hT || void 0 === hT ? void 0 : hT.type)) {
+      const TT = Number(hT.text.replace(/_/g, ""));
+      Number.isFinite(TT) && iT.push({
+        ...mT,
         kind: "number",
-        value: YY
+        value: TT
       })
-    } else if ("string" === (null === VY || void 0 === VY ? void 0 : VY.type)) {
-      const YY = Sa(VY.text);
-      null !== YY && FY.push({
-        ...lY,
+    } else if ("string" === (null === hT || void 0 === hT ? void 0 : hT.type)) {
+      const TT = vF(hT.text);
+      null !== TT && iT.push({
+        ...mT,
         kind: "string",
-        value: YY
+        value: TT
       })
-    } else "word" !== (null === VY || void 0 === VY ? void 0 : VY.type) || "true" !== VY.text && "false" !== VY.text || FY.push({
-      ...lY,
+    } else "word" !== (null === hT || void 0 === hT ? void 0 : hT.type) || "true" !== hT.text && "false" !== hT.text || iT.push({
+      ...mT,
       kind: "boolean",
-      value: "true" === VY.text
+      value: "true" === hT.text
     });
-    IY = yY, mY && "," === (null === (uY = DY[IY]) || void 0 === uY ? void 0 : uY.text) && (IY += 2)
+    kT = cT, gT && "," === (null === (DT = IT[kT]) || void 0 === DT ? void 0 : DT.text) && (kT += 2)
   }
-  return FY.slice(0, 30)
+  return iT.slice(0, 30)
 }
 
-function Ta(YY, rY, DY) {
-  const FY = la(YY).find((YY => YY.key === rY.key));
-  if (!FY || FY.kind !== rY.kind || FY.raw !== rY.raw) return null;
-  let AY;
-  if ("number" === rY.kind) {
-    if ("number" !== typeof DY || !Number.isFinite(DY)) return null;
-    AY = String(Number(DY.toPrecision(12)))
-  } else if ("boolean" === rY.kind) {
-    if ("boolean" !== typeof DY) return null;
-    AY = DY ? "true" : "false"
+function fF(TT, oT, IT) {
+  const iT = EF(TT).find((TT => TT.key === oT.key));
+  if (!iT || iT.kind !== oT.kind || iT.raw !== oT.raw) return null;
+  let zT;
+  if ("number" === oT.kind) {
+    if ("number" !== typeof IT || !Number.isFinite(IT)) return null;
+    zT = String(Number(IT.toPrecision(12)))
+  } else if ("boolean" === oT.kind) {
+    if ("boolean" !== typeof IT) return null;
+    zT = IT ? "true" : "false"
   } else {
-    if ("string" !== typeof DY) return null;
-    const YY = rY.raw.startsWith("'") ? "'" : '"',
-      FY = "'" === YY ? '"' : "'";
-    IY = DY, AY = `${RY=DY.includes(YY)&&!DY.includes(FY)?FY:YY}${IY.slice(0,200).replace(/\\/g,"\\\\").replace('"'===RY?/"/g:/'/g,`\\${RY}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(YY=>`\\u${YY.charCodeAt(0).toString(16).padStart(4,"0")}`))}${RY}`
+    if ("string" !== typeof IT) return null;
+    const TT = oT.raw.startsWith("'") ? "'" : '"',
+      iT = "'" === TT ? '"' : "'";
+    kT = IT, zT = `${WT=IT.includes(TT)&&!IT.includes(iT)?iT:TT}${kT.slice(0,200).replace(/\\/g,"\\\\").replace('"'===WT?/"/g:/'/g,`\\${WT}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(TT=>`\\u${TT.charCodeAt(0).toString(16).padStart(4,"0")}`))}${WT}`
   }
-  var IY, RY;
-  return YY.slice(0, FY.start) + AY + YY.slice(FY.end)
+  var kT, WT;
+  return TT.slice(0, iT.start) + zT + TT.slice(iT.end)
 }
 
-function ea(YY) {
-  if (!Number.isInteger(YY)) {
-    var rY;
-    const DY = Math.min(3, (null !== (rY = String(YY).split(".")[1]) && void 0 !== rY ? rY : "").length);
-    return 10 ** -Math.max(1, DY)
+function CF(TT) {
+  if (!Number.isInteger(TT)) {
+    var oT;
+    const IT = Math.min(3, (null !== (oT = String(TT).split(".")[1]) && void 0 !== oT ? oT : "").length);
+    return 10 ** -Math.max(1, IT)
   }
-  const DY = Math.abs(YY);
-  return DY >= 100 ? 10 ** (Math.floor(Math.log10(DY)) - 1) : 1
+  const IT = Math.abs(TT);
+  return IT >= 100 ? 10 ** (Math.floor(Math.log10(IT)) - 1) : 1
 }
 
-function Na(YY) {
-  return YY.comment ? YY.comment.charAt(0).toUpperCase() + YY.comment.slice(1) : function(YY) {
-    const rY = YY.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
-    return rY.charAt(0).toUpperCase() + rY.slice(1)
-  }(YY.key)
+function jF(TT) {
+  return TT.comment ? TT.comment.charAt(0).toUpperCase() + TT.comment.slice(1) : function(TT) {
+    const oT = TT.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
+    return oT.charAt(0).toUpperCase() + oT.slice(1)
+  }(TT.key)
 }
 
-function Ba(YY) {
-  return "boolean" === typeof YY ? YY ? "on" : "off" : "number" === typeof YY ? String(YY) : YY.length > 20 ? `\u201c${YY.slice(0,19)}\u2026\u201d` : `\u201c${YY}\u201d`
+function JF(TT) {
+  return "boolean" === typeof TT ? TT ? "on" : "off" : "number" === typeof TT ? String(TT) : TT.length > 20 ? `\u201c${TT.slice(0,19)}\u2026\u201d` : `\u201c${TT}\u201d`
 }
 
-function ca(YY) {
-  let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
-  if (0 === YY.length) return `Before ${rY} settings`;
-  const DY = 3 === YY.length ? 3 : 2,
-    FY = YY.slice(0, DY).map((YY => `${YY.name} ${YY.from} \u2192 ${YY.to}`)),
-    AY = YY.length > DY ? ` and ${YY.length-DY} more` : "";
-  return `Before ${rY} settings: ${FY.join(", ")}${AY}`
+function UF(TT) {
+  let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
+  if (0 === TT.length) return `Before ${oT} settings`;
+  const IT = 3 === TT.length ? 3 : 2,
+    iT = TT.slice(0, IT).map((TT => `${TT.name} ${TT.from} \u2192 ${TT.to}`)),
+    zT = TT.length > IT ? ` and ${TT.length-IT} more` : "";
+  return `Before ${oT} settings: ${iT.join(", ")}${zT}`
 }
-const Ka = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
+const aF = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
 
-function Ha(YY) {
-  const rY = new Set;
-  for (const AY of YY.matchAll(Ka)) {
-    var DY, FY;
-    rY.add(null !== (DY = null !== (FY = AY[1]) && void 0 !== FY ? FY : AY[2]) && void 0 !== DY ? DY : AY[3])
+function YF(TT) {
+  const oT = new Set;
+  for (const zT of TT.matchAll(aF)) {
+    var IT, iT;
+    oT.add(null !== (IT = null !== (iT = zT[1]) && void 0 !== iT ? iT : zT[2]) && void 0 !== IT ? IT : zT[3])
   }
-  return rY
+  return oT
 }
-const za = new Map([
+const QF = new Map([
     ["tick", ["second", "minute", "timer", "time", "every", "countdown", "wave", "always", "clock"]],
     ["playerCommand", ["command", "/"]],
     ["onPlayerJoin", ["join", "start", "welcome", "spawn", "enter", "arrive"]],
@@ -11293,27 +11293,27 @@ const za = new Map([
     ["onPlayerDropItem", ["drop"]],
     ["CONFIG", ["setting", "config", "number", "value"]]
   ]),
-  Za = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
+  OF = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
 
-function Ca(YY) {
-  return YY.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((YY => YY.length >= 3 && !Za.has(YY)))
+function HF(TT) {
+  return TT.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((TT => TT.length >= 3 && !OF.has(TT)))
 }
 
-function fa(YY, rY) {
-  return YY.some((YY => rY.some((rY => function(YY, rY) {
-    return YY.startsWith(rY) || rY.startsWith(YY)
-  }(YY, rY)))))
+function nF(TT, oT) {
+  return TT.some((TT => oT.some((oT => function(TT, oT) {
+    return TT.startsWith(oT) || oT.startsWith(TT)
+  }(TT, oT)))))
 }
 
-function ja(YY, rY, DY) {
-  const FY = rY.toLowerCase();
-  return YY.names.some((rY => {
-    var AY;
-    const IY = null !== (AY = za.get(rY)) && void 0 !== AY ? AY : [];
-    return !!(FY.includes(rY.toLowerCase()) || IY.includes("/") && FY.includes("/")) || fa(DY, [...IY.flatMap(Ca), ...Ca(YY.plainWords.join(" ")), ...YY.configKeys.flatMap(Ca)])
+function qF(TT, oT, IT) {
+  const iT = oT.toLowerCase();
+  return TT.names.some((oT => {
+    var zT;
+    const kT = null !== (zT = QF.get(oT)) && void 0 !== zT ? zT : [];
+    return !!(iT.includes(oT.toLowerCase()) || kT.includes("/") && iT.includes("/")) || nF(IT, [...kT.flatMap(HF), ...HF(TT.plainWords.join(" ")), ...TT.configKeys.flatMap(HF)])
   }))
 }
-const ha = new Map([
+const ZF = new Map([
   ["tick", "Runs all the time"],
   ["playerCommand", "Chat commands like /help"],
   ["onPlayerJoin", "When a player joins"],
@@ -11359,382 +11359,382 @@ const ha = new Map([
   ["onClose", "When the game closes"]
 ]);
 
-function da(YY) {
-  var rY;
-  return null !== (rY = ha.get(YY)) && void 0 !== rY ? rY : "CONFIG" === YY ? "Settings" : void 0
+function lF(TT) {
+  var oT;
+  return null !== (oT = ZF.get(TT)) && void 0 !== oT ? oT : "CONFIG" === TT ? "Settings" : void 0
 }
-ha.keys();
-const Ja = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
+ZF.keys();
+const sF = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
 
-function Ma(YY) {
-  const rY = YY.trim();
-  return "" === rY || /^(?:\/\/|\/\*|\*)/.test(rY)
+function tF(TT) {
+  const oT = TT.trim();
+  return "" === oT || /^(?:\/\/|\/\*|\*)/.test(oT)
 }
 
-function wa(YY) {
-  const rY = YY.map((YY => YY.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
-  return ["{}", "()", "[]"].every((YY => {
-    let [DY, FY] = YY;
-    return rY.split(DY).length === rY.split(FY).length
+function GF(TT) {
+  const oT = TT.map((TT => TT.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
+  return ["{}", "()", "[]"].every((TT => {
+    let [IT, iT] = TT;
+    return oT.split(IT).length === oT.split(iT).length
   }))
 }
 
-function ba(YY) {
-  const rY = [];
-  let DY = 0;
-  const FY = FY => {
-    if (FY > DY) {
-      var AY;
-      const IY = YY.slice(DY, FY).find((YY => Ja.test(YY)));
-      rY.push({
-        name: void 0 === IY ? null : null !== (AY = pa(IY)) && void 0 !== AY ? AY : null,
-        lines: YY.slice(DY, FY)
-      }), DY = FY
+function pF(TT) {
+  const oT = [];
+  let IT = 0;
+  const iT = iT => {
+    if (iT > IT) {
+      var zT;
+      const kT = TT.slice(IT, iT).find((TT => sF.test(TT)));
+      oT.push({
+        name: void 0 === kT ? null : null !== (zT = NF(kT)) && void 0 !== zT ? zT : null,
+        lines: TT.slice(IT, iT)
+      }), IT = iT
     }
   };
-  for (let AY = 1; AY < YY.length; AY++)
-    if (Ja.test(YY[AY])) {
-      let rY = AY;
-      for (; rY > DY && Ma(YY[rY - 1]);) rY--;
-      FY(rY)
-    } return FY(YY.length), rY
+  for (let zT = 1; zT < TT.length; zT++)
+    if (sF.test(TT[zT])) {
+      let oT = zT;
+      for (; oT > IT && tF(TT[oT - 1]);) oT--;
+      iT(oT)
+    } return iT(TT.length), oT
 }
 
-function Xa(YY) {
-  const rY = ba(YY.removed),
-    DY = ba(YY.added);
-  if (rY.length + DY.length <= 1) return [YY];
-  const FY = [];
-  let AY = 0,
-    IY = 0;
-  const RY = (YY, rY, DY) => rY.slice(DY).some((rY => rY.name === YY));
-  for (; AY < rY.length || IY < DY.length;)
-    if (AY < rY.length && IY < DY.length && rY[AY].name === DY[IY].name) FY.push({
-      removed: rY[AY++].lines,
-      added: DY[IY++].lines
+function bF(TT) {
+  const oT = pF(TT.removed),
+    IT = pF(TT.added);
+  if (oT.length + IT.length <= 1) return [TT];
+  const iT = [];
+  let zT = 0,
+    kT = 0;
+  const WT = (TT, oT, IT) => oT.slice(IT).some((oT => oT.name === TT));
+  for (; zT < oT.length || kT < IT.length;)
+    if (zT < oT.length && kT < IT.length && oT[zT].name === IT[kT].name) iT.push({
+      removed: oT[zT++].lines,
+      added: IT[kT++].lines
     });
-    else if (AY < rY.length && !RY(rY[AY].name, DY, IY)) FY.push({
-    removed: rY[AY++].lines,
+    else if (zT < oT.length && !WT(oT[zT].name, IT, kT)) iT.push({
+    removed: oT[zT++].lines,
     added: []
   });
   else {
-    if (!(IY < DY.length) || RY(DY[IY].name, rY, AY)) {
-      FY.push({
-        removed: rY.slice(AY).flatMap((YY => YY.lines)),
-        added: DY.slice(IY).flatMap((YY => YY.lines))
+    if (!(kT < IT.length) || WT(IT[kT].name, oT, zT)) {
+      iT.push({
+        removed: oT.slice(zT).flatMap((TT => TT.lines)),
+        added: IT.slice(kT).flatMap((TT => TT.lines))
       });
       break
     }
-    FY.push({
+    iT.push({
       removed: [],
-      added: DY[IY++].lines
+      added: IT[kT++].lines
     })
   }
-  const OY = [];
-  for (const gY of FY) {
-    const YY = OY[OY.length - 1],
-      rY = [...gY.removed, ...gY.added].every(Ma);
-    YY && (rY || [...YY.removed, ...YY.added].every(Ma)) ? OY[OY.length - 1] = {
-      removed: [...YY.removed, ...gY.removed],
-      added: [...YY.added, ...gY.added]
-    } : OY.push(gY)
+  const XT = [];
+  for (const BT of iT) {
+    const TT = XT[XT.length - 1],
+      oT = [...BT.removed, ...BT.added].every(tF);
+    TT && (oT || [...TT.removed, ...TT.added].every(tF)) ? XT[XT.length - 1] = {
+      removed: [...TT.removed, ...BT.removed],
+      added: [...TT.added, ...BT.added]
+    } : XT.push(BT)
   }
-  return OY.every((YY => wa(YY.removed) && wa(YY.added))) ? OY : [YY]
+  return XT.every((TT => GF(TT.removed) && GF(TT.added))) ? XT : [TT]
 }
 
-function qa(YY, rY) {
-  const DY = [];
-  for (const IY of GF(YY, rY)) {
-    const YY = DY[DY.length - 1];
-    "same" === IY.kind ? DY.push({
+function yF(TT, oT) {
+  const IT = [];
+  for (const kT of Pi(TT, oT)) {
+    const TT = IT[IT.length - 1];
+    "same" === kT.kind ? IT.push({
       kind: "same",
-      text: IY.text
-    }) : "hunk" === (null === YY || void 0 === YY ? void 0 : YY.kind) ? YY[IY.kind].push(IY.text) : DY.push({
+      text: kT.text
+    }) : "hunk" === (null === TT || void 0 === TT ? void 0 : TT.kind) ? TT[kT.kind].push(kT.text) : IT.push({
       kind: "hunk",
-      removed: "removed" === IY.kind ? [IY.text] : [],
-      added: "added" === IY.kind ? [IY.text] : []
+      removed: "removed" === kT.kind ? [kT.text] : [],
+      added: "added" === kT.kind ? [kT.text] : []
     })
   }
-  const FY = [];
-  let AY = 0;
-  for (let IY = 0; IY < DY.length; IY++) {
-    const YY = DY[IY];
-    if ("same" === YY.kind) {
-      FY.push(YY);
+  const iT = [];
+  let zT = 0;
+  for (let kT = 0; kT < IT.length; kT++) {
+    const TT = IT[kT];
+    if ("same" === TT.kind) {
+      iT.push(TT);
       continue
     }
-    let rY = Xa(YY);
-    if (1 === rY.length) {
-      let FY = IY + 1;
-      const AY = [];
-      for (; FY < DY.length; FY++) {
-        const YY = DY[FY];
-        if ("same" !== YY.kind || !/^[\s})\];,]+$/.test(YY.text)) break;
-        AY.push(YY.text)
+    let oT = bF(TT);
+    if (1 === oT.length) {
+      let iT = kT + 1;
+      const zT = [];
+      for (; iT < IT.length; iT++) {
+        const TT = IT[iT];
+        if ("same" !== TT.kind || !/^[\s})\];,]+$/.test(TT.text)) break;
+        zT.push(TT.text)
       }
-      const RY = AY.length > 0 ? Xa({
-        removed: [...YY.removed, ...AY],
-        added: [...YY.added, ...AY]
-      }) : rY;
-      RY.length > 1 && (rY = RY, IY = FY - 1)
+      const WT = zT.length > 0 ? bF({
+        removed: [...TT.removed, ...zT],
+        added: [...TT.added, ...zT]
+      }) : oT;
+      WT.length > 1 && (oT = WT, kT = iT - 1)
     }
-    for (const DY of rY) FY.push({
+    for (const IT of oT) iT.push({
       kind: "hunk",
-      index: AY++,
-      removed: DY.removed,
-      added: DY.added
+      index: zT++,
+      removed: IT.removed,
+      added: IT.added
     })
   }
-  return FY
+  return iT
 }
 
-function pa(YY) {
-  var rY, DY;
-  const FY = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(YY);
-  return FY ? null !== (rY = null !== (DY = FY[1]) && void 0 !== DY ? DY : FY[2]) && void 0 !== rY ? rY : FY[3] : void 0
+function NF(TT) {
+  var oT, IT;
+  const iT = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(TT);
+  return iT ? null !== (oT = null !== (IT = iT[1]) && void 0 !== IT ? IT : iT[2]) && void 0 !== oT ? oT : iT[3] : void 0
 }
 
-function ka(YY) {
-  const rY = pa(YY);
-  if (!rY || /^\s/.test(YY)) return;
-  return /^(?:export\s+)?(?:async\s+)?function\b/.test(YY) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(YY) || "CONFIG" === rY ? da(rY) : void 0
+function PF(TT) {
+  const oT = NF(TT);
+  if (!oT || /^\s/.test(TT)) return;
+  return /^(?:export\s+)?(?:async\s+)?function\b/.test(TT) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(TT) || "CONFIG" === oT ? lF(oT) : void 0
 }
 
-function Ga(YY) {
-  const rY = new Map;
-  for (const DY of YY) {
-    const YY = ka(DY),
-      FY = pa(DY);
-    YY && FY && rY.set(FY, YY)
+function dF(TT) {
+  const oT = new Map;
+  for (const IT of TT) {
+    const TT = PF(IT),
+      iT = NF(IT);
+    TT && iT && oT.set(iT, TT)
   }
-  return rY
+  return oT
 }
 
-function xa(YY) {
-  return [...new Set(YY.flatMap((YY => {
-    const rY = /^\s/.test(YY) ? void 0 : pa(YY);
-    return rY ? [rY] : []
+function VF(TT) {
+  return [...new Set(TT.flatMap((TT => {
+    const oT = /^\s/.test(TT) ? void 0 : NF(TT);
+    return oT ? [oT] : []
   })))]
 }
 
-function na(YY) {
-  var rY;
-  return YY.length <= 1 ? null !== (rY = YY[0]) && void 0 !== rY ? rY : "" : `${YY.slice(0,-1).join(", ")} and ${YY[YY.length-1]}`
+function TS(TT) {
+  var oT;
+  return TT.length <= 1 ? null !== (oT = TT[0]) && void 0 !== oT ? oT : "" : `${TT.slice(0,-1).join(", ")} and ${TT[TT.length-1]}`
 }
 
-function Pa(YY) {
-  return YY.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
+function oS(TT) {
+  return TT.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
 }
 
-function Ua(YY) {
-  return YY.charAt(0).toUpperCase() + YY.slice(1)
+function IS(TT) {
+  return TT.charAt(0).toUpperCase() + TT.slice(1)
 }
-const La = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
+const iS = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
 
-function ta(YY) {
-  return [...new Set(YY.flatMap((YY => {
-    const rY = YY.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
-    return (0, ur.g)(rY, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, ur.q).map((YY => YY[0])).filter((YY => !La.has(YY)))
+function zS(TT) {
+  return [...new Set(TT.flatMap((TT => {
+    const oT = TT.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
+    return (0, Do.f)(oT, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, Do.k).map((TT => TT[0])).filter((TT => !iS.has(TT)))
   })))]
 }
 
-function Yv(YY, rY) {
-  var DY;
-  const FY = (null !== (DY = YY.parts) && void 0 !== DY ? DY : []).map((YY => {
+function kS(TT, oT) {
+  var IT;
+  const iT = (null !== (IT = TT.parts) && void 0 !== IT ? IT : []).map((TT => {
       return {
-        why: YY.why,
-        lines: (rY = YY.code, new Set(rY.split("\n").map((YY => YY.trim())).filter((YY => YY.length > 1))))
+        why: TT.why,
+        lines: (oT = TT.code, new Set(oT.split("\n").map((TT => TT.trim())).filter((TT => TT.length > 1))))
       };
-      var rY
+      var oT
     })),
-    AY = qa(YY.before, YY.after);
-  let IY = 1;
-  const RY = AY.flatMap(((YY, rY) => {
-      if ("hunk" !== YY.kind) return IY++, [];
-      let DY;
-      for (const AY of FY) {
-        const rY = YY.added.filter((YY => AY.lines.has(YY.trim()))).length;
-        rY > 0 && (!DY || rY > DY.score) && (DY = {
-          why: AY.why,
-          score: rY
+    zT = yF(TT.before, TT.after);
+  let kT = 1;
+  const WT = zT.flatMap(((TT, oT) => {
+      if ("hunk" !== TT.kind) return kT++, [];
+      let IT;
+      for (const zT of iT) {
+        const oT = TT.added.filter((TT => zT.lines.has(TT.trim()))).length;
+        oT > 0 && (!IT || oT > IT.score) && (IT = {
+          why: zT.why,
+          score: oT
         })
       }
-      const RY = function(YY, rY, DY) {
-          const FY = xa(YY.added),
-            AY = xa(YY.removed),
-            IY = FY.filter((YY => AY.includes(YY))),
-            RY = FY.filter((YY => !IY.includes(YY))),
-            OY = AY.filter((YY => !IY.includes(YY))),
-            gY = new Map([...Ga(YY.removed), ...Ga(YY.added)]),
-            aY = [...IY, ...RY].filter((YY => gY.has(YY))),
-            vY = (rY, DY) => {
+      const WT = function(TT, oT, IT) {
+          const iT = VF(TT.added),
+            zT = VF(TT.removed),
+            kT = iT.filter((TT => zT.includes(TT))),
+            WT = iT.filter((TT => !kT.includes(TT))),
+            XT = zT.filter((TT => !kT.includes(TT))),
+            BT = new Map([...dF(TT.removed), ...dF(TT.added)]),
+            FT = [...kT, ...WT].filter((TT => BT.has(TT))),
+            ST = (oT, IT) => {
               return {
-                names: rY,
-                configKeys: rY.includes("CONFIG") ? (FY = YY.added, FY.flatMap((YY => {
-                  const rY = /^\s+(\w+)\s*:/.exec(YY);
-                  return rY ? [rY[1]] : []
+                names: oT,
+                configKeys: oT.includes("CONFIG") ? (iT = TT.added, iT.flatMap((TT => {
+                  const oT = /^\s+(\w+)\s*:/.exec(TT);
+                  return oT ? [oT[1]] : []
                 }))) : [],
-                plainWords: rY.flatMap((YY => {
-                  const rY = gY.get(YY);
-                  return rY ? [rY] : []
+                plainWords: oT.flatMap((TT => {
+                  const oT = BT.get(TT);
+                  return oT ? [oT] : []
                 })),
-                onlyAdds: DY,
-                uses: ta(YY.added),
-                takesOut: OY,
-                removedUses: ta(YY.removed)
+                onlyAdds: IT,
+                uses: zS(TT.added),
+                takesOut: XT,
+                removedUses: zS(TT.removed)
               };
-              var FY
+              var iT
             },
-            uY = new Set([...YY.added, ...YY.removed].flatMap((YY => {
-              var rY;
-              const DY = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(YY);
-              return DY ? [null !== (rY = DY[1]) && void 0 !== rY ? rY : DY[2]] : []
+            DT = new Set([...TT.added, ...TT.removed].flatMap((TT => {
+              var oT;
+              const IT = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(TT);
+              return IT ? [null !== (oT = IT[1]) && void 0 !== oT ? oT : IT[2]] : []
             }))),
-            sY = YY => {
-              const rY = Pa(YY);
-              return uY.has(YY) ? `"${rY}"` : rY
+            LT = TT => {
+              const oT = oS(TT);
+              return DT.has(TT) ? `"${oT}"` : oT
             },
-            iY = [...IY, ...RY, ...OY];
-          if (iY.some((YY => gY.has(YY)))) {
-            const YY = YY => {
-                const rY = YY.filter((YY => gY.has(YY)));
-                return na(rY.length > 0 ? rY.map((YY => {
-                  var rY;
-                  return null !== (rY = gY.get(YY)) && void 0 !== rY ? rY : YY
-                })) : YY.map(sY))
+            xT = [...kT, ...WT, ...XT];
+          if (xT.some((TT => BT.has(TT)))) {
+            const TT = TT => {
+                const oT = TT.filter((TT => BT.has(TT)));
+                return TS(oT.length > 0 ? oT.map((TT => {
+                  var oT;
+                  return null !== (oT = BT.get(TT)) && void 0 !== oT ? oT : TT
+                })) : TT.map(LT))
               },
-              rY = [IY.length > 0 ? `${YY(IY)} \u2014 changed` : "", RY.length > 0 ? `${YY(RY)} \u2014 added` : "", OY.length > 0 ? `${YY(OY)} \u2014 taken out` : ""].filter(Boolean),
-              DY = [...iY.filter((YY => gY.has(YY))), ...iY.filter((YY => !gY.has(YY)))],
-              FY = aY.every((YY => RY.includes(YY)));
+              oT = [kT.length > 0 ? `${TT(kT)} \u2014 changed` : "", WT.length > 0 ? `${TT(WT)} \u2014 added` : "", XT.length > 0 ? `${TT(XT)} \u2014 taken out` : ""].filter(Boolean),
+              IT = [...xT.filter((TT => BT.has(TT))), ...xT.filter((TT => !BT.has(TT)))],
+              iT = FT.every((TT => WT.includes(TT)));
             return {
-              named: Ua(rY.join("; ")),
-              codeNames: DY,
-              takesOut: OY,
+              named: IS(oT.join("; ")),
+              codeNames: IT,
+              takesOut: XT,
               isPlain: !0,
-              about: vY(aY, FY)
+              about: ST(FT, iT)
             }
           }
-          const yY = [IY.length > 0 ? `changes ${na(IY.map(sY))}` : "", RY.length > 0 ? `adds ${na(RY.map(sY))}` : "", OY.length > 0 ? `takes out ${na(OY.map(sY))}` : ""].filter(Boolean);
-          if (yY.length > 0) return {
-            named: Ua(yY.join(", ")),
-            codeNames: iY,
-            takesOut: OY,
+          const cT = [kT.length > 0 ? `changes ${TS(kT.map(LT))}` : "", WT.length > 0 ? `adds ${TS(WT.map(LT))}` : "", XT.length > 0 ? `takes out ${TS(XT.map(LT))}` : ""].filter(Boolean);
+          if (cT.length > 0) return {
+            named: IS(cT.join(", ")),
+            codeNames: xT,
+            takesOut: XT,
             isPlain: !1,
-            about: vY([], !1)
+            about: ST([], !1)
           };
-          const QY = rY.flatMap((YY => "same" === YY.kind ? [YY.text] : YY.added));
-          for (let oY = QY.length - 1; oY >= 0; oY--) {
-            const YY = QY[oY],
-              rY = /^\s/.test(YY) ? void 0 : pa(YY);
-            if (!rY && "" !== YY.trim() && !/^\s/.test(YY) && !/^(?:\/\/|\/\*|\*)/.test(YY.trim())) break;
-            if (rY) {
-              const DY = ka(YY);
-              return DY ? (gY.set(rY, DY), {
-                named: `${DY} \u2014 changed`,
-                codeNames: [rY],
+          const KT = oT.flatMap((TT => "same" === TT.kind ? [TT.text] : TT.added));
+          for (let MT = KT.length - 1; MT >= 0; MT--) {
+            const TT = KT[MT],
+              oT = /^\s/.test(TT) ? void 0 : NF(TT);
+            if (!oT && "" !== TT.trim() && !/^\s/.test(TT) && !/^(?:\/\/|\/\*|\*)/.test(TT.trim())) break;
+            if (oT) {
+              const IT = PF(TT);
+              return IT ? (BT.set(oT, IT), {
+                named: `${IT} \u2014 changed`,
+                codeNames: [oT],
                 takesOut: [],
                 isPlain: !0,
-                about: vY([rY], !1)
+                about: ST([oT], !1)
               }) : {
-                named: `Changes ${/\bfunction\b|=>/.test(YY)?`"${Pa(rY)}"`:Pa(rY)}`,
-                codeNames: [rY],
+                named: `Changes ${/\bfunction\b|=>/.test(TT)?`"${oS(oT)}"`:oS(oT)}`,
+                codeNames: [oT],
                 takesOut: [],
                 isPlain: !1,
-                about: vY([], !1)
+                about: ST([], !1)
               }
             }
           }
           return {
-            named: 0 === YY.added.length ? `Takes out lines from line ${DY}` : `Changes line ${DY}`,
+            named: 0 === TT.added.length ? `Takes out lines from line ${IT}` : `Changes line ${IT}`,
             codeNames: [],
             takesOut: [],
             isPlain: !1,
-            about: vY([], !1)
+            about: ST([], !1)
           }
-        }(YY, AY.slice(0, rY), IY),
-        OY = IY;
-      return IY += YY.added.length, [{
-        index: YY.index,
-        removed: YY.removed,
-        added: YY.added,
-        line: OY,
-        ...RY,
-        ...DY ? {
-          why: DY.why
+        }(TT, zT.slice(0, oT), kT),
+        XT = kT;
+      return kT += TT.added.length, [{
+        index: TT.index,
+        removed: TT.removed,
+        added: TT.added,
+        line: XT,
+        ...WT,
+        ...IT ? {
+          why: IT.why
         } : {}
       }]
     })),
-    OY = function(YY, rY) {
-      const DY = rY ? Ca(rY) : [];
-      if (!rY || 0 === DY.length) return YY.map((() => {}));
-      const FY = YY.map((YY => ja(YY, rY, DY) || void 0 !== YY.why && fa(DY, Ca(YY.why)))),
-        AY = new Set(YY.flatMap(((YY, rY) => {
-          var DY;
-          return FY[rY] && null !== (DY = YY.uses) && void 0 !== DY ? DY : []
+    XT = function(TT, oT) {
+      const IT = oT ? HF(oT) : [];
+      if (!oT || 0 === IT.length) return TT.map((() => {}));
+      const iT = TT.map((TT => qF(TT, oT, IT) || void 0 !== TT.why && nF(IT, HF(TT.why)))),
+        zT = new Set(TT.flatMap(((TT, oT) => {
+          var IT;
+          return iT[oT] && null !== (IT = TT.uses) && void 0 !== IT ? IT : []
         }))),
-        IY = YY.map(((YY, rY) => {
-          var DY;
-          return FY[rY] || (null !== (DY = YY.uses) && void 0 !== DY ? DY : []).some((YY => AY.has(YY)))
+        kT = TT.map(((TT, oT) => {
+          var IT;
+          return iT[oT] || (null !== (IT = TT.uses) && void 0 !== IT ? IT : []).some((TT => zT.has(TT)))
         }));
-      if (!FY.includes(!0)) return YY.map((() => {}));
-      const RY = new Set(YY.flatMap((YY => YY.names)));
-      return YY.map(((YY, FY) => {
-        if (0 === YY.names.length) {
-          var OY, gY;
-          const FY = (null !== (OY = YY.takesOut) && void 0 !== OY ? OY : []).filter((YY => ("CONFIG" === YY || za.has(YY)) && !RY.has(YY)));
-          return 0 === FY.length || ja({
-            ...YY,
-            names: FY
-          }, rY, DY) || void 0 !== YY.why && fa(DY, Ca(YY.why)) || (null !== (gY = YY.removedUses) && void 0 !== gY ? gY : []).some((YY => AY.has(YY))) ? void 0 : "takesOut"
+      if (!iT.includes(!0)) return TT.map((() => {}));
+      const WT = new Set(TT.flatMap((TT => TT.names)));
+      return TT.map(((TT, iT) => {
+        if (0 === TT.names.length) {
+          var XT, BT;
+          const iT = (null !== (XT = TT.takesOut) && void 0 !== XT ? XT : []).filter((TT => ("CONFIG" === TT || QF.has(TT)) && !WT.has(TT)));
+          return 0 === iT.length || qF({
+            ...TT,
+            names: iT
+          }, oT, IT) || void 0 !== TT.why && nF(IT, HF(TT.why)) || (null !== (BT = TT.removedUses) && void 0 !== BT ? BT : []).some((TT => zT.has(TT))) ? void 0 : "takesOut"
         }
-        if (!IY[FY]) return YY.onlyAdds ? "adds" : "changes"
+        if (!kT[iT]) return TT.onlyAdds ? "adds" : "changes"
       }))
-    }(RY.map((YY => ({
-      ...YY.about,
-      ...YY.why ? {
-        why: YY.why
+    }(WT.map((TT => ({
+      ...TT.about,
+      ...TT.why ? {
+        why: TT.why
       } : {}
-    }))), rY),
-    gY = RY.map(((YY, rY) => {
+    }))), oT),
+    BT = WT.map(((TT, oT) => {
       let {
-        named: DY,
-        codeNames: FY,
-        isPlain: AY,
-        about: IY,
-        ...gY
-      } = YY;
-      const aY = void 0 !== gY.why && 1 === RY.filter((YY => YY.why === gY.why)).length && gY.why ? gY.why.charAt(0).toUpperCase() + gY.why.slice(1) : void 0,
-        vY = !AY && aY ? aY : DY,
-        uY = OY[rY],
-        sY = uY ? vY.replace(/ \u2014 (added|changed|taken out)$/, "") : vY;
+        named: IT,
+        codeNames: iT,
+        isPlain: zT,
+        about: kT,
+        ...BT
+      } = TT;
+      const FT = void 0 !== BT.why && 1 === WT.filter((TT => TT.why === BT.why)).length && BT.why ? BT.why.charAt(0).toUpperCase() + BT.why.slice(1) : void 0,
+        ST = !zT && FT ? FT : IT,
+        DT = XT[oT],
+        LT = DT ? ST.replace(/ \u2014 (added|changed|taken out)$/, "") : ST;
       return {
-        ...gY,
-        label: sY,
-        codeNames: FY,
-        ...AY && aY ? {
-          detail: aY
+        ...BT,
+        label: LT,
+        codeNames: iT,
+        ...zT && FT ? {
+          detail: FT
         } : {},
-        ...uY ? {
-          also: uY
+        ...DT ? {
+          also: DT
         } : {}
       }
     })),
-    aY = YY => {
-      var rY, DY;
-      return `${null!==(rY=YY.also)&&void 0!==rY?rY:""}|${YY.label}|${null!==(DY=YY.detail)&&void 0!==DY?DY:""}`
+    FT = TT => {
+      var oT, IT;
+      return `${null!==(oT=TT.also)&&void 0!==oT?oT:""}|${TT.label}|${null!==(IT=TT.detail)&&void 0!==IT?IT:""}`
     };
-  return gY.map((YY => {
+  return BT.map((TT => {
     let {
-      line: rY,
-      ...DY
-    } = YY;
-    return gY.filter((YY => aY(YY) === aY(DY))).length > 1 ? {
-      ...DY,
-      label: `${DY.label} (line ${rY})`
-    } : DY
+      line: oT,
+      ...IT
+    } = TT;
+    return BT.filter((TT => FT(TT) === FT(IT))).length > 1 ? {
+      ...IT,
+      label: `${IT.label} (line ${oT})`
+    } : IT
   }))
 }
-const rv = {
+const WS = {
     added: "adds",
     changed: "changes",
     updated: "updates",
@@ -11746,1301 +11746,1301 @@ const rv = {
     gave: "gives",
     moved: "moves"
   },
-  Dv = Object.keys(rv).join("|"),
-  Fv = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
-  Av = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
-const Iv = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
+  XS = Object.keys(WS).join("|"),
+  BS = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
+  FS = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
+const SS = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
 
-function Rv(YY) {
-  return !/^['\u2018]/.test(YY[0]) || !(0, ur.d)(YY, "\\w\u2019'")
+function DS(TT) {
+  return !/^['\u2018]/.test(TT[0]) || !(0, Do.d)(TT, "\\w\u2019'")
 }
-const Ov = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
+const LS = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
 
-function gv(YY) {
-  const rY = function(YY) {
-      return (0, ur.g)(YY, Iv, Rv).map((YY => [YY.index, YY.index + YY[0].length]))
-    }(YY),
-    DY = YY => rY.some((rY => {
-      let [DY, FY] = rY;
-      return YY >= DY && YY < FY
+function xS(TT) {
+  const oT = function(TT) {
+      return (0, Do.f)(TT, SS, DS).map((TT => [TT.index, TT.index + TT[0].length]))
+    }(TT),
+    IT = TT => oT.some((oT => {
+      let [IT, iT] = oT;
+      return TT >= IT && TT < iT
     })),
-    FY = [];
-  for (const IY of YY.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${Dv})\\b`, "g"))) {
-    const rY = IY.index + IY[1].length,
-      AY = IY.index + IY[0].length,
-      RY = YY.slice(AY),
-      OY = /[.!?](?=\s|$)|\n/.exec(RY),
-      gY = OY ? RY.slice(0, OY.index) : RY;
-    if (!DY(rY) && !Ov.test(gY)) {
-      FY.push({
-        at: rY,
-        length: AY - rY,
-        words: `${IY[2]?"It also":"This"} ${rv[IY[3]]}`
+    iT = [];
+  for (const kT of TT.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${XS})\\b`, "g"))) {
+    const oT = kT.index + kT[1].length,
+      zT = kT.index + kT[0].length,
+      WT = TT.slice(zT),
+      XT = /[.!?](?=\s|$)|\n/.exec(WT),
+      BT = XT ? WT.slice(0, XT.index) : WT;
+    if (!IT(oT) && !LS.test(BT)) {
+      iT.push({
+        at: oT,
+        length: zT - oT,
+        words: `${kT[2]?"It also":"This"} ${WS[kT[3]]}`
       });
-      for (const YY of gY.matchAll(new RegExp(`\\b(and|then|also) (${Dv})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) DY(AY + YY.index) || FY.push({
-        at: AY + YY.index,
-        length: YY[0].length,
-        words: `${YY[1]} ${rv[YY[2]]}`
+      for (const TT of BT.matchAll(new RegExp(`\\b(and|then|also) (${XS})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) IT(zT + TT.index) || iT.push({
+        at: zT + TT.index,
+        length: TT[0].length,
+        words: `${TT[1]} ${WS[TT[2]]}`
       })
     }
   }
-  for (const IY of YY.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
-    const rY = Math.max(YY.lastIndexOf(".", IY.index), YY.lastIndexOf("\n", IY.index)) + 1,
-      RY = /[.!?](?=\s|$)|\n/.exec(YY.slice(IY.index)),
-      OY = YY.slice(rY, RY ? IY.index + RY.index : YY.length),
-      gY = FY.some((YY => IY.index < YY.at + YY.length && YY.at < IY.index + IY[0].length)),
-      aY = Av.test(YY.slice(rY, IY.index));
-    Fv.has(IY[1]) || aY || DY(IY.index) || Ov.test(OY) || gY || FY.push({
-      at: IY.index,
-      length: IY[0].length,
-      words: `will ${AY=IY[1],"has"===AY?"have":AY.endsWith("ies")?`${AY.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(AY)?AY.slice(0,-2):AY.slice(0,-1)}`
+  for (const kT of TT.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
+    const oT = Math.max(TT.lastIndexOf(".", kT.index), TT.lastIndexOf("\n", kT.index)) + 1,
+      WT = /[.!?](?=\s|$)|\n/.exec(TT.slice(kT.index)),
+      XT = TT.slice(oT, WT ? kT.index + WT.index : TT.length),
+      BT = iT.some((TT => kT.index < TT.at + TT.length && TT.at < kT.index + kT[0].length)),
+      FT = FS.test(TT.slice(oT, kT.index));
+    BS.has(kT[1]) || FT || IT(kT.index) || LS.test(XT) || BT || iT.push({
+      at: kT.index,
+      length: kT[0].length,
+      words: `will ${zT=kT[1],"has"===zT?"have":zT.endsWith("ies")?`${zT.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(zT)?zT.slice(0,-2):zT.slice(0,-1)}`
     })
   }
-  var AY;
-  return FY.sort(((YY, rY) => rY.at - YY.at)).reduce(((YY, rY) => YY.slice(0, rY.at) + rY.words + YY.slice(rY.at + rY.length)), YY)
+  var zT;
+  return iT.sort(((TT, oT) => oT.at - TT.at)).reduce(((TT, oT) => TT.slice(0, oT.at) + oT.words + TT.slice(oT.at + oT.length)), TT)
 }
 
-function av(YY) {
+function cS(TT) {
   let {
-    path: rY,
-    field: DY,
-    onWrite: AY,
-    isChanged: IY
-  } = YY;
-  const [OY, gY] = (0, FY.useState)(null), [aY, vY] = (0, FY.useState)(null), uY = Na(DY), [sY, iY] = (0, FY.useState)(!1), yY = (0, FY.useRef)(null), QY = async YY => {
-    if (AY && !sY) {
-      gY(null), iY(!0);
+    path: oT,
+    field: IT,
+    onWrite: zT,
+    isChanged: kT
+  } = TT;
+  const [XT, BT] = (0, iT.useState)(null), [FT, ST] = (0, iT.useState)(null), DT = jF(IT), [LT, xT] = (0, iT.useState)(!1), cT = (0, iT.useRef)(null), KT = async TT => {
+    if (zT && !LT) {
+      BT(null), xT(!0);
       try {
-        const RY = await AY(rY, DY, YY);
-        var FY, IY;
-        if (vY(RY ? null : "Your code changed here. Look at it again."), RY) null === (FY = yY.current) || void 0 === FY || null === (IY = FY.scrollIntoView) || void 0 === IY || IY.call(FY, {
+        const WT = await zT(oT, IT, TT);
+        var iT, kT;
+        if (ST(WT ? null : "Your code changed here. Look at it again."), WT) null === (iT = cT.current) || void 0 === iT || null === (kT = iT.scrollIntoView) || void 0 === kT || kT.call(iT, {
           block: "nearest"
         })
       } finally {
-        iY(!1)
+        xT(!1)
       }
     }
-  }, oY = () => {
-    if (null !== OY)
-      if ("number" === DY.kind) {
-        const YY = Number(OY.trim());
-        if ("" === OY.trim() || !Number.isFinite(YY)) return vY("That needs to be a number."), void gY(null);
-        QY(YY)
-      } else QY(OY)
-  }, WY = `WorldCodeAiSetting-${rY}-${DY.key}`;
-  return (0, RY.jsxs)("li", {
-    ref: yY,
+  }, MT = () => {
+    if (null !== XT)
+      if ("number" === IT.kind) {
+        const TT = Number(XT.trim());
+        if ("" === XT.trim() || !Number.isFinite(TT)) return ST("That needs to be a number."), void BT(null);
+        KT(TT)
+      } else KT(XT)
+  }, rT = `WorldCodeAiSetting-${oT}-${IT.key}`;
+  return (0, WT.jsxs)("li", {
+    ref: cT,
     className: "WorldCodeAiSetting",
-    children: [(0, RY.jsxs)("label", {
+    children: [(0, WT.jsxs)("label", {
       className: "WorldCodeAiSettingLabel",
-      htmlFor: WY,
-      children: [uY, DY.comment && (0, RY.jsx)("code", {
-        children: DY.key
+      htmlFor: rT,
+      children: [DT, IT.comment && (0, WT.jsx)("code", {
+        children: IT.key
       })]
-    }), "boolean" === DY.kind ? (0, RY.jsxs)("label", {
+    }), "boolean" === IT.kind ? (0, WT.jsxs)("label", {
       className: "WorldCodeAiSwitch",
-      children: [(0, RY.jsx)("input", {
-        id: WY,
+      children: [(0, WT.jsx)("input", {
+        id: rT,
         type: "checkbox",
         role: "switch",
-        checked: !0 === DY.value,
-        disabled: !AY,
-        onChange: YY => {
-          QY(YY.target.checked)
+        checked: !0 === IT.value,
+        disabled: !zT,
+        onChange: TT => {
+          KT(TT.target.checked)
         }
-      }), (0, RY.jsx)("span", {
-        children: DY.value ? "On" : "Off"
+      }), (0, WT.jsx)("span", {
+        children: IT.value ? "On" : "Off"
       })]
-    }) : (0, RY.jsxs)("div", {
+    }) : (0, WT.jsxs)("div", {
       className: "WorldCodeAiSettingControl",
-      children: ["number" === DY.kind && (0, RY.jsx)("button", {
+      children: ["number" === IT.kind && (0, WT.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `Less ${uY}`,
-        disabled: !AY,
+        "aria-label": `Less ${DT}`,
+        disabled: !zT,
         onClick: () => {
-          QY(DY.value - ea(DY.value))
+          KT(IT.value - CF(IT.value))
         },
         children: "\u2212"
-      }), (0, RY.jsx)("input", {
-        id: WY,
+      }), (0, WT.jsx)("input", {
+        id: rT,
         className: "WorldCodeAiInput WorldCodeAiSettingInput",
-        type: "number" === DY.kind ? "number" : "text",
-        inputMode: "number" === DY.kind ? "decimal" : void 0,
-        maxLength: "string" === DY.kind ? 200 : void 0,
-        value: null !== OY && void 0 !== OY ? OY : String(DY.value),
-        disabled: !AY,
-        onChange: YY => {
-          gY(YY.target.value)
+        type: "number" === IT.kind ? "number" : "text",
+        inputMode: "number" === IT.kind ? "decimal" : void 0,
+        maxLength: "string" === IT.kind ? 200 : void 0,
+        value: null !== XT && void 0 !== XT ? XT : String(IT.value),
+        disabled: !zT,
+        onChange: TT => {
+          BT(TT.target.value)
         },
-        onBlur: oY,
-        onKeyDown: YY => {
-          YY.stopPropagation(), "Enter" === YY.key ? oY() : "Escape" === YY.key && gY(null)
+        onBlur: MT,
+        onKeyDown: TT => {
+          TT.stopPropagation(), "Enter" === TT.key ? MT() : "Escape" === TT.key && BT(null)
         }
-      }), "number" === DY.kind && (0, RY.jsx)("button", {
+      }), "number" === IT.kind && (0, WT.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `More ${uY}`,
-        disabled: !AY,
+        "aria-label": `More ${DT}`,
+        disabled: !zT,
         onClick: () => {
-          QY(DY.value + ea(DY.value))
+          KT(IT.value + CF(IT.value))
         },
         children: "+"
       })]
-    }), aY && (0, RY.jsx)("span", {
+    }), FT && (0, WT.jsx)("span", {
       className: "WorldCodeAiAboutError",
-      children: aY
-    }), IY && !aY && (0, RY.jsx)("span", {
+      children: FT
+    }), kT && !FT && (0, WT.jsx)("span", {
       className: "WorldCodeAiSettingDone",
       children: "\u2713 Changed in your code"
     })]
   })
 }
 
-function vv(YY) {
+function KS(TT) {
   let {
-    files: rY,
-    onWrite: DY,
-    onTryIt: FY,
-    onUndo: AY,
-    before: IY
-  } = YY;
-  const OY = Object.entries(rY).flatMap((YY => {
-    let [rY, DY] = YY;
-    const FY = la(DY);
-    return FY.length > 0 ? [{
-      path: rY,
-      fields: FY
+    files: oT,
+    onWrite: IT,
+    onTryIt: iT,
+    onUndo: zT,
+    before: kT
+  } = TT;
+  const XT = Object.entries(oT).flatMap((TT => {
+    let [oT, IT] = TT;
+    const iT = EF(IT);
+    return iT.length > 0 ? [{
+      path: oT,
+      fields: iT
     }] : []
   }));
-  return (0, RY.jsxs)("div", {
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiSettings",
-    children: [(0, RY.jsx)("div", {
+    children: [(0, WT.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, RY.jsx)("span", {
+      children: (0, WT.jsx)("span", {
         children: "Settings of my game"
       })
-    }), 0 === OY.length ? (0, RY.jsx)("p", {
+    }), 0 === XT.length ? (0, WT.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Your code has no settings yet. Settings are the numbers and messages at the top of your code, in CONFIG."
-    }) : (0, RY.jsxs)(RY.Fragment, {
-      children: [(0, RY.jsx)("p", {
+    }) : (0, WT.jsxs)(WT.Fragment, {
+      children: [(0, WT.jsx)("p", {
         className: "WorldCodeAiAboutNote",
         children: "Changes go into your code straight away. Try them in your world."
-      }), (FY || AY) && (0, RY.jsxs)("div", {
+      }), (iT || zT) && (0, WT.jsxs)("div", {
         className: "WorldCodeAiSettingActions",
-        children: [FY && (0, RY.jsx)("button", {
+        children: [iT && (0, WT.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: FY,
+          onClick: iT,
           children: "Try it in my world"
-        }), AY && (0, RY.jsx)("button", {
+        }), zT && (0, WT.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          onClick: AY,
+          onClick: zT,
           children: "Undo these changes"
         })]
-      }), OY.map((YY => {
+      }), XT.map((TT => {
         let {
-          path: rY,
-          fields: FY
-        } = YY;
-        return (0, RY.jsxs)("div", {
-          children: [OY.length > 1 && (0, RY.jsx)("p", {
+          path: oT,
+          fields: iT
+        } = TT;
+        return (0, WT.jsxs)("div", {
+          children: [XT.length > 1 && (0, WT.jsx)("p", {
             className: "WorldCodeAiAboutHeading",
-            children: rY
-          }), (0, RY.jsx)("ul", {
+            children: oT
+          }), (0, WT.jsx)("ul", {
             className: "WorldCodeAiSettingList",
-            children: FY.map((YY => {
-              const FY = void 0 === (null === IY || void 0 === IY ? void 0 : IY[rY]) ? void 0 : la(IY[rY]).find((rY => rY.key === YY.key));
-              return (0, RY.jsx)(av, {
-                isChanged: !!IY && (null === FY || void 0 === FY ? void 0 : FY.value) !== YY.value,
-                path: rY,
-                field: YY,
-                onWrite: DY
-              }, YY.key)
+            children: iT.map((TT => {
+              const iT = void 0 === (null === kT || void 0 === kT ? void 0 : kT[oT]) ? void 0 : EF(kT[oT]).find((oT => oT.key === TT.key));
+              return (0, WT.jsx)(cS, {
+                isChanged: !!kT && (null === iT || void 0 === iT ? void 0 : iT.value) !== TT.value,
+                path: oT,
+                field: TT,
+                onWrite: IT
+              }, TT.key)
             }))
           })]
-        }, rY)
+        }, oT)
       }))]
     })]
   })
 }
-const uv = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
-const sv = ["Reading your code", "Planning", "Writing", "Safety check"];
+const MS = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
+const rS = ["Reading your code", "Planning", "Writing", "Safety check"];
 
-function iv(YY) {
-  if (YY <= 1e4) return "It starts in a few seconds.";
-  const rY = 10 * Math.ceil(YY / 1e4);
-  return rY >= 60 ? "It starts in about a minute." : `It starts in about ${rY} seconds.`
+function AS(TT) {
+  if (TT <= 1e4) return "It starts in a few seconds.";
+  const oT = 10 * Math.ceil(TT / 1e4);
+  return oT >= 60 ? "It starts in about a minute." : `It starts in about ${oT} seconds.`
 }
-var yv = DY(3258);
+var gS = IT(3210);
 
-function Qv(YY, rY) {
-  const DY = new Map;
-  for (const AY of hA(YY)) {
-    var FY;
-    DY.set(AY, (null !== (FY = DY.get(AY)) && void 0 !== FY ? FY : 0) + 1)
+function hS(TT, oT) {
+  const IT = new Map;
+  for (const zT of qz(TT)) {
+    var iT;
+    IT.set(zT, (null !== (iT = IT.get(zT)) && void 0 !== iT ? iT : 0) + 1)
   }
-  return hA(rY).filter((YY => {
-    var rY;
-    const FY = null !== (rY = DY.get(YY)) && void 0 !== rY ? rY : 0;
-    return DY.set(YY, FY - 1), FY <= 0
+  return qz(oT).filter((TT => {
+    var oT;
+    const iT = null !== (oT = IT.get(TT)) && void 0 !== oT ? oT : 0;
+    return IT.set(TT, iT - 1), iT <= 0
   }))
 }
 
-function ov(YY, rY) {
-  return new Promise(((DY, FY) => {
-    if (null !== rY && void 0 !== rY && rY.aborted) return void FY((0, yv.h)(rY));
-    const AY = setTimeout(DY, YY);
-    null === rY || void 0 === rY || rY.addEventListener("abort", (() => {
-      clearTimeout(AY), FY((0, yv.h)(rY))
+function wS(TT, oT) {
+  return new Promise(((IT, iT) => {
+    if (null !== oT && void 0 !== oT && oT.aborted) return void iT((0, gS.f)(oT));
+    const zT = setTimeout(IT, TT);
+    null === oT || void 0 === oT || oT.addEventListener("abort", (() => {
+      clearTimeout(zT), iT((0, gS.f)(oT))
     }), {
       once: !0
     })
   }))
 }
-async function Wv(YY, rY, DY, FY, AY) {
-  const IY = new Set;
-  for (; Date.now() < DY;) {
-    var RY;
-    const OY = HA.filter((YY => !IY.has(YY)));
-    if (0 === OY.length) return null;
-    const gY = LA.firstFreeAt(OY);
-    if (gY > Date.now()) {
-      if (gY > DY) return null;
-      null === AY || void 0 === AY || AY(gY), await ov(gY - Date.now(), FY)
+async function mS(TT, oT, IT, iT, zT) {
+  const kT = new Set;
+  for (; Date.now() < IT;) {
+    var WT;
+    const XT = az.filter((TT => !kT.has(TT)));
+    if (0 === XT.length) return null;
+    const BT = ik.firstFreeAt(XT);
+    if (BT > Date.now()) {
+      if (BT > IT) return null;
+      null === zT || void 0 === zT || zT(BT), await wS(BT - Date.now(), iT)
     }
-    const aY = null !== (RY = OY.find((YY => LA.freeAt(YY) <= Date.now()))) && void 0 !== RY ? RY : OY[0],
-      vY = await hI(aY, [{
+    const FT = null !== (WT = XT.find((TT => ik.freeAt(TT) <= Date.now()))) && void 0 !== WT ? WT : XT[0],
+      ST = await Zk(FT, [{
         role: "user",
-        content: YY
+        content: TT
       }, {
         role: "assistant",
-        content: rY
-      }], FY);
-    if (null === vY) IY.add(aY);
-    else if ("busy" !== vY) return vY
+        content: oT
+      }], iT);
+    if (null === ST) kT.add(FT);
+    else if ("busy" !== ST) return ST
   }
   return null
 }
-async function Ev(YY, rY, DY, FY) {
-  const AY = function(YY) {
-    const rY = [YY.text, ...YY.question ? [YY.question.question, ...YY.question.choices] : [], ...YY.plan, ...YY.notes, ...YY.actions.flatMap((YY => "switchToWorldCode" === YY.kind && YY.request ? [YY.request] : [])), ...YY.lookups.flatMap((YY => Object.values(YY.args).filter((YY => void 0 !== YY)))), ...YY.changes.flatMap((YY => {
-      var rY, DY;
-      return [...null !== (rY = YY.why) && void 0 !== rY ? rY : [], ...(null !== (DY = YY.parts) && void 0 !== DY ? DY : []).map((YY => YY.why)), ...Qv(YY.before, YY.after)]
-    })), ...YY.worldCode.flatMap((YY => hA(YY)))];
-    return rY.map((YY => YY.trim())).filter((YY => "" !== YY)).join("\n")
-  }(rY);
-  if ("" === AY) return "ok";
-  const IY = Date.now() + 75e3;
-  for (const RY of function(YY) {
-      const rY = [];
-      let DY = YY;
-      for (; DY.length > zA;) {
-        const YY = DY.lastIndexOf("\n", zA),
-          FY = YY > 6e3 ? YY : zA;
-        rY.push(DY.slice(0, FY)), DY = DY.slice(FY)
+async function eS(TT, oT, IT, iT) {
+  const zT = function(TT) {
+    const oT = [TT.text, ...TT.question ? [TT.question.question, ...TT.question.choices] : [], ...TT.plan, ...TT.notes, ...TT.actions.flatMap((TT => "switchToWorldCode" === TT.kind && TT.request ? [TT.request] : [])), ...TT.lookups.flatMap((TT => Object.values(TT.args).filter((TT => void 0 !== TT)))), ...TT.changes.flatMap((TT => {
+      var oT, IT;
+      return [...null !== (oT = TT.why) && void 0 !== oT ? oT : [], ...(null !== (IT = TT.parts) && void 0 !== IT ? IT : []).map((TT => TT.why)), ...hS(TT.before, TT.after)]
+    })), ...TT.worldCode.flatMap((TT => qz(TT)))];
+    return oT.map((TT => TT.trim())).filter((TT => "" !== TT)).join("\n")
+  }(oT);
+  if ("" === zT) return "ok";
+  const kT = Date.now() + 75e3;
+  for (const WT of function(TT) {
+      const oT = [];
+      let IT = TT;
+      for (; IT.length > Yz;) {
+        const TT = IT.lastIndexOf("\n", Yz),
+          iT = TT > 6e3 ? TT : Yz;
+        oT.push(IT.slice(0, iT)), IT = IT.slice(iT)
       }
-      return [...rY, DY]
-    }(AY)) {
-    const rY = await jA(RY, (rY => Wv(YY, rY, IY, DY, FY)));
-    if ("ok" !== rY) return rY
+      return [...oT, IT]
+    }(zT)) {
+    const oT = await nz(WT, (oT => mS(TT, oT, kT, IT, iT)));
+    if ("ok" !== oT) return oT
   }
   return "ok"
 }
-const mv = "worldCodeAiAnswerTimes";
+const RS = "worldCodeAiAnswerTimes";
 
-function Vv(YY, rY) {
-  var DY;
-  const FY = rY && null !== (DY = YY[rY]) && void 0 !== DY ? DY : [],
-    AY = FY.length >= 2 ? FY : Object.values(YY).flat();
-  return AY.length < 2 ? "Usually under a minute." : `Usually ${function(YY){const rY=Math.max(5,5*Math.round(YY/5e3));if(rY<60)return`about ${rY} seconds`;const DY=10*Math.round(YY/1e4),FY=Math.floor(DY/60),AY=DY%60,IY=`${FY} ${1===FY?"minute":"minutes"}`;return 0===AY?`about ${IY}`:`about ${IY} ${AY} seconds`}(function(YY){const rY=[...YY].sort(((YY,rY)=>YY-rY)),DY=Math.floor(rY.length/2);return rY.length%2===1?rY[DY]:(rY[DY-1]+rY[DY])/2}(AY))}.`
+function uS(TT, oT) {
+  var IT;
+  const iT = oT && null !== (IT = TT[oT]) && void 0 !== IT ? IT : [],
+    zT = iT.length >= 2 ? iT : Object.values(TT).flat();
+  return zT.length < 2 ? "Usually under a minute." : `Usually ${function(TT){const oT=Math.max(5,5*Math.round(TT/5e3));if(oT<60)return`about ${oT} seconds`;const IT=10*Math.round(TT/1e4),iT=Math.floor(IT/60),zT=IT%60,kT=`${iT} ${1===iT?"minute":"minutes"}`;return 0===zT?`about ${kT}`:`about ${kT} ${zT} seconds`}(function(TT){const oT=[...TT].sort(((TT,oT)=>TT-oT)),IT=Math.floor(oT.length/2);return oT.length%2===1?oT[IT]:(oT[IT-1]+oT[IT])/2}(zT))}.`
 }
-var Sv = DY(36308);
+var vS = IT(35872);
 
-function lv(YY, rY) {
-  const DY = YY.split("\n"),
-    FY = rY.split("\n"),
-    AY = FY.findIndex(((YY, rY) => YY !== DY[rY]));
-  return (-1 === AY ? Math.min(DY.length, FY.length) - 1 : AY) + 1
+function ES(TT, oT) {
+  const IT = TT.split("\n"),
+    iT = oT.split("\n"),
+    zT = iT.findIndex(((TT, oT) => TT !== IT[oT]));
+  return (-1 === zT ? Math.min(IT.length, iT.length) - 1 : zT) + 1
 }
 
-function Tv(YY, rY) {
-  return YY.filter((YY => YY.path !== rY)).map((YY => ({
-    path: YY.path,
-    line: lv(YY.before, YY.after)
+function fS(TT, oT) {
+  return TT.filter((TT => TT.path !== oT)).map((TT => ({
+    path: TT.path,
+    line: ES(TT.before, TT.after)
   })))
 }
 
-function ev(YY) {
-  return `Moving to ${YY} code\u2026`
+function CS(TT) {
+  return `Moving to ${TT} code\u2026`
 }
 
-function Nv(YY) {
-  return YY.fromLine === YY.toLine ? `line ${YY.fromLine}` : `lines ${YY.fromLine}-${YY.toLine}`
+function jS(TT) {
+  return TT.fromLine === TT.toLine ? `line ${TT.fromLine}` : `lines ${TT.fromLine}-${TT.toLine}`
 }
 
-function Bv(YY) {
-  const rY = YY.text.length > 4e3 ? `${YY.text.slice(0,4e3)}\n...` : YY.text;
-  return `The part I picked (${YY.path}, ${Nv(YY)}):\n\`\`\`\n${rY}\n\`\`\``
+function JS(TT) {
+  const oT = TT.text.length > 4e3 ? `${TT.text.slice(0,4e3)}\n...` : TT.text;
+  return `The part I picked (${TT.path}, ${jS(TT)}):\n\`\`\`\n${oT}\n\`\`\``
 }
 
-function cv(YY) {
-  let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  switch (YY.action) {
+function US(TT) {
+  let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  switch (TT.action) {
     case "explain":
-      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${Bv(YY)}`;
+      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${JS(TT)}`;
     case "fix":
-      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${Bv(YY)}`;
+      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${JS(TT)}`;
     case "change":
-      return `${rY.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${Bv(YY)}`
+      return `${oT.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${JS(TT)}`
   }
 }
 
-function Kv(YY) {
-  let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  const DY = Nv(YY);
-  switch (YY.action) {
+function aS(TT) {
+  let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  const IT = jS(TT);
+  switch (TT.action) {
     case "explain":
-      return `Explain ${DY}`;
+      return `Explain ${IT}`;
     case "fix":
-      return `Fix ${DY}`;
+      return `Fix ${IT}`;
     case "change":
-      return `${rY.trim()} (${DY})`
+      return `${oT.trim()} (${IT})`
   }
 }
-var Hv = DY(40472),
-  zv = DY(4340),
-  Zv = DY(40452),
-  Cv = DY(40466),
-  fv = DY(40457);
+var YS = IT(40199),
+  QS = IT(4243),
+  OS = IT(40183),
+  HS = IT(40194),
+  nS = IT(40191);
 
-function jv(YY) {
-  return YY ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
+function qS(TT) {
+  return TT ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
 }
-const hv = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
-  dv = new Set([2304, 2552]),
-  Jv = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
-  Mv = {};
+const ZS = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
+  lS = new Set([2304, 2552]),
+  sS = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
+  tS = {};
 
-function wv() {
-  let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  const rY = YY ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
-  let DY = Mv[rY];
-  if (!DY) {
-    const FY = jv("worldCodeTs" === rY),
-      AY = new Map(YY ? [
-        [FY, "\n"],
-        ["/globals.d.ts", Zv.c],
-        ["/lib.d.ts", Cv.e]
+function GS() {
+  let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+  const oT = TT ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
+  let IT = tS[oT];
+  if (!IT) {
+    const iT = qS("worldCodeTs" === oT),
+      zT = new Map(TT ? [
+        [iT, "\n"],
+        ["/globals.d.ts", OS.b],
+        ["/lib.d.ts", HS.d]
       ] : [
-        [FY, "\n"],
-        ["/node_modules/@bloxd/index.d.ts", zv.default],
-        ["/globals.d.ts", fv.b],
-        ["/lib.d.ts", Cv.e]
+        [iT, "\n"],
+        ["/node_modules/@bloxd/index.d.ts", QS.default],
+        ["/globals.d.ts", nS.d],
+        ["/lib.d.ts", HS.d]
       ]);
-    DY = Hv.e(Hv.b(AY), [...AY.keys()], eY(), {
+    IT = YS.f(YS.d(zT), [...zT.keys()], RT(), {
       allowJs: !0,
       checkJs: !0,
       noLib: !0,
       strict: !1,
-      module: eY().ModuleKind.ESNext,
-      moduleResolution: eY().ModuleResolutionKind.Bundler,
-      target: eY().ScriptTarget.ES2015,
+      module: RT().ModuleKind.ESNext,
+      moduleResolution: RT().ModuleResolutionKind.Bundler,
+      target: RT().ScriptTarget.ES2015,
       allowUnreachableCode: !1,
       paths: {
         "@bloxd": ["/node_modules/@bloxd/index.d.ts"]
       }
-    }), Mv[rY] = DY
+    }), tS[oT] = IT
   }
-  return DY
+  return IT
 }
 
-function bv(YY, rY, DY) {
-  let FY;
-  const AY = IY => {
-    rY < IY.getStart(YY) || rY >= IY.getEnd() || (eY().isFunctionLike(IY) && rY > IY.getStart(YY) && (FY = void 0), eY().isCallExpression(IY) && (rY >= IY.expression.getEnd() || DY <= IY.expression.getEnd()) && (FY = IY), eY().forEachChild(IY, AY))
+function pS(TT, oT, IT) {
+  let iT;
+  const zT = kT => {
+    oT < kT.getStart(TT) || oT >= kT.getEnd() || (RT().isFunctionLike(kT) && oT > kT.getStart(TT) && (iT = void 0), RT().isCallExpression(kT) && (oT >= kT.expression.getEnd() || IT <= kT.expression.getEnd()) && (iT = kT), RT().forEachChild(kT, zT))
   };
-  return AY(YY), FY && XD(FY, YY) ? FY : void 0
+  return zT(TT), iT && tI(iT, TT) ? iT : void 0
 }
 
-function Xv(YY, rY, DY) {
-  let FY;
-  const AY = IY => {
-    rY < IY.getStart(YY) || DY > IY.getEnd() || (FY = IY, eY().forEachChild(IY, AY))
+function bS(TT, oT, IT) {
+  let iT;
+  const zT = kT => {
+    oT < kT.getStart(TT) || IT > kT.getEnd() || (iT = kT, RT().forEachChild(kT, zT))
   };
-  return AY(YY), FY
+  return zT(TT), iT
 }
 
-function qv(YY) {
-  return YY.toLowerCase().replace(/[^a-z0-9]/g, "")
+function yS(TT) {
+  return TT.toLowerCase().replace(/[^a-z0-9]/g, "")
 }
 
-function pv(YY, rY) {
-  const DY = qv(YY);
-  if (!DY) return;
-  const FY = rY.find((YY => qv(YY) === DY));
-  if (FY) return `"${FY}"`;
-  const AY = rY.filter((YY => {
-    const rY = qv(YY);
-    return rY.includes(DY) || DY.includes(rY)
-  })).sort(((YY, rY) => YY.length - rY.length));
-  if (AY.length > 0) return AY.slice(0, 2).map((YY => `"${YY}"`)).join(" or ");
-  const IY = new Set(YY.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
-  let RY;
-  for (const OY of rY) {
-    const YY = OY.toLowerCase().split(/[^a-z0-9]+/).filter((YY => IY.has(YY))).length;
-    YY > 0 && (!RY || YY > RY.shared) && (RY = {
-      option: OY,
-      shared: YY
+function NS(TT, oT) {
+  const IT = yS(TT);
+  if (!IT) return;
+  const iT = oT.find((TT => yS(TT) === IT));
+  if (iT) return `"${iT}"`;
+  const zT = oT.filter((TT => {
+    const oT = yS(TT);
+    return oT.includes(IT) || IT.includes(oT)
+  })).sort(((TT, oT) => TT.length - oT.length));
+  if (zT.length > 0) return zT.slice(0, 2).map((TT => `"${TT}"`)).join(" or ");
+  const kT = new Set(TT.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+  let WT;
+  for (const XT of oT) {
+    const TT = XT.toLowerCase().split(/[^a-z0-9]+/).filter((TT => kT.has(TT))).length;
+    TT > 0 && (!WT || TT > WT.shared) && (WT = {
+      option: XT,
+      shared: TT
     })
   }
-  return RY ? `"${RY.option}"` : void 0
+  return WT ? `"${WT.option}"` : void 0
 }
 
-function kv(YY) {
-  for (let rY = YY; rY && !eY().isSourceFile(rY); rY = rY.parent)
-    if (eY().isExpressionWithTypeArguments(rY)) {
-      if (eY().isHeritageClause(rY.parent) && rY.parent.token === eY().SyntaxKind.ImplementsKeyword) return !0
-    } else if (eY().isTypeNode(rY)) return !0;
+function PS(TT) {
+  for (let oT = TT; oT && !RT().isSourceFile(oT); oT = oT.parent)
+    if (RT().isExpressionWithTypeArguments(oT)) {
+      if (RT().isHeritageClause(oT.parent) && oT.parent.token === RT().SyntaxKind.ImplementsKeyword) return !0
+    } else if (RT().isTypeNode(oT)) return !0;
   return !1
 }
 
-function Gv(YY) {
-  var rY;
-  let DY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    FY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const AY = jv(FY && !DY),
-    IY = wv(DY, FY);
-  IY.updateFile(AY, YY || "\n");
-  const RY = IY.getSourceFile(AY),
-    OY = null === (rY = IY.languageService.getProgram()) || void 0 === rY ? void 0 : rY.getTypeChecker();
-  if (!RY || !OY) return [];
-  const gY = new Set,
-    aY = IY.languageService.getSyntacticDiagnostics(AY)[0];
-  if (void 0 !== (null === aY || void 0 === aY ? void 0 : aY.start)) {
-    var vY, uY;
-    const rY = RY.getLineAndCharacterOfPosition(aY.start).line,
-      DY = null !== (vY = null === (uY = YY.split("\n")[rY]) || void 0 === uY ? void 0 : uY.trim()) && void 0 !== vY ? vY : "",
-      FY = DY.length > 40 ? `${DY.slice(0,37)}...` : DY,
-      AY = eY().flattenDiagnosticMessageText(aY.messageText, " ").replace(/\.$/, "");
-    gY.add(`Line ${rY+1} stops all of this code from running: "${FY}" (${AY}).`)
+function dS(TT) {
+  var oT;
+  let IT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    iT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const zT = qS(iT && !IT),
+    kT = GS(IT, iT);
+  kT.updateFile(zT, TT || "\n");
+  const WT = kT.getSourceFile(zT),
+    XT = null === (oT = kT.languageService.getProgram()) || void 0 === oT ? void 0 : oT.getTypeChecker();
+  if (!WT || !XT) return [];
+  const BT = new Set,
+    FT = kT.languageService.getSyntacticDiagnostics(zT)[0];
+  if (void 0 !== (null === FT || void 0 === FT ? void 0 : FT.start)) {
+    var ST, DT;
+    const oT = WT.getLineAndCharacterOfPosition(FT.start).line,
+      IT = null !== (ST = null === (DT = TT.split("\n")[oT]) || void 0 === DT ? void 0 : DT.trim()) && void 0 !== ST ? ST : "",
+      iT = IT.length > 40 ? `${IT.slice(0,37)}...` : IT,
+      zT = RT().flattenDiagnosticMessageText(FT.messageText, " ").replace(/\.$/, "");
+    BT.add(`Line ${oT+1} stops all of this code from running: "${iT}" (${zT}).`)
   }
-  const sY = new Set;
-  for (const jY of IY.languageService.getSemanticDiagnostics(AY)) {
-    var iY, yY, QY, oY, WY, EY, mY, VY;
-    if (7027 === jY.code && void 0 !== jY.start) {
-      var SY, lY;
-      const rY = RY.getLineAndCharacterOfPosition(jY.start).line,
-        DY = null !== (SY = null === (lY = YY.split("\n")[rY]) || void 0 === lY ? void 0 : lY.trim()) && void 0 !== SY ? SY : "",
-        FY = DY.length > 40 ? `${DY.slice(0,37)}...` : DY;
-      gY.add(`Line ${rY+1} never runs: "${FY}" comes after a return, which ends the function first.`);
+  const LT = new Set;
+  for (const YT of kT.languageService.getSemanticDiagnostics(zT)) {
+    var xT, cT, KT, MT, rT, AT, gT, hT;
+    if (7027 === YT.code && void 0 !== YT.start) {
+      var wT, mT;
+      const oT = WT.getLineAndCharacterOfPosition(YT.start).line,
+        IT = null !== (wT = null === (mT = TT.split("\n")[oT]) || void 0 === mT ? void 0 : mT.trim()) && void 0 !== wT ? wT : "",
+        iT = IT.length > 40 ? `${IT.slice(0,37)}...` : IT;
+      BT.add(`Line ${oT+1} never runs: "${iT}" comes after a return, which ends the function first.`);
       continue
     }
-    if (dv.has(jY.code) && void 0 !== jY.start) {
-      var TY, NY;
-      const rY = jY.start + (null !== (TY = jY.length) && void 0 !== TY ? TY : 0),
-        DY = YY.slice(jY.start, rY),
-        FY = /^\s*\(/.test(YY.slice(rY)),
-        AY = new RegExp(`^${DY.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(YY),
-        IY = YY.slice(0, jY.start),
-        OY = IY.lastIndexOf("/*") > IY.lastIndexOf("*/") || IY.slice(IY.lastIndexOf("\n")).includes("//"),
-        vY = new RegExp(`//\\s*(?:const|let|var)\\s+${DY.replaceAll("$","\\$")}\\b`).test(YY),
-        uY = new RegExp(`typeof\\s+${DY.replaceAll("$","\\$")}\\b`).test(YY);
-      if (Jv.has(DY) || sY.has(DY) || FY || AY || OY || vY || uY || aY || kv(Xv(RY, jY.start, rY))) continue;
-      sY.add(DY);
-      const iY = RY.getLineAndCharacterOfPosition(jY.start).line,
-        yY = null === (NY = /Did you mean '([\w$]+)'\?/.exec(eY().flattenDiagnosticMessageText(jY.messageText, " "))) || void 0 === NY ? void 0 : NY[1];
-      gY.add(yY ? `Line ${iY+1} uses "${DY}", which is never set, so it throws there. Did you mean "${yY}"?` : `Line ${iY+1} uses "${DY}", which isn't set there, so it throws when that line runs.`);
+    if (lS.has(YT.code) && void 0 !== YT.start) {
+      var eT, uT;
+      const oT = YT.start + (null !== (eT = YT.length) && void 0 !== eT ? eT : 0),
+        IT = TT.slice(YT.start, oT),
+        iT = /^\s*\(/.test(TT.slice(oT)),
+        zT = new RegExp(`^${IT.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(TT),
+        kT = TT.slice(0, YT.start),
+        XT = kT.lastIndexOf("/*") > kT.lastIndexOf("*/") || kT.slice(kT.lastIndexOf("\n")).includes("//"),
+        ST = new RegExp(`//\\s*(?:const|let|var)\\s+${IT.replaceAll("$","\\$")}\\b`).test(TT),
+        DT = new RegExp(`typeof\\s+${IT.replaceAll("$","\\$")}\\b`).test(TT);
+      if (sS.has(IT) || LT.has(IT) || iT || zT || XT || ST || DT || FT || PS(bS(WT, YT.start, oT))) continue;
+      LT.add(IT);
+      const xT = WT.getLineAndCharacterOfPosition(YT.start).line,
+        cT = null === (uT = /Did you mean '([\w$]+)'\?/.exec(RT().flattenDiagnosticMessageText(YT.messageText, " "))) || void 0 === uT ? void 0 : uT[1];
+      BT.add(cT ? `Line ${xT+1} uses "${IT}", which is never set, so it throws there. Did you mean "${cT}"?` : `Line ${xT+1} uses "${IT}", which isn't set there, so it throws when that line runs.`);
       continue
     }
-    if (!hv.has(jY.code) || void 0 === jY.start) continue;
-    const rY = eY().flattenDiagnosticMessageText(jY.messageText, " ");
-    if (rY.includes("'string | number'")) continue;
-    const DY = jY.start + (null !== (iY = jY.length) && void 0 !== iY ? iY : 0),
-      FY = bv(RY, jY.start, DY);
-    if (!FY) continue;
-    const AY = Xv(RY, jY.start, DY),
-      IY = FY.expression.getText(RY),
-      vY = null !== AY && void 0 !== AY && AY.parent && eY().isPropertyAssignment(AY.parent) && AY.parent.name === AY ? AY.parent : void 0,
-      uY = (vY ? vY.getText(RY) : YY.slice(jY.start, DY)).replace(/\s+/g, " "),
-      hY = uY.length > 40 ? `${uY.slice(0,37)}...` : uY;
-    if (2554 === jY.code) {
-      var BY, cY, KY;
-      const YY = rY.match(/Expected (\S+) arguments?, but got (\d+)/),
-        DY = null !== (BY = null === YY || void 0 === YY || null === (cY = YY[1]) || void 0 === cY ? void 0 : cY.replace("-", " to ")) && void 0 !== BY ? BY : "a different number of",
-        AY = Number(null !== (KY = null === YY || void 0 === YY ? void 0 : YY[2]) && void 0 !== KY ? KY : FY.arguments.length);
-      gY.add(`${IY} needs ${DY} ${"1"===DY?"value":"values"}, but this line gives it ${AY}.`);
+    if (!ZS.has(YT.code) || void 0 === YT.start) continue;
+    const oT = RT().flattenDiagnosticMessageText(YT.messageText, " ");
+    if (oT.includes("'string | number'")) continue;
+    const IT = YT.start + (null !== (xT = YT.length) && void 0 !== xT ? xT : 0),
+      iT = pS(WT, YT.start, IT);
+    if (!iT) continue;
+    const zT = bS(WT, YT.start, IT),
+      kT = iT.expression.getText(WT),
+      ST = null !== zT && void 0 !== zT && zT.parent && RT().isPropertyAssignment(zT.parent) && zT.parent.name === zT ? zT.parent : void 0,
+      DT = (ST ? ST.getText(WT) : TT.slice(YT.start, IT)).replace(/\s+/g, " "),
+      QT = DT.length > 40 ? `${DT.slice(0,37)}...` : DT;
+    if (2554 === YT.code) {
+      var vT, ET, fT;
+      const TT = oT.match(/Expected (\S+) arguments?, but got (\d+)/),
+        IT = null !== (vT = null === TT || void 0 === TT || null === (ET = TT[1]) || void 0 === ET ? void 0 : ET.replace("-", " to ")) && void 0 !== vT ? vT : "a different number of",
+        zT = Number(null !== (fT = null === TT || void 0 === TT ? void 0 : TT[2]) && void 0 !== fT ? fT : iT.arguments.length);
+      BT.add(`${kT} needs ${IT} ${"1"===IT?"value":"values"}, but this line gives it ${zT}.`);
       continue
     }
-    if (2353 === jY.code) {
-      var HY, zY;
-      const YY = null !== (HY = null === (zY = rY.match(/'([^']*)' does not exist/)) || void 0 === zY ? void 0 : zY[1]) && void 0 !== HY ? HY : hY,
-        DY = null !== AY && void 0 !== AY && AY.parent && eY().isPropertyAssignment(AY.parent) ? AY.parent.parent : null === AY || void 0 === AY ? void 0 : AY.parent,
-        FY = DY && eY().isObjectLiteralExpression(DY) ? OY.getContextualType(DY) : void 0,
-        RY = pv(YY, FY && !OY.isArrayType(OY.getNonNullableType(FY)) ? OY.getPropertiesOfType(OY.getNonNullableType(FY)).map((YY => YY.name)) : []),
-        aY = FY ? ` It takes ${kD(OY,FY)}.` : " Check Show Docs for its settings.";
-      gY.add(`${IY} has no setting called "${YY}".${RY?` Did you mean ${RY}?`:aY}`);
+    if (2353 === YT.code) {
+      var CT, jT;
+      const TT = null !== (CT = null === (jT = oT.match(/'([^']*)' does not exist/)) || void 0 === jT ? void 0 : jT[1]) && void 0 !== CT ? CT : QT,
+        IT = null !== zT && void 0 !== zT && zT.parent && RT().isPropertyAssignment(zT.parent) ? zT.parent.parent : null === zT || void 0 === zT ? void 0 : zT.parent,
+        iT = IT && RT().isObjectLiteralExpression(IT) ? XT.getContextualType(IT) : void 0,
+        WT = NS(TT, iT && !XT.isArrayType(XT.getNonNullableType(iT)) ? XT.getPropertiesOfType(XT.getNonNullableType(iT)).map((TT => TT.name)) : []),
+        FT = iT ? ` It takes ${bI(XT,iT)}.` : " Check Show Docs for its settings.";
+      BT.add(`${kT} has no setting called "${TT}".${WT?` Did you mean ${WT}?`:FT}`);
       continue
     }
-    const dY = null !== (yY = null === vY || void 0 === vY ? void 0 : vY.initializer) && void 0 !== yY ? yY : AY,
-      JY = dY && eY().isExpression(dY) ? OY.getContextualType(dY) : void 0,
-      MY = (null !== (fY = JY) && void 0 !== fY && fY.isUnion() ? fY.types : fY ? [fY] : []).filter((YY => YY.isStringLiteral())).map((YY => YY.value)),
-      wY = rY.includes("keyof ") ? "setting" : "name",
-      bY = null !== (QY = null === dY || void 0 === dY ? void 0 : dY.getText(RY)) && void 0 !== QY ? QY : uY,
-      XY = MY.length > 0 ? null === (oY = /^CONFIG\.([\w$]+)$/.exec(bY)) || void 0 === oY ? void 0 : oY[1] : void 0;
-    if (void 0 !== XY) {
-      var ZY;
-      const rY = null === (ZY = new RegExp(`(?:^|[{,])\\s*${XY.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(YY)) || void 0 === ZY ? void 0 : ZY[2];
-      if (void 0 !== rY && !MY.includes(rY)) {
-        const YY = pv(rY, MY);
-        gY.add(`${IY} has no ${wY} called "${rY}" (${bY}).${YY?` Did you mean ${YY}?`:""}`)
+    const OT = null !== (cT = null === ST || void 0 === ST ? void 0 : ST.initializer) && void 0 !== cT ? cT : zT,
+      HT = OT && RT().isExpression(OT) ? XT.getContextualType(OT) : void 0,
+      nT = (null !== (aT = HT) && void 0 !== aT && aT.isUnion() ? aT.types : aT ? [aT] : []).filter((TT => TT.isStringLiteral())).map((TT => TT.value)),
+      qT = oT.includes("keyof ") ? "setting" : "name",
+      ZT = null !== (KT = null === OT || void 0 === OT ? void 0 : OT.getText(WT)) && void 0 !== KT ? KT : DT,
+      lT = nT.length > 0 ? null === (MT = /^CONFIG\.([\w$]+)$/.exec(ZT)) || void 0 === MT ? void 0 : MT[1] : void 0;
+    if (void 0 !== lT) {
+      var JT;
+      const oT = null === (JT = new RegExp(`(?:^|[{,])\\s*${lT.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(TT)) || void 0 === JT ? void 0 : JT[2];
+      if (void 0 !== oT && !nT.includes(oT)) {
+        const TT = NS(oT, nT);
+        BT.add(`${kT} has no ${qT} called "${oT}" (${ZT}).${TT?` Did you mean ${TT}?`:""}`)
       }
       continue
     }
-    if (JY && dY && GD(OY, OY.getTypeAtLocation(dY), JY)) continue;
-    if (MY.length > 0) {
-      const YY = dY && eY().isStringLiteral(dY) ? dY : void 0,
-        rY = YY ? pv(YY.text, MY) : void 0,
-        DY = YY && !vY ? `${IY} has no ${wY} called ${CY=hY,CY.startsWith('"')?CY:`"${CY}"`}.` : `${IY} can't take ${hY} there.`;
-      gY.add(`${DY}${rY?` Did you mean ${rY}?`:" Check Show Docs for what it takes."}`);
+    if (HT && OT && yI(XT, XT.getTypeAtLocation(OT), HT)) continue;
+    if (nT.length > 0) {
+      const TT = OT && RT().isStringLiteral(OT) ? OT : void 0,
+        oT = TT ? NS(TT.text, nT) : void 0,
+        IT = TT && !ST ? `${kT} has no ${qT} called ${UT=QT,UT.startsWith('"')?UT:`"${UT}"`}.` : `${kT} can't take ${QT} there.`;
+      BT.add(`${IT}${oT?` Did you mean ${oT}?`:" Check Show Docs for what it takes."}`);
       continue
     }
-    if (JY && dY && pD(OY.getTypeAtLocation(dY))) {
-      gY.add(`${IY} can't take ${hY} there: it takes ${kD(OY,JY)}.`);
+    if (HT && OT && pI(XT.getTypeAtLocation(OT))) {
+      BT.add(`${kT} can't take ${QT} there: it takes ${bI(XT,HT)}.`);
       continue
     }
-    const qY = JY && OY.getNonNullableType(JY);
-    if (qY && pD(qY) && !OY.isArrayType(qY) && !OY.isTupleType(qY)) {
-      const YY = qD(OY, JY);
-      gY.add(`${IY} needs settings in { } there${YY?`, like ${YY}`:""}, not ${hY}.`);
+    const sT = HT && XT.getNonNullableType(HT);
+    if (sT && pI(sT) && !XT.isArrayType(sT) && !XT.isTupleType(sT)) {
+      const TT = GI(XT, HT);
+      BT.add(`${kT} needs settings in { } there${TT?`, like ${TT}`:""}, not ${QT}.`);
       continue
     }
-    const pY = null === (WY = rY.match(/parameter of type '([^']*)'/)) || void 0 === WY ? void 0 : WY[1],
-      kY = FY.arguments.findIndex((YY => YY.getStart(RY) <= jY.start && jY.start < YY.getEnd())),
-      GY = null !== (EY = null === (mY = OY.getResolvedSignature(FY)) || void 0 === mY || null === (VY = mY.parameters[kY]) || void 0 === VY ? void 0 : VY.name) && void 0 !== EY ? EY : "that part",
-      xY = AY ? OY.typeToString(OY.getTypeAtLocation(AY)) : "",
-      nY = "number" === xY ? "a number" : "string" === xY ? "text" : "something else";
-    "string" === pY ? gY.add(`${IY} needs ${GY} as text, but ${hY} is ${nY} here.`) : "number" === pY ? gY.add(`${IY} needs ${GY} as a number, but ${hY} is ${nY} here.`) : gY.add(`${IY} can't take ${hY} there${JY?`: it takes ${kD(OY,JY)}`:". Check Show Docs for what it takes"}.`)
+    const tT = null === (rT = oT.match(/parameter of type '([^']*)'/)) || void 0 === rT ? void 0 : rT[1],
+      GT = iT.arguments.findIndex((TT => TT.getStart(WT) <= YT.start && YT.start < TT.getEnd())),
+      pT = null !== (AT = null === (gT = XT.getResolvedSignature(iT)) || void 0 === gT || null === (hT = gT.parameters[GT]) || void 0 === hT ? void 0 : hT.name) && void 0 !== AT ? AT : "that part",
+      bT = zT ? XT.typeToString(XT.getTypeAtLocation(zT)) : "",
+      yT = "number" === bT ? "a number" : "string" === bT ? "text" : "something else";
+    "string" === tT ? BT.add(`${kT} needs ${pT} as text, but ${QT} is ${yT} here.`) : "number" === tT ? BT.add(`${kT} needs ${pT} as a number, but ${QT} is ${yT} here.`) : BT.add(`${kT} can't take ${QT} there${HT?`: it takes ${bI(XT,HT)}`:". Check Show Docs for what it takes"}.`)
   }
-  var CY, fY;
-  return [...gY, ...nD(RY, OY)]
+  var UT, aT;
+  return [...BT, ...PI(WT, XT)]
 }
 
-function xv(YY) {
-  return YY.replace(/^Line \d+ /, "")
+function VS(TT) {
+  return TT.replace(/^Line \d+ /, "")
 }
 
-function nv(YY) {
-  const rY = new Map;
-  for (const AY of YY.split("\n")) {
-    var DY;
-    const YY = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(AY),
-      IY = null !== (DY = null === YY || void 0 === YY ? void 0 : YY[1]) && void 0 !== DY ? DY : null === YY || void 0 === YY ? void 0 : YY[2];
-    var FY;
-    if (IY) rY.set(IY, (null !== (FY = rY.get(IY)) && void 0 !== FY ? FY : 0) + 1)
+function TD(TT) {
+  const oT = new Map;
+  for (const zT of TT.split("\n")) {
+    var IT;
+    const TT = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(zT),
+      kT = null !== (IT = null === TT || void 0 === TT ? void 0 : TT[1]) && void 0 !== IT ? IT : null === TT || void 0 === TT ? void 0 : TT[2];
+    var iT;
+    if (kT) oT.set(kT, (null !== (iT = oT.get(kT)) && void 0 !== iT ? iT : 0) + 1)
   }
-  return [...rY].flatMap((YY => {
-    let [rY, DY] = YY;
-    return DY > 1 ? [`${rY} is in the code ${DY} times, so only the last one runs. Put them together in one ${rY}.`] : []
+  return [...oT].flatMap((TT => {
+    let [oT, IT] = TT;
+    return IT > 1 ? [`${oT} is in the code ${IT} times, so only the last one runs. Put them together in one ${oT}.`] : []
   }))
 }
 
-function Pv(YY, rY) {
-  var DY, FY, AY, IY;
-  const RY = rY.after.split("\n"),
-    OY = YY => {
-      var rY, DY;
-      const FY = null !== (rY = null === (DY = RY[YY]) || void 0 === DY ? void 0 : DY.trim()) && void 0 !== rY ? rY : "";
-      return "" === FY ? void 0 : {
-        line: YY + 1,
-        text: FY.length > 50 ? `${FY.slice(0,47)}...` : FY
+function oD(TT, oT) {
+  var IT, iT, zT, kT;
+  const WT = oT.after.split("\n"),
+    XT = TT => {
+      var oT, IT;
+      const iT = null !== (oT = null === (IT = WT[TT]) || void 0 === IT ? void 0 : IT.trim()) && void 0 !== oT ? oT : "";
+      return "" === iT ? void 0 : {
+        line: TT + 1,
+        text: iT.length > 50 ? `${iT.slice(0,47)}...` : iT
       }
     },
-    gY = /^Line (\d+) /.exec(YY);
-  if (gY) return OY(Number(gY[1]) - 1);
-  const aY = /^([\w$]+) is in the code \d+ times\b/.exec(YY);
-  if (aY) {
-    const YY = aY[1].replaceAll("$", "\\$"),
-      rY = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${YY}\\s*\\(|^${YY}\\s*=`),
-      DY = RY.findIndex((YY => rY.test(YY)));
-    return DY >= 0 ? OY(DY) : void 0
+    BT = /^Line (\d+) /.exec(TT);
+  if (BT) return XT(Number(BT[1]) - 1);
+  const FT = /^([\w$]+) is in the code \d+ times\b/.exec(TT);
+  if (FT) {
+    const TT = FT[1].replaceAll("$", "\\$"),
+      oT = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${TT}\\s*\\(|^${TT}\\s*=`),
+      IT = WT.findIndex((TT => oT.test(TT)));
+    return IT >= 0 ? XT(IT) : void 0
   }
-  const vY = null !== (DY = null === (FY = /"([^"]+)"/.exec(YY)) || void 0 === FY ? void 0 : FY[1]) && void 0 !== DY ? DY : null === (AY = /^api\.[\w$]+/.exec(YY)) || void 0 === AY ? void 0 : AY[0];
-  if (!vY) return;
-  const uY = new Set(rY.before.split("\n")),
-    sY = RY.flatMap(((YY, rY) => YY.includes(vY) ? [rY] : [])),
-    iY = null !== (IY = sY.find((YY => !uY.has(RY[YY])))) && void 0 !== IY ? IY : sY[0];
-  return void 0 === iY ? void 0 : OY(iY)
+  const ST = null !== (IT = null === (iT = /"([^"]+)"/.exec(TT)) || void 0 === iT ? void 0 : iT[1]) && void 0 !== IT ? IT : null === (zT = /^api\.[\w$]+/.exec(TT)) || void 0 === zT ? void 0 : zT[0];
+  if (!ST) return;
+  const DT = new Set(oT.before.split("\n")),
+    LT = WT.flatMap(((TT, oT) => TT.includes(ST) ? [oT] : [])),
+    xT = null !== (kT = LT.find((TT => !DT.has(WT[TT])))) && void 0 !== kT ? kT : LT[0];
+  return void 0 === xT ? void 0 : XT(xT)
 }
 
-function Uv(YY) {
-  return /^Line \d+ stops all of this code from running: "/.test(YY)
+function ID(TT) {
+  return /^Line \d+ stops all of this code from running: "/.test(TT)
 }
 
-function Lv(YY) {
-  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(YY)
+function iD(TT) {
+  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(TT)
 }
 
-function tv(YY) {
-  return YY.replace(/^Line \d+ (\w)/, ((YY, rY) => rY.toUpperCase()))
+function zD(TT) {
+  return TT.replace(/^Line \d+ (\w)/, ((TT, oT) => oT.toUpperCase()))
 }
-const Yu = new Set([eY().SyntaxKind.EqualsToken, eY().SyntaxKind.QuestionQuestionEqualsToken, eY().SyntaxKind.BarBarEqualsToken]);
+const kD = new Set([RT().SyntaxKind.EqualsToken, RT().SyntaxKind.QuestionQuestionEqualsToken, RT().SyntaxKind.BarBarEqualsToken]);
 
-function ru(YY) {
-  const rY = eY().createSourceFile("worldCode.js", YY, eY().ScriptTarget.Latest, !0, eY().ScriptKind.JS),
-    DY = rY.statements.flatMap((YY => eY().isVariableStatement(YY) ? YY.declarationList.declarations.filter((YY => eY().isIdentifier(YY.name) && "CONFIG" === YY.name.text)) : [])),
-    FY = 1 === DY.length ? DY[0].initializer : void 0;
-  if (!FY || !eY().isObjectLiteralExpression(FY)) return [];
-  const AY = new Set;
-  for (const gY of FY.properties) {
-    if (!eY().isPropertyAssignment(gY) && !eY().isShorthandPropertyAssignment(gY) && !eY().isMethodDeclaration(gY)) return [];
-    if (eY().isComputedPropertyName(gY.name)) return [];
-    AY.add(gY.name.text)
+function WD(TT) {
+  const oT = RT().createSourceFile("worldCode.js", TT, RT().ScriptTarget.Latest, !0, RT().ScriptKind.JS),
+    IT = oT.statements.flatMap((TT => RT().isVariableStatement(TT) ? TT.declarationList.declarations.filter((TT => RT().isIdentifier(TT.name) && "CONFIG" === TT.name.text)) : [])),
+    iT = 1 === IT.length ? IT[0].initializer : void 0;
+  if (!iT || !RT().isObjectLiteralExpression(iT)) return [];
+  const zT = new Set;
+  for (const BT of iT.properties) {
+    if (!RT().isPropertyAssignment(BT) && !RT().isShorthandPropertyAssignment(BT) && !RT().isMethodDeclaration(BT)) return [];
+    if (RT().isComputedPropertyName(BT.name)) return [];
+    zT.add(BT.name.text)
   }
-  const IY = [],
-    RY = YY => {
-      if (eY().isPropertyAccessExpression(YY) && eY().isIdentifier(YY.expression) && "CONFIG" === YY.expression.text) {
-        const DY = YY.name.text,
-          FY = YY.parent;
-        eY().isBinaryExpression(FY) && FY.left === YY && Yu.has(FY.operatorToken.kind) ? AY.add(DY) : IY.push({
-          name: DY,
-          at: YY.getStart(rY)
+  const kT = [],
+    WT = TT => {
+      if (RT().isPropertyAccessExpression(TT) && RT().isIdentifier(TT.expression) && "CONFIG" === TT.expression.text) {
+        const IT = TT.name.text,
+          iT = TT.parent;
+        RT().isBinaryExpression(iT) && iT.left === TT && kD.has(iT.operatorToken.kind) ? zT.add(IT) : kT.push({
+          name: IT,
+          at: TT.getStart(oT)
         })
       }
-      eY().forEachChild(YY, RY)
+      RT().forEachChild(TT, WT)
     };
-  RY(rY);
-  const OY = new Set;
-  return IY.flatMap((YY => {
-    if (AY.has(YY.name) || OY.has(YY.name)) return [];
-    OY.add(YY.name);
-    return [`Line ${rY.getLineAndCharacterOfPosition(YY.at).line+1} uses "CONFIG.${YY.name}", but CONFIG has no ${YY.name}, so it is undefined there. Add ${YY.name} to CONFIG.`]
+  WT(oT);
+  const XT = new Set;
+  return kT.flatMap((TT => {
+    if (zT.has(TT.name) || XT.has(TT.name)) return [];
+    XT.add(TT.name);
+    return [`Line ${oT.getLineAndCharacterOfPosition(TT.at).line+1} uses "CONFIG.${TT.name}", but CONFIG has no ${TT.name}, so it is undefined there. Add ${TT.name} to CONFIG.`]
   }))
 }
 
-function Du(YY, rY) {
-  var DY;
-  const FY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== rY.path && (0, yY.e)(rY.path)),
-    AY = !0 === (null === (DY = rY.path) || void 0 === DY ? void 0 : DY.endsWith(".ts")),
-    IY = rY => [...YY.codeWarnings(rY, FY), ...Gv(rY, FY, AY), ...nv(rY), ...ru(rY)],
-    RY = new Set(IY(rY.before).map(xv));
-  return IY(rY.after).filter((YY => !RY.has(xv(YY))))
+function XD(TT, oT) {
+  var IT;
+  const iT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== oT.path && (0, cT.f)(oT.path)),
+    zT = !0 === (null === (IT = oT.path) || void 0 === IT ? void 0 : IT.endsWith(".ts")),
+    kT = oT => [...TT.codeWarnings(oT, iT), ...dS(oT, iT, zT), ...TD(oT), ...WD(oT)],
+    WT = new Set(kT(oT.before).map(VS));
+  return kT(oT.after).filter((TT => !WT.has(VS(TT))))
 }
-const Fu = "Looking up";
+const BD = "Looking up";
 
-function Au(YY) {
+function FD(TT) {
   return {
-    ...YY,
+    ...TT,
     call: void 0
   }
 }
-const Iu = 15e3,
-  Ru = new Map;
-const Ou = function(YY) {
-    let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
-    if ("undefined" === typeof indexedDB) return YY;
-    let DY = "unknown",
-      FY = null;
-    const AY = () => (FY ??= new Promise(((YY, DY) => {
-        const AY = indexedDB.open(rY, 1);
-        AY.onupgradeneeded = () => {
-          AY.result.createObjectStore(ra)
-        }, AY.onsuccess = () => {
-          const rY = AY.result;
-          rY.onversionchange = () => {
-            rY.close(), FY = null
-          }, rY.onclose = () => {
-            FY = null
-          }, YY(rY)
-        }, AY.onerror = () => {
-          var YY;
-          DY(null !== (YY = AY.error) && void 0 !== YY ? YY : new Error("IndexedDB didn't open"))
-        }, AY.onblocked = () => {
-          DY(new Error("IndexedDB is blocked"))
+const SD = 15e3,
+  DD = new Map;
+const LD = function(TT) {
+    let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
+    if ("undefined" === typeof indexedDB) return TT;
+    let IT = "unknown",
+      iT = null;
+    const zT = () => (iT ??= new Promise(((TT, IT) => {
+        const zT = indexedDB.open(oT, 1);
+        zT.onupgradeneeded = () => {
+          zT.result.createObjectStore(WF)
+        }, zT.onsuccess = () => {
+          const oT = zT.result;
+          oT.onversionchange = () => {
+            oT.close(), iT = null
+          }, oT.onclose = () => {
+            iT = null
+          }, TT(oT)
+        }, zT.onerror = () => {
+          var TT;
+          IT(null !== (TT = zT.error) && void 0 !== TT ? TT : new Error("IndexedDB didn't open"))
+        }, zT.onblocked = () => {
+          IT(new Error("IndexedDB is blocked"))
         }
-      })).catch((YY => {
-        throw FY = null, YY
-      })), FY),
-      IY = async YY => {
+      })).catch((TT => {
+        throw iT = null, TT
+      })), iT),
+      kT = async TT => {
         try {
-          return (await AY()).transaction(ra, YY)
-        } catch (rY) {
-          if ("indexedDB" !== DY) throw rY;
-          return FY = null, (await AY()).transaction(ra, YY)
+          return (await zT()).transaction(WF, TT)
+        } catch (oT) {
+          if ("indexedDB" !== IT) throw oT;
+          return iT = null, (await zT()).transaction(WF, TT)
         }
-      }, RY = async () => {
-        if ("unknown" === DY) try {
-          await AY(), DY = "indexedDB"
+      }, WT = async () => {
+        if ("unknown" === IT) try {
+          await zT(), IT = "indexedDB"
         } catch {
-          DY = "fallback"
+          IT = "fallback"
         }
-        return "indexedDB" === DY
+        return "indexedDB" === IT
       };
     return {
-      getItem: async rY => {
-        if (!await RY()) return YY.getItem(rY);
-        const DY = await (async YY => {
-          const rY = await IY("readonly"),
-            DY = rY.objectStore(ra).get(YY);
-          return await Da(rY), DY.result
-        })(rY);
-        return void 0 === DY ? YY.getItem(rY) : DY
+      getItem: async oT => {
+        if (!await WT()) return TT.getItem(oT);
+        const IT = await (async TT => {
+          const oT = await kT("readonly"),
+            IT = oT.objectStore(WF).get(TT);
+          return await XF(oT), IT.result
+        })(oT);
+        return void 0 === IT ? TT.getItem(oT) : IT
       },
-      setItem: async (rY, DY) => {
-        if (!await RY()) return YY.setItem(rY, DY);
+      setItem: async (oT, IT) => {
+        if (!await WT()) return TT.setItem(oT, IT);
         try {
-          const YY = await IY("readwrite");
-          return YY.objectStore(ra).put(DY, rY), await Da(YY), !0
+          const TT = await kT("readwrite");
+          return TT.objectStore(WF).put(IT, oT), await XF(TT), !0
         } catch {
           return !1
         }
       },
-      update: async (rY, DY) => {
-        if (!await RY()) throw new Error("No IndexedDB: read and write localforage instead");
-        const FY = await YY.getItem(rY).catch((() => null)),
-          AY = await IY("readwrite"),
-          OY = AY.objectStore(ra);
-        let gY;
-        const aY = OY.get(rY);
-        return aY.onsuccess = () => {
-          gY = DY(void 0 === aY.result ? FY : aY.result), OY.put(gY, rY)
-        }, await Da(AY), gY
+      update: async (oT, IT) => {
+        if (!await WT()) throw new Error("No IndexedDB: read and write localforage instead");
+        const iT = await TT.getItem(oT).catch((() => null)),
+          zT = await kT("readwrite"),
+          XT = zT.objectStore(WF);
+        let BT;
+        const FT = XT.get(oT);
+        return FT.onsuccess = () => {
+          BT = IT(void 0 === FT.result ? iT : FT.result), XT.put(BT, oT)
+        }, await XF(zT), BT
       }
     }
-  }(dI.i),
-  gu = new class {
-    constructor(YY, rY) {
-      this.store = YY, this.signal = rY, this.Mi = new Map
+  }(lk.c),
+  xD = new class {
+    constructor(TT, oT) {
+      this.store = TT, this.signal = oT, this.qx = new Map
     }
-    watch(YY, rY) {
-      var DY, FY;
-      return null !== (DY = null === (FY = this.signal) || void 0 === FY ? void 0 : FY.listen((DY => {
-        if (DY !== YY) return;
-        const FY = this.load(YY).then((async rY => Oa(rY, await this.read(YY))));
-        this.Mi.set(YY, FY), FY.then(rY)
-      }))) && void 0 !== DY ? DY : () => {}
+    watch(TT, oT) {
+      var IT, iT;
+      return null !== (IT = null === (iT = this.signal) || void 0 === iT ? void 0 : iT.listen((IT => {
+        if (IT !== TT) return;
+        const iT = this.load(TT).then((async oT => LF(oT, await this.read(TT))));
+        this.qx.set(TT, iT), iT.then(oT)
+      }))) && void 0 !== IT ? IT : () => {}
     }
-    list(YY) {
-      return this.load(YY)
+    list(TT) {
+      return this.load(TT)
     }
-    async add(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
-        AY = arguments.length > 4 ? arguments[4] : void 0;
-      const IY = (YY, IY) => {
-          const RY = Oa(YY, IY),
-            OY = RY[RY.length - 1];
-          if (OY && function(YY, rY) {
-              const DY = Object.keys(YY);
-              return DY.length === Object.keys(rY).length && DY.every((DY => YY[DY] === rY[DY]))
-            }(OY.files, DY)) return RY;
-          const gY = Math.max(FY, ...RY.map((YY => YY.id + 1)));
-          return [...RY, {
-            id: gY,
-            at: FY,
-            label: rY,
-            ...AY ? {
-              did: AY
+    async add(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
+        zT = arguments.length > 4 ? arguments[4] : void 0;
+      const kT = (TT, kT) => {
+          const WT = LF(TT, kT),
+            XT = WT[WT.length - 1];
+          if (XT && function(TT, oT) {
+              const IT = Object.keys(TT);
+              return IT.length === Object.keys(oT).length && IT.every((IT => TT[IT] === oT[IT]))
+            }(XT.files, IT)) return WT;
+          const BT = Math.max(iT, ...WT.map((TT => TT.id + 1)));
+          return [...WT, {
+            id: BT,
+            at: iT,
+            label: oT,
+            ...zT ? {
+              did: zT
             } : {},
             files: {
-              ...DY
+              ...IT
             }
           }].slice(-30)
         },
-        RY = this.load(YY).then((async rY => this.save(YY, (YY => IY(rY, YY)))));
-      this.Mi.set(YY, RY.then((YY => {
+        WT = this.load(TT).then((async oT => this.save(TT, (TT => kT(oT, TT)))));
+      this.qx.set(TT, WT.then((TT => {
         let {
-          snapshots: rY
-        } = YY;
-        return rY
+          snapshots: oT
+        } = TT;
+        return oT
       })));
       const {
-        snapshots: OY,
-        isSaved: gY
-      } = await RY;
-      var aY;
-      gY && (null === (aY = this.signal) || void 0 === aY || aY.post(YY));
-      return OY
+        snapshots: XT,
+        isSaved: BT
+      } = await WT;
+      var FT;
+      BT && (null === (FT = this.signal) || void 0 === FT || FT.post(TT));
+      return XT
     }
-    async relabel(YY, rY, DY) {
-      const FY = this.load(YY).then((async FY => this.save(YY, (YY => Oa(FY, YY).map((YY => YY.id === rY ? {
-        ...YY,
-        label: DY
-      } : YY))))));
-      this.Mi.set(YY, FY.then((YY => {
+    async relabel(TT, oT, IT) {
+      const iT = this.load(TT).then((async iT => this.save(TT, (TT => LF(iT, TT).map((TT => TT.id === oT ? {
+        ...TT,
+        label: IT
+      } : TT))))));
+      this.qx.set(TT, iT.then((TT => {
         let {
-          snapshots: rY
-        } = YY;
-        return rY
+          snapshots: oT
+        } = TT;
+        return oT
       })));
       const {
-        snapshots: AY,
-        isSaved: IY
-      } = await FY;
-      var RY;
-      IY && (null === (RY = this.signal) || void 0 === RY || RY.post(YY));
-      return AY
+        snapshots: zT,
+        isSaved: kT
+      } = await iT;
+      var WT;
+      kT && (null === (WT = this.signal) || void 0 === WT || WT.post(TT));
+      return zT
     }
-    async save(YY, rY) {
+    async save(TT, oT) {
       if (this.store.update) try {
         return {
-          snapshots: await this.store.update(this.storeKey(YY), (YY => rY(Ra(YY) ? YY : null))),
+          snapshots: await this.store.update(this.storeKey(TT), (TT => oT(DF(TT) ? TT : null))),
           isSaved: !0
         }
       } catch {}
-      const DY = rY(await this.read(YY));
+      const IT = oT(await this.read(TT));
       return {
-        snapshots: DY,
-        isSaved: await this.store.setItem(this.storeKey(YY), DY).catch((() => !1))
+        snapshots: IT,
+        isSaved: await this.store.setItem(this.storeKey(TT), IT).catch((() => !1))
       }
     }
-    read(YY) {
-      return this.store.getItem(this.storeKey(YY)).then((YY => Ra(YY) ? YY : null)).catch((() => null))
+    read(TT) {
+      return this.store.getItem(this.storeKey(TT)).then((TT => DF(TT) ? TT : null)).catch((() => null))
     }
-    load(YY) {
-      let rY = this.Mi.get(YY);
-      return rY || (rY = this.store.getItem(this.storeKey(YY)).then((YY => Ra(YY) ? YY : [])).catch((() => [])), this.Mi.set(YY, rY)), rY
+    load(TT) {
+      let oT = this.qx.get(TT);
+      return oT || (oT = this.store.getItem(this.storeKey(TT)).then((TT => DF(TT) ? TT : [])).catch((() => [])), this.qx.set(TT, oT)), oT
     }
-    storeKey(YY) {
-      return `worldCodeAiHistory:${YY}`
+    storeKey(TT) {
+      return `worldCodeAiHistory:${TT}`
     }
-  }(Ou, Ia("bloxd-worldCodeAiHistory")),
-  au = new class {
-    constructor(YY, rY) {
-      this.store = YY, this.signal = rY, this.Mi = new Map
+  }(LD, SF("bloxd-worldCodeAiHistory")),
+  cD = new class {
+    constructor(TT, oT) {
+      this.store = TT, this.signal = oT, this.qx = new Map
     }
-    watch(YY, rY) {
-      var DY, FY;
-      return null !== (DY = null === (FY = this.signal) || void 0 === FY ? void 0 : FY.listen((DY => {
-        if (DY !== YY) return;
-        const FY = this.load(YY).then((async rY => {
-          var DY;
-          return null !== (DY = await this.read(YY)) && void 0 !== DY ? DY : rY
+    watch(TT, oT) {
+      var IT, iT;
+      return null !== (IT = null === (iT = this.signal) || void 0 === iT ? void 0 : iT.listen((IT => {
+        if (IT !== TT) return;
+        const iT = this.load(TT).then((async oT => {
+          var IT;
+          return null !== (IT = await this.read(TT)) && void 0 !== IT ? IT : oT
         }));
-        this.Mi.set(YY, FY), FY.then(rY)
-      }))) && void 0 !== DY ? DY : () => {}
+        this.qx.set(TT, iT), iT.then(oT)
+      }))) && void 0 !== IT ? IT : () => {}
     }
-    list(YY) {
-      return this.load(YY)
+    list(TT) {
+      return this.load(TT)
     }
-    add(YY, rY) {
-      return this.update(YY, (YY => YY.includes(rY) || YY.length >= 8 ? YY : [...YY, rY]))
+    add(TT, oT) {
+      return this.update(TT, (TT => TT.includes(oT) || TT.length >= 8 ? TT : [...TT, oT]))
     }
-    remove(YY, rY) {
-      return this.update(YY, (YY => YY.filter((YY => YY !== rY))))
+    remove(TT, oT) {
+      return this.update(TT, (TT => TT.filter((TT => TT !== oT))))
     }
-    async update(YY, rY) {
-      var DY;
-      const FY = this.load(YY).then((async DY => {
-        var FY;
+    async update(TT, oT) {
+      var IT;
+      const iT = this.load(TT).then((async IT => {
+        var iT;
         if (this.store.update) try {
-          return await this.store.update(this.storeKey(YY), (YY => rY(Rr(YY) ? YY.slice(0, 8) : DY)))
+          return await this.store.update(this.storeKey(TT), (TT => oT(Wo(TT) ? TT.slice(0, 8) : IT)))
         } catch {}
-        const AY = rY(null !== (FY = await this.read(YY)) && void 0 !== FY ? FY : DY);
-        return await this.store.setItem(this.storeKey(YY), AY).catch((() => !1)), AY
+        const zT = oT(null !== (iT = await this.read(TT)) && void 0 !== iT ? iT : IT);
+        return await this.store.setItem(this.storeKey(TT), zT).catch((() => !1)), zT
       }));
-      this.Mi.set(YY, FY);
-      const AY = await FY;
-      return null === (DY = this.signal) || void 0 === DY || DY.post(YY), AY
+      this.qx.set(TT, iT);
+      const zT = await iT;
+      return null === (IT = this.signal) || void 0 === IT || IT.post(TT), zT
     }
-    read(YY) {
-      return this.store.getItem(this.storeKey(YY)).then((YY => Rr(YY) ? YY.slice(0, 8) : null)).catch((() => null))
+    read(TT) {
+      return this.store.getItem(this.storeKey(TT)).then((TT => Wo(TT) ? TT.slice(0, 8) : null)).catch((() => null))
     }
-    load(YY) {
-      let rY = this.Mi.get(YY);
-      return rY || (rY = this.read(YY).then((YY => null !== YY && void 0 !== YY ? YY : [])), this.Mi.set(YY, rY)), rY
+    load(TT) {
+      let oT = this.qx.get(TT);
+      return oT || (oT = this.read(TT).then((TT => null !== TT && void 0 !== TT ? TT : [])), this.qx.set(TT, oT)), oT
     }
-    storeKey(YY) {
-      return `worldCodeAiNotes:${YY}`
+    storeKey(TT) {
+      return `worldCodeAiNotes:${TT}`
     }
-  }(Ou, Ia("bloxd-worldCodeAiNotes"));
-const vu = ["Next in line", "2nd in line", "3rd in line"];
-let uu = null;
+  }(LD, SF("bloxd-worldCodeAiNotes"));
+const KD = ["Next in line", "2nd in line", "3rd in line"];
+let MD = null;
 
-function su() {
-  if (!uu) {
-    var YY, rY, DY, FY;
-    const AY = YY => iY.b.find((rY => rY.id === YY)),
-      IY = YY => {
-        var rY, DY;
-        return null !== (rY = null === (DY = AY(YY)) || void 0 === DY ? void 0 : DY.content) && void 0 !== rY ? rY : ""
+function rD() {
+  if (!MD) {
+    var TT, oT, IT, iT;
+    const zT = TT => xT.d.find((oT => oT.id === TT)),
+      kT = TT => {
+        var oT, IT;
+        return null !== (oT = null === (IT = zT(TT)) || void 0 === IT ? void 0 : IT.content) && void 0 !== oT ? oT : ""
       };
-    uu = new PO({
-      apiReference: IY("apiReference"),
-      callbacks: IY("callbacks"),
-      clientOptions: IY("clientOptions"),
-      snippets: IY("snippets"),
-      howTo: IY("howTo"),
-      itemNames: null !== (YY = null === (rY = AY("itemNames")) || void 0 === rY ? void 0 : rY.raw) && void 0 !== YY ? YY : "",
-      blockNames: null !== (DY = null === (FY = AY("blockNames")) || void 0 === FY ? void 0 : FY.raw) && void 0 !== DY ? DY : "",
-      mobSettings: IY("mobSettings")
+    MD = new oB({
+      apiReference: kT("apiReference"),
+      callbacks: kT("callbacks"),
+      clientOptions: kT("clientOptions"),
+      snippets: kT("snippets"),
+      howTo: kT("howTo"),
+      itemNames: null !== (TT = null === (oT = zT("itemNames")) || void 0 === oT ? void 0 : oT.raw) && void 0 !== TT ? TT : "",
+      blockNames: null !== (IT = null === (iT = zT("blockNames")) || void 0 === iT ? void 0 : iT.raw) && void 0 !== IT ? IT : "",
+      mobSettings: kT("mobSettings")
     })
   }
-  return uu
+  return MD
 }
-const iu = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
-  yu = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
-  Qu = ["Explain these changes", "Make it simpler"],
-  ou = ["Make the change"],
-  Wu = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
-  Eu = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
+const AD = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
+  gD = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
+  hD = ["Explain these changes", "Make it simpler"],
+  wD = ["Make the change"],
+  mD = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
+  eD = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
 
-function mu(YY) {
+function RD(TT) {
   let {
-    requests: rY,
-    onPick: DY
-  } = YY;
-  const AY = (0, FY.useRef)(null);
-  var IY;
-  return IY = AY, (0, FY.useLayoutEffect)((() => {
-    const YY = IY.current,
-      rY = null === YY || void 0 === YY ? void 0 : YY.closest(".WorldCodeAiMessages");
-    if (!YY || !rY) return;
-    const DY = () => {
-      const DY = rY.getBoundingClientRect().bottom;
-      for (const rY of Array.from(YY.children)) {
-        const YY = rY.getBoundingClientRect();
-        rY.style.visibility = YY.top < DY && YY.bottom > DY + 1 ? "hidden" : ""
+    requests: oT,
+    onPick: IT
+  } = TT;
+  const zT = (0, iT.useRef)(null);
+  var kT;
+  return kT = zT, (0, iT.useLayoutEffect)((() => {
+    const TT = kT.current,
+      oT = null === TT || void 0 === TT ? void 0 : TT.closest(".WorldCodeAiMessages");
+    if (!TT || !oT) return;
+    const IT = () => {
+      const IT = oT.getBoundingClientRect().bottom;
+      for (const oT of Array.from(TT.children)) {
+        const TT = oT.getBoundingClientRect();
+        oT.style.visibility = TT.top < IT && TT.bottom > IT + 1 ? "hidden" : ""
       }
     };
-    DY(), rY.addEventListener("scroll", DY, {
+    IT(), oT.addEventListener("scroll", IT, {
       passive: !0
     });
-    const FY = "function" === typeof ResizeObserver ? new ResizeObserver(DY) : null;
-    return null === FY || void 0 === FY || FY.observe(rY), null === FY || void 0 === FY || FY.observe(YY), () => {
-      rY.removeEventListener("scroll", DY), null === FY || void 0 === FY || FY.disconnect()
+    const iT = "function" === typeof ResizeObserver ? new ResizeObserver(IT) : null;
+    return null === iT || void 0 === iT || iT.observe(oT), null === iT || void 0 === iT || iT.observe(TT), () => {
+      oT.removeEventListener("scroll", IT), null === iT || void 0 === iT || iT.disconnect()
     }
-  }), [IY]), (0, RY.jsx)("div", {
-    ref: AY,
+  }), [kT]), (0, WT.jsx)("div", {
+    ref: zT,
     className: "WorldCodeAiChips WorldCodeAiFollowUps",
-    children: rY.map((YY => (0, FY.createElement)("button", {
-      ...yg.e,
-      key: YY,
+    children: oT.map((TT => (0, iT.createElement)("button", {
+      ...gB.h,
+      key: TT,
       className: "WorldCodeAiChip",
       onClick: () => {
-        DY(YY)
+        IT(TT)
       }
-    }, function(YY) {
-      const rY = YY.replace(/^It didn't work: /, "").replace(/\.$/, "");
-      return rY.charAt(0).toUpperCase() + rY.slice(1)
-    }(YY))))
+    }, function(TT) {
+      const oT = TT.replace(/^It didn't work: /, "").replace(/\.$/, "");
+      return oT.charAt(0).toUpperCase() + oT.slice(1)
+    }(TT))))
   })
 }
 
-function Vu(YY) {
+function uD(TT) {
   let {
-    useFree: rY,
-    retryOf: DY,
-    isAutoFix: FY,
-    lookupOf: AY
-  } = YY;
-  return !0 !== rY && (void 0 !== DY || !0 !== FY && void 0 === AY)
+    useFree: oT,
+    retryOf: IT,
+    isAutoFix: iT,
+    lookupOf: zT
+  } = TT;
+  return !0 !== oT && (void 0 !== IT || !0 !== iT && void 0 === zT)
 }
 
-function Su() {
+function vD() {
   return "The world's blocks can't be seen from here."
 }
 
-function lu() {
+function ED() {
   return "The world can't be seen from here."
 }
-const Tu = "Try the missing change again",
-  eu = 1e4,
-  Nu = "I can only help with your game's code. Try asking about something in your world.";
+const fD = "Try the missing change again",
+  CD = 1e4,
+  jD = "I can only help with your game's code. Try asking about something in your world.";
 
-function Bu(YY) {
-  return YY ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
+function JD(TT) {
+  return TT ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
 }
-const cu = 1500;
+const UD = 1500;
 
-function Ku(YY, rY) {
-  var DY;
-  return Object.entries(null !== (DY = YY.leftFiles) && void 0 !== DY ? DY : {}).every((YY => {
-    var DY;
-    let [FY, AY] = YY;
-    return (null !== (DY = rY[FY]) && void 0 !== DY ? DY : "") === AY
+function aD(TT, oT) {
+  var IT;
+  return Object.entries(null !== (IT = TT.leftFiles) && void 0 !== IT ? IT : {}).every((TT => {
+    var IT;
+    let [iT, zT] = TT;
+    return (null !== (IT = oT[iT]) && void 0 !== IT ? IT : "") === zT
   }))
 }
-const Hu = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
+const YD = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
 
-function zu(YY) {
-  var rY, DY, AY, gY, aY, vY, uY, sY;
+function QD(TT) {
+  var oT, IT, zT, BT, FT, ST, DT, LT;
   let {
-    entry: iY,
-    isOutOfDate: yY = !1,
-    canEdit: QY,
-    onApply: oY,
-    onUndo: WY,
-    onTryIt: EY,
-    isLatest: mY,
-    canUndo: VY,
-    onFixWarnings: SY,
-    onCheck: lY,
-    busy: TY,
-    checkPicked: eY,
-    onPickedChange: NY,
-    request: BY,
-    elsewhere: cY,
-    defaultOpen: KY
-  } = YY;
-  const HY = "offered" === iY.status && yY ? "stale" : iY.status,
-    [zY, ZY] = (0, FY.useState)(KY),
-    [CY, fY] = (0, FY.useState)(!1),
-    jY = null !== (rY = iY.warnings) && void 0 !== rY ? rY : [],
-    hY = mY && ("offered" === HY || "applied" === HY) && QY && jY.length > 0 && !iY.warningsSentBack,
-    dY = "applied" === HY,
-    JY = null !== (DY = null === (AY = iY.swappedTo) || void 0 === AY ? void 0 : AY[0]) && void 0 !== DY ? DY : hY ? null !== (gY = null === (aY = /"([^"]+)"/.exec(jY[0])) || void 0 === aY ? void 0 : aY[1]) && void 0 !== gY ? gY : null === (vY = /^api\.[\w$]+/.exec(jY[0])) || void 0 === vY ? void 0 : vY[0] : void 0,
-    MY = jY.every((YY => /never true|no block is ever called that/.test(YY))),
-    wY = (0, FY.useMemo)((() => {
-      var YY;
-      const [rY] = iY.changes;
-      return new Map((null !== (YY = iY.warnings) && void 0 !== YY ? YY : []).map((YY => [YY, 1 === iY.changes.length && rY ? Pv(YY, rY) : void 0])))
-    }), [iY.warnings, iY.changes]),
-    bY = 1 === jY.length ? wY.get(jY[0]) : void 0,
-    [XY, qY] = (0, FY.useState)(new Set),
-    pY = XY.size > 0;
-  (0, FY.useEffect)((() => {
-    null === NY || void 0 === NY || NY(pY)
-  }), [pY, NY]), (0, FY.useEffect)((() => {
-    qY((YY => 0 === YY.size ? YY : new Set))
-  }), [iY.changes]);
-  const kY = "offered" === HY && QY && iY.id >= 0,
-    GY = (0, FY.useMemo)((() => new Map(iY.changes.map((YY => [YY.path, Yv(YY, BY)])))), [iY.changes, BY]),
-    xY = [...GY.values()].reduce(((YY, rY) => YY + rY.length), 0),
-    nY = kY && xY >= 2,
-    [PY, UY] = (0, FY.useState)(!1),
-    LY = "applied" === HY && xY >= 2,
-    tY = xY - XY.size,
-    Yr = (0, FY.useMemo)((() => {
-      if (0 !== XY.size) return iY.changes.flatMap((YY => {
-        var rY;
-        const DY = new Set((null !== (rY = GY.get(YY.path)) && void 0 !== rY ? rY : []).filter((rY => !XY.has(`${YY.path}:${rY.index}`))).map((YY => YY.index))),
-          FY = function(YY, rY) {
-            const DY = qa(YY.before, YY.after),
-              FY = DY.flatMap((YY => "same" === YY.kind ? [YY.text] : rY.has(YY.index) ? YY.added : YY.removed));
-            if (0 === FY.length) return "";
-            const AY = (DY.every((YY => "same" === YY.kind || rY.has(YY.index))) ? YY.after : YY.before).endsWith("\n") ? "\n" : "";
-            return `${FY.join("\n")}${AY}`
-          }(YY, DY);
-        return FY === YY.before ? [] : [{
-          ...YY,
-          after: FY
+    entry: xT,
+    isOutOfDate: cT = !1,
+    canEdit: KT,
+    onApply: MT,
+    onUndo: rT,
+    onTryIt: AT,
+    isLatest: gT,
+    canUndo: hT,
+    onFixWarnings: wT,
+    onCheck: mT,
+    busy: eT,
+    checkPicked: RT,
+    onPickedChange: uT,
+    request: vT,
+    elsewhere: ET,
+    defaultOpen: fT
+  } = TT;
+  const CT = "offered" === xT.status && cT ? "stale" : xT.status,
+    [jT, JT] = (0, iT.useState)(fT),
+    [UT, aT] = (0, iT.useState)(!1),
+    YT = null !== (oT = xT.warnings) && void 0 !== oT ? oT : [],
+    QT = gT && ("offered" === CT || "applied" === CT) && KT && YT.length > 0 && !xT.warningsSentBack,
+    OT = "applied" === CT,
+    HT = null !== (IT = null === (zT = xT.swappedTo) || void 0 === zT ? void 0 : zT[0]) && void 0 !== IT ? IT : QT ? null !== (BT = null === (FT = /"([^"]+)"/.exec(YT[0])) || void 0 === FT ? void 0 : FT[1]) && void 0 !== BT ? BT : null === (ST = /^api\.[\w$]+/.exec(YT[0])) || void 0 === ST ? void 0 : ST[0] : void 0,
+    nT = YT.every((TT => /never true|no block is ever called that/.test(TT))),
+    qT = (0, iT.useMemo)((() => {
+      var TT;
+      const [oT] = xT.changes;
+      return new Map((null !== (TT = xT.warnings) && void 0 !== TT ? TT : []).map((TT => [TT, 1 === xT.changes.length && oT ? oD(TT, oT) : void 0])))
+    }), [xT.warnings, xT.changes]),
+    ZT = 1 === YT.length ? qT.get(YT[0]) : void 0,
+    [lT, sT] = (0, iT.useState)(new Set),
+    tT = lT.size > 0;
+  (0, iT.useEffect)((() => {
+    null === uT || void 0 === uT || uT(tT)
+  }), [tT, uT]), (0, iT.useEffect)((() => {
+    sT((TT => 0 === TT.size ? TT : new Set))
+  }), [xT.changes]);
+  const GT = "offered" === CT && KT && xT.id >= 0,
+    pT = (0, iT.useMemo)((() => new Map(xT.changes.map((TT => [TT.path, kS(TT, vT)])))), [xT.changes, vT]),
+    bT = [...pT.values()].reduce(((TT, oT) => TT + oT.length), 0),
+    yT = GT && bT >= 2,
+    [NT, PT] = (0, iT.useState)(!1),
+    dT = "applied" === CT && bT >= 2,
+    VT = bT - lT.size,
+    To = (0, iT.useMemo)((() => {
+      if (0 !== lT.size) return xT.changes.flatMap((TT => {
+        var oT;
+        const IT = new Set((null !== (oT = pT.get(TT.path)) && void 0 !== oT ? oT : []).filter((oT => !lT.has(`${TT.path}:${oT.index}`))).map((TT => TT.index))),
+          iT = function(TT, oT) {
+            const IT = yF(TT.before, TT.after),
+              iT = IT.flatMap((TT => "same" === TT.kind ? [TT.text] : oT.has(TT.index) ? TT.added : TT.removed));
+            if (0 === iT.length) return "";
+            const zT = (IT.every((TT => "same" === TT.kind || oT.has(TT.index))) ? TT.after : TT.before).endsWith("\n") ? "\n" : "";
+            return `${iT.join("\n")}${zT}`
+          }(TT, IT);
+        return iT === TT.before ? [] : [{
+          ...TT,
+          after: iT
         }]
       }))
-    }), [iY.changes, GY, XY]),
-    rr = (0, FY.useMemo)((() => Yr && eY ? eY(Yr) : []), [Yr, eY]);
-  (0, FY.useEffect)((() => {
-    "applied" === HY && ZY(!1)
-  }), [HY]);
-  const Dr = !!iY.editedInPlace;
-  (0, FY.useEffect)((() => {
-    Dr || "offered" !== iY.status || ZY(!0)
-  }), [Dr, iY.status]);
-  const Fr = iY.changes.map((YY => YY.path)).join(", "),
-    Ar = !Dr || hY || rr.length > 0 || "undone" === HY || "stale" === HY;
-  return (0, RY.jsxs)("div", {
+    }), [xT.changes, pT, lT]),
+    oo = (0, iT.useMemo)((() => To && RT ? RT(To) : []), [To, RT]);
+  (0, iT.useEffect)((() => {
+    "applied" === CT && JT(!1)
+  }), [CT]);
+  const Io = !!xT.editedInPlace;
+  (0, iT.useEffect)((() => {
+    Io || "offered" !== xT.status || JT(!0)
+  }), [Io, xT.status]);
+  const io = xT.changes.map((TT => TT.path)).join(", "),
+    zo = !Io || QT || oo.length > 0 || "undone" === CT || "stale" === CT;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, RY.jsx)(OY, {
+    children: [(0, WT.jsx)(XT, {
       className: "WorldCodeAiChangeLog",
-      title: Dr ? `Editing code: ${Fr}` : `Code change: ${Fr}`,
+      title: Io ? `Editing code: ${io}` : `Code change: ${io}`,
       isCalm: !0,
-      isElsewhere: !!cY,
-      isOpen: zY,
-      onToggle: ZY,
-      children: (0, RY.jsx)("div", {
+      isElsewhere: !!ET,
+      isOpen: jT,
+      onToggle: JT,
+      children: (0, WT.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: iY.changes.map((YY => {
-          var rY, DY;
+        children: xT.changes.map((TT => {
+          var oT, IT;
           const {
-            added: FY,
-            removed: AY
-          } = function(YY) {
-            let rY = 0,
-              DY = 0;
-            for (const FY of GF(YY.before, YY.after)) "added" === FY.kind ? rY++ : "removed" === FY.kind && DY++;
+            added: iT,
+            removed: zT
+          } = function(TT) {
+            let oT = 0,
+              IT = 0;
+            for (const iT of Pi(TT.before, TT.after)) "added" === iT.kind ? oT++ : "removed" === iT.kind && IT++;
             return {
-              added: rY,
-              removed: DY
+              added: oT,
+              removed: IT
             }
-          }(Yr ? null !== (rY = Yr.find((rY => rY.path === YY.path))) && void 0 !== rY ? rY : {
-            ...YY,
-            after: YY.before
-          } : YY), IY = null !== (DY = GY.get(YY.path)) && void 0 !== DY ? DY : [], OY = "offered" !== HY && "applied" !== HY || "" === YY.before ? [] : function(YY, rY) {
-            const DY = Ha(rY);
-            return [...Ha(YY)].filter((YY => !DY.has(YY)))
-          }(YY.before, YY.after);
-          return (0, RY.jsxs)("div", {
+          }(To ? null !== (oT = To.find((oT => oT.path === TT.path))) && void 0 !== oT ? oT : {
+            ...TT,
+            after: TT.before
+          } : TT), kT = null !== (IT = pT.get(TT.path)) && void 0 !== IT ? IT : [], XT = "offered" !== CT && "applied" !== CT || "" === TT.before ? [] : function(TT, oT) {
+            const IT = YF(oT);
+            return [...YF(TT)].filter((TT => !IT.has(TT)))
+          }(TT.before, TT.after);
+          return (0, WT.jsxs)("div", {
             className: "WorldCodeAiChange",
-            children: [(0, RY.jsxs)("div", {
+            children: [(0, WT.jsxs)("div", {
               className: "WorldCodeAiChangeHeader",
-              children: [(0, RY.jsx)("span", {
+              children: [(0, WT.jsx)("span", {
                 className: "WorldCodeAiChangePath",
-                children: YY.path
-              }), FY > 0 && (0, RY.jsx)("span", {
+                children: TT.path
+              }), iT > 0 && (0, WT.jsx)("span", {
                 className: "WorldCodeAiAdded",
-                children: 1 === FY ? "1 line added" : `${FY} lines added`
-              }), AY > 0 && (0, RY.jsxs)("span", {
+                children: 1 === iT ? "1 line added" : `${iT} lines added`
+              }), zT > 0 && (0, WT.jsxs)("span", {
                 className: "WorldCodeAiRemoved",
-                children: [AY, " removed"]
+                children: [zT, " removed"]
               })]
-            }), nY && (0, RY.jsx)("ul", {
+            }), yT && (0, WT.jsx)("ul", {
               className: "WorldCodeAiHunks",
-              children: IY.map((rY => {
-                const DY = `${YY.path}:${rY.index}`,
-                  FY = [rY.added.length > 0 ? `+${rY.added.length}` : "", rY.removed.length > 0 ? `\u2212${rY.removed.length}` : ""].filter(Boolean).join(" "),
-                  AY = [rY.added.length > 0 ? `${rY.added.length} ${1===rY.added.length?"line":"lines"} added` : "", rY.removed.length > 0 ? `${rY.removed.length} taken out` : ""].filter(Boolean).join(", ");
-                return (0, RY.jsx)("li", {
-                  children: (0, RY.jsxs)("label", {
-                    children: [(0, RY.jsx)("input", {
+              children: kT.map((oT => {
+                const IT = `${TT.path}:${oT.index}`,
+                  iT = [oT.added.length > 0 ? `+${oT.added.length}` : "", oT.removed.length > 0 ? `\u2212${oT.removed.length}` : ""].filter(Boolean).join(" "),
+                  zT = [oT.added.length > 0 ? `${oT.added.length} ${1===oT.added.length?"line":"lines"} added` : "", oT.removed.length > 0 ? `${oT.removed.length} taken out` : ""].filter(Boolean).join(", ");
+                return (0, WT.jsx)("li", {
+                  children: (0, WT.jsxs)("label", {
+                    children: [(0, WT.jsx)("input", {
                       type: "checkbox",
-                      checked: !XY.has(DY),
-                      onChange: YY => {
-                        const rY = new Set(XY);
-                        YY.target.checked ? rY.delete(DY) : rY.add(DY), qY(rY)
+                      checked: !lT.has(IT),
+                      onChange: TT => {
+                        const oT = new Set(lT);
+                        TT.target.checked ? oT.delete(IT) : oT.add(IT), sT(oT)
                       }
-                    }), (0, RY.jsxs)("span", {
-                      children: [rY.also && (0, RY.jsx)("span", {
+                    }), (0, WT.jsxs)("span", {
+                      children: [oT.also && (0, WT.jsx)("span", {
                         className: "WorldCodeAiHunkAlso",
                         title: "You didn't ask for this. Untick it to leave it out.",
-                        children: "adds" === rY.also ? "Also adds" : "changes" === rY.also ? "Also changes" : "Also takes out"
-                      }), rY.label, rY.codeNames.length > 0 && (0, RY.jsx)("code", {
+                        children: "adds" === oT.also ? "Also adds" : "changes" === oT.also ? "Also changes" : "Also takes out"
+                      }), oT.label, oT.codeNames.length > 0 && (0, WT.jsx)("code", {
                         className: "WorldCodeAiHunkCode",
-                        children: rY.codeNames.join(", ")
-                      }), rY.detail && (0, RY.jsx)("span", {
+                        children: oT.codeNames.join(", ")
+                      }), oT.detail && (0, WT.jsx)("span", {
                         className: "WorldCodeAiHunkDetail",
-                        children: rY.detail
+                        children: oT.detail
                       })]
-                    }), (0, RY.jsx)("span", {
+                    }), (0, WT.jsx)("span", {
                       className: "WorldCodeAiHunkCount",
-                      title: AY,
-                      "aria-label": AY,
-                      children: `${FY} ${rY.added.length+rY.removed.length===1?"line":"lines"}`
+                      title: zT,
+                      "aria-label": zT,
+                      children: `${iT} ${oT.added.length+oT.removed.length===1?"line":"lines"}`
                     })]
                   })
-                }, DY)
+                }, IT)
               }))
-            }), nY && (IY.some((YY => void 0 !== YY.also)) ? (0, RY.jsx)("p", {
+            }), yT && (kT.some((TT => void 0 !== TT.also)) ? (0, WT.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: 'You didn\'t ask for the parts marked "Also". Untick one to leave it out.'
-            }) : IY.some((YY => YY.takesOut.length > 0 || 0 === YY.added.length)) && (0, RY.jsx)("p", {
+            }) : kT.some((TT => TT.takesOut.length > 0 || 0 === TT.added.length)) && (0, WT.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: "Untick a part to keep that bit of your code as it is."
-            })), LY && IY.length >= 2 && (0, RY.jsx)("button", {
+            })), dT && kT.length >= 2 && (0, WT.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiPartsToggle",
               onClick: () => {
-                UY(!PY)
+                PT(!NT)
               },
-              children: PY ? `Hide the ${IY.length} parts` : `Show the ${IY.length} parts that went in`
-            }), LY && PY && (0, RY.jsx)("ul", {
+              children: NT ? `Hide the ${kT.length} parts` : `Show the ${kT.length} parts that went in`
+            }), dT && NT && (0, WT.jsx)("ul", {
               className: "WorldCodeAiHunks WorldCodeAiHunks-done",
-              children: IY.map((rY => (0, RY.jsx)("li", {
-                children: (0, RY.jsxs)("span", {
-                  children: [rY.label, rY.codeNames.length > 0 && (0, RY.jsx)("code", {
+              children: kT.map((oT => (0, WT.jsx)("li", {
+                children: (0, WT.jsxs)("span", {
+                  children: [oT.label, oT.codeNames.length > 0 && (0, WT.jsx)("code", {
                     className: "WorldCodeAiHunkCode",
-                    children: rY.codeNames.join(", ")
-                  }), rY.detail && (0, RY.jsx)("span", {
+                    children: oT.codeNames.join(", ")
+                  }), oT.detail && (0, WT.jsx)("span", {
                     className: "WorldCodeAiHunkDetail",
-                    children: rY.detail
+                    children: oT.detail
                   })]
                 })
-              }, `${YY.path}:${rY.index}`)))
-            }), YY.why && !nY && !(LY && PY) && (0, RY.jsx)("ul", {
+              }, `${TT.path}:${oT.index}`)))
+            }), TT.why && !yT && !(dT && NT) && (0, WT.jsx)("ul", {
               className: "WorldCodeAiChangeWhy",
-              children: YY.why.map((YY => (0, RY.jsx)("li", {
-                children: YY.charAt(0).toUpperCase() + YY.slice(1)
-              }, YY)))
-            }), OY.length > 0 && !(nY && OY.every((YY => IY.some((rY => rY.takesOut.includes(YY)))))) && (0, RY.jsxs)("p", {
+              children: TT.why.map((TT => (0, WT.jsx)("li", {
+                children: TT.charAt(0).toUpperCase() + TT.slice(1)
+              }, TT)))
+            }), XT.length > 0 && !(yT && XT.every((TT => kT.some((oT => oT.takesOut.includes(TT)))))) && (0, WT.jsxs)("p", {
               className: "WorldCodeAiChangeTakenOut",
-              children: ["applied" === HY ? "It took out " : "It also takes out ", OY.slice(0, 6).map((YY => {
-                var rY;
-                const DY = null !== (rY = da(YY)) && void 0 !== rY ? rY : Pa(YY);
-                return DY.charAt(0).toLowerCase() + DY.slice(1)
-              })).join(", "), OY.length > 6 ? ` and ${OY.length-6} more` : "", ".", " ", (0, RY.jsx)("code", {
+              children: ["applied" === CT ? "It took out " : "It also takes out ", XT.slice(0, 6).map((TT => {
+                var oT;
+                const IT = null !== (oT = lF(TT)) && void 0 !== oT ? oT : oS(TT);
+                return IT.charAt(0).toLowerCase() + IT.slice(1)
+              })).join(", "), XT.length > 6 ? ` and ${XT.length-6} more` : "", ".", " ", (0, WT.jsx)("code", {
                 className: "WorldCodeAiHunkCode",
-                children: OY.slice(0, 6).join(", ")
+                children: XT.slice(0, 6).join(", ")
               })]
-            }), (0, RY.jsx)(Aa, {
-              change: YY,
-              marked: JY
+            }), (0, WT.jsx)(FF, {
+              change: TT,
+              marked: HT
             })]
-          }, YY.path)
+          }, TT.path)
         }))
       })
-    }), Ar && (0, RY.jsxs)("div", {
-      className: IY()("WorldCodeAiChangeActions", mY && "WorldCodeAiChangeActions-sticky"),
-      children: [rr.length > 0 && (0, RY.jsxs)("div", {
+    }), zo && (0, WT.jsxs)("div", {
+      className: kT()("WorldCodeAiChangeActions", gT && "WorldCodeAiChangeActions-sticky"),
+      children: [oo.length > 0 && (0, WT.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, RY.jsx)("p", {
+        children: [(0, WT.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
           children: "Leaving that part out breaks this:"
-        }), (0, RY.jsx)("p", {
-          children: rr[0]
+        }), (0, WT.jsx)("p", {
+          children: oo[0]
         })]
-      }), hY && (0, RY.jsxs)("div", {
+      }), QT && (0, WT.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, RY.jsx)("p", {
+        children: [(0, WT.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
-          children: MY ? 1 === jY.length ? `${bY?`Line ${bY.line}`:"This line"} ${dY?"will":"would"} never work:` : `${jY.length} lines ${dY?"will":"would"} never work:` : 1 === jY.length ? `${bY?`Line ${bY.line}`:"This line"} ${dY?"will":"would"} break:` : `${jY.length} lines ${dY?"will":"would"} break:`
-        }), (CY ? jY : jY.slice(0, 1)).map((YY => {
-          const rY = wY.get(YY);
-          return (0, RY.jsxs)(FY.Fragment, {
-            children: [rY && !Lv(YY) && (0, RY.jsxs)("p", {
+          children: nT ? 1 === YT.length ? `${ZT?`Line ${ZT.line}`:"This line"} ${OT?"will":"would"} never work:` : `${YT.length} lines ${OT?"will":"would"} never work:` : 1 === YT.length ? `${ZT?`Line ${ZT.line}`:"This line"} ${OT?"will":"would"} break:` : `${YT.length} lines ${OT?"will":"would"} break:`
+        }), (UT ? YT : YT.slice(0, 1)).map((TT => {
+          const oT = qT.get(TT);
+          return (0, WT.jsxs)(iT.Fragment, {
+            children: [oT && !iD(TT) && (0, WT.jsxs)("p", {
               className: "WorldCodeAiWarningWhere",
-              children: [jY.length > 1 && `Line ${rY.line}: `, (0, RY.jsx)("code", {
-                children: rY.text
+              children: [YT.length > 1 && `Line ${oT.line}: `, (0, WT.jsx)("code", {
+                children: oT.text
               })]
-            }), (0, RY.jsx)("p", {
-              children: !rY || 1 !== jY.length && Lv(YY) ? YY : tv(YY)
+            }), (0, WT.jsx)("p", {
+              children: !oT || 1 !== YT.length && iD(TT) ? TT : zD(TT)
             })]
-          }, YY)
-        })), !CY && jY.length > 1 && (0, RY.jsxs)("button", {
+          }, TT)
+        })), !UT && YT.length > 1 && (0, WT.jsxs)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            fY(!0)
+            aT(!0)
           },
-          children: ["Show ", jY.length - 1, " more"]
+          children: ["Show ", YT.length - 1, " more"]
         })]
-      }), hY && (0, RY.jsx)("button", {
-        ...ag(null !== (uY = iY.warnings) && void 0 !== uY ? uY : []) ? {} : yg.e,
+      }), QT && (0, WT.jsx)("button", {
+        ...cB(null !== (DT = xT.warnings) && void 0 !== DT ? DT : []) ? {} : gB.h,
         className: "WorldCodeAiPrimaryButton",
-        disabled: TY,
-        onClick: SY,
-        children: 1 === (null === (sY = iY.warnings) || void 0 === sY ? void 0 : sY.length) ? "Fix this line" : "Fix these lines"
-      }), "offered" === HY && QY && !Dr && (0, RY.jsx)("button", {
-        className: hY ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
-        disabled: nY && 0 === tY || !!cY && TY,
-        title: cY && TY ? "You can apply it once the AI is done." : void 0,
+        disabled: eT,
+        onClick: wT,
+        children: 1 === (null === (LT = xT.warnings) || void 0 === LT ? void 0 : LT.length) ? "Fix this line" : "Fix these lines"
+      }), "offered" === CT && KT && !Io && (0, WT.jsx)("button", {
+        className: QT ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+        disabled: yT && 0 === VT || !!ET && eT,
+        title: ET && eT ? "You can apply it once the AI is done." : void 0,
         onClick: () => {
-          oY(Yr)
+          MT(To)
         },
-        children: cY ? cY.codeBlock ? "Apply in that code block" : "Apply in World Code" : nY && tY < xY ? `Apply ${tY} of ${xY} changes` : hY ? "Apply anyway" : "Apply to my code"
-      }), "offered" === HY && !QY && (0, RY.jsx)("span", {
+        children: ET ? ET.codeBlock ? "Apply in that code block" : "Apply in World Code" : yT && VT < bT ? `Apply ${VT} of ${bT} changes` : QT ? "Apply anyway" : "Apply to my code"
+      }), "offered" === CT && !KT && (0, WT.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: null !== cY && void 0 !== cY && cY.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
-      }), "applied" === HY && !Dr && (0, RY.jsxs)("div", {
+        children: null !== ET && void 0 !== ET && ET.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
+      }), "applied" === CT && !Io && (0, WT.jsxs)("div", {
         className: "WorldCodeAiAppliedRow",
-        children: [(0, RY.jsx)("span", {
+        children: [(0, WT.jsx)("span", {
           className: "WorldCodeAiAppliedNote",
           children: "Applied."
-        }), mY && (0, RY.jsx)("button", {
+        }), gT && (0, WT.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: EY,
+          onClick: AT,
           children: "Try it in my world"
-        }), mY && (0, RY.jsx)("button", {
-          ...yg.e,
+        }), gT && (0, WT.jsx)("button", {
+          ...gB.h,
           className: "WorldCodeAiSecondaryButton",
-          disabled: TY,
-          onClick: lY,
+          disabled: eT,
+          onClick: mT,
           children: "Check for mistakes"
-        }), VY && (0, RY.jsx)("button", {
+        }), hT && (0, WT.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiUndoButton",
-          onClick: WY,
+          onClick: rT,
           children: "Undo"
         })]
-      }), "applied" === HY && !Dr && !VY && !cY && (0, RY.jsx)("span", {
+      }), "applied" === CT && !Io && !hT && !ET && (0, WT.jsx)("span", {
         className: "WorldCodeAiHint WorldCodeAiUndoOff",
         children: "You've changed this code since, so Undo is off. History can still go back."
-      }), "undone" === HY && (0, RY.jsx)("span", {
+      }), "undone" === CT && (0, WT.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: iY.wentBack ? "You went back, so this change is gone." : "Undone."
-      }), "stale" === HY && (0, RY.jsx)("span", {
+        children: xT.wentBack ? "You went back, so this change is gone." : "Undone."
+      }), "stale" === CT && (0, WT.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Your code changed since this answer, so ask again to get an up-to-date change."
       })]
@@ -13048,104 +13048,104 @@ function zu(YY) {
   })
 }
 
-function Zu(YY) {
+function OD(TT) {
   let {
-    target: rY,
-    isOpen: DY
-  } = YY;
-  return (0, RY.jsxs)("div", {
-    className: IY()("WorldCodeAiTargetLabel", DY && "WorldCodeAiTargetLabel-open"),
-    children: [(0, RY.jsx)("span", {
-      children: rY.label
-    }), DY && (0, RY.jsx)("span", {
+    target: oT,
+    isOpen: IT
+  } = TT;
+  return (0, WT.jsxs)("div", {
+    className: kT()("WorldCodeAiTargetLabel", IT && "WorldCodeAiTargetLabel-open"),
+    children: [(0, WT.jsx)("span", {
+      children: oT.label
+    }), IT && (0, WT.jsx)("span", {
       className: "WorldCodeAiTargetLabelNote",
       children: "Open now"
     })]
   })
 }
 
-function Cu(YY) {
+function HD(TT) {
   let {
-    code: rY,
-    onSwitch: DY,
-    defaultOpen: AY,
-    isElsewhere: IY
-  } = YY;
-  const [gY, aY] = (0, FY.useState)(!1), vY = (0, FY.useMemo)((() => ({
+    code: oT,
+    onSwitch: IT,
+    defaultOpen: zT,
+    isElsewhere: kT
+  } = TT;
+  const [BT, FT] = (0, iT.useState)(!1), ST = (0, iT.useMemo)((() => ({
     path: "World Code",
     before: "",
-    after: rY
-  })), [rY]);
-  return (0, RY.jsxs)("div", {
+    after: oT
+  })), [oT]);
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiToolCard WorldCodeAiWorldCodePart",
-    children: [(0, RY.jsx)(OY, {
+    children: [(0, WT.jsx)(XT, {
       className: "WorldCodeAiChangeLog",
       title: "Code for World Code",
       isCalm: !0,
-      isElsewhere: IY,
-      defaultOpen: AY,
-      children: (0, RY.jsx)("div", {
+      isElsewhere: kT,
+      defaultOpen: zT,
+      children: (0, WT.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: (0, RY.jsx)(Aa, {
-          change: vY
+        children: (0, WT.jsx)(FF, {
+          change: ST
         })
       })
-    }), (0, RY.jsxs)("div", {
+    }), (0, WT.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, RY.jsx)("span", {
+      children: [(0, WT.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "A code block only runs when clicked, so this part goes in World Code."
-      }), DY && (0, RY.jsx)("button", {
+      }), IT && (0, WT.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
-        onClick: DY,
+        onClick: IT,
         children: "Switch to World Code"
-      }), (0, RY.jsx)("button", {
+      }), (0, WT.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          navigator.clipboard.writeText(rY).then((() => {
-            aY(!0)
+          navigator.clipboard.writeText(oT).then((() => {
+            FT(!0)
           })).catch((() => {}))
         },
-        children: gY ? "Copied" : "Copy"
+        children: BT ? "Copied" : "Copy"
       })]
     })]
   })
 }
 
-function fu(YY) {
-  var rY;
+function nD(TT) {
+  var oT;
   let {
-    failed: DY,
-    nothingChanged: FY,
-    onRetry: AY,
-    defaultOpen: IY,
-    isElsewhere: gY
-  } = YY;
-  const aY = null === (rY = DY.find((YY => null !== YY.closest))) || void 0 === rY ? void 0 : rY.closest;
-  return (0, RY.jsxs)("div", {
+    failed: IT,
+    nothingChanged: iT,
+    onRetry: zT,
+    defaultOpen: kT,
+    isElsewhere: BT
+  } = TT;
+  const FT = null === (oT = IT.find((TT => null !== TT.closest))) || void 0 === oT ? void 0 : oT.closest;
+  return (0, WT.jsxs)("div", {
     className: "WorldCodeAiFailedEdits",
-    children: [(0, RY.jsxs)(OY, {
-      title: FY ? "That change didn't work, so your code is the same." : 1 === DY.length ? "One part didn't work, so it's left out." : `${DY.length} parts didn't work, so they're left out.`,
-      defaultOpen: IY,
-      isElsewhere: gY,
-      children: [aY && (0, RY.jsxs)(RY.Fragment, {
-        children: [(0, RY.jsx)("p", {
+    children: [(0, WT.jsxs)(XT, {
+      title: iT ? "That change didn't work, so your code is the same." : 1 === IT.length ? "One part didn't work, so it's left out." : `${IT.length} parts didn't work, so they're left out.`,
+      defaultOpen: kT,
+      isElsewhere: BT,
+      children: [FT && (0, WT.jsxs)(WT.Fragment, {
+        children: [(0, WT.jsx)("p", {
           children: "The closest bit in your code:"
-        }), (0, RY.jsx)("pre", {
+        }), (0, WT.jsx)("pre", {
           className: "WorldCodeAiFailedLines",
-          children: aY.text.split("\n").length > 4 ? `${aY.text.split("\n").slice(0,4).join("\n")}\n\u2026` : aY.text
+          children: FT.text.split("\n").length > 4 ? `${FT.text.split("\n").slice(0,4).join("\n")}\n\u2026` : FT.text
         })]
-      }), !aY && (0, RY.jsx)("p", {
+      }), !FT && (0, WT.jsx)("p", {
         children: "Try asking for it again, maybe in a different way."
       })]
-    }), AY && (0, RY.jsxs)("div", {
+    }), zT && (0, WT.jsxs)("div", {
       className: "WorldCodeAiFailedRetry",
-      children: [(0, RY.jsx)("button", {
-        ...yg.e,
+      children: [(0, WT.jsx)("button", {
+        ...gB.h,
         className: "WorldCodeAiSecondaryButton",
-        onClick: AY,
+        onClick: zT,
         children: "Ask the AI to try again"
-      }), (0, RY.jsx)("span", {
+      }), (0, WT.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "It asks the AI once more."
       })]
@@ -13153,1059 +13153,1059 @@ function fu(YY) {
   })
 }
 
-function ju(YY) {
+function qD(TT) {
   let {
-    lookups: rY,
-    words: DY,
-    defaultOpen: FY,
-    isElsewhere: AY
-  } = YY;
-  return (0, RY.jsxs)(OY, {
-    title: Fu,
+    lookups: oT,
+    words: IT,
+    defaultOpen: iT,
+    isElsewhere: zT
+  } = TT;
+  return (0, WT.jsxs)(XT, {
+    title: BD,
     isCalm: !0,
-    isElsewhere: AY,
-    defaultOpen: FY,
-    children: [DY && (0, RY.jsx)("p", {
-      children: DY
-    }), (0, RY.jsx)("p", {
+    isElsewhere: zT,
+    defaultOpen: iT,
+    children: [IT && (0, WT.jsx)("p", {
+      children: IT
+    }), (0, WT.jsx)("p", {
       children: "It looks at:"
-    }), (0, RY.jsx)("ul", {
+    }), (0, WT.jsx)("ul", {
       className: "WorldCodeAiLookupList",
-      children: rY.map(((YY, rY) => (0, RY.jsx)("li", {
-        children: VA(YY)
-      }, rY)))
+      children: oT.map(((TT, oT) => (0, WT.jsx)("li", {
+        children: Rz(TT)
+      }, oT)))
     })]
   })
 }
 
-function hu(YY) {
-  return `Add this to my World Code:\n\`\`\`js\n${YY.join("\n").replace(/\s*$/,"\n")}\`\`\``
+function ZD(TT) {
+  return `Add this to my World Code:\n\`\`\`js\n${TT.join("\n").replace(/\s*$/,"\n")}\`\`\``
 }
 
-function du(YY) {
-  const rY = Math.ceil(YY / 1e3);
-  return `${Math.floor(rY/60)}:${String(rY%60).padStart(2,"0")}`
+function lD(TT) {
+  const oT = Math.ceil(TT / 1e3);
+  return `${Math.floor(oT/60)}:${String(oT%60).padStart(2,"0")}`
 }
 
-function Ju(YY) {
-  return "waiting" === YY.phase ? "You're next" : YY.playingThrough && "writing" !== YY.phase && "screening" !== YY.phase ? "Playing your code through as each player\u2026" : null
+function sD(TT) {
+  return "waiting" === TT.phase ? "You're next" : TT.playingThrough && "writing" !== TT.phase && "screening" !== TT.phase ? "Playing your code through as each player\u2026" : null
 }
 
-function Mu(YY) {
-  var rY;
+function tD(TT) {
+  var oT;
   let {
-    busy: DY
-  } = YY;
-  const FY = (AY = DY.phase, OY = null !== (rY = DY.reasoningChars) && void 0 !== rY ? rY : 0, "screening" === AY ? 3 : "writing" === AY ? 2 : "thinking" === AY && OY >= 400 ? 1 : 0);
-  var AY, OY;
-  return (0, RY.jsx)("ol", {
+    busy: IT
+  } = TT;
+  const iT = (zT = IT.phase, XT = null !== (oT = IT.reasoningChars) && void 0 !== oT ? oT : 0, "screening" === zT ? 3 : "writing" === zT ? 2 : "thinking" === zT && XT >= 400 ? 1 : 0);
+  var zT, XT;
+  return (0, WT.jsx)("ol", {
     className: "WorldCodeAiSteps",
-    children: sv.map(((YY, rY) => (0, RY.jsx)("li", {
-      className: IY()(rY < FY && "WorldCodeAiStep-done", rY === FY && "WorldCodeAiStep-current"),
-      children: rY < FY ? `\u2713 ${YY}` : YY
-    }, YY)))
+    children: rS.map(((TT, oT) => (0, WT.jsx)("li", {
+      className: kT()(oT < iT && "WorldCodeAiStep-done", oT === iT && "WorldCodeAiStep-current"),
+      children: oT < iT ? `\u2713 ${TT}` : TT
+    }, TT)))
   })
 }
-const wu = (0, FY.memo)((function(YY) {
-    var rY, AY, iY, EY, VY, SY, lY, TY, eY, NY, BY, cY, KY;
+const GD = (0, iT.memo)((function(TT) {
+    var oT, zT, xT, AT, hT, wT, mT, eT, RT, uT, vT, ET, fT;
     let {
-      files: HY,
-      activePath: zY,
-      canEdit: ZY,
-      errors: CY,
-      errorCount: fY,
-      applyFiles: jY,
-      submit: hY,
-      testRun: dY,
-      close: JY,
-      goToLine: MY,
-      target: wY,
-      chatKey: bY,
-      historyKey: XY,
-      openWorldCode: qY,
-      readWorldCode: pY,
-      viewChunk: kY,
-      viewGameState: GY,
-      openTarget: xY,
-      isLoaded: nY = !0,
-      draft: PY,
-      onDraftUsed: UY,
-      selection: LY,
-      onSelectionUsed: tY
-    } = YY;
-    const rr = wY.codeBlock,
-      Dr = wY.key,
-      Ar = function(YY) {
-        let rY = Ru.get(YY);
-        return rY || (rY = {
+      files: CT,
+      activePath: jT,
+      canEdit: JT,
+      errors: UT,
+      errorCount: aT,
+      applyFiles: YT,
+      submit: QT,
+      testRun: OT,
+      close: HT,
+      goToLine: nT,
+      target: qT,
+      chatKey: ZT,
+      historyKey: lT,
+      openWorldCode: sT,
+      readWorldCode: tT,
+      viewChunk: GT,
+      viewGameState: pT,
+      openTarget: bT,
+      isLoaded: yT = !0,
+      draft: NT,
+      onDraftUsed: PT,
+      selection: dT,
+      onSelectionUsed: VT
+    } = TT;
+    const oo = qT.codeBlock,
+      Io = qT.key,
+      zo = function(TT) {
+        let oT = DD.get(TT);
+        return oT || (oT = {
           entries: [],
           nextId: 1,
           dismissedErrorCounts: new Map,
-          turns: new tI
-        }, Ru.set(YY, rY)), rY
-      }(bY),
-      [Ir, Rr] = (0, FY.useState)((() => Ar.entries)),
-      Or = (0, FY.useRef)(!0),
-      gr = (0, FY.useCallback)((YY => {
-        const rY = "function" === typeof YY ? YY : () => YY;
-        Or.current ? Rr(rY) : Ar.setEntries ? Ar.setEntries(rY) : Ar.entries = rY(Ar.entries)
-      }), [Ar]);
-    (0, FY.useEffect)((() => (Or.current = !0, Ar.setEntries = Rr, () => {
-      Or.current = !1, Ar.setEntries === Rr && (Ar.setEntries = void 0)
-    })), [Ar]);
-    const [ar, vr] = (0, FY.useState)(null), [ur, sr] = (0, FY.useState)([]), [ir, yr] = (0, FY.useState)(!1), [Qr, or] = (0, FY.useState)([]), [Wr, Er] = (0, FY.useState)(!1), [mr, Vr] = (0, FY.useState)(!1), [Sr, lr] = (0, FY.useState)(null), [Tr, er] = (0, FY.useState)(!1), Nr = (0, FY.useRef)("settings"), [Br, cr] = (0, FY.useState)(null), Kr = (0, FY.useRef)(function() {
+          turns: new zW
+        }, DD.set(TT, oT)), oT
+      }(ZT),
+      [ko, Wo] = (0, iT.useState)((() => zo.entries)),
+      Xo = (0, iT.useRef)(!0),
+      Bo = (0, iT.useCallback)((TT => {
+        const oT = "function" === typeof TT ? TT : () => TT;
+        Xo.current ? Wo(oT) : zo.setEntries ? zo.setEntries(oT) : zo.entries = oT(zo.entries)
+      }), [zo]);
+    (0, iT.useEffect)((() => (Xo.current = !0, zo.setEntries = Wo, () => {
+      Xo.current = !1, zo.setEntries === Wo && (zo.setEntries = void 0)
+    })), [zo]);
+    const [Fo, So] = (0, iT.useState)(null), [Do, Lo] = (0, iT.useState)([]), [xo, co] = (0, iT.useState)(!1), [Ko, Mo] = (0, iT.useState)([]), [ro, Ao] = (0, iT.useState)(!1), [go, ho] = (0, iT.useState)(!1), [wo, mo] = (0, iT.useState)(null), [eo, Ro] = (0, iT.useState)(!1), uo = (0, iT.useRef)("settings"), [vo, Eo] = (0, iT.useState)(null), fo = (0, iT.useRef)(function() {
       try {
-        var YY;
-        const rY = JSON.parse(null !== (YY = localStorage.getItem(mv)) && void 0 !== YY ? YY : "{}");
-        return "object" !== typeof rY || null === rY ? {} : Object.fromEntries(Object.entries(rY).filter((YY => {
-          let [, rY] = YY;
-          return Array.isArray(rY) && rY.every((YY => "number" === typeof YY))
+        var TT;
+        const oT = JSON.parse(null !== (TT = localStorage.getItem(RS)) && void 0 !== TT ? TT : "{}");
+        return "object" !== typeof oT || null === oT ? {} : Object.fromEntries(Object.entries(oT).filter((TT => {
+          let [, oT] = TT;
+          return Array.isArray(oT) && oT.every((TT => "number" === typeof TT))
         })))
       } catch {
         return {}
       }
-    }()), [Hr, zr] = (0, FY.useState)(eg), Zr = (0, FY.useRef)(Hr);
-    Zr.current = Hr;
-    const Cr = Hr && ZY,
-      fr = (0, FY.useRef)(!1),
-      [jr, hr] = (0, FY.useState)(null),
-      [dr, Jr] = (0, FY.useState)(""),
-      [Mr, wr] = (0, FY.useState)([]),
-      [br, Xr] = (0, FY.useState)(null),
-      [qr, pr] = (0, FY.useState)(new Set),
-      [kr, Gr] = (0, FY.useState)(null !== (rY = Ar.dismissedErrorCounts.get(wY.key)) && void 0 !== rY ? rY : 0),
-      [xr, nr] = (0, FY.useState)(!1),
-      [Pr, Ur] = (0, FY.useState)(Date.now),
-      Lr = (0, FY.useRef)(null),
-      tr = (0, FY.useRef)(null),
-      YD = (0, FY.useRef)([]),
-      [rD, DD] = (0, FY.useState)(0),
-      [FD, AD] = (0, FY.useState)(null),
-      ID = (0, Fa.q)(bY),
-      RD = null !== FD && void 0 !== FD ? FD : null === ID || void 0 === ID ? void 0 : ID.entryId,
-      OD = Ir.find((YY => YY.id === RD)),
-      gD = (null === OD || void 0 === OD ? void 0 : OD.target.key) === wY.key && (null !== FD || void 0 === (null === ID || void 0 === ID ? void 0 : ID.endedAt)),
-      aD = (YY, rY) => {
-        const DY = setTimeout((() => {
-          YD.current = YD.current.filter((YY => YY !== DY)), DD(YD.current.length), YY()
-        }), rY);
-        YD.current.push(DY), DD(YD.current.length)
+    }()), [Co, jo] = (0, iT.useState)(CB), Jo = (0, iT.useRef)(Co);
+    Jo.current = Co;
+    const Uo = Co && JT,
+      ao = (0, iT.useRef)(!1),
+      [Yo, Qo] = (0, iT.useState)(null),
+      [Oo, Ho] = (0, iT.useState)(""),
+      [no, qo] = (0, iT.useState)([]),
+      [Zo, so] = (0, iT.useState)(null),
+      [to, Go] = (0, iT.useState)(new Set),
+      [po, bo] = (0, iT.useState)(null !== (oT = zo.dismissedErrorCounts.get(qT.key)) && void 0 !== oT ? oT : 0),
+      [yo, No] = (0, iT.useState)(!1),
+      [Po, Vo] = (0, iT.useState)(Date.now),
+      TI = (0, iT.useRef)(null),
+      oI = (0, iT.useRef)(null),
+      II = (0, iT.useRef)([]),
+      [iI, zI] = (0, iT.useState)(0),
+      [kI, WI] = (0, iT.useState)(null),
+      XI = (0, BF.l)(ZT),
+      BI = null !== kI && void 0 !== kI ? kI : null === XI || void 0 === XI ? void 0 : XI.entryId,
+      FI = ko.find((TT => TT.id === BI)),
+      SI = (null === FI || void 0 === FI ? void 0 : FI.target.key) === qT.key && (null !== kI || void 0 === (null === XI || void 0 === XI ? void 0 : XI.endedAt)),
+      DI = (TT, oT) => {
+        const IT = setTimeout((() => {
+          II.current = II.current.filter((TT => TT !== IT)), zI(II.current.length), TT()
+        }), oT);
+        II.current.push(IT), zI(II.current.length)
       },
-      uD = () => {
-        for (const YY of YD.current) clearTimeout(YY);
-        YD.current = [], DD(0), AD(null)
+      xI = () => {
+        for (const TT of II.current) clearTimeout(TT);
+        II.current = [], zI(0), WI(null)
       },
-      sD = (0, FY.useRef)(null),
-      iD = (0, FY.useRef)(null),
-      yD = () => Ar.nextId++,
-      QD = (0, FY.useRef)(0),
-      oD = (0, FY.useRef)(HY);
-    oD.current = HY;
-    const WD = (0, FY.useCallback)((YY => {
-        null === YY || void 0 === YY || YY.focus()
+      cI = (0, iT.useRef)(null),
+      KI = (0, iT.useRef)(null),
+      MI = () => zo.nextId++,
+      rI = (0, iT.useRef)(0),
+      AI = (0, iT.useRef)(CT);
+    AI.current = CT;
+    const gI = (0, iT.useCallback)((TT => {
+        null === TT || void 0 === TT || TT.focus()
       }), []),
-      ED = (0, FY.useRef)(fY);
-    ED.current = fY;
-    const mD = (0, FY.useRef)(Mr);
-    mD.current = Mr;
-    const VD = (0, FY.useRef)(Ir.length);
-    (0, FY.useEffect)((() => {
-      const YY = sD.current;
-      if (!YY) return;
-      if (ir) return void YY.scrollTo({
+      hI = (0, iT.useRef)(aT);
+    hI.current = aT;
+    const wI = (0, iT.useRef)(no);
+    wI.current = no;
+    const mI = (0, iT.useRef)(ko.length);
+    (0, iT.useEffect)((() => {
+      const TT = cI.current;
+      if (!TT) return;
+      if (xo) return void TT.scrollTo({
         top: 0
       });
-      if (Sr) return;
-      const rY = Ir[Ir.length - 1],
-        DY = (null === rY || void 0 === rY ? void 0 : rY.target.key) === Dr;
-      Ir.length > VD.current && "assistant" === (null === rY || void 0 === rY ? void 0 : rY.role) && !rY.isNotice && DY && (Ar.heldAnswerId = rY.id), VD.current = Ir.length;
-      const FY = void 0 !== rY && DY && rY.id === Ar.heldAnswerId && "offered" === rY.status && void 0 === rY.trial,
-        AY = YY.querySelectorAll(".WorldCodeAiEntry"),
-        IY = AY[AY.length - 1];
-      if (FY && IY) {
-        var RY;
-        const DY = YY.getBoundingClientRect().top,
-          FY = rY => YY.scrollTop + rY.getBoundingClientRect().top - DY;
-        let AY = FY(IY);
-        const OY = IY.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
-          gY = IY.querySelector(".WorldCodeAiChangeHeader"),
-          aY = IY.querySelector(".WorldCodeAiChangeActions-sticky");
-        if (null !== (RY = rY.warnings) && void 0 !== RY && RY.length && OY && gY && aY) {
-          const rY = IY.querySelector(".WorldCodeAiDiff-marked"),
-            DY = OY.getBoundingClientRect().height,
-            RY = rY ? FY(rY) + 2 * DY + aY.offsetHeight - YY.clientHeight : FY(OY) + 3 * DY + aY.offsetHeight - YY.clientHeight;
-          AY = Math.max(AY, Math.min(RY, rY ? FY(rY) - DY : FY(gY)))
-        } else if (gY && aY) {
-          const rY = IY.querySelectorAll(".WorldCodeAiChangeWhy li"),
-            DY = rY[rY.length - 1];
-          if (DY) {
-            const rY = FY(DY) + DY.getBoundingClientRect().height + aY.offsetHeight - YY.clientHeight;
-            AY = Math.max(AY, Math.min(rY, FY(gY)))
+      if (wo) return;
+      const oT = ko[ko.length - 1],
+        IT = (null === oT || void 0 === oT ? void 0 : oT.target.key) === Io;
+      ko.length > mI.current && "assistant" === (null === oT || void 0 === oT ? void 0 : oT.role) && !oT.isNotice && IT && (zo.heldAnswerId = oT.id), mI.current = ko.length;
+      const iT = void 0 !== oT && IT && oT.id === zo.heldAnswerId && "offered" === oT.status && void 0 === oT.trial,
+        zT = TT.querySelectorAll(".WorldCodeAiEntry"),
+        kT = zT[zT.length - 1];
+      if (iT && kT) {
+        var WT;
+        const IT = TT.getBoundingClientRect().top,
+          iT = oT => TT.scrollTop + oT.getBoundingClientRect().top - IT;
+        let zT = iT(kT);
+        const XT = kT.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
+          BT = kT.querySelector(".WorldCodeAiChangeHeader"),
+          FT = kT.querySelector(".WorldCodeAiChangeActions-sticky");
+        if (null !== (WT = oT.warnings) && void 0 !== WT && WT.length && XT && BT && FT) {
+          const oT = kT.querySelector(".WorldCodeAiDiff-marked"),
+            IT = XT.getBoundingClientRect().height,
+            WT = oT ? iT(oT) + 2 * IT + FT.offsetHeight - TT.clientHeight : iT(XT) + 3 * IT + FT.offsetHeight - TT.clientHeight;
+          zT = Math.max(zT, Math.min(WT, oT ? iT(oT) - IT : iT(BT)))
+        } else if (BT && FT) {
+          const oT = kT.querySelectorAll(".WorldCodeAiChangeWhy li"),
+            IT = oT[oT.length - 1];
+          if (IT) {
+            const oT = iT(IT) + IT.getBoundingClientRect().height + FT.offsetHeight - TT.clientHeight;
+            zT = Math.max(zT, Math.min(oT, iT(BT)))
           }
         }
-        YY.scrollTo({
-          top: AY
+        TT.scrollTo({
+          top: zT
         })
-      } else YY.scrollTo({
-        top: YY.scrollHeight
+      } else TT.scrollTo({
+        top: TT.scrollHeight
       })
-    }), [Ar, Ir, ar, ir, Dr, Sr]), (0, FY.useEffect)((() => {
-      Ar.entries = Ir, Ar.dismissedErrorCounts.set(wY.key, kr)
-    }), [Ar, Ir, kr, wY.key]), (0, FY.useEffect)((() => () => {
-      var YY;
-      null === (YY = Lr.current) || void 0 === YY || YY.abort(), uD(),
+    }), [zo, ko, Fo, xo, Io, wo]), (0, iT.useEffect)((() => {
+      zo.entries = ko, zo.dismissedErrorCounts.set(qT.key, po)
+    }), [zo, ko, po, qT.key]), (0, iT.useEffect)((() => () => {
+      var TT;
+      null === (TT = TI.current) || void 0 === TT || TT.abort(), xI(),
         function() {
-          var YY;
-          null === (YY = bI) || void 0 === YY || YY.tearDownNotification()
+          var TT;
+          null === (TT = pk) || void 0 === TT || TT.tearDownNotification()
         }()
-    }), []), (0, FY.useEffect)((() => {
-      var YY;
-      PY && (PY.send ? nY && (null === UY || void 0 === UY || UY(), kD.current(PY.text, PY.text, {
+    }), []), (0, iT.useEffect)((() => {
+      var TT;
+      NT && (NT.send ? yT && (null === PT || void 0 === PT || PT(), bI.current(NT.text, NT.text, {
         check: !1,
         useFree: !1
-      })) : (Jr(PY.text), null === (YY = iD.current) || void 0 === YY || YY.focus(), null === UY || void 0 === UY || UY()))
-    }), [PY, UY, nY]), (0, FY.useEffect)((() => function() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      const rY = setTimeout((() => {
-        wv(YY)
+      })) : (Ho(NT.text), null === (TT = KI.current) || void 0 === TT || TT.focus(), null === PT || void 0 === PT || PT()))
+    }), [NT, PT, yT]), (0, iT.useEffect)((() => function() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      const oT = setTimeout((() => {
+        GS(TT)
       }), 1e3);
       return () => {
-        clearTimeout(rY)
+        clearTimeout(oT)
       }
-    }(rr)), [rr]), (0, FY.useEffect)((() => {
-      let YY = !0;
-      gu.list(XY).then((rY => {
-        YY && sr(rY)
-      })).catch((YY => {
-        console.error("World Code AI: couldn't read the version history", YY)
+    }(oo)), [oo]), (0, iT.useEffect)((() => {
+      let TT = !0;
+      xD.list(lT).then((oT => {
+        TT && Lo(oT)
+      })).catch((TT => {
+        console.error("World Code AI: couldn't read the version history", TT)
       }));
-      const rY = gu.watch(XY, sr);
+      const oT = xD.watch(lT, Lo);
       return () => {
-        YY = !1, rY()
+        TT = !1, oT()
       }
-    }), [XY]), (0, FY.useEffect)((() => {
-      let YY = !0;
-      au.list(XY).then((rY => {
-        YY && or(rY)
-      })).catch((YY => {
-        console.error("World Code AI: couldn't read the notes about the game", YY)
+    }), [lT]), (0, iT.useEffect)((() => {
+      let TT = !0;
+      cD.list(lT).then((oT => {
+        TT && Mo(oT)
+      })).catch((TT => {
+        console.error("World Code AI: couldn't read the notes about the game", TT)
       }));
-      const rY = au.watch(XY, or);
+      const oT = cD.watch(lT, Mo);
       return () => {
-        YY = !1, rY()
+        TT = !1, oT()
       }
-    }), [XY]);
-    const SD = null !== (AY = null === (iY = Ir.findLast((YY => YY.target.key === wY.key))) || void 0 === iY ? void 0 : iY.retryAt) && void 0 !== AY ? AY : 0,
-      lD = BI(Pr),
-      TD = null !== ar || SD > Pr || lD > Pr;
-    (0, FY.useEffect)((() => {
-      if (!TD) return;
-      const YY = setInterval((() => {
-        Ur(Date.now())
+    }), [lT]);
+    const eI = null !== (zT = null === (xT = ko.findLast((TT => TT.target.key === qT.key))) || void 0 === xT ? void 0 : xT.retryAt) && void 0 !== zT ? zT : 0,
+      RI = Jk(Po),
+      uI = null !== Fo || eI > Po || RI > Po;
+    (0, iT.useEffect)((() => {
+      if (!uI) return;
+      const TT = setInterval((() => {
+        Vo(Date.now())
       }), 1e3);
       return () => {
-        clearInterval(YY)
+        clearInterval(TT)
       }
-    }), [TD]);
-    const eD = fY > kr && CY.length > 0 ? CY[CY.length - 1] : null,
-      ND = (0, FY.useMemo)((() => eD ? function(YY, rY) {
-        var DY;
-        let FY;
-        for (const [AY, IY] of Object.entries(rY)) {
+    }), [uI]);
+    const vI = aT > po && UT.length > 0 ? UT[UT.length - 1] : null,
+      EI = (0, iT.useMemo)((() => vI ? function(TT, oT) {
+        var IT;
+        let iT;
+        for (const [zT, kT] of Object.entries(oT)) {
           const {
-            text: rY,
-            line: DY
-          } = UO(YY, IY);
-          if (void 0 !== DY) {
-            if (FY) return UO(YY);
-            FY = {
-              text: rY,
-              path: AY,
-              line: DY
+            text: oT,
+            line: IT
+          } = IB(TT, kT);
+          if (void 0 !== IT) {
+            if (iT) return IB(TT);
+            iT = {
+              text: oT,
+              path: zT,
+              line: IT
             }
           }
         }
-        return null !== (DY = FY) && void 0 !== DY ? DY : UO(YY)
-      }(eD, HY) : {
+        return null !== (IT = iT) && void 0 !== IT ? IT : IB(TT)
+      }(vI, CT) : {
         text: ""
-      }), [eD, HY]),
-      BD = function(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wY;
-        const DY = yD();
-        return yr(!1), Er(!1), gr((FY => [...FY, {
-          ...YY,
-          id: DY,
-          target: rY
-        }])), DY
+      }), [vI, CT]),
+      fI = function(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qT;
+        const IT = MI();
+        return co(!1), Ao(!1), Bo((iT => [...iT, {
+          ...TT,
+          id: IT,
+          target: oT
+        }])), IT
       },
-      cD = YY => YY.target.key === wY.key,
-      KD = (YY, rY) => {
-        gr((DY => DY.map((DY => DY.id === YY ? {
-          ...DY,
-          ...rY
-        } : DY))))
+      CI = TT => TT.target.key === qT.key,
+      jI = (TT, oT) => {
+        Bo((IT => IT.map((IT => IT.id === TT ? {
+          ...IT,
+          ...oT
+        } : IT))))
       },
-      HD = (YY, rY) => {
-        KD(YY, {
-          status: rY
+      JI = (TT, oT) => {
+        jI(TT, {
+          status: oT
         })
       },
-      zD = RO();
+      UI = DX();
 
-    function ZD(YY) {
-      return !!iO(IO.getState()) && (BO().then((rY => {
-        rY || YY()
+    function aI(TT) {
+      return !!AX(SX.getState()) && (JX().then((oT => {
+        oT || TT()
       })), !0)
     }
-    const CD = YY => {
-        !Tr && ZD(YY) || YY()
+    const YI = TT => {
+        !eo && aI(TT) || TT()
       },
-      fD = async function(YY, rY) {
-        let FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      QI = async function(TT, oT) {
+        let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         const {
-          check: AY = void 0 === rY,
-          about: IY = (null !== rY && void 0 !== rY ? rY : YY.trim()),
-          planStep: RY,
-          wordsOnly: OY = !1,
-          asked: gY,
-          failedEdits: aY,
-          isAutoFix: vY = !1,
-          autoFixRound: uY = 0,
-          useFree: sY,
-          retryOf: iY,
-          continueFrom: QY,
-          lookups: oY = [],
-          lookupRound: EY = 0,
-          worldCodeFiles: mY,
-          viewedPaths: VY = [],
-          lookupOf: SY,
-          insertsInto: lY,
-          guardWords: TY
-        } = FY, eY = YY.trim();
-        if ("" === eY || ar) return;
-        null === wI.get() && (XI || (XI = !0, (async () => {
+          check: zT = void 0 === oT,
+          about: kT = (null !== oT && void 0 !== oT ? oT : TT.trim()),
+          planStep: WT,
+          wordsOnly: XT = !1,
+          asked: BT,
+          failedEdits: FT,
+          isAutoFix: ST = !1,
+          autoFixRound: DT = 0,
+          useFree: LT,
+          retryOf: xT,
+          continueFrom: KT,
+          lookups: MT = [],
+          lookupRound: AT = 0,
+          worldCodeFiles: gT,
+          viewedPaths: hT = [],
+          lookupOf: wT,
+          insertsInto: mT,
+          guardWords: eT
+        } = iT, RT = TT.trim();
+        if ("" === RT || Fo) return;
+        null === Gk.get() && (bk || (bk = !0, (async () => {
           try {
-            if (null !== await wI.refresh() || null === wI.getPlayer()) return;
+            if (null !== await Gk.refresh() || null === Gk.getPlayer()) return;
             const {
-              NotificationProvider: YY
-            } = await Promise.resolve().then((() => DY(1346)));
-            bI = YY.showPromptPopup({
+              NotificationProvider: TT
+            } = await Promise.resolve().then((() => IT(1325)));
+            pk = TT.showPromptPopup({
               title: "aiHelperDataSharing:title",
               subtitle: "aiHelperDataSharing:subtitle",
               confirmText: "aiHelperDataSharing:yes",
               cancelText: "aiHelperDataSharing:no"
             });
-            const rY = await bI.getResult();
-            "notificationTornDown" !== rY && wI.set(rY ? "yes" : "no")
-          } catch (YY) {
-            console.warn("AI Helper: couldn't ask about sharing chats", YY)
+            const oT = await pk.getResult();
+            "notificationTornDown" !== oT && Gk.set(oT ? "yes" : "no")
+          } catch (TT) {
+            console.warn("AI Helper: couldn't ask about sharing chats", TT)
           } finally {
-            bI = null, XI = !1
+            pk = null, bk = !1
           }
         })()));
-        const NY = null !== sY && void 0 !== sY ? sY : Tr && !vY && void 0 === iY && void 0 === QY;
-        if (!NY && Vu(FY) && ZD((() => {
-            JD.current(YY, rY, FY)
+        const uT = null !== LT && void 0 !== LT ? LT : eo && !ST && void 0 === xT && void 0 === KT;
+        if (!uT && uD(iT) && aI((() => {
+            qI.current(TT, oT, iT)
           }))) return;
-        const BY = null !== lY && void 0 !== lY ? lY : zY;
-        void 0 === sY && NY && er(!1), uD();
-        const cY = xR.activeKey(),
-          KY = NY ? null : cY,
-          HY = null !== KY,
-          fY = null !== cY && NY,
-          jY = !KY && !NY && IO.isAnswering(),
-          hY = void 0 === iY ? -1 : ((YY, rY) => {
-            for (let DY = YY.findIndex((YY => YY.id === rY)) - 1; DY >= 0; DY--)
-              if ("user" === YY[DY].role) return DY;
+        const vT = null !== mT && void 0 !== mT ? mT : jT;
+        void 0 === LT && uT && Ro(!1), xI();
+        const ET = VW.activeKey(),
+          fT = uT ? null : ET,
+          CT = null !== fT,
+          aT = null !== ET && uT,
+          YT = !fT && !uT && SX.isAnswering(),
+          QT = void 0 === xT ? -1 : ((TT, oT) => {
+            for (let IT = TT.findIndex((TT => TT.id === oT)) - 1; IT >= 0; IT--)
+              if ("user" === TT[IT].role) return IT;
             return -1
-          })(Ir, iY),
-          dY = (hY < 0 ? Ir : Ir.slice(0, hY)).filter((YY => !YY.isNotice && !YY.leftOut && cD(YY))).slice(-4).map((YY => ({
-            role: YY.role,
-            text: YY.question ? `${YY.text}\n${YY.question.question}` : YY.text
+          })(ko, xT),
+          OT = (QT < 0 ? ko : ko.slice(0, QT)).filter((TT => !TT.isNotice && !TT.leftOut && CI(TT))).slice(-4).map((TT => ({
+            role: TT.role,
+            text: TT.question ? `${TT.text}\n${TT.question.question}` : TT.text
           }))),
-          JY = void 0 === rY,
-          wY = void 0 === gY ? void 0 === rY ? eY : void 0 : null !== gY && void 0 !== gY ? gY : void 0,
-          bY = void 0 !== iY && void 0 !== QY,
-          XY = bY ? Ir.find((YY => YY.id === iY)) : void 0;
-        let pY;
-        if (bY) pY = hY >= 0 ? Ir[hY].id : -1;
-        else if (void 0 !== SY && hY < 0) pY = SY;
-        else if (hY >= 0) pY = Ir[hY].id, gr((YY => YY.filter((YY => YY.id !== iY)).map((YY => YY.id === pY ? {
-          ...YY,
+          HT = void 0 === oT,
+          qT = void 0 === BT ? void 0 === oT ? RT : void 0 : null !== BT && void 0 !== BT ? BT : void 0,
+          ZT = void 0 !== xT && void 0 !== KT,
+          lT = ZT ? ko.find((TT => TT.id === xT)) : void 0;
+        let tT;
+        if (ZT) tT = QT >= 0 ? ko[QT].id : -1;
+        else if (void 0 !== wT && QT < 0) tT = wT;
+        else if (QT >= 0) tT = ko[QT].id, Bo((TT => TT.filter((TT => TT.id !== xT)).map((TT => TT.id === tT ? {
+          ...TT,
           isNotice: void 0
-        } : YY))));
+        } : TT))));
         else {
-          const YY = vY && uY > 0;
-          pY = BD({
+          const TT = ST && DT > 0;
+          tT = fI({
             role: "user",
-            text: YY ? eY : null !== rY && void 0 !== rY ? rY : eY,
+            text: TT ? RT : null !== oT && void 0 !== oT ? oT : RT,
             changes: [],
             status: "offered",
-            about: IY,
-            planStep: RY,
-            ...wY ? {
-              asked: wY
+            about: kT,
+            planStep: WT,
+            ...qT ? {
+              asked: qT
             } : {},
-            ...YY ? {
-              logTitle: aY ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
+            ...TT ? {
+              logTitle: FT ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
             } : {}
           })
         }
-        const kY = {
-            lookups: oY,
-            lookupRound: EY,
-            worldCodeFiles: mY,
-            viewedPaths: VY
+        const GT = {
+            lookups: MT,
+            lookupRound: AT,
+            worldCodeFiles: gT,
+            viewedPaths: hT
           },
-          GY = {
-            retry: eY,
-            retryShown: rY,
+          pT = {
+            retry: RT,
+            retryShown: oT,
             retryOptions: {
-              check: AY,
-              about: IY,
-              planStep: RY,
-              wordsOnly: OY,
-              useFree: NY,
-              asked: gY,
-              failedEdits: aY,
-              isAutoFix: vY,
-              autoFixRound: uY,
-              insertsInto: lY,
-              guardWords: TY,
-              ...kY
+              check: zT,
+              about: kT,
+              planStep: WT,
+              wordsOnly: XT,
+              useFree: uT,
+              asked: BT,
+              failedEdits: FT,
+              isAutoFix: ST,
+              autoFixRound: DT,
+              insertsInto: mT,
+              guardWords: eT,
+              ...GT
             }
           },
-          nY = new AbortController;
-        Lr.current = nY;
-        const PY = Ar.turns;
-        PY.requestStarted(pY, void 0 !== SY);
-        const UY = Zr.current ? "direct" : "offer";
-        var LY, tY, Yr, Dr, Rr;
+          yT = new AbortController;
+        TI.current = yT;
+        const NT = zo.turns;
+        NT.requestStarted(tT, void 0 !== wT);
+        const PT = Jo.current ? "direct" : "offer";
+        var dT, VT, To, Io, Wo;
         try {
-          var Or;
-          const YY = Date.now(),
-            DY = eY.startsWith(Hu),
-            FY = null === KY || void 0 === KY ? void 0 : KY.model.name;
-          Ur(YY), vr(jY ? {
+          var Xo;
+          const TT = Date.now(),
+            IT = RT.startsWith(YD),
+            iT = null === fT || void 0 === fT ? void 0 : fT.model.name;
+          Vo(TT), So(YT ? {
             phase: "thinking",
-            startedAt: YY,
-            playingThrough: DY,
+            startedAt: TT,
+            playingThrough: IT,
             isSuperBot: !0
           } : {
             phase: "checking",
-            startedAt: YY,
-            playingThrough: DY,
-            keyModel: FY
+            startedAt: TT,
+            playingThrough: IT,
+            keyModel: iT
           });
-          const gY = YY => {
-              KD(pY, {
+          const BT = TT => {
+              jI(tT, {
                 isNotice: !0
-              }), BD({
+              }), fI({
                 role: "assistant",
-                text: "personalInfo" === YY ? "Please don't share personal details like names, addresses or schools. Ask again without them." : Nu,
+                text: "personalInfo" === TT ? "Please don't share personal details like names, addresses or schools. Ask again without them." : jD,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               })
             },
-            sY = async () => {
-              if (!AY && !KY) return null !== TY && void 0 !== TY ? TY : eY;
-              const YY = Date.now();
-              Ur(YY), vr({
+            LT = async () => {
+              if (!zT && !fT) return null !== eT && void 0 !== eT ? eT : RT;
+              const TT = Date.now();
+              Vo(TT), So({
                 phase: "checking",
-                startedAt: YY,
-                playingThrough: DY,
-                keyModel: FY
+                startedAt: TT,
+                playingThrough: IT,
+                keyModel: iT
               });
               const {
-                safety: rY,
-                request: IY
-              } = await async function(YY, rY) {
-                let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                const FY = await jI(YY, rY, DY),
-                  AY = BA(YY);
-                if ("unsafe" !== FY || AY === YY) return {
-                  safety: FY,
-                  request: YY
+                safety: oT,
+                request: kT
+              } = await async function(TT, oT) {
+                let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                const iT = await qk(TT, oT, IT),
+                  zT = jz(TT);
+                if ("unsafe" !== iT || zT === TT) return {
+                  safety: iT,
+                  request: TT
                 };
-                const IY = await jI(AY, rY, !0);
-                return "unchecked" === IY ? {
-                  safety: FY,
-                  request: YY
+                const kT = await qk(zT, oT, !0);
+                return "unchecked" === kT ? {
+                  safety: iT,
+                  request: TT
                 } : {
-                  safety: IY,
-                  request: AY
+                  safety: kT,
+                  request: zT
                 }
-              }(eY, nY.signal, HY);
-              return "unchecked" === rY && KY ? (BD({
+              }(RT, yT.signal, CT);
+              return "unchecked" === oT && fT ? (fI({
                 role: "assistant",
                 text: "",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
-                ...GY,
+                ...pT,
                 keyNotice: {
                   notice: "unchecked",
-                  model: KY.model.name,
-                  company: yR(KY.provider, KY.baseUrl, !0)
+                  model: fT.model.name,
+                  company: gW(fT.provider, fT.baseUrl, !0)
                 }
-              }), null) : "personalInfo" === rY || "unsafe" === rY ? (gY(rY), null) : IY
+              }), null) : "personalInfo" === oT || "unsafe" === oT ? (BT(oT), null) : kT
             };
-          let cY = jY ? null !== TY && void 0 !== TY ? TY : eY : await sY();
-          if (null === cY) return;
-          const zY = mY ? {
-              ...oD.current,
-              ...mY
-            } : oD.current,
-            wY = {
-              request: eY,
-              files: zY,
-              activePath: BY,
-              errors: CY.slice(-5),
-              history: dY,
-              codeBlock: rr,
-              failedEdits: aY,
-              canAsk: JY,
-              lookups: oY,
-              canLookUp: EY < 3 && !OY,
-              canChangeWorldCode: DF(UY),
-              looksUpDocs: HY,
-              about: rr ? void 0 : {
-                notes: Qr,
-                outline: (Rr = Fr(zY, new Set(su().callbackNames())), [Rr.callbacks.length > 0 ? `Callbacks: ${Rr.callbacks.join(", ")}` : "", Rr.commands.length > 0 ? `Commands: ${Rr.commands.join(", ")}` : "", Rr.functions.length > 0 ? `Functions: ${Rr.functions.join(", ")}` : ""].filter((YY => "" !== YY)).join("\n")),
-                canRemember: Qr.length < 8
+          let ET = YT ? null !== eT && void 0 !== eT ? eT : RT : await LT();
+          if (null === ET) return;
+          const jT = gT ? {
+              ...AI.current,
+              ...gT
+            } : AI.current,
+            qT = {
+              request: RT,
+              files: jT,
+              activePath: vT,
+              errors: UT.slice(-5),
+              history: OT,
+              codeBlock: oo,
+              failedEdits: FT,
+              canAsk: HT,
+              lookups: MT,
+              canLookUp: AT < 3 && !XT,
+              canChangeWorldCode: zi(PT),
+              looksUpDocs: CT,
+              about: oo ? void 0 : {
+                notes: Ko,
+                outline: (Wo = io(jT, new Set(rD().callbackNames())), [Wo.callbacks.length > 0 ? `Callbacks: ${Wo.callbacks.join(", ")}` : "", Wo.commands.length > 0 ? `Commands: ${Wo.commands.join(", ")}` : "", Wo.functions.length > 0 ? `Functions: ${Wo.functions.join(", ")}` : ""].filter((TT => "" !== TT)).join("\n")),
+                canRemember: Ko.length < 8
               }
             },
-            Ar = new Map,
-            ar = YY => {
-              var rY;
-              const DY = `${YY.format} ${YY.nativeTools}`,
-                FY = null !== (rY = Ar.get(DY)) && void 0 !== rY ? rY : EA(su(), wY, YY);
-              return Ar.set(DY, FY), FY
+            zo = new Map,
+            Fo = TT => {
+              var oT;
+              const IT = `${TT.format} ${TT.nativeTools}`,
+                iT = null !== (oT = zo.get(IT)) && void 0 !== oT ? oT : mz(rD(), qT, TT);
+              return zo.set(IT, iT), iT
             },
-            or = YY => ar(RI(YY)),
-            Wr = oA(wY);
-          let Er = 0,
-            mr = null;
-          const Vr = async () => {
-            const rY = BI();
-            var FY, AY;
-            rY > Date.now() && (Ur(Date.now()), vr({
+            Mo = TT => Fo(Dk(TT)),
+            ro = hz(qT);
+          let Ao = 0,
+            go = null;
+          const ho = async () => {
+            const oT = Jk();
+            var iT, zT;
+            oT > Date.now() && (Vo(Date.now()), So({
               phase: "waiting",
-              startedAt: YY,
-              until: rY,
-              playingThrough: DY
-            }), await (FY = rY - Date.now(), AY = nY.signal, new Promise(((YY, rY) => {
-              const DY = setTimeout(YY, FY);
-              AY.addEventListener("abort", (() => {
-                clearTimeout(DY), rY(new DOMException("The World Code AI request was stopped", "AbortError"))
+              startedAt: TT,
+              until: oT,
+              playingThrough: IT
+            }), await (iT = oT - Date.now(), zT = yT.signal, new Promise(((TT, oT) => {
+              const IT = setTimeout(TT, iT);
+              zT.addEventListener("abort", (() => {
+                clearTimeout(IT), oT(new DOMException("The World Code AI request was stopped", "AbortError"))
               }), {
                 once: !0
               })
             }))));
-            const IY = Date.now();
-            return Ur(IY), vr({
+            const kT = Date.now();
+            return Vo(kT), So({
               phase: "thinking",
-              startedAt: IY,
-              playingThrough: DY
-            }), async function(YY) {
-              var rY, DY;
-              let FY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const AY = Date.now(),
-                IY = new AbortController,
-                RY = () => {
-                  IY.abort()
+              startedAt: kT,
+              playingThrough: IT
+            }), async function(TT) {
+              var oT, IT;
+              let iT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const zT = Date.now(),
+                kT = new AbortController,
+                WT = () => {
+                  kT.abort()
                 };
-              null !== (rY = FY.signal) && void 0 !== rY && rY.aborted && RY(), null === (DY = FY.signal) || void 0 === DY || DY.addEventListener("abort", RY, {
+              null !== (oT = iT.signal) && void 0 !== oT && oT.aborted && WT(), null === (IT = iT.signal) || void 0 === IT || IT.addEventListener("abort", WT, {
                 once: !0
               });
-              const OY = (0, WY.d)(3e4, IY.signal);
-              let gY = !1;
+              const XT = (0, rT.c)(3e4, kT.signal);
+              let BT = !1;
               try {
-                const rY = await SI(FI, fI(OI(YY, FI)), OY.signal, (YY => {
-                  if (!gY) {
-                    if (ZI(YY.answer)) return gY = !0, void RY();
-                    var rY;
-                    (!0 === YY.isCalling || CI(YY.answer)) && (null === (rY = FY.onProgress) || void 0 === rY || rY.call(FY, YY))
+                const oT = await vk(Bk, nk(Lk(TT, Bk)), XT.signal, (TT => {
+                  if (!BT) {
+                    if (Ok(TT.answer)) return BT = !0, void WT();
+                    var oT;
+                    (!0 === TT.isCalling || Hk(TT.answer)) && (null === (oT = iT.onProgress) || void 0 === oT || oT.call(iT, TT))
                   }
-                }), FY.tools);
-                if (VI(rY) && !ZI(rY.answer)) {
-                  const DY = !1 !== FY.canNudge ? await zI(FI, fI(OI(YY, FI)), rY, IY.signal, (YY => {
-                    if (!gY) {
-                      if (ZI(YY.answer)) return gY = !0, void RY();
-                      var rY;
-                      (!0 === YY.isCalling || CI(YY.answer)) && (null === (rY = FY.onProgress) || void 0 === rY || rY.call(FY, YY))
+                }), iT.tools);
+                if (uk(oT) && !Ok(oT.answer)) {
+                  const IT = !1 !== iT.canNudge ? await Qk(Bk, nk(Lk(TT, Bk)), oT, kT.signal, (TT => {
+                    if (!BT) {
+                      if (Ok(TT.answer)) return BT = !0, void WT();
+                      var oT;
+                      (!0 === TT.isCalling || Hk(TT.answer)) && (null === (oT = iT.onProgress) || void 0 === oT || oT.call(iT, TT))
                     }
-                  }), FY.tools, 3e4) : rY;
-                  if (!ZI(DY.answer)) return {
-                    ...DY,
-                    ms: Date.now() - AY
+                  }), iT.tools, 3e4) : oT;
+                  if (!Ok(IT.answer)) return {
+                    ...IT,
+                    ms: Date.now() - zT
                   }
                 }
-              } catch (uY) {
-                var aY;
-                if (null !== (aY = FY.signal) && void 0 !== aY && aY.aborted) throw uY;
-                gY || console.warn(`World Code AI: ${FI.name} couldn't be reached`, uY)
+              } catch (DT) {
+                var FT;
+                if (null !== (FT = iT.signal) && void 0 !== FT && FT.aborted) throw DT;
+                BT || console.warn(`World Code AI: ${Bk.name} couldn't be reached`, DT)
               } finally {
-                var vY;
-                OY.clear(), null === (vY = FY.signal) || void 0 === vY || vY.removeEventListener("abort", RY)
+                var ST;
+                XT.clear(), null === (ST = iT.signal) || void 0 === ST || ST.removeEventListener("abort", WT)
               }
               return {
-                ...await cI(YY, FY),
-                ms: Date.now() - AY
+                ...await Uk(TT, iT),
+                ms: Date.now() - zT
               }
-            }(or, {
-              signal: nY.signal,
-              tools: Wr,
-              canNudge: !OY,
-              onProgress: YY => {
-                const rY = Date.now(),
-                  FY = YY.model !== mr;
-                if (mr = YY.model, !FY && rY - Er < 150) return;
-                Er = rY;
-                const AY = function(YY, rY) {
-                  const DY = function(YY) {
-                      return YY.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
-                    }(YY),
-                    FY = uv.exec(DY);
-                  let AY = FY ? DY.slice(0, FY.index) : DY;
-                  AY = AY.replace(/<[\w_]*$/, "").trim();
-                  const IY = DY.trimEnd(),
-                    RY = vD(DY, rY).filter((YY => !/^<(?:tool_call|function=)/.test(YY.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(YY.source) || !IY.endsWith(YY.source.trimEnd()))),
-                    OY = RY.flatMap((YY => {
-                      var rY;
-                      const DY = null === (rY = YY.args.why) || void 0 === rY ? void 0 : rY.trim();
-                      return DY ? [DY.charAt(0).toUpperCase() + DY.slice(1)] : []
+            }(Mo, {
+              signal: yT.signal,
+              tools: ro,
+              canNudge: !XT,
+              onProgress: TT => {
+                const oT = Date.now(),
+                  iT = TT.model !== go;
+                if (go = TT.model, !iT && oT - Ao < 150) return;
+                Ao = oT;
+                const zT = function(TT, oT) {
+                  const IT = function(TT) {
+                      return TT.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
+                    }(TT),
+                    iT = MS.exec(IT);
+                  let zT = iT ? IT.slice(0, iT.index) : IT;
+                  zT = zT.replace(/<[\w_]*$/, "").trim();
+                  const kT = IT.trimEnd(),
+                    WT = LI(IT, oT).filter((TT => !/^<(?:tool_call|function=)/.test(TT.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(TT.source) || !kT.endsWith(TT.source.trimEnd()))),
+                    XT = WT.flatMap((TT => {
+                      var oT;
+                      const IT = null === (oT = TT.args.why) || void 0 === oT ? void 0 : oT.trim();
+                      return IT ? [IT.charAt(0).toUpperCase() + IT.slice(1)] : []
                     }));
                   return {
-                    text: AY,
-                    whys: [...new Set(OY)],
-                    isWritingCode: null !== FY,
-                    calls: RY.length
+                    text: zT,
+                    whys: [...new Set(XT)],
+                    isWritingCode: null !== iT,
+                    calls: WT.length
                   }
-                }(YY.answer, II(YY.model));
-                vr({
-                  phase: "" !== AY.text || AY.isWritingCode ? "writing" : "thinking",
-                  startedAt: IY,
-                  playingThrough: DY,
-                  reasoningChars: YY.reasoningChars,
-                  model: YY.model
+                }(TT.answer, Sk(TT.model));
+                So({
+                  phase: "" !== zT.text || zT.isWritingCode ? "writing" : "thinking",
+                  startedAt: kT,
+                  playingThrough: IT,
+                  reasoningChars: TT.reasoningChars,
+                  model: TT.model
                 })
               }
             })
-          }, Sr = (Dr = null === (Or = IO.getState().status) || void 0 === Or ? void 0 : Or.provider, YO[null !== Dr && void 0 !== Dr ? Dr : "ovh"]), lr = YY => {
-            tr.current = null, PY.drop(pY), KD(pY, {
+          }, wo = (Io = null === (Xo = SX.getState().status) || void 0 === Xo ? void 0 : Xo.provider, kX[null !== Io && void 0 !== Io ? Io : "ovh"]), mo = TT => {
+            oI.current = null, NT.drop(tT), jI(tT, {
               isNotice: !0
-            }), BD({
+            }), fI({
               role: "assistant",
-              text: "unsafe" === YY ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
+              text: "unsafe" === TT ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...GY
+              ...pT
             })
-          }, Tr = async () => {
-            var YY;
-            const rY = Date.now();
-            Ur(rY), vr({
+          }, eo = async () => {
+            var TT;
+            const oT = Date.now();
+            Vo(oT), So({
               phase: "thinking",
-              startedAt: rY,
-              playingThrough: DY,
+              startedAt: oT,
+              playingThrough: IT,
               isSuperBot: !0
             });
-            const FY = hY < 0 ? Ir : Ir.slice(0, hY),
-              IY = FY.findLastIndex((YY => "assistant" === YY.role && !YY.isNotice && !YY.leftOut && cD(YY))),
-              RY = FY[IY],
-              OY = FY.findIndex((YY => YY.id === SY)),
-              vY = FY.slice(0, Math.max(0, IY)).findLastIndex((YY => "user" === YY.role)),
-              uY = void 0 === iY && (void 0 === SY || OY >= 0 && OY < IY && OY >= vY) && "object" === typeof(null === RY || void 0 === RY ? void 0 : RY.answeredBy) && !0 === RY.answeredBy.isSuperBot,
-              sY = RI(Sr),
-              yY = EA(su(), wY, sY, {
+            const iT = QT < 0 ? ko : ko.slice(0, QT),
+              kT = iT.findLastIndex((TT => "assistant" === TT.role && !TT.isNotice && !TT.leftOut && CI(TT))),
+              WT = iT[kT],
+              XT = iT.findIndex((TT => TT.id === wT)),
+              ST = iT.slice(0, Math.max(0, kT)).findLastIndex((TT => "user" === TT.role)),
+              DT = void 0 === xT && (void 0 === wT || XT >= 0 && XT < kT && XT >= ST) && "object" === typeof(null === WT || void 0 === WT ? void 0 : WT.answeredBy) && !0 === WT.answeredBy.isSuperBot,
+              LT = Dk(wo),
+              cT = mz(rD(), qT, LT, {
                 docsInTurn: !0
               }),
-              QY = oA(wY, sY.format),
-              oY = "deepseek" === sY.format ? {
-                fi: EA(su(), wY, sY, {
+              KT = hz(qT, LT.format),
+              MT = "deepseek" === LT.format ? {
+                xM: mz(rD(), qT, LT, {
                   docsInTurn: !0,
-                  fi: !0
+                  xM: !0
                 }).at(-1),
-                toolResults: [...(null !== aY && void 0 !== aY ? aY : []).flatMap((YY => YY.call ? [{
-                  ...YY.call,
-                  text: tF(YY)
-                }] : [])), ...(null !== (YY = wY.lookups) && void 0 !== YY ? YY : []).flatMap((YY => YY.call ? [{
-                  ...YY.call,
-                  text: `${YY.about}:\n${YY.text}`
+                toolResults: [...(null !== FT && void 0 !== FT ? FT : []).flatMap((TT => TT.call ? [{
+                  ...TT.call,
+                  text: iz(TT)
+                }] : [])), ...(null !== (TT = qT.lookups) && void 0 !== TT ? TT : []).flatMap((TT => TT.call ? [{
+                  ...TT.call,
+                  text: `${TT.about}:\n${TT.text}`
                 }] : []))].slice(-20)
               } : {};
-            let WY;
+            let rT;
             try {
-              WY = await async function(YY, rY, DY, FY, AY) {
-                var IY;
+              rT = await async function(TT, oT, IT, iT, zT) {
+                var kT;
                 let {
-                  fi: RY,
-                  toolResults: OY,
-                  request: gY,
-                  code: aY
+                  xM: WT,
+                  toolResults: XT,
+                  request: BT,
+                  code: FT
                 } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-                const vY = Date.now(),
-                  uY = "system" === (null === (IY = rY[0]) || void 0 === IY ? void 0 : IY.role) ? rY[0].content : "",
-                  sY = JSON.stringify(mI(DY)),
-                  iY = null !== FY && FY.system === uY && FY.toolsJson === sY,
-                  yY = null !== RY && void 0 !== RY ? RY : rY[rY.length - 1],
-                  QY = OY && OY.length > 0 ? {
-                    toolResults: OY
+                const ST = Date.now(),
+                  DT = "system" === (null === (kT = oT[0]) || void 0 === kT ? void 0 : kT.role) ? oT[0].content : "",
+                  LT = JSON.stringify(Rk(IT)),
+                  xT = null !== iT && iT.system === DT && iT.toolsJson === LT,
+                  cT = null !== WT && void 0 !== WT ? WT : oT[oT.length - 1],
+                  KT = XT && XT.length > 0 ? {
+                    toolResults: XT
                   } : {},
-                  oY = {
-                    ...gY ? {
-                      request: gY
+                  MT = {
+                    ...BT ? {
+                      request: BT
                     } : {},
-                    ...aY ? {
-                      code: aY
+                    ...FT ? {
+                      code: FT
                     } : {}
                   };
-                let WY = await EO(WO(iY ? {
-                  chatId: FY.chatId,
-                  messages: [yY],
-                  ...QY,
-                  ...oY
+                let rT = await eX(mX(xT ? {
+                  chatId: iT.chatId,
+                  messages: [cT],
+                  ...KT,
+                  ...MT
                 } : {
-                  messages: rY,
-                  toolsJson: sY,
-                  ...oY
-                }), AY);
-                if ("newChat" === WY.outcome && iY && (WY = await EO(WO({
-                    messages: rY,
-                    toolsJson: sY,
-                    ...oY
-                  }), AY)), "status" in WY && IO.setStatus(WY.status), "refused" === WY.outcome) return {
+                  messages: oT,
+                  toolsJson: LT,
+                  ...MT
+                }), zT);
+                if ("newChat" === rT.outcome && xT && (rT = await eX(mX({
+                    messages: oT,
+                    toolsJson: LT,
+                    ...MT
+                  }), zT)), "status" in rT && SX.setStatus(rT.status), "refused" === rT.outcome) return {
                   kind: "refused",
-                  safety: WY.safety
+                  safety: rT.safety
                 };
-                if ("blocked" === WY.outcome) return {
+                if ("blocked" === rT.outcome) return {
                   kind: "blocked",
-                  safety: WY.safety
+                  safety: rT.safety
                 };
-                if ("answered" !== WY.outcome) return {
-                  kind: "newChat" === WY.outcome ? "failed" : WY.outcome
+                if ("answered" !== rT.outcome) return {
+                  kind: "newChat" === rT.outcome ? "failed" : rT.outcome
                 };
-                const EY = lI(YY, WY.answer, WY.reasoning, WY.toolCalls, WY.isCutShort);
-                return null === EY ? {
+                const AT = Ek(TT, rT.answer, rT.reasoning, rT.toolCalls, rT.isCutShort);
+                return null === AT ? {
                   kind: "failed"
                 } : {
                   kind: "answered",
                   reply: {
-                    ...EY,
-                    ms: Date.now() - vY
+                    ...AT,
+                    ms: Date.now() - ST
                   },
                   chat: {
-                    chatId: WY.chatId,
-                    system: uY,
-                    toolsJson: sY
+                    chatId: rT.chatId,
+                    system: DT,
+                    toolsJson: LT
                   }
                 }
-              }(Sr, yY, QY, uY ? tr.current : null, nY.signal, {
-                ...oY,
-                ...AY ? {
-                  request: eY
+              }(wo, cT, KT, DT ? oI.current : null, yT.signal, {
+                ...MT,
+                ...zT ? {
+                  request: RT
                 } : {},
-                code: iA(wY, sY.format)
+                code: rz(qT, LT.format)
               })
-            } catch (VY) {
-              if (nY.signal.aborted) throw VY;
-              console.warn("AI Helper: Super Bot.xd couldn't be reached", VY), WY = {
+            } catch (hT) {
+              if (yT.signal.aborted) throw hT;
+              console.warn("AI Helper: Super Bot.xd couldn't be reached", hT), rT = {
                 kind: "failed"
               }
             }
-            if ("answered" === WY.kind) return tr.current = WY.chat, {
-              ...WY.reply,
-              promptVersion: PI(yY)
+            if ("answered" === rT.kind) return oI.current = rT.chat, {
+              ...rT.reply,
+              promptVersion: oW(cT)
             };
-            if ("refused" === WY.kind) return gY(WY.safety), "stopped";
-            if ("blocked" === WY.kind) return lr(WY.safety), "stopped";
-            tr.current = null, Hr = "free";
-            const EY = IO.getState(),
-              mY = "unavailable" === WY.kind && iO(EY);
-            return mY && BO(), {
-              fallbackNotice: mY ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : oO(WY.kind, EY.status)
+            if ("refused" === rT.kind) return BT(rT.safety), "stopped";
+            if ("blocked" === rT.kind) return mo(rT.safety), "stopped";
+            oI.current = null, Co = "free";
+            const AT = SX.getState(),
+              gT = "unavailable" === rT.kind && AX(AT);
+            return gT && JX(), {
+              fallbackNotice: gT ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : wX(rT.kind, AT.status)
             }
           };
-          let er, Nr, Br, cr, Hr = NY || xR.getState().keys.length > 0 ? "free" : void 0,
-            zr = !1;
-          if (KY) {
-            const rY = {
-              format: QI(KY.model.callFormat),
-              nativeTools: !0 === KY.model.nativeTools
+          let Ro, uo, vo, Eo, Co = uT || VW.getState().keys.length > 0 ? "free" : void 0,
+            jo = !1;
+          if (fT) {
+            const oT = {
+              format: hk(fT.model.callFormat),
+              nativeTools: !0 === fT.model.nativeTools
             };
-            Nr = rY.format;
-            const AY = [...ar(rY)];
-            var ur;
-            if (cr = {
+            uo = oT.format;
+            const zT = [...Fo(oT)];
+            var Do;
+            if (Eo = {
                 responder: "key",
-                model: KY.model.name,
-                promptVersion: PI(AY)
-              }, void 0 !== QY) "" !== QY && AY.push({
+                model: fT.model.name,
+                promptVersion: oW(zT)
+              }, void 0 !== KT) "" !== KT && zT.push({
               role: "assistant",
-              content: QY
-            }), AY.push({
+              content: KT
+            }), zT.push({
               role: "user",
-              content: (Yr = null === XY || void 0 === XY || null === (ur = XY.cutShort) || void 0 === ur ? void 0 : ur.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (Yr ? ` Your ${Yr.name} call${Yr.path?` for ${Yr.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
+              content: (To = null === lT || void 0 === lT || null === (Do = lT.cutShort) || void 0 === Do ? void 0 : Do.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (To ? ` Your ${To.name} call${To.path?` for ${To.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
             });
-            vr({
+            So({
               phase: "thinking",
-              startedAt: YY,
-              playingThrough: DY,
-              keyModel: FY
+              startedAt: TT,
+              playingThrough: IT,
+              keyModel: iT
             });
-            const IY = rY => {
-              vr({
-                phase: "" === rY.answer ? "thinking" : "writing",
-                startedAt: YY,
-                playingThrough: DY,
-                keyModel: FY
+            const kT = oT => {
+              So({
+                phase: "" === oT.answer ? "thinking" : "writing",
+                startedAt: TT,
+                playingThrough: IT,
+                keyModel: iT
               })
             };
             try {
-              const YY = await UR(KY, AY, {
-                signal: nY.signal,
-                onProgress: IY,
-                tools: Wr,
-                continueFrom: QY
+              const TT = await IX(fT, zT, {
+                signal: yT.signal,
+                onProgress: kT,
+                tools: ro,
+                continueFrom: KT
               });
-              er = YY, Hr = {
-                model: KY.name ? `${KY.name} \xb7 ${KY.model.name}` : KY.model.name
-              }, YY.isCutShort && (Br = function(YY, rY, DY) {
+              Ro = TT, Co = {
+                model: fT.name ? `${fT.name} \xb7 ${fT.model.name}` : fT.model.name
+              }, TT.isCutShort && (vo = function(TT, oT, IT) {
                 return {
-                  request: DY,
-                  written: rY.written,
-                  cutCall: rY.cutCall,
-                  keyId: YY.id,
-                  modelId: YY.model.id
+                  request: IT,
+                  written: oT.written,
+                  cutCall: oT.cutCall,
+                  keyId: TT.id,
+                  modelId: TT.model.id
                 }
-              }(KY, YY, eY))
-            } catch (yr) {
-              if (!(yr instanceof QR) || nY.signal.aborted) throw yr;
-              return void jD(yr, KY, pY, GY)
+              }(fT, TT, RT))
+            } catch (co) {
+              if (!(co instanceof hW) || yT.signal.aborted) throw co;
+              return void OI(co, fT, tT, pT)
             }
           } else {
-            const YY = jY ? await Tr() : null;
-            if ("stopped" === YY) return;
-            if (YY && !("fallbackNotice" in YY)) {
-              var sr;
-              er = YY, cr = {
+            const TT = YT ? await eo() : null;
+            if ("stopped" === TT) return;
+            if (TT && !("fallbackNotice" in TT)) {
+              var Lo;
+              Ro = TT, Eo = {
                 responder: "super_bot_xd",
-                model: Sr.name,
-                promptVersion: YY.promptVersion
-              }, Nr = null !== (sr = Sr.callFormat) && void 0 !== sr ? sr : "simple", Hr = {
-                model: tR,
+                model: wo.name,
+                promptVersion: TT.promptVersion
+              }, uo = null !== (Lo = wo.callFormat) && void 0 !== Lo ? Lo : "simple", Co = {
+                model: zX,
                 isSuperBot: !0
-              }, zr = !0
+              }, jo = !0
             } else {
-              if (jY) {
-                const YY = await sY();
-                if (null === YY) return;
-                cY = YY
+              if (YT) {
+                const TT = await LT();
+                if (null === TT) return;
+                ET = TT
               }
-              let rY;
-              YY && "fallbackNotice" in YY && BD({
+              let oT;
+              TT && "fallbackNotice" in TT && fI({
                 role: "assistant",
-                text: YY.fallbackNotice,
+                text: TT.fallbackNotice,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               });
               try {
-                rY = await Vr()
-              } catch (yr) {
-                if (!(yr instanceof sI && "busy" === yr.reason)) throw yr;
-                rY = await Vr()
+                oT = await ho()
+              } catch (co) {
+                if (!(co instanceof rk && "busy" === co.reason)) throw co;
+                oT = await ho()
               }
-              Kr.current = function(YY, rY, DY) {
-                  var FY;
-                  return !Number.isFinite(DY) || DY <= 0 ? YY : {
-                    ...YY,
-                    [rY]: [...null !== (FY = YY[rY]) && void 0 !== FY ? FY : [], DY].slice(-10)
+              fo.current = function(TT, oT, IT) {
+                  var iT;
+                  return !Number.isFinite(IT) || IT <= 0 ? TT : {
+                    ...TT,
+                    [oT]: [...null !== (iT = TT[oT]) && void 0 !== iT ? iT : [], IT].slice(-10)
                   }
-                }(Kr.current, rY.model, rY.ms),
-                function(YY) {
+                }(fo.current, oT.model, oT.ms),
+                function(TT) {
                   try {
-                    localStorage.setItem(mv, JSON.stringify(YY))
+                    localStorage.setItem(RS, JSON.stringify(TT))
                   } catch {}
-                }(Kr.current), er = rY, Nr = II(rY.model);
-              const DY = AI(rY.model);
-              cr = {
+                }(fo.current), Ro = oT, uo = Sk(oT.model);
+              const IT = Fk(oT.model);
+              Eo = {
                 responder: "bot_xd",
-                model: rY.model,
-                promptVersion: DY ? PI(or(DY)) : ""
+                model: oT.model,
+                promptVersion: IT ? oW(Mo(IT)) : ""
               }
             }
           }
-          const Zr = su(),
-            Cr = kF(er.answer, Nr, zY, BY, Zr.callbackNames(), rr ? yY.b : void 0, UY, new Set([uA(zY, BY, rr), BY, ...VY, ...Object.keys(null !== mY && void 0 !== mY ? mY : {})].filter((YY => null !== YY))), Zr.realName),
-            fr = OY ? {
-              ...Cr,
+          const Jo = rD(),
+            Uo = Ni(Ro.answer, uo, jT, vT, Jo.callbackNames(), oo ? cT.d : void 0, PT, new Set([Kz(jT, vT, oo), vT, ...hT, ...Object.keys(null !== gT && void 0 !== gT ? gT : {})].filter((TT => null !== TT))), Jo.realName),
+            ao = XT ? {
+              ...Uo,
               changes: [],
               failedEdits: [],
               inPlace: !1,
               worldCode: [],
               plan: [],
               actions: []
-            } : Cr;
-          if (!zr) {
-            const YY = Date.now();
-            Ur(YY), vr({
+            } : Uo;
+          if (!jo) {
+            const TT = Date.now();
+            Vo(TT), So({
               phase: "screening",
-              startedAt: YY,
-              playingThrough: DY,
-              keyModel: FY
+              startedAt: TT,
+              playingThrough: IT,
+              keyModel: iT
             });
-            const rY = await Ev(cY, fr, nY.signal, (rY => {
-              Ur(Date.now()), vr({
+            const oT = await eS(ET, ao, yT.signal, (oT => {
+              Vo(Date.now()), So({
                 phase: "screening",
-                startedAt: YY,
-                playingThrough: DY,
-                keyModel: FY,
-                until: rY
+                startedAt: TT,
+                playingThrough: IT,
+                keyModel: iT,
+                until: oT
               })
             }));
-            if ("ok" !== rY) return void lr(rY)
+            if ("ok" !== oT) return void mo(oT)
           }
-          PY.answered(pY, {
-            input: wY,
-            responder: cr.responder,
-            promptVersion: cr.promptVersion
+          NT.answered(tT, {
+            input: qT,
+            responder: Eo.responder,
+            promptVersion: Eo.promptVersion
           }, {
-            model: cr.model,
-            text: er.answer
+            model: Eo.model,
+            text: Ro.answer
           });
-          const jr = function(YY) {
-              let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr;
-              return YY.flatMap((YY => Du(Zr, YY, rY && !(0, yY.e)(YY.path))))
+          const Yo = function(TT) {
+              let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oo;
+              return TT.flatMap((TT => XD(Jo, TT, oT && !(0, cT.f)(TT.path))))
             },
-            hr = jr(fr.changes),
-            dr = "direct" === UY ? function(YY) {
-              return YY.flatMap((YY => {
-                var rY;
-                return null !== (rY = gg(YY)) && void 0 !== rY ? rY : []
+            Qo = Yo(ao.changes),
+            Oo = "direct" === PT ? function(TT) {
+              return TT.flatMap((TT => {
+                var oT;
+                return null !== (oT = xB(TT)) && void 0 !== oT ? oT : []
               }))
-            }(hr) : [],
-            Jr = dr.length > 0 ? {
-              ...fr,
-              changes: fr.changes.map((YY => ({
-                ...YY,
-                after: sg(YY.after, dr)
+            }(Qo) : [],
+            Ho = Oo.length > 0 ? {
+              ...ao,
+              changes: ao.changes.map((TT => ({
+                ...TT,
+                after: rB(TT.after, Oo)
               })))
-            } : fr,
-            Mr = Jr.changes.filter((YY => rr && (0, yY.e)(YY.path))).map((YY => ({
-              ...YY,
-              path: (0, yY.f)(YY.path)
+            } : ao,
+            no = Ho.changes.filter((TT => oo && (0, cT.f)(TT.path))).map((TT => ({
+              ...TT,
+              path: (0, cT.h)(TT.path)
             }))),
-            br = Jr.changes.filter((YY => !rr || !(0, yY.e)(YY.path))),
-            Xr = Mr.length > 0 ? {
-              ...Jr,
-              changes: br,
-              inPlace: Jr.inPlace && br.length > 0
-            } : Jr,
-            qr = Mr.length > 0 || dr.length > 0 ? jr(Xr.changes) : hr,
-            pr = qr.filter(Uv),
-            kr = Xr.inPlace && ZY && pr.length > 0 && uY < 3 && !er.isCutShort && !er.hasCallsFromReasoning,
-            Gr = "direct" === UY && ZY,
-            xr = Xr.failedEdits.filter((YY => "unread" === YY.reason)),
-            nr = !Gr || OY || void 0 !== lY || rr ? [] : xr.flatMap((YY => null !== YY.path && void 0 !== YY.code ? [{
-              path: YY.path,
-              code: YY.code
+            Zo = Ho.changes.filter((TT => !oo || !(0, cT.f)(TT.path))),
+            so = no.length > 0 ? {
+              ...Ho,
+              changes: Zo,
+              inPlace: Ho.inPlace && Zo.length > 0
+            } : Ho,
+            to = no.length > 0 || Oo.length > 0 ? Yo(so.changes) : Qo,
+            Go = to.filter(ID),
+            po = so.inPlace && JT && Go.length > 0 && DT < 3 && !Ro.isCutShort && !Ro.hasCallsFromReasoning,
+            bo = "direct" === PT && JT,
+            yo = so.failedEdits.filter((TT => "unread" === TT.reason)),
+            No = !bo || XT || void 0 !== mT || oo ? [] : yo.flatMap((TT => null !== TT.path && void 0 !== TT.code ? [{
+              path: TT.path,
+              code: TT.code
             }] : [])),
-            Pr = YY => "unread" === YY.reason && nr.some((rY => rY.path === YY.path)),
-            Lr = Xr.failedEdits.filter((YY => !Pr(YY))),
-            YD = xr.filter((YY => !Pr(YY))),
-            rD = DF(UY) && Xr.worldCode.length > 0 && !OY && 0 === Mr.length,
-            DD = EY < 3 && !OY && !er.isCutShort,
-            FD = new Set([...Wr.map((YY => YY.name)), ...YD.length > 0 ? ["view_file", "view_world_code"] : []]),
-            AD = !DD || nr.length > 0 || Mr.length > 0 || kr ? [] : Xr.lookups.filter((YY => FD.has(YY.name))),
-            ID = {
-              request: eY,
-              shown: rY,
-              userEntryId: pY,
+            Po = TT => "unread" === TT.reason && No.some((oT => oT.path === TT.path)),
+            TI = so.failedEdits.filter((TT => !Po(TT))),
+            II = yo.filter((TT => !Po(TT))),
+            iI = zi(PT) && so.worldCode.length > 0 && !XT && 0 === no.length,
+            zI = AT < 3 && !XT && !Ro.isCutShort,
+            kI = new Set([...ro.map((TT => TT.name)), ...II.length > 0 ? ["view_file", "view_world_code"] : []]),
+            WI = !zI || No.length > 0 || no.length > 0 || po ? [] : so.lookups.filter((TT => kI.has(TT.name))),
+            XI = {
+              request: RT,
+              shown: oT,
+              userEntryId: tT,
               options: {
                 check: !1,
-                about: IY,
-                planStep: RY,
-                wordsOnly: OY,
-                useFree: NY,
-                isAutoFix: vY,
-                autoFixRound: uY,
-                failedEdits: [...(null !== aY && void 0 !== aY ? aY : []).map(Au), ...YD],
-                ...kY,
-                lookupRound: EY + 1,
-                lookupOf: pY,
-                insertsInto: lY,
-                guardWords: cY
+                about: kT,
+                planStep: WT,
+                wordsOnly: XT,
+                useFree: uT,
+                isAutoFix: ST,
+                autoFixRound: DT,
+                failedEdits: [...(null !== FT && void 0 !== FT ? FT : []).map(FD), ...II],
+                ...GT,
+                lookupRound: AT + 1,
+                lookupOf: tT,
+                insertsInto: mT,
+                guardWords: ET
               }
             },
-            RD = 0 === Xr.changes.length && 0 === Xr.worldCode.length,
-            OD = AD.length > 0 && ("direct" === UY || HY && RD && AD.every(TA)),
-            gD = OD && RD && 0 === Xr.notes.length,
-            uD = JY ? Xr.question : null,
-            sD = er.isCutShort ? Xr.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : Xr.text,
-            iD = er.isCutShort && !Br ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
-            QD = Lr.length > 0 && Xr.changes.length > 0 && !er.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
-            WD = () => Xr.changes.length > 0 ? "Here's a change for your code." : Mr.length > 0 ? "This changes your World Code." : Xr.worldCode.length > 0 ? "This needs World Code." : nr.length > 0 ? `I'll put it into ${nr.map((YY=>YY.path)).join(" and ")}.` : uD ? "Quick question before I build it:" : Xr.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : AD.length > 0 ? `I'll look at ${function(YY){var rY;const DY=YY.map(VA);return DY.length<=1?null!==(rY=DY[0])&&void 0!==rY?rY:"":`${DY.slice(0,-1).join(", ")} and ${DY[DY.length-1]}`}(AD)} first.` : Xr.notes.length > 0 ? "Here's something to remember about your game." : Xr.actions.length > 0 ? "Sure!" : er.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
-            ED = {
+            BI = 0 === so.changes.length && 0 === so.worldCode.length,
+            FI = WI.length > 0 && ("direct" === PT || CT && BI && WI.every(Ez)),
+            SI = FI && BI && 0 === so.notes.length,
+            xI = HT ? so.question : null,
+            cI = Ro.isCutShort ? so.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : so.text,
+            KI = Ro.isCutShort && !vo ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
+            rI = TI.length > 0 && so.changes.length > 0 && !Ro.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
+            gI = () => so.changes.length > 0 ? "Here's a change for your code." : no.length > 0 ? "This changes your World Code." : so.worldCode.length > 0 ? "This needs World Code." : No.length > 0 ? `I'll put it into ${No.map((TT=>TT.path)).join(" and ")}.` : xI ? "Quick question before I build it:" : so.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : WI.length > 0 ? `I'll look at ${function(TT){var oT;const IT=TT.map(Rz);return IT.length<=1?null!==(oT=IT[0])&&void 0!==oT?oT:"":`${IT.slice(0,-1).join(", ")} and ${IT[IT.length-1]}`}(WI)} first.` : so.notes.length > 0 ? "Here's something to remember about your game." : so.actions.length > 0 ? "Sure!" : Ro.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
+            hI = {
               role: "assistant",
-              text: (sD || WD()) + iD + QD,
-              changes: Xr.changes,
+              text: (cI || gI()) + KI + rI,
+              changes: so.changes,
               status: "offered",
-              warnings: qr,
-              worldCode: Xr.worldCode.length > 0 && !rD ? Xr.worldCode : void 0,
-              editedInPlace: Xr.inPlace && !kr || void 0,
-              failedEdits: Lr.length > 0 ? Lr : void 0,
-              question: null !== uD && void 0 !== uD ? uD : void 0,
-              askedFor: uD ? {
-                request: eY,
-                guardWords: cY
+              warnings: to,
+              worldCode: so.worldCode.length > 0 && !iI ? so.worldCode : void 0,
+              editedInPlace: so.inPlace && !po || void 0,
+              failedEdits: TI.length > 0 ? TI : void 0,
+              question: null !== xI && void 0 !== xI ? xI : void 0,
+              askedFor: xI ? {
+                request: RT,
+                guardWords: ET
               } : void 0,
-              note: Xr.notes[0],
-              plan: Xr.plan.length > 0 ? Xr.plan : void 0,
-              noteStatus: Xr.notes.length > 0 ? Gr ? "pending" : "asked" : void 0,
-              answeredBy: Hr,
-              oneOff: fY || void 0,
-              cutShort: Br,
-              byItself: Gr || void 0,
-              ...Br ? {
-                retryShown: GY.retryShown,
-                retryOptions: GY.retryOptions
+              note: so.notes[0],
+              plan: so.plan.length > 0 ? so.plan : void 0,
+              noteStatus: so.notes.length > 0 ? bo ? "pending" : "asked" : void 0,
+              answeredBy: Co,
+              oneOff: aT || void 0,
+              cutShort: vo,
+              byItself: bo || void 0,
+              ...vo ? {
+                retryShown: pT.retryShown,
+                retryOptions: pT.retryOptions
               } : {},
-              ...gD ? {
-                logTitle: Fu,
+              ...SI ? {
+                logTitle: BD,
                 isCalm: !0
               } : {},
-              ...AD.length > 0 ? {
+              ...WI.length > 0 ? {
                 lookups: {
-                  lookups: AD,
-                  followUp: ID
+                  lookups: WI,
+                  followUp: XI
                 },
-                lookedAt: OD || void 0
+                lookedAt: FI || void 0
               } : {}
             },
-            mD = bY && void 0 !== iY ? (LY = iY, tY = ED, gr((YY => YY.map((YY => YY.id === LY ? {
-              ...tY,
-              id: LY,
-              target: YY.target
-            } : YY)))), LY) : BD(ED),
-            VD = Xr.inPlace && ZY && !kr && !er.isCutShort && !er.hasCallsFromReasoning,
-            SD = VD && await nD({
-              id: mD,
-              changes: Xr.changes
-            }, IY);
-          !Xr.inPlace || kr || SD || KD(mD, {
+            wI = ZT && void 0 !== xT ? (dT = xT, VT = hI, Bo((TT => TT.map((TT => TT.id === dT ? {
+              ...VT,
+              id: dT,
+              target: TT.target
+            } : TT)))), dT) : fI(hI),
+            mI = so.inPlace && JT && !po && !Ro.isCutShort && !Ro.hasCallsFromReasoning,
+            eI = mI && await PI({
+              id: wI,
+              changes: so.changes
+            }, kT);
+          !so.inPlace || po || eI || jI(wI, {
             editedInPlace: void 0
           });
-          const lD = 0 === Xr.changes.length && 0 === Lr.length && 0 === nr.length && 0 === Mr.length && 0 === Xr.worldCode.length;
-          if (Gr && void 0 !== ED.note && ((SD || kr || lD) && !nY.signal.aborted ? TF({
-              id: mD,
-              note: ED.note,
+          const RI = 0 === so.changes.length && 0 === TI.length && 0 === No.length && 0 === no.length && 0 === so.worldCode.length;
+          if (bo && void 0 !== hI.note && ((eI || po || RI) && !yT.signal.aborted ? vi({
+              id: wI,
+              note: hI.note,
               changes: [],
               status: "applied"
-            }, !0) : VD && !nY.signal.aborted ? lF(mD, "declined") : lF(mD, "asked")), nY.signal.aborted) return void BD({
+            }, !0) : mI && !yT.signal.aborted ? ui(wI, "declined") : ui(wI, "asked")), yT.signal.aborted) return void fI({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14213,56 +14213,56 @@ const wu = (0, FY.memo)((function(YY) {
             isNotice: !0,
             isCalm: !0
           });
-          kr && (KD(mD, {
+          po && (jI(wI, {
             warningsSentBack: !0
-          }), wr((YY => [{
-            id: yD(),
-            text: (0, Fa.w)(pr),
+          }), qo((TT => [{
+            id: MI(),
+            text: (0, BF.s)(Go),
             shown: "Fix this line",
             check: !1,
             isAutoFix: !0,
-            autoFixRound: uY + 1
-          }, ...YY]))), SD && Tv(Xr.changes, BY).forEach(((YY, rY) => {
-            const DY = () => {
-              BD({
+            autoFixRound: DT + 1
+          }, ...TT]))), eI && fS(so.changes, vT).forEach(((TT, oT) => {
+            const IT = () => {
+              fI({
                 role: "assistant",
-                text: ev(YY.path),
+                text: CS(TT.path),
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0
-              }), MY(YY.path, YY.line)
+              }), nT(TT.path, TT.line)
             };
-            0 === rY ? DY() : aD(DY, 1200 * rY)
+            0 === oT ? IT() : DI(IT, 1200 * oT)
           }));
-          const TD = 0 === AD.length && Xr.actions.some((YY => "exportGame" === YY.kind));
-          ZY && TD && "direct" === UY ? tD(Xr.changes.length > 0 && !SD) : ZY && (TD || nF(cY) && !rr) && KD(mD, {
+          const uI = 0 === WI.length && so.actions.some((TT => "exportGame" === TT.kind));
+          JT && uI && "direct" === PT ? oi(so.changes.length > 0 && !eI) : JT && (uI || Vi(ET) && !oo) && jI(wI, {
             offerExport: !0
           });
-          const eD = 0 === AD.length ? Xr.actions.find((YY => "switchToWorldCode" === YY.kind)) : void 0,
-            ND = Xr.changes.length > 0 && !SD && ZY,
-            HD = SD ? Xr.changes.map((YY => ({
-              path: YY.path,
-              text: YY.before
+          const vI = 0 === WI.length ? so.actions.find((TT => "switchToWorldCode" === TT.kind)) : void 0,
+            EI = so.changes.length > 0 && !eI && JT,
+            JI = eI ? so.changes.map((TT => ({
+              path: TT.path,
+              text: TT.before
             }))) : void 0,
-            zD = Mr.length > 0 && Gr && !!xY,
-            ZD = zD && !ND;
-          if (Mr.length > 0) {
-            const YY = BD({
+            UI = no.length > 0 && bo && !!bT,
+            aI = UI && !EI;
+          if (no.length > 0) {
+            const TT = fI({
               role: "assistant",
               text: "This is the part of the change that goes in World Code.",
-              changes: Mr,
+              changes: no,
               status: "offered",
-              warnings: jr(Mr, !1),
-              answeredBy: Hr,
-              byItself: ZD || void 0
-            }, Sv.d);
-            zD && rF(YY, ND)
+              warnings: Yo(no, !1),
+              answeredBy: Co,
+              byItself: aI || void 0
+            }, vS.g);
+            UI && ii(TT, EI)
           }
-          if ("stopped" === (OD ? await AF(AD, ID, {
-              replaced: HD,
-              signal: nY.signal
-            }) : "none")) return void BD({
+          if ("stopped" === (FI ? await Wi(WI, XI, {
+              replaced: JI,
+              signal: yT.signal
+            }) : "none")) return void fI({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14270,108 +14270,108 @@ const wu = (0, FY.memo)((function(YY) {
             isNotice: !0,
             isCalm: !0
           });
-          const CD = YY => ({
-            request: YY(eY),
-            guardWords: YY(cY)
+          const YI = TT => ({
+            request: TT(RT),
+            guardWords: TT(ET)
           });
-          nr.length > 0 && wr((YY => [...nr.map((YY => {
+          No.length > 0 && qo((TT => [...No.map((TT => {
             const {
-              request: rY,
-              guardWords: DY
-            } = CD((rY => function(YY, rY, DY) {
-              return `They asked: "${YY}"\nYour last answer wrote this for ${rY}, but you hadn't seen that file, so it didn't go in. ${rY} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${DY.replace(/\s*$/,"")}\n\`\`\``
-            }(rY, YY.path, YY.code)));
+              request: oT,
+              guardWords: IT
+            } = YI((oT => function(TT, oT, IT) {
+              return `They asked: "${TT}"\nYour last answer wrote this for ${oT}, but you hadn't seen that file, so it didn't go in. ${oT} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${IT.replace(/\s*$/,"")}\n\`\`\``
+            }(oT, TT.path, TT.code)));
             return {
-              id: yD(),
-              text: rY,
+              id: MI(),
+              text: oT,
               shown: "Put the code in",
               followUp: {
                 check: !1,
-                about: IY,
-                planStep: RY,
-                useFree: NY,
-                lookupRound: EY,
-                lookupOf: pY,
-                insertsInto: YY.path,
-                guardWords: DY
+                about: kT,
+                planStep: WT,
+                useFree: uT,
+                lookupRound: AT,
+                lookupOf: tT,
+                insertsInto: TT.path,
+                guardWords: IT
               },
-              opensPath: YY.path,
-              ...HD ? {
-                replaced: HD,
-                until: Date.now() + eu
+              opensPath: TT.path,
+              ...JI ? {
+                replaced: JI,
+                until: Date.now() + CD
               } : {}
             }
-          })), ...YY]));
-          const fD = Gr && !!xY && rr && 0 === Mr.length && (rD || "switchToWorldCode" === (null === eD || void 0 === eD ? void 0 : eD.kind) && !OY);
-          if (fD && ND) gr((YY => YY.map((YY => YY.id === mD && Xr.worldCode.length > 0 ? {
-            ...YY,
-            worldCode: Xr.worldCode
-          } : YY)))), BD({
+          })), ...TT]));
+          const QI = bo && !!bT && oo && 0 === no.length && (iI || "switchToWorldCode" === (null === vI || void 0 === vI ? void 0 : vI.kind) && !XT);
+          if (QI && EI) Bo((TT => TT.map((TT => TT.id === wI && so.worldCode.length > 0 ? {
+            ...TT,
+            worldCode: so.worldCode
+          } : TT)))), fI({
             role: "assistant",
-            text: Bu(Xr.worldCode.length > 0),
+            text: JD(so.worldCode.length > 0),
             changes: [],
             status: "offered",
             isNotice: !0
           });
-          else if (fD) {
-            var ir;
-            const YY = Xr.worldCode.join("\n\n"),
-              rY = "switchToWorldCode" === (null === eD || void 0 === eD ? void 0 : eD.kind) ? eD.request : null,
-              DY = rD ? CD((rY => function(YY, rY) {
-                return `In a code block, they asked: "${YY}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${rY.replace(/\s*$/,"")}\n\`\`\``
-              }(rY, YY))) : null;
-            FF(null !== (ir = null === DY || void 0 === DY ? void 0 : DY.request) && void 0 !== ir ? ir : rY ? function(YY) {
-              return `In a code block, they asked for this in World Code, which is open now: ${YY}`
-            }(rY) : null, {
+          else if (QI) {
+            var xo;
+            const TT = so.worldCode.join("\n\n"),
+              oT = "switchToWorldCode" === (null === vI || void 0 === vI ? void 0 : vI.kind) ? vI.request : null,
+              IT = iI ? YI((oT => function(TT, oT) {
+                return `In a code block, they asked: "${TT}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${oT.replace(/\s*$/,"")}\n\`\`\``
+              }(oT, TT))) : null;
+            ki(null !== (xo = null === IT || void 0 === IT ? void 0 : IT.request) && void 0 !== xo ? xo : oT ? function(TT) {
+              return `In a code block, they asked for this in World Code, which is open now: ${TT}`
+            }(oT) : null, {
               check: !1,
-              about: IY,
-              useFree: NY,
-              lookupOf: pY,
-              ...DY ? {
-                guardWords: DY.guardWords
+              about: kT,
+              useFree: uT,
+              lookupOf: tT,
+              ...IT ? {
+                guardWords: IT.guardWords
               } : {}
-            }, rD ? YY : void 0)
+            }, iI ? TT : void 0)
           }
-          const hD = !!qY && 0 === Mr.length && !fD && ("switchToWorldCode" === (null === eD || void 0 === eD ? void 0 : eD.kind) || Gr && Xr.worldCode.length > 0);
-          if (hD) {
-            const YY = "switchToWorldCode" === (null === eD || void 0 === eD ? void 0 : eD.kind) ? eD.request : null;
-            YF(null !== YY && void 0 !== YY ? YY : Xr.worldCode.length > 0 ? hu(Xr.worldCode) : "", {
-              leavesChangeBehind: ND,
-              hasWorldCodePart: Xr.worldCode.length > 0
+          const HI = !!sT && 0 === no.length && !QI && ("switchToWorldCode" === (null === vI || void 0 === vI ? void 0 : vI.kind) || bo && so.worldCode.length > 0);
+          if (HI) {
+            const TT = "switchToWorldCode" === (null === vI || void 0 === vI ? void 0 : vI.kind) ? vI.request : null;
+            Ii(null !== TT && void 0 !== TT ? TT : so.worldCode.length > 0 ? ZD(so.worldCode) : "", {
+              leavesChangeBehind: EI,
+              hasWorldCodePart: so.worldCode.length > 0
             })
           }
-          if (SD && qr.length > 0 && uY < 3 && (!(hD || zD || fD) || ND) && (KD(mD, {
+          if (eI && to.length > 0 && DT < 3 && (!(HI || UI || QI) || EI) && (jI(wI, {
               warningsSentBack: !0
-            }), wr((YY => [{
-              id: yD(),
-              text: (0, Fa.H)(qr),
-              shown: 1 === qr.length ? "Fix this line" : "Fix these lines",
+            }), qo((TT => [{
+              id: MI(),
+              text: (0, BF.A)(to),
+              shown: 1 === to.length ? "Fix this line" : "Fix these lines",
               check: !1,
               isAutoFix: !0,
-              autoFixRound: uY + 1,
-              replaced: HD,
-              until: Date.now() + eu
-            }, ...YY]))), Gr && Lr.length > 0 && (SD || 0 === Xr.changes.length && !er.isCutShort && !kr && !er.hasCallsFromReasoning) && !uD && 0 === qr.length && 0 === AD.length && 0 === nr.length && uY < 3 && !hD && !zD && !fD && wr((YY => [{
-              id: yD(),
-              text: Fa.t,
-              shown: Tu,
-              replaced: HD,
-              until: Date.now() + eu,
+              autoFixRound: DT + 1,
+              replaced: JI,
+              until: Date.now() + CD
+            }, ...TT]))), bo && TI.length > 0 && (eI || 0 === so.changes.length && !Ro.isCutShort && !po && !Ro.hasCallsFromReasoning) && !xI && 0 === to.length && 0 === WI.length && 0 === No.length && DT < 3 && !HI && !UI && !QI && qo((TT => [{
+              id: MI(),
+              text: BF.o,
+              shown: fD,
+              replaced: JI,
+              until: Date.now() + CD,
               followUp: {
                 check: !1,
-                about: IY,
-                planStep: RY,
-                useFree: NY,
+                about: kT,
+                planStep: WT,
+                useFree: uT,
                 isAutoFix: !0,
-                autoFixRound: uY + 1,
-                failedEdits: Lr
+                autoFixRound: DT + 1,
+                failedEdits: TI
               }
-            }, ...YY])), SD && "direct" === UY && 0 === qr.length && 0 === Lr.length && 0 === AD.length && 0 === nr.length && 0 === Mr.length && !fD && !hD) {
-            const YY = Tv(Xr.changes, BY).length;
-            RF(mD, uY, YY > 1 ? 1200 * (YY - 1) + 1500 : 0)
+            }, ...TT])), eI && "direct" === PT && 0 === to.length && 0 === TI.length && 0 === WI.length && 0 === No.length && 0 === no.length && !QI && !HI) {
+            const TT = fS(so.changes, vT).length;
+            Bi(wI, DT, TT > 1 ? 1200 * (TT - 1) + 1500 : 0)
           }
-        } catch (yr) {
-          if (nY.signal.aborted) tr.current = null, BD({
+        } catch (co) {
+          if (yT.signal.aborted) oI.current = null, fI({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14380,356 +14380,356 @@ const wu = (0, FY.memo)((function(YY) {
             isCalm: !0
           });
           else {
-            const YY = yr instanceof sI ? yr.reason : "failed";
-            BD({
+            const TT = co instanceof rk ? co.reason : "failed";
+            fI({
               role: "assistant",
-              text: iI(YY),
+              text: Ak(TT),
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...GY,
-              retryAt: "busy" === YY ? Date.now() + 6e4 : void 0
-            }), Ur(Date.now())
+              ...pT,
+              retryAt: "busy" === TT ? Date.now() + 6e4 : void 0
+            }), Vo(Date.now())
           }
         } finally {
-          Lr.current = null, vr(null), PY.requestEnded(pY)
+          TI.current = null, So(null), NT.requestEnded(tT)
         }
-      }, jD = (YY, rY, DY, FY) => {
-        const AY = function(YY, rY) {
-          return "refused" === YY.problem ? null : {
-            notice: YY.problem,
-            model: rY.model.name,
-            company: yR(rY.provider, rY.baseUrl, !0),
-            isServer: "custom" === rY.provider,
-            detail: YY.detail && oR(YY.detail, rY.key)
+      }, OI = (TT, oT, IT, iT) => {
+        const zT = function(TT, oT) {
+          return "refused" === TT.problem ? null : {
+            notice: TT.problem,
+            model: oT.model.name,
+            company: gW(oT.provider, oT.baseUrl, !0),
+            isServer: "custom" === oT.provider,
+            detail: TT.detail && wW(TT.detail, oT.key)
           }
-        }(YY, rY);
-        if (!AY) return (YY => {
-          KD(YY, {
+        }(TT, oT);
+        if (!zT) return (TT => {
+          jI(TT, {
             leftOut: !0
           })
-        })(DY), void BD({
+        })(IT), void fI({
           role: "assistant",
-          text: Nu,
+          text: jD,
           changes: [],
           status: "offered",
           isNotice: !0
         });
-        BD({
+        fI({
           role: "assistant",
           text: "",
           changes: [],
           status: "offered",
           isNotice: !0,
-          ...FY,
-          keyNotice: AY
+          ...iT,
+          keyNotice: zT
         })
-      }, hD = () => {
-        const YY = dr.trim();
-        if ("" === YY || ar && Mr.length >= 3) return;
-        const rY = Tr && null !== dF;
-        if (rY || !ZD((() => {
-            dD.current()
+      }, HI = () => {
+        const TT = Oo.trim();
+        if ("" === TT || Fo && no.length >= 3) return;
+        const oT = eo && null !== qi;
+        if (oT || !aI((() => {
+            nI.current()
           }))) {
-          if (er(!1), br) return pD(cv(br, YY), Kv(br, YY), {
+          if (Ro(!1), Zo) return pI(US(Zo, TT), aS(Zo, TT), {
             check: !0,
-            useFree: rY
-          }), Xr(null), void Jr("");
-          if (ar || null === CF || void 0 === CF || !CF.question) {
-            if (!ar) return Jr(""), void fD(YY, void 0, {
-              useFree: rY
+            useFree: oT
+          }), so(null), void Ho("");
+          if (Fo || null === Qi || void 0 === Qi || !Qi.question) {
+            if (!Fo) return Ho(""), void QI(TT, void 0, {
+              useFree: oT
             });
-            Mr.length < 3 && (wr([...Mr, {
-              id: yD(),
-              text: YY,
-              useFree: rY
-            }]), Jr(""))
+            no.length < 3 && (qo([...no, {
+              id: MI(),
+              text: TT,
+              useFree: oT
+            }]), Ho(""))
           } else {
-            var DY, FY, AY;
-            Jr("");
-            const IY = null !== (DY = null === (FY = CF.askedFor) || void 0 === FY ? void 0 : FY.request) && void 0 !== DY ? DY : "",
-              RY = Wa(IY, CF.question.question, YY);
-            fD(RY, YY, {
+            var IT, iT, zT;
+            Ho("");
+            const kT = null !== (IT = null === (iT = Qi.askedFor) || void 0 === iT ? void 0 : iT.request) && void 0 !== IT ? IT : "",
+              WT = mF(kT, Qi.question.question, TT);
+            QI(WT, TT, {
               check: !0,
-              about: null === (AY = CF.askedFor) || void 0 === AY ? void 0 : AY.request,
-              asked: `${IY} ${YY}`,
-              useFree: rY
+              about: null === (zT = Qi.askedFor) || void 0 === zT ? void 0 : zT.request,
+              asked: `${kT} ${TT}`,
+              useFree: oT
             })
           }
         }
-      }, dD = (0, FY.useRef)(hD);
-    dD.current = hD;
-    const JD = (0, FY.useRef)(fD);
-    JD.current = fD;
-    const MD = (0, FY.useRef)(BD);
-    MD.current = BD;
-    const wD = (0, FY.useRef)(null),
-      [bD, XD] = (0, FY.useState)(null),
-      qD = Mr.filter((YY => void 0 === YY.followUp));
+      }, nI = (0, iT.useRef)(HI);
+    nI.current = HI;
+    const qI = (0, iT.useRef)(QI);
+    qI.current = QI;
+    const ZI = (0, iT.useRef)(fI);
+    ZI.current = fI;
+    const lI = (0, iT.useRef)(null),
+      [sI, tI] = (0, iT.useState)(null),
+      GI = no.filter((TT => void 0 === TT.followUp));
 
-    function pD(YY, rY, DY) {
-      if (ar) {
-        if (Mr.length < 3) {
-          var FY;
-          const AY = null !== (FY = DY.useFree) && void 0 !== FY ? FY : Tr && null !== dF;
-          AY && er(!1), wr([...Mr, {
-            id: yD(),
-            text: YY,
-            shown: rY,
-            ...DY,
-            useFree: AY
+    function pI(TT, oT, IT) {
+      if (Fo) {
+        if (no.length < 3) {
+          var iT;
+          const zT = null !== (iT = IT.useFree) && void 0 !== iT ? iT : eo && null !== qi;
+          zT && Ro(!1), qo([...no, {
+            id: MI(),
+            text: TT,
+            shown: oT,
+            ...IT,
+            useFree: zT
           }])
         }
-      } else fD(YY, rY, DY)
-    }(0, FY.useEffect)((() => {
-      var YY, rY, DY;
-      const [FY, ...AY] = Mr;
-      if (ar || !FY || rD > 0) return;
-      const IY = null === (YY = FY.followUp) || void 0 === YY ? void 0 : YY.lookupOf;
-      if (void 0 !== IY && !Ir.some((YY => YY.id === IY))) return void wr(AY);
-      if (null === (rY = FY.replaced) || void 0 === rY ? void 0 : rY.some((YY => {
-          var rY;
+      } else QI(TT, oT, IT)
+    }(0, iT.useEffect)((() => {
+      var TT, oT, IT;
+      const [iT, ...zT] = no;
+      if (Fo || !iT || iI > 0) return;
+      const kT = null === (TT = iT.followUp) || void 0 === TT ? void 0 : TT.lookupOf;
+      if (void 0 !== kT && !ko.some((TT => TT.id === kT))) return void qo(zT);
+      if (null === (oT = iT.replaced) || void 0 === oT ? void 0 : oT.some((TT => {
+          var oT;
           let {
-            path: DY,
-            text: FY
-          } = YY;
-          return (null !== (rY = HY[DY]) && void 0 !== rY ? rY : "") === FY
+            path: IT,
+            text: iT
+          } = TT;
+          return (null !== (oT = CT[IT]) && void 0 !== oT ? oT : "") === iT
         }))) {
-        var RY;
-        const YY = (null !== (RY = FY.until) && void 0 !== RY ? RY : 0) - Date.now();
-        if (YY <= 0) return void wr(AY);
-        const rY = setTimeout((() => {
-          wr((YY => [...YY]))
-        }), YY);
+        var WT;
+        const TT = (null !== (WT = iT.until) && void 0 !== WT ? WT : 0) - Date.now();
+        if (TT <= 0) return void qo(zT);
+        const oT = setTimeout((() => {
+          qo((TT => [...TT]))
+        }), TT);
         return () => {
-          clearTimeout(rY)
+          clearTimeout(oT)
         }
       }
-      if (void 0 !== FY.opensPath && FY.opensPath !== zY) {
-        var OY;
-        (null === (OY = wD.current) || void 0 === OY ? void 0 : OY.id) !== FY.id && (wD.current = {
-          id: FY.id,
+      if (void 0 !== iT.opensPath && iT.opensPath !== jT) {
+        var XT;
+        (null === (XT = lI.current) || void 0 === XT ? void 0 : XT.id) !== iT.id && (lI.current = {
+          id: iT.id,
           until: Date.now() + 3e3
-        }, MD.current({
+        }, ZI.current({
           role: "assistant",
-          text: ev(FY.opensPath),
+          text: CS(iT.opensPath),
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), MY(FY.opensPath, 1));
-        const YY = wD.current.until - Date.now();
-        if (YY > 0) {
-          const rY = setTimeout((() => {
-            wr((YY => [...YY]))
-          }), YY);
+        }), nT(iT.opensPath, 1));
+        const TT = lI.current.until - Date.now();
+        if (TT > 0) {
+          const oT = setTimeout((() => {
+            qo((TT => [...TT]))
+          }), TT);
           return () => {
-            clearTimeout(rY)
+            clearTimeout(oT)
           }
         }
       }
-      const gY = null !== (DY = FY.followUp) && void 0 !== DY ? DY : {
-        ...void 0 === FY.shown ? {} : {
-          check: FY.check,
-          wordsOnly: FY.wordsOnly,
-          isAutoFix: FY.isAutoFix,
-          autoFixRound: FY.autoFixRound
+      const BT = null !== (IT = iT.followUp) && void 0 !== IT ? IT : {
+        ...void 0 === iT.shown ? {} : {
+          check: iT.check,
+          wordsOnly: iT.wordsOnly,
+          isAutoFix: iT.isAutoFix,
+          autoFixRound: iT.autoFixRound
         },
-        useFree: FY.useFree
+        useFree: iT.useFree
       };
-      Vu(gY) && iO(IO.getState()) ? bD !== FY.id && (XD(FY.id), BO()) : (wr(AY), JD.current(FY.text, FY.shown, gY))
-    }), [ar, Mr, rD, HY, Ir, zY, MY, zD, bD]);
-    const kD = (0, FY.useRef)(pD);
-    kD.current = pD, (0, FY.useEffect)((() => {
-      if (LY) {
-        var YY;
-        if (null === tY || void 0 === tY || tY(), "change" === LY.action) return Xr(LY), void(null === (YY = iD.current) || void 0 === YY || YY.focus());
-        Xr(null), kD.current(cv(LY), Kv(LY), {
+      uD(BT) && AX(SX.getState()) ? sI !== iT.id && (tI(iT.id), JX()) : (qo(zT), qI.current(iT.text, iT.shown, BT))
+    }), [Fo, no, iI, CT, ko, jT, nT, UI, sI]);
+    const bI = (0, iT.useRef)(pI);
+    bI.current = pI, (0, iT.useEffect)((() => {
+      if (dT) {
+        var TT;
+        if (null === VT || void 0 === VT || VT(), "change" === dT.action) return so(dT), void(null === (TT = KI.current) || void 0 === TT || TT.focus());
+        so(null), bI.current(US(dT), aS(dT), {
           check: !1,
-          wordsOnly: "explain" === LY.action
+          wordsOnly: "explain" === dT.action
         })
       }
-    }), [LY, tY]);
-    const GD = (YY, rY, DY) => {
-        gu.add(XY, YY, rY, Date.now(), DY).then(sr).catch((YY => {
-          console.error("World Code AI: couldn't keep a version of the code", YY)
+    }), [dT, VT]);
+    const yI = (TT, oT, IT) => {
+        xD.add(lT, TT, oT, Date.now(), IT).then(Lo).catch((TT => {
+          console.error("World Code AI: couldn't keep a version of the code", TT)
         }))
       },
-      xD = (0, FY.useRef)(new Set),
-      nD = async function(YY, rY) {
+      NI = (0, iT.useRef)(new Set),
+      PI = async function(TT, oT) {
         let {
-          tryAgainLater: DY = !1
+          tryAgainLater: IT = !1
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const FY = oD.current;
-        if (YY.changes.some((YY => {
-            var rY;
-            return (null !== (rY = FY[YY.path]) && void 0 !== rY ? rY : "") !== YY.before
-          }))) return HD(YY.id, "stale"), !1;
-        xD.current.add(YY.id);
-        if (!await jY(YY.changes.map((YY => ({
-            path: YY.path,
-            text: YY.after
+        const iT = AI.current;
+        if (TT.changes.some((TT => {
+            var oT;
+            return (null !== (oT = iT[TT.path]) && void 0 !== oT ? oT : "") !== TT.before
+          }))) return JI(TT.id, "stale"), !1;
+        NI.current.add(TT.id);
+        if (!await YT(TT.changes.map((TT => ({
+            path: TT.path,
+            text: TT.after
           })))).finally((() => {
-            xD.current.delete(YY.id)
-          }))) return DY || HD(YY.id, "stale"), !1;
-        GD(function(YY) {
-          const rY = YY.replace(/\s+/g, " ").trim();
-          return `Before "${rY.length>200?`${rY.slice(0,200).trimEnd()}\u2026`:rY}"`
-        }(rY), FY, function(YY) {
-          const rY = [...new Set(YY.flatMap((YY => {
-            var rY;
-            return null !== (rY = YY.why) && void 0 !== rY ? rY : []
+            NI.current.delete(TT.id)
+          }))) return IT || JI(TT.id, "stale"), !1;
+        yI(function(TT) {
+          const oT = TT.replace(/\s+/g, " ").trim();
+          return `Before "${oT.length>200?`${oT.slice(0,200).trimEnd()}\u2026`:oT}"`
+        }(oT), iT, function(TT) {
+          const oT = [...new Set(TT.flatMap((TT => {
+            var oT;
+            return null !== (oT = TT.why) && void 0 !== oT ? oT : []
           })))];
-          if (0 === rY.length) return;
-          const DY = rY.map(((YY, rY) => 0 === rY ? YY.charAt(0).toUpperCase() + YY.slice(1) : YY.charAt(0).toLowerCase() + YY.slice(1))).join(", ");
-          return DY.length > 400 ? `${DY.slice(0,400).trimEnd()}\u2026` : DY
-        }(YY.changes)), HD(YY.id, "applied"), YY.isPartial && KD(YY.id, {
-          changes: YY.changes
+          if (0 === oT.length) return;
+          const IT = oT.map(((TT, oT) => 0 === oT ? TT.charAt(0).toUpperCase() + TT.slice(1) : TT.charAt(0).toLowerCase() + TT.slice(1))).join(", ");
+          return IT.length > 400 ? `${IT.slice(0,400).trimEnd()}\u2026` : IT
+        }(TT.changes)), JI(TT.id, "applied"), TT.isPartial && jI(TT.id, {
+          changes: TT.changes
         });
-        const AY = Ir.find((rY => rY.id === YY.id && "pending" === rY.noteStatus));
-        return AY && YY.isPartial ? lF(YY.id, "asked") : AY && TF({
-          ...AY,
+        const zT = ko.find((oT => oT.id === TT.id && "pending" === oT.noteStatus));
+        return zT && TT.isPartial ? ui(TT.id, "asked") : zT && vi({
+          ...zT,
           status: "applied"
-        }, !0), gr((rY => {
-          var DY;
-          const FY = null === (DY = rY.findLast((rY => "user" === rY.role && rY.id < YY.id))) || void 0 === DY ? void 0 : DY.planStep;
-          return FY ? rY.map((YY => {
-            var rY;
-            return YY.id === FY.planId ? {
-              ...YY,
-              planDone: Math.max(null !== (rY = YY.planDone) && void 0 !== rY ? rY : 0, FY.index + 1)
-            } : YY
-          })) : rY
-        })), QD.current = Date.now(), !0
-      }, PD = !ar && 0 === rD && (0 === Mr.length || Mr[0].id === bD), UD = (0, FY.useRef)((() => Promise.resolve(!0)));
-    UD.current = async () => {
-      var YY;
-      const rY = Ar.pendingApply;
-      if (!rY || rY.targetKey !== wY.key) return !0;
-      const DY = Ir.find((YY => YY.id === rY.entryId));
-      if (!DY || "offered" !== DY.status) return Ar.pendingApply = void 0, !0;
-      const FY = null !== (YY = rY.picked) && void 0 !== YY ? YY : DY.changes,
-        AY = nY && ZY && FY.every((YY => {
-          var rY;
-          return (null !== (rY = oD.current[YY.path]) && void 0 !== rY ? rY : "") === YY.before
+        }, !0), Bo((oT => {
+          var IT;
+          const iT = null === (IT = oT.findLast((oT => "user" === oT.role && oT.id < TT.id))) || void 0 === IT ? void 0 : IT.planStep;
+          return iT ? oT.map((TT => {
+            var oT;
+            return TT.id === iT.planId ? {
+              ...TT,
+              planDone: Math.max(null !== (oT = TT.planDone) && void 0 !== oT ? oT : 0, iT.index + 1)
+            } : TT
+          })) : oT
+        })), rI.current = Date.now(), !0
+      }, dI = !Fo && 0 === iI && (0 === no.length || no[0].id === sI), VI = (0, iT.useRef)((() => Promise.resolve(!0)));
+    VI.current = async () => {
+      var TT;
+      const oT = zo.pendingApply;
+      if (!oT || oT.targetKey !== qT.key) return !0;
+      const IT = ko.find((TT => TT.id === oT.entryId));
+      if (!IT || "offered" !== IT.status) return zo.pendingApply = void 0, !0;
+      const iT = null !== (TT = oT.picked) && void 0 !== TT ? TT : IT.changes,
+        zT = yT && JT && iT.every((TT => {
+          var oT;
+          return (null !== (oT = AI.current[TT.path]) && void 0 !== oT ? oT : "") === TT.before
         }));
-      if (Date.now() > rY.until) return Ar.pendingApply = void 0, AY && BD({
+      if (Date.now() > oT.until) return zo.pendingApply = void 0, zT && fI({
         role: "assistant",
         text: "That change couldn't go in. Press Apply to try again.",
         changes: [],
         status: "offered",
         isNotice: !0
       }), !0;
-      if (!AY || xD.current.has(DY.id)) return !1;
-      const IY = await nD({
-        id: DY.id,
-        changes: FY,
-        isPartial: void 0 !== rY.picked
-      }, BF(DY.id), {
+      if (!zT || NI.current.has(IT.id)) return !1;
+      const kT = await PI({
+        id: IT.id,
+        changes: iT,
+        isPartial: void 0 !== oT.picked
+      }, Ci(IT.id), {
         tryAgainLater: !0
       });
-      IY && Ar.pendingApply === rY && (Ar.pendingApply = void 0), IY && rY.byItself && KD(DY.id, {
+      kT && zo.pendingApply === oT && (zo.pendingApply = void 0), kT && oT.byItself && jI(IT.id, {
         editedInPlace: !0
       });
-      const RY = FY[0];
-      return IY && RY && MY(RY.path, lv(RY.before, RY.after)), IY
-    }, (0, FY.useEffect)((() => {
-      var YY;
-      if ((null === (YY = Ar.pendingApply) || void 0 === YY ? void 0 : YY.targetKey) !== wY.key) return;
-      const rY = setInterval((() => {
-        UD.current().then((YY => {
-          YY && clearInterval(rY)
+      const WT = iT[0];
+      return kT && WT && nT(WT.path, ES(WT.before, WT.after)), kT
+    }, (0, iT.useEffect)((() => {
+      var TT;
+      if ((null === (TT = zo.pendingApply) || void 0 === TT ? void 0 : TT.targetKey) !== qT.key) return;
+      const oT = setInterval((() => {
+        VI.current().then((TT => {
+          TT && clearInterval(oT)
         }))
       }), 250);
       return () => {
-        clearInterval(rY)
+        clearInterval(oT)
       }
-    }), [Ar, wY.key, nY, HY]);
-    const LD = (0, FY.useRef)((() => !0));
-    LD.current = () => {
-      const YY = Ar.pendingInsert;
-      if (!YY || YY.targetKey !== wY.key) return !0;
-      if (Date.now() > YY.until) return Ar.pendingInsert = void 0, BD({
+    }), [zo, qT.key, yT, CT]);
+    const Ti = (0, iT.useRef)((() => !0));
+    Ti.current = () => {
+      const TT = zo.pendingInsert;
+      if (!TT || TT.targetKey !== qT.key) return !0;
+      if (Date.now() > TT.until) return zo.pendingInsert = void 0, fI({
         role: "assistant",
-        text: void 0 === YY.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
+        text: void 0 === TT.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
         changes: [],
         status: "offered",
-        worldCode: void 0 === YY.code ? void 0 : [YY.code],
-        isNotice: void 0 === YY.code
+        worldCode: void 0 === TT.code ? void 0 : [TT.code],
+        isNotice: void 0 === TT.code
       }), !0;
-      const rY = Object.values(oD.current).some((YY => "" !== YY.trim()));
-      return !(!nY || !ZY || !rY && Date.now() < YY.readyBy) && (Ar.pendingInsert = void 0, wr((rY => [{
-        id: yD(),
-        text: YY.request,
+      const oT = Object.values(AI.current).some((TT => "" !== TT.trim()));
+      return !(!yT || !JT || !oT && Date.now() < TT.readyBy) && (zo.pendingInsert = void 0, qo((oT => [{
+        id: MI(),
+        text: TT.request,
         shown: "Put the code in",
         followUp: {
-          ...YY.options,
-          insertsInto: zY
+          ...TT.options,
+          insertsInto: jT
         }
-      }, ...rY])), !0)
-    }, (0, FY.useEffect)((() => {
-      var YY;
-      if ((null === (YY = Ar.pendingInsert) || void 0 === YY ? void 0 : YY.targetKey) !== wY.key) return;
-      const rY = setInterval((() => {
-        LD.current() && clearInterval(rY)
+      }, ...oT])), !0)
+    }, (0, iT.useEffect)((() => {
+      var TT;
+      if ((null === (TT = zo.pendingInsert) || void 0 === TT ? void 0 : TT.targetKey) !== qT.key) return;
+      const oT = setInterval((() => {
+        Ti.current() && clearInterval(oT)
       }), 250);
       return () => {
-        clearInterval(rY)
+        clearInterval(oT)
       }
-    }), [Ar, wY.key, nY, HY]);
-    const tD = YY => {
-        aD((() => {
-          gY.gameBridge.send("sendChatMessage", {
-            vv: "//export",
+    }), [zo, qT.key, yT, CT]);
+    const oi = TT => {
+        DI((() => {
+          BT.gameBridge.send("sendChatMessage", {
+            US: "//export",
             channelName: null
           })
-        }), Math.max(0, QD.current + 600 - Date.now())), BD({
+        }), Math.max(0, rI.current + 600 - Date.now())), fI({
           role: "assistant",
-          text: YY ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
+          text: TT ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
           changes: [],
           status: "offered",
           isNotice: !0,
-          isCalm: !YY || void 0
+          isCalm: !TT || void 0
         })
       },
-      YF = (YY, rY) => {
+      Ii = (TT, oT) => {
         let {
-          leavesChangeBehind: DY,
-          hasWorldCodePart: FY
-        } = rY;
-        DY ? BD({
+          leavesChangeBehind: IT,
+          hasWorldCodePart: iT
+        } = oT;
+        IT ? fI({
           role: "assistant",
-          text: Bu(FY),
+          text: JD(iT),
           changes: [],
           status: "offered",
           isNotice: !0
-        }) : (BD({
+        }) : (fI({
           role: "assistant",
           text: "Taking you to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), aD((() => {
-          null === qY || void 0 === qY || qY(YY, !1)
-        }), cu))
+        }), DI((() => {
+          null === sT || void 0 === sT || sT(TT, !1)
+        }), UD))
       },
-      rF = (YY, rY) => {
-        !rY && xY ? (BD({
+      ii = (TT, oT) => {
+        !oT && bT ? (fI({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), aD((() => {
-          Ar.pendingApply = {
-            entryId: YY,
-            targetKey: Sv.d.key,
-            until: Date.now() + Iu,
+        }), DI((() => {
+          zo.pendingApply = {
+            entryId: TT,
+            targetKey: vS.g.key,
+            until: Date.now() + SD,
             byItself: !0
-          }, xY(Sv.d)
-        }), cu)) : BD({
+          }, bT(vS.g)
+        }), UD)) : fI({
           role: "assistant",
           text: "Apply this change first, then apply the World Code part.",
           changes: [],
@@ -14737,1441 +14737,1441 @@ const wu = (0, FY.memo)((function(YY) {
           isNotice: !0
         })
       },
-      DF = YY => rr && "direct" === YY && ZY && !!xY,
-      FF = (YY, rY, DY) => {
-        xY && (BD({
+      zi = TT => oo && "direct" === TT && JT && !!bT,
+      ki = (TT, oT, IT) => {
+        bT && (fI({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), aD((() => {
-          null !== YY && (Ar.pendingInsert = {
-            targetKey: Sv.d.key,
-            request: YY,
-            options: rY,
-            code: DY,
+        }), DI((() => {
+          null !== TT && (zo.pendingInsert = {
+            targetKey: vS.g.key,
+            request: TT,
+            options: oT,
+            code: IT,
             readyBy: Date.now() + 4e3,
-            until: Date.now() + Iu
-          }), xY(Sv.d)
-        }), cu))
+            until: Date.now() + SD
+          }), bT(vS.g)
+        }), UD))
       },
-      AF = async function(YY, rY) {
-        var DY, FY, AY;
+      Wi = async function(TT, oT) {
+        var IT, iT, zT;
         let {
-          replaced: IY,
-          signal: RY
+          replaced: kT,
+          signal: WT
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const OY = await async function(YY, rY) {
-          const DY = [];
-          let FY = null;
-          for (const IY of YY) {
-            var AY;
-            const YY = await eA(IY, rY);
-            DY.push(IY.call ? {
-              ...YY.result,
-              call: IY.call
-            } : YY.result), FY = null !== (AY = YY.worldCodeFiles) && void 0 !== AY ? AY : FY
+        const XT = await async function(TT, oT) {
+          const IT = [];
+          let iT = null;
+          for (const kT of TT) {
+            var zT;
+            const TT = await fz(kT, oT);
+            IT.push(kT.call ? {
+              ...TT.result,
+              call: kT.call
+            } : TT.result), iT = null !== (zT = TT.worldCodeFiles) && void 0 !== zT ? zT : iT
           }
           return {
-            results: DY,
-            worldCodeFiles: FY
+            results: IT,
+            worldCodeFiles: iT
           }
-        }(YY, {
-          files: oD.current,
-          docs: su(),
-          errors: CY,
-          viewChunk: null !== kY && void 0 !== kY ? kY : Su,
-          viewGameState: null !== GY && void 0 !== GY ? GY : lu,
-          readWorldCode: pY,
-          fetchDocsPage: YY => async function(YY, rY, DY) {
-            if ("" === YY.trim()) return `No url was given: give ${oY.l}, or a page it links to.`;
-            const FY = mY(YY);
-            if (null === FY) return YY.includes(oY.f) ? `${YY} is every page at once, too long to read: read ${oY.l}, then the page you need.` : `Only Bloxd's docs can be read: ${oY.l} and the pages it links to.`;
-            const AY = `There is no docs page at ${YY}. ${oY.l} lists every page with its link.`,
-              IY = `${YY} couldn't be read just now. Use get_docs instead.`,
-              RY = (0, WY.d)(2e4, DY);
-            let OY;
+        }(TT, {
+          files: AI.current,
+          docs: rD(),
+          errors: UT,
+          viewChunk: null !== GT && void 0 !== GT ? GT : vD,
+          viewGameState: null !== pT && void 0 !== pT ? pT : ED,
+          readWorldCode: tT,
+          fetchDocsPage: TT => async function(TT, oT, IT) {
+            if ("" === TT.trim()) return `No url was given: give ${MT.n}, or a page it links to.`;
+            const iT = gT(TT);
+            if (null === iT) return TT.includes(MT.f) ? `${TT} is every page at once, too long to read: read ${MT.n}, then the page you need.` : `Only Bloxd's docs can be read: ${MT.n} and the pages it links to.`;
+            const zT = `There is no docs page at ${TT}. ${MT.n} lists every page with its link.`,
+              kT = `${TT} couldn't be read just now. Use get_docs instead.`,
+              WT = (0, rT.c)(2e4, IT);
+            let XT;
             try {
-              var gY;
-              const YY = await fetch(`${rY}${FY}`, {
-                signal: RY.signal
+              var BT;
+              const TT = await fetch(`${oT}${iT}`, {
+                signal: WT.signal
               });
-              if (404 === YY.status) return AY;
-              if (!YY.ok) return console.warn("AI Helper: a docs page couldn't be read", FY, YY.status), IY;
-              if (null !== (gY = YY.headers.get("content-type")) && void 0 !== gY && gY.startsWith("text/html")) return AY;
-              OY = await YY.text()
-            } catch (vY) {
-              return !0 !== (null === DY || void 0 === DY ? void 0 : DY.aborted) && console.warn("AI Helper: a docs page couldn't be read", FY, vY), IY
+              if (404 === TT.status) return zT;
+              if (!TT.ok) return console.warn("AI Helper: a docs page couldn't be read", iT, TT.status), kT;
+              if (null !== (BT = TT.headers.get("content-type")) && void 0 !== BT && BT.startsWith("text/html")) return zT;
+              XT = await TT.text()
+            } catch (ST) {
+              return !0 !== (null === IT || void 0 === IT ? void 0 : IT.aborted) && console.warn("AI Helper: a docs page couldn't be read", iT, ST), kT
             } finally {
-              RY.clear()
+              WT.clear()
             }
-            const aY = (0, oY.z)(FY);
-            return null !== aY && null === aY.part && OY.length > oY.b ? `${YY} is too long to read whole: read the part you need. Its parts start at ${QY.e}${(0,oY.w)(aY.name,0)}, and ${oY.l} says what each part has.` : OY.length <= 4e4 ? OY : (console.warn("AI Helper: a docs file is longer than any should be", FY, OY.length), `${OY.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
-          }(YY, window.location.origin, RY)
+            const FT = (0, MT.y)(iT);
+            return null !== FT && null === FT.part && XT.length > MT.c ? `${TT} is too long to read whole: read the part you need. Its parts start at ${KT.d}${(0,MT.w)(FT.name,0)}, and ${MT.n} says what each part has.` : XT.length <= 4e4 ? XT : (console.warn("AI Helper: a docs file is longer than any should be", iT, XT.length), `${XT.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
+          }(TT, window.location.origin, WT)
         });
-        if (null !== RY && void 0 !== RY && RY.aborted) return "stopped";
-        const gY = OY.results,
-          aY = YY.flatMap((YY => "view_file" === YY.name && void 0 !== YY.args.path && YY.args.path in oD.current ? [YY.args.path] : [])),
-          vY = {
-            ...rY.options,
-            lookups: [...(null !== (DY = rY.options.lookups) && void 0 !== DY ? DY : []).map(Au), ...gY],
-            worldCodeFiles: null !== (FY = OY.worldCodeFiles) && void 0 !== FY ? FY : rY.options.worldCodeFiles,
-            viewedPaths: [...null !== (AY = rY.options.viewedPaths) && void 0 !== AY ? AY : [], ...aY]
+        if (null !== WT && void 0 !== WT && WT.aborted) return "stopped";
+        const BT = XT.results,
+          FT = TT.flatMap((TT => "view_file" === TT.name && void 0 !== TT.args.path && TT.args.path in AI.current ? [TT.args.path] : [])),
+          ST = {
+            ...oT.options,
+            lookups: [...(null !== (IT = oT.options.lookups) && void 0 !== IT ? IT : []).map(FD), ...BT],
+            worldCodeFiles: null !== (iT = XT.worldCodeFiles) && void 0 !== iT ? iT : oT.options.worldCodeFiles,
+            viewedPaths: [...null !== (zT = oT.options.viewedPaths) && void 0 !== zT ? zT : [], ...FT]
           };
-        return wr((YY => [{
-          id: yD(),
-          text: rY.request,
-          shown: rY.shown,
-          followUp: vY,
-          ...IY ? {
-            replaced: IY,
-            until: Date.now() + eu
+        return qo((TT => [{
+          id: MI(),
+          text: oT.request,
+          shown: oT.shown,
+          followUp: ST,
+          ...kT ? {
+            replaced: kT,
+            until: Date.now() + CD
           } : {}
-        }, ...YY])), "asked"
-      }, IF = (YY, rY, DY) => {
-        gr((FY => FY.map((FY => FY.id === YY ? {
-          ...FY,
-          trial: rY,
-          trialErrors: null !== DY && void 0 !== DY ? DY : FY.trialErrors
-        } : FY))))
-      }, RF = function(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        dY && (AD(YY), aD((() => {
-          var DY;
-          AD(null), Lr.current || mD.current.length > 0 || null !== (DY = iD.current) && void 0 !== DY && DY.value.trim() || (Gr(ED.current), dY({
-            chatKey: bY,
-            entryId: YY,
-            autoFixRound: rY
+        }, ...TT])), "asked"
+      }, Xi = (TT, oT, IT) => {
+        Bo((iT => iT.map((iT => iT.id === TT ? {
+          ...iT,
+          trial: oT,
+          trialErrors: null !== IT && void 0 !== IT ? IT : iT.trialErrors
+        } : iT))))
+      }, Bi = function(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        OT && (WI(TT), DI((() => {
+          var IT;
+          WI(null), TI.current || wI.current.length > 0 || null !== (IT = KI.current) && void 0 !== IT && IT.value.trim() || (bo(hI.current), OT({
+            chatKey: ZT,
+            entryId: TT,
+            autoFixRound: oT
           }))
-        }), Math.max(DY, QD.current + 1500 - Date.now())))
-      }, OF = () => {
-        uD(), (0, Fa.d)(bY)
+        }), Math.max(IT, rI.current + 1500 - Date.now())))
+      }, Fi = () => {
+        xI(), (0, BF.c)(ZT)
       };
-    (0, FY.useEffect)((() => {
-      if (!nY || void 0 === (null === ID || void 0 === ID ? void 0 : ID.endedAt) || (null === OD || void 0 === OD ? void 0 : OD.target.key) !== wY.key) return void(void 0 === (null === ID || void 0 === ID ? void 0 : ID.endedAt) || OD || (0, Fa.m)(bY));
-      const YY = (0, Fa.m)(bY);
-      if (!YY) return;
-      const rY = (0, Fa.C)(YY);
-      MD.current({
+    (0, iT.useEffect)((() => {
+      if (!yT || void 0 === (null === XI || void 0 === XI ? void 0 : XI.endedAt) || (null === FI || void 0 === FI ? void 0 : FI.target.key) !== qT.key) return void(void 0 === (null === XI || void 0 === XI ? void 0 : XI.endedAt) || FI || (0, BF.j)(ZT));
+      const TT = (0, BF.j)(ZT);
+      if (!TT) return;
+      const oT = (0, BF.u)(TT);
+      ZI.current({
         role: "assistant",
-        text: rY.text,
+        text: oT.text,
         changes: [],
         status: "offered",
         isNotice: !0,
-        isCalm: 0 === YY.errors.length && void 0 !== YY.ranAt,
-        logTitle: rY.title
-      }), void 0 !== YY.ranAt && (0 !== YY.errors.length ? YY.autoFixRound >= 3 || (Gr(ED.current), wr((rY => [{
-        id: yD(),
-        text: (0, Fa.z)(YY.errors),
-        shown: 1 === YY.errors.length ? "Fix the error" : "Fix these errors",
+        isCalm: 0 === TT.errors.length && void 0 !== TT.ranAt,
+        logTitle: oT.title
+      }), void 0 !== TT.ranAt && (0 !== TT.errors.length ? TT.autoFixRound >= 3 || (bo(hI.current), qo((oT => [{
+        id: MI(),
+        text: (0, BF.t)(TT.errors),
+        shown: 1 === TT.errors.length ? "Fix the error" : "Fix these errors",
         check: !1,
         isAutoFix: !0,
-        autoFixRound: YY.autoFixRound + 1
-      }, ...rY]))) : IF(YY.entryId, "ask", ED.current))
-    }), [ID, nY, OD, wY.key, bY]);
-    const gF = async (YY, rY) => {
-      if (KD(YY.id, {
-          forgetStatus: rY ? "forgotten" : "Mi"
-        }), rY) try {
-        for (const rY of null !== (DY = YY.forgetNotes) && void 0 !== DY ? DY : []) {
-          var DY;
-          or(await au.remove(XY, rY))
+        autoFixRound: TT.autoFixRound + 1
+      }, ...oT]))) : Xi(TT.entryId, "ask", hI.current))
+    }), [XI, yT, FI, qT.key, ZT]);
+    const Si = async (TT, oT) => {
+      if (jI(TT.id, {
+          forgetStatus: oT ? "forgotten" : "qx"
+        }), oT) try {
+        for (const oT of null !== (IT = TT.forgetNotes) && void 0 !== IT ? IT : []) {
+          var IT;
+          Mo(await cD.remove(lT, oT))
         }
-      } catch (FY) {
-        console.error("World Code AI: couldn't forget a note", FY), KD(YY.id, {
+      } catch (iT) {
+        console.error("World Code AI: couldn't forget a note", iT), jI(TT.id, {
           forgetStatus: void 0
         })
       }
-    }, aF = (0, FY.useCallback)((YY => YY.flatMap((YY => Du(su(), YY, rr)))), [rr]), vF = (0, FY.useRef)({}), uF = (0, FY.useRef)({}), sF = (0, FY.useRef)(Promise.resolve()), iF = (0, FY.useRef)([]), yF = (0, FY.useRef)(new Map), QF = (0, FY.useRef)(new Map), oF = (0, FY.useRef)(null), WF = () => {
-      fr.current = !1, iF.current = [], yF.current = new Map, QF.current = new Map, oF.current = null, vF.current = {}, uF.current = {}, hr(null)
-    }, EF = async () => {
-      if (!jr) return;
-      const YY = oD.current,
-        rY = function(YY, rY, DY) {
-          return Object.entries(rY).flatMap((rY => {
-            var FY;
-            let [AY, IY] = rY;
-            const RY = DY[AY];
-            if (void 0 === RY) return [];
-            const OY = new Map(la(null !== (FY = YY[AY]) && void 0 !== FY ? FY : "").map((YY => [YY.key, YY.value]))),
-              gY = new Map(la(IY).map((YY => [YY.key, YY.value])));
-            let aY = RY;
-            for (const [YY, DY] of OY) {
-              var vY;
-              const rY = la(aY).find((rY => rY.key === YY));
-              rY && rY.value !== DY && gY.get(YY) === rY.value && (aY = null !== (vY = Ta(aY, rY, DY)) && void 0 !== vY ? vY : aY)
+    }, Di = (0, iT.useCallback)((TT => TT.flatMap((TT => XD(rD(), TT, oo)))), [oo]), Li = (0, iT.useRef)({}), xi = (0, iT.useRef)({}), ci = (0, iT.useRef)(Promise.resolve()), Ki = (0, iT.useRef)([]), Mi = (0, iT.useRef)(new Map), ri = (0, iT.useRef)(new Map), Ai = (0, iT.useRef)(null), gi = () => {
+      ao.current = !1, Ki.current = [], Mi.current = new Map, ri.current = new Map, Ai.current = null, Li.current = {}, xi.current = {}, Qo(null)
+    }, wi = async () => {
+      if (!Yo) return;
+      const TT = AI.current,
+        oT = function(TT, oT, IT) {
+          return Object.entries(oT).flatMap((oT => {
+            var iT;
+            let [zT, kT] = oT;
+            const WT = IT[zT];
+            if (void 0 === WT) return [];
+            const XT = new Map(EF(null !== (iT = TT[zT]) && void 0 !== iT ? iT : "").map((TT => [TT.key, TT.value]))),
+              BT = new Map(EF(kT).map((TT => [TT.key, TT.value])));
+            let FT = WT;
+            for (const [TT, IT] of XT) {
+              var ST;
+              const oT = EF(FT).find((oT => oT.key === TT));
+              oT && oT.value !== IT && BT.get(TT) === oT.value && (FT = null !== (ST = fF(FT, oT, IT)) && void 0 !== ST ? ST : FT)
             }
-            return aY === RY ? [] : [{
-              path: AY,
-              text: aY
+            return FT === WT ? [] : [{
+              path: zT,
+              text: FT
             }]
           }))
-        }(jr, vF.current, YY);
-      if (rY.length > 0) {
-        if (!await jY(rY)) return;
-        GD(function(YY) {
-          const rY = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((rY => YY.includes(rY.name))).map((YY => ({
-            name: YY.name,
-            from: YY.to,
-            to: YY.from
+        }(Yo, Li.current, TT);
+      if (oT.length > 0) {
+        if (!await YT(oT)) return;
+        yI(function(TT) {
+          const oT = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((oT => TT.includes(oT.name))).map((TT => ({
+            name: TT.name,
+            from: TT.to,
+            to: TT.from
           })));
-          return rY.length > 0 ? ca(rY, "undoing") : 0 === YY.length ? "Before undoing settings" : `Before undoing settings: ${(YY.length>3?[...YY.slice(0,3),YY.length-3+" more"]:YY).join(", ")}`
-        }(iF.current, [...yF.current.values()]), YY), QD.current = Date.now()
+          return oT.length > 0 ? UF(oT, "undoing") : 0 === TT.length ? "Before undoing settings" : `Before undoing settings: ${(TT.length>3?[...TT.slice(0,3),TT.length-3+" more"]:TT).join(", ")}`
+        }(Ki.current, [...Mi.current.values()]), TT), rI.current = Date.now()
       }
-      WF()
-    }, mF = !rr && Object.values(HY).some((YY => la(YY).length > 0)), VF = function(YY) {
+      gi()
+    }, mi = !oo && Object.values(CT).some((TT => EF(TT).length > 0)), ei = function(TT) {
       let {
-        codeBlock: rY,
-        hasSettings: DY,
-        canEdit: AY
-      } = YY;
-      return (0, FY.useEffect)((() => {
-        (0, xg.H)("aiNotes", !rY)
-      }), [rY]), (0, FY.useEffect)((() => {
-        (0, xg.H)("aiGameSettings", DY)
-      }), [DY]), (0, FY.useEffect)((() => {
-        (0, xg.H)("aiEdits", AY)
-      }), [AY]), (0, ng.j)("aiHelperOverview")
+        codeBlock: oT,
+        hasSettings: IT,
+        canEdit: zT
+      } = TT;
+      return (0, iT.useEffect)((() => {
+        (0, VB.N)("aiNotes", !oT)
+      }), [oT]), (0, iT.useEffect)((() => {
+        (0, VB.N)("aiGameSettings", IT)
+      }), [IT]), (0, iT.useEffect)((() => {
+        (0, VB.N)("aiEdits", zT)
+      }), [zT]), (0, TF.i)("aiHelperOverview")
     }({
-      codeBlock: rr,
-      hasSettings: mF,
-      canEdit: ZY
+      codeBlock: oo,
+      hasSettings: mi,
+      canEdit: JT
     });
-    (0, FY.useEffect)((() => {
-      VF && (yr(!1), Er(!1), Vr(!1), lr(null))
-    }), [VF]);
-    const SF = async YY => {
-      const rY = Yr(YY);
-      return null === rY ? "Notes are only about your game, never personal details." : "ok" !== await jI(rY) ? "This note can't be saved. Notes are only about your game." : (or(await au.add(XY, rY)), null)
-    }, lF = (YY, rY) => {
-      KD(YY, {
-        noteStatus: rY
+    (0, iT.useEffect)((() => {
+      ei && (co(!1), Ao(!1), ho(!1), mo(null))
+    }), [ei]);
+    const Ri = async TT => {
+      const oT = To(TT);
+      return null === oT ? "Notes are only about your game, never personal details." : "ok" !== await qk(oT) ? "This note can't be saved. Notes are only about your game." : (Mo(await cD.add(lT, oT)), null)
+    }, ui = (TT, oT) => {
+      jI(TT, {
+        noteStatus: oT
       })
-    }, TF = async (YY, rY) => {
-      if (rY && void 0 !== YY.note)
-        if (YY.changes.length > 0 && "offered" === YY.status) lF(YY.id, "pending");
+    }, vi = async (TT, oT) => {
+      if (oT && void 0 !== TT.note)
+        if (TT.changes.length > 0 && "offered" === TT.status) ui(TT.id, "pending");
         else {
-          lF(YY.id, "checking");
+          ui(TT.id, "checking");
           try {
-            lF(YY.id, null === await SF(YY.note) ? "saved" : "refused")
-          } catch (DY) {
-            console.error("World Code AI: couldn't keep a note", DY), lF(YY.id, "asked")
+            ui(TT.id, null === await Ri(TT.note) ? "saved" : "refused")
+          } catch (IT) {
+            console.error("World Code AI: couldn't keep a note", IT), ui(TT.id, "asked")
           }
         }
-      else lF(YY.id, "declined")
-    }, eF = YY => {
-      var rY;
-      const DY = null === (rY = Ir.find((rY => rY.id === YY))) || void 0 === rY ? void 0 : rY.target.key;
-      return Ir.findLast((rY => "user" === rY.role && rY.id < YY && rY.target.key === DY))
-    }, NF = YY => {
-      var rY;
-      return null === (rY = eF(YY)) || void 0 === rY ? void 0 : rY.asked
-    }, BF = YY => {
-      var rY, DY;
-      const FY = eF(YY);
-      return null !== (rY = null !== (DY = null === FY || void 0 === FY ? void 0 : FY.about) && void 0 !== DY ? DY : null === FY || void 0 === FY ? void 0 : FY.text) && void 0 !== rY ? rY : "a change"
-    }, cF = Ir.filter(cD), KF = null === (EY = cF[cF.length - 1]) || void 0 === EY ? void 0 : EY.id, HF = null !== (VY = null === (SY = cF.findLast((YY => "user" === YY.role))) || void 0 === SY ? void 0 : SY.id) && void 0 !== VY ? VY : 0, zF = cF.length < Ir.length, ZF = cF[cF.length - 1], CF = null !== ZF && void 0 !== ZF && null !== (lY = ZF.question) && void 0 !== lY && lY.allowOther && !ar ? ZF : void 0, fF = (0, FY.useRef)(!1), jF = () => {
-      fF.current = !0, lr("settings")
-    }, hF = () => {
-      yr(!1), Er(!1), Vr(!1), Nr.current = null, cr(null), lr("addKey")
+      else ui(TT.id, "declined")
+    }, Ei = TT => {
+      var oT;
+      const IT = null === (oT = ko.find((oT => oT.id === TT))) || void 0 === oT ? void 0 : oT.target.key;
+      return ko.findLast((oT => "user" === oT.role && oT.id < TT && oT.target.key === IT))
+    }, fi = TT => {
+      var oT;
+      return null === (oT = Ei(TT)) || void 0 === oT ? void 0 : oT.asked
+    }, Ci = TT => {
+      var oT, IT;
+      const iT = Ei(TT);
+      return null !== (oT = null !== (IT = null === iT || void 0 === iT ? void 0 : iT.about) && void 0 !== IT ? IT : null === iT || void 0 === iT ? void 0 : iT.text) && void 0 !== oT ? oT : "a change"
+    }, ji = ko.filter(CI), Ji = null === (AT = ji[ji.length - 1]) || void 0 === AT ? void 0 : AT.id, Ui = null !== (hT = null === (wT = ji.findLast((TT => "user" === TT.role))) || void 0 === wT ? void 0 : wT.id) && void 0 !== hT ? hT : 0, ai = ji.length < ko.length, Yi = ji[ji.length - 1], Qi = null !== Yi && void 0 !== Yi && null !== (mT = Yi.question) && void 0 !== mT && mT.allowOther && !Fo ? Yi : void 0, Oi = (0, iT.useRef)(!1), Hi = () => {
+      Oi.current = !0, mo("settings")
+    }, ni = () => {
+      co(!1), Ao(!1), ho(!1), uo.current = null, Eo(null), mo("addKey")
     }, {
-      activeKey: dF,
-      cutShortActions: JF,
-      noticeActions: MF
-    } = function(YY) {
-      var rY;
+      activeKey: qi,
+      cutShortActions: Zi,
+      noticeActions: li
+    } = function(TT) {
+      var oT;
       let {
-        entries: DY,
-        busy: FY,
-        send: AY,
-        onCheckKey: IY
-      } = YY;
+        entries: IT,
+        busy: iT,
+        send: zT,
+        onCheckKey: kT
+      } = TT;
       const {
-        active: RY
-      } = nR(), OY = null === (rY = DY.findLast((YY => "assistant" === YY.role && !YY.isNotice))) || void 0 === rY ? void 0 : rY.id;
+        active: WT
+      } = TX(), XT = null === (oT = IT.findLast((TT => "assistant" === TT.role && !TT.isNotice))) || void 0 === oT ? void 0 : oT.id;
       return {
-        activeKey: RY,
-        cutShortActions: (YY, rY) => ({
-          canFinish: !FY && YY === OY && (null === RY || void 0 === RY ? void 0 : RY.id) === rY.keyId && RY.model.id === rY.modelId,
+        activeKey: WT,
+        cutShortActions: (TT, oT) => ({
+          canFinish: !iT && TT === XT && (null === WT || void 0 === WT ? void 0 : WT.id) === oT.keyId && WT.model.id === oT.modelId,
           onFinish: () => {
-            AY(rY.request, {
-              retryOf: YY,
-              continueFrom: rY.written
+            zT(oT.request, {
+              retryOf: TT,
+              continueFrom: oT.written
             })
           }
         }),
-        noticeActions: (YY, rY, DY) => ({
-          notice: DY.notice,
+        noticeActions: (TT, oT, IT) => ({
+          notice: IT.notice,
           onRetry: () => {
-            AY(rY, {
-              retryOf: YY
+            zT(oT, {
+              retryOf: TT
             })
           },
           onUseFree: () => {
-            AY(rY, {
+            zT(oT, {
               useFree: !0,
-              retryOf: YY
+              retryOf: TT
             })
           },
-          onCheckKey: IY
+          onCheckKey: kT
         })
       }
     }({
-      entries: cF,
-      busy: !!ar,
-      send: (YY, rY) => {
+      entries: ji,
+      busy: !!Fo,
+      send: (TT, oT) => {
         let {
-          useFree: DY,
-          retryOf: FY,
-          continueFrom: AY
-        } = rY;
-        const IY = Ir.find((YY => YY.id === FY));
-        return fD(YY, null === IY || void 0 === IY ? void 0 : IY.retryShown, {
-          ...null === IY || void 0 === IY ? void 0 : IY.retryOptions,
-          useFree: DY,
-          retryOf: FY,
-          continueFrom: AY
+          useFree: IT,
+          retryOf: iT,
+          continueFrom: zT
+        } = oT;
+        const kT = ko.find((TT => TT.id === iT));
+        return QI(TT, null === kT || void 0 === kT ? void 0 : kT.retryShown, {
+          ...null === kT || void 0 === kT ? void 0 : kT.retryOptions,
+          useFree: IT,
+          retryOf: iT,
+          continueFrom: zT
         })
       },
-      onCheckKey: jF
-    }), wF = sO(zD) ? zD.status : null, bF = null !== wF && void 0 !== wF && wF.isSuper ? wF.resetsAt : null, XF = (0, FY.useRef)({
+      onCheckKey: Hi
+    }), si = rX(UI) ? UI.status : null, ti = null !== si && void 0 !== si && si.isSuper ? si.resetsAt : null, Gi = (0, iT.useRef)({
       resetsAt: 0,
       count: 0,
       nextAt: 0
     });
-    (0, FY.useEffect)((() => {
-      if (null === bF) return;
-      if (bF <= Pr) {
-        XF.current.resetsAt !== bF && (XF.current = {
-          resetsAt: bF,
+    (0, iT.useEffect)((() => {
+      if (null === ti) return;
+      if (ti <= Po) {
+        Gi.current.resetsAt !== ti && (Gi.current = {
+          resetsAt: ti,
           count: 0,
           nextAt: 0
         });
-        const YY = XF.current,
-          rY = [15e3, 6e4, 24e4];
-        if (YY.count > rY.length) return;
-        let DY = !1;
-        const FY = setTimeout((() => {
-          var FY;
-          YY.nextAt = Date.now() + (null !== (FY = rY[YY.count]) && void 0 !== FY ? FY : 0), YY.count++, IO.refresh().then((() => {
-            DY || Ur(Date.now())
+        const TT = Gi.current,
+          oT = [15e3, 6e4, 24e4];
+        if (TT.count > oT.length) return;
+        let IT = !1;
+        const iT = setTimeout((() => {
+          var iT;
+          TT.nextAt = Date.now() + (null !== (iT = oT[TT.count]) && void 0 !== iT ? iT : 0), TT.count++, SX.refresh().then((() => {
+            IT || Vo(Date.now())
           }))
-        }), Math.max(0, YY.nextAt - Date.now()));
+        }), Math.max(0, TT.nextAt - Date.now()));
         return () => {
-          DY = !0, clearTimeout(FY)
+          IT = !0, clearTimeout(iT)
         }
       }
-      const YY = setTimeout((() => {
-        Ur(Date.now())
-      }), Math.max(0, (bF - Pr - 1) % 6e4 + 1 - (Date.now() - Pr)));
+      const TT = setTimeout((() => {
+        Vo(Date.now())
+      }), Math.max(0, (ti - Po - 1) % 6e4 + 1 - (Date.now() - Po)));
       return () => {
-        clearTimeout(YY)
+        clearTimeout(TT)
       }
-    }), [bF, Pr]);
-    const qF = dF ? `${dF.id}/${dF.model.id}` : null;
-    (0, FY.useEffect)((() => {
-      er(!1)
-    }), [qF]);
-    const pF = Object.values(HY).some((YY => "" !== YY.trim())),
-      GF = ir || Wr || mr || null !== Sr,
-      xF = "aiAnswer" === VF || ("aiNotes" === VF || "aiGameSettings" === VF || "aiGear" === VF) && GF ? VF : "aiPanel",
-      PF = (0, FY.useRef)(null),
-      UF = (0, FY.useRef)(null),
-      LF = (0, FY.useRef)(Sr);
-    (0, FY.useEffect)((() => {
-      if (LF.current === Sr) return;
-      LF.current = Sr;
+    }), [ti, Po]);
+    const bi = qi ? `${qi.id}/${qi.model.id}` : null;
+    (0, iT.useEffect)((() => {
+      Ro(!1)
+    }), [bi]);
+    const yi = Object.values(CT).some((TT => "" !== TT.trim())),
+      Pi = xo || ro || go || null !== wo,
+      di = "aiAnswer" === ei || ("aiNotes" === ei || "aiGameSettings" === ei || "aiGear" === ei) && Pi ? ei : "aiPanel",
+      Tz = (0, iT.useRef)(null),
+      oz = (0, iT.useRef)(null),
+      Iz = (0, iT.useRef)(wo);
+    (0, iT.useEffect)((() => {
+      if (Iz.current === wo) return;
+      Iz.current = wo;
       if (!document.activeElement || document.activeElement === document.body) {
-        var YY;
-        null === (YY = (Sr ? PF : UF).current) || void 0 === YY || YY.focus()
+        var TT;
+        null === (TT = (wo ? Tz : oz).current) || void 0 === TT || TT.focus()
       }
-    }), [Sr]), (0, FY.useEffect)((() => {
-      const YY = sD.current;
-      if (!Sr || !YY) return;
-      YY.scrollTo({
+    }), [wo]), (0, iT.useEffect)((() => {
+      const TT = cI.current;
+      if (!wo || !TT) return;
+      TT.scrollTo({
         top: 0
       });
-      const rY = "settings" === Sr && fF.current ? YY.querySelector(".WorldCodeAiModelRow.Selected") : null;
-      if (rY && rY.getBoundingClientRect().bottom > YY.getBoundingClientRect().bottom && !cg(YY, rY)) {
-        const DY = YY.getBoundingClientRect(),
-          FY = rY.getBoundingClientRect();
-        YY.scrollTop += FY.top - DY.top - (DY.height - FY.height) / 2
+      const oT = "settings" === wo && Oi.current ? TT.querySelector(".WorldCodeAiModelRow.Selected") : null;
+      if (oT && oT.getBoundingClientRect().bottom > TT.getBoundingClientRect().bottom && !UB(TT, oT)) {
+        const IT = TT.getBoundingClientRect(),
+          iT = oT.getBoundingClientRect();
+        TT.scrollTop += iT.top - IT.top - (IT.height - iT.height) / 2
       }
       return () => {
-        YY.style.paddingBottom = ""
+        TT.style.paddingBottom = ""
       }
-    }), [Sr]);
+    }), [wo]);
     const {
-      disclosureRef: YA,
-      gearLabelRef: rA,
-      hasGearLabel: DA
-    } = function(YY, rY) {
-      const DY = (0, FY.useRef)(null),
-        AY = (0, FY.useRef)(null),
-        IY = (0, FY.useRef)(0),
-        [RY, OY] = (0, FY.useState)(!0);
-      return (0, FY.useLayoutEffect)((() => {
-        const rY = DY.current;
-        if (!rY || "undefined" === typeof ResizeObserver) return;
-        const FY = () => {
-          const DY = document.createRange();
-          if (DY.selectNodeContents(rY), "function" !== typeof DY.getBoundingClientRect) return;
-          const FY = DY.getBoundingClientRect().width,
-            RY = AY.current;
-          if (RY) {
-            const DY = YY.current,
-              AY = DY && parseFloat(getComputedStyle(DY).columnGap) || 0;
-            IY.current = RY.getBoundingClientRect().width + AY, FY > rY.clientWidth + 1 && OY(!1)
-          } else rY.clientWidth - FY >= IY.current && OY(!0)
+      disclosureRef: zz,
+      gearLabelRef: kz,
+      hasGearLabel: Wz
+    } = function(TT, oT) {
+      const IT = (0, iT.useRef)(null),
+        zT = (0, iT.useRef)(null),
+        kT = (0, iT.useRef)(0),
+        [WT, XT] = (0, iT.useState)(!0);
+      return (0, iT.useLayoutEffect)((() => {
+        const oT = IT.current;
+        if (!oT || "undefined" === typeof ResizeObserver) return;
+        const iT = () => {
+          const IT = document.createRange();
+          if (IT.selectNodeContents(oT), "function" !== typeof IT.getBoundingClientRect) return;
+          const iT = IT.getBoundingClientRect().width,
+            WT = zT.current;
+          if (WT) {
+            const IT = TT.current,
+              zT = IT && parseFloat(getComputedStyle(IT).columnGap) || 0;
+            kT.current = WT.getBoundingClientRect().width + zT, iT > oT.clientWidth + 1 && XT(!1)
+          } else oT.clientWidth - iT >= kT.current && XT(!0)
         };
-        FY();
-        const RY = new ResizeObserver(FY);
-        return RY.observe(rY), () => {
-          RY.disconnect()
+        iT();
+        const WT = new ResizeObserver(iT);
+        return WT.observe(oT), () => {
+          WT.disconnect()
         }
-      }), [YY, rY]), {
-        disclosureRef: DY,
-        gearLabelRef: AY,
-        hasGearLabel: RY
+      }), [TT, oT]), {
+        disclosureRef: IT,
+        gearLabelRef: zT,
+        hasGearLabel: WT
       }
-    }(UF, GF), FA = () => {
-      var YY;
-      wr([]), null === (YY = Lr.current) || void 0 === YY || YY.abort(), uD()
-    }, AA = (0, RY.jsxs)("div", {
-      className: IY()("WorldCodeAiPanel", Sr && "WorldCodeAiPanel-aiView"),
-      children: [(0, RY.jsxs)("div", {
+    }(oz, Pi), Xz = () => {
+      var TT;
+      qo([]), null === (TT = TI.current) || void 0 === TT || TT.abort(), xI()
+    }, Bz = (0, WT.jsxs)("div", {
+      className: kT()("WorldCodeAiPanel", wo && "WorldCodeAiPanel-aiView"),
+      children: [(0, WT.jsxs)("div", {
         className: "WorldCodeAiHeader",
-        children: [(0, RY.jsx)("span", {
+        children: [(0, WT.jsx)("span", {
           className: "WorldCodeAiTitle",
           children: "AI Helper"
-        }), (0, RY.jsx)("span", {
-          ref: YA,
+        }), (0, WT.jsx)("span", {
+          ref: zz,
           className: "WorldCodeAiDisclosure",
           title: "AI can be wrong. Check its changes.",
           children: "AI can be wrong."
-        }), GF && (0, RY.jsx)("button", {
-          ref: PF,
+        }), Pi && (0, WT.jsx)("button", {
+          ref: Tz,
           className: "WorldCodeAiLinkButton WorldCodeAiBackButton",
           onClick: () => {
-            yr(!1), Er(!1), Vr(!1), lr("addKey" === Sr ? Nr.current : null)
+            co(!1), Ao(!1), ho(!1), mo("addKey" === wo ? uo.current : null)
           },
-          children: "addKey" === Sr && Nr.current ? "Back" : "Back to chat"
-        }), Sr && (0, RY.jsx)("h3", {
+          children: "addKey" === wo && uo.current ? "Back" : "Back to chat"
+        }), wo && (0, WT.jsx)("h3", {
           className: "WorldCodeAiViewTitle",
-          children: "settings" === Sr ? "AI settings" : Br ? `Edit ${bR(Br)} key` : "Add an API key"
-        }), "settings" === Sr && (0, RY.jsxs)("span", {
+          children: "settings" === wo ? "AI settings" : vo ? `Edit ${pW(vo)} key` : "Add an API key"
+        }), "settings" === wo && (0, WT.jsxs)("span", {
           className: "WorldCodeAiViewUsing",
-          children: [(0, RY.jsxs)("span", {
+          children: [(0, WT.jsxs)("span", {
             className: "WorldCodeAiViewUsingModel",
-            children: ["Using:", " ", dF ? Tr ? "Bot.xd (free) for the next question" : tg(dF) : wF ? tR : "Bot.xd (free)"]
-          }), (0, RY.jsxs)("span", {
+            children: ["Using:", " ", qi ? eo ? "Bot.xd (free) for the next question" : zF(qi) : si ? zX : "Bot.xd (free)"]
+          }), (0, WT.jsxs)("span", {
             className: "WorldCodeAiViewUsingEdits",
-            children: ["Edits: ", Cr ? "On" : "Off"]
+            children: ["Edits: ", Uo ? "On" : "Off"]
           })]
-        }), GF && ar && (0, RY.jsx)("button", {
+        }), Pi && Fo && (0, WT.jsx)("button", {
           className: "WorldCodeAiStop WorldCodeAiHeaderStop",
-          onClick: FA,
+          onClick: Xz,
           children: "Stop answer"
-        }), !GF && !rr && (0, RY.jsx)(Pg, {
+        }), !Pi && !oo && (0, WT.jsx)(oF, {
           step: "aiNotes",
           placement: "bottom",
-          children: (0, RY.jsx)("button", {
-            className: IY()("WorldCodeAiLinkButton", Wr && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": Wr,
+          children: (0, WT.jsx)("button", {
+            className: kT()("WorldCodeAiLinkButton", ro && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": ro,
             onClick: () => {
-              yr(!1), Vr(!1), Er(!Wr)
+              co(!1), ho(!1), Ao(!ro)
             },
             children: "AI notes"
           })
-        }), !GF && mF && (0, RY.jsx)(Pg, {
+        }), !Pi && mi && (0, WT.jsx)(oF, {
           step: "aiGameSettings",
           placement: "bottom",
-          children: (0, RY.jsx)("button", {
-            className: IY()("WorldCodeAiLinkButton", mr && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": mr,
+          children: (0, WT.jsx)("button", {
+            className: kT()("WorldCodeAiLinkButton", go && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": go,
             onClick: () => {
-              WF(), yr(!1), Er(!1), Vr(!mr)
+              gi(), co(!1), Ao(!1), ho(!go)
             },
             children: "Game settings"
           })
-        }), !GF && ur.length > 0 && (0, RY.jsx)("button", {
-          className: IY()("WorldCodeAiLinkButton", ir && "WorldCodeAiLinkButton-active"),
-          "aria-pressed": ir,
+        }), !Pi && Do.length > 0 && (0, WT.jsx)("button", {
+          className: kT()("WorldCodeAiLinkButton", xo && "WorldCodeAiLinkButton-active"),
+          "aria-pressed": xo,
           onClick: () => {
-            Ur(Date.now()), Er(!1), Vr(!1), yr(!ir)
+            Vo(Date.now()), Ao(!1), ho(!1), co(!xo)
           },
           children: "History"
-        }), !GF && Ir.length > 0 && (0, RY.jsx)("button", {
+        }), !Pi && ko.length > 0 && (0, WT.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          disabled: !!ar,
+          disabled: !!Fo,
           onClick: () => {
-            OF(), wr([]), gr([]), Ar.turns = new tI
+            Fi(), qo([]), Bo([]), zo.turns = new zW
           },
           children: "New chat"
-        }), !GF && (0, RY.jsx)(Pg, {
+        }), !Pi && (0, WT.jsx)(oF, {
           step: "aiGear",
           placement: "bottom",
-          children: (0, RY.jsxs)("button", {
-            ref: UF,
+          children: (0, WT.jsxs)("button", {
+            ref: oz,
             className: "WorldCodeAiLinkButton WorldCodeAiGear",
             "aria-label": "AI Helper settings",
             title: "AI Helper settings",
             onClick: () => {
-              fF.current = !1, lr("settings")
+              Oi.current = !1, mo("settings")
             },
-            children: [(0, RY.jsx)(sY.e, {
+            children: [(0, WT.jsx)(LT.e, {
               name: "gear"
-            }), DA && (0, RY.jsx)("span", {
-              ref: rA,
+            }), Wz && (0, WT.jsx)("span", {
+              ref: kz,
               className: "WorldCodeAiGearLabel",
               children: "Settings"
             })]
           })
         })]
-      }), (0, RY.jsxs)("div", {
+      }), (0, WT.jsxs)("div", {
         className: "WorldCodeAiMessages",
-        ref: sD,
-        role: GF ? void 0 : "log",
-        "aria-live": GF ? void 0 : "polite",
-        children: [ir && (0, RY.jsx)(sa, {
-          snapshots: ur,
-          files: HY,
-          now: Pr,
-          onRestore: ZY && !ar ? YY => {
-            (async YY => {
-              const rY = oD.current,
-                DY = aa(YY, rY);
-              if (0 === DY.length) return;
-              if (!await jY(DY)) return;
-              GD("Before going back", rY), yr(!1), null !== FD && OF();
-              const FY = {};
-              for (const RY of DY) FY[RY.path] = RY.text;
-              const AY = YY => cD(YY) && "applied" === YY.status && YY.changes.some((YY => YY.path in FY && FY[YY.path] !== YY.after)),
-                IY = Ir.filter((YY => AY(YY) && "saved" === YY.noteStatus && void 0 !== YY.note && Qr.includes(YY.note))).map((YY => {
-                  var rY;
-                  return null !== (rY = YY.note) && void 0 !== rY ? rY : ""
+        ref: cI,
+        role: Pi ? void 0 : "log",
+        "aria-live": Pi ? void 0 : "polite",
+        children: [xo && (0, WT.jsx)(rF, {
+          snapshots: Do,
+          files: CT,
+          now: Po,
+          onRestore: JT && !Fo ? TT => {
+            (async TT => {
+              const oT = AI.current,
+                IT = cF(TT, oT);
+              if (0 === IT.length) return;
+              if (!await YT(IT)) return;
+              yI("Before going back", oT), co(!1), null !== kI && Fi();
+              const iT = {};
+              for (const WT of IT) iT[WT.path] = WT.text;
+              const zT = TT => CI(TT) && "applied" === TT.status && TT.changes.some((TT => TT.path in iT && iT[TT.path] !== TT.after)),
+                kT = ko.filter((TT => zT(TT) && "saved" === TT.noteStatus && void 0 !== TT.note && Ko.includes(TT.note))).map((TT => {
+                  var oT;
+                  return null !== (oT = TT.note) && void 0 !== oT ? oT : ""
                 }));
-              gr((YY => YY.map((YY => AY(YY) ? {
-                ...YY,
+              Bo((TT => TT.map((TT => zT(TT) ? {
+                ...TT,
                 status: "undone",
                 wentBack: !0,
-                noteStatus: "asked" === YY.noteStatus ? void 0 : YY.noteStatus
-              } : YY)))), BD({
+                noteStatus: "asked" === TT.noteStatus ? void 0 : TT.noteStatus
+              } : TT)))), fI({
                 role: "assistant",
                 text: "Your code is back to how it was.",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0,
-                undoFiles: rY,
-                leftFiles: Object.fromEntries(DY.map((YY => [YY.path, YY.text]))),
-                forgetNotes: IY.length > 0 ? IY : void 0
+                undoFiles: oT,
+                leftFiles: Object.fromEntries(IT.map((TT => [TT.path, TT.text]))),
+                forgetNotes: kT.length > 0 ? kT : void 0
               })
-            })(YY)
+            })(TT)
           } : void 0
-        }), mr && (0, RY.jsx)(vv, {
-          files: HY,
-          before: jr,
-          onWrite: ZY ? (YY, rY, DY) => {
-            const FY = sF.current.then((async () => {
-              var FY, AY, IY, RY;
-              const OY = oD.current,
-                gY = vF.current[YY],
-                aY = void 0 !== gY && (null !== (FY = OY[YY]) && void 0 !== FY ? FY : "") === uF.current[YY] ? {
-                  ...OY,
-                  [YY]: gY
-                } : OY,
-                vY = Ta(null !== (AY = aY[YY]) && void 0 !== AY ? AY : "", rY, DY);
-              if (null === vY) return !1;
-              if (vY === aY[YY]) return !0;
-              if (!await jY([{
-                  path: YY,
-                  text: vY
+        }), go && (0, WT.jsx)(KS, {
+          files: CT,
+          before: Yo,
+          onWrite: JT ? (TT, oT, IT) => {
+            const iT = ci.current.then((async () => {
+              var iT, zT, kT, WT;
+              const XT = AI.current,
+                BT = Li.current[TT],
+                FT = void 0 !== BT && (null !== (iT = XT[TT]) && void 0 !== iT ? iT : "") === xi.current[TT] ? {
+                  ...XT,
+                  [TT]: BT
+                } : XT,
+                ST = fF(null !== (zT = FT[TT]) && void 0 !== zT ? zT : "", oT, IT);
+              if (null === ST) return !1;
+              if (ST === FT[TT]) return !0;
+              if (!await YT([{
+                  path: TT,
+                  text: ST
                 }])) return !1;
-              const uY = Na(rY),
-                sY = `${YY}:${rY.key}`,
-                iY = null !== (IY = QF.current.get(sY)) && void 0 !== IY ? IY : rY.value;
-              QF.current.set(sY, iY), iY === DY ? yF.current.delete(sY) : yF.current.set(sY, {
-                name: uY,
-                from: Ba(iY),
-                to: Ba(DY)
+              const DT = jF(oT),
+                LT = `${TT}:${oT.key}`,
+                xT = null !== (kT = ri.current.get(LT)) && void 0 !== kT ? kT : oT.value;
+              ri.current.set(LT, xT), xT === IT ? Mi.current.delete(LT) : Mi.current.set(LT, {
+                name: DT,
+                from: JF(xT),
+                to: JF(IT)
               });
-              const yY = ca([...yF.current.values()]);
-              if (fr.current) {
-                var QY;
-                null === (QY = oF.current) || void 0 === QY || QY.then((async YY => {
-                  void 0 !== YY && sr(await gu.relabel(XY, YY, yY))
-                })).catch((YY => {
-                  console.error("World Code AI: couldn't rename a version of the code", YY)
+              const cT = UF([...Mi.current.values()]);
+              if (ao.current) {
+                var KT;
+                null === (KT = Ai.current) || void 0 === KT || KT.then((async TT => {
+                  void 0 !== TT && Lo(await xD.relabel(lT, TT, cT))
+                })).catch((TT => {
+                  console.error("World Code AI: couldn't rename a version of the code", TT)
                 }))
               } else {
-                fr.current = !0;
-                const YY = Date.now();
-                oF.current = gu.add(XY, yY, aY, YY).then((rY => {
-                  var DY;
-                  return sr(rY), null === (DY = rY.find((rY => rY.at === YY && rY.label === yY))) || void 0 === DY ? void 0 : DY.id
-                })).catch((YY => {
-                  console.error("World Code AI: couldn't keep a version of the code", YY)
-                })), hr(aY)
+                ao.current = !0;
+                const TT = Date.now();
+                Ai.current = xD.add(lT, cT, FT, TT).then((oT => {
+                  var IT;
+                  return Lo(oT), null === (IT = oT.find((oT => oT.at === TT && oT.label === cT))) || void 0 === IT ? void 0 : IT.id
+                })).catch((TT => {
+                  console.error("World Code AI: couldn't keep a version of the code", TT)
+                })), Qo(FT)
               }
-              return iF.current.includes(uY) || iF.current.push(uY), uF.current[YY] = null !== (RY = aY[YY]) && void 0 !== RY ? RY : "", vF.current[YY] = vY, QD.current = Date.now(), !0
+              return Ki.current.includes(DT) || Ki.current.push(DT), xi.current[TT] = null !== (WT = FT[TT]) && void 0 !== WT ? WT : "", Li.current[TT] = ST, rI.current = Date.now(), !0
             }));
-            return sF.current = FY.catch((() => !1)), FY
+            return ci.current = iT.catch((() => !1)), iT
           } : void 0,
-          onTryIt: jr ? () => {
-            aD(hY, Math.max(0, QD.current + 600 - Date.now()))
+          onTryIt: Yo ? () => {
+            DI(QT, Math.max(0, rI.current + 600 - Date.now()))
           } : void 0,
-          onUndo: jr && ZY ? () => {
-            EF()
+          onUndo: Yo && JT ? () => {
+            wi()
           } : void 0
-        }), "settings" === Sr && (0, RY.jsx)(Jg, {
-          allowEdits: Hr,
-          onAllowEditsChange: ZY ? YY => {
-            zr(YY),
-              function(YY) {
+        }), "settings" === wo && (0, WT.jsx)(sB, {
+          allowEdits: Co,
+          onAllowEditsChange: JT ? TT => {
+            jo(TT),
+              function(TT) {
                 try {
-                  localStorage.setItem(Tg, String(YY))
+                  localStorage.setItem(fB, String(TT))
                 } catch {}
-              }(YY)
+              }(TT)
           } : void 0,
           onAddKey: () => {
-            Nr.current = "settings", cr(null), lr("addKey")
+            uo.current = "settings", Eo(null), mo("addKey")
           },
-          onEditKey: YY => {
-            Nr.current = "settings", cr(YY), lr("addKey")
+          onEditKey: TT => {
+            uo.current = "settings", Eo(TT), mo("addKey")
           }
-        }), "addKey" === Sr && (0, RY.jsx)(kg, {
-          editing: null !== Br && void 0 !== Br ? Br : void 0,
+        }), "addKey" === wo && (0, WT.jsx)(PB, {
+          editing: null !== vo && void 0 !== vo ? vo : void 0,
           onAdded: () => {
-            fF.current = !0, lr(Nr.current)
+            Oi.current = !0, mo(uo.current)
           },
           onOpenSettings: () => {
-            fF.current = !1, lr("settings")
+            Oi.current = !1, mo("settings")
           }
-        }, null !== (TY = null === Br || void 0 === Br ? void 0 : Br.id) && void 0 !== TY ? TY : "new"), Wr && (0, RY.jsx)(ia, {
-          notes: Qr,
-          outline: Fr(HY, new Set(su().callbackNames())),
-          kE: SF,
-          onDelete: YY => {
-            au.remove(XY, YY).then(or).catch((YY => {
-              console.error("World Code AI: couldn't delete a note", YY)
+        }, null !== (eT = null === vo || void 0 === vo ? void 0 : vo.id) && void 0 !== eT ? eT : "new"), ro && (0, WT.jsx)(AF, {
+          notes: Ko,
+          outline: io(CT, new Set(rD().callbackNames())),
+          Om: Ri,
+          onDelete: TT => {
+            cD.remove(lT, TT).then(Mo).catch((TT => {
+              console.error("World Code AI: couldn't delete a note", TT)
             }))
           }
-        }), !GF && Ir.map(((YY, rY) => {
-          var DY, AY, gY, vY, uY, sY, iY, yY;
-          const QY = cD(YY),
-            oY = zF && (null === (DY = Ir[rY - 1]) || void 0 === DY ? void 0 : DY.target.key) !== YY.target.key,
-            WY = 0 === YY.changes.length,
-            EY = WY && !!YY.failedEdits && !YY.question && !YY.worldCode,
-            mY = YY.failedEdits && (0, RY.jsx)(fu, {
-              failed: YY.failedEdits,
-              nothingChanged: WY,
-              defaultOpen: !YY.byItself,
-              isElsewhere: !QY,
-              onRetry: YY.id !== KF || ar || 0 !== Mr.length ? void 0 : () => {
-                fD(Fa.t, Tu, {
-                  about: BF(YY.id),
-                  failedEdits: YY.failedEdits
+        }), !Pi && ko.map(((TT, oT) => {
+          var IT, zT, BT, ST, DT, LT, xT, cT;
+          const KT = CI(TT),
+            MT = ai && (null === (IT = ko[oT - 1]) || void 0 === IT ? void 0 : IT.target.key) !== TT.target.key,
+            rT = 0 === TT.changes.length,
+            AT = rT && !!TT.failedEdits && !TT.question && !TT.worldCode,
+            gT = TT.failedEdits && (0, WT.jsx)(nD, {
+              failed: TT.failedEdits,
+              nothingChanged: rT,
+              defaultOpen: !TT.byItself,
+              isElsewhere: !KT,
+              onRetry: TT.id !== Ji || Fo || 0 !== no.length ? void 0 : () => {
+                QI(BF.o, fD, {
+                  about: Ci(TT.id),
+                  failedEdits: TT.failedEdits
                 })
               }
             });
-          var VY;
-          return void 0 === YY.logTitle && (!YY.isNotice || "assistant" !== YY.role || "" === YY.text || void 0 !== YY.retry || YY.keyNotice || YY.undoFiles || YY.failedEdits || YY.cutShort || YY.question || YY.worldCode || 0 !== YY.changes.length) ? (0, RY.jsxs)(FY.Fragment, {
-            children: [oY && (0, RY.jsx)(Zu, {
-              target: YY.target,
-              isOpen: QY
-            }), (0, RY.jsxs)("div", {
-              className: IY()("WorldCodeAiEntry", `WorldCodeAiEntry-${YY.role}`, {
-                "WorldCodeAiEntry-elsewhere": !QY,
-                WorldCodeAiNotice: YY.isNotice,
-                "WorldCodeAiNotice-calm": YY.isNotice && YY.isCalm,
-                "WorldCodeAiNotice-past": YY.isNotice && void 0 !== YY.retry && (YY.id !== KF || !!eD)
+          var hT;
+          return void 0 === TT.logTitle && (!TT.isNotice || "assistant" !== TT.role || "" === TT.text || void 0 !== TT.retry || TT.keyNotice || TT.undoFiles || TT.failedEdits || TT.cutShort || TT.question || TT.worldCode || 0 !== TT.changes.length) ? (0, WT.jsxs)(iT.Fragment, {
+            children: [MT && (0, WT.jsx)(OD, {
+              target: TT.target,
+              isOpen: KT
+            }), (0, WT.jsxs)("div", {
+              className: kT()("WorldCodeAiEntry", `WorldCodeAiEntry-${TT.role}`, {
+                "WorldCodeAiEntry-elsewhere": !KT,
+                WorldCodeAiNotice: TT.isNotice,
+                "WorldCodeAiNotice-calm": TT.isNotice && TT.isCalm,
+                "WorldCodeAiNotice-past": TT.isNotice && void 0 !== TT.retry && (TT.id !== Ji || !!vI)
               }),
-              children: [WY && mY, EY ? null : YY.isNotice && void 0 !== YY.retry && (YY.id !== KF || eD) ? (0, RY.jsx)("p", {
-                children: YY.keyNotice ? mg(YY.keyNotice) : void 0 !== YY.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
-              }) : YY.keyNotice ? (0, RY.jsxs)(RY.Fragment, {
-                children: [(0, RY.jsx)("p", {
-                  children: Eg(YY.keyNotice)
-                }), YY.keyNotice.detail && (0, RY.jsx)(og, {
-                  detail: YY.keyNotice.detail
+              children: [rT && gT, AT ? null : TT.isNotice && void 0 !== TT.retry && (TT.id !== Ji || vI) ? (0, WT.jsx)("p", {
+                children: TT.keyNotice ? RB(TT.keyNotice) : void 0 !== TT.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
+              }) : TT.keyNotice ? (0, WT.jsxs)(WT.Fragment, {
+                children: [(0, WT.jsx)("p", {
+                  children: eB(TT.keyNotice)
+                }), TT.keyNotice.detail && (0, WT.jsx)(wB, {
+                  detail: TT.keyNotice.detail
                 })]
-              }) : YY.undoFiles ? (0, RY.jsxs)("div", {
+              }) : TT.undoFiles ? (0, WT.jsxs)("div", {
                 className: "WorldCodeAiWentBack",
-                children: [(0, RY.jsx)("span", {
-                  children: "undone" === YY.status ? "Undone: your code is as it was before going back." : YY.text
-                }), QY && "undone" !== YY.status && Ku(YY, HY) && ZY && (0, RY.jsx)("button", {
+                children: [(0, WT.jsx)("span", {
+                  children: "undone" === TT.status ? "Undone: your code is as it was before going back." : TT.text
+                }), KT && "undone" !== TT.status && aD(TT, CT) && JT && (0, WT.jsx)("button", {
                   className: "WorldCodeAiLinkButton WorldCodeAiNoticeUndo",
-                  disabled: !!ar,
-                  title: ar ? "You can undo once the answer is in." : void 0,
+                  disabled: !!Fo,
+                  title: Fo ? "You can undo once the answer is in." : void 0,
                   onClick: () => {
-                    (async YY => {
-                      var rY;
-                      const DY = oD.current;
-                      if (!Ku(YY, DY)) return;
-                      const FY = aa({
+                    (async TT => {
+                      var oT;
+                      const IT = AI.current;
+                      if (!aD(TT, IT)) return;
+                      const iT = cF({
                         id: 0,
                         at: 0,
                         label: "",
-                        files: null !== (rY = YY.undoFiles) && void 0 !== rY ? rY : {}
-                      }, DY).filter((rY => void 0 !== YY.leftFiles && rY.path in YY.leftFiles));
-                      if (FY.length > 0) {
-                        if (!await jY(FY)) return;
-                        GD("Before undoing going back", DY)
+                        files: null !== (oT = TT.undoFiles) && void 0 !== oT ? oT : {}
+                      }, IT).filter((oT => void 0 !== TT.leftFiles && oT.path in TT.leftFiles));
+                      if (iT.length > 0) {
+                        if (!await YT(iT)) return;
+                        yI("Before undoing going back", IT)
                       }
-                      const AY = {
-                        ...DY
+                      const zT = {
+                        ...IT
                       };
-                      for (const IY of FY) AY[IY.path] = IY.text;
-                      gr((rY => rY.map((rY => rY.id === YY.id ? {
-                        ...rY,
+                      for (const kT of iT) zT[kT.path] = kT.text;
+                      Bo((oT => oT.map((oT => oT.id === TT.id ? {
+                        ...oT,
                         status: "undone"
-                      } : cD(rY) && rY.wentBack && rY.changes.every((YY => {
-                        var rY;
-                        return (null !== (rY = AY[YY.path]) && void 0 !== rY ? rY : "") === YY.after
+                      } : CI(oT) && oT.wentBack && oT.changes.every((TT => {
+                        var oT;
+                        return (null !== (oT = zT[TT.path]) && void 0 !== oT ? oT : "") === TT.after
                       })) ? {
-                        ...rY,
+                        ...oT,
                         status: "applied",
                         wentBack: void 0
-                      } : rY))))
-                    })(YY)
+                      } : oT))))
+                    })(TT)
                   },
-                  children: ar ? "Undo going back after this answer" : "Undo going back"
+                  children: Fo ? "Undo going back after this answer" : "Undo going back"
                 })]
-              }) : "assistant" === YY.role ? (0, RY.jsx)(aY.e, {
-                markdown: "applied" !== YY.status && !YY.editedInPlace && (YY.changes.length > 0 || null !== (AY = YY.failedEdits) && void 0 !== AY && AY.length) ? gv(YY.text) : YY.text
-              }) : (0, RY.jsx)("p", {
-                children: YY.text
-              }), YY.answeredBy && (0, RY.jsx)(Wg, {
-                answeredBy: YY.answeredBy
-              }), YY.oneOff && dF && YY.id === KF && !ar && (0, RY.jsxs)("p", {
+              }) : "assistant" === TT.role ? (0, WT.jsx)(FT.b, {
+                markdown: "applied" !== TT.status && !TT.editedInPlace && (TT.changes.length > 0 || null !== (zT = TT.failedEdits) && void 0 !== zT && zT.length) ? xS(TT.text) : TT.text
+              }) : (0, WT.jsx)("p", {
+                children: TT.text
+              }), TT.answeredBy && (0, WT.jsx)(mB, {
+                answeredBy: TT.answeredBy
+              }), TT.oneOff && qi && TT.id === Ji && !Fo && (0, WT.jsxs)("p", {
                 className: "WorldCodeAiBackTo",
-                children: ["Your next question goes back to ", dF.model.name, "."]
-              }), YY.cutShort && (0, RY.jsx)(lg, {
-                hasCode: YY.changes.length > 0 || !!YY.worldCode,
-                ...JF(YY.id, YY.cutShort)
-              }), YY.forgetNotes && (0, RY.jsx)("div", {
+                children: ["Your next question goes back to ", qi.model.name, "."]
+              }), TT.cutShort && (0, WT.jsx)(EB, {
+                hasCode: TT.changes.length > 0 || !!TT.worldCode,
+                ...Zi(TT.id, TT.cutShort)
+              }), TT.forgetNotes && (0, WT.jsx)("div", {
                 className: "WorldCodeAiForget",
-                children: QY && void 0 === YY.forgetStatus && YY.id > HF ? (0, RY.jsxs)(RY.Fragment, {
-                  children: [(0, RY.jsxs)("span", {
+                children: KT && void 0 === TT.forgetStatus && TT.id > Ui ? (0, WT.jsxs)(WT.Fragment, {
+                  children: [(0, WT.jsxs)("span", {
                     className: "WorldCodeAiForgetAsk",
-                    children: [1 === YY.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, RY.jsx)("span", {
+                    children: [1 === TT.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, WT.jsx)("span", {
                       className: "WorldCodeAiForgetNote",
-                      children: YY.forgetNotes.map((YY => `"${YY}"`)).join(", ")
+                      children: TT.forgetNotes.map((TT => `"${TT}"`)).join(", ")
                     })]
-                  }), (0, RY.jsxs)("div", {
+                  }), (0, WT.jsxs)("div", {
                     className: "WorldCodeAiNoteButtons",
-                    children: [(0, RY.jsx)("button", {
+                    children: [(0, WT.jsx)("button", {
                       className: "WorldCodeAiSecondaryButton",
                       onClick: () => {
-                        gF(YY, !0)
+                        Si(TT, !0)
                       },
                       children: "Forget it"
-                    }), (0, RY.jsx)("button", {
+                    }), (0, WT.jsx)("button", {
                       className: "WorldCodeAiLinkButton",
                       onClick: () => {
-                        gF(YY, !1)
+                        Si(TT, !1)
                       },
                       children: "Keep it"
                     })]
                   })]
-                }) : (0, RY.jsx)("span", {
+                }) : (0, WT.jsx)("span", {
                   className: "WorldCodeAiHint",
-                  children: "forgotten" === YY.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
+                  children: "forgotten" === TT.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
                 })
-              }), YY.changes.length > 0 && (0, RY.jsx)(zu, {
-                entry: YY,
-                defaultOpen: !YY.byItself,
-                elsewhere: QY ? void 0 : YY.target,
-                isOutOfDate: QY && !xD.current.has(YY.id) && YY.changes.some((YY => {
-                  var rY;
-                  return (null !== (rY = HY[YY.path]) && void 0 !== rY ? rY : "") !== YY.before
+              }), TT.changes.length > 0 && (0, WT.jsx)(QD, {
+                entry: TT,
+                defaultOpen: !TT.byItself,
+                elsewhere: KT ? void 0 : TT.target,
+                isOutOfDate: KT && !NI.current.has(TT.id) && TT.changes.some((TT => {
+                  var oT;
+                  return (null !== (oT = CT[TT.path]) && void 0 !== oT ? oT : "") !== TT.before
                 })),
-                canEdit: QY ? ZY : !!xY && (!YY.target.codeBlock || YY.target.canChangePos),
-                request: NF(YY.id),
-                onApply: rY => {
-                  QY ? nD(rY ? {
-                    id: YY.id,
-                    changes: rY,
+                canEdit: KT ? JT : !!bT && (!TT.target.codeBlock || TT.target.canChangePos),
+                request: fi(TT.id),
+                onApply: oT => {
+                  KT ? PI(oT ? {
+                    id: TT.id,
+                    changes: oT,
                     isPartial: !0
-                  } : YY, BF(YY.id)) : ((YY, rY) => {
-                    xY && PD && (Ar.pendingApply = {
-                      entryId: YY.id,
-                      targetKey: YY.target.key,
-                      picked: rY,
-                      until: Date.now() + Iu
-                    }, xY(YY.target))
-                  })(YY, rY)
+                  } : TT, Ci(TT.id)) : ((TT, oT) => {
+                    bT && dI && (zo.pendingApply = {
+                      entryId: TT.id,
+                      targetKey: TT.target.key,
+                      picked: oT,
+                      until: Date.now() + SD
+                    }, bT(TT.target))
+                  })(TT, oT)
                 },
-                checkPicked: QY ? aF : void 0,
-                onPickedChange: rY => {
-                  pr((DY => {
-                    if (DY.has(YY.id) === rY) return DY;
-                    const FY = new Set(DY);
-                    return rY ? FY.add(YY.id) : FY.delete(YY.id), FY
+                checkPicked: KT ? Di : void 0,
+                onPickedChange: oT => {
+                  Go((IT => {
+                    if (IT.has(TT.id) === oT) return IT;
+                    const iT = new Set(IT);
+                    return oT ? iT.add(TT.id) : iT.delete(TT.id), iT
                   }))
                 },
                 onUndo: () => {
-                  (async YY => {
-                    const rY = oD.current;
-                    if (YY.changes.some((YY => {
-                        var DY;
-                        return (null !== (DY = rY[YY.path]) && void 0 !== DY ? DY : "") !== YY.after
+                  (async TT => {
+                    const oT = AI.current;
+                    if (TT.changes.some((TT => {
+                        var IT;
+                        return (null !== (IT = oT[TT.path]) && void 0 !== IT ? IT : "") !== TT.after
                       }))) return;
-                    await jY(YY.changes.map((YY => ({
-                      path: YY.path,
-                      text: YY.before
-                    })))) && (HD(YY.id, "undone"), null !== FD && OF())
-                  })(YY)
+                    await YT(TT.changes.map((TT => ({
+                      path: TT.path,
+                      text: TT.before
+                    })))) && (JI(TT.id, "undone"), null !== kI && Fi())
+                  })(TT)
                 },
                 onTryIt: () => {
-                  (YY => {
-                    const rY = ED.current;
-                    Gr(rY), IF(YY.id, "ask", rY), aD(hY, Math.max(0, QD.current + 600 - Date.now()))
-                  })(YY)
+                  (TT => {
+                    const oT = hI.current;
+                    bo(oT), Xi(TT.id, "ask", oT), DI(QT, Math.max(0, rI.current + 600 - Date.now()))
+                  })(TT)
                 },
-                isLatest: QY && YY.id > HF,
-                canUndo: QY && YY.changes.every((YY => {
-                  var rY;
-                  return (null !== (rY = HY[YY.path]) && void 0 !== rY ? rY : "") === YY.after
+                isLatest: KT && TT.id > Ui,
+                canUndo: KT && TT.changes.every((TT => {
+                  var oT;
+                  return (null !== (oT = CT[TT.path]) && void 0 !== oT ? oT : "") === TT.after
                 })),
                 onFixWarnings: () => {
-                  (YY => {
-                    var rY;
-                    const DY = ag(null !== (rY = YY.warnings) && void 0 !== rY ? rY : []);
-                    var FY;
-                    if (!DY) return void fD(`Fix this in your change: ${null===(FY=YY.warnings)||void 0===FY?void 0:FY.join(" ")}`);
-                    const AY = su(),
-                      IY = YY.changes.map((rY => ({
-                        ...rY,
-                        before: "applied" === YY.status ? rY.after : rY.before,
-                        after: sg(rY.after, DY)
+                  (TT => {
+                    var oT;
+                    const IT = cB(null !== (oT = TT.warnings) && void 0 !== oT ? oT : []);
+                    var iT;
+                    if (!IT) return void QI(`Fix this in your change: ${null===(iT=TT.warnings)||void 0===iT?void 0:iT.join(" ")}`);
+                    const zT = rD(),
+                      kT = TT.changes.map((oT => ({
+                        ...oT,
+                        before: "applied" === TT.status ? oT.after : oT.before,
+                        after: rB(oT.after, IT)
                       })));
-                    BD({
+                    fI({
                       role: "user",
-                      text: 1 === DY.length ? "Fix this line" : "Fix these lines",
+                      text: 1 === IT.length ? "Fix this line" : "Fix these lines",
                       changes: [],
                       status: "offered"
-                    }), BD({
+                    }), fI({
                       role: "assistant",
-                      text: `Fixed without asking the AI: ${DY.map(ig).join(" ")}`,
-                      changes: IY,
+                      text: `Fixed without asking the AI: ${IT.map(AB).join(" ")}`,
+                      changes: kT,
                       status: "offered",
-                      swappedTo: DY.flatMap((YY => {
+                      swappedTo: IT.flatMap((TT => {
                         let {
-                          to: rY
-                        } = YY;
-                        return rY ? [rY] : []
+                          to: oT
+                        } = TT;
+                        return oT ? [oT] : []
                       })),
-                      warnings: IY.flatMap((YY => Du(AY, YY, rr)))
+                      warnings: kT.flatMap((TT => XD(zT, TT, oo)))
                     })
-                  })(YY)
+                  })(TT)
                 },
                 onCheck: () => {
-                  fD(function(YY) {
-                    const rY = [...new Set(YY)];
-                    return rY.length > 0 ? `${Hu} These names were checked against the game and are right, so keep them: ${rY.map((YY=>`"${YY}"`)).join(", ")}.` : Hu
-                  }(cF.flatMap((YY => {
-                    var rY;
-                    return null !== (rY = YY.swappedTo) && void 0 !== rY ? rY : []
+                  QI(function(TT) {
+                    const oT = [...new Set(TT)];
+                    return oT.length > 0 ? `${YD} These names were checked against the game and are right, so keep them: ${oT.map((TT=>`"${TT}"`)).join(", ")}.` : YD
+                  }(ji.flatMap((TT => {
+                    var oT;
+                    return null !== (oT = TT.swappedTo) && void 0 !== oT ? oT : []
                   }))), "Check it for mistakes")
                 },
-                busy: QY ? !!ar : !PD
-              }), YY.question && (0, RY.jsx)(Ea, {
+                busy: KT ? !!Fo : !dI
+              }), TT.question && (0, WT.jsx)(eF, {
                 ownAnswerBelow: !0,
-                question: YY.question,
-                onAnswer: YY.id !== KF || ar ? void 0 : (rY, DY) => {
-                  var FY, AY, IY, RY, OY, gY, aY;
-                  const vY = null !== (FY = null === (AY = YY.question) || void 0 === AY ? void 0 : AY.question) && void 0 !== FY ? FY : "",
-                    uY = null !== (IY = null === (RY = YY.askedFor) || void 0 === RY ? void 0 : RY.request) && void 0 !== IY ? IY : "";
-                  fD(Wa(uY, vY, rY), null !== rY && void 0 !== rY ? rY : "Let the AI pick", {
-                    check: DY,
-                    about: null === (OY = YY.askedFor) || void 0 === OY ? void 0 : OY.request,
-                    asked: DY && rY ? `${uY} ${rY}` : null,
-                    guardWords: Wa(null !== (gY = null === (aY = YY.askedFor) || void 0 === aY ? void 0 : aY.guardWords) && void 0 !== gY ? gY : "", vY, rY)
+                question: TT.question,
+                onAnswer: TT.id !== Ji || Fo ? void 0 : (oT, IT) => {
+                  var iT, zT, kT, WT, XT, BT, FT;
+                  const ST = null !== (iT = null === (zT = TT.question) || void 0 === zT ? void 0 : zT.question) && void 0 !== iT ? iT : "",
+                    DT = null !== (kT = null === (WT = TT.askedFor) || void 0 === WT ? void 0 : WT.request) && void 0 !== kT ? kT : "";
+                  QI(mF(DT, ST, oT), null !== oT && void 0 !== oT ? oT : "Let the AI pick", {
+                    check: IT,
+                    about: null === (XT = TT.askedFor) || void 0 === XT ? void 0 : XT.request,
+                    asked: IT && oT ? `${DT} ${oT}` : null,
+                    guardWords: mF(null !== (BT = null === (FT = TT.askedFor) || void 0 === FT ? void 0 : FT.guardWords) && void 0 !== BT ? BT : "", ST, oT)
                   })
                 }
-              }), QY && YY.offerExport && (0, RY.jsx)("button", {
+              }), KT && TT.offerExport && (0, WT.jsx)("button", {
                 className: "WorldCodeAiSecondaryButton WorldCodeAiSaveGame",
                 onClick: () => {
-                  KD(YY.id, {
+                  jI(TT.id, {
                     offerExport: !1
-                  }), tD("offered" === YY.status && YY.changes.length > 0)
+                  }), oi("offered" === TT.status && TT.changes.length > 0)
                 },
                 children: "Save my game"
-              }), YY.plan && (0, RY.jsx)(oa, {
-                steps: YY.plan,
-                built: null !== (gY = YY.planBuilt) && void 0 !== gY ? gY : 0,
-                done: null !== (vY = YY.planDone) && void 0 !== vY ? vY : 0,
-                onBuild: QY && !ar && ZY ? rY => {
-                  var DY;
-                  const FY = null !== (DY = YY.plan) && void 0 !== DY ? DY : [];
-                  CD((() => {
-                    KD(YY.id, {
-                      planBuilt: rY + 1
-                    }), JD.current(function(YY, rY) {
-                      const DY = YY.map(((YY, DY) => `${DY+1}. ${YY}${DY<rY?" (built)":""}`)).join("\n");
-                      return `Build step ${rY+1} of our plan now: ${YY[rY]}\nThe whole plan:\n${DY}\nBuild only step ${rY+1}, keeping what earlier steps built, so I can try it before the next.`
-                    }(FY, rY), `Build step ${rY+1}: ${FY[rY]}`, {
-                      about: FY[rY],
-                      asked: FY[rY],
+              }), TT.plan && (0, WT.jsx)(wF, {
+                steps: TT.plan,
+                built: null !== (BT = TT.planBuilt) && void 0 !== BT ? BT : 0,
+                done: null !== (ST = TT.planDone) && void 0 !== ST ? ST : 0,
+                onBuild: KT && !Fo && JT ? oT => {
+                  var IT;
+                  const iT = null !== (IT = TT.plan) && void 0 !== IT ? IT : [];
+                  YI((() => {
+                    jI(TT.id, {
+                      planBuilt: oT + 1
+                    }), qI.current(function(TT, oT) {
+                      const IT = TT.map(((TT, IT) => `${IT+1}. ${TT}${IT<oT?" (built)":""}`)).join("\n");
+                      return `Build step ${oT+1} of our plan now: ${TT[oT]}\nThe whole plan:\n${IT}\nBuild only step ${oT+1}, keeping what earlier steps built, so I can try it before the next.`
+                    }(iT, oT), `Build step ${oT+1}: ${iT[oT]}`, {
+                      about: iT[oT],
+                      asked: iT[oT],
                       planStep: {
-                        planId: YY.id,
-                        index: rY
+                        planId: TT.id,
+                        index: oT
                       }
                     })
                   }))
                 } : void 0
-              }), QY && YY.note && YY.noteStatus && !(YY.wentBack && "saved" === YY.noteStatus) && (0, RY.jsx)(Qa, {
-                note: YY.note,
-                status: YY.noteStatus,
-                isPartLeftOut: "offered" === YY.status && qr.has(YY.id),
-                defaultOpen: !YY.byItself || "asked" === YY.noteStatus,
-                onAnswer: rY => {
-                  TF(YY, rY)
+              }), KT && TT.note && TT.noteStatus && !(TT.wentBack && "saved" === TT.noteStatus) && (0, WT.jsx)(hF, {
+                note: TT.note,
+                status: TT.noteStatus,
+                isPartLeftOut: "offered" === TT.status && to.has(TT.id),
+                defaultOpen: !TT.byItself || "asked" === TT.noteStatus,
+                onAnswer: oT => {
+                  vi(TT, oT)
                 }
-              }, "asked" === YY.noteStatus ? "asked" : "Mi"), !WY && mY, YY.lookups && (0, RY.jsx)(ju, {
-                lookups: YY.lookups.lookups,
-                defaultOpen: !YY.lookedAt,
-                isElsewhere: !QY
-              }), QY && YY.lookups && !YY.lookedAt && (0, RY.jsx)("div", {
+              }, "asked" === TT.noteStatus ? "asked" : "qx"), !rT && gT, TT.lookups && (0, WT.jsx)(qD, {
+                lookups: TT.lookups.lookups,
+                defaultOpen: !TT.lookedAt,
+                isElsewhere: !KT
+              }), KT && TT.lookups && !TT.lookedAt && (0, WT.jsx)("div", {
                 className: "WorldCodeAiLookups",
-                children: (0, RY.jsx)("button", {
+                children: (0, WT.jsx)("button", {
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: !!ar,
+                  disabled: !!Fo,
                   onClick: () => {
-                    (async YY => {
-                      if (!YY.lookups || YY.lookedAt || ar) return;
-                      KD(YY.id, {
+                    (async TT => {
+                      if (!TT.lookups || TT.lookedAt || Fo) return;
+                      jI(TT.id, {
                         lookedAt: !0
                       });
-                      const rY = new AbortController;
-                      Lr.current = rY;
-                      const DY = Date.now();
-                      Ur(DY), vr({
+                      const oT = new AbortController;
+                      TI.current = oT;
+                      const IT = Date.now();
+                      Vo(IT), So({
                         phase: "thinking",
-                        startedAt: DY
+                        startedAt: IT
                       });
                       try {
-                        "stopped" === await AF(YY.lookups.lookups, YY.lookups.followUp, {
-                          signal: rY.signal
-                        }) && KD(YY.id, {
+                        "stopped" === await Wi(TT.lookups.lookups, TT.lookups.followUp, {
+                          signal: oT.signal
+                        }) && jI(TT.id, {
                           lookedAt: !1
                         })
                       } finally {
-                        Lr.current = null, vr(null)
+                        TI.current = null, So(null)
                       }
-                    })(YY)
+                    })(TT)
                   },
                   children: "Let the AI look"
                 })
-              }), YY.worldCode && (0, RY.jsx)(Cu, {
-                code: YY.worldCode.join("\n"),
-                defaultOpen: !YY.byItself,
-                isElsewhere: !QY,
-                onSwitch: QY && qY ? () => {
-                  var rY;
-                  qY(hu(null !== (rY = YY.worldCode) && void 0 !== rY ? rY : []))
+              }), TT.worldCode && (0, WT.jsx)(HD, {
+                code: TT.worldCode.join("\n"),
+                defaultOpen: !TT.byItself,
+                isElsewhere: !KT,
+                onSwitch: KT && sT ? () => {
+                  var oT;
+                  sT(ZD(null !== (oT = TT.worldCode) && void 0 !== oT ? oT : []))
                 } : void 0
-              }), QY && "ask" === YY.trial && YY.id > HF && fY <= (null !== (uY = YY.trialErrors) && void 0 !== uY ? uY : 0) && (0, RY.jsxs)("div", {
+              }), KT && "ask" === TT.trial && TT.id > Ui && aT <= (null !== (DT = TT.trialErrors) && void 0 !== DT ? DT : 0) && (0, WT.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, RY.jsx)("span", {
+                children: [(0, WT.jsx)("span", {
                   children: "Did your world do what you wanted?"
-                }), (0, RY.jsxs)("div", {
+                }), (0, WT.jsxs)("div", {
                   className: "WorldCodeAiTrialButtons",
-                  children: [(0, RY.jsx)("button", {
-                    ref: WD,
+                  children: [(0, WT.jsx)("button", {
+                    ref: gI,
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      IF(YY.id, "worked")
+                      Xi(TT.id, "worked")
                     },
                     children: "Yes"
-                  }), (0, RY.jsx)("button", {
+                  }), (0, WT.jsx)("button", {
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      var rY;
-                      IF(YY.id, "notQuite"), Jr("It didn't work because "), null === (rY = iD.current) || void 0 === rY || rY.focus()
+                      var oT;
+                      Xi(TT.id, "notQuite"), Ho("It didn't work because "), null === (oT = KI.current) || void 0 === oT || oT.focus()
                     },
                     children: "Not quite"
                   })]
                 })]
-              }), QY && "worked" === YY.trial && YY.id > HF && (0, RY.jsxs)("div", {
+              }), KT && "worked" === TT.trial && TT.id > Ui && (0, WT.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, RY.jsx)("span", {
+                children: [(0, WT.jsx)("span", {
                   children: "Nice! What next?"
-                }), (0, RY.jsx)(mu, {
-                  requests: Wu,
-                  onPick: YY => {
-                    fD(YY, void 0, {
+                }), (0, WT.jsx)(RD, {
+                  requests: mD,
+                  onPick: TT => {
+                    QI(TT, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), QY && "notQuite" === YY.trial && YY.id > HF && (0, RY.jsxs)("div", {
+              }), KT && "notQuite" === TT.trial && TT.id > Ui && (0, WT.jsxs)("div", {
                 className: "WorldCodeAiTrial WorldCodeAiTrial-wrong",
-                children: [(0, RY.jsx)("span", {
+                children: [(0, WT.jsx)("span", {
                   children: "What went wrong? Pick one, or say it in your own words below."
-                }), (0, RY.jsx)(mu, {
-                  requests: Eu,
-                  onPick: YY => {
-                    fD(YY, void 0, {
+                }), (0, WT.jsx)(RD, {
+                  requests: eD,
+                  onPick: TT => {
+                    QI(TT, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), "assistant" === YY.role && YY.changes.length > 0 && "offered" === YY.status && YY.id === KF && !ar && (0, RY.jsx)(mu, {
-                requests: Qu,
-                onPick: YY => {
-                  fD(YY, void 0, {
+              }), "assistant" === TT.role && TT.changes.length > 0 && "offered" === TT.status && TT.id === Ji && !Fo && (0, WT.jsx)(RD, {
+                requests: hD,
+                onPick: TT => {
+                  QI(TT, void 0, {
                     asked: null
                   })
                 }
-              }), "assistant" === YY.role && void 0 !== YY.answeredBy && "free" !== YY.answeredBy && 0 === YY.changes.length && !YY.worldCode && !YY.cutShort && YY.id === KF && !ar && HI(YY.text) && (0, RY.jsx)(mu, {
-                requests: ou,
+              }), "assistant" === TT.role && void 0 !== TT.answeredBy && "free" !== TT.answeredBy && 0 === TT.changes.length && !TT.worldCode && !TT.cutShort && TT.id === Ji && !Fo && Yk(TT.text) && (0, WT.jsx)(RD, {
+                requests: wD,
                 onPick: () => {
-                  fD("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
+                  QI("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
                     asked: null
                   })
                 }
-              }), YY.keyNotice && void 0 !== YY.retry && YY.id === KF && !ar && (0, RY.jsx)(Sg, {
-                ...MF(YY.id, YY.retry, YY.keyNotice)
-              }), void 0 !== YY.retry && !YY.keyNotice && YY.id === KF && !ar && (0, RY.jsxs)("div", {
+              }), TT.keyNotice && void 0 !== TT.retry && TT.id === Ji && !Fo && (0, WT.jsx)(vB, {
+                ...li(TT.id, TT.retry, TT.keyNotice)
+              }), void 0 !== TT.retry && !TT.keyNotice && TT.id === Ji && !Fo && (0, WT.jsxs)("div", {
                 className: "WorldCodeAiRetry",
-                children: [(0, RY.jsx)("button", {
-                  ...yg.e,
+                children: [(0, WT.jsx)("button", {
+                  ...gB.h,
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: (null !== (sY = YY.retryAt) && void 0 !== sY ? sY : 0) > Pr,
+                  disabled: (null !== (LT = TT.retryAt) && void 0 !== LT ? LT : 0) > Po,
                   onClick: () => {
-                    var rY;
-                    fD(null !== (rY = YY.retry) && void 0 !== rY ? rY : "", YY.retryShown, {
-                      ...YY.retryOptions,
-                      retryOf: YY.id
+                    var oT;
+                    QI(null !== (oT = TT.retry) && void 0 !== oT ? oT : "", TT.retryShown, {
+                      ...TT.retryOptions,
+                      retryOf: TT.id
                     })
                   },
-                  children: (null !== (iY = YY.retryAt) && void 0 !== iY ? iY : 0) > Pr ? `Try again in ${du((null!==(yY=YY.retryAt)&&void 0!==yY?yY:0)-Pr)}` : "Try again"
-                }), dF && (0, RY.jsxs)("button", {
+                  children: (null !== (xT = TT.retryAt) && void 0 !== xT ? xT : 0) > Po ? `Try again in ${lD((null!==(cT=TT.retryAt)&&void 0!==cT?cT:0)-Po)}` : "Try again"
+                }), qi && (0, WT.jsxs)("button", {
                   className: "WorldCodeAiPrimaryButton",
                   onClick: () => {
-                    var rY;
-                    fD(null !== (rY = YY.retry) && void 0 !== rY ? rY : "", YY.retryShown, {
-                      ...YY.retryOptions,
-                      retryOf: YY.id,
+                    var oT;
+                    QI(null !== (oT = TT.retry) && void 0 !== oT ? oT : "", TT.retryShown, {
+                      ...TT.retryOptions,
+                      retryOf: TT.id,
                       useFree: !1
                     })
                   },
-                  children: ["Ask ", dF.model.name, " instead"]
-                }), !dF && (0, RY.jsx)("button", {
+                  children: ["Ask ", qi.model.name, " instead"]
+                }), !qi && (0, WT.jsx)("button", {
                   className: "WorldCodeAiLinkButton",
-                  onClick: jF,
+                  onClick: Hi,
                   children: "Choose another AI"
                 })]
               })]
             })]
-          }, YY.id) : (0, RY.jsxs)(FY.Fragment, {
-            children: [oY && (0, RY.jsx)(Zu, {
-              target: YY.target,
-              isOpen: QY
-            }), YY.lookups && (0, RY.jsx)(ju, {
-              lookups: YY.lookups.lookups,
-              words: YY.text,
-              defaultOpen: !YY.lookedAt,
-              isElsewhere: !QY
-            }), !YY.lookups && (0, RY.jsx)(OY, {
-              title: null !== (VY = YY.logTitle) && void 0 !== VY ? VY : YY.isCalm ? "Update" : "Problem",
-              isCalm: YY.isCalm || "user" === YY.role,
-              isElsewhere: !QY,
-              children: (0, RY.jsx)("p", {
-                children: YY.text
+          }, TT.id) : (0, WT.jsxs)(iT.Fragment, {
+            children: [MT && (0, WT.jsx)(OD, {
+              target: TT.target,
+              isOpen: KT
+            }), TT.lookups && (0, WT.jsx)(qD, {
+              lookups: TT.lookups.lookups,
+              words: TT.text,
+              defaultOpen: !TT.lookedAt,
+              isElsewhere: !KT
+            }), !TT.lookups && (0, WT.jsx)(XT, {
+              title: null !== (hT = TT.logTitle) && void 0 !== hT ? hT : TT.isCalm ? "Update" : "Problem",
+              isCalm: TT.isCalm || "user" === TT.role,
+              isElsewhere: !KT,
+              children: (0, WT.jsx)("p", {
+                children: TT.text
               })
             })]
-          }, YY.id)
-        })), !GF && zF && (null === (eY = Ir[Ir.length - 1]) || void 0 === eY ? void 0 : eY.target.key) !== wY.key && (0, RY.jsx)(Zu, {
-          target: wY,
+          }, TT.id)
+        })), !Pi && ai && (null === (RT = ko[ko.length - 1]) || void 0 === RT ? void 0 : RT.target.key) !== qT.key && (0, WT.jsx)(OD, {
+          target: qT,
           isOpen: !0
-        }), !GF && 0 === cF.length && (0, RY.jsxs)("div", {
+        }), !Pi && 0 === ji.length && (0, WT.jsxs)("div", {
           className: "WorldCodeAiEmpty",
-          children: [(0, RY.jsx)("p", {
-            children: rr ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
-          }), (0, RY.jsxs)("div", {
+          children: [(0, WT.jsx)("p", {
+            children: oo ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
+          }), (0, WT.jsxs)("div", {
             className: "WorldCodeAiChips",
-            children: [pF && (0, RY.jsx)("button", {
-              ...yg.e,
+            children: [yi && (0, WT.jsx)("button", {
+              ...gB.h,
               className: "WorldCodeAiChip",
               onClick: () => {
-                fD("Explain what my code does")
+                QI("Explain what my code does")
               },
               children: "Explain my code"
-            }), pF && !rr && !mF && ZY && (0, RY.jsx)("button", {
-              ...yg.e,
+            }), yi && !oo && !mi && JT && (0, WT.jsx)("button", {
+              ...gB.h,
               className: "WorldCodeAiChip",
               onClick: () => {
-                fD("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
+                QI("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
               },
               children: "Make settings I can change"
-            }), (ZY ? rr ? yu : iu : []).map((YY => (0, FY.createElement)("button", {
-              ...yg.e,
-              key: YY,
+            }), (JT ? oo ? gD : AD : []).map((TT => (0, iT.createElement)("button", {
+              ...gB.h,
+              key: TT,
               className: "WorldCodeAiChip",
               onClick: () => {
-                fD(YY)
+                QI(TT)
               }
-            }, YY)))]
-          }), (0, RY.jsxs)("p", {
+            }, TT)))]
+          }), (0, WT.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: [dF ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${dF.model.name} with your key.` : wF ? "deepseek" === wF.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
-          }), !dF && (0, RY.jsxs)("p", {
+            children: [qi ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${qi.model.name} with your key.` : si ? "deepseek" === si.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
+          }), !qi && (0, WT.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: ["Want a stronger AI?", " ", (0, RY.jsx)("button", {
+            children: ["Want a stronger AI?", " ", (0, WT.jsx)("button", {
               className: "WorldCodeAiKeyLearnMore",
-              onClick: hF,
+              onClick: ni,
               children: "Add your own API key"
             })]
           })]
-        }), !GF && ar && (0, RY.jsx)("div", {
+        }), !Pi && Fo && (0, WT.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, RY.jsxs)("div", {
+          children: (0, WT.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, RY.jsx)("span", {
+            children: [(0, WT.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, RY.jsx)("span", {
+            }), (0, WT.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, RY.jsx)(OY, {
-                title: null !== (NY = Ju(ar)) && void 0 !== NY ? NY : "Thinking\u2026",
+              children: (0, WT.jsx)(XT, {
+                title: null !== (uT = sD(Fo)) && void 0 !== uT ? uT : "Thinking\u2026",
                 isCalm: !0,
-                children: "waiting" === ar.phase ? (0, RY.jsxs)("span", {
+                children: "waiting" === Fo.phase ? (0, WT.jsxs)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: [iv((null !== (BY = ar.until) && void 0 !== BY ? BY : Pr) - Pr), " Lots of people share Bot.xd."]
-                }) : (0, RY.jsxs)(RY.Fragment, {
-                  children: [(0, RY.jsx)(Mu, {
-                    busy: ar
-                  }), "screening" === ar.phase && (null !== (cY = ar.until) && void 0 !== cY ? cY : 0) > Pr && (0, RY.jsxs)("span", {
+                  children: [AS((null !== (vT = Fo.until) && void 0 !== vT ? vT : Po) - Po), " Lots of people share Bot.xd."]
+                }) : (0, WT.jsxs)(WT.Fragment, {
+                  children: [(0, WT.jsx)(tD, {
+                    busy: Fo
+                  }), "screening" === Fo.phase && (null !== (ET = Fo.until) && void 0 !== ET ? ET : 0) > Po && (0, WT.jsxs)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: [iv((null !== (KY = ar.until) && void 0 !== KY ? KY : Pr) - Pr), " Lots of people share the safety check."]
-                  }), "checking" !== ar.phase && "screening" !== ar.phase && (0, RY.jsx)("span", {
+                    children: [AS((null !== (fT = Fo.until) && void 0 !== fT ? fT : Po) - Po), " Lots of people share the safety check."]
+                  }), "checking" !== Fo.phase && "screening" !== Fo.phase && (0, WT.jsx)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: ar.keyModel ? `${ar.keyModel} is answering with your key.` : ar.isSuperBot ? `${tR} is answering from your usage.` : Vv(Kr.current, ar.model)
+                    children: Fo.keyModel ? `${Fo.keyModel} is answering with your key.` : Fo.isSuperBot ? `${zX} is answering from your usage.` : uS(fo.current, Fo.model)
                   })]
                 })
               })
-            }), (0, RY.jsx)("button", {
+            }), (0, WT.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: FA,
+              onClick: Xz,
               children: "Stop"
             })]
           })
-        }), !GF && !ar && gD && (0, RY.jsx)("div", {
+        }), !Pi && !Fo && SI && (0, WT.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, RY.jsxs)("div", {
+          children: (0, WT.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, RY.jsx)("span", {
+            children: [(0, WT.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, RY.jsx)("span", {
+            }), (0, WT.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, RY.jsx)(OY, {
+              children: (0, WT.jsx)(XT, {
                 title: "Testing\u2026",
                 isCalm: !0,
-                children: (0, RY.jsx)("span", {
+                children: (0, WT.jsx)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: rr ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${Fa.D/1e3} seconds. If it shows an error, the AI fixes it.`
+                  children: oo ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${BF.y/1e3} seconds. If it shows an error, the AI fixes it.`
                 })
               })
-            }), (0, RY.jsx)("button", {
+            }), (0, WT.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: OF,
+              onClick: Fi,
               children: "Stop"
             })]
           })
-        }), !GF && qD.map(((YY, rY) => {
-          var DY, FY;
-          return (0, RY.jsxs)("div", {
+        }), !Pi && GI.map(((TT, oT) => {
+          var IT, iT;
+          return (0, WT.jsxs)("div", {
             className: "WorldCodeAiEntry WorldCodeAiEntry-user WorldCodeAiQueued",
-            children: [(0, RY.jsx)("p", {
-              children: null !== (DY = YY.shown) && void 0 !== DY ? DY : YY.text
-            }), (0, RY.jsxs)("span", {
+            children: [(0, WT.jsx)("p", {
+              children: null !== (IT = TT.shown) && void 0 !== IT ? IT : TT.text
+            }), (0, WT.jsxs)("span", {
               className: "WorldCodeAiQueuedNote",
-              children: [YY.id === bD ? "Pick Bot.xd to send it" : null !== (FY = vu[rY]) && void 0 !== FY ? FY : "In line", (0, RY.jsx)("button", {
+              children: [TT.id === sI ? "Pick Bot.xd to send it" : null !== (iT = KD[oT]) && void 0 !== iT ? iT : "In line", (0, WT.jsx)("button", {
                 className: "WorldCodeAiLinkButton",
                 onClick: () => {
-                  wr((rY => rY.filter((rY => rY.id !== YY.id))))
+                  qo((oT => oT.filter((oT => oT.id !== TT.id))))
                 },
                 children: "Delete"
               })]
             })]
-          }, YY.id)
+          }, TT.id)
         }))]
-      }), eD && !ar && (0, RY.jsxs)("div", {
+      }), vI && !Fo && (0, WT.jsxs)("div", {
         className: "WorldCodeAiErrorBanner",
-        children: [(0, RY.jsxs)("div", {
+        children: [(0, WT.jsxs)("div", {
           className: "WorldCodeAiErrorPlain",
-          children: [void 0 !== ND.line && (0, RY.jsxs)(RY.Fragment, {
-            children: [(0, RY.jsxs)("button", {
+          children: [void 0 !== EI.line && (0, WT.jsxs)(WT.Fragment, {
+            children: [(0, WT.jsxs)("button", {
               className: "WorldCodeAiLinkButton",
               title: "Show this line in your code",
               onClick: () => {
-                var YY, rY;
-                MY(null !== (YY = ND.path) && void 0 !== YY ? YY : zY, null !== (rY = ND.line) && void 0 !== rY ? rY : 1), (0, uY.e)() && JY()
+                var TT, oT;
+                nT(null !== (TT = EI.path) && void 0 !== TT ? TT : jT, null !== (oT = EI.line) && void 0 !== oT ? oT : 1), (0, DT.d)() && HT()
               },
-              children: [ND.path && ND.path !== zY ? `${ND.path} line` : "Line", " ", ND.line]
+              children: [EI.path && EI.path !== jT ? `${EI.path} line` : "Line", " ", EI.line]
             }), ":", " "]
-          }), ND.text]
-        }), xr && (0, RY.jsx)("div", {
+          }), EI.text]
+        }), yo && (0, WT.jsx)("div", {
           className: "WorldCodeAiErrorText",
-          children: eD
-        }), (0, RY.jsxs)("div", {
+          children: vI
+        }), (0, WT.jsxs)("div", {
           className: "WorldCodeAiErrorActions",
-          children: [(0, RY.jsx)("button", {
-            ...yg.e,
+          children: [(0, WT.jsx)("button", {
+            ...gB.h,
             className: "WorldCodeAiPrimaryButton",
             onClick: () => {
-              CD((() => {
-                Gr(fY), JD.current(`Fix this error: ${eD}`)
+              YI((() => {
+                bo(aT), qI.current(`Fix this error: ${vI}`)
               }))
             },
             children: "Fix the error"
-          }), (0, RY.jsx)("button", {
-            ...yg.e,
+          }), (0, WT.jsx)("button", {
+            ...gB.h,
             className: "WorldCodeAiSecondaryButton",
             onClick: () => {
-              CD((() => {
-                Gr(fY), JD.current(`Explain this error in simple words, and where it is in my code: ${eD}`)
+              YI((() => {
+                bo(aT), qI.current(`Explain this error in simple words, and where it is in my code: ${vI}`)
               }))
             },
             children: "Explain it"
-          }), (0, RY.jsx)("button", {
+          }), (0, WT.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             onClick: () => {
-              Gr(fY)
+              bo(aT)
             },
             children: "Dismiss"
-          }), (0, RY.jsx)("button", {
+          }), (0, WT.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiErrorDetailsToggle",
             onClick: () => {
-              nr(!xr)
+              No(!yo)
             },
-            children: xr ? "Hide details" : "Show details"
+            children: yo ? "Hide details" : "Show details"
           })]
-        }), (0, RY.jsx)("div", {
+        }), (0, WT.jsx)("div", {
           className: "WorldCodeAiErrorNote",
           children: "Fix the error and Explain it send this error and your code to the AI."
         })]
-      }), br && (0, RY.jsxs)("div", {
+      }), Zo && (0, WT.jsxs)("div", {
         className: "WorldCodeAiPicked",
-        children: [(0, RY.jsxs)("span", {
-          children: ["Changing ", Nv(br), " of ", br.path]
-        }), (0, RY.jsx)("button", {
+        children: [(0, WT.jsxs)("span", {
+          children: ["Changing ", jS(Zo), " of ", Zo.path]
+        }), (0, WT.jsx)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            Xr(null)
+            so(null)
           },
           children: "Cancel"
         })]
-      }), (0, RY.jsx)(Pg, {
+      }), (0, WT.jsx)(oF, {
         step: "aiAskBox",
-        children: (0, RY.jsx)("form", {
+        children: (0, WT.jsx)("form", {
           className: "WorldCodeAiInputRow",
-          onSubmit: YY => {
-            YY.preventDefault(), hD()
+          onSubmit: TT => {
+            TT.preventDefault(), HI()
           },
-          children: (0, RY.jsxs)("div", {
+          children: (0, WT.jsxs)("div", {
             className: "WorldCodeAiAsk",
-            children: [(0, RY.jsx)("textarea", {
-              ref: iD,
+            children: [(0, WT.jsx)("textarea", {
+              ref: KI,
               className: "WorldCodeAiAskInput",
-              value: dr,
+              value: Oo,
               maxLength: 1e3,
               rows: 2,
-              placeholder: br ? `How should ${Nv(br)} change?` : CF ? "Or type your own answer here" : "Ask AI",
-              onChange: YY => {
-                Jr(YY.target.value)
+              placeholder: Zo ? `How should ${jS(Zo)} change?` : Qi ? "Or type your own answer here" : "Ask AI",
+              onChange: TT => {
+                Ho(TT.target.value)
               },
-              onKeyDown: YY => {
-                YY.stopPropagation(), "Enter" !== YY.key || YY.shiftKey || YY.nativeEvent.isComposing || 229 === YY.nativeEvent.keyCode || (YY.preventDefault(), hD())
+              onKeyDown: TT => {
+                TT.stopPropagation(), "Enter" !== TT.key || TT.shiftKey || TT.nativeEvent.isComposing || 229 === TT.nativeEvent.keyCode || (TT.preventDefault(), HI())
               }
-            }), (0, RY.jsx)(vY.n, {
+            }), (0, WT.jsx)(ST.m, {
               className: "WorldCodeAiSend",
               ariaLabel: "Send",
-              disabled: "" === dr.trim() || !!ar && Mr.length >= 3,
-              onClick: hD,
-              children: (0, RY.jsx)(sY.e, {
+              disabled: "" === Oo.trim() || !!Fo && no.length >= 3,
+              onClick: HI,
+              children: (0, WT.jsx)(LT.e, {
                 name: "arrow-up"
               })
             })]
           })
         })
-      }), (0, RY.jsx)(Pg, {
+      }), (0, WT.jsx)(oF, {
         step: "aiModelChip",
-        children: (0, RY.jsx)("div", {
-          className: IY()("WorldCodeAiLimit", ar && "WorldCodeAiLimit-busy"),
-          children: (0, RY.jsx)(Ya, {
-            editsOn: ZY ? Hr : null,
-            freeOnce: Tr,
-            onFreeOnce: er,
-            onAddKey: hF,
+        children: (0, WT.jsx)("div", {
+          className: kT()("WorldCodeAiLimit", Fo && "WorldCodeAiLimit-busy"),
+          children: (0, WT.jsx)(kF, {
+            editsOn: JT ? Co : null,
+            freeOnce: eo,
+            onFreeOnce: Ro,
+            onAddKey: ni,
             children: (() => {
-              if (ar) return 0 === qD.length ? "You can type your next request: it sends when this answer is done." : 1 === qD.length ? "1 request waiting: it sends when this answer is done." : `${qD.length} requests waiting: they send one at a time.`;
-              if (dF && Tr) return `Your next question goes to Bot.xd, then back to ${dF.model.name}.`;
-              if (dF) return `Your question and code go to ${yR(dF.provider,dF.baseUrl,!0)}.`;
-              if (wF) {
-                const YY = null === bF ? null : function(YY, rY) {
-                  return YY <= rY ? null : `Limit resets in ${(0,LR.c)(Math.ceil((YY-rY)/6e4))}`
-                }(bF, Pr);
-                return null === YY ? yO(wF) : (0, RY.jsxs)(RY.Fragment, {
-                  children: [(0, RY.jsx)("span", {
+              if (Fo) return 0 === GI.length ? "You can type your next request: it sends when this answer is done." : 1 === GI.length ? "1 request waiting: it sends when this answer is done." : `${GI.length} requests waiting: they send one at a time.`;
+              if (qi && eo) return `Your next question goes to Bot.xd, then back to ${qi.model.name}.`;
+              if (qi) return `Your question and code go to ${gW(qi.provider,qi.baseUrl,!0)}.`;
+              if (si) {
+                const TT = null === ti ? null : function(TT, oT) {
+                  return TT <= oT ? null : `Limit resets in ${(0,iX.d)(Math.ceil((TT-oT)/6e4))}`
+                }(ti, Po);
+                return null === TT ? gX(si) : (0, WT.jsxs)(WT.Fragment, {
+                  children: [(0, WT.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: yO(wF)
-                  }), (0, RY.jsx)("span", {
+                    children: gX(si)
+                  }), (0, WT.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: YY
+                    children: TT
                   })]
                 })
               }
-              return lD > Pr ? `Send now and it starts by itself. ${iv(lD-Pr)}` : null
+              return RI > Po ? `Send now and it starts by itself. ${AS(RI-Po)}` : null
             })()
           })
         })
       })]
     });
-    return (0, RY.jsx)(Pg, {
-      step: xF,
-      onPrevious: "aiPanel" === xF ? JY : void 0,
-      children: AA
+    return (0, WT.jsx)(oF, {
+      step: di,
+      onPrevious: "aiPanel" === di ? HT : void 0,
+      children: Bz
     })
   })),
-  bu = wu
-}, 38924: (YY, rY, DY) => {
-  DY.d(rY, {
-    e: () => gY,
-    i: () => IY,
-    m: () => AY
+  pD = GD
+}, 38553: (TT, oT, IT) => {
+  IT.d(oT, {
+    c: () => BT,
+    f: () => kT,
+    i: () => zT
   });
-  const FY = 6e3;
+  const iT = 6e3;
 
-  function AY(YY, rY) {
-    return [Math.floor(YY[0] / rY) * rY, Math.floor(YY[1] / rY) * rY, Math.floor(YY[2] / rY) * rY]
+  function zT(TT, oT) {
+    return [Math.floor(TT[0] / oT) * oT, Math.floor(TT[1] / oT) * oT, Math.floor(TT[2] / oT) * oT]
   }
 
-  function IY(YY) {
-    const rY = (null !== YY && void 0 !== YY ? YY : "").match(/-?\d+(?:\.\d+)?/g);
-    return rY && rY.length >= 3 ? [Number(rY[0]), Number(rY[1]), Number(rY[2])] : null
+  function kT(TT) {
+    const oT = (null !== TT && void 0 !== TT ? TT : "").match(/-?\d+(?:\.\d+)?/g);
+    return oT && oT.length >= 3 ? [Number(oT[0]), Number(oT[1]), Number(oT[2])] : null
   }
 
-  function RY(YY, rY) {
-    return YY === rY ? String(YY) : `${YY}-${rY}`
+  function WT(TT, oT) {
+    return TT === oT ? String(TT) : `${TT}-${oT}`
   }
 
-  function OY(YY, rY, DY, FY) {
-    const AY = [];
-    let IY = new Map;
-    for (let RY = YY[2]; RY < YY[2] + rY; RY++) {
-      const OY = new Map;
-      let gY = YY[0];
-      for (; gY < YY[0] + rY;) {
-        const AY = FY(gY, DY, RY);
-        let aY = gY;
-        for (; aY + 1 < YY[0] + rY && FY(aY + 1, DY, RY) === AY;) aY++;
-        if (null !== AY) {
-          const YY = `${gY} ${aY} ${AY}`,
-            rY = IY.get(YY);
-          rY ? (rY.z1 = RY, IY.delete(YY), OY.set(YY, rY)) : OY.set(YY, {
-            x0: gY,
-            x1: aY,
-            z0: RY,
-            z1: RY,
-            name: AY
+  function XT(TT, oT, IT, iT) {
+    const zT = [];
+    let kT = new Map;
+    for (let WT = TT[2]; WT < TT[2] + oT; WT++) {
+      const XT = new Map;
+      let BT = TT[0];
+      for (; BT < TT[0] + oT;) {
+        const zT = iT(BT, IT, WT);
+        let FT = BT;
+        for (; FT + 1 < TT[0] + oT && iT(FT + 1, IT, WT) === zT;) FT++;
+        if (null !== zT) {
+          const TT = `${BT} ${FT} ${zT}`,
+            oT = kT.get(TT);
+          oT ? (oT.z1 = WT, kT.delete(TT), XT.set(TT, oT)) : XT.set(TT, {
+            x0: BT,
+            x1: FT,
+            z0: WT,
+            z1: WT,
+            name: zT
           })
         }
-        gY = aY + 1
+        BT = FT + 1
       }
-      AY.push(...IY.values()), IY = OY
+      zT.push(...kT.values()), kT = XT
     }
-    return AY.push(...IY.values()), AY.sort(((YY, rY) => YY.z0 - rY.z0 || YY.x0 - rY.x0)).map((YY => `x${RY(YY.x0,YY.x1)} z${RY(YY.z0,YY.z1)} ${YY.name}`))
+    return zT.push(...kT.values()), zT.sort(((TT, oT) => TT.z0 - oT.z0 || TT.x0 - oT.x0)).map((TT => `x${WT(TT.x0,TT.x1)} z${WT(TT.z0,TT.z1)} ${TT.name}`))
   }
 
-  function gY(YY, rY, DY, AY) {
-    let IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : FY;
-    const gY = [YY[0] + rY - 1, YY[1] + rY - 1, YY[2] + rY - 1],
-      aY = null !== AY && AY.every(((rY, DY) => Math.floor(rY) >= YY[DY] && Math.floor(rY) <= gY[DY])),
-      vY = [`The chunk from ${YY.join(" ")} to ${gY.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-    null !== AY && vY.push(`The player's feet are at ${AY.map(Math.floor).join(" ")}, ${aY?"in this chunk":"outside this chunk"}.`);
-    const uY = [];
-    for (let FY = YY[1]; FY <= gY[1]; FY++) {
-      const AY = OY(YY, rY, FY, DY).join("; "),
-        IY = uY[uY.length - 1];
-      (null === IY || void 0 === IY ? void 0 : IY.boxes) === AY ? IY.to = FY : uY.push({
-        from: FY,
-        to: FY,
-        boxes: AY
+  function BT(TT, oT, IT, zT) {
+    let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : iT;
+    const BT = [TT[0] + oT - 1, TT[1] + oT - 1, TT[2] + oT - 1],
+      FT = null !== zT && zT.every(((oT, IT) => Math.floor(oT) >= TT[IT] && Math.floor(oT) <= BT[IT])),
+      ST = [`The chunk from ${TT.join(" ")} to ${BT.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+    null !== zT && ST.push(`The player's feet are at ${zT.map(Math.floor).join(" ")}, ${FT?"in this chunk":"outside this chunk"}.`);
+    const DT = [];
+    for (let iT = TT[1]; iT <= BT[1]; iT++) {
+      const zT = XT(TT, oT, iT, IT).join("; "),
+        kT = DT[DT.length - 1];
+      (null === kT || void 0 === kT ? void 0 : kT.boxes) === zT ? kT.to = iT : DT.push({
+        from: iT,
+        to: iT,
+        boxes: zT
       })
     }
-    const sY = uY.filter((YY => "" !== YY.boxes));
-    0 === sY.length && vY.push("It is all air.");
-    let iY = vY.join("\n").length;
-    for (const FY of sY) {
-      const YY = `y${RY(FY.from,FY.to)}: ${FY.boxes}`;
-      if (iY += YY.length + 1, iY > IY) {
-        vY.push(`Cut short: the layers from y${FY.from} up aren't shown, as there are too many blocks.`);
+    const LT = DT.filter((TT => "" !== TT.boxes));
+    0 === LT.length && ST.push("It is all air.");
+    let xT = ST.join("\n").length;
+    for (const iT of LT) {
+      const TT = `y${WT(iT.from,iT.to)}: ${iT.boxes}`;
+      if (xT += TT.length + 1, xT > kT) {
+        ST.push(`Cut short: the layers from y${iT.from} up aren't shown, as there are too many blocks.`);
         break
       }
-      vY.push(YY)
+      ST.push(TT)
     }
-    return vY.join("\n")
+    return ST.join("\n")
   }
-}, 4405: (YY, rY, DY) => {
-  DY.d(rY, {
-    b: () => AY,
-    f: () => gY,
-    i: () => IY,
-    l: () => RY,
-    n: () => OY,
-    q: () => oY,
-    t: () => vY,
-    w: () => uY,
-    y: () => QY,
-    z: () => iY
+}, 4304: (TT, oT, IT) => {
+  IT.d(oT, {
+    c: () => zT,
+    f: () => BT,
+    j: () => kT,
+    n: () => WT,
+    o: () => XT,
+    s: () => MT,
+    t: () => ST,
+    w: () => DT,
+    x: () => KT,
+    y: () => xT
   });
-  var FY = DY(1560);
-  const AY = 24e3,
-    IY = "/docs/llms.txt",
-    RY = `${FY.e}${IY}`,
-    OY = "/llms.txt",
-    gY = "/docs/llms-full.txt";
+  var iT = IT(1531);
+  const zT = 24e3,
+    kT = "/docs/llms.txt",
+    WT = `${iT.d}${kT}`,
+    XT = "/llms.txt",
+    BT = "/docs/llms-full.txt";
 
-  function aY(YY) {
-    return YY || "index"
+  function FT(TT) {
+    return TT || "index"
   }
 
-  function vY(YY) {
-    return `/docs/${aY(YY)}.md`
+  function ST(TT) {
+    return `/docs/${FT(TT)}.md`
   }
 
-  function uY(YY, rY) {
-    return `/docs/${aY(YY)}/${rY+1}.md`
+  function DT(TT, oT) {
+    return `/docs/${FT(TT)}/${oT+1}.md`
   }
-  const sY = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+  const LT = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-  function iY(YY) {
-    const rY = sY.exec(YY);
-    return null === rY ? null : {
-      name: rY[1],
-      part: void 0 === rY[2] ? null : Number(rY[2])
+  function xT(TT) {
+    const oT = LT.exec(TT);
+    return null === oT ? null : {
+      name: oT[1],
+      part: void 0 === oT[2] ? null : Number(oT[2])
     }
   }
-  const yY = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+  const cT = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-  function QY(YY) {
-    const rY = yY.exec(YY);
-    if (null === rY) return null;
-    const [, DY = "", FY] = rY;
-    return void 0 === FY ? vY(DY) : uY(DY, Number(FY) - 1)
+  function KT(TT) {
+    const oT = cT.exec(TT);
+    if (null === oT) return null;
+    const [, IT = "", iT] = oT;
+    return void 0 === iT ? ST(IT) : DT(IT, Number(iT) - 1)
   }
 
-  function oY(YY) {
-    return `/docsHtml/${aY(YY)}.html`
+  function MT(TT) {
+    return `/docsHtml/${FT(TT)}.html`
   }
 }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

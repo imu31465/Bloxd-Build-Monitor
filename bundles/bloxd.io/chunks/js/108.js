@@ -1,312 +1,312 @@
 export const id = 108;
 export const ids = [108, 125];
 export const modules = {
-  4552: (YY, rY, DY) => {
-    var FY = DY(4560);
+  4444: (TT, oT, IT) => {
+    var iT = IT(4451);
 
-    function AY() {}
+    function zT() {}
 
-    function IY() {}
-    IY.resetWarningCache = AY, YY.exports = function() {
-      function YY(YY, rY, DY, AY, IY, RY) {
-        if (RY !== FY) {
-          var OY = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw OY.name = "Invariant Violation", OY
+    function kT() {}
+    kT.resetWarningCache = zT, TT.exports = function() {
+      function TT(TT, oT, IT, zT, kT, WT) {
+        if (WT !== iT) {
+          var XT = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw XT.name = "Invariant Violation", XT
         }
       }
 
-      function rY() {
-        return YY
+      function oT() {
+        return TT
       }
-      YY.isRequired = YY;
-      var DY = {
-        array: YY,
-        bigint: YY,
-        bool: YY,
-        func: YY,
-        number: YY,
-        object: YY,
-        string: YY,
-        symbol: YY,
-        any: YY,
-        arrayOf: rY,
-        element: YY,
-        elementType: YY,
-        instanceOf: rY,
-        node: YY,
-        objectOf: rY,
-        oneOf: rY,
-        oneOfType: rY,
-        shape: rY,
-        exact: rY,
-        checkPropTypes: IY,
-        resetWarningCache: AY
+      TT.isRequired = TT;
+      var IT = {
+        array: TT,
+        bigint: TT,
+        bool: TT,
+        func: TT,
+        number: TT,
+        object: TT,
+        string: TT,
+        symbol: TT,
+        any: TT,
+        arrayOf: oT,
+        element: TT,
+        elementType: TT,
+        instanceOf: oT,
+        node: TT,
+        objectOf: oT,
+        oneOf: oT,
+        oneOfType: oT,
+        shape: oT,
+        exact: oT,
+        checkPropTypes: kT,
+        resetWarningCache: zT
       };
-      return DY.PropTypes = DY, DY
+      return IT.PropTypes = IT, IT
     }
   },
-  4543: (YY, rY, DY) => {
-    YY.exports = DY(4552)()
+  4442: (TT, oT, IT) => {
+    TT.exports = IT(4444)()
   },
-  4560: YY => {
-    YY.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  4451: TT => {
+    TT.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  6144: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      ShaderPackPublishForm: () => mY
+  6085: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      ShaderPackPublishForm: () => gT
     });
-    var FY = DY(61),
-      AY = DY(6112),
-      IY = DY(222),
-      RY = DY(6150),
-      OY = DY(1098),
-      gY = DY(1437),
-      aY = DY(1654),
-      vY = DY(1152),
-      uY = DY(6157),
-      sY = DY(6176),
-      iY = DY(1471),
-      yY = DY(1211),
-      QY = DY(6182),
-      oY = DY(6212),
-      WY = DY(6108),
-      EY = DY(1125);
+    var iT = IT(46),
+      zT = IT(6045),
+      kT = IT(195),
+      WT = IT(6092),
+      XT = IT(1055),
+      BT = IT(1408),
+      FT = IT(1624),
+      ST = IT(1110),
+      DT = IT(6099),
+      LT = IT(6107),
+      xT = IT(1451),
+      cT = IT(1171),
+      KT = IT(6114),
+      MT = IT(6146),
+      rT = IT(6042),
+      AT = IT(1083);
 
-    function mY(YY) {
-      var rY, DY, uY;
+    function gT(TT) {
+      var oT, IT, DT;
       let {
-        existing: mY,
-        onPublished: SY
-      } = YY;
+        existing: gT,
+        onPublished: wT
+      } = TT;
       const {
-        t: TY
-      } = (0, yY.C)(), {
-        userContext: eY,
-        isUserContextUpdating: NY
-      } = (0, vY.d)(), [BY, cY] = (0, FY.useState)(null), [KY, HY] = (0, FY.useState)(0), [zY, ZY] = (0, FY.useState)(null !== (rY = null === mY || void 0 === mY ? void 0 : mY.name) && void 0 !== rY ? rY : ""), CY = (0, FY.useRef)(zY), fY = (0, FY.useRef)(""), jY = YY => {
-        CY.current = YY, ZY(YY)
-      }, [hY, dY] = (0, FY.useState)(null !== (DY = null === mY || void 0 === mY ? void 0 : mY.description) && void 0 !== DY ? DY : ""), JY = (0, FY.useRef)(hY), MY = (0, FY.useRef)(""), wY = YY => {
-        JY.current = YY, dY(YY)
-      }, [bY, XY] = (0, FY.useState)(!1), {
-        loading: qY,
-        error: pY,
-        setError: kY,
-        onFiles: GY
-      } = (0, sY.i)((async YY => {
-        const rY = await (0, QY.loadPageShaderPackCompiler)();
-        if (!rY) return void kY(TY("shaderPack:compilerUnavailable"));
-        const DY = await (0, oY.g)(rY, YY.files);
-        if (cY({
-            pack: YY,
-            validation: DY,
-            sourceBytes: (0, RY.A)(YY.files)
-          }), !mY) {
-          var FY;
-          if ("" !== CY.current.trim() && CY.current !== fY.current || (fY.current = (0, AY.V)(YY.manifest.name.trim(), AY.D), jY(fY.current)), "" === JY.current.trim() || JY.current === MY.current) MY.current = (0, AY.V)((null !== (FY = YY.manifest.description) && void 0 !== FY ? FY : "").trim(), AY.t), wY(MY.current);
-          HY((YY => YY + 1))
+        t: eT
+      } = (0, cT.t)(), {
+        userContext: RT,
+        isUserContextUpdating: uT
+      } = (0, ST.b)(), [vT, ET] = (0, iT.useState)(null), [fT, CT] = (0, iT.useState)(0), [jT, JT] = (0, iT.useState)(null !== (oT = null === gT || void 0 === gT ? void 0 : gT.name) && void 0 !== oT ? oT : ""), UT = (0, iT.useRef)(jT), aT = (0, iT.useRef)(""), YT = TT => {
+        UT.current = TT, JT(TT)
+      }, [QT, OT] = (0, iT.useState)(null !== (IT = null === gT || void 0 === gT ? void 0 : gT.description) && void 0 !== IT ? IT : ""), HT = (0, iT.useRef)(QT), nT = (0, iT.useRef)(""), qT = TT => {
+        HT.current = TT, OT(TT)
+      }, [ZT, lT] = (0, iT.useState)(!1), {
+        loading: sT,
+        error: tT,
+        setError: GT,
+        onFiles: pT
+      } = (0, LT.d)((async TT => {
+        const oT = await (0, KT.loadPageShaderPackCompiler)();
+        if (!oT) return void GT(eT("shaderPack:compilerUnavailable"));
+        const IT = await (0, MT.c)(oT, TT.files);
+        if (ET({
+            pack: TT,
+            validation: IT,
+            sourceBytes: (0, WT.u)(TT.files)
+          }), !gT) {
+          var iT;
+          if ("" !== UT.current.trim() && UT.current !== aT.current || (aT.current = (0, zT.Y)(TT.manifest.name.trim(), zT.E), YT(aT.current)), "" === HT.current.trim() || HT.current === nT.current) nT.current = (0, zT.Y)((null !== (iT = TT.manifest.description) && void 0 !== iT ? iT : "").trim(), zT.s), qT(nT.current);
+          CT((TT => TT + 1))
         }
-      })), xY = !NY && !eY.isLoggedIn() && !IY.b.offlineMode, nY = zY.trim(), PY = nY.length < AY.G, UY = null !== BY && !1 !== (null === (uY = BY.validation) || void 0 === uY ? void 0 : uY.ok) && !qY && !PY && !xY && !NY;
-      return (0, EY.jsxs)("div", {
+      })), bT = !uT && !RT.isLoggedIn() && !kT.d.offlineMode, yT = jT.trim(), NT = yT.length < zT.I, PT = null !== vT && !1 !== (null === (DT = vT.validation) || void 0 === DT ? void 0 : DT.ok) && !sT && !NT && !bT && !uT;
+      return (0, AT.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, EY.jsx)("p", {
+        children: [(0, AT.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: mY ? TY("shaderPackListing:uploadIntro", {
-            minutes: String(AY.K / 6e4)
-          }) : TY("shaderPackListing:publishIntro")
-        }), (0, EY.jsx)(lY, {}), xY && (0, EY.jsx)("div", {
+          children: gT ? eT("shaderPackListing:uploadIntro", {
+            minutes: String(zT.N / 6e4)
+          }) : eT("shaderPackListing:publishIntro")
+        }), (0, AT.jsx)(mT, {}), bT && (0, AT.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: TY("shaderPackListing:publishNeedsLogin")
-        }), (0, EY.jsx)(sY.e, {
-          busy: qY,
-          disabled: qY || bY,
-          onFiles: YY => {
-            cY(null), GY(YY)
+          children: eT("shaderPackListing:publishNeedsLogin")
+        }), (0, AT.jsx)(LT.b, {
+          busy: sT,
+          disabled: sT || ZT,
+          onFiles: TT => {
+            ET(null), pT(TT)
           }
-        }), BY && (0, EY.jsxs)("div", {
+        }), vT && (0, AT.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, EY.jsx)("div", {
+          children: [(0, AT.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: BY.pack.manifest.name
-          }), (0, EY.jsxs)("div", {
+            children: vT.pack.manifest.name
+          }), (0, AT.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [TY("shaderPackListing:sizeValue", {
-              kilobytes: String((0, WY.N)(BY.sourceBytes))
-            }), " \xb7", " ", TY("shaderPackListing:filesValue", {
-              files: String(BY.pack.files.length)
+            children: [eT("shaderPackListing:sizeValue", {
+              kilobytes: String((0, rT.P)(vT.sourceBytes))
+            }), " \xb7", " ", eT("shaderPackListing:filesValue", {
+              files: String(vT.pack.files.length)
             })]
-          }), (0, EY.jsx)(VY, {
-            picked: BY
+          }), (0, AT.jsx)(hT, {
+            picked: vT
           })]
-        }), !mY && (0, EY.jsxs)(EY.Fragment, {
-          children: [(0, EY.jsxs)("label", {
+        }), !gT && (0, AT.jsxs)(AT.Fragment, {
+          children: [(0, AT.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, EY.jsx)("span", {
-              children: TY("general:name")
-            }), (0, EY.jsx)(aY.d, {
+            children: [(0, AT.jsx)("span", {
+              children: eT("general:name")
+            }), (0, AT.jsx)(FT.e, {
               className: "ShaderPackPublishInput",
-              defaultValue: zY,
-              maxLength: AY.D,
-              onValueChange: jY
-            }, KY), BY && PY && (0, EY.jsx)("span", {
+              defaultValue: jT,
+              maxLength: zT.E,
+              onValueChange: YT
+            }, fT), vT && NT && (0, AT.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: TY("shaderPackListing:nameTooShort", {
-                min: String(AY.G)
+              children: eT("shaderPackListing:nameTooShort", {
+                min: String(zT.I)
               })
             })]
-          }), (0, EY.jsxs)("label", {
+          }), (0, AT.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, EY.jsx)("span", {
-              children: TY("general:description")
-            }), (0, EY.jsx)(aY.d, {
+            children: [(0, AT.jsx)("span", {
+              children: eT("general:description")
+            }), (0, AT.jsx)(FT.e, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: hY,
-              maxLength: AY.t,
-              onValueChange: wY,
+              defaultValue: QT,
+              maxLength: zT.s,
+              onValueChange: qT,
               useTextarea: !0
-            }, KY)]
+            }, fT)]
           })]
-        }), pY && (0, EY.jsx)("div", {
+        }), tT && (0, AT.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: pY
-        }), (0, EY.jsxs)(gY.n, {
+          children: tT
+        }), (0, AT.jsxs)(BT.m, {
           className: "ShaderPackPublishButton",
-          disabled: !UY,
-          loading: bY,
+          disabled: !PT,
+          loading: ZT,
           onClick: () => {
             !async function() {
-              var YY;
-              if (!BY) return;
+              var TT;
+              if (!vT) return;
               const {
-                name: rY,
-                description: DY
-              } = null !== mY && void 0 !== mY ? mY : {
-                name: nY,
-                description: hY.trim()
-              }, FY = {
-                packId: null !== (YY = null === mY || void 0 === mY ? void 0 : mY.packId) && void 0 !== YY ? YY : null,
-                name: rY,
-                description: DY,
-                apiVersion: BY.pack.manifest.apiVersion,
-                files: (0, RY.z)(BY.pack.files),
-                keepCircleShadows: !0 === BY.pack.manifest.keepCircleShadows
+                name: oT,
+                description: IT
+              } = null !== gT && void 0 !== gT ? gT : {
+                name: yT,
+                description: QT.trim()
+              }, iT = {
+                packId: null !== (TT = null === gT || void 0 === gT ? void 0 : gT.packId) && void 0 !== TT ? TT : null,
+                name: oT,
+                description: IT,
+                apiVersion: vT.pack.manifest.apiVersion,
+                files: (0, WT.t)(vT.pack.files),
+                keepCircleShadows: !0 === vT.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(FY)).byteLength > 1024 * AY.S) kY(TY("shaderPackListing:publishTooBig", {
-                kilobytes: String(AY.S)
+              if ((new TextEncoder).encode(JSON.stringify(iT)).byteLength > 1024 * zT.U) GT(eT("shaderPackListing:publishTooBig", {
+                kilobytes: String(zT.U)
               }));
               else {
-                XY(!0), kY(null);
+                lT(!0), GT(null);
                 try {
-                  SY(await iY.e.publishShaderPack(eY, FY))
-                } catch (IY) {
-                  console.error("Failed to publish the shader pack", IY), kY((0, WY.y)(IY, TY, "shaderPackListing:publishFailed"))
+                  wT(await xT.e.publishShaderPack(RT, iT))
+                } catch (kT) {
+                  console.error("Failed to publish the shader pack", kT), GT((0, rT.A)(kT, eT, "shaderPackListing:publishFailed"))
                 } finally {
-                  XY(!1)
+                  lT(!1)
                 }
               }
             }()
           },
-          children: [(0, EY.jsx)(OY.e, {
+          children: [(0, AT.jsx)(XT.e, {
             name: "upload"
-          }), " ", TY(mY ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", eT(gT ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function VY(YY) {
+    function hT(TT) {
       let {
-        picked: rY
-      } = YY;
+        picked: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, yY.C)(), {
-        validation: FY
-      } = rY;
-      return null === FY ? (0, EY.jsx)("div", {
+        t: IT
+      } = (0, cT.t)(), {
+        validation: iT
+      } = oT;
+      return null === iT ? (0, AT.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: DY("shaderPackListing:publishUnchecked")
-      }) : FY.ok ? (0, EY.jsxs)(EY.Fragment, {
-        children: [(0, EY.jsxs)("div", {
+        children: IT("shaderPackListing:publishUnchecked")
+      }) : iT.ok ? (0, AT.jsxs)(AT.Fragment, {
+        children: [(0, AT.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, EY.jsx)(OY.e, {
+          children: [(0, AT.jsx)(XT.e, {
             name: "circle-check"
-          }), " ", DY("shaderPackListing:publishReady")]
-        }), FY.offInStrict.length > 0 && (0, EY.jsxs)(EY.Fragment, {
-          children: [(0, EY.jsxs)("div", {
+          }), " ", IT("shaderPackListing:publishReady")]
+        }), iT.offInStrict.length > 0 && (0, AT.jsxs)(AT.Fragment, {
+          children: [(0, AT.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, EY.jsx)(OY.e, {
+            children: [(0, AT.jsx)(XT.e, {
               name: "triangle-exclamation"
-            }), " ", DY("shaderPack:offInStrict")]
-          }), (0, EY.jsx)(uY.e, {
-            diagnostics: FY.offInStrict,
-            t: DY
+            }), " ", IT("shaderPack:offInStrict")]
+          }), (0, AT.jsx)(DT.e, {
+            diagnostics: iT.offInStrict,
+            t: IT
           })]
         })]
-      }) : (0, EY.jsxs)(EY.Fragment, {
-        children: [(0, EY.jsxs)("div", {
+      }) : (0, AT.jsxs)(AT.Fragment, {
+        children: [(0, AT.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, EY.jsx)(OY.e, {
+          children: [(0, AT.jsx)(XT.e, {
             name: "triangle-exclamation"
-          }), " ", DY("shaderPackListing:publishHasErrors")]
-        }), (0, EY.jsx)(uY.e, {
-          diagnostics: FY.errors,
-          more: FY.moreErrors,
-          t: DY
+          }), " ", IT("shaderPackListing:publishHasErrors")]
+        }), (0, AT.jsx)(DT.e, {
+          diagnostics: iT.errors,
+          more: iT.moreErrors,
+          t: IT
         })]
       })
     }
-    const SY = "\0";
+    const wT = "\0";
 
-    function lY() {
+    function mT() {
       const {
-        t: YY
-      } = (0, yY.C)(), [rY, DY] = YY("shaderPackListing:bloxdhubHelp", {
-        site: SY
-      }).split(SY);
-      return (0, EY.jsxs)("p", {
+        t: TT
+      } = (0, cT.t)(), [oT, IT] = TT("shaderPackListing:bloxdhubHelp", {
+        site: wT
+      }).split(wT);
+      return (0, AT.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [rY, (0, EY.jsx)("a", {
+        children: [oT, (0, AT.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: AY.i,
+          href: zT.i,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: AY.d
-        }), DY]
+          children: zT.c
+        }), IT]
       })
     }
   },
-  6142: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => vY
+  6076: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => ST
     });
-    var FY = DY(1488),
-      AY = DY(1437),
-      IY = DY(1211),
-      RY = DY(6144),
-      OY = DY(6123),
-      gY = DY(6108),
-      aY = DY(1125);
+    var iT = IT(1468),
+      zT = IT(1408),
+      kT = IT(1171),
+      WT = IT(6085),
+      XT = IT(6059),
+      BT = IT(6042),
+      FT = IT(1083);
 
-    function vY() {
+    function ST() {
       const {
-        t: YY
-      } = (0, IY.C)(), rY = (0, FY.useNavigatePreserveSearch)();
-      return (0, OY.d)(), (0, aY.jsxs)("div", {
+        t: TT
+      } = (0, kT.t)(), oT = (0, iT.useNavigatePreserveSearch)();
+      return (0, XT.b)(), (0, FT.jsxs)("div", {
         className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, aY.jsx)("div", {
+        children: [(0, FT.jsx)("div", {
           className: "ShaderPackPublishBack",
-          children: (0, aY.jsx)(AY.b, {
+          children: (0, FT.jsx)(zT.c, {
             onClick: () => {
-              rY(gY.R)
+              oT(BT.V)
             },
-            children: YY("shaderPackListing:backToPacks")
+            children: TT("shaderPackListing:backToPacks")
           })
-        }), (0, aY.jsx)("h1", {
+        }), (0, FT.jsx)("h1", {
           className: "ShaderPackPublishTitle",
-          children: YY("shaderPackListing:publishTitle")
-        }), (0, aY.jsx)(RY.ShaderPackPublishForm, {
+          children: TT("shaderPackListing:publishTitle")
+        }), (0, FT.jsx)(WT.ShaderPackPublishForm, {
           existing: null,
-          onPublished: YY => {
-            rY((0, gY.Y)(YY.packId), {
+          onPublished: TT => {
+            oT((0, BT.ab)(TT.packId), {
               replace: !0
             })
           }
@@ -314,131 +314,131 @@ export const modules = {
       })
     }
   },
-  6123: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => sY,
-      e: () => iY,
-      f: () => uY,
-      h: () => yY
+  6059: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => LT,
+      e: () => xT,
+      g: () => DT,
+      i: () => cT
     });
-    var FY = DY(61),
-      AY = DY(6112),
-      IY = DY(1471),
-      RY = DY(6108),
-      OY = DY(6128),
-      gY = DY(1152);
-    const aY = "shaderPackListingView",
-      vY = "shaderPackListingFilterOpen";
+    var iT = IT(46),
+      zT = IT(6045),
+      kT = IT(1451),
+      WT = IT(6042),
+      XT = IT(6062),
+      BT = IT(1110);
+    const FT = "shaderPackListingView",
+      ST = "shaderPackListingFilterOpen";
 
-    function uY() {
-      var YY;
-      const [rY, DY] = (0, OY.e)(aY, AY.J[0]);
-      return [null !== (YY = AY.J.find((YY => YY === rY))) && void 0 !== YY ? YY : AY.J[0], DY]
+    function DT() {
+      var TT;
+      const [oT, IT] = (0, XT.c)(FT, zT.J[0]);
+      return [null !== (TT = zT.J.find((TT => TT === oT))) && void 0 !== TT ? TT : zT.J[0], IT]
     }
 
-    function sY() {
-      (0, FY.useEffect)((() => () => {
-        window.location.pathname.startsWith(RY.R) || (0, RY.l)()
+    function LT() {
+      (0, iT.useEffect)((() => () => {
+        window.location.pathname.startsWith(WT.V) || (0, WT.m)()
       }), [])
     }
 
-    function iY() {
-      return (0, OY.e)(vY, !1)
+    function xT() {
+      return (0, XT.c)(ST, !1)
     }
 
-    function yY() {
+    function cT() {
       const {
-        userContext: YY,
-        isUserContextUpdating: rY
-      } = (0, gY.d)(), [DY, AY] = (0, FY.useState)(null), RY = (0, FY.useRef)(new Set);
+        userContext: TT,
+        isUserContextUpdating: oT
+      } = (0, BT.b)(), [IT, zT] = (0, iT.useState)(null), WT = (0, iT.useRef)(new Set);
 
-      function OY(YY, rY) {
-        AY((DY => {
-          const FY = new Set(DY);
-          return rY ? FY.add(YY) : FY.delete(YY), FY
+      function XT(TT, oT) {
+        zT((IT => {
+          const iT = new Set(IT);
+          return oT ? iT.add(TT) : iT.delete(TT), iT
         }))
       }
-      return (0, FY.useEffect)((() => {
-        if (rY) return;
-        let DY = !1;
-        return IY.e.getFavouriteShaderPacks(YY).then((YY => {
-          DY || AY(new Set(YY))
-        })).catch((YY => {
-          console.error("Failed to get favourite shader packs", YY), DY || AY(new Set)
+      return (0, iT.useEffect)((() => {
+        if (oT) return;
+        let IT = !1;
+        return kT.e.getFavouriteShaderPacks(TT).then((TT => {
+          IT || zT(new Set(TT))
+        })).catch((TT => {
+          console.error("Failed to get favourite shader packs", TT), IT || zT(new Set)
         })), () => {
-          DY = !0
+          IT = !0
         }
-      }), [YY, rY]), {
-        isFavourite: YY => null === DY ? null : DY.has(YY),
-        toggle: function(rY) {
-          if (null === DY || RY.current.has(rY)) return;
-          RY.current.add(rY);
-          const FY = !DY.has(rY);
-          OY(rY, FY), (FY ? IY.e.favouriteShaderPack(YY, rY) : IY.e.unfavouriteShaderPack(YY, rY)).catch((YY => {
-            console.error("Failed to change a favourite shader pack", YY), OY(rY, !FY)
+      }), [TT, oT]), {
+        isFavourite: TT => null === IT ? null : IT.has(TT),
+        toggle: function(oT) {
+          if (null === IT || WT.current.has(oT)) return;
+          WT.current.add(oT);
+          const iT = !IT.has(oT);
+          XT(oT, iT), (iT ? kT.e.favouriteShaderPack(TT, oT) : kT.e.unfavouriteShaderPack(TT, oT)).catch((TT => {
+            console.error("Failed to change a favourite shader pack", TT), XT(oT, !iT)
           })).finally((() => {
-            RY.current.delete(rY)
+            WT.current.delete(oT)
           }))
         }
       }
     }
   },
-  6108: (YY, rY, DY) => {
-    DY.d(rY, {
-      B: () => WY,
-      C: () => cY,
-      E: () => vY,
-      I: () => HY,
-      J: () => QY,
-      N: () => JY,
-      Q: () => hY,
-      R: () => RY,
-      V: () => dY,
-      Y: () => gY,
-      ab: () => OY,
-      bb: () => fY,
-      e: () => EY,
-      eb: () => jY,
-      fb: () => mY,
-      h: () => NY,
-      j: () => oY,
-      jb: () => KY,
-      l: () => sY,
-      o: () => uY,
-      q: () => zY,
-      s: () => iY,
-      u: () => ZY,
-      y: () => MY,
-      z: () => yY
+  6042: (TT, oT, IT) => {
+    IT.d(oT, {
+      A: () => nT,
+      D: () => cT,
+      G: () => rT,
+      I: () => ET,
+      K: () => ST,
+      L: () => CT,
+      N: () => KT,
+      P: () => HT,
+      S: () => QT,
+      V: () => WT,
+      Y: () => OT,
+      ab: () => BT,
+      d: () => AT,
+      db: () => XT,
+      f: () => uT,
+      fb: () => aT,
+      i: () => MT,
+      jb: () => YT,
+      kb: () => gT,
+      m: () => LT,
+      mb: () => fT,
+      p: () => DT,
+      t: () => jT,
+      u: () => xT,
+      x: () => JT
     });
-    var FY = DY(6112),
-      AY = DY(183),
-      IY = DY(4122);
-    const RY = "/shader-packs",
-      OY = `${RY}/publish`;
+    var iT = IT(6045),
+      zT = IT(159),
+      kT = IT(4074);
+    const WT = "/shader-packs",
+      XT = `${WT}/publish`;
 
-    function gY(YY) {
-      return `${RY}/${encodeURIComponent(YY)}`
+    function BT(TT) {
+      return `${WT}/${encodeURIComponent(TT)}`
     }
-    let aY = null;
+    let FT = null;
 
-    function vY(YY) {
-      aY = YY
-    }
-
-    function uY() {
-      return aY
+    function ST(TT) {
+      FT = TT
     }
 
-    function sY() {
-      aY = null
+    function DT() {
+      return FT
     }
 
-    function iY(YY) {
-      return YY.playerHasRank("developer") || YY.playerHasRank("admin")
+    function LT() {
+      FT = null
     }
-    const yY = ["terrain", "water", "models", "sunShadows", "strict"],
-      QY = {
+
+    function xT(TT) {
+      return TT.playerHasRank("developer") || TT.playerHasRank("admin")
+    }
+    const cT = ["terrain", "water", "models", "sunShadows", "strict"],
+      KT = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -446,89 +446,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function oY(YY, rY) {
-      return YY.withFeatures.includes(rY) ? "with" : YY.withoutFeatures.includes(rY) ? "without" : null
+    function MT(TT, oT) {
+      return TT.withFeatures.includes(oT) ? "with" : TT.withoutFeatures.includes(oT) ? "without" : null
     }
 
-    function WY(YY) {
-      return null === YY ? "with" : "with" === YY ? "without" : null
+    function rT(TT) {
+      return null === TT ? "with" : "with" === TT ? "without" : null
     }
 
-    function EY(YY) {
-      return "with" === YY ? "only" : null === YY ? "include" : void 0
+    function AT(TT) {
+      return "with" === TT ? "only" : null === TT ? "include" : void 0
     }
 
-    function mY(YY, rY) {
-      const DY = oY(YY, rY),
-        FY = YY => YY.filter((YY => YY !== rY));
+    function gT(TT, oT) {
+      const IT = MT(TT, oT),
+        iT = TT => TT.filter((TT => TT !== oT));
       return {
-        withFeatures: null === DY ? [...YY.withFeatures, rY] : FY(YY.withFeatures),
-        withoutFeatures: "with" === DY ? [...YY.withoutFeatures, rY] : FY(YY.withoutFeatures)
+        withFeatures: null === IT ? [...TT.withFeatures, oT] : iT(TT.withFeatures),
+        withoutFeatures: "with" === IT ? [...TT.withoutFeatures, oT] : iT(TT.withoutFeatures)
       }
     }
-    const VY = "section",
-      SY = "sort",
-      lY = "filters",
-      TY = "q",
-      eY = "banned",
-      NY = "popular",
-      BY = "strict";
+    const hT = "section",
+      wT = "sort",
+      mT = "filters",
+      eT = "q",
+      RT = "banned",
+      uT = "popular",
+      vT = "strict";
 
-    function cY(YY) {
-      var rY, DY, AY;
-      const RY = YY.get(VY),
-        OY = (null !== (rY = YY.get(lY)) && void 0 !== rY ? rY : BY).split(","),
-        gY = YY.get(eY);
+    function ET(TT) {
+      var oT, IT, zT;
+      const WT = TT.get(hT),
+        XT = (null !== (oT = TT.get(mT)) && void 0 !== oT ? oT : vT).split(","),
+        BT = TT.get(RT);
       return {
-        section: "favourites" === RY || "mine" === RY ? RY : "explore",
-        sort: null !== (DY = FY.A.find((rY => rY === YY.get(SY)))) && void 0 !== DY ? DY : NY,
-        withFeatures: yY.filter((YY => OY.includes(YY) && !OY.includes(`-${YY}`))),
-        withoutFeatures: yY.filter((YY => OY.includes(`-${YY}`))),
-        searchQuery: (null === (AY = YY.get(TY)) || void 0 === AY ? void 0 : AY.slice(0, FY.L)) || null,
-        pageNumber: (0, IY.i)(YY.get(IY.e)),
-        banned: "only" === gY ? "with" : "include" === gY ? null : "without"
+        section: "favourites" === WT || "mine" === WT ? WT : "explore",
+        sort: null !== (IT = iT.A.find((oT => oT === TT.get(wT)))) && void 0 !== IT ? IT : uT,
+        withFeatures: cT.filter((TT => XT.includes(TT) && !XT.includes(`-${TT}`))),
+        withoutFeatures: cT.filter((TT => XT.includes(`-${TT}`))),
+        searchQuery: (null === (zT = TT.get(eT)) || void 0 === zT ? void 0 : zT.slice(0, iT.Q)) || null,
+        pageNumber: (0, kT.i)(TT.get(kT.e)),
+        banned: "only" === BT ? "with" : "include" === BT ? null : "without"
       }
     }
 
-    function KY(YY, rY) {
-      var DY;
-      const FY = CY(rY);
-      (0, IY.l)(YY, VY, "explore" === rY.section ? null : rY.section), (0, IY.l)(YY, SY, rY.sort === NY ? null : rY.sort), (0, IY.l)(YY, lY, FY === BY ? null : FY), (0, IY.l)(YY, TY, rY.searchQuery), (0, IY.l)(YY, eY, null !== (DY = EY(rY.banned)) && void 0 !== DY ? DY : null), (0, IY.n)(YY, rY.pageNumber)
+    function fT(TT, oT) {
+      var IT;
+      const iT = UT(oT);
+      (0, kT.l)(TT, hT, "explore" === oT.section ? null : oT.section), (0, kT.l)(TT, wT, oT.sort === uT ? null : oT.sort), (0, kT.l)(TT, mT, iT === vT ? null : iT), (0, kT.l)(TT, eT, oT.searchQuery), (0, kT.l)(TT, RT, null !== (IT = AT(oT.banned)) && void 0 !== IT ? IT : null), (0, kT.n)(TT, oT.pageNumber)
     }
 
-    function HY(YY) {
-      const rY = new URLSearchParams;
-      return KY(rY, {
+    function CT(TT) {
+      const oT = new URLSearchParams;
+      return fT(oT, {
         section: "explore",
-        sort: NY,
-        withFeatures: "strict" === YY ? [YY] : [YY, "strict"],
+        sort: uT,
+        withFeatures: "strict" === TT ? [TT] : [TT, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${RY}?${rY.toString()}`
+      }), `${WT}?${oT.toString()}`
     }
 
-    function zY(YY) {
-      return CY(YY) === BY
+    function jT(TT) {
+      return UT(TT) === vT
     }
 
-    function ZY(YY) {
-      return null !== YY.searchQuery || "with" === YY.banned || CY(YY) !== BY
+    function JT(TT) {
+      return null !== TT.searchQuery || "with" === TT.banned || UT(TT) !== vT
     }
 
-    function CY(YY) {
-      return yY.flatMap((rY => {
-        const DY = oY(YY, rY);
-        return "with" === DY ? [rY] : "without" === DY ? [`-${rY}`] : []
+    function UT(TT) {
+      return cT.flatMap((oT => {
+        const IT = MT(TT, oT);
+        return "with" === IT ? [oT] : "without" === IT ? [`-${oT}`] : []
       })).join(",")
     }
-    const fY = {
+    const aT = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      jY = {
+      YT = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -536,106 +536,106 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function hY(YY) {
-      return Math.round(100 * Math.max(0, 1 - 1 / YY))
+    function QT(TT) {
+      return Math.round(100 * Math.max(0, 1 - 1 / TT))
     }
 
-    function dY(YY, rY, DY, AY) {
-      const IY = [];
-      YY.isBanned && IY.push({
+    function OT(TT, oT, IT, zT) {
+      const kT = [];
+      TT.isBanned && kT.push({
         tone: "warning",
-        text: AY("shaderPackListing:ownerBanned"),
+        text: zT("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: RY
-      } = YY;
-      if (null === YY.brokenError || RY && !RY.error || IY.push({
+        pending: WT
+      } = TT;
+      if (null === TT.brokenError || WT && !WT.error || kT.push({
           tone: "warning",
-          text: AY("shaderPackListing:ownerBroken"),
-          detail: YY.brokenError
-        }), null !== RY && void 0 !== RY && RY.error) IY.push({
+          text: zT("shaderPackListing:ownerBroken"),
+          detail: TT.brokenError
+        }), null !== WT && void 0 !== WT && WT.error) kT.push({
         tone: "warning",
-        text: AY(rY ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, FY.m)(RY.error) ? null : RY.error
+        text: zT(oT ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, iT.l)(WT.error) ? null : WT.error
       });
-      else if (RY) {
-        const YY = null === RY.renderNotBefore ? 0 : RY.renderNotBefore - DY,
-          FY = String(Math.ceil(YY / 6e4)),
-          OY = AY(rY ? YY > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : YY > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: FY
+      else if (WT) {
+        const TT = null === WT.renderNotBefore ? 0 : WT.renderNotBefore - IT,
+          iT = String(Math.ceil(TT / 6e4)),
+          XT = zT(oT ? TT > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : TT > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: iT
           });
-        IY.push({
+        kT.push({
           tone: "info",
-          text: OY,
+          text: XT,
           detail: null
         })
       }
-      return YY.listed || IY.push({
+      return TT.listed || kT.push({
         tone: "info",
-        text: AY("shaderPackListing:ownerUnlisted"),
+        text: zT("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), IY
+      }), kT
     }
 
-    function JY(YY) {
-      return Math.max(1, Math.round(YY / 1024))
+    function HT(TT) {
+      return Math.max(1, Math.round(TT / 1024))
     }
 
-    function MY(YY, rY, DY) {
-      return YY instanceof AY.e && YY.errorMessageForUser ? YY.errorMessageForUser : rY(DY)
+    function nT(TT, oT, IT) {
+      return TT instanceof zT.d && TT.errorMessageForUser ? TT.errorMessageForUser : oT(IT)
     }
   },
-  6128: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => IY
+  6062: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT
     });
-    var FY = DY(61),
-      AY = DY(40);
+    var iT = IT(46),
+      zT = IT(26);
 
-    function IY(YY, rY) {
-      var DY;
-      const [IY, RY] = (0, FY.useState)(null !== (DY = AY.m.getItem(YY)) && void 0 !== DY ? DY : rY);
-      return [IY, rY => {
-        AY.m.setItem(YY, rY), RY(rY)
+    function kT(TT, oT) {
+      var IT;
+      const [kT, WT] = (0, iT.useState)(null !== (IT = zT.e.getItem(TT)) && void 0 !== IT ? IT : oT);
+      return [kT, oT => {
+        zT.e.setItem(TT, oT), WT(oT)
       }]
     }
   },
-  6230: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY,
-      e: () => IY
+  6158: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT,
+      e: () => kT
     });
-    var FY = DY(40);
-    const AY = "shaderPack";
-    async function IY() {
-      var YY;
-      let rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (YY = await FY.i.getItem(AY, rY)) && void 0 !== YY ? YY : null
+    var iT = IT(26);
+    const zT = "shaderPack";
+    async function kT() {
+      var TT;
+      let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (TT = await iT.c.getItem(zT, oT)) && void 0 !== TT ? TT : null
     }
   },
-  6112: (YY, rY, DY) => {
-    DY.d(rY, {
-      A: () => IY,
-      D: () => OY,
-      G: () => RY,
-      J: () => FY,
-      K: () => sY,
-      L: () => vY,
-      P: () => mY,
-      S: () => uY,
-      V: () => aY,
-      d: () => iY,
-      e: () => QY,
-      i: () => yY,
-      m: () => EY,
-      q: () => SY,
-      t: () => gY,
-      u: () => AY,
-      x: () => VY
+  6045: (TT, oT, IT) => {
+    IT.d(oT, {
+      A: () => kT,
+      E: () => XT,
+      I: () => WT,
+      J: () => iT,
+      N: () => LT,
+      Q: () => ST,
+      T: () => gT,
+      U: () => DT,
+      Y: () => FT,
+      c: () => xT,
+      g: () => KT,
+      i: () => cT,
+      l: () => AT,
+      o: () => wT,
+      s: () => BT,
+      v: () => zT,
+      y: () => hT
     });
-    const FY = ["forest", "desert", "water", "night", "cave"];
-    const AY = {
+    const iT = ["forest", "desert", "water", "night", "cave"];
+    const zT = {
         full: {
           width: 3840,
           height: 2160
@@ -649,43 +649,43 @@ export const modules = {
           height: 360
         }
       },
-      IY = ["popular", "updated", "newest"],
-      RY = 3,
-      OY = 32,
-      gY = 300;
+      kT = ["popular", "updated", "newest"],
+      WT = 3,
+      XT = 32,
+      BT = 300;
 
-    function aY(YY, rY) {
-      return YY.slice(0, rY).replace(/[\uD800-\uDBFF]$/, "")
+    function FT(TT, oT) {
+      return TT.slice(0, oT).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const vY = 64,
-      uY = 512,
-      sY = 18e5;
-    const iY = "Bloxdhub",
-      yY = "https://bloxdhub.com/shaders";
+    const ST = 64,
+      DT = 512,
+      LT = 18e5;
+    const xT = "Bloxdhub",
+      cT = "https://bloxdhub.com/shaders";
 
-    function QY(YY) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(YY)}`
+    function KT(TT) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(TT)}`
     }
-    const oY = "Screenshot generation failed.",
-      WY = "Its screenshots couldn't be generated:";
+    const MT = "Screenshot generation failed.",
+      rT = "Its screenshots couldn't be generated:";
 
-    function EY(YY) {
-      var rY;
-      return YY === oY || null !== (rY = null === YY || void 0 === YY ? void 0 : YY.startsWith(WY)) && void 0 !== rY && rY
-    }
-
-    function mY(YY, rY) {
-      return `shaderPacks/${YY}/${rY}.json`
+    function AT(TT) {
+      var oT;
+      return TT === MT || null !== (oT = null === TT || void 0 === TT ? void 0 : TT.startsWith(rT)) && void 0 !== oT && oT
     }
 
-    function VY(YY, rY, DY, FY) {
-      return null === rY.renderId ? SY(YY, rY.baselineVersion, DY, FY) : `${YY}/${function(YY,rY,DY,FY){return`shaderPacks/${YY}/${rY}/${DY}-${FY}.webp`}(rY.packId,rY.renderId,DY,FY)}`
+    function gT(TT, oT) {
+      return `shaderPacks/${TT}/${oT}.json`
     }
 
-    function SY(YY, rY, DY, FY) {
-      return `${YY}/${function(YY,rY,DY){return`shaderPacks/baseline/${YY}/${rY}-${DY}.webp`}(rY,DY,FY)}`
+    function hT(TT, oT, IT, iT) {
+      return null === oT.renderId ? wT(TT, oT.baselineVersion, IT, iT) : `${TT}/${function(TT,oT,IT,iT){return`shaderPacks/${TT}/${oT}/${IT}-${iT}.webp`}(oT.packId,oT.renderId,IT,iT)}`
+    }
+
+    function wT(TT, oT, IT, iT) {
+      return `${TT}/${function(TT,oT,IT){return`shaderPacks/baseline/${TT}/${oT}-${IT}.webp`}(oT,IT,iT)}`
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

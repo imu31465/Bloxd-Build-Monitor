@@ -1,38 +1,38 @@
 export const id = 56;
 export const ids = [56];
 export const modules = {
-  38003: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY,
-      e: () => IY
+  37629: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => zT,
+      g: () => kT
     });
-    const FY = new WeakMap;
+    const iT = new WeakMap;
 
-    function AY(YY, rY) {
-      return FY.set(YY, rY), YY
+    function zT(TT, oT) {
+      return iT.set(TT, oT), TT
     }
 
-    function IY(YY) {
-      var rY;
-      return null !== (rY = FY.get(YY)) && void 0 !== rY ? rY : null
+    function kT(TT) {
+      var oT;
+      return null !== (oT = iT.get(TT)) && void 0 !== oT ? oT : null
     }
   },
-  38025: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => OY
+  37648: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT
     });
-    var FY = DY(1231);
+    var iT = IT(1193);
 
-    function AY(YY) {
-      const rY = /(\d*\.?\d+)px/.exec(YY);
-      return rY ? Number(rY[1]) : null
+    function zT(TT) {
+      const oT = /(\d*\.?\d+)px/.exec(TT);
+      return oT ? Number(oT[1]) : null
     }
 
-    function IY(YY) {
-      return YY.split(/[\s,]+/).pop()
+    function kT(TT) {
+      return TT.split(/[\s,]+/).pop()
     }
-    let RY = !1;
-    const OY = {
+    let WT = !1;
+    const XT = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,569 +43,569 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(YY, rY, FY, OY, gY, aY) {
-        if (gY <= 0 || aY <= 0 || this.fontSize <= 0) return {
+      drawText: function(TT, oT, iT, XT, BT, FT) {
+        if (BT <= 0 || FT <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: vY,
-          fontVariant: uY,
-          fontWeight: sY,
-          fontSize: iY,
-          font: yY
-        } = this, QY = [vY, uY, sY, `${iY}px`, yY].filter(Boolean).join(" "), oY = [
-          [sY, `${iY}px`, IY(yY)].filter(Boolean).join(" "), `${iY}px sans-serif`
-        ], WY = YY.font, EY = function(YY, rY, DY) {
-          for (const FY of rY) {
-            YY.font = FY;
-            const rY = AY(YY.font),
-              RY = IY(FY);
-            if (null !== rY && Math.abs(rY - DY) <= .5 && YY.font.toLowerCase().includes(RY.toLowerCase())) return FY
+          fontStyle: ST,
+          fontVariant: DT,
+          fontWeight: LT,
+          fontSize: xT,
+          font: cT
+        } = this, KT = [ST, DT, LT, `${xT}px`, cT].filter(Boolean).join(" "), MT = [
+          [LT, `${xT}px`, kT(cT)].filter(Boolean).join(" "), `${xT}px sans-serif`
+        ], rT = TT.font, AT = function(TT, oT, IT) {
+          for (const iT of oT) {
+            TT.font = iT;
+            const oT = zT(TT.font),
+              WT = kT(iT);
+            if (null !== oT && Math.abs(oT - IT) <= .5 && TT.font.toLowerCase().includes(WT.toLowerCase())) return iT
           }
           return null
-        }(YY, [QY, ...oY], iY);
-        EY !== QY && function(YY, rY, FY) {
-          RY || (RY = !0, Promise.resolve().then((() => DY(1113))).then((DY => {
+        }(TT, [KT, ...MT], xT);
+        AT !== KT && function(TT, oT, iT) {
+          WT || (WT = !0, Promise.resolve().then((() => IT(1071))).then((IT => {
             let {
-              jQ: AY
-            } = DY;
-            AY(new Error("A canvas didn't take canvasTxt's font"), {
-              font: YY,
-              Mi: rY,
-              drawnWith: null !== FY && void 0 !== FY ? FY : "the kept font, scaled"
+              JK: zT
+            } = IT;
+            zT(new Error("A canvas didn't take canvasTxt's font"), {
+              font: TT,
+              qx: oT,
+              drawnWith: null !== iT && void 0 !== iT ? iT : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(QY, WY, EY);
-        const mY = AY(YY.font);
-        if (null === EY && null !== mY && mY > 0) {
-          const DY = iY / mY;
-          YY.save();
+        }(KT, rT, AT);
+        const gT = zT(TT.font);
+        if (null === AT && null !== gT && gT > 0) {
+          const IT = xT / gT;
+          TT.save();
           try {
-            return YY.scale(DY, DY), {
-              height: this.drawLines(YY, rY, FY / DY, OY / DY, gY / DY, aY / DY, mY).height * DY
+            return TT.scale(IT, IT), {
+              height: this.drawLines(TT, oT, iT / IT, XT / IT, BT / IT, FT / IT, gT).height * IT
             }
           } finally {
-            YY.restore()
+            TT.restore()
           }
         }
-        return this.drawLines(YY, rY, FY, OY, gY, aY, iY)
+        return this.drawLines(TT, oT, iT, XT, BT, FT, xT)
       },
-      drawLines: function(YY, rY, DY, AY, IY, RY, OY) {
-        const gY = DY + IY,
-          aY = AY + RY;
-        let vY, uY = AY + RY / 2 + OY / 2;
-        "right" === this.align ? (vY = gY, YY.textAlign = "right") : "left" === this.align ? (vY = DY, YY.textAlign = "left") : (vY = DY + IY / 2, YY.textAlign = "center");
-        for (const FY of rY) {
-          YY.measureText(FY).width >= IY && (rY = rY.replace(FY, ""))
+      drawLines: function(TT, oT, IT, zT, kT, WT, XT) {
+        const BT = IT + kT,
+          FT = zT + WT;
+        let ST, DT = zT + WT / 2 + XT / 2;
+        "right" === this.align ? (ST = BT, TT.textAlign = "right") : "left" === this.align ? (ST = IT, TT.textAlign = "left") : (ST = IT + kT / 2, TT.textAlign = "center");
+        for (const iT of oT) {
+          TT.measureText(iT).width >= kT && (oT = oT.replace(iT, ""))
         }
-        rY = (0, FY.U)(rY);
-        const sY = [],
-          iY = rY.split("\n"),
-          yY = this.justify ? YY.measureText("\u200a").width : 0;
-        iY.forEach((rY => {
-          let DY = YY.measureText(rY).width;
-          if (DY <= IY) sY.push(rY);
+        oT = (0, iT.U)(oT);
+        const LT = [],
+          xT = oT.split("\n"),
+          cT = this.justify ? TT.measureText("\u200a").width : 0;
+        xT.forEach((oT => {
+          let IT = TT.measureText(oT).width;
+          if (IT <= kT) LT.push(oT);
           else {
-            let FY = rY;
-            const AY = IY;
-            let RY, OY, gY;
-            for (DY = YY.measureText(FY).width; DY > AY;) {
-              for (RY = 0, OY = 0, gY = ""; OY < AY;) RY++, gY = FY.substr(0, RY), OY = YY.measureText(gY).width;
-              RY--, gY = gY.substr(0, RY);
-              const rY = RY;
-              if (" " !== FY.substr(RY, 1)) {
+            let iT = oT;
+            const zT = kT;
+            let WT, XT, BT;
+            for (IT = TT.measureText(iT).width; IT > zT;) {
+              for (WT = 0, XT = 0, BT = ""; XT < zT;) WT++, BT = iT.substr(0, WT), XT = TT.measureText(BT).width;
+              WT--, BT = BT.substr(0, WT);
+              const oT = WT;
+              if (" " !== iT.substr(WT, 1)) {
                 for (;
-                  " " !== FY.substr(RY, 1) && 0 !== RY;) RY--;
-                0 === RY && (RY = rY), gY = FY.substr(0, RY)
+                  " " !== iT.substr(WT, 1) && 0 !== WT;) WT--;
+                0 === WT && (WT = oT), BT = iT.substr(0, WT)
               }
-              gY = this.justify ? this.justifyLine(YY, gY, yY, "\u200a", IY) : gY, FY = FY.substr(RY), DY = YY.measureText(FY).width, sY.push(gY)
+              BT = this.justify ? this.justifyLine(TT, BT, cT, "\u200a", kT) : BT, iT = iT.substr(WT), IT = TT.measureText(iT).width, LT.push(BT)
             }
-            DY > 0 && sY.push(FY)
+            IT > 0 && LT.push(iT)
           }
         }));
-        const QY = this.lineHeight ? this.lineHeight : this.getTextHeight(YY, rY),
-          oY = QY * (sY.length - 1),
-          WY = oY / 2;
-        let EY = AY;
-        "top" === this.vAlign ? uY = AY + OY : "bottom" === this.vAlign ? (uY = aY - oY, EY = aY) : (EY = AY + RY / 2, uY -= WY), sY.forEach((rY => {
-          rY = rY.trim(), YY.fillText(rY, vY, uY), uY += QY
-        })), this.debug && (YY.lineWidth = 3, YY.strokeStyle = "#00909e", YY.strokeRect(DY, AY, IY, RY), YY.lineWidth = 2, YY.strokeStyle = "#f6d743", YY.beginPath(), YY.moveTo(vY, AY), YY.lineTo(vY, aY), YY.stroke(), YY.strokeStyle = "#ff6363", YY.beginPath(), YY.moveTo(DY, EY), YY.lineTo(gY, EY), YY.stroke());
+        const KT = this.lineHeight ? this.lineHeight : this.getTextHeight(TT, oT),
+          MT = KT * (LT.length - 1),
+          rT = MT / 2;
+        let AT = zT;
+        "top" === this.vAlign ? DT = zT + XT : "bottom" === this.vAlign ? (DT = FT - MT, AT = FT) : (AT = zT + WT / 2, DT -= rT), LT.forEach((oT => {
+          oT = oT.trim(), TT.fillText(oT, ST, DT), DT += KT
+        })), this.debug && (TT.lineWidth = 3, TT.strokeStyle = "#00909e", TT.strokeRect(IT, zT, kT, WT), TT.lineWidth = 2, TT.strokeStyle = "#f6d743", TT.beginPath(), TT.moveTo(ST, zT), TT.lineTo(ST, FT), TT.stroke(), TT.strokeStyle = "#ff6363", TT.beginPath(), TT.moveTo(IT, AT), TT.lineTo(BT, AT), TT.stroke());
         return {
-          height: oY + QY
+          height: MT + KT
         }
       },
-      getTextHeight: function(YY, rY) {
-        const DY = YY.textBaseline;
-        YY.textBaseline = "bottom";
+      getTextHeight: function(TT, oT) {
+        const IT = TT.textBaseline;
+        TT.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: FY
-        } = YY.measureText(rY);
-        return YY.textBaseline = DY, FY
+          actualBoundingBoxAscent: iT
+        } = TT.measureText(oT);
+        return TT.textBaseline = IT, iT
       },
-      justifyLine: function(YY, rY, DY, FY, AY) {
-        const IY = rY.trim(),
-          RY = YY.measureText(IY).width,
-          OY = IY.split(/\s+/).length - 1,
-          gY = Math.floor((AY - RY) / DY);
-        if (OY <= 0 || gY <= 0) return IY;
-        const aY = Math.floor(gY / OY);
-        let vY = gY - OY * aY,
-          uY = [];
-        for (let sY = 0; sY < aY; sY++) uY.push(FY);
-        uY = uY.join("");
-        return IY.replace(/\s+/g, (YY => {
-          const rY = vY > 0 ? uY + FY : uY;
-          return vY--, YY + rY
+      justifyLine: function(TT, oT, IT, iT, zT) {
+        const kT = oT.trim(),
+          WT = TT.measureText(kT).width,
+          XT = kT.split(/\s+/).length - 1,
+          BT = Math.floor((zT - WT) / IT);
+        if (XT <= 0 || BT <= 0) return kT;
+        const FT = Math.floor(BT / XT);
+        let ST = BT - XT * FT,
+          DT = [];
+        for (let LT = 0; LT < FT; LT++) DT.push(iT);
+        DT = DT.join("");
+        return kT.replace(/\s+/g, (TT => {
+          const oT = ST > 0 ? DT + iT : DT;
+          return ST--, TT + oT
         }))
       }
     }
   },
-  38029: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => QY,
-      e: () => yY,
-      h: () => sY,
-      j: () => vY,
-      k: () => uY
+  37654: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => KT,
+      f: () => cT,
+      j: () => LT,
+      m: () => ST,
+      q: () => DT
     });
-    var FY = DY(3815),
-      AY = DY(341);
-    const IY = 1024,
-      RY = 1536,
-      OY = 2 * FY.l + 1,
-      gY = new Intl.NumberFormat("en", {
+    var iT = IT(3811),
+      zT = IT(314);
+    const kT = 1024,
+      WT = 1536,
+      XT = 2 * iT.p + 1,
+      BT = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      aY = 1.5;
+      FT = 1.5;
 
-    function vY(YY, rY, DY) {
-      if ("string" !== typeof YY) return rY;
+    function ST(TT, oT, IT) {
+      if ("string" !== typeof TT) return oT;
       try {
-        const DY = JSON.parse(YY);
-        return DY && "object" === typeof DY ? DY : rY
-      } catch (FY) {
-        return void 0 !== DY && console.error(`Couldn't parse ${DY}`, FY), rY
+        const IT = JSON.parse(TT);
+        return IT && "object" === typeof IT ? IT : oT
+      } catch (iT) {
+        return void 0 !== IT && console.error(`Couldn't parse ${IT}`, iT), oT
       }
     }
 
-    function uY(YY) {
-      return vY(YY, null, "a leaderboard's rows")
+    function DT(TT) {
+      return ST(TT, null, "a leaderboard's rows")
     }
 
-    function sY(YY, rY) {
-      var DY, FY;
-      return null !== rY && void 0 !== rY ? rY : {
-        status: null !== (DY = YY.status) && void 0 !== DY ? DY : "loading",
-        entries: null !== (FY = YY.entries) && void 0 !== FY ? FY : []
+    function LT(TT, oT) {
+      var IT, iT;
+      return null !== oT && void 0 !== oT ? oT : {
+        status: null !== (IT = TT.status) && void 0 !== IT ? IT : "loading",
+        entries: null !== (iT = TT.entries) && void 0 !== iT ? iT : []
       }
     }
 
-    function iY(YY, rY) {
-      return "number" === typeof YY && Number.isFinite(YY) && YY > 0 ? YY : rY
+    function xT(TT, oT) {
+      return "number" === typeof TT && Number.isFinite(TT) && TT > 0 ? TT : oT
     }
 
-    function yY(YY, rY) {
-      const DY = iY(YY.size, 1);
-      let FY = iY(YY.width, iY(2.5 * DY, 2.5)),
-        AY = iY(YY.height, iY(3.75 * DY, 3.75));
-      Number.isFinite(IY * AY / FY) && Number.isFinite(RY * FY / AY) || (FY = 2.5, AY = 3.75);
-      const OY = AY / FY,
-        gY = Math.max(1, Math.min(IY, rY / OY));
+    function cT(TT, oT) {
+      const IT = xT(TT.size, 1);
+      let iT = xT(TT.width, xT(2.5 * IT, 2.5)),
+        zT = xT(TT.height, xT(3.75 * IT, 3.75));
+      Number.isFinite(kT * zT / iT) && Number.isFinite(WT * iT / zT) || (iT = 2.5, zT = 3.75);
+      const XT = zT / iT,
+        BT = Math.max(1, Math.min(kT, oT / XT));
       return {
-        width: FY,
-        height: AY,
-        layoutWidth: Math.max(IY, RY / OY),
-        layoutHeight: Math.max(RY, IY * OY),
-        pixelWidth: Math.round(gY),
-        pixelHeight: Math.round(Math.max(1, Math.min(rY, gY * OY)))
+        width: iT,
+        height: zT,
+        layoutWidth: Math.max(kT, WT / XT),
+        layoutHeight: Math.max(WT, kT * XT),
+        pixelWidth: Math.round(BT),
+        pixelHeight: Math.round(Math.max(1, Math.min(oT, BT * XT)))
       }
     }
 
-    function QY(YY, rY, DY, RY, vY, uY) {
-      YY.setTransform(1, 0, 0, 1, 0, 0), YY.fillStyle = AY.K.defaultNameTagBackground, YY.fillRect(0, 0, rY, DY), YY.scale(rY / RY.layoutWidth, DY / RY.layoutHeight), YY.translate((RY.layoutWidth - IY) / 2, 0),
-        function(YY, rY, DY, IY) {
-          var RY, vY, uY, sY;
+    function KT(TT, oT, IT, WT, ST, DT) {
+      TT.setTransform(1, 0, 0, 1, 0, 0), TT.fillStyle = zT.L.defaultNameTagBackground, TT.fillRect(0, 0, oT, IT), TT.scale(oT / WT.layoutWidth, IT / WT.layoutHeight), TT.translate((WT.layoutWidth - kT) / 2, 0),
+        function(TT, oT, IT, kT) {
+          var WT, ST, DT, LT;
           const {
-            top: iY,
-            around: yY,
-            showPlayerText: QY,
-            localPlayerDbId: EY
-          } = DY, {
-            whiteUiText: mY,
-            grayUiText: VY,
-            yellowUiText: SY
-          } = AY.K;
-          YY.textBaseline = "middle";
-          const lY = function(rY, DY, FY, AY, IY, RY) {
-              let OY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              YY.font = `bold ${AY}px 'Jetbrains Mono', monospace`, YY.fillStyle = IY, YY.textAlign = OY;
-              let gY = rY.replace(/[\r\n\t]/g, " ");
-              if (YY.measureText(gY).width > RY) {
-                for (; gY.length > 0 && YY.measureText(`${gY}\u2026`).width > RY;) gY = gY.slice(0, -1);
-                gY += "\u2026"
+            top: xT,
+            around: cT,
+            showPlayerText: KT,
+            localPlayerDbId: AT
+          } = IT, {
+            whiteUiText: gT,
+            grayUiText: hT,
+            yellowUiText: wT
+          } = zT.L;
+          TT.textBaseline = "middle";
+          const mT = function(oT, IT, iT, zT, kT, WT) {
+              let XT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              TT.font = `bold ${zT}px 'Jetbrains Mono', monospace`, TT.fillStyle = kT, TT.textAlign = XT;
+              let BT = oT.replace(/[\r\n\t]/g, " ");
+              if (TT.measureText(BT).width > WT) {
+                for (; BT.length > 0 && TT.measureText(`${BT}\u2026`).width > WT;) BT = BT.slice(0, -1);
+                BT += "\u2026"
               }
-              YY.fillText(gY, DY, FY)
+              TT.fillText(BT, IT, iT)
             },
-            TY = rY => {
-              YY.fillStyle = mY, YY.globalAlpha = .15, YY.fillRect(24, rY, 976, 2), YY.globalAlpha = 1
+            eT = oT => {
+              TT.fillStyle = gT, TT.globalAlpha = .15, TT.fillRect(24, oT, 976, 2), TT.globalAlpha = 1
             },
-            eY = null === EY ? null : (0, AY.nc)(EY),
-            NY = YY => null !== eY && YY.playerHash === eY,
-            BY = oY(iY.entries, FY.o),
-            cY = "ready" === iY.status && BY.length > 0,
-            KY = null === yY ? [] : oY(yY.entries, OY),
-            HY = BY.some(NY),
-            zY = null === yY ? null : function(YY) {
-              const rY = YY;
-              if (!rY || !Number.isFinite(rY.rank) || !Number.isFinite(rY.tied) || !Number.isFinite(rY.total)) return null;
-              return rY
-            }(yY.standing),
-            ZY = KY.find(NY),
-            CY = BY.find(NY),
-            fY = null === zY || void 0 === ZY ? null : {
-              value: ZY.value,
-              rank: zY.rank
+            RT = null === AT ? null : (0, zT._b)(AT),
+            uT = TT => null !== RT && TT.playerHash === RT,
+            vT = MT(xT.entries, iT.q),
+            ET = "ready" === xT.status && vT.length > 0,
+            fT = null === cT ? [] : MT(cT.entries, XT),
+            CT = vT.some(uT),
+            jT = null === cT ? null : function(TT) {
+              const oT = TT;
+              if (!oT || !Number.isFinite(oT.rank) || !Number.isFinite(oT.tied) || !Number.isFinite(oT.total)) return null;
+              return oT
+            }(cT.standing),
+            JT = fT.find(uT),
+            UT = vT.find(uT),
+            aT = null === jT || void 0 === JT ? null : {
+              value: JT.value,
+              rank: jT.rank
             },
-            jY = WY(BY, void 0 === CY || CY.value === (null === fY || void 0 === fY ? void 0 : fY.value) ? fY : null),
-            hY = WY(KY, fY),
-            dY = (YY, rY) => {
-              const DY = YY.findIndex(NY);
-              return DY >= 0 ? rY[DY] : null
+            YT = rT(vT, void 0 === UT || UT.value === (null === aT || void 0 === aT ? void 0 : aT.value) ? aT : null),
+            QT = rT(fT, aT),
+            OT = (TT, oT) => {
+              const IT = TT.findIndex(uT);
+              return IT >= 0 ? oT[IT] : null
             },
-            JY = null !== (RY = null !== (vY = null === zY || void 0 === zY ? void 0 : zY.rank) && void 0 !== vY ? vY : dY(KY, hY)) && void 0 !== RY ? RY : dY(BY, jY);
-          YY.font = "bold 34px 'Jetbrains Mono', monospace";
-          const MY = [...cY ? jY : [], ...HY ? [] : hY],
-            wY = Math.min(280, Math.max(0, ...MY.map((rY => YY.measureText(gY.format(rY)).width)))),
-            bY = wY <= 80,
-            XY = bY ? 80 : 32 + wY,
-            qY = bY ? 148 : XY + 28,
-            pY = 660 - qY;
-          lY(`TOP ${FY.o}  /  ALL TIME`, 24, 52, 28, VY, 976), lY(QY ? String(null !== (uY = rY.title) && void 0 !== uY ? uY : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, mY, 976), lY("RANK", 32, 174, 28, VY, qY - 40), lY("PLAYER", qY, 174, 28, VY, pY), lY(QY ? String(null !== (sY = rY.scoreLabel) && void 0 !== sY ? sY : "Score").slice(0, 24) : "Score", 992, 174, 28, VY, 304, "right"), TY(202);
-          const kY = (IY - 232) / (FY.o + aY + OY),
-            GY = 208 + FY.o * kY,
-            xY = GY + aY * kY,
-            nY = (rY, DY, FY, AY) => {
-              const IY = NY(rY);
-              YY.fillStyle = IY ? SY : mY, YY.globalAlpha = IY ? .15 : AY ? .035 : 0, YY.fillRect(24, FY - kY / 2 + 1, 976, kY - 2), YY.globalAlpha = 1;
-              const RY = IY ? SY : mY;
-              lY(gY.format(DY), XY, FY, 34, RY, bY ? 80 : wY, bY ? "center" : "right"), lY(QY ? String(rY.name).slice(0, 64) : "Player", qY, FY, 34, RY, pY);
-              const OY = gY.format(rY.value);
-              lY(YY.measureText(OY).width > 304 ? rY.value.toExponential(6) : OY, 992, FY, 34, RY, 304, "right")
+            HT = null !== (WT = null !== (ST = null === jT || void 0 === jT ? void 0 : jT.rank) && void 0 !== ST ? ST : OT(fT, QT)) && void 0 !== WT ? WT : OT(vT, YT);
+          TT.font = "bold 34px 'Jetbrains Mono', monospace";
+          const nT = [...ET ? YT : [], ...CT ? [] : QT],
+            qT = Math.min(280, Math.max(0, ...nT.map((oT => TT.measureText(BT.format(oT)).width)))),
+            ZT = qT <= 80,
+            lT = ZT ? 80 : 32 + qT,
+            sT = ZT ? 148 : lT + 28,
+            tT = 660 - sT;
+          mT(`TOP ${iT.q}  /  ALL TIME`, 24, 52, 28, hT, 976), mT(KT ? String(null !== (DT = oT.title) && void 0 !== DT ? DT : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, gT, 976), mT("RANK", 32, 174, 28, hT, sT - 40), mT("PLAYER", sT, 174, 28, hT, tT), mT(KT ? String(null !== (LT = oT.scoreLabel) && void 0 !== LT ? LT : "Score").slice(0, 24) : "Score", 992, 174, 28, hT, 304, "right"), eT(202);
+          const GT = (kT - 232) / (iT.q + FT + XT),
+            pT = 208 + iT.q * GT,
+            bT = pT + FT * GT,
+            yT = (oT, IT, iT, zT) => {
+              const kT = uT(oT);
+              TT.fillStyle = kT ? wT : gT, TT.globalAlpha = kT ? .15 : zT ? .035 : 0, TT.fillRect(24, iT - GT / 2 + 1, 976, GT - 2), TT.globalAlpha = 1;
+              const WT = kT ? wT : gT;
+              mT(BT.format(IT), lT, iT, 34, WT, ZT ? 80 : qT, ZT ? "center" : "right"), mT(KT ? String(oT.name).slice(0, 64) : "Player", sT, iT, 34, WT, tT);
+              const XT = BT.format(oT.value);
+              mT(TT.measureText(XT).width > 304 ? oT.value.toExponential(6) : XT, 992, iT, 34, WT, 304, "right")
             };
-          if (cY)
-            for (const [FY, AY] of BY.entries()) nY(AY, jY[FY], 208 + (FY + .5) * kY, FY % 2 === 0);
+          if (ET)
+            for (const [iT, zT] of vT.entries()) yT(zT, YT[iT], 208 + (iT + .5) * GT, iT % 2 === 0);
           else {
-            const YY = "error" === iY.status,
-              rY = YY ? "Couldn't load leaderboard" : "ready" === iY.status ? "No scores yet" : "Loading leaderboard\u2026",
-              DY = YY ? "Trying again shortly" : "ready" === iY.status ? "Be the first on the board!" : "Fetching the top players",
-              FY = (208 + GY) / 2;
-            lY(rY, 512, FY - 28, 40, YY ? AY.K.redUiText : mY, 960, "center"), lY(DY, 512, FY + 27, 30, VY, 960, "center")
+            const TT = "error" === xT.status,
+              oT = TT ? "Couldn't load leaderboard" : "ready" === xT.status ? "No scores yet" : "Loading leaderboard\u2026",
+              IT = TT ? "Trying again shortly" : "ready" === xT.status ? "Be the first on the board!" : "Fetching the top players",
+              iT = (208 + pT) / 2;
+            mT(oT, 512, iT - 28, 40, TT ? zT.L.redUiText : gT, 960, "center"), mT(IT, 512, iT + 27, 30, hT, 960, "center")
           }
-          const PY = GY + aY * kY / 2;
-          if (null === JY) TY(PY);
+          const NT = pT + FT * GT / 2;
+          if (null === HT) eT(NT);
           else {
-            const rY = null === zY ? 0 : zY.tied - 1,
-              DY = `YOUR RANK #${gY.format(JY)}${null===zY?"":` of ${gY.format(zY.total)}`}`;
-            YY.font = "bold 36px 'Jetbrains Mono', monospace";
-            const FY = Math.max(20, Math.min(36, Math.floor(34560 / YY.measureText(DY).width)));
-            lY(DY, 512, PY - (rY > 0 ? 15 : 0), FY, SY, 960, "center"), rY > 0 && lY(`Tied with ${gY.format(rY)} other${1===rY?"":"s"}`, 512, PY + 24, 24, VY, 960, "center")
+            const oT = null === jT ? 0 : jT.tied - 1,
+              IT = `YOUR RANK #${BT.format(HT)}${null===jT?"":` of ${BT.format(jT.total)}`}`;
+            TT.font = "bold 36px 'Jetbrains Mono', monospace";
+            const iT = Math.max(20, Math.min(36, Math.floor(34560 / TT.measureText(IT).width)));
+            mT(IT, 512, NT - (oT > 0 ? 15 : 0), iT, wT, 960, "center"), oT > 0 && mT(`Tied with ${BT.format(oT)} other${1===oT?"":"s"}`, 512, NT + 24, 24, hT, 960, "center")
           }
-          if (null === yY) return;
-          const UY = xY + OY * kY / 2;
-          if (HY) lY(`You're in the top ${FY.o}!`, 512, UY, 40, SY, 960, "center");
-          else if (0 === KY.length) lY("You're not on this board yet", 512, UY, 34, VY, 960, "center");
+          if (null === cT) return;
+          const PT = bT + XT * GT / 2;
+          if (CT) mT(`You're in the top ${iT.q}!`, 512, PT, 40, wT, 960, "center");
+          else if (0 === fT.length) mT("You're not on this board yet", 512, PT, 34, hT, 960, "center");
           else
-            for (const [FY, AY] of KY.entries()) nY(AY, hY[FY], xY + (FY + .5) * kY, FY % 2 === 0)
-        }(YY, vY, uY, RY.layoutHeight)
+            for (const [iT, zT] of fT.entries()) yT(zT, QT[iT], bT + (iT + .5) * GT, iT % 2 === 0)
+        }(TT, ST, DT, WT.layoutHeight)
     }
 
-    function oY(YY, rY) {
-      return Array.isArray(YY) ? YY.slice(0, rY).filter((YY => YY && Number.isFinite(YY.rank) && Number.isFinite(YY.value))) : []
+    function MT(TT, oT) {
+      return Array.isArray(TT) ? TT.slice(0, oT).filter((TT => TT && Number.isFinite(TT.rank) && Number.isFinite(TT.value))) : []
     }
 
-    function WY(YY, rY) {
-      const DY = [];
-      let FY = !1;
-      return YY.forEach(((AY, IY) => {
-        if (null !== rY && AY.value === rY.value) return void DY.push(rY.rank);
-        const RY = IY > 0 && AY.value === YY[IY - 1].value;
-        RY || (FY = 0 === IY && 1 !== AY.rank), DY.push(RY && !FY ? DY[IY - 1] : AY.rank)
-      })), DY
+    function rT(TT, oT) {
+      const IT = [];
+      let iT = !1;
+      return TT.forEach(((zT, kT) => {
+        if (null !== oT && zT.value === oT.value) return void IT.push(oT.rank);
+        const WT = kT > 0 && zT.value === TT[kT - 1].value;
+        WT || (iT = 0 === kT && 1 !== zT.rank), IT.push(WT && !iT ? IT[kT - 1] : zT.rank)
+      })), IT
     }
   },
-  38229: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => AY,
-      g: () => IY
+  37844: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      e: () => kT
     });
-    const FY = 32;
+    const iT = 32;
 
-    function AY(YY) {
-      return Array.from(YY).length
+    function zT(TT) {
+      return Array.from(TT).length
     }
 
-    function IY(YY) {
-      const rY = [""];
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        AY = "";
-      const IY = () => {
-        rY.push(""), DY = 0, AY = ""
+    function kT(TT) {
+      const oT = [""];
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        zT = "";
+      const kT = () => {
+        oT.push(""), IT = 0, zT = ""
       };
-      for (const RY of YY.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(RY)) IY();
-        else if (/^\s+$/.test(RY)) AY += RY;
-      else if (RY.length > 0) {
-        const YY = Array.from(RY);
-        DY > 0 && DY + AY.length + YY.length > FY && IY(), rY[rY.length - 1] += AY, DY += AY.length, AY = "";
-        for (const AY of YY) DY >= FY && IY(), rY[rY.length - 1] += AY, DY++
+      for (const WT of TT.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(WT)) kT();
+        else if (/^\s+$/.test(WT)) zT += WT;
+      else if (WT.length > 0) {
+        const TT = Array.from(WT);
+        IT > 0 && IT + zT.length + TT.length > iT && kT(), oT[oT.length - 1] += zT, IT += zT.length, zT = "";
+        for (const zT of TT) IT >= iT && kT(), oT[oT.length - 1] += zT, IT++
       }
-      return rY[rY.length - 1] += AY, rY
+      return oT[oT.length - 1] += zT, oT
     }
   },
-  42332: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      WasmPreviewHost: () => Sr,
-      pageBuiltInAnimationPack: () => sY,
-      pagePreviews: () => Yr,
-      previewModule: () => kY
+  42097: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      WasmPreviewHost: () => wo,
+      pageBuiltInAnimationPack: () => LT,
+      pagePreviews: () => To,
+      previewModule: () => GT
     });
-    var FY = DY(3316),
-      AY = DY(631);
-    const IY = "[bloxd-wasm-client]";
+    var iT = IT(3280),
+      zT = IT(623);
+    const kT = "[bloxd-wasm-client]";
 
-    function RY(YY) {
-      const rY = {
+    function WT(TT) {
+      const oT = {
         wasm: "unknown",
-        client: String(AY.d)
+        client: String(zT.c)
       };
       try {
-        var DY;
-        rY.wasm = null !== (DY = null === YY || void 0 === YY ? void 0 : YY.Iu()) && void 0 !== DY ? DY : rY.wasm
+        var IT;
+        oT.wasm = null !== (IT = null === TT || void 0 === TT ? void 0 : TT.uD()) && void 0 !== IT ? IT : oT.wasm
       } catch {}
-      return rY
+      return oT
     }
-    async function OY(YY) {
-      if (YY.length < 2 || 31 !== YY[0] || 139 !== YY[1]) return YY;
+    async function XT(TT) {
+      if (TT.length < 2 || 31 !== TT[0] || 139 !== TT[1]) return TT;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: rY
-        } = await DY.e(214).then((() => DY(36338)));
-        return rY(YY)
+          ungzip: oT
+        } = await IT.e(214).then((() => IT(35928)));
+        return oT(TT)
       }
-      const rY = new Blob([YY]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(rY).arrayBuffer())
+      const oT = new Blob([TT]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(oT).arrayBuffer())
     }
 
-    function gY(YY, rY, FY, AY) {
-      Promise.resolve().then((() => DY(40046))).then((DY => {
+    function BT(TT, oT, iT, zT) {
+      Promise.resolve().then((() => IT(39745))).then((IT => {
         let {
-          reportDataLoadFailure: IY
-        } = DY;
-        IY(YY, rY, FY, AY)
-      }), (rY => {
-        console.warn(`${IY} ${YY} didn't load, and the report couldn't be sent`, FY.error, rY)
+          reportDataLoadFailure: kT
+        } = IT;
+        kT(TT, oT, iT, zT)
+      }), (oT => {
+        console.warn(`${kT} ${TT} didn't load, and the report couldn't be sent`, iT.error, oT)
       }))
     }
-    const aY = [3e4, 12e4, 3e5];
-    class vY {
-      constructor(YY) {
-        this.deps = YY, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((YY => {
-          this.resolveSet = YY
+    const FT = [3e4, 12e4, 3e5];
+    class ST {
+      constructor(TT) {
+        this.deps = TT, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((TT => {
+          this.resolveSet = TT
         }))
       }
-      provide(YY) {
-        return this.loading ??= this.load(YY), this.loading
+      provide(TT) {
+        return this.loading ??= this.load(TT), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(YY) {
-        const rY = RY(YY),
-          DY = await async function(YY, rY) {
-            let DY;
+      async load(TT) {
+        const oT = WT(TT),
+          IT = await async function(TT, oT) {
+            let IT;
             try {
-              DY = await YY()
-            } catch (FY) {
+              IT = await TT()
+            } catch (iT) {
               return {
                 stage: "fetch",
-                error: FY
+                error: iT
               }
             }
             try {
-              return rY(DY) ? null : {
+              return oT(IT) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (FY) {
+            } catch (iT) {
               return {
                 stage: "decode",
-                error: FY
+                error: iT
               }
             }
-          }((() => this.deps.fetch()), (rY => {
-            const DY = YY.eAY(rY);
-            return DY && this.resolveSet(rY), DY
+          }((() => this.deps.fetch()), (oT => {
+            const IT = TT.ikT(oT);
+            return IT && this.resolveSet(oT), IT
           }));
-        if (null !== DY) {
-          if ("fetch" === DY.stage) {
+        if (null !== IT) {
+          if ("fetch" === IT.stage) {
             this.loading = null;
-            const rY = aY[this.retries++];
-            void 0 !== rY && this.deps.later((() => {
-              this.provide(YY)
-            }), rY)
+            const oT = FT[this.retries++];
+            void 0 !== oT && this.deps.later((() => {
+              this.provide(TT)
+            }), oT)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(DY, rY))
+          this.reported || (this.reported = !0, this.deps.onFailed(IT, oT))
         }
       }
     }
-    let uY = null;
+    let DT = null;
 
-    function sY() {
-      return uY ??= new vY({
-        fetch: async () => OY(await (0, FY.D)(iY(), {
+    function LT() {
+      return DT ??= new ST({
+        fetch: async () => XT(await (0, iT.K)(xT(), {
           priority: "low"
         })),
-        onFailed: (YY, rY) => {
-          gY("builtInAnimations", iY(), YY, rY)
+        onFailed: (TT, oT) => {
+          BT("builtInAnimations", xT(), TT, oT)
         },
-        later: (YY, rY) => {
-          setTimeout(YY, rY)
+        later: (TT, oT) => {
+          setTimeout(TT, oT)
         }
-      }), uY
+      }), DT
     }
 
-    function iY() {
-      return DY(42341)
+    function xT() {
+      return IT(42100)
     }
-    var yY = DY(3312),
-      QY = DY(35750),
-      oY = DY(39871),
-      WY = DY(1222),
-      EY = DY(323),
-      mY = DY(39890),
-      VY = DY(40129),
-      SY = (DY(39906), DY(40074)),
-      lY = DY(40082),
-      TY = DY(40090),
-      eY = DY(39900),
-      NY = DY(40139),
-      BY = DY(40142),
-      cY = DY(39924),
-      KY = DY(40004),
-      HY = DY(40006),
-      zY = DY(40132),
-      ZY = DY(41635),
-      CY = DY(39904);
-    const fY = "[bloxd-previews]",
-      jY = 4e5,
-      hY = 0,
-      dY = 1,
-      JY = 2,
-      MY = 1,
-      wY = 2,
-      bY = 3,
-      XY = 0,
-      qY = 1,
-      pY = 2;
+    var cT = IT(3276),
+      KT = IT(35343),
+      MT = IT(39553),
+      rT = IT(1183),
+      AT = IT(303),
+      gT = IT(39567),
+      hT = IT(39803),
+      wT = (IT(39581), IT(39760)),
+      mT = IT(39762),
+      eT = IT(39768),
+      RT = IT(39577),
+      uT = IT(39815),
+      vT = IT(39819),
+      ET = IT(39593),
+      fT = IT(39694),
+      CT = IT(39697),
+      jT = IT(39807),
+      JT = IT(41388),
+      UT = IT(39579);
+    const aT = "[bloxd-previews]",
+      YT = 4e5,
+      QT = 0,
+      OT = 1,
+      HT = 2,
+      nT = 1,
+      qT = 2,
+      ZT = 3,
+      lT = 0,
+      sT = 1,
+      tT = 2;
 
-    function kY(YY) {
-      const rY = YY,
-        DY = (0, mY.D)(YY),
-        FY = (0, mY.i)(YY);
-      return null !== DY && null !== FY && "function" === typeof rY.SAY && "function" === typeof rY.lAY && "function" === typeof rY.TAY ? rY : null
-    }
-
-    function GY(YY, rY, DY) {
-      let [FY, AY] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [YY, rY], IY = Math.min(Number.isFinite(DY) && DY > 0 ? DY : 1, 2);
-      const RY = Math.max(0, FY, YY) * Math.max(0, AY, rY) * IY * IY;
-      return RY > jY && (IY *= Math.sqrt(jY / RY)), [Math.max(1, Math.floor(Math.max(0, YY) * IY)), Math.max(1, Math.floor(Math.max(0, rY) * IY))]
+    function GT(TT) {
+      const oT = TT,
+        IT = (0, gT.I)(TT),
+        iT = (0, gT.n)(TT);
+      return null !== IT && null !== iT && "function" === typeof oT.TkT && "function" === typeof oT.okT && "function" === typeof oT.IkT ? oT : null
     }
 
-    function xY() {
-      return DY(42344)
+    function pT(TT, oT, IT) {
+      let [iT, zT] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [TT, oT], kT = Math.min(Number.isFinite(IT) && IT > 0 ? IT : 1, 2);
+      const WT = Math.max(0, iT, TT) * Math.max(0, zT, oT) * kT * kT;
+      return WT > YT && (kT *= Math.sqrt(YT / WT)), [Math.max(1, Math.floor(Math.max(0, TT) * kT)), Math.max(1, Math.floor(Math.max(0, oT) * kT))]
     }
-    async function nY(YY, rY) {
-      "lost" === YY && (0, cY.x)();
-      const FY = await (0, cY.L)();
-      if (null === FY || (0, mY.l)(FY) || (0, cY.d)()) return;
-      const AY = "webgpu" === FY.backend;
-      if (!AY && "lost" !== YY) return;
-      const IY = AY ? (0, mY.O)(YY) : null;
-      if (null !== IY) {
-        const DY = `WebGPU failed at home (${YY}${void 0===rY?"":`: ${rY instanceof Error?rY.message:(0,CY.f)(rY)}`}) and ${IY}`;
-        return console.warn(`${fY} ${DY}: the previews stop`, null !== rY && void 0 !== rY ? rY : ""), void(0, cY.p)(DY)
-      }(0, cY.m)();
+
+    function bT() {
+      return IT(42105)
+    }
+    async function yT(TT, oT) {
+      "lost" === TT && (0, ET.s)();
+      const iT = await (0, ET.F)();
+      if (null === iT || (0, gT.r)(iT) || (0, ET.d)()) return;
+      const zT = "webgpu" === iT.backend;
+      if (!zT && "lost" !== TT) return;
+      const kT = zT ? (0, gT.M)(TT) : null;
+      if (null !== kT) {
+        const IT = `WebGPU failed at home (${TT}${void 0===oT?"":`: ${oT instanceof Error?oT.message:(0,UT.h)(oT)}`}) and ${kT}`;
+        return console.warn(`${aT} ${IT}: the previews stop`, null !== oT && void 0 !== oT ? oT : ""), void(0, ET.o)(IT)
+      }(0, ET.n)();
       try {
-        await async function(YY, rY, FY) {
-          var AY;
+        await async function(TT, oT, iT) {
+          var zT;
           let {
-            backend: IY,
-            adapter: OY
-          } = YY;
-          const gY = (0, yY.Q)(),
+            backend: kT,
+            adapter: XT
+          } = TT;
+          const BT = (0, cT.L)(),
             {
-              flushCrashReports: aY,
-              reportRenderReload: vY
-            } = await Promise.resolve().then((() => DY(40046)));
-          vY(IY, "start_failed" === rY ? 0 : 1, RY(gY ? (0, yY.D)() : null), {
-            cause: rY,
-            error: "lost" === rY && null !== (AY = (0, mY.R)(gY ? (0, mY.D)((0, yY.D)()) : null)) && void 0 !== AY ? AY : FY,
+              flushCrashReports: FT,
+              reportRenderReload: ST
+            } = await Promise.resolve().then((() => IT(39745)));
+          ST(kT, "start_failed" === oT ? 0 : 1, WT(BT ? (0, cT.z)() : null), {
+            cause: oT,
+            error: "lost" === oT && null !== (zT = (0, gT.R)(BT ? (0, gT.I)((0, cT.z)()) : null)) && void 0 !== zT ? zT : iT,
             context: {
-              adapter: OY,
-              boundAtMs: "start_failed" === rY ? null : (0, cY.K)(),
-              indirectHangs: (0, cY.B)()
+              adapter: XT,
+              boundAtMs: "start_failed" === oT ? null : (0, ET.E)(),
+              indirectHangs: (0, ET.u)()
             }
-          }), await aY(KY.b)
-        }(FY, YY, rY)
-      } catch (OY) {
-        console.warn(`${fY} ${FY.backend} failed at home (${YY}), and its report couldn't be sent`, OY)
-      }(0, KY.j)()
+          }), await FT(fT.b)
+        }(iT, TT, oT)
+      } catch (XT) {
+        console.warn(`${aT} ${iT.backend} failed at home (${TT}), and its report couldn't be sent`, XT)
+      }(0, fT.j)()
     }
-    async function PY() {
-      if (!(0, yY.Q)()) {
-        const YY = await (0, cY.L)();
-        if (null === YY || (0, mY.l)(YY)) return null;
-        if (await (0, QY.h)(await YY.load(), oY.f), !(0, yY.Q)()) return null
+    async function NT() {
+      if (!(0, cT.L)()) {
+        const TT = await (0, ET.F)();
+        if (null === TT || (0, gT.r)(TT)) return null;
+        if (await (0, KT.h)(await TT.load(), MT.c), !(0, cT.L)()) return null
       }
-      return kY((0, yY.D)())
+      return GT((0, cT.z)())
     }
-    class UY {
-      constructor(YY, rY, DY, FY, AY, IY) {
-        this.page = YY, this.host = rY, this.id = DY, this.canvas = FY, this.size = AY, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const RY = {
-            ...IY.images,
-            glbUrl: YY => {
-              var rY;
-              return null !== (rY = this.models.drawnUrl(YY)) && void 0 !== rY ? rY : IY.images.glbUrl(YY)
+    class PT {
+      constructor(TT, oT, IT, iT, zT, kT) {
+        this.page = TT, this.host = oT, this.id = IT, this.canvas = iT, this.size = zT, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const WT = {
+            ...kT.images,
+            glbUrl: TT => {
+              var oT;
+              return null !== (oT = this.models.drawnUrl(TT)) && void 0 !== oT ? oT : kT.images.glbUrl(TT)
             }
           },
-          OY = rY => YY.modelFile(rY);
-        this.images = new VY.d(RY, (YY => {
-          console.warn(`${fY} image ${YY.key.kind}:${YY.key.index}:${YY.key.word} failed`, YY.error)
+          XT = oT => TT.modelFile(oT);
+        this.images = new hT.f(WT, (TT => {
+          console.warn(`${aT} image ${TT.key.kind}:${TT.key.index}:${TT.key.word} failed`, TT.error)
         }), {
-          fetchFile: OY,
-          fetchImage: rY => YY.imageFile(rY)
-        }), YY.startModels(), this.models = new SY.h(IY.files, ((rY, DY) => YY.buildModel(rY, DY)), (YY => {
-          console.warn(`${fY} model file ${YY.file} (${YY.url}) failed`, YY.error)
+          fetchFile: XT,
+          fetchImage: oT => TT.imageFile(oT)
+        }), TT.startModels(), this.models = new wT.g(kT.files, ((oT, IT) => TT.buildModel(oT, IT)), (TT => {
+          console.warn(`${aT} model file ${TT.file} (${TT.url}) failed`, TT.error)
         }), {
-          fetchFile: OY,
-          onWritten: (YY, rY) => {
-            this.images.glbWritten(YY, rY)
+          fetchFile: XT,
+          onWritten: (TT, oT) => {
+            this.images.glbWritten(TT, oT)
           },
-          onTaken: (YY, rY) => {
-            this.images.glbTaken(YY, rY)
+          onTaken: (TT, oT) => {
+            this.images.glbTaken(TT, oT)
           }
-        }), this.write = (YY, rY, DY) => {
+        }), this.write = (TT, oT, IT) => {
           if (this.closed) return !0;
-          if (YY === SY.e) {
-            const YY = new DataView(DY.buffer, DY.byteOffset, TY.e),
-              FY = YY.getUint32(0, !0),
-              AY = YY.getUint32(TY.h, !0),
-              IY = this.page.hostCall(pY, (() => this.host.cIY(this.id, FY, rY, DY.subarray(TY.e))));
-            return this.outcomes.push([AY, IY]), !0
+          if (TT === wT.c) {
+            const TT = new DataView(IT.buffer, IT.byteOffset, eT.e),
+              iT = TT.getUint32(0, !0),
+              zT = TT.getUint32(eT.h, !0),
+              kT = this.page.hostCall(tT, (() => this.host.WWT(this.id, iT, oT, IT.subarray(eT.e))));
+            return this.outcomes.push([zT, kT]), !0
           }
-          return YY === VY.b && (this.page.hostCall(void 0, (() => {
-            this.host.HIY(this.id, DY)
+          return TT === hT.e && (this.page.hostCall(void 0, (() => {
+            this.host.BWT(this.id, IT)
           })), !0)
         }
       }
@@ -615,74 +615,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(YY, rY, DY) {
+      resize(TT, oT, IT) {
         if (this.closed) return;
-        const [FY, AY] = GY(YY, rY, this.page.dpr(), DY);
-        FY === this.size[0] && AY === this.size[1] || (this.size = [FY, AY], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, FY, AY)
+        const [iT, zT] = pT(TT, oT, this.page.dpr(), IT);
+        iT === this.size[0] && zT === this.size[1] || (this.size = [iT, zT], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, iT, zT)
         })))
       }
-      setMob(YY, rY, DY, FY) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.jIY(this.id, YY, rY, DY, FY))))
+      setMob(TT, oT, IT, iT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.xWT(this.id, TT, oT, IT, iT))))
       }
-      setPet(YY, rY, DY, FY) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.dIY(this.id, YY, rY, DY, FY))))
+      setPet(TT, oT, IT, iT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.KWT(this.id, TT, oT, IT, iT))))
       }
-      setPlayer(YY, rY, DY) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ZIY(this.id, YY, rY, DY))))
+      setPlayer(TT, oT, IT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.SWT(this.id, TT, oT, IT))))
       }
-      setFigure(YY, rY, DY, FY) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.CIY(this.id, YY, rY, DY, FY))))
+      setFigure(TT, oT, IT, iT) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.DWT(this.id, TT, oT, IT, iT))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const YY = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === YY || YY.length < 3 ? null : {
-          alpha: YY[0],
-          beta: YY[1],
-          radius: YY[2]
+        const TT = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === TT || TT.length < 3 ? null : {
+          alpha: TT[0],
+          beta: TT[1],
+          radius: TT[2]
         }
       }
-      setOrbit(YY) {
+      setOrbit(TT) {
         let {
-          alpha: rY,
-          beta: DY,
-          radius: FY
-        } = YY;
+          alpha: oT,
+          beta: IT,
+          radius: iT
+        } = TT;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.hIY(this.id, rY, DY, FY)
+          this.host.cWT(this.id, oT, IT, iT)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((YY => {
-          this.settled.push(YY)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((TT => {
+          this.settled.push(TT)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, NY.k)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, uT.g)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [YY, rY] of this.outcomes) {
-          const DY = rY === XY ? [] : [rY === qY ? YY : (YY | SY.f) >>> 0];
-          this.models.taken(YY, DY)
+        for (const [TT, oT] of this.outcomes) {
+          const IT = oT === lT ? [] : [oT === sT ? TT : (TT | wT.e) >>> 0];
+          this.models.taken(TT, IT)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(YY) {
-        let rY = !1;
-        if (YY) {
-          const YY = this.host.wIY(this.id);
-          for (const rY of YY) this.models.request(rY);
-          const DY = this.host.MIY(this.id);
-          DY.length > 0 && this.images.onEvent(DY), rY = YY.length > 0 || DY.length > 0
+      collect(TT) {
+        let oT = !1;
+        if (TT) {
+          const TT = this.host.AWT(this.id);
+          for (const oT of TT) this.models.request(oT);
+          const IT = this.host.rWT(this.id);
+          IT.length > 0 && this.images.onEvent(IT), oT = TT.length > 0 || IT.length > 0
         }
-        const DY = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          FY = rY || DY > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = FY ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const IT = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          iT = oT || IT > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = iT ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -690,418 +690,418 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(YY) {
+      dispose(TT) {
         this.page.hostCall(void 0, (() => {
-          const rY = this.host.close(this.id);
-          rY.length > 0 && this.images.onEvent(rY), this.page.isTrapped || YY.TAY(this.id)
+          const oT = this.host.close(this.id);
+          oT.length > 0 && this.images.onEvent(oT), this.page.isTrapped || TT.IkT(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const YY = this.settled;
+        const TT = this.settled;
         this.settled = [];
-        for (const rY of YY) rY()
+        for (const oT of TT) oT()
       }
     }
-    class LY {
-      constructor(YY) {
-        this.deps = YY, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: YY => {
-            this.modelsFailed(YY)
+    class dT {
+      constructor(TT) {
+        this.deps = TT, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: TT => {
+            this.modelsFailed(TT)
           },
-          onDecoderFailed: YY => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${fY} the Draco decoder didn't load: models waiting on it won't draw`, YY))
+          onDecoderFailed: TT => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${aT} the Draco decoder didn't load: models waiting on it won't draw`, TT))
           },
-          onWorkerLost: YY => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${fY} a model worker was lost: ${YY}`))
+          onWorkerLost: TT => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${aT} a model worker was lost: ${TT}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.vy = {
-          setShaderPack: (YY, rY, DY, FY, AY) => (this.shaderPackArgs = [YY, rY, DY, FY, AY], this.handOverShaderPack(), !0)
-        }, this.frame = YY => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Fc = {
+          setShaderPack: (TT, oT, IT, iT, zT) => (this.shaderPackArgs = [TT, oT, IT, iT, zT], this.handOverShaderPack(), !0)
+        }, this.frame = TT => {
           this.frameId = null;
-          const rY = this.host;
-          if (null !== rY && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(rY, YY)
-          } catch (DY) {
-            if (!this.stopIfTrapped(DY) && (this.stop(), (0, mY.n)(DY))) return void this.deps.onRenderFailed("frames_refused", DY);
-            console.warn(`${fY} the previews stopped: their frame threw`, DY)
+          const oT = this.host;
+          if (null !== oT && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(oT, TT)
+          } catch (IT) {
+            if (!this.stopIfTrapped(IT) && (this.stop(), (0, gT.s)(IT))) return void this.deps.onRenderFailed("frames_refused", IT);
+            console.warn(`${aT} the previews stopped: their frame threw`, IT)
           }
-        }, YY.pack.onChange((() => {
+        }, TT.pack.onChange((() => {
           this.packChanged()
-        })), YY.game.onGameChange((() => {
+        })), TT.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const YY of this.previews.values()) YY.packChanged()
+          for (const TT of this.previews.values()) TT.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var YY, rY;
-        return null !== (YY = null === (rY = this.host) || void 0 === rY ? void 0 : rY.attached()) && void 0 !== YY && YY
+        var TT, oT;
+        return null !== (TT = null === (oT = this.host) || void 0 === oT ? void 0 : oT.attached()) && void 0 !== TT && TT
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((YY, rY) => YY + rY), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((TT, oT) => TT + oT), 0) / this.costs.length
       }
-      async bindSession(YY, rY, DY) {
-        const FY = this.binding,
-          AY = this.sessionEnds;
+      async bindSession(TT, oT, IT) {
+        const iT = this.binding,
+          zT = this.sessionEnds;
         try {
-          const IY = this.hostOf(YY);
-          if (!IY.KIY()) {
-            const rY = (0, HY.e)().sampleCount,
-              RY = await DY(rY);
-            if (this.sessionEnds !== AY) return this.keepRendererOfEndedSession(YY, IY, RY, rY, FY), rY;
-            if (!IY.iIY(RY)) throw new Error("the page has a renderer already");
-            (0, cY.t)(performance.now()), this.samples = rY, (0, zY.d)((0, mY.i)(YY))
+          const kT = this.hostOf(TT);
+          if (!kT.XWT()) {
+            const oT = (0, CT.g)().sampleCount,
+              WT = await IT(oT);
+            if (this.sessionEnds !== zT) return this.keepRendererOfEndedSession(TT, kT, WT, oT, iT), oT;
+            if (!kT.GkT(WT)) throw new Error("the page has a renderer already");
+            (0, ET.p)(performance.now()), this.samples = oT, (0, jT.c)((0, gT.n)(TT))
           }
-          if (!IY.attach(rY)) throw new Error("the page's renderer is lent to another session");
+          if (!kT.attach(oT)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === FY && this.endBinding()
+          this.binding === iT && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(YY, rY, DY, FY, AY) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== AY) try {
-          DY.free()
-        } catch (IY) {
-          console.warn(`${fY} an ended session's renderer didn't free`, IY)
-        } else rY.iIY(DY) && ((0, cY.t)(performance.now()), this.samples = FY, (0, zY.d)(this.registryOf(YY)))
+      keepRendererOfEndedSession(TT, oT, IT, iT, zT) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== zT) try {
+          IT.free()
+        } catch (kT) {
+          console.warn(`${aT} an ended session's renderer didn't free`, kT)
+        } else oT.GkT(IT) && ((0, ET.p)(performance.now()), this.samples = iT, (0, jT.c)(this.registryOf(TT)))
       }
       async beginSession() {
-        var YY;
-        let rY = () => {};
-        const DY = new Promise((YY => {
-          rY = YY
+        var TT;
+        let oT = () => {};
+        const IT = new Promise((TT => {
+          oT = TT
         }));
         this.binding = {
-          done: DY,
-          release: rY
-        }, await (null === (YY = this.opening) || void 0 === YY ? void 0 : YY.catch((() => null)));
-        const FY = this.pageCanvas;
-        return this.pageCanvas = null, FY
+          done: IT,
+          release: oT
+        }, await (null === (TT = this.opening) || void 0 === TT ? void 0 : TT.catch((() => null)));
+        const iT = this.pageCanvas;
+        return this.pageCanvas = null, iT
       }
-      endSession(YY) {
-        var rY, DY;
-        if (this.sessionEnds++, this.lastEndReturned = YY, this.endBinding(), YY) {
+      endSession(TT) {
+        var oT, IT;
+        if (this.sessionEnds++, this.lastEndReturned = TT, this.endBinding(), TT) {
           try {
-            var FY;
-            null === (FY = this.host) || void 0 === FY || FY.detach()
-          } catch (AY) {
-            return void console.warn(`${fY} the session's core kept the page's renderer`, AY)
-          }!0 === (null === (rY = this.host) || void 0 === rY ? void 0 : rY.attached()) && console.warn(`${fY} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (DY = this.host) || void 0 === DY ? void 0 : DY.KIY()) && (0, zY.d)(this.registryOf(this.module))
+            var iT;
+            null === (iT = this.host) || void 0 === iT || iT.detach()
+          } catch (zT) {
+            return void console.warn(`${aT} the session's core kept the page's renderer`, zT)
+          }!0 === (null === (oT = this.host) || void 0 === oT ? void 0 : oT.attached()) && console.warn(`${aT} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (IT = this.host) || void 0 === IT ? void 0 : IT.XWT()) && (0, jT.c)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var YY;
-        null === (YY = this.binding) || void 0 === YY || YY.release(), this.binding = null
+        var TT;
+        null === (TT = this.binding) || void 0 === TT || TT.release(), this.binding = null
       }
-      async openPreview(YY, rY, DY, FY) {
-        const AY = await this.renderingHost(),
-          IY = this.module;
-        if (null === AY || null === IY) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(AY), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(TT, oT, IT, iT) {
+        const zT = await this.renderingHost(),
+          kT = this.module;
+        if (null === zT || null === kT) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(zT), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(IY)
+          this.deps.provideBuiltInAnimationPack(kT)
         }));
-        const RY = this.nextId++,
-          OY = this.deps.createCanvas(),
-          [gY, aY] = GY(rY, DY, this.deps.dpr(), FY);
-        OY.width = gY, OY.height = aY;
-        if (!this.guarded((() => (IY.lAY(RY, OY), AY.open(RY, gY, aY, YY))))) throw this.hostCall(void 0, (() => {
-          IY.TAY(RY)
+        const WT = this.nextId++,
+          XT = this.deps.createCanvas(),
+          [BT, FT] = pT(oT, IT, this.deps.dpr(), iT);
+        XT.width = BT, XT.height = FT;
+        if (!this.guarded((() => (kT.okT(WT, XT), zT.open(WT, BT, FT, TT))))) throw this.hostCall(void 0, (() => {
+          kT.IkT(WT)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const vY = new UY(this, AY, RY, OY, [gY, aY], this.deps);
-        return this.previews.set(RY, vY), this.startFrames(), vY
+        const ST = new PT(this, zT, WT, XT, [BT, FT], this.deps);
+        return this.previews.set(WT, ST), this.startFrames(), ST
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, cY.d)() || null !== (0, cY.H)()) return;
+        if (this.prefetched || this.isStopped || (0, ET.d)() || null !== (0, ET.A)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((YY => {
-          null === YY || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((TT => {
+          null === TT || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(YY) {
-        return this.prefetchedOr(YY, this.deps.fetchModel)
+      modelFile(TT) {
+        return this.prefetchedOr(TT, this.deps.fetchModel)
       }
-      imageFile(YY) {
-        return this.prefetchedOr(YY, FY.D)
+      imageFile(TT) {
+        return this.prefetchedOr(TT, iT.K)
       }
-      prefetchedOr(YY, rY) {
-        const DY = this.prefetchedFiles.get(YY);
-        return void 0 === DY ? rY(YY) : DY.catch((() => rY(YY)))
+      prefetchedOr(TT, oT) {
+        const IT = this.prefetchedFiles.get(TT);
+        return void 0 === IT ? oT(TT) : IT.catch((() => oT(TT)))
       }
       async prefetchPlayerFiles() {
-        const YY = this.deps.playerFile().then((YY => this.deps.files.url(YY))),
-          rY = await Promise.all([YY, this.deps.images.lifeformAtlasUrl(NY.e)]).catch((() => null));
-        if (null === rY) return;
-        const [DY, FY] = rY, AY = (YY, rY) => {
-          if (null === YY) return;
-          const DY = rY(YY);
-          this.prefetchedFiles.set(YY, DY), DY.catch((() => {
-            this.prefetchedFiles.delete(YY)
+        const TT = this.deps.playerFile().then((TT => this.deps.files.url(TT))),
+          oT = await Promise.all([TT, this.deps.images.lifeformAtlasUrl(uT.d)]).catch((() => null));
+        if (null === oT) return;
+        const [IT, iT] = oT, zT = (TT, oT) => {
+          if (null === TT) return;
+          const IT = oT(TT);
+          this.prefetchedFiles.set(TT, IT), IT.catch((() => {
+            this.prefetchedFiles.delete(TT)
           }))
         };
-        AY(DY, (YY => this.modelFile(YY))), AY(FY, (YY => this.imageFile(YY)))
+        zT(IT, (TT => this.modelFile(TT))), zT(iT, (TT => this.imageFile(TT)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((YY => (null === YY && (this.moduleLoad = null), YY)), (YY => {
-          throw this.moduleLoad = null, YY
+        return this.moduleLoad ??= this.deps.loadModule().then((TT => (null === TT && (this.moduleLoad = null), TT)), (TT => {
+          throw this.moduleLoad = null, TT
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((YY => {
-          throw this.animationTable = null, YY
+        return this.animationTable ??= this.deps.fetchAnimations().catch((TT => {
+          throw this.animationTable = null, TT
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((YY => (this.modelsFailed(YY), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((TT => (this.modelsFailed(TT), () => new Promise((() => {})))))
       }
-      buildModel(YY, rY) {
-        return this.startModels(), this.models.then((DY => DY(YY, rY))).then((YY => this.unavailable ? new Promise((() => {})) : YY))
+      buildModel(TT, oT) {
+        return this.startModels(), this.models.then((IT => IT(TT, oT))).then((TT => this.unavailable ? new Promise((() => {})) : TT))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(YY) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${fY} the model workers didn't start: models won't draw in the previews`, YY))
+      modelsFailed(TT) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${aT} the model workers didn't start: models won't draw in the previews`, TT))
       }
-      called(YY) {
-        return 0 !== YY && this.logError(YY, 0), YY
+      called(TT) {
+        return 0 !== TT && this.logError(TT, 0), TT
       }
-      closePreview(YY) {
-        this.previews.delete(YY.id), null !== this.module && YY.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(TT) {
+        this.previews.delete(TT.id), null !== this.module && TT.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(YY) {
-        if (null !== this.module && this.module !== YY) throw new Error("a second renderer module on one page");
-        return this.module = YY, null === this.host && (this.host = this.guarded((() => new YY.SAY)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(TT) {
+        if (null !== this.module && this.module !== TT) throw new Error("a second renderer module on one page");
+        return this.module = TT, null === this.host && (this.host = this.guarded((() => new TT.TkT)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: YY
+          host: TT
         } = this;
-        null !== YY && this.outsideCall("the game's start or end", (() => {
-          YY.fIY(this.deps.game.inGame())
+        null !== TT && this.outsideCall("the game's start or end", (() => {
+          TT.LWT(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: YY,
-          shaderPackArgs: rY
+          host: TT,
+          shaderPackArgs: oT
         } = this;
-        null !== YY && null !== rY && this.outsideCall("the shader pack's hand-over", (() => {
-          YY.yDY(...rY) || console.warn(`${fY} the host refused the shader pack: previews draw without it at home`)
+        null !== TT && null !== oT && this.outsideCall("the shader pack's hand-over", (() => {
+          TT.ZIT(...oT) || console.warn(`${aT} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(YY, rY) {
+      outsideCall(TT, oT) {
         try {
-          this.hostCall(void 0, rY)
-        } catch (DY) {
-          this.stop(), console.warn(`${fY} the previews stopped: ${YY} threw`, DY)
+          this.hostCall(void 0, oT)
+        } catch (IT) {
+          this.stop(), console.warn(`${aT} the previews stopped: ${TT} threw`, IT)
         }
       }
-      async loadAnimations(YY) {
-        const rY = RY(null),
-          DY = this.module;
+      async loadAnimations(TT) {
+        const oT = WT(null),
+          IT = this.module;
         try {
-          rY.wasm = null === DY ? rY.wasm : this.hostCall(rY.wasm, (() => DY.Iu()))
+          oT.wasm = null === IT ? oT.wasm : this.hostCall(oT.wasm, (() => IT.uD()))
         } catch {}
-        let FY, AY;
+        let iT, zT;
         try {
-          FY = await this.fetchAnimationTable()
-        } catch (IY) {
+          iT = await this.fetchAnimationTable()
+        } catch (kT) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: IY
-          }, rY)
+            error: kT
+          }, oT)
         }
         if (!this.settleIfTrapped()) {
           try {
-            AY = YY.zIY(FY)
-          } catch (IY) {
-            if (this.stopIfTrapped(IY)) return;
+            zT = TT.FWT(iT)
+          } catch (kT) {
+            if (this.stopIfTrapped(kT)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: IY
-            }, rY)
+              error: kT
+            }, oT)
           }
-          AY || this.deps.onAnimationsFailed({
+          zT || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, rY)
+          }, oT)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const YY = this.host;
-        return null !== YY && this.guarded((() => YY.KIY())) ? YY : (this.opening ??= this.openAtHome().finally((() => {
+        const TT = this.host;
+        return null !== TT && this.guarded((() => TT.XWT())) ? TT : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var YY;
-        const rY = null !== (YY = this.module) && void 0 !== YY ? YY : await this.loadModule();
-        if (null === rY) return null;
-        const DY = this.hostOf(rY),
-          FY = () => this.guarded((() => DY.KIY()));
-        if (FY()) return DY;
-        if (null !== (0, cY.H)() || (0, cY.d)()) return null;
-        const AY = this.deps.createCanvas();
-        AY.width = 1, AY.height = 1;
-        const IY = await this.deps.openExtras();
+        var TT;
+        const oT = null !== (TT = this.module) && void 0 !== TT ? TT : await this.loadModule();
+        if (null === oT) return null;
+        const IT = this.hostOf(oT),
+          iT = () => this.guarded((() => IT.XWT()));
+        if (iT()) return IT;
+        if (null !== (0, ET.A)() || (0, ET.d)()) return null;
+        const zT = this.deps.createCanvas();
+        zT.width = 1, zT.height = 1;
+        const kT = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const RY = (0, HY.e)().sampleCount;
-        let OY;
+        const WT = (0, CT.g)().sampleCount;
+        let XT;
         try {
-          OY = await (0, mY.s)(rY, "previewRenderer", AY, RY, ZY.d, IY)
-        } catch (gY) {
-          throw gY instanceof eY.e ? this.stopForTrap(gY) : (0, mY.o)(gY) && await this.deps.onRenderFailed("start_failed", gY), gY
+          XT = await (0, gT.x)(oT, "previewRenderer", zT, WT, JT.c, kT)
+        } catch (BT) {
+          throw BT instanceof RT.d ? this.stopForTrap(BT) : (0, gT.u)(BT) && await this.deps.onRenderFailed("start_failed", BT), BT
         }
-        return this.guarded((() => DY.iIY(OY))) ? ((0, cY.t)(performance.now()), this.samples = RY, this.pageCanvas = AY, (0, zY.d)(this.registryOf(rY)), DY) : FY() ? DY : null
+        return this.guarded((() => IT.GkT(XT))) ? ((0, ET.p)(performance.now()), this.samples = WT, this.pageCanvas = zT, (0, jT.c)(this.registryOf(oT)), IT) : iT() ? IT : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(YY, rY) {
-        for (const RY of this.previews.values()) RY.feed();
+      drawFrame(TT, oT) {
+        for (const WT of this.previews.values()) WT.feed();
         if (this.stopped) return;
-        const DY = this.deps.now(),
-          FY = YY.frame(rY);
-        this.costs.push(this.deps.now() - DY), this.costs.length > 120 && this.costs.shift();
-        const AY = 0 !== (256 & FY),
-          IY = 255 & FY;
-        for (const RY of this.previews.values()) {
+        const IT = this.deps.now(),
+          iT = TT.frame(oT);
+        this.costs.push(this.deps.now() - IT), this.costs.length > 120 && this.costs.shift();
+        const zT = 0 !== (256 & iT),
+          kT = 255 & iT;
+        for (const WT of this.previews.values()) {
           if (this.stopped) return;
-          RY.collect(AY)
+          WT.collect(zT)
         }
         if (!this.stopped) {
-          if (AY) {
-            const rY = YY.JIY();
-            for (let YY = 0; YY + 1 < rY.length; YY += 2) this.logError(rY[YY], rY[YY + 1])
+          if (zT) {
+            const oT = TT.MWT();
+            for (let TT = 0; TT + 1 < oT.length; TT += 2) this.logError(oT[TT], oT[TT + 1])
           }
-          if (IY === MY) return this.stop(), void this.deps.onRenderFailed("lost");
-          if (IY === wY) return this.stop(), void this.deps.onFatal(YY.NIY(), YY.BIY());
-          if (IY === bY) return this.stop(), void console.warn(`${fY} the previews stopped: the page's renderer went with its session`);
-          (0, EY.d)(rY), this.startFrames()
+          if (kT === nT) return this.stop(), void this.deps.onRenderFailed("lost");
+          if (kT === qT) return this.stop(), void this.deps.onFatal(TT.zWT(), TT.kWT());
+          if (kT === ZT) return this.stop(), void console.warn(`${aT} the previews stopped: the page's renderer went with its session`);
+          (0, AT.e)(oT), this.startFrames()
         }
       }
       get isStopped() {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, eY.k)(this.module) || "failed" === (0, yY.B)())
+        return null !== this.module && ((0, RT.i)(this.module) || "failed" === (0, cT.w)())
       }
-      hostCall(YY, rY) {
-        if (this.settleIfTrapped()) return YY;
+      hostCall(TT, oT) {
+        if (this.settleIfTrapped()) return TT;
         try {
-          return rY()
-        } catch (DY) {
-          if (this.stopIfTrapped(DY)) return YY;
-          throw DY
+          return oT()
+        } catch (IT) {
+          if (this.stopIfTrapped(IT)) return TT;
+          throw IT
         }
       }
-      guarded(YY) {
+      guarded(TT) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return YY()
-        } catch (rY) {
-          throw this.stopIfTrapped(rY), rY
+          return TT()
+        } catch (oT) {
+          throw this.stopIfTrapped(oT), oT
         }
       }
-      registryOf(YY) {
+      registryOf(TT) {
         return {
-          IDY: (rY, DY) => {
+          CIT: (oT, IT) => {
             this.hostCall(void 0, (() => {
-              YY.IDY(rY, DY)
+              TT.CIT(oT, IT)
             }))
           },
-          RDY: rY => {
+          jIT: oT => {
             this.hostCall(void 0, (() => {
-              YY.RDY(rY)
+              TT.jIT(oT)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, zY.d)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, jT.c)(null)), !0)
       }
-      stopIfTrapped(YY) {
-        return !(null === this.module || !(0, eY.m)(this.module, YY)) && (this.stopForTrap(YY), !0)
+      stopIfTrapped(TT) {
+        return !(null === this.module || !(0, RT.m)(this.module, TT)) && (this.stopForTrap(TT), !0)
       }
-      stopForTrap(YY) {
-        this.stop(), (0, zY.d)(null), (0, yY.R)(YY)
+      stopForTrap(TT) {
+        this.stop(), (0, jT.c)(null), (0, cT.N)(TT)
       }
       stop() {
         this.stopped = !0;
-        for (const YY of this.previews.values()) YY.abandon()
+        for (const TT of this.previews.values()) TT.abandon()
       }
-      logError(YY, rY) {
-        const DY = `${YY}:${rY}`;
-        this.loggedErrors.has(DY) || (this.loggedErrors.add(DY), console.warn(`${fY} error ${YY} (detail ${rY})`))
+      logError(TT, oT) {
+        const IT = `${TT}:${oT}`;
+        this.loggedErrors.has(IT) || (this.loggedErrors.add(IT), console.warn(`${aT} error ${TT} (detail ${oT})`))
       }
     }
-    let tY = null;
+    let VT = null;
 
-    function Yr() {
-      return tY ??= new LY(function() {
-        const YY = (0, lY.r)(WY.clientSideServerUrls.staticUrl, {
-          packUrl: YY => {
-            var rY, DY;
-            return null !== (rY = null === (DY = NY.i.current) || void 0 === DY ? void 0 : DY.modelUrl(YY)) && void 0 !== rY ? rY : null
+    function To() {
+      return VT ??= new dT(function() {
+        const TT = (0, mT.t)(rT.clientSideServerUrls.staticUrl, {
+          packUrl: TT => {
+            var oT, IT;
+            return null !== (oT = null === (IT = uT.f.current) || void 0 === IT ? void 0 : IT.modelUrl(TT)) && void 0 !== oT ? oT : null
           }
         });
         return {
-          loadModule: PY,
-          startModels: async YY => {
+          loadModule: NT,
+          startModels: async TT => {
             const {
-              pageModelPool: rY
-            } = await DY.e(42).then((() => DY(42414))), {
-              pool: FY
-            } = rY(YY);
-            return (YY, rY) => FY.build(YY, rY)
+              pageModelPool: oT
+            } = await IT.e(42).then((() => IT(42162))), {
+              pool: iT
+            } = oT(TT);
+            return (TT, oT) => iT.build(TT, oT)
           },
-          fetchAnimations: async () => OY(await (0, FY.D)(xY())),
-          playerFile: async () => (await (0, lY.n)()).PLAYER_FILE,
-          onAnimationsFailed: (YY, rY) => {
-            gY("previewAnimations", xY(), YY, rY)
+          fetchAnimations: async () => XT(await (0, iT.K)(bT())),
+          playerFile: async () => (await (0, mT.p)()).PLAYER_FILE,
+          onAnimationsFailed: (TT, oT) => {
+            BT("previewAnimations", bT(), TT, oT)
           },
-          provideBuiltInAnimationPack: YY => {
-            sY().provide(YY)
+          provideBuiltInAnimationPack: TT => {
+            LT().provide(TT)
           },
-          openExtras: cY.C,
-          files: YY,
-          images: (0, NY.o)((0, VY.j)(YY.url), (() => NY.i.current)),
-          pack: NY.i,
-          game: BY.d,
-          fetchModel: YY => (0, lY.j)(YY),
+          openExtras: ET.x,
+          files: TT,
+          images: (0, uT.k)((0, hT.n)(TT.url), (() => uT.f.current)),
+          pack: uT.f,
+          game: vT.e,
+          fetchModel: TT => (0, mT.j)(TT),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: YY => requestAnimationFrame(YY),
-          cancelFrame: YY => {
-            cancelAnimationFrame(YY)
+          requestFrame: TT => requestAnimationFrame(TT),
+          cancelFrame: TT => {
+            cancelAnimationFrame(TT)
           },
-          onRenderFailed: nY,
-          onFatal: (YY, rY) => {
-            console.error(`${fY} the previews stopped: renderer error ${YY} (detail ${rY})`)
+          onRenderFailed: yT,
+          onFatal: (TT, oT) => {
+            console.error(`${aT} the previews stopped: renderer error ${TT} (detail ${oT})`)
           }
         }
-      }()), tY
+      }()), VT
     }
-    var rr = DY(614),
-      Dr = DY(38003),
-      Fr = DY(2864);
-    const Ar = {
+    var oo = IT(601),
+      Io = IT(37629),
+      io = IT(2844);
+    const zo = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1119,322 +1119,322 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const Ir = "[bloxd-previews]",
-      Rr = new Uint32Array(5);
+    const ko = "[bloxd-previews]",
+      Wo = new Uint32Array(5);
 
-    function Or(YY) {
-      return rr.j.indexOf(YY)
+    function Xo(TT) {
+      return oo.h.indexOf(TT)
     }
-    const gr = new WeakSet;
+    const Bo = new WeakSet;
 
-    function ar(YY) {
-      const rY = (0, Dr.e)(YY),
-        DY = null === rY ? -1 : vr(rY);
-      return -1 !== DY ? DY : (gr.has(YY) || (gr.add(YY), console.warn(`${Ir} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function vr(YY) {
-      var rY;
-      return null !== (rY = Ar[YY]) && void 0 !== rY ? rY : -1
+    function Fo(TT) {
+      const oT = (0, Io.g)(TT),
+        IT = null === oT ? -1 : So(oT);
+      return -1 !== IT ? IT : (Bo.has(TT) || (Bo.add(TT), console.warn(`${ko} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function ur(YY, rY) {
+    function So(TT) {
+      var oT;
+      return null !== (oT = zo[TT]) && void 0 !== oT ? oT : -1
+    }
+
+    function Do(TT, oT) {
       const {
-        canvas: DY
-      } = rY;
-      DY.style.width = "100%", DY.style.height = "100%", DY.style.display = "block", YY.appendChild(DY)
+        canvas: IT
+      } = oT;
+      IT.style.width = "100%", IT.style.height = "100%", IT.style.display = "block", TT.appendChild(IT)
     }
 
-    function sr(YY) {
-      const rY = YY.getBoundingClientRect();
-      return [rY.width, rY.height]
+    function Lo(TT) {
+      const oT = TT.getBoundingClientRect();
+      return [oT.width, oT.height]
     }
-    class ir {
-      constructor(YY, rY) {
-        this.preview = YY, this.showView = rY
+    class xo {
+      constructor(TT, oT) {
+        this.preview = TT, this.showView = oT
       }
-      show(YY) {
-        this.showView(this.preview, YY)
+      show(TT) {
+        this.showView(this.preview, TT)
       }
-      resize(YY, rY) {
-        this.preview.resize(YY, rY)
+      resize(TT, oT) {
+        this.preview.resize(TT, oT)
       }
       close() {
         this.preview.close()
       }
     }
-    class yr {
-      constructor(YY) {
-        this.preview = YY, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(YY) {
+    class co {
+      constructor(TT) {
+        this.preview = TT, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(TT) {
           const {
-            canvas: rY
-          } = YY;
-          let DY = null;
-          const FY = YY => {
-              var FY;
-              DY = {
-                pointer: YY.pointerId,
-                x: YY.clientX,
-                y: YY.clientY
-              }, null === (FY = rY.setPointerCapture) || void 0 === FY || FY.call(rY, YY.pointerId)
+            canvas: oT
+          } = TT;
+          let IT = null;
+          const iT = TT => {
+              var iT;
+              IT = {
+                pointer: TT.pointerId,
+                x: TT.clientX,
+                y: TT.clientY
+              }, null === (iT = oT.setPointerCapture) || void 0 === iT || iT.call(oT, TT.pointerId)
             },
-            AY = rY => {
-              var FY;
-              const AY = YY.orbit;
-              if ((null === (FY = DY) || void 0 === FY ? void 0 : FY.pointer) !== rY.pointerId || null === AY) return;
-              const IY = rY.clientX - DY.x,
-                RY = rY.clientY - DY.y;
-              DY = {
-                ...DY,
-                x: rY.clientX,
-                y: rY.clientY
-              }, YY.setOrbit({
-                alpha: AY.alpha - .01 * IY,
-                beta: Math.min(Math.PI - .01, Math.max(.01, AY.beta - .01 * RY)),
-                radius: AY.radius
+            zT = oT => {
+              var iT;
+              const zT = TT.orbit;
+              if ((null === (iT = IT) || void 0 === iT ? void 0 : iT.pointer) !== oT.pointerId || null === zT) return;
+              const kT = oT.clientX - IT.x,
+                WT = oT.clientY - IT.y;
+              IT = {
+                ...IT,
+                x: oT.clientX,
+                y: oT.clientY
+              }, TT.setOrbit({
+                alpha: zT.alpha - .01 * kT,
+                beta: Math.min(Math.PI - .01, Math.max(.01, zT.beta - .01 * WT)),
+                radius: zT.radius
               })
             },
-            IY = YY => {
-              var rY;
-              (null === (rY = DY) || void 0 === rY ? void 0 : rY.pointer) === YY.pointerId && (DY = null)
+            kT = TT => {
+              var oT;
+              (null === (oT = IT) || void 0 === oT ? void 0 : oT.pointer) === TT.pointerId && (IT = null)
             },
-            RY = rY => {
-              const DY = YY.orbit;
-              if (null === DY) return;
-              rY.preventDefault();
-              const FY = rY.deltaY * (rY.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : rY.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                AY = Math.min(100, Math.max(5, DY.radius + .08 * FY));
-              YY.setOrbit({
-                ...DY,
-                radius: AY
+            WT = oT => {
+              const IT = TT.orbit;
+              if (null === IT) return;
+              oT.preventDefault();
+              const iT = oT.deltaY * (oT.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : oT.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                zT = Math.min(100, Math.max(5, IT.radius + .08 * iT));
+              TT.setOrbit({
+                ...IT,
+                radius: zT
               })
             };
-          return rY.style.touchAction = "none", rY.addEventListener("pointerdown", FY), rY.addEventListener("pointermove", AY), rY.addEventListener("pointerup", IY), rY.addEventListener("pointercancel", IY), rY.addEventListener("wheel", RY, {
+          return oT.style.touchAction = "none", oT.addEventListener("pointerdown", iT), oT.addEventListener("pointermove", zT), oT.addEventListener("pointerup", kT), oT.addEventListener("pointercancel", kT), oT.addEventListener("wheel", WT, {
             passive: !1
           }), () => {
-            rY.removeEventListener("pointerdown", FY), rY.removeEventListener("pointermove", AY), rY.removeEventListener("pointerup", IY), rY.removeEventListener("pointercancel", IY), rY.removeEventListener("wheel", RY)
+            oT.removeEventListener("pointerdown", iT), oT.removeEventListener("pointermove", zT), oT.removeEventListener("pointerup", kT), oT.removeEventListener("pointercancel", kT), oT.removeEventListener("wheel", WT)
           }
-        }(YY), this.dev = {
-          setCamera: rY => {
+        }(TT), this.dev = {
+          setCamera: oT => {
             let {
-              yaw: DY,
-              pitch: FY,
-              radius: AY,
-              target: IY
-            } = rY;
-            IY && console.warn(`${Ir} setCamera: target is noa's character preview only`);
-            const RY = YY.orbit;
-            null !== RY && YY.setOrbit({
-              alpha: DY,
-              beta: FY,
-              radius: null !== AY && void 0 !== AY ? AY : RY.radius
+              yaw: IT,
+              pitch: iT,
+              radius: zT,
+              target: kT
+            } = oT;
+            kT && console.warn(`${ko} setCamera: target is noa's character preview only`);
+            const WT = TT.orbit;
+            null !== WT && TT.setOrbit({
+              alpha: IT,
+              beta: iT,
+              radius: null !== zT && void 0 !== zT ? zT : WT.radius
             })
           },
-          canvas: () => YY.canvas,
+          canvas: () => TT.canvas,
           isolateHead: () => {
-            console.warn(`${Ir} isolateHead: noa's character preview only`)
+            console.warn(`${ko} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = YY.untilSettled().then((() => {
-          if (YY.isStopped) throw new Error(`${Ir} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = TT.untilSettled().then((() => {
+          if (TT.isStopped) throw new Error(`${ko} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(YY, rY) {
-        this.cosmetics[YY] = rY, this.apply()
+      setCosmetic(TT, oT) {
+        this.cosmetics[TT] = oT, this.apply()
       }
-      playEmote(YY) {
-        null === YY || YY !== this.emote ? (this.emote = YY, this.apply()) : this.preview.replay()
+      playEmote(TT) {
+        null === TT || TT !== this.emote ? (this.emote = TT, this.apply()) : this.preview.replay()
       }
-      untilDrawn(YY) {
+      untilDrawn(TT) {
         return this.preview.untilSettled()
       }
       resetCamera() {}
-      resize(YY, rY) {
-        this.preview.resize(YY, rY)
+      resize(TT, oT) {
+        this.preview.resize(TT, oT)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var YY;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), Rr, null === (YY = this.emote) ? -1 : vr(YY))
+        var TT;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), Wo, null === (TT = this.emote) ? -1 : So(TT))
       }
     }
 
-    function Qr(YY, rY) {
+    function Ko(TT, oT) {
       let {
-        mobType: DY,
-        variation: FY,
-        animation: AY
-      } = rY;
-      YY.setMob(Or(DY), null !== FY && void 0 !== FY ? FY : "", 1, ar(AY))
+        mobType: IT,
+        variation: iT,
+        animation: zT
+      } = oT;
+      TT.setMob(Xo(IT), null !== iT && void 0 !== iT ? iT : "", 1, Fo(zT))
     }
 
-    function or(YY, rY) {
+    function Mo(TT, oT) {
       let {
-        mobType: DY,
-        variation: FY,
-        metaInfo: AY,
-        tamed: IY
-      } = rY;
-      YY.setPet(Or(DY), FY, AY, IY)
+        mobType: IT,
+        variation: iT,
+        metaInfo: zT,
+        tamed: kT
+      } = oT;
+      TT.setPet(Xo(IT), iT, zT, kT)
     }
-    const Wr = {
+    const ro = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Er {
-      constructor(YY, rY, DY, FY) {
+    class Ao {
+      constructor(TT, oT, IT, iT) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, YY(DY.width, FY[1], FY).then((YY => {
-          if (this.closed) return void YY.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, TT(IT.width, iT[1], iT).then((TT => {
+          if (this.closed) return void TT.close();
           const {
-            style: DY
-          } = YY.canvas;
-          DY.position = "absolute", DY.top = "0", DY.visibility = "hidden", ur(rY, YY), this.preview = YY, this.apply()
-        })).catch((YY => {
-          console.error(`${Ir} couldn't open a lineup figure`, YY)
+            style: IT
+          } = TT.canvas;
+          IT.position = "absolute", IT.top = "0", IT.visibility = "hidden", Do(oT, TT), this.preview = TT, this.apply()
+        })).catch((TT => {
+          console.error(`${ko} couldn't open a lineup figure`, TT)
         }))
       }
-      update(YY, rY, DY, FY, AY) {
-        this.figure = YY, this.shown = rY, this.order = DY, this.span = FY, this.lineup = AY, this.apply()
+      update(TT, oT, IT, iT, zT) {
+        this.figure = TT, this.shown = oT, this.order = IT, this.span = iT, this.lineup = zT, this.apply()
       }
       close() {
-        var YY;
-        this.closed = !0, null === (YY = this.preview) || void 0 === YY || YY.close(), this.preview = null
+        var TT;
+        this.closed = !0, null === (TT = this.preview) || void 0 === TT || TT.close(), this.preview = null
       }
       apply() {
         const {
-          preview: YY,
-          figure: rY,
-          lineup: DY
+          preview: TT,
+          figure: oT,
+          lineup: IT
         } = this;
-        if (null === YY || null === rY) return;
-        if (this.given !== rY) {
-          var FY;
-          this.given = rY, this.loaded = !1;
-          const DY = null === rY.RV ? 0 : null !== (FY = (0, Fr.b)(rY.RV)) && void 0 !== FY ? FY : 0;
-          YY.setFigure(function(YY) {
-            return JSON.stringify(Object.fromEntries(YY.cosmetics))
-          }(rY), DY, ar(rY.animation), rY.size), YY.untilSettled().then((() => {
-            this.given === rY && (this.loaded = !0, this.apply())
+        if (null === TT || null === oT) return;
+        if (this.given !== oT) {
+          var iT;
+          this.given = oT, this.loaded = !1;
+          const IT = null === oT.Tu ? 0 : null !== (iT = (0, io.d)(oT.Tu)) && void 0 !== iT ? iT : 0;
+          TT.setFigure(function(TT) {
+            return JSON.stringify(Object.fromEntries(TT.cosmetics))
+          }(oT), IT, Fo(oT.animation), oT.size), TT.untilSettled().then((() => {
+            this.given === oT && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: AY,
-          width: IY
+          left: zT,
+          width: kT
         } = this.span;
-        YY.resize(IY, DY[1], DY);
+        TT.resize(kT, IT[1], IT);
         const {
-          style: RY
-        } = YY.canvas;
-        RY.left = `${AY}px`, RY.width = `${IY}px`, RY.zIndex = this.order, RY.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: WT
+        } = TT.canvas;
+        WT.left = `${zT}px`, WT.width = `${kT}px`, WT.zIndex = this.order, WT.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class mr {
-      constructor(YY, rY) {
-        this.open = rY, this.layer = void 0, this.figures = [], this.view = {
+    class go {
+      constructor(TT, oT) {
+        this.open = oT, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = sr(YY), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = Lo(TT), this.layer = document.createElement("div");
         const {
-          style: DY
+          style: IT
         } = this.layer;
-        DY.position = "relative", DY.isolation = "isolate", DY.overflow = "hidden", DY.width = "100%", DY.height = "100%", DY.pointerEvents = "none", YY.appendChild(this.layer)
+        IT.position = "relative", IT.isolation = "isolate", IT.overflow = "hidden", IT.width = "100%", IT.height = "100%", IT.pointerEvents = "none", TT.appendChild(this.layer)
       }
-      show(YY) {
-        this.view = YY, this.place()
+      show(TT) {
+        this.view = TT, this.place()
       }
-      resize(YY, rY) {
-        this.size = [YY, rY], this.place()
+      resize(TT, oT) {
+        this.size = [TT, oT], this.place()
       }
       close() {
-        for (const YY of this.figures) YY.close();
+        for (const TT of this.figures) TT.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: YY,
-          shown: rY
+          figures: TT,
+          shown: oT
         } = this.view;
-        for (const FY of this.figures.splice(YY.length)) FY.close();
+        for (const iT of this.figures.splice(TT.length)) iT.close();
         const {
-          size: DY
+          size: IT
         } = this;
-        YY.forEach(((FY, AY) => {
-          var IY;
-          const RY = function(YY, rY, DY, FY) {
-            let [AY, IY] = FY;
-            const RY = (YY + .5) * AY / rY,
-              OY = Math.min(Math.max(AY / rY, 2 * DY * IY), 2 * Math.max(RY, AY - RY));
+        TT.forEach(((iT, zT) => {
+          var kT;
+          const WT = function(TT, oT, IT, iT) {
+            let [zT, kT] = iT;
+            const WT = (TT + .5) * zT / oT,
+              XT = Math.min(Math.max(zT / oT, 2 * IT * kT), 2 * Math.max(WT, zT - WT));
             return {
-              left: RY - OY / 2,
-              width: OY
+              left: WT - XT / 2,
+              width: XT
             }
-          }(AY, YY.length, function(YY) {
+          }(zT, TT.length, function(TT) {
             let {
-              animation: rY,
-              size: DY
-            } = YY;
+              animation: oT,
+              size: IT
+            } = TT;
             const {
-              aimed: FY,
-              ready: AY
-            } = Wr;
-            return (ar(rY) === Ar.gunAimed ? FY : AY) * DY
-          }(FY), DY);
-          this.figures[AY] ??= new Er(this.open, this.layer, RY, DY), this.figures[AY].update(FY, null !== (IY = rY[AY]) && void 0 !== IY && IY, function(YY, rY) {
-            return String(Math.round(1e3 * YY) + rY)
-          }(FY.size, AY), RY, DY)
+              aimed: iT,
+              ready: zT
+            } = ro;
+            return (Fo(oT) === zo.gunAimed ? iT : zT) * IT
+          }(iT), IT);
+          this.figures[zT] ??= new Ao(this.open, this.layer, WT, IT), this.figures[zT].update(iT, null !== (kT = oT[zT]) && void 0 !== kT && kT, function(TT, oT) {
+            return String(Math.round(1e3 * TT) + oT)
+          }(iT.size, zT), WT, IT)
         }))
       }
     }
-    const Vr = {
-      player: dY,
-      store: JY
+    const ho = {
+      player: OT,
+      store: HT
     };
-    class Sr {
-      constructor(YY) {
-        this.page = YY
+    class wo {
+      constructor(TT) {
+        this.page = TT
       }
-      async openMob(YY) {
-        return new ir(await this.open(YY, hY), Qr)
+      async openMob(TT) {
+        return new xo(await this.open(TT, QT), Ko)
       }
-      async openPet(YY) {
-        return new ir(await this.open(YY, hY), or)
+      async openPet(TT) {
+        return new xo(await this.open(TT, QT), Mo)
       }
-      openMobLineup(YY) {
-        return new mr(YY, ((YY, rY, DY) => this.page.openPreview(hY, YY, rY, DY)))
+      openMobLineup(TT) {
+        return new go(TT, ((TT, oT, IT) => this.page.openPreview(QT, TT, oT, IT)))
       }
-      async openCharacter(YY, rY) {
-        return new yr(await this.open(YY, Vr[rY]))
+      async openCharacter(TT, oT) {
+        return new co(await this.open(TT, ho[oT]))
       }
-      async open(YY, rY) {
-        const [DY, FY] = sr(YY), AY = await this.page.openPreview(rY, DY, FY);
-        return ur(YY, AY), AY
+      async open(TT, oT) {
+        const [IT, iT] = Lo(TT), zT = await this.page.openPreview(oT, IT, iT);
+        return Do(TT, zT), zT
       }
     }
   },
-  36140: (YY, rY, DY) => {
-    DY.d(rY, {
-      B: () => QY,
-      D: () => WY,
-      d: () => FY,
-      f: () => AY,
-      g: () => sY,
-      h: () => oY,
-      l: () => vY,
-      o: () => EY,
-      r: () => gY,
-      u: () => aY,
-      v: () => iY,
-      y: () => yY
+  35704: (TT, oT, IT) => {
+    IT.d(oT, {
+      A: () => rT,
+      b: () => iT,
+      e: () => zT,
+      f: () => LT,
+      h: () => MT,
+      k: () => ST,
+      m: () => AT,
+      n: () => BT,
+      p: () => FT,
+      t: () => xT,
+      x: () => cT,
+      y: () => KT
     });
-    const FY = [{
+    const iT = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1451,64 +1451,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function AY(YY, rY) {
+    function zT(TT, oT) {
       const {
-        numLines: DY,
-        charsPerLine: AY
-      } = FY[rY];
-      return mY(YY, DY, AY, !1)
+        numLines: IT,
+        charsPerLine: zT
+      } = iT[oT];
+      return gT(TT, IT, zT, !1)
     }
-    const IY = 7 / 8,
-      RY = .25,
-      OY = 8;
+    const kT = 7 / 8,
+      WT = .25,
+      XT = 8;
 
-    function gY(YY, rY) {
+    function BT(TT, oT) {
       return {
-        width: Math.min(YY, OY) - 2 * RY,
-        height: Math.min(rY, OY) - 2 * RY
+        width: Math.min(TT, XT) - 2 * WT,
+        height: Math.min(oT, XT) - 2 * WT
       }
     }
 
-    function aY(YY, rY, DY) {
-      const AY = gY(YY, rY),
+    function FT(TT, oT, IT) {
+      const zT = BT(TT, oT),
         {
-          numLines: RY,
-          charsPerLine: OY
-        } = FY[DY];
+          numLines: WT,
+          charsPerLine: XT
+        } = iT[IT];
       return {
-        numLines: Math.max(1, Math.floor(RY / IY * AY.height)),
-        charsPerLine: Math.max(1, Math.floor(OY * AY.width))
+        numLines: Math.max(1, Math.floor(WT / kT * zT.height)),
+        charsPerLine: Math.max(1, Math.floor(XT * zT.width))
       }
     }
 
-    function vY(YY, rY, DY, FY) {
+    function ST(TT, oT, IT, iT) {
       const {
-        numLines: AY,
-        charsPerLine: IY
-      } = aY(DY, FY, rY);
-      return mY(YY, AY, IY, !1)
+        numLines: zT,
+        charsPerLine: kT
+      } = FT(IT, iT, oT);
+      return gT(TT, zT, kT, !1)
     }
-    const uY = 32e3;
+    const DT = 32e3;
 
-    function sY(YY) {
-      return YY.slice(0, uY)
+    function LT(TT) {
+      return TT.slice(0, DT)
     }
-    const iY = 512e3,
-      yY = 64,
-      QY = iY;
+    const xT = 512e3,
+      cT = 64,
+      KT = xT;
 
-    function oY(YY, rY) {
-      const DY = Math.max(0, QY - rY),
-        FY = Math.min(iY, DY);
-      return YY.slice(0, FY)
+    function MT(TT, oT) {
+      const IT = Math.max(0, KT - oT),
+        iT = Math.min(xT, IT);
+      return TT.slice(0, iT)
     }
-    const WY = {
+    const rT = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      LR: {
+      gX: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1520,31 +1520,31 @@ export const modules = {
       }
     };
 
-    function EY(YY, rY) {
+    function AT(TT, oT) {
       const {
-        numLines: DY,
-        charsPerLine: FY
-      } = WY[rY];
-      return mY(YY, DY, FY, !1)
+        numLines: IT,
+        charsPerLine: iT
+      } = rT[oT];
+      return gT(TT, IT, iT, !1)
     }
 
-    function mY(YY, rY, DY, FY, AY) {
-      (AY || FY) && (YY = YY.slice(0, null !== AY && void 0 !== AY ? AY : rY * DY));
-      const IY = YY.split("\n");
-      if (IY.length > rY && IY.splice(rY, IY.length - rY), !FY)
-        for (let RY = 0; RY < IY.length; RY++) {
-          const YY = IY[RY];
-          YY.length > DY && (IY[RY] = YY.substring(0, DY), IY.length < rY && IY.splice(RY + 1, 0, YY.substring(DY)))
+    function gT(TT, oT, IT, iT, zT) {
+      (zT || iT) && (TT = TT.slice(0, null !== zT && void 0 !== zT ? zT : oT * IT));
+      const kT = TT.split("\n");
+      if (kT.length > oT && kT.splice(oT, kT.length - oT), !iT)
+        for (let WT = 0; WT < kT.length; WT++) {
+          const TT = kT[WT];
+          TT.length > IT && (kT[WT] = TT.substring(0, IT), kT.length < oT && kT.splice(WT + 1, 0, TT.substring(IT)))
         }
-      return IY.join("\n")
+      return kT.join("\n")
     }
   },
-  42341: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/builtInAnimations.anim.36d8b13aae7e273ec8e8.gz"
+  42100: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/builtInAnimations.anim.36d8b13aae7e273ec8e8.gz"
   },
-  42344: (YY, rY, DY) => {
-    YY.exports = DY.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  42105: (TT, oT, IT) => {
+    TT.exports = IT.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

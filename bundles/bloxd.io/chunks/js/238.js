@@ -1,80 +1,80 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  38946: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      playDocsSound: () => OY
+  38577: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      playDocsSound: () => XT
     });
-    var FY = DY(4434),
-      AY = DY(36151),
-      IY = DY(1222);
-    const RY = new Map;
+    var iT = IT(4341),
+      zT = IT(35713),
+      kT = IT(1183);
+    const WT = new Map;
 
-    function OY(YY, rY, DY, OY, gY) {
-      let aY, vY = null,
-        uY = 0,
-        sY = 0;
-      if (rY) aY = new FY.Howl({
-        src: [`${IY.clientSideServerUrls.staticUrl}/sounds/music/${YY}.mp3`],
+    function XT(TT, oT, IT, XT, BT) {
+      let FT, ST = null,
+        DT = 0,
+        LT = 0;
+      if (oT) FT = new iT.Howl({
+        src: [`${kT.clientSideServerUrls.staticUrl}/sounds/music/${TT}.mp3`],
         html5: !0,
-        volume: DY
+        volume: IT
       });
       else {
-        var iY;
-        vY = (0, AY.k)(YY);
-        const rY = (0, AY.g)(vY),
-          DY = null !== (iY = rY.sprite[YY]) && void 0 !== iY ? iY : null;
-        if (!DY) throw new Error(`Docs sound ${YY} is not in sprite sheet ${vY}`);
-        uY = DY[0] / 1e3, sY = DY[1] / 1e3, aY = RY.get(vY), aY || (aY = new FY.Howl({
-          ...rY,
+        var xT;
+        ST = (0, zT.h)(TT);
+        const oT = (0, zT.f)(ST),
+          IT = null !== (xT = oT.sprite[TT]) && void 0 !== xT ? xT : null;
+        if (!IT) throw new Error(`Docs sound ${TT} is not in sprite sheet ${ST}`);
+        DT = IT[0] / 1e3, LT = IT[1] / 1e3, FT = WT.get(ST), FT || (FT = new iT.Howl({
+          ...oT,
           volume: 1
-        }), RY.set(vY, aY))
+        }), WT.set(ST, FT))
       }
-      const yY = rY ? aY.play() : aY.play(YY);
-      aY.volume(DY, yY), OY > 0 && aY.seek(uY + OY, yY);
-      const QY = () => rY ? aY.duration() : sY;
-      let oY = !1;
-      const WY = YY => {
-          oY || (oY = !0, aY.off("play", EY, yY), aY.off("end", mY, yY), aY.off("loaderror", SY), aY.off("playerror", VY, yY), rY && aY.unload(), gY.onEnd(YY))
+      const cT = oT ? FT.play() : FT.play(TT);
+      FT.volume(IT, cT), XT > 0 && FT.seek(DT + XT, cT);
+      const KT = () => oT ? FT.duration() : LT;
+      let MT = !1;
+      const rT = TT => {
+          MT || (MT = !0, FT.off("play", AT, cT), FT.off("end", gT, cT), FT.off("loaderror", wT), FT.off("playerror", hT, cT), oT && FT.unload(), BT.onEnd(TT))
         },
-        EY = () => {
-          gY.onPlay(QY())
+        AT = () => {
+          BT.onPlay(KT())
         },
-        mY = () => {
-          WY(!1)
+        gT = () => {
+          rT(!1)
         },
-        VY = (rY, DY) => {
-          console.error(`Could not play docs sound ${YY}`, DY), WY(!0)
+        hT = (oT, IT) => {
+          console.error(`Could not play docs sound ${TT}`, IT), rT(!0)
         },
-        SY = (YY, rY) => {
-          null !== vY && RY.get(vY) === aY && (RY.delete(vY), aY.unload()), VY(YY, rY)
+        wT = (TT, oT) => {
+          null !== ST && WT.get(ST) === FT && (WT.delete(ST), FT.unload()), hT(TT, oT)
         };
-      return aY.on("play", EY, yY), aY.once("end", mY, yY), aY.once("loaderror", SY), aY.once("playerror", VY, yY), {
+      return FT.on("play", AT, cT), FT.once("end", gT, cT), FT.once("loaderror", wT), FT.once("playerror", hT, cT), {
         pause: () => {
-          aY.pause(yY)
+          FT.pause(cT)
         },
         resume: () => {
-          aY.play(yY)
+          FT.play(cT)
         },
-        seek: YY => {
-          const rY = QY(),
-            DY = Math.max(YY, 0);
-          aY.seek(uY + (rY > 0 ? Math.min(DY, rY) : DY), yY)
+        seek: TT => {
+          const oT = KT(),
+            IT = Math.max(TT, 0);
+          FT.seek(DT + (oT > 0 ? Math.min(IT, oT) : IT), cT)
         },
-        lE: () => {
-          const YY = aY.seek(yY);
-          return "number" === typeof YY ? Math.max(0, YY - uY) : 0
+        Wm: () => {
+          const TT = FT.seek(cT);
+          return "number" === typeof TT ? Math.max(0, TT - DT) : 0
         },
-        getDuration: QY,
-        setVolume: YY => {
-          aY.volume(YY, yY)
+        getDuration: KT,
+        setVolume: TT => {
+          FT.volume(TT, cT)
         },
         stop: () => {
-          oY || (aY.stop(yY), WY(!1))
+          MT || (FT.stop(cT), rT(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

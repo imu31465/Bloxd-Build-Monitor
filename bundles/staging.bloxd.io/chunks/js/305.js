@@ -1,582 +1,582 @@
 export const id = 305;
 export const ids = [305];
 export const modules = {
-  40926: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      ReadExrDataAsync: () => ur,
-      _ExrTextureLoader: () => vr
+  40672: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      ReadExrDataAsync: () => Do,
+      _ExrTextureLoader: () => So
     });
-    var FY = DY(38040),
-      AY = DY(36559),
-      IY = DY(39184);
-    const RY = 4,
-      OY = 4,
-      gY = 1,
-      aY = 2,
-      vY = 8,
-      uY = 65536,
-      sY = uY >> 3,
-      iY = 14,
-      yY = 65537,
-      QY = 1 << iY,
-      oY = QY - 1,
-      WY = 59,
-      EY = 63,
-      mY = 2 + EY - WY;
-    var VY, SY;
+    var iT = IT(37660),
+      zT = IT(36156),
+      kT = IT(38853);
+    const WT = 4,
+      XT = 4,
+      BT = 1,
+      FT = 2,
+      ST = 8,
+      DT = 65536,
+      LT = DT >> 3,
+      xT = 14,
+      cT = 65537,
+      KT = 1 << xT,
+      MT = KT - 1,
+      rT = 59,
+      AT = 63,
+      gT = 2 + AT - rT;
+    var hT, wT;
 
-    function lY(YY, rY) {
-      const DY = new Uint8Array(YY);
-      let FY = 0;
-      for (; 0 != DY[rY.value + FY];) FY += 1;
-      const AY = (new TextDecoder).decode(DY.slice(rY.value, rY.value + FY));
-      return rY.value = rY.value + FY + 1, AY
+    function mT(TT, oT) {
+      const IT = new Uint8Array(TT);
+      let iT = 0;
+      for (; 0 != IT[oT.value + iT];) iT += 1;
+      const zT = (new TextDecoder).decode(IT.slice(oT.value, oT.value + iT));
+      return oT.value = oT.value + iT + 1, zT
     }
 
-    function TY(YY, rY) {
-      const DY = YY.getInt32(rY.value, !0);
-      return rY.value += RY, DY
+    function eT(TT, oT) {
+      const IT = TT.getInt32(oT.value, !0);
+      return oT.value += WT, IT
     }
 
-    function eY(YY, rY) {
-      const DY = YY.getUint32(rY.value, !0);
-      return rY.value += RY, DY
+    function RT(TT, oT) {
+      const IT = TT.getUint32(oT.value, !0);
+      return oT.value += WT, IT
     }
 
-    function NY(YY, rY) {
-      const DY = YY.getUint8(rY.value);
-      return rY.value += gY, DY
+    function uT(TT, oT) {
+      const IT = TT.getUint8(oT.value);
+      return oT.value += BT, IT
     }
 
-    function BY(YY, rY) {
-      const DY = YY.getUint16(rY.value, !0);
-      return rY.value += aY, DY
+    function vT(TT, oT) {
+      const IT = TT.getUint16(oT.value, !0);
+      return oT.value += FT, IT
     }
 
-    function cY(YY, rY) {
-      const DY = YY[rY.value];
-      return rY.value += gY, DY
+    function ET(TT, oT) {
+      const IT = TT[oT.value];
+      return oT.value += BT, IT
     }
 
-    function KY(YY, rY) {
-      let DY;
-      return DY = "getBigInt64" in DataView.prototype ? Number(YY.getBigInt64(rY.value, !0)) : YY.getUint32(rY.value + 4, !0) + Number(YY.getUint32(rY.value, !0) << 32), rY.value += vY, DY
+    function fT(TT, oT) {
+      let IT;
+      return IT = "getBigInt64" in DataView.prototype ? Number(TT.getBigInt64(oT.value, !0)) : TT.getUint32(oT.value + 4, !0) + Number(TT.getUint32(oT.value, !0) << 32), oT.value += ST, IT
     }
 
-    function HY(YY, rY) {
-      const DY = YY.getFloat32(rY.value, !0);
-      return rY.value += OY, DY
+    function CT(TT, oT) {
+      const IT = TT.getFloat32(oT.value, !0);
+      return oT.value += XT, IT
     }
 
-    function zY(YY, rY) {
-      return (0, IY.c)(BY(YY, rY))
+    function jT(TT, oT) {
+      return (0, kT.b)(vT(TT, oT))
     }
 
-    function ZY(YY, rY) {
-      return (0, IY.k)((0, AY.Clamp)(HY(YY, rY), -IY.g, IY.g))
+    function JT(TT, oT) {
+      return (0, kT.i)((0, zT.Clamp)(CT(TT, oT), -kT.e, kT.e))
     }
 
-    function CY(YY, rY, DY, FY) {
-      switch (DY) {
+    function UT(TT, oT, IT, iT) {
+      switch (IT) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(YY, rY, DY) {
-            const FY = (new TextDecoder).decode(new Uint8Array(YY).slice(rY.value, rY.value + DY));
-            return rY.value = rY.value + DY, FY
-          }(YY.buffer, rY, FY);
+          return function(TT, oT, IT) {
+            const iT = (new TextDecoder).decode(new Uint8Array(TT).slice(oT.value, oT.value + IT));
+            return oT.value = oT.value + IT, iT
+          }(TT.buffer, oT, iT);
         case "chlist":
-          return function(YY, rY, DY) {
-            const FY = rY.value,
-              AY = [];
-            for (; rY.value < FY + DY - 1;) {
-              const DY = lY(YY.buffer, rY),
-                FY = TY(YY, rY),
-                IY = NY(YY, rY);
-              rY.value += 3;
-              const RY = TY(YY, rY),
-                OY = TY(YY, rY);
-              AY.push({
-                name: DY,
-                pixelType: FY,
-                pLinear: IY,
-                xSampling: RY,
-                ySampling: OY
+          return function(TT, oT, IT) {
+            const iT = oT.value,
+              zT = [];
+            for (; oT.value < iT + IT - 1;) {
+              const IT = mT(TT.buffer, oT),
+                iT = eT(TT, oT),
+                kT = uT(TT, oT);
+              oT.value += 3;
+              const WT = eT(TT, oT),
+                XT = eT(TT, oT);
+              zT.push({
+                name: IT,
+                pixelType: iT,
+                pLinear: kT,
+                xSampling: WT,
+                ySampling: XT
               })
             }
-            return rY.value += 1, AY
-          }(YY, rY, FY);
+            return oT.value += 1, zT
+          }(TT, oT, iT);
         case "chromaticities":
-          return function(YY, rY) {
+          return function(TT, oT) {
             return {
-              redX: HY(YY, rY),
-              redY: HY(YY, rY),
-              greenX: HY(YY, rY),
-              greenY: HY(YY, rY),
-              blueX: HY(YY, rY),
-              blueY: HY(YY, rY),
-              whiteX: HY(YY, rY),
-              whiteY: HY(YY, rY)
+              redX: CT(TT, oT),
+              redY: CT(TT, oT),
+              greenX: CT(TT, oT),
+              greenY: CT(TT, oT),
+              blueX: CT(TT, oT),
+              blueY: CT(TT, oT),
+              whiteX: CT(TT, oT),
+              whiteY: CT(TT, oT)
             }
-          }(YY, rY);
+          }(TT, oT);
         case "compression":
-          return function(YY, rY) {
-            return NY(YY, rY)
-          }(YY, rY);
+          return function(TT, oT) {
+            return uT(TT, oT)
+          }(TT, oT);
         case "box2i":
-          return function(YY, rY) {
+          return function(TT, oT) {
             return {
-              xMin: TY(YY, rY),
-              yMin: TY(YY, rY),
-              xMax: TY(YY, rY),
-              yMax: TY(YY, rY)
+              xMin: eT(TT, oT),
+              yMin: eT(TT, oT),
+              xMax: eT(TT, oT),
+              yMax: eT(TT, oT)
             }
-          }(YY, rY);
+          }(TT, oT);
         case "lineOrder":
-          return function(YY, rY) {
-            const DY = NY(YY, rY);
-            return SY[DY]
-          }(YY, rY);
+          return function(TT, oT) {
+            const IT = uT(TT, oT);
+            return wT[IT]
+          }(TT, oT);
         case "float":
-          return HY(YY, rY);
+          return CT(TT, oT);
         case "v2f":
-          return function(YY, rY) {
-            return [HY(YY, rY), HY(YY, rY)]
-          }(YY, rY);
+          return function(TT, oT) {
+            return [CT(TT, oT), CT(TT, oT)]
+          }(TT, oT);
         case "v3f":
-          return function(YY, rY) {
-            return [HY(YY, rY), HY(YY, rY), HY(YY, rY)]
-          }(YY, rY);
+          return function(TT, oT) {
+            return [CT(TT, oT), CT(TT, oT), CT(TT, oT)]
+          }(TT, oT);
         case "int":
-          return TY(YY, rY);
+          return eT(TT, oT);
         case "rational":
-          return function(YY, rY) {
-            return [TY(YY, rY), eY(YY, rY)]
-          }(YY, rY);
+          return function(TT, oT) {
+            return [eT(TT, oT), RT(TT, oT)]
+          }(TT, oT);
         case "timecode":
-          return function(YY, rY) {
-            return [eY(YY, rY), eY(YY, rY)]
-          }(YY, rY);
+          return function(TT, oT) {
+            return [RT(TT, oT), RT(TT, oT)]
+          }(TT, oT);
         case "preview":
-          return rY.value += FY, "skipped";
+          return oT.value += iT, "skipped";
         default:
-          return void(rY.value += FY)
+          return void(oT.value += iT)
       }
     }
 
-    function fY(YY) {
-      for (let rY = 1; rY < YY.length; rY++) {
-        const DY = YY[rY - 1] + YY[rY] - 128;
-        YY[rY] = DY
+    function aT(TT) {
+      for (let oT = 1; oT < TT.length; oT++) {
+        const IT = TT[oT - 1] + TT[oT] - 128;
+        TT[oT] = IT
       }
     }
 
-    function jY(YY, rY) {
-      let DY = 0,
-        FY = Math.floor((YY.length + 1) / 2),
-        AY = 0;
-      const IY = YY.length - 1;
-      for (; !(AY > IY) && (rY[AY++] = YY[DY++], !(AY > IY));) rY[AY++] = YY[FY++]
-    }! function(YY) {
-      YY[YY.NO_COMPRESSION = 0] = "NO_COMPRESSION", YY[YY.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", YY[YY.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", YY[YY.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", YY[YY.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", YY[YY.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(VY || (VY = {})),
-    function(YY) {
-      YY[YY.INCREASING_Y = 0] = "INCREASING_Y", YY[YY.DECREASING_Y = 1] = "DECREASING_Y"
-    }(SY || (SY = {}));
-    const hY = 20000630;
+    function YT(TT, oT) {
+      let IT = 0,
+        iT = Math.floor((TT.length + 1) / 2),
+        zT = 0;
+      const kT = TT.length - 1;
+      for (; !(zT > kT) && (oT[zT++] = TT[IT++], !(zT > kT));) oT[zT++] = TT[iT++]
+    }! function(TT) {
+      TT[TT.NO_COMPRESSION = 0] = "NO_COMPRESSION", TT[TT.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", TT[TT.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", TT[TT.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", TT[TT.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", TT[TT.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(hT || (hT = {})),
+    function(TT) {
+      TT[TT.INCREASING_Y = 0] = "INCREASING_Y", TT[TT.DECREASING_Y = 1] = "DECREASING_Y"
+    }(wT || (wT = {}));
+    const QT = 20000630;
 
-    function dY(YY, rY) {
-      if (YY.getUint32(0, !0) != hY) throw new Error("Incorrect OpenEXR format");
-      const DY = YY.getUint8(4),
-        AY = YY.getUint8(5),
-        IY = {
-          singleTile: !!(2 & AY),
-          longName: !!(4 & AY),
-          deepFormat: !!(8 & AY),
-          multiPart: !!(16 & AY)
+    function OT(TT, oT) {
+      if (TT.getUint32(0, !0) != QT) throw new Error("Incorrect OpenEXR format");
+      const IT = TT.getUint8(4),
+        zT = TT.getUint8(5),
+        kT = {
+          singleTile: !!(2 & zT),
+          longName: !!(4 & zT),
+          deepFormat: !!(8 & zT),
+          multiPart: !!(16 & zT)
         };
-      rY.value = 8;
-      const RY = {};
-      let OY = !0;
-      for (; OY;) {
-        const DY = lY(YY.buffer, rY);
-        if (DY) {
-          const AY = lY(YY.buffer, rY),
-            IY = CY(YY, rY, AY, eY(YY, rY));
-          void 0 === IY ? FY.d.Warn(`Unknown header attribute type ${AY}'.`) : RY[DY] = IY
-        } else OY = !1
+      oT.value = 8;
+      const WT = {};
+      let XT = !0;
+      for (; XT;) {
+        const IT = mT(TT.buffer, oT);
+        if (IT) {
+          const zT = mT(TT.buffer, oT),
+            kT = UT(TT, oT, zT, RT(TT, oT));
+          void 0 === kT ? iT.d.Warn(`Unknown header attribute type ${zT}'.`) : WT[IT] = kT
+        } else XT = !1
       }
-      if (0 != (-5 & AY)) throw new Error("Unsupported file format");
+      if (0 != (-5 & zT)) throw new Error("Unsupported file format");
       return {
-        version: DY,
-        spec: IY,
-        ...RY
-      }
-    }
-    const JY = 32768,
-      MY = 65535;
-
-    function wY(YY, rY, DY, FY, AY) {
-      for (; DY < YY;) rY = rY << 8 | cY(FY, AY), DY += 8;
-      return {
-        l: rY >> (DY -= YY) & (1 << YY) - 1,
-        c: rY,
-        lc: DY
+        version: IT,
+        spec: kT,
+        ...WT
       }
     }
+    const HT = 32768,
+      nT = 65535;
 
-    function bY(YY, rY, DY, FY) {
+    function qT(TT, oT, IT, iT, zT) {
+      for (; IT < TT;) oT = oT << 8 | ET(iT, zT), IT += 8;
       return {
-        c: YY = YY << 8 | cY(DY, FY),
-        lc: rY += 8
+        l: oT >> (IT -= TT) & (1 << TT) - 1,
+        c: oT,
+        lc: IT
       }
     }
 
-    function XY(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
-      if (YY == rY) {
-        if (FY < 8) {
-          const YY = bY(DY, FY, AY, IY);
-          DY = YY.c, FY = YY.lc
+    function ZT(TT, oT, IT, iT) {
+      return {
+        c: TT = TT << 8 | ET(IT, iT),
+        lc: oT += 8
+      }
+    }
+
+    function lT(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
+      if (TT == oT) {
+        if (iT < 8) {
+          const TT = ZT(IT, iT, zT, kT);
+          IT = TT.c, iT = TT.lc
         }
-        let YY = DY >> (FY -= 8);
-        if (YY = new Uint8Array([YY])[0], OY.value + YY > gY) return null;
-        const rY = RY[OY.value - 1];
-        for (; YY-- > 0;) RY[OY.value++] = rY
+        let TT = IT >> (iT -= 8);
+        if (TT = new Uint8Array([TT])[0], XT.value + TT > BT) return null;
+        const oT = WT[XT.value - 1];
+        for (; TT-- > 0;) WT[XT.value++] = oT
       } else {
-        if (!(OY.value < gY)) return null;
-        RY[OY.value++] = YY
+        if (!(XT.value < BT)) return null;
+        WT[XT.value++] = TT
       }
       return {
-        c: DY,
-        lc: FY
+        c: IT,
+        lc: iT
       }
     }
-    const qY = new Array(59);
+    const sT = new Array(59);
 
-    function pY(YY, rY, DY, FY, AY, IY) {
-      const RY = rY;
-      let OY = 0,
-        gY = 0;
-      for (; FY <= AY; FY++) {
-        if (RY.value - rY.value > DY) return;
-        let aY = wY(6, OY, gY, YY, RY);
-        const vY = aY.l;
-        if (OY = aY.c, gY = aY.lc, IY[FY] = vY, vY == EY) {
-          if (RY.value - rY.value > DY) throw new Error("Error in HufUnpackEncTable");
-          aY = wY(8, OY, gY, YY, RY);
-          let vY = aY.l + mY;
-          if (OY = aY.c, gY = aY.lc, FY + vY > AY + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; vY--;) IY[FY++] = 0;
-          FY--
-        } else if (vY >= WY) {
-          let YY = vY - WY + 2;
-          if (FY + YY > AY + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; YY--;) IY[FY++] = 0;
-          FY--
+    function tT(TT, oT, IT, iT, zT, kT) {
+      const WT = oT;
+      let XT = 0,
+        BT = 0;
+      for (; iT <= zT; iT++) {
+        if (WT.value - oT.value > IT) return;
+        let FT = qT(6, XT, BT, TT, WT);
+        const ST = FT.l;
+        if (XT = FT.c, BT = FT.lc, kT[iT] = ST, ST == AT) {
+          if (WT.value - oT.value > IT) throw new Error("Error in HufUnpackEncTable");
+          FT = qT(8, XT, BT, TT, WT);
+          let ST = FT.l + gT;
+          if (XT = FT.c, BT = FT.lc, iT + ST > zT + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; ST--;) kT[iT++] = 0;
+          iT--
+        } else if (ST >= rT) {
+          let TT = ST - rT + 2;
+          if (iT + TT > zT + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; TT--;) kT[iT++] = 0;
+          iT--
         }
-      }! function(YY) {
-        for (let DY = 0; DY <= 58; ++DY) qY[DY] = 0;
-        for (let DY = 0; DY < yY; ++DY) qY[YY[DY]] += 1;
-        let rY = 0;
-        for (let DY = 58; DY > 0; --DY) {
-          const YY = rY + qY[DY] >> 1;
-          qY[DY] = rY, rY = YY
+      }! function(TT) {
+        for (let IT = 0; IT <= 58; ++IT) sT[IT] = 0;
+        for (let IT = 0; IT < cT; ++IT) sT[TT[IT]] += 1;
+        let oT = 0;
+        for (let IT = 58; IT > 0; --IT) {
+          const TT = oT + sT[IT] >> 1;
+          sT[IT] = oT, oT = TT
         }
-        for (let DY = 0; DY < yY; ++DY) {
-          const rY = YY[DY];
-          rY > 0 && (YY[DY] = rY | qY[rY]++ << 6)
+        for (let IT = 0; IT < cT; ++IT) {
+          const oT = TT[IT];
+          oT > 0 && (TT[IT] = oT | sT[oT]++ << 6)
         }
-      }(IY)
+      }(kT)
     }
 
-    function kY(YY) {
-      return 63 & YY
+    function GT(TT) {
+      return 63 & TT
     }
 
-    function GY(YY) {
-      return YY >> 6
+    function pT(TT) {
+      return TT >> 6
     }
 
-    function xY(YY, rY, DY, FY, AY, IY) {
-      const RY = DY.value,
-        OY = eY(rY, DY),
-        gY = eY(rY, DY);
-      DY.value += 4;
-      const aY = eY(rY, DY);
-      if (DY.value += 4, OY < 0 || OY >= yY || gY < 0 || gY >= yY) throw new Error("Wrong HUF_ENCSIZE");
-      const vY = new Array(yY),
-        uY = new Array(QY);
-      ! function(YY) {
-        for (let rY = 0; rY < QY; rY++) YY[rY] = {}, YY[rY].len = 0, YY[rY].lit = 0, YY[rY].p = null
-      }(uY);
-      if (pY(YY, DY, FY - (DY.value - RY), OY, gY, vY), aY > 8 * (FY - (DY.value - RY))) throw new Error("Wrong hufUncompress");
-      ! function(YY, rY, DY, FY) {
-        for (; rY <= DY; rY++) {
-          const DY = GY(YY[rY]),
-            AY = kY(YY[rY]);
-          if (DY >> AY) throw new Error("Invalid table entry");
-          if (AY > iY) {
-            const YY = FY[DY >> AY - iY];
-            if (YY.len) throw new Error("Invalid table entry");
-            if (YY.lit++, YY.p) {
-              const rY = YY.p;
-              YY.p = new Array(YY.lit);
-              for (let DY = 0; DY < YY.lit - 1; ++DY) YY.p[DY] = rY[DY]
-            } else YY.p = new Array(1);
-            YY.p[YY.lit - 1] = rY
-          } else if (AY) {
-            let YY = 0;
-            for (let IY = 1 << iY - AY; IY > 0; IY--) {
-              const IY = FY[(DY << iY - AY) + YY];
-              if (IY.len || IY.p) throw new Error("Invalid table entry");
-              IY.len = AY, IY.lit = rY, YY++
+    function bT(TT, oT, IT, iT, zT, kT) {
+      const WT = IT.value,
+        XT = RT(oT, IT),
+        BT = RT(oT, IT);
+      IT.value += 4;
+      const FT = RT(oT, IT);
+      if (IT.value += 4, XT < 0 || XT >= cT || BT < 0 || BT >= cT) throw new Error("Wrong HUF_ENCSIZE");
+      const ST = new Array(cT),
+        DT = new Array(KT);
+      ! function(TT) {
+        for (let oT = 0; oT < KT; oT++) TT[oT] = {}, TT[oT].len = 0, TT[oT].lit = 0, TT[oT].p = null
+      }(DT);
+      if (tT(TT, IT, iT - (IT.value - WT), XT, BT, ST), FT > 8 * (iT - (IT.value - WT))) throw new Error("Wrong hufUncompress");
+      ! function(TT, oT, IT, iT) {
+        for (; oT <= IT; oT++) {
+          const IT = pT(TT[oT]),
+            zT = GT(TT[oT]);
+          if (IT >> zT) throw new Error("Invalid table entry");
+          if (zT > xT) {
+            const TT = iT[IT >> zT - xT];
+            if (TT.len) throw new Error("Invalid table entry");
+            if (TT.lit++, TT.p) {
+              const oT = TT.p;
+              TT.p = new Array(TT.lit);
+              for (let IT = 0; IT < TT.lit - 1; ++IT) TT.p[IT] = oT[IT]
+            } else TT.p = new Array(1);
+            TT.p[TT.lit - 1] = oT
+          } else if (zT) {
+            let TT = 0;
+            for (let kT = 1 << xT - zT; kT > 0; kT--) {
+              const kT = iT[(IT << xT - zT) + TT];
+              if (kT.len || kT.p) throw new Error("Invalid table entry");
+              kT.len = zT, kT.lit = oT, TT++
             }
           }
         }
-      }(vY, OY, gY, uY),
-      function(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
-        let aY = 0,
-          vY = 0;
-        const uY = RY,
-          sY = Math.trunc(FY.value + (AY + 7) / 8);
-        for (; FY.value < sY;) {
-          let AY = bY(aY, vY, DY, FY);
-          for (aY = AY.c, vY = AY.lc; vY >= iY;) {
-            const RY = rY[aY >> vY - iY & oY];
-            if (RY.len) {
-              vY -= RY.len;
-              const YY = XY(RY.lit, IY, aY, vY, DY, FY, OY, gY, uY);
-              YY && (aY = YY.c, vY = YY.lc)
+      }(ST, XT, BT, DT),
+      function(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
+        let FT = 0,
+          ST = 0;
+        const DT = WT,
+          LT = Math.trunc(iT.value + (zT + 7) / 8);
+        for (; iT.value < LT;) {
+          let zT = ZT(FT, ST, IT, iT);
+          for (FT = zT.c, ST = zT.lc; ST >= xT;) {
+            const WT = oT[FT >> ST - xT & MT];
+            if (WT.len) {
+              ST -= WT.len;
+              const TT = lT(WT.lit, kT, FT, ST, IT, iT, XT, BT, DT);
+              TT && (FT = TT.c, ST = TT.lc)
             } else {
-              if (!RY.p) throw new Error("hufDecode issues");
-              let rY;
-              for (rY = 0; rY < RY.lit; rY++) {
-                const iY = kY(YY[RY.p[rY]]);
-                for (; vY < iY && FY.value < sY;) AY = bY(aY, vY, DY, FY), aY = AY.c, vY = AY.lc;
-                if (vY >= iY && GY(YY[RY.p[rY]]) == (aY >> vY - iY & (1 << iY) - 1)) {
-                  vY -= iY;
-                  const YY = XY(RY.p[rY], IY, aY, vY, DY, FY, OY, gY, uY);
-                  YY && (aY = YY.c, vY = YY.lc);
+              if (!WT.p) throw new Error("hufDecode issues");
+              let oT;
+              for (oT = 0; oT < WT.lit; oT++) {
+                const xT = GT(TT[WT.p[oT]]);
+                for (; ST < xT && iT.value < LT;) zT = ZT(FT, ST, IT, iT), FT = zT.c, ST = zT.lc;
+                if (ST >= xT && pT(TT[WT.p[oT]]) == (FT >> ST - xT & (1 << xT) - 1)) {
+                  ST -= xT;
+                  const TT = lT(WT.p[oT], kT, FT, ST, IT, iT, XT, BT, DT);
+                  TT && (FT = TT.c, ST = TT.lc);
                   break
                 }
               }
-              if (rY == RY.lit) throw new Error("HufDecode issues")
+              if (oT == WT.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const yY = 8 - AY & 7;
-        for (aY >>= yY, vY -= yY; vY > 0;) {
-          const YY = rY[aY << iY - vY & oY];
-          if (!YY.len) throw new Error("HufDecode issues");
+        const cT = 8 - zT & 7;
+        for (FT >>= cT, ST -= cT; ST > 0;) {
+          const TT = oT[FT << xT - ST & MT];
+          if (!TT.len) throw new Error("HufDecode issues");
           {
-            vY -= YY.len;
-            const rY = XY(YY.lit, IY, aY, vY, DY, FY, OY, gY, uY);
-            rY && (aY = rY.c, vY = rY.lc)
+            ST -= TT.len;
+            const oT = lT(TT.lit, kT, FT, ST, IT, iT, XT, BT, DT);
+            oT && (FT = oT.c, ST = oT.lc)
           }
         }
-      }(vY, uY, YY, DY, aY, gY, IY, AY, {
+      }(ST, DT, TT, IT, FT, BT, kT, zT, {
         value: 0
       })
     }
 
-    function nY(YY) {
-      return 65535 & YY
+    function yT(TT) {
+      return 65535 & TT
     }
 
-    function PY(YY) {
-      const rY = nY(YY);
-      return rY > 32767 ? rY - 65536 : rY
+    function NT(TT) {
+      const oT = yT(TT);
+      return oT > 32767 ? oT - 65536 : oT
     }
 
-    function UY(YY, rY) {
-      const DY = PY(YY),
-        FY = PY(rY),
-        AY = DY + (1 & FY) + (FY >> 1);
+    function PT(TT, oT) {
+      const IT = NT(TT),
+        iT = NT(oT),
+        zT = IT + (1 & iT) + (iT >> 1);
       return {
-        a: AY,
-        b: AY - FY
+        a: zT,
+        b: zT - iT
       }
     }
 
-    function LY(YY, rY) {
-      const DY = nY(YY),
-        FY = nY(rY),
-        AY = DY - (FY >> 1) & MY;
+    function dT(TT, oT) {
+      const IT = yT(TT),
+        iT = yT(oT),
+        zT = IT - (iT >> 1) & nT;
       return {
-        a: FY + AY - JY & MY,
-        b: AY
+        a: iT + zT - HT & nT,
+        b: zT
       }
     }
 
-    function tY(YY, rY, DY, FY, AY, IY, RY) {
-      const OY = RY < 16384,
-        gY = DY > AY ? AY : DY;
-      let aY, vY, uY = 1;
-      for (; uY <= gY;) uY <<= 1;
-      for (uY >>= 1, aY = uY, uY >>= 1; uY >= 1;) {
-        vY = 0;
-        const RY = vY + IY * (AY - aY),
-          gY = IY * uY,
-          sY = IY * aY,
-          iY = FY * uY,
-          yY = FY * aY;
-        let QY, oY, WY, EY;
-        for (; vY <= RY; vY += sY) {
-          let AY = vY;
-          const IY = vY + FY * (DY - aY);
-          for (; AY <= IY; AY += yY) {
-            const DY = AY + iY,
-              FY = AY + gY,
-              IY = FY + iY;
-            if (OY) {
-              let RY = UY(YY[AY + rY], YY[FY + rY]);
-              QY = RY.a, WY = RY.b, RY = UY(YY[DY + rY], YY[IY + rY]), oY = RY.a, EY = RY.b, RY = UY(QY, oY), YY[AY + rY] = RY.a, YY[DY + rY] = RY.b, RY = UY(WY, EY), YY[FY + rY] = RY.a, YY[IY + rY] = RY.b
+    function VT(TT, oT, IT, iT, zT, kT, WT) {
+      const XT = WT < 16384,
+        BT = IT > zT ? zT : IT;
+      let FT, ST, DT = 1;
+      for (; DT <= BT;) DT <<= 1;
+      for (DT >>= 1, FT = DT, DT >>= 1; DT >= 1;) {
+        ST = 0;
+        const WT = ST + kT * (zT - FT),
+          BT = kT * DT,
+          LT = kT * FT,
+          xT = iT * DT,
+          cT = iT * FT;
+        let KT, MT, rT, AT;
+        for (; ST <= WT; ST += LT) {
+          let zT = ST;
+          const kT = ST + iT * (IT - FT);
+          for (; zT <= kT; zT += cT) {
+            const IT = zT + xT,
+              iT = zT + BT,
+              kT = iT + xT;
+            if (XT) {
+              let WT = PT(TT[zT + oT], TT[iT + oT]);
+              KT = WT.a, rT = WT.b, WT = PT(TT[IT + oT], TT[kT + oT]), MT = WT.a, AT = WT.b, WT = PT(KT, MT), TT[zT + oT] = WT.a, TT[IT + oT] = WT.b, WT = PT(rT, AT), TT[iT + oT] = WT.a, TT[kT + oT] = WT.b
             } else {
-              let RY = LY(YY[AY + rY], YY[FY + rY]);
-              QY = RY.a, WY = RY.b, RY = LY(YY[DY + rY], YY[IY + rY]), oY = RY.a, EY = RY.b, RY = LY(QY, oY), YY[AY + rY] = RY.a, YY[DY + rY] = RY.b, RY = LY(WY, EY), YY[FY + rY] = RY.a, YY[IY + rY] = RY.b
+              let WT = dT(TT[zT + oT], TT[iT + oT]);
+              KT = WT.a, rT = WT.b, WT = dT(TT[IT + oT], TT[kT + oT]), MT = WT.a, AT = WT.b, WT = dT(KT, MT), TT[zT + oT] = WT.a, TT[IT + oT] = WT.b, WT = dT(rT, AT), TT[iT + oT] = WT.a, TT[kT + oT] = WT.b
             }
           }
-          if (DY & uY) {
-            const DY = AY + gY;
-            let FY;
-            FY = OY ? UY(YY[AY + rY], YY[DY + rY]) : LY(YY[AY + rY], YY[DY + rY]), QY = FY.a, YY[DY + rY] = FY.b, YY[AY + rY] = QY
+          if (IT & DT) {
+            const IT = zT + BT;
+            let iT;
+            iT = XT ? PT(TT[zT + oT], TT[IT + oT]) : dT(TT[zT + oT], TT[IT + oT]), KT = iT.a, TT[IT + oT] = iT.b, TT[zT + oT] = KT
           }
         }
-        if (AY & uY) {
-          let AY = vY;
-          const IY = vY + FY * (DY - aY);
-          for (; AY <= IY; AY += yY) {
-            const DY = AY + iY;
-            let FY;
-            FY = OY ? UY(YY[AY + rY], YY[DY + rY]) : LY(YY[AY + rY], YY[DY + rY]), QY = FY.a, YY[DY + rY] = FY.b, YY[AY + rY] = QY
+        if (zT & DT) {
+          let zT = ST;
+          const kT = ST + iT * (IT - FT);
+          for (; zT <= kT; zT += cT) {
+            const IT = zT + xT;
+            let iT;
+            iT = XT ? PT(TT[zT + oT], TT[IT + oT]) : dT(TT[zT + oT], TT[IT + oT]), KT = iT.a, TT[IT + oT] = iT.b, TT[zT + oT] = KT
           }
         }
-        aY = uY, uY >>= 1
+        FT = DT, DT >>= 1
       }
-      return vY
+      return ST
     }
 
-    function Yr(YY) {
-      return new DataView(YY.array.buffer, YY.offset.value, YY.size)
+    function To(TT) {
+      return new DataView(TT.array.buffer, TT.offset.value, TT.size)
     }
 
-    function rr(YY) {
-      const rY = YY.viewer.buffer.slice(YY.offset.value, YY.offset.value + YY.size),
-        DY = new Uint8Array(function(YY) {
-          let rY = YY.byteLength;
-          const DY = [];
-          let FY = 0;
-          const AY = new DataView(YY);
-          for (; rY > 0;) {
-            const YY = AY.getInt8(FY++);
-            if (YY < 0) {
-              const IY = -YY;
-              rY -= IY + 1;
-              for (let YY = 0; YY < IY; YY++) DY.push(AY.getUint8(FY++))
+    function oo(TT) {
+      const oT = TT.viewer.buffer.slice(TT.offset.value, TT.offset.value + TT.size),
+        IT = new Uint8Array(function(TT) {
+          let oT = TT.byteLength;
+          const IT = [];
+          let iT = 0;
+          const zT = new DataView(TT);
+          for (; oT > 0;) {
+            const TT = zT.getInt8(iT++);
+            if (TT < 0) {
+              const kT = -TT;
+              oT -= kT + 1;
+              for (let TT = 0; TT < kT; TT++) IT.push(zT.getUint8(iT++))
             } else {
-              const IY = YY;
-              rY -= 2;
-              const RY = AY.getUint8(FY++);
-              for (let YY = 0; YY < IY + 1; YY++) DY.push(RY)
+              const kT = TT;
+              oT -= 2;
+              const WT = zT.getUint8(iT++);
+              for (let TT = 0; TT < kT + 1; TT++) IT.push(WT)
             }
           }
-          return DY
-        }(rY)),
-        FY = new Uint8Array(DY.length);
-      return fY(DY), jY(DY, FY), new DataView(FY.buffer)
+          return IT
+        }(oT)),
+        iT = new Uint8Array(IT.length);
+      return aT(IT), YT(IT, iT), new DataView(iT.buffer)
     }
 
-    function Dr(YY) {
-      const rY = YY.array.slice(YY.offset.value, YY.offset.value + YY.size),
-        DY = fflate.unzlibSync(rY),
-        FY = new Uint8Array(DY.length);
-      return fY(DY), jY(DY, FY), new DataView(FY.buffer)
+    function Io(TT) {
+      const oT = TT.array.slice(TT.offset.value, TT.offset.value + TT.size),
+        IT = fflate.unzlibSync(oT),
+        iT = new Uint8Array(IT.length);
+      return aT(IT), YT(IT, iT), new DataView(iT.buffer)
     }
 
-    function Fr(YY) {
-      const rY = YY.array.slice(YY.offset.value, YY.offset.value + YY.size),
-        DY = fflate.unzlibSync(rY),
-        FY = YY.lines * YY.channels * YY.width,
-        AY = 1 == YY.type ? new Uint16Array(FY) : new Uint32Array(FY);
-      let IY = 0,
-        RY = 0;
-      const OY = new Array(4);
-      for (let gY = 0; gY < YY.lines; gY++)
-        for (let rY = 0; rY < YY.channels; rY++) {
-          let rY = 0;
-          switch (YY.type) {
+    function io(TT) {
+      const oT = TT.array.slice(TT.offset.value, TT.offset.value + TT.size),
+        IT = fflate.unzlibSync(oT),
+        iT = TT.lines * TT.channels * TT.width,
+        zT = 1 == TT.type ? new Uint16Array(iT) : new Uint32Array(iT);
+      let kT = 0,
+        WT = 0;
+      const XT = new Array(4);
+      for (let BT = 0; BT < TT.lines; BT++)
+        for (let oT = 0; oT < TT.channels; oT++) {
+          let oT = 0;
+          switch (TT.type) {
             case 1:
-              OY[0] = IY, OY[1] = OY[0] + YY.width, IY = OY[1] + YY.width;
-              for (let FY = 0; FY < YY.width; ++FY) {
-                rY += DY[OY[0]++] << 8 | DY[OY[1]++], AY[RY] = rY, RY++
+              XT[0] = kT, XT[1] = XT[0] + TT.width, kT = XT[1] + TT.width;
+              for (let iT = 0; iT < TT.width; ++iT) {
+                oT += IT[XT[0]++] << 8 | IT[XT[1]++], zT[WT] = oT, WT++
               }
               break;
             case 2:
-              OY[0] = IY, OY[1] = OY[0] + YY.width, OY[2] = OY[1] + YY.width, IY = OY[2] + YY.width;
-              for (let FY = 0; FY < YY.width; ++FY) {
-                rY += DY[OY[0]++] << 24 | DY[OY[1]++] << 16 | DY[OY[2]++] << 8, AY[RY] = rY, RY++
+              XT[0] = kT, XT[1] = XT[0] + TT.width, XT[2] = XT[1] + TT.width, kT = XT[2] + TT.width;
+              for (let iT = 0; iT < TT.width; ++iT) {
+                oT += IT[XT[0]++] << 24 | IT[XT[1]++] << 16 | IT[XT[2]++] << 8, zT[WT] = oT, WT++
               }
           }
         }
-      return new DataView(AY.buffer)
+      return new DataView(zT.buffer)
     }
 
-    function Ar(YY) {
-      const rY = YY.viewer,
-        DY = {
-          value: YY.offset.value
+    function zo(TT) {
+      const oT = TT.viewer,
+        IT = {
+          value: TT.offset.value
         },
-        FY = new Uint16Array(YY.width * YY.scanlineBlockSize * (YY.channels * YY.type)),
-        AY = new Uint8Array(sY);
-      let IY = 0;
-      const RY = new Array(YY.channels);
-      for (let aY = 0; aY < YY.channels; aY++) RY[aY] = {}, RY[aY].start = IY, RY[aY].end = RY[aY].start, RY[aY].nx = YY.width, RY[aY].ny = YY.lines, RY[aY].size = YY.type, IY += RY[aY].nx * RY[aY].ny * RY[aY].size;
-      const OY = BY(rY, DY),
-        gY = BY(rY, DY);
-      if (gY >= sY) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (OY <= gY)
-        for (let aY = 0; aY < gY - OY + 1; aY++) AY[aY + OY] = NY(rY, DY);
-      const vY = new Uint16Array(uY),
-        iY = function(YY, rY) {
-          let DY = 0;
-          for (let AY = 0; AY < uY; ++AY)(0 == AY || YY[AY >> 3] & 1 << (7 & AY)) && (rY[DY++] = AY);
-          const FY = DY - 1;
-          for (; DY < uY;) rY[DY++] = 0;
-          return FY
-        }(AY, vY),
-        yY = eY(rY, DY);
-      xY(YY.array, rY, DY, yY, FY, IY);
-      for (let aY = 0; aY < YY.channels; ++aY) {
-        const YY = RY[aY];
-        for (let rY = 0; rY < RY[aY].size; ++rY) tY(FY, YY.start + rY, YY.nx, YY.size, YY.ny, YY.nx * YY.size, iY)
-      }! function(YY, rY, DY) {
-        for (let FY = 0; FY < DY; ++FY) rY[FY] = YY[rY[FY]]
-      }(vY, FY, IY);
-      let QY = 0;
-      const oY = new Uint8Array(FY.buffer.byteLength);
-      for (let uY = 0; uY < YY.lines; uY++)
-        for (let rY = 0; rY < YY.channels; rY++) {
-          const YY = RY[rY],
-            DY = YY.nx * YY.size,
-            AY = new Uint8Array(FY.buffer, YY.end * aY, DY * aY);
-          oY.set(AY, QY), QY += DY * aY, YY.end += DY
+        iT = new Uint16Array(TT.width * TT.scanlineBlockSize * (TT.channels * TT.type)),
+        zT = new Uint8Array(LT);
+      let kT = 0;
+      const WT = new Array(TT.channels);
+      for (let FT = 0; FT < TT.channels; FT++) WT[FT] = {}, WT[FT].start = kT, WT[FT].end = WT[FT].start, WT[FT].nx = TT.width, WT[FT].ny = TT.lines, WT[FT].size = TT.type, kT += WT[FT].nx * WT[FT].ny * WT[FT].size;
+      const XT = vT(oT, IT),
+        BT = vT(oT, IT);
+      if (BT >= LT) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (XT <= BT)
+        for (let FT = 0; FT < BT - XT + 1; FT++) zT[FT + XT] = uT(oT, IT);
+      const ST = new Uint16Array(DT),
+        xT = function(TT, oT) {
+          let IT = 0;
+          for (let zT = 0; zT < DT; ++zT)(0 == zT || TT[zT >> 3] & 1 << (7 & zT)) && (oT[IT++] = zT);
+          const iT = IT - 1;
+          for (; IT < DT;) oT[IT++] = 0;
+          return iT
+        }(zT, ST),
+        cT = RT(oT, IT);
+      bT(TT.array, oT, IT, cT, iT, kT);
+      for (let FT = 0; FT < TT.channels; ++FT) {
+        const TT = WT[FT];
+        for (let oT = 0; oT < WT[FT].size; ++oT) VT(iT, TT.start + oT, TT.nx, TT.size, TT.ny, TT.nx * TT.size, xT)
+      }! function(TT, oT, IT) {
+        for (let iT = 0; iT < IT; ++iT) oT[iT] = TT[oT[iT]]
+      }(ST, iT, kT);
+      let KT = 0;
+      const MT = new Uint8Array(iT.buffer.byteLength);
+      for (let DT = 0; DT < TT.lines; DT++)
+        for (let oT = 0; oT < TT.channels; oT++) {
+          const TT = WT[oT],
+            IT = TT.nx * TT.size,
+            zT = new Uint8Array(iT.buffer, TT.end * FT, IT * FT);
+          MT.set(zT, KT), KT += IT * FT, TT.end += IT
         }
-      return new DataView(oY.buffer)
+      return new DataView(MT.buffer)
     }
-    var Ir, Rr = DY(39219);
-    ! function(YY) {
-      YY[YY.Float = 0] = "Float", YY[YY.HalfFloat = 1] = "HalfFloat"
-    }(Ir || (Ir = {}));
-    class Or {}
-    async function gr(YY, rY, DY, FY) {
-      const AY = {
+    var ko, Wo = IT(38886);
+    ! function(TT) {
+      TT[TT.Float = 0] = "Float", TT[TT.HalfFloat = 1] = "HalfFloat"
+    }(ko || (ko = {}));
+    class Xo {}
+    async function Bo(TT, oT, IT, iT) {
+      const zT = {
         size: 0,
-        viewer: rY,
-        array: new Uint8Array(rY.buffer),
-        offset: DY,
-        width: YY.dataWindow.xMax - YY.dataWindow.xMin + 1,
-        height: YY.dataWindow.yMax - YY.dataWindow.yMin + 1,
-        channels: YY.channels.length,
+        viewer: oT,
+        array: new Uint8Array(oT.buffer),
+        offset: IT,
+        width: TT.dataWindow.xMax - TT.dataWindow.xMin + 1,
+        height: TT.dataWindow.yMax - TT.dataWindow.yMin + 1,
+        channels: TT.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (YY.compression) {
-        case VY.NO_COMPRESSION:
-          AY.lines = 1, AY.uncompress = Yr;
+      switch (TT.compression) {
+        case hT.NO_COMPRESSION:
+          zT.lines = 1, zT.uncompress = To;
           break;
-        case VY.RLE_COMPRESSION:
-          AY.lines = 1, AY.uncompress = rr;
+        case hT.RLE_COMPRESSION:
+          zT.lines = 1, zT.uncompress = oo;
           break;
-        case VY.ZIPS_COMPRESSION:
-          AY.lines = 1, AY.uncompress = Dr, await Rr.i.LoadScriptAsync(Or.FFLATEUrl);
+        case hT.ZIPS_COMPRESSION:
+          zT.lines = 1, zT.uncompress = Io, await Wo.i.LoadScriptAsync(Xo.FFLATEUrl);
           break;
-        case VY.ZIP_COMPRESSION:
-          AY.lines = 16, AY.uncompress = Dr, await Rr.i.LoadScriptAsync(Or.FFLATEUrl);
+        case hT.ZIP_COMPRESSION:
+          zT.lines = 16, zT.uncompress = Io, await Wo.i.LoadScriptAsync(Xo.FFLATEUrl);
           break;
-        case VY.PIZ_COMPRESSION:
-          AY.lines = 32, AY.uncompress = Ar;
+        case hT.PIZ_COMPRESSION:
+          zT.lines = 32, zT.uncompress = zo;
           break;
-        case VY.PXR24_COMPRESSION:
-          AY.lines = 16, AY.uncompress = Fr, await Rr.i.LoadScriptAsync(Or.FFLATEUrl);
+        case hT.PXR24_COMPRESSION:
+          zT.lines = 16, zT.uncompress = io, await Wo.i.LoadScriptAsync(Xo.FFLATEUrl);
           break;
         default:
-          throw new Error(VY[YY.compression] + " is unsupported")
+          throw new Error(hT[TT.compression] + " is unsupported")
       }
-      AY.scanlineBlockSize = AY.lines;
-      const IY = {};
-      for (const OY of YY.channels) switch (OY.name) {
+      zT.scanlineBlockSize = zT.lines;
+      const kT = {};
+      for (const XT of TT.channels) switch (XT.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          IY[OY.name] = !0, AY.type = OY.pixelType
+          kT[XT.name] = !0, zT.type = XT.pixelType
       }
-      let RY = !1;
-      if (IY.R && IY.G && IY.B && IY.A) AY.outputChannels = 4, AY.decodeChannels = {
+      let WT = !1;
+      if (kT.R && kT.G && kT.B && kT.A) zT.outputChannels = 4, zT.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (IY.R && IY.G && IY.B) RY = !0, AY.outputChannels = 4, AY.decodeChannels = {
+      else if (kT.R && kT.G && kT.B) WT = !0, zT.outputChannels = 4, zT.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (IY.R && IY.G) AY.outputChannels = 2, AY.decodeChannels = {
+      else if (kT.R && kT.G) zT.outputChannels = 2, zT.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (IY.R) AY.outputChannels = 1, AY.decodeChannels = {
+      else if (kT.R) zT.outputChannels = 1, zT.decodeChannels = {
         R: 0
       };
       else {
-        if (!IY.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        AY.outputChannels = 1, AY.decodeChannels = {
+        if (!kT.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        zT.outputChannels = 1, zT.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === AY.type) switch (FY) {
-        case Ir.Float:
-          AY.getter = zY, AY.inputSize = aY;
+      if (1 === zT.type) switch (iT) {
+        case ko.Float:
+          zT.getter = jT, zT.inputSize = FT;
           break;
-        case Ir.HalfFloat:
-          AY.getter = BY, AY.inputSize = aY
+        case ko.HalfFloat:
+          zT.getter = vT, zT.inputSize = FT
       } else {
-        if (2 !== AY.type) throw new Error("Unsupported pixelType " + AY.type + " for " + YY.compression);
-        switch (FY) {
-          case Ir.Float:
-            AY.getter = HY, AY.inputSize = OY;
+        if (2 !== zT.type) throw new Error("Unsupported pixelType " + zT.type + " for " + TT.compression);
+        switch (iT) {
+          case ko.Float:
+            zT.getter = CT, zT.inputSize = XT;
             break;
-          case Ir.HalfFloat:
-            AY.getter = ZY, AY.inputSize = OY
+          case ko.HalfFloat:
+            zT.getter = JT, zT.inputSize = XT
         }
       }
-      AY.blockCount = AY.height / AY.scanlineBlockSize;
-      for (let OY = 0; OY < AY.blockCount; OY++) KY(rY, DY);
-      const gY = AY.width * AY.height * AY.outputChannels;
-      switch (FY) {
-        case Ir.Float:
-          AY.byteArray = new Float32Array(gY), AY.textureType = 1, RY && AY.byteArray.fill(1, 0, gY);
+      zT.blockCount = zT.height / zT.scanlineBlockSize;
+      for (let XT = 0; XT < zT.blockCount; XT++) fT(oT, IT);
+      const BT = zT.width * zT.height * zT.outputChannels;
+      switch (iT) {
+        case ko.Float:
+          zT.byteArray = new Float32Array(BT), zT.textureType = 1, WT && zT.byteArray.fill(1, 0, BT);
           break;
-        case Ir.HalfFloat:
-          AY.byteArray = new Uint16Array(gY), AY.textureType = 2, RY && AY.byteArray.fill(15360, 0, gY);
+        case ko.HalfFloat:
+          zT.byteArray = new Uint16Array(BT), zT.textureType = 2, WT && zT.byteArray.fill(15360, 0, BT);
           break;
         default:
-          throw new Error("Unsupported type: " + FY)
+          throw new Error("Unsupported type: " + iT)
       }
-      let vY = 0;
-      for (const OY of YY.channels) void 0 !== AY.decodeChannels[OY.name] && (AY.channelLineOffsets[OY.name] = vY * AY.width), vY += 2 * OY.pixelType;
-      return AY.bytesPerLine = AY.width * vY, AY.outLineWidth = AY.width * AY.outputChannels, "INCREASING_Y" === YY.lineOrder ? AY.scanOrder = YY => YY : AY.scanOrder = YY => AY.height - 1 - YY, 4 == AY.outputChannels ? (AY.format = 5, AY.linearSpace = !0) : (AY.format = 6, AY.linearSpace = !1), AY
+      let ST = 0;
+      for (const XT of TT.channels) void 0 !== zT.decodeChannels[XT.name] && (zT.channelLineOffsets[XT.name] = ST * zT.width), ST += 2 * XT.pixelType;
+      return zT.bytesPerLine = zT.width * ST, zT.outLineWidth = zT.width * zT.outputChannels, "INCREASING_Y" === TT.lineOrder ? zT.scanOrder = TT => TT : zT.scanOrder = TT => zT.height - 1 - TT, 4 == zT.outputChannels ? (zT.format = 5, zT.linearSpace = !0) : (zT.format = 6, zT.linearSpace = !1), zT
     }
 
-    function ar(YY, rY, DY, FY) {
-      const AY = {
+    function Fo(TT, oT, IT, iT) {
+      const zT = {
         value: 0
       };
-      for (let IY = 0; IY < YY.height / YY.scanlineBlockSize; IY++) {
-        const RY = TY(DY, FY) - rY.dataWindow.yMin;
-        YY.size = eY(DY, FY), YY.lines = RY + YY.scanlineBlockSize > YY.height ? YY.height - RY : YY.scanlineBlockSize;
-        const OY = YY.size < YY.lines * YY.bytesPerLine && YY.uncompress ? YY.uncompress(YY) : Yr(YY);
-        FY.value += YY.size;
-        for (let DY = 0; DY < YY.scanlineBlockSize; DY++) {
-          const FY = IY * YY.scanlineBlockSize,
-            RY = DY + YY.scanOrder(FY);
-          if (RY >= YY.height) continue;
-          const gY = DY * YY.bytesPerLine,
-            aY = (YY.height - 1 - RY) * YY.outLineWidth;
-          for (let DY = 0; DY < YY.channels; DY++) {
-            const FY = rY.channels[DY].name,
-              IY = YY.channelLineOffsets[FY],
-              RY = YY.decodeChannels[FY];
-            if (void 0 !== RY) {
-              AY.value = gY + IY;
-              for (let rY = 0; rY < YY.width; rY++) {
-                const DY = aY + rY * YY.outputChannels + RY;
-                YY.byteArray && (YY.byteArray[DY] = YY.getter(OY, AY))
+      for (let kT = 0; kT < TT.height / TT.scanlineBlockSize; kT++) {
+        const WT = eT(IT, iT) - oT.dataWindow.yMin;
+        TT.size = RT(IT, iT), TT.lines = WT + TT.scanlineBlockSize > TT.height ? TT.height - WT : TT.scanlineBlockSize;
+        const XT = TT.size < TT.lines * TT.bytesPerLine && TT.uncompress ? TT.uncompress(TT) : To(TT);
+        iT.value += TT.size;
+        for (let IT = 0; IT < TT.scanlineBlockSize; IT++) {
+          const iT = kT * TT.scanlineBlockSize,
+            WT = IT + TT.scanOrder(iT);
+          if (WT >= TT.height) continue;
+          const BT = IT * TT.bytesPerLine,
+            FT = (TT.height - 1 - WT) * TT.outLineWidth;
+          for (let IT = 0; IT < TT.channels; IT++) {
+            const iT = oT.channels[IT].name,
+              kT = TT.channelLineOffsets[iT],
+              WT = TT.decodeChannels[iT];
+            if (void 0 !== WT) {
+              zT.value = BT + kT;
+              for (let oT = 0; oT < TT.width; oT++) {
+                const IT = FT + oT * TT.outputChannels + WT;
+                TT.byteArray && (TT.byteArray[IT] = TT.getter(XT, zT))
               }
             }
           }
         }
       }
     }
-    Or.DefaultOutputType = Ir.HalfFloat, Or.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class vr {
+    Xo.DefaultOutputType = ko.HalfFloat, Xo.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class So {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(YY, rY, DY, FY, AY) {
+      loadCubeData(TT, oT, IT, iT, zT) {
         throw ".exr not supported in Cube."
       }
-      loadData(YY, rY, DY) {
-        const AY = new DataView(YY.buffer),
-          IY = {
+      loadData(TT, oT, IT) {
+        const zT = new DataView(TT.buffer),
+          kT = {
             value: 0
           },
-          RY = dY(AY, IY);
-        gr(RY, AY, IY, Or.DefaultOutputType).then((YY => {
-          ar(YY, RY, AY, IY);
-          const FY = RY.dataWindow.xMax - RY.dataWindow.xMin + 1,
-            OY = RY.dataWindow.yMax - RY.dataWindow.yMin + 1;
-          DY(FY, OY, rY.generateMipMaps, !1, (() => {
-            const DY = rY.ky();
-            rY.format = RY.format, rY.type = YY.textureType, rY.invertY = !1, rY._gammaSpace = !RY.linearSpace, YY.byteArray && DY._uploadDataToTextureDirectly(rY, YY.byteArray, 0, 0, void 0, !0)
+          WT = OT(zT, kT);
+        Bo(WT, zT, kT, Xo.DefaultOutputType).then((TT => {
+          Fo(TT, WT, zT, kT);
+          const iT = WT.dataWindow.xMax - WT.dataWindow.xMin + 1,
+            XT = WT.dataWindow.yMax - WT.dataWindow.yMin + 1;
+          IT(iT, XT, oT.generateMipMaps, !1, (() => {
+            const IT = oT.Zc();
+            oT.format = WT.format, oT.type = TT.textureType, oT.invertY = !1, oT._gammaSpace = !WT.linearSpace, TT.byteArray && IT._uploadDataToTextureDirectly(oT, TT.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((YY => {
-          FY.d.Error("Failed to load EXR texture: ", YY)
+        })).catch((TT => {
+          iT.d.Error("Failed to load EXR texture: ", TT)
         }))
       }
     }
-    async function ur(YY) {
-      const rY = new DataView(YY),
-        DY = {
+    async function Do(TT) {
+      const oT = new DataView(TT),
+        IT = {
           value: 0
         },
-        AY = dY(rY, DY);
+        zT = OT(oT, IT);
       try {
-        const YY = await gr(AY, rY, DY, Ir.Float);
-        return ar(YY, AY, rY, DY), YY.byteArray ? {
-          width: AY.dataWindow.xMax - AY.dataWindow.xMin + 1,
-          height: AY.dataWindow.yMax - AY.dataWindow.yMin + 1,
-          data: new Float32Array(YY.byteArray)
-        } : (FY.d.Error("Failed to decode EXR data: No byte array available."), {
+        const TT = await Bo(zT, oT, IT, ko.Float);
+        return Fo(TT, zT, oT, IT), TT.byteArray ? {
+          width: zT.dataWindow.xMax - zT.dataWindow.xMin + 1,
+          height: zT.dataWindow.yMax - zT.dataWindow.yMin + 1,
+          data: new Float32Array(TT.byteArray)
+        } : (iT.d.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (IY) {
-        FY.d.Error("Failed to load EXR data: ", IY)
+      } catch (kT) {
+        iT.d.Error("Failed to load EXR data: ", kT)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

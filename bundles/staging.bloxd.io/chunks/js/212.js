@@ -1,203 +1,203 @@
 export const id = 212;
 export const ids = [212];
 export const modules = {
-  40587: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => IY
+  40345: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT
     });
-    var FY = DY(61),
-      AY = DY(2486);
+    var iT = IT(46),
+      zT = IT(2451);
 
-    function IY(YY, rY, DY) {
-      const IY = (0, FY.useRef)(null),
+    function kT(TT, oT, IT) {
+      const kT = (0, iT.useRef)(null),
         {
-          width: RY,
-          height: OY
-        } = (0, AY.d)(YY);
-      (0, FY.useEffect)((() => {
-        const DY = rY(YY.current);
-        return IY.current = DY, () => {
-          DY.close(), IY.current = null
+          width: WT,
+          height: XT
+        } = (0, zT.d)(TT);
+      (0, iT.useEffect)((() => {
+        const IT = oT(TT.current);
+        return kT.current = IT, () => {
+          IT.close(), kT.current = null
         }
-      }), [YY, rY]), (0, FY.useEffect)((() => {
-        RY <= 0 || OY <= 0 || IY.current.resize(RY, OY)
-      }), [RY, OY]), (0, FY.useEffect)((() => {
-        IY.current.show(DY)
-      }), [DY])
+      }), [TT, oT]), (0, iT.useEffect)((() => {
+        WT <= 0 || XT <= 0 || kT.current.resize(WT, XT)
+      }), [WT, XT]), (0, iT.useEffect)((() => {
+        kT.current.show(IT)
+      }), [IT])
     }
   },
-  40593: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => sY,
-      f: () => uY,
-      j: () => gY
+  40352: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => LT,
+      e: () => DT,
+      g: () => BT
     });
-    var FY = DY(36896),
-      AY = DY(38003);
+    var iT = IT(36510),
+      zT = IT(37629);
 
-    function IY(YY, rY) {
-      let [DY, FY, AY] = YY;
-      return [0, .5, 1].map((YY => ({
-        timeFraction: YY,
+    function kT(TT, oT) {
+      let [IT, iT, zT] = TT;
+      return [0, .5, 1].map((TT => ({
+        timeFraction: TT,
         rotation: {
-          AA: "catmull-rom-spline",
-          point: [DY, FY, AY + (.5 === YY ? rY : 0)]
+          gz: "catmull-rom-spline",
+          point: [IT, iT, zT + (.5 === TT ? oT : 0)]
         }
       })))
     }
 
-    function RY(YY, rY, DY) {
+    function WT(TT, oT, IT) {
       return {
-        tF: 3200,
+        xz: 3200,
         loop: !0,
-        rA: {
+        Mz: {
           Root: {
-            timeline: [0, .5, 1].map((YY => ({
-              timeFraction: YY,
+            timeline: [0, .5, 1].map((TT => ({
+              timeFraction: TT,
               position: {
-                AA: "catmull-rom-spline",
-                point: [0, .5 === YY ? .18 : 0, 0]
+                gz: "catmull-rom-spline",
+                point: [0, .5 === TT ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((YY => ({
-              timeFraction: YY,
+            timeline: [0, .25, .75, 1].map((TT => ({
+              timeFraction: TT,
               rotation: {
-                AA: "catmull-rom-spline",
-                point: [0, .25 === YY ? .12 : .75 === YY ? -.12 : 0, 0]
+                gz: "catmull-rom-spline",
+                point: [0, .25 === TT ? .12 : .75 === TT ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: IY(YY, DY)
+            timeline: kT(TT, IT)
           },
           ArmRightMesh: {
-            timeline: IY(rY, -DY)
+            timeline: kT(oT, -IT)
           }
         }
       }
     }
-    const OY = RY([0, 0, 0], [0, 0, 0], .07),
-      gY = (0, AY.c)((0, FY.f)(OY), "mobIdle"),
-      aY = RY([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      vY = RY([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      uY = (0, AY.c)((0, FY.f)(aY), "gunReady"),
-      sY = (0, AY.c)((0, FY.f)(vY), "gunAimed")
+    const XT = WT([0, 0, 0], [0, 0, 0], .07),
+      BT = (0, zT.e)((0, iT.e)(XT), "mobIdle"),
+      FT = WT([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      ST = WT([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      DT = (0, zT.e)((0, iT.e)(FT), "gunReady"),
+      LT = (0, zT.e)((0, iT.e)(ST), "gunAimed")
   },
-  38003: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY,
-      e: () => IY
+  37629: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => zT,
+      g: () => kT
     });
-    const FY = new WeakMap;
+    const iT = new WeakMap;
 
-    function AY(YY, rY) {
-      return FY.set(YY, rY), YY
+    function zT(TT, oT) {
+      return iT.set(TT, oT), TT
     }
 
-    function IY(YY) {
-      var rY;
-      return null !== (rY = FY.get(YY)) && void 0 !== rY ? rY : null
+    function kT(TT) {
+      var oT;
+      return null !== (oT = iT.get(TT)) && void 0 !== oT ? oT : null
     }
   },
-  36231: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY,
-      c: () => gY
+  35801: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      f: () => BT
     });
-    const FY = {
+    const iT = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      AY = {
-        player: FY,
+      zT = {
+        player: iT,
         store: {
-          ...FY,
+          ...iT,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function IY(YY, rY) {
-      YY instanceof Promise ? YY.then(rY).catch((YY => {
-        console.error("Couldn't open the preview", YY)
-      })) : rY(YY)
+    function kT(TT, oT) {
+      TT instanceof Promise ? TT.then(oT).catch((TT => {
+        console.error("Couldn't open the preview", TT)
+      })) : oT(TT)
     }
-    class RY {
-      constructor(YY) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, IY(YY, (YY => {
-          this.closed ? YY.close() : (this.opened = YY, null !== this.size && YY.resize(this.size.width, this.size.height), null !== this.view && YY.show(this.view))
+    class WT {
+      constructor(TT) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, kT(TT, (TT => {
+          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height), null !== this.view && TT.show(this.view))
         }))
       }
-      show(YY) {
-        var rY;
-        this.view = YY, null === (rY = this.opened) || void 0 === rY || rY.show(YY)
+      show(TT) {
+        var oT;
+        this.view = TT, null === (oT = this.opened) || void 0 === oT || oT.show(TT)
       }
-      resize(YY, rY) {
-        var DY;
+      resize(TT, oT) {
+        var IT;
         this.size = {
-          width: YY,
-          height: rY
-        }, null === (DY = this.opened) || void 0 === DY || DY.resize(YY, rY)
+          width: TT,
+          height: oT
+        }, null === (IT = this.opened) || void 0 === IT || IT.resize(TT, oT)
       }
       close() {
-        var YY;
-        this.closed = !0, null === (YY = this.opened) || void 0 === YY || YY.close(), this.opened = null
+        var TT;
+        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
       }
     }
-    class OY {
-      constructor(YY) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(YY).then((YY => YY.ready)), IY(YY, (YY => {
-          this.closed ? YY.close() : (this.opened = YY, null !== this.size && YY.resize(this.size.width, this.size.height))
+    class XT {
+      constructor(TT) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(TT).then((TT => TT.ready)), kT(TT, (TT => {
+          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var YY, rY;
-        return null !== (YY = null === (rY = this.opened) || void 0 === rY ? void 0 : rY.isReady()) && void 0 !== YY && YY
+        var TT, oT;
+        return null !== (TT = null === (oT = this.opened) || void 0 === oT ? void 0 : oT.isReady()) && void 0 !== TT && TT
       }
-      setCosmetic(YY, rY) {
-        var DY;
-        null === (DY = this.opened) || void 0 === DY || DY.setCosmetic(YY, rY)
+      setCosmetic(TT, oT) {
+        var IT;
+        null === (IT = this.opened) || void 0 === IT || IT.setCosmetic(TT, oT)
       }
-      playEmote(YY) {
-        var rY;
-        null === (rY = this.opened) || void 0 === rY || rY.playEmote(YY)
+      playEmote(TT) {
+        var oT;
+        null === (oT = this.opened) || void 0 === oT || oT.playEmote(TT)
       }
       resetCamera() {
-        var YY;
-        null === (YY = this.opened) || void 0 === YY || YY.resetCamera()
+        var TT;
+        null === (TT = this.opened) || void 0 === TT || TT.resetCamera()
       }
-      async untilDrawn(YY) {
-        var rY;
-        await this.ready, await (null === (rY = this.opened) || void 0 === rY ? void 0 : rY.untilDrawn(YY))
+      async untilDrawn(TT) {
+        var oT;
+        await this.ready, await (null === (oT = this.opened) || void 0 === oT ? void 0 : oT.untilDrawn(TT))
       }
-      resize(YY, rY) {
-        var DY;
+      resize(TT, oT) {
+        var IT;
         this.size = {
-          width: YY,
-          height: rY
-        }, null === (DY = this.opened) || void 0 === DY || DY.resize(YY, rY)
+          width: TT,
+          height: oT
+        }, null === (IT = this.opened) || void 0 === IT || IT.resize(TT, oT)
       }
       close() {
-        var YY;
-        this.closed = !0, null === (YY = this.opened) || void 0 === YY || YY.close(), this.opened = null
+        var TT;
+        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
       }
     }
-    const gY = new class {
+    const BT = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(YY) {
-        this.host = YY
+      setHost(TT) {
+        this.host = TT
       }
-      setDefaultHost(YY) {
-        this.makeDefault = YY
+      setDefaultHost(TT) {
+        this.makeDefault = TT
       }
       current() {
         if (null === this.host) {
@@ -206,424 +206,424 @@ export const modules = {
         }
         return this.host
       }
-      openMob(YY) {
-        return new RY(this.current().openMob(YY))
+      openMob(TT) {
+        return new WT(this.current().openMob(TT))
       }
-      openPet(YY) {
-        return new RY(this.current().openPet(YY))
+      openPet(TT) {
+        return new WT(this.current().openPet(TT))
       }
-      openMobLineup(YY) {
-        return new RY(this.current().openMobLineup(YY))
+      openMobLineup(TT) {
+        return new WT(this.current().openMobLineup(TT))
       }
-      openCharacter(YY, rY) {
-        return new OY(this.current().openCharacter(YY, rY))
+      openCharacter(TT, oT) {
+        return new XT(this.current().openCharacter(TT, oT))
       }
     }
   },
-  36228: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY.c
+  35795: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT.f
     });
-    var FY = DY(36231);
-    class AY {
-      constructor(YY) {
-        this.load = YY, this.loaded = null, this.loading = null
+    var iT = IT(35801);
+    class zT {
+      constructor(TT) {
+        this.load = TT, this.loaded = null, this.loading = null
       }
-      run(YY) {
-        return null !== this.loaded ? YY(this.loaded) : (this.loading ??= this.load().then((YY => (this.loaded = YY, YY)), (YY => {
-          throw this.loading = null, YY
-        })), this.loading.then(YY))
+      run(TT) {
+        return null !== this.loaded ? TT(this.loaded) : (this.loading ??= this.load().then((TT => (this.loaded = TT, TT)), (TT => {
+          throw this.loading = null, TT
+        })), this.loading.then(TT))
       }
     }
-    class IY {
+    class kT {
       constructor() {
-        this.mobScene = new AY((() => Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(72), DY.e(71), DY.e(241), DY.e(70), DY.e(251), DY.e(245), DY.e(250), DY.e(248), DY.e(240), DY.e(214), DY.e(281), DY.e(219), DY.e(234), DY.e(246), DY.e(249), DY.e(74), DY.e(194), DY.e(215), DY.e(230), DY.e(114), DY.e(231), DY.e(73), DY.e(113), DY.e(282), DY.e(154)]).then((() => DY(40289))))), this.characterScene = new AY((() => Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(72), DY.e(71), DY.e(241), DY.e(70), DY.e(251), DY.e(245), DY.e(250), DY.e(248), DY.e(240), DY.e(214), DY.e(281), DY.e(219), DY.e(234), DY.e(246), DY.e(249), DY.e(74), DY.e(194), DY.e(215), DY.e(230), DY.e(114), DY.e(231), DY.e(73), DY.e(113), DY.e(282), DY.e(153)]).then((() => DY(40376)))))
+        this.mobScene = new zT((() => Promise.all([IT.e(223), IT.e(222), IT.e(243), IT.e(244), IT.e(72), IT.e(71), IT.e(241), IT.e(70), IT.e(251), IT.e(245), IT.e(250), IT.e(248), IT.e(240), IT.e(214), IT.e(281), IT.e(219), IT.e(234), IT.e(246), IT.e(249), IT.e(74), IT.e(194), IT.e(215), IT.e(230), IT.e(114), IT.e(231), IT.e(73), IT.e(113), IT.e(282), IT.e(154)]).then((() => IT(39992))))), this.characterScene = new zT((() => Promise.all([IT.e(223), IT.e(222), IT.e(243), IT.e(244), IT.e(72), IT.e(71), IT.e(241), IT.e(70), IT.e(251), IT.e(245), IT.e(250), IT.e(248), IT.e(240), IT.e(214), IT.e(281), IT.e(219), IT.e(234), IT.e(246), IT.e(249), IT.e(74), IT.e(194), IT.e(215), IT.e(230), IT.e(114), IT.e(231), IT.e(73), IT.e(113), IT.e(282), IT.e(153)]).then((() => IT(40089)))))
       }
-      openMob(YY) {
-        return this.mobScene.run((rY => rY.openMobPreview(YY)))
+      openMob(TT) {
+        return this.mobScene.run((oT => oT.openMobPreview(TT)))
       }
-      openPet(YY) {
-        return this.mobScene.run((rY => rY.openPetPreview(YY)))
+      openPet(TT) {
+        return this.mobScene.run((oT => oT.openPetPreview(TT)))
       }
-      openMobLineup(YY) {
-        return this.mobScene.run((rY => rY.openMobLineupPreview(YY)))
+      openMobLineup(TT) {
+        return this.mobScene.run((oT => oT.openMobLineupPreview(TT)))
       }
-      openCharacter(YY, rY) {
-        return this.characterScene.run((DY => DY.openCharacterPreview(YY, rY)))
+      openCharacter(TT, oT) {
+        return this.characterScene.run((IT => IT.openCharacterPreview(TT, oT)))
       }
     }
-    FY.c.setDefaultHost((() => new IY))
+    iT.f.setDefaultHost((() => new kT))
   },
-  40815: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      FrontlineMvpLineup: () => uY
+  40583: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      FrontlineMvpLineup: () => DT
     });
-    var FY = DY(61),
-      AY = DY(1092),
-      IY = DY.n(AY),
-      RY = DY(36228),
-      OY = DY(40593),
-      gY = DY(40587),
-      aY = DY(1125);
+    var iT = IT(46),
+      zT = IT(1042),
+      kT = IT.n(zT),
+      WT = IT(35795),
+      XT = IT(40352),
+      BT = IT(40345),
+      FT = IT(1083);
 
-    function vY(YY) {
-      return RY.b.openMobLineup(YY)
+    function ST(TT) {
+      return WT.b.openMobLineup(TT)
     }
-    const uY = (0, FY.memo)((function(YY) {
+    const DT = (0, iT.memo)((function(TT) {
       let {
-        players: rY,
-        className: DY
-      } = YY;
-      const AY = (0, FY.useRef)(null),
-        RY = (0, FY.useMemo)((() => rY.map((YY => {
+        players: oT,
+        className: IT
+      } = TT;
+      const zT = (0, iT.useRef)(null),
+        WT = (0, iT.useMemo)((() => oT.map((TT => {
           let {
-            cosmetics: rY,
-            size: DY,
-            heldGun: FY
-          } = YY;
+            cosmetics: oT,
+            size: IT,
+            heldGun: iT
+          } = TT;
           return {
-            cosmetics: rY,
-            size: DY,
-            RV: FY.name,
-            animation: FY.aimed ? OY.d : OY.f
+            cosmetics: oT,
+            size: IT,
+            Tu: iT.name,
+            animation: iT.aimed ? XT.c : XT.e
           }
-        }))), [rY]),
-        uY = function(YY) {
-          const [rY, DY] = (0, FY.useState)([]);
-          return (0, FY.useEffect)((() => {
-            DY(YY.map((() => !1)));
-            const rY = YY.map(((YY, rY) => {
+        }))), [oT]),
+        DT = function(TT) {
+          const [oT, IT] = (0, iT.useState)([]);
+          return (0, iT.useEffect)((() => {
+            IT(TT.map((() => !1)));
+            const oT = TT.map(((TT, oT) => {
               let {
-                showAfterMs: FY
-              } = YY;
+                showAfterMs: iT
+              } = TT;
               return window.setTimeout((() => {
-                DY((YY => YY.map(((YY, DY) => YY || DY === rY))))
-              }), FY)
+                IT((TT => TT.map(((TT, IT) => TT || IT === oT))))
+              }), iT)
             }));
             return () => {
-              for (const YY of rY) window.clearTimeout(YY)
+              for (const TT of oT) window.clearTimeout(TT)
             }
-          }), [YY]), rY
-        }(rY),
-        sY = (0, FY.useMemo)((() => ({
-          figures: RY,
-          shown: uY
-        })), [RY, uY]);
-      return (0, gY.b)(AY, vY, sY), (0, aY.jsx)("div", {
-        className: IY()("MobPreview", DY),
-        ref: AY
+          }), [TT]), oT
+        }(oT),
+        LT = (0, iT.useMemo)((() => ({
+          figures: WT,
+          shown: DT
+        })), [WT, DT]);
+      return (0, BT.c)(zT, ST, LT), (0, FT.jsx)("div", {
+        className: kT()("MobPreview", IT),
+        ref: zT
       })
     }))
   },
-  36896: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => OY,
-      f: () => RY
+  36510: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => XT,
+      e: () => WT
     });
-    var FY = DY(36894),
-      AY = DY(341),
-      IY = DY(1774);
+    var iT = IT(36501),
+      zT = IT(314),
+      kT = IT(1724);
 
-    function RY(YY) {
-      if ("tF" in YY) return lY.createAnimationScript(YY);
-      return new aY(YY).createAnimationScript()
+    function WT(TT) {
+      if ("xz" in TT) return mT.createAnimationScript(TT);
+      return new FT(TT).createAnimationScript()
     }
 
-    function OY(YY, rY, DY, AY) {
-      const IY = YY.tF <= 0 ? 1 : rY + DY * Math.max(0, AY) / YY.tF;
-      return YY.YA === FY.l.LoopOnLastFrame ? IY % 1 : YY.YA === FY.l.NoLoop && IY >= 1 ? null : Math.min(1, IY)
+    function XT(TT, oT, IT, zT) {
+      const kT = TT.xz <= 0 ? 1 : oT + IT * Math.max(0, zT) / TT.xz;
+      return TT.Kz === iT.i.LoopOnLastFrame ? kT % 1 : TT.Kz === iT.i.NoLoop && kT >= 1 ? null : Math.min(1, kT)
     }
-    class gY {
-      createAnimationScript(YY) {
+    class BT {
+      createAnimationScript(TT) {
         const {
-          tF: rY,
-          loop: DY,
-          rA: FY
-        } = YY;
+          xz: oT,
+          loop: IT,
+          Mz: iT
+        } = TT;
         return {
-          tF: Math.round(rY),
-          YA: this.createLoopMode(null !== DY && void 0 !== DY && DY),
-          rA: this.createNodeSkeletonAnimationScript(null !== FY && void 0 !== FY ? FY : null)
+          xz: Math.round(oT),
+          Kz: this.createLoopMode(null !== IT && void 0 !== IT && IT),
+          Mz: this.createNodeSkeletonAnimationScript(null !== iT && void 0 !== iT ? iT : null)
         }
       }
-      createLoopMode(YY) {
-        switch (YY) {
+      createLoopMode(TT) {
+        switch (TT) {
           case !1:
-            return FY.l.NoLoop;
+            return iT.i.NoLoop;
           case !0:
-            return FY.l.LoopOnLastFrame;
+            return iT.i.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return FY.l.HoldOnLastFrame
+            return iT.i.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${YY}`)
+        throw new Error(`Invalid loop mode schema: ${TT}`)
       }
-      createNodeSkeletonAnimationScript(YY) {
-        if (null === YY) return null;
-        const rY = {};
-        for (const DY in YY) {
-          const FY = YY[DY];
-          rY[DY] = this.createNodeAnimationScript(FY)
+      createNodeSkeletonAnimationScript(TT) {
+        if (null === TT) return null;
+        const oT = {};
+        for (const IT in TT) {
+          const iT = TT[IT];
+          oT[IT] = this.createNodeAnimationScript(iT)
         }
-        return rY
+        return oT
       }
-      createNodeAnimationScript(YY) {
+      createNodeAnimationScript(TT) {
         const {
-          timeline: rY
-        } = YY, DY = rY.filter((YY => Number.isFinite(YY.timeFraction)));
-        return DY.sort(((YY, rY) => YY.timeFraction - rY.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(DY, "rotation", sY),
-          position: this.createTimelineFromKeyframes(DY, "position", yY)
+          timeline: oT
+        } = TT, IT = oT.filter((TT => Number.isFinite(TT.timeFraction)));
+        return IT.sort(((TT, oT) => TT.timeFraction - oT.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(IT, "rotation", LT),
+          position: this.createTimelineFromKeyframes(IT, "position", cT)
         }
       }
-      createTimelineFromKeyframes(YY, rY, DY) {
-        const FY = [];
-        for (const gY of YY) {
-          const YY = gY[rY];
-          if (YY) {
-            const rY = this.createAnimationFrameWithoutPrecomputes(gY.timeFraction, YY);
-            vY(rY) && FY.push(rY)
+      createTimelineFromKeyframes(TT, oT, IT) {
+        const iT = [];
+        for (const BT of TT) {
+          const TT = BT[oT];
+          if (TT) {
+            const oT = this.createAnimationFrameWithoutPrecomputes(BT.timeFraction, TT);
+            ST(oT) && iT.push(oT)
           }
         }
-        const AY = [];
-        for (let gY = 0; gY < FY.length; gY++) {
-          var IY, RY, OY;
-          const YY = FY[gY],
-            rY = null !== (IY = FY[gY - 1]) && void 0 !== IY ? IY : YY,
-            aY = null !== (RY = FY[gY + 1]) && void 0 !== RY ? RY : YY,
-            vY = null !== (OY = FY[gY + 2]) && void 0 !== OY ? OY : aY;
-          AY.push({
-            ...YY,
-            ...DY(rY.post, rY.timeFraction, YY.post, YY.timeFraction, aY.pre, aY.timeFraction, vY.pre, vY.timeFraction)
+        const zT = [];
+        for (let BT = 0; BT < iT.length; BT++) {
+          var kT, WT, XT;
+          const TT = iT[BT],
+            oT = null !== (kT = iT[BT - 1]) && void 0 !== kT ? kT : TT,
+            FT = null !== (WT = iT[BT + 1]) && void 0 !== WT ? WT : TT,
+            ST = null !== (XT = iT[BT + 2]) && void 0 !== XT ? XT : FT;
+          zT.push({
+            ...TT,
+            ...IT(oT.post, oT.timeFraction, TT.post, TT.timeFraction, FT.pre, FT.timeFraction, ST.pre, ST.timeFraction)
           })
         }
-        return AY
+        return zT
       }
-      createAnimationFrameWithoutPrecomputes(YY, rY) {
-        let DY, FY, AY = null;
-        var IY;
-        if ("object" === typeof rY && "point" in rY) AY = null !== (IY = rY.AA) && void 0 !== IY ? IY : null, DY = rY.point, FY = rY.point;
-        else if ("object" === typeof rY && "pre" in rY) {
-          var RY;
-          AY = null !== (RY = rY.AA) && void 0 !== RY ? RY : null, DY = rY.pre, FY = rY.post
-        } else DY = rY, FY = rY;
+      createAnimationFrameWithoutPrecomputes(TT, oT) {
+        let IT, iT, zT = null;
+        var kT;
+        if ("object" === typeof oT && "point" in oT) zT = null !== (kT = oT.gz) && void 0 !== kT ? kT : null, IT = oT.point, iT = oT.point;
+        else if ("object" === typeof oT && "pre" in oT) {
+          var WT;
+          zT = null !== (WT = oT.gz) && void 0 !== WT ? WT : null, IT = oT.pre, iT = oT.post
+        } else IT = oT, iT = oT;
         return {
-          timeFraction: YY,
-          AA: this.createLerpMode(AY),
-          pre: DY,
-          post: FY
+          timeFraction: TT,
+          gz: this.createLerpMode(zT),
+          pre: IT,
+          post: iT
         }
       }
-      createLerpMode(YY) {
-        return null === YY ? FY.h.Linear : gY.LERP_MODE_SCHEMA_MAPPING[YY]
+      createLerpMode(TT) {
+        return null === TT ? iT.h.Linear : BT.LERP_MODE_SCHEMA_MAPPING[TT]
       }
     }
-    gY.LERP_MODE_SCHEMA_MAPPING = {
-      linear: FY.h.Linear,
-      "catmull-rom-spline": FY.h.CatmullRomSpline
+    BT.LERP_MODE_SCHEMA_MAPPING = {
+      linear: iT.h.Linear,
+      "catmull-rom-spline": iT.h.CatmullRomSpline
     };
-    class aY {
-      constructor(YY) {
-        this.animationSchema = YY
+    class FT {
+      constructor(TT) {
+        this.animationSchema = TT
       }
       createAnimationScript() {
         const {
-          animation_length: YY,
-          loop: rY,
-          bones: DY
+          animation_length: TT,
+          loop: oT,
+          bones: IT
         } = this.animationSchema;
         return {
-          tF: Math.round(1e3 * YY),
-          YA: this.createLoopMode(null !== rY && void 0 !== rY && rY),
-          rA: this.createNodeSkeletonAnimationScript(null !== DY && void 0 !== DY ? DY : null)
+          xz: Math.round(1e3 * TT),
+          Kz: this.createLoopMode(null !== oT && void 0 !== oT && oT),
+          Mz: this.createNodeSkeletonAnimationScript(null !== IT && void 0 !== IT ? IT : null)
         }
       }
-      createLoopMode(YY) {
-        switch (YY) {
+      createLoopMode(TT) {
+        switch (TT) {
           case !1:
-            return FY.l.NoLoop;
+            return iT.i.NoLoop;
           case !0:
-            return FY.l.LoopOnLastFrame;
+            return iT.i.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return FY.l.HoldOnLastFrame
+            return iT.i.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${YY}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${TT}`)
       }
-      createNodeSkeletonAnimationScript(YY) {
-        if (null === YY) return null;
-        const rY = {};
-        for (const DY in YY) {
-          const FY = YY[DY];
-          rY[DY] = this.createNodeAnimationScript(FY)
+      createNodeSkeletonAnimationScript(TT) {
+        if (null === TT) return null;
+        const oT = {};
+        for (const IT in TT) {
+          const iT = TT[IT];
+          oT[IT] = this.createNodeAnimationScript(iT)
         }
-        return rY
+        return oT
       }
-      createNodeAnimationScript(YY) {
+      createNodeAnimationScript(TT) {
         const {
-          rotation: rY,
-          position: DY
-        } = YY;
+          rotation: oT,
+          position: IT
+        } = TT;
         return {
-          rotation: this.createAnimationTimeline(null !== rY && void 0 !== rY ? rY : null, oY, sY, !0),
-          position: this.createAnimationTimeline(null !== DY && void 0 !== DY ? DY : null, EY, yY, !1)
+          rotation: this.createAnimationTimeline(null !== oT && void 0 !== oT ? oT : null, MT, LT, !0),
+          position: this.createAnimationTimeline(null !== IT && void 0 !== IT ? IT : null, AT, cT, !1)
         }
       }
-      createAnimationTimeline(YY, rY, DY, FY) {
-        if (null === YY) return [];
-        if (Array.isArray(YY)) {
-          YY = {
-            "0.0": YY
+      createAnimationTimeline(TT, oT, IT, iT) {
+        if (null === TT) return [];
+        if (Array.isArray(TT)) {
+          TT = {
+            "0.0": TT
           }
         }
-        const AY = Object.entries(YY).map((YY => {
-          let [DY, FY] = YY;
-          const AY = Number(DY) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(AY, FY, rY)
-        })).filter(vY);
-        AY.sort(((YY, rY) => YY.timeFraction - rY.timeFraction)), FY && function(YY) {
-          for (let rY = 1; rY < YY.length; rY++) {
-            const DY = YY[rY - 1].post,
-              FY = YY[rY],
-              AY = mY(FY.pre),
-              IY = mY(FY.post),
-              RY = SY(DY, FY.pre);
-            SY(DY, AY) < RY && (YY[rY] = {
-              ...FY,
-              pre: AY,
-              post: IY
+        const zT = Object.entries(TT).map((TT => {
+          let [IT, iT] = TT;
+          const zT = Number(IT) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(zT, iT, oT)
+        })).filter(ST);
+        zT.sort(((TT, oT) => TT.timeFraction - oT.timeFraction)), iT && function(TT) {
+          for (let oT = 1; oT < TT.length; oT++) {
+            const IT = TT[oT - 1].post,
+              iT = TT[oT],
+              zT = gT(iT.pre),
+              kT = gT(iT.post),
+              WT = wT(IT, iT.pre);
+            wT(IT, zT) < WT && (TT[oT] = {
+              ...iT,
+              pre: zT,
+              post: kT
             })
           }
-        }(AY);
-        const IY = [];
-        for (let aY = 0; aY < AY.length; aY++) {
-          var RY, OY, gY;
-          const YY = AY[aY],
-            rY = null !== (RY = AY[aY - 1]) && void 0 !== RY ? RY : YY,
-            FY = null !== (OY = AY[aY + 1]) && void 0 !== OY ? OY : YY,
-            vY = null !== (gY = AY[aY + 2]) && void 0 !== gY ? gY : FY;
-          IY.push({
-            ...YY,
-            ...DY(rY.post, rY.timeFraction, YY.post, YY.timeFraction, FY.pre, FY.timeFraction, vY.pre, vY.timeFraction)
+        }(zT);
+        const kT = [];
+        for (let FT = 0; FT < zT.length; FT++) {
+          var WT, XT, BT;
+          const TT = zT[FT],
+            oT = null !== (WT = zT[FT - 1]) && void 0 !== WT ? WT : TT,
+            iT = null !== (XT = zT[FT + 1]) && void 0 !== XT ? XT : TT,
+            ST = null !== (BT = zT[FT + 2]) && void 0 !== BT ? BT : iT;
+          kT.push({
+            ...TT,
+            ...IT(oT.post, oT.timeFraction, TT.post, TT.timeFraction, iT.pre, iT.timeFraction, ST.pre, ST.timeFraction)
           })
         }
-        return IY
+        return kT
       }
-      createAnimationFrameWithoutPrecomputes(YY, rY, DY) {
-        let FY, AY, IY = null;
-        if ("object" === typeof rY && "post" in rY) {
-          var RY;
-          IY = null !== (RY = rY.lerp_mode) && void 0 !== RY ? RY : null, AY = QY(rY.post, DY), FY = rY.pre ? QY(rY.pre, DY) : AY
+      createAnimationFrameWithoutPrecomputes(TT, oT, IT) {
+        let iT, zT, kT = null;
+        if ("object" === typeof oT && "post" in oT) {
+          var WT;
+          kT = null !== (WT = oT.lerp_mode) && void 0 !== WT ? WT : null, zT = KT(oT.post, IT), iT = oT.pre ? KT(oT.pre, IT) : zT
         } else {
-          const YY = QY(rY, DY);
-          AY = YY, FY = YY
+          const TT = KT(oT, IT);
+          zT = TT, iT = TT
         }
         return {
-          timeFraction: YY,
-          AA: this.createLerpMode(IY),
-          pre: FY,
-          post: AY
+          timeFraction: TT,
+          gz: this.createLerpMode(kT),
+          pre: iT,
+          post: zT
         }
       }
-      createLerpMode(YY) {
-        return null === YY ? FY.h.Linear : aY.LERP_MODE_SCHEMA_MAPPING[YY]
+      createLerpMode(TT) {
+        return null === TT ? iT.h.Linear : FT.LERP_MODE_SCHEMA_MAPPING[TT]
       }
     }
 
-    function vY(YY) {
-      return Number.isFinite(YY.timeFraction) && uY(YY.pre) && uY(YY.post)
+    function ST(TT) {
+      return Number.isFinite(TT.timeFraction) && DT(TT.pre) && DT(TT.post)
     }
 
-    function uY(YY) {
-      return Number.isFinite(YY[0]) && Number.isFinite(YY[1]) && Number.isFinite(YY[2])
+    function DT(TT) {
+      return Number.isFinite(TT[0]) && Number.isFinite(TT[1]) && Number.isFinite(TT[2])
     }
 
-    function sY(YY, rY, DY, FY, AY, IY, RY, OY) {
-      const gY = IY - rY,
-        aY = IY - FY,
-        vY = OY - FY,
-        uY = [null, null, null];
-      for (let sY = 0; sY < uY.length; sY++) uY[sY] = iY(YY[sY], DY[sY], AY[sY], RY[sY], gY, vY);
+    function LT(TT, oT, IT, iT, zT, kT, WT, XT) {
+      const BT = kT - oT,
+        FT = kT - iT,
+        ST = XT - iT,
+        DT = [null, null, null];
+      for (let LT = 0; LT < DT.length; LT++) DT[LT] = xT(TT[LT], IT[LT], zT[LT], WT[LT], BT, ST);
       return {
-        IA: aY,
-        RA: uY
+        hz: FT,
+        wz: DT
       }
     }
 
-    function iY(YY, rY, DY, FY, IY, RY) {
+    function xT(TT, oT, IT, iT, kT, WT) {
       return {
-        gA: AY.c.computeShortestRotation(YY, DY) / IY,
-        aA: AY.c.computeShortestRotation(rY, FY) / RY,
-        delta: AY.c.computeShortestRotation(rY, DY)
+        ez: zT.e.computeShortestRotation(TT, IT) / kT,
+        Rz: zT.e.computeShortestRotation(oT, iT) / WT,
+        delta: zT.e.computeShortestRotation(oT, IT)
       }
     }
 
-    function yY(YY, rY, DY, FY, AY, IY, RY, OY) {
-      const gY = IY - rY,
-        aY = IY - FY,
-        vY = OY - FY,
-        uY = [null, null, null];
-      for (let sY = 0; sY < uY.length; sY++) uY[sY] = {
-        gA: (AY[sY] - YY[sY]) / gY,
-        aA: (RY[sY] - DY[sY]) / vY,
-        delta: AY[sY] - DY[sY]
+    function cT(TT, oT, IT, iT, zT, kT, WT, XT) {
+      const BT = kT - oT,
+        FT = kT - iT,
+        ST = XT - iT,
+        DT = [null, null, null];
+      for (let LT = 0; LT < DT.length; LT++) DT[LT] = {
+        ez: (zT[LT] - TT[LT]) / BT,
+        Rz: (WT[LT] - IT[LT]) / ST,
+        delta: zT[LT] - IT[LT]
       };
       return {
-        IA: aY,
-        RA: uY
+        hz: FT,
+        wz: DT
       }
     }
 
-    function QY(YY, rY) {
-      return null === rY ? YY : rY(YY)
+    function KT(TT, oT) {
+      return null === oT ? TT : oT(TT)
     }
 
-    function oY(YY) {
-      const [rY, DY, FY] = YY, RY = -(0, IY.q)(rY), OY = -(0, IY.q)(DY), gY = (0, IY.q)(FY), aY = AY.c.quaternionFromEulerZYX(RY, OY, gY);
-      return AY.c.eulerYXZFromQuaternion(aY)
+    function MT(TT) {
+      const [oT, IT, iT] = TT, WT = -(0, kT.m)(oT), XT = -(0, kT.m)(IT), BT = (0, kT.m)(iT), FT = zT.e.quaternionFromEulerZYX(WT, XT, BT);
+      return zT.e.eulerYXZFromQuaternion(FT)
     }
-    aY.LERP_MODE_SCHEMA_MAPPING = {
-      linear: FY.h.Linear,
-      catmullrom: FY.h.CatmullRomSpline
+    FT.LERP_MODE_SCHEMA_MAPPING = {
+      linear: iT.h.Linear,
+      catmullrom: iT.h.CatmullRomSpline
     };
-    const WY = 1 / 16;
+    const rT = 1 / 16;
 
-    function EY(YY) {
-      return [-YY[0] * WY, YY[1] * WY, YY[2] * WY]
+    function AT(TT) {
+      return [-TT[0] * rT, TT[1] * rT, TT[2] * rT]
     }
 
-    function mY(YY) {
-      const [rY, DY, FY] = YY;
-      return [rY >= 0 ? Math.PI - rY : -Math.PI - rY, VY(DY + Math.PI), VY(FY + Math.PI)]
+    function gT(TT) {
+      const [oT, IT, iT] = TT;
+      return [oT >= 0 ? Math.PI - oT : -Math.PI - oT, hT(IT + Math.PI), hT(iT + Math.PI)]
     }
 
-    function VY(YY) {
-      return AY.c.mod(YY + Math.PI, 2 * Math.PI) - Math.PI
+    function hT(TT) {
+      return zT.e.mod(TT + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function SY(YY, rY) {
-      return Math.abs(AY.c.computeShortestRotation(YY[0], rY[0])) + Math.abs(AY.c.computeShortestRotation(YY[1], rY[1])) + Math.abs(AY.c.computeShortestRotation(YY[2], rY[2]))
+    function wT(TT, oT) {
+      return Math.abs(zT.e.computeShortestRotation(TT[0], oT[0])) + Math.abs(zT.e.computeShortestRotation(TT[1], oT[1])) + Math.abs(zT.e.computeShortestRotation(TT[2], oT[2]))
     }
-    const lY = new gY
+    const mT = new BT
   },
-  36894: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => RY,
-      d: () => IY,
-      h: () => FY,
-      l: () => AY
+  36501: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT,
+      e: () => kT,
+      h: () => iT,
+      i: () => zT
     });
-    let FY = function(YY) {
-        return YY[YY.Linear = 0] = "Linear", YY[YY.CatmullRomSpline = 1] = "CatmullRomSpline", YY
+    let iT = function(TT) {
+        return TT[TT.Linear = 0] = "Linear", TT[TT.CatmullRomSpline = 1] = "CatmullRomSpline", TT
       }({}),
-      AY = function(YY) {
-        return YY[YY.NoLoop = 0] = "NoLoop", YY[YY.LoopOnLastFrame = 1] = "LoopOnLastFrame", YY[YY.HoldOnLastFrame = 2] = "HoldOnLastFrame", YY
+      zT = function(TT) {
+        return TT[TT.NoLoop = 0] = "NoLoop", TT[TT.LoopOnLastFrame = 1] = "LoopOnLastFrame", TT[TT.HoldOnLastFrame = 2] = "HoldOnLastFrame", TT
       }({}),
-      IY = function(YY) {
-        return YY[YY.Movement = 0] = "Movement", YY[YY.Action = 1] = "Action", YY[YY.Emote = 2] = "Emote", YY[YY.Custom = 3] = "Custom", YY
+      kT = function(TT) {
+        return TT[TT.Movement = 0] = "Movement", TT[TT.Action = 1] = "Action", TT[TT.Emote = 2] = "Emote", TT[TT.Custom = 3] = "Custom", TT
       }({}),
-      RY = function(YY) {
-        return YY[YY.Start = 0] = "Start", YY[YY.Stop = 1] = "Stop", YY
+      WT = function(TT) {
+        return TT[TT.Start = 0] = "Start", TT[TT.Stop = 1] = "Stop", TT
       }({})
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

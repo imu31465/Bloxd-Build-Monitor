@@ -1,181 +1,181 @@
 export const id = 285;
 export const ids = [285];
 export const modules = {
-  40395: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => Er,
-      f: () => ZY,
-      ChangeSet: () => CY,
-      j: () => Hr,
-      n: () => bY,
-      p: () => fr,
-      r: () => pY,
-      u: () => zY,
-      v: () => Ar,
-      B: () => br,
-      z: () => Xr,
-      C: () => hr,
-      E: () => Sr,
-      G: () => LY,
-      K: () => QY,
-      N: () => lr,
-      R: () => BY,
-      U: () => KY,
-      Y: () => jr,
-      Z: () => YD,
-      $: () => NY,
-      ab: () => rD,
-      bb: () => cY
+  40110: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => Ao,
+      c: () => JT,
+      ChangeSet: () => UT,
+      g: () => Co,
+      k: () => ZT,
+      o: () => ao,
+      p: () => tT,
+      t: () => jT,
+      w: () => zo,
+      D: () => Zo,
+      A: () => so,
+      F: () => Qo,
+      H: () => wo,
+      K: () => dT,
+      N: () => KT,
+      O: () => mo,
+      S: () => vT,
+      T: () => fT,
+      V: () => Yo,
+      Y: () => II,
+      ab: () => uT,
+      db: () => iI,
+      eb: () => ET
     });
-    let FY = [],
-      AY = [];
+    let iT = [],
+      zT = [];
 
-    function IY(YY) {
-      if (YY < 768) return !1;
-      for (let rY = 0, DY = FY.length;;) {
-        let IY = rY + DY >> 1;
-        if (YY < FY[IY]) DY = IY;
+    function kT(TT) {
+      if (TT < 768) return !1;
+      for (let oT = 0, IT = iT.length;;) {
+        let kT = oT + IT >> 1;
+        if (TT < iT[kT]) IT = kT;
         else {
-          if (!(YY >= AY[IY])) return !0;
-          rY = IY + 1
+          if (!(TT >= zT[kT])) return !0;
+          oT = kT + 1
         }
-        if (rY == DY) return !1
+        if (oT == IT) return !1
       }
     }
 
-    function RY(YY) {
-      return YY >= 127462 && YY <= 127487
+    function WT(TT) {
+      return TT >= 127462 && TT <= 127487
     }(() => {
-      let YY = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((YY => YY ? parseInt(YY, 36) : 1));
-      for (let rY = 0, DY = 0; rY < YY.length; rY++)(rY % 2 ? AY : FY).push(DY += YY[rY])
+      let TT = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((TT => TT ? parseInt(TT, 36) : 1));
+      for (let oT = 0, IT = 0; oT < TT.length; oT++)(oT % 2 ? zT : iT).push(IT += TT[oT])
     })();
-    const OY = 8205;
+    const XT = 8205;
 
-    function gY(YY, rY) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? aY : vY)(YY, rY, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function BT(TT, oT) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? FT : ST)(TT, oT, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function aY(YY, rY, DY) {
-      if (rY == YY.length) return rY;
-      rY && sY(YY.charCodeAt(rY)) && iY(YY.charCodeAt(rY - 1)) && rY--;
-      let FY = uY(YY, rY);
-      for (rY += yY(FY); rY < YY.length;) {
-        let AY = uY(YY, rY);
-        if (FY == OY || AY == OY || DY && IY(AY)) rY += yY(AY), FY = AY;
+    function FT(TT, oT, IT) {
+      if (oT == TT.length) return oT;
+      oT && LT(TT.charCodeAt(oT)) && xT(TT.charCodeAt(oT - 1)) && oT--;
+      let iT = DT(TT, oT);
+      for (oT += cT(iT); oT < TT.length;) {
+        let zT = DT(TT, oT);
+        if (iT == XT || zT == XT || IT && kT(zT)) oT += cT(zT), iT = zT;
         else {
-          if (!RY(AY)) break;
+          if (!WT(zT)) break;
           {
-            let DY = 0,
-              FY = rY - 2;
-            for (; FY >= 0 && RY(uY(YY, FY));) DY++, FY -= 2;
-            if (DY % 2 == 0) break;
-            rY += 2
+            let IT = 0,
+              iT = oT - 2;
+            for (; iT >= 0 && WT(DT(TT, iT));) IT++, iT -= 2;
+            if (IT % 2 == 0) break;
+            oT += 2
           }
         }
       }
-      return rY
+      return oT
     }
 
-    function vY(YY, rY, DY) {
-      for (; rY > 0;) {
-        let FY = aY(YY, rY - 2, DY);
-        if (FY < rY) return FY;
-        rY--
+    function ST(TT, oT, IT) {
+      for (; oT > 0;) {
+        let iT = FT(TT, oT - 2, IT);
+        if (iT < oT) return iT;
+        oT--
       }
       return 0
     }
 
-    function uY(YY, rY) {
-      let DY = YY.charCodeAt(rY);
-      if (!iY(DY) || rY + 1 == YY.length) return DY;
-      let FY = YY.charCodeAt(rY + 1);
-      return sY(FY) ? FY - 56320 + (DY - 55296 << 10) + 65536 : DY
+    function DT(TT, oT) {
+      let IT = TT.charCodeAt(oT);
+      if (!xT(IT) || oT + 1 == TT.length) return IT;
+      let iT = TT.charCodeAt(oT + 1);
+      return LT(iT) ? iT - 56320 + (IT - 55296 << 10) + 65536 : IT
     }
 
-    function sY(YY) {
-      return YY >= 56320 && YY < 57344
+    function LT(TT) {
+      return TT >= 56320 && TT < 57344
     }
 
-    function iY(YY) {
-      return YY >= 55296 && YY < 56320
+    function xT(TT) {
+      return TT >= 55296 && TT < 56320
     }
 
-    function yY(YY) {
-      return YY < 65536 ? 1 : 2
+    function cT(TT) {
+      return TT < 65536 ? 1 : 2
     }
-    class QY {
-      lineAt(YY) {
-        if (YY < 0 || YY > this.length) throw new RangeError(`Invalid position ${YY} in document of length ${this.length}`);
-        return this.lineInner(YY, !1, 1, 0)
+    class KT {
+      lineAt(TT) {
+        if (TT < 0 || TT > this.length) throw new RangeError(`Invalid position ${TT} in document of length ${this.length}`);
+        return this.lineInner(TT, !1, 1, 0)
       }
-      line(YY) {
-        if (YY < 1 || YY > this.lines) throw new RangeError(`Invalid line number ${YY} in ${this.lines}-line document`);
-        return this.lineInner(YY, !0, 1, 0)
+      line(TT) {
+        if (TT < 1 || TT > this.lines) throw new RangeError(`Invalid line number ${TT} in ${this.lines}-line document`);
+        return this.lineInner(TT, !0, 1, 0)
       }
-      replace(YY, rY, DY) {
-        [YY, rY] = eY(this, YY, rY);
-        let FY = [];
-        return this.decompose(0, YY, FY, 2), DY.length && DY.decompose(0, DY.length, FY, 3), this.decompose(rY, this.length, FY, 1), WY.from(FY, this.length - (rY - YY) + DY.length)
+      replace(TT, oT, IT) {
+        [TT, oT] = RT(this, TT, oT);
+        let iT = [];
+        return this.decompose(0, TT, iT, 2), IT.length && IT.decompose(0, IT.length, iT, 3), this.decompose(oT, this.length, iT, 1), rT.from(iT, this.length - (oT - TT) + IT.length)
       }
-      append(YY) {
-        return this.replace(this.length, this.length, YY)
+      append(TT) {
+        return this.replace(this.length, this.length, TT)
       }
-      slice(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [YY, rY] = eY(this, YY, rY);
-        let DY = [];
-        return this.decompose(YY, rY, DY, 0), WY.from(DY, rY - YY)
+      slice(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [TT, oT] = RT(this, TT, oT);
+        let IT = [];
+        return this.decompose(TT, oT, IT, 0), rT.from(IT, oT - TT)
       }
-      eq(YY) {
-        if (YY == this) return !0;
-        if (YY.length != this.length || YY.lines != this.lines) return !1;
-        let rY = this.scanIdentical(YY, 1),
-          DY = this.length - this.scanIdentical(YY, -1),
-          FY = new VY(this),
-          AY = new VY(YY);
-        for (let IY = rY, RY = rY;;) {
-          if (FY.next(IY), AY.next(IY), IY = 0, FY.lineBreak != AY.lineBreak || FY.done != AY.done || FY.value != AY.value) return !1;
-          if (RY += FY.value.length, FY.done || RY >= DY) return !0
+      eq(TT) {
+        if (TT == this) return !0;
+        if (TT.length != this.length || TT.lines != this.lines) return !1;
+        let oT = this.scanIdentical(TT, 1),
+          IT = this.length - this.scanIdentical(TT, -1),
+          iT = new hT(this),
+          zT = new hT(TT);
+        for (let kT = oT, WT = oT;;) {
+          if (iT.next(kT), zT.next(kT), kT = 0, iT.lineBreak != zT.lineBreak || iT.done != zT.done || iT.value != zT.value) return !1;
+          if (WT += iT.value.length, iT.done || WT >= IT) return !0
         }
       }
       iter() {
-        return new VY(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new hT(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new SY(this, YY, rY)
+      iterRange(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new wT(this, TT, oT)
       }
-      iterLines(YY, rY) {
-        let DY;
-        if (null == YY) DY = this.iter();
+      iterLines(TT, oT) {
+        let IT;
+        if (null == TT) IT = this.iter();
         else {
-          null == rY && (rY = this.lines + 1);
-          let FY = this.line(YY).from;
-          DY = this.iterRange(FY, Math.max(FY, rY == this.lines + 1 ? this.length : rY <= 1 ? 0 : this.line(rY - 1).to))
+          null == oT && (oT = this.lines + 1);
+          let iT = this.line(TT).from;
+          IT = this.iterRange(iT, Math.max(iT, oT == this.lines + 1 ? this.length : oT <= 1 ? 0 : this.line(oT - 1).to))
         }
-        return new lY(DY)
+        return new mT(IT)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let YY = [];
-        return this.flatten(YY), YY
+        let TT = [];
+        return this.flatten(TT), TT
       }
       constructor() {}
-      static of (YY) {
-        if (0 == YY.length) throw new RangeError("A document must have at least one line");
-        return 1 != YY.length || YY[0] ? YY.length <= 32 ? new oY(YY) : WY.from(oY.split(YY, [])) : QY.empty
+      static of (TT) {
+        if (0 == TT.length) throw new RangeError("A document must have at least one line");
+        return 1 != TT.length || TT[0] ? TT.length <= 32 ? new MT(TT) : rT.from(MT.split(TT, [])) : KT.empty
       }
     }
-    class oY extends QY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(YY) {
-          let rY = -1;
-          for (let DY of YY) rY += DY.length + 1;
-          return rY
-        }(YY);
-        super(), this.text = YY, this.length = rY
+    class MT extends KT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(TT) {
+          let oT = -1;
+          for (let IT of TT) oT += IT.length + 1;
+          return oT
+        }(TT);
+        super(), this.text = TT, this.length = oT
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(YY, rY, DY, FY) {
-        for (let AY = 0;; AY++) {
-          let IY = this.text[AY],
-            RY = FY + IY.length;
-          if ((rY ? DY : RY) >= YY) return new TY(FY, RY, DY, IY);
-          FY = RY + 1, DY++
+      lineInner(TT, oT, IT, iT) {
+        for (let zT = 0;; zT++) {
+          let kT = this.text[zT],
+            WT = iT + kT.length;
+          if ((oT ? IT : WT) >= TT) return new eT(iT, WT, IT, kT);
+          iT = WT + 1, IT++
         }
       }
-      decompose(YY, rY, DY, FY) {
-        let AY = YY <= 0 && rY >= this.length ? this : new oY(mY(this.text, YY, rY), Math.min(rY, this.length) - Math.max(0, YY));
-        if (1 & FY) {
-          let YY = DY.pop(),
-            rY = EY(AY.text, YY.text.slice(), 0, AY.length);
-          if (rY.length <= 32) DY.push(new oY(rY, YY.length + AY.length));
+      decompose(TT, oT, IT, iT) {
+        let zT = TT <= 0 && oT >= this.length ? this : new MT(gT(this.text, TT, oT), Math.min(oT, this.length) - Math.max(0, TT));
+        if (1 & iT) {
+          let TT = IT.pop(),
+            oT = AT(zT.text, TT.text.slice(), 0, zT.length);
+          if (oT.length <= 32) IT.push(new MT(oT, TT.length + zT.length));
           else {
-            let YY = rY.length >> 1;
-            DY.push(new oY(rY.slice(0, YY)), new oY(rY.slice(YY)))
+            let TT = oT.length >> 1;
+            IT.push(new MT(oT.slice(0, TT)), new MT(oT.slice(TT)))
           }
-        } else DY.push(AY)
+        } else IT.push(zT)
       }
-      replace(YY, rY, DY) {
-        if (!(DY instanceof oY)) return super.replace(YY, rY, DY);
-        [YY, rY] = eY(this, YY, rY);
-        let FY = EY(this.text, EY(DY.text, mY(this.text, 0, YY)), rY),
-          AY = this.length + DY.length - (rY - YY);
-        return FY.length <= 32 ? new oY(FY, AY) : WY.from(oY.split(FY, []), AY)
+      replace(TT, oT, IT) {
+        if (!(IT instanceof MT)) return super.replace(TT, oT, IT);
+        [TT, oT] = RT(this, TT, oT);
+        let iT = AT(this.text, AT(IT.text, gT(this.text, 0, TT)), oT),
+          zT = this.length + IT.length - (oT - TT);
+        return iT.length <= 32 ? new MT(iT, zT) : rT.from(MT.split(iT, []), zT)
       }
-      sliceString(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [YY, rY] = eY(this, YY, rY);
-        let FY = "";
-        for (let AY = 0, IY = 0; AY <= rY && IY < this.text.length; IY++) {
-          let RY = this.text[IY],
-            OY = AY + RY.length;
-          AY > YY && IY && (FY += DY), YY < OY && rY > AY && (FY += RY.slice(Math.max(0, YY - AY), rY - AY)), AY = OY + 1
+      sliceString(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [TT, oT] = RT(this, TT, oT);
+        let iT = "";
+        for (let zT = 0, kT = 0; zT <= oT && kT < this.text.length; kT++) {
+          let WT = this.text[kT],
+            XT = zT + WT.length;
+          zT > TT && kT && (iT += IT), TT < XT && oT > zT && (iT += WT.slice(Math.max(0, TT - zT), oT - zT)), zT = XT + 1
         }
-        return FY
+        return iT
       }
-      flatten(YY) {
-        for (let rY of this.text) YY.push(rY)
+      flatten(TT) {
+        for (let oT of this.text) TT.push(oT)
       }
       scanIdentical() {
         return 0
       }
-      static split(YY, rY) {
-        let DY = [],
-          FY = -1;
-        for (let AY of YY) DY.push(AY), FY += AY.length + 1, 32 == DY.length && (rY.push(new oY(DY, FY)), DY = [], FY = -1);
-        return FY > -1 && rY.push(new oY(DY, FY)), rY
+      static split(TT, oT) {
+        let IT = [],
+          iT = -1;
+        for (let zT of TT) IT.push(zT), iT += zT.length + 1, 32 == IT.length && (oT.push(new MT(IT, iT)), IT = [], iT = -1);
+        return iT > -1 && oT.push(new MT(IT, iT)), oT
       }
     }
-    class WY extends QY {
-      constructor(YY, rY) {
-        super(), this.children = YY, this.length = rY, this.lines = 0;
-        for (let DY of YY) this.lines += DY.lines
+    class rT extends KT {
+      constructor(TT, oT) {
+        super(), this.children = TT, this.length = oT, this.lines = 0;
+        for (let IT of TT) this.lines += IT.lines
       }
-      lineInner(YY, rY, DY, FY) {
-        for (let AY = 0;; AY++) {
-          let IY = this.children[AY],
-            RY = FY + IY.length,
-            OY = DY + IY.lines - 1;
-          if ((rY ? OY : RY) >= YY) return IY.lineInner(YY, rY, DY, FY);
-          FY = RY + 1, DY = OY + 1
+      lineInner(TT, oT, IT, iT) {
+        for (let zT = 0;; zT++) {
+          let kT = this.children[zT],
+            WT = iT + kT.length,
+            XT = IT + kT.lines - 1;
+          if ((oT ? XT : WT) >= TT) return kT.lineInner(TT, oT, IT, iT);
+          iT = WT + 1, IT = XT + 1
         }
       }
-      decompose(YY, rY, DY, FY) {
-        for (let AY = 0, IY = 0; IY <= rY && AY < this.children.length; AY++) {
-          let RY = this.children[AY],
-            OY = IY + RY.length;
-          if (YY <= OY && rY >= IY) {
-            let AY = FY & ((IY <= YY ? 1 : 0) | (OY >= rY ? 2 : 0));
-            IY >= YY && OY <= rY && !AY ? DY.push(RY) : RY.decompose(YY - IY, rY - IY, DY, AY)
+      decompose(TT, oT, IT, iT) {
+        for (let zT = 0, kT = 0; kT <= oT && zT < this.children.length; zT++) {
+          let WT = this.children[zT],
+            XT = kT + WT.length;
+          if (TT <= XT && oT >= kT) {
+            let zT = iT & ((kT <= TT ? 1 : 0) | (XT >= oT ? 2 : 0));
+            kT >= TT && XT <= oT && !zT ? IT.push(WT) : WT.decompose(TT - kT, oT - kT, IT, zT)
           }
-          IY = OY + 1
+          kT = XT + 1
         }
       }
-      replace(YY, rY, DY) {
-        if ([YY, rY] = eY(this, YY, rY), DY.lines < this.lines)
-          for (let FY = 0, AY = 0; FY < this.children.length; FY++) {
-            let IY = this.children[FY],
-              RY = AY + IY.length;
-            if (YY >= AY && rY <= RY) {
-              let OY = IY.replace(YY - AY, rY - AY, DY),
-                gY = this.lines - IY.lines + OY.lines;
-              if (OY.lines < gY >> 4 && OY.lines > gY >> 6) {
-                let AY = this.children.slice();
-                return AY[FY] = OY, new WY(AY, this.length - (rY - YY) + DY.length)
+      replace(TT, oT, IT) {
+        if ([TT, oT] = RT(this, TT, oT), IT.lines < this.lines)
+          for (let iT = 0, zT = 0; iT < this.children.length; iT++) {
+            let kT = this.children[iT],
+              WT = zT + kT.length;
+            if (TT >= zT && oT <= WT) {
+              let XT = kT.replace(TT - zT, oT - zT, IT),
+                BT = this.lines - kT.lines + XT.lines;
+              if (XT.lines < BT >> 4 && XT.lines > BT >> 6) {
+                let zT = this.children.slice();
+                return zT[iT] = XT, new rT(zT, this.length - (oT - TT) + IT.length)
               }
-              return super.replace(AY, RY, OY)
+              return super.replace(zT, WT, XT)
             }
-            AY = RY + 1
+            zT = WT + 1
           }
-        return super.replace(YY, rY, DY)
+        return super.replace(TT, oT, IT)
       }
-      sliceString(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [YY, rY] = eY(this, YY, rY);
-        let FY = "";
-        for (let AY = 0, IY = 0; AY < this.children.length && IY <= rY; AY++) {
-          let RY = this.children[AY],
-            OY = IY + RY.length;
-          IY > YY && AY && (FY += DY), YY < OY && rY > IY && (FY += RY.sliceString(YY - IY, rY - IY, DY)), IY = OY + 1
+      sliceString(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [TT, oT] = RT(this, TT, oT);
+        let iT = "";
+        for (let zT = 0, kT = 0; zT < this.children.length && kT <= oT; zT++) {
+          let WT = this.children[zT],
+            XT = kT + WT.length;
+          kT > TT && zT && (iT += IT), TT < XT && oT > kT && (iT += WT.sliceString(TT - kT, oT - kT, IT)), kT = XT + 1
         }
-        return FY
+        return iT
       }
-      flatten(YY) {
-        for (let rY of this.children) rY.flatten(YY)
+      flatten(TT) {
+        for (let oT of this.children) oT.flatten(TT)
       }
-      scanIdentical(YY, rY) {
-        if (!(YY instanceof WY)) return 0;
-        let DY = 0,
-          [FY, AY, IY, RY] = rY > 0 ? [0, 0, this.children.length, YY.children.length] : [this.children.length - 1, YY.children.length - 1, -1, -1];
-        for (;; FY += rY, AY += rY) {
-          if (FY == IY || AY == RY) return DY;
-          let OY = this.children[FY],
-            gY = YY.children[AY];
-          if (OY != gY) return DY + OY.scanIdentical(gY, rY);
-          DY += OY.length + 1
+      scanIdentical(TT, oT) {
+        if (!(TT instanceof rT)) return 0;
+        let IT = 0,
+          [iT, zT, kT, WT] = oT > 0 ? [0, 0, this.children.length, TT.children.length] : [this.children.length - 1, TT.children.length - 1, -1, -1];
+        for (;; iT += oT, zT += oT) {
+          if (iT == kT || zT == WT) return IT;
+          let XT = this.children[iT],
+            BT = TT.children[zT];
+          if (XT != BT) return IT + XT.scanIdentical(BT, oT);
+          IT += XT.length + 1
         }
       }
-      static from(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY.reduce(((YY, rY) => YY + rY.length + 1), -1),
-          DY = 0;
-        for (let sY of YY) DY += sY.lines;
-        if (DY < 32) {
-          let DY = [];
-          for (let rY of YY) rY.flatten(DY);
-          return new oY(DY, rY)
+      static from(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT.reduce(((TT, oT) => TT + oT.length + 1), -1),
+          IT = 0;
+        for (let LT of TT) IT += LT.lines;
+        if (IT < 32) {
+          let IT = [];
+          for (let oT of TT) oT.flatten(IT);
+          return new MT(IT, oT)
         }
-        let FY = Math.max(32, DY >> 5),
-          AY = FY << 1,
-          IY = FY >> 1,
-          RY = [],
-          OY = 0,
-          gY = -1,
-          aY = [];
+        let iT = Math.max(32, IT >> 5),
+          zT = iT << 1,
+          kT = iT >> 1,
+          WT = [],
+          XT = 0,
+          BT = -1,
+          FT = [];
 
-        function vY(YY) {
-          let rY;
-          if (YY.lines > AY && YY instanceof WY)
-            for (let DY of YY.children) vY(DY);
-          else YY.lines > IY && (OY > IY || !OY) ? (uY(), RY.push(YY)) : YY instanceof oY && OY && (rY = aY[aY.length - 1]) instanceof oY && YY.lines + rY.lines <= 32 ? (OY += YY.lines, gY += YY.length + 1, aY[aY.length - 1] = new oY(rY.text.concat(YY.text), rY.length + 1 + YY.length)) : (OY + YY.lines > FY && uY(), OY += YY.lines, gY += YY.length + 1, aY.push(YY))
+        function ST(TT) {
+          let oT;
+          if (TT.lines > zT && TT instanceof rT)
+            for (let IT of TT.children) ST(IT);
+          else TT.lines > kT && (XT > kT || !XT) ? (DT(), WT.push(TT)) : TT instanceof MT && XT && (oT = FT[FT.length - 1]) instanceof MT && TT.lines + oT.lines <= 32 ? (XT += TT.lines, BT += TT.length + 1, FT[FT.length - 1] = new MT(oT.text.concat(TT.text), oT.length + 1 + TT.length)) : (XT + TT.lines > iT && DT(), XT += TT.lines, BT += TT.length + 1, FT.push(TT))
         }
 
-        function uY() {
-          0 != OY && (RY.push(1 == aY.length ? aY[0] : WY.from(aY, gY)), gY = -1, OY = aY.length = 0)
+        function DT() {
+          0 != XT && (WT.push(1 == FT.length ? FT[0] : rT.from(FT, BT)), BT = -1, XT = FT.length = 0)
         }
-        for (let sY of YY) vY(sY);
-        return uY(), 1 == RY.length ? RY[0] : new WY(RY, rY)
+        for (let LT of TT) ST(LT);
+        return DT(), 1 == WT.length ? WT[0] : new rT(WT, oT)
       }
     }
 
-    function EY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let AY = 0, IY = 0, RY = !0; IY < YY.length && AY <= FY; IY++) {
-        let OY = YY[IY],
-          gY = AY + OY.length;
-        gY >= DY && (gY > FY && (OY = OY.slice(0, FY - AY)), AY < DY && (OY = OY.slice(DY - AY)), RY ? (rY[rY.length - 1] += OY, RY = !1) : rY.push(OY)), AY = gY + 1
+    function AT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let zT = 0, kT = 0, WT = !0; kT < TT.length && zT <= iT; kT++) {
+        let XT = TT[kT],
+          BT = zT + XT.length;
+        BT >= IT && (BT > iT && (XT = XT.slice(0, iT - zT)), zT < IT && (XT = XT.slice(IT - zT)), WT ? (oT[oT.length - 1] += XT, WT = !1) : oT.push(XT)), zT = BT + 1
       }
-      return rY
+      return oT
     }
 
-    function mY(YY, rY, DY) {
-      return EY(YY, [""], rY, DY)
+    function gT(TT, oT, IT) {
+      return AT(TT, [""], oT, IT)
     }
-    QY.empty = new oY([""], 0);
-    class VY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = rY, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [YY], this.offsets = [rY > 0 ? 1 : (YY instanceof oY ? YY.text.length : YY.children.length) << 1]
+    KT.empty = new MT([""], 0);
+    class hT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = oT, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [TT], this.offsets = [oT > 0 ? 1 : (TT instanceof MT ? TT.text.length : TT.children.length) << 1]
       }
-      nextInner(YY, rY) {
+      nextInner(TT, oT) {
         for (this.done = this.lineBreak = !1;;) {
-          let DY = this.nodes.length - 1,
-            FY = this.nodes[DY],
-            AY = this.offsets[DY],
-            IY = AY >> 1,
-            RY = FY instanceof oY ? FY.text.length : FY.children.length;
-          if (IY == (rY > 0 ? RY : 0)) {
-            if (0 == DY) return this.done = !0, this.value = "", this;
-            rY > 0 && this.offsets[DY - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & AY) == (rY > 0 ? 0 : 1)) {
-            if (this.offsets[DY] += rY, 0 == YY) return this.lineBreak = !0, this.value = "\n", this;
-            YY--
-          } else if (FY instanceof oY) {
-            let AY = FY.text[IY + (rY < 0 ? -1 : 0)];
-            if (this.offsets[DY] += rY, AY.length > Math.max(0, YY)) return this.value = 0 == YY ? AY : rY > 0 ? AY.slice(YY) : AY.slice(0, AY.length - YY), this;
-            YY -= AY.length
+          let IT = this.nodes.length - 1,
+            iT = this.nodes[IT],
+            zT = this.offsets[IT],
+            kT = zT >> 1,
+            WT = iT instanceof MT ? iT.text.length : iT.children.length;
+          if (kT == (oT > 0 ? WT : 0)) {
+            if (0 == IT) return this.done = !0, this.value = "", this;
+            oT > 0 && this.offsets[IT - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & zT) == (oT > 0 ? 0 : 1)) {
+            if (this.offsets[IT] += oT, 0 == TT) return this.lineBreak = !0, this.value = "\n", this;
+            TT--
+          } else if (iT instanceof MT) {
+            let zT = iT.text[kT + (oT < 0 ? -1 : 0)];
+            if (this.offsets[IT] += oT, zT.length > Math.max(0, TT)) return this.value = 0 == TT ? zT : oT > 0 ? zT.slice(TT) : zT.slice(0, zT.length - TT), this;
+            TT -= zT.length
           } else {
-            let AY = FY.children[IY + (rY < 0 ? -1 : 0)];
-            YY > AY.length ? (YY -= AY.length, this.offsets[DY] += rY) : (rY < 0 && this.offsets[DY]--, this.nodes.push(AY), this.offsets.push(rY > 0 ? 1 : (AY instanceof oY ? AY.text.length : AY.children.length) << 1))
+            let zT = iT.children[kT + (oT < 0 ? -1 : 0)];
+            TT > zT.length ? (TT -= zT.length, this.offsets[IT] += oT) : (oT < 0 && this.offsets[IT]--, this.nodes.push(zT), this.offsets.push(oT > 0 ? 1 : (zT instanceof MT ? zT.text.length : zT.children.length) << 1))
           }
         }
       }
       next() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return YY < 0 && (this.nextInner(-YY, -this.dir), YY = this.value.length), this.nextInner(YY, this.dir)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return TT < 0 && (this.nextInner(-TT, -this.dir), TT = this.value.length), this.nextInner(TT, this.dir)
       }
     }
-    class SY {
-      constructor(YY, rY, DY) {
-        this.value = "", this.done = !1, this.cursor = new VY(YY, rY > DY ? -1 : 1), this.pos = rY > DY ? YY.length : 0, this.from = Math.min(rY, DY), this.to = Math.max(rY, DY)
+    class wT {
+      constructor(TT, oT, IT) {
+        this.value = "", this.done = !1, this.cursor = new hT(TT, oT > IT ? -1 : 1), this.pos = oT > IT ? TT.length : 0, this.from = Math.min(oT, IT), this.to = Math.max(oT, IT)
       }
-      nextInner(YY, rY) {
-        if (rY < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        YY += Math.max(0, rY < 0 ? this.pos - this.to : this.from - this.pos);
-        let DY = rY < 0 ? this.pos - this.from : this.to - this.pos;
-        YY > DY && (YY = DY), DY -= YY;
+      nextInner(TT, oT) {
+        if (oT < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        TT += Math.max(0, oT < 0 ? this.pos - this.to : this.from - this.pos);
+        let IT = oT < 0 ? this.pos - this.from : this.to - this.pos;
+        TT > IT && (TT = IT), IT -= TT;
         let {
-          value: FY
-        } = this.cursor.next(YY);
-        return this.pos += (FY.length + YY) * rY, this.value = FY.length <= DY ? FY : rY < 0 ? FY.slice(FY.length - DY) : FY.slice(0, DY), this.done = !this.value, this
+          value: iT
+        } = this.cursor.next(TT);
+        return this.pos += (iT.length + TT) * oT, this.value = iT.length <= IT ? iT : oT < 0 ? iT.slice(iT.length - IT) : iT.slice(0, IT), this.done = !this.value, this
       }
       next() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return YY < 0 ? YY = Math.max(YY, this.from - this.pos) : YY > 0 && (YY = Math.min(YY, this.to - this.pos)), this.nextInner(YY, this.cursor.dir)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return TT < 0 ? TT = Math.max(TT, this.from - this.pos) : TT > 0 && (TT = Math.min(TT, this.to - this.pos)), this.nextInner(TT, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class lY {
-      constructor(YY) {
-        this.inner = YY, this.afterBreak = !0, this.value = "", this.done = !1
+    class mT {
+      constructor(TT) {
+        this.inner = TT, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: rY,
-            lineBreak: DY,
-            value: FY
-          } = this.inner.next(YY);
-        return rY && this.afterBreak ? (this.value = "", this.afterBreak = !1) : rY ? (this.done = !0, this.value = "") : DY ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = FY, this.afterBreak = !1), this
+            done: oT,
+            lineBreak: IT,
+            value: iT
+          } = this.inner.next(TT);
+        return oT && this.afterBreak ? (this.value = "", this.afterBreak = !1) : oT ? (this.done = !0, this.value = "") : IT ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = iT, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (QY.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (KT.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, VY.prototype[Symbol.iterator] = SY.prototype[Symbol.iterator] = lY.prototype[Symbol.iterator] = function() {
+    }, hT.prototype[Symbol.iterator] = wT.prototype[Symbol.iterator] = mT.prototype[Symbol.iterator] = function() {
       return this
     });
-    class TY {
-      constructor(YY, rY, DY, FY) {
-        this.from = YY, this.to = rY, this.number = DY, this.text = FY
+    class eT {
+      constructor(TT, oT, IT, iT) {
+        this.from = TT, this.to = oT, this.number = IT, this.text = iT
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function eY(YY, rY, DY) {
-      return [rY = Math.max(0, Math.min(YY.length, rY)), Math.max(rY, Math.min(YY.length, DY))]
+    function RT(TT, oT, IT) {
+      return [oT = Math.max(0, Math.min(TT.length, oT)), Math.max(oT, Math.min(TT.length, IT))]
     }
 
-    function NY(YY, rY) {
-      return gY(YY, rY, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function uT(TT, oT) {
+      return BT(TT, oT, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function BY(YY, rY) {
-      let DY = YY.charCodeAt(rY);
-      if (!((FY = DY) >= 55296 && FY < 56320) || rY + 1 == YY.length) return DY;
-      var FY;
-      let AY = YY.charCodeAt(rY + 1);
-      return function(YY) {
-        return YY >= 56320 && YY < 57344
-      }(AY) ? AY - 56320 + (DY - 55296 << 10) + 65536 : DY
+    function vT(TT, oT) {
+      let IT = TT.charCodeAt(oT);
+      if (!((iT = IT) >= 55296 && iT < 56320) || oT + 1 == TT.length) return IT;
+      var iT;
+      let zT = TT.charCodeAt(oT + 1);
+      return function(TT) {
+        return TT >= 56320 && TT < 57344
+      }(zT) ? zT - 56320 + (IT - 55296 << 10) + 65536 : IT
     }
 
-    function cY(YY) {
-      return YY <= 65535 ? String.fromCharCode(YY) : (YY -= 65536, String.fromCharCode(55296 + (YY >> 10), 56320 + (1023 & YY)))
+    function ET(TT) {
+      return TT <= 65535 ? String.fromCharCode(TT) : (TT -= 65536, String.fromCharCode(55296 + (TT >> 10), 56320 + (1023 & TT)))
     }
 
-    function KY(YY) {
-      return YY < 65536 ? 1 : 2
+    function fT(TT) {
+      return TT < 65536 ? 1 : 2
     }
-    const HY = /\r\n?|\n/;
-    var zY = function(YY) {
-      return YY[YY.Simple = 0] = "Simple", YY[YY.TrackDel = 1] = "TrackDel", YY[YY.TrackBefore = 2] = "TrackBefore", YY[YY.TrackAfter = 3] = "TrackAfter", YY
-    }(zY || (zY = {}));
-    class ZY {
-      constructor(YY) {
-        this.sections = YY
+    const CT = /\r\n?|\n/;
+    var jT = function(TT) {
+      return TT[TT.Simple = 0] = "Simple", TT[TT.TrackDel = 1] = "TrackDel", TT[TT.TrackBefore = 2] = "TrackBefore", TT[TT.TrackAfter = 3] = "TrackAfter", TT
+    }(jT || (jT = {}));
+    class JT {
+      constructor(TT) {
+        this.sections = TT
       }
       get length() {
-        let YY = 0;
-        for (let rY = 0; rY < this.sections.length; rY += 2) YY += this.sections[rY];
-        return YY
+        let TT = 0;
+        for (let oT = 0; oT < this.sections.length; oT += 2) TT += this.sections[oT];
+        return TT
       }
       get newLength() {
-        let YY = 0;
-        for (let rY = 0; rY < this.sections.length; rY += 2) {
-          let DY = this.sections[rY + 1];
-          YY += DY < 0 ? this.sections[rY] : DY
+        let TT = 0;
+        for (let oT = 0; oT < this.sections.length; oT += 2) {
+          let IT = this.sections[oT + 1];
+          TT += IT < 0 ? this.sections[oT] : IT
         }
-        return YY
+        return TT
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(YY) {
-        for (let rY = 0, DY = 0, FY = 0; rY < this.sections.length;) {
-          let AY = this.sections[rY++],
-            IY = this.sections[rY++];
-          IY < 0 ? (YY(DY, FY, AY), FY += AY) : FY += IY, DY += AY
+      iterGaps(TT) {
+        for (let oT = 0, IT = 0, iT = 0; oT < this.sections.length;) {
+          let zT = this.sections[oT++],
+            kT = this.sections[oT++];
+          kT < 0 ? (TT(IT, iT, zT), iT += zT) : iT += kT, IT += zT
         }
       }
-      iterChangedRanges(YY) {
-        hY(this, YY, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(TT) {
+        QT(this, TT, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let YY = [];
-        for (let rY = 0; rY < this.sections.length;) {
-          let DY = this.sections[rY++],
-            FY = this.sections[rY++];
-          FY < 0 ? YY.push(DY, FY) : YY.push(FY, DY)
+        let TT = [];
+        for (let oT = 0; oT < this.sections.length;) {
+          let IT = this.sections[oT++],
+            iT = this.sections[oT++];
+          iT < 0 ? TT.push(IT, iT) : TT.push(iT, IT)
         }
-        return new ZY(YY)
+        return new JT(TT)
       }
-      composeDesc(YY) {
-        return this.empty ? YY : YY.empty ? this : JY(this, YY)
+      composeDesc(TT) {
+        return this.empty ? TT : TT.empty ? this : HT(this, TT)
       }
-      mapDesc(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return YY.empty ? this : dY(this, YY, rY)
+      mapDesc(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return TT.empty ? this : OT(this, TT, oT)
       }
-      mapPos(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zY.Simple,
-          FY = 0,
-          AY = 0;
-        for (let IY = 0; IY < this.sections.length;) {
-          let RY = this.sections[IY++],
-            OY = this.sections[IY++],
-            gY = FY + RY;
-          if (OY < 0) {
-            if (gY > YY) return AY + (YY - FY);
-            AY += RY
+      mapPos(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : jT.Simple,
+          iT = 0,
+          zT = 0;
+        for (let kT = 0; kT < this.sections.length;) {
+          let WT = this.sections[kT++],
+            XT = this.sections[kT++],
+            BT = iT + WT;
+          if (XT < 0) {
+            if (BT > TT) return zT + (TT - iT);
+            zT += WT
           } else {
-            if (DY != zY.Simple && gY >= YY && (DY == zY.TrackDel && FY < YY && gY > YY || DY == zY.TrackBefore && FY < YY || DY == zY.TrackAfter && gY > YY)) return null;
-            if (gY > YY || gY == YY && rY < 0 && !RY) return YY == FY || rY < 0 ? AY : AY + OY;
-            AY += OY
+            if (IT != jT.Simple && BT >= TT && (IT == jT.TrackDel && iT < TT && BT > TT || IT == jT.TrackBefore && iT < TT || IT == jT.TrackAfter && BT > TT)) return null;
+            if (BT > TT || BT == TT && oT < 0 && !WT) return TT == iT || oT < 0 ? zT : zT + XT;
+            zT += XT
           }
-          FY = gY
+          iT = BT
         }
-        if (YY > FY) throw new RangeError(`Position ${YY} is out of range for changeset of length ${FY}`);
-        return AY
+        if (TT > iT) throw new RangeError(`Position ${TT} is out of range for changeset of length ${iT}`);
+        return zT
       }
-      touchesRange(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY;
-        for (let DY = 0, FY = 0; DY < this.sections.length && FY <= rY;) {
-          let AY = FY + this.sections[DY++];
-          if (this.sections[DY++] >= 0 && FY <= rY && AY >= YY) return !(FY < YY && AY > rY) || "cover";
-          FY = AY
+      touchesRange(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+        for (let IT = 0, iT = 0; IT < this.sections.length && iT <= oT;) {
+          let zT = iT + this.sections[IT++];
+          if (this.sections[IT++] >= 0 && iT <= oT && zT >= TT) return !(iT < TT && zT > oT) || "cover";
+          iT = zT
         }
         return !1
       }
       toString() {
-        let YY = "";
-        for (let rY = 0; rY < this.sections.length;) {
-          let DY = this.sections[rY++],
-            FY = this.sections[rY++];
-          YY += (YY ? " " : "") + DY + (FY >= 0 ? ":" + FY : "")
+        let TT = "";
+        for (let oT = 0; oT < this.sections.length;) {
+          let IT = this.sections[oT++],
+            iT = this.sections[oT++];
+          TT += (TT ? " " : "") + IT + (iT >= 0 ? ":" + iT : "")
         }
-        return YY
+        return TT
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(YY) {
-        if (!Array.isArray(YY) || YY.length % 2 || YY.some((YY => "number" != typeof YY))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new ZY(YY)
+      static fromJSON(TT) {
+        if (!Array.isArray(TT) || TT.length % 2 || TT.some((TT => "number" != typeof TT))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new JT(TT)
       }
-      static create(YY) {
-        return new ZY(YY)
+      static create(TT) {
+        return new JT(TT)
       }
     }
-    class CY extends ZY {
-      constructor(YY, rY) {
-        super(YY), this.inserted = rY
+    class UT extends JT {
+      constructor(TT, oT) {
+        super(TT), this.inserted = oT
       }
-      apply(YY) {
-        if (this.length != YY.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return hY(this, ((rY, DY, FY, AY, IY) => YY = YY.replace(FY, FY + (DY - rY), IY)), !1), YY
+      apply(TT) {
+        if (this.length != TT.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return QT(this, ((oT, IT, iT, zT, kT) => TT = TT.replace(iT, iT + (IT - oT), kT)), !1), TT
       }
-      mapDesc(YY) {
-        return dY(this, YY, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(TT) {
+        return OT(this, TT, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(YY) {
-        let rY = this.sections.slice(),
-          DY = [];
-        for (let FY = 0, AY = 0; FY < rY.length; FY += 2) {
-          let IY = rY[FY],
-            RY = rY[FY + 1];
-          if (RY >= 0) {
-            rY[FY] = RY, rY[FY + 1] = IY;
-            let OY = FY >> 1;
-            for (; DY.length < OY;) DY.push(QY.empty);
-            DY.push(IY ? YY.slice(AY, AY + IY) : QY.empty)
+      invert(TT) {
+        let oT = this.sections.slice(),
+          IT = [];
+        for (let iT = 0, zT = 0; iT < oT.length; iT += 2) {
+          let kT = oT[iT],
+            WT = oT[iT + 1];
+          if (WT >= 0) {
+            oT[iT] = WT, oT[iT + 1] = kT;
+            let XT = iT >> 1;
+            for (; IT.length < XT;) IT.push(KT.empty);
+            IT.push(kT ? TT.slice(zT, zT + kT) : KT.empty)
           }
-          AY += IY
+          zT += kT
         }
-        return new CY(rY, DY)
+        return new UT(oT, IT)
       }
-      compose(YY) {
-        return this.empty ? YY : YY.empty ? this : JY(this, YY, !0)
+      compose(TT) {
+        return this.empty ? TT : TT.empty ? this : HT(this, TT, !0)
       }
-      map(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return YY.empty ? this : dY(this, YY, rY, !0)
+      map(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return TT.empty ? this : OT(this, TT, oT, !0)
       }
-      iterChanges(YY) {
-        hY(this, YY, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(TT) {
+        QT(this, TT, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return ZY.create(this.sections)
+        return JT.create(this.sections)
       }
-      filter(YY) {
-        let rY = [],
-          DY = [],
-          FY = [],
-          AY = new MY(this);
-        YY: for (let IY = 0, RY = 0;;) {
-          let OY = IY == YY.length ? 1e9 : YY[IY++];
-          for (; RY < OY || RY == OY && 0 == AY.len;) {
-            if (AY.done) break YY;
-            let YY = Math.min(AY.len, OY - RY);
-            fY(FY, YY, -1);
-            let IY = -1 == AY.ins ? -1 : 0 == AY.off ? AY.ins : 0;
-            fY(rY, YY, IY), IY > 0 && jY(DY, rY, AY.text), AY.forward(YY), RY += YY
+      filter(TT) {
+        let oT = [],
+          IT = [],
+          iT = [],
+          zT = new nT(this);
+        TT: for (let kT = 0, WT = 0;;) {
+          let XT = kT == TT.length ? 1e9 : TT[kT++];
+          for (; WT < XT || WT == XT && 0 == zT.len;) {
+            if (zT.done) break TT;
+            let TT = Math.min(zT.len, XT - WT);
+            aT(iT, TT, -1);
+            let kT = -1 == zT.ins ? -1 : 0 == zT.off ? zT.ins : 0;
+            aT(oT, TT, kT), kT > 0 && YT(IT, oT, zT.text), zT.forward(TT), WT += TT
           }
-          let gY = YY[IY++];
-          for (; RY < gY;) {
-            if (AY.done) break YY;
-            let YY = Math.min(AY.len, gY - RY);
-            fY(rY, YY, -1), fY(FY, YY, -1 == AY.ins ? -1 : 0 == AY.off ? AY.ins : 0), AY.forward(YY), RY += YY
+          let BT = TT[kT++];
+          for (; WT < BT;) {
+            if (zT.done) break TT;
+            let TT = Math.min(zT.len, BT - WT);
+            aT(oT, TT, -1), aT(iT, TT, -1 == zT.ins ? -1 : 0 == zT.off ? zT.ins : 0), zT.forward(TT), WT += TT
           }
         }
         return {
-          changes: new CY(rY, DY),
-          filtered: ZY.create(FY)
+          changes: new UT(oT, IT),
+          filtered: JT.create(iT)
         }
       }
       toJSON() {
-        let YY = [];
-        for (let rY = 0; rY < this.sections.length; rY += 2) {
-          let DY = this.sections[rY],
-            FY = this.sections[rY + 1];
-          FY < 0 ? YY.push(DY) : 0 == FY ? YY.push([DY]) : YY.push([DY].concat(this.inserted[rY >> 1].toJSON()))
+        let TT = [];
+        for (let oT = 0; oT < this.sections.length; oT += 2) {
+          let IT = this.sections[oT],
+            iT = this.sections[oT + 1];
+          iT < 0 ? TT.push(IT) : 0 == iT ? TT.push([IT]) : TT.push([IT].concat(this.inserted[oT >> 1].toJSON()))
         }
-        return YY
+        return TT
       }
-      static of (YY, rY, DY) {
-        let FY = [],
-          AY = [],
-          IY = 0,
-          RY = null;
+      static of (TT, oT, IT) {
+        let iT = [],
+          zT = [],
+          kT = 0,
+          WT = null;
 
-        function OY() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !FY.length) return;
-          IY < rY && fY(FY, rY - IY, -1);
-          let YY = new CY(FY, AY);
-          RY = RY ? RY.compose(YY.map(RY)) : YY, FY = [], AY = [], IY = 0
+        function XT() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !iT.length) return;
+          kT < oT && aT(iT, oT - kT, -1);
+          let TT = new UT(iT, zT);
+          WT = WT ? WT.compose(TT.map(WT)) : TT, iT = [], zT = [], kT = 0
         }
-        return function YY(gY) {
-          if (Array.isArray(gY))
-            for (let rY of gY) YY(rY);
-          else if (gY instanceof CY) {
-            if (gY.length != rY) throw new RangeError(`Mismatched change set length (got ${gY.length}, expected ${rY})`);
-            OY(), RY = RY ? RY.compose(gY.map(RY)) : gY
+        return function TT(BT) {
+          if (Array.isArray(BT))
+            for (let oT of BT) TT(oT);
+          else if (BT instanceof UT) {
+            if (BT.length != oT) throw new RangeError(`Mismatched change set length (got ${BT.length}, expected ${oT})`);
+            XT(), WT = WT ? WT.compose(BT.map(WT)) : BT
           } else {
             let {
-              from: YY,
-              to: RY = YY,
-              insert: aY
-            } = gY;
-            if (YY > RY || YY < 0 || RY > rY) throw new RangeError(`Invalid change range ${YY} to ${RY} (in doc of length ${rY})`);
-            let vY = aY ? "string" == typeof aY ? QY.of(aY.split(DY || HY)) : aY : QY.empty,
-              uY = vY.length;
-            if (YY == RY && 0 == uY) return;
-            YY < IY && OY(), YY > IY && fY(FY, YY - IY, -1), fY(FY, RY - YY, uY), jY(AY, FY, vY), IY = RY
+              from: TT,
+              to: WT = TT,
+              insert: FT
+            } = BT;
+            if (TT > WT || TT < 0 || WT > oT) throw new RangeError(`Invalid change range ${TT} to ${WT} (in doc of length ${oT})`);
+            let ST = FT ? "string" == typeof FT ? KT.of(FT.split(IT || CT)) : FT : KT.empty,
+              DT = ST.length;
+            if (TT == WT && 0 == DT) return;
+            TT < kT && XT(), TT > kT && aT(iT, TT - kT, -1), aT(iT, WT - TT, DT), YT(zT, iT, ST), kT = WT
           }
-        }(YY), OY(!RY), RY
+        }(TT), XT(!WT), WT
       }
-      static empty(YY) {
-        return new CY(YY ? [YY, -1] : [], [])
+      static empty(TT) {
+        return new UT(TT ? [TT, -1] : [], [])
       }
-      static fromJSON(YY) {
-        if (!Array.isArray(YY)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let rY = [],
-          DY = [];
-        for (let FY = 0; FY < YY.length; FY++) {
-          let AY = YY[FY];
-          if ("number" == typeof AY) rY.push(AY, -1);
+      static fromJSON(TT) {
+        if (!Array.isArray(TT)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let oT = [],
+          IT = [];
+        for (let iT = 0; iT < TT.length; iT++) {
+          let zT = TT[iT];
+          if ("number" == typeof zT) oT.push(zT, -1);
           else {
-            if (!Array.isArray(AY) || "number" != typeof AY[0] || AY.some(((YY, rY) => rY && "string" != typeof YY))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == AY.length) rY.push(AY[0], 0);
+            if (!Array.isArray(zT) || "number" != typeof zT[0] || zT.some(((TT, oT) => oT && "string" != typeof TT))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == zT.length) oT.push(zT[0], 0);
             else {
-              for (; DY.length < FY;) DY.push(QY.empty);
-              DY[FY] = QY.of(AY.slice(1)), rY.push(AY[0], DY[FY].length)
+              for (; IT.length < iT;) IT.push(KT.empty);
+              IT[iT] = KT.of(zT.slice(1)), oT.push(zT[0], IT[iT].length)
             }
           }
         }
-        return new CY(rY, DY)
+        return new UT(oT, IT)
       }
-      static createSet(YY, rY) {
-        return new CY(YY, rY)
+      static createSet(TT, oT) {
+        return new UT(TT, oT)
       }
     }
 
-    function fY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == rY && DY <= 0) return;
-      let AY = YY.length - 2;
-      AY >= 0 && DY <= 0 && DY == YY[AY + 1] ? YY[AY] += rY : AY >= 0 && 0 == rY && 0 == YY[AY] ? YY[AY + 1] += DY : FY ? (YY[AY] += rY, YY[AY + 1] += DY) : YY.push(rY, DY)
+    function aT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == oT && IT <= 0) return;
+      let zT = TT.length - 2;
+      zT >= 0 && IT <= 0 && IT == TT[zT + 1] ? TT[zT] += oT : zT >= 0 && 0 == oT && 0 == TT[zT] ? TT[zT + 1] += IT : iT ? (TT[zT] += oT, TT[zT + 1] += IT) : TT.push(oT, IT)
     }
 
-    function jY(YY, rY, DY) {
-      if (0 == DY.length) return;
-      let FY = rY.length - 2 >> 1;
-      if (FY < YY.length) YY[YY.length - 1] = YY[YY.length - 1].append(DY);
+    function YT(TT, oT, IT) {
+      if (0 == IT.length) return;
+      let iT = oT.length - 2 >> 1;
+      if (iT < TT.length) TT[TT.length - 1] = TT[TT.length - 1].append(IT);
       else {
-        for (; YY.length < FY;) YY.push(QY.empty);
-        YY.push(DY)
+        for (; TT.length < iT;) TT.push(KT.empty);
+        TT.push(IT)
       }
     }
 
-    function hY(YY, rY, DY) {
-      let FY = YY.inserted;
-      for (let AY = 0, IY = 0, RY = 0; RY < YY.sections.length;) {
-        let OY = YY.sections[RY++],
-          gY = YY.sections[RY++];
-        if (gY < 0) AY += OY, IY += OY;
+    function QT(TT, oT, IT) {
+      let iT = TT.inserted;
+      for (let zT = 0, kT = 0, WT = 0; WT < TT.sections.length;) {
+        let XT = TT.sections[WT++],
+          BT = TT.sections[WT++];
+        if (BT < 0) zT += XT, kT += XT;
         else {
-          let aY = AY,
-            vY = IY,
-            uY = QY.empty;
-          for (; aY += OY, vY += gY, gY && FY && (uY = uY.append(FY[RY - 2 >> 1])), !(DY || RY == YY.sections.length || YY.sections[RY + 1] < 0);) OY = YY.sections[RY++], gY = YY.sections[RY++];
-          rY(AY, aY, IY, vY, uY), AY = aY, IY = vY
+          let FT = zT,
+            ST = kT,
+            DT = KT.empty;
+          for (; FT += XT, ST += BT, BT && iT && (DT = DT.append(iT[WT - 2 >> 1])), !(IT || WT == TT.sections.length || TT.sections[WT + 1] < 0);) XT = TT.sections[WT++], BT = TT.sections[WT++];
+          oT(zT, FT, kT, ST, DT), zT = FT, kT = ST
         }
       }
     }
 
-    function dY(YY, rY, DY) {
-      let FY = [],
-        AY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        IY = new MY(YY),
-        RY = new MY(rY),
-        OY = 0;
-      for (let gY = -1;;) {
-        if (++OY > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (IY.done && RY.len || RY.done && IY.len) throw new Error("Mismatched change set lengths");
-        if (-1 == IY.ins && -1 == RY.ins) {
-          let YY = Math.min(IY.len, RY.len);
-          fY(FY, YY, -1), IY.forward(YY), RY.forward(YY)
-        } else if (RY.ins >= 0 && (IY.ins < 0 || gY == IY.i || 0 == IY.off && (RY.len < IY.len || RY.len == IY.len && !DY))) {
-          let YY = RY.len;
-          for (fY(FY, RY.ins, -1); YY;) {
-            if (++OY > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let rY = Math.min(IY.len, YY);
-            IY.ins >= 0 && gY < IY.i && IY.len <= rY && (fY(FY, 0, IY.ins), AY && jY(AY, FY, IY.text), gY = IY.i), IY.forward(rY), YY -= rY
+    function OT(TT, oT, IT) {
+      let iT = [],
+        zT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        kT = new nT(TT),
+        WT = new nT(oT),
+        XT = 0;
+      for (let BT = -1;;) {
+        if (++XT > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (kT.done && WT.len || WT.done && kT.len) throw new Error("Mismatched change set lengths");
+        if (-1 == kT.ins && -1 == WT.ins) {
+          let TT = Math.min(kT.len, WT.len);
+          aT(iT, TT, -1), kT.forward(TT), WT.forward(TT)
+        } else if (WT.ins >= 0 && (kT.ins < 0 || BT == kT.i || 0 == kT.off && (WT.len < kT.len || WT.len == kT.len && !IT))) {
+          let TT = WT.len;
+          for (aT(iT, WT.ins, -1); TT;) {
+            if (++XT > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let oT = Math.min(kT.len, TT);
+            kT.ins >= 0 && BT < kT.i && kT.len <= oT && (aT(iT, 0, kT.ins), zT && YT(zT, iT, kT.text), BT = kT.i), kT.forward(oT), TT -= oT
           }
-          RY.next()
+          WT.next()
         } else {
-          if (!(IY.ins >= 0)) {
-            if (IY.done && RY.done) return AY ? CY.createSet(FY, AY) : ZY.create(FY);
+          if (!(kT.ins >= 0)) {
+            if (kT.done && WT.done) return zT ? UT.createSet(iT, zT) : JT.create(iT);
             throw new Error("Mismatched change set lengths")
           } {
-            let YY = 0,
-              rY = IY.len;
-            for (; rY;) {
-              if (++OY > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == RY.ins) {
-                let DY = Math.min(rY, RY.len);
-                YY += DY, rY -= DY, RY.forward(DY)
+            let TT = 0,
+              oT = kT.len;
+            for (; oT;) {
+              if (++XT > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == WT.ins) {
+                let IT = Math.min(oT, WT.len);
+                TT += IT, oT -= IT, WT.forward(IT)
               } else {
-                if (!(0 == RY.ins && RY.len < rY)) break;
-                rY -= RY.len, RY.next()
+                if (!(0 == WT.ins && WT.len < oT)) break;
+                oT -= WT.len, WT.next()
               }
             }
-            fY(FY, YY, gY < IY.i ? IY.ins : 0), AY && gY < IY.i && jY(AY, FY, IY.text), gY = IY.i, IY.forward(IY.len - rY)
+            aT(iT, TT, BT < kT.i ? kT.ins : 0), zT && BT < kT.i && YT(zT, iT, kT.text), BT = kT.i, kT.forward(kT.len - oT)
           }
         }
       }
     }
 
-    function JY(YY, rY) {
-      let DY = [],
-        FY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        AY = new MY(YY),
-        IY = new MY(rY),
-        RY = 0;
-      for (let OY = !1;;) {
-        if (++RY > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (AY.done && IY.done) return FY ? CY.createSet(DY, FY) : ZY.create(DY);
-        if (0 == AY.ins) fY(DY, AY.len, 0, OY), AY.next();
-        else if (0 != IY.len || IY.done) {
-          if (AY.done || IY.done) throw new Error("Mismatched change set lengths");
+    function HT(TT, oT) {
+      let IT = [],
+        iT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        zT = new nT(TT),
+        kT = new nT(oT),
+        WT = 0;
+      for (let XT = !1;;) {
+        if (++WT > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (zT.done && kT.done) return iT ? UT.createSet(IT, iT) : JT.create(IT);
+        if (0 == zT.ins) aT(IT, zT.len, 0, XT), zT.next();
+        else if (0 != kT.len || kT.done) {
+          if (zT.done || kT.done) throw new Error("Mismatched change set lengths");
           {
-            let YY = Math.min(AY.len2, IY.len),
-              rY = DY.length;
-            if (-1 == AY.ins) {
-              let rY = -1 == IY.ins ? -1 : IY.off ? 0 : IY.ins;
-              fY(DY, YY, rY, OY), FY && rY && jY(FY, DY, IY.text)
-            } else - 1 == IY.ins ? (fY(DY, AY.off ? 0 : AY.len, YY, OY), FY && jY(FY, DY, AY.textBit(YY))) : (fY(DY, AY.off ? 0 : AY.len, IY.off ? 0 : IY.ins, OY), FY && !IY.off && jY(FY, DY, IY.text));
-            OY = (AY.ins > YY || IY.ins >= 0 && IY.len > YY) && (OY || DY.length > rY), AY.forward2(YY), IY.forward(YY)
+            let TT = Math.min(zT.len2, kT.len),
+              oT = IT.length;
+            if (-1 == zT.ins) {
+              let oT = -1 == kT.ins ? -1 : kT.off ? 0 : kT.ins;
+              aT(IT, TT, oT, XT), iT && oT && YT(iT, IT, kT.text)
+            } else - 1 == kT.ins ? (aT(IT, zT.off ? 0 : zT.len, TT, XT), iT && YT(iT, IT, zT.textBit(TT))) : (aT(IT, zT.off ? 0 : zT.len, kT.off ? 0 : kT.ins, XT), iT && !kT.off && YT(iT, IT, kT.text));
+            XT = (zT.ins > TT || kT.ins >= 0 && kT.len > TT) && (XT || IT.length > oT), zT.forward2(TT), kT.forward(TT)
           }
-        } else fY(DY, 0, IY.ins, OY), FY && jY(FY, DY, IY.text), IY.next()
+        } else aT(IT, 0, kT.ins, XT), iT && YT(iT, IT, kT.text), kT.next()
       }
     }
-    class MY {
-      constructor(YY) {
-        this.set = YY, this.i = 0, this.next()
+    class nT {
+      constructor(TT) {
+        this.set = TT, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: YY
+          sections: TT
         } = this.set;
-        this.i < YY.length ? (this.len = YY[this.i++], this.ins = YY[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < TT.length ? (this.len = TT[this.i++], this.ins = TT[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: YY
-        } = this.set, rY = this.i - 2 >> 1;
-        return rY >= YY.length ? QY.empty : YY[rY]
+          inserted: TT
+        } = this.set, oT = this.i - 2 >> 1;
+        return oT >= TT.length ? KT.empty : TT[oT]
       }
-      textBit(YY) {
+      textBit(TT) {
         let {
-          inserted: rY
-        } = this.set, DY = this.i - 2 >> 1;
-        return DY >= rY.length && !YY ? QY.empty : rY[DY].slice(this.off, null == YY ? void 0 : this.off + YY)
+          inserted: oT
+        } = this.set, IT = this.i - 2 >> 1;
+        return IT >= oT.length && !TT ? KT.empty : oT[IT].slice(this.off, null == TT ? void 0 : this.off + TT)
       }
-      forward(YY) {
-        YY == this.len ? this.next() : (this.len -= YY, this.off += YY)
+      forward(TT) {
+        TT == this.len ? this.next() : (this.len -= TT, this.off += TT)
       }
-      forward2(YY) {
-        -1 == this.ins ? this.forward(YY) : YY == this.ins ? this.next() : (this.ins -= YY, this.off += YY)
+      forward2(TT) {
+        -1 == this.ins ? this.forward(TT) : TT == this.ins ? this.next() : (this.ins -= TT, this.off += TT)
       }
     }
-    class wY {
-      constructor(YY, rY, DY) {
-        this.from = YY, this.to = rY, this.flags = DY
+    class qT {
+      constructor(TT, oT, IT) {
+        this.from = TT, this.to = oT, this.flags = IT
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let YY = 7 & this.flags;
-        return 7 == YY ? null : YY
+        let TT = 7 & this.flags;
+        return 7 == TT ? null : TT
       }
       get goalColumn() {
-        let YY = this.flags >> 6;
-        return 16777215 == YY ? void 0 : YY
+        let TT = this.flags >> 6;
+        return 16777215 == TT ? void 0 : TT
       }
-      map(YY) {
-        let rY, DY, FY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? rY = DY = YY.mapPos(this.from, FY) : (rY = YY.mapPos(this.from, 1), DY = YY.mapPos(this.to, -1)), rY == this.from && DY == this.to ? this : new wY(rY, DY, this.flags)
+      map(TT) {
+        let oT, IT, iT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? oT = IT = TT.mapPos(this.from, iT) : (oT = TT.mapPos(this.from, 1), IT = TT.mapPos(this.to, -1)), oT == this.from && IT == this.to ? this : new qT(oT, IT, this.flags)
       }
-      extend(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (YY <= this.anchor && rY >= this.anchor) return bY.range(YY, rY, void 0, void 0, DY);
-        let FY = Math.abs(YY - this.anchor) > Math.abs(rY - this.anchor) ? YY : rY;
-        return bY.range(this.anchor, FY, void 0, void 0, DY)
+      extend(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (TT <= this.anchor && oT >= this.anchor) return ZT.range(TT, oT, void 0, void 0, IT);
+        let iT = Math.abs(TT - this.anchor) > Math.abs(oT - this.anchor) ? TT : oT;
+        return ZT.range(this.anchor, iT, void 0, void 0, IT)
       }
-      eq(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == YY.anchor && this.head == YY.head && this.goalColumn == YY.goalColumn && (!rY || !this.empty || this.assoc == YY.assoc)
+      eq(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == TT.anchor && this.head == TT.head && this.goalColumn == TT.goalColumn && (!oT || !this.empty || this.assoc == TT.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(YY) {
-        if (!YY || "number" != typeof YY.anchor || "number" != typeof YY.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return bY.range(YY.anchor, YY.head)
+      static fromJSON(TT) {
+        if (!TT || "number" != typeof TT.anchor || "number" != typeof TT.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return ZT.range(TT.anchor, TT.head)
       }
-      static create(YY, rY, DY) {
-        return new wY(YY, rY, DY)
+      static create(TT, oT, IT) {
+        return new qT(TT, oT, IT)
       }
     }
-    class bY {
-      constructor(YY, rY) {
-        this.ws = YY, this.mainIndex = rY
+    class ZT {
+      constructor(TT, oT) {
+        this.ec = TT, this.mainIndex = oT
       }
-      map(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return YY.empty ? this : bY.create(this.ws.map((DY => DY.map(YY, rY))), this.mainIndex)
+      map(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return TT.empty ? this : ZT.create(this.ec.map((IT => IT.map(TT, oT))), this.mainIndex)
       }
-      eq(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.ws.length != YY.ws.length || this.mainIndex != YY.mainIndex) return !1;
-        for (let DY = 0; DY < this.ws.length; DY++)
-          if (!this.ws[DY].eq(YY.ws[DY], rY)) return !1;
+      eq(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.ec.length != TT.ec.length || this.mainIndex != TT.mainIndex) return !1;
+        for (let IT = 0; IT < this.ec.length; IT++)
+          if (!this.ec[IT].eq(TT.ec[IT], oT)) return !1;
         return !0
       }
       get main() {
-        return this.ws[this.mainIndex]
+        return this.ec[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.ws.length ? this : new bY([this.main], 0)
+        return 1 == this.ec.length ? this : new ZT([this.main], 0)
       }
-      addRange(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return bY.create([YY].concat(this.ws), rY ? 0 : this.mainIndex + 1)
+      addRange(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return ZT.create([TT].concat(this.ec), oT ? 0 : this.mainIndex + 1)
       }
-      replaceRange(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          DY = this.ws.slice();
-        return DY[rY] = YY, bY.create(DY, this.mainIndex)
+      replaceRange(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          IT = this.ec.slice();
+        return IT[oT] = TT, ZT.create(IT, this.mainIndex)
       }
       toJSON() {
         return {
-          ws: this.ws.map((YY => YY.toJSON())),
+          ec: this.ec.map((TT => TT.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(YY) {
-        if (!YY || !Array.isArray(YY.ws) || "number" != typeof YY.main || YY.main >= YY.ws.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new bY(YY.ws.map((YY => wY.fromJSON(YY))), YY.main)
+      static fromJSON(TT) {
+        if (!TT || !Array.isArray(TT.ec) || "number" != typeof TT.main || TT.main >= TT.ec.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new ZT(TT.ec.map((TT => qT.fromJSON(TT))), TT.main)
       }
-      static single(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY;
-        return new bY([bY.range(YY, rY)], 0)
+      static single(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+        return new ZT([ZT.range(TT, oT)], 0)
       }
-      static create(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == YY.length) throw new RangeError("A selection needs at least one range");
-        for (let DY = 0, FY = 0; FY < YY.length; FY++) {
-          let AY = YY[FY];
-          if (AY.empty ? AY.from <= DY : AY.from < DY) return bY.normalized(YY.slice(), rY);
-          DY = AY.to
+      static create(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == TT.length) throw new RangeError("A selection needs at least one range");
+        for (let IT = 0, iT = 0; iT < TT.length; iT++) {
+          let zT = TT[iT];
+          if (zT.empty ? zT.from <= IT : zT.from < IT) return ZT.normalized(TT.slice(), oT);
+          IT = zT.to
         }
-        return new bY(YY, rY)
+        return new ZT(TT, oT)
       }
-      static cursor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0;
-        return wY.create(YY, YY, (0 == rY ? 0 : rY < 0 ? 8 : 16) | (null == DY ? 7 : Math.min(6, DY)) | (null !== FY && void 0 !== FY ? FY : 16777215) << 6)
+      static cursor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0;
+        return qT.create(TT, TT, (0 == oT ? 0 : oT < 0 ? 8 : 16) | (null == IT ? 7 : Math.min(6, IT)) | (null !== iT && void 0 !== iT ? iT : 16777215) << 6)
       }
-      static range(YY, rY, DY, FY, AY) {
-        let IY = (null !== DY && void 0 !== DY ? DY : 16777215) << 6 | (null == FY ? 7 : Math.min(6, FY));
-        return AY || YY == rY || (AY = rY < YY ? 1 : -1), rY < YY ? wY.create(rY, YY, 48 | IY) : wY.create(YY, rY, (AY ? AY < 0 ? 8 : 16 : 0) | IY)
+      static range(TT, oT, IT, iT, zT) {
+        let kT = (null !== IT && void 0 !== IT ? IT : 16777215) << 6 | (null == iT ? 7 : Math.min(6, iT));
+        return zT || TT == oT || (zT = oT < TT ? 1 : -1), oT < TT ? qT.create(oT, TT, 48 | kT) : qT.create(TT, oT, (zT ? zT < 0 ? 8 : 16 : 0) | kT)
       }
-      static normalized(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = YY[rY];
-        YY.sort(((YY, rY) => YY.from - rY.from)), rY = YY.indexOf(DY);
-        for (let FY = 1; FY < YY.length; FY++) {
-          let DY = YY[FY],
-            AY = YY[FY - 1];
-          if (DY.empty ? DY.from <= AY.to : DY.from < AY.to) {
-            let IY = AY.from,
-              RY = Math.max(DY.to, AY.to);
-            FY <= rY && rY--, YY.splice(--FY, 2, DY.anchor > DY.head ? bY.range(RY, IY) : bY.range(IY, RY))
+      static normalized(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = TT[oT];
+        TT.sort(((TT, oT) => TT.from - oT.from)), oT = TT.indexOf(IT);
+        for (let iT = 1; iT < TT.length; iT++) {
+          let IT = TT[iT],
+            zT = TT[iT - 1];
+          if (IT.empty ? IT.from <= zT.to : IT.from < zT.to) {
+            let kT = zT.from,
+              WT = Math.max(IT.to, zT.to);
+            iT <= oT && oT--, TT.splice(--iT, 2, IT.anchor > IT.head ? ZT.range(WT, kT) : ZT.range(kT, WT))
           }
         }
-        return new bY(YY, rY)
+        return new ZT(TT, oT)
       }
     }
 
-    function XY(YY, rY) {
-      for (let DY of YY.ws)
-        if (DY.to > rY) throw new RangeError("Selection points outside of document")
+    function lT(TT, oT) {
+      for (let IT of TT.ec)
+        if (IT.to > oT) throw new RangeError("Selection points outside of document")
     }
-    let qY = 0;
-    class pY {
-      constructor(YY, rY, DY, FY, AY) {
-        this.combine = YY, this.compareInput = rY, this.compare = DY, this.isStatic = FY, this.id = qY++, this.default = YY([]), this.extensions = "function" == typeof AY ? AY(this) : AY
+    let sT = 0;
+    class tT {
+      constructor(TT, oT, IT, iT, zT) {
+        this.combine = TT, this.compareInput = oT, this.compare = IT, this.isStatic = iT, this.id = sT++, this.default = TT([]), this.extensions = "function" == typeof zT ? zT(this) : zT
       }
       get reader() {
         return this
       }
       static define() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new pY(YY.combine || (YY => YY), YY.compareInput || ((YY, rY) => YY === rY), YY.compare || (YY.combine ? (YY, rY) => YY === rY : kY), !!YY.static, YY.enables)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new tT(TT.combine || (TT => TT), TT.compareInput || ((TT, oT) => TT === oT), TT.compare || (TT.combine ? (TT, oT) => TT === oT : GT), !!TT.static, TT.enables)
       }
-      of(YY) {
-        return new GY([], this, 0, YY)
+      of(TT) {
+        return new pT([], this, 0, TT)
       }
-      compute(YY, rY) {
+      compute(TT, oT) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new GY(YY, this, 1, rY)
+        return new pT(TT, this, 1, oT)
       }
-      computeN(YY, rY) {
+      computeN(TT, oT) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new GY(YY, this, 2, rY)
+        return new pT(TT, this, 2, oT)
       }
-      from(YY, rY) {
-        return rY || (rY = YY => YY), this.compute([YY], (DY => rY(DY.field(YY))))
+      from(TT, oT) {
+        return oT || (oT = TT => TT), this.compute([TT], (IT => oT(IT.field(TT))))
       }
     }
 
-    function kY(YY, rY) {
-      return YY == rY || YY.length == rY.length && YY.every(((YY, DY) => YY === rY[DY]))
+    function GT(TT, oT) {
+      return TT == oT || TT.length == oT.length && TT.every(((TT, IT) => TT === oT[IT]))
     }
-    class GY {
-      constructor(YY, rY, DY, FY) {
-        this.dependencies = YY, this.facet = rY, this.type = DY, this.value = FY, this.id = qY++
+    class pT {
+      constructor(TT, oT, IT, iT) {
+        this.dependencies = TT, this.facet = oT, this.type = IT, this.value = iT, this.id = sT++
       }
-      dynamicSlot(YY) {
-        var rY;
-        let DY = this.value,
-          FY = this.facet.compareInput,
-          AY = this.id,
-          IY = YY[AY] >> 1,
-          RY = 2 == this.type,
-          OY = !1,
-          gY = !1,
-          aY = [];
-        for (let vY of this.dependencies) "doc" == vY ? OY = !0 : "selection" == vY ? gY = !0 : 0 == (1 & (null !== (rY = YY[vY.id]) && void 0 !== rY ? rY : 1)) && aY.push(YY[vY.id]);
+      dynamicSlot(TT) {
+        var oT;
+        let IT = this.value,
+          iT = this.facet.compareInput,
+          zT = this.id,
+          kT = TT[zT] >> 1,
+          WT = 2 == this.type,
+          XT = !1,
+          BT = !1,
+          FT = [];
+        for (let ST of this.dependencies) "doc" == ST ? XT = !0 : "selection" == ST ? BT = !0 : 0 == (1 & (null !== (oT = TT[ST.id]) && void 0 !== oT ? oT : 1)) && FT.push(TT[ST.id]);
         return {
-          create: YY => (YY.values[IY] = DY(YY), 1),
-          update(YY, rY) {
-            if (OY && rY.docChanged || gY && (rY.docChanged || rY.selection) || nY(YY, aY)) {
-              let rY = DY(YY);
-              if (RY ? !xY(rY, YY.values[IY], FY) : !FY(rY, YY.values[IY])) return YY.values[IY] = rY, 1
+          create: TT => (TT.values[kT] = IT(TT), 1),
+          update(TT, oT) {
+            if (XT && oT.docChanged || BT && (oT.docChanged || oT.selection) || yT(TT, FT)) {
+              let oT = IT(TT);
+              if (WT ? !bT(oT, TT.values[kT], iT) : !iT(oT, TT.values[kT])) return TT.values[kT] = oT, 1
             }
             return 0
           },
-          reconfigure: (YY, rY) => {
-            let OY, gY = rY.config.address[AY];
-            if (null != gY) {
-              let AY = vr(rY, gY);
-              if (this.dependencies.every((DY => DY instanceof pY ? rY.facet(DY) === YY.facet(DY) : !(DY instanceof LY) || rY.field(DY, !1) == YY.field(DY, !1))) || (RY ? xY(OY = DY(YY), AY, FY) : FY(OY = DY(YY), AY))) return YY.values[IY] = AY, 0
-            } else OY = DY(YY);
-            return YY.values[IY] = OY, 1
+          reconfigure: (TT, oT) => {
+            let XT, BT = oT.config.address[zT];
+            if (null != BT) {
+              let zT = So(oT, BT);
+              if (this.dependencies.every((IT => IT instanceof tT ? oT.facet(IT) === TT.facet(IT) : !(IT instanceof dT) || oT.field(IT, !1) == TT.field(IT, !1))) || (WT ? bT(XT = IT(TT), zT, iT) : iT(XT = IT(TT), zT))) return TT.values[kT] = zT, 0
+            } else XT = IT(TT);
+            return TT.values[kT] = XT, 1
           }
         }
       }
     }
 
-    function xY(YY, rY, DY) {
-      if (YY.length != rY.length) return !1;
-      for (let FY = 0; FY < YY.length; FY++)
-        if (!DY(YY[FY], rY[FY])) return !1;
+    function bT(TT, oT, IT) {
+      if (TT.length != oT.length) return !1;
+      for (let iT = 0; iT < TT.length; iT++)
+        if (!IT(TT[iT], oT[iT])) return !1;
       return !0
     }
 
-    function nY(YY, rY) {
-      let DY = !1;
-      for (let FY of rY) 1 & ar(YY, FY) && (DY = !0);
-      return DY
+    function yT(TT, oT) {
+      let IT = !1;
+      for (let iT of oT) 1 & Fo(TT, iT) && (IT = !0);
+      return IT
     }
 
-    function PY(YY, rY, DY) {
-      let FY = DY.map((rY => YY[rY.id])),
-        AY = DY.map((YY => YY.type)),
-        IY = FY.filter((YY => !(1 & YY))),
-        RY = YY[rY.id] >> 1;
+    function NT(TT, oT, IT) {
+      let iT = IT.map((oT => TT[oT.id])),
+        zT = IT.map((TT => TT.type)),
+        kT = iT.filter((TT => !(1 & TT))),
+        WT = TT[oT.id] >> 1;
 
-      function OY(YY) {
-        let DY = [];
-        for (let rY = 0; rY < FY.length; rY++) {
-          let IY = vr(YY, FY[rY]);
-          if (2 == AY[rY])
-            for (let YY of IY) DY.push(YY);
-          else DY.push(IY)
+      function XT(TT) {
+        let IT = [];
+        for (let oT = 0; oT < iT.length; oT++) {
+          let kT = So(TT, iT[oT]);
+          if (2 == zT[oT])
+            for (let TT of kT) IT.push(TT);
+          else IT.push(kT)
         }
-        return rY.combine(DY)
+        return oT.combine(IT)
       }
       return {
-        create(YY) {
-          for (let rY of FY) ar(YY, rY);
-          return YY.values[RY] = OY(YY), 1
+        create(TT) {
+          for (let oT of iT) Fo(TT, oT);
+          return TT.values[WT] = XT(TT), 1
         },
-        update(YY, DY) {
-          if (!nY(YY, IY)) return 0;
-          let FY = OY(YY);
-          return rY.compare(FY, YY.values[RY]) ? 0 : (YY.values[RY] = FY, 1)
+        update(TT, IT) {
+          if (!yT(TT, kT)) return 0;
+          let iT = XT(TT);
+          return oT.compare(iT, TT.values[WT]) ? 0 : (TT.values[WT] = iT, 1)
         },
-        reconfigure(YY, AY) {
-          let IY = nY(YY, FY),
-            gY = AY.config.facets[rY.id],
-            aY = AY.facet(rY);
-          if (gY && !IY && kY(DY, gY)) return YY.values[RY] = aY, 0;
-          let vY = OY(YY);
-          return rY.compare(vY, aY) ? (YY.values[RY] = aY, 0) : (YY.values[RY] = vY, 1)
+        reconfigure(TT, zT) {
+          let kT = yT(TT, iT),
+            BT = zT.config.facets[oT.id],
+            FT = zT.facet(oT);
+          if (BT && !kT && GT(IT, BT)) return TT.values[WT] = FT, 0;
+          let ST = XT(TT);
+          return oT.compare(ST, FT) ? (TT.values[WT] = FT, 0) : (TT.values[WT] = ST, 1)
         }
       }
     }
-    const UY = pY.define({
+    const PT = tT.define({
       static: !0
     });
-    class LY {
-      constructor(YY, rY, DY, FY, AY) {
-        this.id = YY, this.createF = rY, this.updateF = DY, this.compareF = FY, this.spec = AY, this.provides = void 0
+    class dT {
+      constructor(TT, oT, IT, iT, zT) {
+        this.id = TT, this.createF = oT, this.updateF = IT, this.compareF = iT, this.spec = zT, this.provides = void 0
       }
-      static define(YY) {
-        let rY = new LY(qY++, YY.create, YY.update, YY.compare || ((YY, rY) => YY === rY), YY);
-        return YY.provide && (rY.provides = YY.provide(rY)), rY
+      static define(TT) {
+        let oT = new dT(sT++, TT.create, TT.update, TT.compare || ((TT, oT) => TT === oT), TT);
+        return TT.provide && (oT.provides = TT.provide(oT)), oT
       }
-      create(YY) {
-        let rY = YY.facet(UY).find((YY => YY.field == this));
-        return ((null === rY || void 0 === rY ? void 0 : rY.create) || this.createF)(YY)
+      create(TT) {
+        let oT = TT.facet(PT).find((TT => TT.field == this));
+        return ((null === oT || void 0 === oT ? void 0 : oT.create) || this.createF)(TT)
       }
-      slot(YY) {
-        let rY = YY[this.id] >> 1;
+      slot(TT) {
+        let oT = TT[this.id] >> 1;
         return {
-          create: YY => (YY.values[rY] = this.create(YY), 1),
-          update: (YY, DY) => {
-            let FY = YY.values[rY],
-              AY = this.updateF(FY, DY);
-            return this.compareF(FY, AY) ? 0 : (YY.values[rY] = AY, 1)
+          create: TT => (TT.values[oT] = this.create(TT), 1),
+          update: (TT, IT) => {
+            let iT = TT.values[oT],
+              zT = this.updateF(iT, IT);
+            return this.compareF(iT, zT) ? 0 : (TT.values[oT] = zT, 1)
           },
-          reconfigure: (YY, DY) => {
-            let FY, AY = YY.facet(UY),
-              IY = DY.facet(UY);
-            return (FY = AY.find((YY => YY.field == this))) && FY != IY.find((YY => YY.field == this)) ? (YY.values[rY] = FY.create(YY), 1) : null != DY.config.address[this.id] ? (YY.values[rY] = DY.field(this), 0) : (YY.values[rY] = this.create(YY), 1)
+          reconfigure: (TT, IT) => {
+            let iT, zT = TT.facet(PT),
+              kT = IT.facet(PT);
+            return (iT = zT.find((TT => TT.field == this))) && iT != kT.find((TT => TT.field == this)) ? (TT.values[oT] = iT.create(TT), 1) : null != IT.config.address[this.id] ? (TT.values[oT] = IT.field(this), 0) : (TT.values[oT] = this.create(TT), 1)
           }
         }
       }
-      init(YY) {
-        return [this, UY.of({
+      init(TT) {
+        return [this, PT.of({
           field: this,
-          create: YY
+          create: TT
         })]
       }
       get extension() {
         return this
       }
     }
-    const tY = 4,
-      Yr = 3,
-      rr = 2,
-      Dr = 1;
+    const VT = 4,
+      To = 3,
+      oo = 2,
+      Io = 1;
 
-    function Fr(YY) {
-      return rY => new Ir(rY, YY)
+    function io(TT) {
+      return oT => new ko(oT, TT)
     }
-    const Ar = {
-      highest: Fr(0),
-      high: Fr(Dr),
-      default: Fr(rr),
-      low: Fr(Yr),
-      lowest: Fr(tY)
+    const zo = {
+      highest: io(0),
+      high: io(Io),
+      default: io(oo),
+      low: io(To),
+      lowest: io(VT)
     };
-    class Ir {
-      constructor(YY, rY) {
-        this.inner = YY, this.prec = rY
+    class ko {
+      constructor(TT, oT) {
+        this.inner = TT, this.prec = oT
       }
     }
-    class Rr {
-      of(YY) {
-        return new Or(this, YY)
+    class Wo {
+      of(TT) {
+        return new Xo(this, TT)
       }
-      reconfigure(YY) {
-        return Rr.reconfigure.of({
+      reconfigure(TT) {
+        return Wo.reconfigure.of({
           compartment: this,
-          extension: YY
+          extension: TT
         })
       }
-      get(YY) {
-        return YY.config.compartments.get(this)
+      get(TT) {
+        return TT.config.compartments.get(this)
       }
     }
-    class Or {
-      constructor(YY, rY) {
-        this.compartment = YY, this.inner = rY
+    class Xo {
+      constructor(TT, oT) {
+        this.compartment = TT, this.inner = oT
       }
     }
-    class gr {
-      constructor(YY, rY, DY, FY, AY, IY) {
-        for (this.base = YY, this.compartments = rY, this.dynamicSlots = DY, this.address = FY, this.staticValues = AY, this.facets = IY, this.statusTemplate = []; this.statusTemplate.length < DY.length;) this.statusTemplate.push(0)
+    class Bo {
+      constructor(TT, oT, IT, iT, zT, kT) {
+        for (this.base = TT, this.compartments = oT, this.dynamicSlots = IT, this.address = iT, this.staticValues = zT, this.facets = kT, this.statusTemplate = []; this.statusTemplate.length < IT.length;) this.statusTemplate.push(0)
       }
-      staticFacet(YY) {
-        let rY = this.address[YY.id];
-        return null == rY ? YY.default : this.staticValues[rY >> 1]
+      staticFacet(TT) {
+        let oT = this.address[TT.id];
+        return null == oT ? TT.default : this.staticValues[oT >> 1]
       }
-      static resolve(YY, rY, DY) {
-        let FY = [],
-          AY = Object.create(null),
-          IY = new Map;
-        for (let uY of function(YY, rY, DY) {
-            let FY = [
+      static resolve(TT, oT, IT) {
+        let iT = [],
+          zT = Object.create(null),
+          kT = new Map;
+        for (let DT of function(TT, oT, IT) {
+            let iT = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              AY = new Map;
+              zT = new Map;
 
-            function IY(YY, RY) {
-              let OY = AY.get(YY);
-              if (null != OY) {
-                if (OY <= RY) return;
-                let rY = FY[OY].indexOf(YY);
-                rY > -1 && FY[OY].splice(rY, 1), YY instanceof Or && DY.delete(YY.compartment)
+            function kT(TT, WT) {
+              let XT = zT.get(TT);
+              if (null != XT) {
+                if (XT <= WT) return;
+                let oT = iT[XT].indexOf(TT);
+                oT > -1 && iT[XT].splice(oT, 1), TT instanceof Xo && IT.delete(TT.compartment)
               }
-              if (AY.set(YY, RY), Array.isArray(YY))
-                for (let rY of YY) IY(rY, RY);
-              else if (YY instanceof Or) {
-                if (DY.has(YY.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let FY = rY.get(YY.compartment) || YY.inner;
-                DY.set(YY.compartment, FY), IY(FY, RY)
-              } else if (YY instanceof Ir) IY(YY.inner, YY.prec);
-              else if (YY instanceof LY) FY[RY].push(YY), YY.provides && IY(YY.provides, RY);
-              else if (YY instanceof GY) FY[RY].push(YY), YY.facet.extensions && IY(YY.facet.extensions, rr);
+              if (zT.set(TT, WT), Array.isArray(TT))
+                for (let oT of TT) kT(oT, WT);
+              else if (TT instanceof Xo) {
+                if (IT.has(TT.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let iT = oT.get(TT.compartment) || TT.inner;
+                IT.set(TT.compartment, iT), kT(iT, WT)
+              } else if (TT instanceof ko) kT(TT.inner, TT.prec);
+              else if (TT instanceof dT) iT[WT].push(TT), TT.provides && kT(TT.provides, WT);
+              else if (TT instanceof pT) iT[WT].push(TT), TT.facet.extensions && kT(TT.facet.extensions, oo);
               else {
-                let rY = YY.extension;
-                if (!rY) throw new Error(`Unrecognized extension value in extension set (${YY}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                IY(rY, RY)
+                let oT = TT.extension;
+                if (!oT) throw new Error(`Unrecognized extension value in extension set (${TT}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                kT(oT, WT)
               }
             }
-            return IY(YY, rr), FY.reduce(((YY, rY) => YY.concat(rY)))
-          }(YY, rY, IY)) uY instanceof LY ? FY.push(uY) : (AY[uY.facet.id] || (AY[uY.facet.id] = [])).push(uY);
-        let RY = Object.create(null),
-          OY = [],
-          gY = [];
-        for (let uY of FY) RY[uY.id] = gY.length << 1, gY.push((YY => uY.slot(YY)));
-        let aY = null === DY || void 0 === DY ? void 0 : DY.config.facets;
-        for (let uY in AY) {
-          let YY = AY[uY],
-            rY = YY[0].facet,
-            FY = aY && aY[uY] || [];
-          if (YY.every((YY => 0 == YY.type)))
-            if (RY[rY.id] = OY.length << 1 | 1, kY(FY, YY)) OY.push(DY.facet(rY));
+            return kT(TT, oo), iT.reduce(((TT, oT) => TT.concat(oT)))
+          }(TT, oT, kT)) DT instanceof dT ? iT.push(DT) : (zT[DT.facet.id] || (zT[DT.facet.id] = [])).push(DT);
+        let WT = Object.create(null),
+          XT = [],
+          BT = [];
+        for (let DT of iT) WT[DT.id] = BT.length << 1, BT.push((TT => DT.slot(TT)));
+        let FT = null === IT || void 0 === IT ? void 0 : IT.config.facets;
+        for (let DT in zT) {
+          let TT = zT[DT],
+            oT = TT[0].facet,
+            iT = FT && FT[DT] || [];
+          if (TT.every((TT => 0 == TT.type)))
+            if (WT[oT.id] = XT.length << 1 | 1, GT(iT, TT)) XT.push(IT.facet(oT));
             else {
-              let FY = rY.combine(YY.map((YY => YY.value)));
-              OY.push(DY && rY.compare(FY, DY.facet(rY)) ? DY.facet(rY) : FY)
+              let iT = oT.combine(TT.map((TT => TT.value)));
+              XT.push(IT && oT.compare(iT, IT.facet(oT)) ? IT.facet(oT) : iT)
             }
           else {
-            for (let rY of YY) 0 == rY.type ? (RY[rY.id] = OY.length << 1 | 1, OY.push(rY.value)) : (RY[rY.id] = gY.length << 1, gY.push((YY => rY.dynamicSlot(YY))));
-            RY[rY.id] = gY.length << 1, gY.push((DY => PY(DY, rY, YY)))
+            for (let oT of TT) 0 == oT.type ? (WT[oT.id] = XT.length << 1 | 1, XT.push(oT.value)) : (WT[oT.id] = BT.length << 1, BT.push((TT => oT.dynamicSlot(TT))));
+            WT[oT.id] = BT.length << 1, BT.push((IT => NT(IT, oT, TT)))
           }
         }
-        let vY = gY.map((YY => YY(RY)));
-        return new gr(YY, IY, vY, RY, OY, AY)
+        let ST = BT.map((TT => TT(WT)));
+        return new Bo(TT, kT, ST, WT, XT, zT)
       }
     }
 
-    function ar(YY, rY) {
-      if (1 & rY) return 2;
-      let DY = rY >> 1,
-        FY = YY.status[DY];
-      if (4 == FY) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & FY) return FY;
-      YY.status[DY] = 4;
-      let AY = YY.computeSlot(YY, YY.config.dynamicSlots[DY]);
-      return YY.status[DY] = 2 | AY
+    function Fo(TT, oT) {
+      if (1 & oT) return 2;
+      let IT = oT >> 1,
+        iT = TT.status[IT];
+      if (4 == iT) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & iT) return iT;
+      TT.status[IT] = 4;
+      let zT = TT.computeSlot(TT, TT.config.dynamicSlots[IT]);
+      return TT.status[IT] = 2 | zT
     }
 
-    function vr(YY, rY) {
-      return 1 & rY ? YY.config.staticValues[rY >> 1] : YY.values[rY >> 1]
+    function So(TT, oT) {
+      return 1 & oT ? TT.config.staticValues[oT >> 1] : TT.values[oT >> 1]
     }
-    const ur = pY.define(),
-      sr = pY.define({
-        combine: YY => YY.some((YY => YY)),
+    const Do = tT.define(),
+      Lo = tT.define({
+        combine: TT => TT.some((TT => TT)),
         static: !0
       }),
-      ir = pY.define({
-        combine: YY => YY.length ? YY[0] : void 0,
+      xo = tT.define({
+        combine: TT => TT.length ? TT[0] : void 0,
         static: !0
       }),
-      yr = pY.define(),
-      Qr = pY.define(),
-      or = pY.define(),
-      Wr = pY.define({
-        combine: YY => !!YY.length && YY[0]
+      co = tT.define(),
+      Ko = tT.define(),
+      Mo = tT.define(),
+      ro = tT.define({
+        combine: TT => !!TT.length && TT[0]
       });
-    class Er {
-      constructor(YY, rY) {
-        this.type = YY, this.value = rY
+    class Ao {
+      constructor(TT, oT) {
+        this.type = TT, this.value = oT
       }
       static define() {
-        return new mr
+        return new go
       }
     }
-    class mr {
-      of(YY) {
-        return new Er(this, YY)
+    class go {
+      of(TT) {
+        return new Ao(this, TT)
       }
     }
-    class Vr {
-      constructor(YY) {
-        this.map = YY
+    class ho {
+      constructor(TT) {
+        this.map = TT
       }
-      of(YY) {
-        return new Sr(this, YY)
+      of(TT) {
+        return new wo(this, TT)
       }
     }
-    class Sr {
-      constructor(YY, rY) {
-        this.type = YY, this.value = rY
+    class wo {
+      constructor(TT, oT) {
+        this.type = TT, this.value = oT
       }
-      map(YY) {
-        let rY = this.type.map(this.value, YY);
-        return void 0 === rY ? void 0 : rY == this.value ? this : new Sr(this.type, rY)
+      map(TT) {
+        let oT = this.type.map(this.value, TT);
+        return void 0 === oT ? void 0 : oT == this.value ? this : new wo(this.type, oT)
       }
-      is(YY) {
-        return this.type == YY
+      is(TT) {
+        return this.type == TT
       }
       static define() {
-        return new Vr((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (YY => YY))
+        return new ho((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (TT => TT))
       }
-      static mapEffects(YY, rY) {
-        if (!YY.length) return YY;
-        let DY = [];
-        for (let FY of YY) {
-          let YY = FY.map(rY);
-          YY && DY.push(YY)
+      static mapEffects(TT, oT) {
+        if (!TT.length) return TT;
+        let IT = [];
+        for (let iT of TT) {
+          let TT = iT.map(oT);
+          TT && IT.push(TT)
         }
-        return DY
+        return IT
       }
     }
-    Sr.reconfigure = Sr.define(), Sr.appendConfig = Sr.define();
-    class lr {
-      constructor(YY, rY, DY, FY, AY, IY) {
-        this.startState = YY, this.changes = rY, this.selection = DY, this.effects = FY, this.annotations = AY, this.scrollIntoView = IY, this._doc = null, this._state = null, DY && XY(DY, rY.newLength), AY.some((YY => YY.type == lr.time)) || (this.annotations = AY.concat(lr.time.of(Date.now())))
+    wo.reconfigure = wo.define(), wo.appendConfig = wo.define();
+    class mo {
+      constructor(TT, oT, IT, iT, zT, kT) {
+        this.startState = TT, this.changes = oT, this.selection = IT, this.effects = iT, this.annotations = zT, this.scrollIntoView = kT, this._doc = null, this._state = null, IT && lT(IT, oT.newLength), zT.some((TT => TT.type == mo.time)) || (this.annotations = zT.concat(mo.time.of(Date.now())))
       }
-      static create(YY, rY, DY, FY, AY, IY) {
-        return new lr(YY, rY, DY, FY, AY, IY)
+      static create(TT, oT, IT, iT, zT, kT) {
+        return new mo(TT, oT, IT, iT, zT, kT)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(YY) {
-        for (let rY of this.annotations)
-          if (rY.type == YY) return rY.value
+      annotation(TT) {
+        for (let oT of this.annotations)
+          if (oT.type == TT) return oT.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(YY) {
-        let rY = this.annotation(lr.userEvent);
-        return !(!rY || !(rY == YY || rY.length > YY.length && rY.slice(0, YY.length) == YY && "." == rY[YY.length]))
+      isUserEvent(TT) {
+        let oT = this.annotation(mo.userEvent);
+        return !(!oT || !(oT == TT || oT.length > TT.length && oT.slice(0, TT.length) == TT && "." == oT[TT.length]))
       }
     }
 
-    function Tr(YY, rY) {
-      let DY = [];
-      for (let FY = 0, AY = 0;;) {
-        let IY, RY;
-        if (FY < YY.length && (AY == rY.length || rY[AY] >= YY[FY])) IY = YY[FY++], RY = YY[FY++];
+    function eo(TT, oT) {
+      let IT = [];
+      for (let iT = 0, zT = 0;;) {
+        let kT, WT;
+        if (iT < TT.length && (zT == oT.length || oT[zT] >= TT[iT])) kT = TT[iT++], WT = TT[iT++];
         else {
-          if (!(AY < rY.length)) return DY;
-          IY = rY[AY++], RY = rY[AY++]
-        }!DY.length || DY[DY.length - 1] < IY ? DY.push(IY, RY) : DY[DY.length - 1] < RY && (DY[DY.length - 1] = RY)
+          if (!(zT < oT.length)) return IT;
+          kT = oT[zT++], WT = oT[zT++]
+        }!IT.length || IT[IT.length - 1] < kT ? IT.push(kT, WT) : IT[IT.length - 1] < WT && (IT[IT.length - 1] = WT)
       }
     }
 
-    function er(YY, rY, DY) {
-      var FY;
-      let AY, IY, RY;
-      return DY ? (AY = rY.changes, IY = CY.empty(rY.changes.length), RY = YY.changes.compose(rY.changes)) : (AY = rY.changes.map(YY.changes), IY = YY.changes.mapDesc(rY.changes, !0), RY = YY.changes.compose(AY)), {
-        changes: RY,
-        selection: rY.selection ? rY.selection.map(IY) : null === (FY = YY.selection) || void 0 === FY ? void 0 : FY.map(AY),
-        effects: Sr.mapEffects(YY.effects, AY).concat(Sr.mapEffects(rY.effects, IY)),
-        annotations: YY.annotations.length ? YY.annotations.concat(rY.annotations) : rY.annotations,
-        scrollIntoView: YY.scrollIntoView || rY.scrollIntoView
+    function Ro(TT, oT, IT) {
+      var iT;
+      let zT, kT, WT;
+      return IT ? (zT = oT.changes, kT = UT.empty(oT.changes.length), WT = TT.changes.compose(oT.changes)) : (zT = oT.changes.map(TT.changes), kT = TT.changes.mapDesc(oT.changes, !0), WT = TT.changes.compose(zT)), {
+        changes: WT,
+        selection: oT.selection ? oT.selection.map(kT) : null === (iT = TT.selection) || void 0 === iT ? void 0 : iT.map(zT),
+        effects: wo.mapEffects(TT.effects, zT).concat(wo.mapEffects(oT.effects, kT)),
+        annotations: TT.annotations.length ? TT.annotations.concat(oT.annotations) : oT.annotations,
+        scrollIntoView: TT.scrollIntoView || oT.scrollIntoView
       }
     }
 
-    function Nr(YY, rY, DY) {
-      let FY = rY.selection,
-        AY = Kr(rY.annotations);
-      return rY.userEvent && (AY = AY.concat(lr.userEvent.of(rY.userEvent))), {
-        changes: rY.changes instanceof CY ? rY.changes : CY.of(rY.changes || [], DY, YY.facet(ir)),
-        selection: FY && (FY instanceof bY ? FY : bY.single(FY.anchor, FY.head)),
-        effects: Kr(rY.effects),
-        annotations: AY,
-        scrollIntoView: !!rY.scrollIntoView
+    function uo(TT, oT, IT) {
+      let iT = oT.selection,
+        zT = fo(oT.annotations);
+      return oT.userEvent && (zT = zT.concat(mo.userEvent.of(oT.userEvent))), {
+        changes: oT.changes instanceof UT ? oT.changes : UT.of(oT.changes || [], IT, TT.facet(xo)),
+        selection: iT && (iT instanceof ZT ? iT : ZT.single(iT.anchor, iT.head)),
+        effects: fo(oT.effects),
+        annotations: zT,
+        scrollIntoView: !!oT.scrollIntoView
       }
     }
 
-    function Br(YY, rY, DY) {
-      let FY = Nr(YY, rY.length ? rY[0] : {}, YY.doc.length);
-      rY.length && !1 === rY[0].filter && (DY = !1);
-      for (let IY = 1; IY < rY.length; IY++) {
-        !1 === rY[IY].filter && (DY = !1);
-        let AY = !!rY[IY].sequential;
-        FY = er(FY, Nr(YY, rY[IY], AY ? FY.changes.newLength : YY.doc.length), AY)
+    function vo(TT, oT, IT) {
+      let iT = uo(TT, oT.length ? oT[0] : {}, TT.doc.length);
+      oT.length && !1 === oT[0].filter && (IT = !1);
+      for (let kT = 1; kT < oT.length; kT++) {
+        !1 === oT[kT].filter && (IT = !1);
+        let zT = !!oT[kT].sequential;
+        iT = Ro(iT, uo(TT, oT[kT], zT ? iT.changes.newLength : TT.doc.length), zT)
       }
-      let AY = lr.create(YY, FY.changes, FY.selection, FY.effects, FY.annotations, FY.scrollIntoView);
-      return function(YY) {
-        let rY = YY.startState,
-          DY = rY.facet(or),
-          FY = YY;
-        for (let AY = DY.length - 1; AY >= 0; AY--) {
-          let IY = DY[AY](YY);
-          IY && Object.keys(IY).length && (FY = er(FY, Nr(rY, IY, YY.changes.newLength), !0))
+      let zT = mo.create(TT, iT.changes, iT.selection, iT.effects, iT.annotations, iT.scrollIntoView);
+      return function(TT) {
+        let oT = TT.startState,
+          IT = oT.facet(Mo),
+          iT = TT;
+        for (let zT = IT.length - 1; zT >= 0; zT--) {
+          let kT = IT[zT](TT);
+          kT && Object.keys(kT).length && (iT = Ro(iT, uo(oT, kT, TT.changes.newLength), !0))
         }
-        return FY == YY ? YY : lr.create(rY, YY.changes, YY.selection, FY.effects, FY.annotations, FY.scrollIntoView)
-      }(DY ? function(YY) {
-        let rY = YY.startState,
-          DY = !0;
-        for (let AY of rY.facet(yr)) {
-          let rY = AY(YY);
-          if (!1 === rY) {
-            DY = !1;
+        return iT == TT ? TT : mo.create(oT, TT.changes, TT.selection, iT.effects, iT.annotations, iT.scrollIntoView)
+      }(IT ? function(TT) {
+        let oT = TT.startState,
+          IT = !0;
+        for (let zT of oT.facet(co)) {
+          let oT = zT(TT);
+          if (!1 === oT) {
+            IT = !1;
             break
           }
-          Array.isArray(rY) && (DY = !0 === DY ? rY : Tr(DY, rY))
+          Array.isArray(oT) && (IT = !0 === IT ? oT : eo(IT, oT))
         }
-        if (!0 !== DY) {
-          let FY, AY;
-          if (!1 === DY) AY = YY.changes.invertedDesc, FY = CY.empty(rY.doc.length);
+        if (!0 !== IT) {
+          let iT, zT;
+          if (!1 === IT) zT = TT.changes.invertedDesc, iT = UT.empty(oT.doc.length);
           else {
-            let rY = YY.changes.filter(DY);
-            FY = rY.changes, AY = rY.filtered.mapDesc(rY.changes).invertedDesc
+            let oT = TT.changes.filter(IT);
+            iT = oT.changes, zT = oT.filtered.mapDesc(oT.changes).invertedDesc
           }
-          YY = lr.create(rY, FY, YY.selection && YY.selection.map(AY), Sr.mapEffects(YY.effects, AY), YY.annotations, YY.scrollIntoView)
+          TT = mo.create(oT, iT, TT.selection && TT.selection.map(zT), wo.mapEffects(TT.effects, zT), TT.annotations, TT.scrollIntoView)
         }
-        let FY = rY.facet(Qr);
-        for (let AY = FY.length - 1; AY >= 0; AY--) {
-          let DY = FY[AY](YY);
-          YY = DY instanceof lr ? DY : Array.isArray(DY) && 1 == DY.length && DY[0] instanceof lr ? DY[0] : Br(rY, Kr(DY), !1)
+        let iT = oT.facet(Ko);
+        for (let zT = iT.length - 1; zT >= 0; zT--) {
+          let IT = iT[zT](TT);
+          TT = IT instanceof mo ? IT : Array.isArray(IT) && 1 == IT.length && IT[0] instanceof mo ? IT[0] : vo(oT, fo(IT), !1)
         }
-        return YY
-      }(AY) : AY)
+        return TT
+      }(zT) : zT)
     }
-    lr.time = Er.define(), lr.userEvent = Er.define(), lr.addToHistory = Er.define(), lr.remote = Er.define();
-    const cr = [];
+    mo.time = Ao.define(), mo.userEvent = Ao.define(), mo.addToHistory = Ao.define(), mo.remote = Ao.define();
+    const Eo = [];
 
-    function Kr(YY) {
-      return null == YY ? cr : Array.isArray(YY) ? YY : [YY]
+    function fo(TT) {
+      return null == TT ? Eo : Array.isArray(TT) ? TT : [TT]
     }
-    var Hr = function(YY) {
-      return YY[YY.Word = 0] = "Word", YY[YY.Space = 1] = "Space", YY[YY.Other = 2] = "Other", YY
-    }(Hr || (Hr = {}));
-    const zr = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let Zr;
+    var Co = function(TT) {
+      return TT[TT.Word = 0] = "Word", TT[TT.Space = 1] = "Space", TT[TT.Other = 2] = "Other", TT
+    }(Co || (Co = {}));
+    const jo = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let Jo;
     try {
-      Zr = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (DD) {}
+      Jo = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (zI) {}
 
-    function Cr(YY) {
-      return rY => {
-        if (!/\S/.test(rY)) return Hr.Space;
-        if (function(YY) {
-            if (Zr) return Zr.test(YY);
-            for (let rY = 0; rY < YY.length; rY++) {
-              let DY = YY[rY];
-              if (/\w/.test(DY) || DY > "\x80" && (DY.toUpperCase() != DY.toLowerCase() || zr.test(DY))) return !0
+    function Uo(TT) {
+      return oT => {
+        if (!/\S/.test(oT)) return Co.Space;
+        if (function(TT) {
+            if (Jo) return Jo.test(TT);
+            for (let oT = 0; oT < TT.length; oT++) {
+              let IT = TT[oT];
+              if (/\w/.test(IT) || IT > "\x80" && (IT.toUpperCase() != IT.toLowerCase() || jo.test(IT))) return !0
             }
             return !1
-          }(rY)) return Hr.Word;
-        for (let DY = 0; DY < YY.length; DY++)
-          if (rY.indexOf(YY[DY]) > -1) return Hr.Word;
-        return Hr.Other
+          }(oT)) return Co.Word;
+        for (let IT = 0; IT < TT.length; IT++)
+          if (oT.indexOf(TT[IT]) > -1) return Co.Word;
+        return Co.Other
       }
     }
-    class fr {
-      constructor(YY, rY, DY, FY, AY, IY) {
-        this.config = YY, this.doc = rY, this.selection = DY, this.values = FY, this.status = YY.statusTemplate.slice(), this.computeSlot = AY, IY && (IY._state = this);
-        for (let RY = 0; RY < this.config.dynamicSlots.length; RY++) ar(this, RY << 1);
+    class ao {
+      constructor(TT, oT, IT, iT, zT, kT) {
+        this.config = TT, this.doc = oT, this.selection = IT, this.values = iT, this.status = TT.statusTemplate.slice(), this.computeSlot = zT, kT && (kT._state = this);
+        for (let WT = 0; WT < this.config.dynamicSlots.length; WT++) Fo(this, WT << 1);
         this.computeSlot = null
       }
-      field(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          DY = this.config.address[YY.id];
-        if (null != DY) return ar(this, DY), vr(this, DY);
-        if (rY) throw new RangeError("Field is not present in this state")
+      field(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          IT = this.config.address[TT.id];
+        if (null != IT) return Fo(this, IT), So(this, IT);
+        if (oT) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
-        return Br(this, rY, !0)
+        for (var TT = arguments.length, oT = new Array(TT), IT = 0; IT < TT; IT++) oT[IT] = arguments[IT];
+        return vo(this, oT, !0)
       }
-      applyTransaction(YY) {
-        let rY, DY = this.config,
+      applyTransaction(TT) {
+        let oT, IT = this.config,
           {
-            base: FY,
-            compartments: AY
-          } = DY;
-        for (let RY of YY.effects) RY.is(Rr.reconfigure) ? (DY && (AY = new Map, DY.compartments.forEach(((YY, rY) => AY.set(rY, YY))), DY = null), AY.set(RY.value.compartment, RY.value.extension)) : RY.is(Sr.reconfigure) ? (DY = null, FY = RY.value) : RY.is(Sr.appendConfig) && (DY = null, FY = Kr(FY).concat(RY.value));
-        if (DY) rY = YY.startState.values.slice();
+            base: iT,
+            compartments: zT
+          } = IT;
+        for (let WT of TT.effects) WT.is(Wo.reconfigure) ? (IT && (zT = new Map, IT.compartments.forEach(((TT, oT) => zT.set(oT, TT))), IT = null), zT.set(WT.value.compartment, WT.value.extension)) : WT.is(wo.reconfigure) ? (IT = null, iT = WT.value) : WT.is(wo.appendConfig) && (IT = null, iT = fo(iT).concat(WT.value));
+        if (IT) oT = TT.startState.values.slice();
         else {
-          DY = gr.resolve(FY, AY, this), rY = new fr(DY, this.doc, this.selection, DY.dynamicSlots.map((() => null)), ((YY, rY) => rY.reconfigure(YY, this)), null).values
+          IT = Bo.resolve(iT, zT, this), oT = new ao(IT, this.doc, this.selection, IT.dynamicSlots.map((() => null)), ((TT, oT) => oT.reconfigure(TT, this)), null).values
         }
-        let IY = YY.startState.facet(sr) ? YY.newSelection : YY.newSelection.asSingle();
-        new fr(DY, YY.newDoc, IY, rY, ((rY, DY) => DY.update(rY, YY)), YY)
+        let kT = TT.startState.facet(Lo) ? TT.newSelection : TT.newSelection.asSingle();
+        new ao(IT, TT.newDoc, kT, oT, ((oT, IT) => IT.update(oT, TT)), TT)
       }
-      replaceSelection(YY) {
-        return "string" == typeof YY && (YY = this.toText(YY)), this.changeByRange((rY => ({
+      replaceSelection(TT) {
+        return "string" == typeof TT && (TT = this.toText(TT)), this.changeByRange((oT => ({
           changes: {
-            from: rY.from,
-            to: rY.to,
-            insert: YY
+            from: oT.from,
+            to: oT.to,
+            insert: TT
           },
-          range: bY.cursor(rY.from + YY.length)
+          range: ZT.cursor(oT.from + TT.length)
         })))
       }
-      changeByRange(YY) {
-        let rY = this.selection,
-          DY = YY(rY.ws[0]),
-          FY = this.changes(DY.changes),
-          AY = [DY.range],
-          IY = Kr(DY.effects);
-        for (let RY = 1; RY < rY.ws.length; RY++) {
-          let DY = YY(rY.ws[RY]),
-            OY = this.changes(DY.changes),
-            gY = OY.map(FY);
-          for (let YY = 0; YY < RY; YY++) AY[YY] = AY[YY].map(gY);
-          let aY = FY.mapDesc(OY, !0);
-          AY.push(DY.range.map(aY)), FY = FY.compose(gY), IY = Sr.mapEffects(IY, gY).concat(Sr.mapEffects(Kr(DY.effects), aY))
+      changeByRange(TT) {
+        let oT = this.selection,
+          IT = TT(oT.ec[0]),
+          iT = this.changes(IT.changes),
+          zT = [IT.range],
+          kT = fo(IT.effects);
+        for (let WT = 1; WT < oT.ec.length; WT++) {
+          let IT = TT(oT.ec[WT]),
+            XT = this.changes(IT.changes),
+            BT = XT.map(iT);
+          for (let TT = 0; TT < WT; TT++) zT[TT] = zT[TT].map(BT);
+          let FT = iT.mapDesc(XT, !0);
+          zT.push(IT.range.map(FT)), iT = iT.compose(BT), kT = wo.mapEffects(kT, BT).concat(wo.mapEffects(fo(IT.effects), FT))
         }
         return {
-          changes: FY,
-          selection: bY.create(AY, rY.mainIndex),
-          effects: IY
+          changes: iT,
+          selection: ZT.create(zT, oT.mainIndex),
+          effects: kT
         }
       }
       changes() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return YY instanceof CY ? YY : CY.of(YY, this.doc.length, this.facet(fr.lineSeparator))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return TT instanceof UT ? TT : UT.of(TT, this.doc.length, this.facet(ao.lineSeparator))
       }
-      toText(YY) {
-        return QY.of(YY.split(this.facet(fr.lineSeparator) || HY))
+      toText(TT) {
+        return KT.of(TT.split(this.facet(ao.lineSeparator) || CT))
       }
       sliceDoc() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(YY, rY, this.lineBreak)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(TT, oT, this.lineBreak)
       }
-      facet(YY) {
-        let rY = this.config.address[YY.id];
-        return null == rY ? YY.default : (ar(this, rY), vr(this, rY))
+      facet(TT) {
+        let oT = this.config.address[TT.id];
+        return null == oT ? TT.default : (Fo(this, oT), So(this, oT))
       }
-      toJSON(YY) {
-        let rY = {
+      toJSON(TT) {
+        let oT = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (YY)
-          for (let DY in YY) {
-            let FY = YY[DY];
-            FY instanceof LY && null != this.config.address[FY.id] && (rY[DY] = FY.spec.toJSON(this.field(YY[DY]), this))
+        if (TT)
+          for (let IT in TT) {
+            let iT = TT[IT];
+            iT instanceof dT && null != this.config.address[iT.id] && (oT[IT] = iT.spec.toJSON(this.field(TT[IT]), this))
           }
-        return rY
+        return oT
       }
-      static fromJSON(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        if (!YY || "string" != typeof YY.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let FY = [];
-        if (DY)
-          for (let AY in DY)
-            if (Object.prototype.hasOwnProperty.call(YY, AY)) {
-              let rY = DY[AY],
-                IY = YY[AY];
-              FY.push(rY.init((YY => rY.spec.fromJSON(IY, YY))))
-            } return fr.create({
-          doc: YY.doc,
-          selection: bY.fromJSON(YY.selection),
-          extensions: rY.extensions ? FY.concat([rY.extensions]) : FY
+      static fromJSON(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        if (!TT || "string" != typeof TT.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let iT = [];
+        if (IT)
+          for (let zT in IT)
+            if (Object.prototype.hasOwnProperty.call(TT, zT)) {
+              let oT = IT[zT],
+                kT = TT[zT];
+              iT.push(oT.init((TT => oT.spec.fromJSON(kT, TT))))
+            } return ao.create({
+          doc: TT.doc,
+          selection: ZT.fromJSON(TT.selection),
+          extensions: oT.extensions ? iT.concat([oT.extensions]) : iT
         })
       }
       static create() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          rY = gr.resolve(YY.extensions || [], new Map),
-          DY = YY.doc instanceof QY ? YY.doc : QY.of((YY.doc || "").split(rY.staticFacet(fr.lineSeparator) || HY)),
-          FY = YY.selection ? YY.selection instanceof bY ? YY.selection : bY.single(YY.selection.anchor, YY.selection.head) : bY.single(0);
-        return XY(FY, DY.length), rY.staticFacet(sr) || (FY = FY.asSingle()), new fr(rY, DY, FY, rY.dynamicSlots.map((() => null)), ((YY, rY) => rY.create(YY)), null)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          oT = Bo.resolve(TT.extensions || [], new Map),
+          IT = TT.doc instanceof KT ? TT.doc : KT.of((TT.doc || "").split(oT.staticFacet(ao.lineSeparator) || CT)),
+          iT = TT.selection ? TT.selection instanceof ZT ? TT.selection : ZT.single(TT.selection.anchor, TT.selection.head) : ZT.single(0);
+        return lT(iT, IT.length), oT.staticFacet(Lo) || (iT = iT.asSingle()), new ao(oT, IT, iT, oT.dynamicSlots.map((() => null)), ((TT, oT) => oT.create(TT)), null)
       }
       get tabSize() {
-        return this.facet(fr.tabSize)
+        return this.facet(ao.tabSize)
       }
       get lineBreak() {
-        return this.facet(fr.lineSeparator) || "\n"
+        return this.facet(ao.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(Wr)
+        return this.facet(ro)
       }
-      phrase(YY) {
-        for (var rY = arguments.length, DY = new Array(rY > 1 ? rY - 1 : 0), FY = 1; FY < rY; FY++) DY[FY - 1] = arguments[FY];
-        for (let AY of this.facet(fr.phrases))
-          if (Object.prototype.hasOwnProperty.call(AY, YY)) {
-            YY = AY[YY];
+      phrase(TT) {
+        for (var oT = arguments.length, IT = new Array(oT > 1 ? oT - 1 : 0), iT = 1; iT < oT; iT++) IT[iT - 1] = arguments[iT];
+        for (let zT of this.facet(ao.phrases))
+          if (Object.prototype.hasOwnProperty.call(zT, TT)) {
+            TT = zT[TT];
             break
-          } return DY.length && (YY = YY.replace(/\$(\$|\d*)/g, ((YY, rY) => {
-          if ("$" == rY) return "$";
-          let FY = +(rY || 1);
-          return !FY || FY > DY.length ? YY : DY[FY - 1]
-        }))), YY
+          } return IT.length && (TT = TT.replace(/\$(\$|\d*)/g, ((TT, oT) => {
+          if ("$" == oT) return "$";
+          let iT = +(oT || 1);
+          return !iT || iT > IT.length ? TT : IT[iT - 1]
+        }))), TT
       }
-      languageDataAt(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          FY = [];
-        for (let AY of this.facet(ur))
-          for (let IY of AY(this, rY, DY)) Object.prototype.hasOwnProperty.call(IY, YY) && FY.push(IY[YY]);
-        return FY
+      languageDataAt(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          iT = [];
+        for (let zT of this.facet(Do))
+          for (let kT of zT(this, oT, IT)) Object.prototype.hasOwnProperty.call(kT, TT) && iT.push(kT[TT]);
+        return iT
       }
-      charCategorizer(YY) {
-        let rY = this.languageDataAt("wordChars", YY);
-        return Cr(rY.length ? rY[0] : "")
+      charCategorizer(TT) {
+        let oT = this.languageDataAt("wordChars", TT);
+        return Uo(oT.length ? oT[0] : "")
       }
-      wordAt(YY) {
+      wordAt(TT) {
         let {
-          text: rY,
-          from: DY,
-          length: FY
-        } = this.doc.lineAt(YY), AY = this.charCategorizer(YY), IY = YY - DY, RY = YY - DY;
-        for (; IY > 0;) {
-          let YY = NY(rY, IY, !1);
-          if (AY(rY.slice(YY, IY)) != Hr.Word) break;
-          IY = YY
+          text: oT,
+          from: IT,
+          length: iT
+        } = this.doc.lineAt(TT), zT = this.charCategorizer(TT), kT = TT - IT, WT = TT - IT;
+        for (; kT > 0;) {
+          let TT = uT(oT, kT, !1);
+          if (zT(oT.slice(TT, kT)) != Co.Word) break;
+          kT = TT
         }
-        for (; RY < FY;) {
-          let YY = NY(rY, RY);
-          if (AY(rY.slice(RY, YY)) != Hr.Word) break;
-          RY = YY
+        for (; WT < iT;) {
+          let TT = uT(oT, WT);
+          if (zT(oT.slice(WT, TT)) != Co.Word) break;
+          WT = TT
         }
-        return IY == RY ? null : bY.range(IY + DY, RY + DY)
+        return kT == WT ? null : ZT.range(kT + IT, WT + IT)
       }
     }
 
-    function jr(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        FY = {};
-      for (let AY of YY)
-        for (let YY of Object.keys(AY)) {
-          let rY = AY[YY],
-            IY = FY[YY];
-          if (void 0 === IY) FY[YY] = rY;
-          else if (IY === rY || void 0 === rY);
+    function Yo(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        iT = {};
+      for (let zT of TT)
+        for (let TT of Object.keys(zT)) {
+          let oT = zT[TT],
+            kT = iT[TT];
+          if (void 0 === kT) iT[TT] = oT;
+          else if (kT === oT || void 0 === oT);
           else {
-            if (!Object.hasOwnProperty.call(DY, YY)) throw new Error("Config merge conflict for field " + YY);
-            FY[YY] = DY[YY](IY, rY)
+            if (!Object.hasOwnProperty.call(IT, TT)) throw new Error("Config merge conflict for field " + TT);
+            iT[TT] = IT[TT](kT, oT)
           }
         }
-      for (let AY in rY) void 0 === FY[AY] && (FY[AY] = rY[AY]);
-      return FY
+      for (let zT in oT) void 0 === iT[zT] && (iT[zT] = oT[zT]);
+      return iT
     }
-    fr.allowMultipleSelections = sr, fr.tabSize = pY.define({
-      combine: YY => YY.length ? YY[0] : 4
-    }), fr.lineSeparator = ir, fr.readOnly = Wr, fr.phrases = pY.define({
-      compare(YY, rY) {
-        let DY = Object.keys(YY),
-          FY = Object.keys(rY);
-        return DY.length == FY.length && DY.every((DY => YY[DY] == rY[DY]))
+    ao.allowMultipleSelections = Lo, ao.tabSize = tT.define({
+      combine: TT => TT.length ? TT[0] : 4
+    }), ao.lineSeparator = xo, ao.readOnly = ro, ao.phrases = tT.define({
+      compare(TT, oT) {
+        let IT = Object.keys(TT),
+          iT = Object.keys(oT);
+        return IT.length == iT.length && IT.every((IT => TT[IT] == oT[IT]))
       }
-    }), fr.languageData = ur, fr.changeFilter = yr, fr.transactionFilter = Qr, fr.transactionExtender = or, Rr.reconfigure = Sr.define();
-    class hr {
-      eq(YY) {
-        return this == YY
+    }), ao.languageData = Do, ao.changeFilter = co, ao.transactionFilter = Ko, ao.transactionExtender = Mo, Wo.reconfigure = wo.define();
+    class Qo {
+      eq(TT) {
+        return this == TT
       }
-      range(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY;
-        return Jr.create(YY, rY, this)
-      }
-    }
-
-    function dr(YY, rY) {
-      return YY == rY || YY.constructor == rY.constructor && YY.eq(rY)
-    }
-    hr.prototype.startSide = hr.prototype.endSide = 0, hr.prototype.point = !1, hr.prototype.mapMode = zY.TrackDel;
-    class Jr {
-      constructor(YY, rY, DY) {
-        this.from = YY, this.to = rY, this.value = DY
-      }
-      static create(YY, rY, DY) {
-        return new Jr(YY, rY, DY)
+      range(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+        return Ho.create(TT, oT, this)
       }
     }
 
-    function Mr(YY, rY) {
-      return YY.from - rY.from || YY.value.startSide - rY.value.startSide
+    function Oo(TT, oT) {
+      return TT == oT || TT.constructor == oT.constructor && TT.eq(oT)
     }
-    class wr {
-      constructor(YY, rY, DY, FY) {
-        this.from = YY, this.to = rY, this.value = DY, this.SDY = FY
+    Qo.prototype.startSide = Qo.prototype.endSide = 0, Qo.prototype.point = !1, Qo.prototype.mapMode = jT.TrackDel;
+    class Ho {
+      constructor(TT, oT, IT) {
+        this.from = TT, this.to = oT, this.value = IT
+      }
+      static create(TT, oT, IT) {
+        return new Ho(TT, oT, IT)
+      }
+    }
+
+    function no(TT, oT) {
+      return TT.from - oT.from || TT.value.startSide - oT.value.startSide
+    }
+    class qo {
+      constructor(TT, oT, IT, iT) {
+        this.from = TT, this.to = oT, this.value = IT, this.yIT = iT
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          AY = DY ? this.to : this.from;
-        for (let IY = FY, RY = AY.length;;) {
-          if (IY == RY) return IY;
-          let FY = IY + RY >> 1,
-            OY = AY[FY] - YY || (DY ? this.value[FY].endSide : this.value[FY].startSide) - rY;
-          if (FY == IY) return OY >= 0 ? IY : RY;
-          OY >= 0 ? RY = FY : IY = FY + 1
+      findIndex(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          zT = IT ? this.to : this.from;
+        for (let kT = iT, WT = zT.length;;) {
+          if (kT == WT) return kT;
+          let iT = kT + WT >> 1,
+            XT = zT[iT] - TT || (IT ? this.value[iT].endSide : this.value[iT].startSide) - oT;
+          if (iT == kT) return XT >= 0 ? kT : WT;
+          XT >= 0 ? WT = iT : kT = iT + 1
         }
       }
-      between(YY, rY, DY, FY) {
-        for (let AY = this.findIndex(rY, -1e9, !0), IY = this.findIndex(DY, 1e9, !1, AY); AY < IY; AY++)
-          if (!1 === FY(this.from[AY] + YY, this.to[AY] + YY, this.value[AY])) return !1
+      between(TT, oT, IT, iT) {
+        for (let zT = this.findIndex(oT, -1e9, !0), kT = this.findIndex(IT, 1e9, !1, zT); zT < kT; zT++)
+          if (!1 === iT(this.from[zT] + TT, this.to[zT] + TT, this.value[zT])) return !1
       }
-      map(YY, rY) {
-        let DY = [],
-          FY = [],
-          AY = [],
-          IY = -1,
-          RY = -1;
-        for (let OY = 0; OY < this.value.length; OY++) {
-          let gY, aY, vY = this.value[OY],
-            uY = this.from[OY] + YY,
-            sY = this.to[OY] + YY;
-          if (uY == sY) {
-            let YY = rY.mapPos(uY, vY.startSide, vY.mapMode);
-            if (null == YY) continue;
-            if (gY = aY = YY, vY.startSide != vY.endSide && (aY = rY.mapPos(uY, vY.endSide), aY < gY)) continue
-          } else if (gY = rY.mapPos(uY, vY.startSide), aY = rY.mapPos(sY, vY.endSide), gY > aY || gY == aY && vY.startSide > 0 && vY.endSide <= 0) continue;
-          (aY - gY || vY.endSide - vY.startSide) < 0 || (IY < 0 && (IY = gY), vY.point && (RY = Math.max(RY, aY - gY)), DY.push(vY), FY.push(gY - IY), AY.push(aY - IY))
+      map(TT, oT) {
+        let IT = [],
+          iT = [],
+          zT = [],
+          kT = -1,
+          WT = -1;
+        for (let XT = 0; XT < this.value.length; XT++) {
+          let BT, FT, ST = this.value[XT],
+            DT = this.from[XT] + TT,
+            LT = this.to[XT] + TT;
+          if (DT == LT) {
+            let TT = oT.mapPos(DT, ST.startSide, ST.mapMode);
+            if (null == TT) continue;
+            if (BT = FT = TT, ST.startSide != ST.endSide && (FT = oT.mapPos(DT, ST.endSide), FT < BT)) continue
+          } else if (BT = oT.mapPos(DT, ST.startSide), FT = oT.mapPos(LT, ST.endSide), BT > FT || BT == FT && ST.startSide > 0 && ST.endSide <= 0) continue;
+          (FT - BT || ST.endSide - ST.startSide) < 0 || (kT < 0 && (kT = BT), ST.point && (WT = Math.max(WT, FT - BT)), IT.push(ST), iT.push(BT - kT), zT.push(FT - kT))
         }
         return {
-          mapped: DY.length ? new wr(FY, AY, DY, RY) : null,
-          pos: IY
+          mapped: IT.length ? new qo(iT, zT, IT, WT) : null,
+          pos: kT
         }
       }
     }
-    class br {
-      constructor(YY, rY, DY, FY) {
-        this.chunkPos = YY, this.chunk = rY, this.nextLayer = DY, this.SDY = FY
+    class Zo {
+      constructor(TT, oT, IT, iT) {
+        this.chunkPos = TT, this.chunk = oT, this.nextLayer = IT, this.yIT = iT
       }
-      static create(YY, rY, DY, FY) {
-        return new br(YY, rY, DY, FY)
+      static create(TT, oT, IT, iT) {
+        return new Zo(TT, oT, IT, iT)
       }
       get length() {
-        let YY = this.chunk.length - 1;
-        return YY < 0 ? 0 : Math.max(this.chunkEnd(YY), this.nextLayer.length)
+        let TT = this.chunk.length - 1;
+        return TT < 0 ? 0 : Math.max(this.chunkEnd(TT), this.nextLayer.length)
       }
       get size() {
-        if (this.Ey) return 0;
-        let YY = this.nextLayer.size;
-        for (let rY of this.chunk) YY += rY.value.length;
-        return YY
+        if (this.Mc) return 0;
+        let TT = this.nextLayer.size;
+        for (let oT of this.chunk) TT += oT.value.length;
+        return TT
       }
-      chunkEnd(YY) {
-        return this.chunkPos[YY] + this.chunk[YY].length
+      chunkEnd(TT) {
+        return this.chunkPos[TT] + this.chunk[TT].length
       }
-      update(YY) {
+      update(TT) {
         let {
-          add: rY = [],
-          sort: DY = !1,
-          filterFrom: FY = 0,
-          filterTo: AY = this.length
-        } = YY, IY = YY.filter;
-        if (0 == rY.length && !IY) return this;
-        if (DY && (rY = rY.slice().sort(Mr)), this.Ey) return rY.length ? br.of(rY) : this;
-        let RY = new pr(this, null, -1).goto(0),
-          OY = 0,
-          gY = [],
-          aY = new Xr;
-        for (; RY.value || OY < rY.length;)
-          if (OY < rY.length && (RY.from - rY[OY].from || RY.startSide - rY[OY].value.startSide) >= 0) {
-            let YY = rY[OY++];
-            aY.addInner(YY.from, YY.to, YY.value) || gY.push(YY)
-          } else 1 == RY.rangeIndex && RY.chunkIndex < this.chunk.length && (OY == rY.length || this.chunkEnd(RY.chunkIndex) < rY[OY].from) && (!IY || FY > this.chunkEnd(RY.chunkIndex) || AY < this.chunkPos[RY.chunkIndex]) && aY.addChunk(this.chunkPos[RY.chunkIndex], this.chunk[RY.chunkIndex]) ? RY.nextChunk() : ((!IY || FY > RY.to || AY < RY.from || IY(RY.from, RY.to, RY.value)) && (aY.addInner(RY.from, RY.to, RY.value) || gY.push(Jr.create(RY.from, RY.to, RY.value))), RY.next());
-        return aY.finishInner(this.nextLayer.Ey && !gY.length ? br.empty : this.nextLayer.update({
-          add: gY,
-          filter: IY,
-          filterFrom: FY,
-          filterTo: AY
+          add: oT = [],
+          sort: IT = !1,
+          filterFrom: iT = 0,
+          filterTo: zT = this.length
+        } = TT, kT = TT.filter;
+        if (0 == oT.length && !kT) return this;
+        if (IT && (oT = oT.slice().sort(no)), this.Mc) return oT.length ? Zo.of(oT) : this;
+        let WT = new Go(this, null, -1).goto(0),
+          XT = 0,
+          BT = [],
+          FT = new so;
+        for (; WT.value || XT < oT.length;)
+          if (XT < oT.length && (WT.from - oT[XT].from || WT.startSide - oT[XT].value.startSide) >= 0) {
+            let TT = oT[XT++];
+            FT.addInner(TT.from, TT.to, TT.value) || BT.push(TT)
+          } else 1 == WT.rangeIndex && WT.chunkIndex < this.chunk.length && (XT == oT.length || this.chunkEnd(WT.chunkIndex) < oT[XT].from) && (!kT || iT > this.chunkEnd(WT.chunkIndex) || zT < this.chunkPos[WT.chunkIndex]) && FT.addChunk(this.chunkPos[WT.chunkIndex], this.chunk[WT.chunkIndex]) ? WT.nextChunk() : ((!kT || iT > WT.to || zT < WT.from || kT(WT.from, WT.to, WT.value)) && (FT.addInner(WT.from, WT.to, WT.value) || BT.push(Ho.create(WT.from, WT.to, WT.value))), WT.next());
+        return FT.finishInner(this.nextLayer.Mc && !BT.length ? Zo.empty : this.nextLayer.update({
+          add: BT,
+          filter: kT,
+          filterFrom: iT,
+          filterTo: zT
         }))
       }
-      map(YY) {
-        if (YY.empty || this.Ey) return this;
-        let rY = [],
-          DY = [],
-          FY = -1;
-        for (let IY = 0; IY < this.chunk.length; IY++) {
-          let AY = this.chunkPos[IY],
-            RY = this.chunk[IY],
-            OY = YY.touchesRange(AY, AY + RY.length);
-          if (!1 === OY) FY = Math.max(FY, RY.SDY), rY.push(RY), DY.push(YY.mapPos(AY));
-          else if (!0 === OY) {
+      map(TT) {
+        if (TT.empty || this.Mc) return this;
+        let oT = [],
+          IT = [],
+          iT = -1;
+        for (let kT = 0; kT < this.chunk.length; kT++) {
+          let zT = this.chunkPos[kT],
+            WT = this.chunk[kT],
+            XT = TT.touchesRange(zT, zT + WT.length);
+          if (!1 === XT) iT = Math.max(iT, WT.yIT), oT.push(WT), IT.push(TT.mapPos(zT));
+          else if (!0 === XT) {
             let {
-              mapped: IY,
-              pos: OY
-            } = RY.map(AY, YY);
-            IY && (FY = Math.max(FY, IY.SDY), rY.push(IY), DY.push(OY))
+              mapped: kT,
+              pos: XT
+            } = WT.map(zT, TT);
+            kT && (iT = Math.max(iT, kT.yIT), oT.push(kT), IT.push(XT))
           }
         }
-        let AY = this.nextLayer.map(YY);
-        return 0 == rY.length ? AY : new br(DY, rY, AY || br.empty, FY)
+        let zT = this.nextLayer.map(TT);
+        return 0 == oT.length ? zT : new Zo(IT, oT, zT || Zo.empty, iT)
       }
-      between(YY, rY, DY) {
-        if (!this.Ey) {
-          for (let FY = 0; FY < this.chunk.length; FY++) {
-            let AY = this.chunkPos[FY],
-              IY = this.chunk[FY];
-            if (rY >= AY && YY <= AY + IY.length && !1 === IY.between(AY, YY - AY, rY - AY, DY)) return
+      between(TT, oT, IT) {
+        if (!this.Mc) {
+          for (let iT = 0; iT < this.chunk.length; iT++) {
+            let zT = this.chunkPos[iT],
+              kT = this.chunk[iT];
+            if (oT >= zT && TT <= zT + kT.length && !1 === kT.between(zT, TT - zT, oT - zT, IT)) return
           }
-          this.nextLayer.between(YY, rY, DY)
+          this.nextLayer.between(TT, oT, IT)
         }
       }
       iter() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return kr.from([this]).goto(YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return po.from([this]).goto(TT)
       }
-      get Ey() {
+      get Mc() {
         return this.nextLayer == this
       }
-      static iter(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return kr.from(YY).goto(rY)
+      static iter(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return po.from(TT).goto(oT)
       }
-      static compare(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          IY = YY.filter((YY => YY.SDY > 0 || !YY.Ey && YY.SDY >= AY)),
-          RY = rY.filter((YY => YY.SDY > 0 || !YY.Ey && YY.SDY >= AY)),
-          OY = qr(IY, RY, DY),
-          gY = new xr(IY, OY, AY),
-          aY = new xr(RY, OY, AY);
-        DY.iterGaps(((YY, rY, DY) => nr(gY, YY, aY, rY, DY, FY))), DY.empty && 0 == DY.length && nr(gY, 0, aY, 0, 0, FY)
+      static compare(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          kT = TT.filter((TT => TT.yIT > 0 || !TT.Mc && TT.yIT >= zT)),
+          WT = oT.filter((TT => TT.yIT > 0 || !TT.Mc && TT.yIT >= zT)),
+          XT = to(kT, WT, IT),
+          BT = new yo(kT, XT, zT),
+          FT = new yo(WT, XT, zT);
+        IT.iterGaps(((TT, oT, IT) => No(BT, TT, FT, oT, IT, iT))), IT.empty && 0 == IT.length && No(BT, 0, FT, 0, 0, iT)
       }
-      static eq(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0;
-        null == FY && (FY = 999999999);
-        let AY = YY.filter((YY => !YY.Ey && rY.indexOf(YY) < 0)),
-          IY = rY.filter((rY => !rY.Ey && YY.indexOf(rY) < 0));
-        if (AY.length != IY.length) return !1;
-        if (!AY.length) return !0;
-        let RY = qr(AY, IY),
-          OY = new xr(AY, RY, 0).goto(DY),
-          gY = new xr(IY, RY, 0).goto(DY);
+      static eq(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0;
+        null == iT && (iT = 999999999);
+        let zT = TT.filter((TT => !TT.Mc && oT.indexOf(TT) < 0)),
+          kT = oT.filter((oT => !oT.Mc && TT.indexOf(oT) < 0));
+        if (zT.length != kT.length) return !1;
+        if (!zT.length) return !0;
+        let WT = to(zT, kT),
+          XT = new yo(zT, WT, 0).goto(IT),
+          BT = new yo(kT, WT, 0).goto(IT);
         for (;;) {
-          if (OY.to != gY.to || !Pr(OY.active, gY.active) || OY.point && (!gY.point || !dr(OY.point, gY.point))) return !1;
-          if (OY.to > FY) return !0;
-          OY.next(), gY.next()
+          if (XT.to != BT.to || !Po(XT.active, BT.active) || XT.point && (!BT.point || !Oo(XT.point, BT.point))) return !1;
+          if (XT.to > iT) return !0;
+          XT.next(), BT.next()
         }
       }
-      static spans(YY, rY, DY, FY) {
-        let AY = new xr(YY, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(rY),
-          IY = rY,
-          RY = AY.openStart;
+      static spans(TT, oT, IT, iT) {
+        let zT = new yo(TT, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(oT),
+          kT = oT,
+          WT = zT.openStart;
         for (;;) {
-          let YY = Math.min(AY.to, DY);
-          if (AY.point) {
-            let DY = AY.activeForPoint(AY.to),
-              OY = AY.pointFrom < rY ? DY.length + 1 : AY.point.startSide < 0 ? DY.length : Math.min(DY.length, RY);
-            FY.point(IY, YY, AY.point, DY, OY, AY.pointRank), RY = Math.min(AY.openEnd(YY), DY.length)
-          } else YY > IY && (FY.span(IY, YY, AY.active, RY), RY = AY.openEnd(YY));
-          if (AY.to > DY) return RY + (AY.point && AY.to > DY ? 1 : 0);
-          IY = AY.to, AY.next()
+          let TT = Math.min(zT.to, IT);
+          if (zT.point) {
+            let IT = zT.activeForPoint(zT.to),
+              XT = zT.pointFrom < oT ? IT.length + 1 : zT.point.startSide < 0 ? IT.length : Math.min(IT.length, WT);
+            iT.point(kT, TT, zT.point, IT, XT, zT.pointRank), WT = Math.min(zT.openEnd(TT), IT.length)
+          } else TT > kT && (iT.span(kT, TT, zT.active, WT), WT = zT.openEnd(TT));
+          if (zT.to > IT) return WT + (zT.point && zT.to > IT ? 1 : 0);
+          kT = zT.to, zT.next()
         }
       }
-      static of (YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          DY = new Xr;
-        for (let FY of YY instanceof Jr ? [YY] : rY ? function(YY) {
-            if (YY.length > 1)
-              for (let rY = YY[0], DY = 1; DY < YY.length; DY++) {
-                let FY = YY[DY];
-                if (Mr(rY, FY) > 0) return YY.slice().sort(Mr);
-                rY = FY
+      static of (TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          IT = new so;
+        for (let iT of TT instanceof Ho ? [TT] : oT ? function(TT) {
+            if (TT.length > 1)
+              for (let oT = TT[0], IT = 1; IT < TT.length; IT++) {
+                let iT = TT[IT];
+                if (no(oT, iT) > 0) return TT.slice().sort(no);
+                oT = iT
               }
-            return YY
-          }(YY) : YY) DY.add(FY.from, FY.to, FY.value);
-        return DY.finish()
+            return TT
+          }(TT) : TT) IT.add(iT.from, iT.to, iT.value);
+        return IT.finish()
       }
-      static join(YY) {
-        if (!YY.length) return br.empty;
-        let rY = YY[YY.length - 1];
-        for (let DY = YY.length - 2; DY >= 0; DY--)
-          for (let FY = YY[DY]; FY != br.empty; FY = FY.nextLayer) rY = new br(FY.chunkPos, FY.chunk, rY, Math.max(FY.SDY, rY.SDY));
-        return rY
+      static join(TT) {
+        if (!TT.length) return Zo.empty;
+        let oT = TT[TT.length - 1];
+        for (let IT = TT.length - 2; IT >= 0; IT--)
+          for (let iT = TT[IT]; iT != Zo.empty; iT = iT.nextLayer) oT = new Zo(iT.chunkPos, iT.chunk, oT, Math.max(iT.yIT, oT.yIT));
+        return oT
       }
     }
-    br.empty = new br([], [], null, -1), br.empty.nextLayer = br.empty;
-    class Xr {
-      finishChunk(YY) {
-        this.chunks.push(new wr(this.from, this.to, this.value, this.SDY)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.SDY), this.SDY = -1, YY && (this.from = [], this.to = [], this.value = [])
+    Zo.empty = new Zo([], [], null, -1), Zo.empty.nextLayer = Zo.empty;
+    class so {
+      finishChunk(TT) {
+        this.chunks.push(new qo(this.from, this.to, this.value, this.yIT)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.yIT), this.yIT = -1, TT && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.SDY = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.yIT = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(YY, rY, DY) {
-        this.addInner(YY, rY, DY) || (this.nextLayer || (this.nextLayer = new Xr)).add(YY, rY, DY)
+      add(TT, oT, IT) {
+        this.addInner(TT, oT, IT) || (this.nextLayer || (this.nextLayer = new so)).add(TT, oT, IT)
       }
-      addInner(YY, rY, DY) {
-        let FY = YY - this.lastTo || DY.startSide - this.last.endSide;
-        if (FY <= 0 && (YY - this.lastFrom || DY.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(FY < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = YY), this.from.push(YY - this.chunkStart), this.to.push(rY - this.chunkStart), this.last = DY, this.lastFrom = YY, this.lastTo = rY, this.value.push(DY), DY.point && (this.SDY = Math.max(this.SDY, rY - YY)), !0)
+      addInner(TT, oT, IT) {
+        let iT = TT - this.lastTo || IT.startSide - this.last.endSide;
+        if (iT <= 0 && (TT - this.lastFrom || IT.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(iT < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = TT), this.from.push(TT - this.chunkStart), this.to.push(oT - this.chunkStart), this.last = IT, this.lastFrom = TT, this.lastTo = oT, this.value.push(IT), IT.point && (this.yIT = Math.max(this.yIT, oT - TT)), !0)
       }
-      addChunk(YY, rY) {
-        if ((YY - this.lastTo || rY.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, rY.SDY), this.chunks.push(rY), this.chunkPos.push(YY);
-        let DY = rY.value.length - 1;
-        return this.last = rY.value[DY], this.lastFrom = rY.from[DY] + YY, this.lastTo = rY.to[DY] + YY, !0
+      addChunk(TT, oT) {
+        if ((TT - this.lastTo || oT.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, oT.yIT), this.chunks.push(oT), this.chunkPos.push(TT);
+        let IT = oT.value.length - 1;
+        return this.last = oT.value[IT], this.lastFrom = oT.from[IT] + TT, this.lastTo = oT.to[IT] + TT, !0
       }
       finish() {
-        return this.finishInner(br.empty)
+        return this.finishInner(Zo.empty)
       }
-      finishInner(YY) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return YY;
-        let rY = br.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(YY) : YY, this.setMaxPoint);
-        return this.from = null, rY
+      finishInner(TT) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return TT;
+        let oT = Zo.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(TT) : TT, this.setMaxPoint);
+        return this.from = null, oT
       }
     }
 
-    function qr(YY, rY, DY) {
-      let FY = new Map;
-      for (let IY of YY)
-        for (let YY = 0; YY < IY.chunk.length; YY++) IY.chunk[YY].SDY <= 0 && FY.set(IY.chunk[YY], IY.chunkPos[YY]);
-      let AY = new Set;
-      for (let IY of rY)
-        for (let YY = 0; YY < IY.chunk.length; YY++) {
-          let rY = FY.get(IY.chunk[YY]);
-          null == rY || (DY ? DY.mapPos(rY) : rY) != IY.chunkPos[YY] || (null === DY || void 0 === DY ? void 0 : DY.touchesRange(rY, rY + IY.chunk[YY].length)) || AY.add(IY.chunk[YY])
+    function to(TT, oT, IT) {
+      let iT = new Map;
+      for (let kT of TT)
+        for (let TT = 0; TT < kT.chunk.length; TT++) kT.chunk[TT].yIT <= 0 && iT.set(kT.chunk[TT], kT.chunkPos[TT]);
+      let zT = new Set;
+      for (let kT of oT)
+        for (let TT = 0; TT < kT.chunk.length; TT++) {
+          let oT = iT.get(kT.chunk[TT]);
+          null == oT || (IT ? IT.mapPos(oT) : oT) != kT.chunkPos[TT] || (null === IT || void 0 === IT ? void 0 : IT.touchesRange(oT, oT + kT.chunk[TT].length)) || zT.add(kT.chunk[TT])
         }
-      return AY
+      return zT
     }
-    class pr {
-      constructor(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = YY, this.skip = rY, this.lDY = DY, this.rank = FY
+    class Go {
+      constructor(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = TT, this.skip = oT, this.NIT = IT, this.rank = iT
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(YY, rY, !1), this
+      goto(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(TT, oT, !1), this
       }
-      gotoInner(YY, rY, DY) {
+      gotoInner(TT, oT, IT) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let rY = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(rY) || this.layer.chunkEnd(this.chunkIndex) < YY || rY.SDY < this.lDY)) break;
-          this.chunkIndex++, DY = !1
+          let oT = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(oT) || this.layer.chunkEnd(this.chunkIndex) < TT || oT.yIT < this.NIT)) break;
+          this.chunkIndex++, IT = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let FY = this.layer.chunk[this.chunkIndex].findIndex(YY - this.layer.chunkPos[this.chunkIndex], rY, !0);
-          (!DY || this.rangeIndex < FY) && this.setRangeIndex(FY)
+          let iT = this.layer.chunk[this.chunkIndex].findIndex(TT - this.layer.chunkPos[this.chunkIndex], oT, !0);
+          (!IT || this.rangeIndex < iT) && this.setRangeIndex(iT)
         }
         this.next()
       }
-      forward(YY, rY) {
-        (this.to - YY || this.endSide - rY) < 0 && this.gotoInner(YY, rY, !0)
+      forward(TT, oT) {
+        (this.to - TT || this.endSide - oT) < 0 && this.gotoInner(TT, oT, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let YY = this.layer.chunkPos[this.chunkIndex],
-              rY = this.layer.chunk[this.chunkIndex],
-              DY = YY + rY.from[this.rangeIndex];
-            if (this.from = DY, this.to = YY + rY.to[this.rangeIndex], this.value = rY.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.lDY < 0 || this.value.point && this.to - this.from >= this.lDY) break
+            let TT = this.layer.chunkPos[this.chunkIndex],
+              oT = this.layer.chunk[this.chunkIndex],
+              IT = TT + oT.from[this.rangeIndex];
+            if (this.from = IT, this.to = TT + oT.to[this.rangeIndex], this.value = oT.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.NIT < 0 || this.value.point && this.to - this.from >= this.NIT) break
           }
         }
       }
-      setRangeIndex(YY) {
-        if (YY == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(TT) {
+        if (TT == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = YY
+        } else this.rangeIndex = TT
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(YY) {
-        return this.from - YY.from || this.startSide - YY.startSide || this.rank - YY.rank || this.to - YY.to || this.endSide - YY.endSide
+      compare(TT) {
+        return this.from - TT.from || this.startSide - TT.startSide || this.rank - TT.rank || this.to - TT.to || this.endSide - TT.endSide
       }
     }
-    class kr {
-      constructor(YY) {
-        this.heap = YY
+    class po {
+      constructor(TT) {
+        this.heap = TT
       }
-      static from(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          FY = [];
-        for (let AY = 0; AY < YY.length; AY++)
-          for (let IY = YY[AY]; !IY.Ey; IY = IY.nextLayer) IY.SDY >= DY && FY.push(new pr(IY, rY, DY, AY));
-        return 1 == FY.length ? FY[0] : new kr(FY)
+      static from(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          iT = [];
+        for (let zT = 0; zT < TT.length; zT++)
+          for (let kT = TT[zT]; !kT.Mc; kT = kT.nextLayer) kT.yIT >= IT && iT.push(new Go(kT, oT, IT, zT));
+        return 1 == iT.length ? iT[0] : new po(iT)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let DY of this.heap) DY.goto(YY, rY);
-        for (let DY = this.heap.length >> 1; DY >= 0; DY--) Gr(this.heap, DY);
+      goto(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let IT of this.heap) IT.goto(TT, oT);
+        for (let IT = this.heap.length >> 1; IT >= 0; IT--) bo(this.heap, IT);
         return this.next(), this
       }
-      forward(YY, rY) {
-        for (let DY of this.heap) DY.forward(YY, rY);
-        for (let DY = this.heap.length >> 1; DY >= 0; DY--) Gr(this.heap, DY);
-        (this.to - YY || this.value.endSide - rY) < 0 && this.next()
+      forward(TT, oT) {
+        for (let IT of this.heap) IT.forward(TT, oT);
+        for (let IT = this.heap.length >> 1; IT >= 0; IT--) bo(this.heap, IT);
+        (this.to - TT || this.value.endSide - oT) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let YY = this.heap[0];
-          this.from = YY.from, this.to = YY.to, this.value = YY.value, this.rank = YY.rank, YY.value && YY.next(), Gr(this.heap, 0)
+          let TT = this.heap[0];
+          this.from = TT.from, this.to = TT.to, this.value = TT.value, this.rank = TT.rank, TT.value && TT.next(), bo(this.heap, 0)
         }
       }
     }
 
-    function Gr(YY, rY) {
-      for (let DY = YY[rY];;) {
-        let FY = 1 + (rY << 1);
-        if (FY >= YY.length) break;
-        let AY = YY[FY];
-        if (FY + 1 < YY.length && AY.compare(YY[FY + 1]) >= 0 && (AY = YY[FY + 1], FY++), DY.compare(AY) < 0) break;
-        YY[FY] = DY, YY[rY] = AY, rY = FY
+    function bo(TT, oT) {
+      for (let IT = TT[oT];;) {
+        let iT = 1 + (oT << 1);
+        if (iT >= TT.length) break;
+        let zT = TT[iT];
+        if (iT + 1 < TT.length && zT.compare(TT[iT + 1]) >= 0 && (zT = TT[iT + 1], iT++), IT.compare(zT) < 0) break;
+        TT[iT] = IT, TT[oT] = zT, oT = iT
       }
     }
-    class xr {
-      constructor(YY, rY, DY) {
-        this.lDY = DY, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = kr.from(YY, rY, DY)
+    class yo {
+      constructor(TT, oT, IT) {
+        this.NIT = IT, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = po.from(TT, oT, IT)
       }
-      goto(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(YY, rY), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = YY, this.endSide = rY, this.openStart = -1, this.next(), this
+      goto(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(TT, oT), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = TT, this.endSide = oT, this.openStart = -1, this.next(), this
       }
-      forward(YY, rY) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - YY || this.active[this.minActive].endSide - rY) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(YY, rY)
+      forward(TT, oT) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - TT || this.active[this.minActive].endSide - oT) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(TT, oT)
       }
-      removeActive(YY) {
-        Ur(this.active, YY), Ur(this.activeTo, YY), Ur(this.activeRank, YY), this.minActive = tr(this.active, this.activeTo)
+      removeActive(TT) {
+        Vo(this.active, TT), Vo(this.activeTo, TT), Vo(this.activeRank, TT), this.minActive = oI(this.active, this.activeTo)
       }
-      addActive(YY) {
-        let rY = 0,
+      addActive(TT) {
+        let oT = 0,
           {
-            value: DY,
-            to: FY,
-            rank: AY
+            value: IT,
+            to: iT,
+            rank: zT
           } = this.cursor;
-        for (; rY < this.activeRank.length && (AY - this.activeRank[rY] || FY - this.activeTo[rY]) > 0;) rY++;
-        Lr(this.active, rY, DY), Lr(this.activeTo, rY, FY), Lr(this.activeRank, rY, AY), YY && Lr(YY, rY, this.cursor.from), this.minActive = tr(this.active, this.activeTo)
+        for (; oT < this.activeRank.length && (zT - this.activeRank[oT] || iT - this.activeTo[oT]) > 0;) oT++;
+        TI(this.active, oT, IT), TI(this.activeTo, oT, iT), TI(this.activeRank, oT, zT), TT && TI(TT, oT, this.cursor.from), this.minActive = oI(this.active, this.activeTo)
       }
       next() {
-        let YY = this.to,
-          rY = this.point;
+        let TT = this.to,
+          oT = this.point;
         this.point = null;
-        let DY = this.openStart < 0 ? [] : null;
+        let IT = this.openStart < 0 ? [] : null;
         for (;;) {
-          let FY = this.minActive;
-          if (FY > -1 && (this.activeTo[FY] - this.cursor.from || this.active[FY].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[FY] > YY) {
-              this.to = this.activeTo[FY], this.endSide = this.active[FY].endSide;
+          let iT = this.minActive;
+          if (iT > -1 && (this.activeTo[iT] - this.cursor.from || this.active[iT].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[iT] > TT) {
+              this.to = this.activeTo[iT], this.endSide = this.active[iT].endSide;
               break
             }
-            this.removeActive(FY), DY && Ur(DY, FY)
+            this.removeActive(iT), IT && Vo(IT, iT)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > YY) {
+            if (this.cursor.from > TT) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let YY = this.cursor.value;
-              if (YY.point) {
-                if (!(rY && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = YY, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = YY.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let TT = this.cursor.value;
+              if (TT.point) {
+                if (!(oT && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = TT, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = TT.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(DY), this.cursor.next()
+              } else this.addActive(IT), this.cursor.next()
             }
           }
         }
-        if (DY) {
+        if (IT) {
           this.openStart = 0;
-          for (let rY = DY.length - 1; rY >= 0 && DY[rY] < YY; rY--) this.openStart++
+          for (let oT = IT.length - 1; oT >= 0 && IT[oT] < TT; oT--) this.openStart++
         }
       }
-      activeForPoint(YY) {
+      activeForPoint(TT) {
         if (!this.active.length) return this.active;
-        let rY = [];
-        for (let DY = this.active.length - 1; DY >= 0 && !(this.activeRank[DY] < this.pointRank); DY--)(this.activeTo[DY] > YY || this.activeTo[DY] == YY && this.active[DY].endSide >= this.point.endSide) && rY.push(this.active[DY]);
-        return rY.reverse()
+        let oT = [];
+        for (let IT = this.active.length - 1; IT >= 0 && !(this.activeRank[IT] < this.pointRank); IT--)(this.activeTo[IT] > TT || this.activeTo[IT] == TT && this.active[IT].endSide >= this.point.endSide) && oT.push(this.active[IT]);
+        return oT.reverse()
       }
-      openEnd(YY) {
-        let rY = 0;
-        for (let DY = this.activeTo.length - 1; DY >= 0 && this.activeTo[DY] > YY; DY--) rY++;
-        return rY
-      }
-    }
-
-    function nr(YY, rY, DY, FY, AY, IY) {
-      YY.goto(rY), DY.goto(FY);
-      let RY = FY + AY,
-        OY = FY,
-        gY = FY - rY,
-        aY = !!IY.boundChange;
-      for (let vY = !1;;) {
-        let rY = YY.to + gY - DY.to,
-          FY = rY || YY.endSide - DY.endSide,
-          AY = FY < 0 ? YY.to + gY : DY.to,
-          uY = Math.min(AY, RY);
-        if (YY.point || DY.point ? (YY.point && DY.point && dr(YY.point, DY.point) && Pr(YY.activeForPoint(YY.to), DY.activeForPoint(DY.to)) || IY.comparePoint(OY, uY, YY.point, DY.point), vY = !1) : (vY && IY.boundChange(OY), uY > OY && !Pr(YY.active, DY.active) && IY.compareRange(OY, uY, YY.active, DY.active), aY && uY < RY && (rY || YY.openEnd(AY) != DY.openEnd(AY)) && (vY = !0)), AY > RY) break;
-        OY = AY, FY <= 0 && YY.next(), FY >= 0 && DY.next()
+      openEnd(TT) {
+        let oT = 0;
+        for (let IT = this.activeTo.length - 1; IT >= 0 && this.activeTo[IT] > TT; IT--) oT++;
+        return oT
       }
     }
 
-    function Pr(YY, rY) {
-      if (YY.length != rY.length) return !1;
-      for (let DY = 0; DY < YY.length; DY++)
-        if (YY[DY] != rY[DY] && !dr(YY[DY], rY[DY])) return !1;
+    function No(TT, oT, IT, iT, zT, kT) {
+      TT.goto(oT), IT.goto(iT);
+      let WT = iT + zT,
+        XT = iT,
+        BT = iT - oT,
+        FT = !!kT.boundChange;
+      for (let ST = !1;;) {
+        let oT = TT.to + BT - IT.to,
+          iT = oT || TT.endSide - IT.endSide,
+          zT = iT < 0 ? TT.to + BT : IT.to,
+          DT = Math.min(zT, WT);
+        if (TT.point || IT.point ? (TT.point && IT.point && Oo(TT.point, IT.point) && Po(TT.activeForPoint(TT.to), IT.activeForPoint(IT.to)) || kT.comparePoint(XT, DT, TT.point, IT.point), ST = !1) : (ST && kT.boundChange(XT), DT > XT && !Po(TT.active, IT.active) && kT.compareRange(XT, DT, TT.active, IT.active), FT && DT < WT && (oT || TT.openEnd(zT) != IT.openEnd(zT)) && (ST = !0)), zT > WT) break;
+        XT = zT, iT <= 0 && TT.next(), iT >= 0 && IT.next()
+      }
+    }
+
+    function Po(TT, oT) {
+      if (TT.length != oT.length) return !1;
+      for (let IT = 0; IT < TT.length; IT++)
+        if (TT[IT] != oT[IT] && !Oo(TT[IT], oT[IT])) return !1;
       return !0
     }
 
-    function Ur(YY, rY) {
-      for (let DY = rY, FY = YY.length - 1; DY < FY; DY++) YY[DY] = YY[DY + 1];
-      YY.pop()
+    function Vo(TT, oT) {
+      for (let IT = oT, iT = TT.length - 1; IT < iT; IT++) TT[IT] = TT[IT + 1];
+      TT.pop()
     }
 
-    function Lr(YY, rY, DY) {
-      for (let FY = YY.length - 1; FY >= rY; FY--) YY[FY + 1] = YY[FY];
-      YY[rY] = DY
+    function TI(TT, oT, IT) {
+      for (let iT = TT.length - 1; iT >= oT; iT--) TT[iT + 1] = TT[iT];
+      TT[oT] = IT
     }
 
-    function tr(YY, rY) {
-      let DY = -1,
-        FY = 1e9;
-      for (let AY = 0; AY < rY.length; AY++)(rY[AY] - FY || YY[AY].endSide - YY[DY].endSide) < 0 && (DY = AY, FY = rY[AY]);
-      return DY
+    function oI(TT, oT) {
+      let IT = -1,
+        iT = 1e9;
+      for (let zT = 0; zT < oT.length; zT++)(oT[zT] - iT || TT[zT].endSide - TT[IT].endSide) < 0 && (IT = zT, iT = oT[zT]);
+      return IT
     }
 
-    function YD(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YY.length,
-        FY = 0;
-      for (let AY = 0; AY < DY && AY < YY.length;) 9 == YY.charCodeAt(AY) ? (FY += rY - FY % rY, AY++) : (FY++, AY = NY(YY, AY));
-      return FY
+    function II(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TT.length,
+        iT = 0;
+      for (let zT = 0; zT < IT && zT < TT.length;) 9 == TT.charCodeAt(zT) ? (iT += oT - iT % oT, zT++) : (iT++, zT = uT(TT, zT));
+      return iT
     }
 
-    function rD(YY, rY, DY, FY) {
-      for (let AY = 0, IY = 0;;) {
-        if (IY >= rY) return AY;
-        if (AY == YY.length) break;
-        IY += 9 == YY.charCodeAt(AY) ? DY - IY % DY : 1, AY = NY(YY, AY)
+    function iI(TT, oT, IT, iT) {
+      for (let zT = 0, kT = 0;;) {
+        if (kT >= oT) return zT;
+        if (zT == TT.length) break;
+        kT += 9 == TT.charCodeAt(zT) ? IT - kT % IT : 1, zT = uT(TT, zT)
       }
-      return !0 === FY ? -1 : YY.length
+      return !0 === iT ? -1 : TT.length
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

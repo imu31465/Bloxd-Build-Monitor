@@ -1,30 +1,30 @@
 export const id = 73;
 export const ids = [73];
 export const modules = {
-  4267: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => vY
+  4186: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => ST
     });
-    var FY = DY(19),
-      AY = DY(25),
-      IY = DY(1287),
-      RY = DY(2565);
-    const OY = 3e4,
-      gY = 1e3;
+    var iT = IT(12),
+      zT = IT(16),
+      kT = IT(1253),
+      WT = IT(2541);
+    const XT = 3e4,
+      BT = 1e3;
 
-    function aY() {
-      return "visible" === document.visibilityState && "inGame" === FY.b.get("gameState") && (0, IY.l)()
+    function FT() {
+      return "visible" === document.visibilityState && "inGame" === iT.c.get("gameState") && (0, kT.q)()
     }
 
-    function vY(YY, rY) {
-      (0, RY.s)() || function(YY, rY, DY) {
-        let FY = 0;
-        const AY = setInterval((() => {
-          rY() && (FY += gY, FY >= YY && (clearInterval(AY), DY()))
-        }), gY)
-      }(OY, aY, (() => {
-        rY().then((() => {
-          YY(`saved for the player after ${OY/1e3} s of play`), (0, RY.C)(), AY.g.vo("chat", {
+    function ST(TT, oT) {
+      (0, WT.s)() || function(TT, oT, IT) {
+        let iT = 0;
+        const zT = setInterval((() => {
+          oT() && (iT += BT, iT >= TT && (clearInterval(zT), IT()))
+        }), BT)
+      }(XT, FT, (() => {
+        oT().then((() => {
+          TT(`saved for the player after ${XT/1e3} s of play`), (0, WT.B)(), zT.h.XM("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,304 +36,304 @@ export const modules = {
       }))
     }
   },
-  8629: (YY, rY, DY) => {
-    function FY(YY, rY) {
-      return 0 === YY.length ? 0 : YY[Math.min(YY.length - 1, Math.floor(rY * YY.length))]
+  8636: (TT, oT, IT) => {
+    function iT(TT, oT) {
+      return 0 === TT.length ? 0 : TT[Math.min(TT.length - 1, Math.floor(oT * TT.length))]
     }
-    DY.d(rY, {
-      d: () => FY
+    IT.d(oT, {
+      b: () => iT
     })
   },
-  37279: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => aY,
-      e: () => vY,
-      i: () => VY,
-      l: () => mY,
-      o: () => EY
+  36890: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => FT,
+      h: () => ST,
+      j: () => hT,
+      k: () => gT,
+      m: () => AT
     });
-    var FY = DY(4267),
-      AY = DY(8629),
-      IY = DY(2565);
-    const RY = 20,
-      OY = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "gu", "jobMs"];
+    var iT = IT(4186),
+      zT = IT(8636),
+      kT = IT(2541);
+    const WT = 20,
+      XT = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "fD", "jobMs"];
 
-    function gY(YY) {
-      return [...YY].sort(((YY, rY) => YY - rY))
+    function BT(TT) {
+      return [...TT].sort(((TT, oT) => TT - oT))
     }
-    const aY = [];
+    const FT = [];
 
-    function vY(YY, rY, DY) {
-      return `${YY},${rY},${DY}`
+    function ST(TT, oT, IT) {
+      return `${TT},${oT},${IT}`
     }
-    class uY {
+    class DT {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(YY, rY) {
-        var DY;
-        const FY = null !== (DY = this.pending.get(YY)) && void 0 !== DY ? DY : [];
-        FY.push({
-          editAt: rY,
+      edit(TT, oT) {
+        var IT;
+        const iT = null !== (IT = this.pending.get(TT)) && void 0 !== IT ? IT : [];
+        iT.push({
+          editAt: oT,
           meshJobId: 0
-        }), this.pending.set(YY, FY)
+        }), this.pending.set(TT, iT)
       }
-      frame(YY) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, YY - this.lastFrameAt)), this.lastFrameAt = YY, this.frames++, YY - this.windowStart >= 1e3 && this.summarise(YY)
+      frame(TT) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, TT - this.lastFrameAt)), this.lastFrameAt = TT, this.frames++, TT - this.windowStart >= 1e3 && this.summarise(TT)
       }
-      sent(YY, rY, DY, FY, AY, IY, RY) {
-        this.jobs.set(rY, {
-          sentAt: RY,
+      sent(TT, oT, IT, iT, zT, kT, WT) {
+        this.jobs.set(oT, {
+          sentAt: WT,
           receivedAt: 0,
-          ahead: DY,
-          inFlight: FY,
-          gu: AY,
+          ahead: IT,
+          inFlight: iT,
+          fD: zT,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, DY), this.maxCapacity = Math.max(this.maxCapacity, AY);
-        for (const gY of null !== (OY = this.pending.get(YY)) && void 0 !== OY ? OY : []) {
-          var OY;
-          IY.includes(gY.meshJobId) || (gY.meshJobId = rY)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, IT), this.maxCapacity = Math.max(this.maxCapacity, zT);
+        for (const BT of null !== (XT = this.pending.get(TT)) && void 0 !== XT ? XT : []) {
+          var XT;
+          kT.includes(BT.meshJobId) || (BT.meshJobId = oT)
         }
       }
-      received(YY, rY, DY) {
-        const FY = this.jobs.get(YY);
-        void 0 !== FY && (this.roundTrips.push(DY - FY.sentAt), FY.receivedAt = DY, FY.jobMs = rY)
+      received(TT, oT, IT) {
+        const iT = this.jobs.get(TT);
+        void 0 !== iT && (this.roundTrips.push(IT - iT.sentAt), iT.receivedAt = IT, iT.jobMs = oT)
       }
-      failed(YY) {
-        this.jobs.delete(YY)
+      failed(TT) {
+        this.jobs.delete(TT)
       }
-      reassign(YY, rY, DY) {
-        this.jobs.delete(rY);
-        for (const AY of null !== (FY = this.pending.get(YY)) && void 0 !== FY ? FY : []) {
-          var FY;
-          AY.meshJobId === rY && (AY.meshJobId = DY)
+      reassign(TT, oT, IT) {
+        this.jobs.delete(oT);
+        for (const zT of null !== (iT = this.pending.get(TT)) && void 0 !== iT ? iT : []) {
+          var iT;
+          zT.meshJobId === oT && (zT.meshJobId = IT)
         }
       }
-      applied(YY, rY, DY) {
-        const FY = this.jobs.get(rY);
-        this.jobs.delete(rY), void 0 !== FY && this.show(YY, FY, DY, (YY => YY.meshJobId === rY))
+      applied(TT, oT, IT) {
+        const iT = this.jobs.get(oT);
+        this.jobs.delete(oT), void 0 !== iT && this.show(TT, iT, IT, (TT => TT.meshJobId === oT))
       }
-      emptied(YY, rY) {
-        const DY = {
-          sentAt: rY,
-          receivedAt: rY,
+      emptied(TT, oT) {
+        const IT = {
+          sentAt: oT,
+          receivedAt: oT,
           ahead: 0,
           inFlight: 0,
-          gu: 0,
+          fD: 0,
           jobMs: 0
         };
-        this.show(YY, DY, rY, (() => !0))
+        this.show(TT, IT, oT, (() => !0))
       }
-      show(YY, rY, DY, FY) {
-        const AY = this.pending.get(YY);
-        if (!AY) return;
-        const IY = AY.filter((AY => !FY(AY) || (this.record(YY, AY.editAt, rY, DY), !1)));
-        IY.length > 0 ? this.pending.set(YY, IY) : this.pending.delete(YY)
+      show(TT, oT, IT, iT) {
+        const zT = this.pending.get(TT);
+        if (!zT) return;
+        const kT = zT.filter((zT => !iT(zT) || (this.record(TT, zT.editAt, oT, IT), !1)));
+        kT.length > 0 ? this.pending.set(TT, kT) : this.pending.delete(TT)
       }
-      gy(YY) {
-        this.reported += YY, this === iY && this.reported >= RY && null !== yY && (yY(), yY = null)
+      Bc(TT) {
+        this.reported += TT, this === xT && this.reported >= WT && null !== cT && (cT(), cT = null)
       }
-      record(YY, rY, DY, FY) {
-        const AY = {
-          totalMs: FY - rY,
-          slotMs: DY.sentAt - rY,
-          workerMs: DY.receivedAt - DY.sentAt,
-          applyMs: FY - DY.receivedAt,
-          ahead: DY.ahead,
-          inFlight: DY.inFlight,
-          gu: DY.gu,
-          jobMs: DY.jobMs
+      record(TT, oT, IT, iT) {
+        const zT = {
+          totalMs: iT - oT,
+          slotMs: IT.sentAt - oT,
+          workerMs: IT.receivedAt - IT.sentAt,
+          applyMs: iT - IT.receivedAt,
+          ahead: IT.ahead,
+          inFlight: IT.inFlight,
+          fD: IT.fD,
+          jobMs: IT.jobMs
         };
-        if (this.edits[this.nextEdit] = AY, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(AY.totalMs), this.gy(1), AY.totalMs < 100 || ++this.outliers > 5) return;
-        const RY = YY => Math.round(YY);
-        (0, IY.n)("remesh", `slow edit (${YY}) shown in ${RY(AY.totalMs)} ms: slot ${RY(AY.slotMs)}, worker ${RY(AY.workerMs)} (${AY.ahead} ahead, ${AY.inFlight}/${AY.gu} in flight; job ${RY(AY.jobMs)}), apply ${RY(AY.applyMs)}`)
+        if (this.edits[this.nextEdit] = zT, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(zT.totalMs), this.Bc(1), zT.totalMs < 100 || ++this.outliers > 5) return;
+        const WT = TT => Math.round(TT);
+        (0, kT.l)("remesh", `slow edit (${TT}) shown in ${WT(zT.totalMs)} ms: slot ${WT(zT.slotMs)}, worker ${WT(zT.workerMs)} (${zT.ahead} ahead, ${zT.inFlight}/${zT.fD} in flight; job ${WT(zT.jobMs)}), apply ${WT(zT.applyMs)}`)
       }
-      summarise(YY) {
-        const rY = (YY - this.windowStart) / 1e3;
-        for (const [DY, FY] of this.pending) {
-          const rY = FY.filter((rY => YY - rY.editAt <= 1e4));
-          this.gaveUp += FY.length - rY.length, this.gy(FY.length - rY.length), rY.length > 0 ? this.pending.set(DY, rY) : this.pending.delete(DY)
+      summarise(TT) {
+        const oT = (TT - this.windowStart) / 1e3;
+        for (const [IT, iT] of this.pending) {
+          const oT = iT.filter((oT => TT - oT.editAt <= 1e4));
+          this.gaveUp += iT.length - oT.length, this.Bc(iT.length - oT.length), oT.length > 0 ? this.pending.set(IT, oT) : this.pending.delete(IT)
         }
-        for (const [DY, FY] of this.jobs) YY - FY.sentAt > (FY.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(DY);
+        for (const [IT, iT] of this.jobs) TT - iT.sentAt > (iT.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(IT);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const YY = gY(this.roundTrips),
-            DY = gY(this.windowEdits),
-            FY = Math.max(0, this.outliers - 5);
-          (0, IY.n)("remesh", `${Math.round(this.frames/rY)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,AY.d)(YY,.5))} max ${Math.round((0,AY.d)(YY,1))} ms | ${DY.length} edits shown, p50 ${Math.round((0,AY.d)(DY,.5))} max ${Math.round((0,AY.d)(DY,1))} ms${FY>0?`, ${FY} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const TT = BT(this.roundTrips),
+            IT = BT(this.windowEdits),
+            iT = Math.max(0, this.outliers - 5);
+          (0, kT.l)("remesh", `${Math.round(this.frames/oT)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,zT.b)(TT,.5))} max ${Math.round((0,zT.b)(TT,1))} ms | ${IT.length} edits shown, p50 ${Math.round((0,zT.b)(IT,.5))} max ${Math.round((0,zT.b)(IT,1))} ms${iT>0?`, ${iT} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = YY, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = TT, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const YY = OY.map((YY => {
-          const rY = gY(this.edits.map((rY => rY[YY])));
-          return `${YY}: p50 ${Math.round((0,AY.d)(rY,.5))} p90 ${Math.round((0,AY.d)(rY,.9))} max ${Math.round((0,AY.d)(rY,1))}`
+        const TT = XT.map((TT => {
+          const oT = BT(this.edits.map((oT => oT[TT])));
+          return `${TT}: p50 ${Math.round((0,zT.b)(oT,.5))} p90 ${Math.round((0,zT.b)(oT,.9))} max ${Math.round((0,zT.b)(oT,1))}`
         }));
-        return [`${this.edits.length} edits`, ...YY].join("\n")
+        return [`${this.edits.length} edits`, ...TT].join("\n")
       }
       dump() {
-        const YY = this.edits.map((YY => OY.map((rY => Math.round(10 * YY[rY]) / 10)).join(",")));
-        return [this.stats(), OY.join(","), ...YY].join("\n")
+        const TT = this.edits.map((TT => XT.map((oT => Math.round(10 * TT[oT]) / 10)).join(",")));
+        return [this.stats(), XT.join(","), ...TT].join("\n")
       }
     }
-    class sY {
-      constructor(YY, rY) {
-        this.log = YY, this.Gu = rY
+    class LT {
+      constructor(TT, oT) {
+        this.log = TT, this.FL = oT
       }
-      edit(YY, rY, DY) {
-        const [FY, AY, IY] = this.Gu.Mu.sFY(YY, rY, DY), RY = this.Gu.Mu.HQ.zQ(FY, AY, IY);
-        RY && RY.cQ && this.log.edit(vY(FY, AY, IY), performance.now())
+      edit(TT, oT, IT) {
+        const [iT, zT, kT] = this.FL.iL.qiT(TT, oT, IT), WT = this.FL.iL.vK.EK(iT, zT, kT);
+        WT && WT.RK && this.log.edit(ST(iT, zT, kT), performance.now())
       }
-      sent(YY, rY, DY, FY, AY) {
-        this.log.sent(vY(YY.i, YY.j, YY.k), rY, DY, FY, AY, aY, performance.now())
+      sent(TT, oT, IT, iT, zT) {
+        this.log.sent(ST(TT.i, TT.j, TT.k), oT, IT, iT, zT, FT, performance.now())
       }
-      received(YY) {
-        this.log.received(YY.meshJobId, YY.jobMs, performance.now())
+      received(TT) {
+        this.log.received(TT.meshJobId, TT.jobMs, performance.now())
       }
-      failed(YY) {
-        this.log.failed(YY)
+      failed(TT) {
+        this.log.failed(TT)
       }
-      applied(YY, rY) {
-        this.log.applied(vY(YY.i, YY.j, YY.k), rY, performance.now())
+      applied(TT, oT) {
+        this.log.applied(ST(TT.i, TT.j, TT.k), oT, performance.now())
       }
     }
-    let iY = null,
-      yY = null,
-      QY = !1,
-      oY = null;
+    let xT = null,
+      cT = null,
+      KT = !1,
+      MT = null;
 
-    function WY() {
-      return new Promise((YY => {
-        null !== iY && iY.reported >= RY ? YY() : yY = YY
+    function rT() {
+      return new Promise((TT => {
+        null !== xT && xT.reported >= WT ? TT() : cT = TT
       }))
     }
 
-    function EY() {
-      const YY = new uY;
-      return iY = YY, (0, IY.k)("remesh", (() => YY.dump())), (0, IY.e)("remeshStats", (() => {
-        console.log(YY.stats())
-      })), QY || (QY = !0, (0, FY.b)((YY => {
-        (0, IY.n)("remesh", YY)
-      }), WY)), YY
+    function AT() {
+      const TT = new DT;
+      return xT = TT, (0, kT.j)("remesh", (() => TT.dump())), (0, kT.e)("remeshStats", (() => {
+        console.log(TT.stats())
+      })), KT || (KT = !0, (0, iT.c)((TT => {
+        (0, kT.l)("remesh", TT)
+      }), rT)), TT
     }
 
-    function mY(YY) {
-      const rY = EY();
-      oY = new sY(rY, YY), YY.Zm.meshProbe = oY, YY.on("beforeRender", (() => {
-        rY.frame(performance.now())
+    function gT(TT) {
+      const oT = AT();
+      MT = new LT(oT, TT), TT.jR.meshProbe = MT, TT.on("beforeRender", (() => {
+        oT.frame(performance.now())
       }))
     }
 
-    function VY(YY, rY, DY) {
-      var FY;
-      null === (FY = oY) || void 0 === FY || FY.edit(YY, rY, DY)
+    function hT(TT, oT, IT) {
+      var iT;
+      null === (iT = MT) || void 0 === iT || iT.edit(TT, oT, IT)
     }
   },
-  37081: (YY, rY, DY) => {
-    function FY(YY) {
-      return "string" !== typeof YY || 2 !== YY.length && ":" !== YY[2] ? null : YY[0] + YY[1]
+  36687: (TT, oT, IT) => {
+    function iT(TT) {
+      return "string" !== typeof TT || 2 !== TT.length && ":" !== TT[2] ? null : TT[0] + TT[1]
     }
-    DY.d(rY, {
-      c: () => oY,
-      f: () => mY,
-      i: () => OY,
-      m: () => RY,
-      p: () => IY,
-      t: () => gY,
-      w: () => WY,
-      y: () => QY
+    IT.d(oT, {
+      e: () => MT,
+      h: () => gT,
+      l: () => XT,
+      o: () => WT,
+      q: () => kT,
+      s: () => BT,
+      u: () => rT,
+      x: () => KT
     });
-    const AY = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const zT = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function IY(YY) {
-      if (function(YY) {
-          for (let rY = 0; rY < AY.length; rY++)
-            if (YY === AY[rY]) return !0;
+    function kT(TT) {
+      if (function(TT) {
+          for (let oT = 0; oT < zT.length; oT++)
+            if (TT === zT[oT]) return !0;
           return !1
-        }(YY)) return !1;
-      const rY = FY(YY);
-      return "op" === rY || "ep" === rY || "wi" === rY || "pp" === rY || "fp:call" === YY || "fp:t" === YY
+        }(TT)) return !1;
+      const oT = iT(TT);
+      return "op" === oT || "ep" === oT || "wi" === oT || "pp" === oT || "fp:call" === TT || "fp:t" === TT
     }
 
-    function RY(YY) {
-      return "fp" === FY(YY) && !IY(YY)
+    function WT(TT) {
+      return "fp" === iT(TT) && !kT(TT)
     }
 
-    function OY(YY) {
-      if ("string" !== typeof YY) return !1;
-      return "o" === YY[0] && "p" === YY[1] && (2 === YY.length || ":" === YY[2]) || "fp:call" === YY || "2" === YY || "t" === YY || "a" === YY
+    function XT(TT) {
+      if ("string" !== typeof TT) return !1;
+      return "o" === TT[0] && "p" === TT[1] && (2 === TT.length || ":" === TT[2]) || "fp:call" === TT || "2" === TT || "t" === TT || "a" === TT
     }
 
-    function gY(YY, rY) {
-      return `~${function(YY){return YY.length<2?YY:":"===YY[1]?YY[0]:YY[0]+YY[1]}(rY)}~${YY}`
+    function BT(TT, oT) {
+      return `~${function(TT){return TT.length<2?TT:":"===TT[1]?TT[0]:TT[0]+TT[1]}(oT)}~${TT}`
     }
-    const aY = 200;
+    const FT = 200;
 
-    function vY(YY) {
-      let rY = YY.length - 1;
-      for (let DY = 0; DY < 2; DY++) {
-        const DY = rY;
-        for (; rY >= 0 && YY[rY] >= "0" && YY[rY] <= "9";) rY--;
-        if (rY < 0 || rY === DY || ":" !== YY[rY]) return -1;
-        rY--
+    function ST(TT) {
+      let oT = TT.length - 1;
+      for (let IT = 0; IT < 2; IT++) {
+        const IT = oT;
+        for (; oT >= 0 && TT[oT] >= "0" && TT[oT] <= "9";) oT--;
+        if (oT < 0 || oT === IT || ":" !== TT[oT]) return -1;
+        oT--
       }
-      return rY + 1
+      return oT + 1
     }
 
-    function uY(YY) {
-      return "unknown" === YY || vY(YY) >= 0
+    function DT(TT) {
+      return "unknown" === TT || ST(TT) >= 0
     }
 
-    function sY(YY, rY) {
-      return YY[rY] >= "\ud800" && YY[rY] <= "\udbff" && rY + 1 < YY.length && YY[rY + 1] >= "\udc00" && YY[rY + 1] <= "\udfff" ? 2 : 1
+    function LT(TT, oT) {
+      return TT[oT] >= "\ud800" && TT[oT] <= "\udbff" && oT + 1 < TT.length && TT[oT + 1] >= "\udc00" && TT[oT + 1] <= "\udfff" ? 2 : 1
     }
 
-    function iY(YY, rY, DY) {
-      return 2 === DY ? 4 : YY[rY] <= "\x7f" ? 1 : YY[rY] <= "\u07ff" ? 2 : 3
+    function xT(TT, oT, IT) {
+      return 2 === IT ? 4 : TT[oT] <= "\x7f" ? 1 : TT[oT] <= "\u07ff" ? 2 : 3
     }
 
-    function yY(YY, rY, DY) {
-      let FY = 0;
-      for (; FY < rY;) {
-        const rY = sY(YY, FY),
-          AY = iY(YY, FY, rY);
-        if (AY > DY) break;
-        DY -= AY, FY += rY
+    function cT(TT, oT, IT) {
+      let iT = 0;
+      for (; iT < oT;) {
+        const oT = LT(TT, iT),
+          zT = xT(TT, iT, oT);
+        if (zT > IT) break;
+        IT -= zT, iT += oT
       }
-      return FY
+      return iT
     }
 
-    function QY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof YY || YY.length > aY || !uY(YY)) return "t";
-      let DY = 2;
-      for (let OY = 0; OY < YY.length;) {
-        const rY = sY(YY, OY);
-        DY += iY(YY, OY, rY), OY += rY
+    function KT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof TT || TT.length > FT || !DT(TT)) return "t";
+      let IT = 2;
+      for (let XT = 0; XT < TT.length;) {
+        const oT = LT(TT, XT);
+        IT += xT(TT, XT, oT), XT += oT
       }
-      if (DY <= rY) return `t ${YY}`;
-      const FY = vY(YY),
-        AY = rY - 2 - (YY.length - FY);
-      if (AY < 0) return "t";
-      const IY = yY(YY, FY, AY);
-      let RY = "t ";
-      for (let OY = 0; OY < IY; OY++) RY += YY[OY];
-      for (let OY = FY; OY < YY.length; OY++) RY += YY[OY];
-      return RY
+      if (IT <= oT) return `t ${TT}`;
+      const iT = ST(TT),
+        zT = oT - 2 - (TT.length - iT);
+      if (zT < 0) return "t";
+      const kT = cT(TT, iT, zT);
+      let WT = "t ";
+      for (let XT = 0; XT < kT; XT++) WT += TT[XT];
+      for (let XT = iT; XT < TT.length; XT++) WT += TT[XT];
+      return WT
     }
-    const oY = 62;
+    const MT = 62;
 
-    function WY(YY) {
-      let rY = "so:";
-      const DY = yY(YY, YY.length, oY - rY.length);
-      for (let FY = 0; FY < DY; FY++) rY += YY[FY];
-      return rY
+    function rT(TT) {
+      let oT = "so:";
+      const IT = cT(TT, TT.length, MT - oT.length);
+      for (let iT = 0; iT < IT; iT++) oT += TT[iT];
+      return oT
     }
-    const EY = "BABYLON ";
+    const AT = "BABYLON ";
 
-    function mY(YY) {
-      return WY(EY + YY)
+    function gT(TT) {
+      return rT(AT + TT)
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

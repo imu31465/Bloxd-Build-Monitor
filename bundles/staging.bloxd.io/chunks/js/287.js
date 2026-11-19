@@ -1,11 +1,11 @@
 export const id = 287;
 export const ids = [287];
 export const modules = {
-  40466: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => FY
+  40194: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT
     });
-    const FY = String.raw`interface Map<K, V> {
+    const iT = String.raw`interface Map<K, V> {
     clear(): void;
     /**
      * @returns true if an element in the Map existed and has been removed, or false if the element does not exist.
@@ -6409,11 +6409,11 @@ interface Math {
     f16round(x: number): number;
 }`
   },
-  40457: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY
+  40191: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT
     });
-    const FY = String.raw`import type {
+    const iT = String.raw`import type {
 	GameApi,
 	Console,
 	EntityId,
@@ -7359,4 +7359,4 @@ export {}
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

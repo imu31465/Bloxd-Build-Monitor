@@ -1,157 +1,157 @@
 export const id = 282;
 export const ids = [282];
 export const modules = {
-  40323: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      CapeMaterialPlugin: () => VY,
-      HueTintMaterialPlugin: () => SY,
-      LifeformMaterialPlugin: () => lY,
-      OverlayMaterialPlugin: () => TY
+  40038: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      CapeMaterialPlugin: () => hT,
+      HueTintMaterialPlugin: () => wT,
+      LifeformMaterialPlugin: () => mT,
+      OverlayMaterialPlugin: () => eT
     });
-    var FY = DY(40327),
-      AY = DY(37353);
-    class IY extends((0, FY.d)(AY.c)) {}(0, FY.g)(AY.c, IY);
-    var RY = DY(36443);
-    class OY extends((0, FY.d)(RY.g)) {}(0, FY.g)(RY.g, OY);
-    var gY = DY(37189);
-    class aY extends((0, FY.d)(gY.f)) {}(0, FY.g)(gY.f, aY);
-    var vY = DY(36681),
-      uY = DY(39391),
-      sY = DY(36678);
-    class iY extends((0, FY.d)(sY.f)) {
-      constructor(YY, rY, DY) {
-        super(YY, rY, DY), (0, vY.g)(YY)
+    var iT = IT(40043),
+      zT = IT(36958);
+    class kT extends((0, iT.d)(zT.e)) {}(0, iT.f)(zT.e, kT);
+    var WT = IT(36034);
+    class XT extends((0, iT.d)(WT.f)) {}(0, iT.f)(WT.f, XT);
+    var BT = IT(36799);
+    class FT extends((0, iT.d)(BT.e)) {}(0, iT.f)(BT.e, FT);
+    var ST = IT(36263),
+      DT = IT(39038),
+      LT = IT(36261);
+    class xT extends((0, iT.d)(LT.f)) {
+      constructor(TT, oT, IT) {
+        super(TT, oT, IT), (0, ST.j)(TT)
       }
-      dispose(YY) {
-        (0, vY.h)(this._material), super.dispose(YY)
+      dispose(TT) {
+        (0, ST.n)(this._material), super.dispose(TT)
       }
-    }(0, FY.g)(sY.f, iY), (0, sY.j)({
-      disableUnusedSpecularTerm: FY.c,
-      isLightingDisabled: YY => YY instanceof uY.StandardMaterial && YY.disableLighting
+    }(0, iT.f)(LT.f, xT), (0, LT.g)({
+      disableUnusedSpecularTerm: iT.b,
+      isLightingDisabled: TT => TT instanceof DT.StandardMaterial && TT.disableLighting
     });
-    var yY = DY(38050);
-    class QY extends((0, FY.d)(yY.f)) {}(0, FY.g)(yY.f, QY);
-    var oY = DY(38154),
-      WY = DY(36597),
-      EY = DY(37527),
-      mY = DY(36490);
-    class VY extends((0, FY.d)(oY.e)) {}(0, FY.g)(oY.e, VY);
-    class SY extends((0, FY.d)(WY.c)) {}(0, FY.g)(WY.c, SY);
-    class lY extends((0, FY.d)(EY.n)) {}(0, FY.g)(EY.n, lY);
-    class TY extends((0, FY.d)(mY.e)) {}(0, FY.g)(mY.e, TY)
+    var cT = IT(37671);
+    class KT extends((0, iT.d)(cT.h)) {}(0, iT.f)(cT.h, KT);
+    var MT = IT(37777),
+      rT = IT(36179),
+      AT = IT(37138),
+      gT = IT(36083);
+    class hT extends((0, iT.d)(MT.e)) {}(0, iT.f)(MT.e, hT);
+    class wT extends((0, iT.d)(rT.c)) {}(0, iT.f)(rT.c, wT);
+    class mT extends((0, iT.d)(AT.m)) {}(0, iT.f)(AT.m, mT);
+    class eT extends((0, iT.d)(gT.e)) {}(0, iT.f)(gT.e, eT)
   },
-  40327: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => wY,
-      d: () => EY,
-      g: () => GY
+  40043: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => qT,
+      d: () => AT,
+      f: () => pT
     });
-    var FY = DY(39391),
-      AY = DY(40329),
-      IY = DY(40372),
-      RY = DY(40338),
-      OY = DY(37159),
-      gY = DY(37168),
-      aY = DY(37170),
-      vY = DY(37172),
-      uY = DY(36477),
-      sY = DY(36482),
-      iY = DY(40347),
-      yY = DY(36465),
-      QY = DY(36467),
-      oY = DY(36454);
+    var iT = IT(39038),
+      zT = IT(40050),
+      kT = IT(40086),
+      WT = IT(40055),
+      XT = IT(36764),
+      BT = IT(36774),
+      FT = IT(36777),
+      ST = IT(36782),
+      DT = IT(36071),
+      LT = IT(36076),
+      xT = IT(40059),
+      cT = IT(36056),
+      KT = IT(36063),
+      MT = IT(36047);
 
-    function WY(YY, rY) {
-      return Object.assign((function(YY, DY, FY, AY) {
-        return rY(this.featureState, YY, DY, FY, AY)
+    function rT(TT, oT) {
+      return Object.assign((function(TT, IT, iT, zT) {
+        return oT(this.featureState, TT, IT, iT, zT)
       }), {
-        iy: YY
+        Dc: TT
       })
     }
 
-    function EY(YY) {
-      const rY = class extends iY.c {
-          constructor(rY, DY) {
-            const FY = (0, QY.S)(rY),
-              AY = FY && (0, QY.v)(FY, YY.name);
-            for (var IY = arguments.length, RY = new Array(IY > 2 ? IY - 2 : 0), OY = 2; OY < IY; OY++) RY[OY - 2] = arguments[OY];
-            super(rY, YY.name, YY.priority, AY ? AY.defines : YY.defines(...RY), !1), this.featureState = void 0, this.featureState = DY, this._pluginManager._addPlugin(this), this._enable(!0), (0, QY.x)(this._material, YY, this.featureState, this._pluginDefineNames)
+    function AT(TT) {
+      const oT = class extends xT.d {
+          constructor(oT, IT) {
+            const iT = (0, KT.Z)(oT),
+              zT = iT && (0, KT.w)(iT, TT.name);
+            for (var kT = arguments.length, WT = new Array(kT > 2 ? kT - 2 : 0), XT = 2; XT < kT; XT++) WT[XT - 2] = arguments[XT];
+            super(oT, TT.name, TT.priority, zT ? zT.defines : TT.defines(...WT), !1), this.featureState = void 0, this.featureState = IT, this._pluginManager._addPlugin(this), this._enable(!0), (0, KT.A)(this._material, TT, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return YY.className
+            return TT.className
           }
-          isCompatible(YY) {
-            return YY === oY.e.GLSL || YY === oY.e.WGSL
+          isCompatible(TT) {
+            return TT === MT.d.GLSL || TT === MT.d.WGSL
           }
         },
-        DY = (0, yY.j)(YY);
-      for (const [FY, AY] of Object.entries(yY.d)) {
-        const IY = YY[FY];
-        if (IY) {
-          const YY = DY[FY];
-          Object.defineProperty(rY.prototype, AY, {
-            value: WY(IY, YY),
+        IT = (0, cT.j)(TT);
+      for (const [iT, zT] of Object.entries(cT.d)) {
+        const kT = TT[iT];
+        if (kT) {
+          const TT = IT[iT];
+          Object.defineProperty(oT.prototype, zT, {
+            value: rT(kT, TT),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return rY
+      return oT
     }
-    class mY extends(EY(OY.d)) {}
-    var VY = DY(38965),
-      SY = DY(40352);
-    const lY = new WeakMap;
+    class gT extends(AT(XT.d)) {}
+    var hT = IT(38589),
+      wT = IT(40064);
+    const mT = new WeakMap;
 
-    function TY(YY, rY, DY) {
-      let FY = lY.get(DY);
-      FY || (FY = new Map, lY.set(DY, FY));
+    function eT(TT, oT, IT) {
+      let iT = mT.get(IT);
+      iT || (iT = new Map, mT.set(IT, iT));
       const {
-        url: AY
-      } = YY;
-      let IY = FY.get(AY);
-      return IY || (IY = async function(YY, rY, DY) {
+        url: zT
+      } = TT;
+      let kT = iT.get(zT);
+      return kT || (kT = async function(TT, oT, IT) {
         const {
-          width: FY,
-          height: AY
-        } = YY.getSize(), IY = Math.round(AY / FY), OY = rY && rY.byteLength === FY * FY * IY * 4 ? rY : YY._readPixelsSync();
-        return new SY.d(OY, FY, FY, IY, VY.c.TEXTUREFORMAT_RGBA, DY, !0, !1, RY.d.NEAREST_NEAREST_MIPLINEAR)
-      }(YY, rY, DY), FY.set(AY, IY), IY.catch((() => {
-        FY.delete(AY)
-      }))), IY
+          width: iT,
+          height: zT
+        } = TT.getSize(), kT = Math.round(zT / iT), XT = oT && oT.byteLength === iT * iT * kT * 4 ? oT : TT._readPixelsSync();
+        return new wT.e(XT, iT, iT, kT, hT.c.TEXTUREFORMAT_RGBA, IT, !0, !1, WT.d.NEAREST_NEAREST_MIPLINEAR)
+      }(TT, oT, IT), iT.set(zT, kT), kT.catch((() => {
+        iT.delete(zT)
+      }))), kT
     }
-    var eY = DY(37180);
-    class NY extends(EY(gY.f)) {
-      constructor(YY, rY) {
-        super(YY, rY), rY.textures.forEach(((YY, rY) => {
-          YY.mirror.onLoadObservable.add((YY => {
-            this.setTextureArrayData(YY, rY).catch((YY => {
-              console.error(`Failed to build texture array for atlas ${rY}`, YY)
+    var RT = IT(36791);
+    class uT extends(AT(BT.f)) {
+      constructor(TT, oT) {
+        super(TT, oT), oT.textures.forEach(((TT, oT) => {
+          TT.mirror.onLoadObservable.add((TT => {
+            this.setTextureArrayData(TT, oT).catch((TT => {
+              console.error(`Failed to build texture array for atlas ${oT}`, TT)
             }))
           }))
-        })), (0, eY.g)(rY, YY.shaderLanguage)
+        })), (0, RT.e)(oT, TT.shaderLanguage)
       }
-      async setTextureArrayData(YY, rY) {
-        var DY, FY;
-        const AY = this.featureState,
+      async setTextureArrayData(TT, oT) {
+        var IT, iT;
+        const zT = this.featureState,
           {
-            width: IY,
-            height: RY
-          } = YY.getSize(),
-          OY = AY.useWebGL2 ? await TY(YY, null !== (DY = null === (FY = AY.sources.pixels) || void 0 === FY ? void 0 : FY[rY]) && void 0 !== DY ? DY : null, this._material.hT()) : null;
-        (0, eY.e)(this._material, AY, rY, OY, IY, Math.round(RY / IY), this._material.shaderLanguage)
+            width: kT,
+            height: WT
+          } = TT.getSize(),
+          XT = zT.useWebGL2 ? await eT(TT, null !== (IT = null === (iT = zT.sources.pixels) || void 0 === iT ? void 0 : iT[oT]) && void 0 !== IT ? IT : null, this._material.pC()) : null;
+        (0, RT.b)(this._material, zT, oT, XT, kT, Math.round(WT / kT), this._material.shaderLanguage)
       }
     }
-    var BY = DY(40356),
-      cY = DY(39422),
-      KY = DY(36518),
-      HY = DY(40362),
-      zY = DY(39530),
-      ZY = DY(39416),
-      CY = DY(40314),
-      fY = DY(36851),
-      jY = DY(40368);
-    class hY extends BY.e {
+    var vT = IT(40072),
+      ET = IT(39091),
+      fT = IT(36114),
+      CT = IT(40079),
+      jT = IT(39210),
+      JT = IT(39076),
+      UT = IT(40023),
+      aT = IT(36439),
+      YT = IT(40084);
+    class QT extends vT.b {
       getData() {
         return null
       }
@@ -160,320 +160,320 @@ export const modules = {
         super._rebuild()
       }
     }
-    const dY = {
-      Mesh: HY.d,
-      TransformNode: CY.e,
-      Ny: BY.e,
-      VertexBuffer: BY.i,
-      BoundingInfo: cY.d,
-      xy: KY.xy,
-      ArenaBuffer: hY,
-      SubMesh: ZY.d,
-      VertexData: zY.c,
-      MirroredGeometry: jY.d,
-      meshFromArrays: jY.e,
-      plainMeshFromArrays: jY.h
+    const OT = {
+      Mesh: CT.b,
+      TransformNode: UT.c,
+      vc: vT.b,
+      VertexBuffer: vT.d,
+      BoundingInfo: ET.d,
+      sc: fT.sc,
+      ArenaBuffer: QT,
+      SubMesh: JT.c,
+      VertexData: jT.c,
+      MirroredGeometry: YT.c,
+      meshFromArrays: YT.d,
+      plainMeshFromArrays: YT.h
     };
-    (0, fY.f)(dY);
-    var JY = DY(36681);
-    class MY extends(EY(vY.d)) {
-      constructor(YY, rY) {
-        if (super(YY, rY), YY instanceof FY.StandardMaterial && rY.dirLightCount > 0) {
-          const rY = YY,
-            DY = rY._blockDirtyMechanism;
-          rY._blockDirtyMechanism = !0, YY.disableLighting = !0, rY._blockDirtyMechanism = DY;
-          const FY = (0, QY.S)(YY);
-          FY && (FY.disableLighting = !0, (0, QY.Q)(FY))
-        }(0, JY.g)(YY)
+    (0, aT.g)(OT);
+    var HT = IT(36263);
+    class nT extends(AT(ST.h)) {
+      constructor(TT, oT) {
+        if (super(TT, oT), TT instanceof iT.StandardMaterial && oT.dirLightCount > 0) {
+          const oT = TT,
+            IT = oT._blockDirtyMechanism;
+          oT._blockDirtyMechanism = !0, TT.disableLighting = !0, oT._blockDirtyMechanism = IT;
+          const iT = (0, KT.Z)(TT);
+          iT && (iT.disableLighting = !0, (0, KT.W)(iT))
+        }(0, HT.j)(TT)
       }
-      dispose(YY) {
-        (0, JY.h)(this._material), super.dispose(YY)
+      dispose(TT) {
+        (0, HT.n)(this._material), super.dispose(TT)
       }
     }
 
-    function wY(YY, rY) {
-      if (!(rY instanceof FY.StandardMaterial) || rY.specularTexture) return;
+    function qT(TT, oT) {
+      if (!(oT instanceof iT.StandardMaterial) || oT.specularTexture) return;
       const {
-        r: DY,
-        g: AY,
-        b: IY
-      } = rY.specularColor;
-      0 === DY && 0 === AY && 0 === IY && (YY.SPECULARTERM = !1)
-    }(0, vY.c)({
-      disableUnusedSpecularTerm: wY
+        r: IT,
+        g: zT,
+        b: kT
+      } = oT.specularColor;
+      0 === IT && 0 === zT && 0 === kT && (TT.SPECULARTERM = !1)
+    }(0, ST.g)({
+      disableUnusedSpecularTerm: qT
     });
-    var bY = DY(36615),
-      XY = DY(36865);
-    const qY = new RegExp(`^#define ${aY.b}\\s*$`, "m");
-    class pY extends(EY(aY.h)) {
-      constructor(YY, rY) {
-        super(YY, rY), this.Ky = !1, rY.ditherOnlyWhileFading && (XY.f.add(YY), this.prewarmDitherTwins(YY))
+    var ZT = IT(36205),
+      lT = IT(36454);
+    const sT = new RegExp(`^#define ${FT.b}\\s*$`, "m");
+    class tT extends(AT(FT.h)) {
+      constructor(TT, oT) {
+        super(TT, oT), this.Ec = !1, oT.ditherOnlyWhileFading && (lT.c.add(TT), this.prewarmDitherTwins(TT))
       }
-      prewarmDitherTwins(YY) {
-        const rY = new WeakSet;
-        YY.onEffectCreatedObservable.add((DY => {
+      prewarmDitherTwins(TT) {
+        const oT = new WeakSet;
+        TT.onEffectCreatedObservable.add((IT => {
           let {
-            effect: FY,
-            subMesh: AY
-          } = DY;
-          if (this.featureState.prewarmingDither || rY.has(FY)) return;
-          rY.add(FY);
-          const IY = null === AY || void 0 === AY ? void 0 : AY.getMesh();
-          IY && !qY.test(FY.defines) && YY.hT().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(IY) || rY.delete(FY)
+            effect: iT,
+            subMesh: zT
+          } = IT;
+          if (this.featureState.prewarmingDither || oT.has(iT)) return;
+          oT.add(iT);
+          const kT = null === zT || void 0 === zT ? void 0 : zT.getMesh();
+          kT && !sT.test(iT.defines) && TT.pC().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(kT) || oT.delete(iT)
           }))
         }))
       }
-      prewarmDither(YY) {
-        if (this.Ky || YY.CrY()) return !1;
-        const rY = new ZY.d(0, 0, 0, 0, 0, YY, void 0, !1, !1);
+      prewarmDither(TT) {
+        if (this.Ec || TT.IIT()) return !1;
+        const oT = new JT.c(0, 0, 0, 0, 0, TT, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(YY, rY)
+          this._material.isReadyForSubMesh(TT, oT)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== rY.effect
+        return null !== oT.effect
       }
-      dispose(YY) {
-        this.Ky = !0, super.dispose(YY)
+      dispose(TT) {
+        this.Ec = !0, super.dispose(TT)
       }
     }
-    const kY = new Map;
+    const GT = new Map;
 
-    function GY(YY, rY) {
-      kY.set(YY, rY)
+    function pT(TT, oT) {
+      GT.set(TT, oT)
     }
-    GY(OY.d, mY), GY(gY.f, NY), GY(aY.h, pY), GY(vY.d, MY), (0, uY.e)({
-      create: (YY, rY) => {
-        const DY = new FY.StandardMaterial(YY.name, rY);
-        return (0, bY.p)(YY, DY), DY.detailMap._pluginDefineNames
+    pT(XT.d, gT), pT(BT.f, uT), pT(FT.h, tT), pT(ST.h, nT), (0, DT.b)({
+      create: (TT, oT) => {
+        const IT = new iT.StandardMaterial(TT.name, oT);
+        return (0, ZT.g)(TT, IT), IT.detailMap._pluginDefineNames
       },
-      write: (YY, rY, DY) => {
-        (0, bY.V)(YY.mirror, rY, DY)
+      write: (TT, oT, IT) => {
+        (0, ZT.M)(TT.mirror, oT, IT)
       },
-      addFeature: (YY, rY, DY) => {
-        const FY = kY.get(rY.feature);
-        if (!FY) throw new Error(`${rY.feature.name} has no plugin class (registerPluginClass)`);
-        new FY(YY.mirror, rY.state, ...DY)
+      addFeature: (TT, oT, IT) => {
+        const iT = GT.get(oT.feature);
+        if (!iT) throw new Error(`${oT.feature.name} has no plugin class (registerPluginClass)`);
+        new iT(TT.mirror, oT.state, ...IT)
       },
-      texture: (YY, rY, DY) => {
+      texture: (TT, oT, IT) => {
         let {
-          url: FY,
-          noMipmap: AY,
-          invertY: IY,
-          samplingMode: OY,
-          data: gY,
-          sets: aY
-        } = DY;
-        if (!gY) {
-          const DY = new RY.d(FY, rY, AY, IY, OY);
-          return Object.assign(DY, aY), void(0, sY.R)(YY, DY)
+          url: iT,
+          noMipmap: zT,
+          invertY: kT,
+          samplingMode: XT,
+          data: BT,
+          sets: FT
+        } = IT;
+        if (!BT) {
+          const IT = new WT.d(iT, oT, zT, kT, XT);
+          return Object.assign(IT, FT), void(0, LT.I)(TT, IT)
         }
-        const vY = {},
-          uY = new Promise(((YY, rY) => {
-            vY.onLoad = YY, vY.onError = (YY, DY) => {
-              rY(new Error(`${gY.context}: ${(null===DY||void 0===DY?void 0:DY.message)||YY||"Failed to load texture"}`))
+        const ST = {},
+          DT = new Promise(((TT, oT) => {
+            ST.onLoad = TT, ST.onError = (TT, IT) => {
+              oT(new Error(`${BT.context}: ${(null===IT||void 0===IT?void 0:IT.message)||TT||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: iY,
-            bytes: yY,
-            label: QY
-          } = gY,
-          oY = {
-            noMipmap: AY,
+            mimeType: xT,
+            bytes: cT,
+            label: KT
+          } = BT,
+          MT = {
+            noMipmap: zT,
             invertY: !1,
-            samplingMode: OY,
-            ...vY,
-            mimeType: iY,
+            samplingMode: XT,
+            ...ST,
+            mimeType: xT,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          WY = new RY.d(null, rY, oY);
-        bY.t.set(WY, uY), Object.assign(WY, aY), WY.updateURL(FY, yY);
-        const EY = WY.getInternalTexture();
-        EY && (EY.label = QY), YY.uvSet = WY.coordinatesIndex, YY.matrix.set((0, bY.M)(WY)), (0, sY.R)(YY, WY)
+          rT = new WT.d(null, oT, MT);
+        ZT.h.set(rT, DT), Object.assign(rT, FT), rT.updateURL(iT, cT);
+        const AT = rT.getInternalTexture();
+        AT && (AT.label = KT), TT.uvSet = rT.coordinatesIndex, TT.matrix.set((0, ZT.A)(rT)), (0, LT.I)(TT, rT)
       },
-      cube: (YY, rY, DY) => {
+      cube: (TT, oT, IT) => {
         let {
-          rootUrl: FY,
-          files: IY,
-          noMipmap: OY,
-          luminance: gY
-        } = DY;
+          rootUrl: iT,
+          files: kT,
+          noMipmap: XT,
+          luminance: BT
+        } = IT;
         const {
-          samplingMode: aY
-        } = YY.sampler, vY = aY === (0, sY.I)(OY) ? null : () => {
-          (0, bY.L)(uY, aY)
-        }, uY = new AY.d(FY, rY, null, OY, IY, vY, null, (0, sY.H)(gY));
-        uY.coordinatesMode = RY.d.SKYBOX_MODE, (0, sY.R)(YY, uY)
+          samplingMode: FT
+        } = TT.sampler, ST = FT === (0, LT.A)(XT) ? null : () => {
+          (0, ZT.z)(DT, FT)
+        }, DT = new zT.e(iT, oT, null, XT, kT, ST, null, (0, LT.x)(BT));
+        DT.coordinatesMode = WT.d.SKYBOX_MODE, (0, LT.I)(TT, DT)
       },
-      canvas: (YY, rY, DY) => {
+      canvas: (TT, oT, IT) => {
         let {
-          width: FY,
-          height: AY,
-          mipmaps: OY,
-          samplingMode: gY,
-          hasAlpha: aY = !1,
-          wrap: vY = RY.d.CLAMP_ADDRESSMODE
-        } = DY;
-        const uY = new IY.d(rY, {
-          width: FY,
-          height: AY
-        }, YY, OY, gY);
-        uY.hasAlpha = aY, uY.wrapU = vY, uY.wrapV = vY;
-        const sY = (0, bY.C)(uY);
-        return (0, bY.F)(sY, uY), sY
+          width: iT,
+          height: zT,
+          mipmaps: XT,
+          samplingMode: BT,
+          hasAlpha: FT = !1,
+          wrap: ST = WT.d.CLAMP_ADDRESSMODE
+        } = IT;
+        const DT = new kT.c(oT, {
+          width: iT,
+          height: zT
+        }, TT, XT, BT);
+        DT.hasAlpha = FT, DT.wrapU = ST, DT.wrapV = ST;
+        const LT = (0, ZT.p)(DT);
+        return (0, ZT.q)(LT, DT), LT
       }
     })
   },
-  40368: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => vY,
-      e: () => uY,
-      h: () => sY
+  40084: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => ST,
+      d: () => DT,
+      h: () => LT
     });
-    var FY = DY(40356),
-      AY = DY(39180),
-      IY = DY(39422),
-      RY = DY(39534),
-      OY = DY(40362),
-      gY = DY(39530),
-      aY = DY(36739);
-    class vY extends RY.c {
+    var iT = IT(40072),
+      zT = IT(38851),
+      kT = IT(39091),
+      WT = IT(39212),
+      XT = IT(40079),
+      BT = IT(39210),
+      FT = IT(36325);
+    class ST extends WT.d {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (YY, rY) => {
-          this.releaseUnlessInstanced(rY)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (TT, oT) => {
+          this.releaseUnlessInstanced(oT)
         }, this.onLinked = null
       }
-      link(YY) {
-        var rY;
-        (0, aY.n)(YY), this.model = YY, null === (rY = this.onLinked) || void 0 === rY || rY.call(this, YY)
+      link(TT) {
+        var oT;
+        (0, FT.m)(TT), this.model = TT, null === (oT = this.onLinked) || void 0 === oT || oT.call(this, TT)
       }
       relink() {
         this.release();
-        const YY = [];
-        for (const AY of Object.values(this._vertexBuffers))
-          if (!AY.getIsInstanced()) {
+        const TT = [];
+        for (const zT of Object.values(this._vertexBuffers))
+          if (!zT.getIsInstanced()) {
             const {
-              byteOffset: rY,
-              byteStride: DY,
-              type: FY,
-              normalized: IY
-            } = AY;
-            YY.push({
-              kind: AY.getKind(),
-              data: AY.getData(),
-              offset: rY,
-              stride: DY,
-              components: AY.getSize(),
-              glType: FY,
-              isNormalized: IY
+              byteOffset: oT,
+              byteStride: IT,
+              type: iT,
+              normalized: kT
+            } = zT;
+            TT.push({
+              kind: zT.getKind(),
+              data: zT.getData(),
+              offset: oT,
+              stride: IT,
+              components: zT.getSize(),
+              glType: iT,
+              isNormalized: kT
             })
-          } const rY = this._indices.length ? this._indices : null,
+          } const oT = this._indices.length ? this._indices : null,
           {
-            minimum: DY,
-            maximum: FY
+            minimum: IT,
+            maximum: iT
           } = this.extend;
-        this.link(new aY.f(YY, rY, this.getTotalVertices(), new Float64Array(DY.VDY()), new Float64Array(FY.VDY())))
+        this.link(new FT.g(TT, oT, this.getTotalVertices(), new Float64Array(IT.bIT()), new Float64Array(iT.bIT())))
       }
-      copy(YY) {
-        if (!this.model) return super.copy(YY);
-        const rY = new vY(YY, this.hT()),
-          DY = this.XIY(void 0, !0);
-        DY && rY.setIndices(DY);
-        let RY = !1;
-        for (const IY in this._vertexBuffers) {
-          const YY = this._vertexBuffers[IY],
-            DY = YY.getData();
-          if (!DY) continue;
-          const OY = YY.getSize(),
+      copy(TT) {
+        if (!this.model) return super.copy(TT);
+        const oT = new ST(TT, this.pC()),
+          IT = this.hWT(void 0, !0);
+        IT && oT.setIndices(IT);
+        let WT = !1;
+        for (const kT in this._vertexBuffers) {
+          const TT = this._vertexBuffers[kT],
+            IT = TT.getData();
+          if (!IT) continue;
+          const XT = TT.getSize(),
             {
-              type: gY,
-              byteOffset: aY,
-              byteStride: vY,
-              normalized: uY
-            } = YY;
-          RY ||= YY.isUpdatable();
-          const sY = YY.getIsInstanced() ? (DY instanceof Array ? 4 * DY.length : DY.byteLength) / vY : this.getTotalVertices(),
-            iY = (0, AY.q)(DY, OY, gY, aY, vY, sY, !0),
-            yY = {
-              updatable: YY.isUpdatable(),
-              stride: OY,
-              type: gY,
-              normalized: uY,
+              type: BT,
+              byteOffset: FT,
+              byteStride: ST,
+              normalized: DT
+            } = TT;
+          WT ||= TT.isUpdatable();
+          const LT = TT.getIsInstanced() ? (IT instanceof Array ? 4 * IT.length : IT.byteLength) / ST : this.getTotalVertices(),
+            xT = (0, zT.o)(IT, XT, BT, FT, ST, LT, !0),
+            cT = {
+              updatable: TT.isUpdatable(),
+              stride: XT,
+              type: BT,
+              normalized: DT,
               takeBufferOwnership: !0,
-              instanced: YY.getIsInstanced()
+              instanced: TT.getIsInstanced()
             };
-          rY.setVerticesBuffer(new FY.i(this.ky(), iY, IY, yY), sY)
+          oT.setVerticesBuffer(new iT.d(this.Zc(), xT, kT, cT), LT)
         }
-        return rY._updatable = RY, rY._boundingInfo = new IY.d(this.extend.minimum, this.extend.maximum), rY.relink(), rY
+        return oT._updatable = WT, oT._boundingInfo = new kT.d(this.extend.minimum, this.extend.maximum), oT.relink(), oT
       }
-      static mergeMeshes(YY, rY, DY, FY, AY, IY) {
-        const gY = YY[0].hT(),
-          aY = new OY.d(YY[0].name + "_merged", gY),
-          uY = new vY(RY.c.RandomId(), gY, void 0, !1, aY);
+      static mergeMeshes(TT, oT, IT, iT, zT, kT) {
+        const BT = TT[0].pC(),
+          FT = new XT.b(TT[0].name + "_merged", BT),
+          DT = new ST(WT.d.RandomId(), BT, void 0, !1, FT);
         try {
-          if (!OY.d.MergeMeshes(YY, rY, DY, aY, AY, IY)) return aY.dispose(), null
-        } catch (sY) {
-          throw aY.dispose(), sY
+          if (!XT.b.MergeMeshes(TT, oT, IT, FT, zT, kT)) return FT.dispose(), null
+        } catch (LT) {
+          throw FT.dispose(), LT
         }
-        return uY.relink(), aY
+        return DT.relink(), FT
       }
-      removeVerticesData(YY) {
-        this.releaseUnlessInstanced(YY), super.removeVerticesData(YY)
+      removeVerticesData(TT) {
+        this.releaseUnlessInstanced(TT), super.removeVerticesData(TT)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(YY) {
-        var rY;
-        YY && null !== (rY = this.getVertexBuffer(YY)) && void 0 !== rY && rY.getIsInstanced() || this.release()
+      releaseUnlessInstanced(TT) {
+        var oT;
+        TT && null !== (oT = this.getVertexBuffer(TT)) && void 0 !== oT && oT.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, aY.r)(this.model), this.model = null)
+        this.model && ((0, FT.v)(this.model), this.model = null)
       }
     }
 
-    function uY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new OY.d(YY, DY);
-      const AY = (0, aY.k)(rY),
+    function DT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new XT.b(TT, IT);
+      const zT = (0, FT.j)(oT),
         {
-          positions: IY,
-          normals: uY,
-          uvs: sY,
-          indices: iY,
-          named: yY = {}
-        } = rY,
-        QY = new gY.c;
-      QY.positions = IY, QY.normals = null !== uY && void 0 !== uY ? uY : null, QY.uvs = null !== sY && void 0 !== sY ? sY : null, QY.indices = iY;
-      const oY = new vY(RY.c.RandomId(), DY, QY, !1, FY);
+          positions: kT,
+          normals: DT,
+          uvs: LT,
+          indices: xT,
+          named: cT = {}
+        } = oT,
+        KT = new BT.c;
+      KT.positions = kT, KT.normals = null !== DT && void 0 !== DT ? DT : null, KT.uvs = null !== LT && void 0 !== LT ? LT : null, KT.indices = xT;
+      const MT = new ST(WT.d.RandomId(), IT, KT, !1, iT);
       for (const {
-          kind: RY,
-          components: OY
+          kind: WT,
+          components: XT
         }
-        of AY.vertexAttributes) RY in yY && FY.setVerticesData(RY, yY[RY], !1, OY);
-      return oY.link(AY), FY
+        of zT.vertexAttributes) WT in cT && iT.setVerticesData(WT, cT[WT], !1, XT);
+      return MT.link(zT), iT
     }
 
-    function sY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const AY = new OY.d(YY, DY),
+    function LT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const zT = new XT.b(TT, IT),
         {
-          positions: IY,
-          normals: RY,
-          uvs: aY,
-          indices: vY
-        } = rY;
-      return Object.assign(new gY.c, {
-        positions: IY,
-        normals: RY,
-        uvs: aY,
-        indices: vY
-      }).applyToMesh(AY, FY), AY
+          positions: kT,
+          normals: WT,
+          uvs: FT,
+          indices: ST
+        } = oT;
+      return Object.assign(new BT.c, {
+        positions: kT,
+        normals: WT,
+        uvs: FT,
+        indices: ST
+      }).applyToMesh(zT, iT), zT
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

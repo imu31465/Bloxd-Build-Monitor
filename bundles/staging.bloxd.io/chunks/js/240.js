@@ -1,116 +1,116 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  39342: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => oY,
-      f: () => mY
+  38986: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => MT,
+      e: () => gT
     });
-    var FY = DY(39127),
-      AY = DY(39131),
-      IY = DY(39231),
-      RY = DY(36552),
-      OY = DY(36524),
-      gY = DY(39347),
-      aY = DY(38040),
-      vY = DY(36569),
-      uY = DY(39029),
-      sY = DY(37493),
-      iY = DY(37105),
-      yY = DY(39092),
-      QY = DY(39144);
-    let oY = (() => {
-      var YY;
-      let rY, DY, vY, oY, WY, EY, mY, VY, SY, lY, TY, eY, NY, BY, cY, KY, HY, zY, ZY = gY.b,
-        CY = [],
-        fY = [],
-        jY = [],
-        hY = [],
-        dY = [],
-        JY = [],
-        MY = [],
-        wY = [],
-        bY = [],
-        XY = [],
-        qY = [],
-        pY = [],
-        kY = [],
-        GY = [],
-        xY = [],
-        nY = [],
-        PY = [],
-        UY = [],
-        LY = [],
-        tY = [],
-        Yr = [],
-        rr = [],
-        Dr = [],
-        Fr = [],
-        Ar = [];
-      return YY = class extends ZY {
+    var iT = IT(38764),
+      zT = IT(38773),
+      kT = IT(38897),
+      WT = IT(36149),
+      XT = IT(36118),
+      BT = IT(38994),
+      FT = IT(37660),
+      ST = IT(36166),
+      DT = IT(38643),
+      LT = IT(37105),
+      xT = IT(36710),
+      cT = IT(38728),
+      KT = IT(38799);
+    let MT = (() => {
+      var TT;
+      let oT, IT, ST, MT, rT, AT, gT, hT, wT, mT, eT, RT, uT, vT, ET, fT, CT, jT, JT = BT.c,
+        UT = [],
+        aT = [],
+        YT = [],
+        QT = [],
+        OT = [],
+        HT = [],
+        nT = [],
+        qT = [],
+        ZT = [],
+        lT = [],
+        sT = [],
+        tT = [],
+        GT = [],
+        pT = [],
+        bT = [],
+        yT = [],
+        NT = [],
+        PT = [],
+        dT = [],
+        VT = [],
+        To = [],
+        oo = [],
+        Io = [],
+        io = [],
+        zo = [];
+      return TT = class extends JT {
         get position() {
           return this._position
         }
-        set position(YY) {
-          this._position = YY
+        set position(TT) {
+          this._position = TT
         }
-        set upVector(YY) {
-          this._upVector = YY
+        set upVector(TT) {
+          this._upVector = TT
         }
         get upVector() {
           return this._upVector
         }
         get screenArea() {
-          let rY, DY;
-          if (this.mode === YY.PERSPECTIVE_CAMERA) this.fovMode === YY.FOVMODE_VERTICAL_FIXED ? (DY = 2 * this.minZ * Math.tan(this.fov / 2), rY = this.ky().getAspectRatio(this) * DY) : (rY = 2 * this.minZ * Math.tan(this.fov / 2), DY = rY / this.ky().getAspectRatio(this));
+          let oT, IT;
+          if (this.mode === TT.PERSPECTIVE_CAMERA) this.fovMode === TT.FOVMODE_VERTICAL_FIXED ? (IT = 2 * this.minZ * Math.tan(this.fov / 2), oT = this.Zc().getAspectRatio(this) * IT) : (oT = 2 * this.minZ * Math.tan(this.fov / 2), IT = oT / this.Zc().getAspectRatio(this));
           else {
-            const YY = this.ky().getRenderWidth() / 2,
-              FY = this.ky().getRenderHeight() / 2;
-            rY = (this.orthoRight ?? YY) - (this.orthoLeft ?? -YY), DY = (this.orthoTop ?? FY) - (this.orthoBottom ?? -FY)
+            const TT = this.Zc().getRenderWidth() / 2,
+              iT = this.Zc().getRenderHeight() / 2;
+            oT = (this.orthoRight ?? TT) - (this.orthoLeft ?? -TT), IT = (this.orthoTop ?? iT) - (this.orthoBottom ?? -iT)
           }
-          return rY * DY
+          return oT * IT
         }
-        set orthoLeft(YY) {
-          this._orthoLeft = YY;
-          for (const rY of this._rigCameras) rY.orthoLeft = YY
+        set orthoLeft(TT) {
+          this._orthoLeft = TT;
+          for (const oT of this._rigCameras) oT.orthoLeft = TT
         }
         get orthoLeft() {
           return this._orthoLeft
         }
-        set orthoRight(YY) {
-          this._orthoRight = YY;
-          for (const rY of this._rigCameras) rY.orthoRight = YY
+        set orthoRight(TT) {
+          this._orthoRight = TT;
+          for (const oT of this._rigCameras) oT.orthoRight = TT
         }
         get orthoRight() {
           return this._orthoRight
         }
-        set orthoBottom(YY) {
-          this._orthoBottom = YY;
-          for (const rY of this._rigCameras) rY.orthoBottom = YY
+        set orthoBottom(TT) {
+          this._orthoBottom = TT;
+          for (const oT of this._rigCameras) oT.orthoBottom = TT
         }
         get orthoBottom() {
           return this._orthoBottom
         }
-        set orthoTop(YY) {
-          this._orthoTop = YY;
-          for (const rY of this._rigCameras) rY.orthoTop = YY
+        set orthoTop(TT) {
+          this._orthoTop = TT;
+          for (const oT of this._rigCameras) oT.orthoTop = TT
         }
         get orthoTop() {
           return this._orthoTop
         }
-        setFocalLength(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 36;
-          this.fov = 2 * Math.atan(rY / (2 * YY))
+        setFocalLength(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 36;
+          this.fov = 2 * Math.atan(oT / (2 * TT))
         }
         get inertia() {
           return this._baseInertia
         }
-        set inertia(YY) {
-          this._baseInertia = YY
+        set inertia(TT) {
+          this._baseInertia = TT
         }
-        set mode(YY) {
-          this._mode = YY;
-          for (const rY of this._rigCameras) rY.mode = YY
+        set mode(TT) {
+          this._mode = TT;
+          for (const oT of this._rigCameras) oT.mode = TT
         }
         get mode() {
           return this._mode
@@ -118,9 +118,9 @@ export const modules = {
         get hasMoved() {
           return this._hasMoved
         }
-        constructor(rY, DY, AY) {
-          let gY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-          (0, yY.c)(), super(rY, AY, !1), this.inputs = (0, FY.j)(this, CY), this._position = (0, FY.j)(this, fY, OY.r.Zero()), this._upVector = ((0, FY.j)(this, jY), (0, FY.j)(this, hY, OY.r.Up())), this.oblique = ((0, FY.j)(this, dY), null), this._orthoLeft = null, this._orthoRight = null, this._orthoBottom = null, this._orthoTop = null, this.fov = (0, FY.j)(this, JY, .8), this.projectionPlaneTilt = ((0, FY.j)(this, MY), (0, FY.j)(this, wY, 0)), this.minZ = ((0, FY.j)(this, bY), (0, FY.j)(this, XY, 1)), this.maxZ = ((0, FY.j)(this, qY), (0, FY.j)(this, pY, 1e4)), this._baseInertia = ((0, FY.j)(this, kY), .9), this._mode = YY.PERSPECTIVE_CAMERA, this.isIntermediate = !1, this.viewport = new sY.b(0, 0, 1, 1), this.layerMask = (0, FY.j)(this, GY, 268435455), this.fovMode = ((0, FY.j)(this, xY), (0, FY.j)(this, nY, YY.FOVMODE_VERTICAL_FIXED)), this.cameraRigMode = ((0, FY.j)(this, PY), (0, FY.j)(this, UY, YY.RIG_MODE_NONE)), this.interaxialDistance = ((0, FY.j)(this, LY), (0, FY.j)(this, tY, void 0)), this.isStereoscopicSideBySide = ((0, FY.j)(this, Yr), (0, FY.j)(this, rr, void 0)), this.ignoreCameraMaxZ = ((0, FY.j)(this, Dr), (0, FY.j)(this, Fr, !1)), this.customRenderTargets = ((0, FY.j)(this, Ar), []), this.outputRenderTarget = null, this.onViewMatrixChangedObservable = new RY.e, this.onProjectionMatrixChangedObservable = new RY.e, this.onAfterCheckInputsObservable = new RY.e, this.onRestoreStateObservable = new RY.e, this.isRigCamera = !1, this._hasMoved = !1, this._rigCameras = new Array, this._skipRendering = !1, this._projectionMatrix = new OY.e, this._postProcesses = new Array, this._activeMeshes = new IY.f(256), this._globalPosition = OY.r.Zero(), this._computedViewMatrix = OY.e.Identity(), this._doNotComputeProjectionMatrix = !1, this._transformMatrix = OY.e.Zero(), this._refreshFrustumPlanes = !0, this._absoluteRotation = OY.g.Identity(), this._isCamera = !0, this._isLeftCamera = !1, this._isRightCamera = !1, this.layerMask = this.hT().defaultCameraLayerMask, this.hT().addCamera(this), gY && !this.hT().activeCamera && (this.hT().activeCamera = this), this.position = DY, this.renderPassId = this.hT().ky().createRenderPassId(`Camera ${rY}`)
+        constructor(oT, IT, zT) {
+          let BT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+          (0, cT.c)(), super(oT, zT, !1), this.inputs = (0, iT.j)(this, UT), this._position = (0, iT.j)(this, aT, XT.m.Zero()), this._upVector = ((0, iT.j)(this, YT), (0, iT.j)(this, QT, XT.m.Up())), this.oblique = ((0, iT.j)(this, OT), null), this._orthoLeft = null, this._orthoRight = null, this._orthoBottom = null, this._orthoTop = null, this.fov = (0, iT.j)(this, HT, .8), this.projectionPlaneTilt = ((0, iT.j)(this, nT), (0, iT.j)(this, qT, 0)), this.minZ = ((0, iT.j)(this, ZT), (0, iT.j)(this, lT, 1)), this.maxZ = ((0, iT.j)(this, sT), (0, iT.j)(this, tT, 1e4)), this._baseInertia = ((0, iT.j)(this, GT), .9), this._mode = TT.PERSPECTIVE_CAMERA, this.isIntermediate = !1, this.viewport = new LT.b(0, 0, 1, 1), this.layerMask = (0, iT.j)(this, pT, 268435455), this.fovMode = ((0, iT.j)(this, bT), (0, iT.j)(this, yT, TT.FOVMODE_VERTICAL_FIXED)), this.cameraRigMode = ((0, iT.j)(this, NT), (0, iT.j)(this, PT, TT.RIG_MODE_NONE)), this.interaxialDistance = ((0, iT.j)(this, dT), (0, iT.j)(this, VT, void 0)), this.isStereoscopicSideBySide = ((0, iT.j)(this, To), (0, iT.j)(this, oo, void 0)), this.ignoreCameraMaxZ = ((0, iT.j)(this, Io), (0, iT.j)(this, io, !1)), this.customRenderTargets = ((0, iT.j)(this, zo), []), this.outputRenderTarget = null, this.onViewMatrixChangedObservable = new WT.d, this.onProjectionMatrixChangedObservable = new WT.d, this.onAfterCheckInputsObservable = new WT.d, this.onRestoreStateObservable = new WT.d, this.isRigCamera = !1, this._hasMoved = !1, this._rigCameras = new Array, this._skipRendering = !1, this._projectionMatrix = new XT.b, this._postProcesses = new Array, this._activeMeshes = new kT.f(256), this._globalPosition = XT.m.Zero(), this._computedViewMatrix = XT.b.Identity(), this._doNotComputeProjectionMatrix = !1, this._transformMatrix = XT.b.Zero(), this._refreshFrustumPlanes = !0, this._absoluteRotation = XT.c.Identity(), this._isCamera = !0, this._isLeftCamera = !1, this._isRightCamera = !1, this.layerMask = this.pC().defaultCameraLayerMask, this.pC().addCamera(this), BT && !this.pC().activeCamera && (this.pC().activeCamera = this), this.position = IT, this.renderPassId = this.pC().Zc().createRenderPassId(`Camera ${oT}`)
         }
         storeState() {
           return this._stateStored = !0, this._storedFov = this.fov, this
@@ -135,17 +135,17 @@ export const modules = {
           return !!this._restoreStateValues() && (this.onRestoreStateObservable.notifyObservers(this), !0)
         }
         getClassName() {
-          return "Co"
+          return "jM"
         }
-        toString(YY) {
-          let rY = "Name: " + this.name;
-          if (rY += ", type: " + this.getClassName(), this.animations)
-            for (let DY = 0; DY < this.animations.length; DY++) rY += ", animation[0]: " + this.animations[DY].toString(YY);
-          return rY
+        toString(TT) {
+          let oT = "Name: " + this.name;
+          if (oT += ", type: " + this.getClassName(), this.animations)
+            for (let IT = 0; IT < this.animations.length; IT++) oT += ", animation[0]: " + this.animations[IT].toString(TT);
+          return oT
         }
         applyVerticalCorrection() {
-          const YY = this.absoluteRotation.toEulerAngles();
-          this.projectionPlaneTilt = this._scene.useRightHandedSystem ? -YY.x : YY.x
+          const TT = this.absoluteRotation.toEulerAngles();
+          this.projectionPlaneTilt = this._scene.useRightHandedSystem ? -TT.x : TT.x
         }
         get globalPosition() {
           return this._globalPosition
@@ -153,21 +153,21 @@ export const modules = {
         getActiveMeshes() {
           return this._activeMeshes
         }
-        isActiveMesh(YY) {
-          return -1 !== this._activeMeshes.indexOf(YY)
+        isActiveMesh(TT) {
+          return -1 !== this._activeMeshes.indexOf(TT)
         }
         isReady() {
-          let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (YY)
-            for (const rY of this._postProcesses)
-              if (rY && !rY.isReady()) return !1;
-          return super.isReady(YY)
+          let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (TT)
+            for (const oT of this._postProcesses)
+              if (oT && !oT.isReady()) return !1;
+          return super.isReady(TT)
         }
         _initCache() {
-          super._initCache(), this._cache.position = new OY.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.upVector = new OY.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.mode = void 0, this._cache.minZ = void 0, this._cache.maxZ = void 0, this._cache.fov = void 0, this._cache.fovMode = void 0, this._cache.aspectRatio = void 0, this._cache.orthoLeft = void 0, this._cache.orthoRight = void 0, this._cache.orthoBottom = void 0, this._cache.orthoTop = void 0, this._cache.obliqueAngle = void 0, this._cache.obliqueLength = void 0, this._cache.obliqueOffset = void 0, this._cache.renderWidth = void 0, this._cache.renderHeight = void 0
+          super._initCache(), this._cache.position = new XT.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.upVector = new XT.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.mode = void 0, this._cache.minZ = void 0, this._cache.maxZ = void 0, this._cache.fov = void 0, this._cache.fovMode = void 0, this._cache.aspectRatio = void 0, this._cache.orthoLeft = void 0, this._cache.orthoRight = void 0, this._cache.orthoBottom = void 0, this._cache.orthoTop = void 0, this._cache.obliqueAngle = void 0, this._cache.obliqueLength = void 0, this._cache.obliqueOffset = void 0, this._cache.renderWidth = void 0, this._cache.renderHeight = void 0
         }
-        _updateCache(YY) {
-          YY || super._updateCache(), this._cache.position.brY(this.position), this._cache.upVector.brY(this.upVector)
+        _updateCache(TT) {
+          TT || super._updateCache(), this._cache.position.SIT(this.position), this._cache.upVector.SIT(this.upVector)
         }
         _isSynchronized() {
           return this._isSynchronizedViewMatrix() && this._isSynchronizedProjectionMatrix()
@@ -176,16 +176,16 @@ export const modules = {
           return !!super._isSynchronized() && (this._cache.position.equals(this.position) && this._cache.upVector.equals(this.upVector) && this.isSynchronizedWithParent())
         }
         _isSynchronizedProjectionMatrix() {
-          const rY = this.ignoreCameraMaxZ ? 0 : this.maxZ;
-          let DY = this._cache.mode === this.mode && this._cache.minZ === this.minZ && this._cache.maxZ === rY;
-          if (!DY) return !1;
-          const FY = this.ky();
-          return this.mode === YY.PERSPECTIVE_CAMERA ? DY = this._cache.fov === this.fov && this._cache.fovMode === this.fovMode && this._cache.aspectRatio === FY.getAspectRatio(this) && this._cache.projectionPlaneTilt === this.projectionPlaneTilt : (DY = this._cache.orthoLeft === this.orthoLeft && this._cache.orthoRight === this.orthoRight && this._cache.orthoBottom === this.orthoBottom && this._cache.orthoTop === this.orthoTop && this._cache.renderWidth === FY.getRenderWidth() && this._cache.renderHeight === FY.getRenderHeight(), this.oblique && (DY = DY && this._cache.obliqueAngle === this.oblique.angle && this._cache.obliqueLength === this.oblique.length && this._cache.obliqueOffset === this.oblique.offset)), DY
+          const oT = this.ignoreCameraMaxZ ? 0 : this.maxZ;
+          let IT = this._cache.mode === this.mode && this._cache.minZ === this.minZ && this._cache.maxZ === oT;
+          if (!IT) return !1;
+          const iT = this.Zc();
+          return this.mode === TT.PERSPECTIVE_CAMERA ? IT = this._cache.fov === this.fov && this._cache.fovMode === this.fovMode && this._cache.aspectRatio === iT.getAspectRatio(this) && this._cache.projectionPlaneTilt === this.projectionPlaneTilt : (IT = this._cache.orthoLeft === this.orthoLeft && this._cache.orthoRight === this.orthoRight && this._cache.orthoBottom === this.orthoBottom && this._cache.orthoTop === this.orthoTop && this._cache.renderWidth === iT.getRenderWidth() && this._cache.renderHeight === iT.getRenderHeight(), this.oblique && (IT = IT && this._cache.obliqueAngle === this.oblique.angle && this._cache.obliqueLength === this.oblique.length && this._cache.obliqueOffset === this.oblique.offset)), IT
         }
-        attachControl(YY, rY) {}
-        detachControl(YY) {}
+        attachControl(TT, oT) {}
+        detachControl(TT) {}
         update() {
-          this._hasMoved = !1, this._checkInputs(), this.cameraRigMode !== YY.RIG_MODE_NONE && this._updateRigCameras(), this.getViewMatrix(), this.getProjectionMatrix()
+          this._hasMoved = !1, this._checkInputs(), this.cameraRigMode !== TT.RIG_MODE_NONE && this._updateRigCameras(), this.getViewMatrix(), this.getProjectionMatrix()
         }
         _checkInputs() {
           this.onAfterCheckInputsObservable.notifyObservers(this)
@@ -197,109 +197,109 @@ export const modules = {
           return this._rigPostProcess
         }
         _getFirstPostProcess() {
-          for (let YY = 0; YY < this._postProcesses.length; YY++)
-            if (null !== this._postProcesses[YY]) return this._postProcesses[YY];
+          for (let TT = 0; TT < this._postProcesses.length; TT++)
+            if (null !== this._postProcesses[TT]) return this._postProcesses[TT];
           return null
         }
         _cascadePostProcessesToRigCams() {
-          const YY = this._getFirstPostProcess();
-          YY && YY.markTextureDirty();
-          for (let rY = 0, DY = this._rigCameras.length; rY < DY; rY++) {
-            const YY = this._rigCameras[rY],
-              DY = YY._rigPostProcess;
-            if (DY) {
-              "pass" === DY.getEffectName() && (YY.isIntermediate = 0 === this._postProcesses.length), YY._postProcesses = this._postProcesses.slice(0).concat(DY), DY.markTextureDirty()
-            } else YY._postProcesses = this._postProcesses.slice(0)
+          const TT = this._getFirstPostProcess();
+          TT && TT.markTextureDirty();
+          for (let oT = 0, IT = this._rigCameras.length; oT < IT; oT++) {
+            const TT = this._rigCameras[oT],
+              IT = TT._rigPostProcess;
+            if (IT) {
+              "pass" === IT.getEffectName() && (TT.isIntermediate = 0 === this._postProcesses.length), TT._postProcesses = this._postProcesses.slice(0).concat(IT), IT.markTextureDirty()
+            } else TT._postProcesses = this._postProcesses.slice(0)
           }
         }
-        attachPostProcess(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          return !YY.isReusable() && this._postProcesses.indexOf(YY) > -1 ? (aY.d.Error("You're trying to reuse a post process not defined as reusable."), 0) : (null == rY || rY < 0 ? this._postProcesses.push(YY) : null === this._postProcesses[rY] ? this._postProcesses[rY] = YY : this._postProcesses.splice(rY, 0, YY), this._cascadePostProcessesToRigCams(), this._scene.prePassRenderer && this._scene.prePassRenderer.nYY(), this._postProcesses.indexOf(YY))
+        attachPostProcess(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          return !TT.isReusable() && this._postProcesses.indexOf(TT) > -1 ? (FT.d.Error("You're trying to reuse a post process not defined as reusable."), 0) : (null == oT || oT < 0 ? this._postProcesses.push(TT) : null === this._postProcesses[oT] ? this._postProcesses[oT] = TT : this._postProcesses.splice(oT, 0, TT), this._cascadePostProcessesToRigCams(), this._scene.prePassRenderer && this._scene.prePassRenderer.roT(), this._postProcesses.indexOf(TT))
         }
-        detachPostProcess(YY) {
-          const rY = this._postProcesses.indexOf(YY); - 1 !== rY && (this._postProcesses[rY] = null), this._scene.prePassRenderer && this._scene.prePassRenderer.nYY(), this._cascadePostProcessesToRigCams()
+        detachPostProcess(TT) {
+          const oT = this._postProcesses.indexOf(TT); - 1 !== oT && (this._postProcesses[oT] = null), this._scene.prePassRenderer && this._scene.prePassRenderer.roT(), this._cascadePostProcessesToRigCams()
         }
         getWorldMatrix() {
           return this._isSynchronizedViewMatrix() || this.getViewMatrix(), this._worldMatrix
         }
         _getViewMatrix() {
-          return OY.e.Identity()
+          return XT.b.Identity()
         }
-        getViewMatrix(YY) {
-          return !YY && this._isSynchronizedViewMatrix() || (this._hasMoved = !0, this.updateCache(), this._computedViewMatrix = this._getViewMatrix(), this._currentRenderId = this.hT().getRenderId(), this._childUpdateId++, this._refreshFrustumPlanes = !0, this._cameraRigParams && this._cameraRigParams.vrPreViewMatrix && this._computedViewMatrix.multiplyToRef(this._cameraRigParams.vrPreViewMatrix, this._computedViewMatrix), this.parent && this.parent.onViewMatrixChangedObservable && this.parent.onViewMatrixChangedObservable.notifyObservers(this.parent), this.onViewMatrixChangedObservable.notifyObservers(this), this._computedViewMatrix.invertToRef(this._worldMatrix), this._worldMatrix.getTranslationToRef(this._globalPosition)), this._computedViewMatrix
+        getViewMatrix(TT) {
+          return !TT && this._isSynchronizedViewMatrix() || (this._hasMoved = !0, this.updateCache(), this._computedViewMatrix = this._getViewMatrix(), this._currentRenderId = this.pC().getRenderId(), this._childUpdateId++, this._refreshFrustumPlanes = !0, this._cameraRigParams && this._cameraRigParams.vrPreViewMatrix && this._computedViewMatrix.multiplyToRef(this._cameraRigParams.vrPreViewMatrix, this._computedViewMatrix), this.parent && this.parent.onViewMatrixChangedObservable && this.parent.onViewMatrixChangedObservable.notifyObservers(this.parent), this.onViewMatrixChangedObservable.notifyObservers(this), this._computedViewMatrix.invertToRef(this._worldMatrix), this._worldMatrix.getTranslationToRef(this._globalPosition)), this._computedViewMatrix
         }
-        freezeProjectionMatrix(YY) {
-          this._doNotComputeProjectionMatrix = !0, void 0 !== YY && (this._projectionMatrix = YY)
+        freezeProjectionMatrix(TT) {
+          this._doNotComputeProjectionMatrix = !0, void 0 !== TT && (this._projectionMatrix = TT)
         }
         unfreezeProjectionMatrix() {
           this._doNotComputeProjectionMatrix = !1
         }
-        getProjectionMatrix(rY) {
-          if (this._doNotComputeProjectionMatrix || !rY && this._isSynchronizedProjectionMatrix()) return this._projectionMatrix;
-          const DY = this.ignoreCameraMaxZ ? 0 : this.maxZ;
-          this._cache.mode = this.mode, this._cache.minZ = this.minZ, this._cache.maxZ = DY, this._refreshFrustumPlanes = !0;
-          const FY = this.ky(),
-            AY = this.hT(),
-            IY = FY.QDY;
-          if (this.mode === YY.PERSPECTIVE_CAMERA) {
-            let rY;
-            this._cache.fov = this.fov, this._cache.fovMode = this.fovMode, this._cache.aspectRatio = FY.getAspectRatio(this), this._cache.projectionPlaneTilt = this.projectionPlaneTilt, this.minZ <= 0 && (this.minZ = .1), rY = AY.useRightHandedSystem ? OY.e.PerspectiveFovRHToRef : OY.e.PerspectiveFovLHToRef, rY(this.fov, FY.getAspectRatio(this), IY ? DY : this.minZ, IY ? this.minZ : DY, this._projectionMatrix, this.fovMode === YY.FOVMODE_VERTICAL_FIXED, FY.isNDCHalfZRange, this.projectionPlaneTilt, IY)
+        getProjectionMatrix(oT) {
+          if (this._doNotComputeProjectionMatrix || !oT && this._isSynchronizedProjectionMatrix()) return this._projectionMatrix;
+          const IT = this.ignoreCameraMaxZ ? 0 : this.maxZ;
+          this._cache.mode = this.mode, this._cache.minZ = this.minZ, this._cache.maxZ = IT, this._refreshFrustumPlanes = !0;
+          const iT = this.Zc(),
+            zT = this.pC(),
+            kT = iT.lIT;
+          if (this.mode === TT.PERSPECTIVE_CAMERA) {
+            let oT;
+            this._cache.fov = this.fov, this._cache.fovMode = this.fovMode, this._cache.aspectRatio = iT.getAspectRatio(this), this._cache.projectionPlaneTilt = this.projectionPlaneTilt, this.minZ <= 0 && (this.minZ = .1), oT = zT.useRightHandedSystem ? XT.b.PerspectiveFovRHToRef : XT.b.PerspectiveFovLHToRef, oT(this.fov, iT.getAspectRatio(this), kT ? IT : this.minZ, kT ? this.minZ : IT, this._projectionMatrix, this.fovMode === TT.FOVMODE_VERTICAL_FIXED, iT.isNDCHalfZRange, this.projectionPlaneTilt, kT)
           } else {
-            const YY = FY.getRenderWidth() / 2,
-              rY = FY.getRenderHeight() / 2;
-            AY.useRightHandedSystem ? this.oblique ? OY.e.ObliqueOffCenterRHToRef(this.orthoLeft ?? -YY, this.orthoRight ?? YY, this.orthoBottom ?? -rY, this.orthoTop ?? rY, IY ? DY : this.minZ, IY ? this.minZ : DY, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, FY.isNDCHalfZRange) : OY.e.OrthoOffCenterRHToRef(this.orthoLeft ?? -YY, this.orthoRight ?? YY, this.orthoBottom ?? -rY, this.orthoTop ?? rY, IY ? DY : this.minZ, IY ? this.minZ : DY, this._projectionMatrix, FY.isNDCHalfZRange) : this.oblique ? OY.e.ObliqueOffCenterLHToRef(this.orthoLeft ?? -YY, this.orthoRight ?? YY, this.orthoBottom ?? -rY, this.orthoTop ?? rY, IY ? DY : this.minZ, IY ? this.minZ : DY, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, FY.isNDCHalfZRange) : OY.e.OrthoOffCenterLHToRef(this.orthoLeft ?? -YY, this.orthoRight ?? YY, this.orthoBottom ?? -rY, this.orthoTop ?? rY, IY ? DY : this.minZ, IY ? this.minZ : DY, this._projectionMatrix, FY.isNDCHalfZRange), this._cache.orthoLeft = this.orthoLeft, this._cache.orthoRight = this.orthoRight, this._cache.orthoBottom = this.orthoBottom, this._cache.orthoTop = this.orthoTop, this._cache.obliqueAngle = this.oblique?.angle, this._cache.obliqueLength = this.oblique?.length, this._cache.obliqueOffset = this.oblique?.offset, this._cache.renderWidth = FY.getRenderWidth(), this._cache.renderHeight = FY.getRenderHeight()
+            const TT = iT.getRenderWidth() / 2,
+              oT = iT.getRenderHeight() / 2;
+            zT.useRightHandedSystem ? this.oblique ? XT.b.ObliqueOffCenterRHToRef(this.orthoLeft ?? -TT, this.orthoRight ?? TT, this.orthoBottom ?? -oT, this.orthoTop ?? oT, kT ? IT : this.minZ, kT ? this.minZ : IT, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, iT.isNDCHalfZRange) : XT.b.OrthoOffCenterRHToRef(this.orthoLeft ?? -TT, this.orthoRight ?? TT, this.orthoBottom ?? -oT, this.orthoTop ?? oT, kT ? IT : this.minZ, kT ? this.minZ : IT, this._projectionMatrix, iT.isNDCHalfZRange) : this.oblique ? XT.b.ObliqueOffCenterLHToRef(this.orthoLeft ?? -TT, this.orthoRight ?? TT, this.orthoBottom ?? -oT, this.orthoTop ?? oT, kT ? IT : this.minZ, kT ? this.minZ : IT, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, iT.isNDCHalfZRange) : XT.b.OrthoOffCenterLHToRef(this.orthoLeft ?? -TT, this.orthoRight ?? TT, this.orthoBottom ?? -oT, this.orthoTop ?? oT, kT ? IT : this.minZ, kT ? this.minZ : IT, this._projectionMatrix, iT.isNDCHalfZRange), this._cache.orthoLeft = this.orthoLeft, this._cache.orthoRight = this.orthoRight, this._cache.orthoBottom = this.orthoBottom, this._cache.orthoTop = this.orthoTop, this._cache.obliqueAngle = this.oblique?.angle, this._cache.obliqueLength = this.oblique?.length, this._cache.obliqueOffset = this.oblique?.offset, this._cache.renderWidth = iT.getRenderWidth(), this._cache.renderHeight = iT.getRenderHeight()
           }
           return this.onProjectionMatrixChangedObservable.notifyObservers(this), this._projectionMatrix
         }
         getTransformationMatrix() {
           return this._computedViewMatrix.multiplyToRef(this._projectionMatrix, this._transformMatrix), this._transformMatrix
         }
-        _computeObliqueDistance(YY) {
-          return (this.radius || (this.target ? OY.r.Distance(this.position, this.target) : this.position.length())) + YY
+        _computeObliqueDistance(TT) {
+          return (this.radius || (this.target ? XT.m.Distance(this.position, this.target) : this.position.length())) + TT
         }
         _updateFrustumPlanes() {
-          this._refreshFrustumPlanes && (this.getTransformationMatrix(), this._frustumPlanes ? iY.d.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = iY.d.GetPlanes(this._transformMatrix), this._refreshFrustumPlanes = !1)
+          this._refreshFrustumPlanes && (this.getTransformationMatrix(), this._frustumPlanes ? xT.b.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = xT.b.GetPlanes(this._transformMatrix), this._refreshFrustumPlanes = !1)
         }
-        isInFrustum(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._updateFrustumPlanes(), rY && this.rigCameras.length > 0) {
-            let rY = !1;
-            for (const DY of this.rigCameras) DY._updateFrustumPlanes(), rY = rY || YY.isInFrustum(DY._frustumPlanes);
-            return rY
+        isInFrustum(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._updateFrustumPlanes(), oT && this.rigCameras.length > 0) {
+            let oT = !1;
+            for (const IT of this.rigCameras) IT._updateFrustumPlanes(), oT = oT || TT.isInFrustum(IT._frustumPlanes);
+            return oT
           }
-          return YY.isInFrustum(this._frustumPlanes)
+          return TT.isInFrustum(this._frustumPlanes)
         }
-        isCompletelyInFrustum(YY) {
-          return this._updateFrustumPlanes(), YY.isCompletelyInFrustum(this._frustumPlanes)
+        isCompletelyInFrustum(TT) {
+          return this._updateFrustumPlanes(), TT.isCompletelyInFrustum(this._frustumPlanes)
         }
         getForwardRay() {
-          throw (0, uY.i)("Ray")
+          throw (0, DT.k)("Ray")
         }
-        getForwardRayToRef(YY) {
-          throw (0, uY.i)("Ray")
+        getForwardRayToRef(TT) {
+          throw (0, DT.k)("Ray")
         }
-        dispose(rY) {
-          let DY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          for (this.onViewMatrixChangedObservable.clear(), this.onProjectionMatrixChangedObservable.clear(), this.onAfterCheckInputsObservable.clear(), this.onRestoreStateObservable.clear(), this.inputs && this.inputs.clear(), this.hT().stopAnimation(this), this.hT().removeCamera(this); this._rigCameras.length > 0;) {
-            const YY = this._rigCameras.pop();
-            YY && YY.dispose()
+        dispose(oT) {
+          let IT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          for (this.onViewMatrixChangedObservable.clear(), this.onProjectionMatrixChangedObservable.clear(), this.onAfterCheckInputsObservable.clear(), this.onRestoreStateObservable.clear(), this.inputs && this.inputs.clear(), this.pC().stopAnimation(this), this.pC().removeCamera(this); this._rigCameras.length > 0;) {
+            const TT = this._rigCameras.pop();
+            TT && TT.dispose()
           }
           if (this._parentContainer) {
-            const YY = this._parentContainer.cameras.indexOf(this);
-            YY > -1 && this._parentContainer.cameras.splice(YY, 1), this._parentContainer = null
+            const TT = this._parentContainer.cameras.indexOf(this);
+            TT > -1 && this._parentContainer.cameras.splice(TT, 1), this._parentContainer = null
           }
           if (this._rigPostProcess) this._rigPostProcess.dispose(this), this._rigPostProcess = null, this._postProcesses.length = 0;
-          else if (this.cameraRigMode !== YY.RIG_MODE_NONE) this._rigPostProcess = null, this._postProcesses.length = 0;
+          else if (this.cameraRigMode !== TT.RIG_MODE_NONE) this._rigPostProcess = null, this._postProcesses.length = 0;
           else {
-            let YY = this._postProcesses.length;
-            for (; --YY >= 0;) {
-              const rY = this._postProcesses[YY];
-              rY && rY.dispose(this)
+            let TT = this._postProcesses.length;
+            for (; --TT >= 0;) {
+              const oT = this._postProcesses[TT];
+              oT && oT.dispose(this)
             }
           }
-          let FY = this.customRenderTargets.length;
-          for (; --FY >= 0;) this.customRenderTargets[FY].dispose();
-          this.customRenderTargets.length = 0, this._activeMeshes.dispose(), this.hT().ky().releaseRenderPassId(this.renderPassId), super.dispose(rY, DY)
+          let iT = this.customRenderTargets.length;
+          for (; --iT >= 0;) this.customRenderTargets[iT].dispose();
+          this.customRenderTargets.length = 0, this._activeMeshes.dispose(), this.pC().Zc().releaseRenderPassId(this.renderPassId), super.dispose(oT, IT)
         }
         get isLeftCamera() {
           return this._isLeftCamera
@@ -319,347 +319,347 @@ export const modules = {
         getRightTarget() {
           return this._rigCameras.length < 2 ? null : this._rigCameras[1].getTarget()
         }
-        setCameraRigMode(rY, DY) {
-          if (this.cameraRigMode !== rY) {
+        setCameraRigMode(oT, IT) {
+          if (this.cameraRigMode !== oT) {
             for (; this._rigCameras.length > 0;) {
-              const YY = this._rigCameras.pop();
-              YY && YY.dispose()
+              const TT = this._rigCameras.pop();
+              TT && TT.dispose()
             }
-            if (this.cameraRigMode = rY, this._cameraRigParams = {}, this._cameraRigParams.interaxialDistance = DY.interaxialDistance || .0637, this._cameraRigParams.stereoHalfAngle = this._cameraRigParams.interaxialDistance / .0637 * (Math.PI / 180), this.cameraRigMode !== YY.RIG_MODE_NONE) {
-              const YY = this.createRigCamera(this.name + "_L", 0);
-              YY && (YY._isLeftCamera = !0);
-              const rY = this.createRigCamera(this.name + "_R", 1);
-              rY && (rY._isRightCamera = !0), YY && rY && (this._rigCameras.push(YY), this._rigCameras.push(rY))
+            if (this.cameraRigMode = oT, this._cameraRigParams = {}, this._cameraRigParams.interaxialDistance = IT.interaxialDistance || .0637, this._cameraRigParams.stereoHalfAngle = this._cameraRigParams.interaxialDistance / .0637 * (Math.PI / 180), this.cameraRigMode !== TT.RIG_MODE_NONE) {
+              const TT = this.createRigCamera(this.name + "_L", 0);
+              TT && (TT._isLeftCamera = !0);
+              const oT = this.createRigCamera(this.name + "_R", 1);
+              oT && (oT._isRightCamera = !0), TT && oT && (this._rigCameras.push(TT), this._rigCameras.push(oT))
             }
-            this._setRigMode(DY), this._cascadePostProcessesToRigCams(), this.update()
+            this._setRigMode(IT), this._cascadePostProcessesToRigCams(), this.update()
           }
         }
-        _setRigMode(YY) {}
+        _setRigMode(TT) {}
         _getVRProjectionMatrix() {
-          return OY.e.PerspectiveFovLHToRef(this._cameraRigParams.vrMetrics.aspectRatioFov, this._cameraRigParams.vrMetrics.aspectRatio, this.minZ, this.ignoreCameraMaxZ ? 0 : this.maxZ, this._cameraRigParams.vrWorkMatrix, !0, this.ky().isNDCHalfZRange), this._cameraRigParams.vrWorkMatrix.multiplyToRef(this._cameraRigParams.vrHMatrix, this._projectionMatrix), this._projectionMatrix
+          return XT.b.PerspectiveFovLHToRef(this._cameraRigParams.vrMetrics.aspectRatioFov, this._cameraRigParams.vrMetrics.aspectRatio, this.minZ, this.ignoreCameraMaxZ ? 0 : this.maxZ, this._cameraRigParams.vrWorkMatrix, !0, this.Zc().isNDCHalfZRange), this._cameraRigParams.vrWorkMatrix.multiplyToRef(this._cameraRigParams.vrHMatrix, this._projectionMatrix), this._projectionMatrix
         }
-        setCameraRigParameter(YY, rY) {
-          this._cameraRigParams || (this._cameraRigParams = {}), this._cameraRigParams[YY] = rY, "interaxialDistance" === YY && (this._cameraRigParams.stereoHalfAngle = rY / .0637 * (Math.PI / 180))
+        setCameraRigParameter(TT, oT) {
+          this._cameraRigParams || (this._cameraRigParams = {}), this._cameraRigParams[TT] = oT, "interaxialDistance" === TT && (this._cameraRigParams.stereoHalfAngle = oT / .0637 * (Math.PI / 180))
         }
-        createRigCamera(YY, rY) {
+        createRigCamera(TT, oT) {
           return null
         }
         _updateRigCameras() {
-          for (let YY = 0; YY < this._rigCameras.length; YY++) this._rigCameras[YY].minZ = this.minZ, this._rigCameras[YY].maxZ = this.ignoreCameraMaxZ ? 0 : this.maxZ, this._rigCameras[YY].fov = this.fov, this._rigCameras[YY].upVector.brY(this.upVector);
-          this.cameraRigMode === YY.RIG_MODE_STEREOSCOPIC_ANAGLYPH && (this._rigCameras[0].viewport = this._rigCameras[1].viewport = this.viewport)
+          for (let TT = 0; TT < this._rigCameras.length; TT++) this._rigCameras[TT].minZ = this.minZ, this._rigCameras[TT].maxZ = this.ignoreCameraMaxZ ? 0 : this.maxZ, this._rigCameras[TT].fov = this.fov, this._rigCameras[TT].upVector.SIT(this.upVector);
+          this.cameraRigMode === TT.RIG_MODE_STEREOSCOPIC_ANAGLYPH && (this._rigCameras[0].viewport = this._rigCameras[1].viewport = this.viewport)
         }
         _setupInputs() {}
         serialize() {
-          const YY = QY.b.Serialize(this);
-          return YY.uniqueId = this.uniqueId, YY.type = this.getClassName(), this.parent && this.parent._serializeAsParent(YY), this.inputs && this.inputs.serialize(YY), QY.b.AppendSerializedAnimations(this, YY), YY.ws = this.serializeAnimationRanges(), YY.isEnabled = this.isEnabled(), YY
+          const TT = KT.c.Serialize(this);
+          return TT.uniqueId = this.uniqueId, TT.type = this.getClassName(), this.parent && this.parent._serializeAsParent(TT), this.inputs && this.inputs.serialize(TT), KT.c.AppendSerializedAnimations(this, TT), TT.ec = this.serializeAnimationRanges(), TT.isEnabled = this.isEnabled(), TT
         }
-        clone(rY) {
-          let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const FY = QY.b.Clone(YY.GetConstructorFromName(this.getClassName(), rY, this.hT(), this.interaxialDistance, this.isStereoscopicSideBySide), this);
-          return FY.name = rY, FY.parent = DY, this.onClonedObservable.notifyObservers(FY), FY
+        clone(oT) {
+          let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const iT = KT.c.Clone(TT.GetConstructorFromName(this.getClassName(), oT, this.pC(), this.interaxialDistance, this.isStereoscopicSideBySide), this);
+          return iT.name = oT, iT.parent = IT, this.onClonedObservable.notifyObservers(iT), iT
         }
-        zq(YY) {
-          const rY = OY.r.Zero();
-          return this.getDirectionToRef(YY, rY), rY
+        kp(TT) {
+          const oT = XT.m.Zero();
+          return this.getDirectionToRef(TT, oT), oT
         }
         get absoluteRotation() {
           return this.getWorldMatrix().decompose(void 0, this._absoluteRotation), this._absoluteRotation
         }
-        getDirectionToRef(YY, rY) {
-          OY.r.TransformNormalToRef(YY, this.getWorldMatrix(), rY)
+        getDirectionToRef(TT, oT) {
+          XT.m.TransformNormalToRef(TT, this.getWorldMatrix(), oT)
         }
-        static GetConstructorFromName(rY, DY, FY) {
-          let AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-            IY = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const RY = gY.b.Construct(rY, DY, FY, {
-            interaxial_distance: AY,
-            isStereoscopicSideBySide: IY
+        static GetConstructorFromName(oT, IT, iT) {
+          let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+            kT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const WT = BT.c.Construct(oT, IT, iT, {
+            interaxial_distance: zT,
+            isStereoscopicSideBySide: kT
           });
-          return RY || (() => YY._CreateDefaultParsedCamera(DY, FY))
+          return WT || (() => TT._CreateDefaultParsedCamera(IT, iT))
         }
         computeWorldMatrix() {
           return this.getWorldMatrix()
         }
         _calculateHandednessMultiplier() {
-          let YY = this.hT().useRightHandedSystem ? -1 : 1;
-          return this.parent && this.parent._getWorldMatrixDeterminant() < 0 && (YY *= -1), YY
+          let TT = this.pC().useRightHandedSystem ? -1 : 1;
+          return this.parent && this.parent._getWorldMatrixDeterminant() < 0 && (TT *= -1), TT
         }
       }, (() => {
-        const IY = "function" === typeof Symbol && Symbol.metadata ? Object.create(ZY[Symbol.metadata] ?? null) : void 0;
-        rY = [(0, AY.J)("position")], DY = [(0, AY.J)("upVector")], vY = [(0, AY.M)()], oY = [(0, AY.M)()], WY = [(0, AY.M)()], EY = [(0, AY.M)()], mY = [(0, AY.M)()], VY = [(0, AY.M)()], SY = [(0, AY.M)()], lY = [(0, AY.M)()], TY = [(0, AY.M)()], eY = [(0, AY.M)()], NY = [(0, AY.M)()], BY = [(0, AY.M)()], cY = [(0, AY.M)()], KY = [(0, AY.M)()], HY = [(0, AY.M)()], zY = [(0, AY.M)()], (0, FY.i)(YY, null, vY, {
+        const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(JT[Symbol.metadata] ?? null) : void 0;
+        oT = [(0, zT.M)("position")], IT = [(0, zT.M)("upVector")], ST = [(0, zT.P)()], MT = [(0, zT.P)()], rT = [(0, zT.P)()], AT = [(0, zT.P)()], gT = [(0, zT.P)()], hT = [(0, zT.P)()], wT = [(0, zT.P)()], mT = [(0, zT.P)()], eT = [(0, zT.P)()], RT = [(0, zT.P)()], uT = [(0, zT.P)()], vT = [(0, zT.P)()], ET = [(0, zT.P)()], fT = [(0, zT.P)()], CT = [(0, zT.P)()], jT = [(0, zT.P)()], (0, iT.h)(TT, null, ST, {
           kind: "getter",
           name: "orthoLeft",
           static: !1,
           private: !1,
           access: {
-            has: YY => "orthoLeft" in YY,
-            get: YY => YY.orthoLeft
+            has: TT => "orthoLeft" in TT,
+            get: TT => TT.orthoLeft
           },
-          metadata: IY
-        }, null, CY), (0, FY.i)(YY, null, oY, {
+          metadata: kT
+        }, null, UT), (0, iT.h)(TT, null, MT, {
           kind: "getter",
           name: "orthoRight",
           static: !1,
           private: !1,
           access: {
-            has: YY => "orthoRight" in YY,
-            get: YY => YY.orthoRight
+            has: TT => "orthoRight" in TT,
+            get: TT => TT.orthoRight
           },
-          metadata: IY
-        }, null, CY), (0, FY.i)(YY, null, WY, {
+          metadata: kT
+        }, null, UT), (0, iT.h)(TT, null, rT, {
           kind: "getter",
           name: "orthoBottom",
           static: !1,
           private: !1,
           access: {
-            has: YY => "orthoBottom" in YY,
-            get: YY => YY.orthoBottom
+            has: TT => "orthoBottom" in TT,
+            get: TT => TT.orthoBottom
           },
-          metadata: IY
-        }, null, CY), (0, FY.i)(YY, null, EY, {
+          metadata: kT
+        }, null, UT), (0, iT.h)(TT, null, AT, {
           kind: "getter",
           name: "orthoTop",
           static: !1,
           private: !1,
           access: {
-            has: YY => "orthoTop" in YY,
-            get: YY => YY.orthoTop
+            has: TT => "orthoTop" in TT,
+            get: TT => TT.orthoTop
           },
-          metadata: IY
-        }, null, CY), (0, FY.i)(YY, null, TY, {
+          metadata: kT
+        }, null, UT), (0, iT.h)(TT, null, eT, {
           kind: "getter",
           name: "inertia",
           static: !1,
           private: !1,
           access: {
-            has: YY => "inertia" in YY,
-            get: YY => YY.inertia
+            has: TT => "inertia" in TT,
+            get: TT => TT.inertia
           },
-          metadata: IY
-        }, null, CY), (0, FY.i)(YY, null, eY, {
+          metadata: kT
+        }, null, UT), (0, iT.h)(TT, null, RT, {
           kind: "getter",
           name: "mode",
           static: !1,
           private: !1,
           access: {
-            has: YY => "mode" in YY,
-            get: YY => YY.mode
+            has: TT => "mode" in TT,
+            get: TT => TT.mode
           },
-          metadata: IY
-        }, null, CY), (0, FY.i)(null, null, rY, {
+          metadata: kT
+        }, null, UT), (0, iT.h)(null, null, oT, {
           kind: "field",
           name: "_position",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_position" in YY,
-            get: YY => YY._position,
-            set: (YY, rY) => {
-              YY._position = rY
+            has: TT => "_position" in TT,
+            get: TT => TT._position,
+            set: (TT, oT) => {
+              TT._position = oT
             }
           },
-          metadata: IY
-        }, fY, jY), (0, FY.i)(null, null, DY, {
+          metadata: kT
+        }, aT, YT), (0, iT.h)(null, null, IT, {
           kind: "field",
           name: "_upVector",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_upVector" in YY,
-            get: YY => YY._upVector,
-            set: (YY, rY) => {
-              YY._upVector = rY
+            has: TT => "_upVector" in TT,
+            get: TT => TT._upVector,
+            set: (TT, oT) => {
+              TT._upVector = oT
             }
           },
-          metadata: IY
-        }, hY, dY), (0, FY.i)(null, null, mY, {
+          metadata: kT
+        }, QT, OT), (0, iT.h)(null, null, gT, {
           kind: "field",
           name: "fov",
           static: !1,
           private: !1,
           access: {
-            has: YY => "fov" in YY,
-            get: YY => YY.fov,
-            set: (YY, rY) => {
-              YY.fov = rY
+            has: TT => "fov" in TT,
+            get: TT => TT.fov,
+            set: (TT, oT) => {
+              TT.fov = oT
             }
           },
-          metadata: IY
-        }, JY, MY), (0, FY.i)(null, null, VY, {
+          metadata: kT
+        }, HT, nT), (0, iT.h)(null, null, hT, {
           kind: "field",
           name: "projectionPlaneTilt",
           static: !1,
           private: !1,
           access: {
-            has: YY => "projectionPlaneTilt" in YY,
-            get: YY => YY.projectionPlaneTilt,
-            set: (YY, rY) => {
-              YY.projectionPlaneTilt = rY
+            has: TT => "projectionPlaneTilt" in TT,
+            get: TT => TT.projectionPlaneTilt,
+            set: (TT, oT) => {
+              TT.projectionPlaneTilt = oT
             }
           },
-          metadata: IY
-        }, wY, bY), (0, FY.i)(null, null, SY, {
+          metadata: kT
+        }, qT, ZT), (0, iT.h)(null, null, wT, {
           kind: "field",
           name: "minZ",
           static: !1,
           private: !1,
           access: {
-            has: YY => "minZ" in YY,
-            get: YY => YY.minZ,
-            set: (YY, rY) => {
-              YY.minZ = rY
+            has: TT => "minZ" in TT,
+            get: TT => TT.minZ,
+            set: (TT, oT) => {
+              TT.minZ = oT
             }
           },
-          metadata: IY
-        }, XY, qY), (0, FY.i)(null, null, lY, {
+          metadata: kT
+        }, lT, sT), (0, iT.h)(null, null, mT, {
           kind: "field",
           name: "maxZ",
           static: !1,
           private: !1,
           access: {
-            has: YY => "maxZ" in YY,
-            get: YY => YY.maxZ,
-            set: (YY, rY) => {
-              YY.maxZ = rY
+            has: TT => "maxZ" in TT,
+            get: TT => TT.maxZ,
+            set: (TT, oT) => {
+              TT.maxZ = oT
             }
           },
-          metadata: IY
-        }, pY, kY), (0, FY.i)(null, null, NY, {
+          metadata: kT
+        }, tT, GT), (0, iT.h)(null, null, uT, {
           kind: "field",
           name: "layerMask",
           static: !1,
           private: !1,
           access: {
-            has: YY => "layerMask" in YY,
-            get: YY => YY.layerMask,
-            set: (YY, rY) => {
-              YY.layerMask = rY
+            has: TT => "layerMask" in TT,
+            get: TT => TT.layerMask,
+            set: (TT, oT) => {
+              TT.layerMask = oT
             }
           },
-          metadata: IY
-        }, GY, xY), (0, FY.i)(null, null, BY, {
+          metadata: kT
+        }, pT, bT), (0, iT.h)(null, null, vT, {
           kind: "field",
           name: "fovMode",
           static: !1,
           private: !1,
           access: {
-            has: YY => "fovMode" in YY,
-            get: YY => YY.fovMode,
-            set: (YY, rY) => {
-              YY.fovMode = rY
+            has: TT => "fovMode" in TT,
+            get: TT => TT.fovMode,
+            set: (TT, oT) => {
+              TT.fovMode = oT
             }
           },
-          metadata: IY
-        }, nY, PY), (0, FY.i)(null, null, cY, {
+          metadata: kT
+        }, yT, NT), (0, iT.h)(null, null, ET, {
           kind: "field",
           name: "cameraRigMode",
           static: !1,
           private: !1,
           access: {
-            has: YY => "cameraRigMode" in YY,
-            get: YY => YY.cameraRigMode,
-            set: (YY, rY) => {
-              YY.cameraRigMode = rY
+            has: TT => "cameraRigMode" in TT,
+            get: TT => TT.cameraRigMode,
+            set: (TT, oT) => {
+              TT.cameraRigMode = oT
             }
           },
-          metadata: IY
-        }, UY, LY), (0, FY.i)(null, null, KY, {
+          metadata: kT
+        }, PT, dT), (0, iT.h)(null, null, fT, {
           kind: "field",
           name: "interaxialDistance",
           static: !1,
           private: !1,
           access: {
-            has: YY => "interaxialDistance" in YY,
-            get: YY => YY.interaxialDistance,
-            set: (YY, rY) => {
-              YY.interaxialDistance = rY
+            has: TT => "interaxialDistance" in TT,
+            get: TT => TT.interaxialDistance,
+            set: (TT, oT) => {
+              TT.interaxialDistance = oT
             }
           },
-          metadata: IY
-        }, tY, Yr), (0, FY.i)(null, null, HY, {
+          metadata: kT
+        }, VT, To), (0, iT.h)(null, null, CT, {
           kind: "field",
           name: "isStereoscopicSideBySide",
           static: !1,
           private: !1,
           access: {
-            has: YY => "isStereoscopicSideBySide" in YY,
-            get: YY => YY.isStereoscopicSideBySide,
-            set: (YY, rY) => {
-              YY.isStereoscopicSideBySide = rY
+            has: TT => "isStereoscopicSideBySide" in TT,
+            get: TT => TT.isStereoscopicSideBySide,
+            set: (TT, oT) => {
+              TT.isStereoscopicSideBySide = oT
             }
           },
-          metadata: IY
-        }, rr, Dr), (0, FY.i)(null, null, zY, {
+          metadata: kT
+        }, oo, Io), (0, iT.h)(null, null, jT, {
           kind: "field",
           name: "ignoreCameraMaxZ",
           static: !1,
           private: !1,
           access: {
-            has: YY => "ignoreCameraMaxZ" in YY,
-            get: YY => YY.ignoreCameraMaxZ,
-            set: (YY, rY) => {
-              YY.ignoreCameraMaxZ = rY
+            has: TT => "ignoreCameraMaxZ" in TT,
+            get: TT => TT.ignoreCameraMaxZ,
+            set: (TT, oT) => {
+              TT.ignoreCameraMaxZ = oT
             }
           },
-          metadata: IY
-        }, Fr, Ar), IY && Object.defineProperty(YY, Symbol.metadata, {
+          metadata: kT
+        }, io, zo), kT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: IY
+          value: kT
         })
-      })(), YY._CreateDefaultParsedCamera = (YY, rY) => {
-        throw (0, uY.i)("UniversalCamera")
-      }, YY.PERSPECTIVE_CAMERA = 0, YY.ORTHOGRAPHIC_CAMERA = 1, YY.FOVMODE_VERTICAL_FIXED = 0, YY.FOVMODE_HORIZONTAL_FIXED = 1, YY.RIG_MODE_NONE = 0, YY.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, YY.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, YY.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, YY.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, YY.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, YY.RIG_MODE_VR = 20, YY.RIG_MODE_CUSTOM = 22, YY.ForceAttachControlToAlwaysPreventDefault = !1, YY
+      })(), TT._CreateDefaultParsedCamera = (TT, oT) => {
+        throw (0, DT.k)("UniversalCamera")
+      }, TT.PERSPECTIVE_CAMERA = 0, TT.ORTHOGRAPHIC_CAMERA = 1, TT.FOVMODE_VERTICAL_FIXED = 0, TT.FOVMODE_HORIZONTAL_FIXED = 1, TT.RIG_MODE_NONE = 0, TT.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, TT.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, TT.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, TT.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, TT.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, TT.RIG_MODE_VR = 20, TT.RIG_MODE_CUSTOM = 22, TT.ForceAttachControlToAlwaysPreventDefault = !1, TT
     })();
 
-    function WY(YY, rY) {
-      const DY = YY.type,
-        FY = oY.GetConstructorFromName(DY, YY.name, rY, YY.interaxial_distance, YY.isStereoscopicSideBySide),
-        AY = QY.b.Parse(FY, YY, rY);
-      if (void 0 !== YY.parentId && (AY._waitingParentId = YY.parentId), void 0 !== YY.parentInstanceIndex && (AY._waitingParentInstanceIndex = YY.parentInstanceIndex), AY.inputs && (AY.inputs.parse(YY), AY._setupInputs()), YY.upVector && (AY.upVector = OY.r.FromArray(YY.upVector)), AY.setPosition && (AY.position.p_(0, 0, 0), AY.setPosition(OY.r.FromArray(YY.position))), YY.target && AY.setTarget && AY.setTarget(OY.r.FromArray(YY.target)), YY.cameraRigMode) {
-        const rY = YY.interaxial_distance ? {
-          interaxialDistance: YY.interaxial_distance
+    function rT(TT, oT) {
+      const IT = TT.type,
+        iT = MT.GetConstructorFromName(IT, TT.name, oT, TT.interaxial_distance, TT.isStereoscopicSideBySide),
+        zT = KT.c.Parse(iT, TT, oT);
+      if (void 0 !== TT.parentId && (zT._waitingParentId = TT.parentId), void 0 !== TT.parentInstanceIndex && (zT._waitingParentInstanceIndex = TT.parentInstanceIndex), zT.inputs && (zT.inputs.parse(TT), zT._setupInputs()), TT.upVector && (zT.upVector = XT.m.FromArray(TT.upVector)), zT.setPosition && (zT.position.S_(0, 0, 0), zT.setPosition(XT.m.FromArray(TT.position))), TT.target && zT.setTarget && zT.setTarget(XT.m.FromArray(TT.target)), TT.cameraRigMode) {
+        const oT = TT.interaxial_distance ? {
+          interaxialDistance: TT.interaxial_distance
         } : {};
-        AY.setCameraRigMode(YY.cameraRigMode, rY)
+        zT.setCameraRigMode(TT.cameraRigMode, oT)
       }
-      if (YY.animations) {
-        for (let rY = 0; rY < YY.animations.length; rY++) {
-          const DY = YY.animations[rY],
-            FY = (0, vY.e)("BABYLON.Animation");
-          FY && AY.animations.push(FY.Parse(DY))
+      if (TT.animations) {
+        for (let oT = 0; oT < TT.animations.length; oT++) {
+          const IT = TT.animations[oT],
+            iT = (0, ST.d)("BABYLON.Animation");
+          iT && zT.animations.push(iT.Parse(IT))
         }
-        gY.b.ParseAnimationRanges(AY, YY, rY)
+        BT.c.ParseAnimationRanges(zT, TT, oT)
       }
-      return YY.autoAnimate && rY.beginAnimation(AY, YY.autoAnimateFrom, YY.autoAnimateTo, YY.autoAnimateLoop, YY.autoAnimateSpeed || 1), void 0 !== YY.isEnabled && AY.mV(YY.isEnabled), AY
+      return TT.autoAnimate && oT.beginAnimation(zT, TT.autoAnimateFrom, TT.autoAnimateTo, TT.autoAnimateLoop, TT.autoAnimateSpeed || 1), void 0 !== TT.isEnabled && zT.Fv(TT.isEnabled), zT
     }
-    let EY = !1;
+    let AT = !1;
 
-    function mY() {
-      EY || (EY = !0, oY.Parse = WY)
+    function gT() {
+      AT || (AT = !0, MT.Parse = rT)
     }
   },
-  39358: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY
+  38999: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT
     });
-    var FY = DY(36524);
-    class AY {
-      constructor(YY, rY, DY) {
-        this._cameraPosition = rY, this._behavior = DY, this.activeInput = !1, this.speed = 1, this.LJ = 1, this.panSpeed = 1, this.rotationXSpeed = 1, this.rotationYSpeed = 1, this._zoomSpeedMultiplier = 1, this._panSpeedMultiplier = 1, this.zoomInertia = .9, this.panInertia = .9, this.rotationInertia = .9, this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels = new FY.r, this.rotationAccumulatedPixels = new FY.r, this.zoomDeltaCurrentFrame = 0, this.panDeltaCurrentFrame = FY.r.Zero(), this.rotationDeltaCurrentFrame = FY.r.Zero(), this._zoomVelocity = 0, this._panVelocity = new FY.r, this.referenceFrameRate = 60, this._rotationVelocity = new FY.r, this._prevFrameTimeMs = 0, this._scene = YY
+    var iT = IT(36118);
+    class zT {
+      constructor(TT, oT, IT) {
+        this._cameraPosition = oT, this._behavior = IT, this.activeInput = !1, this.speed = 1, this.Rl = 1, this.panSpeed = 1, this.rotationXSpeed = 1, this.rotationYSpeed = 1, this._zoomSpeedMultiplier = 1, this._panSpeedMultiplier = 1, this.zoomInertia = .9, this.panInertia = .9, this.rotationInertia = .9, this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels = new iT.m, this.rotationAccumulatedPixels = new iT.m, this.zoomDeltaCurrentFrame = 0, this.panDeltaCurrentFrame = iT.m.Zero(), this.rotationDeltaCurrentFrame = iT.m.Zero(), this._zoomVelocity = 0, this._panVelocity = new iT.m, this.referenceFrameRate = 60, this._rotationVelocity = new iT.m, this._prevFrameTimeMs = 0, this._scene = TT
       }
       computeCurrentFrameDeltas() {
-        const YY = this._scene.ky().getDeltaTime(),
-          rY = this._getEffectiveDeltaMs(YY);
-        if (0 === this._zoomVelocity && 0 === this.zoomAccumulatedPixels && 0 === this._panVelocity.x && 0 === this._panVelocity.y && 0 === this._panVelocity.z && 0 === this.panAccumulatedPixels.x && 0 === this.panAccumulatedPixels.y && 0 === this.panAccumulatedPixels.z && 0 === this._rotationVelocity.x && 0 === this._rotationVelocity.y && 0 === this._rotationVelocity.z && 0 === this.rotationAccumulatedPixels.x && 0 === this.rotationAccumulatedPixels.y && 0 === this.rotationAccumulatedPixels.z && !this.activeInput) return this.panDeltaCurrentFrame.o3(0), this.rotationDeltaCurrentFrame.o3(0), this.zoomDeltaCurrentFrame = 0, void(YY > 0 && (this._prevFrameTimeMs = YY));
-        this.panDeltaCurrentFrame.o3(0), this.rotationDeltaCurrentFrame.o3(0), this.zoomDeltaCurrentFrame = 0;
-        (this.panAccumulatedPixels.lengthSquared() > 0 || this.rotationAccumulatedPixels.lengthSquared() > 0 || 0 !== this.zoomAccumulatedPixels) && this._behavior?.isInterpolating && this._behavior.stopAllAnimations(), this._panVelocity.p_(this._calculateCurrentVelocity(this._panVelocity.x, this.panAccumulatedPixels.x, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.y, this.panAccumulatedPixels.y, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.z, this.panAccumulatedPixels.z, this.panInertia)), this._panVelocity.scaleToRef(this.speed * this.panSpeed * this._panSpeedMultiplier * rY, this.panDeltaCurrentFrame), this._rotationVelocity.p_(this._calculateCurrentVelocity(this._rotationVelocity.x, this.rotationAccumulatedPixels.x, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.y, this.rotationAccumulatedPixels.y, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.z, this.rotationAccumulatedPixels.z, this.rotationInertia)), this.rotationDeltaCurrentFrame.p_(this._rotationVelocity.x * this.speed * this.rotationXSpeed * rY, this._rotationVelocity.y * this.speed * this.rotationYSpeed * rY, 0), this._zoomVelocity = this._calculateCurrentVelocity(this._zoomVelocity, this.zoomAccumulatedPixels, this.zoomInertia), this.zoomDeltaCurrentFrame = this._zoomVelocity * (this.speed * this.LJ * this._zoomSpeedMultiplier) * rY, YY > 0 && (this._prevFrameTimeMs = YY), this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels.o3(0), this.rotationAccumulatedPixels.o3(0), this.activeInput = !1
+        const TT = this._scene.Zc().getDeltaTime(),
+          oT = this._getEffectiveDeltaMs(TT);
+        if (0 === this._zoomVelocity && 0 === this.zoomAccumulatedPixels && 0 === this._panVelocity.x && 0 === this._panVelocity.y && 0 === this._panVelocity.z && 0 === this.panAccumulatedPixels.x && 0 === this.panAccumulatedPixels.y && 0 === this.panAccumulatedPixels.z && 0 === this._rotationVelocity.x && 0 === this._rotationVelocity.y && 0 === this._rotationVelocity.z && 0 === this.rotationAccumulatedPixels.x && 0 === this.rotationAccumulatedPixels.y && 0 === this.rotationAccumulatedPixels.z && !this.activeInput) return this.panDeltaCurrentFrame.W8(0), this.rotationDeltaCurrentFrame.W8(0), this.zoomDeltaCurrentFrame = 0, void(TT > 0 && (this._prevFrameTimeMs = TT));
+        this.panDeltaCurrentFrame.W8(0), this.rotationDeltaCurrentFrame.W8(0), this.zoomDeltaCurrentFrame = 0;
+        (this.panAccumulatedPixels.lengthSquared() > 0 || this.rotationAccumulatedPixels.lengthSquared() > 0 || 0 !== this.zoomAccumulatedPixels) && this._behavior?.isInterpolating && this._behavior.stopAllAnimations(), this._panVelocity.S_(this._calculateCurrentVelocity(this._panVelocity.x, this.panAccumulatedPixels.x, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.y, this.panAccumulatedPixels.y, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.z, this.panAccumulatedPixels.z, this.panInertia)), this._panVelocity.scaleToRef(this.speed * this.panSpeed * this._panSpeedMultiplier * oT, this.panDeltaCurrentFrame), this._rotationVelocity.S_(this._calculateCurrentVelocity(this._rotationVelocity.x, this.rotationAccumulatedPixels.x, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.y, this.rotationAccumulatedPixels.y, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.z, this.rotationAccumulatedPixels.z, this.rotationInertia)), this.rotationDeltaCurrentFrame.S_(this._rotationVelocity.x * this.speed * this.rotationXSpeed * oT, this._rotationVelocity.y * this.speed * this.rotationYSpeed * oT, 0), this._zoomVelocity = this._calculateCurrentVelocity(this._zoomVelocity, this.zoomAccumulatedPixels, this.zoomInertia), this.zoomDeltaCurrentFrame = this._zoomVelocity * (this.speed * this.Rl * this._zoomSpeedMultiplier) * oT, TT > 0 && (this._prevFrameTimeMs = TT), this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels.W8(0), this.rotationAccumulatedPixels.W8(0), this.activeInput = !1
       }
       resetRotationVelocity() {
-        this._rotationVelocity.o3(0), this.rotationAccumulatedPixels.o3(0)
+        this._rotationVelocity.W8(0), this.rotationAccumulatedPixels.W8(0)
       }
       resetPanVelocity() {
-        this._panVelocity.o3(0), this.panAccumulatedPixels.o3(0)
+        this._panVelocity.W8(0), this.panAccumulatedPixels.W8(0)
       }
       resetZoomVelocity() {
         this._zoomVelocity = 0, this.zoomAccumulatedPixels = 0
@@ -667,170 +667,170 @@ export const modules = {
       get isInterpolating() {
         return !!this._behavior?.isInterpolating
       }
-      getFrameIndependentDecay(YY) {
-        const rY = this._scene.ky().getDeltaTime(),
-          DY = this._getEffectiveDeltaMs(rY),
-          FY = 1e3 / this.referenceFrameRate;
-        return Math.pow(YY, DY / FY)
+      getFrameIndependentDecay(TT) {
+        const oT = this._scene.Zc().getDeltaTime(),
+          IT = this._getEffectiveDeltaMs(oT),
+          iT = 1e3 / this.referenceFrameRate;
+        return Math.pow(TT, IT / iT)
       }
-      getFrameIndependentInputScale(YY) {
-        const rY = 1 - YY;
-        if (rY <= 0) return 1;
-        return (1 - this.getFrameIndependentDecay(YY)) / rY
+      getFrameIndependentInputScale(TT) {
+        const oT = 1 - TT;
+        if (oT <= 0) return 1;
+        return (1 - this.getFrameIndependentDecay(TT)) / oT
       }
-      _getEffectiveDeltaMs(YY) {
-        return YY > 0 ? YY : this._prevFrameTimeMs > 0 ? this._prevFrameTimeMs : 1e3 / this.referenceFrameRate
+      _getEffectiveDeltaMs(TT) {
+        return TT > 0 ? TT : this._prevFrameTimeMs > 0 ? this._prevFrameTimeMs : 1e3 / this.referenceFrameRate
       }
-      _calculateCurrentVelocity(YY, rY, DY) {
-        let FY = YY;
-        const AY = this._scene.ky().getDeltaTime(),
-          IY = this._getEffectiveDeltaMs(AY);
-        if (0 === IY) return FY;
-        const RY = this.getFrameIndependentDecay(DY);
-        if (FY *= RY, 0 !== rY || this.activeInput) {
-          const YY = 1 - DY;
-          FY += rY / IY * (YY > 0 ? (1 - RY) / YY : 1)
-        } else Math.abs(FY) < 1e-6 && (FY = 0);
-        return FY
+      _calculateCurrentVelocity(TT, oT, IT) {
+        let iT = TT;
+        const zT = this._scene.Zc().getDeltaTime(),
+          kT = this._getEffectiveDeltaMs(zT);
+        if (0 === kT) return iT;
+        const WT = this.getFrameIndependentDecay(IT);
+        if (iT *= WT, 0 !== oT || this.activeInput) {
+          const TT = 1 - IT;
+          iT += oT / kT * (TT > 0 ? (1 - WT) / TT : 1)
+        } else Math.abs(iT) < 1e-6 && (iT = 0);
+        return iT
       }
     }
   },
-  39364: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => FY
+  39007: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => iT
     });
-    class FY {
-      constructor(YY, rY) {
-        this.inputMap = [], this.handlers = YY, this._createDefaultEntries = rY, this.resetInputMap()
+    class iT {
+      constructor(TT, oT) {
+        this.inputMap = [], this.handlers = TT, this._createDefaultEntries = oT, this.resetInputMap()
       }
-      resolveInteraction(YY, rY) {
-        for (const DY of this.inputMap)
-          if (DY.source === YY && this._entryMatches(DY, rY)) return DY;
+      resolveInteraction(TT, oT) {
+        for (const IT of this.inputMap)
+          if (IT.source === TT && this._entryMatches(IT, oT)) return IT;
         return null
       }
       resetInputMap() {
         this.inputMap = this._createDefaultEntries?.() ?? []
       }
-      getEntry(YY, rY, DY) {
-        const FY = this.inputMap;
-        for (let AY = 0; AY < FY.length; AY++) {
-          const IY = FY[AY];
-          if (IY.source === YY && IY.interaction === rY && this._entryConditionsMatch(IY, DY)) return IY
+      getEntry(TT, oT, IT) {
+        const iT = this.inputMap;
+        for (let zT = 0; zT < iT.length; zT++) {
+          const kT = iT[zT];
+          if (kT.source === TT && kT.interaction === oT && this._entryConditionsMatch(kT, IT)) return kT
         }
       }
-      getEntries(YY, rY, DY) {
-        const FY = [],
-          AY = this.inputMap;
-        for (let IY = 0; IY < AY.length; IY++) {
-          const RY = AY[IY];
-          RY.source === YY && RY.interaction === rY && this._entryConditionsMatch(RY, DY) && FY.push(RY)
+      getEntries(TT, oT, IT) {
+        const iT = [],
+          zT = this.inputMap;
+        for (let kT = 0; kT < zT.length; kT++) {
+          const WT = zT[kT];
+          WT.source === TT && WT.interaction === oT && this._entryConditionsMatch(WT, IT) && iT.push(WT)
         }
-        return FY
+        return iT
       }
-      addEntry(YY) {
-        const rY = this._entrySpecificity(YY);
-        let DY = this.inputMap.length;
-        for (let FY = 0; FY < this.inputMap.length; FY++)
-          if (this._entrySpecificity(this.inputMap[FY]) < rY) {
-            DY = FY;
+      addEntry(TT) {
+        const oT = this._entrySpecificity(TT);
+        let IT = this.inputMap.length;
+        for (let iT = 0; iT < this.inputMap.length; iT++)
+          if (this._entrySpecificity(this.inputMap[iT]) < oT) {
+            IT = iT;
             break
-          } this.inputMap.splice(DY, 0, YY)
+          } this.inputMap.splice(IT, 0, TT)
       }
-      setInteraction(YY, rY, DY) {
-        const FY = this.resolveInteraction(YY, rY);
-        return FY && this._entryCoversAllConditionsOf(FY, rY) ? (FY.interaction = DY, !0) : (this.addEntry({
-          source: YY,
-          ...rY ?? {},
-          interaction: DY
+      setInteraction(TT, oT, IT) {
+        const iT = this.resolveInteraction(TT, oT);
+        return iT && this._entryCoversAllConditionsOf(iT, oT) ? (iT.interaction = IT, !0) : (this.addEntry({
+          source: TT,
+          ...oT ?? {},
+          interaction: IT
         }), !0)
       }
-      _entryCoversAllConditionsOf(YY, rY) {
-        if (!rY) return !0;
-        const DY = YY;
-        for (const FY of Object.keys(rY)) {
-          const YY = rY[FY];
-          if (void 0 !== YY)
-            if ("modifiers" === FY) {
-              const rY = DY.modifiers ?? {};
-              for (const DY of Object.keys(YY))
-                if (void 0 !== YY[DY] && void 0 === rY[DY]) return !1
-            } else if (void 0 === DY[FY]) return !1
+      _entryCoversAllConditionsOf(TT, oT) {
+        if (!oT) return !0;
+        const IT = TT;
+        for (const iT of Object.keys(oT)) {
+          const TT = oT[iT];
+          if (void 0 !== TT)
+            if ("modifiers" === iT) {
+              const oT = IT.modifiers ?? {};
+              for (const IT of Object.keys(TT))
+                if (void 0 !== TT[IT] && void 0 === oT[IT]) return !1
+            } else if (void 0 === IT[iT]) return !1
         }
         return !0
       }
-      setInteractions(YY, rY, DY) {
-        let FY = 0;
-        const AY = this.inputMap;
-        for (let IY = 0; IY < AY.length; IY++) {
-          const RY = AY[IY];
-          RY.source === YY && this._entryMatches(RY, rY) && (RY.interaction = DY, FY++)
+      setInteractions(TT, oT, IT) {
+        let iT = 0;
+        const zT = this.inputMap;
+        for (let kT = 0; kT < zT.length; kT++) {
+          const WT = zT[kT];
+          WT.source === TT && this._entryMatches(WT, oT) && (WT.interaction = IT, iT++)
         }
-        return FY
+        return iT
       }
-      _entryMatches(YY, rY) {
-        switch (YY.source) {
+      _entryMatches(TT, oT) {
+        switch (TT.source) {
           case "pointer":
-            return (void 0 === YY.button || YY.button === rY?.button) && this._matchModifiers(YY.modifiers, rY?.modifiers);
+            return (void 0 === TT.button || TT.button === oT?.button) && this._matchModifiers(TT.modifiers, oT?.modifiers);
           case "wheel":
-            return this._matchModifiers(YY.modifiers, rY?.modifiers);
+            return this._matchModifiers(TT.modifiers, oT?.modifiers);
           case "touch":
-            return void 0 === YY.touchCount || YY.touchCount === rY?.touchCount;
+            return void 0 === TT.touchCount || TT.touchCount === oT?.touchCount;
           case "keyboard":
-            return (void 0 === YY.key || (Array.isArray(YY.key) ? -1 !== YY.key.indexOf(rY?.key ?? -1) : YY.key === rY?.key)) && this._matchModifiers(YY.modifiers, rY?.modifiers)
+            return (void 0 === TT.key || (Array.isArray(TT.key) ? -1 !== TT.key.indexOf(oT?.key ?? -1) : TT.key === oT?.key)) && this._matchModifiers(TT.modifiers, oT?.modifiers)
         }
       }
-      _entryConditionsMatch(YY, rY) {
-        if (!rY) return !0;
-        switch (YY.source) {
+      _entryConditionsMatch(TT, oT) {
+        if (!oT) return !0;
+        switch (TT.source) {
           case "pointer":
-            return (!("button" in rY) || YY.button === rY.button) && (!("modifiers" in rY) || this._entryModifiersMatch(YY.modifiers, rY.modifiers));
+            return (!("button" in oT) || TT.button === oT.button) && (!("modifiers" in oT) || this._entryModifiersMatch(TT.modifiers, oT.modifiers));
           case "wheel":
-            return !("modifiers" in rY) || this._entryModifiersMatch(YY.modifiers, rY.modifiers);
+            return !("modifiers" in oT) || this._entryModifiersMatch(TT.modifiers, oT.modifiers);
           case "touch":
-            return !("touchCount" in rY) || YY.touchCount === rY.touchCount;
+            return !("touchCount" in oT) || TT.touchCount === oT.touchCount;
           case "keyboard":
-            if ("key" in rY) {
-              if (void 0 === YY.key) return void 0 === rY.key;
-              if (void 0 === rY.key || (Array.isArray(YY.key) ? -1 === YY.key.indexOf(rY.key) : YY.key !== rY.key)) return !1
+            if ("key" in oT) {
+              if (void 0 === TT.key) return void 0 === oT.key;
+              if (void 0 === oT.key || (Array.isArray(TT.key) ? -1 === TT.key.indexOf(oT.key) : TT.key !== oT.key)) return !1
             }
-            return !("modifiers" in rY) || this._entryModifiersMatch(YY.modifiers, rY.modifiers)
+            return !("modifiers" in oT) || this._entryModifiersMatch(TT.modifiers, oT.modifiers)
         }
       }
-      _entrySpecificity(YY) {
-        let rY = 0;
-        return "button" in YY && void 0 !== YY.button && rY++, "key" in YY && void 0 !== YY.key && rY++, "touchCount" in YY && void 0 !== YY.touchCount && rY++, "modifiers" in YY && YY.modifiers && rY++, rY
+      _entrySpecificity(TT) {
+        let oT = 0;
+        return "button" in TT && void 0 !== TT.button && oT++, "key" in TT && void 0 !== TT.key && oT++, "touchCount" in TT && void 0 !== TT.touchCount && oT++, "modifiers" in TT && TT.modifiers && oT++, oT
       }
-      _matchModifiers(YY, rY) {
-        return !YY || (void 0 === YY.ctrl || YY.ctrl === (rY?.ctrl ?? !1)) && ((void 0 === YY.shift || YY.shift === (rY?.shift ?? !1)) && (void 0 === YY.alt || YY.alt === (rY?.alt ?? !1)))
+      _matchModifiers(TT, oT) {
+        return !TT || (void 0 === TT.ctrl || TT.ctrl === (oT?.ctrl ?? !1)) && ((void 0 === TT.shift || TT.shift === (oT?.shift ?? !1)) && (void 0 === TT.alt || TT.alt === (oT?.alt ?? !1)))
       }
-      _entryModifiersMatch(YY, rY) {
-        if (!rY) return !YY;
-        return void 0 !== rY.ctrl || void 0 !== rY.shift || void 0 !== rY.alt ? (void 0 === rY.ctrl || YY?.ctrl === rY.ctrl) && ((void 0 === rY.shift || YY?.shift === rY.shift) && (void 0 === rY.alt || YY?.alt === rY.alt)) : !YY || void 0 === YY.ctrl && void 0 === YY.shift && void 0 === YY.alt
+      _entryModifiersMatch(TT, oT) {
+        if (!oT) return !TT;
+        return void 0 !== oT.ctrl || void 0 !== oT.shift || void 0 !== oT.alt ? (void 0 === oT.ctrl || TT?.ctrl === oT.ctrl) && ((void 0 === oT.shift || TT?.shift === oT.shift) && (void 0 === oT.alt || TT?.alt === oT.alt)) : !TT || void 0 === TT.ctrl && void 0 === TT.shift && void 0 === TT.alt
       }
     }
   },
-  39337: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => WY,
-      g: () => QY
+  38983: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => rT,
+      d: () => KT
     });
-    var FY = DY(39127),
-      AY = DY(39131),
-      IY = DY(39342),
-      RY = DY(36524),
-      OY = DY(36533),
-      gY = DY(39355),
-      aY = DY(39347),
-      vY = DY(39358),
-      uY = DY(39364);
-    class sY extends vY.b {
-      constructor(YY, rY, DY) {
-        super(YY, rY, DY), this.input = new uY.c({
-          translate: (YY, rY, DY) => {
-            this.panAccumulatedPixels.x += YY, this.panAccumulatedPixels.y += rY, this.panAccumulatedPixels.z += DY
+    var iT = IT(38764),
+      zT = IT(38773),
+      kT = IT(38986),
+      WT = IT(36118),
+      XT = IT(36125),
+      BT = IT(38997),
+      FT = IT(38994),
+      ST = IT(38999),
+      DT = IT(39007);
+    class LT extends ST.c {
+      constructor(TT, oT, IT) {
+        super(TT, oT, IT), this.input = new DT.c({
+          translate: (TT, oT, IT) => {
+            this.panAccumulatedPixels.x += TT, this.panAccumulatedPixels.y += oT, this.panAccumulatedPixels.z += IT
           },
-          rotate: (YY, rY) => {
-            this.rotationAccumulatedPixels.x += YY, this.rotationAccumulatedPixels.y += rY
+          rotate: (TT, oT) => {
+            this.rotationAccumulatedPixels.x += TT, this.rotationAccumulatedPixels.y += oT
           }
         }, (() => this._createDefaultInputMap()))
       }
@@ -853,40 +853,40 @@ export const modules = {
         }]
       }
     }
-    const iY = RY.e.Zero(),
-      yY = RY.g.Identity();
-    let QY = (() => {
-        var YY;
-        let rY, DY, aY, vY, uY = IY.e,
-          QY = [],
-          oY = [],
-          WY = [],
-          EY = [],
-          mY = [],
-          VY = [],
-          SY = [],
-          lY = [];
-        return YY = class extends uY {
+    const xT = WT.b.Zero(),
+      cT = WT.c.Identity();
+    let KT = (() => {
+        var TT;
+        let oT, IT, FT, ST, DT = kT.c,
+          KT = [],
+          MT = [],
+          rT = [],
+          AT = [],
+          gT = [],
+          hT = [],
+          wT = [],
+          mT = [];
+        return TT = class extends DT {
           get inertia() {
             return this._targetInertia
           }
-          set inertia(YY) {
-            this._targetInertia = YY, this.movement && (this.movement.panInertia = YY, this.movement.rotationInertia = YY)
+          set inertia(TT) {
+            this._targetInertia = TT, this.movement && (this.movement.panInertia = TT, this.movement.rotationInertia = TT)
           }
-          constructor(YY, rY, DY) {
-            super(YY, rY, DY, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), this.cameraDirection = new RY.r(0, 0, 0), this.cameraRotation = new RY.q(0, 0), this._targetInertia = .9, this.updateUpVectorFromRotation = (0, FY.j)(this, QY, !1), this.rotation = ((0, FY.j)(this, oY), (0, FY.j)(this, WY, void 0)), this.rotationQuaternion = (0, FY.j)(this, EY), this.speed = (0, FY.j)(this, mY, 2), this.noRotationConstraint = ((0, FY.j)(this, VY), !1), this.invertRotation = !1, this.inverseRotationSpeed = .2, this._panningEpsilon = OY.c, this._rotationEpsilon = OY.c, this.lockedTarget = (0, FY.j)(this, SY, null), this._currentTarget = ((0, FY.j)(this, lY), RY.r.Zero()), this._initialFocalDistance = 1, this._viewMatrix = RY.e.Zero(), this._cameraTransformMatrix = RY.e.Zero(), this._cameraRotationMatrix = RY.e.Zero(), this._transformedReferencePoint = RY.r.Zero(), this._deferredPositionUpdate = new RY.r, this._deferredRotationQuaternionUpdate = new RY.g, this._deferredRotationUpdate = new RY.r, this._deferredUpdated = !1, this._deferOnly = !1, this._cachedRotationZ = 0, this._cachedQuaternionRotationZ = 0, this._referencePoint = RY.r.Forward(this.hT().useRightHandedSystem), this.rotation = new RY.r(0, this.hT().useRightHandedSystem ? Math.PI : 0, 0), this.movement = new sY(this.hT(), this.position), this.movement.panInertia = this.inertia, this.movement.rotationInertia = this.inertia
+          constructor(TT, oT, IT) {
+            super(TT, oT, IT, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), this.cameraDirection = new WT.m(0, 0, 0), this.cameraRotation = new WT.j(0, 0), this._targetInertia = .9, this.updateUpVectorFromRotation = (0, iT.j)(this, KT, !1), this.rotation = ((0, iT.j)(this, MT), (0, iT.j)(this, rT, void 0)), this.rotationQuaternion = (0, iT.j)(this, AT), this.speed = (0, iT.j)(this, gT, 2), this.noRotationConstraint = ((0, iT.j)(this, hT), !1), this.invertRotation = !1, this.inverseRotationSpeed = .2, this._panningEpsilon = XT.d, this._rotationEpsilon = XT.d, this.lockedTarget = (0, iT.j)(this, wT, null), this._currentTarget = ((0, iT.j)(this, mT), WT.m.Zero()), this._initialFocalDistance = 1, this._viewMatrix = WT.b.Zero(), this._cameraTransformMatrix = WT.b.Zero(), this._cameraRotationMatrix = WT.b.Zero(), this._transformedReferencePoint = WT.m.Zero(), this._deferredPositionUpdate = new WT.m, this._deferredRotationQuaternionUpdate = new WT.c, this._deferredRotationUpdate = new WT.m, this._deferredUpdated = !1, this._deferOnly = !1, this._cachedRotationZ = 0, this._cachedQuaternionRotationZ = 0, this._referencePoint = WT.m.Forward(this.pC().useRightHandedSystem), this.rotation = new WT.m(0, this.pC().useRightHandedSystem ? Math.PI : 0, 0), this.movement = new LT(this.pC(), this.position), this.movement.panInertia = this.inertia, this.movement.rotationInertia = this.inertia
           }
-          getFrontPosition(YY) {
+          getFrontPosition(TT) {
             this.getWorldMatrix();
-            const rY = RY.n.xy[0],
-              DY = RY.n.xy[1];
-            return DY.set(0, 0, this._scene.useRightHandedSystem ? -1 : 1), this.getDirectionToRef(DY, rY), rY.scaleInPlace(YY), this.globalPosition.add(rY)
+            const oT = WT.i.sc[0],
+              IT = WT.i.sc[1];
+            return IT.set(0, 0, this._scene.useRightHandedSystem ? -1 : 1), this.getDirectionToRef(IT, oT), oT.scaleInPlace(TT), this.globalPosition.add(oT)
           }
           _getLockedTargetPosition() {
             if (!this.lockedTarget) return null;
             if (this.lockedTarget.absolutePosition) {
-              const YY = this.lockedTarget;
-              YY.computeWorldMatrix().getTranslationToRef(YY.absolutePosition)
+              const TT = this.lockedTarget;
+              TT.computeWorldMatrix().getTranslationToRef(TT.absolutePosition)
             }
             return this.lockedTarget.absolutePosition || this.lockedTarget
           }
@@ -894,35 +894,35 @@ export const modules = {
             return this._storedPosition = this.position.clone(), this._storedRotation = this.rotation.clone(), this.rotationQuaternion && (this._storedRotationQuaternion = this.rotationQuaternion.clone()), super.storeState()
           }
           _restoreStateValues() {
-            return !!super._restoreStateValues() && (this.position = this._storedPosition.clone(), this.rotation = this._storedRotation.clone(), this.rotationQuaternion && this._storedRotationQuaternion && (this.rotationQuaternion = this._storedRotationQuaternion.clone()), this.cameraDirection.p_(0, 0, 0), this.cameraRotation.p_(0, 0), !0)
+            return !!super._restoreStateValues() && (this.position = this._storedPosition.clone(), this.rotation = this._storedRotation.clone(), this.rotationQuaternion && this._storedRotationQuaternion && (this.rotationQuaternion = this._storedRotationQuaternion.clone()), this.cameraDirection.S_(0, 0, 0), this.cameraRotation.S_(0, 0), !0)
           }
           _initCache() {
-            super._initCache(), this._cache.lockedTarget = new RY.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotation = new RY.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotationQuaternion = new RY.g(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
+            super._initCache(), this._cache.lockedTarget = new WT.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotation = new WT.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotationQuaternion = new WT.c(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
           }
-          _updateCache(YY) {
-            YY || super._updateCache();
-            const rY = this._getLockedTargetPosition();
-            rY ? this._cache.lockedTarget ? this._cache.lockedTarget.brY(rY) : this._cache.lockedTarget = rY.clone() : this._cache.lockedTarget = null, this._cache.rotation.brY(this.rotation), this.rotationQuaternion && this._cache.rotationQuaternion.brY(this.rotationQuaternion)
+          _updateCache(TT) {
+            TT || super._updateCache();
+            const oT = this._getLockedTargetPosition();
+            oT ? this._cache.lockedTarget ? this._cache.lockedTarget.SIT(oT) : this._cache.lockedTarget = oT.clone() : this._cache.lockedTarget = null, this._cache.rotation.SIT(this.rotation), this.rotationQuaternion && this._cache.rotationQuaternion.SIT(this.rotationQuaternion)
           }
           _isSynchronizedViewMatrix() {
             if (!super._isSynchronizedViewMatrix()) return !1;
-            const YY = this._getLockedTargetPosition();
-            return (this._cache.lockedTarget ? this._cache.lockedTarget.equals(YY) : !YY) && (this.rotationQuaternion ? this.rotationQuaternion.equals(this._cache.rotationQuaternion) : this._cache.rotation.equals(this.rotation))
+            const TT = this._getLockedTargetPosition();
+            return (this._cache.lockedTarget ? this._cache.lockedTarget.equals(TT) : !TT) && (this.rotationQuaternion ? this.rotationQuaternion.equals(this._cache.rotationQuaternion) : this._cache.rotation.equals(this.rotation))
           }
           _computeLocalCameraSpeed() {
-            const YY = this.ky();
-            return this.speed * Math.sqrt(YY.getDeltaTime() / (100 * YY.getFps()))
+            const TT = this.Zc();
+            return this.speed * Math.sqrt(TT.getDeltaTime() / (100 * TT.getFps()))
           }
-          setTarget(YY) {
-            this.upVector.normalize(), this._initialFocalDistance = YY.subtract(this.position).length(), this.position.z === YY.z && (this.position.z += OY.c), this._referencePoint.normalize().scaleInPlace(this._initialFocalDistance), this.hT().useRightHandedSystem ? RY.e.LookAtRHToRef(this.position, YY, RY.r.UpReadOnly, iY) : RY.e.LookAtLHToRef(this.position, YY, RY.r.UpReadOnly, iY), iY.invert();
-            const rY = this.rotationQuaternion || yY;
-            RY.g.FromRotationMatrixToRef(iY, rY), rY.toEulerAnglesToRef(this.rotation), this.rotation.z = 0
+          setTarget(TT) {
+            this.upVector.normalize(), this._initialFocalDistance = TT.subtract(this.position).length(), this.position.z === TT.z && (this.position.z += XT.d), this._referencePoint.normalize().scaleInPlace(this._initialFocalDistance), this.pC().useRightHandedSystem ? WT.b.LookAtRHToRef(this.position, TT, WT.m.UpReadOnly, xT) : WT.b.LookAtLHToRef(this.position, TT, WT.m.UpReadOnly, xT), xT.invert();
+            const oT = this.rotationQuaternion || cT;
+            WT.c.FromRotationMatrixToRef(xT, oT), oT.toEulerAnglesToRef(this.rotation), this.rotation.z = 0
           }
           get target() {
             return this.getTarget()
           }
-          set target(YY) {
-            this.setTarget(YY)
+          set target(TT) {
+            this.setTarget(TT)
           }
           getTarget() {
             return this._currentTarget
@@ -931,923 +931,923 @@ export const modules = {
             return Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
           }
           _updatePosition() {
-            if (this.parent) return this.parent.getWorldMatrix().invertToRef(RY.n.Matrix[0]), RY.r.TransformNormalToRef(this.cameraDirection, RY.n.Matrix[0], RY.n.xy[0]), this._deferredPositionUpdate.addInPlace(RY.n.xy[0]), void(this._deferOnly ? this._deferredUpdated = !0 : this.position.brY(this._deferredPositionUpdate));
-            this._deferredPositionUpdate.addInPlace(this.cameraDirection), this._deferOnly ? this._deferredUpdated = !0 : this.position.brY(this._deferredPositionUpdate)
+            if (this.parent) return this.parent.getWorldMatrix().invertToRef(WT.i.Matrix[0]), WT.m.TransformNormalToRef(this.cameraDirection, WT.i.Matrix[0], WT.i.sc[0]), this._deferredPositionUpdate.addInPlace(WT.i.sc[0]), void(this._deferOnly ? this._deferredUpdated = !0 : this.position.SIT(this._deferredPositionUpdate));
+            this._deferredPositionUpdate.addInPlace(this.cameraDirection), this._deferOnly ? this._deferredUpdated = !0 : this.position.SIT(this._deferredPositionUpdate)
           }
           _checkInputs() {
-            const YY = this.movement,
-              rY = 0 !== this.cameraDirection.x || 0 !== this.cameraDirection.y || 0 !== this.cameraDirection.z;
-            YY.panAccumulatedPixels.addInPlace(this.cameraDirection), YY.rotationAccumulatedPixels.x += this.cameraRotation.x, YY.rotationAccumulatedPixels.y += this.cameraRotation.y, YY.computeCurrentFrameDeltas(), this.cameraDirection.brY(YY.panDeltaCurrentFrame), this.cameraRotation.set(YY.rotationDeltaCurrentFrame.x, YY.rotationDeltaCurrentFrame.y);
-            const DY = this.speed * this._panningEpsilon;
-            !rY && Math.abs(this.cameraDirection.x) < DY && Math.abs(this.cameraDirection.y) < DY && Math.abs(this.cameraDirection.z) < DY && (this.cameraDirection.o3(0), YY.resetPanVelocity());
-            const FY = this.invertRotation ? -this.inverseRotationSpeed : 1,
-              AY = this._decideIfNeedsToMove(),
-              IY = !(!this.cameraRotation.x && !this.cameraRotation.y);
-            if (this._deferredUpdated = !1, this._deferredRotationUpdate.brY(this.rotation), this._deferredPositionUpdate.brY(this.position), this.rotationQuaternion && this._deferredRotationQuaternionUpdate.brY(this.rotationQuaternion), AY && this._updatePosition(), IY) {
-              if (this.rotationQuaternion && this.rotationQuaternion.toEulerAnglesToRef(this._deferredRotationUpdate), this._deferredRotationUpdate.x += this.cameraRotation.x * FY, this._deferredRotationUpdate.y += this.cameraRotation.y * FY, !this.noRotationConstraint) {
-                const YY = 1.570796;
-                this._deferredRotationUpdate.x > YY && (this._deferredRotationUpdate.x = YY), this._deferredRotationUpdate.x < -YY && (this._deferredRotationUpdate.x = -YY)
+            const TT = this.movement,
+              oT = 0 !== this.cameraDirection.x || 0 !== this.cameraDirection.y || 0 !== this.cameraDirection.z;
+            TT.panAccumulatedPixels.addInPlace(this.cameraDirection), TT.rotationAccumulatedPixels.x += this.cameraRotation.x, TT.rotationAccumulatedPixels.y += this.cameraRotation.y, TT.computeCurrentFrameDeltas(), this.cameraDirection.SIT(TT.panDeltaCurrentFrame), this.cameraRotation.set(TT.rotationDeltaCurrentFrame.x, TT.rotationDeltaCurrentFrame.y);
+            const IT = this.speed * this._panningEpsilon;
+            !oT && Math.abs(this.cameraDirection.x) < IT && Math.abs(this.cameraDirection.y) < IT && Math.abs(this.cameraDirection.z) < IT && (this.cameraDirection.W8(0), TT.resetPanVelocity());
+            const iT = this.invertRotation ? -this.inverseRotationSpeed : 1,
+              zT = this._decideIfNeedsToMove(),
+              kT = !(!this.cameraRotation.x && !this.cameraRotation.y);
+            if (this._deferredUpdated = !1, this._deferredRotationUpdate.SIT(this.rotation), this._deferredPositionUpdate.SIT(this.position), this.rotationQuaternion && this._deferredRotationQuaternionUpdate.SIT(this.rotationQuaternion), zT && this._updatePosition(), kT) {
+              if (this.rotationQuaternion && this.rotationQuaternion.toEulerAnglesToRef(this._deferredRotationUpdate), this._deferredRotationUpdate.x += this.cameraRotation.x * iT, this._deferredRotationUpdate.y += this.cameraRotation.y * iT, !this.noRotationConstraint) {
+                const TT = 1.570796;
+                this._deferredRotationUpdate.x > TT && (this._deferredRotationUpdate.x = TT), this._deferredRotationUpdate.x < -TT && (this._deferredRotationUpdate.x = -TT)
               }
-              if (this._deferOnly ? this._deferredUpdated = !0 : this.rotation.brY(this._deferredRotationUpdate), this.rotationQuaternion) {
-                this._deferredRotationUpdate.lengthSquared() && (RY.g.RotationYawPitchRollToRef(this._deferredRotationUpdate.y, this._deferredRotationUpdate.x, this._deferredRotationUpdate.z, this._deferredRotationQuaternionUpdate), this._deferOnly ? this._deferredUpdated = !0 : this.rotationQuaternion.brY(this._deferredRotationQuaternionUpdate))
+              if (this._deferOnly ? this._deferredUpdated = !0 : this.rotation.SIT(this._deferredRotationUpdate), this.rotationQuaternion) {
+                this._deferredRotationUpdate.lengthSquared() && (WT.c.RotationYawPitchRollToRef(this._deferredRotationUpdate.y, this._deferredRotationUpdate.x, this._deferredRotationUpdate.z, this._deferredRotationQuaternionUpdate), this._deferOnly ? this._deferredUpdated = !0 : this.rotationQuaternion.SIT(this._deferredRotationQuaternionUpdate))
               }
             }
-            this.cameraDirection.o3(0), this.cameraRotation.set(0, 0), super._checkInputs()
+            this.cameraDirection.W8(0), this.cameraRotation.set(0, 0), super._checkInputs()
           }
           _updateCameraRotationMatrix() {
-            this.rotationQuaternion ? this.rotationQuaternion.toRotationMatrix(this._cameraRotationMatrix) : RY.e.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, this._cameraRotationMatrix)
+            this.rotationQuaternion ? this.rotationQuaternion.toRotationMatrix(this._cameraRotationMatrix) : WT.b.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, this._cameraRotationMatrix)
           }
           _rotateUpVectorWithCameraRotationMatrix() {
-            return RY.r.TransformNormalToRef(RY.r.UpReadOnly, this._cameraRotationMatrix, this.upVector), this
+            return WT.m.TransformNormalToRef(WT.m.UpReadOnly, this._cameraRotationMatrix, this.upVector), this
           }
           _getViewMatrix() {
-            return this.lockedTarget && this.setTarget(this._getLockedTargetPosition()), this._updateCameraRotationMatrix(), this.rotationQuaternion && this._cachedQuaternionRotationZ != this.rotationQuaternion.z ? (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedQuaternionRotationZ = this.rotationQuaternion.z) : this._cachedRotationZ !== this.rotation.z && (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedRotationZ = this.rotation.z), RY.r.TransformCoordinatesToRef(this._referencePoint, this._cameraRotationMatrix, this._transformedReferencePoint), this.position.addToRef(this._transformedReferencePoint, this._currentTarget), this.updateUpVectorFromRotation && (this.rotationQuaternion ? gY.b.Y.rotateByQuaternionToRef(this.rotationQuaternion, this.upVector) : (RY.g.FromEulerVectorToRef(this.rotation, yY), gY.b.Y.rotateByQuaternionToRef(yY, this.upVector))), this._computeViewMatrix(this.position, this._currentTarget, this.upVector), this._viewMatrix
+            return this.lockedTarget && this.setTarget(this._getLockedTargetPosition()), this._updateCameraRotationMatrix(), this.rotationQuaternion && this._cachedQuaternionRotationZ != this.rotationQuaternion.z ? (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedQuaternionRotationZ = this.rotationQuaternion.z) : this._cachedRotationZ !== this.rotation.z && (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedRotationZ = this.rotation.z), WT.m.TransformCoordinatesToRef(this._referencePoint, this._cameraRotationMatrix, this._transformedReferencePoint), this.position.addToRef(this._transformedReferencePoint, this._currentTarget), this.updateUpVectorFromRotation && (this.rotationQuaternion ? BT.d.Y.rotateByQuaternionToRef(this.rotationQuaternion, this.upVector) : (WT.c.FromEulerVectorToRef(this.rotation, cT), BT.d.Y.rotateByQuaternionToRef(cT, this.upVector))), this._computeViewMatrix(this.position, this._currentTarget, this.upVector), this._viewMatrix
           }
-          _computeViewMatrix(YY, rY, DY) {
-            if (this.hT().useRightHandedSystem ? RY.e.LookAtRHToRef(YY, rY, DY, this._viewMatrix) : RY.e.LookAtLHToRef(YY, rY, DY, this._viewMatrix), this.parent) {
-              const YY = this.parent.getWorldMatrix();
-              this._viewMatrix.invert(), this._viewMatrix.multiplyToRef(YY, this._viewMatrix), this._viewMatrix.invert(), this._markSyncedWithParent()
+          _computeViewMatrix(TT, oT, IT) {
+            if (this.pC().useRightHandedSystem ? WT.b.LookAtRHToRef(TT, oT, IT, this._viewMatrix) : WT.b.LookAtLHToRef(TT, oT, IT, this._viewMatrix), this.parent) {
+              const TT = this.parent.getWorldMatrix();
+              this._viewMatrix.invert(), this._viewMatrix.multiplyToRef(TT, this._viewMatrix), this._viewMatrix.invert(), this._markSyncedWithParent()
             }
           }
-          createRigCamera(rY, DY) {
-            if (this.cameraRigMode !== IY.e.RIG_MODE_NONE) {
-              const DY = new YY(rY, this.position.clone(), this.hT());
-              return DY.isRigCamera = !0, DY.rigParent = this, this.cameraRigMode === IY.e.RIG_MODE_VR && (this.rotationQuaternion || (this.rotationQuaternion = new RY.g), DY._cameraRigParams = {}, DY.rotationQuaternion = new RY.g), DY.mode = this.mode, DY.orthoLeft = this.orthoLeft, DY.orthoRight = this.orthoRight, DY.orthoTop = this.orthoTop, DY.orthoBottom = this.orthoBottom, DY
+          createRigCamera(oT, IT) {
+            if (this.cameraRigMode !== kT.c.RIG_MODE_NONE) {
+              const IT = new TT(oT, this.position.clone(), this.pC());
+              return IT.isRigCamera = !0, IT.rigParent = this, this.cameraRigMode === kT.c.RIG_MODE_VR && (this.rotationQuaternion || (this.rotationQuaternion = new WT.c), IT._cameraRigParams = {}, IT.rotationQuaternion = new WT.c), IT.mode = this.mode, IT.orthoLeft = this.orthoLeft, IT.orthoRight = this.orthoRight, IT.orthoTop = this.orthoTop, IT.orthoBottom = this.orthoBottom, IT
             }
             return null
           }
           _updateRigCameras() {
-            const YY = this._rigCameras[0],
-              rY = this._rigCameras[1];
+            const TT = this._rigCameras[0],
+              oT = this._rigCameras[1];
             switch (this.computeWorldMatrix(), this.cameraRigMode) {
-              case IY.e.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case IY.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case IY.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-              case IY.e.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case IY.e.RIG_MODE_STEREOSCOPIC_INTERLACED: {
-                const DY = this.cameraRigMode === IY.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? 1 : -1,
-                  FY = this.cameraRigMode === IY.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? -1 : 1;
-                this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * DY, YY), this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * FY, rY);
+              case kT.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case kT.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case kT.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+              case kT.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case kT.c.RIG_MODE_STEREOSCOPIC_INTERLACED: {
+                const IT = this.cameraRigMode === kT.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? 1 : -1,
+                  iT = this.cameraRigMode === kT.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? -1 : 1;
+                this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * IT, TT), this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * iT, oT);
                 break
               }
-              case IY.e.RIG_MODE_VR:
-                YY.rotationQuaternion && rY.rotationQuaternion && this.rotationQuaternion ? (YY.rotationQuaternion.brY(this.rotationQuaternion), rY.rotationQuaternion.brY(this.rotationQuaternion)) : (YY.rotation.brY(this.rotation), rY.rotation.brY(this.rotation)), YY.position.brY(this.position), rY.position.brY(this.position)
+              case kT.c.RIG_MODE_VR:
+                TT.rotationQuaternion && oT.rotationQuaternion && this.rotationQuaternion ? (TT.rotationQuaternion.SIT(this.rotationQuaternion), oT.rotationQuaternion.SIT(this.rotationQuaternion)) : (TT.rotation.SIT(this.rotation), oT.rotation.SIT(this.rotation)), TT.position.SIT(this.position), oT.position.SIT(this.position)
             }
             super._updateRigCameras()
           }
-          _getRigCamPositionAndTarget(rY, DY) {
-            this.getTarget().subtractToRef(this.position, YY._TargetFocalPoint), YY._TargetFocalPoint.normalize().scaleInPlace(this._initialFocalDistance);
-            const FY = YY._TargetFocalPoint.addInPlace(this.position);
-            RY.e.TranslationToRef(-FY.x, -FY.y, -FY.z, YY._TargetTransformMatrix), YY._TargetTransformMatrix.multiplyToRef(RY.e.RotationAxis(DY.upVector, rY), YY._RigCamTransformMatrix), RY.e.TranslationToRef(FY.x, FY.y, FY.z, YY._TargetTransformMatrix), YY._RigCamTransformMatrix.multiplyToRef(YY._TargetTransformMatrix, YY._RigCamTransformMatrix), RY.r.TransformCoordinatesToRef(this.position, YY._RigCamTransformMatrix, DY.position), DY.setTarget(FY)
+          _getRigCamPositionAndTarget(oT, IT) {
+            this.getTarget().subtractToRef(this.position, TT._TargetFocalPoint), TT._TargetFocalPoint.normalize().scaleInPlace(this._initialFocalDistance);
+            const iT = TT._TargetFocalPoint.addInPlace(this.position);
+            WT.b.TranslationToRef(-iT.x, -iT.y, -iT.z, TT._TargetTransformMatrix), TT._TargetTransformMatrix.multiplyToRef(WT.b.RotationAxis(IT.upVector, oT), TT._RigCamTransformMatrix), WT.b.TranslationToRef(iT.x, iT.y, iT.z, TT._TargetTransformMatrix), TT._RigCamTransformMatrix.multiplyToRef(TT._TargetTransformMatrix, TT._RigCamTransformMatrix), WT.m.TransformCoordinatesToRef(this.position, TT._RigCamTransformMatrix, IT.position), IT.setTarget(iT)
           }
           getClassName() {
             return "TargetCamera"
           }
         }, (() => {
-          const IY = "function" === typeof Symbol && Symbol.metadata ? Object.create(uY[Symbol.metadata] ?? null) : void 0;
-          rY = [(0, AY.M)()], DY = [(0, AY.J)()], aY = [(0, AY.M)()], vY = [(0, AY.B)("lockedTargetId")], (0, FY.i)(null, null, rY, {
+          const kT = "function" === typeof Symbol && Symbol.metadata ? Object.create(DT[Symbol.metadata] ?? null) : void 0;
+          oT = [(0, zT.P)()], IT = [(0, zT.M)()], FT = [(0, zT.P)()], ST = [(0, zT.E)("lockedTargetId")], (0, iT.h)(null, null, oT, {
             kind: "field",
             name: "updateUpVectorFromRotation",
             static: !1,
             private: !1,
             access: {
-              has: YY => "updateUpVectorFromRotation" in YY,
-              get: YY => YY.updateUpVectorFromRotation,
-              set: (YY, rY) => {
-                YY.updateUpVectorFromRotation = rY
+              has: TT => "updateUpVectorFromRotation" in TT,
+              get: TT => TT.updateUpVectorFromRotation,
+              set: (TT, oT) => {
+                TT.updateUpVectorFromRotation = oT
               }
             },
-            metadata: IY
-          }, QY, oY), (0, FY.i)(null, null, DY, {
+            metadata: kT
+          }, KT, MT), (0, iT.h)(null, null, IT, {
             kind: "field",
             name: "rotation",
             static: !1,
             private: !1,
             access: {
-              has: YY => "rotation" in YY,
-              get: YY => YY.rotation,
-              set: (YY, rY) => {
-                YY.rotation = rY
+              has: TT => "rotation" in TT,
+              get: TT => TT.rotation,
+              set: (TT, oT) => {
+                TT.rotation = oT
               }
             },
-            metadata: IY
-          }, WY, EY), (0, FY.i)(null, null, aY, {
+            metadata: kT
+          }, rT, AT), (0, iT.h)(null, null, FT, {
             kind: "field",
             name: "speed",
             static: !1,
             private: !1,
             access: {
-              has: YY => "speed" in YY,
-              get: YY => YY.speed,
-              set: (YY, rY) => {
-                YY.speed = rY
+              has: TT => "speed" in TT,
+              get: TT => TT.speed,
+              set: (TT, oT) => {
+                TT.speed = oT
               }
             },
-            metadata: IY
-          }, mY, VY), (0, FY.i)(null, null, vY, {
+            metadata: kT
+          }, gT, hT), (0, iT.h)(null, null, ST, {
             kind: "field",
             name: "lockedTarget",
             static: !1,
             private: !1,
             access: {
-              has: YY => "lockedTarget" in YY,
-              get: YY => YY.lockedTarget,
-              set: (YY, rY) => {
-                YY.lockedTarget = rY
+              has: TT => "lockedTarget" in TT,
+              get: TT => TT.lockedTarget,
+              set: (TT, oT) => {
+                TT.lockedTarget = oT
               }
             },
-            metadata: IY
-          }, SY, lY), IY && Object.defineProperty(YY, Symbol.metadata, {
+            metadata: kT
+          }, wT, mT), kT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: IY
+            value: kT
           })
-        })(), YY._RigCamTransformMatrix = new RY.e, YY._TargetTransformMatrix = new RY.e, YY._TargetFocalPoint = new RY.r, YY
+        })(), TT._RigCamTransformMatrix = new WT.b, TT._TargetTransformMatrix = new WT.b, TT._TargetFocalPoint = new WT.m, TT
       })(),
-      oY = !1;
+      MT = !1;
 
-    function WY() {
-      oY || (oY = !0, aY.b.AddNodeConstructor("TargetCamera", ((YY, rY) => () => new QY(YY, RY.r.Zero(), rY))))
+    function rT() {
+      MT || (MT = !0, FT.c.AddNodeConstructor("TargetCamera", ((TT, oT) => () => new KT(TT, WT.m.Zero(), oT))))
     }
   },
-  39089: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => IY
+  38721: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => kT
     });
-    var FY = DY(39041);
-    let AY = !1;
+    var iT = IT(38659);
+    let zT = !1;
 
-    function IY() {
-      AY || (AY = !0, FY.d.prototype.getInputElement = function() {
+    function kT() {
+      zT || (zT = !0, iT.b.prototype.getInputElement = function() {
         return this._renderingCanvas
-      }, FY.d.prototype.getRenderingCanvasClientRect = function() {
+      }, iT.b.prototype.getRenderingCanvasClientRect = function() {
         return this._renderingCanvas ? this._renderingCanvas.getBoundingClientRect() : null
-      }, FY.d.prototype.getInputElementClientRect = function() {
+      }, iT.b.prototype.getInputElementClientRect = function() {
         return this._renderingCanvas ? this.getInputElement().getBoundingClientRect() : null
-      }, FY.d.prototype.getAspectRatio = function(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const DY = YY.viewport;
-        return this.getRenderWidth(rY) * DY.width / (this.getRenderHeight(rY) * DY.height)
-      }, FY.d.prototype.getScreenAspectRatio = function() {
+      }, iT.b.prototype.getAspectRatio = function(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const IT = TT.viewport;
+        return this.getRenderWidth(oT) * IT.width / (this.getRenderHeight(oT) * IT.height)
+      }, iT.b.prototype.getScreenAspectRatio = function() {
         return this.getRenderWidth(!0) / this.getRenderHeight(!0)
-      }, FY.d.prototype._verifyPointerLock = function() {
+      }, iT.b.prototype._verifyPointerLock = function() {
         this._onPointerLockChange?.()
       })
     }
   },
-  39154: (YY, rY, DY) => {
-    var FY = DY(39041),
-      AY = DY(39160);
-    let IY = !1;
-    IY || (IY = !0, (0, AY.t)(), FY.d.prototype._loadFileAsync = async function(YY, rY, DY) {
-      return await new Promise(((FY, AY) => {
-        this._loadFile(YY, (YY => {
-          FY(YY)
-        }), void 0, rY, DY, ((YY, rY) => {
-          AY(rY)
+  38820: (TT, oT, IT) => {
+    var iT = IT(38659),
+      zT = IT(38827);
+    let kT = !1;
+    kT || (kT = !0, (0, zT.v)(), iT.b.prototype._loadFileAsync = async function(TT, oT, IT) {
+      return await new Promise(((iT, zT) => {
+        this._loadFile(TT, (TT => {
+          iT(TT)
+        }), void 0, oT, IT, ((TT, oT) => {
+          zT(oT)
         }))
       }))
     })
   },
-  39151: (YY, rY, DY) => {
-    (0, DY(39092).c)()
+  38817: (TT, oT, IT) => {
+    (0, IT(38728).c)()
   },
-  39092: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  38728: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT
     });
-    var FY = DY(39041);
-    let AY = !1;
+    var iT = IT(38659);
+    let zT = !1;
 
-    function IY() {
-      AY || (AY = !0, FY.d.prototype.getRenderPassNames = function() {
+    function kT() {
+      zT || (zT = !0, iT.b.prototype.getRenderPassNames = function() {
         return this._renderPassNames
-      }, FY.d.prototype.getCurrentRenderPassName = function() {
+      }, iT.b.prototype.getCurrentRenderPassName = function() {
         return this._renderPassNames[this.currentRenderPassId]
-      }, FY.d.prototype.createRenderPassId = function(YY) {
-        const rY = ++FY.d._RenderPassIdCounter;
-        return this._renderPassNames[rY] = YY ?? "NONAME", rY
-      }, FY.d.prototype.releaseRenderPassId = function(YY) {
-        this._renderPassNames[YY] = void 0;
-        for (let rY = 0; rY < this.scenes.length; ++rY) {
-          const DY = this.scenes[rY];
-          for (let rY = 0; rY < DY.meshes.length; ++rY) {
-            const FY = DY.meshes[rY];
-            if (FY._releaseRenderPassId(YY), FY.qm)
-              for (let rY = 0; rY < FY.qm.length; ++rY) {
-                FY.qm[rY]._removeDrawWrapper(YY)
+      }, iT.b.prototype.createRenderPassId = function(TT) {
+        const oT = ++iT.b._RenderPassIdCounter;
+        return this._renderPassNames[oT] = TT ?? "NONAME", oT
+      }, iT.b.prototype.releaseRenderPassId = function(TT) {
+        this._renderPassNames[TT] = void 0;
+        for (let oT = 0; oT < this.scenes.length; ++oT) {
+          const IT = this.scenes[oT];
+          for (let oT = 0; oT < IT.meshes.length; ++oT) {
+            const iT = IT.meshes[oT];
+            if (iT._releaseRenderPassId(TT), iT.pR)
+              for (let oT = 0; oT < iT.pR.length; ++oT) {
+                iT.pR[oT]._removeDrawWrapper(TT)
               }
           }
         }
-        this._onReleaseRenderPassObservable?.notifyObservers(YY)
+        this._onReleaseRenderPassObservable?.notifyObservers(TT)
       })
     }
   },
-  39192: (YY, rY, DY) => {
-    var FY = DY(39200),
-      AY = DY(39041);
-    let IY = !1;
-    IY || (IY = !0, AY.d.GetCompatibleTextureLoader = FY.b)
+  38858: (TT, oT, IT) => {
+    var iT = IT(38867),
+      zT = IT(38659);
+    let kT = !1;
+    kT || (kT = !0, zT.b.GetCompatibleTextureLoader = iT.e)
   },
-  39098: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  38733: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT
     });
-    var FY = DY(38982);
-    let AY = !1;
+    var iT = IT(38607);
+    let zT = !1;
 
-    function IY() {
-      AY || (AY = !0, FY.ThinEngine.prototype.setAlphaMode = function(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this._alphaMode[DY] === YY) {
-          if (!rY) {
-            const rY = 0 === YY;
-            this.depthCullingState.depthMask !== rY && (this.depthCullingState.depthMask = rY)
+    function kT() {
+      zT || (zT = !0, iT.ThinEngine.prototype.setAlphaMode = function(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this._alphaMode[IT] === TT) {
+          if (!oT) {
+            const oT = 0 === TT;
+            this.depthCullingState.depthMask !== oT && (this.depthCullingState.depthMask = oT)
           }
           return
         }
-        const FY = 0 === YY;
-        this._alphaState.setAlphaBlend(!FY, DY), this._alphaState.setAlphaMode(YY, DY), rY || (this.depthCullingState.depthMask = FY), this._alphaMode[DY] = YY
+        const iT = 0 === TT;
+        this._alphaState.setAlphaBlend(!iT, IT), this._alphaState.setAlphaMode(TT, IT), oT || (this.depthCullingState.depthMask = iT), this._alphaMode[IT] = TT
       })
     }
   },
-  39109: (YY, rY, DY) => {
-    var FY = DY(38975),
-      AY = DY(38040),
-      IY = DY(38982),
-      RY = DY(39116),
-      OY = DY(39078);
-    class gY extends RY.b {
-      setDepthStencilTexture(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (super.setDepthStencilTexture(YY, rY), !YY) return;
-        const DY = this._engine,
-          FY = this._context,
-          AY = YY._hardwareTexture;
-        if (AY && YY._autoMSAAManagement && this._MSAAFramebuffer) {
-          const rY = DY._currentFramebuffer;
-          DY._bindUnboundFramebuffer(this._MSAAFramebuffer), FY.framebufferRenderbuffer(FY.FRAMEBUFFER, (0, OY.d)(YY.format) ? FY.DEPTH_STENCIL_ATTACHMENT : FY.DEPTH_ATTACHMENT, FY.RENDERBUFFER, AY.getMSAARenderBuffer()), DY._bindUnboundFramebuffer(rY)
+  38744: (TT, oT, IT) => {
+    var iT = IT(38594),
+      zT = IT(37660),
+      kT = IT(38607),
+      WT = IT(38746),
+      XT = IT(38708);
+    class BT extends WT.e {
+      setDepthStencilTexture(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (super.setDepthStencilTexture(TT, oT), !TT) return;
+        const IT = this._engine,
+          iT = this._context,
+          zT = TT._hardwareTexture;
+        if (zT && TT._autoMSAAManagement && this._MSAAFramebuffer) {
+          const oT = IT._currentFramebuffer;
+          IT._bindUnboundFramebuffer(this._MSAAFramebuffer), iT.framebufferRenderbuffer(iT.FRAMEBUFFER, (0, XT.d)(TT.format) ? iT.DEPTH_STENCIL_ATTACHMENT : iT.DEPTH_ATTACHMENT, iT.RENDERBUFFER, zT.getMSAARenderBuffer()), IT._bindUnboundFramebuffer(oT)
         }
       }
-      constructor(YY, rY, DY, FY, AY) {
-        super(YY, rY, DY, FY), this._framebuffer = null, this._depthStencilBuffer = null, this._MSAAFramebuffer = null, this._colorTextureArray = null, this._depthStencilTextureArray = null, this._disposeOnlyFramebuffers = !1, this._currentLOD = 0, this._context = AY
+      constructor(TT, oT, IT, iT, zT) {
+        super(TT, oT, IT, iT), this._framebuffer = null, this._depthStencilBuffer = null, this._MSAAFramebuffer = null, this._colorTextureArray = null, this._depthStencilTextureArray = null, this._disposeOnlyFramebuffers = !1, this._currentLOD = 0, this._context = zT
       }
       _cloneRenderTargetWrapper() {
-        let YY;
-        return this._colorTextureArray && this._depthStencilTextureArray ? (YY = this._engine.createMultiviewRenderTargetTexture(this.width, this.height), YY.texture.isReady = !0) : YY = super._cloneRenderTargetWrapper(), YY
+        let TT;
+        return this._colorTextureArray && this._depthStencilTextureArray ? (TT = this._engine.createMultiviewRenderTargetTexture(this.width, this.height), TT.texture.isReady = !0) : TT = super._cloneRenderTargetWrapper(), TT
       }
-      _swapRenderTargetWrapper(YY) {
-        super._swapRenderTargetWrapper(YY), YY._framebuffer = this._framebuffer, YY._depthStencilBuffer = this._depthStencilBuffer, YY._MSAAFramebuffer = this._MSAAFramebuffer, YY._colorTextureArray = this._colorTextureArray, YY._depthStencilTextureArray = this._depthStencilTextureArray, this._framebuffer = this._depthStencilBuffer = this._MSAAFramebuffer = this._colorTextureArray = this._depthStencilTextureArray = null
+      _swapRenderTargetWrapper(TT) {
+        super._swapRenderTargetWrapper(TT), TT._framebuffer = this._framebuffer, TT._depthStencilBuffer = this._depthStencilBuffer, TT._MSAAFramebuffer = this._MSAAFramebuffer, TT._colorTextureArray = this._colorTextureArray, TT._depthStencilTextureArray = this._depthStencilTextureArray, this._framebuffer = this._depthStencilBuffer = this._MSAAFramebuffer = this._colorTextureArray = this._depthStencilTextureArray = null
       }
       createDepthStencilTexture() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
-          IY = arguments.length > 5 ? arguments[5] : void 0;
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          kT = arguments.length > 5 ? arguments[5] : void 0;
         if (this._depthStencilBuffer) {
-          const YY = this._engine,
-            rY = YY._currentFramebuffer,
-            DY = this._context;
-          YY._bindUnboundFramebuffer(this._framebuffer), DY.framebufferRenderbuffer(DY.FRAMEBUFFER, DY.DEPTH_STENCIL_ATTACHMENT, DY.RENDERBUFFER, null), DY.framebufferRenderbuffer(DY.FRAMEBUFFER, DY.DEPTH_ATTACHMENT, DY.RENDERBUFFER, null), DY.framebufferRenderbuffer(DY.FRAMEBUFFER, DY.STENCIL_ATTACHMENT, DY.RENDERBUFFER, null), YY._bindUnboundFramebuffer(rY), DY.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null
+          const TT = this._engine,
+            oT = TT._currentFramebuffer,
+            IT = this._context;
+          TT._bindUnboundFramebuffer(this._framebuffer), IT.framebufferRenderbuffer(IT.FRAMEBUFFER, IT.DEPTH_STENCIL_ATTACHMENT, IT.RENDERBUFFER, null), IT.framebufferRenderbuffer(IT.FRAMEBUFFER, IT.DEPTH_ATTACHMENT, IT.RENDERBUFFER, null), IT.framebufferRenderbuffer(IT.FRAMEBUFFER, IT.STENCIL_ATTACHMENT, IT.RENDERBUFFER, null), TT._bindUnboundFramebuffer(oT), IT.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null
         }
-        return super.createDepthStencilTexture(YY, rY, DY, FY, AY, IY)
+        return super.createDepthStencilTexture(TT, oT, IT, iT, zT, kT)
       }
-      shareDepth(YY) {
-        super.shareDepth(YY);
-        const rY = this._context,
-          DY = this._depthStencilBuffer,
-          FY = YY._MSAAFramebuffer || YY._framebuffer,
-          AY = this._engine;
-        YY._depthStencilBuffer && YY._depthStencilBuffer !== DY && rY.deleteRenderbuffer(YY._depthStencilBuffer), YY._depthStencilBuffer = DY;
-        const IY = YY._generateStencilBuffer ? rY.DEPTH_STENCIL_ATTACHMENT : rY.DEPTH_ATTACHMENT;
-        AY._bindUnboundFramebuffer(FY), rY.framebufferRenderbuffer(rY.FRAMEBUFFER, IY, rY.RENDERBUFFER, DY), AY._bindUnboundFramebuffer(null)
+      shareDepth(TT) {
+        super.shareDepth(TT);
+        const oT = this._context,
+          IT = this._depthStencilBuffer,
+          iT = TT._MSAAFramebuffer || TT._framebuffer,
+          zT = this._engine;
+        TT._depthStencilBuffer && TT._depthStencilBuffer !== IT && oT.deleteRenderbuffer(TT._depthStencilBuffer), TT._depthStencilBuffer = IT;
+        const kT = TT._generateStencilBuffer ? oT.DEPTH_STENCIL_ATTACHMENT : oT.DEPTH_ATTACHMENT;
+        zT._bindUnboundFramebuffer(iT), oT.framebufferRenderbuffer(oT.FRAMEBUFFER, kT, oT.RENDERBUFFER, IT), zT._bindUnboundFramebuffer(null)
       }
-      _bindTextureRenderTarget(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const AY = YY._hardwareTexture;
-        if (!AY) return;
-        const IY = this._framebuffer,
-          RY = this._engine,
-          OY = RY._currentFramebuffer;
-        let gY;
-        if (RY._bindUnboundFramebuffer(IY), RY.VQ > 1) {
-          const IY = this._context;
-          gY = IY["COLOR_ATTACHMENT" + rY], YY.is2DArray || YY.is3D ? (DY = DY ?? this.layerIndices?.[rY] ?? 0, IY.framebufferTextureLayer(IY.FRAMEBUFFER, gY, AY.underlyingResource, FY, DY)) : YY.isCube ? (DY = DY ?? this.faceIndices?.[rY] ?? 0, IY.framebufferTexture2D(IY.FRAMEBUFFER, gY, IY.TEXTURE_CUBE_MAP_POSITIVE_X + DY, AY.underlyingResource, FY)) : IY.framebufferTexture2D(IY.FRAMEBUFFER, gY, IY.TEXTURE_2D, AY.underlyingResource, FY)
+      _bindTextureRenderTarget(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const zT = TT._hardwareTexture;
+        if (!zT) return;
+        const kT = this._framebuffer,
+          WT = this._engine,
+          XT = WT._currentFramebuffer;
+        let BT;
+        if (WT._bindUnboundFramebuffer(kT), WT.rK > 1) {
+          const kT = this._context;
+          BT = kT["COLOR_ATTACHMENT" + oT], TT.is2DArray || TT.is3D ? (IT = IT ?? this.layerIndices?.[oT] ?? 0, kT.framebufferTextureLayer(kT.FRAMEBUFFER, BT, zT.underlyingResource, iT, IT)) : TT.isCube ? (IT = IT ?? this.faceIndices?.[oT] ?? 0, kT.framebufferTexture2D(kT.FRAMEBUFFER, BT, kT.TEXTURE_CUBE_MAP_POSITIVE_X + IT, zT.underlyingResource, iT)) : kT.framebufferTexture2D(kT.FRAMEBUFFER, BT, kT.TEXTURE_2D, zT.underlyingResource, iT)
         } else {
-          const YY = this._context;
-          gY = YY["COLOR_ATTACHMENT" + rY + "_WEBGL"];
-          const IY = void 0 !== DY ? YY.TEXTURE_CUBE_MAP_POSITIVE_X + DY : YY.TEXTURE_2D;
-          YY.framebufferTexture2D(YY.FRAMEBUFFER, gY, IY, AY.underlyingResource, FY)
+          const TT = this._context;
+          BT = TT["COLOR_ATTACHMENT" + oT + "_WEBGL"];
+          const kT = void 0 !== IT ? TT.TEXTURE_CUBE_MAP_POSITIVE_X + IT : TT.TEXTURE_2D;
+          TT.framebufferTexture2D(TT.FRAMEBUFFER, BT, kT, zT.underlyingResource, iT)
         }
-        if (YY._autoMSAAManagement && this._MSAAFramebuffer) {
-          const YY = this._context;
-          RY._bindUnboundFramebuffer(this._MSAAFramebuffer), YY.framebufferRenderbuffer(YY.FRAMEBUFFER, gY, YY.RENDERBUFFER, AY.getMSAARenderBuffer())
+        if (TT._autoMSAAManagement && this._MSAAFramebuffer) {
+          const TT = this._context;
+          WT._bindUnboundFramebuffer(this._MSAAFramebuffer), TT.framebufferRenderbuffer(TT.FRAMEBUFFER, BT, TT.RENDERBUFFER, zT.getMSAARenderBuffer())
         }
-        RY._bindUnboundFramebuffer(OY)
+        WT._bindUnboundFramebuffer(XT)
       }
-      setTexture(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        super.setTexture(YY, rY, DY), this._bindTextureRenderTarget(YY, rY)
+      setTexture(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        super.setTexture(TT, oT, IT), this._bindTextureRenderTarget(TT, oT)
       }
-      setLayerAndFaceIndices(YY, rY) {
-        if (super.setLayerAndFaceIndices(YY, rY), !this.textures || !this.layerIndices || !this.faceIndices) return;
-        const DY = this._attachments?.length ?? this.textures.length;
-        for (let FY = 0; FY < DY; FY++) {
-          const YY = this.textures[FY];
-          YY && (YY.is2DArray || YY.is3D ? this._bindTextureRenderTarget(YY, FY, this.layerIndices[FY]) : YY.isCube ? this._bindTextureRenderTarget(YY, FY, this.faceIndices[FY]) : this._bindTextureRenderTarget(YY, FY))
+      setLayerAndFaceIndices(TT, oT) {
+        if (super.setLayerAndFaceIndices(TT, oT), !this.textures || !this.layerIndices || !this.faceIndices) return;
+        const IT = this._attachments?.length ?? this.textures.length;
+        for (let iT = 0; iT < IT; iT++) {
+          const TT = this.textures[iT];
+          TT && (TT.is2DArray || TT.is3D ? this._bindTextureRenderTarget(TT, iT, this.layerIndices[iT]) : TT.isCube ? this._bindTextureRenderTarget(TT, iT, this.faceIndices[iT]) : this._bindTextureRenderTarget(TT, iT))
         }
       }
       setLayerAndFaceIndex() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        if (super.setLayerAndFaceIndex(YY, rY, DY), !this.textures || !this.layerIndices || !this.faceIndices) return;
-        const FY = this.textures[YY];
-        FY.is2DArray || FY.is3D ? this._bindTextureRenderTarget(this.textures[YY], YY, this.layerIndices[YY]) : FY.isCube && this._bindTextureRenderTarget(this.textures[YY], YY, this.faceIndices[YY])
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        if (super.setLayerAndFaceIndex(TT, oT, IT), !this.textures || !this.layerIndices || !this.faceIndices) return;
+        const iT = this.textures[TT];
+        iT.is2DArray || iT.is3D ? this._bindTextureRenderTarget(this.textures[TT], TT, this.layerIndices[TT]) : iT.isCube && this._bindTextureRenderTarget(this.textures[TT], TT, this.faceIndices[TT])
       }
       resolveMSAATextures() {
-        const YY = this._engine,
-          rY = YY._currentFramebuffer;
-        YY._bindUnboundFramebuffer(this._MSAAFramebuffer), super.resolveMSAATextures(), YY._bindUnboundFramebuffer(rY)
+        const TT = this._engine,
+          oT = TT._currentFramebuffer;
+        TT._bindUnboundFramebuffer(this._MSAAFramebuffer), super.resolveMSAATextures(), TT._bindUnboundFramebuffer(oT)
       }
       dispose() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._disposeOnlyFramebuffers;
-        const rY = this._context;
-        YY || (this._colorTextureArray && (this._context.deleteTexture(this._colorTextureArray), this._colorTextureArray = null), this._depthStencilTextureArray && (this._context.deleteTexture(this._depthStencilTextureArray), this._depthStencilTextureArray = null)), this._framebuffer && (rY.deleteFramebuffer(this._framebuffer), this._framebuffer = null), this._depthStencilBuffer && (rY.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null), this._MSAAFramebuffer && (rY.deleteFramebuffer(this._MSAAFramebuffer), this._MSAAFramebuffer = null), super.dispose(YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._disposeOnlyFramebuffers;
+        const oT = this._context;
+        TT || (this._colorTextureArray && (this._context.deleteTexture(this._colorTextureArray), this._colorTextureArray = null), this._depthStencilTextureArray && (this._context.deleteTexture(this._depthStencilTextureArray), this._depthStencilTextureArray = null)), this._framebuffer && (oT.deleteFramebuffer(this._framebuffer), this._framebuffer = null), this._depthStencilBuffer && (oT.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null), this._MSAAFramebuffer && (oT.deleteFramebuffer(this._MSAAFramebuffer), this._MSAAFramebuffer = null), super.dispose(TT)
       }
     }
-    let aY = !1;
-    aY || (aY = !0, IY.ThinEngine.prototype._createHardwareRenderTargetWrapper = function(YY, rY, DY) {
-      const FY = new gY(YY, rY, DY, this, this._gl);
-      return this._renderTargetWrapperCache.push(FY), FY
-    }, IY.ThinEngine.prototype.createRenderTargetTexture = function(YY, rY) {
-      const DY = this._createHardwareRenderTargetWrapper(!1, !1, YY);
-      let FY, AY, IY = !0,
-        RY = !1,
-        OY = !1,
-        gY = 1;
-      void 0 !== rY && "object" === typeof rY && (IY = rY.generateDepthBuffer ?? !0, RY = !!rY.generateStencilBuffer, OY = !!rY.noColorAttachment, FY = rY.colorAttachment, gY = rY.samples ?? 1, AY = rY.label);
-      const aY = FY || (OY ? null : this._createInternalTexture(YY, rY, !0, 5)),
-        vY = YY.width || YY,
-        uY = YY.height || YY,
-        sY = this._currentFramebuffer,
-        iY = this._gl,
-        yY = iY.createFramebuffer();
-      if (this._bindUnboundFramebuffer(yY), DY._depthStencilBuffer = this._setupFramebufferDepthAttachments(RY, IY, vY, uY), !aY || aY.is2DArray || aY.is3D || iY.framebufferTexture2D(iY.FRAMEBUFFER, iY.COLOR_ATTACHMENT0, iY.TEXTURE_2D, aY._hardwareTexture.underlyingResource, 0), this._bindUnboundFramebuffer(sY), DY.label = AY ?? "RenderTargetWrapper", DY._framebuffer = yY, DY._generateDepthBuffer = IY, DY._generateStencilBuffer = RY, DY.setTextures(aY), FY) {
-        if (DY._samples = FY.samples, FY.samples > 1) {
-          const YY = FY._hardwareTexture.getMSAARenderBuffer(0);
-          DY._MSAAFramebuffer = iY.createFramebuffer(), this._bindUnboundFramebuffer(DY._MSAAFramebuffer), iY.framebufferRenderbuffer(iY.FRAMEBUFFER, iY.COLOR_ATTACHMENT0, iY.RENDERBUFFER, YY), this._bindUnboundFramebuffer(null)
+    let FT = !1;
+    FT || (FT = !0, kT.ThinEngine.prototype._createHardwareRenderTargetWrapper = function(TT, oT, IT) {
+      const iT = new BT(TT, oT, IT, this, this._gl);
+      return this._renderTargetWrapperCache.push(iT), iT
+    }, kT.ThinEngine.prototype.createRenderTargetTexture = function(TT, oT) {
+      const IT = this._createHardwareRenderTargetWrapper(!1, !1, TT);
+      let iT, zT, kT = !0,
+        WT = !1,
+        XT = !1,
+        BT = 1;
+      void 0 !== oT && "object" === typeof oT && (kT = oT.generateDepthBuffer ?? !0, WT = !!oT.generateStencilBuffer, XT = !!oT.noColorAttachment, iT = oT.colorAttachment, BT = oT.samples ?? 1, zT = oT.label);
+      const FT = iT || (XT ? null : this._createInternalTexture(TT, oT, !0, 5)),
+        ST = TT.width || TT,
+        DT = TT.height || TT,
+        LT = this._currentFramebuffer,
+        xT = this._gl,
+        cT = xT.createFramebuffer();
+      if (this._bindUnboundFramebuffer(cT), IT._depthStencilBuffer = this._setupFramebufferDepthAttachments(WT, kT, ST, DT), !FT || FT.is2DArray || FT.is3D || xT.framebufferTexture2D(xT.FRAMEBUFFER, xT.COLOR_ATTACHMENT0, xT.TEXTURE_2D, FT._hardwareTexture.underlyingResource, 0), this._bindUnboundFramebuffer(LT), IT.label = zT ?? "RenderTargetWrapper", IT._framebuffer = cT, IT._generateDepthBuffer = kT, IT._generateStencilBuffer = WT, IT.setTextures(FT), iT) {
+        if (IT._samples = iT.samples, iT.samples > 1) {
+          const TT = iT._hardwareTexture.getMSAARenderBuffer(0);
+          IT._MSAAFramebuffer = xT.createFramebuffer(), this._bindUnboundFramebuffer(IT._MSAAFramebuffer), xT.framebufferRenderbuffer(xT.FRAMEBUFFER, xT.COLOR_ATTACHMENT0, xT.RENDERBUFFER, TT), this._bindUnboundFramebuffer(null)
         }
-      } else this.updateRenderTargetTextureSampleCount(DY, gY);
-      return DY
-    }, IY.ThinEngine.prototype._createDepthStencilTexture = function(YY, rY, DY) {
-      const IY = this._gl,
-        RY = YY.layers || 0,
-        gY = YY.depth || 0;
-      let aY = IY.TEXTURE_2D;
-      0 !== RY ? aY = IY.TEXTURE_2D_ARRAY : 0 !== gY && (aY = IY.TEXTURE_3D);
-      const vY = new FY.c(this, 12);
-      if (vY.label = rY.label, !this._caps.depthTextureExtension) return AY.d.Error("Depth texture is not supported by your browser or hardware."), vY;
-      const uY = {
+      } else this.updateRenderTargetTextureSampleCount(IT, BT);
+      return IT
+    }, kT.ThinEngine.prototype._createDepthStencilTexture = function(TT, oT, IT) {
+      const kT = this._gl,
+        WT = TT.layers || 0,
+        BT = TT.depth || 0;
+      let FT = kT.TEXTURE_2D;
+      0 !== WT ? FT = kT.TEXTURE_2D_ARRAY : 0 !== BT && (FT = kT.TEXTURE_3D);
+      const ST = new iT.e(this, 12);
+      if (ST.label = oT.label, !this._caps.depthTextureExtension) return zT.d.Error("Depth texture is not supported by your browser or hardware."), ST;
+      const DT = {
         bilinearFiltering: !1,
         comparisonFunction: 0,
         generateStencil: !1,
-        ...rY
+        ...oT
       };
-      if (this._bindTextureDirectly(aY, vY, !0), this._setupDepthStencilTexture(vY, YY, 0 !== uY.comparisonFunction && uY.bilinearFiltering, uY.comparisonFunction, uY.samples), void 0 !== uY.depthTextureFormat) {
-        if (15 !== uY.depthTextureFormat && 16 !== uY.depthTextureFormat && 17 !== uY.depthTextureFormat && 13 !== uY.depthTextureFormat && 14 !== uY.depthTextureFormat && 18 !== uY.depthTextureFormat) return AY.d.Error(`Depth texture ${uY.depthTextureFormat} format is not supported.`), vY;
-        vY.format = uY.depthTextureFormat
-      } else vY.format = uY.generateStencil ? 13 : 16;
-      const sY = (0, OY.d)(vY.format),
-        iY = this._getWebGLTextureTypeFromDepthTextureFormat(vY.format),
-        yY = sY ? IY.DEPTH_STENCIL : IY.DEPTH_COMPONENT,
-        QY = this._getInternalFormatFromDepthTextureFormat(vY.format, !0, sY);
-      return vY.is2DArray ? IY.texImage3D(aY, 0, QY, vY.width, vY.height, RY, 0, yY, iY, null) : vY.is3D ? IY.texImage3D(aY, 0, QY, vY.width, vY.height, gY, 0, yY, iY, null) : IY.texImage2D(aY, 0, QY, vY.width, vY.height, 0, yY, iY, null), this._bindTextureDirectly(aY, null), this._internalTexturesCache.push(vY), DY._depthStencilBuffer && (IY.deleteRenderbuffer(DY._depthStencilBuffer), DY._depthStencilBuffer = null), this._bindUnboundFramebuffer(DY._MSAAFramebuffer ?? DY._framebuffer), DY._generateStencilBuffer = sY, DY._depthStencilTextureWithStencil = sY, DY._depthStencilBuffer = this._setupFramebufferDepthAttachments(DY._generateStencilBuffer, DY._generateDepthBuffer, DY.width, DY.height, DY.samples, vY.format), this._bindUnboundFramebuffer(null), vY
-    }, IY.ThinEngine.prototype.updateRenderTargetTextureSampleCount = function(YY, rY) {
-      if (this.VQ < 2 || !YY) return 1;
-      if (YY.samples === rY) return rY;
-      const DY = this._gl;
-      rY = Math.min(rY, this.getCaps().maxMSAASamples), YY._depthStencilBuffer && (DY.deleteRenderbuffer(YY._depthStencilBuffer), YY._depthStencilBuffer = null), YY._MSAAFramebuffer && (DY.deleteFramebuffer(YY._MSAAFramebuffer), YY._MSAAFramebuffer = null);
-      const FY = YY.texture?._hardwareTexture;
-      if (FY?.releaseMSAARenderBuffers(), YY.texture && rY > 1 && "function" === typeof DY.renderbufferStorageMultisample) {
-        const AY = DY.createFramebuffer();
-        if (!AY) throw new Error("Unable to create multi sampled framebuffer");
-        YY._MSAAFramebuffer = AY, this._bindUnboundFramebuffer(YY._MSAAFramebuffer);
-        const IY = this._createRenderBuffer(YY.texture.width, YY.texture.height, rY, -1, this._getRGBABufferInternalSizedFormat(YY.texture.type, YY.texture.format, YY.texture._useSRGBBuffer), DY.COLOR_ATTACHMENT0, !1);
-        if (!IY) throw new Error("Unable to create multi sampled framebuffer");
-        FY?.addMSAARenderBuffer(IY)
+      if (this._bindTextureDirectly(FT, ST, !0), this._setupDepthStencilTexture(ST, TT, 0 !== DT.comparisonFunction && DT.bilinearFiltering, DT.comparisonFunction, DT.samples), void 0 !== DT.depthTextureFormat) {
+        if (15 !== DT.depthTextureFormat && 16 !== DT.depthTextureFormat && 17 !== DT.depthTextureFormat && 13 !== DT.depthTextureFormat && 14 !== DT.depthTextureFormat && 18 !== DT.depthTextureFormat) return zT.d.Error(`Depth texture ${DT.depthTextureFormat} format is not supported.`), ST;
+        ST.format = DT.depthTextureFormat
+      } else ST.format = DT.generateStencil ? 13 : 16;
+      const LT = (0, XT.d)(ST.format),
+        xT = this._getWebGLTextureTypeFromDepthTextureFormat(ST.format),
+        cT = LT ? kT.DEPTH_STENCIL : kT.DEPTH_COMPONENT,
+        KT = this._getInternalFormatFromDepthTextureFormat(ST.format, !0, LT);
+      return ST.is2DArray ? kT.texImage3D(FT, 0, KT, ST.width, ST.height, WT, 0, cT, xT, null) : ST.is3D ? kT.texImage3D(FT, 0, KT, ST.width, ST.height, BT, 0, cT, xT, null) : kT.texImage2D(FT, 0, KT, ST.width, ST.height, 0, cT, xT, null), this._bindTextureDirectly(FT, null), this._internalTexturesCache.push(ST), IT._depthStencilBuffer && (kT.deleteRenderbuffer(IT._depthStencilBuffer), IT._depthStencilBuffer = null), this._bindUnboundFramebuffer(IT._MSAAFramebuffer ?? IT._framebuffer), IT._generateStencilBuffer = LT, IT._depthStencilTextureWithStencil = LT, IT._depthStencilBuffer = this._setupFramebufferDepthAttachments(IT._generateStencilBuffer, IT._generateDepthBuffer, IT.width, IT.height, IT.samples, ST.format), this._bindUnboundFramebuffer(null), ST
+    }, kT.ThinEngine.prototype.updateRenderTargetTextureSampleCount = function(TT, oT) {
+      if (this.rK < 2 || !TT) return 1;
+      if (TT.samples === oT) return oT;
+      const IT = this._gl;
+      oT = Math.min(oT, this.getCaps().maxMSAASamples), TT._depthStencilBuffer && (IT.deleteRenderbuffer(TT._depthStencilBuffer), TT._depthStencilBuffer = null), TT._MSAAFramebuffer && (IT.deleteFramebuffer(TT._MSAAFramebuffer), TT._MSAAFramebuffer = null);
+      const iT = TT.texture?._hardwareTexture;
+      if (iT?.releaseMSAARenderBuffers(), TT.texture && oT > 1 && "function" === typeof IT.renderbufferStorageMultisample) {
+        const zT = IT.createFramebuffer();
+        if (!zT) throw new Error("Unable to create multi sampled framebuffer");
+        TT._MSAAFramebuffer = zT, this._bindUnboundFramebuffer(TT._MSAAFramebuffer);
+        const kT = this._createRenderBuffer(TT.texture.width, TT.texture.height, oT, -1, this._getRGBABufferInternalSizedFormat(TT.texture.type, TT.texture.format, TT.texture._useSRGBBuffer), IT.COLOR_ATTACHMENT0, !1);
+        if (!kT) throw new Error("Unable to create multi sampled framebuffer");
+        iT?.addMSAARenderBuffer(kT)
       }
-      this._bindUnboundFramebuffer(YY._MSAAFramebuffer ?? YY._framebuffer), YY.texture && (YY.texture.samples = rY), YY._samples = rY;
-      const AY = YY._depthStencilTexture ? YY._depthStencilTexture.format : void 0;
-      return YY._depthStencilBuffer = this._setupFramebufferDepthAttachments(YY._generateStencilBuffer, YY._generateDepthBuffer, YY.width, YY.height, rY, AY), this._bindUnboundFramebuffer(null), rY
-    }, IY.ThinEngine.prototype._setupDepthStencilTexture = function(YY, rY, DY, FY) {
-      let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
-      const IY = rY.width ?? rY,
-        RY = rY.height ?? rY,
-        OY = rY.layers || 0,
-        gY = rY.depth || 0;
-      YY.baseWidth = IY, YY.baseHeight = RY, YY.width = IY, YY.height = RY, YY.is2DArray = OY > 0, YY.depth = OY || gY, YY.isReady = !0, YY.samples = AY, YY.generateMipMaps = !1, YY.samplingMode = DY ? 2 : 1, YY.type = 0, YY._comparisonFunction = FY;
-      const aY = this._gl,
-        vY = this._getTextureTarget(YY),
-        uY = this._getSamplingParameters(YY.samplingMode, !1);
-      aY.texParameteri(vY, aY.TEXTURE_MAG_FILTER, uY.mag), aY.texParameteri(vY, aY.TEXTURE_MIN_FILTER, uY.min), aY.texParameteri(vY, aY.TEXTURE_WRAP_S, aY.CLAMP_TO_EDGE), aY.texParameteri(vY, aY.TEXTURE_WRAP_T, aY.CLAMP_TO_EDGE), this.VQ > 1 && (0 === FY ? (aY.texParameteri(vY, aY.TEXTURE_COMPARE_FUNC, 515), aY.texParameteri(vY, aY.TEXTURE_COMPARE_MODE, aY.NONE)) : (aY.texParameteri(vY, aY.TEXTURE_COMPARE_FUNC, FY), aY.texParameteri(vY, aY.TEXTURE_COMPARE_MODE, aY.COMPARE_REF_TO_TEXTURE)))
+      this._bindUnboundFramebuffer(TT._MSAAFramebuffer ?? TT._framebuffer), TT.texture && (TT.texture.samples = oT), TT._samples = oT;
+      const zT = TT._depthStencilTexture ? TT._depthStencilTexture.format : void 0;
+      return TT._depthStencilBuffer = this._setupFramebufferDepthAttachments(TT._generateStencilBuffer, TT._generateDepthBuffer, TT.width, TT.height, oT, zT), this._bindUnboundFramebuffer(null), oT
+    }, kT.ThinEngine.prototype._setupDepthStencilTexture = function(TT, oT, IT, iT) {
+      let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
+      const kT = oT.width ?? oT,
+        WT = oT.height ?? oT,
+        XT = oT.layers || 0,
+        BT = oT.depth || 0;
+      TT.baseWidth = kT, TT.baseHeight = WT, TT.width = kT, TT.height = WT, TT.is2DArray = XT > 0, TT.depth = XT || BT, TT.isReady = !0, TT.samples = zT, TT.generateMipMaps = !1, TT.samplingMode = IT ? 2 : 1, TT.type = 0, TT._comparisonFunction = iT;
+      const FT = this._gl,
+        ST = this._getTextureTarget(TT),
+        DT = this._getSamplingParameters(TT.samplingMode, !1);
+      FT.texParameteri(ST, FT.TEXTURE_MAG_FILTER, DT.mag), FT.texParameteri(ST, FT.TEXTURE_MIN_FILTER, DT.min), FT.texParameteri(ST, FT.TEXTURE_WRAP_S, FT.CLAMP_TO_EDGE), FT.texParameteri(ST, FT.TEXTURE_WRAP_T, FT.CLAMP_TO_EDGE), this.rK > 1 && (0 === iT ? (FT.texParameteri(ST, FT.TEXTURE_COMPARE_FUNC, 515), FT.texParameteri(ST, FT.TEXTURE_COMPARE_MODE, FT.NONE)) : (FT.texParameteri(ST, FT.TEXTURE_COMPARE_FUNC, iT), FT.texParameteri(ST, FT.TEXTURE_COMPARE_MODE, FT.COMPARE_REF_TO_TEXTURE)))
     })
   },
-  38965: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => FY.e
+  38589: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => iT.c
     });
-    var FY = DY(38969);
-    (0, DY(39098).c)();
-    var AY = DY(38982);
-    let IY = !1;
+    var iT = IT(38592);
+    (0, IT(38733).e)();
+    var zT = IT(38607);
+    let kT = !1;
     ! function() {
-      if (IY) return;
-      IY = !0;
-      const YY = new WeakMap,
-        rY = new WeakMap,
-        DY = new WeakMap,
-        FY = new WeakMap;
-      AY.ThinEngine.prototype.getAlphaToCoverage = function() {
-        return YY.get(this) ?? !1
-      }, AY.ThinEngine.prototype.setAlphaToCoverage = function(DY) {
-        (YY.get(this) !== DY || this._gl && rY.get(this) !== this._gl) && (YY.set(this, DY), this._gl && (DY ? this._gl.enable(this._gl.SAMPLE_ALPHA_TO_COVERAGE) : this._gl.disable(this._gl.SAMPLE_ALPHA_TO_COVERAGE), rY.set(this, this._gl)))
-      }, Object.defineProperty(AY.ThinEngine.prototype, "currentSampleCount", {
+      if (kT) return;
+      kT = !0;
+      const TT = new WeakMap,
+        oT = new WeakMap,
+        IT = new WeakMap,
+        iT = new WeakMap;
+      zT.ThinEngine.prototype.getAlphaToCoverage = function() {
+        return TT.get(this) ?? !1
+      }, zT.ThinEngine.prototype.setAlphaToCoverage = function(IT) {
+        (TT.get(this) !== IT || this._gl && oT.get(this) !== this._gl) && (TT.set(this, IT), this._gl && (IT ? this._gl.enable(this._gl.SAMPLE_ALPHA_TO_COVERAGE) : this._gl.disable(this._gl.SAMPLE_ALPHA_TO_COVERAGE), oT.set(this, this._gl)))
+      }, Object.defineProperty(zT.ThinEngine.prototype, "currentSampleCount", {
         get: function() {
-          return this._currentRenderTarget ? this._currentRenderTarget.samples : this._gl ? (FY.get(this) !== this._gl && (DY.set(this, this._gl.getContextAttributes()?.antialias ? Math.max(1, this._gl.getParameter(this._gl.SAMPLES)) : 1), FY.set(this, this._gl)), DY.get(this)) : 1
+          return this._currentRenderTarget ? this._currentRenderTarget.samples : this._gl ? (iT.get(this) !== this._gl && (IT.set(this, this._gl.getContextAttributes()?.antialias ? Math.max(1, this._gl.getParameter(this._gl.SAMPLES)) : 1), iT.set(this, this._gl)), IT.get(this)) : 1
         },
         enumerable: !1,
         configurable: !0
       })
     }();
-    var RY = DY(38975),
-      OY = DY(38040),
-      gY = DY(39065);
-    let aY = !1;
+    var WT = IT(38594),
+      XT = IT(37660),
+      BT = IT(38698);
+    let FT = !1;
     ! function() {
-      function YY(YY, rY, DY, FY) {
-        let AY, IY = 1;
-        1 === FY ? AY = new Float32Array(rY * DY * 4) : 2 === FY ? (AY = new Uint16Array(rY * DY * 4), IY = 15360) : AY = 7 === FY ? new Uint32Array(rY * DY * 4) : new Uint8Array(rY * DY * 4);
-        for (let RY = 0; RY < rY; RY++)
-          for (let FY = 0; FY < DY; FY++) {
-            const DY = 3 * (FY * rY + RY),
-              OY = 4 * (FY * rY + RY);
-            AY[OY + 0] = YY[DY + 0], AY[OY + 1] = YY[DY + 1], AY[OY + 2] = YY[DY + 2], AY[OY + 3] = IY
+      function TT(TT, oT, IT, iT) {
+        let zT, kT = 1;
+        1 === iT ? zT = new Float32Array(oT * IT * 4) : 2 === iT ? (zT = new Uint16Array(oT * IT * 4), kT = 15360) : zT = 7 === iT ? new Uint32Array(oT * IT * 4) : new Uint8Array(oT * IT * 4);
+        for (let WT = 0; WT < oT; WT++)
+          for (let iT = 0; iT < IT; iT++) {
+            const IT = 3 * (iT * oT + WT),
+              XT = 4 * (iT * oT + WT);
+            zT[XT + 0] = TT[IT + 0], zT[XT + 1] = TT[IT + 1], zT[XT + 2] = TT[IT + 2], zT[XT + 3] = kT
           }
-        return AY
+        return zT
       }
 
-      function rY(YY) {
-        return function(rY, DY, FY, AY, IY, OY, gY, aY) {
-          let vY = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-            uY = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
-          const sY = YY ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
-            iY = YY ? 10 : 11,
-            yY = new RY.c(this, iY);
-          yY.baseWidth = DY, yY.baseHeight = FY, yY.baseDepth = AY, yY.width = DY, yY.height = FY, yY.depth = AY, yY.format = IY, yY.type = uY, yY.generateMipMaps = OY, yY.samplingMode = aY, YY ? yY.is3D = !0 : yY.is2DArray = !0, this._doNotHandleContextLost || (yY._bufferView = rY), YY ? this.updateRawTexture3D(yY, rY, IY, gY, vY, uY) : this.updateRawTexture2DArray(yY, rY, IY, gY, vY, uY), this._bindTextureDirectly(sY, yY, !0);
-          const QY = this._getSamplingParameters(aY, OY);
-          return this._gl.texParameteri(sY, this._gl.TEXTURE_MAG_FILTER, QY.mag), this._gl.texParameteri(sY, this._gl.TEXTURE_MIN_FILTER, QY.min), OY && this._gl.generateMipmap(sY), this._bindTextureDirectly(sY, null), this._internalTexturesCache.push(yY), yY
+      function oT(TT) {
+        return function(oT, IT, iT, zT, kT, XT, BT, FT) {
+          let ST = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+            DT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+          const LT = TT ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
+            xT = TT ? 10 : 11,
+            cT = new WT.e(this, xT);
+          cT.baseWidth = IT, cT.baseHeight = iT, cT.baseDepth = zT, cT.width = IT, cT.height = iT, cT.depth = zT, cT.format = kT, cT.type = DT, cT.generateMipMaps = XT, cT.samplingMode = FT, TT ? cT.is3D = !0 : cT.is2DArray = !0, this._doNotHandleContextLost || (cT._bufferView = oT), TT ? this.updateRawTexture3D(cT, oT, kT, BT, ST, DT) : this.updateRawTexture2DArray(cT, oT, kT, BT, ST, DT), this._bindTextureDirectly(LT, cT, !0);
+          const KT = this._getSamplingParameters(FT, XT);
+          return this._gl.texParameteri(LT, this._gl.TEXTURE_MAG_FILTER, KT.mag), this._gl.texParameteri(LT, this._gl.TEXTURE_MIN_FILTER, KT.min), XT && this._gl.generateMipmap(LT), this._bindTextureDirectly(LT, null), this._internalTexturesCache.push(cT), cT
         }
       }
 
-      function DY(YY) {
-        return function(rY, DY, FY, AY) {
-          let IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-            RY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          const OY = YY ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
-            gY = this._getWebGLTextureType(RY),
-            aY = this._getInternalFormat(FY),
-            vY = this._getRGBABufferInternalSizedFormat(RY, FY);
-          this._bindTextureDirectly(OY, rY, !0), this._unpackFlipY(void 0 === AY || !!AY), this._doNotHandleContextLost || (rY._bufferView = DY, rY.format = FY, rY.invertY = AY, rY._compression = IY), rY.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), IY && DY ? this._gl.compressedTexImage3D(OY, 0, this.getCaps().s3tc[IY], rY.width, rY.height, rY.depth, 0, DY) : this._gl.texImage3D(OY, 0, vY, rY.width, rY.height, rY.depth, 0, aY, gY, DY), rY.generateMipMaps && this._gl.generateMipmap(OY), this._bindTextureDirectly(OY, null), rY.isReady = !0
+      function IT(TT) {
+        return function(oT, IT, iT, zT) {
+          let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+            WT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          const XT = TT ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
+            BT = this._getWebGLTextureType(WT),
+            FT = this._getInternalFormat(iT),
+            ST = this._getRGBABufferInternalSizedFormat(WT, iT);
+          this._bindTextureDirectly(XT, oT, !0), this._unpackFlipY(void 0 === zT || !!zT), this._doNotHandleContextLost || (oT._bufferView = IT, oT.format = iT, oT.invertY = zT, oT._compression = kT), oT.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), kT && IT ? this._gl.compressedTexImage3D(XT, 0, this.getCaps().s3tc[kT], oT.width, oT.height, oT.depth, 0, IT) : this._gl.texImage3D(XT, 0, ST, oT.width, oT.height, oT.depth, 0, FT, BT, IT), oT.generateMipMaps && this._gl.generateMipmap(XT), this._bindTextureDirectly(XT, null), oT.isReady = !0
         }
       }
-      aY || (aY = !0, AY.ThinEngine.prototype.updateRawTexture = function(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          RY = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        if (!YY) return;
-        const OY = this._getRGBABufferInternalSizedFormat(IY, DY, RY),
-          gY = this._getInternalFormat(DY),
-          aY = this._getWebGLTextureType(IY);
-        this._bindTextureDirectly(this._gl.TEXTURE_2D, YY, !0), this._unpackFlipY(void 0 === FY || !!FY), this._doNotHandleContextLost || (YY._bufferView = rY, YY.format = DY, YY.type = IY, YY.invertY = FY, YY._compression = AY), YY.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), AY && rY ? this._gl.compressedTexImage2D(this._gl.TEXTURE_2D, 0, this.getCaps().s3tc[AY], YY.width, YY.height, 0, rY) : this._gl.texImage2D(this._gl.TEXTURE_2D, 0, OY, YY.width, YY.height, 0, gY, aY, rY), YY.generateMipMaps && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), YY.isReady = !0
-      }, AY.ThinEngine.prototype.createRawTexture = function(YY, rY, DY, FY, AY, IY, OY) {
-        let gY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-          aY = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-          vY = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        const uY = new RY.c(this, 3);
-        uY.baseWidth = rY, uY.baseHeight = DY, uY.width = rY, uY.height = DY, uY.format = FY, uY.generateMipMaps = AY, uY.samplingMode = OY, uY.invertY = IY, uY._compression = gY, uY.type = aY, uY._useSRGBBuffer = this._getUseSRGBBuffer(vY, !AY), this._doNotHandleContextLost || (uY._bufferView = YY), this.updateRawTexture(uY, YY, FY, IY, gY, aY, uY._useSRGBBuffer), this._bindTextureDirectly(this._gl.TEXTURE_2D, uY, !0);
-        const sY = this._getSamplingParameters(OY, AY);
-        return this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, sY.mag), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, sY.min), AY && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._internalTexturesCache.push(uY), uY
-      }, AY.ThinEngine.prototype.createRawCubeTexture = function(YY, rY, DY, FY, AY, IY, aY) {
-        let vY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null;
-        const uY = this._gl,
-          sY = new RY.c(this, 8);
-        sY.isCube = !0, sY.format = DY, sY.type = FY, this._doNotHandleContextLost || (sY._bufferViewArray = YY);
-        const iY = this._getWebGLTextureType(FY);
-        let yY = this._getInternalFormat(DY);
-        yY === uY.RGB && (yY = uY.RGBA), iY !== uY.FLOAT || this._caps.textureFloatLinearFiltering ? iY !== this._gl.HALF_FLOAT_OES || this._caps.textureHalfFloatLinearFiltering ? iY !== uY.FLOAT || this._caps.textureFloatRender ? iY !== uY.HALF_FLOAT || this._caps.colorBufferFloat || (AY = !1, OY.d.Warn("Render to half float textures is not supported. Mipmap generation forced to false.")) : (AY = !1, OY.d.Warn("Render to float textures is not supported. Mipmap generation forced to false.")) : (AY = !1, aY = 1, OY.d.Warn("Half float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively.")) : (AY = !1, aY = 1, OY.d.Warn("Float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively."));
-        const QY = rY,
-          oY = QY;
-        sY.width = QY, sY.height = oY, sY.invertY = IY, sY._compression = vY;
-        if (!this.needPOTTextures || (0, gY.g)(sY.width) && (0, gY.g)(sY.height) || (AY = !1), YY) this.updateRawCubeTexture(sY, YY, DY, FY, IY, vY);
+      FT || (FT = !0, zT.ThinEngine.prototype.updateRawTexture = function(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          WT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        if (!TT) return;
+        const XT = this._getRGBABufferInternalSizedFormat(kT, IT, WT),
+          BT = this._getInternalFormat(IT),
+          FT = this._getWebGLTextureType(kT);
+        this._bindTextureDirectly(this._gl.TEXTURE_2D, TT, !0), this._unpackFlipY(void 0 === iT || !!iT), this._doNotHandleContextLost || (TT._bufferView = oT, TT.format = IT, TT.type = kT, TT.invertY = iT, TT._compression = zT), TT.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), zT && oT ? this._gl.compressedTexImage2D(this._gl.TEXTURE_2D, 0, this.getCaps().s3tc[zT], TT.width, TT.height, 0, oT) : this._gl.texImage2D(this._gl.TEXTURE_2D, 0, XT, TT.width, TT.height, 0, BT, FT, oT), TT.generateMipMaps && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), TT.isReady = !0
+      }, zT.ThinEngine.prototype.createRawTexture = function(TT, oT, IT, iT, zT, kT, XT) {
+        let BT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+          FT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          ST = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        const DT = new WT.e(this, 3);
+        DT.baseWidth = oT, DT.baseHeight = IT, DT.width = oT, DT.height = IT, DT.format = iT, DT.generateMipMaps = zT, DT.samplingMode = XT, DT.invertY = kT, DT._compression = BT, DT.type = FT, DT._useSRGBBuffer = this._getUseSRGBBuffer(ST, !zT), this._doNotHandleContextLost || (DT._bufferView = TT), this.updateRawTexture(DT, TT, iT, kT, BT, FT, DT._useSRGBBuffer), this._bindTextureDirectly(this._gl.TEXTURE_2D, DT, !0);
+        const LT = this._getSamplingParameters(XT, zT);
+        return this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, LT.mag), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, LT.min), zT && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._internalTexturesCache.push(DT), DT
+      }, zT.ThinEngine.prototype.createRawCubeTexture = function(TT, oT, IT, iT, zT, kT, FT) {
+        let ST = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null;
+        const DT = this._gl,
+          LT = new WT.e(this, 8);
+        LT.isCube = !0, LT.format = IT, LT.type = iT, this._doNotHandleContextLost || (LT._bufferViewArray = TT);
+        const xT = this._getWebGLTextureType(iT);
+        let cT = this._getInternalFormat(IT);
+        cT === DT.RGB && (cT = DT.RGBA), xT !== DT.FLOAT || this._caps.textureFloatLinearFiltering ? xT !== this._gl.HALF_FLOAT_OES || this._caps.textureHalfFloatLinearFiltering ? xT !== DT.FLOAT || this._caps.textureFloatRender ? xT !== DT.HALF_FLOAT || this._caps.colorBufferFloat || (zT = !1, XT.d.Warn("Render to half float textures is not supported. Mipmap generation forced to false.")) : (zT = !1, XT.d.Warn("Render to float textures is not supported. Mipmap generation forced to false.")) : (zT = !1, FT = 1, XT.d.Warn("Half float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively.")) : (zT = !1, FT = 1, XT.d.Warn("Float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively."));
+        const KT = oT,
+          MT = KT;
+        LT.width = KT, LT.height = MT, LT.invertY = kT, LT._compression = ST;
+        if (!this.needPOTTextures || (0, BT.h)(LT.width) && (0, BT.h)(LT.height) || (zT = !1), TT) this.updateRawCubeTexture(LT, TT, IT, iT, kT, ST);
         else {
-          const YY = this._getRGBABufferInternalSizedFormat(FY),
-            rY = 0;
-          this._bindTextureDirectly(uY.TEXTURE_CUBE_MAP, sY, !0);
-          for (let DY = 0; DY < 6; DY++) vY ? uY.compressedTexImage2D(uY.TEXTURE_CUBE_MAP_POSITIVE_X + DY, rY, this.getCaps().s3tc[vY], sY.width, sY.height, 0, void 0) : uY.texImage2D(uY.TEXTURE_CUBE_MAP_POSITIVE_X + DY, rY, YY, sY.width, sY.height, 0, yY, iY, null);
+          const TT = this._getRGBABufferInternalSizedFormat(iT),
+            oT = 0;
+          this._bindTextureDirectly(DT.TEXTURE_CUBE_MAP, LT, !0);
+          for (let IT = 0; IT < 6; IT++) ST ? DT.compressedTexImage2D(DT.TEXTURE_CUBE_MAP_POSITIVE_X + IT, oT, this.getCaps().s3tc[ST], LT.width, LT.height, 0, void 0) : DT.texImage2D(DT.TEXTURE_CUBE_MAP_POSITIVE_X + IT, oT, TT, LT.width, LT.height, 0, cT, xT, null);
           this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)
         }
-        this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, sY, !0), YY && AY && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP);
-        const WY = this._getSamplingParameters(aY, AY);
-        return uY.texParameteri(uY.TEXTURE_CUBE_MAP, uY.TEXTURE_MAG_FILTER, WY.mag), uY.texParameteri(uY.TEXTURE_CUBE_MAP, uY.TEXTURE_MIN_FILTER, WY.min), uY.texParameteri(uY.TEXTURE_CUBE_MAP, uY.TEXTURE_WRAP_S, uY.CLAMP_TO_EDGE), uY.texParameteri(uY.TEXTURE_CUBE_MAP, uY.TEXTURE_WRAP_T, uY.CLAMP_TO_EDGE), this._bindTextureDirectly(uY.TEXTURE_CUBE_MAP, null), sY.generateMipMaps = AY, sY.samplingMode = aY, sY.isReady = !0, sY
-      }, AY.ThinEngine.prototype.updateRawCubeTexture = function(rY, DY, FY, AY, IY) {
-        let RY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          OY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        rY._bufferViewArray = DY, rY.format = FY, rY.type = AY, rY.invertY = IY, rY._compression = RY;
-        const aY = this._gl,
-          vY = this._getWebGLTextureType(AY);
-        let uY = this._getInternalFormat(FY);
-        const sY = this._getRGBABufferInternalSizedFormat(AY);
-        let iY = !1;
-        uY === aY.RGB && (uY = aY.RGBA, iY = !0), this._bindTextureDirectly(aY.TEXTURE_CUBE_MAP, rY, !0), this._unpackFlipY(void 0 === IY || !!IY), rY.width % 4 !== 0 && aY.pixelStorei(aY.UNPACK_ALIGNMENT, 1);
-        for (let gY = 0; gY < 6; gY++) {
-          let FY = DY[gY];
-          RY ? aY.compressedTexImage2D(aY.TEXTURE_CUBE_MAP_POSITIVE_X + gY, OY, this.getCaps().s3tc[RY], rY.width, rY.height, 0, FY) : (iY && (FY = YY(FY, rY.width, rY.height, AY)), aY.texImage2D(aY.TEXTURE_CUBE_MAP_POSITIVE_X + gY, OY, sY, rY.width, rY.height, 0, uY, vY, FY))
-        }(!this.needPOTTextures || (0, gY.g)(rY.width) && (0, gY.g)(rY.height)) && rY.generateMipMaps && 0 === OY && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), rY.isReady = !0
-      }, AY.ThinEngine.prototype.createRawCubeTextureFromUrl = function(rY, DY, FY, AY, IY, RY, OY, gY) {
-        let aY = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-          vY = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-          uY = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 3,
-          sY = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
-        const iY = this._gl,
-          yY = this.createRawCubeTexture(null, FY, AY, IY, !RY, sY, uY, null);
-        DY?.addPendingData(yY), yY.url = rY, yY.isReady = !1, this._internalTexturesCache.push(yY);
-        const QY = (YY, rY) => {
-            DY?.removePendingData(yY), vY && vY(YY ? YY.status + " " + YY.statusText : "Failed to parse texture data", rY)
+        this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, LT, !0), TT && zT && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP);
+        const rT = this._getSamplingParameters(FT, zT);
+        return DT.texParameteri(DT.TEXTURE_CUBE_MAP, DT.TEXTURE_MAG_FILTER, rT.mag), DT.texParameteri(DT.TEXTURE_CUBE_MAP, DT.TEXTURE_MIN_FILTER, rT.min), DT.texParameteri(DT.TEXTURE_CUBE_MAP, DT.TEXTURE_WRAP_S, DT.CLAMP_TO_EDGE), DT.texParameteri(DT.TEXTURE_CUBE_MAP, DT.TEXTURE_WRAP_T, DT.CLAMP_TO_EDGE), this._bindTextureDirectly(DT.TEXTURE_CUBE_MAP, null), LT.generateMipMaps = zT, LT.samplingMode = FT, LT.isReady = !0, LT
+      }, zT.ThinEngine.prototype.updateRawCubeTexture = function(oT, IT, iT, zT, kT) {
+        let WT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          XT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        oT._bufferViewArray = IT, oT.format = iT, oT.type = zT, oT.invertY = kT, oT._compression = WT;
+        const FT = this._gl,
+          ST = this._getWebGLTextureType(zT);
+        let DT = this._getInternalFormat(iT);
+        const LT = this._getRGBABufferInternalSizedFormat(zT);
+        let xT = !1;
+        DT === FT.RGB && (DT = FT.RGBA, xT = !0), this._bindTextureDirectly(FT.TEXTURE_CUBE_MAP, oT, !0), this._unpackFlipY(void 0 === kT || !!kT), oT.width % 4 !== 0 && FT.pixelStorei(FT.UNPACK_ALIGNMENT, 1);
+        for (let BT = 0; BT < 6; BT++) {
+          let iT = IT[BT];
+          WT ? FT.compressedTexImage2D(FT.TEXTURE_CUBE_MAP_POSITIVE_X + BT, XT, this.getCaps().s3tc[WT], oT.width, oT.height, 0, iT) : (xT && (iT = TT(iT, oT.width, oT.height, zT)), FT.texImage2D(FT.TEXTURE_CUBE_MAP_POSITIVE_X + BT, XT, LT, oT.width, oT.height, 0, DT, ST, iT))
+        }(!this.needPOTTextures || (0, BT.h)(oT.width) && (0, BT.h)(oT.height)) && oT.generateMipMaps && 0 === XT && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), oT.isReady = !0
+      }, zT.ThinEngine.prototype.createRawCubeTextureFromUrl = function(oT, IT, iT, zT, kT, WT, XT, BT) {
+        let FT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+          ST = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+          DT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 3,
+          LT = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
+        const xT = this._gl,
+          cT = this.createRawCubeTexture(null, iT, zT, kT, !WT, LT, DT, null);
+        IT?.addPendingData(cT), cT.url = oT, cT.isReady = !1, this._internalTexturesCache.push(cT);
+        const KT = (TT, oT) => {
+            IT?.removePendingData(cT), ST && ST(TT ? TT.status + " " + TT.statusText : "Failed to parse texture data", oT)
           },
-          oY = async rY => {
-            if (!yY._hardwareTexture) return;
-            const FY = OY(rY);
-            if (!FY) return;
-            const RY = FY instanceof Promise ? await FY : FY,
-              vY = yY.width;
-            if (gY) {
-              const rY = this._getWebGLTextureType(IY);
-              let DY = this._getInternalFormat(AY);
-              const FY = this._getRGBABufferInternalSizedFormat(IY);
-              let OY = !1;
-              DY === iY.RGB && (DY = iY.RGBA, OY = !0), this._bindTextureDirectly(iY.TEXTURE_CUBE_MAP, yY, !0), this._unpackFlipY(!1);
-              const aY = gY(RY);
-              for (let AY = 0; AY < aY.length; AY++) {
-                const RY = vY >> AY;
-                for (let gY = 0; gY < 6; gY++) {
-                  let vY = aY[AY][gY];
-                  OY && (vY = YY(vY, RY, RY, IY)), iY.texImage2D(gY, AY, FY, RY, RY, 0, DY, rY, vY)
+          MT = async oT => {
+            if (!cT._hardwareTexture) return;
+            const iT = XT(oT);
+            if (!iT) return;
+            const WT = iT instanceof Promise ? await iT : iT,
+              ST = cT.width;
+            if (BT) {
+              const oT = this._getWebGLTextureType(kT);
+              let IT = this._getInternalFormat(zT);
+              const iT = this._getRGBABufferInternalSizedFormat(kT);
+              let XT = !1;
+              IT === xT.RGB && (IT = xT.RGBA, XT = !0), this._bindTextureDirectly(xT.TEXTURE_CUBE_MAP, cT, !0), this._unpackFlipY(!1);
+              const FT = BT(WT);
+              for (let zT = 0; zT < FT.length; zT++) {
+                const WT = ST >> zT;
+                for (let BT = 0; BT < 6; BT++) {
+                  let ST = FT[zT][BT];
+                  XT && (ST = TT(ST, WT, WT, kT)), xT.texImage2D(BT, zT, iT, WT, WT, 0, IT, oT, ST)
                 }
               }
-              this._bindTextureDirectly(iY.TEXTURE_CUBE_MAP, null)
-            } else this.updateRawCubeTexture(yY, RY, AY, IY, sY);
-            yY.isReady = !0, DY?.removePendingData(yY), yY.onLoadedObservable.notifyObservers(yY), yY.onLoadedObservable.clear(), aY && aY()
+              this._bindTextureDirectly(xT.TEXTURE_CUBE_MAP, null)
+            } else this.updateRawCubeTexture(cT, WT, zT, kT, LT);
+            cT.isReady = !0, IT?.removePendingData(cT), cT.onLoadedObservable.notifyObservers(cT), cT.onLoadedObservable.clear(), FT && FT()
           };
-        return this._loadFile(rY, (YY => {
-          oY(YY).catch((YY => {
-            QY(void 0, YY)
+        return this._loadFile(oT, (TT => {
+          MT(TT).catch((TT => {
+            KT(void 0, TT)
           }))
-        }), void 0, DY?.offlineProvider, !0, QY), yY
-      }, AY.ThinEngine.prototype.createRawTexture2DArray = rY(!1), AY.ThinEngine.prototype.createRawTexture3D = rY(!0), AY.ThinEngine.prototype.updateRawTexture2DArray = DY(!1), AY.ThinEngine.prototype.updateRawTexture3D = DY(!0))
+        }), void 0, IT?.offlineProvider, !0, KT), cT
+      }, zT.ThinEngine.prototype.createRawTexture2DArray = oT(!1), zT.ThinEngine.prototype.createRawTexture3D = oT(!0), zT.ThinEngine.prototype.updateRawTexture2DArray = IT(!1), zT.ThinEngine.prototype.updateRawTexture3D = IT(!0))
     }();
-    var vY = DY(39021);
-    let uY = !1;
-    uY || (uY = !0, AY.ThinEngine.prototype._readTexturePixelsSync = function(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
-        AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-        IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        RY = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-        OY = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        gY = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-        aY = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
-      const uY = this._gl;
-      if (!uY) throw new Error("Engine does not have gl rendering context.");
+    var ST = IT(38635);
+    let DT = !1;
+    DT || (DT = !0, zT.ThinEngine.prototype._readTexturePixelsSync = function(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
+        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        WT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+        XT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        BT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+        FT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+      const DT = this._gl;
+      if (!DT) throw new Error("Engine does not have gl rendering context.");
       if (!this._dummyFramebuffer) {
-        const YY = uY.createFramebuffer();
-        if (!YY) throw new Error("Unable to create dummy framebuffer");
-        this._dummyFramebuffer = YY
+        const TT = DT.createFramebuffer();
+        if (!TT) throw new Error("Unable to create dummy framebuffer");
+        this._dummyFramebuffer = TT
       }
-      uY.bindFramebuffer(uY.FRAMEBUFFER, this._dummyFramebuffer), FY > -1 && (YY.is2DArray || YY.is3D) ? uY.framebufferTextureLayer(uY.FRAMEBUFFER, uY.COLOR_ATTACHMENT0, YY._hardwareTexture?.underlyingResource, AY, FY) : FY > -1 ? uY.framebufferTexture2D(uY.FRAMEBUFFER, uY.COLOR_ATTACHMENT0, uY.TEXTURE_CUBE_MAP_POSITIVE_X + FY, YY._hardwareTexture?.underlyingResource, AY) : uY.framebufferTexture2D(uY.FRAMEBUFFER, uY.COLOR_ATTACHMENT0, uY.TEXTURE_2D, YY._hardwareTexture?.underlyingResource, AY);
-      let sY = void 0 !== YY.type ? this._getWebGLTextureType(YY.type) : uY.UNSIGNED_BYTE;
-      return OY ? IY || (IY = (0, vY.q)(YY.type, 4 * rY * DY)) : sY === uY.UNSIGNED_BYTE ? (IY || (IY = new Uint8Array(4 * rY * DY)), sY = uY.UNSIGNED_BYTE) : (IY || (IY = new Float32Array(4 * rY * DY)), sY = uY.FLOAT), RY && this.flushFramebuffer(), uY.readPixels(gY, aY, rY, DY, uY.RGBA, sY, IY), uY.bindFramebuffer(uY.FRAMEBUFFER, this._currentFramebuffer), IY
-    }, AY.ThinEngine.prototype._readTexturePixels = function(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
-        AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-        IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        RY = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-        OY = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        gY = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-        aY = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
-      return Promise.resolve(this._readTexturePixelsSync(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY))
-    }), (0, DY(39102).d)();
-    let sY = !1;
-    sY || (sY = !0, AY.ThinEngine.prototype._createDepthStencilCubeTexture = function(YY, rY) {
-      const DY = new RY.c(this, 12);
-      if (DY.isCube = !0, 1 === this.VQ) return OY.d.Error("Depth cube texture is not supported by WebGL 1."), DY;
-      const FY = {
+      DT.bindFramebuffer(DT.FRAMEBUFFER, this._dummyFramebuffer), iT > -1 && (TT.is2DArray || TT.is3D) ? DT.framebufferTextureLayer(DT.FRAMEBUFFER, DT.COLOR_ATTACHMENT0, TT._hardwareTexture?.underlyingResource, zT, iT) : iT > -1 ? DT.framebufferTexture2D(DT.FRAMEBUFFER, DT.COLOR_ATTACHMENT0, DT.TEXTURE_CUBE_MAP_POSITIVE_X + iT, TT._hardwareTexture?.underlyingResource, zT) : DT.framebufferTexture2D(DT.FRAMEBUFFER, DT.COLOR_ATTACHMENT0, DT.TEXTURE_2D, TT._hardwareTexture?.underlyingResource, zT);
+      let LT = void 0 !== TT.type ? this._getWebGLTextureType(TT.type) : DT.UNSIGNED_BYTE;
+      return XT ? kT || (kT = (0, ST.o)(TT.type, 4 * oT * IT)) : LT === DT.UNSIGNED_BYTE ? (kT || (kT = new Uint8Array(4 * oT * IT)), LT = DT.UNSIGNED_BYTE) : (kT || (kT = new Float32Array(4 * oT * IT)), LT = DT.FLOAT), WT && this.flushFramebuffer(), DT.readPixels(BT, FT, oT, IT, DT.RGBA, LT, kT), DT.bindFramebuffer(DT.FRAMEBUFFER, this._currentFramebuffer), kT
+    }, zT.ThinEngine.prototype._readTexturePixels = function(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
+        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        WT = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+        XT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        BT = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+        FT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+      return Promise.resolve(this._readTexturePixelsSync(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT))
+    }), (0, IT(38740).b)();
+    let LT = !1;
+    LT || (LT = !0, zT.ThinEngine.prototype._createDepthStencilCubeTexture = function(TT, oT) {
+      const IT = new WT.e(this, 12);
+      if (IT.isCube = !0, 1 === this.rK) return XT.d.Error("Depth cube texture is not supported by WebGL 1."), IT;
+      const iT = {
           bilinearFiltering: !1,
           comparisonFunction: 0,
           generateStencil: !1,
-          ...rY
+          ...oT
         },
-        AY = this._gl;
-      this._bindTextureDirectly(AY.TEXTURE_CUBE_MAP, DY, !0), this._setupDepthStencilTexture(DY, YY, FY.bilinearFiltering, FY.comparisonFunction);
-      for (let IY = 0; IY < 6; IY++) FY.generateStencil ? AY.texImage2D(AY.TEXTURE_CUBE_MAP_POSITIVE_X + IY, 0, AY.DEPTH24_STENCIL8, YY, YY, 0, AY.DEPTH_STENCIL, AY.UNSIGNED_INT_24_8, null) : AY.texImage2D(AY.TEXTURE_CUBE_MAP_POSITIVE_X + IY, 0, AY.DEPTH_COMPONENT24, YY, YY, 0, AY.DEPTH_COMPONENT, AY.UNSIGNED_INT, null);
-      return this._bindTextureDirectly(AY.TEXTURE_CUBE_MAP, null), this._internalTexturesCache.push(DY), DY
-    }, AY.ThinEngine.prototype._setCubeMapTextureParams = function(YY, rY, DY) {
-      const FY = this._gl;
-      FY.texParameteri(FY.TEXTURE_CUBE_MAP, FY.TEXTURE_MAG_FILTER, FY.LINEAR), FY.texParameteri(FY.TEXTURE_CUBE_MAP, FY.TEXTURE_MIN_FILTER, rY ? FY.LINEAR_MIPMAP_LINEAR : FY.LINEAR), FY.texParameteri(FY.TEXTURE_CUBE_MAP, FY.TEXTURE_WRAP_S, FY.CLAMP_TO_EDGE), FY.texParameteri(FY.TEXTURE_CUBE_MAP, FY.TEXTURE_WRAP_T, FY.CLAMP_TO_EDGE), YY.samplingMode = rY ? 3 : 2, rY && this.getCaps().textureMaxLevel && void 0 !== DY && DY > 0 && (FY.texParameteri(FY.TEXTURE_CUBE_MAP, FY.TEXTURE_MAX_LEVEL, DY), YY._maxLodLevel = DY), this._bindTextureDirectly(FY.TEXTURE_CUBE_MAP, null)
-    }, AY.ThinEngine.prototype.createCubeTexture = function(YY, rY, DY, FY) {
-      let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        RY = arguments.length > 6 ? arguments[6] : void 0,
-        aY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        vY = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        uY = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-        sY = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-        iY = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-        yY = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
-        QY = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : null;
-      const oY = this._gl;
-      return this.createCubeTextureBase(YY, rY, DY, !!FY, AY, IY, RY, aY, vY, uY, sY, iY, (YY => this._bindTextureDirectly(oY.TEXTURE_CUBE_MAP, YY, !0)), ((YY, rY) => {
-        const DY = this.needPOTTextures ? (0, gY.f)(rY[0].width, this._caps.maxCubemapTextureSize) : rY[0].width,
-          IY = DY,
-          aY = [oY.TEXTURE_CUBE_MAP_POSITIVE_X, oY.TEXTURE_CUBE_MAP_POSITIVE_Y, oY.TEXTURE_CUBE_MAP_POSITIVE_Z, oY.TEXTURE_CUBE_MAP_NEGATIVE_X, oY.TEXTURE_CUBE_MAP_NEGATIVE_Y, oY.TEXTURE_CUBE_MAP_NEGATIVE_Z];
-        this._bindTextureDirectly(oY.TEXTURE_CUBE_MAP, YY, !0), this._unpackFlipY(!1);
-        const vY = RY ? this._getInternalFormat(RY, YY._useSRGBBuffer) : YY._useSRGBBuffer ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : oY.RGBA;
-        let uY = RY ? this._getInternalFormat(RY) : oY.RGBA;
-        YY._useSRGBBuffer && 1 === this.VQ && (uY = vY);
-        for (let FY = 0; FY < aY.length; FY++)
-          if (rY[FY].width !== DY || rY[FY].height !== IY) {
-            if (this._prepareWorkingCanvas(), !this._workingCanvas || !this._workingContext) return void OY.d.Warn("Cannot create canvas to resize texture.");
-            this._workingCanvas.width = DY, this._workingCanvas.height = IY, this._workingContext.drawImage(rY[FY], 0, 0, rY[FY].width, rY[FY].height, 0, 0, DY, IY), oY.texImage2D(aY[FY], 0, vY, uY, oY.UNSIGNED_BYTE, this._workingCanvas)
-          } else oY.texImage2D(aY[FY], 0, vY, uY, oY.UNSIGNED_BYTE, rY[FY]);
-        FY || oY.generateMipmap(oY.TEXTURE_CUBE_MAP), this._setCubeMapTextureParams(YY, !FY), YY.width = DY, YY.height = IY, YY.isReady = !0, RY && (YY.format = RY), YY.onLoadedObservable.notifyObservers(YY), YY.onLoadedObservable.clear(), AY && AY()
-      }), !!yY, QY)
-    }, AY.ThinEngine.prototype.generateMipMapsForCubemap = function(YY) {
-      let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (YY.generateMipMaps) {
-        const DY = this._gl;
-        this._bindTextureDirectly(DY.TEXTURE_CUBE_MAP, YY, !0), DY.generateMipmap(DY.TEXTURE_CUBE_MAP), rY && this._bindTextureDirectly(DY.TEXTURE_CUBE_MAP, null)
+        zT = this._gl;
+      this._bindTextureDirectly(zT.TEXTURE_CUBE_MAP, IT, !0), this._setupDepthStencilTexture(IT, TT, iT.bilinearFiltering, iT.comparisonFunction);
+      for (let kT = 0; kT < 6; kT++) iT.generateStencil ? zT.texImage2D(zT.TEXTURE_CUBE_MAP_POSITIVE_X + kT, 0, zT.DEPTH24_STENCIL8, TT, TT, 0, zT.DEPTH_STENCIL, zT.UNSIGNED_INT_24_8, null) : zT.texImage2D(zT.TEXTURE_CUBE_MAP_POSITIVE_X + kT, 0, zT.DEPTH_COMPONENT24, TT, TT, 0, zT.DEPTH_COMPONENT, zT.UNSIGNED_INT, null);
+      return this._bindTextureDirectly(zT.TEXTURE_CUBE_MAP, null), this._internalTexturesCache.push(IT), IT
+    }, zT.ThinEngine.prototype._setCubeMapTextureParams = function(TT, oT, IT) {
+      const iT = this._gl;
+      iT.texParameteri(iT.TEXTURE_CUBE_MAP, iT.TEXTURE_MAG_FILTER, iT.LINEAR), iT.texParameteri(iT.TEXTURE_CUBE_MAP, iT.TEXTURE_MIN_FILTER, oT ? iT.LINEAR_MIPMAP_LINEAR : iT.LINEAR), iT.texParameteri(iT.TEXTURE_CUBE_MAP, iT.TEXTURE_WRAP_S, iT.CLAMP_TO_EDGE), iT.texParameteri(iT.TEXTURE_CUBE_MAP, iT.TEXTURE_WRAP_T, iT.CLAMP_TO_EDGE), TT.samplingMode = oT ? 3 : 2, oT && this.getCaps().textureMaxLevel && void 0 !== IT && IT > 0 && (iT.texParameteri(iT.TEXTURE_CUBE_MAP, iT.TEXTURE_MAX_LEVEL, IT), TT._maxLodLevel = IT), this._bindTextureDirectly(iT.TEXTURE_CUBE_MAP, null)
+    }, zT.ThinEngine.prototype.createCubeTexture = function(TT, oT, IT, iT) {
+      let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        WT = arguments.length > 6 ? arguments[6] : void 0,
+        FT = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        ST = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        DT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+        LT = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+        xT = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+        cT = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
+        KT = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : null;
+      const MT = this._gl;
+      return this.createCubeTextureBase(TT, oT, IT, !!iT, zT, kT, WT, FT, ST, DT, LT, xT, (TT => this._bindTextureDirectly(MT.TEXTURE_CUBE_MAP, TT, !0)), ((TT, oT) => {
+        const IT = this.needPOTTextures ? (0, BT.e)(oT[0].width, this._caps.maxCubemapTextureSize) : oT[0].width,
+          kT = IT,
+          FT = [MT.TEXTURE_CUBE_MAP_POSITIVE_X, MT.TEXTURE_CUBE_MAP_POSITIVE_Y, MT.TEXTURE_CUBE_MAP_POSITIVE_Z, MT.TEXTURE_CUBE_MAP_NEGATIVE_X, MT.TEXTURE_CUBE_MAP_NEGATIVE_Y, MT.TEXTURE_CUBE_MAP_NEGATIVE_Z];
+        this._bindTextureDirectly(MT.TEXTURE_CUBE_MAP, TT, !0), this._unpackFlipY(!1);
+        const ST = WT ? this._getInternalFormat(WT, TT._useSRGBBuffer) : TT._useSRGBBuffer ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : MT.RGBA;
+        let DT = WT ? this._getInternalFormat(WT) : MT.RGBA;
+        TT._useSRGBBuffer && 1 === this.rK && (DT = ST);
+        for (let iT = 0; iT < FT.length; iT++)
+          if (oT[iT].width !== IT || oT[iT].height !== kT) {
+            if (this._prepareWorkingCanvas(), !this._workingCanvas || !this._workingContext) return void XT.d.Warn("Cannot create canvas to resize texture.");
+            this._workingCanvas.width = IT, this._workingCanvas.height = kT, this._workingContext.drawImage(oT[iT], 0, 0, oT[iT].width, oT[iT].height, 0, 0, IT, kT), MT.texImage2D(FT[iT], 0, ST, DT, MT.UNSIGNED_BYTE, this._workingCanvas)
+          } else MT.texImage2D(FT[iT], 0, ST, DT, MT.UNSIGNED_BYTE, oT[iT]);
+        iT || MT.generateMipmap(MT.TEXTURE_CUBE_MAP), this._setCubeMapTextureParams(TT, !iT), TT.width = IT, TT.height = kT, TT.isReady = !0, WT && (TT.format = WT), TT.onLoadedObservable.notifyObservers(TT), TT.onLoadedObservable.clear(), zT && zT()
+      }), !!cT, KT)
+    }, zT.ThinEngine.prototype.generateMipMapsForCubemap = function(TT) {
+      let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (TT.generateMipMaps) {
+        const IT = this._gl;
+        this._bindTextureDirectly(IT.TEXTURE_CUBE_MAP, TT, !0), IT.generateMipmap(IT.TEXTURE_CUBE_MAP), oT && this._bindTextureDirectly(IT.TEXTURE_CUBE_MAP, null)
       }
     });
-    DY(39109);
-    let iY = !1;
-    iY || (iY = !0, AY.ThinEngine.prototype.setDepthStencilTexture = function(YY, rY, DY, FY) {
-      void 0 !== YY && (rY && (this._boundUniforms[YY] = rY), DY && DY.depthStencilTexture ? this._setTexture(YY, DY, !1, !0, FY) : this._setTexture(YY, null, void 0, void 0, FY))
+    IT(38744);
+    let xT = !1;
+    xT || (xT = !0, zT.ThinEngine.prototype.setDepthStencilTexture = function(TT, oT, IT, iT) {
+      void 0 !== TT && (oT && (this._boundUniforms[TT] = oT), IT && IT.depthStencilTexture ? this._setTexture(TT, IT, !1, !0, iT) : this._setTexture(TT, null, void 0, void 0, iT))
     });
-    let yY = !1;
-    yY || (yY = !0, AY.ThinEngine.prototype.createRenderTargetCubeTexture = function(YY, rY) {
-      const DY = this._createHardwareRenderTargetWrapper(!1, !0, YY),
-        FY = {
+    let cT = !1;
+    cT || (cT = !0, zT.ThinEngine.prototype.createRenderTargetCubeTexture = function(TT, oT) {
+      const IT = this._createHardwareRenderTargetWrapper(!1, !0, TT),
+        iT = {
           generateMipMaps: !0,
           generateDepthBuffer: !0,
           generateStencilBuffer: !1,
           type: 0,
           samplingMode: 3,
           format: 5,
-          ...rY
+          ...oT
         };
-      FY.generateStencilBuffer = FY.generateDepthBuffer && FY.generateStencilBuffer, (1 !== FY.type || this._caps.textureFloatLinearFiltering) && (2 !== FY.type || this._caps.textureHalfFloatLinearFiltering) || (FY.samplingMode = 1);
-      const AY = this._gl,
-        IY = new RY.c(this, 5);
-      this._bindTextureDirectly(AY.TEXTURE_CUBE_MAP, IY, !0);
-      const gY = this._getSamplingParameters(FY.samplingMode, FY.generateMipMaps);
-      1 !== FY.type || this._caps.textureFloat || (FY.type = 0, OY.d.Warn("Float textures are not supported. Cube render target forced to TEXTURETYPE_UNESIGNED_BYTE type")), AY.texParameteri(AY.TEXTURE_CUBE_MAP, AY.TEXTURE_MAG_FILTER, gY.mag), AY.texParameteri(AY.TEXTURE_CUBE_MAP, AY.TEXTURE_MIN_FILTER, gY.min), AY.texParameteri(AY.TEXTURE_CUBE_MAP, AY.TEXTURE_WRAP_S, AY.CLAMP_TO_EDGE), AY.texParameteri(AY.TEXTURE_CUBE_MAP, AY.TEXTURE_WRAP_T, AY.CLAMP_TO_EDGE);
-      for (let RY = 0; RY < 6; RY++) AY.texImage2D(AY.TEXTURE_CUBE_MAP_POSITIVE_X + RY, 0, this._getRGBABufferInternalSizedFormat(FY.type, FY.format), YY, YY, 0, this._getInternalFormat(FY.format), this._getWebGLTextureType(FY.type), null);
-      const aY = AY.createFramebuffer();
-      return this._bindUnboundFramebuffer(aY), DY._depthStencilBuffer = this._setupFramebufferDepthAttachments(FY.generateStencilBuffer, FY.generateDepthBuffer, YY, YY), FY.generateMipMaps && AY.generateMipmap(AY.TEXTURE_CUBE_MAP), this._bindTextureDirectly(AY.TEXTURE_CUBE_MAP, null), this._bindUnboundFramebuffer(null), DY._framebuffer = aY, DY._generateDepthBuffer = FY.generateDepthBuffer, DY._generateStencilBuffer = FY.generateStencilBuffer, IY.width = YY, IY.height = YY, IY.isReady = !0, IY.isCube = !0, IY.samples = 1, IY.generateMipMaps = FY.generateMipMaps, IY.samplingMode = FY.samplingMode, IY.type = FY.type, IY.format = FY.format, this._internalTexturesCache.push(IY), DY.setTextures(IY), DY
+      iT.generateStencilBuffer = iT.generateDepthBuffer && iT.generateStencilBuffer, (1 !== iT.type || this._caps.textureFloatLinearFiltering) && (2 !== iT.type || this._caps.textureHalfFloatLinearFiltering) || (iT.samplingMode = 1);
+      const zT = this._gl,
+        kT = new WT.e(this, 5);
+      this._bindTextureDirectly(zT.TEXTURE_CUBE_MAP, kT, !0);
+      const BT = this._getSamplingParameters(iT.samplingMode, iT.generateMipMaps);
+      1 !== iT.type || this._caps.textureFloat || (iT.type = 0, XT.d.Warn("Float textures are not supported. Cube render target forced to TEXTURETYPE_UNESIGNED_BYTE type")), zT.texParameteri(zT.TEXTURE_CUBE_MAP, zT.TEXTURE_MAG_FILTER, BT.mag), zT.texParameteri(zT.TEXTURE_CUBE_MAP, zT.TEXTURE_MIN_FILTER, BT.min), zT.texParameteri(zT.TEXTURE_CUBE_MAP, zT.TEXTURE_WRAP_S, zT.CLAMP_TO_EDGE), zT.texParameteri(zT.TEXTURE_CUBE_MAP, zT.TEXTURE_WRAP_T, zT.CLAMP_TO_EDGE);
+      for (let WT = 0; WT < 6; WT++) zT.texImage2D(zT.TEXTURE_CUBE_MAP_POSITIVE_X + WT, 0, this._getRGBABufferInternalSizedFormat(iT.type, iT.format), TT, TT, 0, this._getInternalFormat(iT.format), this._getWebGLTextureType(iT.type), null);
+      const FT = zT.createFramebuffer();
+      return this._bindUnboundFramebuffer(FT), IT._depthStencilBuffer = this._setupFramebufferDepthAttachments(iT.generateStencilBuffer, iT.generateDepthBuffer, TT, TT), iT.generateMipMaps && zT.generateMipmap(zT.TEXTURE_CUBE_MAP), this._bindTextureDirectly(zT.TEXTURE_CUBE_MAP, null), this._bindUnboundFramebuffer(null), IT._framebuffer = FT, IT._generateDepthBuffer = iT.generateDepthBuffer, IT._generateStencilBuffer = iT.generateStencilBuffer, kT.width = TT, kT.height = TT, kT.isReady = !0, kT.isCube = !0, kT.samples = 1, kT.generateMipMaps = iT.generateMipMaps, kT.samplingMode = iT.samplingMode, kT.type = iT.type, kT.format = iT.format, this._internalTexturesCache.push(kT), IT.setTextures(kT), IT
     });
-    var QY = DY(39120),
-      oY = DY(39123);
-    let WY = !1;
-    WY || (WY = !0, AY.ThinEngine.prototype.createPrefilteredCubeTexture = function(YY, rY, FY, AY) {
-      let IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        gY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        aY = arguments.length > 6 ? arguments[6] : void 0,
-        vY = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        uY = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        sY = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null;
-      return this.createCubeTexture(YY, rY, null, !1, (async YY => {
-        if (!YY) return void(IY && IY(null));
-        const gY = YY.texture;
-        if (uY ? YY.info.sphericalPolynomial && (gY._sphericalPolynomial = YY.info.sphericalPolynomial) : gY._sphericalPolynomial = gY._sphericalPolynomial ?? new QY.f, gY._source = 9, this.getCaps().textureLOD) return void(IY && IY(gY));
-        const aY = this._gl,
-          vY = YY.width;
-        if (!vY) return;
+    var KT = IT(38752),
+      MT = IT(38758);
+    let rT = !1;
+    rT || (rT = !0, zT.ThinEngine.prototype.createPrefilteredCubeTexture = function(TT, oT, iT, zT) {
+      let kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        BT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        FT = arguments.length > 6 ? arguments[6] : void 0,
+        ST = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        DT = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        LT = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null;
+      return this.createCubeTexture(TT, oT, null, !1, (async TT => {
+        if (!TT) return void(kT && kT(null));
+        const BT = TT.texture;
+        if (DT ? TT.info.sphericalPolynomial && (BT._sphericalPolynomial = TT.info.sphericalPolynomial) : BT._sphericalPolynomial = BT._sphericalPolynomial ?? new KT.c, BT._source = 9, this.getCaps().textureLOD) return void(kT && kT(BT));
+        const FT = this._gl,
+          ST = TT.width;
+        if (!ST) return;
         const {
-          DDSTools: sY
-        } = await DY.e(296).then((() => DY(40821))), iY = [];
-        for (let DY = 0; DY < 3; DY++) {
-          const IY = 1 - DY / 2,
-            uY = AY,
-            yY = Math.log2(vY) * FY + AY,
-            QY = uY + (yY - uY) * IY,
-            WY = Math.round(Math.min(Math.max(QY, 0), yY)),
-            EY = new RY.c(this, 2);
-          if (EY.type = gY.type, EY.format = gY.format, EY.width = Math.pow(2, Math.max(Math.log2(vY) - WY, 0)), EY.height = EY.width, EY.isCube = !0, EY._cachedWrapU = 0, EY._cachedWrapV = 0, this._bindTextureDirectly(aY.TEXTURE_CUBE_MAP, EY, !0), EY.samplingMode = 2, aY.texParameteri(aY.TEXTURE_CUBE_MAP, aY.TEXTURE_MAG_FILTER, aY.LINEAR), aY.texParameteri(aY.TEXTURE_CUBE_MAP, aY.TEXTURE_MIN_FILTER, aY.LINEAR), aY.texParameteri(aY.TEXTURE_CUBE_MAP, aY.TEXTURE_WRAP_S, aY.CLAMP_TO_EDGE), aY.texParameteri(aY.TEXTURE_CUBE_MAP, aY.TEXTURE_WRAP_T, aY.CLAMP_TO_EDGE), YY.isDDS) {
-            const rY = YY.info,
-              DY = YY.data;
-            this._unpackFlipY(rY.isCompressed), sY.UploadDDSLevels(this, EY, DY, rY, !0, 6, WY)
-          } else OY.d.Warn("DDS is the only prefiltered cube map supported so far.");
-          this._bindTextureDirectly(aY.TEXTURE_CUBE_MAP, null);
-          const mY = new oY.e(rY);
-          mY._isCube = !0, mY._texture = EY, EY.isReady = !0, iY.push(mY)
+          DDSTools: LT
+        } = await IT.e(296).then((() => IT(40592))), xT = [];
+        for (let IT = 0; IT < 3; IT++) {
+          const kT = 1 - IT / 2,
+            DT = zT,
+            cT = Math.log2(ST) * iT + zT,
+            KT = DT + (cT - DT) * kT,
+            rT = Math.round(Math.min(Math.max(KT, 0), cT)),
+            AT = new WT.e(this, 2);
+          if (AT.type = BT.type, AT.format = BT.format, AT.width = Math.pow(2, Math.max(Math.log2(ST) - rT, 0)), AT.height = AT.width, AT.isCube = !0, AT._cachedWrapU = 0, AT._cachedWrapV = 0, this._bindTextureDirectly(FT.TEXTURE_CUBE_MAP, AT, !0), AT.samplingMode = 2, FT.texParameteri(FT.TEXTURE_CUBE_MAP, FT.TEXTURE_MAG_FILTER, FT.LINEAR), FT.texParameteri(FT.TEXTURE_CUBE_MAP, FT.TEXTURE_MIN_FILTER, FT.LINEAR), FT.texParameteri(FT.TEXTURE_CUBE_MAP, FT.TEXTURE_WRAP_S, FT.CLAMP_TO_EDGE), FT.texParameteri(FT.TEXTURE_CUBE_MAP, FT.TEXTURE_WRAP_T, FT.CLAMP_TO_EDGE), TT.isDDS) {
+            const oT = TT.info,
+              IT = TT.data;
+            this._unpackFlipY(oT.isCompressed), LT.UploadDDSLevels(this, AT, IT, oT, !0, 6, rT)
+          } else XT.d.Warn("DDS is the only prefiltered cube map supported so far.");
+          this._bindTextureDirectly(FT.TEXTURE_CUBE_MAP, null);
+          const gT = new MT.e(oT);
+          gT._isCube = !0, gT._texture = AT, AT.isReady = !0, xT.push(gT)
         }
-        gY._lodTextureHigh = iY[2], gY._lodTextureMid = iY[1], gY._lodTextureLow = iY[0], IY && IY(gY)
-      }), gY, aY, vY, uY, FY, AY, null, void 0, !1, sY)
+        BT._lodTextureHigh = xT[2], BT._lodTextureMid = xT[1], BT._lodTextureLow = xT[0], kT && kT(BT)
+      }), BT, FT, ST, DT, iT, zT, null, void 0, !1, LT)
     });
-    var EY = DY(39054);
-    let mY = !1;
-    mY || (mY = !0, AY.ThinEngine.prototype.createUniformBuffer = function(YY, rY) {
-      const DY = this._gl.createBuffer();
-      if (!DY) throw new Error("Unable to create uniform buffer");
-      const FY = new EY.d(DY);
-      return this.bindUniformBuffer(FY), YY instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, YY, this._gl.STATIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(YY), this._gl.STATIC_DRAW), this.bindUniformBuffer(null), FY.references = 1, FY
-    }, AY.ThinEngine.prototype.createDynamicUniformBuffer = function(YY, rY) {
-      const DY = this._gl.createBuffer();
-      if (!DY) throw new Error("Unable to create dynamic uniform buffer");
-      const FY = new EY.d(DY);
-      return this.bindUniformBuffer(FY), YY instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, YY, this._gl.DYNAMIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(YY), this._gl.DYNAMIC_DRAW), this.bindUniformBuffer(null), FY.references = 1, FY
-    }, AY.ThinEngine.prototype.updateUniformBuffer = function(YY, rY, DY, FY) {
-      this.bindUniformBuffer(YY), void 0 === DY && (DY = 0), void 0 === FY ? rY instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, DY, rY) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, DY, new Float32Array(rY)) : rY instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, rY.subarray(DY, DY + FY)) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, new Float32Array(rY).subarray(DY, DY + FY)), this.bindUniformBuffer(null)
-    }, AY.ThinEngine.prototype.bindUniformBuffer = function(YY) {
-      this._gl.bindBuffer(this._gl.UNIFORM_BUFFER, YY ? YY.underlyingResource : null)
-    }, AY.ThinEngine.prototype.bindUniformBufferBase = function(YY, rY, DY) {
-      this._gl.bindBufferBase(this._gl.UNIFORM_BUFFER, rY, YY ? YY.underlyingResource : null)
-    }, AY.ThinEngine.prototype.bindUniformBlock = function(YY, rY, DY) {
-      const FY = YY.program,
-        AY = this._gl.getUniformBlockIndex(FY, rY);
-      4294967295 !== AY && this._gl.uniformBlockBinding(FY, AY, DY)
+    var AT = IT(38687);
+    let gT = !1;
+    gT || (gT = !0, zT.ThinEngine.prototype.createUniformBuffer = function(TT, oT) {
+      const IT = this._gl.createBuffer();
+      if (!IT) throw new Error("Unable to create uniform buffer");
+      const iT = new AT.e(IT);
+      return this.bindUniformBuffer(iT), TT instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, TT, this._gl.STATIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(TT), this._gl.STATIC_DRAW), this.bindUniformBuffer(null), iT.references = 1, iT
+    }, zT.ThinEngine.prototype.createDynamicUniformBuffer = function(TT, oT) {
+      const IT = this._gl.createBuffer();
+      if (!IT) throw new Error("Unable to create dynamic uniform buffer");
+      const iT = new AT.e(IT);
+      return this.bindUniformBuffer(iT), TT instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, TT, this._gl.DYNAMIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(TT), this._gl.DYNAMIC_DRAW), this.bindUniformBuffer(null), iT.references = 1, iT
+    }, zT.ThinEngine.prototype.updateUniformBuffer = function(TT, oT, IT, iT) {
+      this.bindUniformBuffer(TT), void 0 === IT && (IT = 0), void 0 === iT ? oT instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, IT, oT) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, IT, new Float32Array(oT)) : oT instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, oT.subarray(IT, IT + iT)) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, new Float32Array(oT).subarray(IT, IT + iT)), this.bindUniformBuffer(null)
+    }, zT.ThinEngine.prototype.bindUniformBuffer = function(TT) {
+      this._gl.bindBuffer(this._gl.UNIFORM_BUFFER, TT ? TT.underlyingResource : null)
+    }, zT.ThinEngine.prototype.bindUniformBufferBase = function(TT, oT, IT) {
+      this._gl.bindBufferBase(this._gl.UNIFORM_BUFFER, oT, TT ? TT.underlyingResource : null)
+    }, zT.ThinEngine.prototype.bindUniformBlock = function(TT, oT, IT) {
+      const iT = TT.program,
+        zT = this._gl.getUniformBlockIndex(iT, oT);
+      4294967295 !== zT && this._gl.uniformBlockBinding(iT, zT, IT)
     });
-    var VY = DY(39013),
-      SY = DY(39041);
-    let lY = !1;
-    lY || (lY = !0, SY.d.prototype.displayLoadingUI = function() {
-      if (!(0, VY.l)()) return;
-      const YY = this.loadingScreen;
-      YY && YY.displayLoadingUI()
-    }, SY.d.prototype.hideLoadingUI = function() {
-      if (!(0, VY.l)()) return;
-      const YY = this._loadingScreen;
-      YY && YY.hideLoadingUI()
-    }, Object.defineProperty(SY.d.prototype, "loadingScreen", {
+    var hT = IT(38626),
+      wT = IT(38659);
+    let mT = !1;
+    mT || (mT = !0, wT.b.prototype.displayLoadingUI = function() {
+      if (!(0, hT.k)()) return;
+      const TT = this.loadingScreen;
+      TT && TT.displayLoadingUI()
+    }, wT.b.prototype.hideLoadingUI = function() {
+      if (!(0, hT.k)()) return;
+      const TT = this._loadingScreen;
+      TT && TT.hideLoadingUI()
+    }, Object.defineProperty(wT.b.prototype, "loadingScreen", {
       get: function() {
-        return !this._loadingScreen && this._renderingCanvas && (this._loadingScreen = SY.d.DefaultLoadingScreenFactory(this._renderingCanvas)), this._loadingScreen
+        return !this._loadingScreen && this._renderingCanvas && (this._loadingScreen = wT.b.DefaultLoadingScreenFactory(this._renderingCanvas)), this._loadingScreen
       },
-      set: function(YY) {
-        this._loadingScreen = YY
-      },
-      enumerable: !0,
-      configurable: !0
-    }), Object.defineProperty(SY.d.prototype, "loadingUIText", {
-      set: function(YY) {
-        this.loadingScreen.loadingUIText = YY
+      set: function(TT) {
+        this._loadingScreen = TT
       },
       enumerable: !0,
       configurable: !0
-    }), Object.defineProperty(SY.d.prototype, "loadingUIBackgroundColor", {
-      set: function(YY) {
-        this.loadingScreen.loadingUIBackgroundColor = YY
+    }), Object.defineProperty(wT.b.prototype, "loadingUIText", {
+      set: function(TT) {
+        this.loadingScreen.loadingUIText = TT
       },
       enumerable: !0,
       configurable: !0
-    })), (0, DY(39089).b)();
-    let TY = !1;
-    TY || (TY = !0, SY.d.prototype.getInputElement = function() {
+    }), Object.defineProperty(wT.b.prototype, "loadingUIBackgroundColor", {
+      set: function(TT) {
+        this.loadingScreen.loadingUIBackgroundColor = TT
+      },
+      enumerable: !0,
+      configurable: !0
+    })), (0, IT(38721).b)();
+    let eT = !1;
+    eT || (eT = !0, wT.b.prototype.getInputElement = function() {
       return this._renderingCanvas
-    }, SY.d.prototype.getDepthFunction = function() {
+    }, wT.b.prototype.getDepthFunction = function() {
       return this._depthCullingState.depthFunc
-    }, SY.d.prototype.setDepthFunction = function(YY) {
-      this._depthCullingState.depthFunc = YY
-    }, SY.d.prototype.setDepthFunctionToGreater = function() {
+    }, wT.b.prototype.setDepthFunction = function(TT) {
+      this._depthCullingState.depthFunc = TT
+    }, wT.b.prototype.setDepthFunctionToGreater = function() {
       this.setDepthFunction(516)
-    }, SY.d.prototype.setDepthFunctionToGreaterOrEqual = function() {
+    }, wT.b.prototype.setDepthFunctionToGreaterOrEqual = function() {
       this.setDepthFunction(518)
-    }, SY.d.prototype.setDepthFunctionToLess = function() {
+    }, wT.b.prototype.setDepthFunctionToLess = function() {
       this.setDepthFunction(513)
-    }, SY.d.prototype.setDepthFunctionToLessOrEqual = function() {
+    }, wT.b.prototype.setDepthFunctionToLessOrEqual = function() {
       this.setDepthFunction(515)
-    }, SY.d.prototype.getDepthWrite = function() {
+    }, wT.b.prototype.getDepthWrite = function() {
       return this._depthCullingState.depthMask
-    }, SY.d.prototype.setDepthWrite = function(YY) {
-      this._depthCullingState.depthMask = YY
-    }, SY.d.prototype.setAlphaConstants = function(YY, rY, DY, FY) {
-      this._alphaState.setAlphaBlendConstants(YY, rY, DY, FY)
-    }, SY.d.prototype.getAlphaMode = function() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-      return this._alphaMode[YY]
-    }, SY.d.prototype.getAlphaEquation = function() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-      return this._alphaEquation[YY]
+    }, wT.b.prototype.setDepthWrite = function(TT) {
+      this._depthCullingState.depthMask = TT
+    }, wT.b.prototype.setAlphaConstants = function(TT, oT, IT, iT) {
+      this._alphaState.setAlphaBlendConstants(TT, oT, IT, iT)
+    }, wT.b.prototype.getAlphaMode = function() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+      return this._alphaMode[TT]
+    }, wT.b.prototype.getAlphaEquation = function() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+      return this._alphaEquation[TT]
     });
-    let eY = !1;
-    eY || (eY = !0, SY.d.prototype.getStencilBuffer = function() {
+    let RT = !1;
+    RT || (RT = !0, wT.b.prototype.getStencilBuffer = function() {
       return this._stencilState.stencilTest
-    }, SY.d.prototype.setStencilBuffer = function(YY) {
-      this._stencilState.stencilTest = YY
-    }, SY.d.prototype.getStencilMask = function() {
+    }, wT.b.prototype.setStencilBuffer = function(TT) {
+      this._stencilState.stencilTest = TT
+    }, wT.b.prototype.getStencilMask = function() {
       return this._stencilState.stencilMask
-    }, SY.d.prototype.setStencilMask = function(YY) {
-      this._stencilState.stencilMask = YY
-    }, SY.d.prototype.getStencilFunction = function() {
+    }, wT.b.prototype.setStencilMask = function(TT) {
+      this._stencilState.stencilMask = TT
+    }, wT.b.prototype.getStencilFunction = function() {
       return this._stencilState.stencilFunc
-    }, SY.d.prototype.getStencilBackFunction = function() {
+    }, wT.b.prototype.getStencilBackFunction = function() {
       return this._stencilState.stencilBackFunc
-    }, SY.d.prototype.getStencilFunctionReference = function() {
+    }, wT.b.prototype.getStencilFunctionReference = function() {
       return this._stencilState.stencilFuncRef
-    }, SY.d.prototype.getStencilFunctionMask = function() {
+    }, wT.b.prototype.getStencilFunctionMask = function() {
       return this._stencilState.stencilFuncMask
-    }, SY.d.prototype.setStencilFunction = function(YY) {
-      this._stencilState.stencilFunc = YY
-    }, SY.d.prototype.setStencilBackFunction = function(YY) {
-      this._stencilState.stencilBackFunc = YY
-    }, SY.d.prototype.setStencilFunctionReference = function(YY) {
-      this._stencilState.stencilFuncRef = YY
-    }, SY.d.prototype.setStencilFunctionMask = function(YY) {
-      this._stencilState.stencilFuncMask = YY
-    }, SY.d.prototype.getStencilOperationFail = function() {
+    }, wT.b.prototype.setStencilFunction = function(TT) {
+      this._stencilState.stencilFunc = TT
+    }, wT.b.prototype.setStencilBackFunction = function(TT) {
+      this._stencilState.stencilBackFunc = TT
+    }, wT.b.prototype.setStencilFunctionReference = function(TT) {
+      this._stencilState.stencilFuncRef = TT
+    }, wT.b.prototype.setStencilFunctionMask = function(TT) {
+      this._stencilState.stencilFuncMask = TT
+    }, wT.b.prototype.getStencilOperationFail = function() {
       return this._stencilState.stencilOpStencilFail
-    }, SY.d.prototype.getStencilBackOperationFail = function() {
+    }, wT.b.prototype.getStencilBackOperationFail = function() {
       return this._stencilState.stencilBackOpStencilFail
-    }, SY.d.prototype.getStencilOperationDepthFail = function() {
+    }, wT.b.prototype.getStencilOperationDepthFail = function() {
       return this._stencilState.stencilOpDepthFail
-    }, SY.d.prototype.getStencilBackOperationDepthFail = function() {
+    }, wT.b.prototype.getStencilBackOperationDepthFail = function() {
       return this._stencilState.stencilBackOpDepthFail
-    }, SY.d.prototype.getStencilOperationPass = function() {
+    }, wT.b.prototype.getStencilOperationPass = function() {
       return this._stencilState.stencilOpStencilDepthPass
-    }, SY.d.prototype.getStencilBackOperationPass = function() {
+    }, wT.b.prototype.getStencilBackOperationPass = function() {
       return this._stencilState.stencilBackOpStencilDepthPass
-    }, SY.d.prototype.setStencilOperationFail = function(YY) {
-      this._stencilState.stencilOpStencilFail = YY
-    }, SY.d.prototype.setStencilBackOperationFail = function(YY) {
-      this._stencilState.stencilBackOpStencilFail = YY
-    }, SY.d.prototype.setStencilOperationDepthFail = function(YY) {
-      this._stencilState.stencilOpDepthFail = YY
-    }, SY.d.prototype.setStencilBackOperationDepthFail = function(YY) {
-      this._stencilState.stencilBackOpDepthFail = YY
-    }, SY.d.prototype.setStencilOperationPass = function(YY) {
-      this._stencilState.stencilOpStencilDepthPass = YY
-    }, SY.d.prototype.setStencilBackOperationPass = function(YY) {
-      this._stencilState.stencilBackOpStencilDepthPass = YY
-    }, SY.d.prototype.cacheStencilState = function() {
+    }, wT.b.prototype.setStencilOperationFail = function(TT) {
+      this._stencilState.stencilOpStencilFail = TT
+    }, wT.b.prototype.setStencilBackOperationFail = function(TT) {
+      this._stencilState.stencilBackOpStencilFail = TT
+    }, wT.b.prototype.setStencilOperationDepthFail = function(TT) {
+      this._stencilState.stencilOpDepthFail = TT
+    }, wT.b.prototype.setStencilBackOperationDepthFail = function(TT) {
+      this._stencilState.stencilBackOpDepthFail = TT
+    }, wT.b.prototype.setStencilOperationPass = function(TT) {
+      this._stencilState.stencilOpStencilDepthPass = TT
+    }, wT.b.prototype.setStencilBackOperationPass = function(TT) {
+      this._stencilState.stencilBackOpStencilDepthPass = TT
+    }, wT.b.prototype.cacheStencilState = function() {
       this._cachedStencilBuffer = this.getStencilBuffer(), this._cachedStencilFunction = this.getStencilFunction(), this._cachedStencilMask = this.getStencilMask(), this._cachedStencilOperationPass = this.getStencilOperationPass(), this._cachedStencilOperationFail = this.getStencilOperationFail(), this._cachedStencilOperationDepthFail = this.getStencilOperationDepthFail(), this._cachedStencilReference = this.getStencilFunctionReference()
-    }, SY.d.prototype.restoreStencilState = function() {
+    }, wT.b.prototype.restoreStencilState = function() {
       this.setStencilFunction(this._cachedStencilFunction), this.setStencilMask(this._cachedStencilMask), this.setStencilBuffer(this._cachedStencilBuffer), this.setStencilOperationPass(this._cachedStencilOperationPass), this.setStencilOperationFail(this._cachedStencilOperationFail), this.setStencilOperationDepthFail(this._cachedStencilOperationDepthFail), this.setStencilFunctionReference(this._cachedStencilReference)
     });
-    DY(39151);
-    let NY = !1;
-    NY || (NY = !0, SY.d.prototype.createDepthStencilTexture = function(YY, rY, DY) {
-      if (rY.isCube) {
-        const DY = YY.width || YY;
-        return this._createDepthStencilCubeTexture(DY, rY)
+    IT(38817);
+    let uT = !1;
+    uT || (uT = !0, wT.b.prototype.createDepthStencilTexture = function(TT, oT, IT) {
+      if (oT.isCube) {
+        const IT = TT.width || TT;
+        return this._createDepthStencilCubeTexture(IT, oT)
       }
-      return this._createDepthStencilTexture(YY, rY, DY)
+      return this._createDepthStencilTexture(TT, oT, IT)
     });
-    DY(39154), DY(39192);
-    let BY = !1;
-    BY || (BY = !0, AY.ThinEngine.prototype.enableScissor = function(YY, rY, DY, FY) {
-      const AY = this._gl;
-      AY.enable(AY.SCISSOR_TEST), AY.scissor(YY, rY, DY, FY)
-    }, AY.ThinEngine.prototype.disableScissor = function() {
-      const YY = this._gl;
-      YY.disable(YY.SCISSOR_TEST)
+    IT(38820), IT(38858);
+    let vT = !1;
+    vT || (vT = !0, zT.ThinEngine.prototype.enableScissor = function(TT, oT, IT, iT) {
+      const zT = this._gl;
+      zT.enable(zT.SCISSOR_TEST), zT.scissor(TT, oT, IT, iT)
+    }, zT.ThinEngine.prototype.disableScissor = function() {
+      const TT = this._gl;
+      TT.disable(TT.SCISSOR_TEST)
     })
   },
-  38969: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => SY
+  38592: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => wT
     });
-    var FY = DY(38975),
-      AY = DY(36546),
-      IY = DY(38982),
-      RY = DY(39044);
-    class OY {
+    var iT = IT(38594),
+      zT = IT(36146),
+      kT = IT(38607),
+      WT = IT(38667);
+    class XT {
       constructor() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
-        this._enabled = !0, this._rollingFrameTime = new gY(YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
+        this._enabled = !0, this._rollingFrameTime = new BT(TT)
       }
       sampleFrame() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : RY.c.Now;
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : WT.c.Now;
         if (this._enabled) {
           if (null != this._lastFrameTimeMs) {
-            const rY = YY - this._lastFrameTimeMs;
-            this._rollingFrameTime.add(rY)
+            const oT = TT - this._lastFrameTimeMs;
+            this._rollingFrameTime.add(oT)
           }
-          this._lastFrameTimeMs = YY
+          this._lastFrameTimeMs = TT
         }
       }
       get averageFrameTime() {
@@ -1863,8 +1863,8 @@ export const modules = {
         return 1e3 / this._rollingFrameTime.average
       }
       get instantaneousFPS() {
-        const YY = this._rollingFrameTime.history(0);
-        return 0 === YY ? 0 : 1e3 / YY
+        const TT = this._rollingFrameTime.history(0);
+        return 0 === TT ? 0 : 1e3 / TT
       }
       get isSaturated() {
         return this._rollingFrameTime.isSaturated()
@@ -1882,22 +1882,22 @@ export const modules = {
         this._lastFrameTimeMs = null, this._rollingFrameTime.reset()
       }
     }
-    class gY {
-      constructor(YY) {
-        this._samples = new Array(YY), this.reset()
+    class BT {
+      constructor(TT) {
+        this._samples = new Array(TT), this.reset()
       }
-      add(YY) {
-        let rY;
+      add(TT) {
+        let oT;
         if (this.isSaturated()) {
-          const YY = this._samples[this._pos];
-          rY = YY - this.average, this.average -= rY / (this._sampleCount - 1), this._m2 -= rY * (YY - this.average)
+          const TT = this._samples[this._pos];
+          oT = TT - this.average, this.average -= oT / (this._sampleCount - 1), this._m2 -= oT * (TT - this.average)
         } else this._sampleCount++;
-        rY = YY - this.average, this.average += rY / this._sampleCount, this._m2 += rY * (YY - this.average), this.variance = this._m2 / (this._sampleCount - 1), this._samples[this._pos] = YY, this._pos++, this._pos %= this._samples.length
+        oT = TT - this.average, this.average += oT / this._sampleCount, this._m2 += oT * (TT - this.average), this.variance = this._m2 / (this._sampleCount - 1), this._samples[this._pos] = TT, this._pos++, this._pos %= this._samples.length
       }
-      history(YY) {
-        if (YY >= this._sampleCount || YY >= this._samples.length) return 0;
-        const rY = this._wrapPosition(this._pos - 1);
-        return this._samples[this._wrapPosition(rY - YY)]
+      history(TT) {
+        if (TT >= this._sampleCount || TT >= this._samples.length) return 0;
+        const oT = this._wrapPosition(this._pos - 1);
+        return this._samples[this._wrapPosition(oT - TT)]
       }
       isSaturated() {
         return this._sampleCount >= this._samples.length
@@ -1905,115 +1905,115 @@ export const modules = {
       reset() {
         this.average = 0, this.variance = 0, this._sampleCount = 0, this._pos = 0, this._m2 = 0
       }
-      _wrapPosition(YY) {
-        const rY = this._samples.length;
-        return (YY % rY + rY) % rY
+      _wrapPosition(TT) {
+        const oT = this._samples.length;
+        return (TT % oT + oT) % oT
       }
     }
-    var aY = DY(39054),
-      vY = DY(38040),
-      uY = DY(39074),
-      sY = DY(39041),
-      iY = DY(39013);
+    var FT = IT(38687),
+      ST = IT(37660),
+      DT = IT(38700),
+      LT = IT(38659),
+      xT = IT(38626);
 
-    function yY(YY) {
-      const rY = function(YY) {
-        if (!(0, iY.e)() || !document.body) return null;
-        const rY = document.createElement("span");
-        rY.textContent = "Hg", rY.style.font = YY;
-        const DY = document.createElement("div");
-        DY.style.display = "inline-block", DY.style.width = "1px", DY.style.height = "0px", DY.style.verticalAlign = "bottom";
-        const FY = document.createElement("div");
-        let AY, IY;
-        FY.style.whiteSpace = "nowrap", FY.appendChild(rY), FY.appendChild(DY), document.body.appendChild(FY);
+    function cT(TT) {
+      const oT = function(TT) {
+        if (!(0, xT.e)() || !document.body) return null;
+        const oT = document.createElement("span");
+        oT.textContent = "Hg", oT.style.font = TT;
+        const IT = document.createElement("div");
+        IT.style.display = "inline-block", IT.style.width = "1px", IT.style.height = "0px", IT.style.verticalAlign = "bottom";
+        const iT = document.createElement("div");
+        let zT, kT;
+        iT.style.whiteSpace = "nowrap", iT.appendChild(oT), iT.appendChild(IT), document.body.appendChild(iT);
         try {
-          IY = DY.getBoundingClientRect().top - rY.getBoundingClientRect().top, DY.style.verticalAlign = "baseline", AY = DY.getBoundingClientRect().top - rY.getBoundingClientRect().top
+          kT = IT.getBoundingClientRect().top - oT.getBoundingClientRect().top, IT.style.verticalAlign = "baseline", zT = IT.getBoundingClientRect().top - oT.getBoundingClientRect().top
         } finally {
-          document.body.removeChild(FY)
+          document.body.removeChild(iT)
         }
-        const RY = {
-          ascent: AY,
-          height: IY,
-          descent: IY - AY
+        const WT = {
+          ascent: zT,
+          height: kT,
+          descent: kT - zT
         };
-        return QY(RY) ? RY : null
-      }(YY);
-      if (rY) return rY;
-      const DY = function(YY) {
-        let rY = null;
+        return KT(WT) ? WT : null
+      }(TT);
+      if (oT) return oT;
+      const IT = function(TT) {
+        let oT = null;
         try {
-          "undefined" !== typeof OffscreenCanvas ? rY = new OffscreenCanvas(64, 64) : (0, iY.e)() && "function" === typeof document.createElement && (rY = document.createElement("canvas"), rY.width = 64, rY.height = 64);
-          const DY = rY?.getContext("2d");
-          if (!DY) return null;
-          DY.font = YY;
-          const FY = DY.measureText("Hg"),
-            AY = Number(FY.actualBoundingBoxAscent ?? FY.fontBoundingBoxAscent),
-            IY = Number(FY.actualBoundingBoxDescent ?? FY.fontBoundingBoxDescent),
-            RY = {
-              ascent: AY,
-              height: AY + IY,
-              descent: IY
+          "undefined" !== typeof OffscreenCanvas ? oT = new OffscreenCanvas(64, 64) : (0, xT.e)() && "function" === typeof document.createElement && (oT = document.createElement("canvas"), oT.width = 64, oT.height = 64);
+          const IT = oT?.getContext("2d");
+          if (!IT) return null;
+          IT.font = TT;
+          const iT = IT.measureText("Hg"),
+            zT = Number(iT.actualBoundingBoxAscent ?? iT.fontBoundingBoxAscent),
+            kT = Number(iT.actualBoundingBoxDescent ?? iT.fontBoundingBoxDescent),
+            WT = {
+              ascent: zT,
+              height: zT + kT,
+              descent: kT
             };
-          return QY(RY) ? RY : null
+          return KT(WT) ? WT : null
         } catch {
           return null
         } finally {
-          const YY = rY;
-          "function" === typeof YY?.dispose && YY.dispose()
+          const TT = oT;
+          "function" === typeof TT?.dispose && TT.dispose()
         }
-      }(YY);
-      return DY || function(YY) {
-        const rY = Math.max(1, function(YY) {
-            const rY = /(?:^|\s)([0-9]+(?:\.[0-9]+)?)px(?:\/|\s|$)/.exec(String(YY || ""));
-            return rY ? Number(rY[1]) : 16
-          }(YY)),
-          DY = .8 * rY,
-          FY = .2 * rY;
+      }(TT);
+      return IT || function(TT) {
+        const oT = Math.max(1, function(TT) {
+            const oT = /(?:^|\s)([0-9]+(?:\.[0-9]+)?)px(?:\/|\s|$)/.exec(String(TT || ""));
+            return oT ? Number(oT[1]) : 16
+          }(TT)),
+          IT = .8 * oT,
+          iT = .2 * oT;
         return {
-          ascent: DY,
-          height: DY + FY,
-          descent: FY
+          ascent: IT,
+          height: IT + iT,
+          descent: iT
         }
-      }(YY)
+      }(TT)
     }
 
-    function QY(YY) {
-      return Number.isFinite(YY.ascent) && Number.isFinite(YY.height) && Number.isFinite(YY.descent) && YY.height > 0
+    function KT(TT) {
+      return Number.isFinite(TT.ascent) && Number.isFinite(TT.height) && Number.isFinite(TT.descent) && TT.height > 0
     }
 
-    function oY(YY) {
-      if (YY.requestPointerLock) {
-        const rY = YY.requestPointerLock();
-        rY instanceof Promise ? rY.then((() => {
-          YY.focus()
-        })).catch((() => {})) : YY.focus()
+    function MT(TT) {
+      if (TT.requestPointerLock) {
+        const oT = TT.requestPointerLock();
+        oT instanceof Promise ? oT.then((() => {
+          TT.focus()
+        })).catch((() => {})) : TT.focus()
       }
     }
-    var WY = DY(39087),
-      EY = DY(39037),
-      mY = DY(39089),
-      VY = DY(39092);
-    class SY extends IY.ThinEngine {
+    var rT = IT(38716),
+      AT = IT(38653),
+      gT = IT(38721),
+      hT = IT(38728);
+    class wT extends kT.ThinEngine {
       static get NpmPackage() {
-        return sY.d.NpmPackage
+        return LT.b.NpmPackage
       }
       static get Version() {
-        return sY.d.Version
+        return LT.b.Version
       }
       static get Instances() {
-        return AY.d.Instances
+        return zT.d.Instances
       }
       static get LastCreatedEngine() {
-        return AY.d.LastCreatedEngine
+        return zT.d.LastCreatedEngine
       }
       static get LastCreatedScene() {
-        return AY.d.LastCreatedScene
+        return zT.d.LastCreatedScene
       }
-      static DefaultLoadingScreenFactory(YY) {
-        return sY.d.DefaultLoadingScreenFactory(YY)
+      static DefaultLoadingScreenFactory(TT) {
+        return LT.b.DefaultLoadingScreenFactory(TT)
       }
       get _supportsHardwareTextureRescaling() {
-        return !!SY._RescalePostProcessFactory
+        return !!wT._RescalePostProcessFactory
       }
       _measureFps() {
         this._performanceMonitor.sampleFrame(), this._fps = this._performanceMonitor.averageFPS, this._deltaTime = this._performanceMonitor.instantaneousFrameTime || 0
@@ -2021,154 +2021,154 @@ export const modules = {
       get performanceMonitor() {
         return this._performanceMonitor
       }
-      constructor(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        (0, mY.b)(), (0, VY.c)(), super(YY, rY, DY, FY), this._performanceMonitor = new OY, this._drawCalls = new WY.e, YY && (this._features.supportRenderPasses = !0)
+      constructor(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        (0, gT.b)(), (0, hT.c)(), super(TT, oT, IT, iT), this._performanceMonitor = new XT, this._drawCalls = new rT.c, TT && (this._features.supportRenderPasses = !0)
       }
       _initGLContext() {
         super._initGLContext(), this._rescalePostProcess = null
       }
-      _sharedInit(YY) {
-        super._sharedInit(YY),
-          function(YY, rY, DY) {
-            YY._onCanvasFocus = () => {
-              YY.onCanvasFocusObservable.notifyObservers(YY)
-            }, YY._onCanvasBlur = () => {
-              YY.onCanvasBlurObservable.notifyObservers(YY)
-            }, YY._onCanvasContextMenu = rY => {
-              YY.disableContextMenu && rY.preventDefault()
-            }, rY.addEventListener("focus", YY._onCanvasFocus), rY.addEventListener("blur", YY._onCanvasBlur), rY.addEventListener("contextmenu", YY._onCanvasContextMenu), YY._onBlur = () => {
-              YY.disablePerformanceMonitorInBackground && YY.performanceMonitor.disable(), YY._windowIsBackground = !0
-            }, YY._onFocus = () => {
-              YY.disablePerformanceMonitorInBackground && YY.performanceMonitor.enable(), YY._windowIsBackground = !1
-            }, YY._onCanvasPointerOut = DY => {
-              document.elementFromPoint(DY.clientX, DY.clientY) !== rY && YY.onCanvasPointerOutObservable.notifyObservers(DY)
+      _sharedInit(TT) {
+        super._sharedInit(TT),
+          function(TT, oT, IT) {
+            TT._onCanvasFocus = () => {
+              TT.onCanvasFocusObservable.notifyObservers(TT)
+            }, TT._onCanvasBlur = () => {
+              TT.onCanvasBlurObservable.notifyObservers(TT)
+            }, TT._onCanvasContextMenu = oT => {
+              TT.disableContextMenu && oT.preventDefault()
+            }, oT.addEventListener("focus", TT._onCanvasFocus), oT.addEventListener("blur", TT._onCanvasBlur), oT.addEventListener("contextmenu", TT._onCanvasContextMenu), TT._onBlur = () => {
+              TT.disablePerformanceMonitorInBackground && TT.performanceMonitor.disable(), TT._windowIsBackground = !0
+            }, TT._onFocus = () => {
+              TT.disablePerformanceMonitorInBackground && TT.performanceMonitor.enable(), TT._windowIsBackground = !1
+            }, TT._onCanvasPointerOut = IT => {
+              document.elementFromPoint(IT.clientX, IT.clientY) !== oT && TT.onCanvasPointerOutObservable.notifyObservers(IT)
             };
-            const FY = YY.getHostWindow();
-            FY && "function" === typeof FY.addEventListener && (FY.addEventListener("blur", YY._onBlur), FY.addEventListener("focus", YY._onFocus)), rY.addEventListener("pointerout", YY._onCanvasPointerOut), DY.doNotHandleTouchAction || function(YY) {
-              YY && YY.setAttribute && (YY.setAttribute("touch-action", "none"), YY.style.touchAction = "none", YY.style.webkitTapHighlightColor = "transparent")
-            }(rY), !sY.d.audioEngine && DY.audioEngine && sY.d.AudioEngineFactory && (sY.d.audioEngine = sY.d.AudioEngineFactory(YY.getRenderingCanvas(), YY.getAudioContext(), YY.getAudioDestination())), (0, iY.e)() && (YY._onFullscreenChange = () => {
-              YY.isFullscreen = !!document.fullscreenElement, YY.isFullscreen && YY._pointerLockRequested && rY && oY(rY)
-            }, document.addEventListener("fullscreenchange", YY._onFullscreenChange, !1), document.addEventListener("webkitfullscreenchange", YY._onFullscreenChange, !1), YY._onPointerLockChange = () => {
-              YY.isPointerLock = document.pointerLockElement === rY
-            }, document.addEventListener("pointerlockchange", YY._onPointerLockChange, !1), document.addEventListener("webkitpointerlockchange", YY._onPointerLockChange, !1)), YY.enableOfflineSupport = void 0 !== sY.d.OfflineProviderFactory, YY._deterministicLockstep = !!DY.deterministicLockstep, YY._lockstepMaxSteps = DY.lockstepMaxSteps || 0, YY._timeStep = DY.timeStep || 1 / 60
-          }(this, YY, this._creationOptions)
+            const iT = TT.getHostWindow();
+            iT && "function" === typeof iT.addEventListener && (iT.addEventListener("blur", TT._onBlur), iT.addEventListener("focus", TT._onFocus)), oT.addEventListener("pointerout", TT._onCanvasPointerOut), IT.doNotHandleTouchAction || function(TT) {
+              TT && TT.setAttribute && (TT.setAttribute("touch-action", "none"), TT.style.touchAction = "none", TT.style.webkitTapHighlightColor = "transparent")
+            }(oT), !LT.b.audioEngine && IT.audioEngine && LT.b.AudioEngineFactory && (LT.b.audioEngine = LT.b.AudioEngineFactory(TT.getRenderingCanvas(), TT.getAudioContext(), TT.getAudioDestination())), (0, xT.e)() && (TT._onFullscreenChange = () => {
+              TT.isFullscreen = !!document.fullscreenElement, TT.isFullscreen && TT._pointerLockRequested && oT && MT(oT)
+            }, document.addEventListener("fullscreenchange", TT._onFullscreenChange, !1), document.addEventListener("webkitfullscreenchange", TT._onFullscreenChange, !1), TT._onPointerLockChange = () => {
+              TT.isPointerLock = document.pointerLockElement === oT
+            }, document.addEventListener("pointerlockchange", TT._onPointerLockChange, !1), document.addEventListener("webkitpointerlockchange", TT._onPointerLockChange, !1)), TT.enableOfflineSupport = void 0 !== LT.b.OfflineProviderFactory, TT._deterministicLockstep = !!IT.deterministicLockstep, TT._lockstepMaxSteps = IT.lockstepMaxSteps || 0, TT._timeStep = IT.timeStep || 1 / 60
+          }(this, TT, this._creationOptions)
       }
-      resizeImageBitmap(YY, rY, DY) {
-        return function(YY, rY, DY, FY) {
-          const AY = YY.createCanvas(DY, FY).getContext("2d");
-          if (!AY) throw new Error("Unable to get 2d context for resizeImageBitmap");
-          return AY.drawImage(rY, 0, 0), AY.getImageData(0, 0, DY, FY).data
-        }(this, YY, rY, DY)
+      resizeImageBitmap(TT, oT, IT) {
+        return function(TT, oT, IT, iT) {
+          const zT = TT.createCanvas(IT, iT).getContext("2d");
+          if (!zT) throw new Error("Unable to get 2d context for resizeImageBitmap");
+          return zT.drawImage(oT, 0, 0), zT.getImageData(0, 0, IT, iT).data
+        }(this, TT, oT, IT)
       }
-      async _createImageBitmapFromSource(YY, rY) {
-        return await async function(YY, rY, DY) {
-          return await new Promise(((FY, AY) => {
-            const IY = new Image;
-            IY.onload = () => {
-              IY.decode().then((() => {
-                YY.createImageBitmap(IY, DY).then((YY => {
-                  FY(YY)
+      async _createImageBitmapFromSource(TT, oT) {
+        return await async function(TT, oT, IT) {
+          return await new Promise(((iT, zT) => {
+            const kT = new Image;
+            kT.onload = () => {
+              kT.decode().then((() => {
+                TT.createImageBitmap(kT, IT).then((TT => {
+                  iT(TT)
                 }))
               }))
-            }, IY.onerror = () => {
-              AY(`Error loading image ${IY.src}`)
-            }, IY.src = rY
+            }, kT.onerror = () => {
+              zT(`Error loading image ${kT.src}`)
+            }, kT.src = oT
           }))
-        }(this, YY, rY)
+        }(this, TT, oT)
       }
-      switchFullscreen(YY) {
-        this.isFullscreen ? this.exitFullscreen() : this.enterFullscreen(YY)
+      switchFullscreen(TT) {
+        this.isFullscreen ? this.exitFullscreen() : this.enterFullscreen(TT)
       }
-      enterFullscreen(YY) {
-        this.isFullscreen || (this._pointerLockRequested = YY, this._renderingCanvas && function(YY) {
-          const rY = YY.requestFullscreen || YY.webkitRequestFullscreen;
-          rY && rY.call(YY)
+      enterFullscreen(TT) {
+        this.isFullscreen || (this._pointerLockRequested = TT, this._renderingCanvas && function(TT) {
+          const oT = TT.requestFullscreen || TT.webkitRequestFullscreen;
+          oT && oT.call(TT)
         }(this._renderingCanvas))
       }
       exitFullscreen() {
         this.isFullscreen && function() {
-          const YY = document;
-          document.exitFullscreen ? document.exitFullscreen() : YY.webkitCancelFullScreen && YY.webkitCancelFullScreen()
+          const TT = document;
+          document.exitFullscreen ? document.exitFullscreen() : TT.webkitCancelFullScreen && TT.webkitCancelFullScreen()
         }()
       }
-      setDitheringState(YY) {
-        YY ? this._gl.enable(this._gl.DITHER) : this._gl.disable(this._gl.DITHER)
+      setDitheringState(TT) {
+        TT ? this._gl.enable(this._gl.DITHER) : this._gl.disable(this._gl.DITHER)
       }
-      setRasterizerState(YY) {
-        YY ? this._gl.disable(this._gl.RASTERIZER_DISCARD) : this._gl.enable(this._gl.RASTERIZER_DISCARD)
+      setRasterizerState(TT) {
+        TT ? this._gl.disable(this._gl.RASTERIZER_DISCARD) : this._gl.enable(this._gl.RASTERIZER_DISCARD)
       }
-      setDirectViewport(YY, rY, DY, FY) {
-        const AY = this._cachedViewport;
-        return this._cachedViewport = null, this._viewport(YY, rY, DY, FY), AY
+      setDirectViewport(TT, oT, IT, iT) {
+        const zT = this._cachedViewport;
+        return this._cachedViewport = null, this._viewport(TT, oT, IT, iT), zT
       }
-      scissorClear(YY, rY, DY, FY, AY) {
-        this.enableScissor(YY, rY, DY, FY), this.clear(AY, !0, !0, !0), this.disableScissor()
+      scissorClear(TT, oT, IT, iT, zT) {
+        this.enableScissor(TT, oT, IT, iT), this.clear(zT, !0, !0, !0), this.disableScissor()
       }
-      getVertexShaderSource(YY) {
-        const rY = this._gl.getAttachedShaders(YY);
-        return rY ? this._gl.getShaderSource(rY[0]) : null
+      getVertexShaderSource(TT) {
+        const oT = this._gl.getAttachedShaders(TT);
+        return oT ? this._gl.getShaderSource(oT[0]) : null
       }
-      getFragmentShaderSource(YY) {
-        const rY = this._gl.getAttachedShaders(YY);
-        return rY ? this._gl.getShaderSource(rY[1]) : null
+      getFragmentShaderSource(TT) {
+        const oT = this._gl.getAttachedShaders(TT);
+        return oT ? this._gl.getShaderSource(oT[1]) : null
       }
-      set framebufferDimensionsObject(YY) {
-        this._framebufferDimensionsObject = YY, this._framebufferDimensionsObject && this.onResizeObservable.notifyObservers(this)
+      set framebufferDimensionsObject(TT) {
+        this._framebufferDimensionsObject = TT, this._framebufferDimensionsObject && this.onResizeObservable.notifyObservers(this)
       }
       _rebuildBuffers() {
-        for (const YY of this.scenes) YY.resetCachedMaterial(), YY._rebuildGeometries();
-        for (const YY of this._virtualScenes) YY.resetCachedMaterial(), YY._rebuildGeometries();
+        for (const TT of this.scenes) TT.resetCachedMaterial(), TT._rebuildGeometries();
+        for (const TT of this._virtualScenes) TT.resetCachedMaterial(), TT._rebuildGeometries();
         super._rebuildBuffers()
       }
-      getFontOffset(YY) {
-        return yY(YY)
+      getFontOffset(TT) {
+        return cT(TT)
       }
       enterPointerlock() {
-        this._renderingCanvas && oY(this._renderingCanvas)
+        this._renderingCanvas && MT(this._renderingCanvas)
       }
       exitPointerlock() {
         document.exitPointerLock && document.exitPointerLock()
       }
-      Om() {
-        this._measureFps(), super.Om()
+      xR() {
+        this._measureFps(), super.xR()
       }
-      _deletePipelineContext(YY) {
-        const rY = YY;
-        rY && rY.program && rY.transformFeedback && (this.deleteTransformFeedback(rY.transformFeedback), rY.transformFeedback = null), super._deletePipelineContext(YY)
+      _deletePipelineContext(TT) {
+        const oT = TT;
+        oT && oT.program && oT.transformFeedback && (this.deleteTransformFeedback(oT.transformFeedback), oT.transformFeedback = null), super._deletePipelineContext(TT)
       }
-      createShaderProgram(YY, rY, DY, FY, AY) {
-        let IY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
-        AY = AY || this._gl, this.onBeforeShaderCompilationObservable.notifyObservers(this);
-        const RY = super.createShaderProgram(YY, rY, DY, FY, AY, IY);
-        return this.onAfterShaderCompilationObservable.notifyObservers(this), RY
+      createShaderProgram(TT, oT, IT, iT, zT) {
+        let kT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+        zT = zT || this._gl, this.onBeforeShaderCompilationObservable.notifyObservers(this);
+        const WT = super.createShaderProgram(TT, oT, IT, iT, zT, kT);
+        return this.onAfterShaderCompilationObservable.notifyObservers(this), WT
       }
-      _createShaderProgram(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        const IY = FY.createProgram();
-        if (YY.program = IY, !IY) throw new Error("Unable to create program");
-        if (FY.attachShader(IY, rY), FY.attachShader(IY, DY), this.VQ > 1 && AY) {
-          const rY = this.createTransformFeedback();
-          this.bindTransformFeedback(rY), this.setTranformFeedbackVaryings(IY, AY), YY.transformFeedback = rY
+      _createShaderProgram(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        const kT = iT.createProgram();
+        if (TT.program = kT, !kT) throw new Error("Unable to create program");
+        if (iT.attachShader(kT, oT), iT.attachShader(kT, IT), this.rK > 1 && zT) {
+          const oT = this.createTransformFeedback();
+          this.bindTransformFeedback(oT), this.setTranformFeedbackVaryings(kT, zT), TT.transformFeedback = oT
         }
-        return FY.linkProgram(IY), this.VQ > 1 && AY && this.bindTransformFeedback(null), YY.context = FY, YY.vertexShader = rY, YY.fragmentShader = DY, YY.isParallelCompiled || this._finalizePipelineContext(YY), IY
+        return iT.linkProgram(kT), this.rK > 1 && zT && this.bindTransformFeedback(null), TT.context = iT, TT.vertexShader = oT, TT.fragmentShader = IT, TT.isParallelCompiled || this._finalizePipelineContext(TT), kT
       }
-      _releaseTexture(YY) {
-        super._releaseTexture(YY)
+      _releaseTexture(TT) {
+        super._releaseTexture(TT)
       }
-      _releaseRenderTargetWrapper(YY) {
-        super._releaseRenderTargetWrapper(YY);
-        for (const rY of this.scenes) {
-          for (const DY of rY.postProcesses) DY._outputTexture === YY && (DY._outputTexture = null);
-          for (const DY of rY.cameras)
-            for (const rY of DY._postProcesses) rY && rY._outputTexture === YY && (rY._outputTexture = null)
+      _releaseRenderTargetWrapper(TT) {
+        super._releaseRenderTargetWrapper(TT);
+        for (const oT of this.scenes) {
+          for (const IT of oT.postProcesses) IT._outputTexture === TT && (IT._outputTexture = null);
+          for (const IT of oT.cameras)
+            for (const oT of IT._postProcesses) oT && oT._outputTexture === TT && (oT._outputTexture = null)
         }
       }
-      _rescaleTexture(YY, rY, DY, FY, AY) {
+      _rescaleTexture(TT, oT, IT, iT, zT) {
         this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, this._gl.LINEAR), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, this._gl.LINEAR), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_WRAP_S, this._gl.CLAMP_TO_EDGE), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_WRAP_T, this._gl.CLAMP_TO_EDGE);
-        const IY = this.createRenderTargetTexture({
-          width: rY.width,
-          height: rY.height
+        const kT = this.createRenderTargetTexture({
+          width: oT.width,
+          height: oT.height
         }, {
           generateMipMaps: !1,
           type: 0,
@@ -2176,119 +2176,119 @@ export const modules = {
           generateDepthBuffer: !1,
           generateStencilBuffer: !1
         });
-        if (!this._rescalePostProcess && SY._RescalePostProcessFactory && (this._rescalePostProcess = SY._RescalePostProcessFactory(this)), this._rescalePostProcess) {
+        if (!this._rescalePostProcess && wT._RescalePostProcessFactory && (this._rescalePostProcess = wT._RescalePostProcessFactory(this)), this._rescalePostProcess) {
           this._rescalePostProcess.externalTextureSamplerBinding = !0;
-          const RY = () => {
-              this._rescalePostProcess.onApply = function(rY) {
-                rY._bindTexture("textureSampler", YY)
+          const WT = () => {
+              this._rescalePostProcess.onApply = function(oT) {
+                oT._bindTexture("textureSampler", TT)
               };
-              let RY = DY;
-              RY || (RY = this.scenes[this.scenes.length - 1]), RY.postProcessManager.directRender([this._rescalePostProcess], IY, !0), this._bindTextureDirectly(this._gl.TEXTURE_2D, rY, !0), this._gl.copyTexImage2D(this._gl.TEXTURE_2D, 0, FY, 0, 0, rY.width, rY.height, 0), this.unBindFramebuffer(IY), IY.dispose(), AY && AY()
+              let WT = IT;
+              WT || (WT = this.scenes[this.scenes.length - 1]), WT.postProcessManager.directRender([this._rescalePostProcess], kT, !0), this._bindTextureDirectly(this._gl.TEXTURE_2D, oT, !0), this._gl.copyTexImage2D(this._gl.TEXTURE_2D, 0, iT, 0, 0, oT.width, oT.height, 0), this.unBindFramebuffer(kT), kT.dispose(), zT && zT()
             },
-            OY = this._rescalePostProcess.getEffect();
-          OY ? OY.executeWhenCompiled(RY) : this._rescalePostProcess.onEffectCreatedObservable.addOnce((YY => {
-            YY.executeWhenCompiled(RY)
+            XT = this._rescalePostProcess.getEffect();
+          XT ? XT.executeWhenCompiled(WT) : this._rescalePostProcess.onEffectCreatedObservable.addOnce((TT => {
+            TT.executeWhenCompiled(WT)
           }))
         }
       }
-      wrapWebGLTexture(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3,
-          AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-        const RY = new uY.d(YY, this._gl),
-          OY = new FY.c(this, 15, !0);
-        return OY._hardwareTexture = RY, OY.baseWidth = AY, OY.baseHeight = IY, OY.width = AY, OY.height = IY, OY.isReady = !0, OY.useMipMaps = rY, this.updateTextureSamplingMode(DY, OY), OY
+      wrapWebGLTexture(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3,
+          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+        const WT = new DT.c(TT, this._gl),
+          XT = new iT.e(this, 15, !0);
+        return XT._hardwareTexture = WT, XT.baseWidth = zT, XT.baseHeight = kT, XT.width = zT, XT.height = kT, XT.isReady = !0, XT.useMipMaps = oT, this.updateTextureSamplingMode(IT, XT), XT
       }
-      updateWrappedWebGLTexture(YY, rY) {
-        if (15 !== YY.source) throw new Error("updateWrappedWebGLTexture: target InternalTexture was not produced by wrapWebGLTexture.");
-        for (const FY of this._renderTargetWrapperCache)
-          if (FY.textures?.includes(YY)) {
-            if (FY.isMulti) throw new Error("updateWrappedWebGLTexture: wrapped texture is part of a multi render-target; not supported. Dispose and re-wrap.");
-            if (FY._depthStencilTexture) throw new Error("updateWrappedWebGLTexture: wrapped texture's render-target wrapper has a depth/stencil texture; not supported. Dispose and re-wrap.")
-          } YY._hardwareTexture = new uY.d(rY, this._gl), YY.isReady = !0, YY._cachedCoordinatesMode = null, YY._cachedWrapU = null, YY._cachedWrapV = null, YY._cachedWrapR = null, YY._cachedAnisotropicFilteringLevel = null;
-        for (const FY in this._boundTexturesCache) this._boundTexturesCache[FY] === YY && (this._boundTexturesCache[FY] = null);
-        this.updateTextureSamplingMode(YY.samplingMode, YY);
-        const DY = this._gl;
-        for (const FY of this._renderTargetWrapperCache) {
-          if (FY.texture !== YY) continue;
-          const AY = FY,
-            IY = FY.samples,
-            RY = IY > 1;
-          AY._framebuffer && DY.deleteFramebuffer(AY._framebuffer), !RY && AY._depthStencilBuffer && (DY.deleteRenderbuffer(AY._depthStencilBuffer), AY._depthStencilBuffer = null);
-          const OY = this._currentFramebuffer,
-            gY = DY.createFramebuffer();
-          this._bindUnboundFramebuffer(gY), DY.framebufferTexture2D(DY.FRAMEBUFFER, DY.COLOR_ATTACHMENT0, DY.TEXTURE_2D, rY, 0), RY || (AY._depthStencilBuffer = this._setupFramebufferDepthAttachments(FY._generateStencilBuffer, FY._generateDepthBuffer, FY.width, FY.height)), this._bindUnboundFramebuffer(OY), AY._framebuffer = gY, RY && (FY._samples = 1, this.updateRenderTargetTextureSampleCount(AY, IY))
+      updateWrappedWebGLTexture(TT, oT) {
+        if (15 !== TT.source) throw new Error("updateWrappedWebGLTexture: target InternalTexture was not produced by wrapWebGLTexture.");
+        for (const iT of this._renderTargetWrapperCache)
+          if (iT.textures?.includes(TT)) {
+            if (iT.isMulti) throw new Error("updateWrappedWebGLTexture: wrapped texture is part of a multi render-target; not supported. Dispose and re-wrap.");
+            if (iT._depthStencilTexture) throw new Error("updateWrappedWebGLTexture: wrapped texture's render-target wrapper has a depth/stencil texture; not supported. Dispose and re-wrap.")
+          } TT._hardwareTexture = new DT.c(oT, this._gl), TT.isReady = !0, TT._cachedCoordinatesMode = null, TT._cachedWrapU = null, TT._cachedWrapV = null, TT._cachedWrapR = null, TT._cachedAnisotropicFilteringLevel = null;
+        for (const iT in this._boundTexturesCache) this._boundTexturesCache[iT] === TT && (this._boundTexturesCache[iT] = null);
+        this.updateTextureSamplingMode(TT.samplingMode, TT);
+        const IT = this._gl;
+        for (const iT of this._renderTargetWrapperCache) {
+          if (iT.texture !== TT) continue;
+          const zT = iT,
+            kT = iT.samples,
+            WT = kT > 1;
+          zT._framebuffer && IT.deleteFramebuffer(zT._framebuffer), !WT && zT._depthStencilBuffer && (IT.deleteRenderbuffer(zT._depthStencilBuffer), zT._depthStencilBuffer = null);
+          const XT = this._currentFramebuffer,
+            BT = IT.createFramebuffer();
+          this._bindUnboundFramebuffer(BT), IT.framebufferTexture2D(IT.FRAMEBUFFER, IT.COLOR_ATTACHMENT0, IT.TEXTURE_2D, oT, 0), WT || (zT._depthStencilBuffer = this._setupFramebufferDepthAttachments(iT._generateStencilBuffer, iT._generateDepthBuffer, iT.width, iT.height)), this._bindUnboundFramebuffer(XT), zT._framebuffer = BT, WT && (iT._samples = 1, this.updateRenderTargetTextureSampleCount(zT, kT))
         }
       }
-      _uploadImageToTexture(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const AY = this._gl,
-          IY = this._getWebGLTextureType(YY.type),
-          RY = this._getInternalFormat(YY.format),
-          OY = this._getRGBABufferInternalSizedFormat(YY.type, RY),
-          gY = YY.isCube ? AY.TEXTURE_CUBE_MAP : AY.TEXTURE_2D;
-        this._bindTextureDirectly(gY, YY, !0), this._unpackFlipY(YY.invertY);
-        let aY = AY.TEXTURE_2D;
-        YY.isCube && (aY = AY.TEXTURE_CUBE_MAP_POSITIVE_X + DY), AY.texImage2D(aY, FY, OY, RY, IY, rY), this._bindTextureDirectly(gY, null, !0)
+      _uploadImageToTexture(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const zT = this._gl,
+          kT = this._getWebGLTextureType(TT.type),
+          WT = this._getInternalFormat(TT.format),
+          XT = this._getRGBABufferInternalSizedFormat(TT.type, WT),
+          BT = TT.isCube ? zT.TEXTURE_CUBE_MAP : zT.TEXTURE_2D;
+        this._bindTextureDirectly(BT, TT, !0), this._unpackFlipY(TT.invertY);
+        let FT = zT.TEXTURE_2D;
+        TT.isCube && (FT = zT.TEXTURE_CUBE_MAP_POSITIVE_X + IT), zT.texImage2D(FT, iT, XT, WT, kT, oT), this._bindTextureDirectly(BT, null, !0)
       }
-      updateTextureComparisonFunction(YY, rY) {
-        if (1 === this.VQ) return void vY.d.Error("WebGL 1 does not support texture comparison.");
-        const DY = this._gl;
-        YY.isCube ? (this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, YY, !0), 0 === rY ? (DY.texParameteri(DY.TEXTURE_CUBE_MAP, DY.TEXTURE_COMPARE_FUNC, 515), DY.texParameteri(DY.TEXTURE_CUBE_MAP, DY.TEXTURE_COMPARE_MODE, DY.NONE)) : (DY.texParameteri(DY.TEXTURE_CUBE_MAP, DY.TEXTURE_COMPARE_FUNC, rY), DY.texParameteri(DY.TEXTURE_CUBE_MAP, DY.TEXTURE_COMPARE_MODE, DY.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)) : (this._bindTextureDirectly(this._gl.TEXTURE_2D, YY, !0), 0 === rY ? (DY.texParameteri(DY.TEXTURE_2D, DY.TEXTURE_COMPARE_FUNC, 515), DY.texParameteri(DY.TEXTURE_2D, DY.TEXTURE_COMPARE_MODE, DY.NONE)) : (DY.texParameteri(DY.TEXTURE_2D, DY.TEXTURE_COMPARE_FUNC, rY), DY.texParameteri(DY.TEXTURE_2D, DY.TEXTURE_COMPARE_MODE, DY.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_2D, null)), YY._comparisonFunction = rY
+      updateTextureComparisonFunction(TT, oT) {
+        if (1 === this.rK) return void ST.d.Error("WebGL 1 does not support texture comparison.");
+        const IT = this._gl;
+        TT.isCube ? (this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, TT, !0), 0 === oT ? (IT.texParameteri(IT.TEXTURE_CUBE_MAP, IT.TEXTURE_COMPARE_FUNC, 515), IT.texParameteri(IT.TEXTURE_CUBE_MAP, IT.TEXTURE_COMPARE_MODE, IT.NONE)) : (IT.texParameteri(IT.TEXTURE_CUBE_MAP, IT.TEXTURE_COMPARE_FUNC, oT), IT.texParameteri(IT.TEXTURE_CUBE_MAP, IT.TEXTURE_COMPARE_MODE, IT.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)) : (this._bindTextureDirectly(this._gl.TEXTURE_2D, TT, !0), 0 === oT ? (IT.texParameteri(IT.TEXTURE_2D, IT.TEXTURE_COMPARE_FUNC, 515), IT.texParameteri(IT.TEXTURE_2D, IT.TEXTURE_COMPARE_MODE, IT.NONE)) : (IT.texParameteri(IT.TEXTURE_2D, IT.TEXTURE_COMPARE_FUNC, oT), IT.texParameteri(IT.TEXTURE_2D, IT.TEXTURE_COMPARE_MODE, IT.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_2D, null)), TT._comparisonFunction = oT
       }
-      createInstancesBuffer(YY) {
-        const rY = this._gl.createBuffer();
-        if (!rY) throw new Error("Unable to create instance buffer");
-        const DY = new aY.d(rY);
-        return DY.gu = YY, this.bindArrayBuffer(DY), this._gl.bufferData(this._gl.ARRAY_BUFFER, YY, this._gl.DYNAMIC_DRAW), DY.references = 1, DY
+      createInstancesBuffer(TT) {
+        const oT = this._gl.createBuffer();
+        if (!oT) throw new Error("Unable to create instance buffer");
+        const IT = new FT.e(oT);
+        return IT.fD = TT, this.bindArrayBuffer(IT), this._gl.bufferData(this._gl.ARRAY_BUFFER, TT, this._gl.DYNAMIC_DRAW), IT.references = 1, IT
       }
-      deleteInstancesBuffer(YY) {
-        this._gl.deleteBuffer(YY)
+      deleteInstancesBuffer(TT) {
+        this._gl.deleteBuffer(TT)
       }
-      async _clientWaitAsync(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10;
-        const FY = this._gl;
-        return await new Promise(((AY, IY) => {
-          (0, EY.e)((() => {
-            const DY = FY.clientWaitSync(YY, rY, 0);
-            if (DY == FY.WAIT_FAILED) throw new Error("clientWaitSync failed");
-            return DY != FY.TIMEOUT_EXPIRED
-          }), AY, IY, DY)
+      async _clientWaitAsync(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10;
+        const iT = this._gl;
+        return await new Promise(((zT, kT) => {
+          (0, AT.e)((() => {
+            const IT = iT.clientWaitSync(TT, oT, 0);
+            if (IT == iT.WAIT_FAILED) throw new Error("clientWaitSync failed");
+            return IT != iT.TIMEOUT_EXPIRED
+          }), zT, kT, IT)
         }))
       }
-      _readPixelsAsync(YY, rY, DY, FY, AY, IY, RY) {
+      _readPixelsAsync(TT, oT, IT, iT, zT, kT, WT) {
         if (this._webGLVersion < 2) throw new Error("_readPixelsAsync only work on WebGL2+");
-        const OY = this._gl,
-          gY = OY.createBuffer();
-        OY.bindBuffer(OY.PIXEL_PACK_BUFFER, gY), OY.bufferData(OY.PIXEL_PACK_BUFFER, RY.byteLength, OY.STREAM_READ), OY.readPixels(YY, rY, DY, FY, AY, IY, 0), OY.bindBuffer(OY.PIXEL_PACK_BUFFER, null);
-        const aY = OY.fenceSync(OY.SYNC_GPU_COMMANDS_COMPLETE, 0);
-        return aY ? (OY.flush(), this._clientWaitAsync(aY, 0, 10).then((() => (OY.deleteSync(aY), OY.bindBuffer(OY.PIXEL_PACK_BUFFER, gY), OY.getBufferSubData(OY.PIXEL_PACK_BUFFER, 0, RY), OY.bindBuffer(OY.PIXEL_PACK_BUFFER, null), OY.deleteBuffer(gY), RY)))) : null
+        const XT = this._gl,
+          BT = XT.createBuffer();
+        XT.bindBuffer(XT.PIXEL_PACK_BUFFER, BT), XT.bufferData(XT.PIXEL_PACK_BUFFER, WT.byteLength, XT.STREAM_READ), XT.readPixels(TT, oT, IT, iT, zT, kT, 0), XT.bindBuffer(XT.PIXEL_PACK_BUFFER, null);
+        const FT = XT.fenceSync(XT.SYNC_GPU_COMMANDS_COMPLETE, 0);
+        return FT ? (XT.flush(), this._clientWaitAsync(FT, 0, 10).then((() => (XT.deleteSync(FT), XT.bindBuffer(XT.PIXEL_PACK_BUFFER, BT), XT.getBufferSubData(XT.PIXEL_PACK_BUFFER, 0, WT), XT.bindBuffer(XT.PIXEL_PACK_BUFFER, null), XT.deleteBuffer(BT), WT)))) : null
       }
       dispose() {
         this.hideLoadingUI?.(), this._rescalePostProcess && this._rescalePostProcess.dispose(),
-          function(YY, rY) {
-            1 === AY.d.Instances.length && sY.d.audioEngine && (sY.d.audioEngine.dispose(), sY.d.audioEngine = null);
-            const DY = YY.getHostWindow();
-            DY && "function" === typeof DY.removeEventListener && (DY.removeEventListener("blur", YY._onBlur), DY.removeEventListener("focus", YY._onFocus)), rY && (rY.removeEventListener("focus", YY._onCanvasFocus), rY.removeEventListener("blur", YY._onCanvasBlur), rY.removeEventListener("pointerout", YY._onCanvasPointerOut), rY.removeEventListener("contextmenu", YY._onCanvasContextMenu)), (0, iY.e)() && (document.removeEventListener("fullscreenchange", YY._onFullscreenChange), document.removeEventListener("mozfullscreenchange", YY._onFullscreenChange), document.removeEventListener("webkitfullscreenchange", YY._onFullscreenChange), document.removeEventListener("msfullscreenchange", YY._onFullscreenChange), document.removeEventListener("pointerlockchange", YY._onPointerLockChange), document.removeEventListener("mspointerlockchange", YY._onPointerLockChange), document.removeEventListener("mozpointerlockchange", YY._onPointerLockChange), document.removeEventListener("webkitpointerlockchange", YY._onPointerLockChange))
+          function(TT, oT) {
+            1 === zT.d.Instances.length && LT.b.audioEngine && (LT.b.audioEngine.dispose(), LT.b.audioEngine = null);
+            const IT = TT.getHostWindow();
+            IT && "function" === typeof IT.removeEventListener && (IT.removeEventListener("blur", TT._onBlur), IT.removeEventListener("focus", TT._onFocus)), oT && (oT.removeEventListener("focus", TT._onCanvasFocus), oT.removeEventListener("blur", TT._onCanvasBlur), oT.removeEventListener("pointerout", TT._onCanvasPointerOut), oT.removeEventListener("contextmenu", TT._onCanvasContextMenu)), (0, xT.e)() && (document.removeEventListener("fullscreenchange", TT._onFullscreenChange), document.removeEventListener("mozfullscreenchange", TT._onFullscreenChange), document.removeEventListener("webkitfullscreenchange", TT._onFullscreenChange), document.removeEventListener("msfullscreenchange", TT._onFullscreenChange), document.removeEventListener("pointerlockchange", TT._onPointerLockChange), document.removeEventListener("mspointerlockchange", TT._onPointerLockChange), document.removeEventListener("mozpointerlockchange", TT._onPointerLockChange), document.removeEventListener("webkitpointerlockchange", TT._onPointerLockChange))
           }(this, this._renderingCanvas), super.dispose()
       }
     }
-    SY.ALPHA_DISABLE = 0, SY.ALPHA_ADD = 1, SY.ALPHA_COMBINE = 2, SY.ALPHA_SUBTRACT = 3, SY.ALPHA_MULTIPLY = 4, SY.ALPHA_MAXIMIZED = 5, SY.ALPHA_ONEONE = 6, SY.ALPHA_PREMULTIPLIED = 7, SY.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, SY.ALPHA_INTERPOLATE = 9, SY.ALPHA_SCREENMODE = 10, SY.DELAYLOADSTATE_NONE = 0, SY.DELAYLOADSTATE_LOADED = 1, SY.DELAYLOADSTATE_LOADING = 2, SY.DELAYLOADSTATE_NOTLOADED = 4, SY.NEVER = 512, SY.ALWAYS = 519, SY.LESS = 513, SY.EQUAL = 514, SY.LEQUAL = 515, SY.GREATER = 516, SY.GEQUAL = 518, SY.NOTEQUAL = 517, SY.KEEP = 7680, SY.REPLACE = 7681, SY.INCR = 7682, SY.DECR = 7683, SY.INVERT = 5386, SY.INCR_WRAP = 34055, SY.DECR_WRAP = 34056, SY.TEXTURE_CLAMP_ADDRESSMODE = 0, SY.TEXTURE_WRAP_ADDRESSMODE = 1, SY.TEXTURE_MIRROR_ADDRESSMODE = 2, SY.TEXTUREFORMAT_ALPHA = 0, SY.TEXTUREFORMAT_LUMINANCE = 1, SY.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, SY.TEXTUREFORMAT_RGB = 4, SY.TEXTUREFORMAT_RGBA = 5, SY.TEXTUREFORMAT_RED = 6, SY.TEXTUREFORMAT_R = 6, SY.TEXTUREFORMAT_R16_UNORM = 33322, SY.TEXTUREFORMAT_RG16_UNORM = 33324, SY.TEXTUREFORMAT_RGB16_UNORM = 32852, SY.TEXTUREFORMAT_RGBA16_UNORM = 32859, SY.TEXTUREFORMAT_R16_SNORM = 36760, SY.TEXTUREFORMAT_RG16_SNORM = 36761, SY.TEXTUREFORMAT_RGB16_SNORM = 36762, SY.TEXTUREFORMAT_RGBA16_SNORM = 36763, SY.TEXTUREFORMAT_RG = 7, SY.TEXTUREFORMAT_RED_INTEGER = 8, SY.TEXTUREFORMAT_R_INTEGER = 8, SY.TEXTUREFORMAT_RG_INTEGER = 9, SY.TEXTUREFORMAT_RGB_INTEGER = 10, SY.TEXTUREFORMAT_RGBA_INTEGER = 11, SY.TEXTURETYPE_UNSIGNED_BYTE = 0, SY.TEXTURETYPE_UNSIGNED_INT = 0, SY.TEXTURETYPE_FLOAT = 1, SY.TEXTURETYPE_HALF_FLOAT = 2, SY.TEXTURETYPE_BYTE = 3, SY.TEXTURETYPE_SHORT = 4, SY.TEXTURETYPE_UNSIGNED_SHORT = 5, SY.TEXTURETYPE_INT = 6, SY.TEXTURETYPE_UNSIGNED_INTEGER = 7, SY.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, SY.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, SY.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, SY.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, SY.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, SY.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, SY.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, SY.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, SY.TEXTURE_NEAREST_SAMPLINGMODE = 1, SY.TEXTURE_BILINEAR_SAMPLINGMODE = 2, SY.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, SY.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, SY.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, SY.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, SY.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, SY.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, SY.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, SY.TEXTURE_NEAREST_LINEAR = 7, SY.TEXTURE_NEAREST_NEAREST = 1, SY.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, SY.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, SY.TEXTURE_LINEAR_LINEAR = 2, SY.TEXTURE_LINEAR_NEAREST = 12, SY.TEXTURE_EXPLICIT_MODE = 0, SY.TEXTURE_SPHERICAL_MODE = 1, SY.TEXTURE_PLANAR_MODE = 2, SY.TEXTURE_CUBIC_MODE = 3, SY.TEXTURE_PROJECTION_MODE = 4, SY.TEXTURE_SKYBOX_MODE = 5, SY.TEXTURE_INVCUBIC_MODE = 6, SY.TEXTURE_EQUIRECTANGULAR_MODE = 7, SY.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, SY.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, SY.SCALEMODE_FLOOR = 1, SY.SCALEMODE_NEAREST = 2, SY.SCALEMODE_CEILING = 3
+    wT.ALPHA_DISABLE = 0, wT.ALPHA_ADD = 1, wT.ALPHA_COMBINE = 2, wT.ALPHA_SUBTRACT = 3, wT.ALPHA_MULTIPLY = 4, wT.ALPHA_MAXIMIZED = 5, wT.ALPHA_ONEONE = 6, wT.ALPHA_PREMULTIPLIED = 7, wT.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, wT.ALPHA_INTERPOLATE = 9, wT.ALPHA_SCREENMODE = 10, wT.DELAYLOADSTATE_NONE = 0, wT.DELAYLOADSTATE_LOADED = 1, wT.DELAYLOADSTATE_LOADING = 2, wT.DELAYLOADSTATE_NOTLOADED = 4, wT.NEVER = 512, wT.ALWAYS = 519, wT.LESS = 513, wT.EQUAL = 514, wT.LEQUAL = 515, wT.GREATER = 516, wT.GEQUAL = 518, wT.NOTEQUAL = 517, wT.KEEP = 7680, wT.REPLACE = 7681, wT.INCR = 7682, wT.DECR = 7683, wT.INVERT = 5386, wT.INCR_WRAP = 34055, wT.DECR_WRAP = 34056, wT.TEXTURE_CLAMP_ADDRESSMODE = 0, wT.TEXTURE_WRAP_ADDRESSMODE = 1, wT.TEXTURE_MIRROR_ADDRESSMODE = 2, wT.TEXTUREFORMAT_ALPHA = 0, wT.TEXTUREFORMAT_LUMINANCE = 1, wT.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, wT.TEXTUREFORMAT_RGB = 4, wT.TEXTUREFORMAT_RGBA = 5, wT.TEXTUREFORMAT_RED = 6, wT.TEXTUREFORMAT_R = 6, wT.TEXTUREFORMAT_R16_UNORM = 33322, wT.TEXTUREFORMAT_RG16_UNORM = 33324, wT.TEXTUREFORMAT_RGB16_UNORM = 32852, wT.TEXTUREFORMAT_RGBA16_UNORM = 32859, wT.TEXTUREFORMAT_R16_SNORM = 36760, wT.TEXTUREFORMAT_RG16_SNORM = 36761, wT.TEXTUREFORMAT_RGB16_SNORM = 36762, wT.TEXTUREFORMAT_RGBA16_SNORM = 36763, wT.TEXTUREFORMAT_RG = 7, wT.TEXTUREFORMAT_RED_INTEGER = 8, wT.TEXTUREFORMAT_R_INTEGER = 8, wT.TEXTUREFORMAT_RG_INTEGER = 9, wT.TEXTUREFORMAT_RGB_INTEGER = 10, wT.TEXTUREFORMAT_RGBA_INTEGER = 11, wT.TEXTURETYPE_UNSIGNED_BYTE = 0, wT.TEXTURETYPE_UNSIGNED_INT = 0, wT.TEXTURETYPE_FLOAT = 1, wT.TEXTURETYPE_HALF_FLOAT = 2, wT.TEXTURETYPE_BYTE = 3, wT.TEXTURETYPE_SHORT = 4, wT.TEXTURETYPE_UNSIGNED_SHORT = 5, wT.TEXTURETYPE_INT = 6, wT.TEXTURETYPE_UNSIGNED_INTEGER = 7, wT.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, wT.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, wT.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, wT.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, wT.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, wT.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, wT.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, wT.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, wT.TEXTURE_NEAREST_SAMPLINGMODE = 1, wT.TEXTURE_BILINEAR_SAMPLINGMODE = 2, wT.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, wT.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, wT.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, wT.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, wT.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, wT.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, wT.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, wT.TEXTURE_NEAREST_LINEAR = 7, wT.TEXTURE_NEAREST_NEAREST = 1, wT.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, wT.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, wT.TEXTURE_LINEAR_LINEAR = 2, wT.TEXTURE_LINEAR_NEAREST = 12, wT.TEXTURE_EXPLICIT_MODE = 0, wT.TEXTURE_SPHERICAL_MODE = 1, wT.TEXTURE_PLANAR_MODE = 2, wT.TEXTURE_CUBIC_MODE = 3, wT.TEXTURE_PROJECTION_MODE = 4, wT.TEXTURE_SKYBOX_MODE = 5, wT.TEXTURE_INVCUBIC_MODE = 6, wT.TEXTURE_EQUIRECTANGULAR_MODE = 7, wT.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, wT.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, wT.SCALEMODE_FLOOR = 1, wT.SCALEMODE_NEAREST = 2, wT.SCALEMODE_CEILING = 3
   },
-  39116: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY
+  38746: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => zT
     });
-    var FY = DY(39078);
-    class AY {
+    var iT = IT(38708);
+    class zT {
       get depthStencilTexture() {
         return this._depthStencilTexture
       }
-      setDepthStencilTexture(YY) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._depthStencilTexture && this._depthStencilTexture.dispose(), this._depthStencilTexture = YY, this._generateDepthBuffer = this._generateStencilBuffer = this._depthStencilTextureWithStencil = !1, YY && (this._generateDepthBuffer = !0, this._generateStencilBuffer = this._depthStencilTextureWithStencil = (0, FY.d)(YY.format))
+      setDepthStencilTexture(TT) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._depthStencilTexture && this._depthStencilTexture.dispose(), this._depthStencilTexture = TT, this._generateDepthBuffer = this._generateStencilBuffer = this._depthStencilTextureWithStencil = !1, TT && (this._generateDepthBuffer = !0, this._generateStencilBuffer = this._depthStencilTextureWithStencil = (0, iT.d)(TT.format))
       }
       get depthStencilTextureWithStencil() {
         return this._depthStencilTextureWithStencil
@@ -2332,22 +2332,22 @@ export const modules = {
       get layerIndices() {
         return this._layerIndices
       }
-      getBaseArrayLayer(YY) {
+      getBaseArrayLayer(TT) {
         if (!this._textures) return -1;
-        const rY = this._textures[YY],
-          DY = this._layerIndices?.[YY] ?? 0,
-          FY = this._faceIndices?.[YY] ?? 0;
-        return rY.isCube ? 6 * DY + FY : rY.is3D ? 0 : DY
+        const oT = this._textures[TT],
+          IT = this._layerIndices?.[TT] ?? 0,
+          iT = this._faceIndices?.[TT] ?? 0;
+        return oT.isCube ? 6 * IT + iT : oT.is3D ? 0 : IT
       }
       get samples() {
         return this._samples
       }
-      setSamples(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this.samples === YY && !DY) return YY;
-        const FY = this._isMulti ? this._engine.updateMultipleRenderTargetTextureSampleCount(this, YY, rY) : this._engine.updateRenderTargetTextureSampleCount(this, YY);
-        return this._samples = YY, FY
+      setSamples(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this.samples === TT && !IT) return TT;
+        const iT = this._isMulti ? this._engine.updateMultipleRenderTargetTextureSampleCount(this, TT, oT) : this._engine.updateRenderTargetTextureSampleCount(this, TT);
+        return this._samples = TT, iT
       }
       resolveMSAATextures() {
         this.isMulti ? this._engine.resolveMultiFramebuffer(this) : this._engine.resolveFramebuffer(this)
@@ -2355,138 +2355,138 @@ export const modules = {
       generateMipMaps() {
         this._engine._currentRenderTarget === this && (this.isMulti ? this._engine.unBindMultiColorAttachmentFramebuffer(this, !0) : this._engine.unBindFramebuffer(this, !0)), this.isMulti ? this._engine.generateMipMapsMultiFramebuffer(this) : this._engine.generateMipMapsFramebuffer(this)
       }
-      constructor(YY, rY, DY, FY, AY) {
-        this._textures = null, this._faceIndices = null, this._layerIndices = null, this._samples = 1, this._attachments = null, this._generateStencilBuffer = !1, this._generateDepthBuffer = !1, this._depthStencilTextureWithStencil = !1, this.disableAutomaticMSAAResolve = !1, this.resolveMSAAColors = !0, this.resolveMSAADepth = !1, this.resolveMSAAStencil = !1, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._isMulti = YY, this._isCube = rY, this._size = DY, this._engine = FY, this._depthStencilTexture = null, this.label = AY
+      constructor(TT, oT, IT, iT, zT) {
+        this._textures = null, this._faceIndices = null, this._layerIndices = null, this._samples = 1, this._attachments = null, this._generateStencilBuffer = !1, this._generateDepthBuffer = !1, this._depthStencilTextureWithStencil = !1, this.disableAutomaticMSAAResolve = !1, this.resolveMSAAColors = !0, this.resolveMSAADepth = !1, this.resolveMSAAStencil = !1, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._isMulti = TT, this._isCube = oT, this._size = IT, this._engine = iT, this._depthStencilTexture = null, this.label = zT
       }
-      setTextures(YY) {
-        Array.isArray(YY) ? this._textures = YY : this._textures = YY ? [YY] : null
+      setTextures(TT) {
+        Array.isArray(TT) ? this._textures = TT : this._textures = TT ? [TT] : null
       }
-      setTexture(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._textures || (this._textures = []), this._textures[rY] !== YY && (this._textures[rY] && DY && this._textures[rY].dispose(), this._textures[rY] = YY)
+      setTexture(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this._textures || (this._textures = []), this._textures[oT] !== TT && (this._textures[oT] && IT && this._textures[oT].dispose(), this._textures[oT] = TT)
       }
-      setLayerAndFaceIndices(YY, rY) {
-        this._layerIndices = YY, this._faceIndices = rY
+      setLayerAndFaceIndices(TT, oT) {
+        this._layerIndices = TT, this._faceIndices = oT
       }
       setLayerAndFaceIndex() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        this._layerIndices || (this._layerIndices = []), this._faceIndices || (this._faceIndices = []), void 0 !== rY && rY >= 0 && (this._layerIndices[YY] = rY), void 0 !== DY && DY >= 0 && (this._faceIndices[YY] = DY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        this._layerIndices || (this._layerIndices = []), this._faceIndices || (this._faceIndices = []), void 0 !== oT && oT >= 0 && (this._layerIndices[TT] = oT), void 0 !== IT && IT >= 0 && (this._faceIndices[TT] = IT)
       }
       createDepthStencilTexture() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
-          IY = arguments.length > 5 ? arguments[5] : void 0;
-        return this._depthStencilTexture?.dispose(), this._depthStencilTextureWithStencil = DY, this._depthStencilTextureLabel = IY, this._depthStencilTexture = this._engine.createDepthStencilTexture(this._size, {
-          bilinearFiltering: rY,
-          comparisonFunction: YY,
-          generateStencil: DY,
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          kT = arguments.length > 5 ? arguments[5] : void 0;
+        return this._depthStencilTexture?.dispose(), this._depthStencilTextureWithStencil = IT, this._depthStencilTextureLabel = kT, this._depthStencilTexture = this._engine.createDepthStencilTexture(this._size, {
+          bilinearFiltering: oT,
+          comparisonFunction: TT,
+          generateStencil: IT,
           isCube: this._isCube,
-          samples: FY,
-          depthTextureFormat: AY,
-          label: IY
+          samples: iT,
+          depthTextureFormat: zT,
+          label: kT
         }, this), this._depthStencilTexture
       }
-      _shareDepth(YY) {
-        this.shareDepth(YY)
+      _shareDepth(TT) {
+        this.shareDepth(TT)
       }
-      shareDepth(YY) {
-        this._depthStencilTexture && (YY._depthStencilTexture && YY._depthStencilTexture.dispose(), YY._depthStencilTexture = this._depthStencilTexture, YY._depthStencilTextureWithStencil = this._depthStencilTextureWithStencil, this._depthStencilTexture.incrementReferences())
+      shareDepth(TT) {
+        this._depthStencilTexture && (TT._depthStencilTexture && TT._depthStencilTexture.dispose(), TT._depthStencilTexture = this._depthStencilTexture, TT._depthStencilTextureWithStencil = this._depthStencilTextureWithStencil, this._depthStencilTexture.incrementReferences())
       }
-      _swapAndDie(YY) {
-        this.texture && this.texture._swapAndDie(YY), this._textures = null, this.dispose(!0)
+      _swapAndDie(TT) {
+        this.texture && this.texture._swapAndDie(TT), this._textures = null, this.dispose(!0)
       }
       _cloneRenderTargetWrapper() {
-        let YY = null;
+        let TT = null;
         if (this._isMulti) {
-          const rY = this.textures;
-          if (rY && rY.length > 0) {
-            let DY = !1,
-              FY = rY.length,
-              AY = -1;
-            const IY = rY[rY.length - 1]._source;
-            14 !== IY && 12 !== IY || (DY = !0, AY = rY[rY.length - 1].format, FY--);
-            const RY = [],
-              OY = [],
-              gY = [],
-              aY = [],
-              vY = [],
-              uY = [],
-              sY = [],
-              iY = {};
-            for (let YY = 0; YY < FY; ++YY) {
-              const DY = rY[YY];
-              RY.push(DY.samplingMode), OY.push(DY.type), gY.push(DY.format);
-              void 0 !== iY[DY.uniqueId] ? (aY.push(-1), sY.push(0)) : (iY[DY.uniqueId] = YY, DY.is2DArray ? (aY.push(35866), sY.push(DY.depth)) : DY.isCube ? (aY.push(34067), sY.push(0)) : DY.is3D ? (aY.push(32879), sY.push(DY.depth)) : (aY.push(3553), sY.push(0))), this._faceIndices && vY.push(this._faceIndices[YY] ?? 0), this._layerIndices && uY.push(this._layerIndices[YY] ?? 0)
+          const oT = this.textures;
+          if (oT && oT.length > 0) {
+            let IT = !1,
+              iT = oT.length,
+              zT = -1;
+            const kT = oT[oT.length - 1]._source;
+            14 !== kT && 12 !== kT || (IT = !0, zT = oT[oT.length - 1].format, iT--);
+            const WT = [],
+              XT = [],
+              BT = [],
+              FT = [],
+              ST = [],
+              DT = [],
+              LT = [],
+              xT = {};
+            for (let TT = 0; TT < iT; ++TT) {
+              const IT = oT[TT];
+              WT.push(IT.samplingMode), XT.push(IT.type), BT.push(IT.format);
+              void 0 !== xT[IT.uniqueId] ? (FT.push(-1), LT.push(0)) : (xT[IT.uniqueId] = TT, IT.is2DArray ? (FT.push(35866), LT.push(IT.depth)) : IT.isCube ? (FT.push(34067), LT.push(0)) : IT.is3D ? (FT.push(32879), LT.push(IT.depth)) : (FT.push(3553), LT.push(0))), this._faceIndices && ST.push(this._faceIndices[TT] ?? 0), this._layerIndices && DT.push(this._layerIndices[TT] ?? 0)
             }
-            const yY = {
-                samplingModes: RY,
-                generateMipMaps: rY[0].generateMipMaps,
+            const cT = {
+                samplingModes: WT,
+                generateMipMaps: oT[0].generateMipMaps,
                 generateDepthBuffer: this._generateDepthBuffer,
                 generateStencilBuffer: this._generateStencilBuffer,
-                generateDepthTexture: DY,
-                depthTextureFormat: AY,
-                types: OY,
-                formats: gY,
-                qIY: FY,
-                targetTypes: aY,
-                faceIndex: vY,
-                layerIndex: uY,
-                layerCounts: sY,
+                generateDepthTexture: IT,
+                depthTextureFormat: zT,
+                types: XT,
+                formats: BT,
+                wWT: iT,
+                targetTypes: FT,
+                faceIndex: ST,
+                layerIndex: DT,
+                layerCounts: LT,
                 label: this.label
               },
-              QY = {
+              KT = {
                 width: this.width,
                 height: this.height,
                 depth: this.depth
               };
-            YY = this._engine.createMultipleRenderTarget(QY, yY);
-            for (let oY = 0; oY < FY; ++oY) {
-              if (-1 !== aY[oY]) continue;
-              const DY = iY[rY[oY].uniqueId];
-              YY.setTexture(YY.textures[DY], oY)
+            TT = this._engine.createMultipleRenderTarget(KT, cT);
+            for (let MT = 0; MT < iT; ++MT) {
+              if (-1 !== FT[MT]) continue;
+              const IT = xT[oT[MT].uniqueId];
+              TT.setTexture(TT.textures[IT], MT)
             }
           }
         } else {
-          const rY = {};
-          if (rY.generateDepthBuffer = this._generateDepthBuffer, rY.generateMipMaps = this.texture?.generateMipMaps ?? !1, rY.generateStencilBuffer = this._generateStencilBuffer, rY.samplingMode = this.texture?.samplingMode, rY.type = this.texture?.type, rY.format = this.texture?.format, rY.noColorAttachment = !this._textures, rY.label = this.label, this.isCube) YY = this._engine.createRenderTargetCubeTexture(this.width, rY);
+          const oT = {};
+          if (oT.generateDepthBuffer = this._generateDepthBuffer, oT.generateMipMaps = this.texture?.generateMipMaps ?? !1, oT.generateStencilBuffer = this._generateStencilBuffer, oT.samplingMode = this.texture?.samplingMode, oT.type = this.texture?.type, oT.format = this.texture?.format, oT.noColorAttachment = !this._textures, oT.label = this.label, this.isCube) TT = this._engine.createRenderTargetCubeTexture(this.width, oT);
           else {
-            const DY = {
+            const IT = {
               width: this.width,
               height: this.height,
               layers: this.is2DArray || this.is3D ? this.texture?.depth : void 0
             };
-            YY = this._engine.createRenderTargetTexture(DY, rY)
+            TT = this._engine.createRenderTargetTexture(IT, oT)
           }
-          YY.texture && (YY.texture.isReady = !0)
+          TT.texture && (TT.texture.isReady = !0)
         }
-        return YY
+        return TT
       }
-      _swapRenderTargetWrapper(YY) {
-        if (this._textures && YY._textures)
-          for (let rY = 0; rY < this._textures.length; ++rY) this._textures[rY]._swapAndDie(YY._textures[rY], !1), YY._textures[rY].isReady = !0;
-        this._depthStencilTexture && YY._depthStencilTexture && (this._depthStencilTexture._swapAndDie(YY._depthStencilTexture), YY._depthStencilTexture.isReady = !0), this._textures = null, this._depthStencilTexture = null
+      _swapRenderTargetWrapper(TT) {
+        if (this._textures && TT._textures)
+          for (let oT = 0; oT < this._textures.length; ++oT) this._textures[oT]._swapAndDie(TT._textures[oT], !1), TT._textures[oT].isReady = !0;
+        this._depthStencilTexture && TT._depthStencilTexture && (this._depthStencilTexture._swapAndDie(TT._depthStencilTexture), TT._depthStencilTexture.isReady = !0), this._textures = null, this._depthStencilTexture = null
       }
       _rebuild() {
-        const YY = this._cloneRenderTargetWrapper();
-        if (YY) {
+        const TT = this._cloneRenderTargetWrapper();
+        if (TT) {
           if (this._depthStencilTexture) {
-            const rY = this._depthStencilTexture.samplingMode,
-              DY = this._depthStencilTexture.format,
-              FY = 2 === rY || 3 === rY || 11 === rY;
-            YY.createDepthStencilTexture(this._depthStencilTexture._comparisonFunction, FY, this._depthStencilTextureWithStencil, this._depthStencilTexture.samples, DY, this._depthStencilTextureLabel)
+            const oT = this._depthStencilTexture.samplingMode,
+              IT = this._depthStencilTexture.format,
+              iT = 2 === oT || 3 === oT || 11 === oT;
+            TT.createDepthStencilTexture(this._depthStencilTexture._comparisonFunction, iT, this._depthStencilTextureWithStencil, this._depthStencilTexture.samples, IT, this._depthStencilTextureLabel)
           }
-          this.samples > 1 && YY.setSamples(this.samples), YY._swapRenderTargetWrapper(this), YY.dispose()
+          this.samples > 1 && TT.setSamples(this.samples), TT._swapRenderTargetWrapper(this), TT.dispose()
         }
       }
       releaseTextures() {
         if (this._textures)
-          for (let YY = 0; YY < this._textures.length; ++YY) this._textures[YY].dispose();
+          for (let TT = 0; TT < this._textures.length; ++TT) this._textures[TT].dispose();
         this._textures = null
       }
       dispose() {
@@ -2494,321 +2494,321 @@ export const modules = {
       }
     }
   },
-  39543: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  39219: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT
     });
-    class FY {
+    class iT {
       static get ForceFullSceneLoadingForIncremental() {
-        return FY._ForceFullSceneLoadingForIncremental
+        return iT._ForceFullSceneLoadingForIncremental
       }
-      static set ForceFullSceneLoadingForIncremental(YY) {
-        FY._ForceFullSceneLoadingForIncremental = YY
+      static set ForceFullSceneLoadingForIncremental(TT) {
+        iT._ForceFullSceneLoadingForIncremental = TT
       }
       static get ShowLoadingScreen() {
-        return FY._ShowLoadingScreen
+        return iT._ShowLoadingScreen
       }
-      static set ShowLoadingScreen(YY) {
-        FY._ShowLoadingScreen = YY
+      static set ShowLoadingScreen(TT) {
+        iT._ShowLoadingScreen = TT
       }
       static get loggingLevel() {
-        return FY._LoggingLevel
+        return iT._LoggingLevel
       }
-      static set loggingLevel(YY) {
-        FY._LoggingLevel = YY
+      static set loggingLevel(TT) {
+        iT._LoggingLevel = TT
       }
       static get CleanBoneMatrixWeights() {
-        return FY._CleanBoneMatrixWeights
+        return iT._CleanBoneMatrixWeights
       }
-      static set CleanBoneMatrixWeights(YY) {
-        FY._CleanBoneMatrixWeights = YY
+      static set CleanBoneMatrixWeights(TT) {
+        iT._CleanBoneMatrixWeights = TT
       }
     }
-    FY._ForceFullSceneLoadingForIncremental = !1, FY._ShowLoadingScreen = !0, FY._CleanBoneMatrixWeights = !1, FY._LoggingLevel = 0
+    iT._ForceFullSceneLoadingForIncremental = !1, iT._ShowLoadingScreen = !0, iT._CleanBoneMatrixWeights = !1, iT._LoggingLevel = 0
   },
-  39200: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => RY
+  38867: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => WT
     });
-    var FY = DY(38040);
-    const AY = new Map;
+    var iT = IT(37660);
+    const zT = new Map;
 
-    function IY(YY, rY) {
-      (function(YY) {
-        return AY.delete(YY)
-      })(YY) && FY.d.Warn(`Extension with the name '${YY}' already exists`), AY.set(YY, rY)
+    function kT(TT, oT) {
+      (function(TT) {
+        return zT.delete(TT)
+      })(TT) && iT.d.Warn(`Extension with the name '${TT}' already exists`), zT.set(TT, oT)
     }
 
-    function RY(YY, rY) {
-      "image/ktx" !== rY && "image/ktx2" !== rY || (YY = ".ktx"), AY.has(YY) || (YY.endsWith(".ies") && IY(".ies", (async () => await DY.e(299).then((() => DY(40833))).then((YY => new YY._IESTextureLoader)))), YY.endsWith(".dds") && IY(".dds", (async () => await DY.e(297).then((() => DY(40838))).then((YY => new YY._DDSTextureLoader)))), YY.endsWith(".basis") && IY(".basis", (async () => await DY.e(300).then((() => DY(40841))).then((YY => new YY._BasisTextureLoader)))), YY.endsWith(".env") && IY(".env", (async () => await Promise.all([DY.e(301), DY.e(298)]).then((() => DY(40846))).then((YY => new YY._ENVTextureLoader)))), YY.endsWith(".hdr") && IY(".hdr", (async () => await DY.e(302).then((() => DY(40902))).then((YY => new YY._HDRTextureLoader)))), (YY.endsWith(".ktx") || YY.endsWith(".ktx2")) && (IY(".ktx", (async () => await DY.e(303).then((() => DY(40907))).then((YY => new YY._KTXTextureLoader)))), IY(".ktx2", (async () => await DY.e(303).then((() => DY(40907))).then((YY => new YY._KTXTextureLoader))))), YY.endsWith(".tga") && IY(".tga", (async () => await DY.e(304).then((() => DY(40917))).then((YY => new YY._TGATextureLoader)))), YY.endsWith(".exr") && IY(".exr", (async () => await DY.e(305).then((() => DY(40926))).then((YY => new YY._ExrTextureLoader)))));
-      const FY = AY.get(YY);
-      return FY ? Promise.resolve(FY(rY)) : null
+    function WT(TT, oT) {
+      "image/ktx" !== oT && "image/ktx2" !== oT || (TT = ".ktx"), zT.has(TT) || (TT.endsWith(".ies") && kT(".ies", (async () => await IT.e(299).then((() => IT(40602))).then((TT => new TT._IESTextureLoader)))), TT.endsWith(".dds") && kT(".dds", (async () => await IT.e(297).then((() => IT(40604))).then((TT => new TT._DDSTextureLoader)))), TT.endsWith(".basis") && kT(".basis", (async () => await IT.e(300).then((() => IT(40613))).then((TT => new TT._BasisTextureLoader)))), TT.endsWith(".env") && kT(".env", (async () => await Promise.all([IT.e(301), IT.e(298)]).then((() => IT(40616))).then((TT => new TT._ENVTextureLoader)))), TT.endsWith(".hdr") && kT(".hdr", (async () => await IT.e(302).then((() => IT(40650))).then((TT => new TT._HDRTextureLoader)))), (TT.endsWith(".ktx") || TT.endsWith(".ktx2")) && (kT(".ktx", (async () => await IT.e(303).then((() => IT(40656))).then((TT => new TT._KTXTextureLoader)))), kT(".ktx2", (async () => await IT.e(303).then((() => IT(40656))).then((TT => new TT._KTXTextureLoader))))), TT.endsWith(".tga") && kT(".tga", (async () => await IT.e(304).then((() => IT(40665))).then((TT => new TT._TGATextureLoader)))), TT.endsWith(".exr") && kT(".exr", (async () => await IT.e(305).then((() => IT(40672))).then((TT => new TT._ExrTextureLoader)))));
+      const iT = zT.get(TT);
+      return iT ? Promise.resolve(iT(oT)) : null
     }
   },
-  39568: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => RY,
-      f: () => aY
+  39238: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => WT,
+      d: () => FT
     });
-    var FY = DY(39414),
-      AY = DY(39149),
-      IY = DY(36569);
-    class RY extends FY.c {
-      get J_() {
+    var iT = IT(39068),
+      zT = IT(38808),
+      kT = IT(36166);
+    class WT extends iT.c {
+      get i_() {
         return this._subMaterials
       }
-      set J_(YY) {
-        this._subMaterials = YY, this._hookArray(YY)
+      set i_(TT) {
+        this._subMaterials = TT, this._hookArray(TT)
       }
       getChildren() {
-        return this.J_
+        return this.i_
       }
-      constructor(YY, rY) {
-        super(YY, rY, !0), this._waitingSubMaterialsUniqueIds = [], this.hT().addMultiMaterial(this), this.J_ = [], this._storeEffectOnSubMeshes = !0
+      constructor(TT, oT) {
+        super(TT, oT, !0), this._waitingSubMaterialsUniqueIds = [], this.pC().addMultiMaterial(this), this.i_ = [], this._storeEffectOnSubMeshes = !0
       }
-      _hookArray(YY) {
-        var rY = this;
-        const DY = YY.push;
-        YY.push = function() {
-          for (var FY = arguments.length, AY = new Array(FY), IY = 0; IY < FY; IY++) AY[IY] = arguments[IY];
-          const RY = DY.apply(YY, AY);
-          return rY._markAllSubMeshesAsTexturesDirty(), RY
+      _hookArray(TT) {
+        var oT = this;
+        const IT = TT.push;
+        TT.push = function() {
+          for (var iT = arguments.length, zT = new Array(iT), kT = 0; kT < iT; kT++) zT[kT] = arguments[kT];
+          const WT = IT.apply(TT, zT);
+          return oT._markAllSubMeshesAsTexturesDirty(), WT
         };
-        const FY = YY.splice;
-        YY.splice = (rY, DY) => {
-          const AY = FY.call(YY, rY, DY ?? YY.length);
-          return this._markAllSubMeshesAsTexturesDirty(), AY
+        const iT = TT.splice;
+        TT.splice = (oT, IT) => {
+          const zT = iT.call(TT, oT, IT ?? TT.length);
+          return this._markAllSubMeshesAsTexturesDirty(), zT
         }
       }
-      getSubMaterial(YY) {
-        return YY < 0 || YY >= this.J_.length ? this.hT().defaultMaterial : this.J_[YY]
+      getSubMaterial(TT) {
+        return TT < 0 || TT >= this.i_.length ? this.pC().defaultMaterial : this.i_[TT]
       }
       getActiveTextures() {
-        return super.getActiveTextures().concat(...this.J_.map((YY => YY ? YY.getActiveTextures() : [])))
+        return super.getActiveTextures().concat(...this.i_.map((TT => TT ? TT.getActiveTextures() : [])))
       }
-      hasTexture(YY) {
-        if (super.hasTexture(YY)) return !0;
-        for (let rY = 0; rY < this.J_.length; rY++)
-          if (this.J_[rY]?.hasTexture(YY)) return !0;
+      hasTexture(TT) {
+        if (super.hasTexture(TT)) return !0;
+        for (let oT = 0; oT < this.i_.length; oT++)
+          if (this.i_[oT]?.hasTexture(TT)) return !0;
         return !1
       }
       getClassName() {
         return "MultiMaterial"
       }
-      isReadyForSubMesh(YY, rY, DY) {
-        for (let FY = 0; FY < this.J_.length; FY++) {
-          const AY = this.J_[FY];
-          if (AY) {
-            if (AY._storeEffectOnSubMeshes) {
-              if (!AY.isReadyForSubMesh(YY, rY, DY)) return !1;
+      isReadyForSubMesh(TT, oT, IT) {
+        for (let iT = 0; iT < this.i_.length; iT++) {
+          const zT = this.i_[iT];
+          if (zT) {
+            if (zT._storeEffectOnSubMeshes) {
+              if (!zT.isReadyForSubMesh(TT, oT, IT)) return !1;
               continue
             }
-            if (!AY.isReady(YY)) return !1
+            if (!zT.isReady(TT)) return !1
           }
         }
         return !0
       }
-      clone(YY, rY) {
-        const DY = new RY(YY, this.hT());
-        for (let FY = 0; FY < this.J_.length; FY++) {
-          let AY;
-          const IY = this.J_[FY];
-          AY = rY && IY ? IY.clone(YY + "-" + IY.name) : this.J_[FY], DY.J_.push(AY)
+      clone(TT, oT) {
+        const IT = new WT(TT, this.pC());
+        for (let iT = 0; iT < this.i_.length; iT++) {
+          let zT;
+          const kT = this.i_[iT];
+          zT = oT && kT ? kT.clone(TT + "-" + kT.name) : this.i_[iT], IT.i_.push(zT)
         }
-        return DY
+        return IT
       }
       serialize() {
-        const YY = {};
-        YY.name = this.name, YY.id = this.id, YY.uniqueId = this.uniqueId, AY.e && (YY.tags = AY.e.GetTags(this)), YY.materialsUniqueIds = [], YY.materials = [];
-        for (let rY = 0; rY < this.J_.length; rY++) {
-          const DY = this.J_[rY];
-          DY ? (YY.materialsUniqueIds.push(DY.uniqueId), YY.materials.push(DY.id)) : (YY.materialsUniqueIds.push(null), YY.materials.push(null))
+        const TT = {};
+        TT.name = this.name, TT.id = this.id, TT.uniqueId = this.uniqueId, zT.c && (TT.tags = zT.c.GetTags(this)), TT.materialsUniqueIds = [], TT.materials = [];
+        for (let oT = 0; oT < this.i_.length; oT++) {
+          const IT = this.i_[oT];
+          IT ? (TT.materialsUniqueIds.push(IT.uniqueId), TT.materials.push(IT.id)) : (TT.materialsUniqueIds.push(null), TT.materials.push(null))
         }
-        return YY
+        return TT
       }
-      dispose(YY, rY, DY) {
-        const FY = this.hT();
-        if (!FY) return;
-        if (DY)
-          for (let IY = 0; IY < this.J_.length; IY++) {
-            const DY = this.J_[IY];
-            DY && DY.dispose(YY, rY)
+      dispose(TT, oT, IT) {
+        const iT = this.pC();
+        if (!iT) return;
+        if (IT)
+          for (let kT = 0; kT < this.i_.length; kT++) {
+            const IT = this.i_[kT];
+            IT && IT.dispose(TT, oT)
           }
-        const AY = FY.multiMaterials.indexOf(this);
-        AY >= 0 && FY.multiMaterials.splice(AY, 1), super.dispose(YY, rY)
+        const zT = iT.multiMaterials.indexOf(this);
+        zT >= 0 && iT.multiMaterials.splice(zT, 1), super.dispose(TT, oT)
       }
     }
-    let OY = !1;
+    let XT = !1;
 
-    function gY(YY, rY) {
-      const DY = new RY(YY.name, rY);
-      if (DY.id = YY.id, DY._loadedUniqueId = YY.uniqueId, AY.e && AY.e.AddTagsTo(DY, YY.tags), YY.materialsUniqueIds) DY._waitingSubMaterialsUniqueIds = YY.materialsUniqueIds;
+    function BT(TT, oT) {
+      const IT = new WT(TT.name, oT);
+      if (IT.id = TT.id, IT._loadedUniqueId = TT.uniqueId, zT.c && zT.c.AddTagsTo(IT, TT.tags), TT.materialsUniqueIds) IT._waitingSubMaterialsUniqueIds = TT.materialsUniqueIds;
       else
-        for (const FY of YY.materials) DY.J_.push(rY.getLastMaterialById(FY));
-      return DY
+        for (const iT of TT.materials) IT.i_.push(oT.getLastMaterialById(iT));
+      return IT
     }
 
-    function aY() {
-      OY || (OY = !0, RY.ParseMultiMaterial = gY, (0, IY.i)("BABYLON.MultiMaterial", RY))
+    function FT() {
+      XT || (XT = !0, WT.ParseMultiMaterial = BT, (0, kT.h)("BABYLON.MultiMaterial", WT))
     }
   },
-  39355: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => RY
+  38997: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT
     });
-    var FY, AY, IY = DY(36524);
-    ! function(YY) {
-      YY[YY.LOCAL = 0] = "LOCAL", YY[YY.WORLD = 1] = "WORLD", YY[YY.BONE = 2] = "BONE"
-    }(FY || (FY = {}));
-    class RY {}
-    RY.X = new IY.r(1, 0, 0), RY.Y = new IY.r(0, 1, 0), RY.Z = new IY.r(0, 0, 1),
-      function(YY) {
-        YY[YY.X = 0] = "X", YY[YY.Y = 1] = "Y", YY[YY.Z = 2] = "Z"
-      }(AY || (AY = {}))
+    var iT, zT, kT = IT(36118);
+    ! function(TT) {
+      TT[TT.LOCAL = 0] = "LOCAL", TT[TT.WORLD = 1] = "WORLD", TT[TT.BONE = 2] = "BONE"
+    }(iT || (iT = {}));
+    class WT {}
+    WT.X = new kT.m(1, 0, 0), WT.Y = new kT.m(0, 1, 0), WT.Z = new kT.m(0, 0, 1),
+      function(TT) {
+        TT[TT.X = 0] = "X", TT[TT.Y = 1] = "Y", TT[TT.Z = 2] = "Z"
+      }(zT || (zT = {}))
   },
-  39120: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => gY,
-      f: () => aY
+  38752: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => BT,
+      c: () => FT
     });
-    var FY = DY(36524);
-    const AY = [Math.sqrt(1 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(3 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(15 / (4 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(5 / (16 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(15 / (16 * Math.PI))],
-      IY = [() => 1, YY => YY.y, YY => YY.z, YY => YY.x, YY => YY.x * YY.y, YY => YY.y * YY.z, YY => 3 * YY.z * YY.z - 1, YY => YY.x * YY.z, YY => YY.x * YY.x - YY.y * YY.y],
-      RY = (YY, rY) => AY[YY] * IY[YY](rY),
-      OY = [Math.PI, 2 * Math.PI / 3, 2 * Math.PI / 3, 2 * Math.PI / 3, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4];
-    class gY {
+    var iT = IT(36118);
+    const zT = [Math.sqrt(1 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(3 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(15 / (4 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(5 / (16 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(15 / (16 * Math.PI))],
+      kT = [() => 1, TT => TT.y, TT => TT.z, TT => TT.x, TT => TT.x * TT.y, TT => TT.y * TT.z, TT => 3 * TT.z * TT.z - 1, TT => TT.x * TT.z, TT => TT.x * TT.x - TT.y * TT.y],
+      WT = (TT, oT) => zT[TT] * kT[TT](oT),
+      XT = [Math.PI, 2 * Math.PI / 3, 2 * Math.PI / 3, 2 * Math.PI / 3, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4];
+    class BT {
       constructor() {
-        this.preScaled = !1, this.l00 = FY.r.Zero(), this.l1_1 = FY.r.Zero(), this.l10 = FY.r.Zero(), this.l11 = FY.r.Zero(), this.l2_2 = FY.r.Zero(), this.l2_1 = FY.r.Zero(), this.l20 = FY.r.Zero(), this.l21 = FY.r.Zero(), this.l22 = FY.r.Zero()
+        this.preScaled = !1, this.l00 = iT.m.Zero(), this.l1_1 = iT.m.Zero(), this.l10 = iT.m.Zero(), this.l11 = iT.m.Zero(), this.l2_2 = iT.m.Zero(), this.l2_1 = iT.m.Zero(), this.l20 = iT.m.Zero(), this.l21 = iT.m.Zero(), this.l22 = iT.m.Zero()
       }
-      addLight(YY, rY, DY) {
-        FY.n.xy[0].set(rY.r, rY.g, rY.b);
-        const AY = FY.n.xy[0],
-          IY = FY.n.xy[1];
-        AY.scaleToRef(DY, IY), IY.scaleToRef(RY(0, YY), FY.n.xy[2]), this.l00.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(1, YY), FY.n.xy[2]), this.l1_1.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(2, YY), FY.n.xy[2]), this.l10.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(3, YY), FY.n.xy[2]), this.l11.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(4, YY), FY.n.xy[2]), this.l2_2.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(5, YY), FY.n.xy[2]), this.l2_1.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(6, YY), FY.n.xy[2]), this.l20.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(7, YY), FY.n.xy[2]), this.l21.addInPlace(FY.n.xy[2]), IY.scaleToRef(RY(8, YY), FY.n.xy[2]), this.l22.addInPlace(FY.n.xy[2])
+      addLight(TT, oT, IT) {
+        iT.i.sc[0].set(oT.r, oT.g, oT.b);
+        const zT = iT.i.sc[0],
+          kT = iT.i.sc[1];
+        zT.scaleToRef(IT, kT), kT.scaleToRef(WT(0, TT), iT.i.sc[2]), this.l00.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(1, TT), iT.i.sc[2]), this.l1_1.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(2, TT), iT.i.sc[2]), this.l10.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(3, TT), iT.i.sc[2]), this.l11.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(4, TT), iT.i.sc[2]), this.l2_2.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(5, TT), iT.i.sc[2]), this.l2_1.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(6, TT), iT.i.sc[2]), this.l20.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(7, TT), iT.i.sc[2]), this.l21.addInPlace(iT.i.sc[2]), kT.scaleToRef(WT(8, TT), iT.i.sc[2]), this.l22.addInPlace(iT.i.sc[2])
       }
-      scaleInPlace(YY) {
-        this.l00.scaleInPlace(YY), this.l1_1.scaleInPlace(YY), this.l10.scaleInPlace(YY), this.l11.scaleInPlace(YY), this.l2_2.scaleInPlace(YY), this.l2_1.scaleInPlace(YY), this.l20.scaleInPlace(YY), this.l21.scaleInPlace(YY), this.l22.scaleInPlace(YY)
+      scaleInPlace(TT) {
+        this.l00.scaleInPlace(TT), this.l1_1.scaleInPlace(TT), this.l10.scaleInPlace(TT), this.l11.scaleInPlace(TT), this.l2_2.scaleInPlace(TT), this.l2_1.scaleInPlace(TT), this.l20.scaleInPlace(TT), this.l21.scaleInPlace(TT), this.l22.scaleInPlace(TT)
       }
       convertIncidentRadianceToIrradiance() {
-        this.l00.scaleInPlace(OY[0]), this.l1_1.scaleInPlace(OY[1]), this.l10.scaleInPlace(OY[2]), this.l11.scaleInPlace(OY[3]), this.l2_2.scaleInPlace(OY[4]), this.l2_1.scaleInPlace(OY[5]), this.l20.scaleInPlace(OY[6]), this.l21.scaleInPlace(OY[7]), this.l22.scaleInPlace(OY[8])
+        this.l00.scaleInPlace(XT[0]), this.l1_1.scaleInPlace(XT[1]), this.l10.scaleInPlace(XT[2]), this.l11.scaleInPlace(XT[3]), this.l2_2.scaleInPlace(XT[4]), this.l2_1.scaleInPlace(XT[5]), this.l20.scaleInPlace(XT[6]), this.l21.scaleInPlace(XT[7]), this.l22.scaleInPlace(XT[8])
       }
       convertIrradianceToLambertianRadiance() {
         this.scaleInPlace(1 / Math.PI)
       }
       preScaleForRendering() {
-        this.preScaled = !0, this.l00.scaleInPlace(AY[0]), this.l1_1.scaleInPlace(AY[1]), this.l10.scaleInPlace(AY[2]), this.l11.scaleInPlace(AY[3]), this.l2_2.scaleInPlace(AY[4]), this.l2_1.scaleInPlace(AY[5]), this.l20.scaleInPlace(AY[6]), this.l21.scaleInPlace(AY[7]), this.l22.scaleInPlace(AY[8])
+        this.preScaled = !0, this.l00.scaleInPlace(zT[0]), this.l1_1.scaleInPlace(zT[1]), this.l10.scaleInPlace(zT[2]), this.l11.scaleInPlace(zT[3]), this.l2_2.scaleInPlace(zT[4]), this.l2_1.scaleInPlace(zT[5]), this.l20.scaleInPlace(zT[6]), this.l21.scaleInPlace(zT[7]), this.l22.scaleInPlace(zT[8])
       }
-      updateFromArray(YY) {
-        return FY.r.FromArrayToRef(YY[0], 0, this.l00), FY.r.FromArrayToRef(YY[1], 0, this.l1_1), FY.r.FromArrayToRef(YY[2], 0, this.l10), FY.r.FromArrayToRef(YY[3], 0, this.l11), FY.r.FromArrayToRef(YY[4], 0, this.l2_2), FY.r.FromArrayToRef(YY[5], 0, this.l2_1), FY.r.FromArrayToRef(YY[6], 0, this.l20), FY.r.FromArrayToRef(YY[7], 0, this.l21), FY.r.FromArrayToRef(YY[8], 0, this.l22), this
+      updateFromArray(TT) {
+        return iT.m.FromArrayToRef(TT[0], 0, this.l00), iT.m.FromArrayToRef(TT[1], 0, this.l1_1), iT.m.FromArrayToRef(TT[2], 0, this.l10), iT.m.FromArrayToRef(TT[3], 0, this.l11), iT.m.FromArrayToRef(TT[4], 0, this.l2_2), iT.m.FromArrayToRef(TT[5], 0, this.l2_1), iT.m.FromArrayToRef(TT[6], 0, this.l20), iT.m.FromArrayToRef(TT[7], 0, this.l21), iT.m.FromArrayToRef(TT[8], 0, this.l22), this
       }
-      updateFromFloatsArray(YY) {
-        return FY.r.FromFloatsToRef(YY[0], YY[1], YY[2], this.l00), FY.r.FromFloatsToRef(YY[3], YY[4], YY[5], this.l1_1), FY.r.FromFloatsToRef(YY[6], YY[7], YY[8], this.l10), FY.r.FromFloatsToRef(YY[9], YY[10], YY[11], this.l11), FY.r.FromFloatsToRef(YY[12], YY[13], YY[14], this.l2_2), FY.r.FromFloatsToRef(YY[15], YY[16], YY[17], this.l2_1), FY.r.FromFloatsToRef(YY[18], YY[19], YY[20], this.l20), FY.r.FromFloatsToRef(YY[21], YY[22], YY[23], this.l21), FY.r.FromFloatsToRef(YY[24], YY[25], YY[26], this.l22), this
+      updateFromFloatsArray(TT) {
+        return iT.m.FromFloatsToRef(TT[0], TT[1], TT[2], this.l00), iT.m.FromFloatsToRef(TT[3], TT[4], TT[5], this.l1_1), iT.m.FromFloatsToRef(TT[6], TT[7], TT[8], this.l10), iT.m.FromFloatsToRef(TT[9], TT[10], TT[11], this.l11), iT.m.FromFloatsToRef(TT[12], TT[13], TT[14], this.l2_2), iT.m.FromFloatsToRef(TT[15], TT[16], TT[17], this.l2_1), iT.m.FromFloatsToRef(TT[18], TT[19], TT[20], this.l20), iT.m.FromFloatsToRef(TT[21], TT[22], TT[23], this.l21), iT.m.FromFloatsToRef(TT[24], TT[25], TT[26], this.l22), this
       }
-      static FromArray(YY) {
-        return (new gY).updateFromArray(YY)
+      static FromArray(TT) {
+        return (new BT).updateFromArray(TT)
       }
-      static FromPolynomial(YY) {
-        const rY = new gY;
-        return rY.l00 = YY.xx.scale(.376127).add(YY.yy.scale(.376127)).add(YY.zz.scale(.376126)), rY.l1_1 = YY.y.scale(.977204), rY.l10 = YY.z.scale(.977204), rY.l11 = YY.x.scale(.977204), rY.l2_2 = YY.xy.scale(1.16538), rY.l2_1 = YY.yz.scale(1.16538), rY.l20 = YY.zz.scale(1.34567).subtract(YY.xx.scale(.672834)).subtract(YY.yy.scale(.672834)), rY.l21 = YY.zx.scale(1.16538), rY.l22 = YY.xx.scale(1.16538).subtract(YY.yy.scale(1.16538)), rY.l1_1.scaleInPlace(-1), rY.l11.scaleInPlace(-1), rY.l2_1.scaleInPlace(-1), rY.l21.scaleInPlace(-1), rY.scaleInPlace(Math.PI), rY
+      static FromPolynomial(TT) {
+        const oT = new BT;
+        return oT.l00 = TT.xx.scale(.376127).add(TT.yy.scale(.376127)).add(TT.zz.scale(.376126)), oT.l1_1 = TT.y.scale(.977204), oT.l10 = TT.z.scale(.977204), oT.l11 = TT.x.scale(.977204), oT.l2_2 = TT.xy.scale(1.16538), oT.l2_1 = TT.yz.scale(1.16538), oT.l20 = TT.zz.scale(1.34567).subtract(TT.xx.scale(.672834)).subtract(TT.yy.scale(.672834)), oT.l21 = TT.zx.scale(1.16538), oT.l22 = TT.xx.scale(1.16538).subtract(TT.yy.scale(1.16538)), oT.l1_1.scaleInPlace(-1), oT.l11.scaleInPlace(-1), oT.l2_1.scaleInPlace(-1), oT.l21.scaleInPlace(-1), oT.scaleInPlace(Math.PI), oT
       }
     }
-    class aY {
+    class FT {
       constructor() {
-        this.x = FY.r.Zero(), this.y = FY.r.Zero(), this.z = FY.r.Zero(), this.xx = FY.r.Zero(), this.yy = FY.r.Zero(), this.zz = FY.r.Zero(), this.xy = FY.r.Zero(), this.yz = FY.r.Zero(), this.zx = FY.r.Zero()
+        this.x = iT.m.Zero(), this.y = iT.m.Zero(), this.z = iT.m.Zero(), this.xx = iT.m.Zero(), this.yy = iT.m.Zero(), this.zz = iT.m.Zero(), this.xy = iT.m.Zero(), this.yz = iT.m.Zero(), this.zx = iT.m.Zero()
       }
       get preScaledHarmonics() {
-        return this._harmonics || (this._harmonics = gY.FromPolynomial(this)), this._harmonics.preScaled || this._harmonics.preScaleForRendering(), this._harmonics
+        return this._harmonics || (this._harmonics = BT.FromPolynomial(this)), this._harmonics.preScaled || this._harmonics.preScaleForRendering(), this._harmonics
       }
-      addAmbient(YY) {
-        FY.n.xy[0].p_(YY.r, YY.g, YY.b);
-        const rY = FY.n.xy[0];
-        this.xx.addInPlace(rY), this.yy.addInPlace(rY), this.zz.addInPlace(rY)
+      addAmbient(TT) {
+        iT.i.sc[0].S_(TT.r, TT.g, TT.b);
+        const oT = iT.i.sc[0];
+        this.xx.addInPlace(oT), this.yy.addInPlace(oT), this.zz.addInPlace(oT)
       }
-      scaleInPlace(YY) {
-        this.x.scaleInPlace(YY), this.y.scaleInPlace(YY), this.z.scaleInPlace(YY), this.xx.scaleInPlace(YY), this.yy.scaleInPlace(YY), this.zz.scaleInPlace(YY), this.yz.scaleInPlace(YY), this.zx.scaleInPlace(YY), this.xy.scaleInPlace(YY)
+      scaleInPlace(TT) {
+        this.x.scaleInPlace(TT), this.y.scaleInPlace(TT), this.z.scaleInPlace(TT), this.xx.scaleInPlace(TT), this.yy.scaleInPlace(TT), this.zz.scaleInPlace(TT), this.yz.scaleInPlace(TT), this.zx.scaleInPlace(TT), this.xy.scaleInPlace(TT)
       }
-      updateFromHarmonics(YY) {
-        return this._harmonics = YY, this.x.brY(YY.l11), this.x.scaleInPlace(1.02333).scaleInPlace(-1), this.y.brY(YY.l1_1), this.y.scaleInPlace(1.02333).scaleInPlace(-1), this.z.brY(YY.l10), this.z.scaleInPlace(1.02333), this.xx.brY(YY.l00), FY.n.xy[0].brY(YY.l20).scaleInPlace(.247708), FY.n.xy[1].brY(YY.l22).scaleInPlace(.429043), this.xx.scaleInPlace(.886277).dDY(FY.n.xy[0]).addInPlace(FY.n.xy[1]), this.yy.brY(YY.l00), this.yy.scaleInPlace(.886277).dDY(FY.n.xy[0]).dDY(FY.n.xy[1]), this.zz.brY(YY.l00), FY.n.xy[0].brY(YY.l20).scaleInPlace(.495417), this.zz.scaleInPlace(.886277).addInPlace(FY.n.xy[0]), this.yz.brY(YY.l2_1), this.yz.scaleInPlace(.858086).scaleInPlace(-1), this.zx.brY(YY.l21), this.zx.scaleInPlace(.858086).scaleInPlace(-1), this.xy.brY(YY.l2_2), this.xy.scaleInPlace(.858086), this.scaleInPlace(1 / Math.PI), this
+      updateFromHarmonics(TT) {
+        return this._harmonics = TT, this.x.SIT(TT.l11), this.x.scaleInPlace(1.02333).scaleInPlace(-1), this.y.SIT(TT.l1_1), this.y.scaleInPlace(1.02333).scaleInPlace(-1), this.z.SIT(TT.l10), this.z.scaleInPlace(1.02333), this.xx.SIT(TT.l00), iT.i.sc[0].SIT(TT.l20).scaleInPlace(.247708), iT.i.sc[1].SIT(TT.l22).scaleInPlace(.429043), this.xx.scaleInPlace(.886277).SiT(iT.i.sc[0]).addInPlace(iT.i.sc[1]), this.yy.SIT(TT.l00), this.yy.scaleInPlace(.886277).SiT(iT.i.sc[0]).SiT(iT.i.sc[1]), this.zz.SIT(TT.l00), iT.i.sc[0].SIT(TT.l20).scaleInPlace(.495417), this.zz.scaleInPlace(.886277).addInPlace(iT.i.sc[0]), this.yz.SIT(TT.l2_1), this.yz.scaleInPlace(.858086).scaleInPlace(-1), this.zx.SIT(TT.l21), this.zx.scaleInPlace(.858086).scaleInPlace(-1), this.xy.SIT(TT.l2_2), this.xy.scaleInPlace(.858086), this.scaleInPlace(1 / Math.PI), this
       }
-      static FromHarmonics(YY) {
-        return (new aY).updateFromHarmonics(YY)
+      static FromHarmonics(TT) {
+        return (new FT).updateFromHarmonics(TT)
       }
-      static FromArray(YY) {
-        const rY = new aY;
-        return FY.r.FromArrayToRef(YY[0], 0, rY.x), FY.r.FromArrayToRef(YY[1], 0, rY.y), FY.r.FromArrayToRef(YY[2], 0, rY.z), FY.r.FromArrayToRef(YY[3], 0, rY.xx), FY.r.FromArrayToRef(YY[4], 0, rY.yy), FY.r.FromArrayToRef(YY[5], 0, rY.zz), FY.r.FromArrayToRef(YY[6], 0, rY.yz), FY.r.FromArrayToRef(YY[7], 0, rY.zx), FY.r.FromArrayToRef(YY[8], 0, rY.xy), rY
+      static FromArray(TT) {
+        const oT = new FT;
+        return iT.m.FromArrayToRef(TT[0], 0, oT.x), iT.m.FromArrayToRef(TT[1], 0, oT.y), iT.m.FromArrayToRef(TT[2], 0, oT.z), iT.m.FromArrayToRef(TT[3], 0, oT.xx), iT.m.FromArrayToRef(TT[4], 0, oT.yy), iT.m.FromArrayToRef(TT[5], 0, oT.zz), iT.m.FromArrayToRef(TT[6], 0, oT.yz), iT.m.FromArrayToRef(TT[7], 0, oT.zx), iT.m.FromArrayToRef(TT[8], 0, oT.xy), oT
       }
     }
   },
-  39554: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => ZY,
-      c: () => fY
+  39230: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => JT,
+      f: () => aT
     });
-    var FY = DY(39127),
-      AY = DY(36552),
-      IY = DY(36524),
-      RY = DY(39270),
-      OY = DY(39530),
-      gY = DY(39560),
-      aY = DY(39261),
-      vY = DY(39422),
-      uY = DY(39255);
-    class sY {
+    var iT = IT(38764),
+      zT = IT(36149),
+      kT = IT(36118),
+      WT = IT(38923),
+      XT = IT(39210),
+      BT = IT(39233),
+      FT = IT(38918),
+      ST = IT(39091),
+      DT = IT(38911);
+    class LT {
       constructor() {
-        this._checkCollisions = !1, this._collisionMask = -1, this._collisionGroup = -1, this._surroundingMeshes = null, this._collider = null, this._oldPositionForCollisions = new IY.r(0, 0, 0), this._diffPositionForCollisions = new IY.r(0, 0, 0), this._collisionResponse = !0
+        this._checkCollisions = !1, this._collisionMask = -1, this._collisionGroup = -1, this._surroundingMeshes = null, this._collider = null, this._oldPositionForCollisions = new kT.m(0, 0, 0), this._diffPositionForCollisions = new kT.m(0, 0, 0), this._collisionResponse = !0
       }
     }
-    var iY, yY, QY, oY = DY(39029),
-      WY = DY(39184),
-      EY = DY(39429),
-      mY = DY(36588),
-      VY = DY(36533),
-      SY = DY(39355),
-      lY = DY(38040),
-      TY = DY(39131),
-      eY = DY(39041),
-      NY = DY(36569);
+    var xT, cT, KT, MT = IT(38643),
+      rT = IT(38853),
+      AT = IT(39102),
+      gT = IT(36177),
+      hT = IT(36125),
+      wT = IT(38997),
+      mT = IT(37660),
+      eT = IT(38773),
+      RT = IT(38659),
+      uT = IT(36166);
 
-    function BY(YY, rY) {
-      return YY - Math.floor(YY / rY) * rY
+    function vT(TT, oT) {
+      return TT - Math.floor(TT / oT) * oT
     }
 
-    function cY(YY, rY, DY) {
-      YY instanceof Float32Array ? IY.e.FromArrayToRef(YY, rY, DY) : DY.p_((0, WY.c)(YY[rY]), (0, WY.c)(YY[rY + 1]), (0, WY.c)(YY[rY + 2]), (0, WY.c)(YY[rY + 3]), (0, WY.c)(YY[rY + 4]), (0, WY.c)(YY[rY + 5]), (0, WY.c)(YY[rY + 6]), (0, WY.c)(YY[rY + 7]), (0, WY.c)(YY[rY + 8]), (0, WY.c)(YY[rY + 9]), (0, WY.c)(YY[rY + 10]), (0, WY.c)(YY[rY + 11]), (0, WY.c)(YY[rY + 12]), (0, WY.c)(YY[rY + 13]), (0, WY.c)(YY[rY + 14]), (0, WY.c)(YY[rY + 15]))
+    function ET(TT, oT, IT) {
+      TT instanceof Float32Array ? kT.b.FromArrayToRef(TT, oT, IT) : IT.S_((0, rT.b)(TT[oT]), (0, rT.b)(TT[oT + 1]), (0, rT.b)(TT[oT + 2]), (0, rT.b)(TT[oT + 3]), (0, rT.b)(TT[oT + 4]), (0, rT.b)(TT[oT + 5]), (0, rT.b)(TT[oT + 6]), (0, rT.b)(TT[oT + 7]), (0, rT.b)(TT[oT + 8]), (0, rT.b)(TT[oT + 9]), (0, rT.b)(TT[oT + 10]), (0, rT.b)(TT[oT + 11]), (0, rT.b)(TT[oT + 12]), (0, rT.b)(TT[oT + 13]), (0, rT.b)(TT[oT + 14]), (0, rT.b)(TT[oT + 15]))
     }
 
-    function KY(YY, rY, DY, FY, AY, OY, gY, aY, vY) {
-      const uY = DY.texture,
-        sY = uY?.getInternalTexture(),
-        iY = sY?._bufferView;
-      if (!(iY instanceof Float32Array) && !(iY instanceof Uint16Array)) return lY.d.Warn("Baked vertex animation bounding info requires CPU-readable Float32Array or Uint16Array texture data.", 1), !1;
-      const yY = uY.getSize(),
-        QY = function(YY, rY) {
-          const DY = YY.y - YY.x + 1,
-            FY = rY * YY.w / DY,
-            AY = FY < 1 ? 0 : 1,
-            IY = DY - AY;
-          let RY = BY(FY - Math.floor(FY), 1) * IY;
-          return RY = BY(RY + YY.z, IY), Math.floor(RY) + YY.x + AY
-        }(FY, DY.time);
-      if (!isFinite(QY) || QY < 0 || QY >= yY.height) return lY.d.Warn("Baked vertex animation bounding info could not be refreshed because the computed frame is outside the texture.", 1), !1;
-      const oY = IY.n.xy[0],
-        WY = IY.n.Matrix[0],
-        EY = IY.n.Matrix[1],
-        mY = QY * yY.width * 4,
-        VY = rY === RY.l.NormalKind ? IY.r.TransformNormalFromFloatsToRef : IY.r.TransformCoordinatesFromFloatsToRef;
-      for (let IY = 0, RY = 0; IY < YY.length; IY += 3, RY += 4) {
-        let rY, DY;
-        for (WY.reset(), rY = 0; rY < 4 && rY < vY; rY++) DY = OY[RY + rY], DY > 0 && (cY(iY, mY + 16 * Math.floor(AY[RY + rY]), EY), EY.scaleAndAddToRef(DY, WY));
-        if (gY && aY)
-          for (rY = 0; rY < 4 && rY + 4 < vY; rY++) DY = aY[RY + rY], DY > 0 && (cY(iY, mY + 16 * Math.floor(gY[RY + rY]), EY), EY.scaleAndAddToRef(DY, WY));
-        VY(YY[IY], YY[IY + 1], YY[IY + 2], WY, oY), oY.toArray(YY, IY)
+    function fT(TT, oT, IT, iT, zT, XT, BT, FT, ST) {
+      const DT = IT.texture,
+        LT = DT?.getInternalTexture(),
+        xT = LT?._bufferView;
+      if (!(xT instanceof Float32Array) && !(xT instanceof Uint16Array)) return mT.d.Warn("Baked vertex animation bounding info requires CPU-readable Float32Array or Uint16Array texture data.", 1), !1;
+      const cT = DT.getSize(),
+        KT = function(TT, oT) {
+          const IT = TT.y - TT.x + 1,
+            iT = oT * TT.w / IT,
+            zT = iT < 1 ? 0 : 1,
+            kT = IT - zT;
+          let WT = vT(iT - Math.floor(iT), 1) * kT;
+          return WT = vT(WT + TT.z, kT), Math.floor(WT) + TT.x + zT
+        }(iT, IT.time);
+      if (!isFinite(KT) || KT < 0 || KT >= cT.height) return mT.d.Warn("Baked vertex animation bounding info could not be refreshed because the computed frame is outside the texture.", 1), !1;
+      const MT = kT.i.sc[0],
+        rT = kT.i.Matrix[0],
+        AT = kT.i.Matrix[1],
+        gT = KT * cT.width * 4,
+        hT = oT === WT.i.NormalKind ? kT.m.TransformNormalFromFloatsToRef : kT.m.TransformCoordinatesFromFloatsToRef;
+      for (let kT = 0, WT = 0; kT < TT.length; kT += 3, WT += 4) {
+        let oT, IT;
+        for (rT.reset(), oT = 0; oT < 4 && oT < ST; oT++) IT = XT[WT + oT], IT > 0 && (ET(xT, gT + 16 * Math.floor(zT[WT + oT]), AT), AT.scaleAndAddToRef(IT, rT));
+        if (BT && FT)
+          for (oT = 0; oT < 4 && oT + 4 < ST; oT++) IT = FT[WT + oT], IT > 0 && (ET(xT, gT + 16 * Math.floor(BT[WT + oT]), AT), AT.scaleAndAddToRef(IT, rT));
+        hT(TT[kT], TT[kT + 1], TT[kT + 2], rT, MT), MT.toArray(TT, kT)
       }
       return !0
     }
-    class HY {
+    class CT {
       constructor() {
-        this.facetNb = 0, this.partitioningSubdivisions = 10, this.partitioningBBoxRatio = 1.01, this.facetDataEnabled = !1, this.facetParameters = {}, this.bbSize = IY.r.Zero(), this.subDiv = {
+        this.facetNb = 0, this.partitioningSubdivisions = 10, this.partitioningBBoxRatio = 1.01, this.facetDataEnabled = !1, this.facetParameters = {}, this.bbSize = kT.m.Zero(), this.subDiv = {
           max: 1,
           X: 1,
           Y: 1,
@@ -2816,33 +2816,33 @@ export const modules = {
         }, this.facetDepthSort = !1, this.facetDepthSortEnabled = !1
       }
     }
-    class zY {
+    class jT {
       constructor() {
-        this._hasVertexAlpha = !1, this._useVertexColors = !0, this._numBoneInfluencers = 4, this._applyFog = !0, this._receiveShadows = !1, this._facetData = new HY, this._visibility = 1, this._skeleton = null, this._layerMask = 268435455, this._computeBonesUsingShaders = !0, this._isActive = !1, this._onlyForInstances = !1, this._isActiveIntermediate = !1, this._onlyForInstancesIntermediate = !1, this._actAsRegularMesh = !1, this._currentLOD = new Map, this._collisionRetryCount = 3, this._morphTargetManager = null, this._renderingGroupId = 0, this._meshBlendingTag = 0, this._bakedVertexAnimationManager = null, this._material = null, this._positions = null, this._pointerOverDisableMeshTesting = !1, this._meshCollisionData = new sY, this._enableDistantPicking = !1, this._rawBoundingInfo = null, this._sideOrientationHint = !1, this._wasActiveLastFrame = !1
+        this._hasVertexAlpha = !1, this._useVertexColors = !0, this._numBoneInfluencers = 4, this._applyFog = !0, this._receiveShadows = !1, this._facetData = new CT, this._visibility = 1, this._skeleton = null, this._layerMask = 268435455, this._computeBonesUsingShaders = !0, this._isActive = !1, this._onlyForInstances = !1, this._isActiveIntermediate = !1, this._onlyForInstancesIntermediate = !1, this._actAsRegularMesh = !1, this._currentLOD = new Map, this._collisionRetryCount = 3, this._morphTargetManager = null, this._renderingGroupId = 0, this._meshBlendingTag = 0, this._bakedVertexAnimationManager = null, this._material = null, this._positions = null, this._pointerOverDisableMeshTesting = !1, this._meshCollisionData = new LT, this._enableDistantPicking = !1, this._rawBoundingInfo = null, this._sideOrientationHint = !1, this._wasActiveLastFrame = !1
       }
     }
-    let ZY = (() => {
-        var YY;
-        let rY, sY = gY.g,
-          iY = [];
-        return YY = class extends sY {
+    let JT = (() => {
+        var TT;
+        let oT, LT = BT.g,
+          xT = [];
+        return TT = class extends LT {
           static get BILLBOARDMODE_NONE() {
-            return gY.g.BILLBOARDMODE_NONE
+            return BT.g.BILLBOARDMODE_NONE
           }
           static get BILLBOARDMODE_X() {
-            return gY.g.BILLBOARDMODE_X
+            return BT.g.BILLBOARDMODE_X
           }
           static get BILLBOARDMODE_Y() {
-            return gY.g.BILLBOARDMODE_Y
+            return BT.g.BILLBOARDMODE_Y
           }
           static get BILLBOARDMODE_Z() {
-            return gY.g.BILLBOARDMODE_Z
+            return BT.g.BILLBOARDMODE_Z
           }
           static get BILLBOARDMODE_ALL() {
-            return gY.g.BILLBOARDMODE_ALL
+            return BT.g.BILLBOARDMODE_ALL
           }
           static get BILLBOARDMODE_USE_POSITION() {
-            return gY.g.BILLBOARDMODE_USE_POSITION
+            return BT.g.BILLBOARDMODE_USE_POSITION
           }
           get facetNb() {
             return this._internalAbstractMeshDataInfo._facetData.facetNb
@@ -2850,32 +2850,32 @@ export const modules = {
           get partitioningSubdivisions() {
             return this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions
           }
-          set partitioningSubdivisions(YY) {
-            this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions = YY
+          set partitioningSubdivisions(TT) {
+            this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions = TT
           }
           get partitioningBBoxRatio() {
             return this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio
           }
-          set partitioningBBoxRatio(YY) {
-            this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio = YY
+          set partitioningBBoxRatio(TT) {
+            this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio = TT
           }
           get mustDepthSortFacets() {
             return this._internalAbstractMeshDataInfo._facetData.facetDepthSort
           }
-          set mustDepthSortFacets(YY) {
-            this._internalAbstractMeshDataInfo._facetData.facetDepthSort = YY
+          set mustDepthSortFacets(TT) {
+            this._internalAbstractMeshDataInfo._facetData.facetDepthSort = TT
           }
           get facetDepthSortFrom() {
             return this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom
           }
-          set facetDepthSortFrom(YY) {
-            this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom = YY
+          set facetDepthSortFrom(TT) {
+            this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom = TT
           }
           get collisionRetryCount() {
             return this._internalAbstractMeshDataInfo._collisionRetryCount
           }
-          set collisionRetryCount(YY) {
-            this._internalAbstractMeshDataInfo._collisionRetryCount = YY
+          set collisionRetryCount(TT) {
+            this._internalAbstractMeshDataInfo._collisionRetryCount = TT
           }
           get isFacetDataEnabled() {
             return this._internalAbstractMeshDataInfo._facetData.facetDataEnabled
@@ -2883,182 +2883,182 @@ export const modules = {
           get morphTargetManager() {
             return this._internalAbstractMeshDataInfo._morphTargetManager
           }
-          set morphTargetManager(YY) {
-            this._internalAbstractMeshDataInfo._morphTargetManager !== YY && (this._internalAbstractMeshDataInfo._morphTargetManager = YY, this._syncGeometryWithMorphTargetManager())
+          set morphTargetManager(TT) {
+            this._internalAbstractMeshDataInfo._morphTargetManager !== TT && (this._internalAbstractMeshDataInfo._morphTargetManager = TT, this._syncGeometryWithMorphTargetManager())
           }
           get bakedVertexAnimationManager() {
             return this._internalAbstractMeshDataInfo._bakedVertexAnimationManager
           }
-          set bakedVertexAnimationManager(YY) {
-            this._internalAbstractMeshDataInfo._bakedVertexAnimationManager !== YY && (this._internalAbstractMeshDataInfo._bakedVertexAnimationManager = YY, this._markSubMeshesAsAttributesDirty())
+          set bakedVertexAnimationManager(TT) {
+            this._internalAbstractMeshDataInfo._bakedVertexAnimationManager !== TT && (this._internalAbstractMeshDataInfo._bakedVertexAnimationManager = TT, this._markSubMeshesAsAttributesDirty())
           }
           _syncGeometryWithMorphTargetManager() {}
-          _updateNonUniformScalingState(YY) {
-            return !!super._updateNonUniformScalingState(YY) && (this._markSubMeshesAsMiscDirty(), !0)
+          _updateNonUniformScalingState(TT) {
+            return !!super._updateNonUniformScalingState(TT) && (this._markSubMeshesAsMiscDirty(), !0)
           }
           get rawBoundingInfo() {
             return this._internalAbstractMeshDataInfo._rawBoundingInfo
           }
-          set rawBoundingInfo(YY) {
-            this._internalAbstractMeshDataInfo._rawBoundingInfo = YY
+          set rawBoundingInfo(TT) {
+            this._internalAbstractMeshDataInfo._rawBoundingInfo = TT
           }
-          set Lu(YY) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver && this.onCollideObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver = this.onCollideObservable.add(YY)
+          set cL(TT) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver && this.onCollideObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver = this.onCollideObservable.add(TT)
           }
-          set onCollisionPositionChange(YY) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver && this.onCollisionPositionChangeObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver = this.onCollisionPositionChangeObservable.add(YY)
+          set onCollisionPositionChange(TT) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver && this.onCollisionPositionChangeObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver = this.onCollisionPositionChangeObservable.add(TT)
           }
           get visibility() {
             return this._internalAbstractMeshDataInfo._visibility
           }
-          set visibility(YY) {
-            if (this._internalAbstractMeshDataInfo._visibility === YY) return;
-            const rY = this._internalAbstractMeshDataInfo._visibility;
-            this._internalAbstractMeshDataInfo._visibility = YY, (1 === rY && 1 !== YY || 1 !== rY && 1 === YY) && this._markSubMeshesAsDirty((YY => {
-              YY.markAsMiscDirty(), YY.markAsPrePassDirty()
+          set visibility(TT) {
+            if (this._internalAbstractMeshDataInfo._visibility === TT) return;
+            const oT = this._internalAbstractMeshDataInfo._visibility;
+            this._internalAbstractMeshDataInfo._visibility = TT, (1 === oT && 1 !== TT || 1 !== oT && 1 === TT) && this._markSubMeshesAsDirty((TT => {
+              TT.markAsMiscDirty(), TT.markAsPrePassDirty()
             }))
           }
           get pointerOverDisableMeshTesting() {
             return this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting
           }
-          set pointerOverDisableMeshTesting(YY) {
-            this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting = YY
+          set pointerOverDisableMeshTesting(TT) {
+            this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting = TT
           }
           get renderingGroupId() {
             return this._internalAbstractMeshDataInfo._renderingGroupId
           }
-          set renderingGroupId(YY) {
-            this._internalAbstractMeshDataInfo._renderingGroupId = YY
+          set renderingGroupId(TT) {
+            this._internalAbstractMeshDataInfo._renderingGroupId = TT
           }
           get meshBlendingTag() {
             return this._internalAbstractMeshDataInfo._meshBlendingTag
           }
-          set meshBlendingTag(YY) {
-            if (!Number.isInteger(YY) || YY < 0 || YY > 255 || 0 !== YY && 0 === (63 & YY)) throw new RangeError("Mesh-blending tag must be 0 or contain a group ID between 1 and 63.");
-            this._internalAbstractMeshDataInfo._meshBlendingTag = YY
+          set meshBlendingTag(TT) {
+            if (!Number.isInteger(TT) || TT < 0 || TT > 255 || 0 !== TT && 0 === (63 & TT)) throw new RangeError("Mesh-blending tag must be 0 or contain a group ID between 1 and 63.");
+            this._internalAbstractMeshDataInfo._meshBlendingTag = TT
           }
           get material() {
             return this._internalAbstractMeshDataInfo._material
           }
-          set material(YY) {
-            this._setMaterial(YY)
+          set material(TT) {
+            this._setMaterial(TT)
           }
-          _setMaterial(YY) {
-            this._internalAbstractMeshDataInfo._material !== YY && (this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._material = YY, YY && YY.meshMap && (YY.meshMap[this.uniqueId] = this), this.onMaterialChangedObservable.hasObservers() && this.onMaterialChangedObservable.notifyObservers(this), this.qm && (this.resetDrawCache(void 0, null == YY), this._unBindEffect()))
+          _setMaterial(TT) {
+            this._internalAbstractMeshDataInfo._material !== TT && (this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._material = TT, TT && TT.meshMap && (TT.meshMap[this.uniqueId] = this), this.onMaterialChangedObservable.hasObservers() && this.onMaterialChangedObservable.notifyObservers(this), this.pR && (this.resetDrawCache(void 0, null == TT), this._unBindEffect()))
           }
-          getMaterialForRenderPass(YY) {
-            return this._internalAbstractMeshDataInfo._materialForRenderPass?.[YY]
+          getMaterialForRenderPass(TT) {
+            return this._internalAbstractMeshDataInfo._materialForRenderPass?.[TT]
           }
-          setMaterialForRenderPass(YY, rY) {
-            this.resetDrawCache(YY), this._internalAbstractMeshDataInfo._materialForRenderPass || (this._internalAbstractMeshDataInfo._materialForRenderPass = []);
-            const DY = this._internalAbstractMeshDataInfo._materialForRenderPass[YY];
-            DY?.meshMap?.[this.uniqueId] && (DY.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._materialForRenderPass[YY] = rY, rY && rY.meshMap && (rY.meshMap[this.uniqueId] = this)
+          setMaterialForRenderPass(TT, oT) {
+            this.resetDrawCache(TT), this._internalAbstractMeshDataInfo._materialForRenderPass || (this._internalAbstractMeshDataInfo._materialForRenderPass = []);
+            const IT = this._internalAbstractMeshDataInfo._materialForRenderPass[TT];
+            IT?.meshMap?.[this.uniqueId] && (IT.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._materialForRenderPass[TT] = oT, oT && oT.meshMap && (oT.meshMap[this.uniqueId] = this)
           }
           get receiveShadows() {
             return this._internalAbstractMeshDataInfo._receiveShadows
           }
-          set receiveShadows(YY) {
-            this._internalAbstractMeshDataInfo._receiveShadows !== YY && (this._internalAbstractMeshDataInfo._receiveShadows = YY, this._markSubMeshesAsLightDirty())
+          set receiveShadows(TT) {
+            this._internalAbstractMeshDataInfo._receiveShadows !== TT && (this._internalAbstractMeshDataInfo._receiveShadows = TT, this._markSubMeshesAsLightDirty())
           }
           get hasVertexAlpha() {
             return this._internalAbstractMeshDataInfo._hasVertexAlpha
           }
-          set hasVertexAlpha(YY) {
-            this._internalAbstractMeshDataInfo._hasVertexAlpha !== YY && (this._internalAbstractMeshDataInfo._hasVertexAlpha = YY, this._markSubMeshesAsAttributesDirty(), this._markSubMeshesAsMiscDirty())
+          set hasVertexAlpha(TT) {
+            this._internalAbstractMeshDataInfo._hasVertexAlpha !== TT && (this._internalAbstractMeshDataInfo._hasVertexAlpha = TT, this._markSubMeshesAsAttributesDirty(), this._markSubMeshesAsMiscDirty())
           }
           get useVertexColors() {
             return this._internalAbstractMeshDataInfo._useVertexColors
           }
-          set useVertexColors(YY) {
-            this._internalAbstractMeshDataInfo._useVertexColors !== YY && (this._internalAbstractMeshDataInfo._useVertexColors = YY, this._markSubMeshesAsAttributesDirty())
+          set useVertexColors(TT) {
+            this._internalAbstractMeshDataInfo._useVertexColors !== TT && (this._internalAbstractMeshDataInfo._useVertexColors = TT, this._markSubMeshesAsAttributesDirty())
           }
           get computeBonesUsingShaders() {
             return this._internalAbstractMeshDataInfo._computeBonesUsingShaders
           }
-          set computeBonesUsingShaders(YY) {
-            this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== YY && (this._internalAbstractMeshDataInfo._computeBonesUsingShaders = YY, this._markSubMeshesAsAttributesDirty())
+          set computeBonesUsingShaders(TT) {
+            this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== TT && (this._internalAbstractMeshDataInfo._computeBonesUsingShaders = TT, this._markSubMeshesAsAttributesDirty())
           }
           get numBoneInfluencers() {
             return this._internalAbstractMeshDataInfo._numBoneInfluencers
           }
-          set numBoneInfluencers(YY) {
-            this._internalAbstractMeshDataInfo._numBoneInfluencers !== YY && (this._internalAbstractMeshDataInfo._numBoneInfluencers = YY, this._markSubMeshesAsAttributesDirty())
+          set numBoneInfluencers(TT) {
+            this._internalAbstractMeshDataInfo._numBoneInfluencers !== TT && (this._internalAbstractMeshDataInfo._numBoneInfluencers = TT, this._markSubMeshesAsAttributesDirty())
           }
           get applyFog() {
             return this._internalAbstractMeshDataInfo._applyFog
           }
-          set applyFog(YY) {
-            this._internalAbstractMeshDataInfo._applyFog !== YY && (this._internalAbstractMeshDataInfo._applyFog = YY, this._markSubMeshesAsMiscDirty())
+          set applyFog(TT) {
+            this._internalAbstractMeshDataInfo._applyFog !== TT && (this._internalAbstractMeshDataInfo._applyFog = TT, this._markSubMeshesAsMiscDirty())
           }
           get enableDistantPicking() {
             return this._internalAbstractMeshDataInfo._enableDistantPicking
           }
-          set enableDistantPicking(YY) {
-            this._internalAbstractMeshDataInfo._enableDistantPicking = YY
+          set enableDistantPicking(TT) {
+            this._internalAbstractMeshDataInfo._enableDistantPicking = TT
           }
           get layerMask() {
             return this._internalAbstractMeshDataInfo._layerMask
           }
-          set layerMask(YY) {
-            YY !== this._internalAbstractMeshDataInfo._layerMask && (this._internalAbstractMeshDataInfo._layerMask = YY, this._resyncLightSources())
+          set layerMask(TT) {
+            TT !== this._internalAbstractMeshDataInfo._layerMask && (this._internalAbstractMeshDataInfo._layerMask = TT, this._resyncLightSources())
           }
           get collisionMask() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask
           }
-          set collisionMask(YY) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask = isNaN(YY) ? -1 : YY
+          set collisionMask(TT) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask = isNaN(TT) ? -1 : TT
           }
           get collisionResponse() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse
           }
-          set collisionResponse(YY) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse = YY
+          set collisionResponse(TT) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse = TT
           }
           get collisionGroup() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup
           }
-          set collisionGroup(YY) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup = isNaN(YY) ? -1 : YY
+          set collisionGroup(TT) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup = isNaN(TT) ? -1 : TT
           }
           get surroundingMeshes() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes
           }
-          set surroundingMeshes(YY) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes = YY
+          set surroundingMeshes(TT) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes = TT
           }
           get lightSources() {
             return this._lightSources
           }
-          set skeleton(YY) {
-            const rY = this._internalAbstractMeshDataInfo._skeleton;
-            rY && rY.needInitialSkinMatrix && rY._unregisterMeshWithPoseMatrix(this), YY && YY.needInitialSkinMatrix && YY._registerMeshWithPoseMatrix(this), this._internalAbstractMeshDataInfo._skeleton = YY, this._internalAbstractMeshDataInfo._skeleton || (this._bonesTransformMatrices = null), this._markSubMeshesAsAttributesDirty()
+          set skeleton(TT) {
+            const oT = this._internalAbstractMeshDataInfo._skeleton;
+            oT && oT.needInitialSkinMatrix && oT._unregisterMeshWithPoseMatrix(this), TT && TT.needInitialSkinMatrix && TT._registerMeshWithPoseMatrix(this), this._internalAbstractMeshDataInfo._skeleton = TT, this._internalAbstractMeshDataInfo._skeleton || (this._bonesTransformMatrices = null), this._markSubMeshesAsAttributesDirty()
           }
           get skeleton() {
             return this._internalAbstractMeshDataInfo._skeleton
           }
-          constructor(rY) {
-            var DY;
-            let FY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            switch (super(rY, FY, !1), DY = this, this._internalAbstractMeshDataInfo = new zY, this._waitingMaterialId = null, this._waitingMorphTargetManagerId = null, this._waitingSkeletonId = null, this._waitingSkeletonUniqueId = null, this.cullingStrategy = YY.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY, this.onCollideObservable = new AY.e, this.onCollisionPositionChangeObservable = new AY.e, this.onMaterialChangedObservable = new AY.e, this.definedFacingForward = !0, this._occlusionQuery = null, this._renderingGroup = null, this.alphaIndex = Number.MAX_VALUE, this.Yo = YY.DefaultIsPickable, this.isNearPickable = !1, this.isNearGrabbable = !1, this.showSubMeshesBoundingBox = !1, this.isBlocker = !1, this.enablePointerMoveEvents = !1, this.outlineColor = mY.c.Red(), this.outlineWidth = .02, this.overlayColor = mY.c.Red(), this.overlayAlpha = .5, this.useOctreeForRenderingSelection = !0, this.useOctreeForPicking = !0, this.useOctreeForCollisions = !0, this.Gy = !1, this.Py = !1, this.actionManager = null, this.ellipsoid = new IY.r(.5, 1, .5), this.ellipsoidOffset = new IY.r(0, 0, 0), this.edgesWidth = 1, this.edgesColor = new mY.d(1, 0, 0, 1), this._edgesRenderer = null, this._masterMesh = null, this._boundingInfo = null, this._boundingInfoIsDirty = !0, this._renderId = 0, this._intersectionsInProgress = new Array, this._unIndexed = !1, this._lightSources = new Array, this._waitingData = {
+          constructor(oT) {
+            var IT;
+            let iT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            switch (super(oT, iT, !1), IT = this, this._internalAbstractMeshDataInfo = new jT, this._waitingMaterialId = null, this._waitingMorphTargetManagerId = null, this._waitingSkeletonId = null, this._waitingSkeletonUniqueId = null, this.cullingStrategy = TT.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY, this.onCollideObservable = new zT.d, this.onCollisionPositionChangeObservable = new zT.d, this.onMaterialChangedObservable = new zT.d, this.definedFacingForward = !0, this._occlusionQuery = null, this._renderingGroup = null, this.alphaIndex = Number.MAX_VALUE, this.dK = TT.DefaultIsPickable, this.isNearPickable = !1, this.isNearGrabbable = !1, this.showSubMeshesBoundingBox = !1, this.isBlocker = !1, this.enablePointerMoveEvents = !1, this.outlineColor = gT.e.Red(), this.outlineWidth = .02, this.overlayColor = gT.e.Red(), this.overlayAlpha = .5, this.useOctreeForRenderingSelection = !0, this.useOctreeForPicking = !0, this.useOctreeForCollisions = !0, this.lc = !1, this.Gc = !1, this.actionManager = null, this.ellipsoid = new kT.m(.5, 1, .5), this.ellipsoidOffset = new kT.m(0, 0, 0), this.edgesWidth = 1, this.edgesColor = new gT.i(1, 0, 0, 1), this._edgesRenderer = null, this._masterMesh = null, this._boundingInfo = null, this._boundingInfoIsDirty = !0, this._renderId = 0, this._intersectionsInProgress = new Array, this._unIndexed = !1, this._lightSources = new Array, this._waitingData = {
                 lods: null,
                 actions: null,
-                aN: null
-              }, this._bonesTransformMatrices = null, this._transformMatrixTexture = null, this.onRebuildObservable = new AY.e, this._onCollisionPositionChange = function(YY, rY) {
-                let FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                rY.subtractToRef(DY._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, DY._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), DY._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions.length() > eY.d.CollisionsEpsilon && DY.position.addInPlace(DY._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), FY && DY.onCollideObservable.notifyObservers(FY), DY.onCollisionPositionChangeObservable.notifyObservers(DY.position)
-              }, FY = this.hT(), this.layerMask = FY.defaultRenderableLayerMask, FY.WDY(this), this._resyncLightSources(), this._uniformBuffer = new uY.b(this.hT().ky(), void 0, void 0, rY, !this.hT().ky().isWebGPU), this._buildUniformLayout(), FY.performancePriority) {
+                LJ: null
+              }, this._bonesTransformMatrices = null, this._transformMatrixTexture = null, this.onRebuildObservable = new zT.d, this._onCollisionPositionChange = function(TT, oT) {
+                let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                oT.subtractToRef(IT._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, IT._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), IT._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions.length() > RT.b.CollisionsEpsilon && IT.position.addInPlace(IT._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), iT && IT.onCollideObservable.notifyObservers(iT), IT.onCollisionPositionChangeObservable.notifyObservers(IT.position)
+              }, iT = this.pC(), this.layerMask = iT.defaultRenderableLayerMask, iT.tIT(this), this._resyncLightSources(), this._uniformBuffer = new DT.e(this.pC().Zc(), void 0, void 0, oT, !this.pC().Zc().isWebGPU), this._buildUniformLayout(), iT.performancePriority) {
               case 2:
-                this.Py = !0;
+                this.Gc = !0;
               case 1:
-                this.Gy = !0, this.Yo = !1
+                this.lc = !0, this.dK = !1
             }
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("world", 16), this._uniformBuffer.addUniform("visibility", 1), this._uniformBuffer.create()
           }
-          transferToEffect(YY) {
-            const rY = this._uniformBuffer;
-            rY.m_("world", YY), rY.updateFloat("visibility", this._internalAbstractMeshDataInfo._visibility), rY.update()
+          transferToEffect(TT) {
+            const oT = this._uniformBuffer;
+            oT.Y1("world", TT), oT.updateFloat("visibility", this._internalAbstractMeshDataInfo._visibility), oT.update()
           }
           getMeshUniformBuffer() {
             return this._uniformBuffer
@@ -3069,84 +3069,84 @@ export const modules = {
           getClassName() {
             return "AbstractMesh"
           }
-          toString(YY) {
-            let rY = "Name: " + this.name + ", isInstance: " + ("InstancedMesh" === this.getClassName() ? "YES" : "NO");
-            rY += ", # of submeshes: " + (this.qm ? this.qm.length : 0);
-            const DY = this._internalAbstractMeshDataInfo._skeleton;
-            return DY && (rY += ", skeleton: " + DY.name), YY && (rY += ", billboard mode: " + ["NONE", "X", "Y", null, "Z", null, null, "ALL"][this.billboardMode], rY += ", freeze wrld mat: " + (this._isWorldMatrixFrozen || this._waitingData.aN ? "YES" : "NO")), rY
+          toString(TT) {
+            let oT = "Name: " + this.name + ", isInstance: " + ("InstancedMesh" === this.getClassName() ? "YES" : "NO");
+            oT += ", # of submeshes: " + (this.pR ? this.pR.length : 0);
+            const IT = this._internalAbstractMeshDataInfo._skeleton;
+            return IT && (oT += ", skeleton: " + IT.name), TT && (oT += ", billboard mode: " + ["NONE", "X", "Y", null, "Z", null, null, "ALL"][this.billboardMode], oT += ", freeze wrld mat: " + (this._isWorldMatrixFrozen || this._waitingData.LJ ? "YES" : "NO")), oT
           }
           _getEffectiveParent() {
-            return this._masterMesh && this.billboardMode !== gY.g.BILLBOARDMODE_NONE ? this._masterMesh : super._getEffectiveParent()
+            return this._masterMesh && this.billboardMode !== BT.g.BILLBOARDMODE_NONE ? this._masterMesh : super._getEffectiveParent()
           }
-          _getActionManagerForTrigger(YY) {
-            let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-            if (this.actionManager && (rY || this.actionManager.isRecursive)) {
-              if (!YY) return this.actionManager;
-              if (this.actionManager.hasSpecificTrigger(YY)) return this.actionManager
+          _getActionManagerForTrigger(TT) {
+            let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+            if (this.actionManager && (oT || this.actionManager.isRecursive)) {
+              if (!TT) return this.actionManager;
+              if (this.actionManager.hasSpecificTrigger(TT)) return this.actionManager
             }
-            return this.parent ? this.parent._getActionManagerForTrigger(YY, !1) : null
+            return this.parent ? this.parent._getActionManagerForTrigger(TT, !1) : null
           }
-          _releaseRenderPassId(YY) {}
+          _releaseRenderPassId(TT) {}
           _rebuild() {
-            if (this.onRebuildObservable.notifyObservers(this), null !== this._occlusionQuery && (this._occlusionQuery = null), this.qm) {
-              for (const YY of this.qm) YY._rebuild();
+            if (this.onRebuildObservable.notifyObservers(this), null !== this._occlusionQuery && (this._occlusionQuery = null), this.pR) {
+              for (const TT of this.pR) TT._rebuild();
               this.resetDrawCache()
             }
           }
           _resyncLightSources() {
             this._lightSources.length = 0;
-            for (const YY of this.hT().lights) YY.isEnabled() && YY.canAffectMesh(this) && this._lightSources.push(YY);
+            for (const TT of this.pC().lights) TT.isEnabled() && TT.canAffectMesh(this) && this._lightSources.push(TT);
             this._markSubMeshesAsLightDirty()
           }
-          _resyncLightSource(YY) {
-            const rY = YY.isEnabled() && YY.canAffectMesh(this),
-              DY = this._lightSources.indexOf(YY);
-            let FY = !1;
-            if (-1 === DY) {
-              if (!rY) return;
-              this._lightSources.push(YY)
+          _resyncLightSource(TT) {
+            const oT = TT.isEnabled() && TT.canAffectMesh(this),
+              IT = this._lightSources.indexOf(TT);
+            let iT = !1;
+            if (-1 === IT) {
+              if (!oT) return;
+              this._lightSources.push(TT)
             } else {
-              if (rY) return;
-              FY = !0, this._lightSources.splice(DY, 1)
+              if (oT) return;
+              iT = !0, this._lightSources.splice(IT, 1)
             }
-            this._markSubMeshesAsLightDirty(FY)
+            this._markSubMeshesAsLightDirty(iT)
           }
           _unBindEffect() {
-            for (const YY of this.qm) YY.setEffect(null)
+            for (const TT of this.pR) TT.setEffect(null)
           }
-          _removeLightSource(YY, rY) {
-            const DY = this._lightSources.indexOf(YY); - 1 !== DY && (this._lightSources.splice(DY, 1), this._markSubMeshesAsLightDirty(rY))
+          _removeLightSource(TT, oT) {
+            const IT = this._lightSources.indexOf(TT); - 1 !== IT && (this._lightSources.splice(IT, 1), this._markSubMeshesAsLightDirty(oT))
           }
-          _markSubMeshesAsDirty(YY) {
-            if (this.qm)
-              for (const rY of this.qm)
-                for (let DY = 0; DY < rY._drawWrappers.length; ++DY) {
-                  const FY = rY._drawWrappers[DY];
-                  FY && FY.defines && FY.defines.markAllAsDirty && YY(FY.defines)
+          _markSubMeshesAsDirty(TT) {
+            if (this.pR)
+              for (const oT of this.pR)
+                for (let IT = 0; IT < oT._drawWrappers.length; ++IT) {
+                  const iT = oT._drawWrappers[IT];
+                  iT && iT.defines && iT.defines.markAllAsDirty && TT(iT.defines)
                 }
           }
           _markSubMeshesAsLightDirty() {
-            let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            this._markSubMeshesAsDirty((rY => rY.markAsLightDirty(YY)))
+            let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            this._markSubMeshesAsDirty((oT => oT.markAsLightDirty(TT)))
           }
           _markSubMeshesAsAttributesDirty() {
-            this._markSubMeshesAsDirty((YY => YY.markAsAttributesDirty()))
+            this._markSubMeshesAsDirty((TT => TT.markAsAttributesDirty()))
           }
           _markSubMeshesAsMiscDirty() {
-            this._markSubMeshesAsDirty((YY => YY.markAsMiscDirty()))
+            this._markSubMeshesAsDirty((TT => TT.markAsMiscDirty()))
           }
-          nYY(YY) {
-            return this._currentRenderId = Number.MAX_VALUE, super.nYY(YY), this._isDirty = !0, this
+          roT(TT) {
+            return this._currentRenderId = Number.MAX_VALUE, super.roT(TT), this._isDirty = !0, this
           }
-          resetDrawCache(YY) {
-            let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (this.qm)
-              for (const DY of this.qm) DY.resetDrawCache(YY, rY)
+          resetDrawCache(TT) {
+            let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (this.pR)
+              for (const IT of this.pR) IT.resetDrawCache(TT, oT)
           }
           get isBlocked() {
             return !1
           }
-          getLOD(YY) {
+          getLOD(TT) {
             return this
           }
           getTotalVertices() {
@@ -3155,838 +3155,838 @@ export const modules = {
           getTotalIndices() {
             return 0
           }
-          XIY() {
+          hWT() {
             return null
           }
-          getVerticesData(YY) {
+          getVerticesData(TT) {
             return null
           }
-          setVerticesData(YY, rY, DY, FY) {
+          setVerticesData(TT, oT, IT, iT) {
             return this
           }
-          updateVerticesData(YY, rY, DY, FY) {
+          updateVerticesData(TT, oT, IT, iT) {
             return this
           }
-          setIndices(YY, rY) {
+          setIndices(TT, oT) {
             return this
           }
-          isVerticesDataPresent(YY) {
+          isVerticesDataPresent(TT) {
             return !1
           }
-          oB() {
-            return this._masterMesh ? this._masterMesh.oB() : (this._boundingInfoIsDirty && (this._boundingInfoIsDirty = !1, this._updateBoundingInfo()), this._boundingInfo)
+          GJ() {
+            return this._masterMesh ? this._masterMesh.GJ() : (this._boundingInfoIsDirty && (this._boundingInfoIsDirty = !1, this._updateBoundingInfo()), this._boundingInfo)
           }
           getRawBoundingInfo() {
-            return this.rawBoundingInfo ?? this.oB()
+            return this.rawBoundingInfo ?? this.GJ()
           }
-          setBoundingInfo(YY) {
-            return this._boundingInfo = YY, this
+          setBoundingInfo(TT) {
+            return this._boundingInfo = TT, this
           }
           get hasBoundingInfo() {
             return null !== this._boundingInfo
           }
-          buildBoundingInfo(YY, rY, DY) {
-            return this._boundingInfo = new vY.d(YY, rY, DY), this._boundingInfo
+          buildBoundingInfo(TT, oT, IT) {
+            return this._boundingInfo = new ST.d(TT, oT, IT), this._boundingInfo
           }
           normalizeToUnitCube() {
-            let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-              rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              DY = arguments.length > 2 ? arguments[2] : void 0;
-            return super.normalizeToUnitCube(YY, rY, DY)
+            let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+              oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              IT = arguments.length > 2 ? arguments[2] : void 0;
+            return super.normalizeToUnitCube(TT, oT, IT)
           }
           get useBones() {
-            return this.skeleton && this.hT().skeletonsEnabled && this.isVerticesDataPresent(RY.l.MatricesIndicesKind) && this.isVerticesDataPresent(RY.l.MatricesWeightsKind)
+            return this.skeleton && this.pC().skeletonsEnabled && this.isVerticesDataPresent(WT.i.MatricesIndicesKind) && this.isVerticesDataPresent(WT.i.MatricesWeightsKind)
           }
           _preActivate() {}
-          _preActivateForIntermediateRendering(YY) {}
-          _activate(YY, rY) {
-            return this._renderId = YY, !0
+          _preActivateForIntermediateRendering(TT) {}
+          _activate(TT, oT) {
+            return this._renderId = TT, !0
           }
           _postActivate() {}
           _freeze() {}
           _unFreeze() {}
           getWorldMatrix() {
-            return this._masterMesh && this.billboardMode === gY.g.BILLBOARDMODE_NONE ? this._masterMesh.getWorldMatrix() : super.getWorldMatrix()
+            return this._masterMesh && this.billboardMode === BT.g.BILLBOARDMODE_NONE ? this._masterMesh.getWorldMatrix() : super.getWorldMatrix()
           }
           _getWorldMatrixDeterminant() {
             return this._masterMesh ? this._masterMesh._getWorldMatrixDeterminant() : super._getWorldMatrixDeterminant()
           }
-          get XT() {
+          get yC() {
             return !1
           }
-          get aFY() {
+          get OiT() {
             return !1
           }
           get hasThinInstances() {
             return !1
           }
-          movePOV(YY, rY, DY) {
-            return this.position.addInPlace(this.calcMovePOV(YY, rY, DY)), this
+          movePOV(TT, oT, IT) {
+            return this.position.addInPlace(this.calcMovePOV(TT, oT, IT)), this
           }
-          calcMovePOV(YY, rY, DY) {
-            const FY = new IY.e;
-            (this.rotationQuaternion ? this.rotationQuaternion : IY.g.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z)).toRotationMatrix(FY);
-            const AY = IY.r.Zero(),
-              RY = this.definedFacingForward ? -1 : 1;
-            return IY.r.TransformCoordinatesFromFloatsToRef(YY * RY, rY, DY * RY, FY, AY), AY
+          calcMovePOV(TT, oT, IT) {
+            const iT = new kT.b;
+            (this.rotationQuaternion ? this.rotationQuaternion : kT.c.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z)).toRotationMatrix(iT);
+            const zT = kT.m.Zero(),
+              WT = this.definedFacingForward ? -1 : 1;
+            return kT.m.TransformCoordinatesFromFloatsToRef(TT * WT, oT, IT * WT, iT, zT), zT
           }
-          rotatePOV(YY, rY, DY) {
-            return this.rotation.addInPlace(this.calcRotatePOV(YY, rY, DY)), this
+          rotatePOV(TT, oT, IT) {
+            return this.rotation.addInPlace(this.calcRotatePOV(TT, oT, IT)), this
           }
-          calcRotatePOV(YY, rY, DY) {
-            const FY = this.definedFacingForward ? 1 : -1;
-            return new IY.r(YY * FY, rY, DY * FY)
+          calcRotatePOV(TT, oT, IT) {
+            const iT = this.definedFacingForward ? 1 : -1;
+            return new kT.m(TT * iT, oT, IT * iT)
           }
-          _refreshBoundingInfo(YY, rY) {
-            if (YY) {
-              const DY = (0, EY.h)(YY, 0, this.getTotalVertices(), rY);
-              this._boundingInfo ? this._boundingInfo.reConstruct(DY.minimum, DY.maximum) : this._boundingInfo = new vY.d(DY.minimum, DY.maximum)
+          _refreshBoundingInfo(TT, oT) {
+            if (TT) {
+              const IT = (0, AT.e)(TT, 0, this.getTotalVertices(), oT);
+              this._boundingInfo ? this._boundingInfo.reConstruct(IT.minimum, IT.maximum) : this._boundingInfo = new ST.d(IT.minimum, IT.maximum)
             }
-            if (this.qm)
-              for (let DY = 0; DY < this.qm.length; DY++) this.qm[DY].refreshBoundingInfo(YY);
+            if (this.pR)
+              for (let IT = 0; IT < this.pR.length; IT++) this.pR[IT].refreshBoundingInfo(TT);
             this._updateBoundingInfo()
           }
-          _refreshBoundingInfoDirect(YY) {
-            if (this._boundingInfo ? this._boundingInfo.reConstruct(YY.minimum, YY.maximum) : this._boundingInfo = new vY.d(YY.minimum, YY.maximum), this.qm)
-              for (let rY = 0; rY < this.qm.length; rY++) this.qm[rY].refreshBoundingInfo(null);
+          _refreshBoundingInfoDirect(TT) {
+            if (this._boundingInfo ? this._boundingInfo.reConstruct(TT.minimum, TT.maximum) : this._boundingInfo = new ST.d(TT.minimum, TT.maximum), this.pR)
+              for (let oT = 0; oT < this.pR.length; oT++) this.pR[oT].refreshBoundingInfo(null);
             this._updateBoundingInfo()
           }
-          static _ApplySkeleton(YY, rY, DY, FY, AY, OY, gY) {
-            ! function(YY, rY, DY, FY, AY, OY, gY) {
-              const aY = IY.n.xy[0],
-                vY = IY.n.Matrix[0],
-                uY = IY.n.Matrix[1],
-                sY = rY === RY.l.NormalKind ? IY.r.TransformNormalFromFloatsToRef : IY.r.TransformCoordinatesFromFloatsToRef;
-              for (let RY = 0, iY = 0; RY < YY.length; RY += 3, iY += 4) {
-                let rY, yY;
-                for (vY.reset(), rY = 0; rY < 4; rY++) yY = AY[iY + rY], yY > 0 && (IY.e.FromFloat32ArrayToRefScaled(DY, Math.floor(16 * FY[iY + rY]), yY, uY), vY.addToSelf(uY));
-                if (OY && gY)
-                  for (rY = 0; rY < 4; rY++) yY = gY[iY + rY], yY > 0 && (IY.e.FromFloat32ArrayToRefScaled(DY, Math.floor(16 * OY[iY + rY]), yY, uY), vY.addToSelf(uY));
-                sY(YY[RY], YY[RY + 1], YY[RY + 2], vY, aY), aY.toArray(YY, RY)
+          static _ApplySkeleton(TT, oT, IT, iT, zT, XT, BT) {
+            ! function(TT, oT, IT, iT, zT, XT, BT) {
+              const FT = kT.i.sc[0],
+                ST = kT.i.Matrix[0],
+                DT = kT.i.Matrix[1],
+                LT = oT === WT.i.NormalKind ? kT.m.TransformNormalFromFloatsToRef : kT.m.TransformCoordinatesFromFloatsToRef;
+              for (let WT = 0, xT = 0; WT < TT.length; WT += 3, xT += 4) {
+                let oT, cT;
+                for (ST.reset(), oT = 0; oT < 4; oT++) cT = zT[xT + oT], cT > 0 && (kT.b.FromFloat32ArrayToRefScaled(IT, Math.floor(16 * iT[xT + oT]), cT, DT), ST.addToSelf(DT));
+                if (XT && BT)
+                  for (oT = 0; oT < 4; oT++) cT = BT[xT + oT], cT > 0 && (kT.b.FromFloat32ArrayToRefScaled(IT, Math.floor(16 * XT[xT + oT]), cT, DT), ST.addToSelf(DT));
+                LT(TT[WT], TT[WT + 1], TT[WT + 2], ST, FT), FT.toArray(TT, WT)
               }
-            }(YY, rY, DY, FY, AY, OY, gY)
+            }(TT, oT, IT, iT, zT, XT, BT)
           }
-          _getData(rY, DY) {
-            let FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : RY.l.PositionKind;
-            const AY = rY.cache,
-              OY = YY => {
-                if (AY) {
-                  const rY = AY._vertexData || (AY._vertexData = {});
-                  return rY[YY] || this.copyVerticesData(YY, rY), rY[YY]
+          _getData(oT, IT) {
+            let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : WT.i.PositionKind;
+            const zT = oT.cache,
+              XT = TT => {
+                if (zT) {
+                  const oT = zT._vertexData || (zT._vertexData = {});
+                  return oT[TT] || this.copyVerticesData(TT, oT), oT[TT]
                 }
-                return this.getVerticesData(YY)
+                return this.getVerticesData(TT)
               };
-            if (DY || (DY = OY(FY)), !DY) return null;
-            AY ? (AY._outputData ? AY._outputData.set(DY) : AY._outputData = new Float32Array(DY), DY = AY._outputData) : (rY.applyMorph && this.morphTargetManager || rY.applySkeleton && this.skeleton || rY.applyBakedVertexAnimation && this.bakedVertexAnimationManager?.isEnabled) && (DY = DY.slice()), rY.applyMorph && this.morphTargetManager && function(YY, rY, DY) {
-              let FY;
-              switch (rY) {
-                case RY.l.PositionKind:
-                  FY = YY => YY.getPositions();
+            if (IT || (IT = XT(iT)), !IT) return null;
+            zT ? (zT._outputData ? zT._outputData.set(IT) : zT._outputData = new Float32Array(IT), IT = zT._outputData) : (oT.applyMorph && this.morphTargetManager || oT.applySkeleton && this.skeleton || oT.applyBakedVertexAnimation && this.bakedVertexAnimationManager?.isEnabled) && (IT = IT.slice()), oT.applyMorph && this.morphTargetManager && function(TT, oT, IT) {
+              let iT;
+              switch (oT) {
+                case WT.i.PositionKind:
+                  iT = TT => TT.getPositions();
                   break;
-                case RY.l.NormalKind:
-                  FY = YY => YY.getNormals();
+                case WT.i.NormalKind:
+                  iT = TT => TT.getNormals();
                   break;
-                case RY.l.TangentKind:
-                  FY = YY => YY.getTangents();
+                case WT.i.TangentKind:
+                  iT = TT => TT.getTangents();
                   break;
-                case RY.l.UVKind:
-                  FY = YY => YY.getUVs();
+                case WT.i.UVKind:
+                  iT = TT => TT.getUVs();
                   break;
-                case RY.l.UV2Kind:
-                  FY = YY => YY.getUV2s();
+                case WT.i.UV2Kind:
+                  iT = TT => TT.getUV2s();
                   break;
-                case RY.l.ColorKind:
-                  FY = YY => YY.getColors();
+                case WT.i.ColorKind:
+                  iT = TT => TT.getColors();
                   break;
                 default:
                   return
               }
-              for (let AY = 0; AY < YY.length; AY++) {
-                let rY = YY[AY];
-                for (let IY = 0; IY < DY.numTargets; IY++) {
-                  const RY = DY.getTarget(IY),
-                    OY = RY.influence;
-                  if (0 !== OY) {
-                    const DY = FY(RY);
-                    DY && (rY += (DY[AY] - YY[AY]) * OY)
+              for (let zT = 0; zT < TT.length; zT++) {
+                let oT = TT[zT];
+                for (let kT = 0; kT < IT.numTargets; kT++) {
+                  const WT = IT.getTarget(kT),
+                    XT = WT.influence;
+                  if (0 !== XT) {
+                    const IT = iT(WT);
+                    IT && (oT += (IT[zT] - TT[zT]) * XT)
                   }
                 }
-                YY[AY] = rY
+                TT[zT] = oT
               }
-            }(DY, FY, this.morphTargetManager);
-            const gY = this.bakedVertexAnimationManager;
-            let aY = !1;
-            if (rY.applyBakedVertexAnimation && gY?.isEnabled) {
-              const YY = OY(RY.l.MatricesIndicesKind),
-                AY = OY(RY.l.MatricesWeightsKind);
-              if (AY && YY) {
-                const IY = this.numBoneInfluencers > 4,
-                  vY = IY ? OY(RY.l.MatricesIndicesExtraKind) : null,
-                  uY = IY ? OY(RY.l.MatricesWeightsExtraKind) : null;
-                aY = KY(DY, FY, gY, rY.bakedVertexAnimationSettings ?? gY.animationParameters, YY, AY, vY, uY, this.numBoneInfluencers)
-              }
-            }
-            if (!aY && rY.applySkeleton && this.skeleton) {
-              const rY = OY(RY.l.MatricesIndicesKind),
-                AY = OY(RY.l.MatricesWeightsKind);
-              if (AY && rY) {
-                const IY = this.numBoneInfluencers > 4,
-                  gY = IY ? OY(RY.l.MatricesIndicesExtraKind) : null,
-                  aY = IY ? OY(RY.l.MatricesWeightsExtraKind) : null,
-                  vY = this.skeleton.getTransformMatrices(this);
-                YY._ApplySkeleton(DY, FY, vY, rY, AY, gY, aY)
+            }(IT, iT, this.morphTargetManager);
+            const BT = this.bakedVertexAnimationManager;
+            let FT = !1;
+            if (oT.applyBakedVertexAnimation && BT?.isEnabled) {
+              const TT = XT(WT.i.MatricesIndicesKind),
+                zT = XT(WT.i.MatricesWeightsKind);
+              if (zT && TT) {
+                const kT = this.numBoneInfluencers > 4,
+                  ST = kT ? XT(WT.i.MatricesIndicesExtraKind) : null,
+                  DT = kT ? XT(WT.i.MatricesWeightsExtraKind) : null;
+                FT = fT(IT, iT, BT, oT.bakedVertexAnimationSettings ?? BT.animationParameters, TT, zT, ST, DT, this.numBoneInfluencers)
               }
             }
-            if (!1 !== rY.updatePositionsArray && FY === RY.l.PositionKind) {
-              const YY = this._internalAbstractMeshDataInfo._positions || [],
-                rY = YY.length;
-              if (YY.length = DY.length / 3, rY < YY.length)
-                for (let DY = rY; DY < YY.length; DY++) YY[DY] = new IY.r;
-              for (let FY = 0, AY = 0; FY < YY.length; FY++, AY += 3) YY[FY].p_(DY[AY], DY[AY + 1], DY[AY + 2]);
-              this._internalAbstractMeshDataInfo._positions = YY
+            if (!FT && oT.applySkeleton && this.skeleton) {
+              const oT = XT(WT.i.MatricesIndicesKind),
+                zT = XT(WT.i.MatricesWeightsKind);
+              if (zT && oT) {
+                const kT = this.numBoneInfluencers > 4,
+                  BT = kT ? XT(WT.i.MatricesIndicesExtraKind) : null,
+                  FT = kT ? XT(WT.i.MatricesWeightsExtraKind) : null,
+                  ST = this.skeleton.getTransformMatrices(this);
+                TT._ApplySkeleton(IT, iT, ST, oT, zT, BT, FT)
+              }
             }
-            return DY
+            if (!1 !== oT.updatePositionsArray && iT === WT.i.PositionKind) {
+              const TT = this._internalAbstractMeshDataInfo._positions || [],
+                oT = TT.length;
+              if (TT.length = IT.length / 3, oT < TT.length)
+                for (let IT = oT; IT < TT.length; IT++) TT[IT] = new kT.m;
+              for (let iT = 0, zT = 0; iT < TT.length; iT++, zT += 3) TT[iT].S_(IT[zT], IT[zT + 1], IT[zT + 2]);
+              this._internalAbstractMeshDataInfo._positions = TT
+            }
+            return IT
           }
           getNormalsData() {
-            let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-              rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+              oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return this._getData({
-              applySkeleton: YY,
-              applyMorph: rY,
+              applySkeleton: TT,
+              applyMorph: oT,
               updatePositionsArray: !1
-            }, null, RY.l.NormalKind)
+            }, null, WT.i.NormalKind)
           }
-          bM() {
-            let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-              rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+          Gl() {
+            let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+              oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
             return this._getData({
-              applySkeleton: YY,
-              applyMorph: rY,
+              applySkeleton: TT,
+              applyMorph: oT,
               updatePositionsArray: !1
-            }, DY, RY.l.PositionKind)
+            }, IT, WT.i.PositionKind)
           }
           _updateBoundingInfo() {
-            return this._boundingInfo ? this._boundingInfo.update(this.worldMatrixFromCache) : this._boundingInfo = new vY.d(IY.r.Zero(), IY.r.Zero(), this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
+            return this._boundingInfo ? this._boundingInfo.update(this.worldMatrixFromCache) : this._boundingInfo = new ST.d(kT.m.Zero(), kT.m.Zero(), this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
           }
-          _updateSubMeshesBoundingInfo(YY) {
-            if (!this.qm) return this;
-            const rY = this.qm.length;
-            for (let DY = 0; DY < rY; DY++) {
-              const FY = this.qm[DY];
-              (rY > 1 || !FY.IsGlobal) && FY.updateBoundingInfo(YY)
+          _updateSubMeshesBoundingInfo(TT) {
+            if (!this.pR) return this;
+            const oT = this.pR.length;
+            for (let IT = 0; IT < oT; IT++) {
+              const iT = this.pR[IT];
+              (oT > 1 || !iT.IsGlobal) && iT.updateBoundingInfo(TT)
             }
             return this
           }
           _afterComputeWorldMatrix() {
-            this.Py || (this._boundingInfoIsDirty = !0)
+            this.Gc || (this._boundingInfoIsDirty = !0)
           }
-          isInFrustum(YY) {
-            return this.oB().isInFrustum(YY, this.cullingStrategy)
+          isInFrustum(TT) {
+            return this.GJ().isInFrustum(TT, this.cullingStrategy)
           }
-          isCompletelyInFrustum(YY) {
-            return this.oB().isCompletelyInFrustum(YY)
+          isCompletelyInFrustum(TT) {
+            return this.GJ().isCompletelyInFrustum(TT)
           }
-          FFY(YY) {
-            let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              DY = arguments.length > 2 ? arguments[2] : void 0;
-            const FY = this.oB(),
-              AY = YY.oB();
-            if (FY.intersects(AY, rY)) return !0;
-            if (DY)
-              for (const IY of this.getChildMeshes())
-                if (IY.FFY(YY, rY, !0)) return !0;
+          jiT(TT) {
+            let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              IT = arguments.length > 2 ? arguments[2] : void 0;
+            const iT = this.GJ(),
+              zT = TT.GJ();
+            if (iT.intersects(zT, oT)) return !0;
+            if (IT)
+              for (const kT of this.getChildMeshes())
+                if (kT.jiT(TT, oT, !0)) return !0;
             return !1
           }
-          intersectsPoint(YY) {
-            return this.oB().intersectsPoint(YY)
+          intersectsPoint(TT) {
+            return this.GJ().intersectsPoint(TT)
           }
           get checkCollisions() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions
           }
-          set checkCollisions(YY) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions = YY
+          set checkCollisions(TT) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions = TT
           }
           get collider() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collider
           }
-          moveWithCollisions(YY) {
-            let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          moveWithCollisions(TT) {
+            let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
             this.getAbsolutePosition().addToRef(this.ellipsoidOffset, this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions);
-            const DY = this.hT().collisionCoordinator;
-            return this._internalAbstractMeshDataInfo._meshCollisionData._collider || (this._internalAbstractMeshDataInfo._meshCollisionData._collider = DY.createCollider()), this._internalAbstractMeshDataInfo._meshCollisionData._collider._radius = this.ellipsoid, DY.getNewPosition(this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, YY, this._internalAbstractMeshDataInfo._meshCollisionData._collider, this.collisionRetryCount, this, this._onCollisionPositionChange, this.uniqueId, rY), this
+            const IT = this.pC().collisionCoordinator;
+            return this._internalAbstractMeshDataInfo._meshCollisionData._collider || (this._internalAbstractMeshDataInfo._meshCollisionData._collider = IT.createCollider()), this._internalAbstractMeshDataInfo._meshCollisionData._collider._radius = this.ellipsoid, IT.getNewPosition(this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, TT, this._internalAbstractMeshDataInfo._meshCollisionData._collider, this.collisionRetryCount, this, this._onCollisionPositionChange, this.uniqueId, oT), this
           }
-          _collideForSubMesh(YY, rY, DY) {
+          _collideForSubMesh(TT, oT, IT) {
             if (this._generatePointsArray(), !this._positions) return this;
-            if (!YY._lastColliderWorldVertices || !YY._lastColliderTransformMatrix.equals(rY)) {
-              YY._lastColliderTransformMatrix = rY.clone(), YY._lastColliderWorldVertices = [], YY._trianglePlanes = [];
-              const DY = YY.verticesStart,
-                FY = YY.verticesStart + YY.verticesCount;
-              for (let AY = DY; AY < FY; AY++) YY._lastColliderWorldVertices.push(IY.r.TransformCoordinates(this._positions[AY], rY))
+            if (!TT._lastColliderWorldVertices || !TT._lastColliderTransformMatrix.equals(oT)) {
+              TT._lastColliderTransformMatrix = oT.clone(), TT._lastColliderWorldVertices = [], TT._trianglePlanes = [];
+              const IT = TT.verticesStart,
+                iT = TT.verticesStart + TT.verticesCount;
+              for (let zT = IT; zT < iT; zT++) TT._lastColliderWorldVertices.push(kT.m.TransformCoordinates(this._positions[zT], oT))
             }
-            return DY._collide(YY._trianglePlanes, YY._lastColliderWorldVertices, this.XIY(), YY.indexStart, YY.indexStart + YY.indexCount, YY.verticesStart, !!YY.Uy(), this, this._shouldConvertRHS(), 7 === YY.Uy()?.fillMode), this
+            return IT._collide(TT._trianglePlanes, TT._lastColliderWorldVertices, this.hWT(), TT.indexStart, TT.indexStart + TT.indexCount, TT.verticesStart, !!TT.bc(), this, this._shouldConvertRHS(), 7 === TT.bc()?.fillMode), this
           }
-          _processCollisionsForSubMeshes(YY, rY) {
-            const DY = this._scene.getCollidingSubMeshCandidates(this, YY),
-              FY = DY.length;
-            for (let AY = 0; AY < FY; AY++) {
-              const IY = DY.data[AY];
-              FY > 1 && !IY._checkCollision(YY) || this._collideForSubMesh(IY, rY, YY)
+          _processCollisionsForSubMeshes(TT, oT) {
+            const IT = this._scene.getCollidingSubMeshCandidates(this, TT),
+              iT = IT.length;
+            for (let zT = 0; zT < iT; zT++) {
+              const kT = IT.data[zT];
+              iT > 1 && !kT._checkCollision(TT) || this._collideForSubMesh(kT, oT, TT)
             }
             return this
           }
           _shouldConvertRHS() {
             return !1
           }
-          _checkCollision(YY) {
-            if (!this.oB()._checkCollision(YY)) return this;
-            const rY = IY.n.Matrix[0],
-              DY = IY.n.Matrix[1];
-            return IY.e.ScalingToRef(1 / YY._radius.x, 1 / YY._radius.y, 1 / YY._radius.z, rY), this.worldMatrixFromCache.multiplyToRef(rY, DY), this._processCollisionsForSubMeshes(YY, DY), this
+          _checkCollision(TT) {
+            if (!this.GJ()._checkCollision(TT)) return this;
+            const oT = kT.i.Matrix[0],
+              IT = kT.i.Matrix[1];
+            return kT.b.ScalingToRef(1 / TT._radius.x, 1 / TT._radius.y, 1 / TT._radius.z, oT), this.worldMatrixFromCache.multiplyToRef(oT, IT), this._processCollisionsForSubMeshes(TT, IT), this
           }
           _generatePointsArray() {
             return !1
           }
-          intersects(YY, rY, DY) {
-            let FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              AY = arguments.length > 4 ? arguments[4] : void 0,
-              RY = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-            const OY = new aY.c,
-              gY = this.getClassName(),
-              vY = "InstancedLinesMesh" === gY || "LinesMesh" === gY || "GreasedLineMesh" === gY ? this.intersectionThreshold : 0,
-              uY = this.oB();
-            if (!this.qm) return OY;
-            if (!RY && (!YY.intersectsSphere(uY.bDY, vY) || !YY.intersectsBox(uY.boundingBox, vY))) return OY;
-            if (FY) return OY.hit = !RY, OY.pickedMesh = RY ? null : this, OY.distance = RY ? 0 : IY.r.Distance(YY.origin, uY.bDY.center), OY.subMeshId = 0, OY;
-            if (!this._generatePointsArray()) return OY;
-            let sY = null;
-            const iY = this._scene.getIntersectingSubMeshCandidates(this, YY),
-              yY = iY.length;
-            let QY = !1;
-            for (let IY = 0; IY < yY; IY++) {
-              const YY = iY.data[IY].Uy();
-              if (YY && (7 == YY.fillMode || 0 == YY.fillMode || 1 == YY.fillMode || 2 == YY.fillMode || 4 == YY.fillMode)) {
-                QY = !0;
+          intersects(TT, oT, IT) {
+            let iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              zT = arguments.length > 4 ? arguments[4] : void 0,
+              WT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+            const XT = new FT.d,
+              BT = this.getClassName(),
+              ST = "InstancedLinesMesh" === BT || "LinesMesh" === BT || "GreasedLineMesh" === BT ? this.intersectionThreshold : 0,
+              DT = this.GJ();
+            if (!this.pR) return XT;
+            if (!WT && (!TT.intersectsSphere(DT.KiT, ST) || !TT.intersectsBox(DT.boundingBox, ST))) return XT;
+            if (iT) return XT.hit = !WT, XT.pickedMesh = WT ? null : this, XT.distance = WT ? 0 : kT.m.Distance(TT.origin, DT.KiT.center), XT.subMeshId = 0, XT;
+            if (!this._generatePointsArray()) return XT;
+            let LT = null;
+            const xT = this._scene.getIntersectingSubMeshCandidates(this, TT),
+              cT = xT.length;
+            let KT = !1;
+            for (let kT = 0; kT < cT; kT++) {
+              const TT = xT.data[kT].bc();
+              if (TT && (7 == TT.fillMode || 0 == TT.fillMode || 1 == TT.fillMode || 2 == TT.fillMode || 4 == TT.fillMode)) {
+                KT = !0;
                 break
               }
             }
-            if (!QY) return OY.hit = !0, OY.pickedMesh = this, OY.distance = IY.r.Distance(YY.origin, uY.bDY.center), OY.subMeshId = -1, OY;
-            for (let IY = 0; IY < yY; IY++) {
-              const FY = iY.data[IY];
-              if (yY > 1 && !RY && !FY.canIntersects(YY)) continue;
-              const AY = FY.intersects(YY, this._positions, this.XIY(), rY, DY);
-              if (AY && (rY || !sY || AY.distance < sY.distance) && (sY = AY, sY.subMeshId = FY._id, sY._internalSubMeshId = IY, rY)) break
+            if (!KT) return XT.hit = !0, XT.pickedMesh = this, XT.distance = kT.m.Distance(TT.origin, DT.KiT.center), XT.subMeshId = -1, XT;
+            for (let kT = 0; kT < cT; kT++) {
+              const iT = xT.data[kT];
+              if (cT > 1 && !WT && !iT.canIntersects(TT)) continue;
+              const zT = iT.intersects(TT, this._positions, this.hWT(), oT, IT);
+              if (zT && (oT || !LT || zT.distance < LT.distance) && (LT = zT, LT.subMeshId = iT._id, LT._internalSubMeshId = kT, oT)) break
             }
-            if (sY) {
-              const rY = AY ?? this.getWorldMatrix(),
-                DY = IY.n.xy[0],
-                FY = IY.n.xy[1];
-              IY.r.TransformCoordinatesToRef(YY.origin, rY, DY), YY.direction.scaleToRef(sY.distance, FY);
-              const RY = IY.r.TransformNormal(FY, rY).addInPlace(DY);
-              return OY.hit = !0, OY.distance = IY.r.Distance(DY, RY), OY.pickedPoint = RY, OY.pickedMesh = this, OY.bu = sY.bu || 0, OY.bv = sY.bv || 0, OY.subMeshFaceId = sY.faceId, OY.faceId = sY.faceId + iY.data[sY._internalSubMeshId].indexStart / (-1 !== this.getClassName().indexOf("LinesMesh") ? 2 : 3), OY.subMeshId = sY.subMeshId, OY
+            if (LT) {
+              const oT = zT ?? this.getWorldMatrix(),
+                IT = kT.i.sc[0],
+                iT = kT.i.sc[1];
+              kT.m.TransformCoordinatesToRef(TT.origin, oT, IT), TT.direction.scaleToRef(LT.distance, iT);
+              const WT = kT.m.TransformNormal(iT, oT).addInPlace(IT);
+              return XT.hit = !0, XT.distance = kT.m.Distance(IT, WT), XT.pickedPoint = WT, XT.pickedMesh = this, XT.bu = LT.bu || 0, XT.bv = LT.bv || 0, XT.subMeshFaceId = LT.faceId, XT.faceId = LT.faceId + xT.data[LT._internalSubMeshId].indexStart / (-1 !== this.getClassName().indexOf("LinesMesh") ? 2 : 3), XT.subMeshId = LT.subMeshId, XT
             }
-            return OY
+            return XT
           }
-          clone(YY, rY, DY) {
+          clone(TT, oT, IT) {
             return null
           }
           releaseSubMeshes() {
-            let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            if (this.qm)
-              for (; this.qm.length;) this.qm[0].dispose(YY);
-            else this.qm = [];
+            let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            if (this.pR)
+              for (; this.pR.length;) this.pR[0].dispose(TT);
+            else this.pR = [];
             return this
           }
-          dispose(YY) {
-            let rY, DY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            const FY = this.hT();
-            for (this._scene.useMaterialMeshMap && this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), FY.freeActiveMeshes(), FY.freeRenderingGroups(), FY.renderingManager.maintainStateBetweenFrames && FY.renderingManager.restoreDispachedFlags(), void 0 !== this.actionManager && null !== this.actionManager && (this.actionManager.disposeWhenUnowned && !this._scene.meshes.some((YY => YY !== this && YY.actionManager === this.actionManager)) && this.actionManager.dispose(), this.actionManager = null), this._internalAbstractMeshDataInfo._skeleton = null, this._transformMatrixTexture && (this._transformMatrixTexture.dispose(), this._transformMatrixTexture = null), rY = 0; rY < this._intersectionsInProgress.length; rY++) {
-              const YY = this._intersectionsInProgress[rY],
-                DY = YY._intersectionsInProgress.indexOf(this);
-              YY._intersectionsInProgress.splice(DY, 1)
+          dispose(TT) {
+            let oT, IT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            const iT = this.pC();
+            for (this._scene.useMaterialMeshMap && this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), iT.freeActiveMeshes(), iT.freeRenderingGroups(), iT.renderingManager.maintainStateBetweenFrames && iT.renderingManager.restoreDispachedFlags(), void 0 !== this.actionManager && null !== this.actionManager && (this.actionManager.disposeWhenUnowned && !this._scene.meshes.some((TT => TT !== this && TT.actionManager === this.actionManager)) && this.actionManager.dispose(), this.actionManager = null), this._internalAbstractMeshDataInfo._skeleton = null, this._transformMatrixTexture && (this._transformMatrixTexture.dispose(), this._transformMatrixTexture = null), oT = 0; oT < this._intersectionsInProgress.length; oT++) {
+              const TT = this._intersectionsInProgress[oT],
+                IT = TT._intersectionsInProgress.indexOf(this);
+              TT._intersectionsInProgress.splice(IT, 1)
             }
             this._intersectionsInProgress.length = 0;
-            const AY = FY.lights;
-            for (const RY of AY) {
-              let YY = RY.includedOnlyMeshes.indexOf(this); - 1 !== YY && RY.includedOnlyMeshes.splice(YY, 1), YY = RY.excludedMeshes.indexOf(this), -1 !== YY && RY.excludedMeshes.splice(YY, 1);
-              const rY = RY.getShadowGenerators();
-              if (rY) {
-                const DY = rY.values();
-                for (let rY = DY.next(); !0 !== rY.done; rY = DY.next()) {
-                  const DY = rY.value.getShadowMap();
-                  DY && DY.renderList && (YY = DY.renderList.indexOf(this), -1 !== YY && DY.renderList.splice(YY, 1))
+            const zT = iT.lights;
+            for (const WT of zT) {
+              let TT = WT.includedOnlyMeshes.indexOf(this); - 1 !== TT && WT.includedOnlyMeshes.splice(TT, 1), TT = WT.excludedMeshes.indexOf(this), -1 !== TT && WT.excludedMeshes.splice(TT, 1);
+              const oT = WT.getShadowGenerators();
+              if (oT) {
+                const IT = oT.values();
+                for (let oT = IT.next(); !0 !== oT.done; oT = IT.next()) {
+                  const IT = oT.value.getShadowMap();
+                  IT && IT.renderList && (TT = IT.renderList.indexOf(this), -1 !== TT && IT.renderList.splice(TT, 1))
                 }
               }
             }
-            this.releaseSubMeshes(FY._isDisposing);
-            const IY = FY.ky();
-            if (null !== this._occlusionQuery && (this.isOcclusionQueryInProgress = !1, IY.deleteQuery(this._occlusionQuery), this._occlusionQuery = null), IY.wipeCaches(), FY.iN(this), this._parentContainer) {
-              const YY = this._parentContainer.meshes.indexOf(this);
-              YY > -1 && this._parentContainer.meshes.splice(YY, 1), this._parentContainer = null
+            this.releaseSubMeshes(iT._isDisposing);
+            const kT = iT.Zc();
+            if (null !== this._occlusionQuery && (this.isOcclusionQueryInProgress = !1, kT.deleteQuery(this._occlusionQuery), this._occlusionQuery = null), kT.wipeCaches(), iT.KJ(this), this._parentContainer) {
+              const TT = this._parentContainer.meshes.indexOf(this);
+              TT > -1 && this._parentContainer.meshes.splice(TT, 1), this._parentContainer = null
             }
-            if (DY && this.material && ("MultiMaterial" === this.material.getClassName() ? this.material.dispose(!1, !0, !0) : this.material.dispose(!1, !0)), !YY)
-              for (rY = 0; rY < FY.YV.length; rY++) FY.YV[rY].emitter === this && (FY.YV[rY].dispose(), rY--);
-            this._internalAbstractMeshDataInfo._facetData.facetDataEnabled && this.disableFacetData(), this._uniformBuffer.dispose(), this.onAfterWorldMatrixUpdateObservable.clear(), this.onCollideObservable.clear(), this.onCollisionPositionChangeObservable.clear(), this.onRebuildObservable.clear(), super.dispose(YY, DY)
+            if (IT && this.material && ("MultiMaterial" === this.material.getClassName() ? this.material.dispose(!1, !0, !0) : this.material.dispose(!1, !0)), !TT)
+              for (oT = 0; oT < iT.bR.length; oT++) iT.bR[oT].emitter === this && (iT.bR[oT].dispose(), oT--);
+            this._internalAbstractMeshDataInfo._facetData.facetDataEnabled && this.disableFacetData(), this._uniformBuffer.dispose(), this.onAfterWorldMatrixUpdateObservable.clear(), this.onCollideObservable.clear(), this.onCollisionPositionChangeObservable.clear(), this.onRebuildObservable.clear(), super.dispose(TT, IT)
           }
           _initFacetData() {
-            const YY = this._internalAbstractMeshDataInfo._facetData;
-            YY.facetNormals || (YY.facetNormals = []), YY.facetPositions || (YY.facetPositions = []), YY.facetPartitioning || (YY.facetPartitioning = new Array), YY.facetNb = this.XIY().length / 3 | 0, YY.partitioningSubdivisions = YY.partitioningSubdivisions ? YY.partitioningSubdivisions : 10, YY.partitioningBBoxRatio = YY.partitioningBBoxRatio ? YY.partitioningBBoxRatio : 1.01;
-            for (let rY = 0; rY < YY.facetNb; rY++) YY.facetNormals[rY] = IY.r.Zero(), YY.facetPositions[rY] = IY.r.Zero();
-            return YY.facetDataEnabled = !0, this
+            const TT = this._internalAbstractMeshDataInfo._facetData;
+            TT.facetNormals || (TT.facetNormals = []), TT.facetPositions || (TT.facetPositions = []), TT.facetPartitioning || (TT.facetPartitioning = new Array), TT.facetNb = this.hWT().length / 3 | 0, TT.partitioningSubdivisions = TT.partitioningSubdivisions ? TT.partitioningSubdivisions : 10, TT.partitioningBBoxRatio = TT.partitioningBBoxRatio ? TT.partitioningBBoxRatio : 1.01;
+            for (let oT = 0; oT < TT.facetNb; oT++) TT.facetNormals[oT] = kT.m.Zero(), TT.facetPositions[oT] = kT.m.Zero();
+            return TT.facetDataEnabled = !0, this
           }
           updateFacetData() {
-            const YY = this._internalAbstractMeshDataInfo._facetData;
-            YY.facetDataEnabled || this._initFacetData();
-            const rY = this.getVerticesData(RY.l.PositionKind),
-              DY = this.XIY(),
-              FY = this.getVerticesData(RY.l.NormalKind)?.slice(),
-              AY = this.oB();
-            if (YY.facetDepthSort && !YY.facetDepthSortEnabled) {
-              if (YY.facetDepthSortEnabled = !0, DY instanceof Uint16Array) YY.depthSortedIndices = new Uint16Array(DY);
-              else if (DY instanceof Uint32Array) YY.depthSortedIndices = new Uint32Array(DY);
+            const TT = this._internalAbstractMeshDataInfo._facetData;
+            TT.facetDataEnabled || this._initFacetData();
+            const oT = this.getVerticesData(WT.i.PositionKind),
+              IT = this.hWT(),
+              iT = this.getVerticesData(WT.i.NormalKind)?.slice(),
+              zT = this.GJ();
+            if (TT.facetDepthSort && !TT.facetDepthSortEnabled) {
+              if (TT.facetDepthSortEnabled = !0, IT instanceof Uint16Array) TT.depthSortedIndices = new Uint16Array(IT);
+              else if (IT instanceof Uint32Array) TT.depthSortedIndices = new Uint32Array(IT);
               else {
-                let rY = !1;
-                for (let YY = 0; YY < DY.length; YY++)
-                  if (DY[YY] > 65535) {
-                    rY = !0;
+                let oT = !1;
+                for (let TT = 0; TT < IT.length; TT++)
+                  if (IT[TT] > 65535) {
+                    oT = !0;
                     break
-                  } YY.depthSortedIndices = rY ? new Uint32Array(DY) : new Uint16Array(DY)
+                  } TT.depthSortedIndices = oT ? new Uint32Array(IT) : new Uint16Array(IT)
               }
-              if (YY.facetDepthSortFunction = function(YY, rY) {
-                  return rY.sqDistance - YY.sqDistance
-                }, !YY.facetDepthSortFrom) {
-                const rY = this.hT().activeCamera;
-                YY.facetDepthSortFrom = rY ? rY.position : IY.r.Zero()
+              if (TT.facetDepthSortFunction = function(TT, oT) {
+                  return oT.sqDistance - TT.sqDistance
+                }, !TT.facetDepthSortFrom) {
+                const oT = this.pC().activeCamera;
+                TT.facetDepthSortFrom = oT ? oT.position : kT.m.Zero()
               }
-              YY.depthSortedFacets = [];
-              for (let rY = 0; rY < YY.facetNb; rY++) {
-                const DY = {
-                  ind: 3 * rY,
+              TT.depthSortedFacets = [];
+              for (let oT = 0; oT < TT.facetNb; oT++) {
+                const IT = {
+                  ind: 3 * oT,
                   sqDistance: 0
                 };
-                YY.depthSortedFacets.push(DY)
+                TT.depthSortedFacets.push(IT)
               }
-              YY.invertedMatrix = IY.e.Identity(), YY.facetDepthSortOrigin = IY.r.Zero()
+              TT.invertedMatrix = kT.b.Identity(), TT.facetDepthSortOrigin = kT.m.Zero()
             }
-            YY.bbSize.x = AY.maximum.x - AY.minimum.x > VY.c ? AY.maximum.x - AY.minimum.x : VY.c, YY.bbSize.y = AY.maximum.y - AY.minimum.y > VY.c ? AY.maximum.y - AY.minimum.y : VY.c, YY.bbSize.z = AY.maximum.z - AY.minimum.z > VY.c ? AY.maximum.z - AY.minimum.z : VY.c;
-            let gY = YY.bbSize.x > YY.bbSize.y ? YY.bbSize.x : YY.bbSize.y;
-            if (gY = gY > YY.bbSize.z ? gY : YY.bbSize.z, YY.subDiv.max = YY.partitioningSubdivisions, YY.subDiv.X = Math.floor(YY.subDiv.max * YY.bbSize.x / gY), YY.subDiv.Y = Math.floor(YY.subDiv.max * YY.bbSize.y / gY), YY.subDiv.Z = Math.floor(YY.subDiv.max * YY.bbSize.z / gY), YY.subDiv.X = YY.subDiv.X < 1 ? 1 : YY.subDiv.X, YY.subDiv.Y = YY.subDiv.Y < 1 ? 1 : YY.subDiv.Y, YY.subDiv.Z = YY.subDiv.Z < 1 ? 1 : YY.subDiv.Z, YY.facetParameters.facetNormals = this.getFacetLocalNormals(), YY.facetParameters.facetPositions = this.getFacetLocalPositions(), YY.facetParameters.facetPartitioning = this.getFacetLocalPartitioning(), YY.facetParameters.bInfo = AY, YY.facetParameters.bbSize = YY.bbSize, YY.facetParameters.subDiv = YY.subDiv, YY.facetParameters.ratio = this.partitioningBBoxRatio, YY.facetParameters.depthSort = YY.facetDepthSort, YY.facetDepthSort && YY.facetDepthSortEnabled && (this.computeWorldMatrix(!0), this._worldMatrix.invertToRef(YY.invertedMatrix), IY.r.TransformCoordinatesToRef(YY.facetDepthSortFrom, YY.invertedMatrix, YY.facetDepthSortOrigin), YY.facetParameters.distanceTo = YY.facetDepthSortOrigin), YY.facetParameters.depthSortedFacets = YY.depthSortedFacets, FY && OY.c.ComputeNormals(rY, DY, FY, YY.facetParameters), YY.facetDepthSort && YY.facetDepthSortEnabled) {
-              YY.depthSortedFacets.sort(YY.facetDepthSortFunction);
-              const rY = YY.depthSortedIndices.length / 3 | 0;
-              for (let FY = 0; FY < rY; FY++) {
-                const rY = YY.depthSortedFacets[FY].ind;
-                YY.depthSortedIndices[3 * FY] = DY[rY], YY.depthSortedIndices[3 * FY + 1] = DY[rY + 1], YY.depthSortedIndices[3 * FY + 2] = DY[rY + 2]
+            TT.bbSize.x = zT.maximum.x - zT.minimum.x > hT.d ? zT.maximum.x - zT.minimum.x : hT.d, TT.bbSize.y = zT.maximum.y - zT.minimum.y > hT.d ? zT.maximum.y - zT.minimum.y : hT.d, TT.bbSize.z = zT.maximum.z - zT.minimum.z > hT.d ? zT.maximum.z - zT.minimum.z : hT.d;
+            let BT = TT.bbSize.x > TT.bbSize.y ? TT.bbSize.x : TT.bbSize.y;
+            if (BT = BT > TT.bbSize.z ? BT : TT.bbSize.z, TT.subDiv.max = TT.partitioningSubdivisions, TT.subDiv.X = Math.floor(TT.subDiv.max * TT.bbSize.x / BT), TT.subDiv.Y = Math.floor(TT.subDiv.max * TT.bbSize.y / BT), TT.subDiv.Z = Math.floor(TT.subDiv.max * TT.bbSize.z / BT), TT.subDiv.X = TT.subDiv.X < 1 ? 1 : TT.subDiv.X, TT.subDiv.Y = TT.subDiv.Y < 1 ? 1 : TT.subDiv.Y, TT.subDiv.Z = TT.subDiv.Z < 1 ? 1 : TT.subDiv.Z, TT.facetParameters.facetNormals = this.getFacetLocalNormals(), TT.facetParameters.facetPositions = this.getFacetLocalPositions(), TT.facetParameters.facetPartitioning = this.getFacetLocalPartitioning(), TT.facetParameters.bInfo = zT, TT.facetParameters.bbSize = TT.bbSize, TT.facetParameters.subDiv = TT.subDiv, TT.facetParameters.ratio = this.partitioningBBoxRatio, TT.facetParameters.depthSort = TT.facetDepthSort, TT.facetDepthSort && TT.facetDepthSortEnabled && (this.computeWorldMatrix(!0), this._worldMatrix.invertToRef(TT.invertedMatrix), kT.m.TransformCoordinatesToRef(TT.facetDepthSortFrom, TT.invertedMatrix, TT.facetDepthSortOrigin), TT.facetParameters.distanceTo = TT.facetDepthSortOrigin), TT.facetParameters.depthSortedFacets = TT.depthSortedFacets, iT && XT.c.ComputeNormals(oT, IT, iT, TT.facetParameters), TT.facetDepthSort && TT.facetDepthSortEnabled) {
+              TT.depthSortedFacets.sort(TT.facetDepthSortFunction);
+              const oT = TT.depthSortedIndices.length / 3 | 0;
+              for (let iT = 0; iT < oT; iT++) {
+                const oT = TT.depthSortedFacets[iT].ind;
+                TT.depthSortedIndices[3 * iT] = IT[oT], TT.depthSortedIndices[3 * iT + 1] = IT[oT + 1], TT.depthSortedIndices[3 * iT + 2] = IT[oT + 2]
               }
-              this.updateIndices(YY.depthSortedIndices, void 0, !0)
+              this.updateIndices(TT.depthSortedIndices, void 0, !0)
             }
             return this
           }
           getFacetLocalNormals() {
-            const YY = this._internalAbstractMeshDataInfo._facetData;
-            return YY.facetNormals || this.updateFacetData(), YY.facetNormals
+            const TT = this._internalAbstractMeshDataInfo._facetData;
+            return TT.facetNormals || this.updateFacetData(), TT.facetNormals
           }
           getFacetLocalPositions() {
-            const YY = this._internalAbstractMeshDataInfo._facetData;
-            return YY.facetPositions || this.updateFacetData(), YY.facetPositions
+            const TT = this._internalAbstractMeshDataInfo._facetData;
+            return TT.facetPositions || this.updateFacetData(), TT.facetPositions
           }
           getFacetLocalPartitioning() {
-            const YY = this._internalAbstractMeshDataInfo._facetData;
-            return YY.facetPartitioning || this.updateFacetData(), YY.facetPartitioning
+            const TT = this._internalAbstractMeshDataInfo._facetData;
+            return TT.facetPartitioning || this.updateFacetData(), TT.facetPartitioning
           }
-          getFacetPosition(YY) {
-            const rY = IY.r.Zero();
-            return this.getFacetPositionToRef(YY, rY), rY
+          getFacetPosition(TT) {
+            const oT = kT.m.Zero();
+            return this.getFacetPositionToRef(TT, oT), oT
           }
-          getFacetPositionToRef(YY, rY) {
-            const DY = this.getFacetLocalPositions()[YY],
-              FY = this.getWorldMatrix();
-            return IY.r.TransformCoordinatesToRef(DY, FY, rY), this
+          getFacetPositionToRef(TT, oT) {
+            const IT = this.getFacetLocalPositions()[TT],
+              iT = this.getWorldMatrix();
+            return kT.m.TransformCoordinatesToRef(IT, iT, oT), this
           }
-          getFacetNormal(YY) {
-            const rY = IY.r.Zero();
-            return this.getFacetNormalToRef(YY, rY), rY
+          getFacetNormal(TT) {
+            const oT = kT.m.Zero();
+            return this.getFacetNormalToRef(TT, oT), oT
           }
-          getFacetNormalToRef(YY, rY) {
-            const DY = this.getFacetLocalNormals()[YY];
-            return IY.r.TransformNormalToRef(DY, this.getWorldMatrix(), rY), this
+          getFacetNormalToRef(TT, oT) {
+            const IT = this.getFacetLocalNormals()[TT];
+            return kT.m.TransformNormalToRef(IT, this.getWorldMatrix(), oT), this
           }
-          getFacetsAtLocalCoordinates(YY, rY, DY) {
-            const FY = this.oB(),
-              AY = this._internalAbstractMeshDataInfo._facetData,
-              IY = Math.floor((YY - FY.minimum.x * AY.partitioningBBoxRatio) * AY.subDiv.X * AY.partitioningBBoxRatio / AY.bbSize.x),
-              RY = Math.floor((rY - FY.minimum.y * AY.partitioningBBoxRatio) * AY.subDiv.Y * AY.partitioningBBoxRatio / AY.bbSize.y),
-              OY = Math.floor((DY - FY.minimum.z * AY.partitioningBBoxRatio) * AY.subDiv.Z * AY.partitioningBBoxRatio / AY.bbSize.z);
-            return IY < 0 || IY > AY.subDiv.max || RY < 0 || RY > AY.subDiv.max || OY < 0 || OY > AY.subDiv.max ? null : AY.facetPartitioning[IY + AY.subDiv.max * RY + AY.subDiv.max * AY.subDiv.max * OY]
+          getFacetsAtLocalCoordinates(TT, oT, IT) {
+            const iT = this.GJ(),
+              zT = this._internalAbstractMeshDataInfo._facetData,
+              kT = Math.floor((TT - iT.minimum.x * zT.partitioningBBoxRatio) * zT.subDiv.X * zT.partitioningBBoxRatio / zT.bbSize.x),
+              WT = Math.floor((oT - iT.minimum.y * zT.partitioningBBoxRatio) * zT.subDiv.Y * zT.partitioningBBoxRatio / zT.bbSize.y),
+              XT = Math.floor((IT - iT.minimum.z * zT.partitioningBBoxRatio) * zT.subDiv.Z * zT.partitioningBBoxRatio / zT.bbSize.z);
+            return kT < 0 || kT > zT.subDiv.max || WT < 0 || WT > zT.subDiv.max || XT < 0 || XT > zT.subDiv.max ? null : zT.facetPartitioning[kT + zT.subDiv.max * WT + zT.subDiv.max * zT.subDiv.max * XT]
           }
-          getClosestFacetAtCoordinates(YY, rY, DY, FY) {
-            let AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-              RY = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const OY = this.getWorldMatrix(),
-              gY = IY.n.Matrix[5];
-            OY.invertToRef(gY);
-            const aY = IY.n.xy[8];
-            IY.r.TransformCoordinatesFromFloatsToRef(YY, rY, DY, gY, aY);
-            const vY = this.getClosestFacetAtLocalCoordinates(aY.x, aY.y, aY.z, FY, AY, RY);
-            return FY && IY.r.TransformCoordinatesFromFloatsToRef(FY.x, FY.y, FY.z, OY, FY), vY
+          getClosestFacetAtCoordinates(TT, oT, IT, iT) {
+            let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+              WT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const XT = this.getWorldMatrix(),
+              BT = kT.i.Matrix[5];
+            XT.invertToRef(BT);
+            const FT = kT.i.sc[8];
+            kT.m.TransformCoordinatesFromFloatsToRef(TT, oT, IT, BT, FT);
+            const ST = this.getClosestFacetAtLocalCoordinates(FT.x, FT.y, FT.z, iT, zT, WT);
+            return iT && kT.m.TransformCoordinatesFromFloatsToRef(iT.x, iT.y, iT.z, XT, iT), ST
           }
-          getClosestFacetAtLocalCoordinates(YY, rY, DY, FY) {
-            let AY, IY, RY, OY, gY, aY, vY, uY, sY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-              iY = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-              yY = null;
-            const QY = this.getFacetLocalPositions(),
-              oY = this.getFacetLocalNormals(),
-              WY = this.getFacetsAtLocalCoordinates(YY, rY, DY);
-            if (!WY) return null;
-            let EY, mY, VY, SY, lY = Number.MAX_VALUE;
-            for (let TY = 0; TY < WY.length; TY++) mY = WY[TY], VY = oY[mY], SY = QY[mY], OY = (YY - SY.x) * VY.x + (rY - SY.y) * VY.y + (DY - SY.z) * VY.z, (!sY || sY && iY && OY >= 0 || sY && !iY && OY <= 0) && (OY = VY.x * SY.x + VY.y * SY.y + VY.z * SY.z, gY = -(VY.x * YY + VY.y * rY + VY.z * DY - OY) / (VY.x * VY.x + VY.y * VY.y + VY.z * VY.z), aY = YY + VY.x * gY, vY = rY + VY.y * gY, uY = DY + VY.z * gY, AY = aY - YY, IY = vY - rY, RY = uY - DY, EY = AY * AY + IY * IY + RY * RY, EY < lY && (lY = EY, yY = mY, FY && (FY.x = aY, FY.y = vY, FY.z = uY)));
-            return yY
+          getClosestFacetAtLocalCoordinates(TT, oT, IT, iT) {
+            let zT, kT, WT, XT, BT, FT, ST, DT, LT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+              xT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              cT = null;
+            const KT = this.getFacetLocalPositions(),
+              MT = this.getFacetLocalNormals(),
+              rT = this.getFacetsAtLocalCoordinates(TT, oT, IT);
+            if (!rT) return null;
+            let AT, gT, hT, wT, mT = Number.MAX_VALUE;
+            for (let eT = 0; eT < rT.length; eT++) gT = rT[eT], hT = MT[gT], wT = KT[gT], XT = (TT - wT.x) * hT.x + (oT - wT.y) * hT.y + (IT - wT.z) * hT.z, (!LT || LT && xT && XT >= 0 || LT && !xT && XT <= 0) && (XT = hT.x * wT.x + hT.y * wT.y + hT.z * wT.z, BT = -(hT.x * TT + hT.y * oT + hT.z * IT - XT) / (hT.x * hT.x + hT.y * hT.y + hT.z * hT.z), FT = TT + hT.x * BT, ST = oT + hT.y * BT, DT = IT + hT.z * BT, zT = FT - TT, kT = ST - oT, WT = DT - IT, AT = zT * zT + kT * kT + WT * WT, AT < mT && (mT = AT, cT = gT, iT && (iT.x = FT, iT.y = ST, iT.z = DT)));
+            return cT
           }
           getFacetDataParameters() {
             return this._internalAbstractMeshDataInfo._facetData.facetParameters
           }
           disableFacetData() {
-            const YY = this._internalAbstractMeshDataInfo._facetData;
-            return YY.facetDataEnabled && (YY.facetDataEnabled = !1, YY.facetPositions = [], YY.facetNormals = [], YY.facetPartitioning = new Array, YY.facetParameters = {}, YY.depthSortedIndices = new Uint32Array(0)), this
+            const TT = this._internalAbstractMeshDataInfo._facetData;
+            return TT.facetDataEnabled && (TT.facetDataEnabled = !1, TT.facetPositions = [], TT.facetNormals = [], TT.facetPartitioning = new Array, TT.facetParameters = {}, TT.depthSortedIndices = new Uint32Array(0)), this
           }
-          updateIndices(YY, rY) {
+          updateIndices(TT, oT) {
             return this
           }
-          createNormals(YY) {
-            const rY = this.getVerticesData(RY.l.PositionKind),
-              DY = this.XIY();
-            let FY;
-            return FY = this.isVerticesDataPresent(RY.l.NormalKind) ? this.getVerticesData(RY.l.NormalKind) : [], OY.c.ComputeNormals(rY, DY, FY, {
-              useRightHandedSystem: this.hT().useRightHandedSystem
-            }), this.setVerticesData(RY.l.NormalKind, FY, YY), this
+          createNormals(TT) {
+            const oT = this.getVerticesData(WT.i.PositionKind),
+              IT = this.hWT();
+            let iT;
+            return iT = this.isVerticesDataPresent(WT.i.NormalKind) ? this.getVerticesData(WT.i.NormalKind) : [], XT.c.ComputeNormals(oT, IT, iT, {
+              useRightHandedSystem: this.pC().useRightHandedSystem
+            }), this.setVerticesData(WT.i.NormalKind, iT, TT), this
           }
           async optimizeIndicesAsync() {
-            const YY = this.XIY();
-            if (!YY) return this;
+            const TT = this.hWT();
+            if (!TT) return this;
             const {
-              OptimizeIndices: rY
-            } = await DY.e(341).then((() => DY(41600)));
-            return rY(YY), this.setIndices(YY, this.getTotalVertices()), this
+              OptimizeIndices: oT
+            } = await IT.e(341).then((() => IT(41352)));
+            return oT(TT), this.setIndices(TT, this.getTotalVertices()), this
           }
-          alignWithNormal(YY, rY) {
-            rY || (rY = SY.b.Y);
-            const DY = IY.n.xy[0],
-              FY = IY.n.xy[1];
-            return IY.r.CrossToRef(rY, YY, FY), IY.r.CrossToRef(YY, FY, DY), this.rotationQuaternion ? IY.g.RotationQuaternionFromAxisToRef(DY, YY, FY, this.rotationQuaternion) : IY.r.RotationFromAxisToRef(DY, YY, FY, this.rotation), this
+          alignWithNormal(TT, oT) {
+            oT || (oT = wT.d.Y);
+            const IT = kT.i.sc[0],
+              iT = kT.i.sc[1];
+            return kT.m.CrossToRef(oT, TT, iT), kT.m.CrossToRef(TT, iT, IT), this.rotationQuaternion ? kT.c.RotationQuaternionFromAxisToRef(IT, TT, iT, this.rotationQuaternion) : kT.m.RotationFromAxisToRef(IT, TT, iT, this.rotation), this
           }
           _checkOcclusionQuery() {
             return !1
           }
           disableEdgesRendering() {
-            throw (0, oY.i)("EdgesRenderer")
+            throw (0, MT.k)("EdgesRenderer")
           }
-          enableEdgesRendering(YY, rY, DY) {
-            throw (0, oY.i)("EdgesRenderer")
+          enableEdgesRendering(TT, oT, IT) {
+            throw (0, MT.k)("EdgesRenderer")
           }
           getConnectedParticleSystems() {
-            return this._scene.YV.filter((YY => YY.emitter === this))
+            return this._scene.bR.filter((TT => TT.emitter === this))
           }
         }, (() => {
-          const DY = "function" === typeof Symbol && Symbol.metadata ? Object.create(sY[Symbol.metadata] ?? null) : void 0;
-          rY = [TY.j.filter((function() {
+          const IT = "function" === typeof Symbol && Symbol.metadata ? Object.create(LT[Symbol.metadata] ?? null) : void 0;
+          oT = [eT.l.filter((function() {
             return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0]) && !Array.isArray(arguments.length <= 3 ? void 0 : arguments[3]) && !Array.isArray(arguments.length <= 4 ? void 0 : arguments[4]) && !Array.isArray(arguments.length <= 5 ? void 0 : arguments[5]) && !Array.isArray(arguments.length <= 6 ? void 0 : arguments[6])
-          }))], (0, FY.i)(YY, null, rY, {
+          }))], (0, iT.h)(TT, null, oT, {
             kind: "method",
             name: "_ApplySkeleton",
             static: !0,
             private: !1,
             access: {
-              has: YY => "_ApplySkeleton" in YY,
-              get: YY => YY._ApplySkeleton
+              has: TT => "_ApplySkeleton" in TT,
+              get: TT => TT._ApplySkeleton
             },
-            metadata: DY
-          }, null, iY), DY && Object.defineProperty(YY, Symbol.metadata, {
+            metadata: IT
+          }, null, xT), IT && Object.defineProperty(TT, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: DY
+            value: IT
           })
-        })(), YY.OCCLUSION_TYPE_NONE = ((0, FY.j)(YY, iY), 0), YY.OCCLUSION_TYPE_OPTIMISTIC = 1, YY.OCCLUSION_TYPE_STRICT = 2, YY.OCCLUSION_ALGORITHM_TYPE_ACCURATE = 0, YY.OCCLUSION_ALGORITHM_TYPE_CONSERVATIVE = 1, YY.CULLINGSTRATEGY_STANDARD = 0, YY.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, YY.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, YY.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, YY.DefaultIsPickable = !0, YY
+        })(), TT.OCCLUSION_TYPE_NONE = ((0, iT.j)(TT, xT), 0), TT.OCCLUSION_TYPE_OPTIMISTIC = 1, TT.OCCLUSION_TYPE_STRICT = 2, TT.OCCLUSION_ALGORITHM_TYPE_ACCURATE = 0, TT.OCCLUSION_ALGORITHM_TYPE_CONSERVATIVE = 1, TT.CULLINGSTRATEGY_STANDARD = 0, TT.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, TT.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, TT.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, TT.DefaultIsPickable = !0, TT
       })(),
-      CY = !1;
+      UT = !1;
 
-    function fY() {
-      CY || (CY = !0, (0, NY.i)("BABYLON.AbstractMesh", ZY))
-    }(iY = ZY.prototype).createOrUpdateSubmeshesOctree ?? (iY.createOrUpdateSubmeshesOctree = (0, oY.g)("AbstractMesh", "createOrUpdateSubmeshesOctree")), (yY = ZY.prototype).getPhysicsImpostor ?? (yY.getPhysicsImpostor = (0, oY.g)("AbstractMesh", "getPhysicsImpostor")), (QY = ZY.prototype).setPhysicsLinkWith ?? (QY.setPhysicsLinkWith = (0, oY.g)("AbstractMesh", "setPhysicsLinkWith")), Object.getOwnPropertyDescriptor(ZY.prototype, "occlusionRetryCount") || Object.defineProperty(ZY.prototype, "occlusionRetryCount", (0, oY.c)("AbstractMesh", "occlusionRetryCount")), Object.getOwnPropertyDescriptor(ZY.prototype, "occlusionType") || Object.defineProperty(ZY.prototype, "occlusionType", (0, oY.c)("AbstractMesh", "occlusionType")), Object.getOwnPropertyDescriptor(ZY.prototype, "occlusionQueryAlgorithmType") || Object.defineProperty(ZY.prototype, "occlusionQueryAlgorithmType", (0, oY.c)("AbstractMesh", "occlusionQueryAlgorithmType")), Object.getOwnPropertyDescriptor(ZY.prototype, "isOccluded") || Object.defineProperty(ZY.prototype, "isOccluded", (0, oY.c)("AbstractMesh", "isOccluded")), Object.getOwnPropertyDescriptor(ZY.prototype, "isOcclusionQueryInProgress") || Object.defineProperty(ZY.prototype, "isOcclusionQueryInProgress", (0, oY.c)("AbstractMesh", "isOcclusionQueryInProgress")), Object.getOwnPropertyDescriptor(ZY.prototype, "forceRenderingWhenOccluded") || Object.defineProperty(ZY.prototype, "forceRenderingWhenOccluded", (0, oY.c)("AbstractMesh", "forceRenderingWhenOccluded")), Object.getOwnPropertyDescriptor(ZY.prototype, "occlusionForRenderPassId") || Object.defineProperty(ZY.prototype, "occlusionForRenderPassId", (0, oY.c)("AbstractMesh", "occlusionForRenderPassId")), Object.getOwnPropertyDescriptor(ZY.prototype, "decalMap") || Object.defineProperty(ZY.prototype, "decalMap", (0, oY.c)("AbstractMesh", "decalMap")), Object.getOwnPropertyDescriptor(ZY.prototype, "YB") || Object.defineProperty(ZY.prototype, "YB", (0, oY.c)("AbstractMesh", "YB")), Object.getOwnPropertyDescriptor(ZY.prototype, "physicsImpostor") || Object.defineProperty(ZY.prototype, "physicsImpostor", (0, oY.c)("AbstractMesh", "physicsImpostor")), Object.getOwnPropertyDescriptor(ZY.prototype, "showBoundingBox") || Object.defineProperty(ZY.prototype, "showBoundingBox", (0, oY.c)("AbstractMesh", "showBoundingBox")), Object.getOwnPropertyDescriptor(ZY.prototype, "edgesRenderer") || Object.defineProperty(ZY.prototype, "edgesRenderer", (0, oY.c)("AbstractMesh", "edgesRenderer")), Object.getOwnPropertyDescriptor(ZY.prototype, "renderOutline") || Object.defineProperty(ZY.prototype, "renderOutline", (0, oY.c)("AbstractMesh", "renderOutline")), Object.getOwnPropertyDescriptor(ZY.prototype, "renderOverlay") || Object.defineProperty(ZY.prototype, "renderOverlay", (0, oY.c)("AbstractMesh", "renderOverlay"))
+    function aT() {
+      UT || (UT = !0, (0, uT.h)("BABYLON.AbstractMesh", JT))
+    }(xT = JT.prototype).createOrUpdateSubmeshesOctree ?? (xT.createOrUpdateSubmeshesOctree = (0, MT.i)("AbstractMesh", "createOrUpdateSubmeshesOctree")), (cT = JT.prototype).getPhysicsImpostor ?? (cT.getPhysicsImpostor = (0, MT.i)("AbstractMesh", "getPhysicsImpostor")), (KT = JT.prototype).setPhysicsLinkWith ?? (KT.setPhysicsLinkWith = (0, MT.i)("AbstractMesh", "setPhysicsLinkWith")), Object.getOwnPropertyDescriptor(JT.prototype, "occlusionRetryCount") || Object.defineProperty(JT.prototype, "occlusionRetryCount", (0, MT.f)("AbstractMesh", "occlusionRetryCount")), Object.getOwnPropertyDescriptor(JT.prototype, "occlusionType") || Object.defineProperty(JT.prototype, "occlusionType", (0, MT.f)("AbstractMesh", "occlusionType")), Object.getOwnPropertyDescriptor(JT.prototype, "occlusionQueryAlgorithmType") || Object.defineProperty(JT.prototype, "occlusionQueryAlgorithmType", (0, MT.f)("AbstractMesh", "occlusionQueryAlgorithmType")), Object.getOwnPropertyDescriptor(JT.prototype, "isOccluded") || Object.defineProperty(JT.prototype, "isOccluded", (0, MT.f)("AbstractMesh", "isOccluded")), Object.getOwnPropertyDescriptor(JT.prototype, "isOcclusionQueryInProgress") || Object.defineProperty(JT.prototype, "isOcclusionQueryInProgress", (0, MT.f)("AbstractMesh", "isOcclusionQueryInProgress")), Object.getOwnPropertyDescriptor(JT.prototype, "forceRenderingWhenOccluded") || Object.defineProperty(JT.prototype, "forceRenderingWhenOccluded", (0, MT.f)("AbstractMesh", "forceRenderingWhenOccluded")), Object.getOwnPropertyDescriptor(JT.prototype, "occlusionForRenderPassId") || Object.defineProperty(JT.prototype, "occlusionForRenderPassId", (0, MT.f)("AbstractMesh", "occlusionForRenderPassId")), Object.getOwnPropertyDescriptor(JT.prototype, "decalMap") || Object.defineProperty(JT.prototype, "decalMap", (0, MT.f)("AbstractMesh", "decalMap")), Object.getOwnPropertyDescriptor(JT.prototype, "HJ") || Object.defineProperty(JT.prototype, "HJ", (0, MT.f)("AbstractMesh", "HJ")), Object.getOwnPropertyDescriptor(JT.prototype, "physicsImpostor") || Object.defineProperty(JT.prototype, "physicsImpostor", (0, MT.f)("AbstractMesh", "physicsImpostor")), Object.getOwnPropertyDescriptor(JT.prototype, "showBoundingBox") || Object.defineProperty(JT.prototype, "showBoundingBox", (0, MT.f)("AbstractMesh", "showBoundingBox")), Object.getOwnPropertyDescriptor(JT.prototype, "edgesRenderer") || Object.defineProperty(JT.prototype, "edgesRenderer", (0, MT.f)("AbstractMesh", "edgesRenderer")), Object.getOwnPropertyDescriptor(JT.prototype, "renderOutline") || Object.defineProperty(JT.prototype, "renderOutline", (0, MT.f)("AbstractMesh", "renderOutline")), Object.getOwnPropertyDescriptor(JT.prototype, "renderOverlay") || Object.defineProperty(JT.prototype, "renderOverlay", (0, MT.f)("AbstractMesh", "renderOverlay"))
   },
-  39534: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => WY
+  39212: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => rT
     });
-    var FY = DY(36524),
-      AY = DY(36588),
-      IY = DY(39530),
-      RY = DY(39270),
-      OY = DY(39416),
-      gY = DY(39543),
-      aY = DY(39422),
-      vY = DY(39219),
-      uY = DY(38040),
-      sY = DY(39149),
-      iY = DY(39429),
-      yY = DY(36546),
-      QY = DY(39546),
-      oY = DY(39180);
-    class WY {
+    var iT = IT(36118),
+      zT = IT(36177),
+      kT = IT(39210),
+      WT = IT(38923),
+      XT = IT(39076),
+      BT = IT(39219),
+      FT = IT(39091),
+      ST = IT(38886),
+      DT = IT(37660),
+      LT = IT(38808),
+      xT = IT(39102),
+      cT = IT(36146),
+      KT = IT(39223),
+      MT = IT(38851);
+    class rT {
       get boundingBias() {
         return this._boundingBias
       }
-      set boundingBias(YY) {
-        this._boundingBias ? this._boundingBias.brY(YY) : this._boundingBias = YY.clone(), this._updateBoundingInfo(!0, null)
+      set boundingBias(TT) {
+        this._boundingBias ? this._boundingBias.SIT(TT) : this._boundingBias = TT.clone(), this._updateBoundingInfo(!0, null)
       }
-      static CreateGeometryForMesh(YY) {
-        const rY = new WY(WY.RandomId(), YY.hT());
-        return rY.applyToMesh(YY), rY
+      static CreateGeometryForMesh(TT) {
+        const oT = new rT(rT.RandomId(), TT.pC());
+        return oT.applyToMesh(TT), oT
       }
       get meshes() {
         return this._meshes
       }
-      constructor(YY, rY, DY) {
-        let AY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          RY = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+      constructor(TT, oT, IT) {
+        let zT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          WT = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
         this.delayLoadState = 0, this._totalVertices = 0, this._isDisposed = !1, this._extend = {
-          minimum: new FY.r(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
-          maximum: new FY.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
-        }, this._indexBufferIsUpdatable = !1, this._positionsCache = [], this._parentContainer = null, this.useBoundingInfoFromGeometry = !1, this._scene = rY || yY.d.LastCreatedScene, this._scene && (this.id = YY, this.uniqueId = this._scene.getUniqueId(), this._engine = this._scene.ky(), this._meshes = [], this._vertexBuffers = {}, this._indices = [], this._updatable = AY, null !== RY && (this._totalVertices = RY), DY ? this.setAllVerticesData(DY, AY) : null === RY && (this._totalVertices = 0), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObjects = {}), IY && (this.applyToMesh(IY), IY.computeWorldMatrix(!0)))
+          minimum: new iT.m(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
+          maximum: new iT.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
+        }, this._indexBufferIsUpdatable = !1, this._positionsCache = [], this._parentContainer = null, this.useBoundingInfoFromGeometry = !1, this._scene = oT || cT.d.LastCreatedScene, this._scene && (this.id = TT, this.uniqueId = this._scene.getUniqueId(), this._engine = this._scene.Zc(), this._meshes = [], this._vertexBuffers = {}, this._indices = [], this._updatable = zT, null !== WT && (this._totalVertices = WT), IT ? this.setAllVerticesData(IT, zT) : null === WT && (this._totalVertices = 0), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObjects = {}), kT && (this.applyToMesh(kT), kT.computeWorldMatrix(!0)))
       }
       get extend() {
         return this._extend
       }
-      hT() {
+      pC() {
         return this._scene
       }
-      ky() {
+      Zc() {
         return this._engine
       }
       isReady() {
         return 1 === this.delayLoadState || 0 === this.delayLoadState
       }
       get doNotSerialize() {
-        for (let YY = 0; YY < this._meshes.length; YY++)
-          if (!this._meshes[YY].doNotSerialize) return !1;
+        for (let TT = 0; TT < this._meshes.length; TT++)
+          if (!this._meshes[TT].doNotSerialize) return !1;
         return !0
       }
       _rebuild() {
         this._vertexArrayObjects && (this._vertexArrayObjects = {}), 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer"));
-        const YY = new Set;
-        for (const rY in this._vertexBuffers) YY.add(this._vertexBuffers[rY].getWrapperBuffer());
-        YY.forEach((YY => {
-          YY._rebuild()
+        const TT = new Set;
+        for (const oT in this._vertexBuffers) TT.add(this._vertexBuffers[oT].getWrapperBuffer());
+        TT.forEach((TT => {
+          TT._rebuild()
         }))
       }
-      setAllVerticesData(YY, rY) {
-        YY.applyToGeometry(this, rY), this._notifyUpdate()
+      setAllVerticesData(TT, oT) {
+        TT.applyToGeometry(this, oT), this._notifyUpdate()
       }
-      setVerticesData(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          FY = arguments.length > 3 ? arguments[3] : void 0;
-        DY && Array.isArray(rY) && (rY = new Float32Array(rY));
-        const AY = new RY.l(this._engine, rY, YY, {
-          updatable: DY,
+      setVerticesData(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          iT = arguments.length > 3 ? arguments[3] : void 0;
+        IT && Array.isArray(oT) && (oT = new Float32Array(oT));
+        const zT = new WT.i(this._engine, oT, TT, {
+          updatable: IT,
           postponeInternalCreation: 0 === this._meshes.length,
-          stride: FY,
-          label: "Geometry_" + this.id + "_" + YY
+          stride: iT,
+          label: "Geometry_" + this.id + "_" + TT
         });
-        this.setVerticesBuffer(AY)
+        this.setVerticesBuffer(zT)
       }
-      removeVerticesData(YY) {
-        this._vertexBuffers[YY] && (this._vertexBuffers[YY].dispose(), delete this._vertexBuffers[YY]), this._vertexArrayObjects && this._disposeVertexArrayObjects()
+      removeVerticesData(TT) {
+        this._vertexBuffers[TT] && (this._vertexBuffers[TT].dispose(), delete this._vertexBuffers[TT]), this._vertexArrayObjects && this._disposeVertexArrayObjects()
       }
-      setVerticesBuffer(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        const AY = YY.getKind();
-        this._vertexBuffers[AY] && DY && this._vertexBuffers[AY].dispose(), YY._buffer && YY._ownsBuffer && YY._buffer._increaseReferences(), this._vertexBuffers[AY] = YY;
-        const IY = this._meshes,
-          OY = IY.length;
-        if (AY === RY.l.PositionKind) {
-          this._totalVertices = rY ?? YY._maxVerticesCount, this._updateExtend(this.useBoundingInfoFromGeometry && this._boundingInfo ? null : YY.getFloatData(this._totalVertices)), this._resetPointsArrayCache();
-          const DY = this._extend && this._extend.minimum || new FY.r(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
-            AY = this._extend && this._extend.maximum || new FY.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE);
-          for (let YY = 0; YY < OY; YY++) {
-            const rY = IY[YY];
-            rY.buildBoundingInfo(DY, AY), rY._createGlobalSubMesh(rY.isUnIndexed), rY.computeWorldMatrix(!0), rY.synchronizeInstances()
+      setVerticesBuffer(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        const zT = TT.getKind();
+        this._vertexBuffers[zT] && IT && this._vertexBuffers[zT].dispose(), TT._buffer && TT._ownsBuffer && TT._buffer._increaseReferences(), this._vertexBuffers[zT] = TT;
+        const kT = this._meshes,
+          XT = kT.length;
+        if (zT === WT.i.PositionKind) {
+          this._totalVertices = oT ?? TT._maxVerticesCount, this._updateExtend(this.useBoundingInfoFromGeometry && this._boundingInfo ? null : TT.getFloatData(this._totalVertices)), this._resetPointsArrayCache();
+          const IT = this._extend && this._extend.minimum || new iT.m(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
+            zT = this._extend && this._extend.maximum || new iT.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE);
+          for (let TT = 0; TT < XT; TT++) {
+            const oT = kT[TT];
+            oT.buildBoundingInfo(IT, zT), oT._createGlobalSubMesh(oT.isUnIndexed), oT.computeWorldMatrix(!0), oT.synchronizeInstances()
           }
         }
-        this._notifyUpdate(AY)
+        this._notifyUpdate(zT)
       }
-      updateVerticesDataDirectly(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const AY = this.getVertexBuffer(YY);
-        AY && (AY.updateDirectly(rY, DY, FY), this._notifyUpdate(YY))
+      updateVerticesDataDirectly(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const zT = this.getVertexBuffer(TT);
+        zT && (zT.updateDirectly(oT, IT, iT), this._notifyUpdate(TT))
       }
-      updateVerticesData(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const FY = this.getVertexBuffer(YY);
-        FY && (FY.update(rY), YY === RY.l.PositionKind && this._updateBoundingInfo(DY, rY), this._notifyUpdate(YY))
+      updateVerticesData(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const iT = this.getVertexBuffer(TT);
+        iT && (iT.update(oT), TT === WT.i.PositionKind && this._updateBoundingInfo(IT, oT), this._notifyUpdate(TT))
       }
-      _updateBoundingInfo(YY, rY) {
-        if (YY && this._updateExtend(rY), this._resetPointsArrayCache(), YY) {
-          const YY = this._meshes;
-          for (const rY of YY) {
-            rY.hasBoundingInfo ? rY.oB().reConstruct(this._extend.minimum, this._extend.maximum) : rY.buildBoundingInfo(this._extend.minimum, this._extend.maximum);
-            const YY = rY.qm;
-            for (const rY of YY) rY.refreshBoundingInfo()
+      _updateBoundingInfo(TT, oT) {
+        if (TT && this._updateExtend(oT), this._resetPointsArrayCache(), TT) {
+          const TT = this._meshes;
+          for (const oT of TT) {
+            oT.hasBoundingInfo ? oT.GJ().reConstruct(this._extend.minimum, this._extend.maximum) : oT.buildBoundingInfo(this._extend.minimum, this._extend.maximum);
+            const TT = oT.pR;
+            for (const oT of TT) oT.refreshBoundingInfo()
           }
         }
       }
-      _bind(YY, rY, DY, FY) {
-        if (!YY) return;
-        void 0 === rY && (rY = this._indexBuffer);
-        const AY = this.getVertexBuffers();
-        if (!AY) return;
-        if (rY != this._indexBuffer || !this._vertexArrayObjects && !FY) return void this._engine.bindBuffers(AY, rY, YY, DY);
-        const IY = FY || this._vertexArrayObjects,
-          RY = this._engine;
-        IY[YY.key] || (IY[YY.key] = RY.recordVertexArrayObject(AY, rY, YY, DY)), RY.bindVertexArrayObject(IY[YY.key], rY)
+      _bind(TT, oT, IT, iT) {
+        if (!TT) return;
+        void 0 === oT && (oT = this._indexBuffer);
+        const zT = this.getVertexBuffers();
+        if (!zT) return;
+        if (oT != this._indexBuffer || !this._vertexArrayObjects && !iT) return void this._engine.bindBuffers(zT, oT, TT, IT);
+        const kT = iT || this._vertexArrayObjects,
+          WT = this._engine;
+        kT[TT.key] || (kT[TT.key] = WT.recordVertexArrayObject(zT, oT, TT, IT)), WT.bindVertexArrayObject(kT[TT.key], oT)
       }
       getTotalVertices() {
         return this.isReady() ? this._totalVertices : 0
       }
-      getVerticesData(YY, rY, DY) {
-        const FY = this.getVertexBuffer(YY);
-        return FY ? FY.getFloatData(this._totalVertices, DY || rY && 1 !== this._meshes.length) : null
+      getVerticesData(TT, oT, IT) {
+        const iT = this.getVertexBuffer(TT);
+        return iT ? iT.getFloatData(this._totalVertices, IT || oT && 1 !== this._meshes.length) : null
       }
-      copyVerticesData(YY, rY) {
-        const DY = this.getVertexBuffer(YY);
-        if (!DY) return;
-        rY[YY] || (rY[YY] = new Float32Array(this._totalVertices * DY.getSize()));
-        const FY = DY.getData();
-        FY && (0, oY.g)(FY, DY.getSize(), DY.type, DY.byteOffset, DY.byteStride, DY.normalized, this._totalVertices, rY[YY])
+      copyVerticesData(TT, oT) {
+        const IT = this.getVertexBuffer(TT);
+        if (!IT) return;
+        oT[TT] || (oT[TT] = new Float32Array(this._totalVertices * IT.getSize()));
+        const iT = IT.getData();
+        iT && (0, MT.e)(iT, IT.getSize(), IT.type, IT.byteOffset, IT.byteStride, IT.normalized, this._totalVertices, oT[TT])
       }
-      isVertexBufferUpdatable(YY) {
-        const rY = this._vertexBuffers[YY];
-        return !!rY && rY.isUpdatable()
+      isVertexBufferUpdatable(TT) {
+        const oT = this._vertexBuffers[TT];
+        return !!oT && oT.isUpdatable()
       }
-      getVertexBuffer(YY) {
-        return this.isReady() ? this._vertexBuffers[YY] : null
+      getVertexBuffer(TT) {
+        return this.isReady() ? this._vertexBuffers[TT] : null
       }
       getVertexBuffers() {
         return this.isReady() ? this._vertexBuffers : null
       }
-      isVerticesDataPresent(YY) {
-        return this._vertexBuffers ? void 0 !== this._vertexBuffers[YY] : !!this._delayInfo && -1 !== this._delayInfo.indexOf(YY)
+      isVerticesDataPresent(TT) {
+        return this._vertexBuffers ? void 0 !== this._vertexBuffers[TT] : !!this._delayInfo && -1 !== this._delayInfo.indexOf(TT)
       }
       getVerticesDataKinds() {
-        const YY = [];
-        let rY;
+        const TT = [];
+        let oT;
         if (!this._vertexBuffers && this._delayInfo)
-          for (rY in this._delayInfo) YY.push(rY);
+          for (oT in this._delayInfo) TT.push(oT);
         else
-          for (rY in this._vertexBuffers) YY.push(rY);
-        return YY
+          for (oT in this._vertexBuffers) TT.push(oT);
+        return TT
       }
-      updateIndices(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      updateIndices(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this._indexBuffer)
           if (this._indexBufferIsUpdatable) {
-            const FY = YY.length !== this._indices.length;
-            if (DY || (this._indices = YY.slice()), this._engine.updateDynamicIndexBuffer(this._indexBuffer, YY, rY), FY)
-              for (const YY of this._meshes) YY._createGlobalSubMesh(!0)
-          } else this.setIndices(YY, null, !0)
+            const iT = TT.length !== this._indices.length;
+            if (IT || (this._indices = TT.slice()), this._engine.updateDynamicIndexBuffer(this._indexBuffer, TT, oT), iT)
+              for (const TT of this._meshes) TT._createGlobalSubMesh(!0)
+          } else this.setIndices(TT, null, !0)
       }
-      setIndexBuffer(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._indices = [], this._indexBufferIsUpdatable = !1, this._indexBuffer = YY, this._totalVertices = rY, this._totalIndices = DY, YY.is32Bits = null === FY ? rY > 65535 : FY;
-        for (const AY of this._meshes) AY._createGlobalSubMesh(!0), AY.synchronizeInstances();
+      setIndexBuffer(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._indices = [], this._indexBufferIsUpdatable = !1, this._indexBuffer = TT, this._totalVertices = oT, this._totalIndices = IT, TT.is32Bits = null === iT ? oT > 65535 : iT;
+        for (const zT of this._meshes) zT._createGlobalSubMesh(!0), zT.synchronizeInstances();
         this._notifyUpdate()
       }
-      setIndices(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indices = YY, this._indexBufferIsUpdatable = DY, 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, DY, "Geometry_" + this.id + "_IndexBuffer")), void 0 != rY && (this._totalVertices = rY);
-        for (const AY of this._meshes) AY._createGlobalSubMesh(!FY), AY.synchronizeInstances();
+      setIndices(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indices = TT, this._indexBufferIsUpdatable = IT, 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, IT, "Geometry_" + this.id + "_IndexBuffer")), void 0 != oT && (this._totalVertices = oT);
+        for (const zT of this._meshes) zT._createGlobalSubMesh(!iT), zT.synchronizeInstances();
         this._notifyUpdate()
       }
       getTotalIndices() {
         return this.isReady() ? void 0 !== this._totalIndices ? this._totalIndices : this._indices.length : 0
       }
-      XIY(YY, rY) {
+      hWT(TT, oT) {
         if (!this.isReady()) return null;
-        const DY = this._indices;
-        return rY || YY && 1 !== this._meshes.length ? DY.slice() : DY
+        const IT = this._indices;
+        return oT || TT && 1 !== this._meshes.length ? IT.slice() : IT
       }
       getIndexBuffer() {
         return this.isReady() ? this._indexBuffer : null
       }
       _releaseVertexArrayObject() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        YY && this._vertexArrayObjects && this._vertexArrayObjects[YY.key] && (this._engine.releaseVertexArrayObject(this._vertexArrayObjects[YY.key]), delete this._vertexArrayObjects[YY.key])
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        TT && this._vertexArrayObjects && this._vertexArrayObjects[TT.key] && (this._engine.releaseVertexArrayObject(this._vertexArrayObjects[TT.key]), delete this._vertexArrayObjects[TT.key])
       }
-      releaseForMesh(YY, rY) {
-        const DY = this._meshes,
-          FY = DY.indexOf(YY); - 1 !== FY && (DY.splice(FY, 1), this._vertexArrayObjects && YY._invalidateInstanceVertexArrayObject(), YY._geometry = null, 0 === DY.length && rY && this.dispose())
+      releaseForMesh(TT, oT) {
+        const IT = this._meshes,
+          iT = IT.indexOf(TT); - 1 !== iT && (IT.splice(iT, 1), this._vertexArrayObjects && TT._invalidateInstanceVertexArrayObject(), TT._geometry = null, 0 === IT.length && oT && this.dispose())
       }
-      applyToMesh(YY) {
-        if (YY._geometry === this) return;
-        const rY = YY._geometry;
-        rY && rY.releaseForMesh(YY), this._vertexArrayObjects && YY._invalidateInstanceVertexArrayObject();
-        const DY = this._meshes;
-        YY._geometry = this, YY._internalAbstractMeshDataInfo._positions = null, this._scene.pushGeometry(this), DY.push(YY), this.isReady() ? this._applyToMesh(YY) : this._boundingInfo && YY.setBoundingInfo(this._boundingInfo)
+      applyToMesh(TT) {
+        if (TT._geometry === this) return;
+        const oT = TT._geometry;
+        oT && oT.releaseForMesh(TT), this._vertexArrayObjects && TT._invalidateInstanceVertexArrayObject();
+        const IT = this._meshes;
+        TT._geometry = this, TT._internalAbstractMeshDataInfo._positions = null, this._scene.pushGeometry(this), IT.push(TT), this.isReady() ? this._applyToMesh(TT) : this._boundingInfo && TT.setBoundingInfo(this._boundingInfo)
       }
       _updateExtend() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.useBoundingInfoFromGeometry && this._boundingInfo) this._extend = {
           minimum: this._boundingInfo.minimum.clone(),
           maximum: this._boundingInfo.maximum.clone()
         };
         else {
-          if (!YY && (YY = this.getVerticesData(RY.l.PositionKind), !YY)) return;
-          this._extend = (0, iY.h)(YY, 0, this._totalVertices, this.boundingBias, 3)
+          if (!TT && (TT = this.getVerticesData(WT.i.PositionKind), !TT)) return;
+          this._extend = (0, xT.e)(TT, 0, this._totalVertices, this.boundingBias, 3)
         }
       }
-      _applyToMesh(YY) {
-        for (const rY in this._vertexBuffers) {
-          const DY = this._vertexBuffers[rY];
-          DY._buffer.getBuffer() || DY.create(), rY === RY.l.PositionKind && (this._extend || this._updateExtend(), YY.buildBoundingInfo(this._extend.minimum, this._extend.maximum), YY._createGlobalSubMesh(YY.isUnIndexed), YY._updateBoundingInfo())
-        }!this._indexBuffer && this._indices && this._indices.length > 0 && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer")), YY._syncGeometryWithMorphTargetManager(), YY.synchronizeInstances()
+      _applyToMesh(TT) {
+        for (const oT in this._vertexBuffers) {
+          const IT = this._vertexBuffers[oT];
+          IT._buffer.getBuffer() || IT.create(), oT === WT.i.PositionKind && (this._extend || this._updateExtend(), TT.buildBoundingInfo(this._extend.minimum, this._extend.maximum), TT._createGlobalSubMesh(TT.isUnIndexed), TT._updateBoundingInfo())
+        }!this._indexBuffer && this._indices && this._indices.length > 0 && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer")), TT._syncGeometryWithMorphTargetManager(), TT.synchronizeInstances()
       }
-      _notifyUpdate(YY) {
-        this.onGeometryUpdated && this.onGeometryUpdated(this, YY), this._vertexArrayObjects && this._disposeVertexArrayObjects();
-        for (const rY of this._meshes) rY._markSubMeshesAsAttributesDirty()
+      _notifyUpdate(TT) {
+        this.onGeometryUpdated && this.onGeometryUpdated(this, TT), this._vertexArrayObjects && this._disposeVertexArrayObjects();
+        for (const oT of this._meshes) oT._markSubMeshesAsAttributesDirty()
       }
-      load(YY, rY) {
-        2 !== this.delayLoadState && (this.isReady() ? rY && rY() : (this.delayLoadState = 2, this._queueLoad(YY, rY)))
+      load(TT, oT) {
+        2 !== this.delayLoadState && (this.isReady() ? oT && oT() : (this.delayLoadState = 2, this._queueLoad(TT, oT)))
       }
-      _queueLoad(YY, rY) {
-        this.delayLoadingFile && (YY.addPendingData(this), (async () => {
+      _queueLoad(TT, oT) {
+        this.delayLoadingFile && (TT.addPendingData(this), (async () => {
           try {
-            const DY = await YY._loadDelayedFileAsync(this.delayLoadingFile, !1, !0);
-            if (!this._delayLoadingFunction) return void YY.removePendingData(this);
-            this._delayLoadingFunction(JSON.parse(DY), this), this.delayLoadState = 1, this._delayInfo = [], YY.removePendingData(this);
-            const FY = this._meshes,
-              AY = FY.length;
-            for (let YY = 0; YY < AY; YY++) this._applyToMesh(FY[YY]);
-            rY && rY()
-          } catch (DY) {
-            YY.removePendingData(this), YY.CrY || uY.d.Error(`Unable to delay load geometry "${this.id}" from "${this.delayLoadingFile}": ${DY}`)
+            const IT = await TT._loadDelayedFileAsync(this.delayLoadingFile, !1, !0);
+            if (!this._delayLoadingFunction) return void TT.removePendingData(this);
+            this._delayLoadingFunction(JSON.parse(IT), this), this.delayLoadState = 1, this._delayInfo = [], TT.removePendingData(this);
+            const iT = this._meshes,
+              zT = iT.length;
+            for (let TT = 0; TT < zT; TT++) this._applyToMesh(iT[TT]);
+            oT && oT()
+          } catch (IT) {
+            TT.removePendingData(this), TT.IIT || DT.d.Error(`Unable to delay load geometry "${this.id}" from "${this.delayLoadingFile}": ${IT}`)
           }
         })())
       }
       toLeftHanded() {
-        const YY = this.XIY(!1);
-        if (null != YY && YY.length > 0) {
-          for (let rY = 0; rY < YY.length; rY += 3) {
-            const DY = YY[rY + 0];
-            YY[rY + 0] = YY[rY + 2], YY[rY + 2] = DY
+        const TT = this.hWT(!1);
+        if (null != TT && TT.length > 0) {
+          for (let oT = 0; oT < TT.length; oT += 3) {
+            const IT = TT[oT + 0];
+            TT[oT + 0] = TT[oT + 2], TT[oT + 2] = IT
           }
-          this.setIndices(YY)
+          this.setIndices(TT)
         }
-        const rY = this.getVerticesData(RY.l.PositionKind, !1);
-        if (null != rY && rY.length > 0) {
-          for (let YY = 0; YY < rY.length; YY += 3) rY[YY + 2] = -rY[YY + 2];
-          this.setVerticesData(RY.l.PositionKind, rY, !1)
+        const oT = this.getVerticesData(WT.i.PositionKind, !1);
+        if (null != oT && oT.length > 0) {
+          for (let TT = 0; TT < oT.length; TT += 3) oT[TT + 2] = -oT[TT + 2];
+          this.setVerticesData(WT.i.PositionKind, oT, !1)
         }
-        const DY = this.getVerticesData(RY.l.NormalKind, !1);
-        if (null != DY && DY.length > 0) {
-          for (let YY = 0; YY < DY.length; YY += 3) DY[YY + 2] = -DY[YY + 2];
-          this.setVerticesData(RY.l.NormalKind, DY, !1)
+        const IT = this.getVerticesData(WT.i.NormalKind, !1);
+        if (null != IT && IT.length > 0) {
+          for (let TT = 0; TT < IT.length; TT += 3) IT[TT + 2] = -IT[TT + 2];
+          this.setVerticesData(WT.i.NormalKind, IT, !1)
         }
       }
       _resetPointsArrayCache() {
@@ -3994,297 +3994,297 @@ export const modules = {
       }
       _generatePointsArray() {
         if (this._positions) return !0;
-        const YY = this.getVerticesData(RY.l.PositionKind);
-        if (!YY || 0 === YY.length) return !1;
-        for (let rY = 3 * this._positionsCache.length, DY = this._positionsCache.length; rY < YY.length; rY += 3, ++DY) this._positionsCache[DY] = FY.r.FromArray(YY, rY);
-        for (let rY = 0, DY = 0; rY < YY.length; rY += 3, ++DY) this._positionsCache[DY].set(YY[0 + rY], YY[1 + rY], YY[2 + rY]);
-        return this._positionsCache.length = YY.length / 3, this._positions = this._positionsCache, !0
+        const TT = this.getVerticesData(WT.i.PositionKind);
+        if (!TT || 0 === TT.length) return !1;
+        for (let oT = 3 * this._positionsCache.length, IT = this._positionsCache.length; oT < TT.length; oT += 3, ++IT) this._positionsCache[IT] = iT.m.FromArray(TT, oT);
+        for (let oT = 0, IT = 0; oT < TT.length; oT += 3, ++IT) this._positionsCache[IT].set(TT[0 + oT], TT[1 + oT], TT[2 + oT]);
+        return this._positionsCache.length = TT.length / 3, this._positions = this._positionsCache, !0
       }
-      CrY() {
+      IIT() {
         return this._isDisposed
       }
       _disposeVertexArrayObjects() {
         if (this._vertexArrayObjects) {
-          for (const DY in this._vertexArrayObjects) this._engine.releaseVertexArrayObject(this._vertexArrayObjects[DY]);
+          for (const IT in this._vertexArrayObjects) this._engine.releaseVertexArrayObject(this._vertexArrayObjects[IT]);
           this._vertexArrayObjects = {};
-          const YY = this._meshes,
-            rY = YY.length;
-          for (let DY = 0; DY < rY; DY++) YY[DY]._invalidateInstanceVertexArrayObject()
+          const TT = this._meshes,
+            oT = TT.length;
+          for (let IT = 0; IT < oT; IT++) TT[IT]._invalidateInstanceVertexArrayObject()
         }
       }
       dispose() {
-        const YY = this._meshes,
-          rY = YY.length;
-        let DY;
-        for (DY = 0; DY < rY; DY++) this.releaseForMesh(YY[DY]);
+        const TT = this._meshes,
+          oT = TT.length;
+        let IT;
+        for (IT = 0; IT < oT; IT++) this.releaseForMesh(TT[IT]);
         this._meshes.length = 0, this._disposeVertexArrayObjects();
-        for (const FY in this._vertexBuffers) this._vertexBuffers[FY].dispose();
+        for (const iT in this._vertexBuffers) this._vertexBuffers[iT].dispose();
         if (this._vertexBuffers = {}, this._totalVertices = 0, this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null, this._indices = [], this.delayLoadState = 0, this.delayLoadingFile = null, this._delayLoadingFunction = null, this._delayInfo = [], this._boundingInfo = null, this._scene.removeGeometry(this), this._parentContainer) {
-          const YY = this._parentContainer.geometries.indexOf(this);
-          YY > -1 && this._parentContainer.geometries.splice(YY, 1), this._parentContainer = null
+          const TT = this._parentContainer.geometries.indexOf(this);
+          TT > -1 && this._parentContainer.geometries.splice(TT, 1), this._parentContainer = null
         }
         this._isDisposed = !0
       }
-      copy(YY) {
-        const rY = new WY(YY, this._scene),
-          DY = this.XIY(void 0, !0);
-        DY && rY.setIndices(DY);
-        let FY, AY = !1;
-        for (FY in this._vertexBuffers) {
-          const YY = this.getVertexBuffer(FY),
-            DY = YY.getData();
-          if (!DY) continue;
-          const IY = YY.isUpdatable(),
-            OY = YY.getSize(),
+      copy(TT) {
+        const oT = new rT(TT, this._scene),
+          IT = this.hWT(void 0, !0);
+        IT && oT.setIndices(IT);
+        let iT, zT = !1;
+        for (iT in this._vertexBuffers) {
+          const TT = this.getVertexBuffer(iT),
+            IT = TT.getData();
+          if (!IT) continue;
+          const kT = TT.isUpdatable(),
+            XT = TT.getSize(),
             {
-              type: gY,
-              byteOffset: aY,
-              byteStride: vY,
-              normalized: uY
-            } = YY;
-          AY = AY || IY;
-          let sY = this._totalVertices;
-          if (YY.getIsInstanced()) {
-            let YY;
-            YY = DY instanceof Array ? 4 * DY.length : DY.byteLength, sY = YY / vY
+              type: BT,
+              byteOffset: FT,
+              byteStride: ST,
+              normalized: DT
+            } = TT;
+          zT = zT || kT;
+          let LT = this._totalVertices;
+          if (TT.getIsInstanced()) {
+            let TT;
+            TT = IT instanceof Array ? 4 * IT.length : IT.byteLength, LT = TT / ST
           }
-          const iY = (0, oY.q)(DY, OY, gY, aY, vY, sY, !0),
-            yY = new RY.l(this._engine, iY, FY, {
-              updatable: IY,
+          const xT = (0, MT.o)(IT, XT, BT, FT, ST, LT, !0),
+            cT = new WT.i(this._engine, xT, iT, {
+              updatable: kT,
               useBytes: !1,
-              stride: OY,
-              size: OY,
+              stride: XT,
+              size: XT,
               offset: 0,
-              type: gY,
-              normalized: uY,
+              type: BT,
+              normalized: DT,
               takeBufferOwnership: !0,
-              instanced: YY.getIsInstanced()
+              instanced: TT.getIsInstanced()
             });
-          rY.setVerticesBuffer(yY, sY)
+          oT.setVerticesBuffer(cT, LT)
         }
-        for (FY in rY._updatable = AY, rY.delayLoadState = this.delayLoadState, rY.delayLoadingFile = this.delayLoadingFile, rY._delayLoadingFunction = this._delayLoadingFunction, this._delayInfo) rY._delayInfo = rY._delayInfo || [], rY._delayInfo.push(FY);
-        return rY._boundingInfo = new aY.d(this._extend.minimum, this._extend.maximum), rY
+        for (iT in oT._updatable = zT, oT.delayLoadState = this.delayLoadState, oT.delayLoadingFile = this.delayLoadingFile, oT._delayLoadingFunction = this._delayLoadingFunction, this._delayInfo) oT._delayInfo = oT._delayInfo || [], oT._delayInfo.push(iT);
+        return oT._boundingInfo = new FT.d(this._extend.minimum, this._extend.maximum), oT
       }
       serialize() {
-        const YY = {};
-        return YY.id = this.id, YY.uniqueId = this.uniqueId, YY.updatable = this._updatable, sY.e && sY.e.HasTags(this) && (YY.tags = sY.e.GetTags(this)), YY
+        const TT = {};
+        return TT.id = this.id, TT.uniqueId = this.uniqueId, TT.updatable = this._updatable, LT.c && LT.c.HasTags(this) && (TT.tags = LT.c.GetTags(this)), TT
       }
-      _toNumberArray(YY) {
-        return Array.isArray(YY) ? YY : Array.prototype.slice.call(YY)
+      _toNumberArray(TT) {
+        return Array.isArray(TT) ? TT : Array.prototype.slice.call(TT)
       }
       clearCachedData() {
         this._totalIndices = this._indices.length, this._indices = [], this._resetPointsArrayCache();
-        for (const YY in this._vertexBuffers) Object.prototype.hasOwnProperty.call(this._vertexBuffers, YY) && (this._vertexBuffers[YY]._buffer._data = null)
+        for (const TT in this._vertexBuffers) Object.prototype.hasOwnProperty.call(this._vertexBuffers, TT) && (this._vertexBuffers[TT]._buffer._data = null)
       }
       serializeVerticeData() {
-        const YY = this.serialize();
-        return this.isVerticesDataPresent(RY.l.PositionKind) && (YY.positions = this._toNumberArray(this.getVerticesData(RY.l.PositionKind)), this.isVertexBufferUpdatable(RY.l.PositionKind) && (YY.positionsUpdatable = !0)), this.isVerticesDataPresent(RY.l.NormalKind) && (YY.normals = this._toNumberArray(this.getVerticesData(RY.l.NormalKind)), this.isVertexBufferUpdatable(RY.l.NormalKind) && (YY.normalsUpdatable = !0)), this.isVerticesDataPresent(RY.l.TangentKind) && (YY.tangents = this._toNumberArray(this.getVerticesData(RY.l.TangentKind)), this.isVertexBufferUpdatable(RY.l.TangentKind) && (YY.tangentsUpdatable = !0)), this.isVerticesDataPresent(RY.l.UVKind) && (YY.uvs = this._toNumberArray(this.getVerticesData(RY.l.UVKind)), this.isVertexBufferUpdatable(RY.l.UVKind) && (YY.uvsUpdatable = !0)), this.isVerticesDataPresent(RY.l.UV2Kind) && (YY.uvs2 = this._toNumberArray(this.getVerticesData(RY.l.UV2Kind)), this.isVertexBufferUpdatable(RY.l.UV2Kind) && (YY.uvs2Updatable = !0)), this.isVerticesDataPresent(RY.l.UV3Kind) && (YY.uvs3 = this._toNumberArray(this.getVerticesData(RY.l.UV3Kind)), this.isVertexBufferUpdatable(RY.l.UV3Kind) && (YY.uvs3Updatable = !0)), this.isVerticesDataPresent(RY.l.UV4Kind) && (YY.uvs4 = this._toNumberArray(this.getVerticesData(RY.l.UV4Kind)), this.isVertexBufferUpdatable(RY.l.UV4Kind) && (YY.uvs4Updatable = !0)), this.isVerticesDataPresent(RY.l.UV5Kind) && (YY.uvs5 = this._toNumberArray(this.getVerticesData(RY.l.UV5Kind)), this.isVertexBufferUpdatable(RY.l.UV5Kind) && (YY.uvs5Updatable = !0)), this.isVerticesDataPresent(RY.l.UV6Kind) && (YY.uvs6 = this._toNumberArray(this.getVerticesData(RY.l.UV6Kind)), this.isVertexBufferUpdatable(RY.l.UV6Kind) && (YY.uvs6Updatable = !0)), this.isVerticesDataPresent(RY.l.ColorKind) && (YY.colors = this._toNumberArray(this.getVerticesData(RY.l.ColorKind)), this.isVertexBufferUpdatable(RY.l.ColorKind) && (YY.colorsUpdatable = !0)), this.isVerticesDataPresent(RY.l.MatricesIndicesKind) && (YY.matricesIndices = this._toNumberArray(this.getVerticesData(RY.l.MatricesIndicesKind)), YY.matricesIndicesExpanded = !0, this.isVertexBufferUpdatable(RY.l.MatricesIndicesKind) && (YY.matricesIndicesUpdatable = !0)), this.isVerticesDataPresent(RY.l.MatricesWeightsKind) && (YY.matricesWeights = this._toNumberArray(this.getVerticesData(RY.l.MatricesWeightsKind)), this.isVertexBufferUpdatable(RY.l.MatricesWeightsKind) && (YY.matricesWeightsUpdatable = !0)), YY.indices = this._toNumberArray(this.XIY()), YY
+        const TT = this.serialize();
+        return this.isVerticesDataPresent(WT.i.PositionKind) && (TT.positions = this._toNumberArray(this.getVerticesData(WT.i.PositionKind)), this.isVertexBufferUpdatable(WT.i.PositionKind) && (TT.positionsUpdatable = !0)), this.isVerticesDataPresent(WT.i.NormalKind) && (TT.normals = this._toNumberArray(this.getVerticesData(WT.i.NormalKind)), this.isVertexBufferUpdatable(WT.i.NormalKind) && (TT.normalsUpdatable = !0)), this.isVerticesDataPresent(WT.i.TangentKind) && (TT.tangents = this._toNumberArray(this.getVerticesData(WT.i.TangentKind)), this.isVertexBufferUpdatable(WT.i.TangentKind) && (TT.tangentsUpdatable = !0)), this.isVerticesDataPresent(WT.i.UVKind) && (TT.uvs = this._toNumberArray(this.getVerticesData(WT.i.UVKind)), this.isVertexBufferUpdatable(WT.i.UVKind) && (TT.uvsUpdatable = !0)), this.isVerticesDataPresent(WT.i.UV2Kind) && (TT.uvs2 = this._toNumberArray(this.getVerticesData(WT.i.UV2Kind)), this.isVertexBufferUpdatable(WT.i.UV2Kind) && (TT.uvs2Updatable = !0)), this.isVerticesDataPresent(WT.i.UV3Kind) && (TT.uvs3 = this._toNumberArray(this.getVerticesData(WT.i.UV3Kind)), this.isVertexBufferUpdatable(WT.i.UV3Kind) && (TT.uvs3Updatable = !0)), this.isVerticesDataPresent(WT.i.UV4Kind) && (TT.uvs4 = this._toNumberArray(this.getVerticesData(WT.i.UV4Kind)), this.isVertexBufferUpdatable(WT.i.UV4Kind) && (TT.uvs4Updatable = !0)), this.isVerticesDataPresent(WT.i.UV5Kind) && (TT.uvs5 = this._toNumberArray(this.getVerticesData(WT.i.UV5Kind)), this.isVertexBufferUpdatable(WT.i.UV5Kind) && (TT.uvs5Updatable = !0)), this.isVerticesDataPresent(WT.i.UV6Kind) && (TT.uvs6 = this._toNumberArray(this.getVerticesData(WT.i.UV6Kind)), this.isVertexBufferUpdatable(WT.i.UV6Kind) && (TT.uvs6Updatable = !0)), this.isVerticesDataPresent(WT.i.ColorKind) && (TT.colors = this._toNumberArray(this.getVerticesData(WT.i.ColorKind)), this.isVertexBufferUpdatable(WT.i.ColorKind) && (TT.colorsUpdatable = !0)), this.isVerticesDataPresent(WT.i.MatricesIndicesKind) && (TT.matricesIndices = this._toNumberArray(this.getVerticesData(WT.i.MatricesIndicesKind)), TT.matricesIndicesExpanded = !0, this.isVertexBufferUpdatable(WT.i.MatricesIndicesKind) && (TT.matricesIndicesUpdatable = !0)), this.isVerticesDataPresent(WT.i.MatricesWeightsKind) && (TT.matricesWeights = this._toNumberArray(this.getVerticesData(WT.i.MatricesWeightsKind)), this.isVertexBufferUpdatable(WT.i.MatricesWeightsKind) && (TT.matricesWeightsUpdatable = !0)), TT.indices = this._toNumberArray(this.hWT()), TT
       }
-      static ExtractFromMesh(YY, rY) {
-        const DY = YY._geometry;
-        return DY ? DY.copy(rY) : null
+      static ExtractFromMesh(TT, oT) {
+        const IT = TT._geometry;
+        return IT ? IT.copy(oT) : null
       }
       static RandomId() {
-        return vY.i.RandomId()
+        return ST.i.RandomId()
       }
-      static _GetGeometryByLoadedUniqueId(YY, rY) {
-        for (let DY = 0; DY < rY.geometries.length; DY++)
-          if (rY.geometries[DY]._loadedUniqueId === YY) return rY.geometries[DY];
+      static _GetGeometryByLoadedUniqueId(TT, oT) {
+        for (let IT = 0; IT < oT.geometries.length; IT++)
+          if (oT.geometries[IT]._loadedUniqueId === TT) return oT.geometries[IT];
         return null
       }
-      static _ImportGeometry(YY, rY) {
-        const DY = rY.hT(),
-          FY = YY.geometryUniqueId,
-          IY = YY.geometryId;
-        if (FY || IY) {
-          const YY = FY ? this._GetGeometryByLoadedUniqueId(FY, DY) : DY.getGeometryById(IY);
-          YY && YY.applyToMesh(rY)
-        } else if (YY instanceof ArrayBuffer) {
-          const DY = rY._binaryInfo;
-          if (DY.positionsAttrDesc && DY.positionsAttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.positionsAttrDesc.offset, DY.positionsAttrDesc.count);
-            rY.setVerticesData(RY.l.PositionKind, FY, !1)
+      static _ImportGeometry(TT, oT) {
+        const IT = oT.pC(),
+          iT = TT.geometryUniqueId,
+          kT = TT.geometryId;
+        if (iT || kT) {
+          const TT = iT ? this._GetGeometryByLoadedUniqueId(iT, IT) : IT.getGeometryById(kT);
+          TT && TT.applyToMesh(oT)
+        } else if (TT instanceof ArrayBuffer) {
+          const IT = oT._binaryInfo;
+          if (IT.positionsAttrDesc && IT.positionsAttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.positionsAttrDesc.offset, IT.positionsAttrDesc.count);
+            oT.setVerticesData(WT.i.PositionKind, iT, !1)
           }
-          if (DY.normalsAttrDesc && DY.normalsAttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.normalsAttrDesc.offset, DY.normalsAttrDesc.count);
-            rY.setVerticesData(RY.l.NormalKind, FY, !1)
+          if (IT.normalsAttrDesc && IT.normalsAttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.normalsAttrDesc.offset, IT.normalsAttrDesc.count);
+            oT.setVerticesData(WT.i.NormalKind, iT, !1)
           }
-          if (DY.tangetsAttrDesc && DY.tangetsAttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.tangetsAttrDesc.offset, DY.tangetsAttrDesc.count);
-            rY.setVerticesData(RY.l.TangentKind, FY, !1)
+          if (IT.tangetsAttrDesc && IT.tangetsAttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.tangetsAttrDesc.offset, IT.tangetsAttrDesc.count);
+            oT.setVerticesData(WT.i.TangentKind, iT, !1)
           }
-          if (DY.uvsAttrDesc && DY.uvsAttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.uvsAttrDesc.offset, DY.uvsAttrDesc.count);
-            if (QY.e)
-              for (let YY = 1; YY < FY.length; YY += 2) FY[YY] = 1 - FY[YY];
-            rY.setVerticesData(RY.l.UVKind, FY, !1)
+          if (IT.uvsAttrDesc && IT.uvsAttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.uvsAttrDesc.offset, IT.uvsAttrDesc.count);
+            if (KT.d)
+              for (let TT = 1; TT < iT.length; TT += 2) iT[TT] = 1 - iT[TT];
+            oT.setVerticesData(WT.i.UVKind, iT, !1)
           }
-          if (DY.uvs2AttrDesc && DY.uvs2AttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.uvs2AttrDesc.offset, DY.uvs2AttrDesc.count);
-            if (QY.e)
-              for (let YY = 1; YY < FY.length; YY += 2) FY[YY] = 1 - FY[YY];
-            rY.setVerticesData(RY.l.UV2Kind, FY, !1)
+          if (IT.uvs2AttrDesc && IT.uvs2AttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.uvs2AttrDesc.offset, IT.uvs2AttrDesc.count);
+            if (KT.d)
+              for (let TT = 1; TT < iT.length; TT += 2) iT[TT] = 1 - iT[TT];
+            oT.setVerticesData(WT.i.UV2Kind, iT, !1)
           }
-          if (DY.uvs3AttrDesc && DY.uvs3AttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.uvs3AttrDesc.offset, DY.uvs3AttrDesc.count);
-            if (QY.e)
-              for (let YY = 1; YY < FY.length; YY += 2) FY[YY] = 1 - FY[YY];
-            rY.setVerticesData(RY.l.UV3Kind, FY, !1)
+          if (IT.uvs3AttrDesc && IT.uvs3AttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.uvs3AttrDesc.offset, IT.uvs3AttrDesc.count);
+            if (KT.d)
+              for (let TT = 1; TT < iT.length; TT += 2) iT[TT] = 1 - iT[TT];
+            oT.setVerticesData(WT.i.UV3Kind, iT, !1)
           }
-          if (DY.uvs4AttrDesc && DY.uvs4AttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.uvs4AttrDesc.offset, DY.uvs4AttrDesc.count);
-            if (QY.e)
-              for (let YY = 1; YY < FY.length; YY += 2) FY[YY] = 1 - FY[YY];
-            rY.setVerticesData(RY.l.UV4Kind, FY, !1)
+          if (IT.uvs4AttrDesc && IT.uvs4AttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.uvs4AttrDesc.offset, IT.uvs4AttrDesc.count);
+            if (KT.d)
+              for (let TT = 1; TT < iT.length; TT += 2) iT[TT] = 1 - iT[TT];
+            oT.setVerticesData(WT.i.UV4Kind, iT, !1)
           }
-          if (DY.uvs5AttrDesc && DY.uvs5AttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.uvs5AttrDesc.offset, DY.uvs5AttrDesc.count);
-            if (QY.e)
-              for (let YY = 1; YY < FY.length; YY += 2) FY[YY] = 1 - FY[YY];
-            rY.setVerticesData(RY.l.UV5Kind, FY, !1)
+          if (IT.uvs5AttrDesc && IT.uvs5AttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.uvs5AttrDesc.offset, IT.uvs5AttrDesc.count);
+            if (KT.d)
+              for (let TT = 1; TT < iT.length; TT += 2) iT[TT] = 1 - iT[TT];
+            oT.setVerticesData(WT.i.UV5Kind, iT, !1)
           }
-          if (DY.uvs6AttrDesc && DY.uvs6AttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.uvs6AttrDesc.offset, DY.uvs6AttrDesc.count);
-            if (QY.e)
-              for (let YY = 1; YY < FY.length; YY += 2) FY[YY] = 1 - FY[YY];
-            rY.setVerticesData(RY.l.UV6Kind, FY, !1)
+          if (IT.uvs6AttrDesc && IT.uvs6AttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.uvs6AttrDesc.offset, IT.uvs6AttrDesc.count);
+            if (KT.d)
+              for (let TT = 1; TT < iT.length; TT += 2) iT[TT] = 1 - iT[TT];
+            oT.setVerticesData(WT.i.UV6Kind, iT, !1)
           }
-          if (DY.colorsAttrDesc && DY.colorsAttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.colorsAttrDesc.offset, DY.colorsAttrDesc.count);
-            rY.setVerticesData(RY.l.ColorKind, FY, !1, DY.colorsAttrDesc.stride)
+          if (IT.colorsAttrDesc && IT.colorsAttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.colorsAttrDesc.offset, IT.colorsAttrDesc.count);
+            oT.setVerticesData(WT.i.ColorKind, iT, !1, IT.colorsAttrDesc.stride)
           }
-          if (DY.matricesIndicesAttrDesc && DY.matricesIndicesAttrDesc.count > 0) {
-            const FY = new Int32Array(YY, DY.matricesIndicesAttrDesc.offset, DY.matricesIndicesAttrDesc.count),
-              AY = [];
-            for (let YY = 0; YY < FY.length; YY++) {
-              const rY = FY[YY];
-              AY.push(255 & rY), AY.push((65280 & rY) >> 8), AY.push((16711680 & rY) >> 16), AY.push(rY >> 24 & 255)
+          if (IT.matricesIndicesAttrDesc && IT.matricesIndicesAttrDesc.count > 0) {
+            const iT = new Int32Array(TT, IT.matricesIndicesAttrDesc.offset, IT.matricesIndicesAttrDesc.count),
+              zT = [];
+            for (let TT = 0; TT < iT.length; TT++) {
+              const oT = iT[TT];
+              zT.push(255 & oT), zT.push((65280 & oT) >> 8), zT.push((16711680 & oT) >> 16), zT.push(oT >> 24 & 255)
             }
-            rY.setVerticesData(RY.l.MatricesIndicesKind, AY, !1)
+            oT.setVerticesData(WT.i.MatricesIndicesKind, zT, !1)
           }
-          if (DY.matricesIndicesExtraAttrDesc && DY.matricesIndicesExtraAttrDesc.count > 0) {
-            const FY = new Int32Array(YY, DY.matricesIndicesExtraAttrDesc.offset, DY.matricesIndicesExtraAttrDesc.count),
-              AY = [];
-            for (let YY = 0; YY < FY.length; YY++) {
-              const rY = FY[YY];
-              AY.push(255 & rY), AY.push((65280 & rY) >> 8), AY.push((16711680 & rY) >> 16), AY.push(rY >> 24 & 255)
+          if (IT.matricesIndicesExtraAttrDesc && IT.matricesIndicesExtraAttrDesc.count > 0) {
+            const iT = new Int32Array(TT, IT.matricesIndicesExtraAttrDesc.offset, IT.matricesIndicesExtraAttrDesc.count),
+              zT = [];
+            for (let TT = 0; TT < iT.length; TT++) {
+              const oT = iT[TT];
+              zT.push(255 & oT), zT.push((65280 & oT) >> 8), zT.push((16711680 & oT) >> 16), zT.push(oT >> 24 & 255)
             }
-            rY.setVerticesData(RY.l.MatricesIndicesExtraKind, AY, !1)
+            oT.setVerticesData(WT.i.MatricesIndicesExtraKind, zT, !1)
           }
-          if (DY.matricesWeightsAttrDesc && DY.matricesWeightsAttrDesc.count > 0) {
-            const FY = new Float32Array(YY, DY.matricesWeightsAttrDesc.offset, DY.matricesWeightsAttrDesc.count);
-            rY.setVerticesData(RY.l.MatricesWeightsKind, FY, !1)
+          if (IT.matricesWeightsAttrDesc && IT.matricesWeightsAttrDesc.count > 0) {
+            const iT = new Float32Array(TT, IT.matricesWeightsAttrDesc.offset, IT.matricesWeightsAttrDesc.count);
+            oT.setVerticesData(WT.i.MatricesWeightsKind, iT, !1)
           }
-          if (DY.indicesAttrDesc && DY.indicesAttrDesc.count > 0) {
-            const FY = new Int32Array(YY, DY.indicesAttrDesc.offset, DY.indicesAttrDesc.count);
-            rY.setIndices(FY, null)
+          if (IT.indicesAttrDesc && IT.indicesAttrDesc.count > 0) {
+            const iT = new Int32Array(TT, IT.indicesAttrDesc.offset, IT.indicesAttrDesc.count);
+            oT.setIndices(iT, null)
           }
-          if (DY.subMeshesAttrDesc && DY.subMeshesAttrDesc.count > 0) {
-            const FY = new Int32Array(YY, DY.subMeshesAttrDesc.offset, 5 * DY.subMeshesAttrDesc.count);
-            rY.qm = [];
-            for (let YY = 0; YY < DY.subMeshesAttrDesc.count; YY++) {
-              const DY = FY[5 * YY + 0],
-                AY = FY[5 * YY + 1],
-                IY = FY[5 * YY + 2],
-                RY = FY[5 * YY + 3],
-                gY = FY[5 * YY + 4];
-              OY.d.AddToMesh(DY, AY, IY, RY, gY, rY)
+          if (IT.subMeshesAttrDesc && IT.subMeshesAttrDesc.count > 0) {
+            const iT = new Int32Array(TT, IT.subMeshesAttrDesc.offset, 5 * IT.subMeshesAttrDesc.count);
+            oT.pR = [];
+            for (let TT = 0; TT < IT.subMeshesAttrDesc.count; TT++) {
+              const IT = iT[5 * TT + 0],
+                zT = iT[5 * TT + 1],
+                kT = iT[5 * TT + 2],
+                WT = iT[5 * TT + 3],
+                BT = iT[5 * TT + 4];
+              XT.c.AddToMesh(IT, zT, kT, WT, BT, oT)
             }
           }
-        } else if (YY.positions && YY.normals && YY.indices) {
-          if (rY.setVerticesData(RY.l.PositionKind, YY.positions, YY.positions._updatable || YY.positionsUpdatable), rY.setVerticesData(RY.l.NormalKind, YY.normals, YY.normals._updatable || YY.normalsUpdatable), YY.tangents && rY.setVerticesData(RY.l.TangentKind, YY.tangents, YY.tangents._updatable || YY.tangentsUpdatable), YY.uvs && rY.setVerticesData(RY.l.UVKind, YY.uvs, YY.uvs._updatable || YY.uvsUpdatable), YY.uvs2 && rY.setVerticesData(RY.l.UV2Kind, YY.uvs2, YY.uvs2._updatable || YY.uvs2Updatable), YY.uvs3 && rY.setVerticesData(RY.l.UV3Kind, YY.uvs3, YY.uvs3._updatable || YY.uvs3Updatable), YY.uvs4 && rY.setVerticesData(RY.l.UV4Kind, YY.uvs4, YY.uvs4._updatable || YY.uvs4Updatable), YY.uvs5 && rY.setVerticesData(RY.l.UV5Kind, YY.uvs5, YY.uvs5._updatable || YY.uvs5Updatable), YY.uvs6 && rY.setVerticesData(RY.l.UV6Kind, YY.uvs6, YY.uvs6._updatable || YY.uvs6Updatable), YY.colors && rY.setVerticesData(RY.l.ColorKind, AY.d.CheckColors4(YY.colors, YY.positions.length / 3), YY.colors._updatable), YY.matricesIndices)
-            if (YY.matricesIndices._isExpanded || YY.matricesIndicesExpanded) delete YY.matricesIndices._isExpanded, delete YY.matricesIndicesExpanded, rY.setVerticesData(RY.l.MatricesIndicesKind, YY.matricesIndices, YY.matricesIndices._updatable || YY.matricesIndicesUpdatable);
+        } else if (TT.positions && TT.normals && TT.indices) {
+          if (oT.setVerticesData(WT.i.PositionKind, TT.positions, TT.positions._updatable || TT.positionsUpdatable), oT.setVerticesData(WT.i.NormalKind, TT.normals, TT.normals._updatable || TT.normalsUpdatable), TT.tangents && oT.setVerticesData(WT.i.TangentKind, TT.tangents, TT.tangents._updatable || TT.tangentsUpdatable), TT.uvs && oT.setVerticesData(WT.i.UVKind, TT.uvs, TT.uvs._updatable || TT.uvsUpdatable), TT.uvs2 && oT.setVerticesData(WT.i.UV2Kind, TT.uvs2, TT.uvs2._updatable || TT.uvs2Updatable), TT.uvs3 && oT.setVerticesData(WT.i.UV3Kind, TT.uvs3, TT.uvs3._updatable || TT.uvs3Updatable), TT.uvs4 && oT.setVerticesData(WT.i.UV4Kind, TT.uvs4, TT.uvs4._updatable || TT.uvs4Updatable), TT.uvs5 && oT.setVerticesData(WT.i.UV5Kind, TT.uvs5, TT.uvs5._updatable || TT.uvs5Updatable), TT.uvs6 && oT.setVerticesData(WT.i.UV6Kind, TT.uvs6, TT.uvs6._updatable || TT.uvs6Updatable), TT.colors && oT.setVerticesData(WT.i.ColorKind, zT.i.CheckColors4(TT.colors, TT.positions.length / 3), TT.colors._updatable), TT.matricesIndices)
+            if (TT.matricesIndices._isExpanded || TT.matricesIndicesExpanded) delete TT.matricesIndices._isExpanded, delete TT.matricesIndicesExpanded, oT.setVerticesData(WT.i.MatricesIndicesKind, TT.matricesIndices, TT.matricesIndices._updatable || TT.matricesIndicesUpdatable);
             else {
-              const DY = [];
-              for (let rY = 0; rY < YY.matricesIndices.length; rY++) {
-                const FY = YY.matricesIndices[rY];
-                DY.push(255 & FY), DY.push((65280 & FY) >> 8), DY.push((16711680 & FY) >> 16), DY.push(FY >> 24 & 255)
+              const IT = [];
+              for (let oT = 0; oT < TT.matricesIndices.length; oT++) {
+                const iT = TT.matricesIndices[oT];
+                IT.push(255 & iT), IT.push((65280 & iT) >> 8), IT.push((16711680 & iT) >> 16), IT.push(iT >> 24 & 255)
               }
-              rY.setVerticesData(RY.l.MatricesIndicesKind, DY, YY.matricesIndices._updatable || YY.matricesIndicesUpdatable)
-            } if (YY.matricesIndicesExtra)
-            if (YY.matricesIndicesExtraExpanded || YY.matricesIndicesExtra._isExpanded) delete YY.matricesIndices._isExpanded, delete YY.matricesIndicesExtraExpanded, rY.setVerticesData(RY.l.MatricesIndicesExtraKind, YY.matricesIndicesExtra, YY.matricesIndicesExtra._updatable || YY.matricesIndicesExtraUpdatable);
+              oT.setVerticesData(WT.i.MatricesIndicesKind, IT, TT.matricesIndices._updatable || TT.matricesIndicesUpdatable)
+            } if (TT.matricesIndicesExtra)
+            if (TT.matricesIndicesExtraExpanded || TT.matricesIndicesExtra._isExpanded) delete TT.matricesIndices._isExpanded, delete TT.matricesIndicesExtraExpanded, oT.setVerticesData(WT.i.MatricesIndicesExtraKind, TT.matricesIndicesExtra, TT.matricesIndicesExtra._updatable || TT.matricesIndicesExtraUpdatable);
             else {
-              const DY = [];
-              for (let rY = 0; rY < YY.matricesIndicesExtra.length; rY++) {
-                const FY = YY.matricesIndicesExtra[rY];
-                DY.push(255 & FY), DY.push((65280 & FY) >> 8), DY.push((16711680 & FY) >> 16), DY.push(FY >> 24 & 255)
+              const IT = [];
+              for (let oT = 0; oT < TT.matricesIndicesExtra.length; oT++) {
+                const iT = TT.matricesIndicesExtra[oT];
+                IT.push(255 & iT), IT.push((65280 & iT) >> 8), IT.push((16711680 & iT) >> 16), IT.push(iT >> 24 & 255)
               }
-              rY.setVerticesData(RY.l.MatricesIndicesExtraKind, DY, YY.matricesIndicesExtra._updatable || YY.matricesIndicesExtraUpdatable)
-            } YY.matricesWeights && (WY._CleanMatricesWeights(YY, rY), rY.setVerticesData(RY.l.MatricesWeightsKind, YY.matricesWeights, YY.matricesWeights._updatable)), YY.matricesWeightsExtra && rY.setVerticesData(RY.l.MatricesWeightsExtraKind, YY.matricesWeightsExtra, YY.matricesWeights._updatable), rY.setIndices(YY.indices, null)
+              oT.setVerticesData(WT.i.MatricesIndicesExtraKind, IT, TT.matricesIndicesExtra._updatable || TT.matricesIndicesExtraUpdatable)
+            } TT.matricesWeights && (rT._CleanMatricesWeights(TT, oT), oT.setVerticesData(WT.i.MatricesWeightsKind, TT.matricesWeights, TT.matricesWeights._updatable)), TT.matricesWeightsExtra && oT.setVerticesData(WT.i.MatricesWeightsExtraKind, TT.matricesWeightsExtra, TT.matricesWeights._updatable), oT.setIndices(TT.indices, null)
         }
-        if (YY.qm) {
-          rY.qm = [];
-          for (let DY = 0; DY < YY.qm.length; DY++) {
-            const FY = YY.qm[DY];
-            OY.d.AddToMesh(FY.materialIndex, FY.verticesStart, FY.verticesCount, FY.indexStart, FY.indexCount, rY)
+        if (TT.pR) {
+          oT.pR = [];
+          for (let IT = 0; IT < TT.pR.length; IT++) {
+            const iT = TT.pR[IT];
+            XT.c.AddToMesh(iT.materialIndex, iT.verticesStart, iT.verticesCount, iT.indexStart, iT.indexCount, oT)
           }
         }
-        rY._shouldGenerateFlatShading && (rY.convertToFlatShadedMesh(), rY._shouldGenerateFlatShading = !1), rY.computeWorldMatrix(!0), DY.onMeshImportedObservable.notifyObservers(rY)
+        oT._shouldGenerateFlatShading && (oT.convertToFlatShadedMesh(), oT._shouldGenerateFlatShading = !1), oT.computeWorldMatrix(!0), IT.onMeshImportedObservable.notifyObservers(oT)
       }
-      static _CleanMatricesWeights(YY, rY) {
-        const DY = .001;
-        if (!gY.d.CleanBoneMatrixWeights) return;
-        let FY;
-        if (!(YY.skeletonId > -1)) return;
+      static _CleanMatricesWeights(TT, oT) {
+        const IT = .001;
+        if (!BT.b.CleanBoneMatrixWeights) return;
+        let iT;
+        if (!(TT.skeletonId > -1)) return;
         {
-          const DY = rY.hT().getLastSkeletonById(YY.skeletonId);
-          if (!DY) return;
-          FY = DY.bones.length
+          const IT = oT.pC().getLastSkeletonById(TT.skeletonId);
+          if (!IT) return;
+          iT = IT.bones.length
         }
-        const AY = rY.getVerticesData(RY.l.MatricesIndicesKind),
-          IY = rY.getVerticesData(RY.l.MatricesIndicesExtraKind),
-          OY = YY.matricesWeights,
-          aY = YY.matricesWeightsExtra,
-          vY = YY.numBoneInfluencer,
-          uY = OY.length;
-        for (let RY = 0; RY < uY; RY += 4) {
-          let YY = 0,
-            rY = -1;
-          for (let FY = 0; FY < 4; FY++) {
-            const AY = OY[RY + FY];
-            YY += AY, AY < DY && rY < 0 && (rY = FY)
+        const zT = oT.getVerticesData(WT.i.MatricesIndicesKind),
+          kT = oT.getVerticesData(WT.i.MatricesIndicesExtraKind),
+          XT = TT.matricesWeights,
+          FT = TT.matricesWeightsExtra,
+          ST = TT.numBoneInfluencer,
+          DT = XT.length;
+        for (let WT = 0; WT < DT; WT += 4) {
+          let TT = 0,
+            oT = -1;
+          for (let iT = 0; iT < 4; iT++) {
+            const zT = XT[WT + iT];
+            TT += zT, zT < IT && oT < 0 && (oT = iT)
           }
-          if (aY)
-            for (let FY = 0; FY < 4; FY++) {
-              const AY = aY[RY + FY];
-              YY += AY, AY < DY && rY < 0 && (rY = FY + 4)
+          if (FT)
+            for (let iT = 0; iT < 4; iT++) {
+              const zT = FT[WT + iT];
+              TT += zT, zT < IT && oT < 0 && (oT = iT + 4)
             }
-          if ((rY < 0 || rY > vY - 1) && (rY = vY - 1), YY > DY) {
-            const rY = 1 / YY;
-            for (let YY = 0; YY < 4; YY++) OY[RY + YY] *= rY;
-            if (aY)
-              for (let YY = 0; YY < 4; YY++) aY[RY + YY] *= rY
-          } else rY >= 4 ? (aY[RY + rY - 4] = 1 - YY, IY[RY + rY - 4] = FY) : (OY[RY + rY] = 1 - YY, AY[RY + rY] = FY)
+          if ((oT < 0 || oT > ST - 1) && (oT = ST - 1), TT > IT) {
+            const oT = 1 / TT;
+            for (let TT = 0; TT < 4; TT++) XT[WT + TT] *= oT;
+            if (FT)
+              for (let TT = 0; TT < 4; TT++) FT[WT + TT] *= oT
+          } else oT >= 4 ? (FT[WT + oT - 4] = 1 - TT, kT[WT + oT - 4] = iT) : (XT[WT + oT] = 1 - TT, zT[WT + oT] = iT)
         }
-        rY.setVerticesData(RY.l.MatricesIndicesKind, AY), YY.matricesWeightsExtra && rY.setVerticesData(RY.l.MatricesIndicesExtraKind, IY)
+        oT.setVerticesData(WT.i.MatricesIndicesKind, zT), TT.matricesWeightsExtra && oT.setVerticesData(WT.i.MatricesIndicesExtraKind, kT)
       }
-      static Parse(YY, rY, DY) {
-        const AY = new WY(YY.id, rY, void 0, YY.updatable);
-        return AY._loadedUniqueId = YY.uniqueId, sY.e && sY.e.AddTagsTo(AY, YY.tags), YY.delayLoadingFile ? (AY.delayLoadState = 4, AY.delayLoadingFile = DY + YY.delayLoadingFile, AY._boundingInfo = new aY.d(FY.r.FromArray(YY.boundingBoxMinimum), FY.r.FromArray(YY.boundingBoxMaximum)), AY._delayInfo = [], YY.hasUVs && AY._delayInfo.push(RY.l.UVKind), YY.hasUVs2 && AY._delayInfo.push(RY.l.UV2Kind), YY.hasUVs3 && AY._delayInfo.push(RY.l.UV3Kind), YY.hasUVs4 && AY._delayInfo.push(RY.l.UV4Kind), YY.hasUVs5 && AY._delayInfo.push(RY.l.UV5Kind), YY.hasUVs6 && AY._delayInfo.push(RY.l.UV6Kind), YY.hasColors && AY._delayInfo.push(RY.l.ColorKind), YY.hasMatricesIndices && AY._delayInfo.push(RY.l.MatricesIndicesKind), YY.hasMatricesWeights && AY._delayInfo.push(RY.l.MatricesWeightsKind), AY._delayLoadingFunction = IY.c.ImportVertexData) : IY.c.ImportVertexData(YY, AY), rY.pushGeometry(AY, !0), AY
+      static Parse(TT, oT, IT) {
+        const zT = new rT(TT.id, oT, void 0, TT.updatable);
+        return zT._loadedUniqueId = TT.uniqueId, LT.c && LT.c.AddTagsTo(zT, TT.tags), TT.delayLoadingFile ? (zT.delayLoadState = 4, zT.delayLoadingFile = IT + TT.delayLoadingFile, zT._boundingInfo = new FT.d(iT.m.FromArray(TT.boundingBoxMinimum), iT.m.FromArray(TT.boundingBoxMaximum)), zT._delayInfo = [], TT.hasUVs && zT._delayInfo.push(WT.i.UVKind), TT.hasUVs2 && zT._delayInfo.push(WT.i.UV2Kind), TT.hasUVs3 && zT._delayInfo.push(WT.i.UV3Kind), TT.hasUVs4 && zT._delayInfo.push(WT.i.UV4Kind), TT.hasUVs5 && zT._delayInfo.push(WT.i.UV5Kind), TT.hasUVs6 && zT._delayInfo.push(WT.i.UV6Kind), TT.hasColors && zT._delayInfo.push(WT.i.ColorKind), TT.hasMatricesIndices && zT._delayInfo.push(WT.i.MatricesIndicesKind), TT.hasMatricesWeights && zT._delayInfo.push(WT.i.MatricesWeightsKind), zT._delayLoadingFunction = kT.c.ImportVertexData) : kT.c.ImportVertexData(TT, zT), oT.pushGeometry(zT, !0), zT
       }
     }
   },
-  39582: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => uY,
-      f: () => yY
+  39256: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => DT,
+      f: () => cT
     });
-    var FY = DY(36524),
-      AY = DY(38040),
-      IY = DY(39554),
-      RY = DY(39514),
-      OY = DY(38037),
-      gY = DY(39560),
-      aY = DY(39270),
-      vY = DY(36569);
-    class uY extends IY.b {
-      constructor(YY, rY) {
-        super(YY, rY.hT()), this._indexInSourceMeshInstanceArray = -1, this._distanceToCamera = 0, rY.Q_(this), this._sourceMesh = rY, this._unIndexed = rY._unIndexed, this.position.brY(rY.position), this.rotation.brY(rY.rotation), this.pa.brY(rY.pa), rY.rotationQuaternion && (this.rotationQuaternion = rY.rotationQuaternion.clone()), this.animations = rY.animations.slice();
-        for (const DY of rY.getAnimationRanges()) null != DY && this.createAnimationRange(DY.name, DY.from, DY.to);
-        if (this.infiniteDistance = rY.infiniteDistance, this.setPivotMatrix(rY.getPivotMatrix()), rY.skeleton || rY.morphTargetManager || !rY.hasBoundingInfo) this.refreshBoundingInfo(!0, !0);
+    var iT = IT(36118),
+      zT = IT(37660),
+      kT = IT(39230),
+      WT = IT(39192),
+      XT = IT(37658),
+      BT = IT(39233),
+      FT = IT(38923),
+      ST = IT(36166);
+    class DT extends kT.e {
+      constructor(TT, oT) {
+        super(TT, oT.pC()), this._indexInSourceMeshInstanceArray = -1, this._distanceToCamera = 0, oT.N9(this), this._sourceMesh = oT, this._unIndexed = oT._unIndexed, this.position.SIT(oT.position), this.rotation.SIT(oT.rotation), this.ti.SIT(oT.ti), oT.rotationQuaternion && (this.rotationQuaternion = oT.rotationQuaternion.clone()), this.animations = oT.animations.slice();
+        for (const IT of oT.getAnimationRanges()) null != IT && this.createAnimationRange(IT.name, IT.from, IT.to);
+        if (this.infiniteDistance = oT.infiniteDistance, this.setPivotMatrix(oT.getPivotMatrix()), oT.skeleton || oT.morphTargetManager || !oT.hasBoundingInfo) this.refreshBoundingInfo(!0, !0);
         else {
-          const YY = rY.oB();
-          this.buildBoundingInfo(YY.minimum, YY.maximum)
+          const TT = oT.GJ();
+          this.buildBoundingInfo(TT.minimum, TT.maximum)
         }
         this._syncSubMeshes()
       }
@@ -4300,38 +4300,38 @@ export const modules = {
       get receiveShadows() {
         return this._sourceMesh.receiveShadows
       }
-      set receiveShadows(YY) {
-        this._sourceMesh?.receiveShadows !== YY && AY.d.Warn("Setting receiveShadows on an instanced mesh has no effect")
+      set receiveShadows(TT) {
+        this._sourceMesh?.receiveShadows !== TT && zT.d.Warn("Setting receiveShadows on an instanced mesh has no effect")
       }
       get material() {
         return this._sourceMesh.material
       }
-      set material(YY) {
-        this._sourceMesh?.material !== YY && AY.d.Warn("Setting material on an instanced mesh has no effect")
+      set material(TT) {
+        this._sourceMesh?.material !== TT && zT.d.Warn("Setting material on an instanced mesh has no effect")
       }
       get visibility() {
         return this._sourceMesh.visibility
       }
-      set visibility(YY) {
-        this._sourceMesh?.visibility !== YY && AY.d.Warn("Setting visibility on an instanced mesh has no effect")
+      set visibility(TT) {
+        this._sourceMesh?.visibility !== TT && zT.d.Warn("Setting visibility on an instanced mesh has no effect")
       }
       get skeleton() {
         return this._sourceMesh.skeleton
       }
-      set skeleton(YY) {
-        this._sourceMesh?.skeleton !== YY && AY.d.Warn("Setting skeleton on an instanced mesh has no effect")
+      set skeleton(TT) {
+        this._sourceMesh?.skeleton !== TT && zT.d.Warn("Setting skeleton on an instanced mesh has no effect")
       }
       get renderingGroupId() {
         return this._sourceMesh.renderingGroupId
       }
-      set renderingGroupId(YY) {
-        this._sourceMesh && YY !== this._sourceMesh.renderingGroupId && AY.d.Warn("Note - setting renderingGroupId of an instanced mesh has no effect on the scene")
+      set renderingGroupId(TT) {
+        this._sourceMesh && TT !== this._sourceMesh.renderingGroupId && zT.d.Warn("Note - setting renderingGroupId of an instanced mesh has no effect on the scene")
       }
       get meshBlendingTag() {
         return this._sourceMesh.meshBlendingTag
       }
-      set meshBlendingTag(YY) {
-        this._sourceMesh && YY !== this._sourceMesh.meshBlendingTag && AY.d.Warn("Setting meshBlendingTag on an instanced mesh has no effect")
+      set meshBlendingTag(TT) {
+        this._sourceMesh && TT !== this._sourceMesh.meshBlendingTag && zT.d.Warn("Setting meshBlendingTag on an instanced mesh has no effect")
       }
       getTotalVertices() {
         return this._sourceMesh ? this._sourceMesh.getTotalVertices() : 0
@@ -4339,65 +4339,65 @@ export const modules = {
       getTotalIndices() {
         return this._sourceMesh.getTotalIndices()
       }
-      get vFY() {
+      get HiT() {
         return this._sourceMesh
       }
       get geometry() {
         return this._sourceMesh._geometry
       }
-      createInstance(YY) {
-        return this._sourceMesh.createInstance(YY)
+      createInstance(TT) {
+        return this._sourceMesh.createInstance(TT)
       }
       isReady() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return this._sourceMesh.isReady(YY, !0)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return this._sourceMesh.isReady(TT, !0)
       }
-      getVerticesData(YY, rY, DY) {
-        return this._sourceMesh.getVerticesData(YY, rY, DY)
+      getVerticesData(TT, oT, IT) {
+        return this._sourceMesh.getVerticesData(TT, oT, IT)
       }
-      copyVerticesData(YY, rY) {
-        this._sourceMesh.copyVerticesData(YY, rY)
+      copyVerticesData(TT, oT) {
+        this._sourceMesh.copyVerticesData(TT, oT)
       }
-      getVertexBuffer(YY, rY) {
-        return this._sourceMesh.getVertexBuffer(YY, rY)
+      getVertexBuffer(TT, oT) {
+        return this._sourceMesh.getVertexBuffer(TT, oT)
       }
-      setVerticesData(YY, rY, DY, FY) {
-        return this.vFY && this.vFY.setVerticesData(YY, rY, DY, FY), this.vFY
+      setVerticesData(TT, oT, IT, iT) {
+        return this.HiT && this.HiT.setVerticesData(TT, oT, IT, iT), this.HiT
       }
-      updateVerticesData(YY, rY, DY, FY) {
-        return this.vFY && this.vFY.updateVerticesData(YY, rY, DY, FY), this.vFY
+      updateVerticesData(TT, oT, IT, iT) {
+        return this.HiT && this.HiT.updateVerticesData(TT, oT, IT, iT), this.HiT
       }
-      setIndices(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return this.vFY && this.vFY.setIndices(YY, rY), this.vFY
+      setIndices(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        return this.HiT && this.HiT.setIndices(TT, oT), this.HiT
       }
-      isVerticesDataPresent(YY) {
-        return this._sourceMesh.isVerticesDataPresent(YY)
+      isVerticesDataPresent(TT) {
+        return this._sourceMesh.isVerticesDataPresent(TT)
       }
-      XIY() {
-        return this._sourceMesh.XIY()
+      hWT() {
+        return this._sourceMesh.hWT()
       }
       get _positions() {
         return this._sourceMesh._positions
       }
       refreshBoundingInfo() {
-        let YY, rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          DY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.hasBoundingInfo && this.oB().isLocked) return this;
-        YY = "object" === typeof rY ? rY : {
-          applySkeleton: rY,
-          applyMorph: DY
+        let TT, oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          IT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.hasBoundingInfo && this.GJ().isLocked) return this;
+        TT = "object" === typeof oT ? oT : {
+          applySkeleton: oT,
+          applyMorph: IT
         };
-        const FY = this._sourceMesh.geometry ? this._sourceMesh.geometry.boundingBias : null;
-        return this._refreshBoundingInfo(this._sourceMesh._getData(YY, null, aY.l.PositionKind), FY), this
+        const iT = this._sourceMesh.geometry ? this._sourceMesh.geometry.boundingBias : null;
+        return this._refreshBoundingInfo(this._sourceMesh._getData(TT, null, FT.i.PositionKind), iT), this
       }
       _preActivate() {
         return this._currentLOD && this._currentLOD._preActivate(), this
       }
-      _activate(YY, rY) {
-        if (super._activate(YY, rY), this._sourceMesh.qm || AY.d.Warn("Instances should only be created for meshes with geometry."), this._currentLOD) {
+      _activate(TT, oT) {
+        if (super._activate(TT, oT), this._sourceMesh.pR || zT.d.Warn("Instances should only be created for meshes with geometry."), this._currentLOD) {
           if (this._currentLOD._getWorldMatrixDeterminant() >= 0 !== this._getWorldMatrixDeterminant() >= 0) return this._internalAbstractMeshDataInfo._actAsRegularMesh = !0, !0;
-          if (this._internalAbstractMeshDataInfo._actAsRegularMesh = !1, this._currentLOD._registerInstanceForRenderId(this, YY), rY) {
+          if (this._internalAbstractMeshDataInfo._actAsRegularMesh = !1, this._currentLOD._registerInstanceForRenderId(this, TT), oT) {
             if (!this._currentLOD._internalAbstractMeshDataInfo._isActiveIntermediate) return this._currentLOD._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !0, !0
           } else if (!this._currentLOD._internalAbstractMeshDataInfo._isActive) return this._currentLOD._internalAbstractMeshDataInfo._onlyForInstances = !0, !0
         }
@@ -4407,261 +4407,261 @@ export const modules = {
         this._sourceMesh.edgesShareWithInstances && this._sourceMesh._edgesRenderer && this._sourceMesh._edgesRenderer.isEnabled && this._sourceMesh._renderingGroup ? (this._sourceMesh._renderingGroup._edgesRenderers.pushNoDuplicate(this._sourceMesh._edgesRenderer), this._sourceMesh._edgesRenderer.customInstances.push(this.getWorldMatrix())) : this._edgesRenderer && this._edgesRenderer.isEnabled && this._sourceMesh._renderingGroup && this._sourceMesh._renderingGroup._edgesRenderers.push(this._edgesRenderer)
       }
       getWorldMatrix() {
-        if (this._currentLOD && this._currentLOD !== this._sourceMesh && this._currentLOD.billboardMode !== gY.g.BILLBOARDMODE_NONE && this._currentLOD._masterMesh !== this) {
-          this._billboardWorldMatrix || (this._billboardWorldMatrix = new FY.e);
-          const YY = this._currentLOD._masterMesh;
-          return this._currentLOD._masterMesh = this, FY.n.xy[7].brY(this._currentLOD.position), this._currentLOD.position.set(0, 0, 0), this._billboardWorldMatrix.brY(this._currentLOD.computeWorldMatrix(!0)), this._currentLOD.position.brY(FY.n.xy[7]), this._currentLOD._masterMesh = YY, this._billboardWorldMatrix
+        if (this._currentLOD && this._currentLOD !== this._sourceMesh && this._currentLOD.billboardMode !== BT.g.BILLBOARDMODE_NONE && this._currentLOD._masterMesh !== this) {
+          this._billboardWorldMatrix || (this._billboardWorldMatrix = new iT.b);
+          const TT = this._currentLOD._masterMesh;
+          return this._currentLOD._masterMesh = this, iT.i.sc[7].SIT(this._currentLOD.position), this._currentLOD.position.set(0, 0, 0), this._billboardWorldMatrix.SIT(this._currentLOD.computeWorldMatrix(!0)), this._currentLOD.position.SIT(iT.i.sc[7]), this._currentLOD._masterMesh = TT, this._billboardWorldMatrix
         }
         return super.getWorldMatrix()
       }
-      get XT() {
+      get yC() {
         return !0
       }
-      getLOD(YY) {
-        if (!YY) return this;
-        const rY = this.vFY.getLODLevels();
-        if (rY && 0 !== rY.length) {
-          const rY = this.oB();
-          this._currentLOD = this.vFY.getLOD(YY, rY.bDY)
-        } else this._currentLOD = this.vFY;
+      getLOD(TT) {
+        if (!TT) return this;
+        const oT = this.HiT.getLODLevels();
+        if (oT && 0 !== oT.length) {
+          const oT = this.GJ();
+          this._currentLOD = this.HiT.getLOD(TT, oT.KiT)
+        } else this._currentLOD = this.HiT;
         return this._currentLOD
       }
-      _preActivateForIntermediateRendering(YY) {
-        return this.vFY._preActivateForIntermediateRendering(YY)
+      _preActivateForIntermediateRendering(TT) {
+        return this.HiT._preActivateForIntermediateRendering(TT)
       }
       _syncSubMeshes() {
-        if (this.releaseSubMeshes(), this._sourceMesh.qm)
-          for (let YY = 0; YY < this._sourceMesh.qm.length; YY++) this._sourceMesh.qm[YY].clone(this, this._sourceMesh);
+        if (this.releaseSubMeshes(), this._sourceMesh.pR)
+          for (let TT = 0; TT < this._sourceMesh.pR.length; TT++) this._sourceMesh.pR[TT].clone(this, this._sourceMesh);
         return this
       }
       _generatePointsArray() {
         return this._sourceMesh._generatePointsArray()
       }
       _updateBoundingInfo() {
-        return this.hasBoundingInfo ? this.oB().update(this.worldMatrixFromCache) : this.buildBoundingInfo(this.absolutePosition, this.absolutePosition, this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
+        return this.hasBoundingInfo ? this.GJ().update(this.worldMatrixFromCache) : this.buildBoundingInfo(this.absolutePosition, this.absolutePosition, this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
       }
-      clone(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        const FY = ((arguments.length > 3 ? arguments[3] : void 0) || this._sourceMesh).createInstance(YY);
-        if (OY.c.DeepCopy(this, FY, ["name", "qm", "uniqueId", "parent", "lightSources", "receiveShadows", "material", "visibility", "skeleton", "vFY", "XT", "facetNb", "isFacetDataEnabled", "isBlocked", "useBones", "aFY", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "nIY", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "hasBoundingInfo", "geometry"], []), rY && (FY.parent = rY), !DY)
-          for (let AY = 0; AY < this.hT().meshes.length; AY++) {
-            const YY = this.hT().meshes[AY];
-            YY.parent === this && YY.clone(YY.name, FY)
+      clone(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        const iT = ((arguments.length > 3 ? arguments[3] : void 0) || this._sourceMesh).createInstance(TT);
+        if (XT.d.DeepCopy(this, iT, ["name", "pR", "uniqueId", "parent", "lightSources", "receiveShadows", "material", "visibility", "skeleton", "HiT", "yC", "facetNb", "isFacetDataEnabled", "isBlocked", "useBones", "OiT", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "vWT", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "hasBoundingInfo", "geometry"], []), oT && (iT.parent = oT), !IT)
+          for (let zT = 0; zT < this.pC().meshes.length; zT++) {
+            const TT = this.pC().meshes[zT];
+            TT.parent === this && TT.clone(TT.name, iT)
           }
-        return FY.computeWorldMatrix(!0), this.onClonedObservable.notifyObservers(FY), FY
+        return iT.computeWorldMatrix(!0), this.onClonedObservable.notifyObservers(iT), iT
       }
-      dispose(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._sourceMesh.E_(this), super.dispose(YY, rY)
+      dispose(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._sourceMesh.U1(this), super.dispose(TT, oT)
       }
-      _serializeAsParent(YY) {
-        super._serializeAsParent(YY), YY.parentId = this._sourceMesh.uniqueId, YY.parentInstanceIndex = this._indexInSourceMeshInstanceArray
+      _serializeAsParent(TT) {
+        super._serializeAsParent(TT), TT.parentId = this._sourceMesh.uniqueId, TT.parentInstanceIndex = this._indexInSourceMeshInstanceArray
       }
       instantiateHierarchy() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        const FY = this.clone("Clone of " + (this.name || this.id), YY || this.parent, !0, rY && rY.newSourcedMesh);
-        FY && DY && DY(this, FY);
-        for (const AY of this.getChildTransformNodes(!0)) AY.instantiateHierarchy(FY, rY, DY);
-        return FY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        const iT = this.clone("Clone of " + (this.name || this.id), TT || this.parent, !0, oT && oT.newSourcedMesh);
+        iT && IT && IT(this, iT);
+        for (const zT of this.getChildTransformNodes(!0)) zT.instantiateHierarchy(iT, oT, IT);
+        return iT
       }
     }
-    let sY = !1;
+    let LT = !1;
 
-    function iY(YY, rY, DY, FY, AY) {
-      for (let IY = 0; IY < rY.length; IY++) {
-        const RY = YY[rY[IY]] ?? 0,
-          OY = AY + DY[IY];
-        RY.toArray ? RY.toArray(FY, OY) : RY.copyToArray ? RY.copyToArray(FY, OY) : FY[OY] = RY
+    function xT(TT, oT, IT, iT, zT) {
+      for (let kT = 0; kT < oT.length; kT++) {
+        const WT = TT[oT[kT]] ?? 0,
+          XT = zT + IT[kT];
+        WT.toArray ? WT.toArray(iT, XT) : WT.copyToArray ? WT.copyToArray(iT, XT) : iT[XT] = WT
       }
     }
 
-    function yY() {
-      sY || (sY = !0, RY.c._instancedMeshFactory = (YY, rY) => {
-        const DY = new uY(YY, rY);
-        if (rY.YB) {
-          DY.YB = {};
-          for (const YY in rY.YB) DY.YB[YY] = rY.YB[YY]
+    function cT() {
+      LT || (LT = !0, WT.e._instancedMeshFactory = (TT, oT) => {
+        const IT = new DT(TT, oT);
+        if (oT.HJ) {
+          IT.HJ = {};
+          for (const TT in oT.HJ) IT.HJ[TT] = oT.HJ[TT]
         }
-        return DY
-      }, RY.c.prototype.kN = function(YY, rY) {
-        if (!this.YB) {
-          this.YB = {};
-          for (const YY of this.instances) YY.YB = {}
+        return IT
+      }, WT.e.prototype.OJ = function(TT, oT) {
+        if (!this.HJ) {
+          this.HJ = {};
+          for (const TT of this.instances) TT.HJ = {}
         }
         this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
           data: {},
           vertexBuffers: {},
           strides: {},
           sizes: {},
-          vertexArrayObjects: this.ky().getCaps().vertexArrayObject ? {} : void 0
-        }), this.YB[YY] = null, this._userInstancedBuffersStorage.strides[YY] = rY;
-        const DY = this._userInstancedBuffersStorage;
-        DY.interleavedKinds = [], DY.interleavedOffsets = [], DY.interleavedRowStride = 0;
-        for (const FY in DY.strides) DY.interleavedKinds.push(FY), DY.interleavedOffsets.push(DY.interleavedRowStride), DY.interleavedRowStride += DY.strides[FY];
-        DY.interleavedData = new Float32Array(32 * DY.interleavedRowStride);
-        for (const FY in DY.interleavedBuffers) DY.interleavedBuffers[FY].buffer.dispose();
-        DY.interleavedBuffers = {}, DY.vertexBuffers[YY] = null;
-        for (const FY of this.instances) FY.YB[YY] = null;
+          vertexArrayObjects: this.Zc().getCaps().vertexArrayObject ? {} : void 0
+        }), this.HJ[TT] = null, this._userInstancedBuffersStorage.strides[TT] = oT;
+        const IT = this._userInstancedBuffersStorage;
+        IT.interleavedKinds = [], IT.interleavedOffsets = [], IT.interleavedRowStride = 0;
+        for (const iT in IT.strides) IT.interleavedKinds.push(iT), IT.interleavedOffsets.push(IT.interleavedRowStride), IT.interleavedRowStride += IT.strides[iT];
+        IT.interleavedData = new Float32Array(32 * IT.interleavedRowStride);
+        for (const iT in IT.interleavedBuffers) IT.interleavedBuffers[iT].buffer.dispose();
+        IT.interleavedBuffers = {}, IT.vertexBuffers[TT] = null;
+        for (const iT of this.instances) iT.HJ[TT] = null;
         this._invalidateInstanceVertexArrayObject(), this._markSubMeshesAsAttributesDirty()
-      }, RY.c.prototype._processInstancedBuffers = function(YY, rY) {
-        const DY = this._userInstancedBuffersStorage,
-          FY = DY.interleavedRowStride;
-        if (!FY) return;
-        const AY = YY ? YY.length : 0,
-          IY = (AY + 1) * FY;
-        let RY = DY.interleavedData;
-        if (RY.length < IY) {
-          let YY = RY.length;
-          for (; YY < IY;) YY *= 2;
-          RY = DY.interleavedData = new Float32Array(YY)
+      }, WT.e.prototype._processInstancedBuffers = function(TT, oT) {
+        const IT = this._userInstancedBuffersStorage,
+          iT = IT.interleavedRowStride;
+        if (!iT) return;
+        const zT = TT ? TT.length : 0,
+          kT = (zT + 1) * iT;
+        let WT = IT.interleavedData;
+        if (WT.length < kT) {
+          let TT = WT.length;
+          for (; TT < kT;) TT *= 2;
+          WT = IT.interleavedData = new Float32Array(TT)
         }
-        const OY = DY.interleavedKinds,
-          gY = DY.interleavedOffsets;
-        let vY = 0;
-        rY && (iY(this.YB, OY, gY, RY, vY), vY += FY);
-        for (let aY = 0; aY < AY; aY++) iY(YY[aY].YB, OY, gY, RY, vY), vY += FY;
-        let uY = "shared",
-          sY = DY.vertexBuffers;
-        this._instanceDataStorage.useMonoDataStorageRenderPass || (uY = this._instanceDataStorage.engine.currentRenderPassId, DY.renderPasses || (DY.renderPasses = {}), DY.renderPasses[uY] || (DY.renderPasses[uY] = {}), sY = DY.renderPasses[uY]);
-        const yY = DY.interleavedBuffers[uY];
-        let QY = !yY || yY.data !== RY;
-        for (let aY = 0; !QY && aY < OY.length; aY++) QY = !sY[OY[aY]];
-        if (!QY) return void yY.buffer.updateDirectly(RY, 0);
-        yY?.buffer.dispose();
-        const oY = new aY.c(this.ky(), RY, !0, FY, !1, !0);
-        for (let aY = 0; aY < OY.length; aY++) {
-          const YY = OY[aY],
-            rY = oY.createVertexBuffer(YY, gY[aY], DY.strides[YY]);
-          rY.hashCode += rY.byteOffset * 2 ** 24, sY[YY] = rY
+        const XT = IT.interleavedKinds,
+          BT = IT.interleavedOffsets;
+        let ST = 0;
+        oT && (xT(this.HJ, XT, BT, WT, ST), ST += iT);
+        for (let FT = 0; FT < zT; FT++) xT(TT[FT].HJ, XT, BT, WT, ST), ST += iT;
+        let DT = "shared",
+          LT = IT.vertexBuffers;
+        this._instanceDataStorage.useMonoDataStorageRenderPass || (DT = this._instanceDataStorage.engine.currentRenderPassId, IT.renderPasses || (IT.renderPasses = {}), IT.renderPasses[DT] || (IT.renderPasses[DT] = {}), LT = IT.renderPasses[DT]);
+        const cT = IT.interleavedBuffers[DT];
+        let KT = !cT || cT.data !== WT;
+        for (let FT = 0; !KT && FT < XT.length; FT++) KT = !LT[XT[FT]];
+        if (!KT) return void cT.buffer.updateDirectly(WT, 0);
+        cT?.buffer.dispose();
+        const MT = new FT.d(this.Zc(), WT, !0, iT, !1, !0);
+        for (let FT = 0; FT < XT.length; FT++) {
+          const TT = XT[FT],
+            oT = MT.createVertexBuffer(TT, BT[FT], IT.strides[TT]);
+          oT.hashCode += oT.byteOffset * 2 ** 24, LT[TT] = oT
         }
-        DY.interleavedBuffers[uY] = {
-          buffer: oY,
-          data: RY
+        IT.interleavedBuffers[DT] = {
+          buffer: MT,
+          data: WT
         }, this._invalidateInstanceVertexArrayObject()
-      }, RY.c.prototype._invalidateInstanceVertexArrayObject = function() {
+      }, WT.e.prototype._invalidateInstanceVertexArrayObject = function() {
         if (this._userInstancedBuffersStorage && void 0 !== this._userInstancedBuffersStorage.vertexArrayObjects) {
-          for (const YY in this._userInstancedBuffersStorage.vertexArrayObjects) this.ky().releaseVertexArrayObject(this._userInstancedBuffersStorage.vertexArrayObjects[YY]);
+          for (const TT in this._userInstancedBuffersStorage.vertexArrayObjects) this.Zc().releaseVertexArrayObject(this._userInstancedBuffersStorage.vertexArrayObjects[TT]);
           this._userInstancedBuffersStorage.vertexArrayObjects = {}
         }
-      }, RY.c.prototype._disposeInstanceSpecificData = function() {
-        for (const rY in this._instanceDataStorage.renderPasses) this._instanceDataStorage.renderPasses[rY].instancesBuffer?.dispose();
+      }, WT.e.prototype._disposeInstanceSpecificData = function() {
+        for (const oT in this._instanceDataStorage.renderPasses) this._instanceDataStorage.renderPasses[oT].instancesBuffer?.dispose();
         for (this._instanceDataStorage.renderPasses = {}, this._instanceDataStorage.dataStorageRenderPass?.instancesBuffer?.dispose(); this.instances.length;) this.instances[0].dispose();
-        for (const rY in this.YB) this._userInstancedBuffersStorage.vertexBuffers[rY] && this._userInstancedBuffersStorage.vertexBuffers[rY].dispose();
-        const YY = this._userInstancedBuffersStorage?.interleavedBuffers;
-        if (YY) {
-          for (const rY in YY) YY[rY].buffer.dispose();
+        for (const oT in this.HJ) this._userInstancedBuffersStorage.vertexBuffers[oT] && this._userInstancedBuffersStorage.vertexBuffers[oT].dispose();
+        const TT = this._userInstancedBuffersStorage?.interleavedBuffers;
+        if (TT) {
+          for (const oT in TT) TT[oT].buffer.dispose();
           this._userInstancedBuffersStorage.interleavedBuffers = {}
         }
-        this._invalidateInstanceVertexArrayObject(), this.YB = {}
-      }, (0, vY.i)("BABYLON.InstancedMesh", uY))
+        this._invalidateInstanceVertexArrayObject(), this.HJ = {}
+      }, (0, ST.h)("BABYLON.InstancedMesh", DT))
     }
   },
-  39514: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => UY,
-      g: () => tY,
-      i: () => qY
+  39192: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => PT,
+      i: () => VT,
+      j: () => sT
     });
-    var FY, AY, IY, RY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY, WY = DY(36552),
-      EY = DY(39219),
-      mY = DY(39160),
-      VY = DY(38037),
-      SY = DY(39149),
-      lY = DY(39523),
-      TY = DY(39342),
-      eY = DY(36524),
-      NY = DY(36588),
-      BY = DY(39347),
-      cY = DY(39270),
-      KY = DY(39530),
-      HY = DY(39534),
-      zY = DY(39554),
-      ZY = DY(39416),
-      CY = DY(39414),
-      fY = DY(39499),
-      jY = DY(39568),
-      hY = DY(39543),
-      dY = DY(39144),
-      JY = DY(38040),
-      MY = DY(36569),
-      wY = DY(39029),
-      bY = DY(39296);
-    class XY {
-      constructor(YY, rY) {
-        this.distanceOrScreenCoverage = YY, this.mesh = rY
+    var iT, zT, kT, WT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT, rT = IT(36149),
+      AT = IT(38886),
+      gT = IT(38827),
+      hT = IT(37658),
+      wT = IT(38808),
+      mT = IT(39201),
+      eT = IT(38986),
+      RT = IT(36118),
+      uT = IT(36177),
+      vT = IT(38994),
+      ET = IT(38923),
+      fT = IT(39210),
+      CT = IT(39212),
+      jT = IT(39230),
+      JT = IT(39076),
+      UT = IT(39068),
+      aT = IT(39170),
+      YT = IT(39238),
+      QT = IT(39219),
+      OT = IT(38799),
+      HT = IT(37660),
+      nT = IT(36166),
+      qT = IT(38643),
+      ZT = IT(38949);
+    class lT {
+      constructor(TT, oT) {
+        this.distanceOrScreenCoverage = TT, this.mesh = oT
       }
     }
-    class qY {}
-    class pY {
+    class sT {}
+    class tT {
       constructor() {
-        this.batchCache = new GY(this), this.batchCacheReplacementModeInFrozenMode = new GY(this), this.instancesBufferSize = 2048
+        this.batchCache = new pT(this), this.batchCacheReplacementModeInFrozenMode = new pT(this), this.instancesBufferSize = 2048
       }
     }
-    class kY {
+    class GT {
       constructor() {
         this.renderPasses = {}
       }
     }
-    class GY {
-      constructor(YY) {
-        this.parent = YY, this.mustReturn = !1, this.visibleInstances = new Array, this.renderSelf = [], this.hardwareInstancedRendering = []
+    class pT {
+      constructor(TT) {
+        this.parent = TT, this.mustReturn = !1, this.visibleInstances = new Array, this.renderSelf = [], this.hardwareInstancedRendering = []
       }
     }
-    class xY {
+    class bT {
       constructor() {
         this.instancesCount = 0, this.matrixBuffer = null, this.previousMatrixBuffer = null, this.matrixBufferSize = 512, this.matrixData = null, this.boundingVectors = [], this.worldMatrices = null
       }
     }
-    class nY {
+    class yT {
       constructor() {
         this._areNormalsFrozen = !1, this._source = null, this.meshMap = null, this._preActivateId = -1, this._LODLevels = new Array, this._useLODScreenCoverage = !1, this._effectiveMaterial = null, this._forcedInstanceCount = 0, this._overrideRenderingFillMode = null
       }
     }
-    const PY = {
+    const NT = {
       source: null,
       parent: null,
       doNotCloneChildren: !1,
       clonePhysicsImpostor: !0,
       cloneThinInstances: !1
     };
-    class UY extends zY.b {
-      static _GetDefaultSideOrientation(YY) {
-        return YY || UY.FRONTSIDE
+    class PT extends jT.e {
+      static _GetDefaultSideOrientation(TT) {
+        return TT || PT.FRONTSIDE
       }
       get useLODScreenCoverage() {
         return this._internalMeshDataInfo._useLODScreenCoverage
       }
-      set useLODScreenCoverage(YY) {
-        this._internalMeshDataInfo._useLODScreenCoverage = YY, this._sortLODLevels()
+      set useLODScreenCoverage(TT) {
+        this._internalMeshDataInfo._useLODScreenCoverage = TT, this._sortLODLevels()
       }
       get computeBonesUsingShaders() {
         return this._internalAbstractMeshDataInfo._computeBonesUsingShaders
       }
-      set computeBonesUsingShaders(YY) {
-        this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== YY && (YY && this._internalMeshDataInfo._sourcePositions && (this.setVerticesData(cY.l.PositionKind, this._internalMeshDataInfo._sourcePositions, !0), this._internalMeshDataInfo._sourceNormals && this.setVerticesData(cY.l.NormalKind, this._internalMeshDataInfo._sourceNormals, !0), this._internalMeshDataInfo._sourcePositions = null, this._internalMeshDataInfo._sourceNormals = null), this._internalAbstractMeshDataInfo._computeBonesUsingShaders = YY, this._markSubMeshesAsAttributesDirty())
+      set computeBonesUsingShaders(TT) {
+        this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== TT && (TT && this._internalMeshDataInfo._sourcePositions && (this.setVerticesData(ET.i.PositionKind, this._internalMeshDataInfo._sourcePositions, !0), this._internalMeshDataInfo._sourceNormals && this.setVerticesData(ET.i.NormalKind, this._internalMeshDataInfo._sourceNormals, !0), this._internalMeshDataInfo._sourcePositions = null, this._internalMeshDataInfo._sourceNormals = null), this._internalAbstractMeshDataInfo._computeBonesUsingShaders = TT, this._markSubMeshesAsAttributesDirty())
       }
       get onBeforeRenderObservable() {
-        return this._internalMeshDataInfo._onBeforeRenderObservable || (this._internalMeshDataInfo._onBeforeRenderObservable = new WY.e), this._internalMeshDataInfo._onBeforeRenderObservable
+        return this._internalMeshDataInfo._onBeforeRenderObservable || (this._internalMeshDataInfo._onBeforeRenderObservable = new rT.d), this._internalMeshDataInfo._onBeforeRenderObservable
       }
       get onBeforeBindObservable() {
-        return this._internalMeshDataInfo._onBeforeBindObservable || (this._internalMeshDataInfo._onBeforeBindObservable = new WY.e), this._internalMeshDataInfo._onBeforeBindObservable
+        return this._internalMeshDataInfo._onBeforeBindObservable || (this._internalMeshDataInfo._onBeforeBindObservable = new rT.d), this._internalMeshDataInfo._onBeforeBindObservable
       }
       get onAfterRenderObservable() {
-        return this._internalMeshDataInfo._onAfterRenderObservable || (this._internalMeshDataInfo._onAfterRenderObservable = new WY.e), this._internalMeshDataInfo._onAfterRenderObservable
+        return this._internalMeshDataInfo._onAfterRenderObservable || (this._internalMeshDataInfo._onAfterRenderObservable = new rT.d), this._internalMeshDataInfo._onAfterRenderObservable
       }
       get onBetweenPassObservable() {
-        return this._internalMeshDataInfo._onBetweenPassObservable || (this._internalMeshDataInfo._onBetweenPassObservable = new WY.e), this._internalMeshDataInfo._onBetweenPassObservable
+        return this._internalMeshDataInfo._onBetweenPassObservable || (this._internalMeshDataInfo._onBetweenPassObservable = new rT.d), this._internalMeshDataInfo._onBetweenPassObservable
       }
       get onBeforeDrawObservable() {
-        return this._internalMeshDataInfo._onBeforeDrawObservable || (this._internalMeshDataInfo._onBeforeDrawObservable = new WY.e), this._internalMeshDataInfo._onBeforeDrawObservable
+        return this._internalMeshDataInfo._onBeforeDrawObservable || (this._internalMeshDataInfo._onBeforeDrawObservable = new rT.d), this._internalMeshDataInfo._onBeforeDrawObservable
       }
-      set onBeforeDraw(YY) {
-        this._onBeforeDrawObserver && this.onBeforeDrawObservable.remove(this._onBeforeDrawObserver), this._onBeforeDrawObserver = this.onBeforeDrawObservable.add(YY)
+      set onBeforeDraw(TT) {
+        this._onBeforeDrawObserver && this.onBeforeDrawObservable.remove(this._onBeforeDrawObserver), this._onBeforeDrawObserver = this.onBeforeDrawObservable.add(TT)
       }
-      get aFY() {
+      get OiT() {
         return this.instances.length > 0
       }
       get hasThinInstances() {
@@ -4670,14 +4670,14 @@ export const modules = {
       get forcedInstanceCount() {
         return this._internalMeshDataInfo._forcedInstanceCount
       }
-      set forcedInstanceCount(YY) {
-        this._internalMeshDataInfo._forcedInstanceCount = YY
+      set forcedInstanceCount(TT) {
+        this._internalMeshDataInfo._forcedInstanceCount = TT
       }
       get sideOrientation() {
         return this._internalMeshDataInfo._sideOrientation
       }
-      set sideOrientation(YY) {
-        this._internalMeshDataInfo._sideOrientation = YY, this._internalAbstractMeshDataInfo._sideOrientationHint = this._scene.useRightHandedSystem && 1 === YY || !this._scene.useRightHandedSystem && 0 === YY
+      set sideOrientation(TT) {
+        this._internalMeshDataInfo._sideOrientation = TT, this._internalAbstractMeshDataInfo._sideOrientationHint = this._scene.useRightHandedSystem && 1 === TT || !this._scene.useRightHandedSystem && 0 === TT
       }
       get _effectiveSideOrientation() {
         return this._internalMeshDataInfo._effectiveSideOrientation
@@ -4685,20 +4685,20 @@ export const modules = {
       get overrideMaterialSideOrientation() {
         return this.sideOrientation
       }
-      set overrideMaterialSideOrientation(YY) {
-        this.sideOrientation = YY, this.material && (this.material.sideOrientation = null)
+      set overrideMaterialSideOrientation(TT) {
+        this.sideOrientation = TT, this.material && (this.material.sideOrientation = null)
       }
       get overrideRenderingFillMode() {
         return this._internalMeshDataInfo._overrideRenderingFillMode
       }
-      set overrideRenderingFillMode(YY) {
-        this._internalMeshDataInfo._overrideRenderingFillMode = YY
+      set overrideRenderingFillMode(TT) {
+        this._internalMeshDataInfo._overrideRenderingFillMode = TT
       }
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(YY) {
-        YY && (this.material && null === this.material.sideOrientation || this._internalAbstractMeshDataInfo._sideOrientationHint) && (YY.sideOrientation = null), this._setMaterial(YY)
+      set material(TT) {
+        TT && (this.material && null === this.material.sideOrientation || this._internalAbstractMeshDataInfo._sideOrientationHint) && (TT.sideOrientation = null), this._setMaterial(TT)
       }
       get source() {
         return this._internalMeshDataInfo._source
@@ -4709,99 +4709,99 @@ export const modules = {
       get isUnIndexed() {
         return this._unIndexed
       }
-      set isUnIndexed(YY) {
-        this._unIndexed !== YY && (this._unIndexed = YY, this._markSubMeshesAsAttributesDirty())
+      set isUnIndexed(TT) {
+        this._unIndexed !== TT && (this._unIndexed = TT, this._markSubMeshesAsAttributesDirty())
       }
       get worldMatrixInstancedBuffer() {
-        const YY = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
-        return YY ? YY.instancesData : void 0
+        const TT = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+        return TT ? TT.instancesData : void 0
       }
       get previousWorldMatrixInstancedBuffer() {
-        const YY = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
-        return YY ? YY.instancesPreviousData : void 0
+        const TT = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+        return TT ? TT.instancesPreviousData : void 0
       }
       get manualUpdateOfWorldMatrixInstancedBuffer() {
         return this._instanceDataStorage.manualUpdate
       }
-      set manualUpdateOfWorldMatrixInstancedBuffer(YY) {
-        this._instanceDataStorage.manualUpdate = YY
+      set manualUpdateOfWorldMatrixInstancedBuffer(TT) {
+        this._instanceDataStorage.manualUpdate = TT
       }
       get manualUpdateOfPreviousWorldMatrixInstancedBuffer() {
         return this._instanceDataStorage.previousManualUpdate
       }
-      set manualUpdateOfPreviousWorldMatrixInstancedBuffer(YY) {
-        this._instanceDataStorage.previousManualUpdate = YY
+      set manualUpdateOfPreviousWorldMatrixInstancedBuffer(TT) {
+        this._instanceDataStorage.previousManualUpdate = TT
       }
       get forceWorldMatrixInstancedBufferUpdate() {
         return this._instanceDataStorage.forceMatrixUpdates
       }
-      set forceWorldMatrixInstancedBufferUpdate(YY) {
-        this._instanceDataStorage.forceMatrixUpdates = YY
+      set forceWorldMatrixInstancedBufferUpdate(TT) {
+        this._instanceDataStorage.forceMatrixUpdates = TT
       }
-      _copySource(YY, rY) {
-        let DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const AY = this.hT();
-        if (YY._geometry && YY._geometry.applyToMesh(this), VY.c.DeepCopy(YY, this, ["name", "material", "skeleton", "instances", "parent", "uniqueId", "source", "metadata", "morphTargetManager", "aFY", "worldMatrixInstancedBuffer", "previousWorldMatrixInstancedBuffer", "hasLODLevels", "geometry", "isBlocked", "areNormalsFrozen", "facetNb", "isFacetDataEnabled", "lightSources", "useBones", "XT", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "nIY", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "cloneMeshMap", "hasBoundingInfo", "physicsBody", "physicsImpostor"], ["_poseMatrix"]), this._internalMeshDataInfo._source = YY, AY.useClonedMeshMap && (YY._internalMeshDataInfo.meshMap || (YY._internalMeshDataInfo.meshMap = {}), YY._internalMeshDataInfo.meshMap[this.uniqueId] = this), this._originalBuilderSideOrientation = YY._originalBuilderSideOrientation, this._creationDataStorage = YY._creationDataStorage, YY._ranges) {
-          const rY = YY._ranges;
-          for (const YY in rY) Object.prototype.hasOwnProperty.call(rY, YY) && rY[YY] && this.createAnimationRange(YY, rY[YY].from, rY[YY].to)
+      _copySource(TT, oT) {
+        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const zT = this.pC();
+        if (TT._geometry && TT._geometry.applyToMesh(this), hT.d.DeepCopy(TT, this, ["name", "material", "skeleton", "instances", "parent", "uniqueId", "source", "metadata", "morphTargetManager", "OiT", "worldMatrixInstancedBuffer", "previousWorldMatrixInstancedBuffer", "hasLODLevels", "geometry", "isBlocked", "areNormalsFrozen", "facetNb", "isFacetDataEnabled", "lightSources", "useBones", "yC", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "vWT", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "cloneMeshMap", "hasBoundingInfo", "physicsBody", "physicsImpostor"], ["_poseMatrix"]), this._internalMeshDataInfo._source = TT, zT.useClonedMeshMap && (TT._internalMeshDataInfo.meshMap || (TT._internalMeshDataInfo.meshMap = {}), TT._internalMeshDataInfo.meshMap[this.uniqueId] = this), this._originalBuilderSideOrientation = TT._originalBuilderSideOrientation, this._creationDataStorage = TT._creationDataStorage, TT._ranges) {
+          const oT = TT._ranges;
+          for (const TT in oT) Object.prototype.hasOwnProperty.call(oT, TT) && oT[TT] && this.createAnimationRange(TT, oT[TT].from, oT[TT].to)
         }
-        if (YY.metadata && YY.metadata.clone ? this.metadata = YY.metadata.clone() : this.metadata = YY.metadata, this._internalMetadata = YY._internalMetadata, this.meshBlendingTag = YY.meshBlendingTag, SY.e && SY.e.HasTags(YY) && SY.e.AddTagsTo(this, SY.e.GetTags(YY, !0)), this.mV(YY.isEnabled(!1)), this.parent = YY.parent, this.setPivotMatrix(YY.getPivotMatrix(), this._postMultiplyPivotMatrix), this.id = this.name + "." + YY.id, this.material = YY.material, !rY) {
-          const AY = YY.getDescendants(!0);
-          for (let YY = 0; YY < AY.length; YY++) {
-            const IY = AY[YY];
-            IY._isMesh ? (PY.parent = this, PY.doNotCloneChildren = rY, PY.clonePhysicsImpostor = DY, PY.cloneThinInstances = FY, IY.clone(this.name + "." + IY.name, PY)) : IY.clone && IY.clone(this.name + "." + IY.name, this)
+        if (TT.metadata && TT.metadata.clone ? this.metadata = TT.metadata.clone() : this.metadata = TT.metadata, this._internalMetadata = TT._internalMetadata, this.meshBlendingTag = TT.meshBlendingTag, wT.c && wT.c.HasTags(TT) && wT.c.AddTagsTo(this, wT.c.GetTags(TT, !0)), this.Fv(TT.isEnabled(!1)), this.parent = TT.parent, this.setPivotMatrix(TT.getPivotMatrix(), this._postMultiplyPivotMatrix), this.id = this.name + "." + TT.id, this.material = TT.material, !oT) {
+          const zT = TT.getDescendants(!0);
+          for (let TT = 0; TT < zT.length; TT++) {
+            const kT = zT[TT];
+            kT._isMesh ? (NT.parent = this, NT.doNotCloneChildren = oT, NT.clonePhysicsImpostor = IT, NT.cloneThinInstances = iT, kT.clone(this.name + "." + kT.name, NT)) : kT.clone && kT.clone(this.name + "." + kT.name, this)
           }
         }
-        if (YY.morphTargetManager && (this.morphTargetManager = YY.morphTargetManager), (0, wY.b)(AY.getPhysicsEngine)) {
-          const rY = AY.getPhysicsEngine();
-          if (DY && rY)
-            if (1 === rY.getPluginVersion()) {
-              const DY = rY.getImpostorForPhysicsObject(YY);
-              DY && (this.physicsImpostor = DY.clone(this))
-            } else 2 === rY.getPluginVersion() && YY.physicsBody && YY.physicsBody.clone(this)
+        if (TT.morphTargetManager && (this.morphTargetManager = TT.morphTargetManager), (0, qT.d)(zT.getPhysicsEngine)) {
+          const oT = zT.getPhysicsEngine();
+          if (IT && oT)
+            if (1 === oT.getPluginVersion()) {
+              const IT = oT.getImpostorForPhysicsObject(TT);
+              IT && (this.physicsImpostor = IT.clone(this))
+            } else 2 === oT.getPluginVersion() && TT.physicsBody && TT.physicsBody.clone(this)
         }
-        for (let IY = 0; IY < AY.YV.length; IY++) {
-          const rY = AY.YV[IY];
-          rY.emitter === YY && rY.clone(rY.name, this)
+        for (let kT = 0; kT < zT.bR.length; kT++) {
+          const oT = zT.bR[kT];
+          oT.emitter === TT && oT.clone(oT.name, this)
         }
-        if (this.skeleton = YY.skeleton, FY && (YY._thinInstanceDataStorage.matrixData ? (this.j_("matrix", new Float32Array(YY._thinInstanceDataStorage.matrixData), 16, !YY._thinInstanceDataStorage.matrixBuffer.isUpdatable()), this._thinInstanceDataStorage.matrixBufferSize = YY._thinInstanceDataStorage.matrixBufferSize, this._thinInstanceDataStorage.instancesCount = YY._thinInstanceDataStorage.instancesCount) : this._thinInstanceDataStorage.matrixBufferSize = YY._thinInstanceDataStorage.matrixBufferSize, YY._userThinInstanceBuffersStorage)) {
-          const rY = YY._userThinInstanceBuffersStorage;
-          for (const YY in rY.data) this.j_(YY, new Float32Array(rY.data[YY]), rY.strides[YY], !rY.vertexBuffers?.[YY]?.isUpdatable()), this._userThinInstanceBuffersStorage.sizes[YY] = rY.sizes[YY]
+        if (this.skeleton = TT.skeleton, iT && (TT._thinInstanceDataStorage.matrixData ? (this.T_("matrix", new Float32Array(TT._thinInstanceDataStorage.matrixData), 16, !TT._thinInstanceDataStorage.matrixBuffer.isUpdatable()), this._thinInstanceDataStorage.matrixBufferSize = TT._thinInstanceDataStorage.matrixBufferSize, this._thinInstanceDataStorage.instancesCount = TT._thinInstanceDataStorage.instancesCount) : this._thinInstanceDataStorage.matrixBufferSize = TT._thinInstanceDataStorage.matrixBufferSize, TT._userThinInstanceBuffersStorage)) {
+          const oT = TT._userThinInstanceBuffersStorage;
+          for (const TT in oT.data) this.T_(TT, new Float32Array(oT.data[TT]), oT.strides[TT], !oT.vertexBuffers?.[TT]?.isUpdatable()), this._userThinInstanceBuffersStorage.sizes[TT] = oT.sizes[TT]
         }
         this.refreshBoundingInfo(!0, !0), this.computeWorldMatrix(!0)
       }
-      constructor(YY) {
-        let rY, DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          IY = arguments.length > 4 ? arguments[4] : void 0,
-          RY = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-        super(YY, DY), this._internalMeshDataInfo = new nY, this.delayLoadState = 0, this.instances = [], this._creationDataStorage = null, this._geometry = null, this._thinInstanceDataStorage = new xY, this._shouldGenerateFlatShading = !1, this._originalBuilderSideOrientation = UY.DEFAULTSIDE, this.ignoreCameraMaxZ = !1, DY = this.hT(), this._instanceDataStorage = new kY, this._instanceDataStorage.engine = DY.ky(), this._instanceDataStorage.useMonoDataStorageRenderPass = !this._instanceDataStorage.engine.isWebGPU, this._instanceDataStorage.useMonoDataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass = new pY), this._scene.useRightHandedSystem ? this.sideOrientation = 0 : this.sideOrientation = 1, this._onBeforeDraw = (YY, rY, DY) => {
-          YY && DY && (this._uniformBuffer ? this.transferToEffect(rY) : DY.bindOnlyWorldMatrix(rY))
+      constructor(TT) {
+        let oT, IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          kT = arguments.length > 4 ? arguments[4] : void 0,
+          WT = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        super(TT, IT), this._internalMeshDataInfo = new yT, this.delayLoadState = 0, this.instances = [], this._creationDataStorage = null, this._geometry = null, this._thinInstanceDataStorage = new bT, this._shouldGenerateFlatShading = !1, this._originalBuilderSideOrientation = PT.DEFAULTSIDE, this.ignoreCameraMaxZ = !1, IT = this.pC(), this._instanceDataStorage = new GT, this._instanceDataStorage.engine = IT.Zc(), this._instanceDataStorage.useMonoDataStorageRenderPass = !this._instanceDataStorage.engine.isWebGPU, this._instanceDataStorage.useMonoDataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass = new tT), this._scene.useRightHandedSystem ? this.sideOrientation = 0 : this.sideOrientation = 1, this._onBeforeDraw = (TT, oT, IT) => {
+          TT && IT && (this._uniformBuffer ? this.transferToEffect(oT) : IT.bindOnlyWorldMatrix(oT))
         };
-        let OY = !1;
-        if (FY && void 0 === FY._addToSceneRootNodes) {
-          const YY = FY;
-          rY = YY.parent ?? null, AY = YY.source ?? null, IY = YY.doNotCloneChildren ?? !1, RY = YY.clonePhysicsImpostor ?? !0, OY = YY.cloneThinInstances ?? !1
-        } else rY = FY;
-        AY && this._copySource(AY, IY, RY, OY), null !== rY && (this.parent = rY), this._instanceDataStorage.hardwareInstancedRendering = this.ky().getCaps().instancedArrays, this._internalMeshDataInfo._onMeshReadyObserverAdded = YY => {
-          YY.unregisterOnNextCall = !0, this.isReady(!0) ? this.onMeshReadyObservable.notifyObservers(this) : this._internalMeshDataInfo._checkReadinessObserver || (this._internalMeshDataInfo._checkReadinessObserver = this._scene.onBeforeRenderObservable.add((() => {
+        let XT = !1;
+        if (iT && void 0 === iT._addToSceneRootNodes) {
+          const TT = iT;
+          oT = TT.parent ?? null, zT = TT.source ?? null, kT = TT.doNotCloneChildren ?? !1, WT = TT.clonePhysicsImpostor ?? !0, XT = TT.cloneThinInstances ?? !1
+        } else oT = iT;
+        zT && this._copySource(zT, kT, WT, XT), null !== oT && (this.parent = oT), this._instanceDataStorage.hardwareInstancedRendering = this.Zc().getCaps().instancedArrays, this._internalMeshDataInfo._onMeshReadyObserverAdded = TT => {
+          TT.unregisterOnNextCall = !0, this.isReady(!0) ? this.onMeshReadyObservable.notifyObservers(this) : this._internalMeshDataInfo._checkReadinessObserver || (this._internalMeshDataInfo._checkReadinessObserver = this._scene.onBeforeRenderObservable.add((() => {
             this.isReady(!0) && (this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), this._internalMeshDataInfo._checkReadinessObserver = null, this.onMeshReadyObservable.notifyObservers(this))
           })))
-        }, this.onMeshReadyObservable = new WY.e(this._internalMeshDataInfo._onMeshReadyObserverAdded), AY && AY.onClonedObservable.notifyObservers(this)
+        }, this.onMeshReadyObservable = new rT.d(this._internalMeshDataInfo._onMeshReadyObserverAdded), zT && zT.onClonedObservable.notifyObservers(this)
       }
       instantiateHierarchy() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        const FY = 0 === this.getTotalVertices() || rY && rY.doNotInstantiate && (!0 === rY.doNotInstantiate || rY.doNotInstantiate(this)) ? this.clone("Clone of " + (this.name || this.id), YY || this.parent, !0) : this.createInstance("instance of " + (this.name || this.id));
-        FY.parent = YY || this.parent, FY.position = this.position.clone(), FY.pa = this.pa.clone(), this.rotationQuaternion ? FY.rotationQuaternion = this.rotationQuaternion.clone() : FY.rotation = this.rotation.clone(), DY && DY(this, FY);
-        for (const AY of this.getChildTransformNodes(!0)) "InstancedMesh" === AY.getClassName() && "Mesh" === FY.getClassName() && AY.vFY === this ? AY.instantiateHierarchy(FY, {
-          doNotInstantiate: rY && rY.doNotInstantiate || !1,
-          newSourcedMesh: FY
-        }, DY) : AY.instantiateHierarchy(FY, rY, DY);
-        return FY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        const iT = 0 === this.getTotalVertices() || oT && oT.doNotInstantiate && (!0 === oT.doNotInstantiate || oT.doNotInstantiate(this)) ? this.clone("Clone of " + (this.name || this.id), TT || this.parent, !0) : this.createInstance("instance of " + (this.name || this.id));
+        iT.parent = TT || this.parent, iT.position = this.position.clone(), iT.ti = this.ti.clone(), this.rotationQuaternion ? iT.rotationQuaternion = this.rotationQuaternion.clone() : iT.rotation = this.rotation.clone(), IT && IT(this, iT);
+        for (const zT of this.getChildTransformNodes(!0)) "InstancedMesh" === zT.getClassName() && "Mesh" === iT.getClassName() && zT.HiT === this ? zT.instantiateHierarchy(iT, {
+          doNotInstantiate: oT && oT.doNotInstantiate || !1,
+          newSourcedMesh: iT
+        }, IT) : zT.instantiateHierarchy(iT, oT, IT);
+        return iT
       }
       getClassName() {
         return "Mesh"
@@ -4809,21 +4809,21 @@ export const modules = {
       get _isMesh() {
         return !0
       }
-      toString(YY) {
-        let rY = super.toString(YY);
-        if (rY += ", n vertices: " + this.getTotalVertices(), rY += ", parent: " + (this._waitingParentId ? this._waitingParentId : this.parent ? this.parent.name : "NONE"), this.animations)
-          for (let DY = 0; DY < this.animations.length; DY++) rY += ", animation[0]: " + this.animations[DY].toString(YY);
-        if (YY)
+      toString(TT) {
+        let oT = super.toString(TT);
+        if (oT += ", n vertices: " + this.getTotalVertices(), oT += ", parent: " + (this._waitingParentId ? this._waitingParentId : this.parent ? this.parent.name : "NONE"), this.animations)
+          for (let IT = 0; IT < this.animations.length; IT++) oT += ", animation[0]: " + this.animations[IT].toString(TT);
+        if (TT)
           if (this._geometry) {
-            const YY = this.XIY(),
-              DY = this.getVerticesData(cY.l.PositionKind);
-            DY && YY && (rY += ", flat shading: " + (DY.length / 3 === YY.length ? "YES" : "NO"))
-          } else rY += ", flat shading: UNKNOWN";
-        return rY
+            const TT = this.hWT(),
+              IT = this.getVerticesData(ET.i.PositionKind);
+            IT && TT && (oT += ", flat shading: " + (IT.length / 3 === TT.length ? "YES" : "NO"))
+          } else oT += ", flat shading: UNKNOWN";
+        return oT
       }
       _unBindEffect() {
         super._unBindEffect();
-        for (const YY of this.instances) YY._unBindEffect()
+        for (const TT of this.instances) TT._unBindEffect()
       }
       get hasLODLevels() {
         return this._internalMeshDataInfo._LODLevels.length > 0
@@ -4832,52 +4832,52 @@ export const modules = {
         return this._internalMeshDataInfo._LODLevels
       }
       _sortLODLevels() {
-        const YY = this._internalMeshDataInfo._useLODScreenCoverage ? -1 : 1;
-        this._internalMeshDataInfo._LODLevels.sort(((rY, DY) => rY.distanceOrScreenCoverage < DY.distanceOrScreenCoverage ? YY : rY.distanceOrScreenCoverage > DY.distanceOrScreenCoverage ? -YY : 0))
+        const TT = this._internalMeshDataInfo._useLODScreenCoverage ? -1 : 1;
+        this._internalMeshDataInfo._LODLevels.sort(((oT, IT) => oT.distanceOrScreenCoverage < IT.distanceOrScreenCoverage ? TT : oT.distanceOrScreenCoverage > IT.distanceOrScreenCoverage ? -TT : 0))
       }
-      addLODLevel(YY, rY) {
-        if (rY && rY._masterMesh) return JY.d.Warn("You cannot use a mesh as LOD level twice"), this;
-        const DY = new XY(YY, rY);
-        return this._internalMeshDataInfo._LODLevels.push(DY), rY && (rY._masterMesh = this), this._sortLODLevels(), this
+      addLODLevel(TT, oT) {
+        if (oT && oT._masterMesh) return HT.d.Warn("You cannot use a mesh as LOD level twice"), this;
+        const IT = new lT(TT, oT);
+        return this._internalMeshDataInfo._LODLevels.push(IT), oT && (oT._masterMesh = this), this._sortLODLevels(), this
       }
-      getLODLevelAtDistance(YY) {
-        const rY = this._internalMeshDataInfo;
-        for (let DY = 0; DY < rY._LODLevels.length; DY++) {
-          const FY = rY._LODLevels[DY];
-          if (FY.distanceOrScreenCoverage === YY) return FY.mesh
+      getLODLevelAtDistance(TT) {
+        const oT = this._internalMeshDataInfo;
+        for (let IT = 0; IT < oT._LODLevels.length; IT++) {
+          const iT = oT._LODLevels[IT];
+          if (iT.distanceOrScreenCoverage === TT) return iT.mesh
         }
         return null
       }
-      removeLODLevel(YY) {
-        const rY = this._internalMeshDataInfo;
-        for (let DY = 0; DY < rY._LODLevels.length; DY++) rY._LODLevels[DY].mesh === YY && (rY._LODLevels.splice(DY, 1), YY && (YY._masterMesh = null));
+      removeLODLevel(TT) {
+        const oT = this._internalMeshDataInfo;
+        for (let IT = 0; IT < oT._LODLevels.length; IT++) oT._LODLevels[IT].mesh === TT && (oT._LODLevels.splice(IT, 1), TT && (TT._masterMesh = null));
         return this._sortLODLevels(), this
       }
-      getLOD(YY, rY) {
-        const DY = this._internalMeshDataInfo;
-        if (!DY._LODLevels || 0 === DY._LODLevels.length) return this;
-        const FY = rY || this.oB().bDY,
-          AY = YY.mode === TY.e.ORTHOGRAPHIC_CAMERA ? YY.minZ : FY.centerWorld.subtract(YY.globalPosition).length();
-        let IY = AY,
-          RY = 1;
-        if (DY._useLODScreenCoverage) {
-          const rY = YY.screenArea;
-          let DY = FY.radiusWorld * YY.minZ / AY;
-          DY = DY * DY * Math.PI, IY = DY / rY, RY = -1
+      getLOD(TT, oT) {
+        const IT = this._internalMeshDataInfo;
+        if (!IT._LODLevels || 0 === IT._LODLevels.length) return this;
+        const iT = oT || this.GJ().KiT,
+          zT = TT.mode === eT.c.ORTHOGRAPHIC_CAMERA ? TT.minZ : iT.centerWorld.subtract(TT.globalPosition).length();
+        let kT = zT,
+          WT = 1;
+        if (IT._useLODScreenCoverage) {
+          const oT = TT.screenArea;
+          let IT = iT.radiusWorld * TT.minZ / zT;
+          IT = IT * IT * Math.PI, kT = IT / oT, WT = -1
         }
-        if (RY * DY._LODLevels[DY._LODLevels.length - 1].distanceOrScreenCoverage > RY * IY) return this.onLODLevelSelection && this.onLODLevelSelection(IY, this, this), this;
-        for (let OY = 0; OY < DY._LODLevels.length; OY++) {
-          const YY = DY._LODLevels[OY];
-          if (RY * YY.distanceOrScreenCoverage < RY * IY) {
-            if (YY.mesh) {
-              if (4 === YY.mesh.delayLoadState) return YY.mesh._checkDelayState(), this;
-              if (2 === YY.mesh.delayLoadState) return this;
-              YY.mesh._preActivate(), YY.mesh._updateSubMeshesBoundingInfo(this.worldMatrixFromCache)
+        if (WT * IT._LODLevels[IT._LODLevels.length - 1].distanceOrScreenCoverage > WT * kT) return this.onLODLevelSelection && this.onLODLevelSelection(kT, this, this), this;
+        for (let XT = 0; XT < IT._LODLevels.length; XT++) {
+          const TT = IT._LODLevels[XT];
+          if (WT * TT.distanceOrScreenCoverage < WT * kT) {
+            if (TT.mesh) {
+              if (4 === TT.mesh.delayLoadState) return TT.mesh._checkDelayState(), this;
+              if (2 === TT.mesh.delayLoadState) return this;
+              TT.mesh._preActivate(), TT.mesh._updateSubMeshesBoundingInfo(this.worldMatrixFromCache)
             }
-            return this.onLODLevelSelection && this.onLODLevelSelection(IY, this, YY.mesh), YY.mesh
+            return this.onLODLevelSelection && this.onLODLevelSelection(kT, this, TT.mesh), TT.mesh
           }
         }
-        return this.onLODLevelSelection && this.onLODLevelSelection(IY, this, this), this
+        return this.onLODLevelSelection && this.onLODLevelSelection(kT, this, this), this
       }
       get geometry() {
         return this._geometry
@@ -4885,715 +4885,715 @@ export const modules = {
       getTotalVertices() {
         return null === this._geometry || void 0 === this._geometry ? 0 : this._geometry.getTotalVertices()
       }
-      getVerticesData(YY, rY, DY, FY) {
+      getVerticesData(TT, oT, IT, iT) {
         if (!this._geometry) return null;
-        let AY = FY ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[YY]?.getFloatData(this.instances.length + 1, DY || rY && 1 !== this._geometry.meshes.length);
-        return AY || (AY = this._geometry.getVerticesData(YY, rY, DY)), AY
+        let zT = iT ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[TT]?.getFloatData(this.instances.length + 1, IT || oT && 1 !== this._geometry.meshes.length);
+        return zT || (zT = this._geometry.getVerticesData(TT, oT, IT)), zT
       }
-      copyVerticesData(YY, rY) {
-        this._geometry && this._geometry.copyVerticesData(YY, rY)
+      copyVerticesData(TT, oT) {
+        this._geometry && this._geometry.copyVerticesData(TT, oT)
       }
-      getVertexBuffer(YY, rY) {
-        return this._geometry ? (rY ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[YY]) ?? this._geometry.getVertexBuffer(YY) : null
+      getVertexBuffer(TT, oT) {
+        return this._geometry ? (oT ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[TT]) ?? this._geometry.getVertexBuffer(TT) : null
       }
-      isVerticesDataPresent(YY, rY) {
-        return this._geometry ? !rY && void 0 !== this._userInstancedBuffersStorage?.vertexBuffers[YY] || this._geometry.isVerticesDataPresent(YY) : !!this._delayInfo && -1 !== this._delayInfo.indexOf(YY)
+      isVerticesDataPresent(TT, oT) {
+        return this._geometry ? !oT && void 0 !== this._userInstancedBuffersStorage?.vertexBuffers[TT] || this._geometry.isVerticesDataPresent(TT) : !!this._delayInfo && -1 !== this._delayInfo.indexOf(TT)
       }
-      isVertexBufferUpdatable(YY, rY) {
-        if (!this._geometry) return !!this._delayInfo && -1 !== this._delayInfo.indexOf(YY);
-        if (!rY) {
-          const rY = this._userInstancedBuffersStorage?.vertexBuffers[YY];
-          if (rY) return rY.isUpdatable()
+      isVertexBufferUpdatable(TT, oT) {
+        if (!this._geometry) return !!this._delayInfo && -1 !== this._delayInfo.indexOf(TT);
+        if (!oT) {
+          const oT = this._userInstancedBuffersStorage?.vertexBuffers[TT];
+          if (oT) return oT.isUpdatable()
         }
-        return this._geometry.isVertexBufferUpdatable(YY)
+        return this._geometry.isVertexBufferUpdatable(TT)
       }
-      getVerticesDataKinds(YY) {
+      getVerticesDataKinds(TT) {
         if (!this._geometry) {
-          const YY = [];
+          const TT = [];
           if (this._delayInfo)
-            for (const rY of this._delayInfo) YY.push(rY);
-          return YY
+            for (const oT of this._delayInfo) TT.push(oT);
+          return TT
         }
-        const rY = this._geometry.getVerticesDataKinds();
-        if (!YY && this._userInstancedBuffersStorage)
-          for (const DY in this._userInstancedBuffersStorage.vertexBuffers) - 1 === rY.indexOf(DY) && rY.push(DY);
-        return rY
+        const oT = this._geometry.getVerticesDataKinds();
+        if (!TT && this._userInstancedBuffersStorage)
+          for (const IT in this._userInstancedBuffersStorage.vertexBuffers) - 1 === oT.indexOf(IT) && oT.push(IT);
+        return oT
       }
       getTotalIndices() {
         return this._geometry ? this._geometry.getTotalIndices() : 0
       }
-      XIY(YY, rY) {
-        return this._geometry ? this._geometry.XIY(YY, rY) : []
+      hWT(TT, oT) {
+        return this._geometry ? this._geometry.hWT(TT, oT) : []
       }
       get isBlocked() {
         return null !== this._masterMesh && void 0 !== this._masterMesh
       }
       isReady() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (2 === this.delayLoadState) return !1;
-        if (!super.isReady(YY)) return !1;
-        if (!this.qm || 0 === this.qm.length) return !0;
-        if (!YY) return !0;
-        const DY = this.ky(),
-          FY = this.hT(),
-          AY = rY || DY.getCaps().instancedArrays && (this.instances.length > 0 || this.hasThinInstances);
+        if (!super.isReady(TT)) return !1;
+        if (!this.pR || 0 === this.pR.length) return !0;
+        if (!TT) return !0;
+        const IT = this.Zc(),
+          iT = this.pC(),
+          zT = oT || IT.getCaps().instancedArrays && (this.instances.length > 0 || this.hasThinInstances);
         this.computeWorldMatrix();
-        const IY = this.material || FY.defaultMaterial;
-        if (IY)
-          if (IY._storeEffectOnSubMeshes)
-            for (const OY of this.qm) {
-              const YY = OY.Uy();
-              if (YY)
-                if (YY._storeEffectOnSubMeshes) {
-                  if (!YY.isReadyForSubMesh(this, OY, AY)) return !1
-                } else if (!YY.isReady(this, AY)) return !1
-            } else if (!IY.isReady(this, AY)) return !1;
-        const RY = DY.currentRenderPassId;
-        for (const OY of this.lightSources) {
-          const YY = OY.getShadowGenerators();
-          if (!YY) continue;
-          const rY = YY.values();
-          for (let FY = rY.next(); !0 !== FY.done; FY = rY.next()) {
-            const YY = FY.value;
-            if (YY && (!YY.getShadowMap()?.renderList || YY.getShadowMap()?.renderList && -1 !== YY.getShadowMap()?.renderList?.indexOf(this))) {
-              const rY = YY.getShadowMap().renderPassIds ?? [DY.currentRenderPassId];
-              for (let FY = 0; FY < rY.length; ++FY) {
-                DY.currentRenderPassId = rY[FY];
-                for (const rY of this.qm)
-                  if (!YY.isReady(rY, AY, rY.Uy()?.needAlphaBlendingForMesh(this) ?? !1)) return DY.currentRenderPassId = RY, !1
+        const kT = this.material || iT.defaultMaterial;
+        if (kT)
+          if (kT._storeEffectOnSubMeshes)
+            for (const XT of this.pR) {
+              const TT = XT.bc();
+              if (TT)
+                if (TT._storeEffectOnSubMeshes) {
+                  if (!TT.isReadyForSubMesh(this, XT, zT)) return !1
+                } else if (!TT.isReady(this, zT)) return !1
+            } else if (!kT.isReady(this, zT)) return !1;
+        const WT = IT.currentRenderPassId;
+        for (const XT of this.lightSources) {
+          const TT = XT.getShadowGenerators();
+          if (!TT) continue;
+          const oT = TT.values();
+          for (let iT = oT.next(); !0 !== iT.done; iT = oT.next()) {
+            const TT = iT.value;
+            if (TT && (!TT.getShadowMap()?.renderList || TT.getShadowMap()?.renderList && -1 !== TT.getShadowMap()?.renderList?.indexOf(this))) {
+              const oT = TT.getShadowMap().renderPassIds ?? [IT.currentRenderPassId];
+              for (let iT = 0; iT < oT.length; ++iT) {
+                IT.currentRenderPassId = oT[iT];
+                for (const oT of this.pR)
+                  if (!TT.isReady(oT, zT, oT.bc()?.needAlphaBlendingForMesh(this) ?? !1)) return IT.currentRenderPassId = WT, !1
               }
-              DY.currentRenderPassId = RY
+              IT.currentRenderPassId = WT
             }
           }
         }
-        for (const OY of this._internalMeshDataInfo._LODLevels)
-          if (OY.mesh && !OY.mesh.isReady(AY)) return !1;
+        for (const XT of this._internalMeshDataInfo._LODLevels)
+          if (XT.mesh && !XT.mesh.isReady(zT)) return !1;
         return !0
       }
       get areNormalsFrozen() {
         return this._internalMeshDataInfo._areNormalsFrozen
       }
-      Ly() {
+      yc() {
         return this._internalMeshDataInfo._areNormalsFrozen = !0, this
       }
       unfreezeNormals() {
         return this._internalMeshDataInfo._areNormalsFrozen = !1, this
       }
-      set overridenInstanceCount(YY) {
-        this._instanceDataStorage.overridenInstanceCount = YY
+      set overridenInstanceCount(TT) {
+        this._instanceDataStorage.overridenInstanceCount = TT
       }
       _getInstanceDataStorage() {
         if (this._instanceDataStorage.useMonoDataStorageRenderPass) return this._instanceDataStorage.dataStorageRenderPass;
-        const YY = this._instanceDataStorage.engine.currentRenderPassId;
-        let rY = this._instanceDataStorage.renderPasses[YY];
-        return rY || (rY = new pY, this._instanceDataStorage.renderPasses[YY] = rY), rY
+        const TT = this._instanceDataStorage.engine.currentRenderPassId;
+        let oT = this._instanceDataStorage.renderPasses[TT];
+        return oT || (oT = new tT, this._instanceDataStorage.renderPasses[TT] = oT), oT
       }
       _preActivate() {
-        const YY = this._internalMeshDataInfo,
-          rY = this.hT().getRenderId();
-        return YY._preActivateId === rY || (YY._preActivateId = rY, this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass.visibleInstances = null : this._getInstanceDataStorage().visibleInstances = null), this
+        const TT = this._internalMeshDataInfo,
+          oT = this.pC().getRenderId();
+        return TT._preActivateId === oT || (TT._preActivateId = oT, this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass.visibleInstances = null : this._getInstanceDataStorage().visibleInstances = null), this
       }
-      _preActivateForIntermediateRendering(YY) {
-        const rY = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
-        return rY.visibleInstances && (rY.visibleInstances.intermediateDefaultRenderId = YY), this
+      _preActivateForIntermediateRendering(TT) {
+        const oT = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+        return oT.visibleInstances && (oT.visibleInstances.intermediateDefaultRenderId = TT), this
       }
-      _registerInstanceForRenderId(YY, rY) {
-        const DY = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
-        return DY.visibleInstances || (DY.visibleInstances = {
-          defaultRenderId: rY,
+      _registerInstanceForRenderId(TT, oT) {
+        const IT = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+        return IT.visibleInstances || (IT.visibleInstances = {
+          defaultRenderId: oT,
           selfDefaultRenderId: this._renderId,
           intermediateDefaultRenderId: -1
-        }), DY.visibleInstances[rY] || (void 0 === DY.previousRenderId || this._instanceDataStorage.useMonoDataStorageRenderPass && !this._instanceDataStorage.isFrozen || delete DY.visibleInstances[DY.previousRenderId], DY.previousRenderId = rY, DY.visibleInstances[rY] = new Array), DY.visibleInstances[rY].push(YY), this
+        }), IT.visibleInstances[oT] || (void 0 === IT.previousRenderId || this._instanceDataStorage.useMonoDataStorageRenderPass && !this._instanceDataStorage.isFrozen || delete IT.visibleInstances[IT.previousRenderId], IT.previousRenderId = oT, IT.visibleInstances[oT] = new Array), IT.visibleInstances[oT].push(TT), this
       }
       _afterComputeWorldMatrix() {
-        super._afterComputeWorldMatrix(), this.hasThinInstances && (this.Py || this.thinInstanceRefreshBoundingInfo(!1))
+        super._afterComputeWorldMatrix(), this.hasThinInstances && (this.Gc || this.thinInstanceRefreshBoundingInfo(!1))
       }
       _postActivate() {
         this.edgesShareWithInstances && this.edgesRenderer && this.edgesRenderer.isEnabled && this._renderingGroup && (this._renderingGroup._edgesRenderers.pushNoDuplicate(this.edgesRenderer), this.edgesRenderer.customInstances.push(this.getWorldMatrix()))
       }
       refreshBoundingInfo() {
-        let YY, rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          DY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.hasBoundingInfo && this.oB().isLocked) return this;
-        YY = "object" === typeof rY ? rY : {
-          applySkeleton: rY,
-          applyMorph: DY
+        let TT, oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          IT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.hasBoundingInfo && this.GJ().isLocked) return this;
+        TT = "object" === typeof oT ? oT : {
+          applySkeleton: oT,
+          applyMorph: IT
         };
-        const FY = this.geometry ? this.geometry.boundingBias : null;
-        return this._refreshBoundingInfo(this._getData(YY, null, cY.l.PositionKind), FY), this
+        const iT = this.geometry ? this.geometry.boundingBias : null;
+        return this._refreshBoundingInfo(this._getData(TT, null, ET.i.PositionKind), iT), this
       }
-      _createGlobalSubMesh(YY) {
-        const rY = this.getTotalVertices();
-        if (!rY || !this.XIY()) return null;
-        if (this.qm && this.qm.length > 0) {
-          const DY = this.XIY();
-          if (!DY) return null;
-          const FY = DY.length;
-          let AY = !1;
-          if (YY) AY = !0;
+      _createGlobalSubMesh(TT) {
+        const oT = this.getTotalVertices();
+        if (!oT || !this.hWT()) return null;
+        if (this.pR && this.pR.length > 0) {
+          const IT = this.hWT();
+          if (!IT) return null;
+          const iT = IT.length;
+          let zT = !1;
+          if (TT) zT = !0;
           else
-            for (const YY of this.qm) {
-              if (YY.indexStart + YY.indexCount > FY) {
-                AY = !0;
+            for (const TT of this.pR) {
+              if (TT.indexStart + TT.indexCount > iT) {
+                zT = !0;
                 break
               }
-              if (YY.verticesStart + YY.verticesCount > rY) {
-                AY = !0;
+              if (TT.verticesStart + TT.verticesCount > oT) {
+                zT = !0;
                 break
               }
             }
-          if (!AY) return this.qm[0]
+          if (!zT) return this.pR[0]
         }
-        return this.releaseSubMeshes(), new ZY.d(0, 0, rY, 0, this.getTotalIndices() || (this.isUnIndexed ? rY : 0), this)
+        return this.releaseSubMeshes(), new JT.c(0, 0, oT, 0, this.getTotalIndices() || (this.isUnIndexed ? oT : 0), this)
       }
-      subdivide(YY) {
-        if (YY < 1) return;
-        const rY = this.getTotalIndices();
-        let DY = rY / YY | 0,
-          FY = 0;
-        for (; DY % 3 !== 0;) DY++;
+      subdivide(TT) {
+        if (TT < 1) return;
+        const oT = this.getTotalIndices();
+        let IT = oT / TT | 0,
+          iT = 0;
+        for (; IT % 3 !== 0;) IT++;
         this.releaseSubMeshes();
-        for (let AY = 0; AY < YY && !(FY >= rY); AY++) ZY.d.CreateFromIndices(0, FY, FY + DY >= rY ? rY - FY : DY, this, void 0, !1), FY += DY;
+        for (let zT = 0; zT < TT && !(iT >= oT); zT++) JT.c.CreateFromIndices(0, iT, iT + IT >= oT ? oT - iT : IT, this, void 0, !1), iT += IT;
         this.refreshBoundingInfo(), this.synchronizeInstances()
       }
-      setVerticesData(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          FY = arguments.length > 3 ? arguments[3] : void 0;
-        if (this._geometry) this._geometry.setVerticesData(YY, rY, DY, FY);
+      setVerticesData(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          iT = arguments.length > 3 ? arguments[3] : void 0;
+        if (this._geometry) this._geometry.setVerticesData(TT, oT, IT, iT);
         else {
-          const FY = new KY.c;
-          FY.set(rY, YY);
-          const AY = this.hT();
-          new HY.c(HY.c.RandomId(), AY, FY, DY, this)
+          const iT = new fT.c;
+          iT.set(oT, TT);
+          const zT = this.pC();
+          new CT.d(CT.d.RandomId(), zT, iT, IT, this)
         }
         return this
       }
-      removeVerticesData(YY) {
-        this._geometry && this._geometry.removeVerticesData(YY)
+      removeVerticesData(TT) {
+        this._geometry && this._geometry.removeVerticesData(TT)
       }
-      markVerticesDataAsUpdatable(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const DY = this.getVertexBuffer(YY);
-        DY && DY.isUpdatable() !== rY && this.setVerticesData(YY, this.getVerticesData(YY), rY)
+      markVerticesDataAsUpdatable(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const IT = this.getVertexBuffer(TT);
+        IT && IT.isUpdatable() !== oT && this.setVerticesData(TT, this.getVerticesData(TT), oT)
       }
-      setVerticesBuffer(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        return this._geometry || (this._geometry = HY.c.CreateGeometryForMesh(this)), this._geometry.setVerticesBuffer(YY, DY, rY), this
+      setVerticesBuffer(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        return this._geometry || (this._geometry = CT.d.CreateGeometryForMesh(this)), this._geometry.setVerticesBuffer(TT, IT, oT), this
       }
-      updateVerticesData(YY, rY, DY, FY) {
-        return this._geometry ? (FY ? (this.makeGeometryUnique(), this.updateVerticesData(YY, rY, DY, !1)) : this._geometry.updateVerticesData(YY, rY, DY), this) : this
+      updateVerticesData(TT, oT, IT, iT) {
+        return this._geometry ? (iT ? (this.makeGeometryUnique(), this.updateVerticesData(TT, oT, IT, !1)) : this._geometry.updateVerticesData(TT, oT, IT), this) : this
       }
-      updateMeshPositions(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const DY = this.getVerticesData(cY.l.PositionKind);
-        if (!DY) return this;
-        if (YY(DY), this.updateVerticesData(cY.l.PositionKind, DY, !1, !1), rY) {
-          const YY = this.XIY(),
-            rY = this.getVerticesData(cY.l.NormalKind);
-          if (!rY) return this;
-          KY.c.ComputeNormals(DY, YY, rY), this.updateVerticesData(cY.l.NormalKind, rY, !1, !1)
+      updateMeshPositions(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const IT = this.getVerticesData(ET.i.PositionKind);
+        if (!IT) return this;
+        if (TT(IT), this.updateVerticesData(ET.i.PositionKind, IT, !1, !1), oT) {
+          const TT = this.hWT(),
+            oT = this.getVerticesData(ET.i.NormalKind);
+          if (!oT) return this;
+          fT.c.ComputeNormals(IT, TT, oT), this.updateVerticesData(ET.i.NormalKind, oT, !1, !1)
         }
         return this
       }
       makeGeometryUnique() {
         if (!this._geometry) return this;
         if (1 === this._geometry.meshes.length) return this;
-        const YY = this._geometry,
-          rY = this._geometry.copy(HY.c.RandomId());
-        return YY.releaseForMesh(this, !0), rY.applyToMesh(this), this
+        const TT = this._geometry,
+          oT = this._geometry.copy(CT.d.RandomId());
+        return TT.releaseForMesh(this, !0), oT.applyToMesh(this), this
       }
-      setIndexBuffer(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          AY = this._geometry;
-        AY || (AY = new HY.c(HY.c.RandomId(), this.hT(), void 0, void 0, this)), AY.setIndexBuffer(YY, rY, DY, FY)
+      setIndexBuffer(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          zT = this._geometry;
+        zT || (zT = new CT.d(CT.d.RandomId(), this.pC(), void 0, void 0, this)), zT.setIndexBuffer(TT, oT, IT, iT)
       }
-      setIndices(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this._geometry) this._geometry.setIndices(YY, rY, DY, FY);
+      setIndices(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this._geometry) this._geometry.setIndices(TT, oT, IT, iT);
         else {
-          const FY = new KY.c;
-          FY.indices = YY;
-          const AY = this.hT();
-          new HY.c(HY.c.RandomId(), AY, FY, DY, this, rY)
+          const iT = new fT.c;
+          iT.indices = TT;
+          const zT = this.pC();
+          new CT.d(CT.d.RandomId(), zT, iT, IT, this, oT)
         }
         return this
       }
-      updateIndices(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return this._geometry ? (this._geometry.updateIndices(YY, rY, DY), this) : this
+      updateIndices(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        return this._geometry ? (this._geometry.updateIndices(TT, oT, IT), this) : this
       }
       toLeftHanded() {
         return this._geometry ? (this._geometry.toLeftHanded(), this) : this
       }
-      _bind(YY, rY, DY) {
-        let FY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      _bind(TT, oT, IT) {
+        let iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
         if (!this._geometry) return this;
-        const AY = this.hT().ky();
-        let IY;
+        const zT = this.pC().Zc();
+        let kT;
         if (this._unIndexed)
-          if (this._getRenderingFillMode(DY) === CY.c.WireFrameFillMode) IY = YY._getLinesIndexBuffer(this.XIY(), AY);
-          else IY = null;
-        else switch (this._getRenderingFillMode(DY)) {
-          case CY.c.PointFillMode:
-            IY = null;
+          if (this._getRenderingFillMode(IT) === UT.c.WireFrameFillMode) kT = TT._getLinesIndexBuffer(this.hWT(), zT);
+          else kT = null;
+        else switch (this._getRenderingFillMode(IT)) {
+          case UT.c.PointFillMode:
+            kT = null;
             break;
-          case CY.c.WireFrameFillMode:
-            IY = YY._getLinesIndexBuffer(this.XIY(), AY);
+          case UT.c.WireFrameFillMode:
+            kT = TT._getLinesIndexBuffer(this.hWT(), zT);
             break;
           default:
-          case CY.c.TriangleFillMode:
-            IY = this._geometry.getIndexBuffer()
+          case UT.c.TriangleFillMode:
+            kT = this._geometry.getIndexBuffer()
         }
-        return this._bindDirect(rY, IY, FY)
+        return this._bindDirect(oT, kT, iT)
       }
-      _bindDirect(YY, rY) {
-        let DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      _bindDirect(TT, oT) {
+        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
         if (!this._geometry) return this;
-        if (this.morphTargetManager && this.morphTargetManager.isUsingTextureForTargets && this.morphTargetManager._bind(YY), DY && this._userInstancedBuffersStorage && !this.hasThinInstances) {
+        if (this.morphTargetManager && this.morphTargetManager.isUsingTextureForTargets && this.morphTargetManager._bind(TT), IT && this._userInstancedBuffersStorage && !this.hasThinInstances) {
           if (!this._instanceDataStorage.useMonoDataStorageRenderPass && this._userInstancedBuffersStorage.renderPasses && this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId]) {
-            const YY = this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
-            for (const rY in YY) this._userInstancedBuffersStorage.vertexBuffers[rY] = YY[rY]
+            const TT = this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+            for (const oT in TT) this._userInstancedBuffersStorage.vertexBuffers[oT] = TT[oT]
           }
-          this._geometry._bind(YY, rY, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects)
-        } else this._geometry._bind(YY, rY);
+          this._geometry._bind(TT, oT, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects)
+        } else this._geometry._bind(TT, oT);
         return this
       }
-      _draw(YY, rY, DY) {
+      _draw(TT, oT, IT) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
         this._internalMeshDataInfo._onBeforeDrawObservable && this._internalMeshDataInfo._onBeforeDrawObservable.notifyObservers(this);
-        const FY = this.hT().ky(),
-          AY = FY._currentMaterialContext,
-          IY = AY && AY.useVertexPulling;
-        return this._unIndexed && rY !== CY.c.WireFrameFillMode || rY == CY.c.PointFillMode ? FY.drawArraysType(rY, YY.verticesStart, YY.verticesCount, this.forcedInstanceCount || DY) : rY == CY.c.WireFrameFillMode ? FY.drawElementsType(rY, 0, YY._linesIndexCount, this.forcedInstanceCount || DY) : IY ? FY.drawArraysType(rY, YY.indexStart, YY.indexCount, this.forcedInstanceCount || DY) : FY.drawElementsType(rY, YY.indexStart, YY.indexCount, this.forcedInstanceCount || DY), this
+        const iT = this.pC().Zc(),
+          zT = iT._currentMaterialContext,
+          kT = zT && zT.useVertexPulling;
+        return this._unIndexed && oT !== UT.c.WireFrameFillMode || oT == UT.c.PointFillMode ? iT.drawArraysType(oT, TT.verticesStart, TT.verticesCount, this.forcedInstanceCount || IT) : oT == UT.c.WireFrameFillMode ? iT.drawElementsType(oT, 0, TT._linesIndexCount, this.forcedInstanceCount || IT) : kT ? iT.drawArraysType(oT, TT.indexStart, TT.indexCount, this.forcedInstanceCount || IT) : iT.drawElementsType(oT, TT.indexStart, TT.indexCount, this.forcedInstanceCount || IT), this
       }
-      registerBeforeRender(YY) {
-        return this.onBeforeRenderObservable.add(YY), this
+      registerBeforeRender(TT) {
+        return this.onBeforeRenderObservable.add(TT), this
       }
-      unregisterBeforeRender(YY) {
-        return this.onBeforeRenderObservable.removeCallback(YY), this
+      unregisterBeforeRender(TT) {
+        return this.onBeforeRenderObservable.removeCallback(TT), this
       }
-      registerAfterRender(YY) {
-        return this.onAfterRenderObservable.add(YY), this
+      registerAfterRender(TT) {
+        return this.onAfterRenderObservable.add(TT), this
       }
-      unregisterAfterRender(YY) {
-        return this.onAfterRenderObservable.removeCallback(YY), this
+      unregisterAfterRender(TT) {
+        return this.onAfterRenderObservable.removeCallback(TT), this
       }
-      _getInstancesRenderList(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const DY = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+      _getInstancesRenderList(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const IT = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
         if (this._instanceDataStorage.isFrozen) {
-          if (rY) return DY.batchCacheReplacementModeInFrozenMode.hardwareInstancedRendering[YY] = !1, DY.batchCacheReplacementModeInFrozenMode.renderSelf[YY] = !0, DY.batchCacheReplacementModeInFrozenMode;
-          if (DY.previousBatch) return DY.previousBatch
+          if (oT) return IT.batchCacheReplacementModeInFrozenMode.hardwareInstancedRendering[TT] = !1, IT.batchCacheReplacementModeInFrozenMode.renderSelf[TT] = !0, IT.batchCacheReplacementModeInFrozenMode;
+          if (IT.previousBatch) return IT.previousBatch
         }
-        const FY = this.hT(),
-          AY = FY._isInIntermediateRendering(),
-          IY = AY ? this._internalAbstractMeshDataInfo._onlyForInstancesIntermediate : this._internalAbstractMeshDataInfo._onlyForInstances,
-          RY = DY.batchCache;
-        if (RY.mustReturn = !1, RY.renderSelf[YY] = rY || !IY && this.isEnabled() && this.isVisible, RY.visibleInstances[YY] = null, DY.visibleInstances && !rY) {
-          const rY = DY.visibleInstances,
-            IY = FY.getRenderId(),
-            OY = AY ? rY.intermediateDefaultRenderId : rY.defaultRenderId;
-          RY.visibleInstances[YY] = rY[IY], !RY.visibleInstances[YY] && OY && (RY.visibleInstances[YY] = rY[OY])
+        const iT = this.pC(),
+          zT = iT._isInIntermediateRendering(),
+          kT = zT ? this._internalAbstractMeshDataInfo._onlyForInstancesIntermediate : this._internalAbstractMeshDataInfo._onlyForInstances,
+          WT = IT.batchCache;
+        if (WT.mustReturn = !1, WT.renderSelf[TT] = oT || !kT && this.isEnabled() && this.isVisible, WT.visibleInstances[TT] = null, IT.visibleInstances && !oT) {
+          const oT = IT.visibleInstances,
+            kT = iT.getRenderId(),
+            XT = zT ? oT.intermediateDefaultRenderId : oT.defaultRenderId;
+          WT.visibleInstances[TT] = oT[kT], !WT.visibleInstances[TT] && XT && (WT.visibleInstances[TT] = oT[XT])
         }
-        return RY.hardwareInstancedRendering[YY] = !rY && this._instanceDataStorage.hardwareInstancedRendering && null !== RY.visibleInstances[YY] && void 0 !== RY.visibleInstances[YY], DY.previousBatch = RY, RY
+        return WT.hardwareInstancedRendering[TT] = !oT && this._instanceDataStorage.hardwareInstancedRendering && null !== WT.visibleInstances[TT] && void 0 !== WT.visibleInstances[TT], IT.previousBatch = WT, WT
       }
-      _updateInstancedBuffers(YY, rY, DY, FY, AY, IY) {
-        const RY = rY.visibleInstances[YY._id],
-          OY = RY ? RY.length : 0,
-          gY = rY.parent,
-          aY = this._instanceDataStorage;
-        let vY = gY.instancesBuffer,
-          uY = gY.instancesPreviousBuffer,
-          sY = 0,
-          iY = 0;
-        const yY = rY.renderSelf[YY._id],
-          QY = this._scene.floatingOriginOffset,
-          oY = !vY || DY !== gY.instancesBufferSize || this._scene.needsPreviousWorldMatrices && !gY.instancesPreviousBuffer;
-        if (this._instanceDataStorage.manualUpdate || aY.isFrozen && !oY) iY = (yY ? 1 : 0) + OY;
+      _updateInstancedBuffers(TT, oT, IT, iT, zT, kT) {
+        const WT = oT.visibleInstances[TT._id],
+          XT = WT ? WT.length : 0,
+          BT = oT.parent,
+          FT = this._instanceDataStorage;
+        let ST = BT.instancesBuffer,
+          DT = BT.instancesPreviousBuffer,
+          LT = 0,
+          xT = 0;
+        const cT = oT.renderSelf[TT._id],
+          KT = this._scene.floatingOriginOffset,
+          MT = !ST || IT !== BT.instancesBufferSize || this._scene.needsPreviousWorldMatrices && !BT.instancesPreviousBuffer;
+        if (this._instanceDataStorage.manualUpdate || FT.isFrozen && !MT) xT = (cT ? 1 : 0) + XT;
         else {
-          const rY = this.getWorldMatrix();
-          if (yY) {
-            this._scene.needsPreviousWorldMatrices && (aY.masterMeshPreviousWorldMatrix ? (aY.masterMeshPreviousWorldMatrix.copyToArray(gY.instancesPreviousData, sY), aY.masterMeshPreviousWorldMatrix.brY(rY)) : (aY.masterMeshPreviousWorldMatrix = rY.clone(), aY.masterMeshPreviousWorldMatrix.copyToArray(gY.instancesPreviousData, sY))), rY.copyToArray(gY.instancesData, sY);
-            const YY = rY.VDY();
-            gY.instancesData[sY + 12] = YY[12] - QY.x, gY.instancesData[sY + 13] = YY[13] - QY.y, gY.instancesData[sY + 14] = YY[14] - QY.z, sY += 16, iY++
+          const oT = this.getWorldMatrix();
+          if (cT) {
+            this._scene.needsPreviousWorldMatrices && (FT.masterMeshPreviousWorldMatrix ? (FT.masterMeshPreviousWorldMatrix.copyToArray(BT.instancesPreviousData, LT), FT.masterMeshPreviousWorldMatrix.SIT(oT)) : (FT.masterMeshPreviousWorldMatrix = oT.clone(), FT.masterMeshPreviousWorldMatrix.copyToArray(BT.instancesPreviousData, LT))), oT.copyToArray(BT.instancesData, LT);
+            const TT = oT.bIT();
+            BT.instancesData[LT + 12] = TT[12] - KT.x, BT.instancesData[LT + 13] = TT[13] - KT.y, BT.instancesData[LT + 14] = TT[14] - KT.z, LT += 16, xT++
           }
-          if (RY) {
-            if (UY.INSTANCEDMESH_SORT_TRANSPARENT && this._scene.activeCamera && YY.Uy()?.needAlphaBlendingForMesh(YY.getRenderingMesh())) {
-              const YY = this._scene.activeCamera.globalPosition;
-              for (let rY = 0; rY < RY.length; rY++) {
-                const DY = RY[rY];
-                DY._distanceToCamera = eY.r.Distance(DY.oB().bDY.centerWorld, YY)
+          if (WT) {
+            if (PT.INSTANCEDMESH_SORT_TRANSPARENT && this._scene.activeCamera && TT.bc()?.needAlphaBlendingForMesh(TT.getRenderingMesh())) {
+              const TT = this._scene.activeCamera.globalPosition;
+              for (let oT = 0; oT < WT.length; oT++) {
+                const IT = WT[oT];
+                IT._distanceToCamera = RT.m.Distance(IT.GJ().KiT.centerWorld, TT)
               }
-              RY.sort(((YY, rY) => YY._distanceToCamera > rY._distanceToCamera ? -1 : YY._distanceToCamera < rY._distanceToCamera ? 1 : 0))
+              WT.sort(((TT, oT) => TT._distanceToCamera > oT._distanceToCamera ? -1 : TT._distanceToCamera < oT._distanceToCamera ? 1 : 0))
             }
-            for (let YY = 0; YY < RY.length; YY++) {
-              const rY = RY[YY],
-                DY = rY.getWorldMatrix();
-              DY.copyToArray(gY.instancesData, sY), this._scene.needsPreviousWorldMatrices && (rY._previousWorldMatrix ? (rY._previousWorldMatrix.copyToArray(gY.instancesPreviousData, sY), rY._previousWorldMatrix.brY(DY)) : (rY._previousWorldMatrix = DY.clone(), rY._previousWorldMatrix.copyToArray(gY.instancesPreviousData, sY)));
-              const FY = DY.VDY();
-              gY.instancesData[sY + 12] = FY[12] - QY.x, gY.instancesData[sY + 13] = FY[13] - QY.y, gY.instancesData[sY + 14] = FY[14] - QY.z, sY += 16, iY++
+            for (let TT = 0; TT < WT.length; TT++) {
+              const oT = WT[TT],
+                IT = oT.getWorldMatrix();
+              IT.copyToArray(BT.instancesData, LT), this._scene.needsPreviousWorldMatrices && (oT._previousWorldMatrix ? (oT._previousWorldMatrix.copyToArray(BT.instancesPreviousData, LT), oT._previousWorldMatrix.SIT(IT)) : (oT._previousWorldMatrix = IT.clone(), oT._previousWorldMatrix.copyToArray(BT.instancesPreviousData, LT)));
+              const iT = IT.bIT();
+              BT.instancesData[LT + 12] = iT[12] - KT.x, BT.instancesData[LT + 13] = iT[13] - KT.y, BT.instancesData[LT + 14] = iT[14] - KT.z, LT += 16, xT++
             }
           }
         }
-        if (oY) {
-          let YY;
-          if (vY && vY.dispose(), uY && uY.dispose(), vY = new cY.c(FY, gY.instancesData, !0, 16, !1, !0), gY.instancesBuffer = vY, this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
+        if (MT) {
+          let TT;
+          if (ST && ST.dispose(), DT && DT.dispose(), ST = new ET.d(iT, BT.instancesData, !0, 16, !1, !0), BT.instancesBuffer = ST, this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
               data: {},
               vertexBuffers: {},
               strides: {},
               sizes: {},
-              vertexArrayObjects: this.ky().getCaps().vertexArrayObject ? {} : void 0
-            }), this._instanceDataStorage.useMonoDataStorageRenderPass) YY = this._userInstancedBuffersStorage.vertexBuffers;
+              vertexArrayObjects: this.Zc().getCaps().vertexArrayObject ? {} : void 0
+            }), this._instanceDataStorage.useMonoDataStorageRenderPass) TT = this._userInstancedBuffersStorage.vertexBuffers;
           else {
             this._userInstancedBuffersStorage.renderPasses || (this._userInstancedBuffersStorage.renderPasses = {});
-            const rY = this._instanceDataStorage.engine.currentRenderPassId;
-            YY = this._userInstancedBuffersStorage.renderPasses[rY], YY || (this._userInstancedBuffersStorage.renderPasses[rY] = YY = {})
+            const oT = this._instanceDataStorage.engine.currentRenderPassId;
+            TT = this._userInstancedBuffersStorage.renderPasses[oT], TT || (this._userInstancedBuffersStorage.renderPasses[oT] = TT = {})
           }
-          YY.world0 = vY.createVertexBuffer("world0", 0, 4), YY.world1 = vY.createVertexBuffer("world1", 4, 4), YY.world2 = vY.createVertexBuffer("world2", 8, 4), YY.world3 = vY.createVertexBuffer("world3", 12, 4), this._scene.needsPreviousWorldMatrices && (uY = new cY.c(FY, gY.instancesPreviousData, !0, 16, !1, !0), gY.instancesPreviousBuffer = uY, YY.previousWorld0 = uY.createVertexBuffer("previousWorld0", 0, 4), YY.previousWorld1 = uY.createVertexBuffer("previousWorld1", 4, 4), YY.previousWorld2 = uY.createVertexBuffer("previousWorld2", 8, 4), YY.previousWorld3 = uY.createVertexBuffer("previousWorld3", 12, 4)), this._invalidateInstanceVertexArrayObject()
-        } else this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || (vY.updateDirectly(gY.instancesData, 0, iY), !this._scene.needsPreviousWorldMatrices || this._instanceDataStorage.manualUpdate && !this._instanceDataStorage.previousManualUpdate || uY.updateDirectly(gY.instancesPreviousData, 0, iY));
-        this._processInstancedBuffers(RY, yY), IY && void 0 !== AY && (this.hT()._activeIndices.addCount(YY.indexCount * iY, !1), FY._currentDrawContext && (FY._currentDrawContext.useInstancing = !0), this._bind(YY, IY, AY), this._draw(YY, AY, iY)), !this._scene.needsPreviousWorldMatrices || oY || !this._instanceDataStorage.manualUpdate || this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || this._instanceDataStorage.previousManualUpdate || uY.updateDirectly(gY.instancesData, 0, iY)
+          TT.world0 = ST.createVertexBuffer("world0", 0, 4), TT.world1 = ST.createVertexBuffer("world1", 4, 4), TT.world2 = ST.createVertexBuffer("world2", 8, 4), TT.world3 = ST.createVertexBuffer("world3", 12, 4), this._scene.needsPreviousWorldMatrices && (DT = new ET.d(iT, BT.instancesPreviousData, !0, 16, !1, !0), BT.instancesPreviousBuffer = DT, TT.previousWorld0 = DT.createVertexBuffer("previousWorld0", 0, 4), TT.previousWorld1 = DT.createVertexBuffer("previousWorld1", 4, 4), TT.previousWorld2 = DT.createVertexBuffer("previousWorld2", 8, 4), TT.previousWorld3 = DT.createVertexBuffer("previousWorld3", 12, 4)), this._invalidateInstanceVertexArrayObject()
+        } else this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || (ST.updateDirectly(BT.instancesData, 0, xT), !this._scene.needsPreviousWorldMatrices || this._instanceDataStorage.manualUpdate && !this._instanceDataStorage.previousManualUpdate || DT.updateDirectly(BT.instancesPreviousData, 0, xT));
+        this._processInstancedBuffers(WT, cT), kT && void 0 !== zT && (this.pC()._activeIndices.addCount(TT.indexCount * xT, !1), iT._currentDrawContext && (iT._currentDrawContext.useInstancing = !0), this._bind(TT, kT, zT), this._draw(TT, zT, xT)), !this._scene.needsPreviousWorldMatrices || MT || !this._instanceDataStorage.manualUpdate || this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || this._instanceDataStorage.previousManualUpdate || DT.updateDirectly(BT.instancesData, 0, xT)
       }
-      _renderWithInstances(YY, rY, DY, FY, AY) {
-        const IY = DY.visibleInstances[YY._id],
-          RY = IY ? IY.length : 0,
-          OY = DY.parent,
-          gY = OY.instancesBufferSize,
-          aY = 16 * (RY + 1) * 4;
-        for (; OY.instancesBufferSize < aY;) OY.instancesBufferSize *= 2;
-        return OY.instancesData && gY == OY.instancesBufferSize || (OY.instancesData = new Float32Array(OY.instancesBufferSize / 4)), (this._scene.needsPreviousWorldMatrices && !OY.instancesPreviousData || gY != OY.instancesBufferSize) && (OY.instancesPreviousData = new Float32Array(OY.instancesBufferSize / 4)), this._updateInstancedBuffers(YY, DY, gY, AY, rY, FY), AY.unbindInstanceAttributes(), this
+      _renderWithInstances(TT, oT, IT, iT, zT) {
+        const kT = IT.visibleInstances[TT._id],
+          WT = kT ? kT.length : 0,
+          XT = IT.parent,
+          BT = XT.instancesBufferSize,
+          FT = 16 * (WT + 1) * 4;
+        for (; XT.instancesBufferSize < FT;) XT.instancesBufferSize *= 2;
+        return XT.instancesData && BT == XT.instancesBufferSize || (XT.instancesData = new Float32Array(XT.instancesBufferSize / 4)), (this._scene.needsPreviousWorldMatrices && !XT.instancesPreviousData || BT != XT.instancesBufferSize) && (XT.instancesPreviousData = new Float32Array(XT.instancesBufferSize / 4)), this._updateInstancedBuffers(TT, IT, BT, zT, oT, iT), zT.unbindInstanceAttributes(), this
       }
-      _renderWithThinInstances(YY, rY, DY, FY) {
-        const AY = this._thinInstanceDataStorage?.instancesCount ?? 0;
-        this.hT()._activeIndices.addCount(YY.indexCount * AY, !1), FY._currentDrawContext && (FY._currentDrawContext.useInstancing = !0), this._bind(YY, DY, rY), this._draw(YY, rY, AY), this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && this._thinInstanceDataStorage.matrixData && (this._thinInstanceDataStorage.previousMatrixBuffer ? this._thinInstanceDataStorage.previousMatrixBuffer.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, AY) : this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.matrixData, !1)), FY.unbindInstanceAttributes()
+      _renderWithThinInstances(TT, oT, IT, iT) {
+        const zT = this._thinInstanceDataStorage?.instancesCount ?? 0;
+        this.pC()._activeIndices.addCount(TT.indexCount * zT, !1), iT._currentDrawContext && (iT._currentDrawContext.useInstancing = !0), this._bind(TT, IT, oT), this._draw(TT, oT, zT), this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && this._thinInstanceDataStorage.matrixData && (this._thinInstanceDataStorage.previousMatrixBuffer ? this._thinInstanceDataStorage.previousMatrixBuffer.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, zT) : this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.matrixData, !1)), iT.unbindInstanceAttributes()
       }
-      _processInstancedBuffers(YY, rY) {}
-      _processRendering(YY, rY, DY, FY, AY, IY, RY, OY) {
-        const gY = this.hT(),
-          aY = gY.ky();
-        if (FY = this._getRenderingFillMode(FY), IY && rY.getRenderingMesh().hasThinInstances) return this._renderWithThinInstances(rY, FY, DY, aY), this;
-        if (IY) this._renderWithInstances(rY, FY, AY, DY, aY);
+      _processInstancedBuffers(TT, oT) {}
+      _processRendering(TT, oT, IT, iT, zT, kT, WT, XT) {
+        const BT = this.pC(),
+          FT = BT.Zc();
+        if (iT = this._getRenderingFillMode(iT), kT && oT.getRenderingMesh().hasThinInstances) return this._renderWithThinInstances(oT, iT, IT, FT), this;
+        if (kT) this._renderWithInstances(oT, iT, zT, IT, FT);
         else {
-          aY._currentDrawContext && (aY._currentDrawContext.useInstancing = !1);
-          let DY = 0;
-          AY.renderSelf[rY._id] && (RY && RY(!1, YY.getWorldMatrix(), OY), DY++, this._draw(rY, FY, this._instanceDataStorage.overridenInstanceCount));
-          const IY = AY.visibleInstances[rY._id];
-          if (IY) {
-            const YY = IY.length;
-            DY += YY;
-            for (let DY = 0; DY < YY; DY++) {
-              const YY = IY[DY].getWorldMatrix();
-              RY && RY(!0, YY, OY), this._draw(rY, FY)
+          FT._currentDrawContext && (FT._currentDrawContext.useInstancing = !1);
+          let IT = 0;
+          zT.renderSelf[oT._id] && (WT && WT(!1, TT.getWorldMatrix(), XT), IT++, this._draw(oT, iT, this._instanceDataStorage.overridenInstanceCount));
+          const kT = zT.visibleInstances[oT._id];
+          if (kT) {
+            const TT = kT.length;
+            IT += TT;
+            for (let IT = 0; IT < TT; IT++) {
+              const TT = kT[IT].getWorldMatrix();
+              WT && WT(!0, TT, XT), this._draw(oT, iT)
             }
           }
-          gY._activeIndices.addCount(rY.indexCount * DY, !1)
+          BT._activeIndices.addCount(oT.indexCount * IT, !1)
         }
         return this
       }
-      _disposeInstanceDataStorageRenderPass(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        YY?.instancesBuffer && (rY && YY.instancesBuffer.dispose(), YY.instancesBuffer = null), YY?.instancesPreviousBuffer && (rY && YY.instancesPreviousBuffer.dispose(), YY.instancesPreviousBuffer = null)
+      _disposeInstanceDataStorageRenderPass(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        TT?.instancesBuffer && (oT && TT.instancesBuffer.dispose(), TT.instancesBuffer = null), TT?.instancesPreviousBuffer && (oT && TT.instancesPreviousBuffer.dispose(), TT.instancesPreviousBuffer = null)
       }
       _rebuild() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const rY in this._instanceDataStorage.renderPasses) {
-          const DY = this._instanceDataStorage.renderPasses[rY];
-          this._disposeInstanceDataStorageRenderPass(DY, YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const oT in this._instanceDataStorage.renderPasses) {
+          const IT = this._instanceDataStorage.renderPasses[oT];
+          this._disposeInstanceDataStorageRenderPass(IT, TT)
         }
-        if (this._disposeInstanceDataStorageRenderPass(this._instanceDataStorage.dataStorageRenderPass, YY), this._userInstancedBuffersStorage) {
-          for (const rY in this._userInstancedBuffersStorage.vertexBuffers) {
-            const DY = this._userInstancedBuffersStorage.vertexBuffers[rY];
-            DY && (YY && DY.dispose(), this._userInstancedBuffersStorage.vertexBuffers[rY] = null)
+        if (this._disposeInstanceDataStorageRenderPass(this._instanceDataStorage.dataStorageRenderPass, TT), this._userInstancedBuffersStorage) {
+          for (const oT in this._userInstancedBuffersStorage.vertexBuffers) {
+            const IT = this._userInstancedBuffersStorage.vertexBuffers[oT];
+            IT && (TT && IT.dispose(), this._userInstancedBuffersStorage.vertexBuffers[oT] = null)
           }
           this._userInstancedBuffersStorage.vertexArrayObjects && (this._userInstancedBuffersStorage.vertexArrayObjects = {})
         }
-        this._internalMeshDataInfo._effectiveMaterial = null, super._rebuild(YY)
+        this._internalMeshDataInfo._effectiveMaterial = null, super._rebuild(TT)
       }
-      _releaseRenderPassId(YY) {
-        const rY = this._instanceDataStorage.renderPasses[YY];
-        if (rY && (this._disposeInstanceDataStorageRenderPass(rY, !0), delete this._instanceDataStorage.renderPasses[YY]), this._userInstancedBuffersStorage?.renderPasses) {
-          const rY = this._userInstancedBuffersStorage.renderPasses[YY];
-          if (rY)
-            for (const YY in rY) rY[YY]?.dispose();
-          delete this._userInstancedBuffersStorage.renderPasses[YY]
+      _releaseRenderPassId(TT) {
+        const oT = this._instanceDataStorage.renderPasses[TT];
+        if (oT && (this._disposeInstanceDataStorageRenderPass(oT, !0), delete this._instanceDataStorage.renderPasses[TT]), this._userInstancedBuffersStorage?.renderPasses) {
+          const oT = this._userInstancedBuffersStorage.renderPasses[TT];
+          if (oT)
+            for (const TT in oT) oT[TT]?.dispose();
+          delete this._userInstancedBuffersStorage.renderPasses[TT]
         }
-        const DY = this._userInstancedBuffersStorage?.interleavedBuffers;
-        DY?.[YY] && (DY[YY].buffer.dispose(), delete DY[YY])
+        const IT = this._userInstancedBuffersStorage?.interleavedBuffers;
+        IT?.[TT] && (IT[TT].buffer.dispose(), delete IT[TT])
       }
       _freeze() {
-        if (this.qm) {
-          for (let YY = 0; YY < this.qm.length; YY++) this._getInstancesRenderList(YY);
+        if (this.pR) {
+          for (let TT = 0; TT < this.pR.length; TT++) this._getInstancesRenderList(TT);
           this._internalMeshDataInfo._effectiveMaterial = null, this._instanceDataStorage.isFrozen = !0
         }
       }
       _unFreeze() {
         this._instanceDataStorage.isFrozen = !1;
-        for (const YY in this._instanceDataStorage.renderPasses) {
-          this._instanceDataStorage.renderPasses[YY].previousBatch = null
+        for (const TT in this._instanceDataStorage.renderPasses) {
+          this._instanceDataStorage.renderPasses[TT].previousBatch = null
         }
         this._instanceDataStorage.dataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass.previousBatch = null)
       }
-      renderWithRenderPassId(YY, rY, DY, FY) {
-        let AY = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const IY = this._scene.ky(),
-          RY = IY.currentRenderPassId;
-        if (void 0 !== YY && (IY.currentRenderPassId = YY), FY)(!AY || AY && FY.isInFrustum(this._scene._frustumPlanes)) && this.render(FY, !!rY, DY);
+      renderWithRenderPassId(TT, oT, IT, iT) {
+        let zT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const kT = this._scene.Zc(),
+          WT = kT.currentRenderPassId;
+        if (void 0 !== TT && (kT.currentRenderPassId = TT), iT)(!zT || zT && iT.isInFrustum(this._scene._frustumPlanes)) && this.render(iT, !!oT, IT);
         else
-          for (let OY = 0; OY < this.qm.length; OY++) {
-            const YY = this.qm[OY];
-            (!AY || AY && YY.isInFrustum(this._scene._frustumPlanes)) && this.render(YY, !!rY, DY)
+          for (let XT = 0; XT < this.pR.length; XT++) {
+            const TT = this.pR[XT];
+            (!zT || zT && TT.isInFrustum(this._scene._frustumPlanes)) && this.render(TT, !!oT, IT)
           }
-        return void 0 !== YY && (IY.currentRenderPassId = RY), this
+        return void 0 !== TT && (kT.currentRenderPassId = WT), this
       }
       directRender() {
-        if (!this.qm) return this;
-        for (const YY of this.qm) this.render(YY, !1);
+        if (!this.pR) return this;
+        for (const TT of this.pR) this.render(TT, !1);
         return this
       }
-      render(YY, rY, DY) {
-        const FY = this.hT(),
-          AY = FY.ky();
+      render(TT, oT, IT) {
+        const iT = this.pC(),
+          zT = iT.Zc();
         this._internalAbstractMeshDataInfo._isActiveIntermediate ? this._internalAbstractMeshDataInfo._isActiveIntermediate = !1 : this._internalAbstractMeshDataInfo._isActive = !1;
-        const IY = FY.activeCameras?.length ?? 0,
-          RY = IY > 1 && FY.activeCamera === FY.activeCameras[0] || IY <= 1,
-          OY = this._occlusionDataStorage && -1 !== this._occlusionDataStorage.occlusionForRenderPassId && this._occlusionDataStorage.occlusionForRenderPassId !== AY.currentRenderPassId;
-        if (RY && this._checkOcclusionQuery(OY) && !this._occlusionDataStorage.forceRenderingWhenOccluded) return this;
-        const gY = this._getInstancesRenderList(YY._id, !!DY);
-        if (gY.mustReturn) return this;
+        const kT = iT.activeCameras?.length ?? 0,
+          WT = kT > 1 && iT.activeCamera === iT.activeCameras[0] || kT <= 1,
+          XT = this._occlusionDataStorage && -1 !== this._occlusionDataStorage.occlusionForRenderPassId && this._occlusionDataStorage.occlusionForRenderPassId !== zT.currentRenderPassId;
+        if (WT && this._checkOcclusionQuery(XT) && !this._occlusionDataStorage.forceRenderingWhenOccluded) return this;
+        const BT = this._getInstancesRenderList(TT._id, !!IT);
+        if (BT.mustReturn) return this;
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        let aY = 0,
-          vY = null;
-        this.ignoreCameraMaxZ && FY.activeCamera && !FY._isInIntermediateRendering() && (aY = FY.activeCamera.maxZ, vY = FY.activeCamera, FY.activeCamera.maxZ = 0, FY.updateTransformMatrix(!0)), this._internalMeshDataInfo._onBeforeRenderObservable && this._internalMeshDataInfo._onBeforeRenderObservable.notifyObservers(this);
-        const uY = YY.getRenderingMesh(),
-          sY = gY.hardwareInstancedRendering[YY._id] || uY.hasThinInstances || !!this._userInstancedBuffersStorage && !YY.getMesh()._internalAbstractMeshDataInfo._actAsRegularMesh,
-          iY = this._instanceDataStorage,
-          yY = YY.Uy();
-        if (!yY) return vY && (vY.maxZ = aY, FY.updateTransformMatrix(!0)), this;
-        if (iY.isFrozen && this._internalMeshDataInfo._effectiveMaterial && this._internalMeshDataInfo._effectiveMaterial === yY) {
-          if (yY._storeEffectOnSubMeshes && !YY._drawWrapper?._wasPreviouslyReady || !yY._storeEffectOnSubMeshes && !yY._getDrawWrapper()._wasPreviouslyReady) return vY && (vY.maxZ = aY, FY.updateTransformMatrix(!0)), this
+        let FT = 0,
+          ST = null;
+        this.ignoreCameraMaxZ && iT.activeCamera && !iT._isInIntermediateRendering() && (FT = iT.activeCamera.maxZ, ST = iT.activeCamera, iT.activeCamera.maxZ = 0, iT.updateTransformMatrix(!0)), this._internalMeshDataInfo._onBeforeRenderObservable && this._internalMeshDataInfo._onBeforeRenderObservable.notifyObservers(this);
+        const DT = TT.getRenderingMesh(),
+          LT = BT.hardwareInstancedRendering[TT._id] || DT.hasThinInstances || !!this._userInstancedBuffersStorage && !TT.getMesh()._internalAbstractMeshDataInfo._actAsRegularMesh,
+          xT = this._instanceDataStorage,
+          cT = TT.bc();
+        if (!cT) return ST && (ST.maxZ = FT, iT.updateTransformMatrix(!0)), this;
+        if (xT.isFrozen && this._internalMeshDataInfo._effectiveMaterial && this._internalMeshDataInfo._effectiveMaterial === cT) {
+          if (cT._storeEffectOnSubMeshes && !TT._drawWrapper?._wasPreviouslyReady || !cT._storeEffectOnSubMeshes && !cT._getDrawWrapper()._wasPreviouslyReady) return ST && (ST.maxZ = FT, iT.updateTransformMatrix(!0)), this
         } else {
-          if (yY._storeEffectOnSubMeshes) {
-            if (!yY.isReadyForSubMesh(this, YY, sY)) return vY && (vY.maxZ = aY, FY.updateTransformMatrix(!0)), this
-          } else if (!yY.isReady(this, sY)) return vY && (vY.maxZ = aY, FY.updateTransformMatrix(!0)), this;
-          this._internalMeshDataInfo._effectiveMaterial = yY
+          if (cT._storeEffectOnSubMeshes) {
+            if (!cT.isReadyForSubMesh(this, TT, LT)) return ST && (ST.maxZ = FT, iT.updateTransformMatrix(!0)), this
+          } else if (!cT.isReady(this, LT)) return ST && (ST.maxZ = FT, iT.updateTransformMatrix(!0)), this;
+          this._internalMeshDataInfo._effectiveMaterial = cT
         }
-        if (rY) {
-          const YY = this._internalMeshDataInfo._effectiveMaterial;
-          if (1 === YY.alphaModes.length) AY.setAlphaMode(YY.alphaMode);
+        if (oT) {
+          const TT = this._internalMeshDataInfo._effectiveMaterial;
+          if (1 === TT.alphaModes.length) zT.setAlphaMode(TT.alphaMode);
           else
-            for (let rY = 0; rY < YY.alphaModes.length; rY++) {
-              const DY = YY.alphaModes[rY];
-              AY.setAlphaMode(void 0 !== DY ? DY : 2, !1, rY)
+            for (let oT = 0; oT < TT.alphaModes.length; oT++) {
+              const IT = TT.alphaModes[oT];
+              zT.setAlphaMode(void 0 !== IT ? IT : 2, !1, oT)
             }
         }
-        let QY;
-        QY = this._internalMeshDataInfo._effectiveMaterial._storeEffectOnSubMeshes ? YY._drawWrapper : this._internalMeshDataInfo._effectiveMaterial._getDrawWrapper();
-        const oY = QY?.effect ?? null;
-        for (let TY = 0, eY = FY._beforeRenderingMeshStage; TY < eY.length; TY++) {
-          eY[TY].action(this, YY, gY, oY)
+        let KT;
+        KT = this._internalMeshDataInfo._effectiveMaterial._storeEffectOnSubMeshes ? TT._drawWrapper : this._internalMeshDataInfo._effectiveMaterial._getDrawWrapper();
+        const MT = KT?.effect ?? null;
+        for (let eT = 0, RT = iT._beforeRenderingMeshStage; eT < RT.length; eT++) {
+          RT[eT].action(this, TT, BT, MT)
         }
-        if (!QY || !oY) return vY && (vY.maxZ = aY, FY.updateTransformMatrix(!0)), this;
-        const WY = DY || this;
-        let EY;
-        if (!iY.isFrozen && (this._internalMeshDataInfo._effectiveMaterial.backFaceCulling || null !== this._internalMeshDataInfo._effectiveMaterial.sideOrientation || this._internalMeshDataInfo._effectiveMaterial._twoSidedLighting)) {
-          const YY = WY._getWorldMatrixDeterminant();
-          EY = this._internalMeshDataInfo._effectiveMaterial._getEffectiveOrientation(this), YY < 0 && (EY = EY === CY.c.ClockWiseSideOrientation ? CY.c.CounterClockWiseSideOrientation : CY.c.ClockWiseSideOrientation), this._internalMeshDataInfo._effectiveSideOrientation = EY
+        if (!KT || !MT) return ST && (ST.maxZ = FT, iT.updateTransformMatrix(!0)), this;
+        const rT = IT || this;
+        let AT;
+        if (!xT.isFrozen && (this._internalMeshDataInfo._effectiveMaterial.backFaceCulling || null !== this._internalMeshDataInfo._effectiveMaterial.sideOrientation || this._internalMeshDataInfo._effectiveMaterial._twoSidedLighting)) {
+          const TT = rT._getWorldMatrixDeterminant();
+          AT = this._internalMeshDataInfo._effectiveMaterial._getEffectiveOrientation(this), TT < 0 && (AT = AT === UT.c.ClockWiseSideOrientation ? UT.c.CounterClockWiseSideOrientation : UT.c.ClockWiseSideOrientation), this._internalMeshDataInfo._effectiveSideOrientation = AT
         }
-        const mY = this._internalMeshDataInfo._effectiveMaterial._preBind(QY, this._internalMeshDataInfo._effectiveSideOrientation);
-        this._internalMeshDataInfo._effectiveMaterial.forceDepthWrite && AY.setDepthWrite(!0);
-        const VY = this._internalMeshDataInfo._effectiveMaterial,
-          SY = VY.fillMode;
-        this._internalMeshDataInfo._onBeforeBindObservable && this._internalMeshDataInfo._onBeforeBindObservable.notifyObservers(this), sY || this._bind(YY, oY, SY, !1);
-        const lY = WY.getWorldMatrix();
-        VY._storeEffectOnSubMeshes ? VY.bindForSubMesh(lY, this, YY) : VY.bind(lY, this);
+        const gT = this._internalMeshDataInfo._effectiveMaterial._preBind(KT, this._internalMeshDataInfo._effectiveSideOrientation);
+        this._internalMeshDataInfo._effectiveMaterial.forceDepthWrite && zT.setDepthWrite(!0);
+        const hT = this._internalMeshDataInfo._effectiveMaterial,
+          wT = hT.fillMode;
+        this._internalMeshDataInfo._onBeforeBindObservable && this._internalMeshDataInfo._onBeforeBindObservable.notifyObservers(this), LT || this._bind(TT, MT, wT, !1);
+        const mT = rT.getWorldMatrix();
+        hT._storeEffectOnSubMeshes ? hT.bindForSubMesh(mT, this, TT) : hT.bind(mT, this);
         try {
-          fY.d._BindAttachmentsForEffect(AY, oY) && (!VY.backFaceCulling && VY.separateCullingPass && (AY.setState(!0, VY.zOffset, !1, !mY, VY.cullBackFaces, VY.stencil, VY.zOffsetUnits), this._processRendering(this, YY, oY, SY, gY, sY, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial), AY.setState(!0, VY.zOffset, !1, mY, VY.cullBackFaces, VY.stencil, VY.zOffsetUnits), this._internalMeshDataInfo._onBetweenPassObservable && this._internalMeshDataInfo._onBetweenPassObservable.notifyObservers(YY)), this._processRendering(this, YY, oY, SY, gY, sY, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial))
+          aT.d._BindAttachmentsForEffect(zT, MT) && (!hT.backFaceCulling && hT.separateCullingPass && (zT.setState(!0, hT.zOffset, !1, !gT, hT.cullBackFaces, hT.stencil, hT.zOffsetUnits), this._processRendering(this, TT, MT, wT, BT, LT, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial), zT.setState(!0, hT.zOffset, !1, gT, hT.cullBackFaces, hT.stencil, hT.zOffsetUnits), this._internalMeshDataInfo._onBetweenPassObservable && this._internalMeshDataInfo._onBetweenPassObservable.notifyObservers(TT)), this._processRendering(this, TT, MT, wT, BT, LT, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial))
         } finally {
-          fY.d._RestoreAttachments(AY)
+          aT.d._RestoreAttachments(zT)
         }
         this._internalMeshDataInfo._effectiveMaterial.unbind();
-        for (let TY = 0, eY = FY._afterRenderingMeshStage; TY < eY.length; TY++) {
-          eY[TY].action(this, YY, gY, oY)
+        for (let eT = 0, RT = iT._afterRenderingMeshStage; eT < RT.length; eT++) {
+          RT[eT].action(this, TT, BT, MT)
         }
-        return this._internalMeshDataInfo._onAfterRenderObservable && this._internalMeshDataInfo._onAfterRenderObservable.notifyObservers(this), vY && (vY.maxZ = aY, FY.updateTransformMatrix(!0)), 2 !== FY.performancePriority || iY.isFrozen || this._freeze(), this
+        return this._internalMeshDataInfo._onAfterRenderObservable && this._internalMeshDataInfo._onAfterRenderObservable.notifyObservers(this), ST && (ST.maxZ = FT, iT.updateTransformMatrix(!0)), 2 !== iT.performancePriority || xT.isFrozen || this._freeze(), this
       }
-      _renderRunFollower(YY, rY) {
-        const DY = this._scene,
-          FY = DY._engine;
-        if (FY.isWebGPU || YY._mesh !== this || 0 !== this.instances.length || this.render !== UY.prototype.render) return !1;
-        const AY = YY.Uy();
-        if (!AY || AY !== DY._cachedMaterial || void 0 === AY._canBindRunFollower) return !1;
-        const IY = YY._drawWrapper,
-          RY = IY?.effect;
-        if (!RY || RY !== DY._cachedEffect || this.visibility !== DY._cachedVisibility || IY._forceRebindOnNextCall) return !1;
-        const OY = this.hasThinInstances;
-        if (!OY && this._userInstancedBuffersStorage) return !1;
-        if (!IY._wasPreviouslyReady || IY._wasPreviouslyUsingInstances !== OY) return !1;
-        const gY = this._internalMeshDataInfo;
-        if (this.ignoreCameraMaxZ || this.morphTargetManager || this._instanceDataStorage.isFrozen || DY._isInIntermediateRendering() || 0 !== DY._beforeRenderingMeshStage.length || 0 !== DY._afterRenderingMeshStage.length || gY._onBeforeRenderObservable?.hasObservers() || gY._onBeforeBindObservable?.hasObservers() || gY._onAfterRenderObservable?.hasObservers()) return !1;
-        const aY = this.occlusionType;
-        if (void 0 !== aY && aY !== zY.b.OCCLUSION_TYPE_NONE || !AY._canBindRunFollower(DY, FY, this, YY, RY)) return !1;
-        const vY = this._internalAbstractMeshDataInfo,
-          uY = vY._isActiveIntermediate;
-        uY ? vY._isActiveIntermediate = !1 : vY._isActive = !1;
-        const sY = DY.activeCameras?.length ?? 0;
-        (sY > 1 && DY.activeCamera === DY.activeCameras[0] || sY <= 1) && this._checkOcclusionQuery(!1);
-        const iY = this._getInstancesRenderList(YY._id);
-        if (iY.mustReturn) return !0;
-        if (!OY && !iY.renderSelf[YY._id]) return uY ? vY._isActiveIntermediate = !0 : vY._isActive = !0, !1;
+      _renderRunFollower(TT, oT) {
+        const IT = this._scene,
+          iT = IT._engine;
+        if (iT.isWebGPU || TT._mesh !== this || 0 !== this.instances.length || this.render !== PT.prototype.render) return !1;
+        const zT = TT.bc();
+        if (!zT || zT !== IT._cachedMaterial || void 0 === zT._canBindRunFollower) return !1;
+        const kT = TT._drawWrapper,
+          WT = kT?.effect;
+        if (!WT || WT !== IT._cachedEffect || this.visibility !== IT._cachedVisibility || kT._forceRebindOnNextCall) return !1;
+        const XT = this.hasThinInstances;
+        if (!XT && this._userInstancedBuffersStorage) return !1;
+        if (!kT._wasPreviouslyReady || kT._wasPreviouslyUsingInstances !== XT) return !1;
+        const BT = this._internalMeshDataInfo;
+        if (this.ignoreCameraMaxZ || this.morphTargetManager || this._instanceDataStorage.isFrozen || IT._isInIntermediateRendering() || 0 !== IT._beforeRenderingMeshStage.length || 0 !== IT._afterRenderingMeshStage.length || BT._onBeforeRenderObservable?.hasObservers() || BT._onBeforeBindObservable?.hasObservers() || BT._onAfterRenderObservable?.hasObservers()) return !1;
+        const FT = this.occlusionType;
+        if (void 0 !== FT && FT !== jT.e.OCCLUSION_TYPE_NONE || !zT._canBindRunFollower(IT, iT, this, TT, WT)) return !1;
+        const ST = this._internalAbstractMeshDataInfo,
+          DT = ST._isActiveIntermediate;
+        DT ? ST._isActiveIntermediate = !1 : ST._isActive = !1;
+        const LT = IT.activeCameras?.length ?? 0;
+        (LT > 1 && IT.activeCamera === IT.activeCameras[0] || LT <= 1) && this._checkOcclusionQuery(!1);
+        const xT = this._getInstancesRenderList(TT._id);
+        if (xT.mustReturn) return !0;
+        if (!XT && !xT.renderSelf[TT._id]) return DT ? ST._isActiveIntermediate = !0 : ST._isActive = !0, !1;
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return !0;
-        if (gY._effectiveMaterial = AY, rY)
-          if (1 === AY.alphaModes.length) FY.setAlphaMode(AY.alphaMode);
+        if (BT._effectiveMaterial = zT, oT)
+          if (1 === zT.alphaModes.length) iT.setAlphaMode(zT.alphaMode);
           else
-            for (let QY = 0; QY < AY.alphaModes.length; QY++) {
-              const YY = AY.alphaModes[QY];
-              FY.setAlphaMode(void 0 !== YY ? YY : 2, !1, QY)
+            for (let KT = 0; KT < zT.alphaModes.length; KT++) {
+              const TT = zT.alphaModes[KT];
+              iT.setAlphaMode(void 0 !== TT ? TT : 2, !1, KT)
             }
-        if (AY.backFaceCulling || null !== AY.sideOrientation || AY._twoSidedLighting) {
-          const YY = this._getWorldMatrixDeterminant();
-          let rY = AY._getEffectiveOrientation(this);
-          YY < 0 && (rY = rY === CY.c.ClockWiseSideOrientation ? CY.c.CounterClockWiseSideOrientation : CY.c.ClockWiseSideOrientation), gY._effectiveSideOrientation = rY
+        if (zT.backFaceCulling || null !== zT.sideOrientation || zT._twoSidedLighting) {
+          const TT = this._getWorldMatrixDeterminant();
+          let oT = zT._getEffectiveOrientation(this);
+          TT < 0 && (oT = oT === UT.c.ClockWiseSideOrientation ? UT.c.CounterClockWiseSideOrientation : UT.c.ClockWiseSideOrientation), BT._effectiveSideOrientation = oT
         }
-        AY._preBind(IY, gY._effectiveSideOrientation), AY.forceDepthWrite && FY.setDepthWrite(!0);
-        const yY = AY.fillMode;
-        return OY || this._bind(YY, RY, yY, !1), AY._bindRunFollower(this.getWorldMatrix(), this, YY, RY), this._processRendering(this, YY, RY, yY, iY, OY, this._onBeforeDraw, AY), AY.unbind(), 2 === DY.performancePriority && this._freeze(), !0
+        zT._preBind(kT, BT._effectiveSideOrientation), zT.forceDepthWrite && iT.setDepthWrite(!0);
+        const cT = zT.fillMode;
+        return XT || this._bind(TT, WT, cT, !1), zT._bindRunFollower(this.getWorldMatrix(), this, TT, WT), this._processRendering(this, TT, WT, cT, xT, XT, this._onBeforeDraw, zT), zT.unbind(), 2 === IT.performancePriority && this._freeze(), !0
       }
       cleanMatrixWeights() {
-        this.isVerticesDataPresent(cY.l.MatricesWeightsKind) && (this.isVerticesDataPresent(cY.l.MatricesWeightsExtraKind) ? this._normalizeSkinWeightsAndExtra() : this._normalizeSkinFourWeights())
+        this.isVerticesDataPresent(ET.i.MatricesWeightsKind) && (this.isVerticesDataPresent(ET.i.MatricesWeightsExtraKind) ? this._normalizeSkinWeightsAndExtra() : this._normalizeSkinFourWeights())
       }
       _normalizeSkinFourWeights() {
-        const YY = this.getVerticesData(cY.l.MatricesWeightsKind),
-          rY = YY.length;
-        for (let DY = 0; DY < rY; DY += 4) {
-          const rY = YY[DY] + YY[DY + 1] + YY[DY + 2] + YY[DY + 3];
-          if (0 === rY) YY[DY] = 1;
+        const TT = this.getVerticesData(ET.i.MatricesWeightsKind),
+          oT = TT.length;
+        for (let IT = 0; IT < oT; IT += 4) {
+          const oT = TT[IT] + TT[IT + 1] + TT[IT + 2] + TT[IT + 3];
+          if (0 === oT) TT[IT] = 1;
           else {
-            const FY = 1 / rY;
-            YY[DY] *= FY, YY[DY + 1] *= FY, YY[DY + 2] *= FY, YY[DY + 3] *= FY
+            const iT = 1 / oT;
+            TT[IT] *= iT, TT[IT + 1] *= iT, TT[IT + 2] *= iT, TT[IT + 3] *= iT
           }
         }
-        this.setVerticesData(cY.l.MatricesWeightsKind, YY)
+        this.setVerticesData(ET.i.MatricesWeightsKind, TT)
       }
       _normalizeSkinWeightsAndExtra() {
-        const YY = this.getVerticesData(cY.l.MatricesWeightsExtraKind),
-          rY = this.getVerticesData(cY.l.MatricesWeightsKind),
-          DY = rY.length;
-        for (let FY = 0; FY < DY; FY += 4) {
-          let DY = rY[FY] + rY[FY + 1] + rY[FY + 2] + rY[FY + 3];
-          if (DY += YY[FY] + YY[FY + 1] + YY[FY + 2] + YY[FY + 3], 0 === DY) rY[FY] = 1;
+        const TT = this.getVerticesData(ET.i.MatricesWeightsExtraKind),
+          oT = this.getVerticesData(ET.i.MatricesWeightsKind),
+          IT = oT.length;
+        for (let iT = 0; iT < IT; iT += 4) {
+          let IT = oT[iT] + oT[iT + 1] + oT[iT + 2] + oT[iT + 3];
+          if (IT += TT[iT] + TT[iT + 1] + TT[iT + 2] + TT[iT + 3], 0 === IT) oT[iT] = 1;
           else {
-            const AY = 1 / DY;
-            rY[FY] *= AY, rY[FY + 1] *= AY, rY[FY + 2] *= AY, rY[FY + 3] *= AY, YY[FY] *= AY, YY[FY + 1] *= AY, YY[FY + 2] *= AY, YY[FY + 3] *= AY
+            const zT = 1 / IT;
+            oT[iT] *= zT, oT[iT + 1] *= zT, oT[iT + 2] *= zT, oT[iT + 3] *= zT, TT[iT] *= zT, TT[iT + 1] *= zT, TT[iT + 2] *= zT, TT[iT + 3] *= zT
           }
         }
-        this.setVerticesData(cY.l.MatricesWeightsKind, rY), this.setVerticesData(cY.l.MatricesWeightsKind, YY)
+        this.setVerticesData(ET.i.MatricesWeightsKind, oT), this.setVerticesData(ET.i.MatricesWeightsKind, TT)
       }
       validateSkinning() {
-        const YY = this.getVerticesData(cY.l.MatricesWeightsExtraKind),
-          rY = this.getVerticesData(cY.l.MatricesWeightsKind);
-        if (null === rY || null == this.skeleton) return {
+        const TT = this.getVerticesData(ET.i.MatricesWeightsExtraKind),
+          oT = this.getVerticesData(ET.i.MatricesWeightsKind);
+        if (null === oT || null == this.skeleton) return {
           skinned: !1,
           valid: !0,
-          gy: "not skinned"
+          Bc: "not skinned"
         };
-        const DY = rY.length;
-        let FY = 0,
-          AY = 0,
-          IY = 0,
-          RY = 0;
-        const OY = null === YY ? 4 : 8,
-          gY = [];
-        for (let iY = 0; iY <= OY; iY++) gY[iY] = 0;
-        for (let iY = 0; iY < DY; iY += 4) {
-          let DY = rY[iY],
-            aY = DY,
-            vY = 0 === aY ? 0 : 1;
-          for (let AY = 1; AY < OY; AY++) {
-            const IY = AY < 4 ? rY[iY + AY] : YY[iY + AY - 4];
-            IY > DY && FY++, 0 !== IY && vY++, aY += IY, DY = IY
+        const IT = oT.length;
+        let iT = 0,
+          zT = 0,
+          kT = 0,
+          WT = 0;
+        const XT = null === TT ? 4 : 8,
+          BT = [];
+        for (let xT = 0; xT <= XT; xT++) BT[xT] = 0;
+        for (let xT = 0; xT < IT; xT += 4) {
+          let IT = oT[xT],
+            FT = IT,
+            ST = 0 === FT ? 0 : 1;
+          for (let zT = 1; zT < XT; zT++) {
+            const kT = zT < 4 ? oT[xT + zT] : TT[xT + zT - 4];
+            kT > IT && iT++, 0 !== kT && ST++, FT += kT, IT = kT
           }
-          if (gY[vY]++, vY > IY && (IY = vY), 0 === aY) AY++;
+          if (BT[ST]++, ST > kT && (kT = ST), 0 === FT) zT++;
           else {
-            const DY = 1 / aY;
-            let FY = 0;
-            for (let AY = 0; AY < OY; AY++) FY += AY < 4 ? Math.abs(rY[iY + AY] - rY[iY + AY] * DY) : Math.abs(YY[iY + AY - 4] - YY[iY + AY - 4] * DY);
-            FY > .001 && RY++
+            const IT = 1 / FT;
+            let iT = 0;
+            for (let zT = 0; zT < XT; zT++) iT += zT < 4 ? Math.abs(oT[xT + zT] - oT[xT + zT] * IT) : Math.abs(TT[xT + zT - 4] - TT[xT + zT - 4] * IT);
+            iT > .001 && WT++
           }
         }
-        const aY = this.skeleton.bones.length,
-          vY = this.getVerticesData(cY.l.MatricesIndicesKind),
-          uY = this.getVerticesData(cY.l.MatricesIndicesExtraKind);
-        let sY = 0;
-        for (let iY = 0; iY < DY; iY += 4)
-          for (let YY = 0; YY < OY; YY++) {
-            const rY = YY < 4 ? vY[iY + YY] : uY[iY + YY - 4];
-            (rY >= aY || rY < 0) && sY++
+        const FT = this.skeleton.bones.length,
+          ST = this.getVerticesData(ET.i.MatricesIndicesKind),
+          DT = this.getVerticesData(ET.i.MatricesIndicesExtraKind);
+        let LT = 0;
+        for (let xT = 0; xT < IT; xT += 4)
+          for (let TT = 0; TT < XT; TT++) {
+            const oT = TT < 4 ? ST[xT + TT] : DT[xT + TT - 4];
+            (oT >= FT || oT < 0) && LT++
           }
         return {
           skinned: !0,
-          valid: 0 === AY && 0 === RY && 0 === sY,
-          gy: "Number of Weights = " + DY / 4 + "\nMaximum influences = " + IY + "\nMissing Weights = " + AY + "\nNot Sorted = " + FY + "\nNot Normalized = " + RY + "\nWeightCounts = [" + gY + "]\nNumber of bones = " + aY + "\nBad Bone Indices = " + sY
+          valid: 0 === zT && 0 === WT && 0 === LT,
+          Bc: "Number of Weights = " + IT / 4 + "\nMaximum influences = " + kT + "\nMissing Weights = " + zT + "\nNot Sorted = " + iT + "\nNot Normalized = " + WT + "\nWeightCounts = [" + BT + "]\nNumber of bones = " + FT + "\nBad Bone Indices = " + LT
         }
       }
       _checkDelayState() {
-        const YY = this.hT();
-        return this._geometry ? this._geometry.load(YY) : 4 === this.delayLoadState && (this.delayLoadState = 2, this._queueLoad(YY)), this
+        const TT = this.pC();
+        return this._geometry ? this._geometry.load(TT) : 4 === this.delayLoadState && (this.delayLoadState = 2, this._queueLoad(TT)), this
       }
-      _queueLoad(YY) {
-        YY.addPendingData(this);
-        const rY = -1 !== this.delayLoadingFile.indexOf(".babylonbinarymeshdata");
+      _queueLoad(TT) {
+        TT.addPendingData(this);
+        const oT = -1 !== this.delayLoadingFile.indexOf(".babylonbinarymeshdata");
         return (async () => {
           try {
-            const DY = await YY._loadDelayedFileAsync(this.delayLoadingFile, rY, !0);
-            DY instanceof ArrayBuffer ? this._delayLoadingFunction(DY, this) : this._delayLoadingFunction(JSON.parse(DY), this);
-            for (const YY of this.instances) YY.refreshBoundingInfo(), YY._syncSubMeshes();
-            this.delayLoadState = 1, YY.removePendingData(this)
-          } catch (DY) {
-            YY.removePendingData(this), YY.CrY || JY.d.Error(`Unable to delay load geometry data for mesh "${this.name}" from "${this.delayLoadingFile}": ${DY}`)
+            const IT = await TT._loadDelayedFileAsync(this.delayLoadingFile, oT, !0);
+            IT instanceof ArrayBuffer ? this._delayLoadingFunction(IT, this) : this._delayLoadingFunction(JSON.parse(IT), this);
+            for (const TT of this.instances) TT.refreshBoundingInfo(), TT._syncSubMeshes();
+            this.delayLoadState = 1, TT.removePendingData(this)
+          } catch (IT) {
+            TT.removePendingData(this), TT.IIT || HT.d.Error(`Unable to delay load geometry data for mesh "${this.name}" from "${this.delayLoadingFile}": ${IT}`)
           }
         })(), this
       }
-      isInFrustum(YY) {
-        return 2 !== this.delayLoadState && (!!super.isInFrustum(YY) && (this._checkDelayState(), !0))
+      isInFrustum(TT) {
+        return 2 !== this.delayLoadState && (!!super.isInFrustum(TT) && (this._checkDelayState(), !0))
       }
-      setMaterialById(YY) {
-        const rY = this.hT().materials;
-        let DY;
-        for (DY = rY.length - 1; DY > -1; DY--)
-          if (rY[DY].id === YY) return this.material = rY[DY], this;
-        const FY = this.hT().multiMaterials;
-        for (DY = FY.length - 1; DY > -1; DY--)
-          if (FY[DY].id === YY) return this.material = FY[DY], this;
+      setMaterialById(TT) {
+        const oT = this.pC().materials;
+        let IT;
+        for (IT = oT.length - 1; IT > -1; IT--)
+          if (oT[IT].id === TT) return this.material = oT[IT], this;
+        const iT = this.pC().multiMaterials;
+        for (IT = iT.length - 1; IT > -1; IT--)
+          if (iT[IT].id === TT) return this.material = iT[IT], this;
         return this
       }
       getAnimatables() {
-        const YY = [];
-        return this.material && YY.push(this.material), this.skeleton && YY.push(this.skeleton), YY
+        const TT = [];
+        return this.material && TT.push(this.material), this.skeleton && TT.push(this.skeleton), TT
       }
-      bakeTransformIntoVertices(YY) {
-        if (!this.isVerticesDataPresent(cY.l.PositionKind)) return this;
-        const rY = this.qm.splice(0);
+      bakeTransformIntoVertices(TT) {
+        if (!this.isVerticesDataPresent(ET.i.PositionKind)) return this;
+        const oT = this.pR.splice(0);
         this._resetPointsArrayCache();
-        let DY = this.getVerticesData(cY.l.PositionKind);
-        const FY = eY.r.Zero();
-        let AY;
-        for (AY = 0; AY < DY.length; AY += 3) eY.r.TransformCoordinatesFromFloatsToRef(DY[AY], DY[AY + 1], DY[AY + 2], YY, FY).toArray(DY, AY);
-        if (this.setVerticesData(cY.l.PositionKind, DY, this.getVertexBuffer(cY.l.PositionKind).isUpdatable()), this.isVerticesDataPresent(cY.l.NormalKind)) {
-          for (DY = this.getVerticesData(cY.l.NormalKind), AY = 0; AY < DY.length; AY += 3) eY.r.TransformNormalFromFloatsToRef(DY[AY], DY[AY + 1], DY[AY + 2], YY, FY).normalize().toArray(DY, AY);
-          this.setVerticesData(cY.l.NormalKind, DY, this.getVertexBuffer(cY.l.NormalKind).isUpdatable())
+        let IT = this.getVerticesData(ET.i.PositionKind);
+        const iT = RT.m.Zero();
+        let zT;
+        for (zT = 0; zT < IT.length; zT += 3) RT.m.TransformCoordinatesFromFloatsToRef(IT[zT], IT[zT + 1], IT[zT + 2], TT, iT).toArray(IT, zT);
+        if (this.setVerticesData(ET.i.PositionKind, IT, this.getVertexBuffer(ET.i.PositionKind).isUpdatable()), this.isVerticesDataPresent(ET.i.NormalKind)) {
+          for (IT = this.getVerticesData(ET.i.NormalKind), zT = 0; zT < IT.length; zT += 3) RT.m.TransformNormalFromFloatsToRef(IT[zT], IT[zT + 1], IT[zT + 2], TT, iT).normalize().toArray(IT, zT);
+          this.setVerticesData(ET.i.NormalKind, IT, this.getVertexBuffer(ET.i.NormalKind).isUpdatable())
         }
-        if (this.isVerticesDataPresent(cY.l.TangentKind)) {
-          for (DY = this.getVerticesData(cY.l.TangentKind), AY = 0; AY < DY.length; AY += 4) eY.r.TransformNormalFromFloatsToRef(DY[AY], DY[AY + 1], DY[AY + 2], YY, FY).normalize().toArray(DY, AY);
-          this.setVerticesData(cY.l.TangentKind, DY, this.getVertexBuffer(cY.l.TangentKind).isUpdatable())
+        if (this.isVerticesDataPresent(ET.i.TangentKind)) {
+          for (IT = this.getVerticesData(ET.i.TangentKind), zT = 0; zT < IT.length; zT += 4) RT.m.TransformNormalFromFloatsToRef(IT[zT], IT[zT + 1], IT[zT + 2], TT, iT).normalize().toArray(IT, zT);
+          this.setVerticesData(ET.i.TangentKind, IT, this.getVertexBuffer(ET.i.TangentKind).isUpdatable())
         }
-        return YY.determinant() < 0 && this.flipFaces(), this.releaseSubMeshes(), this.qm = rY, this
+        return TT.determinant() < 0 && this.flipFaces(), this.releaseSubMeshes(), this.pR = oT, this
       }
       bakeCurrentTransformIntoVertices() {
-        let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] && this.makeGeometryUnique(), this.bakeTransformIntoVertices(this.computeWorldMatrix(!0)), this.resetLocalMatrix(YY), this
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] && this.makeGeometryUnique(), this.bakeTransformIntoVertices(this.computeWorldMatrix(!0)), this.resetLocalMatrix(TT), this
       }
       get _positions() {
         return this._internalAbstractMeshDataInfo._positions || this._geometry && this._geometry._positions || null
@@ -5605,132 +5605,132 @@ export const modules = {
         return !!this._geometry && this._geometry._generatePointsArray()
       }
       clone() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-          rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        if (rY && void 0 === rY._addToSceneRootNodes) {
-          const DY = rY;
-          return PY.source = this, PY.doNotCloneChildren = DY.doNotCloneChildren, PY.clonePhysicsImpostor = DY.clonePhysicsImpostor, PY.cloneThinInstances = DY.cloneThinInstances, new UY(YY, this.hT(), PY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        if (oT && void 0 === oT._addToSceneRootNodes) {
+          const IT = oT;
+          return NT.source = this, NT.doNotCloneChildren = IT.doNotCloneChildren, NT.clonePhysicsImpostor = IT.clonePhysicsImpostor, NT.cloneThinInstances = IT.cloneThinInstances, new PT(TT, this.pC(), NT)
         }
-        return new UY(YY, this.hT(), rY, this, DY, FY)
+        return new PT(TT, this.pC(), oT, this, IT, iT)
       }
-      dispose(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      dispose(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         this.morphTargetManager = null, this._geometry && this._geometry.releaseForMesh(this, !0);
-        const DY = this._internalMeshDataInfo;
-        if (DY._onBeforeDrawObservable && DY._onBeforeDrawObservable.clear(), DY._onBeforeBindObservable && DY._onBeforeBindObservable.clear(), DY._onBeforeRenderObservable && DY._onBeforeRenderObservable.clear(), DY._onAfterRenderObservable && DY._onAfterRenderObservable.clear(), DY._onBetweenPassObservable && DY._onBetweenPassObservable.clear(), this._scene.useClonedMeshMap) {
-          if (DY.meshMap)
-            for (const YY in DY.meshMap) {
-              const rY = DY.meshMap[YY];
-              rY && (rY._internalMeshDataInfo._source = null, DY.meshMap[YY] = void 0)
+        const IT = this._internalMeshDataInfo;
+        if (IT._onBeforeDrawObservable && IT._onBeforeDrawObservable.clear(), IT._onBeforeBindObservable && IT._onBeforeBindObservable.clear(), IT._onBeforeRenderObservable && IT._onBeforeRenderObservable.clear(), IT._onAfterRenderObservable && IT._onAfterRenderObservable.clear(), IT._onBetweenPassObservable && IT._onBetweenPassObservable.clear(), this._scene.useClonedMeshMap) {
+          if (IT.meshMap)
+            for (const TT in IT.meshMap) {
+              const oT = IT.meshMap[TT];
+              oT && (oT._internalMeshDataInfo._source = null, IT.meshMap[TT] = void 0)
             }
-          DY._source && DY._source._internalMeshDataInfo.meshMap && (DY._source._internalMeshDataInfo.meshMap[this.uniqueId] = void 0)
+          IT._source && IT._source._internalMeshDataInfo.meshMap && (IT._source._internalMeshDataInfo.meshMap[this.uniqueId] = void 0)
         } else {
-          const YY = this.hT().meshes;
-          for (const rY of YY) {
-            const YY = rY;
-            YY._internalMeshDataInfo && YY._internalMeshDataInfo._source && YY._internalMeshDataInfo._source === this && (YY._internalMeshDataInfo._source = null)
+          const TT = this.pC().meshes;
+          for (const oT of TT) {
+            const TT = oT;
+            TT._internalMeshDataInfo && TT._internalMeshDataInfo._source && TT._internalMeshDataInfo._source === this && (TT._internalMeshDataInfo._source = null)
           }
         }
-        DY._source = null, this._disposeInstanceSpecificData(), this._disposeThinInstanceSpecificData(), this._internalMeshDataInfo._checkReadinessObserver && this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), super.dispose(YY, rY)
+        IT._source = null, this._disposeInstanceSpecificData(), this._disposeThinInstanceSpecificData(), this._internalMeshDataInfo._checkReadinessObserver && this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), super.dispose(TT, oT)
       }
       _disposeInstanceSpecificData() {}
       _disposeThinInstanceSpecificData() {}
       _invalidateInstanceVertexArrayObject() {}
-      applyDisplacementMap(YY, rY, DY, FY, AY, IY) {
-        let RY = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          OY = arguments.length > 7 ? arguments[7] : void 0;
-        const gY = this.hT();
-        return (0, mY.m)(YY, (YY => {
-          const OY = YY.width,
-            gY = YY.height,
-            aY = this.ky().createCanvas(OY, gY).getContext("2d");
-          aY.drawImage(YY, 0, 0);
-          const vY = aY.getImageData(0, 0, OY, gY).data;
-          this.applyDisplacementMapFromBuffer(vY, OY, gY, rY, DY, AY, IY, RY), FY && FY(this)
-        }), OY || (() => {}), gY.offlineProvider), this
+      applyDisplacementMap(TT, oT, IT, iT, zT, kT) {
+        let WT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          XT = arguments.length > 7 ? arguments[7] : void 0;
+        const BT = this.pC();
+        return (0, gT.r)(TT, (TT => {
+          const XT = TT.width,
+            BT = TT.height,
+            FT = this.Zc().createCanvas(XT, BT).getContext("2d");
+          FT.drawImage(TT, 0, 0);
+          const ST = FT.getImageData(0, 0, XT, BT).data;
+          this.applyDisplacementMapFromBuffer(ST, XT, BT, oT, IT, zT, kT, WT), iT && iT(this)
+        }), XT || (() => {}), BT.offlineProvider), this
       }
-      applyDisplacementMapFromBuffer(YY, rY, DY, FY, AY, IY, RY) {
-        let OY = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-        if (!this.isVerticesDataPresent(cY.l.PositionKind) || !this.isVerticesDataPresent(cY.l.NormalKind) || !this.isVerticesDataPresent(cY.l.UVKind)) return JY.d.Warn("Cannot call applyDisplacementMap: Given mesh is not complete. Position, Normal or UV are missing"), this;
-        const gY = this.getVerticesData(cY.l.PositionKind, !0, !0),
-          aY = this.getVerticesData(cY.l.NormalKind),
-          vY = this.getVerticesData(cY.l.UVKind);
-        let uY = eY.r.Zero();
-        const sY = eY.r.Zero(),
-          iY = eY.q.Zero();
-        IY = IY || eY.q.Zero(), RY = RY || new eY.q(1, 1);
-        for (let yY = 0; yY < gY.length; yY += 3) {
-          eY.r.FromArrayToRef(gY, yY, uY), eY.r.FromArrayToRef(aY, yY, sY), eY.q.FromArrayToRef(vY, yY / 3 * 2, iY);
-          const OY = 4 * ((Math.abs(iY.x * RY.x + IY.x % 1) * (rY - 1) % rY | 0) + (Math.abs(iY.y * RY.y + IY.y % 1) * (DY - 1) % DY | 0) * rY),
-            QY = .3 * (YY[OY] / 255) + .59 * (YY[OY + 1] / 255) + .11 * (YY[OY + 2] / 255);
-          sY.normalize(), sY.scaleInPlace(FY + (AY - FY) * QY), uY = uY.add(sY), uY.toArray(gY, yY)
+      applyDisplacementMapFromBuffer(TT, oT, IT, iT, zT, kT, WT) {
+        let XT = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+        if (!this.isVerticesDataPresent(ET.i.PositionKind) || !this.isVerticesDataPresent(ET.i.NormalKind) || !this.isVerticesDataPresent(ET.i.UVKind)) return HT.d.Warn("Cannot call applyDisplacementMap: Given mesh is not complete. Position, Normal or UV are missing"), this;
+        const BT = this.getVerticesData(ET.i.PositionKind, !0, !0),
+          FT = this.getVerticesData(ET.i.NormalKind),
+          ST = this.getVerticesData(ET.i.UVKind);
+        let DT = RT.m.Zero();
+        const LT = RT.m.Zero(),
+          xT = RT.j.Zero();
+        kT = kT || RT.j.Zero(), WT = WT || new RT.j(1, 1);
+        for (let cT = 0; cT < BT.length; cT += 3) {
+          RT.m.FromArrayToRef(BT, cT, DT), RT.m.FromArrayToRef(FT, cT, LT), RT.j.FromArrayToRef(ST, cT / 3 * 2, xT);
+          const XT = 4 * ((Math.abs(xT.x * WT.x + kT.x % 1) * (oT - 1) % oT | 0) + (Math.abs(xT.y * WT.y + kT.y % 1) * (IT - 1) % IT | 0) * oT),
+            KT = .3 * (TT[XT] / 255) + .59 * (TT[XT + 1] / 255) + .11 * (TT[XT + 2] / 255);
+          LT.normalize(), LT.scaleInPlace(iT + (zT - iT) * KT), DT = DT.add(LT), DT.toArray(BT, cT)
         }
-        return KY.c.ComputeNormals(gY, this.XIY(), aY), OY ? (this.setVerticesData(cY.l.PositionKind, gY), this.setVerticesData(cY.l.NormalKind, aY), this.setVerticesData(cY.l.UVKind, vY)) : (this.updateVerticesData(cY.l.PositionKind, gY), this.updateVerticesData(cY.l.NormalKind, aY)), this
+        return fT.c.ComputeNormals(BT, this.hWT(), FT), XT ? (this.setVerticesData(ET.i.PositionKind, BT), this.setVerticesData(ET.i.NormalKind, FT), this.setVerticesData(ET.i.UVKind, ST)) : (this.updateVerticesData(ET.i.PositionKind, BT), this.updateVerticesData(ET.i.NormalKind, FT)), this
       }
-      _getFlattenedNormals(YY, rY) {
-        const DY = new Float32Array(3 * YY.length);
-        let FY = 0;
-        const AY = this.sideOrientation === (this._scene.useRightHandedSystem ? 1 : 0);
-        for (let IY = 0; IY < YY.length; IY += 3) {
-          const RY = eY.r.FromArray(rY, 3 * YY[IY]),
-            OY = eY.r.FromArray(rY, 3 * YY[IY + 1]),
-            gY = eY.r.FromArray(rY, 3 * YY[IY + 2]),
-            aY = RY.subtract(OY),
-            vY = gY.subtract(OY),
-            uY = eY.r.Normalize(eY.r.Cross(aY, vY));
-          AY && uY.scaleInPlace(-1);
-          for (let YY = 0; YY < 3; YY++) DY[FY++] = uY.x, DY[FY++] = uY.y, DY[FY++] = uY.z
+      _getFlattenedNormals(TT, oT) {
+        const IT = new Float32Array(3 * TT.length);
+        let iT = 0;
+        const zT = this.sideOrientation === (this._scene.useRightHandedSystem ? 1 : 0);
+        for (let kT = 0; kT < TT.length; kT += 3) {
+          const WT = RT.m.FromArray(oT, 3 * TT[kT]),
+            XT = RT.m.FromArray(oT, 3 * TT[kT + 1]),
+            BT = RT.m.FromArray(oT, 3 * TT[kT + 2]),
+            FT = WT.subtract(XT),
+            ST = BT.subtract(XT),
+            DT = RT.m.Normalize(RT.m.Cross(FT, ST));
+          zT && DT.scaleInPlace(-1);
+          for (let TT = 0; TT < 3; TT++) IT[iT++] = DT.x, IT[iT++] = DT.y, IT[iT++] = DT.z
         }
-        return DY
+        return IT
       }
       _convertToUnIndexedMesh() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rY = this.getVerticesDataKinds().filter((YY => !this.getVertexBuffer(YY)?.getIsInstanced())),
-          DY = this.XIY(!1, !0),
-          FY = {},
-          AY = (YY, rY) => {
-            const FY = new Float32Array(DY.length * rY);
-            let AY = 0;
-            for (let IY = 0; IY < DY.length; IY++)
-              for (let RY = 0; RY < rY; RY++) FY[AY++] = YY[DY[IY] * rY + RY];
-            return FY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const oT = this.getVerticesDataKinds().filter((TT => !this.getVertexBuffer(TT)?.getIsInstanced())),
+          IT = this.hWT(!1, !0),
+          iT = {},
+          zT = (TT, oT) => {
+            const iT = new Float32Array(IT.length * oT);
+            let zT = 0;
+            for (let kT = 0; kT < IT.length; kT++)
+              for (let WT = 0; WT < oT; WT++) iT[zT++] = TT[IT[kT] * oT + WT];
+            return iT
           },
-          IY = this.oB(),
-          RY = this.geometry ? this.qm.slice(0) : [];
-        for (const OY of rY) FY[OY] = this.getVerticesData(OY);
-        for (const OY of rY) {
-          const rY = this.getVertexBuffer(OY),
-            IY = rY.getSize();
-          if (YY && OY === cY.l.NormalKind) {
-            const YY = this._getFlattenedNormals(DY, FY[cY.l.PositionKind]);
-            this.setVerticesData(cY.l.NormalKind, YY, rY.isUpdatable(), IY)
-          } else this.setVerticesData(OY, AY(FY[OY], IY), rY.isUpdatable(), IY)
+          kT = this.GJ(),
+          WT = this.geometry ? this.pR.slice(0) : [];
+        for (const XT of oT) iT[XT] = this.getVerticesData(XT);
+        for (const XT of oT) {
+          const oT = this.getVertexBuffer(XT),
+            kT = oT.getSize();
+          if (TT && XT === ET.i.NormalKind) {
+            const TT = this._getFlattenedNormals(IT, iT[ET.i.PositionKind]);
+            this.setVerticesData(ET.i.NormalKind, TT, oT.isUpdatable(), kT)
+          } else this.setVerticesData(XT, zT(iT[XT], kT), oT.isUpdatable(), kT)
         }
         if (this.morphTargetManager) {
-          for (let rY = 0; rY < this.morphTargetManager.numTargets; rY++) {
-            const FY = this.morphTargetManager.getTarget(rY),
-              IY = FY.getPositions();
-            FY.pIY(AY(IY, 3));
-            const RY = FY.getNormals();
-            RY && FY.setNormals(YY ? this._getFlattenedNormals(DY, IY) : AY(RY, 3));
-            const OY = FY.getTangents();
-            OY && FY.setTangents(AY(OY, 3));
-            const gY = FY.getUVs();
-            gY && FY.setUVs(AY(gY, 2));
-            const aY = FY.getColors();
-            aY && FY.setColors(AY(aY, 4))
+          for (let oT = 0; oT < this.morphTargetManager.numTargets; oT++) {
+            const iT = this.morphTargetManager.getTarget(oT),
+              kT = iT.getPositions();
+            iT.mWT(zT(kT, 3));
+            const WT = iT.getNormals();
+            WT && iT.setNormals(TT ? this._getFlattenedNormals(IT, kT) : zT(WT, 3));
+            const XT = iT.getTangents();
+            XT && iT.setTangents(zT(XT, 3));
+            const BT = iT.getUVs();
+            BT && iT.setUVs(zT(BT, 2));
+            const FT = iT.getColors();
+            FT && iT.setColors(zT(FT, 4))
           }
           this.morphTargetManager.synchronize()
         }
-        for (let OY = 0; OY < DY.length; OY++) DY[OY] = OY;
-        this.setIndices(DY), this._unIndexed = !0, this.releaseSubMeshes();
-        for (const OY of RY) {
-          const YY = OY.oB();
-          ZY.d.AddToMesh(OY.materialIndex, OY.indexStart, OY.indexCount, OY.indexStart, OY.indexCount, this).setBoundingInfo(YY)
+        for (let XT = 0; XT < IT.length; XT++) IT[XT] = XT;
+        this.setIndices(IT), this._unIndexed = !0, this.releaseSubMeshes();
+        for (const XT of WT) {
+          const TT = XT.GJ();
+          JT.c.AddToMesh(XT.materialIndex, XT.indexStart, XT.indexCount, XT.indexStart, XT.indexCount, this).setBoundingInfo(TT)
         }
-        return this.setBoundingInfo(IY), this.synchronizeInstances(), this
+        return this.setBoundingInfo(kT), this.synchronizeInstances(), this
       }
       convertToFlatShadedMesh() {
         return this._convertToUnIndexedMesh(!0)
@@ -5739,1385 +5739,1385 @@ export const modules = {
         return this._convertToUnIndexedMesh()
       }
       flipFaces() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rY = KY.c.ExtractFromMesh(this);
-        let DY;
-        if (YY && this.isVerticesDataPresent(cY.l.NormalKind) && rY.normals) {
-          for (DY = 0; DY < rY.normals.length; DY++) rY.normals[DY] *= -1;
-          this.setVerticesData(cY.l.NormalKind, rY.normals, this.isVertexBufferUpdatable(cY.l.NormalKind))
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const oT = fT.c.ExtractFromMesh(this);
+        let IT;
+        if (TT && this.isVerticesDataPresent(ET.i.NormalKind) && oT.normals) {
+          for (IT = 0; IT < oT.normals.length; IT++) oT.normals[IT] *= -1;
+          this.setVerticesData(ET.i.NormalKind, oT.normals, this.isVertexBufferUpdatable(ET.i.NormalKind))
         }
-        if (rY.indices) {
-          let YY;
-          for (DY = 0; DY < rY.indices.length; DY += 3) YY = rY.indices[DY + 1], rY.indices[DY + 1] = rY.indices[DY + 2], rY.indices[DY + 2] = YY;
-          this.setIndices(rY.indices, null, this.isVertexBufferUpdatable(cY.l.PositionKind), !0)
+        if (oT.indices) {
+          let TT;
+          for (IT = 0; IT < oT.indices.length; IT += 3) TT = oT.indices[IT + 1], oT.indices[IT + 1] = oT.indices[IT + 2], oT.indices[IT + 2] = TT;
+          this.setIndices(oT.indices, null, this.isVertexBufferUpdatable(ET.i.PositionKind), !0)
         }
         return this
       }
       increaseVertices() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        const rY = KY.c.ExtractFromMesh(this),
-          DY = rY.indices && !Array.isArray(rY.indices) && Array.from ? Array.from(rY.indices) : rY.indices,
-          FY = rY.positions && !Array.isArray(rY.positions) && Array.from ? Array.from(rY.positions) : rY.positions,
-          AY = rY.uvs && !Array.isArray(rY.uvs) && Array.from ? Array.from(rY.uvs) : rY.uvs,
-          IY = rY.normals && !Array.isArray(rY.normals) && Array.from ? Array.from(rY.normals) : rY.normals;
-        if (DY && FY) {
-          rY.indices = DY, rY.positions = FY, AY && (rY.uvs = AY), IY && (rY.normals = IY);
-          const RY = YY + 1,
-            OY = [];
-          for (let YY = 0; YY < RY + 1; YY++) OY[YY] = [];
-          let gY, aY;
-          const vY = new eY.r(0, 0, 0),
-            uY = new eY.r(0, 0, 0),
-            sY = new eY.q(0, 0),
-            iY = [],
-            yY = [],
-            QY = [];
-          let oY, WY, EY, mY = FY.length;
-          AY && (WY = AY.length), IY && (EY = IY.length);
-          for (let YY = 0; YY < DY.length; YY += 3) {
-            yY[0] = DY[YY], yY[1] = DY[YY + 1], yY[2] = DY[YY + 2];
-            for (let YY = 0; YY < 3; YY++)
-              if (gY = yY[YY], aY = yY[(YY + 1) % 3], void 0 === QY[gY] && void 0 === QY[aY] ? (QY[gY] = [], QY[aY] = []) : (void 0 === QY[gY] && (QY[gY] = []), void 0 === QY[aY] && (QY[aY] = [])), void 0 === QY[gY][aY] && void 0 === QY[aY][gY]) {
-                QY[gY][aY] = [], vY.x = (FY[3 * aY] - FY[3 * gY]) / RY, vY.y = (FY[3 * aY + 1] - FY[3 * gY + 1]) / RY, vY.z = (FY[3 * aY + 2] - FY[3 * gY + 2]) / RY, IY && (uY.x = (IY[3 * aY] - IY[3 * gY]) / RY, uY.y = (IY[3 * aY + 1] - IY[3 * gY + 1]) / RY, uY.z = (IY[3 * aY + 2] - IY[3 * gY + 2]) / RY), AY && (sY.x = (AY[2 * aY] - AY[2 * gY]) / RY, sY.y = (AY[2 * aY + 1] - AY[2 * gY + 1]) / RY), QY[gY][aY].push(gY);
-                for (let YY = 1; YY < RY; YY++) QY[gY][aY].push(FY.length / 3), FY[mY++] = FY[3 * gY] + YY * vY.x, FY[mY++] = FY[3 * gY + 1] + YY * vY.y, FY[mY++] = FY[3 * gY + 2] + YY * vY.z, IY && (IY[EY++] = IY[3 * gY] + YY * uY.x, IY[EY++] = IY[3 * gY + 1] + YY * uY.y, IY[EY++] = IY[3 * gY + 2] + YY * uY.z), AY && (AY[WY++] = AY[2 * gY] + YY * sY.x, AY[WY++] = AY[2 * gY + 1] + YY * sY.y);
-                QY[gY][aY].push(aY), QY[aY][gY] = [], oY = QY[gY][aY].length;
-                for (let YY = 0; YY < oY; YY++) QY[aY][gY][YY] = QY[gY][aY][oY - 1 - YY]
-              } OY[0][0] = DY[YY], OY[1][0] = QY[DY[YY]][DY[YY + 1]][1], OY[1][1] = QY[DY[YY]][DY[YY + 2]][1];
-            for (let rY = 2; rY < RY; rY++) {
-              OY[rY][0] = QY[DY[YY]][DY[YY + 1]][rY], OY[rY][rY] = QY[DY[YY]][DY[YY + 2]][rY], vY.x = (FY[3 * OY[rY][rY]] - FY[3 * OY[rY][0]]) / rY, vY.y = (FY[3 * OY[rY][rY] + 1] - FY[3 * OY[rY][0] + 1]) / rY, vY.z = (FY[3 * OY[rY][rY] + 2] - FY[3 * OY[rY][0] + 2]) / rY, IY && (uY.x = (IY[3 * OY[rY][rY]] - IY[3 * OY[rY][0]]) / rY, uY.y = (IY[3 * OY[rY][rY] + 1] - IY[3 * OY[rY][0] + 1]) / rY, uY.z = (IY[3 * OY[rY][rY] + 2] - IY[3 * OY[rY][0] + 2]) / rY), AY && (sY.x = (AY[2 * OY[rY][rY]] - AY[2 * OY[rY][0]]) / rY, sY.y = (AY[2 * OY[rY][rY] + 1] - AY[2 * OY[rY][0] + 1]) / rY);
-              for (let YY = 1; YY < rY; YY++) OY[rY][YY] = FY.length / 3, FY[mY++] = FY[3 * OY[rY][0]] + YY * vY.x, FY[mY++] = FY[3 * OY[rY][0] + 1] + YY * vY.y, FY[mY++] = FY[3 * OY[rY][0] + 2] + YY * vY.z, IY && (IY[EY++] = IY[3 * OY[rY][0]] + YY * uY.x, IY[EY++] = IY[3 * OY[rY][0] + 1] + YY * uY.y, IY[EY++] = IY[3 * OY[rY][0] + 2] + YY * uY.z), AY && (AY[WY++] = AY[2 * OY[rY][0]] + YY * sY.x, AY[WY++] = AY[2 * OY[rY][0] + 1] + YY * sY.y)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        const oT = fT.c.ExtractFromMesh(this),
+          IT = oT.indices && !Array.isArray(oT.indices) && Array.from ? Array.from(oT.indices) : oT.indices,
+          iT = oT.positions && !Array.isArray(oT.positions) && Array.from ? Array.from(oT.positions) : oT.positions,
+          zT = oT.uvs && !Array.isArray(oT.uvs) && Array.from ? Array.from(oT.uvs) : oT.uvs,
+          kT = oT.normals && !Array.isArray(oT.normals) && Array.from ? Array.from(oT.normals) : oT.normals;
+        if (IT && iT) {
+          oT.indices = IT, oT.positions = iT, zT && (oT.uvs = zT), kT && (oT.normals = kT);
+          const WT = TT + 1,
+            XT = [];
+          for (let TT = 0; TT < WT + 1; TT++) XT[TT] = [];
+          let BT, FT;
+          const ST = new RT.m(0, 0, 0),
+            DT = new RT.m(0, 0, 0),
+            LT = new RT.j(0, 0),
+            xT = [],
+            cT = [],
+            KT = [];
+          let MT, rT, AT, gT = iT.length;
+          zT && (rT = zT.length), kT && (AT = kT.length);
+          for (let TT = 0; TT < IT.length; TT += 3) {
+            cT[0] = IT[TT], cT[1] = IT[TT + 1], cT[2] = IT[TT + 2];
+            for (let TT = 0; TT < 3; TT++)
+              if (BT = cT[TT], FT = cT[(TT + 1) % 3], void 0 === KT[BT] && void 0 === KT[FT] ? (KT[BT] = [], KT[FT] = []) : (void 0 === KT[BT] && (KT[BT] = []), void 0 === KT[FT] && (KT[FT] = [])), void 0 === KT[BT][FT] && void 0 === KT[FT][BT]) {
+                KT[BT][FT] = [], ST.x = (iT[3 * FT] - iT[3 * BT]) / WT, ST.y = (iT[3 * FT + 1] - iT[3 * BT + 1]) / WT, ST.z = (iT[3 * FT + 2] - iT[3 * BT + 2]) / WT, kT && (DT.x = (kT[3 * FT] - kT[3 * BT]) / WT, DT.y = (kT[3 * FT + 1] - kT[3 * BT + 1]) / WT, DT.z = (kT[3 * FT + 2] - kT[3 * BT + 2]) / WT), zT && (LT.x = (zT[2 * FT] - zT[2 * BT]) / WT, LT.y = (zT[2 * FT + 1] - zT[2 * BT + 1]) / WT), KT[BT][FT].push(BT);
+                for (let TT = 1; TT < WT; TT++) KT[BT][FT].push(iT.length / 3), iT[gT++] = iT[3 * BT] + TT * ST.x, iT[gT++] = iT[3 * BT + 1] + TT * ST.y, iT[gT++] = iT[3 * BT + 2] + TT * ST.z, kT && (kT[AT++] = kT[3 * BT] + TT * DT.x, kT[AT++] = kT[3 * BT + 1] + TT * DT.y, kT[AT++] = kT[3 * BT + 2] + TT * DT.z), zT && (zT[rT++] = zT[2 * BT] + TT * LT.x, zT[rT++] = zT[2 * BT + 1] + TT * LT.y);
+                KT[BT][FT].push(FT), KT[FT][BT] = [], MT = KT[BT][FT].length;
+                for (let TT = 0; TT < MT; TT++) KT[FT][BT][TT] = KT[BT][FT][MT - 1 - TT]
+              } XT[0][0] = IT[TT], XT[1][0] = KT[IT[TT]][IT[TT + 1]][1], XT[1][1] = KT[IT[TT]][IT[TT + 2]][1];
+            for (let oT = 2; oT < WT; oT++) {
+              XT[oT][0] = KT[IT[TT]][IT[TT + 1]][oT], XT[oT][oT] = KT[IT[TT]][IT[TT + 2]][oT], ST.x = (iT[3 * XT[oT][oT]] - iT[3 * XT[oT][0]]) / oT, ST.y = (iT[3 * XT[oT][oT] + 1] - iT[3 * XT[oT][0] + 1]) / oT, ST.z = (iT[3 * XT[oT][oT] + 2] - iT[3 * XT[oT][0] + 2]) / oT, kT && (DT.x = (kT[3 * XT[oT][oT]] - kT[3 * XT[oT][0]]) / oT, DT.y = (kT[3 * XT[oT][oT] + 1] - kT[3 * XT[oT][0] + 1]) / oT, DT.z = (kT[3 * XT[oT][oT] + 2] - kT[3 * XT[oT][0] + 2]) / oT), zT && (LT.x = (zT[2 * XT[oT][oT]] - zT[2 * XT[oT][0]]) / oT, LT.y = (zT[2 * XT[oT][oT] + 1] - zT[2 * XT[oT][0] + 1]) / oT);
+              for (let TT = 1; TT < oT; TT++) XT[oT][TT] = iT.length / 3, iT[gT++] = iT[3 * XT[oT][0]] + TT * ST.x, iT[gT++] = iT[3 * XT[oT][0] + 1] + TT * ST.y, iT[gT++] = iT[3 * XT[oT][0] + 2] + TT * ST.z, kT && (kT[AT++] = kT[3 * XT[oT][0]] + TT * DT.x, kT[AT++] = kT[3 * XT[oT][0] + 1] + TT * DT.y, kT[AT++] = kT[3 * XT[oT][0] + 2] + TT * DT.z), zT && (zT[rT++] = zT[2 * XT[oT][0]] + TT * LT.x, zT[rT++] = zT[2 * XT[oT][0] + 1] + TT * LT.y)
             }
-            OY[RY] = QY[DY[YY + 1]][DY[YY + 2]], iY.push(OY[0][0], OY[1][0], OY[1][1]);
-            for (let YY = 1; YY < RY; YY++) {
-              let rY;
-              for (rY = 0; rY < YY; rY++) iY.push(OY[YY][rY], OY[YY + 1][rY], OY[YY + 1][rY + 1]), iY.push(OY[YY][rY], OY[YY + 1][rY + 1], OY[YY][rY + 1]);
-              iY.push(OY[YY][rY], OY[YY + 1][rY], OY[YY + 1][rY + 1])
+            XT[WT] = KT[IT[TT + 1]][IT[TT + 2]], xT.push(XT[0][0], XT[1][0], XT[1][1]);
+            for (let TT = 1; TT < WT; TT++) {
+              let oT;
+              for (oT = 0; oT < TT; oT++) xT.push(XT[TT][oT], XT[TT + 1][oT], XT[TT + 1][oT + 1]), xT.push(XT[TT][oT], XT[TT + 1][oT + 1], XT[TT][oT + 1]);
+              xT.push(XT[TT][oT], XT[TT + 1][oT], XT[TT + 1][oT + 1])
             }
           }
-          rY.indices = iY, rY.applyToMesh(this, this.isVertexBufferUpdatable(cY.l.PositionKind))
-        } else JY.d.Warn("Couldn't increase number of vertices : VertexData must contain at least indices and positions")
+          oT.indices = xT, oT.applyToMesh(this, this.isVertexBufferUpdatable(ET.i.PositionKind))
+        } else HT.d.Warn("Couldn't increase number of vertices : VertexData must contain at least indices and positions")
       }
       forceSharedVertices() {
-        const YY = KY.c.ExtractFromMesh(this),
-          rY = YY.uvs,
-          DY = YY.indices,
-          FY = YY.positions,
-          AY = YY.colors,
-          IY = YY.matricesIndices,
-          RY = YY.matricesWeights,
-          OY = YY.matricesIndicesExtra,
-          gY = YY.matricesWeightsExtra;
-        if (void 0 === DY || void 0 === FY || null === DY || null === FY) JY.d.Warn("VertexData contains empty entries");
+        const TT = fT.c.ExtractFromMesh(this),
+          oT = TT.uvs,
+          IT = TT.indices,
+          iT = TT.positions,
+          zT = TT.colors,
+          kT = TT.matricesIndices,
+          WT = TT.matricesWeights,
+          XT = TT.matricesIndicesExtra,
+          BT = TT.matricesWeightsExtra;
+        if (void 0 === IT || void 0 === iT || null === IT || null === iT) HT.d.Warn("VertexData contains empty entries");
         else {
-          const aY = [],
-            vY = [],
-            uY = [],
-            sY = [],
-            iY = [],
-            yY = [],
-            QY = [],
-            oY = [];
-          let WY, EY = 0;
-          const mY = {};
-          let VY, SY;
-          for (let YY = 0; YY < DY.length; YY += 3) {
-            SY = [DY[YY], DY[YY + 1], DY[YY + 2]], WY = [];
-            for (let YY = 0; YY < 3; YY++) {
-              WY[YY] = "";
-              for (let rY = 0; rY < 3; rY++) Math.abs(FY[3 * SY[YY] + rY]) < 1e-8 && (FY[3 * SY[YY] + rY] = 0), WY[YY] += FY[3 * SY[YY] + rY] + "|"
+          const FT = [],
+            ST = [],
+            DT = [],
+            LT = [],
+            xT = [],
+            cT = [],
+            KT = [],
+            MT = [];
+          let rT, AT = 0;
+          const gT = {};
+          let hT, wT;
+          for (let TT = 0; TT < IT.length; TT += 3) {
+            wT = [IT[TT], IT[TT + 1], IT[TT + 2]], rT = [];
+            for (let TT = 0; TT < 3; TT++) {
+              rT[TT] = "";
+              for (let oT = 0; oT < 3; oT++) Math.abs(iT[3 * wT[TT] + oT]) < 1e-8 && (iT[3 * wT[TT] + oT] = 0), rT[TT] += iT[3 * wT[TT] + oT] + "|"
             }
-            if (WY[0] != WY[1] && WY[0] != WY[2] && WY[1] != WY[2])
-              for (let YY = 0; YY < 3; YY++) {
-                if (VY = mY[WY[YY]], void 0 === VY) {
-                  mY[WY[YY]] = EY, VY = EY++;
-                  for (let rY = 0; rY < 3; rY++) aY.push(FY[3 * SY[YY] + rY]);
-                  if (null !== AY && void 0 !== AY)
-                    for (let rY = 0; rY < 4; rY++) sY.push(AY[4 * SY[YY] + rY]);
-                  if (null !== rY && void 0 !== rY)
-                    for (let DY = 0; DY < 2; DY++) uY.push(rY[2 * SY[YY] + DY]);
-                  if (null !== IY && void 0 !== IY)
-                    for (let rY = 0; rY < 4; rY++) iY.push(IY[4 * SY[YY] + rY]);
-                  if (null !== RY && void 0 !== RY)
-                    for (let rY = 0; rY < 4; rY++) yY.push(RY[4 * SY[YY] + rY]);
-                  if (null !== OY && void 0 !== OY)
-                    for (let rY = 0; rY < 4; rY++) QY.push(OY[4 * SY[YY] + rY]);
-                  if (null !== gY && void 0 !== gY)
-                    for (let rY = 0; rY < 4; rY++) oY.push(gY[4 * SY[YY] + rY])
+            if (rT[0] != rT[1] && rT[0] != rT[2] && rT[1] != rT[2])
+              for (let TT = 0; TT < 3; TT++) {
+                if (hT = gT[rT[TT]], void 0 === hT) {
+                  gT[rT[TT]] = AT, hT = AT++;
+                  for (let oT = 0; oT < 3; oT++) FT.push(iT[3 * wT[TT] + oT]);
+                  if (null !== zT && void 0 !== zT)
+                    for (let oT = 0; oT < 4; oT++) LT.push(zT[4 * wT[TT] + oT]);
+                  if (null !== oT && void 0 !== oT)
+                    for (let IT = 0; IT < 2; IT++) DT.push(oT[2 * wT[TT] + IT]);
+                  if (null !== kT && void 0 !== kT)
+                    for (let oT = 0; oT < 4; oT++) xT.push(kT[4 * wT[TT] + oT]);
+                  if (null !== WT && void 0 !== WT)
+                    for (let oT = 0; oT < 4; oT++) cT.push(WT[4 * wT[TT] + oT]);
+                  if (null !== XT && void 0 !== XT)
+                    for (let oT = 0; oT < 4; oT++) KT.push(XT[4 * wT[TT] + oT]);
+                  if (null !== BT && void 0 !== BT)
+                    for (let oT = 0; oT < 4; oT++) MT.push(BT[4 * wT[TT] + oT])
                 }
-                vY.push(VY)
+                ST.push(hT)
               }
           }
-          const lY = [];
-          KY.c.ComputeNormals(aY, vY, lY), YY.positions = aY, YY.indices = vY, YY.normals = lY, null !== rY && void 0 !== rY && (YY.uvs = uY), null !== AY && void 0 !== AY && (YY.colors = sY), null !== IY && void 0 !== IY && (YY.matricesIndices = iY), null !== RY && void 0 !== RY && (YY.matricesWeights = yY), null !== OY && void 0 !== OY && (YY.matricesIndicesExtra = QY), null !== RY && void 0 !== RY && (YY.matricesWeightsExtra = oY), YY.applyToMesh(this, this.isVertexBufferUpdatable(cY.l.PositionKind))
+          const mT = [];
+          fT.c.ComputeNormals(FT, ST, mT), TT.positions = FT, TT.indices = ST, TT.normals = mT, null !== oT && void 0 !== oT && (TT.uvs = DT), null !== zT && void 0 !== zT && (TT.colors = LT), null !== kT && void 0 !== kT && (TT.matricesIndices = xT), null !== WT && void 0 !== WT && (TT.matricesWeights = cT), null !== XT && void 0 !== XT && (TT.matricesIndicesExtra = KT), null !== WT && void 0 !== WT && (TT.matricesWeightsExtra = MT), TT.applyToMesh(this, this.isVertexBufferUpdatable(ET.i.PositionKind))
         }
       }
-      static _instancedMeshFactory(YY, rY) {
-        throw (0, wY.i)("InstancedMesh")
+      static _instancedMeshFactory(TT, oT) {
+        throw (0, qT.k)("InstancedMesh")
       }
-      static _PhysicsImpostorParser(YY, rY, DY) {
-        throw (0, wY.i)("PhysicsImpostor")
+      static _PhysicsImpostorParser(TT, oT, IT) {
+        throw (0, qT.k)("PhysicsImpostor")
       }
-      createInstance(YY) {
-        const rY = UY._instancedMeshFactory(YY, this);
-        return rY.parent = this.parent, rY
+      createInstance(TT) {
+        const oT = PT._instancedMeshFactory(TT, this);
+        return oT.parent = this.parent, oT
       }
       synchronizeInstances() {
-        for (let YY = 0; YY < this.instances.length; YY++) {
-          this.instances[YY]._syncSubMeshes()
+        for (let TT = 0; TT < this.instances.length; TT++) {
+          this.instances[TT]._syncSubMeshes()
         }
         return this
       }
-      optimizeIndices(YY) {
-        const rY = this.XIY(),
-          DY = this.getVerticesData(cY.l.PositionKind);
-        if (!DY || !rY) return this;
-        const FY = [];
-        for (let IY = 0; IY < DY.length; IY += 3) FY.push(eY.r.FromArray(DY, IY));
-        const AY = [];
-        return EY.c.SyncAsyncForLoop(FY.length, 40, (YY => {
-          const rY = FY.length - 1 - YY,
-            DY = FY[rY];
-          for (let IY = 0; IY < rY; ++IY) {
-            const YY = FY[IY];
-            if (DY.equals(YY)) {
-              AY[rY] = IY;
+      optimizeIndices(TT) {
+        const oT = this.hWT(),
+          IT = this.getVerticesData(ET.i.PositionKind);
+        if (!IT || !oT) return this;
+        const iT = [];
+        for (let kT = 0; kT < IT.length; kT += 3) iT.push(RT.m.FromArray(IT, kT));
+        const zT = [];
+        return AT.d.SyncAsyncForLoop(iT.length, 40, (TT => {
+          const oT = iT.length - 1 - TT,
+            IT = iT[oT];
+          for (let kT = 0; kT < oT; ++kT) {
+            const TT = iT[kT];
+            if (IT.equals(TT)) {
+              zT[oT] = kT;
               break
             }
           }
         }), (() => {
-          for (let YY = 0; YY < rY.length; ++YY) rY[YY] = AY[rY[YY]] || rY[YY];
-          const DY = this.qm.slice(0);
-          this.setIndices(rY), this.qm = DY, YY && YY(this)
+          for (let TT = 0; TT < oT.length; ++TT) oT[TT] = zT[oT[TT]] || oT[TT];
+          const IT = this.pR.slice(0);
+          this.setIndices(oT), this.pR = IT, TT && TT(this)
         })), this
       }
       serialize() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        YY.name = this.name, YY.id = this.id, YY.uniqueId = this.uniqueId, YY.type = this.getClassName(), SY.e && SY.e.HasTags(this) && (YY.tags = SY.e.GetTags(this)), YY.position = this.position.VDY(), this.rotationQuaternion ? YY.rotationQuaternion = this.rotationQuaternion.VDY() : this.rotation && (YY.rotation = this.rotation.VDY()), YY.pa = this.pa.VDY(), this._postMultiplyPivotMatrix ? YY.pivotMatrix = this.getPivotMatrix().VDY() : YY.localMatrix = this.getPivotMatrix().VDY(), YY.isEnabled = this.isEnabled(!1), YY.isVisible = this.isVisible, YY.infiniteDistance = this.infiniteDistance, YY.pickable = this.Yo, YY.receiveShadows = this.receiveShadows, YY.billboardMode = this.billboardMode, YY.visibility = this.visibility, YY.Gy = this.Gy, YY.checkCollisions = this.checkCollisions, YY.ellipsoid = this.ellipsoid.VDY(), YY.ellipsoidOffset = this.ellipsoidOffset.VDY(), YY.Py = this.Py, YY.isBlocker = this.isBlocker, YY.sideOrientation = this.sideOrientation, this._isWorldMatrixFrozen && (YY.aN = !0), this.parent && this.parent._serializeAsParent(YY), YY.isUnIndexed = this.isUnIndexed;
-        const rY = this._geometry;
-        if (rY && this.qm) {
-          YY.geometryUniqueId = rY.uniqueId, YY.geometryId = rY.id, YY.qm = [];
-          for (let rY = 0; rY < this.qm.length; rY++) {
-            const DY = this.qm[rY];
-            YY.qm.push({
-              materialIndex: DY.materialIndex,
-              verticesStart: DY.verticesStart,
-              verticesCount: DY.verticesCount,
-              indexStart: DY.indexStart,
-              indexCount: DY.indexCount
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        TT.name = this.name, TT.id = this.id, TT.uniqueId = this.uniqueId, TT.type = this.getClassName(), wT.c && wT.c.HasTags(this) && (TT.tags = wT.c.GetTags(this)), TT.position = this.position.bIT(), this.rotationQuaternion ? TT.rotationQuaternion = this.rotationQuaternion.bIT() : this.rotation && (TT.rotation = this.rotation.bIT()), TT.ti = this.ti.bIT(), this._postMultiplyPivotMatrix ? TT.pivotMatrix = this.getPivotMatrix().bIT() : TT.localMatrix = this.getPivotMatrix().bIT(), TT.isEnabled = this.isEnabled(!1), TT.isVisible = this.isVisible, TT.infiniteDistance = this.infiniteDistance, TT.pickable = this.dK, TT.receiveShadows = this.receiveShadows, TT.billboardMode = this.billboardMode, TT.visibility = this.visibility, TT.lc = this.lc, TT.checkCollisions = this.checkCollisions, TT.ellipsoid = this.ellipsoid.bIT(), TT.ellipsoidOffset = this.ellipsoidOffset.bIT(), TT.Gc = this.Gc, TT.isBlocker = this.isBlocker, TT.sideOrientation = this.sideOrientation, this._isWorldMatrixFrozen && (TT.LJ = !0), this.parent && this.parent._serializeAsParent(TT), TT.isUnIndexed = this.isUnIndexed;
+        const oT = this._geometry;
+        if (oT && this.pR) {
+          TT.geometryUniqueId = oT.uniqueId, TT.geometryId = oT.id, TT.pR = [];
+          for (let oT = 0; oT < this.pR.length; oT++) {
+            const IT = this.pR[oT];
+            TT.pR.push({
+              materialIndex: IT.materialIndex,
+              verticesStart: IT.verticesStart,
+              verticesCount: IT.verticesCount,
+              indexStart: IT.indexStart,
+              indexCount: IT.indexCount
             })
           }
         }
-        if (this.material ? this.material.doNotSerialize || (YY.materialUniqueId = this.material.uniqueId, YY.materialId = this.material.id) : (this.material = null, YY.materialUniqueId = this._scene.defaultMaterial.uniqueId, YY.materialId = this._scene.defaultMaterial.id), this.morphTargetManager && (YY.morphTargetManagerId = this.morphTargetManager.uniqueId), this.skeleton && (YY.skeletonId = this.skeleton.id, YY.skeletonUniqueId = this.skeleton.uniqueId, YY.numBoneInfluencers = this.numBoneInfluencers), this.hT()._getComponent(bY.c.NAME_PHYSICSENGINE)) {
-          const rY = this.getPhysicsImpostor?.();
-          rY && (YY.physicsMass = rY.getParam("TR"), YY.physicsFriction = rY.getParam("friction"), YY.physicsRestitution = rY.getParam("TR"), YY.physicsImpostor = rY.type)
+        if (this.material ? this.material.doNotSerialize || (TT.materialUniqueId = this.material.uniqueId, TT.materialId = this.material.id) : (this.material = null, TT.materialUniqueId = this._scene.defaultMaterial.uniqueId, TT.materialId = this._scene.defaultMaterial.id), this.morphTargetManager && (TT.morphTargetManagerId = this.morphTargetManager.uniqueId), this.skeleton && (TT.skeletonId = this.skeleton.id, TT.skeletonUniqueId = this.skeleton.uniqueId, TT.numBoneInfluencers = this.numBoneInfluencers), this.pC()._getComponent(ZT.d.NAME_PHYSICSENGINE)) {
+          const oT = this.getPhysicsImpostor?.();
+          oT && (TT.physicsMass = oT.getParam("GW"), TT.physicsFriction = oT.getParam("friction"), TT.physicsRestitution = oT.getParam("GW"), TT.physicsImpostor = oT.type)
         }
-        this.metadata && (YY.metadata = this.metadata), 0 !== this.meshBlendingTag && (YY.meshBlendingTag = this.meshBlendingTag), YY.instances = [];
-        for (let DY = 0; DY < this.instances.length; DY++) {
-          const rY = this.instances[DY];
-          if (rY.doNotSerialize) continue;
-          const FY = {
-            name: rY.name,
-            id: rY.id,
-            isEnabled: rY.isEnabled(!1),
-            isVisible: rY.isVisible,
-            Yo: rY.Yo,
-            checkCollisions: rY.checkCollisions,
-            position: rY.position.VDY(),
-            pa: rY.pa.VDY()
+        this.metadata && (TT.metadata = this.metadata), 0 !== this.meshBlendingTag && (TT.meshBlendingTag = this.meshBlendingTag), TT.instances = [];
+        for (let IT = 0; IT < this.instances.length; IT++) {
+          const oT = this.instances[IT];
+          if (oT.doNotSerialize) continue;
+          const iT = {
+            name: oT.name,
+            id: oT.id,
+            isEnabled: oT.isEnabled(!1),
+            isVisible: oT.isVisible,
+            dK: oT.dK,
+            checkCollisions: oT.checkCollisions,
+            position: oT.position.bIT(),
+            ti: oT.ti.bIT()
           };
-          if (rY.parent && rY.parent._serializeAsParent(FY), rY.rotationQuaternion ? FY.rotationQuaternion = rY.rotationQuaternion.VDY() : rY.rotation && (FY.rotation = rY.rotation.VDY()), this.hT()._getComponent(bY.c.NAME_PHYSICSENGINE)) {
-            const YY = rY.getPhysicsImpostor?.();
-            YY && (FY.physicsMass = YY.getParam("TR"), FY.physicsFriction = YY.getParam("friction"), FY.physicsRestitution = YY.getParam("TR"), FY.physicsImpostor = YY.type)
+          if (oT.parent && oT.parent._serializeAsParent(iT), oT.rotationQuaternion ? iT.rotationQuaternion = oT.rotationQuaternion.bIT() : oT.rotation && (iT.rotation = oT.rotation.bIT()), this.pC()._getComponent(ZT.d.NAME_PHYSICSENGINE)) {
+            const TT = oT.getPhysicsImpostor?.();
+            TT && (iT.physicsMass = TT.getParam("GW"), iT.physicsFriction = TT.getParam("friction"), iT.physicsRestitution = TT.getParam("GW"), iT.physicsImpostor = TT.type)
           }
-          rY.metadata && (FY.metadata = rY.metadata), rY.actionManager && (FY.actions = rY.actionManager.serialize(rY.name)), YY.instances.push(FY), dY.b.AppendSerializedAnimations(rY, FY), FY.ws = rY.serializeAnimationRanges()
+          oT.metadata && (iT.metadata = oT.metadata), oT.actionManager && (iT.actions = oT.actionManager.serialize(oT.name)), TT.instances.push(iT), OT.c.AppendSerializedAnimations(oT, iT), iT.ec = oT.serializeAnimationRanges()
         }
-        if (this._thinInstanceDataStorage.instancesCount && this._thinInstanceDataStorage.matrixData && (YY.thinInstances = {
+        if (this._thinInstanceDataStorage.instancesCount && this._thinInstanceDataStorage.matrixData && (TT.thinInstances = {
             instancesCount: this._thinInstanceDataStorage.instancesCount,
             matrixData: Array.from(this._thinInstanceDataStorage.matrixData),
             matrixBufferSize: this._thinInstanceDataStorage.matrixBufferSize,
-            enablePicking: this.MYY
+            enablePicking: this.XoT
           }, this._userThinInstanceBuffersStorage)) {
-          const rY = {
+          const oT = {
             data: {},
             sizes: {},
             strides: {}
           };
-          for (const YY in this._userThinInstanceBuffersStorage.data) rY.data[YY] = Array.from(this._userThinInstanceBuffersStorage.data[YY]), rY.sizes[YY] = this._userThinInstanceBuffersStorage.sizes[YY], rY.strides[YY] = this._userThinInstanceBuffersStorage.strides[YY];
-          YY.thinInstances.userThinInstance = rY
+          for (const TT in this._userThinInstanceBuffersStorage.data) oT.data[TT] = Array.from(this._userThinInstanceBuffersStorage.data[TT]), oT.sizes[TT] = this._userThinInstanceBuffersStorage.sizes[TT], oT.strides[TT] = this._userThinInstanceBuffersStorage.strides[TT];
+          TT.thinInstances.userThinInstance = oT
         }
-        return dY.b.AppendSerializedAnimations(this, YY), YY.ws = this.serializeAnimationRanges(), YY.layerMask = this.layerMask, YY.alphaIndex = this.alphaIndex, YY.hasVertexAlpha = this.hasVertexAlpha, YY.overlayAlpha = this.overlayAlpha, YY.overlayColor = this.overlayColor.VDY(), YY.renderOverlay = this.renderOverlay, YY.applyFog = this.applyFog, this.actionManager && (YY.actions = this.actionManager.serialize(this.name)), YY
+        return OT.c.AppendSerializedAnimations(this, TT), TT.ec = this.serializeAnimationRanges(), TT.layerMask = this.layerMask, TT.alphaIndex = this.alphaIndex, TT.hasVertexAlpha = this.hasVertexAlpha, TT.overlayAlpha = this.overlayAlpha, TT.overlayColor = this.overlayColor.bIT(), TT.renderOverlay = this.renderOverlay, TT.applyFog = this.applyFog, this.actionManager && (TT.actions = this.actionManager.serialize(this.name)), TT
       }
       _syncGeometryWithMorphTargetManager() {
         if (!this.geometry) return;
         this._markSubMeshesAsAttributesDirty();
-        const YY = this._internalAbstractMeshDataInfo._morphTargetManager;
-        if (YY && YY.vertexCount) {
-          if (YY.vertexCount !== this.getTotalVertices()) return JY.d.Error("Mesh is incompatible with morph targets. Targets and mesh must all have the same vertices count."), void(this.morphTargetManager = null);
-          if (YY.isUsingTextureForTargets) return;
-          for (let rY = 0; rY < YY.numInfluencers; rY++) {
-            const DY = YY.getActiveTarget(rY),
-              FY = DY.getPositions();
-            if (!FY) return void JY.d.Error("Invalid morph target. Target must have positions.");
-            this.geometry.setVerticesData(cY.l.PositionKind + rY, FY, !1, 3);
-            const AY = DY.getNormals();
-            AY && this.geometry.setVerticesData(cY.l.NormalKind + rY, AY, !1, 3);
-            const IY = DY.getTangents();
-            IY && this.geometry.setVerticesData(cY.l.TangentKind + rY, IY, !1, 3);
-            const RY = DY.getUVs();
-            RY && this.geometry.setVerticesData(cY.l.UVKind + "_" + rY, RY, !1, 2);
-            const OY = DY.getUV2s();
-            OY && this.geometry.setVerticesData(cY.l.UV2Kind + "_" + rY, OY, !1, 2);
-            const gY = DY.getColors();
-            gY && this.geometry.setVerticesData(cY.l.ColorKind + rY, gY, !1, 4)
+        const TT = this._internalAbstractMeshDataInfo._morphTargetManager;
+        if (TT && TT.vertexCount) {
+          if (TT.vertexCount !== this.getTotalVertices()) return HT.d.Error("Mesh is incompatible with morph targets. Targets and mesh must all have the same vertices count."), void(this.morphTargetManager = null);
+          if (TT.isUsingTextureForTargets) return;
+          for (let oT = 0; oT < TT.numInfluencers; oT++) {
+            const IT = TT.getActiveTarget(oT),
+              iT = IT.getPositions();
+            if (!iT) return void HT.d.Error("Invalid morph target. Target must have positions.");
+            this.geometry.setVerticesData(ET.i.PositionKind + oT, iT, !1, 3);
+            const zT = IT.getNormals();
+            zT && this.geometry.setVerticesData(ET.i.NormalKind + oT, zT, !1, 3);
+            const kT = IT.getTangents();
+            kT && this.geometry.setVerticesData(ET.i.TangentKind + oT, kT, !1, 3);
+            const WT = IT.getUVs();
+            WT && this.geometry.setVerticesData(ET.i.UVKind + "_" + oT, WT, !1, 2);
+            const XT = IT.getUV2s();
+            XT && this.geometry.setVerticesData(ET.i.UV2Kind + "_" + oT, XT, !1, 2);
+            const BT = IT.getColors();
+            BT && this.geometry.setVerticesData(ET.i.ColorKind + oT, BT, !1, 4)
           }
         } else {
-          let YY = 0;
-          for (; this.geometry.isVerticesDataPresent(cY.l.PositionKind + YY);) this.geometry.removeVerticesData(cY.l.PositionKind + YY), this.geometry.isVerticesDataPresent(cY.l.NormalKind + YY) && this.geometry.removeVerticesData(cY.l.NormalKind + YY), this.geometry.isVerticesDataPresent(cY.l.TangentKind + YY) && this.geometry.removeVerticesData(cY.l.TangentKind + YY), this.geometry.isVerticesDataPresent(cY.l.UVKind + "_" + YY) && this.geometry.removeVerticesData(cY.l.UVKind + "_" + YY), this.geometry.isVerticesDataPresent(cY.l.UV2Kind + "_" + YY) && this.geometry.removeVerticesData(cY.l.UV2Kind + "_" + YY), this.geometry.isVerticesDataPresent(cY.l.ColorKind + YY) && this.geometry.removeVerticesData(cY.l.ColorKind + YY), YY++
+          let TT = 0;
+          for (; this.geometry.isVerticesDataPresent(ET.i.PositionKind + TT);) this.geometry.removeVerticesData(ET.i.PositionKind + TT), this.geometry.isVerticesDataPresent(ET.i.NormalKind + TT) && this.geometry.removeVerticesData(ET.i.NormalKind + TT), this.geometry.isVerticesDataPresent(ET.i.TangentKind + TT) && this.geometry.removeVerticesData(ET.i.TangentKind + TT), this.geometry.isVerticesDataPresent(ET.i.UVKind + "_" + TT) && this.geometry.removeVerticesData(ET.i.UVKind + "_" + TT), this.geometry.isVerticesDataPresent(ET.i.UV2Kind + "_" + TT) && this.geometry.removeVerticesData(ET.i.UV2Kind + "_" + TT), this.geometry.isVerticesDataPresent(ET.i.ColorKind + TT) && this.geometry.removeVerticesData(ET.i.ColorKind + TT), TT++
         }
       }
-      static Parse(YY, rY, DY) {
-        let FY, AY = !1;
-        if (YY.type && "LinesMesh" === YY.type ? FY = UY._LinesMeshParser(YY, rY) : YY.type && "GroundMesh" === YY.type ? FY = UY._GroundMeshParser(YY, rY) : YY.type && "GoldbergMesh" === YY.type ? FY = UY._GoldbergMeshParser(YY, rY) : YY.type && "GreasedLineMesh" === YY.type ? FY = UY._GreasedLineMeshParser(YY, rY) : YY.type && "TrailMesh" === YY.type ? FY = UY._TrailMeshParser(YY, rY) : YY.type && "GaussianSplattingMesh" === YY.type ? (FY = YY._isCompound ? UY._GaussianSplattingCompoundMeshParser(YY, rY) : UY._GaussianSplattingMeshParser(YY, rY), AY = !0) : YY.type && "GaussianSplattingPartProxyMesh" === YY.type ? (FY = UY._GaussianSplattingPartProxyMeshParser(YY, rY), AY = !0) : FY = new UY(YY.name, rY), FY.id = YY.id, FY._waitingParsedUniqueId = YY.uniqueId, SY.e && SY.e.AddTagsTo(FY, YY.tags), FY.position = eY.r.FromArray(YY.position), void 0 !== YY.metadata && (FY.metadata = YY.metadata), void 0 !== YY.meshBlendingTag && (FY.meshBlendingTag = YY.meshBlendingTag), YY.rotationQuaternion ? FY.rotationQuaternion = eY.g.FromArray(YY.rotationQuaternion) : YY.rotation && (FY.rotation = eY.r.FromArray(YY.rotation)), FY.pa = eY.r.FromArray(YY.pa), YY.localMatrix ? FY.setPreTransformMatrix(eY.e.FromArray(YY.localMatrix)) : YY.pivotMatrix && FY.setPivotMatrix(eY.e.FromArray(YY.pivotMatrix)), FY.mV(YY.isEnabled), FY.isVisible = YY.isVisible, FY.infiniteDistance = YY.infiniteDistance, FY.Gy = !!YY.Gy, FY.showBoundingBox = YY.showBoundingBox, FY.showSubMeshesBoundingBox = YY.showSubMeshesBoundingBox, void 0 !== YY.applyFog && (FY.applyFog = YY.applyFog), void 0 !== YY.pickable && (FY.Yo = YY.pickable), void 0 !== YY.alphaIndex && (FY.alphaIndex = YY.alphaIndex), FY.receiveShadows = YY.receiveShadows, void 0 !== YY.billboardMode && (FY.billboardMode = YY.billboardMode), void 0 !== YY.visibility && (FY.visibility = YY.visibility), FY.checkCollisions = YY.checkCollisions, FY.Py = !!YY.Py, YY.ellipsoid && (FY.ellipsoid = eY.r.FromArray(YY.ellipsoid)), YY.ellipsoidOffset && (FY.ellipsoidOffset = eY.r.FromArray(YY.ellipsoidOffset)), null != YY.overrideMaterialSideOrientation && (FY.sideOrientation = YY.overrideMaterialSideOrientation), void 0 !== YY.sideOrientation && (FY.sideOrientation = YY.sideOrientation), void 0 !== YY.isBlocker && (FY.isBlocker = YY.isBlocker), FY._shouldGenerateFlatShading = YY.useFlatShading, YY.aN && (FY._waitingData.aN = YY.aN), void 0 !== YY.parentId && (FY._waitingParentId = YY.parentId), void 0 !== YY.parentInstanceIndex && (FY._waitingParentInstanceIndex = YY.parentInstanceIndex), void 0 !== YY.actions && (FY._waitingData.actions = YY.actions), void 0 !== YY.overlayAlpha && (FY.overlayAlpha = YY.overlayAlpha), void 0 !== YY.overlayColor && (FY.overlayColor = NY.c.FromArray(YY.overlayColor)), void 0 !== YY.renderOverlay && (FY.renderOverlay = YY.renderOverlay), FY.isUnIndexed = !!YY.isUnIndexed, FY.hasVertexAlpha = YY.hasVertexAlpha, YY.delayLoadingFile ? (FY.delayLoadState = 4, FY.delayLoadingFile = DY + YY.delayLoadingFile, FY.buildBoundingInfo(eY.r.FromArray(YY.boundingBoxMinimum), eY.r.FromArray(YY.boundingBoxMaximum)), YY._binaryInfo && (FY._binaryInfo = YY._binaryInfo), FY._delayInfo = [], YY.hasUVs && FY._delayInfo.push(cY.l.UVKind), YY.hasUVs2 && FY._delayInfo.push(cY.l.UV2Kind), YY.hasUVs3 && FY._delayInfo.push(cY.l.UV3Kind), YY.hasUVs4 && FY._delayInfo.push(cY.l.UV4Kind), YY.hasUVs5 && FY._delayInfo.push(cY.l.UV5Kind), YY.hasUVs6 && FY._delayInfo.push(cY.l.UV6Kind), YY.hasColors && FY._delayInfo.push(cY.l.ColorKind), YY.hasMatricesIndices && FY._delayInfo.push(cY.l.MatricesIndicesKind), YY.hasMatricesWeights && FY._delayInfo.push(cY.l.MatricesWeightsKind), FY._delayLoadingFunction = HY.c._ImportGeometry, hY.d.ForceFullSceneLoadingForIncremental && FY._checkDelayState()) : AY || HY.c._ImportGeometry(YY, FY), YY.materialUniqueId ? FY._waitingMaterialId = YY.materialUniqueId : YY.materialId && (FY._waitingMaterialId = YY.materialId), YY.morphTargetManagerId > -1 && (FY._waitingMorphTargetManagerId = YY.morphTargetManagerId), void 0 !== YY.skeletonId && null !== YY.skeletonId && (FY.skeleton = rY.getLastSkeletonById(YY.skeletonId), FY._waitingSkeletonId = YY.skeletonId, YY.numBoneInfluencers && (FY.numBoneInfluencers = YY.numBoneInfluencers)), void 0 !== YY.skeletonUniqueId && null !== YY.skeletonUniqueId && (FY._waitingSkeletonUniqueId = YY.skeletonUniqueId), YY.animations) {
-          for (let rY = 0; rY < YY.animations.length; rY++) {
-            const DY = YY.animations[rY],
-              AY = (0, MY.e)("BABYLON.Animation");
-            AY && FY.animations.push(AY.Parse(DY))
+      static Parse(TT, oT, IT) {
+        let iT, zT = !1;
+        if (TT.type && "LinesMesh" === TT.type ? iT = PT._LinesMeshParser(TT, oT) : TT.type && "GroundMesh" === TT.type ? iT = PT._GroundMeshParser(TT, oT) : TT.type && "GoldbergMesh" === TT.type ? iT = PT._GoldbergMeshParser(TT, oT) : TT.type && "GreasedLineMesh" === TT.type ? iT = PT._GreasedLineMeshParser(TT, oT) : TT.type && "TrailMesh" === TT.type ? iT = PT._TrailMeshParser(TT, oT) : TT.type && "GaussianSplattingMesh" === TT.type ? (iT = TT._isCompound ? PT._GaussianSplattingCompoundMeshParser(TT, oT) : PT._GaussianSplattingMeshParser(TT, oT), zT = !0) : TT.type && "GaussianSplattingPartProxyMesh" === TT.type ? (iT = PT._GaussianSplattingPartProxyMeshParser(TT, oT), zT = !0) : iT = new PT(TT.name, oT), iT.id = TT.id, iT._waitingParsedUniqueId = TT.uniqueId, wT.c && wT.c.AddTagsTo(iT, TT.tags), iT.position = RT.m.FromArray(TT.position), void 0 !== TT.metadata && (iT.metadata = TT.metadata), void 0 !== TT.meshBlendingTag && (iT.meshBlendingTag = TT.meshBlendingTag), TT.rotationQuaternion ? iT.rotationQuaternion = RT.c.FromArray(TT.rotationQuaternion) : TT.rotation && (iT.rotation = RT.m.FromArray(TT.rotation)), iT.ti = RT.m.FromArray(TT.ti), TT.localMatrix ? iT.setPreTransformMatrix(RT.b.FromArray(TT.localMatrix)) : TT.pivotMatrix && iT.setPivotMatrix(RT.b.FromArray(TT.pivotMatrix)), iT.Fv(TT.isEnabled), iT.isVisible = TT.isVisible, iT.infiniteDistance = TT.infiniteDistance, iT.lc = !!TT.lc, iT.showBoundingBox = TT.showBoundingBox, iT.showSubMeshesBoundingBox = TT.showSubMeshesBoundingBox, void 0 !== TT.applyFog && (iT.applyFog = TT.applyFog), void 0 !== TT.pickable && (iT.dK = TT.pickable), void 0 !== TT.alphaIndex && (iT.alphaIndex = TT.alphaIndex), iT.receiveShadows = TT.receiveShadows, void 0 !== TT.billboardMode && (iT.billboardMode = TT.billboardMode), void 0 !== TT.visibility && (iT.visibility = TT.visibility), iT.checkCollisions = TT.checkCollisions, iT.Gc = !!TT.Gc, TT.ellipsoid && (iT.ellipsoid = RT.m.FromArray(TT.ellipsoid)), TT.ellipsoidOffset && (iT.ellipsoidOffset = RT.m.FromArray(TT.ellipsoidOffset)), null != TT.overrideMaterialSideOrientation && (iT.sideOrientation = TT.overrideMaterialSideOrientation), void 0 !== TT.sideOrientation && (iT.sideOrientation = TT.sideOrientation), void 0 !== TT.isBlocker && (iT.isBlocker = TT.isBlocker), iT._shouldGenerateFlatShading = TT.useFlatShading, TT.LJ && (iT._waitingData.LJ = TT.LJ), void 0 !== TT.parentId && (iT._waitingParentId = TT.parentId), void 0 !== TT.parentInstanceIndex && (iT._waitingParentInstanceIndex = TT.parentInstanceIndex), void 0 !== TT.actions && (iT._waitingData.actions = TT.actions), void 0 !== TT.overlayAlpha && (iT.overlayAlpha = TT.overlayAlpha), void 0 !== TT.overlayColor && (iT.overlayColor = uT.e.FromArray(TT.overlayColor)), void 0 !== TT.renderOverlay && (iT.renderOverlay = TT.renderOverlay), iT.isUnIndexed = !!TT.isUnIndexed, iT.hasVertexAlpha = TT.hasVertexAlpha, TT.delayLoadingFile ? (iT.delayLoadState = 4, iT.delayLoadingFile = IT + TT.delayLoadingFile, iT.buildBoundingInfo(RT.m.FromArray(TT.boundingBoxMinimum), RT.m.FromArray(TT.boundingBoxMaximum)), TT._binaryInfo && (iT._binaryInfo = TT._binaryInfo), iT._delayInfo = [], TT.hasUVs && iT._delayInfo.push(ET.i.UVKind), TT.hasUVs2 && iT._delayInfo.push(ET.i.UV2Kind), TT.hasUVs3 && iT._delayInfo.push(ET.i.UV3Kind), TT.hasUVs4 && iT._delayInfo.push(ET.i.UV4Kind), TT.hasUVs5 && iT._delayInfo.push(ET.i.UV5Kind), TT.hasUVs6 && iT._delayInfo.push(ET.i.UV6Kind), TT.hasColors && iT._delayInfo.push(ET.i.ColorKind), TT.hasMatricesIndices && iT._delayInfo.push(ET.i.MatricesIndicesKind), TT.hasMatricesWeights && iT._delayInfo.push(ET.i.MatricesWeightsKind), iT._delayLoadingFunction = CT.d._ImportGeometry, QT.b.ForceFullSceneLoadingForIncremental && iT._checkDelayState()) : zT || CT.d._ImportGeometry(TT, iT), TT.materialUniqueId ? iT._waitingMaterialId = TT.materialUniqueId : TT.materialId && (iT._waitingMaterialId = TT.materialId), TT.morphTargetManagerId > -1 && (iT._waitingMorphTargetManagerId = TT.morphTargetManagerId), void 0 !== TT.skeletonId && null !== TT.skeletonId && (iT.skeleton = oT.getLastSkeletonById(TT.skeletonId), iT._waitingSkeletonId = TT.skeletonId, TT.numBoneInfluencers && (iT.numBoneInfluencers = TT.numBoneInfluencers)), void 0 !== TT.skeletonUniqueId && null !== TT.skeletonUniqueId && (iT._waitingSkeletonUniqueId = TT.skeletonUniqueId), TT.animations) {
+          for (let oT = 0; oT < TT.animations.length; oT++) {
+            const IT = TT.animations[oT],
+              zT = (0, nT.d)("BABYLON.Animation");
+            zT && iT.animations.push(zT.Parse(IT))
           }
-          BY.b.ParseAnimationRanges(FY, YY, rY)
+          vT.c.ParseAnimationRanges(iT, TT, oT)
         }
-        if (YY.autoAnimate && rY.beginAnimation(FY, YY.autoAnimateFrom, YY.autoAnimateTo, YY.autoAnimateLoop, YY.autoAnimateSpeed || 1), YY.layerMask && !isNaN(YY.layerMask) ? FY.layerMask = Math.abs(parseInt(YY.layerMask)) : FY.layerMask = 268435455, YY.physicsImpostor && (FY.physicsImpostor = UY._PhysicsImpostorParser(rY, FY, YY)), YY.lodMeshIds && (FY._waitingData.lods = {
-            ids: YY.lodMeshIds,
-            distances: YY.lodDistances ? YY.lodDistances : null,
-            coverages: YY.lodCoverages ? YY.lodCoverages : null
-          }), YY.instances)
-          for (let IY = 0; IY < YY.instances.length; IY++) {
-            const DY = YY.instances[IY],
-              AY = FY.createInstance(DY.name);
-            if (DY.id && (AY.id = DY.id), SY.e && (DY.tags ? SY.e.AddTagsTo(AY, DY.tags) : SY.e.AddTagsTo(AY, YY.tags)), AY.position = eY.r.FromArray(DY.position), void 0 !== DY.metadata && (AY.metadata = DY.metadata), void 0 !== DY.parentId && (AY._waitingParentId = DY.parentId), void 0 !== DY.parentInstanceIndex && (AY._waitingParentInstanceIndex = DY.parentInstanceIndex), void 0 !== DY.isEnabled && null !== DY.isEnabled && AY.mV(DY.isEnabled), void 0 !== DY.isVisible && null !== DY.isVisible && (AY.isVisible = DY.isVisible), void 0 !== DY.Yo && null !== DY.Yo && (AY.Yo = DY.Yo), DY.rotationQuaternion ? AY.rotationQuaternion = eY.g.FromArray(DY.rotationQuaternion) : DY.rotation && (AY.rotation = eY.r.FromArray(DY.rotation)), AY.pa = eY.r.FromArray(DY.pa), void 0 != DY.checkCollisions && null != DY.checkCollisions && (AY.checkCollisions = DY.checkCollisions), void 0 != DY.pickable && null != DY.pickable && (AY.Yo = DY.pickable), void 0 != DY.showBoundingBox && null != DY.showBoundingBox && (AY.showBoundingBox = DY.showBoundingBox), void 0 != DY.showSubMeshesBoundingBox && null != DY.showSubMeshesBoundingBox && (AY.showSubMeshesBoundingBox = DY.showSubMeshesBoundingBox), void 0 != DY.alphaIndex && null != DY.showSubMeshesBoundingBox && (AY.alphaIndex = DY.alphaIndex), DY.physicsImpostor && (AY.physicsImpostor = UY._PhysicsImpostorParser(rY, AY, DY)), void 0 !== DY.actions && (AY._waitingData.actions = DY.actions), DY.animations) {
-              for (let YY = 0; YY < DY.animations.length; YY++) {
-                const rY = DY.animations[YY],
-                  FY = (0, MY.e)("BABYLON.Animation");
-                FY && AY.animations.push(FY.Parse(rY))
+        if (TT.autoAnimate && oT.beginAnimation(iT, TT.autoAnimateFrom, TT.autoAnimateTo, TT.autoAnimateLoop, TT.autoAnimateSpeed || 1), TT.layerMask && !isNaN(TT.layerMask) ? iT.layerMask = Math.abs(parseInt(TT.layerMask)) : iT.layerMask = 268435455, TT.physicsImpostor && (iT.physicsImpostor = PT._PhysicsImpostorParser(oT, iT, TT)), TT.lodMeshIds && (iT._waitingData.lods = {
+            ids: TT.lodMeshIds,
+            distances: TT.lodDistances ? TT.lodDistances : null,
+            coverages: TT.lodCoverages ? TT.lodCoverages : null
+          }), TT.instances)
+          for (let kT = 0; kT < TT.instances.length; kT++) {
+            const IT = TT.instances[kT],
+              zT = iT.createInstance(IT.name);
+            if (IT.id && (zT.id = IT.id), wT.c && (IT.tags ? wT.c.AddTagsTo(zT, IT.tags) : wT.c.AddTagsTo(zT, TT.tags)), zT.position = RT.m.FromArray(IT.position), void 0 !== IT.metadata && (zT.metadata = IT.metadata), void 0 !== IT.parentId && (zT._waitingParentId = IT.parentId), void 0 !== IT.parentInstanceIndex && (zT._waitingParentInstanceIndex = IT.parentInstanceIndex), void 0 !== IT.isEnabled && null !== IT.isEnabled && zT.Fv(IT.isEnabled), void 0 !== IT.isVisible && null !== IT.isVisible && (zT.isVisible = IT.isVisible), void 0 !== IT.dK && null !== IT.dK && (zT.dK = IT.dK), IT.rotationQuaternion ? zT.rotationQuaternion = RT.c.FromArray(IT.rotationQuaternion) : IT.rotation && (zT.rotation = RT.m.FromArray(IT.rotation)), zT.ti = RT.m.FromArray(IT.ti), void 0 != IT.checkCollisions && null != IT.checkCollisions && (zT.checkCollisions = IT.checkCollisions), void 0 != IT.pickable && null != IT.pickable && (zT.dK = IT.pickable), void 0 != IT.showBoundingBox && null != IT.showBoundingBox && (zT.showBoundingBox = IT.showBoundingBox), void 0 != IT.showSubMeshesBoundingBox && null != IT.showSubMeshesBoundingBox && (zT.showSubMeshesBoundingBox = IT.showSubMeshesBoundingBox), void 0 != IT.alphaIndex && null != IT.showSubMeshesBoundingBox && (zT.alphaIndex = IT.alphaIndex), IT.physicsImpostor && (zT.physicsImpostor = PT._PhysicsImpostorParser(oT, zT, IT)), void 0 !== IT.actions && (zT._waitingData.actions = IT.actions), IT.animations) {
+              for (let TT = 0; TT < IT.animations.length; TT++) {
+                const oT = IT.animations[TT],
+                  iT = (0, nT.d)("BABYLON.Animation");
+                iT && zT.animations.push(iT.Parse(oT))
               }
-              BY.b.ParseAnimationRanges(AY, DY, rY), DY.autoAnimate && rY.beginAnimation(AY, DY.autoAnimateFrom, DY.autoAnimateTo, DY.autoAnimateLoop, DY.autoAnimateSpeed || 1)
+              vT.c.ParseAnimationRanges(zT, IT, oT), IT.autoAnimate && oT.beginAnimation(zT, IT.autoAnimateFrom, IT.autoAnimateTo, IT.autoAnimateLoop, IT.autoAnimateSpeed || 1)
             }
           }
-        if (YY.thinInstances) {
-          const rY = YY.thinInstances;
-          if (FY.MYY = !!rY.enablePicking, rY.matrixData ? (FY.j_("matrix", new Float32Array(rY.matrixData), 16, !1), FY._thinInstanceDataStorage.matrixBufferSize = rY.matrixBufferSize, FY._thinInstanceDataStorage.instancesCount = rY.instancesCount) : FY._thinInstanceDataStorage.matrixBufferSize = rY.matrixBufferSize, YY.thinInstances.userThinInstance) {
-            const rY = YY.thinInstances.userThinInstance;
-            for (const YY in rY.data) FY.j_(YY, new Float32Array(rY.data[YY]), rY.strides[YY], !1), FY._userThinInstanceBuffersStorage.sizes[YY] = rY.sizes[YY]
+        if (TT.thinInstances) {
+          const oT = TT.thinInstances;
+          if (iT.XoT = !!oT.enablePicking, oT.matrixData ? (iT.T_("matrix", new Float32Array(oT.matrixData), 16, !1), iT._thinInstanceDataStorage.matrixBufferSize = oT.matrixBufferSize, iT._thinInstanceDataStorage.instancesCount = oT.instancesCount) : iT._thinInstanceDataStorage.matrixBufferSize = oT.matrixBufferSize, TT.thinInstances.userThinInstance) {
+            const oT = TT.thinInstances.userThinInstance;
+            for (const TT in oT.data) iT.T_(TT, new Float32Array(oT.data[TT]), oT.strides[TT], !1), iT._userThinInstanceBuffersStorage.sizes[TT] = oT.sizes[TT]
           }
         }
-        return FY
+        return iT
       }
       setPositionsForCPUSkinning() {
-        const YY = this._internalMeshDataInfo;
-        if (!YY._sourcePositions) {
-          const rY = this.getVerticesData(cY.l.PositionKind);
-          if (!rY) return YY._sourcePositions;
-          YY._sourcePositions = new Float32Array(rY), this.isVertexBufferUpdatable(cY.l.PositionKind) || this.setVerticesData(cY.l.PositionKind, rY, !0)
+        const TT = this._internalMeshDataInfo;
+        if (!TT._sourcePositions) {
+          const oT = this.getVerticesData(ET.i.PositionKind);
+          if (!oT) return TT._sourcePositions;
+          TT._sourcePositions = new Float32Array(oT), this.isVertexBufferUpdatable(ET.i.PositionKind) || this.setVerticesData(ET.i.PositionKind, oT, !0)
         }
-        return YY._sourcePositions
+        return TT._sourcePositions
       }
       setNormalsForCPUSkinning() {
-        const YY = this._internalMeshDataInfo;
-        if (!YY._sourceNormals) {
-          const rY = this.getVerticesData(cY.l.NormalKind);
-          if (!rY) return YY._sourceNormals;
-          YY._sourceNormals = new Float32Array(rY), this.isVertexBufferUpdatable(cY.l.NormalKind) || this.setVerticesData(cY.l.NormalKind, rY, !0)
+        const TT = this._internalMeshDataInfo;
+        if (!TT._sourceNormals) {
+          const oT = this.getVerticesData(ET.i.NormalKind);
+          if (!oT) return TT._sourceNormals;
+          TT._sourceNormals = new Float32Array(oT), this.isVertexBufferUpdatable(ET.i.NormalKind) || this.setVerticesData(ET.i.NormalKind, oT, !0)
         }
-        return YY._sourceNormals
+        return TT._sourceNormals
       }
-      applySkeleton(YY) {
+      applySkeleton(TT) {
         if (!this.geometry) return this;
-        if (this.geometry._softwareSkinningFrameId == this.hT().getFrameId()) return this;
-        if (this.geometry._softwareSkinningFrameId = this.hT().getFrameId(), !this.isVerticesDataPresent(cY.l.PositionKind)) return this;
-        if (!this.isVerticesDataPresent(cY.l.MatricesIndicesKind)) return this;
-        if (!this.isVerticesDataPresent(cY.l.MatricesWeightsKind)) return this;
-        const rY = this.isVerticesDataPresent(cY.l.NormalKind),
-          DY = this._internalMeshDataInfo;
-        if (!DY._sourcePositions) {
-          const YY = this.qm.slice();
-          this.setPositionsForCPUSkinning(), this.qm = YY
+        if (this.geometry._softwareSkinningFrameId == this.pC().getFrameId()) return this;
+        if (this.geometry._softwareSkinningFrameId = this.pC().getFrameId(), !this.isVerticesDataPresent(ET.i.PositionKind)) return this;
+        if (!this.isVerticesDataPresent(ET.i.MatricesIndicesKind)) return this;
+        if (!this.isVerticesDataPresent(ET.i.MatricesWeightsKind)) return this;
+        const oT = this.isVerticesDataPresent(ET.i.NormalKind),
+          IT = this._internalMeshDataInfo;
+        if (!IT._sourcePositions) {
+          const TT = this.pR.slice();
+          this.setPositionsForCPUSkinning(), this.pR = TT
         }
-        rY && !DY._sourceNormals && this.setNormalsForCPUSkinning();
-        let FY = this.getVerticesData(cY.l.PositionKind);
-        if (!FY) return this;
-        FY instanceof Float32Array || (FY = new Float32Array(FY));
-        let AY = this.getVerticesData(cY.l.NormalKind);
-        if (rY) {
-          if (!AY) return this;
-          AY instanceof Float32Array || (AY = new Float32Array(AY))
+        oT && !IT._sourceNormals && this.setNormalsForCPUSkinning();
+        let iT = this.getVerticesData(ET.i.PositionKind);
+        if (!iT) return this;
+        iT instanceof Float32Array || (iT = new Float32Array(iT));
+        let zT = this.getVerticesData(ET.i.NormalKind);
+        if (oT) {
+          if (!zT) return this;
+          zT instanceof Float32Array || (zT = new Float32Array(zT))
         }
-        const IY = this.getVerticesData(cY.l.MatricesIndicesKind),
-          RY = this.getVerticesData(cY.l.MatricesWeightsKind);
-        if (!RY || !IY) return this;
-        const OY = this.numBoneInfluencers > 4,
-          gY = OY ? this.getVerticesData(cY.l.MatricesIndicesExtraKind) : null,
-          aY = OY ? this.getVerticesData(cY.l.MatricesWeightsExtraKind) : null,
-          vY = YY.getTransformMatrices(this),
-          uY = eY.r.Zero(),
-          sY = new eY.e,
-          iY = new eY.e;
-        let yY, QY = 0;
-        for (let oY = 0; oY < FY.length; oY += 3, QY += 4) {
-          let YY;
-          for (yY = 0; yY < 4; yY++) YY = RY[QY + yY], YY > 0 && (eY.e.FromFloat32ArrayToRefScaled(vY, Math.floor(16 * IY[QY + yY]), YY, iY), sY.addToSelf(iY));
-          if (OY)
-            for (yY = 0; yY < 4; yY++) YY = aY[QY + yY], YY > 0 && (eY.e.FromFloat32ArrayToRefScaled(vY, Math.floor(16 * gY[QY + yY]), YY, iY), sY.addToSelf(iY));
-          eY.r.TransformCoordinatesFromFloatsToRef(DY._sourcePositions[oY], DY._sourcePositions[oY + 1], DY._sourcePositions[oY + 2], sY, uY), uY.toArray(FY, oY), rY && (eY.r.TransformNormalFromFloatsToRef(DY._sourceNormals[oY], DY._sourceNormals[oY + 1], DY._sourceNormals[oY + 2], sY, uY), uY.toArray(AY, oY)), sY.reset()
+        const kT = this.getVerticesData(ET.i.MatricesIndicesKind),
+          WT = this.getVerticesData(ET.i.MatricesWeightsKind);
+        if (!WT || !kT) return this;
+        const XT = this.numBoneInfluencers > 4,
+          BT = XT ? this.getVerticesData(ET.i.MatricesIndicesExtraKind) : null,
+          FT = XT ? this.getVerticesData(ET.i.MatricesWeightsExtraKind) : null,
+          ST = TT.getTransformMatrices(this),
+          DT = RT.m.Zero(),
+          LT = new RT.b,
+          xT = new RT.b;
+        let cT, KT = 0;
+        for (let MT = 0; MT < iT.length; MT += 3, KT += 4) {
+          let TT;
+          for (cT = 0; cT < 4; cT++) TT = WT[KT + cT], TT > 0 && (RT.b.FromFloat32ArrayToRefScaled(ST, Math.floor(16 * kT[KT + cT]), TT, xT), LT.addToSelf(xT));
+          if (XT)
+            for (cT = 0; cT < 4; cT++) TT = FT[KT + cT], TT > 0 && (RT.b.FromFloat32ArrayToRefScaled(ST, Math.floor(16 * BT[KT + cT]), TT, xT), LT.addToSelf(xT));
+          RT.m.TransformCoordinatesFromFloatsToRef(IT._sourcePositions[MT], IT._sourcePositions[MT + 1], IT._sourcePositions[MT + 2], LT, DT), DT.toArray(iT, MT), oT && (RT.m.TransformNormalFromFloatsToRef(IT._sourceNormals[MT], IT._sourceNormals[MT + 1], IT._sourceNormals[MT + 2], LT, DT), DT.toArray(zT, MT)), LT.reset()
         }
-        return this.updateVerticesData(cY.l.PositionKind, FY), rY && this.updateVerticesData(cY.l.NormalKind, AY), this
+        return this.updateVerticesData(ET.i.PositionKind, iT), oT && this.updateVerticesData(ET.i.NormalKind, zT), this
       }
-      static MinMax(YY) {
-        let rY = null,
-          DY = null;
-        for (const FY of YY) {
-          const YY = FY.oB().boundingBox;
-          rY && DY ? (rY.minimizeInPlace(YY.minimumWorld), DY.maximizeInPlace(YY.maximumWorld)) : (rY = YY.minimumWorld.clone(), DY = YY.maximumWorld.clone())
+      static MinMax(TT) {
+        let oT = null,
+          IT = null;
+        for (const iT of TT) {
+          const TT = iT.GJ().boundingBox;
+          oT && IT ? (oT.minimizeInPlace(TT.minimumWorld), IT.maximizeInPlace(TT.maximumWorld)) : (oT = TT.minimumWorld.clone(), IT = TT.maximumWorld.clone())
         }
-        return rY && DY ? {
-          min: rY,
-          max: DY
+        return oT && IT ? {
+          min: oT,
+          max: IT
         } : {
-          min: eY.r.Zero(),
-          max: eY.r.Zero()
+          min: RT.m.Zero(),
+          max: RT.m.Zero()
         }
       }
-      static Center(YY) {
-        const rY = YY instanceof Array ? UY.MinMax(YY) : YY;
-        return eY.r.Center(rY.min, rY.max)
+      static Center(TT) {
+        const oT = TT instanceof Array ? PT.MinMax(TT) : TT;
+        return RT.m.Center(oT.min, oT.max)
       }
-      static MergeMeshes(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0,
-          AY = arguments.length > 4 ? arguments[4] : void 0,
-          IY = arguments.length > 5 ? arguments[5] : void 0;
-        return (0, lY.j)(UY._MergeMeshesCoroutine(YY, rY, DY, FY, AY, IY, !1))
+      static MergeMeshes(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0,
+          zT = arguments.length > 4 ? arguments[4] : void 0,
+          kT = arguments.length > 5 ? arguments[5] : void 0;
+        return (0, mT.j)(PT._MergeMeshesCoroutine(TT, oT, IT, iT, zT, kT, !1))
       }
-      static async MergeMeshesAsync(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0,
-          AY = arguments.length > 4 ? arguments[4] : void 0,
-          IY = arguments.length > 5 ? arguments[5] : void 0;
-        return await (0, lY.h)(UY._MergeMeshesCoroutine(YY, rY, DY, FY, AY, IY, !0), (0, lY.d)())
+      static async MergeMeshesAsync(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0,
+          zT = arguments.length > 4 ? arguments[4] : void 0,
+          kT = arguments.length > 5 ? arguments[5] : void 0;
+        return await (0, mT.h)(PT._MergeMeshesCoroutine(TT, oT, IT, iT, zT, kT, !0), (0, mT.e)())
       }
-      static * _MergeMeshesCoroutine(YY) {
-        let rY, DY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          FY = arguments.length > 2 ? arguments[2] : void 0,
-          AY = arguments.length > 3 ? arguments[3] : void 0,
-          IY = arguments.length > 4 ? arguments[4] : void 0,
-          RY = arguments.length > 5 ? arguments[5] : void 0,
-          OY = arguments.length > 6 ? arguments[6] : void 0;
-        if (0 === (YY = YY.filter(Boolean)).length) return null;
-        if (!FY) {
-          let DY = 0;
-          for (rY = 0; rY < YY.length; rY++)
-            if (DY += YY[rY].getTotalVertices(), DY >= 65536) return JY.d.Warn("Cannot merge meshes because resulting mesh will have more than 65536 vertices. Please use allow32BitsIndices = true to use 32 bits indices"), null
+      static * _MergeMeshesCoroutine(TT) {
+        let oT, IT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          iT = arguments.length > 2 ? arguments[2] : void 0,
+          zT = arguments.length > 3 ? arguments[3] : void 0,
+          kT = arguments.length > 4 ? arguments[4] : void 0,
+          WT = arguments.length > 5 ? arguments[5] : void 0,
+          XT = arguments.length > 6 ? arguments[6] : void 0;
+        if (0 === (TT = TT.filter(Boolean)).length) return null;
+        if (!iT) {
+          let IT = 0;
+          for (oT = 0; oT < TT.length; oT++)
+            if (IT += TT[oT].getTotalVertices(), IT >= 65536) return HT.d.Warn("Cannot merge meshes because resulting mesh will have more than 65536 vertices. Please use allow32BitsIndices = true to use 32 bits indices"), null
         }
-        const gY = YY[0];
-        RY && (IY = !1, YY.sort(((YY, rY) => (YY.material?.uniqueId ?? -1) - (rY.material?.uniqueId ?? -1))));
-        const aY = new Array,
-          vY = new Array,
-          uY = new Array,
-          sY = YY[0].sideOrientation;
-        for (rY = 0; rY < YY.length; rY++) {
-          const DY = YY[rY];
-          if (DY.XT) return JY.d.Warn("Cannot merge instance meshes."), null;
-          if (sY !== DY.sideOrientation) return JY.d.Warn("Cannot merge meshes with different sideOrientation values."), null;
-          if (IY || RY) {
-            const YY = uY.reduce(((YY, rY) => Math.max(YY, rY.start + rY.count)), 0);
-            if (RY)
-              if (DY.material) {
-                const rY = DY.material;
-                if (rY instanceof jY.b) {
-                  for (let YY = 0; YY < rY.J_.length; YY++) aY.indexOf(rY.J_[YY]) < 0 && aY.push(rY.J_[YY]);
-                  for (let FY = 0; FY < DY.qm.length; FY++) vY.push(aY.indexOf(rY.J_[DY.qm[FY].materialIndex])), uY.push({
-                    start: YY + DY.qm[FY].indexStart,
-                    count: DY.qm[FY].indexCount
+        const BT = TT[0];
+        WT && (kT = !1, TT.sort(((TT, oT) => (TT.material?.uniqueId ?? -1) - (oT.material?.uniqueId ?? -1))));
+        const FT = new Array,
+          ST = new Array,
+          DT = new Array,
+          LT = TT[0].sideOrientation;
+        for (oT = 0; oT < TT.length; oT++) {
+          const IT = TT[oT];
+          if (IT.yC) return HT.d.Warn("Cannot merge instance meshes."), null;
+          if (LT !== IT.sideOrientation) return HT.d.Warn("Cannot merge meshes with different sideOrientation values."), null;
+          if (kT || WT) {
+            const TT = DT.reduce(((TT, oT) => Math.max(TT, oT.start + oT.count)), 0);
+            if (WT)
+              if (IT.material) {
+                const oT = IT.material;
+                if (oT instanceof YT.b) {
+                  for (let TT = 0; TT < oT.i_.length; TT++) FT.indexOf(oT.i_[TT]) < 0 && FT.push(oT.i_[TT]);
+                  for (let iT = 0; iT < IT.pR.length; iT++) ST.push(FT.indexOf(oT.i_[IT.pR[iT].materialIndex])), DT.push({
+                    start: TT + IT.pR[iT].indexStart,
+                    count: IT.pR[iT].indexCount
                   })
                 } else {
-                  aY.indexOf(rY) < 0 && aY.push(rY);
-                  for (let FY = 0; FY < DY.qm.length; FY++) vY.push(aY.indexOf(rY)), uY.push({
-                    start: YY + DY.qm[FY].indexStart,
-                    count: DY.qm[FY].indexCount
+                  FT.indexOf(oT) < 0 && FT.push(oT);
+                  for (let iT = 0; iT < IT.pR.length; iT++) ST.push(FT.indexOf(oT)), DT.push({
+                    start: TT + IT.pR[iT].indexStart,
+                    count: IT.pR[iT].indexCount
                   })
                 }
               } else
-                for (let rY = 0; rY < DY.qm.length; rY++) vY.push(0), uY.push({
-                  start: YY + DY.qm[rY].indexStart,
-                  count: DY.qm[rY].indexCount
+                for (let oT = 0; oT < IT.pR.length; oT++) ST.push(0), DT.push({
+                  start: TT + IT.pR[oT].indexStart,
+                  count: IT.pR[oT].indexCount
                 });
-            else uY.push({
-              start: YY,
-              count: DY.getTotalIndices()
+            else DT.push({
+              start: TT,
+              count: IT.getTotalIndices()
             })
           }
         }
-        if (RY && uY.length > 1) {
-          let YY = 0;
-          for (let rY = 1; rY < uY.length; rY++) {
-            const DY = uY[YY],
-              FY = uY[rY];
-            vY[rY] === vY[YY] && DY.start + DY.count === FY.start ? DY.count += FY.count : (YY++, uY[YY] = FY, vY[YY] = vY[rY])
+        if (WT && DT.length > 1) {
+          let TT = 0;
+          for (let oT = 1; oT < DT.length; oT++) {
+            const IT = DT[TT],
+              iT = DT[oT];
+            ST[oT] === ST[TT] && IT.start + IT.count === iT.start ? IT.count += iT.count : (TT++, DT[TT] = iT, ST[TT] = ST[oT])
           }
-          uY.length = YY + 1, vY.length = YY + 1
+          DT.length = TT + 1, ST.length = TT + 1
         }
-        const iY = YY => {
-            const rY = YY.computeWorldMatrix(!0);
+        const xT = TT => {
+            const oT = TT.computeWorldMatrix(!0);
             return {
-              vertexData: KY.c.ExtractFromMesh(YY, !1, !1),
-              transform: rY
+              vertexData: fT.c.ExtractFromMesh(TT, !1, !1),
+              transform: oT
             }
           },
           {
-            vertexData: yY,
-            transform: QY
-          } = iY(YY[0]);
-        OY && (yield);
-        const oY = new Array(YY.length - 1);
-        for (let lY = 1; lY < YY.length; lY++) oY[lY - 1] = iY(YY[lY]), OY && (yield);
-        const WY = yY._mergeCoroutine(QY, oY, FY, OY, !DY);
-        let EY = WY.next();
-        for (; !EY.done;) OY && (yield), EY = WY.next();
-        const mY = EY.value;
-        AY || (AY = new UY(gY.name + "_merged", gY.hT()));
-        const VY = mY._applyToCoroutine(AY, void 0, OY);
-        let SY = VY.next();
-        for (; !SY.done;) OY && (yield), SY = VY.next();
-        if (AY.checkCollisions = gY.checkCollisions, AY.sideOrientation = gY.sideOrientation, DY)
-          for (rY = 0; rY < YY.length; rY++) YY[rY].dispose();
-        if (IY || RY) {
-          for (AY.releaseSubMeshes(), rY = 0; rY < uY.length;) ZY.d.CreateFromIndices(0, uY[rY].start, uY[rY].count, AY, void 0, !1), rY++;
-          for (const YY of AY.qm) YY.refreshBoundingInfo();
-          AY.computeWorldMatrix(!0)
+            vertexData: cT,
+            transform: KT
+          } = xT(TT[0]);
+        XT && (yield);
+        const MT = new Array(TT.length - 1);
+        for (let mT = 1; mT < TT.length; mT++) MT[mT - 1] = xT(TT[mT]), XT && (yield);
+        const rT = cT._mergeCoroutine(KT, MT, iT, XT, !IT);
+        let AT = rT.next();
+        for (; !AT.done;) XT && (yield), AT = rT.next();
+        const gT = AT.value;
+        zT || (zT = new PT(BT.name + "_merged", BT.pC()));
+        const hT = gT._applyToCoroutine(zT, void 0, XT);
+        let wT = hT.next();
+        for (; !wT.done;) XT && (yield), wT = hT.next();
+        if (zT.checkCollisions = BT.checkCollisions, zT.sideOrientation = BT.sideOrientation, IT)
+          for (oT = 0; oT < TT.length; oT++) TT[oT].dispose();
+        if (kT || WT) {
+          for (zT.releaseSubMeshes(), oT = 0; oT < DT.length;) JT.c.CreateFromIndices(0, DT[oT].start, DT[oT].count, zT, void 0, !1), oT++;
+          for (const TT of zT.pR) TT.refreshBoundingInfo();
+          zT.computeWorldMatrix(!0)
         }
-        if (RY) {
-          const YY = new jY.b(gY.name + "_merged", gY.hT());
-          YY.J_ = aY;
-          for (let rY = 0; rY < AY.qm.length; rY++) AY.qm[rY].materialIndex = vY[rY];
-          AY.material = YY
-        } else AY.material = gY.material;
-        return AY
+        if (WT) {
+          const TT = new YT.b(BT.name + "_merged", BT.pC());
+          TT.i_ = FT;
+          for (let oT = 0; oT < zT.pR.length; oT++) zT.pR[oT].materialIndex = ST[oT];
+          zT.material = TT
+        } else zT.material = BT.material;
+        return zT
       }
-      Q_(YY) {
-        YY._indexInSourceMeshInstanceArray = this.instances.length, this.instances.push(YY)
+      N9(TT) {
+        TT._indexInSourceMeshInstanceArray = this.instances.length, this.instances.push(TT)
       }
-      E_(YY) {
-        const rY = YY._indexInSourceMeshInstanceArray;
-        if (-1 != rY) {
-          if (rY !== this.instances.length - 1) {
-            const YY = this.instances[this.instances.length - 1];
-            this.instances[rY] = YY, YY._indexInSourceMeshInstanceArray = rY
+      U1(TT) {
+        const oT = TT._indexInSourceMeshInstanceArray;
+        if (-1 != oT) {
+          if (oT !== this.instances.length - 1) {
+            const TT = this.instances[this.instances.length - 1];
+            this.instances[oT] = TT, TT._indexInSourceMeshInstanceArray = oT
           }
-          YY._indexInSourceMeshInstanceArray = -1, this.instances.pop()
+          TT._indexInSourceMeshInstanceArray = -1, this.instances.pop()
         }
       }
       _shouldConvertRHS() {
-        return this._scene.useRightHandedSystem && this.sideOrientation === CY.c.CounterClockWiseSideOrientation
+        return this._scene.useRightHandedSystem && this.sideOrientation === UT.c.CounterClockWiseSideOrientation
       }
-      _getRenderingFillMode(YY) {
-        const rY = this.hT();
-        return rY.forcePointsCloud ? CY.c.PointFillMode : rY.forceWireframe ? CY.c.WireFrameFillMode : this.overrideRenderingFillMode ?? YY
+      _getRenderingFillMode(TT) {
+        const oT = this.pC();
+        return oT.forcePointsCloud ? UT.c.PointFillMode : oT.forceWireframe ? UT.c.WireFrameFillMode : this.overrideRenderingFillMode ?? TT
       }
-      setMaterialByID(YY) {
-        return this.setMaterialById(YY)
+      setMaterialByID(TT) {
+        return this.setMaterialById(TT)
       }
-      static CreateRibbon(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+      static CreateRibbon(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateDisc(YY, rY, DY, FY, AY, IY) {
+      static CreateDisc(TT, oT, IT, iT, zT, kT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateBox(YY, rY, DY, FY, AY) {
+      static CreateBox(TT, oT, IT, iT, zT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateSphere(YY, rY, DY, FY, AY, IY) {
+      static CreateSphere(TT, oT, IT, iT, zT, kT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateHemisphere(YY, rY, DY, FY) {
+      static CreateHemisphere(TT, oT, IT, iT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateCylinder(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+      static CreateCylinder(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTorus(YY, rY, DY, FY, AY, IY, RY) {
+      static CreateTorus(TT, oT, IT, iT, zT, kT, WT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTorusKnot(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY) {
+      static CreateTorusKnot(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateLines(YY, rY, DY, FY, AY) {
+      static CreateLines(TT, oT, IT, iT, zT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateDashedLines(YY, rY, DY, FY, AY, IY, RY, OY) {
+      static CreateDashedLines(TT, oT, IT, iT, zT, kT, WT, XT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreatePolygon(YY, rY, DY, FY, AY, IY, RY) {
+      static CreatePolygon(TT, oT, IT, iT, zT, kT, WT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtrudePolygon(YY, rY, DY, FY, AY, IY, RY, OY) {
+      static ExtrudePolygon(TT, oT, IT, iT, zT, kT, WT, XT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtrudeShape(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY) {
+      static ExtrudeShape(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtrudeShapeCustom(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY, uY) {
+      static ExtrudeShapeCustom(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST, DT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateLathe(YY, rY, DY, FY, AY, IY, RY) {
+      static CreateLathe(TT, oT, IT, iT, zT, kT, WT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreatePlane(YY, rY, DY, FY, AY) {
+      static CreatePlane(TT, oT, IT, iT, zT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateGround(YY, rY, DY, FY, AY, IY) {
+      static CreateGround(TT, oT, IT, iT, zT, kT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTiledGround(YY, rY, DY, FY, AY, IY, RY, OY, gY) {
+      static CreateTiledGround(TT, oT, IT, iT, zT, kT, WT, XT, BT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateGroundFromHeightMap(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY) {
+      static CreateGroundFromHeightMap(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTube(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY) {
+      static CreateTube(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreatePolyhedron(YY, rY, DY) {
+      static CreatePolyhedron(TT, oT, IT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateIcoSphere(YY, rY, DY) {
+      static CreateIcoSphere(TT, oT, IT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateDecal(YY, rY, DY, FY, AY, IY) {
+      static CreateDecal(TT, oT, IT, iT, zT, kT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateCapsule(YY, rY, DY) {
+      static CreateCapsule(TT, oT, IT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtendToGoldberg(YY) {
+      static ExtendToGoldberg(TT) {
         throw new Error("Import MeshBuilder to populate this function")
       }
     }
-    UY.FRONTSIDE = KY.c.FRONTSIDE, UY.BACKSIDE = KY.c.BACKSIDE, UY.DOUBLESIDE = KY.c.DOUBLESIDE, UY.DEFAULTSIDE = KY.c.DEFAULTSIDE, UY.NO_CAP = 0, UY.CAP_START = 1, UY.CAP_END = 2, UY.CAP_ALL = 3, UY.NO_FLIP = 0, UY.FLIP_TILE = 1, UY.ROTATE_TILE = 2, UY.FLIP_ROW = 3, UY.ROTATE_ROW = 4, UY.FLIP_N_ROTATE_TILE = 5, UY.FLIP_N_ROTATE_ROW = 6, UY.CENTER = 0, UY.LEFT = 1, UY.RIGHT = 2, UY.TOP = 3, UY.BOTTOM = 4, UY.INSTANCEDMESH_SORT_TRANSPARENT = !1, UY._GroundMeshParser = (YY, rY) => {
-      throw (0, wY.i)("GroundMesh")
-    }, UY._GoldbergMeshParser = (YY, rY) => {
-      throw (0, wY.i)("GoldbergMesh")
-    }, UY._LinesMeshParser = (YY, rY) => {
-      throw (0, wY.i)("LinesMesh")
-    }, UY._GreasedLineMeshParser = (YY, rY) => {
-      throw (0, wY.i)("GreasedLineMesh")
-    }, UY._GreasedLineRibbonMeshParser = (YY, rY) => {
-      throw (0, wY.i)("GreasedLineRibbonMesh")
-    }, UY._TrailMeshParser = (YY, rY) => {
-      throw (0, wY.i)("TrailMesh")
-    }, UY._GaussianSplattingMeshParser = (YY, rY) => {
-      throw (0, wY.i)("GaussianSplattingMesh")
-    }, UY._GaussianSplattingPartProxyMeshParser = (YY, rY) => {
-      throw (0, wY.i)("GaussianSplattingPartProxyMesh")
-    }, UY._GaussianSplattingCompoundMeshParser = (YY, rY) => {
-      throw (0, wY.i)("GaussianSplattingCompoundMesh")
+    PT.FRONTSIDE = fT.c.FRONTSIDE, PT.BACKSIDE = fT.c.BACKSIDE, PT.DOUBLESIDE = fT.c.DOUBLESIDE, PT.DEFAULTSIDE = fT.c.DEFAULTSIDE, PT.NO_CAP = 0, PT.CAP_START = 1, PT.CAP_END = 2, PT.CAP_ALL = 3, PT.NO_FLIP = 0, PT.FLIP_TILE = 1, PT.ROTATE_TILE = 2, PT.FLIP_ROW = 3, PT.ROTATE_ROW = 4, PT.FLIP_N_ROTATE_TILE = 5, PT.FLIP_N_ROTATE_ROW = 6, PT.CENTER = 0, PT.LEFT = 1, PT.RIGHT = 2, PT.TOP = 3, PT.BOTTOM = 4, PT.INSTANCEDMESH_SORT_TRANSPARENT = !1, PT._GroundMeshParser = (TT, oT) => {
+      throw (0, qT.k)("GroundMesh")
+    }, PT._GoldbergMeshParser = (TT, oT) => {
+      throw (0, qT.k)("GoldbergMesh")
+    }, PT._LinesMeshParser = (TT, oT) => {
+      throw (0, qT.k)("LinesMesh")
+    }, PT._GreasedLineMeshParser = (TT, oT) => {
+      throw (0, qT.k)("GreasedLineMesh")
+    }, PT._GreasedLineRibbonMeshParser = (TT, oT) => {
+      throw (0, qT.k)("GreasedLineRibbonMesh")
+    }, PT._TrailMeshParser = (TT, oT) => {
+      throw (0, qT.k)("TrailMesh")
+    }, PT._GaussianSplattingMeshParser = (TT, oT) => {
+      throw (0, qT.k)("GaussianSplattingMesh")
+    }, PT._GaussianSplattingPartProxyMeshParser = (TT, oT) => {
+      throw (0, qT.k)("GaussianSplattingPartProxyMesh")
+    }, PT._GaussianSplattingCompoundMeshParser = (TT, oT) => {
+      throw (0, qT.k)("GaussianSplattingCompoundMesh")
     };
-    let LY = !1;
+    let dT = !1;
 
-    function tY() {
-      LY || (LY = !0, (0, MY.i)("BABYLON.Mesh", UY))
-    }(FY = UY.prototype).kN ?? (FY.kN = (0, wY.g)("Mesh", "kN")), (AY = UY.prototype).simplify ?? (AY.simplify = (0, wY.g)("Mesh", "simplify")), (IY = UY.prototype).thinInstanceAdd ?? (IY.thinInstanceAdd = (0, wY.g)("Mesh", "thinInstanceAdd")), (RY = UY.prototype).thinInstanceAddSelf ?? (RY.thinInstanceAddSelf = (0, wY.g)("Mesh", "thinInstanceAddSelf")), (OY = UY.prototype).thinInstanceRegisterAttribute ?? (OY.thinInstanceRegisterAttribute = (0, wY.g)("Mesh", "thinInstanceRegisterAttribute")), (gY = UY.prototype).thinInstanceSetMatrixAt ?? (gY.thinInstanceSetMatrixAt = (0, wY.g)("Mesh", "thinInstanceSetMatrixAt")), (aY = UY.prototype).thinInstanceSetAttributeAt ?? (aY.thinInstanceSetAttributeAt = (0, wY.g)("Mesh", "thinInstanceSetAttributeAt")), (vY = UY.prototype).j_ ?? (vY.j_ = (0, wY.g)("Mesh", "j_")), (uY = UY.prototype).thinInstanceGetWorldMatrices ?? (uY.thinInstanceGetWorldMatrices = (0, wY.g)("Mesh", "thinInstanceGetWorldMatrices")), (sY = UY.prototype).T_ ?? (sY.T_ = (0, wY.g)("Mesh", "T_")), (iY = UY.prototype).thinInstancePartialBufferUpdate ?? (iY.thinInstancePartialBufferUpdate = (0, wY.g)("Mesh", "thinInstancePartialBufferUpdate")), (yY = UY.prototype).thinInstanceRefreshBoundingInfo ?? (yY.thinInstanceRefreshBoundingInfo = (0, wY.g)("Mesh", "thinInstanceRefreshBoundingInfo")), (QY = UY.prototype).getEmittedParticleSystems ?? (QY.getEmittedParticleSystems = (0, wY.g)("Mesh", "getEmittedParticleSystems")), (oY = UY.prototype).getHierarchyEmittedParticleSystems ?? (oY.getHierarchyEmittedParticleSystems = (0, wY.g)("Mesh", "getHierarchyEmittedParticleSystems")), Object.getOwnPropertyDescriptor(UY.prototype, "edgesShareWithInstances") || Object.defineProperty(UY.prototype, "edgesShareWithInstances", (0, wY.c)("Mesh", "edgesShareWithInstances")), Object.getOwnPropertyDescriptor(UY.prototype, "MYY") || Object.defineProperty(UY.prototype, "MYY", (0, wY.c)("Mesh", "MYY")), Object.getOwnPropertyDescriptor(UY.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation") || Object.defineProperty(UY.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation", (0, wY.c)("Mesh", "thinInstanceAllowAutomaticStaticBufferRecreation")), Object.getOwnPropertyDescriptor(UY.prototype, "R_") || Object.defineProperty(UY.prototype, "R_", (0, wY.c)("Mesh", "R_"))
+    function VT() {
+      dT || (dT = !0, (0, nT.h)("BABYLON.Mesh", PT))
+    }(iT = PT.prototype).OJ ?? (iT.OJ = (0, qT.i)("Mesh", "OJ")), (zT = PT.prototype).simplify ?? (zT.simplify = (0, qT.i)("Mesh", "simplify")), (kT = PT.prototype).thinInstanceAdd ?? (kT.thinInstanceAdd = (0, qT.i)("Mesh", "thinInstanceAdd")), (WT = PT.prototype).thinInstanceAddSelf ?? (WT.thinInstanceAddSelf = (0, qT.i)("Mesh", "thinInstanceAddSelf")), (XT = PT.prototype).thinInstanceRegisterAttribute ?? (XT.thinInstanceRegisterAttribute = (0, qT.i)("Mesh", "thinInstanceRegisterAttribute")), (BT = PT.prototype).thinInstanceSetMatrixAt ?? (BT.thinInstanceSetMatrixAt = (0, qT.i)("Mesh", "thinInstanceSetMatrixAt")), (FT = PT.prototype).thinInstanceSetAttributeAt ?? (FT.thinInstanceSetAttributeAt = (0, qT.i)("Mesh", "thinInstanceSetAttributeAt")), (ST = PT.prototype).T_ ?? (ST.T_ = (0, qT.i)("Mesh", "T_")), (DT = PT.prototype).thinInstanceGetWorldMatrices ?? (DT.thinInstanceGetWorldMatrices = (0, qT.i)("Mesh", "thinInstanceGetWorldMatrices")), (LT = PT.prototype).X3 ?? (LT.X3 = (0, qT.i)("Mesh", "X3")), (xT = PT.prototype).thinInstancePartialBufferUpdate ?? (xT.thinInstancePartialBufferUpdate = (0, qT.i)("Mesh", "thinInstancePartialBufferUpdate")), (cT = PT.prototype).thinInstanceRefreshBoundingInfo ?? (cT.thinInstanceRefreshBoundingInfo = (0, qT.i)("Mesh", "thinInstanceRefreshBoundingInfo")), (KT = PT.prototype).getEmittedParticleSystems ?? (KT.getEmittedParticleSystems = (0, qT.i)("Mesh", "getEmittedParticleSystems")), (MT = PT.prototype).getHierarchyEmittedParticleSystems ?? (MT.getHierarchyEmittedParticleSystems = (0, qT.i)("Mesh", "getHierarchyEmittedParticleSystems")), Object.getOwnPropertyDescriptor(PT.prototype, "edgesShareWithInstances") || Object.defineProperty(PT.prototype, "edgesShareWithInstances", (0, qT.f)("Mesh", "edgesShareWithInstances")), Object.getOwnPropertyDescriptor(PT.prototype, "XoT") || Object.defineProperty(PT.prototype, "XoT", (0, qT.f)("Mesh", "XoT")), Object.getOwnPropertyDescriptor(PT.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation") || Object.defineProperty(PT.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation", (0, qT.f)("Mesh", "thinInstanceAllowAutomaticStaticBufferRecreation")), Object.getOwnPropertyDescriptor(PT.prototype, "W9") || Object.defineProperty(PT.prototype, "W9", (0, qT.f)("Mesh", "W9"))
   },
-  39530: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => yY
+  39210: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => cT
     });
-    var FY = DY(39127),
-      AY = DY(36524),
-      IY = DY(39270),
-      RY = DY(39029),
-      OY = DY(36588),
-      gY = DY(38040),
-      aY = DY(39131),
-      vY = DY(39523),
-      uY = DY(39171),
-      sY = DY(39416);
-    class iY {}
-    let yY = (() => {
-      var YY;
-      let rY, DY, yY, QY, oY = [];
-      return YY = class {
+    var iT = IT(38764),
+      zT = IT(36118),
+      kT = IT(38923),
+      WT = IT(38643),
+      XT = IT(36177),
+      BT = IT(37660),
+      FT = IT(38773),
+      ST = IT(39201),
+      DT = IT(38838),
+      LT = IT(39076);
+    class xT {}
+    let cT = (() => {
+      var TT;
+      let oT, IT, cT, KT, MT = [];
+      return TT = class {
         constructor() {
-          this.uniqueId = 0, this.metadata = {}, this._applyTo = (0, vY.g)(this._applyToCoroutine.bind(this)), this.uniqueId = YY._UniqueIdGenerator, YY._UniqueIdGenerator++
+          this.uniqueId = 0, this.metadata = {}, this._applyTo = (0, ST.g)(this._applyToCoroutine.bind(this)), this.uniqueId = TT._UniqueIdGenerator, TT._UniqueIdGenerator++
         }
-        set(YY, rY) {
-          switch (YY.length || gY.d.Warn(`Setting vertex data kind '${rY}' with an empty array`), rY) {
-            case IY.l.PositionKind:
-              this.positions = YY;
+        set(TT, oT) {
+          switch (TT.length || BT.d.Warn(`Setting vertex data kind '${oT}' with an empty array`), oT) {
+            case kT.i.PositionKind:
+              this.positions = TT;
               break;
-            case IY.l.NormalKind:
-              this.normals = YY;
+            case kT.i.NormalKind:
+              this.normals = TT;
               break;
-            case IY.l.TangentKind:
-              this.tangents = YY;
+            case kT.i.TangentKind:
+              this.tangents = TT;
               break;
-            case IY.l.UVKind:
-              this.uvs = YY;
+            case kT.i.UVKind:
+              this.uvs = TT;
               break;
-            case IY.l.UV2Kind:
-              this.uvs2 = YY;
+            case kT.i.UV2Kind:
+              this.uvs2 = TT;
               break;
-            case IY.l.UV3Kind:
-              this.uvs3 = YY;
+            case kT.i.UV3Kind:
+              this.uvs3 = TT;
               break;
-            case IY.l.UV4Kind:
-              this.uvs4 = YY;
+            case kT.i.UV4Kind:
+              this.uvs4 = TT;
               break;
-            case IY.l.UV5Kind:
-              this.uvs5 = YY;
+            case kT.i.UV5Kind:
+              this.uvs5 = TT;
               break;
-            case IY.l.UV6Kind:
-              this.uvs6 = YY;
+            case kT.i.UV6Kind:
+              this.uvs6 = TT;
               break;
-            case IY.l.ColorKind:
-              this.colors = YY;
+            case kT.i.ColorKind:
+              this.colors = TT;
               break;
-            case IY.l.MatricesIndicesKind:
-              this.matricesIndices = YY;
+            case kT.i.MatricesIndicesKind:
+              this.matricesIndices = TT;
               break;
-            case IY.l.MatricesWeightsKind:
-              this.matricesWeights = YY;
+            case kT.i.MatricesWeightsKind:
+              this.matricesWeights = TT;
               break;
-            case IY.l.MatricesIndicesExtraKind:
-              this.matricesIndicesExtra = YY;
+            case kT.i.MatricesIndicesExtraKind:
+              this.matricesIndicesExtra = TT;
               break;
-            case IY.l.MatricesWeightsExtraKind:
-              this.matricesWeightsExtra = YY
+            case kT.i.MatricesWeightsExtraKind:
+              this.matricesWeightsExtra = TT
           }
         }
-        applyToMesh(YY, rY) {
-          return this._applyTo(YY, rY, !1), this
+        applyToMesh(TT, oT) {
+          return this._applyTo(TT, oT, !1), this
         }
-        applyToGeometry(YY, rY) {
-          return this._applyTo(YY, rY, !1), this
+        applyToGeometry(TT, oT) {
+          return this._applyTo(TT, oT, !1), this
         }
-        updateMesh(YY) {
-          return this._update(YY), this
+        updateMesh(TT) {
+          return this._update(TT), this
         }
-        updateGeometry(YY) {
-          return this._update(YY), this
-        }* _applyToCoroutine(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            DY = arguments.length > 2 ? arguments[2] : void 0;
-          if (this.positions && (YY.setVerticesData(IY.l.PositionKind, this.positions, rY), DY && (yield)), this.normals && (YY.setVerticesData(IY.l.NormalKind, this.normals, rY), DY && (yield)), this.tangents && (YY.setVerticesData(IY.l.TangentKind, this.tangents, rY), DY && (yield)), this.uvs && (YY.setVerticesData(IY.l.UVKind, this.uvs, rY), DY && (yield)), this.uvs2 && (YY.setVerticesData(IY.l.UV2Kind, this.uvs2, rY), DY && (yield)), this.uvs3 && (YY.setVerticesData(IY.l.UV3Kind, this.uvs3, rY), DY && (yield)), this.uvs4 && (YY.setVerticesData(IY.l.UV4Kind, this.uvs4, rY), DY && (yield)), this.uvs5 && (YY.setVerticesData(IY.l.UV5Kind, this.uvs5, rY), DY && (yield)), this.uvs6 && (YY.setVerticesData(IY.l.UV6Kind, this.uvs6, rY), DY && (yield)), this.colors) {
-            const FY = this.positions && this.colors.length === this.positions.length ? 3 : 4;
-            YY.setVerticesData(IY.l.ColorKind, this.colors, rY, FY), this.hasVertexAlpha && void 0 !== YY.hasVertexAlpha && (YY.hasVertexAlpha = !0), DY && (yield)
+        updateGeometry(TT) {
+          return this._update(TT), this
+        }* _applyToCoroutine(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            IT = arguments.length > 2 ? arguments[2] : void 0;
+          if (this.positions && (TT.setVerticesData(kT.i.PositionKind, this.positions, oT), IT && (yield)), this.normals && (TT.setVerticesData(kT.i.NormalKind, this.normals, oT), IT && (yield)), this.tangents && (TT.setVerticesData(kT.i.TangentKind, this.tangents, oT), IT && (yield)), this.uvs && (TT.setVerticesData(kT.i.UVKind, this.uvs, oT), IT && (yield)), this.uvs2 && (TT.setVerticesData(kT.i.UV2Kind, this.uvs2, oT), IT && (yield)), this.uvs3 && (TT.setVerticesData(kT.i.UV3Kind, this.uvs3, oT), IT && (yield)), this.uvs4 && (TT.setVerticesData(kT.i.UV4Kind, this.uvs4, oT), IT && (yield)), this.uvs5 && (TT.setVerticesData(kT.i.UV5Kind, this.uvs5, oT), IT && (yield)), this.uvs6 && (TT.setVerticesData(kT.i.UV6Kind, this.uvs6, oT), IT && (yield)), this.colors) {
+            const iT = this.positions && this.colors.length === this.positions.length ? 3 : 4;
+            TT.setVerticesData(kT.i.ColorKind, this.colors, oT, iT), this.hasVertexAlpha && void 0 !== TT.hasVertexAlpha && (TT.hasVertexAlpha = !0), IT && (yield)
           }
-          if (this.matricesIndices && (YY.setVerticesData(IY.l.MatricesIndicesKind, this.matricesIndices, rY), DY && (yield)), this.matricesWeights && (YY.setVerticesData(IY.l.MatricesWeightsKind, this.matricesWeights, rY), DY && (yield)), this.matricesIndicesExtra && (YY.setVerticesData(IY.l.MatricesIndicesExtraKind, this.matricesIndicesExtra, rY), DY && (yield)), this.matricesWeightsExtra && (YY.setVerticesData(IY.l.MatricesWeightsExtraKind, this.matricesWeightsExtra, rY), DY && (yield)), this.indices ? (YY.setIndices(this.indices, null, rY), DY && (yield)) : YY.setIndices([], null), YY.qm && this.materialInfos && this.materialInfos.length > 1) {
-            const rY = YY;
-            rY.qm = [];
-            for (const YY of this.materialInfos) new sY.d(YY.materialIndex, YY.verticesStart, YY.verticesCount, YY.indexStart, YY.indexCount, rY)
+          if (this.matricesIndices && (TT.setVerticesData(kT.i.MatricesIndicesKind, this.matricesIndices, oT), IT && (yield)), this.matricesWeights && (TT.setVerticesData(kT.i.MatricesWeightsKind, this.matricesWeights, oT), IT && (yield)), this.matricesIndicesExtra && (TT.setVerticesData(kT.i.MatricesIndicesExtraKind, this.matricesIndicesExtra, oT), IT && (yield)), this.matricesWeightsExtra && (TT.setVerticesData(kT.i.MatricesWeightsExtraKind, this.matricesWeightsExtra, oT), IT && (yield)), this.indices ? (TT.setIndices(this.indices, null, oT), IT && (yield)) : TT.setIndices([], null), TT.pR && this.materialInfos && this.materialInfos.length > 1) {
+            const oT = TT;
+            oT.pR = [];
+            for (const TT of this.materialInfos) new LT.c(TT.materialIndex, TT.verticesStart, TT.verticesCount, TT.indexStart, TT.indexCount, oT)
           }
           return this
         }
-        _update(YY, rY, DY) {
-          return this.positions && YY.updateVerticesData(IY.l.PositionKind, this.positions, rY, DY), this.normals && YY.updateVerticesData(IY.l.NormalKind, this.normals, rY, DY), this.tangents && YY.updateVerticesData(IY.l.TangentKind, this.tangents, rY, DY), this.uvs && YY.updateVerticesData(IY.l.UVKind, this.uvs, rY, DY), this.uvs2 && YY.updateVerticesData(IY.l.UV2Kind, this.uvs2, rY, DY), this.uvs3 && YY.updateVerticesData(IY.l.UV3Kind, this.uvs3, rY, DY), this.uvs4 && YY.updateVerticesData(IY.l.UV4Kind, this.uvs4, rY, DY), this.uvs5 && YY.updateVerticesData(IY.l.UV5Kind, this.uvs5, rY, DY), this.uvs6 && YY.updateVerticesData(IY.l.UV6Kind, this.uvs6, rY, DY), this.colors && YY.updateVerticesData(IY.l.ColorKind, this.colors, rY, DY), this.matricesIndices && YY.updateVerticesData(IY.l.MatricesIndicesKind, this.matricesIndices, rY, DY), this.matricesWeights && YY.updateVerticesData(IY.l.MatricesWeightsKind, this.matricesWeights, rY, DY), this.matricesIndicesExtra && YY.updateVerticesData(IY.l.MatricesIndicesExtraKind, this.matricesIndicesExtra, rY, DY), this.matricesWeightsExtra && YY.updateVerticesData(IY.l.MatricesWeightsExtraKind, this.matricesWeightsExtra, rY, DY), this.indices && YY.setIndices(this.indices, null), this
+        _update(TT, oT, IT) {
+          return this.positions && TT.updateVerticesData(kT.i.PositionKind, this.positions, oT, IT), this.normals && TT.updateVerticesData(kT.i.NormalKind, this.normals, oT, IT), this.tangents && TT.updateVerticesData(kT.i.TangentKind, this.tangents, oT, IT), this.uvs && TT.updateVerticesData(kT.i.UVKind, this.uvs, oT, IT), this.uvs2 && TT.updateVerticesData(kT.i.UV2Kind, this.uvs2, oT, IT), this.uvs3 && TT.updateVerticesData(kT.i.UV3Kind, this.uvs3, oT, IT), this.uvs4 && TT.updateVerticesData(kT.i.UV4Kind, this.uvs4, oT, IT), this.uvs5 && TT.updateVerticesData(kT.i.UV5Kind, this.uvs5, oT, IT), this.uvs6 && TT.updateVerticesData(kT.i.UV6Kind, this.uvs6, oT, IT), this.colors && TT.updateVerticesData(kT.i.ColorKind, this.colors, oT, IT), this.matricesIndices && TT.updateVerticesData(kT.i.MatricesIndicesKind, this.matricesIndices, oT, IT), this.matricesWeights && TT.updateVerticesData(kT.i.MatricesWeightsKind, this.matricesWeights, oT, IT), this.matricesIndicesExtra && TT.updateVerticesData(kT.i.MatricesIndicesExtraKind, this.matricesIndicesExtra, oT, IT), this.matricesWeightsExtra && TT.updateVerticesData(kT.i.MatricesWeightsExtraKind, this.matricesWeightsExtra, oT, IT), this.indices && TT.setIndices(this.indices, null), this
         }
-        static _TransformVector3Coordinates(YY, rY) {
-          let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YY.length;
-          const IY = AY.n.xy[0],
-            RY = AY.n.xy[1];
-          for (let OY = DY; OY < DY + FY; OY += 3) AY.r.FromArrayToRef(YY, OY, IY), AY.r.TransformCoordinatesToRef(IY, rY, RY), YY[OY] = RY.x, YY[OY + 1] = RY.y, YY[OY + 2] = RY.z
+        static _TransformVector3Coordinates(TT, oT) {
+          let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.length;
+          const kT = zT.i.sc[0],
+            WT = zT.i.sc[1];
+          for (let XT = IT; XT < IT + iT; XT += 3) zT.m.FromArrayToRef(TT, XT, kT), zT.m.TransformCoordinatesToRef(kT, oT, WT), TT[XT] = WT.x, TT[XT + 1] = WT.y, TT[XT + 2] = WT.z
         }
-        static _TransformVector3Normals(YY, rY) {
-          let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YY.length;
-          const IY = AY.n.xy[0],
-            RY = AY.n.xy[1];
-          for (let OY = DY; OY < DY + FY; OY += 3) AY.r.FromArrayToRef(YY, OY, IY), AY.r.TransformNormalToRef(IY, rY, RY), YY[OY] = RY.x, YY[OY + 1] = RY.y, YY[OY + 2] = RY.z
+        static _TransformVector3Normals(TT, oT) {
+          let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.length;
+          const kT = zT.i.sc[0],
+            WT = zT.i.sc[1];
+          for (let XT = IT; XT < IT + iT; XT += 3) zT.m.FromArrayToRef(TT, XT, kT), zT.m.TransformNormalToRef(kT, oT, WT), TT[XT] = WT.x, TT[XT + 1] = WT.y, TT[XT + 2] = WT.z
         }
-        static _TransformVector4Normals(YY, rY) {
-          let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YY.length;
-          const IY = AY.n.Vector4[0],
-            RY = AY.n.Vector4[1];
-          for (let OY = DY; OY < DY + FY; OY += 4) AY.v.FromArrayToRef(YY, OY, IY), AY.v.TransformNormalToRef(IY, rY, RY), YY[OY] = RY.x, YY[OY + 1] = RY.y, YY[OY + 2] = RY.z, YY[OY + 3] = RY.w
+        static _TransformVector4Normals(TT, oT) {
+          let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.length;
+          const kT = zT.i.Vector4[0],
+            WT = zT.i.Vector4[1];
+          for (let XT = IT; XT < IT + iT; XT += 4) zT.n.FromArrayToRef(TT, XT, kT), zT.n.TransformNormalToRef(kT, oT, WT), TT[XT] = WT.x, TT[XT + 1] = WT.y, TT[XT + 2] = WT.z, TT[XT + 3] = WT.w
         }
-        static _FlipFaces(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YY.length;
-          for (let FY = rY; FY < rY + DY; FY += 3) {
-            const rY = YY[FY + 1];
-            YY[FY + 1] = YY[FY + 2], YY[FY + 2] = rY
+        static _FlipFaces(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TT.length;
+          for (let iT = oT; iT < oT + IT; iT += 3) {
+            const oT = TT[iT + 1];
+            TT[iT + 1] = TT[iT + 2], TT[iT + 2] = oT
           }
         }
-        transform(rY) {
-          const DY = rY.determinant() < 0;
-          return this.positions && YY._TransformVector3Coordinates(this.positions, rY), this.normals && YY._TransformVector3Normals(this.normals, rY), this.tangents && YY._TransformVector4Normals(this.tangents, rY), DY && this.indices && YY._FlipFaces(this.indices), this
+        transform(oT) {
+          const IT = oT.determinant() < 0;
+          return this.positions && TT._TransformVector3Coordinates(this.positions, oT), this.normals && TT._TransformVector3Normals(this.normals, oT), this.tangents && TT._TransformVector4Normals(this.tangents, oT), IT && this.indices && TT._FlipFaces(this.indices), this
         }
         splitBasedOnMaterialID() {
           if (!this.materialInfos || this.materialInfos.length < 2) return [this];
-          const rY = [];
-          for (const DY of this.materialInfos) {
-            const FY = new YY;
-            if (this.positions && (FY.positions = this.positions.slice(3 * DY.verticesStart, 3 * (DY.verticesCount + DY.verticesStart))), this.normals && (FY.normals = this.normals.slice(3 * DY.verticesStart, 3 * (DY.verticesCount + DY.verticesStart))), this.tangents && (FY.tangents = this.tangents.slice(4 * DY.verticesStart, 4 * (DY.verticesCount + DY.verticesStart))), this.colors && (FY.colors = this.colors.slice(4 * DY.verticesStart, 4 * (DY.verticesCount + DY.verticesStart))), this.uvs && (FY.uvs = this.uvs.slice(2 * DY.verticesStart, 2 * (DY.verticesCount + DY.verticesStart))), this.uvs2 && (FY.uvs2 = this.uvs2.slice(2 * DY.verticesStart, 2 * (DY.verticesCount + DY.verticesStart))), this.uvs3 && (FY.uvs3 = this.uvs3.slice(2 * DY.verticesStart, 2 * (DY.verticesCount + DY.verticesStart))), this.uvs4 && (FY.uvs4 = this.uvs4.slice(2 * DY.verticesStart, 2 * (DY.verticesCount + DY.verticesStart))), this.uvs5 && (FY.uvs5 = this.uvs5.slice(2 * DY.verticesStart, 2 * (DY.verticesCount + DY.verticesStart))), this.uvs6 && (FY.uvs6 = this.uvs6.slice(2 * DY.verticesStart, 2 * (DY.verticesCount + DY.verticesStart))), this.matricesIndices && (FY.matricesIndices = this.matricesIndices.slice(4 * DY.verticesStart, 4 * (DY.verticesCount + DY.verticesStart))), this.matricesIndicesExtra && (FY.matricesIndicesExtra = this.matricesIndicesExtra.slice(4 * DY.verticesStart, 4 * (DY.verticesCount + DY.verticesStart))), this.matricesWeights && (FY.matricesWeights = this.matricesWeights.slice(4 * DY.verticesStart, 4 * (DY.verticesCount + DY.verticesStart))), this.matricesWeightsExtra && (FY.matricesWeightsExtra = this.matricesWeightsExtra.slice(4 * DY.verticesStart, 4 * (DY.verticesCount + DY.verticesStart))), this.indices) {
-              FY.indices = [];
-              for (let YY = DY.indexStart; YY < DY.indexStart + DY.indexCount; YY++) FY.indices.push(this.indices[YY] - DY.verticesStart)
+          const oT = [];
+          for (const IT of this.materialInfos) {
+            const iT = new TT;
+            if (this.positions && (iT.positions = this.positions.slice(3 * IT.verticesStart, 3 * (IT.verticesCount + IT.verticesStart))), this.normals && (iT.normals = this.normals.slice(3 * IT.verticesStart, 3 * (IT.verticesCount + IT.verticesStart))), this.tangents && (iT.tangents = this.tangents.slice(4 * IT.verticesStart, 4 * (IT.verticesCount + IT.verticesStart))), this.colors && (iT.colors = this.colors.slice(4 * IT.verticesStart, 4 * (IT.verticesCount + IT.verticesStart))), this.uvs && (iT.uvs = this.uvs.slice(2 * IT.verticesStart, 2 * (IT.verticesCount + IT.verticesStart))), this.uvs2 && (iT.uvs2 = this.uvs2.slice(2 * IT.verticesStart, 2 * (IT.verticesCount + IT.verticesStart))), this.uvs3 && (iT.uvs3 = this.uvs3.slice(2 * IT.verticesStart, 2 * (IT.verticesCount + IT.verticesStart))), this.uvs4 && (iT.uvs4 = this.uvs4.slice(2 * IT.verticesStart, 2 * (IT.verticesCount + IT.verticesStart))), this.uvs5 && (iT.uvs5 = this.uvs5.slice(2 * IT.verticesStart, 2 * (IT.verticesCount + IT.verticesStart))), this.uvs6 && (iT.uvs6 = this.uvs6.slice(2 * IT.verticesStart, 2 * (IT.verticesCount + IT.verticesStart))), this.matricesIndices && (iT.matricesIndices = this.matricesIndices.slice(4 * IT.verticesStart, 4 * (IT.verticesCount + IT.verticesStart))), this.matricesIndicesExtra && (iT.matricesIndicesExtra = this.matricesIndicesExtra.slice(4 * IT.verticesStart, 4 * (IT.verticesCount + IT.verticesStart))), this.matricesWeights && (iT.matricesWeights = this.matricesWeights.slice(4 * IT.verticesStart, 4 * (IT.verticesCount + IT.verticesStart))), this.matricesWeightsExtra && (iT.matricesWeightsExtra = this.matricesWeightsExtra.slice(4 * IT.verticesStart, 4 * (IT.verticesCount + IT.verticesStart))), this.indices) {
+              iT.indices = [];
+              for (let TT = IT.indexStart; TT < IT.indexStart + IT.indexCount; TT++) iT.indices.push(this.indices[TT] - IT.verticesStart)
             }
-            const AY = new iY;
-            AY.indexStart = 0, AY.indexCount = FY.indices ? FY.indices.length : 0, AY.materialIndex = DY.materialIndex, AY.verticesStart = 0, AY.verticesCount = (FY.positions ? FY.positions.length : 0) / 3, FY.materialInfos = [AY], rY.push(FY)
+            const zT = new xT;
+            zT.indexStart = 0, zT.indexCount = iT.indices ? iT.indices.length : 0, zT.materialIndex = IT.materialIndex, zT.verticesStart = 0, zT.verticesCount = (iT.positions ? iT.positions.length : 0) / 3, iT.materialInfos = [zT], oT.push(iT)
           }
-          return rY
+          return oT
         }
-        merge(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            FY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-          const IY = Array.isArray(YY) ? YY.map((YY => ({
-            vertexData: YY
+        merge(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            iT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          const kT = Array.isArray(TT) ? TT.map((TT => ({
+            vertexData: TT
           }))) : [{
-            vertexData: YY
+            vertexData: TT
           }];
-          return (0, vY.j)(this._mergeCoroutine(void 0, IY, rY, !1, DY, FY, AY))
-        }* _mergeCoroutine(rY, DY) {
-          let FY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            AY = arguments.length > 3 ? arguments[3] : void 0,
-            RY = arguments.length > 4 ? arguments[4] : void 0,
-            OY = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-            gY = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+          return (0, ST.j)(this._mergeCoroutine(void 0, kT, oT, !1, IT, iT, zT))
+        }* _mergeCoroutine(oT, IT) {
+          let iT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            zT = arguments.length > 3 ? arguments[3] : void 0,
+            WT = arguments.length > 4 ? arguments[4] : void 0,
+            XT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+            BT = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
           this._validate();
-          let aY = DY.map((YY => YY.vertexData)),
-            vY = this;
-          if (gY)
-            for (const YY of aY) YY && (YY._validate(), !this.normals && YY.normals && (this.normals = new Float32Array(this.positions.length)), !this.tangents && YY.tangents && (this.tangents = new Float32Array(this.positions.length / 3 * 4)), !this.uvs && YY.uvs && (this.uvs = new Float32Array(this.positions.length / 3 * 2)), !this.uvs2 && YY.uvs2 && (this.uvs2 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs3 && YY.uvs3 && (this.uvs3 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs4 && YY.uvs4 && (this.uvs4 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs5 && YY.uvs5 && (this.uvs5 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs6 && YY.uvs6 && (this.uvs6 = new Float32Array(this.positions.length / 3 * 2)), !this.colors && YY.colors && (this.colors = new Float32Array(this.positions.length / 3 * 4), this.colors.fill(1)), !this.matricesIndices && YY.matricesIndices && (this.matricesIndices = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeights && YY.matricesWeights && (this.matricesWeights = new Float32Array(this.positions.length / 3 * 4)), !this.matricesIndicesExtra && YY.matricesIndicesExtra && (this.matricesIndicesExtra = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeightsExtra && YY.matricesWeightsExtra && (this.matricesWeightsExtra = new Float32Array(this.positions.length / 3 * 4)));
-          for (const YY of aY)
-            if (YY)
-              if (gY) this.normals && !YY.normals && (YY.normals = new Float32Array(YY.positions.length)), this.tangents && !YY.tangents && (YY.tangents = new Float32Array(YY.positions.length / 3 * 4)), this.uvs && !YY.uvs && (YY.uvs = new Float32Array(YY.positions.length / 3 * 2)), this.uvs2 && !YY.uvs2 && (YY.uvs2 = new Float32Array(YY.positions.length / 3 * 2)), this.uvs3 && !YY.uvs3 && (YY.uvs3 = new Float32Array(YY.positions.length / 3 * 2)), this.uvs4 && !YY.uvs4 && (YY.uvs4 = new Float32Array(YY.positions.length / 3 * 2)), this.uvs5 && !YY.uvs5 && (YY.uvs5 = new Float32Array(YY.positions.length / 3 * 2)), this.uvs6 && !YY.uvs6 && (YY.uvs6 = new Float32Array(YY.positions.length / 3 * 2)), this.colors && !YY.colors && (YY.colors = new Float32Array(YY.positions.length / 3 * 4), YY.colors.fill(1)), this.matricesIndices && !YY.matricesIndices && (YY.matricesIndices = new Float32Array(YY.positions.length / 3 * 4)), this.matricesWeights && !YY.matricesWeights && (YY.matricesWeights = new Float32Array(YY.positions.length / 3 * 4)), this.matricesIndicesExtra && !YY.matricesIndicesExtra && (YY.matricesIndicesExtra = new Float32Array(YY.positions.length / 3 * 4)), this.matricesWeightsExtra && !YY.matricesWeightsExtra && (YY.matricesWeightsExtra = new Float32Array(YY.positions.length / 3 * 4));
-              else if (YY._validate(), !this.normals !== !YY.normals || !this.tangents !== !YY.tangents || !this.uvs !== !YY.uvs || !this.uvs2 !== !YY.uvs2 || !this.uvs3 !== !YY.uvs3 || !this.uvs4 !== !YY.uvs4 || !this.uvs5 !== !YY.uvs5 || !this.uvs6 !== !YY.uvs6 || !this.colors !== !YY.colors || !this.matricesIndices !== !YY.matricesIndices || !this.matricesWeights !== !YY.matricesWeights || !this.matricesIndicesExtra !== !YY.matricesIndicesExtra || !this.matricesWeightsExtra !== !YY.matricesWeightsExtra) throw new Error("Cannot merge vertex data that do not have the same set of attributes");
-          if (OY) {
-            let YY, FY = 0,
-              AY = 0;
-            const IY = [];
-            let RY = null;
-            const OY = [];
-            for (const DY of this.splitBasedOnMaterialID()) OY.push({
-              vertexData: DY,
-              transform: rY
+          let FT = IT.map((TT => TT.vertexData)),
+            ST = this;
+          if (BT)
+            for (const TT of FT) TT && (TT._validate(), !this.normals && TT.normals && (this.normals = new Float32Array(this.positions.length)), !this.tangents && TT.tangents && (this.tangents = new Float32Array(this.positions.length / 3 * 4)), !this.uvs && TT.uvs && (this.uvs = new Float32Array(this.positions.length / 3 * 2)), !this.uvs2 && TT.uvs2 && (this.uvs2 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs3 && TT.uvs3 && (this.uvs3 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs4 && TT.uvs4 && (this.uvs4 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs5 && TT.uvs5 && (this.uvs5 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs6 && TT.uvs6 && (this.uvs6 = new Float32Array(this.positions.length / 3 * 2)), !this.colors && TT.colors && (this.colors = new Float32Array(this.positions.length / 3 * 4), this.colors.fill(1)), !this.matricesIndices && TT.matricesIndices && (this.matricesIndices = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeights && TT.matricesWeights && (this.matricesWeights = new Float32Array(this.positions.length / 3 * 4)), !this.matricesIndicesExtra && TT.matricesIndicesExtra && (this.matricesIndicesExtra = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeightsExtra && TT.matricesWeightsExtra && (this.matricesWeightsExtra = new Float32Array(this.positions.length / 3 * 4)));
+          for (const TT of FT)
+            if (TT)
+              if (BT) this.normals && !TT.normals && (TT.normals = new Float32Array(TT.positions.length)), this.tangents && !TT.tangents && (TT.tangents = new Float32Array(TT.positions.length / 3 * 4)), this.uvs && !TT.uvs && (TT.uvs = new Float32Array(TT.positions.length / 3 * 2)), this.uvs2 && !TT.uvs2 && (TT.uvs2 = new Float32Array(TT.positions.length / 3 * 2)), this.uvs3 && !TT.uvs3 && (TT.uvs3 = new Float32Array(TT.positions.length / 3 * 2)), this.uvs4 && !TT.uvs4 && (TT.uvs4 = new Float32Array(TT.positions.length / 3 * 2)), this.uvs5 && !TT.uvs5 && (TT.uvs5 = new Float32Array(TT.positions.length / 3 * 2)), this.uvs6 && !TT.uvs6 && (TT.uvs6 = new Float32Array(TT.positions.length / 3 * 2)), this.colors && !TT.colors && (TT.colors = new Float32Array(TT.positions.length / 3 * 4), TT.colors.fill(1)), this.matricesIndices && !TT.matricesIndices && (TT.matricesIndices = new Float32Array(TT.positions.length / 3 * 4)), this.matricesWeights && !TT.matricesWeights && (TT.matricesWeights = new Float32Array(TT.positions.length / 3 * 4)), this.matricesIndicesExtra && !TT.matricesIndicesExtra && (TT.matricesIndicesExtra = new Float32Array(TT.positions.length / 3 * 4)), this.matricesWeightsExtra && !TT.matricesWeightsExtra && (TT.matricesWeightsExtra = new Float32Array(TT.positions.length / 3 * 4));
+              else if (TT._validate(), !this.normals !== !TT.normals || !this.tangents !== !TT.tangents || !this.uvs !== !TT.uvs || !this.uvs2 !== !TT.uvs2 || !this.uvs3 !== !TT.uvs3 || !this.uvs4 !== !TT.uvs4 || !this.uvs5 !== !TT.uvs5 || !this.uvs6 !== !TT.uvs6 || !this.colors !== !TT.colors || !this.matricesIndices !== !TT.matricesIndices || !this.matricesWeights !== !TT.matricesWeights || !this.matricesIndicesExtra !== !TT.matricesIndicesExtra || !this.matricesWeightsExtra !== !TT.matricesWeightsExtra) throw new Error("Cannot merge vertex data that do not have the same set of attributes");
+          if (XT) {
+            let TT, iT = 0,
+              zT = 0;
+            const kT = [];
+            let WT = null;
+            const XT = [];
+            for (const IT of this.splitBasedOnMaterialID()) XT.push({
+              vertexData: IT,
+              transform: oT
             });
-            for (const rY of DY)
-              if (rY.vertexData)
-                for (const YY of rY.vertexData.splitBasedOnMaterialID()) OY.push({
-                  vertexData: YY,
-                  transform: rY.transform
+            for (const oT of IT)
+              if (oT.vertexData)
+                for (const TT of oT.vertexData.splitBasedOnMaterialID()) XT.push({
+                  vertexData: TT,
+                  transform: oT.transform
                 });
-            OY.sort(((YY, rY) => {
-              const DY = YY.vertexData.materialInfos ? YY.vertexData.materialInfos[0].materialIndex : 0,
-                FY = rY.vertexData.materialInfos ? rY.vertexData.materialInfos[0].materialIndex : 0;
-              return DY > FY ? 1 : DY === FY ? 0 : -1
+            XT.sort(((TT, oT) => {
+              const IT = TT.vertexData.materialInfos ? TT.vertexData.materialInfos[0].materialIndex : 0,
+                iT = oT.vertexData.materialInfos ? oT.vertexData.materialInfos[0].materialIndex : 0;
+              return IT > iT ? 1 : IT === iT ? 0 : -1
             }));
-            for (const rY of OY) {
-              const DY = rY.vertexData;
-              if (YY = DY.materialInfos ? DY.materialInfos[0].materialIndex : 0, RY && RY.materialIndex === YY) RY.indexCount += DY.indices.length, RY.verticesCount += DY.positions.length / 3;
+            for (const oT of XT) {
+              const IT = oT.vertexData;
+              if (TT = IT.materialInfos ? IT.materialInfos[0].materialIndex : 0, WT && WT.materialIndex === TT) WT.indexCount += IT.indices.length, WT.verticesCount += IT.positions.length / 3;
               else {
-                const rY = new iY;
-                rY.materialIndex = YY, rY.indexStart = FY, rY.indexCount = DY.indices.length, rY.verticesStart = AY, rY.verticesCount = DY.positions.length / 3, IY.push(rY), RY = rY
+                const oT = new xT;
+                oT.materialIndex = TT, oT.indexStart = iT, oT.indexCount = IT.indices.length, oT.verticesStart = zT, oT.verticesCount = IT.positions.length / 3, kT.push(oT), WT = oT
               }
-              FY += DY.indices.length, AY += DY.positions.length / 3
+              iT += IT.indices.length, zT += IT.positions.length / 3
             }
-            const gY = OY.splice(0, 1)[0];
-            vY = gY.vertexData, rY = gY.transform, aY = OY.map((YY => YY.vertexData)), DY = OY, this.materialInfos = IY
+            const BT = XT.splice(0, 1)[0];
+            ST = BT.vertexData, oT = BT.transform, FT = XT.map((TT => TT.vertexData)), IT = XT, this.materialInfos = kT
           }
-          const uY = aY.reduce(((YY, rY) => YY + (rY.indices?.length ?? 0)), vY.indices?.length ?? 0);
-          let sY = RY || aY.some((YY => YY.indices === vY.indices)) ? vY.indices?.slice() : vY.indices;
-          if (uY > 0) {
-            let IY = sY?.length ?? 0;
-            if (sY || (sY = new Array(uY)), sY.length !== uY) {
-              if (Array.isArray(sY)) sY.length = uY;
+          const DT = FT.reduce(((TT, oT) => TT + (oT.indices?.length ?? 0)), ST.indices?.length ?? 0);
+          let LT = WT || FT.some((TT => TT.indices === ST.indices)) ? ST.indices?.slice() : ST.indices;
+          if (DT > 0) {
+            let kT = LT?.length ?? 0;
+            if (LT || (LT = new Array(DT)), LT.length !== DT) {
+              if (Array.isArray(LT)) LT.length = DT;
               else {
-                const YY = FY || sY instanceof Uint32Array ? new Uint32Array(uY) : new Uint16Array(uY);
-                YY.set(sY), sY = YY
+                const TT = iT || LT instanceof Uint32Array ? new Uint32Array(DT) : new Uint16Array(DT);
+                TT.set(LT), LT = TT
               }
-              rY && rY.determinant() < 0 && YY._FlipFaces(sY, 0, IY)
+              oT && oT.determinant() < 0 && TT._FlipFaces(LT, 0, kT)
             }
-            let RY = vY.positions ? vY.positions.length / 3 : 0;
+            let WT = ST.positions ? ST.positions.length / 3 : 0;
             for (const {
-                vertexData: rY,
-                transform: FY
+                vertexData: oT,
+                transform: iT
               }
-              of DY)
-              if (rY.indices) {
-                for (let YY = 0; YY < rY.indices.length; YY++) sY[IY + YY] = rY.indices[YY] + RY;
-                FY && FY.determinant() < 0 && YY._FlipFaces(sY, IY, rY.indices.length), RY += rY.positions.length / 3, IY += rY.indices.length, AY && (yield)
+              of IT)
+              if (oT.indices) {
+                for (let TT = 0; TT < oT.indices.length; TT++) LT[kT + TT] = oT.indices[TT] + WT;
+                iT && iT.determinant() < 0 && TT._FlipFaces(LT, kT, oT.indices.length), WT += oT.positions.length / 3, kT += oT.indices.length, zT && (yield)
               }
           }
-          return this.indices = sY, this.positions = YY._MergeElement(IY.l.PositionKind, vY.positions, rY, DY.map((YY => [YY.vertexData.positions, YY.transform]))), AY && (yield), vY.normals && (this.normals = YY._MergeElement(IY.l.NormalKind, vY.normals, rY, DY.map((YY => [YY.vertexData.normals, YY.transform]))), AY && (yield)), vY.tangents && (this.tangents = YY._MergeElement(IY.l.TangentKind, vY.tangents, rY, DY.map((YY => [YY.vertexData.tangents, YY.transform]))), AY && (yield)), vY.uvs && (this.uvs = YY._MergeElement(IY.l.UVKind, vY.uvs, rY, DY.map((YY => [YY.vertexData.uvs, YY.transform]))), AY && (yield)), vY.uvs2 && (this.uvs2 = YY._MergeElement(IY.l.UV2Kind, vY.uvs2, rY, DY.map((YY => [YY.vertexData.uvs2, YY.transform]))), AY && (yield)), vY.uvs3 && (this.uvs3 = YY._MergeElement(IY.l.UV3Kind, vY.uvs3, rY, DY.map((YY => [YY.vertexData.uvs3, YY.transform]))), AY && (yield)), vY.uvs4 && (this.uvs4 = YY._MergeElement(IY.l.UV4Kind, vY.uvs4, rY, DY.map((YY => [YY.vertexData.uvs4, YY.transform]))), AY && (yield)), vY.uvs5 && (this.uvs5 = YY._MergeElement(IY.l.UV5Kind, vY.uvs5, rY, DY.map((YY => [YY.vertexData.uvs5, YY.transform]))), AY && (yield)), vY.uvs6 && (this.uvs6 = YY._MergeElement(IY.l.UV6Kind, vY.uvs6, rY, DY.map((YY => [YY.vertexData.uvs6, YY.transform]))), AY && (yield)), vY.colors && (this.colors = YY._MergeElement(IY.l.ColorKind, vY.colors, rY, DY.map((YY => [YY.vertexData.colors, YY.transform]))), (void 0 !== vY.hasVertexAlpha || DY.some((YY => void 0 !== YY.vertexData.hasVertexAlpha))) && (this.hasVertexAlpha = vY.hasVertexAlpha || DY.some((YY => YY.vertexData.hasVertexAlpha))), AY && (yield)), vY.matricesIndices && (this.matricesIndices = YY._MergeElement(IY.l.MatricesIndicesKind, vY.matricesIndices, rY, DY.map((YY => [YY.vertexData.matricesIndices, YY.transform]))), AY && (yield)), vY.matricesWeights && (this.matricesWeights = YY._MergeElement(IY.l.MatricesWeightsKind, vY.matricesWeights, rY, DY.map((YY => [YY.vertexData.matricesWeights, YY.transform]))), AY && (yield)), vY.matricesIndicesExtra && (this.matricesIndicesExtra = YY._MergeElement(IY.l.MatricesIndicesExtraKind, vY.matricesIndicesExtra, rY, DY.map((YY => [YY.vertexData.matricesIndicesExtra, YY.transform]))), AY && (yield)), vY.matricesWeightsExtra && (this.matricesWeightsExtra = YY._MergeElement(IY.l.MatricesWeightsExtraKind, vY.matricesWeightsExtra, rY, DY.map((YY => [YY.vertexData.matricesWeightsExtra, YY.transform])))), this
+          return this.indices = LT, this.positions = TT._MergeElement(kT.i.PositionKind, ST.positions, oT, IT.map((TT => [TT.vertexData.positions, TT.transform]))), zT && (yield), ST.normals && (this.normals = TT._MergeElement(kT.i.NormalKind, ST.normals, oT, IT.map((TT => [TT.vertexData.normals, TT.transform]))), zT && (yield)), ST.tangents && (this.tangents = TT._MergeElement(kT.i.TangentKind, ST.tangents, oT, IT.map((TT => [TT.vertexData.tangents, TT.transform]))), zT && (yield)), ST.uvs && (this.uvs = TT._MergeElement(kT.i.UVKind, ST.uvs, oT, IT.map((TT => [TT.vertexData.uvs, TT.transform]))), zT && (yield)), ST.uvs2 && (this.uvs2 = TT._MergeElement(kT.i.UV2Kind, ST.uvs2, oT, IT.map((TT => [TT.vertexData.uvs2, TT.transform]))), zT && (yield)), ST.uvs3 && (this.uvs3 = TT._MergeElement(kT.i.UV3Kind, ST.uvs3, oT, IT.map((TT => [TT.vertexData.uvs3, TT.transform]))), zT && (yield)), ST.uvs4 && (this.uvs4 = TT._MergeElement(kT.i.UV4Kind, ST.uvs4, oT, IT.map((TT => [TT.vertexData.uvs4, TT.transform]))), zT && (yield)), ST.uvs5 && (this.uvs5 = TT._MergeElement(kT.i.UV5Kind, ST.uvs5, oT, IT.map((TT => [TT.vertexData.uvs5, TT.transform]))), zT && (yield)), ST.uvs6 && (this.uvs6 = TT._MergeElement(kT.i.UV6Kind, ST.uvs6, oT, IT.map((TT => [TT.vertexData.uvs6, TT.transform]))), zT && (yield)), ST.colors && (this.colors = TT._MergeElement(kT.i.ColorKind, ST.colors, oT, IT.map((TT => [TT.vertexData.colors, TT.transform]))), (void 0 !== ST.hasVertexAlpha || IT.some((TT => void 0 !== TT.vertexData.hasVertexAlpha))) && (this.hasVertexAlpha = ST.hasVertexAlpha || IT.some((TT => TT.vertexData.hasVertexAlpha))), zT && (yield)), ST.matricesIndices && (this.matricesIndices = TT._MergeElement(kT.i.MatricesIndicesKind, ST.matricesIndices, oT, IT.map((TT => [TT.vertexData.matricesIndices, TT.transform]))), zT && (yield)), ST.matricesWeights && (this.matricesWeights = TT._MergeElement(kT.i.MatricesWeightsKind, ST.matricesWeights, oT, IT.map((TT => [TT.vertexData.matricesWeights, TT.transform]))), zT && (yield)), ST.matricesIndicesExtra && (this.matricesIndicesExtra = TT._MergeElement(kT.i.MatricesIndicesExtraKind, ST.matricesIndicesExtra, oT, IT.map((TT => [TT.vertexData.matricesIndicesExtra, TT.transform]))), zT && (yield)), ST.matricesWeightsExtra && (this.matricesWeightsExtra = TT._MergeElement(kT.i.MatricesWeightsExtraKind, ST.matricesWeightsExtra, oT, IT.map((TT => [TT.vertexData.matricesWeightsExtra, TT.transform])))), this
         }
-        static _MergeElement(rY, DY, FY, AY) {
-          const RY = AY.filter((YY => null !== YY[0] && void 0 !== YY[0]));
-          if (!DY && 0 == RY.length) return DY;
-          if (!DY) return this._MergeElement(rY, RY[0][0], RY[0][1], RY.slice(1));
-          const OY = RY.reduce(((YY, rY) => YY + rY[0].length), DY.length),
-            gY = rY === IY.l.PositionKind ? YY._TransformVector3Coordinates : rY === IY.l.NormalKind ? YY._TransformVector3Normals : rY === IY.l.TangentKind ? YY._TransformVector4Normals : () => {};
-          if (DY instanceof Float32Array) {
-            const YY = new Float32Array(OY);
-            YY.set(DY), FY && gY(YY, FY, 0, DY.length);
-            let rY = DY.length;
-            for (const [DY, FY] of RY) YY.set(DY, rY), FY && gY(YY, FY, rY, DY.length), rY += DY.length;
-            return YY
+        static _MergeElement(oT, IT, iT, zT) {
+          const WT = zT.filter((TT => null !== TT[0] && void 0 !== TT[0]));
+          if (!IT && 0 == WT.length) return IT;
+          if (!IT) return this._MergeElement(oT, WT[0][0], WT[0][1], WT.slice(1));
+          const XT = WT.reduce(((TT, oT) => TT + oT[0].length), IT.length),
+            BT = oT === kT.i.PositionKind ? TT._TransformVector3Coordinates : oT === kT.i.NormalKind ? TT._TransformVector3Normals : oT === kT.i.TangentKind ? TT._TransformVector4Normals : () => {};
+          if (IT instanceof Float32Array) {
+            const TT = new Float32Array(XT);
+            TT.set(IT), iT && BT(TT, iT, 0, IT.length);
+            let oT = IT.length;
+            for (const [IT, iT] of WT) TT.set(IT, oT), iT && BT(TT, iT, oT, IT.length), oT += IT.length;
+            return TT
           } {
-            const YY = new Array(OY);
-            for (let FY = 0; FY < DY.length; FY++) YY[FY] = DY[FY];
-            FY && gY(YY, FY, 0, DY.length);
-            let rY = DY.length;
-            for (const [DY, FY] of RY) {
-              for (let FY = 0; FY < DY.length; FY++) YY[rY + FY] = DY[FY];
-              FY && gY(YY, FY, rY, DY.length), rY += DY.length
+            const TT = new Array(XT);
+            for (let iT = 0; iT < IT.length; iT++) TT[iT] = IT[iT];
+            iT && BT(TT, iT, 0, IT.length);
+            let oT = IT.length;
+            for (const [IT, iT] of WT) {
+              for (let iT = 0; iT < IT.length; iT++) TT[oT + iT] = IT[iT];
+              iT && BT(TT, iT, oT, IT.length), oT += IT.length
             }
-            return YY
+            return TT
           }
         }
         _validate() {
-          if (!this.positions) throw new uY.g("Positions are required", uY.c.MeshInvalidPositionsError);
-          const YY = (YY, rY) => {
-              const DY = (0, IY.h)(YY);
-              if (rY.length % DY !== 0) throw new Error("The " + YY + "s array count must be a multiple of " + DY);
-              return rY.length / DY
+          if (!this.positions) throw new DT.k("Positions are required", DT.g.MeshInvalidPositionsError);
+          const TT = (TT, oT) => {
+              const IT = (0, kT.h)(TT);
+              if (oT.length % IT !== 0) throw new Error("The " + TT + "s array count must be a multiple of " + IT);
+              return oT.length / IT
             },
-            rY = YY(IY.l.PositionKind, this.positions),
-            DY = (DY, FY) => {
-              const AY = YY(DY, FY);
-              if (AY !== rY) throw new Error("The " + DY + "s element count (" + AY + ") does not match the positions count (" + rY + ")")
+            oT = TT(kT.i.PositionKind, this.positions),
+            IT = (IT, iT) => {
+              const zT = TT(IT, iT);
+              if (zT !== oT) throw new Error("The " + IT + "s element count (" + zT + ") does not match the positions count (" + oT + ")")
             };
-          this.normals && DY(IY.l.NormalKind, this.normals), this.tangents && DY(IY.l.TangentKind, this.tangents), this.uvs && DY(IY.l.UVKind, this.uvs), this.uvs2 && DY(IY.l.UV2Kind, this.uvs2), this.uvs3 && DY(IY.l.UV3Kind, this.uvs3), this.uvs4 && DY(IY.l.UV4Kind, this.uvs4), this.uvs5 && DY(IY.l.UV5Kind, this.uvs5), this.uvs6 && DY(IY.l.UV6Kind, this.uvs6), this.colors && DY(IY.l.ColorKind, this.colors), this.matricesIndices && DY(IY.l.MatricesIndicesKind, this.matricesIndices), this.matricesWeights && DY(IY.l.MatricesWeightsKind, this.matricesWeights), this.matricesIndicesExtra && DY(IY.l.MatricesIndicesExtraKind, this.matricesIndicesExtra), this.matricesWeightsExtra && DY(IY.l.MatricesWeightsExtraKind, this.matricesWeightsExtra)
+          this.normals && IT(kT.i.NormalKind, this.normals), this.tangents && IT(kT.i.TangentKind, this.tangents), this.uvs && IT(kT.i.UVKind, this.uvs), this.uvs2 && IT(kT.i.UV2Kind, this.uvs2), this.uvs3 && IT(kT.i.UV3Kind, this.uvs3), this.uvs4 && IT(kT.i.UV4Kind, this.uvs4), this.uvs5 && IT(kT.i.UV5Kind, this.uvs5), this.uvs6 && IT(kT.i.UV6Kind, this.uvs6), this.colors && IT(kT.i.ColorKind, this.colors), this.matricesIndices && IT(kT.i.MatricesIndicesKind, this.matricesIndices), this.matricesWeights && IT(kT.i.MatricesWeightsKind, this.matricesWeights), this.matricesIndicesExtra && IT(kT.i.MatricesIndicesExtraKind, this.matricesIndicesExtra), this.matricesWeightsExtra && IT(kT.i.MatricesWeightsExtraKind, this.matricesWeightsExtra)
         }
         clone() {
-          const rY = this.serialize();
-          return YY.Parse(rY)
+          const oT = this.serialize();
+          return TT.Parse(oT)
         }
         serialize() {
-          const YY = {};
-          if (this.positions && (YY.positions = Array.from(this.positions)), this.normals && (YY.normals = Array.from(this.normals)), this.tangents && (YY.tangents = Array.from(this.tangents)), this.uvs && (YY.uvs = Array.from(this.uvs)), this.uvs2 && (YY.uvs2 = Array.from(this.uvs2)), this.uvs3 && (YY.uvs3 = Array.from(this.uvs3)), this.uvs4 && (YY.uvs4 = Array.from(this.uvs4)), this.uvs5 && (YY.uvs5 = Array.from(this.uvs5)), this.uvs6 && (YY.uvs6 = Array.from(this.uvs6)), this.colors && (YY.colors = Array.from(this.colors), YY.hasVertexAlpha = this.hasVertexAlpha), this.matricesIndices && (YY.matricesIndices = Array.from(this.matricesIndices), YY.matricesIndicesExpanded = !0), this.matricesWeights && (YY.matricesWeights = Array.from(this.matricesWeights)), this.matricesIndicesExtra && (YY.matricesIndicesExtra = Array.from(this.matricesIndicesExtra), YY.matricesIndicesExtraExpanded = !0), this.matricesWeightsExtra && (YY.matricesWeightsExtra = Array.from(this.matricesWeightsExtra)), YY.indices = this.indices ? Array.from(this.indices) : [], this.materialInfos) {
-            YY.materialInfos = [];
-            for (const rY of this.materialInfos) {
-              const DY = {
-                indexStart: rY.indexStart,
-                indexCount: rY.indexCount,
-                materialIndex: rY.materialIndex,
-                verticesStart: rY.verticesStart,
-                verticesCount: rY.verticesCount
+          const TT = {};
+          if (this.positions && (TT.positions = Array.from(this.positions)), this.normals && (TT.normals = Array.from(this.normals)), this.tangents && (TT.tangents = Array.from(this.tangents)), this.uvs && (TT.uvs = Array.from(this.uvs)), this.uvs2 && (TT.uvs2 = Array.from(this.uvs2)), this.uvs3 && (TT.uvs3 = Array.from(this.uvs3)), this.uvs4 && (TT.uvs4 = Array.from(this.uvs4)), this.uvs5 && (TT.uvs5 = Array.from(this.uvs5)), this.uvs6 && (TT.uvs6 = Array.from(this.uvs6)), this.colors && (TT.colors = Array.from(this.colors), TT.hasVertexAlpha = this.hasVertexAlpha), this.matricesIndices && (TT.matricesIndices = Array.from(this.matricesIndices), TT.matricesIndicesExpanded = !0), this.matricesWeights && (TT.matricesWeights = Array.from(this.matricesWeights)), this.matricesIndicesExtra && (TT.matricesIndicesExtra = Array.from(this.matricesIndicesExtra), TT.matricesIndicesExtraExpanded = !0), this.matricesWeightsExtra && (TT.matricesWeightsExtra = Array.from(this.matricesWeightsExtra)), TT.indices = this.indices ? Array.from(this.indices) : [], this.materialInfos) {
+            TT.materialInfos = [];
+            for (const oT of this.materialInfos) {
+              const IT = {
+                indexStart: oT.indexStart,
+                indexCount: oT.indexCount,
+                materialIndex: oT.materialIndex,
+                verticesStart: oT.verticesStart,
+                verticesCount: oT.verticesCount
               };
-              YY.materialInfos.push(DY)
+              TT.materialInfos.push(IT)
             }
           }
-          return YY
+          return TT
         }
-        static ExtractFromMesh(rY, DY, FY) {
-          return YY._ExtractFrom(rY, DY, FY)
+        static ExtractFromMesh(oT, IT, iT) {
+          return TT._ExtractFrom(oT, IT, iT)
         }
-        static ExtractFromGeometry(rY, DY, FY) {
-          return YY._ExtractFrom(rY, DY, FY)
+        static ExtractFromGeometry(oT, IT, iT) {
+          return TT._ExtractFrom(oT, IT, iT)
         }
-        static _ExtractFrom(rY, DY, FY) {
-          const AY = new YY;
-          if (rY.isVerticesDataPresent(IY.l.PositionKind) && (AY.positions = rY.getVerticesData(IY.l.PositionKind, DY, FY)), rY.isVerticesDataPresent(IY.l.NormalKind) && (AY.normals = rY.getVerticesData(IY.l.NormalKind, DY, FY)), rY.isVerticesDataPresent(IY.l.TangentKind) && (AY.tangents = rY.getVerticesData(IY.l.TangentKind, DY, FY)), rY.isVerticesDataPresent(IY.l.UVKind) && (AY.uvs = rY.getVerticesData(IY.l.UVKind, DY, FY)), rY.isVerticesDataPresent(IY.l.UV2Kind) && (AY.uvs2 = rY.getVerticesData(IY.l.UV2Kind, DY, FY)), rY.isVerticesDataPresent(IY.l.UV3Kind) && (AY.uvs3 = rY.getVerticesData(IY.l.UV3Kind, DY, FY)), rY.isVerticesDataPresent(IY.l.UV4Kind) && (AY.uvs4 = rY.getVerticesData(IY.l.UV4Kind, DY, FY)), rY.isVerticesDataPresent(IY.l.UV5Kind) && (AY.uvs5 = rY.getVerticesData(IY.l.UV5Kind, DY, FY)), rY.isVerticesDataPresent(IY.l.UV6Kind) && (AY.uvs6 = rY.getVerticesData(IY.l.UV6Kind, DY, FY)), rY.isVerticesDataPresent(IY.l.ColorKind)) {
-            const YY = rY.geometry || rY,
-              RY = YY.getVertexBuffer(IY.l.ColorKind),
-              OY = YY.getVerticesData(IY.l.ColorKind, DY, FY);
-            if (3 === RY.getSize()) {
-              const YY = new Float32Array(4 * OY.length / 3);
-              for (let rY = 0, DY = 0; rY < OY.length; rY += 3, DY += 4) YY[DY] = OY[rY], YY[DY + 1] = OY[rY + 1], YY[DY + 2] = OY[rY + 2], YY[DY + 3] = 1;
-              AY.colors = YY
+        static _ExtractFrom(oT, IT, iT) {
+          const zT = new TT;
+          if (oT.isVerticesDataPresent(kT.i.PositionKind) && (zT.positions = oT.getVerticesData(kT.i.PositionKind, IT, iT)), oT.isVerticesDataPresent(kT.i.NormalKind) && (zT.normals = oT.getVerticesData(kT.i.NormalKind, IT, iT)), oT.isVerticesDataPresent(kT.i.TangentKind) && (zT.tangents = oT.getVerticesData(kT.i.TangentKind, IT, iT)), oT.isVerticesDataPresent(kT.i.UVKind) && (zT.uvs = oT.getVerticesData(kT.i.UVKind, IT, iT)), oT.isVerticesDataPresent(kT.i.UV2Kind) && (zT.uvs2 = oT.getVerticesData(kT.i.UV2Kind, IT, iT)), oT.isVerticesDataPresent(kT.i.UV3Kind) && (zT.uvs3 = oT.getVerticesData(kT.i.UV3Kind, IT, iT)), oT.isVerticesDataPresent(kT.i.UV4Kind) && (zT.uvs4 = oT.getVerticesData(kT.i.UV4Kind, IT, iT)), oT.isVerticesDataPresent(kT.i.UV5Kind) && (zT.uvs5 = oT.getVerticesData(kT.i.UV5Kind, IT, iT)), oT.isVerticesDataPresent(kT.i.UV6Kind) && (zT.uvs6 = oT.getVerticesData(kT.i.UV6Kind, IT, iT)), oT.isVerticesDataPresent(kT.i.ColorKind)) {
+            const TT = oT.geometry || oT,
+              WT = TT.getVertexBuffer(kT.i.ColorKind),
+              XT = TT.getVerticesData(kT.i.ColorKind, IT, iT);
+            if (3 === WT.getSize()) {
+              const TT = new Float32Array(4 * XT.length / 3);
+              for (let oT = 0, IT = 0; oT < XT.length; oT += 3, IT += 4) TT[IT] = XT[oT], TT[IT + 1] = XT[oT + 1], TT[IT + 2] = XT[oT + 2], TT[IT + 3] = 1;
+              zT.colors = TT
             } else {
-              if (4 !== RY.getSize()) throw new Error(`Unexpected number of color components: ${RY.getSize()}`);
-              AY.colors = OY
+              if (4 !== WT.getSize()) throw new Error(`Unexpected number of color components: ${WT.getSize()}`);
+              zT.colors = XT
             }
           }
-          return rY.isVerticesDataPresent(IY.l.MatricesIndicesKind) && (AY.matricesIndices = rY.getVerticesData(IY.l.MatricesIndicesKind, DY, FY)), rY.isVerticesDataPresent(IY.l.MatricesWeightsKind) && (AY.matricesWeights = rY.getVerticesData(IY.l.MatricesWeightsKind, DY, FY)), rY.isVerticesDataPresent(IY.l.MatricesIndicesExtraKind) && (AY.matricesIndicesExtra = rY.getVerticesData(IY.l.MatricesIndicesExtraKind, DY, FY)), rY.isVerticesDataPresent(IY.l.MatricesWeightsExtraKind) && (AY.matricesWeightsExtra = rY.getVerticesData(IY.l.MatricesWeightsExtraKind, DY, FY)), AY.indices = rY.XIY(DY, FY), AY
+          return oT.isVerticesDataPresent(kT.i.MatricesIndicesKind) && (zT.matricesIndices = oT.getVerticesData(kT.i.MatricesIndicesKind, IT, iT)), oT.isVerticesDataPresent(kT.i.MatricesWeightsKind) && (zT.matricesWeights = oT.getVerticesData(kT.i.MatricesWeightsKind, IT, iT)), oT.isVerticesDataPresent(kT.i.MatricesIndicesExtraKind) && (zT.matricesIndicesExtra = oT.getVerticesData(kT.i.MatricesIndicesExtraKind, IT, iT)), oT.isVerticesDataPresent(kT.i.MatricesWeightsExtraKind) && (zT.matricesWeightsExtra = oT.getVerticesData(kT.i.MatricesWeightsExtraKind, IT, iT)), zT.indices = oT.hWT(IT, iT), zT
         }
-        static CreateRibbon(YY) {
-          throw (0, RY.i)("ribbonBuilder")
+        static CreateRibbon(TT) {
+          throw (0, WT.k)("ribbonBuilder")
         }
-        static CreateBox(YY) {
-          throw (0, RY.i)("boxBuilder")
+        static CreateBox(TT) {
+          throw (0, WT.k)("boxBuilder")
         }
-        static CreateTiledBox(YY) {
-          throw (0, RY.i)("tiledBoxBuilder")
+        static CreateTiledBox(TT) {
+          throw (0, WT.k)("tiledBoxBuilder")
         }
-        static CreateTiledPlane(YY) {
-          throw (0, RY.i)("tiledPlaneBuilder")
+        static CreateTiledPlane(TT) {
+          throw (0, WT.k)("tiledPlaneBuilder")
         }
-        static CreateSphere(YY) {
-          throw (0, RY.i)("sphereBuilder")
+        static CreateSphere(TT) {
+          throw (0, WT.k)("sphereBuilder")
         }
-        static CreateCylinder(YY) {
-          throw (0, RY.i)("cylinderBuilder")
+        static CreateCylinder(TT) {
+          throw (0, WT.k)("cylinderBuilder")
         }
-        static CreateTorus(YY) {
-          throw (0, RY.i)("torusBuilder")
+        static CreateTorus(TT) {
+          throw (0, WT.k)("torusBuilder")
         }
-        static CreateLineSystem(YY) {
-          throw (0, RY.i)("linesBuilder")
+        static CreateLineSystem(TT) {
+          throw (0, WT.k)("linesBuilder")
         }
-        static CreateDashedLines(YY) {
-          throw (0, RY.i)("linesBuilder")
+        static CreateDashedLines(TT) {
+          throw (0, WT.k)("linesBuilder")
         }
-        static CreateGround(YY) {
-          throw (0, RY.i)("groundBuilder")
+        static CreateGround(TT) {
+          throw (0, WT.k)("groundBuilder")
         }
-        static CreateTiledGround(YY) {
-          throw (0, RY.i)("groundBuilder")
+        static CreateTiledGround(TT) {
+          throw (0, WT.k)("groundBuilder")
         }
-        static CreateGroundFromHeightMap(YY) {
-          throw (0, RY.i)("groundBuilder")
+        static CreateGroundFromHeightMap(TT) {
+          throw (0, WT.k)("groundBuilder")
         }
-        static CreatePlane(YY) {
-          throw (0, RY.i)("planeBuilder")
+        static CreatePlane(TT) {
+          throw (0, WT.k)("planeBuilder")
         }
-        static CreateDisc(YY) {
-          throw (0, RY.i)("discBuilder")
+        static CreateDisc(TT) {
+          throw (0, WT.k)("discBuilder")
         }
-        static CreatePolygon(YY, rY, DY, FY, AY, IY, OY) {
-          throw (0, RY.i)("polygonBuilder")
+        static CreatePolygon(TT, oT, IT, iT, zT, kT, XT) {
+          throw (0, WT.k)("polygonBuilder")
         }
-        static CreateIcoSphere(YY) {
-          throw (0, RY.i)("icoSphereBuilder")
+        static CreateIcoSphere(TT) {
+          throw (0, WT.k)("icoSphereBuilder")
         }
-        static CreatePolyhedron(YY) {
-          throw (0, RY.i)("polyhedronBuilder")
+        static CreatePolyhedron(TT) {
+          throw (0, WT.k)("polyhedronBuilder")
         }
         static CreateCapsule() {
-          arguments.length > 0 && void 0 !== arguments[0] || AY.r.Up();
-          throw (0, RY.i)("capsuleBuilder")
+          arguments.length > 0 && void 0 !== arguments[0] || zT.m.Up();
+          throw (0, WT.k)("capsuleBuilder")
         }
-        static CreateTorusKnot(YY) {
-          throw (0, RY.i)("torusKnotBuilder")
+        static CreateTorusKnot(TT) {
+          throw (0, WT.k)("torusKnotBuilder")
         }
-        static ComputeNormals(YY, rY, DY, FY) {
-          let IY, RY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY, WY, EY, mY, VY, SY, lY, TY, eY, NY = !1,
-            BY = !1,
-            cY = !1,
-            KY = !1,
-            HY = 1,
-            zY = 0,
-            ZY = null;
-          FY && (NY = !!FY.facetNormals, BY = !!FY.facetPositions, cY = !!FY.facetPartitioning, HY = !0 === FY.useRightHandedSystem ? -1 : 1, zY = FY.ratio || 0, KY = !!FY.depthSort, ZY = FY.distanceTo, KY && void 0 === ZY && (ZY = AY.r.Zero()));
-          let CY = 0,
-            fY = 0,
-            jY = 0,
-            hY = 0;
-          for (cY && FY && FY.bbSize && (CY = FY.subDiv.X * zY / FY.bbSize.x, fY = FY.subDiv.Y * zY / FY.bbSize.y, jY = FY.subDiv.Z * zY / FY.bbSize.z, hY = FY.subDiv.max * FY.subDiv.max, FY.facetPartitioning.length = 0), IY = 0; IY < YY.length; IY++) DY[IY] = 0;
-          const dY = rY.length / 3 | 0;
-          for (IY = 0; IY < dY; IY++) {
-            if (oY = 3 * rY[3 * IY], WY = oY + 1, EY = oY + 2, mY = 3 * rY[3 * IY + 1], VY = mY + 1, SY = mY + 2, lY = 3 * rY[3 * IY + 2], TY = lY + 1, eY = lY + 2, RY = YY[oY] - YY[mY], OY = YY[WY] - YY[VY], gY = YY[EY] - YY[SY], aY = YY[lY] - YY[mY], vY = YY[TY] - YY[VY], uY = YY[eY] - YY[SY], sY = HY * (OY * uY - gY * vY), iY = HY * (gY * aY - RY * uY), yY = HY * (RY * vY - OY * aY), QY = Math.sqrt(sY * sY + iY * iY + yY * yY), QY = 0 === QY ? 1 : QY, sY /= QY, iY /= QY, yY /= QY, NY && FY && (FY.facetNormals[IY].x = sY, FY.facetNormals[IY].y = iY, FY.facetNormals[IY].z = yY), BY && FY && (FY.facetPositions[IY].x = (YY[oY] + YY[mY] + YY[lY]) / 3, FY.facetPositions[IY].y = (YY[WY] + YY[VY] + YY[TY]) / 3, FY.facetPositions[IY].z = (YY[EY] + YY[SY] + YY[eY]) / 3), cY && FY) {
-              const rY = Math.floor((FY.facetPositions[IY].x - FY.bInfo.minimum.x * zY) * CY),
-                DY = Math.floor((FY.facetPositions[IY].y - FY.bInfo.minimum.y * zY) * fY),
-                AY = Math.floor((FY.facetPositions[IY].z - FY.bInfo.minimum.z * zY) * jY),
-                RY = Math.floor((YY[oY] - FY.bInfo.minimum.x * zY) * CY),
-                OY = Math.floor((YY[WY] - FY.bInfo.minimum.y * zY) * fY),
-                gY = Math.floor((YY[EY] - FY.bInfo.minimum.z * zY) * jY),
-                aY = Math.floor((YY[mY] - FY.bInfo.minimum.x * zY) * CY),
-                vY = Math.floor((YY[VY] - FY.bInfo.minimum.y * zY) * fY),
-                uY = Math.floor((YY[SY] - FY.bInfo.minimum.z * zY) * jY),
-                sY = Math.floor((YY[lY] - FY.bInfo.minimum.x * zY) * CY),
-                iY = Math.floor((YY[TY] - FY.bInfo.minimum.y * zY) * fY),
-                yY = Math.floor((YY[eY] - FY.bInfo.minimum.z * zY) * jY),
-                QY = RY + FY.subDiv.max * OY + hY * gY,
-                NY = aY + FY.subDiv.max * vY + hY * uY,
-                BY = sY + FY.subDiv.max * iY + hY * yY,
-                cY = rY + FY.subDiv.max * DY + hY * AY;
-              FY.facetPartitioning[cY] = FY.facetPartitioning[cY] ? FY.facetPartitioning[cY] : [], FY.facetPartitioning[QY] = FY.facetPartitioning[QY] ? FY.facetPartitioning[QY] : [], FY.facetPartitioning[NY] = FY.facetPartitioning[NY] ? FY.facetPartitioning[NY] : [], FY.facetPartitioning[BY] = FY.facetPartitioning[BY] ? FY.facetPartitioning[BY] : [], FY.facetPartitioning[QY].push(IY), NY != QY && FY.facetPartitioning[NY].push(IY), BY != NY && BY != QY && FY.facetPartitioning[BY].push(IY), cY != QY && cY != NY && cY != BY && FY.facetPartitioning[cY].push(IY)
+        static ComputeNormals(TT, oT, IT, iT) {
+          let kT, WT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT, rT, AT, gT, hT, wT, mT, eT, RT, uT = !1,
+            vT = !1,
+            ET = !1,
+            fT = !1,
+            CT = 1,
+            jT = 0,
+            JT = null;
+          iT && (uT = !!iT.facetNormals, vT = !!iT.facetPositions, ET = !!iT.facetPartitioning, CT = !0 === iT.useRightHandedSystem ? -1 : 1, jT = iT.ratio || 0, fT = !!iT.depthSort, JT = iT.distanceTo, fT && void 0 === JT && (JT = zT.m.Zero()));
+          let UT = 0,
+            aT = 0,
+            YT = 0,
+            QT = 0;
+          for (ET && iT && iT.bbSize && (UT = iT.subDiv.X * jT / iT.bbSize.x, aT = iT.subDiv.Y * jT / iT.bbSize.y, YT = iT.subDiv.Z * jT / iT.bbSize.z, QT = iT.subDiv.max * iT.subDiv.max, iT.facetPartitioning.length = 0), kT = 0; kT < TT.length; kT++) IT[kT] = 0;
+          const OT = oT.length / 3 | 0;
+          for (kT = 0; kT < OT; kT++) {
+            if (MT = 3 * oT[3 * kT], rT = MT + 1, AT = MT + 2, gT = 3 * oT[3 * kT + 1], hT = gT + 1, wT = gT + 2, mT = 3 * oT[3 * kT + 2], eT = mT + 1, RT = mT + 2, WT = TT[MT] - TT[gT], XT = TT[rT] - TT[hT], BT = TT[AT] - TT[wT], FT = TT[mT] - TT[gT], ST = TT[eT] - TT[hT], DT = TT[RT] - TT[wT], LT = CT * (XT * DT - BT * ST), xT = CT * (BT * FT - WT * DT), cT = CT * (WT * ST - XT * FT), KT = Math.sqrt(LT * LT + xT * xT + cT * cT), KT = 0 === KT ? 1 : KT, LT /= KT, xT /= KT, cT /= KT, uT && iT && (iT.facetNormals[kT].x = LT, iT.facetNormals[kT].y = xT, iT.facetNormals[kT].z = cT), vT && iT && (iT.facetPositions[kT].x = (TT[MT] + TT[gT] + TT[mT]) / 3, iT.facetPositions[kT].y = (TT[rT] + TT[hT] + TT[eT]) / 3, iT.facetPositions[kT].z = (TT[AT] + TT[wT] + TT[RT]) / 3), ET && iT) {
+              const oT = Math.floor((iT.facetPositions[kT].x - iT.bInfo.minimum.x * jT) * UT),
+                IT = Math.floor((iT.facetPositions[kT].y - iT.bInfo.minimum.y * jT) * aT),
+                zT = Math.floor((iT.facetPositions[kT].z - iT.bInfo.minimum.z * jT) * YT),
+                WT = Math.floor((TT[MT] - iT.bInfo.minimum.x * jT) * UT),
+                XT = Math.floor((TT[rT] - iT.bInfo.minimum.y * jT) * aT),
+                BT = Math.floor((TT[AT] - iT.bInfo.minimum.z * jT) * YT),
+                FT = Math.floor((TT[gT] - iT.bInfo.minimum.x * jT) * UT),
+                ST = Math.floor((TT[hT] - iT.bInfo.minimum.y * jT) * aT),
+                DT = Math.floor((TT[wT] - iT.bInfo.minimum.z * jT) * YT),
+                LT = Math.floor((TT[mT] - iT.bInfo.minimum.x * jT) * UT),
+                xT = Math.floor((TT[eT] - iT.bInfo.minimum.y * jT) * aT),
+                cT = Math.floor((TT[RT] - iT.bInfo.minimum.z * jT) * YT),
+                KT = WT + iT.subDiv.max * XT + QT * BT,
+                uT = FT + iT.subDiv.max * ST + QT * DT,
+                vT = LT + iT.subDiv.max * xT + QT * cT,
+                ET = oT + iT.subDiv.max * IT + QT * zT;
+              iT.facetPartitioning[ET] = iT.facetPartitioning[ET] ? iT.facetPartitioning[ET] : [], iT.facetPartitioning[KT] = iT.facetPartitioning[KT] ? iT.facetPartitioning[KT] : [], iT.facetPartitioning[uT] = iT.facetPartitioning[uT] ? iT.facetPartitioning[uT] : [], iT.facetPartitioning[vT] = iT.facetPartitioning[vT] ? iT.facetPartitioning[vT] : [], iT.facetPartitioning[KT].push(kT), uT != KT && iT.facetPartitioning[uT].push(kT), vT != uT && vT != KT && iT.facetPartitioning[vT].push(kT), ET != KT && ET != uT && ET != vT && iT.facetPartitioning[ET].push(kT)
             }
-            if (KY && FY && FY.facetPositions) {
-              const YY = FY.depthSortedFacets[IY];
-              YY.ind = 3 * IY, YY.sqDistance = AY.r.DistanceSquared(FY.facetPositions[IY], ZY)
+            if (fT && iT && iT.facetPositions) {
+              const TT = iT.depthSortedFacets[kT];
+              TT.ind = 3 * kT, TT.sqDistance = zT.m.DistanceSquared(iT.facetPositions[kT], JT)
             }
-            DY[oY] += sY, DY[WY] += iY, DY[EY] += yY, DY[mY] += sY, DY[VY] += iY, DY[SY] += yY, DY[lY] += sY, DY[TY] += iY, DY[eY] += yY
+            IT[MT] += LT, IT[rT] += xT, IT[AT] += cT, IT[gT] += LT, IT[hT] += xT, IT[wT] += cT, IT[mT] += LT, IT[eT] += xT, IT[RT] += cT
           }
-          for (IY = 0; IY < DY.length / 3; IY++) sY = DY[3 * IY], iY = DY[3 * IY + 1], yY = DY[3 * IY + 2], QY = Math.sqrt(sY * sY + iY * iY + yY * yY), QY = 0 === QY ? 1 : QY, sY /= QY, iY /= QY, yY /= QY, DY[3 * IY] = sY, DY[3 * IY + 1] = iY, DY[3 * IY + 2] = yY
+          for (kT = 0; kT < IT.length / 3; kT++) LT = IT[3 * kT], xT = IT[3 * kT + 1], cT = IT[3 * kT + 2], KT = Math.sqrt(LT * LT + xT * xT + cT * cT), KT = 0 === KT ? 1 : KT, LT /= KT, xT /= KT, cT /= KT, IT[3 * kT] = LT, IT[3 * kT + 1] = xT, IT[3 * kT + 2] = cT
         }
-        static _ComputeSides(rY, DY, FY, IY, RY, OY, gY) {
-          const aY = FY.length,
-            vY = IY.length;
-          let uY, sY;
-          switch (rY = rY || YY.DEFAULTSIDE) {
-            case YY.FRONTSIDE:
+        static _ComputeSides(oT, IT, iT, kT, WT, XT, BT) {
+          const FT = iT.length,
+            ST = kT.length;
+          let DT, LT;
+          switch (oT = oT || TT.DEFAULTSIDE) {
+            case TT.FRONTSIDE:
               break;
-            case YY.BACKSIDE:
-              for (uY = 0; uY < aY; uY += 3) {
-                const YY = FY[uY];
-                FY[uY] = FY[uY + 2], FY[uY + 2] = YY
+            case TT.BACKSIDE:
+              for (DT = 0; DT < FT; DT += 3) {
+                const TT = iT[DT];
+                iT[DT] = iT[DT + 2], iT[DT + 2] = TT
               }
-              for (sY = 0; sY < vY; sY++) IY[sY] = -IY[sY];
+              for (LT = 0; LT < ST; LT++) kT[LT] = -kT[LT];
               break;
-            case YY.DOUBLESIDE: {
-              const YY = DY.length,
-                rY = YY / 3;
-              for (let FY = 0; FY < YY; FY++) DY[YY + FY] = DY[FY];
-              for (uY = 0; uY < aY; uY += 3) FY[uY + aY] = FY[uY + 2] + rY, FY[uY + 1 + aY] = FY[uY + 1] + rY, FY[uY + 2 + aY] = FY[uY] + rY;
-              for (sY = 0; sY < vY; sY++) IY[vY + sY] = -IY[sY];
-              const iY = RY.length;
-              let yY;
-              for (yY = 0; yY < iY; yY++) RY[yY + iY] = RY[yY];
-              for (OY = OY || new AY.v(0, 0, 1, 1), gY = gY || new AY.v(0, 0, 1, 1), yY = 0, uY = 0; uY < iY / 2; uY++) RY[yY] = OY.x + (OY.z - OY.x) * RY[yY], RY[yY + 1] = OY.y + (OY.w - OY.y) * RY[yY + 1], RY[yY + iY] = gY.x + (gY.z - gY.x) * RY[yY + iY], RY[yY + iY + 1] = gY.y + (gY.w - gY.y) * RY[yY + iY + 1], yY += 2;
+            case TT.DOUBLESIDE: {
+              const TT = IT.length,
+                oT = TT / 3;
+              for (let iT = 0; iT < TT; iT++) IT[TT + iT] = IT[iT];
+              for (DT = 0; DT < FT; DT += 3) iT[DT + FT] = iT[DT + 2] + oT, iT[DT + 1 + FT] = iT[DT + 1] + oT, iT[DT + 2 + FT] = iT[DT] + oT;
+              for (LT = 0; LT < ST; LT++) kT[ST + LT] = -kT[LT];
+              const xT = WT.length;
+              let cT;
+              for (cT = 0; cT < xT; cT++) WT[cT + xT] = WT[cT];
+              for (XT = XT || new zT.n(0, 0, 1, 1), BT = BT || new zT.n(0, 0, 1, 1), cT = 0, DT = 0; DT < xT / 2; DT++) WT[cT] = XT.x + (XT.z - XT.x) * WT[cT], WT[cT + 1] = XT.y + (XT.w - XT.y) * WT[cT + 1], WT[cT + xT] = BT.x + (BT.z - BT.x) * WT[cT + xT], WT[cT + xT + 1] = BT.y + (BT.w - BT.y) * WT[cT + xT + 1], cT += 2;
               break
             }
           }
         }
-        static Parse(rY) {
-          const DY = new YY,
-            FY = rY.positions;
-          FY && DY.set(FY, IY.l.PositionKind);
-          const AY = rY.normals;
-          AY && DY.set(AY, IY.l.NormalKind);
-          const RY = rY.tangents;
-          RY && DY.set(RY, IY.l.TangentKind);
-          const gY = rY.uvs;
-          gY && DY.set(gY, IY.l.UVKind);
-          const aY = rY.uvs2;
-          aY && DY.set(aY, IY.l.UV2Kind);
-          const vY = rY.uvs3;
-          vY && DY.set(vY, IY.l.UV3Kind);
-          const uY = rY.uvs4;
-          uY && DY.set(uY, IY.l.UV4Kind);
-          const sY = rY.uvs5;
-          sY && DY.set(sY, IY.l.UV5Kind);
-          const yY = rY.uvs6;
-          yY && DY.set(yY, IY.l.UV6Kind);
-          const QY = rY.colors;
-          QY && (DY.set(OY.d.CheckColors4(QY, FY.length / 3), IY.l.ColorKind), void 0 !== rY.hasVertexAlpha && (DY.hasVertexAlpha = rY.hasVertexAlpha));
-          const oY = rY.matricesIndices;
-          oY && DY.set(oY, IY.l.MatricesIndicesKind);
-          const WY = rY.matricesWeights;
-          WY && DY.set(WY, IY.l.MatricesWeightsKind);
-          const EY = rY.indices;
-          EY && (DY.indices = EY);
-          const mY = rY.materialInfos;
-          if (mY) {
-            DY.materialInfos = [];
-            for (const YY of mY) {
-              const rY = new iY;
-              rY.indexCount = YY.indexCount, rY.indexStart = YY.indexStart, rY.verticesCount = YY.verticesCount, rY.verticesStart = YY.verticesStart, rY.materialIndex = YY.materialIndex, DY.materialInfos.push(rY)
+        static Parse(oT) {
+          const IT = new TT,
+            iT = oT.positions;
+          iT && IT.set(iT, kT.i.PositionKind);
+          const zT = oT.normals;
+          zT && IT.set(zT, kT.i.NormalKind);
+          const WT = oT.tangents;
+          WT && IT.set(WT, kT.i.TangentKind);
+          const BT = oT.uvs;
+          BT && IT.set(BT, kT.i.UVKind);
+          const FT = oT.uvs2;
+          FT && IT.set(FT, kT.i.UV2Kind);
+          const ST = oT.uvs3;
+          ST && IT.set(ST, kT.i.UV3Kind);
+          const DT = oT.uvs4;
+          DT && IT.set(DT, kT.i.UV4Kind);
+          const LT = oT.uvs5;
+          LT && IT.set(LT, kT.i.UV5Kind);
+          const cT = oT.uvs6;
+          cT && IT.set(cT, kT.i.UV6Kind);
+          const KT = oT.colors;
+          KT && (IT.set(XT.i.CheckColors4(KT, iT.length / 3), kT.i.ColorKind), void 0 !== oT.hasVertexAlpha && (IT.hasVertexAlpha = oT.hasVertexAlpha));
+          const MT = oT.matricesIndices;
+          MT && IT.set(MT, kT.i.MatricesIndicesKind);
+          const rT = oT.matricesWeights;
+          rT && IT.set(rT, kT.i.MatricesWeightsKind);
+          const AT = oT.indices;
+          AT && (IT.indices = AT);
+          const gT = oT.materialInfos;
+          if (gT) {
+            IT.materialInfos = [];
+            for (const TT of gT) {
+              const oT = new xT;
+              oT.indexCount = TT.indexCount, oT.indexStart = TT.indexStart, oT.verticesCount = TT.verticesCount, oT.verticesStart = TT.verticesStart, oT.materialIndex = TT.materialIndex, IT.materialInfos.push(oT)
             }
           }
-          return DY
+          return IT
         }
-        static ImportVertexData(rY, DY) {
-          const FY = YY.Parse(rY);
-          DY.setAllVerticesData(FY, rY.updatable)
+        static ImportVertexData(oT, IT) {
+          const iT = TT.Parse(oT);
+          IT.setAllVerticesData(iT, oT.updatable)
         }
       }, (() => {
-        const AY = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        rY = [aY.j.filter((function() {
+        const zT = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        oT = [FT.l.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], DY = [aY.j.filter((function() {
+        }))], IT = [FT.l.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], yY = [aY.j.filter((function() {
+        }))], cT = [FT.l.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], QY = [aY.j.filter((function() {
+        }))], KT = [FT.l.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], (0, FY.i)(YY, null, rY, {
+        }))], (0, iT.h)(TT, null, oT, {
           kind: "method",
           name: "_TransformVector3Coordinates",
           static: !0,
           private: !1,
           access: {
-            has: YY => "_TransformVector3Coordinates" in YY,
-            get: YY => YY._TransformVector3Coordinates
+            has: TT => "_TransformVector3Coordinates" in TT,
+            get: TT => TT._TransformVector3Coordinates
           },
-          metadata: AY
-        }, null, oY), (0, FY.i)(YY, null, DY, {
+          metadata: zT
+        }, null, MT), (0, iT.h)(TT, null, IT, {
           kind: "method",
           name: "_TransformVector3Normals",
           static: !0,
           private: !1,
           access: {
-            has: YY => "_TransformVector3Normals" in YY,
-            get: YY => YY._TransformVector3Normals
+            has: TT => "_TransformVector3Normals" in TT,
+            get: TT => TT._TransformVector3Normals
           },
-          metadata: AY
-        }, null, oY), (0, FY.i)(YY, null, yY, {
+          metadata: zT
+        }, null, MT), (0, iT.h)(TT, null, cT, {
           kind: "method",
           name: "_TransformVector4Normals",
           static: !0,
           private: !1,
           access: {
-            has: YY => "_TransformVector4Normals" in YY,
-            get: YY => YY._TransformVector4Normals
+            has: TT => "_TransformVector4Normals" in TT,
+            get: TT => TT._TransformVector4Normals
           },
-          metadata: AY
-        }, null, oY), (0, FY.i)(YY, null, QY, {
+          metadata: zT
+        }, null, MT), (0, iT.h)(TT, null, KT, {
           kind: "method",
           name: "_FlipFaces",
           static: !0,
           private: !1,
           access: {
-            has: YY => "_FlipFaces" in YY,
-            get: YY => YY._FlipFaces
+            has: TT => "_FlipFaces" in TT,
+            get: TT => TT._FlipFaces
           },
-          metadata: AY
-        }, null, oY), AY && Object.defineProperty(YY, Symbol.metadata, {
+          metadata: zT
+        }, null, MT), zT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: AY
+          value: zT
         })
-      })(), YY.FRONTSIDE = ((0, FY.j)(YY, oY), 0), YY.BACKSIDE = 1, YY.DOUBLESIDE = 2, YY.DEFAULTSIDE = 0, YY._UniqueIdGenerator = 0, YY
+      })(), TT.FRONTSIDE = ((0, iT.j)(TT, MT), 0), TT.BACKSIDE = 1, TT.DOUBLESIDE = 2, TT.DEFAULTSIDE = 0, TT._UniqueIdGenerator = 0, TT
     })()
   },
-  39602: (YY, rY, DY) => {
-    var FY = DY(36524),
-      AY = DY(38040),
-      IY = DY(39422),
-      RY = DY(39514),
-      OY = DY(39270);
-    const gY = "bakedVertexAnimationSettingsInstanced";
+  39273: (TT, oT, IT) => {
+    var iT = IT(36118),
+      zT = IT(37660),
+      kT = IT(39091),
+      WT = IT(39192),
+      XT = IT(38923);
+    const BT = "bakedVertexAnimationSettingsInstanced";
 
-    function aY(YY) {
-      const rY = YY.bakedVertexAnimationManager?.texture?.getInternalTexture()?._bufferView;
-      return rY instanceof Float32Array || rY instanceof Uint16Array
+    function FT(TT) {
+      const oT = TT.bakedVertexAnimationManager?.texture?.getInternalTexture()?._bufferView;
+      return oT instanceof Float32Array || oT instanceof Uint16Array
     }
 
-    function vY(YY, rY, DY, FY) {
-      DY.o3(Number.POSITIVE_INFINITY), FY.o3(Number.NEGATIVE_INFINITY);
-      for (let AY = 0; AY < 3 * rY; AY += 3) {
-        const rY = YY[AY],
-          IY = YY[AY + 1],
-          RY = YY[AY + 2];
-        rY < DY.x && (DY.x = rY), IY < DY.y && (DY.y = IY), RY < DY.z && (DY.z = RY), rY > FY.x && (FY.x = rY), IY > FY.y && (FY.y = IY), RY > FY.z && (FY.z = RY)
+    function ST(TT, oT, IT, iT) {
+      IT.W8(Number.POSITIVE_INFINITY), iT.W8(Number.NEGATIVE_INFINITY);
+      for (let zT = 0; zT < 3 * oT; zT += 3) {
+        const oT = TT[zT],
+          kT = TT[zT + 1],
+          WT = TT[zT + 2];
+        oT < IT.x && (IT.x = oT), kT < IT.y && (IT.y = kT), WT < IT.z && (IT.z = WT), oT > iT.x && (iT.x = oT), kT > iT.y && (iT.y = kT), WT > iT.z && (iT.z = WT)
       }
     }
 
-    function uY(YY, rY, DY) {
-      DY && (YY.x -= YY.x * DY.x + DY.y, YY.y -= YY.y * DY.x + DY.y, YY.z -= YY.z * DY.x + DY.y, rY.x += rY.x * DY.x + DY.y, rY.y += rY.y * DY.x + DY.y, rY.z += rY.z * DY.x + DY.y)
+    function DT(TT, oT, IT) {
+      IT && (TT.x -= TT.x * IT.x + IT.y, TT.y -= TT.y * IT.x + IT.y, TT.z -= TT.z * IT.x + IT.y, oT.x += oT.x * IT.x + IT.y, oT.y += oT.y * IT.x + IT.y, oT.z += oT.z * IT.x + IT.y)
     }
 
-    function sY(YY, rY, DY, AY, IY) {
-      const RY = FY.n.xy[7],
-        OY = FY.n.xy[8];
-      for (let gY = 0; gY < 2; ++gY)
-        for (let aY = 0; aY < 2; ++aY)
-          for (let vY = 0; vY < 2; ++vY) RY.set(gY ? rY.x : YY.x, aY ? rY.y : YY.y, vY ? rY.z : YY.z), FY.r.TransformCoordinatesToRef(RY, DY, OY), AY.minimizeInPlace(OY), IY.maximizeInPlace(OY)
+    function LT(TT, oT, IT, zT, kT) {
+      const WT = iT.i.sc[7],
+        XT = iT.i.sc[8];
+      for (let BT = 0; BT < 2; ++BT)
+        for (let FT = 0; FT < 2; ++FT)
+          for (let ST = 0; ST < 2; ++ST) WT.set(BT ? oT.x : TT.x, FT ? oT.y : TT.y, ST ? oT.z : TT.z), iT.m.TransformCoordinatesToRef(WT, IT, XT), zT.minimizeInPlace(XT), kT.maximizeInPlace(XT)
     }
 
-    function iY(YY, rY, DY, AY, IY) {
-      const RY = FY.n.xy[7];
-      for (let OY = 0; OY < 3 * rY; OY += 3) FY.r.TransformCoordinatesFromFloatsToRef(YY[OY], YY[OY + 1], YY[OY + 2], DY, RY), AY.minimizeInPlace(RY), IY.maximizeInPlace(RY)
+    function xT(TT, oT, IT, zT, kT) {
+      const WT = iT.i.sc[7];
+      for (let XT = 0; XT < 3 * oT; XT += 3) iT.m.TransformCoordinatesFromFloatsToRef(TT[XT], TT[XT + 1], TT[XT + 2], IT, WT), zT.minimizeInPlace(WT), kT.maximizeInPlace(WT)
     }
-    let yY = !1;
-    yY || (yY = !0, RY.c.prototype.thinInstanceAdd = function(YY) {
-      let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (!this.hT().ky().getCaps().instancedArrays) return AY.d.Error("Thin Instances are not supported on this device as Instanced Array extension not supported"), -1;
-      this._thinInstanceUpdateBufferSize("matrix", Array.isArray(YY) ? YY.length : 1);
-      const DY = this._thinInstanceDataStorage.instancesCount;
-      if (Array.isArray(YY))
-        for (let FY = 0; FY < YY.length; ++FY) this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, YY[FY], FY === YY.length - 1 && rY);
-      else this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, YY, rY);
-      return DY
-    }, RY.c.prototype.thinInstanceAddSelf = function() {
-      let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return this.thinInstanceAdd(FY.e.IdentityReadOnly, YY)
-    }, RY.c.prototype.thinInstanceRegisterAttribute = function(YY, rY) {
-      YY === OY.l.ColorKind && (YY = OY.l.ColorInstanceKind), this.removeVerticesData(YY), this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.strides[YY] = rY, this._userThinInstanceBuffersStorage.sizes[YY] = rY * Math.max(32, this._thinInstanceDataStorage.instancesCount), this._userThinInstanceBuffersStorage.data[YY] = new Float32Array(this._userThinInstanceBuffersStorage.sizes[YY]), this._userThinInstanceBuffersStorage.vertexBuffers[YY] = new OY.l(this.ky(), this._userThinInstanceBuffersStorage.data[YY], YY, !0, !1, rY, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[YY])
-    }, RY.c.prototype.thinInstanceSetMatrixAt = function(YY, rY) {
-      let DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      if (!this._thinInstanceDataStorage.matrixData || YY >= this._thinInstanceDataStorage.instancesCount) return !1;
-      const FY = this._thinInstanceDataStorage.matrixData;
-      return rY.copyToArray(FY, 16 * YY), this._thinInstanceDataStorage.worldMatrices && (this._thinInstanceDataStorage.worldMatrices[YY] = rY), DY && (this.T_("matrix"), this.Py || this.thinInstanceRefreshBoundingInfo(!1)), !0
-    }, RY.c.prototype.thinInstanceSetAttributeAt = function(YY, rY, DY) {
-      let FY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      return YY === OY.l.ColorKind && (YY = OY.l.ColorInstanceKind), !(!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.data[YY] || rY >= this._thinInstanceDataStorage.instancesCount) && (this._thinInstanceUpdateBufferSize(YY, 0), this._userThinInstanceBuffersStorage.data[YY].set(DY, rY * this._userThinInstanceBuffersStorage.strides[YY]), FY && this.T_(YY), !0)
-    }, Object.defineProperty(RY.c.prototype, "R_", {
+    let cT = !1;
+    cT || (cT = !0, WT.e.prototype.thinInstanceAdd = function(TT) {
+      let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (!this.pC().Zc().getCaps().instancedArrays) return zT.d.Error("Thin Instances are not supported on this device as Instanced Array extension not supported"), -1;
+      this._thinInstanceUpdateBufferSize("matrix", Array.isArray(TT) ? TT.length : 1);
+      const IT = this._thinInstanceDataStorage.instancesCount;
+      if (Array.isArray(TT))
+        for (let iT = 0; iT < TT.length; ++iT) this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, TT[iT], iT === TT.length - 1 && oT);
+      else this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, TT, oT);
+      return IT
+    }, WT.e.prototype.thinInstanceAddSelf = function() {
+      let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return this.thinInstanceAdd(iT.b.IdentityReadOnly, TT)
+    }, WT.e.prototype.thinInstanceRegisterAttribute = function(TT, oT) {
+      TT === XT.i.ColorKind && (TT = XT.i.ColorInstanceKind), this.removeVerticesData(TT), this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.strides[TT] = oT, this._userThinInstanceBuffersStorage.sizes[TT] = oT * Math.max(32, this._thinInstanceDataStorage.instancesCount), this._userThinInstanceBuffersStorage.data[TT] = new Float32Array(this._userThinInstanceBuffersStorage.sizes[TT]), this._userThinInstanceBuffersStorage.vertexBuffers[TT] = new XT.i(this.Zc(), this._userThinInstanceBuffersStorage.data[TT], TT, !0, !1, oT, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[TT])
+    }, WT.e.prototype.thinInstanceSetMatrixAt = function(TT, oT) {
+      let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      if (!this._thinInstanceDataStorage.matrixData || TT >= this._thinInstanceDataStorage.instancesCount) return !1;
+      const iT = this._thinInstanceDataStorage.matrixData;
+      return oT.copyToArray(iT, 16 * TT), this._thinInstanceDataStorage.worldMatrices && (this._thinInstanceDataStorage.worldMatrices[TT] = oT), IT && (this.X3("matrix"), this.Gc || this.thinInstanceRefreshBoundingInfo(!1)), !0
+    }, WT.e.prototype.thinInstanceSetAttributeAt = function(TT, oT, IT) {
+      let iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      return TT === XT.i.ColorKind && (TT = XT.i.ColorInstanceKind), !(!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.data[TT] || oT >= this._thinInstanceDataStorage.instancesCount) && (this._thinInstanceUpdateBufferSize(TT, 0), this._userThinInstanceBuffersStorage.data[TT].set(IT, oT * this._userThinInstanceBuffersStorage.strides[TT]), iT && this.X3(TT), !0)
+    }, Object.defineProperty(WT.e.prototype, "W9", {
       get: function() {
         return this._thinInstanceDataStorage.instancesCount
       },
-      set: function(YY) {
-        const rY = this._thinInstanceDataStorage.matrixData ?? this.source?._thinInstanceDataStorage.matrixData;
-        YY <= (rY ? rY.length / 16 : 0) && (this._thinInstanceDataStorage.instancesCount = YY)
+      set: function(TT) {
+        const oT = this._thinInstanceDataStorage.matrixData ?? this.source?._thinInstanceDataStorage.matrixData;
+        TT <= (oT ? oT.length / 16 : 0) && (this._thinInstanceDataStorage.instancesCount = TT)
       },
       enumerable: !0,
       configurable: !0
-    }), RY.c.prototype._thinInstanceCreateMatrixBuffer = function(YY, rY) {
-      let DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const FY = new OY.c(this.ky(), rY, !DY, 16, !1, !0);
-      for (let AY = 0; AY < 4; AY++) this.setVerticesBuffer(FY.createVertexBuffer(YY + AY, 4 * AY, 4));
-      return FY
-    }, RY.c.prototype.j_ = function(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        FY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      if (DY = DY || 16, "matrix" === YY) this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = null, this._thinInstanceDataStorage.matrixBufferSize = rY ? rY.length : 32 * DY, this._thinInstanceDataStorage.matrixData = rY, this._thinInstanceDataStorage.worldMatrices = null, null !== rY ? (this._thinInstanceDataStorage.instancesCount = rY.length / DY, this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", rY, FY), this.Py || this.thinInstanceRefreshBoundingInfo(!1)) : (this._thinInstanceDataStorage.instancesCount = 0, this.Py || this.refreshBoundingInfo());
-      else if ("previousMatrix" === YY) this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null, this._thinInstanceDataStorage.previousMatrixData = rY, null !== rY && (this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", rY, FY));
-      else if ("splatIndex" === YY && rY) {
-        this._thinInstanceInitializeUserStorage(), this._thinInstanceDataStorage.instancesCount = rY.length / DY, this._userThinInstanceBuffersStorage.data[YY] = rY, this._userThinInstanceBuffersStorage.strides[YY] = DY, this._userThinInstanceBuffersStorage.sizes[YY] = rY.length;
-        const FY = new OY.c(this.ky(), rY, !0, 16, !1, !0);
-        this._thinInstanceDataStorage.matrixBuffer = FY;
-        for (let rY = 0; rY < 4; rY++) this.setVerticesBuffer(FY.createVertexBuffer(YY + rY, 4 * rY, 4))
-      } else YY === OY.l.ColorKind && (YY = OY.l.ColorInstanceKind), null === rY ? this._userThinInstanceBuffersStorage?.data[YY] && (this.removeVerticesData(YY), delete this._userThinInstanceBuffersStorage.data[YY], delete this._userThinInstanceBuffersStorage.strides[YY], delete this._userThinInstanceBuffersStorage.sizes[YY], delete this._userThinInstanceBuffersStorage.vertexBuffers[YY]) : (this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.data[YY] = rY, this._userThinInstanceBuffersStorage.strides[YY] = DY, this._userThinInstanceBuffersStorage.sizes[YY] = rY.length, this._userThinInstanceBuffersStorage.vertexBuffers[YY] = new OY.l(this.ky(), rY, YY, !FY, !1, DY, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[YY]))
-    }, RY.c.prototype.T_ = function(YY) {
-      "matrix" === YY ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.matrixBuffer && !this._thinInstanceDataStorage.matrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(YY), this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "previousMatrix" === YY ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.previousMatrixBuffer && !this._thinInstanceDataStorage.previousMatrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(YY), this._thinInstanceDataStorage.previousMatrixBuffer?.updateDirectly(this._thinInstanceDataStorage.previousMatrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "splatIndex" === YY ? this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._userThinInstanceBuffersStorage.data[YY], 0, this._thinInstanceDataStorage.instancesCount) : (YY === OY.l.ColorKind && (YY = OY.l.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[YY] && (this.thinInstanceAllowAutomaticStaticBufferRecreation && !this._userThinInstanceBuffersStorage.vertexBuffers[YY].isUpdatable() && this._thinInstanceRecreateBuffer(YY), this._userThinInstanceBuffersStorage.vertexBuffers[YY].updateDirectly(this._userThinInstanceBuffersStorage.data[YY], 0)))
-    }, RY.c.prototype.thinInstancePartialBufferUpdate = function(YY, rY, DY) {
-      if ("matrix" === YY) this._thinInstanceDataStorage.matrixBuffer && ("number" === typeof rY ? this._thinInstanceDataStorage.matrixBuffer.updateDirectly(new Float32Array(this._thinInstanceDataStorage.matrixData.buffer, this._thinInstanceDataStorage.matrixData.byteOffset + 16 * DY * Float32Array.BYTES_PER_ELEMENT, 16 * rY), 16 * DY) : this._thinInstanceDataStorage.matrixBuffer.updateDirectly(rY, DY));
-      else if (YY === OY.l.ColorKind && (YY = OY.l.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[YY]) {
-        const FY = this._userThinInstanceBuffersStorage.vertexBuffers[YY];
-        if ("number" === typeof rY) {
-          const FY = new Float32Array(this._userThinInstanceBuffersStorage.data[YY].buffer, this._userThinInstanceBuffersStorage.data[YY].byteOffset + DY * this._userThinInstanceBuffersStorage.strides[YY] * Float32Array.BYTES_PER_ELEMENT, rY * this._userThinInstanceBuffersStorage.strides[YY]);
-          this._userThinInstanceBuffersStorage.vertexBuffers[YY].updateDirectly(FY, DY * this._userThinInstanceBuffersStorage.strides[YY])
-        } else FY.updateDirectly(rY, DY)
+    }), WT.e.prototype._thinInstanceCreateMatrixBuffer = function(TT, oT) {
+      let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const iT = new XT.d(this.Zc(), oT, !IT, 16, !1, !0);
+      for (let zT = 0; zT < 4; zT++) this.setVerticesBuffer(iT.createVertexBuffer(TT + zT, 4 * zT, 4));
+      return iT
+    }, WT.e.prototype.T_ = function(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      if (IT = IT || 16, "matrix" === TT) this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = null, this._thinInstanceDataStorage.matrixBufferSize = oT ? oT.length : 32 * IT, this._thinInstanceDataStorage.matrixData = oT, this._thinInstanceDataStorage.worldMatrices = null, null !== oT ? (this._thinInstanceDataStorage.instancesCount = oT.length / IT, this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", oT, iT), this.Gc || this.thinInstanceRefreshBoundingInfo(!1)) : (this._thinInstanceDataStorage.instancesCount = 0, this.Gc || this.refreshBoundingInfo());
+      else if ("previousMatrix" === TT) this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null, this._thinInstanceDataStorage.previousMatrixData = oT, null !== oT && (this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", oT, iT));
+      else if ("splatIndex" === TT && oT) {
+        this._thinInstanceInitializeUserStorage(), this._thinInstanceDataStorage.instancesCount = oT.length / IT, this._userThinInstanceBuffersStorage.data[TT] = oT, this._userThinInstanceBuffersStorage.strides[TT] = IT, this._userThinInstanceBuffersStorage.sizes[TT] = oT.length;
+        const iT = new XT.d(this.Zc(), oT, !0, 16, !1, !0);
+        this._thinInstanceDataStorage.matrixBuffer = iT;
+        for (let oT = 0; oT < 4; oT++) this.setVerticesBuffer(iT.createVertexBuffer(TT + oT, 4 * oT, 4))
+      } else TT === XT.i.ColorKind && (TT = XT.i.ColorInstanceKind), null === oT ? this._userThinInstanceBuffersStorage?.data[TT] && (this.removeVerticesData(TT), delete this._userThinInstanceBuffersStorage.data[TT], delete this._userThinInstanceBuffersStorage.strides[TT], delete this._userThinInstanceBuffersStorage.sizes[TT], delete this._userThinInstanceBuffersStorage.vertexBuffers[TT]) : (this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.data[TT] = oT, this._userThinInstanceBuffersStorage.strides[TT] = IT, this._userThinInstanceBuffersStorage.sizes[TT] = oT.length, this._userThinInstanceBuffersStorage.vertexBuffers[TT] = new XT.i(this.Zc(), oT, TT, !iT, !1, IT, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[TT]))
+    }, WT.e.prototype.X3 = function(TT) {
+      "matrix" === TT ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.matrixBuffer && !this._thinInstanceDataStorage.matrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(TT), this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "previousMatrix" === TT ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.previousMatrixBuffer && !this._thinInstanceDataStorage.previousMatrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(TT), this._thinInstanceDataStorage.previousMatrixBuffer?.updateDirectly(this._thinInstanceDataStorage.previousMatrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "splatIndex" === TT ? this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._userThinInstanceBuffersStorage.data[TT], 0, this._thinInstanceDataStorage.instancesCount) : (TT === XT.i.ColorKind && (TT = XT.i.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[TT] && (this.thinInstanceAllowAutomaticStaticBufferRecreation && !this._userThinInstanceBuffersStorage.vertexBuffers[TT].isUpdatable() && this._thinInstanceRecreateBuffer(TT), this._userThinInstanceBuffersStorage.vertexBuffers[TT].updateDirectly(this._userThinInstanceBuffersStorage.data[TT], 0)))
+    }, WT.e.prototype.thinInstancePartialBufferUpdate = function(TT, oT, IT) {
+      if ("matrix" === TT) this._thinInstanceDataStorage.matrixBuffer && ("number" === typeof oT ? this._thinInstanceDataStorage.matrixBuffer.updateDirectly(new Float32Array(this._thinInstanceDataStorage.matrixData.buffer, this._thinInstanceDataStorage.matrixData.byteOffset + 16 * IT * Float32Array.BYTES_PER_ELEMENT, 16 * oT), 16 * IT) : this._thinInstanceDataStorage.matrixBuffer.updateDirectly(oT, IT));
+      else if (TT === XT.i.ColorKind && (TT = XT.i.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[TT]) {
+        const iT = this._userThinInstanceBuffersStorage.vertexBuffers[TT];
+        if ("number" === typeof oT) {
+          const iT = new Float32Array(this._userThinInstanceBuffersStorage.data[TT].buffer, this._userThinInstanceBuffersStorage.data[TT].byteOffset + IT * this._userThinInstanceBuffersStorage.strides[TT] * Float32Array.BYTES_PER_ELEMENT, oT * this._userThinInstanceBuffersStorage.strides[TT]);
+          this._userThinInstanceBuffersStorage.vertexBuffers[TT].updateDirectly(iT, IT * this._userThinInstanceBuffersStorage.strides[TT])
+        } else iT.updateDirectly(oT, IT)
       }
-    }, RY.c.prototype.thinInstanceGetWorldMatrices = function() {
+    }, WT.e.prototype.thinInstanceGetWorldMatrices = function() {
       if (!this._thinInstanceDataStorage.matrixData || !this._thinInstanceDataStorage.matrixBuffer) return [];
-      const YY = this._thinInstanceDataStorage.matrixData;
+      const TT = this._thinInstanceDataStorage.matrixData;
       if (!this._thinInstanceDataStorage.worldMatrices) {
         this._thinInstanceDataStorage.worldMatrices = [];
-        for (let rY = 0; rY < this._thinInstanceDataStorage.instancesCount; ++rY) this._thinInstanceDataStorage.worldMatrices[rY] = FY.e.FromArray(YY, 16 * rY)
+        for (let oT = 0; oT < this._thinInstanceDataStorage.instancesCount; ++oT) this._thinInstanceDataStorage.worldMatrices[oT] = iT.b.FromArray(TT, 16 * oT)
       }
       return this._thinInstanceDataStorage.worldMatrices
-    }, RY.c.prototype.thinInstanceRefreshBoundingInfo = function() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        AY = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    }, WT.e.prototype.thinInstanceRefreshBoundingInfo = function() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        zT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       if (!this._thinInstanceDataStorage.matrixData || !this._thinInstanceDataStorage.matrixBuffer) return;
-      const RY = this._thinInstanceDataStorage.boundingVectors;
-      if (YY || !this.rawBoundingInfo) {
-        if (RY.length = 0, AY && function(YY, rY, DY) {
-            const AY = YY._userThinInstanceBuffersStorage,
-              RY = AY?.data[gY],
-              yY = AY?.strides[gY];
-            if (!RY || !yY || yY < 4 || !aY(YY)) return !1;
-            const QY = YY._thinInstanceDataStorage.matrixData;
-            if (!QY) return !1;
-            const oY = {},
-              WY = FY.n.Vector4[0],
-              EY = FY.n.xy[1],
-              mY = FY.n.xy[2],
-              VY = FY.n.xy[3],
-              SY = FY.n.xy[4],
-              lY = FY.n.xy[5],
-              TY = FY.n.xy[6],
-              eY = FY.n.Matrix[2],
-              NY = YY.geometry ? YY.geometry.boundingBias : null,
-              BY = YY.getTotalVertices();
-            EY.o3(Number.POSITIVE_INFINITY), mY.o3(Number.NEGATIVE_INFINITY), VY.o3(Number.POSITIVE_INFINITY), SY.o3(Number.NEGATIVE_INFINITY);
-            for (let IY = 0; IY < YY._thinInstanceDataStorage.instancesCount; ++IY) {
-              const rY = IY * yY;
-              WY.set(RY[rY], RY[rY + 1], RY[rY + 2], RY[rY + 3]);
-              const AY = YY._getData({
-                applyMorph: DY,
+      const WT = this._thinInstanceDataStorage.boundingVectors;
+      if (TT || !this.rawBoundingInfo) {
+        if (WT.length = 0, zT && function(TT, oT, IT) {
+            const zT = TT._userThinInstanceBuffersStorage,
+              WT = zT?.data[BT],
+              cT = zT?.strides[BT];
+            if (!WT || !cT || cT < 4 || !FT(TT)) return !1;
+            const KT = TT._thinInstanceDataStorage.matrixData;
+            if (!KT) return !1;
+            const MT = {},
+              rT = iT.i.Vector4[0],
+              AT = iT.i.sc[1],
+              gT = iT.i.sc[2],
+              hT = iT.i.sc[3],
+              wT = iT.i.sc[4],
+              mT = iT.i.sc[5],
+              eT = iT.i.sc[6],
+              RT = iT.i.Matrix[2],
+              uT = TT.geometry ? TT.geometry.boundingBias : null,
+              vT = TT.getTotalVertices();
+            AT.W8(Number.POSITIVE_INFINITY), gT.W8(Number.NEGATIVE_INFINITY), hT.W8(Number.POSITIVE_INFINITY), wT.W8(Number.NEGATIVE_INFINITY);
+            for (let kT = 0; kT < TT._thinInstanceDataStorage.instancesCount; ++kT) {
+              const oT = kT * cT;
+              rT.set(WT[oT], WT[oT + 1], WT[oT + 2], WT[oT + 3]);
+              const zT = TT._getData({
+                applyMorph: IT,
                 applyBakedVertexAnimation: !0,
-                bakedVertexAnimationSettings: WY,
+                bakedVertexAnimationSettings: rT,
                 updatePositionsArray: !1,
-                cache: oY
-              }, null, OY.l.PositionKind);
-              if (!AY) return !1;
-              vY(AY, BY, lY, TY), uY(lY, TY, NY), EY.minimizeInPlace(lY), mY.maximizeInPlace(TY), FY.e.FromArrayToRef(QY, 16 * IY, eY), NY ? sY(lY, TY, eY, VY, SY) : iY(AY, BY, eY, VY, SY)
+                cache: MT
+              }, null, XT.i.PositionKind);
+              if (!zT) return !1;
+              ST(zT, vT, mT, eT), DT(mT, eT, uT), AT.minimizeInPlace(mT), gT.maximizeInPlace(eT), iT.b.FromArrayToRef(KT, 16 * kT, RT), uT ? LT(mT, eT, RT, hT, wT) : xT(zT, vT, RT, hT, wT)
             }
-            return !(!isFinite(EY.x) || !isFinite(VY.x)) && (YY.oB().reConstruct(VY, SY), YY.rawBoundingInfo = new IY.d(EY, mY), function(YY, rY) {
-              YY.length = 0;
-              for (let DY = 0; DY < rY.boundingBox.vectors.length; ++DY) YY.push(rY.boundingBox.vectors[DY].clone())
-            }(rY, YY.rawBoundingInfo), YY._updateBoundingInfo(), !0)
-          }(this, RY, DY)) return;
-        AY && this.bakedVertexAnimationManager?.isEnabled && aY(this) ? this.refreshBoundingInfo({
-          applySkeleton: rY,
-          applyMorph: DY,
+            return !(!isFinite(AT.x) || !isFinite(hT.x)) && (TT.GJ().reConstruct(hT, wT), TT.rawBoundingInfo = new kT.d(AT, gT), function(TT, oT) {
+              TT.length = 0;
+              for (let IT = 0; IT < oT.boundingBox.vectors.length; ++IT) TT.push(oT.boundingBox.vectors[IT].clone())
+            }(oT, TT.rawBoundingInfo), TT._updateBoundingInfo(), !0)
+          }(this, WT, IT)) return;
+        zT && this.bakedVertexAnimationManager?.isEnabled && FT(this) ? this.refreshBoundingInfo({
+          applySkeleton: oT,
+          applyMorph: IT,
           applyBakedVertexAnimation: !0,
           updatePositionsArray: !1
-        }) : this.refreshBoundingInfo(rY, DY);
-        const YY = this.oB();
-        this.rawBoundingInfo = new IY.d(YY.minimum, YY.maximum)
+        }) : this.refreshBoundingInfo(oT, IT);
+        const TT = this.GJ();
+        this.rawBoundingInfo = new kT.d(TT.minimum, TT.maximum)
       }
-      const yY = this.oB(),
-        QY = this._thinInstanceDataStorage.matrixData;
-      if (0 === RY.length)
-        for (let FY = 0; FY < yY.boundingBox.vectors.length; ++FY) RY.push(yY.boundingBox.vectors[FY].clone());
-      FY.n.xy[0].o3(Number.POSITIVE_INFINITY), FY.n.xy[1].o3(Number.NEGATIVE_INFINITY);
-      for (let IY = 0; IY < this._thinInstanceDataStorage.instancesCount; ++IY) {
-        FY.e.FromArrayToRef(QY, 16 * IY, FY.n.Matrix[0]);
-        for (let YY = 0; YY < RY.length; ++YY) FY.r.TransformCoordinatesToRef(RY[YY], FY.n.Matrix[0], FY.n.xy[2]), FY.n.xy[0].minimizeInPlace(FY.n.xy[2]), FY.n.xy[1].maximizeInPlace(FY.n.xy[2])
+      const cT = this.GJ(),
+        KT = this._thinInstanceDataStorage.matrixData;
+      if (0 === WT.length)
+        for (let iT = 0; iT < cT.boundingBox.vectors.length; ++iT) WT.push(cT.boundingBox.vectors[iT].clone());
+      iT.i.sc[0].W8(Number.POSITIVE_INFINITY), iT.i.sc[1].W8(Number.NEGATIVE_INFINITY);
+      for (let kT = 0; kT < this._thinInstanceDataStorage.instancesCount; ++kT) {
+        iT.b.FromArrayToRef(KT, 16 * kT, iT.i.Matrix[0]);
+        for (let TT = 0; TT < WT.length; ++TT) iT.m.TransformCoordinatesToRef(WT[TT], iT.i.Matrix[0], iT.i.sc[2]), iT.i.sc[0].minimizeInPlace(iT.i.sc[2]), iT.i.sc[1].maximizeInPlace(iT.i.sc[2])
       }
-      yY.reConstruct(FY.n.xy[0], FY.n.xy[1]), this._updateBoundingInfo()
-    }, RY.c.prototype._thinInstanceRecreateBuffer = function(YY) {
-      let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      "matrix" === YY ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", this._thinInstanceDataStorage.matrixData, rY)) : "previousMatrix" === YY ? this._scene.needsPreviousWorldMatrices && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.previousMatrixData ?? this._thinInstanceDataStorage.matrixData, rY)) : (YY === OY.l.ColorKind && (YY = OY.l.ColorInstanceKind), this._userThinInstanceBuffersStorage.vertexBuffers[YY]?.dispose(), this._userThinInstanceBuffersStorage.vertexBuffers[YY] = new OY.l(this.ky(), this._userThinInstanceBuffersStorage.data[YY], YY, !rY, !1, this._userThinInstanceBuffersStorage.strides[YY], !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[YY]))
-    }, RY.c.prototype._thinInstanceUpdateBufferSize = function(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      YY === OY.l.ColorKind && (YY = OY.l.ColorInstanceKind);
-      const DY = "matrix" === YY;
-      if (!DY && (!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.strides[YY])) return;
-      const FY = DY ? 16 : this._userThinInstanceBuffersStorage.strides[YY],
-        AY = DY ? this._thinInstanceDataStorage.matrixBufferSize : this._userThinInstanceBuffersStorage.sizes[YY];
-      let IY = DY ? this._thinInstanceDataStorage.matrixData : this._userThinInstanceBuffersStorage.data[YY];
-      const RY = (this._thinInstanceDataStorage.instancesCount + rY) * FY;
-      let gY = AY;
-      for (; gY < RY;) gY *= 2;
-      if (!IY || AY != gY) {
-        if (IY) {
-          const YY = new Float32Array(gY);
-          YY.set(IY, 0), IY = YY
-        } else IY = new Float32Array(gY);
-        DY ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", IY, !1), this._thinInstanceDataStorage.matrixData = IY, this._thinInstanceDataStorage.matrixBufferSize = gY, this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", IY, !1))) : (this._userThinInstanceBuffersStorage.vertexBuffers[YY]?.dispose(), this._userThinInstanceBuffersStorage.data[YY] = IY, this._userThinInstanceBuffersStorage.sizes[YY] = gY, this._userThinInstanceBuffersStorage.vertexBuffers[YY] = new OY.l(this.ky(), IY, YY, !0, !1, FY, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[YY]))
+      cT.reConstruct(iT.i.sc[0], iT.i.sc[1]), this._updateBoundingInfo()
+    }, WT.e.prototype._thinInstanceRecreateBuffer = function(TT) {
+      let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      "matrix" === TT ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", this._thinInstanceDataStorage.matrixData, oT)) : "previousMatrix" === TT ? this._scene.needsPreviousWorldMatrices && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.previousMatrixData ?? this._thinInstanceDataStorage.matrixData, oT)) : (TT === XT.i.ColorKind && (TT = XT.i.ColorInstanceKind), this._userThinInstanceBuffersStorage.vertexBuffers[TT]?.dispose(), this._userThinInstanceBuffersStorage.vertexBuffers[TT] = new XT.i(this.Zc(), this._userThinInstanceBuffersStorage.data[TT], TT, !oT, !1, this._userThinInstanceBuffersStorage.strides[TT], !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[TT]))
+    }, WT.e.prototype._thinInstanceUpdateBufferSize = function(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      TT === XT.i.ColorKind && (TT = XT.i.ColorInstanceKind);
+      const IT = "matrix" === TT;
+      if (!IT && (!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.strides[TT])) return;
+      const iT = IT ? 16 : this._userThinInstanceBuffersStorage.strides[TT],
+        zT = IT ? this._thinInstanceDataStorage.matrixBufferSize : this._userThinInstanceBuffersStorage.sizes[TT];
+      let kT = IT ? this._thinInstanceDataStorage.matrixData : this._userThinInstanceBuffersStorage.data[TT];
+      const WT = (this._thinInstanceDataStorage.instancesCount + oT) * iT;
+      let BT = zT;
+      for (; BT < WT;) BT *= 2;
+      if (!kT || zT != BT) {
+        if (kT) {
+          const TT = new Float32Array(BT);
+          TT.set(kT, 0), kT = TT
+        } else kT = new Float32Array(BT);
+        IT ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", kT, !1), this._thinInstanceDataStorage.matrixData = kT, this._thinInstanceDataStorage.matrixBufferSize = BT, this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", kT, !1))) : (this._userThinInstanceBuffersStorage.vertexBuffers[TT]?.dispose(), this._userThinInstanceBuffersStorage.data[TT] = kT, this._userThinInstanceBuffersStorage.sizes[TT] = BT, this._userThinInstanceBuffersStorage.vertexBuffers[TT] = new XT.i(this.Zc(), kT, TT, !0, !1, iT, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[TT]))
       }
-    }, RY.c.prototype._thinInstanceInitializeUserStorage = function() {
+    }, WT.e.prototype._thinInstanceInitializeUserStorage = function() {
       this._userThinInstanceBuffersStorage || (this._userThinInstanceBuffersStorage = {
         data: {},
         sizes: {},
         vertexBuffers: {},
         strides: {}
       })
-    }, RY.c.prototype._disposeThinInstanceSpecificData = function() {
+    }, WT.e.prototype._disposeThinInstanceSpecificData = function() {
       this._thinInstanceDataStorage?.matrixBuffer && (this._thinInstanceDataStorage.matrixBuffer.dispose(), this._thinInstanceDataStorage.matrixBuffer = null), this._thinInstanceDataStorage?.previousMatrixBuffer && (this._thinInstanceDataStorage.previousMatrixBuffer.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null)
     })
   },
-  39560: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => EY,
-      g: () => QY
+  39233: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => AT,
+      g: () => KT
     });
-    var FY, AY, IY, RY, OY = DY(39127),
-      gY = DY(39131),
-      aY = DY(39144),
-      vY = DY(36552),
-      uY = DY(36524),
-      sY = DY(39347),
-      iY = DY(36569),
-      yY = DY(39029);
-    let QY = (() => {
-      var YY;
-      let rY, DY, FY, AY, IY, RY, iY, yY, QY, oY = sY.b,
-        WY = [],
-        EY = [],
-        mY = [],
-        VY = [],
-        SY = [],
-        lY = [],
-        TY = [],
-        eY = [],
-        NY = [],
-        BY = [],
-        cY = [],
-        KY = [],
-        HY = [],
-        zY = [],
-        ZY = [],
-        CY = [],
-        fY = [],
-        jY = [];
-      return YY = class extends oY {
+    var iT, zT, kT, WT, XT = IT(38764),
+      BT = IT(38773),
+      FT = IT(38799),
+      ST = IT(36149),
+      DT = IT(36118),
+      LT = IT(38994),
+      xT = IT(36166),
+      cT = IT(38643);
+    let KT = (() => {
+      var TT;
+      let oT, IT, iT, zT, kT, WT, xT, cT, KT, MT = LT.c,
+        rT = [],
+        AT = [],
+        gT = [],
+        hT = [],
+        wT = [],
+        mT = [],
+        eT = [],
+        RT = [],
+        uT = [],
+        vT = [],
+        ET = [],
+        fT = [],
+        CT = [],
+        jT = [],
+        JT = [],
+        UT = [],
+        aT = [],
+        YT = [];
+      return TT = class extends MT {
         get billboardMode() {
           return this._billboardMode
         }
-        set billboardMode(rY) {
-          this._billboardMode !== rY && (this._billboardMode = rY, this._cache.useBillboardPosition = 0 !== (this._billboardMode & YY.BILLBOARDMODE_USE_POSITION))
+        set billboardMode(oT) {
+          this._billboardMode !== oT && (this._billboardMode = oT, this._cache.useBillboardPosition = 0 !== (this._billboardMode & TT.BILLBOARDMODE_USE_POSITION))
         }
         get infiniteDistance() {
           return this._infiniteDistance
         }
-        set infiniteDistance(YY) {
-          this._infiniteDistance !== YY && (this._infiniteDistance = YY)
+        set infiniteDistance(TT) {
+          this._infiniteDistance !== TT && (this._infiniteDistance = TT)
         }
-        constructor(rY) {
-          let DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          super(rY, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, !1), this._forward = new uY.r(0, 0, 1), this._up = new uY.r(0, 1, 0), this._right = new uY.r(1, 0, 0), this._position = (0, OY.j)(this, WY, uY.r.Zero()), this._rotation = ((0, OY.j)(this, EY), (0, OY.j)(this, mY, uY.r.Zero())), this._rotationQuaternion = ((0, OY.j)(this, VY), (0, OY.j)(this, SY, null)), this._scaling = ((0, OY.j)(this, lY), (0, OY.j)(this, TY, uY.r.One())), this._transformToBoneReferal = ((0, OY.j)(this, eY), null), this._isAbsoluteSynced = !1, this._billboardMode = (0, OY.j)(this, NY, YY.BILLBOARDMODE_NONE), this.scalingDeterminant = ((0, OY.j)(this, BY), (0, OY.j)(this, cY, 1)), this._infiniteDistance = ((0, OY.j)(this, KY), (0, OY.j)(this, HY, !1)), this.ignoreNonUniformScaling = ((0, OY.j)(this, zY), (0, OY.j)(this, ZY, !1)), this.reIntegrateRotationIntoRotationQuaternion = ((0, OY.j)(this, CY), (0, OY.j)(this, fY, !1)), this._poseMatrix = ((0, OY.j)(this, jY), null), this._localMatrix = uY.e.Zero(), this._usePivotMatrix = !1, this._absolutePosition = uY.r.Zero(), this._absoluteScaling = uY.r.Zero(), this._absoluteRotationQuaternion = uY.g.Identity(), this._pivotMatrix = uY.e.Identity(), this._postMultiplyPivotMatrix = !1, this._isWorldMatrixFrozen = !1, this._indexInSceneTransformNodesArray = -1, this.onAfterWorldMatrixUpdateObservable = new vY.e, this._nonUniformScaling = !1, DY && this.hT().addTransformNode(this)
+        constructor(oT) {
+          let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          super(oT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, !1), this._forward = new DT.m(0, 0, 1), this._up = new DT.m(0, 1, 0), this._right = new DT.m(1, 0, 0), this._position = (0, XT.j)(this, rT, DT.m.Zero()), this._rotation = ((0, XT.j)(this, AT), (0, XT.j)(this, gT, DT.m.Zero())), this._rotationQuaternion = ((0, XT.j)(this, hT), (0, XT.j)(this, wT, null)), this._scaling = ((0, XT.j)(this, mT), (0, XT.j)(this, eT, DT.m.One())), this._transformToBoneReferal = ((0, XT.j)(this, RT), null), this._isAbsoluteSynced = !1, this._billboardMode = (0, XT.j)(this, uT, TT.BILLBOARDMODE_NONE), this.scalingDeterminant = ((0, XT.j)(this, vT), (0, XT.j)(this, ET, 1)), this._infiniteDistance = ((0, XT.j)(this, fT), (0, XT.j)(this, CT, !1)), this.ignoreNonUniformScaling = ((0, XT.j)(this, jT), (0, XT.j)(this, JT, !1)), this.reIntegrateRotationIntoRotationQuaternion = ((0, XT.j)(this, UT), (0, XT.j)(this, aT, !1)), this._poseMatrix = ((0, XT.j)(this, YT), null), this._localMatrix = DT.b.Zero(), this._usePivotMatrix = !1, this._absolutePosition = DT.m.Zero(), this._absoluteScaling = DT.m.Zero(), this._absoluteRotationQuaternion = DT.c.Identity(), this._pivotMatrix = DT.b.Identity(), this._postMultiplyPivotMatrix = !1, this._isWorldMatrixFrozen = !1, this._indexInSceneTransformNodesArray = -1, this.onAfterWorldMatrixUpdateObservable = new ST.d, this._nonUniformScaling = !1, IT && this.pC().addTransformNode(this)
         }
         getClassName() {
           return "TransformNode"
@@ -7125,8 +7125,8 @@ export const modules = {
         get position() {
           return this._position
         }
-        set position(YY) {
-          this._position = YY, this._markAsDirtyInternal()
+        set position(TT) {
+          this._position = TT, this._markAsDirtyInternal()
         }
         isUsingPivotMatrix() {
           return this._usePivotMatrix
@@ -7137,47 +7137,47 @@ export const modules = {
         get rotation() {
           return this._rotation
         }
-        set rotation(YY) {
-          this._rotation = YY, this._rotationQuaternion = null, this._markAsDirtyInternal()
+        set rotation(TT) {
+          this._rotation = TT, this._rotationQuaternion = null, this._markAsDirtyInternal()
         }
-        get pa() {
+        get ti() {
           return this._scaling
         }
-        set pa(YY) {
-          this._scaling = YY, this._markAsDirtyInternal()
+        set ti(TT) {
+          this._scaling = TT, this._markAsDirtyInternal()
         }
         get rotationQuaternion() {
           return this._rotationQuaternion
         }
-        set rotationQuaternion(YY) {
-          this._rotationQuaternion = YY, YY && this._rotation.o3(0), this._markAsDirtyInternal()
+        set rotationQuaternion(TT) {
+          this._rotationQuaternion = TT, TT && this._rotation.W8(0), this._markAsDirtyInternal()
         }
         _markAsDirtyInternal() {
           this._isDirty || (this._isDirty = !0, this.customMarkAsDirty && this.customMarkAsDirty())
         }
         get forward() {
-          return uY.r.TransformNormalFromFloatsToRef(0, 0, this.hT().useRightHandedSystem ? -1 : 1, this.getWorldMatrix(), this._forward), this._forward.normalize()
+          return DT.m.TransformNormalFromFloatsToRef(0, 0, this.pC().useRightHandedSystem ? -1 : 1, this.getWorldMatrix(), this._forward), this._forward.normalize()
         }
         get up() {
-          return uY.r.TransformNormalFromFloatsToRef(0, 1, 0, this.getWorldMatrix(), this._up), this._up.normalize()
+          return DT.m.TransformNormalFromFloatsToRef(0, 1, 0, this.getWorldMatrix(), this._up), this._up.normalize()
         }
         get right() {
-          return uY.r.TransformNormalFromFloatsToRef(this.hT().useRightHandedSystem ? -1 : 1, 0, 0, this.getWorldMatrix(), this._right), this._right.normalize()
+          return DT.m.TransformNormalFromFloatsToRef(this.pC().useRightHandedSystem ? -1 : 1, 0, 0, this.getWorldMatrix(), this._right), this._right.normalize()
         }
-        updatePoseMatrix(YY) {
-          return this._poseMatrix ? (this._poseMatrix.brY(YY), this) : (this._poseMatrix = YY.clone(), this)
+        updatePoseMatrix(TT) {
+          return this._poseMatrix ? (this._poseMatrix.SIT(TT), this) : (this._poseMatrix = TT.clone(), this)
         }
         getPoseMatrix() {
-          return this._poseMatrix || (this._poseMatrix = uY.e.Identity()), this._poseMatrix
+          return this._poseMatrix || (this._poseMatrix = DT.b.Identity()), this._poseMatrix
         }
         _isSynchronized() {
-          const rY = this._cache;
-          return this._billboardMode === rY.billboardMode && this._billboardMode === YY.BILLBOARDMODE_NONE && (!rY.pivotMatrixUpdated && (!this._infiniteDistance && (!this._position._isDirty && (!this._scaling._isDirty && !(this._rotationQuaternion && this._rotationQuaternion._isDirty || this._rotation._isDirty)))))
+          const oT = this._cache;
+          return this._billboardMode === oT.billboardMode && this._billboardMode === TT.BILLBOARDMODE_NONE && (!oT.pivotMatrixUpdated && (!this._infiniteDistance && (!this._position._isDirty && (!this._scaling._isDirty && !(this._rotationQuaternion && this._rotationQuaternion._isDirty || this._rotation._isDirty)))))
         }
         _initCache() {
           super._initCache();
-          const YY = this._cache;
-          YY.localMatrixUpdated = !1, YY.billboardMode = -1, YY.infiniteDistance = !1, YY.useBillboardPosition = !1
+          const TT = this._cache;
+          TT.localMatrixUpdated = !1, TT.billboardMode = -1, TT.infiniteDistance = !1, TT.useBillboardPosition = !1
         }
         get absolutePosition() {
           return this.getAbsolutePosition()
@@ -7188,566 +7188,566 @@ export const modules = {
         get absoluteRotationQuaternion() {
           return this._syncAbsoluteScalingAndRotation(), this._absoluteRotationQuaternion
         }
-        setPreTransformMatrix(YY) {
-          return this.setPivotMatrix(YY, !1)
+        setPreTransformMatrix(TT) {
+          return this.setPivotMatrix(TT, !1)
         }
-        setPivotMatrix(YY) {
-          let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this._pivotMatrix.brY(YY), this._usePivotMatrix = !this._pivotMatrix.isIdentity(), this._cache.pivotMatrixUpdated = !0, this._postMultiplyPivotMatrix = rY, this._postMultiplyPivotMatrix && (this._pivotMatrixInverse ? this._pivotMatrix.invertToRef(this._pivotMatrixInverse) : this._pivotMatrixInverse = uY.e.Invert(this._pivotMatrix)), this
+        setPivotMatrix(TT) {
+          let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this._pivotMatrix.SIT(TT), this._usePivotMatrix = !this._pivotMatrix.isIdentity(), this._cache.pivotMatrixUpdated = !0, this._postMultiplyPivotMatrix = oT, this._postMultiplyPivotMatrix && (this._pivotMatrixInverse ? this._pivotMatrix.invertToRef(this._pivotMatrixInverse) : this._pivotMatrixInverse = DT.b.Invert(this._pivotMatrix)), this
         }
         getPivotMatrix() {
           return this._pivotMatrix
         }
         instantiateHierarchy() {
-          let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            rY = arguments.length > 1 ? arguments[1] : void 0,
-            DY = arguments.length > 2 ? arguments[2] : void 0;
-          const FY = this.clone("Clone of " + (this.name || this.id), YY || this.parent, !0);
-          FY && DY && DY(this, FY);
-          for (const AY of this.getChildTransformNodes(!0)) AY.instantiateHierarchy(FY, rY, DY);
-          return FY
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+            oT = arguments.length > 1 ? arguments[1] : void 0,
+            IT = arguments.length > 2 ? arguments[2] : void 0;
+          const iT = this.clone("Clone of " + (this.name || this.id), TT || this.parent, !0);
+          iT && IT && IT(this, iT);
+          for (const zT of this.getChildTransformNodes(!0)) zT.instantiateHierarchy(iT, oT, IT);
+          return iT
         }
-        aN() {
-          let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return YY ? arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (this._rotation.o3(0), this._rotationQuaternion = this._rotationQuaternion || uY.g.Identity(), YY.decompose(this._scaling, this._rotationQuaternion, this._position), this.computeWorldMatrix(!0)) : (this._worldMatrix = YY, this._absolutePosition.p_(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._afterComputeWorldMatrix()) : (this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0)), this._isDirty = !1, this._isWorldMatrixFrozen = !0, this
+        LJ() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return TT ? arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (this._rotation.W8(0), this._rotationQuaternion = this._rotationQuaternion || DT.c.Identity(), TT.decompose(this._scaling, this._rotationQuaternion, this._position), this.computeWorldMatrix(!0)) : (this._worldMatrix = TT, this._absolutePosition.S_(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._afterComputeWorldMatrix()) : (this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0)), this._isDirty = !1, this._isWorldMatrixFrozen = !0, this
         }
         unfreezeWorldMatrix() {
           return this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0), this
         }
-        get nIY() {
+        get vWT() {
           return this._isWorldMatrixFrozen
         }
         getAbsolutePosition() {
           return this.computeWorldMatrix(), this._absolutePosition
         }
-        setAbsolutePosition(YY) {
-          if (!YY) return this;
-          let rY, DY, FY;
-          if (void 0 === YY.x) {
+        setAbsolutePosition(TT) {
+          if (!TT) return this;
+          let oT, IT, iT;
+          if (void 0 === TT.x) {
             if (arguments.length < 3) return this;
-            rY = arguments[0], DY = arguments[1], FY = arguments[2]
-          } else rY = YY.x, DY = YY.y, FY = YY.z;
+            oT = arguments[0], IT = arguments[1], iT = arguments[2]
+          } else oT = TT.x, IT = TT.y, iT = TT.z;
           if (this.parent) {
-            const YY = uY.n.Matrix[0];
-            this.parent.getWorldMatrix().invertToRef(YY), uY.r.TransformCoordinatesFromFloatsToRef(rY, DY, FY, YY, this.position)
-          } else this.position.x = rY, this.position.y = DY, this.position.z = FY;
-          return this._absolutePosition.brY(YY), this
+            const TT = DT.i.Matrix[0];
+            this.parent.getWorldMatrix().invertToRef(TT), DT.m.TransformCoordinatesFromFloatsToRef(oT, IT, iT, TT, this.position)
+          } else this.position.x = oT, this.position.y = IT, this.position.z = iT;
+          return this._absolutePosition.SIT(TT), this
         }
-        setPositionWithLocalVector(YY) {
-          return this.computeWorldMatrix(), this.position = uY.r.TransformNormal(YY, this._localMatrix), this
+        setPositionWithLocalVector(TT) {
+          return this.computeWorldMatrix(), this.position = DT.m.TransformNormal(TT, this._localMatrix), this
         }
         getPositionExpressedInLocalSpace() {
           this.computeWorldMatrix();
-          const YY = uY.n.Matrix[0];
-          return this._localMatrix.invertToRef(YY), uY.r.TransformNormal(this.position, YY)
+          const TT = DT.i.Matrix[0];
+          return this._localMatrix.invertToRef(TT), DT.m.TransformNormal(this.position, TT)
         }
-        locallyTranslate(YY) {
-          return this.computeWorldMatrix(!0), this.position = uY.r.TransformCoordinates(YY, this._localMatrix), this
+        locallyTranslate(TT) {
+          return this.computeWorldMatrix(!0), this.position = DT.m.TransformCoordinates(TT, this._localMatrix), this
         }
-        lookAt(rY) {
-          let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-            IY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-          const RY = YY._LookAtVectorCache,
-            OY = 0 === IY ? this.position : this.getAbsolutePosition();
-          if (rY.subtractToRef(OY, RY), this.setDirection(RY, DY, FY, AY), 1 === IY && this.parent)
+        lookAt(oT) {
+          let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+            kT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+          const WT = TT._LookAtVectorCache,
+            XT = 0 === kT ? this.position : this.getAbsolutePosition();
+          if (oT.subtractToRef(XT, WT), this.setDirection(WT, IT, iT, zT), 1 === kT && this.parent)
             if (this.rotationQuaternion) {
-              const YY = uY.n.Matrix[0];
-              this.rotationQuaternion.toRotationMatrix(YY);
-              const rY = uY.n.Matrix[1];
-              this.parent.getWorldMatrix().getRotationMatrixToRef(rY), rY.invert(), YY.multiplyToRef(rY, YY), this.rotationQuaternion.fromRotationMatrix(YY)
+              const TT = DT.i.Matrix[0];
+              this.rotationQuaternion.toRotationMatrix(TT);
+              const oT = DT.i.Matrix[1];
+              this.parent.getWorldMatrix().getRotationMatrixToRef(oT), oT.invert(), TT.multiplyToRef(oT, TT), this.rotationQuaternion.fromRotationMatrix(TT)
             } else {
-              const YY = uY.n.Quaternion[0];
-              uY.g.FromEulerVectorToRef(this.rotation, YY);
-              const rY = uY.n.Matrix[0];
-              YY.toRotationMatrix(rY);
-              const DY = uY.n.Matrix[1];
-              this.parent.getWorldMatrix().getRotationMatrixToRef(DY), DY.invert(), rY.multiplyToRef(DY, rY), YY.fromRotationMatrix(rY), YY.toEulerAnglesToRef(this.rotation)
+              const TT = DT.i.Quaternion[0];
+              DT.c.FromEulerVectorToRef(this.rotation, TT);
+              const oT = DT.i.Matrix[0];
+              TT.toRotationMatrix(oT);
+              const IT = DT.i.Matrix[1];
+              this.parent.getWorldMatrix().getRotationMatrixToRef(IT), IT.invert(), oT.multiplyToRef(IT, oT), TT.fromRotationMatrix(oT), TT.toEulerAnglesToRef(this.rotation)
             } return this
         }
-        zq(YY) {
-          const rY = uY.r.Zero();
-          return this.getDirectionToRef(YY, rY), rY
+        kp(TT) {
+          const oT = DT.m.Zero();
+          return this.getDirectionToRef(TT, oT), oT
         }
-        getDirectionToRef(YY, rY) {
-          return uY.r.TransformNormalToRef(YY, this.getWorldMatrix(), rY), this
+        getDirectionToRef(TT, oT) {
+          return DT.m.TransformNormalToRef(TT, this.getWorldMatrix(), oT), this
         }
-        setDirection(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-          const AY = -Math.atan2(YY.z, YY.x) + Math.PI / 2,
-            IY = Math.sqrt(YY.x * YY.x + YY.z * YY.z),
-            RY = -Math.atan2(YY.y, IY);
-          return this.rotationQuaternion ? uY.g.RotationYawPitchRollToRef(AY + rY, RY + DY, FY, this.rotationQuaternion) : (this.rotation.x = RY + DY, this.rotation.y = AY + rY, this.rotation.z = FY), this
+        setDirection(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+          const zT = -Math.atan2(TT.z, TT.x) + Math.PI / 2,
+            kT = Math.sqrt(TT.x * TT.x + TT.z * TT.z),
+            WT = -Math.atan2(TT.y, kT);
+          return this.rotationQuaternion ? DT.c.RotationYawPitchRollToRef(zT + oT, WT + IT, iT, this.rotationQuaternion) : (this.rotation.x = WT + IT, this.rotation.y = zT + oT, this.rotation.z = iT), this
         }
-        setPivotPoint(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          0 == this.hT().getRenderId() && this.computeWorldMatrix(!0);
-          const DY = this.getWorldMatrix();
-          if (1 == rY) {
-            const rY = uY.n.Matrix[0];
-            DY.invertToRef(rY), YY = uY.r.TransformCoordinates(YY, rY)
+        setPivotPoint(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          0 == this.pC().getRenderId() && this.computeWorldMatrix(!0);
+          const IT = this.getWorldMatrix();
+          if (1 == oT) {
+            const oT = DT.i.Matrix[0];
+            IT.invertToRef(oT), TT = DT.m.TransformCoordinates(TT, oT)
           }
-          return this.setPivotMatrix(uY.e.Translation(-YY.x, -YY.y, -YY.z), !0)
+          return this.setPivotMatrix(DT.b.Translation(-TT.x, -TT.y, -TT.z), !0)
         }
         getPivotPoint() {
-          const YY = uY.r.Zero();
-          return this.getPivotPointToRef(YY), YY
+          const TT = DT.m.Zero();
+          return this.getPivotPointToRef(TT), TT
         }
-        getPivotPointToRef(YY) {
-          return YY.x = -this._pivotMatrix.m[12], YY.y = -this._pivotMatrix.m[13], YY.z = -this._pivotMatrix.m[14], this
+        getPivotPointToRef(TT) {
+          return TT.x = -this._pivotMatrix.m[12], TT.y = -this._pivotMatrix.m[13], TT.z = -this._pivotMatrix.m[14], this
         }
         getAbsolutePivotPoint() {
-          const YY = uY.r.Zero();
-          return this.getAbsolutePivotPointToRef(YY), YY
+          const TT = DT.m.Zero();
+          return this.getAbsolutePivotPointToRef(TT), TT
         }
-        getAbsolutePivotPointToRef(YY) {
-          return this.getPivotPointToRef(YY), uY.r.TransformCoordinatesToRef(YY, this.getWorldMatrix(), YY), this
+        getAbsolutePivotPointToRef(TT) {
+          return this.getPivotPointToRef(TT), DT.m.TransformCoordinatesToRef(TT, this.getWorldMatrix(), TT), this
         }
-        nYY(YY) {
+        roT(TT) {
           if (this._isDirty) return this;
           if (this._children)
-            for (const rY of this._children) rY.nYY(YY);
-          return super.nYY(YY)
+            for (const oT of this._children) oT.roT(TT);
+          return super.roT(TT)
         }
-        setParent(rY) {
-          let DY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            FY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          if (!rY && !this.parent) return this;
-          const AY = uY.n.Quaternion[0],
-            IY = uY.n.xy[0],
-            RY = uY.n.xy[1],
-            OY = uY.n.Matrix[1];
-          uY.e.IdentityToRef(OY);
-          const gY = uY.n.Matrix[0];
+        setParent(oT) {
+          let IT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            iT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          if (!oT && !this.parent) return this;
+          const zT = DT.i.Quaternion[0],
+            kT = DT.i.sc[0],
+            WT = DT.i.sc[1],
+            XT = DT.i.Matrix[1];
+          DT.b.IdentityToRef(XT);
+          const BT = DT.i.Matrix[0];
           this.computeWorldMatrix(!0);
-          let aY = this.rotationQuaternion;
-          return aY || (aY = YY._TmpRotation, uY.g.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, aY)), uY.e.ComposeToRef(this.pa, aY, this.position, gY), this.parent && gY.multiplyToRef(this.parent.computeWorldMatrix(!0), gY), rY && (rY.computeWorldMatrix(!0).invertToRef(OY), gY.multiplyToRef(OY, gY)), gY.decompose(RY, AY, IY, DY ? this : void 0), this.rotationQuaternion ? this.rotationQuaternion.brY(AY) : AY.toEulerAnglesToRef(this.rotation), this.pa.brY(RY), this.position.brY(IY), this.parent = rY, FY && this.setPivotMatrix(uY.e.Identity()), this
+          let FT = this.rotationQuaternion;
+          return FT || (FT = TT._TmpRotation, DT.c.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, FT)), DT.b.ComposeToRef(this.ti, FT, this.position, BT), this.parent && BT.multiplyToRef(this.parent.computeWorldMatrix(!0), BT), oT && (oT.computeWorldMatrix(!0).invertToRef(XT), BT.multiplyToRef(XT, BT)), BT.decompose(WT, zT, kT, IT ? this : void 0), this.rotationQuaternion ? this.rotationQuaternion.SIT(zT) : zT.toEulerAnglesToRef(this.rotation), this.ti.SIT(WT), this.position.SIT(kT), this.parent = oT, iT && this.setPivotMatrix(DT.b.Identity()), this
         }
-        addChild(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return YY.setParent(this, rY), this
+        addChild(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return TT.setParent(this, oT), this
         }
-        removeChild(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return YY.parent !== this || YY.setParent(null, rY), this
+        removeChild(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return TT.parent !== this || TT.setParent(null, oT), this
         }
         get nonUniformScaling() {
           return this._nonUniformScaling
         }
-        _updateNonUniformScalingState(YY) {
-          return this._nonUniformScaling !== YY && (this._nonUniformScaling = YY, !0)
+        _updateNonUniformScalingState(TT) {
+          return this._nonUniformScaling !== TT && (this._nonUniformScaling = TT, !0)
         }
-        attachToBone(YY, rY) {
-          return this._currentParentWhenAttachingToBone = this.parent, this._transformToBoneReferal = rY, this.parent = YY, YY.getSkeleton().prepare(!0), YY.getFinalMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this
+        attachToBone(TT, oT) {
+          return this._currentParentWhenAttachingToBone = this.parent, this._transformToBoneReferal = oT, this.parent = TT, TT.getSkeleton().prepare(!0), TT.getFinalMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this
         }
         detachFromBone() {
-          let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          return this.parent ? (this.parent.getWorldMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this._transformToBoneReferal = null, this.parent = YY ? this._currentParentWhenAttachingToBone : null, this) : (YY && (this.parent = this._currentParentWhenAttachingToBone), this)
+          let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          return this.parent ? (this.parent.getWorldMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this._transformToBoneReferal = null, this.parent = TT ? this._currentParentWhenAttachingToBone : null, this) : (TT && (this.parent = this._currentParentWhenAttachingToBone), this)
         }
-        rotate(rY, DY, FY) {
-          let AY;
-          if (rY.normalize(), this.rotationQuaternion || (this.rotationQuaternion = this.rotation.toQuaternion(), this.rotation.o3(0)), FY && 0 !== FY) {
+        rotate(oT, IT, iT) {
+          let zT;
+          if (oT.normalize(), this.rotationQuaternion || (this.rotationQuaternion = this.rotation.toQuaternion(), this.rotation.W8(0)), iT && 0 !== iT) {
             if (this.parent) {
-              const YY = this.parent.getWorldMatrix(),
-                FY = uY.n.Matrix[0];
-              YY.invertToRef(FY), rY = uY.r.TransformNormal(rY, FY), YY.determinant() < 0 && (DY *= -1)
+              const TT = this.parent.getWorldMatrix(),
+                iT = DT.i.Matrix[0];
+              TT.invertToRef(iT), oT = DT.m.TransformNormal(oT, iT), TT.determinant() < 0 && (IT *= -1)
             }
-            AY = uY.g.RotationAxisToRef(rY, DY, YY._RotationAxisCache), AY.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion)
-          } else AY = uY.g.RotationAxisToRef(rY, DY, YY._RotationAxisCache), this.rotationQuaternion.multiplyToRef(AY, this.rotationQuaternion);
+            zT = DT.c.RotationAxisToRef(oT, IT, TT._RotationAxisCache), zT.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion)
+          } else zT = DT.c.RotationAxisToRef(oT, IT, TT._RotationAxisCache), this.rotationQuaternion.multiplyToRef(zT, this.rotationQuaternion);
           return this
         }
-        rotateAround(YY, rY, DY) {
-          rY.normalize(), this.rotationQuaternion || (this.rotationQuaternion = uY.g.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z), this.rotation.o3(0));
-          const FY = uY.n.xy[0],
-            AY = uY.n.xy[1],
-            IY = uY.n.xy[2],
-            RY = uY.n.Quaternion[0],
-            OY = uY.n.Matrix[0],
-            gY = uY.n.Matrix[1],
-            aY = uY.n.Matrix[2],
-            vY = uY.n.Matrix[3];
-          return YY.subtractToRef(this.position, FY), uY.e.TranslationToRef(FY.x, FY.y, FY.z, OY), uY.e.TranslationToRef(-FY.x, -FY.y, -FY.z, gY), uY.e.RotationAxisToRef(rY, DY, aY), gY.multiplyToRef(aY, vY), vY.multiplyToRef(OY, vY), vY.decompose(AY, RY, IY), this.position.addInPlace(IY), RY.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion), this
+        rotateAround(TT, oT, IT) {
+          oT.normalize(), this.rotationQuaternion || (this.rotationQuaternion = DT.c.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z), this.rotation.W8(0));
+          const iT = DT.i.sc[0],
+            zT = DT.i.sc[1],
+            kT = DT.i.sc[2],
+            WT = DT.i.Quaternion[0],
+            XT = DT.i.Matrix[0],
+            BT = DT.i.Matrix[1],
+            FT = DT.i.Matrix[2],
+            ST = DT.i.Matrix[3];
+          return TT.subtractToRef(this.position, iT), DT.b.TranslationToRef(iT.x, iT.y, iT.z, XT), DT.b.TranslationToRef(-iT.x, -iT.y, -iT.z, BT), DT.b.RotationAxisToRef(oT, IT, FT), BT.multiplyToRef(FT, ST), ST.multiplyToRef(XT, ST), ST.decompose(zT, WT, kT), this.position.addInPlace(kT), WT.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion), this
         }
-        translate(YY, rY, DY) {
-          const FY = YY.scale(rY);
-          if (DY && 0 !== DY) this.setAbsolutePosition(this.getAbsolutePosition().add(FY));
+        translate(TT, oT, IT) {
+          const iT = TT.scale(oT);
+          if (IT && 0 !== IT) this.setAbsolutePosition(this.getAbsolutePosition().add(iT));
           else {
-            const YY = this.getPositionExpressedInLocalSpace().add(FY);
-            this.setPositionWithLocalVector(YY)
+            const TT = this.getPositionExpressedInLocalSpace().add(iT);
+            this.setPositionWithLocalVector(TT)
           }
           return this
         }
-        addRotation(YY, rY, DY) {
-          let FY;
-          this.rotationQuaternion ? FY = this.rotationQuaternion : (FY = uY.n.Quaternion[1], uY.g.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, FY));
-          const AY = uY.n.Quaternion[0];
-          return uY.g.RotationYawPitchRollToRef(rY, YY, DY, AY), FY.multiplyInPlace(AY), this.rotationQuaternion || FY.toEulerAnglesToRef(this.rotation), this
+        addRotation(TT, oT, IT) {
+          let iT;
+          this.rotationQuaternion ? iT = this.rotationQuaternion : (iT = DT.i.Quaternion[1], DT.c.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, iT));
+          const zT = DT.i.Quaternion[0];
+          return DT.c.RotationYawPitchRollToRef(oT, TT, IT, zT), iT.multiplyInPlace(zT), this.rotationQuaternion || iT.toEulerAnglesToRef(this.rotation), this
         }
         _getEffectiveParent() {
           return this.parent
         }
         isWorldMatrixCameraDependent() {
-          return this._infiniteDistance && !this.parent || this._billboardMode !== YY.BILLBOARDMODE_NONE
+          return this._infiniteDistance && !this.parent || this._billboardMode !== TT.BILLBOARDMODE_NONE
         }
         computeWorldMatrix() {
-          let rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
           if (this._isWorldMatrixFrozen && !this._isDirty) return this._worldMatrix;
-          const FY = this.hT().getRenderId();
-          if (!this._isDirty && !rY && (this._currentRenderId === FY || this.isSynchronized())) return this._currentRenderId = FY, this._worldMatrix;
-          DY = DY || this.hT().activeCamera, this._updateCache();
-          const AY = this._cache;
-          AY.pivotMatrixUpdated = !1, AY.billboardMode = this.billboardMode, AY.infiniteDistance = this.infiniteDistance, AY.parent = this._parentNode, this._currentRenderId = FY, this._childUpdateId += 1, this._isDirty = !1, this._position._isDirty = !1, this._rotation._isDirty = !1, this._scaling._isDirty = !1;
-          const IY = this._getEffectiveParent(),
-            RY = YY._TmpScaling;
-          let OY, gY = this._position;
-          if (this._infiniteDistance && !this.parent && DY) {
-            const rY = DY.getWorldMatrix().m;
-            gY = YY._TmpTranslation, gY.p_(this._position.x + rY[12], this._position.y + rY[13], this._position.z + rY[14])
+          const iT = this.pC().getRenderId();
+          if (!this._isDirty && !oT && (this._currentRenderId === iT || this.isSynchronized())) return this._currentRenderId = iT, this._worldMatrix;
+          IT = IT || this.pC().activeCamera, this._updateCache();
+          const zT = this._cache;
+          zT.pivotMatrixUpdated = !1, zT.billboardMode = this.billboardMode, zT.infiniteDistance = this.infiniteDistance, zT.parent = this._parentNode, this._currentRenderId = iT, this._childUpdateId += 1, this._isDirty = !1, this._position._isDirty = !1, this._rotation._isDirty = !1, this._scaling._isDirty = !1;
+          const kT = this._getEffectiveParent(),
+            WT = TT._TmpScaling;
+          let XT, BT = this._position;
+          if (this._infiniteDistance && !this.parent && IT) {
+            const oT = IT.getWorldMatrix().m;
+            BT = TT._TmpTranslation, BT.S_(this._position.x + oT[12], this._position.y + oT[13], this._position.z + oT[14])
           }
-          if (RY.p_(this._scaling.x * this.scalingDeterminant, this._scaling.y * this.scalingDeterminant, this._scaling.z * this.scalingDeterminant), this._rotationQuaternion) {
-            if (this._rotationQuaternion._isDirty = !1, OY = this._rotationQuaternion, this.reIntegrateRotationIntoRotationQuaternion) {
-              this.rotation.lengthSquared() && (this._rotationQuaternion.multiplyInPlace(uY.g.RotationYawPitchRoll(this._rotation.y, this._rotation.x, this._rotation.z)), this._rotation.p_(0, 0, 0))
+          if (WT.S_(this._scaling.x * this.scalingDeterminant, this._scaling.y * this.scalingDeterminant, this._scaling.z * this.scalingDeterminant), this._rotationQuaternion) {
+            if (this._rotationQuaternion._isDirty = !1, XT = this._rotationQuaternion, this.reIntegrateRotationIntoRotationQuaternion) {
+              this.rotation.lengthSquared() && (this._rotationQuaternion.multiplyInPlace(DT.c.RotationYawPitchRoll(this._rotation.y, this._rotation.x, this._rotation.z)), this._rotation.S_(0, 0, 0))
             }
-          } else OY = YY._TmpRotation, uY.g.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, OY);
+          } else XT = TT._TmpRotation, DT.c.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, XT);
           if (this._usePivotMatrix) {
-            const YY = uY.n.Matrix[1];
-            uY.e.ScalingToRef(RY.x, RY.y, RY.z, YY);
-            const rY = uY.n.Matrix[0];
-            OY.toRotationMatrix(rY), this._pivotMatrix.multiplyToRef(YY, uY.n.Matrix[4]), uY.n.Matrix[4].multiplyToRef(rY, this._localMatrix), this._postMultiplyPivotMatrix && this._localMatrix.multiplyToRef(this._pivotMatrixInverse, this._localMatrix), this._localMatrix.addTranslationFromFloats(gY.x, gY.y, gY.z)
-          } else uY.e.ComposeToRef(RY, OY, gY, this._localMatrix);
-          if (IY && IY.getWorldMatrix) {
-            if (rY && IY.computeWorldMatrix(rY), this.billboardMode) {
+            const TT = DT.i.Matrix[1];
+            DT.b.ScalingToRef(WT.x, WT.y, WT.z, TT);
+            const oT = DT.i.Matrix[0];
+            XT.toRotationMatrix(oT), this._pivotMatrix.multiplyToRef(TT, DT.i.Matrix[4]), DT.i.Matrix[4].multiplyToRef(oT, this._localMatrix), this._postMultiplyPivotMatrix && this._localMatrix.multiplyToRef(this._pivotMatrixInverse, this._localMatrix), this._localMatrix.addTranslationFromFloats(BT.x, BT.y, BT.z)
+          } else DT.b.ComposeToRef(WT, XT, BT, this._localMatrix);
+          if (kT && kT.getWorldMatrix) {
+            if (oT && kT.computeWorldMatrix(oT), this.billboardMode) {
               if (this._transformToBoneReferal) {
-                const YY = this.parent;
-                YY.getSkeleton().prepare(), YY.getFinalMatrix().multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), uY.n.Matrix[7])
-              } else uY.n.Matrix[7].brY(IY.getWorldMatrix());
-              const rY = uY.n.xy[5],
-                DY = uY.n.xy[6],
-                FY = uY.n.Quaternion[0];
-              uY.n.Matrix[7].decompose(DY, FY, rY), uY.e.ScalingToRef(DY.x, DY.y, DY.z, uY.n.Matrix[7]), uY.n.Matrix[7].setTranslation(rY), YY.BillboardUseParentOrientation && (this._position.applyRotationQuaternionToRef(FY, rY), this._localMatrix.setTranslation(rY)), this._localMatrix.multiplyToRef(uY.n.Matrix[7], this._worldMatrix)
+                const TT = this.parent;
+                TT.getSkeleton().prepare(), TT.getFinalMatrix().multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), DT.i.Matrix[7])
+              } else DT.i.Matrix[7].SIT(kT.getWorldMatrix());
+              const oT = DT.i.sc[5],
+                IT = DT.i.sc[6],
+                iT = DT.i.Quaternion[0];
+              DT.i.Matrix[7].decompose(IT, iT, oT), DT.b.ScalingToRef(IT.x, IT.y, IT.z, DT.i.Matrix[7]), DT.i.Matrix[7].setTranslation(oT), TT.BillboardUseParentOrientation && (this._position.applyRotationQuaternionToRef(iT, oT), this._localMatrix.setTranslation(oT)), this._localMatrix.multiplyToRef(DT.i.Matrix[7], this._worldMatrix)
             } else if (this._transformToBoneReferal) {
-              const YY = this.parent;
-              YY.getSkeleton().prepare(), this._localMatrix.multiplyToRef(YY.getFinalMatrix(), uY.n.Matrix[6]), uY.n.Matrix[6].multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), this._worldMatrix)
-            } else this._localMatrix.multiplyToRef(IY.getWorldMatrix(), this._worldMatrix);
+              const TT = this.parent;
+              TT.getSkeleton().prepare(), this._localMatrix.multiplyToRef(TT.getFinalMatrix(), DT.i.Matrix[6]), DT.i.Matrix[6].multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), this._worldMatrix)
+            } else this._localMatrix.multiplyToRef(kT.getWorldMatrix(), this._worldMatrix);
             this._markSyncedWithParent()
-          } else this._worldMatrix.brY(this._localMatrix);
-          if (DY && this.billboardMode)
-            if (AY.useBillboardPosition) {
-              const rY = uY.n.xy[0];
-              this._worldMatrix.getTranslationToRef(rY);
-              const FY = DY.globalPosition;
-              this._worldMatrix.invertToRef(uY.n.Matrix[1]);
-              const AY = uY.n.xy[1];
-              uY.r.TransformCoordinatesToRef(FY, uY.n.Matrix[1], AY), AY.normalize();
-              const IY = -Math.atan2(AY.z, AY.x) + Math.PI / 2,
-                RY = Math.sqrt(AY.x * AY.x + AY.z * AY.z),
-                OY = -Math.atan2(AY.y, RY);
-              if (uY.g.RotationYawPitchRollToRef(IY, OY, 0, uY.n.Quaternion[0]), (this.billboardMode & YY.BILLBOARDMODE_ALL) !== YY.BILLBOARDMODE_ALL) {
-                const rY = uY.n.xy[1];
-                uY.n.Quaternion[0].toEulerAnglesToRef(rY), (this.billboardMode & YY.BILLBOARDMODE_X) !== YY.BILLBOARDMODE_X && (rY.x = 0), (this.billboardMode & YY.BILLBOARDMODE_Y) !== YY.BILLBOARDMODE_Y && (rY.y = 0), (this.billboardMode & YY.BILLBOARDMODE_Z) !== YY.BILLBOARDMODE_Z && (rY.z = 0), uY.e.RotationYawPitchRollToRef(rY.y, rY.x, rY.z, uY.n.Matrix[0])
-              } else uY.e.FromQuaternionToRef(uY.n.Quaternion[0], uY.n.Matrix[0]);
-              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(uY.n.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(uY.n.xy[0])
+          } else this._worldMatrix.SIT(this._localMatrix);
+          if (IT && this.billboardMode)
+            if (zT.useBillboardPosition) {
+              const oT = DT.i.sc[0];
+              this._worldMatrix.getTranslationToRef(oT);
+              const iT = IT.globalPosition;
+              this._worldMatrix.invertToRef(DT.i.Matrix[1]);
+              const zT = DT.i.sc[1];
+              DT.m.TransformCoordinatesToRef(iT, DT.i.Matrix[1], zT), zT.normalize();
+              const kT = -Math.atan2(zT.z, zT.x) + Math.PI / 2,
+                WT = Math.sqrt(zT.x * zT.x + zT.z * zT.z),
+                XT = -Math.atan2(zT.y, WT);
+              if (DT.c.RotationYawPitchRollToRef(kT, XT, 0, DT.i.Quaternion[0]), (this.billboardMode & TT.BILLBOARDMODE_ALL) !== TT.BILLBOARDMODE_ALL) {
+                const oT = DT.i.sc[1];
+                DT.i.Quaternion[0].toEulerAnglesToRef(oT), (this.billboardMode & TT.BILLBOARDMODE_X) !== TT.BILLBOARDMODE_X && (oT.x = 0), (this.billboardMode & TT.BILLBOARDMODE_Y) !== TT.BILLBOARDMODE_Y && (oT.y = 0), (this.billboardMode & TT.BILLBOARDMODE_Z) !== TT.BILLBOARDMODE_Z && (oT.z = 0), DT.b.RotationYawPitchRollToRef(oT.y, oT.x, oT.z, DT.i.Matrix[0])
+              } else DT.b.FromQuaternionToRef(DT.i.Quaternion[0], DT.i.Matrix[0]);
+              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(DT.i.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(DT.i.sc[0])
             } else {
-              const rY = uY.n.xy[0];
-              this._worldMatrix.getTranslationToRef(rY), uY.n.Matrix[1].brY(DY.getViewMatrix());
-              const FY = this.hT().useRightHandedSystem;
-              if (FY && uY.n.Matrix[1].multiplyToRef(YY._TmpRHRestore, uY.n.Matrix[1]), uY.n.Matrix[1].setTranslationFromFloats(0, 0, 0), uY.n.Matrix[1].invertToRef(uY.n.Matrix[0]), (this.billboardMode & YY.BILLBOARDMODE_ALL) !== YY.BILLBOARDMODE_ALL) {
-                uY.n.Matrix[0].decompose(void 0, uY.n.Quaternion[0], void 0);
-                const rY = uY.n.xy[1];
-                uY.n.Quaternion[0].toEulerAnglesToRef(rY), (this.billboardMode & YY.BILLBOARDMODE_X) !== YY.BILLBOARDMODE_X && (rY.x = 0), (this.billboardMode & YY.BILLBOARDMODE_Y) !== YY.BILLBOARDMODE_Y && (rY.y = 0), (this.billboardMode & YY.BILLBOARDMODE_Z) !== YY.BILLBOARDMODE_Z && (rY.z = 0), FY && (rY.y += Math.PI), uY.e.RotationYawPitchRollToRef(rY.y, rY.x, rY.z, uY.n.Matrix[0])
+              const oT = DT.i.sc[0];
+              this._worldMatrix.getTranslationToRef(oT), DT.i.Matrix[1].SIT(IT.getViewMatrix());
+              const iT = this.pC().useRightHandedSystem;
+              if (iT && DT.i.Matrix[1].multiplyToRef(TT._TmpRHRestore, DT.i.Matrix[1]), DT.i.Matrix[1].setTranslationFromFloats(0, 0, 0), DT.i.Matrix[1].invertToRef(DT.i.Matrix[0]), (this.billboardMode & TT.BILLBOARDMODE_ALL) !== TT.BILLBOARDMODE_ALL) {
+                DT.i.Matrix[0].decompose(void 0, DT.i.Quaternion[0], void 0);
+                const oT = DT.i.sc[1];
+                DT.i.Quaternion[0].toEulerAnglesToRef(oT), (this.billboardMode & TT.BILLBOARDMODE_X) !== TT.BILLBOARDMODE_X && (oT.x = 0), (this.billboardMode & TT.BILLBOARDMODE_Y) !== TT.BILLBOARDMODE_Y && (oT.y = 0), (this.billboardMode & TT.BILLBOARDMODE_Z) !== TT.BILLBOARDMODE_Z && (oT.z = 0), iT && (oT.y += Math.PI), DT.b.RotationYawPitchRollToRef(oT.y, oT.x, oT.z, DT.i.Matrix[0])
               }
-              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(uY.n.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(uY.n.xy[0])
-            } return this.ignoreNonUniformScaling ? this._updateNonUniformScalingState(!1) : this._scaling.isNonUniformWithinEpsilon(1e-6) ? this._updateNonUniformScalingState(!0) : IY && IY._nonUniformScaling ? this._updateNonUniformScalingState(IY._nonUniformScaling) : this._updateNonUniformScalingState(!1), this._afterComputeWorldMatrix(), this._absolutePosition.p_(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._isAbsoluteSynced = !1, this.onAfterWorldMatrixUpdateObservable.notifyObservers(this), this._poseMatrix || (this._poseMatrix = uY.e.Invert(this._worldMatrix)), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix
+              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(DT.i.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(DT.i.sc[0])
+            } return this.ignoreNonUniformScaling ? this._updateNonUniformScalingState(!1) : this._scaling.isNonUniformWithinEpsilon(1e-6) ? this._updateNonUniformScalingState(!0) : kT && kT._nonUniformScaling ? this._updateNonUniformScalingState(kT._nonUniformScaling) : this._updateNonUniformScalingState(!1), this._afterComputeWorldMatrix(), this._absolutePosition.S_(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._isAbsoluteSynced = !1, this.onAfterWorldMatrixUpdateObservable.notifyObservers(this), this._poseMatrix || (this._poseMatrix = DT.b.Invert(this._worldMatrix)), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix
         }
         resetLocalMatrix() {
-          let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-          if (this.computeWorldMatrix(), YY) {
-            const YY = this.getChildren();
-            for (let rY = 0; rY < YY.length; ++rY) {
-              const DY = YY[rY];
-              if (DY) {
-                DY.computeWorldMatrix();
-                const YY = uY.n.Matrix[0];
-                DY._localMatrix.multiplyToRef(this._localMatrix, YY);
-                const rY = uY.n.Quaternion[0];
-                YY.decompose(DY.pa, rY, DY.position), DY.rotationQuaternion ? DY.rotationQuaternion.brY(rY) : rY.toEulerAnglesToRef(DY.rotation)
+          let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          if (this.computeWorldMatrix(), TT) {
+            const TT = this.getChildren();
+            for (let oT = 0; oT < TT.length; ++oT) {
+              const IT = TT[oT];
+              if (IT) {
+                IT.computeWorldMatrix();
+                const TT = DT.i.Matrix[0];
+                IT._localMatrix.multiplyToRef(this._localMatrix, TT);
+                const oT = DT.i.Quaternion[0];
+                TT.decompose(IT.ti, oT, IT.position), IT.rotationQuaternion ? IT.rotationQuaternion.SIT(oT) : oT.toEulerAnglesToRef(IT.rotation)
               }
             }
           }
-          this.pa.p_(1, 1, 1), this.position.p_(0, 0, 0), this.rotation.p_(0, 0, 0), this.rotationQuaternion && (this.rotationQuaternion = uY.g.Identity()), this._worldMatrix = uY.e.Identity()
+          this.ti.S_(1, 1, 1), this.position.S_(0, 0, 0), this.rotation.S_(0, 0, 0), this.rotationQuaternion && (this.rotationQuaternion = DT.c.Identity()), this._worldMatrix = DT.b.Identity()
         }
         _afterComputeWorldMatrix() {}
-        registerAfterWorldMatrixUpdate(YY) {
-          return this.onAfterWorldMatrixUpdateObservable.add(YY), this
+        registerAfterWorldMatrixUpdate(TT) {
+          return this.onAfterWorldMatrixUpdateObservable.add(TT), this
         }
-        unregisterAfterWorldMatrixUpdate(YY) {
-          return this.onAfterWorldMatrixUpdateObservable.removeCallback(YY), this
+        unregisterAfterWorldMatrixUpdate(TT) {
+          return this.onAfterWorldMatrixUpdateObservable.removeCallback(TT), this
         }
         getPositionInCameraSpace() {
-          let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return YY || (YY = this.hT().activeCamera), uY.r.TransformCoordinates(this.getAbsolutePosition(), YY.getViewMatrix())
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return TT || (TT = this.pC().activeCamera), DT.m.TransformCoordinates(this.getAbsolutePosition(), TT.getViewMatrix())
         }
         getDistanceToCamera() {
-          let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return YY || (YY = this.hT().activeCamera), this.getAbsolutePosition().subtract(YY.globalPosition).length()
+          let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return TT || (TT = this.pC().activeCamera), this.getAbsolutePosition().subtract(TT.globalPosition).length()
         }
-        clone(rY, DY, FY) {
-          const AY = aY.b.Clone((() => new YY(rY, this.hT())), this);
-          if (AY.name = rY, AY.id = rY, DY && (AY.parent = DY), !FY) {
-            const YY = this.getDescendants(!0);
-            for (let DY = 0; DY < YY.length; DY++) {
-              const FY = YY[DY];
-              FY.clone && FY.clone(rY + "." + FY.name, AY)
+        clone(oT, IT, iT) {
+          const zT = FT.c.Clone((() => new TT(oT, this.pC())), this);
+          if (zT.name = oT, zT.id = oT, IT && (zT.parent = IT), !iT) {
+            const TT = this.getDescendants(!0);
+            for (let IT = 0; IT < TT.length; IT++) {
+              const iT = TT[IT];
+              iT.clone && iT.clone(oT + "." + iT.name, zT)
             }
           }
-          return AY
+          return zT
         }
-        serialize(YY) {
-          const rY = aY.b.Serialize(this, YY);
-          return rY.type = this.getClassName(), rY.uniqueId = this.uniqueId, this.parent && this.parent._serializeAsParent(rY), rY.localMatrix = this.getPivotMatrix().VDY(), rY.isEnabled = this.isEnabled(), this._isWorldMatrixFrozen && (rY.aN = !0), aY.b.AppendSerializedAnimations(this, rY), rY.ws = this.serializeAnimationRanges(), rY
+        serialize(TT) {
+          const oT = FT.c.Serialize(this, TT);
+          return oT.type = this.getClassName(), oT.uniqueId = this.uniqueId, this.parent && this.parent._serializeAsParent(oT), oT.localMatrix = this.getPivotMatrix().bIT(), oT.isEnabled = this.isEnabled(), this._isWorldMatrixFrozen && (oT.LJ = !0), FT.c.AppendSerializedAnimations(this, oT), oT.ec = this.serializeAnimationRanges(), oT
         }
-        getChildTransformNodes(rY, DY) {
-          const FY = [];
-          return this._getDescendants(FY, rY, (rY => (!DY || DY(rY)) && rY instanceof YY)), FY
+        getChildTransformNodes(oT, IT) {
+          const iT = [];
+          return this._getDescendants(iT, oT, (oT => (!IT || IT(oT)) && oT instanceof TT)), iT
         }
-        dispose(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this.hT().stopAnimation(this), this.hT().removeTransformNode(this), this._parentContainer) {
-            const YY = this._parentContainer.transformNodes.indexOf(this);
-            YY > -1 && this._parentContainer.transformNodes.splice(YY, 1), this._parentContainer = null
+        dispose(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this.pC().stopAnimation(this), this.pC().removeTransformNode(this), this._parentContainer) {
+            const TT = this._parentContainer.transformNodes.indexOf(this);
+            TT > -1 && this._parentContainer.transformNodes.splice(TT, 1), this._parentContainer = null
           }
-          if (this.onAfterWorldMatrixUpdateObservable.clear(), YY) {
-            const YY = this.getChildTransformNodes(!0);
-            for (const rY of YY) rY.parent = null, rY.computeWorldMatrix(!0)
+          if (this.onAfterWorldMatrixUpdateObservable.clear(), TT) {
+            const TT = this.getChildTransformNodes(!0);
+            for (const oT of TT) oT.parent = null, oT.computeWorldMatrix(!0)
           }
-          super.dispose(YY, rY)
+          super.dispose(TT, oT)
         }
         normalizeToUnitCube() {
-          let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            DY = arguments.length > 2 ? arguments[2] : void 0,
-            FY = null,
-            AY = null;
-          rY && (this.rotationQuaternion ? (AY = this.rotationQuaternion.clone(), this.rotationQuaternion.p_(0, 0, 0, 1)) : this.rotation && (FY = this.rotation.clone(), this.rotation.p_(0, 0, 0)));
-          const IY = this.getHierarchyBoundingVectors(YY, DY),
-            RY = IY.max.subtract(IY.min),
-            OY = Math.max(RY.x, RY.y, RY.z);
-          if (0 === OY) return this;
-          const gY = 1 / OY;
-          return this.pa.scaleInPlace(gY), rY && (this.rotationQuaternion && AY ? this.rotationQuaternion.brY(AY) : this.rotation && FY && this.rotation.brY(FY)), this
+          let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            IT = arguments.length > 2 ? arguments[2] : void 0,
+            iT = null,
+            zT = null;
+          oT && (this.rotationQuaternion ? (zT = this.rotationQuaternion.clone(), this.rotationQuaternion.S_(0, 0, 0, 1)) : this.rotation && (iT = this.rotation.clone(), this.rotation.S_(0, 0, 0)));
+          const kT = this.getHierarchyBoundingVectors(TT, IT),
+            WT = kT.max.subtract(kT.min),
+            XT = Math.max(WT.x, WT.y, WT.z);
+          if (0 === XT) return this;
+          const BT = 1 / XT;
+          return this.ti.scaleInPlace(BT), oT && (this.rotationQuaternion && zT ? this.rotationQuaternion.SIT(zT) : this.rotation && iT && this.rotation.SIT(iT)), this
         }
         _syncAbsoluteScalingAndRotation() {
           this._isAbsoluteSynced || (this._worldMatrix.decompose(this._absoluteScaling, this._absoluteRotationQuaternion), this._isAbsoluteSynced = !0)
         }
       }, (() => {
-        const aY = "function" === typeof Symbol && Symbol.metadata ? Object.create(oY[Symbol.metadata] ?? null) : void 0;
-        rY = [(0, gY.J)("position")], DY = [(0, gY.J)("rotation")], FY = [(0, gY.C)("rotationQuaternion")], AY = [(0, gY.J)("pa")], IY = [(0, gY.M)("billboardMode")], RY = [(0, gY.M)()], iY = [(0, gY.M)("infiniteDistance")], yY = [(0, gY.M)()], QY = [(0, gY.M)()], (0, OY.i)(null, null, rY, {
+        const FT = "function" === typeof Symbol && Symbol.metadata ? Object.create(MT[Symbol.metadata] ?? null) : void 0;
+        oT = [(0, BT.M)("position")], IT = [(0, BT.M)("rotation")], iT = [(0, BT.G)("rotationQuaternion")], zT = [(0, BT.M)("ti")], kT = [(0, BT.P)("billboardMode")], WT = [(0, BT.P)()], xT = [(0, BT.P)("infiniteDistance")], cT = [(0, BT.P)()], KT = [(0, BT.P)()], (0, XT.h)(null, null, oT, {
           kind: "field",
           name: "_position",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_position" in YY,
-            get: YY => YY._position,
-            set: (YY, rY) => {
-              YY._position = rY
+            has: TT => "_position" in TT,
+            get: TT => TT._position,
+            set: (TT, oT) => {
+              TT._position = oT
             }
           },
-          metadata: aY
-        }, WY, EY), (0, OY.i)(null, null, DY, {
+          metadata: FT
+        }, rT, AT), (0, XT.h)(null, null, IT, {
           kind: "field",
           name: "_rotation",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_rotation" in YY,
-            get: YY => YY._rotation,
-            set: (YY, rY) => {
-              YY._rotation = rY
+            has: TT => "_rotation" in TT,
+            get: TT => TT._rotation,
+            set: (TT, oT) => {
+              TT._rotation = oT
             }
           },
-          metadata: aY
-        }, mY, VY), (0, OY.i)(null, null, FY, {
+          metadata: FT
+        }, gT, hT), (0, XT.h)(null, null, iT, {
           kind: "field",
           name: "_rotationQuaternion",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_rotationQuaternion" in YY,
-            get: YY => YY._rotationQuaternion,
-            set: (YY, rY) => {
-              YY._rotationQuaternion = rY
+            has: TT => "_rotationQuaternion" in TT,
+            get: TT => TT._rotationQuaternion,
+            set: (TT, oT) => {
+              TT._rotationQuaternion = oT
             }
           },
-          metadata: aY
-        }, SY, lY), (0, OY.i)(null, null, AY, {
+          metadata: FT
+        }, wT, mT), (0, XT.h)(null, null, zT, {
           kind: "field",
           name: "_scaling",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_scaling" in YY,
-            get: YY => YY._scaling,
-            set: (YY, rY) => {
-              YY._scaling = rY
+            has: TT => "_scaling" in TT,
+            get: TT => TT._scaling,
+            set: (TT, oT) => {
+              TT._scaling = oT
             }
           },
-          metadata: aY
-        }, TY, eY), (0, OY.i)(null, null, IY, {
+          metadata: FT
+        }, eT, RT), (0, XT.h)(null, null, kT, {
           kind: "field",
           name: "_billboardMode",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_billboardMode" in YY,
-            get: YY => YY._billboardMode,
-            set: (YY, rY) => {
-              YY._billboardMode = rY
+            has: TT => "_billboardMode" in TT,
+            get: TT => TT._billboardMode,
+            set: (TT, oT) => {
+              TT._billboardMode = oT
             }
           },
-          metadata: aY
-        }, NY, BY), (0, OY.i)(null, null, RY, {
+          metadata: FT
+        }, uT, vT), (0, XT.h)(null, null, WT, {
           kind: "field",
           name: "scalingDeterminant",
           static: !1,
           private: !1,
           access: {
-            has: YY => "scalingDeterminant" in YY,
-            get: YY => YY.scalingDeterminant,
-            set: (YY, rY) => {
-              YY.scalingDeterminant = rY
+            has: TT => "scalingDeterminant" in TT,
+            get: TT => TT.scalingDeterminant,
+            set: (TT, oT) => {
+              TT.scalingDeterminant = oT
             }
           },
-          metadata: aY
-        }, cY, KY), (0, OY.i)(null, null, iY, {
+          metadata: FT
+        }, ET, fT), (0, XT.h)(null, null, xT, {
           kind: "field",
           name: "_infiniteDistance",
           static: !1,
           private: !1,
           access: {
-            has: YY => "_infiniteDistance" in YY,
-            get: YY => YY._infiniteDistance,
-            set: (YY, rY) => {
-              YY._infiniteDistance = rY
+            has: TT => "_infiniteDistance" in TT,
+            get: TT => TT._infiniteDistance,
+            set: (TT, oT) => {
+              TT._infiniteDistance = oT
             }
           },
-          metadata: aY
-        }, HY, zY), (0, OY.i)(null, null, yY, {
+          metadata: FT
+        }, CT, jT), (0, XT.h)(null, null, cT, {
           kind: "field",
           name: "ignoreNonUniformScaling",
           static: !1,
           private: !1,
           access: {
-            has: YY => "ignoreNonUniformScaling" in YY,
-            get: YY => YY.ignoreNonUniformScaling,
-            set: (YY, rY) => {
-              YY.ignoreNonUniformScaling = rY
+            has: TT => "ignoreNonUniformScaling" in TT,
+            get: TT => TT.ignoreNonUniformScaling,
+            set: (TT, oT) => {
+              TT.ignoreNonUniformScaling = oT
             }
           },
-          metadata: aY
-        }, ZY, CY), (0, OY.i)(null, null, QY, {
+          metadata: FT
+        }, JT, UT), (0, XT.h)(null, null, KT, {
           kind: "field",
           name: "reIntegrateRotationIntoRotationQuaternion",
           static: !1,
           private: !1,
           access: {
-            has: YY => "reIntegrateRotationIntoRotationQuaternion" in YY,
-            get: YY => YY.reIntegrateRotationIntoRotationQuaternion,
-            set: (YY, rY) => {
-              YY.reIntegrateRotationIntoRotationQuaternion = rY
+            has: TT => "reIntegrateRotationIntoRotationQuaternion" in TT,
+            get: TT => TT.reIntegrateRotationIntoRotationQuaternion,
+            set: (TT, oT) => {
+              TT.reIntegrateRotationIntoRotationQuaternion = oT
             }
           },
-          metadata: aY
-        }, fY, jY), aY && Object.defineProperty(YY, Symbol.metadata, {
+          metadata: FT
+        }, aT, YT), FT && Object.defineProperty(TT, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: aY
+          value: FT
         })
-      })(), YY.BILLBOARDMODE_NONE = 0, YY.BILLBOARDMODE_X = 1, YY.BILLBOARDMODE_Y = 2, YY.BILLBOARDMODE_Z = 4, YY.BILLBOARDMODE_ALL = 7, YY.BILLBOARDMODE_USE_POSITION = 128, YY.BillboardUseParentOrientation = !1, YY._TmpRotation = uY.g.Zero(), YY._TmpScaling = uY.r.Zero(), YY._TmpTranslation = uY.r.Zero(), YY._TmpRHRestore = uY.e.Scaling(1, 1, -1), YY._LookAtVectorCache = new uY.r(0, 0, 0), YY._RotationAxisCache = new uY.g, YY
+      })(), TT.BILLBOARDMODE_NONE = 0, TT.BILLBOARDMODE_X = 1, TT.BILLBOARDMODE_Y = 2, TT.BILLBOARDMODE_Z = 4, TT.BILLBOARDMODE_ALL = 7, TT.BILLBOARDMODE_USE_POSITION = 128, TT.BillboardUseParentOrientation = !1, TT._TmpRotation = DT.c.Zero(), TT._TmpScaling = DT.m.Zero(), TT._TmpTranslation = DT.m.Zero(), TT._TmpRHRestore = DT.b.Scaling(1, 1, -1), TT._LookAtVectorCache = new DT.m(0, 0, 0), TT._RotationAxisCache = new DT.c, TT
     })();
 
-    function oY(YY, rY, DY) {
-      const FY = aY.b.Parse((() => new QY(YY.name, rY)), YY, rY, DY);
-      if (YY.localMatrix ? FY.setPreTransformMatrix(uY.e.FromArray(YY.localMatrix)) : YY.pivotMatrix && FY.setPivotMatrix(uY.e.FromArray(YY.pivotMatrix)), FY.mV(YY.isEnabled), FY._waitingParsedUniqueId = YY.uniqueId, void 0 !== YY.parentId && (FY._waitingParentId = YY.parentId), void 0 !== YY.parentInstanceIndex && (FY._waitingParentInstanceIndex = YY.parentInstanceIndex), YY.aN && (FY._waitingFreezeWorldMatrix = YY.aN), YY.animations) {
-        for (let rY = 0; rY < YY.animations.length; rY++) {
-          const DY = YY.animations[rY],
-            AY = (0, iY.e)("BABYLON.Animation");
-          AY && FY.animations.push(AY.Parse(DY))
+    function MT(TT, oT, IT) {
+      const iT = FT.c.Parse((() => new KT(TT.name, oT)), TT, oT, IT);
+      if (TT.localMatrix ? iT.setPreTransformMatrix(DT.b.FromArray(TT.localMatrix)) : TT.pivotMatrix && iT.setPivotMatrix(DT.b.FromArray(TT.pivotMatrix)), iT.Fv(TT.isEnabled), iT._waitingParsedUniqueId = TT.uniqueId, void 0 !== TT.parentId && (iT._waitingParentId = TT.parentId), void 0 !== TT.parentInstanceIndex && (iT._waitingParentInstanceIndex = TT.parentInstanceIndex), TT.LJ && (iT._waitingFreezeWorldMatrix = TT.LJ), TT.animations) {
+        for (let oT = 0; oT < TT.animations.length; oT++) {
+          const IT = TT.animations[oT],
+            zT = (0, xT.d)("BABYLON.Animation");
+          zT && iT.animations.push(zT.Parse(IT))
         }
-        sY.b.ParseAnimationRanges(FY, YY, rY)
+        LT.c.ParseAnimationRanges(iT, TT, oT)
       }
-      return YY.autoAnimate && rY.beginAnimation(FY, YY.autoAnimateFrom, YY.autoAnimateTo, YY.autoAnimateLoop, YY.autoAnimateSpeed || 1), FY
+      return TT.autoAnimate && oT.beginAnimation(iT, TT.autoAnimateFrom, TT.autoAnimateTo, TT.autoAnimateLoop, TT.autoAnimateSpeed || 1), iT
     }
-    let WY = !1;
+    let rT = !1;
 
-    function EY() {
-      WY || (WY = !0, QY.Parse = oY)
-    }(FY = QY.prototype).ZZ ?? (FY.ZZ = (0, yY.g)("TransformNode", "ZZ")), (AY = QY.prototype).applyImpulse ?? (AY.applyImpulse = (0, yY.g)("TransformNode", "applyImpulse")), (IY = QY.prototype).applyAngularImpulse ?? (IY.applyAngularImpulse = (0, yY.g)("TransformNode", "applyAngularImpulse")), (RY = QY.prototype).applyTorque ?? (RY.applyTorque = (0, yY.g)("TransformNode", "applyTorque")), Object.getOwnPropertyDescriptor(QY.prototype, "physicsBody") || Object.defineProperty(QY.prototype, "physicsBody", (0, yY.c)("TransformNode", "physicsBody"))
+    function AT() {
+      rT || (rT = !0, KT.Parse = MT)
+    }(iT = KT.prototype).iH ?? (iT.iH = (0, cT.i)("TransformNode", "iH")), (zT = KT.prototype).applyImpulse ?? (zT.applyImpulse = (0, cT.i)("TransformNode", "applyImpulse")), (kT = KT.prototype).applyAngularImpulse ?? (kT.applyAngularImpulse = (0, cT.i)("TransformNode", "applyAngularImpulse")), (WT = KT.prototype).applyTorque ?? (WT.applyTorque = (0, cT.i)("TransformNode", "applyTorque")), Object.getOwnPropertyDescriptor(KT.prototype, "physicsBody") || Object.defineProperty(KT.prototype, "physicsBody", (0, cT.f)("TransformNode", "physicsBody"))
   },
-  39523: (YY, rY, DY) => {
-    function FY(YY, rY, DY) {
+  39201: (TT, oT, IT) => {
+    function iT(TT, oT, IT) {
       try {
-        const FY = YY.next();
-        FY.done ? rY(FY) : FY.value ? FY.value.then((() => {
-          FY.value = void 0, rY(FY)
-        }), DY) : rY(FY)
-      } catch (FY) {
-        DY(FY)
+        const iT = TT.next();
+        iT.done ? oT(iT) : iT.value ? iT.value.then((() => {
+          iT.value = void 0, oT(iT)
+        }), IT) : oT(iT)
+      } catch (iT) {
+        IT(iT)
       }
     }
 
-    function AY() {
-      let YY, rY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 25;
-      return (DY, AY, IY) => {
-        const RY = performance.now();
-        void 0 === YY || RY - YY > rY ? (YY = RY, setTimeout((() => {
-          FY(DY, AY, IY)
-        }), 0)) : FY(DY, AY, IY)
+    function zT() {
+      let TT, oT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 25;
+      return (IT, zT, kT) => {
+        const WT = performance.now();
+        void 0 === TT || WT - TT > oT ? (TT = WT, setTimeout((() => {
+          iT(IT, zT, kT)
+        }), 0)) : iT(IT, zT, kT)
       }
     }
 
-    function IY(YY, rY, DY, FY, AY) {
-      const IY = () => {
-        let RY;
-        const OY = YY => {
-          YY.done ? DY(YY.value) : void 0 === RY ? RY = !0 : IY()
+    function kT(TT, oT, IT, iT, zT) {
+      const kT = () => {
+        let WT;
+        const XT = TT => {
+          TT.done ? IT(TT.value) : void 0 === WT ? WT = !0 : kT()
         };
         do {
-          RY = void 0, AY && AY.aborted ? FY(new Error("Aborted")) : rY(YY, OY, FY), void 0 === RY && (RY = !1)
-        } while (RY)
+          WT = void 0, zT && zT.aborted ? iT(new Error("Aborted")) : oT(TT, XT, iT), void 0 === WT && (WT = !1)
+        } while (WT)
       };
-      IY()
+      kT()
     }
 
-    function RY(YY, rY) {
-      let DY;
-      return IY(YY, FY, (YY => DY = YY), (YY => {
-        throw YY
-      }), rY), DY
+    function WT(TT, oT) {
+      let IT;
+      return kT(TT, iT, (TT => IT = TT), (TT => {
+        throw TT
+      }), oT), IT
     }
-    async function OY(YY, rY, DY) {
-      return await new Promise(((FY, AY) => {
-        IY(YY, rY, FY, AY, DY)
+    async function XT(TT, oT, IT) {
+      return await new Promise(((iT, zT) => {
+        kT(TT, oT, iT, zT, IT)
       }))
     }
 
-    function gY(YY, rY) {
+    function BT(TT, oT) {
       return function() {
-        return RY(YY(...arguments), rY)
+        return WT(TT(...arguments), oT)
       }
     }
-    DY.d(rY, {
-      d: () => AY,
-      g: () => gY,
-      h: () => OY,
-      j: () => RY
+    IT.d(oT, {
+      e: () => zT,
+      g: () => BT,
+      h: () => XT,
+      j: () => WT
     })
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

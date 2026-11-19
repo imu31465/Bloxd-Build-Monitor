@@ -1,2445 +1,2445 @@
 export const id = 181;
 export const ids = [181];
 export const modules = {
-  8597: (YY, rY) => {
-    rY.discordURLBuilder = function(YY) {
-      var rY;
-      const DY = (null === (rY = null === window || void 0 === window ? void 0 : window.location) || void 0 === rY ? void 0 : rY.hostname) || "localhost",
-        FY = YY.hostname.split("."),
-        AY = !YY.hostname.includes("trycloudflare.com") && !YY.hostname.includes("discordsays.com") && FY.length > 2 ? `/${FY[0]}` : "";
-      return YY.pathname.startsWith("/.proxy") ? `${YY.protocol}//${DY}${AY}${YY.pathname}${YY.search}` : `${YY.protocol}//${DY}/.proxy/colyseus${AY}${YY.pathname}${YY.search}`
+  8609: (TT, oT) => {
+    oT.discordURLBuilder = function(TT) {
+      var oT;
+      const IT = (null === (oT = null === window || void 0 === window ? void 0 : window.location) || void 0 === oT ? void 0 : oT.hostname) || "localhost",
+        iT = TT.hostname.split("."),
+        zT = !TT.hostname.includes("trycloudflare.com") && !TT.hostname.includes("discordsays.com") && iT.length > 2 ? `/${iT[0]}` : "";
+      return TT.pathname.startsWith("/.proxy") ? `${TT.protocol}//${IT}${zT}${TT.pathname}${TT.search}` : `${TT.protocol}//${IT}/.proxy/colyseus${zT}${TT.pathname}${TT.search}`
     }
   },
-  8591: (YY, rY, DY) => {
-    var FY, AY, IY, RY, OY = DY(8496),
-      gY = DY(8593),
-      aY = DY(8554);
-    FY = new WeakMap, AY = new WeakMap, IY = new WeakMap, RY = new WeakMap, rY.Auth = class {
-      constructor(YY) {
-        this.http = YY, this.settings = {
+  8593: (TT, oT, IT) => {
+    var iT, zT, kT, WT, XT = IT(8493),
+      BT = IT(8602),
+      FT = IT(8560);
+    iT = new WeakMap, zT = new WeakMap, kT = new WeakMap, WT = new WeakMap, oT.Auth = class {
+      constructor(TT) {
+        this.http = TT, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, FY.set(this, !1), AY.set(this, void 0), IY.set(this, void 0), RY.set(this, aY.createNanoEvents()), gY.getItem(this.settings.key, (YY => this.token = YY))
+        }, iT.set(this, !1), zT.set(this, void 0), kT.set(this, void 0), WT.set(this, FT.createNanoEvents()), BT.getItem(this.settings.key, (TT => this.token = TT))
       }
-      set token(YY) {
-        this.http.authToken = YY
+      set token(TT) {
+        this.http.authToken = TT
       }
       get token() {
         return this.http.authToken
       }
-      onChange(YY) {
-        const rY = OY.__classPrivateFieldGet(this, RY, "f").on("change", YY);
-        return OY.__classPrivateFieldGet(this, FY, "f") || OY.__classPrivateFieldSet(this, AY, new Promise(((YY, rY) => {
-          this.getUserData().then((YY => {
-            this.emitChange(Object.assign(Object.assign({}, YY), {
+      onChange(TT) {
+        const oT = XT.__classPrivateFieldGet(this, WT, "f").on("change", TT);
+        return XT.__classPrivateFieldGet(this, iT, "f") || XT.__classPrivateFieldSet(this, zT, new Promise(((TT, oT) => {
+          this.getUserData().then((TT => {
+            this.emitChange(Object.assign(Object.assign({}, TT), {
               token: this.token
             }))
-          })).catch((YY => {
+          })).catch((TT => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            YY()
+            TT()
           }))
-        })), "f"), OY.__classPrivateFieldSet(this, FY, !0, "f"), rY
+        })), "f"), XT.__classPrivateFieldSet(this, iT, !0, "f"), oT
       }
       getUserData() {
-        return OY.__awaiter(this, void 0, void 0, (function*() {
+        return XT.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(YY, rY, DY) {
-        return OY.__awaiter(this, void 0, void 0, (function*() {
-          const FY = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(TT, oT, IT) {
+        return XT.__awaiter(this, void 0, void 0, (function*() {
+          const iT = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: YY,
-              password: rY,
-              options: DY
+              email: TT,
+              password: oT,
+              options: IT
             }
           })).data;
-          return this.emitChange(FY), FY
+          return this.emitChange(iT), iT
         }))
       }
-      signInWithEmailAndPassword(YY, rY) {
-        return OY.__awaiter(this, void 0, void 0, (function*() {
-          const DY = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(TT, oT) {
+        return XT.__awaiter(this, void 0, void 0, (function*() {
+          const IT = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: YY,
-              password: rY
+              email: TT,
+              password: oT
             }
           })).data;
-          return this.emitChange(DY), DY
+          return this.emitChange(IT), IT
         }))
       }
-      signInAnonymously(YY) {
-        return OY.__awaiter(this, void 0, void 0, (function*() {
-          const rY = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(TT) {
+        return XT.__awaiter(this, void 0, void 0, (function*() {
+          const oT = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: YY
+              options: TT
             }
           })).data;
-          return this.emitChange(rY), rY
+          return this.emitChange(oT), oT
         }))
       }
-      sendPasswordResetEmail(YY) {
-        return OY.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(TT) {
+        return XT.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: YY
+              email: TT
             }
           })).data
         }))
       }
-      signInWithProvider(YY) {
-        return OY.__awaiter(this, arguments, void 0, (function*(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((DY, FY) => {
-            const AY = rY.width || 480,
-              RY = rY.height || 768,
-              gY = this.token ? `?token=${this.token}` : "",
-              aY = `Login with ${YY[0].toUpperCase()+YY.substring(1)}`,
-              vY = this.http.client.getHttpEndpoint(`${rY.prefix||`${this.settings.path}/provider`}/${YY}${gY}`),
-              uY = screen.width / 2 - AY / 2,
-              sY = screen.height / 2 - RY / 2;
-            OY.__classPrivateFieldSet(this, IY, window.open(vY, aY, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + AY + ", height=" + RY + ", top=" + sY + ", left=" + uY), "f");
-            const iY = YY => {
-                void 0 === YY.data.user && void 0 === YY.data.token || (clearInterval(yY), OY.__classPrivateFieldGet(this, IY, "f").close(), OY.__classPrivateFieldSet(this, IY, void 0, "f"), window.removeEventListener("message", iY), void 0 !== YY.data.error ? FY(YY.data.error) : (DY(YY.data), this.emitChange(YY.data)))
+      signInWithProvider(TT) {
+        return XT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((IT, iT) => {
+            const zT = oT.width || 480,
+              WT = oT.height || 768,
+              BT = this.token ? `?token=${this.token}` : "",
+              FT = `Login with ${TT[0].toUpperCase()+TT.substring(1)}`,
+              ST = this.http.client.getHttpEndpoint(`${oT.prefix||`${this.settings.path}/provider`}/${TT}${BT}`),
+              DT = screen.width / 2 - zT / 2,
+              LT = screen.height / 2 - WT / 2;
+            XT.__classPrivateFieldSet(this, kT, window.open(ST, FT, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + zT + ", height=" + WT + ", top=" + LT + ", left=" + DT), "f");
+            const xT = TT => {
+                void 0 === TT.data.user && void 0 === TT.data.token || (clearInterval(cT), XT.__classPrivateFieldGet(this, kT, "f").close(), XT.__classPrivateFieldSet(this, kT, void 0, "f"), window.removeEventListener("message", xT), void 0 !== TT.data.error ? iT(TT.data.error) : (IT(TT.data), this.emitChange(TT.data)))
               },
-              yY = setInterval((() => {
-                OY.__classPrivateFieldGet(this, IY, "f") && !OY.__classPrivateFieldGet(this, IY, "f").closed || (OY.__classPrivateFieldSet(this, IY, void 0, "f"), FY("Hr"), window.removeEventListener("message", iY))
+              cT = setInterval((() => {
+                XT.__classPrivateFieldGet(this, kT, "f") && !XT.__classPrivateFieldGet(this, kT, "f").closed || (XT.__classPrivateFieldSet(this, kT, void 0, "f"), iT("Jo"), window.removeEventListener("message", xT))
               }), 200);
-            window.addEventListener("message", iY)
+            window.addEventListener("message", xT)
           }))
         }))
       }
       signOut() {
-        return OY.__awaiter(this, void 0, void 0, (function*() {
+        return XT.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(YY) {
-        void 0 !== YY.token && (this.token = YY.token, null === YY.token ? gY.removeItem(this.settings.key) : gY.setItem(this.settings.key, YY.token)), OY.__classPrivateFieldGet(this, RY, "f").emit("change", YY)
+      emitChange(TT) {
+        void 0 !== TT.token && (this.token = TT.token, null === TT.token ? BT.removeItem(this.settings.key) : BT.setItem(this.settings.key, TT.token)), XT.__classPrivateFieldGet(this, WT, "f").emit("change", TT)
       }
     }
   },
-  8489: (YY, rY, DY) => {
-    var FY, AY = DY(8496),
-      IY = DY(8503),
-      RY = DY(8510),
-      OY = DY(8576),
-      gY = DY(8591),
-      aY = DY(8597);
-    class vY extends Error {
-      constructor(YY, rY) {
-        super(YY), this.code = rY, this.name = "MatchMakeError", Object.setPrototypeOf(this, vY.prototype)
+  8486: (TT, oT, IT) => {
+    var iT, zT = IT(8493),
+      kT = IT(8499),
+      WT = IT(8507),
+      XT = IT(8581),
+      BT = IT(8593),
+      FT = IT(8609);
+    class ST extends Error {
+      constructor(TT, oT) {
+        super(TT), this.code = oT, this.name = "MatchMakeError", Object.setPrototypeOf(this, ST.prototype)
       }
     }
-    const uY = "undefined" !== typeof window && "undefined" !== typeof(null === (FY = null === window || void 0 === window ? void 0 : window.location) || void 0 === FY ? void 0 : FY.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class sY {
+    const DT = "undefined" !== typeof window && "undefined" !== typeof(null === (iT = null === window || void 0 === window ? void 0 : window.location) || void 0 === iT ? void 0 : iT.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class LT {
       constructor() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : uY,
-          rY = arguments.length > 1 ? arguments[1] : void 0;
-        var DY, FY;
-        if ("string" === typeof YY) {
-          const rY = YY.startsWith("/") ? new URL(YY, uY) : new URL(YY),
-            DY = "https:" === rY.protocol || "wss:" === rY.protocol,
-            FY = Number(rY.port || (DY ? 443 : 80));
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : DT,
+          oT = arguments.length > 1 ? arguments[1] : void 0;
+        var IT, iT;
+        if ("string" === typeof TT) {
+          const oT = TT.startsWith("/") ? new URL(TT, DT) : new URL(TT),
+            IT = "https:" === oT.protocol || "wss:" === oT.protocol,
+            iT = Number(oT.port || (IT ? 443 : 80));
           this.settings = {
-            hostname: rY.hostname,
-            pathname: rY.pathname,
-            port: FY,
-            secure: DY,
-            searchParams: rY.searchParams.toString() || void 0
+            hostname: oT.hostname,
+            pathname: oT.pathname,
+            port: iT,
+            secure: IT,
+            searchParams: oT.searchParams.toString() || void 0
           }
-        } else void 0 === YY.port && (YY.port = YY.secure ? 443 : 80), void 0 === YY.pathname && (YY.pathname = ""), this.settings = YY;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new OY.HTTP(this, (null === rY || void 0 === rY ? void 0 : rY.headers) || {}), this.auth = new gY.Auth(this.http), this.urlBuilder = null === rY || void 0 === rY ? void 0 : rY.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (FY = null === (DY = null === window || void 0 === window ? void 0 : window.location) || void 0 === DY ? void 0 : DY.hostname) || void 0 === FY ? void 0 : FY.includes("discordsays.com")) && (this.urlBuilder = aY.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === TT.port && (TT.port = TT.secure ? 443 : 80), void 0 === TT.pathname && (TT.pathname = ""), this.settings = TT;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new XT.HTTP(this, (null === oT || void 0 === oT ? void 0 : oT.headers) || {}), this.auth = new BT.Auth(this.http), this.urlBuilder = null === oT || void 0 === oT ? void 0 : oT.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (iT = null === (IT = null === window || void 0 === window ? void 0 : window.location) || void 0 === IT ? void 0 : IT.hostname) || void 0 === iT ? void 0 : iT.includes("discordsays.com")) && (this.urlBuilder = FT.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(YY) {
-        return AY.__awaiter(this, arguments, void 0, (function*(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            DY = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", YY, rY, DY)
+      joinOrCreate(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            IT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", TT, oT, IT)
         }))
       }
-      create(YY) {
-        return AY.__awaiter(this, arguments, void 0, (function*(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            DY = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", YY, rY, DY)
+      create(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            IT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", TT, oT, IT)
         }))
       }
-      join(YY) {
-        return AY.__awaiter(this, arguments, void 0, (function*(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            DY = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", YY, rY, DY)
+      join(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            IT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", TT, oT, IT)
         }))
       }
-      joinById(YY) {
-        return AY.__awaiter(this, arguments, void 0, (function*(YY) {
-          let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            DY = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", YY, rY, DY)
+      joinById(TT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT) {
+          let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            IT = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", TT, oT, IT)
         }))
       }
-      reconnect(YY, rY) {
-        return AY.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof YY && "string" === typeof rY) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [DY, FY] = YY.split(":");
-          if (!DY || !FY) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", DY, {
-            reconnectionToken: FY
-          }, rY)
+      reconnect(TT, oT) {
+        return zT.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof TT && "string" === typeof oT) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [IT, iT] = TT.split(":");
+          if (!IT || !iT) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", IT, {
+            reconnectionToken: iT
+          }, oT)
         }))
       }
-      consumeSeatReservation(YY, rY, DY) {
-        return AY.__awaiter(this, void 0, void 0, (function*() {
-          const FY = this.createRoom(YY.room.name, rY);
-          FY.roomId = YY.room.roomId, FY.sessionId = YY.sessionId;
-          const RY = {
-            sessionId: FY.sessionId
+      consumeSeatReservation(TT, oT, IT) {
+        return zT.__awaiter(this, void 0, void 0, (function*() {
+          const iT = this.createRoom(TT.room.name, oT);
+          iT.roomId = TT.room.roomId, iT.sessionId = TT.sessionId;
+          const WT = {
+            sessionId: iT.sessionId
           };
-          YY.reconnectionToken && (RY.reconnectionToken = YY.reconnectionToken);
-          const OY = DY || FY;
-          return FY.connect(this.buildEndpoint(YY.room, RY, YY.protocol), YY.devMode && (() => AY.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${FY.roomId}'...`);
-            let DY = 0;
-            const IY = () => AY.__awaiter(this, void 0, void 0, (function*() {
-              DY++;
+          TT.reconnectionToken && (WT.reconnectionToken = TT.reconnectionToken);
+          const XT = IT || iT;
+          return iT.connect(this.buildEndpoint(TT.room, WT, TT.protocol), TT.devMode && (() => zT.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${iT.roomId}'...`);
+            let IT = 0;
+            const kT = () => zT.__awaiter(this, void 0, void 0, (function*() {
+              IT++;
               try {
-                yield this.consumeSeatReservation(YY, rY, OY), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${FY.roomId}'`)
-              } catch (AY) {
-                DY < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${DY} out of 8)`), setTimeout(IY, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(TT, oT, XT), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${iT.roomId}'`)
+              } catch (zT) {
+                IT < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${IT} out of 8)`), setTimeout(kT, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(IY, 2e3)
-          }))), OY, YY, this.http.headers), new Promise(((YY, rY) => {
-            const DY = (YY, DY) => rY(new IY.ServerError(YY, DY));
-            OY.onError.once(DY), OY.onJoin.once((() => {
-              OY.onError.remove(DY), setTimeout((() => {
+            setTimeout(kT, 2e3)
+          }))), XT, TT, this.http.headers), new Promise(((TT, oT) => {
+            const IT = (TT, IT) => oT(new kT.ServerError(TT, IT));
+            XT.onError.once(IT), XT.onJoin.once((() => {
+              XT.onError.remove(IT), setTimeout((() => {
                 try {
-                  const YY = [123, 247, 175, 89, 62, 43, 199, 206, 19, 177, 218, 138, 248, 127, 128, 246, 39, 28, 231, 141];
-                  YY && OY.fV(128, new Uint8Array(YY))
+                  const TT = [123, 247, 175, 89, 62, 43, 199, 206, 19, 177, 218, 138, 248, 127, 128, 246, 39, 28, 231, 141];
+                  TT && XT.XE(128, new Uint8Array(TT))
                 } catch {}
-              }), 3e3), YY(OY)
+              }), 3e3), TT(XT)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(YY, rY) {
-        return AY.__awaiter(this, arguments, void 0, (function*(YY, rY) {
-          let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            FY = arguments.length > 3 ? arguments[3] : void 0,
-            AY = arguments.length > 4 ? arguments[4] : void 0;
-          const IY = (yield this.http.post(`matchmake/${YY}/${rY}`, {
+      createMatchMakeRequest(TT, oT) {
+        return zT.__awaiter(this, arguments, void 0, (function*(TT, oT) {
+          let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            iT = arguments.length > 3 ? arguments[3] : void 0,
+            zT = arguments.length > 4 ? arguments[4] : void 0;
+          const kT = (yield this.http.post(`matchmake/${TT}/${oT}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(DY)
+            body: JSON.stringify(IT)
           })).data;
-          if (IY.error) throw new vY(IY.error, IY.code);
-          return "reconnect" === YY && (IY.reconnectionToken = DY.reconnectionToken), yield this.consumeSeatReservation(IY, FY, AY)
+          if (kT.error) throw new ST(kT.error, kT.code);
+          return "reconnect" === TT && (kT.reconnectionToken = IT.reconnectionToken), yield this.consumeSeatReservation(kT, iT, zT)
         }))
       }
-      createRoom(YY, rY) {
-        return new RY.Bu(YY, rY)
+      createRoom(TT, oT) {
+        return new WT.pD(TT, oT)
       }
-      buildEndpoint(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          FY = this.settings.searchParams || "";
-        this.http.authToken && (rY._authToken = this.http.authToken);
-        for (const RY in rY) rY.hasOwnProperty(RY) && (FY += (FY ? "&" : "") + `${RY}=${rY[RY]}`);
-        "h3" === DY && (DY = "http");
-        let AY = this.settings.secure ? `${DY}s://` : `${DY}://`;
-        YY.publicAddress ? AY += `${YY.publicAddress}` : AY += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const IY = `${AY}/${YY.processId}/${YY.roomId}?${FY}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(IY)) : IY
+      buildEndpoint(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          iT = this.settings.searchParams || "";
+        this.http.authToken && (oT._authToken = this.http.authToken);
+        for (const WT in oT) oT.hasOwnProperty(WT) && (iT += (iT ? "&" : "") + `${WT}=${oT[WT]}`);
+        "h3" === IT && (IT = "http");
+        let zT = this.settings.secure ? `${IT}s://` : `${IT}://`;
+        TT.publicAddress ? zT += `${TT.publicAddress}` : zT += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const kT = `${zT}/${TT.processId}/${TT.roomId}?${iT}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(kT)) : kT
       }
       getHttpEndpoint() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const rY = YY.startsWith("/") ? YY : `/${YY}`;
-        let DY = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${rY}`;
-        return this.settings.searchParams && (DY += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(DY)) : DY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const oT = TT.startsWith("/") ? TT : `/${TT}`;
+        let IT = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${oT}`;
+        return this.settings.searchParams && (IT += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(IT)) : IT
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    sY.VERSION = "0.16.22", rY.Client = sY, rY.MatchMakeError = vY
+    LT.VERSION = "0.16.22", oT.Client = LT, oT.MatchMakeError = ST
   },
-  8512: (YY, rY, DY) => {
-    var FY = DY(8518),
-      AY = DY(8533);
-    rY.Connection = class {
-      constructor(YY) {
-        if (this.events = {}, "h3" === YY) this.transport = new FY.H3TransportTransport(this.events);
-        else this.transport = new AY.WebSocketTransport(this.events)
+  8511: (TT, oT, IT) => {
+    var iT = IT(8515),
+      zT = IT(8527);
+    oT.Connection = class {
+      constructor(TT) {
+        if (this.events = {}, "h3" === TT) this.transport = new iT.H3TransportTransport(this.events);
+        else this.transport = new zT.WebSocketTransport(this.events)
       }
-      connect(YY, rY) {
-        this.transport.connect.call(this.transport, YY, rY)
+      connect(TT, oT) {
+        this.transport.connect.call(this.transport, TT, oT)
       }
-      send(YY) {
-        this.transport.send(YY)
+      send(TT) {
+        this.transport.send(TT)
       }
-      sendUnreliable(YY) {
-        this.transport.sendUnreliable(YY)
+      sendUnreliable(TT) {
+        this.transport.sendUnreliable(TT)
       }
-      close(YY, rY) {
-        this.transport.close(YY, rY)
+      close(TT, oT) {
+        this.transport.close(TT, oT)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  8576: (YY, rY, DY) => {
-    var FY = DY(8503);
+  8581: (TT, oT, IT) => {
+    var iT = IT(8499);
 
-    function AY(YY) {
-      var rY = Object.create(null);
-      return YY && Object.keys(YY).forEach((function(DY) {
-        if ("default" !== DY) {
-          var FY = Object.getOwnPropertyDescriptor(YY, DY);
-          Object.defineProperty(rY, DY, FY.get ? FY : {
+    function zT(TT) {
+      var oT = Object.create(null);
+      return TT && Object.keys(TT).forEach((function(IT) {
+        if ("default" !== IT) {
+          var iT = Object.getOwnPropertyDescriptor(TT, IT);
+          Object.defineProperty(oT, IT, iT.get ? iT : {
             enumerable: !0,
             get: function() {
-              return YY[DY]
+              return TT[IT]
             }
           })
         }
-      })), rY.default = YY, Object.freeze(rY)
+      })), oT.default = TT, Object.freeze(oT)
     }
-    var IY = AY(DY(8584));
-    rY.HTTP = class {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = YY, this.headers = rY
+    var kT = zT(IT(8590));
+    oT.HTTP = class {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = TT, this.headers = oT
       }
-      get(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", YY, rY)
+      get(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", TT, oT)
       }
-      post(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", YY, rY)
+      post(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", TT, oT)
       }
-      del(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", YY, rY)
+      del(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", TT, oT)
       }
-      put(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", YY, rY)
+      put(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", TT, oT)
       }
-      request(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return IY[YY](this.client.getHttpEndpoint(rY), this.getOptions(DY)).catch((YY => {
-          var rY;
-          if (YY.aborted) throw new FY.AbortError("Request aborted");
-          const DY = YY.statusCode,
-            AY = (null === (rY = YY.data) || void 0 === rY ? void 0 : rY.error) || YY.statusMessage || YY.message;
-          if (!DY && !AY) throw YY;
-          throw new FY.ServerError(DY, AY)
+      request(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return kT[TT](this.client.getHttpEndpoint(oT), this.getOptions(IT)).catch((TT => {
+          var oT;
+          if (TT.aborted) throw new iT.AbortError("Request aborted");
+          const IT = TT.statusCode,
+            zT = (null === (oT = TT.data) || void 0 === oT ? void 0 : oT.error) || TT.statusMessage || TT.message;
+          if (!IT && !zT) throw TT;
+          throw new iT.ServerError(IT, zT)
         }))
       }
-      getOptions(YY) {
-        return YY.headers = Object.assign({}, this.headers, YY.headers), this.authToken && (YY.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (YY.withCredentials = !0), YY
+      getOptions(TT) {
+        return TT.headers = Object.assign({}, this.headers, TT.headers), this.authToken && (TT.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (TT.withCredentials = !0), TT
       }
     }
   },
-  8547: (YY, rY) => {
-    var DY, FY;
-    rY.Protocol = void 0, (DY = rY.Protocol || (rY.Protocol = {}))[DY.HANDSHAKE = 9] = "HANDSHAKE", DY[DY.JOIN_ROOM = 10] = "JOIN_ROOM", DY[DY.ERROR = 11] = "ERROR", DY[DY.LEAVE_ROOM = 12] = "LEAVE_ROOM", DY[DY.ROOM_DATA = 13] = "ROOM_DATA", DY[DY.ROOM_STATE = 14] = "ROOM_STATE", DY[DY.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", DY[DY.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", DY[DY.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", rY.ErrorCode = void 0, (FY = rY.ErrorCode || (rY.ErrorCode = {}))[FY.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", FY[FY.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", FY[FY.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", FY[FY.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", FY[FY.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", FY[FY.AUTH_FAILED = 4215] = "AUTH_FAILED", FY[FY.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  8543: (TT, oT) => {
+    var IT, iT;
+    oT.Protocol = void 0, (IT = oT.Protocol || (oT.Protocol = {}))[IT.HANDSHAKE = 9] = "HANDSHAKE", IT[IT.JOIN_ROOM = 10] = "JOIN_ROOM", IT[IT.ERROR = 11] = "ERROR", IT[IT.LEAVE_ROOM = 12] = "LEAVE_ROOM", IT[IT.ROOM_DATA = 13] = "ROOM_DATA", IT[IT.ROOM_STATE = 14] = "ROOM_STATE", IT[IT.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", IT[IT.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", IT[IT.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", oT.ErrorCode = void 0, (iT = oT.ErrorCode || (oT.ErrorCode = {}))[iT.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", iT[iT.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", iT[iT.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", iT[iT.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", iT[iT.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", iT[iT.AUTH_FAILED = 4215] = "AUTH_FAILED", iT[iT.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  8510: (YY, rY, DY) => {
-    var FY = DY(8512),
-      AY = DY(8547),
-      IY = DY(8549),
-      RY = DY(8554),
-      OY = DY(8563),
-      gY = DY(8526),
-      aY = DY(8572),
-      vY = DY(8503),
-      uY = DY(8574);
-    class sY {
-      constructor(YY, rY) {
-        this.onStateChange = OY.createSignal(), this.onError = OY.createSignal(), this.XE = OY.createSignal(), this.onJoin = OY.createSignal(), this.hasJoined = !1, this.onMessageHandlers = RY.createNanoEvents(), this.roomId = null, this.name = YY, this.packr = new uY.Packr, this.packr.encode(void 0), rY && (this.EW = new(IY.getSerializer("schema")), this.rootSchema = rY, this.EW.state = new rY), this.onError(((YY, rY) => {
-          var DY;
-          return null === (DY = console.warn) || void 0 === DY ? void 0 : DY.call(console, `colyseus.js - onError => (${YY}) ${rY}`)
-        })), this.XE((() => this.oW()))
+  8507: (TT, oT, IT) => {
+    var iT = IT(8511),
+      zT = IT(8543),
+      kT = IT(8551),
+      WT = IT(8560),
+      XT = IT(8567),
+      BT = IT(8521),
+      FT = IT(8570),
+      ST = IT(8499),
+      DT = IT(8572);
+    class LT {
+      constructor(TT, oT) {
+        this.onStateChange = XT.createSignal(), this.onError = XT.createSignal(), this.Rm = XT.createSignal(), this.onJoin = XT.createSignal(), this.hasJoined = !1, this.onMessageHandlers = WT.createNanoEvents(), this.roomId = null, this.name = TT, this.packr = new DT.Packr, this.packr.encode(void 0), oT && (this.JA = new(kT.getSerializer("schema")), this.rootSchema = oT, this.JA.state = new oT), this.onError(((TT, oT) => {
+          var IT;
+          return null === (IT = console.warn) || void 0 === IT ? void 0 : IT.call(console, `colyseus.js - onError => (${TT}) ${oT}`)
+        })), this.Rm((() => this.hA()))
       }
-      connect(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          AY = arguments.length > 3 ? arguments[3] : void 0,
-          IY = arguments.length > 4 ? arguments[4] : void 0;
-        const RY = new FY.Connection(AY.protocol);
-        if (DY.connection = RY, RY.events.onmessage = sY.prototype.onMessageCallback.bind(DY), RY.events.onclose = function(YY) {
-            var FY;
-            if (!DY.hasJoined) return null === (FY = console.warn) || void 0 === FY || FY.call(console, `Room connection was closed unexpectedly (${YY.code}): ${YY.reason}`), void DY.onError.invoke(YY.code, YY.reason);
-            YY.code === vY.CloseCode.DEVMODE_RESTART && rY ? rY() : (DY.XE.invoke(YY.code, YY.reason), DY.destroy())
-          }, RY.events.onerror = function(YY) {
-            var rY;
-            null === (rY = console.warn) || void 0 === rY || rY.call(console, `Room, onError (${YY.code}): ${YY.reason}`), DY.onError.invoke(YY.code, YY.reason)
-          }, "h3" === AY.protocol) {
-          const rY = new URL(YY);
-          RY.connect(rY.origin, AY)
-        } else RY.connect(YY, IY)
+      connect(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          zT = arguments.length > 3 ? arguments[3] : void 0,
+          kT = arguments.length > 4 ? arguments[4] : void 0;
+        const WT = new iT.Connection(zT.protocol);
+        if (IT.connection = WT, WT.events.onmessage = LT.prototype.onMessageCallback.bind(IT), WT.events.onclose = function(TT) {
+            var iT;
+            if (!IT.hasJoined) return null === (iT = console.warn) || void 0 === iT || iT.call(console, `Room connection was closed unexpectedly (${TT.code}): ${TT.reason}`), void IT.onError.invoke(TT.code, TT.reason);
+            TT.code === ST.CloseCode.DEVMODE_RESTART && oT ? oT() : (IT.Rm.invoke(TT.code, TT.reason), IT.destroy())
+          }, WT.events.onerror = function(TT) {
+            var oT;
+            null === (oT = console.warn) || void 0 === oT || oT.call(console, `Room, onError (${TT.code}): ${TT.reason}`), IT.onError.invoke(TT.code, TT.reason)
+          }, "h3" === zT.protocol) {
+          const oT = new URL(TT);
+          WT.connect(oT.origin, zT)
+        } else WT.connect(TT, kT)
       }
       leave() {
-        let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((rY => {
-          this.XE((YY => rY(YY))), this.connection ? YY ? (this.packr.buffer[0] = AY.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.XE.invoke(vY.CloseCode.CONSENTED)
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((oT => {
+          this.Rm((TT => oT(TT))), this.connection ? TT ? (this.packr.buffer[0] = zT.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.Rm.invoke(ST.CloseCode.CONSENTED)
         }))
       }
-      ZE(YY, rY) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(YY), rY)
+      Am(TT, oT) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(TT), oT)
       }
-      send(YY, rY) {
-        const DY = {
+      send(TT, oT) {
+        const IT = {
           offset: 1
         };
-        this.packr.buffer[0] = AY.Protocol.ROOM_DATA, "string" === typeof YY ? gY.encode.string(this.packr.buffer, YY, DY) : gY.encode.number(this.packr.buffer, YY, DY), this.packr.position = 0;
-        const FY = void 0 !== rY ? this.packr.pack(rY, 2048 + DY.offset) : this.packr.buffer.subarray(0, DY.offset);
-        this.connection.send(FY)
+        this.packr.buffer[0] = zT.Protocol.ROOM_DATA, "string" === typeof TT ? BT.encode.string(this.packr.buffer, TT, IT) : BT.encode.number(this.packr.buffer, TT, IT), this.packr.position = 0;
+        const iT = void 0 !== oT ? this.packr.pack(oT, 2048 + IT.offset) : this.packr.buffer.subarray(0, IT.offset);
+        this.connection.send(iT)
       }
-      sendUnreliable(YY, rY) {
-        const DY = {
+      sendUnreliable(TT, oT) {
+        const IT = {
           offset: 1
         };
-        this.packr.buffer[0] = AY.Protocol.ROOM_DATA, "string" === typeof YY ? gY.encode.string(this.packr.buffer, YY, DY) : gY.encode.number(this.packr.buffer, YY, DY), this.packr.position = 0;
-        const FY = void 0 !== rY ? this.packr.pack(rY, 2048 + DY.offset) : this.packr.buffer.subarray(0, DY.offset);
-        this.connection.sendUnreliable(FY)
+        this.packr.buffer[0] = zT.Protocol.ROOM_DATA, "string" === typeof TT ? BT.encode.string(this.packr.buffer, TT, IT) : BT.encode.number(this.packr.buffer, TT, IT), this.packr.position = 0;
+        const iT = void 0 !== oT ? this.packr.pack(oT, 2048 + IT.offset) : this.packr.buffer.subarray(0, IT.offset);
+        this.connection.sendUnreliable(iT)
       }
-      fV(YY, rY) {
-        const DY = {
+      XE(TT, oT) {
+        const IT = {
           offset: 1
         };
-        if (this.packr.buffer[0] = AY.Protocol.ROOM_DATA_BYTES, "string" === typeof YY ? gY.encode.string(this.packr.buffer, YY, DY) : gY.encode.number(this.packr.buffer, YY, DY), rY.byteLength + DY.offset > this.packr.buffer.byteLength) {
-          const YY = new Uint8Array(DY.offset + rY.byteLength);
-          YY.set(this.packr.buffer), this.packr.useBuffer(YY)
+        if (this.packr.buffer[0] = zT.Protocol.ROOM_DATA_BYTES, "string" === typeof TT ? BT.encode.string(this.packr.buffer, TT, IT) : BT.encode.number(this.packr.buffer, TT, IT), oT.byteLength + IT.offset > this.packr.buffer.byteLength) {
+          const TT = new Uint8Array(IT.offset + oT.byteLength);
+          TT.set(this.packr.buffer), this.packr.useBuffer(TT)
         }
-        this.packr.buffer.set(rY, DY.offset), this.connection.send(this.packr.buffer.subarray(0, DY.offset + rY.byteLength))
+        this.packr.buffer.set(oT, IT.offset), this.connection.send(this.packr.buffer.subarray(0, IT.offset + oT.byteLength))
       }
       get state() {
-        return this.EW.getState()
+        return this.JA.getState()
       }
-      oW() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.XE.clear(), this.onMessageHandlers.events = {}, this.EW instanceof aY.Ml && (this.EW.yy.root.callbacks = {})
+      hA() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.Rm.clear(), this.onMessageHandlers.events = {}, this.JA instanceof FT.JC && (this.JA.Lc.root.callbacks = {})
       }
-      onMessageCallback(YY) {
-        const rY = new Uint8Array(YY.data),
-          DY = {
+      onMessageCallback(TT) {
+        const oT = new Uint8Array(TT.data),
+          IT = {
             offset: 1
           },
-          FY = rY[0];
-        if (FY === AY.Protocol.JOIN_ROOM) {
-          const YY = gY.decode.utf8Read(rY, DY, rY[DY.offset++]);
-          if (this.serializerId = gY.decode.utf8Read(rY, DY, rY[DY.offset++]), !this.EW) {
-            const YY = IY.getSerializer(this.serializerId);
-            this.EW = new YY
+          iT = oT[0];
+        if (iT === zT.Protocol.JOIN_ROOM) {
+          const TT = BT.decode.utf8Read(oT, IT, oT[IT.offset++]);
+          if (this.serializerId = BT.decode.utf8Read(oT, IT, oT[IT.offset++]), !this.JA) {
+            const TT = kT.getSerializer(this.serializerId);
+            this.JA = new TT
           }
-          rY.byteLength > DY.offset && this.EW.handshake && this.EW.handshake(rY, DY), this.reconnectionToken = `${this.roomId}:${YY}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = AY.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (FY === AY.Protocol.ERROR) {
-          const YY = gY.decode.number(rY, DY),
-            FY = gY.decode.string(rY, DY);
-          this.onError.invoke(YY, FY)
-        } else if (FY === AY.Protocol.LEAVE_ROOM) this.leave();
-        else if (FY === AY.Protocol.ROOM_STATE) this.EW.setState(rY, DY), this.onStateChange.invoke(this.EW.getState());
-        else if (FY === AY.Protocol.ROOM_STATE_PATCH) this.EW.patch(rY, DY), this.onStateChange.invoke(this.EW.getState());
-        else if (FY === AY.Protocol.ROOM_DATA) {
-          const YY = gY.decode.stringCheck(rY, DY) ? gY.decode.string(rY, DY) : gY.decode.number(rY, DY),
-            FY = rY.byteLength > DY.offset ? uY.unpack(rY, {
-              start: DY.offset
+          oT.byteLength > IT.offset && this.JA.handshake && this.JA.handshake(oT, IT), this.reconnectionToken = `${this.roomId}:${TT}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = zT.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (iT === zT.Protocol.ERROR) {
+          const TT = BT.decode.number(oT, IT),
+            iT = BT.decode.string(oT, IT);
+          this.onError.invoke(TT, iT)
+        } else if (iT === zT.Protocol.LEAVE_ROOM) this.leave();
+        else if (iT === zT.Protocol.ROOM_STATE) this.JA.setState(oT, IT), this.onStateChange.invoke(this.JA.getState());
+        else if (iT === zT.Protocol.ROOM_STATE_PATCH) this.JA.patch(oT, IT), this.onStateChange.invoke(this.JA.getState());
+        else if (iT === zT.Protocol.ROOM_DATA) {
+          const TT = BT.decode.stringCheck(oT, IT) ? BT.decode.string(oT, IT) : BT.decode.number(oT, IT),
+            iT = oT.byteLength > IT.offset ? DT.unpack(oT, {
+              start: IT.offset
             }) : void 0;
-          this.dispatchMessage(YY, FY)
-        } else if (FY === AY.Protocol.ROOM_DATA_BYTES) {
-          const YY = gY.decode.stringCheck(rY, DY) ? gY.decode.string(rY, DY) : gY.decode.number(rY, DY);
-          this.dispatchMessage(YY, rY.subarray(DY.offset))
+          this.dispatchMessage(TT, iT)
+        } else if (iT === zT.Protocol.ROOM_DATA_BYTES) {
+          const TT = BT.decode.stringCheck(oT, IT) ? BT.decode.string(oT, IT) : BT.decode.number(oT, IT);
+          this.dispatchMessage(TT, oT.subarray(IT.offset))
         }
       }
-      dispatchMessage(YY, rY) {
-        var DY;
-        const FY = this.getMessageHandlerKey(YY);
-        this.onMessageHandlers.events[FY] ? this.onMessageHandlers.emit(FY, rY) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", YY, rY) : null === (DY = console.warn) || void 0 === DY || DY.call(console, `colyseus.js: onMessage() not registered for type '${YY}'.`)
+      dispatchMessage(TT, oT) {
+        var IT;
+        const iT = this.getMessageHandlerKey(TT);
+        this.onMessageHandlers.events[iT] ? this.onMessageHandlers.emit(iT, oT) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", TT, oT) : null === (IT = console.warn) || void 0 === IT || IT.call(console, `colyseus.js: onMessage() not registered for type '${TT}'.`)
       }
       destroy() {
-        this.EW && this.EW.teardown()
+        this.JA && this.JA.teardown()
       }
-      getMessageHandlerKey(YY) {
-        switch (typeof YY) {
+      getMessageHandlerKey(TT) {
+        switch (typeof TT) {
           case "string":
-            return YY;
+            return TT;
           case "number":
-            return `i${YY}`;
+            return `i${TT}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    rY.Bu = sY
+    oT.pD = LT
   },
-  8593: (YY, rY, DY) => {
-    var FY = DY(8496);
-    let AY;
+  8602: (TT, oT, IT) => {
+    var iT = IT(8493);
+    let zT;
 
-    function IY() {
-      if (!AY) try {
-        AY = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (YY) {}
-      return AY || "undefined" === typeof globalThis.indexedDB || (AY = new RY), AY || (AY = {
+    function kT() {
+      if (!zT) try {
+        zT = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (TT) {}
+      return zT || "undefined" === typeof globalThis.indexedDB || (zT = new WT), zT || (zT = {
         cache: {},
-        setItem: function(YY, rY) {
-          this.cache[YY] = rY
+        setItem: function(TT, oT) {
+          this.cache[TT] = oT
         },
-        getItem: function(YY) {
-          this.cache[YY]
+        getItem: function(TT) {
+          this.cache[TT]
         },
-        removeItem: function(YY) {
-          delete this.cache[YY]
+        removeItem: function(TT) {
+          delete this.cache[TT]
         }
-      }), AY
+      }), zT
     }
-    class RY {
+    class WT {
       constructor() {
-        this.dbPromise = new Promise((YY => {
-          const rY = indexedDB.open("_colyseus_storage", 1);
-          rY.onupgradeneeded = () => rY.result.createObjectStore("store"), rY.onsuccess = () => YY(rY.result)
+        this.dbPromise = new Promise((TT => {
+          const oT = indexedDB.open("_colyseus_storage", 1);
+          oT.onupgradeneeded = () => oT.result.createObjectStore("store"), oT.onsuccess = () => TT(oT.result)
         }))
       }
-      tx(YY, rY) {
-        return FY.__awaiter(this, void 0, void 0, (function*() {
-          const DY = (yield this.dbPromise).transaction("store", YY).objectStore("store");
-          return rY(DY)
+      tx(TT, oT) {
+        return iT.__awaiter(this, void 0, void 0, (function*() {
+          const IT = (yield this.dbPromise).transaction("store", TT).objectStore("store");
+          return oT(IT)
         }))
       }
-      setItem(YY, rY) {
-        return this.tx("readwrite", (DY => DY.put(rY, YY))).then()
+      setItem(TT, oT) {
+        return this.tx("readwrite", (IT => IT.put(oT, TT))).then()
       }
-      getItem(YY) {
-        return FY.__awaiter(this, void 0, void 0, (function*() {
-          const rY = yield this.tx("readonly", (rY => rY.get(YY)));
-          return new Promise((YY => {
-            rY.onsuccess = () => YY(rY.result)
+      getItem(TT) {
+        return iT.__awaiter(this, void 0, void 0, (function*() {
+          const oT = yield this.tx("readonly", (oT => oT.get(TT)));
+          return new Promise((TT => {
+            oT.onsuccess = () => TT(oT.result)
           }))
         }))
       }
-      removeItem(YY) {
-        return this.tx("readwrite", (rY => rY.delete(YY))).then()
+      removeItem(TT) {
+        return this.tx("readwrite", (oT => oT.delete(TT))).then()
       }
     }
-    rY.getItem = function(YY, rY) {
-      const DY = IY().getItem(YY);
-      "undefined" !== typeof Promise && DY instanceof Promise ? DY.then((YY => rY(YY))) : rY(DY)
-    }, rY.removeItem = function(YY) {
-      IY().removeItem(YY)
-    }, rY.setItem = function(YY, rY) {
-      IY().setItem(YY, rY)
+    oT.getItem = function(TT, oT) {
+      const IT = kT().getItem(TT);
+      "undefined" !== typeof Promise && IT instanceof Promise ? IT.then((TT => oT(TT))) : oT(IT)
+    }, oT.removeItem = function(TT) {
+      kT().removeItem(TT)
+    }, oT.setItem = function(TT, oT) {
+      kT().setItem(TT, oT)
     }
   },
-  8554: (YY, rY) => {
-    rY.createNanoEvents = () => ({
-      emit(YY) {
-        let rY = this.events[YY] || [];
-        for (var DY = arguments.length, FY = new Array(DY > 1 ? DY - 1 : 0), AY = 1; AY < DY; AY++) FY[AY - 1] = arguments[AY];
-        for (let IY = 0, RY = rY.length; IY < RY; IY++) rY[IY](...FY)
+  8560: (TT, oT) => {
+    oT.createNanoEvents = () => ({
+      emit(TT) {
+        let oT = this.events[TT] || [];
+        for (var IT = arguments.length, iT = new Array(IT > 1 ? IT - 1 : 0), zT = 1; zT < IT; zT++) iT[zT - 1] = arguments[zT];
+        for (let kT = 0, WT = oT.length; kT < WT; kT++) oT[kT](...iT)
       },
       events: {},
-      on(YY, rY) {
-        var DY;
-        return (null === (DY = this.events[YY]) || void 0 === DY ? void 0 : DY.push(rY)) || (this.events[YY] = [rY]), () => {
-          var DY;
-          this.events[YY] = null === (DY = this.events[YY]) || void 0 === DY ? void 0 : DY.filter((YY => rY !== YY))
+      on(TT, oT) {
+        var IT;
+        return (null === (IT = this.events[TT]) || void 0 === IT ? void 0 : IT.push(oT)) || (this.events[TT] = [oT]), () => {
+          var IT;
+          this.events[TT] = null === (IT = this.events[TT]) || void 0 === IT ? void 0 : IT.filter((TT => oT !== TT))
         }
       }
     })
   },
-  8563: (YY, rY) => {
-    class DY {
+  8567: (TT, oT) => {
+    class IT {
       constructor() {
         this.handlers = []
       }
-      register(YY) {
-        return this.handlers.push(YY), this
+      register(TT) {
+        return this.handlers.push(TT), this
       }
       invoke() {
-        for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
-        this.handlers.forEach((YY => YY.apply(this, rY)))
+        for (var TT = arguments.length, oT = new Array(TT), IT = 0; IT < TT; IT++) oT[IT] = arguments[IT];
+        this.handlers.forEach((TT => TT.apply(this, oT)))
       }
       invokeAsync() {
-        for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
-        return Promise.all(this.handlers.map((YY => YY.apply(this, rY))))
+        for (var TT = arguments.length, oT = new Array(TT), IT = 0; IT < TT; IT++) oT[IT] = arguments[IT];
+        return Promise.all(this.handlers.map((TT => TT.apply(this, oT))))
       }
-      remove(YY) {
-        const rY = this.handlers.indexOf(YY);
-        this.handlers[rY] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(TT) {
+        const oT = this.handlers.indexOf(TT);
+        this.handlers[oT] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    rY.EventEmitter = DY, rY.createSignal = function() {
-      const YY = new DY;
+    oT.EventEmitter = IT, oT.createSignal = function() {
+      const TT = new IT;
 
-      function rY(rY) {
-        return YY.register(rY, null === this)
+      function oT(oT) {
+        return TT.register(oT, null === this)
       }
-      return rY.once = rY => {
-        const DY = function() {
-          for (var FY = arguments.length, AY = new Array(FY), IY = 0; IY < FY; IY++) AY[IY] = arguments[IY];
-          rY.apply(this, AY), YY.remove(DY)
+      return oT.once = oT => {
+        const IT = function() {
+          for (var iT = arguments.length, zT = new Array(iT), kT = 0; kT < iT; kT++) zT[kT] = arguments[kT];
+          oT.apply(this, zT), TT.remove(IT)
         };
-        YY.register(DY)
-      }, rY.remove = rY => YY.remove(rY), rY.invoke = function() {
-        return YY.invoke(...arguments)
-      }, rY.invokeAsync = function() {
-        return YY.invokeAsync(...arguments)
-      }, rY.clear = () => YY.clear(), rY
+        TT.register(IT)
+      }, oT.remove = oT => TT.remove(oT), oT.invoke = function() {
+        return TT.invoke(...arguments)
+      }, oT.invokeAsync = function() {
+        return TT.invokeAsync(...arguments)
+      }, oT.clear = () => TT.clear(), oT
     }
   },
-  8503: (YY, rY) => {
-    var DY;
-    rY.CloseCode = void 0, (DY = rY.CloseCode || (rY.CloseCode = {}))[DY.CONSENTED = 4e3] = "CONSENTED", DY[DY.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class FY extends Error {
-      constructor(YY, rY) {
-        super(rY), this.name = "ServerError", this.code = YY
+  8499: (TT, oT) => {
+    var IT;
+    oT.CloseCode = void 0, (IT = oT.CloseCode || (oT.CloseCode = {}))[IT.CONSENTED = 4e3] = "CONSENTED", IT[IT.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class iT extends Error {
+      constructor(TT, oT) {
+        super(oT), this.name = "ServerError", this.code = TT
       }
     }
-    class AY extends Error {
-      constructor(YY) {
-        super(YY), this.name = "AbortError"
+    class zT extends Error {
+      constructor(TT) {
+        super(TT), this.name = "AbortError"
       }
     }
-    rY.AbortError = AY, rY.ServerError = FY
+    oT.AbortError = zT, oT.ServerError = iT
   },
-  8481: (YY, rY, DY) => {
-    DY(8485);
-    var FY = DY(8489),
-      AY = DY(8547),
-      IY = DY(8510),
-      RY = DY(8591),
-      OY = DY(8503),
-      gY = DY(8572),
-      aY = DY(8601),
-      vY = DY(8549);
-    vY.registerSerializer("schema", gY.Ml), vY.registerSerializer("none", aY.NoneSerializer), rY.Client = FY.Client, rY.MatchMakeError = FY.MatchMakeError, Object.defineProperty(rY, "ErrorCode", {
+  8471: (TT, oT, IT) => {
+    IT(8479);
+    var iT = IT(8486),
+      zT = IT(8543),
+      kT = IT(8507),
+      WT = IT(8593),
+      XT = IT(8499),
+      BT = IT(8570),
+      FT = IT(8611),
+      ST = IT(8551);
+    ST.registerSerializer("schema", BT.JC), ST.registerSerializer("none", FT.NoneSerializer), oT.Client = iT.Client, oT.MatchMakeError = iT.MatchMakeError, Object.defineProperty(oT, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return AY.ErrorCode
+        return zT.ErrorCode
       }
-    }), Object.defineProperty(rY, "Protocol", {
+    }), Object.defineProperty(oT, "Protocol", {
       enumerable: !0,
       get: function() {
-        return AY.Protocol
+        return zT.Protocol
       }
-    }), rY.Bu = IY.Bu, rY.Auth = RY.Auth, rY.ServerError = OY.ServerError, rY.Ml = gY.Ml, rY.getStateCallbacks = gY.getStateCallbacks, rY.registerSerializer = vY.registerSerializer
+    }), oT.pD = kT.pD, oT.Auth = WT.Auth, oT.ServerError = XT.ServerError, oT.JC = BT.JC, oT.getStateCallbacks = BT.getStateCallbacks, oT.registerSerializer = ST.registerSerializer
   },
-  8485: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = YY => null !== YY && "object" === typeof YY && YY.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  8479: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = TT => null !== TT && "object" === typeof TT && TT.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  8601: (YY, rY) => {
-    rY.NoneSerializer = class {
-      setState(YY) {}
+  8611: (TT, oT) => {
+    oT.NoneSerializer = class {
+      setState(TT) {}
       getState() {
         return null
       }
-      patch(YY) {}
+      patch(TT) {}
       teardown() {}
-      handshake(YY) {}
+      handshake(TT) {}
     }
   },
-  8572: (YY, rY, DY) => {
-    var FY = DY(8526);
-    rY.Ml = class {
-      setState(YY, rY) {
-        this.yy.decode(YY, rY)
+  8570: (TT, oT, IT) => {
+    var iT = IT(8521);
+    oT.JC = class {
+      setState(TT, oT) {
+        this.Lc.decode(TT, oT)
       }
       getState() {
         return this.state
       }
-      patch(YY, rY) {
-        return this.yy.decode(YY, rY)
+      patch(TT, oT) {
+        return this.Lc.decode(TT, oT)
       }
       teardown() {
-        this.yy.root.clearRefs()
+        this.Lc.root.clearRefs()
       }
-      handshake(YY, rY) {
-        this.state ? (FY.Reflection.decode(YY, rY), this.yy = new FY.Decoder(this.state)) : (this.yy = FY.Reflection.decode(YY, rY), this.state = this.yy.state)
+      handshake(TT, oT) {
+        this.state ? (iT.Reflection.decode(TT, oT), this.Lc = new iT.Decoder(this.state)) : (this.Lc = iT.Reflection.decode(TT, oT), this.state = this.Lc.state)
       }
-    }, rY.getStateCallbacks = function(YY) {
+    }, oT.getStateCallbacks = function(TT) {
       try {
-        return FY.getDecoderStateCallbacks(YY.EW.yy)
-      } catch (rY) {
+        return iT.getDecoderStateCallbacks(TT.JA.Lc)
+      } catch (oT) {
         return
       }
     }
   },
-  8549: (YY, rY) => {
-    const DY = {};
-    rY.getSerializer = function(YY) {
-      const rY = DY[YY];
-      if (!rY) throw new Error("missing serializer: " + YY);
-      return rY
-    }, rY.registerSerializer = function(YY, rY) {
-      DY[YY] = rY
+  8551: (TT, oT) => {
+    const IT = {};
+    oT.getSerializer = function(TT) {
+      const oT = IT[TT];
+      if (!oT) throw new Error("missing serializer: " + TT);
+      return oT
+    }, oT.registerSerializer = function(TT, oT) {
+      IT[TT] = oT
     }
   },
-  8518: (YY, rY, DY) => {
-    var FY = DY(8496),
-      AY = DY(8526);
-    rY.H3TransportTransport = class {
-      constructor(YY) {
-        this.events = YY, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  8515: (TT, oT, IT) => {
+    var iT = IT(8493),
+      zT = IT(8521);
+    oT.H3TransportTransport = class {
+      constructor(TT) {
+        this.events = TT, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const DY = rY.fingerprint && {
+      connect(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const IT = oT.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(rY.fingerprint).buffer
+            value: new Uint8Array(oT.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(YY, DY), this.wt.ready.then((YY => {
-          console.log("WebTransport ready!", YY), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((YY => {
-            this.reader = YY.value.readable.getReader(), this.writer = YY.value.writable.getWriter(), this.sendSeatReservation(rY.room.roomId, rY.sessionId, rY.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((YY => {
-            console.error("failed to read incoming stream", YY), console.error("TODO: close the connection")
+        this.wt = new WebTransport(TT, IT), this.wt.ready.then((TT => {
+          console.log("WebTransport ready!", TT), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((TT => {
+            this.reader = TT.value.readable.getReader(), this.writer = TT.value.writable.getWriter(), this.sendSeatReservation(oT.room.roomId, oT.sessionId, oT.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((TT => {
+            console.error("failed to read incoming stream", TT), console.error("TODO: close the connection")
           }))
-        })).catch((YY => {
-          console.log("WebTransport not ready!", YY), this._close()
-        })), this.wt.closed.then((YY => {
-          console.log("WebTransport closed w/ success", YY), this.events.onclose({
-            code: YY.closeCode,
-            reason: YY.reason
+        })).catch((TT => {
+          console.log("WebTransport not ready!", TT), this._close()
+        })), this.wt.closed.then((TT => {
+          console.log("WebTransport closed w/ success", TT), this.events.onclose({
+            code: TT.closeCode,
+            reason: TT.reason
           })
-        })).catch((YY => {
-          console.log("WebTransport closed w/ error", YY), this.events.onerror(YY), this.events.onclose({
-            code: YY.closeCode,
-            reason: YY.reason
+        })).catch((TT => {
+          console.log("WebTransport closed w/ error", TT), this.events.onerror(TT), this.events.onclose({
+            code: TT.closeCode,
+            reason: TT.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(YY) {
-        const rY = AY.encode.number(this.lengthPrefixBuffer, YY.length, {
+      send(TT) {
+        const oT = zT.encode.number(this.lengthPrefixBuffer, TT.length, {
             offset: 0
           }),
-          DY = new Uint8Array(rY + YY.length);
-        DY.set(this.lengthPrefixBuffer.subarray(0, rY), 0), DY.set(YY, rY), this.writer.write(DY)
+          IT = new Uint8Array(oT + TT.length);
+        IT.set(this.lengthPrefixBuffer.subarray(0, oT), 0), IT.set(TT, oT), this.writer.write(IT)
       }
-      sendUnreliable(YY) {
-        const rY = AY.encode.number(this.lengthPrefixBuffer, YY.length, {
+      sendUnreliable(TT) {
+        const oT = zT.encode.number(this.lengthPrefixBuffer, TT.length, {
             offset: 0
           }),
-          DY = new Uint8Array(rY + YY.length);
-        DY.set(this.lengthPrefixBuffer.subarray(0, rY), 0), DY.set(YY, rY), this.unreliableWriter.write(DY)
+          IT = new Uint8Array(oT + TT.length);
+        IT.set(this.lengthPrefixBuffer.subarray(0, oT), 0), IT.set(TT, oT), this.unreliableWriter.write(IT)
       }
-      close(YY, rY) {
+      close(TT, oT) {
         try {
           this.wt.close({
-            closeCode: YY,
-            reason: rY
+            closeCode: TT,
+            reason: oT
           })
-        } catch (DY) {
-          console.error(DY)
+        } catch (IT) {
+          console.error(IT)
         }
       }
       readIncomingData() {
-        return FY.__awaiter(this, void 0, void 0, (function*() {
-          let YY;
+        return iT.__awaiter(this, void 0, void 0, (function*() {
+          let TT;
           for (; this.isOpen;) {
             try {
-              YY = yield this.reader.read();
-              const rY = YY.value,
-                DY = {
+              TT = yield this.reader.read();
+              const oT = TT.value,
+                IT = {
                   offset: 0
                 };
               do {
-                const YY = AY.decode.number(rY, DY);
+                const TT = zT.decode.number(oT, IT);
                 this.events.onmessage({
-                  data: rY.subarray(DY.offset, DY.offset + YY)
-                }), DY.offset += YY
-              } while (DY.offset < rY.length)
-            } catch (rY) {
-              -1 === rY.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", rY);
+                  data: oT.subarray(IT.offset, IT.offset + TT)
+                }), IT.offset += TT
+              } while (IT.offset < oT.length)
+            } catch (oT) {
+              -1 === oT.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", oT);
               break
             }
-            if (YY.done) break
+            if (TT.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return FY.__awaiter(this, void 0, void 0, (function*() {
-          let YY;
+        return iT.__awaiter(this, void 0, void 0, (function*() {
+          let TT;
           for (; this.isOpen;) {
             try {
-              YY = yield this.unreliableReader.read();
-              const rY = YY.value,
-                DY = {
+              TT = yield this.unreliableReader.read();
+              const oT = TT.value,
+                IT = {
                   offset: 0
                 };
               do {
-                const YY = AY.decode.number(rY, DY);
+                const TT = zT.decode.number(oT, IT);
                 this.events.onmessage({
-                  data: rY.subarray(DY.offset, DY.offset + YY)
-                }), DY.offset += YY
-              } while (DY.offset < rY.length)
-            } catch (rY) {
-              -1 === rY.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", rY);
+                  data: oT.subarray(IT.offset, IT.offset + TT)
+                }), IT.offset += TT
+              } while (IT.offset < oT.length)
+            } catch (oT) {
+              -1 === oT.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", oT);
               break
             }
-            if (YY.done) break
+            if (TT.done) break
           }
         }))
       }
-      sendSeatReservation(YY, rY, DY) {
-        const FY = {
+      sendSeatReservation(TT, oT, IT) {
+        const iT = {
             offset: 0
           },
-          IY = [];
-        AY.encode.string(IY, YY, FY), AY.encode.string(IY, rY, FY), DY && AY.encode.string(IY, DY, FY), this.writer.write(new Uint8Array(IY).buffer)
+          kT = [];
+        zT.encode.string(kT, TT, iT), zT.encode.string(kT, oT, iT), IT && zT.encode.string(kT, IT, iT), this.writer.write(new Uint8Array(kT).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  8533: (YY, rY, DY) => {
-    var FY = DY(8539);
-    const AY = globalThis.WebSocket || FY;
-    rY.WebSocketTransport = class {
-      constructor(YY) {
-        this.events = YY
+  8527: (TT, oT, IT) => {
+    var iT = IT(8536);
+    const zT = globalThis.WebSocket || iT;
+    oT.WebSocketTransport = class {
+      constructor(TT) {
+        this.events = TT
       }
-      send(YY) {
-        this.ws.send(YY)
+      send(TT) {
+        this.ws.send(TT)
       }
-      sendUnreliable(YY) {
+      sendUnreliable(TT) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(YY, rY) {
+      connect(TT, oT) {
         try {
-          this.ws = new AY(YY, {
-            headers: rY,
+          this.ws = new zT(TT, {
+            headers: oT,
             protocols: this.protocols
           })
-        } catch (DY) {
-          this.ws = new AY(YY, this.protocols)
+        } catch (IT) {
+          this.ws = new zT(TT, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(YY, rY) {
-        this.ws.close(YY, rY)
+      close(TT, oT) {
+        this.ws.close(TT, oT)
       }
       get isOpen() {
-        return this.ws.readyState === AY.OPEN
+        return this.ws.readyState === zT.OPEN
       }
     }
   },
-  8539: YY => {
-    YY.exports = function() {
+  8536: TT => {
+    TT.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  8584: (YY, rY, DY) => {
-    function FY(YY, rY) {
-      rY.headers = YY.headers || {}, rY.statusMessage = YY.statusText, rY.statusCode = YY.status, rY.data = YY.response
+  8590: (TT, oT, IT) => {
+    function iT(TT, oT) {
+      oT.headers = TT.headers || {}, oT.statusMessage = TT.statusText, oT.statusCode = TT.status, oT.data = TT.response
     }
 
-    function AY(YY, rY, DY) {
-      return new Promise((function(AY, IY) {
-        DY = DY || {};
-        var RY, OY, gY, aY = new XMLHttpRequest,
-          vY = DY.body,
-          uY = DY.headers || {};
-        for (RY in DY.timeout && (aY.timeout = DY.timeout), aY.ontimeout = aY.onerror = function(YY) {
-            YY.timeout = "timeout" == YY.type, IY(YY)
-          }, aY.onabort = function(YY) {
-            YY.aborted = !0, IY(YY)
-          }, aY.open(YY, rY.href || rY), aY.onload = function() {
-            for (gY = aY.getAllResponseHeaders().trim().split(/[\r\n]+/), FY(aY, aY); OY = gY.shift();) OY = OY.split(": "), aY.headers[OY.shift().toLowerCase()] = OY.join(": ");
-            if ((OY = aY.headers["content-type"]) && ~OY.indexOf("application/json")) try {
-              aY.data = JSON.parse(aY.data, DY.reviver)
-            } catch (YY) {
-              return FY(aY, YY), IY(YY)
-            }(aY.status >= 400 ? IY : AY)(aY)
-          }, typeof FormData < "u" && vY instanceof FormData || vY && "object" == typeof vY && (uY["content-type"] = "application/json", vY = JSON.stringify(vY)), aY.withCredentials = !!DY.withCredentials, uY) aY.setRequestHeader(RY, uY[RY]);
-        aY.send(vY), DY.signal && DY.signal.addEventListener("abort", (function() {
-          aY.abort()
+    function zT(TT, oT, IT) {
+      return new Promise((function(zT, kT) {
+        IT = IT || {};
+        var WT, XT, BT, FT = new XMLHttpRequest,
+          ST = IT.body,
+          DT = IT.headers || {};
+        for (WT in IT.timeout && (FT.timeout = IT.timeout), FT.ontimeout = FT.onerror = function(TT) {
+            TT.timeout = "timeout" == TT.type, kT(TT)
+          }, FT.onabort = function(TT) {
+            TT.aborted = !0, kT(TT)
+          }, FT.open(TT, oT.href || oT), FT.onload = function() {
+            for (BT = FT.getAllResponseHeaders().trim().split(/[\r\n]+/), iT(FT, FT); XT = BT.shift();) XT = XT.split(": "), FT.headers[XT.shift().toLowerCase()] = XT.join(": ");
+            if ((XT = FT.headers["content-type"]) && ~XT.indexOf("application/json")) try {
+              FT.data = JSON.parse(FT.data, IT.reviver)
+            } catch (TT) {
+              return iT(FT, TT), kT(TT)
+            }(FT.status >= 400 ? kT : zT)(FT)
+          }, typeof FormData < "u" && ST instanceof FormData || ST && "object" == typeof ST && (DT["content-type"] = "application/json", ST = JSON.stringify(ST)), FT.withCredentials = !!IT.withCredentials, DT) FT.setRequestHeader(WT, DT[WT]);
+        FT.send(ST), IT.signal && IT.signal.addEventListener("abort", (function() {
+          FT.abort()
         }))
       }))
     }
-    DY.r(rY), DY.d(rY, {
-      del: () => gY,
-      get: () => IY,
-      patch: () => OY,
-      post: () => RY,
-      put: () => aY,
-      send: () => AY
+    IT.r(oT), IT.d(oT, {
+      del: () => BT,
+      get: () => kT,
+      patch: () => XT,
+      post: () => WT,
+      put: () => FT,
+      send: () => zT
     });
-    var IY = AY.bind(AY, "GET"),
-      RY = AY.bind(AY, "POST"),
-      OY = AY.bind(AY, "PATCH"),
-      gY = AY.bind(AY, "DELETE"),
-      aY = AY.bind(AY, "PUT")
+    var kT = zT.bind(zT, "GET"),
+      WT = zT.bind(zT, "POST"),
+      XT = zT.bind(zT, "PATCH"),
+      BT = zT.bind(zT, "DELETE"),
+      FT = zT.bind(zT, "PUT")
   },
-  8574: (YY, rY, DY) => {
-    var FY, AY, IY;
-    DY.r(rY), DY.d(rY, {
-      ALWAYS: () => Gr,
-      C1: () => SY,
-      DECIMAL_FIT: () => nr,
-      DECIMAL_ROUND: () => xr,
-      Decoder: () => gr,
-      Encoder: () => pr,
-      FLOAT32_OPTIONS: () => ir,
-      NEVER: () => kr,
-      Packr: () => fr,
-      RESERVE_START_SPACE: () => Lr,
-      RESET_BUFFER_MODE: () => Ur,
-      REUSE_BUFFER_MODE: () => Pr,
-      Unpackr: () => cY,
-      addExtension: () => Mr,
-      clearSource: () => Rr,
-      decode: () => sr,
-      decodeIter: () => tr,
-      encode: () => qr,
-      encodeIter: () => YD,
-      isNativeAccelerationEnabled: () => wY,
-      mapsAsObjects: () => DD,
-      pack: () => Xr,
-      roundFloat32: () => mr,
-      unpack: () => vr,
-      unpackMultiple: () => ur,
-      useRecords: () => rD
+  8572: (TT, oT, IT) => {
+    var iT, zT, kT;
+    IT.r(oT), IT.d(oT, {
+      ALWAYS: () => bo,
+      C1: () => wT,
+      DECIMAL_FIT: () => No,
+      DECIMAL_ROUND: () => yo,
+      Decoder: () => Bo,
+      Encoder: () => Go,
+      FLOAT32_OPTIONS: () => xo,
+      NEVER: () => po,
+      Packr: () => ao,
+      RESERVE_START_SPACE: () => TI,
+      RESET_BUFFER_MODE: () => Vo,
+      REUSE_BUFFER_MODE: () => Po,
+      Unpackr: () => ET,
+      addExtension: () => no,
+      clearSource: () => Wo,
+      decode: () => Lo,
+      decodeIter: () => oI,
+      encode: () => to,
+      encodeIter: () => II,
+      isNativeAccelerationEnabled: () => qT,
+      mapsAsObjects: () => zI,
+      pack: () => so,
+      roundFloat32: () => go,
+      unpack: () => So,
+      unpackMultiple: () => Do,
+      useRecords: () => iI
     });
     try {
-      FY = new TextDecoder
-    } catch (FD) {}
-    var RY = 0;
-    const OY = [];
-    var gY, aY, vY, uY, sY, iY = OY,
-      yY = 0,
-      QY = {},
-      oY = 0,
-      WY = 0,
-      EY = [],
-      mY = {
+      iT = new TextDecoder
+    } catch (kI) {}
+    var WT = 0;
+    const XT = [];
+    var BT, FT, ST, DT, LT, xT = XT,
+      cT = 0,
+      KT = {},
+      MT = 0,
+      rT = 0,
+      AT = [],
+      gT = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class VY {}
-    const SY = new VY;
-    SY.name = "MessagePack 0xC1";
-    var lY, TY, eY, NY = !1,
-      BY = 2;
+    class hT {}
+    const wT = new hT;
+    wT.name = "MessagePack 0xC1";
+    var mT, eT, RT, uT = !1,
+      vT = 2;
     try {
       new Function("")
-    } catch (FD) {
-      BY = 1 / 0
+    } catch (kI) {
+      vT = 1 / 0
     }
-    class cY {
-      constructor(YY) {
-        YY && (!1 === YY.useRecords && void 0 === YY.mapsAsObjects && (YY.mapsAsObjects = !0), YY.sequential && !1 !== YY.trusted && (YY.trusted = !0, YY.structures || 0 == YY.useRecords || (YY.structures = [], YY.maxSharedStructures || (YY.maxSharedStructures = 0))), YY.structures ? YY.structures.sharedLength = YY.structures.length : YY.getStructures && ((YY.structures = []).uninitialized = !0, YY.structures.sharedLength = 0), YY.int64AsNumber && (YY.int64AsType = "number")), Object.assign(this, YY)
+    class ET {
+      constructor(TT) {
+        TT && (!1 === TT.useRecords && void 0 === TT.mapsAsObjects && (TT.mapsAsObjects = !0), TT.sequential && !1 !== TT.trusted && (TT.trusted = !0, TT.structures || 0 == TT.useRecords || (TT.structures = [], TT.maxSharedStructures || (TT.maxSharedStructures = 0))), TT.structures ? TT.structures.sharedLength = TT.structures.length : TT.getStructures && ((TT.structures = []).uninitialized = !0, TT.structures.sharedLength = 0), TT.int64AsNumber && (TT.int64AsType = "number")), Object.assign(this, TT)
       }
-      unpack(YY, rY) {
-        if (AY) return Ir((() => (Rr(), this ? this.unpack(YY, rY) : cY.prototype.unpack.call(mY, YY, rY))));
-        YY.buffer || YY.constructor !== ArrayBuffer || (YY = "undefined" !== typeof Buffer ? Buffer.from(YY) : new Uint8Array(YY)), "object" === typeof rY ? (IY = rY.end || YY.length, RY = rY.start || 0) : (RY = 0, IY = rY > -1 ? rY : YY.length), yY = 0, WY = 0, aY = null, iY = OY, vY = null, AY = YY;
+      unpack(TT, oT) {
+        if (zT) return ko((() => (Wo(), this ? this.unpack(TT, oT) : ET.prototype.unpack.call(gT, TT, oT))));
+        TT.buffer || TT.constructor !== ArrayBuffer || (TT = "undefined" !== typeof Buffer ? Buffer.from(TT) : new Uint8Array(TT)), "object" === typeof oT ? (kT = oT.end || TT.length, WT = oT.start || 0) : (WT = 0, kT = oT > -1 ? oT : TT.length), cT = 0, rT = 0, FT = null, xT = XT, ST = null, zT = TT;
         try {
-          sY = YY.dataView || (YY.dataView = new DataView(YY.buffer, YY.byteOffset, YY.byteLength))
-        } catch (FD) {
-          if (AY = null, YY instanceof Uint8Array) throw FD;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (YY && "object" == typeof YY ? YY.constructor.name : typeof YY))
+          LT = TT.dataView || (TT.dataView = new DataView(TT.buffer, TT.byteOffset, TT.byteLength))
+        } catch (kI) {
+          if (zT = null, TT instanceof Uint8Array) throw kI;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (TT && "object" == typeof TT ? TT.constructor.name : typeof TT))
         }
-        if (this instanceof cY) {
-          if (QY = this, this.structures) return gY = this.structures, KY(rY);
-          (!gY || gY.length > 0) && (gY = [])
-        } else QY = mY, (!gY || gY.length > 0) && (gY = []);
-        return KY(rY)
+        if (this instanceof ET) {
+          if (KT = this, this.structures) return BT = this.structures, fT(oT);
+          (!BT || BT.length > 0) && (BT = [])
+        } else KT = gT, (!BT || BT.length > 0) && (BT = []);
+        return fT(oT)
       }
-      unpackMultiple(YY, rY) {
-        let DY, FY = 0;
+      unpackMultiple(TT, oT) {
+        let IT, iT = 0;
         try {
-          NY = !0;
-          let AY = YY.length,
-            IY = this ? this.unpack(YY, AY) : ar.unpack(YY, AY);
-          if (!rY) {
-            for (DY = [IY]; RY < AY;) FY = RY, DY.push(KY());
-            return DY
+          uT = !0;
+          let zT = TT.length,
+            kT = this ? this.unpack(TT, zT) : Fo.unpack(TT, zT);
+          if (!oT) {
+            for (IT = [kT]; WT < zT;) iT = WT, IT.push(fT());
+            return IT
           }
-          if (!1 === rY(IY, FY, RY)) return;
-          for (; RY < AY;)
-            if (FY = RY, !1 === rY(KY(), FY, RY)) return
-        } catch (FD) {
-          throw FD.lastPosition = FY, FD.values = DY, FD
+          if (!1 === oT(kT, iT, WT)) return;
+          for (; WT < zT;)
+            if (iT = WT, !1 === oT(fT(), iT, WT)) return
+        } catch (kI) {
+          throw kI.lastPosition = iT, kI.values = IT, kI
         } finally {
-          NY = !1, Rr()
+          uT = !1, Wo()
         }
       }
-      _mergeStructures(YY, rY) {
-        TY && (YY = TY.call(this, YY)), YY = YY || [], Object.isFrozen(YY) && (YY = YY.map((YY => YY.slice(0))));
-        for (let DY = 0, FY = YY.length; DY < FY; DY++) {
-          let rY = YY[DY];
-          rY && (rY.isShared = !0, DY >= 32 && (rY.highByte = DY - 32 >> 5))
+      _mergeStructures(TT, oT) {
+        eT && (TT = eT.call(this, TT)), TT = TT || [], Object.isFrozen(TT) && (TT = TT.map((TT => TT.slice(0))));
+        for (let IT = 0, iT = TT.length; IT < iT; IT++) {
+          let oT = TT[IT];
+          oT && (oT.isShared = !0, IT >= 32 && (oT.highByte = IT - 32 >> 5))
         }
-        YY.sharedLength = YY.length;
-        for (let DY in rY || [])
-          if (DY >= 0) {
-            let FY = YY[DY],
-              AY = rY[DY];
-            AY && (FY && ((YY.restoreStructures || (YY.restoreStructures = []))[DY] = FY), YY[DY] = AY)
-          } return this.structures = YY
+        TT.sharedLength = TT.length;
+        for (let IT in oT || [])
+          if (IT >= 0) {
+            let iT = TT[IT],
+              zT = oT[IT];
+            zT && (iT && ((TT.restoreStructures || (TT.restoreStructures = []))[IT] = iT), TT[IT] = zT)
+          } return this.structures = TT
       }
-      decode(YY, rY) {
-        return this.unpack(YY, rY)
+      decode(TT, oT) {
+        return this.unpack(TT, oT)
       }
     }
 
-    function KY(YY) {
+    function fT(TT) {
       try {
-        if (!QY.trusted && !NY) {
-          let YY = gY.sharedLength || 0;
-          YY < gY.length && (gY.length = YY)
+        if (!KT.trusted && !uT) {
+          let TT = BT.sharedLength || 0;
+          TT < BT.length && (BT.length = TT)
         }
-        let rY;
-        if (QY.randomAccessStructure && AY[RY] < 64 && AY[RY] >= 32 && lY ? (rY = lY(AY, RY, IY, QY), AY = null, YY && YY.lazy || !rY || (rY = rY.toJSON()), RY = IY) : rY = zY(), vY && (RY = vY.postBundlePosition, vY = null), NY && (gY.restoreStructures = null), RY == IY) gY && gY.restoreStructures && HY(), gY = null, AY = null, uY && (uY = null);
+        let oT;
+        if (KT.randomAccessStructure && zT[WT] < 64 && zT[WT] >= 32 && mT ? (oT = mT(zT, WT, kT, KT), zT = null, TT && TT.lazy || !oT || (oT = oT.toJSON()), WT = kT) : oT = jT(), ST && (WT = ST.postBundlePosition, ST = null), uT && (BT.restoreStructures = null), WT == kT) BT && BT.restoreStructures && CT(), BT = null, zT = null, DT && (DT = null);
         else {
-          if (RY > IY) throw new Error("Unexpected end of MessagePack data");
-          if (!NY) {
-            let YY;
+          if (WT > kT) throw new Error("Unexpected end of MessagePack data");
+          if (!uT) {
+            let TT;
             try {
-              YY = JSON.stringify(rY, ((YY, rY) => "bigint" === typeof rY ? `${rY}n` : rY)).slice(0, 100)
-            } catch (FD) {
-              YY = "(JSON view not available " + FD + ")"
+              TT = JSON.stringify(oT, ((TT, oT) => "bigint" === typeof oT ? `${oT}n` : oT)).slice(0, 100)
+            } catch (kI) {
+              TT = "(JSON view not available " + kI + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + YY)
+            throw new Error("Data read, but end of buffer not reached " + TT)
           }
         }
-        return rY
-      } catch (FD) {
-        throw gY && gY.restoreStructures && HY(), Rr(), (FD instanceof RangeError || FD.message.startsWith("Unexpected end of buffer") || RY > IY) && (FD.incomplete = !0), FD
+        return oT
+      } catch (kI) {
+        throw BT && BT.restoreStructures && CT(), Wo(), (kI instanceof RangeError || kI.message.startsWith("Unexpected end of buffer") || WT > kT) && (kI.incomplete = !0), kI
       }
     }
 
-    function HY() {
-      for (let YY in gY.restoreStructures) gY[YY] = gY.restoreStructures[YY];
-      gY.restoreStructures = null
+    function CT() {
+      for (let TT in BT.restoreStructures) BT[TT] = BT.restoreStructures[TT];
+      BT.restoreStructures = null
     }
 
-    function zY() {
-      let YY = AY[RY++];
-      if (YY < 160) {
-        if (YY < 128) {
-          if (YY < 64) return YY;
+    function jT() {
+      let TT = zT[WT++];
+      if (TT < 160) {
+        if (TT < 128) {
+          if (TT < 64) return TT;
           {
-            let rY = gY[63 & YY] || QY.getStructures && jY()[63 & YY];
-            return rY ? (rY.read || (rY.read = CY(rY, 63 & YY)), rY.read()) : YY
+            let oT = BT[63 & TT] || KT.getStructures && YT()[63 & TT];
+            return oT ? (oT.read || (oT.read = UT(oT, 63 & TT)), oT.read()) : TT
           }
         }
-        if (YY < 144) {
-          if (YY -= 128, QY.mapsAsObjects) {
-            let rY = {};
-            for (let DY = 0; DY < YY; DY++) {
-              let YY = LY();
-              "__proto__" === YY && (YY = "__proto_"), rY[YY] = zY()
+        if (TT < 144) {
+          if (TT -= 128, KT.mapsAsObjects) {
+            let oT = {};
+            for (let IT = 0; IT < TT; IT++) {
+              let TT = dT();
+              "__proto__" === TT && (TT = "__proto_"), oT[TT] = jT()
             }
-            return rY
+            return oT
           } {
-            let rY = new Map;
-            for (let DY = 0; DY < YY; DY++) rY.set(zY(), zY());
-            return rY
+            let oT = new Map;
+            for (let IT = 0; IT < TT; IT++) oT.set(jT(), jT());
+            return oT
           }
         } {
-          YY -= 144;
-          let rY = new Array(YY);
-          for (let DY = 0; DY < YY; DY++) rY[DY] = zY();
-          return QY.freezeData ? Object.freeze(rY) : rY
+          TT -= 144;
+          let oT = new Array(TT);
+          for (let IT = 0; IT < TT; IT++) oT[IT] = jT();
+          return KT.freezeData ? Object.freeze(oT) : oT
         }
       }
-      if (YY < 192) {
-        let rY = YY - 160;
-        if (WY >= RY) return aY.slice(RY - oY, (RY += rY) - oY);
-        if (0 == WY && IY < 140) {
-          let YY = rY < 16 ? GY(rY) : kY(rY);
-          if (null != YY) return YY
+      if (TT < 192) {
+        let oT = TT - 160;
+        if (rT >= WT) return FT.slice(WT - MT, (WT += oT) - MT);
+        if (0 == rT && kT < 140) {
+          let TT = oT < 16 ? pT(oT) : GT(oT);
+          if (null != TT) return TT
         }
-        return hY(rY)
+        return QT(oT)
       } {
-        let rY;
-        switch (YY) {
+        let oT;
+        switch (TT) {
           case 192:
             return null;
           case 193:
-            return vY ? (rY = zY(), rY > 0 ? vY[1].slice(vY.position1, vY.position1 += rY) : vY[0].slice(vY.position0, vY.position0 -= rY)) : SY;
+            return ST ? (oT = jT(), oT > 0 ? ST[1].slice(ST.position1, ST.position1 += oT) : ST[0].slice(ST.position0, ST.position0 -= oT)) : wT;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (rY = AY[RY++], void 0 === rY) throw new Error("Unexpected end of buffer");
-            return nY(rY);
+            if (oT = zT[WT++], void 0 === oT) throw new Error("Unexpected end of buffer");
+            return yT(oT);
           case 197:
-            return rY = sY.getUint16(RY), RY += 2, nY(rY);
+            return oT = LT.getUint16(WT), WT += 2, yT(oT);
           case 198:
-            return rY = sY.getUint32(RY), RY += 4, nY(rY);
+            return oT = LT.getUint32(WT), WT += 4, yT(oT);
           case 199:
-            return PY(AY[RY++]);
+            return NT(zT[WT++]);
           case 200:
-            return rY = sY.getUint16(RY), RY += 2, PY(rY);
+            return oT = LT.getUint16(WT), WT += 2, NT(oT);
           case 201:
-            return rY = sY.getUint32(RY), RY += 4, PY(rY);
+            return oT = LT.getUint32(WT), WT += 4, NT(oT);
           case 202:
-            if (rY = sY.getFloat32(RY), QY.useFloat32 > 2) {
-              let YY = Or[(127 & AY[RY]) << 1 | AY[RY + 1] >> 7];
-              return RY += 4, (YY * rY + (rY > 0 ? .5 : -.5) | 0) / YY
+            if (oT = LT.getFloat32(WT), KT.useFloat32 > 2) {
+              let TT = Xo[(127 & zT[WT]) << 1 | zT[WT + 1] >> 7];
+              return WT += 4, (TT * oT + (oT > 0 ? .5 : -.5) | 0) / TT
             }
-            return RY += 4, rY;
+            return WT += 4, oT;
           case 203:
-            return rY = sY.getFloat64(RY), RY += 8, rY;
+            return oT = LT.getFloat64(WT), WT += 8, oT;
           case 204:
-            return AY[RY++];
+            return zT[WT++];
           case 205:
-            return rY = sY.getUint16(RY), RY += 2, rY;
+            return oT = LT.getUint16(WT), WT += 2, oT;
           case 206:
-            return rY = sY.getUint32(RY), RY += 4, rY;
+            return oT = LT.getUint32(WT), WT += 4, oT;
           case 207:
-            return "number" === QY.int64AsType ? (rY = 4294967296 * sY.getUint32(RY), rY += sY.getUint32(RY + 4)) : "string" === QY.int64AsType ? rY = sY.getBigUint64(RY).toString() : "auto" === QY.int64AsType ? (rY = sY.getBigUint64(RY), rY <= BigInt(2) << BigInt(52) && (rY = Number(rY))) : rY = sY.getBigUint64(RY), RY += 8, rY;
+            return "number" === KT.int64AsType ? (oT = 4294967296 * LT.getUint32(WT), oT += LT.getUint32(WT + 4)) : "string" === KT.int64AsType ? oT = LT.getBigUint64(WT).toString() : "auto" === KT.int64AsType ? (oT = LT.getBigUint64(WT), oT <= BigInt(2) << BigInt(52) && (oT = Number(oT))) : oT = LT.getBigUint64(WT), WT += 8, oT;
           case 208:
-            return sY.getInt8(RY++);
+            return LT.getInt8(WT++);
           case 209:
-            return rY = sY.getInt16(RY), RY += 2, rY;
+            return oT = LT.getInt16(WT), WT += 2, oT;
           case 210:
-            return rY = sY.getInt32(RY), RY += 4, rY;
+            return oT = LT.getInt32(WT), WT += 4, oT;
           case 211:
-            return "number" === QY.int64AsType ? (rY = 4294967296 * sY.getInt32(RY), rY += sY.getUint32(RY + 4)) : "string" === QY.int64AsType ? rY = sY.getBigInt64(RY).toString() : "auto" === QY.int64AsType ? (rY = sY.getBigInt64(RY), rY >= BigInt(-2) << BigInt(52) && rY <= BigInt(2) << BigInt(52) && (rY = Number(rY))) : rY = sY.getBigInt64(RY), RY += 8, rY;
+            return "number" === KT.int64AsType ? (oT = 4294967296 * LT.getInt32(WT), oT += LT.getUint32(WT + 4)) : "string" === KT.int64AsType ? oT = LT.getBigInt64(WT).toString() : "auto" === KT.int64AsType ? (oT = LT.getBigInt64(WT), oT >= BigInt(-2) << BigInt(52) && oT <= BigInt(2) << BigInt(52) && (oT = Number(oT))) : oT = LT.getBigInt64(WT), WT += 8, oT;
           case 212:
-            if (rY = AY[RY++], 114 == rY) return Yr(63 & AY[RY++]);
+            if (oT = zT[WT++], 114 == oT) return To(63 & zT[WT++]);
             {
-              let YY = EY[rY];
-              if (YY) return YY.read ? (RY++, YY.read(zY())) : YY.noBuffer ? (RY++, YY()) : YY(AY.subarray(RY, ++RY));
-              throw new Error("Unknown extension " + rY)
+              let TT = AT[oT];
+              if (TT) return TT.read ? (WT++, TT.read(jT())) : TT.noBuffer ? (WT++, TT()) : TT(zT.subarray(WT, ++WT));
+              throw new Error("Unknown extension " + oT)
             }
           case 213:
-            return rY = AY[RY], 114 == rY ? (RY++, Yr(63 & AY[RY++], AY[RY++])) : PY(2);
+            return oT = zT[WT], 114 == oT ? (WT++, To(63 & zT[WT++], zT[WT++])) : NT(2);
           case 214:
-            return PY(4);
+            return NT(4);
           case 215:
-            return PY(8);
+            return NT(8);
           case 216:
-            return PY(16);
+            return NT(16);
           case 217:
-            return rY = AY[RY++], WY >= RY ? aY.slice(RY - oY, (RY += rY) - oY) : dY(rY);
+            return oT = zT[WT++], rT >= WT ? FT.slice(WT - MT, (WT += oT) - MT) : OT(oT);
           case 218:
-            return rY = sY.getUint16(RY), WY >= (RY += 2) ? aY.slice(RY - oY, (RY += rY) - oY) : JY(rY);
+            return oT = LT.getUint16(WT), rT >= (WT += 2) ? FT.slice(WT - MT, (WT += oT) - MT) : HT(oT);
           case 219:
-            return rY = sY.getUint32(RY), WY >= (RY += 4) ? aY.slice(RY - oY, (RY += rY) - oY) : MY(rY);
+            return oT = LT.getUint32(WT), rT >= (WT += 4) ? FT.slice(WT - MT, (WT += oT) - MT) : nT(oT);
           case 220:
-            return rY = sY.getUint16(RY), RY += 2, XY(rY);
+            return oT = LT.getUint16(WT), WT += 2, lT(oT);
           case 221:
-            return rY = sY.getUint32(RY), RY += 4, XY(rY);
+            return oT = LT.getUint32(WT), WT += 4, lT(oT);
           case 222:
-            return rY = sY.getUint16(RY), RY += 2, qY(rY);
+            return oT = LT.getUint16(WT), WT += 2, sT(oT);
           case 223:
-            return rY = sY.getUint32(RY), RY += 4, qY(rY);
+            return oT = LT.getUint32(WT), WT += 4, sT(oT);
           default:
-            if (YY >= 224) return YY - 256;
-            if (void 0 === YY) {
-              let YY = new Error("Unexpected end of MessagePack data");
-              throw YY.incomplete = !0, YY
+            if (TT >= 224) return TT - 256;
+            if (void 0 === TT) {
+              let TT = new Error("Unexpected end of MessagePack data");
+              throw TT.incomplete = !0, TT
             }
-            throw new Error("Unknown MessagePack token " + YY)
+            throw new Error("Unknown MessagePack token " + TT)
         }
       }
     }
-    const ZY = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const JT = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function CY(YY, rY) {
-      function DY() {
-        if (DY.count++ > BY) {
-          let DY = YY.read = new Function("r", "return function(){return " + (QY.freezeData ? "Object.freeze" : "") + "({" + YY.map((YY => "__proto__" === YY ? "__proto_:r()" : ZY.test(YY) ? YY + ":r()" : "[" + JSON.stringify(YY) + "]:r()")).join(",") + "})}")(zY);
-          return 0 === YY.highByte && (YY.read = fY(rY, YY.read)), DY()
+    function UT(TT, oT) {
+      function IT() {
+        if (IT.count++ > vT) {
+          let IT = TT.read = new Function("r", "return function(){return " + (KT.freezeData ? "Object.freeze" : "") + "({" + TT.map((TT => "__proto__" === TT ? "__proto_:r()" : JT.test(TT) ? TT + ":r()" : "[" + JSON.stringify(TT) + "]:r()")).join(",") + "})}")(jT);
+          return 0 === TT.highByte && (TT.read = aT(oT, TT.read)), IT()
         }
-        let FY = {};
-        for (let rY = 0, DY = YY.length; rY < DY; rY++) {
-          let DY = YY[rY];
-          "__proto__" === DY && (DY = "__proto_"), FY[DY] = zY()
+        let iT = {};
+        for (let oT = 0, IT = TT.length; oT < IT; oT++) {
+          let IT = TT[oT];
+          "__proto__" === IT && (IT = "__proto_"), iT[IT] = jT()
         }
-        return QY.freezeData ? Object.freeze(FY) : FY
+        return KT.freezeData ? Object.freeze(iT) : iT
       }
-      return DY.count = 0, 0 === YY.highByte ? fY(rY, DY) : DY
+      return IT.count = 0, 0 === TT.highByte ? aT(oT, IT) : IT
     }
-    const fY = (YY, rY) => function() {
-      let DY = AY[RY++];
-      if (0 === DY) return rY();
-      let FY = YY < 32 ? -(YY + (DY << 5)) : YY + (DY << 5),
-        IY = gY[FY] || jY()[FY];
-      if (!IY) throw new Error("Record id is not defined for " + FY);
-      return IY.read || (IY.read = CY(IY, YY)), IY.read()
+    const aT = (TT, oT) => function() {
+      let IT = zT[WT++];
+      if (0 === IT) return oT();
+      let iT = TT < 32 ? -(TT + (IT << 5)) : TT + (IT << 5),
+        kT = BT[iT] || YT()[iT];
+      if (!kT) throw new Error("Record id is not defined for " + iT);
+      return kT.read || (kT.read = UT(kT, TT)), kT.read()
     };
 
-    function jY() {
-      let YY = Ir((() => (AY = null, QY.getStructures())));
-      return gY = QY._mergeStructures(YY, gY)
+    function YT() {
+      let TT = ko((() => (zT = null, KT.getStructures())));
+      return BT = KT._mergeStructures(TT, BT)
     }
-    var hY = bY,
-      dY = bY,
-      JY = bY,
-      MY = bY;
-    let wY = !1;
+    var QT = ZT,
+      OT = ZT,
+      HT = ZT,
+      nT = ZT;
+    let qT = !1;
 
-    function bY(YY) {
-      let rY;
-      if (YY < 16 && (rY = GY(YY))) return rY;
-      if (YY > 64 && FY) return FY.decode(AY.subarray(RY, RY += YY));
-      const DY = RY + YY,
-        IY = [];
-      for (rY = ""; RY < DY;) {
-        const YY = AY[RY++];
-        if (0 === (128 & YY)) IY.push(YY);
-        else if (192 === (224 & YY)) {
-          const rY = 63 & AY[RY++];
-          IY.push((31 & YY) << 6 | rY)
-        } else if (224 === (240 & YY)) {
-          const rY = 63 & AY[RY++],
-            DY = 63 & AY[RY++];
-          IY.push((31 & YY) << 12 | rY << 6 | DY)
-        } else if (240 === (248 & YY)) {
-          let rY = (7 & YY) << 18 | (63 & AY[RY++]) << 12 | (63 & AY[RY++]) << 6 | 63 & AY[RY++];
-          rY > 65535 && (rY -= 65536, IY.push(rY >>> 10 & 1023 | 55296), rY = 56320 | 1023 & rY), IY.push(rY)
-        } else IY.push(YY);
-        IY.length >= 4096 && (rY += pY.apply(String, IY), IY.length = 0)
+    function ZT(TT) {
+      let oT;
+      if (TT < 16 && (oT = pT(TT))) return oT;
+      if (TT > 64 && iT) return iT.decode(zT.subarray(WT, WT += TT));
+      const IT = WT + TT,
+        kT = [];
+      for (oT = ""; WT < IT;) {
+        const TT = zT[WT++];
+        if (0 === (128 & TT)) kT.push(TT);
+        else if (192 === (224 & TT)) {
+          const oT = 63 & zT[WT++];
+          kT.push((31 & TT) << 6 | oT)
+        } else if (224 === (240 & TT)) {
+          const oT = 63 & zT[WT++],
+            IT = 63 & zT[WT++];
+          kT.push((31 & TT) << 12 | oT << 6 | IT)
+        } else if (240 === (248 & TT)) {
+          let oT = (7 & TT) << 18 | (63 & zT[WT++]) << 12 | (63 & zT[WT++]) << 6 | 63 & zT[WT++];
+          oT > 65535 && (oT -= 65536, kT.push(oT >>> 10 & 1023 | 55296), oT = 56320 | 1023 & oT), kT.push(oT)
+        } else kT.push(TT);
+        kT.length >= 4096 && (oT += tT.apply(String, kT), kT.length = 0)
       }
-      return IY.length > 0 && (rY += pY.apply(String, IY)), rY
+      return kT.length > 0 && (oT += tT.apply(String, kT)), oT
     }
 
-    function XY(YY) {
-      let rY = new Array(YY);
-      for (let DY = 0; DY < YY; DY++) rY[DY] = zY();
-      return QY.freezeData ? Object.freeze(rY) : rY
+    function lT(TT) {
+      let oT = new Array(TT);
+      for (let IT = 0; IT < TT; IT++) oT[IT] = jT();
+      return KT.freezeData ? Object.freeze(oT) : oT
     }
 
-    function qY(YY) {
-      if (QY.mapsAsObjects) {
-        let rY = {};
-        for (let DY = 0; DY < YY; DY++) {
-          let YY = LY();
-          "__proto__" === YY && (YY = "__proto_"), rY[YY] = zY()
+    function sT(TT) {
+      if (KT.mapsAsObjects) {
+        let oT = {};
+        for (let IT = 0; IT < TT; IT++) {
+          let TT = dT();
+          "__proto__" === TT && (TT = "__proto_"), oT[TT] = jT()
         }
-        return rY
+        return oT
       } {
-        let rY = new Map;
-        for (let DY = 0; DY < YY; DY++) rY.set(zY(), zY());
-        return rY
+        let oT = new Map;
+        for (let IT = 0; IT < TT; IT++) oT.set(jT(), jT());
+        return oT
       }
     }
-    var pY = String.fromCharCode;
+    var tT = String.fromCharCode;
 
-    function kY(YY) {
-      let rY = RY,
-        DY = new Array(YY);
-      for (let FY = 0; FY < YY; FY++) {
-        const YY = AY[RY++];
-        if ((128 & YY) > 0) return void(RY = rY);
-        DY[FY] = YY
+    function GT(TT) {
+      let oT = WT,
+        IT = new Array(TT);
+      for (let iT = 0; iT < TT; iT++) {
+        const TT = zT[WT++];
+        if ((128 & TT) > 0) return void(WT = oT);
+        IT[iT] = TT
       }
-      return pY.apply(String, DY)
+      return tT.apply(String, IT)
     }
 
-    function GY(YY) {
-      if (YY < 4) {
-        if (YY < 2) {
-          if (0 === YY) return "";
+    function pT(TT) {
+      if (TT < 4) {
+        if (TT < 2) {
+          if (0 === TT) return "";
           {
-            let YY = AY[RY++];
-            return (128 & YY) > 1 ? void(RY -= 1) : pY(YY)
+            let TT = zT[WT++];
+            return (128 & TT) > 1 ? void(WT -= 1) : tT(TT)
           }
         } {
-          let rY = AY[RY++],
-            DY = AY[RY++];
-          if ((128 & rY) > 0 || (128 & DY) > 0) return void(RY -= 2);
-          if (YY < 3) return pY(rY, DY);
-          let FY = AY[RY++];
-          return (128 & FY) > 0 ? void(RY -= 3) : pY(rY, DY, FY)
+          let oT = zT[WT++],
+            IT = zT[WT++];
+          if ((128 & oT) > 0 || (128 & IT) > 0) return void(WT -= 2);
+          if (TT < 3) return tT(oT, IT);
+          let iT = zT[WT++];
+          return (128 & iT) > 0 ? void(WT -= 3) : tT(oT, IT, iT)
         }
       } {
-        let rY = AY[RY++],
-          DY = AY[RY++],
-          FY = AY[RY++],
-          IY = AY[RY++];
-        if ((128 & rY) > 0 || (128 & DY) > 0 || (128 & FY) > 0 || (128 & IY) > 0) return void(RY -= 4);
-        if (YY < 6) {
-          if (4 === YY) return pY(rY, DY, FY, IY);
+        let oT = zT[WT++],
+          IT = zT[WT++],
+          iT = zT[WT++],
+          kT = zT[WT++];
+        if ((128 & oT) > 0 || (128 & IT) > 0 || (128 & iT) > 0 || (128 & kT) > 0) return void(WT -= 4);
+        if (TT < 6) {
+          if (4 === TT) return tT(oT, IT, iT, kT);
           {
-            let YY = AY[RY++];
-            return (128 & YY) > 0 ? void(RY -= 5) : pY(rY, DY, FY, IY, YY)
+            let TT = zT[WT++];
+            return (128 & TT) > 0 ? void(WT -= 5) : tT(oT, IT, iT, kT, TT)
           }
         }
-        if (YY < 8) {
-          let OY = AY[RY++],
-            gY = AY[RY++];
-          if ((128 & OY) > 0 || (128 & gY) > 0) return void(RY -= 6);
-          if (YY < 7) return pY(rY, DY, FY, IY, OY, gY);
-          let aY = AY[RY++];
-          return (128 & aY) > 0 ? void(RY -= 7) : pY(rY, DY, FY, IY, OY, gY, aY)
+        if (TT < 8) {
+          let XT = zT[WT++],
+            BT = zT[WT++];
+          if ((128 & XT) > 0 || (128 & BT) > 0) return void(WT -= 6);
+          if (TT < 7) return tT(oT, IT, iT, kT, XT, BT);
+          let FT = zT[WT++];
+          return (128 & FT) > 0 ? void(WT -= 7) : tT(oT, IT, iT, kT, XT, BT, FT)
         } {
-          let OY = AY[RY++],
-            gY = AY[RY++],
-            aY = AY[RY++],
-            vY = AY[RY++];
-          if ((128 & OY) > 0 || (128 & gY) > 0 || (128 & aY) > 0 || (128 & vY) > 0) return void(RY -= 8);
-          if (YY < 10) {
-            if (8 === YY) return pY(rY, DY, FY, IY, OY, gY, aY, vY);
+          let XT = zT[WT++],
+            BT = zT[WT++],
+            FT = zT[WT++],
+            ST = zT[WT++];
+          if ((128 & XT) > 0 || (128 & BT) > 0 || (128 & FT) > 0 || (128 & ST) > 0) return void(WT -= 8);
+          if (TT < 10) {
+            if (8 === TT) return tT(oT, IT, iT, kT, XT, BT, FT, ST);
             {
-              let YY = AY[RY++];
-              return (128 & YY) > 0 ? void(RY -= 9) : pY(rY, DY, FY, IY, OY, gY, aY, vY, YY)
+              let TT = zT[WT++];
+              return (128 & TT) > 0 ? void(WT -= 9) : tT(oT, IT, iT, kT, XT, BT, FT, ST, TT)
             }
           }
-          if (YY < 12) {
-            let uY = AY[RY++],
-              sY = AY[RY++];
-            if ((128 & uY) > 0 || (128 & sY) > 0) return void(RY -= 10);
-            if (YY < 11) return pY(rY, DY, FY, IY, OY, gY, aY, vY, uY, sY);
-            let iY = AY[RY++];
-            return (128 & iY) > 0 ? void(RY -= 11) : pY(rY, DY, FY, IY, OY, gY, aY, vY, uY, sY, iY)
+          if (TT < 12) {
+            let DT = zT[WT++],
+              LT = zT[WT++];
+            if ((128 & DT) > 0 || (128 & LT) > 0) return void(WT -= 10);
+            if (TT < 11) return tT(oT, IT, iT, kT, XT, BT, FT, ST, DT, LT);
+            let xT = zT[WT++];
+            return (128 & xT) > 0 ? void(WT -= 11) : tT(oT, IT, iT, kT, XT, BT, FT, ST, DT, LT, xT)
           } {
-            let uY = AY[RY++],
-              sY = AY[RY++],
-              iY = AY[RY++],
-              yY = AY[RY++];
-            if ((128 & uY) > 0 || (128 & sY) > 0 || (128 & iY) > 0 || (128 & yY) > 0) return void(RY -= 12);
-            if (YY < 14) {
-              if (12 === YY) return pY(rY, DY, FY, IY, OY, gY, aY, vY, uY, sY, iY, yY);
+            let DT = zT[WT++],
+              LT = zT[WT++],
+              xT = zT[WT++],
+              cT = zT[WT++];
+            if ((128 & DT) > 0 || (128 & LT) > 0 || (128 & xT) > 0 || (128 & cT) > 0) return void(WT -= 12);
+            if (TT < 14) {
+              if (12 === TT) return tT(oT, IT, iT, kT, XT, BT, FT, ST, DT, LT, xT, cT);
               {
-                let YY = AY[RY++];
-                return (128 & YY) > 0 ? void(RY -= 13) : pY(rY, DY, FY, IY, OY, gY, aY, vY, uY, sY, iY, yY, YY)
+                let TT = zT[WT++];
+                return (128 & TT) > 0 ? void(WT -= 13) : tT(oT, IT, iT, kT, XT, BT, FT, ST, DT, LT, xT, cT, TT)
               }
             } {
-              let QY = AY[RY++],
-                oY = AY[RY++];
-              if ((128 & QY) > 0 || (128 & oY) > 0) return void(RY -= 14);
-              if (YY < 15) return pY(rY, DY, FY, IY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY);
-              let WY = AY[RY++];
-              return (128 & WY) > 0 ? void(RY -= 15) : pY(rY, DY, FY, IY, OY, gY, aY, vY, uY, sY, iY, yY, QY, oY, WY)
+              let KT = zT[WT++],
+                MT = zT[WT++];
+              if ((128 & KT) > 0 || (128 & MT) > 0) return void(WT -= 14);
+              if (TT < 15) return tT(oT, IT, iT, kT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT);
+              let rT = zT[WT++];
+              return (128 & rT) > 0 ? void(WT -= 15) : tT(oT, IT, iT, kT, XT, BT, FT, ST, DT, LT, xT, cT, KT, MT, rT)
             }
           }
         }
       }
     }
 
-    function xY() {
-      let YY, rY = AY[RY++];
-      if (rY < 192) YY = rY - 160;
-      else switch (rY) {
+    function bT() {
+      let TT, oT = zT[WT++];
+      if (oT < 192) TT = oT - 160;
+      else switch (oT) {
         case 217:
-          YY = AY[RY++];
+          TT = zT[WT++];
           break;
         case 218:
-          YY = sY.getUint16(RY), RY += 2;
+          TT = LT.getUint16(WT), WT += 2;
           break;
         case 219:
-          YY = sY.getUint32(RY), RY += 4;
+          TT = LT.getUint32(WT), WT += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return bY(YY)
+      return ZT(TT)
     }
 
-    function nY(YY) {
-      return QY.copyBuffers ? Uint8Array.prototype.slice.call(AY, RY, RY += YY) : AY.subarray(RY, RY += YY)
+    function yT(TT) {
+      return KT.copyBuffers ? Uint8Array.prototype.slice.call(zT, WT, WT += TT) : zT.subarray(WT, WT += TT)
     }
 
-    function PY(YY) {
-      let rY = AY[RY++];
-      if (EY[rY]) {
-        let DY;
-        return EY[rY](AY.subarray(RY, DY = RY += YY), (YY => {
-          RY = YY;
+    function NT(TT) {
+      let oT = zT[WT++];
+      if (AT[oT]) {
+        let IT;
+        return AT[oT](zT.subarray(WT, IT = WT += TT), (TT => {
+          WT = TT;
           try {
-            return zY()
+            return jT()
           } finally {
-            RY = DY
+            WT = IT
           }
         }))
       }
-      throw new Error("Unknown extension type " + rY)
+      throw new Error("Unknown extension type " + oT)
     }
-    var UY = new Array(4096);
+    var PT = new Array(4096);
 
-    function LY() {
-      let YY = AY[RY++];
-      if (!(YY >= 160 && YY < 192)) return RY--, tY(zY());
-      if (YY -= 160, WY >= RY) return aY.slice(RY - oY, (RY += YY) - oY);
-      if (!(0 == WY && IY < 180)) return hY(YY);
-      let rY, DY = 4095 & (YY << 5 ^ (YY > 1 ? sY.getUint16(RY) : YY > 0 ? AY[RY] : 0)),
-        FY = UY[DY],
-        OY = RY,
-        gY = RY + YY - 3,
-        vY = 0;
-      if (FY && FY.bytes == YY) {
-        for (; OY < gY;) {
-          if (rY = sY.getUint32(OY), rY != FY[vY++]) {
-            OY = 1879048192;
+    function dT() {
+      let TT = zT[WT++];
+      if (!(TT >= 160 && TT < 192)) return WT--, VT(jT());
+      if (TT -= 160, rT >= WT) return FT.slice(WT - MT, (WT += TT) - MT);
+      if (!(0 == rT && kT < 180)) return QT(TT);
+      let oT, IT = 4095 & (TT << 5 ^ (TT > 1 ? LT.getUint16(WT) : TT > 0 ? zT[WT] : 0)),
+        iT = PT[IT],
+        XT = WT,
+        BT = WT + TT - 3,
+        ST = 0;
+      if (iT && iT.bytes == TT) {
+        for (; XT < BT;) {
+          if (oT = LT.getUint32(XT), oT != iT[ST++]) {
+            XT = 1879048192;
             break
           }
-          OY += 4
+          XT += 4
         }
-        for (gY += 3; OY < gY;)
-          if (rY = AY[OY++], rY != FY[vY++]) {
-            OY = 1879048192;
+        for (BT += 3; XT < BT;)
+          if (oT = zT[XT++], oT != iT[ST++]) {
+            XT = 1879048192;
             break
-          } if (OY === gY) return RY = OY, FY.string;
-        gY -= 3, OY = RY
+          } if (XT === BT) return WT = XT, iT.string;
+        BT -= 3, XT = WT
       }
-      for (FY = [], UY[DY] = FY, FY.bytes = YY; OY < gY;) rY = sY.getUint32(OY), FY.push(rY), OY += 4;
-      for (gY += 3; OY < gY;) rY = AY[OY++], FY.push(rY);
-      let uY = YY < 16 ? GY(YY) : kY(YY);
-      return FY.string = null != uY ? uY : hY(YY)
+      for (iT = [], PT[IT] = iT, iT.bytes = TT; XT < BT;) oT = LT.getUint32(XT), iT.push(oT), XT += 4;
+      for (BT += 3; XT < BT;) oT = zT[XT++], iT.push(oT);
+      let DT = TT < 16 ? pT(TT) : GT(TT);
+      return iT.string = null != DT ? DT : QT(TT)
     }
 
-    function tY(YY) {
-      if ("string" === typeof YY) return YY;
-      if ("number" === typeof YY || "boolean" === typeof YY || "bigint" === typeof YY) return YY.toString();
-      if (null == YY) return YY + "";
-      if (QY.allowArraysInMapKeys && Array.isArray(YY) && YY.flat().every((YY => ["string", "number", "boolean", "bigint"].includes(typeof YY)))) return YY.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof YY)
+    function VT(TT) {
+      if ("string" === typeof TT) return TT;
+      if ("number" === typeof TT || "boolean" === typeof TT || "bigint" === typeof TT) return TT.toString();
+      if (null == TT) return TT + "";
+      if (KT.allowArraysInMapKeys && Array.isArray(TT) && TT.flat().every((TT => ["string", "number", "boolean", "bigint"].includes(typeof TT)))) return TT.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof TT)
     }
-    const Yr = (YY, rY) => {
-      let DY = zY().map(tY),
-        FY = YY;
-      void 0 !== rY && (YY = YY < 32 ? -((rY << 5) + YY) : (rY << 5) + YY, DY.highByte = rY);
-      let AY = gY[YY];
-      return AY && (AY.isShared || NY) && ((gY.restoreStructures || (gY.restoreStructures = []))[YY] = AY), gY[YY] = DY, DY.read = CY(DY, FY), DY.read()
+    const To = (TT, oT) => {
+      let IT = jT().map(VT),
+        iT = TT;
+      void 0 !== oT && (TT = TT < 32 ? -((oT << 5) + TT) : (oT << 5) + TT, IT.highByte = oT);
+      let zT = BT[TT];
+      return zT && (zT.isShared || uT) && ((BT.restoreStructures || (BT.restoreStructures = []))[TT] = zT), BT[TT] = IT, IT.read = UT(IT, iT), IT.read()
     };
-    EY[0] = () => {}, EY[0].noBuffer = !0, EY[66] = YY => {
-      let rY = YY.length,
-        DY = BigInt(128 & YY[0] ? YY[0] - 256 : YY[0]);
-      for (let FY = 1; FY < rY; FY++) DY <<= BigInt(8), DY += BigInt(YY[FY]);
-      return DY
+    AT[0] = () => {}, AT[0].noBuffer = !0, AT[66] = TT => {
+      let oT = TT.length,
+        IT = BigInt(128 & TT[0] ? TT[0] - 256 : TT[0]);
+      for (let iT = 1; iT < oT; iT++) IT <<= BigInt(8), IT += BigInt(TT[iT]);
+      return IT
     };
-    let rr = {
+    let oo = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    EY[101] = () => {
-      let YY = zY();
-      return (rr[YY[0]] || Error)(YY[1], {
-        cause: YY[2]
+    AT[101] = () => {
+      let TT = jT();
+      return (oo[TT[0]] || Error)(TT[1], {
+        cause: TT[2]
       })
-    }, EY[105] = YY => {
-      if (!1 === QY.structuredClone) throw new Error("Structured clone extension is disabled");
-      let rY = sY.getUint32(RY - 4);
-      uY || (uY = new Map);
-      let DY, FY = AY[RY];
-      DY = FY >= 144 && FY < 160 || 220 == FY || 221 == FY ? [] : {};
-      let IY = {
-        target: DY
+    }, AT[105] = TT => {
+      if (!1 === KT.structuredClone) throw new Error("Structured clone extension is disabled");
+      let oT = LT.getUint32(WT - 4);
+      DT || (DT = new Map);
+      let IT, iT = zT[WT];
+      IT = iT >= 144 && iT < 160 || 220 == iT || 221 == iT ? [] : {};
+      let kT = {
+        target: IT
       };
-      uY.set(rY, IY);
-      let OY = zY();
-      return IY.used ? Object.assign(DY, OY) : (IY.target = OY, OY)
-    }, EY[112] = YY => {
-      if (!1 === QY.structuredClone) throw new Error("Structured clone extension is disabled");
-      let rY = sY.getUint32(RY - 4),
-        DY = uY.get(rY);
-      return DY.used = !0, DY.target
-    }, EY[115] = () => new Set(zY());
-    const Dr = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((YY => YY + "Array"));
-    let Fr = "object" === typeof globalThis ? globalThis : window;
-    EY[116] = YY => {
-      let rY = YY[0],
-        DY = Dr[rY];
-      if (!DY) {
-        if (16 === rY) {
-          let rY = new ArrayBuffer(YY.length - 1);
-          return new Uint8Array(rY).set(YY.subarray(1)), rY
+      DT.set(oT, kT);
+      let XT = jT();
+      return kT.used ? Object.assign(IT, XT) : (kT.target = XT, XT)
+    }, AT[112] = TT => {
+      if (!1 === KT.structuredClone) throw new Error("Structured clone extension is disabled");
+      let oT = LT.getUint32(WT - 4),
+        IT = DT.get(oT);
+      return IT.used = !0, IT.target
+    }, AT[115] = () => new Set(jT());
+    const Io = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((TT => TT + "Array"));
+    let io = "object" === typeof globalThis ? globalThis : window;
+    AT[116] = TT => {
+      let oT = TT[0],
+        IT = Io[oT];
+      if (!IT) {
+        if (16 === oT) {
+          let oT = new ArrayBuffer(TT.length - 1);
+          return new Uint8Array(oT).set(TT.subarray(1)), oT
         }
-        throw new Error("Could not find typed array for code " + rY)
+        throw new Error("Could not find typed array for code " + oT)
       }
-      return new Fr[DY](Uint8Array.prototype.slice.call(YY, 1).buffer)
-    }, EY[120] = () => {
-      let YY = zY();
-      return new RegExp(YY[0], YY[1])
+      return new io[IT](Uint8Array.prototype.slice.call(TT, 1).buffer)
+    }, AT[120] = () => {
+      let TT = jT();
+      return new RegExp(TT[0], TT[1])
     };
-    const Ar = [];
+    const zo = [];
 
-    function Ir(YY) {
-      eY && eY();
-      let rY = IY,
-        DY = RY,
-        FY = yY,
-        OY = oY,
-        EY = WY,
-        mY = aY,
-        VY = iY,
-        SY = uY,
-        lY = vY,
-        TY = new Uint8Array(AY.slice(0, IY)),
-        BY = gY,
-        cY = gY.slice(0, gY.length),
-        KY = QY,
-        HY = NY,
-        zY = YY();
-      return IY = rY, RY = DY, yY = FY, oY = OY, WY = EY, aY = mY, iY = VY, uY = SY, vY = lY, AY = TY, NY = HY, (gY = BY).splice(0, gY.length, ...cY), QY = KY, sY = new DataView(AY.buffer, AY.byteOffset, AY.byteLength), zY
+    function ko(TT) {
+      RT && RT();
+      let oT = kT,
+        IT = WT,
+        iT = cT,
+        XT = MT,
+        AT = rT,
+        gT = FT,
+        hT = xT,
+        wT = DT,
+        mT = ST,
+        eT = new Uint8Array(zT.slice(0, kT)),
+        vT = BT,
+        ET = BT.slice(0, BT.length),
+        fT = KT,
+        CT = uT,
+        jT = TT();
+      return kT = oT, WT = IT, cT = iT, MT = XT, rT = AT, FT = gT, xT = hT, DT = wT, ST = mT, zT = eT, uT = CT, (BT = vT).splice(0, BT.length, ...ET), KT = fT, LT = new DataView(zT.buffer, zT.byteOffset, zT.byteLength), jT
     }
 
-    function Rr() {
-      AY = null, uY = null, gY = null
+    function Wo() {
+      zT = null, DT = null, BT = null
     }
-    EY[98] = YY => {
-      let rY = (YY[0] << 24) + (YY[1] << 16) + (YY[2] << 8) + YY[3],
-        DY = RY;
-      return RY += rY - YY.length, vY = Ar, (vY = [xY(), xY()]).position0 = 0, vY.position1 = 0, vY.postBundlePosition = RY, RY = DY, zY()
-    }, EY[255] = YY => 4 == YY.length ? new Date(1e3 * (16777216 * YY[0] + (YY[1] << 16) + (YY[2] << 8) + YY[3])) : 8 == YY.length ? new Date(((YY[0] << 22) + (YY[1] << 14) + (YY[2] << 6) + (YY[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & YY[3]) + 16777216 * YY[4] + (YY[5] << 16) + (YY[6] << 8) + YY[7])) : 12 == YY.length ? new Date(((YY[0] << 24) + (YY[1] << 16) + (YY[2] << 8) + YY[3]) / 1e6 + 1e3 * ((128 & YY[4] ? -281474976710656 : 0) + 1099511627776 * YY[6] + 4294967296 * YY[7] + 16777216 * YY[8] + (YY[9] << 16) + (YY[10] << 8) + YY[11])) : new Date("invalid");
-    const Or = new Array(147);
-    for (let AD = 0; AD < 256; AD++) Or[AD] = +("1e" + Math.floor(45.15 - .30103 * AD));
-    const gr = cY;
-    var ar = new cY({
+    AT[98] = TT => {
+      let oT = (TT[0] << 24) + (TT[1] << 16) + (TT[2] << 8) + TT[3],
+        IT = WT;
+      return WT += oT - TT.length, ST = zo, (ST = [bT(), bT()]).position0 = 0, ST.position1 = 0, ST.postBundlePosition = WT, WT = IT, jT()
+    }, AT[255] = TT => 4 == TT.length ? new Date(1e3 * (16777216 * TT[0] + (TT[1] << 16) + (TT[2] << 8) + TT[3])) : 8 == TT.length ? new Date(((TT[0] << 22) + (TT[1] << 14) + (TT[2] << 6) + (TT[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & TT[3]) + 16777216 * TT[4] + (TT[5] << 16) + (TT[6] << 8) + TT[7])) : 12 == TT.length ? new Date(((TT[0] << 24) + (TT[1] << 16) + (TT[2] << 8) + TT[3]) / 1e6 + 1e3 * ((128 & TT[4] ? -281474976710656 : 0) + 1099511627776 * TT[6] + 4294967296 * TT[7] + 16777216 * TT[8] + (TT[9] << 16) + (TT[10] << 8) + TT[11])) : new Date("invalid");
+    const Xo = new Array(147);
+    for (let WI = 0; WI < 256; WI++) Xo[WI] = +("1e" + Math.floor(45.15 - .30103 * WI));
+    const Bo = ET;
+    var Fo = new ET({
       useRecords: !1
     });
-    const vr = ar.unpack,
-      ur = ar.unpackMultiple,
-      sr = ar.unpack,
-      ir = {
+    const So = Fo.unpack,
+      Do = Fo.unpackMultiple,
+      Lo = Fo.unpack,
+      xo = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let yr, Qr, or, Wr = new Float32Array(1),
-      Er = new Uint8Array(Wr.buffer, 0, 4);
+    let co, Ko, Mo, ro = new Float32Array(1),
+      Ao = new Uint8Array(ro.buffer, 0, 4);
 
-    function mr(YY) {
-      Wr[0] = YY;
-      let rY = Or[(127 & Er[3]) << 1 | Er[2] >> 7];
-      return (rY * YY + (YY > 0 ? .5 : -.5) | 0) / rY
+    function go(TT) {
+      ro[0] = TT;
+      let oT = Xo[(127 & Ao[3]) << 1 | Ao[2] >> 7];
+      return (oT * TT + (TT > 0 ? .5 : -.5) | 0) / oT
     }
     try {
-      yr = new TextEncoder
-    } catch (FD) {}
-    const Vr = "undefined" !== typeof Buffer,
-      Sr = Vr ? function(YY) {
-        return Buffer.allocUnsafeSlow(YY)
+      co = new TextEncoder
+    } catch (kI) {}
+    const ho = "undefined" !== typeof Buffer,
+      wo = ho ? function(TT) {
+        return Buffer.allocUnsafeSlow(TT)
       } : Uint8Array,
-      lr = Vr ? Buffer : Uint8Array,
-      Tr = Vr ? 4294967296 : 2144337920;
-    let er, Nr, Br, cr, Kr, Hr = 0,
-      zr = null;
-    const Zr = /[\u0080-\uFFFF]/,
-      Cr = Symbol("record-id");
-    class fr extends cY {
-      constructor(YY) {
-        let rY, DY, FY, AY;
-        super(YY), this.offset = 0;
-        let IY = lr.prototype.utf8Write ? function(YY, rY) {
-            return er.utf8Write(YY, rY, er.byteLength - rY)
-          } : !(!yr || !yr.encodeInto) && function(YY, rY) {
-            return yr.encodeInto(YY, er.subarray(rY)).written
+      mo = ho ? Buffer : Uint8Array,
+      eo = ho ? 4294967296 : 2144337920;
+    let Ro, uo, vo, Eo, fo, Co = 0,
+      jo = null;
+    const Jo = /[\u0080-\uFFFF]/,
+      Uo = Symbol("record-id");
+    class ao extends ET {
+      constructor(TT) {
+        let oT, IT, iT, zT;
+        super(TT), this.offset = 0;
+        let kT = mo.prototype.utf8Write ? function(TT, oT) {
+            return Ro.utf8Write(TT, oT, Ro.byteLength - oT)
+          } : !(!co || !co.encodeInto) && function(TT, oT) {
+            return co.encodeInto(TT, Ro.subarray(oT)).written
           },
-          RY = this;
-        YY || (YY = {});
-        let OY = YY && YY.sequential,
-          gY = YY.structures || YY.saveStructures,
-          aY = YY.maxSharedStructures;
-        if (null == aY && (aY = gY ? 32 : 0), aY > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        YY.structuredClone && void 0 == YY.moreTypes && (this.moreTypes = !0);
-        let vY = YY.maxOwnStructures;
-        null == vY && (vY = gY ? 32 : 64), this.structures || 0 == YY.useRecords || (this.structures = []);
-        let uY = aY > 32 || vY + aY > 64,
-          sY = aY + 64,
-          iY = aY + vY + 64;
-        if (iY > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let yY = [],
-          QY = 0,
-          oY = 0;
-        this.pack = this.encode = function(YY, IY) {
-          if (er || (er = new Sr(8192), Br = er.dataView || (er.dataView = new DataView(er.buffer, 0, 8192)), Hr = 0), cr = er.length - 10, cr - Hr < 2048 ? (er = new Sr(er.length), Br = er.dataView || (er.dataView = new DataView(er.buffer, 0, er.length)), cr = er.length - 10, Hr = 0) : Hr = Hr + 7 & 2147483640, rY = Hr, IY & Lr && (Hr += 255 & IY), AY = RY.structuredClone ? new Map : null, RY.bundleStrings && "string" !== typeof YY ? (zr = [], zr.size = 1 / 0) : zr = null, FY = RY.structures, FY) {
-            FY.uninitialized && (FY = RY._mergeStructures(RY.getStructures()));
-            let YY = FY.sharedLength || 0;
-            if (YY > aY) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + FY.sharedLength);
-            if (!FY.transitions) {
-              FY.transitions = Object.create(null);
-              for (let rY = 0; rY < YY; rY++) {
-                let YY = FY[rY];
-                if (!YY) continue;
-                let DY, AY = FY.transitions;
-                for (let rY = 0, FY = YY.length; rY < FY; rY++) {
-                  let FY = YY[rY];
-                  DY = AY[FY], DY || (DY = AY[FY] = Object.create(null)), AY = DY
+          WT = this;
+        TT || (TT = {});
+        let XT = TT && TT.sequential,
+          BT = TT.structures || TT.saveStructures,
+          FT = TT.maxSharedStructures;
+        if (null == FT && (FT = BT ? 32 : 0), FT > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        TT.structuredClone && void 0 == TT.moreTypes && (this.moreTypes = !0);
+        let ST = TT.maxOwnStructures;
+        null == ST && (ST = BT ? 32 : 64), this.structures || 0 == TT.useRecords || (this.structures = []);
+        let DT = FT > 32 || ST + FT > 64,
+          LT = FT + 64,
+          xT = FT + ST + 64;
+        if (xT > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let cT = [],
+          KT = 0,
+          MT = 0;
+        this.pack = this.encode = function(TT, kT) {
+          if (Ro || (Ro = new wo(8192), vo = Ro.dataView || (Ro.dataView = new DataView(Ro.buffer, 0, 8192)), Co = 0), Eo = Ro.length - 10, Eo - Co < 2048 ? (Ro = new wo(Ro.length), vo = Ro.dataView || (Ro.dataView = new DataView(Ro.buffer, 0, Ro.length)), Eo = Ro.length - 10, Co = 0) : Co = Co + 7 & 2147483640, oT = Co, kT & TI && (Co += 255 & kT), zT = WT.structuredClone ? new Map : null, WT.bundleStrings && "string" !== typeof TT ? (jo = [], jo.size = 1 / 0) : jo = null, iT = WT.structures, iT) {
+            iT.uninitialized && (iT = WT._mergeStructures(WT.getStructures()));
+            let TT = iT.sharedLength || 0;
+            if (TT > FT) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + iT.sharedLength);
+            if (!iT.transitions) {
+              iT.transitions = Object.create(null);
+              for (let oT = 0; oT < TT; oT++) {
+                let TT = iT[oT];
+                if (!TT) continue;
+                let IT, zT = iT.transitions;
+                for (let oT = 0, iT = TT.length; oT < iT; oT++) {
+                  let iT = TT[oT];
+                  IT = zT[iT], IT || (IT = zT[iT] = Object.create(null)), zT = IT
                 }
-                AY[Cr] = rY + 64
+                zT[Uo] = oT + 64
               }
-              this.lastNamedStructuresLength = YY
+              this.lastNamedStructuresLength = TT
             }
-            OY || (FY.nextId = YY + 64)
+            XT || (iT.nextId = TT + 64)
           }
-          let gY;
-          DY && (DY = !1);
+          let BT;
+          IT && (IT = !1);
           try {
-            RY.randomAccessStructure && YY && YY.constructor && YY.constructor === Object ? cY(YY) : mY(YY);
-            let DY = zr;
-            if (zr && Jr(rY, mY, 0), AY && AY.idsToInsert) {
-              let YY = AY.idsToInsert.sort(((YY, rY) => YY.offset > rY.offset ? 1 : -1)),
-                FY = YY.length,
-                IY = -1;
-              for (; DY && FY > 0;) {
-                let AY = YY[--FY].offset + rY;
-                AY < DY.stringsPosition + rY && -1 === IY && (IY = 0), AY > DY.position + rY ? IY >= 0 && (IY += 6) : (IY >= 0 && (Br.setUint32(DY.position + rY, Br.getUint32(DY.position + rY) + IY), IY = -1), DY = DY.previous, FY++)
+            WT.randomAccessStructure && TT && TT.constructor && TT.constructor === Object ? ET(TT) : gT(TT);
+            let IT = jo;
+            if (jo && Ho(oT, gT, 0), zT && zT.idsToInsert) {
+              let TT = zT.idsToInsert.sort(((TT, oT) => TT.offset > oT.offset ? 1 : -1)),
+                iT = TT.length,
+                kT = -1;
+              for (; IT && iT > 0;) {
+                let zT = TT[--iT].offset + oT;
+                zT < IT.stringsPosition + oT && -1 === kT && (kT = 0), zT > IT.position + oT ? kT >= 0 && (kT += 6) : (kT >= 0 && (vo.setUint32(IT.position + oT, vo.getUint32(IT.position + oT) + kT), kT = -1), IT = IT.previous, iT++)
               }
-              IY >= 0 && DY && Br.setUint32(DY.position + rY, Br.getUint32(DY.position + rY) + IY), Hr += 6 * YY.length, Hr > cr && eY(Hr), RY.offset = Hr;
-              let OY = function(YY, rY) {
-                let DY, FY = 6 * rY.length,
-                  AY = YY.length - FY;
-                for (; DY = rY.pop();) {
-                  let rY = DY.offset,
-                    IY = DY.id;
-                  YY.copyWithin(rY + FY, rY, AY), FY -= 6;
-                  let RY = rY + FY;
-                  YY[RY++] = 214, YY[RY++] = 105, YY[RY++] = IY >> 24, YY[RY++] = IY >> 16 & 255, YY[RY++] = IY >> 8 & 255, YY[RY++] = 255 & IY, AY = rY
+              kT >= 0 && IT && vo.setUint32(IT.position + oT, vo.getUint32(IT.position + oT) + kT), Co += 6 * TT.length, Co > Eo && RT(Co), WT.offset = Co;
+              let XT = function(TT, oT) {
+                let IT, iT = 6 * oT.length,
+                  zT = TT.length - iT;
+                for (; IT = oT.pop();) {
+                  let oT = IT.offset,
+                    kT = IT.id;
+                  TT.copyWithin(oT + iT, oT, zT), iT -= 6;
+                  let WT = oT + iT;
+                  TT[WT++] = 214, TT[WT++] = 105, TT[WT++] = kT >> 24, TT[WT++] = kT >> 16 & 255, TT[WT++] = kT >> 8 & 255, TT[WT++] = 255 & kT, zT = oT
                 }
-                return YY
-              }(er.subarray(rY, Hr), YY);
-              return AY = null, OY
+                return TT
+              }(Ro.subarray(oT, Co), TT);
+              return zT = null, XT
             }
-            return RY.offset = Hr, IY & Pr ? (er.start = rY, er.end = Hr, er) : er.subarray(rY, Hr)
-          } catch (FD) {
-            throw gY = FD, FD
+            return WT.offset = Co, kT & Po ? (Ro.start = oT, Ro.end = Co, Ro) : Ro.subarray(oT, Co)
+          } catch (kI) {
+            throw BT = kI, kI
           } finally {
-            if (FY && (WY(), DY && RY.saveStructures)) {
-              let DY = FY.sharedLength || 0,
-                AY = er.subarray(rY, Hr),
-                OY = wr(FY, RY);
-              if (!gY) return !1 === RY.saveStructures(OY, OY.isCompatible) ? RY.pack(YY, IY) : (RY.lastNamedStructuresLength = DY, er.length > 1073741824 && (er = null), AY)
+            if (iT && (rT(), IT && WT.saveStructures)) {
+              let IT = iT.sharedLength || 0,
+                zT = Ro.subarray(oT, Co),
+                XT = qo(iT, WT);
+              if (!BT) return !1 === WT.saveStructures(XT, XT.isCompatible) ? WT.pack(TT, kT) : (WT.lastNamedStructuresLength = IT, Ro.length > 1073741824 && (Ro = null), zT)
             }
-            er.length > 1073741824 && (er = null), IY & Ur && (Hr = rY)
+            Ro.length > 1073741824 && (Ro = null), kT & Vo && (Co = oT)
           }
         };
-        const WY = () => {
-            oY < 10 && oY++;
-            let YY = FY.sharedLength || 0;
-            if (FY.length > YY && !OY && (FY.length = YY), QY > 1e4) FY.transitions = null, oY = 0, QY = 0, yY.length > 0 && (yY = []);
-            else if (yY.length > 0 && !OY) {
-              for (let YY = 0, rY = yY.length; YY < rY; YY++) yY[YY][Cr] = 0;
-              yY = []
+        const rT = () => {
+            MT < 10 && MT++;
+            let TT = iT.sharedLength || 0;
+            if (iT.length > TT && !XT && (iT.length = TT), KT > 1e4) iT.transitions = null, MT = 0, KT = 0, cT.length > 0 && (cT = []);
+            else if (cT.length > 0 && !XT) {
+              for (let TT = 0, oT = cT.length; TT < oT; TT++) cT[TT][Uo] = 0;
+              cT = []
             }
           },
-          EY = YY => {
-            var rY = YY.length;
-            rY < 16 ? er[Hr++] = 144 | rY : rY < 65536 ? (er[Hr++] = 220, er[Hr++] = rY >> 8, er[Hr++] = 255 & rY) : (er[Hr++] = 221, Br.setUint32(Hr, rY), Hr += 4);
-            for (let DY = 0; DY < rY; DY++) mY(YY[DY])
+          AT = TT => {
+            var oT = TT.length;
+            oT < 16 ? Ro[Co++] = 144 | oT : oT < 65536 ? (Ro[Co++] = 220, Ro[Co++] = oT >> 8, Ro[Co++] = 255 & oT) : (Ro[Co++] = 221, vo.setUint32(Co, oT), Co += 4);
+            for (let IT = 0; IT < oT; IT++) gT(TT[IT])
           },
-          mY = YY => {
-            Hr > cr && (er = eY(Hr));
-            var DY, FY = typeof YY;
-            if ("string" === FY) {
-              let FY, AY = YY.length;
-              if (zr && AY >= 4 && AY < 4096) {
-                if ((zr.size += AY) > 21760) {
-                  let YY, DY, FY = (zr[0] ? 3 * zr[0].length + zr[1].length : 0) + 10;
-                  Hr + FY > cr && (er = eY(Hr + FY)), zr.position ? (DY = zr, er[Hr] = 200, Hr += 3, er[Hr++] = 98, YY = Hr - rY, Hr += 4, Jr(rY, mY, 0), Br.setUint16(YY + rY - 3, Hr - rY - YY)) : (er[Hr++] = 214, er[Hr++] = 98, YY = Hr - rY, Hr += 4), zr = ["", ""], zr.previous = DY, zr.size = 0, zr.position = YY
+          gT = TT => {
+            Co > Eo && (Ro = RT(Co));
+            var IT, iT = typeof TT;
+            if ("string" === iT) {
+              let iT, zT = TT.length;
+              if (jo && zT >= 4 && zT < 4096) {
+                if ((jo.size += zT) > 21760) {
+                  let TT, IT, iT = (jo[0] ? 3 * jo[0].length + jo[1].length : 0) + 10;
+                  Co + iT > Eo && (Ro = RT(Co + iT)), jo.position ? (IT = jo, Ro[Co] = 200, Co += 3, Ro[Co++] = 98, TT = Co - oT, Co += 4, Ho(oT, gT, 0), vo.setUint16(TT + oT - 3, Co - oT - TT)) : (Ro[Co++] = 214, Ro[Co++] = 98, TT = Co - oT, Co += 4), jo = ["", ""], jo.previous = IT, jo.size = 0, jo.position = TT
                 }
-                let DY = Zr.test(YY);
-                return zr[DY ? 0 : 1] += YY, er[Hr++] = 193, void mY(DY ? -AY : AY)
+                let IT = Jo.test(TT);
+                return jo[IT ? 0 : 1] += TT, Ro[Co++] = 193, void gT(IT ? -zT : zT)
               }
-              FY = AY < 32 ? 1 : AY < 256 ? 2 : AY < 65536 ? 3 : 5;
-              let RY = 3 * AY;
-              if (Hr + RY > cr && (er = eY(Hr + RY)), AY < 64 || !IY) {
-                let rY, IY, RY, OY = Hr + FY;
-                for (rY = 0; rY < AY; rY++) IY = YY.charCodeAt(rY), IY < 128 ? er[OY++] = IY : IY < 2048 ? (er[OY++] = IY >> 6 | 192, er[OY++] = 63 & IY | 128) : 55296 === (64512 & IY) && 56320 === (64512 & (RY = YY.charCodeAt(rY + 1))) ? (IY = 65536 + ((1023 & IY) << 10) + (1023 & RY), rY++, er[OY++] = IY >> 18 | 240, er[OY++] = IY >> 12 & 63 | 128, er[OY++] = IY >> 6 & 63 | 128, er[OY++] = 63 & IY | 128) : (er[OY++] = IY >> 12 | 224, er[OY++] = IY >> 6 & 63 | 128, er[OY++] = 63 & IY | 128);
-                DY = OY - Hr - FY
-              } else DY = IY(YY, Hr + FY);
-              DY < 32 ? er[Hr++] = 160 | DY : DY < 256 ? (FY < 2 && er.copyWithin(Hr + 2, Hr + 1, Hr + 1 + DY), er[Hr++] = 217, er[Hr++] = DY) : DY < 65536 ? (FY < 3 && er.copyWithin(Hr + 3, Hr + 2, Hr + 2 + DY), er[Hr++] = 218, er[Hr++] = DY >> 8, er[Hr++] = 255 & DY) : (FY < 5 && er.copyWithin(Hr + 5, Hr + 3, Hr + 3 + DY), er[Hr++] = 219, Br.setUint32(Hr, DY), Hr += 4), Hr += DY
-            } else if ("number" === FY)
-              if (YY >>> 0 === YY) YY < 32 || YY < 128 && !1 === this.useRecords || YY < 64 && !this.randomAccessStructure ? er[Hr++] = YY : YY < 256 ? (er[Hr++] = 204, er[Hr++] = YY) : YY < 65536 ? (er[Hr++] = 205, er[Hr++] = YY >> 8, er[Hr++] = 255 & YY) : (er[Hr++] = 206, Br.setUint32(Hr, YY), Hr += 4);
-              else if ((YY | 0) === YY) YY >= -32 ? er[Hr++] = 256 + YY : YY >= -128 ? (er[Hr++] = 208, er[Hr++] = YY + 256) : YY >= -32768 ? (er[Hr++] = 209, Br.setInt16(Hr, YY), Hr += 2) : (er[Hr++] = 210, Br.setInt32(Hr, YY), Hr += 4);
+              iT = zT < 32 ? 1 : zT < 256 ? 2 : zT < 65536 ? 3 : 5;
+              let WT = 3 * zT;
+              if (Co + WT > Eo && (Ro = RT(Co + WT)), zT < 64 || !kT) {
+                let oT, kT, WT, XT = Co + iT;
+                for (oT = 0; oT < zT; oT++) kT = TT.charCodeAt(oT), kT < 128 ? Ro[XT++] = kT : kT < 2048 ? (Ro[XT++] = kT >> 6 | 192, Ro[XT++] = 63 & kT | 128) : 55296 === (64512 & kT) && 56320 === (64512 & (WT = TT.charCodeAt(oT + 1))) ? (kT = 65536 + ((1023 & kT) << 10) + (1023 & WT), oT++, Ro[XT++] = kT >> 18 | 240, Ro[XT++] = kT >> 12 & 63 | 128, Ro[XT++] = kT >> 6 & 63 | 128, Ro[XT++] = 63 & kT | 128) : (Ro[XT++] = kT >> 12 | 224, Ro[XT++] = kT >> 6 & 63 | 128, Ro[XT++] = 63 & kT | 128);
+                IT = XT - Co - iT
+              } else IT = kT(TT, Co + iT);
+              IT < 32 ? Ro[Co++] = 160 | IT : IT < 256 ? (iT < 2 && Ro.copyWithin(Co + 2, Co + 1, Co + 1 + IT), Ro[Co++] = 217, Ro[Co++] = IT) : IT < 65536 ? (iT < 3 && Ro.copyWithin(Co + 3, Co + 2, Co + 2 + IT), Ro[Co++] = 218, Ro[Co++] = IT >> 8, Ro[Co++] = 255 & IT) : (iT < 5 && Ro.copyWithin(Co + 5, Co + 3, Co + 3 + IT), Ro[Co++] = 219, vo.setUint32(Co, IT), Co += 4), Co += IT
+            } else if ("number" === iT)
+              if (TT >>> 0 === TT) TT < 32 || TT < 128 && !1 === this.useRecords || TT < 64 && !this.randomAccessStructure ? Ro[Co++] = TT : TT < 256 ? (Ro[Co++] = 204, Ro[Co++] = TT) : TT < 65536 ? (Ro[Co++] = 205, Ro[Co++] = TT >> 8, Ro[Co++] = 255 & TT) : (Ro[Co++] = 206, vo.setUint32(Co, TT), Co += 4);
+              else if ((TT | 0) === TT) TT >= -32 ? Ro[Co++] = 256 + TT : TT >= -128 ? (Ro[Co++] = 208, Ro[Co++] = TT + 256) : TT >= -32768 ? (Ro[Co++] = 209, vo.setInt16(Co, TT), Co += 2) : (Ro[Co++] = 210, vo.setInt32(Co, TT), Co += 4);
             else {
-              let rY;
-              if ((rY = this.useFloat32) > 0 && YY < 4294967296 && YY >= -2147483648) {
-                let DY;
-                if (er[Hr++] = 202, Br.setFloat32(Hr, YY), rY < 4 || ((DY = YY * Or[(127 & er[Hr]) << 1 | er[Hr + 1] >> 7]) | 0) === DY) return void(Hr += 4);
-                Hr--
+              let oT;
+              if ((oT = this.useFloat32) > 0 && TT < 4294967296 && TT >= -2147483648) {
+                let IT;
+                if (Ro[Co++] = 202, vo.setFloat32(Co, TT), oT < 4 || ((IT = TT * Xo[(127 & Ro[Co]) << 1 | Ro[Co + 1] >> 7]) | 0) === IT) return void(Co += 4);
+                Co--
               }
-              er[Hr++] = 203, Br.setFloat64(Hr, YY), Hr += 8
-            } else if ("object" === FY || "function" === FY)
-              if (YY) {
-                if (AY) {
-                  let DY = AY.get(YY);
-                  if (DY) {
-                    if (!DY.id) {
-                      let YY = AY.idsToInsert || (AY.idsToInsert = []);
-                      DY.id = YY.push(DY)
+              Ro[Co++] = 203, vo.setFloat64(Co, TT), Co += 8
+            } else if ("object" === iT || "function" === iT)
+              if (TT) {
+                if (zT) {
+                  let IT = zT.get(TT);
+                  if (IT) {
+                    if (!IT.id) {
+                      let TT = zT.idsToInsert || (zT.idsToInsert = []);
+                      IT.id = TT.push(IT)
                     }
-                    return er[Hr++] = 214, er[Hr++] = 112, Br.setUint32(Hr, DY.id), void(Hr += 4)
+                    return Ro[Co++] = 214, Ro[Co++] = 112, vo.setUint32(Co, IT.id), void(Co += 4)
                   }
-                  AY.set(YY, {
-                    offset: Hr - rY
+                  zT.set(TT, {
+                    offset: Co - oT
                   })
                 }
-                let IY = YY.constructor;
-                if (IY === Object) TY(YY);
-                else if (IY === Array) EY(YY);
-                else if (IY === Map)
-                  if (this.mapAsEmptyObject) er[Hr++] = 128;
+                let kT = TT.constructor;
+                if (kT === Object) eT(TT);
+                else if (kT === Array) AT(TT);
+                else if (kT === Map)
+                  if (this.mapAsEmptyObject) Ro[Co++] = 128;
                   else {
-                    (DY = YY.size) < 16 ? er[Hr++] = 128 | DY : DY < 65536 ? (er[Hr++] = 222, er[Hr++] = DY >> 8, er[Hr++] = 255 & DY) : (er[Hr++] = 223, Br.setUint32(Hr, DY), Hr += 4);
-                    for (let [rY, DY] of YY) mY(rY), mY(DY)
+                    (IT = TT.size) < 16 ? Ro[Co++] = 128 | IT : IT < 65536 ? (Ro[Co++] = 222, Ro[Co++] = IT >> 8, Ro[Co++] = 255 & IT) : (Ro[Co++] = 223, vo.setUint32(Co, IT), Co += 4);
+                    for (let [oT, IT] of TT) gT(oT), gT(IT)
                   }
                 else {
-                  for (let rY = 0, DY = Qr.length; rY < DY; rY++) {
-                    if (YY instanceof or[rY]) {
-                      let DY = Qr[rY];
-                      if (DY.write) {
-                        DY.type && (er[Hr++] = 212, er[Hr++] = DY.type, er[Hr++] = 0);
-                        let rY = DY.write.call(this, YY);
-                        return void(rY === YY ? Array.isArray(YY) ? EY(YY) : TY(YY) : mY(rY))
+                  for (let oT = 0, IT = Ko.length; oT < IT; oT++) {
+                    if (TT instanceof Mo[oT]) {
+                      let IT = Ko[oT];
+                      if (IT.write) {
+                        IT.type && (Ro[Co++] = 212, Ro[Co++] = IT.type, Ro[Co++] = 0);
+                        let oT = IT.write.call(this, TT);
+                        return void(oT === TT ? Array.isArray(TT) ? AT(TT) : eT(TT) : gT(oT))
                       }
-                      let FY, AY = er,
-                        IY = Br,
-                        RY = Hr;
-                      er = null;
+                      let iT, zT = Ro,
+                        kT = vo,
+                        WT = Co;
+                      Ro = null;
                       try {
-                        FY = DY.pack.call(this, YY, (YY => (er = AY, AY = null, Hr += YY, Hr > cr && eY(Hr), {
-                          target: er,
-                          targetView: Br,
-                          position: Hr - YY
-                        })), mY)
+                        iT = IT.pack.call(this, TT, (TT => (Ro = zT, zT = null, Co += TT, Co > Eo && RT(Co), {
+                          target: Ro,
+                          targetView: vo,
+                          position: Co - TT
+                        })), gT)
                       } finally {
-                        AY && (er = AY, Br = IY, Hr = RY, cr = er.length - 10)
+                        zT && (Ro = zT, vo = kT, Co = WT, Eo = Ro.length - 10)
                       }
-                      return void(FY && (FY.length + Hr > cr && eY(FY.length + Hr), Hr = dr(FY, er, Hr, DY.type)))
+                      return void(iT && (iT.length + Co > Eo && RT(iT.length + Co), Co = Oo(iT, Ro, Co, IT.type)))
                     }
                   }
-                  if (Array.isArray(YY)) EY(YY);
+                  if (Array.isArray(TT)) AT(TT);
                   else {
-                    if (YY.toJSON) {
-                      const rY = YY.toJSON();
-                      if (rY !== YY) return mY(rY)
+                    if (TT.toJSON) {
+                      const oT = TT.toJSON();
+                      if (oT !== TT) return gT(oT)
                     }
-                    if ("function" === FY) return mY(this.writeFunction && this.writeFunction(YY));
-                    TY(YY)
+                    if ("function" === iT) return gT(this.writeFunction && this.writeFunction(TT));
+                    eT(TT)
                   }
                 }
-              } else er[Hr++] = 192;
-            else if ("boolean" === FY) er[Hr++] = YY ? 195 : 194;
-            else if ("bigint" === FY) {
-              if (YY < BigInt(1) << BigInt(63) && YY >= -(BigInt(1) << BigInt(63))) er[Hr++] = 211, Br.setBigInt64(Hr, YY);
-              else if (YY < BigInt(1) << BigInt(64) && YY > 0) er[Hr++] = 207, Br.setBigUint64(Hr, YY);
+              } else Ro[Co++] = 192;
+            else if ("boolean" === iT) Ro[Co++] = TT ? 195 : 194;
+            else if ("bigint" === iT) {
+              if (TT < BigInt(1) << BigInt(63) && TT >= -(BigInt(1) << BigInt(63))) Ro[Co++] = 211, vo.setBigInt64(Co, TT);
+              else if (TT < BigInt(1) << BigInt(64) && TT > 0) Ro[Co++] = 207, vo.setBigUint64(Co, TT);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return mY(YY.toString());
-                  if (this.useBigIntExtension && YY < BigInt(2) ** BigInt(1023) && YY > -(BigInt(2) ** BigInt(1023))) {
-                    er[Hr++] = 199, Hr++, er[Hr++] = 66;
-                    let rY, DY = [];
+                  if (this.largeBigIntToString) return gT(TT.toString());
+                  if (this.useBigIntExtension && TT < BigInt(2) ** BigInt(1023) && TT > -(BigInt(2) ** BigInt(1023))) {
+                    Ro[Co++] = 199, Co++, Ro[Co++] = 66;
+                    let oT, IT = [];
                     do {
-                      let FY = YY & BigInt(255);
-                      rY = (FY & BigInt(128)) === (YY < BigInt(0) ? BigInt(128) : BigInt(0)), DY.push(FY), YY >>= BigInt(8)
-                    } while (YY !== BigInt(0) && YY !== BigInt(-1) || !rY);
-                    er[Hr - 2] = DY.length;
-                    for (let YY = DY.length; YY > 0;) er[Hr++] = Number(DY[--YY]);
+                      let iT = TT & BigInt(255);
+                      oT = (iT & BigInt(128)) === (TT < BigInt(0) ? BigInt(128) : BigInt(0)), IT.push(iT), TT >>= BigInt(8)
+                    } while (TT !== BigInt(0) && TT !== BigInt(-1) || !oT);
+                    Ro[Co - 2] = IT.length;
+                    for (let TT = IT.length; TT > 0;) Ro[Co++] = Number(IT[--TT]);
                     return
                   }
-                  throw new RangeError(YY + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(TT + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                er[Hr++] = 203, Br.setFloat64(Hr, Number(YY))
+                Ro[Co++] = 203, vo.setFloat64(Co, Number(TT))
               }
-              Hr += 8
+              Co += 8
             } else {
-              if ("undefined" !== FY) throw new Error("Unknown type: " + FY);
-              this.encodeUndefinedAsNil ? er[Hr++] = 192 : (er[Hr++] = 212, er[Hr++] = 0, er[Hr++] = 0)
+              if ("undefined" !== iT) throw new Error("Unknown type: " + iT);
+              this.encodeUndefinedAsNil ? Ro[Co++] = 192 : (Ro[Co++] = 212, Ro[Co++] = 0, Ro[Co++] = 0)
             }
           },
-          VY = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? YY => {
-            let rY;
+          hT = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? TT => {
+            let oT;
             if (this.skipValues) {
-              rY = [];
-              for (let DY in YY) "function" === typeof YY.hasOwnProperty && !YY.hasOwnProperty(DY) || this.skipValues.includes(YY[DY]) || rY.push(DY)
-            } else rY = Object.keys(YY);
-            let DY, FY = rY.length;
-            if (FY < 16 ? er[Hr++] = 128 | FY : FY < 65536 ? (er[Hr++] = 222, er[Hr++] = FY >> 8, er[Hr++] = 255 & FY) : (er[Hr++] = 223, Br.setUint32(Hr, FY), Hr += 4), this.coercibleKeyAsNumber)
-              for (let AY = 0; AY < FY; AY++) {
-                DY = rY[AY];
-                let FY = Number(DY);
-                mY(isNaN(FY) ? DY : FY), mY(YY[DY])
+              oT = [];
+              for (let IT in TT) "function" === typeof TT.hasOwnProperty && !TT.hasOwnProperty(IT) || this.skipValues.includes(TT[IT]) || oT.push(IT)
+            } else oT = Object.keys(TT);
+            let IT, iT = oT.length;
+            if (iT < 16 ? Ro[Co++] = 128 | iT : iT < 65536 ? (Ro[Co++] = 222, Ro[Co++] = iT >> 8, Ro[Co++] = 255 & iT) : (Ro[Co++] = 223, vo.setUint32(Co, iT), Co += 4), this.coercibleKeyAsNumber)
+              for (let zT = 0; zT < iT; zT++) {
+                IT = oT[zT];
+                let iT = Number(IT);
+                gT(isNaN(iT) ? IT : iT), gT(TT[IT])
               } else
-                for (let AY = 0; AY < FY; AY++) mY(DY = rY[AY]), mY(YY[DY])
-          } : YY => {
-            er[Hr++] = 222;
-            let DY = Hr - rY;
-            Hr += 2;
-            let FY = 0;
-            for (let rY in YY)("function" !== typeof YY.hasOwnProperty || YY.hasOwnProperty(rY)) && (mY(rY), mY(YY[rY]), FY++);
-            if (FY > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            er[DY++ + rY] = FY >> 8, er[DY + rY] = 255 & FY
+                for (let zT = 0; zT < iT; zT++) gT(IT = oT[zT]), gT(TT[IT])
+          } : TT => {
+            Ro[Co++] = 222;
+            let IT = Co - oT;
+            Co += 2;
+            let iT = 0;
+            for (let oT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(oT)) && (gT(oT), gT(TT[oT]), iT++);
+            if (iT > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            Ro[IT++ + oT] = iT >> 8, Ro[IT + oT] = 255 & iT
           },
-          SY = !1 === this.useRecords ? VY : YY.progressiveRecords && !uY ? YY => {
-            let DY, AY, IY = FY.transitions || (FY.transitions = Object.create(null)),
-              RY = Hr++ - rY;
-            for (let OY in YY)
-              if ("function" !== typeof YY.hasOwnProperty || YY.hasOwnProperty(OY)) {
-                if (DY = IY[OY], DY) IY = DY;
+          wT = !1 === this.useRecords ? hT : TT.progressiveRecords && !DT ? TT => {
+            let IT, zT, kT = iT.transitions || (iT.transitions = Object.create(null)),
+              WT = Co++ - oT;
+            for (let XT in TT)
+              if ("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(XT)) {
+                if (IT = kT[XT], IT) kT = IT;
                 else {
-                  let gY = Object.keys(YY),
-                    aY = IY;
-                  IY = FY.transitions;
-                  let vY = 0;
-                  for (let YY = 0, rY = gY.length; YY < rY; YY++) {
-                    let rY = gY[YY];
-                    DY = IY[rY], DY || (DY = IY[rY] = Object.create(null), vY++), IY = DY
+                  let BT = Object.keys(TT),
+                    FT = kT;
+                  kT = iT.transitions;
+                  let ST = 0;
+                  for (let TT = 0, oT = BT.length; TT < oT; TT++) {
+                    let oT = BT[TT];
+                    IT = kT[oT], IT || (IT = kT[oT] = Object.create(null), ST++), kT = IT
                   }
-                  RY + rY + 1 == Hr ? (Hr--, NY(IY, gY, vY)) : BY(IY, gY, RY, vY), AY = !0, IY = aY[OY]
+                  WT + oT + 1 == Co ? (Co--, uT(kT, BT, ST)) : vT(kT, BT, WT, ST), zT = !0, kT = FT[XT]
                 }
-                mY(YY[OY])
-              } if (!AY) {
-              let DY = IY[Cr];
-              DY ? er[RY + rY] = DY : BY(IY, Object.keys(YY), RY, 0)
+                gT(TT[XT])
+              } if (!zT) {
+              let IT = kT[Uo];
+              IT ? Ro[WT + oT] = IT : vT(kT, Object.keys(TT), WT, 0)
             }
-          } : YY => {
-            let rY, DY = FY.transitions || (FY.transitions = Object.create(null)),
-              AY = 0;
-            for (let FY in YY)("function" !== typeof YY.hasOwnProperty || YY.hasOwnProperty(FY)) && (rY = DY[FY], rY || (rY = DY[FY] = Object.create(null), AY++), DY = rY);
-            let IY = DY[Cr];
-            IY ? IY >= 96 && uY ? (er[Hr++] = 96 + (31 & (IY -= 96)), er[Hr++] = IY >> 5) : er[Hr++] = IY : NY(DY, DY.__keys__ || Object.keys(YY), AY);
-            for (let FY in YY)("function" !== typeof YY.hasOwnProperty || YY.hasOwnProperty(FY)) && mY(YY[FY])
+          } : TT => {
+            let oT, IT = iT.transitions || (iT.transitions = Object.create(null)),
+              zT = 0;
+            for (let iT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(iT)) && (oT = IT[iT], oT || (oT = IT[iT] = Object.create(null), zT++), IT = oT);
+            let kT = IT[Uo];
+            kT ? kT >= 96 && DT ? (Ro[Co++] = 96 + (31 & (kT -= 96)), Ro[Co++] = kT >> 5) : Ro[Co++] = kT : uT(IT, IT.__keys__ || Object.keys(TT), zT);
+            for (let iT in TT)("function" !== typeof TT.hasOwnProperty || TT.hasOwnProperty(iT)) && gT(TT[iT])
           },
-          lY = "function" == typeof this.useRecords && this.useRecords,
-          TY = lY ? YY => {
-            lY(YY) ? SY(YY) : VY(YY)
-          } : SY,
-          eY = YY => {
-            let DY;
-            if (YY > 16777216) {
-              if (YY - rY > Tr) throw new Error("Packed buffer would be larger than maximum buffer size");
-              DY = Math.min(Tr, 4096 * Math.round(Math.max((YY - rY) * (YY > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else DY = 1 + (Math.max(YY - rY << 2, er.length - 1) >> 12) << 12;
-            let FY = new Sr(DY);
-            return Br = FY.dataView || (FY.dataView = new DataView(FY.buffer, 0, DY)), YY = Math.min(YY, er.length), er.copy ? er.copy(FY, 0, rY, YY) : FY.set(er.slice(rY, YY)), Hr -= rY, rY = 0, cr = FY.length - 10, er = FY
+          mT = "function" == typeof this.useRecords && this.useRecords,
+          eT = mT ? TT => {
+            mT(TT) ? wT(TT) : hT(TT)
+          } : wT,
+          RT = TT => {
+            let IT;
+            if (TT > 16777216) {
+              if (TT - oT > eo) throw new Error("Packed buffer would be larger than maximum buffer size");
+              IT = Math.min(eo, 4096 * Math.round(Math.max((TT - oT) * (TT > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else IT = 1 + (Math.max(TT - oT << 2, Ro.length - 1) >> 12) << 12;
+            let iT = new wo(IT);
+            return vo = iT.dataView || (iT.dataView = new DataView(iT.buffer, 0, IT)), TT = Math.min(TT, Ro.length), Ro.copy ? Ro.copy(iT, 0, oT, TT) : iT.set(Ro.slice(oT, TT)), Co -= oT, oT = 0, Eo = iT.length - 10, Ro = iT
           },
-          NY = (YY, rY, AY) => {
-            let IY = FY.nextId;
-            IY || (IY = 64), IY < sY && this.shouldShareStructure && !this.shouldShareStructure(rY) ? (IY = FY.nextOwnId, IY < iY || (IY = sY), FY.nextOwnId = IY + 1) : (IY >= iY && (IY = sY), FY.nextId = IY + 1);
-            let RY = rY.highByte = IY >= 96 && uY ? IY - 96 >> 5 : -1;
-            YY[Cr] = IY, YY.__keys__ = rY, FY[IY - 64] = rY, IY < sY ? (rY.isShared = !0, FY.sharedLength = IY - 63, DY = !0, RY >= 0 ? (er[Hr++] = 96 + (31 & IY), er[Hr++] = RY) : er[Hr++] = IY) : (RY >= 0 ? (er[Hr++] = 213, er[Hr++] = 114, er[Hr++] = 96 + (31 & IY), er[Hr++] = RY) : (er[Hr++] = 212, er[Hr++] = 114, er[Hr++] = IY), AY && (QY += oY * AY), yY.length >= vY && (yY.shift()[Cr] = 0), yY.push(YY), mY(rY))
+          uT = (TT, oT, zT) => {
+            let kT = iT.nextId;
+            kT || (kT = 64), kT < LT && this.shouldShareStructure && !this.shouldShareStructure(oT) ? (kT = iT.nextOwnId, kT < xT || (kT = LT), iT.nextOwnId = kT + 1) : (kT >= xT && (kT = LT), iT.nextId = kT + 1);
+            let WT = oT.highByte = kT >= 96 && DT ? kT - 96 >> 5 : -1;
+            TT[Uo] = kT, TT.__keys__ = oT, iT[kT - 64] = oT, kT < LT ? (oT.isShared = !0, iT.sharedLength = kT - 63, IT = !0, WT >= 0 ? (Ro[Co++] = 96 + (31 & kT), Ro[Co++] = WT) : Ro[Co++] = kT) : (WT >= 0 ? (Ro[Co++] = 213, Ro[Co++] = 114, Ro[Co++] = 96 + (31 & kT), Ro[Co++] = WT) : (Ro[Co++] = 212, Ro[Co++] = 114, Ro[Co++] = kT), zT && (KT += MT * zT), cT.length >= ST && (cT.shift()[Uo] = 0), cT.push(TT), gT(oT))
           },
-          BY = (YY, DY, FY, AY) => {
-            let IY = er,
-              RY = Hr,
-              OY = cr,
-              gY = rY;
-            er = Nr, Hr = 0, rY = 0, er || (Nr = er = new Sr(8192)), cr = er.length - 10, NY(YY, DY, AY), Nr = er;
-            let aY = Hr;
-            if (er = IY, Hr = RY, cr = OY, rY = gY, aY > 1) {
-              let YY = Hr + aY - 1;
-              YY > cr && eY(YY);
-              let DY = FY + rY;
-              er.copyWithin(DY + aY, DY + 1, Hr), er.set(Nr.slice(0, aY), DY), Hr = YY
-            } else er[FY + rY] = Nr[0]
+          vT = (TT, IT, iT, zT) => {
+            let kT = Ro,
+              WT = Co,
+              XT = Eo,
+              BT = oT;
+            Ro = uo, Co = 0, oT = 0, Ro || (uo = Ro = new wo(8192)), Eo = Ro.length - 10, uT(TT, IT, zT), uo = Ro;
+            let FT = Co;
+            if (Ro = kT, Co = WT, Eo = XT, oT = BT, FT > 1) {
+              let TT = Co + FT - 1;
+              TT > Eo && RT(TT);
+              let IT = iT + oT;
+              Ro.copyWithin(IT + FT, IT + 1, Co), Ro.set(uo.slice(0, FT), IT), Co = TT
+            } else Ro[iT + oT] = uo[0]
           },
-          cY = YY => {
-            let AY = Kr(YY, er, rY, Hr, FY, eY, ((YY, rY, FY) => {
-              if (FY) return DY = !0;
-              Hr = rY;
-              let AY = er;
-              return mY(YY), WY(), AY !== er ? {
-                position: Hr,
-                targetView: Br,
-                target: er
-              } : Hr
+          ET = TT => {
+            let zT = fo(TT, Ro, oT, Co, iT, RT, ((TT, oT, iT) => {
+              if (iT) return IT = !0;
+              Co = oT;
+              let zT = Ro;
+              return gT(TT), rT(), zT !== Ro ? {
+                position: Co,
+                targetView: vo,
+                target: Ro
+              } : Co
             }), this);
-            if (0 === AY) return TY(YY);
-            Hr = AY
+            if (0 === zT) return eT(TT);
+            Co = zT
           }
       }
-      useBuffer(YY) {
-        er = YY, Br = er.dataView || (er.dataView = new DataView(er.buffer, er.byteOffset, er.byteLength)), Hr = 0
+      useBuffer(TT) {
+        Ro = TT, vo = Ro.dataView || (Ro.dataView = new DataView(Ro.buffer, Ro.byteOffset, Ro.byteLength)), Co = 0
       }
-      set position(YY) {
-        Hr = YY
+      set position(TT) {
+        Co = TT
       }
       get position() {
-        return Hr
+        return Co
       }
-      set buffer(YY) {
-        er = YY
+      set buffer(TT) {
+        Ro = TT
       }
       get buffer() {
-        return er
+        return Ro
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function jr(YY, rY, DY, FY) {
-      let AY = YY.byteLength;
-      if (AY + 1 < 256) {
+    function Yo(TT, oT, IT, iT) {
+      let zT = TT.byteLength;
+      if (zT + 1 < 256) {
         var {
-          target: IY,
-          position: RY
-        } = DY(4 + AY);
-        IY[RY++] = 199, IY[RY++] = AY + 1
-      } else if (AY + 1 < 65536) {
+          target: kT,
+          position: WT
+        } = IT(4 + zT);
+        kT[WT++] = 199, kT[WT++] = zT + 1
+      } else if (zT + 1 < 65536) {
         var {
-          target: IY,
-          position: RY
-        } = DY(5 + AY);
-        IY[RY++] = 200, IY[RY++] = AY + 1 >> 8, IY[RY++] = AY + 1 & 255
+          target: kT,
+          position: WT
+        } = IT(5 + zT);
+        kT[WT++] = 200, kT[WT++] = zT + 1 >> 8, kT[WT++] = zT + 1 & 255
       } else {
         var {
-          target: IY,
-          position: RY,
-          targetView: OY
-        } = DY(7 + AY);
-        IY[RY++] = 201, OY.setUint32(RY, AY + 1), RY += 4
+          target: kT,
+          position: WT,
+          targetView: XT
+        } = IT(7 + zT);
+        kT[WT++] = 201, XT.setUint32(WT, zT + 1), WT += 4
       }
-      IY[RY++] = 116, IY[RY++] = rY, YY.buffer || (YY = new Uint8Array(YY)), IY.set(new Uint8Array(YY.buffer, YY.byteOffset, YY.byteLength), RY)
+      kT[WT++] = 116, kT[WT++] = oT, TT.buffer || (TT = new Uint8Array(TT)), kT.set(new Uint8Array(TT.buffer, TT.byteOffset, TT.byteLength), WT)
     }
 
-    function hr(YY, rY) {
-      let DY = YY.byteLength;
-      var FY, AY;
-      if (DY < 256) {
+    function Qo(TT, oT) {
+      let IT = TT.byteLength;
+      var iT, zT;
+      if (IT < 256) {
         var {
-          target: FY,
-          position: AY
-        } = rY(DY + 2);
-        FY[AY++] = 196, FY[AY++] = DY
-      } else if (DY < 65536) {
+          target: iT,
+          position: zT
+        } = oT(IT + 2);
+        iT[zT++] = 196, iT[zT++] = IT
+      } else if (IT < 65536) {
         var {
-          target: FY,
-          position: AY
-        } = rY(DY + 3);
-        FY[AY++] = 197, FY[AY++] = DY >> 8, FY[AY++] = 255 & DY
+          target: iT,
+          position: zT
+        } = oT(IT + 3);
+        iT[zT++] = 197, iT[zT++] = IT >> 8, iT[zT++] = 255 & IT
       } else {
         var {
-          target: FY,
-          position: AY,
-          targetView: IY
-        } = rY(DY + 5);
-        FY[AY++] = 198, IY.setUint32(AY, DY), AY += 4
+          target: iT,
+          position: zT,
+          targetView: kT
+        } = oT(IT + 5);
+        iT[zT++] = 198, kT.setUint32(zT, IT), zT += 4
       }
-      FY.set(YY, AY)
+      iT.set(TT, zT)
     }
 
-    function dr(YY, rY, DY, FY) {
-      let AY = YY.length;
-      switch (AY) {
+    function Oo(TT, oT, IT, iT) {
+      let zT = TT.length;
+      switch (zT) {
         case 1:
-          rY[DY++] = 212;
+          oT[IT++] = 212;
           break;
         case 2:
-          rY[DY++] = 213;
+          oT[IT++] = 213;
           break;
         case 4:
-          rY[DY++] = 214;
+          oT[IT++] = 214;
           break;
         case 8:
-          rY[DY++] = 215;
+          oT[IT++] = 215;
           break;
         case 16:
-          rY[DY++] = 216;
+          oT[IT++] = 216;
           break;
         default:
-          AY < 256 ? (rY[DY++] = 199, rY[DY++] = AY) : AY < 65536 ? (rY[DY++] = 200, rY[DY++] = AY >> 8, rY[DY++] = 255 & AY) : (rY[DY++] = 201, rY[DY++] = AY >> 24, rY[DY++] = AY >> 16 & 255, rY[DY++] = AY >> 8 & 255, rY[DY++] = 255 & AY)
+          zT < 256 ? (oT[IT++] = 199, oT[IT++] = zT) : zT < 65536 ? (oT[IT++] = 200, oT[IT++] = zT >> 8, oT[IT++] = 255 & zT) : (oT[IT++] = 201, oT[IT++] = zT >> 24, oT[IT++] = zT >> 16 & 255, oT[IT++] = zT >> 8 & 255, oT[IT++] = 255 & zT)
       }
-      return rY[DY++] = FY, rY.set(YY, DY), DY += AY
+      return oT[IT++] = iT, oT.set(TT, IT), IT += zT
     }
 
-    function Jr(YY, rY, DY) {
-      if (zr.length > 0) {
-        Br.setUint32(zr.position + YY, Hr + DY - zr.position - YY), zr.stringsPosition = Hr - YY;
-        let FY = zr;
-        zr = null, rY(FY[0]), rY(FY[1])
+    function Ho(TT, oT, IT) {
+      if (jo.length > 0) {
+        vo.setUint32(jo.position + TT, Co + IT - jo.position - TT), jo.stringsPosition = Co - TT;
+        let iT = jo;
+        jo = null, oT(iT[0]), oT(iT[1])
       }
     }
 
-    function Mr(YY) {
-      if (YY.Class) {
-        if (!YY.pack && !YY.write) throw new Error("Extension has no pack or write function");
-        if (YY.pack && !YY.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        or.unshift(YY.Class), Qr.unshift(YY)
-      }! function(YY) {
-        YY.unpack ? EY[YY.type] = YY.unpack : EY[YY.type] = YY
-      }(YY)
+    function no(TT) {
+      if (TT.Class) {
+        if (!TT.pack && !TT.write) throw new Error("Extension has no pack or write function");
+        if (TT.pack && !TT.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        Mo.unshift(TT.Class), Ko.unshift(TT)
+      }! function(TT) {
+        TT.unpack ? AT[TT.type] = TT.unpack : AT[TT.type] = TT
+      }(TT)
     }
 
-    function wr(YY, rY) {
-      return YY.isCompatible = YY => {
-        let DY = !YY || (rY.lastNamedStructuresLength || 0) === YY.length;
-        return DY || rY._mergeStructures(YY), DY
-      }, YY
+    function qo(TT, oT) {
+      return TT.isCompatible = TT => {
+        let IT = !TT || (oT.lastNamedStructuresLength || 0) === TT.length;
+        return IT || oT._mergeStructures(TT), IT
+      }, TT
     }
-    or = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, VY], Qr = [{
-      pack(YY, rY, DY) {
-        let FY = YY.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === YY.getMilliseconds()) && FY >= 0 && FY < 4294967296) {
+    Mo = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, hT], Ko = [{
+      pack(TT, oT, IT) {
+        let iT = TT.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === TT.getMilliseconds()) && iT >= 0 && iT < 4294967296) {
           let {
-            target: YY,
-            targetView: DY,
-            position: AY
-          } = rY(6);
-          YY[AY++] = 214, YY[AY++] = 255, DY.setUint32(AY, FY)
-        } else if (FY > 0 && FY < 4294967296) {
+            target: TT,
+            targetView: IT,
+            position: zT
+          } = oT(6);
+          TT[zT++] = 214, TT[zT++] = 255, IT.setUint32(zT, iT)
+        } else if (iT > 0 && iT < 4294967296) {
           let {
-            target: DY,
-            targetView: AY,
-            position: IY
-          } = rY(10);
-          DY[IY++] = 215, DY[IY++] = 255, AY.setUint32(IY, 4e6 * YY.getMilliseconds() + (FY / 1e3 / 4294967296 | 0)), AY.setUint32(IY + 4, FY)
-        } else if (isNaN(FY)) {
-          if (this.onInvalidDate) return rY(0), DY(this.onInvalidDate());
+            target: IT,
+            targetView: zT,
+            position: kT
+          } = oT(10);
+          IT[kT++] = 215, IT[kT++] = 255, zT.setUint32(kT, 4e6 * TT.getMilliseconds() + (iT / 1e3 / 4294967296 | 0)), zT.setUint32(kT + 4, iT)
+        } else if (isNaN(iT)) {
+          if (this.onInvalidDate) return oT(0), IT(this.onInvalidDate());
           let {
-            target: YY,
-            targetView: FY,
-            position: AY
-          } = rY(3);
-          YY[AY++] = 212, YY[AY++] = 255, YY[AY++] = 255
+            target: TT,
+            targetView: iT,
+            position: zT
+          } = oT(3);
+          TT[zT++] = 212, TT[zT++] = 255, TT[zT++] = 255
         } else {
           let {
-            target: DY,
-            targetView: AY,
-            position: IY
-          } = rY(15);
-          DY[IY++] = 199, DY[IY++] = 12, DY[IY++] = 255, AY.setUint32(IY, 1e6 * YY.getMilliseconds()), AY.setBigInt64(IY + 4, BigInt(Math.floor(FY)))
+            target: IT,
+            targetView: zT,
+            position: kT
+          } = oT(15);
+          IT[kT++] = 199, IT[kT++] = 12, IT[kT++] = 255, zT.setUint32(kT, 1e6 * TT.getMilliseconds()), zT.setBigInt64(kT + 4, BigInt(Math.floor(iT)))
         }
       }
     }, {
-      pack(YY, rY, DY) {
-        if (this.setAsEmptyObject) return rY(0), DY({});
-        let FY = Array.from(YY),
+      pack(TT, oT, IT) {
+        if (this.setAsEmptyObject) return oT(0), IT({});
+        let iT = Array.from(TT),
           {
-            target: AY,
-            position: IY
-          } = rY(this.moreTypes ? 3 : 0);
-        this.moreTypes && (AY[IY++] = 212, AY[IY++] = 115, AY[IY++] = 0), DY(FY)
+            target: zT,
+            position: kT
+          } = oT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (zT[kT++] = 212, zT[kT++] = 115, zT[kT++] = 0), IT(iT)
       }
     }, {
-      pack(YY, rY, DY) {
+      pack(TT, oT, IT) {
         let {
-          target: FY,
-          position: AY
-        } = rY(this.moreTypes ? 3 : 0);
-        this.moreTypes && (FY[AY++] = 212, FY[AY++] = 101, FY[AY++] = 0), DY([YY.name, YY.message, YY.cause])
+          target: iT,
+          position: zT
+        } = oT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (iT[zT++] = 212, iT[zT++] = 101, iT[zT++] = 0), IT([TT.name, TT.message, TT.cause])
       }
     }, {
-      pack(YY, rY, DY) {
+      pack(TT, oT, IT) {
         let {
-          target: FY,
-          position: AY
-        } = rY(this.moreTypes ? 3 : 0);
-        this.moreTypes && (FY[AY++] = 212, FY[AY++] = 120, FY[AY++] = 0), DY([YY.source, YY.flags])
+          target: iT,
+          position: zT
+        } = oT(this.moreTypes ? 3 : 0);
+        this.moreTypes && (iT[zT++] = 212, iT[zT++] = 120, iT[zT++] = 0), IT([TT.source, TT.flags])
       }
     }, {
-      pack(YY, rY) {
-        this.moreTypes ? jr(YY, 16, rY) : hr(Vr ? Buffer.from(YY) : new Uint8Array(YY), rY)
+      pack(TT, oT) {
+        this.moreTypes ? Yo(TT, 16, oT) : Qo(ho ? Buffer.from(TT) : new Uint8Array(TT), oT)
       }
     }, {
-      pack(YY, rY) {
-        let DY = YY.constructor;
-        DY !== lr && this.moreTypes ? jr(YY, Dr.indexOf(DY.name), rY) : hr(YY, rY)
+      pack(TT, oT) {
+        let IT = TT.constructor;
+        IT !== mo && this.moreTypes ? Yo(TT, Io.indexOf(IT.name), oT) : Qo(TT, oT)
       }
     }, {
-      pack(YY, rY) {
+      pack(TT, oT) {
         let {
-          target: DY,
-          position: FY
-        } = rY(1);
-        DY[FY] = 193
+          target: IT,
+          position: iT
+        } = oT(1);
+        IT[iT] = 193
       }
     }];
-    let br = new fr({
+    let Zo = new ao({
       useRecords: !1
     });
-    const Xr = br.pack,
-      qr = br.pack,
-      pr = fr,
+    const so = Zo.pack,
+      to = Zo.pack,
+      Go = ao,
       {
-        NEVER: kr,
-        ALWAYS: Gr,
-        DECIMAL_ROUND: xr,
-        DECIMAL_FIT: nr
-      } = ir,
-      Pr = 512,
-      Ur = 1024,
-      Lr = 2048;
-    const tr = function(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!YY || "object" !== typeof YY) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const DY = new cY(rY);
-        let FY;
-        const AY = YY => {
-          let rY;
-          FY && (YY = Buffer.concat([FY, YY]), FY = void 0);
+        NEVER: po,
+        ALWAYS: bo,
+        DECIMAL_ROUND: yo,
+        DECIMAL_FIT: No
+      } = xo,
+      Po = 512,
+      Vo = 1024,
+      TI = 2048;
+    const oI = function(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!TT || "object" !== typeof TT) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const IT = new ET(oT);
+        let iT;
+        const zT = TT => {
+          let oT;
+          iT && (TT = Buffer.concat([iT, TT]), iT = void 0);
           try {
-            rY = DY.unpackMultiple(YY)
-          } catch (AY) {
-            if (!AY.incomplete) throw AY;
-            FY = YY.slice(AY.lastPosition), rY = AY.values
+            oT = IT.unpackMultiple(TT)
+          } catch (zT) {
+            if (!zT.incomplete) throw zT;
+            iT = TT.slice(zT.lastPosition), oT = zT.values
           }
-          return rY
+          return oT
         };
-        return "function" === typeof YY[Symbol.iterator] ? function*() {
-          for (const rY of YY) yield* AY(rY)
-        }() : "function" === typeof YY[Symbol.asyncIterator] ? async function*() {
-          for await (const rY of YY) yield* AY(rY)
+        return "function" === typeof TT[Symbol.iterator] ? function*() {
+          for (const oT of TT) yield* zT(oT)
+        }() : "function" === typeof TT[Symbol.asyncIterator] ? async function*() {
+          for await (const oT of TT) yield* zT(oT)
         }(): void 0
       },
-      YD = function(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (YY && "object" === typeof YY) {
-          if ("function" === typeof YY[Symbol.iterator]) return function*(YY, rY) {
-            const DY = new fr(rY);
-            for (const FY of YY) yield DY.pack(FY)
-          }(YY, rY);
-          if ("function" === typeof YY.then || "function" === typeof YY[Symbol.asyncIterator]) return async function*(YY, rY) {
-            const DY = new fr(rY);
-            for await (const FY of YY) yield DY.pack(FY)
-          }(YY, rY);
+      II = function(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (TT && "object" === typeof TT) {
+          if ("function" === typeof TT[Symbol.iterator]) return function*(TT, oT) {
+            const IT = new ao(oT);
+            for (const iT of TT) yield IT.pack(iT)
+          }(TT, oT);
+          if ("function" === typeof TT.then || "function" === typeof TT[Symbol.asyncIterator]) return async function*(TT, oT) {
+            const IT = new ao(oT);
+            for await (const iT of TT) yield IT.pack(iT)
+          }(TT, oT);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      rD = !1,
-      DD = !0
+      iI = !1,
+      zI = !0
   },
-  8526: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      $changes: () => QY,
-      $childType: () => oY,
-      $decoder: () => vY,
-      $deleteByIndex: () => iY,
-      $encoder: () => aY,
-      $filter: () => uY,
-      $getByIndex: () => sY,
-      $numFields: () => BY,
-      $refId: () => OY,
-      $track: () => gY,
-      $values: () => SY,
-      ArraySchema: () => DF,
-      Callbacks: () => DA,
-      ChangeTree: () => HD,
-      CollectionSchema: () => IF,
-      Decoder: () => xF,
-      Encoder: () => qF,
-      FieldBuilder: () => gF,
-      MapSchema: () => AF,
-      Metadata: () => xr,
-      OPERATION: () => AY,
-      Reflection: () => LF,
-      ReflectionField: () => PF,
-      ReflectionType: () => UF,
-      Root: () => zF,
-      Schema: () => KF,
-      SetSchema: () => RF,
-      StateCallbackStrategy: () => rA,
-      StateView: () => hF,
-      StreamSchema: () => OF,
-      TypeContext: () => wr,
-      createPool: () => AA,
-      decode: () => mr,
-      decodeKeyValueOperation: () => PD,
-      decodeSchemaOperation: () => nD,
-      defineCustomTypes: () => Tr,
-      defineTypes: () => NF,
-      deprecated: () => TF,
-      dumpChanges: () => cF,
-      encode: () => rr,
-      encodeArray: () => JD,
-      encodeIndexedEntry: () => hD,
-      encodeKeyValueOperation: () => dD,
-      encodeMapEntry: () => jD,
-      encodeSchemaOperation: () => fD,
-      my: () => QF,
-      fullStateOnly: () => mF,
-      getDecoderStateCallbacks: () => tF,
-      getEncodeDescriptor: () => YD,
-      getRawChangesCallback: () => YA,
-      isBuilder: () => aF,
-      patchOnly: () => EF,
-      registerType: () => lr,
-      schema: () => BF,
-      t: () => iF,
-      type: () => VF,
-      unreliable: () => WF,
-      view: () => oF
+  8521: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      $changes: () => KT,
+      $childType: () => MT,
+      $decoder: () => ST,
+      $deleteByIndex: () => xT,
+      $encoder: () => FT,
+      $filter: () => DT,
+      $getByIndex: () => LT,
+      $numFields: () => vT,
+      $refId: () => XT,
+      $track: () => BT,
+      $values: () => wT,
+      ArraySchema: () => zi,
+      Callbacks: () => Wz,
+      ChangeTree: () => JI,
+      CollectionSchema: () => Xi,
+      Decoder: () => di,
+      Encoder: () => bi,
+      FieldBuilder: () => Si,
+      MapSchema: () => Wi,
+      Metadata: () => yo,
+      OPERATION: () => zT,
+      Reflection: () => Iz,
+      ReflectionField: () => Tz,
+      ReflectionType: () => oz,
+      Root: () => ai,
+      Schema: () => Ji,
+      SetSchema: () => Bi,
+      StateCallbackStrategy: () => kz,
+      StateView: () => ni,
+      StreamSchema: () => Fi,
+      TypeContext: () => qo,
+      createPool: () => Bz,
+      decode: () => go,
+      decodeKeyValueOperation: () => dI,
+      decodeSchemaOperation: () => PI,
+      defineCustomTypes: () => eo,
+      defineTypes: () => fi,
+      deprecated: () => vi,
+      dumpChanges: () => ji,
+      encode: () => oo,
+      encodeArray: () => qI,
+      encodeIndexedEntry: () => HI,
+      encodeKeyValueOperation: () => nI,
+      encodeMapEntry: () => OI,
+      encodeSchemaOperation: () => QI,
+      Ac: () => ri,
+      fullStateOnly: () => mi,
+      getDecoderStateCallbacks: () => iz,
+      getEncodeDescriptor: () => II,
+      getRawChangesCallback: () => zz,
+      isBuilder: () => Di,
+      patchOnly: () => wi,
+      registerType: () => mo,
+      schema: () => Ci,
+      t: () => Ki,
+      type: () => ei,
+      unreliable: () => gi,
+      view: () => Ai
     });
-    const FY = 255;
-    var AY;
+    const iT = 255;
+    var zT;
 
-    function IY(YY) {
-      Object.defineProperty(YY, Symbol.metadata, {
+    function kT(TT) {
+      Object.defineProperty(TT, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(YY) {
-      YY[YY.ADD = 128] = "ADD", YY[YY.REPLACE = 0] = "REPLACE", YY[YY.DELETE = 64] = "DELETE", YY[YY.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", YY[YY.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", YY[YY.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", YY[YY.CLEAR = 10] = "CLEAR", YY[YY.REVERSE = 15] = "REVERSE", YY[YY.MOVE = 32] = "MOVE", YY[YY.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", YY[YY.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(AY || (AY = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const RY = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(TT) {
+      TT[TT.ADD = 128] = "ADD", TT[TT.REPLACE = 0] = "REPLACE", TT[TT.DELETE = 64] = "DELETE", TT[TT.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", TT[TT.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", TT[TT.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", TT[TT.CLEAR = 10] = "CLEAR", TT[TT.REVERSE = 15] = "REVERSE", TT[TT.MOVE = 32] = "MOVE", TT[TT.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", TT[TT.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(zT || (zT = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const WT = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const YY = "colyseus.symbolRegistry",
-        rY = RY[YY] || (RY[YY] = Object.create(null));
-      Symbol.for = function(YY) {
-        return rY[YY] || (rY[YY] = Symbol(YY))
-      }, Symbol.keyFor = function(YY) {
-        for (const DY in rY)
-          if (rY[DY] === YY) return DY
+      const TT = "colyseus.symbolRegistry",
+        oT = WT[TT] || (WT[TT] = Object.create(null));
+      Symbol.for = function(TT) {
+        return oT[TT] || (oT[TT] = Symbol(TT))
+      }, Symbol.keyFor = function(TT) {
+        for (const IT in oT)
+          if (oT[IT] === TT) return IT
       }
     }
-    const OY = Symbol.for("$refId"),
-      gY = "~track",
-      aY = "~encoder",
-      vY = "~decoder",
-      uY = "~filter",
-      sY = "~getByIndex",
-      iY = "~deleteByIndex",
-      yY = "~resyncPrune",
-      QY = Symbol.for("$changes"),
-      oY = Symbol.for("$childType"),
-      WY = Symbol.for("$proxyTarget"),
-      EY = "~onEncodeEnd",
-      mY = "~reset",
-      VY = "~onDecodeEnd",
-      SY = Symbol.for("$values"),
-      lY = "~builder",
-      TY = "~descriptors",
-      eY = "~__encodeDescriptor",
-      NY = "~encoders",
-      BY = "~__numFields",
-      cY = "~__refTypeFieldIndexes",
-      KY = "~__viewFieldIndexes",
-      HY = "$__fieldIndexesByViewTag",
-      zY = "~__unreliableFieldIndexes",
-      ZY = "~__patchOnlyFieldIndexes",
-      CY = "~__fullSyncSkipIndexes",
-      fY = "~__fullStateOnlyFieldIndexes",
-      jY = "~__streamFieldIndexes",
-      hY = "~__streamPriorities";
-    let dY;
+    const XT = Symbol.for("$refId"),
+      BT = "~track",
+      FT = "~encoder",
+      ST = "~decoder",
+      DT = "~filter",
+      LT = "~getByIndex",
+      xT = "~deleteByIndex",
+      cT = "~resyncPrune",
+      KT = Symbol.for("$changes"),
+      MT = Symbol.for("$childType"),
+      rT = Symbol.for("$proxyTarget"),
+      AT = "~onEncodeEnd",
+      gT = "~reset",
+      hT = "~onDecodeEnd",
+      wT = Symbol.for("$values"),
+      mT = "~builder",
+      eT = "~descriptors",
+      RT = "~__encodeDescriptor",
+      uT = "~encoders",
+      vT = "~__numFields",
+      ET = "~__refTypeFieldIndexes",
+      fT = "~__viewFieldIndexes",
+      CT = "$__fieldIndexesByViewTag",
+      jT = "~__unreliableFieldIndexes",
+      JT = "~__patchOnlyFieldIndexes",
+      UT = "~__fullSyncSkipIndexes",
+      aT = "~__fullStateOnlyFieldIndexes",
+      YT = "~__streamFieldIndexes",
+      QT = "~__streamPriorities";
+    let OT;
     try {
-      dY = new TextEncoder
-    } catch (IA) {}
-    const JY = new ArrayBuffer(8),
-      MY = new Int32Array(JY),
-      wY = new Float32Array(JY),
-      bY = new Float64Array(JY),
-      XY = new BigInt64Array(JY),
-      qY = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(YY, rY) {
-        for (var DY = 0, FY = 0, AY = 0, IY = YY.length; AY < IY; AY++)(DY = YY.charCodeAt(AY)) < 128 ? FY += 1 : DY < 2048 ? FY += 2 : DY < 55296 || DY >= 57344 ? FY += 3 : (AY++, FY += 4);
-        return FY
+      OT = new TextEncoder
+    } catch (Fz) {}
+    const HT = new ArrayBuffer(8),
+      nT = new Int32Array(HT),
+      qT = new Float32Array(HT),
+      ZT = new Float64Array(HT),
+      lT = new BigInt64Array(HT),
+      sT = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(TT, oT) {
+        for (var IT = 0, iT = 0, zT = 0, kT = TT.length; zT < kT; zT++)(IT = TT.charCodeAt(zT)) < 128 ? iT += 1 : IT < 2048 ? iT += 2 : IT < 55296 || IT >= 57344 ? iT += 3 : (zT++, iT += 4);
+        return iT
       };
 
-    function pY(YY, rY, DY) {
-      for (var FY = 0, AY = 0, IY = rY.length; AY < IY; AY++)(FY = rY.charCodeAt(AY)) < 128 ? YY[DY.offset++] = FY : FY < 2048 ? (YY[DY.offset] = 192 | FY >> 6, YY[DY.offset + 1] = 128 | 63 & FY, DY.offset += 2) : FY < 55296 || FY >= 57344 ? (YY[DY.offset] = 224 | FY >> 12, YY[DY.offset + 1] = 128 | FY >> 6 & 63, YY[DY.offset + 2] = 128 | 63 & FY, DY.offset += 3) : (AY++, FY = 65536 + ((1023 & FY) << 10 | 1023 & rY.charCodeAt(AY)), YY[DY.offset] = 240 | FY >> 18, YY[DY.offset + 1] = 128 | FY >> 12 & 63, YY[DY.offset + 2] = 128 | FY >> 6 & 63, YY[DY.offset + 3] = 128 | 63 & FY, DY.offset += 4)
+    function tT(TT, oT, IT) {
+      for (var iT = 0, zT = 0, kT = oT.length; zT < kT; zT++)(iT = oT.charCodeAt(zT)) < 128 ? TT[IT.offset++] = iT : iT < 2048 ? (TT[IT.offset] = 192 | iT >> 6, TT[IT.offset + 1] = 128 | 63 & iT, IT.offset += 2) : iT < 55296 || iT >= 57344 ? (TT[IT.offset] = 224 | iT >> 12, TT[IT.offset + 1] = 128 | iT >> 6 & 63, TT[IT.offset + 2] = 128 | 63 & iT, IT.offset += 3) : (zT++, iT = 65536 + ((1023 & iT) << 10 | 1023 & oT.charCodeAt(zT)), TT[IT.offset] = 240 | iT >> 18, TT[IT.offset + 1] = 128 | iT >> 12 & 63, TT[IT.offset + 2] = 128 | iT >> 6 & 63, TT[IT.offset + 3] = 128 | 63 & iT, IT.offset += 4)
     }
 
-    function kY(YY, rY, DY) {
-      YY[DY.offset++] = 255 & rY
+    function GT(TT, oT, IT) {
+      TT[IT.offset++] = 255 & oT
     }
 
-    function GY(YY, rY, DY) {
-      YY[DY.offset++] = 255 & rY, YY[DY.offset++] = rY >> 8 & 255
+    function pT(TT, oT, IT) {
+      TT[IT.offset++] = 255 & oT, TT[IT.offset++] = oT >> 8 & 255
     }
 
-    function xY(YY, rY, DY) {
-      YY[DY.offset++] = 255 & rY, YY[DY.offset++] = rY >> 8 & 255
+    function bT(TT, oT, IT) {
+      TT[IT.offset++] = 255 & oT, TT[IT.offset++] = oT >> 8 & 255
     }
 
-    function nY(YY, rY, DY) {
-      YY[DY.offset++] = 255 & rY, YY[DY.offset++] = rY >> 8 & 255, YY[DY.offset++] = rY >> 16 & 255, YY[DY.offset++] = rY >> 24 & 255
+    function yT(TT, oT, IT) {
+      TT[IT.offset++] = 255 & oT, TT[IT.offset++] = oT >> 8 & 255, TT[IT.offset++] = oT >> 16 & 255, TT[IT.offset++] = oT >> 24 & 255
     }
 
-    function PY(YY, rY, DY) {
-      const FY = rY >> 24,
-        AY = rY >> 16,
-        IY = rY >> 8,
-        RY = rY;
-      YY[DY.offset++] = 255 & RY, YY[DY.offset++] = 255 & IY, YY[DY.offset++] = 255 & AY, YY[DY.offset++] = 255 & FY
+    function NT(TT, oT, IT) {
+      const iT = oT >> 24,
+        zT = oT >> 16,
+        kT = oT >> 8,
+        WT = oT;
+      TT[IT.offset++] = 255 & WT, TT[IT.offset++] = 255 & kT, TT[IT.offset++] = 255 & zT, TT[IT.offset++] = 255 & iT
     }
 
-    function UY(YY, rY, DY) {
-      const FY = Math.floor(rY / Math.pow(2, 32));
-      PY(YY, rY >>> 0, DY), PY(YY, FY, DY)
+    function PT(TT, oT, IT) {
+      const iT = Math.floor(oT / Math.pow(2, 32));
+      NT(TT, oT >>> 0, IT), NT(TT, iT, IT)
     }
 
-    function LY(YY, rY, DY) {
-      const FY = rY / Math.pow(2, 32) | 0;
-      PY(YY, rY >>> 0, DY), PY(YY, FY, DY)
+    function dT(TT, oT, IT) {
+      const iT = oT / Math.pow(2, 32) | 0;
+      NT(TT, oT >>> 0, IT), NT(TT, iT, IT)
     }
 
-    function tY(YY, rY, DY) {
-      wY[0] = rY, nY(YY, MY[0], DY)
+    function VT(TT, oT, IT) {
+      qT[0] = oT, yT(TT, nT[0], IT)
     }
 
-    function Yr(YY, rY, DY) {
-      bY[0] = rY, nY(YY, MY[0], DY), nY(YY, MY[1], DY)
+    function To(TT, oT, IT) {
+      ZT[0] = oT, yT(TT, nT[0], IT), yT(TT, nT[1], IT)
     }
-    const rr = {
-        int8: kY,
-        uint8: function(YY, rY, DY) {
-          YY[DY.offset++] = 255 & rY
+    const oo = {
+        int8: GT,
+        uint8: function(TT, oT, IT) {
+          TT[IT.offset++] = 255 & oT
         },
-        int16: GY,
-        uint16: xY,
-        int32: nY,
-        uint32: PY,
-        int64: UY,
-        uint64: LY,
-        bigint64: function(YY, rY, DY) {
-          XY[0] = BigInt.asIntN(64, rY), nY(YY, MY[0], DY), nY(YY, MY[1], DY)
+        int16: pT,
+        uint16: bT,
+        int32: yT,
+        uint32: NT,
+        int64: PT,
+        uint64: dT,
+        bigint64: function(TT, oT, IT) {
+          lT[0] = BigInt.asIntN(64, oT), yT(TT, nT[0], IT), yT(TT, nT[1], IT)
         },
-        biguint64: function(YY, rY, DY) {
-          XY[0] = BigInt.asIntN(64, rY), nY(YY, MY[0], DY), nY(YY, MY[1], DY)
+        biguint64: function(TT, oT, IT) {
+          lT[0] = BigInt.asIntN(64, oT), yT(TT, nT[0], IT), yT(TT, nT[1], IT)
         },
-        float32: tY,
-        float64: Yr,
-        boolean: function(YY, rY, DY) {
-          YY[DY.offset++] = rY ? 1 : 0
+        float32: VT,
+        float64: To,
+        boolean: function(TT, oT, IT) {
+          TT[IT.offset++] = oT ? 1 : 0
         },
-        string: function(YY, rY, DY) {
-          rY || (rY = "");
-          let FY = qY(rY, "utf8"),
-            AY = 0;
-          if (FY < 32) YY[DY.offset++] = 160 | FY, AY = 1;
-          else if (FY < 256) YY[DY.offset++] = 217, YY[DY.offset++] = FY, AY = 2;
-          else if (FY < 65536) YY[DY.offset++] = 218, xY(YY, FY, DY), AY = 3;
+        string: function(TT, oT, IT) {
+          oT || (oT = "");
+          let iT = sT(oT, "utf8"),
+            zT = 0;
+          if (iT < 32) TT[IT.offset++] = 160 | iT, zT = 1;
+          else if (iT < 256) TT[IT.offset++] = 217, TT[IT.offset++] = iT, zT = 2;
+          else if (iT < 65536) TT[IT.offset++] = 218, bT(TT, iT, IT), zT = 3;
           else {
-            if (!(FY < 4294967296)) throw new Error("String too long");
-            YY[DY.offset++] = 219, PY(YY, FY, DY), AY = 5
+            if (!(iT < 4294967296)) throw new Error("String too long");
+            TT[IT.offset++] = 219, NT(TT, iT, IT), zT = 5
           }
-          return pY(YY, rY, DY), AY + FY
+          return tT(TT, oT, IT), zT + iT
         },
-        number: function YY(rY, DY, FY) {
-          return isNaN(DY) ? YY(rY, 0, FY) : isFinite(DY) ? DY !== (0 | DY) ? Math.abs(DY) <= 34028235e31 && (wY[0] = DY, Math.abs(Math.abs(wY[0]) - Math.abs(DY)) < 1e-4) ? (rY[FY.offset++] = 202, tY(rY, DY, FY), 5) : (rY[FY.offset++] = 203, Yr(rY, DY, FY), 9) : DY >= 0 ? DY < 128 ? (rY[FY.offset++] = 255 & DY, 1) : DY < 256 ? (rY[FY.offset++] = 204, rY[FY.offset++] = 255 & DY, 2) : DY < 65536 ? (rY[FY.offset++] = 205, xY(rY, DY, FY), 3) : DY < 4294967296 ? (rY[FY.offset++] = 206, PY(rY, DY, FY), 5) : (rY[FY.offset++] = 207, LY(rY, DY, FY), 9) : DY >= -32 ? (rY[FY.offset++] = 224 | DY + 32, 1) : DY >= -128 ? (rY[FY.offset++] = 208, kY(rY, DY, FY), 2) : DY >= -32768 ? (rY[FY.offset++] = 209, GY(rY, DY, FY), 3) : DY >= -2147483648 ? (rY[FY.offset++] = 210, nY(rY, DY, FY), 5) : (rY[FY.offset++] = 211, UY(rY, DY, FY), 9) : YY(rY, DY > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, FY)
+        number: function TT(oT, IT, iT) {
+          return isNaN(IT) ? TT(oT, 0, iT) : isFinite(IT) ? IT !== (0 | IT) ? Math.abs(IT) <= 34028235e31 && (qT[0] = IT, Math.abs(Math.abs(qT[0]) - Math.abs(IT)) < 1e-4) ? (oT[iT.offset++] = 202, VT(oT, IT, iT), 5) : (oT[iT.offset++] = 203, To(oT, IT, iT), 9) : IT >= 0 ? IT < 128 ? (oT[iT.offset++] = 255 & IT, 1) : IT < 256 ? (oT[iT.offset++] = 204, oT[iT.offset++] = 255 & IT, 2) : IT < 65536 ? (oT[iT.offset++] = 205, bT(oT, IT, iT), 3) : IT < 4294967296 ? (oT[iT.offset++] = 206, NT(oT, IT, iT), 5) : (oT[iT.offset++] = 207, dT(oT, IT, iT), 9) : IT >= -32 ? (oT[iT.offset++] = 224 | IT + 32, 1) : IT >= -128 ? (oT[iT.offset++] = 208, GT(oT, IT, iT), 2) : IT >= -32768 ? (oT[iT.offset++] = 209, pT(oT, IT, iT), 3) : IT >= -2147483648 ? (oT[iT.offset++] = 210, yT(oT, IT, iT), 5) : (oT[iT.offset++] = 211, PT(oT, IT, iT), 9) : TT(oT, IT > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, iT)
         },
-        utf8Write: pY,
-        utf8Length: qY
+        utf8Write: tT,
+        utf8Length: sT
       },
-      Dr = new ArrayBuffer(8),
-      Fr = new Int32Array(Dr),
-      Ar = new Float32Array(Dr),
-      Ir = new Float64Array(Dr),
-      Rr = new BigUint64Array(Dr),
-      Or = new BigInt64Array(Dr);
+      Io = new ArrayBuffer(8),
+      io = new Int32Array(Io),
+      zo = new Float32Array(Io),
+      ko = new Float64Array(Io),
+      Wo = new BigUint64Array(Io),
+      Xo = new BigInt64Array(Io);
 
-    function gr(YY, rY, DY) {
-      DY > YY.length - rY.offset && (DY = YY.length - rY.offset);
-      for (var FY = "", AY = 0, IY = rY.offset, RY = rY.offset + DY; IY < RY; IY++) {
-        var OY = YY[IY];
-        if (0 !== (128 & OY))
-          if (192 !== (224 & OY))
-            if (224 !== (240 & OY)) {
-              if (240 !== (248 & OY)) {
-                console.error("decode.utf8Read(): Invalid byte " + OY + " at offset " + IY + ". Skip to end of string: " + (rY.offset + DY));
+    function Bo(TT, oT, IT) {
+      IT > TT.length - oT.offset && (IT = TT.length - oT.offset);
+      for (var iT = "", zT = 0, kT = oT.offset, WT = oT.offset + IT; kT < WT; kT++) {
+        var XT = TT[kT];
+        if (0 !== (128 & XT))
+          if (192 !== (224 & XT))
+            if (224 !== (240 & XT)) {
+              if (240 !== (248 & XT)) {
+                console.error("decode.utf8Read(): Invalid byte " + XT + " at offset " + kT + ". Skip to end of string: " + (oT.offset + IT));
                 break
-              }(AY = (7 & OY) << 18 | (63 & YY[++IY]) << 12 | (63 & YY[++IY]) << 6 | 63 & YY[++IY]) >= 65536 ? (AY -= 65536, FY += String.fromCharCode(55296 + (AY >>> 10), 56320 + (1023 & AY))) : FY += String.fromCharCode(AY)
-            } else FY += String.fromCharCode((15 & OY) << 12 | (63 & YY[++IY]) << 6 | 63 & YY[++IY]);
-        else FY += String.fromCharCode((31 & OY) << 6 | 63 & YY[++IY]);
-        else FY += String.fromCharCode(OY)
+              }(zT = (7 & XT) << 18 | (63 & TT[++kT]) << 12 | (63 & TT[++kT]) << 6 | 63 & TT[++kT]) >= 65536 ? (zT -= 65536, iT += String.fromCharCode(55296 + (zT >>> 10), 56320 + (1023 & zT))) : iT += String.fromCharCode(zT)
+            } else iT += String.fromCharCode((15 & XT) << 12 | (63 & TT[++kT]) << 6 | 63 & TT[++kT]);
+        else iT += String.fromCharCode((31 & XT) << 6 | 63 & TT[++kT]);
+        else iT += String.fromCharCode(XT)
       }
-      return rY.offset += DY, FY
+      return oT.offset += IT, iT
     }
 
-    function ar(YY, rY) {
-      return vr(YY, rY) << 24 >> 24
+    function Fo(TT, oT) {
+      return So(TT, oT) << 24 >> 24
     }
 
-    function vr(YY, rY) {
-      return YY[rY.offset++]
+    function So(TT, oT) {
+      return TT[oT.offset++]
     }
 
-    function ur(YY, rY) {
-      return sr(YY, rY) << 16 >> 16
+    function Do(TT, oT) {
+      return Lo(TT, oT) << 16 >> 16
     }
 
-    function sr(YY, rY) {
-      return YY[rY.offset++] | YY[rY.offset++] << 8
+    function Lo(TT, oT) {
+      return TT[oT.offset++] | TT[oT.offset++] << 8
     }
 
-    function ir(YY, rY) {
-      return YY[rY.offset++] | YY[rY.offset++] << 8 | YY[rY.offset++] << 16 | YY[rY.offset++] << 24
+    function xo(TT, oT) {
+      return TT[oT.offset++] | TT[oT.offset++] << 8 | TT[oT.offset++] << 16 | TT[oT.offset++] << 24
     }
 
-    function yr(YY, rY) {
-      return ir(YY, rY) >>> 0
+    function co(TT, oT) {
+      return xo(TT, oT) >>> 0
     }
 
-    function Qr(YY, rY) {
-      return Fr[0] = ir(YY, rY), Ar[0]
+    function Ko(TT, oT) {
+      return io[0] = xo(TT, oT), zo[0]
     }
 
-    function or(YY, rY) {
-      return Fr[0] = ir(YY, rY), Fr[1] = ir(YY, rY), Ir[0]
+    function Mo(TT, oT) {
+      return io[0] = xo(TT, oT), io[1] = xo(TT, oT), ko[0]
     }
 
-    function Wr(YY, rY) {
-      const DY = yr(YY, rY);
-      return ir(YY, rY) * Math.pow(2, 32) + DY
+    function ro(TT, oT) {
+      const IT = co(TT, oT);
+      return xo(TT, oT) * Math.pow(2, 32) + IT
     }
 
-    function Er(YY, rY) {
-      const DY = yr(YY, rY);
-      return yr(YY, rY) * Math.pow(2, 32) + DY
+    function Ao(TT, oT) {
+      const IT = co(TT, oT);
+      return co(TT, oT) * Math.pow(2, 32) + IT
     }
-    const mr = {
-        utf8Read: gr,
-        int8: ar,
-        uint8: vr,
-        int16: ur,
-        uint16: sr,
-        int32: ir,
-        uint32: yr,
-        float32: Qr,
-        float64: or,
-        int64: Wr,
-        uint64: Er,
-        bigint64: function(YY, rY) {
-          return Fr[0] = ir(YY, rY), Fr[1] = ir(YY, rY), Or[0]
+    const go = {
+        utf8Read: Bo,
+        int8: Fo,
+        uint8: So,
+        int16: Do,
+        uint16: Lo,
+        int32: xo,
+        uint32: co,
+        float32: Ko,
+        float64: Mo,
+        int64: ro,
+        uint64: Ao,
+        bigint64: function(TT, oT) {
+          return io[0] = xo(TT, oT), io[1] = xo(TT, oT), Xo[0]
         },
-        biguint64: function(YY, rY) {
-          return Fr[0] = ir(YY, rY), Fr[1] = ir(YY, rY), Rr[0]
+        biguint64: function(TT, oT) {
+          return io[0] = xo(TT, oT), io[1] = xo(TT, oT), Wo[0]
         },
-        boolean: function(YY, rY) {
-          return vr(YY, rY) > 0
+        boolean: function(TT, oT) {
+          return So(TT, oT) > 0
         },
-        string: function(YY, rY) {
-          const DY = YY[rY.offset++];
-          let FY;
-          return DY < 192 ? FY = 31 & DY : 217 === DY ? FY = vr(YY, rY) : 218 === DY ? FY = sr(YY, rY) : 219 === DY && (FY = yr(YY, rY)), gr(YY, rY, FY)
+        string: function(TT, oT) {
+          const IT = TT[oT.offset++];
+          let iT;
+          return IT < 192 ? iT = 31 & IT : 217 === IT ? iT = So(TT, oT) : 218 === IT ? iT = Lo(TT, oT) : 219 === IT && (iT = co(TT, oT)), Bo(TT, oT, iT)
         },
-        number: function(YY, rY) {
-          const DY = YY[rY.offset++];
-          return DY < 128 ? DY : 202 === DY ? Qr(YY, rY) : 203 === DY ? or(YY, rY) : 204 === DY ? vr(YY, rY) : 205 === DY ? sr(YY, rY) : 206 === DY ? yr(YY, rY) : 207 === DY ? Er(YY, rY) : 208 === DY ? ar(YY, rY) : 209 === DY ? ur(YY, rY) : 210 === DY ? ir(YY, rY) : 211 === DY ? Wr(YY, rY) : DY > 223 ? -1 * (255 - DY + 1) : void 0
+        number: function(TT, oT) {
+          const IT = TT[oT.offset++];
+          return IT < 128 ? IT : 202 === IT ? Ko(TT, oT) : 203 === IT ? Mo(TT, oT) : 204 === IT ? So(TT, oT) : 205 === IT ? Lo(TT, oT) : 206 === IT ? co(TT, oT) : 207 === IT ? Ao(TT, oT) : 208 === IT ? Fo(TT, oT) : 209 === IT ? Do(TT, oT) : 210 === IT ? xo(TT, oT) : 211 === IT ? ro(TT, oT) : IT > 223 ? -1 * (255 - IT + 1) : void 0
         },
-        stringCheck: function(YY, rY) {
-          const DY = YY[rY.offset];
-          return DY < 192 && DY > 160 || 217 === DY || 218 === DY || 219 === DY
+        stringCheck: function(TT, oT) {
+          const IT = TT[oT.offset];
+          return IT < 192 && IT > 160 || 217 === IT || 218 === IT || 219 === IT
         }
       },
-      Vr = {},
-      Sr = new Map;
+      ho = {},
+      wo = new Map;
 
-    function lr(YY, rY) {
-      rY.constructor && (Object.prototype.hasOwnProperty.call(rY, "constructor") && null == rY.constructor[Symbol.metadata] && IY(rY.constructor), Sr.set(rY.constructor, YY), Vr[YY] = rY), rY.encode && (rr[YY] = rY.encode), rY.decode && (mr[YY] = rY.decode)
+    function mo(TT, oT) {
+      oT.constructor && (Object.prototype.hasOwnProperty.call(oT, "constructor") && null == oT.constructor[Symbol.metadata] && kT(oT.constructor), wo.set(oT.constructor, TT), ho[TT] = oT), oT.encode && (oo[TT] = oT.encode), oT.decode && (go[TT] = oT.decode)
     }
 
-    function Tr(YY) {
-      for (const rY in YY) lr(rY, YY[rY]);
-      return YY => VF(YY)
+    function eo(TT) {
+      for (const oT in TT) mo(oT, TT[oT]);
+      return TT => ei(TT)
     }
-    const er = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const Ro = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function Nr() {
+    function uo() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function Br(YY) {
-      return YY._stream ??= Nr()
+    function vo(TT) {
+      return TT._stream ??= uo()
     }
 
-    function cr(YY, rY, DY) {
-      0 === rY.activeViews.size && Br(YY).broadcastPending.add(DY)
+    function Eo(TT, oT, IT) {
+      0 === oT.activeViews.size && vo(TT).broadcastPending.add(IT)
     }
 
-    function Kr(YY, rY, DY, FY) {
-      const IY = YY._stream;
-      if (void 0 === IY) return !0;
-      let RY = !1;
-      return IY.broadcastPending.delete(FY) ? RY = !0 : IY.sentBroadcast.delete(FY) && IY.broadcastDeletes.add(FY), rY.forEachActiveView((YY => {
-        const rY = IY.pendingByView.get(YY.id);
-        if (rY?.has(FY)) return rY.delete(FY), void(RY = !0);
-        const OY = IY.sentByView.get(YY.id);
-        if (OY?.has(FY)) {
-          OY.delete(FY);
-          let rY = YY.changes.get(DY);
-          void 0 === rY && (rY = new Map, YY.changes.set(DY, rY)), rY.set(FY, AY.DELETE)
+    function fo(TT, oT, IT, iT) {
+      const kT = TT._stream;
+      if (void 0 === kT) return !0;
+      let WT = !1;
+      return kT.broadcastPending.delete(iT) ? WT = !0 : kT.sentBroadcast.delete(iT) && kT.broadcastDeletes.add(iT), oT.forEachActiveView((TT => {
+        const oT = kT.pendingByView.get(TT.id);
+        if (oT?.has(iT)) return oT.delete(iT), void(WT = !0);
+        const XT = kT.sentByView.get(TT.id);
+        if (XT?.has(iT)) {
+          XT.delete(iT);
+          let oT = TT.changes.get(IT);
+          void 0 === oT && (oT = new Map, TT.changes.set(IT, oT)), oT.set(iT, zT.DELETE)
         }
-      })), RY
+      })), WT
     }
 
-    function Hr(YY, rY) {
-      const DY = YY._stream?.pendingByView;
-      if (void 0 === DY) return !1;
-      for (const [FY, AY] of DY)
-        if (AY.size > 0 && void 0 !== rY.activeViews.get(FY)?.deref()) return !0;
+    function Co(TT, oT) {
+      const IT = TT._stream?.pendingByView;
+      if (void 0 === IT) return !1;
+      for (const [iT, zT] of IT)
+        if (zT.size > 0 && void 0 !== oT.activeViews.get(iT)?.deref()) return !0;
       return !1
     }
 
-    function zr(YY) {
-      const rY = YY._stream;
-      return void 0 !== rY && (rY.broadcastPending.size > 0 || rY.broadcastDeletes.size > 0)
+    function jo(TT) {
+      const oT = TT._stream;
+      return void 0 !== oT && (oT.broadcastPending.size > 0 || oT.broadcastDeletes.size > 0)
     }
 
-    function Zr(YY, rY, DY) {
-      const FY = Br(YY);
-      let AY = FY.pendingByView.get(rY);
-      void 0 === AY && (AY = new Set, FY.pendingByView.set(rY, AY)), AY.add(DY)
+    function Jo(TT, oT, IT) {
+      const iT = vo(TT);
+      let zT = iT.pendingByView.get(oT);
+      void 0 === zT && (zT = new Set, iT.pendingByView.set(oT, zT)), zT.add(IT)
     }
 
-    function Cr(YY, rY) {
-      const DY = YY._stream;
-      void 0 !== DY && (DY.pendingByView.delete(rY), DY.sentByView.delete(rY), DY.priorityByView?.delete(rY))
+    function Uo(TT, oT) {
+      const IT = TT._stream;
+      void 0 !== IT && (IT.pendingByView.delete(oT), IT.sentByView.delete(oT), IT.priorityByView?.delete(oT))
     }
-    const fr = {
+    const ao = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function jr(YY) {
-      if (null == YY || "object" !== typeof YY) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function Yo(TT) {
+      if (null == TT || "object" !== typeof TT) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: rY,
-        max: DY
-      } = YY;
-      if ("number" !== typeof rY || "number" !== typeof DY || !(DY > rY) || !Number.isFinite(rY) || !Number.isFinite(DY)) throw new Error(`t.quantized(): require finite min < max (got min=${rY}, max=${DY}).`);
-      const FY = YY.bits ?? 16;
-      if (8 !== FY && 16 !== FY && 32 !== FY) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${FY}).`);
-      const AY = YY.mode ?? "clamp";
-      if ("clamp" !== AY && "wrap" !== AY) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(AY)}).`);
-      const IY = "wrap" === AY,
-        RY = Math.pow(2, FY);
+        min: oT,
+        max: IT
+      } = TT;
+      if ("number" !== typeof oT || "number" !== typeof IT || !(IT > oT) || !Number.isFinite(oT) || !Number.isFinite(IT)) throw new Error(`t.quantized(): require finite min < max (got min=${oT}, max=${IT}).`);
+      const iT = TT.bits ?? 16;
+      if (8 !== iT && 16 !== iT && 32 !== iT) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${iT}).`);
+      const zT = TT.mode ?? "clamp";
+      if ("clamp" !== zT && "wrap" !== zT) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(zT)}).`);
+      const kT = "wrap" === zT,
+        WT = Math.pow(2, iT);
       return {
-        min: rY,
-        max: DY,
-        bits: FY,
-        wrap: IY,
-        wire: fr[FY],
-        range: DY - rY,
-        span: IY ? RY : rY === -DY ? RY - 2 : RY - 1
+        min: oT,
+        max: IT,
+        bits: iT,
+        wrap: kT,
+        wire: ao[iT],
+        range: IT - oT,
+        span: kT ? WT : oT === -IT ? WT - 2 : WT - 1
       }
     }
 
-    function hr(YY) {
-      return null !== YY && "object" === typeof YY && void 0 !== YY.quantized
+    function Qo(TT) {
+      return null !== TT && "object" === typeof TT && void 0 !== TT.quantized
     }
 
-    function dr(YY, rY) {
-      if (YY.wrap) {
-        if (!Number.isFinite(rY)) return 0;
-        const DY = YY.range;
-        let FY = (rY - YY.min) % DY;
-        FY < 0 && (FY += DY);
-        const AY = YY.span;
-        return Math.floor(FY / DY * AY + .5) % AY
+    function Oo(TT, oT) {
+      if (TT.wrap) {
+        if (!Number.isFinite(oT)) return 0;
+        const IT = TT.range;
+        let iT = (oT - TT.min) % IT;
+        iT < 0 && (iT += IT);
+        const zT = TT.span;
+        return Math.floor(iT / IT * zT + .5) % zT
       }
-      if (rY !== rY) return 0;
-      const DY = rY < YY.min ? YY.min : rY > YY.max ? YY.max : rY;
-      return Math.floor((DY - YY.min) / YY.range * YY.span + .5)
+      if (oT !== oT) return 0;
+      const IT = oT < TT.min ? TT.min : oT > TT.max ? TT.max : oT;
+      return Math.floor((IT - TT.min) / TT.range * TT.span + .5)
     }
 
-    function Jr(YY, rY) {
-      return YY.min + rY / YY.span * YY.range
+    function Ho(TT, oT) {
+      return TT.min + oT / TT.span * TT.range
     }
 
-    function Mr(YY) {
-      const rY = rr[YY.wire];
-      return (DY, FY, AY) => rY(DY, dr(YY, FY), AY)
+    function no(TT) {
+      const oT = oo[TT.wire];
+      return (IT, iT, zT) => oT(IT, Oo(TT, iT), zT)
     }
-    class wr {
+    class qo {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(YY) {
-        const rY = Object.getPrototypeOf(YY);
-        if (rY !== KF) {
-          let DY = wr.inheritedTypes.get(rY);
-          DY || (DY = new Set, wr.inheritedTypes.set(rY, DY)), DY.add(YY)
+      static register(TT) {
+        const oT = Object.getPrototypeOf(TT);
+        if (oT !== Ji) {
+          let IT = qo.inheritedTypes.get(oT);
+          IT || (IT = new Set, qo.inheritedTypes.set(oT, IT)), IT.add(TT)
         }
       }
-      static cache(YY) {
-        let rY = wr.cachedContexts.get(YY);
-        return rY || (rY = new wr(YY), wr.cachedContexts.set(YY, rY)), rY
+      static cache(TT) {
+        let oT = qo.cachedContexts.get(TT);
+        return oT || (oT = new qo(TT), qo.cachedContexts.set(TT, oT)), oT
       }
-      constructor(YY) {
-        YY && this.discoverTypes(YY)
+      constructor(TT) {
+        TT && this.discoverTypes(TT)
       }
-      has(YY) {
-        return this.schemas.has(YY)
+      has(TT) {
+        return this.schemas.has(TT)
       }
-      get(YY) {
-        return this.types[YY]
+      get(TT) {
+        return this.types[TT]
       }
-      add(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(YY) && (this.types[rY] = YY, null == YY[Symbol.metadata] && xr.initialize(YY), this.schemas.set(YY, rY), !0)
+      add(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(TT) && (this.types[oT] = TT, null == TT[Symbol.metadata] && yo.initialize(TT), this.schemas.set(TT, oT), !0)
       }
-      getTypeId(YY) {
-        return this.schemas.get(YY)
+      getTypeId(TT) {
+        return this.schemas.get(TT)
       }
-      discoverTypes(YY) {
-        if (!this.add(YY)) return;
-        wr.inheritedTypes.get(YY)?.forEach((YY => {
-          this.discoverTypes(YY)
+      discoverTypes(TT) {
+        if (!this.add(TT)) return;
+        qo.inheritedTypes.get(TT)?.forEach((TT => {
+          this.discoverTypes(TT)
         }));
-        let rY = YY;
+        let oT = TT;
         for (;
-          (rY = Object.getPrototypeOf(rY)) && rY !== KF && rY !== Function.prototype;) this.discoverTypes(rY);
-        const DY = YY[Symbol.metadata];
-        (DY[KY] || DY[jY]) && (this.hasFilters = !0);
-        for (const FY in DY) {
-          const YY = DY[FY].type;
-          if ("string" !== typeof YY && !hr(YY))
-            if ("function" === typeof YY) this.discoverTypes(YY);
+          (oT = Object.getPrototypeOf(oT)) && oT !== Ji && oT !== Function.prototype;) this.discoverTypes(oT);
+        const IT = TT[Symbol.metadata];
+        (IT[fT] || IT[YT]) && (this.hasFilters = !0);
+        for (const iT in IT) {
+          const TT = IT[iT].type;
+          if ("string" !== typeof TT && !Qo(TT))
+            if ("function" === typeof TT) this.discoverTypes(TT);
             else {
-              const rY = Object.values(YY)[0];
-              if ("string" === typeof rY) continue;
-              this.discoverTypes(rY)
+              const oT = Object.values(TT)[0];
+              if ("string" === typeof oT) continue;
+              this.discoverTypes(oT)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function br(YY) {
-      const rY = qr(YY);
-      return rY ? {
-        complexTypeKlass: Vr[rY],
-        childType: YY[rY]
+    function Zo(TT) {
+      const oT = to(TT);
+      return oT ? {
+        complexTypeKlass: ho[oT],
+        childType: TT[oT]
       } : {
         complexTypeKlass: !1,
-        childType: YY
+        childType: TT
       }
     }
 
-    function Xr(YY, rY) {
-      const DY = pr(YY),
-        FY = qr(DY),
-        AY = FY && qr(DY[FY]);
-      if (AY) throw new Error(`${rY?`${rY}: `:""}@colyseus/schema: nested collections are not supported ("${FY}" of "${AY}"). Collections can only hold primitive types or Schema classes, wrap the inner ${AY} in a Schema class.`);
-      return DY
+    function so(TT, oT) {
+      const IT = Go(TT),
+        iT = to(IT),
+        zT = iT && to(IT[iT]);
+      if (zT) throw new Error(`${oT?`${oT}: `:""}@colyseus/schema: nested collections are not supported ("${iT}" of "${zT}"). Collections can only hold primitive types or Schema classes, wrap the inner ${zT} in a Schema class.`);
+      return IT
     }
 
-    function qr(YY) {
-      return "object" === typeof YY && null !== YY ? Object.keys(YY).find((YY => void 0 !== Vr[YY])) : void 0
+    function to(TT) {
+      return "object" === typeof TT && null !== TT ? Object.keys(TT).find((TT => void 0 !== ho[TT])) : void 0
     }
 
-    function pr(YY) {
-      if ("object" !== typeof YY || null === YY) return YY;
-      if (Array.isArray(YY)) return {
-        array: pr(YY[0])
+    function Go(TT) {
+      if ("object" !== typeof TT || null === TT) return TT;
+      if (Array.isArray(TT)) return {
+        array: Go(TT[0])
       };
-      const rY = function(YY) {
-        const rY = Object.keys(YY),
-          DY = rY.filter((YY => /\d+/.test(YY)));
-        if (DY.length > 0 && DY.length === rY.length / 2 && YY[YY[DY[0]]] == DY[0]) return "number";
-        if (rY.length > 0 && rY.every((rY => YY[rY] === rY))) return "string"
-      }(YY);
-      if (rY) return rY;
-      if (hr(YY)) return "string" === typeof YY.quantized.wire ? YY : {
-        quantized: jr(YY.quantized)
+      const oT = function(TT) {
+        const oT = Object.keys(TT),
+          IT = oT.filter((TT => /\d+/.test(TT)));
+        if (IT.length > 0 && IT.length === oT.length / 2 && TT[TT[IT[0]]] == IT[0]) return "number";
+        if (oT.length > 0 && oT.every((oT => TT[oT] === oT))) return "string"
+      }(TT);
+      if (oT) return oT;
+      if (Qo(TT)) return "string" === typeof TT.quantized.wire ? TT : {
+        quantized: Yo(TT.quantized)
       };
-      if (void 0 !== YY.type) return pr(YY.type);
-      const DY = qr(YY);
-      return DY && (YY[DY] = pr(YY[DY])), YY
+      if (void 0 !== TT.type) return Go(TT.type);
+      const IT = to(TT);
+      return IT && (TT[IT] = Go(TT[IT])), TT
     }
-    const kr = [cY, zY, ZY, CY, fY, jY, NY];
+    const po = [ET, jT, JT, UT, aT, YT, uT];
 
-    function Gr(YY, rY, DY) {
-      YY[rY] || Object.defineProperty(YY, rY, {
+    function bo(TT, oT, IT) {
+      TT[oT] || Object.defineProperty(TT, oT, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), YY[rY].push(DY)
+      }), TT[oT].push(IT)
     }
-    const xr = {
-        addField(YY, rY, DY, FY, AY) {
-          if (rY >= 63) throw new Error(`Can't define field '${DY}'.\nSchema instances may only have up to 63 fields.`);
-          YY[rY] = Object.assign(YY[rY] || {}, {
-            type: FY,
-            index: rY,
-            name: DY
-          }), Object.defineProperty(YY, TY, {
-            value: YY[TY] || {},
+    const yo = {
+        addField(TT, oT, IT, iT, zT) {
+          if (oT >= 63) throw new Error(`Can't define field '${IT}'.\nSchema instances may only have up to 63 fields.`);
+          TT[oT] = Object.assign(TT[oT] || {}, {
+            type: iT,
+            index: oT,
+            name: IT
+          }), Object.defineProperty(TT, eT, {
+            value: TT[eT] || {},
             enumerable: !1,
             configurable: !0
-          }), YY[TY][DY] = AY || {
+          }), TT[eT][IT] = zT || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(YY, BY, {
-            value: rY,
+          }, Object.defineProperty(TT, vT, {
+            value: oT,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(YY, DY, {
-            value: rY,
+          }), Object.defineProperty(TT, IT, {
+            value: oT,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof YY[rY].type || hr(YY[rY].type) || (void 0 === YY[cY] && Object.defineProperty(YY, cY, {
+          }), "string" === typeof TT[oT].type || Qo(TT[oT].type) || (void 0 === TT[ET] && Object.defineProperty(TT, ET, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), YY[cY].push(rY));
-          const IY = YY[rY].type;
-          if (IY && "object" === typeof IY && void 0 !== IY.stream) {
-            if (void 0 !== IY.array) throw new Error(er);
-            YY[rY].stream = !0, YY[jY] || Object.defineProperty(YY, jY, {
+          }), TT[ET].push(oT));
+          const kT = TT[oT].type;
+          if (kT && "object" === typeof kT && void 0 !== kT.stream) {
+            if (void 0 !== kT.array) throw new Error(Ro);
+            TT[oT].stream = !0, TT[YT] || Object.defineProperty(TT, YT, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), YY[jY].includes(rY) || YY[jY].push(rY);
-            const AY = FY?.priority;
-            "function" === typeof AY && xr.setStreamPriority(YY, DY, AY)
+            }), TT[YT].includes(oT) || TT[YT].push(oT);
+            const zT = iT?.priority;
+            "function" === typeof zT && yo.setStreamPriority(TT, IT, zT)
           }
         },
-        setTag(YY, rY, DY) {
-          const FY = YY[rY];
-          if (YY[FY].tag = DY, YY[KY] || (Object.defineProperty(YY, KY, {
+        setTag(TT, oT, IT) {
+          const iT = TT[oT];
+          if (TT[iT].tag = IT, TT[fT] || (Object.defineProperty(TT, fT, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(YY, HY, {
+            }), Object.defineProperty(TT, CT, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), YY[KY].push(FY), DY < 0) YY[HY][DY] || (YY[HY][DY] = []), YY[HY][DY].push(FY);
+            })), TT[fT].push(iT), IT < 0) TT[CT][IT] || (TT[CT][IT] = []), TT[CT][IT].push(iT);
           else
-            for (let AY = DY; AY > 0; AY &= AY - 1) {
-              const rY = AY & -AY;
-              YY[HY][rY] || (YY[HY][rY] = []), YY[HY][rY].push(FY)
+            for (let zT = IT; zT > 0; zT &= zT - 1) {
+              const oT = zT & -zT;
+              TT[CT][oT] || (TT[CT][oT] = []), TT[CT][oT].push(iT)
             }
         },
-        setUnreliable(YY, rY) {
-          const DY = YY[rY];
-          if ("string" !== typeof YY[DY].type) throw new Error(`@unreliable cannot be applied to ref-type field "${rY}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          YY[DY].unreliable = !0, YY[zY] || Object.defineProperty(YY, zY, {
+        setUnreliable(TT, oT) {
+          const IT = TT[oT];
+          if ("string" !== typeof TT[IT].type) throw new Error(`@unreliable cannot be applied to ref-type field "${oT}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          TT[IT].unreliable = !0, TT[jT] || Object.defineProperty(TT, jT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), YY[zY].push(DY)
+          }), TT[jT].push(IT)
         },
-        setPatchOnly(YY, rY) {
-          const DY = YY[rY];
-          if (YY[DY].fullStateOnly) throw new Error(`field "${rY}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          YY[DY].patchOnly = !0, Gr(YY, ZY, DY), Gr(YY, CY, DY)
+        setPatchOnly(TT, oT) {
+          const IT = TT[oT];
+          if (TT[IT].fullStateOnly) throw new Error(`field "${oT}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          TT[IT].patchOnly = !0, bo(TT, JT, IT), bo(TT, UT, IT)
         },
-        setDeprecated(YY, rY) {
-          const DY = YY[rY];
-          YY[DY].deprecated = !0, Gr(YY, CY, DY), Object.defineProperty(YY, DY, {
-            value: YY[DY],
+        setDeprecated(TT, oT) {
+          const IT = TT[oT];
+          TT[IT].deprecated = !0, bo(TT, UT, IT), Object.defineProperty(TT, IT, {
+            value: TT[IT],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(YY, rY) {
-          const DY = YY[rY];
-          if (YY[DY].patchOnly) throw new Error(`field "${rY}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          YY[DY].fullStateOnly = !0, Gr(YY, fY, DY)
+        setFullStateOnly(TT, oT) {
+          const IT = TT[oT];
+          if (TT[IT].patchOnly) throw new Error(`field "${oT}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          TT[IT].fullStateOnly = !0, bo(TT, aT, IT)
         },
-        setStream(YY, rY) {
-          const DY = YY[rY];
-          YY[DY].stream = !0, YY[jY] || Object.defineProperty(YY, jY, {
+        setStream(TT, oT) {
+          const IT = TT[oT];
+          TT[IT].stream = !0, TT[YT] || Object.defineProperty(TT, YT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), YY[jY].push(DY)
+          }), TT[YT].push(IT)
         },
-        setStreamPriority(YY, rY, DY) {
-          const FY = YY[rY];
-          YY[hY] || Object.defineProperty(YY, hY, {
+        setStreamPriority(TT, oT, IT) {
+          const iT = TT[oT];
+          TT[QT] || Object.defineProperty(TT, QT, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), YY[hY][FY] = DY
+          }), TT[QT][iT] = IT
         },
-        getStreamPriority: (YY, rY) => YY?.[hY]?.[rY],
-        defineField(YY, rY, DY, FY, AY) {
-          const IY = Xr(AY, `${YY.name}.${FY}`),
+        getStreamPriority: (TT, oT) => TT?.[QT]?.[oT],
+        defineField(TT, oT, IT, iT, zT) {
+          const kT = so(zT, `${TT.name}.${iT}`),
             {
-              complexTypeKlass: RY,
-              childType: OY
-            } = br(IY);
-          xr.addField(rY, DY, FY, IY, lF(FY, DY, OY, RY)), rY[TY][FY] && Object.defineProperty(YY.prototype, FY, rY[TY][FY]), ("string" === typeof IY || hr(IY)) && (rY[NY] || Object.defineProperty(rY, NY, {
+              complexTypeKlass: WT,
+              childType: XT
+            } = Zo(kT);
+          yo.addField(oT, IT, iT, kT, ui(iT, IT, XT, WT)), oT[eT][iT] && Object.defineProperty(TT.prototype, iT, oT[eT][iT]), ("string" === typeof kT || Qo(kT)) && (oT[uT] || Object.defineProperty(oT, uT, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), rY[NY][DY] = "string" === typeof IY ? rr[IY] : Mr(IY.quantized))
+          }), oT[uT][IT] = "string" === typeof kT ? oo[kT] : no(kT.quantized))
         },
-        setFields(YY, rY) {
-          const DY = YY.prototype.constructor;
-          wr.register(DY);
-          const FY = Object.getPrototypeOf(DY),
-            AY = FY && FY[Symbol.metadata],
-            IY = xr.initialize(DY);
-          DY[gY] || (DY[gY] = KF[gY]), DY[aY] || (DY[aY] = KF[aY]), DY[vY] || (DY[vY] = KF[vY]), DY.prototype.toJSON || (DY.prototype.toJSON = KF.prototype.toJSON);
-          let RY = IY[BY] ?? (AY && AY[BY]) ?? -1;
-          RY++, IY[NY] || Object.defineProperty(IY, NY, {
-            value: AY?.[NY] ? [...AY[NY]] : [],
+        setFields(TT, oT) {
+          const IT = TT.prototype.constructor;
+          qo.register(IT);
+          const iT = Object.getPrototypeOf(IT),
+            zT = iT && iT[Symbol.metadata],
+            kT = yo.initialize(IT);
+          IT[BT] || (IT[BT] = Ji[BT]), IT[FT] || (IT[FT] = Ji[FT]), IT[ST] || (IT[ST] = Ji[ST]), IT.prototype.toJSON || (IT.prototype.toJSON = Ji.prototype.toJSON);
+          let WT = kT[vT] ?? (zT && zT[vT]) ?? -1;
+          WT++, kT[uT] || Object.defineProperty(kT, uT, {
+            value: zT?.[uT] ? [...zT[uT]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const OY in rY) {
-            if (void 0 !== IY[OY]) throw new Error(`@colyseus/schema: Duplicate '${OY}' definition on '${DY.name||"(anonymous)"}'.`);
-            xr.defineField(DY, IY, RY, OY, rY[OY]), RY++
+          for (const XT in oT) {
+            if (void 0 !== kT[XT]) throw new Error(`@colyseus/schema: Duplicate '${XT}' definition on '${IT.name||"(anonymous)"}'.`);
+            yo.defineField(IT, kT, WT, XT, oT[XT]), WT++
           }
-          return YY
+          return TT
         },
-        isDeprecated: (YY, rY) => !0 === YY[rY].deprecated,
-        initialize(YY) {
-          const rY = Object.getPrototypeOf(YY),
-            DY = rY[Symbol.metadata];
-          let FY = YY[Symbol.metadata] ?? Object.create(null);
-          if (rY !== KF && FY === DY && (FY = Object.create(null), DY)) {
-            Object.setPrototypeOf(FY, DY), Object.defineProperty(FY, BY, {
-              value: DY[BY],
+        isDeprecated: (TT, oT) => !0 === TT[oT].deprecated,
+        initialize(TT) {
+          const oT = Object.getPrototypeOf(TT),
+            IT = oT[Symbol.metadata];
+          let iT = TT[Symbol.metadata] ?? Object.create(null);
+          if (oT !== Ji && iT === IT && (iT = Object.create(null), IT)) {
+            Object.setPrototypeOf(iT, IT), Object.defineProperty(iT, vT, {
+              value: IT[vT],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== DY[KY] && (Object.defineProperty(FY, KY, {
-              value: [...DY[KY]],
+            }), void 0 !== IT[fT] && (Object.defineProperty(iT, fT, {
+              value: [...IT[fT]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(FY, HY, {
+            }), Object.defineProperty(iT, CT, {
               value: {
-                ...DY[HY]
+                ...IT[CT]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const YY of kr) {
-              const rY = DY[YY];
-              void 0 !== rY && Object.defineProperty(FY, YY, {
-                value: [...rY],
+            for (const TT of po) {
+              const oT = IT[TT];
+              void 0 !== oT && Object.defineProperty(iT, TT, {
+                value: [...oT],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(FY, TY, {
+            Object.defineProperty(iT, eT, {
               value: {
-                ...DY[TY]
+                ...IT[eT]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(YY, Symbol.metadata, {
-            value: FY,
+          return Object.defineProperty(TT, Symbol.metadata, {
+            value: iT,
             writable: !1,
             configurable: !0
-          }), FY
+          }), iT
         },
-        isValidInstance: YY => YY.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(YY.constructor[Symbol.metadata], BY),
-        getFields(YY) {
-          const rY = YY[Symbol.metadata],
-            DY = {};
-          for (let FY = 0; FY <= rY[BY]; FY++) DY[rY[FY].name] = rY[FY].type;
-          return DY
+        isValidInstance: TT => TT.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(TT.constructor[Symbol.metadata], vT),
+        getFields(TT) {
+          const oT = TT[Symbol.metadata],
+            IT = {};
+          for (let iT = 0; iT <= oT[vT]; iT++) IT[oT[iT].name] = oT[iT].type;
+          return IT
         },
-        hasViewTagAtIndex: (YY, rY) => YY?.[KY]?.includes(rY),
-        hasUnreliableAtIndex: (YY, rY) => YY?.[zY]?.includes(rY),
-        hasPatchOnlyAtIndex: (YY, rY) => YY?.[ZY]?.includes(rY),
-        hasFullStateOnlyAtIndex: (YY, rY) => YY?.[fY]?.includes(rY),
-        hasStreamAtIndex: (YY, rY) => YY?.[jY]?.includes(rY)
+        hasViewTagAtIndex: (TT, oT) => TT?.[fT]?.includes(oT),
+        hasUnreliableAtIndex: (TT, oT) => TT?.[jT]?.includes(oT),
+        hasPatchOnlyAtIndex: (TT, oT) => TT?.[JT]?.includes(oT),
+        hasFullStateOnlyAtIndex: (TT, oT) => TT?.[aT]?.includes(oT),
+        hasStreamAtIndex: (TT, oT) => TT?.[YT]?.includes(oT)
       },
-      nr = (YY, rY, DY) => YY(rY, DY);
-    class Pr {
+      No = (TT, oT, IT) => TT(oT, IT);
+    class Po {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(YY) {
-        this.ops = new Uint8Array(Math.max(YY + 1, 1))
+      constructor(TT) {
+        this.ops = new Uint8Array(Math.max(TT + 1, 1))
       }
-      record(YY, rY) {
-        const DY = this.ops[YY];
-        0 === DY ? this.ops[YY] = rY : (DY === AY.DELETE || DY === AY.ADD && rY === AY.DELETE_AND_ADD) && (this.ops[YY] = AY.DELETE_AND_ADD), YY < 32 ? this.dirtyLow |= 1 << YY : this.dirtyHigh |= 1 << YY - 32
+      record(TT, oT) {
+        const IT = this.ops[TT];
+        0 === IT ? this.ops[TT] = oT : (IT === zT.DELETE || IT === zT.ADD && oT === zT.DELETE_AND_ADD) && (this.ops[TT] = zT.DELETE_AND_ADD), TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      recordDelete(YY, rY) {
-        this.ops[YY] = rY, YY < 32 ? this.dirtyLow |= 1 << YY : this.dirtyHigh |= 1 << YY - 32
+      recordDelete(TT, oT) {
+        this.ops[TT] = oT, TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      recordRaw(YY, rY) {
-        this.record(YY, rY)
+      recordRaw(TT, oT) {
+        this.record(TT, oT)
       }
-      operationAt(YY) {
-        const rY = this.ops[YY];
-        return 0 === rY ? void 0 : rY
+      operationAt(TT) {
+        const oT = this.ops[TT];
+        return 0 === oT ? void 0 : oT
       }
-      setOperationAt(YY, rY) {
-        this.ops[YY] = rY
+      setOperationAt(TT, oT) {
+        this.ops[TT] = oT
       }
-      forEach(YY) {
-        this.forEachWithCtx(YY, nr)
+      forEach(TT) {
+        this.forEachWithCtx(TT, No)
       }
-      forEachWithCtx(YY, rY) {
-        let DY = this.dirtyLow,
-          FY = this.dirtyHigh;
-        const AY = this.ops;
-        for (; 0 !== DY;) {
-          const FY = DY & -DY,
-            IY = 31 - Math.clz32(FY);
-          DY ^= FY, rY(YY, IY, AY[IY])
+      forEachWithCtx(TT, oT) {
+        let IT = this.dirtyLow,
+          iT = this.dirtyHigh;
+        const zT = this.ops;
+        for (; 0 !== IT;) {
+          const iT = IT & -IT,
+            kT = 31 - Math.clz32(iT);
+          IT ^= iT, oT(TT, kT, zT[kT])
         }
-        for (; 0 !== FY;) {
-          const DY = FY & -FY,
-            IY = 31 - Math.clz32(DY) + 32;
-          FY ^= DY, rY(YY, IY, AY[IY])
+        for (; 0 !== iT;) {
+          const IT = iT & -iT,
+            kT = 31 - Math.clz32(IT) + 32;
+          iT ^= IT, oT(TT, kT, zT[kT])
         }
       }
       size() {
-        return Lr(this.dirtyLow) + Lr(this.dirtyHigh)
+        return TI(this.dirtyLow) + TI(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class Ur {
-      ty = new Map;
+    class Vo {
+      Nc = new Map;
       pureOps = [];
-      record(YY, rY) {
-        const DY = this.ty.get(YY);
-        void 0 === DY ? this.ty.set(YY, rY) : (DY === AY.DELETE || DY === AY.ADD && rY === AY.DELETE_AND_ADD) && this.ty.set(YY, AY.DELETE_AND_ADD)
+      record(TT, oT) {
+        const IT = this.Nc.get(TT);
+        void 0 === IT ? this.Nc.set(TT, oT) : (IT === zT.DELETE || IT === zT.ADD && oT === zT.DELETE_AND_ADD) && this.Nc.set(TT, zT.DELETE_AND_ADD)
       }
-      recordDelete(YY, rY) {
-        this.ty.set(YY, rY)
+      recordDelete(TT, oT) {
+        this.Nc.set(TT, oT)
       }
-      recordRaw(YY, rY) {
-        this.ty.set(YY, rY)
+      recordRaw(TT, oT) {
+        this.Nc.set(TT, oT)
       }
-      recordPure(YY) {
-        this.pureOps.push([this.ty.size, YY])
+      recordPure(TT) {
+        this.pureOps.push([this.Nc.size, TT])
       }
-      operationAt(YY) {
-        return this.ty.get(YY)
+      operationAt(TT) {
+        return this.Nc.get(TT)
       }
-      setOperationAt(YY, rY) {
-        this.ty.has(YY) && this.ty.set(YY, rY)
+      setOperationAt(TT, oT) {
+        this.Nc.has(TT) && this.Nc.set(TT, oT)
       }
-      forEach(YY) {
-        this.forEachWithCtx(YY, nr)
+      forEach(TT) {
+        this.forEachWithCtx(TT, No)
       }
-      forEachWithCtx(YY, rY) {
-        const DY = this.pureOps;
-        if (DY.length > 0) {
-          let FY = 0,
-            AY = 0;
-          for (const [IY, RY] of this.ty) {
-            for (; FY < DY.length && DY[FY][0] <= AY;) {
-              const AY = DY[FY++][1];
-              rY(YY, -AY, AY)
+      forEachWithCtx(TT, oT) {
+        const IT = this.pureOps;
+        if (IT.length > 0) {
+          let iT = 0,
+            zT = 0;
+          for (const [kT, WT] of this.Nc) {
+            for (; iT < IT.length && IT[iT][0] <= zT;) {
+              const zT = IT[iT++][1];
+              oT(TT, -zT, zT)
             }
-            rY(YY, IY, RY), AY++
+            oT(TT, kT, WT), zT++
           }
-          for (; FY < DY.length;) {
-            const AY = DY[FY++][1];
-            rY(YY, -AY, AY)
+          for (; iT < IT.length;) {
+            const zT = IT[iT++][1];
+            oT(TT, -zT, zT)
           }
         } else
-          for (const [FY, AY] of this.ty) rY(YY, FY, AY)
+          for (const [iT, zT] of this.Nc) oT(TT, iT, zT)
       }
       size() {
-        return this.ty.size + this.pureOps.length
+        return this.Nc.size + this.pureOps.length
       }
       has() {
-        return this.ty.size > 0 || this.pureOps.length > 0
+        return this.Nc.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.ty.clear(), this.pureOps.length = 0
+        this.Nc.clear(), this.pureOps.length = 0
       }
-      shift(YY) {
-        const rY = new Map;
-        for (const [DY, FY] of this.ty) rY.set(DY + YY, FY);
-        this.ty = rY
+      shift(TT) {
+        const oT = new Map;
+        for (const [IT, iT] of this.Nc) oT.set(IT + TT, iT);
+        this.Nc = oT
       }
     }
 
-    function Lr(YY) {
-      return 16843009 * ((YY = (858993459 & (YY -= YY >>> 1 & 1431655765)) + (YY >>> 2 & 858993459)) + (YY >>> 4) & 252645135) >>> 24
+    function TI(TT) {
+      return 16843009 * ((TT = (858993459 & (TT -= TT >>> 1 & 1431655765)) + (TT >>> 2 & 858993459)) + (TT >>> 4) & 252645135) >>> 24
     }
 
-    function tr(YY) {
-      if (void 0 === YY) return 0;
-      let rY = 0;
-      for (let DY = 0, FY = YY.length; DY < FY; DY++) {
-        const FY = YY[DY];
-        FY < 32 && (rY |= 1 << FY)
+    function oI(TT) {
+      if (void 0 === TT) return 0;
+      let oT = 0;
+      for (let IT = 0, iT = TT.length; IT < iT; IT++) {
+        const iT = TT[IT];
+        iT < 32 && (oT |= 1 << iT)
       }
-      return rY
+      return oT
     }
 
-    function YD(YY) {
-      const rY = YY.constructor;
-      if (Object.prototype.hasOwnProperty.call(rY, eY)) return rY[eY];
-      const DY = rY[Symbol.metadata],
-        FY = xr.isValidInstance(YY),
-        AY = (DY?.[KY]?.length ?? 0) > 0,
-        IY = function(YY) {
-          const rY = [],
-            DY = [],
-            FY = [],
-            AY = [],
-            IY = YY?.[BY];
-          if (void 0 === IY) return {
-            names: rY,
-            types: DY,
-            tags: FY,
-            encoders: AY
+    function II(TT) {
+      const oT = TT.constructor;
+      if (Object.prototype.hasOwnProperty.call(oT, RT)) return oT[RT];
+      const IT = oT[Symbol.metadata],
+        iT = yo.isValidInstance(TT),
+        zT = (IT?.[fT]?.length ?? 0) > 0,
+        kT = function(TT) {
+          const oT = [],
+            IT = [],
+            iT = [],
+            zT = [],
+            kT = TT?.[vT];
+          if (void 0 === kT) return {
+            names: oT,
+            types: IT,
+            tags: iT,
+            encoders: zT
           };
-          const RY = YY[NY];
-          for (let OY = 0; OY <= IY; OY++) {
-            const IY = YY[OY];
-            void 0 !== IY ? (rY[OY] = IY.name, DY[OY] = IY.type, FY[OY] = IY.tag, AY[OY] = RY?.[OY]) : (rY[OY] = void 0, DY[OY] = void 0, FY[OY] = void 0, AY[OY] = void 0)
+          const WT = TT[uT];
+          for (let XT = 0; XT <= kT; XT++) {
+            const kT = TT[XT];
+            void 0 !== kT ? (oT[XT] = kT.name, IT[XT] = kT.type, iT[XT] = kT.tag, zT[XT] = WT?.[XT]) : (oT[XT] = void 0, IT[XT] = void 0, iT[XT] = void 0, zT[XT] = void 0)
           }
           return {
-            names: rY,
-            types: DY,
-            tags: FY,
-            encoders: AY
+            names: oT,
+            types: IT,
+            tags: iT,
+            encoders: zT
           }
-        }(DY),
-        RY = FY && !AY ? void 0 : rY[uY],
-        OY = {
-          encoder: rY[aY],
-          filter: RY,
-          metadata: DY,
-          isSchema: FY,
-          filterBitmask: FY ? tr(DY?.[KY]) : 0,
-          hasAnyFullStateOnly: (DY?.[fY]?.length ?? 0) > 0,
-          hasAnyUnreliable: (DY?.[zY]?.length ?? 0) > 0,
-          hasAnyStream: (DY?.[jY]?.length ?? 0) > 0,
-          hasAnyView: AY,
-          fullStateOnlyBitmask: tr(DY?.[fY]),
-          unreliableBitmask: tr(DY?.[zY]),
-          streamBitmask: tr(DY?.[jY]),
-          names: IY.names,
-          types: IY.types,
-          tags: IY.tags,
-          encoders: IY.encoders
+        }(IT),
+        WT = iT && !zT ? void 0 : oT[DT],
+        XT = {
+          encoder: oT[FT],
+          filter: WT,
+          metadata: IT,
+          isSchema: iT,
+          filterBitmask: iT ? oI(IT?.[fT]) : 0,
+          hasAnyFullStateOnly: (IT?.[aT]?.length ?? 0) > 0,
+          hasAnyUnreliable: (IT?.[jT]?.length ?? 0) > 0,
+          hasAnyStream: (IT?.[YT]?.length ?? 0) > 0,
+          hasAnyView: zT,
+          fullStateOnlyBitmask: oI(IT?.[aT]),
+          unreliableBitmask: oI(IT?.[jT]),
+          streamBitmask: oI(IT?.[YT]),
+          names: kT.names,
+          types: kT.types,
+          tags: kT.tags,
+          encoders: kT.encoders
         };
-      return Object.defineProperty(rY, eY, {
-        value: OY,
+      return Object.defineProperty(oT, RT, {
+        value: XT,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), OY
+      }), XT
     }
 
-    function rD(YY, rY) {
-      if (void 0 !== YY.parentRef && rY(YY.parentRef, YY._parentIndex)) return !0;
-      for (let DY = YY.extraParents; void 0 !== DY; DY = DY.next)
-        if (rY(DY.ref, DY.index)) return !0;
+    function iI(TT, oT) {
+      if (void 0 !== TT.parentRef && oT(TT.parentRef, TT._parentIndex)) return !0;
+      for (let IT = TT.extraParents; void 0 !== IT; IT = IT.next)
+        if (oT(IT.ref, IT.index)) return !0;
       return !1
     }
-    const DD = (YY, rY) => {
-        YY.isFieldUnreliable(rY) ? YY.ensureUnreliableRecorder().record(rY, AY.ADD) : YY.record(rY, AY.ADD)
+    const zI = (TT, oT) => {
+        TT.isFieldUnreliable(oT) ? TT.ensureUnreliableRecorder().record(oT, zT.ADD) : TT.record(oT, zT.ADD)
       },
-      FD = (YY, rY) => YY(rY);
+      kI = (TT, oT) => TT(oT);
 
-    function AD(YY, rY, DY) {
-      const FY = YY.refTarget;
-      if (void 0 !== FY[oY]) {
-        if (YY.isPatchOnly) return;
-        if (Array.isArray(FY.items)) {
-          const YY = FY.items;
-          for (let FY = 0, AY = YY.length; FY < AY; FY++) void 0 !== YY[FY] && DY(rY, FY)
-        } else if (void 0 !== FY.journal)
-          for (const [YY, AY] of FY.journal.keyByIndex) FY.$items.has(AY) && DY(rY, YY);
-        else if (void 0 !== FY.$items)
-          for (const YY of FY.$items.keys()) DY(rY, YY)
+    function WI(TT, oT, IT) {
+      const iT = TT.refTarget;
+      if (void 0 !== iT[MT]) {
+        if (TT.isPatchOnly) return;
+        if (Array.isArray(iT.items)) {
+          const TT = iT.items;
+          for (let iT = 0, zT = TT.length; iT < zT; iT++) void 0 !== TT[iT] && IT(oT, iT)
+        } else if (void 0 !== iT.journal)
+          for (const [TT, zT] of iT.journal.keyByIndex) iT.$items.has(zT) && IT(oT, TT);
+        else if (void 0 !== iT.$items)
+          for (const TT of iT.$items.keys()) IT(oT, TT)
       } else {
-        const AY = YY.metadata;
-        if (!AY) return;
-        const IY = AY[BY] ?? -1,
-          RY = AY[CY],
-          OY = YY.encDescriptor.names;
-        for (let YY = 0; YY <= IY; YY++) {
-          const AY = OY[YY];
-          if (void 0 === AY) continue;
-          if (RY && RY.includes(YY)) continue;
-          const IY = FY[AY];
-          void 0 !== IY && null !== IY && DY(rY, YY)
+        const zT = TT.metadata;
+        if (!zT) return;
+        const kT = zT[vT] ?? -1,
+          WT = zT[UT],
+          XT = TT.encDescriptor.names;
+        for (let TT = 0; TT <= kT; TT++) {
+          const zT = XT[TT];
+          if (void 0 === zT) continue;
+          if (WT && WT.includes(TT)) continue;
+          const kT = iT[zT];
+          void 0 !== kT && null !== kT && IT(oT, TT)
         }
       }
     }
 
-    function ID(YY, rY, DY, FY) {
-      ! function(YY, rY, DY) {
-        if (!rY) return;
-        const FY = rY[QY],
-          AY = !FY._isSchema;
-        let IY;
-        AY ? (rY = FY.parent, DY = FY.parentIndex, IY = rY?.[QY].metadata) : IY = FY.metadata;
-        const RY = (IY?.[ZY]?.includes(DY) ? eD : 0) | (IY?.[fY]?.includes(DY) ? ND : 0),
-          OY = FY.flags & KD | RY,
-          gY = YY.flags;
-        YY.flags = gY | OY;
-        OY & ~gY & ND && (YY.reset(), YY.unreliableRecorder?.reset());
-        const aY = YY.root?.types;
-        if (!aY?.hasFilters) return;
-        const vY = IY?.[KY]?.includes(DY) ?? !1,
-          uY = IY?.[jY]?.includes(DY) ?? !1,
-          sY = FY.isFiltered || vY || uY;
-        if (YY.isFiltered = sY, uY && !AY) {
-          YY.isStreamCollection = !0;
-          const rY = Br(YY.ref);
-          if (void 0 === rY.priority) {
-            const YY = xr.getStreamPriority(IY, DY);
-            void 0 !== YY && (rY.priority = YY)
+    function XI(TT, oT, IT, iT) {
+      ! function(TT, oT, IT) {
+        if (!oT) return;
+        const iT = oT[KT],
+          zT = !iT._isSchema;
+        let kT;
+        zT ? (oT = iT.parent, IT = iT.parentIndex, kT = oT?.[KT].metadata) : kT = iT.metadata;
+        const WT = (kT?.[JT]?.includes(IT) ? vI : 0) | (kT?.[aT]?.includes(IT) ? EI : 0),
+          XT = iT.flags & jI | WT,
+          BT = TT.flags;
+        TT.flags = BT | XT;
+        XT & ~BT & EI && (TT.reset(), TT.unreliableRecorder?.reset());
+        const FT = TT.root?.types;
+        if (!FT?.hasFilters) return;
+        const ST = kT?.[fT]?.includes(IT) ?? !1,
+          DT = kT?.[YT]?.includes(IT) ?? !1,
+          LT = iT.isFiltered || ST || DT;
+        if (TT.isFiltered = LT, DT && !zT) {
+          TT.isStreamCollection = !0;
+          const oT = vo(TT.ref);
+          if (void 0 === oT.priority) {
+            const TT = yo.getStreamPriority(kT, IT);
+            void 0 !== TT && (oT.priority = TT)
           }
-          YY.root?.registerStream(YY.ref)
+          TT.root?.registerStream(TT.ref)
         }
-        if (sY) {
-          const rY = OD(YY);
-          YY.isVisibilitySharedWithParent = FY.isFiltered && rY && !uY && (!vY || AY && IY[DY].tag !== yF)
+        if (LT) {
+          const oT = FI(TT);
+          TT.isVisibilitySharedWithParent = iT.isFiltered && oT && !DT && (!ST || zT && kT[IT].tag !== Mi)
         }
-      }(YY, rY, DY), YY.isFullStateOnly || (YY.has() && YY.root?.enqueueChangeTree(YY), YY.unreliableRecorder?.has() && YY.root?.enqueueUnreliable(YY), YY.has() || YY.unreliableRecorder?.has() || YY.root?.enqueueChangeTree(YY))
+      }(TT, oT, IT), TT.isFullStateOnly || (TT.has() && TT.root?.enqueueChangeTree(TT), TT.unreliableRecorder?.has() && TT.root?.enqueueUnreliable(TT), TT.has() || TT.unreliableRecorder?.has() || TT.root?.enqueueChangeTree(TT))
     }
 
-    function RD(YY) {
-      const rY = YY.pendingFilterRefresh;
-      for (let DY = 0; DY < rY.length; DY++) {
-        const YY = rY[DY];
-        0 !== (YY.flags & cD) && gD(YY)
+    function BI(TT) {
+      const oT = TT.pendingFilterRefresh;
+      for (let IT = 0; IT < oT.length; IT++) {
+        const TT = oT[IT];
+        0 !== (TT.flags & CI) && SI(TT)
       }
-      rY.length = 0
+      oT.length = 0
     }
 
-    function OD(YY) {
-      return YY._isSchema || "string" !== typeof YY.refTarget[oY]
+    function FI(TT) {
+      return TT._isSchema || "string" !== typeof TT.refTarget[MT]
     }
 
-    function gD(YY) {
-      YY.flags &= ~cD;
-      const rY = YY.root;
-      if (void 0 === rY || void 0 === YY.parentRef) return;
-      const DY = OD(YY);
-      let FY = iD(YY, YY.parentRef, YY._parentIndex, DY);
-      for (let IY = YY.extraParents; void 0 !== IY && FY !== sD; IY = IY.next) FY |= iD(YY, IY.ref, IY.index, DY);
-      if (0 === FY) return;
-      YY.isVisibilitySharedWithParent = 0 !== (FY & uD);
-      const AY = 0 === (FY & vD);
-      AY !== YY.isFiltered && (YY.isFiltered = AY, AY || YY.isFullStateOnly || (YY.forEachLiveWithCtx(YY, DD), YY.has() && rY.enqueueChangeTree(YY), YY.unreliableRecorder?.has() && rY.enqueueUnreliable(YY)), YY.forEachChildWithCtx(YY, yD))
+    function SI(TT) {
+      TT.flags &= ~CI;
+      const oT = TT.root;
+      if (void 0 === oT || void 0 === TT.parentRef) return;
+      const IT = FI(TT);
+      let iT = KI(TT, TT.parentRef, TT._parentIndex, IT);
+      for (let kT = TT.extraParents; void 0 !== kT && iT !== cI; kT = kT.next) iT |= KI(TT, kT.ref, kT.index, IT);
+      if (0 === iT) return;
+      TT.isVisibilitySharedWithParent = 0 !== (iT & xI);
+      const zT = 0 === (iT & LI);
+      zT !== TT.isFiltered && (TT.isFiltered = zT, zT || TT.isFullStateOnly || (TT.forEachLiveWithCtx(TT, zI), TT.has() && oT.enqueueChangeTree(TT), TT.unreliableRecorder?.has() && oT.enqueueUnreliable(TT)), TT.forEachChildWithCtx(TT, MI))
     }
-    const aD = 1,
-      vD = 2,
-      uD = 4,
-      sD = aD | vD | uD;
+    const DI = 1,
+      LI = 2,
+      xI = 4,
+      cI = DI | LI | xI;
 
-    function iD(YY, rY, DY, FY) {
-      const AY = rY[QY];
-      if (AY.root !== YY.root || ! function(YY, rY, DY) {
-          const FY = rY.refTarget;
-          if (rY.isArray) {
-            const rY = FY.items,
-              AY = rY[DY];
-            if (void 0 !== AY && AY[QY] === YY) return !0;
-            for (let DY = 0, FY = rY.length; DY < FY; DY++) {
-              const FY = rY[DY];
-              if (void 0 !== FY && FY[QY] === YY) return !0
+    function KI(TT, oT, IT, iT) {
+      const zT = oT[KT];
+      if (zT.root !== TT.root || ! function(TT, oT, IT) {
+          const iT = oT.refTarget;
+          if (oT.isArray) {
+            const oT = iT.items,
+              zT = oT[IT];
+            if (void 0 !== zT && zT[KT] === TT) return !0;
+            for (let IT = 0, iT = oT.length; IT < iT; IT++) {
+              const iT = oT[IT];
+              if (void 0 !== iT && iT[KT] === TT) return !0
             }
             return !1
           }
-          const AY = rY.getValue(DY);
-          return void 0 !== AY && AY[QY] === YY
-        }(YY, AY, DY)) return 0;
-      AY.flags & cD && gD(AY);
-      let IY = aD;
-      if (AY._isSchema) {
-        void 0 !== AY.encDescriptor.tags[DY] || AY.isFieldStream(DY) || (AY.isFiltered ? FY && (IY |= uD) : IY |= vD)
-      } else if (AY.isFiltered) {
-        if (FY && !AY.isStreamCollection) {
-          const YY = AY.parent?.[QY];
-          (YY?._isSchema ? YY.encDescriptor.tags[AY.parentIndex] : void 0) !== yF && (IY |= uD)
+          const zT = oT.getValue(IT);
+          return void 0 !== zT && zT[KT] === TT
+        }(TT, zT, IT)) return 0;
+      zT.flags & CI && SI(zT);
+      let kT = DI;
+      if (zT._isSchema) {
+        void 0 !== zT.encDescriptor.tags[IT] || zT.isFieldStream(IT) || (zT.isFiltered ? iT && (kT |= xI) : kT |= LI)
+      } else if (zT.isFiltered) {
+        if (iT && !zT.isStreamCollection) {
+          const TT = zT.parent?.[KT];
+          (TT?._isSchema ? TT.encDescriptor.tags[zT.parentIndex] : void 0) !== Mi && (kT |= xI)
         }
-      } else IY |= vD;
-      return IY
+      } else kT |= LI;
+      return kT
     }
-    const yD = (YY, rY, DY) => {
-      gD(rY)
+    const MI = (TT, oT, IT) => {
+      SI(oT)
     };
 
-    function QD(YY, rY, DY, FY) {
-      if (YY.addParent(rY, FY), !DY) return;
-      const AY = DY.add(YY);
-      DY !== YY.root && (YY.root = DY, ID(YY, rY, FY));
-      const IY = rY?.[QY];
-      if (void 0 !== IY && void 0 !== IY.subscribedViews && void 0 !== rY[oY] && function(YY, rY, DY, FY) {
-          const AY = YY.subscribedViews;
-          if (void 0 === AY) return;
-          const IY = YY.isStreamCollection,
-            RY = IY ? YY.ref : void 0,
-            OY = IY ? void 0 : DY[QY];
-          for (let gY = 0, aY = AY.length; gY < aY; gY++) {
-            let YY = AY[gY];
-            for (; 0 !== YY;) {
-              const DY = YY & -YY;
-              YY ^= DY;
-              const aY = 32 * gY + (31 - Math.clz32(DY)),
-                vY = FY.activeViews.get(aY),
-                uY = vY?.deref();
-              void 0 !== uY ? IY ? Zr(RY, aY, rY) : void 0 !== OY && uY.markVisible(OY) : AY[gY] &= ~DY
+    function rI(TT, oT, IT, iT) {
+      if (TT.addParent(oT, iT), !IT) return;
+      const zT = IT.add(TT);
+      IT !== TT.root && (TT.root = IT, XI(TT, oT, iT));
+      const kT = oT?.[KT];
+      if (void 0 !== kT && void 0 !== kT.subscribedViews && void 0 !== oT[MT] && function(TT, oT, IT, iT) {
+          const zT = TT.subscribedViews;
+          if (void 0 === zT) return;
+          const kT = TT.isStreamCollection,
+            WT = kT ? TT.ref : void 0,
+            XT = kT ? void 0 : IT[KT];
+          for (let BT = 0, FT = zT.length; BT < FT; BT++) {
+            let TT = zT[BT];
+            for (; 0 !== TT;) {
+              const IT = TT & -TT;
+              TT ^= IT;
+              const FT = 32 * BT + (31 - Math.clz32(IT)),
+                ST = iT.activeViews.get(FT),
+                DT = ST?.deref();
+              void 0 !== DT ? kT ? Jo(WT, FT, oT) : void 0 !== XT && DT.markVisible(XT) : zT[BT] &= ~IT
             }
           }
-        }(IY, FY, YY.ref, DY), AY) {
-        let rY = mD[VD];
-        void 0 === rY && (rY = {
+        }(kT, iT, TT.ref, IT), zT) {
+        let oT = wI[mI];
+        void 0 === oT && (oT = {
           parentRef: void 0,
           root: void 0
-        }, mD[VD] = rY), rY.parentRef = YY.ref, rY.root = DY, VD++, WD(YY, rY, SD), VD--
+        }, wI[mI] = oT), oT.parentRef = TT.ref, oT.root = IT, mI++, gI(TT, oT, eI), mI--
       }
     }
 
-    function oD(YY, rY, DY) {
-      YY(rY, DY)
+    function AI(TT, oT, IT) {
+      TT(oT, IT)
     }
 
-    function WD(YY, rY, DY) {
-      const FY = YY.refTarget;
-      if (FY[oY]) {
-        if ("string" !== typeof FY[oY]) {
-          const YY = FY.items;
-          if (void 0 !== YY)
-            for (let FY = 0, AY = YY.length; FY < AY; FY++) {
-              const AY = YY[FY];
-              AY && DY(rY, AY[QY], FY)
+    function gI(TT, oT, IT) {
+      const iT = TT.refTarget;
+      if (iT[MT]) {
+        if ("string" !== typeof iT[MT]) {
+          const TT = iT.items;
+          if (void 0 !== TT)
+            for (let iT = 0, zT = TT.length; iT < zT; iT++) {
+              const zT = TT[iT];
+              zT && IT(oT, zT[KT], iT)
             } else {
-              const YY = FY.$items,
-                AY = FY._collectionIndexes;
-              for (const FY of YY.keys()) {
-                const IY = YY.get(FY);
-                IY && DY(rY, IY[QY], AY?.[FY] ?? FY)
+              const TT = iT.$items,
+                zT = iT._collectionIndexes;
+              for (const iT of TT.keys()) {
+                const kT = TT.get(iT);
+                kT && IT(oT, kT[KT], zT?.[iT] ?? iT)
               }
             }
         }
       } else {
-        const AY = YY.metadata,
-          IY = AY?.[cY];
-        if (!IY) return;
-        const RY = YY.encDescriptor.names;
-        for (let YY = 0, OY = IY.length; YY < OY; YY++) {
-          const AY = IY[YY],
-            OY = FY[RY[AY]];
-          OY && DY(rY, OY[QY], AY)
+        const zT = TT.metadata,
+          kT = zT?.[ET];
+        if (!kT) return;
+        const WT = TT.encDescriptor.names;
+        for (let TT = 0, XT = kT.length; TT < XT; TT++) {
+          const zT = kT[TT],
+            XT = iT[WT[zT]];
+          XT && IT(oT, XT[KT], zT)
         }
       }
     }
 
-    function ED(YY, rY, DY) {
-      rY.root !== YY ? rY.setRoot(YY) : YY.add(rY)
+    function hI(TT, oT, IT) {
+      oT.root !== TT ? oT.setRoot(TT) : TT.add(oT)
     }
-    const mD = [];
-    let VD = 0;
+    const wI = [];
+    let mI = 0;
 
-    function SD(YY, rY, DY) {
-      if (rY.root === YY.root) return YY.root.add(rY), void YY.root.moveNextToParent(rY);
-      rY.setParent(YY.parentRef, YY.root, DY)
+    function eI(TT, oT, IT) {
+      if (oT.root === TT.root) return TT.root.add(oT), void TT.root.moveNextToParent(oT);
+      oT.setParent(TT.parentRef, TT.root, IT)
     }
 
-    function lD(YY, rY, DY) {
-      const FY = (3 & DY) << 3;
-      return DY < 4 ? YY >>> FY & 255 : rY >>> FY & 255
+    function RI(TT, oT, IT) {
+      const iT = (3 & IT) << 3;
+      return IT < 4 ? TT >>> iT & 255 : oT >>> iT & 255
     }
-    const TD = (YY, rY, DY) => YY(rY, DY);
-    const eD = 16,
-      ND = 32,
-      BD = 128,
-      cD = 256,
-      KD = eD | ND;
-    class HD {
+    const uI = (TT, oT, IT) => TT(oT, IT);
+    const vI = 16,
+      EI = 32,
+      fI = 128,
+      CI = 256,
+      jI = vI | EI;
+    class JI {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(YY) {
-        this.flags = YY ? 1 | this.flags : -2 & this.flags
+      set isFiltered(TT) {
+        this.flags = TT ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(YY) {
-        this.flags = YY ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(TT) {
+        this.flags = TT ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(YY) {
-        this.flags = YY ? 4 | this.flags : -5 & this.flags
+      set isNew(TT) {
+        this.flags = TT ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(YY) {
-        this.flags = YY ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(TT) {
+        this.flags = TT ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & eD)
+        return 0 !== (this.flags & vI)
       }
-      set isPatchOnly(YY) {
-        this.flags = YY ? this.flags | eD : this.flags & ~eD
+      set isPatchOnly(TT) {
+        this.flags = TT ? this.flags | vI : this.flags & ~vI
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & ND)
+        return 0 !== (this.flags & EI)
       }
-      set isFullStateOnly(YY) {
-        this.flags = YY ? this.flags | ND : this.flags & ~ND
+      set isFullStateOnly(TT) {
+        this.flags = TT ? this.flags | EI : this.flags & ~EI
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(YY) {
-        this.flags = YY ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(TT) {
+        this.flags = TT ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & BD)
+        return 0 !== (this.flags & fI)
       }
-      set needsRestage(YY) {
-        this.flags = YY ? this.flags | BD : -129 & this.flags
+      set needsRestage(TT) {
+        this.flags = TT ? this.flags | fI : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new Pr(this.metadata?.[BY] ?? 0) : new Ur), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new Po(this.metadata?.[vT] ?? 0) : new Vo), this.unreliableRecorder
       }
-      isFieldUnreliable(YY) {
-        const rY = this.encDescriptor;
-        return !!rY.hasAnyUnreliable && (YY < 32 ? 0 !== (rY.unreliableBitmask & 1 << YY) : xr.hasUnreliableAtIndex(this.metadata, YY))
+      isFieldUnreliable(TT) {
+        const oT = this.encDescriptor;
+        return !!oT.hasAnyUnreliable && (TT < 32 ? 0 !== (oT.unreliableBitmask & 1 << TT) : yo.hasUnreliableAtIndex(this.metadata, TT))
       }
-      isFieldFullStateOnly(YY) {
+      isFieldFullStateOnly(TT) {
         if (this.isFullStateOnly) return !0;
-        const rY = this.encDescriptor;
-        return !!rY.hasAnyFullStateOnly && (YY < 32 ? 0 !== (rY.fullStateOnlyBitmask & 1 << YY) : xr.hasFullStateOnlyAtIndex(this.metadata, YY))
+        const oT = this.encDescriptor;
+        return !!oT.hasAnyFullStateOnly && (TT < 32 ? 0 !== (oT.fullStateOnlyBitmask & 1 << TT) : yo.hasFullStateOnlyAtIndex(this.metadata, TT))
       }
-      isFieldStream(YY) {
-        const rY = this.encDescriptor;
-        return !!rY.hasAnyStream && (YY < 32 ? 0 !== (rY.streamBitmask & 1 << YY) : xr.hasStreamAtIndex(this.metadata, YY))
+      isFieldStream(TT) {
+        const oT = this.encDescriptor;
+        return !!oT.hasAnyStream && (TT < 32 ? 0 !== (oT.streamBitmask & 1 << TT) : yo.hasStreamAtIndex(this.metadata, TT))
       }
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY;
-        this.ref = YY, this.refTarget = rY;
-        const DY = YD(YY);
-        this.encDescriptor = DY, this.metadata = DY.metadata;
-        const FY = DY.isSchema;
-        if (this._isSchema = FY, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, FY) {
-          const YY = this.metadata?.[BY] ?? 0;
-          YY > 7 && (this.ops = new Uint8Array(YY + 1))
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+        this.ref = TT, this.refTarget = oT;
+        const IT = II(TT);
+        this.encDescriptor = IT, this.metadata = IT.metadata;
+        const iT = IT.isSchema;
+        if (this._isSchema = iT, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, iT) {
+          const TT = this.metadata?.[vT] ?? 0;
+          TT > 7 && (this.ops = new Uint8Array(TT + 1))
         } else this.collDirty = new Map
       }
-      _opAt(YY) {
-        const rY = this.ops;
-        if (void 0 !== rY) return rY[YY];
-        const DY = (3 & YY) << 3;
-        return YY < 4 ? this.opsLow >>> DY & 255 : this.opsHigh >>> DY & 255
+      _opAt(TT) {
+        const oT = this.ops;
+        if (void 0 !== oT) return oT[TT];
+        const IT = (3 & TT) << 3;
+        return TT < 4 ? this.opsLow >>> IT & 255 : this.opsHigh >>> IT & 255
       }
-      _opPut(YY, rY) {
-        const DY = this.ops;
-        if (void 0 !== DY) return void(DY[YY] = rY);
-        const FY = (3 & YY) << 3,
-          AY = ~(255 << FY);
-        YY < 4 ? this.opsLow = this.opsLow & AY | rY << FY : this.opsHigh = this.opsHigh & AY | rY << FY
+      _opPut(TT, oT) {
+        const IT = this.ops;
+        if (void 0 !== IT) return void(IT[TT] = oT);
+        const iT = (3 & TT) << 3,
+          zT = ~(255 << iT);
+        TT < 4 ? this.opsLow = this.opsLow & zT | oT << iT : this.opsHigh = this.opsHigh & zT | oT << iT
       }
-      _markDirty(YY) {
-        YY < 32 ? this.dirtyLow |= 1 << YY : this.dirtyHigh |= 1 << YY - 32
+      _markDirty(TT) {
+        TT < 32 ? this.dirtyLow |= 1 << TT : this.dirtyHigh |= 1 << TT - 32
       }
-      record(YY, rY) {
+      record(TT, oT) {
         if (this._isSchema) {
-          const DY = this._opAt(YY);
-          0 === DY ? this._opPut(YY, rY) : (DY === AY.DELETE || DY === AY.ADD && rY === AY.DELETE_AND_ADD) && this._opPut(YY, AY.DELETE_AND_ADD), this._markDirty(YY)
+          const IT = this._opAt(TT);
+          0 === IT ? this._opPut(TT, oT) : (IT === zT.DELETE || IT === zT.ADD && oT === zT.DELETE_AND_ADD) && this._opPut(TT, zT.DELETE_AND_ADD), this._markDirty(TT)
         } else {
-          const DY = this.collDirty,
-            FY = DY.get(YY);
-          let IY;
-          IY = void 0 === FY ? rY : FY === AY.DELETE || FY === AY.ADD && rY === AY.DELETE_AND_ADD ? AY.DELETE_AND_ADD : FY, DY.set(YY, IY)
+          const IT = this.collDirty,
+            iT = IT.get(TT);
+          let kT;
+          kT = void 0 === iT ? oT : iT === zT.DELETE || iT === zT.ADD && oT === zT.DELETE_AND_ADD ? zT.DELETE_AND_ADD : iT, IT.set(TT, kT)
         }
       }
-      recordDelete(YY, rY) {
-        this._isSchema ? (this._opPut(YY, rY), this._markDirty(YY)) : this.collDirty.set(YY, rY)
+      recordDelete(TT, oT) {
+        this._isSchema ? (this._opPut(TT, oT), this._markDirty(TT)) : this.collDirty.set(TT, oT)
       }
-      recordRaw(YY, rY) {
-        this._isSchema ? (this._opPut(YY, rY), this._markDirty(YY)) : this.collDirty.set(YY, rY)
+      recordRaw(TT, oT) {
+        this._isSchema ? (this._opPut(TT, oT), this._markDirty(TT)) : this.collDirty.set(TT, oT)
       }
-      recordPure(YY) {
+      recordPure(TT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, YY])
+        (this.collPureOps ??= []).push([this.collDirty.size, TT])
       }
-      operationAt(YY) {
+      operationAt(TT) {
         if (this._isSchema) {
-          const rY = this._opAt(YY);
-          return 0 === rY ? void 0 : rY
+          const oT = this._opAt(TT);
+          return 0 === oT ? void 0 : oT
         }
-        return this.collDirty.get(YY)
+        return this.collDirty.get(TT)
       }
-      setOperationAt(YY, rY) {
-        if (this._isSchema) this._opPut(YY, rY);
+      setOperationAt(TT, oT) {
+        if (this._isSchema) this._opPut(TT, oT);
         else {
-          const DY = this.collDirty;
-          DY.has(YY) && DY.set(YY, rY)
+          const IT = this.collDirty;
+          IT.has(TT) && IT.set(TT, oT)
         }
       }
-      forEach(YY) {
-        this.forEachWithCtx(YY, TD)
+      forEach(TT) {
+        this.forEachWithCtx(TT, uI)
       }
-      forEachWithCtx(YY, rY) {
+      forEachWithCtx(TT, oT) {
         if (this._isSchema) {
-          let DY = this.dirtyLow,
-            FY = this.dirtyHigh;
-          const AY = this.ops;
-          if (void 0 !== AY) {
-            for (; 0 !== DY;) {
-              const FY = DY & -DY,
-                IY = 31 - Math.clz32(FY);
-              DY ^= FY, rY(YY, IY, AY[IY])
+          let IT = this.dirtyLow,
+            iT = this.dirtyHigh;
+          const zT = this.ops;
+          if (void 0 !== zT) {
+            for (; 0 !== IT;) {
+              const iT = IT & -IT,
+                kT = 31 - Math.clz32(iT);
+              IT ^= iT, oT(TT, kT, zT[kT])
             }
-            for (; 0 !== FY;) {
-              const DY = FY & -FY,
-                IY = 31 - Math.clz32(DY) + 32;
-              FY ^= DY, rY(YY, IY, AY[IY])
+            for (; 0 !== iT;) {
+              const IT = iT & -iT,
+                kT = 31 - Math.clz32(IT) + 32;
+              iT ^= IT, oT(TT, kT, zT[kT])
             }
           } else {
-            const FY = this.opsLow,
-              AY = this.opsHigh;
-            for (; 0 !== DY;) {
-              const IY = DY & -DY,
-                RY = 31 - Math.clz32(IY);
-              DY ^= IY, rY(YY, RY, lD(FY, AY, RY))
+            const iT = this.opsLow,
+              zT = this.opsHigh;
+            for (; 0 !== IT;) {
+              const kT = IT & -IT,
+                WT = 31 - Math.clz32(kT);
+              IT ^= kT, oT(TT, WT, RI(iT, zT, WT))
             }
           }
           return
         }
-        const DY = this.collDirty,
-          FY = this.collPureOps;
-        if (void 0 !== FY && FY.length > 0) {
-          let AY = 0,
-            IY = 0;
-          for (const [RY, OY] of DY) {
-            for (; AY < FY.length && FY[AY][0] <= IY;) {
-              const DY = FY[AY++][1];
-              rY(YY, -DY, DY)
+        const IT = this.collDirty,
+          iT = this.collPureOps;
+        if (void 0 !== iT && iT.length > 0) {
+          let zT = 0,
+            kT = 0;
+          for (const [WT, XT] of IT) {
+            for (; zT < iT.length && iT[zT][0] <= kT;) {
+              const IT = iT[zT++][1];
+              oT(TT, -IT, IT)
             }
-            rY(YY, RY, OY), IY++
+            oT(TT, WT, XT), kT++
           }
-          for (; AY < FY.length;) {
-            const DY = FY[AY++][1];
-            rY(YY, -DY, DY)
+          for (; zT < iT.length;) {
+            const IT = iT[zT++][1];
+            oT(TT, -IT, IT)
           }
         } else
-          for (const [AY, IY] of DY) rY(YY, AY, IY)
+          for (const [zT, kT] of IT) oT(TT, zT, kT)
       }
       size() {
-        return this._isSchema ? Lr(this.dirtyLow) + Lr(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? TI(this.dirtyLow) + TI(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(YY, rY) {
+      insertAt(TT, oT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const DY = this.collDirty,
-          FY = new Map,
-          IY = !this.paused && !this.isFullStateOnly;
-        if (YY > 0)
-          for (const [AY, RY] of DY) AY < YY && FY.set(AY, RY);
-        if (IY)
-          for (let RY = 0; RY < rY; RY++) FY.set(YY + RY, AY.ADD);
-        for (const [AY, RY] of DY) AY >= YY && FY.set(AY + rY, RY);
-        this.collDirty = FY, IY && this.root?.enqueueChangeTree(this)
+        const IT = this.collDirty,
+          iT = new Map,
+          kT = !this.paused && !this.isFullStateOnly;
+        if (TT > 0)
+          for (const [zT, WT] of IT) zT < TT && iT.set(zT, WT);
+        if (kT)
+          for (let WT = 0; WT < oT; WT++) iT.set(TT + WT, zT.ADD);
+        for (const [zT, WT] of IT) zT >= TT && iT.set(zT + oT, WT);
+        this.collDirty = iT, kT && this.root?.enqueueChangeTree(this)
       }
-      removeAt(YY, rY) {
+      removeAt(TT, oT) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const DY = this.collDirty,
-          FY = YY + rY;
-        let AY = !1;
-        for (const RY of DY.keys())
-          if (RY >= FY) {
-            AY = !0;
+        const IT = this.collDirty,
+          iT = TT + oT;
+        let zT = !1;
+        for (const WT of IT.keys())
+          if (WT >= iT) {
+            zT = !0;
             break
-          } if (!AY) {
-          for (let rY = YY; rY < FY; rY++) DY.delete(rY);
+          } if (!zT) {
+          for (let oT = TT; oT < iT; oT++) IT.delete(oT);
           return
         }
-        const IY = new Map;
-        for (const [RY, OY] of DY) RY < YY ? IY.set(RY, OY) : RY >= FY && IY.set(RY - rY, OY);
-        this.collDirty = IY
+        const kT = new Map;
+        for (const [WT, XT] of IT) WT < TT ? kT.set(WT, XT) : WT >= iT && kT.set(WT - oT, XT);
+        this.collDirty = kT
       }
-      unshift(YY) {
-        this.insertAt(0, YY)
+      unshift(TT) {
+        this.insertAt(0, TT)
       }
-      setRoot(YY) {
-        ! function(YY, rY) {
-          YY.root = rY;
-          const DY = rY.add(YY);
-          ID(YY, YY.parent, YY.parentIndex), DY && WD(YY, rY, ED)
-        }(this, YY)
+      setRoot(TT) {
+        ! function(TT, oT) {
+          TT.root = oT;
+          const IT = oT.add(TT);
+          XI(TT, TT.parent, TT.parentIndex), IT && gI(TT, oT, hI)
+        }(this, TT)
       }
-      setParent(YY, rY, DY) {
-        QD(this, YY, rY, DY)
+      setParent(TT, oT, IT) {
+        rI(this, TT, oT, IT)
       }
-      forEachChild(YY) {
-        WD(this, YY, oD)
+      forEachChild(TT) {
+        gI(this, TT, AI)
       }
-      forEachChildWithCtx(YY, rY) {
-        WD(this, YY, rY)
+      forEachChildWithCtx(TT, oT) {
+        gI(this, TT, oT)
       }
-      forEachLive(YY) {
-        AD(this, YY, FD)
+      forEachLive(TT) {
+        WI(this, TT, kI)
       }
-      forEachLiveWithCtx(YY, rY) {
-        AD(this, YY, rY)
+      forEachLiveWithCtx(TT, oT) {
+        WI(this, TT, oT)
       }
-      operation(YY) {
-        this.paused || this.isFullStateOnly || (this.recordPure(YY), this.root?.enqueueChangeTree(this))
+      operation(TT) {
+        this.paused || this.isFullStateOnly || (this.recordPure(TT), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(YY, rY, DY) {
-        if (!this.paused && !this.isFieldFullStateOnly(YY)) {
-          if (this.isFieldUnreliable(YY) && !this.isNew) {
-            const FY = this.ensureUnreliableRecorder();
-            return DY ? FY.recordRaw(YY, rY) : FY.record(YY, rY), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(TT, oT, IT) {
+        if (!this.paused && !this.isFieldFullStateOnly(TT)) {
+          if (this.isFieldUnreliable(TT) && !this.isNew) {
+            const iT = this.ensureUnreliableRecorder();
+            return IT ? iT.recordRaw(TT, oT) : iT.record(TT, oT), void this.root?.enqueueUnreliable(this)
           }
-          DY ? this.recordRaw(YY, rY) : this.record(YY, rY), this.root?.enqueueChangeTree(this)
+          IT ? this.recordRaw(TT, oT) : this.record(TT, oT), this.root?.enqueueChangeTree(this)
         }
       }
-      change(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AY.ADD;
-        this._routeAndRecord(YY, rY, !1)
+      change(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.ADD;
+        this._routeAndRecord(TT, oT, !1)
       }
-      indexedOperation(YY, rY) {
-        this._routeAndRecord(YY, rY, !0)
+      indexedOperation(TT, oT) {
+        this._routeAndRecord(TT, oT, !0)
       }
-      getChange(YY) {
-        return this.operationAt(YY)
+      getChange(TT) {
+        return this.operationAt(TT)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(YY) {
-        const rY = this.paused;
+      untracked(TT) {
+        const oT = this.paused;
         this.paused = !0;
         try {
-          return YY()
+          return TT()
         } finally {
-          this.paused = rY
+          this.paused = oT
         }
       }
-      markDirty(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AY.ADD;
-        const DY = this.paused;
+      markDirty(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.ADD;
+        const IT = this.paused;
         this.paused = !1;
         try {
-          this.change(YY, rY)
+          this.change(TT, oT)
         } finally {
-          this.paused = DY
+          this.paused = IT
         }
       }
-      getValue(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[sY](YY, rY)
+      getValue(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[LT](TT, oT)
       }
-      delete(YY, rY) {
-        if (void 0 === YY) {
+      delete(TT, oT) {
+        if (void 0 === TT) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${YY}'`)
-          } catch (IA) {
-            console.warn(IA)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${TT}'`)
+          } catch (Fz) {
+            console.warn(Fz)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(YY)) return this.getValue(YY);
-        const DY = this.isFieldUnreliable(YY) && !this.isNew;
-        DY ? this.ensureUnreliableRecorder().recordDelete(YY, rY ?? AY.DELETE) : this.recordDelete(YY, rY ?? AY.DELETE);
-        const FY = this.getValue(YY);
-        return FY && FY[QY] && this.root?.remove(FY[QY]), DY ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), FY
+        if (this.paused || this.isFieldFullStateOnly(TT)) return this.getValue(TT);
+        const IT = this.isFieldUnreliable(TT) && !this.isNew;
+        IT ? this.ensureUnreliableRecorder().recordDelete(TT, oT ?? zT.DELETE) : this.recordDelete(TT, oT ?? zT.DELETE);
+        const iT = this.getValue(TT);
+        return iT && iT[KT] && this.root?.remove(iT[KT]), IT ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), iT
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[EY]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[AT]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[EY]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[AT]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[EY]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[AT]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const YY = YY => {
-          if (YY < 0) return;
-          const rY = this.getValue(YY);
-          rY && rY[QY] && rY[QY].discardAll()
+        const TT = TT => {
+          if (TT < 0) return;
+          const oT = this.getValue(TT);
+          oT && oT[KT] && oT[KT].discardAll()
         };
-        this.forEach(YY), this.unreliableRecorder?.forEach(YY), this.discard()
+        this.forEach(TT), this.unreliableRecorder?.forEach(TT), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(YY, rY) {
-        ! function(YY, rY, DY) {
-          if (YY.parentRef) {
-            if (YY.parentRef[QY] === rY[QY]) return void(YY._parentIndex = DY);
-            if (rD(YY, ((YY, DY) => YY[QY] === rY[QY]))) return void(YY._parentIndex = DY)
+      addParent(TT, oT) {
+        ! function(TT, oT, IT) {
+          if (TT.parentRef) {
+            if (TT.parentRef[KT] === oT[KT]) return void(TT._parentIndex = IT);
+            if (iI(TT, ((TT, IT) => TT[KT] === oT[KT]))) return void(TT._parentIndex = IT)
           }
-          void 0 === YY.parentRef ? (YY.parentRef = rY, YY._parentIndex = DY) : (YY.extraParents = {
-            ref: YY.parentRef,
-            index: YY._parentIndex,
-            next: YY.extraParents
-          }, YY.parentRef = rY, YY._parentIndex = DY)
-        }(this, YY, rY)
+          void 0 === TT.parentRef ? (TT.parentRef = oT, TT._parentIndex = IT) : (TT.extraParents = {
+            ref: TT.parentRef,
+            index: TT._parentIndex,
+            next: TT.extraParents
+          }, TT.parentRef = oT, TT._parentIndex = IT)
+        }(this, TT, oT)
       }
-      setParentIndex(YY, rY) {
-        ! function(YY, rY, DY) {
-          if (void 0 !== YY.extraParents)
-            if (YY.parentRef[QY] !== rY[QY]) {
-              for (let FY = YY.extraParents; void 0 !== FY; FY = FY.next)
-                if (FY.ref[QY] === rY[QY]) return void(FY.index = DY)
-            } else YY._parentIndex = DY;
-          else YY._parentIndex = DY
-        }(this, YY, rY)
+      setParentIndex(TT, oT) {
+        ! function(TT, oT, IT) {
+          if (void 0 !== TT.extraParents)
+            if (TT.parentRef[KT] !== oT[KT]) {
+              for (let iT = TT.extraParents; void 0 !== iT; iT = iT.next)
+                if (iT.ref[KT] === oT[KT]) return void(iT.index = IT)
+            } else TT._parentIndex = IT;
+          else TT._parentIndex = IT
+        }(this, TT, oT)
       }
       removeParent() {
-        return function(YY, rY) {
-          if (YY.parentRef && YY.parentRef[QY] === rY[QY]) return YY.extraParents ? (YY.parentRef = YY.extraParents.ref, YY._parentIndex = YY.extraParents.index, YY.extraParents = YY.extraParents.next) : (YY.parentRef = void 0, YY._parentIndex = void 0), !0;
-          let DY = YY.extraParents,
-            FY = null;
-          for (; DY;) {
-            if (DY.ref[QY] === rY[QY]) return FY ? FY.next = DY.next : YY.extraParents = DY.next, !0;
-            FY = DY, DY = DY.next
+        return function(TT, oT) {
+          if (TT.parentRef && TT.parentRef[KT] === oT[KT]) return TT.extraParents ? (TT.parentRef = TT.extraParents.ref, TT._parentIndex = TT.extraParents.index, TT.extraParents = TT.extraParents.next) : (TT.parentRef = void 0, TT._parentIndex = void 0), !0;
+          let IT = TT.extraParents,
+            iT = null;
+          for (; IT;) {
+            if (IT.ref[KT] === oT[KT]) return iT ? iT.next = IT.next : TT.extraParents = IT.next, !0;
+            iT = IT, IT = IT.next
           }
-          return void 0 === YY.parentRef
+          return void 0 === TT.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(YY) {
-        return function(YY, rY) {
-          if (void 0 !== YY.parentRef && rY(YY.parentRef, YY._parentIndex)) return {
-            ref: YY.parentRef,
-            index: YY._parentIndex
+      findParent(TT) {
+        return function(TT, oT) {
+          if (void 0 !== TT.parentRef && oT(TT.parentRef, TT._parentIndex)) return {
+            ref: TT.parentRef,
+            index: TT._parentIndex
           };
-          for (let DY = YY.extraParents; void 0 !== DY; DY = DY.next)
-            if (rY(DY.ref, DY.index)) return {
-              ref: DY.ref,
-              index: DY.index
+          for (let IT = TT.extraParents; void 0 !== IT; IT = IT.next)
+            if (oT(IT.ref, IT.index)) return {
+              ref: IT.ref,
+              index: IT.index
             }
-        }(this, YY)
+        }(this, TT)
       }
-      hasParent(YY) {
-        return rD(this, YY)
+      hasParent(TT) {
+        return iI(this, TT)
       }
-      indexInParent(YY) {
-        return function(YY, rY) {
-          if (YY.parentRef && YY.parentRef[QY] === rY[QY]) return YY._parentIndex;
-          for (let DY = YY.extraParents; void 0 !== DY; DY = DY.next)
-            if (DY.ref[QY] === rY[QY]) return DY.index
-        }(this, YY)
+      indexInParent(TT) {
+        return function(TT, oT) {
+          if (TT.parentRef && TT.parentRef[KT] === oT[KT]) return TT._parentIndex;
+          for (let IT = TT.extraParents; void 0 !== IT; IT = IT.next)
+            if (IT.ref[KT] === oT[KT]) return IT.index
+        }(this, TT)
       }
       getAllParents() {
-        return function(YY) {
-          const rY = [];
-          YY.parentRef && rY.push({
-            ref: YY.parentRef,
-            index: YY._parentIndex
+        return function(TT) {
+          const oT = [];
+          TT.parentRef && oT.push({
+            ref: TT.parentRef,
+            index: TT._parentIndex
           });
-          let DY = YY.extraParents;
-          for (; DY;) rY.push({
-            ref: DY.ref,
-            index: DY.index
-          }), DY = DY.next;
-          return rY
+          let IT = TT.extraParents;
+          for (; IT;) oT.push({
+            ref: IT.ref,
+            index: IT.index
+          }), IT = IT.next;
+          return oT
         }(this)
       }
     }
-    class zD {
+    class UI {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(YY) {
-        this.ref = YY
+      constructor(TT) {
+        this.ref = TT
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(YY) {
-        return YY()
+      untracked(TT) {
+        return TT()
       }
       markDirty() {}
-      forEachChild(YY) {
-        const rY = this.ref;
-        if (rY[oY]) {
-          if ("string" !== typeof rY[oY])
-            for (const [DY, FY] of rY.entries()) FY && YY(FY[QY], rY._collectionIndexes?.[DY] ?? DY);
+      forEachChild(TT) {
+        const oT = this.ref;
+        if (oT[MT]) {
+          if ("string" !== typeof oT[MT])
+            for (const [IT, iT] of oT.entries()) iT && TT(iT[KT], oT._collectionIndexes?.[IT] ?? IT);
           return
         }
-        const DY = rY.constructor,
-          FY = DY?.[Symbol.metadata];
-        if (!FY) return;
-        const AY = FY[cY] ?? [];
-        for (let IY = 0; IY < AY.length; IY++) {
-          const DY = AY[IY],
-            RY = rY[FY[DY].name];
-          RY && YY(RY[QY], DY)
+        const IT = oT.constructor,
+          iT = IT?.[Symbol.metadata];
+        if (!iT) return;
+        const zT = iT[ET] ?? [];
+        for (let kT = 0; kT < zT.length; kT++) {
+          const IT = zT[kT],
+            WT = oT[iT[IT].name];
+          WT && TT(WT[KT], IT)
         }
       }
-      forEachChildWithCtx(YY, rY) {
-        this.forEachChild(((DY, FY) => rY(YY, DY, FY)))
+      forEachChildWithCtx(TT, oT) {
+        this.forEachChild(((IT, iT) => oT(TT, IT, iT)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function ZD(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY;
-      var DY;
-      Object.defineProperty(YY, QY, {
-        value: (DY = rY, new zD(DY)),
+    function aI(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT;
+      var IT;
+      Object.defineProperty(TT, KT, {
+        value: (IT = oT, new UI(IT)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function CD(YY, rY, DY, FY, IY, RY, gY) {
-      void 0 !== gY ? gY(rY, FY, RY) : "string" === typeof DY ? rr[DY]?.(rY, FY, RY) : null != DY[Symbol.metadata] ? (rr.number(rY, FY[OY], RY), (IY & AY.ADD) === AY.ADD && YY.tryEncodeTypeId(rY, DY, FY.constructor, RY)) : rr.number(rY, FY[OY], RY)
+    function YI(TT, oT, IT, iT, kT, WT, BT) {
+      void 0 !== BT ? BT(oT, iT, WT) : "string" === typeof IT ? oo[IT]?.(oT, iT, WT) : null != IT[Symbol.metadata] ? (oo.number(oT, iT[XT], WT), (kT & zT.ADD) === zT.ADD && TT.tryEncodeTypeId(oT, IT, iT.constructor, WT)) : oo.number(oT, iT[XT], WT)
     }
-    const fD = function(YY, rY, DY, FY, IY, RY, OY, gY) {
-        if (rY[RY.offset++] = 255 & (FY | IY), IY === AY.DELETE) return;
-        const aY = DY.encDescriptor,
-          vY = DY.ref,
-          uY = vY[SY][FY] ?? vY[aY.names[FY]];
-        CD(YY, rY, aY.types[FY], uY, IY, RY, aY.encoders[FY])
+    const QI = function(TT, oT, IT, iT, kT, WT, XT, BT) {
+        if (oT[WT.offset++] = 255 & (iT | kT), kT === zT.DELETE) return;
+        const FT = IT.encDescriptor,
+          ST = IT.ref,
+          DT = ST[wT][iT] ?? ST[FT.names[iT]];
+        YI(TT, oT, FT.types[iT], DT, kT, WT, FT.encoders[iT])
       },
-      jD = function(YY, rY, DY, FY, IY, RY) {
-        if (rY[RY.offset++] = 255 & IY, rr.number(rY, FY, RY), IY === AY.DELETE) return;
-        const OY = DY.ref;
-        if ((IY & AY.ADD) === AY.ADD) {
-          const YY = OY.$indexes.get(FY);
-          rr.string(rY, YY, RY)
+      OI = function(TT, oT, IT, iT, kT, WT) {
+        if (oT[WT.offset++] = 255 & kT, oo.number(oT, iT, WT), kT === zT.DELETE) return;
+        const XT = IT.ref;
+        if ((kT & zT.ADD) === zT.ADD) {
+          const TT = XT.$indexes.get(iT);
+          oo.string(oT, TT, WT)
         }
-        CD(YY, rY, OY[oY], OY[sY](FY), IY, RY)
+        YI(TT, oT, XT[MT], XT[LT](iT), kT, WT)
       },
-      hD = function(YY, rY, DY, FY, IY, RY) {
-        if (rY[RY.offset++] = 255 & IY, rr.number(rY, FY, RY), IY === AY.DELETE) return;
-        const OY = DY.ref;
-        CD(YY, rY, OY[oY], OY[sY](FY), IY, RY)
+      HI = function(TT, oT, IT, iT, kT, WT) {
+        if (oT[WT.offset++] = 255 & kT, oo.number(oT, iT, WT), kT === zT.DELETE) return;
+        const XT = IT.ref;
+        YI(TT, oT, XT[MT], XT[LT](iT), kT, WT)
       },
-      dD = function(YY, rY, DY, FY, IY, RY) {
-        const OY = DY.ref;
-        (IY & AY.ADD) === AY.ADD && "function" === typeof OY.set ? jD(YY, rY, DY, FY, IY, RY) : hD(YY, rY, DY, FY, IY, RY)
+      nI = function(TT, oT, IT, iT, kT, WT) {
+        const XT = IT.ref;
+        (kT & zT.ADD) === zT.ADD && "function" === typeof XT.set ? OI(TT, oT, IT, iT, kT, WT) : HI(TT, oT, IT, iT, kT, WT)
       },
-      JD = function(YY, rY, DY, FY, IY, RY, gY, aY) {
-        const vY = DY.refTarget,
-          uY = vY[oY],
-          iY = "string" !== typeof uY;
-        let yY;
-        if (aY && DY.isFiltered && iY) {
-          const YY = vY.tmpItems[FY];
-          if (!YY) return;
-          if (yY = YY[OY], IY === AY.DELETE) IY = AY.DELETE_BY_REFID;
-          else if ((IY & AY.ADD) === AY.ADD) IY = AY.ADD_BY_REFID;
-          else if ((IY & AY.MOVE) === AY.MOVE) return
-        } else if (IY === AY.DELETE && iY) {
-          const YY = vY.tmpItems[FY];
-          if (!YY) return;
-          yY = YY[OY], IY = AY.DELETE_BY_REFID
-        } else yY = FY;
-        if (rY[RY.offset++] = 255 & IY, rr.number(rY, yY, RY), IY === AY.DELETE || IY === AY.DELETE_BY_REFID) return;
-        CD(YY, rY, uY, vY[sY](FY, gY), IY, RY)
+      qI = function(TT, oT, IT, iT, kT, WT, BT, FT) {
+        const ST = IT.refTarget,
+          DT = ST[MT],
+          xT = "string" !== typeof DT;
+        let cT;
+        if (FT && IT.isFiltered && xT) {
+          const TT = ST.tmpItems[iT];
+          if (!TT) return;
+          if (cT = TT[XT], kT === zT.DELETE) kT = zT.DELETE_BY_REFID;
+          else if ((kT & zT.ADD) === zT.ADD) kT = zT.ADD_BY_REFID;
+          else if ((kT & zT.MOVE) === zT.MOVE) return
+        } else if (kT === zT.DELETE && xT) {
+          const TT = ST.tmpItems[iT];
+          if (!TT) return;
+          cT = TT[XT], kT = zT.DELETE_BY_REFID
+        } else cT = iT;
+        if (oT[WT.offset++] = 255 & kT, oo.number(oT, cT, WT), kT === zT.DELETE || kT === zT.DELETE_BY_REFID) return;
+        YI(TT, oT, DT, ST[LT](iT, BT), kT, WT)
       };
 
-    function MD(YY, rY, DY, FY, IY, RY, gY) {
-      const aY = YY.resyncVisited;
-      let vY = aY.get(YY.currentRefId);
-      if (void 0 === vY && aY.set(YY.currentRefId, vY = new Set), vY.add(FY), void 0 !== IY && DY === AY.ADD && IY !== RY) {
-        const DY = IY[OY];
-        void 0 !== DY && (YY.root.removeRef(DY), gY?.push({
-          ref: rY,
-          refId: YY.currentRefId,
-          op: AY.DELETE,
-          dynamicIndex: FY,
+    function ZI(TT, oT, IT, iT, kT, WT, BT) {
+      const FT = TT.resyncVisited;
+      let ST = FT.get(TT.currentRefId);
+      if (void 0 === ST && FT.set(TT.currentRefId, ST = new Set), ST.add(iT), void 0 !== kT && IT === zT.ADD && kT !== WT) {
+        const IT = kT[XT];
+        void 0 !== IT && (TT.root.removeRef(IT), BT?.push({
+          ref: oT,
+          refId: TT.currentRefId,
+          op: zT.DELETE,
+          dynamicIndex: iT,
           value: void 0,
-          previousValue: IY
+          previousValue: kT
         }))
       }
     }
 
-    function wD(YY, rY, DY, FY) {
-      const AY = rY[OY];
-      if (void 0 === AY || DY.has(AY)) return;
-      DY.add(AY);
-      const IY = rY.constructor[Symbol.metadata],
-        RY = IY?.[cY];
-      if (void 0 === RY) return;
-      const gY = IY[ZY];
-      for (let OY = 0; OY < RY.length; OY++) {
-        const AY = RY[OY];
-        if (void 0 !== gY && gY.includes(AY)) continue;
-        const aY = IY[AY],
-          vY = rY[aY.name];
-        vY && (KF.is(aY.type) ? wD(YY, vY, DY, FY) : bD(YY, vY, DY, FY))
+    function lI(TT, oT, IT, iT) {
+      const zT = oT[XT];
+      if (void 0 === zT || IT.has(zT)) return;
+      IT.add(zT);
+      const kT = oT.constructor[Symbol.metadata],
+        WT = kT?.[ET];
+      if (void 0 === WT) return;
+      const BT = kT[JT];
+      for (let XT = 0; XT < WT.length; XT++) {
+        const zT = WT[XT];
+        if (void 0 !== BT && BT.includes(zT)) continue;
+        const FT = kT[zT],
+          ST = oT[FT.name];
+        ST && (Ji.is(FT.type) ? lI(TT, ST, IT, iT) : sI(TT, ST, IT, iT))
       }
     }
 
-    function bD(YY, rY, DY, FY) {
-      const IY = rY[WY] ?? rY,
-        RY = IY[OY];
-      if (void 0 === RY || DY.has(RY)) return;
-      DY.add(RY);
-      const gY = YY.resyncVisited.get(RY);
-      if (void 0 === gY) return;
-      const aY = YY.root;
-      IY[yY](gY, ((YY, DY) => {
-        FY?.push({
-          ref: rY,
-          refId: RY,
-          op: AY.DELETE,
-          dynamicIndex: DY,
+    function sI(TT, oT, IT, iT) {
+      const kT = oT[rT] ?? oT,
+        WT = kT[XT];
+      if (void 0 === WT || IT.has(WT)) return;
+      IT.add(WT);
+      const BT = TT.resyncVisited.get(WT);
+      if (void 0 === BT) return;
+      const FT = TT.root;
+      kT[cT](BT, ((TT, IT) => {
+        iT?.push({
+          ref: oT,
+          refId: WT,
+          op: zT.DELETE,
+          dynamicIndex: IT,
           value: void 0,
-          previousValue: YY
+          previousValue: TT
         });
-        const IY = YY?.[OY];
-        void 0 !== IY && aY.removeRef(IY)
-      }), (rY => {
-        KF.isSchema(rY) && wD(YY, rY, DY, FY)
+        const kT = TT?.[XT];
+        void 0 !== kT && FT.removeRef(kT)
+      }), (oT => {
+        Ji.isSchema(oT) && lI(TT, oT, IT, iT)
       }))
     }
-    const XD = 1,
-      qD = 2,
-      pD = 3,
-      kD = 4,
-      GD = 5;
+    const tI = 1,
+      GI = 2,
+      pI = 3,
+      bI = 4,
+      yI = 5;
 
-    function xD(YY, rY, DY, FY, IY, RY, gY, aY, vY) {
-      const uY = YY.root;
-      let sY;
-      if ((rY & AY.DELETE) === AY.DELETE) {
-        const YY = IY?.[OY];
-        void 0 !== YY && uY.removeRef(YY), rY !== AY.DELETE_AND_ADD && DY[iY](FY), sY = void 0
+    function NI(TT, oT, IT, iT, kT, WT, BT, FT, ST) {
+      const DT = TT.root;
+      let LT;
+      if ((oT & zT.DELETE) === zT.DELETE) {
+        const TT = kT?.[XT];
+        void 0 !== TT && DT.removeRef(TT), oT !== zT.DELETE_AND_ADD && IT[xT](iT), LT = void 0
       }
-      if (rY === AY.DELETE);
-      else if ("string" === typeof RY) sY = mr[RY](gY, aY);
-      else if (hr(RY)) sY = function(YY, rY, DY) {
-        return Jr(YY, (0, mr[YY.wire])(rY, DY))
-      }(RY.quantized, gY, aY);
-      else if (KF.is(RY)) {
-        const DY = mr.number(gY, aY);
-        if (sY = uY.refs.get(DY), (rY & AY.ADD) === AY.ADD) {
-          const FY = YY.getInstanceType(gY, aY, RY);
-          sY || (sY = YY.createInstanceOfType(FY)), uY.addRef(DY, sY, sY !== IY || rY === AY.DELETE_AND_ADD && sY === IY)
+      if (oT === zT.DELETE);
+      else if ("string" === typeof WT) LT = go[WT](BT, FT);
+      else if (Qo(WT)) LT = function(TT, oT, IT) {
+        return Ho(TT, (0, go[TT.wire])(oT, IT))
+      }(WT.quantized, BT, FT);
+      else if (Ji.is(WT)) {
+        const IT = go.number(BT, FT);
+        if (LT = DT.refs.get(IT), (oT & zT.ADD) === zT.ADD) {
+          const iT = TT.getInstanceType(BT, FT, WT);
+          LT || (LT = TT.createInstanceOfType(iT)), DT.addRef(IT, LT, LT !== kT || oT === zT.DELETE_AND_ADD && LT === kT)
         }
       } else {
-        const DY = (yY = Object.keys(RY)[0], Vr[yY]),
-          FY = mr.number(gY, aY);
-        null !== YY.resyncVisited && function(YY, rY) {
-          const DY = YY.resyncVisited;
-          DY.has(rY) || DY.set(rY, new Set)
-        }(YY, FY);
-        const iY = uY.refs.has(FY) ? IY || uY.refs.get(FY) : DY.constructor.initializeForDecoder();
-        if (sY = iY.clone(!0), sY[oY] = Object.values(RY)[0], IY) {
-          let YY = IY[OY];
-          if (void 0 !== YY && FY !== YY) {
-            (rY & AY.DELETE) !== AY.DELETE && uY.removeRef(YY);
-            const DY = IY.entries();
-            let FY;
+        const IT = (cT = Object.keys(WT)[0], ho[cT]),
+          iT = go.number(BT, FT);
+        null !== TT.resyncVisited && function(TT, oT) {
+          const IT = TT.resyncVisited;
+          IT.has(oT) || IT.set(oT, new Set)
+        }(TT, iT);
+        const xT = DT.refs.has(iT) ? kT || DT.refs.get(iT) : IT.constructor.initializeForDecoder();
+        if (LT = xT.clone(!0), LT[MT] = Object.values(WT)[0], kT) {
+          let TT = kT[XT];
+          if (void 0 !== TT && iT !== TT) {
+            (oT & zT.DELETE) !== zT.DELETE && DT.removeRef(TT);
+            const IT = kT.entries();
+            let iT;
             for (;
-              (FY = DY.next()) && !FY.done;) {
-              const [rY, DY] = FY.value;
-              "object" === typeof DY && (YY = DY[OY]), vY?.push({
-                ref: IY,
-                refId: YY,
-                op: AY.DELETE,
-                field: rY,
+              (iT = IT.next()) && !iT.done;) {
+              const [oT, IT] = iT.value;
+              "object" === typeof IT && (TT = IT[XT]), ST?.push({
+                ref: kT,
+                refId: TT,
+                op: zT.DELETE,
+                field: oT,
                 value: void 0,
-                previousValue: DY
+                previousValue: IT
               })
             }
           }
         }
-        uY.addRef(FY, sY, iY !== IY || rY === AY.DELETE_AND_ADD && iY === IY)
+        DT.addRef(iT, LT, xT !== kT || oT === zT.DELETE_AND_ADD && xT === kT)
       }
-      var yY;
-      return sY
+      var cT;
+      return LT
     }
-    const nD = function(YY, rY, DY, FY, AY) {
-        const IY = rY[DY.offset++],
-          RY = FY.constructor[Symbol.metadata],
-          OY = IY >> 6 << 6,
-          gY = IY % (OY || 255),
-          aY = RY[gY];
-        if (void 0 === aY) return console.warn("@colyseus/schema: field not defined at", {
-          index: gY,
-          ref: FY.constructor.name,
-          metadata: RY
+    const PI = function(TT, oT, IT, iT, zT) {
+        const kT = oT[IT.offset++],
+          WT = iT.constructor[Symbol.metadata],
+          XT = kT >> 6 << 6,
+          BT = kT % (XT || 255),
+          FT = WT[BT];
+        if (void 0 === FT) return console.warn("@colyseus/schema: field not defined at", {
+          index: BT,
+          ref: iT.constructor.name,
+          metadata: WT
         }), -1;
-        const vY = !0 === aY.deprecated,
-          uY = vY ? void 0 : FY[sY](gY),
-          iY = xD(YY, OY, FY, gY, uY, aY.type, rY, DY, AY);
-        vY || (null !== iY && void 0 !== iY && (FY[aY.name] = iY), uY !== iY && AY?.push({
-          ref: FY,
-          refId: YY.currentRefId,
-          op: OY,
-          field: aY.name,
-          value: iY,
-          previousValue: uY
+        const ST = !0 === FT.deprecated,
+          DT = ST ? void 0 : iT[LT](BT),
+          xT = NI(TT, XT, iT, BT, DT, FT.type, oT, IT, zT);
+        ST || (null !== xT && void 0 !== xT && (iT[FT.name] = xT), DT !== xT && zT?.push({
+          ref: iT,
+          refId: TT.currentRefId,
+          op: XT,
+          field: FT.name,
+          value: xT,
+          previousValue: DT
         }))
       },
-      PD = function(YY, rY, DY, FY, IY) {
-        const RY = FY[WY] ?? FY,
-          OY = rY[DY.offset++];
-        if (OY === AY.CLEAR) return YY.removeChildRefs(RY, IY), void RY.clear();
-        const gY = mr.number(rY, DY),
-          aY = RY[oY],
-          vY = RY.constructor.COLLECTION_KIND;
-        let uY;
-        (OY & AY.ADD) === AY.ADD ? vY === XD ? (uY = mr.string(rY, DY), RY.setIndex(gY, uY)) : uY = gY : uY = RY.getIndex(gY);
-        const iY = RY[sY](gY),
-          yY = xD(YY, OY, FY, gY, iY, aY, rY, DY, IY);
-        if (null !== YY.resyncVisited && MD(YY, FY, OY, uY, iY, yY, IY), null !== yY && void 0 !== yY) switch (vY) {
-          case XD:
-            RY.$items.set(uY, yY);
+      dI = function(TT, oT, IT, iT, kT) {
+        const WT = iT[rT] ?? iT,
+          XT = oT[IT.offset++];
+        if (XT === zT.CLEAR) return TT.removeChildRefs(WT, kT), void WT.clear();
+        const BT = go.number(oT, IT),
+          FT = WT[MT],
+          ST = WT.constructor.COLLECTION_KIND;
+        let DT;
+        (XT & zT.ADD) === zT.ADD ? ST === tI ? (DT = go.string(oT, IT), WT.setIndex(BT, DT)) : DT = BT : DT = WT.getIndex(BT);
+        const xT = WT[LT](BT),
+          cT = NI(TT, XT, iT, BT, xT, FT, oT, IT, kT);
+        if (null !== TT.resyncVisited && ZI(TT, iT, XT, DT, xT, cT, kT), null !== cT && void 0 !== cT) switch (ST) {
+          case tI:
+            WT.$items.set(DT, cT);
             break;
-          case qD:
-            RY.$setAt(gY, yY, null !== YY.resyncVisited && OY === AY.ADD ? AY.REPLACE : OY);
+          case GI:
+            WT.$setAt(BT, cT, null !== TT.resyncVisited && XT === zT.ADD ? zT.REPLACE : XT);
             break;
-          case pD:
-          case kD:
-          case GD:
-            RY.$items.has(gY) || (RY.$items.set(gY, yY), "number" === typeof RY.$refId && gY >= RY.$refId && (RY.$refId = gY + 1));
+          case pI:
+          case bI:
+          case yI:
+            WT.$items.has(BT) || (WT.$items.set(BT, cT), "number" === typeof WT.$refId && BT >= WT.$refId && (WT.$refId = BT + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${RY.constructor?.name} \u2014 item at index ${gY} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${WT.constructor?.name} \u2014 item at index ${BT} was not stored.`)
         }
-        iY !== yY && IY?.push({
-          ref: FY,
-          refId: YY.currentRefId,
-          op: OY,
-          dynamicIndex: uY,
-          value: yY,
-          previousValue: iY
+        xT !== cT && kT?.push({
+          ref: iT,
+          refId: TT.currentRefId,
+          op: XT,
+          dynamicIndex: DT,
+          value: cT,
+          previousValue: xT
         })
       },
-      UD = function(YY, rY, DY, FY, IY) {
-        const RY = FY[WY] ?? FY;
-        let OY, gY = rY[DY.offset++];
-        if (gY === AY.CLEAR) return YY.removeChildRefs(RY, IY), void RY.clear();
-        if (gY === AY.REVERSE) return void RY.items.reverse();
-        if (gY === AY.DELETE_BY_REFID) {
-          const gY = mr.number(rY, DY),
-            aY = YY.root.refs.get(gY);
-          if (void 0 === aY) return;
-          if (YY.root.removeRef(gY), OY = RY.findIndex((YY => YY === aY)), -1 === OY) return;
-          return RY[iY](OY), void IY?.push({
-            ref: FY,
-            refId: YY.currentRefId,
-            op: AY.DELETE,
-            dynamicIndex: OY,
+      VI = function(TT, oT, IT, iT, kT) {
+        const WT = iT[rT] ?? iT;
+        let XT, BT = oT[IT.offset++];
+        if (BT === zT.CLEAR) return TT.removeChildRefs(WT, kT), void WT.clear();
+        if (BT === zT.REVERSE) return void WT.items.reverse();
+        if (BT === zT.DELETE_BY_REFID) {
+          const BT = go.number(oT, IT),
+            FT = TT.root.refs.get(BT);
+          if (void 0 === FT) return;
+          if (TT.root.removeRef(BT), XT = WT.findIndex((TT => TT === FT)), -1 === XT) return;
+          return WT[xT](XT), void kT?.push({
+            ref: iT,
+            refId: TT.currentRefId,
+            op: zT.DELETE,
+            dynamicIndex: XT,
             value: void 0,
-            previousValue: aY
+            previousValue: FT
           })
         }
-        if (gY === AY.ADD_BY_REFID) {
-          const FY = mr.number(rY, DY),
-            AY = YY.root.refs.get(FY);
-          AY && (OY = RY.findIndex((YY => YY === AY))), -1 !== OY && void 0 !== OY || (OY = RY.length)
-        } else OY = mr.number(rY, DY);
-        const aY = RY[oY];
-        let vY = OY;
-        const uY = RY.items[OY],
-          sY = xD(YY, gY, FY, OY, uY, aY, rY, DY, IY);
-        null !== YY.resyncVisited && MD(YY, FY, gY, OY, uY, sY, IY), null !== sY && void 0 !== sY && sY !== uY && RY.$setAt(OY, sY, null !== YY.resyncVisited && gY === AY.ADD ? AY.REPLACE : gY), uY !== sY && IY?.push({
-          ref: FY,
-          refId: YY.currentRefId,
-          op: gY,
-          dynamicIndex: vY,
-          value: sY,
-          previousValue: uY
+        if (BT === zT.ADD_BY_REFID) {
+          const iT = go.number(oT, IT),
+            zT = TT.root.refs.get(iT);
+          zT && (XT = WT.findIndex((TT => TT === zT))), -1 !== XT && void 0 !== XT || (XT = WT.length)
+        } else XT = go.number(oT, IT);
+        const FT = WT[MT];
+        let ST = XT;
+        const DT = WT.items[XT],
+          LT = NI(TT, BT, iT, XT, DT, FT, oT, IT, kT);
+        null !== TT.resyncVisited && ZI(TT, iT, BT, XT, DT, LT, kT), null !== LT && void 0 !== LT && LT !== DT && WT.$setAt(XT, LT, null !== TT.resyncVisited && BT === zT.ADD ? zT.REPLACE : BT), DT !== LT && kT?.push({
+          ref: iT,
+          refId: TT.currentRefId,
+          op: BT,
+          dynamicIndex: ST,
+          value: LT,
+          previousValue: DT
         })
       };
-    class LD extends Error {}
+    class Ti extends Error {}
 
-    function tD(YY, rY, DY, FY) {
-      if (!(YY instanceof rY)) throw new LD(`a '${rY.name}' was expected, but '${YY&&YY.constructor.name}' was provided in ${DY.constructor.name}#${FY}`)
+    function oi(TT, oT, IT, iT) {
+      if (!(TT instanceof oT)) throw new Ti(`a '${oT.name}' was expected, but '${TT&&TT.constructor.name}' was provided in ${IT.constructor.name}#${iT}`)
     }
-    const YF = (YY, rY) => {
-        const DY = YY.toString(),
-          FY = rY.toString();
-        return DY < FY ? -1 : DY > FY ? 1 : 0
+    const Ii = (TT, oT) => {
+        const IT = TT.toString(),
+          iT = oT.toString();
+        return IT < iT ? -1 : IT > iT ? 1 : 0
       },
-      rF = {
-        get: (YY, rY) => "symbol" === typeof rY || isNaN(rY) ? Reflect.get(YY, rY) : YY.items[rY],
-        set: (YY, rY, DY) => {
-          if ("symbol" !== typeof rY && !isNaN(rY)) {
-            if (void 0 === DY || null === DY) YY.$deleteAt(rY);
+      ii = {
+        get: (TT, oT) => "symbol" === typeof oT || isNaN(oT) ? Reflect.get(TT, oT) : TT.items[oT],
+        set: (TT, oT, IT) => {
+          if ("symbol" !== typeof oT && !isNaN(oT)) {
+            if (void 0 === IT || null === IT) TT.$deleteAt(oT);
             else {
-              let FY;
-              if (DY[QY]) {
-                tD(DY, YY[oY], YY, rY);
-                const IY = YY.items[rY];
-                YY.isMovingItems ? (FY = YY.$wireIndex(Number(rY)), void 0 !== IY ? DY[QY].isNew ? YY[QY].indexedOperation(FY, AY.MOVE_AND_ADD) : (YY[QY].getChange(FY) & AY.DELETE) === AY.DELETE ? YY[QY].indexedOperation(FY, AY.DELETE_AND_MOVE) : YY[QY].indexedOperation(FY, AY.MOVE) : DY[QY].isNew && YY[QY].indexedOperation(FY, AY.ADD), DY[QY].setParent(YY, YY[QY].root, FY)) : FY = YY.$changeAt(Number(rY), DY), void 0 !== IY && IY[QY].root?.remove(IY[QY])
-              } else FY = YY.$changeAt(Number(rY), DY);
-              YY.items[rY] = DY, void 0 !== FY && (YY.tmpItems[FY] = DY)
+              let iT;
+              if (IT[KT]) {
+                oi(IT, TT[MT], TT, oT);
+                const kT = TT.items[oT];
+                TT.isMovingItems ? (iT = TT.$wireIndex(Number(oT)), void 0 !== kT ? IT[KT].isNew ? TT[KT].indexedOperation(iT, zT.MOVE_AND_ADD) : (TT[KT].getChange(iT) & zT.DELETE) === zT.DELETE ? TT[KT].indexedOperation(iT, zT.DELETE_AND_MOVE) : TT[KT].indexedOperation(iT, zT.MOVE) : IT[KT].isNew && TT[KT].indexedOperation(iT, zT.ADD), IT[KT].setParent(TT, TT[KT].root, iT)) : iT = TT.$changeAt(Number(oT), IT), void 0 !== kT && kT[KT].root?.remove(kT[KT])
+              } else iT = TT.$changeAt(Number(oT), IT);
+              TT.items[oT] = IT, void 0 !== iT && (TT.tmpItems[iT] = IT)
             }
             return !0
           }
-          return Reflect.set(YY, rY, DY)
+          return Reflect.set(TT, oT, IT)
         },
-        deleteProperty: (YY, rY) => ("number" === typeof rY ? YY.$deleteAt(rY) : delete YY[rY], !0),
-        has: (YY, rY) => "symbol" === typeof rY || isNaN(Number(rY)) ? Reflect.has(YY, rY) : Reflect.has(YY.items, rY)
+        deleteProperty: (TT, oT) => ("number" === typeof oT ? TT.$deleteAt(oT) : delete TT[oT], !0),
+        has: (TT, oT) => "symbol" === typeof oT || isNaN(Number(oT)) ? Reflect.has(TT, oT) : Reflect.has(TT.items, oT)
       };
-    class DF {
-      [QY];
-      [OY];
-      [WY];
-      [oY];
+    class zi {
+      [KT];
+      [XT];
+      [rT];
+      [MT];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[aY] = JD;
-      static[vY] = UD;
-      static COLLECTION_KIND = qD;
-      static[uY](YY, rY, DY) {
-        if (!DY) return !0;
-        const FY = YY[WY] ?? YY;
-        return "string" === typeof FY[oY] || DY.isChangeTreeVisible(FY.tmpItems[rY]?.[QY])
+      static[FT] = qI;
+      static[ST] = VI;
+      static COLLECTION_KIND = GI;
+      static[DT](TT, oT, IT) {
+        if (!IT) return !0;
+        const iT = TT[rT] ?? TT;
+        return "string" === typeof iT[MT] || IT.isChangeTreeVisible(iT.tmpItems[oT]?.[KT])
       }
-      static is(YY) {
-        return Array.isArray(YY) || void 0 !== YY.array
+      static is(TT) {
+        return Array.isArray(TT) || void 0 !== TT.array
       }
-      static from(YY) {
-        return new DF(...Array.from(YY))
+      static from(TT) {
+        return new zi(...Array.from(TT))
       }
       constructor() {
-        this[oY] = void 0, this[WY] = this;
-        const YY = new Proxy(this, rF);
-        return Object.defineProperty(this, QY, {
-          value: new HD(YY, this),
+        this[MT] = void 0, this[rT] = this;
+        const TT = new Proxy(this, ii);
+        return Object.defineProperty(this, KT, {
+          value: new JI(TT, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), YY
+        }), arguments.length > 0 && this.push(...arguments), TT
       }
       static initializeForDecoder() {
-        const YY = Object.create(DF.prototype);
-        YY.items = [], YY.isMovingItems = !1, YY._needsCompaction = !1, YY[oY] = void 0, YY[WY] = YY;
-        const rY = new Proxy(YY, rF);
-        return ZD(YY, rY), rY
+        const TT = Object.create(zi.prototype);
+        TT.items = [], TT.isMovingItems = !1, TT._needsCompaction = !1, TT[MT] = void 0, TT[rT] = TT;
+        const oT = new Proxy(TT, ii);
+        return aI(TT, oT), oT
       }
-      set length(YY) {
-        0 === YY ? this.clear() : YY < this.items.length ? this.splice(YY, this.length - YY) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(TT) {
+        0 === TT ? this.clear() : TT < this.items.length ? this.splice(TT, this.length - TT) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[QY].pause()
+        this[KT].pause()
       }
       resumeTracking() {
-        this[QY].resume()
+        this[KT].resume()
       }
-      untracked(YY) {
-        return this[QY].untracked(YY)
+      untracked(TT) {
+        return this[KT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[QY].paused
+        return this[KT].paused
       }
       push() {
-        const YY = this[WY],
-          rY = YY.items,
-          DY = YY.tmpItems,
-          FY = YY[QY],
-          IY = YY[oY];
-        let RY = DY.length;
-        for (let OY = 0, gY = arguments.length; OY < gY; OY++, RY++) {
-          const gY = OY < 0 || arguments.length <= OY ? void 0 : arguments[OY];
-          if (void 0 === gY || null === gY) return;
-          "object" === typeof gY && IY && tD(gY, IY, YY, OY), FY.indexedOperation(RY, AY.ADD), rY.push(gY), DY.push(gY), gY[QY]?.setParent(this, FY.root, RY)
+        const TT = this[rT],
+          oT = TT.items,
+          IT = TT.tmpItems,
+          iT = TT[KT],
+          kT = TT[MT];
+        let WT = IT.length;
+        for (let XT = 0, BT = arguments.length; XT < BT; XT++, WT++) {
+          const BT = XT < 0 || arguments.length <= XT ? void 0 : arguments[XT];
+          if (void 0 === BT || null === BT) return;
+          "object" === typeof BT && kT && oi(BT, kT, TT, XT), iT.indexedOperation(WT, zT.ADD), oT.push(BT), IT.push(BT), BT[KT]?.setParent(this, iT.root, WT)
         }
-        return RY
+        return WT
       }
       pop() {
-        const YY = this[WY],
-          rY = YY.tmpItems,
-          DY = YY.deletedIndexes;
-        let FY = -1;
-        for (let IY = rY.length - 1; IY >= 0; IY--)
-          if (!0 !== DY[IY]) {
-            FY = IY;
+        const TT = this[rT],
+          oT = TT.tmpItems,
+          IT = TT.deletedIndexes;
+        let iT = -1;
+        for (let kT = oT.length - 1; kT >= 0; kT--)
+          if (!0 !== IT[kT]) {
+            iT = kT;
             break
-          } if (FY < 0) return;
-        const AY = YY.$isUnsentAdd(FY);
-        return YY[QY].delete(FY), AY ? YY.$cancelAdd(FY) : DY[FY] = !0, YY.items.pop()
+          } if (iT < 0) return;
+        const zT = TT.$isUnsentAdd(iT);
+        return TT[KT].delete(iT), zT ? TT.$cancelAdd(iT) : IT[iT] = !0, TT.items.pop()
       }
-      at(YY) {
-        return YY < 0 && (YY += this.length), this.items[YY]
+      at(TT) {
+        return TT < 0 && (TT += this.length), this.items[TT]
       }
-      $wireIndex(YY) {
-        const rY = this.deletedIndexes;
-        if (0 === rY.length) return YY;
-        const DY = this.tmpItems;
-        let FY = 0;
-        for (let AY = 0; AY < DY.length; AY++)
-          if (!0 !== rY[AY]) {
-            if (FY === YY) return AY;
-            FY++
-          } return DY.length + (YY - FY)
+      $wireIndex(TT) {
+        const oT = this.deletedIndexes;
+        if (0 === oT.length) return TT;
+        const IT = this.tmpItems;
+        let iT = 0;
+        for (let zT = 0; zT < IT.length; zT++)
+          if (!0 !== oT[zT]) {
+            if (iT === TT) return zT;
+            iT++
+          } return IT.length + (TT - iT)
       }
-      $isUnsentAdd(YY) {
-        const rY = this[QY];
-        return 0 === (576 & rY.flags) && !rY.paused && "string" !== typeof this[oY] && rY.operationAt(YY) === AY.ADD
+      $isUnsentAdd(TT) {
+        const oT = this[KT];
+        return 0 === (576 & oT.flags) && !oT.paused && "string" !== typeof this[MT] && oT.operationAt(TT) === zT.ADD
       }
-      $cancelAdd(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const DY = this[QY],
-          FY = this.tmpItems[YY];
-        this.tmpItems.splice(YY, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(YY, 1), DY.removeAt(YY, 1);
-        const AY = FY?.[QY];
-        void 0 !== AY && void 0 === AY.root && AY.removeParent(this), rY && this.$reindexChildren(YY)
+      $cancelAdd(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const IT = this[KT],
+          iT = this.tmpItems[TT];
+        this.tmpItems.splice(TT, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(TT, 1), IT.removeAt(TT, 1);
+        const zT = iT?.[KT];
+        void 0 !== zT && void 0 === zT.root && zT.removeParent(this), oT && this.$reindexChildren(TT)
       }
-      $reindexChildren(YY, rY) {
-        if (!this[QY].hasFilteredFields) return;
-        if ("string" === typeof this[oY]) return;
-        const DY = this.tmpItems,
-          FY = DY.length;
-        if (void 0 !== rY)
-          for (; YY < FY && DY[YY] === rY[YY];) YY++;
-        for (let AY = YY; AY < FY; AY++) DY[AY]?.[QY]?.setParentIndex(this, AY)
+      $reindexChildren(TT, oT) {
+        if (!this[KT].hasFilteredFields) return;
+        if ("string" === typeof this[MT]) return;
+        const IT = this.tmpItems,
+          iT = IT.length;
+        if (void 0 !== oT)
+          for (; TT < iT && IT[TT] === oT[TT];) TT++;
+        for (let zT = TT; zT < iT; zT++) IT[zT]?.[KT]?.setParentIndex(this, zT)
       }
-      $changeAt(YY, rY) {
-        if (void 0 === rY || null === rY) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[YY] === rY) return;
-        const DY = void 0 !== this.items[YY] ? "object" === typeof rY ? AY.DELETE_AND_ADD : AY.REPLACE : AY.ADD,
-          FY = this.$wireIndex(YY),
-          IY = this[QY];
-        return IY.change(FY, DY), rY[QY]?.setParent(this, IY.root, FY), FY
+      $changeAt(TT, oT) {
+        if (void 0 === oT || null === oT) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[TT] === oT) return;
+        const IT = void 0 !== this.items[TT] ? "object" === typeof oT ? zT.DELETE_AND_ADD : zT.REPLACE : zT.ADD,
+          iT = this.$wireIndex(TT),
+          kT = this[KT];
+        return kT.change(iT, IT), oT[KT]?.setParent(this, kT.root, iT), iT
       }
-      $deleteAt(YY, rY) {
-        this[QY].delete(this.$wireIndex(YY), rY)
+      $deleteAt(TT, oT) {
+        this[KT].delete(this.$wireIndex(TT), oT)
       }
-      $setAt(YY, rY, DY) {
-        DY === AY.ADD && void 0 !== this.items[YY] ? this.items.splice(YY, 0, rY) : DY === AY.DELETE_AND_MOVE ? (this.items.splice(YY, 1), this.items[YY] = rY) : (YY > this.items.length && (this._needsCompaction = !0), this.items[YY] = rY)
+      $setAt(TT, oT, IT) {
+        IT === zT.ADD && void 0 !== this.items[TT] ? this.items.splice(TT, 0, oT) : IT === zT.DELETE_AND_MOVE ? (this.items.splice(TT, 1), this.items[TT] = oT) : (TT > this.items.length && (this._needsCompaction = !0), this.items[TT] = oT)
       }
       clear() {
-        const YY = this[WY];
-        if (0 === YY.items.length) return;
-        const rY = YY[QY];
-        rY.forEachChild(((YY, DY) => {
-          rY.root?.remove(YY)
-        })), rY.discard(), rY.operation(AY.CLEAR), YY.items.length = 0, YY.tmpItems.length = 0
-      } [mY]() {
-        const YY = this[WY] ?? this,
-          rY = YY[QY];
-        if (rY.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const DY = YY.items;
-        for (let FY = 0; FY < DY.length; FY++) DY[FY]?.[mY]?.();
-        YY.items.length = 0, YY.tmpItems.length = 0, YY.deletedIndexes.length = 0, rY.recycle(), YY[OY] = void 0
+        const TT = this[rT];
+        if (0 === TT.items.length) return;
+        const oT = TT[KT];
+        oT.forEachChild(((TT, IT) => {
+          oT.root?.remove(TT)
+        })), oT.discard(), oT.operation(zT.CLEAR), TT.items.length = 0, TT.tmpItems.length = 0
+      } [gT]() {
+        const TT = this[rT] ?? this,
+          oT = TT[KT];
+        if (oT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const IT = TT.items;
+        for (let iT = 0; iT < IT.length; iT++) IT[iT]?.[gT]?.();
+        TT.items.length = 0, TT.tmpItems.length = 0, TT.deletedIndexes.length = 0, oT.recycle(), TT[XT] = void 0
       }
       concat() {
-        return new DF(...this.items.concat(...arguments))
+        return new zi(...this.items.concat(...arguments))
       }
-      join(YY) {
-        return this.items.join(YY)
+      join(TT) {
+        return this.items.join(TT)
       }
       reverse() {
-        const YY = this[WY],
-          rY = YY[QY];
-        if (rY.has() || YY.deletedIndexes.length > 0) {
-          const rY = YY.items.slice().reverse();
-          return this.clear(), this.push(...rY), this
+        const TT = this[rT],
+          oT = TT[KT];
+        if (oT.has() || TT.deletedIndexes.length > 0) {
+          const oT = TT.items.slice().reverse();
+          return this.clear(), this.push(...oT), this
         }
-        return rY.operation(AY.REVERSE), YY.items.reverse(), YY.tmpItems.reverse(), YY.$reindexChildren(0), this
+        return oT.operation(zT.REVERSE), TT.items.reverse(), TT.tmpItems.reverse(), TT.$reindexChildren(0), this
       }
       shift() {
-        const YY = this[WY],
-          rY = YY.items;
-        if (0 === rY.length) return;
-        const DY = YY[QY],
-          FY = YY.deletedIndexes;
-        let IY = 0;
-        for (; !0 === FY[IY];) IY++;
-        const RY = YY.$isUnsentAdd(IY);
-        return DY.delete(IY, AY.DELETE), RY ? YY.$cancelAdd(IY) : FY[IY] = !0, rY.shift()
+        const TT = this[rT],
+          oT = TT.items;
+        if (0 === oT.length) return;
+        const IT = TT[KT],
+          iT = TT.deletedIndexes;
+        let kT = 0;
+        for (; !0 === iT[kT];) kT++;
+        const WT = TT.$isUnsentAdd(kT);
+        return IT.delete(kT, zT.DELETE), WT ? TT.$cancelAdd(kT) : iT[kT] = !0, oT.shift()
       }
-      slice(YY, rY) {
-        const DY = new DF;
-        return DY.push(...this.items.slice(YY, rY)), DY
+      slice(TT, oT) {
+        const IT = new zi;
+        return IT.push(...this.items.slice(TT, oT)), IT
       }
       sort() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : YF;
-        const rY = this[WY];
-        rY.isMovingItems = !0;
-        const DY = rY[QY];
-        return rY.items.sort(YY).forEach(((YY, rY) => DY.change(rY, AY.REPLACE))), rY.tmpItems.sort(YY), rY.$reindexChildren(0), rY.isMovingItems = !1, this
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ii;
+        const oT = this[rT];
+        oT.isMovingItems = !0;
+        const IT = oT[KT];
+        return oT.items.sort(TT).forEach(((TT, oT) => IT.change(oT, zT.REPLACE))), oT.tmpItems.sort(TT), oT.$reindexChildren(0), oT.isMovingItems = !1, this
       }
-      splice(YY, rY) {
-        const DY = this[WY],
-          FY = DY[QY],
-          IY = DY.items,
-          RY = DY.tmpItems,
-          OY = DY.deletedIndexes,
-          gY = IY.length,
-          aY = RY.length;
-        for (var vY = arguments.length, uY = new Array(vY > 2 ? vY - 2 : 0), sY = 2; sY < vY; sY++) uY[sY - 2] = arguments[sY];
-        const iY = uY.length,
-          yY = [];
-        for (let AY = 0; AY < aY; AY++) !0 !== OY[AY] && yY.push(AY);
-        let oY;
-        if (gY > YY) {
-          void 0 === rY && (rY = gY - YY);
-          for (let IY = YY; IY < YY + rY; IY++) {
-            const YY = yY[IY],
-              rY = DY.$isUnsentAdd(YY);
-            FY.delete(YY, AY.DELETE), rY ? (oY ??= []).push(YY) : OY[YY] = !0
+      splice(TT, oT) {
+        const IT = this[rT],
+          iT = IT[KT],
+          kT = IT.items,
+          WT = IT.tmpItems,
+          XT = IT.deletedIndexes,
+          BT = kT.length,
+          FT = WT.length;
+        for (var ST = arguments.length, DT = new Array(ST > 2 ? ST - 2 : 0), LT = 2; LT < ST; LT++) DT[LT - 2] = arguments[LT];
+        const xT = DT.length,
+          cT = [];
+        for (let zT = 0; zT < FT; zT++) !0 !== XT[zT] && cT.push(zT);
+        let MT;
+        if (BT > TT) {
+          void 0 === oT && (oT = BT - TT);
+          for (let kT = TT; kT < TT + oT; kT++) {
+            const TT = cT[kT],
+              oT = IT.$isUnsentAdd(TT);
+            iT.delete(TT, zT.DELETE), oT ? (MT ??= []).push(TT) : XT[TT] = !0
           }
-        } else rY = 0;
-        if (iY > 0) {
-          const IY = yY[YY] ?? gY,
-            aY = Math.min(iY, rY);
-          for (let YY = 0; YY < aY; YY++) {
-            const rY = IY + YY;
-            let DY;
-            const gY = void 0 !== oY ? oY.indexOf(rY) : -1; - 1 !== gY ? (oY.splice(gY, 1), DY = AY.ADD) : DY = OY[rY] ? AY.DELETE_AND_ADD : AY.ADD, FY.indexedOperation(rY, DY), RY[rY] = uY[YY], OY[rY] = !1, uY[YY][QY]?.setParent(this, FY.root, rY)
+        } else oT = 0;
+        if (xT > 0) {
+          const kT = cT[TT] ?? BT,
+            FT = Math.min(xT, oT);
+          for (let TT = 0; TT < FT; TT++) {
+            const oT = kT + TT;
+            let IT;
+            const BT = void 0 !== MT ? MT.indexOf(oT) : -1; - 1 !== BT ? (MT.splice(BT, 1), IT = zT.ADD) : IT = XT[oT] ? zT.DELETE_AND_ADD : zT.ADD, iT.indexedOperation(oT, IT), WT[oT] = DT[TT], XT[oT] = !1, DT[TT][KT]?.setParent(this, iT.root, oT)
           }
-          const vY = iY - aY;
-          if (vY > 0) {
-            const YY = IY + aY;
-            FY.insertAt(YY, vY);
-            for (let rY = 0; rY < vY; rY++) uY[aY + rY][QY]?.setParent(this, FY.root, YY + rY);
-            OY.length > 0 && OY.splice(YY, 0, ...new Array(vY).fill(!1)), RY.splice(YY, 0, ...uY.slice(aY)), DY.$reindexChildren(YY + vY)
+          const ST = xT - FT;
+          if (ST > 0) {
+            const TT = kT + FT;
+            iT.insertAt(TT, ST);
+            for (let oT = 0; oT < ST; oT++) DT[FT + oT][KT]?.setParent(this, iT.root, TT + oT);
+            XT.length > 0 && XT.splice(TT, 0, ...new Array(ST).fill(!1)), WT.splice(TT, 0, ...DT.slice(FT)), IT.$reindexChildren(TT + ST)
           }
         }
-        if (void 0 !== oY && oY.length > 0) {
-          for (let YY = oY.length - 1; YY >= 0; YY--) DY.$cancelAdd(oY[YY], !1);
-          DY.$reindexChildren(oY[0])
+        if (void 0 !== MT && MT.length > 0) {
+          for (let TT = MT.length - 1; TT >= 0; TT--) IT.$cancelAdd(MT[TT], !1);
+          IT.$reindexChildren(MT[0])
         }
-        return FY.root?.enqueueChangeTree(FY), IY.splice(YY, rY, ...uY)
+        return iT.root?.enqueueChangeTree(iT), kT.splice(TT, oT, ...DT)
       }
       unshift() {
-        const YY = this[WY],
-          rY = YY[QY];
-        rY.unshift(arguments.length);
-        for (let FY = 0; FY < arguments.length; FY++)(FY < 0 || arguments.length <= FY ? void 0 : arguments[FY])?.[QY]?.setParent(this, rY.root, FY);
-        const DY = YY.deletedIndexes;
-        return DY.length > 0 && DY.unshift(...new Array(arguments.length).fill(!1)), YY.tmpItems.unshift(...arguments), YY.$reindexChildren(arguments.length), YY.items.unshift(...arguments)
+        const TT = this[rT],
+          oT = TT[KT];
+        oT.unshift(arguments.length);
+        for (let iT = 0; iT < arguments.length; iT++)(iT < 0 || arguments.length <= iT ? void 0 : arguments[iT])?.[KT]?.setParent(this, oT.root, iT);
+        const IT = TT.deletedIndexes;
+        return IT.length > 0 && IT.unshift(...new Array(arguments.length).fill(!1)), TT.tmpItems.unshift(...arguments), TT.$reindexChildren(arguments.length), TT.items.unshift(...arguments)
       }
-      indexOf(YY, rY) {
-        return this.items.indexOf(YY, rY)
+      indexOf(TT, oT) {
+        return this.items.indexOf(TT, oT)
       }
-      lastIndexOf(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(YY, rY)
+      lastIndexOf(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(TT, oT)
       }
-      every(YY, rY) {
-        return this.items.every(YY, rY)
+      every(TT, oT) {
+        return this.items.every(TT, oT)
       }
-      some(YY, rY) {
-        return this.items.some(YY, rY)
+      some(TT, oT) {
+        return this.items.some(TT, oT)
       }
-      forEach(YY, rY) {
-        return this.items.forEach(YY, rY)
+      forEach(TT, oT) {
+        return this.items.forEach(TT, oT)
       }
-      map(YY, rY) {
-        return this.items.map(YY, rY)
+      map(TT, oT) {
+        return this.items.map(TT, oT)
       }
-      filter(YY, rY) {
-        return this.items.filter(YY, rY)
+      filter(TT, oT) {
+        return this.items.filter(TT, oT)
       }
-      reduce(YY, rY) {
+      reduce(TT, oT) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(YY, rY) {
+      reduceRight(TT, oT) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(YY, rY) {
-        return this.items.find(YY, rY)
+      find(TT, oT) {
+        return this.items.find(TT, oT)
       }
-      findIndex(YY, rY) {
-        return this.items.findIndex(YY, rY)
+      findIndex(TT, oT) {
+        return this.items.findIndex(TT, oT)
       }
-      fill(YY, rY, DY) {
+      fill(TT, oT, IT) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(YY, rY, DY) {
+      copyWithin(TT, oT, IT) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return DF
+        return zi
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(YY, rY) {
-        return this.items.includes(YY, rY)
+      includes(TT, oT) {
+        return this.items.includes(TT, oT)
       }
-      flatMap(YY, rY) {
+      flatMap(TT, oT) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(YY) {
+      flat(TT) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
+        for (var TT = arguments.length, oT = new Array(TT), IT = 0; IT < TT; IT++) oT[IT] = arguments[IT];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(YY, rY) {
-        const DY = this.items.slice();
-        return YY < 0 && (YY += this.length), DY[YY] = rY, new DF(...DY)
+      with(TT, oT) {
+        const IT = this.items.slice();
+        return TT < 0 && (TT += this.length), IT[TT] = oT, new zi(...IT)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(YY) {
-        return this.items.slice().sort(YY)
+      toSorted(TT) {
+        return this.items.slice().sort(TT)
       }
-      toSpliced(YY, rY) {
-        for (var DY = arguments.length, FY = new Array(DY > 2 ? DY - 2 : 0), AY = 2; AY < DY; AY++) FY[AY - 2] = arguments[AY];
-        const IY = this.items.slice();
-        return IY.splice.apply(IY, arguments), IY
+      toSpliced(TT, oT) {
+        for (var IT = arguments.length, iT = new Array(IT > 2 ? IT - 2 : 0), zT = 2; zT < IT; zT++) iT[zT - 2] = arguments[zT];
+        const kT = this.items.slice();
+        return kT.splice.apply(kT, arguments), kT
       }
       shuffle() {
-        return this.move((YY => {
-          let rY = this.items.length;
-          for (; 0 != rY;) {
-            let YY = Math.floor(Math.random() * rY);
-            rY--, [this[rY], this[YY]] = [this[YY], this[rY]]
+        return this.move((TT => {
+          let oT = this.items.length;
+          for (; 0 != oT;) {
+            let TT = Math.floor(Math.random() * oT);
+            oT--, [this[oT], this[TT]] = [this[TT], this[oT]]
           }
         }))
       }
-      move(YY) {
-        return this.isMovingItems = !0, YY(this), this.isMovingItems = !1, this
-      } [sY](YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const DY = this[WY] ?? this;
-        return rY || DY.deletedIndexes[YY] ? DY.items[YY] : DY.tmpItems[YY] || DY.items[YY]
-      } [iY](YY) {
-        const rY = this[WY] ?? this;
-        rY.items[YY] = void 0, rY._needsCompaction = !0
-      } [EY]() {
-        const YY = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, YY), this.deletedIndexes.length = 0)
-      } [VY]() {
-        const YY = this[WY] ?? this;
-        YY._needsCompaction && (YY._needsCompaction = !1, YY.items = YY.items.filter((YY => void 0 !== YY)))
-      } [yY](YY, rY, DY) {
-        const FY = this[WY] ?? this,
-          AY = FY.items;
-        let IY = !1;
-        for (let RY = 0; RY < AY.length; RY++) {
-          const OY = AY[RY];
-          YY.has(RY) ? DY(OY) : (IY = !0, rY(OY, RY), FY[iY](RY))
+      move(TT) {
+        return this.isMovingItems = !0, TT(this), this.isMovingItems = !1, this
+      } [LT](TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const IT = this[rT] ?? this;
+        return oT || IT.deletedIndexes[TT] ? IT.items[TT] : IT.tmpItems[TT] || IT.items[TT]
+      } [xT](TT) {
+        const oT = this[rT] ?? this;
+        oT.items[TT] = void 0, oT._needsCompaction = !0
+      } [AT]() {
+        const TT = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, TT), this.deletedIndexes.length = 0)
+      } [hT]() {
+        const TT = this[rT] ?? this;
+        TT._needsCompaction && (TT._needsCompaction = !1, TT.items = TT.items.filter((TT => void 0 !== TT)))
+      } [cT](TT, oT, IT) {
+        const iT = this[rT] ?? this,
+          zT = iT.items;
+        let kT = !1;
+        for (let WT = 0; WT < zT.length; WT++) {
+          const XT = zT[WT];
+          TT.has(WT) ? IT(XT) : (kT = !0, oT(XT, WT), iT[xT](WT))
         }
-        IY && FY[VY]()
+        kT && iT[hT]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((YY => "function" === typeof YY.toJSON ? YY.toJSON() : YY))
+        return this.toArray().map((TT => "function" === typeof TT.toJSON ? TT.toJSON() : TT))
       }
-      clone(YY) {
-        let rY;
-        return YY ? (rY = new DF, rY.push(...this.items)) : rY = new DF(...this.map((YY => YY[QY] ? YY.clone() : YY))), rY
+      clone(TT) {
+        let oT;
+        return TT ? (oT = new zi, oT.push(...this.items)) : oT = new zi(...this.map((TT => TT[KT] ? TT.clone() : TT))), oT
       }
     }
-    lr("array", {
-      constructor: DF
+    mo("array", {
+      constructor: zi
     });
-    class FF {
+    class ki {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(YY) {
-        const rY = this.indexByKey[YY];
-        return void 0 === rY ? void 0 : rY
+      indexOf(TT) {
+        const oT = this.indexByKey[TT];
+        return void 0 === oT ? void 0 : oT
       }
-      assign(YY) {
-        const rY = this.nextIndex++;
-        return this.indexByKey[YY] = rY, this.keyByIndex.set(rY, YY), rY
+      assign(TT) {
+        const oT = this.nextIndex++;
+        return this.indexByKey[TT] = oT, this.keyByIndex.set(oT, TT), oT
       }
-      snapshot(YY, rY) {
-        (this.snapshots ??= new Map).set(YY, rY)
+      snapshot(TT, oT) {
+        (this.snapshots ??= new Map).set(TT, oT)
       }
-      forgetSnapshot(YY) {
-        this.snapshots?.delete(YY)
+      forgetSnapshot(TT) {
+        this.snapshots?.delete(TT)
       }
-      snapshotAt(YY) {
-        return this.snapshots?.get(YY)
+      snapshotAt(TT) {
+        return this.snapshots?.get(TT)
       }
-      setIndex(YY, rY) {
-        this.keyByIndex.set(YY, rY), this.indexByKey[rY] = YY
+      setIndex(TT, oT) {
+        this.keyByIndex.set(TT, oT), this.indexByKey[oT] = TT
       }
-      keyOf(YY) {
-        return this.keyByIndex.get(YY)
+      keyOf(TT) {
+        return this.keyByIndex.get(TT)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [YY] of this.snapshots) {
-            const rY = this.keyByIndex.get(YY);
-            void 0 !== rY && (delete this.indexByKey[rY], this.keyByIndex.delete(YY))
+          for (const [TT] of this.snapshots) {
+            const oT = this.keyByIndex.get(TT);
+            void 0 !== oT && (delete this.indexByKey[oT], this.keyByIndex.delete(TT))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class AF {
-      [QY];
-      [OY];
+    class Wi {
+      [KT];
+      [XT];
       childType;
-      [oY];
+      [MT];
       $items = new Map;
-      journal = new FF;
+      journal = new ki;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(YY) {
-        (this._stream ??= Nr()).maxPerTick = YY
+      set maxPerTick(TT) {
+        (this._stream ??= uo()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(YY) {
-        (this._stream ??= Nr()).priority = YY
+      set priority(TT) {
+        (this._stream ??= uo()).priority = TT
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[aY] = jD;
-      static[vY] = PD;
-      static COLLECTION_KIND = XD;
-      static[uY](YY, rY, DY) {
-        if (!DY || "string" === typeof YY[oY]) return !0;
-        const FY = YY[sY](rY) ?? YY.journal.snapshotAt(rY);
-        return DY.isChangeTreeVisible(FY[QY])
+      static[FT] = OI;
+      static[ST] = dI;
+      static COLLECTION_KIND = tI;
+      static[DT](TT, oT, IT) {
+        if (!IT || "string" === typeof TT[MT]) return !0;
+        const iT = TT[LT](oT) ?? TT.journal.snapshotAt(oT);
+        return IT.isChangeTreeVisible(iT[KT])
       }
-      static is(YY) {
-        return void 0 !== YY.map
+      static is(TT) {
+        return void 0 !== TT.map
       }
-      constructor(YY) {
-        if (Object.defineProperty(this, QY, {
-            value: new HD(this),
+      constructor(TT) {
+        if (Object.defineProperty(this, KT, {
+            value: new JI(this),
             enumerable: !1,
             writable: !0
-          }), this[oY] = void 0, YY)
-          if (YY instanceof Map || YY instanceof AF) YY.forEach(((YY, rY) => this.set(rY, YY)));
+          }), this[MT] = void 0, TT)
+          if (TT instanceof Map || TT instanceof Wi) TT.forEach(((TT, oT) => this.set(oT, TT)));
           else
-            for (const rY in YY) this.set(rY, YY[rY])
+            for (const oT in TT) this.set(oT, TT[oT])
       }
       static initializeForDecoder() {
-        const YY = Object.create(AF.prototype);
-        return YY.$items = new Map, YY.journal = new FF, YY[oY] = void 0, ZD(YY), YY
+        const TT = Object.create(Wi.prototype);
+        return TT.$items = new Map, TT.journal = new ki, TT[MT] = void 0, aI(TT), TT
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return AF
+        return Wi
       }
-      set(YY, rY) {
-        if (void 0 === rY || null === rY) throw new Error(`MapSchema#set('${YY}', ${rY}): trying to set ${rY} value on '${YY}'.`);
-        "object" === typeof rY && this[oY] && tD(rY, this[oY], this, YY), YY = YY.toString();
-        const DY = this[QY],
-          FY = void 0 !== rY[QY],
-          IY = this.journal;
-        let RY, OY = IY.indexOf(YY);
-        if (void 0 !== OY) {
-          RY = AY.REPLACE;
-          const DY = this.$items.get(YY);
-          if (DY === rY) return;
-          FY && (RY = AY.DELETE_AND_ADD, void 0 !== DY && DY[QY].root?.remove(DY[QY])), void 0 !== IY.snapshotAt(OY) && IY.forgetSnapshot(OY)
-        } else OY = IY.assign(YY), RY = AY.ADD;
-        return this.$items.set(YY, rY), RY === AY.ADD && DY.isStreamCollection ? void 0 !== DY.root && cr(this, DY.root, OY) : DY.change(OY, RY), FY && rY[QY].setParent(this, DY.root, OY), this
+      set(TT, oT) {
+        if (void 0 === oT || null === oT) throw new Error(`MapSchema#set('${TT}', ${oT}): trying to set ${oT} value on '${TT}'.`);
+        "object" === typeof oT && this[MT] && oi(oT, this[MT], this, TT), TT = TT.toString();
+        const IT = this[KT],
+          iT = void 0 !== oT[KT],
+          kT = this.journal;
+        let WT, XT = kT.indexOf(TT);
+        if (void 0 !== XT) {
+          WT = zT.REPLACE;
+          const IT = this.$items.get(TT);
+          if (IT === oT) return;
+          iT && (WT = zT.DELETE_AND_ADD, void 0 !== IT && IT[KT].root?.remove(IT[KT])), void 0 !== kT.snapshotAt(XT) && kT.forgetSnapshot(XT)
+        } else XT = kT.assign(TT), WT = zT.ADD;
+        return this.$items.set(TT, oT), WT === zT.ADD && IT.isStreamCollection ? void 0 !== IT.root && Eo(this, IT.root, XT) : IT.change(XT, WT), iT && oT[KT].setParent(this, IT.root, XT), this
       }
-      get(YY) {
-        return this.$items.get(YY)
+      get(TT) {
+        return this.$items.get(TT)
       }
-      getOrInsert(YY, rY) {
-        return this.$items.has(YY) ? this.$items.get(YY) : (this.set(YY, rY), rY)
+      getOrInsert(TT, oT) {
+        return this.$items.has(TT) ? this.$items.get(TT) : (this.set(TT, oT), oT)
       }
-      getOrInsertComputed(YY, rY) {
-        if (this.$items.has(YY)) return this.$items.get(YY);
-        const DY = rY(YY);
-        return this.set(YY, DY), DY
+      getOrInsertComputed(TT, oT) {
+        if (this.$items.has(TT)) return this.$items.get(TT);
+        const IT = oT(TT);
+        return this.set(TT, IT), IT
       }
-      delete(YY) {
-        if (!this.$items.has(YY)) return !1;
-        const rY = this.journal.indexOf(YY),
-          DY = this.$items.get(YY),
-          FY = this[QY];
-        if (FY.isStreamCollection) {
-          const AY = FY.root;
-          let IY = !1;
-          return void 0 !== AY && (IY = Kr(this, AY, this[OY], rY)), void 0 !== DY?.[QY] && AY?.remove(DY[QY]), this.$items.delete(YY), IY || this.journal.snapshot(rY, DY), !0
+      delete(TT) {
+        if (!this.$items.has(TT)) return !1;
+        const oT = this.journal.indexOf(TT),
+          IT = this.$items.get(TT),
+          iT = this[KT];
+        if (iT.isStreamCollection) {
+          const zT = iT.root;
+          let kT = !1;
+          return void 0 !== zT && (kT = fo(this, zT, this[XT], oT)), void 0 !== IT?.[KT] && zT?.remove(IT[KT]), this.$items.delete(TT), kT || this.journal.snapshot(oT, IT), !0
         }
-        return this.journal.snapshot(rY, DY), FY.delete(rY), this.$items.delete(YY)
+        return this.journal.snapshot(oT, IT), iT.delete(oT), this.$items.delete(TT)
       }
       clear() {
-        const YY = this[QY];
-        YY.discard(), YY.forEachChild(((rY, DY) => {
-          YY.root?.remove(rY)
-        })), this.journal.reset(), this.$items.clear(), YY.operation(AY.CLEAR)
-      } [mY]() {
-        const YY = this[QY];
-        if (YY.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((YY => YY?.[mY]?.())), this.$items.clear(), this.journal.reset(), YY.recycle(), this[OY] = void 0
+        const TT = this[KT];
+        TT.discard(), TT.forEachChild(((oT, IT) => {
+          TT.root?.remove(oT)
+        })), this.journal.reset(), this.$items.clear(), TT.operation(zT.CLEAR)
+      } [gT]() {
+        const TT = this[KT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[gT]?.())), this.$items.clear(), this.journal.reset(), TT.recycle(), this[XT] = void 0
       }
-      has(YY) {
-        return this.$items.has(YY)
+      has(TT) {
+        return this.$items.has(TT)
       }
-      forEach(YY) {
-        this.$items.forEach(YY)
+      forEach(TT) {
+        this.$items.forEach(TT)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[QY].pause()
+        this[KT].pause()
       }
       resumeTracking() {
-        this[QY].resume()
+        this[KT].resume()
       }
-      untracked(YY) {
-        return this[QY].untracked(YY)
+      untracked(TT) {
+        return this[KT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[QY].paused
+        return this[KT].paused
       }
-      setIndex(YY, rY) {
-        this.journal.setIndex(YY, rY)
+      setIndex(TT, oT) {
+        this.journal.setIndex(TT, oT)
       }
-      getIndex(YY) {
-        return this.journal.keyOf(YY)
-      } [sY](YY) {
-        const rY = this.journal.keyOf(YY);
-        return void 0 !== rY ? this.$items.get(rY) : void 0
-      } [iY](YY) {
-        const rY = this.journal.keyOf(YY);
-        void 0 !== rY && (this.$items.delete(rY), this.journal.keyByIndex.delete(YY))
-      } [yY](YY, rY, DY) {
-        let FY = null;
-        if (this.$items.forEach(((AY, IY) => {
-            YY.has(IY) ? DY(AY) : ((FY ??= new Set).add(IY), rY(AY, IY))
-          })), null !== FY) {
-          FY.forEach((YY => {
-            this.$items.delete(YY), delete this.journal.indexByKey[YY]
+      getIndex(TT) {
+        return this.journal.keyOf(TT)
+      } [LT](TT) {
+        const oT = this.journal.keyOf(TT);
+        return void 0 !== oT ? this.$items.get(oT) : void 0
+      } [xT](TT) {
+        const oT = this.journal.keyOf(TT);
+        void 0 !== oT && (this.$items.delete(oT), this.journal.keyByIndex.delete(TT))
+      } [cT](TT, oT, IT) {
+        let iT = null;
+        if (this.$items.forEach(((zT, kT) => {
+            TT.has(kT) ? IT(zT) : ((iT ??= new Set).add(kT), oT(zT, kT))
+          })), null !== iT) {
+          iT.forEach((TT => {
+            this.$items.delete(TT), delete this.journal.indexByKey[TT]
           }));
-          const YY = [];
-          this.journal.keyByIndex.forEach(((rY, DY) => {
-            FY.has(rY) && YY.push(DY)
+          const TT = [];
+          this.journal.keyByIndex.forEach(((oT, IT) => {
+            iT.has(oT) && TT.push(IT)
           }));
-          for (let rY = 0; rY < YY.length; rY++) this.journal.keyByIndex.delete(YY[rY])
+          for (let oT = 0; oT < TT.length; oT++) this.journal.keyByIndex.delete(TT[oT])
         }
-      } [EY]() {
+      } [AT]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(YY) {
-        Cr(this, YY)
+      _dropView(TT) {
+        Uo(this, TT)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (YY => {
-          let [rY, DY] = YY;
-          return [rY, "function" === typeof DY.toJSON ? DY.toJSON() : DY]
+        return Object.fromEntries(Array.from(this, (TT => {
+          let [oT, IT] = TT;
+          return [oT, "function" === typeof IT.toJSON ? IT.toJSON() : IT]
         })))
       }
-      clone(YY) {
-        let rY;
-        return YY ? rY = Object.assign(new AF, this) : (rY = new AF, this.forEach(((YY, DY) => {
-          YY[QY] ? rY.set(DY, YY.clone()) : rY.set(DY, YY)
-        }))), rY
+      clone(TT) {
+        let oT;
+        return TT ? oT = Object.assign(new Wi, this) : (oT = new Wi, this.forEach(((TT, IT) => {
+          TT[KT] ? oT.set(IT, TT.clone()) : oT.set(IT, TT)
+        }))), oT
       }
     }
-    lr("map", {
-      constructor: AF
+    mo("map", {
+      constructor: Wi
     });
-    class IF {
-      [QY];
-      [OY];
-      [oY];
+    class Xi {
+      [KT];
+      [XT];
+      [MT];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(YY) {
-        (this._stream ??= Nr()).maxPerTick = YY
+      set maxPerTick(TT) {
+        (this._stream ??= uo()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(YY) {
-        (this._stream ??= Nr()).priority = YY
+      set priority(TT) {
+        (this._stream ??= uo()).priority = TT
       }
-      static[aY] = hD;
-      static[vY] = PD;
-      static COLLECTION_KIND = kD;
-      static[uY](YY, rY, DY) {
-        return !DY || "string" === typeof YY[oY] || DY.isChangeTreeVisible((YY[sY](rY) ?? YY.deletedItems[rY])[QY])
+      static[FT] = HI;
+      static[ST] = dI;
+      static COLLECTION_KIND = bI;
+      static[DT](TT, oT, IT) {
+        return !IT || "string" === typeof TT[MT] || IT.isChangeTreeVisible((TT[LT](oT) ?? TT.deletedItems[oT])[KT])
       }
-      static is(YY) {
-        return void 0 !== YY.collection
+      static is(TT) {
+        return void 0 !== TT.collection
       }
-      constructor(YY) {
-        Object.defineProperty(this, QY, {
-          value: new HD(this),
+      constructor(TT) {
+        Object.defineProperty(this, KT, {
+          value: new JI(this),
           enumerable: !1,
           writable: !0
-        }), this[oY] = void 0, YY && YY.forEach((YY => this.add(YY)))
+        }), this[MT] = void 0, TT && TT.forEach((TT => this.add(TT)))
       }
       static initializeForDecoder() {
-        const YY = Object.create(IF.prototype);
-        return YY.$items = new Map, YY.deletedItems = {}, YY.$refId = 0, YY[oY] = void 0, ZD(YY), YY
+        const TT = Object.create(Xi.prototype);
+        return TT.$items = new Map, TT.deletedItems = {}, TT.$refId = 0, TT[MT] = void 0, aI(TT), TT
       }
-      add(YY) {
-        const rY = this.$refId++,
-          DY = this[QY];
-        return this.$items.set(rY, YY), DY.isStreamCollection ? void 0 !== DY.root && cr(this, DY.root, rY) : DY.change(rY), void 0 !== YY[QY] && YY[QY].setParent(this, DY.root, rY), rY
+      add(TT) {
+        const oT = this.$refId++,
+          IT = this[KT];
+        return this.$items.set(oT, TT), IT.isStreamCollection ? void 0 !== IT.root && Eo(this, IT.root, oT) : IT.change(oT), void 0 !== TT[KT] && TT[KT].setParent(this, IT.root, oT), oT
       }
-      at(YY) {
-        const rY = Array.from(this.$items.keys())[YY];
-        return this.$items.get(rY)
+      at(TT) {
+        const oT = Array.from(this.$items.keys())[TT];
+        return this.$items.get(oT)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(YY) {
-        const rY = this.$items.entries();
-        let DY, FY;
+      delete(TT) {
+        const oT = this.$items.entries();
+        let IT, iT;
         for (;
-          (FY = rY.next()) && !FY.done;)
-          if (YY === FY.value[1]) {
-            DY = FY.value[0];
+          (iT = oT.next()) && !iT.done;)
+          if (TT === iT.value[1]) {
+            IT = iT.value[0];
             break
-          } if (void 0 === DY) return !1;
-        const AY = this[QY];
-        if (AY.isStreamCollection) {
-          const YY = AY.root,
-            rY = this.$items.get(DY);
-          return void 0 !== YY && Kr(this, YY, this[OY], DY), void 0 !== rY?.[QY] && YY?.remove(rY[QY]), this.deletedItems[DY] = rY, this.$items.delete(DY)
+          } if (void 0 === IT) return !1;
+        const zT = this[KT];
+        if (zT.isStreamCollection) {
+          const TT = zT.root,
+            oT = this.$items.get(IT);
+          return void 0 !== TT && fo(this, TT, this[XT], IT), void 0 !== oT?.[KT] && TT?.remove(oT[KT]), this.deletedItems[IT] = oT, this.$items.delete(IT)
         }
-        return this.deletedItems[DY] = AY.delete(DY), this.$items.delete(DY)
+        return this.deletedItems[IT] = zT.delete(IT), this.$items.delete(IT)
       }
       clear() {
-        const YY = this[QY];
-        YY.discard(), YY.forEachChild(((rY, DY) => {
-          YY.root?.remove(rY)
-        })), this.$items.clear(), YY.operation(AY.CLEAR)
-      } [mY]() {
-        const YY = this[QY];
-        if (YY.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((YY => YY?.[mY]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, YY.recycle(), this[OY] = void 0
+        const TT = this[KT];
+        TT.discard(), TT.forEachChild(((oT, IT) => {
+          TT.root?.remove(oT)
+        })), this.$items.clear(), TT.operation(zT.CLEAR)
+      } [gT]() {
+        const TT = this[KT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[gT]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, TT.recycle(), this[XT] = void 0
       }
-      has(YY) {
-        return Array.from(this.$items.values()).some((rY => rY === YY))
+      has(TT) {
+        return Array.from(this.$items.values()).some((oT => oT === TT))
       }
-      forEach(YY) {
-        this.$items.forEach(((rY, DY, FY) => YY(rY, DY, this)))
+      forEach(TT) {
+        this.$items.forEach(((oT, IT, iT) => TT(oT, IT, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[QY].pause()
+        this[KT].pause()
       }
       resumeTracking() {
-        this[QY].resume()
+        this[KT].resume()
       }
-      untracked(YY) {
-        return this[QY].untracked(YY)
+      untracked(TT) {
+        return this[KT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[QY].paused
+        return this[KT].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(YY, rY) {}
-      getIndex(YY) {
-        return YY
-      } [sY](YY) {
-        return this.$items.get(YY)
-      } [iY](YY) {
-        this.$items.delete(YY)
-      } [yY](YY, rY, DY) {
-        let FY = null;
-        if (this.$items.forEach(((AY, IY) => {
-            YY.has(IY) ? DY(AY) : ((FY ??= []).push(IY), rY(AY, IY))
-          })), null !== FY)
-          for (let AY = 0; AY < FY.length; AY++) this[iY](FY[AY])
-      } [EY]() {
-        for (const YY in this.deletedItems) delete this.deletedItems[YY]
+      setIndex(TT, oT) {}
+      getIndex(TT) {
+        return TT
+      } [LT](TT) {
+        return this.$items.get(TT)
+      } [xT](TT) {
+        this.$items.delete(TT)
+      } [cT](TT, oT, IT) {
+        let iT = null;
+        if (this.$items.forEach(((zT, kT) => {
+            TT.has(kT) ? IT(zT) : ((iT ??= []).push(kT), oT(zT, kT))
+          })), null !== iT)
+          for (let zT = 0; zT < iT.length; zT++) this[xT](iT[zT])
+      } [AT]() {
+        for (const TT in this.deletedItems) delete this.deletedItems[TT]
       }
-      _dropView(YY) {
-        Cr(this, YY)
+      _dropView(TT) {
+        Uo(this, TT)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const YY = [];
-        return this.forEach(((rY, DY) => {
-          YY.push("function" === typeof rY.toJSON ? rY.toJSON() : rY)
-        })), YY
+        const TT = [];
+        return this.forEach(((oT, IT) => {
+          TT.push("function" === typeof oT.toJSON ? oT.toJSON() : oT)
+        })), TT
       }
-      clone(YY) {
-        let rY;
-        return YY ? rY = Object.assign(new IF, this) : (rY = new IF, this.forEach((YY => {
-          YY[QY] ? rY.add(YY.clone()) : rY.add(YY)
-        }))), rY
+      clone(TT) {
+        let oT;
+        return TT ? oT = Object.assign(new Xi, this) : (oT = new Xi, this.forEach((TT => {
+          TT[KT] ? oT.add(TT.clone()) : oT.add(TT)
+        }))), oT
       }
     }
-    lr("collection", {
-      constructor: IF
+    mo("collection", {
+      constructor: Xi
     });
-    class RF {
-      [QY];
-      [OY];
-      [oY];
+    class Bi {
+      [KT];
+      [XT];
+      [MT];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(YY) {
-        (this._stream ??= Nr()).maxPerTick = YY
+      set maxPerTick(TT) {
+        (this._stream ??= uo()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(YY) {
-        (this._stream ??= Nr()).priority = YY
+      set priority(TT) {
+        (this._stream ??= uo()).priority = TT
       }
-      static[aY] = hD;
-      static[vY] = PD;
-      static COLLECTION_KIND = pD;
-      static[uY](YY, rY, DY) {
-        return !DY || "string" === typeof YY[oY] || DY.isVisible((YY[sY](rY) ?? YY.deletedItems[rY])[QY])
+      static[FT] = HI;
+      static[ST] = dI;
+      static COLLECTION_KIND = pI;
+      static[DT](TT, oT, IT) {
+        return !IT || "string" === typeof TT[MT] || IT.isVisible((TT[LT](oT) ?? TT.deletedItems[oT])[KT])
       }
-      static is(YY) {
-        return void 0 !== YY.set
+      static is(TT) {
+        return void 0 !== TT.set
       }
-      constructor(YY) {
-        Object.defineProperty(this, QY, {
-          value: new HD(this),
+      constructor(TT) {
+        Object.defineProperty(this, KT, {
+          value: new JI(this),
           enumerable: !1,
           writable: !0
-        }), this[oY] = void 0, YY && YY.forEach((YY => this.add(YY)))
+        }), this[MT] = void 0, TT && TT.forEach((TT => this.add(TT)))
       }
       static initializeForDecoder() {
-        const YY = Object.create(RF.prototype);
-        return YY.$items = new Map, YY.deletedItems = {}, YY.$refId = 0, YY[oY] = void 0, ZD(YY), YY
+        const TT = Object.create(Bi.prototype);
+        return TT.$items = new Map, TT.deletedItems = {}, TT.$refId = 0, TT[MT] = void 0, aI(TT), TT
       }
-      add(YY) {
-        if (this.has(YY)) return !1;
-        const rY = this.$refId++,
-          DY = this[QY];
-        return this.$items.set(rY, YY), DY.isStreamCollection ? void 0 !== DY.root && cr(this, DY.root, rY) : DY.change(rY, AY.ADD), void 0 !== YY[QY] && YY[QY].setParent(this, DY.root, rY), rY
+      add(TT) {
+        if (this.has(TT)) return !1;
+        const oT = this.$refId++,
+          IT = this[KT];
+        return this.$items.set(oT, TT), IT.isStreamCollection ? void 0 !== IT.root && Eo(this, IT.root, oT) : IT.change(oT, zT.ADD), void 0 !== TT[KT] && TT[KT].setParent(this, IT.root, oT), oT
       }
       entries() {
         return this.$items.entries()
       }
-      delete(YY) {
-        const rY = this.$items.entries();
-        let DY, FY;
+      delete(TT) {
+        const oT = this.$items.entries();
+        let IT, iT;
         for (;
-          (FY = rY.next()) && !FY.done;)
-          if (YY === FY.value[1]) {
-            DY = FY.value[0];
+          (iT = oT.next()) && !iT.done;)
+          if (TT === iT.value[1]) {
+            IT = iT.value[0];
             break
-          } if (void 0 === DY) return !1;
-        const AY = this[QY];
-        if (AY.isStreamCollection) {
-          const YY = AY.root,
-            rY = this.$items.get(DY);
-          return void 0 !== YY && Kr(this, YY, this[OY], DY), void 0 !== rY?.[QY] && YY?.remove(rY[QY]), this.deletedItems[DY] = rY, this.$items.delete(DY)
+          } if (void 0 === IT) return !1;
+        const zT = this[KT];
+        if (zT.isStreamCollection) {
+          const TT = zT.root,
+            oT = this.$items.get(IT);
+          return void 0 !== TT && fo(this, TT, this[XT], IT), void 0 !== oT?.[KT] && TT?.remove(oT[KT]), this.deletedItems[IT] = oT, this.$items.delete(IT)
         }
-        return this.deletedItems[DY] = AY.delete(DY), this.$items.delete(DY)
+        return this.deletedItems[IT] = zT.delete(IT), this.$items.delete(IT)
       }
       clear() {
-        const YY = this[QY];
-        YY.discard(), this.$items.clear(), YY.operation(AY.CLEAR)
-      } [mY]() {
-        const YY = this[QY];
-        if (YY.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((YY => YY?.[mY]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, YY.recycle(), this[OY] = void 0
+        const TT = this[KT];
+        TT.discard(), this.$items.clear(), TT.operation(zT.CLEAR)
+      } [gT]() {
+        const TT = this[KT];
+        if (TT.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((TT => TT?.[gT]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, TT.recycle(), this[XT] = void 0
       }
-      has(YY) {
-        const rY = this.$items.values();
-        let DY, FY = !1;
+      has(TT) {
+        const oT = this.$items.values();
+        let IT, iT = !1;
         for (;
-          (DY = rY.next()) && !DY.done;)
-          if (YY === DY.value) {
-            FY = !0;
+          (IT = oT.next()) && !IT.done;)
+          if (TT === IT.value) {
+            iT = !0;
             break
-          } return FY
+          } return iT
       }
-      forEach(YY) {
-        this.$items.forEach(((rY, DY, FY) => YY(rY, DY, this)))
+      forEach(TT) {
+        this.$items.forEach(((oT, IT, iT) => TT(oT, IT, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[QY].pause()
+        this[KT].pause()
       }
       resumeTracking() {
-        this[QY].resume()
+        this[KT].resume()
       }
-      untracked(YY) {
-        return this[QY].untracked(YY)
+      untracked(TT) {
+        return this[KT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[QY].paused
+        return this[KT].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(YY, rY) {}
-      getIndex(YY) {
-        return YY
-      } [sY](YY) {
-        return this.$items.get(YY)
-      } [iY](YY) {
-        this.$items.delete(YY)
-      } [yY](YY, rY, DY) {
-        let FY = null;
-        if (this.$items.forEach(((AY, IY) => {
-            YY.has(IY) ? DY(AY) : ((FY ??= []).push(IY), rY(AY, IY))
-          })), null !== FY)
-          for (let AY = 0; AY < FY.length; AY++) this[iY](FY[AY])
-      } [EY]() {
-        for (const YY in this.deletedItems) delete this.deletedItems[YY]
+      setIndex(TT, oT) {}
+      getIndex(TT) {
+        return TT
+      } [LT](TT) {
+        return this.$items.get(TT)
+      } [xT](TT) {
+        this.$items.delete(TT)
+      } [cT](TT, oT, IT) {
+        let iT = null;
+        if (this.$items.forEach(((zT, kT) => {
+            TT.has(kT) ? IT(zT) : ((iT ??= []).push(kT), oT(zT, kT))
+          })), null !== iT)
+          for (let zT = 0; zT < iT.length; zT++) this[xT](iT[zT])
+      } [AT]() {
+        for (const TT in this.deletedItems) delete this.deletedItems[TT]
       }
-      _dropView(YY) {
-        Cr(this, YY)
+      _dropView(TT) {
+        Uo(this, TT)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const YY = [];
-        return this.forEach(((rY, DY) => {
-          YY.push("function" === typeof rY.toJSON ? rY.toJSON() : rY)
-        })), YY
+        const TT = [];
+        return this.forEach(((oT, IT) => {
+          TT.push("function" === typeof oT.toJSON ? oT.toJSON() : oT)
+        })), TT
       }
-      clone(YY) {
-        let rY;
-        return YY ? rY = Object.assign(new RF, this) : (rY = new RF, this.forEach((YY => {
-          YY[QY] ? rY.add(YY.clone()) : rY.add(YY)
-        }))), rY
+      clone(TT) {
+        let oT;
+        return TT ? oT = Object.assign(new Bi, this) : (oT = new Bi, this.forEach((TT => {
+          TT[KT] ? oT.add(TT.clone()) : oT.add(TT)
+        }))), oT
       }
     }
-    lr("set", {
-      constructor: RF
+    mo("set", {
+      constructor: Bi
     });
-    class OF {
-      [QY];
-      [OY];
-      [oY];
+    class Fi {
+      [KT];
+      [XT];
+      [MT];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(YY) {
-        (this._stream ??= Nr()).maxPerTick = YY
+      set maxPerTick(TT) {
+        (this._stream ??= uo()).maxPerTick = TT
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(YY) {
-        (this._stream ??= Nr()).priority = YY
+      set priority(TT) {
+        (this._stream ??= uo()).priority = TT
       }
       static $isStream = !0;
-      static[aY] = hD;
-      static[vY] = PD;
-      static COLLECTION_KIND = GD;
-      static[uY](YY, rY, DY) {
-        if (!DY) return !0;
-        const FY = YY[sY](rY);
-        return void 0 !== FY && DY.isVisible(FY[QY])
+      static[FT] = HI;
+      static[ST] = dI;
+      static COLLECTION_KIND = yI;
+      static[DT](TT, oT, IT) {
+        if (!IT) return !0;
+        const iT = TT[LT](oT);
+        return void 0 !== iT && IT.isVisible(iT[KT])
       }
-      static is(YY) {
-        return YY && void 0 !== YY.stream
+      static is(TT) {
+        return TT && void 0 !== TT.stream
       }
       constructor() {
-        Object.defineProperty(this, QY, {
-          value: new HD(this),
+        Object.defineProperty(this, KT, {
+          value: new JI(this),
           enumerable: !1,
           writable: !0
-        }), this[oY] = void 0
+        }), this[MT] = void 0
       }
       static initializeForDecoder() {
-        const YY = Object.create(OF.prototype);
-        return YY.$items = new Map, YY.$nextPosition = 0, YY._itemIndex = new Map, YY[oY] = void 0, ZD(YY), YY
+        const TT = Object.create(Fi.prototype);
+        return TT.$items = new Map, TT.$nextPosition = 0, TT._itemIndex = new Map, TT[MT] = void 0, aI(TT), TT
       }
-      add(YY) {
-        if (this._itemIndex.has(YY)) return -1;
-        const rY = this.$nextPosition++;
-        this.$items.set(rY, YY), this._itemIndex.set(YY, rY);
-        const DY = this[QY].root;
-        return void 0 !== YY[QY] && YY[QY].setParent(this, DY, rY), void 0 !== DY && cr(this, DY, rY), rY
+      add(TT) {
+        if (this._itemIndex.has(TT)) return -1;
+        const oT = this.$nextPosition++;
+        this.$items.set(oT, TT), this._itemIndex.set(TT, oT);
+        const IT = this[KT].root;
+        return void 0 !== TT[KT] && TT[KT].setParent(this, IT, oT), void 0 !== IT && Eo(this, IT, oT), oT
       }
-      remove(YY) {
-        const rY = this._itemIndex.get(YY);
-        if (void 0 === rY) return !1;
-        this._itemIndex.delete(YY), this.$items.delete(rY);
-        const DY = this[QY].root;
-        return void 0 !== DY && (Kr(this, DY, this[OY], rY), void 0 !== YY[QY] && DY.remove(YY[QY])), !0
+      remove(TT) {
+        const oT = this._itemIndex.get(TT);
+        if (void 0 === oT) return !1;
+        this._itemIndex.delete(TT), this.$items.delete(oT);
+        const IT = this[KT].root;
+        return void 0 !== IT && (fo(this, IT, this[XT], oT), void 0 !== TT[KT] && IT.remove(TT[KT])), !0
       }
-      has(YY) {
-        return this._itemIndex.has(YY)
+      has(TT) {
+        return this._itemIndex.has(TT)
       }
       clear() {
-        const YY = this[QY].root;
-        if (void 0 !== YY) {
-          ! function(YY, rY, DY) {
-            const FY = YY._stream;
-            if (void 0 !== FY) {
-              FY.broadcastPending.clear();
-              for (const YY of FY.sentBroadcast) FY.broadcastDeletes.add(YY);
-              FY.sentBroadcast.clear(), rY.forEachActiveView((YY => {
-                FY.pendingByView.get(YY.id)?.clear();
-                const rY = FY.sentByView.get(YY.id);
-                if (void 0 !== rY && rY.size > 0) {
-                  let FY = YY.changes.get(DY);
-                  void 0 === FY && (FY = new Map, YY.changes.set(DY, FY));
-                  for (const YY of rY) FY.set(YY, AY.DELETE);
-                  rY.clear()
+        const TT = this[KT].root;
+        if (void 0 !== TT) {
+          ! function(TT, oT, IT) {
+            const iT = TT._stream;
+            if (void 0 !== iT) {
+              iT.broadcastPending.clear();
+              for (const TT of iT.sentBroadcast) iT.broadcastDeletes.add(TT);
+              iT.sentBroadcast.clear(), oT.forEachActiveView((TT => {
+                iT.pendingByView.get(TT.id)?.clear();
+                const oT = iT.sentByView.get(TT.id);
+                if (void 0 !== oT && oT.size > 0) {
+                  let iT = TT.changes.get(IT);
+                  void 0 === iT && (iT = new Map, TT.changes.set(IT, iT));
+                  for (const TT of oT) iT.set(TT, zT.DELETE);
+                  oT.clear()
                 }
               }))
             }
-          }(this, YY, this[OY]);
-          for (const rY of this.$items.values()) void 0 !== rY[QY] && YY.remove(rY[QY])
+          }(this, TT, this[XT]);
+          for (const oT of this.$items.values()) void 0 !== oT[KT] && TT.remove(oT[KT])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(YY) {
-        for (const [rY, DY] of this.$items) YY(DY, rY, this)
+      forEach(TT) {
+        for (const [oT, IT] of this.$items) TT(IT, oT, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(YY, rY) {}
-      getIndex(YY) {
-        return YY
-      } [sY](YY) {
-        return this.$items.get(YY)
-      } [iY](YY) {
-        const rY = this.$items.get(YY);
-        void 0 !== rY && (this._itemIndex.delete(rY), this.$items.delete(YY))
-      } [yY]() {} [EY]() {}
+      setIndex(TT, oT) {}
+      getIndex(TT) {
+        return TT
+      } [LT](TT) {
+        return this.$items.get(TT)
+      } [xT](TT) {
+        const oT = this.$items.get(TT);
+        void 0 !== oT && (this._itemIndex.delete(oT), this.$items.delete(TT))
+      } [cT]() {} [AT]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const YY = [];
-        return this.forEach((rY => {
-          YY.push("function" === typeof rY?.toJSON ? rY.toJSON() : rY)
-        })), YY
+        const TT = [];
+        return this.forEach((oT => {
+          TT.push("function" === typeof oT?.toJSON ? oT.toJSON() : oT)
+        })), TT
       }
-      clone(YY) {
-        if (YY) {
-          return Object.assign(new OF, this)
+      clone(TT) {
+        if (TT) {
+          return Object.assign(new Fi, this)
         }
-        const rY = new OF;
-        return rY.maxPerTick = this.maxPerTick, this.forEach((YY => {
-          rY.add("function" === typeof YY?.clone ? YY.clone() : YY)
-        })), rY
+        const oT = new Fi;
+        return oT.maxPerTick = this.maxPerTick, this.forEach((TT => {
+          oT.add("function" === typeof TT?.clone ? TT.clone() : TT)
+        })), oT
       }
-      _dropView(YY) {
-        Cr(this, YY)
+      _dropView(TT) {
+        Uo(this, TT)
       }
       _unregister() {}
     }
-    lr("stream", {
-      constructor: OF
+    mo("stream", {
+      constructor: Fi
     });
-    class gF {
-      [lY] = !0;
+    class Si {
+      [mT] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(YY) {
-        this._type = YY
+      constructor(TT) {
+        this._type = TT
       }
-      default (YY) {
-        return this._default = YY, this._hasDefault = !0, this
+      default (TT) {
+        return this._default = TT, this._hasDefault = !0, this
       }
-      view(YY) {
-        return this._view = YY ?? -1, this
+      view(TT) {
+        return this._view = TT ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const YY = this._type;
-        if (YY && "object" === typeof YY && void 0 !== YY.array) throw new Error(er);
+        const TT = this._type;
+        if (TT && "object" === typeof TT && void 0 !== TT.array) throw new Error(Ro);
         return this._stream = !0, this
       }
-      priority(YY) {
-        return this._streamPriority = YY, this
+      priority(TT) {
+        return this._streamPriority = TT, this
       }
       deprecated() {
-        let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = YY, this
+        let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = TT, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function aF(YY) {
-      return null != YY && !0 === YY[lY]
+    function Di(TT) {
+      return null != TT && !0 === TT[mT]
     }
 
-    function vF(YY) {
-      return () => new gF(YY)
+    function Li(TT) {
+      return () => new Si(TT)
     }
 
-    function uF(YY) {
-      if (aF(YY)) {
-        const rY = YY._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof rY?`use the type name instead: t.array("${rY}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function xi(TT) {
+      if (Di(TT)) {
+        const oT = TT._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof oT?`use the type name instead: t.array("${oT}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return YY
+      return TT
     }
 
-    function sF(YY) {
-      return new gF({
-        quantized: jr(YY)
+    function ci(TT) {
+      return new Si({
+        quantized: Yo(TT)
       })
     }
-    const iF = Object.freeze({
-        string: vF("string"),
-        number: vF("number"),
-        boolean: vF("boolean"),
-        int8: vF("int8"),
-        uint8: vF("uint8"),
-        int16: vF("int16"),
-        uint16: vF("uint16"),
-        int32: vF("int32"),
-        uint32: vF("uint32"),
-        int64: vF("int64"),
-        uint64: vF("uint64"),
-        float32: vF("float32"),
-        float64: vF("float64"),
-        bigint64: vF("bigint64"),
-        biguint64: vF("biguint64"),
-        ref: YY => new gF(YY),
-        array: YY => new gF({
-          array: uF(YY)
+    const Ki = Object.freeze({
+        string: Li("string"),
+        number: Li("number"),
+        boolean: Li("boolean"),
+        int8: Li("int8"),
+        uint8: Li("uint8"),
+        int16: Li("int16"),
+        uint16: Li("uint16"),
+        int32: Li("int32"),
+        uint32: Li("uint32"),
+        int64: Li("int64"),
+        uint64: Li("uint64"),
+        float32: Li("float32"),
+        float64: Li("float64"),
+        bigint64: Li("bigint64"),
+        biguint64: Li("biguint64"),
+        ref: TT => new Si(TT),
+        array: TT => new Si({
+          array: xi(TT)
         }),
-        map: YY => new gF({
-          map: uF(YY)
+        map: TT => new Si({
+          map: xi(TT)
         }),
-        set: YY => new gF({
-          set: uF(YY)
+        set: TT => new Si({
+          set: xi(TT)
         }),
-        collection: YY => new gF({
-          collection: uF(YY)
+        collection: TT => new Si({
+          collection: xi(TT)
         }),
-        stream: YY => {
-          const rY = new gF({
-            stream: uF(YY)
+        stream: TT => {
+          const oT = new Si({
+            stream: xi(TT)
           });
-          return rY._stream = !0, rY
+          return oT._stream = !0, oT
         },
-        quantized: sF,
-        angle: YY => sF({
+        quantized: ci,
+        angle: TT => ci({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: YY?.bits ?? 16
+          bits: TT?.bits ?? 16
         })
       }),
-      yF = -1;
+      Mi = -1;
 
-    function QF(YY) {
-      return wr.register(YY), YY
+    function ri(TT) {
+      return qo.register(TT), TT
     }
 
-    function oF() {
-      let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yF;
-      return function(rY, DY) {
-        const FY = xr.initialize(rY.constructor);
-        xr.setTag(FY, DY, YY)
+    function Ai() {
+      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Mi;
+      return function(oT, IT) {
+        const iT = yo.initialize(oT.constructor);
+        yo.setTag(iT, IT, TT)
       }
     }
 
-    function WF(YY, rY) {
-      const DY = xr.initialize(YY.constructor);
-      xr.setUnreliable(DY, rY)
+    function gi(TT, oT) {
+      const IT = yo.initialize(TT.constructor);
+      yo.setUnreliable(IT, oT)
     }
 
-    function EF(YY, rY) {
-      const DY = xr.initialize(YY.constructor);
-      xr.setPatchOnly(DY, rY)
+    function wi(TT, oT) {
+      const IT = yo.initialize(TT.constructor);
+      yo.setPatchOnly(IT, oT)
     }
 
-    function mF(YY, rY) {
-      const DY = xr.initialize(YY.constructor);
-      xr.setFullStateOnly(DY, rY)
+    function mi(TT, oT) {
+      const IT = yo.initialize(TT.constructor);
+      yo.setFullStateOnly(IT, oT)
     }
 
-    function VF(YY, rY) {
-      return function(DY, FY) {
-        const AY = DY.constructor;
-        if (!YY) throw new Error(`${AY.name}: @type() reference provided for "${FY}" is undefined. Make sure you don't have any circular dependencies.`);
-        YY = Xr(YY, `${AY.name}.${FY}`), wr.register(AY);
-        const IY = Object.getPrototypeOf(AY)[Symbol.metadata],
-          RY = xr.initialize(AY);
-        let OY = RY[FY];
-        if (void 0 !== RY[OY]) {
-          if (RY[OY].deprecated) return;
-          if (void 0 !== RY[OY].type) {
-            const YY = new Error(`@colyseus/schema: Duplicate '${FY}' definition on '${AY.name}'.\nCheck @type() annotation`);
-            throw new Error(`${YY.message} ${YY.stack.split("\n")[4].trim()}`)
+    function ei(TT, oT) {
+      return function(IT, iT) {
+        const zT = IT.constructor;
+        if (!TT) throw new Error(`${zT.name}: @type() reference provided for "${iT}" is undefined. Make sure you don't have any circular dependencies.`);
+        TT = so(TT, `${zT.name}.${iT}`), qo.register(zT);
+        const kT = Object.getPrototypeOf(zT)[Symbol.metadata],
+          WT = yo.initialize(zT);
+        let XT = WT[iT];
+        if (void 0 !== WT[XT]) {
+          if (WT[XT].deprecated) return;
+          if (void 0 !== WT[XT].type) {
+            const TT = new Error(`@colyseus/schema: Duplicate '${iT}' definition on '${zT.name}'.\nCheck @type() annotation`);
+            throw new Error(`${TT.message} ${TT.stack.split("\n")[4].trim()}`)
           }
-        } else OY = RY[BY] ?? (IY && IY[BY]) ?? -1, OY++;
-        if (rY && rY.manual) xr.addField(RY, OY, FY, YY, {
+        } else XT = WT[vT] ?? (kT && kT[vT]) ?? -1, XT++;
+        if (oT && oT.manual) yo.addField(WT, XT, iT, TT, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: rY,
-            childType: DY
-          } = br(YY);
-          xr.addField(RY, OY, FY, YY, lF(FY, OY, DY, rY))
+            complexTypeKlass: oT,
+            childType: IT
+          } = Zo(TT);
+          yo.addField(WT, XT, iT, TT, ui(iT, XT, IT, oT))
         }
-        RY[TY][FY] && Object.defineProperty(DY, FY, RY[TY][FY]), ("string" === typeof YY || hr(YY)) && (RY[NY] || Object.defineProperty(RY, NY, {
+        WT[eT][iT] && Object.defineProperty(IT, iT, WT[eT][iT]), ("string" === typeof TT || Qo(TT)) && (WT[uT] || Object.defineProperty(WT, uT, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), RY[NY][OY] = "string" === typeof YY ? rr[YY] : Mr(YY.quantized))
+        }), WT[uT][XT] = "string" === typeof TT ? oo[TT] : no(TT.quantized))
       }
     }
-    const SF = {
+    const Ri = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function lF(YY, rY, DY, FY) {
-      let IY;
-      return IY = FY ? function(YY, rY, DY, FY) {
-        const IY = FY.constructor === DF,
-          RY = FY.constructor === AF;
-        return function(YY) {
-          const FY = this[SY],
-            OY = FY[rY];
-          if (YY !== OY) {
-            if (void 0 !== YY && null !== YY) {
-              if (!IY || YY instanceof DF)
-                if (!RY || YY instanceof AF) YY[oY] = DY;
+    function ui(TT, oT, IT, iT) {
+      let kT;
+      return kT = iT ? function(TT, oT, IT, iT) {
+        const kT = iT.constructor === zi,
+          WT = iT.constructor === Wi;
+        return function(TT) {
+          const iT = this[wT],
+            XT = iT[oT];
+          if (TT !== XT) {
+            if (void 0 !== TT && null !== TT) {
+              if (!kT || TT instanceof zi)
+                if (!WT || TT instanceof Wi) TT[MT] = IT;
                 else {
-                  const rY = new AF;
-                  if (rY[oY] = DY, YY instanceof Map) YY.forEach(((YY, DY) => rY.set(DY, YY)));
+                  const oT = new Wi;
+                  if (oT[MT] = IT, TT instanceof Map) TT.forEach(((TT, IT) => oT.set(IT, TT)));
                   else
-                    for (const DY in YY) rY.set(DY, YY[DY]);
-                  YY = rY
+                    for (const IT in TT) oT.set(IT, TT[IT]);
+                  TT = oT
                 }
               else {
-                const rY = new DF;
-                rY[oY] = DY, rY.push(...YY), YY = rY
+                const oT = new zi;
+                oT[MT] = IT, oT.push(...TT), TT = oT
               }
-              const FY = this[QY],
-                aY = this.constructor;
-              void 0 !== OY && null !== OY && OY[QY] ? (FY.root?.remove(OY[QY]), aY[gY](FY, rY, AY.DELETE_AND_ADD)) : aY[gY](FY, rY, AY.ADD), YY[QY]?.setParent(this, FY.root, rY)
-            } else void 0 !== OY && null !== OY && this[QY].delete(rY);
-            FY[rY] = YY
+              const iT = this[KT],
+                FT = this.constructor;
+              void 0 !== XT && null !== XT && XT[KT] ? (iT.root?.remove(XT[KT]), FT[BT](iT, oT, zT.DELETE_AND_ADD)) : FT[BT](iT, oT, zT.ADD), TT[KT]?.setParent(this, iT.root, oT)
+            } else void 0 !== XT && null !== XT && this[KT].delete(oT);
+            iT[oT] = TT
           }
         }
-      }(0, rY, DY, FY) : "string" === typeof DY ? function(YY, rY, DY) {
-        const FY = SF[DY],
-          IY = "string" === DY,
-          RY = "boolean" === DY;
-        return function(DY) {
-          const OY = this[SY],
-            aY = OY[rY];
-          if (DY !== aY) {
-            if (void 0 !== DY && null !== DY) {
-              if (!RY && void 0 !== FY && typeof DY !== FY && (!IY || null !== DY)) {
-                const rY = DY && DY.constructor ? ` (${DY.constructor.name})` : "";
-                throw new LD(`a '${FY}' was expected, but '${JSON.stringify(DY)}'${rY} was provided in ${this.constructor.name}#${YY}`)
+      }(0, oT, IT, iT) : "string" === typeof IT ? function(TT, oT, IT) {
+        const iT = Ri[IT],
+          kT = "string" === IT,
+          WT = "boolean" === IT;
+        return function(IT) {
+          const XT = this[wT],
+            FT = XT[oT];
+          if (IT !== FT) {
+            if (void 0 !== IT && null !== IT) {
+              if (!WT && void 0 !== iT && typeof IT !== iT && (!kT || null !== IT)) {
+                const oT = IT && IT.constructor ? ` (${IT.constructor.name})` : "";
+                throw new Ti(`a '${iT}' was expected, but '${JSON.stringify(IT)}'${oT} was provided in ${this.constructor.name}#${TT}`)
               }
-              this.constructor[gY](this[QY], rY, AY.ADD)
-            } else void 0 !== aY && null !== aY && this[QY].delete(rY);
-            OY[rY] = DY
+              this.constructor[BT](this[KT], oT, zT.ADD)
+            } else void 0 !== FT && null !== FT && this[KT].delete(oT);
+            XT[oT] = IT
           }
         }
-      }(YY, rY, DY) : hr(DY) ? function(YY, rY, DY) {
-        return function(FY) {
-          const IY = this[SY],
-            RY = IY[rY];
-          if (void 0 !== FY && null !== FY) {
-            if ("number" !== typeof FY) throw new LD(`a 'number' was expected, but '${JSON.stringify(FY)}' was provided in ${this.constructor.name}#${YY}`);
-            if ((FY = Jr(DY, dr(DY, FY))) === RY) return;
-            this.constructor[gY](this[QY], rY, AY.ADD)
+      }(TT, oT, IT) : Qo(IT) ? function(TT, oT, IT) {
+        return function(iT) {
+          const kT = this[wT],
+            WT = kT[oT];
+          if (void 0 !== iT && null !== iT) {
+            if ("number" !== typeof iT) throw new Ti(`a 'number' was expected, but '${JSON.stringify(iT)}' was provided in ${this.constructor.name}#${TT}`);
+            if ((iT = Ho(IT, Oo(IT, iT))) === WT) return;
+            this.constructor[BT](this[KT], oT, zT.ADD)
           } else {
-            if (FY === RY) return;
-            void 0 !== RY && null !== RY && this[QY].delete(rY)
+            if (iT === WT) return;
+            void 0 !== WT && null !== WT && this[KT].delete(oT)
           }
-          IY[rY] = FY
+          kT[oT] = iT
         }
-      }(YY, rY, DY.quantized) : function(YY, rY, DY) {
-        return function(FY) {
-          const IY = this[SY],
-            RY = IY[rY];
-          if (FY !== RY) {
-            if (void 0 !== FY && null !== FY) {
-              tD(FY, DY, this, YY);
-              const IY = this[QY],
-                OY = this.constructor;
-              void 0 !== RY && null !== RY && RY[QY] ? (IY.root?.remove(RY[QY]), OY[gY](IY, rY, AY.DELETE_AND_ADD)) : OY[gY](IY, rY, AY.ADD), FY[QY]?.setParent(this, IY.root, rY)
-            } else void 0 !== RY && null !== RY && this[QY].delete(rY);
-            IY[rY] = FY
+      }(TT, oT, IT.quantized) : function(TT, oT, IT) {
+        return function(iT) {
+          const kT = this[wT],
+            WT = kT[oT];
+          if (iT !== WT) {
+            if (void 0 !== iT && null !== iT) {
+              oi(iT, IT, this, TT);
+              const kT = this[KT],
+                XT = this.constructor;
+              void 0 !== WT && null !== WT && WT[KT] ? (kT.root?.remove(WT[KT]), XT[BT](kT, oT, zT.DELETE_AND_ADD)) : XT[BT](kT, oT, zT.ADD), iT[KT]?.setParent(this, kT.root, oT)
+            } else void 0 !== WT && null !== WT && this[KT].delete(oT);
+            kT[oT] = iT
           }
         }
-      }(YY, rY, DY), {
+      }(TT, oT, IT), {
         get: function() {
-          return this[SY][rY]
+          return this[wT][oT]
         },
-        set: IY,
+        set: kT,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function TF() {
-      let YY = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(rY, DY) {
-        const FY = xr.initialize(rY.constructor);
-        xr.setDeprecated(FY, DY), YY && (FY[TY] ??= {}, FY[TY][DY] = {
+    function vi() {
+      let TT = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(oT, IT) {
+        const iT = yo.initialize(oT.constructor);
+        yo.setDeprecated(iT, IT), TT && (iT[eT] ??= {}, iT[eT][IT] = {
           get: function() {
-            throw new Error(`${DY} is deprecated.`)
+            throw new Error(`${IT} is deprecated.`)
           },
-          set: function(YY) {},
+          set: function(TT) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(rY, DY, FY[TY][DY]))
+        }, Object.defineProperty(oT, IT, iT[eT][IT]))
       }
     }
-    let eF = !1;
+    let Ei = !1;
 
-    function NF(YY, rY, DY) {
-      eF || (eF = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let FY in rY) VF(rY[FY], DY)(YY.prototype, FY);
-      return YY
+    function fi(TT, oT, IT) {
+      Ei || (Ei = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let iT in oT) ei(oT[iT], IT)(TT.prototype, iT);
+      return TT
     }
 
-    function BF(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : KF;
-      if (null == YY || "object" !== typeof YY) throw new Error(`schema(): first argument must be a fields object (got ${typeof YY}).`);
-      const FY = {},
-        AY = {},
-        IY = {},
-        RY = {},
-        OY = (YY, rY) => {
-          if (rY.hasDefault)((YY, rY) => {
-            "function" === typeof rY ? RY[YY] = rY : rY && "function" === typeof rY.clone ? RY[YY] = () => rY.clone() : IY[YY] = rY
-          })(YY, rY.default);
-          else if (!rY.optional) {
-            const DY = function(YY) {
-              if (YY && "object" === typeof YY) {
-                if (void 0 !== YY.array) return () => new DF;
-                if (void 0 !== YY.map) return () => new AF;
-                if (void 0 !== YY.set) return () => new RF;
-                if (void 0 !== YY.collection) return () => new IF;
-                if (void 0 !== YY.stream) return () => new OF
-              } else if ("function" === typeof YY && KF.is(YY) && (!YY.prototype.initialize || 0 === YY.prototype.initialize.length)) return () => new YY
-            }(rY.type);
-            DY && (RY[YY] = DY)
+    function Ci(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ji;
+      if (null == TT || "object" !== typeof TT) throw new Error(`schema(): first argument must be a fields object (got ${typeof TT}).`);
+      const iT = {},
+        zT = {},
+        kT = {},
+        WT = {},
+        XT = (TT, oT) => {
+          if (oT.hasDefault)((TT, oT) => {
+            "function" === typeof oT ? WT[TT] = oT : oT && "function" === typeof oT.clone ? WT[TT] = () => oT.clone() : kT[TT] = oT
+          })(TT, oT.default);
+          else if (!oT.optional) {
+            const IT = function(TT) {
+              if (TT && "object" === typeof TT) {
+                if (void 0 !== TT.array) return () => new zi;
+                if (void 0 !== TT.map) return () => new Wi;
+                if (void 0 !== TT.set) return () => new Bi;
+                if (void 0 !== TT.collection) return () => new Xi;
+                if (void 0 !== TT.stream) return () => new Fi
+              } else if ("function" === typeof TT && Ji.is(TT) && (!TT.prototype.initialize || 0 === TT.prototype.initialize.length)) return () => new TT
+            }(oT.type);
+            IT && (WT[TT] = IT)
           }
         },
-        gY = {},
-        aY = [],
-        vY = [],
-        uY = {},
-        sY = [],
-        iY = [],
-        yY = {},
-        QY = [];
-      for (const SY in YY) {
-        const DY = YY[SY],
-          IY = `schema(${rY?`'${rY}'`:""}): field '${SY}'`;
-        if (aF(DY)) {
-          const YY = DY.toDefinition();
-          if (YY.noSync) {
-            if (void 0 !== YY.view || YY.unreliable || YY.patchOnly || YY.fullStateOnly || YY.stream) throw new Error(`${IY} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            OY(SY, YY);
+        BT = {},
+        FT = [],
+        ST = [],
+        DT = {},
+        LT = [],
+        xT = [],
+        cT = {},
+        KT = [];
+      for (const wT in TT) {
+        const IT = TT[wT],
+          kT = `schema(${oT?`'${oT}'`:""}): field '${wT}'`;
+        if (Di(IT)) {
+          const TT = IT.toDefinition();
+          if (TT.noSync) {
+            if (void 0 !== TT.view || TT.unreliable || TT.patchOnly || TT.fullStateOnly || TT.stream) throw new Error(`${kT} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            XT(wT, TT);
             continue
           }
-          if (YY.patchOnly && YY.fullStateOnly) throw new Error(`${IY} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const rY = Xr(YY.type, IY);
-          if ("function" === typeof rY && !KF.is(rY)) throw new Error(`${IY} is a synced ref to non-Schema class '${rY.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          FY[SY] = rY, void 0 !== YY.view && (gY[SY] = YY.view), YY.unreliable && aY.push(SY), YY.patchOnly && vY.push(SY), YY.deprecated && (uY[SY] = YY.deprecatedThrows), YY.fullStateOnly && sY.push(SY), YY.stream && iY.push(SY), void 0 !== YY.streamPriority && (yY[SY] = YY.streamPriority), YY.optional && QY.push(SY), OY(SY, YY)
+          if (TT.patchOnly && TT.fullStateOnly) throw new Error(`${kT} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const oT = so(TT.type, kT);
+          if ("function" === typeof oT && !Ji.is(oT)) throw new Error(`${kT} is a synced ref to non-Schema class '${oT.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          iT[wT] = oT, void 0 !== TT.view && (BT[wT] = TT.view), TT.unreliable && FT.push(wT), TT.patchOnly && ST.push(wT), TT.deprecated && (DT[wT] = TT.deprecatedThrows), TT.fullStateOnly && LT.push(wT), TT.stream && xT.push(wT), void 0 !== TT.streamPriority && (cT[wT] = TT.streamPriority), TT.optional && KT.push(wT), XT(wT, TT)
         } else {
-          if ("function" !== typeof DY) throw new Error(`${IY} must be a t.* builder, Schema subclass, or method (got ${typeof DY}).`);
-          KF.is(DY) ? (FY[SY] = DY, DY.prototype.initialize && 0 !== DY.prototype.initialize.length || (RY[SY] = () => new DY)) : AY[SY] = DY
+          if ("function" !== typeof IT) throw new Error(`${kT} must be a t.* builder, Schema subclass, or method (got ${typeof IT}).`);
+          Ji.is(IT) ? (iT[wT] = IT, IT.prototype.initialize && 0 !== IT.prototype.initialize.length || (WT[wT] = () => new IT)) : zT[wT] = IT
         }
       }
-      const oY = YY => {
-          for (const rY in IY) YY[rY] = IY[rY];
-          for (const rY in RY) YY[rY] = RY[rY]()
+      const MT = TT => {
+          for (const oT in kT) TT[oT] = kT[oT];
+          for (const oT in WT) TT[oT] = WT[oT]()
         },
-        WY = () => {
-          const YY = {};
-          return oY(YY), YY
+        rT = () => {
+          const TT = {};
+          return MT(TT), TT
         },
-        EY = "function" === typeof AY.initialize,
-        mY = AY.initialize ?? DY._initialize,
-        VY = class extends DY {
+        AT = "function" === typeof zT.initialize,
+        gT = zT.initialize ?? IT._initialize,
+        hT = class extends IT {
           constructor() {
-            for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
-            const AY = rY[0];
-            void 0 === AY ? (super(), oY(this)) : super(Object.assign(WY(), EY ? (YY => {
-              const rY = Object.keys(FY),
-                DY = {};
-              for (const FY in YY) rY.includes(FY) || (DY[FY] = YY[FY]);
-              return DY
-            })(AY) : AY)), mY && new.target === VY && mY.apply(this, rY)
+            for (var TT = arguments.length, oT = new Array(TT), IT = 0; IT < TT; IT++) oT[IT] = arguments[IT];
+            const zT = oT[0];
+            void 0 === zT ? (super(), MT(this)) : super(Object.assign(rT(), AT ? (TT => {
+              const oT = Object.keys(iT),
+                IT = {};
+              for (const iT in TT) oT.includes(iT) || (IT[iT] = TT[iT]);
+              return IT
+            })(zT) : zT)), gT && new.target === hT && gT.apply(this, oT)
           }
         };
-      rY && Object.defineProperty(VY, "name", {
-        value: rY
-      }), xr.setFields(VY, FY), VY._getDefaultValues = WY, VY._initialize = mY, Object.assign(VY.prototype, AY);
-      for (const SY in gY) oF(gY[SY])(VY.prototype, SY);
-      for (const SY of aY) WF(VY.prototype, SY);
-      for (const SY of vY) EF(VY.prototype, SY);
-      for (const SY in uY) TF(uY[SY])(VY.prototype, SY);
-      if (sY.length > 0 || iY.length > 0) {
-        const YY = VY[Symbol.metadata];
-        for (const rY of sY) xr.setFullStateOnly(YY, rY);
-        for (const rY of iY) xr.setStream(YY, rY);
-        for (const rY in yY) xr.setStreamPriority(YY, rY, yY[rY])
+      oT && Object.defineProperty(hT, "name", {
+        value: oT
+      }), yo.setFields(hT, iT), hT._getDefaultValues = rT, hT._initialize = gT, Object.assign(hT.prototype, zT);
+      for (const wT in BT) Ai(BT[wT])(hT.prototype, wT);
+      for (const wT of FT) gi(hT.prototype, wT);
+      for (const wT of ST) wi(hT.prototype, wT);
+      for (const wT in DT) vi(DT[wT])(hT.prototype, wT);
+      if (LT.length > 0 || xT.length > 0) {
+        const TT = hT[Symbol.metadata];
+        for (const oT of LT) yo.setFullStateOnly(TT, oT);
+        for (const oT of xT) yo.setStream(TT, oT);
+        for (const oT in cT) yo.setStreamPriority(TT, oT, cT[oT])
       }
-      if (QY.length > 0) {
-        const YY = VY[Symbol.metadata];
-        for (const rY of QY) YY[YY[rY]].optional = !0
+      if (KT.length > 0) {
+        const TT = hT[Symbol.metadata];
+        for (const oT of KT) TT[TT[oT]].optional = !0
       }
-      return VY.extend = (YY, rY) => BF(YY, rY, VY), VY
+      return hT.extend = (TT, oT) => Ci(TT, oT, hT), hT
     }
 
-    function cF(YY) {
-      const rY = YY[QY].root,
-        DY = {
+    function ji(TT) {
+      const oT = TT[KT].root,
+        IT = {
           ops: {},
           refs: []
         };
-      let FY = rY.changes.next;
-      for (; FY;) {
-        const YY = FY.changeTree;
-        void 0 !== YY ? (DY.refs.push(`refId#${YY.ref[OY]}`), YY.forEach(((YY, rY) => {
-          if (YY < 0 || !rY) return;
-          const FY = AY[rY];
-          DY.ops[FY] || (DY.ops[FY] = 0), DY.ops[FY]++
-        })), FY = FY.next) : FY = FY.next
+      let iT = oT.changes.next;
+      for (; iT;) {
+        const TT = iT.changeTree;
+        void 0 !== TT ? (IT.refs.push(`refId#${TT.ref[XT]}`), TT.forEach(((TT, oT) => {
+          if (TT < 0 || !oT) return;
+          const iT = zT[oT];
+          IT.ops[iT] || (IT.ops[iT] = 0), IT.ops[iT]++
+        })), iT = iT.next) : iT = iT.next
       }
-      return DY
+      return IT
     }
-    class KF {
-      static[aY] = fD;
-      static[vY] = nD;
-      [OY];
-      [SY];
-      static initialize(YY) {
-        Object.defineProperty(YY, QY, {
-          value: new HD(YY),
+    class Ji {
+      static[FT] = QI;
+      static[ST] = PI;
+      [XT];
+      [wT];
+      static initialize(TT) {
+        Object.defineProperty(TT, KT, {
+          value: new JI(TT),
           enumerable: !1,
           writable: !0
-        }), YY[SY] = []
+        }), TT[wT] = []
       }
       static initializeForDecoder() {
-        const YY = Object.create(this.prototype);
-        return ZD(YY), YY[SY] = [], YY
+        const TT = Object.create(this.prototype);
+        return aI(TT), TT[wT] = [], TT
       }
-      static reset(YY) {
-        const rY = YY?.[QY];
-        if (void 0 === rY || "function" !== typeof rY.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== rY.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${YY.constructor.name}) with multiple parents.`);
-        YY[mY]()
-      } [mY]() {
-        const YY = this.constructor[Symbol.metadata],
-          rY = YY?.[cY] ?? [],
-          DY = this[SY];
-        for (let FY = 0; FY < rY.length; FY++) {
-          const YY = DY[rY[FY]];
-          YY?.[mY]?.()
+      static reset(TT) {
+        const oT = TT?.[KT];
+        if (void 0 === oT || "function" !== typeof oT.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== oT.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${TT.constructor.name}) with multiple parents.`);
+        TT[gT]()
+      } [gT]() {
+        const TT = this.constructor[Symbol.metadata],
+          oT = TT?.[ET] ?? [],
+          IT = this[wT];
+        for (let iT = 0; iT < oT.length; iT++) {
+          const TT = IT[oT[iT]];
+          TT?.[gT]?.()
         }
-        this[QY].recycle(), this[OY] = void 0
+        this[KT].recycle(), this[XT] = void 0
       }
-      static is(YY) {
-        const rY = YY[Symbol.metadata];
-        return "object" === typeof rY && null !== rY
+      static is(TT) {
+        const oT = TT[Symbol.metadata];
+        return "object" === typeof oT && null !== oT
       }
-      static isSchema(YY) {
-        return "function" === typeof YY?.assign
+      static isSchema(TT) {
+        return "function" === typeof TT?.assign
       }
-      static[gY](YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AY.ADD;
-        YY.change(rY, DY)
+      static[BT](TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zT.ADD;
+        TT.change(oT, IT)
       }
-      static[uY](YY, rY, DY) {
-        const FY = YY.constructor[Symbol.metadata],
-          AY = FY[rY]?.tag;
-        return void 0 === DY ? void 0 === AY : void 0 === AY || (AY === yF ? DY.isChangeTreeVisible(YY[QY]) : DY.hasTagOnTree(YY[QY], AY))
+      static[DT](TT, oT, IT) {
+        const iT = TT.constructor[Symbol.metadata],
+          zT = iT[oT]?.tag;
+        return void 0 === IT ? void 0 === zT : void 0 === zT || (zT === Mi ? IT.isChangeTreeVisible(TT[KT]) : IT.hasTagOnTree(TT[KT], zT))
       }
-      constructor(YY) {
-        KF.initialize(this), YY && KF.assignProps(this, YY)
+      constructor(TT) {
+        Ji.initialize(this), TT && Ji.assignProps(this, TT)
       }
-      assign(YY) {
-        return KF.assignProps(this, YY), this
+      assign(TT) {
+        return Ji.assignProps(this, TT), this
       }
-      static assignProps(YY, rY) {
-        const DY = YY.constructor[Symbol.metadata];
-        if (DY && void 0 !== DY[BY])
-          for (let AY = 0; AY <= DY[BY]; AY++) {
-            const FY = DY[AY];
-            if (!FY) continue;
-            const IY = rY[FY.name];
-            void 0 !== IY && (YY[FY.name] = IY)
+      static assignProps(TT, oT) {
+        const IT = TT.constructor[Symbol.metadata];
+        if (IT && void 0 !== IT[vT])
+          for (let zT = 0; zT <= IT[vT]; zT++) {
+            const iT = IT[zT];
+            if (!iT) continue;
+            const kT = oT[iT.name];
+            void 0 !== kT && (TT[iT.name] = kT)
           }
-        const FY = Object.keys(rY);
-        for (let AY = 0; AY < FY.length; AY++) {
-          const IY = FY[AY];
-          DY && void 0 !== DY[IY] || (YY[IY] = rY[IY])
+        const iT = Object.keys(oT);
+        for (let zT = 0; zT < iT.length; zT++) {
+          const kT = iT[zT];
+          IT && void 0 !== IT[kT] || (TT[kT] = oT[kT])
         }
       }
-      restore(YY) {
-        const rY = this.constructor[Symbol.metadata];
-        for (const DY in rY) {
-          const FY = rY[DY],
-            AY = FY.name,
-            IY = FY.type,
-            RY = YY[AY];
-          if (void 0 !== RY && null !== RY)
-            if ("string" === typeof IY) this[AY] = RY;
-            else if (KF.is(IY)) {
-            const YY = new IY;
-            YY.restore(RY), this[AY] = YY
-          } else if ("object" === typeof IY) {
-            const YY = Object.keys(IY)[0],
-              rY = IY[YY];
-            if ("map" === YY) {
-              const YY = this[AY];
-              for (const DY in RY)
-                if (KF.is(rY)) {
-                  const FY = new rY;
-                  FY.restore(RY[DY]), YY.set(DY, FY)
-                } else YY.set(DY, RY[DY])
-            } else if ("array" === YY) {
-              const YY = this[AY];
-              for (let DY = 0; DY < RY.length; DY++)
-                if (KF.is(rY)) {
-                  const FY = new rY;
-                  FY.restore(RY[DY]), YY.push(FY)
-                } else YY.push(RY[DY])
+      restore(TT) {
+        const oT = this.constructor[Symbol.metadata];
+        for (const IT in oT) {
+          const iT = oT[IT],
+            zT = iT.name,
+            kT = iT.type,
+            WT = TT[zT];
+          if (void 0 !== WT && null !== WT)
+            if ("string" === typeof kT) this[zT] = WT;
+            else if (Ji.is(kT)) {
+            const TT = new kT;
+            TT.restore(WT), this[zT] = TT
+          } else if ("object" === typeof kT) {
+            const TT = Object.keys(kT)[0],
+              oT = kT[TT];
+            if ("map" === TT) {
+              const TT = this[zT];
+              for (const IT in WT)
+                if (Ji.is(oT)) {
+                  const iT = new oT;
+                  iT.restore(WT[IT]), TT.set(IT, iT)
+                } else TT.set(IT, WT[IT])
+            } else if ("array" === TT) {
+              const TT = this[zT];
+              for (let IT = 0; IT < WT.length; IT++)
+                if (Ji.is(oT)) {
+                  const iT = new oT;
+                  iT.restore(WT[IT]), TT.push(iT)
+                } else TT.push(WT[IT])
             }
           }
         }
         return this
       }
-      setDirty(YY, rY) {
-        const DY = this.constructor[Symbol.metadata];
-        this[QY].change(DY[DY[YY]].index, rY)
+      setDirty(TT, oT) {
+        const IT = this.constructor[Symbol.metadata];
+        this[KT].change(IT[IT[TT]].index, oT)
       }
       pauseTracking() {
-        this[QY].pause()
+        this[KT].pause()
       }
       resumeTracking() {
-        this[QY].resume()
+        this[KT].resume()
       }
-      untracked(YY) {
-        return this[QY].untracked(YY)
+      untracked(TT) {
+        return this[KT].untracked(TT)
       }
       get isTrackingPaused() {
-        return this[QY].paused
+        return this[KT].paused
       }
       clone() {
-        const YY = Object.create(this.constructor.prototype);
-        KF.initialize(YY);
-        const rY = this.constructor[Symbol.metadata];
-        for (const DY in rY) {
-          const FY = rY[DY].name;
-          "object" === typeof this[FY] && "function" === typeof this[FY]?.clone ? YY[FY] = this[FY].clone() : YY[FY] = this[FY]
+        const TT = Object.create(this.constructor.prototype);
+        Ji.initialize(TT);
+        const oT = this.constructor[Symbol.metadata];
+        for (const IT in oT) {
+          const iT = oT[IT].name;
+          "object" === typeof this[iT] && "function" === typeof this[iT]?.clone ? TT[iT] = this[iT].clone() : TT[iT] = this[iT]
         }
-        return YY
+        return TT
       }
       toJSON() {
-        const YY = {},
-          rY = this.constructor[Symbol.metadata];
-        for (const DY in rY) {
-          const FY = rY[DY],
-            AY = FY.name;
-          FY.deprecated || null === this[AY] || "undefined" === typeof this[AY] || (YY[AY] = "function" === typeof this[AY].toJSON ? this[AY].toJSON() : this[AY])
+        const TT = {},
+          oT = this.constructor[Symbol.metadata];
+        for (const IT in oT) {
+          const iT = oT[IT],
+            zT = iT.name;
+          iT.deprecated || null === this[zT] || "undefined" === typeof this[zT] || (TT[zT] = "function" === typeof this[zT].toJSON ? this[zT].toJSON() : this[zT])
         }
-        return YY
+        return TT
       }
       discardAllChanges() {
-        this[QY].discardAll()
-      } [sY](YY) {
-        return this[this.constructor[Symbol.metadata][YY].name]
-      } [iY](YY) {
-        this[this.constructor[Symbol.metadata][YY].name] = void 0
+        this[KT].discardAll()
+      } [LT](TT) {
+        return this[this.constructor[Symbol.metadata][TT].name]
+      } [xT](TT) {
+        this[this.constructor[Symbol.metadata][TT].name] = void 0
       }
-      static debugRefIds(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0,
-          AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const IY = rY ? ` - ${JSON.stringify(YY.toJSON())}` : "",
-          RY = YY[QY],
-          gY = YY[OY],
-          aY = FY ? FY.root.refCount[gY] : RY.refCount,
-          vY = aY > 1 ? ` [\xd7${aY}]` : "";
-        let uY = `${function(YY){return new Array(YY).fill(0).map(((rY,DY)=>DY===YY-1?"\u2514\u2500 ":"   ")).join("")}(DY)}${AY}${YY.constructor.name} (refId: ${gY})${vY}${IY}\n`;
-        return RY.forEachChild(((AY, IY) => {
-          let RY = IY;
-          "number" === typeof IY && YY.$indexes && (RY = YY.$indexes.get(IY) ?? IY);
-          const OY = void 0 !== YY.forEach && void 0 !== RY ? `["${RY}"]: ` : "";
-          uY += this.debugRefIds(AY.ref, rY, DY + 1, FY, OY)
-        })), uY
+      static debugRefIds(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0,
+          zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const kT = oT ? ` - ${JSON.stringify(TT.toJSON())}` : "",
+          WT = TT[KT],
+          BT = TT[XT],
+          FT = iT ? iT.root.refCount[BT] : WT.refCount,
+          ST = FT > 1 ? ` [\xd7${FT}]` : "";
+        let DT = `${function(TT){return new Array(TT).fill(0).map(((oT,IT)=>IT===TT-1?"\u2514\u2500 ":"   ")).join("")}(IT)}${zT}${TT.constructor.name} (refId: ${BT})${ST}${kT}\n`;
+        return WT.forEachChild(((zT, kT) => {
+          let WT = kT;
+          "number" === typeof kT && TT.$indexes && (WT = TT.$indexes.get(kT) ?? kT);
+          const XT = void 0 !== TT.forEach && void 0 !== WT ? `["${WT}"]: ` : "";
+          DT += this.debugRefIds(zT.ref, oT, IT + 1, iT, XT)
+        })), DT
       }
-      static debugRefIdEncodingOrder(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const DY = [],
-          FY = YY[QY];
-        if ("changes" === rY) {
-          let YY = FY.root.changes?.next;
-          for (; YY;) YY.changeTree && DY.push(YY.changeTree.ref[OY]), YY = YY.next;
-          return DY
+      static debugRefIdEncodingOrder(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const IT = [],
+          iT = TT[KT];
+        if ("changes" === oT) {
+          let TT = iT.root.changes?.next;
+          for (; TT;) TT.changeTree && IT.push(TT.changeTree.ref[XT]), TT = TT.next;
+          return IT
         }
-        const AY = "allFilteredChanges" === rY,
-          IY = new Set,
-          RY = YY => {
-            IY.has(YY) || (IY.add(YY), YY.isFiltered === AY && DY.push(YY.ref[OY]), YY.forEachChild(((YY, rY) => RY(YY))))
+        const zT = "allFilteredChanges" === oT,
+          kT = new Set,
+          WT = TT => {
+            kT.has(TT) || (kT.add(TT), TT.isFiltered === zT && IT.push(TT.ref[XT]), TT.forEachChild(((TT, oT) => WT(TT))))
           };
-        return RY(FY), DY
+        return WT(iT), IT
       }
-      static debugRefIdsFromDecoder(YY) {
-        return this.debugRefIds(YY.state, !1, 0, YY)
+      static debugRefIdsFromDecoder(TT) {
+        return this.debugRefIds(TT.state, !1, 0, TT)
       }
-      static debugChanges(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const DY = YY[QY],
-          FY = rY ? "allChanges" : "changes";
-        let IY = `${YY.constructor.name} (${YY[OY]}) -> .${FY}:\n`;
-        return rY ? DY.forEachLive((YY => {
-          IY += `- [${YY}]: ADD (${JSON.stringify(DY.getValue(Number(YY),!0))})\n`
-        })) : DY.forEach(((YY, rY) => {
-          YY < 0 || !rY || (IY += `- [${YY}]: ${AY[rY]} (${JSON.stringify(DY.getValue(Number(YY),!1))})\n`)
-        })), IY
+      static debugChanges(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const IT = TT[KT],
+          iT = oT ? "allChanges" : "changes";
+        let kT = `${TT.constructor.name} (${TT[XT]}) -> .${iT}:\n`;
+        return oT ? IT.forEachLive((TT => {
+          kT += `- [${TT}]: ADD (${JSON.stringify(IT.getValue(Number(TT),!0))})\n`
+        })) : IT.forEach(((TT, oT) => {
+          TT < 0 || !oT || (kT += `- [${TT}]: ${zT[oT]} (${JSON.stringify(IT.getValue(Number(TT),!1))})\n`)
+        })), kT
       }
     }
-    IY(KF);
-    const HF = {
+    kT(Ji);
+    const Ui = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class zF {
+    class ai {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const YY = {};
-        for (const rY in this.changeTrees) YY[rY] = this.changeTrees[rY].refCount;
-        return YY
+        const TT = {};
+        for (const oT in this.changeTrees) TT[oT] = this.changeTrees[oT].refCount;
+        return TT
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(YY) {
-        this.types.hasFilters && (YY.flags & cD || (YY.flags |= cD, this.pendingFilterRefresh.push(YY)))
+      enqueueFilterRefresh(TT) {
+        this.types.hasFilters && (TT.flags & CI || (TT.flags |= CI, this.pendingFilterRefresh.push(TT)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(YY) {
-        this._freeViewIds.push(YY)
+      releaseViewId(TT) {
+        this._freeViewIds.push(TT)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(YY) {
-        this.activeViews.set(YY.id, new WeakRef(YY))
+      registerView(TT) {
+        this.activeViews.set(TT.id, new WeakRef(TT))
       }
-      unregisterView(YY) {
-        this.activeViews.delete(YY.id);
-        const rY = YY.id;
-        for (const DY of this.streamTrees) DY._dropView(rY)
+      unregisterView(TT) {
+        this.activeViews.delete(TT.id);
+        const oT = TT.id;
+        for (const IT of this.streamTrees) IT._dropView(oT)
       }
-      forEachActiveView(YY) {
-        for (const [rY, DY] of this.activeViews) {
-          const FY = DY.deref();
-          if (void 0 !== FY) YY(FY);
+      forEachActiveView(TT) {
+        for (const [oT, IT] of this.activeViews) {
+          const iT = IT.deref();
+          if (void 0 !== iT) TT(iT);
           else {
-            this.activeViews.delete(rY);
-            for (const YY of this.streamTrees) YY._dropView(rY)
+            this.activeViews.delete(oT);
+            for (const TT of this.streamTrees) TT._dropView(oT)
           }
         }
       }
-      registerStream(YY) {
-        this.streamTrees.add(YY)
+      registerStream(TT) {
+        this.streamTrees.add(TT)
       }
-      unregisterStream(YY) {
-        this.streamTrees.delete(YY)
+      unregisterStream(TT) {
+        this.streamTrees.delete(TT)
       }
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = YY, this.nextUniqueId = rY
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = TT, this.nextUniqueId = oT
       }
-      add(YY) {
-        const rY = YY.ref;
-        void 0 === rY[OY] && (HF.value = this.nextUniqueId++, Object.defineProperty(rY, OY, HF));
-        const DY = rY[OY],
-          FY = void 0 === this.changeTrees[DY];
-        FY && (this.changeTrees[DY] = YY), YY.needsRestage && (YY.needsRestage = !1, YY.forEachLiveWithCtx(YY, DD));
-        const AY = FY ? 0 : YY.refCount;
-        return YY.refCount = AY + 1, AY > 0 && this.enqueueFilterRefresh(YY), FY
+      add(TT) {
+        const oT = TT.ref;
+        void 0 === oT[XT] && (Ui.value = this.nextUniqueId++, Object.defineProperty(oT, XT, Ui));
+        const IT = oT[XT],
+          iT = void 0 === this.changeTrees[IT];
+        iT && (this.changeTrees[IT] = TT), TT.needsRestage && (TT.needsRestage = !1, TT.forEachLiveWithCtx(TT, zI));
+        const zT = iT ? 0 : TT.refCount;
+        return TT.refCount = zT + 1, zT > 0 && this.enqueueFilterRefresh(TT), iT
       }
-      remove(YY) {
-        const rY = YY.refCount - 1;
-        if (rY <= 0) {
-          if (YY.root = void 0, delete this.changeTrees[YY.ref[OY]], YY.isStreamCollection) {
-            const rY = YY.ref;
-            rY._unregister?.(), this.unregisterStream(rY)
+      remove(TT) {
+        const oT = TT.refCount - 1;
+        if (oT <= 0) {
+          if (TT.root = void 0, delete this.changeTrees[TT.ref[XT]], TT.isStreamCollection) {
+            const oT = TT.ref;
+            oT._unregister?.(), this.unregisterStream(oT)
           }
-          this.removeFromQueue(YY), this.removeFromUnreliableQueue(YY), YY.refCount = 0, YY.needsRestage = !0, YY.forEachChild(((rY, DY) => {
-            rY.removeParent(YY.ref) && (void 0 === rY.parentRef || rY.refCount > 0 ? this.remove(rY) : this.moveNextToParent(rY))
+          this.removeFromQueue(TT), this.removeFromUnreliableQueue(TT), TT.refCount = 0, TT.needsRestage = !0, TT.forEachChild(((oT, IT) => {
+            oT.removeParent(TT.ref) && (void 0 === oT.parentRef || oT.refCount > 0 ? this.remove(oT) : this.moveNextToParent(oT))
           }))
-        } else YY.refCount = rY, this.enqueueFilterRefresh(YY), this.recursivelyMoveNextToParent(YY);
-        return rY
+        } else TT.refCount = oT, this.enqueueFilterRefresh(TT), this.recursivelyMoveNextToParent(TT);
+        return oT
       }
-      recursivelyMoveNextToParent(YY) {
-        this.moveNextToParent(YY), YY.forEachChild(((YY, rY) => this.recursivelyMoveNextToParent(YY)))
+      recursivelyMoveNextToParent(TT) {
+        this.moveNextToParent(TT), TT.forEachChild(((TT, oT) => this.recursivelyMoveNextToParent(TT)))
       }
-      moveNextToParent(YY) {
-        YY.changesNode && this._moveNextToParentInList(this.changes, YY, YY.changesNode, "changesNode"), YY.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, YY, YY.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(TT) {
+        TT.changesNode && this._moveNextToParentInList(this.changes, TT, TT.changesNode, "changesNode"), TT.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, TT, TT.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(YY, rY, DY, FY) {
-        const AY = rY.parent;
-        if (!AY || !AY[QY]) return;
-        const IY = AY[QY][FY];
-        IY && IY !== DY && (DY.position > IY.position || (DY.prev ? DY.prev.next = DY.next : YY.next = DY.next, DY.next ? DY.next.prev = DY.prev : YY.tail = DY.prev, DY.prev = YY.tail, DY.next = void 0, YY.tail.next = DY, YY.tail = DY, DY.position = YY.nextPosition++))
+      _moveNextToParentInList(TT, oT, IT, iT) {
+        const zT = oT.parent;
+        if (!zT || !zT[KT]) return;
+        const kT = zT[KT][iT];
+        kT && kT !== IT && (IT.position > kT.position || (IT.prev ? IT.prev.next = IT.next : TT.next = IT.next, IT.next ? IT.next.prev = IT.prev : TT.tail = IT.prev, IT.prev = TT.tail, IT.next = void 0, TT.tail.next = IT, TT.tail = IT, IT.position = TT.nextPosition++))
       }
-      enqueueChangeTree(YY) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY.changesNode) || (YY.changesNode = this._appendToList(this.changes, YY))
+      enqueueChangeTree(TT) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT.changesNode) || (TT.changesNode = this._appendToList(this.changes, TT))
       }
-      enqueueUnreliable(YY) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : YY.unreliableChangesNode) || (YY.unreliableChangesNode = this._appendToList(this.unreliableChanges, YY))
+      enqueueUnreliable(TT) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TT.unreliableChangesNode) || (TT.unreliableChangesNode = this._appendToList(this.unreliableChanges, TT))
       }
-      _appendToList(YY, rY) {
-        const DY = this._nodePool;
-        let FY;
-        return DY.length > 0 ? (FY = DY.pop(), FY.changeTree = rY, FY.next = void 0, FY.prev = void 0) : FY = {
-          changeTree: rY,
+      _appendToList(TT, oT) {
+        const IT = this._nodePool;
+        let iT;
+        return IT.length > 0 ? (iT = IT.pop(), iT.changeTree = oT, iT.next = void 0, iT.prev = void 0) : iT = {
+          changeTree: oT,
           next: void 0,
           prev: void 0,
           position: 0
-        }, YY.next ? (FY.prev = YY.tail, YY.tail.next = FY, YY.tail = FY) : (YY.nextPosition = 0, YY.next = FY, YY.tail = FY), FY.position = YY.nextPosition++, FY
+        }, TT.next ? (iT.prev = TT.tail, TT.tail.next = iT, TT.tail = iT) : (TT.nextPosition = 0, TT.next = iT, TT.tail = iT), iT.position = TT.nextPosition++, iT
       }
-      releaseNode(YY) {
-        YY.changeTree = void 0, YY.prev = void 0, YY.next = void 0, this._nodePool.push(YY)
+      releaseNode(TT) {
+        TT.changeTree = void 0, TT.prev = void 0, TT.next = void 0, this._nodePool.push(TT)
       }
-      removeFromQueue(YY) {
-        return this._removeNode(this.changes, YY, YY.changesNode, "changesNode")
+      removeFromQueue(TT) {
+        return this._removeNode(this.changes, TT, TT.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(YY) {
-        return this._removeNode(this.unreliableChanges, YY, YY.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(TT) {
+        return this._removeNode(this.unreliableChanges, TT, TT.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(YY, rY, DY, FY) {
-        return !(!DY || DY.changeTree !== rY) && (DY.prev ? DY.prev.next = DY.next : YY.next = DY.next, DY.next ? DY.next.prev = DY.prev : YY.tail = DY.prev, rY[FY] = void 0, this.releaseNode(DY), !0)
+      _removeNode(TT, oT, IT, iT) {
+        return !(!IT || IT.changeTree !== oT) && (IT.prev ? IT.prev.next = IT.next : TT.next = IT.next, IT.next ? IT.next.prev = IT.prev : TT.tail = IT.prev, oT[iT] = void 0, this.releaseNode(IT), !0)
       }
     }
 
-    function ZF(YY, rY) {
-      if (-1 === rY || rY >= YY.length) return !1;
-      const DY = YY.length - 1;
-      for (let FY = rY; FY < DY; FY++) YY[FY] = YY[FY + 1];
-      return YY.length = DY, !0
+    function Yi(TT, oT) {
+      if (-1 === oT || oT >= TT.length) return !1;
+      const IT = TT.length - 1;
+      for (let iT = oT; iT < IT; iT++) TT[iT] = TT[iT + 1];
+      return TT.length = IT, !0
     }
 
-    function CF(YY, rY, DY) {
-      const FY = ~DY,
-        AY = YY.changeTrees;
-      for (const IY in AY) {
-        const YY = AY[IY],
-          DY = YY.visibleViews;
-        void 0 !== DY && rY < DY.length && (DY[rY] &= FY);
-        const RY = YY.subscribedViews;
-        void 0 !== RY && rY < RY.length && (RY[rY] &= FY);
-        const OY = YY.tagViews;
-        void 0 !== OY && OY.forEach((YY => {
-          rY < YY.length && (YY[rY] &= FY)
+    function Qi(TT, oT, IT) {
+      const iT = ~IT,
+        zT = TT.changeTrees;
+      for (const kT in zT) {
+        const TT = zT[kT],
+          IT = TT.visibleViews;
+        void 0 !== IT && oT < IT.length && (IT[oT] &= iT);
+        const WT = TT.subscribedViews;
+        void 0 !== WT && oT < WT.length && (WT[oT] &= iT);
+        const XT = TT.tagViews;
+        void 0 !== XT && XT.forEach((TT => {
+          oT < TT.length && (TT[oT] &= iT)
         }))
       }
     }
-    const fF = new FinalizationRegistry((YY => {
+    const Oi = new FinalizationRegistry((TT => {
       let {
-        root: rY,
-        id: DY,
-        slot: FY,
-        bit: AY
-      } = YY;
-      CF(rY, FY, AY), rY.activeViews.delete(DY);
-      for (const IY of rY.streamTrees) IY._dropView(DY);
-      rY.releaseViewId(DY)
+        root: oT,
+        id: IT,
+        slot: iT,
+        bit: zT
+      } = TT;
+      Qi(oT, iT, zT), oT.activeViews.delete(IT);
+      for (const kT of oT.streamTrees) kT._dropView(IT);
+      oT.releaseViewId(IT)
     }));
 
-    function jF(YY) {
-      if (void 0 === YY) return "undefined";
-      if (null === YY) return "null";
-      const rY = typeof YY;
-      return "string" === rY ? JSON.stringify(YY.length > 30 ? `${YY.slice(0,30)}\u2026` : YY) : "object" !== rY && "function" !== rY ? `${rY} ${String(YY)}` : Array.isArray(YY) ? `Array(${YY.length})` : YY.constructor?.name ?? "Object"
+    function Hi(TT) {
+      if (void 0 === TT) return "undefined";
+      if (null === TT) return "null";
+      const oT = typeof TT;
+      return "string" === oT ? JSON.stringify(TT.length > 30 ? `${TT.slice(0,30)}\u2026` : TT) : "object" !== oT && "function" !== oT ? `${oT} ${String(TT)}` : Array.isArray(TT) ? `Array(${TT.length})` : TT.constructor?.name ?? "Object"
     }
-    class hF {
+    class ni {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = YY, YY && (this.items = [])
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = TT, TT && (this.items = [])
       }
-      _bindRoot(YY) {
-        void 0 === this._root && (this._root = YY, this.id = YY.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), YY.registerView(this), fF.register(this, {
-          root: YY,
+      _bindRoot(TT) {
+        void 0 === this._root && (this._root = TT, this.id = TT.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), TT.registerView(this), Oi.register(this, {
+          root: TT,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), CF(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), fF.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), Qi(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), Oi.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(YY) {
-        const rY = YY.visibleViews,
-          DY = this._slot;
-        return void 0 !== rY && DY < rY.length && 0 !== (rY[DY] & this._bit)
+      isVisible(TT) {
+        const oT = TT.visibleViews,
+          IT = this._slot;
+        return void 0 !== oT && IT < oT.length && 0 !== (oT[IT] & this._bit)
       }
-      markVisible(YY) {
-        const rY = this._slot;
-        let DY = YY.visibleViews;
-        for (void 0 === DY && (DY = YY.visibleViews = []); DY.length <= rY;) DY.push(0);
-        DY[rY] |= this._bit
+      markVisible(TT) {
+        const oT = this._slot;
+        let IT = TT.visibleViews;
+        for (void 0 === IT && (IT = TT.visibleViews = []); IT.length <= oT;) IT.push(0);
+        IT[oT] |= this._bit
       }
-      unmarkVisible(YY) {
-        const rY = YY.visibleViews;
-        if (void 0 === rY) return;
-        const DY = this._slot;
-        DY < rY.length && (rY[DY] &= ~this._bit)
+      unmarkVisible(TT) {
+        const oT = TT.visibleViews;
+        if (void 0 === oT) return;
+        const IT = this._slot;
+        IT < oT.length && (oT[IT] &= ~this._bit)
       }
-      isSubscribed(YY) {
-        const rY = YY.subscribedViews,
-          DY = this._slot;
-        return void 0 !== rY && DY < rY.length && 0 !== (rY[DY] & this._bit)
+      isSubscribed(TT) {
+        const oT = TT.subscribedViews,
+          IT = this._slot;
+        return void 0 !== oT && IT < oT.length && 0 !== (oT[IT] & this._bit)
       }
-      _setSubscribed(YY) {
-        const rY = this._slot;
-        let DY = YY.subscribedViews;
-        for (void 0 === DY && (DY = YY.subscribedViews = []); DY.length <= rY;) DY.push(0);
-        DY[rY] |= this._bit
+      _setSubscribed(TT) {
+        const oT = this._slot;
+        let IT = TT.subscribedViews;
+        for (void 0 === IT && (IT = TT.subscribedViews = []); IT.length <= oT;) IT.push(0);
+        IT[oT] |= this._bit
       }
-      _clearSubscribed(YY) {
-        const rY = YY.subscribedViews;
-        if (void 0 === rY) return;
-        const DY = this._slot;
-        DY < rY.length && (rY[DY] &= ~this._bit)
+      _clearSubscribed(TT) {
+        const oT = TT.subscribedViews;
+        if (void 0 === oT) return;
+        const IT = this._slot;
+        IT < oT.length && (oT[IT] &= ~this._bit)
       }
-      hasTagOnTree(YY, rY) {
-        const DY = YY.tagViews;
-        if (void 0 === DY) return !1;
-        const FY = this._slot,
-          AY = this._bit;
-        for (let IY = rY; 0 !== IY; IY &= IY - 1) {
-          const YY = DY.get(IY & -IY);
-          if (void 0 !== YY && FY < YY.length && 0 !== (YY[FY] & AY)) return !0
+      hasTagOnTree(TT, oT) {
+        const IT = TT.tagViews;
+        if (void 0 === IT) return !1;
+        const iT = this._slot,
+          zT = this._bit;
+        for (let kT = oT; 0 !== kT; kT &= kT - 1) {
+          const TT = IT.get(kT & -kT);
+          if (void 0 !== TT && iT < TT.length && 0 !== (TT[iT] & zT)) return !0
         }
         return !1
       }
-      addTag(YY, rY) {
-        if (rY === yF) return;
-        let DY = YY.tagViews;
-        void 0 === DY && (DY = YY.tagViews = new Map);
-        const FY = this._slot,
-          AY = this._bit;
-        for (let IY = rY; IY > 0; IY &= IY - 1) {
-          const YY = IY & -IY;
-          let rY = DY.get(YY);
-          for (void 0 === rY && (rY = [], DY.set(YY, rY)); rY.length <= FY;) rY.push(0);
-          rY[FY] |= AY
+      addTag(TT, oT) {
+        if (oT === Mi) return;
+        let IT = TT.tagViews;
+        void 0 === IT && (IT = TT.tagViews = new Map);
+        const iT = this._slot,
+          zT = this._bit;
+        for (let kT = oT; kT > 0; kT &= kT - 1) {
+          const TT = kT & -kT;
+          let oT = IT.get(TT);
+          for (void 0 === oT && (oT = [], IT.set(TT, oT)); oT.length <= iT;) oT.push(0);
+          oT[iT] |= zT
         }
       }
-      removeTag(YY, rY) {
-        if (rY === yF) return;
-        const DY = YY.tagViews;
-        if (void 0 === DY) return;
-        const FY = this._slot,
-          AY = ~this._bit;
-        for (let IY = rY; IY > 0; IY &= IY - 1) {
-          const YY = DY.get(IY & -IY);
-          void 0 !== YY && FY < YY.length && (YY[FY] &= AY)
+      removeTag(TT, oT) {
+        if (oT === Mi) return;
+        const IT = TT.tagViews;
+        if (void 0 === IT) return;
+        const iT = this._slot,
+          zT = ~this._bit;
+        for (let kT = oT; kT > 0; kT &= kT - 1) {
+          const TT = IT.get(kT & -kT);
+          void 0 !== TT && iT < TT.length && (TT[iT] &= zT)
         }
       }
-      removeAllTagsOnTree(YY) {
-        const rY = YY.tagViews;
-        if (void 0 === rY) return;
-        const DY = this._slot,
-          FY = ~this._bit;
-        rY.forEach((YY => {
-          DY < YY.length && (YY[DY] &= FY)
+      removeAllTagsOnTree(TT) {
+        const oT = TT.tagViews;
+        if (void 0 === oT) return;
+        const IT = this._slot,
+          iT = ~this._bit;
+        oT.forEach((TT => {
+          IT < TT.length && (TT[IT] &= iT)
         }))
       }
-      add(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yF,
-          DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(YY, rY, DY, !1)
+      add(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mi,
+          IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(TT, oT, IT, !1)
       }
-      _addImmediate(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yF;
-        this._add(YY, rY, !0, !0)
+      _addImmediate(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mi;
+        this._add(TT, oT, !0, !0)
       }
-      _add(YY, rY, DY, FY) {
-        const IY = YY?.[QY];
-        if (!IY) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${jF(YY)}`), !1;
-        const RY = IY.parent;
-        if (!RY && 0 !== YY[OY]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${IY.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== IY.root && this._bindRoot(IY.root);
-        const gY = RY?.[QY];
-        if (!FY && gY?.isStreamCollection) return Zr(RY, this.id, IY.parentIndex), !0;
-        const aY = YY.constructor[Symbol.metadata],
-          vY = this.isVisible(IY);
-        if (!this.iterable || !DY || vY && -1 !== this.items.indexOf(YY) || this.items.push(YY), this.markVisible(IY), DY && RY && this.addParentOf(IY, rY), !FY && IY.isStreamCollection) return !0;
-        if (rY === yF && IY.isNew) return this._markSubtreeVisible(IY, rY), !1;
-        let uY = this.changes.get(YY[OY]);
-        void 0 === uY && (uY = new Map, this.changes.set(YY[OY], uY));
-        let sY = !1;
-        const iY = IY.encDescriptor.tags;
-        if (IY.forEachChild(((YY, DY) => {
-            const FY = iY[DY];
-            if (void 0 !== FY) {
-              if (!(FY === yF || rY !== yF && 0 !== (FY & rY))) return
+      _add(TT, oT, IT, iT) {
+        const kT = TT?.[KT];
+        if (!kT) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Hi(TT)}`), !1;
+        const WT = kT.parent;
+        if (!WT && 0 !== TT[XT]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${kT.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== kT.root && this._bindRoot(kT.root);
+        const BT = WT?.[KT];
+        if (!iT && BT?.isStreamCollection) return Jo(WT, this.id, kT.parentIndex), !0;
+        const FT = TT.constructor[Symbol.metadata],
+          ST = this.isVisible(kT);
+        if (!this.iterable || !IT || ST && -1 !== this.items.indexOf(TT) || this.items.push(TT), this.markVisible(kT), IT && WT && this.addParentOf(kT, oT), !iT && kT.isStreamCollection) return !0;
+        if (oT === Mi && kT.isNew) return this._markSubtreeVisible(kT, oT), !1;
+        let DT = this.changes.get(TT[XT]);
+        void 0 === DT && (DT = new Map, this.changes.set(TT[XT], DT));
+        let LT = !1;
+        const xT = kT.encDescriptor.tags;
+        if (kT.forEachChild(((TT, IT) => {
+            const iT = xT[IT];
+            if (void 0 !== iT) {
+              if (!(iT === Mi || oT !== Mi && 0 !== (iT & oT))) return
             }
-            this.add(YY.ref, rY, !1) && (sY = !0)
-          })), rY !== yF) {
-          this.addTag(IY, rY);
-          const YY = aY?.[HY];
-          if (void 0 !== YY)
-            for (let DY = rY; DY > 0; DY &= DY - 1) YY[DY & -DY]?.forEach((YY => {
-              IY.getChange(YY) !== AY.DELETE && uY.set(YY, AY.ADD)
+            this.add(TT.ref, oT, !1) && (LT = !0)
+          })), oT !== Mi) {
+          this.addTag(kT, oT);
+          const TT = FT?.[CT];
+          if (void 0 !== TT)
+            for (let IT = oT; IT > 0; IT &= IT - 1) TT[IT & -IT]?.forEach((TT => {
+              kT.getChange(TT) !== zT.DELETE && DT.set(TT, zT.ADD)
             }))
         }
-        if ((rY === yF || !vY) && (!IY.isNew || sY))
-          if (IY.isArray && "string" !== typeof IY.refTarget[oY]) IY.refTarget.items.length > 0 && (uY.set(-1, AY.ADD), sY = !0);
+        if ((oT === Mi || !ST) && (!kT.isNew || LT))
+          if (kT.isArray && "string" !== typeof kT.refTarget[MT]) kT.refTarget.items.length > 0 && (DT.set(-1, zT.ADD), LT = !0);
           else {
-            const YY = IY.encDescriptor.tags;
-            IY.forEachLive((DY => {
-              const FY = YY[DY];
-              (void 0 === FY || FY === yF || rY !== yF && 0 !== (FY & rY)) && (uY.set(DY, AY.ADD), sY = !0)
+            const TT = kT.encDescriptor.tags;
+            kT.forEachLive((IT => {
+              const iT = TT[IT];
+              (void 0 === iT || iT === Mi || oT !== Mi && 0 !== (iT & oT)) && (DT.set(IT, zT.ADD), LT = !0)
             }))
-          } return sY
+          } return LT
       }
-      _markSubtreeVisible(YY, rY) {
-        const DY = YY.encDescriptor.tags;
-        YY.forEachChild(((YY, FY) => {
-          const AY = DY[FY];
-          if (void 0 !== AY) {
-            if (!(AY === yF || rY !== yF && 0 !== (AY & rY))) return
+      _markSubtreeVisible(TT, oT) {
+        const IT = TT.encDescriptor.tags;
+        TT.forEachChild(((TT, iT) => {
+          const zT = IT[iT];
+          if (void 0 !== zT) {
+            if (!(zT === Mi || oT !== Mi && 0 !== (zT & oT))) return
           }
-          YY.isNew ? (this.markVisible(YY), this._markSubtreeVisible(YY, rY)) : this._add(YY.ref, rY, !1, !1)
+          TT.isNew ? (this.markVisible(TT), this._markSubtreeVisible(TT, oT)) : this._add(TT.ref, oT, !1, !1)
         }))
       }
-      addParentOf(YY, rY) {
-        const DY = YY.parent[QY],
-          FY = YY.parentIndex;
-        this.isVisible(DY) || this.markVisible(DY);
-        const IY = DY.parent?.[QY];
-        if (IY && this.addParentOf(DY, rY), DY.hasFilteredFields && DY.getChange(FY) !== AY.DELETE) {
-          let IY = this.changes.get(DY.ref[OY]);
-          void 0 === IY && (IY = new Map, this.changes.set(DY.ref[OY], IY));
-          const RY = DY.encDescriptor.tags[FY];
-          void 0 !== RY && RY !== yF && 0 !== (RY & rY) && this.addTag(DY, rY), IY.set(DY.isArray ? YY : FY, AY.ADD)
+      addParentOf(TT, oT) {
+        const IT = TT.parent[KT],
+          iT = TT.parentIndex;
+        this.isVisible(IT) || this.markVisible(IT);
+        const kT = IT.parent?.[KT];
+        if (kT && this.addParentOf(IT, oT), IT.hasFilteredFields && IT.getChange(iT) !== zT.DELETE) {
+          let kT = this.changes.get(IT.ref[XT]);
+          void 0 === kT && (kT = new Map, this.changes.set(IT.ref[XT], kT));
+          const WT = IT.encDescriptor.tags[iT];
+          void 0 !== WT && WT !== Mi && 0 !== (WT & oT) && this.addTag(IT, oT), kT.set(IT.isArray ? TT : iT, zT.ADD)
         }
       }
-      _touchAncestorsOf(YY) {
-        let rY = YY.parent?.[QY];
-        if (void 0 === rY) return;
-        const DY = [];
-        for (; void 0 !== rY;) {
-          if (rY.hasFilteredFields) {
-            const YY = rY.ref[OY];
-            if (this.changes.has(YY)) break;
-            DY.push(rY)
+      _touchAncestorsOf(TT) {
+        let oT = TT.parent?.[KT];
+        if (void 0 === oT) return;
+        const IT = [];
+        for (; void 0 !== oT;) {
+          if (oT.hasFilteredFields) {
+            const TT = oT.ref[XT];
+            if (this.changes.has(TT)) break;
+            IT.push(oT)
           }
-          rY = rY.parent?.[QY]
+          oT = oT.parent?.[KT]
         }
-        for (let FY = DY.length - 1; FY >= 0; FY--) this.changes.set(DY[FY].ref[OY], new Map)
+        for (let iT = IT.length - 1; iT >= 0; iT--) this.changes.set(IT[iT].ref[XT], new Map)
       }
-      remove(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yF,
-          DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const FY = YY?.[QY];
-        if (!FY) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${jF(YY)}`), this;
-        const IY = FY.parent?.[QY];
-        if (IY?.isStreamCollection) return this.unmarkVisible(FY), this.iterable && !DY && ZF(this.items, this.items.indexOf(YY)),
-          function(YY, rY, DY, FY, IY) {
-            const RY = YY._stream;
-            if (void 0 === RY) return !1;
-            const OY = RY.pendingByView.get(rY);
-            if (OY?.has(FY)) return OY.delete(FY), !1;
-            const gY = RY.sentByView.get(rY);
-            if (gY?.has(FY)) {
-              gY.delete(FY);
-              let YY = IY.get(DY);
-              return void 0 === YY && (YY = new Map, IY.set(DY, YY)), YY.set(FY, AY.DELETE), !0
+      remove(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mi,
+          IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const iT = TT?.[KT];
+        if (!iT) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Hi(TT)}`), this;
+        const kT = iT.parent?.[KT];
+        if (kT?.isStreamCollection) return this.unmarkVisible(iT), this.iterable && !IT && Yi(this.items, this.items.indexOf(TT)),
+          function(TT, oT, IT, iT, kT) {
+            const WT = TT._stream;
+            if (void 0 === WT) return !1;
+            const XT = WT.pendingByView.get(oT);
+            if (XT?.has(iT)) return XT.delete(iT), !1;
+            const BT = WT.sentByView.get(oT);
+            if (BT?.has(iT)) {
+              BT.delete(iT);
+              let TT = kT.get(IT);
+              return void 0 === TT && (TT = new Map, kT.set(IT, TT)), TT.set(iT, zT.DELETE), !0
             }
-          }(FY.parent, this.id, FY.parent[OY], FY.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(FY), this;
-        if (FY.isStreamCollection) {
-          this.unmarkVisible(FY), this.iterable && !DY && ZF(this.items, this.items.indexOf(YY));
-          const rY = FY.ref,
-            IY = rY._stream;
-          if (void 0 !== IY) {
-            IY.pendingByView.get(this.id)?.clear();
-            const YY = IY.sentByView.get(this.id);
-            if (void 0 !== YY && YY.size > 0) {
-              const DY = rY[OY];
-              let FY = this.changes.get(DY);
-              void 0 === FY && (FY = new Map, this.changes.set(DY, FY));
-              for (const rY of YY) FY.set(rY, AY.DELETE);
-              YY.clear()
+          }(iT.parent, this.id, iT.parent[XT], iT.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(iT), this;
+        if (iT.isStreamCollection) {
+          this.unmarkVisible(iT), this.iterable && !IT && Yi(this.items, this.items.indexOf(TT));
+          const oT = iT.ref,
+            kT = oT._stream;
+          if (void 0 !== kT) {
+            kT.pendingByView.get(this.id)?.clear();
+            const TT = kT.sentByView.get(this.id);
+            if (void 0 !== TT && TT.size > 0) {
+              const IT = oT[XT];
+              let iT = this.changes.get(IT);
+              void 0 === iT && (iT = new Map, this.changes.set(IT, iT));
+              for (const oT of TT) iT.set(oT, zT.DELETE);
+              TT.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(FY), this.iterable && !DY && ZF(this.items, this.items.indexOf(YY));
-        const RY = FY.ref,
-          gY = RY.constructor[Symbol.metadata],
-          aY = RY[OY];
-        this._touchAncestorsOf(FY);
-        let vY = this.changes.get(aY);
-        if (void 0 === vY && (vY = new Map, this.changes.set(aY, vY)), rY === yF) {
-          const YY = FY.parent;
-          if (YY && !xr.isValidInstance(YY) && FY.isFiltered) {
-            const rY = IY.isArray ? FY : FY.parentIndex,
-              DY = YY[OY];
-            let RY = this.changes.get(DY);
-            void 0 === RY ? (RY = new Map, this.changes.set(DY, RY)) : RY.get(rY) === AY.ADD && this._dropPendingEntries(FY), RY.set(rY, AY.DELETE), this._recursiveDeleteVisibleChangeTree(FY)
-          } else gY?.[KY]?.forEach((YY => this._removeViewField(FY, vY, YY)))
+        this.unmarkVisible(iT), this.iterable && !IT && Yi(this.items, this.items.indexOf(TT));
+        const WT = iT.ref,
+          BT = WT.constructor[Symbol.metadata],
+          FT = WT[XT];
+        this._touchAncestorsOf(iT);
+        let ST = this.changes.get(FT);
+        if (void 0 === ST && (ST = new Map, this.changes.set(FT, ST)), oT === Mi) {
+          const TT = iT.parent;
+          if (TT && !yo.isValidInstance(TT) && iT.isFiltered) {
+            const oT = kT.isArray ? iT : iT.parentIndex,
+              IT = TT[XT];
+            let WT = this.changes.get(IT);
+            void 0 === WT ? (WT = new Map, this.changes.set(IT, WT)) : WT.get(oT) === zT.ADD && this._dropPendingEntries(iT), WT.set(oT, zT.DELETE), this._recursiveDeleteVisibleChangeTree(iT)
+          } else BT?.[fT]?.forEach((TT => this._removeViewField(iT, ST, TT)))
         } else {
-          const YY = gY?.[HY];
-          if (void 0 !== YY)
-            for (let DY = rY; DY > 0; DY &= DY - 1) YY[DY & -DY]?.forEach((YY => this._removeViewField(FY, vY, YY)))
+          const TT = BT?.[CT];
+          if (void 0 !== TT)
+            for (let IT = oT; IT > 0; IT &= IT - 1) TT[IT & -IT]?.forEach((TT => this._removeViewField(iT, ST, TT)))
         }
-        return void 0 === rY ? this.removeAllTagsOnTree(FY) : this.removeTag(FY, rY), this
+        return void 0 === oT ? this.removeAllTagsOnTree(iT) : this.removeTag(iT, oT), this
       }
-      has(YY) {
-        return this.isVisible(YY[QY])
+      has(TT) {
+        return this.isVisible(TT[KT])
       }
-      hasTag(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yF;
-        return this.hasTagOnTree(YY[QY], rY)
+      hasTag(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mi;
+        return this.hasTagOnTree(TT[KT], oT)
       }
-      subscribe(YY, rY) {
-        const DY = YY?.[QY];
-        if (!DY) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${jF(YY)}`), this;
-        if (void 0 === this._root && void 0 !== DY.root && this._bindRoot(DY.root), void 0 !== rY)
-          if (DY.isStreamCollection) {
-            const DY = Br(YY);
-            null === rY ? DY.priorityByView?.delete(this.id) : (DY.priorityByView ??= new Map).set(this.id, rY)
+      subscribe(TT, oT) {
+        const IT = TT?.[KT];
+        if (!IT) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Hi(TT)}`), this;
+        if (void 0 === this._root && void 0 !== IT.root && this._bindRoot(IT.root), void 0 !== oT)
+          if (IT.isStreamCollection) {
+            const IT = vo(TT);
+            null === oT ? IT.priorityByView?.delete(this.id) : (IT.priorityByView ??= new Map).set(this.id, oT)
           } else {
-            const rY = YY?.constructor?.name ?? "collection",
-              FY = DY.parent;
-            if (void 0 === FY) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${rY} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const oT = TT?.constructor?.name ?? "collection",
+              iT = IT.parent;
+            if (void 0 === iT) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${oT} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const YY = FY?.constructor?.[Symbol.metadata]?.[DY.parentIndex]?.name,
-                AY = YY ? `${FY.constructor.name}#${YY}` : rY;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${AY} is a ${rY}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const TT = iT?.constructor?.[Symbol.metadata]?.[IT.parentIndex]?.name,
+                zT = TT ? `${iT.constructor.name}#${TT}` : oT;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${zT} is a ${oT}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(DY)) return this;
-        const FY = void 0 !== DY.parent && !this.isVisible(DY);
-        if (FY ? (this.addParentOf(DY, yF), this._add(YY, yF, !1, !1)) : this.markVisible(DY), this._setSubscribed(DY), DY.isStreamCollection) {
-          const rY = YY;
-          DY.forEachChild(((YY, DY) => {
-            Zr(rY, this.id, DY)
+          } if (this.isSubscribed(IT)) return this;
+        const iT = void 0 !== IT.parent && !this.isVisible(IT);
+        if (iT ? (this.addParentOf(IT, Mi), this._add(TT, Mi, !1, !1)) : this.markVisible(IT), this._setSubscribed(IT), IT.isStreamCollection) {
+          const oT = TT;
+          IT.forEachChild(((TT, IT) => {
+            Jo(oT, this.id, IT)
           }))
-        } else FY || DY.forEachChild((YY => {
-          this.markVisible(YY)
+        } else iT || IT.forEachChild((TT => {
+          this.markVisible(TT)
         }));
         return this
       }
-      unsubscribe(YY) {
-        const rY = YY?.[QY];
-        if (!rY) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${jF(YY)}`), this;
-        if (!this.isSubscribed(rY)) return this;
-        this._clearSubscribed(rY);
-        const DY = rY.ref[OY];
-        if (rY.isStreamCollection) {
-          const rY = YY._stream;
-          if (void 0 !== rY) {
-            rY.pendingByView.get(this.id)?.clear();
-            const YY = rY.sentByView.get(this.id);
-            if (void 0 !== YY && YY.size > 0) {
-              let rY = this.changes.get(DY);
-              void 0 === rY && (rY = new Map, this.changes.set(DY, rY));
-              for (const DY of YY) rY.set(DY, AY.DELETE);
-              YY.clear()
+      unsubscribe(TT) {
+        const oT = TT?.[KT];
+        if (!oT) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Hi(TT)}`), this;
+        if (!this.isSubscribed(oT)) return this;
+        this._clearSubscribed(oT);
+        const IT = oT.ref[XT];
+        if (oT.isStreamCollection) {
+          const oT = TT._stream;
+          if (void 0 !== oT) {
+            oT.pendingByView.get(this.id)?.clear();
+            const TT = oT.sentByView.get(this.id);
+            if (void 0 !== TT && TT.size > 0) {
+              let oT = this.changes.get(IT);
+              void 0 === oT && (oT = new Map, this.changes.set(IT, oT));
+              for (const IT of TT) oT.set(IT, zT.DELETE);
+              TT.clear()
             }
           }
         } else {
-          const YY = rY.isArray;
-          let FY = this.changes.get(DY);
-          rY.forEachChild(((rY, IY) => {
-            void 0 === FY && (FY = new Map, this.changes.set(DY, FY)), FY.set(YY ? rY : IY, AY.DELETE), this.unmarkVisible(rY)
+          const TT = oT.isArray;
+          let iT = this.changes.get(IT);
+          oT.forEachChild(((oT, kT) => {
+            void 0 === iT && (iT = new Map, this.changes.set(IT, iT)), iT.set(TT ? oT : kT, zT.DELETE), this.unmarkVisible(oT)
           }))
         }
-        return this.unmarkVisible(rY), this
+        return this.unmarkVisible(oT), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let YY = 0, rY = this.items.length; YY < rY; YY++) this.remove(this.items[YY], yF, !0);
+        for (let TT = 0, oT = this.items.length; TT < oT; TT++) this.remove(this.items[TT], Mi, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(YY) {
-        let rY = this.isVisible(YY);
-        if (!rY && YY.isVisibilitySharedWithParent)
-          if (this.isVisible(YY.parent[QY])) this.markVisible(YY), rY = !0;
+      isChangeTreeVisible(TT) {
+        let oT = this.isVisible(TT);
+        if (!oT && TT.isVisibilitySharedWithParent)
+          if (this.isVisible(TT.parent[KT])) this.markVisible(TT), oT = !0;
           else
-            for (let DY = YY.extraParents; void 0 !== DY; DY = DY.next) {
-              const FY = DY.ref[QY];
-              if (FY.isFiltered && this.isVisible(FY)) {
-                this.markVisible(YY), rY = !0;
+            for (let IT = TT.extraParents; void 0 !== IT; IT = IT.next) {
+              const iT = IT.ref[KT];
+              if (iT.isFiltered && this.isVisible(iT)) {
+                this.markVisible(TT), oT = !0;
                 break
               }
             }
-        return rY
+        return oT
       }
-      _recursiveDeleteVisibleChangeTree(YY) {
-        YY.forEachChild((YY => {
-          this.unmarkVisible(YY), this._recursiveDeleteVisibleChangeTree(YY)
+      _recursiveDeleteVisibleChangeTree(TT) {
+        TT.forEachChild((TT => {
+          this.unmarkVisible(TT), this._recursiveDeleteVisibleChangeTree(TT)
         }))
       }
-      _dropPendingEntries(YY) {
-        this.changes.delete(YY.ref[OY]), YY.forEachChild((YY => this._dropPendingEntries(YY)))
+      _dropPendingEntries(TT) {
+        this.changes.delete(TT.ref[XT]), TT.forEachChild((TT => this._dropPendingEntries(TT)))
       }
-      _removeViewField(YY, rY, DY) {
-        const FY = rY.get(DY) === AY.ADD;
-        rY.set(DY, AY.DELETE);
-        const IY = YY.ref[YY.encDescriptor.names[DY]],
-          RY = IY?.[QY];
-        RY && (this.unmarkVisible(RY), this._recursiveDeleteVisibleChangeTree(RY), FY && this._dropPendingEntries(RY))
+      _removeViewField(TT, oT, IT) {
+        const iT = oT.get(IT) === zT.ADD;
+        oT.set(IT, zT.DELETE);
+        const kT = TT.ref[TT.encDescriptor.names[IT]],
+          WT = kT?.[KT];
+        WT && (this.unmarkVisible(WT), this._recursiveDeleteVisibleChangeTree(WT), iT && this._dropPendingEntries(WT))
       }
     }
 
-    function dF(YY) {
-      YY.structSwitchEmitted || (YY.shouldEmitSwitch && (YY.buffer[YY.it.offset++] = 255, rr.number(YY.buffer, YY.ref[OY], YY.it)), YY.structSwitchEmitted = !0)
+    function qi(TT) {
+      TT.structSwitchEmitted || (TT.shouldEmitSwitch && (TT.buffer[TT.it.offset++] = 255, oo.number(TT.buffer, TT.ref[XT], TT.it)), TT.structSwitchEmitted = !0)
     }
 
-    function JF(YY, rY) {
-      bF(YY, rY, AY.ADD)
+    function Zi(TT, oT) {
+      ti(TT, oT, zT.ADD)
     }
 
-    function MF(YY, rY) {
-      if (rY._fullSyncGen === YY.gen) return;
-      rY._fullSyncGen = YY.gen;
-      if (!YY.hasView || YY.view.isChangeTreeVisible(rY)) {
-        const DY = rY.encDescriptor;
-        YY.changeTree = rY, YY.ref = rY.ref, YY.encoder = DY.encoder, YY.filter = DY.filter, YY.metadata = DY.metadata, YY.treeIsFiltered = rY.isFiltered, YY.isSchema = DY.isSchema, YY.filterBitmask = DY.filterBitmask, YY.tags = DY.tags, YY.structSwitchEmitted = !1, YY.shouldEmitSwitch = YY.hasView || YY.it.offset > YY.initialOffset || rY !== YY.rootChangeTree, rY.isArray && rY.collDirty.size > 0 && (rY.flags |= 512), AD(rY, YY, JF)
+    function li(TT, oT) {
+      if (oT._fullSyncGen === TT.gen) return;
+      oT._fullSyncGen = TT.gen;
+      if (!TT.hasView || TT.view.isChangeTreeVisible(oT)) {
+        const IT = oT.encDescriptor;
+        TT.changeTree = oT, TT.ref = oT.ref, TT.encoder = IT.encoder, TT.filter = IT.filter, TT.metadata = IT.metadata, TT.treeIsFiltered = oT.isFiltered, TT.isSchema = IT.isSchema, TT.filterBitmask = IT.filterBitmask, TT.tags = IT.tags, TT.structSwitchEmitted = !1, TT.shouldEmitSwitch = TT.hasView || TT.it.offset > TT.initialOffset || oT !== TT.rootChangeTree, oT.isArray && oT.collDirty.size > 0 && (oT.flags |= 512), WI(oT, TT, Zi)
       }
-      WD(rY, YY, wF)
+      gI(oT, TT, si)
     }
 
-    function wF(YY, rY, DY) {
-      MF(YY, rY)
+    function si(TT, oT, IT) {
+      li(TT, oT)
     }
 
-    function bF(YY, rY, DY) {
-      if (rY < 0) {
-        if (YY.treeIsFiltered !== YY.emitFiltered) return;
-        return dF(YY), void(YY.buffer[YY.it.offset++] = 255 & Math.abs(rY))
+    function ti(TT, oT, IT) {
+      if (oT < 0) {
+        if (TT.treeIsFiltered !== TT.emitFiltered) return;
+        return qi(TT), void(TT.buffer[TT.it.offset++] = 255 & Math.abs(oT))
       }
-      if ((YY.isSchema ? YY.treeIsFiltered || (rY < 32 ? 0 !== (YY.filterBitmask & 1 << rY) : void 0 !== YY.tags[rY]) : YY.treeIsFiltered) !== YY.emitFiltered) return;
-      const FY = YY.isEncodeAll ? AY.ADD : DY;
-      void 0 !== FY && (void 0 === YY.filter || YY.filter(YY.ref, rY, YY.view)) && (dF(YY), YY.encoder(YY.self, YY.buffer, YY.changeTree, rY, FY, YY.it, YY.isEncodeAll, YY.hasView, YY.metadata))
+      if ((TT.isSchema ? TT.treeIsFiltered || (oT < 32 ? 0 !== (TT.filterBitmask & 1 << oT) : void 0 !== TT.tags[oT]) : TT.treeIsFiltered) !== TT.emitFiltered) return;
+      const iT = TT.isEncodeAll ? zT.ADD : IT;
+      void 0 !== iT && (void 0 === TT.filter || TT.filter(TT.ref, oT, TT.view)) && (qi(TT), TT.encoder(TT.self, TT.buffer, TT.changeTree, oT, iT, TT.it, TT.isEncodeAll, TT.hasView, TT.metadata))
     }
 
-    function XF(YY, rY) {
-      const DY = new Uint8Array(YY.length + rY.length);
-      return DY.set(YY, 0), DY.set(rY, YY.length), DY
+    function Gi(TT, oT) {
+      const IT = new Uint8Array(TT.length + oT.length);
+      return IT.set(TT, 0), IT.set(oT, TT.length), IT
     }
-    class qF {
+    class bi {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(qF.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(bi.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(YY, rY) {
-        this.context = wr.cache(YY.constructor), this.root = rY ?? new zF(this.context), this.setState(YY)
+      constructor(TT, oT) {
+        this.context = qo.cache(TT.constructor), this.root = oT ?? new ai(this.context), this.setState(TT)
       }
-      setState(YY) {
-        this.state = YY, this.state[QY].setRoot(this.root)
+      setState(TT) {
+        this.state = TT, this.state[KT].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YY.offset;
-        return this._encodeChannel(YY, rY, DY, FY, !1)
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.offset;
+        return this._encodeChannel(TT, oT, IT, iT, !1)
       }
       encodeUnreliable() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YY.offset;
-        return this._encodeChannel(YY, rY, DY, FY, !0)
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TT.offset;
+        return this._encodeChannel(TT, oT, IT, iT, !0)
       }
-      _encodeChannel(YY, rY, DY, FY, AY) {
-        this.root.pendingFilterRefresh.length > 0 && RD(this.root);
-        const IY = void 0 !== rY,
-          RY = this.state[QY],
-          OY = this._encodeCtx;
-        OY.self = this, OY.buffer = DY, OY.it = YY, OY.view = rY, OY.isEncodeAll = !1, OY.hasView = IY, OY.emitFiltered = IY;
-        let gY = AY ? this.root.unreliableChanges : this.root.changes;
-        for (; gY = gY.next;) {
-          const DY = gY.changeTree;
-          if (IY && !rY.isChangeTreeVisible(DY)) continue;
-          const aY = AY ? DY.unreliableRecorder : DY;
-          if (!aY || !aY.has()) continue;
-          const vY = DY.encDescriptor;
-          OY.changeTree = DY, OY.ref = DY.ref, OY.encoder = vY.encoder, OY.filter = vY.filter, OY.metadata = vY.metadata, OY.treeIsFiltered = DY.isFiltered, OY.isSchema = vY.isSchema, OY.filterBitmask = vY.filterBitmask, OY.tags = vY.tags, OY.structSwitchEmitted = !1, OY.isRootTree = DY === RY, OY.shouldEmitSwitch = IY || YY.offset > FY || !OY.isRootTree, aY.forEachWithCtx(OY, bF)
+      _encodeChannel(TT, oT, IT, iT, zT) {
+        this.root.pendingFilterRefresh.length > 0 && BI(this.root);
+        const kT = void 0 !== oT,
+          WT = this.state[KT],
+          XT = this._encodeCtx;
+        XT.self = this, XT.buffer = IT, XT.it = TT, XT.view = oT, XT.isEncodeAll = !1, XT.hasView = kT, XT.emitFiltered = kT;
+        let BT = zT ? this.root.unreliableChanges : this.root.changes;
+        for (; BT = BT.next;) {
+          const IT = BT.changeTree;
+          if (kT && !oT.isChangeTreeVisible(IT)) continue;
+          const FT = zT ? IT.unreliableRecorder : IT;
+          if (!FT || !FT.has()) continue;
+          const ST = IT.encDescriptor;
+          XT.changeTree = IT, XT.ref = IT.ref, XT.encoder = ST.encoder, XT.filter = ST.filter, XT.metadata = ST.metadata, XT.treeIsFiltered = IT.isFiltered, XT.isSchema = ST.isSchema, XT.filterBitmask = ST.filterBitmask, XT.tags = ST.tags, XT.structSwitchEmitted = !1, XT.isRootTree = IT === WT, XT.shouldEmitSwitch = kT || TT.offset > iT || !XT.isRootTree, FT.forEachWithCtx(XT, ti)
         }
-        return AY || IY || !this._isStreamBroadcastMode || this._emitStreamBroadcast(DY, YY), YY.offset > DY.byteLength ? (DY = this._resizeBuffer(DY, YY.offset), YY.offset = FY, this._encodeChannel(YY, rY, DY, FY, AY)) : DY.subarray(0, YY.offset)
+        return zT || kT || !this._isStreamBroadcastMode || this._emitStreamBroadcast(IT, TT), TT.offset > IT.byteLength ? (IT = this._resizeBuffer(IT, TT.offset), TT.offset = iT, this._encodeChannel(TT, oT, IT, iT, zT)) : IT.subarray(0, TT.offset)
       }
-      encodeFullSync(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : YY.offset;
-        this.root.pendingFilterRefresh.length > 0 && RD(this.root);
-        const IY = void 0 !== FY,
-          RY = this.state[QY],
-          OY = this._encodeCtx;
-        return OY.self = this, OY.buffer = rY, OY.it = YY, OY.view = FY, OY.isEncodeAll = !0, OY.hasView = IY, OY.emitFiltered = DY, OY.gen = ++this._fullSyncGen, OY.initialOffset = AY, OY.rootChangeTree = RY, MF(OY, RY), YY.offset > rY.byteLength ? (rY = this._resizeBuffer(rY, YY.offset), YY.offset = AY, this.encodeFullSync(YY, rY, DY, FY, AY)) : rY.subarray(0, YY.offset)
+      encodeFullSync(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : TT.offset;
+        this.root.pendingFilterRefresh.length > 0 && BI(this.root);
+        const kT = void 0 !== iT,
+          WT = this.state[KT],
+          XT = this._encodeCtx;
+        return XT.self = this, XT.buffer = oT, XT.it = TT, XT.view = iT, XT.isEncodeAll = !0, XT.hasView = kT, XT.emitFiltered = IT, XT.gen = ++this._fullSyncGen, XT.initialOffset = zT, XT.rootChangeTree = WT, li(XT, WT), TT.offset > oT.byteLength ? (oT = this._resizeBuffer(oT, TT.offset), TT.offset = zT, this.encodeFullSync(TT, oT, IT, iT, zT)) : oT.subarray(0, TT.offset)
       }
-      _resizeBuffer(YY, rY) {
-        const DY = Math.ceil(rY / qF.BUFFER_SIZE) * qF.BUFFER_SIZE,
-          FY = new Uint8Array(DY);
-        return FY.set(YY), YY === this.sharedBuffer && (this.sharedBuffer = FY), FY
+      _resizeBuffer(TT, oT) {
+        const IT = Math.ceil(oT / bi.BUFFER_SIZE) * bi.BUFFER_SIZE,
+          iT = new Uint8Array(IT);
+        return iT.set(TT), TT === this.sharedBuffer && (this.sharedBuffer = iT), iT
       }
       encodeAll() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(YY, rY, !1)
+          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(TT, oT, !1)
       }
-      encodeAllView(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const AY = DY.offset;
-        return FY = this.encodeFullSync(DY, FY, !0, YY, AY), XF(FY.subarray(0, rY), FY.subarray(AY, DY.offset))
+      encodeAllView(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const zT = IT.offset;
+        return iT = this.encodeFullSync(IT, iT, !0, TT, zT), Gi(iT.subarray(0, oT), iT.subarray(zT, IT.offset))
       }
-      ensureCapacity(YY, rY) {
-        if (rY + qF.BUFFER_SIZE <= YY.byteLength) return YY;
-        const DY = Math.ceil((rY + qF.BUFFER_SIZE) / qF.BUFFER_SIZE) * qF.BUFFER_SIZE,
-          FY = new Uint8Array(DY);
-        return FY.set(YY.subarray(0, rY)), YY === this.sharedBuffer && (this.sharedBuffer = FY), FY
+      ensureCapacity(TT, oT) {
+        if (oT + bi.BUFFER_SIZE <= TT.byteLength) return TT;
+        const IT = Math.ceil((oT + bi.BUFFER_SIZE) / bi.BUFFER_SIZE) * bi.BUFFER_SIZE,
+          iT = new Uint8Array(IT);
+        return iT.set(TT.subarray(0, oT)), TT === this.sharedBuffer && (this.sharedBuffer = iT), iT
       }
-      encodeView(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          IY = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const RY = DY.offset;
-        this._emitStreamPriority(YY);
-        for (const gY of YY.changes.keys()) {
-          const rY = YY.changes.get(gY),
-            IY = this.root.changeTrees[gY];
-          if (void 0 === IY) {
-            YY.changes.delete(gY);
+      encodeView(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          kT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const WT = IT.offset;
+        this._emitStreamPriority(TT);
+        for (const BT of TT.changes.keys()) {
+          const oT = TT.changes.get(BT),
+            kT = this.root.changeTrees[BT];
+          if (void 0 === kT) {
+            TT.changes.delete(BT);
             continue
           }
-          if (0 === rY.size) continue;
-          const RY = IY.encDescriptor,
-            aY = RY.encoder,
-            vY = RY.metadata,
-            uY = IY.ref,
-            iY = IY.refTarget;
-          FY = this.ensureCapacity(FY, DY.offset), FY[DY.offset++] = 255, rr.number(FY, uY[OY], DY);
-          for (const [gY, yY] of rY) {
-            let rY;
-            if (-1 === gY) {
-              const YY = iY.tmpItems,
-                rY = iY.deletedIndexes;
-              for (let RY = 0; RY < YY.length; RY++) void 0 !== YY[RY] && !0 !== rY[RY] && aY(this, FY, IY, RY, AY.ADD, DY, !1, !0, vY);
+          if (0 === oT.size) continue;
+          const WT = kT.encDescriptor,
+            FT = WT.encoder,
+            ST = WT.metadata,
+            DT = kT.ref,
+            xT = kT.refTarget;
+          iT = this.ensureCapacity(iT, IT.offset), iT[IT.offset++] = 255, oo.number(iT, DT[XT], IT);
+          for (const [BT, cT] of oT) {
+            let oT;
+            if (-1 === BT) {
+              const TT = xT.tmpItems,
+                oT = xT.deletedIndexes;
+              for (let WT = 0; WT < TT.length; WT++) void 0 !== TT[WT] && !0 !== oT[WT] && FT(this, iT, kT, WT, zT.ADD, IT, !1, !0, ST);
               continue
             }
-            if ("number" === typeof gY) rY = gY;
+            if ("number" === typeof BT) oT = BT;
             else {
-              const DY = gY.indexInParent(uY);
-              if (void 0 === DY) continue;
-              if (rY = DY, yY === AY.ADD && IY.getChange(rY) === AY.DELETE) {
-                YY.changes.delete(gY.ref[OY]);
+              const IT = BT.indexInParent(DT);
+              if (void 0 === IT) continue;
+              if (oT = IT, cT === zT.ADD && kT.getChange(oT) === zT.DELETE) {
+                TT.changes.delete(BT.ref[XT]);
                 continue
               }
             }
-            aY(this, FY, IY, rY, void 0 !== iY[sY](rY) && yY || AY.DELETE, DY, !1, !0, vY)
+            FT(this, iT, kT, oT, void 0 !== xT[LT](oT) && cT || zT.DELETE, IT, !1, !0, ST)
           }
         }
-        return YY.changes.clear(), FY = this.encode(DY, YY, FY), IY ? XF(FY.subarray(0, rY), FY.subarray(RY, DY.offset)) : FY.subarray(RY, DY.offset)
+        return TT.changes.clear(), iT = this.encode(IT, TT, iT), kT ? Gi(iT.subarray(0, oT), iT.subarray(WT, IT.offset)) : iT.subarray(WT, IT.offset)
       }
-      encodeUnreliableView(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const AY = DY.offset;
-        return FY = this.encodeUnreliable(DY, YY, FY, AY), XF(FY.subarray(0, rY), FY.subarray(AY, DY.offset))
+      encodeUnreliableView(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const zT = IT.offset;
+        return iT = this.encodeUnreliable(IT, TT, iT, zT), Gi(iT.subarray(0, oT), iT.subarray(zT, IT.offset))
       }
-      _emitStreamBroadcast(YY, rY) {
-        const DY = this.root.streamTrees;
-        for (const FY of DY) {
-          const DY = FY,
-            IY = DY[QY],
-            RY = DY[OY];
-          if (void 0 === RY) continue;
-          const gY = DY._stream,
-            aY = gY.broadcastDeletes,
-            vY = gY.broadcastPending,
-            uY = gY.sentBroadcast,
-            iY = aY.size > 0,
-            yY = vY.size > 0,
-            oY = IY.encDescriptor,
-            WY = oY.encoder,
-            EY = oY.metadata;
-          if (iY || yY) {
-            if (YY[rY.offset++] = 255, rr.number(YY, RY, rY), iY) {
-              for (const DY of aY) WY(this, YY, IY, DY, AY.DELETE, rY, !1, !1, EY);
-              aY.clear()
+      _emitStreamBroadcast(TT, oT) {
+        const IT = this.root.streamTrees;
+        for (const iT of IT) {
+          const IT = iT,
+            kT = IT[KT],
+            WT = IT[XT];
+          if (void 0 === WT) continue;
+          const BT = IT._stream,
+            FT = BT.broadcastDeletes,
+            ST = BT.broadcastPending,
+            DT = BT.sentBroadcast,
+            xT = FT.size > 0,
+            cT = ST.size > 0,
+            MT = kT.encDescriptor,
+            rT = MT.encoder,
+            AT = MT.metadata;
+          if (xT || cT) {
+            if (TT[oT.offset++] = 255, oo.number(TT, WT, oT), xT) {
+              for (const IT of FT) rT(this, TT, kT, IT, zT.DELETE, oT, !1, !1, AT);
+              FT.clear()
             }
-            const FY = gY.maxPerTick,
-              yY = [];
-            let oY = 0;
-            const mY = [];
-            for (const RY of vY) {
-              if (oY >= FY) break;
-              const OY = DY[sY](RY);
-              void 0 !== OY ? (WY(this, YY, IY, RY, AY.ADD, rY, !1, !1, EY), uY.add(RY), yY.push(OY), mY.push(RY), oY++) : mY.push(RY)
+            const iT = BT.maxPerTick,
+              cT = [];
+            let MT = 0;
+            const gT = [];
+            for (const WT of ST) {
+              if (MT >= iT) break;
+              const XT = IT[LT](WT);
+              void 0 !== XT ? (rT(this, TT, kT, WT, zT.ADD, oT, !1, !1, AT), DT.add(WT), cT.push(XT), gT.push(WT), MT++) : gT.push(WT)
             }
-            for (const YY of mY) vY.delete(YY);
-            for (const DY of yY) {
-              const FY = DY[QY];
-              if (void 0 === FY) continue;
-              const IY = DY[OY];
-              if (void 0 === IY) continue;
-              YY[rY.offset++] = 255, rr.number(YY, IY, rY);
-              const RY = FY.encDescriptor,
-                gY = RY.encoder,
-                aY = RY.metadata;
-              FY.forEachLive((DY => {
-                xr.hasUnreliableAtIndex(aY, DY) || gY(this, YY, FY, DY, AY.ADD, rY, !1, !1, aY)
+            for (const TT of gT) ST.delete(TT);
+            for (const IT of cT) {
+              const iT = IT[KT];
+              if (void 0 === iT) continue;
+              const kT = IT[XT];
+              if (void 0 === kT) continue;
+              TT[oT.offset++] = 255, oo.number(TT, kT, oT);
+              const WT = iT.encDescriptor,
+                BT = WT.encoder,
+                FT = WT.metadata;
+              iT.forEachLive((IT => {
+                yo.hasUnreliableAtIndex(FT, IT) || BT(this, TT, iT, IT, zT.ADD, oT, !1, !1, FT)
               }))
             }
           }
-          for (const FY of uY) {
-            const AY = DY[sY](FY);
-            if (void 0 === AY) continue;
-            const IY = AY[QY];
-            if (void 0 === IY || !IY.has()) continue;
-            const RY = AY[OY];
-            if (void 0 === RY) continue;
-            YY[rY.offset++] = 255, rr.number(YY, RY, rY);
-            const gY = IY.encDescriptor,
-              aY = gY.encoder,
-              vY = gY.metadata;
-            IY.forEach(((DY, FY) => {
-              DY < 0 || xr.hasUnreliableAtIndex(vY, DY) || aY(this, YY, IY, DY, FY, rY, !1, !1, vY)
+          for (const iT of DT) {
+            const zT = IT[LT](iT);
+            if (void 0 === zT) continue;
+            const kT = zT[KT];
+            if (void 0 === kT || !kT.has()) continue;
+            const WT = zT[XT];
+            if (void 0 === WT) continue;
+            TT[oT.offset++] = 255, oo.number(TT, WT, oT);
+            const BT = kT.encDescriptor,
+              FT = BT.encoder,
+              ST = BT.metadata;
+            kT.forEach(((IT, iT) => {
+              IT < 0 || yo.hasUnreliableAtIndex(ST, IT) || FT(this, TT, kT, IT, iT, oT, !1, !1, ST)
             }))
           }
         }
       }
-      _emitStreamPriority(YY) {
-        const rY = this.root.streamTrees;
-        if (0 === rY.size) return;
-        const DY = YY.id;
-        for (const FY of rY) {
-          const rY = FY,
-            IY = rY._stream,
-            RY = IY.pendingByView.get(DY);
-          if (void 0 === RY || 0 === RY.size) continue;
-          const gY = IY.priorityByView?.get(DY),
-            aY = void 0 !== gY,
-            vY = IY.priority,
-            uY = IY.maxPerTick,
-            iY = [],
-            yY = [];
-          if (aY || void 0 !== vY) {
-            const DY = [],
-              FY = [];
-            let AY = 0;
-            for (const IY of RY) {
-              const RY = rY[sY](IY);
-              if (void 0 === RY) {
-                yY.push(IY);
+      _emitStreamPriority(TT) {
+        const oT = this.root.streamTrees;
+        if (0 === oT.size) return;
+        const IT = TT.id;
+        for (const iT of oT) {
+          const oT = iT,
+            kT = oT._stream,
+            WT = kT.pendingByView.get(IT);
+          if (void 0 === WT || 0 === WT.size) continue;
+          const BT = kT.priorityByView?.get(IT),
+            FT = void 0 !== BT,
+            ST = kT.priority,
+            DT = kT.maxPerTick,
+            xT = [],
+            cT = [];
+          if (FT || void 0 !== ST) {
+            const IT = [],
+              iT = [];
+            let zT = 0;
+            for (const kT of WT) {
+              const WT = oT[LT](kT);
+              if (void 0 === WT) {
+                cT.push(kT);
                 continue
               }
-              const OY = aY ? gY(RY) : vY(YY, RY);
-              if (AY < uY) {
-                let YY = AY++;
-                for (; YY > 0 && FY[YY - 1] < OY;) FY[YY] = FY[YY - 1], DY[YY] = DY[YY - 1], YY--;
-                FY[YY] = OY, DY[YY] = IY
-              } else if (OY > FY[uY - 1]) {
-                let YY = uY - 1;
-                for (; YY > 0 && FY[YY - 1] < OY;) FY[YY] = FY[YY - 1], DY[YY] = DY[YY - 1], YY--;
-                FY[YY] = OY, DY[YY] = IY
+              const XT = FT ? BT(WT) : ST(TT, WT);
+              if (zT < DT) {
+                let TT = zT++;
+                for (; TT > 0 && iT[TT - 1] < XT;) iT[TT] = iT[TT - 1], IT[TT] = IT[TT - 1], TT--;
+                iT[TT] = XT, IT[TT] = kT
+              } else if (XT > iT[DT - 1]) {
+                let TT = DT - 1;
+                for (; TT > 0 && iT[TT - 1] < XT;) iT[TT] = iT[TT - 1], IT[TT] = IT[TT - 1], TT--;
+                iT[TT] = XT, IT[TT] = kT
               }
             }
-            for (let YY = 0; YY < AY; YY++) iY.push(DY[YY])
+            for (let TT = 0; TT < zT; TT++) xT.push(IT[TT])
           } else
-            for (const YY of RY) {
-              if (iY.length >= uY) break;
-              iY.push(YY)
+            for (const TT of WT) {
+              if (xT.length >= DT) break;
+              xT.push(TT)
             }
-          for (const YY of yY) RY.delete(YY);
-          const oY = iY.length;
-          let WY = IY.sentByView.get(DY);
-          void 0 === WY && (WY = new Set, IY.sentByView.set(DY, WY));
-          for (let DY = 0; DY < oY; DY++) {
-            const FY = iY[DY],
-              IY = rY[sY](FY);
-            if (void 0 === IY) {
-              RY.delete(FY);
+          for (const TT of cT) WT.delete(TT);
+          const MT = xT.length;
+          let rT = kT.sentByView.get(IT);
+          void 0 === rT && (rT = new Set, kT.sentByView.set(IT, rT));
+          for (let IT = 0; IT < MT; IT++) {
+            const iT = xT[IT],
+              kT = oT[LT](iT);
+            if (void 0 === kT) {
+              WT.delete(iT);
               continue
             }
-            YY._addImmediate(IY);
-            const gY = IY[QY];
-            if (void 0 !== gY) {
-              const rY = IY[OY];
-              let DY = YY.changes.get(rY);
-              void 0 === DY && (DY = new Map, YY.changes.set(rY, DY));
-              const FY = gY.metadata;
-              gY.forEachLive((YY => {
-                xr.hasUnreliableAtIndex(FY, YY) || DY.set(YY, AY.ADD)
+            TT._addImmediate(kT);
+            const BT = kT[KT];
+            if (void 0 !== BT) {
+              const oT = kT[XT];
+              let IT = TT.changes.get(oT);
+              void 0 === IT && (IT = new Map, TT.changes.set(oT, IT));
+              const iT = BT.metadata;
+              BT.forEachLive((TT => {
+                yo.hasUnreliableAtIndex(iT, TT) || IT.set(TT, zT.ADD)
               }))
             }
-            RY.delete(FY), WY.add(FY)
+            WT.delete(iT), rT.add(iT)
           }
         }
       }
       discardChanges() {
-        const YY = this.root.changes;
-        let rY = YY.next;
-        const DY = this.root;
-        for (; rY;) {
-          const YY = rY.next;
-          rY.changeTree.endEncode(), DY.releaseNode(rY), rY = YY
+        const TT = this.root.changes;
+        let oT = TT.next;
+        const IT = this.root;
+        for (; oT;) {
+          const TT = oT.next;
+          oT.changeTree.endEncode(), IT.releaseNode(oT), oT = TT
         }
-        YY.next = void 0, YY.tail = void 0
+        TT.next = void 0, TT.tail = void 0
       }
       discardUnreliableChanges() {
-        const YY = this.root.unreliableChanges;
-        let rY = YY.next;
-        const DY = this.root;
-        for (; rY;) {
-          const YY = rY.next;
-          rY.changeTree.endEncodeUnreliable(), DY.releaseNode(rY), rY = YY
+        const TT = this.root.unreliableChanges;
+        let oT = TT.next;
+        const IT = this.root;
+        for (; oT;) {
+          const TT = oT.next;
+          oT.changeTree.endEncodeUnreliable(), IT.releaseNode(oT), oT = TT
         }
-        YY.next = void 0, YY.tail = void 0
+        TT.next = void 0, TT.tail = void 0
       }
-      tryEncodeTypeId(YY, rY, DY, FY) {
-        const AY = this.context.getTypeId(rY),
-          IY = this.context.getTypeId(DY);
-        void 0 !== IY ? AY !== IY && (YY[FY.offset++] = 213, rr.number(YY, IY, FY)) : console.warn(`@colyseus/schema WARNING: Class "${DY.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(TT, oT, IT, iT) {
+        const zT = this.context.getTypeId(oT),
+          kT = this.context.getTypeId(IT);
+        void 0 !== kT ? zT !== kT && (TT[iT.offset++] = 213, oo.number(TT, kT, iT)) : console.warn(`@colyseus/schema WARNING: Class "${IT.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const YY = this.root;
-        if (0 === YY.streamTrees.size) return !1;
-        const rY = 0 === YY.activeViews.size;
-        for (const DY of YY.streamTrees)
-          if (rY ? zr(DY) : Hr(DY, YY)) return !0;
+        const TT = this.root;
+        if (0 === TT.streamTrees.size) return !1;
+        const oT = 0 === TT.activeViews.size;
+        for (const IT of TT.streamTrees)
+          if (oT ? jo(IT) : Co(IT, TT)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class pF extends Error {
-      constructor(YY) {
-        super(YY), this.name = "DecodingWarning"
+    class yi extends Error {
+      constructor(TT) {
+        super(TT), this.name = "DecodingWarning"
       }
     }
-    const kF = {
+    const Ni = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class GF {
+    class Pi {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(YY, rY) {
-        let DY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(YY, rY), void 0 === rY[OY] ? (kF.value = YY, Object.defineProperty(rY, OY, kF)) : rY[OY] !== YY && (rY[OY] = YY), DY && (this.refCount[YY] = (this.refCount[YY] || 0) + 1), this.deletedRefs.has(YY) && this.deletedRefs.delete(YY)
+      addRef(TT, oT) {
+        let IT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(TT, oT), void 0 === oT[XT] ? (Ni.value = TT, Object.defineProperty(oT, XT, Ni)) : oT[XT] !== TT && (oT[XT] = TT), IT && (this.refCount[TT] = (this.refCount[TT] || 0) + 1), this.deletedRefs.has(TT) && this.deletedRefs.delete(TT)
       }
-      removeRef(YY) {
-        const rY = this.refCount[YY];
-        if (void 0 !== rY)
-          if (0 !== rY)(this.refCount[YY] = rY - 1) <= 0 && this.deletedRefs.add(YY);
+      removeRef(TT) {
+        const oT = this.refCount[TT];
+        if (void 0 !== oT)
+          if (0 !== oT)(this.refCount[TT] = oT - 1) <= 0 && this.deletedRefs.add(TT);
           else try {
-            const rY = this.refs.get(YY);
-            throw new pF(`trying to remove refId '${YY}' with 0 refCount (${rY.constructor.name}: ${JSON.stringify(rY)})`)
-          } catch (IA) {
-            console.warn(IA)
+            const oT = this.refs.get(TT);
+            throw new yi(`trying to remove refId '${TT}' with 0 refCount (${oT.constructor.name}: ${JSON.stringify(oT)})`)
+          } catch (Fz) {
+            console.warn(Fz)
           } else try {
-            throw new pF("trying to remove refId that doesn't exist: " + YY)
-          } catch (IA) {
-            console.warn(IA)
+            throw new yi("trying to remove refId that doesn't exist: " + TT)
+          } catch (Fz) {
+            console.warn(Fz)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((YY => {
-          if (this.refCount[YY] > 0) return;
-          const rY = this.refs.get(YY),
-            DY = rY.constructor[Symbol.metadata];
-          if (null != DY)
-            for (const FY in DY) {
-              const YY = rY[DY[FY].name];
-              if ("object" === typeof YY && YY) {
-                const rY = YY[OY];
-                void 0 === rY || this.deletedRefs.has(rY) || this.removeRef(rY)
+        this.deletedRefs.forEach((TT => {
+          if (this.refCount[TT] > 0) return;
+          const oT = this.refs.get(TT),
+            IT = oT.constructor[Symbol.metadata];
+          if (null != IT)
+            for (const iT in IT) {
+              const TT = oT[IT[iT].name];
+              if ("object" === typeof TT && TT) {
+                const oT = TT[XT];
+                void 0 === oT || this.deletedRefs.has(oT) || this.removeRef(oT)
               }
-            } else "function" === typeof rY[oY] && Array.from(rY.values()).forEach((YY => {
-              const rY = YY[OY];
-              void 0 === rY || this.deletedRefs.has(rY) || this.removeRef(rY)
+            } else "function" === typeof oT[MT] && Array.from(oT.values()).forEach((TT => {
+              const oT = TT[XT];
+              void 0 === oT || this.deletedRefs.has(oT) || this.removeRef(oT)
             }));
-          this.refs.delete(YY), delete this.refCount[YY], delete this.callbacks[YY]
+          this.refs.delete(TT), delete this.refCount[TT], delete this.callbacks[TT]
         })), this.deletedRefs.clear()
       }
-      addCallback(YY, rY, DY) {
-        if (void 0 === YY) {
-          const YY = "number" === typeof rY ? AY[rY] : rY;
-          throw new Error(`Can't addCallback on '${YY}' (refId is undefined)`)
+      addCallback(TT, oT, IT) {
+        if (void 0 === TT) {
+          const TT = "number" === typeof oT ? zT[oT] : oT;
+          throw new Error(`Can't addCallback on '${TT}' (refId is undefined)`)
         }
-        return this.callbacks[YY] || (this.callbacks[YY] = {}), this.callbacks[YY][rY] || (this.callbacks[YY][rY] = []), this.callbacks[YY][rY].push(DY), () => this.removeCallback(YY, rY, DY)
+        return this.callbacks[TT] || (this.callbacks[TT] = {}), this.callbacks[TT][oT] || (this.callbacks[TT][oT] = []), this.callbacks[TT][oT].push(IT), () => this.removeCallback(TT, oT, IT)
       }
-      removeCallback(YY, rY, DY) {
-        const FY = this.callbacks?.[YY]?.[rY]?.indexOf(DY);
-        void 0 !== FY && -1 !== FY && ZF(this.callbacks[YY][rY], FY)
+      removeCallback(TT, oT, IT) {
+        const iT = this.callbacks?.[TT]?.[oT]?.indexOf(IT);
+        void 0 !== iT && -1 !== iT && Yi(this.callbacks[TT][oT], iT)
       }
     }
-    class xF {
+    class di {
       context;
       state;
       root;
       currentRefId = 0;
-      Gl;
+      YC;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(YY, rY) {
-        this.setState(YY), this.context = rY || new wr(YY.constructor)
+      constructor(TT, oT) {
+        this.setState(TT), this.context = oT || new qo(TT.constructor)
       }
-      setState(YY) {
-        this.state = YY, this.root = new GF, this.root.addRef(0, YY)
+      setState(TT) {
+        this.state = TT, this.root = new Pi, this.root.addRef(0, TT)
       }
-      decode(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const AY = void 0 !== this.Gl ? [] : null,
-          IY = this.root,
-          RY = YY.byteLength;
-        let OY = DY.constructor[vY];
-        for (this.currentRefId = 0; rY.offset < RY;) {
-          if (YY[rY.offset] == FY) {
-            rY.offset++, DY[VY]?.();
-            const FY = mr.number(YY, rY),
-              AY = IY.refs.get(FY);
-            AY ? (DY = AY, OY = DY.constructor[vY], this.currentRefId = FY) : (console.error(`"refId" not found: ${FY}`, {
-              previousRef: DY,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const zT = void 0 !== this.YC ? [] : null,
+          kT = this.root,
+          WT = TT.byteLength;
+        let XT = IT.constructor[ST];
+        for (this.currentRefId = 0; oT.offset < WT;) {
+          if (TT[oT.offset] == iT) {
+            oT.offset++, IT[hT]?.();
+            const iT = go.number(TT, oT),
+              zT = kT.refs.get(iT);
+            zT ? (IT = zT, XT = IT.constructor[ST], this.currentRefId = iT) : (console.error(`"refId" not found: ${iT}`, {
+              previousRef: IT,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(YY, rY, RY));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(TT, oT, WT));
             continue
-          } - 1 !== OY(this, YY, rY, DY, AY) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(YY, rY, RY))
+          } - 1 !== XT(this, TT, oT, IT, zT) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(TT, oT, WT))
         }
-        return DY[VY]?.(), null !== this.resyncVisited && function(YY, rY) {
-          YY.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : wD(YY, YY.state, new Set, rY)
-        }(this, AY), null !== AY && this.Gl?.(AY), IY.garbageCollectDeletedRefs(), AY
+        return IT[hT]?.(), null !== this.resyncVisited && function(TT, oT) {
+          TT.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : lI(TT, TT.state, new Set, oT)
+        }(this, zT), null !== zT && this.YC?.(zT), kT.garbageCollectDeletedRefs(), zT
       }
-      decodeResync(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(YY, rY)
+          return this.decode(TT, oT)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(YY, rY, DY) {
+      skipCurrentStructure(TT, oT, IT) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const AY = {
-          offset: rY.offset
+        const zT = {
+          offset: oT.offset
         };
-        for (; rY.offset < DY && (YY[rY.offset] !== FY || (AY.offset = rY.offset + 1, !this.root.refs.has(mr.number(YY, AY))));) rY.offset++
+        for (; oT.offset < IT && (TT[oT.offset] !== iT || (zT.offset = oT.offset + 1, !this.root.refs.has(go.number(TT, zT))));) oT.offset++
       }
-      getInstanceType(YY, rY, DY) {
-        let FY;
-        if (213 === YY[rY.offset]) {
-          rY.offset++;
-          const DY = mr.number(YY, rY);
-          FY = this.context.get(DY)
+      getInstanceType(TT, oT, IT) {
+        let iT;
+        if (213 === TT[oT.offset]) {
+          oT.offset++;
+          const IT = go.number(TT, oT);
+          iT = this.context.get(IT)
         }
-        return FY || DY
+        return iT || IT
       }
-      createInstanceOfType(YY) {
-        return YY.initializeForDecoder()
+      createInstanceOfType(TT) {
+        return TT.initializeForDecoder()
       }
-      removeChildRefs(YY, rY) {
-        const DY = "string" !== typeof YY[oY],
-          FY = YY[OY];
-        YY.forEach(((IY, RY) => {
-          rY?.push({
-            ref: YY,
-            refId: FY,
-            op: AY.DELETE,
-            field: RY,
+      removeChildRefs(TT, oT) {
+        const IT = "string" !== typeof TT[MT],
+          iT = TT[XT];
+        TT.forEach(((kT, WT) => {
+          oT?.push({
+            ref: TT,
+            refId: iT,
+            op: zT.DELETE,
+            field: WT,
             value: void 0,
-            previousValue: IY
-          }), DY && this.root.removeRef(IY[OY])
+            previousValue: kT
+          }), IT && this.root.removeRef(kT[XT])
         }))
       }
     }
-    const nF = BF({
-        min: iF.float64(),
-        max: iF.float64(),
-        bits: iF.uint8(),
-        mode: iF.uint8()
+    const Vi = Ci({
+        min: Ki.float64(),
+        max: Ki.float64(),
+        bits: Ki.uint8(),
+        mode: Ki.uint8()
       }, "QuantizedDescriptor"),
-      PF = BF({
-        name: iF.string(),
-        type: iF.string(),
-        referencedType: iF.number(),
-        childPrimitive: iF.string(),
-        quantized: iF.ref(nF).optional()
+      Tz = Ci({
+        name: Ki.string(),
+        type: Ki.string(),
+        referencedType: Ki.number(),
+        childPrimitive: Ki.string(),
+        quantized: Ki.ref(Vi).optional()
       }, "ReflectionField"),
-      UF = BF({
-        id: iF.number(),
-        extendsId: iF.number(),
-        fields: iF.array(PF)
+      oz = Ci({
+        id: Ki.number(),
+        extendsId: Ki.number(),
+        fields: Ki.array(Tz)
       }, "ReflectionType"),
-      LF = BF({
-        types: iF.array(UF),
-        rootType: iF.number()
+      Iz = Ci({
+        types: Ki.array(oz),
+        rootType: Ki.number()
       }, "Reflection");
 
-    function tF(YY) {
-      const rY = YY.root,
-        DY = rY.callbacks,
-        FY = new WeakMap;
-      let IY;
+    function iz(TT) {
+      const oT = TT.root,
+        IT = oT.callbacks,
+        iT = new WeakMap;
+      let kT;
 
-      function RY(YY, DY) {
-        let aY = DY.instance?.constructor[Symbol.metadata] || YY,
-          vY = DY.instance && "function" === typeof DY.instance.forEach || YY && !KF.is(YY);
-        if (aY && !vY) {
-          const YY = function(YY, AY, RY, gY) {
-            return gY && void 0 !== DY.instance[AY] && !FY.has(IY) && RY(DY.instance[AY], void 0), rY.addCallback(YY[OY], AY, RY)
+      function WT(TT, IT) {
+        let FT = IT.instance?.constructor[Symbol.metadata] || TT,
+          ST = IT.instance && "function" === typeof IT.instance.forEach || TT && !Ji.is(TT);
+        if (FT && !ST) {
+          const TT = function(TT, zT, WT, BT) {
+            return BT && void 0 !== IT.instance[zT] && !iT.has(kT) && WT(IT.instance[zT], void 0), oT.addCallback(TT[XT], zT, WT)
           };
           return new Proxy({
-            listen: function(rY, AY) {
-              let RY = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (DY.instance) return YY(DY.instance, rY, AY, RY);
+            listen: function(oT, zT) {
+              let WT = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (IT.instance) return TT(IT.instance, oT, zT, WT);
               {
-                let OY = () => {};
-                return DY.onInstanceAvailable(((DY, gY) => {
-                  OY = YY(DY, rY, AY, RY && gY && !FY.has(IY))
-                })), () => OY()
+                let XT = () => {};
+                return IT.onInstanceAvailable(((IT, BT) => {
+                  XT = TT(IT, oT, zT, WT && BT && !iT.has(kT))
+                })), () => XT()
               }
             },
-            onChange: function(YY) {
-              return rY.addCallback(DY.instance[OY], AY.REPLACE, YY)
+            onChange: function(TT) {
+              return oT.addCallback(IT.instance[XT], zT.REPLACE, TT)
             },
-            bindTo: function(YY, FY) {
-              return FY || (FY = Object.keys(aY).map((YY => aY[YY].name))), rY.addCallback(DY.instance[OY], AY.REPLACE, (() => {
-                FY.forEach((rY => YY[rY] = DY.instance[rY]))
+            bindTo: function(TT, iT) {
+              return iT || (iT = Object.keys(FT).map((TT => FT[TT].name))), oT.addCallback(IT.instance[XT], zT.REPLACE, (() => {
+                iT.forEach((oT => TT[oT] = IT.instance[oT]))
               }))
             }
           }, {
-            get(YY, rY) {
-              const FY = aY[aY[rY]];
-              if (FY) {
-                const YY = DY.instance?.[rY],
-                  AY = FY => {
-                    const AY = gY(DY.instance).listen(rY, ((YY, rY) => {
-                      FY(YY, !1), AY?.()
+            get(TT, oT) {
+              const iT = FT[FT[oT]];
+              if (iT) {
+                const TT = IT.instance?.[oT],
+                  zT = iT => {
+                    const zT = BT(IT.instance).listen(oT, ((TT, oT) => {
+                      iT(TT, !1), zT?.()
                     }), !1);
-                    void 0 !== YY?.[OY] && FY(YY, !0)
+                    void 0 !== TT?.[XT] && iT(TT, !0)
                   };
-                return RY(FY.type, {
-                  instance: void 0 !== YY?.[OY] && YY,
-                  parentInstance: DY.instance,
-                  onInstanceAvailable: AY
+                return WT(iT.type, {
+                  instance: void 0 !== TT?.[XT] && TT,
+                  parentInstance: IT.instance,
+                  onInstanceAvailable: zT
                 })
               }
-              return YY[rY]
+              return TT[oT]
             },
-            has: (YY, rY) => void 0 !== aY[rY],
-            set(YY, rY, DY) {
+            has: (TT, oT) => void 0 !== FT[oT],
+            set(TT, oT, IT) {
               throw new Error("not allowed")
             },
-            deleteProperty(YY, rY) {
+            deleteProperty(TT, oT) {
               throw new Error("not allowed")
             }
           })
         } {
-          const YY = function(YY, DY, RY) {
-              return RY && YY.forEach(((YY, rY) => DY(YY, rY))), rY.addCallback(YY[OY], AY.ADD, ((YY, rY) => {
-                FY.set(DY, !0), IY = DY, DY(YY, rY), FY.delete(DY), IY = void 0
+          const TT = function(TT, IT, WT) {
+              return WT && TT.forEach(((TT, oT) => IT(TT, oT))), oT.addCallback(TT[XT], zT.ADD, ((TT, oT) => {
+                iT.set(IT, !0), kT = IT, IT(TT, oT), iT.delete(IT), kT = void 0
               }))
             },
-            RY = function(YY, DY) {
-              return rY.addCallback(YY[OY], AY.DELETE, DY)
+            WT = function(TT, IT) {
+              return oT.addCallback(TT[XT], zT.DELETE, IT)
             },
-            gY = function(YY, DY) {
-              return rY.addCallback(YY[OY], AY.REPLACE, DY)
+            BT = function(TT, IT) {
+              return oT.addCallback(TT[XT], zT.REPLACE, IT)
             };
           return new Proxy({
-            kE: function(rY) {
-              let AY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (DY.instance) return YY(DY.instance, rY, AY && !FY.has(IY));
-              if (DY.onInstanceAvailable) {
-                let RY = () => {};
-                return DY.onInstanceAvailable(((DY, OY) => {
-                  RY = YY(DY, rY, AY && OY && !FY.has(IY))
-                })), () => RY()
+            Om: function(oT) {
+              let zT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (IT.instance) return TT(IT.instance, oT, zT && !iT.has(kT));
+              if (IT.onInstanceAvailable) {
+                let WT = () => {};
+                return IT.onInstanceAvailable(((IT, XT) => {
+                  WT = TT(IT, oT, zT && XT && !iT.has(kT))
+                })), () => WT()
               }
             },
-            kS: function(YY) {
-              if (DY.instance) return RY(DY.instance, YY);
-              if (DY.onInstanceAvailable) {
-                let rY = () => {};
-                return DY.onInstanceAvailable((DY => {
-                  rY = RY(DY, YY)
-                })), () => rY()
+            zC: function(TT) {
+              if (IT.instance) return WT(IT.instance, TT);
+              if (IT.onInstanceAvailable) {
+                let oT = () => {};
+                return IT.onInstanceAvailable((IT => {
+                  oT = WT(IT, TT)
+                })), () => oT()
               }
             },
-            onChange: function(YY) {
-              if (DY.instance) return gY(DY.instance, YY);
-              if (DY.onInstanceAvailable) {
-                let rY = () => {};
-                return DY.onInstanceAvailable((DY => {
-                  rY = gY(DY, YY)
-                })), () => rY()
+            onChange: function(TT) {
+              if (IT.instance) return BT(IT.instance, TT);
+              if (IT.onInstanceAvailable) {
+                let oT = () => {};
+                return IT.onInstanceAvailable((IT => {
+                  oT = BT(IT, TT)
+                })), () => oT()
               }
             }
           }, {
-            get(YY, rY) {
-              if (!YY[rY]) throw new Error(`Can't access '${rY}' through callback proxy. access the instance directly.`);
-              return YY[rY]
+            get(TT, oT) {
+              if (!TT[oT]) throw new Error(`Can't access '${oT}' through callback proxy. access the instance directly.`);
+              return TT[oT]
             },
-            has: (YY, rY) => void 0 !== YY[rY],
-            set(YY, rY, DY) {
+            has: (TT, oT) => void 0 !== TT[oT],
+            set(TT, oT, IT) {
               throw new Error("not allowed")
             },
-            deleteProperty(YY, rY) {
+            deleteProperty(TT, oT) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function gY(YY) {
-        return RY(void 0, {
-          instance: YY
+      function BT(TT) {
+        return WT(void 0, {
+          instance: TT
         })
       }
-      return YY.Gl = function(YY) {
-        const rY = new Set;
-        for (let FY = 0, IY = YY.length; FY < IY; FY++) {
-          const IY = YY[FY],
-            RY = IY.refId,
-            gY = IY.ref,
-            aY = DY[RY];
-          if (aY) {
-            if ((IY.op & AY.DELETE) === AY.DELETE && KF.isSchema(IY.previousValue)) {
-              const YY = DY[IY.previousValue[OY]]?.[AY.DELETE];
-              for (let rY = YY?.length - 1; rY >= 0; rY--) YY[rY]()
+      return TT.YC = function(TT) {
+        const oT = new Set;
+        for (let iT = 0, kT = TT.length; iT < kT; iT++) {
+          const kT = TT[iT],
+            WT = kT.refId,
+            BT = kT.ref,
+            FT = IT[WT];
+          if (FT) {
+            if ((kT.op & zT.DELETE) === zT.DELETE && Ji.isSchema(kT.previousValue)) {
+              const TT = IT[kT.previousValue[XT]]?.[zT.DELETE];
+              for (let oT = TT?.length - 1; oT >= 0; oT--) TT[oT]()
             }
-            if (KF.isSchema(gY)) {
-              if (!rY.has(RY)) {
-                const YY = aY?.[AY.REPLACE];
-                for (let rY = YY?.length - 1; rY >= 0; rY--) YY[rY]()
+            if (Ji.isSchema(BT)) {
+              if (!oT.has(WT)) {
+                const TT = FT?.[zT.REPLACE];
+                for (let oT = TT?.length - 1; oT >= 0; oT--) TT[oT]()
               }
-              if (aY.hasOwnProperty(IY.field)) {
-                const YY = aY[IY.field];
-                for (let rY = YY?.length - 1; rY >= 0; rY--) YY[rY](IY.value, IY.previousValue)
+              if (FT.hasOwnProperty(kT.field)) {
+                const TT = FT[kT.field];
+                for (let oT = TT?.length - 1; oT >= 0; oT--) TT[oT](kT.value, kT.previousValue)
               }
             } else {
-              if ((IY.op & AY.DELETE) === AY.DELETE) {
-                if (void 0 !== IY.previousValue) {
-                  const YY = aY[AY.DELETE];
-                  for (let rY = YY?.length - 1; rY >= 0; rY--) YY[rY](IY.previousValue, IY.dynamicIndex ?? IY.field)
+              if ((kT.op & zT.DELETE) === zT.DELETE) {
+                if (void 0 !== kT.previousValue) {
+                  const TT = FT[zT.DELETE];
+                  for (let oT = TT?.length - 1; oT >= 0; oT--) TT[oT](kT.previousValue, kT.dynamicIndex ?? kT.field)
                 }
-                if ((IY.op & AY.ADD) === AY.ADD) {
-                  const YY = aY[AY.ADD];
-                  for (let rY = YY?.length - 1; rY >= 0; rY--) YY[rY](IY.value, IY.dynamicIndex ?? IY.field)
+                if ((kT.op & zT.ADD) === zT.ADD) {
+                  const TT = FT[zT.ADD];
+                  for (let oT = TT?.length - 1; oT >= 0; oT--) TT[oT](kT.value, kT.dynamicIndex ?? kT.field)
                 }
-              } else if ((IY.op & AY.ADD) === AY.ADD && IY.previousValue !== IY.value) {
-                const YY = aY[AY.ADD];
-                for (let rY = YY?.length - 1; rY >= 0; rY--) YY[rY](IY.value, IY.dynamicIndex ?? IY.field)
+              } else if ((kT.op & zT.ADD) === zT.ADD && kT.previousValue !== kT.value) {
+                const TT = FT[zT.ADD];
+                for (let oT = TT?.length - 1; oT >= 0; oT--) TT[oT](kT.value, kT.dynamicIndex ?? kT.field)
               }
-              if (IY.value !== IY.previousValue && (void 0 !== IY.value || void 0 !== IY.previousValue)) {
-                const YY = aY[AY.REPLACE];
-                for (let rY = YY?.length - 1; rY >= 0; rY--) YY[rY](IY.value, IY.dynamicIndex ?? IY.field)
+              if (kT.value !== kT.previousValue && (void 0 !== kT.value || void 0 !== kT.previousValue)) {
+                const TT = FT[zT.REPLACE];
+                for (let oT = TT?.length - 1; oT >= 0; oT--) TT[oT](kT.value, kT.dynamicIndex ?? kT.field)
               }
             }
-            rY.add(RY)
+            oT.add(WT)
           }
         }
-      }, gY
+      }, BT
     }
 
-    function YA(YY, rY) {
-      YY.Gl = rY
+    function zz(TT, oT) {
+      TT.YC = oT
     }
-    LF.encode = function(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    Iz.encode = function(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const DY = YY.context,
-        FY = new LF,
-        AY = new qF(FY),
-        IY = DY.schemas.get(YY.state.constructor);
-      IY > 0 && (FY.rootType = IY);
-      const RY = new Set,
-        OY = {},
-        gY = YY => {
-          if (void 0 === YY.extendsId || RY.has(YY.extendsId)) {
-            RY.add(YY.id), FY.types.push(YY);
-            const rY = OY[YY.id];
-            void 0 !== rY && (delete OY[YY.id], rY.forEach((YY => gY(YY))))
-          } else void 0 === OY[YY.extendsId] && (OY[YY.extendsId] = []), OY[YY.extendsId].push(YY)
+      const IT = TT.context,
+        iT = new Iz,
+        zT = new bi(iT),
+        kT = IT.schemas.get(TT.state.constructor);
+      kT > 0 && (iT.rootType = kT);
+      const WT = new Set,
+        XT = {},
+        BT = TT => {
+          if (void 0 === TT.extendsId || WT.has(TT.extendsId)) {
+            WT.add(TT.id), iT.types.push(TT);
+            const oT = XT[TT.id];
+            void 0 !== oT && (delete XT[TT.id], oT.forEach((TT => BT(TT))))
+          } else void 0 === XT[TT.extendsId] && (XT[TT.extendsId] = []), XT[TT.extendsId].push(TT)
         };
-      DY.schemas.forEach(((YY, rY) => {
-        const FY = new UF;
-        FY.id = Number(YY);
-        const AY = Object.getPrototypeOf(rY);
-        AY !== KF && (FY.extendsId = DY.schemas.get(AY));
-        const IY = rY[Symbol.metadata];
-        if (IY !== AY[Symbol.metadata]) {
-          const YY = IY[BY] ?? -1;
-          for (let rY = 0; rY <= YY; rY++) {
-            const YY = IY[rY];
-            if (void 0 === YY) continue;
-            const AY = YY.name;
-            if (!Object.prototype.hasOwnProperty.call(IY, AY)) continue;
-            const RY = new PF;
-            let OY;
-            if (RY.name = AY, "string" === typeof YY.type) OY = YY.type;
-            else if (hr(YY.type)) {
-              const rY = YY.type.quantized;
-              OY = "quantized";
-              const DY = new nF;
-              DY.min = rY.min, DY.max = rY.max, DY.bits = rY.bits, DY.mode = rY.wrap ? 1 : 0, RY.quantized = DY
+      IT.schemas.forEach(((TT, oT) => {
+        const iT = new oz;
+        iT.id = Number(TT);
+        const zT = Object.getPrototypeOf(oT);
+        zT !== Ji && (iT.extendsId = IT.schemas.get(zT));
+        const kT = oT[Symbol.metadata];
+        if (kT !== zT[Symbol.metadata]) {
+          const TT = kT[vT] ?? -1;
+          for (let oT = 0; oT <= TT; oT++) {
+            const TT = kT[oT];
+            if (void 0 === TT) continue;
+            const zT = TT.name;
+            if (!Object.prototype.hasOwnProperty.call(kT, zT)) continue;
+            const WT = new Tz;
+            let XT;
+            if (WT.name = zT, "string" === typeof TT.type) XT = TT.type;
+            else if (Qo(TT.type)) {
+              const oT = TT.type.quantized;
+              XT = "quantized";
+              const IT = new Vi;
+              IT.min = oT.min, IT.max = oT.max, IT.bits = oT.bits, IT.mode = oT.wrap ? 1 : 0, WT.quantized = IT
             } else {
-              let rY;
-              KF.is(YY.type) ? (OY = "ref", rY = YY.type) : (OY = Object.keys(YY.type)[0], "string" === typeof YY.type[OY] ? RY.childPrimitive = YY.type[OY] : rY = YY.type[OY]), RY.referencedType = rY ? DY.getTypeId(rY) : -1
+              let oT;
+              Ji.is(TT.type) ? (XT = "ref", oT = TT.type) : (XT = Object.keys(TT.type)[0], "string" === typeof TT.type[XT] ? WT.childPrimitive = TT.type[XT] : oT = TT.type[XT]), WT.referencedType = oT ? IT.getTypeId(oT) : -1
             }
-            RY.type = OY, FY.fields.push(RY)
+            WT.type = XT, iT.fields.push(WT)
           }
         }
-        gY(FY)
+        BT(iT)
       }));
-      for (const aY in OY) OY[aY].forEach((YY => FY.types.push(YY)));
-      return AY.encodeAll(rY).slice(0, rY.offset)
-    }, LF.decode = function(YY, rY) {
-      const DY = new LF;
-      new xF(DY).decode(YY, rY);
-      const FY = new wr;
-      DY.types.forEach((YY => {
-        const rY = FY.get(YY.extendsId) ?? KF,
-          DY = class extends rY {};
-        wr.register(DY), FY.add(DY, YY.id)
+      for (const FT in XT) XT[FT].forEach((TT => iT.types.push(TT)));
+      return zT.encodeAll(oT).slice(0, oT.offset)
+    }, Iz.decode = function(TT, oT) {
+      const IT = new Iz;
+      new di(IT).decode(TT, oT);
+      const iT = new qo;
+      IT.types.forEach((TT => {
+        const oT = iT.get(TT.extendsId) ?? Ji,
+          IT = class extends oT {};
+        qo.register(IT), iT.add(IT, TT.id)
       }), {});
-      DY.types.forEach((YY => {
-        const rY = FY.get(YY.id),
-          AY = xr.initialize(rY),
-          IY = [];
-        let RY = YY;
+      IT.types.forEach((TT => {
+        const oT = iT.get(TT.id),
+          zT = yo.initialize(oT),
+          kT = [];
+        let WT = TT;
         do {
-          IY.push(RY), RY = DY.types.find((YY => YY.id === RY.extendsId))
-        } while (RY);
-        let OY = 0;
-        IY.reverse().forEach((YY => {
-          ((YY, rY, DY) => {
-            rY.fields.forEach(((rY, AY) => {
-              const IY = DY + AY;
-              if (void 0 !== rY.quantized) {
-                const DY = rY.quantized;
-                xr.addField(YY, IY, rY.name, {
-                  quantized: jr({
-                    min: DY.min,
-                    max: DY.max,
-                    bits: DY.bits,
-                    mode: 1 === DY.mode ? "wrap" : "clamp"
+          kT.push(WT), WT = IT.types.find((TT => TT.id === WT.extendsId))
+        } while (WT);
+        let XT = 0;
+        kT.reverse().forEach((TT => {
+          ((TT, oT, IT) => {
+            oT.fields.forEach(((oT, zT) => {
+              const kT = IT + zT;
+              if (void 0 !== oT.quantized) {
+                const IT = oT.quantized;
+                yo.addField(TT, kT, oT.name, {
+                  quantized: Yo({
+                    min: IT.min,
+                    max: IT.max,
+                    bits: IT.bits,
+                    mode: 1 === IT.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== rY.referencedType) {
-                const DY = rY.type,
-                  AY = FY.get(rY.referencedType) ?? rY.childPrimitive;
-                "ref" === DY ? xr.addField(YY, IY, rY.name, AY) : xr.addField(YY, IY, rY.name, {
-                  [DY]: AY
+              } else if (void 0 !== oT.referencedType) {
+                const IT = oT.type,
+                  zT = iT.get(oT.referencedType) ?? oT.childPrimitive;
+                "ref" === IT ? yo.addField(TT, kT, oT.name, zT) : yo.addField(TT, kT, oT.name, {
+                  [IT]: zT
                 })
-              } else xr.addField(YY, IY, rY.name, rY.type)
+              } else yo.addField(TT, kT, oT.name, oT.type)
             }))
-          })(AY, YY, OY), OY += YY.fields.length
+          })(zT, TT, XT), XT += TT.fields.length
         }))
       }));
-      const AY = new(FY.get(DY.rootType || 0));
-      return new xF(AY, FY)
-    }, LF.makeEncodable = function(YY) {
-      const rY = YY[Symbol.metadata];
-      if (!rY) return YY;
-      const DY = rY[BY];
-      if (void 0 === DY) return YY;
-      for (let FY = 0; FY <= DY; FY++) {
-        const DY = rY[FY];
-        DY && xr.defineField(YY, rY, FY, DY.name, DY.type)
+      const zT = new(iT.get(IT.rootType || 0));
+      return new di(zT, iT)
+    }, Iz.makeEncodable = function(TT) {
+      const oT = TT[Symbol.metadata];
+      if (!oT) return TT;
+      const IT = oT[vT];
+      if (void 0 === IT) return TT;
+      for (let iT = 0; iT <= IT; iT++) {
+        const IT = oT[iT];
+        IT && yo.defineField(TT, oT, iT, IT.name, IT.type)
       }
-      return Object.prototype.hasOwnProperty.call(YY, eY) && delete YY[eY], YY
+      return Object.prototype.hasOwnProperty.call(TT, RT) && delete TT[RT], TT
     };
-    class rA {
-      yy;
+    class kz {
+      Lc;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(YY) {
-        this.yy = YY, this.yy.Gl = this.Gl.bind(this)
+      constructor(TT) {
+        this.Lc = TT, this.Lc.YC = this.YC.bind(this)
       }
       get callbacks() {
-        return this.yy.root.callbacks
+        return this.Lc.root.callbacks
       }
       get state() {
-        return this.yy.state
+        return this.Lc.state
       }
-      addCallback(YY, rY, DY) {
-        return this.yy.root.addCallback(YY, rY, DY)
+      addCallback(TT, oT, IT) {
+        return this.Lc.root.addCallback(TT, oT, IT)
       }
-      addCallbackOrWaitCollectionAvailable(YY, rY, DY, FY) {
-        let IY = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          RY = () => {};
-        const gY = () => RY(),
-          aY = YY[rY];
-        if (aY && void 0 !== aY[OY]) return IY = IY && !1 === this.isTriggering, DY === AY.ADD && IY && aY.forEach(((YY, rY) => {
-          FY(YY, rY)
-        })), this.addCallback(aY[OY], DY, FY);
+      addCallbackOrWaitCollectionAvailable(TT, oT, IT, iT) {
+        let kT = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          WT = () => {};
+        const BT = () => WT(),
+          FT = TT[oT];
+        if (FT && void 0 !== FT[XT]) return kT = kT && !1 === this.isTriggering, IT === zT.ADD && kT && FT.forEach(((TT, oT) => {
+          iT(TT, oT)
+        })), this.addCallback(FT[XT], IT, iT);
         {
-          let AY;
-          return AY = this.addCallback(YY[OY], rY, ((YY, rY) => {
-            null !== YY && void 0 !== YY && (AY(), RY = this.addCallback(YY[OY], DY, FY))
-          })), RY = AY, gY
+          let zT;
+          return zT = this.addCallback(TT[XT], oT, ((TT, oT) => {
+            null !== TT && void 0 !== TT && (zT(), WT = this.addCallback(TT[XT], IT, iT))
+          })), WT = zT, BT
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(YY, rY, DY) {
-        let FY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        FY = FY && !1 === this.isTriggering;
-        const AY = YY[rY];
-        return FY && null !== AY && void 0 !== AY && DY(AY, void 0), this.addCallback(YY[OY], rY, DY)
+      listenInstance(TT, oT, IT) {
+        let iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        iT = iT && !1 === this.isTriggering;
+        const zT = TT[oT];
+        return iT && null !== zT && void 0 !== zT && IT(zT, void 0), this.addCallback(TT[XT], oT, IT)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const YY = arguments.length <= 0 ? void 0 : arguments[0],
-            rY = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(YY[OY], AY.REPLACE, rY)
+          const TT = arguments.length <= 0 ? void 0 : arguments[0],
+            oT = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(TT[XT], zT.REPLACE, oT)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], AY.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], AY.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], zT.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], zT.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      kE() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], AY.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], AY.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      Om() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], zT.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], zT.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      kS() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], AY.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], AY.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      zC() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], zT.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], zT.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(YY, rY, DY) {
-        let FY = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const IY = YY.constructor[Symbol.metadata];
-        DY || (DY = Object.keys(IY).filter((YY => !isNaN(Number(YY)))).map((YY => IY[YY].name)));
-        const RY = () => {
-          for (const FY of DY) {
-            const DY = YY[FY];
-            void 0 !== DY && (rY[FY] = DY)
+      bindTo(TT, oT, IT) {
+        let iT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const kT = TT.constructor[Symbol.metadata];
+        IT || (IT = Object.keys(kT).filter((TT => !isNaN(Number(TT)))).map((TT => kT[TT].name)));
+        const WT = () => {
+          for (const iT of IT) {
+            const IT = TT[iT];
+            void 0 !== IT && (oT[iT] = IT)
           }
         };
-        return FY && RY(), this.addCallback(YY[OY], AY.REPLACE, RY)
+        return iT && WT(), this.addCallback(TT[XT], zT.REPLACE, WT)
       }
-      Gl(YY) {
+      YC(TT) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let rY = 0, DY = YY.length; rY < DY; rY++) {
-          const DY = YY[rY],
-            FY = DY.refId,
-            IY = DY.ref,
-            RY = this.callbacks[FY];
-          if (RY) {
-            if ((DY.op & AY.DELETE) === AY.DELETE && KF.isSchema(DY.previousValue)) {
-              const YY = DY.previousValue[OY],
-                rY = this.callbacks[YY]?.[AY.DELETE];
-              if (rY)
-                for (let DY = rY.length - 1; DY >= 0; DY--) try {
-                  rY[DY]()
-                } catch (IA) {
-                  console.error(IA)
+        for (let oT = 0, IT = TT.length; oT < IT; oT++) {
+          const IT = TT[oT],
+            iT = IT.refId,
+            kT = IT.ref,
+            WT = this.callbacks[iT];
+          if (WT) {
+            if ((IT.op & zT.DELETE) === zT.DELETE && Ji.isSchema(IT.previousValue)) {
+              const TT = IT.previousValue[XT],
+                oT = this.callbacks[TT]?.[zT.DELETE];
+              if (oT)
+                for (let IT = oT.length - 1; IT >= 0; IT--) try {
+                  oT[IT]()
+                } catch (Fz) {
+                  console.error(Fz)
                 }
             }
-            if (KF.isSchema(IY)) {
-              if (!this.uniqueRefIds.has(FY)) {
-                const YY = RY[AY.REPLACE];
-                if (YY)
-                  for (let rY = YY.length - 1; rY >= 0; rY--) try {
-                    YY[rY]()
-                  } catch (IA) {
-                    console.error(IA)
+            if (Ji.isSchema(kT)) {
+              if (!this.uniqueRefIds.has(iT)) {
+                const TT = WT[zT.REPLACE];
+                if (TT)
+                  for (let oT = TT.length - 1; oT >= 0; oT--) try {
+                    TT[oT]()
+                  } catch (Fz) {
+                    console.error(Fz)
                   }
               }
-              const YY = RY[DY.field];
-              if (YY)
-                for (let rY = YY.length - 1; rY >= 0; rY--) try {
-                  YY[rY](DY.value, DY.previousValue)
-                } catch (IA) {
-                  console.error(IA)
+              const TT = WT[IT.field];
+              if (TT)
+                for (let oT = TT.length - 1; oT >= 0; oT--) try {
+                  TT[oT](IT.value, IT.previousValue)
+                } catch (Fz) {
+                  console.error(Fz)
                 }
             } else {
-              const YY = DY.dynamicIndex ?? DY.field;
-              if ((DY.op & AY.DELETE) === AY.DELETE) {
-                if (void 0 !== DY.previousValue) {
-                  const rY = RY[AY.DELETE];
-                  if (rY)
-                    for (let FY = rY.length - 1; FY >= 0; FY--) try {
-                      rY[FY](DY.previousValue, YY)
-                    } catch (IA) {
-                      console.error(IA)
+              const TT = IT.dynamicIndex ?? IT.field;
+              if ((IT.op & zT.DELETE) === zT.DELETE) {
+                if (void 0 !== IT.previousValue) {
+                  const oT = WT[zT.DELETE];
+                  if (oT)
+                    for (let iT = oT.length - 1; iT >= 0; iT--) try {
+                      oT[iT](IT.previousValue, TT)
+                    } catch (Fz) {
+                      console.error(Fz)
                     }
                 }
-                if ((DY.op & AY.ADD) === AY.ADD) {
-                  const rY = RY[AY.ADD];
-                  if (rY)
-                    for (let FY = rY.length - 1; FY >= 0; FY--) try {
-                      rY[FY](DY.value, YY)
-                    } catch (IA) {
-                      console.error(IA)
+                if ((IT.op & zT.ADD) === zT.ADD) {
+                  const oT = WT[zT.ADD];
+                  if (oT)
+                    for (let iT = oT.length - 1; iT >= 0; iT--) try {
+                      oT[iT](IT.value, TT)
+                    } catch (Fz) {
+                      console.error(Fz)
                     }
                 }
-              } else if ((DY.op & AY.ADD) === AY.ADD && DY.previousValue !== DY.value) {
-                const rY = RY[AY.ADD];
-                if (rY)
-                  for (let FY = rY.length - 1; FY >= 0; FY--) try {
-                    rY[FY](DY.value, YY)
-                  } catch (IA) {
-                    console.error(IA)
+              } else if ((IT.op & zT.ADD) === zT.ADD && IT.previousValue !== IT.value) {
+                const oT = WT[zT.ADD];
+                if (oT)
+                  for (let iT = oT.length - 1; iT >= 0; iT--) try {
+                    oT[iT](IT.value, TT)
+                  } catch (Fz) {
+                    console.error(Fz)
                   }
               }
-              if (DY.value !== DY.previousValue) {
-                const rY = RY[AY.REPLACE];
-                if (rY)
-                  for (let FY = rY.length - 1; FY >= 0; FY--) try {
-                    rY[FY](YY, DY.value)
-                  } catch (IA) {
-                    console.error(IA)
+              if (IT.value !== IT.previousValue) {
+                const oT = WT[zT.REPLACE];
+                if (oT)
+                  for (let iT = oT.length - 1; iT >= 0; iT--) try {
+                    oT[iT](TT, IT.value)
+                  } catch (Fz) {
+                    console.error(Fz)
                   }
               }
             }
-            this.uniqueRefIds.add(FY)
+            this.uniqueRefIds.add(iT)
           }
         }
         this.isTriggering = !1
       }
     }
-    const DA = {
-      get(YY) {
-        if (YY instanceof xF) return new rA(YY);
-        if ("yy" in YY.EW) return new rA(YY.EW.yy);
+    const Wz = {
+      get(TT) {
+        if (TT instanceof di) return new kz(TT);
+        if ("Lc" in TT.JA) return new kz(TT.JA.Lc);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(YY) {
-        if (YY instanceof xF) return tF(YY);
-        if ("yy" in YY.EW) return tF(YY.EW.yy);
+      getLegacy(TT) {
+        if (TT instanceof di) return iz(TT);
+        if ("Lc" in TT.JA) return iz(TT.JA.Lc);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (YY, rY) => YA(YY, rY)
+      getRawChanges: (TT, oT) => zz(TT, oT)
     };
-    class FA {
+    class Xz {
       _free = [];
       _factory;
       _maxSize;
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = YY, this._maxSize = rY.maxSize ?? 1 / 0;
-        const DY = rY.preallocate ?? 0;
-        for (let FY = 0; FY < DY; FY++) this._free.push(YY())
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = TT, this._maxSize = oT.maxSize ?? 1 / 0;
+        const IT = oT.preallocate ?? 0;
+        for (let iT = 0; iT < IT; iT++) this._free.push(TT())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(YY) {
-        KF.reset(YY), this._free.length < this._maxSize && this._free.push(YY)
+      release(TT) {
+        Ji.reset(TT), this._free.length < this._maxSize && this._free.push(TT)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function AA(YY) {
-      return new FA((() => new YY), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function Bz(TT) {
+      return new Xz((() => new TT), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    lr("map", {
-      constructor: AF
-    }), lr("array", {
-      constructor: DF
-    }), lr("set", {
-      constructor: RF
-    }), lr("collection", {
-      constructor: IF
+    mo("map", {
+      constructor: Wi
+    }), mo("array", {
+      constructor: zi
+    }), mo("set", {
+      constructor: Bi
+    }), mo("collection", {
+      constructor: Xi
     })
   },
-  8496: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      __addDisposableResource: () => hY,
-      __assign: () => IY,
-      __asyncDelegator: () => NY,
-      __asyncGenerator: () => eY,
-      __asyncValues: () => BY,
-      __await: () => TY,
-      __awaiter: () => yY,
-      __classPrivateFieldGet: () => CY,
-      __classPrivateFieldIn: () => jY,
-      __classPrivateFieldSet: () => fY,
-      __createBinding: () => oY,
-      __decorate: () => OY,
-      __disposeResources: () => JY,
-      __esDecorate: () => aY,
-      __exportStar: () => WY,
-      __extends: () => AY,
-      __generator: () => QY,
-      __importDefault: () => ZY,
-      __importStar: () => zY,
-      __makeTemplateObject: () => cY,
-      __metadata: () => iY,
-      __param: () => gY,
-      __propKey: () => uY,
-      __read: () => mY,
-      __rest: () => RY,
-      __rewriteRelativeImportExtension: () => MY,
-      __runInitializers: () => vY,
-      __setFunctionName: () => sY,
-      __spread: () => VY,
-      __spreadArray: () => lY,
-      __spreadArrays: () => SY,
-      __values: () => EY,
-      default: () => wY
+  8493: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      __addDisposableResource: () => QT,
+      __assign: () => kT,
+      __asyncDelegator: () => uT,
+      __asyncGenerator: () => RT,
+      __asyncValues: () => vT,
+      __await: () => eT,
+      __awaiter: () => cT,
+      __classPrivateFieldGet: () => UT,
+      __classPrivateFieldIn: () => YT,
+      __classPrivateFieldSet: () => aT,
+      __createBinding: () => MT,
+      __decorate: () => XT,
+      __disposeResources: () => HT,
+      __esDecorate: () => FT,
+      __exportStar: () => rT,
+      __extends: () => zT,
+      __generator: () => KT,
+      __importDefault: () => JT,
+      __importStar: () => jT,
+      __makeTemplateObject: () => ET,
+      __metadata: () => xT,
+      __param: () => BT,
+      __propKey: () => DT,
+      __read: () => gT,
+      __rest: () => WT,
+      __rewriteRelativeImportExtension: () => nT,
+      __runInitializers: () => ST,
+      __setFunctionName: () => LT,
+      __spread: () => hT,
+      __spreadArray: () => mT,
+      __spreadArrays: () => wT,
+      __values: () => AT,
+      default: () => qT
     });
-    var FY = function(YY, rY) {
-      return FY = Object.setPrototypeOf || {
+    var iT = function(TT, oT) {
+      return iT = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(YY, rY) {
-        YY.__proto__ = rY
-      } || function(YY, rY) {
-        for (var DY in rY) Object.prototype.hasOwnProperty.call(rY, DY) && (YY[DY] = rY[DY])
-      }, FY(YY, rY)
+      instanceof Array && function(TT, oT) {
+        TT.__proto__ = oT
+      } || function(TT, oT) {
+        for (var IT in oT) Object.prototype.hasOwnProperty.call(oT, IT) && (TT[IT] = oT[IT])
+      }, iT(TT, oT)
     };
 
-    function AY(YY, rY) {
-      if ("function" !== typeof rY && null !== rY) throw new TypeError("Class extends value " + String(rY) + " is not a constructor or null");
+    function zT(TT, oT) {
+      if ("function" !== typeof oT && null !== oT) throw new TypeError("Class extends value " + String(oT) + " is not a constructor or null");
 
-      function DY() {
-        this.constructor = YY
+      function IT() {
+        this.constructor = TT
       }
-      FY(YY, rY), YY.prototype = null === rY ? Object.create(rY) : (DY.prototype = rY.prototype, new DY)
+      iT(TT, oT), TT.prototype = null === oT ? Object.create(oT) : (IT.prototype = oT.prototype, new IT)
     }
-    var IY = function() {
-      return IY = Object.assign || function(YY) {
-        for (var rY, DY = 1, FY = arguments.length; DY < FY; DY++)
-          for (var AY in rY = arguments[DY]) Object.prototype.hasOwnProperty.call(rY, AY) && (YY[AY] = rY[AY]);
-        return YY
-      }, IY.apply(this, arguments)
+    var kT = function() {
+      return kT = Object.assign || function(TT) {
+        for (var oT, IT = 1, iT = arguments.length; IT < iT; IT++)
+          for (var zT in oT = arguments[IT]) Object.prototype.hasOwnProperty.call(oT, zT) && (TT[zT] = oT[zT]);
+        return TT
+      }, kT.apply(this, arguments)
     };
 
-    function RY(YY, rY) {
-      var DY = {};
-      for (var FY in YY) Object.prototype.hasOwnProperty.call(YY, FY) && rY.indexOf(FY) < 0 && (DY[FY] = YY[FY]);
-      if (null != YY && "function" === typeof Object.getOwnPropertySymbols) {
-        var AY = 0;
-        for (FY = Object.getOwnPropertySymbols(YY); AY < FY.length; AY++) rY.indexOf(FY[AY]) < 0 && Object.prototype.propertyIsEnumerable.call(YY, FY[AY]) && (DY[FY[AY]] = YY[FY[AY]])
+    function WT(TT, oT) {
+      var IT = {};
+      for (var iT in TT) Object.prototype.hasOwnProperty.call(TT, iT) && oT.indexOf(iT) < 0 && (IT[iT] = TT[iT]);
+      if (null != TT && "function" === typeof Object.getOwnPropertySymbols) {
+        var zT = 0;
+        for (iT = Object.getOwnPropertySymbols(TT); zT < iT.length; zT++) oT.indexOf(iT[zT]) < 0 && Object.prototype.propertyIsEnumerable.call(TT, iT[zT]) && (IT[iT[zT]] = TT[iT[zT]])
       }
-      return DY
+      return IT
     }
 
-    function OY(YY, rY, DY, FY) {
-      var AY, IY = arguments.length,
-        RY = IY < 3 ? rY : null === FY ? FY = Object.getOwnPropertyDescriptor(rY, DY) : FY;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) RY = Reflect.decorate(YY, rY, DY, FY);
+    function XT(TT, oT, IT, iT) {
+      var zT, kT = arguments.length,
+        WT = kT < 3 ? oT : null === iT ? iT = Object.getOwnPropertyDescriptor(oT, IT) : iT;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) WT = Reflect.decorate(TT, oT, IT, iT);
       else
-        for (var OY = YY.length - 1; OY >= 0; OY--)(AY = YY[OY]) && (RY = (IY < 3 ? AY(RY) : IY > 3 ? AY(rY, DY, RY) : AY(rY, DY)) || RY);
-      return IY > 3 && RY && Object.defineProperty(rY, DY, RY), RY
+        for (var XT = TT.length - 1; XT >= 0; XT--)(zT = TT[XT]) && (WT = (kT < 3 ? zT(WT) : kT > 3 ? zT(oT, IT, WT) : zT(oT, IT)) || WT);
+      return kT > 3 && WT && Object.defineProperty(oT, IT, WT), WT
     }
 
-    function gY(YY, rY) {
-      return function(DY, FY) {
-        rY(DY, FY, YY)
+    function BT(TT, oT) {
+      return function(IT, iT) {
+        oT(IT, iT, TT)
       }
     }
 
-    function aY(YY, rY, DY, FY, AY, IY) {
-      function RY(YY) {
-        if (void 0 !== YY && "function" !== typeof YY) throw new TypeError("Function expected");
-        return YY
+    function FT(TT, oT, IT, iT, zT, kT) {
+      function WT(TT) {
+        if (void 0 !== TT && "function" !== typeof TT) throw new TypeError("Function expected");
+        return TT
       }
-      for (var OY, gY = FY.kind, aY = "getter" === gY ? "get" : "setter" === gY ? "set" : "value", vY = !rY && YY ? FY.static ? YY : YY.prototype : null, uY = rY || (vY ? Object.getOwnPropertyDescriptor(vY, FY.name) : {}), sY = !1, iY = DY.length - 1; iY >= 0; iY--) {
-        var yY = {};
-        for (var QY in FY) yY[QY] = "access" === QY ? {} : FY[QY];
-        for (var QY in FY.access) yY.access[QY] = FY.access[QY];
-        yY.addInitializer = function(YY) {
-          if (sY) throw new TypeError("Cannot add initializers after decoration has completed");
-          IY.push(RY(YY || null))
+      for (var XT, BT = iT.kind, FT = "getter" === BT ? "get" : "setter" === BT ? "set" : "value", ST = !oT && TT ? iT.static ? TT : TT.prototype : null, DT = oT || (ST ? Object.getOwnPropertyDescriptor(ST, iT.name) : {}), LT = !1, xT = IT.length - 1; xT >= 0; xT--) {
+        var cT = {};
+        for (var KT in iT) cT[KT] = "access" === KT ? {} : iT[KT];
+        for (var KT in iT.access) cT.access[KT] = iT.access[KT];
+        cT.addInitializer = function(TT) {
+          if (LT) throw new TypeError("Cannot add initializers after decoration has completed");
+          kT.push(WT(TT || null))
         };
-        var oY = (0, DY[iY])("accessor" === gY ? {
-          get: uY.get,
-          set: uY.set
-        } : uY[aY], yY);
-        if ("accessor" === gY) {
-          if (void 0 === oY) continue;
-          if (null === oY || "object" !== typeof oY) throw new TypeError("Object expected");
-          (OY = RY(oY.get)) && (uY.get = OY), (OY = RY(oY.set)) && (uY.set = OY), (OY = RY(oY.init)) && AY.unshift(OY)
-        } else(OY = RY(oY)) && ("field" === gY ? AY.unshift(OY) : uY[aY] = OY)
+        var MT = (0, IT[xT])("accessor" === BT ? {
+          get: DT.get,
+          set: DT.set
+        } : DT[FT], cT);
+        if ("accessor" === BT) {
+          if (void 0 === MT) continue;
+          if (null === MT || "object" !== typeof MT) throw new TypeError("Object expected");
+          (XT = WT(MT.get)) && (DT.get = XT), (XT = WT(MT.set)) && (DT.set = XT), (XT = WT(MT.init)) && zT.unshift(XT)
+        } else(XT = WT(MT)) && ("field" === BT ? zT.unshift(XT) : DT[FT] = XT)
       }
-      vY && Object.defineProperty(vY, FY.name, uY), sY = !0
+      ST && Object.defineProperty(ST, iT.name, DT), LT = !0
     }
 
-    function vY(YY, rY, DY) {
-      for (var FY = arguments.length > 2, AY = 0; AY < rY.length; AY++) DY = FY ? rY[AY].call(YY, DY) : rY[AY].call(YY);
-      return FY ? DY : void 0
+    function ST(TT, oT, IT) {
+      for (var iT = arguments.length > 2, zT = 0; zT < oT.length; zT++) IT = iT ? oT[zT].call(TT, IT) : oT[zT].call(TT);
+      return iT ? IT : void 0
     }
 
-    function uY(YY) {
-      return "symbol" === typeof YY ? YY : "".concat(YY)
+    function DT(TT) {
+      return "symbol" === typeof TT ? TT : "".concat(TT)
     }
 
-    function sY(YY, rY, DY) {
-      return "symbol" === typeof rY && (rY = rY.description ? "[".concat(rY.description, "]") : ""), Object.defineProperty(YY, "name", {
+    function LT(TT, oT, IT) {
+      return "symbol" === typeof oT && (oT = oT.description ? "[".concat(oT.description, "]") : ""), Object.defineProperty(TT, "name", {
         configurable: !0,
-        value: DY ? "".concat(DY, " ", rY) : rY
+        value: IT ? "".concat(IT, " ", oT) : oT
       })
     }
 
-    function iY(YY, rY) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(YY, rY)
+    function xT(TT, oT) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(TT, oT)
     }
 
-    function yY(YY, rY, DY, FY) {
-      return new(DY || (DY = Promise))((function(AY, IY) {
-        function RY(YY) {
+    function cT(TT, oT, IT, iT) {
+      return new(IT || (IT = Promise))((function(zT, kT) {
+        function WT(TT) {
           try {
-            gY(FY.next(YY))
-          } catch (rY) {
-            IY(rY)
+            BT(iT.next(TT))
+          } catch (oT) {
+            kT(oT)
           }
         }
 
-        function OY(YY) {
+        function XT(TT) {
           try {
-            gY(FY.throw(YY))
-          } catch (rY) {
-            IY(rY)
+            BT(iT.throw(TT))
+          } catch (oT) {
+            kT(oT)
           }
         }
 
-        function gY(YY) {
-          var rY;
-          YY.done ? AY(YY.value) : (rY = YY.value, rY instanceof DY ? rY : new DY((function(YY) {
-            YY(rY)
-          }))).then(RY, OY)
+        function BT(TT) {
+          var oT;
+          TT.done ? zT(TT.value) : (oT = TT.value, oT instanceof IT ? oT : new IT((function(TT) {
+            TT(oT)
+          }))).then(WT, XT)
         }
-        gY((FY = FY.apply(YY, rY || [])).next())
+        BT((iT = iT.apply(TT, oT || [])).next())
       }))
     }
 
-    function QY(YY, rY) {
-      var DY, FY, AY, IY = {
+    function KT(TT, oT) {
+      var IT, iT, zT, kT = {
           label: 0,
           sent: function() {
-            if (1 & AY[0]) throw AY[1];
-            return AY[1]
+            if (1 & zT[0]) throw zT[1];
+            return zT[1]
           },
           trys: [],
           ops: []
         },
-        RY = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return RY.next = OY(0), RY.throw = OY(1), RY.return = OY(2), "function" === typeof Symbol && (RY[Symbol.iterator] = function() {
+        WT = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return WT.next = XT(0), WT.throw = XT(1), WT.return = XT(2), "function" === typeof Symbol && (WT[Symbol.iterator] = function() {
         return this
-      }), RY;
+      }), WT;
 
-      function OY(OY) {
-        return function(gY) {
-          return function(OY) {
-            if (DY) throw new TypeError("Generator is already executing.");
-            for (; RY && (RY = 0, OY[0] && (IY = 0)), IY;) try {
-              if (DY = 1, FY && (AY = 2 & OY[0] ? FY.return : OY[0] ? FY.throw || ((AY = FY.return) && AY.call(FY), 0) : FY.next) && !(AY = AY.call(FY, OY[1])).done) return AY;
-              switch (FY = 0, AY && (OY = [2 & OY[0], AY.value]), OY[0]) {
+      function XT(XT) {
+        return function(BT) {
+          return function(XT) {
+            if (IT) throw new TypeError("Generator is already executing.");
+            for (; WT && (WT = 0, XT[0] && (kT = 0)), kT;) try {
+              if (IT = 1, iT && (zT = 2 & XT[0] ? iT.return : XT[0] ? iT.throw || ((zT = iT.return) && zT.call(iT), 0) : iT.next) && !(zT = zT.call(iT, XT[1])).done) return zT;
+              switch (iT = 0, zT && (XT = [2 & XT[0], zT.value]), XT[0]) {
                 case 0:
                 case 1:
-                  AY = OY;
+                  zT = XT;
                   break;
                 case 4:
-                  return IY.label++, {
-                    value: OY[1],
+                  return kT.label++, {
+                    value: XT[1],
                     done: !1
                   };
                 case 5:
-                  IY.label++, FY = OY[1], OY = [0];
+                  kT.label++, iT = XT[1], XT = [0];
                   continue;
                 case 7:
-                  OY = IY.ops.pop(), IY.trys.pop();
+                  XT = kT.ops.pop(), kT.trys.pop();
                   continue;
                 default:
-                  if (!(AY = (AY = IY.trys).length > 0 && AY[AY.length - 1]) && (6 === OY[0] || 2 === OY[0])) {
-                    IY = 0;
+                  if (!(zT = (zT = kT.trys).length > 0 && zT[zT.length - 1]) && (6 === XT[0] || 2 === XT[0])) {
+                    kT = 0;
                     continue
                   }
-                  if (3 === OY[0] && (!AY || OY[1] > AY[0] && OY[1] < AY[3])) {
-                    IY.label = OY[1];
+                  if (3 === XT[0] && (!zT || XT[1] > zT[0] && XT[1] < zT[3])) {
+                    kT.label = XT[1];
                     break
                   }
-                  if (6 === OY[0] && IY.label < AY[1]) {
-                    IY.label = AY[1], AY = OY;
+                  if (6 === XT[0] && kT.label < zT[1]) {
+                    kT.label = zT[1], zT = XT;
                     break
                   }
-                  if (AY && IY.label < AY[2]) {
-                    IY.label = AY[2], IY.ops.push(OY);
+                  if (zT && kT.label < zT[2]) {
+                    kT.label = zT[2], kT.ops.push(XT);
                     break
                   }
-                  AY[2] && IY.ops.pop(), IY.trys.pop();
+                  zT[2] && kT.ops.pop(), kT.trys.pop();
                   continue
               }
-              OY = rY.call(YY, IY)
-            } catch (gY) {
-              OY = [6, gY], FY = 0
+              XT = oT.call(TT, kT)
+            } catch (BT) {
+              XT = [6, BT], iT = 0
             } finally {
-              DY = AY = 0
+              IT = zT = 0
             }
-            if (5 & OY[0]) throw OY[1];
+            if (5 & XT[0]) throw XT[1];
             return {
-              value: OY[0] ? OY[1] : void 0,
+              value: XT[0] ? XT[1] : void 0,
               done: !0
             }
-          }([OY, gY])
+          }([XT, BT])
         }
       }
     }
-    var oY = Object.create ? function(YY, rY, DY, FY) {
-      void 0 === FY && (FY = DY);
-      var AY = Object.getOwnPropertyDescriptor(rY, DY);
-      AY && !("get" in AY ? !rY.__esModule : AY.writable || AY.configurable) || (AY = {
+    var MT = Object.create ? function(TT, oT, IT, iT) {
+      void 0 === iT && (iT = IT);
+      var zT = Object.getOwnPropertyDescriptor(oT, IT);
+      zT && !("get" in zT ? !oT.__esModule : zT.writable || zT.configurable) || (zT = {
         enumerable: !0,
         get: function() {
-          return rY[DY]
+          return oT[IT]
         }
-      }), Object.defineProperty(YY, FY, AY)
-    } : function(YY, rY, DY, FY) {
-      void 0 === FY && (FY = DY), YY[FY] = rY[DY]
+      }), Object.defineProperty(TT, iT, zT)
+    } : function(TT, oT, IT, iT) {
+      void 0 === iT && (iT = IT), TT[iT] = oT[IT]
     };
 
-    function WY(YY, rY) {
-      for (var DY in YY) "default" === DY || Object.prototype.hasOwnProperty.call(rY, DY) || oY(rY, YY, DY)
+    function rT(TT, oT) {
+      for (var IT in TT) "default" === IT || Object.prototype.hasOwnProperty.call(oT, IT) || MT(oT, TT, IT)
     }
 
-    function EY(YY) {
-      var rY = "function" === typeof Symbol && Symbol.iterator,
-        DY = rY && YY[rY],
-        FY = 0;
-      if (DY) return DY.call(YY);
-      if (YY && "number" === typeof YY.length) return {
+    function AT(TT) {
+      var oT = "function" === typeof Symbol && Symbol.iterator,
+        IT = oT && TT[oT],
+        iT = 0;
+      if (IT) return IT.call(TT);
+      if (TT && "number" === typeof TT.length) return {
         next: function() {
-          return YY && FY >= YY.length && (YY = void 0), {
-            value: YY && YY[FY++],
-            done: !YY
+          return TT && iT >= TT.length && (TT = void 0), {
+            value: TT && TT[iT++],
+            done: !TT
           }
         }
       };
-      throw new TypeError(rY ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(oT ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function mY(YY, rY) {
-      var DY = "function" === typeof Symbol && YY[Symbol.iterator];
-      if (!DY) return YY;
-      var FY, AY, IY = DY.call(YY),
-        RY = [];
+    function gT(TT, oT) {
+      var IT = "function" === typeof Symbol && TT[Symbol.iterator];
+      if (!IT) return TT;
+      var iT, zT, kT = IT.call(TT),
+        WT = [];
       try {
         for (;
-          (void 0 === rY || rY-- > 0) && !(FY = IY.next()).done;) RY.push(FY.value)
-      } catch (OY) {
-        AY = {
-          error: OY
+          (void 0 === oT || oT-- > 0) && !(iT = kT.next()).done;) WT.push(iT.value)
+      } catch (XT) {
+        zT = {
+          error: XT
         }
       } finally {
         try {
-          FY && !FY.done && (DY = IY.return) && DY.call(IY)
+          iT && !iT.done && (IT = kT.return) && IT.call(kT)
         } finally {
-          if (AY) throw AY.error
+          if (zT) throw zT.error
         }
       }
-      return RY
+      return WT
     }
 
-    function VY() {
-      for (var YY = [], rY = 0; rY < arguments.length; rY++) YY = YY.concat(mY(arguments[rY]));
-      return YY
+    function hT() {
+      for (var TT = [], oT = 0; oT < arguments.length; oT++) TT = TT.concat(gT(arguments[oT]));
+      return TT
     }
 
-    function SY() {
-      for (var YY = 0, rY = 0, DY = arguments.length; rY < DY; rY++) YY += arguments[rY].length;
-      var FY = Array(YY),
-        AY = 0;
-      for (rY = 0; rY < DY; rY++)
-        for (var IY = arguments[rY], RY = 0, OY = IY.length; RY < OY; RY++, AY++) FY[AY] = IY[RY];
-      return FY
+    function wT() {
+      for (var TT = 0, oT = 0, IT = arguments.length; oT < IT; oT++) TT += arguments[oT].length;
+      var iT = Array(TT),
+        zT = 0;
+      for (oT = 0; oT < IT; oT++)
+        for (var kT = arguments[oT], WT = 0, XT = kT.length; WT < XT; WT++, zT++) iT[zT] = kT[WT];
+      return iT
     }
 
-    function lY(YY, rY, DY) {
-      if (DY || 2 === arguments.length)
-        for (var FY, AY = 0, IY = rY.length; AY < IY; AY++) !FY && AY in rY || (FY || (FY = Array.prototype.slice.call(rY, 0, AY)), FY[AY] = rY[AY]);
-      return YY.concat(FY || Array.prototype.slice.call(rY))
+    function mT(TT, oT, IT) {
+      if (IT || 2 === arguments.length)
+        for (var iT, zT = 0, kT = oT.length; zT < kT; zT++) !iT && zT in oT || (iT || (iT = Array.prototype.slice.call(oT, 0, zT)), iT[zT] = oT[zT]);
+      return TT.concat(iT || Array.prototype.slice.call(oT))
     }
 
-    function TY(YY) {
-      return this instanceof TY ? (this.v = YY, this) : new TY(YY)
+    function eT(TT) {
+      return this instanceof eT ? (this.v = TT, this) : new eT(TT)
     }
 
-    function eY(YY, rY, DY) {
+    function RT(TT, oT, IT) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var FY, AY = DY.apply(YY, rY || []),
-        IY = [];
-      return FY = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), RY("next"), RY("throw"), RY("return", (function(YY) {
-        return function(rY) {
-          return Promise.resolve(rY).then(YY, aY)
+      var iT, zT = IT.apply(TT, oT || []),
+        kT = [];
+      return iT = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), WT("next"), WT("throw"), WT("return", (function(TT) {
+        return function(oT) {
+          return Promise.resolve(oT).then(TT, FT)
         }
-      })), FY[Symbol.asyncIterator] = function() {
+      })), iT[Symbol.asyncIterator] = function() {
         return this
-      }, FY;
+      }, iT;
 
-      function RY(YY, rY) {
-        AY[YY] && (FY[YY] = function(rY) {
-          return new Promise((function(DY, FY) {
-            IY.push([YY, rY, DY, FY]) > 1 || OY(YY, rY)
+      function WT(TT, oT) {
+        zT[TT] && (iT[TT] = function(oT) {
+          return new Promise((function(IT, iT) {
+            kT.push([TT, oT, IT, iT]) > 1 || XT(TT, oT)
           }))
-        }, rY && (FY[YY] = rY(FY[YY])))
+        }, oT && (iT[TT] = oT(iT[TT])))
       }
 
-      function OY(YY, rY) {
+      function XT(TT, oT) {
         try {
-          (DY = AY[YY](rY)).value instanceof TY ? Promise.resolve(DY.value.v).then(gY, aY) : vY(IY[0][2], DY)
-        } catch (FY) {
-          vY(IY[0][3], FY)
+          (IT = zT[TT](oT)).value instanceof eT ? Promise.resolve(IT.value.v).then(BT, FT) : ST(kT[0][2], IT)
+        } catch (iT) {
+          ST(kT[0][3], iT)
         }
-        var DY
+        var IT
       }
 
-      function gY(YY) {
-        OY("next", YY)
+      function BT(TT) {
+        XT("next", TT)
       }
 
-      function aY(YY) {
-        OY("throw", YY)
+      function FT(TT) {
+        XT("throw", TT)
       }
 
-      function vY(YY, rY) {
-        YY(rY), IY.shift(), IY.length && OY(IY[0][0], IY[0][1])
+      function ST(TT, oT) {
+        TT(oT), kT.shift(), kT.length && XT(kT[0][0], kT[0][1])
       }
     }
 
-    function NY(YY) {
-      var rY, DY;
-      return rY = {}, FY("next"), FY("throw", (function(YY) {
-        throw YY
-      })), FY("return"), rY[Symbol.iterator] = function() {
+    function uT(TT) {
+      var oT, IT;
+      return oT = {}, iT("next"), iT("throw", (function(TT) {
+        throw TT
+      })), iT("return"), oT[Symbol.iterator] = function() {
         return this
-      }, rY;
+      }, oT;
 
-      function FY(FY, AY) {
-        rY[FY] = YY[FY] ? function(rY) {
-          return (DY = !DY) ? {
-            value: TY(YY[FY](rY)),
+      function iT(iT, zT) {
+        oT[iT] = TT[iT] ? function(oT) {
+          return (IT = !IT) ? {
+            value: eT(TT[iT](oT)),
             done: !1
-          } : AY ? AY(rY) : rY
-        } : AY
+          } : zT ? zT(oT) : oT
+        } : zT
       }
     }
 
-    function BY(YY) {
+    function vT(TT) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var rY, DY = YY[Symbol.asyncIterator];
-      return DY ? DY.call(YY) : (YY = EY(YY), rY = {}, FY("next"), FY("throw"), FY("return"), rY[Symbol.asyncIterator] = function() {
+      var oT, IT = TT[Symbol.asyncIterator];
+      return IT ? IT.call(TT) : (TT = AT(TT), oT = {}, iT("next"), iT("throw"), iT("return"), oT[Symbol.asyncIterator] = function() {
         return this
-      }, rY);
+      }, oT);
 
-      function FY(DY) {
-        rY[DY] = YY[DY] && function(rY) {
-          return new Promise((function(FY, AY) {
-            (function(YY, rY, DY, FY) {
-              Promise.resolve(FY).then((function(rY) {
-                YY({
-                  value: rY,
-                  done: DY
+      function iT(IT) {
+        oT[IT] = TT[IT] && function(oT) {
+          return new Promise((function(iT, zT) {
+            (function(TT, oT, IT, iT) {
+              Promise.resolve(iT).then((function(oT) {
+                TT({
+                  value: oT,
+                  done: IT
                 })
-              }), rY)
-            })(FY, AY, (rY = YY[DY](rY)).done, rY.value)
+              }), oT)
+            })(iT, zT, (oT = TT[IT](oT)).done, oT.value)
           }))
         }
       }
     }
 
-    function cY(YY, rY) {
-      return Object.defineProperty ? Object.defineProperty(YY, "raw", {
-        value: rY
-      }) : YY.raw = rY, YY
+    function ET(TT, oT) {
+      return Object.defineProperty ? Object.defineProperty(TT, "raw", {
+        value: oT
+      }) : TT.raw = oT, TT
     }
-    var KY = Object.create ? function(YY, rY) {
-        Object.defineProperty(YY, "default", {
+    var fT = Object.create ? function(TT, oT) {
+        Object.defineProperty(TT, "default", {
           enumerable: !0,
-          value: rY
+          value: oT
         })
-      } : function(YY, rY) {
-        YY.default = rY
+      } : function(TT, oT) {
+        TT.default = oT
       },
-      HY = function(YY) {
-        return HY = Object.getOwnPropertyNames || function(YY) {
-          var rY = [];
-          for (var DY in YY) Object.prototype.hasOwnProperty.call(YY, DY) && (rY[rY.length] = DY);
-          return rY
-        }, HY(YY)
+      CT = function(TT) {
+        return CT = Object.getOwnPropertyNames || function(TT) {
+          var oT = [];
+          for (var IT in TT) Object.prototype.hasOwnProperty.call(TT, IT) && (oT[oT.length] = IT);
+          return oT
+        }, CT(TT)
       };
 
-    function zY(YY) {
-      if (YY && YY.__esModule) return YY;
-      var rY = {};
-      if (null != YY)
-        for (var DY = HY(YY), FY = 0; FY < DY.length; FY++) "default" !== DY[FY] && oY(rY, YY, DY[FY]);
-      return KY(rY, YY), rY
+    function jT(TT) {
+      if (TT && TT.__esModule) return TT;
+      var oT = {};
+      if (null != TT)
+        for (var IT = CT(TT), iT = 0; iT < IT.length; iT++) "default" !== IT[iT] && MT(oT, TT, IT[iT]);
+      return fT(oT, TT), oT
     }
 
-    function ZY(YY) {
-      return YY && YY.__esModule ? YY : {
-        default: YY
+    function JT(TT) {
+      return TT && TT.__esModule ? TT : {
+        default: TT
       }
     }
 
-    function CY(YY, rY, DY, FY) {
-      if ("a" === DY && !FY) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof rY ? YY !== rY || !FY : !rY.has(YY)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === DY ? FY : "a" === DY ? FY.call(YY) : FY ? FY.value : rY.get(YY)
+    function UT(TT, oT, IT, iT) {
+      if ("a" === IT && !iT) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof oT ? TT !== oT || !iT : !oT.has(TT)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === IT ? iT : "a" === IT ? iT.call(TT) : iT ? iT.value : oT.get(TT)
     }
 
-    function fY(YY, rY, DY, FY, AY) {
-      if ("m" === FY) throw new TypeError("Private method is not writable");
-      if ("a" === FY && !AY) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof rY ? YY !== rY || !AY : !rY.has(YY)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === FY ? AY.call(YY, DY) : AY ? AY.value = DY : rY.set(YY, DY), DY
+    function aT(TT, oT, IT, iT, zT) {
+      if ("m" === iT) throw new TypeError("Private method is not writable");
+      if ("a" === iT && !zT) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof oT ? TT !== oT || !zT : !oT.has(TT)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === iT ? zT.call(TT, IT) : zT ? zT.value = IT : oT.set(TT, IT), IT
     }
 
-    function jY(YY, rY) {
-      if (null === rY || "object" !== typeof rY && "function" !== typeof rY) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof YY ? rY === YY : YY.has(rY)
+    function YT(TT, oT) {
+      if (null === oT || "object" !== typeof oT && "function" !== typeof oT) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof TT ? oT === TT : TT.has(oT)
     }
 
-    function hY(YY, rY, DY) {
-      if (null !== rY && void 0 !== rY) {
-        if ("object" !== typeof rY && "function" !== typeof rY) throw new TypeError("Object expected.");
-        var FY, AY;
-        if (DY) {
+    function QT(TT, oT, IT) {
+      if (null !== oT && void 0 !== oT) {
+        if ("object" !== typeof oT && "function" !== typeof oT) throw new TypeError("Object expected.");
+        var iT, zT;
+        if (IT) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          FY = rY[Symbol.asyncDispose]
+          iT = oT[Symbol.asyncDispose]
         }
-        if (void 0 === FY) {
+        if (void 0 === iT) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          FY = rY[Symbol.dispose], DY && (AY = FY)
+          iT = oT[Symbol.dispose], IT && (zT = iT)
         }
-        if ("function" !== typeof FY) throw new TypeError("Object not disposable.");
-        AY && (FY = function() {
+        if ("function" !== typeof iT) throw new TypeError("Object not disposable.");
+        zT && (iT = function() {
           try {
-            AY.call(this)
-          } catch (YY) {
-            return Promise.reject(YY)
+            zT.call(this)
+          } catch (TT) {
+            return Promise.reject(TT)
           }
-        }), YY.stack.push({
-          value: rY,
-          dispose: FY,
-          async: DY
+        }), TT.stack.push({
+          value: oT,
+          dispose: iT,
+          async: IT
         })
-      } else DY && YY.stack.push({
+      } else IT && TT.stack.push({
         async: !0
       });
-      return rY
+      return oT
     }
-    var dY = "function" === typeof SuppressedError ? SuppressedError : function(YY, rY, DY) {
-      var FY = new Error(DY);
-      return FY.name = "SuppressedError", FY.error = YY, FY.suppressed = rY, FY
+    var OT = "function" === typeof SuppressedError ? SuppressedError : function(TT, oT, IT) {
+      var iT = new Error(IT);
+      return iT.name = "SuppressedError", iT.error = TT, iT.suppressed = oT, iT
     };
 
-    function JY(YY) {
-      function rY(rY) {
-        YY.error = YY.hasError ? new dY(rY, YY.error, "An error was suppressed during disposal.") : rY, YY.hasError = !0
+    function HT(TT) {
+      function oT(oT) {
+        TT.error = TT.hasError ? new OT(oT, TT.error, "An error was suppressed during disposal.") : oT, TT.hasError = !0
       }
-      var DY, FY = 0;
-      return function AY() {
-        for (; DY = YY.stack.pop();) try {
-          if (!DY.async && 1 === FY) return FY = 0, YY.stack.push(DY), Promise.resolve().then(AY);
-          if (DY.dispose) {
-            var IY = DY.dispose.call(DY.value);
-            if (DY.async) return FY |= 2, Promise.resolve(IY).then(AY, (function(YY) {
-              return rY(YY), AY()
+      var IT, iT = 0;
+      return function zT() {
+        for (; IT = TT.stack.pop();) try {
+          if (!IT.async && 1 === iT) return iT = 0, TT.stack.push(IT), Promise.resolve().then(zT);
+          if (IT.dispose) {
+            var kT = IT.dispose.call(IT.value);
+            if (IT.async) return iT |= 2, Promise.resolve(kT).then(zT, (function(TT) {
+              return oT(TT), zT()
             }))
-          } else FY |= 1
-        } catch (RY) {
-          rY(RY)
+          } else iT |= 1
+        } catch (WT) {
+          oT(WT)
         }
-        if (1 === FY) return YY.hasError ? Promise.reject(YY.error) : Promise.resolve();
-        if (YY.hasError) throw YY.error
+        if (1 === iT) return TT.hasError ? Promise.reject(TT.error) : Promise.resolve();
+        if (TT.hasError) throw TT.error
       }()
     }
 
-    function MY(YY, rY) {
-      return "string" === typeof YY && /^\.\.?\//.test(YY) ? YY.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(YY, DY, FY, AY, IY) {
-        return DY ? rY ? ".jsx" : ".js" : !FY || AY && IY ? FY + AY + "." + IY.toLowerCase() + "js" : YY
-      })) : YY
+    function nT(TT, oT) {
+      return "string" === typeof TT && /^\.\.?\//.test(TT) ? TT.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(TT, IT, iT, zT, kT) {
+        return IT ? oT ? ".jsx" : ".js" : !iT || zT && kT ? iT + zT + "." + kT.toLowerCase() + "js" : TT
+      })) : TT
     }
-    const wY = {
-      __extends: AY,
-      __assign: IY,
-      __rest: RY,
-      __decorate: OY,
-      __param: gY,
-      __esDecorate: aY,
-      __runInitializers: vY,
-      __propKey: uY,
-      __setFunctionName: sY,
-      __metadata: iY,
-      __awaiter: yY,
-      __generator: QY,
-      __createBinding: oY,
-      __exportStar: WY,
-      __values: EY,
-      __read: mY,
-      __spread: VY,
-      __spreadArrays: SY,
-      __spreadArray: lY,
-      __await: TY,
-      __asyncGenerator: eY,
-      __asyncDelegator: NY,
-      __asyncValues: BY,
-      __makeTemplateObject: cY,
-      __importStar: zY,
-      __importDefault: ZY,
-      __classPrivateFieldGet: CY,
-      __classPrivateFieldSet: fY,
-      __classPrivateFieldIn: jY,
-      __addDisposableResource: hY,
-      __disposeResources: JY,
-      __rewriteRelativeImportExtension: MY
+    const qT = {
+      __extends: zT,
+      __assign: kT,
+      __rest: WT,
+      __decorate: XT,
+      __param: BT,
+      __esDecorate: FT,
+      __runInitializers: ST,
+      __propKey: DT,
+      __setFunctionName: LT,
+      __metadata: xT,
+      __awaiter: cT,
+      __generator: KT,
+      __createBinding: MT,
+      __exportStar: rT,
+      __values: AT,
+      __read: gT,
+      __spread: hT,
+      __spreadArrays: wT,
+      __spreadArray: mT,
+      __await: eT,
+      __asyncGenerator: RT,
+      __asyncDelegator: uT,
+      __asyncValues: vT,
+      __makeTemplateObject: ET,
+      __importStar: jT,
+      __importDefault: JT,
+      __classPrivateFieldGet: UT,
+      __classPrivateFieldSet: aT,
+      __classPrivateFieldIn: YT,
+      __addDisposableResource: QT,
+      __disposeResources: HT,
+      __rewriteRelativeImportExtension: nT
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,173 +1,173 @@
 export const id = 107;
 export const ids = [107];
 export const modules = {
-  4592: (YY, rY, DY) => {
-    function FY(YY) {
-      return FY = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(YY) {
-        return typeof YY
-      } : function(YY) {
-        return YY && "function" == typeof Symbol && YY.constructor === Symbol && YY !== Symbol.prototype ? "symbol" : typeof YY
-      }, FY(YY)
+  4491: (TT, oT, IT) => {
+    function iT(TT) {
+      return iT = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(TT) {
+        return typeof TT
+      } : function(TT) {
+        return TT && "function" == typeof Symbol && TT.constructor === Symbol && TT !== Symbol.prototype ? "symbol" : typeof TT
+      }, iT(TT)
     }
-    Object.defineProperty(rY, "__esModule", {
+    Object.defineProperty(oT, "__esModule", {
       value: !0
-    }), rY.default = void 0;
-    var AY = uY(DY(1092)),
-      IY = function(YY, rY) {
-        if (!rY && YY && YY.__esModule) return YY;
-        if (null === YY || "object" !== FY(YY) && "function" !== typeof YY) return {
-          default: YY
+    }), oT.default = void 0;
+    var zT = DT(IT(1042)),
+      kT = function(TT, oT) {
+        if (!oT && TT && TT.__esModule) return TT;
+        if (null === TT || "object" !== iT(TT) && "function" !== typeof TT) return {
+          default: TT
         };
-        var DY = vY(rY);
-        if (DY && DY.has(YY)) return DY.get(YY);
-        var AY = {},
-          IY = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var RY in YY)
-          if ("default" !== RY && Object.prototype.hasOwnProperty.call(YY, RY)) {
-            var OY = IY ? Object.getOwnPropertyDescriptor(YY, RY) : null;
-            OY && (OY.get || OY.set) ? Object.defineProperty(AY, RY, OY) : AY[RY] = YY[RY]
-          } AY.default = YY, DY && DY.set(YY, AY);
-        return AY
-      }(DY(61)),
-      RY = uY(DY(4543)),
-      OY = uY(DY(4594)),
-      gY = DY(4600),
-      aY = DY(1125);
+        var IT = ST(oT);
+        if (IT && IT.has(TT)) return IT.get(TT);
+        var zT = {},
+          kT = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var WT in TT)
+          if ("default" !== WT && Object.prototype.hasOwnProperty.call(TT, WT)) {
+            var XT = kT ? Object.getOwnPropertyDescriptor(TT, WT) : null;
+            XT && (XT.get || XT.set) ? Object.defineProperty(zT, WT, XT) : zT[WT] = TT[WT]
+          } zT.default = TT, IT && IT.set(TT, zT);
+        return zT
+      }(IT(46)),
+      WT = DT(IT(4442)),
+      XT = DT(IT(4497)),
+      BT = IT(4505),
+      FT = IT(1083);
 
-    function vY(YY) {
+    function ST(TT) {
       if ("function" !== typeof WeakMap) return null;
-      var rY = new WeakMap,
-        DY = new WeakMap;
-      return (vY = function(YY) {
-        return YY ? DY : rY
-      })(YY)
+      var oT = new WeakMap,
+        IT = new WeakMap;
+      return (ST = function(TT) {
+        return TT ? IT : oT
+      })(TT)
     }
 
-    function uY(YY) {
-      return YY && YY.__esModule ? YY : {
-        default: YY
+    function DT(TT) {
+      return TT && TT.__esModule ? TT : {
+        default: TT
       }
     }
 
-    function sY(YY, rY) {
-      var DY = "undefined" !== typeof Symbol && YY[Symbol.iterator] || YY["@@iterator"];
-      if (!DY) {
-        if (Array.isArray(YY) || (DY = function(YY, rY) {
-            if (!YY) return;
-            if ("string" === typeof YY) return iY(YY, rY);
-            var DY = Object.prototype.toString.call(YY).slice(8, -1);
-            "Object" === DY && YY.constructor && (DY = YY.constructor.name);
-            if ("Map" === DY || "Set" === DY) return Array.from(YY);
-            if ("Arguments" === DY || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(DY)) return iY(YY, rY)
-          }(YY)) || rY && YY && "number" === typeof YY.length) {
-          DY && (YY = DY);
-          var FY = 0,
-            AY = function() {};
+    function LT(TT, oT) {
+      var IT = "undefined" !== typeof Symbol && TT[Symbol.iterator] || TT["@@iterator"];
+      if (!IT) {
+        if (Array.isArray(TT) || (IT = function(TT, oT) {
+            if (!TT) return;
+            if ("string" === typeof TT) return xT(TT, oT);
+            var IT = Object.prototype.toString.call(TT).slice(8, -1);
+            "Object" === IT && TT.constructor && (IT = TT.constructor.name);
+            if ("Map" === IT || "Set" === IT) return Array.from(TT);
+            if ("Arguments" === IT || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(IT)) return xT(TT, oT)
+          }(TT)) || oT && TT && "number" === typeof TT.length) {
+          IT && (TT = IT);
+          var iT = 0,
+            zT = function() {};
           return {
-            s: AY,
+            s: zT,
             n: function() {
-              return FY >= YY.length ? {
+              return iT >= TT.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: YY[FY++]
+                value: TT[iT++]
               }
             },
-            e: function(YY) {
-              throw YY
+            e: function(TT) {
+              throw TT
             },
-            f: AY
+            f: zT
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var IY, RY = !0,
-        OY = !1;
+      var kT, WT = !0,
+        XT = !1;
       return {
         s: function() {
-          DY = DY.call(YY)
+          IT = IT.call(TT)
         },
         n: function() {
-          var YY = DY.next();
-          return RY = YY.done, YY
+          var TT = IT.next();
+          return WT = TT.done, TT
         },
-        e: function(YY) {
-          OY = !0, IY = YY
+        e: function(TT) {
+          XT = !0, kT = TT
         },
         f: function() {
           try {
-            RY || null == DY.return || DY.return()
+            WT || null == IT.return || IT.return()
           } finally {
-            if (OY) throw IY
+            if (XT) throw kT
           }
         }
       }
     }
 
-    function iY(YY, rY) {
-      (null == rY || rY > YY.length) && (rY = YY.length);
-      for (var DY = 0, FY = new Array(rY); DY < rY; DY++) FY[DY] = YY[DY];
-      return FY
+    function xT(TT, oT) {
+      (null == oT || oT > TT.length) && (oT = TT.length);
+      for (var IT = 0, iT = new Array(oT); IT < oT; IT++) iT[IT] = TT[IT];
+      return iT
     }
 
-    function yY(YY, rY) {
-      for (var DY = 0; DY < rY.length; DY++) {
-        var FY = rY[DY];
-        FY.enumerable = FY.enumerable || !1, FY.configurable = !0, "value" in FY && (FY.writable = !0), Object.defineProperty(YY, FY.key, FY)
+    function cT(TT, oT) {
+      for (var IT = 0; IT < oT.length; IT++) {
+        var iT = oT[IT];
+        iT.enumerable = iT.enumerable || !1, iT.configurable = !0, "value" in iT && (iT.writable = !0), Object.defineProperty(TT, iT.key, iT)
       }
     }
 
-    function QY(YY, rY) {
-      return QY = Object.setPrototypeOf || function(YY, rY) {
-        return YY.__proto__ = rY, YY
-      }, QY(YY, rY)
+    function KT(TT, oT) {
+      return KT = Object.setPrototypeOf || function(TT, oT) {
+        return TT.__proto__ = oT, TT
+      }, KT(TT, oT)
     }
 
-    function oY(YY) {
-      var rY = function() {
+    function MT(TT) {
+      var oT = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (YY) {
+        } catch (TT) {
           return !1
         }
       }();
       return function() {
-        var DY, AY = EY(YY);
-        if (rY) {
-          var IY = EY(this).constructor;
-          DY = Reflect.construct(AY, arguments, IY)
-        } else DY = AY.apply(this, arguments);
-        return function(YY, rY) {
-          if (rY && ("object" === FY(rY) || "function" === typeof rY)) return rY;
-          if (void 0 !== rY) throw new TypeError("Derived constructors may only return object or undefined");
-          return WY(YY)
-        }(this, DY)
+        var IT, zT = AT(TT);
+        if (oT) {
+          var kT = AT(this).constructor;
+          IT = Reflect.construct(zT, arguments, kT)
+        } else IT = zT.apply(this, arguments);
+        return function(TT, oT) {
+          if (oT && ("object" === iT(oT) || "function" === typeof oT)) return oT;
+          if (void 0 !== oT) throw new TypeError("Derived constructors may only return object or undefined");
+          return rT(TT)
+        }(this, IT)
       }
     }
 
-    function WY(YY) {
-      if (void 0 === YY) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return YY
+    function rT(TT) {
+      if (void 0 === TT) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return TT
     }
 
-    function EY(YY) {
-      return EY = Object.setPrototypeOf ? Object.getPrototypeOf : function(YY) {
-        return YY.__proto__ || Object.getPrototypeOf(YY)
-      }, EY(YY)
+    function AT(TT) {
+      return AT = Object.setPrototypeOf ? Object.getPrototypeOf : function(TT) {
+        return TT.__proto__ || Object.getPrototypeOf(TT)
+      }, AT(TT)
     }
 
-    function mY(YY, rY, DY) {
-      return rY in YY ? Object.defineProperty(YY, rY, {
-        value: DY,
+    function gT(TT, oT, IT) {
+      return oT in TT ? Object.defineProperty(TT, oT, {
+        value: IT,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : YY[rY] = DY, YY
+      }) : TT[oT] = IT, TT
     }
-    var VY = {
+    var hT = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      SY = function(YY) {
-        ! function(YY, rY) {
-          if ("function" !== typeof rY && null !== rY) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(YY, "prototype", {
-            value: Object.create(rY && rY.prototype, {
+      wT = function(TT) {
+        ! function(TT, oT) {
+          if ("function" !== typeof oT && null !== oT) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(TT, "prototype", {
+            value: Object.create(oT && oT.prototype, {
               constructor: {
-                value: YY,
+                value: TT,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), rY && QY(YY, rY)
-        }(RY, YY);
-        var rY, DY, FY, IY = oY(RY);
+          }), oT && KT(TT, oT)
+        }(WT, TT);
+        var oT, IT, iT, kT = MT(WT);
 
-        function RY(YY, rY) {
-          var DY;
-          return function(YY, rY) {
-            if (!(YY instanceof rY)) throw new TypeError("Cannot call a class as a function")
-          }(this, RY), mY(WY(DY = IY.call(this, YY, rY)), "handleFormat", (function(YY) {
-            var rY = DY.props.format;
-            return rY ? rY(YY) : YY
-          })), mY(WY(DY), "handleUpdate", (function() {
-            if (DY.slider) {
-              var YY = DY.props.orientation,
-                rY = (0, gY.capitalize)(VY.orientation[YY].dimension),
-                FY = DY.slider["offset".concat(rY)],
-                AY = DY.handle["offset".concat(rY)];
-              DY.setState({
-                limit: FY - AY,
-                grab: AY / 2
+        function WT(TT, oT) {
+          var IT;
+          return function(TT, oT) {
+            if (!(TT instanceof oT)) throw new TypeError("Cannot call a class as a function")
+          }(this, WT), gT(rT(IT = kT.call(this, TT, oT)), "handleFormat", (function(TT) {
+            var oT = IT.props.format;
+            return oT ? oT(TT) : TT
+          })), gT(rT(IT), "handleUpdate", (function() {
+            if (IT.slider) {
+              var TT = IT.props.orientation,
+                oT = (0, BT.capitalize)(hT.orientation[TT].dimension),
+                iT = IT.slider["offset".concat(oT)],
+                zT = IT.handle["offset".concat(oT)];
+              IT.setState({
+                limit: iT - zT,
+                grab: zT / 2
               })
             }
-          })), mY(WY(DY), "handleStart", (function(YY) {
-            var rY = DY.props.onChangeStart;
-            document.addEventListener("mousemove", DY.handleDrag), document.addEventListener("mouseup", DY.handleEnd), DY.setState({
+          })), gT(rT(IT), "handleStart", (function(TT) {
+            var oT = IT.props.onChangeStart;
+            document.addEventListener("mousemove", IT.handleDrag), document.addEventListener("mouseup", IT.handleEnd), IT.setState({
               active: !0
             }, (function() {
-              rY && rY(YY)
+              oT && oT(TT)
             }))
-          })), mY(WY(DY), "handleDrag", (function(YY) {
-            YY.stopPropagation();
-            var rY = DY.props.onChange,
-              FY = YY.target,
-              AY = FY.className,
-              IY = FY.classList,
-              RY = FY.dataset;
-            if (rY && "rangeslider__labels" !== AY) {
-              var OY = DY.position(YY);
-              IY && IY.contains("rangeslider__label-item") && RY.value && (OY = parseFloat(RY.value)), rY && rY(OY, YY)
+          })), gT(rT(IT), "handleDrag", (function(TT) {
+            TT.stopPropagation();
+            var oT = IT.props.onChange,
+              iT = TT.target,
+              zT = iT.className,
+              kT = iT.classList,
+              WT = iT.dataset;
+            if (oT && "rangeslider__labels" !== zT) {
+              var XT = IT.position(TT);
+              kT && kT.contains("rangeslider__label-item") && WT.value && (XT = parseFloat(WT.value)), oT && oT(XT, TT)
             }
-          })), mY(WY(DY), "handleEnd", (function(YY) {
-            var rY = DY.props.onChangeComplete;
-            DY.setState({
+          })), gT(rT(IT), "handleEnd", (function(TT) {
+            var oT = IT.props.onChangeComplete;
+            IT.setState({
               active: !1
             }, (function() {
-              rY && rY(YY)
-            })), document.removeEventListener("mousemove", DY.handleDrag), document.removeEventListener("mouseup", DY.handleEnd)
-          })), mY(WY(DY), "handleKeyDown", (function(YY) {
-            YY.preventDefault();
-            var rY, FY = YY.keyCode,
-              AY = DY.props,
-              IY = AY.value,
-              RY = AY.min,
-              OY = AY.max,
-              gY = AY.step,
-              aY = AY.onChange;
-            switch (FY) {
+              oT && oT(TT)
+            })), document.removeEventListener("mousemove", IT.handleDrag), document.removeEventListener("mouseup", IT.handleEnd)
+          })), gT(rT(IT), "handleKeyDown", (function(TT) {
+            TT.preventDefault();
+            var oT, iT = TT.keyCode,
+              zT = IT.props,
+              kT = zT.value,
+              WT = zT.min,
+              XT = zT.max,
+              BT = zT.step,
+              FT = zT.onChange;
+            switch (iT) {
               case 38:
               case 39:
-                rY = IY + gY > OY ? OY : IY + gY, aY && aY(rY, YY);
+                oT = kT + BT > XT ? XT : kT + BT, FT && FT(oT, TT);
                 break;
               case 37:
               case 40:
-                rY = IY - gY < RY ? RY : IY - gY, aY && aY(rY, YY)
+                oT = kT - BT < WT ? WT : kT - BT, FT && FT(oT, TT)
             }
-          })), mY(WY(DY), "getPositionFromValue", (function(YY) {
-            var rY = DY.state.limit,
-              FY = DY.props,
-              AY = FY.min,
-              IY = (YY - AY) / (FY.max - AY);
-            return Math.round(IY * rY)
-          })), mY(WY(DY), "getValueFromPosition", (function(YY) {
-            var rY = DY.state.limit,
-              FY = DY.props,
-              AY = FY.orientation,
-              IY = FY.min,
-              RY = FY.max,
-              OY = FY.step,
-              aY = (0, gY.clamp)(YY, 0, rY) / (rY || 1),
-              vY = OY * Math.round(aY * (RY - IY) / OY),
-              uY = "horizontal" === AY ? vY + IY : RY - vY;
-            return (0, gY.clamp)(uY, IY, RY)
-          })), mY(WY(DY), "position", (function(YY) {
-            var rY = DY.state.grab,
-              FY = DY.props,
-              AY = FY.orientation,
-              IY = FY.reverse,
-              RY = DY.slider,
-              OY = VY.orientation[AY].coordinate,
-              aY = IY ? VY.orientation[AY].reverseDirection : VY.orientation[AY].direction,
-              vY = "client".concat((0, gY.capitalize)(OY)),
-              uY = YY.touches ? YY.touches[0][vY] : YY[vY],
-              sY = RY.getBoundingClientRect()[aY],
-              iY = IY ? sY - uY - rY : uY - sY - rY;
-            return DY.getValueFromPosition(iY)
-          })), mY(WY(DY), "coordinates", (function(YY) {
-            var rY = DY.state,
-              FY = rY.limit,
-              AY = rY.grab,
-              IY = DY.props.orientation,
-              RY = DY.getValueFromPosition(YY),
-              OY = DY.getPositionFromValue(RY),
-              gY = "horizontal" === IY ? OY + AY : OY;
+          })), gT(rT(IT), "getPositionFromValue", (function(TT) {
+            var oT = IT.state.limit,
+              iT = IT.props,
+              zT = iT.min,
+              kT = (TT - zT) / (iT.max - zT);
+            return Math.round(kT * oT)
+          })), gT(rT(IT), "getValueFromPosition", (function(TT) {
+            var oT = IT.state.limit,
+              iT = IT.props,
+              zT = iT.orientation,
+              kT = iT.min,
+              WT = iT.max,
+              XT = iT.step,
+              FT = (0, BT.clamp)(TT, 0, oT) / (oT || 1),
+              ST = XT * Math.round(FT * (WT - kT) / XT),
+              DT = "horizontal" === zT ? ST + kT : WT - ST;
+            return (0, BT.clamp)(DT, kT, WT)
+          })), gT(rT(IT), "position", (function(TT) {
+            var oT = IT.state.grab,
+              iT = IT.props,
+              zT = iT.orientation,
+              kT = iT.reverse,
+              WT = IT.slider,
+              XT = hT.orientation[zT].coordinate,
+              FT = kT ? hT.orientation[zT].reverseDirection : hT.orientation[zT].direction,
+              ST = "client".concat((0, BT.capitalize)(XT)),
+              DT = TT.touches ? TT.touches[0][ST] : TT[ST],
+              LT = WT.getBoundingClientRect()[FT],
+              xT = kT ? LT - DT - oT : DT - LT - oT;
+            return IT.getValueFromPosition(xT)
+          })), gT(rT(IT), "coordinates", (function(TT) {
+            var oT = IT.state,
+              iT = oT.limit,
+              zT = oT.grab,
+              kT = IT.props.orientation,
+              WT = IT.getValueFromPosition(TT),
+              XT = IT.getPositionFromValue(WT),
+              BT = "horizontal" === kT ? XT + zT : XT;
             return {
-              fill: "horizontal" === IY ? gY : FY - gY,
-              handle: gY,
-              label: gY
+              fill: "horizontal" === kT ? BT : iT - BT,
+              handle: BT,
+              label: BT
             }
-          })), mY(WY(DY), "renderLabels", (function(YY) {
-            return (0, aY.jsx)("ul", {
-              ref: function(YY) {
-                DY.labels = YY
+          })), gT(rT(IT), "renderLabels", (function(TT) {
+            return (0, FT.jsx)("ul", {
+              ref: function(TT) {
+                IT.labels = TT
               },
-              className: (0, AY.default)("rangeslider__labels"),
-              children: YY
+              className: (0, zT.default)("rangeslider__labels"),
+              children: TT
             })
-          })), DY.state = {
+          })), IT.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, DY
+          }, IT
         }
-        return rY = RY, (DY = [{
+        return oT = WT, (IT = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new OY.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new XT.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var YY = this,
-              rY = this.props,
-              DY = rY.value,
-              FY = rY.orientation,
-              IY = rY.className,
-              RY = rY.tooltip,
-              OY = rY.reverse,
-              gY = rY.labels,
-              vY = rY.min,
-              uY = rY.max,
-              iY = rY.handleLabel,
-              yY = this.state.active,
-              QY = VY.orientation[FY].dimension,
-              oY = OY ? VY.orientation[FY].reverseDirection : VY.orientation[FY].direction,
-              WY = this.getPositionFromValue(DY),
-              EY = this.coordinates(WY),
-              SY = mY({}, QY, "".concat(EY.fill, "px")),
-              lY = mY({}, oY, "".concat(EY.handle, "px")),
-              TY = RY && yY,
-              eY = [],
-              NY = Object.keys(gY);
-            if (NY.length > 0) {
-              var BY, cY = sY(NY = NY.sort((function(YY, rY) {
-                return OY ? YY - rY : rY - YY
+            var TT = this,
+              oT = this.props,
+              IT = oT.value,
+              iT = oT.orientation,
+              kT = oT.className,
+              WT = oT.tooltip,
+              XT = oT.reverse,
+              BT = oT.labels,
+              ST = oT.min,
+              DT = oT.max,
+              xT = oT.handleLabel,
+              cT = this.state.active,
+              KT = hT.orientation[iT].dimension,
+              MT = XT ? hT.orientation[iT].reverseDirection : hT.orientation[iT].direction,
+              rT = this.getPositionFromValue(IT),
+              AT = this.coordinates(rT),
+              wT = gT({}, KT, "".concat(AT.fill, "px")),
+              mT = gT({}, MT, "".concat(AT.handle, "px")),
+              eT = WT && cT,
+              RT = [],
+              uT = Object.keys(BT);
+            if (uT.length > 0) {
+              var vT, ET = LT(uT = uT.sort((function(TT, oT) {
+                return XT ? TT - oT : oT - TT
               })));
               try {
-                for (cY.s(); !(BY = cY.n()).done;) {
-                  var KY = BY.value,
-                    HY = this.getPositionFromValue(KY),
-                    zY = this.coordinates(HY),
-                    ZY = mY({}, oY, "".concat(zY.label, "px"));
-                  eY.push((0, aY.jsx)("li", {
-                    className: (0, AY.default)("rangeslider__label-item"),
-                    "data-value": KY,
+                for (ET.s(); !(vT = ET.n()).done;) {
+                  var fT = vT.value,
+                    CT = this.getPositionFromValue(fT),
+                    jT = this.coordinates(CT),
+                    JT = gT({}, MT, "".concat(jT.label, "px"));
+                  RT.push((0, FT.jsx)("li", {
+                    className: (0, zT.default)("rangeslider__label-item"),
+                    "data-value": fT,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: ZY,
-                    children: this.props.labels[KY]
-                  }, KY))
+                    style: JT,
+                    children: this.props.labels[fT]
+                  }, fT))
                 }
-              } catch (CY) {
-                cY.e(CY)
+              } catch (UT) {
+                ET.e(UT)
               } finally {
-                cY.f()
+                ET.f()
               }
             }
-            return (0, aY.jsxs)("div", {
-              ref: function(rY) {
-                YY.slider = rY
+            return (0, FT.jsxs)("div", {
+              ref: function(oT) {
+                TT.slider = oT
               },
-              className: (0, AY.default)("rangeslider", "rangeslider-".concat(FY), {
-                "rangeslider-reverse": OY
-              }, IY),
+              className: (0, zT.default)("rangeslider", "rangeslider-".concat(iT), {
+                "rangeslider-reverse": XT
+              }, kT),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": vY,
-              "aria-valuemax": uY,
-              "aria-valuenow": DY,
-              "aria-orientation": FY,
-              children: [(0, aY.jsx)("div", {
+              "aria-valuemin": ST,
+              "aria-valuemax": DT,
+              "aria-valuenow": IT,
+              "aria-orientation": iT,
+              children: [(0, FT.jsx)("div", {
                 className: "rangeslider__fill",
-                style: SY
-              }), (0, aY.jsxs)("div", {
-                ref: function(rY) {
-                  YY.handle = rY
+                style: wT
+              }), (0, FT.jsxs)("div", {
+                ref: function(oT) {
+                  TT.handle = oT
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: lY,
+                style: mT,
                 tabIndex: 0,
-                children: [TY && (0, aY.jsx)("div", {
-                  ref: function(rY) {
-                    YY.tooltip = rY
+                children: [eT && (0, FT.jsx)("div", {
+                  ref: function(oT) {
+                    TT.tooltip = oT
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, aY.jsx)("span", {
-                    children: this.handleFormat(DY)
+                  children: (0, FT.jsx)("span", {
+                    children: this.handleFormat(IT)
                   })
-                }), (0, aY.jsx)("div", {
+                }), (0, FT.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: iY
+                  children: xT
                 })]
-              }), gY && this.renderLabels(eY)]
+              }), BT && this.renderLabels(RT)]
             })
           }
-        }]) && yY(rY.prototype, DY), FY && yY(rY, FY), Object.defineProperty(rY, "prototype", {
+        }]) && cT(oT.prototype, IT), iT && cT(oT, iT), Object.defineProperty(oT, "prototype", {
           writable: !1
-        }), RY
-      }(IY.Component);
-    mY(SY, "propTypes", {
-      min: RY.default.number,
-      max: RY.default.number,
-      step: RY.default.number,
-      value: RY.default.number,
-      orientation: RY.default.string,
-      tooltip: RY.default.bool,
-      reverse: RY.default.bool,
-      labels: RY.default.object,
-      handleLabel: RY.default.string,
-      format: RY.default.func,
-      onChangeStart: RY.default.func,
-      onChange: RY.default.func,
-      onChangeComplete: RY.default.func
-    }), mY(SY, "defaultProps", {
+        }), WT
+      }(kT.Component);
+    gT(wT, "propTypes", {
+      min: WT.default.number,
+      max: WT.default.number,
+      step: WT.default.number,
+      value: WT.default.number,
+      orientation: WT.default.string,
+      tooltip: WT.default.bool,
+      reverse: WT.default.bool,
+      labels: WT.default.object,
+      handleLabel: WT.default.string,
+      format: WT.default.func,
+      onChangeStart: WT.default.func,
+      onChange: WT.default.func,
+      onChangeComplete: WT.default.func
+    }), gT(wT, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var lY = SY;
-    rY.default = lY
+    var mT = wT;
+    oT.default = mT
   },
-  4589: (YY, rY, DY) => {
-    var FY;
-    rY.b = void 0;
-    var AY = ((FY = DY(4592)) && FY.__esModule ? FY : {
-      default: FY
+  4483: (TT, oT, IT) => {
+    var iT;
+    oT.d = void 0;
+    var zT = ((iT = IT(4491)) && iT.__esModule ? iT : {
+      default: iT
     }).default;
-    rY.b = AY
+    oT.d = zT
   },
-  4600: (YY, rY) => {
-    Object.defineProperty(rY, "__esModule", {
+  4505: (TT, oT) => {
+    Object.defineProperty(oT, "__esModule", {
       value: !0
-    }), rY.capitalize = function(YY) {
-      return YY.charAt(0).toUpperCase() + YY.substr(1)
-    }, rY.clamp = function(YY, rY, DY) {
-      return Math.min(Math.max(YY, rY), DY)
+    }), oT.capitalize = function(TT) {
+      return TT.charAt(0).toUpperCase() + TT.substr(1)
+    }, oT.clamp = function(TT, oT, IT) {
+      return Math.min(Math.max(TT, oT), IT)
     }
   },
-  4552: (YY, rY, DY) => {
-    var FY = DY(4560);
+  4444: (TT, oT, IT) => {
+    var iT = IT(4451);
 
-    function AY() {}
+    function zT() {}
 
-    function IY() {}
-    IY.resetWarningCache = AY, YY.exports = function() {
-      function YY(YY, rY, DY, AY, IY, RY) {
-        if (RY !== FY) {
-          var OY = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw OY.name = "Invariant Violation", OY
+    function kT() {}
+    kT.resetWarningCache = zT, TT.exports = function() {
+      function TT(TT, oT, IT, zT, kT, WT) {
+        if (WT !== iT) {
+          var XT = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw XT.name = "Invariant Violation", XT
         }
       }
 
-      function rY() {
-        return YY
+      function oT() {
+        return TT
       }
-      YY.isRequired = YY;
-      var DY = {
-        array: YY,
-        bigint: YY,
-        bool: YY,
-        func: YY,
-        number: YY,
-        object: YY,
-        string: YY,
-        symbol: YY,
-        any: YY,
-        arrayOf: rY,
-        element: YY,
-        elementType: YY,
-        instanceOf: rY,
-        node: YY,
-        objectOf: rY,
-        oneOf: rY,
-        oneOfType: rY,
-        shape: rY,
-        exact: rY,
-        checkPropTypes: IY,
-        resetWarningCache: AY
+      TT.isRequired = TT;
+      var IT = {
+        array: TT,
+        bigint: TT,
+        bool: TT,
+        func: TT,
+        number: TT,
+        object: TT,
+        string: TT,
+        symbol: TT,
+        any: TT,
+        arrayOf: oT,
+        element: TT,
+        elementType: TT,
+        instanceOf: oT,
+        node: TT,
+        objectOf: oT,
+        oneOf: oT,
+        oneOfType: oT,
+        shape: oT,
+        exact: oT,
+        checkPropTypes: kT,
+        resetWarningCache: zT
       };
-      return DY.PropTypes = DY, DY
+      return IT.PropTypes = IT, IT
     }
   },
-  4543: (YY, rY, DY) => {
-    YY.exports = DY(4552)()
+  4442: (TT, oT, IT) => {
+    TT.exports = IT(4444)()
   },
-  4560: YY => {
-    YY.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  4451: TT => {
+    TT.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  4594: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => eY
+  4497: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => RT
     });
-    var FY = function() {
+    var iT = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function YY(YY, rY) {
-          var DY = -1;
-          return YY.some((function(YY, FY) {
-            return YY[0] === rY && (DY = FY, !0)
-          })), DY
+        function TT(TT, oT) {
+          var IT = -1;
+          return TT.some((function(TT, iT) {
+            return TT[0] === oT && (IT = iT, !0)
+          })), IT
         }
         return function() {
-          function rY() {
+          function oT() {
             this.__entries__ = []
           }
-          return Object.defineProperty(rY.prototype, "size", {
+          return Object.defineProperty(oT.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), rY.prototype.get = function(rY) {
-            var DY = YY(this.__entries__, rY),
-              FY = this.__entries__[DY];
-            return FY && FY[1]
-          }, rY.prototype.set = function(rY, DY) {
-            var FY = YY(this.__entries__, rY);
-            ~FY ? this.__entries__[FY][1] = DY : this.__entries__.push([rY, DY])
-          }, rY.prototype.delete = function(rY) {
-            var DY = this.__entries__,
-              FY = YY(DY, rY);
-            ~FY && DY.splice(FY, 1)
-          }, rY.prototype.has = function(rY) {
-            return !!~YY(this.__entries__, rY)
-          }, rY.prototype.clear = function() {
+          }), oT.prototype.get = function(oT) {
+            var IT = TT(this.__entries__, oT),
+              iT = this.__entries__[IT];
+            return iT && iT[1]
+          }, oT.prototype.set = function(oT, IT) {
+            var iT = TT(this.__entries__, oT);
+            ~iT ? this.__entries__[iT][1] = IT : this.__entries__.push([oT, IT])
+          }, oT.prototype.delete = function(oT) {
+            var IT = this.__entries__,
+              iT = TT(IT, oT);
+            ~iT && IT.splice(iT, 1)
+          }, oT.prototype.has = function(oT) {
+            return !!~TT(this.__entries__, oT)
+          }, oT.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, rY.prototype.forEach = function(YY, rY) {
-            void 0 === rY && (rY = null);
-            for (var DY = 0, FY = this.__entries__; DY < FY.length; DY++) {
-              var AY = FY[DY];
-              YY.call(rY, AY[1], AY[0])
+          }, oT.prototype.forEach = function(TT, oT) {
+            void 0 === oT && (oT = null);
+            for (var IT = 0, iT = this.__entries__; IT < iT.length; IT++) {
+              var zT = iT[IT];
+              TT.call(oT, zT[1], zT[0])
             }
-          }, rY
+          }, oT
         }()
       }(),
-      AY = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      IY = "undefined" !== typeof DY.g && DY.g.Math === Math ? DY.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      RY = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(IY) : function(YY) {
+      zT = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      kT = "undefined" !== typeof IT.g && IT.g.Math === Math ? IT.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      WT = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(kT) : function(TT) {
         return setTimeout((function() {
-          return YY(Date.now())
+          return TT(Date.now())
         }), 1e3 / 60)
       };
-    var OY = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      gY = "undefined" !== typeof MutationObserver,
-      aY = function() {
-        function YY() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(YY, rY) {
-            var DY = !1,
-              FY = !1,
-              AY = 0;
+    var XT = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      BT = "undefined" !== typeof MutationObserver,
+      FT = function() {
+        function TT() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(TT, oT) {
+            var IT = !1,
+              iT = !1,
+              zT = 0;
 
-            function IY() {
-              DY && (DY = !1, YY()), FY && gY()
+            function kT() {
+              IT && (IT = !1, TT()), iT && BT()
             }
 
-            function OY() {
-              RY(IY)
+            function XT() {
+              WT(kT)
             }
 
-            function gY() {
-              var YY = Date.now();
-              if (DY) {
-                if (YY - AY < 2) return;
-                FY = !0
-              } else DY = !0, FY = !1, setTimeout(OY, rY);
-              AY = YY
+            function BT() {
+              var TT = Date.now();
+              if (IT) {
+                if (TT - zT < 2) return;
+                iT = !0
+              } else IT = !0, iT = !1, setTimeout(XT, oT);
+              zT = TT
             }
-            return gY
+            return BT
           }(this.refresh.bind(this), 20)
         }
-        return YY.prototype.addObserver = function(YY) {
-          ~this.observers_.indexOf(YY) || this.observers_.push(YY), this.connected_ || this.connect_()
-        }, YY.prototype.removeObserver = function(YY) {
-          var rY = this.observers_,
-            DY = rY.indexOf(YY);
-          ~DY && rY.splice(DY, 1), !rY.length && this.connected_ && this.disconnect_()
-        }, YY.prototype.refresh = function() {
+        return TT.prototype.addObserver = function(TT) {
+          ~this.observers_.indexOf(TT) || this.observers_.push(TT), this.connected_ || this.connect_()
+        }, TT.prototype.removeObserver = function(TT) {
+          var oT = this.observers_,
+            IT = oT.indexOf(TT);
+          ~IT && oT.splice(IT, 1), !oT.length && this.connected_ && this.disconnect_()
+        }, TT.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, YY.prototype.updateObservers_ = function() {
-          var YY = this.observers_.filter((function(YY) {
-            return YY.gatherActive(), YY.hasActive()
+        }, TT.prototype.updateObservers_ = function() {
+          var TT = this.observers_.filter((function(TT) {
+            return TT.gatherActive(), TT.hasActive()
           }));
-          return YY.forEach((function(YY) {
-            return YY.broadcastActive()
-          })), YY.length > 0
-        }, YY.prototype.connect_ = function() {
-          AY && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), gY ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return TT.forEach((function(TT) {
+            return TT.broadcastActive()
+          })), TT.length > 0
+        }, TT.prototype.connect_ = function() {
+          zT && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), BT ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, YY.prototype.disconnect_ = function() {
-          AY && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, YY.prototype.onTransitionEnd_ = function(YY) {
-          var rY = YY.propertyName,
-            DY = void 0 === rY ? "" : rY;
-          OY.some((function(YY) {
-            return !!~DY.indexOf(YY)
+        }, TT.prototype.disconnect_ = function() {
+          zT && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, TT.prototype.onTransitionEnd_ = function(TT) {
+          var oT = TT.propertyName,
+            IT = void 0 === oT ? "" : oT;
+          XT.some((function(TT) {
+            return !!~IT.indexOf(TT)
           })) && this.refresh()
-        }, YY.getInstance = function() {
-          return this.instance_ || (this.instance_ = new YY), this.instance_
-        }, YY.instance_ = null, YY
+        }, TT.getInstance = function() {
+          return this.instance_ || (this.instance_ = new TT), this.instance_
+        }, TT.instance_ = null, TT
       }(),
-      vY = function(YY, rY) {
-        for (var DY = 0, FY = Object.keys(rY); DY < FY.length; DY++) {
-          var AY = FY[DY];
-          Object.defineProperty(YY, AY, {
-            value: rY[AY],
+      ST = function(TT, oT) {
+        for (var IT = 0, iT = Object.keys(oT); IT < iT.length; IT++) {
+          var zT = iT[IT];
+          Object.defineProperty(TT, zT, {
+            value: oT[zT],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return YY
+        return TT
       },
-      uY = function(YY) {
-        return YY && YY.ownerDocument && YY.ownerDocument.defaultView || IY
+      DT = function(TT) {
+        return TT && TT.ownerDocument && TT.ownerDocument.defaultView || kT
       },
-      sY = EY(0, 0, 0, 0);
+      LT = AT(0, 0, 0, 0);
 
-    function iY(YY) {
-      return parseFloat(YY) || 0
+    function xT(TT) {
+      return parseFloat(TT) || 0
     }
 
-    function yY(YY) {
-      for (var rY = [], DY = 1; DY < arguments.length; DY++) rY[DY - 1] = arguments[DY];
-      return rY.reduce((function(rY, DY) {
-        return rY + iY(YY["border-" + DY + "-width"])
+    function cT(TT) {
+      for (var oT = [], IT = 1; IT < arguments.length; IT++) oT[IT - 1] = arguments[IT];
+      return oT.reduce((function(oT, IT) {
+        return oT + xT(TT["border-" + IT + "-width"])
       }), 0)
     }
 
-    function QY(YY) {
-      var rY = YY.clientWidth,
-        DY = YY.clientHeight;
-      if (!rY && !DY) return sY;
-      var FY = uY(YY).getComputedStyle(YY),
-        AY = function(YY) {
-          for (var rY = {}, DY = 0, FY = ["top", "right", "bottom", "left"]; DY < FY.length; DY++) {
-            var AY = FY[DY],
-              IY = YY["padding-" + AY];
-            rY[AY] = iY(IY)
+    function KT(TT) {
+      var oT = TT.clientWidth,
+        IT = TT.clientHeight;
+      if (!oT && !IT) return LT;
+      var iT = DT(TT).getComputedStyle(TT),
+        zT = function(TT) {
+          for (var oT = {}, IT = 0, iT = ["top", "right", "bottom", "left"]; IT < iT.length; IT++) {
+            var zT = iT[IT],
+              kT = TT["padding-" + zT];
+            oT[zT] = xT(kT)
           }
-          return rY
-        }(FY),
-        IY = AY.left + AY.right,
-        RY = AY.top + AY.bottom,
-        OY = iY(FY.width),
-        gY = iY(FY.height);
-      if ("border-box" === FY.boxSizing && (Math.round(OY + IY) !== rY && (OY -= yY(FY, "left", "right") + IY), Math.round(gY + RY) !== DY && (gY -= yY(FY, "top", "bottom") + RY)), ! function(YY) {
-          return YY === uY(YY).document.documentElement
-        }(YY)) {
-        var aY = Math.round(OY + IY) - rY,
-          vY = Math.round(gY + RY) - DY;
-        1 !== Math.abs(aY) && (OY -= aY), 1 !== Math.abs(vY) && (gY -= vY)
+          return oT
+        }(iT),
+        kT = zT.left + zT.right,
+        WT = zT.top + zT.bottom,
+        XT = xT(iT.width),
+        BT = xT(iT.height);
+      if ("border-box" === iT.boxSizing && (Math.round(XT + kT) !== oT && (XT -= cT(iT, "left", "right") + kT), Math.round(BT + WT) !== IT && (BT -= cT(iT, "top", "bottom") + WT)), ! function(TT) {
+          return TT === DT(TT).document.documentElement
+        }(TT)) {
+        var FT = Math.round(XT + kT) - oT,
+          ST = Math.round(BT + WT) - IT;
+        1 !== Math.abs(FT) && (XT -= FT), 1 !== Math.abs(ST) && (BT -= ST)
       }
-      return EY(AY.left, AY.top, OY, gY)
+      return AT(zT.left, zT.top, XT, BT)
     }
-    var oY = "undefined" !== typeof SVGGraphicsElement ? function(YY) {
-      return YY instanceof uY(YY).SVGGraphicsElement
-    } : function(YY) {
-      return YY instanceof uY(YY).SVGElement && "function" === typeof YY.getBBox
+    var MT = "undefined" !== typeof SVGGraphicsElement ? function(TT) {
+      return TT instanceof DT(TT).SVGGraphicsElement
+    } : function(TT) {
+      return TT instanceof DT(TT).SVGElement && "function" === typeof TT.getBBox
     };
 
-    function WY(YY) {
-      return AY ? oY(YY) ? function(YY) {
-        var rY = YY.getBBox();
-        return EY(0, 0, rY.width, rY.height)
-      }(YY) : QY(YY) : sY
+    function rT(TT) {
+      return zT ? MT(TT) ? function(TT) {
+        var oT = TT.getBBox();
+        return AT(0, 0, oT.width, oT.height)
+      }(TT) : KT(TT) : LT
     }
 
-    function EY(YY, rY, DY, FY) {
+    function AT(TT, oT, IT, iT) {
       return {
-        x: YY,
-        y: rY,
-        width: DY,
-        height: FY
+        x: TT,
+        y: oT,
+        width: IT,
+        height: iT
       }
     }
-    var mY = function() {
-        function YY(YY) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = EY(0, 0, 0, 0), this.target = YY
+    var gT = function() {
+        function TT(TT) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = AT(0, 0, 0, 0), this.target = TT
         }
-        return YY.prototype.isActive = function() {
-          var YY = WY(this.target);
-          return this.contentRect_ = YY, YY.width !== this.broadcastWidth || YY.height !== this.broadcastHeight
-        }, YY.prototype.broadcastRect = function() {
-          var YY = this.contentRect_;
-          return this.broadcastWidth = YY.width, this.broadcastHeight = YY.height, YY
-        }, YY
+        return TT.prototype.isActive = function() {
+          var TT = rT(this.target);
+          return this.contentRect_ = TT, TT.width !== this.broadcastWidth || TT.height !== this.broadcastHeight
+        }, TT.prototype.broadcastRect = function() {
+          var TT = this.contentRect_;
+          return this.broadcastWidth = TT.width, this.broadcastHeight = TT.height, TT
+        }, TT
       }(),
-      VY = function(YY, rY) {
-        var DY = function(YY) {
-          var rY = YY.x,
-            DY = YY.y,
-            FY = YY.width,
-            AY = YY.height,
-            IY = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            RY = Object.create(IY.prototype);
-          return vY(RY, {
-            x: rY,
-            y: DY,
-            width: FY,
-            height: AY,
-            top: DY,
-            right: rY + FY,
-            bottom: AY + DY,
-            left: rY
-          }), RY
-        }(rY);
-        vY(this, {
-          target: YY,
-          contentRect: DY
+      hT = function(TT, oT) {
+        var IT = function(TT) {
+          var oT = TT.x,
+            IT = TT.y,
+            iT = TT.width,
+            zT = TT.height,
+            kT = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            WT = Object.create(kT.prototype);
+          return ST(WT, {
+            x: oT,
+            y: IT,
+            width: iT,
+            height: zT,
+            top: IT,
+            right: oT + iT,
+            bottom: zT + IT,
+            left: oT
+          }), WT
+        }(oT);
+        ST(this, {
+          target: TT,
+          contentRect: IT
         })
       },
-      SY = function() {
-        function YY(YY, rY, DY) {
-          if (this.activeObservations_ = [], this.observations_ = new FY, "function" !== typeof YY) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = YY, this.controller_ = rY, this.callbackCtx_ = DY
+      wT = function() {
+        function TT(TT, oT, IT) {
+          if (this.activeObservations_ = [], this.observations_ = new iT, "function" !== typeof TT) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = TT, this.controller_ = oT, this.callbackCtx_ = IT
         }
-        return YY.prototype.observe = function(YY) {
+        return TT.prototype.observe = function(TT) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(YY instanceof uY(YY).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var rY = this.observations_;
-            rY.has(YY) || (rY.set(YY, new mY(YY)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(TT instanceof DT(TT).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var oT = this.observations_;
+            oT.has(TT) || (oT.set(TT, new gT(TT)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, YY.prototype.unobserve = function(YY) {
+        }, TT.prototype.unobserve = function(TT) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(YY instanceof uY(YY).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var rY = this.observations_;
-            rY.has(YY) && (rY.delete(YY), rY.size || this.controller_.removeObserver(this))
+            if (!(TT instanceof DT(TT).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var oT = this.observations_;
+            oT.has(TT) && (oT.delete(TT), oT.size || this.controller_.removeObserver(this))
           }
-        }, YY.prototype.disconnect = function() {
+        }, TT.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, YY.prototype.gatherActive = function() {
-          var YY = this;
-          this.clearActive(), this.observations_.forEach((function(rY) {
-            rY.isActive() && YY.activeObservations_.push(rY)
+        }, TT.prototype.gatherActive = function() {
+          var TT = this;
+          this.clearActive(), this.observations_.forEach((function(oT) {
+            oT.isActive() && TT.activeObservations_.push(oT)
           }))
-        }, YY.prototype.broadcastActive = function() {
+        }, TT.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var YY = this.callbackCtx_,
-              rY = this.activeObservations_.map((function(YY) {
-                return new VY(YY.target, YY.broadcastRect())
+            var TT = this.callbackCtx_,
+              oT = this.activeObservations_.map((function(TT) {
+                return new hT(TT.target, TT.broadcastRect())
               }));
-            this.callback_.call(YY, rY, YY), this.clearActive()
+            this.callback_.call(TT, oT, TT), this.clearActive()
           }
-        }, YY.prototype.clearActive = function() {
+        }, TT.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, YY.prototype.hasActive = function() {
+        }, TT.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, YY
+        }, TT
       }(),
-      lY = "undefined" !== typeof WeakMap ? new WeakMap : new FY,
-      TY = function YY(rY) {
-        if (!(this instanceof YY)) throw new TypeError("Cannot call a class as a function.");
+      mT = "undefined" !== typeof WeakMap ? new WeakMap : new iT,
+      eT = function TT(oT) {
+        if (!(this instanceof TT)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var DY = aY.getInstance(),
-          FY = new SY(rY, DY, this);
-        lY.set(this, FY)
+        var IT = FT.getInstance(),
+          iT = new wT(oT, IT, this);
+        mT.set(this, iT)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(YY) {
-      TY.prototype[YY] = function() {
-        var rY;
-        return (rY = lY.get(this))[YY].apply(rY, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(TT) {
+      eT.prototype[TT] = function() {
+        var oT;
+        return (oT = mT.get(this))[TT].apply(oT, arguments)
       }
     }));
-    const eY = "undefined" !== typeof IY.ResizeObserver ? IY.ResizeObserver : TY
+    const RT = "undefined" !== typeof kT.ResizeObserver ? kT.ResizeObserver : eT
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,8 +1,8 @@
 export const id = 209;
 export const ids = [209];
 export const modules = {
-  36070: YY => {
-    YY.exports = {
+  35647: TT => {
+    TT.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36063: (YY, rY, DY) => {
-    var FY = DY(36070),
-      AY = DY(36074),
-      IY = Object.hasOwnProperty,
-      RY = Object.create(null);
-    for (var OY in FY) IY.call(FY, OY) && (RY[FY[OY]] = OY);
-    var gY = YY.exports = {
+  35640: (TT, oT, IT) => {
+    var iT = IT(35647),
+      zT = IT(35650),
+      kT = Object.hasOwnProperty,
+      WT = Object.create(null);
+    for (var XT in iT) kT.call(iT, XT) && (WT[iT[XT]] = XT);
+    var BT = TT.exports = {
       to: {},
       get: {}
     };
 
-    function aY(YY, rY, DY) {
-      return Math.min(Math.max(rY, YY), DY)
+    function FT(TT, oT, IT) {
+      return Math.min(Math.max(oT, TT), IT)
     }
 
-    function vY(YY) {
-      var rY = Math.round(YY).toString(16).toUpperCase();
-      return rY.length < 2 ? "0" + rY : rY
+    function ST(TT) {
+      var oT = Math.round(TT).toString(16).toUpperCase();
+      return oT.length < 2 ? "0" + oT : oT
     }
-    gY.get = function(YY) {
-      var rY, DY;
-      switch (YY.substring(0, 3).toLowerCase()) {
+    BT.get = function(TT) {
+      var oT, IT;
+      switch (TT.substring(0, 3).toLowerCase()) {
         case "hsl":
-          rY = gY.get.hsl(YY), DY = "hsl";
+          oT = BT.get.hsl(TT), IT = "hsl";
           break;
         case "hwb":
-          rY = gY.get.hwb(YY), DY = "hwb";
+          oT = BT.get.hwb(TT), IT = "hwb";
           break;
         default:
-          rY = gY.get.rgb(YY), DY = "rgb"
+          oT = BT.get.rgb(TT), IT = "rgb"
       }
-      return rY ? {
-        model: DY,
-        value: rY
+      return oT ? {
+        model: IT,
+        value: oT
       } : null
-    }, gY.get.rgb = function(YY) {
-      if (!YY) return null;
-      var rY, DY, AY, RY = [0, 0, 0, 1];
-      if (rY = YY.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (AY = rY[2], rY = rY[1], DY = 0; DY < 3; DY++) {
-          var OY = 2 * DY;
-          RY[DY] = parseInt(rY.slice(OY, OY + 2), 16)
+    }, BT.get.rgb = function(TT) {
+      if (!TT) return null;
+      var oT, IT, zT, WT = [0, 0, 0, 1];
+      if (oT = TT.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (zT = oT[2], oT = oT[1], IT = 0; IT < 3; IT++) {
+          var XT = 2 * IT;
+          WT[IT] = parseInt(oT.slice(XT, XT + 2), 16)
         }
-        AY && (RY[3] = parseInt(AY, 16) / 255)
-      } else if (rY = YY.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (AY = (rY = rY[1])[3], DY = 0; DY < 3; DY++) RY[DY] = parseInt(rY[DY] + rY[DY], 16);
-        AY && (RY[3] = parseInt(AY + AY, 16) / 255)
-      } else if (rY = YY.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (DY = 0; DY < 3; DY++) RY[DY] = parseInt(rY[DY + 1], 0);
-        rY[4] && (rY[5] ? RY[3] = .01 * parseFloat(rY[4]) : RY[3] = parseFloat(rY[4]))
+        zT && (WT[3] = parseInt(zT, 16) / 255)
+      } else if (oT = TT.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (zT = (oT = oT[1])[3], IT = 0; IT < 3; IT++) WT[IT] = parseInt(oT[IT] + oT[IT], 16);
+        zT && (WT[3] = parseInt(zT + zT, 16) / 255)
+      } else if (oT = TT.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (IT = 0; IT < 3; IT++) WT[IT] = parseInt(oT[IT + 1], 0);
+        oT[4] && (oT[5] ? WT[3] = .01 * parseFloat(oT[4]) : WT[3] = parseFloat(oT[4]))
       } else {
-        if (!(rY = YY.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (rY = YY.match(/^(\w+)$/)) ? "transparent" === rY[1] ? [0, 0, 0, 0] : IY.call(FY, rY[1]) ? ((RY = FY[rY[1]])[3] = 1, RY) : null : null;
-        for (DY = 0; DY < 3; DY++) RY[DY] = Math.round(2.55 * parseFloat(rY[DY + 1]));
-        rY[4] && (rY[5] ? RY[3] = .01 * parseFloat(rY[4]) : RY[3] = parseFloat(rY[4]))
+        if (!(oT = TT.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (oT = TT.match(/^(\w+)$/)) ? "transparent" === oT[1] ? [0, 0, 0, 0] : kT.call(iT, oT[1]) ? ((WT = iT[oT[1]])[3] = 1, WT) : null : null;
+        for (IT = 0; IT < 3; IT++) WT[IT] = Math.round(2.55 * parseFloat(oT[IT + 1]));
+        oT[4] && (oT[5] ? WT[3] = .01 * parseFloat(oT[4]) : WT[3] = parseFloat(oT[4]))
       }
-      for (DY = 0; DY < 3; DY++) RY[DY] = aY(RY[DY], 0, 255);
-      return RY[3] = aY(RY[3], 0, 1), RY
-    }, gY.get.hsl = function(YY) {
-      if (!YY) return null;
-      var rY = YY.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (rY) {
-        var DY = parseFloat(rY[4]);
-        return [(parseFloat(rY[1]) % 360 + 360) % 360, aY(parseFloat(rY[2]), 0, 100), aY(parseFloat(rY[3]), 0, 100), aY(isNaN(DY) ? 1 : DY, 0, 1)]
-      }
-      return null
-    }, gY.get.hwb = function(YY) {
-      if (!YY) return null;
-      var rY = YY.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (rY) {
-        var DY = parseFloat(rY[4]);
-        return [(parseFloat(rY[1]) % 360 + 360) % 360, aY(parseFloat(rY[2]), 0, 100), aY(parseFloat(rY[3]), 0, 100), aY(isNaN(DY) ? 1 : DY, 0, 1)]
+      for (IT = 0; IT < 3; IT++) WT[IT] = FT(WT[IT], 0, 255);
+      return WT[3] = FT(WT[3], 0, 1), WT
+    }, BT.get.hsl = function(TT) {
+      if (!TT) return null;
+      var oT = TT.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (oT) {
+        var IT = parseFloat(oT[4]);
+        return [(parseFloat(oT[1]) % 360 + 360) % 360, FT(parseFloat(oT[2]), 0, 100), FT(parseFloat(oT[3]), 0, 100), FT(isNaN(IT) ? 1 : IT, 0, 1)]
       }
       return null
-    }, gY.to.hex = function() {
-      var YY = AY(arguments);
-      return "#" + vY(YY[0]) + vY(YY[1]) + vY(YY[2]) + (YY[3] < 1 ? vY(Math.round(255 * YY[3])) : "")
-    }, gY.to.rgb = function() {
-      var YY = AY(arguments);
-      return YY.length < 4 || 1 === YY[3] ? "rgb(" + Math.round(YY[0]) + ", " + Math.round(YY[1]) + ", " + Math.round(YY[2]) + ")" : "rgba(" + Math.round(YY[0]) + ", " + Math.round(YY[1]) + ", " + Math.round(YY[2]) + ", " + YY[3] + ")"
-    }, gY.to.rgb.percent = function() {
-      var YY = AY(arguments),
-        rY = Math.round(YY[0] / 255 * 100),
-        DY = Math.round(YY[1] / 255 * 100),
-        FY = Math.round(YY[2] / 255 * 100);
-      return YY.length < 4 || 1 === YY[3] ? "rgb(" + rY + "%, " + DY + "%, " + FY + "%)" : "rgba(" + rY + "%, " + DY + "%, " + FY + "%, " + YY[3] + ")"
-    }, gY.to.hsl = function() {
-      var YY = AY(arguments);
-      return YY.length < 4 || 1 === YY[3] ? "hsl(" + YY[0] + ", " + YY[1] + "%, " + YY[2] + "%)" : "hsla(" + YY[0] + ", " + YY[1] + "%, " + YY[2] + "%, " + YY[3] + ")"
-    }, gY.to.hwb = function() {
-      var YY = AY(arguments),
-        rY = "";
-      return YY.length >= 4 && 1 !== YY[3] && (rY = ", " + YY[3]), "hwb(" + YY[0] + ", " + YY[1] + "%, " + YY[2] + "%" + rY + ")"
-    }, gY.to.keyword = function(YY) {
-      return RY[YY.slice(0, 3)]
+    }, BT.get.hwb = function(TT) {
+      if (!TT) return null;
+      var oT = TT.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (oT) {
+        var IT = parseFloat(oT[4]);
+        return [(parseFloat(oT[1]) % 360 + 360) % 360, FT(parseFloat(oT[2]), 0, 100), FT(parseFloat(oT[3]), 0, 100), FT(isNaN(IT) ? 1 : IT, 0, 1)]
+      }
+      return null
+    }, BT.to.hex = function() {
+      var TT = zT(arguments);
+      return "#" + ST(TT[0]) + ST(TT[1]) + ST(TT[2]) + (TT[3] < 1 ? ST(Math.round(255 * TT[3])) : "")
+    }, BT.to.rgb = function() {
+      var TT = zT(arguments);
+      return TT.length < 4 || 1 === TT[3] ? "rgb(" + Math.round(TT[0]) + ", " + Math.round(TT[1]) + ", " + Math.round(TT[2]) + ")" : "rgba(" + Math.round(TT[0]) + ", " + Math.round(TT[1]) + ", " + Math.round(TT[2]) + ", " + TT[3] + ")"
+    }, BT.to.rgb.percent = function() {
+      var TT = zT(arguments),
+        oT = Math.round(TT[0] / 255 * 100),
+        IT = Math.round(TT[1] / 255 * 100),
+        iT = Math.round(TT[2] / 255 * 100);
+      return TT.length < 4 || 1 === TT[3] ? "rgb(" + oT + "%, " + IT + "%, " + iT + "%)" : "rgba(" + oT + "%, " + IT + "%, " + iT + "%, " + TT[3] + ")"
+    }, BT.to.hsl = function() {
+      var TT = zT(arguments);
+      return TT.length < 4 || 1 === TT[3] ? "hsl(" + TT[0] + ", " + TT[1] + "%, " + TT[2] + "%)" : "hsla(" + TT[0] + ", " + TT[1] + "%, " + TT[2] + "%, " + TT[3] + ")"
+    }, BT.to.hwb = function() {
+      var TT = zT(arguments),
+        oT = "";
+      return TT.length >= 4 && 1 !== TT[3] && (oT = ", " + TT[3]), "hwb(" + TT[0] + ", " + TT[1] + "%, " + TT[2] + "%" + oT + ")"
+    }, BT.to.keyword = function(TT) {
+      return WT[TT.slice(0, 3)]
     }
   },
-  36058: (YY, rY, DY) => {
-    const FY = DY(36063),
-      AY = DY(36085),
-      IY = ["keyword", "gray", "hex"],
-      RY = {};
-    for (const iY of Object.keys(AY)) RY[[...AY[iY].labels].sort().join("")] = iY;
-    const OY = {};
+  35636: (TT, oT, IT) => {
+    const iT = IT(35640),
+      zT = IT(35660),
+      kT = ["keyword", "gray", "hex"],
+      WT = {};
+    for (const xT of Object.keys(zT)) WT[[...zT[xT].labels].sort().join("")] = xT;
+    const XT = {};
 
-    function gY(YY, rY) {
-      if (!(this instanceof gY)) return new gY(YY, rY);
-      if (rY && rY in IY && (rY = null), rY && !(rY in AY)) throw new Error("Unknown model: " + rY);
-      let DY, aY;
-      if (null == YY) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (YY instanceof gY) this.model = YY.model, this.color = [...YY.color], this.valpha = YY.valpha;
-      else if ("string" === typeof YY) {
-        const rY = FY.get(YY);
-        if (null === rY) throw new Error("Unable to parse color from string: " + YY);
-        this.model = rY.model, aY = AY[this.model].channels, this.color = rY.value.slice(0, aY), this.valpha = "number" === typeof rY.value[aY] ? rY.value[aY] : 1
-      } else if (YY.length > 0) {
-        this.model = rY || "rgb", aY = AY[this.model].channels;
-        const DY = Array.prototype.slice.call(YY, 0, aY);
-        this.color = sY(DY, aY), this.valpha = "number" === typeof YY[aY] ? YY[aY] : 1
-      } else if ("number" === typeof YY) this.model = "rgb", this.color = [YY >> 16 & 255, YY >> 8 & 255, 255 & YY], this.valpha = 1;
+    function BT(TT, oT) {
+      if (!(this instanceof BT)) return new BT(TT, oT);
+      if (oT && oT in kT && (oT = null), oT && !(oT in zT)) throw new Error("Unknown model: " + oT);
+      let IT, FT;
+      if (null == TT) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (TT instanceof BT) this.model = TT.model, this.color = [...TT.color], this.valpha = TT.valpha;
+      else if ("string" === typeof TT) {
+        const oT = iT.get(TT);
+        if (null === oT) throw new Error("Unable to parse color from string: " + TT);
+        this.model = oT.model, FT = zT[this.model].channels, this.color = oT.value.slice(0, FT), this.valpha = "number" === typeof oT.value[FT] ? oT.value[FT] : 1
+      } else if (TT.length > 0) {
+        this.model = oT || "rgb", FT = zT[this.model].channels;
+        const IT = Array.prototype.slice.call(TT, 0, FT);
+        this.color = LT(IT, FT), this.valpha = "number" === typeof TT[FT] ? TT[FT] : 1
+      } else if ("number" === typeof TT) this.model = "rgb", this.color = [TT >> 16 & 255, TT >> 8 & 255, 255 & TT], this.valpha = 1;
       else {
         this.valpha = 1;
-        const rY = Object.keys(YY);
-        "alpha" in YY && (rY.splice(rY.indexOf("alpha"), 1), this.valpha = "number" === typeof YY.alpha ? YY.alpha : 0);
-        const FY = rY.sort().join("");
-        if (!(FY in RY)) throw new Error("Unable to parse color from object: " + JSON.stringify(YY));
-        this.model = RY[FY];
+        const oT = Object.keys(TT);
+        "alpha" in TT && (oT.splice(oT.indexOf("alpha"), 1), this.valpha = "number" === typeof TT.alpha ? TT.alpha : 0);
+        const iT = oT.sort().join("");
+        if (!(iT in WT)) throw new Error("Unable to parse color from object: " + JSON.stringify(TT));
+        this.model = WT[iT];
         const {
-          labels: IY
-        } = AY[this.model], OY = [];
-        for (DY = 0; DY < IY.length; DY++) OY.push(YY[IY[DY]]);
-        this.color = sY(OY)
+          labels: kT
+        } = zT[this.model], XT = [];
+        for (IT = 0; IT < kT.length; IT++) XT.push(TT[kT[IT]]);
+        this.color = LT(XT)
       }
-      if (OY[this.model])
-        for (aY = AY[this.model].channels, DY = 0; DY < aY; DY++) {
-          const YY = OY[this.model][DY];
-          YY && (this.color[DY] = YY(this.color[DY]))
+      if (XT[this.model])
+        for (FT = zT[this.model].channels, IT = 0; IT < FT; IT++) {
+          const TT = XT[this.model][IT];
+          TT && (this.color[IT] = TT(this.color[IT]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    gY.prototype = {
+    BT.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(YY) {
-        let rY = this.model in FY.to ? this : this.rgb();
-        rY = rY.round("number" === typeof YY ? YY : 1);
-        const DY = 1 === rY.valpha ? rY.color : [...rY.color, this.valpha];
-        return FY.to[rY.model](DY)
+      string(TT) {
+        let oT = this.model in iT.to ? this : this.rgb();
+        oT = oT.round("number" === typeof TT ? TT : 1);
+        const IT = 1 === oT.valpha ? oT.color : [...oT.color, this.valpha];
+        return iT.to[oT.model](IT)
       },
-      percentString(YY) {
-        const rY = this.rgb().round("number" === typeof YY ? YY : 1),
-          DY = 1 === rY.valpha ? rY.color : [...rY.color, this.valpha];
-        return FY.to.rgb.percent(DY)
+      percentString(TT) {
+        const oT = this.rgb().round("number" === typeof TT ? TT : 1),
+          IT = 1 === oT.valpha ? oT.color : [...oT.color, this.valpha];
+        return iT.to.rgb.percent(IT)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const YY = {},
+        const TT = {},
           {
-            channels: rY
-          } = AY[this.model],
+            channels: oT
+          } = zT[this.model],
           {
-            labels: DY
-          } = AY[this.model];
-        for (let FY = 0; FY < rY; FY++) YY[DY[FY]] = this.color[FY];
-        return 1 !== this.valpha && (YY.alpha = this.valpha), YY
+            labels: IT
+          } = zT[this.model];
+        for (let iT = 0; iT < oT; iT++) TT[IT[iT]] = this.color[iT];
+        return 1 !== this.valpha && (TT.alpha = this.valpha), TT
       },
       unitArray() {
-        const YY = this.rgb().color;
-        return YY[0] /= 255, YY[1] /= 255, YY[2] /= 255, 1 !== this.valpha && YY.push(this.valpha), YY
+        const TT = this.rgb().color;
+        return TT[0] /= 255, TT[1] /= 255, TT[2] /= 255, 1 !== this.valpha && TT.push(this.valpha), TT
       },
       unitObject() {
-        const YY = this.rgb().object();
-        return YY.r /= 255, YY.g /= 255, YY.b /= 255, 1 !== this.valpha && (YY.alpha = this.valpha), YY
+        const TT = this.rgb().object();
+        return TT.r /= 255, TT.g /= 255, TT.b /= 255, 1 !== this.valpha && (TT.alpha = this.valpha), TT
       },
-      round(YY) {
-        return YY = Math.max(YY || 0, 0), new gY([...this.color.map(aY(YY)), this.valpha], this.model)
+      round(TT) {
+        return TT = Math.max(TT || 0, 0), new BT([...this.color.map(FT(TT)), this.valpha], this.model)
       },
-      alpha(YY) {
-        return void 0 !== YY ? new gY([...this.color, Math.max(0, Math.min(1, YY))], this.model) : this.valpha
+      alpha(TT) {
+        return void 0 !== TT ? new BT([...this.color, Math.max(0, Math.min(1, TT))], this.model) : this.valpha
       },
-      red: vY("rgb", 0, uY(255)),
-      green: vY("rgb", 1, uY(255)),
-      blue: vY("rgb", 2, uY(255)),
-      hue: vY(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (YY => (YY % 360 + 360) % 360)),
-      saturationl: vY("hsl", 1, uY(100)),
-      lightness: vY("hsl", 2, uY(100)),
-      saturationv: vY("hsv", 1, uY(100)),
-      value: vY("hsv", 2, uY(100)),
-      chroma: vY("hcg", 1, uY(100)),
-      gray: vY("hcg", 2, uY(100)),
-      white: vY("hwb", 1, uY(100)),
-      wblack: vY("hwb", 2, uY(100)),
-      cyan: vY("cmyk", 0, uY(100)),
-      magenta: vY("cmyk", 1, uY(100)),
-      yellow: vY("cmyk", 2, uY(100)),
-      black: vY("cmyk", 3, uY(100)),
-      x: vY("xyz", 0, uY(95.047)),
-      y: vY("xyz", 1, uY(100)),
-      z: vY("xyz", 2, uY(108.833)),
-      l: vY("lab", 0, uY(100)),
-      a: vY("lab", 1),
-      b: vY("lab", 2),
-      keyword(YY) {
-        return void 0 !== YY ? new gY(YY) : AY[this.model].keyword(this.color)
+      red: ST("rgb", 0, DT(255)),
+      green: ST("rgb", 1, DT(255)),
+      blue: ST("rgb", 2, DT(255)),
+      hue: ST(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (TT => (TT % 360 + 360) % 360)),
+      saturationl: ST("hsl", 1, DT(100)),
+      lightness: ST("hsl", 2, DT(100)),
+      saturationv: ST("hsv", 1, DT(100)),
+      value: ST("hsv", 2, DT(100)),
+      chroma: ST("hcg", 1, DT(100)),
+      gray: ST("hcg", 2, DT(100)),
+      white: ST("hwb", 1, DT(100)),
+      wblack: ST("hwb", 2, DT(100)),
+      cyan: ST("cmyk", 0, DT(100)),
+      magenta: ST("cmyk", 1, DT(100)),
+      yellow: ST("cmyk", 2, DT(100)),
+      black: ST("cmyk", 3, DT(100)),
+      x: ST("xyz", 0, DT(95.047)),
+      y: ST("xyz", 1, DT(100)),
+      z: ST("xyz", 2, DT(108.833)),
+      l: ST("lab", 0, DT(100)),
+      a: ST("lab", 1),
+      b: ST("lab", 2),
+      keyword(TT) {
+        return void 0 !== TT ? new BT(TT) : zT[this.model].keyword(this.color)
       },
-      hex(YY) {
-        return void 0 !== YY ? new gY(YY) : FY.to.hex(this.rgb().round().color)
+      hex(TT) {
+        return void 0 !== TT ? new BT(TT) : iT.to.hex(this.rgb().round().color)
       },
-      hexa(YY) {
-        if (void 0 !== YY) return new gY(YY);
-        const rY = this.rgb().round().color;
-        let DY = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === DY.length && (DY = "0" + DY), FY.to.hex(rY) + DY
+      hexa(TT) {
+        if (void 0 !== TT) return new BT(TT);
+        const oT = this.rgb().round().color;
+        let IT = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === IT.length && (IT = "0" + IT), iT.to.hex(oT) + IT
       },
       rgbNumber() {
-        const YY = this.rgb().color;
-        return (255 & YY[0]) << 16 | (255 & YY[1]) << 8 | 255 & YY[2]
+        const TT = this.rgb().color;
+        return (255 & TT[0]) << 16 | (255 & TT[1]) << 8 | 255 & TT[2]
       },
       luminosity() {
-        const YY = this.rgb().color,
-          rY = [];
-        for (const [DY, FY] of YY.entries()) {
-          const YY = FY / 255;
-          rY[DY] = YY <= .04045 ? YY / 12.92 : ((YY + .055) / 1.055) ** 2.4
+        const TT = this.rgb().color,
+          oT = [];
+        for (const [IT, iT] of TT.entries()) {
+          const TT = iT / 255;
+          oT[IT] = TT <= .04045 ? TT / 12.92 : ((TT + .055) / 1.055) ** 2.4
         }
-        return .2126 * rY[0] + .7152 * rY[1] + .0722 * rY[2]
+        return .2126 * oT[0] + .7152 * oT[1] + .0722 * oT[2]
       },
-      contrast(YY) {
-        const rY = this.luminosity(),
-          DY = YY.luminosity();
-        return rY > DY ? (rY + .05) / (DY + .05) : (DY + .05) / (rY + .05)
+      contrast(TT) {
+        const oT = this.luminosity(),
+          IT = TT.luminosity();
+        return oT > IT ? (oT + .05) / (IT + .05) : (IT + .05) / (oT + .05)
       },
-      level(YY) {
-        const rY = this.contrast(YY);
-        return rY >= 7 ? "AAA" : rY >= 4.5 ? "AA" : ""
+      level(TT) {
+        const oT = this.contrast(TT);
+        return oT >= 7 ? "AAA" : oT >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const YY = this.rgb().color;
-        return (2126 * YY[0] + 7152 * YY[1] + 722 * YY[2]) / 1e4 < 128
+        const TT = this.rgb().color;
+        return (2126 * TT[0] + 7152 * TT[1] + 722 * TT[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      GA() {
-        const YY = this.rgb();
-        for (let rY = 0; rY < 3; rY++) YY.color[rY] = 255 - YY.color[rY];
-        return YY
+      ri() {
+        const TT = this.rgb();
+        for (let oT = 0; oT < 3; oT++) TT.color[oT] = 255 - TT.color[oT];
+        return TT
       },
-      lighten(YY) {
-        const rY = this.hsl();
-        return rY.color[2] += rY.color[2] * YY, rY
+      lighten(TT) {
+        const oT = this.hsl();
+        return oT.color[2] += oT.color[2] * TT, oT
       },
-      darken(YY) {
-        const rY = this.hsl();
-        return rY.color[2] -= rY.color[2] * YY, rY
+      darken(TT) {
+        const oT = this.hsl();
+        return oT.color[2] -= oT.color[2] * TT, oT
       },
-      saturate(YY) {
-        const rY = this.hsl();
-        return rY.color[1] += rY.color[1] * YY, rY
+      saturate(TT) {
+        const oT = this.hsl();
+        return oT.color[1] += oT.color[1] * TT, oT
       },
-      desaturate(YY) {
-        const rY = this.hsl();
-        return rY.color[1] -= rY.color[1] * YY, rY
+      desaturate(TT) {
+        const oT = this.hsl();
+        return oT.color[1] -= oT.color[1] * TT, oT
       },
-      whiten(YY) {
-        const rY = this.hwb();
-        return rY.color[1] += rY.color[1] * YY, rY
+      whiten(TT) {
+        const oT = this.hwb();
+        return oT.color[1] += oT.color[1] * TT, oT
       },
-      blacken(YY) {
-        const rY = this.hwb();
-        return rY.color[2] += rY.color[2] * YY, rY
+      blacken(TT) {
+        const oT = this.hwb();
+        return oT.color[2] += oT.color[2] * TT, oT
       },
       grayscale() {
-        const YY = this.rgb().color,
-          rY = .3 * YY[0] + .59 * YY[1] + .11 * YY[2];
-        return gY.rgb(rY, rY, rY)
+        const TT = this.rgb().color,
+          oT = .3 * TT[0] + .59 * TT[1] + .11 * TT[2];
+        return BT.rgb(oT, oT, oT)
       },
-      fade(YY) {
-        return this.alpha(this.valpha - this.valpha * YY)
+      fade(TT) {
+        return this.alpha(this.valpha - this.valpha * TT)
       },
-      opaquer(YY) {
-        return this.alpha(this.valpha + this.valpha * YY)
+      opaquer(TT) {
+        return this.alpha(this.valpha + this.valpha * TT)
       },
-      rotate(YY) {
-        const rY = this.hsl();
-        let DY = rY.color[0];
-        return DY = (DY + YY) % 360, DY = DY < 0 ? 360 + DY : DY, rY.color[0] = DY, rY
+      rotate(TT) {
+        const oT = this.hsl();
+        let IT = oT.color[0];
+        return IT = (IT + TT) % 360, IT = IT < 0 ? 360 + IT : IT, oT.color[0] = IT, oT
       },
-      mix(YY, rY) {
-        if (!YY || !YY.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof YY);
-        const DY = YY.rgb(),
-          FY = this.rgb(),
-          AY = void 0 === rY ? .5 : rY,
-          IY = 2 * AY - 1,
-          RY = DY.alpha() - FY.alpha(),
-          OY = ((IY * RY === -1 ? IY : (IY + RY) / (1 + IY * RY)) + 1) / 2,
-          aY = 1 - OY;
-        return gY.rgb(OY * DY.red() + aY * FY.red(), OY * DY.green() + aY * FY.green(), OY * DY.blue() + aY * FY.blue(), DY.alpha() * AY + FY.alpha() * (1 - AY))
+      mix(TT, oT) {
+        if (!TT || !TT.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof TT);
+        const IT = TT.rgb(),
+          iT = this.rgb(),
+          zT = void 0 === oT ? .5 : oT,
+          kT = 2 * zT - 1,
+          WT = IT.alpha() - iT.alpha(),
+          XT = ((kT * WT === -1 ? kT : (kT + WT) / (1 + kT * WT)) + 1) / 2,
+          FT = 1 - XT;
+        return BT.rgb(XT * IT.red() + FT * iT.red(), XT * IT.green() + FT * iT.green(), XT * IT.blue() + FT * iT.blue(), IT.alpha() * zT + iT.alpha() * (1 - zT))
       }
     };
-    for (const iY of Object.keys(AY)) {
-      if (IY.includes(iY)) continue;
+    for (const xT of Object.keys(zT)) {
+      if (kT.includes(xT)) continue;
       const {
-        channels: YY
-      } = AY[iY];
-      gY.prototype[iY] = function() {
-        if (this.model === iY) return new gY(this);
-        for (var YY = arguments.length, rY = new Array(YY), DY = 0; DY < YY; DY++) rY[DY] = arguments[DY];
-        return rY.length > 0 ? new gY(rY, iY) : new gY([...(FY = AY[this.model][iY].raw(this.color), Array.isArray(FY) ? FY : [FY]), this.valpha], iY);
-        var FY
-      }, gY[iY] = function() {
-        for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
-        let AY = DY[0];
-        return "number" === typeof AY && (AY = sY(DY, YY)), new gY(AY, iY)
+        channels: TT
+      } = zT[xT];
+      BT.prototype[xT] = function() {
+        if (this.model === xT) return new BT(this);
+        for (var TT = arguments.length, oT = new Array(TT), IT = 0; IT < TT; IT++) oT[IT] = arguments[IT];
+        return oT.length > 0 ? new BT(oT, xT) : new BT([...(iT = zT[this.model][xT].raw(this.color), Array.isArray(iT) ? iT : [iT]), this.valpha], xT);
+        var iT
+      }, BT[xT] = function() {
+        for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
+        let zT = IT[0];
+        return "number" === typeof zT && (zT = LT(IT, TT)), new BT(zT, xT)
       }
     }
 
-    function aY(YY) {
-      return function(rY) {
-        return function(YY, rY) {
-          return Number(YY.toFixed(rY))
-        }(rY, YY)
+    function FT(TT) {
+      return function(oT) {
+        return function(TT, oT) {
+          return Number(TT.toFixed(oT))
+        }(oT, TT)
       }
     }
 
-    function vY(YY, rY, DY) {
-      YY = Array.isArray(YY) ? YY : [YY];
-      for (const FY of YY)(OY[FY] || (OY[FY] = []))[rY] = DY;
-      return YY = YY[0],
-        function(FY) {
-          let AY;
-          return void 0 !== FY ? (DY && (FY = DY(FY)), AY = this[YY](), AY.color[rY] = FY, AY) : (AY = this[YY]().color[rY], DY && (AY = DY(AY)), AY)
+    function ST(TT, oT, IT) {
+      TT = Array.isArray(TT) ? TT : [TT];
+      for (const iT of TT)(XT[iT] || (XT[iT] = []))[oT] = IT;
+      return TT = TT[0],
+        function(iT) {
+          let zT;
+          return void 0 !== iT ? (IT && (iT = IT(iT)), zT = this[TT](), zT.color[oT] = iT, zT) : (zT = this[TT]().color[oT], IT && (zT = IT(zT)), zT)
         }
     }
 
-    function uY(YY) {
-      return function(rY) {
-        return Math.max(0, Math.min(YY, rY))
+    function DT(TT) {
+      return function(oT) {
+        return Math.max(0, Math.min(TT, oT))
       }
     }
 
-    function sY(YY, rY) {
-      for (let DY = 0; DY < rY; DY++) "number" !== typeof YY[DY] && (YY[DY] = 0);
-      return YY
+    function LT(TT, oT) {
+      for (let IT = 0; IT < oT; IT++) "number" !== typeof TT[IT] && (TT[IT] = 0);
+      return TT
     }
-    YY.exports = gY
+    TT.exports = BT
   },
-  36093: (YY, rY, DY) => {
-    const FY = DY(36099),
-      AY = {};
-    for (const RY of Object.keys(FY)) AY[FY[RY]] = RY;
-    const IY = {
+  35668: (TT, oT, IT) => {
+    const iT = IT(35670),
+      zT = {};
+    for (const WT of Object.keys(iT)) zT[iT[WT]] = WT;
+    const kT = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    YY.exports = IY;
-    for (const RY of Object.keys(IY)) {
-      if (!("channels" in IY[RY])) throw new Error("missing channels property: " + RY);
-      if (!("labels" in IY[RY])) throw new Error("missing channel labels property: " + RY);
-      if (IY[RY].labels.length !== IY[RY].channels) throw new Error("channel and label counts mismatch: " + RY);
+    TT.exports = kT;
+    for (const WT of Object.keys(kT)) {
+      if (!("channels" in kT[WT])) throw new Error("missing channels property: " + WT);
+      if (!("labels" in kT[WT])) throw new Error("missing channel labels property: " + WT);
+      if (kT[WT].labels.length !== kT[WT].channels) throw new Error("channel and label counts mismatch: " + WT);
       const {
-        channels: YY,
-        labels: rY
-      } = IY[RY];
-      delete IY[RY].channels, delete IY[RY].labels, Object.defineProperty(IY[RY], "channels", {
-        value: YY
-      }), Object.defineProperty(IY[RY], "labels", {
-        value: rY
+        channels: TT,
+        labels: oT
+      } = kT[WT];
+      delete kT[WT].channels, delete kT[WT].labels, Object.defineProperty(kT[WT], "channels", {
+        value: TT
+      }), Object.defineProperty(kT[WT], "labels", {
+        value: oT
       })
     }
-    IY.rgb.hsl = function(YY) {
-      const rY = YY[0] / 255,
-        DY = YY[1] / 255,
-        FY = YY[2] / 255,
-        AY = Math.min(rY, DY, FY),
-        IY = Math.max(rY, DY, FY),
-        RY = IY - AY;
-      let OY, gY;
-      IY === AY ? OY = 0 : rY === IY ? OY = (DY - FY) / RY : DY === IY ? OY = 2 + (FY - rY) / RY : FY === IY && (OY = 4 + (rY - DY) / RY), OY = Math.min(60 * OY, 360), OY < 0 && (OY += 360);
-      const aY = (AY + IY) / 2;
-      return gY = IY === AY ? 0 : aY <= .5 ? RY / (IY + AY) : RY / (2 - IY - AY), [OY, 100 * gY, 100 * aY]
-    }, IY.rgb.hsv = function(YY) {
-      let rY, DY, FY, AY, IY;
-      const RY = YY[0] / 255,
-        OY = YY[1] / 255,
-        gY = YY[2] / 255,
-        aY = Math.max(RY, OY, gY),
-        vY = aY - Math.min(RY, OY, gY),
-        uY = function(YY) {
-          return (aY - YY) / 6 / vY + .5
+    kT.rgb.hsl = function(TT) {
+      const oT = TT[0] / 255,
+        IT = TT[1] / 255,
+        iT = TT[2] / 255,
+        zT = Math.min(oT, IT, iT),
+        kT = Math.max(oT, IT, iT),
+        WT = kT - zT;
+      let XT, BT;
+      kT === zT ? XT = 0 : oT === kT ? XT = (IT - iT) / WT : IT === kT ? XT = 2 + (iT - oT) / WT : iT === kT && (XT = 4 + (oT - IT) / WT), XT = Math.min(60 * XT, 360), XT < 0 && (XT += 360);
+      const FT = (zT + kT) / 2;
+      return BT = kT === zT ? 0 : FT <= .5 ? WT / (kT + zT) : WT / (2 - kT - zT), [XT, 100 * BT, 100 * FT]
+    }, kT.rgb.hsv = function(TT) {
+      let oT, IT, iT, zT, kT;
+      const WT = TT[0] / 255,
+        XT = TT[1] / 255,
+        BT = TT[2] / 255,
+        FT = Math.max(WT, XT, BT),
+        ST = FT - Math.min(WT, XT, BT),
+        DT = function(TT) {
+          return (FT - TT) / 6 / ST + .5
         };
-      return 0 === vY ? (AY = 0, IY = 0) : (IY = vY / aY, rY = uY(RY), DY = uY(OY), FY = uY(gY), RY === aY ? AY = FY - DY : OY === aY ? AY = 1 / 3 + rY - FY : gY === aY && (AY = 2 / 3 + DY - rY), AY < 0 ? AY += 1 : AY > 1 && (AY -= 1)), [360 * AY, 100 * IY, 100 * aY]
-    }, IY.rgb.hwb = function(YY) {
-      const rY = YY[0],
-        DY = YY[1];
-      let FY = YY[2];
-      const AY = IY.rgb.hsl(YY)[0],
-        RY = 1 / 255 * Math.min(rY, Math.min(DY, FY));
-      return FY = 1 - 1 / 255 * Math.max(rY, Math.max(DY, FY)), [AY, 100 * RY, 100 * FY]
-    }, IY.rgb.cmyk = function(YY) {
-      const rY = YY[0] / 255,
-        DY = YY[1] / 255,
-        FY = YY[2] / 255,
-        AY = Math.min(1 - rY, 1 - DY, 1 - FY);
-      return [100 * ((1 - rY - AY) / (1 - AY) || 0), 100 * ((1 - DY - AY) / (1 - AY) || 0), 100 * ((1 - FY - AY) / (1 - AY) || 0), 100 * AY]
-    }, IY.rgb.keyword = function(YY) {
-      const rY = AY[YY];
-      if (rY) return rY;
-      let DY, IY = 1 / 0;
-      for (const AY of Object.keys(FY)) {
-        const rY = FY[AY],
-          gY = (OY = rY, ((RY = YY)[0] - OY[0]) ** 2 + (RY[1] - OY[1]) ** 2 + (RY[2] - OY[2]) ** 2);
-        gY < IY && (IY = gY, DY = AY)
+      return 0 === ST ? (zT = 0, kT = 0) : (kT = ST / FT, oT = DT(WT), IT = DT(XT), iT = DT(BT), WT === FT ? zT = iT - IT : XT === FT ? zT = 1 / 3 + oT - iT : BT === FT && (zT = 2 / 3 + IT - oT), zT < 0 ? zT += 1 : zT > 1 && (zT -= 1)), [360 * zT, 100 * kT, 100 * FT]
+    }, kT.rgb.hwb = function(TT) {
+      const oT = TT[0],
+        IT = TT[1];
+      let iT = TT[2];
+      const zT = kT.rgb.hsl(TT)[0],
+        WT = 1 / 255 * Math.min(oT, Math.min(IT, iT));
+      return iT = 1 - 1 / 255 * Math.max(oT, Math.max(IT, iT)), [zT, 100 * WT, 100 * iT]
+    }, kT.rgb.cmyk = function(TT) {
+      const oT = TT[0] / 255,
+        IT = TT[1] / 255,
+        iT = TT[2] / 255,
+        zT = Math.min(1 - oT, 1 - IT, 1 - iT);
+      return [100 * ((1 - oT - zT) / (1 - zT) || 0), 100 * ((1 - IT - zT) / (1 - zT) || 0), 100 * ((1 - iT - zT) / (1 - zT) || 0), 100 * zT]
+    }, kT.rgb.keyword = function(TT) {
+      const oT = zT[TT];
+      if (oT) return oT;
+      let IT, kT = 1 / 0;
+      for (const zT of Object.keys(iT)) {
+        const oT = iT[zT],
+          BT = (XT = oT, ((WT = TT)[0] - XT[0]) ** 2 + (WT[1] - XT[1]) ** 2 + (WT[2] - XT[2]) ** 2);
+        BT < kT && (kT = BT, IT = zT)
       }
-      var RY, OY;
-      return DY
-    }, IY.keyword.rgb = function(YY) {
-      return FY[YY]
-    }, IY.rgb.xyz = function(YY) {
-      let rY = YY[0] / 255,
-        DY = YY[1] / 255,
-        FY = YY[2] / 255;
-      rY = rY > .04045 ? ((rY + .055) / 1.055) ** 2.4 : rY / 12.92, DY = DY > .04045 ? ((DY + .055) / 1.055) ** 2.4 : DY / 12.92, FY = FY > .04045 ? ((FY + .055) / 1.055) ** 2.4 : FY / 12.92;
-      return [100 * (.4124 * rY + .3576 * DY + .1805 * FY), 100 * (.2126 * rY + .7152 * DY + .0722 * FY), 100 * (.0193 * rY + .1192 * DY + .9505 * FY)]
-    }, IY.rgb.lab = function(YY) {
-      const rY = IY.rgb.xyz(YY);
-      let DY = rY[0],
-        FY = rY[1],
-        AY = rY[2];
-      DY /= 95.047, FY /= 100, AY /= 108.883, DY = DY > .008856 ? DY ** (1 / 3) : 7.787 * DY + 16 / 116, FY = FY > .008856 ? FY ** (1 / 3) : 7.787 * FY + 16 / 116, AY = AY > .008856 ? AY ** (1 / 3) : 7.787 * AY + 16 / 116;
-      return [116 * FY - 16, 500 * (DY - FY), 200 * (FY - AY)]
-    }, IY.hsl.rgb = function(YY) {
-      const rY = YY[0] / 360,
-        DY = YY[1] / 100,
-        FY = YY[2] / 100;
-      let AY, IY, RY;
-      if (0 === DY) return RY = 255 * FY, [RY, RY, RY];
-      AY = FY < .5 ? FY * (1 + DY) : FY + DY - FY * DY;
-      const OY = 2 * FY - AY,
-        gY = [0, 0, 0];
-      for (let aY = 0; aY < 3; aY++) IY = rY + 1 / 3 * -(aY - 1), IY < 0 && IY++, IY > 1 && IY--, RY = 6 * IY < 1 ? OY + 6 * (AY - OY) * IY : 2 * IY < 1 ? AY : 3 * IY < 2 ? OY + (AY - OY) * (2 / 3 - IY) * 6 : OY, gY[aY] = 255 * RY;
-      return gY
-    }, IY.hsl.hsv = function(YY) {
-      const rY = YY[0];
-      let DY = YY[1] / 100,
-        FY = YY[2] / 100,
-        AY = DY;
-      const IY = Math.max(FY, .01);
-      FY *= 2, DY *= FY <= 1 ? FY : 2 - FY, AY *= IY <= 1 ? IY : 2 - IY;
-      return [rY, 100 * (0 === FY ? 2 * AY / (IY + AY) : 2 * DY / (FY + DY)), 100 * ((FY + DY) / 2)]
-    }, IY.hsv.rgb = function(YY) {
-      const rY = YY[0] / 60,
-        DY = YY[1] / 100;
-      let FY = YY[2] / 100;
-      const AY = Math.floor(rY) % 6,
-        IY = rY - Math.floor(rY),
-        RY = 255 * FY * (1 - DY),
-        OY = 255 * FY * (1 - DY * IY),
-        gY = 255 * FY * (1 - DY * (1 - IY));
-      switch (FY *= 255, AY) {
+      var WT, XT;
+      return IT
+    }, kT.keyword.rgb = function(TT) {
+      return iT[TT]
+    }, kT.rgb.xyz = function(TT) {
+      let oT = TT[0] / 255,
+        IT = TT[1] / 255,
+        iT = TT[2] / 255;
+      oT = oT > .04045 ? ((oT + .055) / 1.055) ** 2.4 : oT / 12.92, IT = IT > .04045 ? ((IT + .055) / 1.055) ** 2.4 : IT / 12.92, iT = iT > .04045 ? ((iT + .055) / 1.055) ** 2.4 : iT / 12.92;
+      return [100 * (.4124 * oT + .3576 * IT + .1805 * iT), 100 * (.2126 * oT + .7152 * IT + .0722 * iT), 100 * (.0193 * oT + .1192 * IT + .9505 * iT)]
+    }, kT.rgb.lab = function(TT) {
+      const oT = kT.rgb.xyz(TT);
+      let IT = oT[0],
+        iT = oT[1],
+        zT = oT[2];
+      IT /= 95.047, iT /= 100, zT /= 108.883, IT = IT > .008856 ? IT ** (1 / 3) : 7.787 * IT + 16 / 116, iT = iT > .008856 ? iT ** (1 / 3) : 7.787 * iT + 16 / 116, zT = zT > .008856 ? zT ** (1 / 3) : 7.787 * zT + 16 / 116;
+      return [116 * iT - 16, 500 * (IT - iT), 200 * (iT - zT)]
+    }, kT.hsl.rgb = function(TT) {
+      const oT = TT[0] / 360,
+        IT = TT[1] / 100,
+        iT = TT[2] / 100;
+      let zT, kT, WT;
+      if (0 === IT) return WT = 255 * iT, [WT, WT, WT];
+      zT = iT < .5 ? iT * (1 + IT) : iT + IT - iT * IT;
+      const XT = 2 * iT - zT,
+        BT = [0, 0, 0];
+      for (let FT = 0; FT < 3; FT++) kT = oT + 1 / 3 * -(FT - 1), kT < 0 && kT++, kT > 1 && kT--, WT = 6 * kT < 1 ? XT + 6 * (zT - XT) * kT : 2 * kT < 1 ? zT : 3 * kT < 2 ? XT + (zT - XT) * (2 / 3 - kT) * 6 : XT, BT[FT] = 255 * WT;
+      return BT
+    }, kT.hsl.hsv = function(TT) {
+      const oT = TT[0];
+      let IT = TT[1] / 100,
+        iT = TT[2] / 100,
+        zT = IT;
+      const kT = Math.max(iT, .01);
+      iT *= 2, IT *= iT <= 1 ? iT : 2 - iT, zT *= kT <= 1 ? kT : 2 - kT;
+      return [oT, 100 * (0 === iT ? 2 * zT / (kT + zT) : 2 * IT / (iT + IT)), 100 * ((iT + IT) / 2)]
+    }, kT.hsv.rgb = function(TT) {
+      const oT = TT[0] / 60,
+        IT = TT[1] / 100;
+      let iT = TT[2] / 100;
+      const zT = Math.floor(oT) % 6,
+        kT = oT - Math.floor(oT),
+        WT = 255 * iT * (1 - IT),
+        XT = 255 * iT * (1 - IT * kT),
+        BT = 255 * iT * (1 - IT * (1 - kT));
+      switch (iT *= 255, zT) {
         case 0:
-          return [FY, gY, RY];
+          return [iT, BT, WT];
         case 1:
-          return [OY, FY, RY];
+          return [XT, iT, WT];
         case 2:
-          return [RY, FY, gY];
+          return [WT, iT, BT];
         case 3:
-          return [RY, OY, FY];
+          return [WT, XT, iT];
         case 4:
-          return [gY, RY, FY];
+          return [BT, WT, iT];
         case 5:
-          return [FY, RY, OY]
+          return [iT, WT, XT]
       }
-    }, IY.hsv.hsl = function(YY) {
-      const rY = YY[0],
-        DY = YY[1] / 100,
-        FY = YY[2] / 100,
-        AY = Math.max(FY, .01);
-      let IY, RY;
-      RY = (2 - DY) * FY;
-      const OY = (2 - DY) * AY;
-      return IY = DY * AY, IY /= OY <= 1 ? OY : 2 - OY, IY = IY || 0, RY /= 2, [rY, 100 * IY, 100 * RY]
-    }, IY.hwb.rgb = function(YY) {
-      const rY = YY[0] / 360;
-      let DY = YY[1] / 100,
-        FY = YY[2] / 100;
-      const AY = DY + FY;
-      let IY;
-      AY > 1 && (DY /= AY, FY /= AY);
-      const RY = Math.floor(6 * rY),
-        OY = 1 - FY;
-      IY = 6 * rY - RY, 0 !== (1 & RY) && (IY = 1 - IY);
-      const gY = DY + IY * (OY - DY);
-      let aY, vY, uY;
-      switch (RY) {
+    }, kT.hsv.hsl = function(TT) {
+      const oT = TT[0],
+        IT = TT[1] / 100,
+        iT = TT[2] / 100,
+        zT = Math.max(iT, .01);
+      let kT, WT;
+      WT = (2 - IT) * iT;
+      const XT = (2 - IT) * zT;
+      return kT = IT * zT, kT /= XT <= 1 ? XT : 2 - XT, kT = kT || 0, WT /= 2, [oT, 100 * kT, 100 * WT]
+    }, kT.hwb.rgb = function(TT) {
+      const oT = TT[0] / 360;
+      let IT = TT[1] / 100,
+        iT = TT[2] / 100;
+      const zT = IT + iT;
+      let kT;
+      zT > 1 && (IT /= zT, iT /= zT);
+      const WT = Math.floor(6 * oT),
+        XT = 1 - iT;
+      kT = 6 * oT - WT, 0 !== (1 & WT) && (kT = 1 - kT);
+      const BT = IT + kT * (XT - IT);
+      let FT, ST, DT;
+      switch (WT) {
         default:
         case 6:
         case 0:
-          aY = OY, vY = gY, uY = DY;
+          FT = XT, ST = BT, DT = IT;
           break;
         case 1:
-          aY = gY, vY = OY, uY = DY;
+          FT = BT, ST = XT, DT = IT;
           break;
         case 2:
-          aY = DY, vY = OY, uY = gY;
+          FT = IT, ST = XT, DT = BT;
           break;
         case 3:
-          aY = DY, vY = gY, uY = OY;
+          FT = IT, ST = BT, DT = XT;
           break;
         case 4:
-          aY = gY, vY = DY, uY = OY;
+          FT = BT, ST = IT, DT = XT;
           break;
         case 5:
-          aY = OY, vY = DY, uY = gY
+          FT = XT, ST = IT, DT = BT
       }
-      return [255 * aY, 255 * vY, 255 * uY]
-    }, IY.cmyk.rgb = function(YY) {
-      const rY = YY[0] / 100,
-        DY = YY[1] / 100,
-        FY = YY[2] / 100,
-        AY = YY[3] / 100;
-      return [255 * (1 - Math.min(1, rY * (1 - AY) + AY)), 255 * (1 - Math.min(1, DY * (1 - AY) + AY)), 255 * (1 - Math.min(1, FY * (1 - AY) + AY))]
-    }, IY.xyz.rgb = function(YY) {
-      const rY = YY[0] / 100,
-        DY = YY[1] / 100,
-        FY = YY[2] / 100;
-      let AY, IY, RY;
-      return AY = 3.2406 * rY + -1.5372 * DY + -.4986 * FY, IY = -.9689 * rY + 1.8758 * DY + .0415 * FY, RY = .0557 * rY + -.204 * DY + 1.057 * FY, AY = AY > .0031308 ? 1.055 * AY ** (1 / 2.4) - .055 : 12.92 * AY, IY = IY > .0031308 ? 1.055 * IY ** (1 / 2.4) - .055 : 12.92 * IY, RY = RY > .0031308 ? 1.055 * RY ** (1 / 2.4) - .055 : 12.92 * RY, AY = Math.min(Math.max(0, AY), 1), IY = Math.min(Math.max(0, IY), 1), RY = Math.min(Math.max(0, RY), 1), [255 * AY, 255 * IY, 255 * RY]
-    }, IY.xyz.lab = function(YY) {
-      let rY = YY[0],
-        DY = YY[1],
-        FY = YY[2];
-      rY /= 95.047, DY /= 100, FY /= 108.883, rY = rY > .008856 ? rY ** (1 / 3) : 7.787 * rY + 16 / 116, DY = DY > .008856 ? DY ** (1 / 3) : 7.787 * DY + 16 / 116, FY = FY > .008856 ? FY ** (1 / 3) : 7.787 * FY + 16 / 116;
-      return [116 * DY - 16, 500 * (rY - DY), 200 * (DY - FY)]
-    }, IY.lab.xyz = function(YY) {
-      let rY, DY, FY;
-      DY = (YY[0] + 16) / 116, rY = YY[1] / 500 + DY, FY = DY - YY[2] / 200;
-      const AY = DY ** 3,
-        IY = rY ** 3,
-        RY = FY ** 3;
-      return DY = AY > .008856 ? AY : (DY - 16 / 116) / 7.787, rY = IY > .008856 ? IY : (rY - 16 / 116) / 7.787, FY = RY > .008856 ? RY : (FY - 16 / 116) / 7.787, rY *= 95.047, DY *= 100, FY *= 108.883, [rY, DY, FY]
-    }, IY.lab.lch = function(YY) {
-      const rY = YY[0],
-        DY = YY[1],
-        FY = YY[2];
-      let AY;
-      AY = 360 * Math.atan2(FY, DY) / 2 / Math.PI, AY < 0 && (AY += 360);
-      return [rY, Math.sqrt(DY * DY + FY * FY), AY]
-    }, IY.lch.lab = function(YY) {
-      const rY = YY[0],
-        DY = YY[1],
-        FY = YY[2] / 360 * 2 * Math.PI;
-      return [rY, DY * Math.cos(FY), DY * Math.sin(FY)]
-    }, IY.rgb.ansi16 = function(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [DY, FY, AY] = YY;
-      let RY = null === rY ? IY.rgb.hsv(YY)[2] : rY;
-      if (RY = Math.round(RY / 50), 0 === RY) return 30;
-      let OY = 30 + (Math.round(AY / 255) << 2 | Math.round(FY / 255) << 1 | Math.round(DY / 255));
-      return 2 === RY && (OY += 60), OY
-    }, IY.hsv.ansi16 = function(YY) {
-      return IY.rgb.ansi16(IY.hsv.rgb(YY), YY[2])
-    }, IY.rgb.ansi256 = function(YY) {
-      const rY = YY[0],
-        DY = YY[1],
-        FY = YY[2];
-      if (rY === DY && DY === FY) return rY < 8 ? 16 : rY > 248 ? 231 : Math.round((rY - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(rY / 255 * 5) + 6 * Math.round(DY / 255 * 5) + Math.round(FY / 255 * 5)
-    }, IY.ansi16.rgb = function(YY) {
-      let rY = YY % 10;
-      if (0 === rY || 7 === rY) return YY > 50 && (rY += 3.5), rY = rY / 10.5 * 255, [rY, rY, rY];
-      const DY = .5 * (1 + ~~(YY > 50));
-      return [(1 & rY) * DY * 255, (rY >> 1 & 1) * DY * 255, (rY >> 2 & 1) * DY * 255]
-    }, IY.ansi256.rgb = function(YY) {
-      if (YY >= 232) {
-        const rY = 10 * (YY - 232) + 8;
-        return [rY, rY, rY]
+      return [255 * FT, 255 * ST, 255 * DT]
+    }, kT.cmyk.rgb = function(TT) {
+      const oT = TT[0] / 100,
+        IT = TT[1] / 100,
+        iT = TT[2] / 100,
+        zT = TT[3] / 100;
+      return [255 * (1 - Math.min(1, oT * (1 - zT) + zT)), 255 * (1 - Math.min(1, IT * (1 - zT) + zT)), 255 * (1 - Math.min(1, iT * (1 - zT) + zT))]
+    }, kT.xyz.rgb = function(TT) {
+      const oT = TT[0] / 100,
+        IT = TT[1] / 100,
+        iT = TT[2] / 100;
+      let zT, kT, WT;
+      return zT = 3.2406 * oT + -1.5372 * IT + -.4986 * iT, kT = -.9689 * oT + 1.8758 * IT + .0415 * iT, WT = .0557 * oT + -.204 * IT + 1.057 * iT, zT = zT > .0031308 ? 1.055 * zT ** (1 / 2.4) - .055 : 12.92 * zT, kT = kT > .0031308 ? 1.055 * kT ** (1 / 2.4) - .055 : 12.92 * kT, WT = WT > .0031308 ? 1.055 * WT ** (1 / 2.4) - .055 : 12.92 * WT, zT = Math.min(Math.max(0, zT), 1), kT = Math.min(Math.max(0, kT), 1), WT = Math.min(Math.max(0, WT), 1), [255 * zT, 255 * kT, 255 * WT]
+    }, kT.xyz.lab = function(TT) {
+      let oT = TT[0],
+        IT = TT[1],
+        iT = TT[2];
+      oT /= 95.047, IT /= 100, iT /= 108.883, oT = oT > .008856 ? oT ** (1 / 3) : 7.787 * oT + 16 / 116, IT = IT > .008856 ? IT ** (1 / 3) : 7.787 * IT + 16 / 116, iT = iT > .008856 ? iT ** (1 / 3) : 7.787 * iT + 16 / 116;
+      return [116 * IT - 16, 500 * (oT - IT), 200 * (IT - iT)]
+    }, kT.lab.xyz = function(TT) {
+      let oT, IT, iT;
+      IT = (TT[0] + 16) / 116, oT = TT[1] / 500 + IT, iT = IT - TT[2] / 200;
+      const zT = IT ** 3,
+        kT = oT ** 3,
+        WT = iT ** 3;
+      return IT = zT > .008856 ? zT : (IT - 16 / 116) / 7.787, oT = kT > .008856 ? kT : (oT - 16 / 116) / 7.787, iT = WT > .008856 ? WT : (iT - 16 / 116) / 7.787, oT *= 95.047, IT *= 100, iT *= 108.883, [oT, IT, iT]
+    }, kT.lab.lch = function(TT) {
+      const oT = TT[0],
+        IT = TT[1],
+        iT = TT[2];
+      let zT;
+      zT = 360 * Math.atan2(iT, IT) / 2 / Math.PI, zT < 0 && (zT += 360);
+      return [oT, Math.sqrt(IT * IT + iT * iT), zT]
+    }, kT.lch.lab = function(TT) {
+      const oT = TT[0],
+        IT = TT[1],
+        iT = TT[2] / 360 * 2 * Math.PI;
+      return [oT, IT * Math.cos(iT), IT * Math.sin(iT)]
+    }, kT.rgb.ansi16 = function(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [IT, iT, zT] = TT;
+      let WT = null === oT ? kT.rgb.hsv(TT)[2] : oT;
+      if (WT = Math.round(WT / 50), 0 === WT) return 30;
+      let XT = 30 + (Math.round(zT / 255) << 2 | Math.round(iT / 255) << 1 | Math.round(IT / 255));
+      return 2 === WT && (XT += 60), XT
+    }, kT.hsv.ansi16 = function(TT) {
+      return kT.rgb.ansi16(kT.hsv.rgb(TT), TT[2])
+    }, kT.rgb.ansi256 = function(TT) {
+      const oT = TT[0],
+        IT = TT[1],
+        iT = TT[2];
+      if (oT === IT && IT === iT) return oT < 8 ? 16 : oT > 248 ? 231 : Math.round((oT - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(oT / 255 * 5) + 6 * Math.round(IT / 255 * 5) + Math.round(iT / 255 * 5)
+    }, kT.ansi16.rgb = function(TT) {
+      let oT = TT % 10;
+      if (0 === oT || 7 === oT) return TT > 50 && (oT += 3.5), oT = oT / 10.5 * 255, [oT, oT, oT];
+      const IT = .5 * (1 + ~~(TT > 50));
+      return [(1 & oT) * IT * 255, (oT >> 1 & 1) * IT * 255, (oT >> 2 & 1) * IT * 255]
+    }, kT.ansi256.rgb = function(TT) {
+      if (TT >= 232) {
+        const oT = 10 * (TT - 232) + 8;
+        return [oT, oT, oT]
       }
-      let rY;
-      YY -= 16;
-      return [Math.floor(YY / 36) / 5 * 255, Math.floor((rY = YY % 36) / 6) / 5 * 255, rY % 6 / 5 * 255]
-    }, IY.rgb.hex = function(YY) {
-      const rY = (((255 & Math.round(YY[0])) << 16) + ((255 & Math.round(YY[1])) << 8) + (255 & Math.round(YY[2]))).toString(16).toUpperCase();
-      return "000000".substring(rY.length) + rY
-    }, IY.hex.rgb = function(YY) {
-      const rY = YY.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!rY) return [0, 0, 0];
-      let DY = rY[0];
-      3 === rY[0].length && (DY = DY.split("").map((YY => YY + YY)).join(""));
-      const FY = parseInt(DY, 16);
-      return [FY >> 16 & 255, FY >> 8 & 255, 255 & FY]
-    }, IY.rgb.hcg = function(YY) {
-      const rY = YY[0] / 255,
-        DY = YY[1] / 255,
-        FY = YY[2] / 255,
-        AY = Math.max(Math.max(rY, DY), FY),
-        IY = Math.min(Math.min(rY, DY), FY),
-        RY = AY - IY;
-      let OY, gY;
-      return OY = RY < 1 ? IY / (1 - RY) : 0, gY = RY <= 0 ? 0 : AY === rY ? (DY - FY) / RY % 6 : AY === DY ? 2 + (FY - rY) / RY : 4 + (rY - DY) / RY, gY /= 6, gY %= 1, [360 * gY, 100 * RY, 100 * OY]
-    }, IY.hsl.hcg = function(YY) {
-      const rY = YY[1] / 100,
-        DY = YY[2] / 100,
-        FY = DY < .5 ? 2 * rY * DY : 2 * rY * (1 - DY);
-      let AY = 0;
-      return FY < 1 && (AY = (DY - .5 * FY) / (1 - FY)), [YY[0], 100 * FY, 100 * AY]
-    }, IY.hsv.hcg = function(YY) {
-      const rY = YY[1] / 100,
-        DY = YY[2] / 100,
-        FY = rY * DY;
-      let AY = 0;
-      return FY < 1 && (AY = (DY - FY) / (1 - FY)), [YY[0], 100 * FY, 100 * AY]
-    }, IY.hcg.rgb = function(YY) {
-      const rY = YY[0] / 360,
-        DY = YY[1] / 100,
-        FY = YY[2] / 100;
-      if (0 === DY) return [255 * FY, 255 * FY, 255 * FY];
-      const AY = [0, 0, 0],
-        IY = rY % 1 * 6,
-        RY = IY % 1,
-        OY = 1 - RY;
-      let gY = 0;
-      switch (Math.floor(IY)) {
+      let oT;
+      TT -= 16;
+      return [Math.floor(TT / 36) / 5 * 255, Math.floor((oT = TT % 36) / 6) / 5 * 255, oT % 6 / 5 * 255]
+    }, kT.rgb.hex = function(TT) {
+      const oT = (((255 & Math.round(TT[0])) << 16) + ((255 & Math.round(TT[1])) << 8) + (255 & Math.round(TT[2]))).toString(16).toUpperCase();
+      return "000000".substring(oT.length) + oT
+    }, kT.hex.rgb = function(TT) {
+      const oT = TT.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!oT) return [0, 0, 0];
+      let IT = oT[0];
+      3 === oT[0].length && (IT = IT.split("").map((TT => TT + TT)).join(""));
+      const iT = parseInt(IT, 16);
+      return [iT >> 16 & 255, iT >> 8 & 255, 255 & iT]
+    }, kT.rgb.hcg = function(TT) {
+      const oT = TT[0] / 255,
+        IT = TT[1] / 255,
+        iT = TT[2] / 255,
+        zT = Math.max(Math.max(oT, IT), iT),
+        kT = Math.min(Math.min(oT, IT), iT),
+        WT = zT - kT;
+      let XT, BT;
+      return XT = WT < 1 ? kT / (1 - WT) : 0, BT = WT <= 0 ? 0 : zT === oT ? (IT - iT) / WT % 6 : zT === IT ? 2 + (iT - oT) / WT : 4 + (oT - IT) / WT, BT /= 6, BT %= 1, [360 * BT, 100 * WT, 100 * XT]
+    }, kT.hsl.hcg = function(TT) {
+      const oT = TT[1] / 100,
+        IT = TT[2] / 100,
+        iT = IT < .5 ? 2 * oT * IT : 2 * oT * (1 - IT);
+      let zT = 0;
+      return iT < 1 && (zT = (IT - .5 * iT) / (1 - iT)), [TT[0], 100 * iT, 100 * zT]
+    }, kT.hsv.hcg = function(TT) {
+      const oT = TT[1] / 100,
+        IT = TT[2] / 100,
+        iT = oT * IT;
+      let zT = 0;
+      return iT < 1 && (zT = (IT - iT) / (1 - iT)), [TT[0], 100 * iT, 100 * zT]
+    }, kT.hcg.rgb = function(TT) {
+      const oT = TT[0] / 360,
+        IT = TT[1] / 100,
+        iT = TT[2] / 100;
+      if (0 === IT) return [255 * iT, 255 * iT, 255 * iT];
+      const zT = [0, 0, 0],
+        kT = oT % 1 * 6,
+        WT = kT % 1,
+        XT = 1 - WT;
+      let BT = 0;
+      switch (Math.floor(kT)) {
         case 0:
-          AY[0] = 1, AY[1] = RY, AY[2] = 0;
+          zT[0] = 1, zT[1] = WT, zT[2] = 0;
           break;
         case 1:
-          AY[0] = OY, AY[1] = 1, AY[2] = 0;
+          zT[0] = XT, zT[1] = 1, zT[2] = 0;
           break;
         case 2:
-          AY[0] = 0, AY[1] = 1, AY[2] = RY;
+          zT[0] = 0, zT[1] = 1, zT[2] = WT;
           break;
         case 3:
-          AY[0] = 0, AY[1] = OY, AY[2] = 1;
+          zT[0] = 0, zT[1] = XT, zT[2] = 1;
           break;
         case 4:
-          AY[0] = RY, AY[1] = 0, AY[2] = 1;
+          zT[0] = WT, zT[1] = 0, zT[2] = 1;
           break;
         default:
-          AY[0] = 1, AY[1] = 0, AY[2] = OY
+          zT[0] = 1, zT[1] = 0, zT[2] = XT
       }
-      return gY = (1 - DY) * FY, [255 * (DY * AY[0] + gY), 255 * (DY * AY[1] + gY), 255 * (DY * AY[2] + gY)]
-    }, IY.hcg.hsv = function(YY) {
-      const rY = YY[1] / 100,
-        DY = rY + YY[2] / 100 * (1 - rY);
-      let FY = 0;
-      return DY > 0 && (FY = rY / DY), [YY[0], 100 * FY, 100 * DY]
-    }, IY.hcg.hsl = function(YY) {
-      const rY = YY[1] / 100,
-        DY = YY[2] / 100 * (1 - rY) + .5 * rY;
-      let FY = 0;
-      return DY > 0 && DY < .5 ? FY = rY / (2 * DY) : DY >= .5 && DY < 1 && (FY = rY / (2 * (1 - DY))), [YY[0], 100 * FY, 100 * DY]
-    }, IY.hcg.hwb = function(YY) {
-      const rY = YY[1] / 100,
-        DY = rY + YY[2] / 100 * (1 - rY);
-      return [YY[0], 100 * (DY - rY), 100 * (1 - DY)]
-    }, IY.hwb.hcg = function(YY) {
-      const rY = YY[1] / 100,
-        DY = 1 - YY[2] / 100,
-        FY = DY - rY;
-      let AY = 0;
-      return FY < 1 && (AY = (DY - FY) / (1 - FY)), [YY[0], 100 * FY, 100 * AY]
-    }, IY.apple.rgb = function(YY) {
-      return [YY[0] / 65535 * 255, YY[1] / 65535 * 255, YY[2] / 65535 * 255]
-    }, IY.rgb.apple = function(YY) {
-      return [YY[0] / 255 * 65535, YY[1] / 255 * 65535, YY[2] / 255 * 65535]
-    }, IY.gray.rgb = function(YY) {
-      return [YY[0] / 100 * 255, YY[0] / 100 * 255, YY[0] / 100 * 255]
-    }, IY.gray.hsl = function(YY) {
-      return [0, 0, YY[0]]
-    }, IY.gray.hsv = IY.gray.hsl, IY.gray.hwb = function(YY) {
-      return [0, 100, YY[0]]
-    }, IY.gray.cmyk = function(YY) {
-      return [0, 0, 0, YY[0]]
-    }, IY.gray.lab = function(YY) {
-      return [YY[0], 0, 0]
-    }, IY.gray.hex = function(YY) {
-      const rY = 255 & Math.round(YY[0] / 100 * 255),
-        DY = ((rY << 16) + (rY << 8) + rY).toString(16).toUpperCase();
-      return "000000".substring(DY.length) + DY
-    }, IY.rgb.gray = function(YY) {
-      return [(YY[0] + YY[1] + YY[2]) / 3 / 255 * 100]
+      return BT = (1 - IT) * iT, [255 * (IT * zT[0] + BT), 255 * (IT * zT[1] + BT), 255 * (IT * zT[2] + BT)]
+    }, kT.hcg.hsv = function(TT) {
+      const oT = TT[1] / 100,
+        IT = oT + TT[2] / 100 * (1 - oT);
+      let iT = 0;
+      return IT > 0 && (iT = oT / IT), [TT[0], 100 * iT, 100 * IT]
+    }, kT.hcg.hsl = function(TT) {
+      const oT = TT[1] / 100,
+        IT = TT[2] / 100 * (1 - oT) + .5 * oT;
+      let iT = 0;
+      return IT > 0 && IT < .5 ? iT = oT / (2 * IT) : IT >= .5 && IT < 1 && (iT = oT / (2 * (1 - IT))), [TT[0], 100 * iT, 100 * IT]
+    }, kT.hcg.hwb = function(TT) {
+      const oT = TT[1] / 100,
+        IT = oT + TT[2] / 100 * (1 - oT);
+      return [TT[0], 100 * (IT - oT), 100 * (1 - IT)]
+    }, kT.hwb.hcg = function(TT) {
+      const oT = TT[1] / 100,
+        IT = 1 - TT[2] / 100,
+        iT = IT - oT;
+      let zT = 0;
+      return iT < 1 && (zT = (IT - iT) / (1 - iT)), [TT[0], 100 * iT, 100 * zT]
+    }, kT.apple.rgb = function(TT) {
+      return [TT[0] / 65535 * 255, TT[1] / 65535 * 255, TT[2] / 65535 * 255]
+    }, kT.rgb.apple = function(TT) {
+      return [TT[0] / 255 * 65535, TT[1] / 255 * 65535, TT[2] / 255 * 65535]
+    }, kT.gray.rgb = function(TT) {
+      return [TT[0] / 100 * 255, TT[0] / 100 * 255, TT[0] / 100 * 255]
+    }, kT.gray.hsl = function(TT) {
+      return [0, 0, TT[0]]
+    }, kT.gray.hsv = kT.gray.hsl, kT.gray.hwb = function(TT) {
+      return [0, 100, TT[0]]
+    }, kT.gray.cmyk = function(TT) {
+      return [0, 0, 0, TT[0]]
+    }, kT.gray.lab = function(TT) {
+      return [TT[0], 0, 0]
+    }, kT.gray.hex = function(TT) {
+      const oT = 255 & Math.round(TT[0] / 100 * 255),
+        IT = ((oT << 16) + (oT << 8) + oT).toString(16).toUpperCase();
+      return "000000".substring(IT.length) + IT
+    }, kT.rgb.gray = function(TT) {
+      return [(TT[0] + TT[1] + TT[2]) / 3 / 255 * 100]
     }
   },
-  36085: (YY, rY, DY) => {
-    const FY = DY(36093),
-      AY = DY(36107),
-      IY = {};
-    Object.keys(FY).forEach((YY => {
-      IY[YY] = {}, Object.defineProperty(IY[YY], "channels", {
-        value: FY[YY].channels
-      }), Object.defineProperty(IY[YY], "labels", {
-        value: FY[YY].labels
+  35660: (TT, oT, IT) => {
+    const iT = IT(35668),
+      zT = IT(35674),
+      kT = {};
+    Object.keys(iT).forEach((TT => {
+      kT[TT] = {}, Object.defineProperty(kT[TT], "channels", {
+        value: iT[TT].channels
+      }), Object.defineProperty(kT[TT], "labels", {
+        value: iT[TT].labels
       });
-      const rY = AY(YY);
-      Object.keys(rY).forEach((DY => {
-        const FY = rY[DY];
-        IY[YY][DY] = function(YY) {
-          const rY = function() {
-            for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
-            const AY = DY[0];
-            if (void 0 === AY || null === AY) return AY;
-            AY.length > 1 && (DY = AY);
-            const IY = YY(DY);
-            if ("object" === typeof IY)
-              for (let YY = IY.length, RY = 0; RY < YY; RY++) IY[RY] = Math.round(IY[RY]);
-            return IY
+      const oT = zT(TT);
+      Object.keys(oT).forEach((IT => {
+        const iT = oT[IT];
+        kT[TT][IT] = function(TT) {
+          const oT = function() {
+            for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
+            const zT = IT[0];
+            if (void 0 === zT || null === zT) return zT;
+            zT.length > 1 && (IT = zT);
+            const kT = TT(IT);
+            if ("object" === typeof kT)
+              for (let TT = kT.length, WT = 0; WT < TT; WT++) kT[WT] = Math.round(kT[WT]);
+            return kT
           };
-          return "conversion" in YY && (rY.conversion = YY.conversion), rY
-        }(FY), IY[YY][DY].raw = function(YY) {
-          const rY = function() {
-            for (var rY = arguments.length, DY = new Array(rY), FY = 0; FY < rY; FY++) DY[FY] = arguments[FY];
-            const AY = DY[0];
-            return void 0 === AY || null === AY ? AY : (AY.length > 1 && (DY = AY), YY(DY))
+          return "conversion" in TT && (oT.conversion = TT.conversion), oT
+        }(iT), kT[TT][IT].raw = function(TT) {
+          const oT = function() {
+            for (var oT = arguments.length, IT = new Array(oT), iT = 0; iT < oT; iT++) IT[iT] = arguments[iT];
+            const zT = IT[0];
+            return void 0 === zT || null === zT ? zT : (zT.length > 1 && (IT = zT), TT(IT))
           };
-          return "conversion" in YY && (rY.conversion = YY.conversion), rY
-        }(FY)
+          return "conversion" in TT && (oT.conversion = TT.conversion), oT
+        }(iT)
       }))
-    })), YY.exports = IY
+    })), TT.exports = kT
   },
-  36107: (YY, rY, DY) => {
-    const FY = DY(36093);
+  35674: (TT, oT, IT) => {
+    const iT = IT(35668);
 
-    function AY(YY) {
-      const rY = function() {
-          const YY = {},
-            rY = Object.keys(FY);
-          for (let DY = rY.length, FY = 0; FY < DY; FY++) YY[rY[FY]] = {
+    function zT(TT) {
+      const oT = function() {
+          const TT = {},
+            oT = Object.keys(iT);
+          for (let IT = oT.length, iT = 0; iT < IT; iT++) TT[oT[iT]] = {
             distance: -1,
             parent: null
           };
-          return YY
+          return TT
         }(),
-        DY = [YY];
-      for (rY[YY].distance = 0; DY.length;) {
-        const YY = DY.pop(),
-          AY = Object.keys(FY[YY]);
-        for (let FY = AY.length, IY = 0; IY < FY; IY++) {
-          const FY = AY[IY],
-            RY = rY[FY]; - 1 === RY.distance && (RY.distance = rY[YY].distance + 1, RY.parent = YY, DY.unshift(FY))
+        IT = [TT];
+      for (oT[TT].distance = 0; IT.length;) {
+        const TT = IT.pop(),
+          zT = Object.keys(iT[TT]);
+        for (let iT = zT.length, kT = 0; kT < iT; kT++) {
+          const iT = zT[kT],
+            WT = oT[iT]; - 1 === WT.distance && (WT.distance = oT[TT].distance + 1, WT.parent = TT, IT.unshift(iT))
         }
       }
-      return rY
+      return oT
     }
 
-    function IY(YY, rY) {
-      return function(DY) {
-        return rY(YY(DY))
+    function kT(TT, oT) {
+      return function(IT) {
+        return oT(TT(IT))
       }
     }
 
-    function RY(YY, rY) {
-      const DY = [rY[YY].parent, YY];
-      let AY = FY[rY[YY].parent][YY],
-        RY = rY[YY].parent;
-      for (; rY[RY].parent;) DY.unshift(rY[RY].parent), AY = IY(FY[rY[RY].parent][RY], AY), RY = rY[RY].parent;
-      return AY.conversion = DY, AY
+    function WT(TT, oT) {
+      const IT = [oT[TT].parent, TT];
+      let zT = iT[oT[TT].parent][TT],
+        WT = oT[TT].parent;
+      for (; oT[WT].parent;) IT.unshift(oT[WT].parent), zT = kT(iT[oT[WT].parent][WT], zT), WT = oT[WT].parent;
+      return zT.conversion = IT, zT
     }
-    YY.exports = function(YY) {
-      const rY = AY(YY),
-        DY = {},
-        FY = Object.keys(rY);
-      for (let AY = FY.length, IY = 0; IY < AY; IY++) {
-        const YY = FY[IY];
-        null !== rY[YY].parent && (DY[YY] = RY(YY, rY))
+    TT.exports = function(TT) {
+      const oT = zT(TT),
+        IT = {},
+        iT = Object.keys(oT);
+      for (let zT = iT.length, kT = 0; kT < zT; kT++) {
+        const TT = iT[kT];
+        null !== oT[TT].parent && (IT[TT] = WT(TT, oT))
       }
-      return DY
+      return IT
     }
   },
-  36099: YY => {
-    YY.exports = {
+  35670: TT => {
+    TT.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36074: (YY, rY, DY) => {
-    var FY = DY(36082),
-      AY = Array.prototype.concat,
-      IY = Array.prototype.slice,
-      RY = YY.exports = function(YY) {
-        for (var rY = [], DY = 0, RY = YY.length; DY < RY; DY++) {
-          var OY = YY[DY];
-          FY(OY) ? rY = AY.call(rY, IY.call(OY)) : rY.push(OY)
+  35650: (TT, oT, IT) => {
+    var iT = IT(35652),
+      zT = Array.prototype.concat,
+      kT = Array.prototype.slice,
+      WT = TT.exports = function(TT) {
+        for (var oT = [], IT = 0, WT = TT.length; IT < WT; IT++) {
+          var XT = TT[IT];
+          iT(XT) ? oT = zT.call(oT, kT.call(XT)) : oT.push(XT)
         }
-        return rY
+        return oT
       };
-    RY.wrap = function(YY) {
+    WT.wrap = function(TT) {
       return function() {
-        return YY(RY(arguments))
+        return TT(WT(arguments))
       }
     }
   },
-  36082: YY => {
-    YY.exports = function(YY) {
-      return !(!YY || "string" === typeof YY) && (YY instanceof Array || Array.isArray(YY) || YY.length >= 0 && (YY.splice instanceof Function || Object.getOwnPropertyDescriptor(YY, YY.length - 1) && "String" !== YY.constructor.name))
+  35652: TT => {
+    TT.exports = function(TT) {
+      return !(!TT || "string" === typeof TT) && (TT instanceof Array || Array.isArray(TT) || TT.length >= 0 && (TT.splice instanceof Function || Object.getOwnPropertyDescriptor(TT, TT.length - 1) && "String" !== TT.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

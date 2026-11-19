@@ -1,467 +1,467 @@
 export const id = 298;
 export const ids = [298];
 export const modules = {
-  40846: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      _ENVTextureLoader: () => NY
+  40616: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      _ENVTextureLoader: () => uT
     });
-    var FY = DY(39065),
-      AY = DY(36524),
-      IY = DY(36559),
-      RY = DY(39120),
-      OY = DY(38975),
-      gY = DY(39123),
-      aY = (DY(39217), DY(40853)),
-      vY = DY(38040),
-      uY = (DY(40863), DY(40891), DY(39180));
-    const sY = "image/png",
-      iY = [134, 22, 135, 150, 246, 214, 150, 54];
+    var iT = IT(38698),
+      zT = IT(36118),
+      kT = IT(36156),
+      WT = IT(38752),
+      XT = IT(38594),
+      BT = IT(38758),
+      FT = (IT(38882), IT(40618)),
+      ST = IT(37660),
+      DT = (IT(40629), IT(40639), IT(38851));
+    const LT = "image/png",
+      xT = [134, 22, 135, 150, 246, 214, 150, 54];
 
-    function yY(YY) {
-      const rY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
-      let DY = 0;
-      for (let RY = 0; RY < iY.length; RY++)
-        if (rY.getUint8(DY++) !== iY[RY]) return vY.d.Error("Not a babylon environment map"), null;
-      let FY, AY = "";
-      for (; FY = rY.getUint8(DY++);) AY += String.fromCharCode(FY);
-      let IY = JSON.parse(AY);
-      return IY = QY(IY), IY.binaryDataPosition = DY, IY.specular && (IY.specular.lodGenerationScale = IY.specular.lodGenerationScale || .8), IY
+    function cT(TT) {
+      const oT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      let IT = 0;
+      for (let WT = 0; WT < xT.length; WT++)
+        if (oT.getUint8(IT++) !== xT[WT]) return ST.d.Error("Not a babylon environment map"), null;
+      let iT, zT = "";
+      for (; iT = oT.getUint8(IT++);) zT += String.fromCharCode(iT);
+      let kT = JSON.parse(zT);
+      return kT = KT(kT), kT.binaryDataPosition = IT, kT.specular && (kT.specular.lodGenerationScale = kT.specular.lodGenerationScale || .8), kT
     }
 
-    function QY(YY) {
-      if (YY.version > 2) throw new Error(`Unsupported babylon environment map version "${YY.version}". Latest supported version is "2".`);
-      return 2 === YY.version ? YY : YY = {
-        ...YY,
+    function KT(TT) {
+      if (TT.version > 2) throw new Error(`Unsupported babylon environment map version "${TT.version}". Latest supported version is "2".`);
+      return 2 === TT.version ? TT : TT = {
+        ...TT,
         version: 2,
-        imageType: sY
+        imageType: LT
       }
     }
 
-    function oY(YY, rY) {
-      const DY = (rY = QY(rY)).specular;
-      let FY = Math.log2(rY.width);
-      if (FY = Math.round(FY) + 1, DY.mipmaps.length !== 6 * FY) throw new Error(`Unsupported specular mipmaps number "${DY.mipmaps.length}"`);
-      const AY = new Array(FY);
-      for (let IY = 0; IY < FY; IY++) {
-        AY[IY] = new Array(6);
-        for (let FY = 0; FY < 6; FY++) {
-          const RY = DY.mipmaps[6 * IY + FY];
-          AY[IY][FY] = new Uint8Array(YY.buffer, YY.byteOffset + rY.binaryDataPosition + RY.position, RY.length)
+    function MT(TT, oT) {
+      const IT = (oT = KT(oT)).specular;
+      let iT = Math.log2(oT.width);
+      if (iT = Math.round(iT) + 1, IT.mipmaps.length !== 6 * iT) throw new Error(`Unsupported specular mipmaps number "${IT.mipmaps.length}"`);
+      const zT = new Array(iT);
+      for (let kT = 0; kT < iT; kT++) {
+        zT[kT] = new Array(6);
+        for (let iT = 0; iT < 6; iT++) {
+          const WT = IT.mipmaps[6 * kT + iT];
+          zT[kT][iT] = new Uint8Array(TT.buffer, TT.byteOffset + oT.binaryDataPosition + WT.position, WT.length)
         }
       }
-      return AY
+      return zT
     }
 
-    function WY(YY, rY) {
-      rY = QY(rY);
-      const DY = new Array(6),
-        FY = rY.irradiance?.irradianceTexture;
-      if (FY) {
-        if (6 !== FY.faces.length) throw new Error(`Incorrect irradiance texture faces number "${FY.faces.length}"`);
-        for (let AY = 0; AY < 6; AY++) {
-          const IY = FY.faces[AY];
-          DY[AY] = new Uint8Array(YY.buffer, YY.byteOffset + rY.binaryDataPosition + IY.position, IY.length)
+    function rT(TT, oT) {
+      oT = KT(oT);
+      const IT = new Array(6),
+        iT = oT.irradiance?.irradianceTexture;
+      if (iT) {
+        if (6 !== iT.faces.length) throw new Error(`Incorrect irradiance texture faces number "${iT.faces.length}"`);
+        for (let zT = 0; zT < 6; zT++) {
+          const kT = iT.faces[zT];
+          IT[zT] = new Uint8Array(TT.buffer, TT.byteOffset + oT.binaryDataPosition + kT.position, kT.length)
         }
       }
-      return DY
+      return IT
     }
 
-    function EY(YY, rY, DY) {
-      const FY = (DY = QY(DY)).specular;
-      if (!FY) return Promise.resolve([]);
-      YY._lodGenerationScale = FY.lodGenerationScale;
-      const IY = [],
-        RY = oY(rY, DY);
-      IY.push(VY(YY, RY, DY.imageType));
-      const OY = DY.irradiance?.irradianceTexture;
-      if (OY) {
-        const FY = WY(rY, DY);
-        let RY = null;
-        DY.irradiance?.irradianceTexture?.dominantDirection && (RY = AY.r.FromArray(DY.irradiance.irradianceTexture.dominantDirection)), IY.push(SY(YY, FY, OY.size, DY.imageType, RY))
+    function AT(TT, oT, IT) {
+      const iT = (IT = KT(IT)).specular;
+      if (!iT) return Promise.resolve([]);
+      TT._lodGenerationScale = iT.lodGenerationScale;
+      const kT = [],
+        WT = MT(oT, IT);
+      kT.push(hT(TT, WT, IT.imageType));
+      const XT = IT.irradiance?.irradianceTexture;
+      if (XT) {
+        const iT = rT(oT, IT);
+        let WT = null;
+        IT.irradiance?.irradianceTexture?.dominantDirection && (WT = zT.m.FromArray(IT.irradiance.irradianceTexture.dominantDirection)), kT.push(wT(TT, iT, XT.size, IT.imageType, WT))
       }
-      return Promise.all(IY)
+      return Promise.all(kT)
     }
-    async function mY(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY, vY) {
-      return await new Promise(((uY, sY) => {
-        if (DY) {
-          const DY = rY.createTexture(null, !0, !0, null, 1, null, (YY => {
-            sY(YY)
-          }), YY);
-          FY?.onEffectCreatedObservable.addOnce((OY => {
-            OY.executeWhenCompiled((() => {
-              FY.externalTextureSamplerBinding = !0, FY.onApply = FY => {
-                FY._bindTexture("textureSampler", DY), FY.setFloat2("scale", 1, rY._features.needsInvertingBitmap && YY instanceof ImageBitmap ? -1 : 1)
-              }, rY.scenes.length && (rY.scenes[0].postProcessManager.directRender([FY], aY, !0, IY, RY), rY.restoreDefaultFramebuffer(), DY.dispose(), URL.revokeObjectURL(AY), uY())
+    async function gT(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT, ST) {
+      return await new Promise(((DT, LT) => {
+        if (IT) {
+          const IT = oT.createTexture(null, !0, !0, null, 1, null, (TT => {
+            LT(TT)
+          }), TT);
+          iT?.onEffectCreatedObservable.addOnce((XT => {
+            XT.executeWhenCompiled((() => {
+              iT.externalTextureSamplerBinding = !0, iT.onApply = iT => {
+                iT._bindTexture("textureSampler", IT), iT.setFloat2("scale", 1, oT._features.needsInvertingBitmap && TT instanceof ImageBitmap ? -1 : 1)
+              }, oT.scenes.length && (oT.scenes[0].postProcessManager.directRender([iT], FT, !0, kT, WT), oT.restoreDefaultFramebuffer(), IT.dispose(), URL.revokeObjectURL(zT), DT())
             }))
           }))
         } else {
-          if (rY._uploadImageToTexture(vY, YY, IY, RY), OY) {
-            const DY = gY[RY];
-            DY && rY._uploadImageToTexture(DY._texture, YY, IY, 0)
+          if (oT._uploadImageToTexture(ST, TT, kT, WT), XT) {
+            const IT = BT[WT];
+            IT && oT._uploadImageToTexture(IT._texture, TT, kT, 0)
           }
-          uY()
+          DT()
         }
       }))
     }
-    async function VY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : sY;
-      const FY = YY.ky();
-      YY.format = 5, YY.type = 0, YY.generateMipMaps = !0, YY._cachedAnisotropicFilteringLevel = null, FY.updateTextureSamplingMode(3, YY), await lY(YY, rY, !0, DY), YY.isReady = !0
+    async function hT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : LT;
+      const iT = TT.Zc();
+      TT.format = 5, TT.type = 0, TT.generateMipMaps = !0, TT._cachedAnisotropicFilteringLevel = null, iT.updateTextureSamplingMode(3, TT), await mT(TT, oT, !0, IT), TT.isReady = !0
     }
-    async function SY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sY,
-        AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const IY = YY.ky(),
-        RY = new OY.c(IY, 5),
-        aY = new gY.e(IY, RY);
-      YY._irradianceTexture = aY, aY._dominantDirection = AY, RY.isCube = !0, RY.format = 5, RY.type = 0, RY.generateMipMaps = !0, RY._cachedAnisotropicFilteringLevel = null, RY.generateMipMaps = !0, RY.width = DY, RY.height = DY, IY.updateTextureSamplingMode(3, RY), await lY(RY, [rY], !1, FY), IY.generateMipMapsForCubemap(RY), RY.isReady = !0
+    async function wT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LT,
+        zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const kT = TT.Zc(),
+        WT = new XT.e(kT, 5),
+        FT = new BT.e(kT, WT);
+      TT._irradianceTexture = FT, FT._dominantDirection = zT, WT.isCube = !0, WT.format = 5, WT.type = 0, WT.generateMipMaps = !0, WT._cachedAnisotropicFilteringLevel = null, WT.generateMipMaps = !0, WT.width = IT, WT.height = IT, kT.updateTextureSamplingMode(3, WT), await mT(WT, [oT], !1, iT), kT.generateMipMapsForCubemap(WT), WT.isReady = !0
     }
-    async function lY(YY, rY, AY) {
-      let RY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sY;
-      if (!(0, FY.g)(YY.width)) throw new Error("Texture size must be a power of two");
-      const vY = (0, IY.ILog2)(YY.width) + 1,
-        iY = YY.ky();
-      let yY = !1,
-        QY = !1,
-        oY = null,
-        WY = null,
-        EY = null;
-      const VY = iY.getCaps();
-      VY.textureLOD ? iY._features.supportRenderAndCopyToLodForFloatTextures ? VY.textureHalfFloatRender && VY.textureHalfFloatLinearFiltering ? (yY = !0, YY.type = 2) : VY.textureFloatRender && VY.textureFloatLinearFiltering && (yY = !0, YY.type = 1) : yY = !1 : (yY = !1, QY = AY);
-      let SY = 0;
-      if (yY) iY.isWebGPU ? (SY = 1, await DY.e(332).then((() => DY(60433)))) : await DY.e(314).then((() => DY(60440))), oY = new aY.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, iY, !1, void 0, YY.type, void 0, null, !1, void 0, SY), YY._isRGBD = !1, YY.invertY = !1, WY = iY.createRenderTargetCubeTexture(YY.width, {
+    async function mT(TT, oT, zT) {
+      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LT;
+      if (!(0, iT.h)(TT.width)) throw new Error("Texture size must be a power of two");
+      const ST = (0, kT.ILog2)(TT.width) + 1,
+        xT = TT.Zc();
+      let cT = !1,
+        KT = !1,
+        MT = null,
+        rT = null,
+        AT = null;
+      const hT = xT.getCaps();
+      hT.textureLOD ? xT._features.supportRenderAndCopyToLodForFloatTextures ? hT.textureHalfFloatRender && hT.textureHalfFloatLinearFiltering ? (cT = !0, TT.type = 2) : hT.textureFloatRender && hT.textureFloatLinearFiltering && (cT = !0, TT.type = 1) : cT = !1 : (cT = !1, KT = zT);
+      let wT = 0;
+      if (cT) xT.isWebGPU ? (wT = 1, await IT.e(332).then((() => IT(60246)))) : await IT.e(314).then((() => IT(60251))), MT = new FT.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, xT, !1, void 0, TT.type, void 0, null, !1, void 0, wT), TT._isRGBD = !1, TT.invertY = !1, rT = xT.createRenderTargetCubeTexture(TT.width, {
         generateDepthBuffer: !1,
         generateMipMaps: !0,
         generateStencilBuffer: !1,
         samplingMode: 3,
-        type: YY.type,
+        type: TT.type,
         format: 5
       });
-      else if (YY._isRGBD = !0, YY.invertY = !0, QY) {
-        const rY = 3;
-        EY = {};
-        const DY = YY._lodGenerationScale,
-          FY = YY._lodGenerationOffset;
-        for (let AY = 0; AY < rY; AY++) {
-          const IY = (vY - 1) * DY + FY,
-            RY = FY + (IY - FY) * (1 - AY / (rY - 1)),
-            aY = Math.round(Math.min(Math.max(RY, 0), IY)),
-            uY = new OY.c(iY, 2);
-          uY.isCube = !0, uY.invertY = !0, uY.generateMipMaps = !1, iY.updateTextureSamplingMode(2, uY);
-          const sY = new gY.e(null);
-          switch (sY._isCube = !0, sY._texture = uY, EY[aY] = sY, AY) {
+      else if (TT._isRGBD = !0, TT.invertY = !0, KT) {
+        const oT = 3;
+        AT = {};
+        const IT = TT._lodGenerationScale,
+          iT = TT._lodGenerationOffset;
+        for (let zT = 0; zT < oT; zT++) {
+          const kT = (ST - 1) * IT + iT,
+            WT = iT + (kT - iT) * (1 - zT / (oT - 1)),
+            FT = Math.round(Math.min(Math.max(WT, 0), kT)),
+            DT = new XT.e(xT, 2);
+          DT.isCube = !0, DT.invertY = !0, DT.generateMipMaps = !1, xT.updateTextureSamplingMode(2, DT);
+          const LT = new BT.e(null);
+          switch (LT._isCube = !0, LT._texture = DT, AT[FT] = LT, zT) {
             case 0:
-              YY._lodTextureLow = sY;
+              TT._lodTextureLow = LT;
               break;
             case 1:
-              YY._lodTextureMid = sY;
+              TT._lodTextureMid = LT;
               break;
             case 2:
-              YY._lodTextureHigh = sY
+              TT._lodTextureHigh = LT
           }
         }
       }
-      const lY = [];
-      for (let DY = 0; DY < rY.length; DY++)
-        for (let FY = 0; FY < 6; FY++) {
-          const AY = rY[DY][FY],
-            IY = (0, uY.i)(AY),
-            OY = new Blob([IY], {
-              type: RY
+      const mT = [];
+      for (let IT = 0; IT < oT.length; IT++)
+        for (let iT = 0; iT < 6; iT++) {
+          const zT = oT[IT][iT],
+            kT = (0, DT.i)(zT),
+            XT = new Blob([kT], {
+              type: WT
             }),
-            gY = URL.createObjectURL(OY);
-          let aY;
-          if (iY._features.forceBitmapOverHTMLImageElement) aY = iY.createImageBitmap(OY, {
+            BT = URL.createObjectURL(XT);
+          let FT;
+          if (xT._features.forceBitmapOverHTMLImageElement) FT = xT.createImageBitmap(XT, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
-          }).then((async rY => await mY(rY, iY, yY, oY, gY, FY, DY, QY, EY, WY, YY)));
+          }).then((async oT => await gT(oT, xT, cT, MT, BT, iT, IT, KT, AT, rT, TT)));
           else {
-            const rY = new Image;
-            rY.src = gY, aY = new Promise(((AY, IY) => {
-              rY.onload = () => {
-                mY(rY, iY, yY, oY, gY, FY, DY, QY, EY, WY, YY).then((() => AY())).catch((YY => {
-                  IY(YY)
+            const oT = new Image;
+            oT.src = BT, FT = new Promise(((zT, kT) => {
+              oT.onload = () => {
+                gT(oT, xT, cT, MT, BT, iT, IT, KT, AT, rT, TT).then((() => zT())).catch((TT => {
+                  kT(TT)
                 }))
-              }, rY.onerror = YY => {
-                IY(YY)
+              }, oT.onerror = TT => {
+                kT(TT)
               }
             }))
           }
-          lY.push(aY)
+          mT.push(FT)
         }
-      if (await Promise.all(lY), rY.length < vY) {
-        let DY;
-        const FY = Math.pow(2, vY - 1 - rY.length),
-          AY = FY * FY * 4;
-        switch (YY.type) {
+      if (await Promise.all(mT), oT.length < ST) {
+        let IT;
+        const iT = Math.pow(2, ST - 1 - oT.length),
+          zT = iT * iT * 4;
+        switch (TT.type) {
           case 0:
-            DY = new Uint8Array(AY);
+            IT = new Uint8Array(zT);
             break;
           case 2:
-            DY = new Uint16Array(AY);
+            IT = new Uint16Array(zT);
             break;
           case 1:
-            DY = new Float32Array(AY)
+            IT = new Float32Array(zT)
         }
-        for (let IY = rY.length; IY < vY; IY++)
-          for (let rY = 0; rY < 6; rY++) iY._uploadArrayBufferViewToTexture(WY?.texture || YY, DY, rY, IY)
+        for (let kT = oT.length; kT < ST; kT++)
+          for (let oT = 0; oT < 6; oT++) xT._uploadArrayBufferViewToTexture(rT?.texture || TT, IT, oT, kT)
       }
-      if (WY) {
-        const rY = YY._irradianceTexture;
-        YY._irradianceTexture = null, iY._releaseTexture(YY), WY._swapAndDie(YY), YY._irradianceTexture = rY
+      if (rT) {
+        const oT = TT._irradianceTexture;
+        TT._irradianceTexture = null, xT._releaseTexture(TT), rT._swapAndDie(TT), TT._irradianceTexture = oT
       }
-      oY && oY.dispose(), QY && (YY._lodTextureHigh && YY._lodTextureHigh._texture && (YY._lodTextureHigh._texture.isReady = !0), YY._lodTextureMid && YY._lodTextureMid._texture && (YY._lodTextureMid._texture.isReady = !0), YY._lodTextureLow && YY._lodTextureLow._texture && (YY._lodTextureLow._texture.isReady = !0))
+      MT && MT.dispose(), KT && (TT._lodTextureHigh && TT._lodTextureHigh._texture && (TT._lodTextureHigh._texture.isReady = !0), TT._lodTextureMid && TT._lodTextureMid._texture && (TT._lodTextureMid._texture.isReady = !0), TT._lodTextureLow && TT._lodTextureLow._texture && (TT._lodTextureLow._texture.isReady = !0))
     }
 
-    function TY(YY, rY) {
-      const DY = (rY = QY(rY)).irradiance;
-      if (!DY) return;
-      const FY = new RY.f;
-      AY.r.FromArrayToRef(DY.x, 0, FY.x), AY.r.FromArrayToRef(DY.y, 0, FY.y), AY.r.FromArrayToRef(DY.z, 0, FY.z), AY.r.FromArrayToRef(DY.xx, 0, FY.xx), AY.r.FromArrayToRef(DY.yy, 0, FY.yy), AY.r.FromArrayToRef(DY.zz, 0, FY.zz), AY.r.FromArrayToRef(DY.yz, 0, FY.yz), AY.r.FromArrayToRef(DY.zx, 0, FY.zx), AY.r.FromArrayToRef(DY.xy, 0, FY.xy), YY._sphericalPolynomial = FY
+    function eT(TT, oT) {
+      const IT = (oT = KT(oT)).irradiance;
+      if (!IT) return;
+      const iT = new WT.c;
+      zT.m.FromArrayToRef(IT.x, 0, iT.x), zT.m.FromArrayToRef(IT.y, 0, iT.y), zT.m.FromArrayToRef(IT.z, 0, iT.z), zT.m.FromArrayToRef(IT.xx, 0, iT.xx), zT.m.FromArrayToRef(IT.yy, 0, iT.yy), zT.m.FromArrayToRef(IT.zz, 0, iT.zz), zT.m.FromArrayToRef(IT.yz, 0, iT.yz), zT.m.FromArrayToRef(IT.zx, 0, iT.zx), zT.m.FromArrayToRef(IT.xy, 0, iT.xy), TT._sphericalPolynomial = iT
     }
-    var eY = DY(40900);
-    class NY {
+    var RT = IT(40643);
+    class uT {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(YY, rY, DY, FY, AY) {
-        if (Array.isArray(YY)) return;
-        const IY = yY(YY);
-        if (IY) {
-          rY.width = IY.width, rY.height = IY.width;
+      loadCubeData(TT, oT, IT, iT, zT) {
+        if (Array.isArray(TT)) return;
+        const kT = cT(TT);
+        if (kT) {
+          oT.width = kT.width, oT.height = kT.width;
           try {
-            (0, eY.d)(), TY(rY, IY), EY(rY, YY, IY).then((() => {
-              rY.isReady = !0, rY.onLoadedObservable.notifyObservers(rY), rY.onLoadedObservable.clear(), FY && FY()
-            }), (YY => {
-              AY?.("Can not upload environment levels", YY)
+            (0, RT.c)(), eT(oT, kT), AT(oT, TT, kT).then((() => {
+              oT.isReady = !0, oT.onLoadedObservable.notifyObservers(oT), oT.onLoadedObservable.clear(), iT && iT()
+            }), (TT => {
+              zT?.("Can not upload environment levels", TT)
             }))
-          } catch (RY) {
-            AY?.("Can not upload environment file", RY)
+          } catch (WT) {
+            zT?.("Can not upload environment file", WT)
           }
-        } else AY && AY("Can not parse the environment file", null)
+        } else zT && zT("Can not parse the environment file", null)
       }
       loadData() {
         throw ".env not supported in 2d."
       }
     }
   },
-  40900: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => RY
+  40643: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => WT
     });
-    var FY = DY(40825),
-      AY = DY(39123);
-    let IY = !1;
+    var iT = IT(40597),
+      zT = IT(38758);
+    let kT = !1;
 
-    function RY() {
-      IY || (IY = !0, AY.e.prototype._sphericalPolynomialTargetSize = 0, AY.e.prototype.forceSphericalPolynomialsRecompute = function() {
+    function WT() {
+      kT || (kT = !0, zT.e.prototype._sphericalPolynomialTargetSize = 0, zT.e.prototype.forceSphericalPolynomialsRecompute = function() {
         this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(AY.e.prototype, "sphericalPolynomial", {
+      }, Object.defineProperty(zT.e.prototype, "sphericalPolynomial", {
         get: function() {
           if (this._texture) {
             if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = FY.c.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((YY => {
-              this._texture._sphericalPolynomial = YY, this._texture._sphericalPolynomialComputed = !0
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = iT.e.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((TT => {
+              this._texture._sphericalPolynomial = TT, this._texture._sphericalPolynomialComputed = !0
             }))), null
           }
           return null
         },
-        set: function(YY) {
-          this._texture && (this._texture._sphericalPolynomial = YY)
+        set: function(TT) {
+          this._texture && (this._texture._sphericalPolynomial = TT)
         },
         enumerable: !0,
         configurable: !0
       }))
     }
   },
-  40825: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => aY
+  40597: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => FT
     });
-    var FY = DY(36524),
-      AY = DY(36559),
-      IY = DY(39120),
-      RY = DY(36533),
-      OY = DY(36588);
-    class gY {
-      constructor(YY, rY, DY, FY) {
-        this.name = YY, this.worldAxisForNormal = rY, this.worldAxisForFileX = DY, this.worldAxisForFileY = FY
+    var iT = IT(36118),
+      zT = IT(36156),
+      kT = IT(38752),
+      WT = IT(36125),
+      XT = IT(36177);
+    class BT {
+      constructor(TT, oT, IT, iT) {
+        this.name = TT, this.worldAxisForNormal = oT, this.worldAxisForFileX = IT, this.worldAxisForFileY = iT
       }
     }
-    class aY {
-      static _NearestPow2Floor(YY) {
-        return YY <= 1 ? 1 : 1 << Math.floor(Math.log2(YY))
+    class FT {
+      static _NearestPow2Floor(TT) {
+        return TT <= 1 ? 1 : 1 << Math.floor(Math.log2(TT))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(YY) {
-        if (!YY.isCube) return null;
-        YY.hT()?.ky().flushFramebuffer();
-        const rY = YY.getSize().width,
-          DY = YY._sphericalPolynomialTargetSize,
-          FY = DY > 0 ? this._NearestPow2Floor(DY) : 0,
-          AY = !YY.noMipmap && !0 === YY._texture?.generateMipMaps,
-          IY = FY > 0 && FY < rY && AY,
-          RY = IY ? Math.max(0, Math.round(Math.log2(rY / FY))) : 0,
-          OY = IY ? Math.max(1, Math.floor(rY / Math.pow(2, RY))) : rY,
-          gY = YY.readPixels(0, RY, void 0, !1),
-          aY = YY.readPixels(1, RY, void 0, !1);
-        let vY, uY;
-        YY.isRenderTarget ? (vY = YY.readPixels(3, RY, void 0, !1), uY = YY.readPixels(2, RY, void 0, !1)) : (vY = YY.readPixels(2, RY, void 0, !1), uY = YY.readPixels(3, RY, void 0, !1));
-        const sY = YY.readPixels(4, RY, void 0, !1),
-          iY = YY.readPixels(5, RY, void 0, !1),
-          yY = YY.gammaSpace,
-          QY = FY > 0 && FY < rY && !IY;
-        return new Promise((YY => {
-          Promise.all([aY, gY, vY, uY, sY, iY]).then((DY => {
-            let [AY, IY, RY, gY, aY, vY] = DY, uY = OY;
-            if (QY) {
-              const YY = 4;
-              AY = this._DownsampleFace(AY, rY, FY, YY), IY = this._DownsampleFace(IY, rY, FY, YY), RY = this._DownsampleFace(RY, rY, FY, YY), gY = this._DownsampleFace(gY, rY, FY, YY), aY = this._DownsampleFace(aY, rY, FY, YY), vY = this._DownsampleFace(vY, rY, FY, YY), uY = FY
+      static ConvertCubeMapTextureToSphericalPolynomial(TT) {
+        if (!TT.isCube) return null;
+        TT.pC()?.Zc().flushFramebuffer();
+        const oT = TT.getSize().width,
+          IT = TT._sphericalPolynomialTargetSize,
+          iT = IT > 0 ? this._NearestPow2Floor(IT) : 0,
+          zT = !TT.noMipmap && !0 === TT._texture?.generateMipMaps,
+          kT = iT > 0 && iT < oT && zT,
+          WT = kT ? Math.max(0, Math.round(Math.log2(oT / iT))) : 0,
+          XT = kT ? Math.max(1, Math.floor(oT / Math.pow(2, WT))) : oT,
+          BT = TT.readPixels(0, WT, void 0, !1),
+          FT = TT.readPixels(1, WT, void 0, !1);
+        let ST, DT;
+        TT.isRenderTarget ? (ST = TT.readPixels(3, WT, void 0, !1), DT = TT.readPixels(2, WT, void 0, !1)) : (ST = TT.readPixels(2, WT, void 0, !1), DT = TT.readPixels(3, WT, void 0, !1));
+        const LT = TT.readPixels(4, WT, void 0, !1),
+          xT = TT.readPixels(5, WT, void 0, !1),
+          cT = TT.gammaSpace,
+          KT = iT > 0 && iT < oT && !kT;
+        return new Promise((TT => {
+          Promise.all([FT, BT, ST, DT, LT, xT]).then((IT => {
+            let [zT, kT, WT, BT, FT, ST] = IT, DT = XT;
+            if (KT) {
+              const TT = 4;
+              zT = this._DownsampleFace(zT, oT, iT, TT), kT = this._DownsampleFace(kT, oT, iT, TT), WT = this._DownsampleFace(WT, oT, iT, TT), BT = this._DownsampleFace(BT, oT, iT, TT), FT = this._DownsampleFace(FT, oT, iT, TT), ST = this._DownsampleFace(ST, oT, iT, TT), DT = iT
             }
-            const sY = {
-              size: uY,
-              right: IY,
-              left: AY,
-              up: RY,
-              down: gY,
-              front: aY,
-              back: vY,
+            const LT = {
+              size: DT,
+              right: kT,
+              left: zT,
+              up: WT,
+              down: BT,
+              front: FT,
+              back: ST,
               format: 5,
-              type: AY instanceof Float32Array ? 1 : 0,
-              gammaSpace: yY
+              type: zT instanceof Float32Array ? 1 : 0,
+              gammaSpace: cT
             };
-            YY(this.ConvertCubeMapToSphericalPolynomial(sY))
+            TT(this.ConvertCubeMapToSphericalPolynomial(LT))
           }))
         }))
       }
-      static _AreaElement(YY, rY) {
-        return Math.atan2(YY * rY, Math.sqrt(YY * YY + rY * rY + 1))
+      static _AreaElement(TT, oT) {
+        return Math.atan2(TT * oT, Math.sqrt(TT * TT + oT * oT + 1))
       }
-      static _DownsampleFace(YY, rY, DY, FY) {
-        const AY = YY instanceof Float32Array ? YY : Float32Array.from(YY),
-          IY = DY * DY * FY,
-          RY = new Float32Array(IY),
-          OY = rY / DY,
-          gY = 1 / (OY * OY);
-        for (let vY = 0; vY < DY; vY++) {
-          const YY = Math.floor(vY * OY),
-            IY = Math.floor((vY + 1) * OY);
-          for (let aY = 0; aY < DY; aY++) {
-            const uY = Math.floor(aY * OY),
-              sY = Math.floor((aY + 1) * OY),
-              iY = (vY * DY + aY) * FY;
-            for (let DY = 0; DY < FY; DY++) {
-              let OY = 0;
-              for (let RY = YY; RY < IY; RY++)
-                for (let YY = uY; YY < sY; YY++) OY += AY[(RY * rY + YY) * FY + DY];
-              RY[iY + DY] = OY * gY
+      static _DownsampleFace(TT, oT, IT, iT) {
+        const zT = TT instanceof Float32Array ? TT : Float32Array.from(TT),
+          kT = IT * IT * iT,
+          WT = new Float32Array(kT),
+          XT = oT / IT,
+          BT = 1 / (XT * XT);
+        for (let ST = 0; ST < IT; ST++) {
+          const TT = Math.floor(ST * XT),
+            kT = Math.floor((ST + 1) * XT);
+          for (let FT = 0; FT < IT; FT++) {
+            const DT = Math.floor(FT * XT),
+              LT = Math.floor((FT + 1) * XT),
+              xT = (ST * IT + FT) * iT;
+            for (let IT = 0; IT < iT; IT++) {
+              let XT = 0;
+              for (let WT = TT; WT < kT; WT++)
+                for (let TT = DT; TT < LT; TT++) XT += zT[(WT * oT + TT) * iT + IT];
+              WT[xT + IT] = XT * BT
             }
           }
         }
-        if (YY instanceof Float32Array) return RY;
-        const aY = new(0, YY.constructor)(IY);
-        for (let vY = 0; vY < IY; vY++) aY[vY] = RY[vY] + .5 | 0;
-        return aY
+        if (TT instanceof Float32Array) return WT;
+        const FT = new(0, TT.constructor)(kT);
+        for (let ST = 0; ST < kT; ST++) FT[ST] = WT[ST] + .5 | 0;
+        return FT
       }
-      static ConvertCubeMapToSphericalPolynomial(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const DY = rY > 0 ? this._NearestPow2Floor(rY) : 0;
-        if (DY > 0 && YY.size > DY) {
-          const rY = 5 === YY.format ? 4 : 3,
-            FY = ["right", "left", "up", "down", "front", "back"],
-            AY = {};
-          for (const IY of FY) AY[IY] = this._DownsampleFace(YY[IY], YY.size, DY, rY);
-          YY = {
-            ...YY,
-            ...AY,
-            size: DY
+      static ConvertCubeMapToSphericalPolynomial(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const IT = oT > 0 ? this._NearestPow2Floor(oT) : 0;
+        if (IT > 0 && TT.size > IT) {
+          const oT = 5 === TT.format ? 4 : 3,
+            iT = ["right", "left", "up", "down", "front", "back"],
+            zT = {};
+          for (const kT of iT) zT[kT] = this._DownsampleFace(TT[kT], TT.size, IT, oT);
+          TT = {
+            ...TT,
+            ...zT,
+            size: IT
           }
         }
-        const FY = new IY.b;
-        let gY = 0;
-        const aY = 2 / YY.size,
-          vY = aY,
-          uY = .5 * aY,
-          sY = uY - 1;
-        for (let IY = 0; IY < 6; IY++) {
-          const rY = this._FileFaces[IY],
-            DY = YY[rY.name];
-          let iY = sY;
-          const yY = 5 === YY.format ? 4 : 3;
-          for (let IY = 0; IY < YY.size; IY++) {
-            let QY = sY;
-            for (let vY = 0; vY < YY.size; vY++) {
-              const sY = rY.worldAxisForFileX.scale(QY).add(rY.worldAxisForFileY.scale(iY)).add(rY.worldAxisForNormal);
-              sY.normalize();
-              const oY = this._AreaElement(QY - uY, iY - uY) - this._AreaElement(QY - uY, iY + uY) - this._AreaElement(QY + uY, iY - uY) + this._AreaElement(QY + uY, iY + uY);
-              let WY = DY[IY * YY.size * yY + vY * yY + 0],
-                EY = DY[IY * YY.size * yY + vY * yY + 1],
-                mY = DY[IY * YY.size * yY + vY * yY + 2];
-              isNaN(WY) && (WY = 0), isNaN(EY) && (EY = 0), isNaN(mY) && (mY = 0), 0 === YY.type && (WY /= 255, EY /= 255, mY /= 255), YY.gammaSpace && (WY = Math.pow((0, AY.Clamp)(WY), RY.g), EY = Math.pow((0, AY.Clamp)(EY), RY.g), mY = Math.pow((0, AY.Clamp)(mY), RY.g));
-              const VY = this.MAX_HDRI_VALUE;
+        const iT = new kT.b;
+        let BT = 0;
+        const FT = 2 / TT.size,
+          ST = FT,
+          DT = .5 * FT,
+          LT = DT - 1;
+        for (let kT = 0; kT < 6; kT++) {
+          const oT = this._FileFaces[kT],
+            IT = TT[oT.name];
+          let xT = LT;
+          const cT = 5 === TT.format ? 4 : 3;
+          for (let kT = 0; kT < TT.size; kT++) {
+            let KT = LT;
+            for (let ST = 0; ST < TT.size; ST++) {
+              const LT = oT.worldAxisForFileX.scale(KT).add(oT.worldAxisForFileY.scale(xT)).add(oT.worldAxisForNormal);
+              LT.normalize();
+              const MT = this._AreaElement(KT - DT, xT - DT) - this._AreaElement(KT - DT, xT + DT) - this._AreaElement(KT + DT, xT - DT) + this._AreaElement(KT + DT, xT + DT);
+              let rT = IT[kT * TT.size * cT + ST * cT + 0],
+                AT = IT[kT * TT.size * cT + ST * cT + 1],
+                gT = IT[kT * TT.size * cT + ST * cT + 2];
+              isNaN(rT) && (rT = 0), isNaN(AT) && (AT = 0), isNaN(gT) && (gT = 0), 0 === TT.type && (rT /= 255, AT /= 255, gT /= 255), TT.gammaSpace && (rT = Math.pow((0, zT.Clamp)(rT), WT.l), AT = Math.pow((0, zT.Clamp)(AT), WT.l), gT = Math.pow((0, zT.Clamp)(gT), WT.l));
+              const hT = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const YY = Math.max(WY, EY, mY);
-                if (YY > VY) {
-                  const rY = VY / YY;
-                  WY *= rY, EY *= rY, mY *= rY
+                const TT = Math.max(rT, AT, gT);
+                if (TT > hT) {
+                  const oT = hT / TT;
+                  rT *= oT, AT *= oT, gT *= oT
                 }
-              } else WY = (0, AY.Clamp)(WY, 0, VY), EY = (0, AY.Clamp)(EY, 0, VY), mY = (0, AY.Clamp)(mY, 0, VY);
-              const SY = new OY.c(WY, EY, mY);
-              FY.addLight(sY, SY, oY), gY += oY, QY += aY
+              } else rT = (0, zT.Clamp)(rT, 0, hT), AT = (0, zT.Clamp)(AT, 0, hT), gT = (0, zT.Clamp)(gT, 0, hT);
+              const wT = new XT.e(rT, AT, gT);
+              iT.addLight(LT, wT, MT), BT += MT, KT += FT
             }
-            iY += vY
+            xT += ST
           }
         }
-        const iY = 6 * (4 * Math.PI) / 6 / gY;
-        return FY.scaleInPlace(iY), FY.convertIncidentRadianceToIrradiance(), FY.convertIrradianceToLambertianRadiance(), IY.f.FromHarmonics(FY)
+        const xT = 6 * (4 * Math.PI) / 6 / BT;
+        return iT.scaleInPlace(xT), iT.convertIncidentRadianceToIrradiance(), iT.convertIrradianceToLambertianRadiance(), kT.c.FromHarmonics(iT)
       }
     }
-    aY._FileFaces = [new gY("right", new FY.r(1, 0, 0), new FY.r(0, 0, -1), new FY.r(0, -1, 0)), new gY("left", new FY.r(-1, 0, 0), new FY.r(0, 0, 1), new FY.r(0, -1, 0)), new gY("up", new FY.r(0, 1, 0), new FY.r(1, 0, 0), new FY.r(0, 0, 1)), new gY("down", new FY.r(0, -1, 0), new FY.r(1, 0, 0), new FY.r(0, 0, -1)), new gY("front", new FY.r(0, 0, 1), new FY.r(1, 0, 0), new FY.r(0, -1, 0)), new gY("back", new FY.r(0, 0, -1), new FY.r(-1, 0, 0), new FY.r(0, -1, 0))], aY.MAX_HDRI_VALUE = 4096, aY.PRESERVE_CLAMPED_COLORS = !1
+    FT._FileFaces = [new BT("right", new iT.m(1, 0, 0), new iT.m(0, 0, -1), new iT.m(0, -1, 0)), new BT("left", new iT.m(-1, 0, 0), new iT.m(0, 0, 1), new iT.m(0, -1, 0)), new BT("up", new iT.m(0, 1, 0), new iT.m(1, 0, 0), new iT.m(0, 0, 1)), new BT("down", new iT.m(0, -1, 0), new iT.m(1, 0, 0), new iT.m(0, 0, -1)), new BT("front", new iT.m(0, 0, 1), new iT.m(1, 0, 0), new iT.m(0, -1, 0)), new BT("back", new iT.m(0, 0, -1), new iT.m(-1, 0, 0), new iT.m(0, -1, 0))], FT.MAX_HDRI_VALUE = 4096, FT.PRESERVE_CLAMPED_COLORS = !1
   },
-  40863: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY
+  40629: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT
     });
-    var FY = DY(40853),
-      AY = DY(40871);
-    class IY {
-      static ExpandRGBDTexture(YY) {
-        const rY = YY._texture;
-        if (!rY || !YY.isRGBD) return;
-        const AY = rY.ky(),
-          IY = AY.getCaps(),
-          RY = rY.isReady;
-        let OY = !1;
-        IY.textureHalfFloatRender && IY.textureHalfFloatLinearFiltering ? (OY = !0, rY.type = 2) : IY.textureFloatRender && IY.textureFloatLinearFiltering && (OY = !0, rY.type = 1), OY && (rY.isReady = !1, rY._isRGBD = !1, rY.invertY = !1);
-        const gY = async () => {
-          const IY = AY.isWebGPU,
-            RY = IY ? 1 : 0;
-          rY.isReady = !1, IY ? await DY.e(332).then((() => DY(60433))) : await DY.e(314).then((() => DY(60440)));
-          const OY = new FY.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, AY, !1, void 0, rY.type, void 0, null, !1, void 0, RY);
-          OY.externalTextureSamplerBinding = !0;
-          const gY = AY.createRenderTargetTexture(rY.width, {
+    var iT = IT(40618),
+      zT = IT(40631);
+    class kT {
+      static ExpandRGBDTexture(TT) {
+        const oT = TT._texture;
+        if (!oT || !TT.isRGBD) return;
+        const zT = oT.Zc(),
+          kT = zT.getCaps(),
+          WT = oT.isReady;
+        let XT = !1;
+        kT.textureHalfFloatRender && kT.textureHalfFloatLinearFiltering ? (XT = !0, oT.type = 2) : kT.textureFloatRender && kT.textureFloatLinearFiltering && (XT = !0, oT.type = 1), XT && (oT.isReady = !1, oT._isRGBD = !1, oT.invertY = !1);
+        const BT = async () => {
+          const kT = zT.isWebGPU,
+            WT = kT ? 1 : 0;
+          oT.isReady = !1, kT ? await IT.e(332).then((() => IT(60246))) : await IT.e(314).then((() => IT(60251)));
+          const XT = new iT.e("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, zT, !1, void 0, oT.type, void 0, null, !1, void 0, WT);
+          XT.externalTextureSamplerBinding = !0;
+          const BT = zT.createRenderTargetTexture(oT.width, {
             generateDepthBuffer: !1,
             generateMipMaps: !1,
             generateStencilBuffer: !1,
-            samplingMode: rY.samplingMode,
-            type: rY.type,
+            samplingMode: oT.samplingMode,
+            type: oT.type,
             format: 5
           });
-          OY.onEffectCreatedObservable.addOnce((DY => {
-            DY.executeWhenCompiled((() => {
-              OY.onApply = YY => {
-                YY._bindTexture("textureSampler", rY), YY.setFloat2("scale", 1, 1)
-              }, YY.hT()?.postProcessManager.directRender([OY], gY, !0), AY.restoreDefaultFramebuffer(), AY._releaseTexture(rY), OY && OY.dispose(), gY._swapAndDie(rY), rY.isReady = !0
+          XT.onEffectCreatedObservable.addOnce((IT => {
+            IT.executeWhenCompiled((() => {
+              XT.onApply = TT => {
+                TT._bindTexture("textureSampler", oT), TT.setFloat2("scale", 1, 1)
+              }, TT.pC()?.postProcessManager.directRender([XT], BT, !0), zT.restoreDefaultFramebuffer(), zT._releaseTexture(oT), XT && XT.dispose(), BT._swapAndDie(oT), oT.isReady = !0
             }))
           }))
         };
-        OY && (RY ? gY() : YY.onLoadObservable.addOnce(gY))
+        XT && (WT ? BT() : TT.onLoadObservable.addOnce(BT))
       }
-      static async EncodeTextureToRGBD(YY, rY) {
-        let FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return rY.ky().isWebGPU ? await DY.e(333).then((() => DY(60457))) : await DY.e(315).then((() => DY(60455))), await (0, AY.b)("rgbdEncode", YY, rY, FY, 1, 5)
+      static async EncodeTextureToRGBD(TT, oT) {
+        let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return oT.Zc().isWebGPU ? await IT.e(333).then((() => IT(60271))) : await IT.e(315).then((() => IT(60264))), await (0, zT.b)("rgbdEncode", TT, oT, iT, 1, 5)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

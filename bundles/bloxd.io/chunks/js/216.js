@@ -1,82 +1,82 @@
 export const id = 216;
 export const ids = [216];
 export const modules = {
-  38939: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      getBlockFaces: () => sY,
-      getIngameIconUrl: () => QY,
-      getItemIconUrl: () => yY,
-      getItemTextureUrl: () => iY,
-      getParticleTextureUrl: () => oY
+  38572: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      getBlockFaces: () => LT,
+      getIngameIconUrl: () => KT,
+      getItemIconUrl: () => cT,
+      getItemTextureUrl: () => xT,
+      getParticleTextureUrl: () => MT
     });
-    var FY = DY(4001),
-      AY = DY(36400),
-      IY = DY(8824),
-      RY = DY(2746);
-    const OY = new Set,
-      gY = new Set;
-    let aY = null;
+    var iT = IT(3985),
+      zT = IT(35995),
+      kT = IT(8821),
+      WT = IT(2713);
+    const XT = new Set,
+      BT = new Set;
+    let FT = null;
 
-    function vY(YY) {
-      OY.has(YY) || (OY.add(YY), gY.add(YY), aY ??= setTimeout((() => {
-        console.warn(`Docs gallery: no default texture for ${gY.size} names`, [...gY]), gY.clear(), aY = null
+    function ST(TT) {
+      XT.has(TT) || (XT.add(TT), BT.add(TT), FT ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${BT.size} names`, [...BT]), BT.clear(), FT = null
       }), 1e3))
     }
 
-    function uY(YY, rY) {
+    function DT(TT, oT) {
       try {
-        return (0, IY.getDefaultTexture)(YY, rY).url
+        return (0, kT.getDefaultTexture)(TT, oT).url
       } catch {
-        return vY(YY), null
+        return ST(TT), null
       }
     }
 
-    function sY(YY) {
-      var rY, DY;
-      const IY = AY.o[YY];
-      if (!IY || IY.itemTexture || !IY.textureInfo) return null;
+    function LT(TT) {
+      var oT, IT;
+      const kT = zT.p[TT];
+      if (!kT || kT.itemTexture || !kT.textureInfo) return null;
       const {
-        textureInfo: OY,
-        texturePerSide: gY
-      } = IY, aY = YY => {
-        return "string" === typeof(rY = gY && Array.isArray(OY) ? OY[gY[YY]] : OY) ? uY(rY, RY.i.BLOCK) : rY && "object" === typeof rY && "animTextures" in rY ? uY((0, FY.g)(rY), RY.i.BLOCK) : null;
-        var rY
-      }, vY = aY(2);
-      return vY ? {
-        top: vY,
-        left: null !== (rY = aY(4)) && void 0 !== rY ? rY : vY,
-        right: null !== (DY = aY(0)) && void 0 !== DY ? DY : vY
+        textureInfo: XT,
+        texturePerSide: BT
+      } = kT, FT = TT => {
+        return "string" === typeof(oT = BT && Array.isArray(XT) ? XT[BT[TT]] : XT) ? DT(oT, WT.i.BLOCK) : oT && "object" === typeof oT && "animTextures" in oT ? DT((0, iT.j)(oT), WT.i.BLOCK) : null;
+        var oT
+      }, ST = FT(2);
+      return ST ? {
+        top: ST,
+        left: null !== (oT = FT(4)) && void 0 !== oT ? oT : ST,
+        right: null !== (IT = FT(0)) && void 0 !== IT ? IT : ST
       } : null
     }
 
-    function iY(YY) {
-      var rY;
-      const DY = AY.o[YY];
-      return uY(null !== (rY = null === DY || void 0 === DY ? void 0 : DY.itemTexture) && void 0 !== rY ? rY : "string" === typeof(null === DY || void 0 === DY ? void 0 : DY.textureInfo) ? DY.textureInfo : YY, RY.i.ITEM)
+    function xT(TT) {
+      var oT;
+      const IT = zT.p[TT];
+      return DT(null !== (oT = null === IT || void 0 === IT ? void 0 : IT.itemTexture) && void 0 !== oT ? oT : "string" === typeof(null === IT || void 0 === IT ? void 0 : IT.textureInfo) ? IT.textureInfo : TT, WT.i.ITEM)
     }
 
-    function yY(YY) {
-      var rY, DY;
-      return AY.o[YY] ? null !== (rY = null === (DY = sY(YY)) || void 0 === DY ? void 0 : DY.top) && void 0 !== rY ? rY : iY(YY) : null
+    function cT(TT) {
+      var oT, IT;
+      return zT.p[TT] ? null !== (oT = null === (IT = LT(TT)) || void 0 === IT ? void 0 : IT.top) && void 0 !== oT ? oT : xT(TT) : null
     }
 
-    function QY(YY) {
-      return uY(YY, RY.i.ICON)
+    function KT(TT) {
+      return DT(TT, WT.i.ICON)
     }
 
-    function oY(YY) {
+    function MT(TT) {
       try {
-        return DY(2886)(`./${YY}.png`)
+        return IT(2866)(`./${TT}.png`)
       } catch {
-        return vY(YY), null
+        return ST(TT), null
       }
     }
   },
-  36427: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  36017: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT
     });
-    const FY = {
+    const iT = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -238,4 +238,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

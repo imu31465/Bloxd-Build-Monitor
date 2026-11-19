@@ -1,961 +1,961 @@
 export const id = 98;
 export const ids = [98, 184];
 export const modules = {
-  8641: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      EverythingMenu: () => BR
+  8645: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      EverythingMenu: () => UW
     });
-    var FY = DY(61),
-      AY = DY(1092),
-      IY = DY.n(AY),
-      RY = DY(1211),
-      OY = DY(1098),
-      gY = DY(1926),
-      aY = DY(1134),
-      vY = DY(1125);
+    var iT = IT(46),
+      zT = IT(1042),
+      kT = IT.n(zT),
+      WT = IT(1171),
+      XT = IT(1055),
+      BT = IT(1880),
+      FT = IT(1102),
+      ST = IT(1083);
 
-    function uY(YY) {
+    function DT(TT) {
       let {
-        items: rY,
-        onClick: DY,
-        selectedItemId: FY,
-        className: AY,
-        padStartsOnTab: uY = !0
-      } = YY;
+        items: oT,
+        onClick: IT,
+        selectedItemId: iT,
+        className: zT,
+        padStartsOnTab: DT = !0
+      } = TT;
       const {
-        t: sY
-      } = (0, RY.C)(), iY = (0, aY.m)(), yY = [];
-      for (const IY of rY) {
-        var QY;
-        const YY = yY[yY.length - 1];
-        var oY;
-        if (YY && YY.title === (null !== (QY = IY.section) && void 0 !== QY ? QY : null)) YY.items.push(IY);
-        else yY.push({
-          title: null !== (oY = IY.section) && void 0 !== oY ? oY : null,
-          items: [IY]
+        t: LT
+      } = (0, WT.t)(), xT = (0, FT.n)(), cT = [];
+      for (const kT of oT) {
+        var KT;
+        const TT = cT[cT.length - 1];
+        var MT;
+        if (TT && TT.title === (null !== (KT = kT.section) && void 0 !== KT ? KT : null)) TT.items.push(kT);
+        else cT.push({
+          title: null !== (MT = kT.section) && void 0 !== MT ? MT : null,
+          items: [kT]
         })
       }
-      return (0, vY.jsx)("div", {
-        className: IY()("MenuSideBarBody", AY),
+      return (0, ST.jsx)("div", {
+        className: kT()("MenuSideBarBody", zT),
         "data-pad-tabs": "2",
-        children: yY.map(((YY, rY) => {
-          var AY;
-          return (0, vY.jsxs)("div", {
+        children: cT.map(((TT, oT) => {
+          var zT;
+          return (0, ST.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [YY.title && (0, vY.jsx)("div", {
+            children: [TT.title && (0, ST.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: sY(YY.title)
-            }), YY.items.map((YY => {
-              var rY;
-              const AY = !!YY.iconElement || !!YY.faIcon;
-              return (0, vY.jsxs)("div", {
+              children: LT(TT.title)
+            }), TT.items.map((TT => {
+              var oT;
+              const zT = !!TT.iconElement || !!TT.faIcon;
+              return (0, ST.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": FY === YY.id ? "true" : void 0,
-                "data-pad-default-focus": uY && FY === YY.id || void 0,
-                className: IY()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: FY === YY.id
+                "data-pad-selected": iT === TT.id ? "true" : void 0,
+                "data-pad-default-focus": DT && iT === TT.id || void 0,
+                className: kT()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: iT === TT.id
                 }),
                 onClick: () => {
-                  DY(YY.id)
+                  IT(TT.id)
                 },
-                children: [AY && (0, vY.jsx)("div", {
+                children: [zT && (0, ST.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (rY = YY.iconElement) && void 0 !== rY ? rY : (0, vY.jsx)(OY.e, {
-                    name: YY.faIcon
+                  children: null !== (oT = TT.iconElement) && void 0 !== oT ? oT : (0, ST.jsx)(XT.e, {
+                    name: TT.faIcon
                   })
-                }), (!iY || !AY) && (0, vY.jsx)("div", {
-                  children: sY(YY.title)
-                }), YY.redDot && (0, vY.jsx)(gY.b, {
+                }), (!xT || !zT) && (0, ST.jsx)("div", {
+                  children: LT(TT.title)
+                }), TT.redDot && (0, ST.jsx)(BT.d, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, YY.id)
+              }, TT.id)
             }))]
-          }, null !== (AY = YY.title) && void 0 !== AY ? AY : rY)
+          }, null !== (zT = TT.title) && void 0 !== zT ? zT : oT)
         }))
       })
     }
-    var sY = DY(2620),
-      iY = DY(1152),
-      yY = DY(2282),
-      QY = DY(1143),
-      oY = DY(1437),
-      WY = DY(99),
-      EY = DY(1808),
-      mY = DY(2114),
-      VY = DY(2116),
-      SY = DY(1654),
-      lY = DY(1337),
-      TY = DY(4580),
-      eY = DY(19),
-      NY = DY(8643);
+    var LT = IT(2610),
+      xT = IT(1110),
+      cT = IT(2227),
+      KT = IT(1108),
+      MT = IT(1408),
+      rT = IT(90),
+      AT = IT(1751),
+      gT = IT(2054),
+      hT = IT(2063),
+      wT = IT(1624),
+      mT = IT(1310),
+      eT = IT(4481),
+      RT = IT(12),
+      uT = IT(8647);
 
-    function BY(YY) {
+    function vT(TT) {
       let {
-        setApplySettingsCallback: rY
-      } = YY;
+        setApplySettingsCallback: oT
+      } = TT;
       const {
-        clientEscMenuOptions: DY
-      } = (0, eY.j)(["clientEscMenuOptions"]), [AY, IY] = (0, FY.useState)(!1), [RY, OY] = (0, FY.useState)(!1), [gY, aY] = (0, FY.useState)(6400), [uY, sY] = (0, FY.useState)(3600), [iY, yY] = (0, FY.useState)(!1), [QY, WY] = (0, FY.useState)(!1);
+        clientEscMenuOptions: IT
+      } = (0, RT.k)(["clientEscMenuOptions"]), [zT, kT] = (0, iT.useState)(!1), [WT, XT] = (0, iT.useState)(!1), [BT, FT] = (0, iT.useState)(6400), [DT, LT] = (0, iT.useState)(3600), [xT, cT] = (0, iT.useState)(!1), [KT, rT] = (0, iT.useState)(!1);
 
-      function EY(YY) {
-        const rY = "screenshot" === YY ? OY : IY;
-        rY(!0);
-        const DY = iY ? "normals" : QY ? "depth" : null;
-        NY.devTools.downloadScene(YY, {
-          width: gY,
-          height: uY,
-          colouring: DY
-        }).catch((YY => {
-          console.error("Couldn't download the scene", YY)
+      function AT(TT) {
+        const oT = "screenshot" === TT ? XT : kT;
+        oT(!0);
+        const IT = xT ? "normals" : KT ? "depth" : null;
+        uT.devTools.downloadScene(TT, {
+          width: BT,
+          height: DT,
+          colouring: IT
+        }).catch((TT => {
+          console.error("Couldn't download the scene", TT)
         })).finally((() => {
-          rY(!1)
+          oT(!1)
         }))
       }
-      return (0, vY.jsxs)("div", {
+      return (0, ST.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, vY.jsx)(TY.c, {
+        children: [(0, ST.jsx)(eT.e, {
           label: "Disable Ambient Occlusion",
-          checked: DY.disableAmbientOcclusion,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              disableAmbientOcclusion: YY
-            }), rY((() => TY.m))
+          checked: IT.disableAmbientOcclusion,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              disableAmbientOcclusion: TT
+            }), oT((() => eT.n))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), NY.devTools.supports("ambientLight") && (0, vY.jsx)(TY.j, {
+        }), uT.devTools.supports("ambientLight") && (0, ST.jsx)(eT.k, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: DY.ambientLightIntensity,
-          onChange: YY => {
-            NY.devTools.setAmbientLightIntensity(YY).then((() => {
-              eY.b.setClientEscMenuOptions({
-                ambientLightIntensity: YY
+          initValue: IT.ambientLightIntensity,
+          onChange: TT => {
+            uT.devTools.setAmbientLightIntensity(TT).then((() => {
+              RT.c.setClientEscMenuOptions({
+                ambientLightIntensity: TT
               })
-            })).catch((YY => {
-              console.error("Couldn't set the ambient light", YY)
+            })).catch((TT => {
+              console.error("Couldn't set the ambient light", TT)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), NY.devTools.supports("weaponRaycasts") && (0, vY.jsx)(TY.c, {
+        }), uT.devTools.supports("weaponRaycasts") && (0, ST.jsx)(eT.e, {
           label: "Show Weapon Raycasts",
-          checked: DY.showWeaponRaycasts,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              showWeaponRaycasts: YY
+          checked: IT.showWeaponRaycasts,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              showWeaponRaycasts: TT
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), NY.devTools.supports("sceneDownload") && (0, vY.jsxs)("div", {
+        }), uT.devTools.supports("sceneDownload") && (0, ST.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, vY.jsx)(TY.c, {
+            children: [(0, ST.jsx)(eT.e, {
               label: "Apply normal-based coloring",
-              checked: iY,
-              onClick: YY => {
-                yY(YY), YY && WY(!1)
+              checked: xT,
+              onClick: TT => {
+                cT(TT), TT && rT(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, vY.jsx)(TY.c, {
+            }), (0, ST.jsx)(eT.e, {
               label: "Apply depth-based coloring",
-              checked: QY,
-              onClick: YY => {
-                WY(YY), YY && yY(!1)
+              checked: KT,
+              onClick: TT => {
+                rT(TT), TT && cT(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, vY.jsxs)("div", {
+            }), (0, ST.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, vY.jsx)("div", {
+              children: [(0, ST.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, vY.jsx)(SY.d, {
+              }), (0, ST.jsx)(wT.e, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (YY, rY) => {
-                  const DY = parseInt(YY) || 6400;
-                  aY(DY)
+                onValueChange: (TT, oT) => {
+                  const IT = parseInt(TT) || 6400;
+                  FT(IT)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: gY.toString()
-              }), (0, vY.jsx)("span", {
+                defaultValue: BT.toString()
+              }), (0, ST.jsx)("span", {
                 children: "X"
-              }), (0, vY.jsx)(SY.d, {
+              }), (0, ST.jsx)(wT.e, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (YY, rY) => {
-                  const DY = parseInt(YY) || 3600;
-                  sY(DY)
+                onValueChange: (TT, oT) => {
+                  const IT = parseInt(TT) || 3600;
+                  LT(IT)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: uY.toString()
+                defaultValue: DT.toString()
               })]
-            }), (0, vY.jsxs)("div", {
+            }), (0, ST.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, vY.jsxs)(oY.f, {
+              children: [(0, ST.jsxs)(MT.e, {
                 onClick: () => {
-                  EY("screenshot")
+                  AT("screenshot")
                 },
-                disabled: RY,
-                children: [RY && (0, vY.jsx)(lY.c, {}), "Download Screenshot"]
-              }), (0, vY.jsxs)(oY.f, {
+                disabled: WT,
+                children: [WT && (0, ST.jsx)(mT.d, {}), "Download Screenshot"]
+              }), (0, ST.jsxs)(MT.e, {
                 onClick: () => {
-                  EY("glb")
+                  AT("glb")
                 },
-                disabled: AY,
-                children: [AY && (0, vY.jsx)(lY.c, {}), "Download GLB"]
+                disabled: zT,
+                children: [zT && (0, ST.jsx)(mT.d, {}), "Download GLB"]
               })]
             })]
-          }), (0, vY.jsx)("div", {
+          }), (0, ST.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var cY = DY(144),
-      KY = DY(1159),
-      HY = DY(1222),
-      zY = DY(2627),
-      ZY = DY(1488),
-      CY = DY(1270),
-      fY = DY(1237),
-      jY = DY(2697),
-      hY = DY(1902),
-      dY = DY(1471),
-      JY = DY(341),
-      MY = DY(2118),
-      wY = DY(2129),
-      bY = DY(1354),
-      XY = DY(1226),
-      qY = DY(4459),
-      pY = DY(1450),
-      kY = DY(3268),
-      GY = DY(2429),
-      xY = DY(2105);
+    var ET = IT(139),
+      fT = IT(1117),
+      CT = IT(1183),
+      jT = IT(2613),
+      JT = IT(1468),
+      UT = IT(1236),
+      aT = IT(1207),
+      YT = IT(2664),
+      QT = IT(1858),
+      OT = IT(1451),
+      HT = IT(314),
+      nT = IT(2071),
+      qT = IT(2084),
+      ZT = IT(1337),
+      lT = IT(1188),
+      sT = IT(4375),
+      tT = IT(1427),
+      GT = IT(3225),
+      pT = IT(2393),
+      bT = IT(2041);
 
-    function nY(YY) {
+    function yT(TT) {
       let {
-        showing: rY
-      } = YY;
+        showing: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, RY.C)(), {
-        data: FY,
-        failed: AY
-      } = (0, GY.g)(kY.g, rY);
-      return 0 === (null === FY || void 0 === FY ? void 0 : FY.length) || null === FY && !AY ? null : (0, vY.jsxs)("div", {
+        t: IT
+      } = (0, WT.t)(), {
+        data: iT,
+        failed: zT
+      } = (0, pT.g)(GT.d, oT);
+      return 0 === (null === iT || void 0 === iT ? void 0 : iT.length) || null === iT && !zT ? null : (0, ST.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: DY("paymentHistory:title")
-        }), null === FY && AY && (0, vY.jsx)("div", {
+          children: IT("paymentHistory:title")
+        }), null === iT && zT && (0, ST.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: DY("paymentHistory:loadFailed")
-        }), null !== FY && (0, vY.jsx)("ul", {
+          children: IT("paymentHistory:loadFailed")
+        }), null !== iT && (0, ST.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: FY.map((YY => (0, vY.jsxs)("li", {
+          children: iT.map((TT => (0, ST.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, vY.jsx)(xY.e, {
-              entry: YY
-            }), (0, vY.jsxs)("div", {
+            children: [(0, ST.jsx)(bT.d, {
+              entry: TT
+            }), (0, ST.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, vY.jsx)("div", {
-                children: (0, xY.h)(DY, YY)
-              }), (0, vY.jsxs)("div", {
+              children: [(0, ST.jsx)("div", {
+                children: (0, bT.h)(IT, TT)
+              }), (0, ST.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(YY.at).toLocaleDateString(), "number" === typeof YY.orderId && ` \xb7 ${DY("paymentHistory:order",{orderId:YY.orderId})}`]
+                children: [new Date(TT.at).toLocaleDateString(), "number" === typeof TT.orderId && ` \xb7 ${IT("paymentHistory:order",{orderId:TT.orderId})}`]
               })]
             })]
-          }, (0, kY.c)(YY))))
+          }, (0, GT.b)(TT))))
         })]
       })
     }
-    var PY = DY(1253),
-      UY = DY(1346),
-      LY = DY(1314);
+    var NT = IT(1216),
+      PT = IT(1325),
+      dT = IT(1280);
 
-    function tY() {
+    function VT() {
       const {
-        userContext: YY,
-        isUserContextUpdating: rY
-      } = (0, iY.d)(), {
-        t: DY
-      } = (0, RY.C)(), [AY, IY] = (0, FY.useState)(!1), [OY, gY] = (0, FY.useState)(null), aY = rY || AY;
-      return (0, vY.jsxs)("div", {
+        userContext: TT,
+        isUserContextUpdating: oT
+      } = (0, xT.b)(), {
+        t: IT
+      } = (0, WT.t)(), [zT, kT] = (0, iT.useState)(!1), [XT, BT] = (0, iT.useState)(null), FT = oT || zT;
+      return (0, ST.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, vY.jsxs)(oY.D, {
+        children: [(0, ST.jsxs)(MT.C, {
           onClick: async function() {
-            if (!AY) {
-              IY(!0);
+            if (!zT) {
+              kT(!0);
               try {
-                const rY = await async function() {
-                  if (!0 !== await UY.NotificationProvider.showPromptPopup({
+                const oT = await async function() {
+                  if (!0 !== await PT.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: (0, CY.d)(YY.getPlayerName(), !WY.featureFlags.canSeeRealPlayerNames)
+                          playerName: (0, UT.b)(TT.getPlayerName(), !rT.featureFlags.canSeeRealPlayerNames)
                         }
                       },
-                      subtitle: Yr(YY.isLoggedIn()),
+                      subtitle: To(TT.isLoggedIn()),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return PY.e.ok();
-                  const rY = await (0, KY.postJsonWithMetricsCookiesAndJsonResponse)(`${HY.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: eY.b.get("gameState")
+                    }).getResult()) return NT.b.ok();
+                  const oT = await (0, fT.postJsonWithMetricsCookiesAndJsonResponse)(`${CT.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: RT.c.get("gameState")
                   }, {
                     retries: 3
-                  }, YY.getMetricsCookies());
-                  if (rY.error) return PY.e.error(rY.error);
-                  (0, cY.b)() && (await LY.k.discordActivity()).exit("User deleted their account");
-                  return (0, KY.forgetStoredGuestAccount)(YY.whamm), (0, KY.forceGlobalSignOut)(!0), PY.e.ok()
-                }(), DY = rY.isError() ? rY.asError().message : null;
-                gY(DY)
-              } catch (rY) {
-                console.error("Failed to delete account:", rY), gY(DY("auth:genericDeleteAccountError"))
+                  }, TT.getMetricsCookies());
+                  if (oT.error) return NT.b.error(oT.error);
+                  (0, ET.c)() && (await dT.m.discordActivity()).exit("User deleted their account");
+                  return (0, fT.forgetStoredGuestAccount)(TT.whamm), (0, fT.forceGlobalSignOut)(!0), NT.b.ok()
+                }(), IT = oT.isError() ? oT.asError().message : null;
+                BT(IT)
+              } catch (oT) {
+                console.error("Failed to delete account:", oT), BT(IT("auth:genericDeleteAccountError"))
               }
-              IY(!1)
+              kT(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: aY,
-          children: [aY && (0, vY.jsx)("div", {
+          disabled: FT,
+          children: [FT && (0, ST.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, vY.jsx)(lY.c, {})
-          }), DY("auth:deleteAccount")]
-        }), OY && (0, vY.jsx)("div", {
+            children: (0, ST.jsx)(mT.d, {})
+          }), IT("auth:deleteAccount")]
+        }), XT && (0, ST.jsx)("div", {
           className: "DeleteAccountError",
-          children: OY
+          children: XT
         })]
       })
     }
 
-    function Yr(YY) {
-      return (0, cY.b)() ? "auth:discordActivityDeleteAccountWarning" : YY ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
+    function To(TT) {
+      return (0, ET.c)() ? "auth:discordActivityDeleteAccountWarning" : TT ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
     }
-    var rr = DY(3184),
-      Dr = DY(3207),
-      Fr = DY(3199);
+    var oo = IT(3149),
+      Io = IT(3163),
+      io = IT(3155);
 
-    function Ar(YY) {
+    function zo(TT) {
       let {
-        showing: rY
-      } = YY;
+        showing: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, RY.C)(), {
-        data: FY,
-        failed: AY
-      } = (0, GY.g)(rr.e, rY), IY = null === FY ? null : (0, rr.g)(FY);
-      return (0, vY.jsxs)("div", {
+        t: IT
+      } = (0, WT.t)(), {
+        data: iT,
+        failed: zT
+      } = (0, pT.g)(oo.b, oT), kT = null === iT ? null : (0, oo.e)(iT);
+      return (0, ST.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: DY("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === IY && !AY && (0, vY.jsx)(lY.c, {}), null === IY && AY && (0, vY.jsxs)("div", {
+          children: IT("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === kT && !zT && (0, ST.jsx)(mT.d, {}), null === kT && zT && (0, ST.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [DY("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, vY.jsx)(oY.f, {
+          children: [IT("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, ST.jsx)(MT.e, {
             className: "SmallTextLight",
             onClick: () => {
-              rr.e.refresh()
+              oo.b.refresh()
             },
-            children: DY("general:tryAgain")
+            children: IT("general:tryAgain")
           })]
-        }), 0 === (null === IY || void 0 === IY ? void 0 : IY.length) && (0, vY.jsx)("div", {
+        }), 0 === (null === kT || void 0 === kT ? void 0 : kT.length) && (0, ST.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: DY("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== IY && IY.length > 0 && (0, vY.jsx)("ul", {
+          children: IT("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== kT && kT.length > 0 && (0, ST.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: IY.map((YY => {
+          children: kT.map((TT => {
             let {
-              name: rY,
-              exclusion: FY
-            } = YY;
-            const AY = Fr.g[FY];
-            return (0, vY.jsxs)("li", {
+              name: oT,
+              exclusion: iT
+            } = TT;
+            const zT = io.i[iT];
+            return (0, ST.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, vY.jsx)("div", {
+              children: [(0, ST.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: rY
-              }), (0, vY.jsx)(oY.j, {
+                children: oT
+              }), (0, ST.jsx)(MT.i, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, Dr.c)(AY, rY, {
+                  (0, Io.g)(zT, oT, {
                     chatMessage: null
                   })
                 },
-                children: DY(Fr.h[AY].text)
+                children: IT(io.j[zT].text)
               })]
-            }, rY)
+            }, oT)
           }))
         })]
       })
     }
-    const Ir = (0, FY.memo)((function(YY) {
-      var rY;
+    const ko = (0, iT.memo)((function(TT) {
+      var oT;
       let {
-        showing: DY,
-        inGame: AY
-      } = YY;
+        showing: IT,
+        inGame: zT
+      } = TT;
       const {
-        t: gY,
-        selectedLanguage: aY
-      } = (0, RY.C)(), {
-        hideSocialLocationFrom: uY
-      } = (0, eY.j)(["hideSocialLocationFrom"]), yY = (0, sY.c)(), {
-        userContext: QY,
-        isUserContextUpdating: EY
-      } = (0, iY.d)(), [mY, VY] = (0, FY.useState)(null !== (rY = QY.getPlayerName()) && void 0 !== rY ? rY : ""), [NY, BY] = (0, FY.useState)(null), {
-        purchasing: kY,
-        outcome: GY,
-        purchase: xY
-      } = (0, zY.b)("/super-rank-welcome"), [PY, UY] = (0, FY.useState)(!1), [LY, Yr] = (0, FY.useState)(!1), rr = (0, FY.useRef)(null), Dr = (0, FY.useRef)(null), Fr = (0, hY.f)({
+        t: BT,
+        selectedLanguage: FT
+      } = (0, WT.t)(), {
+        hideSocialLocationFrom: DT
+      } = (0, RT.k)(["hideSocialLocationFrom"]), cT = (0, LT.c)(), {
+        userContext: KT,
+        isUserContextUpdating: AT
+      } = (0, xT.b)(), [gT, hT] = (0, iT.useState)(null !== (oT = KT.getPlayerName()) && void 0 !== oT ? oT : ""), [uT, vT] = (0, iT.useState)(null), {
+        purchasing: GT,
+        outcome: pT,
+        purchase: bT
+      } = (0, jT.e)("/super-rank-welcome"), [NT, PT] = (0, iT.useState)(!1), [dT, To] = (0, iT.useState)(!1), oo = (0, iT.useRef)(null), Io = (0, iT.useRef)(null), io = (0, QT.i)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), Ir = null === Fr, Or = null !== Fr && void 0 !== Fr ? Fr : [], gr = QY !== KY.NULL_USER_CONTEXT && !QY.isLoggedIn(), ar = gr && 0 !== (null === Fr || void 0 === Fr ? void 0 : Fr.length), [vr, ur] = (0, FY.useState)([]), [sr, ir] = (0, FY.useState)(!1), yr = QY.playerHasRank("youtuber"), Qr = (0, FY.useCallback)((() => dY.e.getPlayerProfile(QY, {
-        lowerCaseName: QY.getPlayerName().toLowerCase()
-      }).then((YY => {
-        ur(YY.socialLinks)
-      })).catch((YY => {
-        console.error("Failed to refresh social links", YY)
-      }))), [QY]);
+      }), ko = null === io, Xo = null !== io && void 0 !== io ? io : [], Bo = KT !== fT.NULL_USER_CONTEXT && !KT.isLoggedIn(), Fo = Bo && 0 !== (null === io || void 0 === io ? void 0 : io.length), [So, Do] = (0, iT.useState)([]), [Lo, xo] = (0, iT.useState)(!1), co = KT.playerHasRank("youtuber"), Ko = (0, iT.useCallback)((() => OT.e.getPlayerProfile(KT, {
+        lowerCaseName: KT.getPlayerName().toLowerCase()
+      }).then((TT => {
+        Do(TT.socialLinks)
+      })).catch((TT => {
+        console.error("Failed to refresh social links", TT)
+      }))), [KT]);
 
-      function or(YY) {
-        YY !== mY && ((0, CY.p)(YY) ? (YY = (0, CY.s)(YY), BY("Only letters, numbers, and _")) : BY(null), rr.current && (rr.current.value = YY), VY(YY))
+      function Mo(TT) {
+        TT !== gT && ((0, UT.j)(TT) ? (TT = (0, UT.n)(TT), vT("Only letters, numbers, and _")) : vT(null), oo.current && (oo.current.value = TT), hT(TT))
       }
-      return (0, FY.useEffect)((() => (!0 === DY ? (clearInterval(Dr.current), Dr.current = setInterval(yY, 1e3)) : clearInterval(Dr.current), () => {
-        clearInterval(Dr.current)
-      })), [DY, yY]), (0, FY.useEffect)((() => {
-        var YY;
-        VY(null !== (YY = QY.getPlayerName()) && void 0 !== YY ? YY : "")
-      }), [QY]), (0, FY.useEffect)((() => {
-        if (!DY || !yr || EY) return;
-        let YY = !1;
-        return ir(!0), ur([]), dY.e.getPlayerProfile(QY, {
-          lowerCaseName: QY.getPlayerName().toLowerCase()
-        }).then((rY => {
-          YY || ur(rY.socialLinks)
-        })).catch((YY => {
-          console.error("Failed to load social links", YY)
+      return (0, iT.useEffect)((() => (!0 === IT ? (clearInterval(Io.current), Io.current = setInterval(cT, 1e3)) : clearInterval(Io.current), () => {
+        clearInterval(Io.current)
+      })), [IT, cT]), (0, iT.useEffect)((() => {
+        var TT;
+        hT(null !== (TT = KT.getPlayerName()) && void 0 !== TT ? TT : "")
+      }), [KT]), (0, iT.useEffect)((() => {
+        if (!IT || !co || AT) return;
+        let TT = !1;
+        return xo(!0), Do([]), OT.e.getPlayerProfile(KT, {
+          lowerCaseName: KT.getPlayerName().toLowerCase()
+        }).then((oT => {
+          TT || Do(oT.socialLinks)
+        })).catch((TT => {
+          console.error("Failed to load social links", TT)
         })).finally((() => {
-          YY || ir(!1)
+          TT || xo(!1)
         })), () => {
-          YY = !0
+          TT = !0
         }
-      }), [DY, yr, EY, QY]), (0, vY.jsxs)("div", {
-        className: IY()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: AY
+      }), [IT, co, AT, KT]), (0, ST.jsxs)("div", {
+        className: kT()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: zT
         }),
-        children: [AY && (0, vY.jsx)("div", {
+        children: [zT && (0, ST.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: gY("settingsMenu:accountSettingsInGameWarning")
-        }), (0, vY.jsxs)("div", {
+          children: BT("settingsMenu:accountSettingsInGameWarning")
+        }), (0, ST.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [gY("homePage:discordNamePopupTitle"), (0, vY.jsxs)(ZY.LinkPreserveSearch, {
+            children: [BT("homePage:discordNamePopupTitle"), (0, ST.jsxs)(JT.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, fY.h)({
-                name: QY.getPlayerName()
+              to: (0, aT.h)({
+                name: KT.getPlayerName()
               }),
               onClick: () => {
-                eY.b.set({
+                RT.c.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, vY.jsx)(OY.e, {
+              children: [(0, ST.jsx)(XT.e, {
                 name: "arrow-up-right-from-square"
-              }), " ", gY("profileCard:viewProfile")]
+              }), " ", BT("profileCard:viewProfile")]
             })]
-          }), (0, vY.jsxs)("div", {
+          }), (0, ST.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, vY.jsxs)("div", {
+            children: [(0, ST.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [WY.featureFlags.canChangeName && (0, vY.jsx)(SY.d, {
+              children: [rT.featureFlags.canChangeName && (0, ST.jsx)(wT.e, {
                 className: "EnterName",
-                placeholderText: gY("homePage:enterName"),
-                maxLength: CY.k,
-                defaultValue: mY,
-                onValueChange: YY => {
-                  or(YY)
+                placeholderText: BT("homePage:enterName"),
+                maxLength: UT.h,
+                defaultValue: gT,
+                onValueChange: TT => {
+                  Mo(TT)
                 },
-                forcedText: PY || !WY.featureFlags.canChangeName ? mY : null,
+                forcedText: NT || !rT.featureFlags.canChangeName ? gT : null,
                 blurOnEnter: !0,
-                domRef: rr
-              }), (0, vY.jsx)(oY.f, {
+                domRef: oo
+              }), (0, ST.jsx)(MT.e, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  or((0, CY.h)())
+                  Mo((0, UT.f)())
                 },
-                children: (0, vY.jsx)(OY.e, {
+                children: (0, ST.jsx)(XT.e, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !WY.featureFlags.canChangeName && (0, vY.jsx)("div", {
+              }), !rT.featureFlags.canChangeName && (0, ST.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, CY.d)(mY, !WY.featureFlags.canSeeRealPlayerNames)
+                children: (0, UT.b)(gT, !rT.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, vY.jsx)(oY.f, {
+            }), (0, ST.jsx)(MT.e, {
               className: "ChooseNameButton",
-              disabled: PY || mY === QY.getPlayerName(),
+              disabled: NT || gT === KT.getPlayerName(),
               onClick: () => {
-                mY.length < CY.o ? BY(gY("homePage:changeNameMinLengthError", {
-                  length: CY.o
-                })) : mY.length > CY.k ? BY(gY("homePage:changeNameMaxLengthError", {
-                  length: CY.k
-                })) : (UY(!0), BY(null), async function(YY, rY, DY, FY) {
-                  const AY = await (0, KY.postJsonWithMetricsCookiesAndJsonResponse)(`${HY.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: YY
+                gT.length < UT.i ? vT(BT("homePage:changeNameMinLengthError", {
+                  length: UT.i
+                })) : gT.length > UT.h ? vT(BT("homePage:changeNameMaxLengthError", {
+                  length: UT.h
+                })) : (PT(!0), vT(null), async function(TT, oT, IT, iT) {
+                  const zT = await (0, fT.postJsonWithMetricsCookiesAndJsonResponse)(`${CT.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: TT
                   }, {
                     retries: 3
-                  }, rY.getMetricsCookies()).catch((YY => (console.error("Bad response from the server when trying to update name:", YY), {
+                  }, oT.getMetricsCookies()).catch((TT => (console.error("Bad response from the server when trying to update name:", TT), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  AY.err ? (console.error("Error when trying to get with new name from DB", AY.err), FY(AY.err)) : !0 === AY.nameExists ? FY("Name is already taken") : DY(YY)
-                }(mY, QY, (YY => {
-                  QY.setPlayerName(YY), UY(!1)
-                }), (YY => {
-                  BY(YY), UY(!1)
+                  zT.err ? (console.error("Error when trying to get with new name from DB", zT.err), iT(zT.err)) : !0 === zT.nameExists ? iT("Name is already taken") : IT(TT)
+                }(gT, KT, (TT => {
+                  KT.setPlayerName(TT), PT(!1)
+                }), (TT => {
+                  vT(TT), PT(!1)
                 })))
               },
-              children: gY("general:choose")
+              children: BT("general:choose")
             })]
-          }), NY && (0, vY.jsx)("div", {
+          }), uT && (0, ST.jsx)("div", {
             className: "ChooseAccNameError",
-            children: NY
+            children: uT
           })]
-        }), (0, vY.jsx)(TY.c, {
+        }), (0, ST.jsx)(eT.e, {
           label: (() => {
-            if ((0, XY.k)(uY)) {
-              const YY = (0, RY.q)(aY.code, "general:timeLeft"),
-                rY = (0, JY.fb)(YY, Date.now(), uY + XY.i);
-              return `${gY("settingsMenu:hideSocialLocation")} (${gY("general:timeLeft",{time:rY})})`
+            if ((0, lT.j)(DT)) {
+              const TT = (0, WT.l)(FT.code, "general:timeLeft"),
+                oT = (0, HT.cb)(TT, Date.now(), DT + lT.g);
+              return `${BT("settingsMenu:hideSocialLocation")} (${BT("general:timeLeft",{time:oT})})`
             }
-            return gY("settingsMenu:hideSocialLocation")
+            return BT("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const YY = !(0, XY.k)(uY);
-            (0, pY.reportAnalyticsClick)({
+            const TT = !(0, lT.j)(DT);
+            (0, tT.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: YY ? "on" : "off"
-            }), Yr(!0), dY.e.setHideSocialLocation(QY, YY).then((() => {
-              eY.b.set({
-                hideSocialLocationFrom: YY ? Date.now() : null
+              value: TT ? "on" : "off"
+            }), To(!0), OT.e.setHideSocialLocation(KT, TT).then((() => {
+              RT.c.set({
+                hideSocialLocationFrom: TT ? Date.now() : null
               })
             })).finally((() => {
-              Yr(!1)
+              To(!1)
             }))
           },
-          checked: (0, XY.k)(uY),
-          disabled: LY
-        }), yr && (0, vY.jsxs)("div", {
+          checked: (0, lT.j)(DT),
+          disabled: dT
+        }), co && (0, ST.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, vY.jsx)("div", {
+          children: [(0, ST.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: gY("settingsMenu:socialLinks")
-          }), sr && (0, vY.jsx)(lY.c, {}), !sr && (0, vY.jsx)(qY.d, {
-            socialLinks: vr,
+            children: BT("settingsMenu:socialLinks")
+          }), Lo && (0, ST.jsx)(mT.d, {}), !Lo && (0, ST.jsx)(sT.b, {
+            socialLinks: So,
             editable: !0,
-            userContext: QY,
-            onLinksUpdated: Qr
+            userContext: KT,
+            onLinksUpdated: Ko
           })]
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vY.jsx)("div", {
+          children: [(0, ST.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: gY(ar ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), Ir && (0, vY.jsx)(lY.c, {}), !Ir && 0 === Or.length && (0, vY.jsx)("div", {
+            children: BT(Fo ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), ko && (0, ST.jsx)(mT.d, {}), !ko && 0 === Xo.length && (0, ST.jsx)("div", {
             className: "NoLoginOptions",
-            children: gY("auth:noLoginOptions")
-          }), !Ir && Or.length > 0 && "crazygames" !== cY.s && (0, vY.jsx)("div", {
+            children: BT("auth:noLoginOptions")
+          }), !ko && Xo.length > 0 && "crazygames" !== ET.p && (0, ST.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: Or
-          }), !Ir && Or.length > 0 && "crazygames" === cY.s && (0, vY.jsxs)("div", {
+            children: Xo
+          }), !ko && Xo.length > 0 && "crazygames" === ET.p && (0, ST.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [Or[0], Or.length > 1 && (0, vY.jsxs)(vY.Fragment, {
-              children: [(0, vY.jsxs)("div", {
+            children: [Xo[0], Xo.length > 1 && (0, ST.jsxs)(ST.Fragment, {
+              children: [(0, ST.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, vY.jsx)("span", {
+                children: [(0, ST.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: gY("auth:legacyLoginOptions")
-                }), (0, vY.jsx)(bY.d, {
+                  children: BT("auth:legacyLoginOptions")
+                }), (0, ST.jsx)(ZT.d, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: gY("auth:legacyLoginOptionsInfo")
+                  hoverInfo: BT("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, vY.jsx)("div", {
+              }), (0, ST.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: Or.slice(1)
+                children: Xo.slice(1)
               })]
             })]
-          }), WY.featureFlags.useLogin && (null !== QY.loggedInInfo || QY.isLoggedIn()) && (0, vY.jsxs)(vY.Fragment, {
-            children: [(0, vY.jsx)("div", {
+          }), rT.featureFlags.useLogin && (null !== KT.loggedInInfo || KT.isLoggedIn()) && (0, ST.jsxs)(ST.Fragment, {
+            children: [(0, ST.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, vY.jsxs)(oY.D, {
+            }), (0, ST.jsxs)(MT.C, {
               onClick: () => {
-                (0, KY.forceGlobalSignOut)()
+                (0, fT.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, vY.jsx)(OY.e, {
+              children: [(0, ST.jsx)(XT.e, {
                 name: "right-from-bracket"
-              }), gY("auth:signOut")]
+              }), BT("auth:signOut")]
             })]
           })]
-        }), !QY.playerHasRank("super") && (0, wY.purchasesAllowed)() && (0, vY.jsxs)("div", {
+        }), !KT.playerHasRank("super") && (0, qT.purchasesAllowed)() && (0, ST.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, vY.jsx)(OY.e, {
+            children: [(0, ST.jsx)(XT.e, {
               name: "bolt"
-            }), gY("homePage:superRank")]
-          }), (0, vY.jsxs)("div", {
+            }), BT("homePage:superRank")]
+          }), (0, ST.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, vY.jsxs)(oY.n, {
+            children: [(0, ST.jsxs)(MT.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, MY.f)({
+                (0, nT.k)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, vY.jsx)(OY.e, {
+              children: [(0, ST.jsx)(XT.e, {
                 name: "bolt"
-              }), gY("homePage:getSuperRank")]
-            }), (0, vY.jsxs)(oY.n, {
+              }), BT("homePage:getSuperRank")]
+            }), (0, ST.jsxs)(MT.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, MY.f)({
+                (0, nT.k)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, vY.jsx)(OY.e, {
+              children: [(0, ST.jsx)(XT.e, {
                 name: "bolt"
-              }), gY("homePage:giftSuperRank")]
+              }), BT("homePage:giftSuperRank")]
             })]
           })]
-        }), QY.playerHasRank("super") && (0, vY.jsxs)("div", {
+        }), KT.playerHasRank("super") && (0, ST.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, vY.jsx)(OY.e, {
+            children: [(0, ST.jsx)(XT.e, {
               name: "bolt"
-            }), gY("homePage:superRank"), (0, vY.jsxs)("div", {
+            }), BT("homePage:superRank"), (0, ST.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", gY("general:timeLeft", {
-                time: (0, JY.hc)((0, RY.q)(aY.code, "general:timeLeft"), QY.superRankInfo)
+              children: ["(", BT("general:timeLeft", {
+                time: (0, HT.Wb)((0, WT.l)(FT.code, "general:timeLeft"), KT.superRankInfo)
               }), ")"]
             })]
-          }), (0, wY.purchasesAllowed)() && (0, vY.jsxs)("div", {
+          }), (0, qT.purchasesAllowed)() && (0, ST.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, vY.jsxs)(oY.n, {
+            children: [(0, ST.jsxs)(MT.m, {
               className: "AccountSettingsSuperRankProlong",
-              loading: kY,
+              loading: GT,
               onClick: () => {
-                xY(jY.l.id, null)
+                bT(YT.h.id, null)
               },
-              children: [(0, vY.jsx)(OY.e, {
+              children: [(0, ST.jsx)(XT.e, {
                 name: "bolt"
-              }), gY("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: jY.l.product.days,
-                price: jY.l.price
+              }), BT("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: YT.h.product.days,
+                price: YT.h.price
               })]
-            }), (0, vY.jsxs)(oY.n, {
+            }), (0, ST.jsxs)(MT.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, MY.f)({
+                (0, nT.k)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, vY.jsx)(OY.e, {
+              children: [(0, ST.jsx)(XT.e, {
                 name: "bolt"
-              }), gY("homePage:giftSuperRank")]
+              }), BT("homePage:giftSuperRank")]
             })]
-          }), GY && (0, vY.jsx)("div", {
+          }), pT && (0, ST.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: gY(GY.translationKey)
+            children: BT(pT.translationKey)
           })]
-        }), (0, vY.jsx)(nY, {
-          showing: DY
-        }), WY.featureFlags.useSocialFeatures && (0, vY.jsx)(Ar, {
-          showing: DY
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsx)(yT, {
+          showing: IT
+        }), rT.featureFlags.useSocialFeatures && (0, ST.jsx)(zo, {
+          showing: IT
+        }), (0, ST.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, vY.jsx)("div", {
+            children: [(0, ST.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: gY(Rr(gr, ar))
-            }), (0, cY.b)() && (0, vY.jsx)("div", {
+              children: BT(Wo(Bo, Fo))
+            }), (0, ET.c)() && (0, ST.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: gY("auth:discordActivityKickWarning")
-            }), (0, vY.jsx)(tY, {})]
-          }), (0, vY.jsx)("div", {
+              children: BT("auth:discordActivityKickWarning")
+            }), (0, ST.jsx)(VT, {})]
+          }), (0, ST.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: gY("auth:deleteAccountWarning")
+            children: BT("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function Rr(YY, rY) {
-      return YY ? rY ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function Wo(TT, oT) {
+      return TT ? oT ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var Or = DY(8649),
-      gr = DY(2722),
-      ar = DY(1256),
-      vr = DY(1413);
-    const ur = (0, FY.memo)((function(YY) {
+    var Xo = IT(8652),
+      Bo = IT(2695),
+      Fo = IT(1220),
+      So = IT(1398);
+    const Do = (0, iT.memo)((function(TT) {
         let {
-          inGame: rY
-        } = YY;
+          inGame: oT
+        } = TT;
         const {
-          t: DY,
-          selectedLanguage: FY
-        } = (0, RY.C)(), {
-          clientEscMenuOptions: AY,
-          showDebugOverlay: IY
-        } = (0, eY.j)(["clientEscMenuOptions", "showDebugOverlay"]), OY = (0, yY.j)("hideCoordinates");
-        let gY = "settingsMenu:showCoordinates",
-          aY = "settingsMenu:showChunkCoordinates";
+          t: IT,
+          selectedLanguage: iT
+        } = (0, WT.t)(), {
+          clientEscMenuOptions: zT,
+          showDebugOverlay: kT
+        } = (0, RT.k)(["clientEscMenuOptions", "showDebugOverlay"]), XT = (0, cT.g)("hideCoordinates");
+        let BT = "settingsMenu:showCoordinates",
+          FT = "settingsMenu:showChunkCoordinates";
 
-        function uY(YY) {
-          const rY = new Intl.DisplayNames([YY], {
+        function DT(TT) {
+          const oT = new Intl.DisplayNames([TT], {
             type: "language"
-          }).of(YY);
-          return rY.charAt(0).toUpperCase() + rY.slice(1)
+          }).of(TT);
+          return oT.charAt(0).toUpperCase() + oT.slice(1)
         }
-        return OY && (gY = "settingsMenu:showCoordinatesHidden", aY = "settingsMenu:showChunkCoordinatesHidden"), (0, vY.jsxs)("div", {
+        return XT && (BT = "settingsMenu:showCoordinatesHidden", FT = "settingsMenu:showChunkCoordinatesHidden"), (0, ST.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [rY && WY.featureFlags.canUseInviteLinks && (0, vY.jsxs)("div", {
+          children: [oT && rT.featureFlags.canUseInviteLinks && (0, ST.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, vY.jsx)("div", {
+            children: [(0, ST.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: DY("settingsMenu:inviteLink")
-            }), (0, vY.jsx)(Or.f, {})]
-          }), (0, vY.jsxs)("div", {
+              children: IT("settingsMenu:inviteLink")
+            }), (0, ST.jsx)(Xo.f, {})]
+          }), (0, ST.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, vY.jsx)("div", {
+            children: [(0, ST.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: DY("settingsMenu:language")
-            }), (0, vY.jsx)(gr.b, {
-              options: Object.entries(RY.l).map((YY => {
-                let [rY, DY] = YY;
+              children: IT("settingsMenu:language")
+            }), (0, ST.jsx)(Bo.d, {
+              options: Object.entries(WT.h).map((TT => {
+                let [oT, IT] = TT;
                 return {
-                  label: (0, vY.jsxs)("div", {
+                  label: (0, ST.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, vY.jsx)("img", {
-                      src: DY.flagImg,
+                    children: [(0, ST.jsx)("img", {
+                      src: IT.flagImg,
                       alt: "flag"
-                    }), (0, vY.jsxs)("span", {
-                      children: [uY(rY), " ", (0, vY.jsxs)("span", {
+                    }), (0, ST.jsxs)("span", {
+                      children: [DT(oT), " ", (0, ST.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", rY, ")"]
+                        children: ["(", oT, ")"]
                       })]
                     })]
                   }),
-                  value: rY
+                  value: oT
                 }
               })),
-              value: FY.code,
-              onChange: YY => {
-                ar.h.get().setCurrentLanguage(YY.value)
+              value: iT.code,
+              onChange: TT => {
+                Fo.d.get().setCurrentLanguage(TT.value)
               }
             })]
-          }), !(0, WY.isMobileApp)() && (0, vr.g)() && WY.featureFlags.useForceRotateForceFullscreenOverlay && (0, vY.jsx)(TY.c, {
-            label: DY("settingsMenu:disableFullscreenMode"),
-            checked: AY.disableFullscreen,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                disableFullscreen: YY
+          }), !(0, rT.isMobileApp)() && (0, So.f)() && rT.featureFlags.useForceRotateForceFullscreenOverlay && (0, ST.jsx)(eT.e, {
+            label: IT("settingsMenu:disableFullscreenMode"),
+            checked: zT.disableFullscreen,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                disableFullscreen: TT
               })
             }
-          }), (0, vY.jsx)(TY.c, {
-            label: DY(gY),
-            checked: AY.showCoordinates,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                showCoordinates: YY
+          }), (0, ST.jsx)(eT.e, {
+            label: IT(BT),
+            checked: zT.showCoordinates,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                showCoordinates: TT
               })
             },
-            disabled: OY
-          }), (0, vY.jsx)(TY.c, {
-            label: DY(aY),
-            checked: AY.showChunkCoordinates,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                showChunkCoordinates: YY
+            disabled: XT
+          }), (0, ST.jsx)(eT.e, {
+            label: IT(FT),
+            checked: zT.showChunkCoordinates,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                showChunkCoordinates: TT
               })
             },
-            disabled: OY
-          }), (0, vY.jsx)(TY.c, {
-            label: DY("settingsMenu:showFps"),
-            checked: AY.showFPS,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                showFPS: YY
+            disabled: XT
+          }), (0, ST.jsx)(eT.e, {
+            label: IT("settingsMenu:showFps"),
+            checked: zT.showFPS,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                showFPS: TT
               })
             }
-          }), (0, vY.jsx)(TY.c, {
-            label: DY("settingsMenu:disableBunnyHopping"),
-            checked: AY.disableBunnyHopping,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                disableBunnyHopping: YY
+          }), (0, ST.jsx)(eT.e, {
+            label: IT("settingsMenu:disableBunnyHopping"),
+            checked: zT.disableBunnyHopping,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                disableBunnyHopping: TT
               })
             }
-          }), (0, LY.y)() && (0, vY.jsx)(TY.c, {
-            label: DY("settingsMenu:showChat"),
-            checked: AY.showChat,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                showChat: YY
+          }), (0, dT.z)() && (0, ST.jsx)(eT.e, {
+            label: IT("settingsMenu:showChat"),
+            checked: zT.showChat,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                showChat: TT
               })
             }
-          }), (0, vY.jsx)(TY.c, {
-            label: DY("settingsMenu:showDebugOverlay"),
-            checked: IY,
-            onClick: YY => {
-              eY.b.set({
-                showDebugOverlay: YY
+          }), (0, ST.jsx)(eT.e, {
+            label: IT("settingsMenu:showDebugOverlay"),
+            checked: kT,
+            onClick: TT => {
+              RT.c.set({
+                showDebugOverlay: TT
               })
             }
-          }), WY.featureFlags.useSocialFeatures && (0, vY.jsx)(TY.c, {
-            label: DY("settingsMenu:showFriendOnlineToasts"),
-            checked: AY.showFriendOnlineToasts,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                showFriendOnlineToasts: YY
+          }), rT.featureFlags.useSocialFeatures && (0, ST.jsx)(eT.e, {
+            label: IT("settingsMenu:showFriendOnlineToasts"),
+            checked: zT.showFriendOnlineToasts,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                showFriendOnlineToasts: TT
               })
             }
-          }), (0, vY.jsx)(TY.c, {
-            label: DY("settingsMenu:showNewItemIndicator"),
-            checked: AY.showNewItemIndicator,
-            onClick: YY => {
-              eY.b.setClientEscMenuOptions({
-                showNewItemIndicator: YY
+          }), (0, ST.jsx)(eT.e, {
+            label: IT("settingsMenu:showNewItemIndicator"),
+            checked: zT.showNewItemIndicator,
+            onClick: TT => {
+              RT.c.setClientEscMenuOptions({
+                showNewItemIndicator: TT
               })
             }
           })]
         })
       })),
-      sr = (0, FY.memo)((function() {
+      Lo = (0, iT.memo)((function() {
         const {
-          t: YY
-        } = (0, RY.C)(), {
-          soundVolume: rY,
-          musicVolume: DY
-        } = (0, eY.j)(["soundVolume", "musicVolume"]);
-        return (0, vY.jsxs)("div", {
+          t: TT
+        } = (0, WT.t)(), {
+          soundVolume: oT,
+          musicVolume: IT
+        } = (0, RT.k)(["soundVolume", "musicVolume"]);
+        return (0, ST.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, vY.jsx)(TY.j, {
-            name: YY("settingsMenu:musicVolume"),
+          children: [(0, ST.jsx)(eT.k, {
+            name: TT("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: DY,
-            onChange: YY => {
-              eY.b.set({
-                musicVolume: Math.round(100 * YY) / 100
+            initValue: IT,
+            onChange: TT => {
+              RT.c.set({
+                musicVolume: Math.round(100 * TT) / 100
               })
             },
-            format: YY => YY.toFixed(2)
-          }), (0, vY.jsx)(TY.j, {
-            name: YY("settingsMenu:soundEffectsVolume"),
+            format: TT => TT.toFixed(2)
+          }), (0, ST.jsx)(eT.k, {
+            name: TT("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: rY,
-            onChange: YY => {
-              eY.b.set({
-                soundVolume: Math.round(100 * YY) / 100
+            initValue: oT,
+            onChange: TT => {
+              RT.c.set({
+                soundVolume: Math.round(100 * TT) / 100
               })
             },
-            format: YY => YY.toFixed(2)
+            format: TT => TT.toFixed(2)
           })]
         })
       }));
-    var ir = DY(722),
-      yr = DY(1430),
-      Qr = DY(3280),
-      or = DY(8653),
-      Wr = DY(3069);
-    const Er = {
+    var xo = IT(698),
+      co = IT(1403),
+      Ko = IT(3236),
+      Mo = IT(8660),
+      ro = IT(3049);
+    const Ao = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function mr() {
+    function go() {
       const {
-        t: YY
-      } = (0, RY.C)(), rY = (0, Wr.b)(), {
-        mobilePushNotificationsCanAsk: DY
-      } = (0, eY.j)(["mobilePushNotificationsCanAsk"]), [AY, IY] = (0, FY.useState)(null), [OY, gY] = (0, FY.useState)(!1), [aY, uY] = (0, FY.useState)(null), [sY, iY] = (0, FY.useState)(!1), yY = (0, FY.useCallback)((() => {
-        (0, Qr.b)().then((YY => {
-          rY.current && (IY(YY), gY(!1))
-        })).catch((YY => {
-          console.error("Failed to load push notification targets:", YY), rY.current && gY(!0)
+        t: TT
+      } = (0, WT.t)(), oT = (0, ro.c)(), {
+        mobilePushNotificationsCanAsk: IT
+      } = (0, RT.k)(["mobilePushNotificationsCanAsk"]), [zT, kT] = (0, iT.useState)(null), [XT, BT] = (0, iT.useState)(!1), [FT, DT] = (0, iT.useState)(null), [LT, xT] = (0, iT.useState)(!1), cT = (0, iT.useCallback)((() => {
+        (0, Ko.c)().then((TT => {
+          oT.current && (kT(TT), BT(!1))
+        })).catch((TT => {
+          console.error("Failed to load push notification targets:", TT), oT.current && BT(!0)
         }))
-      }), [rY]), QY = (0, FY.useCallback)((() => {
-        (0, or.e)().then((YY => {
-          rY.current && uY((() => YY))
+      }), [oT]), KT = (0, iT.useCallback)((() => {
+        (0, Mo.b)().then((TT => {
+          oT.current && DT((() => TT))
         }))
-      }), [rY]);
-      (0, FY.useEffect)((() => {
-        yY()
-      }), [yY]), (0, FY.useEffect)((() => {
-        QY()
-      }), [QY, DY]), (0, yr.g)(Qr.e, yY);
-      const WY = null === AY ? [] : Object.keys(Er).filter((YY => AY[YY] > 0));
-      return (0, vY.jsxs)("div", {
+      }), [oT]);
+      (0, iT.useEffect)((() => {
+        cT()
+      }), [cT]), (0, iT.useEffect)((() => {
+        KT()
+      }), [KT, IT]), (0, co.g)(Ko.i, cT);
+      const rT = null === zT ? [] : Object.keys(Ao).filter((TT => zT[TT] > 0));
+      return (0, ST.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "SliderText",
-          children: YY("notificationSettings:pushNotifications")
-        }), null === AY && OY && (0, vY.jsx)("div", {
+          children: TT("notificationSettings:pushNotifications")
+        }), null === zT && XT && (0, ST.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: YY("notificationSettings:pushTargetsLoadFailed")
-        }), null !== AY && 0 === WY.length && (0, vY.jsx)("div", {
+          children: TT("notificationSettings:pushTargetsLoadFailed")
+        }), null !== zT && 0 === rT.length && (0, ST.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: YY("notificationSettings:pushTargetsNone")
-        }), WY.length > 0 && (0, vY.jsx)("ul", {
+          children: TT("notificationSettings:pushTargetsNone")
+        }), rT.length > 0 && (0, ST.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: WY.map((rY => {
-            var DY;
-            return (0, vY.jsx)("li", {
-              children: YY(Er[rY], {
-                count: null !== (DY = null === AY || void 0 === AY ? void 0 : AY[rY]) && void 0 !== DY ? DY : 0
+          children: rT.map((oT => {
+            var IT;
+            return (0, ST.jsx)("li", {
+              children: TT(Ao[oT], {
+                count: null !== (IT = null === zT || void 0 === zT ? void 0 : zT[oT]) && void 0 !== IT ? IT : 0
               })
-            }, rY)
+            }, oT)
           }))
-        }), null !== aY && (0, vY.jsx)(oY.f, {
+        }), null !== FT && (0, ST.jsx)(MT.e, {
           className: "PushNotificationSettingsButton",
-          loading: sY,
+          loading: LT,
           onClick: () => {
-            iY(!0), aY().catch((YY => {
-              console.error("Failed to turn on push notifications:", YY)
+            xT(!0), FT().catch((TT => {
+              console.error("Failed to turn on push notifications:", TT)
             })).finally((() => {
-              rY.current && (iY(!1), QY())
+              oT.current && (xT(!1), KT())
             }))
           },
-          children: YY("notificationSettings:pushTurnOn")
+          children: TT("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const Vr = {
+    const ho = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -969,337 +969,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      Sr = (0, FY.memo)((function() {
+      wo = (0, iT.memo)((function() {
         const {
-          t: YY
-        } = (0, RY.C)(), {
-          clientEscMenuOptions: rY
-        } = (0, eY.j)(["clientEscMenuOptions"]);
-        return (0, vY.jsxs)("div", {
+          t: TT
+        } = (0, WT.t)(), {
+          clientEscMenuOptions: oT
+        } = (0, RT.k)(["clientEscMenuOptions"]);
+        return (0, ST.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, vY.jsx)(TY.f, {
-            label: YY("notificationSettings:friendRequests"),
-            options: ir.d.map((rY => ({
-              value: rY,
-              label: YY(Vr[rY].label)
+          children: [(0, ST.jsx)(eT.h, {
+            label: TT("notificationSettings:friendRequests"),
+            options: xo.b.map((oT => ({
+              value: oT,
+              label: TT(ho[oT].label)
             }))),
-            value: rY.friendRequestNotifications,
-            onChange: YY => {
-              eY.b.setClientEscMenuOptions({
-                friendRequestNotifications: YY
+            value: oT.friendRequestNotifications,
+            onChange: TT => {
+              RT.c.setClientEscMenuOptions({
+                friendRequestNotifications: TT
               })
             },
-            circleInfoText: (0, vY.jsx)("div", {
+            circleInfoText: (0, ST.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: ir.d.map((rY => (0, vY.jsxs)("div", {
-                children: [(0, vY.jsx)("b", {
-                  children: YY(Vr[rY].label)
-                }), ": ", YY(Vr[rY].info)]
-              }, rY)))
+              children: xo.b.map((oT => (0, ST.jsxs)("div", {
+                children: [(0, ST.jsx)("b", {
+                  children: TT(ho[oT].label)
+                }), ": ", TT(ho[oT].info)]
+              }, oT)))
             })
-          }), (0, vY.jsx)(mr, {})]
+          }), (0, ST.jsx)(go, {})]
         })
       }));
-    var lr = DY(4047),
-      Tr = DY(213),
-      er = DY(307),
-      Nr = DY(6230),
-      Br = DY(3015),
-      cr = DY(8655),
-      Kr = DY(625),
-      Hr = DY(25);
-    var zr = DY(649),
-      Zr = DY(40),
-      Cr = DY(3926);
-    const fr = new Map([
+    var mo = IT(4024),
+      eo = IT(193),
+      Ro = IT(282),
+      uo = IT(6158),
+      vo = IT(3012),
+      Eo = IT(8664),
+      fo = IT(618),
+      Co = IT(16);
+    var jo = IT(637),
+      Jo = IT(26),
+      Uo = IT(3906);
+    const ao = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function jr(YY) {
-      return fr.has(YY) ? EY.gameBridge.lookup("qE", null) : null
+    function Yo(TT) {
+      return ao.has(TT) ? AT.gameBridge.lookup("Jm", null) : null
     }
 
-    function hr(YY) {
-      if (!(0, Kr.H)(eY.b.get("clientEscMenuOptions")[YY])) return eY.b.get("clientEscMenuOptions")[YY];
-      const rY = jr(YY);
-      return null !== rY ? rY[fr.get(YY)] : Zr.m.getItem(YY)
+    function Qo(TT) {
+      if (!(0, fo.K)(RT.c.get("clientEscMenuOptions")[TT])) return RT.c.get("clientEscMenuOptions")[TT];
+      const oT = Yo(TT);
+      return null !== oT ? oT[ao.get(TT)] : Jo.e.getItem(TT)
     }
 
-    function dr(YY, rY) {
-      if ("useTouchControls" === YY) return void(0, Cr.b)(rY);
-      YY in eY.b.get("clientEscMenuOptions") && eY.b.setClientEscMenuOptions({
-        [YY]: rY
+    function Oo(TT, oT) {
+      if ("useTouchControls" === TT) return void(0, Uo.c)(oT);
+      TT in RT.c.get("clientEscMenuOptions") && RT.c.setClientEscMenuOptions({
+        [TT]: oT
       });
-      const DY = jr(YY);
-      null !== DY && EY.gameBridge.send("setChunkAddDistance", {
-        ...DY,
-        [fr.get(YY)]: rY
-      }), Zr.m.setItem(YY, rY)
+      const IT = Yo(TT);
+      null !== IT && AT.gameBridge.send("setChunkAddDistance", {
+        ...IT,
+        [ao.get(TT)]: oT
+      }), Jo.e.setItem(TT, oT)
     }
-    var Jr = DY(3967),
-      Mr = DY(8659),
-      wr = DY(8667),
-      br = DY(4040);
+    var Ho = IT(3945),
+      no = IT(8668),
+      qo = IT(8674),
+      Zo = IT(4021);
 
-    function Xr(YY) {
-      var rY, AY, OY, gY;
+    function so(TT) {
+      var oT, zT, XT, BT;
       let {
-        minChunkAddDist: aY,
-        getValue: uY,
-        onChange: sY,
-        setApplySettingsCallback: iY
-      } = YY;
+        minChunkAddDist: FT,
+        getValue: DT,
+        onChange: LT,
+        setApplySettingsCallback: xT
+      } = TT;
       const {
-        t: QY
-      } = (0, RY.C)(), {
-        clientEscMenuOptions: oY
-      } = (0, eY.j)(["clientEscMenuOptions", "showDistantNametags"]), EY = (0, FY.useRef)(uY("showFog")), mY = (0, FY.useRef)(oY.antiAliasing), VY = (0, FY.useRef)(oY.useWebGpu), [SY, lY] = (0, FY.useState)(null), [BY, cY] = (0, FY.useState)((() => (0, Br.c)(WY.featureFlags.settings.canUseShaderPacks))), [KY] = (0, FY.useState)((() => eY.b.isWebGpuDefaultOff())), [HY] = (0, FY.useState)(er.i);
-      (0, FY.useEffect)((() => {
-        let YY = !1;
-        return (0, WY.hasUsableWebGpuAdapter)().then((rY => {
-          YY || lY(rY)
-        })), (0, Br.g)(WY.featureFlags.settings.canUseShaderPacks) && (0, Nr.e)().then((async rY => {
-          const FY = null !== rY && await async function(YY) {
+        t: KT
+      } = (0, WT.t)(), {
+        clientEscMenuOptions: MT
+      } = (0, RT.k)(["clientEscMenuOptions", "showDistantNametags"]), AT = (0, iT.useRef)(DT("showFog")), gT = (0, iT.useRef)(MT.antiAliasing), hT = (0, iT.useRef)(MT.useWebGpu), [wT, mT] = (0, iT.useState)(null), [vT, ET] = (0, iT.useState)((() => (0, vo.i)(rT.featureFlags.settings.canUseShaderPacks))), [fT] = (0, iT.useState)((() => RT.c.isWebGpuDefaultOff())), [CT] = (0, iT.useState)(Ro.h);
+      (0, iT.useEffect)((() => {
+        let TT = !1;
+        return (0, rT.hasUsableWebGpuAdapter)().then((oT => {
+          TT || mT(oT)
+        })), (0, vo.l)(rT.featureFlags.settings.canUseShaderPacks) && (0, uo.e)().then((async oT => {
+          const iT = null !== oT && await async function(TT) {
             const [{
-              isShaderPackActive: rY
+              isShaderPackActive: oT
             }, {
-              loadPageShaderPackCompiler: FY
-            }] = await Promise.all([DY.e(128).then((() => DY(6221))), Promise.all([DY.e(74), DY.e(132), DY.e(131)]).then((() => DY(6182)))]);
-            return rY(YY, await FY())
-          }(rY);
-          YY || cY(FY)
+              loadPageShaderPackCompiler: iT
+            }] = await Promise.all([IT.e(128).then((() => IT(6154))), Promise.all([IT.e(74), IT.e(132), IT.e(131)]).then((() => IT(6114)))]);
+            return oT(TT, await iT())
+          }(oT);
+          TT || ET(iT)
         })), () => {
-          YY = !0
+          TT = !0
         }
       }), []);
-      const zY = function(YY, rY, DY, FY, AY) {
-          return (0, cr.b)(DY, FY) && !0 === rY ? {
+      const jT = function(TT, oT, IT, iT, zT) {
+          return (0, Eo.d)(IT, iT) && !0 === oT ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== rY ? "settingsMenu:newWebGpu" : AY ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: YY && !1 !== rY,
-            disabled: !0 !== rY
+            translationKey: !1 !== oT ? "settingsMenu:newWebGpu" : zT ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: TT && !1 !== oT,
+            disabled: !0 !== oT
           }
-        }(oY.useWebGpu, SY, BY, KY, HY),
-        ZY = (oY.useWebGpu || (0, cr.b)(BY, KY)) && BY && !0 === SY,
-        CY = (0, yY.j)("lightingOverride"),
-        fY = !(0, Kr.H)(CY);
-      let jY = "settingsMenu:enableLighting";
-      fY && (jY = CY ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const hY = YY => {
-          var rY, DY, FY;
-          const AY = null !== (rY = YY.showFog) && void 0 !== rY ? rY : uY("showFog"),
-            IY = null !== (DY = YY.antiAliasing) && void 0 !== DY ? DY : oY.antiAliasing,
-            RY = null !== (FY = YY.useWebGpu) && void 0 !== FY ? FY : oY.useWebGpu,
-            OY = !zr.r && AY !== EY.current || IY !== mY.current || RY !== VY.current;
-          iY(OY ? () => TY.m : null)
+        }(MT.useWebGpu, wT, vT, fT, CT),
+        JT = (MT.useWebGpu || (0, Eo.d)(vT, fT)) && vT && !0 === wT,
+        UT = (0, cT.g)("lightingOverride"),
+        aT = !(0, fo.K)(UT);
+      let YT = "settingsMenu:enableLighting";
+      aT && (YT = UT ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const QT = TT => {
+          var oT, IT, iT;
+          const zT = null !== (oT = TT.showFog) && void 0 !== oT ? oT : DT("showFog"),
+            kT = null !== (IT = TT.antiAliasing) && void 0 !== IT ? IT : MT.antiAliasing,
+            WT = null !== (iT = TT.useWebGpu) && void 0 !== iT ? iT : MT.useWebGpu,
+            XT = !jo.u && zT !== AT.current || kT !== gT.current || WT !== hT.current;
+          xT(XT ? () => eT.n : null)
         },
-        dY = (0, yY.j)("fogChunkDistanceOverride"),
-        JY = (0, yY.j)("fogBlockDistanceOverride"),
-        MY = !(0, Kr.H)(dY) || !(0, Kr.H)(JY),
-        wY = MY ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [bY, XY] = (0, lr.f)(aY),
-        [qY, pY] = (0, br.e)(aY),
-        kY = QY("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        GY = qY < bY,
-        xY = Math.min(null !== (rY = uY("chunkHorizAddDist")) && void 0 !== rY ? rY : aY[0], qY),
-        nY = !MY && function(YY, rY) {
-          return !0 === YY.showFog && YY.fogChunkDistance > rY
-        }(oY, xY);
-      return (0, vY.jsxs)("div", {
+        OT = (0, cT.g)("fogChunkDistanceOverride"),
+        HT = (0, cT.g)("fogBlockDistanceOverride"),
+        nT = !(0, fo.K)(OT) || !(0, fo.K)(HT),
+        qT = nT ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [ZT, lT] = (0, mo.f)(FT),
+        [sT, tT] = (0, Zo.c)(FT),
+        GT = KT("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        pT = sT < ZT,
+        bT = Math.min(null !== (oT = DT("chunkHorizAddDist")) && void 0 !== oT ? oT : FT[0], sT),
+        yT = !nT && function(TT, oT) {
+          return !0 === TT.showFog && TT.fogChunkDistance > oT
+        }(MT, bT);
+      return (0, ST.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, vY.jsx)(TY.j, {
-          name: QY("settingsMenu:horizontalChunkLoadDistance"),
-          min: aY[0],
-          max: bY,
-          selectableMax: qY,
-          cappedNote: kY,
+        children: [(0, ST.jsx)(eT.k, {
+          name: KT("settingsMenu:horizontalChunkLoadDistance"),
+          min: FT[0],
+          max: ZT,
+          selectableMax: sT,
+          cappedNote: GT,
           step: 1,
-          initValue: xY,
-          onChange: YY => {
-            !0 === uY("showFog") && YY < uY("fogChunkDistance") && sY("fogChunkDistance", YY), sY("chunkHorizAddDist", YY), Hr.g.vo("updatedChunkLoadDist")
+          initValue: bT,
+          onChange: TT => {
+            !0 === DT("showFog") && TT < DT("fogChunkDistance") && LT("fogChunkDistance", TT), LT("chunkHorizAddDist", TT), Co.h.XM("updatedChunkLoadDist")
           },
-          circleInfoText: QY("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, vY.jsx)(TY.j, {
-          name: QY("settingsMenu:verticalChunkLoadDistance"),
-          min: aY[1],
-          max: XY,
-          selectableMax: pY,
-          cappedNote: GY ? void 0 : kY,
+          circleInfoText: KT("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, ST.jsx)(eT.k, {
+          name: KT("settingsMenu:verticalChunkLoadDistance"),
+          min: FT[1],
+          max: lT,
+          selectableMax: tT,
+          cappedNote: pT ? void 0 : GT,
           step: 1,
-          initValue: Math.min(null !== (AY = uY("chunkVertAddDist")) && void 0 !== AY ? AY : aY[1], pY),
-          onChange: YY => {
-            sY("chunkVertAddDist", YY), Hr.g.vo("updatedChunkLoadDist")
+          initValue: Math.min(null !== (zT = DT("chunkVertAddDist")) && void 0 !== zT ? zT : FT[1], tT),
+          onChange: TT => {
+            LT("chunkVertAddDist", TT), Co.h.XM("updatedChunkLoadDist")
           },
-          circleInfoText: QY("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: KT("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, vY.jsx)(TY.c, {
-          label: QY("settingsMenu:chunkFadeIn"),
-          checked: oY.chunkFadeIn,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              chunkFadeIn: YY
+        }), (0, ST.jsx)(eT.e, {
+          label: KT("settingsMenu:chunkFadeIn"),
+          checked: MT.chunkFadeIn,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              chunkFadeIn: TT
             })
           },
-          circleInfoText: QY("settingsMenu:chunkFadeInInfo")
-        }), NY.devTools.supports("chunkBorders") && (0, vY.jsx)(TY.c, {
-          label: QY("settingsMenu:showChunkBorders"),
-          checked: oY.showChunkBorders,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              showChunkBorders: YY
+          circleInfoText: KT("settingsMenu:chunkFadeInInfo")
+        }), uT.devTools.supports("chunkBorders") && (0, ST.jsx)(eT.e, {
+          label: KT("settingsMenu:showChunkBorders"),
+          checked: MT.showChunkBorders,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              showChunkBorders: TT
             })
           },
-          circleInfoText: QY("settingsMenu:showChunkBordersInfo")
-        }), (0, vY.jsx)(TY.c, {
-          label: QY(jY),
-          checked: oY.enableLighting,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              enableLighting: YY
+          circleInfoText: KT("settingsMenu:showChunkBordersInfo")
+        }), (0, ST.jsx)(eT.e, {
+          label: KT(YT),
+          checked: MT.enableLighting,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              enableLighting: TT
             })
           },
-          disabled: fY
-        }), (0, vY.jsxs)("div", {
+          disabled: aT
+        }), (0, ST.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, vY.jsx)(TY.c, {
-            label: QY(wY),
-            checked: oY.showFog,
-            onClick: YY => {
-              hY({
-                showFog: YY
-              }), eY.b.setClientEscMenuOptions({
-                showFog: YY
+          children: [(0, ST.jsx)(eT.e, {
+            label: KT(qT),
+            checked: MT.showFog,
+            onClick: TT => {
+              QT({
+                showFog: TT
+              }), RT.c.setClientEscMenuOptions({
+                showFog: TT
               })
             },
-            disabled: MY,
-            className: IY()({
-              SettingBoxWarning: nY
+            disabled: nT,
+            className: kT()({
+              SettingBoxWarning: yT
             })
-          }), (0, vY.jsx)(TY.j, {
-            name: QY("settingsMenu:fogChunkDistance"),
-            min: aY[0],
-            max: Tr.d.maxChunkHorizAddDistance,
+          }), (0, ST.jsx)(eT.k, {
+            name: KT("settingsMenu:fogChunkDistance"),
+            min: FT[0],
+            max: eo.c.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (OY = oY.fogChunkDistance) && void 0 !== OY ? OY : aY[0],
-            onChange: YY => {
-              eY.b.setClientEscMenuOptions({
-                fogChunkDistance: YY
-              }), Hr.g.vo("fogChunkDistanceChanged", YY)
+            initValue: null !== (XT = MT.fogChunkDistance) && void 0 !== XT ? XT : FT[0],
+            onChange: TT => {
+              RT.c.setClientEscMenuOptions({
+                fogChunkDistance: TT
+              }), Co.h.XM("fogChunkDistanceChanged", TT)
             },
-            circleInfoText: QY("settingsMenu:fogChunkDistanceInfo"),
-            disabled: MY || !1 === uY("showFog"),
-            className: IY()({
-              SettingBoxWarning: nY
+            circleInfoText: KT("settingsMenu:fogChunkDistanceInfo"),
+            disabled: nT || !1 === DT("showFog"),
+            className: kT()({
+              SettingBoxWarning: yT
             })
-          }), nY && (0, vY.jsx)("div", {
+          }), yT && (0, ST.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: QY("settingsMenu:fogChunkDistanceInfo")
+            children: KT("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !zr.r && (0, vY.jsx)(TY.c, {
-          label: QY(ZY ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !ZY && oY.disableTexAtlas,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              disableTexAtlas: YY
+        }), !jo.u && (0, ST.jsx)(eT.e, {
+          label: KT(JT ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !JT && MT.disableTexAtlas,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              disableTexAtlas: TT
             })
           },
-          circleInfoText: QY("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: ZY
-        }), (0, vY.jsx)(TY.j, {
-          name: QY("settingsMenu:fieldOfView"),
+          circleInfoText: KT("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: JT
+        }), (0, ST.jsx)(eT.k, {
+          name: KT("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: oY.cameraFOV,
-          onChange: YY => {
-            eY.b.setClientEscMenuOptions({
-              cameraFOV: YY
+          initValue: MT.cameraFOV,
+          onChange: TT => {
+            RT.c.setClientEscMenuOptions({
+              cameraFOV: TT
             })
           }
-        }), (0, vY.jsx)(TY.c, {
-          label: QY("settingsMenu:disableViewBobbing"),
-          checked: oY.disableBobbing,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              disableBobbing: YY
+        }), (0, ST.jsx)(eT.e, {
+          label: KT("settingsMenu:disableViewBobbing"),
+          checked: MT.disableBobbing,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              disableBobbing: TT
             })
           },
-          circleInfoText: QY("settingsMenu:disableViewBobbingInfo")
-        }), (0, vY.jsx)(TY.c, {
-          label: QY("settingsMenu:antiAliasing"),
-          checked: oY.antiAliasing,
-          onClick: YY => {
-            hY({
-              antiAliasing: YY
-            }), (0, Jr.f)("antiAliasing"), eY.b.setClientEscMenuOptions({
-              antiAliasing: YY
+          circleInfoText: KT("settingsMenu:disableViewBobbingInfo")
+        }), (0, ST.jsx)(eT.e, {
+          label: KT("settingsMenu:antiAliasing"),
+          checked: MT.antiAliasing,
+          onClick: TT => {
+            QT({
+              antiAliasing: TT
+            }), (0, Ho.f)("antiAliasing"), RT.c.setClientEscMenuOptions({
+              antiAliasing: TT
             })
           },
-          circleInfoText: QY("settingsMenu:antiAliasingInfo")
-        }), (0, vY.jsx)(TY.j, {
-          name: QY("settingsMenu:pixelScale"),
+          circleInfoText: KT("settingsMenu:antiAliasingInfo")
+        }), (0, ST.jsx)(eT.k, {
+          name: KT("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (gY = oY.pixelScale) && void 0 !== gY ? gY : 1,
-          onChange: YY => {
-            (YY !== eY.b.get("clientEscMenuOptions").pixelScale || (0, wr.q)()) && (0, Jr.f)("pixelScale"), eY.b.setClientEscMenuOptions({
-              pixelScale: YY
+          initValue: null !== (BT = MT.pixelScale) && void 0 !== BT ? BT : 1,
+          onChange: TT => {
+            (TT !== RT.c.get("clientEscMenuOptions").pixelScale || (0, qo.q)()) && (0, Ho.f)("pixelScale"), RT.c.setClientEscMenuOptions({
+              pixelScale: TT
             })
           },
-          circleInfoText: QY("settingsMenu:pixelScaleInfo"),
-          format: YY => `${YY}x`
-        }), (0, vY.jsx)(TY.c, {
-          label: QY("settingsMenu:pixelSmoothing"),
-          checked: oY.pixelSmoothing,
-          onClick: YY => {
-            eY.b.setClientEscMenuOptions({
-              pixelSmoothing: YY
+          circleInfoText: KT("settingsMenu:pixelScaleInfo"),
+          format: TT => `${TT}x`
+        }), (0, ST.jsx)(eT.e, {
+          label: KT("settingsMenu:pixelSmoothing"),
+          checked: MT.pixelSmoothing,
+          onClick: TT => {
+            RT.c.setClientEscMenuOptions({
+              pixelSmoothing: TT
             })
           },
-          circleInfoText: QY("settingsMenu:pixelSmoothingInfo")
-        }), zr.r && (0, vY.jsx)(TY.c, {
-          label: QY("settingsMenu:distantNametags"),
-          checked: (0, Mr.e)(),
-          onClick: YY => {
-            eY.b.set({
-              showDistantNametags: YY
+          circleInfoText: KT("settingsMenu:pixelSmoothingInfo")
+        }), jo.u && (0, ST.jsx)(eT.e, {
+          label: KT("settingsMenu:distantNametags"),
+          checked: (0, no.d)(),
+          onClick: TT => {
+            RT.c.set({
+              showDistantNametags: TT
             })
           },
-          circleInfoText: QY("settingsMenu:distantNametagsInfo")
-        }), (0, vY.jsx)(TY.c, {
-          label: QY(zY.translationKey),
-          checked: zY.checked,
-          onClick: YY => {
-            hY({
-              useWebGpu: YY
-            }), eY.b.setClientEscMenuOptions({
-              useWebGpu: YY
+          circleInfoText: KT("settingsMenu:distantNametagsInfo")
+        }), (0, ST.jsx)(eT.e, {
+          label: KT(jT.translationKey),
+          checked: jT.checked,
+          onClick: TT => {
+            QT({
+              useWebGpu: TT
+            }), RT.c.setClientEscMenuOptions({
+              useWebGpu: TT
             })
           },
-          circleInfoText: QY("settingsMenu:newWebGpuInfo"),
-          disabled: zY.disabled
+          circleInfoText: KT("settingsMenu:newWebGpuInfo"),
+          disabled: jT.disabled
         })]
       })
     }
-    var qr = DY(3959),
-      pr = DY(8269),
-      kr = DY(8680),
-      Gr = DY(8280),
-      xr = DY(8685);
-    const nr = {
+    var to = IT(3939),
+      Go = IT(8290),
+      po = IT(8682),
+      bo = IT(8298),
+      yo = IT(8684);
+    const No = {
         color: 16777215,
         name: "white"
       },
-      Pr = {
+      Po = {
         color: 0,
         name: "black"
       },
-      Ur = [nr, {
+      Vo = [No, {
         color: 5046092,
         name: "green"
       }, {
@@ -1314,73 +1314,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, Pr],
-      Lr = [Pr, nr];
+      }, Po],
+      TI = [Po, No];
 
-    function tr(YY) {
-      return `${YY} px`
+    function oI(TT) {
+      return `${TT} px`
     }
 
-    function YD(YY) {
-      return `${YY}%`
+    function II(TT) {
+      return `${TT}%`
     }
 
-    function rD(YY) {
+    function iI(TT) {
       let {
-        label: rY,
-        value: DY,
-        swatches: FY,
-        onChange: AY
-      } = YY;
+        label: oT,
+        value: IT,
+        swatches: iT,
+        onChange: zT
+      } = TT;
       const {
-        t: OY
-      } = (0, RY.C)(), gY = !FY.some((YY => YY.color === DY));
-      return (0, vY.jsxs)("div", {
+        t: XT
+      } = (0, WT.t)(), BT = !iT.some((TT => TT.color === IT));
+      return (0, ST.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "SliderText",
-          children: rY
-        }), (0, vY.jsxs)("div", {
+          children: oT
+        }), (0, ST.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": rY,
-          children: [FY.map((YY => {
+          "aria-label": oT,
+          children: [iT.map((TT => {
             let {
-              color: rY,
-              name: FY
-            } = YY;
-            return (0, vY.jsx)("button", {
+              color: oT,
+              name: iT
+            } = TT;
+            return (0, ST.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": rY === DY,
-              "aria-label": OY(`crosshairSettings:color_${FY}`),
+              "aria-checked": oT === IT,
+              "aria-label": XT(`crosshairSettings:color_${iT}`),
               "data-pad-focusable": !0,
-              className: IY()("CrosshairSwatch", {
-                Selected: rY === DY
+              className: kT()("CrosshairSwatch", {
+                Selected: oT === IT
               }),
               style: {
-                background: (0, xr.j)(rY)
+                background: (0, yo.k)(oT)
               },
               onClick: () => {
-                AY(rY)
+                zT(oT)
               }
-            }, rY)
-          })), (0, vY.jsx)("label", {
-            className: IY()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: gY
+            }, oT)
+          })), (0, ST.jsx)("label", {
+            className: kT()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: BT
             }),
-            style: gY ? {
-              background: (0, xr.j)(DY)
+            style: BT ? {
+              background: (0, yo.k)(IT)
             } : void 0,
-            title: OY("crosshairSettings:customColor"),
+            title: XT("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, vY.jsx)("input", {
+            children: (0, ST.jsx)("input", {
               type: "color",
-              "aria-label": OY("crosshairSettings:customColor"),
-              value: (0, xr.j)(DY),
-              onChange: YY => {
-                const rY = (0, xr.o)(YY.target.value);
-                null !== rY && AY(rY)
+              "aria-label": XT("crosshairSettings:customColor"),
+              value: (0, yo.k)(IT),
+              onChange: TT => {
+                const oT = (0, yo.q)(TT.target.value);
+                null !== oT && zT(oT)
               }
             })
           })]
@@ -1388,119 +1388,119 @@ export const modules = {
       })
     }
 
-    function DD(YY) {
+    function zI(TT) {
       let {
-        settings: rY,
-        onChange: DY
-      } = YY;
+        settings: oT,
+        onChange: IT
+      } = TT;
       const {
-        t: FY
-      } = (0, RY.C)(), AY = (YY, FY) => {
-        DY((0, xr.u)(rY, YY, FY))
-      }, IY = function(YY, DY) {
-        let FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tr;
+        t: iT
+      } = (0, WT.t)(), zT = (TT, iT) => {
+        IT((0, yo.w)(oT, TT, iT))
+      }, kT = function(TT, IT) {
+        let iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : oI;
         const {
-          min: IY,
-          max: RY,
-          step: OY
-        } = xr.b[YY];
-        return (0, vY.jsx)(TY.j, {
-          name: DY,
-          min: IY,
-          max: RY,
-          step: OY,
-          initValue: rY[YY],
-          format: FY,
-          onChange: rY => {
-            AY(YY, rY)
+          min: kT,
+          max: WT,
+          step: XT
+        } = yo.e[TT];
+        return (0, ST.jsx)(eT.k, {
+          name: IT,
+          min: kT,
+          max: WT,
+          step: XT,
+          initValue: oT[TT],
+          format: iT,
+          onChange: oT => {
+            zT(TT, oT)
           }
-        }, YY)
-      }, OY = ["lines", "dot", "circle"].filter((YY => rY[YY])), gY = (YY, DY, FY) => (0, vY.jsx)(TY.c, {
-        label: DY,
-        checked: rY[YY],
-        disabled: 1 === OY.length && OY[0] === YY,
-        circleInfoText: FY,
-        onClick: rY => {
-          AY(YY, rY)
+        }, TT)
+      }, XT = ["lines", "dot", "circle"].filter((TT => oT[TT])), BT = (TT, IT, iT) => (0, ST.jsx)(eT.e, {
+        label: IT,
+        checked: oT[TT],
+        disabled: 1 === XT.length && XT[0] === TT,
+        circleInfoText: iT,
+        onClick: oT => {
+          zT(TT, oT)
         }
-      }, YY), aY = "shapes" === rY.style;
-      return (0, vY.jsxs)(vY.Fragment, {
-        children: [(0, vY.jsx)(TY.f, {
-          label: FY("crosshairSettings:style"),
+      }, TT), FT = "shapes" === oT.style;
+      return (0, ST.jsxs)(ST.Fragment, {
+        children: [(0, ST.jsx)(eT.h, {
+          label: iT("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: FY("crosshairSettings:styleClassic")
+            label: iT("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: FY("crosshairSettings:styleShapes")
+            label: iT("crosshairSettings:styleShapes")
           }],
-          value: rY.style,
-          onChange: YY => {
-            AY("style", YY)
+          value: oT.style,
+          onChange: TT => {
+            zT("style", TT)
           }
-        }), (0, vY.jsx)(rD, {
-          label: FY("crosshairSettings:color"),
-          value: rY.color,
-          swatches: Ur,
-          onChange: YY => {
-            AY("color", YY)
+        }), (0, ST.jsx)(iI, {
+          label: iT("crosshairSettings:color"),
+          value: oT.color,
+          swatches: Vo,
+          onChange: TT => {
+            zT("color", TT)
           }
-        }), IY("opacity", FY("crosshairSettings:opacity"), YD), !aY && IY("size", FY("crosshairSettings:size"), YD), aY && (0, vY.jsxs)("div", {
+        }), kT("opacity", iT("crosshairSettings:opacity"), II), !FT && kT("size", iT("crosshairSettings:size"), II), FT && (0, ST.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [gY("lines", FY("crosshairSettings:lines")), rY.lines && IY("lineLength", FY("crosshairSettings:lineLength")), rY.lines && IY("lineThickness", FY("crosshairSettings:lineThickness")), rY.lines && IY("gap", FY("crosshairSettings:gap")), rY.lines && gY("tStyle", FY("crosshairSettings:tStyle"))]
-        }), aY && (0, vY.jsxs)("div", {
+          children: [BT("lines", iT("crosshairSettings:lines")), oT.lines && kT("lineLength", iT("crosshairSettings:lineLength")), oT.lines && kT("lineThickness", iT("crosshairSettings:lineThickness")), oT.lines && kT("gap", iT("crosshairSettings:gap")), oT.lines && BT("tStyle", iT("crosshairSettings:tStyle"))]
+        }), FT && (0, ST.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [gY("dot", FY("crosshairSettings:dot")), rY.dot && IY("dotSize", FY("crosshairSettings:dotSize"))]
-        }), aY && (0, vY.jsxs)("div", {
+          children: [BT("dot", iT("crosshairSettings:dot")), oT.dot && kT("dotSize", iT("crosshairSettings:dotSize"))]
+        }), FT && (0, ST.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [gY("circle", FY("crosshairSettings:circle")), rY.circle && IY("circleRadius", FY("crosshairSettings:circleRadius")), rY.circle && IY("circleThickness", FY("crosshairSettings:circleThickness"))]
-        }), (0, vY.jsxs)("div", {
+          children: [BT("circle", iT("crosshairSettings:circle")), oT.circle && kT("circleRadius", iT("crosshairSettings:circleRadius")), oT.circle && kT("circleThickness", iT("crosshairSettings:circleThickness"))]
+        }), (0, ST.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [IY("outline", FY("crosshairSettings:outline"), (YY => YY > 0 ? tr(YY) : FY("crosshairSettings:off"))), rY.outline > 0 && (0, vY.jsx)(rD, {
-            label: FY("crosshairSettings:outlineColor"),
-            value: rY.outlineColor,
-            swatches: Lr,
-            onChange: YY => {
-              AY("outlineColor", YY)
+          children: [kT("outline", iT("crosshairSettings:outline"), (TT => TT > 0 ? oI(TT) : iT("crosshairSettings:off"))), oT.outline > 0 && (0, ST.jsx)(iI, {
+            label: iT("crosshairSettings:outlineColor"),
+            value: oT.outlineColor,
+            swatches: TI,
+            onChange: TT => {
+              zT("outlineColor", TT)
             }
           })]
-        }), gY("growOnClick", FY("crosshairSettings:growOnClick")), aY && gY("forGuns", FY("crosshairSettings:forGuns"), FY("crosshairSettings:forGunsInfo"))]
+        }), BT("growOnClick", iT("crosshairSettings:growOnClick")), FT && BT("forGuns", iT("crosshairSettings:forGuns"), iT("crosshairSettings:forGunsInfo"))]
       })
     }
-    var FD = DY(76),
-      AD = DY(1284),
-      ID = DY(8691),
-      RD = DY(8698),
-      OD = DY(8705),
-      gD = DY(8709);
-    const aD = ["sky", "grass", "stone", "sand", "snow", "night"],
-      vD = "4rem";
+    var kI = IT(68),
+      WI = IT(1249),
+      XI = IT(8692),
+      BI = IT(8695),
+      FI = IT(8699),
+      SI = IT(8704);
+    const DI = ["sky", "grass", "stone", "sand", "snow", "night"],
+      LI = "4rem";
 
-    function uD(YY) {
+    function xI(TT) {
       return {
-        backgroundImage: `url(${YY})`,
-        backgroundSize: `${vD} ${vD}`,
+        backgroundImage: `url(${TT})`,
+        backgroundSize: `${LI} ${LI}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function sD(YY) {
+    function cI(TT) {
       return {
         ...(() => {
-          switch (YY) {
+          switch (TT) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return uD(ID);
+              return xI(XI);
             case "stone":
-              return uD(RD);
+              return xI(BI);
             case "sand":
-              return uD(OD);
+              return xI(FI);
             case "snow":
-              return uD(gD);
+              return xI(SI);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1511,21 +1511,21 @@ export const modules = {
       }
     }
 
-    function iD(YY) {
+    function KI(TT) {
       return Object.freeze({
-        ...xr.f,
+        ...yo.f,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...YY
+        ...TT
       })
     }
-    const yD = [{
+    const MI = [{
         id: "default",
-        settings: xr.f
+        settings: yo.f
       }, {
         id: "cross",
-        settings: iD({
+        settings: KI({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1534,7 +1534,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: iD({
+        settings: KI({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1545,13 +1545,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: iD({
+        settings: KI({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: iD({
+        settings: KI({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1560,7 +1560,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: iD({
+        settings: KI({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1570,7 +1570,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: iD({
+        settings: KI({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1579,7 +1579,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: iD({
+        settings: KI({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1587,570 +1587,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      QD = ["growOnClick", "forGuns"];
-    var oD = DY(8718);
+      rI = ["growOnClick", "forGuns"];
+    var AI = IT(8713);
 
-    function WD(YY) {
+    function gI(TT) {
       let {
-        label: rY,
-        selected: DY,
-        onClick: FY,
-        className: AY,
-        style: RY,
-        children: OY
-      } = YY;
-      return (0, vY.jsx)("button", {
+        label: oT,
+        selected: IT,
+        onClick: iT,
+        className: zT,
+        style: WT,
+        children: XT
+      } = TT;
+      return (0, ST.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": DY,
-        title: rY,
-        "aria-label": rY,
+        "aria-checked": IT,
+        title: oT,
+        "aria-label": oT,
         "data-pad-focusable": !0,
-        className: IY()("CrosshairBackdropSwatch", AY, {
-          Selected: DY
+        className: kT()("CrosshairBackdropSwatch", zT, {
+          Selected: IT
         }),
-        style: RY,
-        onClick: FY,
-        children: OY
+        style: WT,
+        onClick: iT,
+        children: XT
       })
     }
 
-    function ED(YY) {
+    function hI(TT) {
       let {
-        backdrop: rY,
-        onChange: DY,
-        game: FY
-      } = YY;
+        backdrop: oT,
+        onChange: IT,
+        game: iT
+      } = TT;
       const {
-        t: AY
-      } = (0, RY.C)();
-      return (0, vY.jsxs)("div", {
+        t: zT
+      } = (0, WT.t)();
+      return (0, ST.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": AY("crosshairSettings:background"),
-        children: [FY && (0, vY.jsx)(WD, {
-          label: AY("crosshairSettings:bg_game"),
-          selected: FY.selected,
-          onClick: FY.onSelect,
+        "aria-label": zT("crosshairSettings:background"),
+        children: [iT && (0, ST.jsx)(gI, {
+          label: zT("crosshairSettings:bg_game"),
+          selected: iT.selected,
+          onClick: iT.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, vY.jsx)(OY.e, {
+          children: (0, ST.jsx)(XT.e, {
             name: "cube"
           })
-        }), aD.map((YY => (0, vY.jsx)(WD, {
-          label: AY(`crosshairSettings:bg_${YY}`),
-          selected: !(null !== FY && void 0 !== FY && FY.selected) && YY === rY,
-          style: sD(YY),
+        }), DI.map((TT => (0, ST.jsx)(gI, {
+          label: zT(`crosshairSettings:bg_${TT}`),
+          selected: !(null !== iT && void 0 !== iT && iT.selected) && TT === oT,
+          style: cI(TT),
           onClick: () => {
-            DY(YY)
+            IT(TT)
           }
-        }, YY)))]
+        }, TT)))]
       })
     }
 
-    function mD(YY) {
+    function wI(TT) {
       let {
-        settings: rY,
-        touch: DY,
-        backdrop: FY,
-        onChange: AY
-      } = YY;
+        settings: oT,
+        touch: IT,
+        backdrop: iT,
+        onChange: zT
+      } = TT;
       const {
-        t: OY
-      } = (0, RY.C)(), gY = function(YY) {
-        var rY;
-        return null !== (rY = yD.find((rY => (0, xr.r)(rY.settings, YY, QD)))) && void 0 !== rY ? rY : null
-      }(rY);
-      return (0, vY.jsx)("div", {
+        t: XT
+      } = (0, WT.t)(), BT = function(TT) {
+        var oT;
+        return null !== (oT = MI.find((oT => (0, yo.u)(oT.settings, TT, rI)))) && void 0 !== oT ? oT : null
+      }(oT);
+      return (0, ST.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": OY("crosshairSettings:presets"),
-        children: yD.map((YY => {
-          const RY = (null === gY || void 0 === gY ? void 0 : gY.id) === YY.id;
-          return (0, vY.jsxs)("button", {
+        "aria-label": XT("crosshairSettings:presets"),
+        children: MI.map((TT => {
+          const WT = (null === BT || void 0 === BT ? void 0 : BT.id) === TT.id;
+          return (0, ST.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": RY,
+            "aria-checked": WT,
             "data-pad-focusable": !0,
-            className: IY()("CrosshairPreset", {
-              Selected: RY
+            className: kT()("CrosshairPreset", {
+              Selected: WT
             }),
             onClick: () => {
-              AY(function(YY, rY) {
+              zT(function(TT, oT) {
                 return {
-                  ...rY.settings,
-                  growOnClick: YY.growOnClick,
-                  forGuns: YY.forGuns
+                  ...oT.settings,
+                  growOnClick: TT.growOnClick,
+                  forGuns: TT.forGuns
                 }
-              }(rY, YY))
+              }(oT, TT))
             },
-            children: [(0, vY.jsx)("div", {
+            children: [(0, ST.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: sD(FY),
-              children: (0, vY.jsx)(oD.d, {
-                settings: YY.settings,
-                touch: DY,
+              style: cI(iT),
+              children: (0, ST.jsx)(AI.e, {
+                settings: TT.settings,
+                touch: IT,
                 inPreview: !0
               })
-            }), (0, vY.jsx)("div", {
+            }), (0, ST.jsx)("div", {
               className: "CrosshairPresetName",
-              children: OY(`crosshairSettings:preset_${YY.id}`)
+              children: XT(`crosshairSettings:preset_${TT.id}`)
             })]
-          }, YY.id)
+          }, TT.id)
         }))
       })
     }
+    var mI = IT(1615);
 
-    function VD(YY, rY) {
-      const [DY, AY] = (0, FY.useState)(!1), IY = () => {
-        AY(!1)
-      }, [RY, OY] = (0, FY.useState)(!1), gY = (0, FY.useRef)({
-        growOnClick: YY.growOnClick,
-        forGuns: YY.forGuns
+    function eI(TT, oT) {
+      const [IT, zT] = (0, iT.useState)(!1), kT = () => {
+        zT(!1)
+      }, [WT, XT] = (0, iT.useState)(!1), BT = (0, iT.useRef)({
+        growOnClick: TT.growOnClick,
+        forGuns: TT.forGuns
       });
-      (0, FY.useEffect)((() => {
-        const rY = gY.current;
-        gY.current = {
-          growOnClick: YY.growOnClick,
-          forGuns: YY.forGuns
-        }, (YY.growOnClick && !rY.growOnClick || YY.forGuns && !rY.forGuns) && OY(!0)
-      }), [YY.growOnClick, YY.forGuns]), (0, FY.useEffect)((() => {
-        if (!RY) return;
-        const YY = setTimeout((() => {
-          OY(!1)
+      (0, iT.useEffect)((() => {
+        const oT = BT.current;
+        BT.current = {
+          growOnClick: TT.growOnClick,
+          forGuns: TT.forGuns
+        }, (TT.growOnClick && !oT.growOnClick || TT.forGuns && !oT.forGuns) && XT(!0)
+      }), [TT.growOnClick, TT.forGuns]), (0, iT.useEffect)((() => {
+        if (!WT) return;
+        const TT = setTimeout((() => {
+          XT(!1)
         }), 600);
         return () => {
-          clearTimeout(YY)
+          clearTimeout(TT)
         }
-      }), [RY]);
-      const aY = DY || RY;
+      }), [WT]);
+      const FT = IT || WT;
       return {
         view: {
-          pressed: aY,
-          spread: aY && YY.forGuns && !YY.growOnClick ? 6 : 0
+          pressed: FT,
+          spread: FT && TT.forGuns && !TT.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: YY => {
-            YY.target.closest(rY) || (YY.currentTarget.setPointerCapture(YY.pointerId), AY(!0))
+          onPointerDown: TT => {
+            !TT.target.closest(oT) && (0, mI.e)(TT.currentTarget, TT.pointerId) && zT(!0)
           },
-          onPointerUp: IY,
-          onPointerCancel: IY,
-          onLostPointerCapture: IY
+          onPointerUp: kT,
+          onPointerCancel: kT,
+          onLostPointerCapture: kT
         }
       }
     }
 
-    function SD(YY) {
+    function RI(TT) {
       let {
-        settings: rY,
-        touch: DY,
-        backdrop: FY,
-        className: AY,
-        children: RY,
-        label: OY
-      } = YY;
-      const gY = VD(rY, ".CrosshairStageControls");
-      return (0, vY.jsxs)("div", {
-        className: IY()("CrosshairStage", AY),
-        style: sD(FY),
-        ...gY.handlers,
-        children: [(0, vY.jsx)("div", {
+        settings: oT,
+        touch: IT,
+        backdrop: iT,
+        className: zT,
+        children: WT,
+        label: XT
+      } = TT;
+      const BT = eI(oT, ".CrosshairStageControls");
+      return (0, ST.jsxs)("div", {
+        className: kT()("CrosshairStage", zT),
+        style: cI(iT),
+        ...BT.handlers,
+        children: [(0, ST.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": OY,
-          children: (0, vY.jsx)(oD.d, {
-            settings: rY,
-            touch: DY,
+          "aria-label": XT,
+          children: (0, ST.jsx)(AI.e, {
+            settings: oT,
+            touch: IT,
             inPreview: !0,
-            ...gY.view
+            ...BT.view
           })
-        }), RY]
+        }), WT]
       })
     }
-    const lD = "crosshairFullScreen";
+    const uI = "crosshairFullScreen";
 
-    function TD(YY) {
+    function vI(TT) {
       let {
-        settings: rY,
-        touch: DY,
-        backdrop: AY,
-        onBackdrop: gY,
-        inGame: aY,
-        onChange: uY,
-        onClose: sY
-      } = YY;
+        settings: oT,
+        touch: IT,
+        backdrop: zT,
+        onBackdrop: BT,
+        inGame: FT,
+        onChange: DT,
+        onClose: LT
+      } = TT;
       const {
-        t: iY
-      } = (0, RY.C)(), yY = (0, FY.useRef)(null);
-      (0, AD.t)("popup", yY, sY),
-      function(YY) {
-        const rY = (0, FY.useRef)(YY);
-        rY.current = YY, (0, FY.useEffect)((() => {
+        t: xT
+      } = (0, WT.t)(), cT = (0, iT.useRef)(null);
+      (0, WI.s)("popup", cT, LT),
+      function(TT) {
+        const oT = (0, iT.useRef)(TT);
+        oT.current = TT, (0, iT.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [lD]: !0
+            [uI]: !0
           }, "");
-          let YY = !1;
-          const DY = () => {
-            YY = !0, rY.current()
+          let TT = !1;
+          const IT = () => {
+            TT = !0, oT.current()
           };
-          return window.addEventListener("popstate", DY), () => {
-            var rY;
-            window.removeEventListener("popstate", DY), !YY && null !== (rY = window.history.state) && void 0 !== rY && rY[lD] && window.history.back()
+          return window.addEventListener("popstate", IT), () => {
+            var oT;
+            window.removeEventListener("popstate", IT), !TT && null !== (oT = window.history.state) && void 0 !== oT && oT[uI] && window.history.back()
           }
         }), [])
-      }(sY);
-      const QY = (0, FY.useRef)(sY);
-      QY.current = sY, (0, FY.useEffect)((() => {
-        function YY(YY) {
-          "Escape" === YY.key && (YY.stopPropagation(), QY.current())
+      }(LT);
+      const KT = (0, iT.useRef)(LT);
+      KT.current = LT, (0, iT.useEffect)((() => {
+        function TT(TT) {
+          "Escape" === TT.key && (TT.stopPropagation(), KT.current())
         }
-        return window.addEventListener("keydown", YY, !0), () => {
-          window.removeEventListener("keydown", YY, !0)
+        return window.addEventListener("keydown", TT, !0), () => {
+          window.removeEventListener("keydown", TT, !0)
         }
       }), []);
-      const WY = VD(rY, ".CrosshairFullScreenPanel"),
-        [EY, mY] = (0, FY.useState)(!0),
-        VY = EY && aY;
-      (0, FY.useEffect)((() => {
-        if (VY) return eY.b.set({
+      const rT = eI(oT, ".CrosshairFullScreenPanel"),
+        [AT, gT] = (0, iT.useState)(!0),
+        hT = AT && FT;
+      (0, iT.useEffect)((() => {
+        if (hT) return RT.c.set({
           crosshairGameView: !0
         }), () => {
-          eY.b.set({
+          RT.c.set({
             crosshairGameView: !1
           })
         }
-      }), [VY]);
-      const [SY, lY] = (0, FY.useState)(!0);
-      return (0, FD.createPortal)((0, vY.jsxs)("div", {
-        ref: yY,
+      }), [hT]);
+      const [wT, mT] = (0, iT.useState)(!0);
+      return (0, kI.createPortal)((0, ST.jsxs)("div", {
+        ref: cT,
         className: "CrosshairFullScreen",
-        style: VY ? void 0 : sD(AY),
-        ...WY.handlers,
-        children: [(0, vY.jsx)(oD.d, {
-          settings: rY,
-          touch: DY,
+        style: hT ? void 0 : cI(zT),
+        ...rT.handlers,
+        children: [(0, ST.jsx)(AI.e, {
+          settings: oT,
+          touch: IT,
           inEditor: !0,
-          ...WY.view
-        }), (0, vY.jsxs)("div", {
-          className: IY()("CrosshairFullScreenPanel", {
-            Collapsed: !SY
+          ...rT.view
+        }), (0, ST.jsxs)("div", {
+          className: kT()("CrosshairFullScreenPanel", {
+            Collapsed: !wT
           }),
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, vY.jsx)(ED, {
-              backdrop: AY,
-              onChange: YY => {
-                mY(!1), gY(YY)
+            children: [(0, ST.jsx)(hI, {
+              backdrop: zT,
+              onChange: TT => {
+                gT(!1), BT(TT)
               },
-              game: aY ? {
-                selected: VY,
+              game: FT ? {
+                selected: hT,
                 onSelect: () => {
-                  mY(!0)
+                  gT(!0)
                 }
               } : void 0
-            }), (0, vY.jsx)(oY.J, {
+            }), (0, ST.jsx)(MT.J, {
               className: "CrosshairPanelToggle",
-              ariaLabel: iY(SY ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: xT(wT ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                lY(!SY)
+                mT(!wT)
               },
-              children: (0, vY.jsx)(OY.e, {
-                name: SY ? "caret-up" : "pen"
+              children: (0, ST.jsx)(XT.e, {
+                name: wT ? "caret-up" : "pen"
               })
-            }), (0, vY.jsx)(oY.f, {
+            }), (0, ST.jsx)(MT.e, {
               className: "CrosshairFullScreenDone",
-              onClick: sY,
+              onClick: LT,
               padDefaultFocus: !0,
-              children: iY("crosshairSettings:done")
+              children: xT("crosshairSettings:done")
             })]
-          }), SY && (0, vY.jsxs)("div", {
+          }), wT && (0, ST.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, vY.jsx)(mD, {
-              settings: rY,
-              touch: DY,
-              backdrop: AY,
-              onChange: uY
-            }), (0, vY.jsx)(DD, {
-              settings: rY,
-              onChange: uY
+            children: [(0, ST.jsx)(wI, {
+              settings: oT,
+              touch: IT,
+              backdrop: zT,
+              onChange: DT
+            }), (0, ST.jsx)(zI, {
+              settings: oT,
+              onChange: DT
             })]
           })]
         })]
       }), document.body)
     }
-    var eD = DY(2417),
-      ND = DY(8729);
+    var EI = IT(2382),
+      fI = IT(8724);
 
-    function BD(YY) {
+    function CI(TT) {
       let {
-        settings: rY,
-        onChange: DY
-      } = YY;
+        settings: oT,
+        onChange: IT
+      } = TT;
       const {
-        t: AY
-      } = (0, RY.C)(), gY = (0, ND.i)(rY), [aY, uY] = (0, eD.f)(), [sY, iY] = (0, FY.useState)(!1), yY = (0, FY.useRef)(null), [QY, WY] = (0, eD.f)(), [EY, mY] = (0, FY.useState)(!1);
-      return (0, vY.jsxs)("div", {
+        t: zT
+      } = (0, WT.t)(), BT = (0, fI.k)(oT), [FT, DT] = (0, EI.i)(), [LT, xT] = (0, iT.useState)(!1), cT = (0, iT.useRef)(null), [KT, rT] = (0, EI.i)(), [AT, gT] = (0, iT.useState)(!1);
+      return (0, ST.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, vY.jsxs)("div", {
+        children: [(0, ST.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, vY.jsxs)(oY.J, {
-            className: IY()("CrosshairCopy", {
-              ActiveSecondaryButton: aY
+          children: [(0, ST.jsxs)(MT.J, {
+            className: kT()("CrosshairCopy", {
+              ActiveSecondaryButton: FT
             }),
             onClick: () => {
-              (0, eD.e)(gY, {
+              (0, EI.f)(BT, {
                 useShareSheet: !1,
-                onOutcome: YY => {
-                  iY("failed" === YY), "copied" === YY && uY()
+                onOutcome: TT => {
+                  xT("failed" === TT), "copied" === TT && DT()
                 }
               })
             },
-            children: [(0, vY.jsx)(OY.e, {
-              name: aY ? "check" : "copy"
-            }), " ", AY(aY ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, vY.jsx)(SY.d, {
+            children: [(0, ST.jsx)(XT.e, {
+              name: FT ? "check" : "copy"
+            }), " ", zT(FT ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, ST.jsx)(wT.e, {
             className: "CrosshairPaste",
-            domRef: yY,
-            ariaLabel: AY("crosshairSettings:paste"),
-            placeholderText: AY("crosshairSettings:paste"),
-            onValueChange: YY => {
-              const rY = (0, ND.e)(YY);
-              mY(!rY && YY.trim().length >= ND.b), rY && (DY(rY), yY.current.value = "", WY())
+            domRef: cT,
+            ariaLabel: zT("crosshairSettings:paste"),
+            placeholderText: zT("crosshairSettings:paste"),
+            onValueChange: TT => {
+              const oT = (0, fI.g)(TT);
+              gT(!oT && TT.trim().length >= fI.d), oT && (IT(oT), cT.current.value = "", rT())
             }
           })]
-        }), sY && (0, vY.jsx)("input", {
+        }), LT && (0, ST.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: gY,
-          "aria-label": AY("crosshairSettings:copy"),
-          onFocus: YY => {
-            YY.currentTarget.select()
+          value: BT,
+          "aria-label": zT("crosshairSettings:copy"),
+          onFocus: TT => {
+            TT.currentTarget.select()
           }
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           "aria-live": "polite",
-          children: [EY && (0, vY.jsx)("div", {
+          children: [AT && (0, ST.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: AY("crosshairSettings:pasteInvalid")
-          }), QY && !EY && (0, vY.jsx)("div", {
+            children: zT("crosshairSettings:pasteInvalid")
+          }), KT && !AT && (0, ST.jsx)("div", {
             className: "CrosshairShareNote",
-            children: AY("crosshairSettings:applied")
+            children: zT("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var cD = DY(8733);
-    let KD = "sky";
+    var jI = IT(8731);
+    let JI = "sky";
 
-    function HD(YY) {
+    function UI(TT) {
       let {
-        showing: rY
-      } = YY;
+        showing: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, RY.C)(), {
-        isTouchScreen: AY,
-        gameState: IY,
-        clientEscMenuOptions: gY
-      } = (0, eY.j)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), aY = (0, cD.e)(), [uY, sY] = (0, FY.useState)(KD), iY = YY => {
-        KD = YY, sY(YY)
-      }, [yY, QY] = (0, FY.useState)(!1);
-      return (0, FY.useEffect)((() => {
-        rY || QY(!1)
-      }), [rY]), (0, vY.jsxs)("div", {
+        t: IT
+      } = (0, WT.t)(), {
+        isTouchScreen: zT,
+        gameState: kT,
+        clientEscMenuOptions: BT
+      } = (0, RT.k)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), FT = (0, jI.g)(), [DT, LT] = (0, iT.useState)(JI), xT = TT => {
+        JI = TT, LT(TT)
+      }, [cT, KT] = (0, iT.useState)(!1);
+      return (0, iT.useEffect)((() => {
+        oT || KT(!1)
+      }), [oT]), (0, ST.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, vY.jsx)(SD, {
+          children: (0, ST.jsx)(RI, {
             className: "CrosshairPreviewStage",
-            settings: aY,
-            touch: AY,
-            backdrop: uY,
-            label: DY("crosshairSettings:preview"),
-            children: (0, vY.jsxs)("div", {
+            settings: FT,
+            touch: zT,
+            backdrop: DT,
+            label: IT("crosshairSettings:preview"),
+            children: (0, ST.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, vY.jsx)(ED, {
-                backdrop: uY,
-                onChange: iY
-              }), (0, vY.jsxs)(oY.J, {
+              children: [(0, ST.jsx)(hI, {
+                backdrop: DT,
+                onChange: xT
+              }), (0, ST.jsxs)(MT.J, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  QY(!0)
+                  KT(!0)
                 },
-                children: [(0, vY.jsx)(OY.e, {
+                children: [(0, ST.jsx)(XT.e, {
                   name: "expand"
-                }), " ", DY("crosshairSettings:fullScreen")]
+                }), " ", IT("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, vY.jsx)("div", {
+        }), (0, ST.jsx)("div", {
           className: "SettingBox",
-          children: (0, vY.jsx)(mD, {
-            settings: aY,
-            touch: AY,
-            backdrop: uY,
-            onChange: cD.b
+          children: (0, ST.jsx)(wI, {
+            settings: FT,
+            touch: zT,
+            backdrop: DT,
+            onChange: jI.d
           })
-        }), (0, vY.jsx)(BD, {
-          settings: aY,
-          onChange: cD.b
-        }), AY && (0, vY.jsx)(Gr.c, {
-          note: (0, kr.g)(AY, gY.touchActionButtons) ? DY("crosshairSettings:touchNote") : void 0
-        }), (0, vY.jsx)(DD, {
-          settings: aY,
-          onChange: cD.b
-        }), yY && (0, vY.jsx)(TD, {
-          settings: aY,
-          touch: AY,
-          backdrop: uY,
-          onBackdrop: iY,
-          inGame: "inGame" === IY,
-          onChange: cD.b,
+        }), (0, ST.jsx)(CI, {
+          settings: FT,
+          onChange: jI.d
+        }), zT && (0, ST.jsx)(bo.c, {
+          note: (0, po.e)(zT, BT.touchActionButtons) ? IT("crosshairSettings:touchNote") : void 0
+        }), (0, ST.jsx)(zI, {
+          settings: FT,
+          onChange: jI.d
+        }), cT && (0, ST.jsx)(vI, {
+          settings: FT,
+          touch: zT,
+          backdrop: DT,
+          onBackdrop: xT,
+          inGame: "inGame" === kT,
+          onChange: jI.d,
           onClose: () => {
-            QY(!1)
+            KT(!1)
           }
         })]
       })
     }
-    var zD = DY(8273),
-      ZD = DY(1389),
-      CD = DY(4578),
-      fD = DY(8739),
-      jD = DY(1834),
-      hD = DY(3852),
-      dD = DY(1842),
-      JD = DY(724);
-    const MD = (0, FY.memo)((function() {
+    var aI = IT(8294),
+      YI = IT(1363),
+      QI = IT(4473),
+      OI = IT(8735),
+      HI = IT(1784),
+      nI = IT(3841),
+      qI = IT(1787),
+      ZI = IT(703);
+    const lI = (0, iT.memo)((function() {
       const {
-        clientEscMenuOptions: YY
-      } = (0, eY.j)(["clientEscMenuOptions"]), {
-        recording: rY,
-        clipping: DY,
-        hasClipBuffer: AY
-      } = (0, jD.h)("replayRecorder"), RY = (0, jD.f)("connectedGame", (YY => YY.replay)), OY = (0, hD.i)(), gY = !1 === (0, yY.j)("canRecordReplays");
-      (0, FY.useEffect)((() => {
-        EY.gameBridge.send("setRecorderPrefs", {
-          clipping: YY.enableClipping,
-          clipSeconds: YY.clipDurationSeconds
+        clientEscMenuOptions: TT
+      } = (0, RT.k)(["clientEscMenuOptions"]), {
+        recording: oT,
+        clipping: IT,
+        hasClipBuffer: zT
+      } = (0, HI.f)("replayRecorder"), WT = (0, HI.d)("connectedGame", (TT => TT.replay)), XT = (0, nI.m)(), BT = !1 === (0, cT.g)("canRecordReplays");
+      (0, iT.useEffect)((() => {
+        AT.gameBridge.send("setRecorderPrefs", {
+          clipping: TT.enableClipping,
+          clipSeconds: TT.clipDurationSeconds
         })
-      }), [YY.enableClipping, YY.clipDurationSeconds]);
-      const aY = OY || RY,
-        uY = !aY && !gY,
-        sY = rY || uY,
-        iY = uY,
-        QY = iY && DY && !rY;
+      }), [TT.enableClipping, TT.clipDurationSeconds]);
+      const FT = XT || WT,
+        DT = !FT && !BT,
+        LT = oT || DT,
+        xT = DT,
+        KT = xT && IT && !oT;
 
-      function WY() {
-        sY && EY.gameBridge.send("toggleRecording", null)
+      function rT() {
+        LT && AT.gameBridge.send("toggleRecording", null)
       }
-      return (0, vY.jsxs)("div", {
+      return (0, ST.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, vY.jsxs)("div", {
+        children: [(0, ST.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vY.jsx)("div", {
+          children: [(0, ST.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: rY ? (0, vY.jsxs)(vY.Fragment, {
-              children: [(0, vY.jsxs)(oY.D, {
+            children: oT ? (0, ST.jsxs)(ST.Fragment, {
+              children: [(0, ST.jsxs)(MT.C, {
                 className: "ReplayViewerCategoryButton",
-                onClick: WY,
-                disabled: !sY,
-                children: [(0, vY.jsx)("span", {
+                onClick: rT,
+                disabled: !LT,
+                children: [(0, ST.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, vY.jsx)(dD.d, {
+                }), (0, ST.jsx)(qI.e, {
                   noaAction: "recordGame"
                 })]
-              }), (0, vY.jsx)(fD.d, {
+              }), (0, ST.jsx)(OI.b, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, vY.jsxs)(oY.f, {
+            }) : (0, ST.jsxs)(MT.e, {
               className: "ReplayViewerCategoryButton",
-              onClick: WY,
-              disabled: !sY,
-              children: [(0, vY.jsx)("span", {
+              onClick: rT,
+              disabled: !LT,
+              children: [(0, ST.jsx)("span", {
                 children: "Start Recording"
-              }), (0, vY.jsx)(dD.d, {
+              }), (0, ST.jsx)(qI.e, {
                 noaAction: "recordGame"
               })]
             })
-          }), gY && (0, vY.jsx)("div", {
+          }), BT && (0, ST.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), aY && !rY && (0, vY.jsx)("div", {
+          }), FT && !oT && (0, ST.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, vY.jsx)(TY.c, {
+          children: [(0, ST.jsx)(eT.e, {
             label: "Enable clipping",
-            checked: YY.enableClipping,
-            disabled: !iY,
-            onClick: function(YY) {
-              iY && eY.b.setClientEscMenuOptions({
-                enableClipping: YY
+            checked: TT.enableClipping,
+            disabled: !xT,
+            onClick: function(TT) {
+              xT && RT.c.setClientEscMenuOptions({
+                enableClipping: TT
               })
             },
-            className: IY()({
-              SettingBoxDisabled: !iY
+            className: kT()({
+              SettingBoxDisabled: !xT
             })
-          }), (0, vY.jsx)(TY.j, {
+          }), (0, ST.jsx)(eT.k, {
             name: "Clip duration (seconds)",
-            min: JD.k,
-            max: JD.j,
-            step: JD.d,
-            initValue: YY.clipDurationSeconds,
-            onChange: function(YY) {
-              eY.b.setClientEscMenuOptions({
-                clipDurationSeconds: YY
+            min: ZI.k,
+            max: ZI.g,
+            step: ZI.d,
+            initValue: TT.clipDurationSeconds,
+            onChange: function(TT) {
+              RT.c.setClientEscMenuOptions({
+                clipDurationSeconds: TT
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !iY || !YY.enableClipping
+            disabled: !xT || !TT.enableClipping
           })]
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vY.jsxs)(oY.f, {
+          children: [(0, ST.jsxs)(MT.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              QY && EY.gameBridge.send("saveClip", null)
+              KT && AT.gameBridge.send("saveClip", null)
             },
-            disabled: !QY,
-            children: [(0, vY.jsx)("span", {
+            disabled: !KT,
+            children: [(0, ST.jsx)("span", {
               children: "Record clip"
-            }), (0, vY.jsx)(dD.d, {
+            }), (0, ST.jsx)(qI.e, {
               noaAction: "recordClip"
             })]
-          }), YY.enableClipping && !AY && iY && !rY && (0, vY.jsx)("div", {
+          }), TT.enableClipping && !zT && xT && !oT && (0, ST.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), rY && (0, vY.jsx)("div", {
+          }), oT && (0, ST.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vY.jsxs)(oY.f, {
+          children: [(0, ST.jsxs)(MT.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, hD.f)(!0), eY.b.set({
+              (0, nI.i)(!0), RT.c.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: OY,
-            children: [(0, vY.jsx)("span", {
+            disabled: XT,
+            children: [(0, ST.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, vY.jsx)(dD.d, {
+            }), (0, ST.jsx)(qI.e, {
               noaAction: "replayViewerOpen"
             })]
-          }), OY && (0, vY.jsx)("div", {
+          }), XT && (0, ST.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vY.jsx)("div", {
+          children: [(0, ST.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, vY.jsx)("iframe", {
+          }), (0, ST.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2161,9 +2162,9 @@ export const modules = {
         })]
       })
     }));
-    var wD = DY(332),
-      bD = DY(1774);
-    const XD = {
+    var sI = IT(306),
+      tI = IT(1724);
+    const GI = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2185,11 +2186,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, vY.jsx)("svg", {
+        icon: () => (0, ST.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, vY.jsx)("path", {
+          children: (0, ST.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2208,7 +2209,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      vy: {
+      Fc: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2234,280 +2235,280 @@ export const modules = {
       }
     };
 
-    function qD() {
-      return Promise.all([DY.e(74), DY.e(132), DY.e(126), DY.e(123)]).then((() => DY(40161))).then((YY => ({
-        default: YY.ShaderPackCategory
-      })), (YY => (console.error("Failed to load the shader pack settings", YY), {
-        default: pD
+    function pI() {
+      return Promise.all([IT.e(74), IT.e(132), IT.e(126), IT.e(123)]).then((() => IT(39861))).then((TT => ({
+        default: TT.ShaderPackCategory
+      })), (TT => (console.error("Failed to load the shader pack settings", TT), {
+        default: bI
       })))
     }
 
-    function pD() {
+    function bI() {
       const {
-        t: YY
-      } = (0, RY.C)();
-      return (0, vY.jsx)("div", {
+        t: TT
+      } = (0, WT.t)();
+      return (0, ST.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: YY("shaderPack:tabLoadFailed")
+        children: TT("shaderPack:tabLoadFailed")
       })
     }
-    var kD = DY(1384);
-    const GD = (0, FY.lazy)((() => DY.e(262).then((() => DY(40155))).then((YY => ({
-        default: YY.BloxdInformation
+    var yI = IT(1357);
+    const NI = (0, iT.lazy)((() => IT.e(262).then((() => IT(39843))).then((TT => ({
+        default: TT.BloxdInformation
       }))))),
-      xD = (0, FY.lazy)(qD);
+      PI = (0, iT.lazy)(pI);
 
-    function nD(YY) {
-      return YY ? "general" : "account"
+    function dI(TT) {
+      return TT ? "general" : "account"
     }
-    const PD = new Map,
-      UD = (0, FY.memo)((function(YY) {
+    const VI = new Map,
+      Ti = (0, iT.memo)((function(TT) {
         let {
-          show: rY,
-          setBeforeResumeCallback: DY
-        } = YY;
-        (0, QY.c)();
+          show: oT,
+          setBeforeResumeCallback: IT
+        } = TT;
+        (0, KT.e)();
         const {
-          gameState: AY,
-          openSettingsCategory: IY
-        } = (0, eY.j)(["gameState", "openSettingsCategory"]), {
-          userContext: gY
-        } = (0, iY.d)(), {
-          t: aY
-        } = (0, RY.C)(), SY = (0, sY.c)(), lY = (0, yY.j)("minChunkAddDist"), TY = "inGame" === AY, [NY, KY] = (0, FY.useState)(nD(TY)), [HY, zY] = (0, FY.useState)(null), [ZY, CY] = (0, FY.useState)([]), fY = (0, FY.useRef)(function() {
-          const YY = new Date,
-            rY = 6 * (YY.getMonth() + YY.getDate()) % wD.y.length;
-          return [...wD.y, ...wD.y].slice(rY, rY + 6)
-        }()), jY = (0, FY.useRef)(null), hY = (0, yr.k)(ZD.j, (0, ZD.e)()), dY = Object.keys(XD).filter((YY => {
-          switch (YY) {
+          gameState: zT,
+          openSettingsCategory: kT
+        } = (0, RT.k)(["gameState", "openSettingsCategory"]), {
+          userContext: BT
+        } = (0, xT.b)(), {
+          t: FT
+        } = (0, WT.t)(), wT = (0, LT.c)(), mT = (0, cT.g)("minChunkAddDist"), eT = "inGame" === zT, [uT, fT] = (0, iT.useState)(dI(eT)), [CT, jT] = (0, iT.useState)(null), [JT, UT] = (0, iT.useState)([]), aT = (0, iT.useRef)(function() {
+          const TT = new Date,
+            oT = 6 * (TT.getMonth() + TT.getDate()) % sI.z.length;
+          return [...sI.z, ...sI.z].slice(oT, oT + 6)
+        }()), YT = (0, iT.useRef)(null), QT = (0, co.i)(YI.m, (0, YI.e)()), OT = Object.keys(GI).filter((TT => {
+          switch (TT) {
             case "replayViewer":
-              return TY;
+              return eT;
             case "developerTools":
-              return gY.playerHasRank("developer") || !1;
+              return BT.playerHasRank("developer") || !1;
             case "texturePack":
-              return WY.featureFlags.settings.canChangeTexturePack;
-            case "vy":
-              return WY.featureFlags.settings.canUseShaderPacks;
+              return rT.featureFlags.settings.canChangeTexturePack;
+            case "Fc":
+              return rT.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return WY.featureFlags.useSocialFeatures;
+              return rT.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== cY.s;
+              return "crazygames" !== ET.p;
             case "controller":
-              return WY.featureFlags.useControllerSupport && (hY || "controller" === NY);
+              return rT.featureFlags.useControllerSupport && (QT || "controller" === uT);
             default:
               return !0
           }
         }));
-        (0, yr.g)("toggleFullCoordinateOverlay", (() => {
-          const YY = hr("showCoordinates") && hr("showChunkCoordinates") && hr("showFPS");
-          dr("showCoordinates", !YY), dr("showChunkCoordinates", !YY), dr("showFPS", !YY), SY()
-        })), (0, yr.g)("updatedChunkLoadDist", (() => {
-          SY()
-        })), (0, FY.useEffect)((() => {
-          if (zY(null), null === eY.b.get("openSettingsCategory")) {
-            const YY = (0, kD.f)() ? PD.get(TY) : void 0;
-            KY(YY && dY.includes(YY) ? YY : nD(TY))
+        (0, co.g)("toggleFullCoordinateOverlay", (() => {
+          const TT = Qo("showCoordinates") && Qo("showChunkCoordinates") && Qo("showFPS");
+          Oo("showCoordinates", !TT), Oo("showChunkCoordinates", !TT), Oo("showFPS", !TT), wT()
+        })), (0, co.g)("updatedChunkLoadDist", (() => {
+          wT()
+        })), (0, iT.useEffect)((() => {
+          if (jT(null), null === RT.c.get("openSettingsCategory")) {
+            const TT = (0, yI.f)() ? VI.get(eT) : void 0;
+            fT(TT && OT.includes(TT) ? TT : dI(eT))
           }
-        }), [rY]), (0, FY.useEffect)((() => {
-          null !== IY && (KY(IY), PD.set(TY, IY), eY.b.set({
+        }), [oT]), (0, iT.useEffect)((() => {
+          null !== kT && (fT(kT), VI.set(eT, kT), RT.c.set({
             openSettingsCategory: null
           }))
-        }), [IY, TY]), (0, FY.useLayoutEffect)((() => {
-          jY.current && (jY.current.scrollTop = 0)
-        }), [NY, rY]), (0, FY.useEffect)((() => {
-          "updateLog" === NY && (0, VY.c)().then(CY)
-        }), [NY]), (0, FY.useEffect)((() => {
-          if ((0, Kr.H)(lY)) return;
-          const [YY, rY] = (0, qr.g)(), [DY, FY] = (0, lr.f)(lY), AY = (0, bD.i)(lY[0], YY, DY), IY = (0, bD.i)(lY[1], rY, FY);
-          EY.gameBridge.send("setChunkAddDistance", {
-            horizontal: AY,
-            vertical: IY
+        }), [kT, eT]), (0, iT.useLayoutEffect)((() => {
+          YT.current && (YT.current.scrollTop = 0)
+        }), [uT, oT]), (0, iT.useEffect)((() => {
+          "updateLog" === uT && (0, hT.d)().then(UT)
+        }), [uT]), (0, iT.useEffect)((() => {
+          if ((0, fo.K)(mT)) return;
+          const [TT, oT] = (0, to.e)(), [IT, iT] = (0, mo.f)(mT), zT = (0, tI.g)(mT[0], TT, IT), kT = (0, tI.g)(mT[1], oT, iT);
+          AT.gameBridge.send("setChunkAddDistance", {
+            horizontal: zT,
+            vertical: kT
           })
-        }), [lY]);
-        const JY = (0, FY.useCallback)((async () => {
-          HY && (await HY(), zY(null))
-        }), [HY]);
+        }), [mT]);
+        const HT = (0, iT.useCallback)((async () => {
+          CT && (await CT(), jT(null))
+        }), [CT]);
 
-        function MY() {
-          eY.b.set({
+        function nT() {
+          RT.c.set({
             openEverythingMenuName: null
           })
         }
-        return (0, FY.useEffect)((() => {
-          DY((() => JY))
-        }), [JY, DY]), (0, vY.jsxs)("div", {
+        return (0, iT.useEffect)((() => {
+          IT((() => HT))
+        }), [HT, IT]), (0, ST.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: rY ? {} : {
+          style: oT ? {} : {
             display: "none"
           },
-          children: [(0, vY.jsx)("div", {
+          children: [(0, ST.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, vY.jsx)("div", {
+            children: (0, ST.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, vY.jsx)(uY, {
-                items: dY.map((YY => {
-                  const rY = XD[YY].icon;
+              children: (0, ST.jsx)(DT, {
+                items: OT.map((TT => {
+                  const oT = GI[TT].icon;
                   return {
-                    id: YY,
-                    faIcon: "string" === typeof rY ? rY : void 0,
-                    iconElement: "string" === typeof rY ? void 0 : (0, vY.jsx)(rY, {}),
-                    title: aY(XD[YY].displayName),
+                    id: TT,
+                    faIcon: "string" === typeof oT ? oT : void 0,
+                    iconElement: "string" === typeof oT ? void 0 : (0, ST.jsx)(oT, {}),
+                    title: FT(GI[TT].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: NY,
-                onClick: YY => {
-                  !async function(YY) {
-                    await JY(), KY(YY), PD.set(TY, YY)
-                  }(YY)
+                selectedItemId: uT,
+                onClick: TT => {
+                  !async function(TT) {
+                    await HT(), fT(TT), VI.set(eT, TT)
+                  }(TT)
                 }
               })
             })
-          }), (0, vY.jsxs)("div", {
-            ref: jY,
+          }), (0, ST.jsxs)("div", {
+            ref: YT,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === NY && (0, vY.jsx)(Ir, {
-              showing: rY,
-              inGame: TY
-            }), "general" === NY && (0, vY.jsx)(ur, {
-              inGame: TY
-            }), "audio" === NY && (0, vY.jsx)(sr, {}), "notifications" === NY && (0, vY.jsx)(Sr, {}), "graphics" === NY && (0, vY.jsx)(Xr, {
-              minChunkAddDist: null !== lY && void 0 !== lY ? lY : [2, 2],
-              getValue: hr,
-              onChange: dr,
-              setApplySettingsCallback: zY
-            }), "controls" === NY && (0, vY.jsx)(pr.f, {}), "crosshair" === NY && (0, vY.jsx)(HD, {
-              showing: rY
-            }), "controller" === NY && WY.featureFlags.useControllerSupport && (0, vY.jsx)(zD.e, {}), WY.featureFlags.settings.canChangeTexturePack && "texturePack" === NY && (0, vY.jsx)(CD.b, {
-              setApplySettingsCallback: zY
-            }), WY.featureFlags.settings.canUseShaderPacks && "vy" === NY && (0, vY.jsx)(FY.Suspense, {
+            children: ["account" === uT && (0, ST.jsx)(ko, {
+              showing: oT,
+              inGame: eT
+            }), "general" === uT && (0, ST.jsx)(Do, {
+              inGame: eT
+            }), "audio" === uT && (0, ST.jsx)(Lo, {}), "notifications" === uT && (0, ST.jsx)(wo, {}), "graphics" === uT && (0, ST.jsx)(so, {
+              minChunkAddDist: null !== mT && void 0 !== mT ? mT : [2, 2],
+              getValue: Qo,
+              onChange: Oo,
+              setApplySettingsCallback: jT
+            }), "controls" === uT && (0, ST.jsx)(Go.e, {}), "crosshair" === uT && (0, ST.jsx)(UI, {
+              showing: oT
+            }), "controller" === uT && rT.featureFlags.useControllerSupport && (0, ST.jsx)(aI.b, {}), rT.featureFlags.settings.canChangeTexturePack && "texturePack" === uT && (0, ST.jsx)(QI.e, {
+              setApplySettingsCallback: jT
+            }), rT.featureFlags.settings.canUseShaderPacks && "Fc" === uT && (0, ST.jsx)(iT.Suspense, {
               fallback: null,
-              children: (0, vY.jsx)(xD, {
-                setApplySettingsCallback: zY
+              children: (0, ST.jsx)(PI, {
+                setApplySettingsCallback: jT
               })
-            }), "updateLog" === NY && (0, vY.jsx)("div", {
+            }), "updateLog" === uT && (0, ST.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, vY.jsx)("div", {
+              children: (0, ST.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: ZY.map(((YY, rY) => (0, vY.jsx)(mY.d, {
-                  updateLog: YY,
-                  index: rY,
-                  close: MY
-                }, rY)))
+                children: JT.map(((TT, oT) => (0, ST.jsx)(gT.c, {
+                  updateLog: TT,
+                  index: oT,
+                  close: nT
+                }, oT)))
               })
-            }), "information" === NY && (0, vY.jsx)("div", {
+            }), "information" === uT && (0, ST.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, vY.jsx)(FY.Suspense, {
+              children: (0, ST.jsx)(iT.Suspense, {
                 fallback: null,
-                children: (0, vY.jsx)(GD, {})
+                children: (0, ST.jsx)(NI, {})
               })
-            }), "alternativeDomains" === NY && (0, vY.jsxs)("div", {
+            }), "alternativeDomains" === uT && (0, ST.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, vY.jsx)("div", {
+              children: [(0, ST.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: aY("settingsMenu:unblockedDomainsDescription")
-              }), (0, vY.jsx)("div", {
+                children: FT("settingsMenu:unblockedDomainsDescription")
+              }), (0, ST.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: fY.current.map((YY => (0, vY.jsxs)(oY.f, {
+                children: aT.current.map((TT => (0, ST.jsxs)(MT.e, {
                   onClick: () => {
-                    window.open(`https://${YY}`)
+                    window.open(`https://${TT}`)
                   },
-                  children: [(0, vY.jsx)(OY.e, {
+                  children: [(0, ST.jsx)(XT.e, {
                     name: "arrow-up-right-from-square"
-                  }), " ", YY]
-                }, YY)))
+                  }), " ", TT]
+                }, TT)))
               })]
-            }), "replayViewer" === NY && (0, vY.jsx)(MD, {}), "developerTools" === NY && (0, vY.jsx)("div", {
+            }), "replayViewer" === uT && (0, ST.jsx)(lI, {}), "developerTools" === uT && (0, ST.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, vY.jsx)(BY, {
-                setApplySettingsCallback: zY
+              children: (0, ST.jsx)(vT, {
+                setApplySettingsCallback: jT
               })
-            }), null !== HY && (0, vY.jsx)("div", {
+            }), null !== CT && (0, ST.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, vY.jsx)(oY.f, {
+              children: (0, ST.jsx)(MT.e, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: JY,
-                children: aY("general:apply")
+                onClick: HT,
+                children: FT("general:apply")
               })
             })]
           })]
         })
       }));
-    var LD = DY(2368);
-    const tD = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      YF = (0, FY.lazy)((() => Promise.resolve().then((() => DY(4229))).then((YY => {
-        YY.needGameClientAfterPaint();
-        const rY = YY.matchmakingLibrariesPromise.then((YY => (0, LD.d)(YY.loadCharacterCustomisationUI(), (YY => YY.CharacterCustomisationUI))));
-        return Promise.all([YY.ensureGameSetup(), rY]).then((YY => {
-          let [, rY] = YY;
-          return rY
+    var oi = IT(2327);
+    const Ii = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      ii = (0, iT.lazy)((() => Promise.resolve().then((() => IT(4163))).then((TT => {
+        TT.needGameClientAfterPaint();
+        const oT = TT.matchmakingLibrariesPromise.then((TT => (0, oi.e)(TT.loadCharacterCustomisationUI(), (TT => TT.CharacterCustomisationUI))));
+        return Promise.all([TT.ensureGameSetup(), oT]).then((TT => {
+          let [, oT] = TT;
+          return oT
         }))
       }))));
 
-    function rF(YY) {
+    function zi(TT) {
       let {
-        show: rY
-      } = YY;
+        show: oT
+      } = TT;
       const {
-        userContext: DY
-      } = (0, iY.d)(), [AY, IY] = (0, FY.useState)("characters");
-      if (!rY) return null;
-      const RY = tD.filter((YY => "cape" !== YY && "nameColour" !== YY || DY.getPlayerRanks().includes("super") || (0, wY.purchasesAllowed)())).map((YY => ({
-        id: YY,
-        faIcon: wD.G[YY],
-        title: wD.K[YY],
+        userContext: IT
+      } = (0, xT.b)(), [zT, kT] = (0, iT.useState)("characters");
+      if (!oT) return null;
+      const WT = Ii.filter((TT => "cape" !== TT && "nameColour" !== TT || IT.getPlayerRanks().includes("super") || (0, qT.purchasesAllowed)())).map((TT => ({
+        id: TT,
+        faIcon: sI.G[TT],
+        title: sI.H[TT],
         redDot: !1
       })));
-      return (0, vY.jsxs)("div", {
+      return (0, ST.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, vY.jsx)(uY, {
-            items: RY,
-            selectedItemId: AY,
-            onClick: YY => {
-              IY(YY)
+          children: (0, ST.jsx)(DT, {
+            items: WT,
+            selectedItemId: zT,
+            onClick: TT => {
+              kT(TT)
             }
           })
-        }), (0, vY.jsx)("div", {
+        }), (0, ST.jsx)("div", {
           className: "MenuBody",
-          children: (0, vY.jsx)(FY.Suspense, {
-            fallback: (0, vY.jsx)("div", {
+          children: (0, ST.jsx)(iT.Suspense, {
+            fallback: (0, ST.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, vY.jsx)(lY.c, {})
+              children: (0, ST.jsx)(mT.d, {})
             }),
-            children: (0, vY.jsx)(YF, {
-              selectedTab: AY
+            children: (0, ST.jsx)(ii, {
+              selectedTab: zT
             })
           })
         })]
       })
     }
-    var DF = DY(1445),
-      FF = DY(8745),
-      AF = DY(4086),
-      IF = DY(2975),
-      RF = DY(3030),
-      OF = DY(8774),
-      gF = DY(8181),
-      aF = DY(8748),
-      vF = DY(8765),
-      uF = DY(1793),
-      sF = DY(1778),
-      iF = DY(4483),
-      yF = DY(1267),
-      QF = DY(1231),
-      oF = DY(1646),
-      WF = DY(8255);
+    var ki = IT(1420),
+      Wi = IT(8743),
+      Xi = IT(4050),
+      Bi = IT(2974),
+      Fi = IT(3019),
+      Si = IT(8766),
+      Di = IT(8201),
+      Li = IT(8745),
+      xi = IT(8758),
+      ci = IT(1747),
+      Ki = IT(1729),
+      Mi = IT(4398),
+      ri = IT(1231),
+      Ai = IT(1193),
+      gi = IT(1612),
+      wi = IT(8276);
 
-    function EF(YY) {
-      return YY ? Object.keys(YY).sort(((rY, DY) => {
-        var FY, AY, IY, RY;
-        const OY = (null !== (FY = null === (AY = YY[DY]) || void 0 === AY ? void 0 : AY.sortPriority) && void 0 !== FY ? FY : 0) - (null !== (IY = null === (RY = YY[rY]) || void 0 === RY ? void 0 : RY.sortPriority) && void 0 !== IY ? IY : 0);
-        return 0 !== OY ? OY : rY.localeCompare(DY)
+    function mi(TT) {
+      return TT ? Object.keys(TT).sort(((oT, IT) => {
+        var iT, zT, kT, WT;
+        const XT = (null !== (iT = null === (zT = TT[IT]) || void 0 === zT ? void 0 : zT.sortPriority) && void 0 !== iT ? iT : 0) - (null !== (kT = null === (WT = TT[oT]) || void 0 === WT ? void 0 : WT.sortPriority) && void 0 !== kT ? kT : 0);
+        return 0 !== XT ? XT : oT.localeCompare(IT)
       })) : []
     }
-    const mF = [{
+    const ei = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2521,241 +2522,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function VF(YY) {
+    function Ri(TT) {
       for (const {
-          threshold: rY,
-          suffix: DY
+          threshold: oT,
+          suffix: IT
         }
-        of mF)
-        if (YY >= rY) {
-          const FY = YY / rY;
-          return FY >= 100 ? `${Math.floor(FY)}${DY}` : FY >= 10 ? `${FY.toFixed(1).replace(/\.0$/,"")}${DY}` : `${FY.toFixed(2).replace(/\.?0+$/,"")}${DY}`
-        } return String(YY)
+        of ei)
+        if (TT >= oT) {
+          const iT = TT / oT;
+          return iT >= 100 ? `${Math.floor(iT)}${IT}` : iT >= 10 ? `${iT.toFixed(1).replace(/\.0$/,"")}${IT}` : `${iT.toFixed(2).replace(/\.?0+$/,"")}${IT}`
+        } return String(TT)
     }
-    var SF = DY(4608);
-    const lF = {
+    var ui = IT(4509);
+    const vi = {
         normal: "0.8em",
         big: "1em"
       },
-      TF = (0, FY.memo)((function(YY) {
+      Ei = (0, iT.memo)((function(TT) {
         let {
-          item: rY,
-          amount: DY = 0,
-          size: FY = "normal",
-          tier: AY = null
-        } = YY;
-        return (0, vY.jsx)("div", {
-          className: IY()("SmpSlot", `SmpSlot-${FY}`),
-          children: rY && (0, vY.jsx)(uF.c, {
-            itemName: rY,
-            amount: DY > 1 ? DY : 0,
-            amountFontSize: lF[FY],
-            enchantmentTier: AY
+          item: oT,
+          amount: IT = 0,
+          size: iT = "normal",
+          tier: zT = null
+        } = TT;
+        return (0, ST.jsx)("div", {
+          className: kT()("SmpSlot", `SmpSlot-${iT}`),
+          children: oT && (0, ST.jsx)(ci.c, {
+            itemName: oT,
+            amount: IT > 1 ? IT : 0,
+            amountFontSize: vi[iT],
+            enchantmentTier: zT
           })
         })
       }));
 
-    function eF(YY) {
+    function fi(TT) {
       let {
-        amount: rY,
-        exact: DY = !1,
-        className: FY
-      } = YY;
-      return (0, vY.jsxs)("span", {
-        className: IY()("SmpGold", FY),
-        children: [(0, vY.jsx)("span", {
+        amount: oT,
+        exact: IT = !1,
+        className: iT
+      } = TT;
+      return (0, ST.jsxs)("span", {
+        className: kT()("SmpGold", iT),
+        children: [(0, ST.jsx)("span", {
           className: "SmpCoin",
-          children: (0, vY.jsx)(uF.c, {
+          children: (0, ST.jsx)(ci.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), DY ? rY.toLocaleString("en-US") : VF(rY)]
+        }), IT ? oT.toLocaleString("en-US") : Ri(oT)]
       })
     }
 
-    function NF(YY) {
+    function Ci(TT) {
       let {
-        count: rY = 5,
-        grid: DY = !1
-      } = YY;
-      return (0, vY.jsx)("div", {
-        className: DY ? "SmpCardGrid" : "SmpList",
+        count: oT = 5,
+        grid: IT = !1
+      } = TT;
+      return (0, ST.jsx)("div", {
+        className: IT ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: rY
-        }, ((YY, rY) => (0, vY.jsxs)("div", {
-          className: IY()(DY ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, vY.jsx)("div", {
-            className: IY()("SmpSlot", DY ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, vY.jsxs)("div", {
+          length: oT
+        }, ((TT, oT) => (0, ST.jsxs)("div", {
+          className: kT()(IT ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, ST.jsx)("div", {
+            className: kT()("SmpSlot", IT ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, ST.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, vY.jsx)("b", {}), (0, vY.jsx)("small", {})]
-          }), (0, vY.jsx)("div", {
+            children: [(0, ST.jsx)("b", {}), (0, ST.jsx)("small", {})]
+          }), (0, ST.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, rY)))
+        }, oT)))
       })
     }
 
-    function BF(YY) {
+    function ji(TT) {
       let {
-        title: rY,
-        children: DY
-      } = YY;
-      return (0, vY.jsxs)("div", {
+        title: oT,
+        children: IT
+      } = TT;
+      return (0, ST.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, vY.jsx)("b", {
-          children: rY
-        }), DY && (0, vY.jsx)("small", {
-          children: DY
+        children: [(0, ST.jsx)("b", {
+          children: oT
+        }), IT && (0, ST.jsx)("small", {
+          children: IT
         })]
       })
     }
 
-    function cF(YY) {
+    function Ji(TT) {
       let {
-        entry: rY
-      } = YY;
-      return (0, vY.jsx)(BF, {
-        title: (0, vY.jsx)(sF.b, {
-          text: rY.item.customTitle
+        entry: oT
+      } = TT;
+      return (0, ST.jsx)(ji, {
+        title: (0, ST.jsx)(Ki.c, {
+          text: oT.item.customTitle
         }),
-        children: (0, vY.jsx)(sF.b, {
-          text: rY.item.description
+        children: (0, ST.jsx)(Ki.c, {
+          text: oT.item.description
         })
       })
     }
 
-    function KF(YY) {
-      return (0, vY.jsx)(SF.d, {
-        ...YY,
-        className: IY()("SmpChoice", YY.className),
+    function Ui(TT) {
+      return (0, ST.jsx)(ui.e, {
+        ...TT,
+        className: kT()("SmpChoice", TT.className),
         reselectable: !0
       })
     }
 
-    function HF() {
-      return (0, vY.jsx)("span", {
+    function ai() {
+      return (0, ST.jsx)("span", {
         className: "SmpLoader",
-        children: (0, vY.jsx)(lY.c, {})
+        children: (0, ST.jsx)(mT.d, {})
       })
     }
 
-    function zF(YY) {
+    function Yi(TT) {
       let {
-        value: rY,
-        onChange: DY,
-        min: AY = 1,
-        max: IY,
-        step: RY = 1,
-        label: OY
-      } = YY;
-      const gY = (0, FY.useRef)(null),
-        aY = (0, FY.useRef)(rY);
-      aY.current = rY;
-      const [uY, sY] = (0, FY.useState)(null), iY = YY => Math.max(AY, Math.min(IY, Math.floor(YY))), yY = YY => {
-        const rY = aY.current,
-          FY = "function" === typeof RY ? RY(rY, YY) : RY,
-          AY = iY(rY + FY * YY);
-        aY.current = AY, DY(AY)
+        value: oT,
+        onChange: IT,
+        min: zT = 1,
+        max: kT,
+        step: WT = 1,
+        label: XT
+      } = TT;
+      const BT = (0, iT.useRef)(null),
+        FT = (0, iT.useRef)(oT);
+      FT.current = oT;
+      const [DT, LT] = (0, iT.useState)(null), xT = TT => Math.max(zT, Math.min(kT, Math.floor(TT))), cT = TT => {
+        const oT = FT.current,
+          iT = "function" === typeof WT ? WT(oT, TT) : WT,
+          zT = xT(oT + iT * TT);
+        FT.current = zT, IT(zT)
       };
-      (0, FY.useEffect)((() => {
-        if (null === uY) return;
-        let YY;
-        const rY = () => {
-            sY(null)
+      (0, iT.useEffect)((() => {
+        if (null === DT) return;
+        let TT;
+        const oT = () => {
+            LT(null)
           },
-          DY = setTimeout((() => {
-            YY = setInterval((() => {
-              yY(uY);
-              const YY = aY.current;
-              (uY > 0 ? YY >= IY : YY <= AY) && rY()
+          IT = setTimeout((() => {
+            TT = setInterval((() => {
+              cT(DT);
+              const TT = FT.current;
+              (DT > 0 ? TT >= kT : TT <= zT) && oT()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", rY), window.addEventListener("pointercancel", rY), window.addEventListener("blur", rY), () => {
-          clearTimeout(DY), clearInterval(YY), window.removeEventListener("pointerup", rY), window.removeEventListener("pointercancel", rY), window.removeEventListener("blur", rY)
+        return window.addEventListener("pointerup", oT), window.addEventListener("pointercancel", oT), window.addEventListener("blur", oT), () => {
+          clearTimeout(IT), clearInterval(TT), window.removeEventListener("pointerup", oT), window.removeEventListener("pointercancel", oT), window.removeEventListener("blur", oT)
         }
-      }), [uY]), (0, FY.useEffect)((() => {
-        const YY = gY.current;
-        YY && document.activeElement !== YY && YY.value !== String(rY) && (YY.value = String(rY))
-      }), [rY]), (0, FY.useEffect)((() => {
-        const YY = gY.current;
-        if (!YY) return;
-        const rY = () => {
-          YY.value = String(aY.current)
+      }), [DT]), (0, iT.useEffect)((() => {
+        const TT = BT.current;
+        TT && document.activeElement !== TT && TT.value !== String(oT) && (TT.value = String(oT))
+      }), [oT]), (0, iT.useEffect)((() => {
+        const TT = BT.current;
+        if (!TT) return;
+        const oT = () => {
+          TT.value = String(FT.current)
         };
-        return YY.addEventListener("blur", rY), () => {
-          YY.removeEventListener("blur", rY)
+        return TT.addEventListener("blur", oT), () => {
+          TT.removeEventListener("blur", oT)
         }
       }), []);
-      const QY = YY => (0, vY.jsx)("button", {
+      const KT = TT => (0, ST.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${YY>0?"More":"Less"} ${OY}`,
-        disabled: YY > 0 ? rY >= IY : rY <= AY,
-        onPointerDown: rY => {
-          0 === rY.button && (yY(YY), sY(YY))
+        "aria-label": `${TT>0?"More":"Less"} ${XT}`,
+        disabled: TT > 0 ? oT >= kT : oT <= zT,
+        onPointerDown: oT => {
+          0 === oT.button && (cT(TT), LT(TT))
         },
-        onKeyDown: rY => {
-          "Enter" !== rY.key && " " !== rY.key || yY(YY)
+        onKeyDown: oT => {
+          "Enter" !== oT.key && " " !== oT.key || cT(TT)
         },
-        onContextMenu: YY => {
-          YY.preventDefault()
+        onContextMenu: TT => {
+          TT.preventDefault()
         },
-        children: YY > 0 ? "+" : "\u2212"
+        children: TT > 0 ? "+" : "\u2212"
       });
-      return (0, vY.jsxs)("div", {
+      return (0, ST.jsxs)("div", {
         className: "SmpStepper",
-        children: [QY(-1), (0, vY.jsx)(SY.d, {
+        children: [KT(-1), (0, ST.jsx)(wT.e, {
           className: "SmpStepperInput",
-          domRef: gY,
-          defaultValue: String(rY),
-          ariaLabel: OY,
+          domRef: BT,
+          defaultValue: String(oT),
+          ariaLabel: XT,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: YY => {
-            const rY = YY.replace(/[^\d]/g, "");
-            gY.current && rY !== YY && (gY.current.value = rY), "" !== rY && DY(iY(Number(rY)))
+          onValueChange: TT => {
+            const oT = TT.replace(/[^\d]/g, "");
+            BT.current && oT !== TT && (BT.current.value = oT), "" !== oT && IT(xT(Number(oT)))
           }
-        }), QY(1)]
+        }), KT(1)]
       })
     }
 
-    function ZF(YY) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, YY))) - 1))
+    function Qi(TT) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, TT))) - 1))
     }
-    var CF = DY(8770),
-      fF = DY(1244);
-    const jF = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    fF.v, JY.Fc.length;
+    var Oi = IT(8763),
+      Hi = IT(1214);
+    const ni = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    Hi.w, HT.vc.length;
     new Map;
-    var hF = DY(2864);
+    var qi = IT(2844);
 
-    function dF(YY, rY) {
-      var DY;
-      return rY && (null === (DY = YY[rY]) || void 0 === DY ? void 0 : DY.smp) || null
+    function Zi(TT, oT) {
+      var IT;
+      return oT && (null === (IT = TT[oT]) || void 0 === IT ? void 0 : IT.smp) || null
     }
 
-    function JF(YY, rY) {
-      const DY = [];
-      for (const AY of EF(YY)) {
-        var FY;
-        const IY = YY[AY];
-        (null === (FY = IY.smp) || void 0 === FY ? void 0 : FY.kind) === rY && DY.push({
-          key: AY,
-          item: IY,
-          meta: IY.smp
+    function li(TT, oT) {
+      const IT = [];
+      for (const zT of mi(TT)) {
+        var iT;
+        const kT = TT[zT];
+        (null === (iT = kT.smp) || void 0 === iT ? void 0 : iT.kind) === oT && IT.push({
+          key: zT,
+          item: kT,
+          meta: kT.smp
         })
       }
-      return DY
+      return IT
     }
 
-    function MF(YY, rY) {
-      var DY;
-      return null !== (DY = JF(YY, rY)[0]) && void 0 !== DY ? DY : null
+    function si(TT, oT) {
+      var IT;
+      return null !== (IT = li(TT, oT)[0]) && void 0 !== IT ? IT : null
     }
-    const wF = "50% 0% 50% 0%",
-      bF = [{
+    const ti = "50% 0% 50% 0%",
+      Gi = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2769,746 +2770,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function XF(YY) {
-      const rY = YY - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function bi(TT) {
+      const oT = TT - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: DY,
-          suffix: FY
+          divisor: IT,
+          suffix: iT
         }
-        of bF)
-        if (rY >= DY) return `${Math.floor(rY/DY)}${FY}`;
+        of Gi)
+        if (oT >= IT) return `${Math.floor(oT/IT)}${iT}`;
       return "<1s"
     }
 
-    function qF(YY) {
-      const rY = YY.map(gF.e),
-        DY = [];
-      return rY.forEach(((YY, FY) => {
-        const AY = function(YY) {
-            const rY = YY.match(/\d+/);
-            return rY ? Number(rY[0]) : 0
-          }(YY),
-          IY = FY === rY.length - 1;
-        (IY || 1 === AY || 10 === AY || 100 === AY) && DY.push({
-          label: YY,
-          quantity: AY,
-          isAll: IY
+    function yi(TT) {
+      const oT = TT.map(Di.f),
+        IT = [];
+      return oT.forEach(((TT, iT) => {
+        const zT = function(TT) {
+            const oT = TT.match(/\d+/);
+            return oT ? Number(oT[0]) : 0
+          }(TT),
+          kT = iT === oT.length - 1;
+        (kT || 1 === zT || 10 === zT || 100 === zT) && IT.push({
+          label: TT,
+          quantity: zT,
+          isAll: kT
         })
-      })), DY
+      })), IT
     }
-    let pF = null;
+    let Ni = null;
 
-    function kF(YY, rY) {
-      const DY = rY.trim().toLowerCase();
-      if (!DY) return [];
-      const FY = YY => {
-          if (YY === DY) return 0;
-          if (YY.startsWith(DY)) return 1;
-          const rY = YY.indexOf(DY);
-          return -1 === rY ? -1 : 2 + rY
+    function Pi(TT, oT) {
+      const IT = oT.trim().toLowerCase();
+      if (!IT) return [];
+      const iT = TT => {
+          if (TT === IT) return 0;
+          if (TT.startsWith(IT)) return 1;
+          const oT = TT.indexOf(IT);
+          return -1 === oT ? -1 : 2 + oT
         },
-        AY = [];
-      for (const OY of YY) {
-        const YY = [FY(OY.lowerLabel), FY(OY.lowerName)].filter((YY => -1 !== YY));
-        YY.length && AY.push({
-          item: OY,
-          rank: Math.min(...YY)
+        zT = [];
+      for (const XT of TT) {
+        const TT = [iT(XT.lowerLabel), iT(XT.lowerName)].filter((TT => -1 !== TT));
+        TT.length && zT.push({
+          item: XT,
+          rank: Math.min(...TT)
         })
       }
-      if (AY.length > 0) return AY.sort(((YY, rY) => YY.rank - rY.rank)).map((YY => YY.item));
-      const IY = [...DY],
-        RY = YY => {
-          let rY = 0;
-          for (const DY of IY) {
-            if (rY = YY.indexOf(DY, rY), -1 === rY) return !1;
-            rY++
+      if (zT.length > 0) return zT.sort(((TT, oT) => TT.rank - oT.rank)).map((TT => TT.item));
+      const kT = [...IT],
+        WT = TT => {
+          let oT = 0;
+          for (const IT of kT) {
+            if (oT = TT.indexOf(IT, oT), -1 === oT) return !1;
+            oT++
           }
           return !0
         };
-      return YY.filter((YY => RY(YY.lowerLabel) || RY(YY.lowerName)))
+      return TT.filter((TT => WT(TT.lowerLabel) || WT(TT.lowerName)))
     }
 
-    function GF(YY, rY) {
-      var DY;
-      return null !== (DY = null === YY || void 0 === YY ? void 0 : YY[rY]) && void 0 !== DY ? DY : rY
+    function di(TT, oT) {
+      var IT;
+      return null !== (IT = null === TT || void 0 === TT ? void 0 : TT[oT]) && void 0 !== IT ? IT : oT
     }
 
-    function xF(YY, rY) {
-      const DY = YY.userInput;
-      return void 0 !== rY && "dropdown" === (null === DY || void 0 === DY ? void 0 : DY.type) && DY.dropdownOptions.map(gF.e).includes(rY) ? rY : function(YY) {
-        const rY = YY.userInput;
-        if ("dropdown" !== (null === rY || void 0 === rY ? void 0 : rY.type) || 0 === rY.dropdownOptions.length) return null;
-        const DY = rY.dropdownOptions.map(gF.e);
-        return rY.initialValue && DY.includes(rY.initialValue) ? rY.initialValue : DY[DY.length - 1]
-      }(YY)
+    function Vi(TT, oT) {
+      const IT = TT.userInput;
+      return void 0 !== oT && "dropdown" === (null === IT || void 0 === IT ? void 0 : IT.type) && IT.dropdownOptions.map(Di.f).includes(oT) ? oT : function(TT) {
+        const oT = TT.userInput;
+        if ("dropdown" !== (null === oT || void 0 === oT ? void 0 : oT.type) || 0 === oT.dropdownOptions.length) return null;
+        const IT = oT.dropdownOptions.map(Di.f);
+        return oT.initialValue && IT.includes(oT.initialValue) ? oT.initialValue : IT[IT.length - 1]
+      }(TT)
     }
 
-    function nF(YY) {
-      return void 0 === YY ? "" : JSON.stringify(YY)
+    function Tz(TT) {
+      return void 0 === TT ? "" : JSON.stringify(TT)
     }
-    const PF = (0, FY.createContext)(null);
+    const oz = (0, iT.createContext)(null);
 
-    function UF() {
-      return (0, FY.useContext)(PF)
+    function Iz() {
+      return (0, iT.useContext)(oz)
     }
-    var LF = DY(2437);
-    const tF = (0, FY.memo)((function(YY) {
+    var iz = IT(2404);
+    const zz = (0, iT.memo)((function(TT) {
         let {
-          name: rY,
-          label: DY,
-          onPick: FY
-        } = YY;
-        return (0, vY.jsxs)("button", {
+          name: oT,
+          label: IT,
+          onPick: iT
+        } = TT;
+        return (0, ST.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: DY,
+          title: IT,
           onClick: () => {
-            FY(rY)
+            iT(oT)
           },
-          children: [(0, vY.jsx)(TF, {
-            item: rY,
+          children: [(0, ST.jsx)(Ei, {
+            item: oT,
             size: "big"
-          }), (0, vY.jsx)("span", {
-            children: DY
+          }), (0, ST.jsx)("span", {
+            children: IT
           })]
         })
       })),
-      YA = (0, FY.memo)((function(YY) {
+      kz = (0, iT.memo)((function(TT) {
         let {
-          items: rY,
-          query: DY,
-          onPick: AY
-        } = YY;
+          items: oT,
+          query: IT,
+          onPick: zT
+        } = TT;
         const {
-          t: IY
-        } = (0, RY.C)(), [OY, gY] = (0, FY.useState)(new Set), aY = (0, FY.useMemo)((() => function(YY) {
-          const rY = new Map;
-          for (const DY of YY) {
-            let YY = rY.get(DY.category);
-            YY || (YY = [], rY.set(DY.category, YY)), YY.push(DY)
+          t: kT
+        } = (0, WT.t)(), [XT, BT] = (0, iT.useState)(new Set), FT = (0, iT.useMemo)((() => function(TT) {
+          const oT = new Map;
+          for (const IT of TT) {
+            let TT = oT.get(IT.category);
+            TT || (TT = [], oT.set(IT.category, TT)), TT.push(IT)
           }
-          return [...jF, "other"].filter((YY => rY.has(YY))).map((YY => ({
-            category: YY,
-            items: rY.get(YY)
+          return [...ni, "other"].filter((TT => oT.has(TT))).map((TT => ({
+            category: TT,
+            items: oT.get(TT)
           })))
-        }(rY)), [rY]), uY = (0, FY.useMemo)((() => kF(rY, DY).slice(0, 60)), [rY, DY]);
-        return DY.trim() ? 0 === uY.length ? (0, vY.jsx)(BF, {
-          title: IY("smpShop:noItemsFound", {
-            query: DY.trim()
+        }(oT)), [oT]), DT = (0, iT.useMemo)((() => Pi(oT, IT).slice(0, 60)), [oT, IT]);
+        return IT.trim() ? 0 === DT.length ? (0, ST.jsx)(ji, {
+          title: kT("smpShop:noItemsFound", {
+            query: IT.trim()
           }),
-          children: IY("smpShop:tryShorterName")
-        }) : (0, vY.jsx)(LF.b, {
+          children: kT("smpShop:tryShorterName")
+        }) : (0, ST.jsx)(iz.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: wF,
-          observerUpdateDeps: [DY],
-          children: uY.map((YY => (0, vY.jsx)(tF, {
-            name: YY.name,
-            label: YY.label,
-            onPick: AY
-          }, YY.name)))
-        }) : (0, vY.jsx)(vY.Fragment, {
-          children: aY.map((YY => {
+          rootMargin: ti,
+          observerUpdateDeps: [IT],
+          children: DT.map((TT => (0, ST.jsx)(zz, {
+            name: TT.name,
+            label: TT.label,
+            onPick: zT
+          }, TT.name)))
+        }) : (0, ST.jsx)(ST.Fragment, {
+          children: FT.map((TT => {
             let {
-              category: rY,
-              items: DY
-            } = YY;
-            const FY = OY.has(rY) || DY.length <= 48,
-              RY = FY ? DY : DY.slice(0, 48);
-            return (0, vY.jsxs)("section", {
+              category: oT,
+              items: IT
+            } = TT;
+            const iT = XT.has(oT) || IT.length <= 48,
+              WT = iT ? IT : IT.slice(0, 48);
+            return (0, ST.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, vY.jsxs)("h4", {
-                children: [IY("other" === rY ? "smpShop:otherItems" : `creativeInventory:${rY}`), !FY && (0, vY.jsx)("button", {
+              children: [(0, ST.jsxs)("h4", {
+                children: [kT("other" === oT ? "smpShop:otherItems" : `creativeInventory:${oT}`), !iT && (0, ST.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    gY(new Set([...OY, rY]))
+                    BT(new Set([...XT, oT]))
                   },
-                  children: IY("smpShop:showAll", {
-                    count: DY.length
+                  children: kT("smpShop:showAll", {
+                    count: IT.length
                   })
                 })]
-              }), (0, vY.jsx)(LF.b, {
+              }), (0, ST.jsx)(iz.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: wF,
-                observerUpdateDeps: [FY],
-                children: RY.map((YY => (0, vY.jsx)(tF, {
-                  name: YY.name,
-                  label: YY.label,
-                  onPick: AY
-                }, YY.name)))
+                rootMargin: ti,
+                observerUpdateDeps: [iT],
+                children: WT.map((TT => (0, ST.jsx)(zz, {
+                  name: TT.name,
+                  label: TT.label,
+                  onPick: zT
+                }, TT.name)))
               })]
-            }, rY)
+            }, oT)
           }))
         })
       }));
 
-    function rA(YY, rY) {
+    function Wz(TT, oT) {
       const {
-        searched: DY,
-        shown: AY,
-        searchFor: IY,
-        loading: RY
-      } = function(YY, rY) {
-        var DY;
-        const AY = UF(),
-          [IY, RY] = (0, FY.useState)(void 0),
-          OY = (0, FY.useRef)(void 0),
-          gY = (0, FY.useRef)(0),
-          aY = (0, FY.useRef)(void 0),
-          vY = null !== (DY = null === YY || void 0 === YY ? void 0 : YY.meta.item) && void 0 !== DY ? DY : null,
-          uY = !!YY && AY.isPending(YY.key);
-        (0, FY.useEffect)((() => {
-          if (!YY || uY || !rY || void 0 === IY || IY === vY) return;
-          const DY = IY === OY.current && AY.gaveUpAt(YY.key) > gY.current && aY.current !== IY;
-          (IY !== OY.current || DY) && AY.act(YY.key, null !== IY && void 0 !== IY ? IY : "*", DY) && (DY && (aY.current = IY), OY.current = IY, gY.current = Date.now())
-        }), [YY, uY, rY, IY, vY, AY]);
-        const sY = (0, FY.useCallback)((YY => {
-            OY.current = void 0, aY.current = void 0, RY(YY)
+        searched: IT,
+        shown: zT,
+        searchFor: kT,
+        loading: WT
+      } = function(TT, oT) {
+        var IT;
+        const zT = Iz(),
+          [kT, WT] = (0, iT.useState)(void 0),
+          XT = (0, iT.useRef)(void 0),
+          BT = (0, iT.useRef)(0),
+          FT = (0, iT.useRef)(void 0),
+          ST = null !== (IT = null === TT || void 0 === TT ? void 0 : TT.meta.item) && void 0 !== IT ? IT : null,
+          DT = !!TT && zT.isPending(TT.key);
+        (0, iT.useEffect)((() => {
+          if (!TT || DT || !oT || void 0 === kT || kT === ST) return;
+          const IT = kT === XT.current && zT.gaveUpAt(TT.key) > BT.current && FT.current !== kT;
+          (kT !== XT.current || IT) && zT.act(TT.key, null !== kT && void 0 !== kT ? kT : "*", IT) && (IT && (FT.current = kT), XT.current = kT, BT.current = Date.now())
+        }), [TT, DT, oT, kT, ST, zT]);
+        const LT = (0, iT.useCallback)((TT => {
+            XT.current = void 0, FT.current = void 0, WT(TT)
           }), []),
-          iY = void 0 !== IY && IY !== vY && (uY || OY.current !== IY);
+          xT = void 0 !== kT && kT !== ST && (DT || XT.current !== kT);
         return {
-          searched: vY,
-          shown: iY ? IY : vY,
-          searchFor: sY,
-          loading: iY || uY || null !== vY && !rY
+          searched: ST,
+          shown: xT ? kT : ST,
+          searchFor: LT,
+          loading: xT || DT || null !== ST && !oT
         }
-      }(YY, rY), OY = (0, FY.useMemo)((() => function() {
-        var YY;
-        let rY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          FY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const AY = `${(0,hF.i)()}\x1f${rY.join("\x1e")}\x1f${DY.join("\x1e")}\x1f${JSON.stringify(FY)}`;
-        if ((null === (YY = pF) || void 0 === YY ? void 0 : YY.key) === AY) return pF.items;
-        const IY = new Set(DY),
-          RY = new Set,
-          OY = [],
-          gY = (YY, rY) => {
-            var DY;
-            if (!YY || RY.has(YY) || IY.has(YY)) return;
-            RY.add(YY);
-            const AY = null !== (DY = FY[YY]) && void 0 !== DY ? DY : YY;
-            OY.push({
-              name: YY,
-              label: AY,
-              lowerLabel: AY.toLowerCase(),
-              lowerName: YY.toLowerCase(),
-              category: rY
+      }(TT, oT), XT = (0, iT.useMemo)((() => function() {
+        var TT;
+        let oT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          iT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const zT = `${(0,qi.h)()}\x1f${oT.join("\x1e")}\x1f${IT.join("\x1e")}\x1f${JSON.stringify(iT)}`;
+        if ((null === (TT = Ni) || void 0 === TT ? void 0 : TT.key) === zT) return Ni.items;
+        const kT = new Set(IT),
+          WT = new Set,
+          XT = [],
+          BT = (TT, oT) => {
+            var IT;
+            if (!TT || WT.has(TT) || kT.has(TT)) return;
+            WT.add(TT);
+            const zT = null !== (IT = iT[TT]) && void 0 !== IT ? IT : TT;
+            XT.push({
+              name: TT,
+              label: zT,
+              lowerLabel: zT.toLowerCase(),
+              lowerName: TT.toLowerCase(),
+              category: oT
             })
           };
-        for (const vY of (0, CF.creativeItemIds)()) {
-          var aY;
-          (0, CF.itemIsDisabled)(vY, !0, !0, !1) || (0, CF.showOnlyInCreativeSearch)(vY) || gY((0, hF.e)(vY), null !== (aY = (0, CF.creativeCategoryOf)(vY)) && void 0 !== aY ? aY : "other")
+        for (const ST of (0, Oi.creativeItemIds)()) {
+          var FT;
+          (0, Oi.itemIsDisabled)(ST, !0, !0, !1) || (0, Oi.showOnlyInCreativeSearch)(ST) || BT((0, qi.g)(ST), null !== (FT = (0, Oi.creativeCategoryOf)(ST)) && void 0 !== FT ? FT : "other")
         }
-        for (const vY of rY) gY(vY, "other");
-        return pF = {
-          key: AY,
-          items: OY
-        }, OY
-      }(null === YY || void 0 === YY ? void 0 : YY.meta.extra, null === YY || void 0 === YY ? void 0 : YY.meta.excluded, null === YY || void 0 === YY ? void 0 : YY.meta.names)), [null === YY || void 0 === YY ? void 0 : YY.meta.extra, null === YY || void 0 === YY ? void 0 : YY.meta.excluded, null === YY || void 0 === YY ? void 0 : YY.meta.names]), [gY, aY] = (0, FY.useState)(""), [vY, uY] = (0, FY.useState)(0), [sY, iY] = (0, FY.useState)("recent"), yY = (0, FY.useCallback)((YY => {
-        aY(""), uY((YY => YY + 1)), IY(YY)
-      }), [IY]), QY = "browse" === sY || "" !== gY.trim();
+        for (const ST of oT) BT(ST, "other");
+        return Ni = {
+          key: zT,
+          items: XT
+        }, XT
+      }(null === TT || void 0 === TT ? void 0 : TT.meta.extra, null === TT || void 0 === TT ? void 0 : TT.meta.excluded, null === TT || void 0 === TT ? void 0 : TT.meta.names)), [null === TT || void 0 === TT ? void 0 : TT.meta.extra, null === TT || void 0 === TT ? void 0 : TT.meta.excluded, null === TT || void 0 === TT ? void 0 : TT.meta.names]), [BT, FT] = (0, iT.useState)(""), [ST, DT] = (0, iT.useState)(0), [LT, xT] = (0, iT.useState)("recent"), cT = (0, iT.useCallback)((TT => {
+        FT(""), DT((TT => TT + 1)), kT(TT)
+      }), [kT]), KT = "browse" === LT || "" !== BT.trim();
       return {
-        searched: DY,
-        shown: AY,
-        searchFor: IY,
-        loading: RY,
-        catalogue: OY,
-        names: null === YY || void 0 === YY ? void 0 : YY.meta.names,
-        query: gY,
-        setQuery: aY,
-        searchBoxKey: vY,
-        pickItem: yY,
-        setView: iY,
-        browsing: QY
+        searched: IT,
+        shown: zT,
+        searchFor: kT,
+        loading: WT,
+        catalogue: XT,
+        names: null === TT || void 0 === TT ? void 0 : TT.meta.names,
+        query: BT,
+        setQuery: FT,
+        searchBoxKey: ST,
+        pickItem: cT,
+        setView: xT,
+        browsing: KT
       }
     }
 
-    function DA(YY) {
+    function Xz(TT) {
       let {
-        browser: rY,
-        children: DY
-      } = YY;
+        browser: oT,
+        children: IT
+      } = TT;
       const {
-        t: FY
-      } = (0, RY.C)(), AY = UF();
-      return (0, vY.jsxs)("div", {
+        t: iT
+      } = (0, WT.t)(), zT = Iz();
+      return (0, ST.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "SmpSearch",
-          children: (0, vY.jsx)(SY.d, {
+          children: (0, ST.jsx)(wT.e, {
             className: "SmpSearchInput",
-            placeholderText: FY("smpShop:searchPlaceholder"),
-            defaultValue: rY.query,
-            onValueChange: YY => {
-              rY.setQuery(YY), rY.searched && YY.trim() && rY.searchFor(null)
+            placeholderText: iT("smpShop:searchPlaceholder"),
+            defaultValue: oT.query,
+            onValueChange: TT => {
+              oT.setQuery(TT), oT.searched && TT.trim() && oT.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const YY = kF(rY.catalogue, rY.query)[0];
-              YY ? rY.pickItem(YY.name) : rY.query.trim() && AY.notify(FY("smpShop:noItemsFound", {
-                query: rY.query.trim()
+              const TT = Pi(oT.catalogue, oT.query)[0];
+              TT ? oT.pickItem(TT.name) : oT.query.trim() && zT.notify(iT("smpShop:noItemsFound", {
+                query: oT.query.trim()
               }))
             }
-          }, rY.searchBoxKey)
-        }), DY]
+          }, oT.searchBoxKey)
+        }), IT]
       })
     }
 
-    function FA(YY) {
+    function Bz(TT) {
       let {
-        browser: rY,
-        recentLabel: DY,
-        children: FY
-      } = YY;
+        browser: oT,
+        recentLabel: IT,
+        children: iT
+      } = TT;
       const {
-        t: AY
-      } = (0, RY.C)();
-      return (0, vY.jsxs)("div", {
+        t: zT
+      } = (0, WT.t)();
+      return (0, ST.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, vY.jsx)(KF, {
+        children: [(0, ST.jsx)(Ui, {
           options: [{
             value: "recent",
-            label: DY
+            label: IT
           }, {
             value: "browse",
-            label: AY("smpShop:browseItems")
+            label: zT("smpShop:browseItems")
           }],
-          value: rY.browsing ? "browse" : "recent",
-          onChange: rY.setView,
-          ariaLabel: AY("smpShop:show")
-        }), !rY.browsing && FY]
+          value: oT.browsing ? "browse" : "recent",
+          onChange: oT.setView,
+          ariaLabel: zT("smpShop:show")
+        }), !oT.browsing && iT]
       })
     }
 
-    function AA(YY) {
+    function Fz(TT) {
       let {
-        item: rY,
-        names: DY,
-        summary: FY,
-        onBack: AY,
-        children: IY
-      } = YY;
+        item: oT,
+        names: IT,
+        summary: iT,
+        onBack: zT,
+        children: kT
+      } = TT;
       const {
-        t: OY
-      } = (0, RY.C)();
-      return (0, vY.jsxs)("div", {
+        t: XT
+      } = (0, WT.t)();
+      return (0, ST.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, vY.jsx)(oY.b, {
+        children: [(0, ST.jsx)(MT.c, {
           className: "SmpBackButton",
-          onClick: AY,
-          children: OY("general:back")
-        }), (0, vY.jsx)(TF, {
-          item: rY,
+          onClick: zT,
+          children: XT("general:back")
+        }), (0, ST.jsx)(Ei, {
+          item: oT,
           size: "big"
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, vY.jsx)("b", {
-            children: GF(DY, rY)
-          }), FY && (0, vY.jsx)("small", {
-            children: FY
+          children: [(0, ST.jsx)("b", {
+            children: di(IT, oT)
+          }), iT && (0, ST.jsx)("small", {
+            children: iT
           })]
-        }), IY]
+        }), kT]
       })
     }
 
-    function IA(YY) {
+    function Sz(TT) {
       let {
-        browser: rY,
-        className: DY,
-        action: FY,
-        above: AY,
-        list: RY,
-        summary: OY,
-        recentLabel: gY,
-        listControls: aY,
-        onBack: uY
-      } = YY;
-      return (0, vY.jsxs)("div", {
-        className: IY()("SmpScreen", DY),
-        children: [(0, vY.jsx)(DA, {
-          browser: rY,
-          children: FY
-        }), rY.shown && (0, vY.jsx)(AA, {
-          item: rY.shown,
-          names: rY.names,
-          summary: !rY.loading && OY,
+        browser: oT,
+        className: IT,
+        action: iT,
+        above: zT,
+        list: WT,
+        summary: XT,
+        recentLabel: BT,
+        listControls: FT,
+        onBack: DT
+      } = TT;
+      return (0, ST.jsxs)("div", {
+        className: kT()("SmpScreen", IT),
+        children: [(0, ST.jsx)(Xz, {
+          browser: oT,
+          children: iT
+        }), oT.shown && (0, ST.jsx)(Fz, {
+          item: oT.shown,
+          names: oT.names,
+          summary: !oT.loading && XT,
           onBack: () => {
-            null === uY || void 0 === uY || uY(), rY.searchFor(null)
+            null === DT || void 0 === DT || DT(), oT.searchFor(null)
           },
-          children: aY
-        }), AY, rY.shown ? RY : (0, vY.jsxs)(vY.Fragment, {
-          children: [(0, vY.jsx)(FA, {
-            browser: rY,
-            recentLabel: gY,
-            children: aY
-          }), rY.browsing ? (0, vY.jsx)(YA, {
-            items: rY.catalogue,
-            query: rY.query,
-            onPick: rY.pickItem
-          }) : RY]
+          children: FT
+        }), zT, oT.shown ? WT : (0, ST.jsxs)(ST.Fragment, {
+          children: [(0, ST.jsx)(Bz, {
+            browser: oT,
+            recentLabel: BT,
+            children: FT
+          }), oT.browsing ? (0, ST.jsx)(kz, {
+            items: oT.catalogue,
+            query: oT.query,
+            onPick: oT.pickItem
+          }) : WT]
         })]
       })
     }
 
-    function RA(YY, rY) {
-      const DY = YY.map((YY => {
+    function Dz(TT, oT) {
+      const IT = TT.map((TT => {
         let {
-          meta: rY
-        } = YY;
-        return rY.pricePerItem
+          meta: oT
+        } = TT;
+        return oT.pricePerItem
       }));
-      return "min" === rY ? Math.min(...DY) : Math.max(...DY)
+      return "min" === oT ? Math.min(...IT) : Math.max(...IT)
     }
-    var OA = DY(6128);
-    const gA = (0, FY.memo)((function(YY) {
-      var rY;
+    var Lz = IT(6062);
+    const xz = (0, iT.memo)((function(TT) {
+      var oT;
       const {
-        t: DY
-      } = (0, RY.C)(), FY = null === YY.seller, AY = YY.quantity * YY.pricePerItem;
-      return (0, vY.jsxs)("div", {
-        className: YY.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, vY.jsx)(TF, {
-          item: YY.item,
-          amount: YY.quantity,
-          size: YY.grid ? "big" : "normal",
-          tier: YY.tier
-        }), (0, vY.jsxs)("div", {
+        t: IT
+      } = (0, WT.t)(), iT = null === TT.seller, zT = TT.quantity * TT.pricePerItem;
+      return (0, ST.jsxs)("div", {
+        className: TT.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, ST.jsx)(Ei, {
+          item: TT.item,
+          amount: TT.quantity,
+          size: TT.grid ? "big" : "normal",
+          tier: TT.tier
+        }), (0, ST.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, vY.jsx)("b", {
-            children: (0, vY.jsx)(sF.b, {
-              text: null !== (rY = YY.title) && void 0 !== rY ? rY : `${YY.quantity}x ${YY.item}`
+          children: [(0, ST.jsx)("b", {
+            children: (0, ST.jsx)(Ki.c, {
+              text: null !== (oT = TT.title) && void 0 !== oT ? oT : `${TT.quantity}x ${TT.item}`
             })
-          }), (0, vY.jsxs)("small", {
+          }), (0, ST.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, vY.jsx)("span", {
-              children: FY ? DY("smpShop:you") : (0, vY.jsx)(sF.b, {
+            children: [(0, ST.jsx)("span", {
+              children: iT ? IT("smpShop:you") : (0, ST.jsx)(Ki.c, {
                 text: [{
-                  entityName: YY.seller
+                  entityName: TT.seller
                 }]
               })
-            }), (0, vY.jsx)("span", {
-              children: DY("smpShop:timeLeft", {
-                time: XF(YY.expiresAt)
+            }), (0, ST.jsx)("span", {
+              children: IT("smpShop:timeLeft", {
+                time: bi(TT.expiresAt)
               })
             })]
           })]
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, vY.jsx)(eF, {
-            amount: YY.pricePerItem
-          }), (0, vY.jsx)("small", {
-            children: DY("smpShop:each")
+          children: [(0, ST.jsx)(fi, {
+            amount: TT.pricePerItem
+          }), (0, ST.jsx)("small", {
+            children: IT("smpShop:each")
           })]
-        }), (0, vY.jsx)(oY.f, {
+        }), (0, ST.jsx)(MT.e, {
           className: "SmpBuyButton",
-          disabled: FY || !YY.canAfford && !YY.busy,
-          loading: YY.busy,
+          disabled: iT || !TT.canAfford && !TT.busy,
+          loading: TT.busy,
           onClick: () => {
-            YY.onBuy(YY.itemKey)
+            TT.onBuy(TT.itemKey)
           },
-          children: FY ? DY("smpShop:yours") : (0, vY.jsx)(eF, {
-            amount: AY
+          children: iT ? IT("smpShop:yours") : (0, ST.jsx)(fi, {
+            amount: zT
           })
         })]
       })
     }));
 
-    function aA(YY) {
+    function cz(TT) {
       let {
-        view: rY,
-        onChange: DY
-      } = YY;
+        view: oT,
+        onChange: IT
+      } = TT;
       const {
-        t: FY
-      } = (0, RY.C)();
-      return (0, vY.jsx)(SF.d, {
+        t: iT
+      } = (0, WT.t)();
+      return (0, ST.jsx)(ui.e, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: FY("smpShop:layout"),
+        ariaLabel: iT("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, vY.jsx)(OY.e, {
+          label: (0, ST.jsx)(XT.e, {
             name: "list"
           }),
-          ariaLabel: FY("smpShop:listView")
+          ariaLabel: iT("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, vY.jsx)(OY.e, {
+          label: (0, ST.jsx)(XT.e, {
             name: "grid-2"
           }),
-          ariaLabel: FY("smpShop:gridView")
+          ariaLabel: iT("smpShop:gridView")
         }],
-        value: rY,
-        onChange: DY
+        value: oT,
+        onChange: IT
       })
     }
 
-    function vA(YY) {
+    function Kz(TT) {
       let {
-        entries: rY,
-        view: DY
-      } = YY;
+        entries: oT,
+        view: IT
+      } = TT;
       const {
-        t: FY
-      } = (0, RY.C)(), AY = UF(), IY = "grid" === DY;
-      return (0, vY.jsxs)(vY.Fragment, {
-        children: [!IY && (0, vY.jsxs)("div", {
+        t: iT
+      } = (0, WT.t)(), zT = Iz(), kT = "grid" === IT;
+      return (0, ST.jsxs)(ST.Fragment, {
+        children: [!kT && (0, ST.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, vY.jsx)("span", {}), (0, vY.jsx)("span", {
-            children: FY("smpShop:columnItem")
-          }), (0, vY.jsx)("span", {
-            children: FY("smpShop:columnPriceEach")
-          }), (0, vY.jsx)("span", {
-            children: FY("smpShop:columnTotal")
+          children: [(0, ST.jsx)("span", {}), (0, ST.jsx)("span", {
+            children: iT("smpShop:columnItem")
+          }), (0, ST.jsx)("span", {
+            children: iT("smpShop:columnPriceEach")
+          }), (0, ST.jsx)("span", {
+            children: iT("smpShop:columnTotal")
           })]
-        }), (0, vY.jsx)(LF.b, {
-          lazyLoadedClassName: IY ? "SmpCardGrid" : "SmpList",
+        }), (0, ST.jsx)(iz.d, {
+          lazyLoadedClassName: kT ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: wF,
-          observerUpdateDeps: [rY.length],
-          children: rY.map((YY => {
-            var rY, DY;
+          rootMargin: ti,
+          observerUpdateDeps: [oT.length],
+          children: oT.map((TT => {
+            var oT, IT;
             let {
-              key: FY,
-              item: RY,
-              meta: OY
-            } = YY;
-            const gY = OY.quantity * OY.pricePerItem;
-            return (0, vY.jsx)(gA, {
-              itemKey: FY,
-              item: OY.item,
-              title: RY.customTitle,
-              quantity: OY.quantity,
-              pricePerItem: OY.pricePerItem,
-              seller: OY.seller,
-              expiresAt: OY.expiresAt,
-              tier: null !== (rY = null === (DY = RY.enchant) || void 0 === DY ? void 0 : DY.tier) && void 0 !== rY ? rY : null,
-              busy: AY.isPending(FY) || null !== OY.seller && !1 === RY.canBuy,
-              canAfford: AY.canAfford(RY, gY),
-              grid: IY,
-              onBuy: AY.act
-            }, FY)
+              key: iT,
+              item: WT,
+              meta: XT
+            } = TT;
+            const BT = XT.quantity * XT.pricePerItem;
+            return (0, ST.jsx)(xz, {
+              itemKey: iT,
+              item: XT.item,
+              title: WT.customTitle,
+              quantity: XT.quantity,
+              pricePerItem: XT.pricePerItem,
+              seller: XT.seller,
+              expiresAt: XT.expiresAt,
+              tier: null !== (oT = null === (IT = WT.enchant) || void 0 === IT ? void 0 : IT.tier) && void 0 !== oT ? oT : null,
+              busy: zT.isPending(iT) || null !== XT.seller && !1 === WT.canBuy,
+              canAfford: zT.canAfford(WT, BT),
+              grid: kT,
+              onBuy: zT.act
+            }, iT)
           }))
-        }, DY)]
+        }, IT)]
       })
     }
-    const uA = [1, 10, 100],
-      sA = [1, 10, 100, 999];
+    const Mz = [1, 10, 100],
+      rz = [1, 10, 100, 999];
 
-    function iA(YY) {
-      var rY, DY, AY, gY, aY, uY, sY, iY, yY, QY;
+    function Az(TT) {
+      var oT, IT, zT, BT, FT, DT, LT, xT, cT, KT;
       const {
-        t: WY
-      } = (0, RY.C)(), EY = UF(), {
-        creator: mY,
-        mode: VY
-      } = YY, [lY, TY] = (0, FY.useState)(null !== (rY = null === mY || void 0 === mY ? void 0 : mY.meta.item) && void 0 !== rY ? rY : null), [eY, NY] = (0, FY.useState)(1), [BY, cY] = (0, FY.useState)(0), [KY, HY] = (0, FY.useState)(""), [zY, ZY] = (0, FY.useState)(0), CY = (0, FY.useRef)(lY), fY = (0, FY.useRef)(!1), [jY, hY] = (0, FY.useState)(!1), dY = null !== (DY = null === mY || void 0 === mY ? void 0 : mY.meta.item) && void 0 !== DY ? DY : null, JY = null !== (AY = null === mY || void 0 === mY ? void 0 : mY.meta.ja) && void 0 !== AY ? AY : 0;
-      (0, FY.useEffect)((() => {
-        YY.searching || null === dY || dY === CY.current || (CY.current = dY, fY.current = !1, TY(dY), cY(0), NY("list" === VY ? Math.max(1, JY) : 1))
-      }), [dY, YY.searching]);
-      const MY = !!mY && !!lY && mY.meta.item === lY,
-        wY = MY ? mY.meta.ja : null !== (gY = null === (aY = YY.inventory) || void 0 === aY || null === (uY = aY.find((YY => YY.item === lY))) || void 0 === uY ? void 0 : uY.quantity) && void 0 !== gY ? gY : 0,
-        bY = "list" === VY ? Math.max(1, wY) : 45954,
-        XY = null !== (sY = YY.prices[0]) && void 0 !== sY ? sY : null,
-        qY = YY.prices.length ? Math.round(YY.prices.reduce(((YY, rY) => YY + rY), 0) / YY.prices.length) : null,
-        pY = null === (iY = YY.inventory) || void 0 === iY || null === (yY = iY.find((YY => YY.item === lY))) || void 0 === yY ? void 0 : yY.sellPrice;
-      (0, FY.useEffect)((() => {
-        var YY;
-        MY && (NY((YY => "list" === VY ? Math.min(Math.max(1, YY), Math.max(1, wY)) : YY)), fY.current || cY(null !== (YY = null !== XY && void 0 !== XY ? XY : qY) && void 0 !== YY ? YY : Math.max(1, null !== pY && void 0 !== pY ? pY : 1)))
-      }), [MY, wY, lY, XY, qY]);
-      const kY = YY => {
-          fY.current = !0, cY(YY)
+        t: rT
+      } = (0, WT.t)(), AT = Iz(), {
+        creator: gT,
+        mode: hT
+      } = TT, [mT, eT] = (0, iT.useState)(null !== (oT = null === gT || void 0 === gT ? void 0 : gT.meta.item) && void 0 !== oT ? oT : null), [RT, uT] = (0, iT.useState)(1), [vT, ET] = (0, iT.useState)(0), [fT, CT] = (0, iT.useState)(""), [jT, JT] = (0, iT.useState)(0), UT = (0, iT.useRef)(mT), aT = (0, iT.useRef)(!1), [YT, QT] = (0, iT.useState)(!1), OT = null !== (IT = null === gT || void 0 === gT ? void 0 : gT.meta.item) && void 0 !== IT ? IT : null, HT = null !== (zT = null === gT || void 0 === gT ? void 0 : gT.meta.kS) && void 0 !== zT ? zT : 0;
+      (0, iT.useEffect)((() => {
+        TT.searching || null === OT || OT === UT.current || (UT.current = OT, aT.current = !1, eT(OT), ET(0), uT("list" === hT ? Math.max(1, HT) : 1))
+      }), [OT, TT.searching]);
+      const nT = !!gT && !!mT && gT.meta.item === mT,
+        qT = nT ? gT.meta.kS : null !== (BT = null === (FT = TT.inventory) || void 0 === FT || null === (DT = FT.find((TT => TT.item === mT))) || void 0 === DT ? void 0 : DT.quantity) && void 0 !== BT ? BT : 0,
+        ZT = "list" === hT ? Math.max(1, qT) : 45954,
+        lT = null !== (LT = TT.prices[0]) && void 0 !== LT ? LT : null,
+        sT = TT.prices.length ? Math.round(TT.prices.reduce(((TT, oT) => TT + oT), 0) / TT.prices.length) : null,
+        tT = null === (xT = TT.inventory) || void 0 === xT || null === (cT = xT.find((TT => TT.item === mT))) || void 0 === cT ? void 0 : cT.sellPrice;
+      (0, iT.useEffect)((() => {
+        var TT;
+        nT && (uT((TT => "list" === hT ? Math.min(Math.max(1, TT), Math.max(1, qT)) : TT)), aT.current || ET(null !== (TT = null !== lT && void 0 !== lT ? lT : sT) && void 0 !== TT ? TT : Math.max(1, null !== tT && void 0 !== tT ? tT : 1)))
+      }), [nT, qT, mT, lT, sT]);
+      const GT = TT => {
+          aT.current = !0, ET(TT)
         },
-        GY = rY => {
-          var DY, FY, AY;
-          CY.current = rY, fY.current = !1, hY(!1), HY(""), ZY((YY => YY + 1)), TY(rY), cY(0), NY("list" === VY && null !== (DY = null === (FY = YY.inventory) || void 0 === FY || null === (AY = FY.find((YY => YY.item === rY))) || void 0 === AY ? void 0 : AY.quantity) && void 0 !== DY ? DY : 1), (null === mY || void 0 === mY ? void 0 : mY.meta.item) !== rY && YY.onPickItem(rY)
+        pT = oT => {
+          var IT, iT, zT;
+          UT.current = oT, aT.current = !1, QT(!1), CT(""), JT((TT => TT + 1)), eT(oT), ET(0), uT("list" === hT && null !== (IT = null === (iT = TT.inventory) || void 0 === iT || null === (zT = iT.find((TT => TT.item === oT))) || void 0 === zT ? void 0 : zT.quantity) && void 0 !== IT ? IT : 1), (null === gT || void 0 === gT ? void 0 : gT.meta.item) !== oT && TT.onPickItem(oT)
         },
-        xY = eY * BY,
-        nY = "list" === VY && null !== mY && void 0 !== mY && mY.meta.fee ? function(YY, rY) {
-          const DY = Math.max(0, rY - YY.taxFreeAllowance);
-          return Math.ceil(Math.round(DY * YY.rate * 1e6) / 1e6)
-        }(mY.meta.fee, xY) : 0,
-        PY = !!mY && EY.isPending(mY.key),
-        UY = MY && !YY.searching && eY >= 1 && BY >= 1 && ("order" === VY || wY >= eY) && !PY,
-        LY = !!lY && !MY && !YY.searching && eY >= 1 && BY >= 1,
-        tY = () => {
-          UY ? EY.act(mY.key, `${eY}|${BY}`) : LY && (YY.onPickItem(lY), hY(!0))
+        bT = RT * vT,
+        yT = "list" === hT && null !== gT && void 0 !== gT && gT.meta.fee ? function(TT, oT) {
+          const IT = Math.max(0, oT - TT.taxFreeAllowance);
+          return Math.ceil(Math.round(IT * TT.rate * 1e6) / 1e6)
+        }(gT.meta.fee, bT) : 0,
+        NT = !!gT && AT.isPending(gT.key),
+        PT = nT && !TT.searching && RT >= 1 && vT >= 1 && ("order" === hT || qT >= RT) && !NT,
+        dT = !!mT && !nT && !TT.searching && RT >= 1 && vT >= 1,
+        VT = () => {
+          PT ? AT.act(gT.key, `${RT}|${vT}`) : dT && (TT.onPickItem(mT), QT(!0))
         };
-      (0, FY.useEffect)((() => {
-        jY && MY && !YY.searching && (hY(!1), tY())
-      }), [jY, MY, YY.searching]);
-      const Yr = !!lY && !MY && (YY.searching || jY),
-        rr = lY ? GF(YY.names, lY) : "",
-        Dr = (0, FY.useMemo)((() => kF(YY.catalogue, KY).slice(0, 8)), [YY.catalogue, KY]),
-        Fr = ("list" === VY ? uA.filter((YY => YY < wY)) : sA).map((YY => ({
-          value: YY,
-          label: String(YY)
+      (0, iT.useEffect)((() => {
+        YT && nT && !TT.searching && (QT(!1), VT())
+      }), [YT, nT, TT.searching]);
+      const To = !!mT && !nT && (TT.searching || YT),
+        oo = mT ? di(TT.names, mT) : "",
+        Io = (0, iT.useMemo)((() => Pi(TT.catalogue, fT).slice(0, 8)), [TT.catalogue, fT]),
+        io = ("list" === hT ? Mz.filter((TT => TT < qT)) : rz).map((TT => ({
+          value: TT,
+          label: String(TT)
         })));
-      "list" === VY && wY > 0 && Fr.push({
-        value: wY,
-        label: WY("smpShop:all", {
-          count: wY
+      "list" === hT && qT > 0 && io.push({
+        value: qT,
+        label: rT("smpShop:all", {
+          count: qT
         })
       });
-      const Ar = [];
-      return null !== XY && (XY > 1 && Ar.push({
-        value: XY - 1,
-        label: WY("smpShop:undercut", {
-          price: VF(XY - 1)
+      const zo = [];
+      return null !== lT && (lT > 1 && zo.push({
+        value: lT - 1,
+        label: rT("smpShop:undercut", {
+          price: Ri(lT - 1)
         })
-      }), Ar.push({
-        value: XY,
-        label: WY("smpShop:lowest", {
-          price: VF(XY)
+      }), zo.push({
+        value: lT,
+        label: rT("smpShop:lowest", {
+          price: Ri(lT)
         })
-      })), null !== qY && qY !== XY && Ar.push({
-        value: qY,
-        label: WY("smpShop:average", {
-          price: VF(qY)
+      })), null !== sT && sT !== lT && zo.push({
+        value: sT,
+        label: rT("smpShop:average", {
+          price: Ri(sT)
         })
-      }), (0, vY.jsxs)("div", {
+      }), (0, ST.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, vY.jsxs)("div", {
+        children: [(0, ST.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, vY.jsx)("b", {
-            children: WY("list" === VY ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, vY.jsx)("button", {
+          children: [(0, ST.jsx)("b", {
+            children: rT("list" === hT ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, ST.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": WY("smpShop:close"),
-            onClick: YY.onClose,
-            children: (0, vY.jsx)(OY.e, {
+            "aria-label": rT("smpShop:close"),
+            onClick: TT.onClose,
+            children: (0, ST.jsx)(XT.e, {
               name: "xmark"
             })
           })]
-        }), "list" === VY && (0, vY.jsx)("div", {
+        }), "list" === hT && (0, ST.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (QY = YY.inventory) && void 0 !== QY && QY.length ? YY.inventory.map((YY => {
+          children: null !== (KT = TT.inventory) && void 0 !== KT && KT.length ? TT.inventory.map((TT => {
             let {
-              item: rY,
-              quantity: DY
-            } = YY;
-            return (0, vY.jsx)("button", {
+              item: oT,
+              quantity: IT
+            } = TT;
+            return (0, ST.jsx)("button", {
               type: "button",
-              title: rY,
-              className: IY()("SmpPickerSlot", {
-                SmpPickerSlotOn: rY === lY
+              title: oT,
+              className: kT()("SmpPickerSlot", {
+                SmpPickerSlotOn: oT === mT
               }),
               onClick: () => {
-                GY(rY)
+                pT(oT)
               },
-              children: (0, vY.jsx)(TF, {
-                item: rY,
-                amount: DY
+              children: (0, ST.jsx)(Ei, {
+                item: oT,
+                amount: IT
               })
-            }, rY)
-          })) : (0, vY.jsx)("span", {
+            }, oT)
+          })) : (0, ST.jsx)("span", {
             className: "SmpMuted",
-            children: WY("smpShop:nothingToList")
+            children: rT("smpShop:nothingToList")
           })
-        }), ("list" === VY || !lY) && (0, vY.jsxs)("div", {
+        }), ("list" === hT || !mT) && (0, ST.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, vY.jsx)(SY.d, {
+          children: [(0, ST.jsx)(wT.e, {
             className: "SmpSearchInput",
-            placeholderText: WY("list" === VY ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: KY,
-            onValueChange: HY,
+            placeholderText: rT("list" === hT ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: fT,
+            onValueChange: CT,
             blurOnEnter: !0,
             onEnter: () => {
-              Dr[0] && GY(Dr[0].name)
+              Io[0] && pT(Io[0].name)
             }
-          }, zY), Dr.length > 0 && (0, vY.jsx)("div", {
+          }, jT), Io.length > 0 && (0, ST.jsx)("div", {
             className: "SmpPicker",
-            children: Dr.map((YY => {
+            children: Io.map((TT => {
               let {
-                name: rY
-              } = YY;
-              return (0, vY.jsx)("button", {
+                name: oT
+              } = TT;
+              return (0, ST.jsx)("button", {
                 type: "button",
-                title: rY,
-                className: IY()("SmpPickerSlot", {
-                  SmpPickerSlotOn: rY === lY
+                title: oT,
+                className: kT()("SmpPickerSlot", {
+                  SmpPickerSlotOn: oT === mT
                 }),
                 onClick: () => {
-                  GY(rY)
+                  pT(oT)
                 },
-                children: (0, vY.jsx)(TF, {
-                  item: rY
+                children: (0, ST.jsx)(Ei, {
+                  item: oT
                 })
-              }, rY)
+              }, oT)
             }))
           })]
-        }), lY && (0, vY.jsxs)(vY.Fragment, {
-          children: [(0, vY.jsxs)("div", {
+        }), mT && (0, ST.jsxs)(ST.Fragment, {
+          children: [(0, ST.jsxs)("div", {
             className: "SmpPickedName",
-            children: [rr, Yr && (0, vY.jsx)(HF, {})]
-          }), (0, vY.jsxs)("div", {
+            children: [oo, To && (0, ST.jsx)(ai, {})]
+          }), (0, ST.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, vY.jsxs)("div", {
+            children: [(0, ST.jsxs)("div", {
               className: "SmpField",
-              children: [(0, vY.jsxs)("span", {
-                children: [WY("smpShop:quantity"), "list" === VY && MY && (0, vY.jsx)("small", {
-                  children: WY("smpShop:youHave", {
-                    count: wY
+              children: [(0, ST.jsxs)("span", {
+                children: [rT("smpShop:quantity"), "list" === hT && nT && (0, ST.jsx)("small", {
+                  children: rT("smpShop:youHave", {
+                    count: qT
                   })
                 })]
-              }), (0, vY.jsx)(zF, {
-                value: eY,
-                onChange: NY,
-                max: bY,
-                label: WY("smpShop:quantity")
-              }), (0, vY.jsx)(KF, {
-                options: Fr,
-                value: eY,
-                onChange: NY,
-                ariaLabel: WY("smpShop:quantity")
+              }), (0, ST.jsx)(Yi, {
+                value: RT,
+                onChange: uT,
+                max: ZT,
+                label: rT("smpShop:quantity")
+              }), (0, ST.jsx)(Ui, {
+                options: io,
+                value: RT,
+                onChange: uT,
+                ariaLabel: rT("smpShop:quantity")
               })]
-            }), (0, vY.jsxs)("div", {
+            }), (0, ST.jsxs)("div", {
               className: "SmpField",
-              children: [(0, vY.jsx)("span", {
-                children: WY("smpShop:pricePerItem")
-              }), (0, vY.jsx)(zF, {
-                value: Math.max(1, BY),
-                onChange: kY,
+              children: [(0, ST.jsx)("span", {
+                children: rT("smpShop:pricePerItem")
+              }), (0, ST.jsx)(Yi, {
+                value: Math.max(1, vT),
+                onChange: GT,
                 max: 9999999,
-                step: ZF,
-                label: WY("smpShop:pricePerItem")
-              }), (0, vY.jsx)(KF, {
-                options: Ar,
-                value: BY,
-                onChange: kY,
-                ariaLabel: WY("smpShop:pricePerItem")
+                step: Qi,
+                label: rT("smpShop:pricePerItem")
+              }), (0, ST.jsx)(Ui, {
+                options: zo,
+                value: vT,
+                onChange: GT,
+                ariaLabel: rT("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === VY && (0, vY.jsxs)("div", {
+          }), "list" === hT && (0, ST.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, vY.jsxs)("span", {
-              children: [WY("smpShop:youGet"), " ", (0, vY.jsx)(eF, {
-                amount: Math.max(0, xY - nY),
+            children: [(0, ST.jsxs)("span", {
+              children: [rT("smpShop:youGet"), " ", (0, ST.jsx)(fi, {
+                amount: Math.max(0, bT - yT),
                 exact: !0
               })]
-            }), (0, vY.jsx)("small", {
-              children: nY > 0 ? WY("smpShop:listingFee", {
-                fee: nY.toLocaleString("en-US")
-              }) : WY("smpShop:listingRules")
+            }), (0, ST.jsx)("small", {
+              children: yT > 0 ? rT("smpShop:listingFee", {
+                fee: yT.toLocaleString("en-US")
+              }) : rT("smpShop:listingRules")
             })]
-          }), (0, vY.jsx)(oY.p, {
+          }), (0, ST.jsx)(MT.r, {
             className: "SmpSubmit",
-            disabled: !UY && !LY && !PY,
-            loading: PY || Yr || MY && YY.searching,
-            onClick: tY,
-            children: "list" === VY ? WY("smpShop:listButton", {
-              count: eY,
-              item: rr
-            }) : (0, vY.jsxs)(vY.Fragment, {
-              children: [WY("smpShop:orderButton", {
-                count: eY,
-                item: rr
-              }), " ", BY >= 1 && (0, vY.jsx)(eF, {
-                amount: xY
+            disabled: !PT && !dT && !NT,
+            loading: NT || To || nT && TT.searching,
+            onClick: VT,
+            children: "list" === hT ? rT("smpShop:listButton", {
+              count: RT,
+              item: oo
+            }) : (0, ST.jsxs)(ST.Fragment, {
+              children: [rT("smpShop:orderButton", {
+                count: RT,
+                item: oo
+              }), " ", vT >= 1 && (0, ST.jsx)(fi, {
+                amount: bT
               })]
             })
           })]
@@ -3516,627 +3517,627 @@ export const modules = {
       })
     }
 
-    function yA() {
-      var YY;
+    function gz() {
+      var TT;
       const {
-        t: rY
-      } = (0, RY.C)(), DY = UF(), AY = null === (YY = DY.shopInfo[DY.categoryKey]) || void 0 === YY ? void 0 : YY.items, IY = MF(AY, "search"), OY = MF(AY, "creator"), gY = JF(AY, "enchantedCreator"), aY = JF(AY, "listing"), uY = MF(AY, "empty"), sY = rA(IY, aY.length > 0 || null !== uY), {
-        searched: iY,
-        shown: yY,
-        loading: QY
-      } = sY, [WY, EY] = (0, FY.useState)(!1), [mY, VY] = function() {
-        const [YY, rY] = (0, OA.e)("smpMarketView", "list");
-        return ["grid" === YY ? "grid" : "list", rY]
-      }(), SY = "grid" === mY, lY = (0, FY.useMemo)((() => aY.filter((YY => {
+        t: oT
+      } = (0, WT.t)(), IT = Iz(), zT = null === (TT = IT.shopInfo[IT.categoryKey]) || void 0 === TT ? void 0 : TT.items, kT = si(zT, "search"), XT = si(zT, "creator"), BT = li(zT, "enchantedCreator"), FT = li(zT, "listing"), DT = si(zT, "empty"), LT = Wz(kT, FT.length > 0 || null !== DT), {
+        searched: xT,
+        shown: cT,
+        loading: KT
+      } = LT, [rT, AT] = (0, iT.useState)(!1), [gT, hT] = function() {
+        const [TT, oT] = (0, Lz.c)("smpMarketView", "list");
+        return ["grid" === TT ? "grid" : "list", oT]
+      }(), wT = "grid" === gT, mT = (0, iT.useMemo)((() => FT.filter((TT => {
         let {
-          meta: rY
-        } = YY;
-        return null !== rY.seller && rY.item === iY
-      })).map((YY => {
+          meta: oT
+        } = TT;
+        return null !== oT.seller && oT.item === xT
+      })).map((TT => {
         let {
-          meta: rY
-        } = YY;
-        return rY.pricePerItem
-      })).sort(((YY, rY) => YY - rY))), [aY, iY]), TY = (0, FY.useMemo)((() => {
-        const YY = new Set(sY.catalogue.map((YY => {
+          meta: oT
+        } = TT;
+        return oT.pricePerItem
+      })).sort(((TT, oT) => TT - oT))), [FT, xT]), eT = (0, iT.useMemo)((() => {
+        const TT = new Set(LT.catalogue.map((TT => {
           let {
-            name: rY
-          } = YY;
-          return rY
+            name: oT
+          } = TT;
+          return oT
         })));
-        return function(YY) {
-          for (const rY in YY)
-            if ("sell" === YY[rY].smp) return JF(YY[rY].items, "sell").filter((YY => {
+        return function(TT) {
+          for (const oT in TT)
+            if ("sell" === TT[oT].smp) return li(TT[oT].items, "sell").filter((TT => {
               let {
-                item: rY
-              } = YY;
-              return !rY.enchant
-            })).map((YY => {
+                item: oT
+              } = TT;
+              return !oT.enchant
+            })).map((TT => {
               let {
-                meta: rY
-              } = YY;
+                meta: oT
+              } = TT;
               return {
-                item: rY.item,
-                quantity: rY.quantity,
-                sellPrice: rY.pricePerItem
+                item: oT.item,
+                quantity: oT.quantity,
+                sellPrice: oT.pricePerItem
               }
             }));
           return []
-        }(DY.shopInfo).filter((rY => {
+        }(IT.shopInfo).filter((oT => {
           let {
-            item: DY
-          } = rY;
-          return YY.has(DY)
+            item: IT
+          } = oT;
+          return TT.has(IT)
         }))
-      }), [DY.shopInfo, sY.catalogue]);
-      return (0, vY.jsx)(IA, {
-        browser: sY,
+      }), [IT.shopInfo, LT.catalogue]);
+      return (0, ST.jsx)(Sz, {
+        browser: LT,
         className: "SmpMarketTab",
-        recentLabel: rY("smpShop:recentlyListed"),
-        action: (0, vY.jsx)(oY.p, {
+        recentLabel: oT("smpShop:recentlyListed"),
+        action: (0, ST.jsx)(MT.r, {
           className: "SmpSellButton",
           onClick: () => {
-            EY((YY => !YY))
+            AT((TT => !TT))
           },
-          children: rY("smpShop:sell")
+          children: oT("smpShop:sell")
         }),
-        above: WY && (0, vY.jsxs)(vY.Fragment, {
-          children: [(0, vY.jsx)(iA, {
+        above: rT && (0, ST.jsxs)(ST.Fragment, {
+          children: [(0, ST.jsx)(Az, {
             mode: "list",
-            creator: OY,
-            inventory: TY,
-            catalogue: sY.catalogue,
-            names: sY.names,
-            searching: QY,
-            prices: lY,
-            onPickItem: sY.searchFor,
+            creator: XT,
+            inventory: eT,
+            catalogue: LT.catalogue,
+            names: LT.names,
+            searching: KT,
+            prices: mT,
+            onPickItem: LT.searchFor,
             onClose: () => {
-              EY(!1)
+              AT(!1)
             }
-          }), gY.length > 0 && (0, vY.jsx)(QA, {
-            entries: gY
+          }), BT.length > 0 && (0, ST.jsx)(hz, {
+            entries: BT
           })]
         }),
-        listControls: (0, vY.jsx)(aA, {
-          view: mY,
-          onChange: VY
+        listControls: (0, ST.jsx)(cz, {
+          view: gT,
+          onChange: hT
         }),
-        summary: yY && (aY.length > 0 ? rY(1 === aY.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: aY.length,
-          price: VF(RA(aY, "min"))
-        }) : rY("smpShop:noOneSelling", {
-          item: GF(sY.names, yY)
+        summary: cT && (FT.length > 0 ? oT(1 === FT.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: FT.length,
+          price: Ri(Dz(FT, "min"))
+        }) : oT("smpShop:noOneSelling", {
+          item: di(LT.names, cT)
         })),
-        list: QY ? (0, vY.jsx)(NF, {
-          grid: SY
-        }) : aY.length > 0 ? (0, vY.jsx)(vA, {
-          entries: aY,
-          view: mY
-        }) : uY ? (0, vY.jsx)(cF, {
-          entry: uY
-        }) : (0, vY.jsx)(NF, {
+        list: KT ? (0, ST.jsx)(Ci, {
+          grid: wT
+        }) : FT.length > 0 ? (0, ST.jsx)(Kz, {
+          entries: FT,
+          view: gT
+        }) : DT ? (0, ST.jsx)(Ji, {
+          entry: DT
+        }) : (0, ST.jsx)(Ci, {
           count: 3,
-          grid: SY
+          grid: wT
         })
       })
     }
 
-    function QA(YY) {
+    function hz(TT) {
       let {
-        entries: rY
-      } = YY;
+        entries: oT
+      } = TT;
       const {
-        t: DY
-      } = (0, RY.C)(), AY = UF(), [IY, OY] = (0, FY.useState)({});
-      return (0, vY.jsx)("div", {
+        t: IT
+      } = (0, WT.t)(), zT = Iz(), [kT, XT] = (0, iT.useState)({});
+      return (0, ST.jsx)("div", {
         className: "SmpList",
-        children: rY.map((YY => {
-          var rY, FY, RY;
+        children: oT.map((TT => {
+          var oT, iT, WT;
           let {
-            key: gY,
-            item: aY,
-            meta: uY
-          } = YY;
-          const sY = null !== (rY = IY[gY]) && void 0 !== rY ? rY : 1;
-          return (0, vY.jsxs)("div", {
+            key: BT,
+            item: FT,
+            meta: DT
+          } = TT;
+          const LT = null !== (oT = kT[BT]) && void 0 !== oT ? oT : 1;
+          return (0, ST.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, vY.jsx)(TF, {
-              item: uY.item,
-              amount: uY.quantity,
-              tier: null !== (FY = null === (RY = aY.enchant) || void 0 === RY ? void 0 : RY.tier) && void 0 !== FY ? FY : null
-            }), (0, vY.jsxs)("div", {
+            children: [(0, ST.jsx)(Ei, {
+              item: DT.item,
+              amount: DT.quantity,
+              tier: null !== (iT = null === (WT = FT.enchant) || void 0 === WT ? void 0 : WT.tier) && void 0 !== iT ? iT : null
+            }), (0, ST.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, vY.jsx)("b", {
-                children: (0, vY.jsx)(sF.b, {
-                  text: aY.customTitle
+              children: [(0, ST.jsx)("b", {
+                children: (0, ST.jsx)(Ki.c, {
+                  text: FT.customTitle
                 })
-              }), (0, vY.jsx)("small", {
-                children: DY("smpShop:enchantedListing")
+              }), (0, ST.jsx)("small", {
+                children: IT("smpShop:enchantedListing")
               })]
-            }), (0, vY.jsx)(zF, {
-              value: sY,
-              onChange: YY => {
-                OY({
-                  ...IY,
-                  [gY]: YY
+            }), (0, ST.jsx)(Yi, {
+              value: LT,
+              onChange: TT => {
+                XT({
+                  ...kT,
+                  [BT]: TT
                 })
               },
               max: 9999999,
-              step: ZF,
-              label: DY("smpShop:pricePerItem")
-            }), (0, vY.jsxs)(oY.p, {
-              loading: AY.isPending(gY),
+              step: Qi,
+              label: IT("smpShop:pricePerItem")
+            }), (0, ST.jsxs)(MT.r, {
+              loading: zT.isPending(BT),
               onClick: () => {
-                AY.act(gY, String(sY))
+                zT.act(BT, String(LT))
               },
-              children: [DY("smpShop:list"), " ", (0, vY.jsx)(eF, {
-                amount: sY
+              children: [IT("smpShop:list"), " ", (0, ST.jsx)(fi, {
+                amount: LT
               })]
             })]
-          }, gY)
+          }, BT)
         }))
       })
     }
-    const oA = (0, FY.memo)((function(YY) {
+    const wz = (0, iT.memo)((function(TT) {
       let {
-        itemKey: rY,
-        item: DY,
-        quantity: FY,
-        pricePerItem: AY,
-        tier: RY,
-        selected: OY,
-        onSelect: gY
-      } = YY;
-      return (0, vY.jsxs)("button", {
+        itemKey: oT,
+        item: IT,
+        quantity: iT,
+        pricePerItem: zT,
+        tier: WT,
+        selected: XT,
+        onSelect: BT
+      } = TT;
+      return (0, ST.jsxs)("button", {
         type: "button",
-        className: IY()("SmpInventorySlot", {
-          SmpInventorySlotOn: OY
+        className: kT()("SmpInventorySlot", {
+          SmpInventorySlotOn: XT
         }),
-        title: DY,
+        title: IT,
         onClick: () => {
-          gY(rY)
+          BT(oT)
         },
-        children: [(0, vY.jsx)(TF, {
-          item: DY,
-          amount: FY,
-          tier: RY
-        }), (0, vY.jsx)(eF, {
-          amount: AY
+        children: [(0, ST.jsx)(Ei, {
+          item: IT,
+          amount: iT,
+          tier: WT
+        }), (0, ST.jsx)(fi, {
+          amount: zT
         })]
       })
     }));
 
-    function WA() {
-      var YY;
+    function mz() {
+      var TT;
       const {
-        t: rY
-      } = (0, RY.C)(), DY = UF(), AY = null === (YY = DY.shopInfo[DY.categoryKey]) || void 0 === YY ? void 0 : YY.items, OY = JF(AY, "sell"), gY = MF(AY, "empty"), [aY, uY] = (0, FY.useState)(null), [sY, iY] = (0, FY.useState)({}), yY = OY.find((YY => {
+        t: oT
+      } = (0, WT.t)(), IT = Iz(), zT = null === (TT = IT.shopInfo[IT.categoryKey]) || void 0 === TT ? void 0 : TT.items, XT = li(zT, "sell"), BT = si(zT, "empty"), [FT, DT] = (0, iT.useState)(null), [LT, xT] = (0, iT.useState)({}), cT = XT.find((TT => {
         let {
-          key: rY
-        } = YY;
-        return rY === aY
+          key: oT
+        } = TT;
+        return oT === FT
       }));
-      return 0 === OY.length ? (0, vY.jsx)("div", {
+      return 0 === XT.length ? (0, ST.jsx)("div", {
         className: "SmpScreen",
-        children: (0, vY.jsx)(BF, {
-          title: gY ? (0, vY.jsx)(sF.b, {
-            text: gY.item.customTitle
-          }) : rY("smpShop:nothingToSell"),
-          children: gY && (0, vY.jsx)(sF.b, {
-            text: gY.item.description
+        children: (0, ST.jsx)(ji, {
+          title: BT ? (0, ST.jsx)(Ki.c, {
+            text: BT.item.customTitle
+          }) : oT("smpShop:nothingToSell"),
+          children: BT && (0, ST.jsx)(Ki.c, {
+            text: BT.item.description
           })
         })
-      }) : (0, vY.jsxs)("div", {
+      }) : (0, ST.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, vY.jsx)("div", {
+        children: [(0, ST.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: OY.map((YY => {
-            var rY, DY;
+          children: XT.map((TT => {
+            var oT, IT;
             let {
-              key: FY,
-              item: AY,
-              meta: IY
-            } = YY;
-            return (0, vY.jsx)(oA, {
-              itemKey: FY,
-              item: IY.item,
-              quantity: IY.quantity,
-              pricePerItem: IY.pricePerItem,
-              tier: null !== (rY = null === (DY = AY.enchant) || void 0 === DY ? void 0 : DY.tier) && void 0 !== rY ? rY : null,
-              selected: FY === aY,
-              onSelect: uY
-            }, FY)
+              key: iT,
+              item: zT,
+              meta: kT
+            } = TT;
+            return (0, ST.jsx)(wz, {
+              itemKey: iT,
+              item: kT.item,
+              quantity: kT.quantity,
+              pricePerItem: kT.pricePerItem,
+              tier: null !== (oT = null === (IT = zT.enchant) || void 0 === IT ? void 0 : IT.tier) && void 0 !== oT ? oT : null,
+              selected: iT === FT,
+              onSelect: DT
+            }, iT)
           }))
-        }), (0, vY.jsx)("div", {
-          className: IY()("SmpSellBar", {
-            SmpSellBarIdle: !yY
+        }), (0, ST.jsx)("div", {
+          className: kT()("SmpSellBar", {
+            SmpSellBarIdle: !cT
           }),
-          children: yY ? (0, vY.jsx)(EA, {
-            entry: yY,
-            choice: xF(yY.item, sY[yY.key]),
-            onChoose: YY => {
-              iY({
-                ...sY,
-                [yY.key]: YY
+          children: cT ? (0, ST.jsx)(ez, {
+            entry: cT,
+            choice: Vi(cT.item, LT[cT.key]),
+            onChoose: TT => {
+              xT({
+                ...LT,
+                [cT.key]: TT
               })
             }
-          }) : (0, vY.jsx)("span", {
+          }) : (0, ST.jsx)("span", {
             className: "SmpMuted",
-            children: rY("smpShop:tapToSell")
+            children: oT("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function EA(YY) {
-      var rY, DY, FY, AY;
+    function ez(TT) {
+      var oT, IT, iT, zT;
       let {
-        entry: IY,
-        choice: OY,
-        onChoose: gY
-      } = YY;
+        entry: kT,
+        choice: XT,
+        onChoose: BT
+      } = TT;
       const {
-        t: aY
-      } = (0, RY.C)(), uY = UF(), {
-        key: sY,
-        item: iY,
-        meta: yY
-      } = IY, QY = qF("dropdown" === (null === (rY = iY.userInput) || void 0 === rY ? void 0 : rY.type) ? iY.userInput.dropdownOptions : []), WY = null === OY ? 0 : -(0, gF.c)(iY, OY);
-      return (0, vY.jsxs)(vY.Fragment, {
-        children: [(0, vY.jsx)(TF, {
-          item: yY.item,
-          amount: yY.quantity,
-          tier: null !== (DY = null === (FY = iY.enchant) || void 0 === FY ? void 0 : FY.tier) && void 0 !== DY ? DY : null
-        }), (0, vY.jsxs)("div", {
+        t: FT
+      } = (0, WT.t)(), DT = Iz(), {
+        key: LT,
+        item: xT,
+        meta: cT
+      } = kT, KT = yi("dropdown" === (null === (oT = xT.userInput) || void 0 === oT ? void 0 : oT.type) ? xT.userInput.dropdownOptions : []), rT = null === XT ? 0 : -(0, Di.e)(xT, XT);
+      return (0, ST.jsxs)(ST.Fragment, {
+        children: [(0, ST.jsx)(Ei, {
+          item: cT.item,
+          amount: cT.quantity,
+          tier: null !== (IT = null === (iT = xT.enchant) || void 0 === iT ? void 0 : iT.tier) && void 0 !== IT ? IT : null
+        }), (0, ST.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, vY.jsx)("b", {
-            children: (0, vY.jsx)(sF.b, {
-              text: null !== (AY = iY.customTitle) && void 0 !== AY ? AY : yY.item
+          children: [(0, ST.jsx)("b", {
+            children: (0, ST.jsx)(Ki.c, {
+              text: null !== (zT = xT.customTitle) && void 0 !== zT ? zT : cT.item
             })
-          }), (0, vY.jsx)("small", {
-            children: aY("smpShop:sellEach", {
-              count: yY.quantity
+          }), (0, ST.jsx)("small", {
+            children: FT("smpShop:sellEach", {
+              count: cT.quantity
             })
           })]
-        }), (0, vY.jsx)(KF, {
-          options: QY.map((YY => {
+        }), (0, ST.jsx)(Ui, {
+          options: KT.map((TT => {
             let {
-              label: rY,
-              quantity: DY,
-              isAll: FY
-            } = YY;
+              label: oT,
+              quantity: IT,
+              isAll: iT
+            } = TT;
             return {
-              value: rY,
-              label: FY ? aY("smpShop:all", {
-                count: DY
-              }) : String(DY)
+              value: oT,
+              label: iT ? FT("smpShop:all", {
+                count: IT
+              }) : String(IT)
             }
           })),
-          value: OY,
-          onChange: gY,
-          ariaLabel: aY("smpShop:quantity")
-        }), (0, vY.jsxs)(oY.p, {
-          loading: uY.isPending(sY),
-          disabled: null === OY,
+          value: XT,
+          onChange: BT,
+          ariaLabel: FT("smpShop:quantity")
+        }), (0, ST.jsxs)(MT.r, {
+          loading: DT.isPending(LT),
+          disabled: null === XT,
           onClick: () => {
-            uY.act(sY, OY)
+            DT.act(LT, XT)
           },
-          children: [aY("smpShop:sellButton"), " ", (0, vY.jsx)(eF, {
-            amount: WY
+          children: [FT("smpShop:sellButton"), " ", (0, ST.jsx)(fi, {
+            amount: rT
           })]
         })]
       })
     }
 
-    function mA() {
-      var YY;
+    function Rz() {
+      var TT;
       const {
-        t: rY
-      } = (0, RY.C)(), DY = UF(), FY = null === (YY = DY.shopInfo[DY.categoryKey]) || void 0 === YY ? void 0 : YY.items, AY = JF(FY, "collect"), IY = JF(FY, "myListing"), OY = (YY, rY) => DY.isPending(YY) || !1 === rY.canBuy;
-      return (0, vY.jsxs)("div", {
+        t: oT
+      } = (0, WT.t)(), IT = Iz(), iT = null === (TT = IT.shopInfo[IT.categoryKey]) || void 0 === TT ? void 0 : TT.items, zT = li(iT, "collect"), kT = li(iT, "myListing"), XT = (TT, oT) => IT.isPending(TT) || !1 === oT.canBuy;
+      return (0, ST.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, vY.jsx)("h3", {
+        children: [(0, ST.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: rY("smpShop:readyToCollect")
-        }), AY.length > 0 ? (0, vY.jsx)("div", {
+          children: oT("smpShop:readyToCollect")
+        }), zT.length > 0 ? (0, ST.jsx)("div", {
           className: "SmpList",
-          children: AY.map((YY => {
-            var FY, AY;
+          children: zT.map((TT => {
+            var iT, zT;
             let {
-              key: IY,
-              item: RY,
-              meta: gY
-            } = YY;
-            return (0, vY.jsxs)("div", {
+              key: kT,
+              item: WT,
+              meta: BT
+            } = TT;
+            return (0, ST.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, vY.jsx)(TF, {
-                item: "sold" === gY.type ? "Gold Coin" : gY.item,
-                amount: "sold" === gY.type ? 0 : gY.quantity,
-                tier: null !== (FY = null === (AY = RY.enchant) || void 0 === AY ? void 0 : AY.tier) && void 0 !== FY ? FY : null
-              }), (0, vY.jsxs)("div", {
+              children: [(0, ST.jsx)(Ei, {
+                item: "sold" === BT.type ? "Gold Coin" : BT.item,
+                amount: "sold" === BT.type ? 0 : BT.quantity,
+                tier: null !== (iT = null === (zT = WT.enchant) || void 0 === zT ? void 0 : zT.tier) && void 0 !== iT ? iT : null
+              }), (0, ST.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, vY.jsx)("b", {
-                  children: (0, vY.jsx)(sF.b, {
-                    text: RY.customTitle
+                children: [(0, ST.jsx)("b", {
+                  children: (0, ST.jsx)(Ki.c, {
+                    text: WT.customTitle
                   })
-                }), (0, vY.jsx)("small", {
-                  children: (0, vY.jsx)(sF.b, {
-                    text: RY.description
+                }), (0, ST.jsx)("small", {
+                  children: (0, ST.jsx)(Ki.c, {
+                    text: WT.description
                   })
                 })]
-              }), (0, vY.jsx)(oY.n, {
-                loading: OY(IY, RY),
+              }), (0, ST.jsx)(MT.m, {
+                loading: XT(kT, WT),
                 onClick: () => {
-                  DY.act(IY)
+                  IT.act(kT)
                 },
-                children: rY("smpShop:collect")
+                children: oT("smpShop:collect")
               })]
-            }, IY)
+            }, kT)
           }))
-        }) : (0, vY.jsx)(BF, {
-          title: rY("smpShop:nothingToCollect"),
-          children: rY("smpShop:nothingToCollectHint")
-        }), (0, vY.jsx)("h3", {
+        }) : (0, ST.jsx)(ji, {
+          title: oT("smpShop:nothingToCollect"),
+          children: oT("smpShop:nothingToCollectHint")
+        }), (0, ST.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: rY("smpShop:activeListings", {
-            count: IY.length
+          children: oT("smpShop:activeListings", {
+            count: kT.length
           })
-        }), IY.length > 0 ? (0, vY.jsx)("div", {
+        }), kT.length > 0 ? (0, ST.jsx)("div", {
           className: "SmpList",
-          children: IY.map((YY => {
-            var FY, AY;
+          children: kT.map((TT => {
+            var iT, zT;
             let {
-              key: IY,
-              item: RY,
-              meta: gY
-            } = YY;
-            return (0, vY.jsxs)("div", {
+              key: kT,
+              item: WT,
+              meta: BT
+            } = TT;
+            return (0, ST.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, vY.jsx)(TF, {
-                item: gY.item,
-                amount: gY.quantity,
-                tier: null !== (FY = null === (AY = RY.enchant) || void 0 === AY ? void 0 : AY.tier) && void 0 !== FY ? FY : null
-              }), (0, vY.jsxs)("div", {
+              children: [(0, ST.jsx)(Ei, {
+                item: BT.item,
+                amount: BT.quantity,
+                tier: null !== (iT = null === (zT = WT.enchant) || void 0 === zT ? void 0 : zT.tier) && void 0 !== iT ? iT : null
+              }), (0, ST.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, vY.jsx)("b", {
-                  children: (0, vY.jsx)(sF.b, {
-                    text: RY.customTitle
+                children: [(0, ST.jsx)("b", {
+                  children: (0, ST.jsx)(Ki.c, {
+                    text: WT.customTitle
                   })
-                }), (0, vY.jsx)("small", {
-                  children: rY("smpShop:timeLeft", {
-                    time: XF(gY.expiresAt)
+                }), (0, ST.jsx)("small", {
+                  children: oT("smpShop:timeLeft", {
+                    time: bi(BT.expiresAt)
                   })
                 })]
-              }), (0, vY.jsxs)("div", {
+              }), (0, ST.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, vY.jsx)(eF, {
-                  amount: gY.pricePerItem
-                }), (0, vY.jsx)("small", {
-                  children: rY("smpShop:each")
+                children: [(0, ST.jsx)(fi, {
+                  amount: BT.pricePerItem
+                }), (0, ST.jsx)("small", {
+                  children: oT("smpShop:each")
                 })]
-              }), (0, vY.jsx)(oY.D, {
-                loading: OY(IY, RY),
+              }), (0, ST.jsx)(MT.C, {
+                loading: XT(kT, WT),
                 onClick: () => {
-                  DY.act(IY)
+                  IT.act(kT)
                 },
-                children: rY("smpShop:cancel")
+                children: oT("smpShop:cancel")
               })]
-            }, IY)
+            }, kT)
           }))
-        }) : (0, vY.jsx)(BF, {
-          title: rY("smpShop:noActiveListings"),
-          children: rY("smpShop:noActiveListingsHint")
+        }) : (0, ST.jsx)(ji, {
+          title: oT("smpShop:noActiveListings"),
+          children: oT("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function VA(YY) {
+    function uz(TT) {
       let {
-        done: rY,
-        of: DY
-      } = YY;
-      return (0, vY.jsx)("span", {
+        done: oT,
+        of: IT
+      } = TT;
+      return (0, ST.jsx)("span", {
         className: "SmpProgress",
-        children: (0, vY.jsx)("i", {
+        children: (0, ST.jsx)("i", {
           style: {
-            width: `${Math.min(100,rY/Math.max(1,DY)*100)}%`
+            width: `${Math.min(100,oT/Math.max(1,IT)*100)}%`
           }
         })
       })
     }
 
-    function SA(YY) {
-      var rY, DY, FY;
+    function vz(TT) {
+      var oT, IT, iT;
       let {
-        entry: AY,
-        choice: IY,
-        onChoose: OY
-      } = YY;
+        entry: zT,
+        choice: kT,
+        onChoose: XT
+      } = TT;
       const {
-        t: gY
-      } = (0, RY.C)(), aY = UF(), {
-        key: uY,
-        item: sY,
-        meta: iY
-      } = AY, yY = "dropdown" === (null === (rY = sY.userInput) || void 0 === rY ? void 0 : rY.type) ? sY.userInput.dropdownOptions : [], QY = !0 === iY.processing, WY = null !== iY.creator && (iY.ja > 0 || QY), EY = WY && iY.ja > 0 ? qF(yY) : [], mY = null === IY ? 0 : null !== (DY = null === (FY = EY.find((YY => YY.label === IY))) || void 0 === FY ? void 0 : FY.quantity) && void 0 !== DY ? DY : 0;
-      return (0, vY.jsxs)("div", {
+        t: BT
+      } = (0, WT.t)(), FT = Iz(), {
+        key: DT,
+        item: LT,
+        meta: xT
+      } = zT, cT = "dropdown" === (null === (oT = LT.userInput) || void 0 === oT ? void 0 : oT.type) ? LT.userInput.dropdownOptions : [], KT = !0 === xT.processing, rT = null !== xT.creator && (xT.kS > 0 || KT), AT = rT && xT.kS > 0 ? yi(cT) : [], gT = null === kT ? 0 : null !== (IT = null === (iT = AT.find((TT => TT.label === kT))) || void 0 === iT ? void 0 : iT.quantity) && void 0 !== IT ? IT : 0;
+      return (0, ST.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, vY.jsx)(TF, {
-          item: iY.item
-        }), (0, vY.jsxs)("div", {
+        children: [(0, ST.jsx)(Ei, {
+          item: xT.item
+        }), (0, ST.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, vY.jsx)("b", {
-            children: (0, vY.jsx)(sF.b, {
-              text: sY.customTitle
+          children: [(0, ST.jsx)("b", {
+            children: (0, ST.jsx)(Ki.c, {
+              text: LT.customTitle
             })
-          }), (0, vY.jsxs)("small", {
-            children: [(0, vY.jsx)(eF, {
-              amount: iY.pricePerItem
-            }), " ", gY("smpShop:each"), " \xb7", " ", null === iY.creator ? gY("smpShop:you") : (0, vY.jsx)(sF.b, {
+          }), (0, ST.jsxs)("small", {
+            children: [(0, ST.jsx)(fi, {
+              amount: xT.pricePerItem
+            }), " ", BT("smpShop:each"), " \xb7", " ", null === xT.creator ? BT("smpShop:you") : (0, ST.jsx)(Ki.c, {
               text: [{
-                entityName: iY.creator
+                entityName: xT.creator
               }]
             })]
-          }), (0, vY.jsx)(VA, {
-            done: iY.delivered,
-            of: iY.wanted
+          }), (0, ST.jsx)(uz, {
+            done: xT.delivered,
+            of: xT.wanted
           })]
-        }), WY ? (0, vY.jsxs)(vY.Fragment, {
-          children: [(0, vY.jsx)(KF, {
-            options: EY.map((YY => {
+        }), rT ? (0, ST.jsxs)(ST.Fragment, {
+          children: [(0, ST.jsx)(Ui, {
+            options: AT.map((TT => {
               let {
-                label: rY,
-                quantity: DY,
-                isAll: FY
-              } = YY;
+                label: oT,
+                quantity: IT,
+                isAll: iT
+              } = TT;
               return {
-                value: rY,
-                label: FY ? gY("smpShop:max", {
-                  count: DY
-                }) : String(DY)
+                value: oT,
+                label: iT ? BT("smpShop:max", {
+                  count: IT
+                }) : String(IT)
               }
             })),
-            value: IY,
-            onChange: OY,
-            ariaLabel: gY("smpShop:quantity")
-          }), (0, vY.jsxs)(oY.p, {
-            loading: aY.isPending(uY) || QY,
-            disabled: null === IY,
+            value: kT,
+            onChange: XT,
+            ariaLabel: BT("smpShop:quantity")
+          }), (0, ST.jsxs)(MT.r, {
+            loading: FT.isPending(DT) || KT,
+            disabled: null === kT,
             onClick: () => {
-              aY.act(uY, IY)
+              FT.act(DT, kT)
             },
-            children: [gY("smpShop:deliver"), " ", (0, vY.jsx)(eF, {
-              amount: mY * iY.pricePerItem
+            children: [BT("smpShop:deliver"), " ", (0, ST.jsx)(fi, {
+              amount: gT * xT.pricePerItem
             })]
           })]
-        }) : (0, vY.jsx)("span", {
+        }) : (0, ST.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === iY.creator ? gY("smpShop:yourOrder") : gY("smpShop:youHave", {
+          children: null === xT.creator ? BT("smpShop:yourOrder") : BT("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function lA() {
-      var YY;
+    function Ez() {
+      var TT;
       const {
-        t: rY
-      } = (0, RY.C)(), DY = UF(), AY = null === (YY = DY.shopInfo[DY.categoryKey]) || void 0 === YY ? void 0 : YY.items, IY = MF(AY, "search"), OY = MF(AY, "creator"), gY = JF(AY, "order"), aY = MF(AY, "empty"), uY = rA(IY, gY.length > 0 || null !== aY), [sY, iY] = (0, FY.useState)(!1), [yY, QY] = (0, FY.useState)({});
-      return (0, vY.jsx)(IA, {
-        browser: uY,
-        recentLabel: rY("smpShop:recentOrders"),
-        action: (0, vY.jsx)(oY.p, {
+        t: oT
+      } = (0, WT.t)(), IT = Iz(), zT = null === (TT = IT.shopInfo[IT.categoryKey]) || void 0 === TT ? void 0 : TT.items, kT = si(zT, "search"), XT = si(zT, "creator"), BT = li(zT, "order"), FT = si(zT, "empty"), DT = Wz(kT, BT.length > 0 || null !== FT), [LT, xT] = (0, iT.useState)(!1), [cT, KT] = (0, iT.useState)({});
+      return (0, ST.jsx)(Sz, {
+        browser: DT,
+        recentLabel: oT("smpShop:recentOrders"),
+        action: (0, ST.jsx)(MT.r, {
           onClick: () => {
-            iY((YY => !YY))
+            xT((TT => !TT))
           },
-          children: rY("smpShop:createOrder")
+          children: oT("smpShop:createOrder")
         }),
-        above: sY && (0, vY.jsx)(iA, {
+        above: LT && (0, ST.jsx)(Az, {
           mode: "order",
-          creator: OY,
-          catalogue: uY.catalogue,
-          names: uY.names,
-          searching: uY.loading,
+          creator: XT,
+          catalogue: DT.catalogue,
+          names: DT.names,
+          searching: DT.loading,
           prices: [],
-          onPickItem: uY.searchFor,
+          onPickItem: DT.searchFor,
           onClose: () => {
-            iY(!1)
+            xT(!1)
           }
         }),
         onBack: () => {
-          iY(!1)
+          xT(!1)
         },
-        summary: gY.length > 0 && rY(1 === gY.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: gY.length,
-          price: VF(RA(gY, "max"))
+        summary: BT.length > 0 && oT(1 === BT.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: BT.length,
+          price: Ri(Dz(BT, "max"))
         }),
-        list: uY.loading ? (0, vY.jsx)(NF, {}) : gY.length > 0 ? (0, vY.jsx)(LF.b, {
+        list: DT.loading ? (0, ST.jsx)(Ci, {}) : BT.length > 0 ? (0, ST.jsx)(iz.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: wF,
-          observerUpdateDeps: [gY.length],
-          children: gY.map((YY => (0, vY.jsx)(SA, {
-            entry: YY,
-            choice: xF(YY.item, yY[YY.key]),
-            onChoose: rY => {
-              QY({
-                ...yY,
-                [YY.key]: rY
+          rootMargin: ti,
+          observerUpdateDeps: [BT.length],
+          children: BT.map((TT => (0, ST.jsx)(vz, {
+            entry: TT,
+            choice: Vi(TT.item, cT[TT.key]),
+            onChoose: oT => {
+              KT({
+                ...cT,
+                [TT.key]: oT
               })
             }
-          }, YY.key)))
-        }) : aY ? (0, vY.jsx)(cF, {
-          entry: aY
-        }) : (0, vY.jsx)(NF, {
+          }, TT.key)))
+        }) : FT ? (0, ST.jsx)(Ji, {
+          entry: FT
+        }) : (0, ST.jsx)(Ci, {
           count: 3
         })
       })
     }
 
-    function TA() {
-      var YY;
+    function fz() {
+      var TT;
       const {
-        t: rY
-      } = (0, RY.C)(), DY = UF(), FY = JF(null === (YY = DY.shopInfo[DY.categoryKey]) || void 0 === YY ? void 0 : YY.items, "myOrder");
-      return 0 === FY.length ? (0, vY.jsx)("div", {
+        t: oT
+      } = (0, WT.t)(), IT = Iz(), iT = li(null === (TT = IT.shopInfo[IT.categoryKey]) || void 0 === TT ? void 0 : TT.items, "myOrder");
+      return 0 === iT.length ? (0, ST.jsx)("div", {
         className: "SmpScreen",
-        children: (0, vY.jsx)(BF, {
-          title: rY("smpShop:noOrders"),
-          children: rY("smpShop:noOrdersHint")
+        children: (0, ST.jsx)(ji, {
+          title: oT("smpShop:noOrders"),
+          children: oT("smpShop:noOrdersHint")
         })
-      }) : (0, vY.jsx)("div", {
+      }) : (0, ST.jsx)("div", {
         className: "SmpScreen",
-        children: (0, vY.jsx)("div", {
+        children: (0, ST.jsx)("div", {
           className: "SmpList",
-          children: FY.map((YY => {
+          children: iT.map((TT => {
             let {
-              key: FY,
-              item: AY,
-              meta: IY
-            } = YY;
-            const RY = DY.isPending(FY) || !1 === AY.canBuy;
-            return (0, vY.jsxs)("div", {
+              key: iT,
+              item: zT,
+              meta: kT
+            } = TT;
+            const WT = IT.isPending(iT) || !1 === zT.canBuy;
+            return (0, ST.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, vY.jsx)(TF, {
-                item: IY.item,
-                amount: IY.collectable
-              }), (0, vY.jsxs)("div", {
+              children: [(0, ST.jsx)(Ei, {
+                item: kT.item,
+                amount: kT.collectable
+              }), (0, ST.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, vY.jsx)("b", {
-                  children: (0, vY.jsx)(sF.b, {
-                    text: AY.customTitle
+                children: [(0, ST.jsx)("b", {
+                  children: (0, ST.jsx)(Ki.c, {
+                    text: zT.customTitle
                   })
-                }), (0, vY.jsxs)("small", {
-                  children: [(0, vY.jsx)(eF, {
-                    amount: IY.pricePerItem
-                  }), " ", rY("smpShop:each"), IY.collectable > 0 && ` \xb7 ${rY("smpShop:readyCount",{count:IY.collectable})}`]
-                }), (0, vY.jsx)(VA, {
-                  done: IY.delivered,
-                  of: IY.wanted
+                }), (0, ST.jsxs)("small", {
+                  children: [(0, ST.jsx)(fi, {
+                    amount: kT.pricePerItem
+                  }), " ", oT("smpShop:each"), kT.collectable > 0 && ` \xb7 ${oT("smpShop:readyCount",{count:kT.collectable})}`]
+                }), (0, ST.jsx)(uz, {
+                  done: kT.delivered,
+                  of: kT.wanted
                 })]
-              }), IY.collectable > 0 ? (0, vY.jsx)(oY.n, {
-                loading: RY,
+              }), kT.collectable > 0 ? (0, ST.jsx)(MT.m, {
+                loading: WT,
                 onClick: () => {
-                  DY.act(FY)
+                  IT.act(iT)
                 },
-                children: rY("smpShop:collectCount", {
-                  count: IY.collectable
+                children: oT("smpShop:collectCount", {
+                  count: kT.collectable
                 })
-              }) : (0, vY.jsx)(oY.D, {
-                loading: RY,
+              }) : (0, ST.jsx)(MT.C, {
+                loading: WT,
                 onClick: () => {
-                  DY.act(FY)
+                  IT.act(iT)
                 },
-                children: rY("smpShop:cancel")
+                children: oT("smpShop:cancel")
               })]
-            }, FY)
+            }, iT)
           }))
         })
       })
     }
-    const eA = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      NA = {
+    const Cz = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      jz = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4144,764 +4145,764 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function BA(YY, rY) {
-      let DY = !1;
-      const FY = {};
-      for (const AY in YY) rY(AY, YY[AY]) ? FY[AY] = YY[AY] : DY = !0;
-      return DY ? FY : YY
+    function Jz(TT, oT) {
+      let IT = !1;
+      const iT = {};
+      for (const zT in TT) oT(zT, TT[zT]) ? iT[zT] = TT[zT] : IT = !0;
+      return IT ? iT : TT
     }
 
-    function cA(YY) {
-      var rY, DY, AY, gY;
+    function Uz(TT) {
+      var oT, IT, zT, BT;
       const {
-        show: aY,
-        shopInfo: uY,
-        selectedCategoryKey: sY
-      } = YY, {
-        t: iY
-      } = (0, RY.C)(), yY = null !== sY && void 0 !== sY ? sY : "", QY = dF(uY, yY), oY = null === (rY = uY[yY]) || void 0 === rY ? void 0 : rY.items, WY = null !== QY, [EY, mY] = (0, FY.useState)({}), [VY, SY] = (0, FY.useState)([]), [lY, TY] = (0, FY.useState)(!1), [eY, NY] = (0, FY.useState)(null), [, BY] = (0, FY.useState)(0), cY = (0, FY.useRef)(0), KY = (0, FY.useRef)({}), HY = (0, FY.useRef)({
-        items: oY,
-        pending: EY,
-        shopInfo: uY,
-        active: WY,
-        canAfford: YY.canAfford,
-        buy: YY.buy
+        show: FT,
+        shopInfo: DT,
+        selectedCategoryKey: LT
+      } = TT, {
+        t: xT
+      } = (0, WT.t)(), cT = null !== LT && void 0 !== LT ? LT : "", KT = Zi(DT, cT), MT = null === (oT = DT[cT]) || void 0 === oT ? void 0 : oT.items, rT = null !== KT, [AT, gT] = (0, iT.useState)({}), [hT, wT] = (0, iT.useState)([]), [mT, eT] = (0, iT.useState)(!1), [RT, uT] = (0, iT.useState)(null), [, vT] = (0, iT.useState)(0), ET = (0, iT.useRef)(0), fT = (0, iT.useRef)({}), CT = (0, iT.useRef)({
+        items: MT,
+        pending: AT,
+        shopInfo: DT,
+        active: rT,
+        canAfford: TT.canAfford,
+        buy: TT.buy
       });
-      HY.current = {
-        items: oY,
-        pending: EY,
-        shopInfo: uY,
-        active: WY,
-        canAfford: YY.canAfford,
-        buy: YY.buy
+      CT.current = {
+        items: MT,
+        pending: AT,
+        shopInfo: DT,
+        active: rT,
+        canAfford: TT.canAfford,
+        buy: TT.buy
       };
-      const zY = (0, FY.useCallback)((YY => {
-        cY.current++;
-        const rY = cY.current;
-        SY((DY => [{
-          id: rY,
-          text: YY
-        }, ...DY].slice(0, 8))), NY(rY)
+      const jT = (0, iT.useCallback)((TT => {
+        ET.current++;
+        const oT = ET.current;
+        wT((IT => [{
+          id: oT,
+          text: TT
+        }, ...IT].slice(0, 8))), uT(oT)
       }), []);
-      (0, FY.useEffect)((() => {
-        if (null === eY) return;
-        const YY = setTimeout((() => {
-          NY(null)
+      (0, iT.useEffect)((() => {
+        if (null === RT) return;
+        const TT = setTimeout((() => {
+          uT(null)
         }), 3e3);
         return () => {
-          clearTimeout(YY)
+          clearTimeout(TT)
         }
-      }), [eY]), (0, FY.useEffect)((() => {
-        const rY = YY.message;
-        if (!rY) return;
+      }), [RT]), (0, iT.useEffect)((() => {
+        const oT = TT.message;
+        if (!oT) return;
         const {
-          shopInfo: DY,
-          active: FY,
-          items: AY
-        } = HY.current, IY = null !== rY.categoryKey ? null !== dF(DY, rY.categoryKey) : FY;
-        (IY || FY) && zY(rY.text), IY && mY((YY => BA(YY, (YY => {
-          var rY, DY;
-          return !eA.has(null === AY || void 0 === AY || null === (rY = AY[YY]) || void 0 === rY || null === (DY = rY.smp) || void 0 === DY ? void 0 : DY.kind)
+          shopInfo: IT,
+          active: iT,
+          items: zT
+        } = CT.current, kT = null !== oT.categoryKey ? null !== Zi(IT, oT.categoryKey) : iT;
+        (kT || iT) && jT(oT.text), kT && gT((TT => Jz(TT, (TT => {
+          var oT, IT;
+          return !Cz.has(null === zT || void 0 === zT || null === (oT = zT[TT]) || void 0 === oT || null === (IT = oT.smp) || void 0 === IT ? void 0 : IT.kind)
         }))))
-      }), [YY.message, zY]), (0, FY.useEffect)((() => {
-        mY((YY => BA(YY, ((YY, rY) => nF(null === oY || void 0 === oY ? void 0 : oY[YY]) === rY.snapshot))))
-      }), [uY, oY]);
-      const ZY = Object.keys(EY).length > 0;
-      (0, FY.useEffect)((() => {
-        if (!ZY) return;
-        const YY = setInterval((() => {
-          BY((YY => YY + 1));
-          const YY = Date.now(),
+      }), [TT.message, jT]), (0, iT.useEffect)((() => {
+        gT((TT => Jz(TT, ((TT, oT) => Tz(null === MT || void 0 === MT ? void 0 : MT[TT]) === oT.snapshot))))
+      }), [DT, MT]);
+      const JT = Object.keys(AT).length > 0;
+      (0, iT.useEffect)((() => {
+        if (!JT) return;
+        const TT = setInterval((() => {
+          vT((TT => TT + 1));
+          const TT = Date.now(),
             {
-              pending: rY,
-              items: DY
-            } = HY.current,
-            FY = Object.keys(rY).filter((DY => YY - rY[DY].at >= 12e3));
-          if (0 === FY.length) return;
-          const AY = FY.some((YY => {
-            var FY, AY;
-            return "search" !== (null === DY || void 0 === DY || null === (FY = DY[YY]) || void 0 === FY || null === (AY = FY.smp) || void 0 === AY ? void 0 : AY.kind) || rY[YY].resend
+              pending: oT,
+              items: IT
+            } = CT.current,
+            iT = Object.keys(oT).filter((IT => TT - oT[IT].at >= 12e3));
+          if (0 === iT.length) return;
+          const zT = iT.some((TT => {
+            var iT, zT;
+            return "search" !== (null === IT || void 0 === IT || null === (iT = IT[TT]) || void 0 === iT || null === (zT = iT.smp) || void 0 === zT ? void 0 : zT.kind) || oT[TT].resend
           }));
-          for (const IY of FY) KY.current[IY] = YY;
-          mY((YY => BA(YY, (YY => !FY.includes(YY))))), AY && zY(iY("smpShop:noAnswer"))
+          for (const kT of iT) fT.current[kT] = TT;
+          gT((TT => Jz(TT, (TT => !iT.includes(TT))))), zT && jT(xT("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(YY)
+          clearInterval(TT)
         }
-      }), [ZY]), (0, FY.useEffect)((() => {
-        mY({})
-      }), [yY]), (0, FY.useEffect)((() => {
-        aY || TY(!1)
-      }), [aY]);
-      const CY = (0, FY.useCallback)((function(YY, rY) {
-          let DY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [JT]), (0, iT.useEffect)((() => {
+        gT({})
+      }), [cT]), (0, iT.useEffect)((() => {
+        FT || eT(!1)
+      }), [FT]);
+      const UT = (0, iT.useCallback)((function(TT, oT) {
+          let IT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: FY,
-            pending: AY,
-            canAfford: IY,
-            buy: RY
-          } = HY.current, OY = null === FY || void 0 === FY ? void 0 : FY[YY];
-          if (!OY || YY in AY || !1 === OY.canBuy) return !1;
-          if (!IY(OY, (0, gF.c)(OY, rY))) return !1;
-          RY(YY, OY, rY);
-          const gY = {
-            snapshot: nF(OY),
+            items: iT,
+            pending: zT,
+            canAfford: kT,
+            buy: WT
+          } = CT.current, XT = null === iT || void 0 === iT ? void 0 : iT[TT];
+          if (!XT || TT in zT || !1 === XT.canBuy) return !1;
+          if (!kT(XT, (0, Di.e)(XT, oT))) return !1;
+          WT(TT, XT, oT);
+          const BT = {
+            snapshot: Tz(XT),
             at: Date.now(),
-            resend: DY
+            resend: IT
           };
-          return HY.current.pending = {
-            ...HY.current.pending,
-            [YY]: gY
-          }, mY((rY => ({
-            ...rY,
-            [YY]: gY
+          return CT.current.pending = {
+            ...CT.current.pending,
+            [TT]: BT
+          }, gT((oT => ({
+            ...oT,
+            [TT]: BT
           }))), !0
         }), []),
-        fY = (0, FY.useMemo)((() => ({
-          shopInfo: uY,
-          categoryKey: yY,
-          canAfford: YY.canAfford,
-          isPending: YY => YY in EY,
-          gaveUpAt: YY => {
-            var rY;
-            return null !== (rY = KY.current[YY]) && void 0 !== rY ? rY : 0
+        aT = (0, iT.useMemo)((() => ({
+          shopInfo: DT,
+          categoryKey: cT,
+          canAfford: TT.canAfford,
+          isPending: TT => TT in AT,
+          gaveUpAt: TT => {
+            var oT;
+            return null !== (oT = fT.current[TT]) && void 0 !== oT ? oT : 0
           },
-          act: CY,
-          notify: zY
-        })), [uY, yY, YY.canAfford, EY, CY, zY]),
-        jY = Math.min(...Object.values(EY).map((YY => YY.at))),
-        hY = ZY && Date.now() - jY > 1500,
-        dY = VY.length > 1,
-        JY = null !== (DY = null === (AY = uY[yY]) || void 0 === AY ? void 0 : AY.customTitle) && void 0 !== DY ? DY : yY,
-        MY = null === (gY = uY[yY]) || void 0 === gY ? void 0 : gY.description;
-      let wY = null;
-      return "market" === QY ? wY = (0, vY.jsx)(yA, {}) : "sell" === QY ? wY = (0, vY.jsx)(WA, {}) : "collect" === QY ? wY = (0, vY.jsx)(mA, {}) : "orders" === QY ? wY = (0, vY.jsx)(lA, {}) : "myOrders" === QY && (wY = (0, vY.jsx)(TA, {})), (0, vY.jsx)(PF.Provider, {
-        value: fY,
-        children: (0, vY.jsx)("div", {
+          act: UT,
+          notify: jT
+        })), [DT, cT, TT.canAfford, AT, UT, jT]),
+        YT = Math.min(...Object.values(AT).map((TT => TT.at))),
+        QT = JT && Date.now() - YT > 1500,
+        OT = hT.length > 1,
+        HT = null !== (IT = null === (zT = DT[cT]) || void 0 === zT ? void 0 : zT.customTitle) && void 0 !== IT ? IT : cT,
+        nT = null === (BT = DT[cT]) || void 0 === BT ? void 0 : BT.description;
+      let qT = null;
+      return "market" === KT ? qT = (0, ST.jsx)(gz, {}) : "sell" === KT ? qT = (0, ST.jsx)(mz, {}) : "collect" === KT ? qT = (0, ST.jsx)(Rz, {}) : "orders" === KT ? qT = (0, ST.jsx)(Ez, {}) : "myOrders" === KT && (qT = (0, ST.jsx)(fz, {})), (0, ST.jsx)(oz.Provider, {
+        value: aT,
+        children: (0, ST.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !WY,
-          children: (0, vY.jsxs)("div", {
+          hidden: !rT,
+          children: (0, ST.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, vY.jsx)("header", {
+            children: [(0, ST.jsx)("header", {
               className: "SmpHeader",
-              children: (0, vY.jsxs)("div", {
+              children: (0, ST.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, vY.jsxs)("h2", {
-                  children: [QY && (0, vY.jsx)(OY.e, {
-                    name: NA[QY]
-                  }), iY(JY)]
-                }), MY && (0, vY.jsx)("p", {
-                  children: (0, vY.jsx)(sF.b, {
-                    text: MY
+                children: [(0, ST.jsxs)("h2", {
+                  children: [KT && (0, ST.jsx)(XT.e, {
+                    name: jz[KT]
+                  }), xT(HT)]
+                }), nT && (0, ST.jsx)("p", {
+                  children: (0, ST.jsx)(Ki.c, {
+                    text: nT
                   })
                 })]
               })
-            }), (0, vY.jsx)("main", {
+            }), (0, ST.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: aY && wY
-            }), (0, vY.jsxs)("button", {
+              children: FT && qT
+            }), (0, ST.jsxs)("button", {
               type: "button",
-              className: IY()("SmpStatus", {
-                SmpStatusWaiting: ZY,
-                SmpStatusFresh: !ZY && null !== eY,
-                SmpStatusHasHistory: dY
+              className: kT()("SmpStatus", {
+                SmpStatusWaiting: JT,
+                SmpStatusFresh: !JT && null !== RT,
+                SmpStatusHasHistory: OT
               }),
               "aria-live": "polite",
-              "aria-expanded": dY ? lY : void 0,
+              "aria-expanded": OT ? mT : void 0,
               onClick: () => {
-                dY && TY((YY => !YY))
+                OT && eT((TT => !TT))
               },
-              children: [ZY ? (0, vY.jsxs)("span", {
+              children: [JT ? (0, ST.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, vY.jsx)(HF, {}), iY(hY ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : VY[0] ? (0, vY.jsx)("span", {
+                children: [(0, ST.jsx)(ai, {}), xT(QT ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : hT[0] ? (0, ST.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, vY.jsx)(sF.b, {
-                  text: VY[0].text
+                children: (0, ST.jsx)(Ki.c, {
+                  text: hT[0].text
                 })
-              }, VY[0].id) : (0, vY.jsx)("span", {
+              }, hT[0].id) : (0, ST.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: iY("smpShop:ready")
-              }), dY && (0, vY.jsx)("small", {
-                children: iY("smpShop:recentMessages", {
-                  count: VY.length
+                children: xT("smpShop:ready")
+              }), OT && (0, ST.jsx)("small", {
+                children: xT("smpShop:recentMessages", {
+                  count: hT.length
                 })
               })]
-            }), lY && dY && (0, vY.jsx)("div", {
+            }), mT && OT && (0, ST.jsx)("div", {
               className: "SmpStatusHistory",
-              children: VY.map((YY => (0, vY.jsx)("div", {
-                children: (0, vY.jsx)(sF.b, {
-                  text: YY.text
+              children: hT.map((TT => (0, ST.jsx)("div", {
+                children: (0, ST.jsx)(Ki.c, {
+                  text: TT.text
                 })
-              }, YY.id)))
+              }, TT.id)))
             })]
           })
         })
       })
     }
-    class KA {
-      constructor(YY) {
-        this.info = YY
+    class az {
+      constructor(TT) {
+        this.info = TT
       }
-      static fromShopInfo(YY) {
-        const rY = {};
-        for (const DY in YY) {
-          const FY = !0 === YY[DY].redDot && !0 !== YY[DY].forceRemoveRedDot;
-          rY[DY] = {
-            redDot: FY,
+      static fromShopInfo(TT) {
+        const oT = {};
+        for (const IT in TT) {
+          const iT = !0 === TT[IT].redDot && !0 !== TT[IT].forceRemoveRedDot;
+          oT[IT] = {
+            redDot: iT,
             items: {}
           };
-          for (const AY in YY[DY].items) {
-            const FY = YY[DY].items[AY],
-              IY = !0 === FY.redDot && !0 !== FY.forceRemoveRedDot;
-            rY[DY].items[AY] = {
-              redDot: IY
+          for (const zT in TT[IT].items) {
+            const iT = TT[IT].items[zT],
+              kT = !0 === iT.redDot && !0 !== iT.forceRemoveRedDot;
+            oT[IT].items[zT] = {
+              redDot: kT
             }
           }
         }
-        return new KA(rY)
+        return new az(oT)
       }
       anyCategoryHasRedDots() {
-        for (const YY in this.info)
-          if (this.categoryHasRedDot(YY)) return !0;
+        for (const TT in this.info)
+          if (this.categoryHasRedDot(TT)) return !0;
         return !1
       }
-      doesCategoryExist(YY) {
-        return !(0, Kr.H)(this.info[YY])
+      doesCategoryExist(TT) {
+        return !(0, fo.K)(this.info[TT])
       }
-      categoryHasRedDot(YY) {
-        return !0 === this.info[YY].redDot
+      categoryHasRedDot(TT) {
+        return !0 === this.info[TT].redDot
       }
-      updateCategoryRedDot(YY, rY) {
-        this.info[YY].redDot = rY
+      updateCategoryRedDot(TT, oT) {
+        this.info[TT].redDot = oT
       }
-      doesItemExist(YY, rY) {
-        return this.doesCategoryExist(YY) && !(0, Kr.H)(this.info[YY].items[rY])
+      doesItemExist(TT, oT) {
+        return this.doesCategoryExist(TT) && !(0, fo.K)(this.info[TT].items[oT])
       }
-      itemHasRedDot(YY, rY) {
-        return !0 === this.info[YY].items[rY].redDot
+      itemHasRedDot(TT, oT) {
+        return !0 === this.info[TT].items[oT].redDot
       }
-      updateItemRedDot(YY, rY, DY) {
-        this.info[YY].items[rY].redDot = DY
+      updateItemRedDot(TT, oT, IT) {
+        this.info[TT].items[oT].redDot = IT
       }
       shallowCopy() {
-        return new KA(this.info)
+        return new az(this.info)
       }
     }
 
-    function HA(YY, rY) {
-      return `${YY}\x1f${rY}`
+    function Yz(TT, oT) {
+      return `${TT}\x1f${oT}`
     }
 
-    function zA(YY, rY) {
-      return !(0, Kr.H)(rY) && !(0, Kr.H)(YY) && rY in YY
+    function Qz(TT, oT) {
+      return !(0, fo.K)(oT) && !(0, fo.K)(TT) && oT in TT
     }
-    const ZA = (0, FY.memo)((function(YY) {
-      var rY, DY;
+    const Oz = (0, iT.memo)((function(TT) {
+      var oT, IT;
       let {
-        show: AY
-      } = YY;
-      const RY = (0, jD.f)("players", JA),
-        OY = (0, jD.f)("players", MA),
-        [aY, sY] = (0, FY.useState)({
+        show: zT
+      } = TT;
+      const WT = (0, HI.d)("players", sz),
+        XT = (0, HI.d)("players", tz),
+        [FT, LT] = (0, iT.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: KA.fromShopInfo({}),
+          redDotInfo: az.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        iY = (0, FY.useRef)(""),
-        QY = (0, FY.useRef)(null),
-        WY = (0, FY.useRef)(null),
-        mY = (0, FY.useRef)(0),
-        VY = (0, FY.useRef)(void 0),
-        SY = (0, FY.useRef)(null),
-        lY = (0, FY.useRef)(aY),
-        TY = aY.redDotInfo.anyCategoryHasRedDots(),
-        [NY, BY] = (0, FY.useState)(null),
-        KY = (0, FY.useRef)(!1);
-      let HY = !1,
-        zY = 0,
-        ZY = 0;
-      if (aY.currencyAmounts) {
-        for (const YY in aY.currencyAmounts) {
-          var CY;
-          const rY = aY.currencyAmounts[YY];
-          rY.hidden || (zY++, (null === (CY = rY.subtext) || void 0 === CY ? void 0 : CY.length) > 0 && ZY++)
+        xT = (0, iT.useRef)(""),
+        KT = (0, iT.useRef)(null),
+        rT = (0, iT.useRef)(null),
+        gT = (0, iT.useRef)(0),
+        hT = (0, iT.useRef)(void 0),
+        wT = (0, iT.useRef)(null),
+        mT = (0, iT.useRef)(FT),
+        eT = FT.redDotInfo.anyCategoryHasRedDots(),
+        [uT, vT] = (0, iT.useState)(null),
+        fT = (0, iT.useRef)(!1);
+      let CT = !1,
+        jT = 0,
+        JT = 0;
+      if (FT.currencyAmounts) {
+        for (const TT in FT.currencyAmounts) {
+          var UT;
+          const oT = FT.currencyAmounts[TT];
+          oT.hidden || (jT++, (null === (UT = oT.subtext) || void 0 === UT ? void 0 : UT.length) > 0 && JT++)
         }
-        HY = zY + ZY > 4
-      }(0, FY.useEffect)((() => {
-        Hr.g.vo("showShopIconRedDot", TY, !0)
-      }), [TY]), (0, FY.useEffect)((() => {
-        EY.gameBridge.send("setShopOpen", AY), AY || (clearTimeout(VY.current), sY((YY => YY.awaitingPurchase ? {
-          ...YY,
+        CT = jT + JT > 4
+      }(0, iT.useEffect)((() => {
+        Co.h.XM("showShopIconRedDot", eT, !0)
+      }), [eT]), (0, iT.useEffect)((() => {
+        AT.gameBridge.send("setShopOpen", zT), zT || (clearTimeout(hT.current), LT((TT => TT.awaitingPurchase ? {
+          ...TT,
           awaitingPurchase: !1
-        } : YY)))
-      }), [AY]), (0, FY.useEffect)((() => () => {
-        EY.gameBridge.send("setShopOpen", !1), clearTimeout(VY.current)
-      }), []), (0, FY.useEffect)((() => {
-        lY.current = aY
-      }), [aY]), (0, FY.useEffect)((() => {
-        if (null === NY) return;
-        return (0, oF.c)("pointerdown", (YY => {
-          const rY = YY.target;
-          null !== rY && void 0 !== rY && rY.closest(".ShopItem") || BY(null)
+        } : TT)))
+      }), [zT]), (0, iT.useEffect)((() => () => {
+        AT.gameBridge.send("setShopOpen", !1), clearTimeout(hT.current)
+      }), []), (0, iT.useEffect)((() => {
+        mT.current = FT
+      }), [FT]), (0, iT.useEffect)((() => {
+        if (null === uT) return;
+        return (0, gi.e)("pointerdown", (TT => {
+          const oT = TT.target;
+          null !== oT && void 0 !== oT && oT.closest(".ShopItem") || vT(null)
         }))
-      }), [NY]);
-      const fY = YY => {
-          sY((rY => ({
-            ...rY,
-            ...YY
+      }), [uT]);
+      const aT = TT => {
+          LT((oT => ({
+            ...oT,
+            ...TT
           })))
         },
-        jY = YY => {
-          var rY;
-          clearTimeout(null === (rY = aY.onBoughtInfo) || void 0 === rY ? void 0 : rY.timeout);
-          const DY = setTimeout((() => {
-            fY({
+        YT = TT => {
+          var oT;
+          clearTimeout(null === (oT = FT.onBoughtInfo) || void 0 === oT ? void 0 : oT.timeout);
+          const IT = setTimeout((() => {
+            aT({
               onBoughtInfo: null
             })
           }), 3e3);
-          iY.current = YY, fY({
+          xT.current = TT, aT({
             onBoughtInfo: {
-              text: YY,
-              timeout: DY,
-              categoryKey: QY.current
+              text: TT,
+              timeout: IT,
+              categoryKey: KT.current
             }
           })
         },
-        hY = YY => {
+        QT = TT => {
           const {
-            shopInfo: rY,
-            userInputsPerItem: DY,
-            redDotInfo: FY,
-            autoSelectCategory: IY
-          } = function(YY, rY, DY, FY, AY, IY) {
-            if ((0, Kr.H)(YY) || 0 === Object.keys(YY).length) return {
+            shopInfo: oT,
+            userInputsPerItem: IT,
+            redDotInfo: iT,
+            autoSelectCategory: kT
+          } = function(TT, oT, IT, iT, zT, kT) {
+            if ((0, fo.K)(TT) || 0 === Object.keys(TT).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: KA.fromShopInfo({}),
+              redDotInfo: az.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const RY = cY.l[cY.s].adConfig.showRewardedAds,
-              OY = {};
-            let gY = null;
-            for (const oY in YY) {
-              const rY = YY[oY],
-                DY = {};
-              let FY = !1;
-              for (const YY in rY.items) {
-                const AY = rY.items[YY];
-                (0, gF.m)(AY, RY) && (DY[YY] = AY, FY = !0)
+            const WT = ET.k[ET.p].adConfig.showRewardedAds,
+              XT = {};
+            let BT = null;
+            for (const MT in TT) {
+              const oT = TT[MT],
+                IT = {};
+              let iT = !1;
+              for (const TT in oT.items) {
+                const zT = oT.items[TT];
+                (0, Di.k)(zT, WT) && (IT[TT] = zT, iT = !0)
               }
-              FY && (OY[oY] = {
-                ...rY,
-                items: DY
-              }, !0 === rY.autoSelectCategory && (gY = oY))
+              iT && (XT[MT] = {
+                ...oT,
+                items: IT
+              }, !0 === oT.autoSelectCategory && (BT = MT))
             }
-            const aY = {},
-              vY = (YY, rY, FY, RY) => {
-                var OY, gY;
-                const vY = HA(YY, rY),
-                  uY = null !== (OY = DY[vY]) && void 0 !== OY ? OY : DY[rY];
-                if (null !== (gY = RY.userInput) && void 0 !== gY && gY.type) switch (RY.userInput.type) {
+            const FT = {},
+              ST = (TT, oT, iT, WT) => {
+                var XT, BT;
+                const ST = Yz(TT, oT),
+                  DT = null !== (XT = IT[ST]) && void 0 !== XT ? XT : IT[oT];
+                if (null !== (BT = WT.userInput) && void 0 !== BT && BT.type) switch (WT.userInput.type) {
                   case "dropdown": {
-                    var sY;
-                    const YY = !uY || !RY.userInput.dropdownOptions.some((YY => (0, gF.e)(YY) === uY)),
-                      rY = RY.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === FY || void 0 === FY || null === (sY = FY.userInput) || void 0 === sY ? void 0 : sY.type) || JSON.stringify(FY.userInput.dropdownOptions) !== JSON.stringify(RY.userInput.dropdownOptions)),
-                      DY = RY.userInput,
-                      AY = !(0, Kr.H)(DY.initialValue) && DY.dropdownOptions.some((YY => (0, gF.e)(YY) === DY.initialValue));
-                    var iY;
-                    return void(YY || rY ? AY ? aY[vY] = null !== (iY = RY.userInput.initialValue) && void 0 !== iY ? iY : null : RY.userInput.dropdownOptions.length > 0 ? aY[vY] = (0, gF.e)(RY.userInput.dropdownOptions[0]) : aY[vY] = null : aY[vY] = uY)
+                    var LT;
+                    const TT = !DT || !WT.userInput.dropdownOptions.some((TT => (0, Di.f)(TT) === DT)),
+                      oT = WT.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === iT || void 0 === iT || null === (LT = iT.userInput) || void 0 === LT ? void 0 : LT.type) || JSON.stringify(iT.userInput.dropdownOptions) !== JSON.stringify(WT.userInput.dropdownOptions)),
+                      IT = WT.userInput,
+                      zT = !(0, fo.K)(IT.initialValue) && IT.dropdownOptions.some((TT => (0, Di.f)(TT) === IT.initialValue));
+                    var xT;
+                    return void(TT || oT ? zT ? FT[ST] = null !== (xT = WT.userInput.initialValue) && void 0 !== xT ? xT : null : WT.userInput.dropdownOptions.length > 0 ? FT[ST] = (0, Di.f)(WT.userInput.dropdownOptions[0]) : FT[ST] = null : FT[ST] = DT)
                   }
                   case "text":
                   case "number":
-                    var yY, QY, oY;
-                    return void((null === FY || void 0 === FY ? void 0 : FY.userInput) !== RY.userInput ? aY[vY] = null !== (yY = null !== (QY = RY.userInput.initialValue) && void 0 !== QY ? QY : uY) && void 0 !== yY ? yY : "" : aY[vY] = null !== (oY = null !== uY && void 0 !== uY ? uY : RY.userInput.initialValue) && void 0 !== oY ? oY : "");
+                    var cT, KT, MT;
+                    return void((null === iT || void 0 === iT ? void 0 : iT.userInput) !== WT.userInput ? FT[ST] = null !== (cT = null !== (KT = WT.userInput.initialValue) && void 0 !== KT ? KT : DT) && void 0 !== cT ? cT : "" : FT[ST] = null !== (MT = null !== DT && void 0 !== DT ? DT : WT.userInput.initialValue) && void 0 !== MT ? MT : "");
                   case "color":
-                    var WY, EY, mY;
-                    return void((null === FY || void 0 === FY ? void 0 : FY.userInput) !== RY.userInput ? aY[vY] = null !== (WY = null !== (EY = RY.userInput.initialValue) && void 0 !== EY ? EY : uY) && void 0 !== WY ? WY : "#000000" : aY[vY] = null !== (mY = null !== uY && void 0 !== uY ? uY : RY.userInput.initialValue) && void 0 !== mY ? mY : "#000000");
+                    var rT, AT, gT;
+                    return void((null === iT || void 0 === iT ? void 0 : iT.userInput) !== WT.userInput ? FT[ST] = null !== (rT = null !== (AT = WT.userInput.initialValue) && void 0 !== AT ? AT : DT) && void 0 !== rT ? rT : "#000000" : FT[ST] = null !== (gT = null !== DT && void 0 !== DT ? DT : WT.userInput.initialValue) && void 0 !== gT ? gT : "#000000");
                   case "player": {
-                    const YY = (0, gF.i)(AY, IY, RY.userInput);
-                    return void(uY && YY.includes(uY) ? aY[vY] = uY : aY[vY] = YY.length > 0 ? YY[0] : null)
+                    const TT = (0, Di.j)(zT, kT, WT.userInput);
+                    return void(DT && TT.includes(DT) ? FT[ST] = DT : FT[ST] = TT.length > 0 ? TT[0] : null)
                   }
                 }
               };
-            for (const oY in OY)
-              for (const YY in OY[oY].items) {
-                var uY;
-                const DY = OY[oY].items[YY];
-                vY(oY, YY, null === (uY = rY[oY]) || void 0 === uY ? void 0 : uY.items[YY], DY)
+            for (const MT in XT)
+              for (const TT in XT[MT].items) {
+                var DT;
+                const IT = XT[MT].items[TT];
+                ST(MT, TT, null === (DT = oT[MT]) || void 0 === DT ? void 0 : DT.items[TT], IT)
               }
-            const sY = KA.fromShopInfo(OY);
-            for (const oY in OY) {
-              var iY;
-              if (FY.doesCategoryExist(oY)) {
-                (null === (iY = rY[oY]) || void 0 === iY ? void 0 : iY.redDot) === OY[oY].redDot && sY.updateCategoryRedDot(oY, FY.categoryHasRedDot(oY));
-                for (const YY in OY[oY].items) {
-                  var yY, QY;
-                  FY.doesItemExist(oY, YY) && (null === (yY = rY[oY]) || void 0 === yY || null === (QY = yY.items[YY]) || void 0 === QY ? void 0 : QY.redDot) === OY[oY].items[YY].redDot && sY.updateItemRedDot(oY, YY, FY.itemHasRedDot(oY, YY))
+            const LT = az.fromShopInfo(XT);
+            for (const MT in XT) {
+              var xT;
+              if (iT.doesCategoryExist(MT)) {
+                (null === (xT = oT[MT]) || void 0 === xT ? void 0 : xT.redDot) === XT[MT].redDot && LT.updateCategoryRedDot(MT, iT.categoryHasRedDot(MT));
+                for (const TT in XT[MT].items) {
+                  var cT, KT;
+                  iT.doesItemExist(MT, TT) && (null === (cT = oT[MT]) || void 0 === cT || null === (KT = cT.items[TT]) || void 0 === KT ? void 0 : KT.redDot) === XT[MT].items[TT].redDot && LT.updateItemRedDot(MT, TT, iT.itemHasRedDot(MT, TT))
                 }
               }
             }
             return {
-              shopInfo: OY,
-              userInputsPerItem: aY,
-              redDotInfo: sY,
-              autoSelectCategory: gY
+              shopInfo: XT,
+              userInputsPerItem: FT,
+              redDotInfo: LT,
+              autoSelectCategory: BT
             }
-          }(YY, aY.shopInfo, aY.userInputsPerItem, aY.redDotInfo, RY, OY), gY = {
-            shopInfo: rY,
-            userInputsPerItem: DY,
-            redDotInfo: FY
+          }(TT, FT.shopInfo, FT.userInputsPerItem, FT.redDotInfo, WT, XT), BT = {
+            shopInfo: oT,
+            userInputsPerItem: IT,
+            redDotInfo: iT
           };
-          if (null === IY || AY)
-            if (rY[aY.selectedCategoryKey]) gY.selectedCategoryKey = aY.selectedCategoryKey;
+          if (null === kT || zT)
+            if (oT[FT.selectedCategoryKey]) BT.selectedCategoryKey = FT.selectedCategoryKey;
             else {
-              const YY = EF(rY);
-              gY.selectedCategoryKey = YY.length > 0 ? YY[0] : null
+              const TT = mi(oT);
+              BT.selectedCategoryKey = TT.length > 0 ? TT[0] : null
             }
-          else gY.selectedCategoryKey = IY;
-          return 0 === Object.keys(rY).length && AY && eY.b.set({
+          else BT.selectedCategoryKey = kT;
+          return 0 === Object.keys(oT).length && zT && RT.c.set({
             openEverythingMenuName: null
-          }), gY
+          }), BT
         },
-        dY = (YY, rY, DY) => {
-          const FY = aY.selectedCategoryKey,
-            AY = HA(FY, YY),
-            IY = null !== DY && void 0 !== DY ? DY : aY.userInputsPerItem[AY],
-            RY = {
-              categoryKey: FY,
-              itemKey: YY,
-              userInput: IY
+        OT = (TT, oT, IT) => {
+          const iT = FT.selectedCategoryKey,
+            zT = Yz(iT, TT),
+            kT = null !== IT && void 0 !== IT ? IT : FT.userInputsPerItem[zT],
+            WT = {
+              categoryKey: iT,
+              itemKey: TT,
+              userInput: kT
             };
-          if (QY.current = FY, rY.isRewardedAd) {
-            if (Date.now() - mY.current < 5e3) return;
-            (0, LY.V)((() => {
-              var DY, FY, IY;
+          if (KT.current = iT, oT.isRewardedAd) {
+            if (Date.now() - gT.current < 5e3) return;
+            (0, dT.ab)((() => {
+              var IT, iT, kT;
               console.log("bought rewarded ad");
-              const OY = RY.categoryKey ? null === (DY = lY.current.shopInfo[RY.categoryKey]) || void 0 === DY ? void 0 : DY.items[YY] : null;
-              if (!OY || !OY.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (FY = rY.userInput) || void 0 === FY ? void 0 : FY.type) === (null === OY || void 0 === OY || null === (IY = OY.userInput) || void 0 === IY ? void 0 : IY.type) ? (RY.userInput = lY.current.userInputsPerItem[AY], EY.gameBridge.send("buyShopItem", RY), rY.onBoughtMessage && jY(rY.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), mY.current = Date.now()
+              const XT = WT.categoryKey ? null === (IT = mT.current.shopInfo[WT.categoryKey]) || void 0 === IT ? void 0 : IT.items[TT] : null;
+              if (!XT || !XT.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (iT = oT.userInput) || void 0 === iT ? void 0 : iT.type) === (null === XT || void 0 === XT || null === (kT = XT.userInput) || void 0 === kT ? void 0 : kT.type) ? (WT.userInput = mT.current.userInputsPerItem[zT], AT.gameBridge.send("buyShopItem", WT), oT.onBoughtMessage && YT(oT.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), gT.current = Date.now()
           } else {
-            EY.gameBridge.send("buyShopItem", RY), fY({
+            AT.gameBridge.send("buyShopItem", WT), aT({
               awaitingPurchase: !0
-            }), clearTimeout(VY.current), VY.current = setTimeout((() => {
-              SY.current = null, fY({
+            }), clearTimeout(hT.current), hT.current = setTimeout((() => {
+              wT.current = null, aT({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const YY = (0, gF.c)(rY, IY);
-            if (SY.current = null, !isNaN(YY) && zA(aY.currencyAmounts, rY.currency)) {
-              0 !== YY && (SY.current = {
-                currency: rY.currency,
-                amountBefore: aY.currencyAmounts[rY.currency].amount
+            const TT = (0, Di.e)(oT, kT);
+            if (wT.current = null, !isNaN(TT) && Qz(FT.currencyAmounts, oT.currency)) {
+              0 !== TT && (wT.current = {
+                currency: oT.currency,
+                amountBefore: FT.currencyAmounts[oT.currency].amount
               });
-              const DY = {
-                ...aY.currencyAmounts
+              const IT = {
+                ...FT.currencyAmounts
               };
-              DY[rY.currency].amount -= YY, fY({
-                currencyAmounts: DY
+              IT[oT.currency].amount -= TT, aT({
+                currencyAmounts: IT
               })
             }
-            rY.onBoughtMessage && jY(rY.onBoughtMessage)
+            oT.onBoughtMessage && YT(oT.onBoughtMessage)
           }
         },
-        MY = (YY, rY) => {
-          if (null === rY || !YY.shopInfo[rY]) return YY;
-          let DY = YY.redDotInfo;
-          return DY.categoryHasRedDot(rY) && (DY.updateCategoryRedDot(rY, !1), DY = DY.shallowCopy()), {
-            ...YY,
-            selectedCategoryKey: rY,
-            redDotInfo: DY
+        nT = (TT, oT) => {
+          if (null === oT || !TT.shopInfo[oT]) return TT;
+          let IT = TT.redDotInfo;
+          return IT.categoryHasRedDot(oT) && (IT.updateCategoryRedDot(oT, !1), IT = IT.shallowCopy()), {
+            ...TT,
+            selectedCategoryKey: oT,
+            redDotInfo: IT
           }
         },
-        wY = YY => {
-          sY((rY => MY(rY, YY)))
+        qT = TT => {
+          LT((oT => nT(oT, TT)))
         };
-      (0, yr.g)(WF.m, (() => {
-        sY((YY => {
-          const rY = (0, WF.p)(EF(YY.shopInfo), YY.selectedCategoryKey, (rY => (0, WF.k)(YY.shopInfo[rY].items)));
-          return rY === YY.selectedCategoryKey ? YY : MY(YY, rY)
+      (0, co.g)(wi.k, (() => {
+        LT((TT => {
+          const oT = (0, wi.l)(mi(TT.shopInfo), TT.selectedCategoryKey, (oT => (0, wi.g)(TT.shopInfo[oT].items)));
+          return oT === TT.selectedCategoryKey ? TT : nT(TT, oT)
         }))
-      })), (0, yr.g)("showShopFromServer", (YY => {
+      })), (0, co.g)("showShopFromServer", (TT => {
         let {
-          toggle: rY,
-          QD: DY
-        } = YY;
-        DY && wY(DY), 0 === Object.keys(aY.shopInfo).length || rY && AY ? eY.b.set({
+          toggle: oT,
+          gI: IT
+        } = TT;
+        IT && qT(IT), 0 === Object.keys(FT.shopInfo).length || oT && zT ? RT.c.set({
           openEverythingMenuName: null
-        }) : eY.b.set({
-          openEverythingMenuName: wD.t.SHOP
+        }) : RT.c.set({
+          openEverythingMenuName: sI.q.SHOP
         })
-      })), (0, yr.g)("closeShopOnDamaged", (() => {
-        AY && eY.b.set({
+      })), (0, co.g)("closeShopOnDamaged", (() => {
+        zT && RT.c.set({
           openEverythingMenuName: null
         })
-      })), (0, yr.g)("overShopInfo", (YY => {
-        jY(YY)
-      })), (0, yY.f)("currencyAmounts", (YY => {
-        var rY;
-        const DY = SY.current;
-        DY && (null === YY || void 0 === YY || null === (rY = YY[DY.currency]) || void 0 === rY ? void 0 : rY.amount) === DY.amountBefore ? fY({
-          currencyAmounts: YY
-        }) : (SY.current = null, fY({
-          currencyAmounts: YY,
+      })), (0, co.g)("overShopInfo", (TT => {
+        YT(TT)
+      })), (0, cT.e)("currencyAmounts", (TT => {
+        var oT;
+        const IT = wT.current;
+        IT && (null === TT || void 0 === TT || null === (oT = TT[IT.currency]) || void 0 === oT ? void 0 : oT.amount) === IT.amountBefore ? aT({
+          currencyAmounts: TT
+        }) : (wT.current = null, aT({
+          currencyAmounts: TT,
           awaitingPurchase: !1
         }))
-      })), (0, yY.f)("shopInfo", (YY => {
-        fY({
-          ...hY(YY),
+      })), (0, cT.e)("shopInfo", (TT => {
+        aT({
+          ...QT(TT),
           awaitingPurchase: !1
         })
       }));
-      const bY = (0, FY.useRef)({
-        playerIds: RY,
-        localPlayerId: OY
+      const ZT = (0, iT.useRef)({
+        playerIds: WT,
+        localPlayerId: XT
       });
-      (0, FY.useEffect)((() => {
-        bY.current.playerIds === RY && bY.current.localPlayerId === OY || (bY.current = {
-          playerIds: RY,
-          localPlayerId: OY
-        }, sY((YY => {
-          const rY = hY(YY.shopInfo);
+      (0, iT.useEffect)((() => {
+        ZT.current.playerIds === WT && ZT.current.localPlayerId === XT || (ZT.current = {
+          playerIds: WT,
+          localPlayerId: XT
+        }, LT((TT => {
+          const oT = QT(TT.shopInfo);
           return {
-            ...YY,
-            ...rY
+            ...TT,
+            ...oT
           }
         })))
-      }), [RY, OY]);
-      const XY = aY.selectedCategoryKey,
-        qY = (YY, rY) => {
-          var DY, FY;
-          return (isNaN(rY) || (0, Kr.H)(YY.currency) || zA(aY.currencyAmounts, YY.currency) && rY <= aY.currencyAmounts[YY.currency].amount) && (null === (DY = YY.canBuy) || void 0 === DY || DY) && !(null !== (FY = YY.hidden) && void 0 !== FY && FY)
+      }), [WT, XT]);
+      const lT = FT.selectedCategoryKey,
+        sT = (TT, oT) => {
+          var IT, iT;
+          return (isNaN(oT) || (0, fo.K)(TT.currency) || Qz(FT.currencyAmounts, TT.currency) && oT <= FT.currencyAmounts[TT.currency].amount) && (null === (IT = TT.canBuy) || void 0 === IT || IT) && !(null !== (iT = TT.hidden) && void 0 !== iT && iT)
         },
-        pY = (YY, rY) => {
-          var DY, FY, AY;
-          const RY = HA(XY, YY),
-            OY = aY.shopInfo[XY].items[YY],
-            uY = aY.userInputsPerItem[RY],
-            sY = (0, gF.c)(OY, uY),
-            iY = qY(OY, sY),
-            yY = OY.enchant,
-            QY = yY ? (0, JY.qb)(null !== (DY = OY.customTitle) && void 0 !== DY ? DY : YY, {
-              colour: JY.nb[yY.tier]
-            }) : null !== (FY = OY.customTitle) && void 0 !== FY ? FY : YY,
-            WY = rY => {
-              const DY = null !== rY && void 0 !== rY ? rY : uY,
-                FY = void 0 !== rY ? (0, gF.c)(OY, rY) : sY;
-              qY(OY, FY) && null !== DY && dY(YY, OY, rY);
-              let AY = aY.redDotInfo;
-              AY.itemHasRedDot(XY, YY) && (AY.updateItemRedDot(XY, YY, !1), AY = AY.shallowCopy()), fY({
-                redDotInfo: AY
+        tT = (TT, oT) => {
+          var IT, iT, zT;
+          const WT = Yz(lT, TT),
+            XT = FT.shopInfo[lT].items[TT],
+            DT = FT.userInputsPerItem[WT],
+            LT = (0, Di.e)(XT, DT),
+            xT = sT(XT, LT),
+            cT = XT.enchant,
+            KT = cT ? (0, HT.ob)(null !== (IT = XT.customTitle) && void 0 !== IT ? IT : TT, {
+              colour: HT.lb[cT.tier]
+            }) : null !== (iT = XT.customTitle) && void 0 !== iT ? iT : TT,
+            rT = oT => {
+              const IT = null !== oT && void 0 !== oT ? oT : DT,
+                iT = void 0 !== oT ? (0, Di.e)(XT, oT) : LT;
+              sT(XT, iT) && null !== IT && OT(TT, XT, oT);
+              let zT = FT.redDotInfo;
+              zT.itemHasRedDot(lT, TT) && (zT.updateItemRedDot(lT, TT, !1), zT = zT.shallowCopy()), aT({
+                redDotInfo: zT
               })
             };
-          return (0, vY.jsxs)("div", {
-            className: IY()("ShopItem", {
-              ShopItemNoInput: !OY.userInput,
-              ShopItemNoInputCanBuy: !OY.userInput && iY,
-              ShopItemNoInputSelected: OY.isSelected,
-              ShopItemEnchant: !!yY
+          return (0, ST.jsxs)("div", {
+            className: kT()("ShopItem", {
+              ShopItemNoInput: !XT.userInput,
+              ShopItemNoInputCanBuy: !XT.userInput && xT,
+              ShopItemNoInputSelected: XT.isSelected,
+              ShopItemEnchant: !!cT
             }),
-            "data-pad-focusable": !OY.userInput || void 0,
-            "data-pad-unavailable": !OY.userInput && !iY || void 0,
-            "data-pad-repeat": null !== (AY = (0, WF.c)(OY)) && void 0 !== AY ? AY : void 0,
-            "data-pad-repeat-wait": aY.awaitingPurchase || void 0,
+            "data-pad-focusable": !XT.userInput || void 0,
+            "data-pad-unavailable": !XT.userInput && !xT || void 0,
+            "data-pad-repeat": null !== (zT = (0, wi.b)(XT)) && void 0 !== zT ? zT : void 0,
+            "data-pad-repeat-wait": FT.awaitingPurchase || void 0,
             onClick: () => {
-              if (yY && KY.current) {
-                if (NY !== RY) return void BY(RY);
-                BY(null)
+              if (cT && fT.current) {
+                if (uT !== WT) return void vT(WT);
+                vT(null)
               }
-              OY.userInput || WY()
+              XT.userInput || rT()
             },
-            onPointerDown: YY => {
-              yY && (KY.current = (0, vF.p)(YY))
+            onPointerDown: TT => {
+              cT && (fT.current = (0, xi.o)(TT))
             },
-            onPointerEnter: YY => {
-              yY && !(0, vF.p)(YY) && BY(RY)
+            onPointerEnter: TT => {
+              cT && !(0, xi.o)(TT) && vT(WT)
             },
-            onPointerLeave: YY => {
-              yY && !(0, vF.p)(YY) && BY((YY => YY === RY ? null : YY))
+            onPointerLeave: TT => {
+              cT && !(0, xi.o)(TT) && vT((TT => TT === WT ? null : TT))
             },
             style: {
-              zIndex: Object.keys(aY.shopInfo[XY].items).length - rY
+              zIndex: Object.keys(FT.shopInfo[lT].items).length - oT
             },
-            children: [aY.redDotInfo.itemHasRedDot(XY, YY) && (0, vY.jsx)(gY.b, {
+            children: [FT.redDotInfo.itemHasRedDot(lT, TT) && (0, ST.jsx)(BT.d, {
               top: "-6px",
               right: "-6px"
-            }), OY.badge && (0, vY.jsx)("div", {
+            }), XT.badge && (0, ST.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, vY.jsx)("div", {
-                className: IY()("ShopBadgeMain", OY.badge.type),
-                children: (0, vY.jsx)(sF.b, {
-                  text: OY.badge.text
+              children: (0, ST.jsx)("div", {
+                className: kT()("ShopBadgeMain", XT.badge.type),
+                children: (0, ST.jsx)(Ki.c, {
+                  text: XT.badge.text
                 })
               })
-            }), (0, vY.jsx)("div", {
+            }), (0, ST.jsx)("div", {
               className: "ShopItemLeft",
-              children: OY.image && (0, vY.jsx)(CA, {
-                item: OY,
+              children: XT.image && (0, ST.jsx)(Hz, {
+                item: XT,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, vY.jsxs)("div", {
+            }), (0, ST.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, vY.jsxs)("div", {
+              children: [(0, ST.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, vY.jsx)("div", {
+                children: [(0, ST.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, vY.jsx)(sF.b, {
-                    text: QY
+                  children: (0, ST.jsx)(Ki.c, {
+                    text: KT
                   })
-                }), (0, vY.jsx)("div", {
+                }), (0, ST.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, vY.jsx)(sF.b, {
-                    text: OY.description
+                  children: (0, ST.jsx)(Ki.c, {
+                    text: XT.description
                   })
                 })]
-              }), OY.userInput && (0, vY.jsxs)("div", {
+              }), XT.userInput && (0, ST.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: YY => {
-                  YY.stopPropagation()
+                onClick: TT => {
+                  TT.stopPropagation()
                 },
-                children: [(0, vY.jsx)(hA, {
-                  item: OY,
-                  currInput: uY,
-                  updateInput: rY => {
-                    ((YY, rY, DY) => {
-                      const FY = HA(YY, rY),
-                        AY = {
-                          ...aY.userInputsPerItem
+                children: [(0, ST.jsx)(Zz, {
+                  item: XT,
+                  currInput: DT,
+                  updateInput: oT => {
+                    ((TT, oT, IT) => {
+                      const iT = Yz(TT, oT),
+                        zT = {
+                          ...FT.userInputsPerItem
                         };
-                      AY[FY] = DY, fY({
-                        userInputsPerItem: AY
+                      zT[iT] = IT, aT({
+                        userInputsPerItem: zT
                       })
-                    })(XY, YY, rY)
+                    })(lT, TT, oT)
                   },
-                  onSubmit: YY => {
-                    WY(YY)
+                  onSubmit: TT => {
+                    rT(TT)
                   }
-                }), ("dropdown" !== OY.userInput.type || !OY.userInput.autoSubmit) && (0, vY.jsx)(oY.f, {
+                }), ("dropdown" !== XT.userInput.type || !XT.userInput.autoSubmit) && (0, ST.jsx)(MT.e, {
                   className: "ItemCostButton",
-                  disabled: !iY && null !== uY,
+                  disabled: !xT && null !== DT,
                   onClick: () => {
-                    WY()
+                    rT()
                   },
-                  children: (0, vY.jsx)(jA, {
-                    item: OY,
-                    cost: sY,
-                    currencyAmounts: aY.currencyAmounts
+                  children: (0, ST.jsx)(qz, {
+                    item: XT,
+                    cost: LT,
+                    currencyAmounts: FT.currencyAmounts
                   })
                 })]
               })]
-            }), !OY.userInput && (0, vY.jsx)("div", {
+            }), !XT.userInput && (0, ST.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, vY.jsx)(jA, {
-                item: OY,
-                cost: sY,
-                currencyAmounts: aY.currencyAmounts
+              children: (0, ST.jsx)(qz, {
+                item: XT,
+                cost: LT,
+                currencyAmounts: FT.currencyAmounts
               })
-            }), yY && NY === RY && (0, vY.jsxs)("div", {
+            }), cT && uT === WT && (0, ST.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, vY.jsx)(sF.b, {
-                text: QY
-              }), (0, vY.jsx)("div", {
+              children: [(0, ST.jsx)(Ki.c, {
+                text: KT
+              }), (0, ST.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, vY.jsx)(sF.b, {
-                  text: (0, aF.c)("", yY.enchantments, yY.enchantmentData)
+                children: (0, ST.jsx)(Ki.c, {
+                  text: (0, Li.e)("", cT.enchantments, cT.enchantmentData)
                 })
               })]
             })]
-          }, RY)
+          }, WT)
         },
-        kY = function(YY) {
-          for (const rY in YY)
-            if (YY[rY].smp) return !0;
+        GT = function(TT) {
+          for (const oT in TT)
+            if (TT[oT].smp) return !0;
           return !1
-        }(aY.shopInfo),
-        GY = dF(aY.shopInfo, XY);
-      return (0, vY.jsx)(IF.b, {
+        }(FT.shopInfo),
+        pT = Zi(FT.shopInfo, lT);
+      return (0, ST.jsx)(Bi.c, {
         className: "Menu ShopBody",
-        show: AY,
-        children: 0 !== Object.keys(aY.shopInfo).length && (0, vY.jsxs)(vY.Fragment, {
-          children: [(0, vY.jsxs)("div", {
+        show: zT,
+        children: 0 !== Object.keys(FT.shopInfo).length && (0, ST.jsxs)(ST.Fragment, {
+          children: [(0, ST.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, vY.jsx)(uY, {
-              items: EF(aY.shopInfo).map((YY => {
-                var rY;
+            children: [(0, ST.jsx)(DT, {
+              items: mi(FT.shopInfo).map((TT => {
+                var oT;
                 return {
-                  id: YY,
-                  title: null !== (rY = aY.shopInfo[YY].customTitle) && void 0 !== rY ? rY : YY,
-                  redDot: aY.redDotInfo.categoryHasRedDot(YY)
+                  id: TT,
+                  title: null !== (oT = FT.shopInfo[TT].customTitle) && void 0 !== oT ? oT : TT,
+                  redDot: FT.redDotInfo.categoryHasRedDot(TT)
                 }
               })),
-              selectedItemId: XY,
-              onClick: wY,
-              padStartsOnTab: (0, WF.g)(XY)
-            }), (0, vY.jsx)("div", {
+              selectedItemId: lT,
+              onClick: qT,
+              padStartsOnTab: (0, wi.f)(lT)
+            }), (0, ST.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: aY.currencyAmounts && Object.keys(aY.currencyAmounts).map((YY => {
-                var rY;
-                const DY = aY.currencyAmounts[YY];
-                return DY.hidden ? null : (0, vY.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (HY ? "SmallText" : ""),
-                  children: [(0, vY.jsxs)("div", {
+              children: FT.currencyAmounts && Object.keys(FT.currencyAmounts).map((TT => {
+                var oT;
+                const IT = FT.currencyAmounts[TT];
+                return IT.hidden ? null : (0, ST.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (CT ? "SmallText" : ""),
+                  children: [(0, ST.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, vY.jsx)("div", {
+                    children: [(0, ST.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: DY.iconColour
+                        color: IT.iconColour
                       },
-                      children: (0, vY.jsx)(wA, {
-                        iconName: DY.icon
+                      children: (0, ST.jsx)(Gz, {
+                        iconName: IT.icon
                       })
-                    }), "\xa0", (0, OF.e)(DY.amount, 6)]
-                  }), (null === (rY = DY.subtext) || void 0 === rY ? void 0 : rY.length) > 0 && (0, vY.jsx)("div", {
+                    }), "\xa0", (0, Si.c)(IT.amount, 6)]
+                  }), (null === (oT = IT.subtext) || void 0 === oT ? void 0 : oT.length) > 0 && (0, ST.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, vY.jsx)(sF.b, {
-                      text: DY.subtext
+                    children: (0, ST.jsx)(Ki.c, {
+                      text: IT.subtext
                     })
                   })]
-                }, YY)
+                }, TT)
               }))
             })]
-          }), (0, vY.jsxs)("div", {
+          }), (0, ST.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [kY && (0, vY.jsx)(cA, {
-              show: AY,
-              shopInfo: aY.shopInfo,
-              selectedCategoryKey: XY,
-              buy: (YY, rY, DY) => {
-                dY(YY, rY, DY)
+            children: [GT && (0, ST.jsx)(Uz, {
+              show: zT,
+              shopInfo: FT.shopInfo,
+              selectedCategoryKey: lT,
+              buy: (TT, oT, IT) => {
+                OT(TT, oT, IT)
               },
-              canAfford: qY,
-              message: aY.onBoughtInfo
-            }), null === GY && (0, vY.jsxs)(vY.Fragment, {
-              children: [(0, vY.jsx)("div", {
-                className: IY()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== aY.onBoughtInfo
+              canAfford: sT,
+              message: FT.onBoughtInfo
+            }), null === pT && (0, ST.jsxs)(ST.Fragment, {
+              children: [(0, ST.jsx)("div", {
+                className: kT()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== FT.onBoughtInfo
                 }),
-                children: (0, vY.jsx)(sF.b, {
-                  text: iY.current
+                children: (0, ST.jsx)(Ki.c, {
+                  text: xT.current
                 })
-              }), (0, vY.jsx)("div", {
+              }), (0, ST.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, vY.jsxs)("div", {
+                children: (0, ST.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (rY = aY.shopInfo[XY]) || void 0 === rY ? void 0 : rY.description) && (0, vY.jsx)("div", {
+                  children: [(null === (oT = FT.shopInfo[lT]) || void 0 === oT ? void 0 : oT.description) && (0, ST.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, vY.jsx)(sF.b, {
-                      text: aY.shopInfo[XY].description
+                    children: (0, ST.jsx)(Ki.c, {
+                      text: FT.shopInfo[lT].description
                     })
-                  }), AY && (0, vY.jsx)("div", {
+                  }), zT && (0, ST.jsx)("div", {
                     className: "ShopItems",
-                    ref: WY,
+                    ref: rT,
                     "data-pad-initial-area": !0,
-                    children: EF(null === (DY = aY.shopInfo[XY]) || void 0 === DY ? void 0 : DY.items).map(((YY, rY) => pY(YY, rY)))
+                    children: mi(null === (IT = FT.shopInfo[lT]) || void 0 === IT ? void 0 : IT.items).map(((TT, oT) => tT(TT, oT)))
                   })]
                 })
               })]
@@ -4911,1954 +4912,1954 @@ export const modules = {
       })
     }));
 
-    function CA(YY) {
+    function Hz(TT) {
       let {
-        item: rY,
-        minWidth: DY,
-        minHeight: FY
-      } = YY;
+        item: oT,
+        minWidth: IT,
+        minHeight: iT
+      } = TT;
       const {
-        image: AY,
-        schematicId: IY,
-        imageColour: RY
-      } = rY;
-      if (IY) return (0, vY.jsx)("div", {
+        image: zT,
+        schematicId: kT,
+        imageColour: WT
+      } = oT;
+      if (kT) return (0, ST.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${DY}rem`,
-          height: `${FY}rem`
+          width: `${IT}rem`,
+          height: `${iT}rem`
         },
-        children: (0, vY.jsx)(iF.e, {
+        children: (0, ST.jsx)(Mi.e, {
           game: {
-            schematicId: IY
+            schematicId: kT
           }
         })
       });
-      var gY, aY;
-      if ((0, uF.f)(AY)) return (0, vY.jsx)("div", {
+      var BT, FT;
+      if ((0, ci.g)(zT)) return (0, ST.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${DY}rem`,
+          minWidth: `${IT}rem`,
           height: "0",
-          minHeight: `${FY}rem`
+          minHeight: `${iT}rem`
         },
-        children: (0, vY.jsx)(uF.c, {
-          itemName: AY,
-          amount: null !== (gY = rY.amount) && void 0 !== gY ? gY : 0,
-          amountFontSize: FY / 4 + "rem",
-          enchantmentTier: null === (aY = rY.enchant) || void 0 === aY ? void 0 : aY.tier
+        children: (0, ST.jsx)(ci.c, {
+          itemName: zT,
+          amount: null !== (BT = oT.amount) && void 0 !== BT ? BT : 0,
+          amountFontSize: iT / 4 + "rem",
+          enchantmentTier: null === (FT = oT.enchant) || void 0 === FT ? void 0 : FT.tier
         })
       });
-      const uY = AY.slice(-4);
-      return ".jpg" === uY || ".png" === uY ? (0, vY.jsx)(fA, {
-        image: AY,
-        minWidth: DY
-      }) : (0, vY.jsx)(OY.e, {
-        name: AY,
+      const DT = zT.slice(-4);
+      return ".jpg" === DT || ".png" === DT ? (0, ST.jsx)(nz, {
+        image: zT,
+        minWidth: IT
+      }) : (0, ST.jsx)(XT.e, {
+        name: zT,
         className: "SelectedItemImage",
         style: {
-          color: RY
+          color: WT
         }
       })
     }
 
-    function fA(YY) {
+    function nz(TT) {
       let {
-        image: rY,
-        minWidth: DY
-      } = YY;
+        image: oT,
+        minWidth: IT
+      } = TT;
       const {
-        gameNameWithVariation: FY
-      } = (0, jD.h)("connectedGame"), AY = rY.endsWith(".jpg");
-      return (0, vY.jsx)("img", {
-        className: IY()({
-          ShopPixelImage: !AY
+        gameNameWithVariation: iT
+      } = (0, HI.f)("connectedGame"), zT = oT.endsWith(".jpg");
+      return (0, ST.jsx)("img", {
+        className: kT()({
+          ShopPixelImage: !zT
         }),
         style: {
-          width: `${AY?1.6*DY:DY}rem`,
+          width: `${zT?1.6*IT:IT}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,JY.Pb)(FY)}/${rY}`,
-        alt: rY,
+        src: `/textures/games/${(0,HT.Ib)(iT)}/${oT}`,
+        alt: oT,
         draggable: !1
       })
     }
 
-    function jA(YY) {
+    function qz(TT) {
       let {
-        item: rY,
-        cost: DY,
-        currencyAmounts: FY
-      } = YY;
-      const AY = !isNaN(DY) && 0 !== DY && zA(FY, rY.currency);
-      let IY = null;
-      return rY.buyButtonText ? IY = rY.buyButtonText : AY ? (IY = DY, rY.sell && (IY = -1 * DY), IY = IY.toString()) : 0 === DY ? IY = "Free" : rY.isRewardedAd && (IY = "Watch ad"), (0, Kr.H)(IY) || " " === IY ? null : (0, vY.jsxs)("div", {
+        item: oT,
+        cost: IT,
+        currencyAmounts: iT
+      } = TT;
+      const zT = !isNaN(IT) && 0 !== IT && Qz(iT, oT.currency);
+      let kT = null;
+      return oT.buyButtonText ? kT = oT.buyButtonText : zT ? (kT = IT, oT.sell && (kT = -1 * IT), kT = kT.toString()) : 0 === IT ? kT = "Free" : oT.isRewardedAd && (kT = "Watch ad"), (0, fo.K)(kT) || " " === kT ? null : (0, ST.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [AY && (0, vY.jsx)("div", {
+        children: [zT && (0, ST.jsx)("div", {
           style: {
-            color: FY[rY.currency].iconColour
+            color: iT[oT.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, vY.jsx)(wA, {
-            iconName: FY[rY.currency].icon
+          children: (0, ST.jsx)(Gz, {
+            iconName: iT[oT.currency].icon
           })
-        }), (0, vY.jsx)("div", {
+        }), (0, ST.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, vY.jsx)(sF.b, {
-            text: IY
+          children: (0, ST.jsx)(Ki.c, {
+            text: kT
           })
         })]
       })
     }
 
-    function hA(YY) {
+    function Zz(TT) {
       let {
-        item: rY,
-        currInput: DY,
-        updateInput: AY,
-        onSubmit: IY
-      } = YY;
+        item: oT,
+        currInput: IT,
+        updateInput: zT,
+        onSubmit: kT
+      } = TT;
       const {
-        t: OY
-      } = (0, RY.C)(), gY = (0, FY.useRef)(null);
-      if ((0, FY.useEffect)((() => {
-          const YY = gY.current;
-          YY && YY.value !== DY && document.activeElement !== YY && (YY.value = null !== DY && void 0 !== DY ? DY : "")
-        }), [DY]), !rY.userInput) return null;
-      let aY = rY.userInput;
-      if (WY.featureFlags.sanitizeShopInput && "text" === rY.userInput.type && (aY = {
+        t: XT
+      } = (0, WT.t)(), BT = (0, iT.useRef)(null);
+      if ((0, iT.useEffect)((() => {
+          const TT = BT.current;
+          TT && TT.value !== IT && document.activeElement !== TT && (TT.value = null !== IT && void 0 !== IT ? IT : "")
+        }), [IT]), !oT.userInput) return null;
+      let FT = oT.userInput;
+      if (rT.featureFlags.sanitizeShopInput && "text" === oT.userInput.type && (FT = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === aY.type || "number" === aY.type) {
-        var uY, sY;
-        console.assert(void 0 !== DY, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(rY)}`);
-        const YY = "text" === aY.type && aY.wordCharsOnly;
-        return (0, vY.jsx)("div", {
+        }), "text" === FT.type || "number" === FT.type) {
+        var DT, LT;
+        console.assert(void 0 !== IT, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(oT)}`);
+        const TT = "text" === FT.type && FT.wordCharsOnly;
+        return (0, ST.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, vY.jsx)(SY.d, {
+          children: (0, ST.jsx)(wT.e, {
             className: "ShopItemUserInputText",
-            placeholderText: OY(aY.placeholderText),
-            defaultValue: DY,
-            domRef: gY,
-            onValueChange: (rY, DY) => {
-              !0 === YY && (rY = (0, QF.mb)(rY)), gY.current.value = rY, AY(rY)
+            placeholderText: XT(FT.placeholderText),
+            defaultValue: IT,
+            domRef: BT,
+            onValueChange: (oT, IT) => {
+              !0 === TT && (oT = (0, Ai.ob)(oT)), BT.current.value = oT, zT(oT)
             },
-            onEnter: IY,
-            type: aY.type
-          }, (null !== (uY = aY.initialValue) && void 0 !== uY ? uY : "") + (null !== (sY = aY.placeholderText) && void 0 !== sY ? sY : ""))
+            onEnter: kT,
+            type: FT.type
+          }, (null !== (DT = FT.initialValue) && void 0 !== DT ? DT : "") + (null !== (LT = FT.placeholderText) && void 0 !== LT ? LT : ""))
         })
       }
-      if ("dropdown" === aY.type) {
-        console.assert(void 0 !== DY, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(rY)}`);
-        const YY = aY.autoSubmit;
-        return (0, vY.jsx)("div", {
+      if ("dropdown" === FT.type) {
+        console.assert(void 0 !== IT, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(oT)}`);
+        const TT = FT.autoSubmit;
+        return (0, ST.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, vY.jsx)(gr.b, {
-            options: aY.dropdownOptions.map((YY => (0, gF.e)(YY))),
-            value: DY,
-            onChange: rY => {
+          children: (0, ST.jsx)(Bo.d, {
+            options: FT.dropdownOptions.map((TT => (0, Di.f)(TT))),
+            value: IT,
+            onChange: oT => {
               let {
-                value: DY
-              } = rY;
-              AY(DY), YY && IY(DY)
+                value: IT
+              } = oT;
+              zT(IT), TT && kT(IT)
             }
           })
         })
       }
-      return "player" === aY.type ? (0, vY.jsx)(dA, {
-        userInput: aY,
-        currInput: DY,
-        updateInput: AY
-      }) : "color" === aY.type ? (0, vY.jsx)("div", {
+      return "player" === FT.type ? (0, ST.jsx)(lz, {
+        userInput: FT,
+        currInput: IT,
+        updateInput: zT
+      }) : "color" === FT.type ? (0, ST.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, vY.jsx)("input", {
+        children: (0, ST.jsx)("input", {
           type: "color",
-          value: DY,
-          onChange: YY => {
-            AY(YY.target.value)
+          value: IT,
+          onChange: TT => {
+            zT(TT.target.value)
           }
         })
       }) : null
     }
 
-    function dA(YY) {
+    function lz(TT) {
       let {
-        userInput: rY,
-        currInput: DY,
-        updateInput: FY
-      } = YY;
-      const AY = (0, jD.h)("players"),
-        IY = (0, jD.h)("hiddenPlayerNames"),
-        RY = (0, gF.i)(AY.ids, AY.localId, rY);
-      return (0, vY.jsx)("div", {
+        userInput: oT,
+        currInput: IT,
+        updateInput: iT
+      } = TT;
+      const zT = (0, HI.f)("players"),
+        kT = (0, HI.f)("hiddenPlayerNames"),
+        WT = (0, Di.j)(zT.ids, zT.localId, oT);
+      return (0, ST.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, vY.jsx)(gr.b, {
-          options: RY.map((YY => {
+        children: (0, ST.jsx)(Bo.d, {
+          options: WT.map((TT => {
             const {
-              name: rY
-            } = AY.byId[YY];
+              name: oT
+            } = zT.byId[TT];
             return {
-              value: YY,
-              label: null === rY ? "" : (0, yF.g)(rY, IY)
+              value: TT,
+              label: null === oT ? "" : (0, ri.f)(oT, kT)
             }
           })),
-          value: DY,
-          onChange: YY => {
+          value: IT,
+          onChange: TT => {
             let {
-              value: rY
-            } = YY;
-            FY(rY)
+              value: oT
+            } = TT;
+            iT(oT)
           }
         })
       })
     }
 
-    function JA(YY) {
+    function sz(TT) {
       let {
-        ids: rY
-      } = YY;
-      return rY
+        ids: oT
+      } = TT;
+      return oT
     }
 
-    function MA(YY) {
+    function tz(TT) {
       let {
-        localId: rY
-      } = YY;
-      return rY
+        localId: oT
+      } = TT;
+      return oT
     }
 
-    function wA(YY) {
+    function Gz(TT) {
       let {
-        iconName: rY
-      } = YY;
-      return EY.gameBridge.lookup("isItemName", rY) ? (0, vY.jsx)(uF.c, {
-        itemName: rY,
+        iconName: oT
+      } = TT;
+      return AT.gameBridge.lookup("isItemName", oT) ? (0, ST.jsx)(ci.c, {
+        itemName: oT,
         amount: 1
-      }) : (0, vY.jsx)(OY.e, {
-        name: rY,
+      }) : (0, ST.jsx)(XT.e, {
+        name: oT,
         className: "2x"
       })
     }
-    var bA = DY(1619);
-    const XA = (0, DY(1392).k)((YY => YY.PadLobbyShortcuts)),
-      qA = (0, FY.lazy)((() => Promise.resolve().then((() => DY(4229))).then((YY => ({
-        default: YY.Lobbyleaderboard
+    var pz = IT(1585);
+    const bz = (0, IT(1365).f)((TT => TT.PadLobbyShortcuts)),
+      yz = (0, iT.lazy)((() => Promise.resolve().then((() => IT(4163))).then((TT => ({
+        default: TT.Lobbyleaderboard
       })))));
 
-    function pA(YY) {
+    function Nz(TT) {
       let {
-        show: rY
-      } = YY;
-      return rY ? (0, vY.jsxs)(vY.Fragment, {
-        children: [(0, vY.jsx)(XA, {}), (0, vY.jsx)(FY.Suspense, {
-          fallback: (0, vY.jsx)("div", {
+        show: oT
+      } = TT;
+      return oT ? (0, ST.jsxs)(ST.Fragment, {
+        children: [(0, ST.jsx)(bz, {}), (0, ST.jsx)(iT.Suspense, {
+          fallback: (0, ST.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, vY.jsx)(lY.c, {})
+            children: (0, ST.jsx)(mT.d, {})
           }),
-          children: (0, vY.jsx)(qA, {})
+          children: (0, ST.jsx)(yz, {})
         })]
       }) : null
     }
-    var kA = DY(1543),
-      GA = DY(2640),
-      xA = DY(1699),
-      nA = DY(2426),
-      PA = DY(1469),
-      UA = DY(1441),
-      LA = DY(2614),
-      tA = DY(2e3),
-      YI = DY(2634),
-      rI = DY(2183);
-    const DI = "storeRecentGiftRecipients",
-      FI = new Map;
+    var Pz = IT(1509),
+      dz = IT(2624),
+      Vz = IT(1665),
+      Tk = IT(2386),
+      Ik = IT(1444),
+      ik = IT(1412),
+      zk = IT(2603),
+      kk = IT(1938),
+      Wk = IT(2620),
+      Xk = IT(2145);
+    const Bk = "storeRecentGiftRecipients",
+      Fk = new Map;
 
-    function AI() {
+    function Sk() {
       try {
-        const YY = Zr.m.getItem(DI);
-        return Array.isArray(YY) ? YY.filter((YY => "string" === typeof(null === YY || void 0 === YY ? void 0 : YY.name) && YY.name.length > 0)).map((YY => ({
-          name: YY.name,
-          cosmetics: YY.cosmetics && "object" === typeof YY.cosmetics ? YY.cosmetics : null
+        const TT = Jo.e.getItem(Bk);
+        return Array.isArray(TT) ? TT.filter((TT => "string" === typeof(null === TT || void 0 === TT ? void 0 : TT.name) && TT.name.length > 0)).map((TT => ({
+          name: TT.name,
+          cosmetics: TT.cosmetics && "object" === typeof TT.cosmetics ? TT.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function II(YY) {
-      var rY;
-      const [DY, AY] = (0, FY.useState)(""), [IY, RY] = (0, FY.useState)("search"), [OY, gY] = (0, FY.useState)(null), [aY, vY] = (0, FY.useState)(null), uY = (0, FY.useRef)(null), sY = (0, FY.useRef)(null);
-      (0, FY.useEffect)((() => () => {
-        uY.current && clearTimeout(uY.current)
+    function Dk(TT) {
+      var oT;
+      const [IT, zT] = (0, iT.useState)(""), [kT, WT] = (0, iT.useState)("search"), [XT, BT] = (0, iT.useState)(null), [FT, ST] = (0, iT.useState)(null), DT = (0, iT.useRef)(null), LT = (0, iT.useRef)(null);
+      (0, iT.useEffect)((() => () => {
+        DT.current && clearTimeout(DT.current)
       }), []);
-      const iY = null !== (rY = null === OY || void 0 === OY ? void 0 : OY.name) && void 0 !== rY ? rY : null;
+      const xT = null !== (oT = null === XT || void 0 === XT ? void 0 : XT.name) && void 0 !== oT ? oT : null;
 
-      function yY() {
-        uY.current && (clearTimeout(uY.current), uY.current = null)
-      }(0, FY.useEffect)((() => {
-        if (null === iY || YY === KY.NULL_USER_CONTEXT) return;
-        const rY = iY.toLowerCase();
-        if (rY === YY.getPlayerName().toLowerCase()) return void vY({
-          name: iY,
+      function cT() {
+        DT.current && (clearTimeout(DT.current), DT.current = null)
+      }(0, iT.useEffect)((() => {
+        if (null === xT || TT === fT.NULL_USER_CONTEXT) return;
+        const oT = xT.toLowerCase();
+        if (oT === TT.getPlayerName().toLowerCase()) return void ST({
+          name: xT,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const DY = FI.get(rY);
-        if (DY) return void vY({
-          name: iY,
-          result: DY
+        const IT = Fk.get(oT);
+        if (IT) return void ST({
+          name: xT,
+          result: IT
         });
-        let FY = !1;
-        return async function(YY, rY) {
+        let iT = !1;
+        return async function(TT, oT) {
           try {
-            const DY = await (0, KY.postJsonWithMetricsCookiesAndJsonResponse)(`${HY.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: rY
+            const IT = await (0, fT.postJsonWithMetricsCookiesAndJsonResponse)(`${CT.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: oT
             }, {
               retries: 1
-            }, YY.getMetricsCookies());
-            if ("boolean" !== typeof(null === DY || void 0 === DY ? void 0 : DY.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(DY)}`);
-            return DY
-          } catch (DY) {
-            return console.error("Failed to look up gift recipient:", DY), {
+            }, TT.getMetricsCookies());
+            if ("boolean" !== typeof(null === IT || void 0 === IT ? void 0 : IT.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(IT)}`);
+            return IT
+          } catch (IT) {
+            return console.error("Failed to look up gift recipient:", IT), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(YY, iY).catch((YY => (console.error("Gift recipient lookup failed:", YY), {
+        }(TT, xT).catch((TT => (console.error("Gift recipient lookup failed:", TT), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((YY => {
-          !0 !== YY.giftRecipientFound && "store:giftRecipientLookupFailed" === YY.giftRecipientError || FI.set(rY, YY), FY || vY({
-            name: iY,
-            result: YY
+        }))).then((TT => {
+          !0 !== TT.giftRecipientFound && "store:giftRecipientLookupFailed" === TT.giftRecipientError || Fk.set(oT, TT), iT || ST({
+            name: xT,
+            result: TT
           })
         })), () => {
-          FY = !0
+          iT = !0
         }
-      }), [iY, YY]);
-      const QY = (0, FY.useMemo)((() => {
-        const YY = DY.trim();
-        if (!YY) return {
+      }), [xT, TT]);
+      const KT = (0, iT.useMemo)((() => {
+        const TT = IT.trim();
+        if (!TT) return {
           status: "none"
         };
-        if (!OY || OY.name !== YY || (null === aY || void 0 === aY ? void 0 : aY.name) !== OY.name) return {
+        if (!XT || XT.name !== TT || (null === FT || void 0 === FT ? void 0 : FT.name) !== XT.name) return {
           status: "pending",
-          name: YY
+          name: TT
         };
-        const rY = aY.result;
-        return !1 === rY.giftRecipientFound ? {
+        const oT = FT.result;
+        return !1 === oT.giftRecipientFound ? {
           status: "error",
-          name: OY.name,
-          error: rY.giftRecipientError
+          name: XT.name,
+          error: oT.giftRecipientError
         } : {
           status: "found",
-          name: rY.giftRecipientName,
-          ownedPacks: rY.giftRecipientOwnedPacks,
-          hasSuperRank: rY.giftRecipientHasSuperRank
+          name: oT.giftRecipientName,
+          ownedPacks: oT.giftRecipientOwnedPacks,
+          hasSuperRank: oT.giftRecipientHasSuperRank
         }
-      }), [DY, OY, aY]);
-      (0, FY.useEffect)((() => {
-        "found" === QY.status && "typed" === (null === OY || void 0 === OY ? void 0 : OY.source) && sY.current !== QY.name && (sY.current = QY.name, (0, pY.reportAnalyticsClick)({
+      }), [IT, XT, FT]);
+      (0, iT.useEffect)((() => {
+        "found" === KT.status && "typed" === (null === XT || void 0 === XT ? void 0 : XT.source) && LT.current !== KT.name && (LT.current = KT.name, (0, tT.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [QY, OY]);
-      const oY = (null === aY || void 0 === aY ? void 0 : aY.name) === (null === OY || void 0 === OY ? void 0 : OY.name) ? null === aY || void 0 === aY ? void 0 : aY.result : null,
-        WY = !0 === (null === oY || void 0 === oY ? void 0 : oY.giftRecipientFound) ? oY.giftRecipientCosmetics : null;
+      }), [KT, XT]);
+      const MT = (null === FT || void 0 === FT ? void 0 : FT.name) === (null === XT || void 0 === XT ? void 0 : XT.name) ? null === FT || void 0 === FT ? void 0 : FT.result : null,
+        rT = !0 === (null === MT || void 0 === MT ? void 0 : MT.giftRecipientFound) ? MT.giftRecipientCosmetics : null;
       return {
-        query: DY,
-        via: IY,
-        recipient: QY,
-        recipientCosmetics: WY,
-        type: function(YY) {
-          AY(YY), RY("search"), yY();
-          const rY = YY.trim();
-          rY ? uY.current = setTimeout((() => {
-            gY({
-              name: rY,
+        query: IT,
+        via: kT,
+        recipient: KT,
+        recipientCosmetics: rT,
+        type: function(TT) {
+          zT(TT), WT("search"), cT();
+          const oT = TT.trim();
+          oT ? DT.current = setTimeout((() => {
+            BT({
+              name: oT,
               source: "typed"
             })
-          }), 400) : gY(null)
+          }), 400) : BT(null)
         },
-        choose: function(YY, rY) {
-          yY(), AY(YY), RY("typed" === rY ? "search" : "prefilled" === rY ? "prefilled" : "suggestion"), gY({
-            name: YY,
-            source: rY
-          }), "typed" !== rY && "prefilled" !== rY && (0, pY.reportAnalyticsClick)({
+        choose: function(TT, oT) {
+          cT(), zT(TT), WT("typed" === oT ? "search" : "prefilled" === oT ? "prefilled" : "suggestion"), BT({
+            name: TT,
+            source: oT
+          }), "typed" !== oT && "prefilled" !== oT && (0, tT.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: rY
+            value: oT
           })
         },
         clear: function() {
-          yY(), AY(""), RY("search"), gY(null)
+          cT(), zT(""), WT("search"), BT(null)
         },
-        recordGift: function(YY, rY) {
-          ! function(YY) {
-            FI.delete(YY.toLowerCase())
-          }(YY), vY((DY => {
-            if (!DY || DY.name.toLowerCase() !== YY.toLowerCase() || !0 !== DY.result.giftRecipientFound || "superRank" === rY) return DY;
-            const FY = DY.result.giftRecipientOwnedPacks;
+        recordGift: function(TT, oT) {
+          ! function(TT) {
+            Fk.delete(TT.toLowerCase())
+          }(TT), ST((IT => {
+            if (!IT || IT.name.toLowerCase() !== TT.toLowerCase() || !0 !== IT.result.giftRecipientFound || "superRank" === oT) return IT;
+            const iT = IT.result.giftRecipientOwnedPacks;
             return {
-              ...DY,
+              ...IT,
               result: {
-                ...DY.result,
-                giftRecipientOwnedPacks: FY.includes(rY) ? FY : [...FY, rY]
+                ...IT.result,
+                giftRecipientOwnedPacks: iT.includes(oT) ? iT : [...iT, oT]
               }
             }
           }))
         }
       }
     }
-    var RI = DY(2175),
-      OI = DY(4231),
-      gI = DY(275),
-      aI = DY(2707),
-      vI = DY(2646);
-    const uI = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var sI = DY(2123),
-      iI = DY(605),
-      yI = DY(1623),
-      QI = DY(2219),
-      oI = DY(2353);
+    var Lk = IT(2136),
+      xk = IT(4169),
+      ck = IT(250),
+      Kk = IT(2679),
+      Mk = IT(2626);
+    const rk = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var Ak = IT(2080),
+      gk = IT(596),
+      hk = IT(1591),
+      wk = IT(2176),
+      mk = IT(2303);
 
-    function WI(YY) {
+    function ek(TT) {
       let {
-        cosmetics: rY
-      } = YY;
-      return (0, vY.jsx)("span", {
+        cosmetics: oT
+      } = TT;
+      return (0, ST.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, vY.jsx)(QI.c, {
-          cosmetics: rY
+        children: (0, ST.jsx)(wk.b, {
+          cosmetics: oT
         })
       })
     }
 
-    function EI(YY, rY) {
-      var DY, FY;
-      const AY = null !== (DY = YY.friend) && void 0 !== DY ? DY : {
+    function Rk(TT, oT) {
+      var IT, iT;
+      const zT = null !== (IT = TT.friend) && void 0 !== IT ? IT : {
         isError: !1,
-        name: YY.name,
+        name: TT.name,
         ranks: [],
-        cosmetics: null !== (FY = YY.cosmetics) && void 0 !== FY ? FY : {},
-        nameColour: iI.e,
+        cosmetics: null !== (iT = TT.cosmetics) && void 0 !== iT ? iT : {},
+        nameColour: gk.d,
         location: {
           status: "noGamePlayed"
         }
       };
-      return rY ? {
-        ...AY,
-        cosmetics: rY
-      } : AY
+      return oT ? {
+        ...zT,
+        cosmetics: oT
+      } : zT
     }
 
-    function mI(YY) {
+    function uk(TT) {
       let {
-        recipient: rY
-      } = YY;
-      return "pending" === rY.status ? (0, vY.jsx)("span", {
+        recipient: oT
+      } = TT;
+      return "pending" === oT.status ? (0, ST.jsx)("span", {
         className: "StoreRecipientStatus",
-        children: (0, vY.jsx)(lY.c, {})
-      }) : "found" === rY.status ? (0, vY.jsx)(OY.e, {
+        children: (0, ST.jsx)(mT.d, {})
+      }) : "found" === oT.status ? (0, ST.jsx)(XT.e, {
         name: "check",
         className: "StoreRecipientStatus StoreRecipientStatusFound"
       }) : null
     }
 
-    function VI(YY) {
-      var rY;
+    function vk(TT) {
+      var oT;
       let {
-        selfName: DY,
-        giftRecipient: AY,
-        suggestionsVersion: gY,
-        pulseSignal: aY,
-        disabled: uY
-      } = YY;
+        selfName: IT,
+        giftRecipient: zT,
+        suggestionsVersion: BT,
+        pulseSignal: FT,
+        disabled: DT
+      } = TT;
       const {
-        t: sY
-      } = (0, RY.C)(), iY = (0, yI.j)(), yY = (0, FY.useRef)(null), QY = (0, FY.useRef)(null), {
-        query: EY,
-        via: mY,
-        recipient: VY,
-        recipientCosmetics: lY
-      } = AY, TY = (0, rI.o)(EY), eY = (0, FY.useMemo)((() => {
-        const YY = WY.featureFlags.useSocialFeatures ? iY.friends.filter((YY => !YY.isError)) : [];
-        return (0, rI.l)({
-          onlineFriends: (0, yI.e)(YY),
-          recentRecipients: AI(),
-          friends: YY,
-          selfName: DY,
+        t: LT
+      } = (0, WT.t)(), xT = (0, hk.l)(), cT = (0, iT.useRef)(null), KT = (0, iT.useRef)(null), {
+        query: AT,
+        via: gT,
+        recipient: hT,
+        recipientCosmetics: mT
+      } = zT, eT = (0, Xk.j)(AT), RT = (0, iT.useMemo)((() => {
+        const TT = rT.featureFlags.useSocialFeatures ? xT.friends.filter((TT => !TT.isError)) : [];
+        return (0, Xk.h)({
+          onlineFriends: (0, hk.f)(TT),
+          recentRecipients: Sk(),
+          friends: TT,
+          selfName: IT,
           max: 8
         })
-      }), [iY.friends, DY, gY]), NY = EY.trim().toLowerCase(), BY = "search" !== mY && NY ? eY.find((YY => YY.name.toLowerCase() === NY)) : void 0, cY = BY && "prefilled" === mY ? [BY, ...eY.filter((YY => YY !== BY))] : eY, KY = "" !== NY && !BY, HY = KY ? EY : "", zY = cY.length > 0;
-      (0, FY.useEffect)((() => {
-        yY.current && yY.current.value !== HY && (yY.current.value = HY)
-      }), [HY]), (0, FY.useEffect)((() => {
-        yY.current && (yY.current.disabled = uY)
-      }), [uY, aY]);
-      const ZY = (0, FY.useRef)(0);
+      }), [xT.friends, IT, BT]), uT = AT.trim().toLowerCase(), vT = "search" !== gT && uT ? RT.find((TT => TT.name.toLowerCase() === uT)) : void 0, ET = vT && "prefilled" === gT ? [vT, ...RT.filter((TT => TT !== vT))] : RT, fT = "" !== uT && !vT, CT = fT ? AT : "", jT = ET.length > 0;
+      (0, iT.useEffect)((() => {
+        cT.current && cT.current.value !== CT && (cT.current.value = CT)
+      }), [CT]), (0, iT.useEffect)((() => {
+        cT.current && (cT.current.disabled = DT)
+      }), [DT, FT]);
+      const JT = (0, iT.useRef)(0);
 
-      function fY() {
-        "self" !== TY && (0, pY.reportAnalyticsClick)({
+      function aT() {
+        "self" !== eT && (0, tT.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), AY.clear()
+        }), zT.clear()
       }
 
-      function jY(YY) {
-        var rY, DY;
-        if (uY) return;
-        if (" " === YY.key || "Enter" === YY.key) return YY.preventDefault(), void YY.currentTarget.click();
-        const FY = Array.from(null !== (rY = null === (DY = QY.current) || void 0 === DY ? void 0 : DY.querySelectorAll("[role=radio]")) && void 0 !== rY ? rY : []),
-          AY = FY.indexOf(YY.currentTarget);
-        let IY;
-        "ArrowRight" === YY.key || "ArrowDown" === YY.key ? IY = FY[(AY + 1) % FY.length] : "ArrowLeft" === YY.key || "ArrowUp" === YY.key ? IY = FY[(AY - 1 + FY.length) % FY.length] : "Home" === YY.key ? IY = FY[0] : "End" === YY.key && (IY = FY[FY.length - 1]), IY && (YY.preventDefault(), IY.focus(), IY.click())
-      }(0, FY.useEffect)((() => {
-        var YY;
-        aY > ZY.current && !uY && (ZY.current = aY, null === (YY = yY.current) || void 0 === YY || YY.focus())
-      }), [aY, uY]);
-      const hY = "self" === TY,
-        dY = null !== (rY = null === BY || void 0 === BY ? void 0 : BY.name) && void 0 !== rY ? rY : null,
-        JY = "error" === VY.status ? VY.error : null,
-        MY = "store:giftRecipientLookupFailed" === JY;
-      return (0, vY.jsxs)("div", {
-        className: IY()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: uY,
-          StoreRecipientStripNoChips: !zY
+      function YT(TT) {
+        var oT, IT;
+        if (DT) return;
+        if (" " === TT.key || "Enter" === TT.key) return TT.preventDefault(), void TT.currentTarget.click();
+        const iT = Array.from(null !== (oT = null === (IT = KT.current) || void 0 === IT ? void 0 : IT.querySelectorAll("[role=radio]")) && void 0 !== oT ? oT : []),
+          zT = iT.indexOf(TT.currentTarget);
+        let kT;
+        "ArrowRight" === TT.key || "ArrowDown" === TT.key ? kT = iT[(zT + 1) % iT.length] : "ArrowLeft" === TT.key || "ArrowUp" === TT.key ? kT = iT[(zT - 1 + iT.length) % iT.length] : "Home" === TT.key ? kT = iT[0] : "End" === TT.key && (kT = iT[iT.length - 1]), kT && (TT.preventDefault(), kT.focus(), kT.click())
+      }(0, iT.useEffect)((() => {
+        var TT;
+        FT > JT.current && !DT && (JT.current = FT, null === (TT = cT.current) || void 0 === TT || TT.focus())
+      }), [FT, DT]);
+      const QT = "self" === eT,
+        OT = null !== (oT = null === vT || void 0 === vT ? void 0 : vT.name) && void 0 !== oT ? oT : null,
+        HT = "error" === hT.status ? hT.error : null,
+        nT = "store:giftRecipientLookupFailed" === HT;
+      return (0, ST.jsxs)("div", {
+        className: kT()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: DT,
+          StoreRecipientStripNoChips: !jT
         }),
-        children: [(0, vY.jsx)("span", {
+        children: [(0, ST.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: sY("store:buyingFor")
-        }), (0, vY.jsxs)("div", {
-          ref: QY,
+          children: LT("store:buyingFor")
+        }), (0, ST.jsxs)("div", {
+          ref: KT,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": sY("store:whoIsItFor"),
-          children: [(0, vY.jsxs)("div", {
+          "aria-label": LT("store:whoIsItFor"),
+          children: [(0, ST.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": hY,
-            tabIndex: uY || !hY && null !== dY ? -1 : 0,
-            className: IY()("StoreRecipientMe", {
-              StoreRecipientChecked: hY
+            "aria-checked": QT,
+            tabIndex: DT || !QT && null !== OT ? -1 : 0,
+            className: kT()("StoreRecipientMe", {
+              StoreRecipientChecked: QT
             }),
             onClick: () => {
-              uY || fY()
+              DT || aT()
             },
-            onKeyDown: jY,
-            children: [(0, vY.jsx)(OY.e, {
+            onKeyDown: YT,
+            children: [(0, ST.jsx)(XT.e, {
               name: "user"
-            }), " ", sY("store:me")]
-          }), zY && (0, vY.jsx)("div", {
+            }), " ", LT("store:me")]
+          }), jT && (0, ST.jsx)("div", {
             className: "StoreRecipientChips",
-            children: cY.map((YY => {
-              const rY = YY === BY;
-              return (0, vY.jsx)("div", {
+            children: ET.map((TT => {
+              const oT = TT === vT;
+              return (0, ST.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": rY,
-                tabIndex: !uY && rY ? 0 : -1,
-                title: YY.name,
-                className: IY()("StoreRecipientChip", {
-                  StoreRecipientChecked: rY
+                "aria-checked": oT,
+                tabIndex: !DT && oT ? 0 : -1,
+                title: TT.name,
+                className: kT()("StoreRecipientChip", {
+                  StoreRecipientChecked: oT
                 }),
                 onClick: () => {
-                  uY || function(YY) {
-                    "gift" !== TY && (0, pY.reportAnalyticsClick)({
+                  DT || function(TT) {
+                    "gift" !== eT && (0, tT.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), AY.choose(YY.name, YY.kind)
-                  }(YY)
+                    }), zT.choose(TT.name, TT.kind)
+                  }(TT)
                 },
-                onKeyDown: jY,
-                children: (0, vY.jsx)(oI.g, {
-                  playerSocialPreview: EI(YY, rY ? lY : null),
+                onKeyDown: YT,
+                children: (0, ST.jsx)(mk.g, {
+                  playerSocialPreview: Rk(TT, oT ? mT : null),
                   opensProfileCard: !1,
-                  isFriend: null !== YY.friend,
+                  isFriend: null !== TT.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== YY.friend,
-                  status: null === YY.friend ? null : void 0,
-                  trailing: rY ? (0, vY.jsx)(mI, {
-                    recipient: VY
+                  showLocation: null !== TT.friend,
+                  status: null === TT.friend ? null : void 0,
+                  trailing: oT ? (0, ST.jsx)(uk, {
+                    recipient: hT
                   }) : void 0
                 })
-              }, YY.name)
+              }, TT.name)
             }))
           })]
-        }), (0, vY.jsxs)("div", {
-          className: IY()("StoreRecipientSearch", {
-            StoreRecipientChecked: KY,
-            StoreRecipientSearchPulse: aY > 0 && !KY,
-            StoreRecipientSearchError: null !== JY && !MY
+        }), (0, ST.jsxs)("div", {
+          className: kT()("StoreRecipientSearch", {
+            StoreRecipientChecked: fT,
+            StoreRecipientSearchPulse: FT > 0 && !fT,
+            StoreRecipientSearchError: null !== HT && !nT
           }),
           onClick: () => {
-            var YY;
-            null === (YY = yY.current) || void 0 === YY || YY.focus()
+            var TT;
+            null === (TT = cT.current) || void 0 === TT || TT.focus()
           },
-          children: [KY && "found" === VY.status && lY && (0, vY.jsx)(WI, {
-            cosmetics: lY
-          }), !(KY && "found" === VY.status && lY) && (0, vY.jsx)(OY.e, {
+          children: [fT && "found" === hT.status && mT && (0, ST.jsx)(ek, {
+            cosmetics: mT
+          }), !(fT && "found" === hT.status && mT) && (0, ST.jsx)(XT.e, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, vY.jsx)(SY.d, {
+          }), (0, ST.jsx)(wT.e, {
             className: "StoreRecipientSearchInput",
-            domRef: yY,
-            placeholderText: sY("store:searchName"),
-            defaultValue: HY,
-            maxLength: CY.k,
-            onValueChange: function(YY) {
-              "gift" !== TY && YY.trim() && (0, pY.reportAnalyticsClick)({
+            domRef: cT,
+            placeholderText: LT("store:searchName"),
+            defaultValue: CT,
+            maxLength: UT.h,
+            onValueChange: function(TT) {
+              "gift" !== eT && TT.trim() && (0, tT.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), AY.type(YY)
+              }), zT.type(TT)
             },
             onEnter: () => {
-              var YY;
-              const rY = null === (YY = yY.current) || void 0 === YY ? void 0 : YY.value.trim();
-              rY && AY.choose(rY, "typed")
+              var TT;
+              const oT = null === (TT = cT.current) || void 0 === TT ? void 0 : TT.value.trim();
+              oT && zT.choose(oT, "typed")
             },
             blurOnEnter: !0
-          }), KY && (0, vY.jsx)(mI, {
-            recipient: VY
-          }), KY && (0, vY.jsx)("div", {
-            ...(0, oY.P)({
-              disabled: uY
+          }), fT && (0, ST.jsx)(uk, {
+            recipient: hT
+          }), fT && (0, ST.jsx)("div", {
+            ...(0, MT.Q)({
+              disabled: DT
             }),
-            "aria-label": sY("store:clearRecipient"),
-            title: sY("store:clearRecipient"),
+            "aria-label": LT("store:clearRecipient"),
+            title: LT("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: YY => {
-              YY.stopPropagation(), uY || fY()
+            onClick: TT => {
+              TT.stopPropagation(), DT || aT()
             },
-            children: (0, vY.jsx)(OY.e, {
+            children: (0, ST.jsx)(XT.e, {
               name: "xmark"
             })
           })]
-        }, aY), JY && (0, vY.jsx)("div", {
-          className: IY()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: MY
+        }, FT), HT && (0, ST.jsx)("div", {
+          className: kT()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: nT
           }),
           role: "status",
-          children: sY(JY)
+          children: LT(HT)
         })]
       })
     }
-    var SI = DY(2192),
-      lI = DY(2111),
-      TI = DY(3175),
-      eI = DY(2711),
-      NI = DY(2137);
-    const BI = DY.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var Ek = IT(2150),
+      fk = IT(2045),
+      Ck = IT(3143),
+      jk = IT(2687),
+      Jk = IT(2089);
+    const Uk = IT.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function cI() {
-      (0, NI.f)(BI, {
+    function ak() {
+      (0, Jk.f)(Uk, {
         lowPriority: !1
       })
     }
 
-    function KI(YY) {
+    function Yk(TT) {
       let {
-        onBack: rY,
-        cta: DY,
-        recipient: AY,
-        afterCta: IY
-      } = YY;
+        onBack: oT,
+        cta: IT,
+        recipient: zT,
+        afterCta: kT
+      } = TT;
       const {
-        t: gY
-      } = (0, RY.C)(), [aY, uY] = (0, FY.useState)("starting"), sY = (0, FY.useRef)(null), iY = (0, Wr.b)(), yY = (0, FY.useRef)(null), QY = (0, FY.useCallback)((() => {
-        const YY = sY.current;
-        null !== YY.error && YY.load();
-        const rY = YY.play();
-        yY.current = rY, rY.catch((YY => {
-          (0, TI.e)("Failed to play Super Rank video", YY), iY.current && yY.current === rY && uY("failed")
+        t: BT
+      } = (0, WT.t)(), [FT, DT] = (0, iT.useState)("starting"), LT = (0, iT.useRef)(null), xT = (0, ro.c)(), cT = (0, iT.useRef)(null), KT = (0, iT.useCallback)((() => {
+        const TT = LT.current;
+        null !== TT.error && TT.load();
+        const oT = TT.play();
+        cT.current = oT, oT.catch((TT => {
+          (0, Ck.d)("Failed to play Super Rank video", TT), xT.current && cT.current === oT && DT("failed")
         }))
-      }), [iY]);
-      return (0, FY.useEffect)((() => {
-        const YY = sY.current;
-        let rY;
+      }), [xT]);
+      return (0, iT.useEffect)((() => {
+        const TT = LT.current;
+        let oT;
 
-        function DY() {
-          clearTimeout(rY), rY = setTimeout(QY, 3e3)
+        function IT() {
+          clearTimeout(oT), oT = setTimeout(KT, 3e3)
         }
-        return QY(), YY.addEventListener("ended", DY), () => {
-          clearTimeout(rY), YY.removeEventListener("ended", DY)
+        return KT(), TT.addEventListener("ended", IT), () => {
+          clearTimeout(oT), TT.removeEventListener("ended", IT)
         }
-      }), [QY]), (0, vY.jsxs)("div", {
+      }), [KT]), (0, ST.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, vY.jsxs)("div", {
+        children: [(0, ST.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, vY.jsx)(oY.b, {
+          children: [(0, ST.jsx)(MT.c, {
             className: "StoreDetailBackButton",
-            onClick: rY,
+            onClick: oT,
             padBack: !0,
-            children: gY("general:back")
-          }), (0, vY.jsxs)("div", {
+            children: BT("general:back")
+          }), (0, ST.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, vY.jsx)(OY.e, {
+            children: [(0, ST.jsx)(XT.e, {
               name: "bolt"
-            }), " ", gY("homePage:superRank")]
-          }), AY]
-        }), (0, vY.jsxs)("div", {
+            }), " ", BT("homePage:superRank")]
+          }), zT]
+        }), (0, ST.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, vY.jsx)("video", {
-              ref: sY,
-              src: `${HY.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: BI,
+            children: [(0, ST.jsx)("video", {
+              ref: LT,
+              src: `${CT.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: Uk,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === aY,
+              controls: "playing" === FT,
               onPlaying: () => {
-                uY("playing")
+                DT("playing")
               },
               onError: () => {
-                uY("failed")
+                DT("failed")
               }
-            }), ("failed" === aY || "loading" === aY) && (0, vY.jsx)("div", {
+            }), ("failed" === FT || "loading" === FT) && (0, ST.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, vY.jsx)(oY.f, {
-                ariaLabel: gY("general:play"),
-                loading: "loading" === aY,
+              children: (0, ST.jsx)(MT.e, {
+                ariaLabel: BT("general:play"),
+                loading: "loading" === FT,
                 onClick: () => {
-                  uY("loading"), QY()
+                  DT("loading"), KT()
                 },
                 touchPressOn: "pointerup",
-                children: (0, vY.jsx)(OY.e, {
+                children: (0, ST.jsx)(XT.e, {
                   name: "play"
                 })
               })
             })]
-          }), (0, vY.jsxs)("div", {
+          }), (0, ST.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, vY.jsx)("div", {
+            children: [(0, ST.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, vY.jsx)(eI.e, {})
-            }), (0, vY.jsxs)("div", {
+              children: (0, ST.jsx)(jk.e, {})
+            }), (0, ST.jsxs)("div", {
               className: "StoreTileActions",
-              children: [DY, IY]
+              children: [IT, kT]
             })]
           })]
         })]
       })
     }
-    var HI = DY(2366),
-      zI = DY(3131),
-      ZI = DY(2704);
-    const CI = [iI.v.yellow, iI.v.green, iI.v.aqua, iI.v.blue, iI.v.purple, iI.v.red];
+    var Qk = IT(2322),
+      Ok = IT(3098),
+      Hk = IT(2675);
+    const nk = [gk.t.yellow, gk.t.green, gk.t.aqua, gk.t.blue, gk.t.purple, gk.t.red];
 
-    function fI(YY) {
-      return "needsRecipient" === YY || "lookingUp" === YY || "gift" === YY || "recipientOwns" === YY || "recipientSharesOwned" === YY
+    function qk(TT) {
+      return "needsRecipient" === TT || "lookingUp" === TT || "gift" === TT || "recipientOwns" === TT || "recipientSharesOwned" === TT
     }
 
-    function jI(YY) {
+    function Zk(TT) {
       const {
-        onKeyDown: rY,
-        ...DY
-      } = (0, oY.P)();
+        onKeyDown: oT,
+        ...IT
+      } = (0, MT.Q)();
       return {
-        ...DY,
-        "aria-label": YY,
-        onKeyDown: YY => {
-          YY.target === YY.currentTarget && (null === rY || void 0 === rY || rY(YY))
+        ...IT,
+        "aria-label": TT,
+        onKeyDown: TT => {
+          TT.target === TT.currentTarget && (null === oT || void 0 === oT || oT(TT))
         }
       }
     }
 
-    function hI(YY) {
+    function lk(TT) {
       let {
-        text: rY
-      } = YY;
-      return (0, vY.jsx)("span", {
+        text: oT
+      } = TT;
+      return (0, ST.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(rY).map(((YY, rY) => (0, vY.jsx)("span", {
+        children: Array.from(oT).map(((TT, oT) => (0, ST.jsx)("span", {
           style: {
-            color: CI[rY % CI.length]
+            color: nk[oT % nk.length]
           },
-          children: YY
-        }, rY)))
+          children: TT
+        }, oT)))
       })
     }
-    const dI = {
+    const sk = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned"
     };
 
-    function JI(YY) {
+    function tk(TT) {
       let {
-        state: rY,
-        item: DY,
-        price: FY,
-        busy: AY,
-        highlight: gY = !1,
-        onAct: aY,
-        onNeedRecipient: uY,
-        onLogin: sY = tA.c
-      } = YY;
+        state: oT,
+        item: IT,
+        price: iT,
+        busy: zT,
+        highlight: BT = !1,
+        onAct: FT,
+        onNeedRecipient: DT,
+        onLogin: LT = kk.b
+      } = TT;
       const {
-        t: iY
-      } = (0, RY.C)(), yY = "superRank" === DY ? jY.l.product.days : null, QY = YY => null === yY ? iY(YY ? "general:gift" : "general:buy") : iY(YY ? "store:giftDays" : "store:buyDays", {
-        days: yY
-      }), WY = (YY, rY) => (0, vY.jsxs)(vY.Fragment, {
-        children: [rY && (0, vY.jsx)("span", {
+        t: xT
+      } = (0, WT.t)(), cT = "superRank" === IT ? YT.h.product.days : null, KT = TT => null === cT ? xT(TT ? "general:gift" : "general:buy") : xT(TT ? "store:giftDays" : "store:buyDays", {
+        days: cT
+      }), rT = (TT, oT) => (0, ST.jsxs)(ST.Fragment, {
+        children: [oT && (0, ST.jsx)("span", {
           className: "StoreCtaIcon",
-          children: rY
-        }), null === YY && (0, vY.jsx)("span", {
+          children: oT
+        }), null === TT && (0, ST.jsx)("span", {
           className: "StoreCtaLabel StoreCtaLabelPending"
-        }), null !== YY && (0, vY.jsx)("span", {
+        }), null !== TT && (0, ST.jsx)("span", {
           className: "StoreCtaLabel",
-          title: YY,
-          children: YY
-        }), (0, vY.jsxs)("span", {
+          title: TT,
+          children: TT
+        }), (0, ST.jsxs)("span", {
           className: "StoreCtaPrice",
-          children: ["\xb7", (0, vY.jsx)(lI.d, {
-            amount: FY
+          children: ["\xb7", (0, ST.jsx)(fk.b, {
+            amount: iT
           })]
         })]
       });
-      let EY;
-      switch (rY) {
+      let AT;
+      switch (oT) {
         case "pending":
-          EY = (0, vY.jsx)(oY.n, {
+          AT = (0, ST.jsx)(MT.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: WY(null)
+            children: rT(null)
           });
           break;
         case "login":
-          EY = (0, vY.jsx)(oY.n, {
+          AT = (0, ST.jsx)(MT.m, {
             className: "StoreCtaButton",
-            onClick: sY,
-            children: WY(iY("store:logIn"))
+            onClick: LT,
+            children: rT(xT("store:logIn"))
           });
           break;
         case "owned":
-          EY = (0, vY.jsx)(oY.j, {
+          AT = (0, ST.jsx)(MT.i, {
             className: "StoreCtaButton",
             onClick: () => {
-              eY.b.set({
-                openEverythingMenuName: wD.t.CUSTOMISATION
+              RT.c.set({
+                openEverythingMenuName: sI.q.CUSTOMISATION
               })
             },
-            children: (0, vY.jsxs)("span", {
+            children: (0, ST.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, vY.jsx)(OY.e, {
+              children: [(0, ST.jsx)(XT.e, {
                 name: "shirt"
-              }), " ", iY("store:equip")]
+              }), " ", xT("store:equip")]
             })
           });
           break;
         case "recipientOwns":
         case "sharesOwned":
         case "recipientSharesOwned":
-          EY = (0, vY.jsx)(oY.n, {
+          AT = (0, ST.jsx)(MT.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, vY.jsx)("span", {
+            children: (0, ST.jsx)("span", {
               className: "StoreCtaLabel",
-              children: iY(dI[rY])
+              children: xT(sk[oT])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          EY = (0, vY.jsx)(oY.n, {
+          AT = (0, ST.jsx)(MT.m, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === rY || null === FY,
-            loading: "lookingUp" === rY || AY,
-            onClick: aY,
+            disabled: "needsRecipient" === oT || null === iT,
+            loading: "lookingUp" === oT || zT,
+            onClick: FT,
             analyticsClick: {
               id: "store.gift",
-              value: DY
+              value: IT
             },
-            children: WY(QY(!0), rI.d)
+            children: rT(KT(!0), Xk.b)
           });
           break;
         case "buy":
         case "recharge":
-          EY = (0, vY.jsx)(oY.n, {
+          AT = (0, ST.jsx)(MT.m, {
             className: "StoreCtaButton",
-            loading: AY,
-            disabled: null === FY,
-            onClick: aY,
+            loading: zT,
+            disabled: null === iT,
+            onClick: FT,
             analyticsClick: {
               id: "store.buy",
-              value: DY
+              value: IT
             },
-            children: WY(QY(!1))
+            children: rT(KT(!1))
           })
       }
-      return (0, vY.jsx)("div", {
-        className: IY()("StoreCta", {
-          StoreCtaHighlight: gY
+      return (0, ST.jsx)("div", {
+        className: kT()("StoreCta", {
+          StoreCtaHighlight: BT
         }),
-        onClick: YY => {
-          YY.stopPropagation(), "needsRecipient" === rY && uY()
+        onClick: TT => {
+          TT.stopPropagation(), "needsRecipient" === oT && DT()
         },
-        children: EY
+        children: AT
       })
     }
 
-    function MI() {
+    function Gk() {
       const {
-        t: YY
-      } = (0, RY.C)();
-      return (0, vY.jsxs)("ul", {
+        t: TT
+      } = (0, WT.t)();
+      return (0, ST.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, vY.jsxs)("li", {
-          children: [(0, vY.jsx)(OY.e, {
+        children: [(0, ST.jsxs)("li", {
+          children: [(0, ST.jsx)(XT.e, {
             name: "check"
-          }), (0, vY.jsx)(hI, {
-            text: YY("store:colourfulNames")
+          }), (0, ST.jsx)(lk, {
+            text: TT("store:colourfulNames")
           })]
-        }), (0, vY.jsxs)("li", {
-          children: [(0, vY.jsx)(OY.e, {
+        }), (0, ST.jsxs)("li", {
+          children: [(0, ST.jsx)(XT.e, {
             name: "check"
-          }), YY("store:perkCapes")]
-        }), (0, vY.jsxs)("li", {
-          children: [(0, vY.jsx)(OY.e, {
+          }), TT("store:perkCapes")]
+        }), (0, ST.jsxs)("li", {
+          children: [(0, ST.jsx)(XT.e, {
             name: "check"
-          }), YY("store:perkNoAdverts")]
-        }), (0, vY.jsxs)("li", {
-          children: [(0, vY.jsx)(OY.e, {
+          }), TT("store:perkNoAdverts")]
+        }), (0, ST.jsxs)("li", {
+          children: [(0, ST.jsx)(XT.e, {
             name: "check"
-          }), YY("store:perkFriends", {
-            count: (0, XY.e)(["super"])
+          }), TT("store:perkFriends", {
+            count: (0, lT.b)(["super"])
           })]
         })]
       })
     }
 
-    function wI(YY) {
+    function pk(TT) {
       let {
-        daysLeft: rY,
-        totalDays: DY,
-        urgent: FY
-      } = YY;
+        daysLeft: oT,
+        totalDays: IT,
+        urgent: iT
+      } = TT;
       const {
-        t: AY
-      } = (0, RY.C)(), OY = DY > 0 ? Math.min(1, Math.max(.03, rY / DY)) : 1;
-      return (0, vY.jsxs)("div", {
-        className: IY()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: FY
+        t: zT
+      } = (0, WT.t)(), XT = IT > 0 ? Math.min(1, Math.max(.03, oT / IT)) : 1;
+      return (0, ST.jsxs)("div", {
+        className: kT()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: iT
         }),
-        children: [(0, vY.jsx)("span", {
+        children: [(0, ST.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === rY ? AY("store:oneDayLeft") : AY("store:daysLeft", {
-            days: rY
+          children: 1 === oT ? zT("store:oneDayLeft") : zT("store:daysLeft", {
+            days: oT
           })
-        }), (0, vY.jsx)("div", {
+        }), (0, ST.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, vY.jsx)("i", {
+          children: (0, ST.jsx)("i", {
             style: {
-              width: 100 * OY + "%"
+              width: 100 * XT + "%"
             }
           })
         })]
       })
     }
 
-    function bI(YY) {
+    function bk(TT) {
       let {
-        state: rY,
-        urgent: DY,
-        daysLeft: FY,
-        totalDays: AY,
-        recipientHasSuperRank: gY,
-        busy: aY,
-        highlight: uY,
-        onOpen: sY,
-        onAct: iY,
-        onNeedRecipient: yY,
-        onLogin: QY
-      } = YY;
+        state: oT,
+        urgent: IT,
+        daysLeft: iT,
+        totalDays: zT,
+        recipientHasSuperRank: BT,
+        busy: FT,
+        highlight: DT,
+        onOpen: LT,
+        onAct: xT,
+        onNeedRecipient: cT,
+        onLogin: KT
+      } = TT;
       const {
-        t: oY
-      } = (0, RY.C)(), WY = fI(rY), {
-        days: EY
-      } = jY.l.product, mY = oY("store:recipientHasSuperRank", {
-        giftDays: EY
+        t: MT
+      } = (0, WT.t)(), rT = qk(oT), {
+        days: AT
+      } = YT.h.product, gT = MT("store:recipientHasSuperRank", {
+        giftDays: AT
       });
-      return (0, vY.jsxs)("div", {
-        className: IY()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: WY,
-          StoreSuperRankTileUrgent: "recharge" === rY && DY,
-          StoreSuperRankTileWithChip: gY,
-          StoreSuperRankTileGiftReady: "gift" === rY
+      return (0, ST.jsxs)("div", {
+        className: kT()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: rT,
+          StoreSuperRankTileUrgent: "recharge" === oT && IT,
+          StoreSuperRankTileWithChip: BT,
+          StoreSuperRankTileGiftReady: "gift" === oT
         }),
-        ...jI(oY("homePage:superRank")),
+        ...Zk(MT("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: cI,
-        onFocus: cI,
-        onClick: sY,
-        children: [(0, vY.jsx)("div", {
+        onPointerEnter: ak,
+        onFocus: ak,
+        onClick: LT,
+        children: [(0, ST.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${sI.d})`
+            backgroundImage: `url(${Ak.f})`
           }
-        }), WY && (0, vY.jsx)("div", {
+        }), rT && (0, ST.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "StoreTileContent",
-          children: [gY && (0, vY.jsx)("span", {
+          children: [BT && (0, ST.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: mY,
-            children: mY
-          }), (0, vY.jsxs)("div", {
+            title: gT,
+            children: gT
+          }), (0, ST.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, vY.jsx)(OY.e, {
+            children: [(0, ST.jsx)(XT.e, {
               name: "bolt"
-            }), " ", oY("homePage:superRank")]
-          }), WY && (0, vY.jsx)("div", {
+            }), " ", MT("homePage:superRank")]
+          }), rT && (0, ST.jsx)("div", {
             className: "StoreTilePitch",
-            children: oY("store:giftPitch", {
-              days: EY
+            children: MT("store:giftPitch", {
+              days: AT
             })
-          }), "recharge" === rY && (0, vY.jsx)(wI, {
-            daysLeft: FY,
-            totalDays: AY,
-            urgent: DY
-          }), (0, vY.jsx)(MI, {}), (0, vY.jsxs)("div", {
+          }), "recharge" === oT && (0, ST.jsx)(pk, {
+            daysLeft: iT,
+            totalDays: zT,
+            urgent: IT
+          }), (0, ST.jsx)(Gk, {}), (0, ST.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, vY.jsx)(JI, {
-              state: rY,
+            children: [(0, ST.jsx)(tk, {
+              state: oT,
               item: "superRank",
-              price: jY.l.price,
-              busy: aY,
-              highlight: uY,
-              onAct: iY,
-              onNeedRecipient: yY,
-              onLogin: QY
-            }), "needsRecipient" === rY && (0, vY.jsx)("span", {
+              price: YT.h.price,
+              busy: FT,
+              highlight: DT,
+              onAct: xT,
+              onNeedRecipient: cT,
+              onLogin: KT
+            }), "needsRecipient" === oT && (0, ST.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: oY("store:pickRecipientFirst")
-            }), "recharge" === rY && DY && (0, vY.jsx)("span", {
+              children: MT("store:pickRecipientFirst")
+            }), "recharge" === oT && IT && (0, ST.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === FY ? oY("store:endsInOneDay") : oY("store:endsInDays", {
-                days: FY
+              children: 1 === iT ? MT("store:endsInOneDay") : MT("store:endsInDays", {
+                days: iT
               })
             })]
           })]
         })]
       })
     }
-    const XI = {
+    const yk = {
       standard: "StorePackTileStandard",
       enhanced: "StorePackTileEnhanced",
       premium: "StorePackTilePremium"
     };
 
-    function qI(YY) {
-      var rY;
+    function Nk(TT) {
+      var oT;
       let {
-        pack: DY,
-        state: AY,
-        busy: gY,
-        onOpen: aY,
-        onAct: uY,
-        onNeedRecipient: sY,
-        onLogin: iY
-      } = YY;
+        pack: IT,
+        state: zT,
+        busy: BT,
+        onOpen: FT,
+        onAct: DT,
+        onNeedRecipient: LT,
+        onLogin: xT
+      } = TT;
       const {
-        t: yY
-      } = (0, RY.C)(), QY = kA.b[DY], oY = LA.k[DY], WY = (0, sI.m)(DY), EY = (0, FY.useRef)(null);
-      (0, ZI.g)(DY, EY);
-      const mY = fI(AY),
-        VY = null !== (rY = QY.displayName) && void 0 !== rY ? rY : DY,
-        SY = (0, zI.b)((() => {
-          (0, HI.d)();
-          const YY = (0, ZI.e)(DY);
-          void 0 !== YY && (0, NI.f)((0, ZI.c)(YY))
+        t: cT
+      } = (0, WT.t)(), KT = Pz.b[IT], MT = zk.i[IT], rT = (0, Ak.m)(IT), AT = (0, iT.useRef)(null);
+      (0, Hk.j)(IT, AT);
+      const gT = qk(zT),
+        hT = null !== (oT = KT.displayName) && void 0 !== oT ? oT : IT,
+        wT = (0, Ok.e)((() => {
+          (0, Qk.d)();
+          const TT = (0, Hk.f)(IT);
+          void 0 !== TT && (0, Jk.f)((0, Hk.d)(TT))
         })),
-        [lY] = (0, FY.useState)(aI.e);
-      return (0, vY.jsxs)("div", {
-        className: IY()("StoreTile StorePackTile", QY.tier && XI[QY.tier], {
-          StorePackTileOwned: "owned" === AY,
-          StorePackTileRecipientOwns: "recipientOwns" === AY,
-          StoreTileGift: mY
+        [mT] = (0, iT.useState)(Kk.h);
+      return (0, ST.jsxs)("div", {
+        className: kT()("StoreTile StorePackTile", KT.tier && yk[KT.tier], {
+          StorePackTileOwned: "owned" === zT,
+          StorePackTileRecipientOwns: "recipientOwns" === zT,
+          StoreTileGift: gT
         }),
-        ...jI(VY),
-        ref: EY,
-        "data-store-item": DY,
-        onClick: aY,
-        onPointerMove: YY => {
-          "mouse" !== YY.pointerType || 0 === YY.movementX && 0 === YY.movementY || lY || SY.start()
+        ...Zk(hT),
+        ref: AT,
+        "data-store-item": IT,
+        onClick: FT,
+        onPointerMove: TT => {
+          "mouse" !== TT.pointerType || 0 === TT.movementX && 0 === TT.movementY || mT || wT.start()
         },
-        onPointerLeave: SY.cancel,
-        children: [oY && (0, vY.jsx)(oY, {}), (0, vY.jsx)("div", {
+        onPointerLeave: wT.cancel,
+        children: [MT && (0, ST.jsx)(MT, {}), (0, ST.jsx)("div", {
           className: "StorePackCharacters",
-          children: WY.map((YY => (0, vY.jsx)("div", {
+          children: rT.map((TT => (0, ST.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,sI.g)(YY)})`
+              backgroundImage: `url(${(0,Ak.g)(TT)})`
             }
-          }, YY)))
-        }), (0, vY.jsx)("div", {
+          }, TT)))
+        }), (0, ST.jsx)("div", {
           className: "StoreTileScrim"
-        }), mY && (0, vY.jsx)("div", {
+        }), gT && (0, ST.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, vY.jsx)("div", {
+          children: [(0, ST.jsx)("div", {
             className: "StoreTileTitle",
-            children: VY
-          }), (0, vY.jsxs)("div", {
+            children: hT
+          }), (0, ST.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [yY("store:itemCount", {
-              count: (0, SI.d)(DY)
-            }), "owned" === AY && (0, vY.jsxs)("span", {
+            children: [cT("store:itemCount", {
+              count: (0, Ek.c)(IT)
+            }), "owned" === zT && (0, ST.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, vY.jsx)(OY.e, {
+              children: [" \xb7 ", (0, ST.jsx)(XT.e, {
                 name: "check"
-              }), " ", yY("general:owned")]
+              }), " ", cT("general:owned")]
             })]
-          }), (0, vY.jsx)(JI, {
-            state: AY,
-            item: DY,
-            price: (0, jY.f)(DY),
-            busy: gY,
-            onAct: uY,
-            onNeedRecipient: sY,
-            onLogin: iY
+          }), (0, ST.jsx)(tk, {
+            state: zT,
+            item: IT,
+            price: (0, YT.c)(IT),
+            busy: BT,
+            onAct: DT,
+            onNeedRecipient: LT,
+            onLogin: xT
           })]
         })]
       })
     }
-    var pI = DY(2682),
-      kI = DY(1343);
-    const GI = {
+    var Pk = IT(2652),
+      dk = IT(1316);
+    const Vk = {
       standard: "StoreCharacterCardStandard",
       enhanced: "StoreCharacterCardEnhanced",
       premium: "StoreCharacterCardPremium"
     };
 
-    function xI(YY) {
-      var rY, DY;
+    function TW(TT) {
+      var oT, IT;
       let {
-        tile: AY,
-        busy: gY,
-        highlight: aY,
-        onAct: uY,
-        onNeedRecipient: sY,
-        onLogin: iY
-      } = YY;
+        tile: zT,
+        busy: BT,
+        highlight: FT,
+        onAct: DT,
+        onNeedRecipient: LT,
+        onLogin: xT
+      } = TT;
       const {
-        t: yY
-      } = (0, RY.C)(), {
-        pack: QY,
-        state: oY
-      } = AY, WY = kA.b[QY], EY = (0, kA.c)(QY), mY = LA.k[(0, sI.i)(QY)], VY = null !== (rY = WY.tier) && void 0 !== rY ? rY : "standard", SY = (0, FY.useRef)(null);
-      return (0, kI.b)(SY, "standard" !== VY), (0, vY.jsxs)("div", {
-        ref: SY,
-        className: IY()("StoreCharacterCard", GI[VY], {
-          StoreCharacterCardOwned: "owned" === oY || "recipientOwns" === oY,
-          StoreCharacterCardGift: fI(oY)
+        t: cT
+      } = (0, WT.t)(), {
+        pack: KT,
+        state: MT
+      } = zT, rT = Pz.b[KT], AT = (0, Pz.d)(KT), gT = zk.i[(0, Ak.i)(KT)], hT = null !== (oT = rT.tier) && void 0 !== oT ? oT : "standard", wT = (0, iT.useRef)(null);
+      return (0, dk.c)(wT, "standard" !== hT), (0, ST.jsxs)("div", {
+        ref: wT,
+        className: kT()("StoreCharacterCard", Vk[hT], {
+          StoreCharacterCardOwned: "owned" === MT || "recipientOwns" === MT,
+          StoreCharacterCardGift: qk(MT)
         }),
-        "data-store-item": QY,
-        children: [(0, vY.jsxs)("div", {
+        "data-store-item": KT,
+        children: [(0, ST.jsxs)("div", {
           className: "StoreCharacterArt",
-          children: [mY && (0, vY.jsx)(mY, {
+          children: [gT && (0, ST.jsx)(gT, {
             simple: !0
-          }), (0, vY.jsx)("div", {
+          }), (0, ST.jsx)("div", {
             className: "StoreCharacterHalo"
-          }), (0, vY.jsx)("div", {
+          }), (0, ST.jsx)("div", {
             className: "StoreCharacterFigure",
             style: {
-              backgroundImage: `url(${(0,sI.g)(EY)})`
+              backgroundImage: `url(${(0,Ak.g)(AT)})`
             }
-          }), "owned" === oY && (0, vY.jsx)("span", {
+          }), "owned" === MT && (0, ST.jsx)("span", {
             className: "StoreCharacterOwned",
-            title: yY("general:owned"),
-            "aria-label": yY("general:owned"),
-            children: (0, vY.jsx)(OY.e, {
+            title: cT("general:owned"),
+            "aria-label": cT("general:owned"),
+            children: (0, ST.jsx)(XT.e, {
               name: "check"
             })
           })]
-        }), (0, vY.jsxs)("div", {
+        }), (0, ST.jsxs)("div", {
           className: "StoreCharacterPlate",
-          children: [(0, vY.jsx)("div", {
+          children: [(0, ST.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (DY = WY.displayName) && void 0 !== DY ? DY : QY
-          }), (0, vY.jsx)(JI, {
-            state: oY,
-            item: QY,
-            price: (0, jY.f)(QY),
-            busy: gY,
-            highlight: aY,
-            onAct: uY,
-            onNeedRecipient: sY,
-            onLogin: iY
+            children: null !== (IT = rT.displayName) && void 0 !== IT ? IT : KT
+          }), (0, ST.jsx)(tk, {
+            state: MT,
+            item: KT,
+            price: (0, YT.c)(KT),
+            busy: BT,
+            highlight: FT,
+            onAct: DT,
+            onNeedRecipient: LT,
+            onLogin: xT
           })]
         })]
       })
     }
 
-    function nI(YY) {
+    function oW(TT) {
       let {
-        tiles: rY,
-        busy: DY,
-        highlightItem: FY,
-        onAct: AY,
-        onNeedRecipient: IY,
-        onLogin: RY
-      } = YY;
-      return (0, vY.jsx)("div", {
+        tiles: oT,
+        busy: IT,
+        highlightItem: iT,
+        onAct: zT,
+        onNeedRecipient: kT,
+        onLogin: WT
+      } = TT;
+      return (0, ST.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: rY.map((YY => (0, vY.jsx)(xI, {
-          tile: YY,
-          busy: DY,
-          highlight: FY === YY.pack,
+        children: oT.map((TT => (0, ST.jsx)(TW, {
+          tile: TT,
+          busy: IT,
+          highlight: iT === TT.pack,
           onAct: () => {
-            AY(YY.pack)
+            zT(TT.pack)
           },
-          onNeedRecipient: IY,
+          onNeedRecipient: kT,
           onLogin: () => {
-            RY(YY.pack)
+            WT(TT.pack)
           }
-        }, YY.pack)))
+        }, TT.pack)))
       })
     }
-    var PI = DY(8783);
+    var IW = IT(8783);
 
-    function UI(YY) {
+    function iW(TT) {
       let {
-        title: rY
-      } = YY;
-      return (0, vY.jsx)("h2", {
+        title: oT
+      } = TT;
+      return (0, ST.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, vY.jsx)("span", {
+        children: (0, ST.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: rY
+          children: oT
         })
       })
     }
 
-    function LI(YY) {
+    function zW(TT) {
       let {
-        mountAtOnce: rY,
-        children: DY
-      } = YY;
-      const AY = (0, FY.useRef)(null),
-        [IY, RY] = (0, FY.useState)(rY),
-        OY = (0, PI.c)();
-      return (0, FY.useLayoutEffect)((() => {
-        const YY = AY.current;
-        YY && YY.getBoundingClientRect().top < YY.parentElement.getBoundingClientRect().bottom && RY(!0)
-      }), []), IY || OY ? (0, vY.jsx)(vY.Fragment, {
-        children: DY
-      }) : (0, vY.jsx)("div", {
-        ref: AY
+        mountAtOnce: oT,
+        children: IT
+      } = TT;
+      const zT = (0, iT.useRef)(null),
+        [kT, WT] = (0, iT.useState)(oT),
+        XT = (0, IW.b)();
+      return (0, iT.useLayoutEffect)((() => {
+        const TT = zT.current;
+        TT && TT.getBoundingClientRect().top < TT.parentElement.getBoundingClientRect().bottom && WT(!0)
+      }), []), kT || XT ? (0, ST.jsx)(ST.Fragment, {
+        children: IT
+      }) : (0, ST.jsx)("div", {
+        ref: zT
       })
     }
 
-    function tI(YY) {
+    function kW(TT) {
       let {
-        layout: rY,
-        mountAtOnce: DY,
-        bundleGift: FY,
-        superRankDaysLeft: AY,
-        superRankTotalDays: IY,
-        busy: OY,
-        highlightItem: gY,
-        onOpen: aY,
-        onAct: uY,
-        onNeedRecipient: sY,
-        onLogin: iY
-      } = YY;
+        layout: oT,
+        mountAtOnce: IT,
+        bundleGift: iT,
+        superRankDaysLeft: zT,
+        superRankTotalDays: kT,
+        busy: XT,
+        highlightItem: BT,
+        onOpen: FT,
+        onAct: DT,
+        onNeedRecipient: LT,
+        onLogin: xT
+      } = TT;
       const {
-        t: yY
-      } = (0, RY.C)(), QY = rY.packs.filter((YY => void 0 === (0, kA.c)(YY.pack))), oY = rY.packs.filter((YY => void 0 !== (0, kA.c)(YY.pack)));
-      return (0, vY.jsxs)(vY.Fragment, {
-        children: [(0, vY.jsx)(pI.d, {
+        t: cT
+      } = (0, WT.t)(), KT = oT.packs.filter((TT => void 0 === (0, Pz.d)(TT.pack))), MT = oT.packs.filter((TT => void 0 !== (0, Pz.d)(TT.pack)));
+      return (0, ST.jsxs)(ST.Fragment, {
+        children: [(0, ST.jsx)(Pk.d, {
           className: "StoreSuperGems",
-          gift: FY
-        }), (0, vY.jsx)(UI, {
-          title: yY("store:rank")
-        }), (0, vY.jsx)(bI, {
-          state: rY.superRank.state,
-          urgent: rY.superRank.urgent,
-          daysLeft: AY,
-          totalDays: IY,
-          recipientHasSuperRank: rY.recipientHasSuperRank,
-          busy: OY,
-          highlight: "superRank" === gY,
+          gift: iT
+        }), (0, ST.jsx)(iW, {
+          title: cT("store:rank")
+        }), (0, ST.jsx)(bk, {
+          state: oT.superRank.state,
+          urgent: oT.superRank.urgent,
+          daysLeft: zT,
+          totalDays: kT,
+          recipientHasSuperRank: oT.recipientHasSuperRank,
+          busy: XT,
+          highlight: "superRank" === BT,
           onOpen: () => {
-            aY("superRank")
+            FT("superRank")
           },
           onAct: () => {
-            uY("superRank")
+            DT("superRank")
           },
-          onNeedRecipient: sY,
+          onNeedRecipient: LT,
           onLogin: () => {
-            iY("superRank")
+            xT("superRank")
           }
-        }), (0, vY.jsxs)(LI, {
-          mountAtOnce: DY,
-          children: [(0, vY.jsx)(UI, {
-            title: yY("store:bundles")
-          }), (0, vY.jsx)("div", {
+        }), (0, ST.jsxs)(zW, {
+          mountAtOnce: IT,
+          children: [(0, ST.jsx)(iW, {
+            title: cT("store:bundles")
+          }), (0, ST.jsx)("div", {
             className: "StorePackGrid",
-            children: QY.map((YY => (0, vY.jsx)(qI, {
-              pack: YY.pack,
-              state: YY.state,
-              busy: OY,
+            children: KT.map((TT => (0, ST.jsx)(Nk, {
+              pack: TT.pack,
+              state: TT.state,
+              busy: XT,
               onOpen: () => {
-                aY(YY.pack)
+                FT(TT.pack)
               },
               onAct: () => {
-                uY(YY.pack)
+                DT(TT.pack)
               },
-              onNeedRecipient: sY,
+              onNeedRecipient: LT,
               onLogin: () => {
-                iY(YY.pack)
+                xT(TT.pack)
               }
-            }, YY.pack)))
-          }), (0, vY.jsxs)(LI, {
-            mountAtOnce: DY,
-            children: [(0, vY.jsx)(UI, {
-              title: yY("store:characters")
-            }), (0, vY.jsx)(nI, {
-              tiles: oY,
-              busy: OY,
-              highlightItem: gY,
-              onAct: uY,
-              onNeedRecipient: sY,
-              onLogin: iY
+            }, TT.pack)))
+          }), (0, ST.jsxs)(zW, {
+            mountAtOnce: IT,
+            children: [(0, ST.jsx)(iW, {
+              title: cT("store:characters")
+            }), (0, ST.jsx)(oW, {
+              tiles: MT,
+              busy: XT,
+              highlightItem: BT,
+              onAct: DT,
+              onNeedRecipient: LT,
+              onLogin: xT
             })]
           })]
         })]
       })
     }
 
-    function YR(YY) {
+    function WW(TT) {
       let {
-        state: rY,
-        mode: DY,
-        giftName: FY,
-        busy: AY,
-        highlight: IY,
-        purchaseError: OY,
-        onBack: gY,
-        onChooseRecipient: aY,
-        onAct: uY,
-        onLogin: sY
-      } = YY;
+        state: oT,
+        mode: IT,
+        giftName: iT,
+        busy: zT,
+        highlight: kT,
+        purchaseError: XT,
+        onBack: BT,
+        onChooseRecipient: FT,
+        onAct: DT,
+        onLogin: LT
+      } = TT;
       const {
-        t: iY
-      } = (0, RY.C)();
-      return (0, vY.jsx)(KI, {
-        onBack: gY,
-        recipient: "gift" === DY && (0, vY.jsxs)(vY.Fragment, {
-          children: [FY && (0, vY.jsxs)("span", {
+        t: xT
+      } = (0, WT.t)();
+      return (0, ST.jsx)(Yk, {
+        onBack: BT,
+        recipient: "gift" === IT && (0, ST.jsxs)(ST.Fragment, {
+          children: [iT && (0, ST.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: iY("store:giftFor", {
-              name: FY
+            title: xT("store:giftFor", {
+              name: iT
             }),
-            children: [rI.d, " ", iY("store:giftFor", {
-              name: FY
+            children: [Xk.b, " ", xT("store:giftFor", {
+              name: iT
             })]
-          }), !FY && (0, vY.jsxs)("div", {
-            ...(0, oY.P)(),
+          }), !iT && (0, ST.jsxs)("div", {
+            ...(0, MT.Q)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: aY,
-            children: [rI.d, " ", iY("store:chooseRecipient")]
+            onClick: FT,
+            children: [Xk.b, " ", xT("store:chooseRecipient")]
           })]
         }),
-        cta: (0, vY.jsx)(JI, {
-          state: rY,
+        cta: (0, ST.jsx)(tk, {
+          state: oT,
           item: "superRank",
-          price: jY.l.price,
-          busy: AY,
-          highlight: IY,
-          onAct: uY,
-          onNeedRecipient: aY,
-          onLogin: sY
+          price: YT.h.price,
+          busy: zT,
+          highlight: kT,
+          onAct: DT,
+          onNeedRecipient: FT,
+          onLogin: LT
         }),
-        afterCta: (0, vY.jsx)(vY.Fragment, {
-          children: OY && (0, vY.jsx)("span", {
+        afterCta: (0, ST.jsx)(ST.Fragment, {
+          children: XT && (0, ST.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: iY(OY)
+            children: xT(XT)
           })
         })
       })
     }
-    const rR = {
+    const XW = {
         kind: "board"
       },
-      DR = [...kA.j, ...kA.h];
-    let FR = !1;
+      BW = [...Pz.j, ...Pz.i];
+    let FW = !1;
 
-    function AR(YY) {
-      return "superRank" === YY.kind ? "superRank" : "pack" === YY.kind ? YY.pack : null
+    function SW(TT) {
+      return "superRank" === TT.kind ? "superRank" : "pack" === TT.kind ? TT.pack : null
     }
 
-    function IR(YY) {
-      return "found" === YY.status || "error" === YY.status && "store:giftRecipientLookupFailed" === YY.error ? YY.name : null
-    }(0, MY.o)(GA.prefetchBillingOfferings);
-    const RR = (0, FY.memo)((function(YY) {
-      var rY, AY;
+    function DW(TT) {
+      return "found" === TT.status || "error" === TT.status && "store:giftRecipientLookupFailed" === TT.error ? TT.name : null
+    }(0, nT.u)(dz.prefetchBillingOfferings);
+    const LW = (0, iT.memo)((function(TT) {
+      var oT, zT;
       let {
-        show: OY
-      } = YY;
+        show: XT
+      } = TT;
       const {
-        t: gY
-      } = (0, RY.C)(), {
-        userContext: aY
-      } = (0, iY.d)(), uY = aY !== KY.NULL_USER_CONTEXT, sY = II(aY), [yY, oY] = (0, QY.c)(), {
-        page: WY,
-        urlMode: EY,
-        goTo: mY
-      } = (0, RI.e)(), VY = AR(WY), {
-        openEverythingMenuName: SY,
-        gameState: lY
-      } = (0, eY.j)(["openEverythingMenuName", "gameState"]), TY = null !== SY;
-      ! function(YY, rY) {
-        const [AY] = (0, FY.useState)(aI.e), [IY, RY] = (0, FY.useState)(!1);
-        AY && rY && !IY && RY(!0);
-        const OY = (0, kD.p)(),
-          gY = AY && IY && YY && !OY;
-        (0, FY.useEffect)((() => {
-          if (!gY) return;
-          let YY = null,
-            rY = null,
-            FY = null;
-          const AY = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, vI.c)().purchaseUnderWay,
-            IY = () => {
-              var DY;
-              null === (DY = FY) || void 0 === DY || DY(), FY = null, null !== YY && (clearTimeout(YY), YY = null), null !== rY && (clearTimeout(rY), rY = null)
+        t: BT
+      } = (0, WT.t)(), {
+        userContext: FT
+      } = (0, xT.b)(), DT = FT !== fT.NULL_USER_CONTEXT, LT = Dk(FT), [cT, MT] = (0, KT.e)(), {
+        page: rT,
+        urlMode: AT,
+        goTo: gT
+      } = (0, Lk.e)(), hT = SW(rT), {
+        openEverythingMenuName: wT,
+        gameState: mT
+      } = (0, RT.k)(["openEverythingMenuName", "gameState"]), eT = null !== wT;
+      ! function(TT, oT) {
+        const [zT] = (0, iT.useState)(Kk.h), [kT, WT] = (0, iT.useState)(!1);
+        zT && oT && !kT && WT(!0);
+        const XT = (0, yI.p)(),
+          BT = zT && kT && TT && !XT;
+        (0, iT.useEffect)((() => {
+          if (!BT) return;
+          let TT = null,
+            oT = null,
+            iT = null;
+          const zT = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, Mk.e)().purchaseUnderWay,
+            kT = () => {
+              var IT;
+              null === (IT = iT) || void 0 === IT || IT(), iT = null, null !== TT && (clearTimeout(TT), TT = null), null !== oT && (clearTimeout(oT), oT = null)
             },
-            RY = () => {
-              (0, OI.p)(!1), (0, OI.m)(!1), IY(), YY = setTimeout((() => {
-                YY = null, FY = (0, gI.b)((() => {
-                  FY = null, AY() ? RY() : ((0, OI.p)(!0), rY = setTimeout((() => {
-                    rY = null, FY = (0, gI.b)((() => {
-                      FY = null, AY() ? RY() : (0, OI.m)(!0)
+            WT = () => {
+              (0, xk.p)(!1), (0, xk.l)(!1), kT(), TT = setTimeout((() => {
+                TT = null, iT = (0, ck.b)((() => {
+                  iT = null, zT() ? WT() : ((0, xk.p)(!0), oT = setTimeout((() => {
+                    oT = null, iT = (0, ck.b)((() => {
+                      iT = null, zT() ? WT() : (0, xk.l)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => DY(4229))).then((YY => {
-                    YY.startBackgroundGameSetup()
-                  }), (YY => {
-                    console.warn("Background game setup: its chunk failed to load", YY)
+                  }), 3e3), Promise.resolve().then((() => IT(4163))).then((TT => {
+                    TT.startBackgroundGameSetup()
+                  }), (TT => {
+                    console.warn("Background game setup: its chunk failed to load", TT)
                   })))
                 }))
               }), 2e3)
             };
-          for (const DY of uI) window.addEventListener(DY, RY, {
+          for (const IT of rk) window.addEventListener(IT, WT, {
             capture: !0,
             passive: !0
           });
-          return RY(), () => {
-            for (const YY of uI) window.removeEventListener(YY, RY, {
+          return WT(), () => {
+            for (const TT of rk) window.removeEventListener(TT, WT, {
               capture: !0
             });
-            IY(), (0, OI.p)(!1), (0, OI.m)(!1)
+            kT(), (0, xk.p)(!1), (0, xk.l)(!1)
           }
-        }), [gY])
-      }(OY && TY, "pack" === WY.kind);
-      const NY = "landingPage" === lY;
-      (0, FY.useEffect)((() => {
-        TY && (0, GA.prefetchBillingOfferings)()
-      }), [TY]), (0, FY.useEffect)((() => {
-        TY && !OY && NY && (0, sI.p)()
-      }), [TY, OY, NY]);
-      const [BY, cY] = (0, FY.useState)(0), [HY, zY] = (0, FY.useState)(null), [ZY, CY] = (0, FY.useState)(null), [fY, hY] = (0, FY.useState)(null), [dY, bY] = (0, FY.useState)(null), XY = (0, FY.useRef)(null), qY = (0, FY.useRef)(null), kY = (0, FY.useRef)(!1), GY = (0, MY.v)(), xY = (0, FY.useRef)(0), nY = (0, FY.useRef)(!1);
+        }), [BT])
+      }(XT && eT, "pack" === rT.kind);
+      const uT = "landingPage" === mT;
+      (0, iT.useEffect)((() => {
+        eT && (0, dz.prefetchBillingOfferings)()
+      }), [eT]), (0, iT.useEffect)((() => {
+        eT && !XT && uT && (0, Ak.r)()
+      }), [eT, XT, uT]);
+      const [vT, ET] = (0, iT.useState)(0), [CT, jT] = (0, iT.useState)(null), [JT, UT] = (0, iT.useState)(null), [aT, QT] = (0, iT.useState)(null), [OT, ZT] = (0, iT.useState)(null), lT = (0, iT.useRef)(null), sT = (0, iT.useRef)(null), GT = (0, iT.useRef)(!1), pT = (0, nT.z)(), bT = (0, iT.useRef)(0), yT = (0, iT.useRef)(!1);
 
-      function PY() {
-        cY((YY => YY + 1))
-      }(0, FY.useEffect)((() => {
-        if (OY) {
-          if (FR = !0, GY && GY.seq !== xY.current) {
-            var YY, rY;
-            xY.current = GY.seq;
-            const DY = (0, MY.d)(GY);
-            EY || mY(DY), bY(GY.highlight && null !== (YY = null !== (rY = AR(DY)) && void 0 !== rY ? rY : GY.openItem) && void 0 !== YY ? YY : null), CY(null), "gift" === GY.mode && GY.giftRecipientName ? sY.choose(GY.giftRecipientName, "prefilled") : "current" !== GY.mode && sY.clear(), "gift" !== GY.mode || GY.giftRecipientName || PY(), (0, pY.reportAnalyticsClick)({
+      function NT() {
+        ET((TT => TT + 1))
+      }(0, iT.useEffect)((() => {
+        if (XT) {
+          if (FW = !0, pT && pT.seq !== bT.current) {
+            var TT, oT;
+            bT.current = pT.seq;
+            const IT = (0, nT.d)(pT);
+            AT || gT(IT), ZT(pT.highlight && null !== (TT = null !== (oT = SW(IT)) && void 0 !== oT ? oT : pT.openItem) && void 0 !== TT ? TT : null), UT(null), "gift" === pT.mode && pT.giftRecipientName ? LT.choose(pT.giftRecipientName, "prefilled") : "current" !== pT.mode && LT.clear(), "gift" !== pT.mode || pT.giftRecipientName || NT(), (0, tT.reportAnalyticsClick)({
               id: "store.open",
-              value: GY.source
+              value: pT.source
             })
-          } else nY.current || (0, pY.reportAnalyticsClick)({
+          } else yT.current || (0, tT.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          nY.current = !0
-        } else nY.current = !1
-      }), [OY, GY]), (0, FY.useEffect)((() => {
-        if (!dY) return;
-        const YY = setTimeout((() => {
-          bY(null)
+          yT.current = !0
+        } else yT.current = !1
+      }), [XT, pT]), (0, iT.useEffect)((() => {
+        if (!OT) return;
+        const TT = setTimeout((() => {
+          ZT(null)
         }), 4e3);
         return () => {
-          clearTimeout(YY)
+          clearTimeout(TT)
         }
-      }), [dY]), (0, FY.useEffect)((() => {
-        const YY = XY.current;
-        var rY;
-        if (OY && YY) {
-          if (VY) qY.current = VY, null === (rY = YY.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === rY || rY.focus();
-          else if (qY.current) {
-            var DY;
-            null === (DY = YY.querySelector(`[data-store-item="${qY.current}"]`)) || void 0 === DY || DY.focus(), qY.current = null
+      }), [OT]), (0, iT.useEffect)((() => {
+        const TT = lT.current;
+        var oT;
+        if (XT && TT) {
+          if (hT) sT.current = hT, null === (oT = TT.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === oT || oT.focus();
+          else if (sT.current) {
+            var IT;
+            null === (IT = TT.querySelector(`[data-store-item="${sT.current}"]`)) || void 0 === IT || IT.focus(), sT.current = null
           }
-        } else qY.current = null
-      }), [VY, OY]), (0, FY.useEffect)((() => {
-        CY(null)
-      }), [sY.query]), (0, FY.useEffect)((() => {
-        if (!fY) return;
-        const YY = setTimeout((() => {
-          hY(null)
+        } else sT.current = null
+      }), [hT, XT]), (0, iT.useEffect)((() => {
+        UT(null)
+      }), [LT.query]), (0, iT.useEffect)((() => {
+        if (!aT) return;
+        const TT = setTimeout((() => {
+          QT(null)
         }), 8e3);
         return () => {
-          clearTimeout(YY)
+          clearTimeout(TT)
         }
-      }), [fY]);
-      const UY = aY.superRankInfo,
-        LY = UY ? (0, JY.jc)(UY) : 0,
-        tY = (0, rI.j)(LY),
-        Yr = LY > 0,
-        rr = aY.isLoggedIn() || (0, wY.guestsMayBuy)(),
-        Dr = aY.getOwnedCosmeticPacks(),
-        Fr = (0, rI.o)(sY.query),
-        Ar = (0, rI.f)({
-          mode: Fr,
-          loggedIn: uY ? rr : null,
-          hasSuperRank: Yr,
-          superRankDaysLeft: tY,
-          ownedPacks: Dr,
-          packs: DR,
-          recipient: sY.recipient
+      }), [aT]);
+      const PT = FT.superRankInfo,
+        dT = PT ? (0, HT.Xb)(PT) : 0,
+        VT = (0, Xk.g)(dT),
+        To = dT > 0,
+        oo = FT.isLoggedIn() || (0, qT.guestsMayBuy)(),
+        Io = FT.getOwnedCosmeticPacks(),
+        io = (0, Xk.j)(LT.query),
+        zo = (0, Xk.c)({
+          mode: io,
+          loggedIn: DT ? oo : null,
+          hasSuperRank: To,
+          superRankDaysLeft: VT,
+          ownedPacks: Io,
+          packs: BW,
+          recipient: LT.recipient
         });
-      (0, FY.useEffect)((() => {
-        if (!rr || !OY) return;
-        const YY = (0, MY.s)();
-        var rY;
-        YY && ("superRank" === (rY = YY.item) || DR.includes(rY)) && ((0, pY.reportAnalyticsClick)({
+      (0, iT.useEffect)((() => {
+        if (!oo || !XT) return;
+        const TT = (0, nT.w)();
+        var oT;
+        TT && ("superRank" === (oT = TT.item) || BW.includes(oT)) && ((0, tT.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: YY.item
-        }), (0, MY.f)({
-          mode: YY.mode,
+          value: TT.item
+        }), (0, nT.k)({
+          mode: TT.mode,
           source: "loginResume",
-          giftRecipientName: "gift" === YY.mode && YY.recipient ? YY.recipient : void 0,
-          openItem: YY.item,
+          giftRecipientName: "gift" === TT.mode && TT.recipient ? TT.recipient : void 0,
+          openItem: TT.item,
           highlight: !0
         }))
-      }), [rr, OY]);
-      const Ir = (0, rI.r)({
-        hasSuperRank: rr && Yr,
-        superRankDaysLeft: tY,
-        openedThisSession: FR || OY
+      }), [oo, XT]);
+      const ko = (0, Xk.l)({
+        hasSuperRank: oo && To,
+        superRankDaysLeft: VT,
+        openedThisSession: FW || XT
       });
-      if ((0, FY.useEffect)((() => {
-          (0, MY.r)(Ir)
-        }), [Ir]), !OY || !(0, wY.purchasesAllowed)()) return null;
-      const Rr = oY > yY && yY <= 700,
-        Or = !Rr && oY <= 420,
-        gr = "gift" === Fr ? IR(sY.recipient) : null,
-        ar = null !== HY;
+      if ((0, iT.useEffect)((() => {
+          (0, nT.v)(ko)
+        }), [ko]), !XT || !(0, qT.purchasesAllowed)()) return null;
+      const Wo = MT > cT && cT <= 700,
+        Xo = !Wo && MT <= 420,
+        Bo = "gift" === io ? DW(LT.recipient) : null,
+        Fo = null !== CT;
 
-      function vr(YY) {
-        (0, MY.l)({
-          item: YY,
-          mode: Fr,
-          recipient: "gift" === Fr ? sY.query.trim() : ""
-        }), (0, tA.c)()
+      function So(TT) {
+        (0, nT.r)({
+          item: TT,
+          mode: io,
+          recipient: "gift" === io ? LT.query.trim() : ""
+        }), (0, kk.b)()
       }
 
-      function ur(YY, rY) {
-        (0, pY.reportAnalyticsClick)({
+      function Do(TT, oT) {
+        (0, tT.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${rY?"gift":"self"}:${YY}`
-        }), rY && (sY.recordGift(rY.name, YY), sr(rY))
+          value: `${oT?"gift":"self"}:${TT}`
+        }), oT && (LT.recordGift(oT.name, TT), Lo(oT))
       }
 
-      function sr(YY) {
-        ! function(YY) {
+      function Lo(TT) {
+        ! function(TT) {
           try {
-            Zr.m.setItem(DI, (0, rI.w)(AI(), YY))
+            Jo.e.setItem(Bk, (0, Xk.o)(Sk(), TT))
           } catch {}
         }({
-          name: YY.name,
-          cosmetics: YY.cosmetics
-        }), mY(rR), hY((rY => {
-          var DY;
+          name: TT.name,
+          cosmetics: TT.cosmetics
+        }), gT(XW), QT((oT => {
+          var IT;
           return {
-            name: YY.name,
-            seq: (null !== (DY = null === rY || void 0 === rY ? void 0 : rY.seq) && void 0 !== DY ? DY : 0) + 1
+            name: TT.name,
+            seq: (null !== (IT = null === oT || void 0 === oT ? void 0 : oT.seq) && void 0 !== IT ? IT : 0) + 1
           }
         }))
       }
-      async function ir(YY) {
-        var rY, DY;
-        if (kY.current) return;
-        if (!rr) return void vr(YY);
-        CY(null), bY(null);
-        const FY = "gift" === Fr ? {
-          name: IR(sY.recipient),
-          cosmetics: sY.recipientCosmetics
+      async function xo(TT) {
+        var oT, IT;
+        if (GT.current) return;
+        if (!oo) return void So(TT);
+        UT(null), ZT(null);
+        const iT = "gift" === io ? {
+          name: DW(LT.recipient),
+          cosmetics: LT.recipientCosmetics
         } : null;
-        if (FY && !FY.name) return void PY();
-        const AY = "superRank" === YY ? jY.l.id : (0, jY.c)(YY);
-        kY.current = !0;
-        const IY = await (0, YI.e)(AY, null !== (rY = null === FY || void 0 === FY ? void 0 : FY.name) && void 0 !== rY ? rY : null);
-        if (kY.current = !1, !IY) return;
-        zY(YY);
-        const RY = await nA.b.purchase(AY, null !== (DY = null === FY || void 0 === FY ? void 0 : FY.name) && void 0 !== DY ? DY : null);
-        zY(null), RY ? CY(RY) : (ur(YY, FY), FY || (await (0, PA.flushClientAnalyticsEvents)(), (0, xA.refreshWithoutConfirmation)("superRank" === YY ? "/super-rank-welcome" : `/pack-welcome/${YY}`)))
+        if (iT && !iT.name) return void NT();
+        const zT = "superRank" === TT ? YT.h.id : (0, YT.b)(TT);
+        GT.current = !0;
+        const kT = await (0, Wk.d)(zT, null !== (oT = null === iT || void 0 === iT ? void 0 : iT.name) && void 0 !== oT ? oT : null);
+        if (GT.current = !1, !kT) return;
+        jT(TT);
+        const WT = await Tk.d.purchase(zT, null !== (IT = null === iT || void 0 === iT ? void 0 : iT.name) && void 0 !== IT ? IT : null);
+        jT(null), WT ? UT(WT) : (Do(TT, iT), iT || (await (0, Ik.flushClientAnalyticsEvents)(), (0, Vz.refreshWithoutConfirmation)("superRank" === TT ? "/super-rank-welcome" : `/pack-welcome/${TT}`)))
       }
-      const yr = IY()("Store", {
-        StoreGift: "gift" === Fr,
-        StorePortrait: Rr,
-        StoreCompact: Or
+      const co = kT()("Store", {
+        StoreGift: "gift" === io,
+        StorePortrait: Wo,
+        StoreCompact: Xo
       });
-      if ("pack" === WY.kind) {
-        const YY = WY.pack,
-          rY = Ar.packs.find((rY => rY.pack === YY));
-        return (0, vY.jsx)("div", {
-          ref: XY,
+      if ("pack" === rT.kind) {
+        const TT = rT.pack,
+          oT = zo.packs.find((oT => oT.pack === TT));
+        return (0, ST.jsx)("div", {
+          ref: lT,
           className: "CosmeticShopContainer",
-          children: (0, vY.jsx)(LA.f, {
-            pack: YY,
+          children: (0, ST.jsx)(zk.f, {
+            pack: TT,
             onBack: () => {
-              mY(rR)
+              gT(XW)
             },
-            onPurchased: rY => {
-              ur(YY, rY ? {
-                name: rY,
+            onPurchased: oT => {
+              Do(TT, oT ? {
+                name: oT,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === Fr && gr && rY && (0, vY.jsxs)(vY.Fragment, {
-              children: [(0, vY.jsx)(JI, {
-                state: rY.state,
-                item: YY,
-                price: (Qr = YY, "superRank" === Qr ? jY.l.price : (0, jY.f)(Qr)),
-                busy: ar,
+            giftCta: "gift" === io && Bo && oT && (0, ST.jsxs)(ST.Fragment, {
+              children: [(0, ST.jsx)(tk, {
+                state: oT.state,
+                item: TT,
+                price: (Ko = TT, "superRank" === Ko ? YT.h.price : (0, YT.c)(Ko)),
+                busy: Fo,
                 onAct: () => {
-                  ir(YY)
+                  xo(TT)
                 },
                 onNeedRecipient: () => {
-                  mY(rR), PY()
+                  gT(XW), NT()
                 }
-              }), ZY && (0, vY.jsx)("span", {
+              }), JT && (0, ST.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: gY(ZY)
+                children: BT(JT)
               })]
             }),
-            ownedPacks: Dr,
-            startAsGift: "gift" === Fr,
-            initialGiftRecipient: "gift" === Fr ? null !== gr && void 0 !== gr ? gr : sY.query.trim() : "",
-            highlightCta: dY === YY
-          }, YY)
+            ownedPacks: Io,
+            startAsGift: "gift" === io,
+            initialGiftRecipient: "gift" === io ? null !== Bo && void 0 !== Bo ? Bo : LT.query.trim() : "",
+            highlightCta: OT === TT
+          }, TT)
         })
       }
-      var Qr;
-      return "superRank" === WY.kind ? (0, vY.jsx)("div", {
-        ref: XY,
-        className: IY()(yr, "StoreDetailView"),
-        children: (0, vY.jsx)(YR, {
-          state: Ar.superRank.state,
-          mode: Fr,
-          giftName: gr,
-          busy: ar,
-          highlight: "superRank" === dY,
-          purchaseError: ZY,
+      var Ko;
+      return "superRank" === rT.kind ? (0, ST.jsx)("div", {
+        ref: lT,
+        className: kT()(co, "StoreDetailView"),
+        children: (0, ST.jsx)(WW, {
+          state: zo.superRank.state,
+          mode: io,
+          giftName: Bo,
+          busy: Fo,
+          highlight: "superRank" === OT,
+          purchaseError: JT,
           onBack: () => {
-            mY(rR)
+            gT(XW)
           },
           onChooseRecipient: () => {
-            mY(rR), PY()
+            gT(XW), NT()
           },
           onAct: () => {
-            ir("superRank")
+            xo("superRank")
           },
           onLogin: () => {
-            vr("superRank")
+            So("superRank")
           }
         })
-      }) : (0, vY.jsxs)("div", {
-        ref: XY,
-        className: yr,
-        children: [(0, vY.jsx)("div", {
+      }) : (0, ST.jsxs)("div", {
+        ref: lT,
+        className: co,
+        children: [(0, ST.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, vY.jsx)(VI, {
-            selfName: uY ? aY.getPlayerName() : "",
-            giftRecipient: sY,
-            suggestionsVersion: null !== (rY = null === fY || void 0 === fY ? void 0 : fY.seq) && void 0 !== rY ? rY : 0,
-            pulseSignal: BY,
-            disabled: ar || !uY
+          children: (0, ST.jsx)(vk, {
+            selfName: DT ? FT.getPlayerName() : "",
+            giftRecipient: LT,
+            suggestionsVersion: null !== (oT = null === aT || void 0 === aT ? void 0 : aT.seq) && void 0 !== oT ? oT : 0,
+            pulseSignal: vT,
+            disabled: Fo || !DT
           })
-        }), fY && (0, vY.jsxs)("div", {
+        }), aT && (0, ST.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            hY(null)
+            QT(null)
           },
-          children: [(0, vY.jsx)(UA.b, {
-            showSignal: fY.seq
-          }), rI.d, " ", gY("store:giftSent", {
-            name: fY.name
+          children: [(0, ST.jsx)(ik.d, {
+            showSignal: aT.seq
+          }), Xk.b, " ", BT("store:giftSent", {
+            name: aT.name
           })]
-        }, fY.seq), !fY && ZY && (0, vY.jsx)("div", {
+        }, aT.seq), !aT && JT && (0, ST.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: gY(ZY)
-        }), (0, vY.jsx)(tI, {
-          layout: Ar,
-          mountAtOnce: null !== qY.current,
-          bundleGift: "gift" === Fr ? {
-            recipientName: gr,
-            lookingUp: "pending" === sY.recipient.status,
-            busy: ar,
-            onNeedRecipient: PY,
-            onSent: YY => {
-              (0, pY.reportAnalyticsClick)({
+          children: BT(JT)
+        }), (0, ST.jsx)(kW, {
+          layout: zo,
+          mountAtOnce: null !== sT.current,
+          bundleGift: "gift" === io ? {
+            recipientName: Bo,
+            lookingUp: "pending" === LT.recipient.status,
+            busy: Fo,
+            onNeedRecipient: NT,
+            onSent: TT => {
+              (0, tT.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), sr({
-                name: YY,
-                cosmetics: sY.recipientCosmetics
+              }), Lo({
+                name: TT,
+                cosmetics: LT.recipientCosmetics
               })
             }
           } : null,
-          superRankDaysLeft: tY,
-          superRankTotalDays: null !== (AY = null === UY || void 0 === UY ? void 0 : UY.superRankForDays) && void 0 !== AY ? AY : 0,
-          busy: ar,
-          highlightItem: dY,
-          onOpen: function(YY) {
-            (0, pY.reportAnalyticsClick)({
+          superRankDaysLeft: VT,
+          superRankTotalDays: null !== (zT = null === PT || void 0 === PT ? void 0 : PT.superRankForDays) && void 0 !== zT ? zT : 0,
+          busy: Fo,
+          highlightItem: OT,
+          onOpen: function(TT) {
+            (0, tT.reportAnalyticsClick)({
               id: "store.item_open",
-              value: YY
-            }), mY((0, MY.e)(YY))
+              value: TT
+            }), gT((0, nT.g)(TT))
           },
-          onAct: ir,
-          onNeedRecipient: PY,
-          onLogin: vr
+          onAct: xo,
+          onNeedRecipient: NT,
+          onLogin: So
         })]
       })
     }));
-    var OR = DY(2423),
-      gR = DY(8253),
-      aR = DY(2479),
-      vR = DY(2346),
-      uR = DY(2380),
-      sR = DY(2392),
-      iR = DY(2397),
-      yR = DY(2466),
-      QR = DY(2447),
-      oR = DY(2202),
-      WR = DY(2233),
-      ER = DY(2223),
-      mR = DY(1893),
-      VR = DY(2406),
-      SR = DY(2242);
+    var xW = IT(2384),
+      cW = IT(8267),
+      KW = IT(2445),
+      MW = IT(2290),
+      rW = IT(2344),
+      AW = IT(2357),
+      gW = IT(2363),
+      hW = IT(2429),
+      wW = IT(2417),
+      mW = IT(2160),
+      eW = IT(2189),
+      RW = IT(2180),
+      uW = IT(1852),
+      vW = IT(2369),
+      EW = IT(2193);
 
-    function lR(YY) {
+    function fW(TT) {
       let {
-        show: rY
-      } = YY;
-      return rY ? (0, vY.jsx)(TR, {}) : null
+        show: oT
+      } = TT;
+      return oT ? (0, ST.jsx)(CW, {}) : null
     }
 
-    function TR() {
+    function CW() {
       const {
-        t: YY
-      } = (0, RY.C)(), {
-        followsLeader: rY
-      } = (0, vR.i)(), {
-        loading: DY,
-        friends: AY,
-        requests: gY,
-        invites: aY
-      } = (0, yI.j)(), {
-        userContext: uY
-      } = (0, iY.d)(), [sY, yY] = (0, FY.useState)(SR.h);
-      (0, FY.useEffect)((() => {
-        (0, SR.c)()
+        t: TT
+      } = (0, WT.t)(), {
+        followsLeader: oT
+      } = (0, MW.i)(), {
+        loading: IT,
+        friends: zT,
+        requests: BT,
+        invites: FT
+      } = (0, hk.l)(), {
+        userContext: DT
+      } = (0, xT.b)(), [LT, cT] = (0, iT.useState)(EW.l);
+      (0, iT.useEffect)((() => {
+        (0, EW.c)()
       }), []);
-      const QY = gY.map((YY => YY.name)),
+      const KT = BT.map((TT => TT.name)),
         {
-          state: WY,
-          recentRequesters: EY
-        } = (0, QR.n)(),
-        mY = new Map([...("loaded" === WY.status ? WY.recentPlayers : []).map((YY => [YY.preview.name, YY])), ...EY.map((YY => [YY.name, YY]))]),
-        VY = (0, FY.useRef)(null),
-        [TY, eY] = (0, FY.useState)(""),
-        [NY, BY] = (0, FY.useState)("Enter"),
-        [cY, KY] = (0, FY.useState)(null);
+          state: rT,
+          recentRequesters: AT
+        } = (0, wW.k)(),
+        gT = new Map([...("loaded" === rT.status ? rT.recentPlayers : []).map((TT => [TT.preview.name, TT])), ...AT.map((TT => [TT.name, TT]))]),
+        hT = (0, iT.useRef)(null),
+        [eT, RT] = (0, iT.useState)(""),
+        [uT, vT] = (0, iT.useState)("Enter"),
+        [ET, fT] = (0, iT.useState)(null);
 
-      function HY() {
-        TY && (BY("Loading"), (0, ER.h)(TY, "social_menu").then((YY => {
-          if (VY.current) switch (YY.kind) {
+      function CT() {
+        eT && (vT("Loading"), (0, RW.i)(eT, "social_menu").then((TT => {
+          if (hT.current) switch (TT.kind) {
             case "sent":
-              BY("Success");
+              vT("Success");
               break;
             case "becameFriends":
-              BY("BecameFriends");
+              vT("BecameFriends");
               break;
             case "failed":
-              KY(YY.message), BY("Error")
+              fT(TT.message), vT("Error")
           }
         })))
       }
-      return (0, FY.useEffect)((() => {
-        if ("Enter" === NY || "Loading" === NY) return;
-        const YY = setTimeout((() => {
-          VY.current.value = "", eY(""), BY("Enter")
-        }), "Success" === NY ? 1e3 : 4e3);
+      return (0, iT.useEffect)((() => {
+        if ("Enter" === uT || "Loading" === uT) return;
+        const TT = setTimeout((() => {
+          hT.current.value = "", RT(""), vT("Enter")
+        }), "Success" === uT ? 1e3 : 4e3);
         return () => {
-          clearTimeout(YY)
+          clearTimeout(TT)
         }
-      }), [NY]), (0, vY.jsx)("div", {
+      }), [uT]), (0, ST.jsx)("div", {
         className: "SocialMenu",
-        children: (0, vY.jsxs)("div", {
+        children: (0, ST.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, vY.jsxs)("div", {
+          children: [(0, ST.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, vY.jsxs)("div", {
+            children: [(0, ST.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, vY.jsx)(iR.b, {
-                label: YY("socialBar:addFriend")
-              }), (0, vY.jsxs)("div", {
+              children: [(0, ST.jsx)(gW.d, {
+                label: TT("socialBar:addFriend")
+              }), (0, ST.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, vY.jsxs)("div", {
-                  className: IY()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${NY}`]: !0
+                children: [(0, ST.jsxs)("div", {
+                  className: kT()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${uT}`]: !0
                   }),
-                  children: ["Loading" === NY && (0, vY.jsx)(lY.c, {}), "Success" === NY && (0, vY.jsx)(OY.e, {
+                  children: ["Loading" === uT && (0, ST.jsx)(mT.d, {}), "Success" === uT && (0, ST.jsx)(XT.e, {
                     name: "check"
-                  }), "BecameFriends" === NY && (0, vY.jsx)(vY.Fragment, {
-                    children: YY("socialBar:nowFriends", {
-                      playerName: TY
+                  }), "BecameFriends" === uT && (0, ST.jsx)(ST.Fragment, {
+                    children: TT("socialBar:nowFriends", {
+                      playerName: eT
                     })
-                  }), "Error" === NY && cY && (0, vY.jsx)(vY.Fragment, {
-                    children: YY(cY.translationKey, cY.params)
+                  }), "Error" === uT && ET && (0, ST.jsx)(ST.Fragment, {
+                    children: TT(ET.translationKey, ET.params)
                   })]
-                }), (0, vY.jsxs)("div", {
+                }), (0, ST.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, vY.jsx)(SY.d, {
+                  children: [(0, ST.jsx)(wT.e, {
                     className: "PlayerSearchInput",
-                    placeholderText: YY("socialBar:enterPlayerName"),
-                    domRef: VY,
-                    onValueChange: YY => {
-                      eY((0, CY.s)(YY)), VY.current.value = (0, CY.s)(YY)
+                    placeholderText: TT("socialBar:enterPlayerName"),
+                    domRef: hT,
+                    onValueChange: TT => {
+                      RT((0, UT.n)(TT)), hT.current.value = (0, UT.n)(TT)
                     },
                     onEnter: () => {
-                      TY && (0, pY.reportAnalyticsClick)({
+                      eT && (0, tT.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), HY()
+                      }), CT()
                     }
-                  }), (0, vY.jsxs)(oY.f, {
+                  }), (0, ST.jsxs)(MT.e, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      HY()
+                      CT()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, vY.jsx)(OY.e, {
+                    children: [(0, ST.jsx)(XT.e, {
                       name: "user-plus"
-                    }), " ", YY("socialBar:sendRequest")]
+                    }), " ", TT("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, vY.jsx)(VR.c, {
+              }), (0, ST.jsx)(vW.d, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), aY.length > 0 && (0, vY.jsxs)("div", {
+            }), FT.length > 0 && (0, ST.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, vY.jsx)(iR.b, {
-                label: YY("socialBar:invites"),
-                meta: aY.length
-              }), aY.map((rY => (0, vY.jsxs)("div", {
+              children: [(0, ST.jsx)(gW.d, {
+                label: TT("socialBar:invites"),
+                meta: FT.length
+              }), FT.map((oT => (0, ST.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, vY.jsx)("div", {
+                children: [(0, ST.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, vY.jsx)(oR.c, {
-                    invite: rY
+                  children: (0, ST.jsx)(mW.b, {
+                    invite: oT
                   })
-                }), (0, vY.jsx)("div", {
+                }), (0, ST.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, vY.jsx)(oR.e, {
-                    invite: rY
+                  children: (0, ST.jsx)(mW.f, {
+                    invite: oT
                   })
-                }), (0, vY.jsx)(oY.n, {
+                }), (0, ST.jsx)(MT.m, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, WR.f)(rY)
+                    (0, eW.g)(oT)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${rY.destination.kind}`
+                    value: `social_menu:${oT.destination.kind}`
                   },
-                  children: YY("general:join")
-                }), (0, vY.jsx)(bY.g, {
-                  tooltipInner: (0, vY.jsx)(vY.Fragment, {
-                    children: YY("general:decline")
+                  children: TT("general:join")
+                }), (0, ST.jsx)(ZT.e, {
+                  tooltipInner: (0, ST.jsx)(ST.Fragment, {
+                    children: TT("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, vY.jsx)(oY.j, {
+                  children: (0, ST.jsx)(MT.i, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === sY || void 0 === sY ? void 0 : sY.kind) && sY.inviteId === rY.id,
+                    padDefaultFocus: "invite" === (null === LT || void 0 === LT ? void 0 : LT.kind) && LT.inviteId === oT.id,
                     onClick: () => {
-                      yI.c.declineInvite(rY.id)
+                      hk.e.declineInvite(oT.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${rY.destination.kind}`
+                      value: `social_menu:${oT.destination.kind}`
                     },
-                    children: (0, vY.jsx)(OY.e, {
+                    children: (0, ST.jsx)(XT.e, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, rY.id)))]
-            }), (0, vY.jsxs)("div", {
-              className: IY()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !DY && 0 === gY.length
+              }, oT.id)))]
+            }), (0, ST.jsxs)("div", {
+              className: kT()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !IT && 0 === BT.length
               }),
-              children: [(0, vY.jsx)(iR.b, {
-                label: (0, vY.jsxs)(vY.Fragment, {
-                  children: [(0, vY.jsx)(OY.e, {
-                    name: mR.g
-                  }), " ", YY("socialBar:requests")]
+              children: [(0, ST.jsx)(gW.d, {
+                label: (0, ST.jsxs)(ST.Fragment, {
+                  children: [(0, ST.jsx)(XT.e, {
+                    name: uW.d
+                  }), " ", TT("socialBar:requests")]
                 }),
-                meta: (0, vY.jsxs)(vY.Fragment, {
-                  children: [gY.length, gY.length === XY.o && (0, vY.jsx)("span", {
+                meta: (0, ST.jsxs)(ST.Fragment, {
+                  children: [BT.length, BT.length === lT.n && (0, ST.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: YY("socialBar:limitReached")
+                    children: TT("socialBar:limitReached")
                   })]
                 })
-              }), DY && (0, vY.jsx)("div", {
+              }), IT && (0, ST.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, vY.jsx)(lY.c, {})
-              }), !DY && 0 === gY.length && (0, vY.jsx)("div", {
+                children: (0, ST.jsx)(mT.d, {})
+              }), !IT && 0 === BT.length && (0, ST.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: YY("socialBar:noFriendRequests")
-              }), !DY && gY.length > 0 && (0, vY.jsx)("div", {
+                children: TT("socialBar:noFriendRequests")
+              }), !IT && BT.length > 0 && (0, ST.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, vY.jsx)(LF.b, {
+                children: (0, ST.jsx)(iz.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [gY],
-                  children: gY.map(((rY, DY) => {
-                    const FY = mY.get(rY.name);
-                    return (0, vY.jsxs)(sR.e, {
-                      playerSocialPreview: rY,
-                      zIndex: gY.length - DY,
-                      padDefaultFocus: (0, SR.e)(sY, rY.name, DY),
-                      status: FY && (0, vY.jsx)(yR.b, {
-                        gameNameWithVariation: FY.gameNameWithVariation,
-                        isPrivateLobby: FY.isPrivateLobby
+                  observerUpdateDeps: [BT],
+                  children: BT.map(((oT, IT) => {
+                    const iT = gT.get(oT.name);
+                    return (0, ST.jsxs)(AW.c, {
+                      playerSocialPreview: oT,
+                      zIndex: BT.length - IT,
+                      padDefaultFocus: (0, EW.i)(LT, oT.name, IT),
+                      status: iT && (0, ST.jsx)(hW.b, {
+                        gameNameWithVariation: iT.gameNameWithVariation,
+                        isPrivateLobby: iT.isPrivateLobby
                       }),
-                      children: [(0, vY.jsx)(bY.g, {
-                        tooltipInner: (0, vY.jsx)(vY.Fragment, {
-                          children: YY("general:accept")
+                      children: [(0, ST.jsx)(ZT.e, {
+                        tooltipInner: (0, ST.jsx)(ST.Fragment, {
+                          children: TT("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, vY.jsx)(oY.f, {
+                        children: (0, ST.jsx)(MT.e, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            yY((0, SR.d)(QY, DY)), (0, ER.e)(rY.name, !0, {
+                            cT((0, EW.e)(KT, IT)), (0, RW.e)(oT.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -6867,19 +6868,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, vY.jsx)(OY.e, {
+                          children: (0, ST.jsx)(XT.e, {
                             name: "check"
                           })
                         })
-                      }), (0, vY.jsx)(bY.g, {
-                        tooltipInner: (0, vY.jsx)(vY.Fragment, {
-                          children: YY("general:decline")
+                      }), (0, ST.jsx)(ZT.e, {
+                        tooltipInner: (0, ST.jsx)(ST.Fragment, {
+                          children: TT("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, vY.jsx)(oY.j, {
+                        children: (0, ST.jsx)(MT.i, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            yY((0, SR.d)(QY, DY)), (0, ER.e)(rY.name, !1, {
+                            cT((0, EW.e)(KT, IT)), (0, RW.e)(oT.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -6887,62 +6888,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, vY.jsx)(OY.e, {
+                          children: (0, ST.jsx)(XT.e, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${rY.name}_${rY.isError}`)
+                    }, `${oT.name}_${oT.isError}`)
                   }))
                 })
               })]
-            }), (0, vY.jsx)(yR.f, {})]
-          }), (0, vY.jsxs)("div", {
+            }), (0, ST.jsx)(hW.e, {})]
+          }), (0, ST.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, vY.jsxs)("div", {
+            children: [(0, ST.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, vY.jsx)(iR.b, {
-                label: YY("socialBar:party")
-              }), (0, vY.jsx)(uR.c, {})]
-            }), (0, vY.jsxs)("div", {
+              children: [(0, ST.jsx)(gW.d, {
+                label: TT("socialBar:party")
+              }), (0, ST.jsx)(rW.b, {})]
+            }), (0, ST.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, vY.jsx)(iR.b, {
-                label: (0, vY.jsxs)(vY.Fragment, {
-                  children: [(0, vY.jsx)(OY.e, {
-                    name: mR.d
-                  }), " ", YY("socialBar:friends")]
+              children: [(0, ST.jsx)(gW.d, {
+                label: (0, ST.jsxs)(ST.Fragment, {
+                  children: [(0, ST.jsx)(XT.e, {
+                    name: uW.c
+                  }), " ", TT("socialBar:friends")]
                 }),
-                meta: (0, vY.jsxs)(vY.Fragment, {
-                  children: [AY.length, AY.length >= (0, XY.e)(uY.getPlayerRanks()) && (0, vY.jsx)("span", {
+                meta: (0, ST.jsxs)(ST.Fragment, {
+                  children: [zT.length, zT.length >= (0, lT.b)(DT.getPlayerRanks()) && (0, ST.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: YY("socialBar:limitReached")
+                    children: TT("socialBar:limitReached")
                   })]
                 })
-              }), DY && (0, vY.jsx)("div", {
+              }), IT && (0, ST.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, vY.jsx)(lY.c, {})
-              }), !DY && 0 === AY.length && (0, vY.jsx)("div", {
+                children: (0, ST.jsx)(mT.d, {})
+              }), !IT && 0 === zT.length && (0, ST.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: YY("socialBar:noFriends")
-              }), !DY && AY.length > 0 && (0, vY.jsx)("div", {
+                children: TT("socialBar:noFriends")
+              }), !IT && zT.length > 0 && (0, ST.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, vY.jsx)(LF.b, {
+                children: (0, ST.jsx)(iz.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [AY],
-                  children: AY.map(((YY, DY) => (0, vY.jsx)(sR.e, {
-                    playerSocialPreview: YY,
+                  observerUpdateDeps: [zT],
+                  children: zT.map(((TT, IT) => (0, ST.jsx)(AW.c, {
+                    playerSocialPreview: TT,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: YY => {
-                      yI.c.removeFriendFromState(YY)
+                    onFriendRemoved: TT => {
+                      hk.e.removeFriendFromState(TT)
                     },
-                    zIndex: AY.length - DY,
-                    children: (0, vY.jsx)(sR.b, {
-                      friend: YY,
-                      followsLeader: rY,
+                    zIndex: zT.length - IT,
+                    children: (0, ST.jsx)(AW.b, {
+                      friend: TT,
+                      followsLeader: oT,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${YY.name}_${YY.isError}`)))
+                  }, `${TT.name}_${TT.isError}`)))
                 })
               })]
             })]
@@ -6950,231 +6951,231 @@ export const modules = {
         })
       })
     }
-    var eR = DY(2329);
-    const NR = YY => {
+    var jW = IT(2274);
+    const JW = TT => {
         let {
-          action: rY,
-          padAction: DY
-        } = YY;
+          action: oT,
+          padAction: IT
+        } = TT;
         const {
-          isTouchScreen: FY
-        } = (0, eY.j)(["isTouchScreen"]), AY = (0, kD.p)();
-        return FY && !AY ? null : (0, vY.jsx)(dD.d, {
+          isTouchScreen: iT
+        } = (0, RT.k)(["isTouchScreen"]), zT = (0, yI.p)();
+        return iT && !zT ? null : (0, ST.jsx)(qI.e, {
           className: "EverythingMenuTabKey",
-          noaAction: rY,
+          noaAction: oT,
           padHidesKey: !0,
-          padMenuShortcut: DY
+          padMenuShortcut: IT
         })
       },
-      BR = (0, FY.memo)((function() {
+      UW = (0, iT.memo)((function() {
         const {
-          t: YY
-        } = (0, RY.C)(), {
-          gameState: rY,
-          openEverythingMenuName: DY,
-          initSdkSelectorFinished: AY,
-          crosshairGameView: OY
-        } = (0, eY.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: gY
-        } = (0, iY.d)(), aY = (0, wY.purchasesAllowed)(), uY = (0, MY.w)(), sY = (YY, rY) => (0, vY.jsx)(NR, {
-          action: YY,
-          padAction: rY
-        }), [yY, QY] = (0, FY.useState)(null), EY = (0, FY.useRef)(null), mY = {
-          ..."inGame" === rY ? {} : (0, oY.P)({
+          t: TT
+        } = (0, WT.t)(), {
+          gameState: oT,
+          openEverythingMenuName: IT,
+          initSdkSelectorFinished: zT,
+          crosshairGameView: XT
+        } = (0, RT.k)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: BT
+        } = (0, xT.b)(), FT = (0, qT.purchasesAllowed)(), DT = (0, nT.C)(), LT = (TT, oT) => (0, ST.jsx)(JW, {
+          action: TT,
+          padAction: oT
+        }), [cT, KT] = (0, iT.useState)(null), AT = (0, iT.useRef)(null), gT = {
+          ..."inGame" === oT ? {} : (0, MT.Q)({
             focusOnClick: !1
           }),
-          ...DF.e
-        }, VY = null !== DY, SY = DY !== wD.t.COSMETIC_SHOP && !OY;
-        async function lY() {
+          ...ki.d
+        }, hT = null !== IT, wT = IT !== sI.q.COSMETIC_SHOP && !XT;
+        async function mT() {
           await async function() {
-            if (!yY) return;
-            await yY(), QY(null)
-          }(), eY.b.set({
+            if (!cT) return;
+            await cT(), KT(null)
+          }(), RT.c.set({
             openEverythingMenuName: null
           })
         }
-        const TY = (0, FY.useMemo)((() => "inGame" === rY ? {
-          text: YY("settingsMenu:exitGame"),
+        const eT = (0, iT.useMemo)((() => "inGame" === oT ? {
+          text: TT("settingsMenu:exitGame"),
           onClick: () => {
-            (0, gR.e)()
+            (0, cW.b)()
           }
-        } : (0, cY.b)() ? {
-          text: YY("settingsMenu:exitGame"),
+        } : (0, ET.c)() ? {
+          text: TT("settingsMenu:exitGame"),
           onClick: () => {
-            LY.k.discordActivity().then((YY => {
-              YY.exit("User exited the game")
+            dT.m.discordActivity().then((TT => {
+              TT.exit("User exited the game")
             }))
           }
-        } : null), [rY, YY]);
-        const NY = (0, vY.jsx)("div", {
+        } : null), [oT, TT]);
+        const uT = (0, ST.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
           onClick: () => {
-            lY()
+            mT()
           },
-          children: (0, vY.jsx)(oY.k, {
+          children: (0, ST.jsx)(MT.j, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, vY.jsx)(FF.d, {
-          showing: VY,
+        return (0, ST.jsx)(Wi.c, {
+          showing: hT,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: DY === wD.t.SHOP,
-          doGameplayStartStopOnShow: "inGame" === rY,
-          children: (0, vY.jsx)(IF.b, {
+          keepsMovement: IT === sI.q.SHOP,
+          doGameplayStartStopOnShow: "inGame" === oT,
+          children: (0, ST.jsx)(Bi.c, {
             className: "EverythingMenuContainer",
-            show: VY && !OY,
-            children: (0, vY.jsx)(AF.e, {
+            show: hT && !XT,
+            children: (0, ST.jsx)(Xi.e, {
               close: () => {
-                lY()
+                mT()
               },
               togglePointerLock: !1,
-              children: (0, vY.jsxs)("div", {
+              children: (0, ST.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, bA.l)(DY) && (0, vY.jsxs)("div", {
+                children: [!(0, pz.n)(IT) && (0, ST.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, vY.jsxs)("div", {
+                  children: [(0, ST.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [TY && (0, vY.jsx)(oY.b, {
+                    children: [eT && (0, ST.jsx)(MT.c, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        TY.onClick()
+                        eT.onClick()
                       },
-                      children: TY.text
-                    }), VY && aY && (0, vY.jsx)("div", {
-                      ...mY,
+                      children: eT.text
+                    }), hT && FT && (0, ST.jsx)("div", {
+                      ...gT,
                       className: "EverythingMenuWallet",
-                      title: YY("homePage:getPremiumCurrency"),
+                      title: TT("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, MY.f)({
+                        (0, nT.k)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, vY.jsx)(OR.f, {})
+                      children: (0, ST.jsx)(xW.e, {})
                     })]
-                  }), (0, vY.jsxs)("div", {
+                  }), (0, ST.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, vY.jsxs)("div", {
-                      ...mY,
+                    children: [(0, ST.jsxs)("div", {
+                      ...gT,
                       "data-pad-tab": !0,
-                      "data-pad-selected": DY === wD.t.SETTINGS ? "true" : void 0,
-                      className: IY()("EverythingMenuTab", {
-                        EverythingMenuTabActive: DY === wD.t.SETTINGS
+                      "data-pad-selected": IT === sI.q.SETTINGS ? "true" : void 0,
+                      className: kT()("EverythingMenuTab", {
+                        EverythingMenuTabActive: IT === sI.q.SETTINGS
                       }),
                       onClick: () => {
-                        eY.b.set({
-                          openEverythingMenuName: wD.t.SETTINGS
+                        RT.c.set({
+                          openEverythingMenuName: sI.q.SETTINGS
                         })
                       },
-                      children: [YY("general:settings"), sY("OpenSettings", "pause")]
-                    }), (0, vY.jsxs)("div", {
-                      ...mY,
+                      children: [TT("general:settings"), LT("OpenSettings", "pause")]
+                    }), (0, ST.jsxs)("div", {
+                      ...gT,
                       "data-pad-tab": !0,
-                      "data-pad-selected": DY === wD.t.CUSTOMISATION ? "true" : void 0,
-                      className: IY()("EverythingMenuTab", {
-                        EverythingMenuTabActive: DY === wD.t.CUSTOMISATION
+                      "data-pad-selected": IT === sI.q.CUSTOMISATION ? "true" : void 0,
+                      className: kT()("EverythingMenuTab", {
+                        EverythingMenuTabActive: IT === sI.q.CUSTOMISATION
                       }),
                       onClick: () => {
-                        eY.b.set({
-                          openEverythingMenuName: wD.t.CUSTOMISATION
+                        RT.c.set({
+                          openEverythingMenuName: sI.q.CUSTOMISATION
                         })
                       },
-                      children: [YY("general:player"), sY("OpenCharacterCustomization")]
-                    }), WY.featureFlags.useSocialFeatures && (0, vY.jsxs)("div", {
-                      ...mY,
+                      children: [TT("general:player"), LT("OpenCharacterCustomization")]
+                    }), rT.featureFlags.useSocialFeatures && (0, ST.jsxs)("div", {
+                      ...gT,
                       "data-pad-tab": !0,
-                      "data-pad-selected": DY === wD.t.SOCIAL ? "true" : void 0,
-                      className: IY()("EverythingMenuTab", {
-                        EverythingMenuTabActive: DY === wD.t.SOCIAL
+                      "data-pad-selected": IT === sI.q.SOCIAL ? "true" : void 0,
+                      className: kT()("EverythingMenuTab", {
+                        EverythingMenuTabActive: IT === sI.q.SOCIAL
                       }),
-                      ...(0, pY.c)({
+                      ...(0, tT.c)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, DY === wD.t.SOCIAL),
+                      }, IT === sI.q.SOCIAL),
                       onClick: () => {
-                        eY.b.set({
-                          openEverythingMenuName: wD.t.SOCIAL
+                        RT.c.set({
+                          openEverythingMenuName: sI.q.SOCIAL
                         })
                       },
-                      children: [YY("socialBar:social"), (0, vY.jsx)(eR.e, {})]
-                    }), aY && (0, vY.jsxs)("div", {
-                      ...mY,
+                      children: [TT("socialBar:social"), (0, ST.jsx)(jW.c, {})]
+                    }), FT && (0, ST.jsxs)("div", {
+                      ...gT,
                       "data-pad-tab": !0,
-                      "data-pad-selected": DY === wD.t.COSMETIC_SHOP ? "true" : void 0,
-                      className: IY()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: DY === wD.t.COSMETIC_SHOP
+                      "data-pad-selected": IT === sI.q.COSMETIC_SHOP ? "true" : void 0,
+                      className: kT()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: IT === sI.q.COSMETIC_SHOP
                       }),
                       onClick: () => {
-                        eY.b.set({
-                          openEverythingMenuName: wD.t.COSMETIC_SHOP
+                        RT.c.set({
+                          openEverythingMenuName: sI.q.COSMETIC_SHOP
                         })
                       },
-                      children: [(0, vY.jsx)("span", {
+                      children: [(0, ST.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: YY("store:title")
-                      }), "dot" === uY && (0, vY.jsx)("span", {
+                        children: TT("store:title")
+                      }), "dot" === DT && (0, ST.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === rY && (0, vY.jsxs)("div", {
-                      ...mY,
+                    }), "inGame" === oT && (0, ST.jsxs)("div", {
+                      ...gT,
                       "data-pad-tab": !0,
-                      "data-pad-selected": DY === wD.t.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: IY()("EverythingMenuTab", {
-                        EverythingMenuTabActive: DY === wD.t.LOBBY_LEADERBOARD
+                      "data-pad-selected": IT === sI.q.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: kT()("EverythingMenuTab", {
+                        EverythingMenuTabActive: IT === sI.q.LOBBY_LEADERBOARD
                       }),
                       onClick: () => {
-                        eY.b.set({
-                          openEverythingMenuName: wD.t.LOBBY_LEADERBOARD
+                        RT.c.set({
+                          openEverythingMenuName: sI.q.LOBBY_LEADERBOARD
                         })
                       },
-                      children: [YY("general:lobby"), sY("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [TT("general:lobby"), LT("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, vY.jsx)("div", {
+                  }), (0, ST.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: NY
+                    children: uT
                   })]
-                }), (0, bA.l)(DY) && NY, (0, vY.jsxs)("div", {
+                }), (0, pz.n)(IT) && uT, (0, ST.jsxs)("div", {
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === rY ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === oT ? "0.85" : "1"
                   },
-                  children: [(0, vY.jsx)(UD, {
-                    show: DY === wD.t.SETTINGS,
-                    setBeforeResumeCallback: QY
-                  }), (0, vY.jsx)(rF, {
-                    show: DY === wD.t.CUSTOMISATION
-                  }), (0, vY.jsx)(FY.Suspense, {
+                  children: [(0, ST.jsx)(Ti, {
+                    show: IT === sI.q.SETTINGS,
+                    setBeforeResumeCallback: KT
+                  }), (0, ST.jsx)(zi, {
+                    show: IT === sI.q.CUSTOMISATION
+                  }), (0, ST.jsx)(iT.Suspense, {
                     fallback: null,
-                    children: (0, vY.jsx)(ZA, {
-                      show: DY === wD.t.SHOP
+                    children: (0, ST.jsx)(Oz, {
+                      show: IT === sI.q.SHOP
                     })
-                  }), (0, vY.jsx)(pA, {
-                    show: DY === wD.t.LOBBY_LEADERBOARD
-                  }), (0, vY.jsx)(RR, {
-                    show: DY === wD.t.COSMETIC_SHOP
-                  }), (0, vY.jsx)(lR, {
-                    show: DY === wD.t.SOCIAL
+                  }), (0, ST.jsx)(Nz, {
+                    show: IT === sI.q.LOBBY_LEADERBOARD
+                  }), (0, ST.jsx)(LW, {
+                    show: IT === sI.q.COSMETIC_SHOP
+                  }), (0, ST.jsx)(fW, {
+                    show: IT === sI.q.SOCIAL
                   })]
-                }), !(0, WY.isMobileApp)() && (0, RF.f)(gY.getPlayerRanks()) && (0, vY.jsx)(IF.b, {
-                  ref: EY,
+                }), !(0, rT.isMobileApp)() && (0, Fi.i)(BT.getPlayerRanks()) && (0, ST.jsx)(Bi.c, {
+                  ref: AT,
                   className: "EverythingMenuBannerDiv",
-                  show: SY,
+                  show: wT,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, vY.jsx)(aR.b, {
+                  children: (0, ST.jsx)(KW.c, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: EY
+                      parentRef: AT
                     },
-                    showing: VY && SY,
+                    showing: hT && wT,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7186,135 +7187,135 @@ export const modules = {
         })
       }))
   },
-  8748: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  8745: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT
     });
-    var FY = DY(341),
-      AY = DY(8756);
+    var iT = IT(314),
+      zT = IT(8754);
 
-    function IY(YY, rY, DY) {
-      const IY = Object.entries(rY).sort(((YY, rY) => rY[1] - YY[1])),
-        RY = (0, FY.qb)(YY);
-      RY.push(YY ? "\n\n" : "\n");
-      for (const [AY, yY] of IY) {
-        var OY, gY, aY;
-        const YY = null !== (OY = null === DY || void 0 === DY || null === (gY = DY[AY]) || void 0 === gY ? void 0 : gY.icon) && void 0 !== OY ? OY : `${AY} Enchantment`;
-        RY.push({
-          icon: YY,
+    function kT(TT, oT, IT) {
+      const kT = Object.entries(oT).sort(((TT, oT) => oT[1] - TT[1])),
+        WT = (0, iT.ob)(TT);
+      WT.push(TT ? "\n\n" : "\n");
+      for (const [zT, cT] of kT) {
+        var XT, BT, FT;
+        const TT = null !== (XT = null === IT || void 0 === IT || null === (BT = IT[zT]) || void 0 === BT ? void 0 : BT.icon) && void 0 !== XT ? XT : `${zT} Enchantment`;
+        WT.push({
+          icon: TT,
           style: {
             fontSize: "1.5rem"
           }
-        }), RY.push({
-          str: `${AY} ${null!==(aY=(0,FY.R)(yY))&&void 0!==aY?aY:yY}\n`
+        }), WT.push({
+          str: `${zT} ${null!==(FT=(0,iT.U)(cT))&&void 0!==FT?FT:cT}\n`
         })
       }
-      RY.push({
+      WT.push({
         str: "\n"
       });
-      for (const [FY, yY] of IY) {
-        var vY, uY, sY, iY;
-        const YY = null !== (vY = null === DY || void 0 === DY || null === (uY = DY[FY]) || void 0 === uY ? void 0 : uY.icon) && void 0 !== vY ? vY : `${FY} Enchantment`,
-          rY = null !== (sY = null === DY || void 0 === DY || null === (iY = DY[FY]) || void 0 === iY ? void 0 : iY.description) && void 0 !== sY ? sY : (0, AY.l)(FY);
-        RY.push({
-          icon: YY,
+      for (const [iT, cT] of kT) {
+        var ST, DT, LT, xT;
+        const TT = null !== (ST = null === IT || void 0 === IT || null === (DT = IT[iT]) || void 0 === DT ? void 0 : DT.icon) && void 0 !== ST ? ST : `${iT} Enchantment`,
+          oT = null !== (LT = null === IT || void 0 === IT || null === (xT = IT[iT]) || void 0 === xT ? void 0 : xT.description) && void 0 !== LT ? LT : (0, zT.k)(iT);
+        WT.push({
+          icon: TT,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), RY.push({
-          str: rY,
+        }), WT.push({
+          str: oT,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), RY.push({
+        }), WT.push({
           str: "\n"
         })
       }
-      return RY
+      return WT
     }
   },
-  8765: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => aY,
-      c: () => EY,
-      e: () => oY,
-      i: () => gY,
-      j: () => WY,
-      m: () => vY,
-      p: () => sY,
-      t: () => QY,
-      w: () => uY
+  8758: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => FT,
+      d: () => AT,
+      g: () => MT,
+      h: () => BT,
+      i: () => rT,
+      k: () => ST,
+      o: () => LT,
+      q: () => KT,
+      r: () => DT
     });
-    var FY = DY(332),
-      AY = DY(625),
-      IY = DY(341),
-      RY = DY(3808),
-      OY = DY(8748);
+    var iT = IT(306),
+      zT = IT(618),
+      kT = IT(314),
+      WT = IT(3800),
+      XT = IT(8745);
 
-    function gY(YY, rY) {
-      var DY;
+    function BT(TT, oT) {
+      var IT;
       let {
-        player: FY,
-        chestOrCreative: AY
-      } = YY;
-      var IY;
-      return rY < FY.length ? null !== (IY = FY[rY]) && void 0 !== IY ? IY : null : null !== (DY = AY[rY - FY.length]) && void 0 !== DY ? DY : null
+        player: iT,
+        chestOrCreative: zT
+      } = TT;
+      var kT;
+      return oT < iT.length ? null !== (kT = iT[oT]) && void 0 !== kT ? kT : null : null !== (IT = zT[oT - iT.length]) && void 0 !== IT ? IT : null
     }
 
-    function aY(YY) {
-      var rY;
-      return null !== (rY = YY.amount) && void 0 !== rY ? rY : 0
+    function FT(TT) {
+      var oT;
+      return null !== (oT = TT.amount) && void 0 !== oT ? oT : 0
     }
 
-    function vY(YY) {
-      return 0 === YY.button || void 0 === YY.button
+    function ST(TT) {
+      return 0 === TT.button || void 0 === TT.button
     }
 
-    function uY(YY) {
-      return !!YY.shiftKey
+    function DT(TT) {
+      return !!TT.shiftKey
     }
 
-    function sY(YY) {
-      return "touches" in YY || "touch" === YY.pointerType || "pen" === YY.pointerType
+    function LT(TT) {
+      return "touches" in TT || "touch" === TT.pointerType || "pen" === TT.pointerType
     }
-    const iY = new Set,
-      yY = 50;
+    const xT = new Set,
+      cT = 50;
 
-    function QY(YY, rY) {
-      var DY;
-      const FY = null === (DY = YY[rY]) || void 0 === DY ? void 0 : DY.displayName;
-      return (0, AY.H)(FY) ? "string" !== typeof rY ? "" : (!iY.has(rY) && iY.size < yY && (iY.add(rY), console.warn(`No item called "${rY}", so its hover shows the name as given`)), rY) : FY
+    function KT(TT, oT) {
+      var IT;
+      const iT = null === (IT = TT[oT]) || void 0 === IT ? void 0 : IT.displayName;
+      return (0, zT.K)(iT) ? "string" !== typeof oT ? "" : (!xT.has(oT) && xT.size < cT && (xT.add(oT), console.warn(`No item called "${oT}", so its hover shows the name as given`)), oT) : iT
     }
 
-    function oY(YY, rY, DY) {
-      var gY, aY, vY, uY, sY, iY, yY, oY, WY, EY, mY, VY, SY, lY;
-      const TY = YY.attributes,
-        eY = null !== (gY = null === (aY = rY[YY.name]) || void 0 === aY ? void 0 : aY.rootName) && void 0 !== gY ? gY : YY.name,
-        NY = null !== (vY = null !== (uY = TY.customDisplayName) && void 0 !== uY ? uY : null === (sY = rY[YY.name]) || void 0 === sY ? void 0 : sY.displayName) && void 0 !== vY ? vY : QY(rY, eY);
-      let BY = NY;
-      const cY = null === (iY = TY.customAttributes) || void 0 === iY ? void 0 : iY.enchantmentTier;
-      cY && (BY = (0, IY.qb)(NY, {
-        colour: IY.nb[cY]
+    function MT(TT, oT, IT) {
+      var BT, FT, ST, DT, LT, xT, cT, MT, rT, AT, gT, hT, wT, mT;
+      const eT = TT.attributes,
+        RT = null !== (BT = null === (FT = oT[TT.name]) || void 0 === FT ? void 0 : FT.rootName) && void 0 !== BT ? BT : TT.name,
+        uT = null !== (ST = null !== (DT = eT.customDisplayName) && void 0 !== DT ? DT : null === (LT = oT[TT.name]) || void 0 === LT ? void 0 : LT.displayName) && void 0 !== ST ? ST : KT(oT, RT);
+      let vT = uT;
+      const ET = null === (xT = eT.customAttributes) || void 0 === xT ? void 0 : xT.enchantmentTier;
+      ET && (vT = (0, kT.ob)(uT, {
+        colour: kT.lb[ET]
       }));
-      const KY = null !== (yY = null !== (oY = null !== (WY = function(YY, rY) {
-        var DY;
-        if (void 0 === YY || null !== (DY = rY.customAttributes) && void 0 !== DY && DY.author) return YY;
-        const AY = (0, FY.cc)(YY);
-        return AY.every((YY => "string" === typeof YY)) ? YY : AY.map((YY => "string" === typeof YY ? YY : {
-          icon: YY.icon,
+      const fT = null !== (cT = null !== (MT = null !== (rT = function(TT, oT) {
+        var IT;
+        if (void 0 === TT || null !== (IT = oT.customAttributes) && void 0 !== IT && IT.author) return TT;
+        const zT = (0, iT.ac)(TT);
+        return zT.every((TT => "string" === typeof TT)) ? TT : zT.map((TT => "string" === typeof TT ? TT : {
+          icon: TT.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(TY.customDescription, TY)) && void 0 !== WY ? WY : null === (EY = rY[YY.name]) || void 0 === EY ? void 0 : EY.description) && void 0 !== oY ? oY : null === (mY = rY[eY]) || void 0 === mY ? void 0 : mY.description) && void 0 !== yY ? yY : "";
-      let HY = KY;
-      if (null !== (VY = TY.customAttributes) && void 0 !== VY && VY.enchantments) HY = (0, OY.c)(KY, TY.customAttributes.enchantments, TY.customAttributes.enchantmentData);
-      else if (DY[eY]) HY = (0, IY.qb)(KY), HY.push({
+      }(eT.customDescription, eT)) && void 0 !== rT ? rT : null === (AT = oT[TT.name]) || void 0 === AT ? void 0 : AT.description) && void 0 !== MT ? MT : null === (gT = oT[RT]) || void 0 === gT ? void 0 : gT.description) && void 0 !== cT ? cT : "";
+      let CT = fT;
+      if (null !== (hT = eT.customAttributes) && void 0 !== hT && hT.enchantments) CT = (0, XT.e)(fT, eT.customAttributes.enchantments, eT.customAttributes.enchantmentData);
+      else if (IT[RT]) CT = (0, kT.ob)(fT), CT.push({
         str: "\n"
-      }), HY.push({
+      }), CT.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7322,373 +7323,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (SY = TY.customAttributes) && void 0 !== SY && SY.mobSettings) {
-        var zY, ZY;
-        const YY = TY.customAttributes.mobSettings;
-        var CY, fY;
-        if (HY = [], (0, AY.H)(TY.customAttributes.health) || (HY.push({
+      else if (null !== (wT = eT.customAttributes) && void 0 !== wT && wT.mobSettings) {
+        var jT, JT;
+        const TT = eT.customAttributes.mobSettings;
+        var UT, aT;
+        if (CT = [], (0, zT.K)(eT.customAttributes.health) || (CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
-          }), HY.push({
-            str: TY.customAttributes.health.toString()
-          }), (0, AY.H)(YY.maxHealth) || (HY.push({
+          }), CT.push({
+            str: eT.customAttributes.health.toString()
+          }), (0, zT.K)(TT.maxHealth) || (CT.push({
             str: "/"
-          }), HY.push({
-            str: YY.maxHealth.toString()
-          }))), !(0, AY.H)(YY.attackDamage) && YY.attackDamage > 0 && (HY.push({
+          }), CT.push({
+            str: TT.maxHealth.toString()
+          }))), !(0, zT.K)(TT.attackDamage) && TT.attackDamage > 0 && (CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
-          }), HY.push({
-            str: YY.attackDamage.toString()
-          })), !(0, AY.H)(YY.secondaryAttackDamage) && YY.secondaryAttackDamage > 0 && (HY.push({
+          }), CT.push({
+            str: TT.attackDamage.toString()
+          })), !(0, zT.K)(TT.secondaryAttackDamage) && TT.secondaryAttackDamage > 0 && (CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
-          }), HY.push({
-            str: YY.secondaryAttackDamage.toString()
-          })), (0, AY.H)(YY.baseRunningSpeed) || (HY.push({
+          }), CT.push({
+            str: TT.secondaryAttackDamage.toString()
+          })), (0, zT.K)(TT.baseRunningSpeed) || (CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
-          }), HY.push({
-            str: YY.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === YY.metaInfo) HY.push({
+          }), CT.push({
+            str: TT.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === TT.metaInfo) CT.push({
           str: "\n"
-        }), HY.push({
+        }), CT.push({
           str: {
             translationKey: "general:has"
           }
-        }), HY.push({
+        }), CT.push({
           str: " "
-        }), HY.push({
-          icon: null !== (CY = null === (fY = YY.tameInfo) || void 0 === fY ? void 0 : fY.saddleItemName) && void 0 !== CY ? CY : "Saddle",
+        }), CT.push({
+          icon: null !== (UT = null === (aT = TT.tameInfo) || void 0 === aT ? void 0 : aT.saddleItemName) && void 0 !== UT ? UT : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (HY.push({
+        if (CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             str: "\n"
-          }), YY.petInfo && null !== (zY = YY.tameInfo) && void 0 !== zY && zY.supportsFriendship) {
-          const rY = RY.c.getIconsFromFriendshipPoints(YY.petInfo.friendshipPoints);
-          for (const YY of rY) HY.push({
-            icon: YY,
+          }), TT.petInfo && null !== (jT = TT.tameInfo) && void 0 !== jT && jT.supportsFriendship) {
+          const oT = WT.d.getIconsFromFriendshipPoints(TT.petInfo.friendshipPoints);
+          for (const TT of oT) CT.push({
+            icon: TT,
             style: {
               fontSize: "1.5em"
             }
           });
-          HY.push({
+          CT.push({
             str: "\n"
           });
-          const DY = RY.c.getMobHungerLevel(YY.petInfo.lastFedAt);
-          for (const YY of RY.c.hungerLevelIcons[DY]) HY.push({
-            icon: YY,
+          const IT = WT.d.getMobHungerLevel(TT.petInfo.lastFedAt);
+          for (const TT of WT.d.hungerLevelIcons[IT]) CT.push({
+            icon: TT,
             style: {
               fontSize: "1.5em"
             }
           });
-          HY.push({
+          CT.push({
             str: " "
-          }), HY.push({
-            str: RY.c.hungerLevelTranslations[DY],
+          }), CT.push({
+            str: WT.d.hungerLevelTranslations[IT],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (YY.tameInfo && null !== (ZY = YY.tameInfo) && void 0 !== ZY && ZY.supportsFriendship) {
-          var jY, hY;
-          let rY = null !== (jY = YY.tameInfo.likedFoods) && void 0 !== jY ? jY : [];
-          HY.push({
+        if (TT.tameInfo && null !== (JT = TT.tameInfo) && void 0 !== JT && JT.supportsFriendship) {
+          var YT, QT;
+          let oT = null !== (YT = TT.tameInfo.likedFoods) && void 0 !== YT ? YT : [];
+          CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: RY.c.feedTextColours[RY.c.MobFoodType.Superliked]
+              color: WT.d.feedTextColours[WT.d.MobFoodType.Superliked]
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
-          }), null !== (hY = YY.petInfo) && void 0 !== hY && hY.superlikedFoodKnown ? (HY.push({
-            icon: YY.petInfo.superlikedFood,
+          }), null !== (QT = TT.petInfo) && void 0 !== QT && QT.superlikedFoodKnown ? (CT.push({
+            icon: TT.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), rY = rY.filter((rY => rY !== YY.petInfo.superlikedFood))) : HY.push({
+          }), oT = oT.filter((oT => oT !== TT.petInfo.superlikedFood))) : CT.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), HY.push({
+          }), CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: RY.c.feedTextColours[RY.c.MobFoodType.Liked]
+              color: WT.d.feedTextColours[WT.d.MobFoodType.Liked]
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
           });
-          for (const YY of rY) HY.push({
-            icon: YY,
+          for (const TT of oT) CT.push({
+            icon: TT,
             style: {
               fontSize: "1.5em"
             }
           });
-          HY.push({
+          CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: RY.c.feedTextColours[RY.c.MobFoodType.Neutral]
+              color: WT.d.feedTextColours[WT.d.MobFoodType.Neutral]
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
           });
-          for (const DY of null !== (dY = YY.tameInfo.neutralFoods) && void 0 !== dY ? dY : []) {
-            var dY;
-            HY.push({
-              icon: DY,
+          for (const IT of null !== (OT = TT.tameInfo.neutralFoods) && void 0 !== OT ? OT : []) {
+            var OT;
+            CT.push({
+              icon: IT,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          HY.push({
+          CT.push({
             str: "\n"
-          }), HY.push({
+          }), CT.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: RY.c.feedTextColours[RY.c.MobFoodType.Disliked]
+              color: WT.d.feedTextColours[WT.d.MobFoodType.Disliked]
             }
-          }), HY.push({
+          }), CT.push({
             str: " "
           });
-          for (const DY of null !== (JY = YY.tameInfo.dislikedFoods) && void 0 !== JY ? JY : []) {
-            var JY;
-            HY.push({
-              icon: DY,
+          for (const IT of null !== (HT = TT.tameInfo.dislikedFoods) && void 0 !== HT ? HT : []) {
+            var HT;
+            CT.push({
+              icon: IT,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        HY.length > 0 ? (HY.shift(), HY.unshift(...(0, IY.qb)(KY))) : HY = (0, IY.qb)(KY)
+        CT.length > 0 ? (CT.shift(), CT.unshift(...(0, kT.ob)(fT))) : CT = (0, kT.ob)(fT)
       }
       return {
-        name: BY,
-        desc: HY,
-        fontStyle: null !== (lY = TY.customAttributes) && void 0 !== lY && lY.author ? "italic" : "normal"
+        name: vT,
+        desc: CT,
+        fontStyle: null !== (mT = eT.customAttributes) && void 0 !== mT && mT.author ? "italic" : "normal"
       }
     }
 
-    function WY(YY, rY, DY, FY) {
-      const AY = gY(YY, DY),
-        IY = gY(YY, FY);
-      if (!AY) return !1;
-      const RY = rY[AY.name].armourReduction,
-        OY = rY[IY.name].armourReduction;
-      if (OY === RY) {
-        var aY, vY, uY, sY;
-        const YY = null !== (aY = null === (vY = AY.attributes.customAttributes) || void 0 === vY ? void 0 : vY.enchantmentTier) && void 0 !== aY ? aY : "Tier 0",
-          rY = null !== (uY = null === (sY = IY.attributes.customAttributes) || void 0 === sY ? void 0 : sY.enchantmentTier) && void 0 !== uY ? uY : "Tier 0";
-        return parseInt(YY.replace("Tier ", "")) >= parseInt(rY.replace("Tier ", ""))
+    function rT(TT, oT, IT, iT) {
+      const zT = BT(TT, IT),
+        kT = BT(TT, iT);
+      if (!zT) return !1;
+      const WT = oT[zT.name].armourReduction,
+        XT = oT[kT.name].armourReduction;
+      if (XT === WT) {
+        var FT, ST, DT, LT;
+        const TT = null !== (FT = null === (ST = zT.attributes.customAttributes) || void 0 === ST ? void 0 : ST.enchantmentTier) && void 0 !== FT ? FT : "Tier 0",
+          oT = null !== (DT = null === (LT = kT.attributes.customAttributes) || void 0 === LT ? void 0 : LT.enchantmentTier) && void 0 !== DT ? DT : "Tier 0";
+        return parseInt(TT.replace("Tier ", "")) >= parseInt(oT.replace("Tier ", ""))
       }
-      return RY > OY
+      return WT > XT
     }
 
-    function EY(YY) {
-      let rY;
-      if ("number" === typeof YY) {
-        const DY = document.querySelector(`[data-inven-idx="${YY}"]`);
-        if (!DY) return null;
-        rY = DY.getBoundingClientRect()
-      } else rY = YY.getBoundingClientRect();
+    function AT(TT) {
+      let oT;
+      if ("number" === typeof TT) {
+        const IT = document.querySelector(`[data-inven-idx="${TT}"]`);
+        if (!IT) return null;
+        oT = IT.getBoundingClientRect()
+      } else oT = TT.getBoundingClientRect();
       return {
-        x: rY.left + rY.width / 2,
-        y: rY.top + rY.height / 2
+        x: oT.left + oT.width / 2,
+        y: oT.top + oT.height / 2
       }
     }
   },
-  8649: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => iY,
-      f: () => yY,
-      i: () => QY
+  8652: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => xT,
+      f: () => cT,
+      h: () => KT
     });
-    var FY = DY(1437),
-      AY = DY(61),
-      IY = DY(1314),
-      RY = DY(4086),
-      OY = DY(2211),
-      gY = DY(1211),
-      aY = DY(99),
-      vY = DY(1834),
-      uY = DY(1337),
-      sY = DY(1125);
+    var iT = IT(1408),
+      zT = IT(46),
+      kT = IT(1280),
+      WT = IT(4050),
+      XT = IT(2168),
+      BT = IT(1171),
+      FT = IT(90),
+      ST = IT(1784),
+      DT = IT(1310),
+      LT = IT(1083);
 
-    function iY(YY) {
+    function xT(TT) {
       let {
-        show: rY,
-        onClose: DY
-      } = YY;
+        show: oT,
+        onClose: IT
+      } = TT;
       const {
-        requestedGameNameWithVariation: FY,
-        lobbyName: AY,
-        shownLobbyName: IY
-      } = (0, vY.h)("connectedGame"), gY = (0, OY.d)(FY, AY, !1);
-      return aY.featureFlags.canUseInviteLinks && (0, sY.jsx)(RY.e, {
-        show: rY,
-        close: DY,
+        requestedGameNameWithVariation: iT,
+        lobbyName: zT,
+        shownLobbyName: kT
+      } = (0, ST.f)("connectedGame"), BT = (0, XT.c)(iT, zT, !1);
+      return FT.featureFlags.canUseInviteLinks && (0, LT.jsx)(WT.e, {
+        show: oT,
+        close: IT,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, sY.jsxs)("div", {
+        children: (0, LT.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, sY.jsx)("div", {
+          children: [(0, LT.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, sY.jsxs)("div", {
+          }), (0, LT.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, sY.jsx)("div", {
+            children: [(0, LT.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === gY ? (0, sY.jsx)(uY.c, {}) : gY, (0, sY.jsx)("br", {}), "Lobby Name: ", IY, (0, sY.jsx)("br", {}), (0, sY.jsx)("br", {}), (0, sY.jsx)("br", {}), (0, sY.jsx)("div", {
+            }), "Game: ", null === BT ? (0, LT.jsx)(DT.d, {}) : BT, (0, LT.jsx)("br", {}), "Lobby Name: ", kT, (0, LT.jsx)("br", {}), (0, LT.jsx)("br", {}), (0, LT.jsx)("br", {}), (0, LT.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, sY.jsx)(yY, {})]
+          }), (0, LT.jsx)(cT, {})]
         })
       })
     }
 
-    function yY() {
-      var YY;
+    function cT() {
+      var TT;
       const {
-        t: rY
-      } = (0, gY.C)(), DY = null !== (YY = QY(aY.featureFlags.canUseInviteLinks)) && void 0 !== YY ? YY : "Loading Link...", [IY, RY] = (0, AY.useState)(0), [OY, vY] = (0, AY.useReducer)((YY => YY + 1), 0);
-      return (0, AY.useEffect)((() => {
-        const YY = setTimeout((() => {
-          vY()
+        t: oT
+      } = (0, BT.t)(), IT = null !== (TT = KT(FT.featureFlags.canUseInviteLinks)) && void 0 !== TT ? TT : "Loading Link...", [kT, WT] = (0, zT.useState)(0), [XT, ST] = (0, zT.useReducer)((TT => TT + 1), 0);
+      return (0, zT.useEffect)((() => {
+        const TT = setTimeout((() => {
+          ST()
         }), 1100);
         return () => {
-          clearTimeout(YY)
+          clearTimeout(TT)
         }
-      }), [IY]), aY.featureFlags.canUseInviteLinks && (0, sY.jsxs)("div", {
+      }), [kT]), FT.featureFlags.canUseInviteLinks && (0, LT.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, sY.jsx)("div", {
+        children: [(0, LT.jsx)("div", {
           className: "InviteLinkInner",
-          children: DY
-        }), (0, sY.jsx)(FY.f, {
+          children: IT
+        }), (0, LT.jsx)(iT.e, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(DY).catch((YY => {
-              console.error("Failed to copy invite link:", YY)
-            })), RY(Date.now())
+            navigator.clipboard.writeText(IT).catch((TT => {
+              console.error("Failed to copy invite link:", TT)
+            })), WT(Date.now())
           },
-          disabled: Date.now() - IY < 1e3,
-          children: Date.now() - IY < 1e3 ? rY("general:copied") : rY("general:copy")
+          disabled: Date.now() - kT < 1e3,
+          children: Date.now() - kT < 1e3 ? oT("general:copied") : oT("general:copy")
         })]
       })
     }
 
-    function QY(YY) {
-      const [rY, DY] = (0, AY.useState)(null);
-      return (0, AY.useEffect)((() => {
-        if (!YY) return;
-        let rY = !0;
-        return (0, IY.z)().then((YY => {
-          rY && DY(YY)
-        })).catch((YY => {
-          console.error("Failed to get invite link:", YY)
+    function KT(TT) {
+      const [oT, IT] = (0, zT.useState)(null);
+      return (0, zT.useEffect)((() => {
+        if (!TT) return;
+        let oT = !0;
+        return (0, kT.D)().then((TT => {
+          oT && IT(TT)
+        })).catch((TT => {
+          console.error("Failed to get invite link:", TT)
         })), () => {
-          rY = !1
+          oT = !1
         }
-      }), [YY]), rY
+      }), [TT]), oT
     }
   },
-  8739: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => aY
+  8735: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => FT
     });
-    var FY = DY(61),
-      AY = DY(1092),
-      IY = DY.n(AY),
-      RY = DY(1834),
-      OY = DY(1125);
+    var iT = IT(46),
+      zT = IT(1042),
+      kT = IT.n(zT),
+      WT = IT(1784),
+      XT = IT(1083);
 
-    function gY(YY) {
-      const rY = Math.floor(YY / 3600),
-        DY = Math.floor(YY % 3600 / 60),
-        FY = Math.floor(YY % 60),
-        AY = `${DY.toString().padStart(2,"0")}:${FY.toString().padStart(2,"0")}`;
-      return rY > 0 ? `${rY}:${AY}` : AY
+    function BT(TT) {
+      const oT = Math.floor(TT / 3600),
+        IT = Math.floor(TT % 3600 / 60),
+        iT = Math.floor(TT % 60),
+        zT = `${IT.toString().padStart(2,"0")}:${iT.toString().padStart(2,"0")}`;
+      return oT > 0 ? `${oT}:${zT}` : zT
     }
-    const aY = (0, FY.memo)((function(YY) {
+    const FT = (0, iT.memo)((function(TT) {
       let {
-        className: rY
-      } = YY;
+        className: oT
+      } = TT;
       const {
-        recording: DY,
-        seconds: FY
-      } = (0, RY.h)("replayRecorder");
-      return DY ? (0, OY.jsxs)("div", {
-        className: IY()("RecordingIndicator", rY),
-        children: [(0, OY.jsx)("span", {
+        recording: IT,
+        seconds: iT
+      } = (0, WT.f)("replayRecorder");
+      return IT ? (0, XT.jsxs)("div", {
+        className: kT()("RecordingIndicator", oT),
+        children: [(0, XT.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, OY.jsx)("span", {
+        }), (0, XT.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, OY.jsx)("span", {
+        }), (0, XT.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: gY(FY)
+          children: BT(iT)
         })]
       }) : null
     }))
   },
-  4459: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => oY
+  4375: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => MT
     });
-    var FY = DY(1092),
-      AY = DY.n(FY),
-      IY = DY(4217),
-      RY = DY(1211),
-      OY = DY(1098),
-      gY = DY(1437),
-      aY = DY(1471),
-      vY = DY(1346),
-      uY = DY(2306),
-      sY = DY(1125);
-    const iY = {
+    var iT = IT(1042),
+      zT = IT.n(iT),
+      kT = IT(4145),
+      WT = IT(1171),
+      XT = IT(1055),
+      BT = IT(1408),
+      FT = IT(1451),
+      ST = IT(1325),
+      DT = IT(2251),
+      LT = IT(1083);
+    const xT = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -7716,354 +7717,354 @@ export const modules = {
       }
     };
 
-    function yY(YY) {
+    function cT(TT) {
       let {
-        platform: rY
-      } = YY;
-      const DY = "youtube" === rY;
-      return (0, sY.jsxs)("span", {
-        className: AY()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: DY
+        platform: oT
+      } = TT;
+      const IT = "youtube" === oT;
+      return (0, LT.jsxs)("span", {
+        className: zT()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: IT
         }),
-        children: [DY && (0, sY.jsx)(uY.e, {
+        children: [IT && (0, LT.jsx)(DT.d, {
           variant: "white"
-        }), !DY && (0, sY.jsx)(OY.e, {
-          name: iY[rY].icon,
+        }), !IT && (0, LT.jsx)(XT.e, {
+          name: xT[oT].icon,
           kit: "brands"
         })]
       })
     }
 
-    function QY(YY) {
+    function KT(TT) {
       let {
-        platform: rY,
-        link: DY,
-        editable: FY,
-        userContext: AY,
-        onLinksUpdated: uY
-      } = YY;
+        platform: oT,
+        link: IT,
+        editable: iT,
+        userContext: zT,
+        onLinksUpdated: DT
+      } = TT;
       const {
-        t: QY
-      } = (0, RY.C)(), oY = iY[rY];
-      if (!DY && !FY) return null;
+        t: KT
+      } = (0, WT.t)(), MT = xT[oT];
+      if (!IT && !iT) return null;
 
-      function WY() {
-        var YY;
-        if (!AY || !uY) return;
-        vY.NotificationProvider.showInputPopup({
+      function rT() {
+        var TT;
+        if (!zT || !DT) return;
+        ST.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: oY.name
+              platform: MT.name
             }
           },
-          prefixText: IY.w[rY],
+          prefixText: kT.w[oT],
           placeholderText: "playBloxd",
-          initialValue: null !== (YY = null === DY || void 0 === DY ? void 0 : DY.handle) && void 0 !== YY ? YY : "",
+          initialValue: null !== (TT = null === IT || void 0 === IT ? void 0 : IT.handle) && void 0 !== TT ? TT : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: DY ? "general:remove" : void 0
-        }).getResult().then((async YY => {
-          if ("notificationTornDown" !== YY && null !== YY) try {
-            "submit" === YY.type ? await aY.e.setSocialLink(AY, rY, YY.value) : await aY.e.clearSocialLink(AY, rY), uY()
-          } catch (DY) {
-            console.error("Failed to update social link", DY), vY.NotificationProvider.showAlertPopup({
-              title: DY.errorMessageForUser,
+          secondaryButtonText: IT ? "general:remove" : void 0
+        }).getResult().then((async TT => {
+          if ("notificationTornDown" !== TT && null !== TT) try {
+            "submit" === TT.type ? await FT.e.setSocialLink(zT, oT, TT.value) : await FT.e.clearSocialLink(zT, oT), DT()
+          } catch (IT) {
+            console.error("Failed to update social link", IT), ST.NotificationProvider.showAlertPopup({
+              title: IT.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (DY) {
-        const YY = `@${DY.handle}`;
-        return (0, sY.jsxs)("a", {
+      if (IT) {
+        const TT = `@${IT.handle}`;
+        return (0, LT.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: oY.color
+            background: MT.color
           },
-          href: DY.profileUrl,
+          href: IT.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, sY.jsxs)("div", {
+          children: [(0, LT.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, sY.jsx)(yY, {
-              platform: rY
-            }), (0, sY.jsx)("span", {
+            children: [(0, LT.jsx)(cT, {
+              platform: oT
+            }), (0, LT.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, sY.jsx)("span", {
+              children: (0, LT.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: YY
+                children: TT
               })
             })]
-          }), FY && (0, sY.jsx)("button", {
+          }), iT && (0, LT.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, gY.P)({
+            ...(0, BT.Q)({
               stopPropagation: !0
             }),
-            onClick: YY => {
-              YY.stopPropagation(), YY.preventDefault(), WY()
+            onClick: TT => {
+              TT.stopPropagation(), TT.preventDefault(), rT()
             },
-            children: (0, sY.jsx)(OY.e, {
+            children: (0, LT.jsx)(XT.e, {
               name: "pen-to-square"
             })
-          }), !FY && (0, sY.jsx)("span", {
+          }), !iT && (0, LT.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, sY.jsx)(OY.e, {
+            children: (0, LT.jsx)(XT.e, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, sY.jsxs)("button", {
+      return (0, LT.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: oY.color
+          background: MT.color
         },
-        ...(0, gY.P)(),
+        ...(0, BT.Q)(),
         onClick: () => {
-          WY()
+          rT()
         },
-        children: [(0, sY.jsx)(yY, {
-          platform: rY
-        }), (0, sY.jsxs)("span", {
+        children: [(0, LT.jsx)(cT, {
+          platform: oT
+        }), (0, LT.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, sY.jsx)("span", {
+          children: [(0, LT.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: oY.name
-          }), (0, sY.jsx)("span", {
+            children: MT.name
+          }), (0, LT.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: QY("homePage:profileSocialLinkAdd")
+            children: KT("homePage:profileSocialLinkAdd")
           })]
-        }), (0, sY.jsx)("span", {
+        }), (0, LT.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, sY.jsx)(OY.e, {
+          children: (0, LT.jsx)(XT.e, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function oY(YY) {
+    function MT(TT) {
       let {
-        socialLinks: rY,
-        editable: DY = !1,
-        userContext: FY,
-        onLinksUpdated: AY
-      } = YY;
-      if (!DY && 0 === rY.length) return null;
-      const RY = new Map(rY.map((YY => [YY.platform, YY]))),
-        OY = DY ? IY.t : rY.map((YY => YY.platform));
-      return (0, sY.jsx)("div", {
+        socialLinks: oT,
+        editable: IT = !1,
+        userContext: iT,
+        onLinksUpdated: zT
+      } = TT;
+      if (!IT && 0 === oT.length) return null;
+      const WT = new Map(oT.map((TT => [TT.platform, TT]))),
+        XT = IT ? kT.s : oT.map((TT => TT.platform));
+      return (0, LT.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, sY.jsx)("div", {
+        children: (0, LT.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: OY.map((YY => (0, sY.jsx)(QY, {
-            platform: YY,
-            link: RY.get(YY),
-            editable: DY,
-            userContext: FY,
-            onLinksUpdated: AY
-          }, YY)))
+          children: XT.map((TT => (0, LT.jsx)(KT, {
+            platform: TT,
+            link: WT.get(TT),
+            editable: IT,
+            userContext: iT,
+            onLinksUpdated: zT
+          }, TT)))
         })
       })
     }
   },
-  8745: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY
+  8743: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT
     });
-    var FY = DY(4093),
-      AY = DY(4097);
+    var iT = IT(4057),
+      zT = IT(4061);
 
-    function IY(YY) {
+    function kT(TT) {
       let {
-        children: rY,
-        showing: DY,
-        globallyUniqueKey: IY,
-        alwaysMountChildren: RY = !1,
-        doGameplayStartStopOnShow: OY = !0,
-        keepsMovement: gY = !1
-      } = YY;
-      return (0, AY.b)(!0, DY, IY, gY), (0, FY.c)(OY, DY), DY || RY ? rY : null
+        children: oT,
+        showing: IT,
+        globallyUniqueKey: kT,
+        alwaysMountChildren: WT = !1,
+        doGameplayStartStopOnShow: XT = !0,
+        keepsMovement: BT = !1
+      } = TT;
+      return (0, zT.d)(!0, IT, kT, BT), (0, iT.e)(XT, IT), IT || WT ? oT : null
     }
   },
-  8783: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  8783: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => kT
     });
-    var FY = DY(61),
-      AY = DY(3168);
+    var iT = IT(46),
+      zT = IT(3138);
 
-    function IY() {
-      const [YY, rY] = (0, FY.useState)(!1);
-      return (0, FY.useLayoutEffect)((() => {
-        let YY = !0;
-        return (0, AY.b)().then((() => {
-          YY && rY(!0)
+    function kT() {
+      const [TT, oT] = (0, iT.useState)(!1);
+      return (0, iT.useLayoutEffect)((() => {
+        let TT = !0;
+        return (0, zT.c)().then((() => {
+          TT && oT(!0)
         })), () => {
-          YY = !1
+          TT = !1
         }
-      }), []), YY
+      }), []), TT
     }
   },
-  6128: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => IY
+  6062: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT
     });
-    var FY = DY(61),
-      AY = DY(40);
+    var iT = IT(46),
+      zT = IT(26);
 
-    function IY(YY, rY) {
-      var DY;
-      const [IY, RY] = (0, FY.useState)(null !== (DY = AY.m.getItem(YY)) && void 0 !== DY ? DY : rY);
-      return [IY, rY => {
-        AY.m.setItem(YY, rY), RY(rY)
+    function kT(TT, oT) {
+      var IT;
+      const [kT, WT] = (0, iT.useState)(null !== (IT = zT.e.getItem(TT)) && void 0 !== IT ? IT : oT);
+      return [kT, oT => {
+        zT.e.setItem(TT, oT), WT(oT)
       }]
     }
   },
-  8718: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => sY,
-      g: () => uY
+  8713: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => LT,
+      i: () => DT
     });
-    DY(8724);
-    var FY = DY(1092),
-      AY = DY.n(FY),
-      IY = DY(61),
-      RY = DY(8685);
+    IT(8715);
+    var iT = IT(1042),
+      zT = IT.n(iT),
+      kT = IT(46),
+      WT = IT(8684);
 
-    function OY(YY, rY) {
-      return Math.max(1, Math.round(YY * rY))
+    function XT(TT, oT) {
+      return Math.max(1, Math.round(TT * oT))
     }
 
-    function gY(YY, rY, DY) {
-      const FY = 2 * DY >= rY - 1;
+    function BT(TT, oT, IT) {
+      const iT = 2 * IT >= oT - 1;
       return {
-        x: YY,
-        y: YY,
-        size: rY,
-        border: Math.min(DY, Math.floor(rY / 2)),
-        filled: FY
+        x: TT,
+        y: TT,
+        size: oT,
+        border: Math.min(IT, Math.floor(oT / 2)),
+        filled: iT
       }
     }
-    var aY = DY(1125);
-    const vY = 1.4;
+    var FT = IT(1083);
+    const ST = 1.4;
 
-    function uY(YY, rY) {
-      return YY && rY ? `scale(${vY})` : "scale(1)"
+    function DT(TT, oT) {
+      return TT && oT ? `scale(${ST})` : "scale(1)"
     }
 
-    function sY(YY) {
-      return "classic" === YY.settings.style ? (0, aY.jsx)(QY, {
-        ...YY
-      }) : (0, aY.jsx)(lY, {
-        ...YY
+    function LT(TT) {
+      return "classic" === TT.settings.style ? (0, FT.jsx)(KT, {
+        ...TT
+      }) : (0, FT.jsx)(mT, {
+        ...TT
       })
     }
-    const iY = .125;
+    const xT = .125;
 
-    function yY(YY, rY) {
-      const DY = {};
-      if (YY.color !== RY.f.color && (DY.color = (0, RY.j)(YY.color)), YY.opacity !== RY.f.opacity && (DY.opacity = YY.opacity / 100), YY.outline !== RY.f.outline || YY.outlineColor !== RY.f.outlineColor) {
-        const rY = YY.outline,
-          FY = (0, RY.j)(YY.outlineColor);
-        DY.textShadow = rY > 0 ? `-${rY}px 0 ${FY}, 0 ${rY}px ${FY}, ${rY}px 0 ${FY}, 0 -${rY}px ${FY}` : "none"
+    function cT(TT, oT) {
+      const IT = {};
+      if (TT.color !== WT.f.color && (IT.color = (0, WT.k)(TT.color)), TT.opacity !== WT.f.opacity && (IT.opacity = TT.opacity / 100), TT.outline !== WT.f.outline || TT.outlineColor !== WT.f.outlineColor) {
+        const oT = TT.outline,
+          iT = (0, WT.k)(TT.outlineColor);
+        IT.textShadow = oT > 0 ? `-${oT}px 0 ${iT}, 0 ${oT}px ${iT}, ${oT}px 0 ${iT}, 0 -${oT}px ${iT}` : "none"
       }
-      if (YY.size !== RY.f.size) {
-        const FY = YY.size / 100;
-        DY.fontSize = rY ? `calc(max(1.3rem, 18px) * ${FY})` : `calc(1.3rem * ${FY})`, DY.marginTop = `-${iY}em`, DY.transformOrigin = `50% calc(50% + ${iY}em)`
+      if (TT.size !== WT.f.size) {
+        const iT = TT.size / 100;
+        IT.fontSize = oT ? `calc(max(1.3rem, 18px) * ${iT})` : `calc(1.3rem * ${iT})`, IT.marginTop = `-${xT}em`, IT.transformOrigin = `50% calc(50% + ${xT}em)`
       }
-      return DY
+      return IT
     }
 
-    function QY(YY) {
+    function KT(TT) {
       let {
-        settings: rY,
-        touch: DY,
-        inPreview: FY,
-        inEditor: IY,
-        pressed: RY = !1,
-        pressRef: OY
-      } = YY;
-      return (0, aY.jsx)("div", {
-        className: AY()("Crosshair", {
-          Touch: DY,
-          CrosshairInPreview: FY,
-          CrosshairInEditor: IY || FY
+        settings: oT,
+        touch: IT,
+        inPreview: iT,
+        inEditor: kT,
+        pressed: WT = !1,
+        pressRef: XT
+      } = TT;
+      return (0, FT.jsx)("div", {
+        className: zT()("Crosshair", {
+          Touch: IT,
+          CrosshairInPreview: iT,
+          CrosshairInEditor: kT || iT
         }),
-        ref: OY,
+        ref: XT,
         style: {
-          transform: uY(RY, rY.growOnClick),
-          ...yY(rY, DY)
+          transform: DT(WT, oT.growOnClick),
+          ...cT(oT, IT)
         },
         children: "+"
       })
     }
 
-    function oY(YY, rY) {
-      return YY / rY + "px"
+    function MT(TT, oT) {
+      return TT / oT + "px"
     }
 
-    function WY(YY, rY, DY, FY) {
+    function rT(TT, oT, IT, iT) {
       return {
-        ...VY(YY, rY, DY),
-        width: oY(YY.w, DY),
-        height: oY(YY.h, DY),
-        background: FY
+        ...hT(TT, oT, IT),
+        width: MT(TT.w, IT),
+        height: MT(TT.h, IT),
+        background: iT
       }
     }
 
-    function EY(YY, rY, DY) {
+    function AT(TT, oT, IT) {
       return {
-        left: oY(YY.x, rY),
-        top: oY(YY.y, rY),
-        width: oY(YY.size, rY),
-        height: oY(YY.size, rY),
-        borderWidth: oY(YY.border, rY),
-        borderColor: DY,
-        background: YY.filled ? DY : void 0
+        left: MT(TT.x, oT),
+        top: MT(TT.y, oT),
+        width: MT(TT.size, oT),
+        height: MT(TT.size, oT),
+        borderWidth: MT(TT.border, oT),
+        borderColor: IT,
+        background: TT.filled ? IT : void 0
       }
     }
-    const mY = {
+    const gT = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function VY(YY, rY, DY) {
-      const [FY, AY] = YY.arm ? mY[YY.arm] : [0, 0], IY = Math.round(rY * DY);
+    function hT(TT, oT, IT) {
+      const [iT, zT] = TT.arm ? gT[TT.arm] : [0, 0], kT = Math.round(oT * IT);
       return {
-        left: oY(YY.x + FY * IY, DY),
-        top: oY(YY.y + AY * IY, DY)
+        left: MT(TT.x + iT * kT, IT),
+        top: MT(TT.y + zT * kT, IT)
       }
     }
 
-    function SY(YY) {
-      return YY.arm ? {
-        "data-arm": YY.arm,
-        "data-x": YY.x,
-        "data-y": YY.y
+    function wT(TT) {
+      return TT.arm ? {
+        "data-arm": TT.arm,
+        "data-x": TT.x,
+        "data-y": TT.y
       } : {}
     }
 
-    function lY(YY) {
+    function mT(TT) {
       let {
-        settings: rY,
-        inPreview: DY,
-        inEditor: FY,
-        pressed: uY = !1,
-        spread: sY,
-        spreadRef: iY
-      } = YY;
-      const yY = (0, IY.useRef)(null),
+        settings: oT,
+        inPreview: IT,
+        inEditor: iT,
+        pressed: DT = !1,
+        spread: LT,
+        spreadRef: xT
+      } = TT;
+      const cT = (0, kT.useRef)(null),
         {
-          box: QY,
-          dpr: oY
-        } = function(YY) {
-          const [rY, DY] = (0, IY.useState)({
+          box: KT,
+          dpr: MT
+        } = function(TT) {
+          const [oT, IT] = (0, kT.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8072,282 +8073,282 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, IY.useLayoutEffect)((() => {
-            const rY = YY.current;
-            if (!rY) return;
-            const FY = () => {
-              const YY = rY.getBoundingClientRect(),
-                FY = window.devicePixelRatio || 1;
-              DY((rY => rY.dpr === FY && rY.box.left === YY.left && rY.box.top === YY.top && rY.box.width === YY.width && rY.box.height === YY.height ? rY : {
+          return (0, kT.useLayoutEffect)((() => {
+            const oT = TT.current;
+            if (!oT) return;
+            const iT = () => {
+              const TT = oT.getBoundingClientRect(),
+                iT = window.devicePixelRatio || 1;
+              IT((oT => oT.dpr === iT && oT.box.left === TT.left && oT.box.top === TT.top && oT.box.width === TT.width && oT.box.height === TT.height ? oT : {
                 box: {
-                  left: YY.left,
-                  top: YY.top,
-                  width: YY.width,
-                  height: YY.height
+                  left: TT.left,
+                  top: TT.top,
+                  width: TT.width,
+                  height: TT.height
                 },
-                dpr: FY
+                dpr: iT
               }))
             };
-            FY();
-            const AY = new ResizeObserver(FY);
-            return AY.observe(rY), window.addEventListener("resize", FY), window.addEventListener("scroll", FY, !0), () => {
-              AY.disconnect(), window.removeEventListener("resize", FY), window.removeEventListener("scroll", FY, !0)
+            iT();
+            const zT = new ResizeObserver(iT);
+            return zT.observe(oT), window.addEventListener("resize", iT), window.addEventListener("scroll", iT, !0), () => {
+              zT.disconnect(), window.removeEventListener("resize", iT), window.removeEventListener("scroll", iT, !0)
             }
-          }), [YY]), rY
-        }(yY),
-        mY = (0, IY.useRef)(oY);
-      mY.current = oY;
-      const lY = function(YY, rY) {
-          const DY = OY(YY.lineThickness, rY),
-            FY = OY(YY.lineLength, rY),
-            AY = Math.round(YY.gap * rY),
-            IY = OY(YY.dotSize, rY),
-            RY = YY.outline > 0 ? OY(YY.outline, rY) : 0,
-            aY = OY(YY.circleThickness, rY),
-            vY = YY.circle ? Math.round(YY.circleRadius * rY * 2 + aY) : 0,
-            uY = function(YY, rY, DY, FY) {
-              return YY.lines ? rY : YY.dot ? DY : YY.circle && FY % 2 === 0 ? 2 : 1
-            }(YY, DY, IY, vY),
-            sY = [];
-          if (YY.lines && (sY.push({
-              x: uY + AY,
+          }), [TT]), oT
+        }(cT),
+        gT = (0, kT.useRef)(MT);
+      gT.current = MT;
+      const mT = function(TT, oT) {
+          const IT = XT(TT.lineThickness, oT),
+            iT = XT(TT.lineLength, oT),
+            zT = Math.round(TT.gap * oT),
+            kT = XT(TT.dotSize, oT),
+            WT = TT.outline > 0 ? XT(TT.outline, oT) : 0,
+            FT = XT(TT.circleThickness, oT),
+            ST = TT.circle ? Math.round(TT.circleRadius * oT * 2 + FT) : 0,
+            DT = function(TT, oT, IT, iT) {
+              return TT.lines ? oT : TT.dot ? IT : TT.circle && iT % 2 === 0 ? 2 : 1
+            }(TT, IT, kT, ST),
+            LT = [];
+          if (TT.lines && (LT.push({
+              x: DT + zT,
               y: 0,
-              w: FY,
-              h: DY,
+              w: iT,
+              h: IT,
               arm: "right"
-            }), sY.push({
-              x: -AY - FY,
+            }), LT.push({
+              x: -zT - iT,
               y: 0,
-              w: FY,
-              h: DY,
+              w: iT,
+              h: IT,
               arm: "left"
-            }), sY.push({
+            }), LT.push({
               x: 0,
-              y: uY + AY,
-              w: DY,
-              h: FY,
+              y: DT + zT,
+              w: IT,
+              h: iT,
               arm: "down"
-            }), YY.tStyle || sY.push({
+            }), TT.tStyle || LT.push({
               x: 0,
-              y: -AY - FY,
-              w: DY,
-              h: FY,
+              y: -zT - iT,
+              w: IT,
+              h: iT,
               arm: "up"
-            }), 0 === AY && sY.push({
+            }), 0 === zT && LT.push({
               x: 0,
               y: 0,
-              w: DY,
-              h: DY
-            })), YY.dot) {
-            const YY = Math.floor((uY - IY) / 2);
-            sY.push({
-              x: YY,
-              y: YY,
-              w: IY,
-              h: IY
+              w: IT,
+              h: IT
+            })), TT.dot) {
+            const TT = Math.floor((DT - kT) / 2);
+            LT.push({
+              x: TT,
+              y: TT,
+              w: kT,
+              h: kT
             })
           }
-          const iY = sY.map((YY => ({
-            ...YY,
-            x: YY.x - RY,
-            y: YY.y - RY,
-            w: YY.w + 2 * RY,
-            h: YY.h + 2 * RY
+          const xT = LT.map((TT => ({
+            ...TT,
+            x: TT.x - WT,
+            y: TT.y - WT,
+            w: TT.w + 2 * WT,
+            h: TT.h + 2 * WT
           })));
-          let yY = null,
-            QY = null;
-          if (YY.circle) {
-            const YY = vY + ((vY - uY) % 2 === 0 ? 0 : 1),
-              rY = (uY - YY) / 2;
-            yY = gY(rY, YY, aY), RY > 0 && (QY = gY(rY - RY, YY + 2 * RY, aY + 2 * RY))
+          let cT = null,
+            KT = null;
+          if (TT.circle) {
+            const TT = ST + ((ST - DT) % 2 === 0 ? 0 : 1),
+              oT = (DT - TT) / 2;
+            cT = BT(oT, TT, FT), WT > 0 && (KT = BT(oT - WT, TT + 2 * WT, FT + 2 * WT))
           }
           return {
-            cell: uY,
-            fills: sY,
-            outlines: RY > 0 ? iY : [],
-            ring: yY,
-            ringOutline: QY
+            cell: DT,
+            fills: LT,
+            outlines: WT > 0 ? xT : [],
+            ring: cT,
+            ringOutline: KT
           }
-        }(uY && rY.growOnClick ? function(YY, rY) {
+        }(DT && oT.growOnClick ? function(TT, oT) {
           return {
-            ...YY,
-            outline: YY.outline * rY,
-            lineLength: YY.lineLength * rY,
-            lineThickness: YY.lineThickness * rY,
-            gap: YY.gap * rY,
-            dotSize: YY.dotSize * rY,
-            circleRadius: YY.circleRadius * rY,
-            circleThickness: YY.circleThickness * rY
+            ...TT,
+            outline: TT.outline * oT,
+            lineLength: TT.lineLength * oT,
+            lineThickness: TT.lineThickness * oT,
+            gap: TT.gap * oT,
+            dotSize: TT.dotSize * oT,
+            circleRadius: TT.circleRadius * oT,
+            circleThickness: TT.circleThickness * oT
           }
-        }(rY, vY) : rY, oY),
-        TY = function(YY, rY, DY) {
-          const FY = Math.round((YY.left + YY.width / 2) * DY - rY / 2),
-            AY = Math.round((YY.top + YY.height / 2) * DY - rY / 2);
+        }(oT, ST) : oT, MT),
+        eT = function(TT, oT, IT) {
+          const iT = Math.round((TT.left + TT.width / 2) * IT - oT / 2),
+            zT = Math.round((TT.top + TT.height / 2) * IT - oT / 2);
           return {
-            x: FY / DY - YY.left,
-            y: AY / DY - YY.top
+            x: iT / IT - TT.left,
+            y: zT / IT - TT.top
           }
-        }(QY, lY.cell, oY),
-        eY = (0, RY.j)(rY.color),
-        NY = (0, RY.j)(rY.outlineColor),
-        BY = (0, IY.useRef)(0);
-      (0, IY.useLayoutEffect)((() => {
-        if (iY) return iY.current = YY => {
-          var rY;
-          BY.current = YY, null === (rY = yY.current) || void 0 === rY || rY.querySelectorAll("[data-arm]").forEach((rY => {
-            Object.assign(rY.style, VY(function(YY) {
+        }(KT, mT.cell, MT),
+        RT = (0, WT.k)(oT.color),
+        uT = (0, WT.k)(oT.outlineColor),
+        vT = (0, kT.useRef)(0);
+      (0, kT.useLayoutEffect)((() => {
+        if (xT) return xT.current = TT => {
+          var oT;
+          vT.current = TT, null === (oT = cT.current) || void 0 === oT || oT.querySelectorAll("[data-arm]").forEach((oT => {
+            Object.assign(oT.style, hT(function(TT) {
               return {
-                x: Number(YY.dataset.x),
-                y: Number(YY.dataset.y),
-                arm: YY.dataset.arm
+                x: Number(TT.dataset.x),
+                y: Number(TT.dataset.y),
+                arm: TT.dataset.arm
               }
-            }(rY), YY, mY.current))
+            }(oT), TT, gT.current))
           }))
         }, () => {
-          iY.current = null
+          xT.current = null
         }
-      }), [iY]);
-      const cY = null !== sY && void 0 !== sY ? sY : BY.current;
-      return (0, aY.jsx)("div", {
-        ref: yY,
-        className: AY()("CrosshairShapes", {
-          CrosshairInPreview: DY,
-          CrosshairInEditor: FY || DY,
-          CrosshairSpreads: void 0 !== iY
+      }), [xT]);
+      const ET = null !== LT && void 0 !== LT ? LT : vT.current;
+      return (0, FT.jsx)("div", {
+        ref: cT,
+        className: zT()("CrosshairShapes", {
+          CrosshairInPreview: IT,
+          CrosshairInEditor: iT || IT,
+          CrosshairSpreads: void 0 !== xT
         }),
-        children: (0, aY.jsx)("div", {
+        children: (0, FT.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: TY.x,
-            top: TY.y,
-            opacity: rY.opacity / 100
+            left: eT.x,
+            top: eT.y,
+            opacity: oT.opacity / 100
           },
-          children: (0, aY.jsxs)("div", {
+          children: (0, FT.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [lY.ringOutline && (0, aY.jsx)("div", {
+            children: [mT.ringOutline && (0, FT.jsx)("div", {
               className: "CrosshairRing",
-              style: EY(lY.ringOutline, oY, NY)
-            }), lY.outlines.map(((YY, rY) => (0, aY.jsx)("div", {
+              style: AT(mT.ringOutline, MT, uT)
+            }), mT.outlines.map(((TT, oT) => (0, FT.jsx)("div", {
               className: "CrosshairPart",
-              ...SY(YY),
-              style: WY(YY, cY, oY, NY)
-            }, `o${rY}`))), lY.ring && (0, aY.jsx)("div", {
+              ...wT(TT),
+              style: rT(TT, ET, MT, uT)
+            }, `o${oT}`))), mT.ring && (0, FT.jsx)("div", {
               className: "CrosshairRing",
-              style: EY(lY.ring, oY, eY)
-            }), lY.fills.map(((YY, rY) => (0, aY.jsx)("div", {
+              style: AT(mT.ring, MT, RT)
+            }), mT.fills.map(((TT, oT) => (0, FT.jsx)("div", {
               className: "CrosshairPart",
-              ...SY(YY),
-              style: WY(YY, cY, oY, eY)
-            }, `f${rY}`)))]
+              ...wT(TT),
+              style: rT(TT, ET, MT, RT)
+            }, `f${oT}`)))]
           })
         })
       })
     }
   },
-  8729: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => vY,
-      e: () => oY,
-      i: () => QY
+  8724: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => ST,
+      g: () => MT,
+      k: () => KT
     });
-    var FY = DY(8685);
-    const AY = "XH1-",
-      IY = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      RY = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      OY = ["color", "outlineColor"],
-      gY = 1 + 3 * OY.length + RY.length + 1,
-      aY = Math.ceil(8 * gY / Math.log2(62)),
-      vY = AY.length + aY;
+    var iT = IT(8684);
+    const zT = "XH1-",
+      kT = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      WT = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      XT = ["color", "outlineColor"],
+      BT = 1 + 3 * XT.length + WT.length + 1,
+      FT = Math.ceil(8 * BT / Math.log2(62)),
+      ST = zT.length + FT;
 
-    function uY(YY) {
-      let rY = 90;
-      for (const DY of YY) rY = 31 * rY + DY & 255;
-      return rY
+    function DT(TT) {
+      let oT = 90;
+      for (const IT of TT) oT = 31 * oT + IT & 255;
+      return oT
     }
-    const sY = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      iY = BigInt(sY.length);
+    const LT = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      xT = BigInt(LT.length);
 
-    function yY(YY, rY) {
-      let DY = 0n;
-      for (const AY of YY) {
-        const YY = sY.indexOf(AY);
-        if (YY < 0) return null;
-        DY = DY * iY + BigInt(YY)
+    function cT(TT, oT) {
+      let IT = 0n;
+      for (const zT of TT) {
+        const TT = LT.indexOf(zT);
+        if (TT < 0) return null;
+        IT = IT * xT + BigInt(TT)
       }
-      if (DY >> BigInt(8 * rY) !== 0n) return null;
-      const FY = [];
-      for (let AY = 0; AY < rY; AY++) FY.unshift(Number(0xffn & DY)), DY >>= 8n;
-      return FY
+      if (IT >> BigInt(8 * oT) !== 0n) return null;
+      const iT = [];
+      for (let zT = 0; zT < oT; zT++) iT.unshift(Number(0xffn & IT)), IT >>= 8n;
+      return iT
     }
 
-    function QY(YY) {
-      let rY = "shapes" === YY.style ? 1 : 0;
-      IY.forEach(((DY, FY) => {
-        YY[DY] && (rY |= 1 << FY + 1)
+    function KT(TT) {
+      let oT = "shapes" === TT.style ? 1 : 0;
+      kT.forEach(((IT, iT) => {
+        TT[IT] && (oT |= 1 << iT + 1)
       }));
-      const DY = [rY];
-      for (const AY of OY) {
-        const rY = (0, FY.h)(AY, YY[AY]);
-        DY.push(rY >> 16 & 255, rY >> 8 & 255, 255 & rY)
+      const IT = [oT];
+      for (const zT of XT) {
+        const oT = (0, iT.h)(zT, TT[zT]);
+        IT.push(oT >> 16 & 255, oT >> 8 & 255, 255 & oT)
       }
-      for (const AY of RY) {
+      for (const zT of WT) {
         const {
-          min: rY,
-          step: IY
-        } = FY.b[AY];
-        DY.push(Math.round(((0, FY.h)(AY, YY[AY]) - rY) / IY))
+          min: oT,
+          step: kT
+        } = iT.e[zT];
+        IT.push(Math.round(((0, iT.h)(zT, TT[zT]) - oT) / kT))
       }
-      return DY.push(uY(DY)), AY + function(YY, rY) {
-        let DY = 0n;
-        for (const AY of YY) DY = DY << 8n | BigInt(AY);
-        let FY = "";
-        for (let AY = 0; AY < rY; AY++) FY = sY[Number(DY % iY)] + FY, DY /= iY;
-        return FY
-      }(DY, aY)
+      return IT.push(DT(IT)), zT + function(TT, oT) {
+        let IT = 0n;
+        for (const zT of TT) IT = IT << 8n | BigInt(zT);
+        let iT = "";
+        for (let zT = 0; zT < oT; zT++) iT = LT[Number(IT % xT)] + iT, IT /= xT;
+        return iT
+      }(IT, FT)
     }
 
-    function oY(YY) {
-      for (const rY of YY.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${aY}})`, "gi"))) {
-        const YY = WY(yY(rY[1], gY));
-        if (YY) return YY
+    function MT(TT) {
+      for (const oT of TT.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${FT}})`, "gi"))) {
+        const TT = rT(cT(oT[1], BT));
+        if (TT) return TT
       }
       return null
     }
 
-    function WY(YY) {
-      if (!YY || YY.length !== gY || uY(YY.slice(0, -1)) !== YY[YY.length - 1]) return null;
-      const rY = YY[0],
-        DY = {
-          ...FY.f,
-          style: 1 & rY ? "shapes" : "classic"
+    function rT(TT) {
+      if (!TT || TT.length !== BT || DT(TT.slice(0, -1)) !== TT[TT.length - 1]) return null;
+      const oT = TT[0],
+        IT = {
+          ...iT.f,
+          style: 1 & oT ? "shapes" : "classic"
         };
-      IY.forEach(((YY, FY) => {
-        DY[YY] = 0 !== (rY & 1 << FY + 1)
+      kT.forEach(((TT, iT) => {
+        IT[TT] = 0 !== (oT & 1 << iT + 1)
       }));
-      let AY = 1;
-      for (const FY of OY) DY[FY] = YY[AY] << 16 | YY[AY + 1] << 8 | YY[AY + 2], AY += 3;
-      for (const IY of RY) {
+      let zT = 1;
+      for (const iT of XT) IT[iT] = TT[zT] << 16 | TT[zT + 1] << 8 | TT[zT + 2], zT += 3;
+      for (const kT of WT) {
         const {
-          min: rY,
-          step: RY
-        } = FY.b[IY];
-        DY[IY] = (0, FY.h)(IY, rY + YY[AY] * RY), AY++
+          min: oT,
+          step: WT
+        } = iT.e[kT];
+        IT[kT] = (0, iT.h)(kT, oT + TT[zT] * WT), zT++
       }
-      return DY
+      return IT
     }
   },
-  8685: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      f: () => AY,
-      h: () => IY,
-      j: () => aY,
-      k: () => gY,
-      o: () => vY,
-      r: () => OY,
-      u: () => RY
+  8684: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT,
+      f: () => zT,
+      h: () => kT,
+      k: () => FT,
+      o: () => BT,
+      q: () => ST,
+      u: () => XT,
+      w: () => WT
     });
-    const FY = {
+    const iT = {
         opacity: {
           min: 5,
           max: 100,
@@ -8404,7 +8405,7 @@ export const modules = {
           step: 1
         }
       },
-      AY = Object.freeze({
+      zT = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8425,143 +8426,143 @@ export const modules = {
         forGuns: !1
       });
 
-    function IY(YY, rY) {
-      var DY;
+    function kT(TT, oT) {
+      var IT;
       const {
-        min: IY,
-        max: RY,
-        step: OY
-      } = FY[YY];
-      if (!Number.isFinite(rY)) return AY[YY];
-      const gY = (null !== (DY = String(OY).split(".")[1]) && void 0 !== DY ? DY : "").length,
-        aY = Number((Math.round(rY / OY) * OY).toFixed(gY));
-      return Math.min(RY, Math.max(IY, aY))
+        min: kT,
+        max: WT,
+        step: XT
+      } = iT[TT];
+      if (!Number.isFinite(oT)) return zT[TT];
+      const BT = (null !== (IT = String(XT).split(".")[1]) && void 0 !== IT ? IT : "").length,
+        FT = Number((Math.round(oT / XT) * XT).toFixed(BT));
+      return Math.min(WT, Math.max(kT, FT))
     }
 
-    function RY(YY, rY, DY) {
-      const FY = "number" === typeof DY ? IY(rY, DY) : DY;
+    function WT(TT, oT, IT) {
+      const iT = "number" === typeof IT ? kT(oT, IT) : IT;
       return {
-        ...YY,
-        [rY]: FY
+        ...TT,
+        [oT]: iT
       }
     }
 
-    function OY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(AY).every((FY => DY.includes(FY) || YY[FY] === rY[FY]))
+    function XT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(zT).every((iT => IT.includes(iT) || TT[iT] === oT[iT]))
     }
 
-    function gY(YY) {
-      return OY(YY, AY)
+    function BT(TT) {
+      return XT(TT, zT)
     }
 
-    function aY(YY) {
-      return `#${YY.toString(16).padStart(6,"0")}`
+    function FT(TT) {
+      return `#${TT.toString(16).padStart(6,"0")}`
     }
 
-    function vY(YY) {
-      const rY = /^#?([0-9a-f]{6})$/i.exec(YY.trim());
-      return rY ? parseInt(rY[1], 16) : null
+    function ST(TT) {
+      const oT = /^#?([0-9a-f]{6})$/i.exec(TT.trim());
+      return oT ? parseInt(oT[1], 16) : null
     }
   },
-  8733: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => uY,
-      e: () => sY
+  8731: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => DT,
+      g: () => LT
     });
-    var FY = DY(61),
-      AY = DY(40),
-      IY = DY(8729),
-      RY = DY(8685);
-    const OY = "crosshairCode";
-    let gY = null;
-    const aY = new Set;
+    var iT = IT(46),
+      zT = IT(26),
+      kT = IT(8724),
+      WT = IT(8684);
+    const XT = "crosshairCode";
+    let BT = null;
+    const FT = new Set;
 
-    function vY() {
-      if (null === gY) {
-        var YY;
-        const rY = AY.m.getItem(OY);
-        gY = null !== (YY = "string" === typeof rY ? (0, IY.e)(rY) : null) && void 0 !== YY ? YY : RY.f
+    function ST() {
+      if (null === BT) {
+        var TT;
+        const oT = zT.e.getItem(XT);
+        BT = null !== (TT = "string" === typeof oT ? (0, kT.g)(oT) : null) && void 0 !== TT ? TT : WT.f
       }
-      return gY
+      return BT
     }
 
-    function uY(YY) {
-      gY = YY, (0, RY.k)(YY) ? AY.m.removeItem(OY) : AY.m.setItem(OY, (0, IY.i)(YY));
-      for (const rY of aY) rY()
+    function DT(TT) {
+      BT = TT, (0, WT.o)(TT) ? zT.e.removeItem(XT) : zT.e.setItem(XT, (0, kT.k)(TT));
+      for (const oT of FT) oT()
     }
 
-    function sY() {
-      const [YY, rY] = (0, FY.useState)(vY);
-      return (0, FY.useEffect)((() => {
-        const YY = () => {
-          rY(vY())
+    function LT() {
+      const [TT, oT] = (0, iT.useState)(ST);
+      return (0, iT.useEffect)((() => {
+        const TT = () => {
+          oT(ST())
         };
-        return YY(), DY = YY, aY.add(DY), () => {
-          aY.delete(DY)
+        return TT(), IT = TT, FT.add(IT), () => {
+          FT.delete(IT)
         };
-        var DY
-      }), []), YY
+        var IT
+      }), []), TT
     }
   },
-  8680: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => IY,
-      g: () => AY
+  8682: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => kT,
+      e: () => zT
     });
-    var FY = DY(19);
+    var iT = IT(12);
 
-    function AY(YY, rY) {
-      return YY && !rY
+    function zT(TT, oT) {
+      return TT && !oT
     }
 
-    function IY() {
-      return AY(FY.b.get("isTouchScreen"), FY.b.get("clientEscMenuOptions").touchActionButtons)
+    function kT() {
+      return zT(iT.c.get("isTouchScreen"), iT.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8647: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  8649: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT
     });
-    const FY = new Set(["chunkBorders"])
+    const iT = new Set(["chunkBorders"])
   },
-  8643: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      ALL_DEV_TOOLS: () => RY,
-      coreDevTools: () => aY,
-      devTools: () => gY
+  8647: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      ALL_DEV_TOOLS: () => WT,
+      coreDevTools: () => FT,
+      devTools: () => BT
     });
-    var FY = DY(649),
-      AY = DY(1298),
-      IY = DY(8647);
-    const RY = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function OY() {
+    var iT = IT(637),
+      zT = IT(1266),
+      kT = IT(8649);
+    const WT = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function XT() {
       const {
-        noaDevTools: YY
-      } = await DY.e(226).then((() => DY(40158)));
-      return YY
+        noaDevTools: TT
+      } = await IT.e(226).then((() => IT(39852)));
+      return TT
     }
-    const gY = new class {
+    const BT = new class {
         constructor() {
-          this.loadHost = OY, this.tools = RY
+          this.loadHost = XT, this.tools = WT
         }
-        setHost(YY) {
-          this.tools = null === YY ? RY : YY.tools, this.loadHost = null === YY ? OY : async () => YY
+        setHost(TT) {
+          this.tools = null === TT ? WT : TT.tools, this.loadHost = null === TT ? XT : async () => TT
         }
-        supports(YY) {
-          return this.tools.has(YY)
+        supports(TT) {
+          return this.tools.has(TT)
         }
-        async downloadScene(YY, rY) {
-          const DY = await this.loadHost();
-          await DY.downloadScene(YY, rY)
+        async downloadScene(TT, oT) {
+          const IT = await this.loadHost();
+          await IT.downloadScene(TT, oT)
         }
-        async setAmbientLightIntensity(YY) {
-          const rY = await this.loadHost();
-          await rY.setAmbientLightIntensity(YY)
+        async setAmbientLightIntensity(TT) {
+          const oT = await this.loadHost();
+          await oT.setAmbientLightIntensity(TT)
         }
       },
-      aY = {
-        tools: IY.d,
+      FT = {
+        tools: kT.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -8569,53 +8570,53 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    FY.r && gY.setHost(aY), (0, AY.w)((() => {
-      gY.setHost(aY)
+    iT.u && BT.setHost(FT), (0, zT.r)((() => {
+      BT.setHost(FT)
     }))
   },
-  6230: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => AY,
-      e: () => IY
+  6158: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT,
+      e: () => kT
     });
-    var FY = DY(40);
-    const AY = "shaderPack";
-    async function IY() {
-      var YY;
-      let rY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (YY = await FY.i.getItem(AY, rY)) && void 0 !== YY ? YY : null
+    var iT = IT(26);
+    const zT = "shaderPack";
+    async function kT() {
+      var TT;
+      let oT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (TT = await iT.c.getItem(zT, oT)) && void 0 !== TT ? TT : null
     }
   },
-  8655: (YY, rY, DY) => {
-    function FY(YY, rY) {
-      return YY && !rY
+  8664: (TT, oT, IT) => {
+    function iT(TT, oT) {
+      return TT && !oT
     }
-    DY.d(rY, {
-      b: () => FY
+    IT.d(oT, {
+      d: () => iT
     })
   },
-  8677: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  8680: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT
     });
-    var FY = DY(1113);
+    var iT = IT(1071);
 
-    function AY() {
-      var YY, rY;
-      return null !== (YY = null === (rY = screen.orientation) || void 0 === rY ? void 0 : rY.type) && void 0 !== YY ? YY : innerWidth > innerHeight ? "landscape" : "portrait"
+    function zT() {
+      var TT, oT;
+      return null !== (TT = null === (oT = screen.orientation) || void 0 === oT ? void 0 : oT.type) && void 0 !== TT ? TT : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const IY = new class {
+    const kT = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && AY() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && zT() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = AY(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, FY.jQ)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = zT(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, iT.JK)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -8623,106 +8624,106 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const YY of this.resizers) YY()
+            for (const TT of this.resizers) TT()
           }
         }), 1e3)
       }
-      heldSizer(YY) {
-        let rY = !1;
+      heldSizer(TT) {
+        let oT = !1;
         return () => {
-          if (rY && this.isHeld()) return null;
-          const DY = YY();
-          return rY ||= null !== DY, DY
+          if (oT && this.isHeld()) return null;
+          const IT = TT();
+          return oT ||= null !== IT, IT
         }
       }
-      onRelease(YY) {
-        return this.resizers.add(YY), () => {
-          this.resizers.delete(YY)
+      onRelease(TT) {
+        return this.resizers.add(TT), () => {
+          this.resizers.delete(TT)
         }
       }
     }
   },
-  8653: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => iY,
-      i: () => sY
+  8660: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => xT,
+      d: () => LT
     });
-    var FY = DY(19),
-      AY = DY(1665),
-      IY = DY(40),
-      RY = DY(1346),
-      OY = DY(3272),
-      gY = DY(1450),
-      aY = DY(1384);
-    const vY = 2592e5,
-      uY = "notificationOptInLastPromptedAt";
-    async function sY() {
-      var YY;
-      const rY = await iY();
-      if (null === rY) return;
-      const DY = null !== (YY = IY.m.getItem(uY)) && void 0 !== YY ? YY : 0;
-      if (Date.now() - DY < vY) return;
-      if ((0, aY.f)()) return;
-      const FY = await RY.NotificationProvider.showPromptPopup({
+    var iT = IT(12),
+      zT = IT(1635),
+      kT = IT(26),
+      WT = IT(1325),
+      XT = IT(3232),
+      BT = IT(1427),
+      FT = IT(1357);
+    const ST = 2592e5,
+      DT = "notificationOptInLastPromptedAt";
+    async function LT() {
+      var TT;
+      const oT = await xT();
+      if (null === oT) return;
+      const IT = null !== (TT = kT.e.getItem(DT)) && void 0 !== TT ? TT : 0;
+      if (Date.now() - IT < ST) return;
+      if ((0, FT.f)()) return;
+      const iT = await WT.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: AY.e.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: zT.c.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOnCancel: !0
       }).getResult();
-      "notificationTornDown" !== FY && (IY.m.setItem(uY, Date.now()), (0, gY.reportAnalyticsClick)({
-        id: !0 === FY ? "push.allow" : "push.deny",
-        value: AY.e.supports("notifications") ? "app" : "browser"
-      }), !0 === FY && rY().catch((YY => {
-        console.error("Failed to ask for push notifications:", YY)
+      "notificationTornDown" !== iT && (kT.e.setItem(DT, Date.now()), (0, BT.reportAnalyticsClick)({
+        id: !0 === iT ? "push.allow" : "push.deny",
+        value: zT.c.supports("notifications") ? "app" : "browser"
+      }), !0 === iT && oT().catch((TT => {
+        console.error("Failed to ask for push notifications:", TT)
       })))
     }
-    async function iY() {
-      return await AY.e.ready, AY.e.supports("notifications") ? FY.b.get("mobilePushNotificationsCanAsk") ? async () => {
-        AY.e.request("notifications.requestPermission", {}).then((YY => {
+    async function xT() {
+      return await zT.c.ready, zT.c.supports("notifications") ? iT.c.get("mobilePushNotificationsCanAsk") ? async () => {
+        zT.c.request("notifications.requestPermission", {}).then((TT => {
           let {
-            canAsk: rY
-          } = YY;
-          FY.b.set({
-            mobilePushNotificationsCanAsk: rY
+            canAsk: oT
+          } = TT;
+          iT.c.set({
+            mobilePushNotificationsCanAsk: oT
           })
-        }), (YY => {
-          console.error("The app couldn't ask for push notifications:", YY)
+        }), (TT => {
+          console.error("The app couldn't ask for push notifications:", TT)
         }))
-      }: null: await OY.c.canAsk() ? () => OY.c.requestPermission() : null
+      }: null: await XT.b.canAsk() ? () => XT.b.requestPermission() : null
     }
   },
-  8659: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => OY,
-      g: () => gY
+  8668: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => XT,
+      e: () => BT
     });
-    var FY = DY(19);
-    const AY = 24,
-      IY = "farNametags",
-      RY = 1e5;
+    var iT = IT(12);
+    const zT = 24,
+      kT = "farNametags",
+      WT = 1e5;
 
-    function OY() {
-      var YY;
-      return null === (YY = FY.b.get("showDistantNametags")) || void 0 === YY || YY
+    function XT() {
+      var TT;
+      return null === (TT = iT.c.get("showDistantNametags")) || void 0 === TT || TT
     }
 
-    function gY() {
-      var YY;
-      return null !== (YY = function() {
-        const YY = new URLSearchParams(window.location.search).get(IY),
-          rY = null === YY || "" === YY ? NaN : Number(YY);
-        return Number.isFinite(rY) && rY >= 0 ? Math.min(rY, RY) : null
-      }()) && void 0 !== YY ? YY : OY() ? 0 : AY
+    function BT() {
+      var TT;
+      return null !== (TT = function() {
+        const TT = new URLSearchParams(window.location.search).get(kT),
+          oT = null === TT || "" === TT ? NaN : Number(TT);
+        return Number.isFinite(oT) && oT >= 0 ? Math.min(oT, WT) : null
+      }()) && void 0 !== TT ? TT : XT() ? 0 : zT
     }
   },
-  8774: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => AY,
-      g: () => RY
+  8766: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT,
+      d: () => WT
     });
-    const FY = [{
+    const iT = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -8904,79 +8905,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function AY(YY) {
-      let rY, DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof YY) {
-        if (!Number.isFinite(YY)) return "0";
-        if (Math.abs(YY) < 100) {
-          const rY = YY < 0 ? "-" : "",
-            DY = Math.abs(YY);
-          return DY >= 10 ? `${rY}${DY.toFixed(1).replace(/\.0$/,"")}` : `${rY}${DY.toFixed(2).replace(/\.?0+$/,"")}`
+    function zT(TT) {
+      let oT, IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof TT) {
+        if (!Number.isFinite(TT)) return "0";
+        if (Math.abs(TT) < 100) {
+          const oT = TT < 0 ? "-" : "",
+            IT = Math.abs(TT);
+          return IT >= 10 ? `${oT}${IT.toFixed(1).replace(/\.0$/,"")}` : `${oT}${IT.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        rY = BigInt(Math.floor(YY))
-      } else rY = YY;
-      const AY = rY < 0n ? -rY : rY,
-        IY = rY < 0n ? "-" : "",
-        RY = AY.toString();
-      if (RY.length <= DY) return `${IY}${RY}`;
-      const OY = 3 * Math.floor((RY.length - 1) / 3);
-      if (OY < 3) return `${IY}${RY}`;
-      if (OY > 3 * FY.length) {
-        const YY = RY[0],
-          rY = RY.slice(1, 3).replace(/0+$/, "");
-        return `${IY}${rY?`${YY}.${rY}`:YY}e${RY.length-1}`
+        oT = BigInt(Math.floor(TT))
+      } else oT = TT;
+      const zT = oT < 0n ? -oT : oT,
+        kT = oT < 0n ? "-" : "",
+        WT = zT.toString();
+      if (WT.length <= IT) return `${kT}${WT}`;
+      const XT = 3 * Math.floor((WT.length - 1) / 3);
+      if (XT < 3) return `${kT}${WT}`;
+      if (XT > 3 * iT.length) {
+        const TT = WT[0],
+          oT = WT.slice(1, 3).replace(/0+$/, "");
+        return `${kT}${oT?`${TT}.${oT}`:TT}e${WT.length-1}`
       }
       const {
-        threshold: gY,
-        suffix: aY
-      } = FY[FY.length - OY / 3], vY = AY / gY, uY = Number(1000n * (AY % gY) / gY), sY = Number(vY) + uY / 1e3;
-      let iY;
-      return iY = sY >= 100 ? Math.floor(sY).toString() : sY >= 10 ? sY.toFixed(1).replace(/\.0$/, "") : sY.toFixed(2).replace(/\.?0+$/, ""), `${IY}${iY}${aY}`
+        threshold: BT,
+        suffix: FT
+      } = iT[iT.length - XT / 3], ST = zT / BT, DT = Number(1000n * (zT % BT) / BT), LT = Number(ST) + DT / 1e3;
+      let xT;
+      return xT = LT >= 100 ? Math.floor(LT).toString() : LT >= 10 ? LT.toFixed(1).replace(/\.0$/, "") : LT.toFixed(2).replace(/\.?0+$/, ""), `${kT}${xT}${FT}`
     }
-    const IY = FY.map((YY => {
+    const kT = iT.map((TT => {
       let {
-        threshold: rY,
-        suffix: DY
-      } = YY;
+        threshold: oT,
+        suffix: IT
+      } = TT;
       return {
-        threshold: Number(rY),
-        suffix: DY
+        threshold: Number(oT),
+        suffix: IT
       }
-    })).filter((YY => {
+    })).filter((TT => {
       let {
-        threshold: rY
-      } = YY;
-      return Number.isFinite(rY)
+        threshold: oT
+      } = TT;
+      return Number.isFinite(oT)
     }));
 
-    function RY(YY) {
-      const rY = Math.abs(YY),
-        DY = YY < 0 ? "-" : "";
+    function WT(TT) {
+      const oT = Math.abs(TT),
+        IT = TT < 0 ? "-" : "";
       for (const {
-          threshold: FY,
-          suffix: AY
+          threshold: iT,
+          suffix: zT
         }
-        of IY)
-        if (rY >= FY) {
-          const YY = rY / FY;
-          if (YY >= 1e3) return `${DY}${rY.toExponential(2).replace("e+","e")}`;
-          let IY;
-          return IY = YY >= 100 ? Math.floor(YY).toString() : YY >= 10 ? YY.toFixed(1).replace(/\.0$/, "") : YY.toFixed(2).replace(/\.?0+$/, ""), `${DY}${IY}${AY}`
-        } return `${DY}${rY}`
+        of kT)
+        if (oT >= iT) {
+          const TT = oT / iT;
+          if (TT >= 1e3) return `${IT}${oT.toExponential(2).replace("e+","e")}`;
+          let kT;
+          return kT = TT >= 100 ? Math.floor(TT).toString() : TT >= 10 ? TT.toFixed(1).replace(/\.0$/, "") : TT.toFixed(2).replace(/\.?0+$/, ""), `${IT}${kT}${zT}`
+        } return `${IT}${oT}`
     }
   },
-  8756: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => vY,
-      h: () => sY,
-      k: () => uY,
-      l: () => RY,
-      m: () => aY,
-      n: () => gY
+  8754: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => ST,
+      f: () => LT,
+      h: () => DT,
+      k: () => WT,
+      n: () => FT,
+      r: () => BT
     });
-    var FY = DY(341);
-    const AY = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      IY = {
+    var iT = IT(314);
+    const zT = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      kT = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9051,13 +9052,13 @@ export const modules = {
         }
       };
 
-    function RY(YY) {
-      var rY;
-      return null !== (rY = IY[YY]) && void 0 !== rY ? rY : {
+    function WT(TT) {
+      var oT;
+      return null !== (oT = kT[TT]) && void 0 !== oT ? oT : {
         translationKey: ""
       }
     }
-    const OY = {
+    const XT = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9110,76 +9111,76 @@ export const modules = {
       }]
     };
 
-    function gY(YY) {
-      return AY.includes(YY)
+    function BT(TT) {
+      return zT.includes(TT)
     }
 
-    function aY(YY) {
-      var rY;
-      return !0 === (null === YY || void 0 === YY || null === (rY = YY.customAttributes) || void 0 === rY ? void 0 : rY.cannotEnchant)
+    function FT(TT) {
+      var oT;
+      return !0 === (null === TT || void 0 === TT || null === (oT = TT.customAttributes) || void 0 === oT ? void 0 : oT.cannotEnchant)
     }
 
-    function vY(YY, rY) {
+    function ST(TT, oT) {
       const {
-        max: DY
-      } = OY[YY].at(-1);
-      return rY <= DY
+        max: IT
+      } = XT[TT].at(-1);
+      return oT <= IT
     }
 
-    function uY(YY) {
-      const rY = Math.sin(YY / 80),
-        DY = YY => {
-          if (YY <= 0) return 0;
-          if (YY > 1) return 1;
-          let rY = 0;
-          const DY = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let FY = 0; FY < DY.length; FY++) {
-            rY += (FY % 2 === 0 ? 1 : -1) * DY[FY] * Math.pow(YY, 2 + FY) / (2 + FY)
+    function DT(TT) {
+      const oT = Math.sin(TT / 80),
+        IT = TT => {
+          if (TT <= 0) return 0;
+          if (TT > 1) return 1;
+          let oT = 0;
+          const IT = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let iT = 0; iT < IT.length; iT++) {
+            oT += (iT % 2 === 0 ? 1 : -1) * IT[iT] * Math.pow(TT, 2 + iT) / (2 + iT)
           }
-          return 72 * rY
+          return 72 * oT
         },
-        FY = .3 - .78 * rY,
-        AY = .5 - .78 * rY,
-        IY = .6 - .7 * rY,
-        RY = .8 - .6 * rY;
-      let OY = DY(FY),
-        gY = DY(AY) - OY,
-        aY = DY(IY) - gY - OY,
-        vY = DY(RY) - aY - gY - OY;
-      FY < .041 && (gY /= 1 - OY, aY /= 1 - OY, vY /= 1 - OY, OY = 0), AY < .041 && (OY /= 1 - gY, aY /= 1 - gY, vY /= 1 - gY, gY = 0), IY < .041 && (OY /= 1 - aY, gY /= 1 - aY, vY /= 1 - aY, aY = 0), RY < .041 && (OY /= 1 - vY, gY /= 1 - vY, aY /= 1 - vY, vY = 0);
+        iT = .3 - .78 * oT,
+        zT = .5 - .78 * oT,
+        kT = .6 - .7 * oT,
+        WT = .8 - .6 * oT;
+      let XT = IT(iT),
+        BT = IT(zT) - XT,
+        FT = IT(kT) - BT - XT,
+        ST = IT(WT) - FT - BT - XT;
+      iT < .041 && (BT /= 1 - XT, FT /= 1 - XT, ST /= 1 - XT, XT = 0), zT < .041 && (XT /= 1 - BT, FT /= 1 - BT, ST /= 1 - BT, BT = 0), kT < .041 && (XT /= 1 - FT, BT /= 1 - FT, ST /= 1 - FT, FT = 0), WT < .041 && (XT /= 1 - ST, BT /= 1 - ST, FT /= 1 - ST, ST = 0);
       return {
-        commonProb: OY,
-        uncommonProb: gY,
-        rareProb: aY,
-        epicProb: vY,
-        legendaryProb: 1 - (vY + aY + gY + OY)
+        commonProb: XT,
+        uncommonProb: BT,
+        rareProb: FT,
+        epicProb: ST,
+        legendaryProb: 1 - (ST + FT + BT + XT)
       }
     }
 
-    function sY(YY, rY) {
+    function LT(TT, oT) {
       const {
-        min: DY,
-        max: AY
-      } = OY[YY][rY], IY = FY.c.sampleUniformIntDistribution(DY, AY, "includeMax");
+        min: IT,
+        max: zT
+      } = XT[TT][oT], kT = iT.e.sampleUniformIntDistribution(IT, zT, "includeMax");
       return {
-        ...uY(IY),
-        level: IY
+        ...DT(kT),
+        level: kT
       }
     }
   },
-  8724: () => {},
-  8691: YY => {
-    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  8715: () => {},
+  8692: TT => {
+    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  8698: YY => {
-    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  8695: TT => {
+    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  8705: YY => {
-    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  8699: TT => {
+    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  8709: YY => {
-    YY.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  8704: TT => {
+    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

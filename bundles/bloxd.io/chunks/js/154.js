@@ -1,419 +1,419 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  40289: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      openMobLineupPreview: () => wY,
-      openMobPreview: () => MY,
-      openPetPreview: () => bY
+  39992: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      openMobLineupPreview: () => qT,
+      openMobPreview: () => nT,
+      openPetPreview: () => ZT
     });
-    var FY = DY(38965),
-      AY = DY(39209),
-      IY = DY(40295),
-      RY = DY(36586),
-      OY = DY(36518),
-      gY = DY(39375),
-      aY = DY(40314),
-      vY = DY(37858),
-      uY = DY(36931),
-      sY = DY(36894),
-      iY = DY(36914),
-      yY = DY(37760),
-      QY = DY(37753),
-      oY = DY(37500),
-      WY = DY(37545),
-      EY = DY(37522),
-      mY = DY(37123),
-      VY = DY(2501),
-      SY = DY(36885);
-    DY(40316), DY(39602), DY(40323);
-    const lY = 22,
-      TY = 13,
-      eY = Math.PI - Math.PI / 16,
-      NY = 6,
-      BY = Math.PI / 4;
-    let cY = null;
-    const KY = {},
-      HY = new Map;
+    var iT = IT(38589),
+      zT = IT(38874),
+      kT = IT(4e4),
+      WT = IT(36175),
+      XT = IT(36114),
+      BT = IT(39021),
+      FT = IT(40023),
+      ST = IT(37453),
+      DT = IT(36539),
+      LT = IT(36501),
+      xT = IT(36522),
+      cT = IT(37356),
+      KT = IT(37348),
+      MT = IT(37111),
+      rT = IT(37151),
+      AT = IT(37129),
+      gT = IT(36729),
+      hT = IT(2465),
+      wT = IT(36488);
+    IT(40029), IT(39273), IT(40038);
+    const mT = 22,
+      eT = 13,
+      RT = Math.PI - Math.PI / 16,
+      uT = 6,
+      vT = Math.PI / 4;
+    let ET = null;
+    const fT = {},
+      CT = new Map;
 
-    function zY() {
-      if (null !== cY) return cY;
-      const YY = document.createElement("canvas");
-      YY.classList.add("MobPreviewCanvas");
-      const rY = new FY.c(YY, !0, {
+    function jT() {
+      if (null !== ET) return ET;
+      const TT = document.createElement("canvas");
+      TT.classList.add("MobPreviewCanvas");
+      const oT = new iT.c(TT, !0, {
         preserveDrawingBuffer: !0
       });
-      rY.QDY = (0, VY.e)().sQ.engine.QDY;
-      const DY = new AY.c(rY);
-      DY.clearColor = new RY.c(0, 0, 0, 0), DY.ambientColor = new RY.Color3(1, 1, 1);
-      const aY = new IY.e("Co", Math.PI / 2, Math.PI / 2, lY, OY.xy.Zero(), DY),
-        vY = new gY.e("light", new OY.xy(-.1, 1, -.3), DY);
-      return vY.diffuse = new RY.Color3(1, 1, 1), vY.specular = new RY.Color3(1, 1, 1), vY.groundColor = new RY.Color3(.5, .5, .5), cY = {
-        engine: rY,
-        LQ: DY,
-        canvas: YY,
-        camera: aY
-      }, cY
+      oT.lIT = (0, hT.i)().FK.engine.lIT;
+      const IT = new zT.d(oT);
+      IT.clearColor = new WT.b(0, 0, 0, 0), IT.ambientColor = new WT.Color3(1, 1, 1);
+      const FT = new kT.c("jM", Math.PI / 2, Math.PI / 2, mT, XT.sc.Zero(), IT),
+        ST = new BT.d("light", new XT.sc(-.1, 1, -.3), IT);
+      return ST.diffuse = new WT.Color3(1, 1, 1), ST.specular = new WT.Color3(1, 1, 1), ST.groundColor = new WT.Color3(.5, .5, .5), ET = {
+        engine: oT,
+        NK: IT,
+        canvas: TT,
+        camera: FT
+      }, ET
     }
 
-    function ZY(YY) {
-      return KY[YY] ??= (0, oY.v)(YY, zY().LQ, !0).catch((rY => {
-        throw delete KY[YY], rY
-      })), KY[YY]
+    function JT(TT) {
+      return fT[TT] ??= (0, MT.u)(TT, jT().NK, !0).catch((oT => {
+        throw delete fT[TT], oT
+      })), fT[TT]
     }
 
-    function CY(YY) {
-      let rY = HY.get(YY);
-      return rY || (rY = mY.C[YY].loadModel(zY().LQ, !1).then((YY => (YY.mV(!1), YY)), (rY => {
-        throw HY.delete(YY), rY
-      })), HY.set(YY, rY)), rY
+    function UT(TT) {
+      let oT = CT.get(TT);
+      return oT || (oT = gT.B[TT].loadModel(jT().NK, !1).then((TT => (TT.Fv(!1), TT)), (oT => {
+        throw CT.delete(TT), oT
+      })), CT.set(TT, oT)), oT
     }
 
-    function fY(YY) {
-      var rY, DY, FY;
+    function aT(TT) {
+      var oT, IT, iT;
       let {
-        mobType: AY,
-        variation: IY,
-        animation: RY
-      } = YY, gY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, lY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const NY = null !== (rY = null === gY || void 0 === gY ? void 0 : gY.size) && void 0 !== rY ? rY : 1,
-        BY = null !== (DY = null === gY || void 0 === gY ? void 0 : gY.cosmetics) && void 0 !== DY ? DY : [],
-        cY = null !== (FY = null === gY || void 0 === gY ? void 0 : gY.RV) && void 0 !== FY ? FY : null;
-      let KY = !1,
-        HY = null,
-        fY = null;
+        mobType: zT,
+        variation: kT,
+        animation: WT
+      } = TT, BT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const uT = null !== (oT = null === BT || void 0 === BT ? void 0 : BT.size) && void 0 !== oT ? oT : 1,
+        vT = null !== (IT = null === BT || void 0 === BT ? void 0 : BT.cosmetics) && void 0 !== IT ? IT : [],
+        ET = null !== (iT = null === BT || void 0 === BT ? void 0 : BT.Tu) && void 0 !== iT ? iT : null;
+      let fT = !1,
+        CT = null,
+        aT = null;
       const {
-        engine: jY,
-        LQ: hY
-      } = zY(), dY = hY.onBeforeRenderObservable.add((() => {
-        var YY;
-        null === (YY = fY) || void 0 === YY || YY.render(jY.getDeltaTime())
-      })), JY = null === cY ? null : CY(cY).catch((YY => (console.error(`Mob preview: could not load ${cY}`, YY), null)));
-      return Promise.all([ZY(AY), JY]).then((YY => {
-        var rY, DY, FY;
-        let [gY, ZY] = YY;
-        if (KY) return;
-        const CY = (0, VY.e)().sQ.qT,
+        engine: YT,
+        NK: QT
+      } = jT(), OT = QT.onBeforeRenderObservable.add((() => {
+        var TT;
+        null === (TT = aT) || void 0 === TT || TT.render(YT.getDeltaTime())
+      })), HT = null === ET ? null : UT(ET).catch((TT => (console.error(`Mob preview: could not load ${ET}`, TT), null)));
+      return Promise.all([JT(zT), HT]).then((TT => {
+        var oT, IT, iT;
+        let [BT, JT] = TT;
+        if (fT) return;
+        const UT = (0, hT.i)().FK.iJ,
           {
-            hitBoxDimensions: jY
-          } = (0, vY.e)(AY),
-          hY = TY / Math.max(jY.height, jY.width);
-        if (HY = (0, oY.j)(AY, hY * NY, !0, !0), CY.setPosition(HY, lY, -jY.height * hY / 2, 0), CY.setRotationEulerY(HY, eY), gY.meshApi instanceof EY.e && BY.length > 0)
-          for (const [AY, IY] of BY) gY.meshApi.updatePlayerCosmetic(null, HY, AY, IY, !0);
-        else gY.meshApi.updateVariation(HY, AY, null !== IY && void 0 !== IY ? IY : "default");
-        null !== cY && null !== ZY && function(YY, rY, DY, FY) {
-          var AY;
-          const IY = mY.C[YY],
-            RY = (0, yY.l)();
-          (0, yY.h)(IY, null === (AY = (0, WY.b)(DY).meshMetadata.heldItemPositionParams) || void 0 === AY ? void 0 : AY.itemOffset, RY);
-          const gY = SY.e * RY.pa.y,
-            vY = RY.usesQuaternion ? RY.quaternion : OY.Quaternion.FromEulerVector(RY.rotation),
-            uY = new aY.e(`${rY.name}Hand`, zY().LQ);
-          uY.position.brY((0, QY.e)(RY.position, vY, gY, IY.heldModelOffsetY())), uY.rotationQuaternion = vY, uY.pa.set(RY.pa.x, gY, RY.pa.z), rY.clone(`${rY.name}Held`, uY).mV(!0);
-          const sY = (0, VY.e)().sQ.qT;
-          sY.attachTransformNode(uY, FY, sY.getNamedNode(FY, "ArmRightMesh"))
-        }(cY, ZY, AY, HY), CY.set(HY, "aOpacity", 1);
-        const dY = null !== (rY = (0, WY.b)(AY).meshMetadata.lifeformTypeForModelOverride) && void 0 !== rY ? rY : AY;
-        fY = new iY.AnimatorState, fY.thinInstMgr = CY, fY.pT = HY, fY.MrY = CY.oDY(HY, 0), fY.modelLifeformType = dY, fY.nodeNameAliases = null !== (DY = null === (FY = (0, uY.b)(dY)) || void 0 === FY ? void 0 : FY.nodeNameAliases) && void 0 !== DY ? DY : null, fY.startAnimation(RY, sY.d.Movement)
-      })).catch((YY => {
-        console.error(`Mob preview: could not load ${AY}`, YY)
+            hitBoxDimensions: YT
+          } = (0, ST.c)(zT),
+          QT = eT / Math.max(YT.height, YT.width);
+        if (CT = (0, MT.l)(zT, QT * uT, !0, !0), UT.setPosition(CT, mT, -YT.height * QT / 2, 0), UT.setRotationEulerY(CT, RT), BT.meshApi instanceof AT.b && vT.length > 0)
+          for (const [zT, kT] of vT) BT.meshApi.updatePlayerCosmetic(null, CT, zT, kT, !0);
+        else BT.meshApi.updateVariation(CT, zT, null !== kT && void 0 !== kT ? kT : "default");
+        null !== ET && null !== JT && function(TT, oT, IT, iT) {
+          var zT;
+          const kT = gT.B[TT],
+            WT = (0, cT.k)();
+          (0, cT.h)(kT, null === (zT = (0, rT.c)(IT).meshMetadata.heldItemPositionParams) || void 0 === zT ? void 0 : zT.itemOffset, WT);
+          const BT = wT.e * WT.ti.y,
+            ST = WT.usesQuaternion ? WT.quaternion : XT.Quaternion.FromEulerVector(WT.rotation),
+            DT = new FT.c(`${oT.name}Hand`, jT().NK);
+          DT.position.SIT((0, KT.c)(WT.position, ST, BT, kT.heldModelOffsetY())), DT.rotationQuaternion = ST, DT.ti.set(WT.ti.x, BT, WT.ti.z), oT.clone(`${oT.name}Held`, DT).Fv(!0);
+          const LT = (0, hT.i)().FK.iJ;
+          LT.attachTransformNode(DT, iT, LT.getNamedNode(iT, "ArmRightMesh"))
+        }(ET, JT, zT, CT), UT.set(CT, "aOpacity", 1);
+        const OT = null !== (oT = (0, rT.c)(zT).meshMetadata.lifeformTypeForModelOverride) && void 0 !== oT ? oT : zT;
+        aT = new xT.AnimatorState, aT.thinInstMgr = UT, aT.WJ = CT, aT.BIT = UT.sIT(CT, 0), aT.modelLifeformType = OT, aT.nodeNameAliases = null !== (IT = null === (iT = (0, DT.e)(OT)) || void 0 === iT ? void 0 : iT.nodeNameAliases) && void 0 !== IT ? IT : null, aT.startAnimation(WT, LT.e.Movement)
+      })).catch((TT => {
+        console.error(`Mob preview: could not load ${zT}`, TT)
       })), () => {
-        KY = !0, hY.onBeforeRenderObservable.remove(dY), null !== HY && (0, VY.e)().sQ.qT.delete(HY)
+        fT = !0, QT.onBeforeRenderObservable.remove(OT), null !== CT && (0, hT.i)().FK.iJ.delete(CT)
       }
     }
 
-    function jY(YY, rY) {
-      return fY({
+    function YT(TT, oT) {
+      return aT({
         mobType: "NPC",
         variation: null,
-        animation: YY.animation
-      }, YY, rY)
+        animation: TT.animation
+      }, TT, oT)
     }
 
-    function hY(YY) {
+    function QT(TT) {
       let {
-        mobType: rY,
-        variation: DY,
-        metaInfo: FY,
-        tamed: AY
-      } = YY, IY = !1, RY = null, OY = 0;
-      const gY = (0, VY.e)(),
-        aY = gY.sQ.qT,
-        vY = YY => {
-          OY += BY * (YY / 1e3) % (2 * Math.PI), aY.setRotationEulerY(RY, OY)
+        mobType: oT,
+        variation: IT,
+        metaInfo: iT,
+        tamed: zT
+      } = TT, kT = !1, WT = null, XT = 0;
+      const BT = (0, hT.i)(),
+        FT = BT.FK.iJ,
+        ST = TT => {
+          XT += vT * (TT / 1e3) % (2 * Math.PI), FT.setRotationEulerY(WT, XT)
         };
-      return ZY(rY).then((YY => {
-        if (IY) return;
-        RY = (0, oY.j)(rY, NY, !0, !0), aY.setPosition(RY, 0, -NY, 0), YY.meshApi.updateVariation(RY, rY, DY);
-        const OY = {
-          wool: "Sheared" !== FY,
-          saddle: "Saddled" === FY,
-          antlers: "Antlers" === FY,
-          collar: AY
+      return JT(oT).then((TT => {
+        if (kT) return;
+        WT = (0, MT.l)(oT, uT, !0, !0), FT.setPosition(WT, 0, -uT, 0), TT.meshApi.updateVariation(WT, oT, IT);
+        const XT = {
+          wool: "Sheared" !== iT,
+          saddle: "Saddled" === iT,
+          antlers: "Antlers" === iT,
+          collar: zT
         };
-        for (const [rY, DY] of Object.entries(OY)) aY.hasGroup(RY, rY) && YY.meshApi.setMeshGroupVisibility(RY, rY, DY);
-        aY.set(RY, "aOpacity", 1), gY.on("renderTickBegin", vY)
-      })).catch((YY => {
-        console.error(`Pet preview: could not load ${rY}`, YY)
+        for (const [oT, IT] of Object.entries(XT)) FT.hasGroup(WT, oT) && TT.meshApi.setMeshGroupVisibility(WT, oT, IT);
+        FT.set(WT, "aOpacity", 1), BT.on("renderTickBegin", ST)
+      })).catch((TT => {
+        console.error(`Pet preview: could not load ${oT}`, TT)
       })), () => {
-        IY = !0, gY.off("renderTickBegin", vY), null !== RY && aY.delete(RY)
+        kT = !0, BT.off("renderTickBegin", ST), null !== WT && FT.delete(WT)
       }
     }
-    class dY {
-      constructor(YY, rY) {
-        this.place = rY, this.remove = null;
+    class OT {
+      constructor(TT, oT) {
+        this.place = oT, this.remove = null;
         const {
-          engine: DY,
-          LQ: FY,
-          canvas: AY
-        } = zY();
-        YY.appendChild(AY), DY.resize(), DY.runRenderLoop((() => {
-          FY.render()
+          engine: IT,
+          NK: iT,
+          canvas: zT
+        } = jT();
+        TT.appendChild(zT), IT.resize(), IT.runRenderLoop((() => {
+          iT.render()
         }))
       }
-      show(YY) {
-        var rY;
-        null === (rY = this.remove) || void 0 === rY || rY.call(this), this.remove = this.place(YY)
+      show(TT) {
+        var oT;
+        null === (oT = this.remove) || void 0 === oT || oT.call(this), this.remove = this.place(TT)
       }
-      resize(YY, rY) {
+      resize(TT, oT) {
         const {
-          engine: DY,
-          canvas: FY
-        } = zY();
-        FY.width = YY, FY.height = rY, DY.resize()
+          engine: IT,
+          canvas: iT
+        } = jT();
+        iT.width = TT, iT.height = oT, IT.resize()
       }
       close() {
-        var YY;
-        zY().engine.stopRenderLoop(), null === (YY = this.remove) || void 0 === YY || YY.call(this), this.remove = null
+        var TT;
+        jT().engine.stopRenderLoop(), null === (TT = this.remove) || void 0 === TT || TT.call(this), this.remove = null
       }
     }
-    class JY {
-      constructor(YY) {
+    class HT {
+      constructor(TT) {
         this.preview = void 0, this.view = {
           figures: [],
           shown: []
-        }, this.aspect = 1, this.placed = [], this.preview = new dY(YY, (() => () => {}))
+        }, this.aspect = 1, this.placed = [], this.preview = new OT(TT, (() => () => {}))
       }
-      show(YY) {
-        YY.figures !== this.view.figures && this.preload(YY.figures), this.view = YY, this.place()
+      show(TT) {
+        TT.figures !== this.view.figures && this.preload(TT.figures), this.view = TT, this.place()
       }
-      resize(YY, rY) {
-        this.preview.resize(YY, rY), this.aspect = YY / rY, this.place()
+      resize(TT, oT) {
+        this.preview.resize(TT, oT), this.aspect = TT / oT, this.place()
       }
       close() {
         this.preview.close();
-        for (const YY of this.placed) null === YY || void 0 === YY || YY.remove();
+        for (const TT of this.placed) null === TT || void 0 === TT || TT.remove();
         this.placed = []
       }
-      preload(YY) {
-        const rY = () => {};
-        ZY("NPC").catch(rY);
+      preload(TT) {
+        const oT = () => {};
+        JT("NPC").catch(oT);
         for (const {
-            RV: DY
+            Tu: IT
           }
-          of YY) null !== DY && CY(DY).catch(rY)
+          of TT) null !== IT && UT(IT).catch(oT)
       }
       place() {
         const {
-          figures: YY,
-          shown: rY
-        } = this.view, DY = YY.map(((DY, FY) => {
-          var AY;
-          const IY = null !== (AY = this.placed[FY]) && void 0 !== AY ? AY : null;
-          if (!rY[FY]) return null === IY || void 0 === IY || IY.remove(), null;
-          const RY = (OY = (FY + .5) / YY.length, gY = this.aspect, (.5 - OY) * (2 * lY * Math.tan(zY().camera.fov / 2)) * gY);
-          var OY, gY;
-          return null !== IY && IY.figure === DY && IY.x === RY ? IY : (null === IY || void 0 === IY || IY.remove(), {
-            figure: DY,
-            x: RY,
-            remove: jY(DY, RY)
+          figures: TT,
+          shown: oT
+        } = this.view, IT = TT.map(((IT, iT) => {
+          var zT;
+          const kT = null !== (zT = this.placed[iT]) && void 0 !== zT ? zT : null;
+          if (!oT[iT]) return null === kT || void 0 === kT || kT.remove(), null;
+          const WT = (XT = (iT + .5) / TT.length, BT = this.aspect, (.5 - XT) * (2 * mT * Math.tan(jT().camera.fov / 2)) * BT);
+          var XT, BT;
+          return null !== kT && kT.figure === IT && kT.x === WT ? kT : (null === kT || void 0 === kT || kT.remove(), {
+            figure: IT,
+            x: WT,
+            remove: YT(IT, WT)
           })
         }));
-        for (const FY of this.placed.slice(YY.length)) null === FY || void 0 === FY || FY.remove();
-        this.placed = DY
+        for (const iT of this.placed.slice(TT.length)) null === iT || void 0 === iT || iT.remove();
+        this.placed = IT
       }
     }
 
-    function MY(YY) {
-      return new dY(YY, fY)
+    function nT(TT) {
+      return new OT(TT, aT)
     }
 
-    function wY(YY) {
-      return new JY(YY)
+    function qT(TT) {
+      return new HT(TT)
     }
 
-    function bY(YY) {
-      return new dY(YY, hY)
+    function ZT(TT) {
+      return new OT(TT, QT)
     }
   },
-  38154: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => sY
+  37777: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => LT
     });
-    var FY = DY(36450),
-      AY = DY(36460),
-      IY = DY(36691),
-      RY = DY(36465),
-      OY = DY(36454);
+    var iT = IT(36040),
+      zT = IT(36051),
+      kT = IT(36280),
+      WT = IT(36056),
+      XT = IT(36047);
 
-    function gY(YY) {
-      return `\n\t\t\t\t${(0,OY.z)(YY,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function BT(TT) {
+      return `\n\t\t\t\t${(0,XT.w)(TT,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, OY.F)(YY, "float", "s", "sin(ang)")
+        (0, XT.D)(TT, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, OY.F)(YY, "float", "c", "cos(ang)")
+        (0, XT.D)(TT, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, OY.n)(YY, "mat2", "c", "s", "-s", "c")
+        (0, XT.l)(TT, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function aY(YY, rY) {
-      let DY = (0, OY.Ib)(YY, "skele" + (rY - 1));
-      for (let AY = rY - 2; AY >= 0; AY--) DY = (0, OY.ub)(YY, `boneIdx == ${AY}`, (0, OY.Ib)(YY, `skele${AY}`), DY);
-      const FY = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,OY.F)(YY,"int","boneIdx",(0,OY.Ab)(YY,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,OY.F)(YY,"vec3","bone",DY)}\n\t\t\t\t${(0,OY.F)(YY,"vec2","pivot",(0,OY.n)(YY,"vec2","0.0",`${(0,OY.Ob)(YY,"position")}.z`))}\n\t\t\t\t${(0,OY.db)(YY)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${FY}));`:`positionUpdated.yz += ${FY};`}\n\t\t`
+    function FT(TT, oT) {
+      let IT = (0, XT.wb)(TT, "skele" + (oT - 1));
+      for (let zT = oT - 2; zT >= 0; zT--) IT = (0, XT.ob)(TT, `boneIdx == ${zT}`, (0, XT.wb)(TT, `skele${zT}`), IT);
+      const iT = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,XT.D)(TT,"int","boneIdx",(0,XT.sb)(TT,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,XT.D)(TT,"vec3","bone",IT)}\n\t\t\t\t${(0,XT.D)(TT,"vec2","pivot",(0,XT.l)(TT,"vec2","0.0",`${(0,XT.Fb)(TT,"position")}.z`))}\n\t\t\t\t${(0,XT.Y)(TT)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${iT}));`:`positionUpdated.yz += ${iT};`}\n\t\t`
     }
 
-    function vY(YY) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,OY.n)(YY,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function ST(TT) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,XT.l)(TT,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const uY = {
+    const DT = {
         x: 0,
         y: 0,
         z: 0,
-        grY(YY, rY) {
-          return this.x = YY[rY], this.y = YY[rY + 1], this.z = YY[rY + 2], this
+        joT(TT, oT) {
+          return this.x = TT[oT], this.y = TT[oT + 1], this.z = TT[oT + 2], this
         }
       },
-      sY = {
+      LT = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (YY, rY) => ({
-          ...(0, FY.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${YY}`,
-          BLOXD_CAPE_MAX_Y: (0, AY.lb)(rY)
+        defines: (TT, oT) => ({
+          ...(0, iT.d)("CAPE"),
+          BLOXD_CAPE_BONES: `${TT}`,
+          BLOXD_CAPE_MAX_Y: (0, zT.nb)(oT)
         }),
-        getUniforms(YY) {
-          return (0, IY.e)(function(YY) {
-            const rY = [];
-            for (let DY = 0; DY < YY; DY++) rY.push({
-              name: `skele${DY}`,
+        getUniforms(TT) {
+          return (0, kT.d)(function(TT) {
+            const oT = [];
+            for (let IT = 0; IT < TT; IT++) oT.push({
+              name: `skele${IT}`,
               type: "highp vec3"
             });
-            return rY
-          }(this.skeleLen), "vertex", YY)
+            return oT
+          }(this.skeleLen), "vertex", TT)
         },
-        bind(YY) {
-          for (let rY = 0; rY < this.skeleLen; rY++) YY.updateVector3(`skele${rY}`, uY.grY(this.skele, 3 * rY))
+        bind(TT) {
+          for (let oT = 0; oT < this.skeleLen; oT++) TT.updateVector3(`skele${oT}`, DT.joT(this.skele, 3 * oT))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(YY, rY) {
-          return "vertex" !== YY ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: gY(rY),
-            CUSTOM_VERTEX_UPDATE_POSITION: aY(rY, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: vY(rY)
+        getCustomCode(TT, oT) {
+          return "vertex" !== TT ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: BT(oT),
+            CUSTOM_VERTEX_UPDATE_POSITION: FT(oT, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: ST(oT)
           }
         }
       };
-    (0, RY.l)(sY)
+    (0, WT.n)(LT)
   },
-  38050: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => vY,
-      f: () => uY
+  37671: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => ST,
+      h: () => DT
     });
-    var FY = DY(36450),
-      AY = DY(36691),
-      IY = DY(36454),
-      RY = DY(36465);
-    const OY = "bloxdTextLodBias",
-      gY = [{
-        name: OY,
+    var iT = IT(36040),
+      zT = IT(36280),
+      kT = IT(36047),
+      WT = IT(36056);
+    const XT = "bloxdTextLodBias",
+      BT = [{
+        name: XT,
         type: "float"
       }],
-      aY = "bloxdTextSample",
-      vY = {
+      FT = "bloxdTextSample",
+      ST = {
         planes: -.5,
         boards: -.5
       },
-      uY = {
+      DT = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, FY.b)("TEXT_SAMPLER"),
-        getUniforms: YY => (0, AY.e)(gY, "fragment", YY),
-        bind(YY) {
-          YY.updateFloat(OY, this.lodBias)
+        defines: () => (0, iT.d)("TEXT_SAMPLER"),
+        getUniforms: TT => (0, zT.d)(BT, "fragment", TT),
+        bind(TT) {
+          TT.updateFloat(XT, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(YY, rY) {
-          if ("fragment" !== YY) return null;
-          const DY = (0, IY.M)(rY, `vec4 ${aY}(sampler2D s, vec2 uv, float bias)`, `fn ${aY}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            FY = (0, IY.M)(rY, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            AY = `${(0,IY.U)(rY,"vDiffuseUV")} + uvOffset`,
-            RY = (0, IY.M)(rY, `${aY}(diffuseSampler, ${AY}, ${(0,IY.Ib)(rY,OY)})`, `${aY}(diffuseSampler, diffuseSamplerSampler, ${AY}, ${(0,IY.Ib)(rY,OY)})`);
+        getCustomCode(TT, oT) {
+          if ("fragment" !== TT) return null;
+          const IT = (0, kT.I)(oT, `vec4 ${FT}(sampler2D s, vec2 uv, float bias)`, `fn ${FT}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            iT = (0, kT.I)(oT, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            zT = `${(0,kT.R)(oT,"vDiffuseUV")} + uvOffset`,
+            WT = (0, kT.I)(oT, `${FT}(diffuseSampler, ${zT}, ${(0,kT.wb)(oT,XT)})`, `${FT}(diffuseSampler, diffuseSamplerSampler, ${zT}, ${(0,kT.wb)(oT,XT)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${DY} {\n\t\t\t\t\t${(0,IY.F)(rY,"vec4","texel",FY)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,IY.n)(rY,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,IY.n)(rY,"vec3","0.0")}, ${(0,IY.n)(rY,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, IY.G)(rY)]: `baseColor = ${RY};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${IT} {\n\t\t\t\t\t${(0,kT.D)(oT,"vec4","texel",iT)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,kT.l)(oT,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,kT.l)(oT,"vec3","0.0")}, ${(0,kT.l)(oT,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, kT.F)(oT)]: `baseColor = ${WT};`
           }
         }
       };
-    (0, RY.l)(uY)
+    (0, WT.n)(DT)
   },
-  8236: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => vY,
-      f: () => OY,
-      i: () => gY
+  8248: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => ST,
+      h: () => XT,
+      j: () => BT
     });
-    var FY = DY(2091),
-      AY = DY(1244),
-      IY = DY(2099);
-    const RY = ",";
+    var iT = IT(2026),
+      zT = IT(1214),
+      kT = IT(2029);
+    const WT = ",";
 
-    function OY(YY) {
-      if (!YY) return [];
-      const rY = new Set,
-        DY = [];
-      for (const FY of YY.split(RY)) {
-        const YY = FY.trim();
-        if ((0, IY.j)(YY) && !rY.has(YY) && (rY.add(YY), DY.push(YY), DY.length >= AY.m)) break
+    function XT(TT) {
+      if (!TT) return [];
+      const oT = new Set,
+        IT = [];
+      for (const iT of TT.split(WT)) {
+        const TT = iT.trim();
+        if ((0, kT.h)(TT) && !oT.has(TT) && (oT.add(TT), IT.push(TT), IT.length >= zT.k)) break
       }
-      return DY
+      return IT
     }
 
-    function gY(YY) {
-      const rY = new Set,
-        DY = [];
-      for (const FY of YY)
-        if ((0, IY.j)(FY) && !rY.has(FY) && (rY.add(FY), DY.push(FY), DY.length >= AY.m)) break;
-      return DY.join(RY)
+    function BT(TT) {
+      const oT = new Set,
+        IT = [];
+      for (const iT of TT)
+        if ((0, kT.h)(iT) && !oT.has(iT) && (oT.add(iT), IT.push(iT), IT.length >= zT.k)) break;
+      return IT.join(WT)
     }
 
-    function aY() {
-      return gY(IY.e)
+    function FT() {
+      return BT(kT.d)
     }
 
-    function vY(YY) {
-      var rY;
-      return "emote" === YY ? aY() : null !== (rY = uY[YY][0]) && void 0 !== rY ? rY : sY[YY]
+    function ST(TT) {
+      var oT;
+      return "emote" === TT ? FT() : null !== (oT = DT[TT][0]) && void 0 !== oT ? oT : LT[TT]
     }
-    const uY = AY.u.reduce(((YY, rY) => {
-        const DY = [];
-        for (const IY in FY.g[rY]) {
-          var AY;
-          "default" === (null === (AY = (0, FY.n)(rY, IY)) || void 0 === AY ? void 0 : AY.cosmeticPack) && DY.push(IY)
+    const DT = zT.v.reduce(((TT, oT) => {
+        const IT = [];
+        for (const kT in iT.c[oT]) {
+          var zT;
+          "default" === (null === (zT = (0, iT.g)(oT, kT)) || void 0 === zT ? void 0 : zT.cosmeticPack) && IT.push(kT)
         }
-        return YY[rY] = DY, YY
+        return TT[oT] = IT, TT
       }), {}),
-      sY = AY.u.reduce(((YY, rY) => (YY[rY] = Object.keys(FY.g[rY])[0], YY)), {})
+      LT = zT.v.reduce(((TT, oT) => (TT[oT] = Object.keys(iT.c[oT])[0], TT)), {})
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

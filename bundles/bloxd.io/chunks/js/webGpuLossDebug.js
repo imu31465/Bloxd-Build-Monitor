@@ -1,72 +1,72 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  35851: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      noteJsEngine: () => JY,
-      noteJsJoin: () => bY,
-      noteWasmJoin: () => XY,
-      noteWasmPick: () => MY,
-      noteWebGpuLoss: () => qY,
-      startWebGpuLossDebug: () => dY
+  35424: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      noteJsEngine: () => HT,
+      noteJsJoin: () => ZT,
+      noteWasmJoin: () => lT,
+      noteWasmPick: () => nT,
+      noteWebGpuLoss: () => sT,
+      startWebGpuLossDebug: () => OT
     });
-    var FY = DY(332),
-      AY = DY(19),
-      IY = DY(2517),
-      RY = DY(3015),
-      OY = DY(649),
-      gY = DY(309),
-      aY = DY(99),
-      vY = DY(115),
-      uY = DY(2521),
-      sY = DY(40),
-      iY = DY(121),
-      yY = DY(307),
-      QY = DY(2565),
-      oY = DY(341),
-      WY = DY(8655);
-    const EY = 40,
-      mY = 160;
+    var iT = IT(306),
+      zT = IT(12),
+      kT = IT(2482),
+      WT = IT(3012),
+      XT = IT(637),
+      BT = IT(289),
+      FT = IT(90),
+      ST = IT(104),
+      DT = IT(2486),
+      LT = IT(26),
+      xT = IT(120),
+      cT = IT(282),
+      KT = IT(2541),
+      MT = IT(314),
+      rT = IT(8664);
+    const AT = 40,
+      gT = 160;
 
-    function VY(YY, rY) {
-      return `"${(YY.length>rY?`${YY.slice(0,rY)}...`:YY).replace(/[^ -~]|["\\]/g,"?")}"`
+    function hT(TT, oT) {
+      return `"${(TT.length>oT?`${TT.slice(0,oT)}...`:TT).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function SY(YY) {
-      return YY ? "yes" : "no"
+    function wT(TT) {
+      return TT ? "yes" : "no"
     }
 
-    function lY(YY) {
-      var rY;
-      const DY = YY.storedRenderer;
-      return [`loss holds ${SY(YY.lossHolds)}`, `stops packs ${SY(YY.lossStopsPack)}`, `any loss ${SY(YY.anyLoss)}`, `old intel ${SY(YY.oldIntelDriver)}`, `default off for packs ${SY(YY.defaultOffForPacks)}`, `default off reason ${null!==(rY=YY.defaultOffReason)&&void 0!==rY?rY:"none"}`, `setting ${YY.setting?"on":"off"} (stored ${null===YY.settingStored?"unset":YY.settingStored?"on":"off"})`, `renderer url ${null===YY.urlRenderer?"none":VY(YY.urlRenderer,12)}, stored ${null===DY||void 0===DY?"none":VY(String(DY),12)}`, `hidden-loss arm ${YY.hiddenLossArm}`].join(", ")
+    function mT(TT) {
+      var oT;
+      const IT = TT.storedRenderer;
+      return [`loss holds ${wT(TT.lossHolds)}`, `stops packs ${wT(TT.lossStopsPack)}`, `any loss ${wT(TT.anyLoss)}`, `old intel ${wT(TT.oldIntelDriver)}`, `default off for packs ${wT(TT.defaultOffForPacks)}`, `default off reason ${null!==(oT=TT.defaultOffReason)&&void 0!==oT?oT:"none"}`, `setting ${TT.setting?"on":"off"} (stored ${null===TT.settingStored?"unset":TT.settingStored?"on":"off"})`, `renderer url ${null===TT.urlRenderer?"none":hT(TT.urlRenderer,12)}, stored ${null===IT||void 0===IT?"none":hT(String(IT),12)}`, `hidden-loss arm ${TT.hiddenLossArm}`].join(", ")
     }
 
-    function TY(YY) {
-      if (null === YY) return "no renderer settled";
+    function eT(TT) {
+      if (null === TT) return "no renderer settled";
       const {
-        requested: rY,
-        choice: DY,
-        source: FY,
-        fallbackReason: AY
-      } = YY;
-      return `renderer requested ${rY}, runs ${DY}, from ${FY}${null===AY?"":`, fell back: ${VY(AY,80)}`}`
+        requested: oT,
+        choice: IT,
+        source: iT,
+        fallbackReason: zT
+      } = TT;
+      return `renderer requested ${oT}, runs ${IT}, from ${iT}${null===zT?"":`, fell back: ${hT(zT,80)}`}`
     }
 
-    function eY(YY, rY) {
-      return YY ? `stopping packs: iOS, ${null!==rY&&void 0!==rY?rY:1} losses in a row within a day` : "stopping packs"
+    function RT(TT, oT) {
+      return TT ? `stopping packs: iOS, ${null!==oT&&void 0!==oT?oT:1} losses in a row within a day` : "stopping packs"
     }
 
-    function NY(YY) {
-      var rY, DY, FY;
-      return `pick (wasm): backend ${null!==(rY=YY.backend)&&void 0!==rY?rY:"none"}, webgpu fallback ${null!==(DY=YY.reason)&&void 0!==DY?DY:"none"}, from ${null!==(FY=YY.source)&&void 0!==FY?FY:"none"}, storage pull breaks ${SY(YY.storagePullBreaks)}; packs run ${SY("webgpu"===YY.backend&&!YY.storagePullBreaks)}, else ${YY.noWebGpu}`
+    function uT(TT) {
+      var oT, IT, iT;
+      return `pick (wasm): backend ${null!==(oT=TT.backend)&&void 0!==oT?oT:"none"}, webgpu fallback ${null!==(IT=TT.reason)&&void 0!==IT?IT:"none"}, from ${null!==(iT=TT.source)&&void 0!==iT?iT:"none"}, storage pull breaks ${wT(TT.storagePullBreaks)}; packs run ${wT("webgpu"===TT.backend&&!TT.storagePullBreaks)}, else ${TT.noWebGpu}`
     }
 
-    function BY(YY, rY, DY) {
-      return `pack ${null===YY?"(name not read)":VY(YY,EY)} ${rY}${null===DY?"":`, ${DY} variants`}`
+    function vT(TT, oT, IT) {
+      return `pack ${null===TT?"(name not read)":hT(TT,AT)} ${oT}${null===IT?"":`, ${IT} variants`}`
     }
-    const cY = "shaderPack:failedWebGpuOff",
-      KY = new class {
+    const ET = "shaderPack:failedWebGpuOff",
+      fT = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -74,162 +74,162 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const YY = !this.noPackSaid;
-          return this.noPackSaid = !0, YY
+          const TT = !this.noPackSaid;
+          return this.noPackSaid = !0, TT
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let HY = null,
-      zY = null,
-      ZY = 0;
+    let CT = null,
+      jT = null,
+      JT = 0;
 
-    function CY(YY) {
-      (0, QY.n)("webgpuloss", YY)
+    function UT(TT) {
+      (0, KT.l)("webgpuloss", TT)
     }
 
-    function fY() {
+    function aT() {
       return {
-        lossHolds: (0, yY.v)(),
-        lossStopsPack: (0, yY.A)(),
-        anyLoss: (0, yY.i)(),
-        oldIntelDriver: !0 === sY.m.getItem(iY.Q),
-        defaultOffForPacks: AY.b.isWebGpuDefaultOff(),
-        defaultOffReason: AY.b.webGpuDefaultOffReason(),
-        settingStored: sY.m.getItem(FY.ic),
-        setting: AY.b.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: vY.currentUrl.getSearchParam(uY.e),
-        storedRenderer: sY.m.getItem(uY.f),
-        hiddenLossArm: gY.e.webgpu_hidden_loss_v1
+        lossHolds: (0, cT.u)(),
+        lossStopsPack: (0, cT.C)(),
+        anyLoss: (0, cT.h)(),
+        oldIntelDriver: !0 === LT.e.getItem(xT.F),
+        defaultOffForPacks: zT.c.isWebGpuDefaultOff(),
+        defaultOffReason: zT.c.webGpuDefaultOffReason(),
+        settingStored: LT.e.getItem(iT.hc),
+        setting: zT.c.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: ST.currentUrl.getSearchParam(DT.d),
+        storedRenderer: LT.e.getItem(DT.h),
+        hiddenLossArm: BT.c.webgpu_hidden_loss_v1
       }
     }
 
-    function jY(YY) {
-      return function(YY, rY, DY) {
-        if (null === YY || void 0 === YY) return "none";
-        if ("object" !== typeof YY) return `unreadable (${typeof YY})`;
-        const FY = YY,
-          AY = "number" === typeof FY.at ? FY.at : null;
-        return ["browser " + (rY ? "this one" : "another"), null === AY ? "no time" : `set ${((DY-AY)/oY.h).toFixed(1)} h ago`, `losses ${"number"===typeof FY.losses?FY.losses:"unset (1)"}${null!==AY&&DY-AY<oY.f?", the last within a day":""}`, `hidden-only ${"number"===typeof FY.hiddenLosses?FY.hiddenLosses:"no"}`, `first page ${"hidden"===FY.firstPage||"visible"===FY.firstPage?FY.firstPage:"unset (visible)"}`].join(", ")
-      }(YY, function(YY) {
+    function YT(TT) {
+      return function(TT, oT, IT) {
+        if (null === TT || void 0 === TT) return "none";
+        if ("object" !== typeof TT) return `unreadable (${typeof TT})`;
+        const iT = TT,
+          zT = "number" === typeof iT.at ? iT.at : null;
+        return ["browser " + (oT ? "this one" : "another"), null === zT ? "no time" : `set ${((IT-zT)/MT.k).toFixed(1)} h ago`, `losses ${"number"===typeof iT.losses?iT.losses:"unset (1)"}${null!==zT&&IT-zT<MT.j?", the last within a day":""}`, `hidden-only ${"number"===typeof iT.hiddenLosses?iT.hiddenLosses:"no"}`, `first page ${"hidden"===iT.firstPage||"visible"===iT.firstPage?iT.firstPage:"unset (visible)"}`].join(", ")
+      }(TT, function(TT) {
         try {
-          return "object" === typeof YY && null !== YY && YY.browser === (0, yY.e)()
+          return "object" === typeof TT && null !== TT && TT.browser === (0, cT.d)()
         } catch {
           return !1
         }
-      }(YY), Date.now())
+      }(TT), Date.now())
     }
 
-    function hY() {
-      const YY = (0, yY.l)().now;
-      return "number" === typeof(null === YY || void 0 === YY ? void 0 : YY.losses) ? YY.losses : null
+    function QT() {
+      const TT = (0, cT.m)().now;
+      return "number" === typeof(null === TT || void 0 === TT ? void 0 : TT.losses) ? TT.losses : null
     }
 
-    function dY() {
+    function OT() {
       const {
-        atLoad: YY,
-        now: rY,
-        unreported: DY
-      } = (0, yY.l)(), FY = JSON.stringify(YY) === JSON.stringify(rY) ? "Mi" : `now ${jY(rY)}`;
-      CY(`load (${OY.r?"wasm":"js"}, os ${(0,aY.getOperatingSystem)()}): stored loss ${jY(YY)}; ${FY}; unreported ${function(YY){if(null===YY||void 0===YY||"object"!==typeof YY)return"none";const{hidden:rY,visible:DY}=YY;return`
+        atLoad: TT,
+        now: oT,
+        unreported: IT
+      } = (0, cT.m)(), iT = JSON.stringify(TT) === JSON.stringify(oT) ? "qx" : `now ${YT(oT)}`;
+      UT(`load (${XT.u?"wasm":"js"}, os ${(0,FT.getOperatingSystem)()}): stored loss ${YT(TT)}; ${iT}; unreported ${function(TT){if(null===TT||void 0===TT||"object"!==typeof TT)return"none";const{hidden:oT,visible:IT}=TT;return`
         hidden $ {
-          "number" === typeof rY ? rY : 0
+          "number" === typeof oT ? oT : 0
         }, visible $ {
-          "number" === typeof DY ? DY : 0
+          "number" === typeof IT ? IT : 0
         }
-        `}(DY)}; webgpu_loss_page ${yY.x}`), CY(`load: ${lY(fY())}; pack expected ${(0,RY.c)(aY.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        `}(IT)}; webgpu_loss_page ${cT.y}`), UT(`load: ${mT(aT())}; pack expected ${(0,WT.i)(FT.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function JY(YY) {
-      HY = YY, CY(function(YY, rY, DY) {
-        const FY = YY.setting ? "the setting is on" : (0, WY.b)(YY.packActive, YY.defaultOffForPacks) ? "the pack forces it" : YY.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${SY(YY.useWebGpu)} (${FY}); ${TY(rY)}; webgpu fallback ${null!==DY&&void 0!==DY?DY:"unset"}`
-      }(YY, (0, IY.h)(), (0, aY.getWebGpuFallbackReason)()))
+    function HT(TT) {
+      CT = TT, UT(function(TT, oT, IT) {
+        const iT = TT.setting ? "the setting is on" : (0, rT.d)(TT.packActive, TT.defaultOffForPacks) ? "the pack forces it" : TT.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${wT(TT.useWebGpu)} (${iT}); ${eT(oT)}; webgpu fallback ${null!==IT&&void 0!==IT?IT:"unset"}`
+      }(TT, (0, kT.h)(), (0, FT.getWebGpuFallbackReason)()))
     }
 
-    function MY(YY) {
-      zY = YY, CY(NY(YY))
+    function nT(TT) {
+      jT = TT, UT(uT(TT))
     }
-    async function wY(YY, rY, FY, AY) {
-      const IY = ++ZY,
-        RY = await async function(YY) {
-          var rY, FY;
+    async function qT(TT, oT, iT, zT) {
+      const kT = ++JT,
+        WT = await async function(TT) {
+          var oT, iT;
           const [{
-            shaderPackPage: AY,
-            harnessShaderPackMode: IY
+            shaderPackPage: zT,
+            harnessShaderPackMode: kT
           }, {
-            getShaderPackPolicy: RY
+            getShaderPackPolicy: WT
           }, {
-            packRunsIn: OY
-          }] = await Promise.all([DY.e(130).then((() => DY(38553))), DY.e(89).then((() => DY(40254))), DY.e(134).then((() => DY(40263)))]), gY = await AY.load();
-          if ("none" === gY.status) return null;
-          const aY = null !== (rY = IY()) && void 0 !== rY ? rY : RY(YY),
-            vY = "active" === gY.status ? gY.pack.variants : gY.variants,
-            uY = OY(vY, aY);
+            packRunsIn: XT
+          }] = await Promise.all([IT.e(130).then((() => IT(38159))), IT.e(89).then((() => IT(39953))), IT.e(134).then((() => IT(39959)))]), BT = await zT.load();
+          if ("none" === BT.status) return null;
+          const FT = null !== (oT = kT()) && void 0 !== oT ? oT : WT(TT),
+            ST = "active" === BT.status ? BT.pack.variants : BT.variants,
+            DT = XT(ST, FT);
           return {
-            text: `${"active"===gY.status?BY(gY.pack.name,"active",vY.length):BY(null,`blocked (${gY.messageKey})`,null!==(FY=null===vY||void 0===vY?void 0:vY.length)&&void 0!==FY?FY:null)}; game policy ${aY}, runs in it ${uY?"yes":"no"}`,
-            runs: uY
+            text: `${"active"===BT.status?vT(BT.pack.name,"active",ST.length):vT(null,`blocked (${BT.messageKey})`,null!==(iT=null===ST||void 0===ST?void 0:ST.length)&&void 0!==iT?iT:null)}; game policy ${FT}, runs in it ${DT?"yes":"no"}`,
+            runs: DT
           }
-        }(YY);
-      if (null === RY) return void(KY.noPack() && CY(`join ${IY}: no shader pack on this page (further joins without one not logged)`));
-      const OY = KY.join();
-      if ("none" === OY) return;
-      if ("cap" === OY) return void CY(`join ${IY}: further joins not logged`);
-      const gY = function(YY) {
-          switch (YY.status) {
+        }(TT);
+      if (null === WT) return void(fT.noPack() && UT(`join ${kT}: no shader pack on this page (further joins without one not logged)`));
+      const XT = fT.join();
+      if ("none" === XT) return;
+      if ("cap" === XT) return void UT(`join ${kT}: further joins not logged`);
+      const BT = function(TT) {
+          switch (TT.status) {
             case "ok":
-              return void 0 === YY.couldntRun ? "joined" : `joined without the pack: ${YY.couldntRun}`;
-            case "Hr":
-              return "Hr";
+              return void 0 === TT.couldntRun ? "joined" : `joined without the pack: ${TT.couldntRun}`;
+            case "Jo":
+              return "Jo";
             case "failed":
-              return `failed: ${YY.messageKey}`
+              return `failed: ${TT.messageKey}`
           }
-        }(rY),
-        aY = ("ok" === rY.status ? rY.couldntRun : "failed" === rY.status ? rY.messageKey : void 0) === cY ? `; cause: ${AY()}` : "";
-      "outcome" !== OY ? (CY(`join ${IY}: ${RY.text}`), RY.runs && (CY(`join ${IY}: needs WebGPU; ${FY()}`), CY(`join ${IY}: ${lY(fY())}`)), CY(`join ${IY}: ${gY}${aY}`)) : CY(`join ${IY}: ${gY}${aY}`)
+        }(oT),
+        FT = ("ok" === oT.status ? oT.couldntRun : "failed" === oT.status ? oT.messageKey : void 0) === ET ? `; cause: ${zT()}` : "";
+      "outcome" !== XT ? (UT(`join ${kT}: ${WT.text}`), WT.runs && (UT(`join ${kT}: needs WebGPU; ${iT()}`), UT(`join ${kT}: ${mT(aT())}`)), UT(`join ${kT}: ${BT}${FT}`)) : UT(`join ${kT}: ${BT}${FT}`)
     }
 
-    function bY(YY, rY, DY) {
-      var FY;
-      const AY = null !== (FY = null === rY || void 0 === rY ? void 0 : rY.isRunning()) && void 0 !== FY && FY;
-      return wY(YY, DY, (() => `Lite runtime ${null===rY?"no":"yes, running "+(AY?"yes":"no")}; ${TY((0,IY.h)())}`), (() => {
-        return YY = HY, rY = fY(), DY = "ios" === (0, aY.getOperatingSystem)(), FY = hY(), null === YY ? "engine choice not seen" : YY.packActive ? (0, WY.b)(YY.packActive, YY.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : rY.lossStopsPack ? `a loss ${eY(DY,FY)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (rY.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var YY, rY, DY, FY
+    function ZT(TT, oT, IT) {
+      var iT;
+      const zT = null !== (iT = null === oT || void 0 === oT ? void 0 : oT.isRunning()) && void 0 !== iT && iT;
+      return qT(TT, IT, (() => `Lite runtime ${null===oT?"no":"yes, running "+(zT?"yes":"no")}; ${eT((0,kT.h)())}`), (() => {
+        return TT = CT, oT = aT(), IT = "ios" === (0, FT.getOperatingSystem)(), iT = QT(), null === TT ? "engine choice not seen" : TT.packActive ? (0, rT.d)(TT.packActive, TT.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : oT.lossStopsPack ? `a loss ${RT(IT,iT)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (oT.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        var TT, oT, IT, iT
       }))
     }
 
-    function XY(YY, rY, DY) {
-      return wY(YY, null !== rY ? {
+    function lT(TT, oT, IT) {
+      return qT(TT, null !== oT ? {
         status: "failed",
-        messageKey: rY
+        messageKey: oT
       } : {
         status: "ok",
-        couldntRun: null !== DY && void 0 !== DY ? DY : void 0
-      }, (() => null === zY ? "pick not seen" : NY(zY)), (() => function(YY, rY, DY, FY) {
-        var AY, IY, RY, OY;
-        return null === YY ? "pick not seen" : "off_after_loss" === YY.reason ? `off after a loss, ${"pack"===YY.source?eY(DY,FY):`from ${null!==(OY=YY.source)&&void 0!==OY?OY:"none"}`}` : "not_requested" === YY.reason ? `not requested, from ${null!==(RY=YY.source)&&void 0!==RY?RY:"none"} (setting ${rY.setting?"on":"off"})` : `${null!==(AY=YY.reason)&&void 0!==AY?AY:"none"}, from ${null!==(IY=YY.source)&&void 0!==IY?IY:"none"}`
-      }(zY, fY(), "ios" === (0, aY.getOperatingSystem)(), hY())))
+        couldntRun: null !== IT && void 0 !== IT ? IT : void 0
+      }, (() => null === jT ? "pick not seen" : uT(jT)), (() => function(TT, oT, IT, iT) {
+        var zT, kT, WT, XT;
+        return null === TT ? "pick not seen" : "off_after_loss" === TT.reason ? `off after a loss, ${"pack"===TT.source?RT(IT,iT):`from ${null!==(XT=TT.source)&&void 0!==XT?XT:"none"}`}` : "not_requested" === TT.reason ? `not requested, from ${null!==(WT=TT.source)&&void 0!==WT?WT:"none"} (setting ${oT.setting?"on":"off"})` : `${null!==(zT=TT.reason)&&void 0!==zT?zT:"none"}, from ${null!==(kT=TT.source)&&void 0!==kT?kT:"none"}`
+      }(jT, aT(), "ios" === (0, FT.getOperatingSystem)(), QT())))
     }
 
-    function qY(YY, rY, DY) {
-      const FY = KY.loss();
-      if ("none" === FY) return;
-      if ("cap" === FY) return void CY("further losses not logged");
-      const AY = fY();
-      CY(function(YY, rY, DY, FY) {
-        return `loss (${YY}): ${rY}${null===DY?"":` ${VY(DY,mY)}`}; ${FY}`
-      }(YY, rY, DY, `stored ${jY((0,yY.l)().now)}; holds ${AY.lossHolds?"yes":"no"}, stops packs ${AY.lossStopsPack?"yes":"no"}`))
+    function sT(TT, oT, IT) {
+      const iT = fT.loss();
+      if ("none" === iT) return;
+      if ("cap" === iT) return void UT("further losses not logged");
+      const zT = aT();
+      UT(function(TT, oT, IT, iT) {
+        return `loss (${TT}): ${oT}${null===IT?"":` ${hT(IT,gT)}`}; ${iT}`
+      }(TT, oT, IT, `stored ${YT((0,cT.m)().now)}; holds ${zT.lossHolds?"yes":"no"}, stops packs ${zT.lossStopsPack?"yes":"no"}`))
     }
   },
-  8655: (YY, rY, DY) => {
-    function FY(YY, rY) {
-      return YY && !rY
+  8664: (TT, oT, IT) => {
+    function iT(TT, oT) {
+      return TT && !oT
     }
-    DY.d(rY, {
-      b: () => FY
+    IT.d(oT, {
+      d: () => iT
     })
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

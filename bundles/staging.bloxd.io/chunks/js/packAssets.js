@@ -1,286 +1,286 @@
 export const id = 44;
 export const ids = [44, 189];
 export const modules = {
-  8800: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      packDisplayName: () => yY,
-      packModelMessage: () => QY,
-      packModelSummary: () => WY,
-      refusedPackModels: () => oY
+  8799: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      packDisplayName: () => cT,
+      packModelMessage: () => KT,
+      packModelSummary: () => rT,
+      refusedPackModels: () => MT
     });
-    var FY = DY(8807),
-      AY = DY(8809);
-    const IY = "DRACO",
-      RY = 0,
-      OY = 1,
-      gY = 0,
-      aY = 1,
-      vY = 32768;
+    var iT = IT(8801),
+      zT = IT(8805);
+    const kT = "DRACO",
+      WT = 0,
+      XT = 1,
+      BT = 0,
+      FT = 1,
+      ST = 32768;
 
-    function uY(YY) {
-      const rY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
-      let DY = 0;
-      const FY = () => {
-          if (DY >= YY.byteLength) throw new RangeError("past the stream");
-          return YY[DY++]
+    function DT(TT) {
+      const oT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      let IT = 0;
+      const iT = () => {
+          if (IT >= TT.byteLength) throw new RangeError("past the stream");
+          return TT[IT++]
         },
-        AY = () => {
-          if (DY + 4 > YY.byteLength) throw new RangeError("past the stream");
-          const FY = rY.getUint32(DY, !0);
-          return DY += 4, FY
+        zT = () => {
+          if (IT + 4 > TT.byteLength) throw new RangeError("past the stream");
+          const iT = oT.getUint32(IT, !0);
+          return IT += 4, iT
         },
-        uY = () => {
-          let YY = 0;
-          for (let rY = 0; rY < 35; rY += 7) {
-            const DY = FY();
-            if (YY += (127 & DY) * 2 ** rY, 0 === (128 & DY)) return YY
+        DT = () => {
+          let TT = 0;
+          for (let oT = 0; oT < 35; oT += 7) {
+            const IT = iT();
+            if (TT += (127 & IT) * 2 ** oT, 0 === (128 & IT)) return TT
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let YY = 0; YY < IY.length; YY++)
-          if (FY() !== IY.charCodeAt(YY)) return null;
-        const rY = FY(),
-          sY = FY(),
-          iY = FY(),
-          yY = FY(),
-          QY = FY() | FY() << 8;
-        if (2 !== rY) return null;
-        0 !== (QY & vY) && function(YY, rY, DY) {
-          const FY = () => {
-              rY(DY())
+        for (let TT = 0; TT < kT.length; TT++)
+          if (iT() !== kT.charCodeAt(TT)) return null;
+        const oT = iT(),
+          LT = iT(),
+          xT = iT(),
+          cT = iT(),
+          KT = iT() | iT() << 8;
+        if (2 !== oT) return null;
+        0 !== (KT & ST) && function(TT, oT, IT) {
+          const iT = () => {
+              oT(IT())
             },
-            AY = () => {
-              let DY = 1,
-                AY = !0;
-              for (; DY > 0;) {
-                DY--, AY || FY(), AY = !1;
-                const IY = YY();
-                for (let DY = 0; DY < IY; DY++) FY(), rY(YY());
-                DY += YY()
+            zT = () => {
+              let IT = 1,
+                zT = !0;
+              for (; IT > 0;) {
+                IT--, zT || iT(), zT = !1;
+                const kT = TT();
+                for (let IT = 0; IT < kT; IT++) iT(), oT(TT());
+                IT += TT()
               }
             },
-            IY = YY();
-          for (let RY = 0; RY < IY; RY++) YY(), AY();
-          AY()
-        }(uY, (rY => {
-          if (DY + rY > YY.byteLength) throw new RangeError("past the stream");
-          DY += rY
-        }), FY);
-        const oY = sY < 2 ? AY : uY;
-        if (iY === RY) return {
+            kT = TT();
+          for (let WT = 0; WT < kT; WT++) TT(), zT();
+          zT()
+        }(DT, (oT => {
+          if (IT + oT > TT.byteLength) throw new RangeError("past the stream");
+          IT += oT
+        }), iT);
+        const MT = LT < 2 ? zT : DT;
+        if (xT === WT) return {
           faces: 0,
-          vertices: AY()
+          vertices: zT()
         };
-        if (iY !== OY) return null;
-        if (yY === gY) {
+        if (xT !== XT) return null;
+        if (cT === BT) {
           return {
-            faces: oY(),
-            vertices: oY()
+            faces: MT(),
+            vertices: MT()
           }
         }
-        if (yY !== aY) return null;
-        FY(), sY < 2 && uY();
-        const WY = uY();
+        if (cT !== FT) return null;
+        iT(), LT < 2 && DT();
+        const rT = DT();
         return {
-          faces: uY(),
-          vertices: WY
+          faces: DT(),
+          vertices: rT
         }
       } catch {
         return null
       }
     }
 
-    function sY(YY, rY, DY) {
-      var FY, AY;
-      if (null === (FY = null === (AY = YY.extensionsUsed) || void 0 === AY ? void 0 : AY.includes("KHR_draco_mesh_compression")) || void 0 === FY || !FY) return null;
-      for (const yY of null !== (IY = YY.meshes) && void 0 !== IY ? IY : []) {
-        var IY;
-        for (const FY of yY.primitives) {
-          var RY, OY, gY, aY, vY, sY;
-          const AY = null === (RY = FY.extensions) || void 0 === RY ? void 0 : RY.KHR_draco_mesh_compression;
-          if ("object" !== typeof AY || null === AY) continue;
-          const IY = null === (OY = YY.bufferViews) || void 0 === OY ? void 0 : OY[AY.bufferView];
-          if (null === rY || void 0 === IY) return iY;
-          const yY = null !== (gY = IY.byteOffset) && void 0 !== gY ? gY : 0,
-            QY = uY(rY.subarray(yY, yY + IY.byteLength));
-          if (null === QY && !DY) continue;
-          const oY = null !== (aY = YY.accessors) && void 0 !== aY ? aY : [],
-            WY = null === (vY = oY[FY.attributes.POSITION]) || void 0 === vY ? void 0 : vY.count,
-            EY = void 0 === FY.indices ? 0 : null === (sY = oY[FY.indices]) || void 0 === sY ? void 0 : sY.count;
-          if (null === QY || void 0 === WY || void 0 === EY || 3 * QY.faces !== EY || QY.vertices > WY) return iY
+    function LT(TT, oT, IT) {
+      var iT, zT;
+      if (null === (iT = null === (zT = TT.extensionsUsed) || void 0 === zT ? void 0 : zT.includes("KHR_draco_mesh_compression")) || void 0 === iT || !iT) return null;
+      for (const cT of null !== (kT = TT.meshes) && void 0 !== kT ? kT : []) {
+        var kT;
+        for (const iT of cT.primitives) {
+          var WT, XT, BT, FT, ST, LT;
+          const zT = null === (WT = iT.extensions) || void 0 === WT ? void 0 : WT.KHR_draco_mesh_compression;
+          if ("object" !== typeof zT || null === zT) continue;
+          const kT = null === (XT = TT.bufferViews) || void 0 === XT ? void 0 : XT[zT.bufferView];
+          if (null === oT || void 0 === kT) return xT;
+          const cT = null !== (BT = kT.byteOffset) && void 0 !== BT ? BT : 0,
+            KT = DT(oT.subarray(cT, cT + kT.byteLength));
+          if (null === KT && !IT) continue;
+          const MT = null !== (FT = TT.accessors) && void 0 !== FT ? FT : [],
+            rT = null === (ST = MT[iT.attributes.POSITION]) || void 0 === ST ? void 0 : ST.count,
+            AT = void 0 === iT.indices ? 0 : null === (LT = MT[iT.indices]) || void 0 === LT ? void 0 : LT.count;
+          if (null === KT || void 0 === rT || void 0 === AT || 3 * KT.faces !== AT || KT.vertices > rT) return xT
         }
       }
       return null
     }
-    const iY = "has a Draco stream whose counts don't match its accessors";
+    const xT = "has a Draco stream whose counts don't match its accessors";
 
-    function yY(YY) {
-      var rY;
-      return null !== (rY = YY.name) && void 0 !== rY ? rY : YY.fromFolderName || YY.id
+    function cT(TT) {
+      var oT;
+      return null !== (oT = TT.name) && void 0 !== oT ? oT : TT.fromFolderName || TT.id
     }
 
-    function QY(YY, rY, DY) {
-      return `Texture pack "${YY}": model "${rY}" was not loaded because it ${DY}. The default model is used instead.`
+    function KT(TT, oT, IT) {
+      return `Texture pack "${TT}": model "${oT}" was not loaded because it ${IT}. The default model is used instead.`
     }
 
-    function oY(YY, rY, DY) {
+    function MT(TT, oT, IT) {
       let {
-        strictDraco: IY = !1
+        strictDraco: kT = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const RY = {};
-      for (const [OY, gY] of Object.entries(rY)) {
-        let rY;
-        if (gY.startsWith("data:")) try {
-          const YY = new Uint8Array((0, AY.u)(gY));
-          if (rY = (0, FY.d)(YY), null === rY) {
+      const WT = {};
+      for (const [XT, BT] of Object.entries(oT)) {
+        let oT;
+        if (BT.startsWith("data:")) try {
+          const TT = new Uint8Array((0, zT.w)(BT));
+          if (oT = (0, iT.d)(TT), null === oT) {
             const {
-              json: DY,
-              bin: FY
-            } = (0, AY.B)(YY);
-            rY = sY(DY, FY, IY)
+              json: IT,
+              bin: iT
+            } = (0, zT.B)(TT);
+            oT = LT(IT, iT, kT)
           }
         } catch {
-          rY = "is not a binary glTF 2.0 file"
-        } else rY = "loads data from outside the file";
-        rY && (RY[OY] = rY, DY && console.warn(QY(YY, OY, rY)))
+          oT = "is not a binary glTF 2.0 file"
+        } else oT = "loads data from outside the file";
+        oT && (WT[XT] = oT, IT && console.warn(KT(TT, XT, oT)))
       }
-      return RY
+      return WT
     }
 
-    function WY(YY, rY) {
-      const DY = Object.keys(rY);
-      if (0 === DY.length) return null;
-      if (1 === DY.length) return QY(YY, DY[0], rY[DY[0]]);
-      const FY = DY.map((YY => `"${YY}" ${rY[YY]}`)).join("; ");
-      return `Texture pack "${YY}": ${DY.length} models were not loaded (${FY}). The default models are used instead.`
+    function rT(TT, oT) {
+      const IT = Object.keys(oT);
+      if (0 === IT.length) return null;
+      if (1 === IT.length) return KT(TT, IT[0], oT[IT[0]]);
+      const iT = IT.map((TT => `"${TT}" ${oT[TT]}`)).join("; ");
+      return `Texture pack "${TT}": ${IT.length} models were not loaded (${iT}). The default models are used instead.`
     }
   },
-  60537: (YY, rY, DY) => {
-    DY.d(rY, {
-      packAssets: () => WY
+  60359: (TT, oT, IT) => {
+    IT.d(oT, {
+      packAssets: () => rT
     });
-    var FY = DY(2755),
-      AY = DY(2785),
-      IY = DY(8800),
-      RY = DY(2802),
-      OY = DY(2838);
+    var iT = IT(2715),
+      zT = IT(2750),
+      kT = IT(8799),
+      WT = IT(2774),
+      XT = IT(2814);
 
-    function gY(YY, rY, DY, FY) {
-      const AY = `${(0,RY.e)(YY,rY)}|sheets${DY}`;
-      return FY === OY.e ? AY : `${AY}|layers${FY}`
+    function BT(TT, oT, IT, iT) {
+      const zT = `${(0,WT.c)(TT,oT)}|sheets${IT}`;
+      return iT === XT.e ? zT : `${zT}|layers${iT}`
     }
-    var aY = DY(2846),
-      vY = DY(2773),
-      uY = DY(2764),
-      sY = DY(2804);
-    var iY = DY(42383);
-    const yY = 256;
-    let QY = null,
-      oY = null;
+    var FT = IT(2818),
+      ST = IT(2729),
+      DT = IT(2719),
+      LT = IT(2777);
+    var xT = IT(42138);
+    const cT = 256;
+    let KT = null,
+      MT = null;
 
-    function WY(YY) {
-      var rY;
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OY.e;
-      if ((null === (rY = QY) || void 0 === rY ? void 0 : rY.pack) === YY.pack && QY.maxLayerWidth === DY) return QY.assets;
-      const WY = (0, iY.g)(YY.pack, (0, iY.l)(YY));
-      if (null === WY || !(0, AY.e)(WY)) return Promise.resolve(null);
-      const mY = async function(YY, rY, DY) {
-        var iY;
-        const QY = null !== (iY = YY.textureOverrides) && void 0 !== iY ? iY : {},
+    function rT(TT) {
+      var oT;
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : XT.e;
+      if ((null === (oT = KT) || void 0 === oT ? void 0 : oT.pack) === TT.pack && KT.maxLayerWidth === IT) return KT.assets;
+      const rT = (0, xT.e)(TT.pack, (0, xT.i)(TT));
+      if (null === rT || !(0, zT.e)(rT)) return Promise.resolve(null);
+      const gT = async function(TT, oT, IT) {
+        var xT;
+        const KT = null !== (xT = TT.textureOverrides) && void 0 !== xT ? xT : {},
           {
-            id: WY,
-            version: mY
-          } = YY.metaData,
-          VY = rY && WY !== FY.o.CUSTOM,
-          SY = {};
-        VY && (oY = SY);
-        let lY, TY, eY = VY ? await async function(YY, rY, DY, FY) {
-          const AY = gY(YY, rY, DY, OY.e),
-            IY = gY(YY, rY, DY, FY),
-            aY = await (0, RY.k)((YY => YY === AY || YY === IY));
-          return null !== aY && (FY === OY.e || aY.blockAtlasWidth <= FY) ? aY : null
-        }(WY, mY, yY, DY): null;
-        if (null === eY) {
+            id: rT,
+            version: gT
+          } = TT.metaData,
+          hT = oT && rT !== iT.n.CUSTOM,
+          wT = {};
+        hT && (MT = wT);
+        let mT, eT, RT = hT ? await async function(TT, oT, IT, iT) {
+          const zT = BT(TT, oT, IT, XT.e),
+            kT = BT(TT, oT, IT, iT),
+            FT = await (0, WT.h)((TT => TT === zT || TT === kT));
+          return null !== FT && (iT === XT.e || FT.blockAtlasWidth <= iT) ? FT : null
+        }(rT, gT, cT, IT): null;
+        if (null === RT) {
           const {
-            blockMetadata: YY,
-            getDefaultTexture: rY,
-            textureNameToIndex: IY
-          } = await (0, AY.j)(), OY = (0, vY.e)(YY, ((YY, DY) => ({
-            url: EY(QY, rY, YY, "block" === DY ? uY.e.BLOCK : uY.e.ITEM)
-          }))), aY = await
-          function(YY, rY, DY, FY, AY, IY) {
-            return (0, sY.b)((RY => RY.WasmTextureWorker.generateRequired(YY, rY, DY, FY, AY, IY)))
-          }(YY, IY, OY, WY === FY.d, DY, yY), iY = aY.assets;
-          eY = {
-            ...iY,
+            blockMetadata: TT,
+            getDefaultTexture: oT,
+            textureNameToIndex: kT
+          } = await (0, zT.j)(), XT = (0, ST.c)(TT, ((TT, IT) => ({
+            url: AT(KT, oT, TT, "block" === IT ? DT.g.BLOCK : DT.g.ITEM)
+          }))), FT = await
+          function(TT, oT, IT, iT, zT, kT) {
+            return (0, LT.e)((WT => WT.WasmTextureWorker.generateRequired(TT, oT, IT, iT, zT, kT)))
+          }(TT, kT, XT, rT === iT.d, IT, cT), xT = FT.assets;
+          RT = {
+            ...xT,
             averageColors: {}
-          }, lY = aY.averageColors(), VY && (TY = lY.then((async YY => {
-            null !== YY && oY === SY && await
-            function(YY, rY, DY, FY, AY) {
-              return (0, RY.o)(gY(YY, rY, FY, AY), DY)
-            }(WY, mY, {
-              ...iY,
-              averageColors: YY
-            }, yY, aY.layerCap)
+          }, mT = FT.averageColors(), hT && (eT = mT.then((async TT => {
+            null !== TT && MT === wT && await
+            function(TT, oT, IT, iT, zT) {
+              return (0, WT.m)(BT(TT, oT, iT, zT), IT)
+            }(rT, gT, {
+              ...xT,
+              averageColors: TT
+            }, cT, FT.layerCap)
           })))
         }
-        return function(YY, rY) {
-          var DY, FY;
-          let AY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((OY = YY.averageColors, 0 === Object.keys(null !== OY && void 0 !== OY ? OY : {}).length ? null : YY.averageColors)),
-            RY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var OY;
-          const gY = null !== (DY = rY.textureOverrides) && void 0 !== DY ? DY : {},
-            vY = null !== (FY = rY.modelOverrides) && void 0 !== FY ? FY : {},
-            uY = 0 === Object.keys(vY).length ? {} : (0, IY.refusedPackModels)((0, IY.packDisplayName)(rY.metaData), vY, !0, {
+        return function(TT, oT) {
+          var IT, iT;
+          let zT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((XT = TT.averageColors, 0 === Object.keys(null !== XT && void 0 !== XT ? XT : {}).length ? null : TT.averageColors)),
+            WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var XT;
+          const BT = null !== (IT = oT.textureOverrides) && void 0 !== IT ? IT : {},
+            ST = null !== (iT = oT.modelOverrides) && void 0 !== iT ? iT : {},
+            DT = 0 === Object.keys(ST).length ? {} : (0, kT.refusedPackModels)((0, kT.packDisplayName)(oT.metaData), ST, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: sY,
-              rotatedBlockTextures: iY
-            } = YY,
-            yY = YY => {
-              var rY, DY;
-              return null !== (rY = null !== (DY = sY[YY]) && void 0 !== DY ? DY : iY[YY]) && void 0 !== rY ? rY : null
+              animatedBlockTextures: LT,
+              rotatedBlockTextures: xT
+            } = TT,
+            cT = TT => {
+              var oT, IT;
+              return null !== (oT = null !== (IT = LT[TT]) && void 0 !== IT ? IT : xT[TT]) && void 0 !== oT ? oT : null
             };
           return {
             terrain: {
-              atlasSheets: YY.blockAtlasArr,
-              texture: yY
+              atlasSheets: TT.blockAtlasArr,
+              texture: cT
             },
-            sheetPixels: [...YY.blockAtlasPixels],
-            heldUntil: RY,
-            sheetLayout: YY.imagesPerAtlas,
-            sheetWidth: YY.blockAtlasWidth,
-            armourAtlasUrl: YY.armourAtlas,
-            texture: YY => {
-              var rY, DY;
-              return null !== (rY = null !== (DY = yY(YY)) && void 0 !== DY ? DY : (0, aY.b)(gY, YY)) && void 0 !== rY ? rY : null
+            sheetPixels: [...TT.blockAtlasPixels],
+            heldUntil: WT,
+            sheetLayout: TT.imagesPerAtlas,
+            sheetWidth: TT.blockAtlasWidth,
+            armourAtlasUrl: TT.armourAtlas,
+            texture: TT => {
+              var oT, IT;
+              return null !== (oT = null !== (IT = cT(TT)) && void 0 !== IT ? IT : (0, FT.b)(BT, TT)) && void 0 !== oT ? oT : null
             },
-            model: YY => void 0 === uY[YY] && vY[YY] || null,
-            averageColours: AY
+            model: TT => void 0 === DT[TT] && ST[TT] || null,
+            averageColours: zT
           }
-        }(eY, YY, lY, TY)
-      }(WY, null === YY.gameSource, DY), VY = {
-        pack: YY.pack,
-        maxLayerWidth: DY,
-        assets: mY
+        }(RT, TT, mT, eT)
+      }(rT, null === TT.gameSource, IT), hT = {
+        pack: TT.pack,
+        maxLayerWidth: IT,
+        assets: gT
       };
-      return QY = VY, mY.catch((() => {
-        QY === VY && (QY = null)
-      })), mY
+      return KT = hT, gT.catch((() => {
+        KT === hT && (KT = null)
+      })), gT
     }
 
-    function EY(YY, rY, FY, AY) {
-      const IY = (0, aY.b)(YY, FY);
-      if (IY) return IY;
+    function AT(TT, oT, iT, zT) {
+      const kT = (0, FT.b)(TT, iT);
+      if (kT) return kT;
       try {
-        return rY(FY, AY).url
+        return oT(iT, zT).url
       } catch {
-        return DY(2879)
+        return IT(2861)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  38591: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => AY
+  38205: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => zT
     });
-    var FY = DY(37376);
-    const AY = function(YY, rY, DY) {
-      let AY;
+    var iT = IT(36984);
+    const zT = function(TT, oT, IT) {
+      let zT;
       return {
         plugins: {
-          placeAgainstBeds: (0, FY.d)()
+          placeAgainstBeds: (0, iT.c)()
         },
-        onCreate: YY => {
-          AY = YY
+        onCreate: TT => {
+          zT = TT
         },
-        onPlayerAltAction: (YY, rY, DY, FY, IY, RY) => {
-          ((YY, rY) => {
-            if (!rY || "Mesh" !== AY.getEntityType(rY)) return;
-            const DY = AY.getEntityName(rY);
-            "Upgrades" === DY ? AY.openShop(YY, !1, "Upgrades") : "Items" === DY && AY.openShop(YY, !1, "Recommended")
-          })(YY, RY)
+        onPlayerAltAction: (TT, oT, IT, iT, kT, WT) => {
+          ((TT, oT) => {
+            if (!oT || "Mesh" !== zT.getEntityType(oT)) return;
+            const IT = zT.getEntityName(oT);
+            "Upgrades" === IT ? zT.openShop(TT, !1, "Upgrades") : "Items" === IT && zT.openShop(TT, !1, "Recommended")
+          })(TT, WT)
         }
       }
     }
   },
-  37376: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => OY
+  36984: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT
     });
-    var FY = DY(341),
-      AY = DY(36318),
-      IY = DY(4020);
-    const RY = ["Leaf Bed", "_Leaf Bed Head", ...FY.Fc.flatMap((YY => [`${YY} Bed`, `_${YY} Bed Head`, `${YY} Strongbed`, `_${YY} Strongbed Head`]))];
+    var iT = IT(314),
+      zT = IT(35882),
+      kT = IT(3996);
+    const WT = ["Leaf Bed", "_Leaf Bed Head", ...iT.vc.flatMap((TT => [`${TT} Bed`, `_${TT} Bed Head`, `${TT} Strongbed`, `_${TT} Strongbed Head`]))];
 
-    function OY() {
-      let YY;
+    function XT() {
+      let TT;
       return {
-        onCreate(rY) {
-          YY = rY
+        onCreate(oT) {
+          TT = oT
         },
-        altVetoBlocks: RY,
-        onPlayerAttemptAltAction(rY, DY, FY, RY, OY, gY) {
-          var aY;
-          if ((0, AY.e)(YY.getMetaInfo(OY).rootName) && !YY.isEntityInteractable(gY) && (0, IY.f)(null === (aY = YY.rrY(rY)) || void 0 === aY ? void 0 : aY.typeObj.type)) return "preventAction"
+        altVetoBlocks: WT,
+        onPlayerAttemptAltAction(oT, IT, iT, WT, XT, BT) {
+          var FT;
+          if ((0, zT.d)(TT.getMetaInfo(XT).rootName) && !TT.isEntityInteractable(BT) && (0, kT.g)(null === (FT = TT.eoT(oT)) || void 0 === FT ? void 0 : FT.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36318: (YY, rY, DY) => {
-    function FY(YY) {
-      return YY.includes("Leaf Bed")
+  35882: (TT, oT, IT) => {
+    function iT(TT) {
+      return TT.includes("Leaf Bed")
     }
 
-    function AY(YY) {
-      return / Bed(?: Head)?(?:\||$)/.test(YY) && !FY(YY)
+    function zT(TT) {
+      return / Bed(?: Head)?(?:\||$)/.test(TT) && !iT(TT)
     }
 
-    function IY(YY) {
-      return YY.includes(" Strongbed")
+    function kT(TT) {
+      return TT.includes(" Strongbed")
     }
 
-    function RY(YY) {
-      return FY(YY) || AY(YY) || IY(YY)
+    function WT(TT) {
+      return iT(TT) || zT(TT) || kT(TT)
     }
-    DY.d(rY, {
-      e: () => RY,
-      h: () => FY,
-      i: () => IY,
-      l: () => AY
+    IT.d(oT, {
+      d: () => WT,
+      f: () => iT,
+      g: () => kT,
+      i: () => zT
     })
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

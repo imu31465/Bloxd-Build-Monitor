@@ -1,91 +1,91 @@
 export const id = 49;
 export const ids = [49];
 export const modules = {
-  38005: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      SkyblockEntityFacing: () => OY,
-      needsSkyblockEntityFacing: () => RY
+  37632: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      SkyblockEntityFacing: () => XT,
+      needsSkyblockEntityFacing: () => WT
     });
-    var FY = DY(37921),
-      AY = DY(3815),
-      IY = DY(38011);
+    var iT = IT(37524),
+      zT = IT(3811),
+      kT = IT(37636);
 
-    function RY(YY, rY) {
-      if (YY.metaInfo === FY.n || "Iron Guardian" === YY.type || "Gold Guardian" === YY.type) return !0;
-      if ("Pig" === YY.type) return "sitting" === YY.pose;
-      if ("Person" !== YY.meshKind || void 0 === YY.meshOpts) return !1;
-      let DY = null === rY || void 0 === rY ? void 0 : rY.get(YY.meshOpts);
-      if (void 0 === DY) {
-        var IY, RY;
-        const FY = (0, AY.j)(YY);
-        DY = !1, "pig_napoleon" === (null === FY || void 0 === FY || null === (IY = FY.opts.textures) || void 0 === IY ? void 0 : IY.head) ? DY = !0 : "npc_pig_head" === (null === FY || void 0 === FY || null === (RY = FY.opts.textures) || void 0 === RY ? void 0 : RY.head) && (DY = "sitting" === FY.opts.pose || "sitting"), rY && (rY.size >= 256 && rY.clear(), rY.set(YY.meshOpts, DY))
+    function WT(TT, oT) {
+      if (TT.metaInfo === iT.q || "Iron Guardian" === TT.type || "Gold Guardian" === TT.type) return !0;
+      if ("Pig" === TT.type) return "sitting" === TT.pose;
+      if ("Person" !== TT.meshKind || void 0 === TT.meshOpts) return !1;
+      let IT = null === oT || void 0 === oT ? void 0 : oT.get(TT.meshOpts);
+      if (void 0 === IT) {
+        var kT, WT;
+        const iT = (0, zT.l)(TT);
+        IT = !1, "pig_napoleon" === (null === iT || void 0 === iT || null === (kT = iT.opts.textures) || void 0 === kT ? void 0 : kT.head) ? IT = !0 : "npc_pig_head" === (null === iT || void 0 === iT || null === (WT = iT.opts.textures) || void 0 === WT ? void 0 : WT.head) && (IT = "sitting" === iT.opts.pose || "sitting"), oT && (oT.size >= 256 && oT.clear(), oT.set(TT.meshOpts, IT))
       }
-      return "sitting" === DY ? "sitting" === YY.pose : DY
-    }(0, IY.f)("skyblock", ((YY, rY) => {
-      rY.setFacingTolerance(RY(YY) ? 0 : null)
+      return "sitting" === IT ? "sitting" === TT.pose : IT
+    }(0, kT.g)("skyblock", ((TT, oT) => {
+      oT.setFacingTolerance(WT(TT) ? 0 : null)
     }));
-    class OY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = YY, this.alsoVisit = rY, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = YY => {
-          var rY;
-          const DY = this.api.getEntityInfo(YY);
-          DY && (RY(DY, this.meshFacingCache) && (this.api.setFacingTolerance(YY, 0), this.nextFacing.add(YY)), null === (rY = this.alsoVisit) || void 0 === rY || rY.call(this, YY, DY))
+    class XT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = TT, this.alsoVisit = oT, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = TT => {
+          var oT;
+          const IT = this.api.getEntityInfo(TT);
+          IT && (WT(IT, this.meshFacingCache) && (this.api.setFacingTolerance(TT, 0), this.nextFacing.add(TT)), null === (oT = this.alsoVisit) || void 0 === oT || oT.call(this, TT, IT))
         }
       }
-      Zu() {
+      dD() {
         const {
-          api: YY
-        } = this, rY = this.nextFacing;
-        YY.forEachEntity(this.visit);
-        for (const DY of this.facing) rY.has(DY) || YY.setFacingTolerance(DY, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = rY
+          api: TT
+        } = this, oT = this.nextFacing;
+        TT.forEachEntity(this.visit);
+        for (const IT of this.facing) oT.has(IT) || TT.setFacingTolerance(IT, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = oT
       }
       dispose() {
-        for (const YY of this.facing) this.api.setFacingTolerance(YY, null);
+        for (const TT of this.facing) this.api.setFacingTolerance(TT, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   },
-  37921: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => RY,
-      g: () => OY,
-      i: () => FY,
-      m: () => IY,
-      n: () => AY,
-      q: () => gY
+  37524: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => WT,
+      i: () => XT,
+      k: () => iT,
+      o: () => kT,
+      q: () => zT,
+      t: () => BT
     });
-    const FY = "skyblockDungeons",
-      AY = "skyblockHeldBoss",
-      IY = "dungeonEnter ",
-      RY = Object.freeze({
+    const iT = "skyblockDungeons",
+      zT = "skyblockHeldBoss",
+      kT = "dungeonEnter ",
+      WT = Object.freeze({
         easy: "skyblockGame:difficultyEasy",
         medium: "skyblockGame:difficultyMedium",
         hard: "skyblockGame:difficultyHard",
         insane: "skyblockGame:difficultyInsane"
       }),
-      OY = Object.freeze({
+      XT = Object.freeze({
         easy: "#77b326",
         medium: "#eac03d",
         hard: "#df7622",
         insane: "#e74d4d"
       });
 
-    function gY(YY) {
-      let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      const DY = Math.max(0, Math.floor(YY)),
-        FY = Math.floor(DY % 1e3 / 100),
-        AY = Math.floor(DY / 1e3),
-        IY = AY % 60,
-        RY = Math.floor(AY / 60),
-        OY = RY % 60,
-        gY = Math.floor(RY / 60),
-        aY = YY => YY < 10 ? `0${YY}` : String(YY),
-        vY = rY ? `.${FY}` : "";
-      return gY > 0 ? `${gY}:${aY(OY)}:${aY(IY)}${vY}` : `${OY}:${aY(IY)}${vY}`
+    function BT(TT) {
+      let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const IT = Math.max(0, Math.floor(TT)),
+        iT = Math.floor(IT % 1e3 / 100),
+        zT = Math.floor(IT / 1e3),
+        kT = zT % 60,
+        WT = Math.floor(zT / 60),
+        XT = WT % 60,
+        BT = Math.floor(WT / 60),
+        FT = TT => TT < 10 ? `0${TT}` : String(TT),
+        ST = oT ? `.${iT}` : "";
+      return BT > 0 ? `${BT}:${FT(XT)}:${FT(kT)}${ST}` : `${XT}:${FT(kT)}${ST}`
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

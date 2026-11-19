@@ -1,352 +1,321 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  35843: (YY, rY, DY) => {
-    var FY = {
-      "./Artisan Bench.json": [40172, 263],
-      "./Aspen Item Pedestal.json": [40177, 264],
-      "./Cedar Item Pedestal.json": [40185, 265],
-      "./Cherry Item Pedestal.json": [40191, 266],
-      "./Furnace.json": [40194, 267],
-      "./Jungle Item Pedestal.json": [40200, 268],
-      "./Mango Item Pedestal.json": [40203, 269],
-      "./Palm Item Pedestal.json": [40212, 270],
-      "./Pear Item Pedestal.json": [40218, 271],
-      "./Pine Item Pedestal.json": [40221, 272],
-      "./Plum Item Pedestal.json": [40224, 273],
-      "./Potion Table.json": [40231, 274],
-      "./Salvaging Table.json": [40236, 275],
-      "./Showcase.json": [40238, 276],
-      "./Spectral Item Pedestal.json": [40240, 277],
-      "./Workbench.json": [40245, 278]
-    };
-
-    function AY(YY) {
-      if (!DY.o(FY, YY)) return Promise.resolve().then((() => {
-        var rY = new Error("Cannot find module '" + YY + "'");
-        throw rY.code = "MODULE_NOT_FOUND", rY
-      }));
-      var rY = FY[YY],
-        AY = rY[0];
-      return DY.e(rY[1]).then((() => DY(AY)))
-    }
-    AY.keys = () => Object.keys(FY), AY.id = 35843, YY.exports = AY
-  },
-  35834: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      getBlockModelIconUrl: () => sY,
-      hasBlockModelIcon: () => aY
+  35415: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      getBlockModelIconUrl: () => LT,
+      hasBlockModelIcon: () => FT
     });
-    var FY = DY(35817),
-      AY = DY(35813);
-    const IY = DY(35843),
-      RY = new Map(IY.keys().filter((YY => YY.startsWith("./"))).map((YY => [YY.slice(2, -5), YY]))),
-      OY = new Map,
-      gY = new Map;
+    var iT = IT(35405),
+      zT = IT(35400);
+    const kT = IT(35422),
+      WT = new Map(kT.keys().filter((TT => TT.startsWith("./"))).map((TT => [TT.slice(2, -5), TT]))),
+      XT = new Map,
+      BT = new Map;
 
-    function aY(YY) {
-      return RY.has(YY)
+    function FT(TT) {
+      return WT.has(TT)
     }
 
-    function vY(YY) {
-      return IY(RY.get(YY))
+    function ST(TT) {
+      return kT(WT.get(TT))
     }
-    async function uY(YY, rY, DY) {
+    async function DT(TT, oT, IT) {
       const {
-        data: FY,
-        texture: IY
+        data: iT,
+        texture: kT
       } = await
-      function(YY) {
-        let rY = OY.get(YY);
-        return rY || (rY = vY(YY).then((async YY => {
-          const rY = new Image;
-          rY.src = YY.texture, await rY.decode();
-          const DY = document.createElement("canvas");
-          DY.width = rY.width, DY.height = rY.height;
-          const FY = DY.getContext("2d");
-          return FY.drawImage(rY, 0, 0), {
-            data: YY,
+      function(TT) {
+        let oT = XT.get(TT);
+        return oT || (oT = ST(TT).then((async TT => {
+          const oT = new Image;
+          oT.src = TT.texture, await oT.decode();
+          const IT = document.createElement("canvas");
+          IT.width = oT.width, IT.height = oT.height;
+          const iT = IT.getContext("2d");
+          return iT.drawImage(oT, 0, 0), {
+            data: TT,
             texture: {
-              width: rY.width,
-              height: rY.height,
-              pixels: FY.getImageData(0, 0, rY.width, rY.height).data
+              width: oT.width,
+              height: oT.height,
+              pixels: iT.getImageData(0, 0, oT.width, oT.height).data
             }
           }
-        })), rY.catch((() => {
-          OY.delete(YY)
-        })), OY.set(YY, rY)), rY
-      }(YY), RY = document.createElement("canvas");
-      return RY.width = rY, RY.height = rY, RY.getContext("2d").putImageData(new ImageData((0, AY.j)(FY, IY, rY, DY), rY, rY), 0, 0), RY.toDataURL()
+        })), oT.catch((() => {
+          XT.delete(TT)
+        })), XT.set(TT, oT)), oT
+      }(TT), WT = document.createElement("canvas");
+      return WT.width = oT, WT.height = oT, WT.getContext("2d").putImageData(new ImageData((0, zT.k)(iT, kT, oT, IT), oT, oT), 0, 0), WT.toDataURL()
     }
 
-    function sY(YY, rY, DY) {
-      const AY = `${rY}|${DY}|${YY}`;
-      let IY = gY.get(AY);
-      return IY || (IY = (0, FY.g)(YY, (() => vY(YY)), rY, DY).then((FY => null !== FY && void 0 !== FY ? FY : uY(YY, rY, DY))), IY.catch((() => {
-        gY.delete(AY)
-      })), gY.set(AY, IY)), IY
+    function LT(TT, oT, IT) {
+      const zT = `${oT}|${IT}|${TT}`;
+      let kT = BT.get(zT);
+      return kT || (kT = (0, iT.e)(TT, (() => ST(TT)), oT, IT).then((iT => null !== iT && void 0 !== iT ? iT : DT(TT, oT, IT))), kT.catch((() => {
+        BT.delete(zT)
+      })), BT.set(zT, kT)), kT
     }
   },
-  35817: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => BY,
-      g: () => cY,
-      h: () => mY
+  35405: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => vT,
+      e: () => ET,
+      g: () => gT
     });
-    var FY = DY(309),
-      AY = DY(99);
-    const IY = new(DY(35826).d)(new URL(DY.p + DY.u(3), DY.b), {
+    var iT = IT(289),
+      zT = IT(90);
+    const kT = new(IT(35408).e)(new URL(IT.p + IT.u(3), IT.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var RY = DY(1744),
-      OY = DY(2789);
-    const gY = 1e4,
-      aY = 3e4;
-    let vY = null,
-      uY = null,
-      sY = null,
-      iY = !1,
-      yY = 0;
-    const QY = new Map;
-    let oY = null;
-    const WY = new Map,
-      EY = new Map;
+    var WT = IT(1693),
+      XT = IT(2752);
+    const BT = 1e4,
+      FT = 3e4;
+    let ST = null,
+      DT = null,
+      LT = null,
+      xT = !1,
+      cT = 0;
+    const KT = new Map;
+    let MT = null;
+    const rT = new Map,
+      AT = new Map;
 
-    function mY(YY) {
-      const rY = new Promise(((rY, DY) => {
-        const FY = new Image;
-        FY.crossOrigin = "anonymous", FY.fetchPriority = "high", FY.onload = () => {
-          rY(FY)
-        }, FY.onerror = () => {
-          DY(new Error(`A block icon's texture did not load: ${YY.slice(0,100)}`))
-        }, FY.src = YY
+    function gT(TT) {
+      const oT = new Promise(((oT, IT) => {
+        const iT = new Image;
+        iT.crossOrigin = "anonymous", iT.fetchPriority = "high", iT.onload = () => {
+          oT(iT)
+        }, iT.onerror = () => {
+          IT(new Error(`A block icon's texture did not load: ${TT.slice(0,100)}`))
+        }, iT.src = TT
       }));
-      return (0, OY.g)(rY)
+      return (0, XT.e)(oT)
     }
 
-    function VY(YY) {
-      var rY, DY;
-      iY || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${YY}`), iY = !0, null === (rY = vY) || void 0 === rY || rY.terminate(), vY = null, uY = null, WY.clear(), EY.clear();
-      for (const FY of QY.values()) FY(null);
-      QY.clear(), null === (DY = oY) || void 0 === DY || DY()
+    function hT(TT) {
+      var oT, IT;
+      xT || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${TT}`), xT = !0, null === (oT = ST) || void 0 === oT || oT.terminate(), ST = null, DT = null, rT.clear(), AT.clear();
+      for (const iT of KT.values()) iT(null);
+      KT.clear(), null === (IT = MT) || void 0 === IT || IT()
     }
 
-    function SY() {
-      return sY ??= async function() {
+    function wT() {
+      return LT ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === FY.e.ios_icon_worker_v1 && (0, AY.isWebKit)()) return;
+        if ("page" === iT.c.ios_icon_worker_v1 && (0, zT.isWebKit)()) return;
         try {
-          vY = await async function() {
-            return await IY.ready(), IY.start()
+          ST = await async function() {
+            return await kT.ready(), kT.start()
           }()
-        } catch (OY) {
-          return void VY(`did not start (${String(OY)})`)
+        } catch (XT) {
+          return void hT(`did not start (${String(XT)})`)
         }
-        let YY = () => {};
-        const rY = new Promise((rY => {
-          YY = rY
+        let TT = () => {};
+        const oT = new Promise((oT => {
+          TT = oT
         }));
-        vY.onmessage = rY => {
+        ST.onmessage = oT => {
           let {
-            data: DY
-          } = rY;
-          if ("started" === DY.type) uY = vY, YY();
-          else if ("failed" === DY.type) VY(`failed a draw (${DY.message})`);
+            data: IT
+          } = oT;
+          if ("started" === IT.type) DT = ST, TT();
+          else if ("failed" === IT.type) hT(`failed a draw (${IT.message})`);
           else {
-            var FY, AY;
-            null === (FY = QY.get(DY.id)) || void 0 === FY || FY(DY.url), QY.delete(DY.id), null === (AY = oY) || void 0 === AY || AY()
+            var iT, zT;
+            null === (iT = KT.get(IT.id)) || void 0 === iT || iT(IT.url), KT.delete(IT.id), null === (zT = MT) || void 0 === zT || zT()
           }
-        }, vY.onerror = rY => {
-          rY.preventDefault(), VY(`stopped (${rY.message||"its script did not load or run"})`), YY()
+        }, ST.onerror = oT => {
+          oT.preventDefault(), hT(`stopped (${oT.message||"its script did not load or run"})`), TT()
         };
-        const DY = `did not start in ${aY/1e3} s`;
-        await (0, RY.k)(rY, aY, DY).catch((() => {
-          VY(DY)
+        const IT = `did not start in ${FT/1e3} s`;
+        await (0, WT.k)(oT, FT, IT).catch((() => {
+          hT(IT)
         }))
-      }(), sY
+      }(), LT
     }
 
-    function lY() {
-      if (null !== oY || 0 === QY.size) return;
-      const YY = new Promise((YY => {
-          oY = YY
+    function mT() {
+      if (null !== MT || 0 === KT.size) return;
+      const TT = new Promise((TT => {
+          MT = TT
         })),
-        rY = `did not answer in ${gY/1e3} s`;
-      (0, RY.k)(YY, gY, rY).then((() => {
-        oY = null, lY()
+        oT = `did not answer in ${BT/1e3} s`;
+      (0, WT.k)(TT, BT, oT).then((() => {
+        MT = null, mT()
       }), (() => {
-        oY = null, VY(rY)
+        MT = null, hT(oT)
       }))
     }
 
-    function TY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      YY.postMessage(rY, DY)
+    function eT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      TT.postMessage(oT, IT)
     }
 
-    function eY(YY, rY, DY, FY) {
-      let AY = rY.get(DY);
-      return void 0 === AY && (AY = FY().then((async rY => {
+    function RT(TT, oT, IT, iT) {
+      let zT = oT.get(IT);
+      return void 0 === zT && (zT = iT().then((async oT => {
         let {
-          image: DY,
-          request: FY
-        } = rY;
+          image: IT,
+          request: iT
+        } = oT;
         try {
-          const rY = await createImageBitmap(DY);
-          TY(YY, FY(rY), [rY])
-        } catch (AY) {
-          VY(`could not take an image (${String(AY)})`)
+          const oT = await createImageBitmap(IT);
+          eT(TT, iT(oT), [oT])
+        } catch (zT) {
+          hT(`could not take an image (${String(zT)})`)
         }
-      })), AY.catch((() => {
-        rY.get(DY) === AY && rY.delete(DY)
-      })), rY.set(DY, AY)), AY
+      })), zT.catch((() => {
+        oT.get(IT) === zT && oT.delete(IT)
+      })), oT.set(IT, zT)), zT
     }
-    async function NY(YY, rY) {
-      SY();
-      const DY = uY;
-      if (null === DY) return null;
-      if (await YY(DY), uY !== DY) return null;
-      const FY = ++yY;
-      return new Promise((YY => {
-        QY.set(FY, YY), TY(DY, rY(FY)), lY()
+    async function uT(TT, oT) {
+      wT();
+      const IT = DT;
+      if (null === IT) return null;
+      if (await TT(IT), DT !== IT) return null;
+      const iT = ++cT;
+      return new Promise((TT => {
+        KT.set(iT, TT), eT(IT, oT(iT)), mT()
       }))
     }
 
-    function BY(YY, rY, DY) {
-      return NY((rY => Promise.all([YY.top, YY.left, YY.right].map((YY => function(YY, rY) {
-        return eY(YY, WY, rY, (async () => ({
-          image: await mY(rY),
-          request: YY => ({
+    function vT(TT, oT, IT) {
+      return uT((oT => Promise.all([TT.top, TT.left, TT.right].map((TT => function(TT, oT) {
+        return RT(TT, rT, oT, (async () => ({
+          image: await gT(oT),
+          request: TT => ({
             type: "texture",
-            url: rY,
-            bitmap: YY
+            url: oT,
+            bitmap: TT
           })
         })))
-      }(rY, YY))))), (FY => ({
+      }(oT, TT))))), (iT => ({
         type: "draw",
-        id: FY,
-        ...YY,
-        size: rY,
-        outlineWidth: DY
+        id: iT,
+        ...TT,
+        size: oT,
+        outlineWidth: IT
       })))
     }
 
-    function cY(YY, rY, DY, FY) {
-      return NY((DY => function(YY, rY, DY) {
-        return eY(YY, EY, rY, (async () => {
+    function ET(TT, oT, IT, iT) {
+      return uT((IT => function(TT, oT, IT) {
+        return RT(TT, AT, oT, (async () => {
           const {
-            texture: YY,
-            ...FY
-          } = await DY();
+            texture: TT,
+            ...iT
+          } = await IT();
           return {
-            image: await mY(YY),
-            request: YY => ({
+            image: await gT(TT),
+            request: TT => ({
               type: "model",
-              name: rY,
-              bitmap: YY,
-              geometry: FY
+              name: oT,
+              bitmap: TT,
+              geometry: iT
             })
           }
         }))
-      }(DY, YY, rY)), (rY => ({
+      }(IT, TT, oT)), (oT => ({
         type: "drawModel",
-        id: rY,
-        name: YY,
-        size: DY,
-        outlineWidth: FY
+        id: oT,
+        name: TT,
+        size: IT,
+        outlineWidth: iT
       })))
     }
   },
-  35813: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY,
-      g: () => OY,
-      j: () => RY
+  35400: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      i: () => XT,
+      k: () => WT
     });
-    const FY = 1 / 32,
-      AY = [15, 15, 15],
-      IY = {
+    const iT = 1 / 32,
+      zT = [15, 15, 15],
+      kT = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function RY(YY, rY, DY, AY) {
+    function WT(TT, oT, IT, zT) {
       const {
-        vertices: IY,
-        uvs: RY,
-        indices: gY,
-        shades: aY
-      } = YY, vY = DY * FY, uY = DY - 2 * vY, sY = new Float32Array(IY.length);
-      for (let FY = 0; FY < IY.length; FY += 3) sY[FY] = vY + IY[FY] * uY, sY[FY + 1] = vY + IY[FY + 1] * uY, sY[FY + 2] = IY[FY + 2];
-      const iY = new Float32Array(DY * DY).fill(-1 / 0),
-        yY = new Uint8ClampedArray(DY * DY * 4),
-        QY = 255 * YY.alphaCutoff;
-      for (let FY = 0; FY < gY.length; FY += 3) {
-        const [YY, AY, IY] = [gY[FY], gY[FY + 1], gY[FY + 2]], [OY, vY, uY] = [3 * YY, 3 * AY, 3 * IY], [oY, WY, EY, mY, VY, SY] = [sY[OY], sY[OY + 1], sY[vY], sY[vY + 1], sY[uY], sY[uY + 1]], lY = (EY - oY) * (SY - WY) - (VY - oY) * (mY - WY);
-        if (Math.abs(lY) < 1e-9) continue;
-        const TY = aY[FY / 3],
-          [eY, NY, BY, cY, KY, HY] = [RY[2 * YY], RY[2 * YY + 1], RY[2 * AY], RY[2 * AY + 1], RY[2 * IY], RY[2 * IY + 1]],
-          zY = Math.max(0, Math.floor(Math.min(oY, EY, VY))),
-          ZY = Math.min(DY - 1, Math.ceil(Math.max(oY, EY, VY))),
-          CY = Math.max(0, Math.floor(Math.min(WY, mY, SY))),
-          fY = Math.min(DY - 1, Math.ceil(Math.max(WY, mY, SY)));
-        for (let FY = CY; FY <= fY; FY++)
-          for (let YY = zY; YY <= ZY; YY++) {
-            const [AY, IY] = [YY + .5, FY + .5], RY = ((AY - oY) * (SY - WY) - (VY - oY) * (IY - WY)) / lY, gY = ((EY - oY) * (IY - WY) - (AY - oY) * (mY - WY)) / lY, aY = 1 - RY - gY;
-            if (aY < 0 || RY < 0 || gY < 0) continue;
-            const zY = aY * sY[OY + 2] + RY * sY[vY + 2] + gY * sY[uY + 2],
-              ZY = FY * DY + YY;
-            if (zY <= iY[ZY]) continue;
-            const CY = Math.max(0, Math.min(rY.width - 1, Math.floor((aY * eY + RY * BY + gY * KY) * rY.width))),
-              fY = 4 * (Math.max(0, Math.min(rY.height - 1, Math.floor((aY * NY + RY * cY + gY * HY) * rY.height))) * rY.width + CY);
-            rY.pixels[fY + 3] < QY || (iY[ZY] = zY, yY[4 * ZY] = rY.pixels[fY] * TY, yY[4 * ZY + 1] = rY.pixels[fY + 1] * TY, yY[4 * ZY + 2] = rY.pixels[fY + 2] * TY, yY[4 * ZY + 3] = 255)
+        vertices: kT,
+        uvs: WT,
+        indices: BT,
+        shades: FT
+      } = TT, ST = IT * iT, DT = IT - 2 * ST, LT = new Float32Array(kT.length);
+      for (let iT = 0; iT < kT.length; iT += 3) LT[iT] = ST + kT[iT] * DT, LT[iT + 1] = ST + kT[iT + 1] * DT, LT[iT + 2] = kT[iT + 2];
+      const xT = new Float32Array(IT * IT).fill(-1 / 0),
+        cT = new Uint8ClampedArray(IT * IT * 4),
+        KT = 255 * TT.alphaCutoff;
+      for (let iT = 0; iT < BT.length; iT += 3) {
+        const [TT, zT, kT] = [BT[iT], BT[iT + 1], BT[iT + 2]], [XT, ST, DT] = [3 * TT, 3 * zT, 3 * kT], [MT, rT, AT, gT, hT, wT] = [LT[XT], LT[XT + 1], LT[ST], LT[ST + 1], LT[DT], LT[DT + 1]], mT = (AT - MT) * (wT - rT) - (hT - MT) * (gT - rT);
+        if (Math.abs(mT) < 1e-9) continue;
+        const eT = FT[iT / 3],
+          [RT, uT, vT, ET, fT, CT] = [WT[2 * TT], WT[2 * TT + 1], WT[2 * zT], WT[2 * zT + 1], WT[2 * kT], WT[2 * kT + 1]],
+          jT = Math.max(0, Math.floor(Math.min(MT, AT, hT))),
+          JT = Math.min(IT - 1, Math.ceil(Math.max(MT, AT, hT))),
+          UT = Math.max(0, Math.floor(Math.min(rT, gT, wT))),
+          aT = Math.min(IT - 1, Math.ceil(Math.max(rT, gT, wT)));
+        for (let iT = UT; iT <= aT; iT++)
+          for (let TT = jT; TT <= JT; TT++) {
+            const [zT, kT] = [TT + .5, iT + .5], WT = ((zT - MT) * (wT - rT) - (hT - MT) * (kT - rT)) / mT, BT = ((AT - MT) * (kT - rT) - (zT - MT) * (gT - rT)) / mT, FT = 1 - WT - BT;
+            if (FT < 0 || WT < 0 || BT < 0) continue;
+            const jT = FT * LT[XT + 2] + WT * LT[ST + 2] + BT * LT[DT + 2],
+              JT = iT * IT + TT;
+            if (jT <= xT[JT]) continue;
+            const UT = Math.max(0, Math.min(oT.width - 1, Math.floor((FT * RT + WT * vT + BT * fT) * oT.width))),
+              aT = 4 * (Math.max(0, Math.min(oT.height - 1, Math.floor((FT * uT + WT * ET + BT * CT) * oT.height))) * oT.width + UT);
+            oT.pixels[aT + 3] < KT || (xT[JT] = jT, cT[4 * JT] = oT.pixels[aT] * eT, cT[4 * JT + 1] = oT.pixels[aT + 1] * eT, cT[4 * JT + 2] = oT.pixels[aT + 2] * eT, cT[4 * JT + 3] = 255)
           }
       }
-      return OY(yY, DY, AY), yY
+      return XT(cT, IT, zT), cT
     }
 
-    function OY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rY => 0 !== YY[4 * rY + 3];
-      const IY = (YY, DY) => YY < 0 || DY < 0 || YY >= rY || DY >= rY || !FY(DY * rY + YY),
-        RY = [];
-      for (let AY = 0; AY < rY; AY++)
-        for (let YY = 0; YY < rY; YY++)
-          if (!IY(YY, AY)) YY: for (let FY = -DY; FY <= DY; FY++) {
-            const OY = DY - Math.abs(FY);
-            for (let DY = -OY; DY <= OY; DY++)
-              if (IY(YY + DY, AY + FY)) {
-                RY.push(AY * rY + YY);
-                break YY
+    function XT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : oT => 0 !== TT[4 * oT + 3];
+      const kT = (TT, IT) => TT < 0 || IT < 0 || TT >= oT || IT >= oT || !iT(IT * oT + TT),
+        WT = [];
+      for (let zT = 0; zT < oT; zT++)
+        for (let TT = 0; TT < oT; TT++)
+          if (!kT(TT, zT)) TT: for (let iT = -IT; iT <= IT; iT++) {
+            const XT = IT - Math.abs(iT);
+            for (let IT = -XT; IT <= XT; IT++)
+              if (kT(TT + IT, zT + iT)) {
+                WT.push(zT * oT + TT);
+                break TT
               }
           }
-      for (const OY of RY) YY.set(AY, 4 * OY), YY[4 * OY + 3] = 255
+      for (const XT of WT) TT.set(zT, 4 * XT), TT[4 * XT + 3] = 255
     }
   },
-  35826: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY
+  35408: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => zT
     });
-    const FY = {
-      wait: function(YY) {
-        return new Promise((rY => {
-          setTimeout(rY, YY)
+    const iT = {
+      wait: function(TT) {
+        return new Promise((oT => {
+          setTimeout(oT, TT)
         }))
       },
       stallMs: 2e4
     };
-    class AY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : FY;
-        this.url = YY, this.options = rY, this.timing = DY, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = YY
+    class zT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : iT;
+        this.url = TT, this.options = oT, this.timing = IT, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = TT
       }
       ready() {
         if (null === this.fetched) {
-          const YY = new AbortController;
-          this.fetchAbort = YY, this.fetched = this.fetchWithRetries(YY.signal).finally((() => {
-            this.fetchAbort === YY && (this.fetchAbort = null)
+          const TT = new AbortController;
+          this.fetchAbort = TT, this.fetched = this.fetchWithRetries(TT.signal).finally((() => {
+            this.fetchAbort === TT && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -357,51 +326,82 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(YY) {
-        for (let rY = 0;; rY++) {
-          const DY = new URL(this.url);
-          if (rY > 0 && DY.searchParams.set("cache-bust", `${Date.now()}-${rY}`), await this.fetchWhole(DY, YY)) return void(this.scriptUrl = DY);
-          if (rY >= 3 || YY.aborted) return;
-          if (await this.timing.wait(500 * 2 ** rY), YY.aborted) return
+      async fetchWithRetries(TT) {
+        for (let oT = 0;; oT++) {
+          const IT = new URL(this.url);
+          if (oT > 0 && IT.searchParams.set("cache-bust", `${Date.now()}-${oT}`), await this.fetchWhole(IT, TT)) return void(this.scriptUrl = IT);
+          if (oT >= 3 || TT.aborted) return;
+          if (await this.timing.wait(500 * 2 ** oT), TT.aborted) return
         }
       }
-      async fetchWhole(YY, rY) {
-        const DY = new AbortController;
-        let FY;
-        const AY = () => {
-            clearTimeout(FY), FY = setTimeout((() => {
-              DY.abort()
+      async fetchWhole(TT, oT) {
+        const IT = new AbortController;
+        let iT;
+        const zT = () => {
+            clearTimeout(iT), iT = setTimeout((() => {
+              IT.abort()
             }), this.timing.stallMs)
           },
-          IY = () => {
-            DY.abort()
+          kT = () => {
+            IT.abort()
           };
-        rY.addEventListener("abort", IY, {
+        oT.addEventListener("abort", kT, {
           once: !0
-        }), AY();
+        }), zT();
         try {
-          var RY;
-          const rY = await fetch(YY, {
-            signal: DY.signal
+          var WT;
+          const oT = await fetch(TT, {
+            signal: IT.signal
           });
-          if (!rY.ok) return !1;
-          const FY = null === (RY = rY.body) || void 0 === RY ? void 0 : RY.getReader();
-          if (!FY) return !1;
+          if (!oT.ok) return !1;
+          const iT = null === (WT = oT.body) || void 0 === WT ? void 0 : WT.getReader();
+          if (!iT) return !1;
           for (;;) {
             const {
-              done: YY
-            } = await FY.read();
-            if (YY) return !0;
-            AY()
+              done: TT
+            } = await iT.read();
+            if (TT) return !0;
+            zT()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(FY), rY.removeEventListener("abort", IY)
+          clearTimeout(iT), oT.removeEventListener("abort", kT)
         }
       }
     }
+  },
+  35422: (TT, oT, IT) => {
+    var iT = {
+      "./Artisan Bench.json": [39874, 263],
+      "./Aspen Item Pedestal.json": [39876, 264],
+      "./Cedar Item Pedestal.json": [39882, 265],
+      "./Cherry Item Pedestal.json": [39888, 266],
+      "./Furnace.json": [39891, 267],
+      "./Jungle Item Pedestal.json": [39900, 268],
+      "./Mango Item Pedestal.json": [39907, 269],
+      "./Palm Item Pedestal.json": [39909, 270],
+      "./Pear Item Pedestal.json": [39912, 271],
+      "./Pine Item Pedestal.json": [39918, 272],
+      "./Plum Item Pedestal.json": [39922, 273],
+      "./Potion Table.json": [39927, 274],
+      "./Salvaging Table.json": [39933, 275],
+      "./Showcase.json": [39937, 276],
+      "./Spectral Item Pedestal.json": [39945, 277],
+      "./Workbench.json": [39948, 278]
+    };
+
+    function zT(TT) {
+      if (!IT.o(iT, TT)) return Promise.resolve().then((() => {
+        var oT = new Error("Cannot find module '" + TT + "'");
+        throw oT.code = "MODULE_NOT_FOUND", oT
+      }));
+      var oT = iT[TT],
+        zT = oT[0];
+      return IT.e(oT[1]).then((() => IT(zT)))
+    }
+    zT.keys = () => Object.keys(iT), zT.id = 35422, TT.exports = zT
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

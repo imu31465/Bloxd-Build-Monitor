@@ -1,34 +1,34 @@
 export const id = 234;
 export const ids = [234];
 export const modules = {
-  40298: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => RY,
-      d: () => vY,
-      h: () => aY
+  40008: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT,
+      g: () => ST,
+      k: () => FT
     });
-    var FY, AY = DY(36559),
-      IY = DY(36524);
-    ! function(YY) {
-      YY[YY.CW = 0] = "CW", YY[YY.CCW = 1] = "CCW"
-    }(FY || (FY = {}));
-    class RY {
-      static Interpolate(YY, rY, DY, FY, AY) {
-        if (0 === YY) return 0;
-        const IY = 1 - 3 * FY + 3 * rY,
-          RY = 3 * FY - 6 * rY,
-          OY = 3 * rY;
-        let gY = YY;
-        for (let aY = 0; aY < 5; aY++) {
-          const rY = gY * gY;
-          gY -= (IY * (rY * gY) + RY * rY + OY * gY - YY) * (1 / (3 * IY * rY + 2 * RY * gY + OY)), gY = Math.min(1, Math.max(0, gY))
+    var iT, zT = IT(36156),
+      kT = IT(36118);
+    ! function(TT) {
+      TT[TT.CW = 0] = "CW", TT[TT.CCW = 1] = "CCW"
+    }(iT || (iT = {}));
+    class WT {
+      static Interpolate(TT, oT, IT, iT, zT) {
+        if (0 === TT) return 0;
+        const kT = 1 - 3 * iT + 3 * oT,
+          WT = 3 * iT - 6 * oT,
+          XT = 3 * oT;
+        let BT = TT;
+        for (let FT = 0; FT < 5; FT++) {
+          const oT = BT * BT;
+          BT -= (kT * (oT * BT) + WT * oT + XT * BT - TT) * (1 / (3 * kT * oT + 2 * WT * BT + XT)), BT = Math.min(1, Math.max(0, BT))
         }
-        return 3 * Math.pow(1 - gY, 2) * gY * DY + 3 * (1 - gY) * Math.pow(gY, 2) * AY + Math.pow(gY, 3)
+        return 3 * Math.pow(1 - BT, 2) * BT * IT + 3 * (1 - BT) * Math.pow(BT, 2) * zT + Math.pow(BT, 3)
       }
     }
-    class OY {
-      constructor(YY) {
-        this._radians = YY, this._radians < 0 && (this._radians += 2 * Math.PI)
+    class XT {
+      constructor(TT) {
+        this._radians = TT, this._radians < 0 && (this._radians += 2 * Math.PI)
       }
       degrees() {
         return 180 * this._radians / Math.PI
@@ -36,242 +36,242 @@ export const modules = {
       radians() {
         return this._radians
       }
-      static BetweenTwoPoints(YY, rY) {
-        const DY = rY.subtract(YY),
-          FY = Math.atan2(DY.y, DY.x);
-        return new OY(FY)
+      static BetweenTwoPoints(TT, oT) {
+        const IT = oT.subtract(TT),
+          iT = Math.atan2(IT.y, IT.x);
+        return new XT(iT)
       }
-      static BetweenTwoVectors(YY, rY) {
-        let DY = YY.lengthSquared() * rY.lengthSquared();
-        if (0 === DY) return new OY(Math.PI / 2);
-        DY = Math.sqrt(DY);
-        let FY = YY.dot(rY) / DY;
-        FY = (0, AY.Clamp)(FY, -1, 1);
-        const IY = Math.acos(FY);
-        return new OY(IY)
+      static BetweenTwoVectors(TT, oT) {
+        let IT = TT.lengthSquared() * oT.lengthSquared();
+        if (0 === IT) return new XT(Math.PI / 2);
+        IT = Math.sqrt(IT);
+        let iT = TT.dot(oT) / IT;
+        iT = (0, zT.Clamp)(iT, -1, 1);
+        const kT = Math.acos(iT);
+        return new XT(kT)
       }
-      static FromRadians(YY) {
-        return new OY(YY)
+      static FromRadians(TT) {
+        return new XT(TT)
       }
-      static FromDegrees(YY) {
-        return new OY(YY * Math.PI / 180)
-      }
-    }
-    class gY {
-      constructor(YY, rY, DY) {
-        this.startPoint = YY, this.midPoint = rY, this.endPoint = DY;
-        const FY = Math.pow(rY.x, 2) + Math.pow(rY.y, 2),
-          AY = (Math.pow(YY.x, 2) + Math.pow(YY.y, 2) - FY) / 2,
-          RY = (FY - Math.pow(DY.x, 2) - Math.pow(DY.y, 2)) / 2,
-          gY = (YY.x - rY.x) * (rY.y - DY.y) - (rY.x - DY.x) * (YY.y - rY.y);
-        this.centerPoint = new IY.q((AY * (rY.y - DY.y) - RY * (YY.y - rY.y)) / gY, ((YY.x - rY.x) * RY - (rY.x - DY.x) * AY) / gY), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = OY.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const aY = this.startAngle.degrees();
-        let vY = OY.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          uY = OY.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        vY - aY > 180 && (vY -= 360), vY - aY < -180 && (vY += 360), uY - vY > 180 && (uY -= 360), uY - vY < -180 && (uY += 360), this.orientation = vY - aY < 0 ? 0 : 1, this.angle = OY.FromDegrees(0 === this.orientation ? aY - uY : uY - aY)
+      static FromDegrees(TT) {
+        return new XT(TT * Math.PI / 180)
       }
     }
-    class aY {
-      constructor(YY, rY) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new IY.q(YY, rY))
+    class BT {
+      constructor(TT, oT, IT) {
+        this.startPoint = TT, this.midPoint = oT, this.endPoint = IT;
+        const iT = Math.pow(oT.x, 2) + Math.pow(oT.y, 2),
+          zT = (Math.pow(TT.x, 2) + Math.pow(TT.y, 2) - iT) / 2,
+          WT = (iT - Math.pow(IT.x, 2) - Math.pow(IT.y, 2)) / 2,
+          BT = (TT.x - oT.x) * (oT.y - IT.y) - (oT.x - IT.x) * (TT.y - oT.y);
+        this.centerPoint = new kT.j((zT * (oT.y - IT.y) - WT * (TT.y - oT.y)) / BT, ((TT.x - oT.x) * WT - (oT.x - IT.x) * zT) / BT), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = XT.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const FT = this.startAngle.degrees();
+        let ST = XT.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          DT = XT.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        ST - FT > 180 && (ST -= 360), ST - FT < -180 && (ST += 360), DT - ST > 180 && (DT -= 360), DT - ST < -180 && (DT += 360), this.orientation = ST - FT < 0 ? 0 : 1, this.angle = XT.FromDegrees(0 === this.orientation ? FT - DT : DT - FT)
       }
-      addLineTo(YY, rY) {
-        if (this.closed) return this;
-        const DY = new IY.q(YY, rY),
-          FY = this._points[this._points.length - 1];
-        return this._points.push(DY), this._length += DY.subtract(FY).length(), this
+    }
+    class FT {
+      constructor(TT, oT) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new kT.j(TT, oT))
       }
-      addArcTo(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addLineTo(TT, oT) {
         if (this.closed) return this;
-        const RY = this._points[this._points.length - 1],
-          OY = new IY.q(YY, rY),
-          aY = new IY.q(DY, FY),
-          vY = new gY(RY, OY, aY);
-        let uY = vY.angle.radians() / AY;
-        0 === vY.orientation && (uY *= -1);
-        let sY = vY.startAngle.radians() + uY;
-        for (let IY = 0; IY < AY; IY++) {
-          const YY = Math.cos(sY) * vY.radius + vY.centerPoint.x,
-            rY = Math.sin(sY) * vY.radius + vY.centerPoint.y;
-          this.addLineTo(YY, rY), sY += uY
+        const IT = new kT.j(TT, oT),
+          iT = this._points[this._points.length - 1];
+        return this._points.push(IT), this._length += IT.subtract(iT).length(), this
+      }
+      addArcTo(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const WT = this._points[this._points.length - 1],
+          XT = new kT.j(TT, oT),
+          FT = new kT.j(IT, iT),
+          ST = new BT(WT, XT, FT);
+        let DT = ST.angle.radians() / zT;
+        0 === ST.orientation && (DT *= -1);
+        let LT = ST.startAngle.radians() + DT;
+        for (let kT = 0; kT < zT; kT++) {
+          const TT = Math.cos(LT) * ST.radius + ST.centerPoint.x,
+            oT = Math.sin(LT) * ST.radius + ST.centerPoint.y;
+          this.addLineTo(TT, oT), LT += DT
         }
         return this
       }
-      addQuadraticCurveTo(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addQuadraticCurveTo(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
         if (this.closed) return this;
-        const IY = (YY, rY, DY, FY) => (1 - YY) * (1 - YY) * rY + 2 * YY * (1 - YY) * DY + YY * YY * FY,
-          RY = this._points[this._points.length - 1];
-        for (let OY = 0; OY <= AY; OY++) {
-          const gY = OY / AY,
-            aY = IY(gY, RY.x, YY, DY),
-            vY = IY(gY, RY.y, rY, FY);
-          this.addLineTo(aY, vY)
+        const kT = (TT, oT, IT, iT) => (1 - TT) * (1 - TT) * oT + 2 * TT * (1 - TT) * IT + TT * TT * iT,
+          WT = this._points[this._points.length - 1];
+        for (let XT = 0; XT <= zT; XT++) {
+          const BT = XT / zT,
+            FT = kT(BT, WT.x, TT, IT),
+            ST = kT(BT, WT.y, oT, iT);
+          this.addLineTo(FT, ST)
         }
         return this
       }
-      addBezierCurveTo(YY, rY, DY, FY, AY, IY) {
-        let RY = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+      addBezierCurveTo(TT, oT, IT, iT, zT, kT) {
+        let WT = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
         if (this.closed) return this;
-        const OY = (YY, rY, DY, FY, AY) => (1 - YY) * (1 - YY) * (1 - YY) * rY + 3 * YY * (1 - YY) * (1 - YY) * DY + 3 * YY * YY * (1 - YY) * FY + YY * YY * YY * AY,
-          gY = this._points[this._points.length - 1];
-        for (let aY = 0; aY <= RY; aY++) {
-          const vY = aY / RY,
-            uY = OY(vY, gY.x, YY, DY, AY),
-            sY = OY(vY, gY.y, rY, FY, IY);
-          this.addLineTo(uY, sY)
+        const XT = (TT, oT, IT, iT, zT) => (1 - TT) * (1 - TT) * (1 - TT) * oT + 3 * TT * (1 - TT) * (1 - TT) * IT + 3 * TT * TT * (1 - TT) * iT + TT * TT * TT * zT,
+          BT = this._points[this._points.length - 1];
+        for (let FT = 0; FT <= WT; FT++) {
+          const ST = FT / WT,
+            DT = XT(ST, BT.x, TT, IT, zT),
+            LT = XT(ST, BT.y, oT, iT, kT);
+          this.addLineTo(DT, LT)
         }
         return this
       }
-      isPointInside(YY) {
-        let rY = !1;
-        const DY = this._points.length;
-        for (let FY = DY - 1, AY = 0; AY < DY; FY = AY++) {
-          let DY = this._points[FY],
-            IY = this._points[AY],
-            RY = IY.x - DY.x,
-            OY = IY.y - DY.y;
-          if (Math.abs(OY) > Number.EPSILON) {
-            if (OY < 0 && (DY = this._points[AY], RY = -RY, IY = this._points[FY], OY = -OY), YY.y < DY.y || YY.y > IY.y) continue;
-            if (YY.y === DY.y && YY.x === DY.x) return !0;
+      isPointInside(TT) {
+        let oT = !1;
+        const IT = this._points.length;
+        for (let iT = IT - 1, zT = 0; zT < IT; iT = zT++) {
+          let IT = this._points[iT],
+            kT = this._points[zT],
+            WT = kT.x - IT.x,
+            XT = kT.y - IT.y;
+          if (Math.abs(XT) > Number.EPSILON) {
+            if (XT < 0 && (IT = this._points[zT], WT = -WT, kT = this._points[iT], XT = -XT), TT.y < IT.y || TT.y > kT.y) continue;
+            if (TT.y === IT.y && TT.x === IT.x) return !0;
             {
-              const FY = OY * (YY.x - DY.x) - RY * (YY.y - DY.y);
-              if (0 === FY) return !0;
-              if (FY < 0) continue;
-              rY = !rY
+              const iT = XT * (TT.x - IT.x) - WT * (TT.y - IT.y);
+              if (0 === iT) return !0;
+              if (iT < 0) continue;
+              oT = !oT
             }
           } else {
-            if (YY.y !== DY.y) continue;
-            if (IY.x <= YY.x && YY.x <= DY.x || DY.x <= YY.x && YY.x <= IY.x) return !0
+            if (TT.y !== IT.y) continue;
+            if (kT.x <= TT.x && TT.x <= IT.x || IT.x <= TT.x && TT.x <= kT.x) return !0
           }
         }
-        return rY
+        return oT
       }
       close() {
         return this.closed = !0, this
       }
       length() {
-        let YY = this._length;
+        let TT = this._length;
         if (this.closed) {
-          const rY = this._points[this._points.length - 1];
-          YY += this._points[0].subtract(rY).length()
+          const oT = this._points[this._points.length - 1];
+          TT += this._points[0].subtract(oT).length()
         }
-        return YY
+        return TT
       }
       area() {
-        const YY = this._points.length;
-        let rY = 0;
-        for (let DY = YY - 1, FY = 0; FY < YY; DY = FY++) rY += this._points[DY].x * this._points[FY].y - this._points[FY].x * this._points[DY].y;
-        return .5 * rY
+        const TT = this._points.length;
+        let oT = 0;
+        for (let IT = TT - 1, iT = 0; iT < TT; IT = iT++) oT += this._points[IT].x * this._points[iT].y - this._points[iT].x * this._points[IT].y;
+        return .5 * oT
       }
       getPoints() {
         return this._points
       }
-      getPointAtLengthPosition(YY) {
-        if (YY < 0 || YY > 1) return IY.q.Zero();
-        const rY = YY * this.length();
-        let DY = 0;
-        for (let FY = 0; FY < this._points.length; FY++) {
-          const YY = (FY + 1) % this._points.length,
-            AY = this._points[FY],
-            RY = this._points[YY].subtract(AY),
-            OY = RY.length() + DY;
-          if (rY >= DY && rY <= OY) {
-            const YY = RY.normalize(),
-              FY = rY - DY;
-            return new IY.q(AY.x + YY.x * FY, AY.y + YY.y * FY)
+      getPointAtLengthPosition(TT) {
+        if (TT < 0 || TT > 1) return kT.j.Zero();
+        const oT = TT * this.length();
+        let IT = 0;
+        for (let iT = 0; iT < this._points.length; iT++) {
+          const TT = (iT + 1) % this._points.length,
+            zT = this._points[iT],
+            WT = this._points[TT].subtract(zT),
+            XT = WT.length() + IT;
+          if (oT >= IT && oT <= XT) {
+            const TT = WT.normalize(),
+              iT = oT - IT;
+            return new kT.j(zT.x + TT.x * iT, zT.y + TT.y * iT)
           }
-          DY = OY
+          IT = XT
         }
-        return IY.q.Zero()
+        return kT.j.Zero()
       }
-      static StartingAt(YY, rY) {
-        return new aY(YY, rY)
+      static StartingAt(TT, oT) {
+        return new FT(TT, oT)
       }
     }
-    class vY {
-      static CreateQuadraticBezier(YY, rY, DY, FY) {
-        FY = FY > 2 ? FY : 3;
-        const AY = [],
-          RY = (YY, rY, DY, FY) => (1 - YY) * (1 - YY) * rY + 2 * YY * (1 - YY) * DY + YY * YY * FY;
-        for (let OY = 0; OY <= FY; OY++) AY.push(new IY.r(RY(OY / FY, YY.x, rY.x, DY.x), RY(OY / FY, YY.y, rY.y, DY.y), RY(OY / FY, YY.z, rY.z, DY.z)));
-        return new vY(AY)
+    class ST {
+      static CreateQuadraticBezier(TT, oT, IT, iT) {
+        iT = iT > 2 ? iT : 3;
+        const zT = [],
+          WT = (TT, oT, IT, iT) => (1 - TT) * (1 - TT) * oT + 2 * TT * (1 - TT) * IT + TT * TT * iT;
+        for (let XT = 0; XT <= iT; XT++) zT.push(new kT.m(WT(XT / iT, TT.x, oT.x, IT.x), WT(XT / iT, TT.y, oT.y, IT.y), WT(XT / iT, TT.z, oT.z, IT.z)));
+        return new ST(zT)
       }
-      static CreateCubicBezier(YY, rY, DY, FY, AY) {
-        AY = AY > 3 ? AY : 4;
-        const RY = [],
-          OY = (YY, rY, DY, FY, AY) => (1 - YY) * (1 - YY) * (1 - YY) * rY + 3 * YY * (1 - YY) * (1 - YY) * DY + 3 * YY * YY * (1 - YY) * FY + YY * YY * YY * AY;
-        for (let gY = 0; gY <= AY; gY++) RY.push(new IY.r(OY(gY / AY, YY.x, rY.x, DY.x, FY.x), OY(gY / AY, YY.y, rY.y, DY.y, FY.y), OY(gY / AY, YY.z, rY.z, DY.z, FY.z)));
-        return new vY(RY)
+      static CreateCubicBezier(TT, oT, IT, iT, zT) {
+        zT = zT > 3 ? zT : 4;
+        const WT = [],
+          XT = (TT, oT, IT, iT, zT) => (1 - TT) * (1 - TT) * (1 - TT) * oT + 3 * TT * (1 - TT) * (1 - TT) * IT + 3 * TT * TT * (1 - TT) * iT + TT * TT * TT * zT;
+        for (let BT = 0; BT <= zT; BT++) WT.push(new kT.m(XT(BT / zT, TT.x, oT.x, IT.x, iT.x), XT(BT / zT, TT.y, oT.y, IT.y, iT.y), XT(BT / zT, TT.z, oT.z, IT.z, iT.z)));
+        return new ST(WT)
       }
-      static CreateHermiteSpline(YY, rY, DY, FY, AY) {
-        const RY = [],
-          OY = 1 / AY;
-        for (let gY = 0; gY <= AY; gY++) RY.push(IY.r.Hermite(YY, rY, DY, FY, gY * OY));
-        return new vY(RY)
+      static CreateHermiteSpline(TT, oT, IT, iT, zT) {
+        const WT = [],
+          XT = 1 / zT;
+        for (let BT = 0; BT <= zT; BT++) WT.push(kT.m.Hermite(TT, oT, IT, iT, BT * XT));
+        return new ST(WT)
       }
-      static CreateCatmullRomSpline(YY, rY, DY) {
-        const FY = [],
-          AY = 1 / rY;
-        let RY = 0;
-        if (DY) {
-          const DY = YY.length;
-          for (let OY = 0; OY < DY; OY++) {
-            RY = 0;
-            for (let gY = 0; gY < rY; gY++) FY.push(IY.r.CatmullRom(YY[OY % DY], YY[(OY + 1) % DY], YY[(OY + 2) % DY], YY[(OY + 3) % DY], RY)), RY += AY
+      static CreateCatmullRomSpline(TT, oT, IT) {
+        const iT = [],
+          zT = 1 / oT;
+        let WT = 0;
+        if (IT) {
+          const IT = TT.length;
+          for (let XT = 0; XT < IT; XT++) {
+            WT = 0;
+            for (let BT = 0; BT < oT; BT++) iT.push(kT.m.CatmullRom(TT[XT % IT], TT[(XT + 1) % IT], TT[(XT + 2) % IT], TT[(XT + 3) % IT], WT)), WT += zT
           }
-          FY.push(FY[0])
+          iT.push(iT[0])
         } else {
-          const DY = [];
-          DY.push(YY[0].clone()), DY.push(...YY), DY.push(YY[YY.length - 1].clone());
-          let OY = 0;
-          for (; OY < DY.length - 3; OY++) {
-            RY = 0;
-            for (let YY = 0; YY < rY; YY++) FY.push(IY.r.CatmullRom(DY[OY], DY[OY + 1], DY[OY + 2], DY[OY + 3], RY)), RY += AY
+          const IT = [];
+          IT.push(TT[0].clone()), IT.push(...TT), IT.push(TT[TT.length - 1].clone());
+          let XT = 0;
+          for (; XT < IT.length - 3; XT++) {
+            WT = 0;
+            for (let TT = 0; TT < oT; TT++) iT.push(kT.m.CatmullRom(IT[XT], IT[XT + 1], IT[XT + 2], IT[XT + 3], WT)), WT += zT
           }
-          OY--, FY.push(IY.r.CatmullRom(DY[OY], DY[OY + 1], DY[OY + 2], DY[OY + 3], RY))
+          XT--, iT.push(kT.m.CatmullRom(IT[XT], IT[XT + 1], IT[XT + 2], IT[XT + 3], WT))
         }
-        return new vY(FY)
+        return new ST(iT)
       }
-      static ArcThru3Points(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          RY = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const OY = [],
-          gY = rY.subtract(YY),
-          aY = DY.subtract(rY),
-          uY = YY.subtract(DY),
-          sY = IY.r.Cross(gY, aY),
-          iY = sY.length();
-        if (iY < Math.pow(10, -8)) return new vY(OY);
-        const yY = gY.lengthSquared(),
-          QY = aY.lengthSquared(),
-          oY = uY.lengthSquared(),
-          WY = sY.lengthSquared(),
-          EY = .5 * gY.length() * aY.length() * uY.length() / iY,
-          mY = -.5 * QY * IY.r.Dot(gY, uY) / WY,
-          VY = -.5 * oY * IY.r.Dot(gY, aY) / WY,
-          SY = -.5 * yY * IY.r.Dot(aY, uY) / WY,
-          lY = YY.scale(mY).add(rY.scale(VY)).add(DY.scale(SY)),
-          TY = YY.subtract(lY).normalize(),
-          eY = IY.r.Cross(sY, TY).normalize();
-        if (RY) {
-          const rY = 2 * Math.PI / FY;
-          for (let YY = 0; YY <= 2 * Math.PI; YY += rY) OY.push(lY.add(TY.scale(EY * Math.cos(YY)).add(eY.scale(EY * Math.sin(YY)))));
-          OY.push(YY)
+      static ArcThru3Points(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          WT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const XT = [],
+          BT = oT.subtract(TT),
+          FT = IT.subtract(oT),
+          DT = TT.subtract(IT),
+          LT = kT.m.Cross(BT, FT),
+          xT = LT.length();
+        if (xT < Math.pow(10, -8)) return new ST(XT);
+        const cT = BT.lengthSquared(),
+          KT = FT.lengthSquared(),
+          MT = DT.lengthSquared(),
+          rT = LT.lengthSquared(),
+          AT = .5 * BT.length() * FT.length() * DT.length() / xT,
+          gT = -.5 * KT * kT.m.Dot(BT, DT) / rT,
+          hT = -.5 * MT * kT.m.Dot(BT, FT) / rT,
+          wT = -.5 * cT * kT.m.Dot(FT, DT) / rT,
+          mT = TT.scale(gT).add(oT.scale(hT)).add(IT.scale(wT)),
+          eT = TT.subtract(mT).normalize(),
+          RT = kT.m.Cross(LT, eT).normalize();
+        if (WT) {
+          const oT = 2 * Math.PI / iT;
+          for (let TT = 0; TT <= 2 * Math.PI; TT += oT) XT.push(mT.add(eT.scale(AT * Math.cos(TT)).add(RT.scale(AT * Math.sin(TT)))));
+          XT.push(TT)
         } else {
-          const rY = 1 / FY;
-          let IY, RY = 0;
+          const oT = 1 / iT;
+          let kT, WT = 0;
           do {
-            IY = lY.add(TY.scale(EY * Math.cos(RY)).add(eY.scale(EY * Math.sin(RY)))), OY.push(IY), RY += rY
-          } while (!IY.equalsWithEpsilon(DY, EY * rY * 1.1));
-          OY.push(DY), AY && OY.push(YY)
+            kT = mT.add(eT.scale(AT * Math.cos(WT)).add(RT.scale(AT * Math.sin(WT)))), XT.push(kT), WT += oT
+          } while (!kT.equalsWithEpsilon(IT, AT * oT * 1.1));
+          XT.push(IT), zT && XT.push(TT)
         }
-        return new vY(OY)
+        return new ST(XT)
       }
-      constructor(YY) {
-        this._length = 0, this._points = YY, this._length = this._computeLength(YY)
+      constructor(TT) {
+        this._length = 0, this._points = TT, this._length = this._computeLength(TT)
       }
       getPoints() {
         return this._points
@@ -279,121 +279,121 @@ export const modules = {
       length() {
         return this._length
       }
-      continue (YY) {
-        const rY = this._points[this._points.length - 1],
-          DY = this._points.slice(),
-          FY = YY.getPoints();
-        for (let AY = 1; AY < FY.length; AY++) DY.push(FY[AY].subtract(FY[0]).add(rY));
-        return new vY(DY)
+      continue (TT) {
+        const oT = this._points[this._points.length - 1],
+          IT = this._points.slice(),
+          iT = TT.getPoints();
+        for (let zT = 1; zT < iT.length; zT++) IT.push(iT[zT].subtract(iT[0]).add(oT));
+        return new ST(IT)
       }
-      _computeLength(YY) {
-        let rY = 0;
-        for (let DY = 1; DY < YY.length; DY++) rY += YY[DY].subtract(YY[DY - 1]).length();
-        return rY
+      _computeLength(TT) {
+        let oT = 0;
+        for (let IT = 1; IT < TT.length; IT++) oT += TT[IT].subtract(TT[IT - 1]).length();
+        return oT
       }
     }
   },
-  38037: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  37658: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => kT
     });
-    var FY = DY(38040);
-    const AY = (YY, rY, DY) => YY ? YY.getClassName && "Mesh" === YY.getClassName() ? null : !YY.getClassName || "SubMesh" !== YY.getClassName() && "PhysicsBody" !== YY.getClassName() ? YY.clone ? YY.clone() : Array.isArray(YY) ? YY.slice() : DY && "object" === typeof YY ? {
-      ...YY
-    } : null : YY.clone(rY) : null;
-    class IY {
-      static DeepCopy(YY, rY, DY, IY) {
-        let RY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const OY = function(YY) {
-          const rY = [];
+    var iT = IT(37660);
+    const zT = (TT, oT, IT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : IT && "object" === typeof TT ? {
+      ...TT
+    } : null : TT.clone(oT) : null;
+    class kT {
+      static DeepCopy(TT, oT, IT, kT) {
+        let WT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const XT = function(TT) {
+          const oT = [];
           do {
-            const DY = Object.getOwnPropertyNames(YY);
-            for (const YY of DY) - 1 === rY.indexOf(YY) && rY.push(YY)
-          } while (YY = Object.getPrototypeOf(YY));
-          return rY
-        }(YY);
-        for (const aY of OY) {
-          if ("_" === aY[0] && (!IY || -1 === IY.indexOf(aY))) continue;
-          if (aY.endsWith("Observable")) continue;
-          if (DY && -1 !== DY.indexOf(aY)) continue;
-          const OY = YY[aY],
-            vY = typeof OY;
-          if ("function" !== vY) try {
-            if ("object" === vY)
-              if (OY instanceof Uint8Array) rY[aY] = Uint8Array.from(OY);
-              else if (OY instanceof Array) {
-              if (rY[aY] = [], OY.length > 0)
-                if ("object" == typeof OY[0])
-                  for (let YY = 0; YY < OY.length; YY++) {
-                    const DY = AY(OY[YY], rY, RY); - 1 === rY[aY].indexOf(DY) && rY[aY].push(DY)
-                  } else rY[aY] = OY.slice(0)
-            } else rY[aY] = AY(OY, rY, RY);
-            else rY[aY] = OY
-          } catch (gY) {
-            FY.d.Warn(gY.message)
+            const IT = Object.getOwnPropertyNames(TT);
+            for (const TT of IT) - 1 === oT.indexOf(TT) && oT.push(TT)
+          } while (TT = Object.getPrototypeOf(TT));
+          return oT
+        }(TT);
+        for (const FT of XT) {
+          if ("_" === FT[0] && (!kT || -1 === kT.indexOf(FT))) continue;
+          if (FT.endsWith("Observable")) continue;
+          if (IT && -1 !== IT.indexOf(FT)) continue;
+          const XT = TT[FT],
+            ST = typeof XT;
+          if ("function" !== ST) try {
+            if ("object" === ST)
+              if (XT instanceof Uint8Array) oT[FT] = Uint8Array.from(XT);
+              else if (XT instanceof Array) {
+              if (oT[FT] = [], XT.length > 0)
+                if ("object" == typeof XT[0])
+                  for (let TT = 0; TT < XT.length; TT++) {
+                    const IT = zT(XT[TT], oT, WT); - 1 === oT[FT].indexOf(IT) && oT[FT].push(IT)
+                  } else oT[FT] = XT.slice(0)
+            } else oT[FT] = zT(XT, oT, WT);
+            else oT[FT] = XT
+          } catch (BT) {
+            iT.d.Warn(BT.message)
           }
         }
       }
     }
   },
-  38040: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  37660: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT
     });
-    class FY {
-      static _CheckLimit(YY, rY) {
-        let DY = FY._LogLimitOutputs[YY];
-        return DY ? DY.current++ : (DY = {
-          limit: rY,
+    class iT {
+      static _CheckLimit(TT, oT) {
+        let IT = iT._LogLimitOutputs[TT];
+        return IT ? IT.current++ : (IT = {
+          limit: oT,
           current: 1
-        }, FY._LogLimitOutputs[YY] = DY), DY.current <= DY.limit
+        }, iT._LogLimitOutputs[TT] = IT), IT.current <= IT.limit
       }
-      static _GenerateLimitMessage(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const DY = FY._LogLimitOutputs[YY];
-        if (!DY || !FY.MessageLimitReached) return;
-        const AY = this._Levels[rY];
-        DY.current === DY.limit && FY[AY.name](FY.MessageLimitReached.replace(/%LIMIT%/g, "" + DY.limit).replace(/%TYPE%/g, AY.name ?? ""))
+      static _GenerateLimitMessage(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const IT = iT._LogLimitOutputs[TT];
+        if (!IT || !iT.MessageLimitReached) return;
+        const zT = this._Levels[oT];
+        IT.current === IT.limit && iT[zT.name](iT.MessageLimitReached.replace(/%LIMIT%/g, "" + IT.limit).replace(/%TYPE%/g, zT.name ?? ""))
       }
-      static _AddLogEntry(YY) {
-        FY._LogCache = YY + FY._LogCache, FY.OnNewCacheEntry && FY.OnNewCacheEntry(YY)
+      static _AddLogEntry(TT) {
+        iT._LogCache = TT + iT._LogCache, iT.OnNewCacheEntry && iT.OnNewCacheEntry(TT)
       }
-      static _FormatMessage(YY) {
-        const rY = YY => YY < 10 ? "0" + YY : "" + YY,
-          DY = new Date;
-        return "[" + rY(DY.getHours()) + ":" + rY(DY.getMinutes()) + ":" + rY(DY.getSeconds()) + "]: " + YY
+      static _FormatMessage(TT) {
+        const oT = TT => TT < 10 ? "0" + TT : "" + TT,
+          IT = new Date;
+        return "[" + oT(IT.getHours()) + ":" + oT(IT.getMinutes()) + ":" + oT(IT.getSeconds()) + "]: " + TT
       }
-      static _LogDisabled(YY, rY) {}
+      static _LogDisabled(TT, oT) {}
       static _LogEnabled() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        const AY = Array.isArray(rY) ? rY[0] : rY;
-        if (void 0 !== DY && !FY._CheckLimit(AY, DY)) return;
-        const IY = FY._FormatMessage(AY),
-          RY = this._Levels[YY],
-          OY = Array.isArray(rY) ? rY.slice(1) : [];
-        RY.logFunc && RY.logFunc("BJS - " + IY, ...OY);
-        const gY = `<div style='color:${RY.color}'>${IY}</div><br>`;
-        FY._AddLogEntry(gY), FY._GenerateLimitMessage(AY, YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        const zT = Array.isArray(oT) ? oT[0] : oT;
+        if (void 0 !== IT && !iT._CheckLimit(zT, IT)) return;
+        const kT = iT._FormatMessage(zT),
+          WT = this._Levels[TT],
+          XT = Array.isArray(oT) ? oT.slice(1) : [];
+        WT.logFunc && WT.logFunc("BJS - " + kT, ...XT);
+        const BT = `<div style='color:${WT.color}'>${kT}</div><br>`;
+        iT._AddLogEntry(BT), iT._GenerateLimitMessage(zT, TT)
       }
       static get LogCache() {
-        return FY._LogCache
+        return iT._LogCache
       }
       static ClearLogCache() {
-        FY._LogCache = "", FY._LogLimitOutputs = {}, FY.errorsCount = 0
+        iT._LogCache = "", iT._LogLimitOutputs = {}, iT.errorsCount = 0
       }
-      static set LogLevels(YY) {
-        FY.Log = FY._LogDisabled, FY.Warn = FY._LogDisabled, FY.Error = FY._LogDisabled;
-        const rY = [FY.MessageLogLevel, FY.WarningLogLevel, FY.ErrorLogLevel];
-        for (const DY of rY)
-          if ((YY & DY) === DY) {
-            const YY = this._Levels[DY];
-            FY[YY.name] = FY._LogEnabled.bind(FY, DY)
+      static set LogLevels(TT) {
+        iT.Log = iT._LogDisabled, iT.Warn = iT._LogDisabled, iT.Error = iT._LogDisabled;
+        const oT = [iT.MessageLogLevel, iT.WarningLogLevel, iT.ErrorLogLevel];
+        for (const IT of oT)
+          if ((TT & IT) === IT) {
+            const TT = this._Levels[IT];
+            iT[TT.name] = iT._LogEnabled.bind(iT, IT)
           }
       }
     }
-    FY.NoneLogLevel = 0, FY.MessageLogLevel = 1, FY.WarningLogLevel = 2, FY.ErrorLogLevel = 4, FY.AllLogLevel = 7, FY.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", FY._LogCache = "", FY._LogLimitOutputs = {}, FY._Levels = [{}, {
+    iT.NoneLogLevel = 0, iT.MessageLogLevel = 1, iT.WarningLogLevel = 2, iT.ErrorLogLevel = 4, iT.AllLogLevel = 7, iT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", iT._LogCache = "", iT._LogLimitOutputs = {}, iT._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +405,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], FY.errorsCount = 0, FY.Log = FY._LogEnabled.bind(FY, FY.MessageLogLevel), FY.Warn = FY._LogEnabled.bind(FY, FY.WarningLogLevel), FY.Error = FY._LogEnabled.bind(FY, FY.ErrorLogLevel)
+    }], iT.errorsCount = 0, iT.Log = iT._LogEnabled.bind(iT, iT.MessageLogLevel), iT.Warn = iT._LogEnabled.bind(iT, iT.WarningLogLevel), iT.Error = iT._LogEnabled.bind(iT, iT.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

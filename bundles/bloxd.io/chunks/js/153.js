@@ -1,432 +1,432 @@
 export const id = 153;
 export const ids = [153];
 export const modules = {
-  38163: (YY, rY, DY) => {
-    var FY = {
-      "./cape_cow_cream.png": 27660,
-      "./cape_cow_normal.png": 27663,
-      "./cape_creator_level1.png": 27667,
-      "./cape_creator_level2.png": 27672,
-      "./cape_creator_level3.png": 27681,
-      "./cape_none.png": 27687,
-      "./cape_pig.png": 27690,
-      "./cape_sheep.png": 27698,
-      "./cape_super.png": 27706,
-      "./cape_super_inverted.png": 27711,
-      "./cape_youtuber.png": 27717
-    };
-
-    function AY(YY) {
-      var rY = IY(YY);
-      return DY(rY)
-    }
-
-    function IY(YY) {
-      if (!DY.o(FY, YY)) {
-        var rY = new Error("Cannot find module '" + YY + "'");
-        throw rY.code = "MODULE_NOT_FOUND", rY
-      }
-      return FY[YY]
-    }
-    AY.keys = function() {
-      return Object.keys(FY)
-    }, AY.resolve = IY, YY.exports = AY, AY.id = 38163
-  },
-  40376: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      openCharacterPreview: () => GY
+  40089: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      openCharacterPreview: () => pT
     });
-    var FY = DY(37500),
-      AY = DY(2501),
-      IY = DY(2091),
-      RY = DY(605),
-      OY = DY(36896),
-      gY = DY(2099),
-      aY = DY(36894),
-      vY = DY(38965),
-      uY = DY(39209),
-      sY = DY(40295),
-      iY = DY(36518),
-      yY = DY(39375),
-      QY = DY(36586),
-      oY = DY(39391),
-      WY = DY(40338),
-      EY = DY(36493),
-      mY = DY(36914),
-      VY = DY(36931),
-      SY = (DY(40316), DY(39602), DY(40323), DY(36231));
-    let lY, TY, eY, NY, BY, cY, KY, HY, zY;
-    const ZY = document.createElement("canvas");
-    async function CY() {
-      await new Promise((YY => {
+    var iT = IT(37111),
+      zT = IT(2465),
+      kT = IT(2026),
+      WT = IT(596),
+      XT = IT(36510),
+      BT = IT(2029),
+      FT = IT(36501),
+      ST = IT(38589),
+      DT = IT(38874),
+      LT = IT(4e4),
+      xT = IT(36114),
+      cT = IT(39021),
+      KT = IT(36175),
+      MT = IT(39038),
+      rT = IT(40055),
+      AT = IT(36089),
+      gT = IT(36522),
+      hT = IT(36539),
+      wT = (IT(40029), IT(39273), IT(40038), IT(35801));
+    let mT, eT, RT, uT, vT, ET, fT, CT, jT;
+    const JT = document.createElement("canvas");
+    async function UT() {
+      await new Promise((TT => {
         setTimeout((() => {
-          YY()
+          TT()
         }), 100)
       }))
     }
-    ZY.classList.add("CharCustomisationPreviewCanvas");
-    const fY = {},
-      jY = {},
-      hY = {},
-      dY = {};
+    JT.classList.add("CharCustomisationPreviewCanvas");
+    const aT = {},
+      YT = {},
+      QT = {},
+      OT = {};
 
-    function JY(YY) {
-      YY.unfreezeWorldMatrix();
-      for (const rY of YY.getChildren()) JY(rY)
+    function HT(TT) {
+      TT.unfreezeWorldMatrix();
+      for (const oT of TT.getChildren()) HT(oT)
     }
 
-    function MY(YY, rY) {
-      const DY = (0, EY.f)(YY, rY);
-      return DY in fY || (fY[DY] = (async () => {
+    function nT(TT, oT) {
+      const IT = (0, AT.c)(TT, oT);
+      return IT in aT || (aT[IT] = (async () => {
         try {
-          const DY = await (0, EY.h)(YY, eY),
-            FY = new Map;
-          for (const YY of DY.getNodes()) FY.set(YY.name, YY);
-          const AY = (0, EY.c)(null !== rY && void 0 !== rY ? rY : YY, eY);
-          (0, EY.k)(DY, AY, {
-            onProcessedMesh: YY => {
-              (0, EY.m)(YY), eY.WDY(YY, !1), YY.isVisible = !1
+          const IT = await (0, AT.e)(TT, RT),
+            iT = new Map;
+          for (const TT of IT.getNodes()) iT.set(TT.name, TT);
+          const zT = (0, AT.b)(null !== oT && void 0 !== oT ? oT : TT, RT);
+          (0, AT.i)(IT, zT, {
+            onProcessedMesh: TT => {
+              (0, AT.l)(TT), RT.tIT(TT, !1), TT.isVisible = !1
             }
           });
-          for (const YY of DY.rootNodes) JY(YY);
-          return FY
-        } catch (FY) {
-          throw delete fY[DY], console.error(`Failed to load preview attachment ${DY}:`, FY), FY
+          for (const TT of IT.rootNodes) HT(TT);
+          return iT
+        } catch (iT) {
+          throw delete aT[IT], console.error(`Failed to load preview attachment ${IT}:`, iT), iT
         }
-      })()), fY[DY]
+      })()), aT[IT]
     }
 
-    function wY(YY, rY) {
-      YY.isVisible = rY;
-      for (const DY of YY.getChildMeshes()) DY.isVisible = rY
+    function qT(TT, oT) {
+      TT.isVisible = oT;
+      for (const IT of TT.getChildMeshes()) IT.isVisible = oT
     }
 
-    function bY(YY, rY) {
-      if (!NY) return;
-      const OY = (0, AY.e)();
-      if (OY.wV(!1), FY.b.Player.meshApi.updatePlayerCosmetic(OY.yB, KY, YY, rY, !0), "cape" === YY)
-        if (rY === RY.g) BY.mV(!1);
+    function ZT(TT, oT) {
+      if (!uT) return;
+      const XT = (0, zT.i)();
+      if (XT.OE(!1), iT.b.Player.meshApi.updatePlayerCosmetic(XT.ZJ, fT, TT, oT, !0), "cape" === TT)
+        if (oT === WT.h) vT.Fv(!1);
         else {
-          BY.mV(!0);
-          BY.material.diffuseTexture = new WY.d(DY(38163)(`./cape_${rY}.png`), BY.hT(), {
+          vT.Fv(!0);
+          vT.material.diffuseTexture = new rT.d(IT(37779)(`./cape_${oT}.png`), vT.pC(), {
             invertY: !1,
-            samplingMode: WY.d.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: rT.d.NEAREST_NEAREST_MIPLINEAR
           })
-        } dY[YY] = async function(YY, rY) {
-        var DY;
-        hY[YY] = rY;
-        const FY = jY[YY];
-        if (FY)
+        } OT[TT] = async function(TT, oT) {
+        var IT;
+        QT[TT] = oT;
+        const iT = YT[TT];
+        if (iT)
           for (const {
-              mesh: IY,
-              destNode: RY
+              mesh: kT,
+              destNode: WT
             }
-            of FY) {
-            wY(IY, !1);
-            const YY = cY.getNamedNode(KY, RY);
-            cY.detachTransformNodeIfFound(IY, KY, YY)
+            of iT) {
+            qT(kT, !1);
+            const TT = ET.getNamedNode(fT, WT);
+            ET.detachTransformNodeIfFound(kT, fT, TT)
           }
-        jY[YY] = [];
-        const AY = (0, IY.n)(YY, rY);
-        if (null !== AY && void 0 !== AY && null !== (DY = AY.attachments) && void 0 !== DY && DY.length)
-          for (const IY of AY.attachments) {
-            let DY;
+        YT[TT] = [];
+        const zT = (0, kT.g)(TT, oT);
+        if (null !== zT && void 0 !== zT && null !== (IT = zT.attachments) && void 0 !== IT && IT.length)
+          for (const kT of zT.attachments) {
+            let IT;
             try {
-              DY = await MY(IY.modelGlb, IY.texture)
+              IT = await nT(kT.modelGlb, kT.texture)
             } catch {
               continue
             }
-            if (hY[YY] !== rY) return;
-            const FY = DY.get(IY.modelNode);
-            if (!FY) {
-              console.error(`Preview attachment node ${IY.modelNode} not found in ${IY.modelGlb}`);
+            if (QT[TT] !== oT) return;
+            const iT = IT.get(kT.modelNode);
+            if (!iT) {
+              console.error(`Preview attachment node ${kT.modelNode} not found in ${kT.modelGlb}`);
               continue
             }
-            wY(FY, !0), (0, EY.r)(FY, IY.overlayColour);
-            const AY = cY.getNamedNode(KY, IY.destNode);
-            cY.attachTransformNode(FY, KY, AY), jY[YY].push({
-              mesh: FY,
-              destNode: IY.destNode
+            qT(iT, !0), (0, AT.r)(iT, kT.overlayColour);
+            const zT = ET.getNamedNode(fT, kT.destNode);
+            ET.attachTransformNode(iT, fT, zT), YT[TT].push({
+              mesh: iT,
+              destNode: kT.destNode
             })
           }
-      }(YY, rY)
+      }(TT, oT)
     }
 
-    function XY(YY, rY) {
-      ZY.width = YY, ZY.height = rY, lY.resize()
+    function lT(TT, oT) {
+      JT.width = TT, JT.height = oT, mT.resize()
     }
-    let qY = 0;
-    class pY {
-      constructor(YY, rY) {
-        this.framing = rY, this.ready = zY, this.dev = {
-          setCamera: kY,
-          canvas: () => ZY,
-          isolateHead(YY) {
-            const rY = cY.getNodeNames(KY);
-            for (let DY = 0; DY < rY.length; DY++) "HeadMesh" !== rY[DY] && "__root__" !== rY[DY] && "TorsoNode" !== rY[DY] && cY.setNodeEnabled(KY, DY, !1);
-            if (YY) {
-              const YY = cY.getNamedNode(KY, "HeadMesh");
-              cY.setNodeDisableColorWrite(KY, YY, !0, (YY => {
-                const rY = new oY.StandardMaterial(`${YY.name}_depthOnly`, YY.hT());
-                return rY.disableColorWrite = !0, rY
+    let sT = 0;
+    class tT {
+      constructor(TT, oT) {
+        this.framing = oT, this.ready = jT, this.dev = {
+          setCamera: GT,
+          canvas: () => JT,
+          isolateHead(TT) {
+            const oT = ET.getNodeNames(fT);
+            for (let IT = 0; IT < oT.length; IT++) "HeadMesh" !== oT[IT] && "__root__" !== oT[IT] && "TorsoNode" !== oT[IT] && ET.setNodeEnabled(fT, IT, !1);
+            if (TT) {
+              const TT = ET.getNamedNode(fT, "HeadMesh");
+              ET.setNodeDisableColorWrite(fT, TT, !0, (TT => {
+                const oT = new MT.StandardMaterial(`${TT.name}_depthOnly`, TT.pC());
+                return oT.disableColorWrite = !0, oT
               }))
             }
-            cY.setPosition(KY, 0, -12, 0)
+            ET.setPosition(fT, 0, -12, 0)
           }
         }, this.closed = !1, this.resetCamera();
-        const DY = YY.getBoundingClientRect();
-        XY(DY.width, DY.height), qY++, lY.stopRenderLoop(), lY.runRenderLoop((() => {
-          var YY;
-          null === (YY = HY) || void 0 === YY || YY.render(lY.getDeltaTime()), eY.render()
+        const IT = TT.getBoundingClientRect();
+        lT(IT.width, IT.height), sT++, mT.stopRenderLoop(), mT.runRenderLoop((() => {
+          var TT;
+          null === (TT = CT) || void 0 === TT || TT.render(mT.getDeltaTime()), RT.render()
         }))
       }
       isReady() {
-        return !!NY
+        return !!uT
       }
-      setCosmetic(YY, rY) {
-        bY(YY, rY)
+      setCosmetic(TT, oT) {
+        ZT(TT, oT)
       }
-      playEmote(YY) {
-        if (!HY) return;
-        if (!YY) return void HY.stopAnimation(aY.d.Emote);
-        const rY = (0, OY.f)((0, gY.h)(YY).animation);
-        HY.startAnimation(rY, aY.d.Emote, 0, gY.c)
+      playEmote(TT) {
+        if (!CT) return;
+        if (!TT) return void CT.stopAnimation(FT.e.Emote);
+        const oT = (0, XT.e)((0, BT.g)(TT).animation);
+        CT.startAnimation(oT, FT.e.Emote, 0, BT.c)
       }
-      async untilDrawn(YY) {
-        if (await CY(), "cape" === YY && BY) {
-          const YY = BY.material,
-            rY = null === YY || void 0 === YY ? void 0 : YY.diffuseTexture;
-          rY && !rY.isReady() && (await new Promise((YY => {
-            rY.onLoadObservable.addOnce((() => {
-              YY()
+      async untilDrawn(TT) {
+        if (await UT(), "cape" === TT && vT) {
+          const TT = vT.material,
+            oT = null === TT || void 0 === TT ? void 0 : TT.diffuseTexture;
+          oT && !oT.isReady() && (await new Promise((TT => {
+            oT.onLoadObservable.addOnce((() => {
+              TT()
             }))
-          })), await CY())
+          })), await UT())
         }
-        dY[YY] && (await dY[YY], await CY()), await eY.whenReadyAsync(), await new Promise((YY => {
-          eY.onAfterRenderObservable.addOnce((() => {
-            YY()
+        OT[TT] && (await OT[TT], await UT()), await RT.whenReadyAsync(), await new Promise((TT => {
+          RT.onAfterRenderObservable.addOnce((() => {
+            TT()
           }))
         }))
       }
       resetCamera() {
-        TY.inertialAlphaOffset = 0, TY.inertialBetaOffset = 0, TY.inertialRadiusOffset = 0, kY(SY.b[this.framing])
+        eT.inertialAlphaOffset = 0, eT.inertialBetaOffset = 0, eT.inertialRadiusOffset = 0, GT(wT.b[this.framing])
       }
-      resize(YY, rY) {
-        XY(YY, rY)
+      resize(TT, oT) {
+        lT(TT, oT)
       }
       close() {
-        this.closed || (this.closed = !0, qY--, 0 === qY && lY.stopRenderLoop())
+        this.closed || (this.closed = !0, sT--, 0 === sT && mT.stopRenderLoop())
       }
     }
 
-    function kY(YY) {
+    function GT(TT) {
       let {
-        yaw: rY,
-        pitch: DY,
-        radius: FY,
-        target: AY
-      } = YY;
-      TY.alpha = rY, TY.beta = DY, FY && (TY.radius = FY), AY && TY.target.set(AY[0], AY[1], AY[2])
+        yaw: oT,
+        pitch: IT,
+        radius: iT,
+        target: zT
+      } = TT;
+      eT.alpha = oT, eT.beta = IT, iT && (eT.radius = iT), zT && eT.target.set(zT[0], zT[1], zT[2])
     }
 
-    function GY(YY, rY) {
-      return YY.appendChild(ZY), lY || function() {
-        lY = new vY.c(ZY, !0, {
+    function pT(TT, oT) {
+      return TT.appendChild(JT), mT || function() {
+        mT = new ST.c(JT, !0, {
           preserveDrawingBuffer: !0
         });
-        const YY = (0, AY.e)();
-        lY.QDY = YY.sQ.engine.QDY, eY = new uY.c(lY), eY.clearColor = new QY.c(0, 0, 0, 0), eY.ambientColor = new QY.Color3(1, 1, 1), TY = new sY.e("Co", 0, 0, 1, iY.xy.Zero(), eY), TY.attachControl(ZY, !0), TY.panningSensibility = 0, zY = (0, FY.v)("Player", eY, !0).then((rY => {
-          NY = rY.meshApi, BY = rY.capeMesh, cY = YY.sQ.qT;
-          const DY = 8.33;
-          KY = (0, FY.j)("Player", DY, !0, !0), cY.setPosition(KY, 0, -8.33, 0);
-          const AY = cY.getNamedNode(KY, "BodyMesh");
-          cY.attachTransformNode(BY, KY, AY), cY.set(KY, "aOpacity", 1), cY.lB(KY, "aOpacity", 1), HY = new mY.AnimatorState, HY.Gu = YY, HY.thinInstMgr = cY, HY.pT = KY, HY.MrY = cY.oDY(KY, 0), HY.modelLifeformType = "Player", HY.nodeNameAliases = (0, VY.b)("Player").nodeNameAliases;
-          const IY = BY.oB().boundingBox;
-          BY.position.y = ((24 - IY.maximum.y + IY.minimum.y) / 2 - 1 / 32) / DY, BY.position.z = -1 / DY, BY.rotationQuaternion = null;
-          const RY = Math.PI / 18,
-            OY = IY.maximum.y / DY;
-          BY.rotation.x = RY;
-          const gY = Math.cos(RY),
-            aY = Math.sin(RY);
-          BY.position.y += OY * (1 - gY) + 0 * aY, BY.position.z -= OY * aY + 0 * (1 - gY);
-          const vY = new oY.StandardMaterial("capeMaterial", BY.hT());
-          BY.material = vY;
-          const uY = new QY.Color3(1, 1, 1);
-          vY.diffuseColor = new QY.Color3, vY.specularColor = new QY.Color3, vY.emissiveColor = new QY.Color3, vY.ambientColor = new QY.Color3, uY.scaleToRef(.43, vY.diffuseColor), uY.scaleToRef(1.75, vY.ambientColor), vY.freeze();
-          const sY = new yY.e("light", new iY.xy(-.1, 1, -.3), eY);
-          sY.diffuse = new QY.Color3(1, 1, 1), sY.specular = new QY.Color3(1, 1, 1), sY.groundColor = new QY.Color3(.5, .5, .5)
+        const TT = (0, zT.i)();
+        mT.lIT = TT.FK.engine.lIT, RT = new DT.d(mT), RT.clearColor = new KT.b(0, 0, 0, 0), RT.ambientColor = new KT.Color3(1, 1, 1), eT = new LT.c("jM", 0, 0, 1, xT.sc.Zero(), RT), eT.attachControl(JT, !0), eT.panningSensibility = 0, jT = (0, iT.u)("Player", RT, !0).then((oT => {
+          uT = oT.meshApi, vT = oT.capeMesh, ET = TT.FK.iJ;
+          const IT = 8.33;
+          fT = (0, iT.l)("Player", IT, !0, !0), ET.setPosition(fT, 0, -8.33, 0);
+          const zT = ET.getNamedNode(fT, "BodyMesh");
+          ET.attachTransformNode(vT, fT, zT), ET.set(fT, "aOpacity", 1), ET.bJ(fT, "aOpacity", 1), CT = new gT.AnimatorState, CT.FL = TT, CT.thinInstMgr = ET, CT.WJ = fT, CT.BIT = ET.sIT(fT, 0), CT.modelLifeformType = "Player", CT.nodeNameAliases = (0, hT.e)("Player").nodeNameAliases;
+          const kT = vT.GJ().boundingBox;
+          vT.position.y = ((24 - kT.maximum.y + kT.minimum.y) / 2 - 1 / 32) / IT, vT.position.z = -1 / IT, vT.rotationQuaternion = null;
+          const WT = Math.PI / 18,
+            XT = kT.maximum.y / IT;
+          vT.rotation.x = WT;
+          const BT = Math.cos(WT),
+            FT = Math.sin(WT);
+          vT.position.y += XT * (1 - BT) + 0 * FT, vT.position.z -= XT * FT + 0 * (1 - BT);
+          const ST = new MT.StandardMaterial("capeMaterial", vT.pC());
+          vT.material = ST;
+          const DT = new KT.Color3(1, 1, 1);
+          ST.diffuseColor = new KT.Color3, ST.specularColor = new KT.Color3, ST.emissiveColor = new KT.Color3, ST.ambientColor = new KT.Color3, DT.scaleToRef(.43, ST.diffuseColor), DT.scaleToRef(1.75, ST.ambientColor), ST.freeze();
+          const LT = new cT.d("light", new xT.sc(-.1, 1, -.3), RT);
+          LT.diffuse = new KT.Color3(1, 1, 1), LT.specular = new KT.Color3(1, 1, 1), LT.groundColor = new KT.Color3(.5, .5, .5)
         }))
-      }(), new pY(YY, rY)
+      }(), new tT(TT, oT)
     }
   },
-  38154: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => sY
+  37777: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => LT
     });
-    var FY = DY(36450),
-      AY = DY(36460),
-      IY = DY(36691),
-      RY = DY(36465),
-      OY = DY(36454);
+    var iT = IT(36040),
+      zT = IT(36051),
+      kT = IT(36280),
+      WT = IT(36056),
+      XT = IT(36047);
 
-    function gY(YY) {
-      return `\n\t\t\t\t${(0,OY.z)(YY,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function BT(TT) {
+      return `\n\t\t\t\t${(0,XT.w)(TT,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, OY.F)(YY, "float", "s", "sin(ang)")
+        (0, XT.D)(TT, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, OY.F)(YY, "float", "c", "cos(ang)")
+        (0, XT.D)(TT, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, OY.n)(YY, "mat2", "c", "s", "-s", "c")
+        (0, XT.l)(TT, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function aY(YY, rY) {
-      let DY = (0, OY.Ib)(YY, "skele" + (rY - 1));
-      for (let AY = rY - 2; AY >= 0; AY--) DY = (0, OY.ub)(YY, `boneIdx == ${AY}`, (0, OY.Ib)(YY, `skele${AY}`), DY);
-      const FY = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,OY.F)(YY,"int","boneIdx",(0,OY.Ab)(YY,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,OY.F)(YY,"vec3","bone",DY)}\n\t\t\t\t${(0,OY.F)(YY,"vec2","pivot",(0,OY.n)(YY,"vec2","0.0",`${(0,OY.Ob)(YY,"position")}.z`))}\n\t\t\t\t${(0,OY.db)(YY)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${FY}));`:`positionUpdated.yz += ${FY};`}\n\t\t`
+    function FT(TT, oT) {
+      let IT = (0, XT.wb)(TT, "skele" + (oT - 1));
+      for (let zT = oT - 2; zT >= 0; zT--) IT = (0, XT.ob)(TT, `boneIdx == ${zT}`, (0, XT.wb)(TT, `skele${zT}`), IT);
+      const iT = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,XT.D)(TT,"int","boneIdx",(0,XT.sb)(TT,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,XT.D)(TT,"vec3","bone",IT)}\n\t\t\t\t${(0,XT.D)(TT,"vec2","pivot",(0,XT.l)(TT,"vec2","0.0",`${(0,XT.Fb)(TT,"position")}.z`))}\n\t\t\t\t${(0,XT.Y)(TT)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${iT}));`:`positionUpdated.yz += ${iT};`}\n\t\t`
     }
 
-    function vY(YY) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,OY.n)(YY,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function ST(TT) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,XT.l)(TT,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const uY = {
+    const DT = {
         x: 0,
         y: 0,
         z: 0,
-        grY(YY, rY) {
-          return this.x = YY[rY], this.y = YY[rY + 1], this.z = YY[rY + 2], this
+        joT(TT, oT) {
+          return this.x = TT[oT], this.y = TT[oT + 1], this.z = TT[oT + 2], this
         }
       },
-      sY = {
+      LT = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (YY, rY) => ({
-          ...(0, FY.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${YY}`,
-          BLOXD_CAPE_MAX_Y: (0, AY.lb)(rY)
+        defines: (TT, oT) => ({
+          ...(0, iT.d)("CAPE"),
+          BLOXD_CAPE_BONES: `${TT}`,
+          BLOXD_CAPE_MAX_Y: (0, zT.nb)(oT)
         }),
-        getUniforms(YY) {
-          return (0, IY.e)(function(YY) {
-            const rY = [];
-            for (let DY = 0; DY < YY; DY++) rY.push({
-              name: `skele${DY}`,
+        getUniforms(TT) {
+          return (0, kT.d)(function(TT) {
+            const oT = [];
+            for (let IT = 0; IT < TT; IT++) oT.push({
+              name: `skele${IT}`,
               type: "highp vec3"
             });
-            return rY
-          }(this.skeleLen), "vertex", YY)
+            return oT
+          }(this.skeleLen), "vertex", TT)
         },
-        bind(YY) {
-          for (let rY = 0; rY < this.skeleLen; rY++) YY.updateVector3(`skele${rY}`, uY.grY(this.skele, 3 * rY))
+        bind(TT) {
+          for (let oT = 0; oT < this.skeleLen; oT++) TT.updateVector3(`skele${oT}`, DT.joT(this.skele, 3 * oT))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(YY, rY) {
-          return "vertex" !== YY ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: gY(rY),
-            CUSTOM_VERTEX_UPDATE_POSITION: aY(rY, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: vY(rY)
+        getCustomCode(TT, oT) {
+          return "vertex" !== TT ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: BT(oT),
+            CUSTOM_VERTEX_UPDATE_POSITION: FT(oT, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: ST(oT)
           }
         }
       };
-    (0, RY.l)(sY)
+    (0, WT.n)(LT)
   },
-  38050: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => vY,
-      f: () => uY
+  37671: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => ST,
+      h: () => DT
     });
-    var FY = DY(36450),
-      AY = DY(36691),
-      IY = DY(36454),
-      RY = DY(36465);
-    const OY = "bloxdTextLodBias",
-      gY = [{
-        name: OY,
+    var iT = IT(36040),
+      zT = IT(36280),
+      kT = IT(36047),
+      WT = IT(36056);
+    const XT = "bloxdTextLodBias",
+      BT = [{
+        name: XT,
         type: "float"
       }],
-      aY = "bloxdTextSample",
-      vY = {
+      FT = "bloxdTextSample",
+      ST = {
         planes: -.5,
         boards: -.5
       },
-      uY = {
+      DT = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, FY.b)("TEXT_SAMPLER"),
-        getUniforms: YY => (0, AY.e)(gY, "fragment", YY),
-        bind(YY) {
-          YY.updateFloat(OY, this.lodBias)
+        defines: () => (0, iT.d)("TEXT_SAMPLER"),
+        getUniforms: TT => (0, zT.d)(BT, "fragment", TT),
+        bind(TT) {
+          TT.updateFloat(XT, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(YY, rY) {
-          if ("fragment" !== YY) return null;
-          const DY = (0, IY.M)(rY, `vec4 ${aY}(sampler2D s, vec2 uv, float bias)`, `fn ${aY}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            FY = (0, IY.M)(rY, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            AY = `${(0,IY.U)(rY,"vDiffuseUV")} + uvOffset`,
-            RY = (0, IY.M)(rY, `${aY}(diffuseSampler, ${AY}, ${(0,IY.Ib)(rY,OY)})`, `${aY}(diffuseSampler, diffuseSamplerSampler, ${AY}, ${(0,IY.Ib)(rY,OY)})`);
+        getCustomCode(TT, oT) {
+          if ("fragment" !== TT) return null;
+          const IT = (0, kT.I)(oT, `vec4 ${FT}(sampler2D s, vec2 uv, float bias)`, `fn ${FT}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            iT = (0, kT.I)(oT, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            zT = `${(0,kT.R)(oT,"vDiffuseUV")} + uvOffset`,
+            WT = (0, kT.I)(oT, `${FT}(diffuseSampler, ${zT}, ${(0,kT.wb)(oT,XT)})`, `${FT}(diffuseSampler, diffuseSamplerSampler, ${zT}, ${(0,kT.wb)(oT,XT)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${DY} {\n\t\t\t\t\t${(0,IY.F)(rY,"vec4","texel",FY)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,IY.n)(rY,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,IY.n)(rY,"vec3","0.0")}, ${(0,IY.n)(rY,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, IY.G)(rY)]: `baseColor = ${RY};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${IT} {\n\t\t\t\t\t${(0,kT.D)(oT,"vec4","texel",iT)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,kT.l)(oT,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,kT.l)(oT,"vec3","0.0")}, ${(0,kT.l)(oT,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, kT.F)(oT)]: `baseColor = ${WT};`
           }
         }
       };
-    (0, RY.l)(uY)
+    (0, WT.n)(DT)
   },
-  8236: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => vY,
-      f: () => OY,
-      i: () => gY
+  8248: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => ST,
+      h: () => XT,
+      j: () => BT
     });
-    var FY = DY(2091),
-      AY = DY(1244),
-      IY = DY(2099);
-    const RY = ",";
+    var iT = IT(2026),
+      zT = IT(1214),
+      kT = IT(2029);
+    const WT = ",";
 
-    function OY(YY) {
-      if (!YY) return [];
-      const rY = new Set,
-        DY = [];
-      for (const FY of YY.split(RY)) {
-        const YY = FY.trim();
-        if ((0, IY.j)(YY) && !rY.has(YY) && (rY.add(YY), DY.push(YY), DY.length >= AY.m)) break
+    function XT(TT) {
+      if (!TT) return [];
+      const oT = new Set,
+        IT = [];
+      for (const iT of TT.split(WT)) {
+        const TT = iT.trim();
+        if ((0, kT.h)(TT) && !oT.has(TT) && (oT.add(TT), IT.push(TT), IT.length >= zT.k)) break
       }
-      return DY
+      return IT
     }
 
-    function gY(YY) {
-      const rY = new Set,
-        DY = [];
-      for (const FY of YY)
-        if ((0, IY.j)(FY) && !rY.has(FY) && (rY.add(FY), DY.push(FY), DY.length >= AY.m)) break;
-      return DY.join(RY)
+    function BT(TT) {
+      const oT = new Set,
+        IT = [];
+      for (const iT of TT)
+        if ((0, kT.h)(iT) && !oT.has(iT) && (oT.add(iT), IT.push(iT), IT.length >= zT.k)) break;
+      return IT.join(WT)
     }
 
-    function aY() {
-      return gY(IY.e)
+    function FT() {
+      return BT(kT.d)
     }
 
-    function vY(YY) {
-      var rY;
-      return "emote" === YY ? aY() : null !== (rY = uY[YY][0]) && void 0 !== rY ? rY : sY[YY]
+    function ST(TT) {
+      var oT;
+      return "emote" === TT ? FT() : null !== (oT = DT[TT][0]) && void 0 !== oT ? oT : LT[TT]
     }
-    const uY = AY.u.reduce(((YY, rY) => {
-        const DY = [];
-        for (const IY in FY.g[rY]) {
-          var AY;
-          "default" === (null === (AY = (0, FY.n)(rY, IY)) || void 0 === AY ? void 0 : AY.cosmeticPack) && DY.push(IY)
+    const DT = zT.v.reduce(((TT, oT) => {
+        const IT = [];
+        for (const kT in iT.c[oT]) {
+          var zT;
+          "default" === (null === (zT = (0, iT.g)(oT, kT)) || void 0 === zT ? void 0 : zT.cosmeticPack) && IT.push(kT)
         }
-        return YY[rY] = DY, YY
+        return TT[oT] = IT, TT
       }), {}),
-      sY = AY.u.reduce(((YY, rY) => (YY[rY] = Object.keys(FY.g[rY])[0], YY)), {})
+      LT = zT.v.reduce(((TT, oT) => (TT[oT] = Object.keys(iT.c[oT])[0], TT)), {})
+  },
+  37779: (TT, oT, IT) => {
+    var iT = {
+      "./cape_cow_cream.png": 27238,
+      "./cape_cow_normal.png": 27240,
+      "./cape_creator_level1.png": 27243,
+      "./cape_creator_level2.png": 27250,
+      "./cape_creator_level3.png": 27259,
+      "./cape_none.png": 27264,
+      "./cape_pig.png": 27271,
+      "./cape_sheep.png": 27277,
+      "./cape_super.png": 27285,
+      "./cape_super_inverted.png": 27289,
+      "./cape_youtuber.png": 27292
+    };
+
+    function zT(TT) {
+      var oT = kT(TT);
+      return IT(oT)
+    }
+
+    function kT(TT) {
+      if (!IT.o(iT, TT)) {
+        var oT = new Error("Cannot find module '" + TT + "'");
+        throw oT.code = "MODULE_NOT_FOUND", oT
+      }
+      return iT[TT]
+    }
+    zT.keys = function() {
+      return Object.keys(iT)
+    }, zT.resolve = kT, TT.exports = zT, zT.id = 37779
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

@@ -1,26 +1,26 @@
 export const id = 99;
 export const ids = [99];
 export const modules = {
-  4467: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => VY
+  4382: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => hT
     });
-    var FY = DY(1501),
-      AY = DY(61),
-      IY = DY(1211),
-      RY = DY(1152),
-      OY = DY(1134),
-      gY = DY(1941),
-      aY = DY(1488),
-      vY = DY(1337),
-      uY = DY(1132),
-      sY = DY(19),
-      iY = DY(1437),
-      yY = DY(1098),
-      QY = DY(2335),
-      oY = DY(1519),
-      WY = DY(1125);
-    const EY = [{
+    var iT = IT(1484),
+      zT = IT(46),
+      kT = IT(1171),
+      WT = IT(1110),
+      XT = IT(1102),
+      BT = IT(1893),
+      FT = IT(1468),
+      ST = IT(1310),
+      DT = IT(1099),
+      LT = IT(12),
+      xT = IT(1408),
+      cT = IT(1055),
+      KT = IT(2281),
+      MT = IT(1499),
+      rT = IT(1083);
+    const AT = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      mY = {
+      gT = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function VY() {
+    function hT() {
       const {
-        t: YY
-      } = (0, IY.C)(), rY = (0, aY.useNavigatePreserveSearch)(), DY = (0, FY.u)(), {
-        isUserContextUpdating: VY
-      } = (0, RY.d)(), SY = (0, gY.e)(), lY = (0, OY.m)(), TY = (eY = DY.pathname).startsWith(oY.t) ? null : eY.startsWith(mY.docs) ? "docs" : eY.startsWith(mY.leaderboard) ? "leaderboard" : "myGames";
-      var eY;
-      const NY = function(YY) {
-        if (!YY.startsWith(oY.t)) return {
+        t: TT
+      } = (0, kT.t)(), oT = (0, FT.useNavigatePreserveSearch)(), IT = (0, iT.t)(), {
+        isUserContextUpdating: hT
+      } = (0, WT.b)(), wT = (0, BT.b)(), mT = (0, XT.n)(), eT = (RT = IT.pathname).startsWith(MT.m) ? null : RT.startsWith(gT.docs) ? "docs" : RT.startsWith(gT.leaderboard) ? "leaderboard" : "myGames";
+      var RT;
+      const uT = function(TT) {
+        if (!TT.startsWith(MT.m)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const rY = (0, aY.getPreviousLocation)();
+        const oT = (0, FT.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== rY && rY.startsWith(mY.myGames) ? -1 : mY.myGames
+          to: null !== oT && oT.startsWith(gT.myGames) ? -1 : gT.myGames
         }
-      }(DY.pathname);
-      return (0, AY.useEffect)((() => {
-        sY.b.set({
+      }(IT.pathname);
+      return (0, zT.useEffect)((() => {
+        LT.c.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, WY.jsxs)("div", {
+      }), []), (0, rT.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [SY && (0, WY.jsx)("aside", {
+        children: [wT && (0, rT.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, WY.jsx)(QY.d, {})
-        }), (0, WY.jsxs)("div", {
+          children: (0, rT.jsx)(KT.b, {})
+        }), (0, rT.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, WY.jsxs)("div", {
+          children: [(0, rT.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, WY.jsx)(uY.d, {
+            children: [(0, rT.jsx)(DT.e, {
               show: !0,
-              socialBarIsDocked: SY
-            }), (0, WY.jsxs)("nav", {
+              socialBarIsDocked: wT
+            }), (0, rT.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, WY.jsx)(iY.b, {
-                icon: NY.icon,
+              children: [(0, rT.jsx)(xT.c, {
+                icon: uT.icon,
                 onClick: () => {
-                  rY(NY.to)
+                  oT(uT.to)
                 },
-                children: YY(NY.title)
-              }), (0, WY.jsx)("div", {
+                children: TT(uT.title)
+              }), (0, rT.jsx)("div", {
                 className: "StudioNavTabs",
-                children: EY.map((DY => (0, WY.jsxs)(iY.J, {
-                  active: TY === DY.id,
-                  href: mY[DY.id],
+                children: AT.map((IT => (0, rT.jsxs)(xT.J, {
+                  active: eT === IT.id,
+                  href: gT[IT.id],
                   onClick: () => {
-                    rY(mY[DY.id])
+                    oT(gT[IT.id])
                   },
-                  children: [(0, WY.jsx)(yY.e, {
-                    name: DY.icon
-                  }), !lY && YY(DY.title)]
-                }, DY.id)))
+                  children: [(0, rT.jsx)(cT.e, {
+                    name: IT.icon
+                  }), !mT && TT(IT.title)]
+                }, IT.id)))
               })]
             })]
-          }), (0, WY.jsxs)("main", {
+          }), (0, rT.jsxs)("main", {
             className: "StudioBottom",
-            children: [VY && (0, WY.jsx)("div", {
+            children: [hT && (0, rT.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, WY.jsx)(vY.c, {})
-            }), !VY && (0, WY.jsx)("div", {
+              children: (0, rT.jsx)(ST.d, {})
+            }), !hT && (0, rT.jsx)("div", {
               className: "StudioContent",
-              children: (0, WY.jsx)(FY.h, {})
+              children: (0, rT.jsx)(iT.g, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

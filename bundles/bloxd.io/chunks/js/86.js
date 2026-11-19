@@ -1,308 +1,308 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  38118: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY,
-      g: () => gY,
-      k: () => aY,
-      n: () => OY,
-      o: () => RY
+  37747: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => kT,
+      i: () => BT,
+      m: () => FT,
+      p: () => XT,
+      s: () => WT
     });
-    const FY = "A valid external Instance reference no longer exists.",
-      AY = [
+    const iT = "A valid external Instance reference no longer exists.",
+      zT = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ];
-    const IY = {
+    const kT = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function RY(YY, rY) {
-      return YY ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(YY) {
-        var rY;
-        const DY = null !== (rY = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(YY)) && void 0 !== rY ? rY : /failed with ([A-Z][A-Z0-9_]+)/.exec(YY);
-        return DY ? DY[1] : YY.includes(FY) ? "gpu_process_lost" : "other"
-      }(rY)
+    function WT(TT, oT) {
+      return TT ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(TT) {
+        var oT;
+        const IT = null !== (oT = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(TT)) && void 0 !== oT ? oT : /failed with ([A-Z][A-Z0-9_]+)/.exec(TT);
+        return IT ? IT[1] : TT.includes(iT) ? "gpu_process_lost" : "other"
+      }(oT)
     }
 
-    function OY(YY) {
-      return `${(null===YY||void 0===YY?void 0:YY.vendor)||"unknown vendor"} ${(null===YY||void 0===YY?void 0:YY.architecture)||"unknown architecture"}`
+    function XT(TT) {
+      return `${(null===TT||void 0===TT?void 0:TT.vendor)||"unknown vendor"} ${(null===TT||void 0===TT?void 0:TT.architecture)||"unknown architecture"}`
     }
 
-    function gY(YY) {
-      return vY(YY)[1]
+    function BT(TT) {
+      return ST(TT)[1]
     }
 
-    function aY(YY) {
-      return vY(YY)[2]
+    function FT(TT) {
+      return ST(TT)[2]
     }
 
-    function vY(YY) {
-      var rY;
-      return null !== (rY = AY.find((rY => {
-        let [DY] = rY;
-        return YY < DY
-      }))) && void 0 !== rY ? rY : AY[AY.length - 1]
+    function ST(TT) {
+      var oT;
+      return null !== (oT = zT.find((oT => {
+        let [IT] = oT;
+        return TT < IT
+      }))) && void 0 !== oT ? oT : zT[zT.length - 1]
     }
   },
-  38427: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => FY,
-      e: () => AY
+  38038: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT,
+      f: () => zT
     });
-    const FY = 45e3;
-    class AY extends Error {
+    const iT = 45e3;
+    class zT extends Error {
       constructor() {
         super("The game server didn't answer in time"), this.name = "SeatRequestTimedOut"
       }
     }
   },
-  35916: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => FY,
-      f: () => AY,
-      g: () => IY
+  35488: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => iT,
+      f: () => zT,
+      h: () => kT
     });
-    const FY = 1024,
-      AY = 1024 * FY;
+    const iT = 1024,
+      zT = 1024 * iT;
 
-    function IY(YY) {
-      return (YY / AY).toFixed(1)
+    function kT(TT) {
+      return (TT / zT).toFixed(1)
     }
   },
-  35913: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => IY,
-      f: () => OY,
-      h: () => RY,
-      l: () => gY,
-      n: () => aY
+  35479: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => kT,
+      f: () => XT,
+      g: () => WT,
+      h: () => BT,
+      i: () => FT
     });
-    var FY = DY(213);
-    const AY = 32 * DY(35916).f,
-      IY = 6144,
-      RY = 4608,
-      OY = 512;
+    var iT = IT(193);
+    const zT = 32 * IT(35488).f,
+      kT = 6144,
+      WT = 4608,
+      XT = 512;
 
-    function gY(YY) {
-      return Math.floor(AY * YY / IY)
+    function BT(TT) {
+      return Math.floor(zT * TT / kT)
     }
 
-    function aY(YY) {
-      const rY = YY - Math.floor(YY / 6);
-      let DY = FY.d.maxChunkHorizAddDistance,
-        AY = FY.d.maxChunkVertAddDistance;
-      if (vY(DY + 1, AY + 1) <= rY) return null;
-      for (; vY(DY + 1, AY + 1) > rY && (DY > 0 || AY > 0);) DY > AY ? DY-- : AY--;
+    function FT(TT) {
+      const oT = TT - Math.floor(TT / 6);
+      let IT = iT.c.maxChunkHorizAddDistance,
+        zT = iT.c.maxChunkVertAddDistance;
+      if (ST(IT + 1, zT + 1) <= oT) return null;
+      for (; ST(IT + 1, zT + 1) > oT && (IT > 0 || zT > 0);) IT > zT ? IT-- : zT--;
       return {
-        horizontal: DY,
-        vertical: AY
+        horizontal: IT,
+        vertical: zT
       }
     }
 
-    function vY(YY, rY) {
-      const DY = Math.max(YY, rY);
-      let FY = 0;
-      for (let AY = -DY; AY <= DY; AY++)
-        for (let IY = -DY; IY <= DY; IY++)
-          for (let RY = -DY; RY <= DY; RY++) uY(YY, rY, AY, IY, RY) && FY++;
-      return FY
+    function ST(TT, oT) {
+      const IT = Math.max(TT, oT);
+      let iT = 0;
+      for (let zT = -IT; zT <= IT; zT++)
+        for (let kT = -IT; kT <= IT; kT++)
+          for (let WT = -IT; WT <= IT; WT++) DT(TT, oT, zT, kT, WT) && iT++;
+      return iT
     }
 
-    function uY(YY, rY, DY, FY, AY) {
-      const IY = DY * DY + AY * AY;
-      return YY === rY ? IY + FY * FY <= YY * YY : YY > rY ? Math.abs(FY) <= rY && IY + FY * FY <= YY * YY : IY <= YY * YY && IY + FY * FY <= rY * rY
+    function DT(TT, oT, IT, iT, zT) {
+      const kT = IT * IT + zT * zT;
+      return TT === oT ? kT + iT * iT <= TT * TT : TT > oT ? Math.abs(iT) <= oT && kT + iT * iT <= TT * TT : kT <= TT * TT && kT + iT * iT <= oT * oT
     }
   },
-  39966: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY,
-      g: () => IY,
-      i: () => OY,
-      j: () => vY,
-      k: () => gY,
-      m: () => RY
+  39656: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => zT,
+      e: () => kT,
+      h: () => XT,
+      k: () => ST,
+      n: () => BT,
+      q: () => WT
     });
-    var FY = DY(213);
-    const AY = 3e3,
-      IY = 15e3;
+    var iT = IT(193);
+    const zT = 3e3,
+      kT = 15e3;
 
-    function RY(YY) {
-      const rY = YY.endsWith(FY.h);
+    function WT(TT) {
+      const oT = TT.endsWith(iT.k);
       return {
-        text: (rY ? YY.slice(0, -FY.h.length) : YY) || null,
-        dropsCache: rY
+        text: (oT ? TT.slice(0, -iT.k.length) : TT) || null,
+        dropsCache: oT
       }
     }
-    const OY = "Either your internet isn't working or this is a bug.";
+    const XT = "Either your internet isn't working or this is a bug.";
 
-    function gY(YY, rY) {
-      const DY = vY(YY);
-      return null !== DY.name && "" === FY.c[DY.name].text && null !== rY ? rY : DY.reason
+    function BT(TT, oT) {
+      const IT = ST(TT);
+      return null !== IT.name && "" === iT.b[IT.name].text && null !== oT ? oT : IT.reason
     }
-    const aY = "You were removed from the game.";
+    const FT = "You were removed from the game.";
 
-    function vY(YY) {
-      var rY;
-      let DY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const AY = null !== (rY = Object.keys(FY.c).find((rY => FY.c[rY].code === YY))) && void 0 !== rY ? rY : null;
-      if (null === AY) return {
-        code: YY,
-        name: AY,
-        reason: null !== DY && void 0 !== DY ? DY : `${OY}\nCode: ${YY}`,
+    function ST(TT) {
+      var oT;
+      let IT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const zT = null !== (oT = Object.keys(iT.b).find((oT => iT.b[oT].code === TT))) && void 0 !== oT ? oT : null;
+      if (null === zT) return {
+        code: TT,
+        name: zT,
+        reason: null !== IT && void 0 !== IT ? IT : `${XT}\nCode: ${TT}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: IY,
-        canReconnect: RY = !1
-      } = FY.c[AY], gY = YY === FY.c.outdatedVersion.code || YY === FY.c.loadRecaptchaError.code;
+        text: kT,
+        canReconnect: WT = !1
+      } = iT.b[zT], BT = TT === iT.b.outdatedVersion.code || TT === iT.b.loadRecaptchaError.code;
       return {
-        code: YY,
-        name: AY,
-        reason: "" !== IY ? IY : null !== DY && void 0 !== DY ? DY : YY === FY.c.gameOrPluginKick.code ? aY : `Code: ${YY}`,
-        canReconnect: RY,
-        automaticallyReconnect: YY === FY.c.customGameUpdated.code || YY === FY.c.duplicateLobbyNameError.code,
-        requiresRefresh: gY
+        code: TT,
+        name: zT,
+        reason: "" !== kT ? kT : null !== IT && void 0 !== IT ? IT : TT === iT.b.gameOrPluginKick.code ? FT : `Code: ${TT}`,
+        canReconnect: WT,
+        automaticallyReconnect: TT === iT.b.customGameUpdated.code || TT === iT.b.duplicateLobbyNameError.code,
+        requiresRefresh: BT
       }
     }
   },
-  4376: (YY, rY, DY) => {
-    DY.d(rY, {
-      $d: () => CY,
-      A: () => ZY,
-      Ab: () => PY,
-      Ad: () => bY,
-      Bb: () => tY,
-      Bc: () => ir,
-      Bd: () => JY,
-      C: () => sr,
-      Cd: () => pY,
-      D: () => UY,
-      Eb: () => rr,
-      Ec: () => ar,
-      G: () => FY.f,
-      H: () => aY,
-      I: () => FY.j,
-      Ib: () => AY.g,
-      Ic: () => Fr,
-      Kb: () => eY,
-      Kc: () => FY.nb,
-      Kd: () => XY,
-      L: () => FY.l,
-      Ld: () => GY,
-      Mb: () => dY,
-      Nc: () => FY.pb,
-      O: () => nY,
-      Od: () => kY,
-      Pd: () => Rr,
-      Qb: () => HY,
-      Qc: () => FY.rb,
-      Qd: () => yr,
-      R: () => FY.s,
-      Rb: () => cY,
-      S: () => FY.u,
-      Sb: () => FY.L,
-      Sd: () => VY,
-      Tc: () => LY,
-      Td: () => xY,
-      W: () => FY.y,
-      Wb: () => zY,
-      Wd: () => jY,
-      Xb: () => SY,
-      Xc: () => FY.yb,
-      Zb: () => Ir,
-      Zc: () => FY.Ab,
-      Zd: () => fY,
-      _: () => uY,
-      _c: () => FY.Cb,
-      ac: () => mY,
-      ad: () => FY.Jb,
-      ae: () => gY,
-      c: () => Yr,
-      cb: () => EY,
-      cd: () => FY.Mb,
-      dc: () => vr,
-      ed: () => FY.Ob,
-      ee: () => hY,
-      f: () => QY,
-      fb: () => FY.z,
-      hb: () => FY.B,
-      hc: () => AY.k,
-      i: () => yY,
-      id: () => BY,
-      ie: () => Qr,
-      je: () => iY,
-      kb: () => wY,
-      kc: () => WY,
-      l: () => gr,
-      lc: () => Dr,
-      ld: () => FY.Qb,
-      m: () => NY,
-      nb: () => Ar,
-      nc: () => FY.U,
-      nd: () => FY.Sb,
-      pd: () => FY.Wb,
-      q: () => TY,
-      qb: () => vY,
-      r: () => FY.d,
-      rc: () => FY.Y,
-      rd: () => IY,
-      s: () => ur,
-      tc: () => FY._,
-      u: () => KY,
-      ub: () => FY.C,
-      ud: () => oY,
-      wb: () => qY,
-      x: () => RY,
-      xc: () => FY.ab,
-      xd: () => Or,
-      yc: () => FY.db,
-      zc: () => FY.lb,
-      zd: () => MY
+  4276: (TT, oT, IT) => {
+    IT.d(oT, {
+      $c: () => dT,
+      B: () => WT,
+      Bb: () => VT,
+      Cb: () => oo,
+      Cc: () => iT.hb,
+      D: () => JT,
+      Dc: () => iT.qb,
+      Dd: () => kT,
+      Eb: () => zT.f,
+      F: () => Lo,
+      G: () => PT,
+      Gb: () => RT,
+      Hc: () => xo,
+      Hd: () => MT,
+      I: () => iT.d,
+      J: () => FT,
+      Jb: () => OT,
+      Jd: () => Xo,
+      K: () => iT.f,
+      Kc: () => Fo,
+      M: () => iT.j,
+      Nb: () => CT,
+      Nd: () => nT,
+      Oc: () => io,
+      Od: () => ZT,
+      P: () => yT,
+      Qb: () => ET,
+      Qc: () => iT.ub,
+      R: () => iT.o,
+      Rb: () => iT.N,
+      Rd: () => HT,
+      Sb: () => jT,
+      Uc: () => iT.vb,
+      V: () => iT.r,
+      Vb: () => wT,
+      Vd: () => tT,
+      Xc: () => iT.xb,
+      Z: () => iT.u,
+      Zb: () => ko,
+      ab: () => DT,
+      ae: () => lT,
+      bb: () => AT,
+      bc: () => gT,
+      be: () => pT,
+      ce: () => GT,
+      dd: () => iT.Bb,
+      e: () => To,
+      eb: () => iT.y,
+      ed: () => iT.Fb,
+      ee: () => Wo,
+      fc: () => So,
+      g: () => KT,
+      gb: () => iT.A,
+      gd: () => iT.Gb,
+      h: () => cT,
+      he: () => co,
+      ic: () => zT.m,
+      ie: () => hT,
+      je: () => bT,
+      kb: () => qT,
+      kd: () => iT.Kb,
+      l: () => Bo,
+      lc: () => rT,
+      ld: () => iT.Nb,
+      le: () => YT,
+      m: () => uT,
+      ne: () => aT,
+      ob: () => zo,
+      pc: () => Io,
+      pd: () => iT.Pb,
+      pe: () => UT,
+      q: () => eT,
+      qe: () => BT,
+      rd: () => vT,
+      sb: () => ST,
+      se: () => QT,
+      t: () => iT.c,
+      tc: () => iT._,
+      te: () => Ko,
+      ud: () => iT.Rb,
+      vb: () => iT.C,
+      wb: () => sT,
+      wd: () => iT.Tb,
+      we: () => xT,
+      x: () => Do,
+      xb: () => NT,
+      xc: () => iT.bb,
+      y: () => fT,
+      yc: () => iT.eb,
+      zc: () => iT.gb,
+      zd: () => iT.Yb
     });
-    var FY = DY(4382),
-      AY = DY(2251);
-    const IY = Math.round(1e3 / FY.Wb),
-      RY = 4,
-      OY = 2;
+    var iT = IT(4285),
+      zT = IT(2201);
+    const kT = Math.round(1e3 / iT.Yb),
+      WT = 4,
+      XT = 2;
 
-    function gY() {
-      return crypto.getRandomValues(new Uint32Array(OY))
+    function BT() {
+      return crypto.getRandomValues(new Uint32Array(XT))
     }
-    const aY = {
+    const FT = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      vY = 16,
-      uY = {
+      ST = 16,
+      DT = {
         Draws: 1,
         NetAll: 2
       },
-      sY = {
+      LT = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function iY(YY) {
-      return (YY.nametagsHidden ? lY.NametagsHidden : 0) | (YY.crouchToggle ? lY.CrouchToggle : 0) | (YY.bhopDisabled ? lY.BhopDisabled : 0) | (YY.disableBobbing ? lY.DisableBobbing : 0) | (YY.ezTowering ? lY.EzTowering : 0) | (YY.ezBridging ? lY.EzBridging : 0) | (YY.showChunkBorders ? lY.ShowChunkBorders : 0)
+    function xT(TT) {
+      return (TT.nametagsHidden ? mT.NametagsHidden : 0) | (TT.crouchToggle ? mT.CrouchToggle : 0) | (TT.bhopDisabled ? mT.BhopDisabled : 0) | (TT.disableBobbing ? mT.DisableBobbing : 0) | (TT.ezTowering ? mT.EzTowering : 0) | (TT.ezBridging ? mT.EzBridging : 0) | (TT.showChunkBorders ? mT.ShowChunkBorders : 0)
     }
-    const yY = {
+    const cT = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      QY = {
+      KT = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -310,7 +310,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      oY = {
+      MT = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -319,7 +319,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      WY = {
+      rT = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -328,20 +328,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      EY = 5,
-      mY = 4294967295;
+      AT = 5,
+      gT = 4294967295;
 
-    function VY(YY) {
-      return (YY.showFog ? sY.ShowFog : 0) | (YY.lighting ? sY.Lighting : 0) | (YY.chunkFade ? sY.ChunkFade : 0)
+    function hT(TT) {
+      return (TT.showFog ? LT.ShowFog : 0) | (TT.lighting ? LT.Lighting : 0) | (TT.chunkFade ? LT.ChunkFade : 0)
     }
-    const SY = {
+    const wT = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      lY = {
+      mT = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -351,50 +351,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      TY = {
+      eT = {
         Release: 1,
         KeepTouches: 2
       },
-      eY = {
+      RT = {
         Point: 1,
         Stamped: 2
       },
-      NY = {
+      uT = {
         Add: 1,
         Clear: 2
       },
-      BY = 1,
-      cY = 8,
-      KY = 16777215,
-      HY = 4,
-      zY = {
+      vT = 1,
+      ET = 8,
+      fT = 16777215,
+      CT = 4,
+      jT = {
         Resume: 1
       },
-      ZY = {
+      JT = {
         Held: 1
       };
 
-    function CY(YY, rY) {
-      return (YY | rY << 8) >>> 0
+    function UT(TT, oT) {
+      return (TT | oT << 8) >>> 0
     }
 
-    function fY(YY) {
-      return 255 & YY
+    function aT(TT) {
+      return 255 & TT
     }
 
-    function jY(YY) {
-      return YY >>> 8
+    function YT(TT) {
+      return TT >>> 8
     }
 
-    function hY(YY) {
-      return YY + 3 & -4
+    function QT(TT) {
+      return TT + 3 & -4
     }
-    const dY = 16777216,
-      JY = 20;
-    const MY = 8,
-      wY = 8,
-      bY = 16777216,
-      XY = {
+    const OT = 16777216,
+      HT = 20;
+    const nT = 8,
+      qT = 8,
+      ZT = 16777216,
+      lT = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -402,19 +402,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      qY = {
+      sT = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      pY = 16,
-      kY = {
+      tT = 16,
+      GT = {
         Lost: 0,
         Gone: 1
       },
-      GY = {
+      pT = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -422,18 +422,18 @@ export const modules = {
         Retire: 5
       };
 
-    function xY(YY) {
-      return YY === GY.WorldgenSeed || YY === GY.Generate
+    function bT(TT) {
+      return TT === pT.WorldgenSeed || TT === pT.Generate
     }
-    const nY = 4,
-      PY = 99,
-      UY = {
+    const yT = 4,
+      NT = 99,
+      PT = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      LY = {
+      dT = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -441,40 +441,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      tY = 12,
-      Yr = 16,
-      rr = 4,
-      Dr = 12,
-      Fr = {
+      VT = 12,
+      To = 16,
+      oo = 4,
+      Io = 12,
+      io = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      Ar = 4,
-      Ir = 8,
-      Rr = 8,
-      Or = {
+      zo = 4,
+      ko = 8,
+      Wo = 8,
+      Xo = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      gr = {
+      Bo = {
         Crit: 1,
         HitSelf: 2
       },
-      ar = {
+      Fo = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      vr = {
+      So = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      ur = 12,
-      sr = {
+      Do = 12,
+      Lo = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -483,80 +483,80 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      ir = 67108864;
+      xo = 67108864;
 
-    function yr(YY) {
-      for (const [rY, DY] of Object.entries(FY.f))
-        if (DY === YY) return rY;
-      return `Unknown${YY}`
+    function co(TT) {
+      for (const [oT, IT] of Object.entries(iT.d))
+        if (IT === TT) return oT;
+      return `Unknown${TT}`
     }
 
-    function Qr(YY) {
+    function Ko(TT) {
       return {
-        status: YY[FY.B.Status],
-        lastError: YY[FY.B.LastError],
-        lastErrorDetail: YY[FY.B.LastErrorDetail],
-        errorCount: YY[FY.B.ErrorCount],
-        frameIndex: YY[FY.B.FrameIndex],
-        tickIndex: YY[FY.B.TickIndex],
-        renderPending: YY[FY.B.RenderPending],
-        firstView: YY[FY.B.FirstView],
-        chunksCancelled: YY[FY.B.ChunksCancelled]
+        status: TT[iT.A.Status],
+        lastError: TT[iT.A.LastError],
+        lastErrorDetail: TT[iT.A.LastErrorDetail],
+        errorCount: TT[iT.A.ErrorCount],
+        frameIndex: TT[iT.A.FrameIndex],
+        tickIndex: TT[iT.A.TickIndex],
+        renderPending: TT[iT.A.RenderPending],
+        firstView: TT[iT.A.FirstView],
+        chunksCancelled: TT[iT.A.ChunksCancelled]
       }
     }
   },
-  39744: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY,
-      e: () => uY,
-      f: () => OY,
-      g: () => IY,
-      i: () => AY,
-      m: () => gY,
-      o: () => vY
+  39420: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT,
+      c: () => DT,
+      f: () => XT,
+      i: () => kT,
+      j: () => zT,
+      m: () => BT,
+      q: () => ST
     });
-    class FY extends Error {
+    class iT extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function AY(YY) {
-      return YY instanceof RangeError && /call stack/i.test(YY.message) || YY instanceof Error && "InternalError" === YY.name && /recursion/i.test(YY.message)
+    function zT(TT) {
+      return TT instanceof RangeError && /call stack/i.test(TT.message) || TT instanceof Error && "InternalError" === TT.name && /recursion/i.test(TT.message)
     }
 
-    function IY(YY) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(YY))
+    function kT(TT) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(TT))
     }
-    const RY = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const WT = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function OY(YY) {
-      var rY;
-      return YY instanceof WebAssembly.RuntimeError || YY instanceof FY || AY(YY) && RY.test(null !== (rY = YY.stack) && void 0 !== rY ? rY : "")
-    }
-
-    function gY(YY, rY) {
-      if (OY(YY)) throw YY;
-      console.error(rY, YY)
+    function XT(TT) {
+      var oT;
+      return TT instanceof WebAssembly.RuntimeError || TT instanceof iT || zT(TT) && WT.test(null !== (oT = TT.stack) && void 0 !== oT ? oT : "")
     }
 
-    function aY(YY, rY, DY, AY, IY) {
-      if (rY % AY !== 0 || rY + DY > YY.byteLength) throw new FY(`${IY}: ${DY} bytes at ${rY}, ${AY}-aligned, outside ${YY.byteLength} bytes of memory`)
+    function BT(TT, oT) {
+      if (XT(TT)) throw TT;
+      console.error(oT, TT)
     }
 
-    function vY(YY, rY, DY, FY, AY) {
-      return 0 === DY ? null : (aY(rY, DY, FY * YY.BYTES_PER_ELEMENT, YY.BYTES_PER_ELEMENT, AY), new YY(rY, DY, FY))
+    function FT(TT, oT, IT, zT, kT) {
+      if (oT % zT !== 0 || oT + IT > TT.byteLength) throw new iT(`${kT}: ${IT} bytes at ${oT}, ${zT}-aligned, outside ${TT.byteLength} bytes of memory`)
     }
 
-    function uY(YY, rY, DY, FY, AY) {
-      return 0 === rY ? null : (aY(YY, rY, DY, FY, AY), new DataView(YY, rY, DY))
+    function ST(TT, oT, IT, iT, zT) {
+      return 0 === IT ? null : (FT(oT, IT, iT * TT.BYTES_PER_ELEMENT, TT.BYTES_PER_ELEMENT, zT), new TT(oT, IT, iT))
+    }
+
+    function DT(TT, oT, IT, iT, zT) {
+      return 0 === oT ? null : (FT(TT, oT, IT, iT, zT), new DataView(TT, oT, IT))
     }
   },
-  40109: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => FY
+  39783: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT
     });
-    const FY = {
+    const iT = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -569,251 +569,251 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  40054: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => yY,
-      g: () => QY,
-      i: () => sY,
-      k: () => uY
+  39747: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => cT,
+      e: () => KT,
+      i: () => LT,
+      m: () => DT
     });
-    const FY = 2e3,
-      AY = "unavailable";
-    let IY = () => Promise.resolve().then((() => DY(2823))),
-      RY = null,
-      OY = null,
-      gY = aY();
+    const iT = 2e3,
+      zT = "unavailable";
+    let kT = () => Promise.resolve().then((() => IT(2791))),
+      WT = null,
+      XT = null,
+      BT = FT();
 
-    function aY() {
-      let YY = () => {};
+    function FT() {
+      let TT = () => {};
       return {
-        promise: new Promise((rY => {
-          YY = () => {
-            rY(null)
+        promise: new Promise((oT => {
+          TT = () => {
+            oT(null)
           }
         })),
-        resolve: YY
+        resolve: TT
       }
     }
 
-    function vY() {
-      if (null === RY) {
-        const YY = IY();
-        RY = YY, YY.then((rY => {
-          RY === YY && (OY = rY)
+    function ST() {
+      if (null === WT) {
+        const TT = kT();
+        WT = TT, TT.then((oT => {
+          WT === TT && (XT = oT)
         }), (() => {
-          RY === YY && (RY = null)
+          WT === TT && (WT = null)
         }))
       }
-      return RY
+      return WT
     }
 
-    function uY() {
-      vY().catch((() => {}))
+    function DT() {
+      ST().catch((() => {}))
     }
 
-    function sY() {
-      gY.resolve()
+    function LT() {
+      BT.resolve()
     }
 
-    function iY(YY, rY, DY, FY) {
-      if (null === YY) return {
-        errorKind: rY,
-        fingerprint: AY,
-        dedupe: `${rY}|${FY}`
+    function xT(TT, oT, IT, iT) {
+      if (null === TT) return {
+        errorKind: oT,
+        fingerprint: zT,
+        dedupe: `${oT}|${iT}`
       };
       const {
-        fingerprint: IY
-      } = YY.clientErrorKey(rY, DY, FY);
+        fingerprint: kT
+      } = TT.clientErrorKey(oT, IT, iT);
       return {
-        errorKind: rY,
-        fingerprint: IY,
-        dedupe: IY
+        errorKind: oT,
+        fingerprint: kT,
+        dedupe: kT
       }
     }
 
-    function yY(YY, rY, DY, FY) {
-      return null === OY ? FY ? (uY(), iY(null, YY, rY, DY)) : null : iY(OY, YY, rY, DY)
+    function cT(TT, oT, IT, iT) {
+      return null === XT ? iT ? (DT(), xT(null, TT, oT, IT)) : null : xT(XT, TT, oT, IT)
     }
-    async function QY(YY, rY, DY) {
-      let AY;
-      const IY = new Promise((YY => {
-        AY = setTimeout((() => {
-          YY(null)
-        }), FY)
+    async function KT(TT, oT, IT) {
+      let zT;
+      const kT = new Promise((TT => {
+        zT = setTimeout((() => {
+          TT(null)
+        }), iT)
       }));
       try {
-        return iY(await Promise.race([vY(), IY, gY.promise]), YY, rY, DY)
+        return xT(await Promise.race([ST(), kT, BT.promise]), TT, oT, IT)
       } catch {
-        return iY(null, YY, rY, DY)
+        return xT(null, TT, oT, IT)
       } finally {
-        clearTimeout(AY)
+        clearTimeout(zT)
       }
     }
   },
-  40046: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      BUILT_IN_ANIMATIONS_SITE: () => pY,
-      CORE_ERRORS_SITE: () => fY,
-      EVENT_OVERFLOW_SITE: () => qY,
-      FIRST_VIEW_SITE: () => GY,
-      JOIN_SITE: () => hY,
-      LEAVE_SITE: () => dY,
-      MODEL_FEED_SITE: () => JY,
-      MODEL_POOL_SITE: () => MY,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => nY,
-      NON_FATAL_REPORTS_PER_SESSION: () => vr,
-      PREVIEW_ANIMATIONS_SITE: () => XY,
-      RENDER_RELOAD_SITE: () => bY,
-      TEXTURE_NAMES_SITE: () => wY,
-      TEXTURE_PACK_FEED_SITE: () => kY,
-      TurnstilePageError: () => Jr,
-      WASM_LOAD_SITE: () => jY,
-      crashError: () => Qr,
-      crashReportsSettled: () => Sr,
-      flushCrashReports: () => mr,
-      joinFailureCode: () => Mr,
-      lokiTransport: () => LY,
-      modelFailureCode: () => Gr,
-      readTrap: () => er,
-      renderLossDetail: () => uD,
-      renderReloadMessage: () => aD,
-      reportCoreErrors: () => Tr,
-      reportCountedLoadFallback: () => hr,
-      reportCrash: () => or,
-      reportDataLoadFailure: () => oD,
-      reportDisconnect: () => pr,
-      reportDracoDecoderFailure: () => Ur,
-      reportEventOverflow: () => YD,
-      reportFirstViewNoTerrain: () => ID,
-      reportGpuFallback: () => fr,
-      reportGpuWasmPopulation: () => jr,
-      reportLightFault: () => DD,
-      reportMemoryShed: () => AD,
-      reportModelFailure: () => xr,
-      reportModelPoolFailure: () => nr,
-      reportModelsModuleRetry: () => Pr,
-      reportPageJoinFailure: () => br,
-      reportReconnectGaveUp: () => kr,
-      reportRenderReload: () => iD,
-      reportReplayFault: () => OD,
-      reportStaleBuildReload: () => ED,
-      reportStoppedCore: () => Kr,
-      reportTerrainTextureFailure: () => yD,
-      reportTexturePackFeedLoadFailure: () => tr,
-      reportUnstreamedCoreLoad: () => dr,
-      reportUnsupportedFallback: () => Zr,
-      reportUnusedSeat: () => qr,
-      reportWorkerLost: () => rD,
-      reportWorkerStartTimeout: () => RD,
-      reportWorldgenGaveUp: () => FD,
-      reportWorldgenLoadFailure: () => Lr,
-      resetCrashReports: () => lr,
-      setCrashBackend: () => Ir,
-      setCrashScreen: () => Fr,
-      setCrashTransport: () => rr,
-      showCrash: () => cr,
-      showJoinFailure: () => wr,
-      showUnsupported: () => zr
+  39745: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      BUILT_IN_ANIMATIONS_SITE: () => tT,
+      CORE_ERRORS_SITE: () => aT,
+      EVENT_OVERFLOW_SITE: () => sT,
+      FIRST_VIEW_SITE: () => pT,
+      JOIN_SITE: () => QT,
+      LEAVE_SITE: () => OT,
+      MODEL_FEED_SITE: () => HT,
+      MODEL_POOL_SITE: () => nT,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => yT,
+      NON_FATAL_REPORTS_PER_SESSION: () => So,
+      PREVIEW_ANIMATIONS_SITE: () => lT,
+      RENDER_RELOAD_SITE: () => ZT,
+      TEXTURE_NAMES_SITE: () => qT,
+      TEXTURE_PACK_FEED_SITE: () => GT,
+      TurnstilePageError: () => Ho,
+      WASM_LOAD_SITE: () => YT,
+      crashError: () => Ko,
+      crashReportsSettled: () => wo,
+      flushCrashReports: () => go,
+      joinFailureCode: () => no,
+      lokiTransport: () => dT,
+      modelFailureCode: () => bo,
+      readTrap: () => Ro,
+      renderLossDetail: () => xI,
+      renderReloadMessage: () => DI,
+      reportCoreErrors: () => eo,
+      reportCountedLoadFallback: () => Qo,
+      reportCrash: () => Mo,
+      reportDataLoadFailure: () => AI,
+      reportDisconnect: () => Go,
+      reportDracoDecoderFailure: () => Vo,
+      reportEventOverflow: () => II,
+      reportFirstViewNoTerrain: () => XI,
+      reportGpuFallback: () => ao,
+      reportGpuWasmPopulation: () => Yo,
+      reportLightFault: () => zI,
+      reportMemoryShed: () => WI,
+      reportModelFailure: () => yo,
+      reportModelPoolFailure: () => No,
+      reportModelsModuleRetry: () => Po,
+      reportPageJoinFailure: () => Zo,
+      reportReconnectGaveUp: () => po,
+      reportRenderReload: () => KI,
+      reportReplayFault: () => FI,
+      reportStaleBuildReload: () => hI,
+      reportStoppedCore: () => fo,
+      reportTerrainTextureFailure: () => MI,
+      reportTexturePackFeedLoadFailure: () => oI,
+      reportUnstreamedCoreLoad: () => Oo,
+      reportUnsupportedFallback: () => Jo,
+      reportUnusedSeat: () => to,
+      reportWorkerLost: () => iI,
+      reportWorkerStartTimeout: () => BI,
+      reportWorldgenGaveUp: () => kI,
+      reportWorldgenLoadFailure: () => TI,
+      resetCrashReports: () => mo,
+      setCrashBackend: () => ko,
+      setCrashScreen: () => io,
+      setCrashTransport: () => oo,
+      showCrash: () => Eo,
+      showJoinFailure: () => qo,
+      showUnsupported: () => jo
     });
-    var FY = DY(1113),
-      AY = DY(293),
-      IY = DY(2829),
-      RY = DY(40054),
-      OY = DY(4376),
-      gY = DY(40063),
-      aY = DY(3036),
-      vY = DY(38118),
-      uY = DY(144),
-      sY = DY(704),
-      iY = DY(138),
-      yY = DY(3045),
-      QY = DY(38427),
-      oY = DY(1744),
-      WY = DY(40019),
-      EY = DY(39693),
-      mY = DY(39969),
-      VY = DY(39976),
-      SY = DY(40067),
-      lY = DY(3312),
-      TY = DY(3316),
-      eY = DY(40074),
-      NY = DY(40096),
-      BY = DY(40098),
-      cY = DY(40118),
-      KY = DY(2834),
-      HY = DY(40015),
-      zY = DY(39900),
-      ZY = DY(39904);
-    const CY = "[bloxd-wasm-client]",
-      fY = "coreErrors",
-      jY = "wasmLoad",
-      hY = "join",
-      dY = "leave",
-      JY = "modelFeed",
-      MY = "modelWorkerPool",
-      wY = "textureNames",
-      bY = "renderReload",
-      XY = "previewAnimations",
-      qY = "eventOverflow",
-      pY = "builtInAnimations",
-      kY = "texturePackFeed",
-      GY = "firstView",
-      xY = 300,
-      nY = 8;
-    let PY = 0;
-    const UY = new Set,
-      LY = (YY, rY) => {
-        const DY = Rr[YY.kind];
-        if (null === DY) return void tY(YY, rY, Ar, null);
-        const FY = (0, RY.c)(DY, YY.message, YY.code, YY.fatal);
-        if (null !== FY) return void tY(YY, rY, Ar, FY);
-        const AY = Ar;
-        Er("Loki", (async () => {
-          tY(YY, rY, AY, await (0, RY.g)(DY, YY.message, YY.code))
+    var iT = IT(1071),
+      zT = IT(270),
+      kT = IT(2795),
+      WT = IT(39747),
+      XT = IT(4276),
+      BT = IT(39749),
+      FT = IT(3022),
+      ST = IT(37747),
+      DT = IT(139),
+      LT = IT(681),
+      xT = IT(134),
+      cT = IT(3028),
+      KT = IT(38038),
+      MT = IT(1693),
+      rT = IT(39717),
+      AT = IT(39371),
+      gT = IT(39662),
+      hT = IT(39667),
+      wT = IT(39753),
+      mT = IT(3276),
+      eT = IT(3280),
+      RT = IT(39760),
+      uT = IT(39775),
+      vT = IT(39779),
+      ET = IT(39786),
+      fT = IT(2801),
+      CT = IT(39710),
+      jT = IT(39577),
+      JT = IT(39579);
+    const UT = "[bloxd-wasm-client]",
+      aT = "coreErrors",
+      YT = "wasmLoad",
+      QT = "join",
+      OT = "leave",
+      HT = "modelFeed",
+      nT = "modelWorkerPool",
+      qT = "textureNames",
+      ZT = "renderReload",
+      lT = "previewAnimations",
+      sT = "eventOverflow",
+      tT = "builtInAnimations",
+      GT = "texturePackFeed",
+      pT = "firstView",
+      bT = 300,
+      yT = 8;
+    let NT = 0;
+    const PT = new Set,
+      dT = (TT, oT) => {
+        const IT = Wo[TT.kind];
+        if (null === IT) return void VT(TT, oT, zo, null);
+        const iT = (0, WT.d)(IT, TT.message, TT.code, TT.fatal);
+        if (null !== iT) return void VT(TT, oT, zo, iT);
+        const zT = zo;
+        Ao("Loki", (async () => {
+          VT(TT, oT, zT, await (0, WT.e)(IT, TT.message, TT.code))
         }))
       };
 
-    function tY(YY, rY, DY, AY) {
+    function VT(TT, oT, IT, zT) {
       const {
-        kind: RY,
-        code: OY,
-        site: gY,
-        fatal: aY,
-        details: vY
-      } = YY;
-      if (!aY)
-        if (null === AY || (0, IY.b)(AY.errorKind) || UY.has(AY.dedupe)) {
-          if (PY >= nY) return;
-          PY++
-        } else UY.add(AY.dedupe);
-      const uY = {
-        ...vY,
-        kind: RY,
-        code: OY,
-        site: gY,
-        fatal: String(aY),
-        backend: DY
+        kind: WT,
+        code: XT,
+        site: BT,
+        fatal: FT,
+        details: ST
+      } = TT;
+      if (!FT)
+        if (null === zT || (0, kT.c)(zT.errorKind) || PT.has(zT.dedupe)) {
+          if (NT >= yT) return;
+          NT++
+        } else PT.add(zT.dedupe);
+      const DT = {
+        ...ST,
+        kind: WT,
+        code: XT,
+        site: BT,
+        fatal: String(FT),
+        backend: IT
       };
-      null !== AY && (uY.errorKind = AY.errorKind, uY.fingerprint = AY.fingerprint), rY instanceof Error && "string" === typeof rY.stack && (uY.causeStack = rY.stack.slice(0, 2e3)), (0, FY.jQ)(Qr(YY, rY), uY)
+      null !== zT && (DT.errorKind = zT.errorKind, DT.fingerprint = zT.fingerprint), oT instanceof Error && "string" === typeof oT.stack && (DT.causeStack = oT.stack.slice(0, 2e3)), (0, iT.JK)(Ko(TT, oT), DT)
     }
-    let Yr = LY;
+    let To = dT;
 
-    function rr(YY) {
-      const rY = Yr;
-      return Yr = YY, rY
+    function oo(TT) {
+      const oT = To;
+      return To = TT, oT
     }
-    let Dr = () => {};
+    let Io = () => {};
 
-    function Fr(YY) {
-      const rY = Dr;
-      return Dr = YY, rY
+    function io(TT) {
+      const oT = Io;
+      return Io = TT, oT
     }
-    let Ar = "unpicked";
+    let zo = "unpicked";
 
-    function Ir(YY) {
-      Ar = YY
+    function ko(TT) {
+      zo = TT
     }
-    const Rr = {
+    const Wo = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -836,187 +836,187 @@ export const modules = {
         staleBuild: "wasm_load",
         disconnect: "disconnect"
       },
-      Or = {
+      Xo = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
         noTerrain: "wasm_load",
         gpuFallback: "wasm_load"
       },
-      gr = new Set(["unstreamedLoad"]);
-    let ar = !1;
-    const vr = 20,
-      ur = new Map;
-    let sr = 0,
-      ir = 0;
-    const yr = new Set;
+      Bo = new Set(["unstreamedLoad"]);
+    let Fo = !1;
+    const So = 20,
+      Do = new Map;
+    let Lo = 0,
+      xo = 0;
+    const co = new Set;
 
-    function Qr(YY, rY) {
-      const DY = Object.assign(new Error(`${YY.code}: ${YY.message}`), {
+    function Ko(TT, oT) {
+      const IT = Object.assign(new Error(`${TT.code}: ${TT.message}`), {
         name: "WasmClientCrash",
-        cause: null !== rY && void 0 !== rY ? rY : void 0
+        cause: null !== oT && void 0 !== oT ? oT : void 0
       });
-      return rY instanceof Error && rY.stack && (DY.stack = rY.stack), DY
+      return oT instanceof Error && oT.stack && (IT.stack = oT.stack), IT
     }
 
-    function or(YY) {
-      var rY, FY;
+    function Mo(TT) {
+      var oT, iT;
       const {
-        kind: AY,
-        code: IY,
-        site: RY,
-        fatal: OY,
-        message: gY,
-        error: aY
-      } = YY, vY = !1 !== YY.toTransport && !gr.has(AY), uY = !OY && vY, sY = {
-        kind: AY,
-        code: IY,
-        site: RY,
-        fatal: OY,
-        message: gY,
-        details: null !== (rY = YY.details) && void 0 !== rY ? rY : {}
-      }, iY = `${IY}@${RY}${void 0===YY.instance?"":`#${YY.instance}`}${OY?"!":""}`, yY = (null !== (FY = ur.get(iY)) && void 0 !== FY ? FY : 0) + 1;
-      if (ur.set(iY, yY), yY > 1 ? 0 === (yY & yY - 1) && Wr((() => {
-          console.warn(`${CY} ${IY} at ${RY} reported ${yY} times`)
-        })) : uY && sr >= vr ? Wr((() => {
-          console.warn(`${CY} ${AY} ${IY} at ${RY}: ${gY} (not sent: the session's ${vr} went)`, sY.details, null !== aY && void 0 !== aY ? aY : "")
-        })) : (uY && sr++, function(YY, rY, FY) {
-          var AY, IY;
+        kind: zT,
+        code: kT,
+        site: WT,
+        fatal: XT,
+        message: BT,
+        error: FT
+      } = TT, ST = !1 !== TT.toTransport && !Bo.has(zT), DT = !XT && ST, LT = {
+        kind: zT,
+        code: kT,
+        site: WT,
+        fatal: XT,
+        message: BT,
+        details: null !== (oT = TT.details) && void 0 !== oT ? oT : {}
+      }, xT = `${kT}@${WT}${void 0===TT.instance?"":`#${TT.instance}`}${XT?"!":""}`, cT = (null !== (iT = Do.get(xT)) && void 0 !== iT ? iT : 0) + 1;
+      if (Do.set(xT, cT), cT > 1 ? 0 === (cT & cT - 1) && ro((() => {
+          console.warn(`${UT} ${kT} at ${WT} reported ${cT} times`)
+        })) : DT && Lo >= So ? ro((() => {
+          console.warn(`${UT} ${zT} ${kT} at ${WT}: ${BT} (not sent: the session's ${So} went)`, LT.details, null !== FT && void 0 !== FT ? FT : "")
+        })) : (DT && Lo++, function(TT, oT, iT) {
+          var zT, kT;
           const {
-            kind: RY,
-            code: OY,
-            site: gY,
-            fatal: aY,
-            message: vY,
-            details: uY
-          } = YY;
-          Wr((() => {
-            (aY ? console.error : console.warn)(`${CY} ${RY} ${OY} at ${gY}: ${vY}`, uY, null !== rY && void 0 !== rY ? rY : "")
+            kind: WT,
+            code: XT,
+            site: BT,
+            fatal: FT,
+            message: ST,
+            details: DT
+          } = TT;
+          ro((() => {
+            (FT ? console.error : console.warn)(`${UT} ${WT} ${XT} at ${BT}: ${ST}`, DT, null !== oT && void 0 !== oT ? oT : "")
           }));
-          const sY = Or[RY],
-            iY = null !== (AY = null !== (IY = Rr[RY]) && void 0 !== IY ? IY : sY) && void 0 !== AY ? AY : null;
-          null !== iY && Er("counts", (async () => {
+          const LT = Xo[WT],
+            xT = null !== (zT = null !== (kT = Wo[WT]) && void 0 !== kT ? kT : LT) && void 0 !== zT ? zT : null;
+          null !== xT && Ao("counts", (async () => {
             const {
-              peekVisitSessionId: YY
-            } = await Promise.resolve().then((() => DY(668)));
-            if (null !== YY()) {
+              peekVisitSessionId: TT
+            } = await Promise.resolve().then((() => IT(648)));
+            if (null !== TT()) {
               const {
-                reportCappedWasmFailure: YY,
-                reportWasmFailure: rY
-              } = await DY.e(202).then((() => DY(35731)));
-              (void 0 === sY ? rY : YY)(iY, vY, OY), ar = !0
+                reportCappedWasmFailure: TT,
+                reportWasmFailure: oT
+              } = await IT.e(202).then((() => IT(35316)));
+              (void 0 === LT ? oT : TT)(xT, ST, XT), Fo = !0
             }
           }));
-          FY && Wr((() => {
-            Yr(YY, rY)
+          iT && ro((() => {
+            To(TT, oT)
           }))
-        }(sY, aY, vY)), OY) {
-        var QY;
-        const rY = null !== (QY = YY.screen) && void 0 !== QY ? QY : {
-          text: (0, cY.i)(sY, !0),
+        }(LT, FT, ST)), XT) {
+        var KT;
+        const oT = null !== (KT = TT.screen) && void 0 !== KT ? KT : {
+          text: (0, ET.f)(LT, !0),
           reload: !0
         };
-        Wr((() => {
-          Dr(rY)
+        ro((() => {
+          Io(oT)
         }))
       }
-      return sY
+      return LT
     }
 
-    function Wr(YY) {
+    function ro(TT) {
       try {
-        YY()
-      } catch (rY) {
+        TT()
+      } catch (oT) {
         try {
-          console.warn(`${CY} could not send a report`, rY)
+          console.warn(`${UT} could not send a report`, oT)
         } catch {}
       }
     }
 
-    function Er(YY, rY) {
+    function Ao(TT, oT) {
       try {
-        const DY = rY().catch((rY => {
-          console.warn(`${CY} could not send the report to ${YY}`, rY)
+        const IT = oT().catch((oT => {
+          console.warn(`${UT} could not send the report to ${TT}`, oT)
         })).finally((() => {
-          yr.delete(DY)
+          co.delete(IT)
         }));
-        yr.add(DY)
-      } catch (DY) {
-        console.warn(`${CY} could not send the report to ${YY}`, DY)
+        co.add(IT)
+      } catch (IT) {
+        console.warn(`${UT} could not send the report to ${TT}`, IT)
       }
     }
-    async function mr(YY) {
-      let rY;
-      (0, RY.i)();
-      const DY = new Promise((DY => {
-        rY = setTimeout(DY, YY)
+    async function go(TT) {
+      let oT;
+      (0, WT.i)();
+      const IT = new Promise((IT => {
+        oT = setTimeout(IT, TT)
       }));
-      await Promise.race([Vr(), DY]), clearTimeout(rY)
+      await Promise.race([ho(), IT]), clearTimeout(oT)
     }
-    async function Vr() {
-      if (await Promise.allSettled([...yr]), ar) try {
+    async function ho() {
+      if (await Promise.allSettled([...co]), Fo) try {
         const {
-          flushClientAnalyticsEvents: YY
-        } = await Promise.resolve().then((() => DY(1469)));
-        await YY()
-      } catch (YY) {
-        console.warn(`${CY} could not send the counts`, YY)
+          flushClientAnalyticsEvents: TT
+        } = await Promise.resolve().then((() => IT(1444)));
+        await TT()
+      } catch (TT) {
+        console.warn(`${UT} could not send the counts`, TT)
       }
     }
-    async function Sr() {
-      for (; yr.size > 0;) await Promise.allSettled([...yr])
+    async function wo() {
+      for (; co.size > 0;) await Promise.allSettled([...co])
     }
 
-    function lr() {
-      ur.clear(), sr = 0, ar = !1, PY = 0, UY.clear(), ir = 0, (0, gY.n)()
+    function mo() {
+      Do.clear(), Lo = 0, Fo = !1, NT = 0, PT.clear(), xo = 0, (0, BT.n)()
     }
 
-    function Tr(YY, rY, DY, FY) {
-      ir += rY;
+    function eo(TT, oT, IT, iT) {
+      xo += oT;
       for (const {
-          code: RY,
-          detail: aY
+          code: WT,
+          detail: FT
         }
-        of YY) {
-        var AY, IY;
-        const YY = (0, OY.Qd)(RY),
-          rY = (0, gY.c)(RY, aY),
-          vY = null === FY || void 0 === FY ? void 0 : FY(RY, aY),
-          uY = void 0 !== (null === rY || void 0 === rY ? void 0 : rY.gpuDetails),
-          sY = uY ? null === (AY = (0, iY.q)()) || void 0 === AY ? void 0 : AY.renderer : void 0,
-          yY = uY ? ` ${(0,gY.g)()}` : "",
-          QY = Array.from([sY && `gpu ${(0,gY.r)(sY)}`, vY].filter(Boolean).join("; ")).slice(0, xY).join(""),
-          oY = `core error ${YY}${null!==(IY=null===rY||void 0===rY?void 0:rY.words)&&void 0!==IY?IY:""}${yY}${QY?`: ${QY}`:""}`,
-          WY = {
-            errorCode: String(RY),
-            detail: String(aY),
-            droppedBefore: String(ir),
-            wasmBuild: DY.wasm,
-            clientVersion: DY.client,
-            ...null === rY || void 0 === rY ? void 0 : rY.gpuDetails
+        of TT) {
+        var zT, kT;
+        const TT = (0, XT.he)(WT),
+          oT = (0, BT.c)(WT, FT),
+          ST = null === iT || void 0 === iT ? void 0 : iT(WT, FT),
+          DT = void 0 !== (null === oT || void 0 === oT ? void 0 : oT.gpuDetails),
+          LT = DT ? null === (zT = (0, xT.m)()) || void 0 === zT ? void 0 : zT.renderer : void 0,
+          cT = DT ? ` ${(0,BT.e)()}` : "",
+          KT = Array.from([LT && `gpu ${(0,BT.p)(LT)}`, ST].filter(Boolean).join("; ")).slice(0, bT).join(""),
+          MT = `core error ${TT}${null!==(kT=null===oT||void 0===oT?void 0:oT.words)&&void 0!==kT?kT:""}${cT}${KT?`: ${KT}`:""}`,
+          rT = {
+            errorCode: String(WT),
+            detail: String(FT),
+            droppedBefore: String(xo),
+            wasmBuild: IT.wasm,
+            clientVersion: IT.client,
+            ...null === oT || void 0 === oT ? void 0 : oT.gpuDetails
           };
-        null !== rY && (0, gY.l)(rY) ? Wr((() => {
-          console.warn(`${CY} coreError CORE-${YY}: ${oY} (not sent: the session's render warnings of its kind went)`, WY)
-        })) : or({
-          kind: RY === OY.G.JobsHeapGaveUp ? "meshHeap" : "coreError",
-          code: `CORE-${YY}`,
-          site: fY,
+        null !== oT && (0, BT.l)(oT) ? ro((() => {
+          console.warn(`${UT} coreError CORE-${TT}: ${MT} (not sent: the session's render warnings of its kind went)`, rT)
+        })) : Mo({
+          kind: WT === XT.I.JobsHeapGaveUp ? "meshHeap" : "coreError",
+          code: `CORE-${TT}`,
+          site: aT,
           fatal: !1,
-          message: oY,
-          details: WY,
-          instance: null === rY || void 0 === rY ? void 0 : rY.instance
+          message: MT,
+          details: rT,
+          instance: null === oT || void 0 === oT ? void 0 : oT.instance
         })
       }
     }
 
-    function er(YY) {
-      return (0, HY.m)(YY instanceof zY.e ? YY.trap : YY, lY.H, lY._)
+    function Ro(TT) {
+      return (0, CT.i)(TT instanceof jT.d ? TT.trap : TT, mT.C, mT.Y)
     }
-    const Nr = "declined=js";
+    const uo = "declined=js";
 
-    function Br(YY) {
-      return YY ? {
-        labels: [Nr],
+    function vo(TT) {
+      return TT ? {
+        labels: [uo],
         details: {
           declined: "js"
         }
@@ -1026,189 +1026,189 @@ export const modules = {
       }
     }
 
-    function cr(YY, rY, DY) {
-      return Hr(YY, rY, DY, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function Eo(TT, oT, IT) {
+      return Co(TT, oT, IT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function Kr(YY, rY, DY) {
-      return Hr(YY, rY, DY, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function fo(TT, oT, IT) {
+      return Co(TT, oT, IT, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function Hr(YY, rY, DY, FY, AY) {
+    function Co(TT, oT, IT, iT, zT) {
       let {
-        memoryDetails: IY = {},
-        declined: RY = !1
-      } = FY;
+        memoryDetails: kT = {},
+        declined: WT = !1
+      } = iT;
       const {
-        code: OY,
-        details: gY,
-        message: aY
-      } = (0, WY.H)(YY, rY), vY = [];
-      null !== DY && (gY.trapKind = DY.kind, null !== DY.panic && (gY.panic = (0, HY.i)(DY.panic)), DY.refusedBytes > 0 && (gY.refusedAllocation = String(DY.refusedBytes)), vY.push((0, HY.p)(DY.kind, DY.refusedBytes)));
-      const uY = Br(RY);
-      return or({
+        code: XT,
+        details: BT,
+        message: FT
+      } = (0, rT.G)(TT, oT), ST = [];
+      null !== IT && (BT.trapKind = IT.kind, null !== IT.panic && (BT.panic = (0, CT.g)(IT.panic)), IT.refusedBytes > 0 && (BT.refusedAllocation = String(IT.refusedBytes)), ST.push((0, CT.k)(IT.kind, IT.refusedBytes)));
+      const DT = vo(WT);
+      return Mo({
         kind: "crash",
-        code: OY,
-        site: YY.site,
-        fatal: AY,
-        message: [...vY, ...uY.labels, aY].join("; "),
+        code: XT,
+        site: TT.site,
+        fatal: zT,
+        message: [...ST, ...DT.labels, FT].join("; "),
         details: {
-          ...gY,
-          ...uY.details,
-          ...IY
+          ...BT,
+          ...DT.details,
+          ...kT
         },
-        error: YY.error
+        error: TT.error
       })
     }
 
-    function zr(YY, rY, DY) {
-      return or({
+    function jo(TT, oT, IT) {
+      return Mo({
         kind: "unsupported",
-        code: rY,
-        site: jY,
+        code: oT,
+        site: YT,
         fatal: !0,
-        message: DY,
+        message: IT,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: YY,
-          status: rY
+          cause: TT,
+          status: oT
         },
         screen: {
-          text: (0, cY.r)(YY),
-          reload: "download" === YY
+          text: (0, ET.l)(TT),
+          reload: "download" === TT
         }
       })
     }
 
-    function Zr(YY, rY, DY) {
-      return or({
+    function Jo(TT, oT, IT) {
+      return Mo({
         kind: "unsupportedFallback",
-        code: "blockedAfterLoss" === rY ? "blocked_after_loss" : "unsupported_js_fallback",
-        site: jY,
+        code: "blockedAfterLoss" === oT ? "blocked_after_loss" : "unsupported_js_fallback",
+        site: YT,
         fatal: !1,
-        message: DY,
+        message: IT,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: YY,
+          cause: TT,
           status: "unsupported",
-          decline: rY,
+          decline: oT,
           fallback: "js"
         }
       })
     }
-    const Cr = "misdrawn_gpu_js_fallback";
+    const Uo = "misdrawn_gpu_js_fallback";
 
-    function fr(YY, rY) {
-      return or({
+    function ao(TT, oT) {
+      return Mo({
         kind: "gpuFallback",
-        code: Cr,
-        site: jY,
+        code: Uo,
+        site: YT,
         fatal: !1,
-        message: `the renderer plays ${YY} on ${rY} worse than the JS client`,
+        message: `the renderer plays ${TT} on ${oT} worse than the JS client`,
         details: {
-          gpuFamily: YY,
-          backend: rY,
+          gpuFamily: TT,
+          backend: oT,
           fallback: "js"
         }
       })
     }
 
-    function jr(YY) {
-      Er("counts", (async () => {
-        await (0, sY.c)(YY), ar = !0
+    function Yo(TT) {
+      Ao("counts", (async () => {
+        await (0, LT.d)(TT), Fo = !0
       }))
     }
 
-    function hr(YY, rY, DY, FY) {
-      const AY = Br(FY);
-      return or({
+    function Qo(TT, oT, IT, iT) {
+      const zT = vo(iT);
+      return Mo({
         kind: "unsupported",
-        code: rY,
-        site: jY,
+        code: oT,
+        site: YT,
         fatal: !1,
-        message: [...AY.labels, DY].join("; "),
+        message: [...zT.labels, IT].join("; "),
         details: {
-          cause: YY,
-          status: rY,
+          cause: TT,
+          status: oT,
           fallback: "js",
-          ...AY.details
+          ...zT.details
         }
       })
     }
 
-    function dr() {
+    function Oo() {
       const {
-        code: YY,
-        message: rY
-      } = KY.b;
-      return or({
+        code: TT,
+        message: oT
+      } = fT.e;
+      return Mo({
         kind: "unstreamedLoad",
-        code: YY,
-        site: jY,
+        code: TT,
+        site: YT,
         fatal: !1,
-        message: rY
+        message: oT
       })
     }
-    class Jr extends Error {
+    class Ho extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function Mr(YY) {
-      return YY instanceof mY.m ? 0 === YY.code ? "JOIN-matchmake" : `JOIN-${YY.code}` : YY instanceof mY.c ? 0 === YY.code ? `JOIN-${YY.stage}` : `JOIN-${YY.stage}-${YY.code}` : YY instanceof EY.e ? "JOIN-gameCode" : YY instanceof Jr ? "JOIN-turnstilePage" : YY instanceof mY.A ? "JOIN-trafficCheck" : YY instanceof QY.e ? "JOIN-timeout" : "JOIN-network"
+    function no(TT) {
+      return TT instanceof gT.r ? 0 === TT.code ? "JOIN-matchmake" : `JOIN-${TT.code}` : TT instanceof gT.e ? 0 === TT.code ? `JOIN-${TT.stage}` : `JOIN-${TT.stage}-${TT.code}` : TT instanceof AT.b ? "JOIN-gameCode" : TT instanceof Ho ? "JOIN-turnstilePage" : TT instanceof gT.B ? "JOIN-trafficCheck" : TT instanceof KT.f ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function wr(YY, rY) {
-      const DY = (0, ZY.f)(YY),
-        FY = {
-          wasmBuild: rY.wasm,
-          clientVersion: rY.client
+    function qo(TT, oT) {
+      const IT = (0, JT.h)(TT),
+        iT = {
+          wasmBuild: oT.wasm,
+          clientVersion: oT.client
         },
-        AY = YY instanceof Jr ? {
-          text: (0, cY.l)(),
+        zT = TT instanceof Ho ? {
+          text: (0, ET.j)(),
           reload: !1
         } : void 0,
-        IY = (0, VY.g)(YY),
-        RY = "expected" !== IY;
-      return or({
+        kT = (0, hT.g)(TT),
+        WT = "expected" !== kT;
+      return Mo({
         kind: "join",
-        code: Mr(YY),
-        site: hY,
+        code: no(TT),
+        site: QT,
         fatal: !0,
-        message: DY,
-        details: FY,
-        error: YY,
-        screen: AY,
-        toTransport: RY,
-        instance: IY
+        message: IT,
+        details: iT,
+        error: TT,
+        screen: zT,
+        toTransport: WT,
+        instance: kT
       })
     }
 
-    function br(YY, rY, DY) {
-      var FY;
-      const AY = (0, VY.g)(YY),
-        IY = {
-          cause: (YY instanceof mY.c || YY instanceof mY.m) && null !== (FY = YY.serverText) && void 0 !== FY ? FY : "",
-          sinceJoinStart: (0, yY.d)(DY.sinceJoinStartMs),
-          game: DY.game,
-          ...(0, yY.m)(),
-          wasmBuild: rY.wasm,
-          clientVersion: rY.client
+    function Zo(TT, oT, IT) {
+      var iT;
+      const zT = (0, hT.g)(TT),
+        kT = {
+          cause: (TT instanceof gT.e || TT instanceof gT.r) && null !== (iT = TT.serverText) && void 0 !== iT ? iT : "",
+          sinceJoinStart: (0, cT.b)(IT.sinceJoinStartMs),
+          game: IT.game,
+          ...(0, cT.k)(),
+          wasmBuild: oT.wasm,
+          clientVersion: oT.client
         };
-      return or({
+      return Mo({
         kind: "pageJoin",
-        code: Mr(YY),
-        site: hY,
+        code: no(TT),
+        site: QT,
         fatal: !1,
-        message: (0, ZY.f)(YY),
-        details: IY,
-        error: YY,
-        toTransport: "unrecognised" === AY,
-        instance: AY
+        message: (0, JT.h)(TT),
+        details: kT,
+        error: TT,
+        toTransport: "unrecognised" === zT,
+        instance: zT
       })
     }
-    const Xr = {
+    const so = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1227,956 +1227,956 @@ export const modules = {
       }
     };
 
-    function qr(YY, rY) {
+    function to(TT, oT) {
       let {
-        unused: DY,
-        answered: FY,
-        heldMs: AY
-      } = YY;
+        unused: IT,
+        answered: iT,
+        heldMs: zT
+      } = TT;
       const {
-        code: IY,
-        message: RY
-      } = Xr[DY], OY = {
-        unused: DY,
-        answered: String(FY),
-        heldMs: String(AY),
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+        code: kT,
+        message: WT
+      } = so[IT], XT = {
+        unused: IT,
+        answered: String(iT),
+        heldMs: String(zT),
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "seat",
-        code: IY,
-        site: hY,
+        code: kT,
+        site: QT,
         fatal: !1,
-        message: RY,
-        details: OY
+        message: WT,
+        details: XT
       })
     }
 
-    function pr(YY, rY, DY) {
-      var FY;
-      let AY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (FY = YY.name) && void 0 !== FY ? FY : String(YY.code);
-      const IY = {
-          closeCode: String(YY.code),
-          recognised: String(null !== YY.name),
-          closeReason: DY.closeReason,
-          sinceJoined: (0, yY.d)(DY.sinceJoinedMs),
-          game: DY.game,
-          ...(0, yY.m)(),
-          wasmBuild: rY.wasm,
-          clientVersion: rY.client
+    function Go(TT, oT, IT) {
+      var iT;
+      let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (iT = TT.name) && void 0 !== iT ? iT : String(TT.code);
+      const kT = {
+          closeCode: String(TT.code),
+          recognised: String(null !== TT.name),
+          closeReason: IT.closeReason,
+          sinceJoined: (0, cT.b)(IT.sinceJoinedMs),
+          game: IT.game,
+          ...(0, cT.k)(),
+          wasmBuild: oT.wasm,
+          clientVersion: oT.client
         },
-        RY = null === YY.name && !(0, yY.h)(YY.code);
-      return or({
+        WT = null === TT.name && !(0, cT.e)(TT.code);
+      return Mo({
         kind: "disconnect",
-        code: AY,
-        site: dY,
+        code: zT,
+        site: OT,
         fatal: !1,
         message: "Left room",
-        details: IY,
-        toTransport: RY
+        details: kT,
+        toTransport: WT
       })
     }
 
-    function kr(YY, rY) {
-      const DY = {
-        ...(0, aY.k)(YY),
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+    function po(TT, oT) {
+      const IT = {
+        ...(0, FT.j)(TT),
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "disconnect",
-        code: `reconnect-${YY.reason}`,
-        site: hY,
+        code: `reconnect-${TT.reason}`,
+        site: QT,
         fatal: !1,
         message: "Reconnect failed",
-        details: DY
+        details: IT
       })
     }
 
-    function Gr(YY) {
-      return YY.error instanceof TY.e ? `MODEL-${YY.error.status}` : YY.error instanceof eY.i ? "MODEL-ring" : "MODEL-network"
+    function bo(TT) {
+      return TT.error instanceof eT.g ? `MODEL-${TT.error.status}` : TT.error instanceof RT.i ? "MODEL-ring" : "MODEL-network"
     }
 
-    function xr(YY, rY) {
-      const DY = Gr(YY),
-        FY = `model file ${YY.file} ${YY.startup?"(startup) ":""}could not load`,
-        AY = {
-          file: String(YY.file),
-          url: YY.url,
-          wasmBuild: rY.wasm,
-          clientVersion: rY.client
+    function yo(TT, oT) {
+      const IT = bo(TT),
+        iT = `model file ${TT.file} ${TT.startup?"(startup) ":""}could not load`,
+        zT = {
+          file: String(TT.file),
+          url: TT.url,
+          wasmBuild: oT.wasm,
+          clientVersion: oT.client
         };
-      return or({
-        kind: YY.startup ? "model" : "modelLate",
-        code: DY,
-        site: JY,
-        fatal: YY.startup,
-        message: FY,
-        details: AY,
-        error: YY.error
+      return Mo({
+        kind: TT.startup ? "model" : "modelLate",
+        code: IT,
+        site: HT,
+        fatal: TT.startup,
+        message: iT,
+        details: zT,
+        error: TT.error
       })
     }
 
-    function nr(YY, rY) {
-      const DY = {
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+    function No(TT, oT) {
+      const IT = {
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: MY,
+        site: nT,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: DY,
-        error: YY
+        details: IT,
+        error: TT
       })
     }
 
-    function Pr(YY, rY, DY) {
-      const FY = {
-        delayMs: String(rY),
-        wasmBuild: DY.wasm,
-        clientVersion: DY.client
+    function Po(TT, oT, IT) {
+      const iT = {
+        delayMs: String(oT),
+        wasmBuild: IT.wasm,
+        clientVersion: IT.client
       };
-      YY instanceof TY.e && (FY.status = String(YY.status));
-      return or({
+      TT instanceof eT.g && (iT.status = String(TT.status));
+      return Mo({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: MY,
+        site: nT,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: FY,
-        error: YY
+        details: iT,
+        error: TT
       })
     }
 
-    function Ur(YY, rY) {
-      const DY = {
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+    function Vo(TT, oT) {
+      const IT = {
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: MY,
+        site: nT,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: DY,
-        error: YY
+        details: IT,
+        error: TT
       })
     }
 
-    function Lr(YY, rY) {
-      const DY = {
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+    function TI(TT, oT) {
+      const IT = {
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: WY.C,
+        site: rT.A,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: DY,
-        error: YY
+        details: IT,
+        error: TT
       })
     }
 
-    function tr(YY, rY) {
-      const DY = {
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+    function oI(TT, oT) {
+      const IT = {
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: kY,
+        site: GT,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: DY,
-        error: YY
+        details: IT,
+        error: TT
       })
     }
 
-    function YD(YY, rY) {
+    function II(TT, oT) {
       const {
-        frames: DY,
-        acks: FY,
-        mask: AY,
-        outcome: IY
-      } = YY, RY = {
-        frames: String(DY),
-        acks: String(FY),
-        mask: String(AY),
-        outcome: null !== IY && void 0 !== IY ? IY : "resynced",
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+        frames: IT,
+        acks: iT,
+        mask: zT,
+        outcome: kT
+      } = TT, WT = {
+        frames: String(IT),
+        acks: String(iT),
+        mask: String(zT),
+        outcome: null !== kT && void 0 !== kT ? kT : "resynced",
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "recovered",
-        code: "rejoined" === IY ? "CORE-eventOverflowRejoin" : "failed" === IY ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: qY,
+        code: "rejoined" === kT ? "CORE-eventOverflowRejoin" : "failed" === kT ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: sT,
         fatal: !1,
-        message: `the event buffer refused records in ${DY} frames`,
-        details: RY
+        message: `the event buffer refused records in ${IT} frames`,
+        details: WT
       })
     }
 
-    function rD(YY, rY, DY) {
-      return or({
+    function iI(TT, oT, IT) {
+      return Mo({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: YY,
+        site: TT,
         fatal: !1,
-        message: `a ${YY} worker was lost`,
+        message: `a ${TT} worker was lost`,
         details: {
-          reason: rY,
-          wasmBuild: DY.wasm,
-          clientVersion: DY.client
+          reason: oT,
+          wasmBuild: IT.wasm,
+          clientVersion: IT.client
         }
       })
     }
 
-    function DD(YY, rY, DY) {
-      const FY = {
-        wasmBuild: DY.wasm,
-        clientVersion: DY.client
+    function zI(TT, oT, IT) {
+      const iT = {
+        wasmBuild: IT.wasm,
+        clientVersion: IT.client
       };
-      return or({
+      return Mo({
         kind: "recovered",
-        code: YY,
-        site: WY.o,
+        code: TT,
+        site: rT.m,
         fatal: !1,
-        message: rY,
-        details: FY
+        message: oT,
+        details: iT
       })
     }
 
-    function FD(YY, rY) {
-      const DY = {
-        lastReason: YY,
-        wasmBuild: rY.wasm,
-        clientVersion: rY.client
+    function kI(TT, oT) {
+      const IT = {
+        lastReason: TT,
+        wasmBuild: oT.wasm,
+        clientVersion: oT.client
       };
-      return or({
+      return Mo({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: WY.C,
+        site: rT.A,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: DY
+        details: IT
       })
     }
 
-    function AD(YY, rY, DY) {
-      return or({
+    function WI(TT, oT, IT) {
+      return Mo({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: WY.l,
+        site: rT.l,
         fatal: !1,
-        message: (0, SY.i)(YY) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
+        message: (0, wT.g)(TT) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
         details: {
-          cause: YY,
-          ...rY,
-          wasmBuild: DY.wasm,
-          clientVersion: DY.client
+          cause: TT,
+          ...oT,
+          wasmBuild: IT.wasm,
+          clientVersion: IT.client
         }
       })
     }
 
-    function ID(YY, rY) {
-      const DY = (0, gY.k)(),
-        FY = {
-          game: YY,
-          renderWarned: String(DY),
-          browser: (0, gY.g)(),
-          wasmBuild: rY.wasm,
-          clientVersion: rY.client
+    function XI(TT, oT) {
+      const IT = (0, BT.h)(),
+        iT = {
+          game: TT,
+          renderWarned: String(IT),
+          browser: (0, BT.e)(),
+          wasmBuild: oT.wasm,
+          clientVersion: oT.client
         },
-        AY = `first view drew no whole terrain in ${NY.c/1e3} s${DY?", render warned":""}`;
-      return or({
+        zT = `first view drew no whole terrain in ${uT.f/1e3} s${IT?", render warned":""}`;
+      return Mo({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: GY,
+        site: pT,
         fatal: !1,
-        message: AY,
-        details: FY
+        message: zT,
+        details: iT
       })
     }
 
-    function RD(YY, rY, DY) {
-      return or({
+    function BI(TT, oT, IT) {
+      return Mo({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: YY,
+        site: TT,
         fatal: !1,
-        message: `a ${YY} worker did not start`,
+        message: `a ${TT} worker did not start`,
         details: {
-          waitedMs: String(Math.round(rY)),
-          wasmBuild: DY.wasm,
-          clientVersion: DY.client
+          waitedMs: String(Math.round(oT)),
+          wasmBuild: IT.wasm,
+          clientVersion: IT.client
         }
       })
     }
 
-    function OD(YY, rY, DY) {
-      return or({
+    function FI(TT, oT, IT) {
+      return Mo({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: YY,
+        site: TT,
         fatal: !1,
-        message: `the replay's ${YY} failed`,
+        message: `the replay's ${TT} failed`,
         details: {
-          wasmBuild: DY.wasm,
-          clientVersion: DY.client
+          wasmBuild: IT.wasm,
+          clientVersion: IT.client
         },
-        error: rY
+        error: oT
       })
     }
-    const gD = {
+    const SI = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function aD(YY, rY, DY) {
-      const FY = "lost" === rY && void 0 !== DY ? ` (${DY})` : "";
-      return `the ${YY} ${gD[rY]}${FY}`
+    function DI(TT, oT, IT) {
+      const iT = "lost" === oT && void 0 !== IT ? ` (${IT})` : "";
+      return `the ${TT} ${SI[oT]}${iT}`
     }
-    const vD = {
+    const LI = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
 
-    function uD(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
-      const AY = null === DY.boundAtMs ? "unbound" : `up${(0,vY.g)(FY-DY.boundAtMs)}`,
-        IY = null === DY.adapter ? "no adapter" : (0, vY.n)(DY.adapter),
-        RY = `${(0,oY.g)()?"hidden":"visible"} ${AY} ${IY}${!0===DY.indirectHangs?" ih":""}`;
-      if ("pipeline_failed" === YY) return `${YY} ${RY}`;
-      const OY = null === rY || void 0 === rY ? void 0 : rY.message;
-      return `${rY instanceof oY.f?"timeout":(0,vY.o)("frames_refused"===YY,"string"===typeof OY?OY:"")} ${RY}`
+    function xI(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
+      const zT = null === IT.boundAtMs ? "unbound" : `up${(0,ST.i)(iT-IT.boundAtMs)}`,
+        kT = null === IT.adapter ? "no adapter" : (0, ST.p)(IT.adapter),
+        WT = `${(0,MT.g)()?"hidden":"visible"} ${zT} ${kT}${!0===IT.indirectHangs?" ih":""}`;
+      if ("pipeline_failed" === TT) return `${TT} ${WT}`;
+      const XT = null === oT || void 0 === oT ? void 0 : oT.message;
+      return `${oT instanceof MT.e?"timeout":(0,ST.s)("frames_refused"===TT,"string"===typeof XT?XT:"")} ${WT}`
     }
-    const sD = {
+    const cI = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function iD(YY, rY, FY) {
-      var IY, RY, OY, aY, sY;
+    function KI(TT, oT, iT) {
+      var kT, WT, XT, FT, LT;
       let {
-        cause: iY = "lost",
-        error: yY,
-        context: QY = vD,
-        session: oY = sD
+        cause: xT = "lost",
+        error: cT,
+        context: KT = LI,
+        session: MT = cI
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const WY = uD(iY, yY, QY),
-        EY = {
-          losses: String(rY),
-          cause: iY,
-          detail: WY,
-          vendor: null !== (IY = null === (RY = QY.adapter) || void 0 === RY ? void 0 : RY.vendor) && void 0 !== IY ? IY : "",
-          architecture: null !== (OY = null === (aY = QY.adapter) || void 0 === aY ? void 0 : aY.architecture) && void 0 !== OY ? OY : "",
-          indirectHangs: String(QY.indirectHangs),
-          samples: String(oY.samples),
-          sunShadows: String(oY.sunShadows),
-          renderDistance: String(oY.renderDistance),
-          gpuFamily: null !== (sY = (0, AY.b)()) && void 0 !== sY ? sY : "",
-          browser: (0, gY.g)(),
-          siteUsed: uY.s,
-          wasmBuild: FY.wasm,
-          clientVersion: FY.client
+      const rT = xI(xT, cT, KT),
+        AT = {
+          losses: String(oT),
+          cause: xT,
+          detail: rT,
+          vendor: null !== (kT = null === (WT = KT.adapter) || void 0 === WT ? void 0 : WT.vendor) && void 0 !== kT ? kT : "",
+          architecture: null !== (XT = null === (FT = KT.adapter) || void 0 === FT ? void 0 : FT.architecture) && void 0 !== XT ? XT : "",
+          indirectHangs: String(KT.indirectHangs),
+          samples: String(MT.samples),
+          sunShadows: String(MT.sunShadows),
+          renderDistance: String(MT.renderDistance),
+          gpuFamily: null !== (LT = (0, zT.c)()) && void 0 !== LT ? LT : "",
+          browser: (0, BT.e)(),
+          siteUsed: DT.p,
+          wasmBuild: iT.wasm,
+          clientVersion: iT.client
         },
-        mY = aD(YY, iY),
-        VY = or({
+        gT = DI(TT, xT),
+        hT = Mo({
           kind: "recovered",
           code: "CORE-renderLost",
-          site: bY,
+          site: ZT,
           fatal: !1,
-          message: mY,
-          details: EY,
-          error: yY
+          message: gT,
+          details: AT,
+          error: cT
         });
-      return Er("ga", (async () => {
+      return Ao("ga", (async () => {
         const {
-          logError: rY
-        } = await Promise.resolve().then((() => DY(2579))), FY = `${vY.c["webgpu"===YY?"WebGPU":"WebGL2"]}\n Error: ${WY}`;
-        rY("warning", FY), rY("error", FY)
-      })), VY
+          logError: oT
+        } = await Promise.resolve().then((() => IT(2556))), iT = `${ST.e["webgpu"===TT?"WebGPU":"WebGL2"]}\n Error: ${rT}`;
+        oT("warning", iT), oT("error", iT)
+      })), hT
     }
 
-    function yD(YY, rY) {
-      var DY, FY;
-      const AY = null === YY.name ? "TEXTURE-sources" : null === YY.url ? "TEXTURE-nourl" : YY.error instanceof BY.d ? `TEXTURE-${YY.error.status}` : "TEXTURE-network",
-        IY = null === YY.name ? "terrain textures could not load" : `terrain texture ${YY.name} could not load`,
-        RY = {
-          texture: null !== (DY = YY.name) && void 0 !== DY ? DY : "",
-          url: null !== (FY = YY.url) && void 0 !== FY ? FY : "",
-          wasmBuild: rY.wasm,
-          clientVersion: rY.client
+    function MI(TT, oT) {
+      var IT, iT;
+      const zT = null === TT.name ? "TEXTURE-sources" : null === TT.url ? "TEXTURE-nourl" : TT.error instanceof vT.c ? `TEXTURE-${TT.error.status}` : "TEXTURE-network",
+        kT = null === TT.name ? "terrain textures could not load" : `terrain texture ${TT.name} could not load`,
+        WT = {
+          texture: null !== (IT = TT.name) && void 0 !== IT ? IT : "",
+          url: null !== (iT = TT.url) && void 0 !== iT ? iT : "",
+          wasmBuild: oT.wasm,
+          clientVersion: oT.client
         };
-      return or({
+      return Mo({
         kind: "terrainTexture",
-        code: AY,
-        site: WY.z,
+        code: zT,
+        site: rT.x,
         fatal: !1,
-        message: IY,
-        details: RY,
-        error: YY.error
+        message: kT,
+        details: WT,
+        error: TT.error
       })
     }
-    const QD = {
+    const rI = {
       previewAnimations: {
-        site: XY,
+        site: lT,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: pY,
+        site: tT,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function oD(YY, rY, DY, FY) {
+    function AI(TT, oT, IT, iT) {
       const {
-        site: AY,
-        prefix: IY,
-        name: RY
-      } = QD[YY], {
-        stage: OY,
-        error: gY
-      } = DY;
-      return or({
-        kind: YY,
-        code: "decode" === OY ? null === gY ? `${IY}-decode` : `${IY}-trap` : gY instanceof TY.e ? `${IY}-${gY.status}` : `${IY}-network`,
-        site: AY,
+        site: zT,
+        prefix: kT,
+        name: WT
+      } = rI[TT], {
+        stage: XT,
+        error: BT
+      } = IT;
+      return Mo({
+        kind: TT,
+        code: "decode" === XT ? null === BT ? `${kT}-decode` : `${kT}-trap` : BT instanceof eT.g ? `${kT}-${BT.status}` : `${kT}-network`,
+        site: zT,
         fatal: !1,
-        message: "decode" === OY ? `${RY} did not decode` : `${RY} could not load`,
+        message: "decode" === XT ? `${WT} did not decode` : `${WT} could not load`,
         details: {
-          url: rY,
-          wasmBuild: FY.wasm,
-          clientVersion: FY.client
+          url: oT,
+          wasmBuild: iT.wasm,
+          clientVersion: iT.client
         },
-        error: gY
+        error: BT
       })
     }
-    const WD = "staleBuild";
+    const gI = "staleBuild";
 
-    function ED(YY, rY, DY) {
-      const FY = {
-          failedSite: YY.site,
-          url: YY.url,
-          from: YY.from,
-          sameBuild: String(YY.from === rY),
-          reloadMs: String(Math.max(0, Date.now() - YY.at)),
-          wasmBuild: DY.wasm,
-          clientVersion: DY.client
+    function hI(TT, oT, IT) {
+      const iT = {
+          failedSite: TT.site,
+          url: TT.url,
+          from: TT.from,
+          sameBuild: String(TT.from === oT),
+          reloadMs: String(Math.max(0, Date.now() - TT.at)),
+          wasmBuild: IT.wasm,
+          clientVersion: IT.client
         },
-        AY = `reloaded into a newer build after ${YY.site} failed to load: ${YY.error}`;
-      return or({
+        zT = `reloaded into a newer build after ${TT.site} failed to load: ${TT.error}`;
+      return Mo({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: WD,
+        site: gI,
         fatal: !1,
-        message: AY,
-        details: FY
+        message: zT,
+        details: iT
       })
     }
   },
-  40096: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => AY,
-      c: () => FY
+  39775: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => zT,
+      f: () => iT
     });
-    const FY = 3e4;
-    class AY {
-      constructor(YY) {
-        this.gy = YY, this.waitedMs = 0, this.lastMs = null
+    const iT = 3e4;
+    class zT {
+      constructor(TT) {
+        this.Bc = TT, this.waitedMs = 0, this.lastMs = null
       }
-      frame(YY, rY) {
-        if (rY) return !0;
-        const DY = null === this.lastMs ? 0 : YY - this.lastMs;
-        return this.lastMs = YY, DY <= 900 && (this.waitedMs += DY), !(this.waitedMs < FY) && (this.gy(), !0)
+      frame(TT, oT) {
+        if (oT) return !0;
+        const IT = null === this.lastMs ? 0 : TT - this.lastMs;
+        return this.lastMs = TT, IT <= 900 && (this.waitedMs += IT), !(this.waitedMs < iT) && (this.Bc(), !0)
       }
     }
   },
-  4371: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => RY,
-      h: () => IY,
-      j: () => AY
+  4274: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => WT,
+      h: () => kT,
+      j: () => zT
     });
-    var FY = DY(4376);
+    var iT = IT(4276);
 
-    function AY(YY) {
-      return "none" !== YY
+    function zT(TT) {
+      return "none" !== TT
     }
 
-    function IY(YY, rY) {
-      if (!YY) return "none";
-      switch (rY) {
-        case FY.W.Drawn:
+    function kT(TT, oT) {
+      if (!TT) return "none";
+      switch (oT) {
+        case iT.Z.Drawn:
           return "drawn";
-        case FY.W.Paced:
+        case iT.Z.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function RY(YY) {
-      return "drawn" === YY
+    function WT(TT) {
+      return "drawn" === TT
     }
   },
-  39693: (YY, rY, DY) => {
-    DY.d(rY, {
-      A: () => yY,
-      e: () => FY,
-      f: () => WY,
-      g: () => QY,
-      k: () => oY,
-      n: () => sY,
-      r: () => iY,
-      v: () => vY,
-      z: () => uY
+  39371: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => iT,
+      e: () => rT,
+      i: () => KT,
+      k: () => MT,
+      l: () => LT,
+      n: () => xT,
+      p: () => ST,
+      s: () => DT,
+      w: () => cT
     });
-    class FY extends Error {
-      constructor(YY) {
-        super(`the join's code did not load: ${YY instanceof Error?YY.message:String(YY)}`, {
-          cause: YY
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === YY || void 0 === YY ? void 0 : YY.request
+    class iT extends Error {
+      constructor(TT) {
+        super(`the join's code did not load: ${TT instanceof Error?TT.message:String(TT)}`, {
+          cause: TT
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === TT || void 0 === TT ? void 0 : TT.request
       }
     }
-    let AY = null,
-      IY = null,
-      RY = null;
-    const OY = [];
-    let gY = null;
+    let zT = null,
+      kT = null,
+      WT = null;
+    const XT = [];
+    let BT = null;
 
-    function aY(YY, rY) {
+    function FT(TT, oT) {
       try {
-        YY(rY)
-      } catch (DY) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", DY)
+        TT(oT)
+      } catch (IT) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", IT)
       }
     }
 
-    function vY() {
-      return gY
+    function ST() {
+      return BT
     }
 
-    function uY(YY) {
-      OY.push(YY), null !== gY && aY(YY, gY)
+    function DT(TT) {
+      XT.push(TT), null !== BT && FT(TT, BT)
     }
 
-    function sY(YY) {
-      return AY ??= Promise.all([DY.e(69), DY.e(95), DY.e(209), DY.e(74), DY.e(186), DY.e(230), DY.e(210), DY.e(258), DY.e(92), DY.e(261), DY.e(237), DY.e(185), DY.e(195), DY.e(137), DY.e(85), DY.e(115), DY.e(235), DY.e(53)]).then((() => DY(41621))).then((rY => {
-        rY.loadAudio(YY), gY = rY;
-        for (const YY of OY) aY(YY, rY);
-        return rY
-      })).catch((YY => {
-        throw AY = null, YY
-      })), AY
+    function LT(TT) {
+      return zT ??= Promise.all([IT.e(69), IT.e(95), IT.e(209), IT.e(74), IT.e(186), IT.e(230), IT.e(210), IT.e(258), IT.e(92), IT.e(261), IT.e(237), IT.e(185), IT.e(195), IT.e(137), IT.e(85), IT.e(115), IT.e(235), IT.e(53)]).then((() => IT(41382))).then((oT => {
+        oT.loadAudio(TT), BT = oT;
+        for (const TT of XT) FT(TT, oT);
+        return oT
+      })).catch((TT => {
+        throw zT = null, TT
+      })), zT
     }
-    async function iY(YY, rY) {
+    async function xT(TT, oT) {
       try {
-        const DY = await sY(YY);
-        await DY.loadClientGame(rY)
-      } catch (DY) {
-        throw new FY(DY)
+        const IT = await LT(TT);
+        await IT.loadClientGame(oT)
+      } catch (IT) {
+        throw new iT(IT)
       }
     }
 
-    function yY(YY, rY) {
-      IY = {
-        running: YY,
-        shell: rY
+    function cT(TT, oT) {
+      kT = {
+        running: TT,
+        shell: oT
       }
     }
 
-    function QY() {
-      return RY
+    function KT() {
+      return WT
     }
-    async function oY(YY) {
-      const rY = IY;
-      if ((null === rY || void 0 === rY ? void 0 : rY.running) !== YY) throw new Error("the core's session has ended");
-      const DY = await sY(rY.shell.audio).catch((YY => {
-        throw new FY(YY)
+    async function MT(TT) {
+      const oT = kT;
+      if ((null === oT || void 0 === oT ? void 0 : oT.running) !== TT) throw new Error("the core's session has ended");
+      const IT = await LT(oT.shell.audio).catch((TT => {
+        throw new iT(TT)
       }));
-      if (null !== RY) return RY;
-      if (IY !== rY || YY.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (RY = DY.startGameHost(YY, rY.shell), null === RY) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return RY
+      if (null !== WT) return WT;
+      if (kT !== oT || TT.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (WT = IT.startGameHost(TT, oT.shell), null === WT) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return WT
     }
 
-    function WY() {
-      null !== RY && (null !== gY ? gY.endGameHost(RY) : RY.closeGame()), RY = null, IY = null
+    function rT() {
+      null !== WT && (null !== BT ? BT.endGameHost(WT) : WT.closeGame()), WT = null, kT = null
     }
   },
-  39969: (YY, rY, DY) => {
-    DY.d(rY, {
-      A: () => uY,
-      D: () => OY,
-      c: () => aY,
-      d: () => IY,
-      f: () => RY,
-      j: () => AY,
-      m: () => iY,
-      o: () => vY,
-      s: () => gY,
-      w: () => sY
+  39662: (TT, oT, IT) => {
+    IT.d(oT, {
+      B: () => DT,
+      E: () => XT,
+      e: () => FT,
+      h: () => kT,
+      l: () => WT,
+      o: () => zT,
+      r: () => xT,
+      t: () => ST,
+      u: () => BT,
+      x: () => LT
     });
-    var FY = DY(1753);
-    const AY = new Uint8Array([12]),
-      IY = 2e3,
-      RY = 257;
+    var iT = IT(1695);
+    const zT = new Uint8Array([12]),
+      kT = 2e3,
+      WT = 257;
 
-    function OY(YY) {
-      const rY = new Uint8Array(4);
-      return new DataView(rY.buffer).setUint32(0, YY, !0), rY
+    function XT(TT) {
+      const oT = new Uint8Array(4);
+      return new DataView(oT.buffer).setUint32(0, TT, !0), oT
     }
-    class gY extends Error {
+    class BT extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class aY extends Error {
-      constructor(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(YY), this.stage = rY, this.code = DY, this.serverText = FY, this.name = "JoinError"
+    class FT extends Error {
+      constructor(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(TT), this.stage = oT, this.code = IT, this.serverText = iT, this.name = "JoinError"
       }
     }
-    class vY extends Error {
-      constructor(YY) {
-        super(YY), this.final = !0, this.name = "ResumeRefusedError"
+    class ST extends Error {
+      constructor(TT) {
+        super(TT), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class uY extends Error {
-      constructor(YY) {
-        super((0, FY.f)(YY), {
-          cause: YY
+    class DT extends Error {
+      constructor(TT) {
+        super((0, iT.i)(TT), {
+          cause: TT
         }), this.name = "TrafficCheckError"
       }
     }
-    class sY extends Error {
-      constructor(YY, rY, DY) {
-        super(YY, {
-          cause: DY
-        }), this.networkLost = rY, this.name = "SeatRequestError"
+    class LT extends Error {
+      constructor(TT, oT, IT) {
+        super(TT, {
+          cause: IT
+        }), this.networkLost = oT, this.name = "SeatRequestError"
       }
     }
-    class iY extends Error {
-      constructor(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(YY), this.code = rY, this.serverText = DY, this.name = "MatchmakeError"
+    class xT extends Error {
+      constructor(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(TT), this.code = oT, this.serverText = IT, this.name = "MatchmakeError"
       }
     }
   },
-  39976: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => sY,
-      g: () => uY
+  39667: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => LT,
+      g: () => DT
     });
-    var FY = DY(2368),
-      AY = DY(3045),
-      IY = DY(38427),
-      RY = DY(39966),
-      OY = DY(39969),
-      gY = DY(39982);
-    const aY = "seat reservation expired.",
-      vY = "early_leave";
+    var iT = IT(2327),
+      zT = IT(3028),
+      kT = IT(38038),
+      WT = IT(39656),
+      XT = IT(39662),
+      BT = IT(39674);
+    const FT = "seat reservation expired.",
+      ST = "early_leave";
 
-    function uY(YY) {
-      if (YY instanceof IY.e) return "expected";
-      if (YY instanceof OY.w) return YY.networkLost ? "expected" : "unrecognised";
-      if (YY instanceof OY.c) {
-        if ("closed" === YY.stage && (0 === YY.code || (0, AY.h)(YY.code))) return "expected";
-        if ("roomError" === YY.stage && (YY.serverText === aY || YY.serverText === vY)) return "expected"
+    function DT(TT) {
+      if (TT instanceof kT.f) return "expected";
+      if (TT instanceof XT.x) return TT.networkLost ? "expected" : "unrecognised";
+      if (TT instanceof XT.e) {
+        if ("closed" === TT.stage && (0 === TT.code || (0, zT.e)(TT.code))) return "expected";
+        if ("roomError" === TT.stage && (TT.serverText === FT || TT.serverText === ST)) return "expected"
       }
-      return YY instanceof OY.c || YY instanceof OY.m ? null === (0, RY.j)(YY.code).name ? "unrecognised" : "known" : (0, FY.e)(YY) ? "expected" : YY instanceof OY.A || YY instanceof gY.g ? "known" : "unrecognised"
+      return TT instanceof XT.e || TT instanceof XT.r ? null === (0, WT.k)(TT.code).name ? "unrecognised" : "known" : (0, iT.g)(TT) ? "expected" : TT instanceof XT.B || TT instanceof BT.e ? "known" : "unrecognised"
     }
 
-    function sY(YY) {
-      return YY instanceof IY.e ? "timedOut" : "expected" !== uY(YY) || (0, FY.e)(YY) || YY instanceof OY.c && 1001 === YY.code ? void 0 : "failed"
+    function LT(TT) {
+      return TT instanceof kT.f ? "timedOut" : "expected" !== DT(TT) || (0, iT.g)(TT) || TT instanceof XT.e && 1001 === TT.code ? void 0 : "failed"
     }
   },
-  40067: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => NY,
-      i: () => uY,
-      k: () => SY,
-      o: () => WY,
-      r: () => TY
+  39753: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => uT,
+      g: () => DT,
+      j: () => wT,
+      n: () => rT,
+      o: () => eT
     });
-    var FY = DY(35916),
-      AY = DY(35913);
-    const IY = 64 * FY.e,
-      RY = 40 * FY.f,
-      OY = 36 * FY.f,
-      gY = 20 * FY.f,
-      aY = 2 * FY.f,
-      vY = 5 * FY.f;
+    var iT = IT(35488),
+      zT = IT(35479);
+    const kT = 64 * iT.e,
+      WT = 40 * iT.f,
+      XT = 36 * iT.f,
+      BT = 20 * iT.f,
+      FT = 2 * iT.f,
+      ST = 5 * iT.f;
 
-    function uY(YY) {
-      return "footprint" !== YY
+    function DT(TT) {
+      return "footprint" !== TT
     }
-    const sY = 2 * FY.f,
-      iY = 4 * FY.f,
-      yY = 35 * FY.f + sY + iY,
-      QY = 6.5 * FY.f,
-      oY = 132.5 * FY.e;
+    const LT = 2 * iT.f,
+      xT = 4 * iT.f,
+      cT = 35 * iT.f + LT + xT,
+      KT = 6.5 * iT.f,
+      MT = 132.5 * iT.e;
 
-    function WY(YY) {
-      const rY = QY + (0, AY.l)(YY) + YY * oY;
-      return Math.ceil((2 * yY + rY) / IY) * IY
+    function rT(TT) {
+      const oT = KT + (0, zT.h)(TT) + TT * MT;
+      return Math.ceil((2 * cT + oT) / kT) * kT
     }
-    const EY = WY(AY.b),
-      mY = (FY.f, FY.f, FY.f, {
-        targetBytes: RY,
-        leastBytes: gY
+    const AT = rT(zT.c),
+      gT = (iT.f, iT.f, iT.f, {
+        targetBytes: WT,
+        leastBytes: BT
       }),
-      VY = {
-        targetBytes: OY,
-        leastBytes: gY
+      hT = {
+        targetBytes: XT,
+        leastBytes: BT
       };
 
-    function SY(YY) {
-      return YY >= AY.b ? mY : VY
+    function wT(TT) {
+      return TT >= zT.c ? gT : hT
     }
-    const lY = 2 * IY;
+    const mT = 2 * kT;
 
-    function TY(YY, rY, DY) {
-      return YY + rY + lY > (null !== DY && void 0 !== DY ? DY : EY)
+    function eT(TT, oT, IT) {
+      return TT + oT + mT > (null !== IT && void 0 !== IT ? IT : AT)
     }
-    const eY = {
+    const RT = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? YY => {
-        requestIdleCallback(YY)
+      requestIdle: "function" === typeof requestIdleCallback ? TT => {
+        requestIdleCallback(TT)
       } : null
     };
-    class NY {
-      constructor(YY, rY, DY) {
-        let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : eY;
-        this.memory = YY, this.readPeakStoredChunks = rY, this.onError = DY, this.clock = FY, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class uT {
+      constructor(TT, oT, IT) {
+        let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RT;
+        this.memory = TT, this.readPeakStoredChunks = oT, this.onError = IT, this.clock = iT, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(YY, rY, DY) {
+      setShed(TT, oT, IT) {
         this.shedding = {
-          shed: YY,
-          gy: rY,
-          readDistanceInUse: DY
+          shed: TT,
+          Bc: oT,
+          readDistanceInUse: IT
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(YY) {
-        this.footprint = YY
+      setFootprint(TT) {
+        this.footprint = TT
       }
-      setCeiling(YY) {
-        this.ceilingBytes = YY, this.call((() => {
-          this.memory.setCeiling(YY)
+      setCeiling(TT) {
+        this.ceilingBytes = TT, this.call((() => {
+          this.memory.setCeiling(TT)
         }), void 0)
       }
-      ceilingMayRefuse(YY) {
-        return TY(this.memory.memoryBytes(), YY, this.ceilingBytes)
+      ceilingMayRefuse(TT) {
+        return eT(this.memory.memoryBytes(), TT, this.ceilingBytes)
       }
-      reserveAtJoin(YY) {
+      reserveAtJoin(TT) {
         let {
-          targetBytes: rY,
-          leastBytes: DY
-        } = YY;
-        const FY = this.memory.memoryBytes(),
-          AY = FY + DY,
-          IY = Math.max(rY + (this.ballastOn() ? vY : 0), AY),
-          RY = this.call((() => this.memory.reserveUpFront(IY) ? "target" : IY > AY && this.memory.reserveUpFront(AY) ? "least" : "none"), "none");
+          targetBytes: oT,
+          leastBytes: IT
+        } = TT;
+        const iT = this.memory.memoryBytes(),
+          zT = iT + IT,
+          kT = Math.max(oT + (this.ballastOn() ? ST : 0), zT),
+          WT = this.call((() => this.memory.reserveUpFront(kT) ? "target" : kT > zT && this.memory.reserveUpFront(zT) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== RY) {
-          const YY = "least" === RY ? `took ${AY} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${IY} bytes was refused at ${FY} bytes; ${YY}`)
+        if ("target" !== WT) {
+          const TT = "least" === WT ? `took ${zT} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${kT} bytes was refused at ${iT} bytes; ${TT}`)
         }
-        return this.joinReserveTaken = RY, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== RY && this.shedFor("joinReserve"), "none" !== RY
+        return this.joinReserveTaken = WT, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== WT && this.shedFor("joinReserve"), "none" !== WT
       }
       afterFrame() {
         if (this.stopped) return;
-        const YY = this.clock.now(),
-          rY = null !== this.stepsHeldUntil && YY >= this.stepsHeldUntil;
-        if (rY && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && YY >= this.ballastCheckAt && (this.takeBallast(YY), this.stopped)) return;
-        const DY = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          FY = rY && "now" === DY ? "none" : DY,
+        const TT = this.clock.now(),
+          oT = null !== this.stepsHeldUntil && TT >= this.stepsHeldUntil;
+        if (oT && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && TT >= this.ballastCheckAt && (this.takeBallast(TT), this.stopped)) return;
+        const IT = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          iT = oT && "now" === IT ? "none" : IT,
           {
-            requestIdle: AY
+            requestIdle: zT
           } = this.clock;
-        "now" === FY || null !== this.pendingSince && YY - this.pendingSince >= 500 ? this.step() : "idle" === FY && null === this.pendingSince && (null === AY ? this.step() : (this.pendingSince = YY, AY((() => {
+        "now" === iT || null !== this.pendingSince && TT - this.pendingSince >= 500 ? this.step() : "idle" === iT && null === this.pendingSince && (null === zT ? this.step() : (this.pendingSince = TT, zT((() => {
           null !== this.pendingSince && this.step()
-        })))), YY - this.statsAt >= 1e3 && (this.statsAt = YY, this.refreshStats(), this.checkFootprint())
+        })))), TT - this.statsAt >= 1e3 && (this.statsAt = TT, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var YY, rY;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (rY = this.shedding.readDistanceInUse()) && void 0 !== rY ? rY : this.distanceInUse);
-          null === (YY = this.footprint) || void 0 === YY || YY.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var TT, oT;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (oT = this.shedding.readDistanceInUse()) && void 0 !== oT ? oT : this.distanceInUse);
+          null === (TT = this.footprint) || void 0 === TT || TT.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(YY, rY) {
-        this.noteWorker(`Mesh${YY}`, rY)
+      noteMeshWorker(TT, oT) {
+        this.noteWorker(`Mesh${TT}`, oT)
       }
-      meshWorkerGone(YY) {
-        this.workerGone(`Mesh${YY}`)
+      meshWorkerGone(TT) {
+        this.workerGone(`Mesh${TT}`)
       }
-      noteWorldgen(YY) {
-        this.noteWorker("Worldgen", YY)
+      noteWorldgen(TT) {
+        this.noteWorker("Worldgen", TT)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(YY, rY) {
-        const DY = this.workers.get(YY);
-        null !== DY && void 0 !== DY && DY.gone && (this.replacedRefusals.reserves += DY.stats.reservesRefused, this.replacedRefusals.allocations += DY.stats.allocationsRefused), this.workers.set(YY, {
-          stats: rY,
+      noteWorker(TT, oT) {
+        const IT = this.workers.get(TT);
+        null !== IT && void 0 !== IT && IT.gone && (this.replacedRefusals.reserves += IT.stats.reservesRefused, this.replacedRefusals.allocations += IT.stats.allocationsRefused), this.workers.set(TT, {
+          stats: oT,
           gone: !1
         })
       }
-      workerGone(YY) {
-        const rY = this.workers.get(YY);
-        rY && (rY.gone = !0)
+      workerGone(TT) {
+        const oT = this.workers.get(TT);
+        oT && (oT.gone = !0)
       }
       details() {
-        var YY, rY;
-        const DY = {
-          wasmMemoryNow: `${(0,FY.g)(this.memory.memoryBytes())} MiB`
+        var TT, oT;
+        const IT = {
+          wasmMemoryNow: `${(0,iT.h)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (DY.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (DY.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const AY = this.main;
-        if (AY) {
-          DY.wasmMemoryMain = BY(AY);
-          const YY = Math.max(0, AY.peakLiveBytes - this.ballastPeakBytes),
-            rY = 0 === this.peakStoredChunks ? "-" : (YY / this.peakStoredChunks / FY.e).toFixed(1);
-          DY.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${rY} KiB`
+        null !== this.joinReserveTaken && (IT.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (IT.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const zT = this.main;
+        if (zT) {
+          IT.wasmMemoryMain = vT(zT);
+          const TT = Math.max(0, zT.peakLiveBytes - this.ballastPeakBytes),
+            oT = 0 === this.peakStoredChunks ? "-" : (TT / this.peakStoredChunks / iT.e).toFixed(1);
+          IT.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${oT} KiB`
         }
-        for (const [FY, {
-            stats: RY,
-            gone: OY
-          }] of this.workers) DY[`wasmMemory${FY}`] = BY(RY) + (OY ? " (gone)" : "");
-        const IY = null !== (YY = null === (rY = this.footprint) || void 0 === rY ? void 0 : rY.describe()) && void 0 !== YY ? YY : null;
-        return null !== IY && (DY.wasmMemoryFootprint = IY), DY
+        for (const [iT, {
+            stats: WT,
+            gone: XT
+          }] of this.workers) IT[`wasmMemory${iT}`] = vT(WT) + (XT ? " (gone)" : "");
+        const kT = null !== (TT = null === (oT = this.footprint) || void 0 === oT ? void 0 : oT.describe()) && void 0 !== TT ? TT : null;
+        return null !== kT && (IT.wasmMemoryFootprint = kT), IT
       }
       pageKillSnapshot() {
-        var YY, rY, DY, AY, IY;
-        let RY = (null !== (YY = null === (rY = this.main) || void 0 === rY ? void 0 : rY.reservesRefused) && void 0 !== YY ? YY : 0) + this.replacedRefusals.reserves,
-          OY = (null !== (DY = null === (AY = this.main) || void 0 === AY ? void 0 : AY.allocationsRefused) && void 0 !== DY ? DY : 0) + this.replacedRefusals.allocations;
+        var TT, oT, IT, zT, kT;
+        let WT = (null !== (TT = null === (oT = this.main) || void 0 === oT ? void 0 : oT.reservesRefused) && void 0 !== TT ? TT : 0) + this.replacedRefusals.reserves,
+          XT = (null !== (IT = null === (zT = this.main) || void 0 === zT ? void 0 : zT.allocationsRefused) && void 0 !== IT ? IT : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: FY
+            stats: iT
           }
-          of this.workers.values()) RY += FY.reservesRefused, OY += FY.allocationsRefused;
+          of this.workers.values()) WT += iT.reservesRefused, XT += iT.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, FY.g)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, FY.g)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, iT.h)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, iT.h)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: RY,
-          refusedAllocations: OY,
+          refusedReserves: WT,
+          refusedAllocations: XT,
           sheds: this.sheds,
-          ...null === (IY = this.footprint) || void 0 === IY ? void 0 : IY.snapshot()
+          ...null === (kT = this.footprint) || void 0 === kT ? void 0 : kT.snapshot()
         }
       }
       workersMemoryBytes() {
-        let YY = 0;
+        let TT = 0;
         for (const {
-            stats: rY,
-            gone: DY
+            stats: oT,
+            gone: IT
           }
-          of this.workers.values()) YY += DY ? 0 : rY.memoryBytes;
-        return YY
+          of this.workers.values()) TT += IT ? 0 : oT.memoryBytes;
+        return TT
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(aY)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(FT)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(YY) {
+      takeBallast(TT) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = YY + 1e3;
-        const rY = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, rY)
+        this.ballastCheckAt = TT + 1e3;
+        const oT = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, oT)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(YY) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${YY}: frames grow on demand from here`)
+      stopSteps(TT) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${TT}: frames grow on demand from here`)
       }
-      shedFor(YY) {
+      shedFor(TT) {
         const {
-          shedding: rY
+          shedding: oT
         } = this;
-        if (null === rY) return;
+        if (null === oT) return;
         this.pendingSince = null;
-        const DY = this.call((() => rY.shed(YY)), null);
-        this.stopped || (null !== DY ? (this.sheds++, this.shedCap = DY, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), rY.gy(YY, this.sheds, this.details())) : uY(YY) && this.stopSteps("nothing is left to shed"))
+        const IT = this.call((() => oT.shed(TT)), null);
+        this.stopped || (null !== IT ? (this.sheds++, this.shedCap = IT, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), oT.Bc(TT, this.sheds, this.details())) : DT(TT) && this.stopSteps("nothing is left to shed"))
       }
-      call(YY, rY) {
-        if (this.stopped) return rY;
+      call(TT, oT) {
+        if (this.stopped) return oT;
         try {
-          return YY()
-        } catch (DY) {
-          return this.stop(), this.onError(DY), rY
+          return TT()
+        } catch (IT) {
+          return this.stop(), this.onError(IT), oT
         }
       }
     }
 
-    function BY(YY) {
-      const rY = (YY, rY) => `${YY}/${(0,FY.g)(rY)}`;
-      return `memory ${(0,FY.g)(YY.memoryBytes)} live ${(0,FY.g)(YY.liveBytes)} peak ${(0,FY.g)(YY.peakLiveBytes)} unused ${(0,FY.g)(YY.unusedBytes)} ceiling ${(0,FY.g)(YY.ceilingBytes)} MiB; grows upFront ${rY(YY.grows.upFront,YY.grownBytes.upFront)} ahead ${rY(YY.grows.ahead,YY.grownBytes.ahead)} inFrame ${rY(YY.grows.onDemandInFrame,YY.grownBytes.onDemandInFrame)} other ${rY(YY.grows.onDemand,YY.grownBytes.onDemand)}; refused reserves ${YY.reservesRefused} allocations ${YY.allocationsRefused}`
+    function vT(TT) {
+      const oT = (TT, oT) => `${TT}/${(0,iT.h)(oT)}`;
+      return `memory ${(0,iT.h)(TT.memoryBytes)} live ${(0,iT.h)(TT.liveBytes)} peak ${(0,iT.h)(TT.peakLiveBytes)} unused ${(0,iT.h)(TT.unusedBytes)} ceiling ${(0,iT.h)(TT.ceilingBytes)} MiB; grows upFront ${oT(TT.grows.upFront,TT.grownBytes.upFront)} ahead ${oT(TT.grows.ahead,TT.grownBytes.ahead)} inFrame ${oT(TT.grows.onDemandInFrame,TT.grownBytes.onDemandInFrame)} other ${oT(TT.grows.onDemand,TT.grownBytes.onDemand)}; refused reserves ${TT.reservesRefused} allocations ${TT.allocationsRefused}`
     }
   },
-  40074: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => gY,
-      f: () => aY,
-      h: () => iY,
-      i: () => uY
+  39760: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => BT,
+      e: () => FT,
+      g: () => xT,
+      i: () => DT
     });
-    var FY = DY(3316),
-      AY = DY(4376),
-      IY = DY(40082),
-      RY = DY(40090),
-      OY = DY(39904);
-    const gY = 395,
-      aY = 2147483648,
-      vY = new Uint8Array(0);
-    class uY extends Error {
+    var iT = IT(3280),
+      zT = IT(4276),
+      kT = IT(39762),
+      WT = IT(39768),
+      XT = IT(39579);
+    const BT = 395,
+      FT = 2147483648,
+      ST = new Uint8Array(0);
+    class DT extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class sY extends Error {
+    class LT extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class iY {
-      constructor(YY, rY, DY) {
-        var FY, AY, RY, OY;
-        let gY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = YY, this.build = rY, this.onFailure = DY, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.Mi = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (FY = gY.fetchFile) && void 0 !== FY ? FY : YY => (0, IY.j)(YY), this.onWritten = null !== (AY = gY.onWritten) && void 0 !== AY ? AY : null, this.onTaken = null !== (RY = gY.onTaken) && void 0 !== RY ? RY : null, this.onPackFileFailed = null !== (OY = gY.onPackFileFailed) && void 0 !== OY ? OY : null, this.startupLeft = new Set(YY.startup);
-        for (const IY of YY.startup) this.request(IY)
+    class xT {
+      constructor(TT, oT, IT) {
+        var iT, zT, WT, XT;
+        let BT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = TT, this.build = oT, this.onFailure = IT, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.qx = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (iT = BT.fetchFile) && void 0 !== iT ? iT : TT => (0, kT.j)(TT), this.onWritten = null !== (zT = BT.onWritten) && void 0 !== zT ? zT : null, this.onTaken = null !== (WT = BT.onTaken) && void 0 !== WT ? WT : null, this.onPackFileFailed = null !== (XT = BT.onPackFileFailed) && void 0 !== XT ? XT : null, this.startupLeft = new Set(TT.startup);
+        for (const kT of TT.startup) this.request(kT)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2196,361 +2196,361 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(YY) {
-        return this.drawn.get(YY)
+      drawnUrl(TT) {
+        return this.drawn.get(TT)
       }
-      request(YY) {
-        const rY = this.pending.get(YY);
-        if (!0 === (null === rY || void 0 === rY ? void 0 : rY.ask)) return;
-        const DY = this.Ei(YY, !0);
-        DY.recheck = void 0 !== rY;
-        const FY = this.drawn.get(YY);
-        if (void 0 !== FY) return DY.ja = !0, DY.recheck = !0, void this.fetch(YY, DY, FY);
-        this.fetchWanted(YY, DY)
+      request(TT) {
+        const oT = this.pending.get(TT);
+        if (!0 === (null === oT || void 0 === oT ? void 0 : oT.ask)) return;
+        const IT = this.hx(TT, !0);
+        IT.recheck = void 0 !== oT;
+        const iT = this.drawn.get(TT);
+        if (void 0 !== iT) return IT.kS = !0, IT.recheck = !0, void this.fetch(TT, IT, iT);
+        this.fetchWanted(TT, IT)
       }
       async refresh() {
-        const YY = ++this.refreshes,
-          rY = new Set;
-        for (const RY of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const YY of RY) 0 === (YY & IY.g) && rY.add(YY);
-        const DY = [...rY];
-        let FY;
+        const TT = ++this.refreshes,
+          oT = new Set;
+        for (const WT of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const TT of WT) 0 === (TT & kT.h) && oT.add(TT);
+        const IT = [...oT];
+        let iT;
         try {
-          FY = await Promise.all(DY.map((YY => this.wanted(YY))))
+          iT = await Promise.all(IT.map((TT => this.wanted(TT))))
         } catch {
           return null
         }
-        if (YY !== this.refreshes) return null;
-        const AY = {
+        if (TT !== this.refreshes) return null;
+        const zT = {
           resent: 0,
           refetched: 0,
-          delivered: DY.filter((YY => this.drawn.has(YY))).length
+          delivered: IT.filter((TT => this.drawn.has(TT))).length
         };
-        return DY.forEach(((YY, rY) => {
+        return IT.forEach(((TT, oT) => {
           const {
-            url: DY,
-            inPlaceOf: IY
-          } = FY[rY], RY = this.pending.get(YY);
-          if (void 0 !== RY) {
-            if (RY.ja || void 0 === RY.url) return void(RY.recheck = !0);
-            if (RY.url === DY) return;
-            AY.refetched++;
-            const rY = this.Ei(YY, RY.ask);
-            return rY.recheck = RY.recheck, void this.fetch(YY, rY, DY, IY)
+            url: IT,
+            inPlaceOf: kT
+          } = iT[oT], WT = this.pending.get(TT);
+          if (void 0 !== WT) {
+            if (WT.kS || void 0 === WT.url) return void(WT.recheck = !0);
+            if (WT.url === IT) return;
+            zT.refetched++;
+            const oT = this.hx(TT, WT.ask);
+            return oT.recheck = WT.recheck, void this.fetch(TT, oT, IT, kT)
           }
-          const OY = this.written.get(YY);
-          void 0 === OY ? this.drawn.get(YY) !== (null !== DY && void 0 !== DY ? DY : void 0) && (AY.resent++, this.fetch(YY, this.Ei(YY, !1), DY, IY)) : OY.url !== (null !== DY && void 0 !== DY ? DY : "") && (OY.attempt.recheck = !0)
-        })), AY
+          const XT = this.written.get(TT);
+          void 0 === XT ? this.drawn.get(TT) !== (null !== IT && void 0 !== IT ? IT : void 0) && (zT.resent++, this.fetch(TT, this.hx(TT, !1), IT, kT)) : XT.url !== (null !== IT && void 0 !== IT ? IT : "") && (XT.attempt.recheck = !0)
+        })), zT
       }
-      taken(YY, rY) {
-        const DY = new Set,
-          FY = new Set;
-        for (const AY of Array.from(rY)) 0 === (AY & aY) ? DY.add(AY) : FY.add((AY & ~aY) >>> 0);
-        for (const [AY, IY] of this.written) IY.seq > YY || (this.written.delete(AY), DY.has(IY.seq) ? this.refusedFile(AY, IY) : this.takenFile(AY, IY, !IY.empty && !FY.has(IY.seq)))
+      taken(TT, oT) {
+        const IT = new Set,
+          iT = new Set;
+        for (const zT of Array.from(oT)) 0 === (zT & FT) ? IT.add(zT) : iT.add((zT & ~FT) >>> 0);
+        for (const [zT, kT] of this.written) kT.seq > TT || (this.written.delete(zT), IT.has(kT.seq) ? this.refusedFile(zT, kT) : this.takenFile(zT, kT, !kT.empty && !iT.has(kT.seq)))
       }
-      takenFile(YY, rY, DY) {
+      takenFile(TT, oT, IT) {
         const {
-          attempt: FY
-        } = rY;
-        if (DY) {
-          var AY;
-          this.drawn.set(YY, rY.url), this.undrawn.delete(YY), void 0 !== FY.inPlaceOf ? this.refusedPack.set(YY, FY.inPlaceOf) : FY.ja || this.refusedPack.delete(YY), null === (AY = this.onTaken) || void 0 === AY || AY.call(this, YY, !0);
-          const DY = this.pending.get(YY);
-          if (!0 === (null === DY || void 0 === DY ? void 0 : DY.ja) && DY.url !== rY.url) {
-            const DY = this.Ei(YY, !0);
-            DY.ja = !0, DY.recheck = !0, this.fetch(YY, DY, rY.url)
+          attempt: iT
+        } = oT;
+        if (IT) {
+          var zT;
+          this.drawn.set(TT, oT.url), this.undrawn.delete(TT), void 0 !== iT.inPlaceOf ? this.refusedPack.set(TT, iT.inPlaceOf) : iT.kS || this.refusedPack.delete(TT), null === (zT = this.onTaken) || void 0 === zT || zT.call(this, TT, !0);
+          const IT = this.pending.get(TT);
+          if (!0 === (null === IT || void 0 === IT ? void 0 : IT.kS) && IT.url !== oT.url) {
+            const IT = this.hx(TT, !0);
+            IT.kS = !0, IT.recheck = !0, this.fetch(TT, IT, oT.url)
           }
         } else {
-          var IY;
-          this.drawn.has(YY) || this.undrawn.add(YY), null === (IY = this.onTaken) || void 0 === IY || IY.call(this, YY, !1)
+          var kT;
+          this.drawn.has(TT) || this.undrawn.add(TT), null === (kT = this.onTaken) || void 0 === kT || kT.call(this, TT, !1)
         }
-        FY.recheck && this.resendIfChanged(YY)
+        iT.recheck && this.resendIfChanged(TT)
       }
-      refusedFile(YY, rY) {
-        var DY, FY;
-        if (null === (DY = this.onTaken) || void 0 === DY || DY.call(this, YY, !1), this.refusedPack.set(YY, rY.url), this.pending.has(YY)) return void(null === (FY = this.onPackFileFailed) || void 0 === FY || FY.call(this, YY, yY(rY.url)));
-        const AY = this.Ei(YY, rY.attempt.ask);
-        AY.recheck = rY.attempt.recheck, this.afterRefusal(YY, AY, rY.url)
+      refusedFile(TT, oT) {
+        var IT, iT;
+        if (null === (IT = this.onTaken) || void 0 === IT || IT.call(this, TT, !1), this.refusedPack.set(TT, oT.url), this.pending.has(TT)) return void(null === (iT = this.onPackFileFailed) || void 0 === iT || iT.call(this, TT, cT(oT.url)));
+        const zT = this.hx(TT, oT.attempt.ask);
+        zT.recheck = oT.attempt.recheck, this.afterRefusal(TT, zT, oT.url)
       }
-      async afterRefusal(YY, rY, DY) {
-        var FY;
-        let AY;
+      async afterRefusal(TT, oT, IT) {
+        var iT;
+        let zT;
         try {
-          AY = await this.wanted(YY)
-        } catch (IY) {
-          return void(this.pending.get(YY) === rY && this.giveUp(YY, rY, DY, IY))
+          zT = await this.wanted(TT)
+        } catch (kT) {
+          return void(this.pending.get(TT) === oT && this.giveUp(TT, oT, IT, kT))
         }
-        this.pending.get(YY) === rY && (AY.inPlaceOf !== DY ? rY.ask || (null !== (FY = AY.url) && void 0 !== FY ? FY : void 0) !== this.drawn.get(YY) ? this.fetch(YY, rY, AY.url, AY.inPlaceOf) : this.pending.delete(YY) : this.fallBack(YY, rY, DY, yY(DY)))
+        this.pending.get(TT) === oT && (zT.inPlaceOf !== IT ? oT.ask || (null !== (iT = zT.url) && void 0 !== iT ? iT : void 0) !== this.drawn.get(TT) ? this.fetch(TT, oT, zT.url, zT.inPlaceOf) : this.pending.delete(TT) : this.fallBack(TT, oT, IT, cT(IT)))
       }
-      Ei(YY, rY) {
-        const DY = {
+      hx(TT, oT) {
+        const IT = {
           url: void 0,
-          ask: rY,
-          ja: !1,
+          ask: oT,
+          kS: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(YY, DY);
-        for (let FY = this.ready.length - 1; FY >= 0; FY--) this.ready[FY].file === YY && this.ready.splice(FY, 1);
-        return DY
+        this.pending.set(TT, IT);
+        for (let iT = this.ready.length - 1; iT >= 0; iT--) this.ready[iT].file === TT && this.ready.splice(iT, 1);
+        return IT
       }
-      async wanted(YY) {
-        const rY = await this.files.url(YY);
-        return null !== rY && this.refusedPack.get(YY) === rY ? {
-          url: await this.files.shippedUrl(YY),
-          inPlaceOf: rY
+      async wanted(TT) {
+        const oT = await this.files.url(TT);
+        return null !== oT && this.refusedPack.get(TT) === oT ? {
+          url: await this.files.shippedUrl(TT),
+          inPlaceOf: oT
         } : {
-          url: rY,
+          url: oT,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(YY, rY) {
-        const DY = this.files.url(YY);
-        DY instanceof Promise ? DY.then((DY => {
-          this.fetchFound(YY, rY, DY)
-        }), (DY => {
-          this.pending.get(YY) === rY && this.giveUp(YY, rY, "", DY)
-        })) : this.fetchFound(YY, rY, DY)
+      fetchWanted(TT, oT) {
+        const IT = this.files.url(TT);
+        IT instanceof Promise ? IT.then((IT => {
+          this.fetchFound(TT, oT, IT)
+        }), (IT => {
+          this.pending.get(TT) === oT && this.giveUp(TT, oT, "", IT)
+        })) : this.fetchFound(TT, oT, IT)
       }
-      fetchFound(YY, rY, DY) {
-        null !== DY && this.refusedPack.get(YY) === DY ? Promise.resolve(this.files.shippedUrl(YY)).then((FY => {
-          this.fetch(YY, rY, FY, DY)
-        }), (FY => {
-          this.pending.get(YY) === rY && this.giveUp(YY, rY, DY, FY)
-        })) : this.fetch(YY, rY, DY)
+      fetchFound(TT, oT, IT) {
+        null !== IT && this.refusedPack.get(TT) === IT ? Promise.resolve(this.files.shippedUrl(TT)).then((iT => {
+          this.fetch(TT, oT, iT, IT)
+        }), (iT => {
+          this.pending.get(TT) === oT && this.giveUp(TT, oT, IT, iT)
+        })) : this.fetch(TT, oT, IT)
       }
-      fetch(YY, rY, DY, FY) {
-        this.pending.get(YY) === rY && (rY.url = DY, rY.inPlaceOf = FY, null !== DY ? this.load(YY, rY, DY) : this.buildFile(YY, rY, "", vY))
+      fetch(TT, oT, IT, iT) {
+        this.pending.get(TT) === oT && (oT.url = IT, oT.inPlaceOf = iT, null !== IT ? this.load(TT, oT, IT) : this.buildFile(TT, oT, "", ST))
       }
-      load(YY, rY, DY) {
-        const FY = this.Mi.get(YY);
-        (null === FY || void 0 === FY ? void 0 : FY.url) !== DY ? this.fetchFile(DY).then((FY => {
-          var AY, IY;
-          this.pending.get(YY) === rY && (this.keptTotal += FY.byteLength - (null !== (AY = null === (IY = this.Mi.get(YY)) || void 0 === IY ? void 0 : IY.glb.byteLength) && void 0 !== AY ? AY : 0), this.Mi.set(YY, {
-            url: DY,
-            glb: FY
-          }), this.buildFile(YY, rY, DY, FY))
-        }), (FY => {
-          this.pending.get(YY) === rY && this.fallBack(YY, rY, DY, FY)
-        })) : this.buildFile(YY, rY, DY, FY.glb)
+      load(TT, oT, IT) {
+        const iT = this.qx.get(TT);
+        (null === iT || void 0 === iT ? void 0 : iT.url) !== IT ? this.fetchFile(IT).then((iT => {
+          var zT, kT;
+          this.pending.get(TT) === oT && (this.keptTotal += iT.byteLength - (null !== (zT = null === (kT = this.qx.get(TT)) || void 0 === kT ? void 0 : kT.glb.byteLength) && void 0 !== zT ? zT : 0), this.qx.set(TT, {
+            url: IT,
+            glb: iT
+          }), this.buildFile(TT, oT, IT, iT))
+        }), (iT => {
+          this.pending.get(TT) === oT && this.fallBack(TT, oT, IT, iT)
+        })) : this.buildFile(TT, oT, IT, iT.glb)
       }
-      buildFile(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const RY = FY.byteLength > 0 && (0, IY.l)(DY) ? (YY | IY.e) >>> 0 : YY;
-        this.queueRecord(YY, rY, DY, FY, this.build(RY, FY), AY)
+      buildFile(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const WT = iT.byteLength > 0 && (0, kT.n)(IT) ? (TT | kT.d) >>> 0 : TT;
+        this.queueRecord(TT, oT, IT, iT, this.build(WT, iT), zT)
       }
-      queueRecord(YY, rY, DY, FY, IY, OY) {
-        IY.then((IY => {
-          if (this.pending.get(YY) !== rY) return;
-          if (AY.r + (0, AY.ee)(IY.byteLength) > AY.Bc) return void this.ringRefused(YY, rY, DY, new uY(`${QY(DY)}'s record is ${IY.byteLength-RY.e} bytes, past the cmd ring's ${AY.Bc}`), OY);
-          const gY = {
-            file: YY,
-            url: DY,
-            payload: IY,
-            glb: FY,
-            attempt: rY
+      queueRecord(TT, oT, IT, iT, kT, XT) {
+        kT.then((kT => {
+          if (this.pending.get(TT) !== oT) return;
+          if (zT.t + (0, zT.se)(kT.byteLength) > zT.Hc) return void this.ringRefused(TT, oT, IT, new DT(`${KT(IT)}'s record is ${kT.byteLength-WT.e} bytes, past the cmd ring's ${zT.Hc}`), XT);
+          const BT = {
+            file: TT,
+            url: IT,
+            payload: kT,
+            glb: iT,
+            attempt: oT
           };
-          OY ? this.ready.unshift(gY) : this.ready.push(gY)
+          XT ? this.ready.unshift(BT) : this.ready.push(BT)
         }))
       }
-      async fallBack(YY, rY, DY, FY) {
-        var AY;
-        let IY = null,
-          RY = FY;
+      async fallBack(TT, oT, IT, iT) {
+        var zT;
+        let kT = null,
+          WT = iT;
         try {
-          IY = await this.files.shippedUrl(YY)
-        } catch (OY) {
-          RY = OY
+          kT = await this.files.shippedUrl(TT)
+        } catch (XT) {
+          WT = XT
         }
-        this.pending.get(YY) === rY && (null !== IY && IY !== DY ? (null === (AY = this.onPackFileFailed) || void 0 === AY || AY.call(this, YY, FY), rY.ask || this.drawn.get(YY) !== IY ? (rY.url = IY, rY.inPlaceOf = DY, this.load(YY, rY, IY)) : this.pending.delete(YY)) : this.giveUp(YY, rY, DY, RY))
+        this.pending.get(TT) === oT && (null !== kT && kT !== IT ? (null === (zT = this.onPackFileFailed) || void 0 === zT || zT.call(this, TT, iT), oT.ask || this.drawn.get(TT) !== kT ? (oT.url = kT, oT.inPlaceOf = IT, this.load(TT, oT, kT)) : this.pending.delete(TT)) : this.giveUp(TT, oT, IT, WT))
       }
-      ringRefused(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, IY.l)(DY) ? this.fallBack(YY, rY, DY, FY): this.giveUp(YY, rY, DY, FY, AY)
+      ringRefused(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, kT.n)(IT) ? this.fallBack(TT, oT, IT, iT): this.giveUp(TT, oT, IT, iT, zT)
       }
-      giveUp(YY, rY, DY, AY) {
-        let IY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(TT, oT, IT, zT) {
+        let kT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: YY,
-          url: QY(DY),
-          error: AY,
-          startup: this.startupLeft.has(YY)
-        }), rY.ask || !this.drawn.has(YY) ? (0, FY.O)(AY) ? this.queueRecord(YY, rY, DY, vY, Promise.resolve((0, RY.n)(YY, (0, OY.f)(AY))), IY) : this.buildFile(YY, rY, DY, vY, IY) : this.pending.delete(YY)
+          file: TT,
+          url: KT(IT),
+          error: zT,
+          startup: this.startupLeft.has(TT)
+        }), oT.ask || !this.drawn.has(TT) ? (0, iT.Y)(zT) ? this.queueRecord(TT, oT, IT, ST, Promise.resolve((0, WT.p)(TT, (0, XT.h)(zT))), kT) : this.buildFile(TT, oT, IT, ST, kT) : this.pending.delete(TT)
       }
-      async resendIfChanged(YY) {
-        var rY;
-        if (0 !== (YY & IY.g)) return;
-        let DY;
+      async resendIfChanged(TT) {
+        var oT;
+        if (0 !== (TT & kT.h)) return;
+        let IT;
         try {
-          DY = await this.wanted(YY)
+          IT = await this.wanted(TT)
         } catch {
           return
-        }(null !== (rY = DY.url) && void 0 !== rY ? rY : void 0) === this.drawn.get(YY) || this.pending.has(YY) || this.written.has(YY) || this.fetch(YY, this.Ei(YY, !1), DY.url, DY.inPlaceOf)
+        }(null !== (oT = IT.url) && void 0 !== oT ? oT : void 0) === this.drawn.get(TT) || this.pending.has(TT) || this.written.has(TT) || this.fetch(TT, this.hx(TT, !1), IT.url, IT.inPlaceOf)
       }
-      drain(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === YY) return;
-        let DY = 0,
-          FY = 0;
-        for (; FY < this.ready.length && DY < 262144;) {
-          const OY = this.ready[FY];
-          if (this.written.has(OY.file)) {
-            FY++;
+      drain(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === TT) return;
+        let IT = 0,
+          iT = 0;
+        for (; iT < this.ready.length && IT < 262144;) {
+          const XT = this.ready[iT];
+          if (this.written.has(XT.file)) {
+            iT++;
             continue
           }
-          const vY = this.nextSeq;
-          new DataView(OY.payload.buffer, OY.payload.byteOffset, OY.payload.byteLength).setUint32(RY.h, vY, !0);
-          const sY = OY.attempt.ja && OY.glb.byteLength > 0 && this.drawn.get(OY.file) === OY.url;
-          if (YY(gY, sY ? 1 : 0, OY.payload)) {
-            if (this.nextSeq = vY >= aY - 1 ? 1 : vY + 1, this.ready.splice(FY, 1), DY += OY.payload.byteLength, this.pending.delete(OY.file), this.startupLeft.delete(OY.file), this.written.set(OY.file, {
-                seq: vY,
-                url: OY.url,
-                empty: 0 === OY.glb.byteLength,
-                attempt: OY.attempt
-              }), OY.glb.byteLength > 0) try {
-              var AY;
-              null === (AY = this.onWritten) || void 0 === AY || AY.call(this, OY.file, OY.glb)
-            } catch (IY) {
-              console.warn("ModelFeed: reading the file's images failed", IY)
+          const ST = this.nextSeq;
+          new DataView(XT.payload.buffer, XT.payload.byteOffset, XT.payload.byteLength).setUint32(WT.h, ST, !0);
+          const LT = XT.attempt.kS && XT.glb.byteLength > 0 && this.drawn.get(XT.file) === XT.url;
+          if (TT(BT, LT ? 1 : 0, XT.payload)) {
+            if (this.nextSeq = ST >= FT - 1 ? 1 : ST + 1, this.ready.splice(iT, 1), IT += XT.payload.byteLength, this.pending.delete(XT.file), this.startupLeft.delete(XT.file), this.written.set(XT.file, {
+                seq: ST,
+                url: XT.url,
+                empty: 0 === XT.glb.byteLength,
+                attempt: XT.attempt
+              }), XT.glb.byteLength > 0) try {
+              var zT;
+              null === (zT = this.onWritten) || void 0 === zT || zT.call(this, XT.file, XT.glb)
+            } catch (kT) {
+              console.warn("ModelFeed: reading the file's images failed", kT)
             }
           } else {
-            if (null === rY || 0 === OY.glb.byteLength || rY(OY.payload.byteLength)) return;
-            this.ready.splice(FY, 1);
-            const YY = new uY(`${QY(OY.url)}'s record is ${OY.payload.byteLength-RY.e} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(OY.file, OY.attempt, OY.url, YY, !0)
+            if (null === oT || 0 === XT.glb.byteLength || oT(XT.payload.byteLength)) return;
+            this.ready.splice(iT, 1);
+            const TT = new DT(`${KT(XT.url)}'s record is ${XT.payload.byteLength-WT.e} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(XT.file, XT.attempt, XT.url, TT, !0)
           }
         }
       }
     }
 
-    function yY(YY) {
-      return new sY(`presentation refused ${QY(YY)}`)
+    function cT(TT) {
+      return new LT(`presentation refused ${KT(TT)}`)
     }
 
-    function QY(YY) {
-      return YY.startsWith("data:") ? `${YY.slice(0,Math.min(Math.max(YY.indexOf(","),5),64))},...` : YY
+    function KT(TT) {
+      return TT.startsWith("data:") ? `${TT.slice(0,Math.min(Math.max(TT.indexOf(","),5),64))},...` : TT
     }
   },
-  40082: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => RY,
-      g: () => IY,
-      j: () => vY,
-      l: () => OY,
-      n: () => aY,
-      r: () => gY
+  39762: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT,
+      h: () => kT,
+      j: () => ST,
+      n: () => XT,
+      p: () => FT,
+      t: () => BT
     });
-    var FY = DY(3316),
-      AY = DY(2795);
-    const IY = 2147483648,
-      RY = 1073741824;
+    var iT = IT(3280),
+      zT = IT(2765);
+    const kT = 2147483648,
+      WT = 1073741824;
 
-    function OY(YY) {
-      return YY.startsWith("data:")
+    function XT(TT) {
+      return TT.startsWith("data:")
     }
 
-    function gY(YY) {
+    function BT(TT) {
       let {
-        onTableFailed: rY,
-        packUrl: DY
+        onTableFailed: oT,
+        packUrl: IT
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const FY = aY();
-      FY.catch((YY => {
-        null === rY || void 0 === rY || rY(YY)
+      const iT = FT();
+      iT.catch((TT => {
+        null === oT || void 0 === oT || oT(TT)
       }));
-      const AY = async rY => (await FY).fileUrl((rY & ~IY) >>> 0, YY);
+      const zT = async oT => (await iT).fileUrl((oT & ~kT) >>> 0, TT);
       return {
         startup: [],
-        url: async YY => {
-          if (DY && 0 === (YY & IY)) {
-            const rY = await FY,
-              AY = rY.filePackName(YY),
-              IY = null === AY || "lifeform" === rY.fileSource(YY) ? null : DY(AY);
-            if (null !== IY) return IY
+        url: async TT => {
+          if (IT && 0 === (TT & kT)) {
+            const oT = await iT,
+              zT = oT.filePackName(TT),
+              kT = null === zT || "lifeform" === oT.fileSource(TT) ? null : IT(zT);
+            if (null !== kT) return kT
           }
-          return AY(YY)
+          return zT(TT)
         },
-        shippedUrl: AY
+        shippedUrl: zT
       }
     }
 
-    function aY() {
-      return DY.e(41).then((() => DY(42424)))
+    function FT() {
+      return IT.e(41).then((() => IT(42170)))
     }
-    async function vY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return YY.startsWith("data:") ? (0, AY.e)(YY.slice(YY.indexOf(",") + 1), rY) : (0, FY.D)(YY, {
-        spare: rY
+    async function ST(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return TT.startsWith("data:") ? (0, zT.e)(TT.slice(TT.indexOf(",") + 1), oT) : (0, iT.K)(TT, {
+        spare: oT
       })
     }
   },
-  40090: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => aY,
-      h: () => vY,
-      k: () => iY,
-      l: () => oY,
-      n: () => yY,
-      q: () => sY,
-      t: () => QY
+  39768: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => FT,
+      h: () => ST,
+      i: () => xT,
+      l: () => MT,
+      p: () => cT,
+      t: () => LT,
+      w: () => KT
     });
-    const FY = 826427981,
-      AY = 1,
-      IY = 2,
-      RY = 44,
-      OY = 46,
-      gY = 58,
-      aY = 8,
-      vY = 4;
+    const iT = 826427981,
+      zT = 1,
+      kT = 2,
+      WT = 44,
+      XT = 46,
+      BT = 58,
+      FT = 8,
+      ST = 4;
 
-    function uY(YY, rY, DY) {
-      const AY = (new TextEncoder).encode(DY),
-        IY = aY + 4 * (rY.length + 2),
-        RY = new Uint8Array(IY + (AY.byteLength + 3 & -4)),
-        OY = new DataView(RY.buffer);
-      return OY.setUint32(0, YY, !0), OY.setUint32(aY, FY, !0), rY.forEach(((YY, rY) => {
-        OY.setUint32(aY + 4 * (rY + 1), YY, !0)
-      })), OY.setUint32(IY - 4, AY.byteLength, !0), RY.set(AY, IY), RY
+    function DT(TT, oT, IT) {
+      const zT = (new TextEncoder).encode(IT),
+        kT = FT + 4 * (oT.length + 2),
+        WT = new Uint8Array(kT + (zT.byteLength + 3 & -4)),
+        XT = new DataView(WT.buffer);
+      return XT.setUint32(0, TT, !0), XT.setUint32(FT, iT, !0), oT.forEach(((TT, oT) => {
+        XT.setUint32(FT + 4 * (oT + 1), TT, !0)
+      })), XT.setUint32(kT - 4, zT.byteLength, !0), WT.set(zT, kT), WT
     }
 
-    function sY(YY, rY) {
-      return uY(YY, [IY], rY)
+    function LT(TT, oT) {
+      return DT(TT, [kT], oT)
     }
 
-    function iY(YY, rY) {
-      return uY(YY, [AY, OY], rY)
+    function xT(TT, oT) {
+      return DT(TT, [zT, XT], oT)
     }
 
-    function yY(YY, rY) {
-      return uY(YY, [AY, gY], rY)
+    function cT(TT, oT) {
+      return DT(TT, [zT, BT], oT)
     }
 
-    function QY(YY, rY) {
-      return uY(YY, [AY, RY], rY)
+    function KT(TT, oT) {
+      return DT(TT, [zT, WT], oT)
     }
 
-    function oY(YY) {
-      const rY = aY;
-      if (YY.byteLength < rY + 12) return !1;
-      const DY = new DataView(YY.buffer, YY.byteOffset, YY.byteLength);
-      return DY.getUint32(rY, !0) === FY && DY.getUint32(rY + 4, !0) === AY && DY.getUint32(rY + 8, !0) === RY
+    function MT(TT) {
+      const oT = FT;
+      if (TT.byteLength < oT + 12) return !1;
+      const IT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
+      return IT.getUint32(oT, !0) === iT && IT.getUint32(oT + 4, !0) === zT && IT.getUint32(oT + 8, !0) === WT
     }
   },
-  40063: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => EY,
-      g: () => WY,
-      k: () => lY,
-      l: () => SY,
-      n: () => TY,
-      r: () => QY
+  39749: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => AT,
+      e: () => rT,
+      h: () => mT,
+      l: () => wT,
+      n: () => eT,
+      p: () => KT
     });
-    var FY = DY(4382),
-      AY = DY(39945);
-    const IY = 18,
-      RY = 19,
-      OY = 20,
-      gY = {
+    var iT = IT(4285),
+      zT = IT(39615);
+    const kT = 18,
+      WT = 19,
+      XT = 20,
+      BT = {
         1: "link",
         2: "draw",
         3: "draw base vertex",
@@ -2564,24 +2564,24 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [IY]: "retry linked",
-        [RY]: "fallback linked",
-        [OY]: "fallback failed",
+        [kT]: "retry linked",
+        [WT]: "fallback linked",
+        [XT]: "fallback failed",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function aY(YY, rY) {
-      return YY === IY ? "program retry" : YY === RY || YY === OY ? `program fallback ${rY}` : "program"
+    function FT(TT, oT) {
+      return TT === kT ? "program retry" : TT === WT || TT === XT ? `program fallback ${oT}` : "program"
     }
-    const vY = {
+    const ST = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain"
       },
-      uY = {
+      DT = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2594,14 +2594,14 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      sY = {
+      LT = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      iY = {
+      xT = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -2610,7 +2610,7 @@ export const modules = {
         6: "no wait parallel links",
         7: "view shown unheld"
       },
-      yY = {
+      cT = {
         1280: "invalid enum",
         1281: "invalid value",
         1282: "invalid operation",
@@ -2619,78 +2619,78 @@ export const modules = {
         37442: "context lost"
       };
 
-    function QY(YY) {
-      return String(YY).replace(/\d/g, (YY => String.fromCharCode(97 + Number(YY))))
+    function KT(TT) {
+      return String(TT).replace(/\d/g, (TT => String.fromCharCode(97 + Number(TT))))
     }
 
-    function oY(YY, rY) {
-      var DY;
-      return null !== (DY = YY[rY]) && void 0 !== DY ? DY : QY(rY)
+    function MT(TT, oT) {
+      var IT;
+      return null !== (IT = TT[oT]) && void 0 !== IT ? IT : KT(oT)
     }
 
-    function WY() {
-      return QY((0, AY.e)())
+    function rT() {
+      return KT((0, zT.c)())
     }
 
-    function EY(YY, rY) {
-      switch (YY) {
-        case FY.f.RenderSceneRowNotDrawn:
+    function AT(TT, oT) {
+      switch (TT) {
+        case iT.d.RenderSceneRowNotDrawn:
           return {
-            words: ` ${oY(uY,rY)}`, instance: String(rY), group: String(YY)
+            words: ` ${MT(DT,oT)}`, instance: String(oT), group: String(TT)
           };
-        case FY.f.RenderChunkMeshNotDrawn: {
-          const DY = 0 === (128 & rY) ? "" : " shortage",
-            FY = rY >>> 8;
+        case iT.d.RenderChunkMeshNotDrawn: {
+          const IT = 0 === (128 & oT) ? "" : " shortage",
+            iT = oT >>> 8;
           return {
-            words: ` ${oY(sY,127&rY)}${DY}${0===FY?"":` kind ${QY(FY)}`}`,
-            instance: String(rY),
-            group: String(YY)
+            words: ` ${MT(LT,127&oT)}${IT}${0===iT?"":` kind ${KT(iT)}`}`,
+            instance: String(oT),
+            group: String(TT)
           }
         }
-        case FY.f.RenderInternal: {
-          const DY = oY(vY, 255 & rY),
-            FY = rY >>> 8 & 255;
-          if (0 === FY) return {
-            words: ` ${DY}`,
-            instance: String(rY),
-            group: String(YY)
+        case iT.d.RenderInternal: {
+          const IT = MT(ST, 255 & oT),
+            iT = oT >>> 8 & 255;
+          if (0 === iT) return {
+            words: ` ${IT}`,
+            instance: String(oT),
+            group: String(TT)
           };
-          const AY = oY(gY, FY),
-            IY = rY >>> 16;
+          const zT = MT(BT, iT),
+            kT = oT >>> 16;
           return {
-            words: ` ${DY} ${AY} program ${QY(IY)}`,
-            instance: `${DY} ${AY}`,
-            group: aY(FY, DY),
+            words: ` ${IT} ${zT} program ${KT(kT)}`,
+            instance: `${IT} ${zT}`,
+            group: FT(iT, IT),
             gpuDetails: {
-              programFailure: AY,
-              program: String(IY)
+              programFailure: zT,
+              program: String(kT)
             }
           }
         }
-        case FY.f.RenderSerialLinks: {
-          const DY = oY(iY, rY);
+        case iT.d.RenderSerialLinks: {
+          const IT = MT(xT, oT);
           return {
-            words: ` ${DY}`,
-            instance: String(rY),
-            group: String(YY),
+            words: ` ${IT}`,
+            instance: String(oT),
+            group: String(TT),
             gpuDetails: {
-              serialLinks: DY
+              serialLinks: IT
             }
           }
         }
-        case FY.f.RenderGlErrorAfterRestore: {
-          const DY = oY(yY, 65535 & rY),
-            FY = rY >>> 16,
-            AY = 65535 !== FY;
+        case iT.d.RenderGlErrorAfterRestore: {
+          const IT = MT(cT, 65535 & oT),
+            iT = oT >>> 16,
+            zT = 65535 !== iT;
           return {
-            words: ` ${DY}${AY?` program ${QY(FY)}`:""}`,
-            instance: String(rY),
-            group: String(YY),
-            gpuDetails: AY ? {
-              glError: DY,
-              program: String(FY)
+            words: ` ${IT}${zT?` program ${KT(iT)}`:""}`,
+            instance: String(oT),
+            group: String(TT),
+            gpuDetails: zT ? {
+              glError: IT,
+              program: String(iT)
             } : {
-              glError: DY
+              glError: IT
             }
           }
         }
@@ -2698,107 +2698,107 @@ export const modules = {
           return null
       }
     }
-    const mY = 2,
-      VY = new Map;
+    const gT = 2,
+      hT = new Map;
 
-    function SY(YY) {
+    function wT(TT) {
       let {
-        group: rY,
-        instance: DY
-      } = YY, FY = VY.get(rY);
-      return void 0 === FY && (FY = [], VY.set(rY, FY)), !FY.includes(DY) && (FY.length >= mY || (FY.push(DY), !1))
+        group: oT,
+        instance: IT
+      } = TT, iT = hT.get(oT);
+      return void 0 === iT && (iT = [], hT.set(oT, iT)), !iT.includes(IT) && (iT.length >= gT || (iT.push(IT), !1))
     }
 
-    function lY() {
-      return VY.size > 0
+    function mT() {
+      return hT.size > 0
     }
 
-    function TY() {
-      VY.clear()
+    function eT() {
+      hT.clear()
     }
   },
-  39982: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => WY,
-      g: () => EY,
-      h: () => oY,
-      j: () => lY
+  39674: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => rT,
+      e: () => AT,
+      f: () => MT,
+      g: () => mT
     });
-    var FY = DY(6208),
-      AY = DY(25),
-      IY = DY(3873),
-      RY = DY(4382),
-      OY = DY(6200),
-      gY = DY(39986);
+    var iT = IT(6143),
+      zT = IT(16),
+      kT = IT(3862),
+      WT = IT(4285),
+      XT = IT(6141),
+      BT = IT(39679);
 
-    function aY(YY, rY) {
-      const DY = (0, OY.e)(rY.variants);
-      return YY.setShaderPack(DY.variantFlags, DY.hooks, DY.moduleCodes, (0, gY.t)(rY.layers), gY.m[rY.Qa], rY.keepCircleShadows)
+    function FT(TT, oT) {
+      const IT = (0, XT.c)(oT.variants);
+      return TT.setShaderPack(IT.variantFlags, IT.hooks, IT.moduleCodes, (0, BT.z)(oT.layers), BT.l[oT.QF], oT.keepCircleShadows)
     }
-    const vY = 0,
-      uY = 1,
-      sY = 2,
-      iY = "shaderPack:failedToCompile",
-      yY = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
-      QY = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
+    const ST = 0,
+      DT = 1,
+      LT = 2,
+      xT = "shaderPack:failedToCompile",
+      cT = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
+      KT = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
 
-    function oY(YY, rY) {
-      var DY;
-      const FY = null !== (DY = null === YY || void 0 === YY ? void 0 : YY.reason) && void 0 !== DY ? DY : "none";
-      return yY.has(FY) ? {
-        messageKey: rY ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function MT(TT, oT) {
+      var IT;
+      const iT = null !== (IT = null === TT || void 0 === TT ? void 0 : TT.reason) && void 0 !== IT ? IT : "none";
+      return cT.has(iT) ? {
+        messageKey: oT ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === FY && "override" === (null === YY || void 0 === YY ? void 0 : YY.source) ? {
+      } : "not_requested" === iT && "override" === (null === TT || void 0 === TT ? void 0 : TT.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: QY.has(FY) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: KT.has(iT) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    const WY = {
+    const rT = {
       messageKey: "shaderPack:failedDeviceGraphics",
       noAdapter: !1
     };
-    class EY extends Error {
-      constructor(YY) {
-        super(`the shader pack can't run in this game: ${YY}`), this.messageKey = YY, this.name = "ShaderPackJoinError"
+    class AT extends Error {
+      constructor(TT) {
+        super(`the shader pack can't run in this game: ${TT}`), this.messageKey = TT, this.name = "ShaderPackJoinError"
       }
     }
-    const mY = "strict";
-    class VY {
-      constructor(YY) {
-        this.deps = YY, this.pagePack = void 0, this.loaded = null, this.Qa = mY, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = YY.load().catch((rY => (YY.warn("the shader pack could not load: the game draws without it", rY), {
+    const gT = "strict";
+    class hT {
+      constructor(TT) {
+        this.deps = TT, this.pagePack = void 0, this.loaded = null, this.QF = gT, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = TT.load().catch((oT => (TT.warn("the shader pack could not load: the game draws without it", oT), {
           status: "none"
-        }))).then((YY => (this.loaded = YY, "active" === YY.status && (this.handOverToPreviews(YY), null !== YY.harnessPolicy && (this.Qa = YY.harnessPolicy, this.handOver())), YY)))
+        }))).then((TT => (this.loaded = TT, "active" === TT.status && (this.handOverToPreviews(TT), null !== TT.harnessPolicy && (this.QF = TT.harnessPolicy, this.handOver())), TT)))
       }
-      async join(YY) {
+      async join(TT) {
         this.leave();
-        const rY = this.game,
-          [DY, AY] = await Promise.all([this.pagePack, this.policyOf(YY)]);
-        if (rY !== this.game || "none" === DY.status) return null;
-        const IY = "active" === DY.status ? DY.pack.variants : DY.variants,
-          RY = (0, FY.h)(IY, AY);
-        if (RY && "active" === DY.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (RY) {
-          const YY = this.cantRun(DY, AY);
-          if (null !== YY) return YY
-        } else if ("blocked" === DY.status || null === this.deps.core) return null;
-        return this.Qa = AY, this.handOver(), RY && this.refused ? iY : (this.joined = !0, this.offInThisGame = !RY, null)
+        const oT = this.game,
+          [IT, zT] = await Promise.all([this.pagePack, this.policyOf(TT)]);
+        if (oT !== this.game || "none" === IT.status) return null;
+        const kT = "active" === IT.status ? IT.pack.variants : IT.variants,
+          WT = (0, iT.h)(kT, zT);
+        if (WT && "active" === IT.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (WT) {
+          const TT = this.cantRun(IT, zT);
+          if (null !== TT) return TT
+        } else if ("blocked" === IT.status || null === this.deps.core) return null;
+        return this.QF = zT, this.handOver(), WT && this.refused ? xT : (this.joined = !0, this.offInThisGame = !WT, null)
       }
-      async replay(YY) {
-        const rY = await this.join(YY);
-        null === rY ? this.playable() : this.deps.failInGame(rY)
+      async replay(TT) {
+        const oT = await this.join(TT);
+        null === oT ? this.playable() : this.deps.failInGame(oT)
       }
-      cantRun(YY, rY) {
+      cantRun(TT, oT) {
         const {
-          core: DY,
-          noWebGpu: FY
+          core: IT,
+          noWebGpu: iT
         } = this.deps;
-        if ("blocked" === YY.status) {
-          return "shaderPack:failedUnchecked" === YY.messageKey && null === DY && FY.noAdapter ? FY.messageKey : YY.messageKey
+        if ("blocked" === TT.status) {
+          return "shaderPack:failedUnchecked" === TT.messageKey && null === IT && iT.noAdapter ? iT.messageKey : TT.messageKey
         }
-        return this.refused || this.failedPolicies.has(rY) ? iY : null
+        return this.refused || this.failedPolicies.has(oT) ? xT : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
@@ -2807,412 +2807,412 @@ export const modules = {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(iY) : (null !== this.couldntRun ? this.notify(IY.c, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.Qa) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(xT) : (null !== this.couldntRun ? this.notify(kT.e, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.QF) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(YY) {
+      coreErrors(TT) {
         for (const {
-            code: rY,
-            detail: DY
+            code: oT,
+            detail: IT
           }
-          of YY)
-          if (rY === RY.f.RenderShaderPackNotRun) switch (255 & DY) {
-            case vY:
+          of TT)
+          if (oT === WT.d.RenderShaderPackNotRun) switch (255 & IT) {
+            case ST:
               this.refused = !0, this.failed();
               break;
-            case uY:
-              this.failedPolicies.add(this.Qa), this.failed();
+            case DT:
+              this.failedPolicies.add(this.QF), this.failed();
               break;
-            case sY:
-              this.failedModelPolicies.add(this.Qa), this.playing && this.notifyModelFallback()
+            case LT:
+              this.failedModelPolicies.add(this.QF), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(iY) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(xT) : this.failedWhileJoining = !0)
       }
-      fail(YY) {
-        this.leave(), this.deps.failInGame(YY)
+      fail(TT) {
+        this.leave(), this.deps.failInGame(TT)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(YY, rY) {
-        const DY = this.game;
-        this.deps.notify(YY, (() => DY === this.game && this.joined), rY)
+      notify(TT, oT) {
+        const IT = this.game;
+        this.deps.notify(TT, (() => IT === this.game && this.joined), oT)
       }
       handOver() {
-        var YY;
+        var TT;
         const {
-          core: rY
+          core: oT
         } = this.deps;
-        null !== rY && "active" === (null === (YY = this.loaded) || void 0 === YY ? void 0 : YY.status) && (aY(rY, {
+        null !== oT && "active" === (null === (TT = this.loaded) || void 0 === TT ? void 0 : TT.status) && (FT(oT, {
           ...this.loaded.pack,
-          Qa: this.Qa
+          QF: this.QF
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(YY) {
+      handOverToPreviews(TT) {
         let {
-          pack: rY,
-          harnessPolicy: DY
-        } = YY;
+          pack: oT,
+          harnessPolicy: IT
+        } = TT;
         const {
-          previews: FY
+          previews: iT
         } = this.deps;
-        null !== FY && aY(FY, {
-          ...rY,
-          Qa: null !== DY && void 0 !== DY ? DY : mY
+        null !== iT && FT(iT, {
+          ...oT,
+          QF: null !== IT && void 0 !== IT ? IT : gT
         })
       }
-      policyOf(YY) {
-        return this.deps.policyOf(YY).catch((YY => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", YY), mY)))
+      policyOf(TT) {
+        return this.deps.policyOf(TT).catch((TT => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", TT), gT)))
       }
     }
-    const SY = "wasmShaderPackNotice";
+    const wT = "wasmShaderPackNotice";
 
-    function lY(YY, rY, DY, FY) {
-      return AY.g.subscribe(SY, (YY => {
+    function mT(TT, oT, IT, iT) {
+      return zT.h.subscribe(wT, (TT => {
         let {
-          translationKey: rY,
-          stillCurrent: DY,
-          reasonKey: FY
-        } = YY;
-        DY() && AY.g.vo("chat", (0, IY.f)(rY, FY))
-      })), new VY({
-        load: TY,
-        policyOf: eY,
-        core: YY,
-        previews: rY,
-        noWebGpu: DY,
-        notify: (YY, rY, DY) => {
-          const FY = {
-            translationKey: YY,
-            stillCurrent: rY,
-            reasonKey: DY
+          translationKey: oT,
+          stillCurrent: IT,
+          reasonKey: iT
+        } = TT;
+        IT() && zT.h.XM("chat", (0, kT.j)(oT, iT))
+      })), new hT({
+        load: eT,
+        policyOf: RT,
+        core: TT,
+        previews: oT,
+        noWebGpu: IT,
+        notify: (TT, oT, IT) => {
+          const iT = {
+            translationKey: TT,
+            stillCurrent: oT,
+            reasonKey: IT
           };
-          AY.g.vo(SY, FY, !0)
+          zT.h.XM(wT, iT, !0)
         },
-        failInGame: YY => {
-          AY.g.vo(IY.d, YY)
+        failInGame: TT => {
+          zT.h.XM(kT.h, TT)
         },
-        warn: FY
+        warn: iT
       })
     }
-    async function TY() {
+    async function eT() {
       const [{
-        shaderPackPage: YY,
-        harnessShaderPackMode: rY
+        shaderPackPage: TT,
+        harnessShaderPackMode: oT
       }, {
-        shaderPackTextures: FY
-      }] = await Promise.all([DY.e(130).then((() => DY(38553))), DY.e(131).then((() => DY(6194)))]), AY = await YY.load();
-      return "active" !== AY.status ? AY : {
+        shaderPackTextures: iT
+      }] = await Promise.all([IT.e(130).then((() => IT(38159))), IT.e(131).then((() => IT(6138)))]), zT = await TT.load();
+      return "active" !== zT.status ? zT : {
         status: "active",
         pack: {
-          variants: AY.pack.variants,
-          layers: FY().layers,
-          keepCircleShadows: AY.pack.keepCircleShadows
+          variants: zT.pack.variants,
+          layers: iT().layers,
+          keepCircleShadows: zT.pack.keepCircleShadows
         },
-        harnessPolicy: rY()
+        harnessPolicy: oT()
       }
     }
-    async function eY(YY) {
-      var rY;
+    async function RT(TT) {
+      var oT;
       const [{
-        harnessShaderPackMode: FY
+        harnessShaderPackMode: iT
       }, {
-        getShaderPackPolicy: AY
-      }] = await Promise.all([DY.e(130).then((() => DY(38553))), DY.e(89).then((() => DY(40254)))]);
-      return null !== (rY = FY()) && void 0 !== rY ? rY : AY(YY)
+        getShaderPackPolicy: zT
+      }] = await Promise.all([IT.e(130).then((() => IT(38159))), IT.e(89).then((() => IT(39953)))]);
+      return null !== (oT = iT()) && void 0 !== oT ? oT : zT(TT)
     }
   },
-  40098: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => OY,
-      h: () => oY,
-      i: () => gY,
-      j: () => aY,
-      m: () => vY,
-      p: () => sY
+  39779: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => XT,
+      d: () => MT,
+      h: () => BT,
+      l: () => FT,
+      o: () => ST,
+      s: () => LT
     });
-    var FY = DY(40104),
-      AY = DY(40109);
-    const IY = "atlas:",
-      RY = 3e4;
-    class OY extends Error {
-      constructor(YY, rY) {
-        super(`fetching ${YY} answered HTTP ${rY}`), this.url = YY, this.status = rY, this.name = "TerrainTextureFetchError"
+    var iT = IT(39781),
+      zT = IT(39783);
+    const kT = "atlas:",
+      WT = 3e4;
+    class XT extends Error {
+      constructor(TT, oT) {
+        super(`fetching ${TT} answered HTTP ${oT}`), this.url = TT, this.status = oT, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function gY(YY) {
-      if (!YY.startsWith(IY)) return null;
-      const rY = Number(YY.slice(IY.length));
-      return Number.isInteger(rY) && rY >= 0 ? rY : null
+    function BT(TT) {
+      if (!TT.startsWith(kT)) return null;
+      const oT = Number(TT.slice(kT.length));
+      return Number.isInteger(oT) && oT >= 0 ? oT : null
     }
-    async function aY() {
-      const YY = await DY.e(196).then((() => DY(33702)));
+    async function FT() {
+      const TT = await IT.e(196).then((() => IT(33287)));
       return {
-        atlasSheets: YY.blockAtlasUrls,
-        texture: rY => {
-          var DY, FY, IY;
-          return null !== (DY = null !== (FY = null !== (IY = YY.animatedBlockTextures[rY]) && void 0 !== IY ? IY : YY.rotatedBlockTextures[rY]) && void 0 !== FY ? FY : AY.e[rY]) && void 0 !== DY ? DY : null
+        atlasSheets: TT.blockAtlasUrls,
+        texture: oT => {
+          var IT, iT, kT;
+          return null !== (IT = null !== (iT = null !== (kT = TT.animatedBlockTextures[oT]) && void 0 !== kT ? kT : TT.rotatedBlockTextures[oT]) && void 0 !== iT ? iT : zT.b[oT]) && void 0 !== IT ? IT : null
         }
       }
     }
-    async function vY(YY) {
-      const rY = new AbortController,
-        DY = setTimeout((() => {
-          rY.abort(new DOMException(`${YY} took over ${RY} ms`, "TimeoutError"))
-        }), RY);
-      let FY;
+    async function ST(TT) {
+      const oT = new AbortController,
+        IT = setTimeout((() => {
+          oT.abort(new DOMException(`${TT} took over ${WT} ms`, "TimeoutError"))
+        }), WT);
+      let iT;
       try {
-        const DY = await fetch(YY, {
-          signal: rY.signal
+        const IT = await fetch(TT, {
+          signal: oT.signal
         });
-        if (!DY.ok) throw new OY(YY, DY.status);
-        FY = await DY.blob()
+        if (!IT.ok) throw new XT(TT, IT.status);
+        iT = await IT.blob()
       } finally {
-        clearTimeout(DY)
+        clearTimeout(IT)
       }
-      const AY = await createImageBitmap(FY, {
+      const zT = await createImageBitmap(iT, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return sY(AY)
+        return LT(zT)
       } finally {
-        AY.close()
+        zT.close()
       }
     }
-    const uY = 8192;
+    const DT = 8192;
 
-    function sY(YY) {
+    function LT(TT) {
       const {
-        width: rY,
-        height: DY
-      } = YY, AY = Math.max(1, Math.min(DY, uY)), IY = (0, FY.d)(rY, AY, {
+        width: oT,
+        height: IT
+      } = TT, zT = Math.max(1, Math.min(IT, DT)), kT = (0, iT.i)(oT, zT, {
         willReadFrequently: !0
       });
-      if (!IY) throw new Error("no 2D context to read the texture back");
-      IY.globalCompositeOperation = "copy";
-      const RY = new Uint8Array(rY * DY * 4);
-      for (let FY = 0; FY < DY; FY += AY) {
-        const OY = Math.min(AY, DY - FY);
-        IY.drawImage(YY, 0, FY, rY, OY, 0, 0, rY, OY), RY.set(IY.getImageData(0, 0, rY, OY).data, FY * rY * 4)
+      if (!kT) throw new Error("no 2D context to read the texture back");
+      kT.globalCompositeOperation = "copy";
+      const WT = new Uint8Array(oT * IT * 4);
+      for (let iT = 0; iT < IT; iT += zT) {
+        const XT = Math.min(zT, IT - iT);
+        kT.drawImage(TT, 0, iT, oT, XT, 0, 0, oT, XT), WT.set(kT.getImageData(0, 0, oT, XT).data, iT * oT * 4)
       }
       return {
-        width: rY,
-        height: DY,
-        pixels: RY
+        width: oT,
+        height: IT,
+        pixels: WT
       }
     }
-    async function iY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vY;
-      const FY = [],
-        AY = await Promise.all(YY.map((async YY => {
-          var AY, RY;
-          const OY = null !== (AY = null === (RY = rY.decoded) || void 0 === RY ? void 0 : RY.call(rY, YY)) && void 0 !== AY ? AY : null,
-            aY = null === OY ? function(YY, rY) {
-              if (YY.startsWith(IY)) {
-                var DY;
-                const FY = gY(YY);
-                return null === FY ? null : null !== (DY = rY.atlasSheets[FY]) && void 0 !== DY ? DY : null
+    async function xT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ST;
+      const iT = [],
+        zT = await Promise.all(TT.map((async TT => {
+          var zT, WT;
+          const XT = null !== (zT = null === (WT = oT.decoded) || void 0 === WT ? void 0 : WT.call(oT, TT)) && void 0 !== zT ? zT : null,
+            FT = null === XT ? function(TT, oT) {
+              if (TT.startsWith(kT)) {
+                var IT;
+                const iT = BT(TT);
+                return null === iT ? null : null !== (IT = oT.atlasSheets[iT]) && void 0 !== IT ? IT : null
               }
-              return rY.texture(YY)
-            }(YY, rY) : null,
-            vY = null !== OY && void 0 !== OY ? OY : null === aY ? null : DY(aY);
-          if (null === vY) return FY.push({
-            name: YY,
-            url: aY,
-            error: new Error(`no URL for terrain texture ${YY}`)
+              return oT.texture(TT)
+            }(TT, oT) : null,
+            ST = null !== XT && void 0 !== XT ? XT : null === FT ? null : IT(FT);
+          if (null === ST) return iT.push({
+            name: TT,
+            url: FT,
+            error: new Error(`no URL for terrain texture ${TT}`)
           }), null;
           try {
-            const rY = await vY;
-            if (rY.pixels.byteLength !== rY.width * rY.height * 4) throw new Error(`decoded ${rY.pixels.byteLength} bytes for ${rY.width}x${rY.height} texels`);
+            const oT = await ST;
+            if (oT.pixels.byteLength !== oT.width * oT.height * 4) throw new Error(`decoded ${oT.pixels.byteLength} bytes for ${oT.width}x${oT.height} texels`);
             return {
-              name: YY,
-              texture: rY
+              name: TT,
+              texture: oT
             }
-          } catch (uY) {
-            return FY.push({
-              name: YY,
-              url: aY,
-              error: uY
+          } catch (DT) {
+            return iT.push({
+              name: TT,
+              url: FT,
+              error: DT
             }), null
           }
         }))),
-        RY = AY.filter((YY => null !== YY)),
-        OY = new Uint32Array(2 * RY.length);
-      RY.forEach(((YY, rY) => {
+        WT = zT.filter((TT => null !== TT)),
+        XT = new Uint32Array(2 * WT.length);
+      WT.forEach(((TT, oT) => {
         let {
-          texture: DY
-        } = YY;
-        OY[2 * rY] = DY.width, OY[2 * rY + 1] = DY.height
+          texture: IT
+        } = TT;
+        XT[2 * oT] = IT.width, XT[2 * oT + 1] = IT.height
       }));
       return {
         handOver: {
-          names: RY.map((YY => {
+          names: WT.map((TT => {
             let {
-              name: rY
-            } = YY;
-            return rY
+              name: oT
+            } = TT;
+            return oT
           })),
-          textures: RY.map((YY => {
+          textures: WT.map((TT => {
             let {
-              texture: rY
-            } = YY;
-            return rY.pixels
+              texture: oT
+            } = TT;
+            return oT.pixels
           })),
-          sizes: OY
+          sizes: XT
         },
-        failures: FY
+        failures: iT
       }
     }
-    const yY = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const cT = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function QY() {}
-    class oY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yY,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = YY, this.retryMs = rY, this.keepBelow = DY, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function KT() {}
+    class MT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cT,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = TT, this.retryMs = oT, this.keepBelow = IT, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aY,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const FY = ++this.started,
-          AY = {
-            decode: DY.decode,
-            wholeAtlas: DY.wholeAtlas
+      async swap(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : FT,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const iT = ++this.started,
+          zT = {
+            decode: IT.decode,
+            wholeAtlas: IT.wholeAtlas
           };
-        return this.loadAndHandOver(rY, AY, YY, (() => {
-          var YY;
-          return FY < this.landed || !1 === (null === (YY = DY.wanted) || void 0 === YY ? void 0 : YY.call(DY))
+        return this.loadAndHandOver(oT, zT, TT, (() => {
+          var TT;
+          return iT < this.landed || !1 === (null === (TT = IT.wanted) || void 0 === TT ? void 0 : TT.call(IT))
         }), {
-          onTaken: (YY, DY) => {
-            this.landed = FY, this.current = {
-              mine: FY,
-              sources: rY,
-              load: AY,
-              Mi: YY,
-              failed: DY
+          onTaken: (TT, IT) => {
+            this.landed = iT, this.current = {
+              mine: iT,
+              sources: oT,
+              load: zT,
+              qx: TT,
+              failed: IT
             }
           }
         })
       }
-      restore(YY) {
-        var rY;
-        const DY = this.current;
-        if (null === DY) return Promise.resolve(null);
-        if ((null === (rY = this.restoring) || void 0 === rY ? void 0 : rY.mine) === DY.mine) return this.restoring.done;
-        const FY = {
-          mine: DY.mine,
-          done: this.restoreLanded(DY, YY).finally((() => {
-            this.restoring === FY && (this.restoring = null)
+      restore(TT) {
+        var oT;
+        const IT = this.current;
+        if (null === IT) return Promise.resolve(null);
+        if ((null === (oT = this.restoring) || void 0 === oT ? void 0 : oT.mine) === IT.mine) return this.restoring.done;
+        const iT = {
+          mine: IT.mine,
+          done: this.restoreLanded(IT, TT).finally((() => {
+            this.restoring === iT && (this.restoring = null)
           }))
         };
-        return this.restoring = FY, FY.done
+        return this.restoring = iT, iT.done
       }
-      async restoreLanded(YY, rY) {
-        const DY = () => this.landed !== YY.mine,
+      async restoreLanded(TT, oT) {
+        const IT = () => this.landed !== TT.mine,
           {
-            Mi: FY
-          } = YY;
-        if (null !== FY) return this.stopped() ? null : this.core.setTerrainTextures(FY.names, FY.textures, FY.sizes);
-        let AY = rY;
-        for (let IY = 0;; IY++) {
-          const rY = this.retryMs.at(IY),
-            FY = {
-              allOrNothingExcept: void 0 === rY ? void 0 : YY.failed
+            qx: iT
+          } = TT;
+        if (null !== iT) return this.stopped() ? null : this.core.setTerrainTextures(iT.names, iT.textures, iT.sizes);
+        let zT = oT;
+        for (let kT = 0;; kT++) {
+          const oT = this.retryMs.at(kT),
+            iT = {
+              allOrNothingExcept: void 0 === oT ? void 0 : TT.failed
             },
-            RY = await this.loadAndHandOver(YY.sources, YY.load, AY, DY, FY);
-          if (!1 !== RY || void 0 === rY || this.stopped()) return RY;
-          if (AY = QY, await new Promise((YY => {
-              setTimeout(YY, rY)
-            })), DY()) return null
+            WT = await this.loadAndHandOver(TT.sources, TT.load, zT, IT, iT);
+          if (!1 !== WT || void 0 === oT || this.stopped()) return WT;
+          if (zT = KT, await new Promise((TT => {
+              setTimeout(TT, oT)
+            })), IT()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(YY, rY, DY, FY) {
-        let AY = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(TT, oT, IT, iT) {
+        let zT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const IY = this.core.terrainTextureNames();
-        var RY;
-        if (0 === IY.length) return null === (RY = AY.onTaken) || void 0 === RY || RY.call(AY, null, new Set), !0;
-        let OY, aY;
+        const kT = this.core.terrainTextureNames();
+        var WT;
+        if (0 === kT.length) return null === (WT = zT.onTaken) || void 0 === WT || WT.call(zT, null, new Set), !0;
+        let XT, FT;
         try {
-          OY = await YY(), aY = await iY(IY, OY, rY.decode)
-        } catch (oY) {
-          return FY() ? null : (DY({
+          XT = await TT(), FT = await xT(kT, XT, oT.decode)
+        } catch (MT) {
+          return iT() ? null : (IT({
             name: null,
             url: null,
-            error: oY
+            error: MT
           }), !1)
         }
-        if (FY() || this.stopped()) return null;
-        for (const gY of aY.failures) DY(gY);
-        const vY = AY.allOrNothingExcept;
-        if (void 0 !== vY && aY.failures.some((YY => {
+        if (iT() || this.stopped()) return null;
+        for (const BT of FT.failures) IT(BT);
+        const ST = zT.allOrNothingExcept;
+        if (void 0 !== ST && FT.failures.some((TT => {
             let {
-              name: rY
-            } = YY;
-            return null === rY || !vY.has(rY)
-          })) || !0 === rY.wholeAtlas && aY.failures.some((YY => {
+              name: oT
+            } = TT;
+            return null === oT || !ST.has(oT)
+          })) || !0 === oT.wholeAtlas && FT.failures.some((TT => {
             let {
-              name: rY
-            } = YY;
-            return null === rY || null !== gY(rY)
+              name: oT
+            } = TT;
+            return null === oT || null !== BT(oT)
           }))) return !1;
         const {
-          handOver: uY
-        } = aY, sY = function(YY) {
-          return YY.textures.reduce(((YY, rY) => YY + rY.byteLength), 0)
-        }(uY) < this.keepBelow, yY = this.core.setTerrainTextures(uY.names, uY.textures, uY.sizes, sY ? void 0 : () => {
-          !async function(YY, rY) {
-            await rY;
+          handOver: DT
+        } = FT, LT = function(TT) {
+          return TT.textures.reduce(((TT, oT) => TT + oT.byteLength), 0)
+        }(DT) < this.keepBelow, cT = this.core.setTerrainTextures(DT.names, DT.textures, DT.sizes, LT ? void 0 : () => {
+          !async function(TT, oT) {
+            await oT;
             for (const {
-                buffer: FY
+                buffer: iT
               }
-              of YY) {
-              const YY = FY;
-              var DY;
-              if (!YY.detached) null === (DY = YY.transfer) || void 0 === DY || DY.call(YY, 0)
+              of TT) {
+              const TT = iT;
+              var IT;
+              if (!TT.detached) null === (IT = TT.transfer) || void 0 === IT || IT.call(TT, 0)
             }
-          }(uY.textures, OY.heldUntil)
+          }(DT.textures, XT.heldUntil)
         });
-        if (yY) {
-          var QY;
-          const YY = new Set(aY.failures.flatMap((YY => {
+        if (cT) {
+          var KT;
+          const TT = new Set(FT.failures.flatMap((TT => {
             let {
-              name: rY
-            } = YY;
-            return null === rY ? [] : [rY]
+              name: oT
+            } = TT;
+            return null === oT ? [] : [oT]
           })));
-          null === (QY = AY.onTaken) || void 0 === QY || QY.call(AY, sY ? uY : null, YY)
+          null === (KT = zT.onTaken) || void 0 === KT || KT.call(zT, LT ? DT : null, TT)
         }
-        return yY
+        return cT
       }
     }
   },
-  40118: (YY, rY, DY) => {
-    function FY(YY) {
-      return "fetch" === YY || "timeout" === YY || "integrity" === YY ? "download" : "browser"
+  39786: (TT, oT, IT) => {
+    function iT(TT) {
+      return "fetch" === TT || "timeout" === TT || "integrity" === TT ? "download" : "browser"
     }
-    DY.d(rY, {
-      e: () => AY,
-      i: () => RY,
-      j: () => gY,
-      l: () => OY,
-      n: () => FY,
-      r: () => IY
+    IT.d(oT, {
+      c: () => zT,
+      f: () => WT,
+      g: () => BT,
+      j: () => XT,
+      k: () => iT,
+      l: () => kT
     });
-    const AY = "https://discord.gg/playbloxd";
+    const zT = "https://discord.gg/playbloxd";
 
-    function IY(YY) {
-      return "download" === YY ? {
+    function kT(TT) {
+      return "download" === TT ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3231,21 +3231,21 @@ export const modules = {
       }
     }
 
-    function RY(YY, rY) {
+    function WT(TT, oT) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: rY ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: oT ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: YY.code
+          code: TT.code
         },
-        discordLink: rY,
+        discordLink: oT,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function OY() {
+    function XT() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3257,146 +3257,146 @@ export const modules = {
       }
     }
 
-    function gY(YY, rY, DY) {
+    function BT(TT, oT, IT) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: DY ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: IT ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: YY.reason
+          reason: TT.reason
         },
-        discordLink: null === YY.name,
-        confirm: rY ? "general:reconnect" : YY.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === TT.name,
+        confirm: oT ? "general:reconnect" : TT.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  6200: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => VY,
-      f: () => SY,
-      i: () => EY,
-      m: () => WY
+  6141: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => hT,
+      g: () => wT,
+      j: () => AT,
+      n: () => rT
     });
-    var FY = DY(6208);
-    const AY = 6,
-      IY = 3,
-      RY = 1,
-      OY = 2,
-      gY = 4,
-      aY = 8,
-      vY = 16,
-      uY = 32,
-      sY = 64,
-      iY = 128,
-      yY = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var iT = IT(6143);
+    const zT = 6,
+      kT = 3,
+      WT = 1,
+      XT = 2,
+      BT = 4,
+      FT = 8,
+      ST = 16,
+      DT = 32,
+      LT = 64,
+      xT = 128,
+      cT = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function QY(YY) {
-      if (!YY) return 0;
-      const rY = yY.indexOf(YY);
-      if (rY <= 0) throw new Error(`"${YY}" is not a shader pack hook function`);
-      return rY
+    function KT(TT) {
+      if (!TT) return 0;
+      const oT = cT.indexOf(TT);
+      if (oT <= 0) throw new Error(`"${TT}" is not a shader pack hook function`);
+      return oT
     }
 
-    function oY(YY) {
-      if (0 === YY) return null;
-      const rY = yY[YY];
-      if (void 0 === rY) throw new Error(`${YY} is not a shader pack hook function id`);
-      return rY
+    function MT(TT) {
+      if (0 === TT) return null;
+      const oT = cT[TT];
+      if (void 0 === oT) throw new Error(`${TT} is not a shader pack hook function id`);
+      return oT
     }
 
-    function WY(YY) {
-      const rY = FY.c.length;
+    function rT(TT) {
+      const oT = iT.d.length;
       return {
-        strict: YY >= rY,
-        program: FY.c[YY % rY]
+        strict: TT >= oT,
+        program: iT.d[TT % oT]
       }
     }
 
-    function EY(YY) {
-      return Number(YY.strict) * FY.c.length + FY.c.indexOf(YY.program)
+    function AT(TT) {
+      return Number(TT.strict) * iT.d.length + iT.d.indexOf(TT.program)
     }
 
-    function mY(YY) {
-      return "" === YY ? [] : YY.split(" ")
+    function gT(TT) {
+      return "" === TT ? [] : TT.split(" ")
     }
 
-    function VY(YY) {
-      const rY = {
-        variantFlags: new Uint8Array(AY),
-        hooks: new Uint8Array(AY * IY),
-        moduleCodes: Array(AY).fill(""),
-        reads: Array(2 * AY).fill("")
+    function hT(TT) {
+      const oT = {
+        variantFlags: new Uint8Array(zT),
+        hooks: new Uint8Array(zT * kT),
+        moduleCodes: Array(zT).fill(""),
+        reads: Array(2 * zT).fill("")
       };
-      for (const DY of YY) {
-        const YY = EY(DY.key),
-          FY = (YY, rY) => null === DY.hooks.surface || DY.reads.fragment.includes(YY) ? 0 : rY;
-        rY.variantFlags[YY] = (DY.sceneDepth ? RY : 0) | (DY.movesVertices ? OY : 0) | (DY.sunShadow ? gY : 0) | (DY.airShadow ? aY : 0) | (DY.discards ? vY : 0) | FY("localPosition", uY) | FY("enchantSpeed", sY) | FY("enchantTier", iY), rY.hooks[YY * IY] = QY(DY.hooks.vertex), rY.hooks[YY * IY + 1] = QY(DY.hooks.surface), rY.hooks[YY * IY + 2] = QY(DY.hooks.light), rY.moduleCodes[YY] = DY.moduleCode, rY.reads[2 * YY] = DY.reads.vertex.join(" "), rY.reads[2 * YY + 1] = DY.reads.fragment.join(" ")
+      for (const IT of TT) {
+        const TT = AT(IT.key),
+          iT = (TT, oT) => null === IT.hooks.surface || IT.reads.fragment.includes(TT) ? 0 : oT;
+        oT.variantFlags[TT] = (IT.sceneDepth ? WT : 0) | (IT.movesVertices ? XT : 0) | (IT.sunShadow ? BT : 0) | (IT.airShadow ? FT : 0) | (IT.discards ? ST : 0) | iT("localPosition", DT) | iT("enchantSpeed", LT) | iT("enchantTier", xT), oT.hooks[TT * kT] = KT(IT.hooks.vertex), oT.hooks[TT * kT + 1] = KT(IT.hooks.surface), oT.hooks[TT * kT + 2] = KT(IT.hooks.light), oT.moduleCodes[TT] = IT.moduleCode, oT.reads[2 * TT] = IT.reads.vertex.join(" "), oT.reads[2 * TT + 1] = IT.reads.fragment.join(" ")
       }
-      return rY
+      return oT
     }
 
-    function SY(YY) {
+    function wT(TT) {
       const {
-        hooks: rY,
-        moduleCodes: DY,
-        reads: FY
-      } = YY;
-      return Array.from(YY.variantFlags, ((YY, AY) => {
-        const uY = AY * IY;
+        hooks: oT,
+        moduleCodes: IT,
+        reads: iT
+      } = TT;
+      return Array.from(TT.variantFlags, ((TT, zT) => {
+        const DT = zT * kT;
         return {
-          key: WY(AY),
+          key: rT(zT),
           hooks: {
-            vertex: oY(rY[uY]),
-            surface: oY(rY[uY + 1]),
-            light: oY(rY[uY + 2])
+            vertex: MT(oT[DT]),
+            surface: MT(oT[DT + 1]),
+            light: MT(oT[DT + 2])
           },
-          moduleCode: DY[AY],
-          sceneDepth: 0 !== (YY & RY),
-          sunShadow: 0 !== (YY & gY),
-          airShadow: 0 !== (YY & aY),
-          movesVertices: 0 !== (YY & OY),
-          discards: 0 !== (YY & vY),
+          moduleCode: IT[zT],
+          sceneDepth: 0 !== (TT & WT),
+          sunShadow: 0 !== (TT & BT),
+          airShadow: 0 !== (TT & FT),
+          movesVertices: 0 !== (TT & XT),
+          discards: 0 !== (TT & ST),
           reads: {
-            vertex: mY(FY[2 * AY]),
-            fragment: mY(FY[2 * AY + 1])
+            vertex: gT(iT[2 * zT]),
+            fragment: gT(iT[2 * zT + 1])
           }
         }
       }))
     }
   },
-  39986: (YY, rY, DY) => {
-    DY.d(rY, {
-      A: () => yY,
-      c: () => AY,
-      e: () => FY,
-      f: () => sY,
-      i: () => vY,
-      m: () => oY,
-      o: () => IY,
-      p: () => OY,
-      q: () => gY,
-      r: () => RY,
-      t: () => QY,
-      x: () => iY
+  39679: (TT, oT, IT) => {
+    IT.d(oT, {
+      A: () => xT,
+      B: () => cT,
+      c: () => zT,
+      d: () => iT,
+      e: () => LT,
+      h: () => ST,
+      l: () => MT,
+      n: () => kT,
+      q: () => XT,
+      r: () => BT,
+      v: () => WT,
+      z: () => KT
     });
-    const FY = 3,
-      AY = 0,
-      IY = 1,
-      RY = 2,
-      OY = {
+    const iT = 3,
+      zT = 0,
+      kT = 1,
+      WT = 2,
+      XT = {
         uniform: 3,
-        ls: 4,
+        jL: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      gY = 10,
-      aY = "BloxdPackInputs",
-      vY = "bloxdPackInputs",
-      uY = [{
+      BT = 10,
+      FT = "BloxdPackInputs",
+      ST = "bloxdPackInputs",
+      DT = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -3421,115 +3421,115 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      sY = 80;
+      LT = 80;
 
-    function iY() {
-      const YY = uY.map((YY => {
+    function xT() {
+      const TT = DT.map((TT => {
         let {
-          name: rY,
-          type: DY
-        } = YY;
-        return `    ${rY}: ${DY},\n`
+          name: oT,
+          type: IT
+        } = TT;
+        return `    ${oT}: ${IT},\n`
       })).join("");
-      return `struct ${aY} {\n${YY}}\n@group(${FY}) @binding(${AY}) var<uniform> ${vY}: ${aY};\n`
+      return `struct ${FT} {\n${TT}}\n@group(${iT}) @binding(${zT}) var<uniform> ${ST}: ${FT};\n`
     }
 
-    function yY(YY, rY) {
-      const DY = new DataView(YY, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, sY),
-        [FY, AY, IY, RY, OY, gY] = uY;
-      DY.setFloat32(FY.offset, rY.seconds, !0), DY.setUint32(AY.offset, rY.lit ? 1 : 0, !0);
-      for (let aY = 0; aY < 3; aY++) DY.setInt32(IY.offset + 4 * aY, rY.renderOffset[aY], !0), DY.setFloat32(RY.offset + 4 * aY, rY.i6[aY], !0), DY.setFloat32(OY.offset + 4 * aY, rY.eyePosition[aY], !0), DY.setFloat32(gY.offset + 4 * aY, rY.shadowDirection[aY], !0)
+    function cT(TT, oT) {
+      const IT = new DataView(TT, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, LT),
+        [iT, zT, kT, WT, XT, BT] = DT;
+      IT.setFloat32(iT.offset, oT.seconds, !0), IT.setUint32(zT.offset, oT.lit ? 1 : 0, !0);
+      for (let FT = 0; FT < 3; FT++) IT.setInt32(kT.offset + 4 * FT, oT.renderOffset[FT], !0), IT.setFloat32(WT.offset + 4 * FT, oT.f_[FT], !0), IT.setFloat32(XT.offset + 4 * FT, oT.eyePosition[FT], !0), IT.setFloat32(BT.offset + 4 * FT, oT.shadowDirection[FT], !0)
     }
 
-    function QY(YY) {
-      const rY = new Uint32Array(Math.max(1, YY.length));
-      return YY.forEach(((YY, DY) => {
+    function KT(TT) {
+      const oT = new Uint32Array(Math.max(1, TT.length));
+      return TT.forEach(((TT, IT) => {
         let {
-          id: FY,
-          rotation: AY
-        } = YY;
-        rY[DY] = 65535 & FY | (3 & AY) << 16
-      })), rY
+          id: iT,
+          rotation: zT
+        } = TT;
+        oT[IT] = 65535 & iT | (3 & zT) << 16
+      })), oT
     }
-    const oY = {
+    const MT = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6208: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => FY,
-      e: () => RY,
-      h: () => OY,
-      l: () => AY,
-      o: () => IY
+  6143: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT,
+      g: () => WT,
+      h: () => XT,
+      k: () => zT,
+      l: () => kT
     });
-    const FY = ["terrain", "liquid", "model"];
+    const iT = ["terrain", "liquid", "model"];
 
-    function AY() {
-      const YY = [];
-      for (const rY of [!1, !0])
-        for (const DY of FY) YY.push({
-          strict: rY,
-          program: DY
+    function zT() {
+      const TT = [];
+      for (const oT of [!1, !0])
+        for (const IT of iT) TT.push({
+          strict: oT,
+          program: IT
         });
-      return YY
+      return TT
     }
 
-    function IY(YY) {
-      return `${YY.strict?"strict":"allow"}.${YY.program}`
+    function kT(TT) {
+      return `${TT.strict?"strict":"allow"}.${TT.program}`
     }
 
-    function RY(YY) {
-      return !YY.hooks.vertex && !YY.hooks.surface && !YY.hooks.light
+    function WT(TT) {
+      return !TT.hooks.vertex && !TT.hooks.surface && !TT.hooks.light
     }
 
-    function OY(YY, rY) {
-      return "off" !== rY && (null === YY || YY.some((YY => YY.key.strict === ("strict" === rY) && !RY(YY))))
+    function XT(TT, oT) {
+      return "off" !== oT && (null === TT || TT.some((TT => TT.key.strict === ("strict" === oT) && !WT(TT))))
     }
   },
-  40015: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => FY,
-      h: () => IY,
-      i: () => gY,
-      m: () => RY,
-      p: () => AY
+  39710: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT,
+      f: () => kT,
+      g: () => BT,
+      i: () => WT,
+      k: () => zT
     });
-    const FY = /^alloc_failed (\d+) bytes$/;
+    const iT = /^alloc_failed (\d+) bytes$/;
 
-    function AY(YY, rY) {
-      return IY(YY, rY) ? `trap=alloc_failed ${rY} bytes` : `trap=${YY}`
+    function zT(TT, oT) {
+      return kT(TT, oT) ? `trap=alloc_failed ${oT} bytes` : `trap=${TT}`
     }
 
-    function IY(YY, rY) {
-      return "unreachable" === YY && rY > 0
+    function kT(TT, oT) {
+      return "unreachable" === TT && oT > 0
     }
 
-    function RY(YY, rY, DY) {
-      const FY = function(YY) {
-        return YY instanceof WebAssembly.RuntimeError ? /unreachable/i.test(YY.message) ? "unreachable" : /out of bounds/i.test(YY.message) ? "out_of_bounds" : "runtime_error" : (YY instanceof RangeError || YY instanceof Error && "InternalError" === YY.name) && /call stack|recursion/i.test(YY.message) ? "stack_overflow" : "js_error"
-      }(YY);
-      if ("unreachable" !== FY) return {
-        kind: FY,
+    function WT(TT, oT, IT) {
+      const iT = function(TT) {
+        return TT instanceof WebAssembly.RuntimeError ? /unreachable/i.test(TT.message) ? "unreachable" : /out of bounds/i.test(TT.message) ? "out_of_bounds" : "runtime_error" : (TT instanceof RangeError || TT instanceof Error && "InternalError" === TT.name) && /call stack|recursion/i.test(TT.message) ? "stack_overflow" : "js_error"
+      }(TT);
+      if ("unreachable" !== iT) return {
+        kind: iT,
         panic: null,
         refusedBytes: 0
       };
-      const AY = rY(),
-        IY = DY();
+      const zT = oT(),
+        kT = IT();
       return {
-        kind: FY,
-        panic: IY > 0 ? null : AY,
-        refusedBytes: IY
+        kind: iT,
+        panic: kT > 0 ? null : zT,
+        refusedBytes: kT
       }
     }
-    const OY = 300;
+    const XT = 300;
 
-    function gY(YY) {
-      return YY.replace(/\s*\n\s*/g, " / ").slice(0, OY)
+    function BT(TT) {
+      return TT.replace(/\s*\n\s*/g, " / ").slice(0, XT)
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

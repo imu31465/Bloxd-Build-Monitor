@@ -1,39 +1,39 @@
 export const id = 223;
 export const ids = [223];
 export const modules = {
-  36588: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => uY,
-      d: () => sY,
-      f: () => QY,
-      i: () => iY
+  36177: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => DT,
+      i: () => LT,
+      j: () => KT,
+      m: () => xT
     });
-    var FY = DY(36539),
-      AY = DY(36533),
-      IY = DY(36559),
-      RY = DY(36569);
+    var iT = IT(36134),
+      zT = IT(36125),
+      kT = IT(36156),
+      WT = IT(36166);
 
-    function OY(YY) {
-      return Math.pow(YY, AY.g)
+    function XT(TT) {
+      return Math.pow(TT, zT.l)
     }
 
-    function gY(YY) {
-      return YY <= .04045 ? .0773993808 * YY : Math.pow(.947867299 * (YY + .055), 2.4)
+    function BT(TT) {
+      return TT <= .04045 ? .0773993808 * TT : Math.pow(.947867299 * (TT + .055), 2.4)
     }
 
-    function aY(YY) {
-      return Math.pow(YY, AY.e)
+    function FT(TT) {
+      return Math.pow(TT, zT.h)
     }
 
-    function vY(YY) {
-      return YY <= .0031308 ? 12.92 * YY : 1.055 * Math.pow(YY, .41666) - .055
+    function ST(TT) {
+      return TT <= .0031308 ? 12.92 * TT : 1.055 * Math.pow(TT, .41666) - .055
     }
-    class uY {
+    class DT {
       constructor() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = YY, this.g = rY, this.b = DY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = TT, this.g = oT, this.b = IT
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let YY = 255 * this.r | 0;
-        return YY = 397 * YY ^ 255 * this.g, YY = 397 * YY ^ 255 * this.b, YY
+        let TT = 255 * this.r | 0;
+        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT
       }
-      toArray(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return YY[rY] = this.r, YY[rY + 1] = this.g, YY[rY + 2] = this.b, this
+      toArray(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[oT] = this.r, TT[oT + 1] = this.g, TT[oT + 2] = this.b, this
       }
-      grY(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return uY.FromArrayToRef(YY, rY, this), this
+      joT(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return DT.FromArrayToRef(TT, oT, this), this
       }
       toColor4() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new sY(this.r, this.g, this.b, YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new LT(this.r, this.g, this.b, TT)
       }
-      VDY() {
+      bIT() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(YY) {
-        return new uY(this.r * YY.r, this.g * YY.g, this.b * YY.b)
+      multiply(TT) {
+        return new DT(this.r * TT.r, this.g * TT.g, this.b * TT.b)
       }
-      multiplyToRef(YY, rY) {
-        return rY.r = this.r * YY.r, rY.g = this.g * YY.g, rY.b = this.b * YY.b, rY
+      multiplyToRef(TT, oT) {
+        return oT.r = this.r * TT.r, oT.g = this.g * TT.g, oT.b = this.b * TT.b, oT
       }
-      multiplyInPlace(YY) {
-        return this.r *= YY.r, this.g *= YY.g, this.b *= YY.b, this
+      multiplyInPlace(TT) {
+        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this
       }
-      multiplyByFloats(YY, rY, DY) {
-        return new uY(this.r * YY, this.g * rY, this.b * DY)
+      multiplyByFloats(TT, oT, IT) {
+        return new DT(this.r * TT, this.g * oT, this.b * IT)
       }
-      divide(YY) {
+      divide(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(YY, rY) {
+      divideToRef(TT, oT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(YY) {
+      divideInPlace(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(YY) {
-        return this.minimizeInPlaceFromFloats(YY.r, YY.g, YY.b)
+      minimizeInPlace(TT) {
+        return this.minimizeInPlaceFromFloats(TT.r, TT.g, TT.b)
       }
-      maximizeInPlace(YY) {
-        return this.maximizeInPlaceFromFloats(YY.r, YY.g, YY.b)
+      maximizeInPlace(TT) {
+        return this.maximizeInPlaceFromFloats(TT.r, TT.g, TT.b)
       }
-      minimizeInPlaceFromFloats(YY, rY, DY) {
-        return this.r = Math.min(YY, this.r), this.g = Math.min(rY, this.g), this.b = Math.min(DY, this.b), this
+      minimizeInPlaceFromFloats(TT, oT, IT) {
+        return this.r = Math.min(TT, this.r), this.g = Math.min(oT, this.g), this.b = Math.min(IT, this.b), this
       }
-      maximizeInPlaceFromFloats(YY, rY, DY) {
-        return this.r = Math.max(YY, this.r), this.g = Math.max(rY, this.g), this.b = Math.max(DY, this.b), this
+      maximizeInPlaceFromFloats(TT, oT, IT) {
+        return this.r = Math.max(TT, this.r), this.g = Math.max(oT, this.g), this.b = Math.max(IT, this.b), this
       }
-      floorToRef(YY) {
+      floorToRef(TT) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(YY) {
+      fractToRef(TT) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(YY) {
-        return YY && this.r === YY.r && this.g === YY.g && this.b === YY.b
+      equals(TT) {
+        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b
       }
-      equalsFloats(YY, rY, DY) {
-        return this.kIY(YY, rY, DY)
+      equalsFloats(TT, oT, IT) {
+        return this.eWT(TT, oT, IT)
       }
-      kIY(YY, rY, DY) {
-        return this.r === YY && this.g === rY && this.b === DY
+      eWT(TT, oT, IT) {
+        return this.r === TT && this.g === oT && this.b === IT
       }
-      equalsWithEpsilon(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AY.c;
-        return (0, IY.WithinEpsilon)(this.r, YY.r, rY) && (0, IY.WithinEpsilon)(this.g, YY.g, rY) && (0, IY.WithinEpsilon)(this.b, YY.b, rY)
+      equalsWithEpsilon(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.d;
+        return (0, kT.WithinEpsilon)(this.r, TT.r, oT) && (0, kT.WithinEpsilon)(this.g, TT.g, oT) && (0, kT.WithinEpsilon)(this.b, TT.b, oT)
       }
-      GA() {
+      ri() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(YY) {
+      negateToRef(TT) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(YY) {
-        return new uY(this.r * YY, this.g * YY, this.b * YY)
+      scale(TT) {
+        return new DT(this.r * TT, this.g * TT, this.b * TT)
       }
-      scaleInPlace(YY) {
-        return this.r *= YY, this.g *= YY, this.b *= YY, this
+      scaleInPlace(TT) {
+        return this.r *= TT, this.g *= TT, this.b *= TT, this
       }
-      scaleToRef(YY, rY) {
-        return rY.r = this.r * YY, rY.g = this.g * YY, rY.b = this.b * YY, rY
+      scaleToRef(TT, oT) {
+        return oT.r = this.r * TT, oT.g = this.g * TT, oT.b = this.b * TT, oT
       }
-      scaleAndAddToRef(YY, rY) {
-        return rY.r += this.r * YY, rY.g += this.g * YY, rY.b += this.b * YY, rY
+      scaleAndAddToRef(TT, oT) {
+        return oT.r += this.r * TT, oT.g += this.g * TT, oT.b += this.b * TT, oT
       }
       clampToRef() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        return DY.r = (0, IY.Clamp)(this.r, YY, rY), DY.g = (0, IY.Clamp)(this.g, YY, rY), DY.b = (0, IY.Clamp)(this.b, YY, rY), DY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        return IT.r = (0, kT.Clamp)(this.r, TT, oT), IT.g = (0, kT.Clamp)(this.g, TT, oT), IT.b = (0, kT.Clamp)(this.b, TT, oT), IT
       }
-      add(YY) {
-        return new uY(this.r + YY.r, this.g + YY.g, this.b + YY.b)
+      add(TT) {
+        return new DT(this.r + TT.r, this.g + TT.g, this.b + TT.b)
       }
-      addInPlace(YY) {
-        return this.r += YY.r, this.g += YY.g, this.b += YY.b, this
+      addInPlace(TT) {
+        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this
       }
-      addInPlaceFromFloats(YY, rY, DY) {
-        return this.r += YY, this.g += rY, this.b += DY, this
+      addInPlaceFromFloats(TT, oT, IT) {
+        return this.r += TT, this.g += oT, this.b += IT, this
       }
-      addToRef(YY, rY) {
-        return rY.r = this.r + YY.r, rY.g = this.g + YY.g, rY.b = this.b + YY.b, rY
+      addToRef(TT, oT) {
+        return oT.r = this.r + TT.r, oT.g = this.g + TT.g, oT.b = this.b + TT.b, oT
       }
-      subtract(YY) {
-        return new uY(this.r - YY.r, this.g - YY.g, this.b - YY.b)
+      subtract(TT) {
+        return new DT(this.r - TT.r, this.g - TT.g, this.b - TT.b)
       }
-      subtractToRef(YY, rY) {
-        return rY.r = this.r - YY.r, rY.g = this.g - YY.g, rY.b = this.b - YY.b, rY
+      subtractToRef(TT, oT) {
+        return oT.r = this.r - TT.r, oT.g = this.g - TT.g, oT.b = this.b - TT.b, oT
       }
-      dDY(YY) {
-        return this.r -= YY.r, this.g -= YY.g, this.b -= YY.b, this
+      SiT(TT) {
+        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this
       }
-      subtractFromFloats(YY, rY, DY) {
-        return new uY(this.r - YY, this.g - rY, this.b - DY)
+      subtractFromFloats(TT, oT, IT) {
+        return new DT(this.r - TT, this.g - oT, this.b - IT)
       }
-      subtractFromFloatsToRef(YY, rY, DY, FY) {
-        return FY.r = this.r - YY, FY.g = this.g - rY, FY.b = this.b - DY, FY
+      subtractFromFloatsToRef(TT, oT, IT, iT) {
+        return iT.r = this.r - TT, iT.g = this.g - oT, iT.b = this.b - IT, iT
       }
       clone() {
-        return new uY(this.r, this.g, this.b)
+        return new DT(this.r, this.g, this.b)
       }
-      brY(YY) {
-        return this.r = YY.r, this.g = YY.g, this.b = YY.b, this
+      SIT(TT) {
+        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this
       }
-      p_(YY, rY, DY) {
-        return this.r = YY, this.g = rY, this.b = DY, this
+      S_(TT, oT, IT) {
+        return this.r = TT, this.g = oT, this.b = IT, this
       }
-      set(YY, rY, DY) {
-        return this.p_(YY, rY, DY)
+      set(TT, oT, IT) {
+        return this.S_(TT, oT, IT)
       }
-      o3(YY) {
-        return this.r = this.g = this.b = YY, this
+      W8(TT) {
+        return this.r = this.g = this.b = TT, this
       }
       toHexString() {
-        const YY = Math.round(255 * this.r),
-          rY = Math.round(255 * this.g),
-          DY = Math.round(255 * this.b);
-        return "#" + (0, IY.ToHex)(YY) + (0, IY.ToHex)(rY) + (0, IY.ToHex)(DY)
+        const TT = Math.round(255 * this.r),
+          oT = Math.round(255 * this.g),
+          IT = Math.round(255 * this.b);
+        return "#" + (0, kT.ToHex)(TT) + (0, kT.ToHex)(oT) + (0, kT.ToHex)(IT)
       }
-      fromHexString(YY) {
-        return "#" !== YY.substring(0, 1) || 7 !== YY.length || (this.r = parseInt(YY.substring(1, 3), 16) / 255, this.g = parseInt(YY.substring(3, 5), 16) / 255, this.b = parseInt(YY.substring(5, 7), 16) / 255), this
+      fromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new uY)
+        return this.toHSVToRef(new DT)
       }
-      toHSVToRef(YY) {
-        const rY = this.r,
-          DY = this.g,
-          FY = this.b,
-          AY = Math.max(rY, DY, FY),
-          IY = Math.min(rY, DY, FY);
-        let RY = 0,
-          OY = 0;
-        const gY = AY,
-          aY = AY - IY;
-        return 0 !== AY && (OY = aY / AY), AY != IY && (AY == rY ? (RY = (DY - FY) / aY, DY < FY && (RY += 6)) : AY == DY ? RY = (FY - rY) / aY + 2 : AY == FY && (RY = (rY - DY) / aY + 4), RY *= 60), YY.r = RY, YY.g = OY, YY.b = gY, YY
+      toHSVToRef(TT) {
+        const oT = this.r,
+          IT = this.g,
+          iT = this.b,
+          zT = Math.max(oT, IT, iT),
+          kT = Math.min(oT, IT, iT);
+        let WT = 0,
+          XT = 0;
+        const BT = zT,
+          FT = zT - kT;
+        return 0 !== zT && (XT = FT / zT), zT != kT && (zT == oT ? (WT = (IT - iT) / FT, IT < iT && (WT += 6)) : zT == IT ? WT = (iT - oT) / FT + 2 : zT == iT && (WT = (oT - IT) / FT + 4), WT *= 60), TT.r = WT, TT.g = XT, TT.b = BT, TT
       }
       toLinearSpace() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rY = new uY;
-        return this.toLinearSpaceToRef(rY, YY), rY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const oT = new DT;
+        return this.toLinearSpaceToRef(oT, TT), oT
       }
-      toLinearSpaceToRef(YY) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (YY.r = gY(this.r), YY.g = gY(this.g), YY.b = gY(this.b)) : (YY.r = OY(this.r), YY.g = OY(this.g), YY.b = OY(this.b)), this
+      toLinearSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = BT(this.r), TT.g = BT(this.g), TT.b = BT(this.b)) : (TT.r = XT(this.r), TT.g = XT(this.g), TT.b = XT(this.b)), this
       }
       toGammaSpace() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rY = new uY;
-        return this.toGammaSpaceToRef(rY, YY), rY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const oT = new DT;
+        return this.toGammaSpaceToRef(oT, TT), oT
       }
-      toGammaSpaceToRef(YY) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (YY.r = vY(this.r), YY.g = vY(this.g), YY.b = vY(this.b)) : (YY.r = aY(this.r), YY.g = aY(this.g), YY.b = aY(this.b)), this
+      toGammaSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = ST(this.r), TT.g = ST(this.g), TT.b = ST(this.b)) : (TT.r = FT(this.r), TT.g = FT(this.g), TT.b = FT(this.b)), this
       }
-      static HSVtoRGBToRef(YY, rY, DY, FY) {
-        const AY = DY * rY,
-          IY = YY / 60,
-          RY = AY * (1 - Math.abs(IY % 2 - 1));
-        let OY = 0,
-          gY = 0,
-          aY = 0;
-        IY >= 0 && IY <= 1 ? (OY = AY, gY = RY) : IY >= 1 && IY <= 2 ? (OY = RY, gY = AY) : IY >= 2 && IY <= 3 ? (gY = AY, aY = RY) : IY >= 3 && IY <= 4 ? (gY = RY, aY = AY) : IY >= 4 && IY <= 5 ? (OY = RY, aY = AY) : IY >= 5 && IY <= 6 && (OY = AY, aY = RY);
-        const vY = DY - AY;
-        return FY.r = OY + vY, FY.g = gY + vY, FY.b = aY + vY, FY
+      static HSVtoRGBToRef(TT, oT, IT, iT) {
+        const zT = IT * oT,
+          kT = TT / 60,
+          WT = zT * (1 - Math.abs(kT % 2 - 1));
+        let XT = 0,
+          BT = 0,
+          FT = 0;
+        kT >= 0 && kT <= 1 ? (XT = zT, BT = WT) : kT >= 1 && kT <= 2 ? (XT = WT, BT = zT) : kT >= 2 && kT <= 3 ? (BT = zT, FT = WT) : kT >= 3 && kT <= 4 ? (BT = WT, FT = zT) : kT >= 4 && kT <= 5 ? (XT = WT, FT = zT) : kT >= 5 && kT <= 6 && (XT = zT, FT = WT);
+        const ST = IT - zT;
+        return iT.r = XT + ST, iT.g = BT + ST, iT.b = FT + ST, iT
       }
-      static FromHSV(YY, rY, DY) {
-        const FY = new uY(0, 0, 0);
-        return uY.HSVtoRGBToRef(YY, rY, DY, FY), FY
+      static FromHSV(TT, oT, IT) {
+        const iT = new DT(0, 0, 0);
+        return DT.HSVtoRGBToRef(TT, oT, IT, iT), iT
       }
-      static FromHexString(YY) {
-        return new uY(0, 0, 0).fromHexString(YY)
+      static FromHexString(TT) {
+        return new DT(0, 0, 0).fromHexString(TT)
       }
-      static FromArray(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new uY(YY[rY], YY[rY + 1], YY[rY + 2])
+      static FromArray(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new DT(TT[oT], TT[oT + 1], TT[oT + 2])
       }
-      static FromArrayToRef(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        DY.r = YY[rY], DY.g = YY[rY + 1], DY.b = YY[rY + 2]
+      static FromArrayToRef(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        IT.r = TT[oT], IT.g = TT[oT + 1], IT.b = TT[oT + 2]
       }
-      static FromInts(YY, rY, DY) {
-        return new uY(YY / 255, rY / 255, DY / 255)
+      static FromInts(TT, oT, IT) {
+        return new DT(TT / 255, oT / 255, IT / 255)
       }
-      static Lerp(YY, rY, DY) {
-        const FY = new uY(0, 0, 0);
-        return uY.LerpToRef(YY, rY, DY, FY), FY
+      static Lerp(TT, oT, IT) {
+        const iT = new DT(0, 0, 0);
+        return DT.LerpToRef(TT, oT, IT, iT), iT
       }
-      static LerpToRef(YY, rY, DY, FY) {
-        FY.r = YY.r + (rY.r - YY.r) * DY, FY.g = YY.g + (rY.g - YY.g) * DY, FY.b = YY.b + (rY.b - YY.b) * DY
+      static LerpToRef(TT, oT, IT, iT) {
+        iT.r = TT.r + (oT.r - TT.r) * IT, iT.g = TT.g + (oT.g - TT.g) * IT, iT.b = TT.b + (oT.b - TT.b) * IT
       }
-      static Hermite(YY, rY, DY, FY, AY) {
-        const IY = AY * AY,
-          RY = AY * IY,
-          OY = 2 * RY - 3 * IY + 1,
-          gY = -2 * RY + 3 * IY,
-          aY = RY - 2 * IY + AY,
-          vY = RY - IY,
-          sY = YY.r * OY + DY.r * gY + rY.r * aY + FY.r * vY,
-          iY = YY.g * OY + DY.g * gY + rY.g * aY + FY.g * vY,
-          yY = YY.b * OY + DY.b * gY + rY.b * aY + FY.b * vY;
-        return new uY(sY, iY, yY)
+      static Hermite(TT, oT, IT, iT, zT) {
+        const kT = zT * zT,
+          WT = zT * kT,
+          XT = 2 * WT - 3 * kT + 1,
+          BT = -2 * WT + 3 * kT,
+          FT = WT - 2 * kT + zT,
+          ST = WT - kT,
+          LT = TT.r * XT + IT.r * BT + oT.r * FT + iT.r * ST,
+          xT = TT.g * XT + IT.g * BT + oT.g * FT + iT.g * ST,
+          cT = TT.b * XT + IT.b * BT + oT.b * FT + iT.b * ST;
+        return new DT(LT, xT, cT)
       }
-      static Hermite1stDerivative(YY, rY, DY, FY, AY) {
-        const IY = uY.Black();
-        return this.Hermite1stDerivativeToRef(YY, rY, DY, FY, AY, IY), IY
+      static Hermite1stDerivative(TT, oT, IT, iT, zT) {
+        const kT = DT.Black();
+        return this.Hermite1stDerivativeToRef(TT, oT, IT, iT, zT, kT), kT
       }
-      static Hermite1stDerivativeToRef(YY, rY, DY, FY, AY, IY) {
-        const RY = AY * AY;
-        IY.r = 6 * (RY - AY) * YY.r + (3 * RY - 4 * AY + 1) * rY.r + 6 * (-RY + AY) * DY.r + (3 * RY - 2 * AY) * FY.r, IY.g = 6 * (RY - AY) * YY.g + (3 * RY - 4 * AY + 1) * rY.g + 6 * (-RY + AY) * DY.g + (3 * RY - 2 * AY) * FY.g, IY.b = 6 * (RY - AY) * YY.b + (3 * RY - 4 * AY + 1) * rY.b + 6 * (-RY + AY) * DY.b + (3 * RY - 2 * AY) * FY.b
+      static Hermite1stDerivativeToRef(TT, oT, IT, iT, zT, kT) {
+        const WT = zT * zT;
+        kT.r = 6 * (WT - zT) * TT.r + (3 * WT - 4 * zT + 1) * oT.r + 6 * (-WT + zT) * IT.r + (3 * WT - 2 * zT) * iT.r, kT.g = 6 * (WT - zT) * TT.g + (3 * WT - 4 * zT + 1) * oT.g + 6 * (-WT + zT) * IT.g + (3 * WT - 2 * zT) * iT.g, kT.b = 6 * (WT - zT) * TT.b + (3 * WT - 4 * zT + 1) * oT.b + 6 * (-WT + zT) * IT.b + (3 * WT - 2 * zT) * iT.b
       }
       static Red() {
-        return new uY(1, 0, 0)
+        return new DT(1, 0, 0)
       }
       static Green() {
-        return new uY(0, 1, 0)
+        return new DT(0, 1, 0)
       }
       static Blue() {
-        return new uY(0, 0, 1)
+        return new DT(0, 0, 1)
       }
       static Black() {
-        return new uY(0, 0, 0)
+        return new DT(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return uY._BlackReadOnly
+        return DT._BlackReadOnly
       }
       static White() {
-        return new uY(1, 1, 1)
+        return new DT(1, 1, 1)
       }
       static Purple() {
-        return new uY(.5, 0, .5)
+        return new DT(.5, 0, .5)
       }
       static Magenta() {
-        return new uY(1, 0, 1)
+        return new DT(1, 0, 1)
       }
       static Yellow() {
-        return new uY(1, 1, 0)
+        return new DT(1, 1, 0)
       }
       static Gray() {
-        return new uY(.5, .5, .5)
+        return new DT(.5, .5, .5)
       }
       static Teal() {
-        return new uY(0, 1, 1)
+        return new DT(0, 1, 1)
       }
       static Random() {
-        return new uY(Math.random(), Math.random(), Math.random())
+        return new DT(Math.random(), Math.random(), Math.random())
       }
     }
-    uY._V8PerformanceHack = new uY(.5, .5, .5), uY._BlackReadOnly = uY.Black();
-    class sY {
+    DT._V8PerformanceHack = new DT(.5, .5, .5), DT._BlackReadOnly = DT.Black();
+    class LT {
       constructor() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = YY, this.g = rY, this.b = DY, this.a = FY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = TT, this.g = oT, this.b = IT, this.a = iT
       }
-      VDY() {
+      bIT() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return YY[rY] = this.r, YY[rY + 1] = this.g, YY[rY + 2] = this.b, YY[rY + 3] = this.a, this
+      toArray(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return TT[oT] = this.r, TT[oT + 1] = this.g, TT[oT + 2] = this.b, TT[oT + 3] = this.a, this
       }
-      grY(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = YY[rY], this.g = YY[rY + 1], this.b = YY[rY + 2], this.a = YY[rY + 3], this
+      joT(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = TT[oT], this.g = TT[oT + 1], this.b = TT[oT + 2], this.a = TT[oT + 3], this
       }
-      equals(YY) {
-        return YY && this.r === YY.r && this.g === YY.g && this.b === YY.b && this.a === YY.a
+      equals(TT) {
+        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b && this.a === TT.a
       }
-      add(YY) {
-        return new sY(this.r + YY.r, this.g + YY.g, this.b + YY.b, this.a + YY.a)
+      add(TT) {
+        return new LT(this.r + TT.r, this.g + TT.g, this.b + TT.b, this.a + TT.a)
       }
-      addToRef(YY, rY) {
-        return rY.r = this.r + YY.r, rY.g = this.g + YY.g, rY.b = this.b + YY.b, rY.a = this.a + YY.a, rY
+      addToRef(TT, oT) {
+        return oT.r = this.r + TT.r, oT.g = this.g + TT.g, oT.b = this.b + TT.b, oT.a = this.a + TT.a, oT
       }
-      addInPlace(YY) {
-        return this.r += YY.r, this.g += YY.g, this.b += YY.b, this.a += YY.a, this
+      addInPlace(TT) {
+        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this.a += TT.a, this
       }
-      addInPlaceFromFloats(YY, rY, DY, FY) {
-        return this.r += YY, this.g += rY, this.b += DY, this.a += FY, this
+      addInPlaceFromFloats(TT, oT, IT, iT) {
+        return this.r += TT, this.g += oT, this.b += IT, this.a += iT, this
       }
-      subtract(YY) {
-        return new sY(this.r - YY.r, this.g - YY.g, this.b - YY.b, this.a - YY.a)
+      subtract(TT) {
+        return new LT(this.r - TT.r, this.g - TT.g, this.b - TT.b, this.a - TT.a)
       }
-      subtractToRef(YY, rY) {
-        return rY.r = this.r - YY.r, rY.g = this.g - YY.g, rY.b = this.b - YY.b, rY.a = this.a - YY.a, rY
+      subtractToRef(TT, oT) {
+        return oT.r = this.r - TT.r, oT.g = this.g - TT.g, oT.b = this.b - TT.b, oT.a = this.a - TT.a, oT
       }
-      dDY(YY) {
-        return this.r -= YY.r, this.g -= YY.g, this.b -= YY.b, this.a -= YY.a, this
+      SiT(TT) {
+        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this.a -= TT.a, this
       }
-      subtractFromFloats(YY, rY, DY, FY) {
-        return new sY(this.r - YY, this.g - rY, this.b - DY, this.a - FY)
+      subtractFromFloats(TT, oT, IT, iT) {
+        return new LT(this.r - TT, this.g - oT, this.b - IT, this.a - iT)
       }
-      subtractFromFloatsToRef(YY, rY, DY, FY, AY) {
-        return AY.r = this.r - YY, AY.g = this.g - rY, AY.b = this.b - DY, AY.a = this.a - FY, AY
+      subtractFromFloatsToRef(TT, oT, IT, iT, zT) {
+        return zT.r = this.r - TT, zT.g = this.g - oT, zT.b = this.b - IT, zT.a = this.a - iT, zT
       }
-      scale(YY) {
-        return new sY(this.r * YY, this.g * YY, this.b * YY, this.a * YY)
+      scale(TT) {
+        return new LT(this.r * TT, this.g * TT, this.b * TT, this.a * TT)
       }
-      scaleInPlace(YY) {
-        return this.r *= YY, this.g *= YY, this.b *= YY, this.a *= YY, this
+      scaleInPlace(TT) {
+        return this.r *= TT, this.g *= TT, this.b *= TT, this.a *= TT, this
       }
-      scaleToRef(YY, rY) {
-        return rY.r = this.r * YY, rY.g = this.g * YY, rY.b = this.b * YY, rY.a = this.a * YY, rY
+      scaleToRef(TT, oT) {
+        return oT.r = this.r * TT, oT.g = this.g * TT, oT.b = this.b * TT, oT.a = this.a * TT, oT
       }
-      scaleAndAddToRef(YY, rY) {
-        return rY.r += this.r * YY, rY.g += this.g * YY, rY.b += this.b * YY, rY.a += this.a * YY, rY
+      scaleAndAddToRef(TT, oT) {
+        return oT.r += this.r * TT, oT.g += this.g * TT, oT.b += this.b * TT, oT.a += this.a * TT, oT
       }
       clampToRef() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        return DY.r = (0, IY.Clamp)(this.r, YY, rY), DY.g = (0, IY.Clamp)(this.g, YY, rY), DY.b = (0, IY.Clamp)(this.b, YY, rY), DY.a = (0, IY.Clamp)(this.a, YY, rY), DY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        return IT.r = (0, kT.Clamp)(this.r, TT, oT), IT.g = (0, kT.Clamp)(this.g, TT, oT), IT.b = (0, kT.Clamp)(this.b, TT, oT), IT.a = (0, kT.Clamp)(this.a, TT, oT), IT
       }
-      multiply(YY) {
-        return new sY(this.r * YY.r, this.g * YY.g, this.b * YY.b, this.a * YY.a)
+      multiply(TT) {
+        return new LT(this.r * TT.r, this.g * TT.g, this.b * TT.b, this.a * TT.a)
       }
-      multiplyToRef(YY, rY) {
-        return rY.r = this.r * YY.r, rY.g = this.g * YY.g, rY.b = this.b * YY.b, rY.a = this.a * YY.a, rY
+      multiplyToRef(TT, oT) {
+        return oT.r = this.r * TT.r, oT.g = this.g * TT.g, oT.b = this.b * TT.b, oT.a = this.a * TT.a, oT
       }
-      multiplyInPlace(YY) {
-        return this.r *= YY.r, this.g *= YY.g, this.b *= YY.b, this.a *= YY.a, this
+      multiplyInPlace(TT) {
+        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this.a *= TT.a, this
       }
-      multiplyByFloats(YY, rY, DY, FY) {
-        return new sY(this.r * YY, this.g * rY, this.b * DY, this.a * FY)
+      multiplyByFloats(TT, oT, IT, iT) {
+        return new LT(this.r * TT, this.g * oT, this.b * IT, this.a * iT)
       }
-      divide(YY) {
+      divide(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(YY, rY) {
+      divideToRef(TT, oT) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(YY) {
+      divideInPlace(TT) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(YY) {
-        return this.r = Math.min(this.r, YY.r), this.g = Math.min(this.g, YY.g), this.b = Math.min(this.b, YY.b), this.a = Math.min(this.a, YY.a), this
+      minimizeInPlace(TT) {
+        return this.r = Math.min(this.r, TT.r), this.g = Math.min(this.g, TT.g), this.b = Math.min(this.b, TT.b), this.a = Math.min(this.a, TT.a), this
       }
-      maximizeInPlace(YY) {
-        return this.r = Math.max(this.r, YY.r), this.g = Math.max(this.g, YY.g), this.b = Math.max(this.b, YY.b), this.a = Math.max(this.a, YY.a), this
+      maximizeInPlace(TT) {
+        return this.r = Math.max(this.r, TT.r), this.g = Math.max(this.g, TT.g), this.b = Math.max(this.b, TT.b), this.a = Math.max(this.a, TT.a), this
       }
-      minimizeInPlaceFromFloats(YY, rY, DY, FY) {
-        return this.r = Math.min(YY, this.r), this.g = Math.min(rY, this.g), this.b = Math.min(DY, this.b), this.a = Math.min(FY, this.a), this
+      minimizeInPlaceFromFloats(TT, oT, IT, iT) {
+        return this.r = Math.min(TT, this.r), this.g = Math.min(oT, this.g), this.b = Math.min(IT, this.b), this.a = Math.min(iT, this.a), this
       }
-      maximizeInPlaceFromFloats(YY, rY, DY, FY) {
-        return this.r = Math.max(YY, this.r), this.g = Math.max(rY, this.g), this.b = Math.max(DY, this.b), this.a = Math.max(FY, this.a), this
+      maximizeInPlaceFromFloats(TT, oT, IT, iT) {
+        return this.r = Math.max(TT, this.r), this.g = Math.max(oT, this.g), this.b = Math.max(IT, this.b), this.a = Math.max(iT, this.a), this
       }
-      floorToRef(YY) {
+      floorToRef(TT) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(YY) {
+      fractToRef(TT) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      GA() {
+      ri() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(YY) {
+      negateToRef(TT) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AY.c;
-        return (0, IY.WithinEpsilon)(this.r, YY.r, rY) && (0, IY.WithinEpsilon)(this.g, YY.g, rY) && (0, IY.WithinEpsilon)(this.b, YY.b, rY) && (0, IY.WithinEpsilon)(this.a, YY.a, rY)
+      equalsWithEpsilon(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.d;
+        return (0, kT.WithinEpsilon)(this.r, TT.r, oT) && (0, kT.WithinEpsilon)(this.g, TT.g, oT) && (0, kT.WithinEpsilon)(this.b, TT.b, oT) && (0, kT.WithinEpsilon)(this.a, TT.a, oT)
       }
-      kIY(YY, rY, DY, FY) {
-        return this.r === YY && this.g === rY && this.b === DY && this.a === FY
+      eWT(TT, oT, IT, iT) {
+        return this.r === TT && this.g === oT && this.b === IT && this.a === iT
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let YY = 255 * this.r | 0;
-        return YY = 397 * YY ^ 255 * this.g, YY = 397 * YY ^ 255 * this.b, YY = 397 * YY ^ 255 * this.a, YY
+        let TT = 255 * this.r | 0;
+        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT = 397 * TT ^ 255 * this.a, TT
       }
       clone() {
-        return (new sY).brY(this)
+        return (new LT).SIT(this)
       }
-      brY(YY) {
-        return this.r = YY.r, this.g = YY.g, this.b = YY.b, this.a = YY.a, this
+      SIT(TT) {
+        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this.a = TT.a, this
       }
-      p_(YY, rY, DY, FY) {
-        return this.r = YY, this.g = rY, this.b = DY, this.a = FY, this
+      S_(TT, oT, IT, iT) {
+        return this.r = TT, this.g = oT, this.b = IT, this.a = iT, this
       }
-      set(YY, rY, DY, FY) {
-        return this.p_(YY, rY, DY, FY)
+      set(TT, oT, IT, iT) {
+        return this.S_(TT, oT, IT, iT)
       }
-      o3(YY) {
-        return this.r = this.g = this.b = this.a = YY, this
+      W8(TT) {
+        return this.r = this.g = this.b = this.a = TT, this
       }
       toHexString() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rY = Math.round(255 * this.r),
-          DY = Math.round(255 * this.g),
-          FY = Math.round(255 * this.b);
-        if (YY) return "#" + (0, IY.ToHex)(rY) + (0, IY.ToHex)(DY) + (0, IY.ToHex)(FY);
-        const AY = Math.round(255 * this.a);
-        return "#" + (0, IY.ToHex)(rY) + (0, IY.ToHex)(DY) + (0, IY.ToHex)(FY) + (0, IY.ToHex)(AY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const oT = Math.round(255 * this.r),
+          IT = Math.round(255 * this.g),
+          iT = Math.round(255 * this.b);
+        if (TT) return "#" + (0, kT.ToHex)(oT) + (0, kT.ToHex)(IT) + (0, kT.ToHex)(iT);
+        const zT = Math.round(255 * this.a);
+        return "#" + (0, kT.ToHex)(oT) + (0, kT.ToHex)(IT) + (0, kT.ToHex)(iT) + (0, kT.ToHex)(zT)
       }
-      fromHexString(YY) {
-        return "#" !== YY.substring(0, 1) || 9 !== YY.length && 7 !== YY.length || (this.r = parseInt(YY.substring(1, 3), 16) / 255, this.g = parseInt(YY.substring(3, 5), 16) / 255, this.b = parseInt(YY.substring(5, 7), 16) / 255, 9 === YY.length && (this.a = parseInt(YY.substring(7, 9), 16) / 255)), this
+      fromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255, 9 === TT.length && (this.a = parseInt(TT.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rY = new sY;
-        return this.toLinearSpaceToRef(rY, YY), rY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const oT = new LT;
+        return this.toLinearSpaceToRef(oT, TT), oT
       }
-      toLinearSpaceToRef(YY) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (YY.r = gY(this.r), YY.g = gY(this.g), YY.b = gY(this.b)) : (YY.r = OY(this.r), YY.g = OY(this.g), YY.b = OY(this.b)), YY.a = this.a, this
+      toLinearSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = BT(this.r), TT.g = BT(this.g), TT.b = BT(this.b)) : (TT.r = XT(this.r), TT.g = XT(this.g), TT.b = XT(this.b)), TT.a = this.a, this
       }
       toGammaSpace() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const rY = new sY;
-        return this.toGammaSpaceToRef(rY, YY), rY
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const oT = new LT;
+        return this.toGammaSpaceToRef(oT, TT), oT
       }
-      toGammaSpaceToRef(YY) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (YY.r = vY(this.r), YY.g = vY(this.g), YY.b = vY(this.b)) : (YY.r = aY(this.r), YY.g = aY(this.g), YY.b = aY(this.b)), YY.a = this.a, this
+      toGammaSpaceToRef(TT) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = ST(this.r), TT.g = ST(this.g), TT.b = ST(this.b)) : (TT.r = FT(this.r), TT.g = FT(this.g), TT.b = FT(this.b)), TT.a = this.a, this
       }
-      static FromHexString(YY) {
-        return "#" !== YY.substring(0, 1) || 9 !== YY.length && 7 !== YY.length ? new sY(0, 0, 0, 0) : new sY(0, 0, 0, 1).fromHexString(YY)
+      static FromHexString(TT) {
+        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length ? new LT(0, 0, 0, 0) : new LT(0, 0, 0, 1).fromHexString(TT)
       }
-      static Lerp(YY, rY, DY) {
-        return sY.LerpToRef(YY, rY, DY, new sY)
+      static Lerp(TT, oT, IT) {
+        return LT.LerpToRef(TT, oT, IT, new LT)
       }
-      static LerpToRef(YY, rY, DY, FY) {
-        return FY.r = YY.r + (rY.r - YY.r) * DY, FY.g = YY.g + (rY.g - YY.g) * DY, FY.b = YY.b + (rY.b - YY.b) * DY, FY.a = YY.a + (rY.a - YY.a) * DY, FY
+      static LerpToRef(TT, oT, IT, iT) {
+        return iT.r = TT.r + (oT.r - TT.r) * IT, iT.g = TT.g + (oT.g - TT.g) * IT, iT.b = TT.b + (oT.b - TT.b) * IT, iT.a = TT.a + (oT.a - TT.a) * IT, iT
       }
-      static Hermite(YY, rY, DY, FY, AY) {
-        const IY = AY * AY,
-          RY = AY * IY,
-          OY = 2 * RY - 3 * IY + 1,
-          gY = -2 * RY + 3 * IY,
-          aY = RY - 2 * IY + AY,
-          vY = RY - IY,
-          uY = YY.r * OY + DY.r * gY + rY.r * aY + FY.r * vY,
-          iY = YY.g * OY + DY.g * gY + rY.g * aY + FY.g * vY,
-          yY = YY.b * OY + DY.b * gY + rY.b * aY + FY.b * vY,
-          QY = YY.a * OY + DY.a * gY + rY.a * aY + FY.a * vY;
-        return new sY(uY, iY, yY, QY)
+      static Hermite(TT, oT, IT, iT, zT) {
+        const kT = zT * zT,
+          WT = zT * kT,
+          XT = 2 * WT - 3 * kT + 1,
+          BT = -2 * WT + 3 * kT,
+          FT = WT - 2 * kT + zT,
+          ST = WT - kT,
+          DT = TT.r * XT + IT.r * BT + oT.r * FT + iT.r * ST,
+          xT = TT.g * XT + IT.g * BT + oT.g * FT + iT.g * ST,
+          cT = TT.b * XT + IT.b * BT + oT.b * FT + iT.b * ST,
+          KT = TT.a * XT + IT.a * BT + oT.a * FT + iT.a * ST;
+        return new LT(DT, xT, cT, KT)
       }
-      static Hermite1stDerivative(YY, rY, DY, FY, AY) {
-        const IY = new sY;
-        return this.Hermite1stDerivativeToRef(YY, rY, DY, FY, AY, IY), IY
+      static Hermite1stDerivative(TT, oT, IT, iT, zT) {
+        const kT = new LT;
+        return this.Hermite1stDerivativeToRef(TT, oT, IT, iT, zT, kT), kT
       }
-      static Hermite1stDerivativeToRef(YY, rY, DY, FY, AY, IY) {
-        const RY = AY * AY;
-        IY.r = 6 * (RY - AY) * YY.r + (3 * RY - 4 * AY + 1) * rY.r + 6 * (-RY + AY) * DY.r + (3 * RY - 2 * AY) * FY.r, IY.g = 6 * (RY - AY) * YY.g + (3 * RY - 4 * AY + 1) * rY.g + 6 * (-RY + AY) * DY.g + (3 * RY - 2 * AY) * FY.g, IY.b = 6 * (RY - AY) * YY.b + (3 * RY - 4 * AY + 1) * rY.b + 6 * (-RY + AY) * DY.b + (3 * RY - 2 * AY) * FY.b, IY.a = 6 * (RY - AY) * YY.a + (3 * RY - 4 * AY + 1) * rY.a + 6 * (-RY + AY) * DY.a + (3 * RY - 2 * AY) * FY.a
+      static Hermite1stDerivativeToRef(TT, oT, IT, iT, zT, kT) {
+        const WT = zT * zT;
+        kT.r = 6 * (WT - zT) * TT.r + (3 * WT - 4 * zT + 1) * oT.r + 6 * (-WT + zT) * IT.r + (3 * WT - 2 * zT) * iT.r, kT.g = 6 * (WT - zT) * TT.g + (3 * WT - 4 * zT + 1) * oT.g + 6 * (-WT + zT) * IT.g + (3 * WT - 2 * zT) * iT.g, kT.b = 6 * (WT - zT) * TT.b + (3 * WT - 4 * zT + 1) * oT.b + 6 * (-WT + zT) * IT.b + (3 * WT - 2 * zT) * iT.b, kT.a = 6 * (WT - zT) * TT.a + (3 * WT - 4 * zT + 1) * oT.a + 6 * (-WT + zT) * IT.a + (3 * WT - 2 * zT) * iT.a
       }
-      static FromColor3(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new sY(YY.r, YY.g, YY.b, rY)
+      static FromColor3(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new LT(TT.r, TT.g, TT.b, oT)
       }
-      static FromArray(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new sY(YY[rY], YY[rY + 1], YY[rY + 2], YY[rY + 3])
+      static FromArray(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new LT(TT[oT], TT[oT + 1], TT[oT + 2], TT[oT + 3])
       }
-      static FromArrayToRef(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        DY.r = YY[rY], DY.g = YY[rY + 1], DY.b = YY[rY + 2], DY.a = YY[rY + 3]
+      static FromArrayToRef(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        IT.r = TT[oT], IT.g = TT[oT + 1], IT.b = TT[oT + 2], IT.a = TT[oT + 3]
       }
-      static FromInts(YY, rY, DY, FY) {
-        return new sY(YY / 255, rY / 255, DY / 255, FY / 255)
+      static FromInts(TT, oT, IT, iT) {
+        return new LT(TT / 255, oT / 255, IT / 255, iT / 255)
       }
-      static CheckColors4(YY, rY) {
-        if (YY.length === 3 * rY) {
-          const rY = [];
-          for (let DY = 0; DY < YY.length; DY += 3) {
-            const FY = DY / 3 * 4;
-            rY[FY] = YY[DY], rY[FY + 1] = YY[DY + 1], rY[FY + 2] = YY[DY + 2], rY[FY + 3] = 1
+      static CheckColors4(TT, oT) {
+        if (TT.length === 3 * oT) {
+          const oT = [];
+          for (let IT = 0; IT < TT.length; IT += 3) {
+            const iT = IT / 3 * 4;
+            oT[iT] = TT[IT], oT[iT + 1] = TT[IT + 1], oT[iT + 2] = TT[IT + 2], oT[iT + 3] = 1
           }
-          return rY
+          return oT
         }
-        return YY
+        return TT
       }
     }
-    sY._V8PerformanceHack = new sY(.5, .5, .5, .5);
-    class iY {}
-    iY.Color3 = (0, FY.c)(3, uY.Black), iY.Color4 = (0, FY.c)(3, (() => new sY(0, 0, 0, 0)));
-    let yY = !1;
+    LT._V8PerformanceHack = new LT(.5, .5, .5, .5);
+    class xT {}
+    xT.Color3 = (0, iT.d)(3, DT.Black), xT.Color4 = (0, iT.d)(3, (() => new LT(0, 0, 0, 0)));
+    let cT = !1;
 
-    function QY() {
-      yY || (yY = !0, Object.defineProperties(uY.prototype, {
+    function KT() {
+      cT || (cT = !0, Object.defineProperties(DT.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(sY.prototype, {
+      }), Object.defineProperties(LT.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, RY.i)("BABYLON.Color3", uY), (0, RY.i)("BABYLON.Color4", sY))
+      }), (0, WT.h)("BABYLON.Color3", DT), (0, WT.h)("BABYLON.Color4", LT))
     }
   },
-  36533: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY,
-      e: () => FY,
-      g: () => AY
+  36125: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => kT,
+      h: () => iT,
+      l: () => zT
     });
-    const FY = 1 / 2.2,
-      AY = 2.2;
+    const iT = 1 / 2.2,
+      zT = 2.2;
     Math.sqrt(5);
-    let IY = .001
+    let kT = .001
   },
-  36559: (YY, rY, DY) => {
-    function FY(YY) {
-      return parseInt(YY.toString().replace(/\W/g, ""))
+  36156: (TT, oT, IT) => {
+    function iT(TT) {
+      return parseInt(TT.toString().replace(/\W/g, ""))
     }
 
-    function AY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(YY - rY) <= DY
+    function zT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(TT - oT) <= IT
     }
 
-    function IY(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return YY < rY - FY || YY > DY + FY
+    function kT(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return TT < oT - iT || TT > IT + iT
     }
 
-    function RY(YY, rY) {
-      return YY === rY ? YY : Math.random() * (rY - YY) + YY
+    function WT(TT, oT) {
+      return TT === oT ? TT : Math.random() * (oT - TT) + TT
     }
 
-    function OY(YY, rY, DY) {
-      return YY + (rY - YY) * DY
+    function XT(TT, oT, IT) {
+      return TT + (oT - TT) * IT
     }
 
-    function gY(YY, rY, DY) {
-      let FY = oY(rY - YY, 360);
-      return FY > 180 && (FY -= 360), YY + FY * sY(DY)
+    function BT(TT, oT, IT) {
+      let iT = MT(oT - TT, 360);
+      return iT > 180 && (iT -= 360), TT + iT * LT(IT)
     }
 
-    function aY(YY, rY, DY) {
-      let FY;
-      return FY = YY != rY ? sY((DY - YY) / (rY - YY)) : 0, FY
+    function FT(TT, oT, IT) {
+      let iT;
+      return iT = TT != oT ? LT((IT - TT) / (oT - TT)) : 0, iT
     }
 
-    function vY(YY, rY, DY, FY, AY) {
-      const IY = AY * AY,
-        RY = AY * IY;
-      return YY * (2 * RY - 3 * IY + 1) + DY * (-2 * RY + 3 * IY) + rY * (RY - 2 * IY + AY) + FY * (RY - IY)
+    function ST(TT, oT, IT, iT, zT) {
+      const kT = zT * zT,
+        WT = zT * kT;
+      return TT * (2 * WT - 3 * kT + 1) + IT * (-2 * WT + 3 * kT) + oT * (WT - 2 * kT + zT) + iT * (WT - kT)
     }
 
-    function uY(YY, rY, DY, FY, AY) {
-      const IY = AY * AY;
-      return 6 * (IY - AY) * YY + (3 * IY - 4 * AY + 1) * rY + 6 * (-IY + AY) * DY + (3 * IY - 2 * AY) * FY
+    function DT(TT, oT, IT, iT, zT) {
+      const kT = zT * zT;
+      return 6 * (kT - zT) * TT + (3 * kT - 4 * zT + 1) * oT + 6 * (-kT + zT) * IT + (3 * kT - 2 * zT) * iT
     }
 
-    function sY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(DY, Math.max(rY, YY))
+    function LT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(IT, Math.max(oT, TT))
     }
 
-    function iY(YY) {
-      return YY -= 2 * Math.PI * Math.floor((YY + Math.PI) / (2 * Math.PI))
+    function xT(TT) {
+      return TT -= 2 * Math.PI * Math.floor((TT + Math.PI) / (2 * Math.PI))
     }
 
-    function yY(YY) {
-      const rY = YY.toString(16);
-      return YY <= 15 ? ("0" + rY).toUpperCase() : rY.toUpperCase()
+    function cT(TT) {
+      const oT = TT.toString(16);
+      return TT <= 15 ? ("0" + oT).toUpperCase() : oT.toUpperCase()
     }
 
-    function QY(YY) {
-      if (Math.log2) return Math.floor(Math.log2(YY));
-      if (YY < 0) return NaN;
-      if (0 === YY) return -1 / 0;
-      let rY = 0;
-      if (YY < 1) {
-        for (; YY < 1;) rY++, YY *= 2;
-        rY = -rY
-      } else if (YY > 1)
-        for (; YY > 1;) rY++, YY = Math.floor(YY / 2);
-      return rY
+    function KT(TT) {
+      if (Math.log2) return Math.floor(Math.log2(TT));
+      if (TT < 0) return NaN;
+      if (0 === TT) return -1 / 0;
+      let oT = 0;
+      if (TT < 1) {
+        for (; TT < 1;) oT++, TT *= 2;
+        oT = -oT
+      } else if (TT > 1)
+        for (; TT > 1;) oT++, TT = Math.floor(TT / 2);
+      return oT
     }
 
-    function oY(YY, rY) {
-      return YY - Math.floor(YY / rY) * rY
+    function MT(TT, oT) {
+      return TT - Math.floor(TT / oT) * oT
     }
 
-    function WY(YY, rY, DY) {
-      return (YY - rY) / (DY - rY)
+    function rT(TT, oT, IT) {
+      return (TT - oT) / (IT - oT)
     }
 
-    function EY(YY, rY, DY) {
-      return YY * (DY - rY) + rY
+    function AT(TT, oT, IT) {
+      return TT * (IT - oT) + oT
     }
 
-    function mY(YY, rY) {
-      let DY = oY(rY - YY, 360);
-      return DY > 180 && (DY -= 360), DY
+    function gT(TT, oT) {
+      let IT = MT(oT - TT, 360);
+      return IT > 180 && (IT -= 360), IT
     }
 
-    function VY(YY, rY) {
-      const DY = oY(YY, 2 * rY);
-      return rY - Math.abs(DY - rY)
+    function hT(TT, oT) {
+      const IT = MT(TT, 2 * oT);
+      return oT - Math.abs(IT - oT)
     }
 
-    function SY(YY, rY, DY) {
-      let FY = sY(DY);
-      return FY = -2 * FY * FY * FY + 3 * FY * FY, rY * FY + YY * (1 - FY)
+    function wT(TT, oT, IT) {
+      let iT = LT(IT);
+      return iT = -2 * iT * iT * iT + 3 * iT * iT, oT * iT + TT * (1 - iT)
     }
 
-    function lY(YY, rY, DY) {
-      let FY;
-      return FY = Math.abs(rY - YY) <= DY ? rY : YY + Math.sign(rY - YY) * DY, FY
+    function mT(TT, oT, IT) {
+      let iT;
+      return iT = Math.abs(oT - TT) <= IT ? oT : TT + Math.sign(oT - TT) * IT, iT
     }
 
-    function TY(YY, rY, DY) {
-      const FY = mY(YY, rY);
-      let AY;
-      return AY = -DY < FY && FY < DY ? rY : lY(YY, rY = YY + FY, DY), AY
+    function eT(TT, oT, IT) {
+      const iT = gT(TT, oT);
+      let zT;
+      return zT = -IT < iT && iT < IT ? oT : mT(TT, oT = TT + iT, IT), zT
     }
 
-    function eY(YY, rY, DY) {
-      return (YY - rY) / (DY - rY)
+    function RT(TT, oT, IT) {
+      return (TT - oT) / (IT - oT)
     }
 
-    function NY(YY, rY, DY) {
-      return (DY - rY) * YY + rY
+    function uT(TT, oT, IT) {
+      return (IT - oT) * TT + oT
     }
 
-    function BY(YY, rY) {
-      const DY = YY % rY;
-      return 0 === DY ? rY : BY(rY, DY)
+    function vT(TT, oT) {
+      const IT = TT % oT;
+      return 0 === IT ? oT : vT(oT, IT)
     }
-    DY.r(rY), DY.d(rY, {
-      Clamp: () => sY,
-      DeltaAngle: () => mY,
-      Denormalize: () => EY,
-      ExtractAsInt: () => FY,
-      Hermite: () => vY,
-      Hermite1stDerivative: () => uY,
-      HighestCommonFactor: () => BY,
-      ILog2: () => QY,
-      InverseLerp: () => aY,
-      Lerp: () => OY,
-      LerpAngle: () => gY,
-      MoveTowards: () => lY,
-      MoveTowardsAngle: () => TY,
-      Normalize: () => WY,
-      NormalizeRadians: () => iY,
-      OutsideRange: () => IY,
-      PercentToRange: () => NY,
-      PingPong: () => VY,
-      RandomRange: () => RY,
-      RangeToPercent: () => eY,
-      Repeat: () => oY,
-      SmoothStep: () => SY,
-      ToHex: () => yY,
-      WithinEpsilon: () => AY
+    IT.r(oT), IT.d(oT, {
+      Clamp: () => LT,
+      DeltaAngle: () => gT,
+      Denormalize: () => AT,
+      ExtractAsInt: () => iT,
+      Hermite: () => ST,
+      Hermite1stDerivative: () => DT,
+      HighestCommonFactor: () => vT,
+      ILog2: () => KT,
+      InverseLerp: () => FT,
+      Lerp: () => XT,
+      LerpAngle: () => BT,
+      MoveTowards: () => mT,
+      MoveTowardsAngle: () => eT,
+      Normalize: () => rT,
+      NormalizeRadians: () => xT,
+      OutsideRange: () => kT,
+      PercentToRange: () => uT,
+      PingPong: () => hT,
+      RandomRange: () => WT,
+      RangeToPercent: () => RT,
+      Repeat: () => MT,
+      SmoothStep: () => wT,
+      ToHex: () => cT,
+      WithinEpsilon: () => zT
     })
   },
-  36539: (YY, rY, DY) => {
-    function FY(YY, rY) {
-      const DY = [];
-      for (let FY = 0; FY < YY; ++FY) DY.push(rY());
-      return DY
+  36134: (TT, oT, IT) => {
+    function iT(TT, oT) {
+      const IT = [];
+      for (let iT = 0; iT < TT; ++iT) IT.push(oT());
+      return IT
     }
 
-    function AY(YY, rY) {
-      return FY(YY, rY)
+    function zT(TT, oT) {
+      return iT(TT, oT)
     }
-    DY.d(rY, {
-      c: () => FY,
-      g: () => AY,
-      j: () => RY
+    IT.d(oT, {
+      d: () => iT,
+      g: () => zT,
+      j: () => WT
     });
-    const IY = ["push", "splice", "pop", "shift", "unshift"];
+    const kT = ["push", "splice", "pop", "shift", "unshift"];
 
-    function RY(YY, rY) {
-      const DY = IY.map((DY => function(YY, rY, DY) {
-        const FY = YY[rY];
-        if ("function" !== typeof FY) return null;
-        const AY = function() {
-          const FY = YY.length,
-            IY = AY.previous.apply(YY, arguments);
-          return DY(rY, FY), IY
+    function WT(TT, oT) {
+      const IT = kT.map((IT => function(TT, oT, IT) {
+        const iT = TT[oT];
+        if ("function" !== typeof iT) return null;
+        const zT = function() {
+          const iT = TT.length,
+            kT = zT.previous.apply(TT, arguments);
+          return IT(oT, iT), kT
         };
-        return FY.next = AY, AY.previous = FY, YY[rY] = AY, () => {
-          const DY = AY.previous;
-          if (!DY) return;
-          const FY = AY.next;
-          FY ? (DY.next = FY, FY.previous = DY) : (DY.next = void 0, YY[rY] = DY), AY.next = void 0, AY.previous = void 0
+        return iT.next = zT, zT.previous = iT, TT[oT] = zT, () => {
+          const IT = zT.previous;
+          if (!IT) return;
+          const iT = zT.next;
+          iT ? (IT.next = iT, iT.previous = IT) : (IT.next = void 0, TT[oT] = IT), zT.next = void 0, zT.previous = void 0
         }
-      }(YY, DY, rY)));
+      }(TT, IT, oT)));
       return () => {
-        for (const YY of DY) YY?.()
+        for (const TT of IT) TT?.()
       }
     }
   },
-  36569: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => IY,
-      i: () => AY
+  36166: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => kT,
+      h: () => zT
     });
-    const FY = {};
+    const iT = {};
 
-    function AY(YY, rY) {
-      FY[YY] = rY
+    function zT(TT, oT) {
+      iT[TT] = oT
     }
 
-    function IY(YY) {
-      return FY[YY]
+    function kT(TT) {
+      return iT[TT]
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

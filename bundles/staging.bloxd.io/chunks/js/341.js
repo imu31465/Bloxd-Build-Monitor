@@ -1,68 +1,68 @@
 export const id = 341;
 export const ids = [341];
 export const modules = {
-  41600: (YY, rY, DY) => {
-    function FY(YY) {
-      return Math.floor(YY / 8)
+  41352: (TT, oT, IT) => {
+    function iT(TT) {
+      return Math.floor(TT / 8)
     }
 
-    function AY(YY) {
-      return 1 << YY % 8
+    function zT(TT) {
+      return 1 << TT % 8
     }
-    DY.d(rY, {
-      OptimizeIndices: () => RY
+    IT.d(oT, {
+      OptimizeIndices: () => WT
     });
-    class IY {
-      constructor(YY) {
-        this.size = YY, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class kT {
+      constructor(TT) {
+        this.size = TT, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(YY) {
-        if (YY >= this.size) throw new RangeError("Bit index out of range");
-        const rY = FY(YY),
-          DY = AY(YY);
-        return 0 !== (this._byteArray[rY] & DY)
+      get(TT) {
+        if (TT >= this.size) throw new RangeError("Bit index out of range");
+        const oT = iT(TT),
+          IT = zT(TT);
+        return 0 !== (this._byteArray[oT] & IT)
       }
-      set(YY, rY) {
-        if (YY >= this.size) throw new RangeError("Bit index out of range");
-        const DY = FY(YY),
-          IY = AY(YY);
-        rY ? this._byteArray[DY] |= IY : this._byteArray[DY] &= ~IY
+      set(TT, oT) {
+        if (TT >= this.size) throw new RangeError("Bit index out of range");
+        const IT = iT(TT),
+          kT = zT(TT);
+        oT ? this._byteArray[IT] |= kT : this._byteArray[IT] &= ~kT
       }
     }
 
-    function RY(YY) {
-      const rY = [],
-        DY = YY.length / 3;
-      for (let IY = 0; IY < DY; IY++) rY.push([YY[3 * IY], YY[3 * IY + 1], YY[3 * IY + 2]]);
-      const FY = new Map;
-      for (let IY = 0; IY < rY.length; IY++) {
-        const YY = rY[IY];
-        for (const rY of YY) {
-          let YY = FY.get(rY);
-          YY || FY.set(rY, YY = []), YY.push(IY)
+    function WT(TT) {
+      const oT = [],
+        IT = TT.length / 3;
+      for (let kT = 0; kT < IT; kT++) oT.push([TT[3 * kT], TT[3 * kT + 1], TT[3 * kT + 2]]);
+      const iT = new Map;
+      for (let kT = 0; kT < oT.length; kT++) {
+        const TT = oT[kT];
+        for (const oT of TT) {
+          let TT = iT.get(oT);
+          TT || iT.set(oT, TT = []), TT.push(kT)
         }
       }
-      const AY = new IY(DY),
-        RY = [],
-        OY = YY => {
-          const DY = [YY];
-          for (; DY.length > 0;) {
-            const YY = DY.pop();
-            if (!AY.get(YY)) {
-              AY.set(YY, !0), RY.push(rY[YY]);
-              for (const IY of rY[YY]) {
-                const YY = FY.get(IY);
-                if (!YY) return;
-                for (const rY of YY) AY.get(rY) || DY.push(rY)
+      const zT = new kT(IT),
+        WT = [],
+        XT = TT => {
+          const IT = [TT];
+          for (; IT.length > 0;) {
+            const TT = IT.pop();
+            if (!zT.get(TT)) {
+              zT.set(TT, !0), WT.push(oT[TT]);
+              for (const kT of oT[TT]) {
+                const TT = iT.get(kT);
+                if (!TT) return;
+                for (const oT of TT) zT.get(oT) || IT.push(oT)
               }
             }
           }
         };
-      for (let IY = 0; IY < DY; IY++) AY.get(IY) || OY(IY);
-      let gY = 0;
-      for (const IY of RY) YY[gY++] = IY[0], YY[gY++] = IY[1], YY[gY++] = IY[2]
+      for (let kT = 0; kT < IT; kT++) zT.get(kT) || XT(kT);
+      let BT = 0;
+      for (const kT of WT) TT[BT++] = kT[0], TT[BT++] = kT[1], TT[BT++] = kT[2]
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

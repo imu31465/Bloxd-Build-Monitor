@@ -1,12 +1,12 @@
 export const id = 224;
 export const ids = [224];
 export const modules = {
-  36546: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => AY
+  36146: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => zT
     });
-    var FY = DY(36552);
-    class AY {
+    var iT = IT(36149);
+    class zT {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,120 +14,120 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    AY.Instances = [], AY.OnEnginesDisposedObservable = new FY.e, AY._LastCreatedScene = null, AY.UseFallbackTexture = !0, AY.FallbackTexture = ""
+    zT.Instances = [], zT.OnEnginesDisposedObservable = new iT.d, zT._LastCreatedScene = null, zT.UseFallbackTexture = !0, zT.FallbackTexture = ""
   },
-  38037: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => IY
+  37658: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => kT
     });
-    var FY = DY(38040);
-    const AY = (YY, rY, DY) => YY ? YY.getClassName && "Mesh" === YY.getClassName() ? null : !YY.getClassName || "SubMesh" !== YY.getClassName() && "PhysicsBody" !== YY.getClassName() ? YY.clone ? YY.clone() : Array.isArray(YY) ? YY.slice() : DY && "object" === typeof YY ? {
-      ...YY
-    } : null : YY.clone(rY) : null;
-    class IY {
-      static DeepCopy(YY, rY, DY, IY) {
-        let RY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const OY = function(YY) {
-          const rY = [];
+    var iT = IT(37660);
+    const zT = (TT, oT, IT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : IT && "object" === typeof TT ? {
+      ...TT
+    } : null : TT.clone(oT) : null;
+    class kT {
+      static DeepCopy(TT, oT, IT, kT) {
+        let WT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const XT = function(TT) {
+          const oT = [];
           do {
-            const DY = Object.getOwnPropertyNames(YY);
-            for (const YY of DY) - 1 === rY.indexOf(YY) && rY.push(YY)
-          } while (YY = Object.getPrototypeOf(YY));
-          return rY
-        }(YY);
-        for (const aY of OY) {
-          if ("_" === aY[0] && (!IY || -1 === IY.indexOf(aY))) continue;
-          if (aY.endsWith("Observable")) continue;
-          if (DY && -1 !== DY.indexOf(aY)) continue;
-          const OY = YY[aY],
-            vY = typeof OY;
-          if ("function" !== vY) try {
-            if ("object" === vY)
-              if (OY instanceof Uint8Array) rY[aY] = Uint8Array.from(OY);
-              else if (OY instanceof Array) {
-              if (rY[aY] = [], OY.length > 0)
-                if ("object" == typeof OY[0])
-                  for (let YY = 0; YY < OY.length; YY++) {
-                    const DY = AY(OY[YY], rY, RY); - 1 === rY[aY].indexOf(DY) && rY[aY].push(DY)
-                  } else rY[aY] = OY.slice(0)
-            } else rY[aY] = AY(OY, rY, RY);
-            else rY[aY] = OY
-          } catch (gY) {
-            FY.d.Warn(gY.message)
+            const IT = Object.getOwnPropertyNames(TT);
+            for (const TT of IT) - 1 === oT.indexOf(TT) && oT.push(TT)
+          } while (TT = Object.getPrototypeOf(TT));
+          return oT
+        }(TT);
+        for (const FT of XT) {
+          if ("_" === FT[0] && (!kT || -1 === kT.indexOf(FT))) continue;
+          if (FT.endsWith("Observable")) continue;
+          if (IT && -1 !== IT.indexOf(FT)) continue;
+          const XT = TT[FT],
+            ST = typeof XT;
+          if ("function" !== ST) try {
+            if ("object" === ST)
+              if (XT instanceof Uint8Array) oT[FT] = Uint8Array.from(XT);
+              else if (XT instanceof Array) {
+              if (oT[FT] = [], XT.length > 0)
+                if ("object" == typeof XT[0])
+                  for (let TT = 0; TT < XT.length; TT++) {
+                    const IT = zT(XT[TT], oT, WT); - 1 === oT[FT].indexOf(IT) && oT[FT].push(IT)
+                  } else oT[FT] = XT.slice(0)
+            } else oT[FT] = zT(XT, oT, WT);
+            else oT[FT] = XT
+          } catch (BT) {
+            iT.d.Warn(BT.message)
           }
         }
       }
     }
   },
-  37242: (YY, rY, DY) => {
-    function FY() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (YY => {
-        const rY = 16 * Math.random() | 0;
-        return ("x" === YY ? rY : 3 & rY | 8).toString(16)
+  36851: (TT, oT, IT) => {
+    function iT() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (TT => {
+        const oT = 16 * Math.random() | 0;
+        return ("x" === TT ? oT : 3 & oT | 8).toString(16)
       }))
     }
-    DY.d(rY, {
-      c: () => FY
+    IT.d(oT, {
+      e: () => iT
     })
   },
-  38040: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => FY
+  37660: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => iT
     });
-    class FY {
-      static _CheckLimit(YY, rY) {
-        let DY = FY._LogLimitOutputs[YY];
-        return DY ? DY.current++ : (DY = {
-          limit: rY,
+    class iT {
+      static _CheckLimit(TT, oT) {
+        let IT = iT._LogLimitOutputs[TT];
+        return IT ? IT.current++ : (IT = {
+          limit: oT,
           current: 1
-        }, FY._LogLimitOutputs[YY] = DY), DY.current <= DY.limit
+        }, iT._LogLimitOutputs[TT] = IT), IT.current <= IT.limit
       }
-      static _GenerateLimitMessage(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const DY = FY._LogLimitOutputs[YY];
-        if (!DY || !FY.MessageLimitReached) return;
-        const AY = this._Levels[rY];
-        DY.current === DY.limit && FY[AY.name](FY.MessageLimitReached.replace(/%LIMIT%/g, "" + DY.limit).replace(/%TYPE%/g, AY.name ?? ""))
+      static _GenerateLimitMessage(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const IT = iT._LogLimitOutputs[TT];
+        if (!IT || !iT.MessageLimitReached) return;
+        const zT = this._Levels[oT];
+        IT.current === IT.limit && iT[zT.name](iT.MessageLimitReached.replace(/%LIMIT%/g, "" + IT.limit).replace(/%TYPE%/g, zT.name ?? ""))
       }
-      static _AddLogEntry(YY) {
-        FY._LogCache = YY + FY._LogCache, FY.OnNewCacheEntry && FY.OnNewCacheEntry(YY)
+      static _AddLogEntry(TT) {
+        iT._LogCache = TT + iT._LogCache, iT.OnNewCacheEntry && iT.OnNewCacheEntry(TT)
       }
-      static _FormatMessage(YY) {
-        const rY = YY => YY < 10 ? "0" + YY : "" + YY,
-          DY = new Date;
-        return "[" + rY(DY.getHours()) + ":" + rY(DY.getMinutes()) + ":" + rY(DY.getSeconds()) + "]: " + YY
+      static _FormatMessage(TT) {
+        const oT = TT => TT < 10 ? "0" + TT : "" + TT,
+          IT = new Date;
+        return "[" + oT(IT.getHours()) + ":" + oT(IT.getMinutes()) + ":" + oT(IT.getSeconds()) + "]: " + TT
       }
-      static _LogDisabled(YY, rY) {}
+      static _LogDisabled(TT, oT) {}
       static _LogEnabled() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          rY = arguments.length > 1 ? arguments[1] : void 0,
-          DY = arguments.length > 2 ? arguments[2] : void 0;
-        const AY = Array.isArray(rY) ? rY[0] : rY;
-        if (void 0 !== DY && !FY._CheckLimit(AY, DY)) return;
-        const IY = FY._FormatMessage(AY),
-          RY = this._Levels[YY],
-          OY = Array.isArray(rY) ? rY.slice(1) : [];
-        RY.logFunc && RY.logFunc("BJS - " + IY, ...OY);
-        const gY = `<div style='color:${RY.color}'>${IY}</div><br>`;
-        FY._AddLogEntry(gY), FY._GenerateLimitMessage(AY, YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          oT = arguments.length > 1 ? arguments[1] : void 0,
+          IT = arguments.length > 2 ? arguments[2] : void 0;
+        const zT = Array.isArray(oT) ? oT[0] : oT;
+        if (void 0 !== IT && !iT._CheckLimit(zT, IT)) return;
+        const kT = iT._FormatMessage(zT),
+          WT = this._Levels[TT],
+          XT = Array.isArray(oT) ? oT.slice(1) : [];
+        WT.logFunc && WT.logFunc("BJS - " + kT, ...XT);
+        const BT = `<div style='color:${WT.color}'>${kT}</div><br>`;
+        iT._AddLogEntry(BT), iT._GenerateLimitMessage(zT, TT)
       }
       static get LogCache() {
-        return FY._LogCache
+        return iT._LogCache
       }
       static ClearLogCache() {
-        FY._LogCache = "", FY._LogLimitOutputs = {}, FY.errorsCount = 0
+        iT._LogCache = "", iT._LogLimitOutputs = {}, iT.errorsCount = 0
       }
-      static set LogLevels(YY) {
-        FY.Log = FY._LogDisabled, FY.Warn = FY._LogDisabled, FY.Error = FY._LogDisabled;
-        const rY = [FY.MessageLogLevel, FY.WarningLogLevel, FY.ErrorLogLevel];
-        for (const DY of rY)
-          if ((YY & DY) === DY) {
-            const YY = this._Levels[DY];
-            FY[YY.name] = FY._LogEnabled.bind(FY, DY)
+      static set LogLevels(TT) {
+        iT.Log = iT._LogDisabled, iT.Warn = iT._LogDisabled, iT.Error = iT._LogDisabled;
+        const oT = [iT.MessageLogLevel, iT.WarningLogLevel, iT.ErrorLogLevel];
+        for (const IT of oT)
+          if ((TT & IT) === IT) {
+            const TT = this._Levels[IT];
+            iT[TT.name] = iT._LogEnabled.bind(iT, IT)
           }
       }
     }
-    FY.NoneLogLevel = 0, FY.MessageLogLevel = 1, FY.WarningLogLevel = 2, FY.ErrorLogLevel = 4, FY.AllLogLevel = 7, FY.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", FY._LogCache = "", FY._LogLimitOutputs = {}, FY._Levels = [{}, {
+    iT.NoneLogLevel = 0, iT.MessageLogLevel = 1, iT.WarningLogLevel = 2, iT.ErrorLogLevel = 4, iT.AllLogLevel = 7, iT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", iT._LogCache = "", iT._LogLimitOutputs = {}, iT._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -139,126 +139,126 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], FY.errorsCount = 0, FY.Log = FY._LogEnabled.bind(FY, FY.MessageLogLevel), FY.Warn = FY._LogEnabled.bind(FY, FY.WarningLogLevel), FY.Error = FY._LogEnabled.bind(FY, FY.ErrorLogLevel)
+    }], iT.errorsCount = 0, iT.Log = iT._LogEnabled.bind(iT, iT.MessageLogLevel), iT.Warn = iT._LogEnabled.bind(iT, iT.WarningLogLevel), iT.Error = iT._LogEnabled.bind(iT, iT.ErrorLogLevel)
   },
-  36552: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => RY
+  36149: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => WT
     });
-    const FY = "undefined" !== typeof WeakRef;
-    class AY {
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(YY, rY, DY, FY)
+    const iT = "undefined" !== typeof WeakRef;
+    class zT {
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(TT, oT, IT, iT)
       }
-      initialize(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = YY, this.skipNextObservers = rY, this.target = DY, this.currentTarget = FY, this
+      initialize(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = TT, this.skipNextObservers = oT, this.target = IT, this.currentTarget = iT, this
       }
     }
-    class IY {
-      constructor(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = YY, this.mask = rY, this.scope = DY, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class kT {
+      constructor(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = TT, this.mask = oT, this.scope = IT, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(YY)
+        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(TT)
       }
     }
-    class RY {
-      static FromPromise(YY, rY) {
-        const DY = new RY;
-        return YY.then((YY => {
-          DY.notifyObservers(YY)
-        })).catch((YY => {
-          if (!rY) throw YY;
-          rY.notifyObservers(YY)
-        })), DY
+    class WT {
+      static FromPromise(TT, oT) {
+        const IT = new WT;
+        return TT.then((TT => {
+          IT.notifyObservers(TT)
+        })).catch((TT => {
+          if (!oT) throw TT;
+          oT.notifyObservers(TT)
+        })), IT
       }
       get observers() {
         return this._observers
       }
-      constructor(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = rY, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new AY(0), YY && (this._onObserverAdded = YY)
+      constructor(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = oT, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new zT(0), TT && (this._onObserverAdded = TT)
       }
-      add(YY) {
-        let rY = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          DY = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!YY) return null;
-        const AY = new IY(YY, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        AY.unregisterOnNextCall = DY, rY ? this._observers.unshift(AY) : this._observers.push(AY), this._onObserverAdded && this._onObserverAdded(AY), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(AY, this._lastNotifiedValue);
-        const RY = FY ? new WeakRef(this) : {
+      add(TT) {
+        let oT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          IT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!TT) return null;
+        const zT = new kT(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        zT.unregisterOnNextCall = IT, oT ? this._observers.unshift(zT) : this._observers.push(zT), this._onObserverAdded && this._onObserverAdded(zT), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(zT, this._lastNotifiedValue);
+        const WT = iT ? new WeakRef(this) : {
           deref: () => this
         };
-        return AY._remove = function() {
-          let YY = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const rY = RY.deref();
-          rY && (YY ? rY.remove(AY) : rY._remove(AY))
-        }, AY
+        return zT._remove = function() {
+          let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const oT = WT.deref();
+          oT && (TT ? oT.remove(zT) : oT._remove(zT))
+        }, zT
       }
-      addOnce(YY) {
-        return this.add(YY, void 0, void 0, void 0, !0)
+      addOnce(TT) {
+        return this.add(TT, void 0, void 0, void 0, !0)
       }
-      remove(YY) {
-        if (!YY) return !1;
-        YY._remove = null;
-        return -1 !== this._observers.indexOf(YY) && (this._deferUnregister(YY), !0)
+      remove(TT) {
+        if (!TT) return !1;
+        TT._remove = null;
+        return -1 !== this._observers.indexOf(TT) && (this._deferUnregister(TT), !0)
       }
-      removeCallback(YY, rY) {
-        for (let DY = 0; DY < this._observers.length; DY++) {
-          const FY = this._observers[DY];
-          if (!FY._willBeUnregistered && (FY.callback === YY && (!rY || rY === FY.scope))) return this._deferUnregister(FY), !0
+      removeCallback(TT, oT) {
+        for (let IT = 0; IT < this._observers.length; IT++) {
+          const iT = this._observers[IT];
+          if (!iT._willBeUnregistered && (iT.callback === TT && (!oT || oT === iT.scope))) return this._deferUnregister(iT), !0
         }
         return !1
       }
-      _deferUnregister(YY) {
-        YY._willBeUnregistered || (this._numObserversMarkedAsDeleted++, YY.unregisterOnNextCall = !1, YY._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(YY)
+      _deferUnregister(TT) {
+        TT._willBeUnregistered || (this._numObserversMarkedAsDeleted++, TT.unregisterOnNextCall = !1, TT._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(TT)
         }), 0))
       }
-      _remove(YY) {
-        let rY = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!YY) return !1;
-        const DY = this._observers.indexOf(YY);
-        return -1 !== DY && (rY && this._numObserversMarkedAsDeleted--, this._observers.splice(DY, 1), !0)
+      _remove(TT) {
+        let oT = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!TT) return !1;
+        const IT = this._observers.indexOf(TT);
+        return -1 !== IT && (oT && this._numObserversMarkedAsDeleted--, this._observers.splice(IT, 1), !0)
       }
-      makeObserverTopPriority(YY) {
-        this._remove(YY, !1), this._observers.unshift(YY)
+      makeObserverTopPriority(TT) {
+        this._remove(TT, !1), this._observers.unshift(TT)
       }
-      makeObserverBottomPriority(YY) {
-        this._remove(YY, !1), this._observers.push(YY)
+      makeObserverBottomPriority(TT) {
+        this._remove(TT, !1), this._observers.push(TT)
       }
-      notifyObservers(YY) {
-        let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          DY = arguments.length > 2 ? arguments[2] : void 0,
-          FY = arguments.length > 3 ? arguments[3] : void 0,
-          AY = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = YY), !this._observers.length) return !0;
-        const IY = this._eventState;
-        IY.mask = rY, IY.target = DY, IY.currentTarget = FY, IY.skipNextObservers = !1, IY.lastReturnValue = YY, IY.userInfo = AY;
-        for (const RY of this._observers)
-          if (!RY._willBeUnregistered && (RY.mask & rY && (RY.unregisterOnNextCall && this._deferUnregister(RY), RY.scope ? IY.lastReturnValue = RY.callback.apply(RY.scope, [YY, IY]) : IY.lastReturnValue = RY.callback(YY, IY)), IY.skipNextObservers)) return !1;
+      notifyObservers(TT) {
+        let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          IT = arguments.length > 2 ? arguments[2] : void 0,
+          iT = arguments.length > 3 ? arguments[3] : void 0,
+          zT = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = TT), !this._observers.length) return !0;
+        const kT = this._eventState;
+        kT.mask = oT, kT.target = IT, kT.currentTarget = iT, kT.skipNextObservers = !1, kT.lastReturnValue = TT, kT.userInfo = zT;
+        for (const WT of this._observers)
+          if (!WT._willBeUnregistered && (WT.mask & oT && (WT.unregisterOnNextCall && this._deferUnregister(WT), WT.scope ? kT.lastReturnValue = WT.callback.apply(WT.scope, [TT, kT]) : kT.lastReturnValue = WT.callback(TT, kT)), kT.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(YY, rY) {
-        let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = rY), YY._willBeUnregistered) return;
-        const FY = this._eventState;
-        FY.mask = DY, FY.skipNextObservers = !1, YY.unregisterOnNextCall && this._deferUnregister(YY), YY.callback(rY, FY)
+      notifyObserver(TT, oT) {
+        let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = oT), TT._willBeUnregistered) return;
+        const iT = this._eventState;
+        iT.mask = IT, iT.skipNextObservers = !1, TT.unregisterOnNextCall && this._deferUnregister(TT), TT.callback(oT, iT)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const YY = this._observers.pop();
-          YY && (YY._remove = null)
+          const TT = this._observers.pop();
+          TT && (TT._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -266,42 +266,42 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const YY = new RY;
-        return YY._observers = this._observers.slice(0), YY
+        const TT = new WT;
+        return TT._observers = this._observers.slice(0), TT
       }
       hasSpecificMask() {
-        let YY = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const rY of this._observers)
-          if (rY.mask & YY || rY.mask === YY) return !0;
+        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const oT of this._observers)
+          if (oT.mask & TT || oT.mask === TT) return !0;
         return !1
       }
     }
   },
-  60196: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      AsyncLoop: () => FY.c,
-      RegisterTools: () => FY.f,
-      Tools: () => FY.i,
-      className: () => FY.m
+  59995: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      AsyncLoop: () => iT.d,
+      RegisterTools: () => iT.e,
+      Tools: () => iT.i,
+      className: () => iT.k
     });
-    var FY = DY(39219);
-    (0, FY.f)()
+    var iT = IT(38886);
+    (0, iT.e)()
   },
-  36569: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => IY,
-      i: () => AY
+  36166: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => kT,
+      h: () => zT
     });
-    const FY = {};
+    const iT = {};
 
-    function AY(YY, rY) {
-      FY[YY] = rY
+    function zT(TT, oT) {
+      iT[TT] = oT
     }
 
-    function IY(YY) {
-      return FY[YY]
+    function kT(TT) {
+      return iT[TT]
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

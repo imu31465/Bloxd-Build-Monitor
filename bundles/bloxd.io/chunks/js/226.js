@@ -1,559 +1,559 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  40158: (YY, rY, DY) => {
-    DY.d(rY, {
-      noaDevTools: () => uY
+  39852: (TT, oT, IT) => {
+    IT.d(oT, {
+      noaDevTools: () => DT
     });
-    var FY = DY(36812),
-      AY = DY(36801),
-      IY = DY(2501),
-      RY = DY(1699);
+    var iT = IT(36397),
+      zT = IT(36385),
+      kT = IT(2465),
+      WT = IT(1665);
 
-    function OY(YY) {
+    function XT(TT) {
       const {
-        sQ: rY
-      } = YY, DY = rY.engine, FY = {
-        width: DY.getRenderWidth(),
-        height: DY.getRenderHeight()
+        FK: oT
+      } = TT, IT = oT.engine, iT = {
+        width: IT.getRenderWidth(),
+        height: IT.getRenderHeight()
       };
       return {
-        canvas: DY.getRenderingCanvas(),
-        maxTextureSize: DY.getCaps().maxTextureSize,
-        drawing: () => !YY.Wm,
-        resize: (YY, rY) => {
-          DY.setSize(YY, rY)
+        canvas: IT.getRenderingCanvas(),
+        maxTextureSize: IT.getCaps().maxTextureSize,
+        drawing: () => !TT.uR,
+        resize: (TT, oT) => {
+          IT.setSize(TT, oT)
         },
         restoreSize: () => {
-          DY.setSize(FY.width, FY.height), rY.resize()
+          IT.setSize(iT.width, iT.height), oT.resize()
         },
-        onFrameDrawn: rY => (YY.on("afterRender", rY), () => {
-          YY.off("afterRender", rY)
+        onFrameDrawn: oT => (TT.on("afterRender", oT), () => {
+          TT.off("afterRender", oT)
         })
       }
     }
-    var gY = DY(40147),
-      aY = DY(8643);
+    var BT = IT(39829),
+      FT = IT(8647);
 
-    function vY(YY, rY) {
+    function ST(TT, oT) {
       let {
-        width: aY,
-        height: vY,
-        colouring: uY
-      } = rY;
-      const sY = "normals" === uY,
-        iY = "depth" === uY;
-      return new Promise((rY => {
+        width: FT,
+        height: ST,
+        colouring: DT
+      } = oT;
+      const LT = "normals" === DT,
+        xT = "depth" === DT;
+      return new Promise((oT => {
         try {
-          const yY = (0, IY.e)();
-          if (yY.sQ.iQ) return "screenshot" !== YY || null !== uY ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void rY()) : void(0, gY.e)(OY(yY), aY, vY).finally(rY);
-          const QY = yY.sQ.engine,
-            oY = yY.sQ.hT(),
-            WY = aY,
-            EY = vY;
-          Promise.all([Promise.all([DY.e(243), DY.e(244), DY.e(224)]).then((() => DY(60196))), Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(245), DY.e(248), DY.e(301), DY.e(227)]).then((() => DY(60201))), Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(245), DY.e(253), DY.e(229)]).then((() => DY(60208))), DY.e(344).then((() => DY(60213))), Promise.all([DY.e(222), DY.e(218)]).then((() => DY(36518))), DY.e(242).then((() => DY(60220))), DY.e(217).then((() => DY(60229)))]).then((IY => {
+          const cT = (0, kT.i)();
+          if (cT.FK.SK) return "screenshot" !== TT || null !== DT ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void oT()) : void(0, BT.d)(XT(cT), FT, ST).finally(oT);
+          const KT = cT.FK.engine,
+            MT = cT.FK.pC(),
+            rT = FT,
+            AT = ST;
+          Promise.all([Promise.all([IT.e(243), IT.e(244), IT.e(224)]).then((() => IT(59995))), Promise.all([IT.e(223), IT.e(222), IT.e(243), IT.e(244), IT.e(241), IT.e(245), IT.e(248), IT.e(301), IT.e(227)]).then((() => IT(59998))), Promise.all([IT.e(223), IT.e(222), IT.e(243), IT.e(244), IT.e(241), IT.e(251), IT.e(245), IT.e(253), IT.e(229)]).then((() => IT(60005))), IT.e(344).then((() => IT(60012))), Promise.all([IT.e(222), IT.e(218)]).then((() => IT(36114))), IT.e(242).then((() => IT(60015))), IT.e(217).then((() => IT(60022)))]).then((kT => {
             const {
-              CreateScreenshotUsingRenderTarget: OY
-            } = IY[1], {
-              ShaderMaterial: gY
-            } = IY[2], {
-              ShaderLanguage: aY
-            } = IY[3], {
-              xy: vY
-            } = IY[4], {
-              registerDevtoolsShader: uY
-            } = IY[6], yY = aY.GLSL, mY = new Map, VY = oY.meshes.filter((YY => YY.material));
-            let SY = !1,
-              lY = null;
+              CreateScreenshotUsingRenderTarget: XT
+            } = kT[1], {
+              ShaderMaterial: BT
+            } = kT[2], {
+              ShaderLanguage: FT
+            } = kT[3], {
+              sc: ST
+            } = kT[4], {
+              registerDevtoolsShader: DT
+            } = kT[6], cT = FT.GLSL, gT = new Map, hT = MT.meshes.filter((TT => TT.material));
+            let wT = !1,
+              mT = null;
 
-            function TY() {
-              var YY;
-              SY && (SY = !1, (0, FY.e)(oY.meshes, !1)), null === (YY = lY) || void 0 === YY || YY(), lY = null, VY.forEach((YY => {
-                const rY = mY.get(YY);
-                rY && (YY.material = rY)
+            function eT() {
+              var TT;
+              wT && (wT = !1, (0, iT.f)(MT.meshes, !1)), null === (TT = mT) || void 0 === TT || TT(), mT = null, hT.forEach((TT => {
+                const oT = gT.get(TT);
+                oT && (TT.material = oT)
               }))
             }
-            if (sY) {
-              const YY = [],
-                rY = [];
-              VY.forEach((DY => {
-                const FY = DY.name.toLowerCase(),
-                  AY = DY.oB().boundingBox.center,
-                  IY = oY.activeCamera.position.subtract(AY).length();
-                FY.includes("sky") || FY.includes("background") || FY.includes("environment") || IY > 1e3 ? rY.push(DY) : YY.push(DY)
-              })), uY("devtoolsNormal", yY);
-              const DY = new gY("normalMaterial", oY, "devtoolsNormal", {
+            if (LT) {
+              const TT = [],
+                oT = [];
+              hT.forEach((IT => {
+                const iT = IT.name.toLowerCase(),
+                  zT = IT.GJ().boundingBox.center,
+                  kT = MT.activeCamera.position.subtract(zT).length();
+                iT.includes("sky") || iT.includes("background") || iT.includes("environment") || kT > 1e3 ? oT.push(IT) : TT.push(IT)
+              })), DT("devtoolsNormal", cT);
+              const IT = new BT("normalMaterial", MT, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: yY
+                shaderLanguage: cT
               });
-              uY("devtoolsWhite", yY);
-              const FY = new gY("whiteMaterial", oY, "devtoolsWhite", {
+              DT("devtoolsWhite", cT);
+              const iT = new BT("whiteMaterial", MT, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: yY
+                shaderLanguage: cT
               });
-              YY.forEach((YY => {
-                mY.set(YY, YY.material), YY.material = DY
-              })), rY.forEach((YY => {
-                mY.set(YY, YY.material), YY.material = FY
+              TT.forEach((TT => {
+                gT.set(TT, TT.material), TT.material = IT
+              })), oT.forEach((TT => {
+                gT.set(TT, TT.material), TT.material = iT
               }))
-            } else if (iY) {
-              uY("devtoolsDepth", yY);
-              const YY = oY.activeCamera.position;
-              let rY = 0,
-                DY = 1 / 0;
-              VY.forEach((FY => {
-                const AY = FY.name.toLowerCase();
-                if (AY.includes("sky") || AY.includes("background") || AY.includes("environment")) return;
-                const IY = FY.oB().boundingBox.center,
-                  RY = vY.TransformCoordinates(IY, FY.getWorldMatrix()),
-                  OY = YY.subtract(RY).length();
-                OY > 1e3 || (rY = Math.max(rY, OY), DY = Math.min(DY, OY))
+            } else if (xT) {
+              DT("devtoolsDepth", cT);
+              const TT = MT.activeCamera.position;
+              let oT = 0,
+                IT = 1 / 0;
+              hT.forEach((iT => {
+                const zT = iT.name.toLowerCase();
+                if (zT.includes("sky") || zT.includes("background") || zT.includes("environment")) return;
+                const kT = iT.GJ().boundingBox.center,
+                  WT = ST.TransformCoordinates(kT, iT.getWorldMatrix()),
+                  XT = TT.subtract(WT).length();
+                XT > 1e3 || (oT = Math.max(oT, XT), IT = Math.min(IT, XT))
               }));
-              const FY = rY - DY;
-              rY += .1 * FY, DY = Math.max(0, DY - .1 * FY), console.log(`Depth range: min=${DY.toFixed(2)}, max=${rY.toFixed(2)}, range=${FY.toFixed(2)}`), FY < 1 && (rY = DY + 10);
-              const AY = new gY("depthMaterial", oY, "devtoolsDepth", {
+              const iT = oT - IT;
+              oT += .1 * iT, IT = Math.max(0, IT - .1 * iT), console.log(`Depth range: min=${IT.toFixed(2)}, max=${oT.toFixed(2)}, range=${iT.toFixed(2)}`), iT < 1 && (oT = IT + 10);
+              const zT = new BT("depthMaterial", MT, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: yY
+                shaderLanguage: cT
               });
-              AY.setVector3("cameraPosition", YY), AY.setFloat("maxDepth", rY), AY.setFloat("minDepth", DY), VY.forEach((YY => {
-                mY.set(YY, YY.material), YY.material = AY
+              zT.setVector3("cameraPosition", TT), zT.setFloat("maxDepth", oT), zT.setFloat("minDepth", IT), hT.forEach((TT => {
+                gT.set(TT, TT.material), TT.material = zT
               }))
             }
-            if ((0, FY.e)(oY.meshes, !0), SY = !0, "glb" === YY && (lY = (0, AY.c)(oY.meshes)), "screenshot" === YY) {
-              let YY = `bloxd-screenshot-${WY}x${EY}-${Date.now()}.png`;
-              sY ? YY = `bloxd-screenshot-normals-${WY}x${EY}-${Date.now()}.png` : iY && (YY = `bloxd-screenshot-depth-${WY}x${EY}-${Date.now()}.png`), OY(QY, oY.activeCamera, {
-                width: WY,
-                height: EY
-              }, (function(DY) {
-                TY(), fetch(DY).then((function(YY) {
-                  return YY.blob()
-                })).then((function(DY) {
-                  (0, RY.downloadBlob)(DY, YY), rY()
-                })).catch((function(YY) {
-                  console.error("Error processing screenshot:", YY), rY()
+            if ((0, iT.f)(MT.meshes, !0), wT = !0, "glb" === TT && (mT = (0, zT.e)(MT.meshes)), "screenshot" === TT) {
+              let TT = `bloxd-screenshot-${rT}x${AT}-${Date.now()}.png`;
+              LT ? TT = `bloxd-screenshot-normals-${rT}x${AT}-${Date.now()}.png` : xT && (TT = `bloxd-screenshot-depth-${rT}x${AT}-${Date.now()}.png`), XT(KT, MT.activeCamera, {
+                width: rT,
+                height: AT
+              }, (function(IT) {
+                eT(), fetch(IT).then((function(TT) {
+                  return TT.blob()
+                })).then((function(IT) {
+                  (0, WT.downloadBlob)(IT, TT), oT()
+                })).catch((function(TT) {
+                  console.error("Error processing screenshot:", TT), oT()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), TY(), rY()
+                console.error("Screenshot timed out"), eT(), oT()
               }))
             } else {
-              let YY = "LQ";
-              sY ? YY = "scene-normals" : iY && (YY = "scene-depth"), sY || iY ? setTimeout((() => {
+              let TT = "NK";
+              LT ? TT = "scene-normals" : xT && (TT = "scene-depth"), LT || xT ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: YY
-                  } = await Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(250), DY.e(228)]).then((() => DY(39391))), {
-                    Color3: rY
-                  } = await Promise.all([DY.e(223), DY.e(225)]).then((() => DY(36586))), FY = [], AY = [];
-                  if (VY.forEach((YY => {
-                      const rY = YY.name.toLowerCase(),
-                        DY = YY.oB().boundingBox.center,
-                        IY = oY.activeCamera.position.subtract(DY).length();
-                      rY.includes("sky") || rY.includes("background") || rY.includes("environment") || IY > 1e3 ? AY.push(YY) : FY.push(YY)
-                    })), sY) FY.forEach(((DY, FY) => {
-                    const AY = DY.getVerticesData("normal");
-                    if (AY) {
-                      const IY = [];
-                      for (let YY = 0; YY < AY.length; YY += 3) {
-                        const rY = Math.abs(AY[YY]),
-                          DY = Math.abs(AY[YY + 1]),
-                          FY = Math.abs(AY[YY + 2]);
-                        IY.push(rY, DY, FY, 1)
+                    StandardMaterial: TT
+                  } = await Promise.all([IT.e(223), IT.e(222), IT.e(243), IT.e(244), IT.e(241), IT.e(251), IT.e(250), IT.e(228)]).then((() => IT(39038))), {
+                    Color3: oT
+                  } = await Promise.all([IT.e(223), IT.e(225)]).then((() => IT(36175))), iT = [], zT = [];
+                  if (hT.forEach((TT => {
+                      const oT = TT.name.toLowerCase(),
+                        IT = TT.GJ().boundingBox.center,
+                        kT = MT.activeCamera.position.subtract(IT).length();
+                      oT.includes("sky") || oT.includes("background") || oT.includes("environment") || kT > 1e3 ? zT.push(TT) : iT.push(TT)
+                    })), LT) iT.forEach(((IT, iT) => {
+                    const zT = IT.getVerticesData("normal");
+                    if (zT) {
+                      const kT = [];
+                      for (let TT = 0; TT < zT.length; TT += 3) {
+                        const oT = Math.abs(zT[TT]),
+                          IT = Math.abs(zT[TT + 1]),
+                          iT = Math.abs(zT[TT + 2]);
+                        kT.push(oT, IT, iT, 1)
                       }
-                      DY.setVerticesData("color", IY);
-                      const RY = new YY(`vertexColorMat_${FY}`, oY);
-                      RY.disableLighting = !0, RY.emissiveColor = new rY(1, 1, 1), RY.specularColor = new rY(0, 0, 0), DY.material = RY
+                      IT.setVerticesData("color", kT);
+                      const WT = new TT(`vertexColorMat_${iT}`, MT);
+                      WT.disableLighting = !0, WT.emissiveColor = new oT(1, 1, 1), WT.specularColor = new oT(0, 0, 0), IT.material = WT
                     }
-                  })), AY.forEach(((DY, FY) => {
-                    const AY = DY.getVerticesData("position");
-                    if (AY) {
-                      const IY = [],
-                        RY = AY.length / 3;
-                      for (let YY = 0; YY < RY; YY++) IY.push(1, 1, 1, 1);
-                      DY.setVerticesData("color", IY);
-                      const OY = new YY(`whiteMat_${FY}`, oY);
-                      OY.disableLighting = !0, OY.emissiveColor = new rY(1, 1, 1), OY.specularColor = new rY(0, 0, 0), DY.material = OY
+                  })), zT.forEach(((IT, iT) => {
+                    const zT = IT.getVerticesData("position");
+                    if (zT) {
+                      const kT = [],
+                        WT = zT.length / 3;
+                      for (let TT = 0; TT < WT; TT++) kT.push(1, 1, 1, 1);
+                      IT.setVerticesData("color", kT);
+                      const XT = new TT(`whiteMat_${iT}`, MT);
+                      XT.disableLighting = !0, XT.emissiveColor = new oT(1, 1, 1), XT.specularColor = new oT(0, 0, 0), IT.material = XT
                     }
                   }));
-                  else if (iY) {
-                    const DY = oY.activeCamera.position;
-                    let AY = 0,
-                      IY = 1 / 0;
-                    FY.forEach((YY => {
-                      const rY = YY.oB().boundingBox.center,
-                        FY = vY.TransformCoordinates(rY, YY.getWorldMatrix()),
-                        RY = DY.subtract(FY).length();
-                      AY = Math.max(AY, RY), IY = Math.min(IY, RY)
+                  else if (xT) {
+                    const IT = MT.activeCamera.position;
+                    let zT = 0,
+                      kT = 1 / 0;
+                    iT.forEach((TT => {
+                      const oT = TT.GJ().boundingBox.center,
+                        iT = ST.TransformCoordinates(oT, TT.getWorldMatrix()),
+                        WT = IT.subtract(iT).length();
+                      zT = Math.max(zT, WT), kT = Math.min(kT, WT)
                     }));
-                    const RY = AY - IY;
-                    AY += .1 * RY, IY = Math.max(0, IY - .1 * RY), RY < 1 && (AY = IY + 10), VY.forEach(((FY, RY) => {
-                      const OY = FY.name.toLowerCase(),
-                        gY = FY.oB().boundingBox.center,
-                        aY = vY.TransformCoordinates(gY, FY.getWorldMatrix()),
-                        uY = DY.subtract(aY).length();
-                      if (!(OY.includes("sky") || OY.includes("background") || OY.includes("environment") || uY > 1e3)) {
-                        const DY = 1 - Math.min(Math.max((uY - IY) / (AY - IY), 0), 1),
-                          OY = new YY(`depthMat_${RY}`, oY);
-                        OY.diffuseColor = new rY(DY, DY, DY), OY.specularColor = new rY(0, 0, 0), FY.material = OY
+                    const WT = zT - kT;
+                    zT += .1 * WT, kT = Math.max(0, kT - .1 * WT), WT < 1 && (zT = kT + 10), hT.forEach(((iT, WT) => {
+                      const XT = iT.name.toLowerCase(),
+                        BT = iT.GJ().boundingBox.center,
+                        FT = ST.TransformCoordinates(BT, iT.getWorldMatrix()),
+                        DT = IT.subtract(FT).length();
+                      if (!(XT.includes("sky") || XT.includes("background") || XT.includes("environment") || DT > 1e3)) {
+                        const IT = 1 - Math.min(Math.max((DT - kT) / (zT - kT), 0), 1),
+                          XT = new TT(`depthMat_${WT}`, MT);
+                        XT.diffuseColor = new oT(IT, IT, IT), XT.specularColor = new oT(0, 0, 0), iT.material = XT
                       }
                     }))
                   }
-                })().then((() => Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(245), DY.e(250), DY.e(248), DY.e(240), DY.e(253), DY.e(281), DY.e(301), DY.e(234), DY.e(252), DY.e(221)]).then((() => DY(60234))))).then((rY => rY.GLTF2Export.GLBAsync(oY, YY))).then((YY => {
-                  TY(), YY.downloadFiles(), rY()
-                })).catch((YY => {
-                  console.error("Error exporting GLB:", YY), TY(), rY()
+                })().then((() => Promise.all([IT.e(223), IT.e(222), IT.e(243), IT.e(244), IT.e(241), IT.e(251), IT.e(245), IT.e(250), IT.e(248), IT.e(240), IT.e(253), IT.e(281), IT.e(301), IT.e(234), IT.e(252), IT.e(221)]).then((() => IT(60029))))).then((oT => oT.GLTF2Export.GLBAsync(MT, TT))).then((TT => {
+                  eT(), TT.downloadFiles(), oT()
+                })).catch((TT => {
+                  console.error("Error exporting GLB:", TT), eT(), oT()
                 }))
-              }), 100) : Promise.all([DY.e(223), DY.e(222), DY.e(243), DY.e(244), DY.e(241), DY.e(251), DY.e(245), DY.e(250), DY.e(248), DY.e(240), DY.e(253), DY.e(281), DY.e(301), DY.e(234), DY.e(252), DY.e(221)]).then((() => DY(60234))).then((DY => {
-                DY.GLTF2Export.GLBAsync(oY, YY).then((YY => {
-                  TY(), YY.downloadFiles(), rY()
-                })).catch((YY => {
-                  console.error("Error exporting GLB:", YY), TY(), rY()
+              }), 100) : Promise.all([IT.e(223), IT.e(222), IT.e(243), IT.e(244), IT.e(241), IT.e(251), IT.e(245), IT.e(250), IT.e(248), IT.e(240), IT.e(253), IT.e(281), IT.e(301), IT.e(234), IT.e(252), IT.e(221)]).then((() => IT(60029))).then((IT => {
+                IT.GLTF2Export.GLBAsync(MT, TT).then((TT => {
+                  eT(), TT.downloadFiles(), oT()
+                })).catch((TT => {
+                  console.error("Error exporting GLB:", TT), eT(), oT()
                 }))
-              })).catch((YY => {
-                console.error("Error importing serializers:", YY), TY(), rY()
+              })).catch((TT => {
+                console.error("Error importing serializers:", TT), eT(), oT()
               }))
             }
-          })).catch((YY => {
-            console.error("Error downloading the scene:", YY), rY()
+          })).catch((TT => {
+            console.error("Error downloading the scene:", TT), oT()
           }))
-        } catch (yY) {
-          console.error("Error taking screenshot:", yY), rY()
+        } catch (cT) {
+          console.error("Error taking screenshot:", cT), oT()
         }
       }))
     }
-    const uY = new class {
+    const DT = new class {
       constructor() {
-        this.tools = aY.ALL_DEV_TOOLS
+        this.tools = FT.ALL_DEV_TOOLS
       }
-      downloadScene(YY, rY) {
-        return vY(YY, rY)
+      downloadScene(TT, oT) {
+        return ST(TT, oT)
       }
-      async setAmbientLightIntensity(YY) {
+      async setAmbientLightIntensity(TT) {
         const {
-          Color3: rY
-        } = await Promise.all([DY.e(223), DY.e(225)]).then((() => DY(36586)));
-        (0, IY.e)().sQ.hT().ambientColor = rY.FromArray([YY, YY, YY])
+          Color3: oT
+        } = await Promise.all([IT.e(223), IT.e(225)]).then((() => IT(36175)));
+        (0, kT.i)().FK.pC().ambientColor = oT.FromArray([TT, TT, TT])
       }
     }
   },
-  40147: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => gY
+  39829: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => BT
     });
-    var FY = DY(1716);
-    const AY = 33177600,
-      IY = 3e4;
-    let RY = !1;
+    var iT = IT(1679);
+    const zT = 33177600,
+      kT = 3e4;
+    let WT = !1;
 
-    function OY(YY, rY, DY) {
-      if (!YY.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (RY) return Promise.reject(new Error("A screenshot is already being taken"));
-      RY = !0;
-      const FY = function(YY, rY, DY) {
-        const FY = Math.max(1, YY),
-          IY = Math.max(1, rY),
-          RY = Math.min(1, DY / Math.max(FY, IY), Math.sqrt(AY / (FY * IY)));
+    function XT(TT, oT, IT) {
+      if (!TT.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (WT) return Promise.reject(new Error("A screenshot is already being taken"));
+      WT = !0;
+      const iT = function(TT, oT, IT) {
+        const iT = Math.max(1, TT),
+          kT = Math.max(1, oT),
+          WT = Math.min(1, IT / Math.max(iT, kT), Math.sqrt(zT / (iT * kT)));
         return {
-          width: Math.max(1, Math.floor(FY * RY)),
-          height: Math.max(1, Math.floor(IY * RY))
+          width: Math.max(1, Math.floor(iT * WT)),
+          height: Math.max(1, Math.floor(kT * WT))
         }
-      }(rY, DY, YY.maxTextureSize);
-      return YY.resize(FY.width, FY.height), new Promise(((rY, DY) => {
-        let FY, AY = 2,
-          OY = null;
-        const gY = () => {
-          var rY;
-          RY = !1, null === (rY = OY) || void 0 === rY || rY(), clearTimeout(FY), YY.restoreSize()
+      }(oT, IT, TT.maxTextureSize);
+      return TT.resize(iT.width, iT.height), new Promise(((oT, IT) => {
+        let iT, zT = 2,
+          XT = null;
+        const BT = () => {
+          var oT;
+          WT = !1, null === (oT = XT) || void 0 === oT || oT(), clearTimeout(iT), TT.restoreSize()
         };
-        FY = setTimeout((() => {
-          gY(), DY(new Error("No frame was drawn to capture"))
-        }), IY), OY = YY.onFrameDrawn((() => {
-          if (AY--, AY > 0) return;
+        iT = setTimeout((() => {
+          BT(), IT(new Error("No frame was drawn to capture"))
+        }), kT), XT = TT.onFrameDrawn((() => {
+          if (zT--, zT > 0) return;
           const {
-            canvas: FY
-          } = YY, IY = {
-            width: FY.width,
-            height: FY.height
+            canvas: iT
+          } = TT, kT = {
+            width: iT.width,
+            height: iT.height
           };
           try {
-            FY.toBlob((YY => {
-              YY ? rY({
-                blob: YY,
-                ...IY
-              }) : DY(new Error("The canvas gave no image"))
+            iT.toBlob((TT => {
+              TT ? oT({
+                blob: TT,
+                ...kT
+              }) : IT(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (RY) {
-            DY(RY)
+          } catch (WT) {
+            IT(WT)
           } finally {
-            gY()
+            BT()
           }
         }))
       }))
     }
-    async function gY(YY, rY, DY) {
+    async function BT(TT, oT, IT) {
       try {
-        const AY = await OY(YY, rY, DY);
-        (0, FY.d)(AY.blob, `bloxd-screenshot-${AY.width}x${AY.height}-${Date.now()}.png`)
-      } catch (AY) {
-        console.error("Error taking screenshot:", AY)
+        const zT = await XT(TT, oT, IT);
+        (0, iT.d)(zT.blob, `bloxd-screenshot-${zT.width}x${zT.height}-${Date.now()}.png`)
+      } catch (zT) {
+        console.error("Error taking screenshot:", zT)
       }
     }
   },
-  36812: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => aY,
-      e: () => OY,
-      h: () => RY
+  36397: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => FT,
+      f: () => XT,
+      h: () => WT
     });
-    var FY = DY(36809),
-      AY = DY(36817);
-    let IY = 0;
+    var iT = IT(36391),
+      zT = IT(36404);
+    let kT = 0;
 
-    function RY(YY, rY) {
-      const DY = YY;
-      DY._noaFaceGroups = null !== rY && void 0 !== rY ? rY : null, DY._noaFaceEpoch = -1, DY._noaFaceMask = -1, DY._noaFaceCount = -1, DY._noaFaceMaterial = null;
-      const FY = YY.qm;
-      FY && 1 === FY.length && (FY[0].indexStart = 0, FY[0].indexCount = YY.getTotalIndices())
+    function WT(TT, oT) {
+      const IT = TT;
+      IT._noaFaceGroups = null !== oT && void 0 !== oT ? oT : null, IT._noaFaceEpoch = -1, IT._noaFaceMask = -1, IT._noaFaceCount = -1, IT._noaFaceMaterial = null;
+      const iT = TT.pR;
+      iT && 1 === iT.length && (iT[0].indexStart = 0, iT[0].indexCount = TT.getTotalIndices())
     }
 
-    function OY(YY, rY) {
-      if (rY) {
-        IY++;
-        for (const rY of YY) {
-          const YY = rY._noaFaceGroups;
-          YY && RY(rY, YY)
+    function XT(TT, oT) {
+      if (oT) {
+        kT++;
+        for (const oT of TT) {
+          const TT = oT._noaFaceGroups;
+          TT && WT(oT, TT)
         }
-      } else IY = Math.max(0, IY - 1)
+      } else kT = Math.max(0, kT - 1)
     }
 
-    function gY(YY, rY, DY) {
-      let AY = -1,
-        IY = 0;
-      for (let RY = 0; RY < FY.c; RY++) {
-        const DY = YY[RY],
-          OY = YY[RY + 1];
-        OY > DY && rY & 1 << FY.b[RY] && (AY < 0 && (AY = DY), IY = OY)
+    function BT(TT, oT, IT) {
+      let zT = -1,
+        kT = 0;
+      for (let WT = 0; WT < iT.c; WT++) {
+        const IT = TT[WT],
+          XT = TT[WT + 1];
+        XT > IT && oT & 1 << iT.b[WT] && (zT < 0 && (zT = IT), kT = XT)
       }
-      return AY < 0 ? (DY[0] = 0, DY[1] = 0, 0) : (DY[0] = AY, DY[1] = IY - AY, IY - AY)
+      return zT < 0 ? (IT[0] = 0, IT[1] = 0, 0) : (IT[0] = zT, IT[1] = kT - zT, kT - zT)
     }
-    class aY {
-      constructor(YY, rY) {
-        this.Jy = YY, this.engine = rY, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class FT {
+      constructor(TT, oT) {
+        this.Yc = TT, this.engine = oT, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(YY, rY) {
-        if (!rY) return;
-        const DY = rY.getProjectionMatrix().m,
-          RY = 0 === IY && 0 === DY[15],
-          OY = rY.globalPosition,
+      apply(TT, oT) {
+        if (!oT) return;
+        const IT = oT.getProjectionMatrix().m,
+          WT = 0 === kT && 0 === IT[15],
+          XT = oT.globalPosition,
           {
-            engine: aY
+            engine: FT
           } = this,
-          vY = RY ? (0, AY.c)(DY, aY.getRenderWidth(), aY.getRenderHeight()) : 0;
-        OY.x === this.eyeX && OY.y === this.eyeY && OY.z === this.eyeZ && vY === this.focalPx && RY === this.culling || (this.epoch++, this.eyeX = OY.x, this.eyeY = OY.y, this.eyeZ = OY.z, this.focalPx = vY, this.culling = RY);
+          ST = WT ? (0, zT.d)(IT, FT.getRenderWidth(), FT.getRenderHeight()) : 0;
+        XT.x === this.eyeX && XT.y === this.eyeY && XT.z === this.eyeZ && ST === this.focalPx && WT === this.culling || (this.epoch++, this.eyeX = XT.x, this.eyeY = XT.y, this.eyeZ = XT.z, this.focalPx = ST, this.culling = WT);
         const {
-          epoch: uY,
-          range: sY
-        } = this, iY = this.Jy / 2, yY = iY * Math.sqrt(3), QY = YY.data, oY = YY.length;
-        let WY = 0;
-        for (let IY = 0; IY < oY; IY++) {
-          const YY = QY[IY],
-            rY = YY._noaFaceGroups;
-          if (rY && (YY._noaFaceEpoch !== uY || YY._noaFaceMaterial !== YY.material)) {
-            YY._noaFaceEpoch = uY, YY._noaFaceMaterial = YY.material;
-            const DY = YY.qm,
-              IY = DY && 1 === DY.length ? DY[0] : null;
-            let aY = -1;
-            if (RY && IY && (0, FY.q)(YY.material)) {
-              const DY = YY.position,
-                FY = OY.x - DY.x,
-                IY = OY.y - DY.y,
-                RY = OY.z - DY.z,
-                gY = FY - iY,
-                uY = IY - iY,
-                sY = RY - iY,
-                QY = Math.sqrt(gY * gY + uY * uY + sY * sY) + yY;
-              aY = (0, AY.l)(rY, FY, IY, RY, (0, AY.f)(QY, vY))
+          epoch: DT,
+          range: LT
+        } = this, xT = this.Yc / 2, cT = xT * Math.sqrt(3), KT = TT.data, MT = TT.length;
+        let rT = 0;
+        for (let kT = 0; kT < MT; kT++) {
+          const TT = KT[kT],
+            oT = TT._noaFaceGroups;
+          if (oT && (TT._noaFaceEpoch !== DT || TT._noaFaceMaterial !== TT.material)) {
+            TT._noaFaceEpoch = DT, TT._noaFaceMaterial = TT.material;
+            const IT = TT.pR,
+              kT = IT && 1 === IT.length ? IT[0] : null;
+            let FT = -1;
+            if (WT && kT && (0, iT.k)(TT.material)) {
+              const IT = TT.position,
+                iT = XT.x - IT.x,
+                kT = XT.y - IT.y,
+                WT = XT.z - IT.z,
+                BT = iT - xT,
+                DT = kT - xT,
+                LT = WT - xT,
+                KT = Math.sqrt(BT * BT + DT * DT + LT * LT) + cT;
+              FT = (0, zT.l)(oT, iT, kT, WT, (0, zT.e)(KT, ST))
             }
-            if (IY && aY !== YY._noaFaceMask) {
-              YY._noaFaceMask = aY;
-              let DY = 0,
-                AY = rY[FY.c]; - 1 !== aY && (AY = gY(rY, aY, sY), DY = sY[0]), YY._noaFaceCount = AY, IY.indexStart = 6 * DY, IY.indexCount = 6 * AY, IY.setBoundingInfo(YY.oB())
+            if (kT && FT !== TT._noaFaceMask) {
+              TT._noaFaceMask = FT;
+              let IT = 0,
+                zT = oT[iT.c]; - 1 !== FT && (zT = BT(oT, FT, LT), IT = LT[0]), TT._noaFaceCount = zT, kT.indexStart = 6 * IT, kT.indexCount = 6 * zT, kT.setBoundingInfo(TT.GJ())
             }
           }
-          rY && 0 === YY._noaFaceCount || (QY[WY++] = YY)
+          oT && 0 === TT._noaFaceCount || (KT[rT++] = TT)
         }
-        YY.length = WY
+        TT.length = rT
       }
     }
   },
-  36801: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => gY,
-      g: () => OY
+  36385: (TT, oT, IT) => {
+    IT.d(oT, {
+      e: () => BT,
+      g: () => XT
     });
-    const FY = new WeakSet;
-    let AY = 0;
-    const IY = new Set;
+    const iT = new WeakSet;
+    let zT = 0;
+    const kT = new Set;
 
-    function RY(YY, rY) {
-      YY._data = rY
+    function WT(TT, oT) {
+      TT._data = oT
     }
 
-    function OY(YY) {
-      var rY, DY;
-      (null !== (rY = null === (DY = YY.getBuffer()) || void 0 === DY ? void 0 : DY.gu) && void 0 !== rY ? rY : 0) > 0 && (FY.add(YY), 0 === AY ? RY(YY, null) : IY.add(YY))
+    function XT(TT) {
+      var oT, IT;
+      (null !== (oT = null === (IT = TT.getBuffer()) || void 0 === IT ? void 0 : IT.fD) && void 0 !== oT ? oT : 0) > 0 && (iT.add(TT), 0 === zT ? WT(TT, null) : kT.add(TT))
     }
 
-    function gY(YY) {
-      AY++;
-      for (const DY of function(YY) {
-          const rY = new Set;
-          for (const AY of YY) {
-            const YY = AY.geometry;
-            for (const AY of Object.values(null !== (DY = null === YY || void 0 === YY ? void 0 : YY.getVertexBuffers()) && void 0 !== DY ? DY : {})) {
-              var DY;
-              const YY = AY.getWrapperBuffer();
-              FY.has(YY) && rY.add(YY)
+    function BT(TT) {
+      zT++;
+      for (const IT of function(TT) {
+          const oT = new Set;
+          for (const zT of TT) {
+            const TT = zT.geometry;
+            for (const zT of Object.values(null !== (IT = null === TT || void 0 === TT ? void 0 : TT.getVertexBuffers()) && void 0 !== IT ? IT : {})) {
+              var IT;
+              const TT = zT.getWrapperBuffer();
+              iT.has(TT) && oT.add(TT)
             }
           }
-          return rY
-        }(YY)) DY.getData() || aY(DY), IY.add(DY);
-      let rY = !0;
+          return oT
+        }(TT)) IT.getData() || FT(IT), kT.add(IT);
+      let oT = !0;
       return () => {
-        if (rY && (rY = !1, AY--, 0 === AY)) {
-          for (const YY of IY) RY(YY, null);
-          IY.clear()
+        if (oT && (oT = !1, zT--, 0 === zT)) {
+          for (const TT of kT) WT(TT, null);
+          kT.clear()
         }
       }
     }
 
-    function aY(YY) {
-      const rY = YY.getBuffer();
-      if (!rY || !(rY.gu > 0)) return;
-      const DY = YY._engine,
-        FY = new Uint8Array(rY.gu);
-      DY.bindArrayBuffer(rY), DY._gl.getBufferSubData(DY._gl.ARRAY_BUFFER, 0, FY), DY._resetVertexBufferBinding(), RY(YY, FY)
+    function FT(TT) {
+      const oT = TT.getBuffer();
+      if (!oT || !(oT.fD > 0)) return;
+      const IT = TT._engine,
+        iT = new Uint8Array(oT.fD);
+      IT.bindArrayBuffer(oT), IT._gl.getBufferSubData(IT._gl.ARRAY_BUFFER, 0, iT), IT._resetVertexBufferBinding(), WT(TT, iT)
     }
   },
-  36809: (YY, rY, DY) => {
-    DY.d(rY, {
-      b: () => RY,
-      c: () => IY,
-      g: () => gY,
-      i: () => FY,
-      m: () => OY,
-      p: () => AY,
-      q: () => aY
+  36391: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => WT,
+      c: () => kT,
+      d: () => BT,
+      f: () => iT,
+      g: () => XT,
+      j: () => zT,
+      k: () => FT
     });
-    const FY = 6,
-      AY = [0, 2, 4, 1, 3, 5, 0, 2],
-      IY = 6,
-      RY = [1, 0, 3, 2, 5, 4];
-    for (let vY = IY; vY < AY.length; vY++)
-      if (AY[vY] !== AY[vY - IY]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const OY = AY.length + 1,
-      gY = (() => {
-        const YY = [];
-        for (let rY = 0; rY < IY; rY++) YY[AY[rY]] = rY;
-        return YY
+    const iT = 6,
+      zT = [0, 2, 4, 1, 3, 5, 0, 2],
+      kT = 6,
+      WT = [1, 0, 3, 2, 5, 4];
+    for (let ST = kT; ST < zT.length; ST++)
+      if (zT[ST] !== zT[ST - kT]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const XT = zT.length + 1,
+      BT = (() => {
+        const TT = [];
+        for (let oT = 0; oT < kT; oT++) TT[zT[oT]] = oT;
+        return TT
       })();
 
-    function aY(YY) {
-      return !!YY && YY.backFaceCulling && (0 === YY.transparencyMode || 1 === YY.transparencyMode)
+    function FT(TT) {
+      return !!TT && TT.backFaceCulling && (0 === TT.transparencyMode || 1 === TT.transparencyMode)
     }
   },
-  36817: (YY, rY, DY) => {
-    DY.d(rY, {
-      c: () => OY,
-      f: () => gY,
-      i: () => vY,
-      l: () => aY,
-      m: () => yY
+  36404: (TT, oT, IT) => {
+    IT.d(oT, {
+      d: () => XT,
+      e: () => BT,
+      i: () => ST,
+      l: () => FT,
+      n: () => cT
     });
-    var FY = DY(36809);
-    const AY = 1 / 16,
-      IY = 1 / 64,
-      RY = 2048;
-    FY.i;
+    var iT = IT(36391);
+    const zT = 1 / 16,
+      kT = 1 / 64,
+      WT = 2048;
+    iT.f;
 
-    function OY(YY, rY, DY) {
-      return Math.min(Math.abs(YY[0] * rY), Math.abs(YY[5] * DY)) / 2
+    function XT(TT, oT, IT) {
+      return Math.min(Math.abs(TT[0] * oT), Math.abs(TT[5] * IT)) / 2
     }
 
-    function gY(YY, rY) {
-      return AY + IY * YY * YY / rY
+    function BT(TT, oT) {
+      return zT + kT * TT * TT / oT
     }
 
-    function aY(YY, rY, DY, AY, IY) {
-      const RY = FY.m;
-      return vY(YY[RY], YY[RY + 1], YY[RY + 2], YY[RY + 3], YY[RY + 4], YY[RY + 5], rY, DY, AY, IY)
+    function FT(TT, oT, IT, zT, kT) {
+      const WT = iT.g;
+      return ST(TT[WT], TT[WT + 1], TT[WT + 2], TT[WT + 3], TT[WT + 4], TT[WT + 5], oT, IT, zT, kT)
     }
 
-    function vY(YY, rY, DY, FY, AY, IY, RY, OY, gY, aY) {
-      return (RY <= YY - aY ? 0 : 1) | (RY >= rY + aY ? 0 : 2) | (OY <= DY - aY ? 0 : 4) | (OY >= FY + aY ? 0 : 8) | (gY <= AY - aY ? 0 : 16) | (gY >= IY + aY ? 0 : 32)
+    function ST(TT, oT, IT, iT, zT, kT, WT, XT, BT, FT) {
+      return (WT <= TT - FT ? 0 : 1) | (WT >= oT + FT ? 0 : 2) | (XT <= IT - FT ? 0 : 4) | (XT >= iT + FT ? 0 : 8) | (BT <= zT - FT ? 0 : 16) | (BT >= kT + FT ? 0 : 32)
     }
-    const uY = (() => {
-        const YY = [];
-        for (let rY = 0; rY < FY.p.length; rY++) {
-          let DY = 0;
-          for (let AY = rY + 1; AY <= FY.p.length; AY++) {
-            const IY = 1 << FY.p[AY - 1];
-            if (DY & IY) break;
-            DY |= IY, YY.push({
-              start: rY,
-              end: AY,
-              EF: DY
+    const DT = (() => {
+        const TT = [];
+        for (let oT = 0; oT < iT.j.length; oT++) {
+          let IT = 0;
+          for (let zT = oT + 1; zT <= iT.j.length; zT++) {
+            const kT = 1 << iT.j[zT - 1];
+            if (IT & kT) break;
+            IT |= kT, TT.push({
+              start: oT,
+              end: zT,
+              Ci: IT
             })
           }
         }
-        return YY
+        return TT
       })(),
-      sY = [];
+      LT = [];
 
-    function iY(YY, rY) {
-      const DY = FY.g[rY];
-      return YY[DY + 1] - YY[DY]
+    function xT(TT, oT) {
+      const IT = iT.d[oT];
+      return TT[IT + 1] - TT[IT]
     }
 
-    function yY(YY, rY, DY) {
-      let AY = 0;
-      for (let RY = 0; RY < FY.i; RY++) iY(YY, RY) > 0 && (AY |= 1 << RY);
-      if (0 === (rY &= AY)) return 0;
-      if (rY === AY) return DY[0] = 0, DY[1] = YY[FY.c], 1;
-      let IY = null,
-        OY = 1 / 0;
-      for (const aY of function(YY) {
-          let rY = sY[YY];
-          if (rY) return rY;
-          const DY = new Map,
-            FY = (YY, rY) => {
-              const FY = 4 * YY + rY.length / 2;
-              DY.has(FY) || DY.set(FY, {
-                EF: YY,
-                windows: rY
+    function cT(TT, oT, IT) {
+      let zT = 0;
+      for (let WT = 0; WT < iT.f; WT++) xT(TT, WT) > 0 && (zT |= 1 << WT);
+      if (0 === (oT &= zT)) return 0;
+      if (oT === zT) return IT[0] = 0, IT[1] = TT[iT.c], 1;
+      let kT = null,
+        XT = 1 / 0;
+      for (const FT of function(TT) {
+          let oT = LT[TT];
+          if (oT) return oT;
+          const IT = new Map,
+            iT = (TT, oT) => {
+              const iT = 4 * TT + oT.length / 2;
+              IT.has(iT) || IT.set(iT, {
+                Ci: TT,
+                windows: oT
               })
             };
-          for (const IY of uY)
-            if ((IY.EF & YY) === YY && FY(IY.EF, [IY.start, IY.end]), 0 !== (IY.EF & YY))
-              for (const rY of uY) rY.start < IY.end || 0 !== (IY.EF & rY.EF) || 0 === (rY.EF & YY) || ((IY.EF | rY.EF) & YY) !== YY || FY(IY.EF | rY.EF, [IY.start, IY.end, rY.start, rY.end]);
-          const AY = [...DY.values()];
-          return rY = AY.filter((YY => !AY.some((rY => rY !== YY && (rY.EF & YY.EF) === rY.EF && rY.windows.length <= YY.windows.length)))), sY[YY] = rY, rY
-        }(rY)) {
-        let DY = (aY.windows.length / 2 - 1) * RY;
-        const gY = aY.EF & ~rY & AY;
-        for (let rY = 0; rY < FY.i; rY++) gY & 1 << rY && (DY += iY(YY, rY));
-        DY < OY && (IY = aY, OY = DY)
+          for (const kT of DT)
+            if ((kT.Ci & TT) === TT && iT(kT.Ci, [kT.start, kT.end]), 0 !== (kT.Ci & TT))
+              for (const oT of DT) oT.start < kT.end || 0 !== (kT.Ci & oT.Ci) || 0 === (oT.Ci & TT) || ((kT.Ci | oT.Ci) & TT) !== TT || iT(kT.Ci | oT.Ci, [kT.start, kT.end, oT.start, oT.end]);
+          const zT = [...IT.values()];
+          return oT = zT.filter((TT => !zT.some((oT => oT !== TT && (oT.Ci & TT.Ci) === oT.Ci && oT.windows.length <= TT.windows.length)))), LT[TT] = oT, oT
+        }(oT)) {
+        let IT = (FT.windows.length / 2 - 1) * WT;
+        const BT = FT.Ci & ~oT & zT;
+        for (let oT = 0; oT < iT.f; oT++) BT & 1 << oT && (IT += xT(TT, oT));
+        IT < XT && (kT = FT, XT = IT)
       }
-      const gY = IY.windows;
-      for (let FY = 0; FY < gY.length; FY += 2) {
-        const rY = YY[gY[FY]];
-        DY[FY] = rY, DY[FY + 1] = YY[gY[FY + 1]] - rY
+      const BT = kT.windows;
+      for (let iT = 0; iT < BT.length; iT += 2) {
+        const oT = TT[BT[iT]];
+        IT[iT] = oT, IT[iT + 1] = TT[BT[iT + 1]] - oT
       }
-      return gY.length / 2
+      return BT.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

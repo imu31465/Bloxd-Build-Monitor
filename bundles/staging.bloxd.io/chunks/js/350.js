@@ -1,62 +1,62 @@
 export const id = 350;
 export const ids = [350];
 export const modules = {
-  60285: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      applyLightFoOffset: () => RY,
-      getFloatingOriginOffset: () => AY,
-      lightFoVersion: () => IY,
-      wrapRenderableForFO: () => OY
+  60091: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      applyLightFoOffset: () => WT,
+      getFloatingOriginOffset: () => zT,
+      lightFoVersion: () => kT,
+      wrapRenderableForFO: () => XT
     });
-    var FY = DY(40800);
+    var iT = IT(40563);
 
-    function AY(YY) {
-      const rY = YY.camera;
-      if (!rY) return {
+    function zT(TT) {
+      const oT = TT.camera;
+      if (!oT) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const DY = rY.worldMatrix;
+      const IT = oT.worldMatrix;
       return {
-        x: DY[12],
-        y: DY[13],
-        z: DY[14]
+        x: IT[12],
+        y: IT[13],
+        z: IT[14]
       }
     }
 
-    function IY(YY) {
-      return YY.camera ? YY.camera.worldMatrixVersion : 0
+    function kT(TT) {
+      return TT.camera ? TT.camera.worldMatrixVersion : 0
     }
 
-    function RY(YY, rY) {
-      const DY = rY.camera?.worldMatrix;
-      if (!DY) return;
-      const AY = DY[12],
-        IY = DY[13],
-        RY = DY[14];
-      let OY = 0;
-      for (const gY of rY.lights) {
-        if (OY >= FY.c) break;
-        if (!gY._writeLightUbo) continue;
-        const rY = 4 + 16 * OY,
-          DY = YY[rY + 3];
-        if (0 === DY || 2 === DY) {
-          const DY = gY.worldMatrix;
-          YY[rY] = DY[12] - AY, YY[rY + 1] = DY[13] - IY, YY[rY + 2] = DY[14] - RY
+    function WT(TT, oT) {
+      const IT = oT.camera?.worldMatrix;
+      if (!IT) return;
+      const zT = IT[12],
+        kT = IT[13],
+        WT = IT[14];
+      let XT = 0;
+      for (const BT of oT.lights) {
+        if (XT >= iT.e) break;
+        if (!BT._writeLightUbo) continue;
+        const oT = 4 + 16 * XT,
+          IT = TT[oT + 3];
+        if (0 === IT || 2 === IT) {
+          const IT = BT.worldMatrix;
+          TT[oT] = IT[12] - zT, TT[oT + 1] = IT[13] - kT, TT[oT + 2] = IT[14] - WT
         }
-        OY++
+        XT++
       }
     }
 
-    function OY(YY, rY, DY) {
-      let FY = -1;
+    function XT(TT, oT, IT) {
+      let iT = -1;
       return () => {
-        const AY = rY.camera ? rY.camera.worldMatrixVersion : -1;
-        AY !== FY && (DY(), FY = AY), YY()
+        const zT = oT.camera ? oT.camera.worldMatrixVersion : -1;
+        zT !== iT && (IT(), iT = zT), TT()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

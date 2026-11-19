@@ -1,26 +1,26 @@
 export const id = 288;
 export const ids = [288];
 export const modules = {
-  40472: (YY, rY, DY) => {
-    function FY() {
-      return FY = Object.assign ? Object.assign.bind() : function(YY) {
-        for (var rY = 1; rY < arguments.length; rY++) {
-          var DY = arguments[rY];
-          for (var FY in DY)({}).hasOwnProperty.call(DY, FY) && (YY[FY] = DY[FY])
+  40199: (TT, oT, IT) => {
+    function iT() {
+      return iT = Object.assign ? Object.assign.bind() : function(TT) {
+        for (var oT = 1; oT < arguments.length; oT++) {
+          var IT = arguments[oT];
+          for (var iT in IT)({}).hasOwnProperty.call(IT, iT) && (TT[iT] = IT[iT])
         }
-        return YY
-      }, FY.apply(null, arguments)
+        return TT
+      }, iT.apply(null, arguments)
     }
-    DY.d(rY, {
-      b: () => sY,
-      e: () => OY
+    IT.d(oT, {
+      d: () => LT,
+      f: () => XT
     });
-    var AY = !1;
+    var zT = !1;
     try {
-      AY = "undefined" !== typeof localStorage
-    } catch (yY) {}
-    var IY = "undefined" !== typeof process,
-      RY = AY && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || IY && {
+      zT = "undefined" !== typeof localStorage
+    } catch (cT) {}
+    var kT = "undefined" !== typeof process,
+      WT = zT && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || kT && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -28,141 +28,141 @@ export const modules = {
         WDS_SOCKET_PORT: void 0,
         FAST_REFRESH: !0,
         REACT_APP_DEV_URLS: "false"
-      }.DEBUG ? console.log : function(YY) {
+      }.DEBUG ? console.log : function(TT) {
         return ""
       };
 
-    function OY(YY, rY, DY, AY, IY) {
-      void 0 === AY && (AY = {});
-      var RY = FY({}, vY(DY), AY),
-        OY = function(YY, rY, DY, AY, IY) {
-          var RY = [].concat(rY),
-            OY = iY(YY, DY, AY),
-            gY = OY.compilerHost,
-            aY = OY.updateFile,
-            vY = OY.deleteFile,
-            uY = new Map,
-            sY = 0,
-            yY = FY({}, gY, {
+    function XT(TT, oT, IT, zT, kT) {
+      void 0 === zT && (zT = {});
+      var WT = iT({}, ST(IT), zT),
+        XT = function(TT, oT, IT, zT, kT) {
+          var WT = [].concat(oT),
+            XT = xT(TT, IT, zT),
+            BT = XT.compilerHost,
+            FT = XT.updateFile,
+            ST = XT.deleteFile,
+            DT = new Map,
+            LT = 0,
+            cT = iT({}, BT, {
               getProjectVersion: function() {
-                return sY.toString()
+                return LT.toString()
               },
               getCompilationSettings: function() {
-                return DY
+                return IT
               },
               getCustomTransformers: function() {
-                return IY
+                return kT
               },
               getScriptFileNames: function() {
-                return RY.slice()
+                return WT.slice()
               },
-              getScriptSnapshot: function(rY) {
-                var DY = YY.readFile(rY);
-                if (DY && "string" === typeof DY) return AY.ScriptSnapshot.fromString(DY)
+              getScriptSnapshot: function(oT) {
+                var IT = TT.readFile(oT);
+                if (IT && "string" === typeof IT) return zT.ScriptSnapshot.fromString(IT)
               },
-              getScriptVersion: function(YY) {
-                return uY.get(YY) || "0"
+              getScriptVersion: function(TT) {
+                return DT.get(TT) || "0"
               },
-              writeFile: YY.writeFile
+              writeFile: TT.writeFile
             }),
-            QY = {
-              languageServiceHost: yY,
-              updateFile: function(YY) {
-                sY++, uY.set(YY.fileName, sY.toString()), RY.includes(YY.fileName) || RY.push(YY.fileName), aY(YY)
+            KT = {
+              languageServiceHost: cT,
+              updateFile: function(TT) {
+                LT++, DT.set(TT.fileName, LT.toString()), WT.includes(TT.fileName) || WT.push(TT.fileName), FT(TT)
               },
-              deleteFile: function(YY) {
-                sY++, uY.set(YY.fileName, sY.toString());
-                var rY = RY.indexOf(YY.fileName); - 1 !== rY && RY.splice(rY, 1), vY(YY)
+              deleteFile: function(TT) {
+                LT++, DT.set(TT.fileName, LT.toString());
+                var oT = WT.indexOf(TT.fileName); - 1 !== oT && WT.splice(oT, 1), ST(TT)
               }
             };
-          return QY
-        }(YY, rY, RY, DY, IY),
-        gY = OY.languageServiceHost,
-        aY = OY.updateFile,
-        uY = OY.deleteFile,
-        sY = DY.createLanguageService(gY),
-        yY = sY.getCompilerOptionsDiagnostics();
-      if (yY.length) {
-        var QY = iY(YY, AY, DY);
-        throw new Error(DY.formatDiagnostics(yY, QY.compilerHost))
+          return KT
+        }(TT, oT, WT, IT, kT),
+        BT = XT.languageServiceHost,
+        FT = XT.updateFile,
+        DT = XT.deleteFile,
+        LT = IT.createLanguageService(BT),
+        cT = LT.getCompilerOptionsDiagnostics();
+      if (cT.length) {
+        var KT = xT(TT, zT, IT);
+        throw new Error(IT.formatDiagnostics(cT, KT.compilerHost))
       }
       return {
         name: "vfs",
-        sys: YY,
-        languageService: sY,
-        getSourceFile: function(YY) {
-          var rY;
-          return null == (rY = sY.getProgram()) ? void 0 : rY.getSourceFile(YY)
+        sys: TT,
+        languageService: LT,
+        getSourceFile: function(TT) {
+          var oT;
+          return null == (oT = LT.getProgram()) ? void 0 : oT.getSourceFile(TT)
         },
-        createFile: function(YY, rY) {
-          aY(DY.createSourceFile(YY, rY, RY.target, !1))
+        createFile: function(TT, oT) {
+          FT(IT.createSourceFile(TT, oT, WT.target, !1))
         },
-        updateFile: function(YY, rY, FY) {
-          var AY = sY.getProgram().getSourceFile(YY);
-          if (!AY) throw new Error("Did not find a source file for " + YY);
-          var IY = AY.text,
-            RY = null != FY ? FY : DY.createTextSpan(0, IY.length),
-            OY = IY.slice(0, RY.start) + rY + IY.slice(RY.start + RY.length),
-            gY = DY.updateSourceFile(AY, OY, {
-              span: RY,
-              newLength: rY.length
+        updateFile: function(TT, oT, iT) {
+          var zT = LT.getProgram().getSourceFile(TT);
+          if (!zT) throw new Error("Did not find a source file for " + TT);
+          var kT = zT.text,
+            WT = null != iT ? iT : IT.createTextSpan(0, kT.length),
+            XT = kT.slice(0, WT.start) + oT + kT.slice(WT.start + WT.length),
+            BT = IT.updateSourceFile(zT, XT, {
+              span: WT,
+              newLength: oT.length
             });
-          aY(gY)
+          FT(BT)
         },
-        deleteFile: function(YY) {
-          var rY = sY.getProgram().getSourceFile(YY);
-          rY && uY(rY)
+        deleteFile: function(TT) {
+          var oT = LT.getProgram().getSourceFile(TT);
+          oT && DT(oT)
         }
       }
     }
 
-    function gY(YY) {
-      throw new Error("Method '" + YY + "' is not implemented.")
+    function BT(TT) {
+      throw new Error("Method '" + TT + "' is not implemented.")
     }
 
-    function aY(YY, rY) {
+    function FT(TT, oT) {
       return function() {
-        for (var DY = arguments.length, FY = new Array(DY), AY = 0; AY < DY; AY++) FY[AY] = arguments[AY];
-        var IY = rY.apply(void 0, FY),
-          OY = "string" === typeof IY ? IY.slice(0, 80) + "..." : IY;
-        return RY.apply(void 0, ["> " + YY].concat(FY)), RY("< " + OY), IY
+        for (var IT = arguments.length, iT = new Array(IT), zT = 0; zT < IT; zT++) iT[zT] = arguments[zT];
+        var kT = oT.apply(void 0, iT),
+          XT = "string" === typeof kT ? kT.slice(0, 80) + "..." : kT;
+        return WT.apply(void 0, ["> " + TT].concat(iT)), WT("< " + XT), kT
       }
     }
-    var vY = function(YY) {
-        return FY({}, YY.getDefaultCompilerOptions(), {
-          jsx: YY.JsxEmit.React,
+    var ST = function(TT) {
+        return iT({}, TT.getDefaultCompilerOptions(), {
+          jsx: TT.JsxEmit.React,
           strict: !0,
           esModuleInterop: !0,
-          module: YY.ModuleKind.ESNext,
+          module: TT.ModuleKind.ESNext,
           suppressOutputPathCheck: !0,
           skipLibCheck: !0,
           skipDefaultLibCheck: !0
-        }, YY.versionMajorMinor && Number(YY.versionMajorMinor.split(".")[0]) >= 6 ? {
+        }, TT.versionMajorMinor && Number(TT.versionMajorMinor.split(".")[0]) >= 6 ? {
           ignoreDeprecations: "6.0"
         } : {
-          moduleResolution: YY.ModuleResolutionKind.NodeJs
+          moduleResolution: TT.ModuleResolutionKind.NodeJs
         })
       },
-      uY = function(YY) {
-        return YY.replace("/", "/lib.").toLowerCase()
+      DT = function(TT) {
+        return TT.replace("/", "/lib.").toLowerCase()
       };
 
-    function sY(YY) {
+    function LT(TT) {
       return {
         args: [],
         createDirectory: function() {
-          return gY("createDirectory")
+          return BT("createDirectory")
         },
-        directoryExists: aY("directoryExists", (function(rY) {
-          return Array.from(YY.keys()).some((function(YY) {
-            return YY.startsWith(rY)
+        directoryExists: FT("directoryExists", (function(oT) {
+          return Array.from(TT.keys()).some((function(TT) {
+            return TT.startsWith(oT)
           }))
         })),
         exit: function() {
-          return gY("exit")
+          return BT("exit")
         },
-        fileExists: aY("fileExists", (function(rY) {
-          return YY.has(rY) || YY.has(uY(rY))
+        fileExists: FT("fileExists", (function(oT) {
+          return TT.has(oT) || TT.has(DT(oT))
         })),
         getCurrentDirectory: function() {
           return "/"
@@ -171,64 +171,64 @@ export const modules = {
           return []
         },
         getExecutingFilePath: function() {
-          return gY("getExecutingFilePath")
+          return BT("getExecutingFilePath")
         },
-        readDirectory: aY("readDirectory", (function(rY) {
-          return "/" === rY ? Array.from(YY.keys()) : []
+        readDirectory: FT("readDirectory", (function(oT) {
+          return "/" === oT ? Array.from(TT.keys()) : []
         })),
-        readFile: aY("readFile", (function(rY) {
-          var DY;
-          return null != (DY = YY.get(rY)) ? DY : YY.get(uY(rY))
+        readFile: FT("readFile", (function(oT) {
+          var IT;
+          return null != (IT = TT.get(oT)) ? IT : TT.get(DT(oT))
         })),
-        resolvePath: function(YY) {
-          return YY
+        resolvePath: function(TT) {
+          return TT
         },
         newLine: "\n",
         useCaseSensitiveFileNames: !0,
         write: function() {
-          return gY("write")
+          return BT("write")
         },
-        writeFile: function(rY, DY) {
-          YY.set(rY, DY)
+        writeFile: function(oT, IT) {
+          TT.set(oT, IT)
         },
-        deleteFile: function(rY) {
-          YY.delete(rY)
+        deleteFile: function(oT) {
+          TT.delete(oT)
         }
       }
     }
 
-    function iY(YY, rY, DY) {
-      var AY = new Map;
+    function xT(TT, oT, IT) {
+      var zT = new Map;
       return {
-        compilerHost: FY({}, YY, {
-          getCanonicalFileName: function(YY) {
-            return YY
+        compilerHost: iT({}, TT, {
+          getCanonicalFileName: function(TT) {
+            return TT
           },
           getDefaultLibFileName: function() {
-            return "/" + DY.getDefaultLibFileName(rY)
+            return "/" + IT.getDefaultLibFileName(oT)
           },
           getNewLine: function() {
-            return YY.newLine
+            return TT.newLine
           },
-          getSourceFile: function(FY, IY) {
-            var RY, OY;
-            return AY.get(FY) || (OY = DY.createSourceFile(FY, YY.readFile(FY), null != (RY = null != IY ? IY : rY.target) ? RY : vY(DY).target, !1), AY.set(OY.fileName, OY), OY)
+          getSourceFile: function(iT, kT) {
+            var WT, XT;
+            return zT.get(iT) || (XT = IT.createSourceFile(iT, TT.readFile(iT), null != (WT = null != kT ? kT : oT.target) ? WT : ST(IT).target, !1), zT.set(XT.fileName, XT), XT)
           },
           useCaseSensitiveFileNames: function() {
-            return YY.useCaseSensitiveFileNames
+            return TT.useCaseSensitiveFileNames
           }
         }),
-        updateFile: function(rY) {
-          var DY = AY.has(rY.fileName);
-          return YY.writeFile(rY.fileName, rY.text), AY.set(rY.fileName, rY), DY
+        updateFile: function(oT) {
+          var IT = zT.has(oT.fileName);
+          return TT.writeFile(oT.fileName, oT.text), zT.set(oT.fileName, oT), IT
         },
-        deleteFile: function(rY) {
-          var DY = AY.has(rY.fileName);
-          return AY.delete(rY.fileName), YY.deleteFile(rY.fileName), DY
+        deleteFile: function(oT) {
+          var IT = zT.has(oT.fileName);
+          return zT.delete(oT.fileName), TT.deleteFile(oT.fileName), IT
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

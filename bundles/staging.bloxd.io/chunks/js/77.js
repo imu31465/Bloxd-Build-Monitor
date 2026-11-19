@@ -1,377 +1,377 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4313: (YY, rY, DY) => {
-    DY.d(rY, {
-      A: () => sY,
-      c: () => FY,
-      f: () => RY,
-      i: () => oY,
-      l: () => QY,
-      o: () => OY,
-      s: () => AY,
-      v: () => IY,
-      x: () => yY,
-      z: () => iY
+  4229: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => iT,
+      e: () => WT,
+      f: () => MT,
+      j: () => KT,
+      l: () => XT,
+      p: () => zT,
+      r: () => kT,
+      s: () => cT,
+      v: () => xT,
+      y: () => LT
     });
-    const FY = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const iT = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function AY(YY) {
+    function zT(TT) {
       try {
-        return decodeURIComponent(YY.slice(1))
+        return decodeURIComponent(TT.slice(1))
       } catch {
-        return YY.slice(1)
+        return TT.slice(1)
       }
     }
 
-    function IY(YY) {
-      return YY.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function kT(TT) {
+      return TT.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const RY = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${FY.source}`, "g");
+    const WT = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${iT.source}`, "g");
 
-    function OY(YY, rY) {
-      return 2 === YY.length ? rY.replace(/^ (.*) $/, "$1") : rY
-    }
-
-    function gY(YY) {
-      return "" === YY.trim()
+    function XT(TT, oT) {
+      return 2 === TT.length ? oT.replace(/^ (.*) $/, "$1") : oT
     }
 
-    function aY(YY) {
-      const rY = [];
-      for (const DY of YY.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) rY.length > 0 && rY[rY.length - 1].endsWith("\\") ? rY[rY.length - 1] += `|${DY}` : rY.push(DY);
-      return rY.map((YY => YY.trim().replaceAll("\\|", "|")))
+    function BT(TT) {
+      return "" === TT.trim()
     }
-    const vY = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function uY(YY) {
-      const rY = [],
-        DY = [{
+    function FT(TT) {
+      const oT = [];
+      for (const IT of TT.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) oT.length > 0 && oT[oT.length - 1].endsWith("\\") ? oT[oT.length - 1] += `|${IT}` : oT.push(IT);
+      return oT.map((TT => TT.trim().replaceAll("\\|", "|")))
+    }
+    const ST = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function DT(TT) {
+      const oT = [],
+        IT = [{
           indent: -1,
-          items: rY
+          items: oT
         }];
-      let FY = null;
-      for (const AY of YY) {
-        const YY = AY.match(vY);
-        if (!YY) {
-          FY && (FY.text += ` ${AY.trim()}`);
+      let iT = null;
+      for (const zT of TT) {
+        const TT = zT.match(ST);
+        if (!TT) {
+          iT && (iT.text += ` ${zT.trim()}`);
           continue
         }
-        const rY = YY[1].replace(/\t/g, "  ").length;
-        for (; rY <= DY[DY.length - 1].indent;) DY.pop();
-        FY = {
-          text: YY[3].trim(),
+        const oT = TT[1].replace(/\t/g, "  ").length;
+        for (; oT <= IT[IT.length - 1].indent;) IT.pop();
+        iT = {
+          text: TT[3].trim(),
           children: []
-        }, DY[DY.length - 1].items.push(FY), DY.push({
-          indent: rY,
-          items: FY.children
+        }, IT[IT.length - 1].items.push(iT), IT.push({
+          indent: oT,
+          items: iT.children
         })
       }
-      return rY
+      return oT
     }
 
-    function sY(YY) {
-      const rY = YY.replace(/\r\n/g, "\n").split("\n"),
-        DY = [];
-      let FY = 0;
-      for (; FY < rY.length;) {
-        const YY = rY[FY];
-        if (gY(YY)) {
-          FY++;
+    function LT(TT) {
+      const oT = TT.replace(/\r\n/g, "\n").split("\n"),
+        IT = [];
+      let iT = 0;
+      for (; iT < oT.length;) {
+        const TT = oT[iT];
+        if (BT(TT)) {
+          iT++;
           continue
         }
-        const AY = YY.match(/^\s*```\s*(\w*)\s*$/);
-        if (AY) {
-          const YY = [];
-          for (FY++; FY < rY.length && !/^\s*```\s*$/.test(rY[FY]);) YY.push(rY[FY]), FY++;
-          FY++, DY.push({
+        const zT = TT.match(/^\s*```\s*(\w*)\s*$/);
+        if (zT) {
+          const TT = [];
+          for (iT++; iT < oT.length && !/^\s*```\s*$/.test(oT[iT]);) TT.push(oT[iT]), iT++;
+          iT++, IT.push({
             kind: "code",
-            lang: AY[1] || "text",
-            code: YY.join("\n").replace(/\s+$/, "")
+            lang: zT[1] || "text",
+            code: TT.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const RY = YY.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (RY) {
-          const YY = RY[2].trim();
-          DY.push({
+        const WT = TT.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (WT) {
+          const TT = WT[2].trim();
+          IT.push({
             kind: "heading",
-            level: RY[1].length,
-            text: YY,
-            anchor: IY(YY)
-          }), FY++;
+            level: WT[1].length,
+            text: TT,
+            anchor: kT(TT)
+          }), iT++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(YY)) {
-          DY.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(TT)) {
+          IT.push({
             kind: "rule"
-          }), FY++;
+          }), iT++;
           continue
         }
-        if (YY.trim().startsWith("|") && FY + 1 < rY.length && /^\s*\|[\s:|-]+\|\s*$/.test(rY[FY + 1])) {
-          const AY = aY(YY),
-            IY = [];
-          for (FY += 2; FY < rY.length && rY[FY].trim().startsWith("|");) IY.push(aY(rY[FY])), FY++;
-          DY.push({
+        if (TT.trim().startsWith("|") && iT + 1 < oT.length && /^\s*\|[\s:|-]+\|\s*$/.test(oT[iT + 1])) {
+          const zT = FT(TT),
+            kT = [];
+          for (iT += 2; iT < oT.length && oT[iT].trim().startsWith("|");) kT.push(FT(oT[iT])), iT++;
+          IT.push({
             kind: "table",
-            header: AY,
-            rows: IY
+            header: zT,
+            rows: kT
           });
           continue
         }
-        if (YY.startsWith(">")) {
-          const YY = [];
-          for (; FY < rY.length && rY[FY].startsWith(">");) YY.push(rY[FY].replace(/^>\s?/, "")), FY++;
-          DY.push({
+        if (TT.startsWith(">")) {
+          const TT = [];
+          for (; iT < oT.length && oT[iT].startsWith(">");) TT.push(oT[iT].replace(/^>\s?/, "")), iT++;
+          IT.push({
             kind: "quote",
-            blocks: sY(YY.join("\n"))
+            blocks: LT(TT.join("\n"))
           });
           continue
         }
-        if (vY.test(YY)) {
-          const AY = [],
-            IY = /^\s*\d+\./.test(YY);
-          for (; FY < rY.length && !gY(rY[FY]) && (vY.test(rY[FY]) || /^\s+\S/.test(rY[FY]));) AY.push(rY[FY]), FY++;
-          DY.push({
+        if (ST.test(TT)) {
+          const zT = [],
+            kT = /^\s*\d+\./.test(TT);
+          for (; iT < oT.length && !BT(oT[iT]) && (ST.test(oT[iT]) || /^\s+\S/.test(oT[iT]));) zT.push(oT[iT]), iT++;
+          IT.push({
             kind: "list",
-            ordered: IY,
-            items: uY(AY)
+            ordered: kT,
+            items: DT(zT)
           });
           continue
         }
-        const OY = [];
-        for (; FY < rY.length && !gY(rY[FY]) && !/^\s*```/.test(rY[FY]) && !/^#{1,6}\s/.test(rY[FY]) && !rY[FY].startsWith(">") && !vY.test(rY[FY]) && (!rY[FY].trim().startsWith("|") || 0 !== OY.length);) OY.push(rY[FY].trim()), FY++;
-        0 === OY.length && (OY.push(rY[FY].trim()), FY++), DY.push({
+        const XT = [];
+        for (; iT < oT.length && !BT(oT[iT]) && !/^\s*```/.test(oT[iT]) && !/^#{1,6}\s/.test(oT[iT]) && !oT[iT].startsWith(">") && !ST.test(oT[iT]) && (!oT[iT].trim().startsWith("|") || 0 !== XT.length);) XT.push(oT[iT].trim()), iT++;
+        0 === XT.length && (XT.push(oT[iT].trim()), iT++), IT.push({
           kind: "paragraph",
-          text: OY.join(" ")
+          text: XT.join(" ")
         })
       }
-      return DY
+      return IT
     }
 
-    function iY(YY) {
-      let rY = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const DY = sY(YY);
-      let FY = "";
-      const AY = [],
-        IY = [],
-        RY = new Map;
-      for (const aY of DY) {
-        if ("heading" === aY.kind) {
-          var OY;
-          const YY = (null !== (OY = RY.get(aY.anchor)) && void 0 !== OY ? OY : 0) + 1;
-          RY.set(aY.anchor, YY), YY > 1 && (aY.anchor = `${aY.anchor}-${YY}`)
+    function xT(TT) {
+      let oT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const IT = LT(TT);
+      let iT = "";
+      const zT = [],
+        kT = [],
+        WT = new Map;
+      for (const FT of IT) {
+        if ("heading" === FT.kind) {
+          var XT;
+          const TT = (null !== (XT = WT.get(FT.anchor)) && void 0 !== XT ? XT : 0) + 1;
+          WT.set(FT.anchor, TT), TT > 1 && (FT.anchor = `${FT.anchor}-${TT}`)
         }
-        if ("heading" === aY.kind && 1 === aY.level && !FY) {
-          FY = aY.text;
+        if ("heading" === FT.kind && 1 === FT.level && !iT) {
+          iT = FT.text;
           continue
         }
-        if ("heading" === aY.kind && aY.level <= rY) {
-          IY.push({
-            heading: aY,
+        if ("heading" === FT.kind && FT.level <= oT) {
+          kT.push({
+            heading: FT,
             blocks: []
           });
           continue
         }
-        const YY = IY.at(-1);
-        YY ? YY.blocks.push(aY) : AY.push(aY)
+        const TT = kT.at(-1);
+        TT ? TT.blocks.push(FT) : zT.push(FT)
       }
-      const gY = YY => {
+      const BT = TT => {
         for (;
-          "rule" === (null === (rY = YY.at(-1)) || void 0 === rY ? void 0 : rY.kind);) {
-          var rY;
-          YY.pop()
+          "rule" === (null === (oT = TT.at(-1)) || void 0 === oT ? void 0 : oT.kind);) {
+          var oT;
+          TT.pop()
         }
       };
-      gY(AY);
-      for (const aY of IY) gY(aY.blocks);
+      BT(zT);
+      for (const FT of kT) BT(FT.blocks);
       return {
-        title: FY,
-        intro: AY,
-        sections: IY
+        title: iT,
+        intro: zT,
+        sections: kT
       }
     }
 
-    function yY(YY) {
+    function cT(TT) {
       return [{
         heading: null,
-        blocks: YY.intro
-      }, ...YY.sections.map((YY => ({
-        heading: YY.heading,
-        blocks: YY.blocks
+        blocks: TT.intro
+      }, ...TT.sections.map((TT => ({
+        heading: TT.heading,
+        blocks: TT.blocks
       })))]
     }
 
-    function QY(YY) {
-      return YY.flatMap((YY => "code" === YY.kind ? [YY] : "quote" === YY.kind ? QY(YY.blocks) : []))
+    function KT(TT) {
+      return TT.flatMap((TT => "code" === TT.kind ? [TT] : "quote" === TT.kind ? KT(TT.blocks) : []))
     }
 
-    function oY(YY) {
-      switch (YY.kind) {
+    function MT(TT) {
+      switch (TT.kind) {
         case "heading":
         case "paragraph":
-          return YY.text;
+          return TT.text;
         case "code":
-          return YY.code;
+          return TT.code;
         case "table":
-          return [YY.header, ...YY.rows].map((YY => YY.join(" "))).join(" ");
+          return [TT.header, ...TT.rows].map((TT => TT.join(" "))).join(" ");
         case "list": {
-          const rY = YY => YY.map((YY => `${YY.text} ${rY(YY.children)}`)).join(" ");
-          return rY(YY.items)
+          const oT = TT => TT.map((TT => `${TT.text} ${oT(TT.children)}`)).join(" ");
+          return oT(TT.items)
         }
         case "quote":
-          return YY.blocks.map(oY).join(" ");
+          return TT.blocks.map(MT).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6061: (YY, rY, DY) => {
-    DY.d(rY, {
-      e: () => uY,
-      f: () => RY,
-      h: () => OY
+  6001: (TT, oT, IT) => {
+    IT.d(oT, {
+      b: () => DT,
+      f: () => WT,
+      i: () => XT
     });
-    DY(6057);
-    var FY = DY(61),
-      AY = DY(4313),
-      IY = DY(1125);
-    const RY = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    IT(5992);
+    var iT = IT(46),
+      zT = IT(4229),
+      kT = IT(1083);
+    const WT = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function OY(YY, rY) {
-      return YY === rY ? YY : `${YY} (${rY})`
+    function XT(TT, oT) {
+      return TT === oT ? TT : `${TT} (${oT})`
     }
 
-    function gY(YY) {
-      const rY = [];
-      let DY = 0;
-      for (const FY of YY.matchAll(RY)) {
-        FY.index > DY && rY.push(YY.slice(DY, FY.index));
-        const [, AY, RY, gY, aY, vY, uY] = FY;
-        void 0 !== AY ? rY.push(OY(AY, RY)) : void 0 !== gY || void 0 !== aY ? rY.push((0, IY.jsx)("strong", {
-          children: null !== gY && void 0 !== gY ? gY : aY
-        }, FY.index)) : void 0 !== vY ? rY.push((0, IY.jsx)("em", {
-          children: vY
-        }, FY.index)) : rY.push((0, IY.jsx)("code", {
-          children: uY
-        }, FY.index)), DY = FY.index + FY[0].length
+    function BT(TT) {
+      const oT = [];
+      let IT = 0;
+      for (const iT of TT.matchAll(WT)) {
+        iT.index > IT && oT.push(TT.slice(IT, iT.index));
+        const [, zT, WT, BT, FT, ST, DT] = iT;
+        void 0 !== zT ? oT.push(XT(zT, WT)) : void 0 !== BT || void 0 !== FT ? oT.push((0, kT.jsx)("strong", {
+          children: null !== BT && void 0 !== BT ? BT : FT
+        }, iT.index)) : void 0 !== ST ? oT.push((0, kT.jsx)("em", {
+          children: ST
+        }, iT.index)) : oT.push((0, kT.jsx)("code", {
+          children: DT
+        }, iT.index)), IT = iT.index + iT[0].length
       }
-      return DY < YY.length && rY.push(YY.slice(DY)), rY
+      return IT < TT.length && oT.push(TT.slice(IT)), oT
     }
 
-    function aY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const FY = YY.map(((YY, rY) => (0, IY.jsxs)("li", {
-        children: [gY(YY.text), YY.children.length > 0 && aY(YY.children, !1)]
-      }, rY)));
-      return rY ? (0, IY.jsx)("ol", {
-        start: DY,
-        children: FY
-      }) : (0, IY.jsx)("ul", {
-        children: FY
+    function FT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const iT = TT.map(((TT, oT) => (0, kT.jsxs)("li", {
+        children: [BT(TT.text), TT.children.length > 0 && FT(TT.children, !1)]
+      }, oT)));
+      return oT ? (0, kT.jsx)("ol", {
+        start: IT,
+        children: iT
+      }) : (0, kT.jsx)("ul", {
+        children: iT
       })
     }
 
-    function vY(YY, rY) {
-      switch (YY.kind) {
+    function ST(TT, oT) {
+      switch (TT.kind) {
         case "heading":
-          return YY.level <= 2 ? (0, IY.jsx)("h3", {
-            children: gY(YY.text)
-          }, rY) : (0, IY.jsx)("h4", {
-            children: gY(YY.text)
-          }, rY);
+          return TT.level <= 2 ? (0, kT.jsx)("h3", {
+            children: BT(TT.text)
+          }, oT) : (0, kT.jsx)("h4", {
+            children: BT(TT.text)
+          }, oT);
         case "paragraph":
-          return (0, IY.jsx)("p", {
-            children: gY(YY.text)
-          }, rY);
+          return (0, kT.jsx)("p", {
+            children: BT(TT.text)
+          }, oT);
         case "list":
-          return (0, IY.jsx)(FY.Fragment, {
-            children: aY(YY.items, YY.ordered)
-          }, rY);
+          return (0, kT.jsx)(iT.Fragment, {
+            children: FT(TT.items, TT.ordered)
+          }, oT);
         case "quote":
-          return (0, IY.jsx)("blockquote", {
-            children: YY.blocks.map(((YY, rY) => vY(YY, rY)))
-          }, rY);
+          return (0, kT.jsx)("blockquote", {
+            children: TT.blocks.map(((TT, oT) => ST(TT, oT)))
+          }, oT);
         case "code":
-          return (0, IY.jsx)("pre", {
-            children: (0, IY.jsx)("code", {
-              children: YY.code
+          return (0, kT.jsx)("pre", {
+            children: (0, kT.jsx)("code", {
+              children: TT.code
             })
-          }, rY);
+          }, oT);
         case "table":
-          return (0, IY.jsxs)("table", {
-            children: [(0, IY.jsx)("thead", {
-              children: (0, IY.jsx)("tr", {
-                children: YY.header.map(((YY, rY) => (0, IY.jsx)("th", {
-                  children: gY(YY)
-                }, rY)))
+          return (0, kT.jsxs)("table", {
+            children: [(0, kT.jsx)("thead", {
+              children: (0, kT.jsx)("tr", {
+                children: TT.header.map(((TT, oT) => (0, kT.jsx)("th", {
+                  children: BT(TT)
+                }, oT)))
               })
-            }), (0, IY.jsx)("tbody", {
-              children: YY.rows.map(((YY, rY) => (0, IY.jsx)("tr", {
-                children: YY.map(((YY, rY) => (0, IY.jsx)("td", {
-                  children: gY(YY)
-                }, rY)))
-              }, rY)))
+            }), (0, kT.jsx)("tbody", {
+              children: TT.rows.map(((TT, oT) => (0, kT.jsx)("tr", {
+                children: TT.map(((TT, oT) => (0, kT.jsx)("td", {
+                  children: BT(TT)
+                }, oT)))
+              }, oT)))
             })]
-          }, rY);
+          }, oT);
         case "rule":
-          return (0, IY.jsx)("hr", {}, rY)
+          return (0, kT.jsx)("hr", {}, oT)
       }
     }
 
-    function uY(YY) {
+    function DT(TT) {
       let {
-        markdown: rY
-      } = YY, DY = 0;
-      return (0, IY.jsx)("div", {
+        markdown: oT
+      } = TT, IT = 0;
+      return (0, kT.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, AY.A)(rY).map(((YY, rY) => {
-          if ("list" !== YY.kind || !YY.ordered) return DY = 0, vY(YY, rY);
-          const AY = DY + 1;
-          return DY += YY.items.length, (0, IY.jsx)(FY.Fragment, {
-            children: aY(YY.items, !0, AY)
-          }, rY)
+        children: (0, zT.y)(oT).map(((TT, oT) => {
+          if ("list" !== TT.kind || !TT.ordered) return IT = 0, ST(TT, oT);
+          const zT = IT + 1;
+          return IT += TT.items.length, (0, kT.jsx)(iT.Fragment, {
+            children: FT(TT.items, !0, zT)
+          }, oT)
         }))
       })
     }
   },
-  6050: (YY, rY, DY) => {
-    DY.d(rY, {
-      d: () => EY,
-      h: () => mY,
-      f: () => SY,
-      j: () => yY
+  5986: (TT, oT, IT) => {
+    IT.d(oT, {
+      c: () => AT,
+      g: () => gT,
+      d: () => wT,
+      j: () => cT
     });
-    var FY = DY(3258),
-      AY = DY(6011),
-      IY = DY(4443);
-    const RY = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var iT = IT(3210),
+      zT = IT(5936),
+      kT = IT(4355);
+    const WT = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function OY(YY) {
-      return (0, IY.g)(YY, RY, (rY => !/^my/i.test(rY[0]) || !/follow $/i.test(YY.slice(0, rY.index)))).length > 0
+    function XT(TT) {
+      return (0, kT.f)(TT, WT, (oT => !/^my/i.test(oT[0]) || !/follow $/i.test(TT.slice(0, oT.index)))).length > 0
     }
-    const gY = /\byou(?:r|'re|'ll)?\b/i,
-      aY = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      vY = 2;
+    const BT = /\byou(?:r|'re|'ll)?\b/i,
+      FT = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      ST = 2;
 
-    function uY(YY) {
-      return function(YY) {
-        const rY = [];
-        let DY = !1;
-        for (const FY of YY.split("\n")) {
-          if (/^\s*(```|~~~)/.test(FY)) {
-            DY = !DY;
+    function DT(TT) {
+      return function(TT) {
+        const oT = [];
+        let IT = !1;
+        for (const iT of TT.split("\n")) {
+          if (/^\s*(```|~~~)/.test(iT)) {
+            IT = !IT;
             continue
           }
-          if (DY || /^\s*>/.test(FY)) continue;
-          const YY = FY.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          rY.push(...(0, AY.m)(YY))
+          if (IT || /^\s*>/.test(iT)) continue;
+          const TT = iT.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          oT.push(...(0, zT.q)(TT))
         }
-        return rY
-      }(YY).filter((YY => OY(YY) || aY.test(YY) && !gY.test(YY)))
+        return oT
+      }(TT).filter((TT => XT(TT) || FT.test(TT) && !BT.test(TT)))
     }
-    const sY = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      iY = [{
+    const LT = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      xT = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function yY(YY) {
-      const rY = iY.findIndex((rY => rY.name === YY));
-      return -1 === rY ? iY.length : rY
+    function cT(TT) {
+      const oT = xT.findIndex((oT => oT.name === TT));
+      return -1 === oT ? xT.length : oT
     }
-    const QY = 2500,
-      oY = 12e4;
-    class WY extends Error {
-      constructor(YY) {
-        super(`Studio AI chat ${YY}`), this.reason = YY
+    const KT = 2500,
+      MT = 12e4;
+    class rT extends Error {
+      constructor(TT) {
+        super(`Studio AI chat ${TT}`), this.reason = TT
       }
     }
 
-    function EY(YY, rY) {
-      const DY = new AbortController,
-        FY = () => {
-          DY.abort()
+    function AT(TT, oT) {
+      const IT = new AbortController,
+        iT = () => {
+          IT.abort()
         },
-        AY = setTimeout(FY, YY);
-      return null !== rY && void 0 !== rY && rY.aborted && FY(), null === rY || void 0 === rY || rY.addEventListener("abort", FY, {
+        zT = setTimeout(iT, TT);
+      return null !== oT && void 0 !== oT && oT.aborted && iT(), null === oT || void 0 === oT || oT.addEventListener("abort", iT, {
         once: !0
       }), {
-        signal: DY.signal,
+        signal: IT.signal,
         clear: () => {
-          clearTimeout(AY), null === rY || void 0 === rY || rY.removeEventListener("abort", FY)
+          clearTimeout(zT), null === oT || void 0 === oT || oT.removeEventListener("abort", iT)
         }
       }
     }
 
-    function mY(YY, rY, DY) {
-      return new Promise(((AY, IY) => {
-        const RY = new AbortController,
-          OY = () => {
-            RY.abort(), IY((0, FY.h)(DY))
+    function gT(TT, oT, IT) {
+      return new Promise(((zT, kT) => {
+        const WT = new AbortController,
+          XT = () => {
+            WT.abort(), kT((0, iT.f)(IT))
           };
-        if (null !== DY && void 0 !== DY && DY.aborted) return void OY();
-        null === DY || void 0 === DY || DY.addEventListener("abort", OY, {
+        if (null !== IT && void 0 !== IT && IT.aborted) return void XT();
+        null === IT || void 0 === IT || IT.addEventListener("abort", XT, {
           once: !0
         });
-        const gY = iY.map((() => !1));
-        let aY = null;
-        const vY = iY.map((() => !1)),
-          uY = iY.map((() => !1));
-        iY.forEach(((FY, sY) => {
-          const yY = EY(oY, RY.signal);
-          lY(FY, [{
+        const BT = xT.map((() => !1));
+        let FT = null;
+        const ST = xT.map((() => !1)),
+          DT = xT.map((() => !1));
+        xT.forEach(((iT, LT) => {
+          const cT = AT(MT, WT.signal);
+          mT(iT, [{
             role: "user",
-            content: YY
-          }], yY.signal).then((YY => {
-            RY.signal.aborted || ("busy" === YY || "failed" === YY ? (vY[sY] = "busy" === YY, uY[sY] = !0) : null !== YY && (null === aY || sY < aY.rank) && (aY = {
-              rank: sY,
+            content: TT
+          }], cT.signal).then((TT => {
+            WT.signal.aborted || ("busy" === TT || "failed" === TT ? (ST[LT] = "busy" === TT, DT[LT] = !0) : null !== TT && (null === FT || LT < FT.rank) && (FT = {
+              rank: LT,
               answer: {
-                text: YY.text,
-                model: FY.name
+                text: TT.text,
+                model: iT.name
               }
-            }, rY(aY.answer)))
-          }), (YY => {
-            RY.signal.aborted || (uY[sY] = !0, console.warn(`Studio AI: ${FY.name} couldn't be reached`, YY))
+            }, oT(FT.answer)))
+          }), (TT => {
+            WT.signal.aborted || (DT[LT] = !0, console.warn(`Studio AI: ${iT.name} couldn't be reached`, TT))
           })).finally((() => {
-            yY.clear(), gY[sY] = !0, RY.signal.aborted || (() => {
-              var YY, rY;
-              const FY = null !== (YY = null === (rY = aY) || void 0 === rY ? void 0 : rY.rank) && void 0 !== YY ? YY : iY.length;
-              gY.slice(0, FY).includes(!1) || (null === DY || void 0 === DY || DY.removeEventListener("abort", OY), RY.abort(), null !== aY ? AY({
-                ...aY.answer,
-                isFinal: !uY.slice(0, aY.rank).includes(!0)
-              }) : IY(new WY(vY.includes(!0) ? "busy" : "failed")))
+            cT.clear(), BT[LT] = !0, WT.signal.aborted || (() => {
+              var TT, oT;
+              const iT = null !== (TT = null === (oT = FT) || void 0 === oT ? void 0 : oT.rank) && void 0 !== TT ? TT : xT.length;
+              BT.slice(0, iT).includes(!1) || (null === IT || void 0 === IT || IT.removeEventListener("abort", XT), WT.abort(), null !== FT ? zT({
+                ...FT.answer,
+                isFinal: !DT.slice(0, FT.rank).includes(!0)
+              }) : kT(new rT(ST.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((YY => {
-            console.error("Studio AI: showing an answer failed", YY)
+          })).catch((TT => {
+            console.error("Studio AI: showing an answer failed", TT)
           }))
         }))
       }))
     }
 
-    function VY(YY) {
-      var rY, DY;
-      return "length" === (null === YY || void 0 === YY || null === (rY = YY.choices) || void 0 === rY || null === (DY = rY[0]) || void 0 === DY ? void 0 : DY.finish_reason)
+    function hT(TT) {
+      var oT, IT;
+      return "length" === (null === TT || void 0 === TT || null === (oT = TT.choices) || void 0 === oT || null === (IT = oT[0]) || void 0 === IT ? void 0 : IT.finish_reason)
     }
-    async function SY(YY, rY, DY) {
-      const FY = iY.find((rY => rY.name === YY));
-      if (void 0 === FY) return "failed";
-      const AY = EY(oY, DY);
+    async function wT(TT, oT, IT) {
+      const iT = xT.find((oT => oT.name === TT));
+      if (void 0 === iT) return "failed";
+      const zT = AT(MT, IT);
       try {
-        const YY = await lY(FY, rY, AY.signal);
-        return null !== YY && "object" === typeof YY ? YY.isCutOff ? (console.warn(`Studio AI: ${FY.name}'s answer was cut off at the token limit`), null) : {
-          text: YY.text
-        } : YY
+        const TT = await mT(iT, oT, zT.signal);
+        return null !== TT && "object" === typeof TT ? TT.isCutOff ? (console.warn(`Studio AI: ${iT.name}'s answer was cut off at the token limit`), null) : {
+          text: TT.text
+        } : TT
       } finally {
-        AY.clear()
+        zT.clear()
       }
     }
-    async function lY(YY, rY, DY) {
-      const FY = await fetch(sY, {
+    async function mT(TT, oT, IT) {
+      const iT = await fetch(LT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: YY.name,
-          messages: rY,
-          max_tokens: QY,
-          temperature: YY.temperature,
-          reasoning_effort: YY.reasoningEffort
+          model: TT.name,
+          messages: oT,
+          max_tokens: KT,
+          temperature: TT.temperature,
+          reasoning_effort: TT.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: DY
+        signal: IT
       });
-      if (429 === FY.status) return "busy";
-      if (!FY.ok) return console.warn(`Studio AI: ${YY.name} answered ${FY.status}`), "failed";
-      const AY = await FY.json().catch((() => null)),
-        IY = function(YY) {
-          var rY, DY, FY;
-          const AY = null === YY || void 0 === YY || null === (rY = YY.choices) || void 0 === rY || null === (DY = rY[0]) || void 0 === DY || null === (FY = DY.message) || void 0 === FY ? void 0 : FY.content;
-          if ("string" !== typeof AY) return null;
-          const IY = AY.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === IY ? null : IY
-        }(AY);
-      return null !== IY && function(YY) {
-        const rY = uY(YY);
-        return rY.length >= vY || rY.some((YY => OY(YY)))
-      }(IY) ? (console.warn(`Studio AI: ${YY.name} thought out loud instead of answering`), "failed") : null === IY ? null : {
-        text: IY,
-        isCutOff: VY(AY)
+      if (429 === iT.status) return "busy";
+      if (!iT.ok) return console.warn(`Studio AI: ${TT.name} answered ${iT.status}`), "failed";
+      const zT = await iT.json().catch((() => null)),
+        kT = function(TT) {
+          var oT, IT, iT;
+          const zT = null === TT || void 0 === TT || null === (oT = TT.choices) || void 0 === oT || null === (IT = oT[0]) || void 0 === IT || null === (iT = IT.message) || void 0 === iT ? void 0 : iT.content;
+          if ("string" !== typeof zT) return null;
+          const kT = zT.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === kT ? null : kT
+        }(zT);
+      return null !== kT && function(TT) {
+        const oT = DT(TT);
+        return oT.length >= ST || oT.some((TT => XT(TT)))
+      }(kT) ? (console.warn(`Studio AI: ${TT.name} thought out loud instead of answering`), "failed") : null === kT ? null : {
+        text: kT,
+        isCutOff: hT(zT)
       }
     }
   },
-  6011: (YY, rY, DY) => {
-    DY.d(rY, {
-      B: () => oY,
-      D: () => mY,
-      G: () => SY,
-      I: () => EY,
-      J: () => uY,
-      L: () => aY,
-      O: () => iY,
-      b: () => yY,
-      f: () => OY,
-      g: () => RY,
-      j: () => QY,
-      l: () => sY,
-      m: () => vY,
-      o: () => IY,
-      r: () => AY,
-      v: () => VY,
-      x: () => lY
+  5936: (TT, oT, IT) => {
+    IT.d(oT, {
+      B: () => MT,
+      D: () => gT,
+      F: () => wT,
+      G: () => AT,
+      K: () => DT,
+      N: () => FT,
+      R: () => xT,
+      c: () => cT,
+      e: () => XT,
+      g: () => WT,
+      j: () => KT,
+      m: () => LT,
+      q: () => ST,
+      s: () => kT,
+      t: () => zT,
+      w: () => hT,
+      y: () => mT
     });
-    var FY = DY(4443);
-    const AY = 2e3,
-      IY = 2e4;
+    var iT = IT(4355);
+    const zT = 2e3,
+      kT = 2e4;
 
-    function RY(YY) {
-      return YY.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function WT(TT) {
+      return TT.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function OY(YY) {
-      return YY.replace(/\$/g, "\\$")
+    function XT(TT) {
+      return TT.replace(/\$/g, "\\$")
     }
-    const gY = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const BT = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function aY(YY, rY) {
-      gY.lastIndex = rY;
-      const DY = gY.exec(YY);
-      return DY.index + DY[0].length
-    }
-
-    function vY(YY) {
-      return (0, FY.F)(YY, /\s+/g, (0, FY.y)(".!?")).flatMap((YY => YY.split("\n")))
+    function FT(TT, oT) {
+      BT.lastIndex = oT;
+      const IT = BT.exec(TT);
+      return IT.index + IT[0].length
     }
 
-    function uY(YY, rY) {
-      let DY = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : rY;
-      const FY = [...YY.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((YY => YY.index)),
-        AY = FY.filter((YY => YY < rY)),
-        IY = FY.find((YY => YY >= DY));
-      return [0 === AY.length ? 0 : AY.at(-1) + 1, void 0 === IY ? YY.length : IY + 1]
+    function ST(TT) {
+      return (0, iT.u)(TT, /\s+/g, (0, iT.p)(".!?")).flatMap((TT => TT.split("\n")))
     }
 
-    function sY(YY, rY) {
-      const DY = YY.charCodeAt(rY - 1);
-      return YY.slice(0, rY > 0 && rY < YY.length && DY >= 55296 && DY <= 56319 ? rY - 1 : rY)
+    function DT(TT, oT) {
+      let IT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : oT;
+      const iT = [...TT.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((TT => TT.index)),
+        zT = iT.filter((TT => TT < oT)),
+        kT = iT.find((TT => TT >= IT));
+      return [0 === zT.length ? 0 : zT.at(-1) + 1, void 0 === kT ? TT.length : kT + 1]
     }
 
-    function iY(YY, rY) {
-      return `${rY}${YY.replace(/\\/g,"\\\\").split(rY).join(`\\${rY}`)}${rY}`
+    function LT(TT, oT) {
+      const IT = TT.charCodeAt(oT - 1);
+      return TT.slice(0, oT > 0 && oT < TT.length && IT >= 55296 && IT <= 56319 ? oT - 1 : oT)
     }
 
-    function yY(YY) {
-      return YY.charAt(0).toUpperCase() + YY.slice(1)
+    function xT(TT, oT) {
+      return `${oT}${TT.replace(/\\/g,"\\\\").split(oT).join(`\\${oT}`)}${oT}`
     }
 
-    function QY(YY) {
-      return Math.round(YY).toLocaleString("en-US")
+    function cT(TT) {
+      return TT.charAt(0).toUpperCase() + TT.slice(1)
     }
 
-    function oY(YY) {
-      return YY.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((YY => "" !== YY))
-    }
-    const WY = 3;
-
-    function EY(YY, rY) {
-      return oY(YY).filter((YY => YY.length >= WY && !/\d/.test(YY))).map((YY => `${YY} ${rY}`))
+    function KT(TT) {
+      return Math.round(TT).toLocaleString("en-US")
     }
 
-    function mY(YY) {
-      return YY.split(/[\s:_]+/).filter((YY => "" !== YY)).map(RY).join("[`:_\\s]+")
+    function MT(TT) {
+      return TT.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((TT => "" !== TT))
+    }
+    const rT = 3;
+
+    function AT(TT, oT) {
+      return MT(TT).filter((TT => TT.length >= rT && !/\d/.test(TT))).map((TT => `${TT} ${oT}`))
     }
 
-    function VY(YY) {
-      return oY(YY.split(".").pop())
+    function gT(TT) {
+      return TT.split(/[\s:_]+/).filter((TT => "" !== TT)).map(WT).join("[`:_\\s]+")
     }
 
-    function SY(YY) {
-      return YY.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function hT(TT) {
+      return MT(TT.split(".").pop())
     }
 
-    function lY(YY) {
-      let rY = null;
+    function wT(TT) {
+      return TT.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function mT(TT) {
+      let oT = null;
       return () => {
-        const DY = rY ??= YY();
-        return DY.catch((() => {
-          rY === DY && (rY = null)
-        })), DY
+        const IT = oT ??= TT();
+        return IT.catch((() => {
+          oT === IT && (oT = null)
+        })), IT
       }
     }
   },
-  4443: (YY, rY, DY) => {
-    function FY(YY) {
+  4355: (TT, oT, IT) => {
+    function iT(TT) {
       return {
-        notAfter: YY
+        notAfter: TT
       }
     }
-    DY.d(rY, {
-      C: () => vY,
-      F: () => uY,
-      d: () => gY,
-      g: () => aY,
-      j: () => OY,
-      m: () => FY,
-      q: () => AY,
-      u: () => IY,
-      y: () => RY
+    IT.d(oT, {
+      d: () => BT,
+      f: () => FT,
+      g: () => XT,
+      i: () => iT,
+      k: () => zT,
+      m: () => kT,
+      p: () => WT,
+      r: () => ST,
+      u: () => DT
     });
-    const AY = FY("\\w$."),
-      IY = FY("\\w.,");
+    const zT = iT("\\w$."),
+      kT = iT("\\w.,");
 
-    function RY(YY) {
-      return rY => gY(rY, YY)
+    function WT(TT) {
+      return oT => BT(oT, TT)
     }
 
-    function OY(YY) {
-      return rY => !YY.test(rY.input.slice(0, rY.index))
+    function XT(TT) {
+      return oT => !TT.test(oT.input.slice(0, oT.index))
     }
 
-    function gY(YY, rY) {
-      return YY.index > 0 && new RegExp(`[${rY}]`).test(YY.input[YY.index - 1])
+    function BT(TT, oT) {
+      return TT.index > 0 && new RegExp(`[${oT}]`).test(TT.input[TT.index - 1])
     }
 
-    function aY(YY, rY, DY) {
-      return function(YY) {
-        return void 0 !== YY && "function" !== typeof YY
-      }(DY) ? function(YY, rY, DY) {
-        const FY = rY.flags.replace(/[gy]/g, ""),
-          AY = new RegExp(`[^${DY}](?:${rY.source})`, `${FY}g`),
-          IY = [],
-          RY = DY => {
-            const FY = DY.index + DY[0].length;
-            return ("" === DY[0] ? sY(YY, rY, FY) : FY) - 1
+    function FT(TT, oT, IT) {
+      return function(TT) {
+        return void 0 !== TT && "function" !== typeof TT
+      }(IT) ? function(TT, oT, IT) {
+        const iT = oT.flags.replace(/[gy]/g, ""),
+          zT = new RegExp(`[^${IT}](?:${oT.source})`, `${iT}g`),
+          kT = [],
+          WT = IT => {
+            const iT = IT.index + IT[0].length;
+            return ("" === IT[0] ? LT(TT, oT, iT) : iT) - 1
           },
-          OY = new RegExp(`(?:${rY.source})`, `${FY}y`).exec(YY);
-        if (OY) {
-          if (IY.push(OY), !rY.global) return IY;
-          AY.lastIndex = RY(OY)
+          XT = new RegExp(`(?:${oT.source})`, `${iT}y`).exec(TT);
+        if (XT) {
+          if (kT.push(XT), !oT.global) return kT;
+          zT.lastIndex = WT(XT)
         }
-        for (let gY = AY.exec(YY); gY; gY = AY.exec(YY)) {
-          const DY = sY(YY, rY, gY.index) - gY.index;
-          if (gY[0] = gY[0].slice(DY), gY.index += DY, IY.push(gY), !rY.global) break;
-          AY.lastIndex = RY(gY)
+        for (let BT = zT.exec(TT); BT; BT = zT.exec(TT)) {
+          const IT = LT(TT, oT, BT.index) - BT.index;
+          if (BT[0] = BT[0].slice(IT), BT.index += IT, kT.push(BT), !oT.global) break;
+          zT.lastIndex = WT(BT)
         }
-        return IY
-      }(YY, rY, DY.notAfter) : function(YY, rY, DY) {
-        const FY = new RegExp(rY.source, `${rY.flags.replace(/[gy]/g,"")}g`),
-          AY = [];
-        for (let IY = FY.exec(YY); IY; IY = FY.exec(YY))
-          if (!DY || DY(IY)) {
-            if (AY.push(IY), !rY.global) break;
-            "" === IY[0] && (FY.lastIndex = sY(YY, rY, FY.lastIndex))
-          } else FY.lastIndex = sY(YY, rY, IY.index);
-        return AY
-      }(YY, rY, DY)
+        return kT
+      }(TT, oT, IT.notAfter) : function(TT, oT, IT) {
+        const iT = new RegExp(oT.source, `${oT.flags.replace(/[gy]/g,"")}g`),
+          zT = [];
+        for (let kT = iT.exec(TT); kT; kT = iT.exec(TT))
+          if (!IT || IT(kT)) {
+            if (zT.push(kT), !oT.global) break;
+            "" === kT[0] && (iT.lastIndex = LT(TT, oT, iT.lastIndex))
+          } else iT.lastIndex = LT(TT, oT, kT.index);
+        return zT
+      }(TT, oT, IT)
     }
 
-    function vY(YY, rY, DY, FY) {
-      let AY = "",
-        IY = 0;
-      for (const RY of aY(YY, rY, DY)) AY += YY.slice(IY, RY.index) + FY(RY), IY = RY.index + RY[0].length;
-      return AY + YY.slice(IY)
+    function ST(TT, oT, IT, iT) {
+      let zT = "",
+        kT = 0;
+      for (const WT of FT(TT, oT, IT)) zT += TT.slice(kT, WT.index) + iT(WT), kT = WT.index + WT[0].length;
+      return zT + TT.slice(kT)
     }
 
-    function uY(YY, rY, DY) {
-      const FY = [];
-      let AY = 0;
-      for (const IY of aY(YY, rY, DY)) FY.push(YY.slice(AY, IY.index)), AY = IY.index + IY[0].length;
-      return [...FY, YY.slice(AY)]
+    function DT(TT, oT, IT) {
+      const iT = [];
+      let zT = 0;
+      for (const kT of FT(TT, oT, IT)) iT.push(TT.slice(zT, kT.index)), zT = kT.index + kT[0].length;
+      return [...iT, TT.slice(zT)]
     }
 
-    function sY(YY, rY, DY) {
-      var FY;
-      return DY + (rY.unicode && (null !== (FY = YY.codePointAt(DY)) && void 0 !== FY ? FY : 0) > 65535 ? 2 : 1)
+    function LT(TT, oT, IT) {
+      var iT;
+      return IT + (oT.unicode && (null !== (iT = TT.codePointAt(IT)) && void 0 !== iT ? iT : 0) > 65535 ? 2 : 1)
     }
   },
-  6057: () => {}
+  5992: () => {}
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);

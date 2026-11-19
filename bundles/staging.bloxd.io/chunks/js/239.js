@@ -1,52 +1,52 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  38962: (YY, rY, DY) => {
-    DY.r(rY), DY.d(rY, {
-      default: () => xY
+  38584: (TT, oT, IT) => {
+    IT.r(oT), IT.d(oT, {
+      default: () => bT
     });
-    DY(6023);
-    var FY = DY(61),
-      AY = DY(38965),
-      IY = DY(39209),
-      RY = DY(39328),
-      OY = DY(39375),
-      gY = DY(39391),
-      aY = DY(36586),
-      vY = DY(36518),
-      uY = DY(39512),
-      sY = DY(39574),
-      iY = (DY(39602), DY(1231)),
-      yY = DY(213),
-      QY = DY(1211),
-      oY = DY(19),
-      WY = DY(2486),
-      EY = DY(1437),
-      mY = DY(1098),
-      VY = DY(6018),
-      SY = DY(6030),
-      lY = DY(3983),
-      TY = DY(1125);
-    const eY = 1.2,
-      NY = .2,
-      BY = .0066 * Math.PI / 180,
-      cY = new Set(["Escape", "KeyG"]),
-      KY = {
+    IT(5950);
+    var iT = IT(46),
+      zT = IT(38589),
+      kT = IT(38874),
+      WT = IT(38979),
+      XT = IT(39021),
+      BT = IT(39038),
+      FT = IT(36175),
+      ST = IT(36114),
+      DT = IT(39187),
+      LT = IT(39242),
+      xT = (IT(39273), IT(1193)),
+      cT = IT(193),
+      KT = IT(1171),
+      MT = IT(12),
+      rT = IT(2451),
+      AT = IT(1408),
+      gT = IT(1055),
+      hT = IT(5942),
+      wT = IT(5958),
+      mT = IT(3966),
+      eT = IT(1083);
+    const RT = 1.2,
+      uT = .2,
+      vT = .0066 * Math.PI / 180,
+      ET = new Set(["Escape", "KeyG"]),
+      fT = {
         ArrowLeft: -1,
         ArrowRight: 1
       },
-      HY = "ArrowUp",
-      zY = new Set([...Object.keys(KY), HY, "ArrowDown"]),
-      ZY = 32,
-      CY = 1,
-      fY = 10,
-      jY = "F4",
-      hY = "Period",
-      dY = Math.PI / 2 - .001,
-      JY = Math.PI / 6,
-      MY = Math.PI / 6,
-      wY = 1.08,
-      bY = [{
+      CT = "ArrowUp",
+      jT = new Set([...Object.keys(fT), CT, "ArrowDown"]),
+      JT = 32,
+      UT = 1,
+      aT = 10,
+      YT = "F4",
+      QT = "Period",
+      OT = Math.PI / 2 - .001,
+      HT = Math.PI / 6,
+      nT = Math.PI / 6,
+      qT = 1.08,
+      ZT = [{
         name: "X",
         direction: [1, 0, 0],
         colour: "#e5534b"
@@ -59,387 +59,387 @@ export const modules = {
         direction: [0, 0, 1],
         colour: "#539bf5"
       }],
-      XY = 24,
-      qY = 7,
-      pY = 4,
-      kY = .01,
-      GY = 4;
+      lT = 24,
+      sT = 7,
+      tT = 4,
+      GT = .01,
+      pT = 4;
 
-    function xY(YY) {
+    function bT(TT) {
       let {
-        heatmap: rY,
-        scale: DY,
-        fullyOpaqueFrom: CY,
-        bounds: JY,
-        fitBounds: MY,
-        schematic: wY,
-        controls: bY,
-        onStepTime: XY,
-        onShowAllTime: qY,
-        onTogglePlaying: pY,
-        getReadout: GY = null
-      } = YY;
+        heatmap: oT,
+        scale: IT,
+        fullyOpaqueFrom: UT,
+        bounds: HT,
+        fitBounds: nT,
+        schematic: qT,
+        controls: ZT,
+        onStepTime: lT,
+        onShowAllTime: sT,
+        onTogglePlaying: tT,
+        getReadout: pT = null
+      } = TT;
       const {
-        t: xY
-      } = (0, QY.C)(), {
-        clientEscMenuOptions: Ir
-      } = (0, oY.j)(["clientEscMenuOptions"]), gr = (0, FY.useRef)(null), ar = (0, FY.useRef)(null), vr = (0, FY.useRef)(null), ur = (0, WY.d)(gr), [sr, ir] = (0, FY.useState)(!1), [yr, Qr] = (0, FY.useState)(!1), [or, Wr] = (0, FY.useState)(!0), Er = (0, FY.useRef)(!1), [mr, Vr] = (0, FY.useState)(!1), Sr = yr || !or && mr, [lr, Tr] = (0, FY.useState)(!1), [er, Nr] = (0, FY.useState)(!0), [Br, cr] = (0, FY.useState)(null), Kr = JY.min, [Hr, zr] = (0, FY.useState)(Kr);
-      Hr[0] === Kr[0] && Hr[1] === Kr[1] && Hr[2] === Kr[2] || (zr(Kr), null !== Br && cr({
-        ...Br,
-        position: Rr(Br.position, Rr(Hr, Or(Kr, -1)))
+        t: bT
+      } = (0, KT.t)(), {
+        clientEscMenuOptions: ko
+      } = (0, MT.k)(["clientEscMenuOptions"]), Bo = (0, iT.useRef)(null), Fo = (0, iT.useRef)(null), So = (0, iT.useRef)(null), Do = (0, rT.d)(Bo), [Lo, xo] = (0, iT.useState)(!1), [co, Ko] = (0, iT.useState)(!1), [Mo, ro] = (0, iT.useState)(!0), Ao = (0, iT.useRef)(!1), [go, ho] = (0, iT.useState)(!1), wo = co || !Mo && go, [mo, eo] = (0, iT.useState)(!1), [Ro, uo] = (0, iT.useState)(!0), [vo, Eo] = (0, iT.useState)(null), fo = HT.min, [Co, jo] = (0, iT.useState)(fo);
+      Co[0] === fo[0] && Co[1] === fo[1] && Co[2] === fo[2] || (jo(fo), null !== vo && Eo({
+        ...vo,
+        position: Wo(vo.position, Wo(Co, Xo(fo, -1)))
       }));
-      const Zr = (0, FY.useMemo)((() => function(YY) {
-          return [YY.max[0] - YY.min[0] + 1, YY.max[1] - YY.min[1] + 1, YY.max[2] - YY.min[2] + 1]
-        }(JY)), [JY]),
-        Cr = (0, FY.useMemo)((() => function(YY, rY) {
-          const DY = [],
-            FY = [];
-          for (const [AY, IY] of Object.entries(YY.frequencies)) {
-            const YY = Number(AY);
-            for (const [AY, RY] of Object.entries(IY)) {
-              const IY = Number(AY);
-              for (const [AY, OY] of Object.entries(RY)) OY <= 0 || (DY.push(YY - rY[0], IY - rY[1], Number(AY) - rY[2]), FY.push(OY))
+      const Jo = (0, iT.useMemo)((() => function(TT) {
+          return [TT.max[0] - TT.min[0] + 1, TT.max[1] - TT.min[1] + 1, TT.max[2] - TT.min[2] + 1]
+        }(HT)), [HT]),
+        Uo = (0, iT.useMemo)((() => function(TT, oT) {
+          const IT = [],
+            iT = [];
+          for (const [zT, kT] of Object.entries(TT.frequencies)) {
+            const TT = Number(zT);
+            for (const [zT, WT] of Object.entries(kT)) {
+              const kT = Number(zT);
+              for (const [zT, XT] of Object.entries(WT)) XT <= 0 || (IT.push(TT - oT[0], kT - oT[1], Number(zT) - oT[2]), iT.push(XT))
             }
           }
           return {
-            positions: Int32Array.from(DY),
-            values: Float64Array.from(FY),
-            count: FY.length
+            positions: Int32Array.from(IT),
+            values: Float64Array.from(iT),
+            count: iT.length
           }
-        }(rY, Kr)), [rY, Kr]),
-        fr = eY * Ir.cameraFOV / 100,
-        jr = ur.height > 0 ? ur.width / ur.height : 1,
-        hr = (0, FY.useMemo)((() => function(YY, rY) {
+        }(oT, fo)), [oT, fo]),
+        ao = RT * ko.cameraFOV / 100,
+        Yo = Do.height > 0 ? Do.width / Do.height : 1,
+        Qo = (0, iT.useMemo)((() => function(TT, oT) {
           return {
-            min: [YY.min[0] - rY[0], YY.min[1] - rY[1], YY.min[2] - rY[2]],
-            max: [YY.max[0] - rY[0] + 1, YY.max[1] - rY[1] + 1, YY.max[2] - rY[2] + 1]
+            min: [TT.min[0] - oT[0], TT.min[1] - oT[1], TT.min[2] - oT[2]],
+            max: [TT.max[0] - oT[0] + 1, TT.max[1] - oT[1] + 1, TT.max[2] - oT[2] + 1]
           }
-        }(MY, Kr)), [MY, Kr]),
-        dr = Dr(hr, jr, fr),
-        Jr = null !== Br && void 0 !== Br ? Br : dr,
-        Mr = (0, FY.useRef)({
-          fittedView: dr,
-          fieldOfView: fr,
-          mouseSensitivity: Ir.mouseSensitivity,
-          canLock: or
+        }(nT, fo)), [nT, fo]),
+        Oo = Io(Qo, Yo, ao),
+        Ho = null !== vo && void 0 !== vo ? vo : Oo,
+        no = (0, iT.useRef)({
+          fittedView: Oo,
+          fieldOfView: ao,
+          mouseSensitivity: ko.mouseSensitivity,
+          canLock: Mo
         });
-      Mr.current = {
-        fittedView: dr,
-        fieldOfView: fr,
-        mouseSensitivity: Ir.mouseSensitivity,
-        canLock: or
+      no.current = {
+        fittedView: Oo,
+        fieldOfView: ao,
+        mouseSensitivity: ko.mouseSensitivity,
+        canLock: Mo
       };
-      const wr = (0, FY.useMemo)((() => {
-          if (!Sr) return null;
-          const YY = (YY, DY, FY) => {
-              var AY, IY, RY;
-              return null !== (AY = null === (IY = rY.frequencies[YY + Kr[0]]) || void 0 === IY || null === (RY = IY[DY + Kr[1]]) || void 0 === RY ? void 0 : RY[FY + Kr[2]]) && void 0 !== AY ? AY : 0
+      const qo = (0, iT.useMemo)((() => {
+          if (!wo) return null;
+          const TT = (TT, IT, iT) => {
+              var zT, kT, WT;
+              return null !== (zT = null === (kT = oT.frequencies[TT + fo[0]]) || void 0 === kT || null === (WT = kT[IT + fo[1]]) || void 0 === WT ? void 0 : WT[iT + fo[2]]) && void 0 !== zT ? zT : 0
             },
-            FY = function(YY, rY, DY, FY) {
-              let AY = 0,
-                IY = 1 / 0;
-              for (const uY of [0, 1, 2]) {
-                if (0 === rY[uY]) {
-                  if (YY[uY] < 0 || YY[uY] > DY[uY]) return null;
+            iT = function(TT, oT, IT, iT) {
+              let zT = 0,
+                kT = 1 / 0;
+              for (const DT of [0, 1, 2]) {
+                if (0 === oT[DT]) {
+                  if (TT[DT] < 0 || TT[DT] > IT[DT]) return null;
                   continue
                 }
-                const FY = (0 - YY[uY]) / rY[uY],
-                  RY = (DY[uY] - YY[uY]) / rY[uY];
-                AY = Math.max(AY, Math.min(FY, RY)), IY = Math.min(IY, Math.max(FY, RY))
+                const iT = (0 - TT[DT]) / oT[DT],
+                  WT = (IT[DT] - TT[DT]) / oT[DT];
+                zT = Math.max(zT, Math.min(iT, WT)), kT = Math.min(kT, Math.max(iT, WT))
               }
-              if (AY > IY) return null;
-              const RY = [0, 1, 2].map((FY => Math.min(DY[FY] - 1, Math.max(0, Math.floor(YY[FY] + rY[FY] * AY))))),
-                OY = [0, 1, 2].map((YY => Math.sign(rY[YY]))),
-                gY = [0, 1, 2].map((DY => {
-                  if (0 === OY[DY]) return 1 / 0;
-                  return ((OY[DY] > 0 ? RY[DY] + 1 : RY[DY]) - YY[DY]) / rY[DY]
+              if (zT > kT) return null;
+              const WT = [0, 1, 2].map((iT => Math.min(IT[iT] - 1, Math.max(0, Math.floor(TT[iT] + oT[iT] * zT))))),
+                XT = [0, 1, 2].map((TT => Math.sign(oT[TT]))),
+                BT = [0, 1, 2].map((IT => {
+                  if (0 === XT[IT]) return 1 / 0;
+                  return ((XT[IT] > 0 ? WT[IT] + 1 : WT[IT]) - TT[IT]) / oT[IT]
                 })),
-                aY = [0, 1, 2].map((YY => 0 === OY[YY] ? 1 / 0 : Math.abs(1 / rY[YY])));
-              let vY = null;
+                FT = [0, 1, 2].map((TT => 0 === XT[TT] ? 1 / 0 : Math.abs(1 / oT[TT])));
+              let ST = null;
               for (;;) {
-                const YY = FY(RY[0], RY[1], RY[2]);
-                if (YY >= 1) return RY;
-                YY > 0 && (vY = [RY[0], RY[1], RY[2]]);
-                const rY = gY[0] < gY[1] ? gY[0] < gY[2] ? 0 : 2 : gY[1] < gY[2] ? 1 : 2;
-                if (gY[rY] > IY) return vY;
-                if (RY[rY] += OY[rY], gY[rY] += aY[rY], RY[rY] < 0 || RY[rY] >= DY[rY]) return vY
+                const TT = iT(WT[0], WT[1], WT[2]);
+                if (TT >= 1) return WT;
+                TT > 0 && (ST = [WT[0], WT[1], WT[2]]);
+                const oT = BT[0] < BT[1] ? BT[0] < BT[2] ? 0 : 2 : BT[1] < BT[2] ? 1 : 2;
+                if (BT[oT] > kT) return ST;
+                if (WT[oT] += XT[oT], BT[oT] += FT[oT], WT[oT] < 0 || WT[oT] >= IT[oT]) return ST
               }
-            }(Jr.position, Yr(Jr), Zr, ((rY, FY, AY) => (0, VY.E)(YY(rY, FY, AY), DY, CY)));
-          return null === FY ? null : {
-            x: FY[0] + Kr[0],
-            y: FY[1] + Kr[1],
-            z: FY[2] + Kr[2],
-            value: YY(FY[0], FY[1], FY[2])
+            }(Ho.position, To(Ho), Jo, ((oT, iT, zT) => (0, hT.q)(TT(oT, iT, zT), IT, UT)));
+          return null === iT ? null : {
+            x: iT[0] + fo[0],
+            y: iT[1] + fo[1],
+            z: iT[2] + fo[2],
+            value: TT(iT[0], iT[1], iT[2])
           }
-        }), [Sr, rY, Kr, Jr, Zr, DY, CY]),
+        }), [wo, oT, fo, Ho, Jo, IT, UT]),
         {
-          keyHandlers: br
-        } = (0, SY.i)({
-          isEnabled: Sr,
-          claimedKeyCodes: zY,
-          Ys: YY => {
-            cr((rY => function(YY, rY) {
-              const DY = [Math.sin(YY.heading), 0, Math.cos(YY.heading)],
-                FY = Rr(Rr(Or(DY, rY.forward), Or(rr(YY.heading), rY.right)), [0, rY.up, 0]);
+          keyHandlers: Zo
+        } = (0, wT.f)({
+          isEnabled: wo,
+          claimedKeyCodes: jT,
+          ML: TT => {
+            Eo((oT => function(TT, oT) {
+              const IT = [Math.sin(TT.heading), 0, Math.cos(TT.heading)],
+                iT = Wo(Wo(Xo(IT, oT.forward), Xo(oo(TT.heading), oT.right)), [0, oT.up, 0]);
               return {
-                ...YY,
-                position: Rr(YY.position, FY)
+                ...TT,
+                position: Wo(TT.position, iT)
               }
-            }(null !== rY && void 0 !== rY ? rY : Mr.current.fittedView, YY)))
+            }(null !== oT && void 0 !== oT ? oT : no.current.fittedView, TT)))
           },
-          onZoomChange: Tr
+          onZoomChange: eo
         });
-      (0, FY.useEffect)((() => {
-        const YY = ar.current;
-        if (!YY) return;
-        let rY;
+      (0, iT.useEffect)((() => {
+        const TT = Fo.current;
+        if (!TT) return;
+        let oT;
         try {
-          rY = function(YY, rY) {
-            const DY = new AY.c(YY, !0, {
+          oT = function(TT, oT) {
+            const IT = new zT.c(TT, !0, {
                 stencil: !1
               }, !0),
-              FY = new IY.c(DY),
-              [iY, yY, QY] = VY.W;
-            FY.clearColor = new aY.c(iY / 255, yY / 255, QY / 255, 1);
-            const oY = new RY.c("Heatmap3DCamera", vY.xy.Zero(), FY);
-            oY.fov = rY, oY.minZ = .05;
-            const WY = new OY.e("Heatmap3DLight", new vY.xy(.4, 1, -.6), FY);
-            WY.diffuse = aY.Color3.White(), WY.groundColor = aY.Color3.Black(), WY.specular = aY.Color3.Black();
-            const EY = new gY.StandardMaterial("Heatmap3DCellMaterial", FY);
-            EY.diffuseColor = new aY.Color3(.4, .4, .4), EY.emissiveColor = new aY.Color3(.62, .62, .62), EY.specularColor = aY.Color3.Black();
-            const mY = (0, uY.b)("Heatmap3DCells", {
+              iT = new kT.d(IT),
+              [xT, cT, KT] = hT.J;
+            iT.clearColor = new FT.b(xT / 255, cT / 255, KT / 255, 1);
+            const MT = new WT.e("Heatmap3DCamera", ST.sc.Zero(), iT);
+            MT.fov = oT, MT.minZ = .05;
+            const rT = new XT.d("Heatmap3DLight", new ST.sc(.4, 1, -.6), iT);
+            rT.diffuse = FT.Color3.White(), rT.groundColor = FT.Color3.Black(), rT.specular = FT.Color3.Black();
+            const AT = new BT.StandardMaterial("Heatmap3DCellMaterial", iT);
+            AT.diffuseColor = new FT.Color3(.4, .4, .4), AT.emissiveColor = new FT.Color3(.62, .62, .62), AT.specularColor = FT.Color3.Black();
+            const gT = (0, DT.d)("Heatmap3DCells", {
               size: 1
-            }, FY);
-            mY.material = EY, mY.Yo = !1, mY.Gy = !0, mY.isVisible = !1;
-            const SY = (0, uY.b)("Heatmap3DTranslucentCells", {
+            }, iT);
+            gT.material = AT, gT.dK = !1, gT.lc = !0, gT.isVisible = !1;
+            const wT = (0, DT.d)("Heatmap3DTranslucentCells", {
               size: 1
-            }, FY);
-            SY.material = EY, SY.hasVertexAlpha = !0, SY.Yo = !1, SY.Gy = !0, SY.isVisible = !1;
-            const lY = new gY.StandardMaterial("Heatmap3DSchematicMaterial", FY);
-            lY.diffuseColor = new aY.Color3(.6, .6, .6), lY.emissiveColor = new aY.Color3(.4, .4, .4), lY.specularColor = aY.Color3.Black();
-            const TY = (0, uY.b)("Heatmap3DSchematicBlocks", {
+            }, iT);
+            wT.material = AT, wT.hasVertexAlpha = !0, wT.dK = !1, wT.lc = !0, wT.isVisible = !1;
+            const mT = new BT.StandardMaterial("Heatmap3DSchematicMaterial", iT);
+            mT.diffuseColor = new FT.Color3(.6, .6, .6), mT.emissiveColor = new FT.Color3(.4, .4, .4), mT.specularColor = FT.Color3.Black();
+            const eT = (0, DT.d)("Heatmap3DSchematicBlocks", {
               size: 1
-            }, FY);
-            TY.material = lY, TY.Yo = !1, TY.Gy = !0, TY.isVisible = !1;
-            const eY = (0, sY.b)("Heatmap3DTarget", {
-              lines: tY([-.52, -.52, -.52], [.52, .52, .52])
-            }, FY);
-            return eY.color = new aY.Color3(.06, .14, .23), eY.renderingGroupId = 1, eY.Yo = !1, eY.isVisible = !1, {
-              engine: DY,
-              LQ: FY,
-              camera: oY,
-              cells: mY,
-              translucentCells: SY,
+            }, iT);
+            eT.material = mT, eT.dK = !1, eT.lc = !0, eT.isVisible = !1;
+            const RT = (0, LT.b)("Heatmap3DTarget", {
+              lines: VT([-.52, -.52, -.52], [.52, .52, .52])
+            }, iT);
+            return RT.color = new FT.Color3(.06, .14, .23), RT.renderingGroupId = 1, RT.dK = !1, RT.isVisible = !1, {
+              engine: IT,
+              NK: iT,
+              camera: MT,
+              cells: gT,
+              translucentCells: wT,
               translucent: {
-                uv: new Float32Array(0),
+                ek: new Float32Array(0),
                 colours: new Float32Array(0),
                 count: 0
               },
               translucentSortedFrom: null,
-              schematicBlocks: TY,
-              targetOutline: eY,
+              schematicBlocks: eT,
+              targetOutline: RT,
               chunkGrid: null,
               chunkGridCentre: null,
               chunkGridOrigin: null,
-              targetFieldOfView: rY,
+              targetFieldOfView: oT,
               needsRender: !0
             }
-          }(YY, Mr.current.fieldOfView)
-        } catch (DY) {
-          return console.error("Failed to start the 3D heatmap", DY), void ir(!0)
+          }(TT, no.current.fieldOfView)
+        } catch (IT) {
+          return console.error("Failed to start the 3D heatmap", IT), void xo(!0)
         }
-        return vr.current = rY, rY.engine.runRenderLoop((() => {
-          const YY = rY.camera;
-          YY.fov !== rY.targetFieldOfView && (YY.fov += (rY.targetFieldOfView - YY.fov) * (YY.fov > rY.targetFieldOfView ? .3 : .2), Math.abs(rY.targetFieldOfView - YY.fov) < 5e-4 && (YY.fov = rY.targetFieldOfView), rY.needsRender = !0), rY.needsRender && (rY.LQ.render(), rY.needsRender = !rY.LQ.isReady() || !rY.engine.areAllEffectsReady())
+        return So.current = oT, oT.engine.runRenderLoop((() => {
+          const TT = oT.camera;
+          TT.fov !== oT.targetFieldOfView && (TT.fov += (oT.targetFieldOfView - TT.fov) * (TT.fov > oT.targetFieldOfView ? .3 : .2), Math.abs(oT.targetFieldOfView - TT.fov) < 5e-4 && (TT.fov = oT.targetFieldOfView), oT.needsRender = !0), oT.needsRender && (oT.NK.render(), oT.needsRender = !oT.NK.isReady() || !oT.engine.areAllEffectsReady())
         })), () => {
-          vr.current = null, rY.engine.dispose()
+          So.current = null, oT.engine.dispose()
         }
-      }), []), (0, FY.useEffect)((() => {
-        const YY = ar.current;
-        if (!YY) return;
-        const rY = () => {
-            Er.current = !1, Qr(document.pointerLockElement === YY)
+      }), []), (0, iT.useEffect)((() => {
+        const TT = Fo.current;
+        if (!TT) return;
+        const oT = () => {
+            Ao.current = !1, Ko(document.pointerLockElement === TT)
           },
-          DY = () => {
-            Er.current && (Er.current = !1, Wr(!1))
+          IT = () => {
+            Ao.current && (Ao.current = !1, ro(!1))
           },
-          FY = rY => {
-            const DY = !Mr.current.canLock && document.activeElement === YY && 0 !== (1 & rY.buttons);
-            if (document.pointerLockElement !== YY && !DY) return;
-            const FY = Mr.current.mouseSensitivity * BY;
-            cr((YY => function(YY, rY, DY) {
-              const FY = 2 * Math.PI;
+          iT = oT => {
+            const IT = !no.current.canLock && document.activeElement === TT && 0 !== (1 & oT.buttons);
+            if (document.pointerLockElement !== TT && !IT) return;
+            const iT = no.current.mouseSensitivity * vT;
+            Eo((TT => function(TT, oT, IT) {
+              const iT = 2 * Math.PI;
               return {
-                ...YY,
-                heading: ((YY.heading + rY) % FY + FY) % FY,
-                pitch: Math.max(-dY, Math.min(dY, YY.pitch + DY))
+                ...TT,
+                heading: ((TT.heading + oT) % iT + iT) % iT,
+                pitch: Math.max(-OT, Math.min(OT, TT.pitch + IT))
               }
-            }(null !== YY && void 0 !== YY ? YY : Mr.current.fittedView, rY.movementX * FY, rY.movementY * FY)))
+            }(null !== TT && void 0 !== TT ? TT : no.current.fittedView, oT.movementX * iT, oT.movementY * iT)))
           };
-        return document.addEventListener("pointerlockchange", rY), document.addEventListener("pointerlockerror", DY), document.addEventListener("pointermove", FY), () => {
-          document.removeEventListener("pointerlockchange", rY), document.removeEventListener("pointerlockerror", DY), document.removeEventListener("pointermove", FY), document.pointerLockElement === YY && (0, lY.c)()
+        return document.addEventListener("pointerlockchange", oT), document.addEventListener("pointerlockerror", IT), document.addEventListener("pointermove", iT), () => {
+          document.removeEventListener("pointerlockchange", oT), document.removeEventListener("pointerlockerror", IT), document.removeEventListener("pointermove", iT), document.pointerLockElement === TT && (0, mT.b)()
         }
-      }), []), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && 0 !== ur.width && 0 !== ur.height && (YY.engine.resize(), YY.needsRender = !0)
-      }), [ur.width, ur.height]), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && (YY.targetFieldOfView = fr * (lr ? NY : 1))
-      }), [fr, lr]), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && function(YY, rY, DY, FY) {
-          const AY = [],
-            IY = [],
-            RY = [],
-            OY = [];
-          for (let gY = 0; gY < rY.count; gY++) {
-            const YY = rY.values[gY],
-              aY = (0, VY.E)(YY, DY, FY);
-            if (aY <= 0) continue;
-            const [vY, uY, sY] = (0, VY.v)((0, VY.P)(YY, DY)), iY = aY >= 1;
-            (iY ? AY : RY).push(rY.positions[3 * gY] + .5, rY.positions[3 * gY + 1] + .5, rY.positions[3 * gY + 2] + .5), (iY ? IY : OY).push(vY / 255, uY / 255, sY / 255, aY)
+      }), []), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && 0 !== Do.width && 0 !== Do.height && (TT.engine.resize(), TT.needsRender = !0)
+      }), [Do.width, Do.height]), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && (TT.targetFieldOfView = ao * (mo ? uT : 1))
+      }), [ao, mo]), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && function(TT, oT, IT, iT) {
+          const zT = [],
+            kT = [],
+            WT = [],
+            XT = [];
+          for (let BT = 0; BT < oT.count; BT++) {
+            const TT = oT.values[BT],
+              FT = (0, hT.q)(TT, IT, iT);
+            if (FT <= 0) continue;
+            const [ST, DT, LT] = (0, hT.l)((0, hT.B)(TT, IT)), xT = FT >= 1;
+            (xT ? zT : WT).push(oT.positions[3 * BT] + .5, oT.positions[3 * BT + 1] + .5, oT.positions[3 * BT + 2] + .5), (xT ? kT : XT).push(ST / 255, DT / 255, LT / 255, FT)
           }
-          UY(YY.cells, Float32Array.from(AY), Float32Array.from(IY), IY.length / 4), YY.translucent = {
-            uv: Float32Array.from(RY),
-            colours: Float32Array.from(OY),
-            count: OY.length / 4
-          }, YY.translucentSortedFrom = null, LY(YY), YY.needsRender = !0
-        }(YY, Cr, DY, CY)
-      }), [Cr, DY, CY]), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && function(YY, rY) {
-          YY.chunkGridOrigin = rY, YY.chunkGridCentre = null, PY(YY)
-        }(YY, JY.min)
-      }), [JY]), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && function(YY, rY, DY) {
-          const FY = [],
-            AY = [];
-          if (null !== rY) {
+          PT(TT.cells, Float32Array.from(zT), Float32Array.from(kT), kT.length / 4), TT.translucent = {
+            ek: Float32Array.from(WT),
+            colours: Float32Array.from(XT),
+            count: XT.length / 4
+          }, TT.translucentSortedFrom = null, dT(TT), TT.needsRender = !0
+        }(TT, Uo, IT, UT)
+      }), [Uo, IT, UT]), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && function(TT, oT) {
+          TT.chunkGridOrigin = oT, TT.chunkGridCentre = null, NT(TT)
+        }(TT, HT.min)
+      }), [HT]), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && function(TT, oT, IT) {
+          const iT = [],
+            zT = [];
+          if (null !== oT) {
             const {
-              positions: YY,
-              colours: IY,
-              count: RY
-            } = rY.surface;
-            for (let rY = 0; rY < RY; rY++) {
-              const RY = [YY[3 * rY], YY[3 * rY + 1], YY[3 * rY + 2]];
-              [0, 1, 2].every((YY => RY[YY] >= DY.min[YY] - ZY && RY[YY] <= DY.max[YY] + ZY)) && (FY.push(RY[0] - DY.min[0] + .5, RY[1] - DY.min[1] + .5, RY[2] - DY.min[2] + .5), AY.push(IY[3 * rY] / 255, IY[3 * rY + 1] / 255, IY[3 * rY + 2] / 255, 1))
+              positions: TT,
+              colours: kT,
+              count: WT
+            } = oT.surface;
+            for (let oT = 0; oT < WT; oT++) {
+              const WT = [TT[3 * oT], TT[3 * oT + 1], TT[3 * oT + 2]];
+              [0, 1, 2].every((TT => WT[TT] >= IT.min[TT] - JT && WT[TT] <= IT.max[TT] + JT)) && (iT.push(WT[0] - IT.min[0] + .5, WT[1] - IT.min[1] + .5, WT[2] - IT.min[2] + .5), zT.push(kT[3 * oT] / 255, kT[3 * oT + 1] / 255, kT[3 * oT + 2] / 255, 1))
             }
           }
-          UY(YY.schematicBlocks, Float32Array.from(FY), Float32Array.from(AY), AY.length / 4), YY.needsRender = !0
-        }(YY, wY, JY)
-      }), [wY, JY]), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && null !== YY.chunkGrid && (YY.chunkGrid.isVisible = er, YY.needsRender = !0)
-      }), [er, JY]), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && function(YY, rY, DY) {
+          PT(TT.schematicBlocks, Float32Array.from(iT), Float32Array.from(zT), zT.length / 4), TT.needsRender = !0
+        }(TT, qT, HT)
+      }), [qT, HT]), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && null !== TT.chunkGrid && (TT.chunkGrid.isVisible = Ro, TT.needsRender = !0)
+      }), [Ro, HT]), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && function(TT, oT, IT) {
           const {
-            camera: FY
-          } = YY;
-          FY.position.set(rY.position[0], rY.position[1], rY.position[2]), FY.rotation.set(rY.pitch, rY.heading, 0);
-          const AY = (fY + 1) * yY.d.Jy * Math.sqrt(3);
-          FY.maxZ = Math.max(AY, Math.hypot(...Rr(rY.position, Or(Ar({
+            camera: iT
+          } = TT;
+          iT.position.set(oT.position[0], oT.position[1], oT.position[2]), iT.rotation.set(oT.pitch, oT.heading, 0);
+          const zT = (aT + 1) * cT.c.Yc * Math.sqrt(3);
+          iT.maxZ = Math.max(zT, Math.hypot(...Wo(oT.position, Xo(zo({
             min: [0, 0, 0],
-            max: DY
-          }), -1))) + 2 * Math.hypot(...DY)), PY(YY), LY(YY), YY.needsRender = !0
-        }(YY, Jr, Zr)
-      }), [Jr, Zr]), (0, FY.useEffect)((() => {
-        const YY = vr.current;
-        null !== YY && (YY.targetOutline.isVisible = null !== wr, null !== wr && YY.targetOutline.position.set(wr.x - Kr[0] + .5, wr.y - Kr[1] + .5, wr.z - Kr[2] + .5), YY.needsRender = !0)
-      }), [wr, Kr]);
-      return (0, TY.jsxs)("div", {
+            max: IT
+          }), -1))) + 2 * Math.hypot(...IT)), NT(TT), dT(TT), TT.needsRender = !0
+        }(TT, Ho, Jo)
+      }), [Ho, Jo]), (0, iT.useEffect)((() => {
+        const TT = So.current;
+        null !== TT && (TT.targetOutline.isVisible = null !== qo, null !== qo && TT.targetOutline.position.set(qo.x - fo[0] + .5, qo.y - fo[1] + .5, qo.z - fo[2] + .5), TT.needsRender = !0)
+      }), [qo, fo]);
+      return (0, eT.jsxs)("div", {
         className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: gr,
-        children: [(0, TY.jsx)("canvas", {
+        ref: Bo,
+        children: [(0, eT.jsx)("canvas", {
           className: "StudioHeatmapMapCanvas",
-          ref: ar,
+          ref: Fo,
           style: {
-            width: `${ur.width}px`,
-            height: `${ur.height}px`
+            width: `${Do.width}px`,
+            height: `${Do.height}px`
           },
           tabIndex: 0,
-          "aria-label": xY("3D heatmap"),
+          "aria-label": bT("3D heatmap"),
           onClick: () => {
-            const YY = ar.current;
-            if (null === YY) return;
-            if (YY.focus({
+            const TT = Fo.current;
+            if (null === TT) return;
+            if (TT.focus({
                 preventScroll: !0
-              }), yr || !or) return;
-            const rY = YY.requestPointerLock();
-            rY instanceof Promise ? rY.catch((YY => {
-              YY instanceof DOMException && ("WrongDocumentError" === YY.name || "NotSupportedError" === YY.name) && Wr(!1)
-            })) : Er.current = !0
+              }), co || !Mo) return;
+            const oT = TT.requestPointerLock();
+            oT instanceof Promise ? oT.catch((TT => {
+              TT instanceof DOMException && ("WrongDocumentError" === TT.name || "NotSupportedError" === TT.name) && ro(!1)
+            })) : Ao.current = !0
           },
-          ...br,
-          onKeyDown: YY => {
-            if (Sr && cY.has(YY.code)) return YY.preventDefault(), void(() => {
-              const YY = ar.current;
-              null !== YY && document.pointerLockElement === YY ? (0, lY.c)() : null === YY || void 0 === YY || YY.blur()
+          ...Zo,
+          onKeyDown: TT => {
+            if (wo && ET.has(TT.code)) return TT.preventDefault(), void(() => {
+              const TT = Fo.current;
+              null !== TT && document.pointerLockElement === TT ? (0, mT.b)() : null === TT || void 0 === TT || TT.blur()
             })();
-            const rY = KY[YY.code];
-            return Sr && void 0 !== rY ? (YY.preventDefault(), void XY(rY)) : Sr && (0, SY.e)("replayPlayPause", YY.code) && !(0, SY.e)("Zoom", YY.code) ? (YY.preventDefault(), void(YY.repeat || pY())) : Sr && YY.code === HY ? (YY.preventDefault(), void qY()) : Sr && YY.code === hY ? (YY.preventDefault(), void cr(null)) : Sr && YY.code === jY ? (YY.preventDefault(), void Nr((YY => !YY))) : void br.onKeyDown(YY)
+            const oT = fT[TT.code];
+            return wo && void 0 !== oT ? (TT.preventDefault(), void lT(oT)) : wo && (0, wT.b)("replayPlayPause", TT.code) && !(0, wT.b)("Zoom", TT.code) ? (TT.preventDefault(), void(TT.repeat || tT())) : wo && TT.code === CT ? (TT.preventDefault(), void sT()) : wo && TT.code === QT ? (TT.preventDefault(), void Eo(null)) : wo && TT.code === YT ? (TT.preventDefault(), void uo((TT => !TT))) : void Zo.onKeyDown(TT)
           },
           onFocus: () => {
-            Vr(!0)
+            ho(!0)
           },
           onBlur: () => {
-            Vr(!1), br.onBlur()
+            ho(!1), Zo.onBlur()
           }
-        }), sr && (0, TY.jsx)("div", {
+        }), Lo && (0, eT.jsx)("div", {
           className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: xY("3D view isn't available in this browser.")
-        }), Sr && (0, TY.jsx)("div", {
+          children: bT("3D view isn't available in this browser.")
+        }), wo && (0, eT.jsx)("div", {
           className: "StudioHeatmap3DCrosshair"
-        }), (0, TY.jsx)("div", {
+        }), (0, eT.jsx)("div", {
           className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: Jr.position.map(((YY, rY) => (YY + Kr[rY]).toFixed(2))).join(" ")
-        }), er && (0, TY.jsx)(nY, {
-          heading: Jr.heading,
-          pitch: Jr.pitch,
-          onViewFrom: YY => {
-            const rY = Or(YY, -1),
-              DY = 0 === rY[1] ? {
-                heading: Math.atan2(rY[0], rY[2]),
+          children: Ho.position.map(((TT, oT) => (TT + fo[oT]).toFixed(2))).join(" ")
+        }), Ro && (0, eT.jsx)(yT, {
+          heading: Ho.heading,
+          pitch: Ho.pitch,
+          onViewFrom: TT => {
+            const oT = Xo(TT, -1),
+              IT = 0 === oT[1] ? {
+                heading: Math.atan2(oT[0], oT[2]),
                 pitch: 0
               } : {
-                heading: Jr.heading,
-                pitch: rY[1] < 0 ? dY : -dY
+                heading: Ho.heading,
+                pitch: oT[1] < 0 ? OT : -OT
               };
-            cr(Dr(hr, jr, fr, DY))
+            Eo(Io(Qo, Yo, ao, IT))
           },
-          onTurn: (YY, rY) => {
-            cr((DY => function(YY, rY, DY, FY) {
-              return Fr(YY, rY, {
-                heading: YY.heading + DY * kY,
-                pitch: Math.max(-dY, Math.min(dY, YY.pitch + FY * kY))
+          onTurn: (TT, oT) => {
+            Eo((IT => function(TT, oT, IT, iT) {
+              return io(TT, oT, {
+                heading: TT.heading + IT * GT,
+                pitch: Math.max(-OT, Math.min(OT, TT.pitch + iT * GT))
               })
-            }(null !== DY && void 0 !== DY ? DY : Mr.current.fittedView, Ar(hr), YY, rY)))
+            }(null !== IT && void 0 !== IT ? IT : no.current.fittedView, zo(Qo), TT, oT)))
           },
           onFlip: () => {
-            cr((YY => function(YY, rY) {
-              return Fr(YY, rY, {
-                heading: YY.heading + Math.PI,
-                pitch: -YY.pitch
+            Eo((TT => function(TT, oT) {
+              return io(TT, oT, {
+                heading: TT.heading + Math.PI,
+                pitch: -TT.pitch
               })
-            }(null !== YY && void 0 !== YY ? YY : Mr.current.fittedView, Ar(hr))))
+            }(null !== TT && void 0 !== TT ? TT : no.current.fittedView, zo(Qo))))
           }
-        }), null !== wr && (0, TY.jsx)("div", {
+        }), null !== qo && (0, eT.jsx)("div", {
           className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === GY ? xY("studio:heatmapBlockReadout", {
-            x: wr.x,
-            y: wr.y,
-            z: wr.z,
-            count: (0, iY.S)(wr.value)
-          }) : GY(wr.x, wr.y, wr.z, wr.value)
-        }), (0, TY.jsxs)("div", {
+          children: null === pT ? bT("studio:heatmapBlockReadout", {
+            x: qo.x,
+            y: qo.y,
+            z: qo.z,
+            count: (0, xT.S)(qo.value)
+          }) : pT(qo.x, qo.y, qo.z, qo.value)
+        }), (0, eT.jsxs)("div", {
           className: "StudioHeatmapMapControls",
-          children: [bY, (0, TY.jsx)(EY.J, {
-            active: null === Br,
+          children: [ZT, (0, eT.jsx)(AT.J, {
+            active: null === vo,
             onClick: () => {
-              cr(null)
+              Eo(null)
             },
-            children: (0, TY.jsx)(mY.e, {
+            children: (0, eT.jsx)(gT.e, {
               name: "eye"
             })
           })]
@@ -447,255 +447,255 @@ export const modules = {
       })
     }
 
-    function nY(YY) {
+    function yT(TT) {
       let {
-        heading: rY,
-        pitch: DY,
-        onViewFrom: AY,
-        onTurn: IY,
-        onFlip: RY
-      } = YY;
+        heading: oT,
+        pitch: IT,
+        onViewFrom: zT,
+        onTurn: kT,
+        onFlip: WT
+      } = TT;
       const {
-        t: OY
-      } = (0, QY.C)(), gY = (0, FY.useRef)(null), aY = Yr({
-        heading: rY,
-        pitch: DY
-      }), vY = rr(rY), uY = ar(aY, vY), sY = XY + qY + 2, iY = bY.flatMap((YY => [1, -1].map((rY => {
-        const DY = Or(YY.direction, rY);
+        t: XT
+      } = (0, KT.t)(), BT = (0, iT.useRef)(null), FT = To({
+        heading: oT,
+        pitch: IT
+      }), ST = oo(oT), DT = Fo(FT, ST), LT = lT + sT + 2, xT = ZT.flatMap((TT => [1, -1].map((oT => {
+        const IT = Xo(TT.direction, oT);
         return {
-          ...YY,
-          sign: rY,
-          direction: DY,
-          endX: sY + gr(DY, vY) * XY,
-          endY: sY - gr(DY, uY) * XY,
-          depth: gr(DY, aY)
+          ...TT,
+          sign: oT,
+          direction: IT,
+          endX: LT + Bo(IT, ST) * lT,
+          endY: LT - Bo(IT, DT) * lT,
+          depth: Bo(IT, FT)
         }
-      })))).sort(((YY, rY) => rY.depth - YY.depth));
-      return (0, TY.jsxs)("svg", {
+      })))).sort(((TT, oT) => oT.depth - TT.depth));
+      return (0, eT.jsxs)("svg", {
         className: "StudioHeatmap3DGizmo",
-        width: 2 * sY,
-        height: 2 * sY,
+        width: 2 * LT,
+        height: 2 * LT,
         "aria-hidden": !0,
-        onPointerDown: YY => {
-          var rY, DY;
-          YY.currentTarget.setPointerCapture(YY.pointerId);
-          const FY = YY.target,
-            AY = FY.getAttribute("data-end");
-          gY.current = {
-            pointerId: YY.pointerId,
-            x: YY.clientX,
-            y: YY.clientY,
+        onPointerDown: TT => {
+          var oT, IT;
+          TT.currentTarget.setPointerCapture(TT.pointerId);
+          const iT = TT.target,
+            zT = iT.getAttribute("data-end");
+          BT.current = {
+            pointerId: TT.pointerId,
+            x: TT.clientX,
+            y: TT.clientY,
             travel: 0,
-            side: null === AY ? null : null !== (rY = null === (DY = iY[Number(AY)]) || void 0 === DY ? void 0 : DY.direction) && void 0 !== rY ? rY : null,
-            isOnMiddle: FY.hasAttribute("data-middle")
+            side: null === zT ? null : null !== (oT = null === (IT = xT[Number(zT)]) || void 0 === IT ? void 0 : IT.direction) && void 0 !== oT ? oT : null,
+            isOnMiddle: iT.hasAttribute("data-middle")
           }
         },
-        onPointerMove: YY => {
-          const rY = gY.current;
-          if (null === rY || rY.pointerId !== YY.pointerId) return;
-          const DY = YY.clientX - rY.x,
-            FY = YY.clientY - rY.y;
-          rY.x = YY.clientX, rY.y = YY.clientY, rY.travel += Math.abs(DY) + Math.abs(FY), rY.travel >= GY && IY(DY, FY)
+        onPointerMove: TT => {
+          const oT = BT.current;
+          if (null === oT || oT.pointerId !== TT.pointerId) return;
+          const IT = TT.clientX - oT.x,
+            iT = TT.clientY - oT.y;
+          oT.x = TT.clientX, oT.y = TT.clientY, oT.travel += Math.abs(IT) + Math.abs(iT), oT.travel >= pT && kT(IT, iT)
         },
-        onPointerUp: YY => {
-          const rY = gY.current;
-          gY.current = null, null === rY || rY.pointerId !== YY.pointerId || rY.travel >= GY || (null !== rY.side ? AY(rY.side) : rY.isOnMiddle && RY())
+        onPointerUp: TT => {
+          const oT = BT.current;
+          BT.current = null, null === oT || oT.pointerId !== TT.pointerId || oT.travel >= pT || (null !== oT.side ? zT(oT.side) : oT.isOnMiddle && WT())
         },
         onPointerCancel: () => {
-          gY.current = null
+          BT.current = null
         },
-        children: [iY.map(((YY, rY) => {
-          const DY = YY.sign > 0;
-          return (0, TY.jsxs)("g", {
-            children: [(0, TY.jsx)("line", {
-              x1: sY,
-              y1: sY,
-              x2: YY.endX,
-              y2: YY.endY,
-              stroke: YY.colour,
-              strokeOpacity: DY ? 1 : .5,
+        children: [xT.map(((TT, oT) => {
+          const IT = TT.sign > 0;
+          return (0, eT.jsxs)("g", {
+            children: [(0, eT.jsx)("line", {
+              x1: LT,
+              y1: LT,
+              x2: TT.endX,
+              y2: TT.endY,
+              stroke: TT.colour,
+              strokeOpacity: IT ? 1 : .5,
               strokeWidth: 2,
               strokeLinecap: "round"
-            }), (0, TY.jsx)("circle", {
+            }), (0, eT.jsx)("circle", {
               className: "StudioHeatmap3DGizmoEnd",
-              "data-end": rY,
-              cx: YY.endX,
-              cy: YY.endY,
-              r: DY ? qY : qY - 1,
-              fill: YY.colour,
-              fillOpacity: DY ? 1 : .3,
-              stroke: YY.colour,
-              strokeWidth: DY ? 0 : 1.5,
-              children: (0, TY.jsx)("title", {
-                children: `${OY("View from")} ${DY?"+":"\u2212"}${YY.name}`
+              "data-end": oT,
+              cx: TT.endX,
+              cy: TT.endY,
+              r: IT ? sT : sT - 1,
+              fill: TT.colour,
+              fillOpacity: IT ? 1 : .3,
+              stroke: TT.colour,
+              strokeWidth: IT ? 0 : 1.5,
+              children: (0, eT.jsx)("title", {
+                children: `${XT("View from")} ${IT?"+":"\u2212"}${TT.name}`
               })
-            }), DY && (0, TY.jsx)("text", {
+            }), IT && (0, eT.jsx)("text", {
               pointerEvents: "none",
-              x: YY.endX,
-              y: YY.endY,
+              x: TT.endX,
+              y: TT.endY,
               fill: "#151515",
               fontSize: 9,
               fontWeight: "bold",
               textAnchor: "middle",
               dominantBaseline: "central",
-              children: YY.name
+              children: TT.name
             })]
-          }, `${DY?"+":"-"}${YY.name}`)
-        })), (0, TY.jsx)("circle", {
+          }, `${IT?"+":"-"}${TT.name}`)
+        })), (0, eT.jsx)("circle", {
           className: "StudioHeatmap3DGizmoEnd",
           "data-middle": !0,
-          cx: sY,
-          cy: sY,
-          r: pY,
+          cx: LT,
+          cy: LT,
+          r: tT,
           fill: "#d0d0d0",
           fillOpacity: .85,
-          children: (0, TY.jsx)("title", {
-            children: OY("View from the opposite side")
+          children: (0, eT.jsx)("title", {
+            children: XT("View from the opposite side")
           })
         })]
       })
     }
 
-    function PY(YY) {
-      var rY, DY, FY;
+    function NT(TT) {
+      var oT, IT, iT;
       const {
-        chunkGridOrigin: AY,
-        camera: IY
-      } = YY;
-      if (null === AY) return;
-      const RY = [IY.position.x, IY.position.y, IY.position.z],
-        OY = [0, 2].map((YY => Math.floor((RY[YY] + AY[YY]) / yY.d.Jy))),
-        gY = YY.chunkGridCentre;
-      if (null !== gY && gY.every(((YY, rY) => YY === OY[rY]))) return;
-      const uY = null === (rY = null === (DY = YY.chunkGrid) || void 0 === DY ? void 0 : DY.isVisible) || void 0 === rY || rY;
-      null === (FY = YY.chunkGrid) || void 0 === FY || FY.dispose();
-      const [iY, QY] = [0, 2].map(((YY, rY) => {
-        const DY = [];
-        for (let FY = OY[rY] - fY; FY <= OY[rY] + fY + 1; FY++) DY.push(FY * yY.d.Jy - AY[YY]);
-        return DY
-      })), oY = -AY[1], WY = [];
-      for (const aY of QY) WY.push([new vY.xy(iY[0], oY, aY), new vY.xy(iY[iY.length - 1], oY, aY)]);
-      for (const aY of iY) WY.push([new vY.xy(aY, oY, QY[0]), new vY.xy(aY, oY, QY[QY.length - 1])]);
-      const EY = (0, sY.b)("Heatmap3DChunkGrid", {
-        lines: WY
-      }, YY.LQ);
-      EY.color = new aY.Color3(.45, .6, .78), EY.Yo = !1, EY.isVisible = uY, YY.chunkGrid = EY, YY.chunkGridCentre = OY, YY.needsRender = !0
+        chunkGridOrigin: zT,
+        camera: kT
+      } = TT;
+      if (null === zT) return;
+      const WT = [kT.position.x, kT.position.y, kT.position.z],
+        XT = [0, 2].map((TT => Math.floor((WT[TT] + zT[TT]) / cT.c.Yc))),
+        BT = TT.chunkGridCentre;
+      if (null !== BT && BT.every(((TT, oT) => TT === XT[oT]))) return;
+      const DT = null === (oT = null === (IT = TT.chunkGrid) || void 0 === IT ? void 0 : IT.isVisible) || void 0 === oT || oT;
+      null === (iT = TT.chunkGrid) || void 0 === iT || iT.dispose();
+      const [xT, KT] = [0, 2].map(((TT, oT) => {
+        const IT = [];
+        for (let iT = XT[oT] - aT; iT <= XT[oT] + aT + 1; iT++) IT.push(iT * cT.c.Yc - zT[TT]);
+        return IT
+      })), MT = -zT[1], rT = [];
+      for (const FT of KT) rT.push([new ST.sc(xT[0], MT, FT), new ST.sc(xT[xT.length - 1], MT, FT)]);
+      for (const FT of xT) rT.push([new ST.sc(FT, MT, KT[0]), new ST.sc(FT, MT, KT[KT.length - 1])]);
+      const AT = (0, LT.b)("Heatmap3DChunkGrid", {
+        lines: rT
+      }, TT.NK);
+      AT.color = new FT.Color3(.45, .6, .78), AT.dK = !1, AT.isVisible = DT, TT.chunkGrid = AT, TT.chunkGridCentre = XT, TT.needsRender = !0
     }
 
-    function UY(YY, rY, DY, FY) {
-      YY.j_("matrix", function(YY, rY) {
-        const DY = new Float32Array(16 * rY);
-        for (let FY = 0; FY < rY; FY++) {
-          const rY = 16 * FY;
-          DY[rY] = 1, DY[rY + 5] = 1, DY[rY + 10] = 1, DY[rY + 12] = YY[3 * FY], DY[rY + 13] = YY[3 * FY + 1], DY[rY + 14] = YY[3 * FY + 2], DY[rY + 15] = 1
+    function PT(TT, oT, IT, iT) {
+      TT.T_("matrix", function(TT, oT) {
+        const IT = new Float32Array(16 * oT);
+        for (let iT = 0; iT < oT; iT++) {
+          const oT = 16 * iT;
+          IT[oT] = 1, IT[oT + 5] = 1, IT[oT + 10] = 1, IT[oT + 12] = TT[3 * iT], IT[oT + 13] = TT[3 * iT + 1], IT[oT + 14] = TT[3 * iT + 2], IT[oT + 15] = 1
         }
-        return DY
-      }(rY, FY), 16, !0), YY.j_("color", DY, 4, !0), YY.isVisible = FY > 0
+        return IT
+      }(oT, iT), 16, !0), TT.T_("color", IT, 4, !0), TT.isVisible = iT > 0
     }
 
-    function LY(YY) {
+    function dT(TT) {
       const {
-        camera: rY,
-        translucent: DY
-      } = YY, FY = [rY.position.x, rY.position.y, rY.position.z], AY = YY.translucentSortedFrom;
-      if (null !== AY && Math.hypot(FY[0] - AY[0], FY[1] - AY[1], FY[2] - AY[2]) < CY) return;
-      YY.translucentSortedFrom = FY;
-      const IY = new Float64Array(DY.count),
-        RY = new Uint32Array(DY.count);
-      for (let aY = 0; aY < DY.count; aY++) {
-        const YY = DY.uv[3 * aY] - FY[0],
-          rY = DY.uv[3 * aY + 1] - FY[1],
-          AY = DY.uv[3 * aY + 2] - FY[2];
-        IY[aY] = YY * YY + rY * rY + AY * AY, RY[aY] = aY
+        camera: oT,
+        translucent: IT
+      } = TT, iT = [oT.position.x, oT.position.y, oT.position.z], zT = TT.translucentSortedFrom;
+      if (null !== zT && Math.hypot(iT[0] - zT[0], iT[1] - zT[1], iT[2] - zT[2]) < UT) return;
+      TT.translucentSortedFrom = iT;
+      const kT = new Float64Array(IT.count),
+        WT = new Uint32Array(IT.count);
+      for (let FT = 0; FT < IT.count; FT++) {
+        const TT = IT.ek[3 * FT] - iT[0],
+          oT = IT.ek[3 * FT + 1] - iT[1],
+          zT = IT.ek[3 * FT + 2] - iT[2];
+        kT[FT] = TT * TT + oT * oT + zT * zT, WT[FT] = FT
       }
-      RY.sort(((YY, rY) => IY[rY] - IY[YY]));
-      const OY = new Float32Array(3 * DY.count),
-        gY = new Float32Array(4 * DY.count);
-      RY.forEach(((YY, rY) => {
-        OY.set(DY.uv.subarray(3 * YY, 3 * YY + 3), 3 * rY), gY.set(DY.colours.subarray(4 * YY, 4 * YY + 4), 4 * rY)
-      })), UY(YY.translucentCells, OY, gY, DY.count), YY.needsRender = !0
+      WT.sort(((TT, oT) => kT[oT] - kT[TT]));
+      const XT = new Float32Array(3 * IT.count),
+        BT = new Float32Array(4 * IT.count);
+      WT.forEach(((TT, oT) => {
+        XT.set(IT.ek.subarray(3 * TT, 3 * TT + 3), 3 * oT), BT.set(IT.colours.subarray(4 * TT, 4 * TT + 4), 4 * oT)
+      })), PT(TT.translucentCells, XT, BT, IT.count), TT.needsRender = !0
     }
 
-    function tY(YY, rY) {
-      const DY = (DY, FY, AY) => new vY.xy(0 === DY ? YY[0] : rY[0], 0 === FY ? YY[1] : rY[1], 0 === AY ? YY[2] : rY[2]),
-        FY = [];
-      for (const AY of [0, 1])
-        for (const YY of [0, 1]) FY.push([DY(0, AY, YY), DY(1, AY, YY)], [DY(AY, 0, YY), DY(AY, 1, YY)], [DY(AY, YY, 0), DY(AY, YY, 1)]);
-      return FY
+    function VT(TT, oT) {
+      const IT = (IT, iT, zT) => new ST.sc(0 === IT ? TT[0] : oT[0], 0 === iT ? TT[1] : oT[1], 0 === zT ? TT[2] : oT[2]),
+        iT = [];
+      for (const zT of [0, 1])
+        for (const TT of [0, 1]) iT.push([IT(0, zT, TT), IT(1, zT, TT)], [IT(zT, 0, TT), IT(zT, 1, TT)], [IT(zT, TT, 0), IT(zT, TT, 1)]);
+      return iT
     }
 
-    function Yr(YY) {
-      return [Math.sin(YY.heading) * Math.cos(YY.pitch), -Math.sin(YY.pitch), Math.cos(YY.heading) * Math.cos(YY.pitch)]
+    function To(TT) {
+      return [Math.sin(TT.heading) * Math.cos(TT.pitch), -Math.sin(TT.pitch), Math.cos(TT.heading) * Math.cos(TT.pitch)]
     }
 
-    function rr(YY) {
-      return [Math.cos(YY), 0, -Math.sin(YY)]
+    function oo(TT) {
+      return [Math.cos(TT), 0, -Math.sin(TT)]
     }
 
-    function Dr(YY, rY, DY) {
-      let FY = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: JY,
-        pitch: MY
+    function Io(TT, oT, IT) {
+      let iT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: HT,
+        pitch: nT
       };
-      const AY = [YY.max[0] - YY.min[0], YY.max[1] - YY.min[1], YY.max[2] - YY.min[2]],
-        IY = Yr(FY),
-        RY = rr(FY.heading),
-        OY = ar(IY, RY),
-        gY = Math.tan(DY / 2),
-        aY = gY * rY;
-      let vY = 1;
-      for (const uY of [-AY[0] / 2, AY[0] / 2])
-        for (const YY of [-AY[1] / 2, AY[1] / 2])
-          for (const rY of [-AY[2] / 2, AY[2] / 2]) {
-            const DY = [uY, YY, rY],
-              FY = gr(DY, IY);
-            vY = Math.max(vY, Math.abs(gr(DY, RY)) / aY - FY, Math.abs(gr(DY, OY)) / gY - FY)
+      const zT = [TT.max[0] - TT.min[0], TT.max[1] - TT.min[1], TT.max[2] - TT.min[2]],
+        kT = To(iT),
+        WT = oo(iT.heading),
+        XT = Fo(kT, WT),
+        BT = Math.tan(IT / 2),
+        FT = BT * oT;
+      let ST = 1;
+      for (const DT of [-zT[0] / 2, zT[0] / 2])
+        for (const TT of [-zT[1] / 2, zT[1] / 2])
+          for (const oT of [-zT[2] / 2, zT[2] / 2]) {
+            const IT = [DT, TT, oT],
+              iT = Bo(IT, kT);
+            ST = Math.max(ST, Math.abs(Bo(IT, WT)) / FT - iT, Math.abs(Bo(IT, XT)) / BT - iT)
           }
       return {
-        position: Rr([YY.min[0] + AY[0] / 2, YY.min[1] + AY[1] / 2, YY.min[2] + AY[2] / 2], Or(IY, -vY * wY)),
-        heading: FY.heading,
-        pitch: FY.pitch
+        position: Wo([TT.min[0] + zT[0] / 2, TT.min[1] + zT[1] / 2, TT.min[2] + zT[2] / 2], Xo(kT, -ST * qT)),
+        heading: iT.heading,
+        pitch: iT.pitch
       }
     }
 
-    function Fr(YY, rY, DY) {
-      const FY = Ir(YY),
-        AY = Ir(DY),
-        IY = Rr(YY.position, Or(rY, -1)),
-        RY = [0, 1, 2].reduce(((YY, rY) => Rr(YY, Or(AY[rY], gr(IY, FY[rY])))), [0, 0, 0]);
+    function io(TT, oT, IT) {
+      const iT = ko(TT),
+        zT = ko(IT),
+        kT = Wo(TT.position, Xo(oT, -1)),
+        WT = [0, 1, 2].reduce(((TT, oT) => Wo(TT, Xo(zT[oT], Bo(kT, iT[oT])))), [0, 0, 0]);
       return {
-        position: Rr(rY, RY),
-        heading: DY.heading,
-        pitch: DY.pitch
+        position: Wo(oT, WT),
+        heading: IT.heading,
+        pitch: IT.pitch
       }
     }
 
-    function Ar(YY) {
-      return Or(Rr(YY.min, YY.max), .5)
+    function zo(TT) {
+      return Xo(Wo(TT.min, TT.max), .5)
     }
 
-    function Ir(YY) {
-      const rY = Yr(YY),
-        DY = rr(YY.heading);
-      return [rY, DY, ar(rY, DY)]
+    function ko(TT) {
+      const oT = To(TT),
+        IT = oo(TT.heading);
+      return [oT, IT, Fo(oT, IT)]
     }
 
-    function Rr(YY, rY) {
-      return [YY[0] + rY[0], YY[1] + rY[1], YY[2] + rY[2]]
+    function Wo(TT, oT) {
+      return [TT[0] + oT[0], TT[1] + oT[1], TT[2] + oT[2]]
     }
 
-    function Or(YY, rY) {
-      return [YY[0] * rY, YY[1] * rY, YY[2] * rY]
+    function Xo(TT, oT) {
+      return [TT[0] * oT, TT[1] * oT, TT[2] * oT]
     }
 
-    function gr(YY, rY) {
-      return YY[0] * rY[0] + YY[1] * rY[1] + YY[2] * rY[2]
+    function Bo(TT, oT) {
+      return TT[0] * oT[0] + TT[1] * oT[1] + TT[2] * oT[2]
     }
 
-    function ar(YY, rY) {
-      return [YY[1] * rY[2] - YY[2] * rY[1], YY[2] * rY[0] - YY[0] * rY[2], YY[0] * rY[1] - YY[1] * rY[0]]
+    function Fo(TT, oT) {
+      return [TT[1] * oT[2] - TT[2] * oT[1], TT[2] * oT[0] - TT[0] * oT[2], TT[0] * oT[1] - TT[1] * oT[0]]
     }
   }
 };
 Object.freeze(modules);
-for (const YY in modules) Object.freeze(modules[YY]);
+for (const TT in modules) Object.freeze(modules[TT]);
