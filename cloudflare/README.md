@@ -59,6 +59,7 @@ The existing `NOTIFICATION_STATE` Workers KV namespace stores monitoring state, 
 - `GET /health`: basic Worker health.
 - `GET /stats`: read-only current monitor state, update-delay samples, social incidents, and last internal error.
 - Internal error notifications identify the failed monitoring task, HTTP status, sanitized endpoint, and error detail. Identical task/status/endpoint failures are rate-limited to one notification per 30 minutes.
+- Outbound GET requests retry once after network errors/timeouts or HTTP 408/425/429/5xx responses; permanent 4xx responses fail immediately.
 - GitHub Actions failure cursors are written to KV only when their baseline or pending-run set changes; the once-per-minute poll does not cause a KV write by itself.
 - Worker Logs, invocation logs, and Issues detection are enabled with full sampling. Query strings are redacted; Discord webhook URLs and credentials are never written to logs.
 - A gap longer than 45 minutes between successful Cron executions is reported when monitoring resumes.
