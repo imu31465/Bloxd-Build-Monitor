@@ -1,1043 +1,1294 @@
-/*! For license information please see 7jvyee.246.96d910d2.chunk.js.LICENSE.txt */
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  39037: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      getAnalytics: () => kW,
-      getGoogleAnalyticsClientId: () => xW,
-      initializeAnalytics: () => Nb,
-      isSupported: () => zW,
-      logEvent: () => WW,
-      setAnalyticsCollectionEnabled: () => yU,
-      setConsent: () => UW,
-      setCurrentScreen: () => Ib,
-      setDefaultEventParameters: () => bU,
-      setUserId: () => Ab,
-      setUserProperties: () => db,
-      settings: () => tW
+  39609: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Ez
     });
-    var Uy = Wy(39016),
-      hy = Wy(39034),
-      fy = Wy(39029),
-      Zy = Wy(39025);
-    let cb, Py;
-    const oy = new WeakMap,
-      By = new WeakMap,
-      Ky = new WeakMap,
-      ey = new WeakMap,
-      qb = new WeakMap;
-    let sy = {
-      get(yb, bb, Wy) {
-        if (yb instanceof IDBTransaction) {
-          if ("done" === bb) return By.get(yb);
-          if ("objectStoreNames" === bb) return yb.objectStoreNames || Ky.get(yb);
-          if ("store" === bb) return Wy.objectStoreNames[1] ? void 0 : Wy.objectStore(Wy.objectStoreNames[0])
+    let Ez = !1
+  },
+  39167: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Zz
+    });
+    var Ez = bz(39170),
+      nz = bz(39172),
+      iz = bz(36547),
+      lz = bz(36519),
+      Mz = bz(36543),
+      tz = bz(37335),
+      Hz = bz(39180);
+    class Oz {
+      get wrapU() {
+        return this._wrapU
+      }
+      set wrapU(zz) {
+        this._wrapU = zz
+      }
+      get wrapV() {
+        return this._wrapV
+      }
+      set wrapV(zz) {
+        this._wrapV = zz
+      }
+      get coordinatesMode() {
+        return 0
+      }
+      get isCube() {
+        return !!this._texture && this._texture.isCube
+      }
+      set isCube(zz) {
+        this._texture && (this._texture.isCube = zz)
+      }
+      get is3D() {
+        return !!this._texture && this._texture.is3D
+      }
+      set is3D(zz) {
+        this._texture && (this._texture.is3D = zz)
+      }
+      get is2DArray() {
+        return !!this._texture && this._texture.is2DArray
+      }
+      set is2DArray(zz) {
+        this._texture && (this._texture.is2DArray = zz)
+      }
+      getClassName() {
+        return "ThinTexture"
+      }
+      static _IsRenderTargetWrapper(zz) {
+        return void 0 !== zz?.shareDepth
+      }
+      constructor(zz) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = Hz.e.Zero(), this._cachedBaseSize = Hz.e.Zero(), this._initialSamplingMode = 2, this._texture = Oz._IsRenderTargetWrapper(zz) ? zz.texture : zz, this._texture && (this._engine = this._texture.uR(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
+      }
+      isReady() {
+        return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
+      }
+      delayLoad() {}
+      getInternalTexture() {
+        return this._texture
+      }
+      getSize() {
+        if (this._texture) {
+          if (this._texture.width) return this._cachedSize.width = this._texture.width, this._cachedSize.height = this._texture.height, this._cachedSize;
+          if (this._texture._size) return this._cachedSize.width = this._texture._size, this._cachedSize.height = this._texture._size, this._cachedSize
         }
-        return ly(yb[bb])
-      },
-      set: (yb, bb, Wy) => (yb[bb] = Wy, !0),
-      has: (yb, bb) => yb instanceof IDBTransaction && ("done" === bb || "store" === bb) || bb in yb
-    };
-
-    function Sy(yb) {
-      return yb !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (Py || (Py = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(yb) ? function() {
-        for (var bb = arguments.length, Wy = new Array(bb), Uy = 0; Uy < bb; Uy++) Wy[Uy] = arguments[Uy];
-        return yb.apply(mb(this), Wy), ly(oy.get(this))
-      } : function() {
-        for (var bb = arguments.length, Wy = new Array(bb), Uy = 0; Uy < bb; Uy++) Wy[Uy] = arguments[Uy];
-        return ly(yb.apply(mb(this), Wy))
-      } : function(bb) {
-        for (var Wy = arguments.length, Uy = new Array(Wy > 1 ? Wy - 1 : 0), hy = 1; hy < Wy; hy++) Uy[hy - 1] = arguments[hy];
-        const fy = yb.call(mb(this), bb, ...Uy);
-        return Ky.set(fy, bb.sort ? bb.sort() : [bb]), ly(fy)
+        return this._cachedSize
+      }
+      getBaseSize() {
+        return this.isReady() && this._texture ? this._texture._size ? (this._cachedBaseSize.width = this._texture._size, this._cachedBaseSize.height = this._texture._size, this._cachedBaseSize) : (this._cachedBaseSize.width = this._texture.baseWidth, this._cachedBaseSize.height = this._texture.baseHeight, this._cachedBaseSize) : (this._cachedBaseSize.width = 0, this._cachedBaseSize.height = 0, this._cachedBaseSize)
+      }
+      get samplingMode() {
+        return this._texture ? this._texture.samplingMode : this._initialSamplingMode
+      }
+      updateSamplingMode(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(zz, this._texture, this._texture.generateMipMaps && uz)
+      }
+      releaseInternalTexture() {
+        this._texture && (this._texture.dispose(), this._texture = null)
+      }
+      dispose() {
+        this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-
-    function Ey(yb) {
-      return "function" === typeof yb ? Sy(yb) : (yb instanceof IDBTransaction && function(yb) {
-        if (By.has(yb)) return;
-        const bb = new Promise(((bb, Wy) => {
-          const Uy = () => {
-              yb.removeEventListener("complete", hy), yb.removeEventListener("error", fy), yb.removeEventListener("abort", fy)
-            },
-            hy = () => {
-              bb(), Uy()
-            },
-            fy = () => {
-              Wy(yb.error || new DOMException("AbortError", "AbortError")), Uy()
-            };
-          yb.addEventListener("complete", hy), yb.addEventListener("error", fy), yb.addEventListener("abort", fy)
-        }));
-        By.set(yb, bb)
-      }(yb), bb = yb, (cb || (cb = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((yb => bb instanceof yb)) ? new Proxy(yb, sy) : yb);
-      var bb
-    }
-
-    function ly(yb) {
-      if (yb instanceof IDBRequest) return function(yb) {
-        const bb = new Promise(((bb, Wy) => {
-          const Uy = () => {
-              yb.removeEventListener("success", hy), yb.removeEventListener("error", fy)
-            },
-            hy = () => {
-              bb(ly(yb.result)), Uy()
-            },
-            fy = () => {
-              Wy(yb.error), Uy()
-            };
-          yb.addEventListener("success", hy), yb.addEventListener("error", fy)
-        }));
-        return bb.then((bb => {
-          bb instanceof IDBCursor && oy.set(bb, yb)
-        })).catch((() => {})), qb.set(bb, yb), bb
-      }(yb);
-      if (ey.has(yb)) return ey.get(yb);
-      const bb = Ey(yb);
-      return bb !== yb && (ey.set(yb, bb), qb.set(bb, yb)), bb
-    }
-    const mb = yb => qb.get(yb);
-    const Cy = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      Ty = ["put", "add", "delete", "clear"],
-      Vy = new Map;
-
-    function Jy(yb, bb) {
-      if (!(yb instanceof IDBDatabase) || bb in yb || "string" !== typeof bb) return;
-      if (Vy.get(bb)) return Vy.get(bb);
-      const Wy = bb.replace(/FromIndex$/, ""),
-        Uy = bb !== Wy,
-        hy = Ty.includes(Wy);
-      if (!(Wy in (Uy ? IDBIndex : IDBObjectStore).prototype) || !hy && !Cy.includes(Wy)) return;
-      const fy = async function(yb) {
-        const bb = this.transaction(yb, hy ? "readwrite" : "readonly");
-        let fy = bb.store;
-        for (var Zy = arguments.length, cb = new Array(Zy > 1 ? Zy - 1 : 0), Py = 1; Py < Zy; Py++) cb[Py - 1] = arguments[Py];
-        return Uy && (fy = fy.index(cb.shift())), (await Promise.all([fy[Wy](...cb), hy && bb.done]))[0]
-      };
-      return Vy.set(bb, fy), fy
-    }
-    sy = (yb => ({
-      ...yb,
-      get: (bb, Wy, Uy) => Jy(bb, Wy) || yb.get(bb, Wy, Uy),
-      has: (bb, Wy) => !!Jy(bb, Wy) || yb.has(bb, Wy)
-    }))(sy);
-    const gb = "@firebase/installations",
-      Gy = "0.6.4",
-      Oy = 1e4,
-      Ry = `w:${Gy}`,
-      vb = "FIS_v2",
-      ib = 36e5,
-      My = {
-        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
-        "not-registered": "Firebase Installation is not registered.",
-        "installation-not-found": "Firebase Installation not found.",
-        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
-        "app-offline": "Could not process request. Application offline.",
-        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
-      },
-      Yy = new fy.e("installations", "Installations", My);
-
-    function Xy(yb) {
-      return yb instanceof fy.i && yb.code.includes("request-failed")
-    }
-
-    function ny(yb) {
-      let {
-        projectId: bb
-      } = yb;
-      return `https://firebaseinstallations.googleapis.com/v1/projects/${bb}/installations`
-    }
-
-    function uy(yb) {
-      return {
-        token: yb.token,
-        requestStatus: 2,
-        expiresIn: (bb = yb.expiresIn, Number(bb.replace("s", "000"))),
-        creationTime: Date.now()
-      };
-      var bb
-    }
-    async function rb(yb, bb) {
-      const Wy = (await bb.json()).error;
-      return Yy.create("request-failed", {
-        requestName: yb,
-        serverCode: Wy.code,
-        serverMessage: Wy.message,
-        serverStatus: Wy.status
-      })
-    }
-
-    function Hy(yb) {
-      let {
-        apiKey: bb
-      } = yb;
-      return new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-goog-api-key": bb
-      })
-    }
-
-    function ab(yb, bb) {
-      let {
-        refreshToken: Wy
-      } = bb;
-      const Uy = Hy(yb);
-      return Uy.append("Authorization", function(yb) {
-        return `${vb} ${yb}`
-      }(Wy)), Uy
-    }
-    async function Fy(yb) {
-      const bb = await yb();
-      return bb.status >= 500 && bb.status < 600 ? yb() : bb
-    }
-
-    function py(yb) {
-      return new Promise((bb => {
-        setTimeout(bb, yb)
-      }))
-    }
-    const Ly = /^[cdef][\w-]{21}$/;
-
-    function Qy() {
-      try {
-        const yb = new Uint8Array(17);
-        (self.crypto || self.msCrypto).getRandomValues(yb), yb[0] = 112 + yb[0] % 16;
-        const bb = function(yb) {
-          const bb = (Wy = yb, btoa(String.fromCharCode(...Wy)).replace(/\+/g, "-").replace(/\//g, "_"));
-          var Wy;
-          return bb.substr(0, 22)
-        }(yb);
-        return Ly.test(bb) ? bb : ""
-      } catch (yb) {
-        return ""
-      }
-    }
-
-    function jb(yb) {
-      return `${yb.appName}!${yb.appId}`
-    }
-    const Dy = new Map;
-
-    function tb(yb, bb) {
-      const Wy = jb(yb);
-      wy(Wy, bb),
-        function(yb, bb) {
-          const Wy = Ny();
-          Wy && Wy.postMessage({
-            key: yb,
-            fid: bb
-          });
-          zb()
-        }(Wy, bb)
-    }
-
-    function wy(yb, bb) {
-      const Wy = Dy.get(yb);
-      if (Wy)
-        for (const Uy of Wy) Uy(bb)
-    }
-    let kb = null;
-
-    function Ny() {
-      return !kb && "BroadcastChannel" in self && (kb = new BroadcastChannel("[Firebase] FID Change"), kb.onmessage = yb => {
-        wy(yb.data.key, yb.data.fid)
-      }), kb
-    }
-
-    function zb() {
-      0 === Dy.size && kb && (kb.close(), kb = null)
-    }
-    const Iy = "firebase-installations-store";
-    let xb = null;
-
-    function Ay() {
-      return xb || (xb = function(yb, bb) {
-        let {
-          blocked: Wy,
-          upgrade: Uy,
-          blocking: hy,
-          terminated: fy
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Zy = indexedDB.open(yb, bb),
-          cb = ly(Zy);
-        return Uy && Zy.addEventListener("upgradeneeded", (yb => {
-          Uy(ly(Zy.result), yb.oldVersion, yb.newVersion, ly(Zy.transaction))
-        })), Wy && Zy.addEventListener("blocked", (() => Wy())), cb.then((yb => {
-          fy && yb.addEventListener("close", (() => fy())), hy && yb.addEventListener("versionchange", (() => hy()))
-        })).catch((() => {})), cb
-      }("firebase-installations-database", 1, {
-        upgrade: (yb, bb) => {
-          if (0 === bb) yb.createObjectStore(Iy)
+    var pz, dz = bz(39182),
+      Fz = bz(39061);
+    let Zz = (() => {
+      var zz;
+      let uz, bz, Hz, pz, Fz, Zz, Rz, Kz, wz, Xz, fz, sz, rz, oz, Nz, vz, xz, Jz, Az, Tz, Lz, Pz, Gz, az, Vz, mz = Oz,
+        qz = [],
+        hz = [],
+        Uz = [],
+        cz = [],
+        gz = [],
+        Sz = [],
+        yz = [],
+        Dz = [],
+        Qz = [],
+        Wz = [],
+        ez = [],
+        jz = [],
+        Iz = [],
+        Bz = [],
+        Cz = [],
+        Yz = [],
+        kz = [],
+        zu = [],
+        uu = [],
+        bu = [],
+        Eu = [],
+        nu = [],
+        iu = [],
+        lu = [],
+        Mu = [],
+        tu = [],
+        Hu = [],
+        Ou = [],
+        pu = [],
+        du = [],
+        Fu = [];
+      return zz = class extends mz {
+        set hasAlpha(zz) {
+          this._hasAlpha = zz
         }
-      })), xb
-    }
-    async function dy(yb, bb) {
-      const Wy = jb(yb),
-        Uy = (await Ay()).transaction(Iy, "readwrite"),
-        hy = Uy.objectStore(Iy),
-        fy = await hy.get(Wy);
-      return await hy.put(bb, Wy), await Uy.done, fy && fy.fid === bb.fid || tb(yb, bb.fid), bb
-    }
-    async function yW(yb) {
-      const bb = jb(yb),
-        Wy = (await Ay()).transaction(Iy, "readwrite");
-      await Wy.objectStore(Iy).delete(bb), await Wy.done
-    }
-    async function bW(yb, bb) {
-      const Wy = jb(yb),
-        Uy = (await Ay()).transaction(Iy, "readwrite"),
-        hy = Uy.objectStore(Iy),
-        fy = await hy.get(Wy),
-        Zy = bb(fy);
-      return void 0 === Zy ? await hy.delete(Wy) : await hy.put(Zy, Wy), await Uy.done, !Zy || fy && fy.fid === Zy.fid || tb(yb, Zy.fid), Zy
-    }
-    async function Wb(yb) {
-      let bb;
-      const Wy = await bW(yb.appConfig, (Wy => {
-        const Uy = function(yb) {
-            const bb = yb || {
-              fid: Qy(),
-              registrationStatus: 0
-            };
-            return fb(bb)
-          }(Wy),
-          hy = function(yb, bb) {
-            if (0 === bb.registrationStatus) {
-              if (!navigator.onLine) {
-                return {
-                  installationEntry: bb,
-                  registrationPromise: Promise.reject(Yy.create("app-offline"))
-                }
-              }
-              const Wy = {
-                  fid: bb.fid,
-                  registrationStatus: 1,
-                  registrationTime: Date.now()
-                },
-                Uy = async function(yb, bb) {
-                  try {
-                    const Wy = await async function(yb, bb) {
-                      let {
-                        appConfig: Wy,
-                        heartbeatServiceProvider: Uy
-                      } = yb, {
-                        fid: hy
-                      } = bb;
-                      const fy = ny(Wy),
-                        Zy = Hy(Wy),
-                        cb = Uy.getImmediate({
-                          optional: !0
-                        });
-                      if (cb) {
-                        const yb = await cb.getHeartbeatsHeader();
-                        yb && Zy.append("x-firebase-client", yb)
-                      }
-                      const Py = {
-                          fid: hy,
-                          authVersion: vb,
-                          appId: Wy.appId,
-                          sdkVersion: Ry
-                        },
-                        oy = {
-                          method: "POST",
-                          headers: Zy,
-                          body: JSON.stringify(Py)
-                        },
-                        By = await Fy((() => fetch(fy, oy)));
-                      if (By.ok) {
-                        const yb = await By.json();
-                        return {
-                          fid: yb.fid || hy,
-                          registrationStatus: 2,
-                          refreshToken: yb.refreshToken,
-                          authToken: uy(yb.authToken)
-                        }
-                      }
-                      throw await rb("Create Installation", By)
-                    }(yb, bb);
-                    return dy(yb.appConfig, Wy)
-                  } catch (Wy) {
-                    throw Xy(Wy) && 409 === Wy.customData.serverCode ? await yW(yb.appConfig) : await dy(yb.appConfig, {
-                      fid: bb.fid,
-                      registrationStatus: 0
-                    }), Wy
-                  }
-                }(yb, Wy);
-              return {
-                installationEntry: Wy,
-                registrationPromise: Uy
-              }
-            }
-            return 1 === bb.registrationStatus ? {
-              installationEntry: bb,
-              registrationPromise: Ub(yb)
-            } : {
-              installationEntry: bb
-            }
-          }(yb, Uy);
-        return bb = hy.registrationPromise, hy.installationEntry
-      }));
-      return "" === Wy.fid ? {
-        installationEntry: await bb
-      } : {
-        installationEntry: Wy,
-        registrationPromise: bb
-      }
-    }
-    async function Ub(yb) {
-      let bb = await hb(yb.appConfig);
-      for (; 1 === bb.registrationStatus;) await py(100), bb = await hb(yb.appConfig);
-      if (0 === bb.registrationStatus) {
-        const {
-          installationEntry: bb,
-          registrationPromise: Wy
-        } = await Wb(yb);
-        return Wy || bb
-      }
-      return bb
-    }
-
-    function hb(yb) {
-      return bW(yb, (yb => {
-        if (!yb) throw Yy.create("installation-not-found");
-        return fb(yb)
-      }))
-    }
-
-    function fb(yb) {
-      return 1 === (bb = yb).registrationStatus && bb.registrationTime + Oy < Date.now() ? {
-        fid: yb.fid,
-        registrationStatus: 0
-      } : yb;
-      var bb
-    }
-    async function Zb(yb, bb) {
-      let {
-        appConfig: Wy,
-        heartbeatServiceProvider: Uy
-      } = yb;
-      const hy = function(yb, bb) {
-          let {
-            fid: Wy
-          } = bb;
-          return `${ny(yb)}/${Wy}/authTokens:generate`
-        }(Wy, bb),
-        fy = ab(Wy, bb),
-        Zy = Uy.getImmediate({
-          optional: !0
-        });
-      if (Zy) {
-        const yb = await Zy.getHeartbeatsHeader();
-        yb && fy.append("x-firebase-client", yb)
-      }
-      const cb = {
-          installation: {
-            sdkVersion: Ry,
-            appId: Wy.appId
+        get hasAlpha() {
+          return this._hasAlpha
+        }
+        set getAlphaFromRGB(zz) {
+          this._getAlphaFromRGB !== zz && (this._getAlphaFromRGB = zz, this._scene && this._scene.markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this))))
+        }
+        get getAlphaFromRGB() {
+          return this._getAlphaFromRGB
+        }
+        set coordinatesIndex(zz) {
+          this._coordinatesIndex !== zz && (this._coordinatesIndex = zz, this._scene && this._scene.markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this))))
+        }
+        get coordinatesIndex() {
+          return this._coordinatesIndex
+        }
+        set coordinatesMode(zz) {
+          this._coordinatesMode !== zz && (this._coordinatesMode = zz, this._scene && this._scene.markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this))))
+        }
+        get coordinatesMode() {
+          return this._coordinatesMode
+        }
+        get wrapU() {
+          return this._wrapU
+        }
+        set wrapU(zz) {
+          this._wrapU = zz
+        }
+        get wrapV() {
+          return this._wrapV
+        }
+        set wrapV(zz) {
+          this._wrapV = zz
+        }
+        get isCube() {
+          return this._texture ? this._texture.isCube : this._isCube
+        }
+        set isCube(zz) {
+          this._texture ? this._texture.isCube = zz : this._isCube = zz
+        }
+        get is3D() {
+          return !!this._texture && this._texture.is3D
+        }
+        set is3D(zz) {
+          this._texture && (this._texture.is3D = zz)
+        }
+        get is2DArray() {
+          return !!this._texture && this._texture.is2DArray
+        }
+        set is2DArray(zz) {
+          this._texture && (this._texture.is2DArray = zz)
+        }
+        get gammaSpace() {
+          return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
+        }
+        set gammaSpace(zz) {
+          if (this._texture) {
+            if (this._texture._gammaSpace === zz) return;
+            this._texture._gammaSpace = zz
+          } else {
+            if (this._gammaSpace === zz) return;
+            this._gammaSpace = zz
           }
-        },
-        Py = {
-          method: "POST",
-          headers: fy,
-          body: JSON.stringify(cb)
-        },
-        oy = await Fy((() => fetch(hy, Py)));
-      if (oy.ok) {
-        return uy(await oy.json())
-      }
-      throw await rb("Generate Auth Token", oy)
-    }
-    async function cW(yb) {
-      let bb, Wy = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const Uy = await bW(yb.appConfig, (Uy => {
-        if (!ob(Uy)) throw Yy.create("not-registered");
-        const hy = Uy.authToken;
-        if (!Wy && function(yb) {
-            return 2 === yb.requestStatus && ! function(yb) {
-              const bb = Date.now();
-              return bb < yb.creationTime || yb.creationTime + yb.expiresIn < bb + ib
-            }(yb)
-          }(hy)) return Uy;
-        if (1 === hy.requestStatus) return bb = async function(yb, bb) {
-          let Wy = await Pb(yb.appConfig);
-          for (; 1 === Wy.authToken.requestStatus;) await py(100), Wy = await Pb(yb.appConfig);
-          const Uy = Wy.authToken;
-          return 0 === Uy.requestStatus ? cW(yb, bb) : Uy
-        }(yb, Wy), Uy;
-        {
-          if (!navigator.onLine) throw Yy.create("app-offline");
-          const Wy = function(yb) {
-            const bb = {
-              requestStatus: 1,
-              requestTime: Date.now()
-            };
-            return Object.assign(Object.assign({}, yb), {
-              authToken: bb
-            })
-          }(Uy);
-          return bb = async function(yb, bb) {
-            try {
-              const Wy = await Zb(yb, bb),
-                Uy = Object.assign(Object.assign({}, bb), {
-                  authToken: Wy
-                });
-              return await dy(yb.appConfig, Uy), Wy
-            } catch (Wy) {
-              if (!Xy(Wy) || 401 !== Wy.customData.serverCode && 404 !== Wy.customData.serverCode) {
-                const Wy = Object.assign(Object.assign({}, bb), {
-                  authToken: {
-                    requestStatus: 0
-                  }
-                });
-                await dy(yb.appConfig, Wy)
-              } else await yW(yb.appConfig);
-              throw Wy
-            }
-          }(yb, Wy), Wy
+          this.XT()?.markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this)))
         }
-      }));
-      return bb ? await bb : Uy.authToken
-    }
-
-    function Pb(yb) {
-      return bW(yb, (yb => {
-        if (!ob(yb)) throw Yy.create("not-registered");
-        const bb = yb.authToken;
-        return 1 === (Wy = bb).requestStatus && Wy.requestTime + Oy < Date.now() ? Object.assign(Object.assign({}, yb), {
-          authToken: {
-            requestStatus: 0
+        get isRGBD() {
+          return null != this._texture && this._texture._isRGBD
+        }
+        set isRGBD(zz) {
+          zz !== this.isRGBD && (this._texture && (this._texture._isRGBD = zz), this.XT()?.markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this))))
+        }
+        get noMipmap() {
+          return !1
+        }
+        get lodGenerationOffset() {
+          return this._texture ? this._texture._lodGenerationOffset : 0
+        }
+        set lodGenerationOffset(zz) {
+          this._texture && (this._texture._lodGenerationOffset = zz)
+        }
+        get lodGenerationScale() {
+          return this._texture ? this._texture._lodGenerationScale : 0
+        }
+        set lodGenerationScale(zz) {
+          this._texture && (this._texture._lodGenerationScale = zz)
+        }
+        get linearSpecularLOD() {
+          return !!this._texture && this._texture._linearSpecularLOD
+        }
+        set linearSpecularLOD(zz) {
+          this._texture && (this._texture._linearSpecularLOD = zz)
+        }
+        get irradianceTexture() {
+          return this._texture ? this._texture._irradianceTexture : null
+        }
+        set irradianceTexture(zz) {
+          this._texture && (this._texture._irradianceTexture = zz)
+        }
+        get uid() {
+          return this._uid || (this._uid = (0, tz.c)()), this._uid
+        }
+        toString() {
+          return this.name
+        }
+        getClassName() {
+          return "BaseTexture"
+        }
+        set onDispose(zz) {
+          this._onDisposeObserver && this.aT.remove(this._onDisposeObserver), this._onDisposeObserver = this.aT.add(zz)
+        }
+        get isBlocking() {
+          return !0
+        }
+        get loadingError() {
+          return this._loadingError
+        }
+        get errorObject() {
+          return this._errorObject
+        }
+        constructor(uz) {
+          let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, Ez.j)(this, qz), (0, Ez.j)(this, hz, void 0)), this.name = ((0, Ez.j)(this, Uz), (0, Ez.j)(this, cz, void 0)), this.displayName = ((0, Ez.j)(this, gz), (0, Ez.j)(this, Sz, void 0)), this.metadata = ((0, Ez.j)(this, yz), (0, Ez.j)(this, Dz, null)), this._internalMetadata = (0, Ez.j)(this, Qz), this.reservedDataStore = null, this._hasAlpha = (0, Ez.j)(this, Wz, !1), this._getAlphaFromRGB = ((0, Ez.j)(this, ez), (0, Ez.j)(this, jz, !1)), this.level = ((0, Ez.j)(this, Iz), (0, Ez.j)(this, Bz, 1)), this._coordinatesIndex = ((0, Ez.j)(this, Cz), (0, Ez.j)(this, Yz, 0)), this.optimizeUVAllocation = ((0, Ez.j)(this, kz), (0, Ez.j)(this, zu, !0)), this._coordinatesMode = ((0, Ez.j)(this, uu), (0, Ez.j)(this, bu, 0)), this.wrapR = ((0, Ez.j)(this, Eu), (0, Ez.j)(this, nu, 1)), this.anisotropicFilteringLevel = ((0, Ez.j)(this, iu), (0, Ez.j)(this, lu, zz.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, Ez.j)(this, Mu), !1), this._gammaSpace = !0, this.invertZ = (0, Ez.j)(this, tu, !1), this.lodLevelInAlpha = ((0, Ez.j)(this, Hu), (0, Ez.j)(this, Ou, !1)), this._dominantDirection = ((0, Ez.j)(this, pu), null), this.isRenderTarget = (0, Ez.j)(this, du, !1), this._prefiltered = ((0, Ez.j)(this, Fu), !1), this._forceSerialize = !1, this.animations = [], this.aT = new iz.b, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, uz ? zz._IsScene(uz) ? this._scene = uz : this._engine = uz : this._scene = Mz.d.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.uR()), this._texture = bz, this._uid = null
+        }
+        XT() {
+          return this._scene
+        }
+        _getEngine() {
+          return this._engine
+        }
+        getTextureMatrix() {
+          return lz.d.IdentityReadOnly
+        }
+        getReflectionTextureMatrix() {
+          return lz.d.IdentityReadOnly
+        }
+        getRefractionTextureMatrix() {
+          return this.getReflectionTextureMatrix()
+        }
+        isReadyOrNotBlocking() {
+          return !this.isBlocking || this.isReady() || this.loadingError
+        }
+        scale(zz) {}
+        get canRescale() {
+          return !1
+        }
+        _getFromCache(zz, uz, bz, Ez, nz, iz) {
+          const lz = this._getEngine();
+          if (!lz) return null;
+          const Mz = lz._getUseSRGBBuffer(!!nz, uz),
+            tz = lz.getLoadedTexturesCache();
+          for (let Hz = 0; Hz < tz.length; Hz++) {
+            const lz = tz[Hz];
+            if ((void 0 === nz || Mz === lz._useSRGBBuffer) && (void 0 === Ez || Ez === lz.invertY) && lz.url === zz && lz.generateMipMaps === !uz && (!bz || bz === lz.samplingMode) && (void 0 === iz || iz === lz.isCube)) return lz.incrementReferences(), lz
           }
-        }) : yb;
-        var Wy
-      }))
-    }
-
-    function ob(yb) {
-      return void 0 !== yb && 2 === yb.registrationStatus
-    }
-    async function Bb(yb) {
-      let bb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const Wy = yb;
-      await async function(yb) {
-        const {
-          registrationPromise: bb
-        } = await Wb(yb);
-        bb && await bb
-      }(Wy);
-      return (await cW(Wy, bb)).token
-    }
-
-    function Kb(yb) {
-      return Yy.create("missing-app-config-values", {
-        valueName: yb
-      })
-    }
-    const eb = "installations",
-      qW = yb => {
-        const bb = yb.getProvider("app").getImmediate(),
-          Wy = function(yb) {
-            if (!yb || !yb.options) throw Kb("App Configuration");
-            if (!yb.name) throw Kb("App Name");
-            const bb = ["projectId", "apiKey", "appId"];
-            for (const Wy of bb)
-              if (!yb.options[Wy]) throw Kb(Wy);
-            return {
-              appName: yb.name,
-              projectId: yb.options.projectId,
-              apiKey: yb.options.apiKey,
-              appId: yb.options.appId
+          return null
+        }
+        _rebuild() {}
+        clone() {
+          return null
+        }
+        get textureType() {
+          return this._texture && void 0 !== this._texture.type ? this._texture.type : 0
+        }
+        get textureFormat() {
+          return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
+        }
+        _markAllSubMeshesAsTexturesDirty() {
+          const zz = this.XT();
+          zz && zz.markAllMaterialsAsDirty(1)
+        }
+        readPixels() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            iz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            lz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            Mz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            tz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          if (!this._texture) return null;
+          const Hz = this._getEngine();
+          if (!Hz) return null;
+          const Oz = this.getSize();
+          let pz = Oz.width,
+            dz = Oz.height;
+          0 !== uz && (pz /= Math.pow(2, uz), dz /= Math.pow(2, uz), pz = Math.round(pz), dz = Math.round(dz)), Mz = Math.min(pz, Mz), tz = Math.min(dz, tz);
+          try {
+            return this._texture.isCube || this._texture.is2DArray ? Hz._readTexturePixels(this._texture, Mz, tz, zz, uz, bz, Ez, nz, iz, lz) : Hz._readTexturePixels(this._texture, Mz, tz, -1, uz, bz, Ez, nz, iz, lz)
+          } catch (Fz) {
+            return null
+          }
+        }
+        _readPixelsSync() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            Ez = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            nz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          if (!this._texture) return null;
+          const iz = this.getSize();
+          let lz = iz.width,
+            Mz = iz.height;
+          const tz = this._getEngine();
+          if (!tz) return null;
+          0 != uz && (lz /= Math.pow(2, uz), Mz /= Math.pow(2, uz), lz = Math.round(lz), Mz = Math.round(Mz));
+          try {
+            return this._texture.isCube ? tz._readTexturePixelsSync(this._texture, lz, Mz, zz, uz, bz, Ez, nz) : tz._readTexturePixelsSync(this._texture, lz, Mz, -1, uz, bz, Ez, nz)
+          } catch (Hz) {
+            return null
+          }
+        }
+        get _lodTextureHigh() {
+          return this._texture ? this._texture._lodTextureHigh : null
+        }
+        get _lodTextureMid() {
+          return this._texture ? this._texture._lodTextureMid : null
+        }
+        get _lodTextureLow() {
+          return this._texture ? this._texture._lodTextureLow : null
+        }
+        dispose() {
+          if (this._scene) {
+            this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
+            const zz = this._scene.textures.indexOf(this);
+            if (zz >= 0 && this._scene.textures.splice(zz, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const zz = this._parentContainer.textures.indexOf(this);
+              zz > -1 && this._parentContainer.textures.splice(zz, 1), this._parentContainer = null
             }
-          }(bb);
-        return {
-          app: bb,
-          appConfig: Wy,
-          heartbeatServiceProvider: (0, Uy.v)(bb, "heartbeat"),
-          _delete: () => Promise.resolve()
+          }
+          this.aT.notifyObservers(this), this.aT.clear(), this.metadata = null, super.dispose()
         }
-      },
-      sb = yb => {
-        const bb = yb.getProvider("app").getImmediate(),
-          Wy = (0, Uy.v)(bb, eb).getImmediate();
-        return {
-          getId: () => async function(yb) {
-            const bb = yb,
-              {
-                installationEntry: Wy,
-                registrationPromise: Uy
-              } = await Wb(bb);
-            return Uy ? Uy.catch(console.error) : cW(bb).catch(console.error), Wy.fid
-          }(Wy),
-          getToken: yb => Bb(Wy, yb)
+        serialize() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !zz) return null;
+          const uz = dz.e.Serialize(this);
+          return dz.e.AppendSerializedAnimations(this, uz), uz
         }
-      };
-    (0, Uy.z)(new Zy.i(eb, qW, "PUBLIC")), (0, Uy.z)(new Zy.i("installations-internal", sb, "PRIVATE")), (0, Uy.R)(gb, Gy), (0, Uy.R)(gb, Gy, "esm2017");
-    const Sb = "analytics",
-      Eb = "https://www.googletagmanager.com/gtag/js",
-      lb = new hy.f("@firebase/analytics"),
-      mW = {
-        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
-        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
-        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
-        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
-        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
-        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
-        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
-        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
-        "no-client-id": 'The "client_id" field is empty.',
-        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
-      },
-      Cb = new fy.e("analytics", "Analytics", mW);
+        static WhenAllReady(zz, uz) {
+          let bz = zz.length;
+          if (0 !== bz)
+            for (let Ez = 0; Ez < zz.length; Ez++) {
+              const nz = zz[Ez];
+              if (nz.isReady()) 0 === --bz && uz();
+              else {
+                const zz = nz.onLoadObservable;
+                zz ? zz.addOnce((() => {
+                  0 === --bz && uz()
+                })) : 0 === --bz && uz()
+              }
+            } else uz()
+        }
+        static _IsScene(zz) {
+          return "Scene" === zz.getClassName()
+        }
+      }, (() => {
+        const iz = "function" === typeof Symbol && Symbol.metadata ? Object.create(mz[Symbol.metadata] ?? null) : void 0;
+        uz = [(0, nz.G)()], bz = [(0, nz.G)()], Hz = [(0, nz.G)()], pz = [(0, nz.G)()], Fz = [(0, nz.G)("hasAlpha")], Zz = [(0, nz.G)("getAlphaFromRGB")], Rz = [(0, nz.G)()], Kz = [(0, nz.G)("coordinatesIndex")], wz = [(0, nz.G)()], Xz = [(0, nz.G)("coordinatesMode")], fz = [(0, nz.G)()], sz = [(0, nz.G)()], rz = [(0, nz.G)()], oz = [(0, nz.G)()], Nz = [(0, nz.G)()], vz = [(0, nz.G)()], xz = [(0, nz.G)()], Jz = [(0, nz.G)()], Az = [(0, nz.G)()], Tz = [(0, nz.G)()], Lz = [(0, nz.G)()], Pz = [(0, nz.G)()], Gz = [(0, nz.G)()], az = [(0, nz.B)()], Vz = [(0, nz.G)()], (0, Ez.h)(zz, null, fz, {
+          kind: "getter",
+          name: "wrapU",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "wrapU" in zz,
+            get: zz => zz.wrapU
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, sz, {
+          kind: "getter",
+          name: "wrapV",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "wrapV" in zz,
+            get: zz => zz.wrapV
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, Nz, {
+          kind: "getter",
+          name: "isCube",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "isCube" in zz,
+            get: zz => zz.isCube
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, vz, {
+          kind: "getter",
+          name: "is3D",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "is3D" in zz,
+            get: zz => zz.is3D
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, xz, {
+          kind: "getter",
+          name: "is2DArray",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "is2DArray" in zz,
+            get: zz => zz.is2DArray
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, Jz, {
+          kind: "getter",
+          name: "gammaSpace",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "gammaSpace" in zz,
+            get: zz => zz.gammaSpace
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, Lz, {
+          kind: "getter",
+          name: "lodGenerationOffset",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "lodGenerationOffset" in zz,
+            get: zz => zz.lodGenerationOffset
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, Pz, {
+          kind: "getter",
+          name: "lodGenerationScale",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "lodGenerationScale" in zz,
+            get: zz => zz.lodGenerationScale
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, Gz, {
+          kind: "getter",
+          name: "linearSpecularLOD",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "linearSpecularLOD" in zz,
+            get: zz => zz.linearSpecularLOD
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(zz, null, az, {
+          kind: "getter",
+          name: "irradianceTexture",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "irradianceTexture" in zz,
+            get: zz => zz.irradianceTexture
+          },
+          metadata: iz
+        }, null, qz), (0, Ez.h)(null, null, uz, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "uniqueId" in zz,
+            get: zz => zz.uniqueId,
+            set: (zz, uz) => {
+              zz.uniqueId = uz
+            }
+          },
+          metadata: iz
+        }, hz, Uz), (0, Ez.h)(null, null, bz, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "name" in zz,
+            get: zz => zz.name,
+            set: (zz, uz) => {
+              zz.name = uz
+            }
+          },
+          metadata: iz
+        }, cz, gz), (0, Ez.h)(null, null, Hz, {
+          kind: "field",
+          name: "displayName",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "displayName" in zz,
+            get: zz => zz.displayName,
+            set: (zz, uz) => {
+              zz.displayName = uz
+            }
+          },
+          metadata: iz
+        }, Sz, yz), (0, Ez.h)(null, null, pz, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "metadata" in zz,
+            get: zz => zz.metadata,
+            set: (zz, uz) => {
+              zz.metadata = uz
+            }
+          },
+          metadata: iz
+        }, Dz, Qz), (0, Ez.h)(null, null, Fz, {
+          kind: "field",
+          name: "_hasAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_hasAlpha" in zz,
+            get: zz => zz._hasAlpha,
+            set: (zz, uz) => {
+              zz._hasAlpha = uz
+            }
+          },
+          metadata: iz
+        }, Wz, ez), (0, Ez.h)(null, null, Zz, {
+          kind: "field",
+          name: "_getAlphaFromRGB",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_getAlphaFromRGB" in zz,
+            get: zz => zz._getAlphaFromRGB,
+            set: (zz, uz) => {
+              zz._getAlphaFromRGB = uz
+            }
+          },
+          metadata: iz
+        }, jz, Iz), (0, Ez.h)(null, null, Rz, {
+          kind: "field",
+          name: "level",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "level" in zz,
+            get: zz => zz.level,
+            set: (zz, uz) => {
+              zz.level = uz
+            }
+          },
+          metadata: iz
+        }, Bz, Cz), (0, Ez.h)(null, null, Kz, {
+          kind: "field",
+          name: "_coordinatesIndex",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_coordinatesIndex" in zz,
+            get: zz => zz._coordinatesIndex,
+            set: (zz, uz) => {
+              zz._coordinatesIndex = uz
+            }
+          },
+          metadata: iz
+        }, Yz, kz), (0, Ez.h)(null, null, wz, {
+          kind: "field",
+          name: "optimizeUVAllocation",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "optimizeUVAllocation" in zz,
+            get: zz => zz.optimizeUVAllocation,
+            set: (zz, uz) => {
+              zz.optimizeUVAllocation = uz
+            }
+          },
+          metadata: iz
+        }, zu, uu), (0, Ez.h)(null, null, Xz, {
+          kind: "field",
+          name: "_coordinatesMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "_coordinatesMode" in zz,
+            get: zz => zz._coordinatesMode,
+            set: (zz, uz) => {
+              zz._coordinatesMode = uz
+            }
+          },
+          metadata: iz
+        }, bu, Eu), (0, Ez.h)(null, null, rz, {
+          kind: "field",
+          name: "wrapR",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "wrapR" in zz,
+            get: zz => zz.wrapR,
+            set: (zz, uz) => {
+              zz.wrapR = uz
+            }
+          },
+          metadata: iz
+        }, nu, iu), (0, Ez.h)(null, null, oz, {
+          kind: "field",
+          name: "anisotropicFilteringLevel",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "anisotropicFilteringLevel" in zz,
+            get: zz => zz.anisotropicFilteringLevel,
+            set: (zz, uz) => {
+              zz.anisotropicFilteringLevel = uz
+            }
+          },
+          metadata: iz
+        }, lu, Mu), (0, Ez.h)(null, null, Az, {
+          kind: "field",
+          name: "invertZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "invertZ" in zz,
+            get: zz => zz.invertZ,
+            set: (zz, uz) => {
+              zz.invertZ = uz
+            }
+          },
+          metadata: iz
+        }, tu, Hu), (0, Ez.h)(null, null, Tz, {
+          kind: "field",
+          name: "lodLevelInAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "lodLevelInAlpha" in zz,
+            get: zz => zz.lodLevelInAlpha,
+            set: (zz, uz) => {
+              zz.lodLevelInAlpha = uz
+            }
+          },
+          metadata: iz
+        }, Ou, pu), (0, Ez.h)(null, null, Vz, {
+          kind: "field",
+          name: "isRenderTarget",
+          static: !1,
+          private: !1,
+          access: {
+            has: zz => "isRenderTarget" in zz,
+            get: zz => zz.isRenderTarget,
+            set: (zz, uz) => {
+              zz.isRenderTarget = uz
+            }
+          },
+          metadata: iz
+        }, du, Fu), iz && Object.defineProperty(zz, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: iz
+        })
+      })(), zz.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, zz
+    })();
+    (pz = Zz.prototype).forceSphericalPolynomialsRecompute ?? (pz.forceSphericalPolynomialsRecompute = (0, Fz.h)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(Zz.prototype, "sphericalPolynomial") || Object.defineProperty(Zz.prototype, "sphericalPolynomial", (0, Fz.f)("BaseTexture", "sphericalPolynomial"))
+  },
+  39636: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => rz,
+      e: () => fz
+    });
+    var Ez = bz(39170),
+      nz = bz(39172),
+      iz = bz(36547),
+      lz = bz(36519),
+      Mz = bz(39167),
+      tz = bz(36564),
+      Hz = bz(39061),
+      Oz = bz(39071),
+      pz = bz(39265),
+      dz = bz(37239),
+      Fz = bz(39221);
 
-    function Tb(yb) {
-      if (!yb.startsWith(Eb)) {
-        const bb = Cb.create("invalid-gtag-resource", {
-          gtagURL: yb
-        });
-        return lb.warn(bb.message), ""
+    function Zz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Ez = uz.width,
+        nz = uz.height;
+      if (zz instanceof Float32Array) {
+        let uz = zz.byteLength / zz.BYTES_PER_ELEMENT;
+        const bz = new Uint8Array(uz);
+        for (; --uz >= 0;) {
+          let Ez = zz[uz];
+          Ez < 0 ? Ez = 0 : Ez > 1 && (Ez = 1), bz[uz] = 255 * Ez
+        }
+        zz = bz
       }
-      return yb
+      const iz = document.createElement("canvas");
+      iz.width = Ez, iz.height = nz;
+      const lz = iz.getContext("2d");
+      if (!lz) return null;
+      const Mz = lz.createImageData(Ez, nz);
+      if (Mz.data.set(zz), lz.putImageData(Mz, 0, 0), bz) {
+        const zz = document.createElement("canvas");
+        zz.width = Ez, zz.height = nz;
+        const uz = zz.getContext("2d");
+        return uz ? (uz.translate(0, nz), uz.scale(1, -1), uz.drawImage(iz, 0, 0), zz.toDataURL("image/png")) : null
+      }
+      return iz.toDataURL("image/png")
     }
 
-    function Vb(yb) {
-      return Promise.all(yb.map((yb => yb.catch((yb => yb)))))
+    function Rz(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Ez = zz.getInternalTexture();
+      if (!Ez) return null;
+      const nz = zz._readPixelsSync(uz, bz);
+      return nz ? Zz(nz, zz.getSize(), Ez.invertY) : null
     }
-
-    function Jb(yb, bb) {
-      const Wy = function(yb, bb) {
-          let Wy;
-          return window.trustedTypes && (Wy = window.trustedTypes.createPolicy(yb, bb)), Wy
-        }("firebase-js-sdk-policy", {
-          createScriptURL: Tb
-        }),
-        Uy = document.createElement("script"),
-        hy = `${Eb}?l=${yb}&id=${bb}`;
-      Uy.src = Wy ? null === Wy || void 0 === Wy ? void 0 : Wy.createScriptURL(hy) : hy, Uy.async = !0, document.head.appendChild(Uy)
+    async function Kz(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Ez = zz.getInternalTexture();
+      if (!Ez) return null;
+      const nz = await zz.readPixels(uz, bz);
+      return nz ? Zz(nz, zz.getSize(), Ez.invertY) : null
     }
-
-    function gW(yb, bb, Wy, Uy) {
-      return async function(hy) {
-        try {
-          for (var fy = arguments.length, Zy = new Array(fy > 1 ? fy - 1 : 0), cb = 1; cb < fy; cb++) Zy[cb - 1] = arguments[cb];
-          if ("event" === hy) {
-            const [Uy, hy] = Zy;
-            await async function(yb, bb, Wy, Uy, hy) {
+    var wz = bz(39609),
+      Xz = bz(39182);
+    let fz = (() => {
+        var zz;
+        let uz, bz, Zz, fz, sz, rz, oz, Nz, vz, xz, Jz, Az, Tz, Lz = Mz.b,
+          Pz = [],
+          Gz = [],
+          az = [],
+          Vz = [],
+          mz = [],
+          qz = [],
+          hz = [],
+          Uz = [],
+          cz = [],
+          gz = [],
+          Sz = [],
+          yz = [],
+          Dz = [],
+          Qz = [],
+          Wz = [],
+          ez = [],
+          jz = [],
+          Iz = [],
+          Bz = [],
+          Cz = [],
+          Yz = [],
+          kz = [],
+          zu = [],
+          uu = [],
+          bu = [];
+        return zz = class extends Lz {
+          static _CreateVideoTexture(uz, bz, Ez) {
+            arguments.length > 5 && void 0 !== arguments[5] || zz.TRILINEAR_SAMPLINGMODE;
+            throw (0, Hz.l)("VideoTexture")
+          }
+          get noMipmap() {
+            return this._noMipmap
+          }
+          get mimeType() {
+            return this._mimeType
+          }
+          set isBlocking(zz) {
+            this._isBlocking = zz
+          }
+          get isBlocking() {
+            return this._isBlocking
+          }
+          get invertY() {
+            return this._invertY
+          }
+          constructor(uz, bz, nz, lz) {
+            let Mz, tz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zz.TRILINEAR_SAMPLINGMODE,
+              Hz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              pz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              dz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              Fz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              Zz = arguments.length > 9 ? arguments[9] : void 0,
+              Rz = arguments.length > 10 ? arguments[10] : void 0,
+              Kz = arguments.length > 11 ? arguments[11] : void 0,
+              Xz = arguments.length > 12 ? arguments[12] : void 0,
+              fz = arguments.length > 13 ? arguments[13] : void 0;
+            super(bz), this.url = ((0, Ez.j)(this, Pz), (0, Ez.j)(this, Gz, null)), this.uOffset = ((0, Ez.j)(this, az), (0, Ez.j)(this, Vz, 0)), this.vOffset = ((0, Ez.j)(this, mz), (0, Ez.j)(this, qz, 0)), this.uScale = ((0, Ez.j)(this, hz), (0, Ez.j)(this, Uz, 1)), this.vScale = ((0, Ez.j)(this, cz), (0, Ez.j)(this, gz, 1)), this.uAng = ((0, Ez.j)(this, Sz), (0, Ez.j)(this, yz, 0)), this.vAng = ((0, Ez.j)(this, Dz), (0, Ez.j)(this, Qz, 0)), this.wAng = ((0, Ez.j)(this, Wz), (0, Ez.j)(this, ez, 0)), this.uRotationCenter = ((0, Ez.j)(this, jz), (0, Ez.j)(this, Iz, .5)), this.vRotationCenter = ((0, Ez.j)(this, Bz), (0, Ez.j)(this, Cz, .5)), this.wRotationCenter = ((0, Ez.j)(this, Yz), (0, Ez.j)(this, kz, .5)), this.homogeneousRotationInUVTransform = ((0, Ez.j)(this, zu), (0, Ez.j)(this, uu, !1)), this.inspectableCustomProperties = ((0, Ez.j)(this, bu), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new iz.b, this._isBlocking = !0, this.name = uz || "", this.url = uz;
+            let sz = !1,
+              rz = null,
+              oz = !0;
+            "object" === typeof nz && null !== nz ? (Mz = nz.noMipmap ?? !1, lz = nz.invertY ?? !wz.b, tz = nz.samplingMode ?? zz.TRILINEAR_SAMPLINGMODE, Hz = nz.onLoad ?? null, pz = nz.onError ?? null, dz = nz.buffer ?? null, Fz = nz.deleteBuffer ?? !1, Zz = nz.format, Rz = nz.mimeType, Kz = nz.loaderOptions, Xz = nz.creationFlags, sz = nz.useSRGBBuffer ?? !1, rz = nz.internalTexture ?? null, oz = nz.gammaSpace ?? oz, fz = nz.forcedExtension ?? fz) : Mz = !!nz, this._gammaSpace = oz, this._noMipmap = Mz, this._invertY = void 0 === lz ? !wz.b : lz, this._initialSamplingMode = tz, this._buffer = dz, this._deleteBuffer = Fz, this._mimeType = Rz, this._loaderOptions = Kz, this._creationFlags = Xz, this._useSRGBBuffer = sz, this._forcedExtension = fz, void 0 !== Zz && (this._format = Zz);
+            const Nz = this.XT(),
+              vz = this._getEngine();
+            if (!vz) return;
+            vz.onBeforeTextureInitObservable.notifyObservers(this);
+            const xz = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), Hz && Hz(), !this.isBlocking && Nz && Nz.resetCachedMaterial()
+              },
+              Jz = (uz, bz) => {
+                this._loadingError = !0, this._errorObject = {
+                  message: uz,
+                  exception: bz
+                }, pz && pz(uz, bz), zz.OnTextureLoadErrorObservable.notifyObservers(this)
+              };
+            if (!this.url && !rz) return this._delayedOnLoad = xz, void(this._delayedOnError = Jz);
+            if (this._texture = rz ?? this._getFromCache(this.url, Mz, tz, this._invertY, sz, this.isCube), this._texture)
+              if (this._texture.isReady) Oz.c.SetImmediate((() => xz()));
+              else {
+                const zz = this._texture.onLoadedObservable.add(xz);
+                this._texture.onErrorObservable.add((uz => {
+                  Jz(uz.message, uz.exception), this._texture?.onLoadedObservable.remove(zz)
+                }))
+              }
+            else if (Nz && Nz.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = xz, this._delayedOnError = Jz;
+            else {
               try {
-                let fy = [];
-                if (hy && hy.send_to) {
-                  let yb = hy.send_to;
-                  Array.isArray(yb) || (yb = [yb]);
-                  const Uy = await Vb(Wy);
-                  for (const Wy of yb) {
-                    const yb = Uy.find((yb => yb.measurementId === Wy)),
-                      hy = yb && bb[yb.appId];
-                    if (!hy) {
-                      fy = [];
-                      break
+                this._texture = vz.createTexture(this.url, Mz, this._invertY, Nz, tz, xz, Jz, this._buffer, void 0, this._format, this._forcedExtension, Rz, Kz, Xz, sz)
+              } catch (Az) {
+                throw Jz("error loading", Az), Az
+              }
+              Fz && (this._buffer = null)
+            }
+          }
+          updateURL(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              bz = arguments.length > 2 ? arguments[2] : void 0,
+              Ez = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.XT().markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = zz), this.url = zz, this._buffer = uz, this._forcedExtension = Ez, this.delayLoadState = 4;
+            const nz = this._delayedOnLoad;
+            this._delayedOnLoad = () => {
+              nz ? nz() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), bz && bz()
+            }, this.delayLoad()
+          }
+          delayLoad() {
+            if (4 !== this.delayLoadState) return;
+            const zz = this.XT();
+            if (!zz) return;
+            let uz = this.url;
+            !uz && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (uz = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(uz, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? Oz.c.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = zz.uR().createTexture(uz, this._noMipmap, this._invertY, zz, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+          }
+          _prepareRowForTextureGeneration(zz, uz, bz, Ez) {
+            zz *= this._cachedUScale, uz *= this._cachedVScale, zz -= this.uRotationCenter * this._cachedUScale, uz -= this.vRotationCenter * this._cachedVScale, bz -= this.wRotationCenter, lz.n.TransformCoordinatesFromFloatsToRef(zz, uz, bz, this._rowGenerationMatrix, Ez), Ez.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, Ez.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, Ez.z += this.wRotationCenter
+          }
+          getTextureMatrix() {
+            let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * zz === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * zz, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = lz.d.Zero(), this._rowGenerationMatrix = new lz.d, this._t0 = lz.n.Zero(), this._t1 = lz.n.Zero(), this._t2 = lz.n.Zero()), lz.d.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (lz.d.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, lz.l.Matrix[0]), lz.d.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, lz.l.Matrix[1]), lz.d.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, lz.l.Matrix[2]), lz.d.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, lz.l.Matrix[3]), lz.l.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(lz.l.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(lz.l.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(lz.l.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.Qbz(this._t0), this._t2.Qbz(this._t0), lz.d.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const uz = this.XT();
+            if (!uz) return this._cachedTextureMatrix;
+            const bz = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && bz !== this._cachedIdentity3x2 && uz.markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this))), this._cachedTextureMatrix
+          }
+          getReflectionTextureMatrix() {
+            const uz = this.XT();
+            if (!uz) return this._cachedReflectionTextureMatrix;
+            if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
+              if (this.coordinatesMode !== zz.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === uz.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+            }
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = lz.d.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = lz.d.Zero());
+            const bz = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
+              case zz.PLANAR_MODE:
+                lz.d.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+                break;
+              case zz.PROJECTION_MODE: {
+                lz.d.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const zz = uz.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = zz.updateFlag, zz.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+                break
+              }
+              default:
+                lz.d.IdentityToRef(this._cachedReflectionTextureMatrix)
+            }
+            return bz && uz.markAllMaterialsAsDirty(1, (zz => zz.hasTexture(this))), this._cachedReflectionTextureMatrix
+          }
+          clone() {
+            const uz = {
+              noMipmap: this._noMipmap,
+              invertY: this._invertY,
+              samplingMode: this.samplingMode,
+              onLoad: void 0,
+              onError: void 0,
+              buffer: this._texture ? this._texture._buffer : void 0,
+              deleteBuffer: this._deleteBuffer,
+              format: this.textureFormat,
+              mimeType: this.mimeType,
+              loaderOptions: this._loaderOptions,
+              creationFlags: this._creationFlags,
+              useSRGBBuffer: this._useSRGBBuffer
+            };
+            return Xz.e.Clone((() => new zz(this._texture ? this._texture.url : null, this.XT(), uz)), this)
+          }
+          serialize() {
+            const uz = this.name;
+            zz.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const bz = super.serialize(zz._SerializeInternalTextureUniqueId);
+            if (!bz) return null;
+            if (zz.SerializeBuffers || zz.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) bz.base64String = this._buffer, bz.name = bz.name.replace("data:", "");
+              else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
+              const zz = this.mimeType || "image/png";
+              bz.base64String = `data:${zz};base64,${(0,Fz.h)(this._buffer)}`
+            } else(zz.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (bz.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? Rz(this) : Kz(this));
+            return bz.invertY = this._invertY, bz.samplingMode = this.samplingMode, bz._creationFlags = this._creationFlags, bz._useSRGBBuffer = this._useSRGBBuffer, zz._SerializeInternalTextureUniqueId && (bz.internalTextureUniqueId = this._texture?.uniqueId), bz.internalTextureLabel = this._texture?.label, bz.noMipmap = this._noMipmap, this.name = uz, bz
+          }
+          getClassName() {
+            return "Texture"
+          }
+          dispose() {
+            super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
+          }
+          static Parse(uz, bz, Ez) {
+            if (uz.customType) {
+              const zz = pz.d.Instantiate(uz.customType).Parse(uz, bz, Ez);
+              return uz.samplingMode && zz.updateSamplingMode && zz._samplingMode && zz._samplingMode !== uz.samplingMode && zz.updateSamplingMode(uz.samplingMode), zz
+            }
+            if (uz.isCube && !uz.isRenderTarget) return zz._CubeTextureParser(uz, bz, Ez);
+            const nz = void 0 !== uz.internalTextureUniqueId;
+            if (!uz.name && !uz.isRenderTarget && !nz) return null;
+            let iz;
+            if (nz) {
+              const zz = bz.uR().getLoadedTexturesCache();
+              for (const bz of zz)
+                if (bz.uniqueId === uz.internalTextureUniqueId) {
+                  iz = bz;
+                  break
+                }
+            }
+            const lz = zz => {
+              if (zz && zz._texture && (zz._texture._cachedWrapU = null, zz._texture._cachedWrapV = null, zz._texture._cachedWrapR = null), uz.samplingMode) {
+                const bz = uz.samplingMode;
+                zz && zz.samplingMode !== bz && zz.updateSamplingMode(bz)
+              }
+              if (zz && uz.animations)
+                for (let bz = 0; bz < uz.animations.length; bz++) {
+                  const Ez = uz.animations[bz],
+                    nz = (0, tz.b)("BABYLON.Animation");
+                  nz && zz.animations.push(nz.Parse(Ez))
+                }
+              zz && zz._texture && (nz && !iz && zz._texture._setUniqueId(uz.internalTextureUniqueId), zz._texture.label = uz.internalTextureLabel)
+            };
+            return Xz.e.Parse((() => {
+              let nz = !0;
+              if (uz.noMipmap && (nz = !1), uz.mirrorPlane) {
+                const Ez = zz._CreateMirror(uz.name, uz.renderTargetSize, bz, nz);
+                return Ez._waitingRenderList = uz.renderList, Ez.mirrorPlane = dz.b.FromArray(uz.mirrorPlane), lz(Ez), Ez
+              }
+              if (uz.isRenderTarget && !uz.base64String) {
+                let Ez = null;
+                if (uz.isCube) {
+                  if (bz.reflectionProbes)
+                    for (let zz = 0; zz < bz.reflectionProbes.length; zz++) {
+                      const Ez = bz.reflectionProbes[zz];
+                      if (Ez.name === uz.name) return Ez.cubeTexture
                     }
-                    fy.push(hy)
-                  }
-                }
-                0 === fy.length && (fy = Object.values(bb)), await Promise.all(fy), yb("event", Uy, hy || {})
-              } catch (fy) {
-                lb.error(fy)
+                } else Ez = zz._CreateRenderTargetTexture(uz.name, uz.renderTargetSize, bz, nz, uz._creationFlags ?? 0), Ez._waitingRenderList = uz.renderList;
+                return lz(Ez), Ez
               }
-            }(yb, bb, Wy, Uy, hy)
-          } else if ("config" === hy) {
-            const [hy, fy] = Zy;
-            await async function(yb, bb, Wy, Uy, hy, fy) {
-              const Zy = Uy[hy];
-              try {
-                if (Zy) await bb[Zy];
-                else {
-                  const yb = (await Vb(Wy)).find((yb => yb.measurementId === hy));
-                  yb && await bb[yb.appId]
+              if (uz.isVideo) {
+                const iz = zz._CreateVideoTexture(Ez + (uz.url || uz.name), Ez + (uz.src || uz.url), bz, nz, uz.invertY, uz.samplingMode, uz.settings || {});
+                return lz(iz), iz
+              } {
+                let Mz;
+                if ("string" === typeof uz.base64String && uz.base64String && !iz) {
+                  const Ez = {
+                      buffer: uz.base64String,
+                      noMipmap: !nz,
+                      invertY: uz.invertY,
+                      samplingMode: uz.samplingMode,
+                      useSRGBBuffer: uz._useSRGBBuffer ?? !1,
+                      creationFlags: uz._creationFlags ?? 0,
+                      onLoad: () => {
+                        lz(Mz)
+                      }
+                    },
+                    iz = uz.base64String,
+                    tz = iz.startsWith("data:") ? iz.substring(5) : iz;
+                  Mz = zz.CreateFromBase64String("", tz, bz, Ez), Mz.name = uz.name
+                } else {
+                  let tz;
+                  tz = uz.name && (uz.name.indexOf("://") > 0 || uz.name.startsWith("data:")) ? uz.name : Ez + uz.name, uz.url && (uz.url.startsWith("data:") || zz.UseSerializedUrlIfAny) && (tz = uz.url);
+                  const Hz = {
+                    noMipmap: !nz,
+                    invertY: uz.invertY,
+                    samplingMode: uz.samplingMode,
+                    useSRGBBuffer: uz._useSRGBBuffer ?? !1,
+                    creationFlags: uz._creationFlags ?? 0,
+                    onLoad: () => {
+                      lz(Mz)
+                    },
+                    internalTexture: iz
+                  };
+                  Mz = new zz(tz, bz, Hz)
                 }
-              } catch (cb) {
-                lb.error(cb)
+                return Mz
               }
-              yb("config", hy, fy)
-            }(yb, bb, Wy, Uy, hy, fy)
-          } else if ("consent" === hy) {
-            const [bb] = Zy;
-            yb("consent", "update", bb)
-          } else if ("get" === hy) {
-            const [bb, Wy, Uy] = Zy;
-            yb("get", bb, Wy, Uy)
-          } else if ("set" === hy) {
-            const [bb] = Zy;
-            yb("set", bb)
-          } else yb(hy, ...Zy)
-        } catch (Py) {
-          lb.error(Py)
-        }
-      }
-    }
-    const Gb = new class {
-      constructor() {
-        let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
-        this.throttleMetadata = yb, this.intervalMillis = bb
-      }
-      getThrottleMetadata(yb) {
-        return this.throttleMetadata[yb]
-      }
-      setThrottleMetadata(yb, bb) {
-        this.throttleMetadata[yb] = bb
-      }
-      deleteThrottleMetadata(yb) {
-        delete this.throttleMetadata[yb]
-      }
-    };
-
-    function Ob(yb) {
-      return new Headers({
-        Accept: "application/json",
-        "x-goog-api-key": yb
-      })
-    }
-    async function Rb(yb) {
-      let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Gb,
-        Wy = arguments.length > 2 ? arguments[2] : void 0;
-      const {
-        appId: Uy,
-        apiKey: hy,
-        measurementId: fy
-      } = yb.options;
-      if (!Uy) throw Cb.create("no-app-id");
-      if (!hy) {
-        if (fy) return {
-          measurementId: fy,
-          appId: Uy
-        };
-        throw Cb.create("no-api-key")
-      }
-      const Zy = bb.getThrottleMetadata(Uy) || {
-          backoffCount: 0,
-          throttleEndTimeMillis: Date.now()
-        },
-        cb = new iW;
-      return setTimeout((async () => {
-        cb.abort()
-      }), void 0 !== Wy ? Wy : 6e4), vW({
-        appId: Uy,
-        apiKey: hy,
-        measurementId: fy
-      }, Zy, cb, bb)
-    }
-    async function vW(yb, bb, Wy) {
-      let {
-        throttleEndTimeMillis: Uy,
-        backoffCount: hy
-      } = bb, Zy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Gb;
-      var cb;
-      const {
-        appId: Py,
-        measurementId: oy
-      } = yb;
-      try {
-        await
-        function(yb, bb) {
-          return new Promise(((Wy, Uy) => {
-            const hy = Math.max(bb - Date.now(), 0),
-              fy = setTimeout(Wy, hy);
-            yb.addEventListener((() => {
-              clearTimeout(fy), Uy(Cb.create("fetch-throttle", {
-                throttleEndTimeMillis: bb
-              }))
-            }))
-          }))
-        }(Wy, Uy)
-      } catch (By) {
-        if (oy) return lb.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${oy} provided in the "measurementId" field in the local Firebase config. [${null===By||void 0===By?void 0:By.message}]`), {
-          appId: Py,
-          measurementId: oy
-        };
-        throw By
-      }
-      try {
-        const bb = await async function(yb) {
-          var bb;
-          const {
-            appId: Wy,
-            apiKey: Uy
-          } = yb, hy = {
-            method: "GET",
-            headers: Ob(Uy)
-          }, fy = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", Wy), Zy = await fetch(fy, hy);
-          if (200 !== Zy.status && 304 !== Zy.status) {
-            let yb = "";
-            try {
-              const Wy = await Zy.json();
-              (null === (bb = Wy.error) || void 0 === bb ? void 0 : bb.message) && (yb = Wy.error.message)
-            } catch (cb) {}
-            throw Cb.create("config-fetch-failed", {
-              httpStatus: Zy.status,
-              responseMessage: yb
-            })
+            }), uz, bz)
           }
-          return Zy.json()
-        }(yb);
-        return Zy.deleteThrottleMetadata(Py), bb
-      } catch (By) {
-        const bb = By;
-        if (! function(yb) {
-            if (!(yb instanceof fy.i) || !yb.customData) return !1;
-            const bb = Number(yb.customData.httpStatus);
-            return 429 === bb || 500 === bb || 503 === bb || 504 === bb
-          }(bb)) {
-          if (Zy.deleteThrottleMetadata(Py), oy) return lb.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${oy} provided in the "measurementId" field in the local Firebase config. [${null===bb||void 0===bb?void 0:bb.message}]`), {
-            appId: Py,
-            measurementId: oy
-          };
-          throw By
-        }
-        const Uy = 503 === Number(null === (cb = null === bb || void 0 === bb ? void 0 : bb.customData) || void 0 === cb ? void 0 : cb.httpStatus) ? (0, fy.u)(hy, Zy.intervalMillis, 30) : (0, fy.u)(hy, Zy.intervalMillis),
-          Ky = {
-            throttleEndTimeMillis: Date.now() + Uy,
-            backoffCount: hy + 1
-          };
-        return Zy.setThrottleMetadata(Py, Ky), lb.debug(`Calling attemptFetch again in ${Uy} millis`), vW(yb, Ky, Wy, Zy)
-      }
-    }
-    class iW {
-      constructor() {
-        this.listeners = []
-      }
-      addEventListener(yb) {
-        this.listeners.push(yb)
-      }
-      abort() {
-        this.listeners.forEach((yb => yb()))
-      }
-    }
-    let Mb, Yb;
-
-    function Xb(yb) {
-      Yb = yb
-    }
-
-    function nb(yb) {
-      Mb = yb
-    }
-    async function ub(yb, bb, Wy, Uy, hy, Zy, cb) {
-      var Py;
-      const oy = Rb(yb);
-      oy.then((bb => {
-        Wy[bb.measurementId] = bb.appId, yb.options.measurementId && bb.measurementId !== yb.options.measurementId && lb.warn(`The measurement ID in the local Firebase config (${yb.options.measurementId}) does not match the measurement ID fetched from the server (${bb.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
-      })).catch((yb => lb.error(yb))), bb.push(oy);
-      const By = async function() {
-        if (!(0, fy.S)()) return lb.warn(Cb.create("indexeddb-unavailable", {
-          errorInfo: "IndexedDB is not available in this environment."
-        }).message), !1;
-        try {
-          await (0, fy.gb)()
-        } catch (yb) {
-          return lb.warn(Cb.create("indexeddb-unavailable", {
-            errorInfo: null === yb || void 0 === yb ? void 0 : yb.toString()
-          }).message), !1
-        }
-        return !0
-      }().then((yb => yb ? Uy.getId() : void 0)), [Ky, ey] = await Promise.all([oy, By]);
-      (function(yb) {
-        const bb = window.document.getElementsByTagName("script");
-        for (const Wy of Object.values(bb))
-          if (Wy.src && Wy.src.includes(Eb) && Wy.src.includes(yb)) return Wy;
-        return null
-      })(Zy) || Jb(Zy, Ky.measurementId), Yb && (hy("consent", "default", Yb), Xb(void 0)), hy("js", new Date);
-      const qb = null !== (Py = null === cb || void 0 === cb ? void 0 : cb.config) && void 0 !== Py ? Py : {};
-      return qb.origin = "firebase", qb.update = !0, null != ey && (qb.firebase_id = ey), hy("config", Ky.measurementId, qb), Mb && (hy("set", Mb), nb(void 0)), Ky.measurementId
-    }
-    class rW {
-      constructor(yb) {
-        this.app = yb
-      }
-      _delete() {
-        return delete Hb[this.app.options.appId], Promise.resolve()
-      }
-    }
-    let Hb = {},
-      aW = [];
-    const Fb = {};
-    let pb, Lb, Qb = "dataLayer",
-      jW = "gtag",
-      Db = !1;
-
-    function tW(yb) {
-      if (Db) throw Cb.create("already-initialized");
-      yb.dataLayerName && (Qb = yb.dataLayerName), yb.gtagName && (jW = yb.gtagName)
-    }
-
-    function wb(yb, bb, Wy) {
-      ! function() {
-        const yb = [];
-        if ((0, fy.L)() && yb.push("This is a browser extension environment."), (0, fy.m)() || yb.push("Cookies are not available."), yb.length > 0) {
-          const bb = yb.map(((yb, bb) => `(${bb+1}) ${yb}`)).join(" "),
-            Wy = Cb.create("invalid-analytics-context", {
-              errorInfo: bb
-            });
-          lb.warn(Wy.message)
-        }
-      }();
-      const Uy = yb.options.appId;
-      if (!Uy) throw Cb.create("no-app-id");
-      if (!yb.options.apiKey) {
-        if (!yb.options.measurementId) throw Cb.create("no-api-key");
-        lb.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${yb.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
-      }
-      if (null != Hb[Uy]) throw Cb.create("already-exists", {
-        id: Uy
-      });
-      if (!Db) {
-        ! function(yb) {
-          let bb = [];
-          Array.isArray(window[yb]) ? bb = window[yb] : window[yb] = bb
-        }(Qb);
-        const {
-          wrappedGtag: yb,
-          gtagCore: bb
-        } = function(yb, bb, Wy, Uy, hy) {
-          let fy = function() {
-            for (var yb = arguments.length, bb = new Array(yb), Wy = 0; Wy < yb; Wy++) bb[Wy] = arguments[Wy];
-            window[Uy].push(arguments)
-          };
-          return window[hy] && "function" === typeof window[hy] && (fy = window[hy]), window[hy] = gW(fy, yb, bb, Wy), {
-            gtagCore: fy,
-            wrappedGtag: window[hy]
+          static CreateFromBase64String(uz, bz, Ez, nz, iz) {
+            let lz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : zz.TRILINEAR_SAMPLINGMODE;
+            return new zz("data:" + bz, Ez, nz, iz, lz, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, uz, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
           }
-        }(Hb, aW, Fb, Qb, jW);
-        Lb = yb, pb = bb, Db = !0
+          static LoadFromDataString(uz, bz, Ez) {
+            let nz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              iz = arguments.length > 4 ? arguments[4] : void 0,
+              lz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              Mz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : zz.TRILINEAR_SAMPLINGMODE,
+              tz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              Hz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              Oz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              pz = arguments.length > 10 ? arguments[10] : void 0,
+              dz = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== uz.substring(0, 5) && (uz = "data:" + uz), new zz(uz, Ez, iz, lz, Mz, tz, Hz, bz, nz, Oz, void 0, void 0, pz, dz)
+          }
+        }, (() => {
+          const iz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Lz[Symbol.metadata] ?? null) : void 0;
+          uz = [(0, nz.G)()], bz = [(0, nz.G)()], Zz = [(0, nz.G)()], fz = [(0, nz.G)()], sz = [(0, nz.G)()], rz = [(0, nz.G)()], oz = [(0, nz.G)()], Nz = [(0, nz.G)()], vz = [(0, nz.G)()], xz = [(0, nz.G)()], Jz = [(0, nz.G)()], Az = [(0, nz.G)()], Tz = [(0, nz.G)()], (0, Ez.h)(zz, null, Tz, {
+            kind: "getter",
+            name: "isBlocking",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "isBlocking" in zz,
+              get: zz => zz.isBlocking
+            },
+            metadata: iz
+          }, null, Pz), (0, Ez.h)(null, null, uz, {
+            kind: "field",
+            name: "url",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "url" in zz,
+              get: zz => zz.url,
+              set: (zz, uz) => {
+                zz.url = uz
+              }
+            },
+            metadata: iz
+          }, Gz, az), (0, Ez.h)(null, null, bz, {
+            kind: "field",
+            name: "uOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "uOffset" in zz,
+              get: zz => zz.uOffset,
+              set: (zz, uz) => {
+                zz.uOffset = uz
+              }
+            },
+            metadata: iz
+          }, Vz, mz), (0, Ez.h)(null, null, Zz, {
+            kind: "field",
+            name: "vOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "vOffset" in zz,
+              get: zz => zz.vOffset,
+              set: (zz, uz) => {
+                zz.vOffset = uz
+              }
+            },
+            metadata: iz
+          }, qz, hz), (0, Ez.h)(null, null, fz, {
+            kind: "field",
+            name: "uScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "uScale" in zz,
+              get: zz => zz.uScale,
+              set: (zz, uz) => {
+                zz.uScale = uz
+              }
+            },
+            metadata: iz
+          }, Uz, cz), (0, Ez.h)(null, null, sz, {
+            kind: "field",
+            name: "vScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "vScale" in zz,
+              get: zz => zz.vScale,
+              set: (zz, uz) => {
+                zz.vScale = uz
+              }
+            },
+            metadata: iz
+          }, gz, Sz), (0, Ez.h)(null, null, rz, {
+            kind: "field",
+            name: "uAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "uAng" in zz,
+              get: zz => zz.uAng,
+              set: (zz, uz) => {
+                zz.uAng = uz
+              }
+            },
+            metadata: iz
+          }, yz, Dz), (0, Ez.h)(null, null, oz, {
+            kind: "field",
+            name: "vAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "vAng" in zz,
+              get: zz => zz.vAng,
+              set: (zz, uz) => {
+                zz.vAng = uz
+              }
+            },
+            metadata: iz
+          }, Qz, Wz), (0, Ez.h)(null, null, Nz, {
+            kind: "field",
+            name: "wAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "wAng" in zz,
+              get: zz => zz.wAng,
+              set: (zz, uz) => {
+                zz.wAng = uz
+              }
+            },
+            metadata: iz
+          }, ez, jz), (0, Ez.h)(null, null, vz, {
+            kind: "field",
+            name: "uRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "uRotationCenter" in zz,
+              get: zz => zz.uRotationCenter,
+              set: (zz, uz) => {
+                zz.uRotationCenter = uz
+              }
+            },
+            metadata: iz
+          }, Iz, Bz), (0, Ez.h)(null, null, xz, {
+            kind: "field",
+            name: "vRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "vRotationCenter" in zz,
+              get: zz => zz.vRotationCenter,
+              set: (zz, uz) => {
+                zz.vRotationCenter = uz
+              }
+            },
+            metadata: iz
+          }, Cz, Yz), (0, Ez.h)(null, null, Jz, {
+            kind: "field",
+            name: "wRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "wRotationCenter" in zz,
+              get: zz => zz.wRotationCenter,
+              set: (zz, uz) => {
+                zz.wRotationCenter = uz
+              }
+            },
+            metadata: iz
+          }, kz, zu), (0, Ez.h)(null, null, Az, {
+            kind: "field",
+            name: "homogeneousRotationInUVTransform",
+            static: !1,
+            private: !1,
+            access: {
+              has: zz => "homogeneousRotationInUVTransform" in zz,
+              get: zz => zz.homogeneousRotationInUVTransform,
+              set: (zz, uz) => {
+                zz.homogeneousRotationInUVTransform = uz
+              }
+            },
+            metadata: iz
+          }, uu, bu), iz && Object.defineProperty(zz, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: iz
+          })
+        })(), zz.SerializeBuffers = !0, zz.ForceSerializeBuffers = !1, zz.OnTextureLoadErrorObservable = new iz.b, zz._SerializeInternalTextureUniqueId = !1, zz._CubeTextureParser = (zz, uz, bz) => {
+          throw (0, Hz.l)("CubeTexture")
+        }, zz._CreateMirror = (zz, uz, bz, Ez) => {
+          throw (0, Hz.l)("MirrorTexture")
+        }, zz._CreateRenderTargetTexture = (zz, uz, bz, Ez, nz) => {
+          throw (0, Hz.l)("RenderTargetTexture")
+        }, zz.NEAREST_SAMPLINGMODE = 1, zz.NEAREST_NEAREST_MIPLINEAR = 8, zz.BILINEAR_SAMPLINGMODE = 2, zz.LINEAR_LINEAR_MIPNEAREST = 11, zz.TRILINEAR_SAMPLINGMODE = 3, zz.LINEAR_LINEAR_MIPLINEAR = 3, zz.NEAREST_NEAREST_MIPNEAREST = 4, zz.NEAREST_LINEAR_MIPNEAREST = 5, zz.NEAREST_LINEAR_MIPLINEAR = 6, zz.NEAREST_LINEAR = 7, zz.NEAREST_NEAREST = 1, zz.LINEAR_NEAREST_MIPNEAREST = 9, zz.LINEAR_NEAREST_MIPLINEAR = 10, zz.LINEAR_LINEAR = 2, zz.LINEAR_NEAREST = 12, zz.EXPLICIT_MODE = 0, zz.SPHERICAL_MODE = 1, zz.PLANAR_MODE = 2, zz.CUBIC_MODE = 3, zz.PROJECTION_MODE = 4, zz.SKYBOX_MODE = 5, zz.INVCUBIC_MODE = 6, zz.EQUIRECTANGULAR_MODE = 7, zz.FIXED_EQUIRECTANGULAR_MODE = 8, zz.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, zz.CLAMP_ADDRESSMODE = 0, zz.WRAP_ADDRESSMODE = 1, zz.MIRROR_ADDRESSMODE = 2, zz.UseSerializedUrlIfAny = !1, zz
+      })(),
+      sz = !1;
+
+    function rz() {
+      sz || (sz = !0, (0, tz.c)("BABYLON.Texture", fz), Xz.e._TextureParser = fz.Parse)
+    }
+  },
+  39180: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez
+    });
+    class Ez {
+      constructor(zz, uz) {
+        this.width = zz, this.height = uz
       }
-      Hb[Uy] = ub(yb, aW, Fb, bb, pb, Qb, Wy);
-      return new rW(yb)
-    }
-
-    function kW() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Uy.L)();
-      yb = (0, fy.J)(yb);
-      const bb = (0, Uy.v)(yb, Sb);
-      return bb.isInitialized() ? bb.getImmediate() : Nb(yb)
-    }
-
-    function Nb(yb) {
-      let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Wy = (0, Uy.v)(yb, Sb);
-      if (Wy.isInitialized()) {
-        const yb = Wy.getImmediate();
-        if ((0, fy.z)(bb, Wy.getOptions())) return yb;
-        throw Cb.create("already-initialized")
+      toString() {
+        return `{W: ${this.width}, H: ${this.height}}`
       }
-      return Wy.initialize({
-        options: bb
-      })
-    }
-    async function zW() {
-      if ((0, fy.L)()) return !1;
-      if (!(0, fy.m)()) return !1;
-      if (!(0, fy.S)()) return !1;
-      try {
-        return await (0, fy.gb)()
-      } catch (yb) {
-        return !1
+      getClassName() {
+        return "Size"
+      }
+      getHashCode() {
+        let zz = 0 | this.width;
+        return zz = 397 * zz ^ this.height, zz
+      }
+      euz(zz) {
+        this.width = zz.width, this.height = zz.height
+      }
+      P_(zz, uz) {
+        return this.width = zz, this.height = uz, this
+      }
+      set(zz, uz) {
+        return this.P_(zz, uz)
+      }
+      multiplyByFloats(zz, uz) {
+        return new Ez(this.width * zz, this.height * uz)
+      }
+      clone() {
+        return new Ez(this.width, this.height)
+      }
+      equals(zz) {
+        return !!zz && (this.width === zz.width && this.height === zz.height)
+      }
+      get surface() {
+        return this.width * this.height
+      }
+      static Zero() {
+        return new Ez(0, 0)
+      }
+      add(zz) {
+        return new Ez(this.width + zz.width, this.height + zz.height)
+      }
+      subtract(zz) {
+        return new Ez(this.width - zz.width, this.height - zz.height)
+      }
+      scale(zz) {
+        return new Ez(this.width * zz, this.height * zz)
+      }
+      static Lerp(zz, uz, bz) {
+        const nz = zz.width + (uz.width - zz.width) * bz,
+          iz = zz.height + (uz.height - zz.height) * bz;
+        return new Ez(nz, iz)
       }
     }
-
-    function Ib(yb, bb, Wy) {
-      yb = (0, fy.J)(yb), async function(yb, bb, Wy, Uy) {
-        if (Uy && Uy.global) return yb("set", {
-          screen_name: Wy
-        }), Promise.resolve();
-        yb("config", await bb, {
-          update: !0,
-          screen_name: Wy
-        })
-      }(Lb, Hb[yb.app.options.appId], bb, Wy).catch((yb => lb.error(yb)))
-    }
-    async function xW(yb) {
-      return yb = (0, fy.J)(yb), async function(yb, bb) {
-        const Wy = await bb;
-        return new Promise(((bb, Uy) => {
-          yb("get", Wy, "client_id", (yb => {
-            yb || Uy(Cb.create("no-client-id")), bb(yb)
-          }))
-        }))
-      }(Lb, Hb[yb.app.options.appId])
-    }
-
-    function Ab(yb, bb, Wy) {
-      yb = (0, fy.J)(yb), async function(yb, bb, Wy, Uy) {
-        if (Uy && Uy.global) return yb("set", {
-          user_id: Wy
-        }), Promise.resolve();
-        yb("config", await bb, {
-          update: !0,
-          user_id: Wy
-        })
-      }(Lb, Hb[yb.app.options.appId], bb, Wy).catch((yb => lb.error(yb)))
-    }
-
-    function db(yb, bb, Wy) {
-      yb = (0, fy.J)(yb), async function(yb, bb, Wy, Uy) {
-        if (Uy && Uy.global) {
-          const bb = {};
-          for (const yb of Object.keys(Wy)) bb[`user_properties.${yb}`] = Wy[yb];
-          return yb("set", bb), Promise.resolve()
-        }
-        yb("config", await bb, {
-          update: !0,
-          user_properties: Wy
-        })
-      }(Lb, Hb[yb.app.options.appId], bb, Wy).catch((yb => lb.error(yb)))
-    }
-
-    function yU(yb, bb) {
-      yb = (0, fy.J)(yb), async function(yb, bb) {
-        const Wy = await yb;
-        window[`ga-disable-${Wy}`] = !bb
-      }(Hb[yb.app.options.appId], bb).catch((yb => lb.error(yb)))
-    }
-
-    function bU(yb) {
-      Lb ? Lb("set", yb) : nb(yb)
-    }
-
-    function WW(yb, bb, Wy, Uy) {
-      yb = (0, fy.J)(yb), async function(yb, bb, Wy, Uy, hy) {
-        if (hy && hy.global) yb("event", Wy, Uy);
-        else {
-          const hy = await bb;
-          yb("event", Wy, Object.assign(Object.assign({}, Uy), {
-            send_to: hy
-          }))
-        }
-      }(Lb, Hb[yb.app.options.appId], bb, Wy, Uy).catch((yb => lb.error(yb)))
-    }
-
-    function UW(yb) {
-      Lb ? Lb("consent", "update", yb) : Xb(yb)
-    }
-    const hW = "@firebase/analytics",
-      fW = "0.10.0";
-    (0, Uy.z)(new Zy.i(Sb, ((yb, bb) => {
-      let {
-        options: Wy
-      } = bb;
-      return wb(yb.getProvider("app").getImmediate(), yb.getProvider("installations-internal").getImmediate(), Wy)
-    }), "PUBLIC")), (0, Uy.z)(new Zy.i("analytics-internal", (function(yb) {
-      try {
-        const bb = yb.getProvider(Sb).getImmediate();
-        return {
-          logEvent: (yb, Wy, Uy) => WW(bb, yb, Wy, Uy)
-        }
-      } catch (bb) {
-        throw Cb.create("interop-component-reg-failed", {
-          reason: bb
-        })
-      }
-    }), "PRIVATE")), (0, Uy.R)(hW, fW), (0, Uy.R)(hW, fW, "esm2017")
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

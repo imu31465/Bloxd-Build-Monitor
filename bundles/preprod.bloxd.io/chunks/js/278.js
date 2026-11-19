@@ -1,82 +1,9 @@
 export const id = 278;
 export const ids = [278];
 export const modules = {
-  39912: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      collectImportedWorldCodePluginNames: () => oy
-    });
-    var Uy = Wy(35604),
-      hy = Wy(35595),
-      fy = Wy(39846),
-      Zy = Wy.n(fy);
-
-    function cb(yb) {
-      return Zy().isImportDeclaration(yb) && Zy().isStringLiteral(yb.moduleSpecifier) && function(yb) {
-        const bb = yb.importClause;
-        if (!bb) return !0;
-        if (bb.isTypeOnly) return !1;
-        const Wy = bb.namedBindings;
-        return !(Wy && !Zy().isNamespaceImport(Wy)) || !!bb.name || Wy.elements.some((yb => !yb.isTypeOnly))
-      }(yb) || Zy().isExportDeclaration(yb) && yb.moduleSpecifier && Zy().isStringLiteral(yb.moduleSpecifier) && function(yb) {
-        return !yb.isTypeOnly && (!yb.exportClause || !Zy().isNamedExports(yb.exportClause) || 0 === yb.exportClause.elements.length || yb.exportClause.elements.some((yb => !yb.isTypeOnly)))
-      }(yb) ? yb.moduleSpecifier.text : Zy().isImportEqualsDeclaration(yb) && !yb.isTypeOnly && Zy().isExternalModuleReference(yb.moduleReference) && yb.moduleReference.expression && Zy().isStringLiteral(yb.moduleReference.expression) ? yb.moduleReference.expression.text : Zy().isCallExpression(yb) && Zy().isIdentifier(yb.expression) && "require" === yb.expression.text && 1 === yb.arguments.length && Zy().isStringLiteral(yb.arguments[0]) ? yb.arguments[0].text : void 0
-    }
-
-    function Py(yb, bb, Wy) {
-      if (!bb.startsWith("./") && !bb.startsWith("../")) return;
-      const hy = ((yb.includes("/") ? yb.slice(0, yb.lastIndexOf("/") + 1) : "") + bb).split("/"),
-        fy = [];
-      for (const Uy of hy)
-        if ("" !== Uy && "." !== Uy)
-          if (".." !== Uy) fy.push(Uy);
-          else {
-            if (0 === fy.length) return;
-            fy.pop()
-          } const Zy = fy.join("/");
-      for (const cb of [Zy, `${Zy}.ts`, `${Zy}.js`])
-        if (cb in Wy && !(0, Uy.q)(cb)) return cb
-    }
-
-    function oy(yb) {
-      const bb = new Set,
-        Wy = (0, hy.b)(yb);
-      if (!Wy) return [];
-      const Uy = [Wy],
-        fy = new Set;
-      for (; Uy.length > 0;) {
-        const Wy = Uy.pop();
-        if (!Wy || fy.has(Wy)) continue;
-        fy.add(Wy);
-        const oy = Zy().createSourceFile(Wy, yb[Wy], Zy().ScriptTarget.Latest, !1),
-          By = oy => {
-            const Ky = cb(oy),
-              ey = Ky ? (0, hy.n)(Ky) : null;
-            if (ey) bb.add(ey);
-            else if (Ky) {
-              const bb = Py(Wy, Ky, yb);
-              bb && !fy.has(bb) && Uy.push(bb)
-            }
-            Zy().forEachChild(oy, By)
-          };
-        By(oy)
-      }
-      return [...bb].sort()
-    }
-  },
-  39878: yb => {
-    function bb(yb) {
-      var bb = new Error("Cannot find module '" + yb + "'");
-      throw bb.code = "MODULE_NOT_FOUND", bb
-    }
-    bb.keys = () => [], bb.resolve = bb, bb.id = 39878, yb.exports = bb
-  },
-  39872: () => {},
-  39855: () => {},
-  39883: () => {},
-  39869: () => {},
-  39860: () => {},
-  39849: () => {},
-  39876: () => {}
+  40466: zz => {
+    zz.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAEKSURBVHic7doxDoJAEIVh1hBjY/BsxsrOI3ADLmA8gp2VsfJgEhtjoxXGAsV1Ft/i/l9Jlt3Jc6I4wWVG22pxs9x/Ol9M55fro7PcPzKd/gfyUBsVxdhrfV1fQx1tQgeE3rDrk/XtlL4l3wEEoC5AjQDUBagRgLoAteDPAbH9znehA0JtFMuzva/kO8BZ/88PXfIdkFsnMkOXfAd4z9MOm2Wv3xnzcmea8flKvgMIQF2AGgGoC1AjAHUBagSgLkCNANQFqD3mAc+zvGa603atEcv6VbXn/QCL1nnAp9diXe+DDphNJ1n2Yp7/bsYf2/pvJd8BBKAuQI0A1AWoEYC6AAAAAAAAAAD4pTt191CoDjSH2wAAAABJRU5ErkJggg==","alphaCutoff":0.05,"vertices":[0.83524,0.32258,0.4691,0.5,0.51613,0.9021,0.83524,0.70968,0.0361,0.5,0.90323,0.4691,0.16476,0.32258,0.4691,0.5,0.12903,0.0361,0.16476,0.70968,0.0361,0.5,0.51613,-0.3969,0.16476,0.32258,0.4691,0.5,0.51613,0.9021,0.5,0.12903,0.0361,0.83524,0.32258,0.4691,0.5,0.51613,-0.3969,0.83524,0.70968,0.0361,0.16476,0.70968,0.0361,0.5,0.90323,0.4691,0.5,0.12903,0.0361,0.83524,0.32258,0.4691,0.5,0.51613,-0.3969,0.83524,0.70968,0.0361,0.5,0.51613,0.9021,0.16476,0.32258,0.4691,0.5,0.90323,0.4691,0.16476,0.70968,0.0361,0.94698,0.25806,0.5413,0.5,0.51613,1.1186,0.94698,0.3871,0.3969,0.5,0.64516,0.9743,0.05302,0.25806,0.5413,0.5,0,-0.0361,0.05302,0.3871,0.3969,0.5,0.12903,-0.1804,0.05302,0.25806,0.5413,0.5,0.51613,1.1186,0.5,0,-0.0361,0.94698,0.25806,0.5413,0.5,0.12903,-0.1804,0.94698,0.3871,0.3969,0.05302,0.3871,0.3969,0.5,0.64516,0.9743,0.5,0,-0.0361,0.94698,0.25806,0.5413,0.5,0.12903,-0.1804,0.94698,0.3871,0.3969,0.5,0.51613,1.1186,0.05302,0.25806,0.5413,0.5,0.64516,0.9743,0.05302,0.3871,0.3969,0.94698,0.6129,0.1443,0.5,0.87097,0.7217,0.94698,0.74194,0,0.5,1,0.5774,0.05302,0.6129,0.1443,0.5,0.35484,-0.433,0.05302,0.74194,0,0.5,0.48387,-0.5774,0.05302,0.6129,0.1443,0.5,0.87097,0.7217,0.5,0.35484,-0.433,0.94698,0.6129,0.1443,0.5,0.48387,-0.5774,0.94698,0.74194,0,0.05302,0.74194,0,0.5,1,0.5774,0.5,0.35484,-0.433,0.94698,0.6129,0.1443,0.5,0.48387,-0.5774,0.94698,0.74194,0,0.5,0.87097,0.7217,0.05302,0.6129,0.1443,0.5,1,0.5774,0.05302,0.74194,0],"uvs":[0.000244,0.500244,0.187256,0.500244,0.000244,0.687256,0.187256,0.687256,0.375244,0.500244,0.562256,0.500244,0.375244,0.687256,0.562256,0.687256,0.374756,0.499756,0.187744,0.499756,0.374756,0.312744,0.187744,0.312744,0.562256,0.312744,0.375244,0.312744,0.562256,0.499756,0.375244,0.499756,0.562744,0.500244,0.749756,0.500244,0.562744,0.687256,0.749756,0.687256,0.187744,0.500244,0.374756,0.500244,0.187744,0.687256,0.374756,0.687256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256],"indices":[0,2,1,2,3,1,4,6,5,6,7,5,8,10,9,10,11,9,12,14,13,14,15,13,16,18,17,18,19,17,20,22,21,22,23,21,24,26,25,26,27,25,28,30,29,30,31,29,32,34,33,34,35,33,36,38,37,38,39,37,40,42,41,42,43,41,44,46,45,46,47,45,48,50,49,50,51,49,52,54,53,54,55,53,56,58,57,58,59,57,60,62,61,62,63,61,64,66,65,66,67,65,68,70,69,70,71,69],"shades":[0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85]}')
+  }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

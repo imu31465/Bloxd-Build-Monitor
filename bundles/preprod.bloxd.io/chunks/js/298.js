@@ -1,245 +1,467 @@
 export const id = 298;
 export const ids = [298];
 export const modules = {
-  40484: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  40996: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      _ENVTextureLoader: () => xz
     });
-    var Uy = Wy(38319);
-    const hy = "bakedVertexAnimation",
-      fy = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(39118),
+      nz = bz(36519),
+      iz = bz(36553),
+      lz = bz(39164),
+      Mz = bz(39011),
+      tz = bz(39167),
+      Hz = (bz(39253), bz(41e3)),
+      Oz = bz(38060),
+      pz = (bz(41012), bz(41031), bz(39226));
+    const dz = "image/png",
+      Fz = [134, 22, 135, 150, 246, 214, 150, 54];
+
+    function Zz(zz) {
+      const uz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
+      let bz = 0;
+      for (let lz = 0; lz < Fz.length; lz++)
+        if (uz.getUint8(bz++) !== Fz[lz]) return Oz.e.Error("Not a babylon environment map"), null;
+      let Ez, nz = "";
+      for (; Ez = uz.getUint8(bz++);) nz += String.fromCharCode(Ez);
+      let iz = JSON.parse(nz);
+      return iz = Rz(iz), iz.binaryDataPosition = bz, iz.specular && (iz.specular.lodGenerationScale = iz.specular.lodGenerationScale || .8), iz
+    }
+
+    function Rz(zz) {
+      if (zz.version > 2) throw new Error(`Unsupported babylon environment map version "${zz.version}". Latest supported version is "2".`);
+      return 2 === zz.version ? zz : zz = {
+        ...zz,
+        version: 2,
+        imageType: dz
+      }
+    }
+
+    function Kz(zz, uz) {
+      const bz = (uz = Rz(uz)).specular;
+      let Ez = Math.log2(uz.width);
+      if (Ez = Math.round(Ez) + 1, bz.mipmaps.length !== 6 * Ez) throw new Error(`Unsupported specular mipmaps number "${bz.mipmaps.length}"`);
+      const nz = new Array(Ez);
+      for (let iz = 0; iz < Ez; iz++) {
+        nz[iz] = new Array(6);
+        for (let Ez = 0; Ez < 6; Ez++) {
+          const lz = bz.mipmaps[6 * iz + Ez];
+          nz[iz][Ez] = new Uint8Array(zz.buffer, zz.byteOffset + uz.binaryDataPosition + lz.position, lz.length)
+        }
+      }
+      return nz
+    }
+
+    function wz(zz, uz) {
+      uz = Rz(uz);
+      const bz = new Array(6),
+        Ez = uz.irradiance?.irradianceTexture;
+      if (Ez) {
+        if (6 !== Ez.faces.length) throw new Error(`Incorrect irradiance texture faces number "${Ez.faces.length}"`);
+        for (let nz = 0; nz < 6; nz++) {
+          const iz = Ez.faces[nz];
+          bz[nz] = new Uint8Array(zz.buffer, zz.byteOffset + uz.binaryDataPosition + iz.position, iz.length)
+        }
+      }
+      return bz
+    }
+
+    function Xz(zz, uz, bz) {
+      const Ez = (bz = Rz(bz)).specular;
+      if (!Ez) return Promise.resolve([]);
+      zz._lodGenerationScale = Ez.lodGenerationScale;
+      const iz = [],
+        lz = Kz(uz, bz);
+      iz.push(sz(zz, lz, bz.imageType));
+      const Mz = bz.irradiance?.irradianceTexture;
+      if (Mz) {
+        const Ez = wz(uz, bz);
+        let lz = null;
+        bz.irradiance?.irradianceTexture?.dominantDirection && (lz = nz.n.FromArray(bz.irradiance.irradianceTexture.dominantDirection)), iz.push(rz(zz, Ez, Mz.size, bz.imageType, lz))
+      }
+      return Promise.all(iz)
+    }
+    async function fz(zz, uz, bz, Ez, nz, iz, lz, Mz, tz, Hz, Oz) {
+      return await new Promise(((pz, dz) => {
+        if (bz) {
+          const bz = uz.createTexture(null, !0, !0, null, 1, null, (zz => {
+            dz(zz)
+          }), zz);
+          Ez?.onEffectCreatedObservable.addOnce((Mz => {
+            Mz.executeWhenCompiled((() => {
+              Ez.externalTextureSamplerBinding = !0, Ez.onApply = Ez => {
+                Ez._bindTexture("textureSampler", bz), Ez.setFloat2("scale", 1, uz._features.needsInvertingBitmap && zz instanceof ImageBitmap ? -1 : 1)
+              }, uz.scenes.length && (uz.scenes[0].postProcessManager.directRender([Ez], Hz, !0, iz, lz), uz.restoreDefaultFramebuffer(), bz.dispose(), URL.revokeObjectURL(nz), pz())
+            }))
+          }))
+        } else {
+          if (uz._uploadImageToTexture(Oz, zz, iz, lz), Mz) {
+            const bz = tz[lz];
+            bz && uz._uploadImageToTexture(bz._texture, zz, iz, 0)
+          }
+          pz()
+        }
+      }))
+    }
+    async function sz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dz;
+      const Ez = zz.uR();
+      zz.format = 5, zz.type = 0, zz.generateMipMaps = !0, zz._cachedAnisotropicFilteringLevel = null, Ez.updateTextureSamplingMode(3, zz), await oz(zz, uz, !0, bz), zz.isReady = !0
+    }
+    async function rz(zz, uz, bz) {
+      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dz,
+        nz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const iz = zz.uR(),
+        lz = new Mz.c(iz, 5),
+        Hz = new tz.b(iz, lz);
+      zz._irradianceTexture = Hz, Hz._dominantDirection = nz, lz.isCube = !0, lz.format = 5, lz.type = 0, lz.generateMipMaps = !0, lz._cachedAnisotropicFilteringLevel = null, lz.generateMipMaps = !0, lz.width = bz, lz.height = bz, iz.updateTextureSamplingMode(3, lz), await oz(lz, [uz], !1, Ez), iz.generateMipMapsForCubemap(lz), lz.isReady = !0
+    }
+    async function oz(zz, uz, nz) {
+      let lz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dz;
+      if (!(0, Ez.i)(zz.width)) throw new Error("Texture size must be a power of two");
+      const Oz = (0, iz.ILog2)(zz.width) + 1,
+        Fz = zz.uR();
+      let Zz = !1,
+        Rz = !1,
+        Kz = null,
+        wz = null,
+        Xz = null;
+      const sz = Fz.getCaps();
+      sz.textureLOD ? Fz._features.supportRenderAndCopyToLodForFloatTextures ? sz.textureHalfFloatRender && sz.textureHalfFloatLinearFiltering ? (Zz = !0, zz.type = 2) : sz.textureFloatRender && sz.textureFloatLinearFiltering && (Zz = !0, zz.type = 1) : Zz = !1 : (Zz = !1, Rz = nz);
+      let rz = 0;
+      if (Zz) Fz.isWebGPU ? (rz = 1, await bz.e(332).then((() => bz(60527)))) : await bz.e(314).then((() => bz(60534))), Kz = new Hz.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Fz, !1, void 0, zz.type, void 0, null, !1, void 0, rz), zz._isRGBD = !1, zz.invertY = !1, wz = Fz.createRenderTargetCubeTexture(zz.width, {
+        generateDepthBuffer: !1,
+        generateMipMaps: !0,
+        generateStencilBuffer: !1,
+        samplingMode: 3,
+        type: zz.type,
+        format: 5
+      });
+      else if (zz._isRGBD = !0, zz.invertY = !0, Rz) {
+        const uz = 3;
+        Xz = {};
+        const bz = zz._lodGenerationScale,
+          Ez = zz._lodGenerationOffset;
+        for (let nz = 0; nz < uz; nz++) {
+          const iz = (Oz - 1) * bz + Ez,
+            lz = Ez + (iz - Ez) * (1 - nz / (uz - 1)),
+            Hz = Math.round(Math.min(Math.max(lz, 0), iz)),
+            pz = new Mz.c(Fz, 2);
+          pz.isCube = !0, pz.invertY = !0, pz.generateMipMaps = !1, Fz.updateTextureSamplingMode(2, pz);
+          const dz = new tz.b(null);
+          switch (dz._isCube = !0, dz._texture = pz, Xz[Hz] = dz, nz) {
+            case 0:
+              zz._lodTextureLow = dz;
+              break;
+            case 1:
+              zz._lodTextureMid = dz;
+              break;
+            case 2:
+              zz._lodTextureHigh = dz
+          }
+        }
+      }
+      const oz = [];
+      for (let bz = 0; bz < uz.length; bz++)
+        for (let Ez = 0; Ez < 6; Ez++) {
+          const nz = uz[bz][Ez],
+            iz = (0, pz.o)(nz),
+            Mz = new Blob([iz], {
+              type: lz
+            }),
+            tz = URL.createObjectURL(Mz);
+          let Hz;
+          if (Fz._features.forceBitmapOverHTMLImageElement) Hz = Fz.createImageBitmap(Mz, {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none"
+          }).then((async uz => await fz(uz, Fz, Zz, Kz, tz, Ez, bz, Rz, Xz, wz, zz)));
+          else {
+            const uz = new Image;
+            uz.src = tz, Hz = new Promise(((nz, iz) => {
+              uz.onload = () => {
+                fz(uz, Fz, Zz, Kz, tz, Ez, bz, Rz, Xz, wz, zz).then((() => nz())).catch((zz => {
+                  iz(zz)
+                }))
+              }, uz.onerror = zz => {
+                iz(zz)
+              }
+            }))
+          }
+          oz.push(Hz)
+        }
+      if (await Promise.all(oz), uz.length < Oz) {
+        let bz;
+        const Ez = Math.pow(2, Oz - 1 - uz.length),
+          nz = Ez * Ez * 4;
+        switch (zz.type) {
+          case 0:
+            bz = new Uint8Array(nz);
+            break;
+          case 2:
+            bz = new Uint16Array(nz);
+            break;
+          case 1:
+            bz = new Float32Array(nz)
+        }
+        for (let iz = uz.length; iz < Oz; iz++)
+          for (let uz = 0; uz < 6; uz++) Fz._uploadArrayBufferViewToTexture(wz?.texture || zz, bz, uz, iz)
+      }
+      if (wz) {
+        const uz = zz._irradianceTexture;
+        zz._irradianceTexture = null, Fz._releaseTexture(zz), wz._swapAndDie(zz), zz._irradianceTexture = uz
+      }
+      Kz && Kz.dispose(), Rz && (zz._lodTextureHigh && zz._lodTextureHigh._texture && (zz._lodTextureHigh._texture.isReady = !0), zz._lodTextureMid && zz._lodTextureMid._texture && (zz._lodTextureMid._texture.isReady = !0), zz._lodTextureLow && zz._lodTextureLow._texture && (zz._lodTextureLow._texture.isReady = !0))
+    }
+
+    function Nz(zz, uz) {
+      const bz = (uz = Rz(uz)).irradiance;
+      if (!bz) return;
+      const Ez = new lz.g;
+      nz.n.FromArrayToRef(bz.x, 0, Ez.x), nz.n.FromArrayToRef(bz.y, 0, Ez.y), nz.n.FromArrayToRef(bz.z, 0, Ez.z), nz.n.FromArrayToRef(bz.xx, 0, Ez.xx), nz.n.FromArrayToRef(bz.yy, 0, Ez.yy), nz.n.FromArrayToRef(bz.zz, 0, Ez.zz), nz.n.FromArrayToRef(bz.yz, 0, Ez.yz), nz.n.FromArrayToRef(bz.zx, 0, Ez.zx), nz.n.FromArrayToRef(bz.xy, 0, Ez.xy), zz._sphericalPolynomial = Ez
+    }
+    var vz = bz(41037);
+    class xz {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(zz, uz, bz, Ez, nz) {
+        if (Array.isArray(zz)) return;
+        const iz = Zz(zz);
+        if (iz) {
+          uz.width = iz.width, uz.height = iz.width;
+          try {
+            (0, vz.b)(), Nz(uz, iz), Xz(uz, zz, iz).then((() => {
+              uz.isReady = !0, uz.onLoadedObservable.notifyObservers(uz), uz.onLoadedObservable.clear(), Ez && Ez()
+            }), (zz => {
+              nz?.("Can not upload environment levels", zz)
+            }))
+          } catch (lz) {
+            nz?.("Can not upload environment file", lz)
+          }
+        } else nz && nz("Can not parse the environment file", null)
+      }
+      loadData() {
+        throw ".env not supported in 2d."
+      }
     }
   },
-  40393: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  41037: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz
     });
-    var Uy = Wy(38319);
-    const hy = "bakedVertexAnimationDeclaration",
-      fy = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(40972),
+      nz = bz(39167);
+    let iz = !1;
+
+    function lz() {
+      iz || (iz = !0, nz.b.prototype._sphericalPolynomialTargetSize = 0, nz.b.prototype.forceSphericalPolynomialsRecompute = function() {
+        this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
+      }, Object.defineProperty(nz.b.prototype, "sphericalPolynomial", {
+        get: function() {
+          if (this._texture) {
+            if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = Ez.d.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((zz => {
+              this._texture._sphericalPolynomial = zz, this._texture._sphericalPolynomialComputed = !0
+            }))), null
+          }
+          return null
+        },
+        set: function(zz) {
+          this._texture && (this._texture._sphericalPolynomial = zz)
+        },
+        enumerable: !0,
+        configurable: !0
+      }))
     }
   },
-  40387: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  40972: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Hz
     });
-    var Uy = Wy(38319);
-    const hy = "bonesDeclaration",
-      fy = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(36519),
+      nz = bz(36553),
+      iz = bz(39164),
+      lz = bz(36526),
+      Mz = bz(36715);
+    class tz {
+      constructor(zz, uz, bz, Ez) {
+        this.name = zz, this.worldAxisForNormal = uz, this.worldAxisForFileX = bz, this.worldAxisForFileY = Ez
+      }
     }
-  },
-  40479: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "bonesVertex",
-      fy = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    class Hz {
+      static _NearestPow2Floor(zz) {
+        return zz <= 1 ? 1 : 1 << Math.floor(Math.log2(zz))
+      }
+      static ConvertCubeMapTextureToSphericalPolynomial(zz) {
+        if (!zz.isCube) return null;
+        zz.XT()?.uR().flushFramebuffer();
+        const uz = zz.getSize().width,
+          bz = zz._sphericalPolynomialTargetSize,
+          Ez = bz > 0 ? this._NearestPow2Floor(bz) : 0,
+          nz = !zz.noMipmap && !0 === zz._texture?.generateMipMaps,
+          iz = Ez > 0 && Ez < uz && nz,
+          lz = iz ? Math.max(0, Math.round(Math.log2(uz / Ez))) : 0,
+          Mz = iz ? Math.max(1, Math.floor(uz / Math.pow(2, lz))) : uz,
+          tz = zz.readPixels(0, lz, void 0, !1),
+          Hz = zz.readPixels(1, lz, void 0, !1);
+        let Oz, pz;
+        zz.isRenderTarget ? (Oz = zz.readPixels(3, lz, void 0, !1), pz = zz.readPixels(2, lz, void 0, !1)) : (Oz = zz.readPixels(2, lz, void 0, !1), pz = zz.readPixels(3, lz, void 0, !1));
+        const dz = zz.readPixels(4, lz, void 0, !1),
+          Fz = zz.readPixels(5, lz, void 0, !1),
+          Zz = zz.gammaSpace,
+          Rz = Ez > 0 && Ez < uz && !iz;
+        return new Promise((zz => {
+          Promise.all([Hz, tz, Oz, pz, dz, Fz]).then((bz => {
+            let [nz, iz, lz, tz, Hz, Oz] = bz, pz = Mz;
+            if (Rz) {
+              const zz = 4;
+              nz = this._DownsampleFace(nz, uz, Ez, zz), iz = this._DownsampleFace(iz, uz, Ez, zz), lz = this._DownsampleFace(lz, uz, Ez, zz), tz = this._DownsampleFace(tz, uz, Ez, zz), Hz = this._DownsampleFace(Hz, uz, Ez, zz), Oz = this._DownsampleFace(Oz, uz, Ez, zz), pz = Ez
+            }
+            const dz = {
+              size: pz,
+              right: iz,
+              left: nz,
+              up: lz,
+              down: tz,
+              front: Hz,
+              back: Oz,
+              format: 5,
+              type: nz instanceof Float32Array ? 1 : 0,
+              gammaSpace: Zz
+            };
+            zz(this.ConvertCubeMapToSphericalPolynomial(dz))
+          }))
+        }))
+      }
+      static _AreaElement(zz, uz) {
+        return Math.atan2(zz * uz, Math.sqrt(zz * zz + uz * uz + 1))
+      }
+      static _DownsampleFace(zz, uz, bz, Ez) {
+        const nz = zz instanceof Float32Array ? zz : Float32Array.from(zz),
+          iz = bz * bz * Ez,
+          lz = new Float32Array(iz),
+          Mz = uz / bz,
+          tz = 1 / (Mz * Mz);
+        for (let Oz = 0; Oz < bz; Oz++) {
+          const zz = Math.floor(Oz * Mz),
+            iz = Math.floor((Oz + 1) * Mz);
+          for (let Hz = 0; Hz < bz; Hz++) {
+            const pz = Math.floor(Hz * Mz),
+              dz = Math.floor((Hz + 1) * Mz),
+              Fz = (Oz * bz + Hz) * Ez;
+            for (let bz = 0; bz < Ez; bz++) {
+              let Mz = 0;
+              for (let lz = zz; lz < iz; lz++)
+                for (let zz = pz; zz < dz; zz++) Mz += nz[(lz * uz + zz) * Ez + bz];
+              lz[Fz + bz] = Mz * tz
+            }
+          }
+        }
+        if (zz instanceof Float32Array) return lz;
+        const Hz = new(0, zz.constructor)(iz);
+        for (let Oz = 0; Oz < iz; Oz++) Hz[Oz] = lz[Oz] + .5 | 0;
+        return Hz
+      }
+      static ConvertCubeMapToSphericalPolynomial(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const bz = uz > 0 ? this._NearestPow2Floor(uz) : 0;
+        if (bz > 0 && zz.size > bz) {
+          const uz = 5 === zz.format ? 4 : 3,
+            Ez = ["right", "left", "up", "down", "front", "back"],
+            nz = {};
+          for (const iz of Ez) nz[iz] = this._DownsampleFace(zz[iz], zz.size, bz, uz);
+          zz = {
+            ...zz,
+            ...nz,
+            size: bz
+          }
+        }
+        const Ez = new iz.c;
+        let tz = 0;
+        const Hz = 2 / zz.size,
+          Oz = Hz,
+          pz = .5 * Hz,
+          dz = pz - 1;
+        for (let iz = 0; iz < 6; iz++) {
+          const uz = this._FileFaces[iz],
+            bz = zz[uz.name];
+          let Fz = dz;
+          const Zz = 5 === zz.format ? 4 : 3;
+          for (let iz = 0; iz < zz.size; iz++) {
+            let Rz = dz;
+            for (let Oz = 0; Oz < zz.size; Oz++) {
+              const dz = uz.worldAxisForFileX.scale(Rz).add(uz.worldAxisForFileY.scale(Fz)).add(uz.worldAxisForNormal);
+              dz.normalize();
+              const Kz = this._AreaElement(Rz - pz, Fz - pz) - this._AreaElement(Rz - pz, Fz + pz) - this._AreaElement(Rz + pz, Fz - pz) + this._AreaElement(Rz + pz, Fz + pz);
+              let wz = bz[iz * zz.size * Zz + Oz * Zz + 0],
+                Xz = bz[iz * zz.size * Zz + Oz * Zz + 1],
+                fz = bz[iz * zz.size * Zz + Oz * Zz + 2];
+              isNaN(wz) && (wz = 0), isNaN(Xz) && (Xz = 0), isNaN(fz) && (fz = 0), 0 === zz.type && (wz /= 255, Xz /= 255, fz /= 255), zz.gammaSpace && (wz = Math.pow((0, nz.Clamp)(wz), lz.i), Xz = Math.pow((0, nz.Clamp)(Xz), lz.i), fz = Math.pow((0, nz.Clamp)(fz), lz.i));
+              const sz = this.MAX_HDRI_VALUE;
+              if (this.PRESERVE_CLAMPED_COLORS) {
+                const zz = Math.max(wz, Xz, fz);
+                if (zz > sz) {
+                  const uz = sz / zz;
+                  wz *= uz, Xz *= uz, fz *= uz
+                }
+              } else wz = (0, nz.Clamp)(wz, 0, sz), Xz = (0, nz.Clamp)(Xz, 0, sz), fz = (0, nz.Clamp)(fz, 0, sz);
+              const rz = new Mz.c(wz, Xz, fz);
+              Ez.addLight(dz, rz, Kz), tz += Kz, Rz += Hz
+            }
+            Fz += Oz
+          }
+        }
+        const Fz = 6 * (4 * Math.PI) / 6 / tz;
+        return Ez.scaleInPlace(Fz), Ez.convertIncidentRadianceToIrradiance(), Ez.convertIrradianceToLambertianRadiance(), iz.g.FromHarmonics(Ez)
+      }
     }
+    Hz._FileFaces = [new tz("right", new Ez.n(1, 0, 0), new Ez.n(0, 0, -1), new Ez.n(0, -1, 0)), new tz("left", new Ez.n(-1, 0, 0), new Ez.n(0, 0, 1), new Ez.n(0, -1, 0)), new tz("up", new Ez.n(0, 1, 0), new Ez.n(1, 0, 0), new Ez.n(0, 0, 1)), new tz("down", new Ez.n(0, -1, 0), new Ez.n(1, 0, 0), new Ez.n(0, 0, -1)), new tz("front", new Ez.n(0, 0, 1), new Ez.n(1, 0, 0), new Ez.n(0, -1, 0)), new tz("back", new Ez.n(0, 0, -1), new Ez.n(-1, 0, 0), new Ez.n(0, -1, 0))], Hz.MAX_HDRI_VALUE = 4096, Hz.PRESERVE_CLAMPED_COLORS = !1
   },
-  40506: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
+  41012: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz
     });
-    var Uy = Wy(38319);
-    const hy = "bumpVertex",
-      fy = "#if defined(BUMP) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nvec3 tbnNormal=normalize(normalUpdated);vec3 tbnTangent=normalize(tangentUpdated.xyz);vec3 tbnBitangent=cross(tbnNormal,tbnTangent)*tangentUpdated.w;vTBN=mat3(finalWorld)*mat3(tbnTangent,tbnBitangent,tbnNormal);\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40508: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneVertex",
-      fy = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40430: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneVertexDeclaration",
-      fy = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60094: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "harmonicsFunctions",
-      fy = "#ifdef USESPHERICALFROMREFLECTIONMAP\n#ifdef SPHERICAL_HARMONICS\nvec3 computeEnvironmentIrradiance(vec3 normal) {return vSphericalL00\n+ vSphericalL1_1*(normal.y)\n+ vSphericalL10*(normal.z)\n+ vSphericalL11*(normal.x)\n+ vSphericalL2_2*(normal.y*normal.x)\n+ vSphericalL2_1*(normal.y*normal.z)\n+ vSphericalL20*((3.0*normal.z*normal.z)-1.0)\n+ vSphericalL21*(normal.z*normal.x)\n+ vSphericalL22*(normal.x*normal.x-(normal.y*normal.y));}\n#else\nvec3 computeEnvironmentIrradiance(vec3 normal) {float Nx=normal.x;float Ny=normal.y;float Nz=normal.z;vec3 C1=vSphericalZZ.rgb;vec3 Cx=vSphericalX.rgb;vec3 Cy=vSphericalY.rgb;vec3 Cz=vSphericalZ.rgb;vec3 Cxx_zz=vSphericalXX_ZZ.rgb;vec3 Cyy_zz=vSphericalYY_ZZ.rgb;vec3 Cxy=vSphericalXY.rgb;vec3 Cyz=vSphericalYZ.rgb;vec3 Czx=vSphericalZX.rgb;vec3 a1=Cyy_zz*Ny+Cy;vec3 a2=Cyz*Nz+a1;vec3 b1=Czx*Nz+Cx;vec3 b2=Cxy*Ny+b1;vec3 b3=Cxx_zz*Nx+b2;vec3 t1=Cz *Nz+C1;vec3 t2=a2 *Ny+t1;vec3 t3=b3 *Nx+t2;return t3;}\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40400: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "instancesDeclaration",
-      fy = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40477: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "instancesVertex",
-      fy = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40468: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "morphTargetsVertex",
-      fy = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (int i=0; i<NUM_MORPH_INFLUENCERS; i++) {if (float(i)>=morphTargetCount) break;vertexID=float(gl_VertexID)*morphTargetTextureInfo.x;\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(readVector3FromRawSampler(i,vertexID)-position)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(readVector3FromRawSampler(i,vertexID) -normal)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(readVector3FromRawSampler(i,vertexID).xy-uv)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(readVector3FromRawSampler(i,vertexID) -tangent.xyz)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(readVector3FromRawSampler(i,vertexID).xy-uv2)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUV2S\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(readVector4FromRawSampler(i,vertexID)-color)*morphTargetInfluences[i];\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(position{X}-position)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(normal{X}-normal)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(tangent{X}-tangent.xyz)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(uv_{X}-uv)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(uv2_{X}-uv2)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(color{X}-color)*morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40447: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "morphTargetsVertexDeclaration",
-      fy = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute vec3 position{X};\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute vec3 normal{X};\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute vec3 tangent{X};\n#endif\n#ifdef MORPHTARGETS_UV\nattribute vec2 uv_{X};\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute vec2 uv2_{X};\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute vec4 color{X};\n#endif\n#elif {X}==0\nuniform float morphTargetCount;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40462: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "morphTargetsVertexGlobal",
-      fy = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nfloat vertexID;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40440: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "morphTargetsVertexGlobalDeclaration",
-      fy = "#ifdef MORPHTARGETS\nuniform float morphTargetInfluences[NUM_MORPH_INFLUENCERS];\n#ifdef MORPHTARGETS_TEXTURE \nuniform float morphTargetTextureIndices[NUM_MORPH_INFLUENCERS];uniform vec3 morphTargetTextureInfo;uniform highp sampler2DArray morphTargets;vec3 readVector3FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0).xyz;\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV).xyz;\n#endif\n}\nvec4 readVector4FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0);\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV);\n#endif\n}\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40363: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "sceneUboDeclaration",
-      fy = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60427: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      geometryVertexShader: () => ib
-    });
-    var Uy = Wy(38319),
-      hy = Wy(40387),
-      fy = Wy(40393),
-      Zy = Wy(40440),
-      cb = Wy(40447),
-      Py = Wy(40400);
-    const oy = "geometryVertexDeclaration",
-      By = "uniform mat4 viewProjection;uniform mat4 view;";
-    Uy.e.IncludesShadersStore[oy] || (Uy.e.IncludesShadersStore[oy] = By);
-    const Ky = {
-      name: oy,
-      shader: By
-    };
-    var ey = Wy(40363);
-    const qb = "geometryUboDeclaration",
-      sy = "#include<sceneUboDeclaration>\n";
-    Uy.e.IncludesShadersStore[qb] || (Uy.e.IncludesShadersStore[qb] = sy);
-    const Sy = {
-      name: qb,
-      shader: sy
-    };
-    var Ey = Wy(40430),
-      ly = Wy(60094),
-      mb = Wy(40462),
-      Cy = Wy(40468),
-      Ty = Wy(40477),
-      Vy = Wy(40479),
-      Jy = Wy(40484),
-      gb = Wy(40508),
-      Gy = Wy(40506);
-    const Oy = "geometryVertexShader",
-      Ry = "precision highp float;\n#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<morphTargetsVertexGlobalDeclaration>\n#include<morphTargetsVertexDeclaration>[0..maxSimultaneousMorphTargets]\n#include<instancesDeclaration>\n#include<__decl__geometryVertex>\n#include<clipPlaneVertexDeclaration>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\nuniform mat4 reflectionMatrix;uniform vec2 vReflectionInfos;uniform vec3 vReflectionColor;\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvarying vec3 vEnvironmentIrradiance;\n#ifdef SPHERICAL_HARMONICS\nuniform vec3 vSphericalL00;uniform vec3 vSphericalL1_1;uniform vec3 vSphericalL10;uniform vec3 vSphericalL11;uniform vec3 vSphericalL2_2;uniform vec3 vSphericalL2_1;uniform vec3 vSphericalL20;uniform vec3 vSphericalL21;uniform vec3 vSphericalL22;\n#else\nuniform vec3 vSphericalX;uniform vec3 vSphericalY;uniform vec3 vSphericalZ;uniform vec3 vSphericalXX_ZZ;uniform vec3 vSphericalYY_ZZ;uniform vec3 vSphericalZZ;uniform vec3 vSphericalXY;uniform vec3 vSphericalYZ;uniform vec3 vSphericalZX;\n#endif\n#include<harmonicsFunctions>\n#endif\n#endif\n#endif\nattribute vec3 position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nattribute vec3 normal;\n#endif\n#ifdef NEED_UV\nvarying vec2 vUV;\n#ifdef ALPHATEST\nuniform mat4 diffuseMatrix;\n#endif\n#ifdef BUMP\nuniform mat4 bumpMatrix;varying vec2 vBumpUV;\n#endif\n#ifdef REFLECTIVITY\nuniform mat4 reflectivityMatrix;uniform mat4 albedoMatrix;varying vec2 vReflectivityUV;varying vec2 vAlbedoUV;\n#endif\n#ifdef METALLIC_TEXTURE\nvarying vec2 vMetallicUV;uniform mat4 metallicMatrix;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nvarying vec2 vRoughnessUV;uniform mat4 roughnessMatrix;\n#endif\n#ifdef SUBSURFACE_WEIGHT\nvarying vec2 vSubsurfaceWeightUV;uniform mat4 subsurfaceWeightMatrix;\n#endif\n#ifdef TRANSMISSION_WEIGHT\nvarying vec2 vTransmissionWeightUV;uniform mat4 transmissionWeightMatrix;\n#endif\n#ifdef UV1\nattribute vec2 uv;\n#endif\n#ifdef UV2\nattribute vec2 uv2;\n#endif\n#endif\n#ifdef BUMP\nvarying mat4 vWorldView;\n#endif\n#ifdef BUMP\nvarying vec3 vNormalW;\n#else\nvarying vec3 vNormalV;\n#endif\nvarying vec4 vViewPos;\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvarying vec3 vPositionW;\n#endif\n#if defined(VELOCITY) || defined(VELOCITY_LINEAR)\nuniform mat4 previousViewProjection;varying vec4 vCurrentPosition;varying vec4 vPreviousPosition;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void)\n{vec3 positionUpdated=position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nvec3 normalUpdated=normal;\n#else\nvec3 normalUpdated=vec3(0.0,0.0,0.0);\n#endif\n#ifdef UV1\nvec2 uvUpdated=uv;\n#endif\n#ifdef UV2\nvec2 uv2Updated=uv2;\n#endif\n#include<morphTargetsVertexGlobal>\n#include<morphTargetsVertex>[0..maxSimultaneousMorphTargets]\n#include<instancesVertex>\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && !defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*finalWorld*vec4(positionUpdated,1.0);vPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#include<bonesVertex>\n#include<bakedVertexAnimation>\nvec4 worldPos=vec4(finalWorld*vec4(positionUpdated,1.0));\n#ifdef BUMP\nvWorldView=view*finalWorld;mat3 normalWorld=mat3(finalWorld);vNormalW=normalize(normalWorld*normalUpdated);\n#else\n#ifdef NORMAL_WORLDSPACE\nvNormalV=normalize(vec3(finalWorld*vec4(normalUpdated,0.0)));\n#else\nvNormalV=normalize(vec3((view*finalWorld)*vec4(normalUpdated,0.0)));\n#endif\n#endif\nvViewPos=view*worldPos;\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*finalWorld*vec4(positionUpdated,1.0);\n#if NUM_BONE_INFLUENCERS>0\nmat4 previousInfluence;previousInfluence=mPreviousBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=mPreviousBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=mPreviousBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=mPreviousBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\nvPreviousPosition=previousViewProjection*finalPreviousWorld*previousInfluence*vec4(positionUpdated,1.0);\n#else\nvPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#endif\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvPositionW=worldPos.xyz/worldPos.w;\n#endif\ngl_Position=viewProjection*finalWorld*vec4(positionUpdated,1.0);\n#include<clipPlaneVertex>\n#ifdef NEED_UV\n#ifdef UV1\n#if defined(ALPHATEST) && defined(ALPHATEST_UV1)\nvUV=vec2(diffuseMatrix*vec4(uvUpdated,1.0,0.0));\n#else\nvUV=uvUpdated;\n#endif\n#ifdef BUMP_UV1\nvBumpUV=vec2(bumpMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef REFLECTIVITY_UV1\nvReflectivityUV=vec2(reflectivityMatrix*vec4(uvUpdated,1.0,0.0));\n#else\n#ifdef METALLIC_UV1\nvMetallicUV=vec2(metallicMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef ROUGHNESS_UV1\nvRoughnessUV=vec2(roughnessMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#endif\n#ifdef ALBEDO_UV1\nvAlbedoUV=vec2(albedoMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_COLOR_UV1\nvSubsurfaceColorUV=vec2(subsurfaceColorMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV1\nvSubsurfaceWeightUV=vec2(subsurfaceWeightMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#endif\n#ifdef UV2\n#if defined(ALPHATEST) && defined(ALPHATEST_UV2)\nvUV=vec2(diffuseMatrix*vec4(uv2Updated,1.0,0.0));\n#else\nvUV=uv2Updated;\n#endif\n#ifdef BUMP_UV2\nvBumpUV=vec2(bumpMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef REFLECTIVITY_UV2\nvReflectivityUV=vec2(reflectivityMatrix*vec4(uv2Updated,1.0,0.0));\n#else\n#ifdef METALLIC_UV2\nvMetallicUV=vec2(metallicMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef ROUGHNESS_UV2\nvRoughnessUV=vec2(roughnessMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#endif\n#ifdef ALBEDO_UV2\nvAlbedoUV=vec2(albedoMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_COLOR_UV2\nvSubsurfaceColorUV=vec2(subsurfaceColorMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV2\nvSubsurfaceWeightUV=vec2(subsurfaceWeightMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#endif\n#endif\n#include<bumpVertex>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvec3 reflectionVector=vec3(reflectionMatrix*vec4(normalUpdated,0.0)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0;\n#endif\nvEnvironmentIrradiance=computeEnvironmentIrradiance(reflectionVector)*vReflectionInfos.x;\n#endif\n#endif\n#endif\n}\n";
-    Uy.e.ShadersStore[Oy] || (Uy.e.ShadersStore[Oy] = Ry);
-    const vb = [hy.c, fy.c, Zy.b, cb.e, Py.b, Ky, ey.b, Sy, Ey.d, ly.e, mb.c, Cy.d, Ty.d, Vy.c, Jy.c, gb.b, Gy.d];
-    for (const My of vb) Uy.e.IncludesShadersStore[My.name] || (Uy.e.IncludesShadersStore[My.name] = My.shader);
-    const ib = {
-      name: Oy,
-      shader: Ry
+    var Ez = bz(41e3),
+      nz = bz(41014);
+    class iz {
+      static ExpandRGBDTexture(zz) {
+        const uz = zz._texture;
+        if (!uz || !zz.isRGBD) return;
+        const nz = uz.uR(),
+          iz = nz.getCaps(),
+          lz = uz.isReady;
+        let Mz = !1;
+        iz.textureHalfFloatRender && iz.textureHalfFloatLinearFiltering ? (Mz = !0, uz.type = 2) : iz.textureFloatRender && iz.textureFloatLinearFiltering && (Mz = !0, uz.type = 1), Mz && (uz.isReady = !1, uz._isRGBD = !1, uz.invertY = !1);
+        const tz = async () => {
+          const iz = nz.isWebGPU,
+            lz = iz ? 1 : 0;
+          uz.isReady = !1, iz ? await bz.e(332).then((() => bz(60527))) : await bz.e(314).then((() => bz(60534)));
+          const Mz = new Ez.d("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, nz, !1, void 0, uz.type, void 0, null, !1, void 0, lz);
+          Mz.externalTextureSamplerBinding = !0;
+          const tz = nz.createRenderTargetTexture(uz.width, {
+            generateDepthBuffer: !1,
+            generateMipMaps: !1,
+            generateStencilBuffer: !1,
+            samplingMode: uz.samplingMode,
+            type: uz.type,
+            format: 5
+          });
+          Mz.onEffectCreatedObservable.addOnce((bz => {
+            bz.executeWhenCompiled((() => {
+              Mz.onApply = zz => {
+                zz._bindTexture("textureSampler", uz), zz.setFloat2("scale", 1, 1)
+              }, zz.XT()?.postProcessManager.directRender([Mz], tz, !0), nz.restoreDefaultFramebuffer(), nz._releaseTexture(uz), Mz && Mz.dispose(), tz._swapAndDie(uz), uz.isReady = !0
+            }))
+          }))
+        };
+        Mz && (lz ? tz() : zz.onLoadObservable.addOnce(tz))
+      }
+      static async EncodeTextureToRGBD(zz, uz) {
+        let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return uz.uR().isWebGPU ? await bz.e(333).then((() => bz(60551))) : await bz.e(315).then((() => bz(60546))), await (0, nz.c)("rgbdEncode", zz, uz, Ez, 1, 5)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

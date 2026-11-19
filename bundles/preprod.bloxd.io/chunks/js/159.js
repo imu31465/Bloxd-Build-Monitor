@@ -1,40 +1,40 @@
 export const id = 159;
 export const ids = [159];
 export const modules = {
-  8125: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  8604: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const Uy = {
-      whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
-      howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
-      features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
-      tips: ["Open every chest you find. That's where your Gold Coins come from.", "Put your coins in the bank, where your balance stays safe forever.", "Save 1,000, 50,000 or 1,000,000 coins in the bank to unlock gold portal skins.", "Level up your skills, then right click to use them. They've got a cooldown, so pick your moment.", "Use Mega Chop on trees to find way more chests.", "Only switch on Allow Edit for people you trust. Anyone with it can take your blocks.", "Lost? Type /home and you'll be straight back on your island."],
-      similarGames: ["skyblock", "skyIslands", "classic_survival"],
+    const Ez = {
+      whatIs: ["Your gear is completely random, and only one player makes it out of the madness. Bloxd Lucky Towers is a last-player-standing PvP mode where everyone spawns on their own pillar. Rounds are quick, chaotic and pretty unpredictable. There are no Lucky Blocks to open here, which is the big difference from Lucky Blocks Battlegrounds. Your items just turn up every 3 seconds."],
+      howToPlay: ["Up to 15 players spawn on pillars spaced out across the map. You start in a glass cage for 3 seconds. After that, everyone gets a random item every 3 seconds. It could be blocks, food, a weapon, armour, a potion or something that explodes. Build bridges over to your rivals, knock them off their pillars and be the last one alive.", "Keep an eye on the announcements, because random events can flip a whole fight. A chest might drop with a guaranteed weapon and armour inside. Jump Boost lets everyone jump higher for a bit, and Double Speed makes items spawn twice as fast. During Lava Rise the ground starts creeping up beneath you. If a Bombardment is announced, get under cover fast. Holding a Respawn Totem saves you from a fall into the void. Knocked out? You can still spectate the rest of the match."],
+      features: ["Up to 15 Players per Match", "A Random Item Every 3 Seconds", "Weapons, Armour, Potions, Arrows and Explosives", "Special Items Like Updraft, SnowDash, Steal Ball, Bouncy Bomb and Chaos Potion", "Respawn Totems for an Extra Life", "Five Random Events, From Chest Drops to Bombardment", "Craft Sticks, Reinforced Pebbles, Floor Creators and More", "Maps: The OG, Desert, Icy, Space and Forest, Plus Seasonal Spooky and Holiday Maps"],
+      tips: ["Use your first few blocks to wall up your pillar", "Hang on to explosives for breaking your rivals' bridges", "If a chest drops, race for it. There's a guaranteed weapon and two pieces of armour inside", "When the ground starts rising, build upwards", "Get under cover the moment a Bombardment is announced", "Hold a Respawn Totem whenever you might fall, because it puts you back on your pillar", "The pillars on the Icy map are further apart, since jumps on ice go further"],
+      similarGames: ["skywars", "luckyBedwars", "luckyBattlegrounds", "bedwars"],
       faq: [{
-        question: "What is Bloxd One Block?",
-        answer: "A sky challenge where you start on a single floating block. Break it to get new blocks, items and chests, unlock phases and grow your island into an empire."
+        question: "What is Lucky Towers?",
+        answer: "A fast PvP mode for up to 15 players. Everyone starts on their own pillar, gets a random item every 3 seconds and fights to be the last one standing."
       }, {
-        question: "Is Bloxd One Block a skyblock game?",
-        answer: "Sort of. You start with one block in the sky and build everything from there. Bloxd Skyblock is a different mode, though: that one's an RPG with skills, quests and dungeons, while One Block is all about breaking your block to unlock 17 phases."
+        question: "How do you win in Bloxd Lucky Towers?",
+        answer: "Be the last player alive. Use whatever random items you get to knock rivals off their pillars or take them out. If you're eliminated, you can spectate untill the match ends."
       }, {
-        question: "How many phases are in Bloxd One Block?",
-        answer: "17, from Forest and Plains through Ocean, Desert and Dungeon to the Volcano and the Moon. Mine enough blocks to unlock each one. When you've got them all, you can change phase."
+        question: "How often do you get items in Lucky Towers?",
+        answer: "Every 3 seconds. During the Double Speed event they spawn twice as fast for a short while."
       }, {
-        question: "How do I get to the Hub in One Block?",
-        answer: "Grab 3 Gold Coins from chests, bridge over to the portal island nearby and walk into your portal. Type /home to come back."
+        question: "What items can you get in Lucky Towers?",
+        answer: "Blocks, seedlings, beds, food, potions, weapons, arrows, armour and explosives. There are special items too, like the Bouncy Bomb, Respawn Totem, Floor Creator, SnowDash, Updraft, Steal Ball, Chaos Potion and Moonstone Remote Explosive."
       }, {
-        question: "Where do One Block coins come from?",
-        answer: "Chests from your One Block and the Hub treasure chests, daily and weekly quests, or watching an ad for coins."
+        question: "Which random events can happen in Lucky Towers?",
+        answer: "Chest Drop, Jump Boost, Double Speed, Lava Rise and Bombardment. You'll get an announcement when each one starts."
       }, {
-        question: "How do I open my portal in One Block?",
-        answer: "Type /open in chat. You can also add visitors in your island access settings, even if your portal is closed."
+        question: "Which maps are in Lucky Towers?",
+        answer: "The OG, Desert, Icy, Space and Forest. There's also a Spooky map in October and a Holiday map in December and January."
       }, {
-        question: "Can I have more than one island?",
-        answer: "Yes. The Island Manager lets you create new islands, rename them, load another save or delete one, up to a maximum number of islands."
+        question: "How is Lucky Towers different from Lucky Blocks Battlegrounds?",
+        answer: "Lucky Towers is last player standing. Items arrive on their own, and once you're knocked out you spectate. Lucky Blocks Battlegrounds is a kills race in a shared arena where you open Lucky Blocks, and the top player wins when it resets."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

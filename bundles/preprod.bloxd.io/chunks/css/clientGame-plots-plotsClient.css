@@ -1,4 +1,4 @@
-.PlotsJournalOverlay {
+.GameBackgroundScreen.PlotsJournalOverlay {
   background: rgba(26, 31, 46, .6);
   box-sizing: border-box;
   padding: max(env(safe-area-inset-top), env(safe-area-inset-bottom)) env(safe-area-inset-right) max(env(safe-area-inset-top), env(safe-area-inset-bottom)) env(safe-area-inset-left);
@@ -696,7 +696,6 @@
 
 .PlotsProgress .PlotsProgressBar {
   background: rgba(57, 73, 128, .4);
-  border-radius: .3rem;
   flex: 1 1;
   height: .6rem;
   min-width: 4rem;

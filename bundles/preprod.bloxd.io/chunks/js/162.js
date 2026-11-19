@@ -1,37 +1,46 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  8133: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  8613: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const Uy = {
-      whatIs: ["Build machines on your own floating island and watch them work! That's Bloxd Build a Factory 2 in one line. You mine ore, link your machines up with conveyor belts and turn a couple of drills into a massive, fully automated factory. Never played a factory game before? Don't worry, it's easy to pick up. The original Build a Factory is a race to launch a rocket before a shared world resets. This one's about growing your own island."],
-      howToPlay: ["Use your Workbench to make a Machine Bench. Build a Burner Drill, stick it on an ore Deposit and give it fuel, and it starts mining by itself. Belt the ore into a Crusher to turn it into Grit (that's crushed ore), then into a Smelter to make bars. From there you can press bars into plates, spin Copper Bars into wire and make parts like Motors at the Parts Bench. Give your Core the parts it asks for and it moves up a tier, which unlocks better machines.", "For power you've got Generators, Solar Panels and Volt Engines. Drop down into the Wilds below your island to find rare ore, open ruin chests for Salvage and break fallen comets, then head home and build bigger. When you log off, your island pauses and picks up right where it left off when you're back."],
-      features: ["Your Own Floating Factory Island", "Conveyor Belts, Fast Belts, Splitters, Sorting Gates, Belt Lifts and Tunnels", "Drills, Crushers, Smelters, Presses, Wire Mills, Assemblers and More", "Tier Up Your Core to Unlock New Machines, Then Build the Star Spire", "Power from Generators, Solar Panels and Volt Engines", "Explore the Wilds for Rare Ore, Ruin Chests and Comets", "Fill Star Forge Orders for Deposit Seeds and Comet Cores", "Build Several Islands, Play Co-op with Friends or Visit Theirs"],
-      tips: ["Use Deposit Seeds to grow Deposits that never run out", "Crush ore into Grit before you smelt it and you'll get twice the bars", "Teach a Sorting Gate an item and it'll send that item down its own belt", "A Power Coupler makes Crushers, Smelters and Alloy Kilns twice as fast", "Belt spare items into a Storage Silo so your belts don't jam", "Carry an Ore Lens in the Wilds and it'll point you to the nearest rare ore"],
-      similarGames: ["survivalFactory", "skyblock", "oneBlock", "classic_survival"],
+    const Ez = {
+      whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
+      howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
+      features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
+      tips: ["Pick a spot to build 200+ blocks out, where blocks don't reset every few hours", "Craft a Protector from diamonds to keep your builds and chests safe", "Don't bother with a sword. Passive animals are weak enough to beat with your fist", "Just starting out? Practise mining, crafting and building here before you try Survival", "Fancy some danger and a health bar? Give Survival a go"],
+      similarGames: ["classic_survival", "classic_survivalDayNight", "classic_creative", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Build a Factory 2 on Bloxd?",
-        answer: "An idle factory builder. You build machines on your own floating island, connect them with conveyor belts and let them make everything for you."
+        question: "What is Bloxd Peaceful?",
+        answer: "It's Bloxd's no-danger survival mode. You explore, build and gather in a shared block world, with no hostile mobs and no health bar."
       }, {
-        question: "Is Build a Factory 2 an idle factory game?",
-        answer: "Partly. Once it's set up, your factory runs by itself while you explore the Wilds or plan your next build. It pauses while you're offline and carries on where it stopped when you come back."
+        question: "Can you die in Bloxd Peaceful?",
+        answer: "No. There's no health bar, so mobs and other players can't hurt you."
       }, {
-        question: "How do I unlock new machines in Build a Factory 2?",
-        answer: "Tier up your Core by giving it the parts it asks for, like Motors and, later on, Logic Boards. Every new tier unlocks more machines and items."
+        question: "Is there PvP in Bloxd Peaceful?",
+        answer: "There isn't. Players can't attack each other in Peaceful."
       }, {
-        question: "What's the best way to power my factory?",
-        answer: "You've got a few options. Burn Coal or Charcoal in a Generator, build Solar Panels (they keep running at night at half power), or run Volt Engines on Voltite Cells for loads of power. Add Charge Vaults to store more."
+        question: "Are there mobs in Bloxd Peaceful?",
+        answer: "Only passive animals. None of them can attack you, and you can beat them with your fist."
       }, {
-        question: "What are the Wilds?",
-        answer: "The land below your island. Drop down to mine rare ore, loot ruin chests for Salvage, explore the Old Works and break fallen comets for Comet Cores."
+        question: "What's the difference between Peaceful and Survival in Bloxd?",
+        answer: "The world works the same way, with the same mining, crafting and building. Survival has hostile mobs, PvP and a health bar. Peaceful takes all of that away so you can explore and build without worrying."
       }, {
-        question: "Can friends help build my factory?",
-        answer: "Definitely. Invite friends to a shared co-op island, or use /visit to have a look around other players' islands."
+        question: "Is Bloxd Peaceful good for beginners?",
+        answer: "Definitely. It's a safe place to learn the basics. If you die early on in Survival, the game will even offer to move you over to Peaceful."
+      }, {
+        question: "Can I play Bloxd Peaceful with friends?",
+        answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
+      }, {
+        question: "How do I keep my builds safe in Peaceful?",
+        answer: "Blocks near spawn reset every few hours, so build at least 200 blocks away. Then put down a Protector and other players won't be able to break your builds or open your chests."
+      }, {
+        question: "How do I save my progress in Bloxd Peaceful?",
+        answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

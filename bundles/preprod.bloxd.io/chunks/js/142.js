@@ -1,146 +1,212 @@
 export const id = 142;
 export const ids = [142];
 export const modules = {
-  7304: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      NitroSdkAdaptor: () => Zy
+  7792: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      BloxdMsnAccountSdk: () => pz,
+      MsnSdkAdaptor: () => Rz,
+      msnMockIdentityStorageKey: () => tz
     });
-    var Uy = Wy(1169),
-      hy = Wy(1029);
-    const fy = "NitroOutstreamVideo";
-    class Zy extends Uy.b {
+    var Ez = bz(1288),
+      nz = bz(1171),
+      iz = bz(3210),
+      lz = bz(588);
+    bz(33);
+    const Mz = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js",
+      tz = "msnMockIdentity";
+    let Hz = null;
+
+    function Oz() {
+      return Hz ??= async function() {
+        await (0, nz.e)(Mz, {}, !1);
+        for (let zz = 0; zz < 50 && !window.$msstart; zz++) await (0, lz.L)(100)
+      }(), Hz
+    }
+    class pz {
+      constructor() {}
+      static async setup() {
+        try {
+          await Promise.race([Oz(), (0, lz.L)(1e4).then((() => {
+            throw new Error("Not loaded after 10000ms")
+          }))])
+        } catch (zz) {
+          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", zz), null
+        }
+        return window.$msstart ? new pz : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
+      }
+      async getSignedInUser() {
+        try {
+          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, lz.L)(1e4).then((() => {
+            throw new Error("No answer after 10000ms")
+          }))])
+        } catch (zz) {
+          return "USER_NOT_CONSENTED" !== (null === zz || void 0 === zz ? void 0 : zz.code) && console.error("Failed to get the signed-in MSN Play player:", zz), null
+        }
+      }
+      async signIn() {
+        return null !== null ? null : await window.$msstart.signInAsync()
+      }
+    }
+    const dz = 20,
+      Fz = {
+        top: [{
+          width: 970,
+          height: 250
+        }, {
+          width: 728,
+          height: 90
+        }, {
+          width: 320,
+          height: 50
+        }],
+        right: [{
+          width: 300,
+          height: 600
+        }, {
+          width: 160,
+          height: 600
+        }, {
+          width: 300,
+          height: 250
+        }, {
+          width: 320,
+          height: 50
+        }],
+        left: [{
+          width: 300,
+          height: 600
+        }, {
+          width: 160,
+          height: 600
+        }, {
+          width: 300,
+          height: 250
+        }, {
+          width: 320,
+          height: 50
+        }]
+      },
+      Zz = {
+        leaderboard: {
+          1: ["right", "left"],
+          5: ["top", "left"]
+        },
+        square: {
+          1: []
+        },
+        skyscraper: {
+          2: []
+        }
+      };
+    class Rz extends Ez.b {
       constructor() {
-        super(), this.name = "nitro", this.bannerAutoRefresh = "alwaysOn", this.videoInFlight = !1
+        super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
       }
       static async setup() {
-        return window.nitroAds = window.nitroAds || {
-          createAd: function() {
-            for (var yb = arguments.length, bb = new Array(yb), Wy = 0; Wy < yb; Wy++) bb[Wy] = arguments[Wy];
-            return new Promise((yb => {
-              window.nitroAds.queue.push(["createAd", bb, yb])
+        return await Oz(), new Rz
+      }
+      playVideoAd(zz, uz) {
+        this.playVideoOrRewarded("video", zz, zz)
+      }
+      playRewarded(zz, uz) {
+        this.playVideoOrRewarded("rewarded", zz, uz)
+      }
+      canShowBloxdAd(zz) {
+        for (const uz in Zz)
+          if (zz.adId in Zz[uz]) return !1;
+        return !0
+      }
+      async renderBanner(zz) {
+        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,iz.c)(zz)}: msn placement is already showing so not requesting`);
+        const uz = Zz[zz.adType][zz.adId];
+        if ((0, lz.F)(uz)) return void console.warn(`AD ${(0,iz.c)(zz)}: no msn placement is configured for this bloxd placement so not showing any ad`);
+        const bz = [];
+        for (const Ez of uz)
+          for (const zz of Fz[Ez])
+            if (zz.width <= window.innerWidth - 40 && zz.height <= window.innerHeight - 40) {
+              const uz = {
+                placement: Ez,
+                width: zz.width,
+                height: zz.height
+              };
+              if (!bz.some((zz => wz(uz, zz)))) {
+                bz.push(uz);
+                break
+              }
+            } if (bz.length > 0) {
+          console.log(`AD ${(0,iz.c)(zz)}: Attempting to show msn units: `, bz);
+          const uz = bz.map((zz => `${zz.placement}:${zz.width}x${zz.height}`));
+          this.currentlyShowingBannerPlacement = {
+            placementId: (0, iz.c)(zz),
+            renderPromise: window.$msstart.showDisplayAdsAsync(uz).then((() => {
+              console.log(`AD ${(0,iz.c)(zz)}: Successfully request msn banner ad`)
+            })).catch((uz => {
+              console.log(`AD ${(0,iz.c)(zz)}: Error while requesting msn banner ad`, uz)
             }))
-          },
-          addUserToken: function() {
-            for (var yb = arguments.length, bb = new Array(yb), Wy = 0; Wy < yb; Wy++) bb[Wy] = arguments[Wy];
-            window.nitroAds.queue.push(["addUserToken", bb])
-          },
-          queue: []
-        }, document.addEventListener("nitroAds.rendered", (yb => {
-          var bb, Wy, Uy;
-          const hy = document.getElementById(null !== (bb = null === (Wy = yb.detail) || void 0 === Wy || null === (Uy = Wy.adInfo) || void 0 === Uy ? void 0 : Uy.adUnitCode) && void 0 !== bb ? bb : "");
-          null !== hy && void 0 !== hy && hy.classList.contains("NitroBanner") && hy.classList.toggle("NitroBannerUnfilled", "blank" === yb.detail.type)
-        })), await (0, hy.b)("https://s.nitropay.com/ads-2842.js", {
-          "data-cfasync": "false"
-        }), new Zy
-      }
-      playVideoAd(yb, bb) {
-        this.showVideoAd(yb, yb)
-      }
-      playRewarded(yb, bb) {
-        this.showVideoAd(yb, bb)
-      }
-      showVideoAd(yb, bb) {
-        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void bb();
-        const Wy = document.getElementById("GenericVideoWrapper"),
-          Uy = document.getElementById("GenericVideoInner");
-        if (null === Wy || null === Uy) return void bb();
-        this.videoInFlight = !0;
-        let hy = !1;
-        const Zy = document.createElement("div");
-        Zy.id = fy, Zy.className = "NitroVideoPlacement";
-        const cb = fy => {
-          if (!hy) {
-            hy = !0, clearTimeout(ly), clearInterval(Ey), document.removeEventListener("nitroAds.adResult", By), document.removeEventListener("nitroAds.rendered", Ky), document.removeEventListener("nitroAds.complete", ey);
-            try {
-              qb.remove(), Zy.querySelectorAll("video").forEach((yb => {
-                yb.pause()
-              })), Zy.remove(), Uy.classList.remove("NitroVideo"), Wy.style.display = "none"
-            } catch (cb) {
-              console.error("AD: Error tearing down Nitro video", cb)
-            } finally {
-              this.videoInFlight = !1, window.adCompleteSoResume(), fy ? yb() : bb()
-            }
           }
+        } else console.warn(`AD ${(0,iz.c)(zz)}: couldn't find an msn unit that fit screen size`)
+      }
+      async clearBanner(zz) {
+        null !== this.currentlyShowingBannerPlacement && (0, iz.c)(zz) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,iz.c)(zz)}: Attempting to clear msn banner ads for banner`, zz), await this.clearAllBannerAds())
+      }
+      async clearAllBannerAds() {
+        try {
+          if (this.isCurrentlyClearingAllBanners) return;
+          this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
+        } catch (zz) {
+          console.log("AD: Error while clearing all msn banner ads", zz)
+        } finally {
+          this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+        }
+      }
+      playVideoOrRewarded(zz, uz, bz) {
+        const Ez = uz => {
+          console.error(`AD: Error while playing MSN ${zz} ad: `, uz), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), bz()
         };
-        let Py = !1;
-        const oy = (yb, bb) => {
-            if (!Py) {
-              if (!yb) return console.log(`AD: Nitro video not filled: ${bb}`), void cb(!1);
-              Py = !0, clearTimeout(ly), ly = setTimeout((() => {
-                console.log("AD: Nitro video never completed"), cb(!1)
-              }), 12e4)
+        if (window.$msstart) {
+          console.log(`AD: Attempting to play MSN ${zz} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
+          const bz = async () => {
+            try {
+              const bz = await window.$msstart.loadAdsAsync("rewarded" === zz),
+                Ez = await window.$msstart.showAdsAsync(bz.instanceId);
+              this.clearAllBannerAds(), await Ez.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${zz} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), uz()
+            } catch (bz) {
+              Ez(bz)
             }
-          },
-          By = yb => {
-            var bb;
-            (null === (bb = yb.detail) || void 0 === bb ? void 0 : bb.id) === fy && oy("filled" === yb.detail.status, yb.detail.status)
-          },
-          Ky = yb => {
-            var bb, Wy;
-            (null === (bb = yb.detail) || void 0 === bb || null === (Wy = bb.adInfo) || void 0 === Wy ? void 0 : Wy.adUnitCode) === fy && oy("blank" !== yb.detail.type, yb.detail.type)
-          },
-          ey = yb => {
-            var bb;
-            (null === (bb = yb.detail) || void 0 === bb ? void 0 : bb.adUnitCode) === fy && cb(!0)
-          },
-          qb = document.createElement("button");
-        qb.className = "NitroVideoSkip", qb.disabled = !0, qb.addEventListener("click", (() => {
-          console.log("AD: Nitro video skipped"), cb(!0)
-        }));
-        let sy = Math.ceil(15);
-        const Sy = () => {
-          if (sy <= 0) return clearInterval(Ey), qb.textContent = "Skip Ad", void(qb.disabled = !1);
-          qb.textContent = `Skip ad in ${sy}s`, sy--
-        };
-        Sy();
-        const Ey = setInterval(Sy, 1e3);
-        let ly = setTimeout((() => {
-          console.log("AD: Nitro video got no result"), cb(!1)
-        }), 1e4);
-        document.addEventListener("nitroAds.adResult", By), document.addEventListener("nitroAds.rendered", Ky), document.addEventListener("nitroAds.complete", ey), Uy.appendChild(Zy), Uy.classList.add("NitroVideo"), Wy.appendChild(qb), Wy.style.display = "flex", window.adStartSoPause(null, {
-          preventMovement: !0
-        }), Promise.resolve(window.nitroAds.createAd(fy, {
-          format: "display",
-          outstream: "only",
-          resultTimeout: 8e3
-        })).catch((yb => {
-          console.error("AD: Nitro failed to create video", yb), cb(!1)
-        })), console.log("AD: Requested Nitro video")
+          };
+          window.adStartSoPause(null, {
+            preventMovement: !0
+          }), bz()
+        } else Ez(`AD: Can't play MSN ${zz} ad because sdk is not loaded`)
       }
-      renderBanner(yb) {
-        const {
-          divId: bb,
-          width: Wy,
-          height: Uy
-        } = yb, hy = `${bb}-nitro`;
-        let fy = document.getElementById(hy);
-        null === fy && (fy = document.createElement("div"), fy.id = hy, fy.className = "NitroBanner", fy.style.setProperty("--nitro-slot-width", `${Wy}px`), fy.style.setProperty("--nitro-slot-height", `${Uy}px`), document.getElementById(bb).appendChild(fy));
-        const Zy = [
-          [String(Wy), String(Uy)]
-        ];
-        Promise.resolve(window.nitroAds.createAd(hy, {
-          sizes: Zy
-        })).catch((yb => {
-          console.error(`AD: Nitro failed to create banner ${hy}:`, yb)
-        })), console.log(`AD: Requested Nitro banner ${hy}`)
+    }
+
+    function Kz(zz) {
+      let uz, bz;
+      switch (zz.placement) {
+        case "top":
+          uz = (window.innerWidth - zz.width) / 2, bz = dz;
+          break;
+        case "right":
+          uz = window.innerWidth - zz.width - dz, bz = window.innerHeight / 2 - zz.height / 2 - 10;
+          break;
+        case "left":
+          uz = dz, bz = window.innerHeight / 2 - zz.height / 2 - 10
       }
-      displayConsentUI() {
-        var yb, bb;
-        null === (yb = (bb = window).__cmp) || void 0 === yb || yb.call(bb, "showModal")
+      return {
+        x1: uz,
+        y1: bz,
+        x2: uz + zz.width,
+        y2: bz + zz.height
       }
-      addPrivacyLinks(yb) {
-        var bb, Wy, Uy, hy;
-        const fy = document.createElement("span");
-        fy.dataset.ccpaLink = "1";
-        const Zy = document.createElement("div");
-        Zy.id = "ncmp-consent-link", yb.replaceChildren(fy, Zy), null === (bb = (Wy = window).__uspapi) || void 0 === bb || bb.call(Wy, "addLink", 1), null === (Uy = (hy = window).__cmp) || void 0 === Uy || Uy.call(hy, "addConsentLink")
-      }
-      newPageSession() {
-        var yb, bb;
-        null === (yb = (bb = window.nitroAds).navigate) || void 0 === yb || yb.call(bb)
-      }
+    }
+
+    function wz(zz, uz) {
+      const bz = Kz(zz),
+        Ez = Kz(uz);
+      return !(bz.x2 <= Ez.x1 || Ez.x2 <= bz.x1 || bz.y2 <= Ez.y1 || Ez.y2 <= bz.y1)
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

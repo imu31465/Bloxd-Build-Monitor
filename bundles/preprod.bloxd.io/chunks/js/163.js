@@ -1,37 +1,37 @@
 export const id = 163;
 export const ids = [163];
 export const modules = {
-  8135: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  8619: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const Uy = {
-      whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a laid-back town. You work jobs, play mini-games and hang out with other players, and there's no rush to do any of it."],
-      howToPlay: ["Press B to pick your starting house, then take the portal to the Town Square and start earning gold. Choose a job. You could help customers at the Market, smash blocks and buildings in Demolition, dig for minerals in Mining, or try Woodcutting and Farming. Jobs level up the more you work them, so your earnings grow over time.", "Spend your gold in the shop on new houses like the Castle, Treehouse, Hobbit Hole or Japanese House. Or grab an Empty Plot and build a house of your own. You can also unlock fast travel, buy flower and wool packs, and sell the stuff you collect. Keep your mood up by resting in your bed, because a happy player earns alot more. Once your home's ready, throw a party and invite everyone over."],
-      features: ["Unlock and Switch Between Houses and Plots", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "PvP Arena and Spleef Mini-Games", "Unlock Fast Travel to Get Around Quickly", "Host Parties and Choose Who Can Visit", "Turn On PvP or Build a Parkour Course at Home"],
-      tips: ["Rest in your bed when your mood drops. Low mood means lower earnings.", "A better bed means bigger earnings, so upgrade it when you can", "Sell the items you collect in the shop for extra gold", "In Mining, head back up to sell when your backpack's full", "Some minerals need a higher Mining level, so keep levelling", "Use the booster in Demolition to multi-jump up tall buildings", "Spleef needs at least 2 players, so bring a mate", "Building a parkour course? Light blue wool is the start, yellow is a checkpoint, orange is the finish and red eliminates players"],
-      similarGames: ["plots", "classic_creative", "fishing", "classic"],
+    const Ez = {
+      whatIs: ["When the sun goes down, the monsters come out. Bloxd Day & Night Survival is a survival mode built around the clock. You mine, craft and build while it's light, then protect your base once it gets dark. Light up your world with torches and see if you can make it through the night. Choose this over regular Survival if you want torches, night-time danger and a Days Survived leaderboard to be the main event. So, how many days can you last?"],
+      howToPlay: ["Use the daylight to gather resources, craft tools and build somewhere safe. Time goes from dawn to day, then dusk to night. The game announces the time, and there's a progress bar showing how far through the cycle you are. Once dusk hits, get ready. At night it gets properly dark and only hostile mobs spawn, right on the surface. That includes the Draugr Huntress and the rare Draugr Warper.", "Torches are your best defence, because hostile mobs won't spawn near light. You get a few free torches when you first join, so stick them around your base. When morning comes, any hostile mobs still out in the sunlight start to burn. Mobs in caves or under cover are fine, though, so watch yourself underground. Sleep in a bed to skip the night, and keep surviving to climb the Days Survived leaderboard."],
+      features: ["Dawn, Day, Dusk and Night Cycle with Time Announcements", "Hostile Mobs That Spawn on the Surface at Night", "Torches to Keep Monsters Away from Your Base", "Free Torches When You First Join", "Sleep in a Bed to Skip the Night", "Days Survived and Days Played Leaderboard", "Mining, Crafting, Base Building and PvP", "Free Private Servers with Day & Night Settings"],
+      tips: ["Get torches up around your base before dusk", "Use the free torches you start with straight away", "Keep an eye on the progress bar so the night doesn't sneak up on you", "Not ready to fight? Stay inside at night", "Wait for sunrise, because monsters left out in the open start to burn", "Careful in caves. Mobs underground don't burn", "Guard your base with Protectors, which you make from diamonds", "In public lobbies, build more than 200 blocks from spawn, since the area near spawn resets every few hours"],
+      similarGames: ["classic_survival", "classic", "classic_survivalGuns", "skyblock"],
       faq: [{
-        question: "What is Bloxd Greenville?",
-        answer: "A town life sim where you build a home, earn gold from jobs and play mini-games with other players."
+        question: "What is Bloxd Day and Night Survival?",
+        answer: "A survival mode on Bloxd.io with a day-night cycle. You build and explore during the day, then use torches to protect your base from the monsters that come out at night."
       }, {
-        question: "How do I earn gold in Greenville?",
-        answer: "Work jobs like Market, Demolition, Mining, Woodcutting and Farming, eliminate players in the Arena and Spleef, and sell what you collect. Keep your mood up as well, because low mood cuts your earnings."
+        question: "How do I stop monsters spawning near my base in Bloxd?",
+        answer: "Torches. Hostile mobs won't spawn near light, so light up your base and the area around it before night falls."
       }, {
-        question: "Can I build my own house in Greenville?",
-        answer: "Yes! Pick one of the ready-made houses in the shop, or unlock an Empty Plot and build from scratch."
+        question: "How do I skip the night in Day & Night Survival?",
+        answer: "Sleep in a bed. By default the night gets skipped once more than half the players are asleep. Private-server owners can change that or turn sleeping off."
       }, {
-        question: "How do I change my house in Bloxd Greenville?",
-        answer: "Unlock new houses in the Houses section of the shop, then switch to whichever one you like."
+        question: "What happens to monsters when the sun comes up?",
+        answer: "Hostile mobs standing in direct sunlight start to burn. Mobs in caves or under cover are safe, so stay alert if you're underground."
       }, {
-        question: "Can my friends visit my house?",
-        answer: "Sure. Turn on Allow Entry, add friends to your whitelist, or host a party to invite everyone over. You also get to choose who's allowed to edit your home."
+        question: "How are Days Survived counted?",
+        answer: "One day is a full cycle of day, dusk, night and dawn. Days Survived is how many days in a row you've stayed alive, and it resets when you die. Days Played keeps going no matter what. You'll see both on the lobby leaderboard."
       }, {
-        question: "Which mini-games are in Greenville?",
-        answer: "Spleef, where you try to make every other player fall, and the Arena, where you battle other players in PvP. Both pay out gold."
+        question: "Can I change the day and night settings on my own server?",
+        answer: "Yes. On your free private server you can pause the cycle, set the time, pick how many players need to sleep and turn the leaderboard on or off, plus a few other options."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

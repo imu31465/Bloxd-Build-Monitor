@@ -1,897 +1,1681 @@
-/*! For license information please see 7jvyee.84.1fddf628.chunk.js.LICENSE.txt */
 export const id = 84;
 export const ids = [84];
 export const modules = {
-  4072: (yb, bb, Wy) => {
-    var Uy;
-    ! function() {
-      var hy = function() {
-        this.init()
-      };
-      hy.prototype = {
-        init: function() {
-          var yb = this || fy;
-          return yb._counter = 1e3, yb._html5AudioPool = [], yb.html5PoolSize = 10, yb._codecs = {}, yb._howls = [], yb._muted = !1, yb._volume = 1, yb._canPlayEvent = "canplaythrough", yb._navigator = "undefined" !== typeof window && window.navigator ? window.navigator : null, yb.masterGain = null, yb.noAudio = !1, yb.usingWebAudio = !0, yb.autoSuspend = !0, yb.ctx = null, yb.autoUnlock = !0, yb._setup(), yb
-        },
-        volume: function(yb) {
-          var bb = this || fy;
-          if (yb = parseFloat(yb), bb.ctx || qb(), "undefined" !== typeof yb && yb >= 0 && yb <= 1) {
-            if (bb._volume = yb, bb._muted) return bb;
-            bb.usingWebAudio && bb.masterGain.gain.setValueAtTime(yb, fy.ctx.currentTime);
-            for (var Wy = 0; Wy < bb._howls.length; Wy++)
-              if (!bb._howls[Wy]._webAudio)
-                for (var Uy = bb._howls[Wy]._getSoundIds(), hy = 0; hy < Uy.length; hy++) {
-                  var Zy = bb._howls[Wy]._soundById(Uy[hy]);
-                  Zy && Zy._node && (Zy._node.volume = Zy._volume * yb)
-                }
-            return bb
-          }
-          return bb._volume
-        },
-        mute: function(yb) {
-          var bb = this || fy;
-          bb.ctx || qb(), bb._muted = yb, bb.usingWebAudio && bb.masterGain.gain.setValueAtTime(yb ? 0 : bb._volume, fy.ctx.currentTime);
-          for (var Wy = 0; Wy < bb._howls.length; Wy++)
-            if (!bb._howls[Wy]._webAudio)
-              for (var Uy = bb._howls[Wy]._getSoundIds(), hy = 0; hy < Uy.length; hy++) {
-                var Zy = bb._howls[Wy]._soundById(Uy[hy]);
-                Zy && Zy._node && (Zy._node.muted = !!yb || Zy._muted)
-              }
-          return bb
-        },
-        stop: function() {
-          for (var yb = this || fy, bb = 0; bb < yb._howls.length; bb++) yb._howls[bb].stop();
-          return yb
-        },
-        unload: function() {
-          for (var yb = this || fy, bb = yb._howls.length - 1; bb >= 0; bb--) yb._howls[bb].unload();
-          return yb.usingWebAudio && yb.ctx && "undefined" !== typeof yb.ctx.close && (yb.ctx.close(), yb.ctx = null, qb()), yb
-        },
-        codecs: function(yb) {
-          return (this || fy)._codecs[yb.replace(/^x-/, "")]
-        },
-        _setup: function() {
-          var yb = this || fy;
-          if (yb.state = yb.ctx && yb.ctx.state || "suspended", yb._autoSuspend(), !yb.usingWebAudio)
-            if ("undefined" !== typeof Audio) try {
-              "undefined" === typeof(new Audio).oncanplaythrough && (yb._canPlayEvent = "canplay")
-            } catch (bb) {
-              yb.noAudio = !0
-            } else yb.noAudio = !0;
-          try {
-            (new Audio).muted && (yb.noAudio = !0)
-          } catch (bb) {}
-          return yb.noAudio || yb._setupCodecs(), yb
-        },
-        _setupCodecs: function() {
-          var yb = this || fy,
-            bb = null;
-          try {
-            bb = "undefined" !== typeof Audio ? new Audio : null
-          } catch (By) {
-            return yb
-          }
-          if (!bb || "function" !== typeof bb.canPlayType) return yb;
-          var Wy = bb.canPlayType("audio/mpeg;").replace(/^no$/, ""),
-            Uy = yb._navigator ? yb._navigator.userAgent : "",
-            hy = Uy.match(/OPR\/([0-6].)/g),
-            Zy = hy && parseInt(hy[0].split("/")[1], 10) < 33,
-            cb = -1 !== Uy.indexOf("Safari") && -1 === Uy.indexOf("Chrome"),
-            Py = Uy.match(/Version\/(.*?) /),
-            oy = cb && Py && parseInt(Py[1], 10) < 15;
-          return yb._codecs = {
-            mp3: !(Zy || !Wy && !bb.canPlayType("audio/mp3;").replace(/^no$/, "")),
-            mpeg: !!Wy,
-            opus: !!bb.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ""),
-            ogg: !!bb.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            oga: !!bb.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            wav: !!(bb.canPlayType('audio/wav; codecs="1"') || bb.canPlayType("audio/wav")).replace(/^no$/, ""),
-            aac: !!bb.canPlayType("audio/aac;").replace(/^no$/, ""),
-            caf: !!bb.canPlayType("audio/x-caf;").replace(/^no$/, ""),
-            m4a: !!(bb.canPlayType("audio/x-m4a;") || bb.canPlayType("audio/m4a;") || bb.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            m4b: !!(bb.canPlayType("audio/x-m4b;") || bb.canPlayType("audio/m4b;") || bb.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            mp4: !!(bb.canPlayType("audio/x-mp4;") || bb.canPlayType("audio/mp4;") || bb.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            weba: !(oy || !bb.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            webm: !(oy || !bb.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            dolby: !!bb.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ""),
-            flac: !!(bb.canPlayType("audio/x-flac;") || bb.canPlayType("audio/flac;")).replace(/^no$/, "")
-          }, yb
-        },
-        _unlockAudio: function() {
-          var yb = this || fy;
-          if (!yb._audioUnlocked && yb.ctx) {
-            yb._audioUnlocked = !1, yb.autoUnlock = !1, yb._mobileUnloaded || 44100 === yb.ctx.sampleRate || (yb._mobileUnloaded = !0, yb.unload()), yb._scratchBuffer = yb.ctx.createBuffer(1, 1, 22050);
-            var bb = function(Wy) {
-              for (; yb._html5AudioPool.length < yb.html5PoolSize;) try {
-                var Uy = new Audio;
-                Uy._unlocked = !0, yb._releaseHtml5Audio(Uy)
-              } catch (Wy) {
-                yb.noAudio = !0;
-                break
-              }
-              for (var hy = 0; hy < yb._howls.length; hy++)
-                if (!yb._howls[hy]._webAudio)
-                  for (var fy = yb._howls[hy]._getSoundIds(), Zy = 0; Zy < fy.length; Zy++) {
-                    var cb = yb._howls[hy]._soundById(fy[Zy]);
-                    cb && cb._node && !cb._node._unlocked && (cb._node._unlocked = !0, cb._node.load())
-                  }
-              yb._autoResume();
-              var Py = yb.ctx.createBufferSource();
-              Py.buffer = yb._scratchBuffer, Py.connect(yb.ctx.destination), "undefined" === typeof Py.start ? Py.noteOn(0) : Py.start(0), "function" === typeof yb.ctx.resume && yb.ctx.resume(), Py.onended = function() {
-                Py.disconnect(0), yb._audioUnlocked = !0, document.removeEventListener("touchstart", bb, !0), document.removeEventListener("touchend", bb, !0), document.removeEventListener("click", bb, !0), document.removeEventListener("keydown", bb, !0);
-                for (var Wy = 0; Wy < yb._howls.length; Wy++) yb._howls[Wy]._emit("unlock")
-              }
-            };
-            return document.addEventListener("touchstart", bb, !0), document.addEventListener("touchend", bb, !0), document.addEventListener("click", bb, !0), document.addEventListener("keydown", bb, !0), yb
-          }
-        },
-        _obtainHtml5Audio: function() {
-          var yb = this || fy;
-          if (yb._html5AudioPool.length) return yb._html5AudioPool.pop();
-          var bb = (new Audio).play();
-          return bb && "undefined" !== typeof Promise && (bb instanceof Promise || "function" === typeof bb.then) && bb.catch((function() {
-            console.warn("HTML5 Audio pool exhausted, returning potentially locked audio object.")
-          })), new Audio
-        },
-        _releaseHtml5Audio: function(yb) {
-          var bb = this || fy;
-          return yb._unlocked && bb._html5AudioPool.push(yb), bb
-        },
-        _autoSuspend: function() {
-          var yb = this;
-          if (yb.autoSuspend && yb.ctx && "undefined" !== typeof yb.ctx.suspend && fy.usingWebAudio) {
-            for (var bb = 0; bb < yb._howls.length; bb++)
-              if (yb._howls[bb]._webAudio)
-                for (var Wy = 0; Wy < yb._howls[bb]._sounds.length; Wy++)
-                  if (!yb._howls[bb]._sounds[Wy].Om) return yb;
-            return yb._suspendTimer && clearTimeout(yb._suspendTimer), yb._suspendTimer = setTimeout((function() {
-              if (yb.autoSuspend) {
-                yb._suspendTimer = null, yb.state = "suspending";
-                var bb = function() {
-                  yb.state = "suspended", yb._resumeAfterSuspend && (delete yb._resumeAfterSuspend, yb._autoResume())
-                };
-                yb.ctx.suspend().then(bb, bb)
-              }
-            }), 3e4), yb
-          }
-        },
-        _autoResume: function() {
-          var yb = this;
-          if (yb.ctx && "undefined" !== typeof yb.ctx.resume && fy.usingWebAudio) return "running" === yb.state && "interrupted" !== yb.ctx.state && yb._suspendTimer ? (clearTimeout(yb._suspendTimer), yb._suspendTimer = null) : "suspended" === yb.state || "running" === yb.state && "interrupted" === yb.ctx.state ? (yb.ctx.resume().then((function() {
-            yb.state = "running";
-            for (var bb = 0; bb < yb._howls.length; bb++) yb._howls[bb]._emit("resume")
-          })), yb._suspendTimer && (clearTimeout(yb._suspendTimer), yb._suspendTimer = null)) : "suspending" === yb.state && (yb._resumeAfterSuspend = !0), yb
-        }
-      };
-      var fy = new hy,
-        Zy = function(yb) {
-          yb.src && 0 !== yb.src.length ? this.init(yb) : console.error("An array of source files must be passed with any new Howl.")
-        };
-      Zy.prototype = {
-        init: function(yb) {
-          var bb = this;
-          return fy.ctx || qb(), bb._autoplay = yb.autoplay || !1, bb._format = "string" !== typeof yb.format ? yb.format : [yb.format], bb._html5 = yb.html5 || !1, bb._muted = yb.mute || !1, bb._loop = yb.loop || !1, bb._pool = yb.pool || 5, bb._preload = "boolean" !== typeof yb.preload && "metadata" !== yb.preload || yb.preload, bb._rate = yb.rate || 1, bb._sprite = yb.sprite || {}, bb._src = "string" !== typeof yb.src ? yb.src : [yb.src], bb._volume = void 0 !== yb.volume ? yb.volume : 1, bb._xhr = {
-            method: yb.xhr && yb.xhr.method ? yb.xhr.method : "GET",
-            headers: yb.xhr && yb.xhr.headers ? yb.xhr.headers : null,
-            withCredentials: !(!yb.xhr || !yb.xhr.withCredentials) && yb.xhr.withCredentials
-          }, bb._duration = 0, bb._state = "unloaded", bb._sounds = [], bb._endTimers = {}, bb._queue = [], bb._playLock = !1, bb._onend = yb.onend ? [{
-            EU: yb.onend
-          }] : [], bb._onfade = yb.onfade ? [{
-            EU: yb.onfade
-          }] : [], bb._onload = yb.onload ? [{
-            EU: yb.onload
-          }] : [], bb._onloaderror = yb.onloaderror ? [{
-            EU: yb.onloaderror
-          }] : [], bb._onplayerror = yb.onplayerror ? [{
-            EU: yb.onplayerror
-          }] : [], bb._onpause = yb.onpause ? [{
-            EU: yb.onpause
-          }] : [], bb._onplay = yb.onplay ? [{
-            EU: yb.onplay
-          }] : [], bb._onstop = yb.onstop ? [{
-            EU: yb.onstop
-          }] : [], bb._onmute = yb.onmute ? [{
-            EU: yb.onmute
-          }] : [], bb._onvolume = yb.onvolume ? [{
-            EU: yb.onvolume
-          }] : [], bb._onrate = yb.onrate ? [{
-            EU: yb.onrate
-          }] : [], bb._onseek = yb.onseek ? [{
-            EU: yb.onseek
-          }] : [], bb._onunlock = yb.onunlock ? [{
-            EU: yb.onunlock
-          }] : [], bb._onresume = [], bb._webAudio = fy.usingWebAudio && !bb._html5, "undefined" !== typeof fy.ctx && fy.ctx && fy.autoUnlock && fy._unlockAudio(), fy._howls.push(bb), bb._autoplay && bb._queue.push({
-            event: "play",
-            action: function() {
-              bb.play()
-            }
-          }), bb._preload && "none" !== bb._preload && bb.load(), bb
-        },
-        load: function() {
-          var yb = this,
-            bb = null;
-          if (fy.noAudio) yb._emit("loaderror", null, "No audio support.");
-          else {
-            "string" === typeof yb._src && (yb._src = [yb._src]);
-            for (var Wy = 0; Wy < yb._src.length; Wy++) {
-              var Uy, hy;
-              if (yb._format && yb._format[Wy]) Uy = yb._format[Wy];
-              else {
-                if ("string" !== typeof(hy = yb._src[Wy])) {
-                  yb._emit("loaderror", null, "Non-string found in selected audio sources - ignoring.");
-                  continue
-                }(Uy = /^data:audio\/([^;,]+);/i.exec(hy)) || (Uy = /\.([^.]+)$/.exec(hy.split("?", 1)[0])), Uy && (Uy = Uy[1].toLowerCase())
-              }
-              if (Uy || console.warn('No file extension was found. Consider using the "format" property or specify an extension.'), Uy && fy.codecs(Uy)) {
-                bb = yb._src[Wy];
-                break
-              }
-            }
-            if (bb) return yb._src = bb, yb._state = "loading", "https:" === window.location.protocol && "http:" === bb.slice(0, 5) && (yb._html5 = !0, yb._webAudio = !1), new cb(yb), yb._webAudio && oy(yb), yb;
-            yb._emit("loaderror", null, "No codec support for selected audio sources.")
-          }
-        },
-        play: function(yb, bb) {
-          var Wy = this,
-            Uy = null;
-          if ("number" === typeof yb) Uy = yb, yb = null;
-          else {
-            if ("string" === typeof yb && "loaded" === Wy._state && !Wy._sprite[yb]) return null;
-            if ("undefined" === typeof yb && (yb = "__default", !Wy._playLock)) {
-              for (var hy = 0, Zy = 0; Zy < Wy._sounds.length; Zy++) Wy._sounds[Zy].Om && !Wy._sounds[Zy]._ended && (hy++, Uy = Wy._sounds[Zy]._id);
-              1 === hy ? yb = null : Uy = null
-            }
-          }
-          var cb = Uy ? Wy._soundById(Uy) : Wy._inactiveSound();
-          if (!cb) return null;
-          if (Uy && !yb && (yb = cb._sprite || "__default"), "loaded" !== Wy._state) {
-            cb._sprite = yb, cb._ended = !1;
-            var Py = cb._id;
-            return Wy._queue.push({
-              event: "play",
-              action: function() {
-                Wy.play(Py)
-              }
-            }), Py
-          }
-          if (Uy && !cb.Om) return bb || Wy._loadQueue("play"), cb._id;
-          Wy._webAudio && fy._autoResume();
-          var oy = Math.max(0, cb._seek > 0 ? cb._seek : Wy._sprite[yb][0] / 1e3),
-            By = Math.max(0, (Wy._sprite[yb][0] + Wy._sprite[yb][1]) / 1e3 - oy),
-            Ky = 1e3 * By / Math.abs(cb._rate),
-            ey = Wy._sprite[yb][0] / 1e3,
-            qb = (Wy._sprite[yb][0] + Wy._sprite[yb][1]) / 1e3;
-          cb._sprite = yb, cb._ended = !1;
-          var sy = function() {
-            cb.Om = !1, cb._seek = oy, cb._start = ey, cb._stop = qb, cb._loop = !(!cb._loop && !Wy._sprite[yb][2])
+  39696: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      startWasmPadGameplay: () => hz
+    });
+    bz(39704);
+    var Ez = bz(39708),
+      nz = bz(39724),
+      iz = bz(1892),
+      lz = bz(39740),
+      Mz = bz(4564),
+      tz = bz(4544),
+      Hz = bz(39742),
+      Oz = bz(39750),
+      pz = bz(4571),
+      dz = bz(39829),
+      Fz = bz(2294),
+      Zz = bz(8530),
+      Rz = bz(39712),
+      Kz = bz(8507);
+    const wz = zz => {
+        const uz = pz.d.indexOf(zz);
+        if (uz < 0) throw new Error(`No core action "${zz}"`);
+        return uz
+      },
+      Xz = wz("primary-fire"),
+      fz = wz("alt-fire"),
+      sz = wz("mid-fire"),
+      rz = wz("jump"),
+      oz = wz("ReloadGun"),
+      Nz = wz("SwapCameraZoom"),
+      vz = wz("TouchAction1"),
+      xz = {
+        SpecialAction1: wz("SpecialAction1"),
+        SpecialAction2: wz("SpecialAction2")
+      },
+      Jz = (zz, uz) => {
+        (0, Fz.q)(Mz.E.PadAction, zz, 0, 0, (0, Fz.p)(uz, performance.now()))
+      },
+      Az = zz => {
+        Jz(zz, lz.yd.Down)
+      },
+      Tz = zz => {
+        Jz(zz, 0)
+      },
+      Lz = zz => {
+        Az(zz), Tz(zz)
+      },
+      Pz = () => {
+        const zz = (0, Oz.j)();
+        return null !== zz && void 0 !== zz && zz.isCoreRunning ? zz : null
+      },
+      Gz = zz => lz.z.playerFlags(zz.api.apiView, 0),
+      az = zz => null !== zz && lz.z.targetBlockId(zz.api.apiView, 0) !== lz.cd,
+      Vz = () => {
+        const zz = (0, Zz.e)(),
+          uz = new Rz.e;
+        let bz = !1;
+        const Ez = (zz, uz) => {
+            (0, Fz.q)(Mz.E.PadLook, lz.Cd.Rate, zz, uz, 0)
+          },
+          nz = () => {
+            bz = !1, uz.reset(), Ez(0, 0)
           };
-          if (!(oy >= qb)) {
-            var Sy = cb._node;
-            if (Wy._webAudio) {
-              var Ey = function() {
-                Wy._playLock = !1, sy(), Wy._refreshBuffer(cb);
-                var yb = cb._muted || Wy._muted ? 0 : cb._volume;
-                Sy.gain.setValueAtTime(yb, fy.ctx.currentTime), cb._playStart = fy.ctx.currentTime, "undefined" === typeof Sy.bufferSource.start ? cb._loop ? Sy.bufferSource.noteGrainOn(0, oy, 86400) : Sy.bufferSource.noteGrainOn(0, oy, By) : cb._loop ? Sy.bufferSource.start(0, oy, 86400) : Sy.bufferSource.start(0, oy, By), Ky !== 1 / 0 && (Wy._endTimers[cb._id] = setTimeout(Wy._ended.bind(Wy, cb), Ky)), bb || setTimeout((function() {
-                  Wy._emit("play", cb._id), Wy._loadQueue()
-                }), 0)
-              };
-              "running" === fy.state && "interrupted" !== fy.ctx.state ? Ey() : (Wy._playLock = !0, Wy.once("resume", Ey), Wy._clearTimer(cb._id))
-            } else {
-              var ly = function() {
-                Sy.currentTime = oy, Sy.muted = cb._muted || Wy._muted || fy._muted || Sy.muted, Sy.volume = cb._volume * fy.volume(), Sy.playbackRate = cb._rate;
-                try {
-                  var Uy = Sy.play();
-                  if (Uy && "undefined" !== typeof Promise && (Uy instanceof Promise || "function" === typeof Uy.then) ? (Wy._playLock = !0, sy(), Uy.then((function() {
-                      Wy._playLock = !1, Sy._unlocked = !0, bb ? Wy._loadQueue() : Wy._emit("play", cb._id)
-                    })).catch((function() {
-                      Wy._playLock = !1, Wy._emit("playerror", cb._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."), cb._ended = !0, cb.Om = !0
-                    }))) : bb || (Wy._playLock = !1, sy(), Wy._emit("play", cb._id)), Sy.playbackRate = cb._rate, Sy.paused) return void Wy._emit("playerror", cb._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
-                  "__default" !== yb || cb._loop ? Wy._endTimers[cb._id] = setTimeout(Wy._ended.bind(Wy, cb), Ky) : (Wy._endTimers[cb._id] = function() {
-                    Wy._ended(cb), Sy.removeEventListener("ended", Wy._endTimers[cb._id], !1)
-                  }, Sy.addEventListener("ended", Wy._endTimers[cb._id], !1))
-                } catch (hy) {
-                  Wy._emit("playerror", cb._id, hy)
-                }
-              };
-              "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" === Sy.src && (Sy.src = Wy._src, Sy.load());
-              var mb = window && window.ejecta || !Sy.readyState && fy._navigator.isCocoonJS;
-              if (Sy.readyState >= 3 || mb) ly();
-              else {
-                Wy._playLock = !0, Wy._state = "loading";
-                var Cy = function() {
-                  Wy._state = "loaded", ly(), Sy.removeEventListener(fy._canPlayEvent, Cy, !1)
-                };
-                Sy.addEventListener(fy._canPlayEvent, Cy, !1), Wy._clearTimer(cb._id)
-              }
-            }
-            return cb._id
-          }
-          Wy._ended(cb)
-        },
-        pause: function(yb) {
-          var bb = this;
-          if ("loaded" !== bb._state || bb._playLock) return bb._queue.push({
-            event: "pause",
-            action: function() {
-              bb.pause(yb)
-            }
-          }), bb;
-          for (var Wy = bb._getSoundIds(yb), Uy = 0; Uy < Wy.length; Uy++) {
-            bb._clearTimer(Wy[Uy]);
-            var hy = bb._soundById(Wy[Uy]);
-            if (hy && !hy.Om && (hy._seek = bb.seek(Wy[Uy]), hy._rateSeek = 0, hy.Om = !0, bb._stopFade(Wy[Uy]), hy._node))
-              if (bb._webAudio) {
-                if (!hy._node.bufferSource) continue;
-                "undefined" === typeof hy._node.bufferSource.stop ? hy._node.bufferSource.noteOff(0) : hy._node.bufferSource.stop(0), bb._cleanBuffer(hy._node)
-              } else isNaN(hy._node.duration) && hy._node.duration !== 1 / 0 || hy._node.pause();
-            arguments[1] || bb._emit("pause", hy ? hy._id : null)
-          }
-          return bb
-        },
-        stop: function(yb, bb) {
-          var Wy = this;
-          if ("loaded" !== Wy._state || Wy._playLock) return Wy._queue.push({
-            event: "stop",
-            action: function() {
-              Wy.stop(yb)
-            }
-          }), Wy;
-          for (var Uy = Wy._getSoundIds(yb), hy = 0; hy < Uy.length; hy++) {
-            Wy._clearTimer(Uy[hy]);
-            var fy = Wy._soundById(Uy[hy]);
-            fy && (fy._seek = fy._start || 0, fy._rateSeek = 0, fy.Om = !0, fy._ended = !0, Wy._stopFade(Uy[hy]), fy._node && (Wy._webAudio ? fy._node.bufferSource && ("undefined" === typeof fy._node.bufferSource.stop ? fy._node.bufferSource.noteOff(0) : fy._node.bufferSource.stop(0), Wy._cleanBuffer(fy._node)) : isNaN(fy._node.duration) && fy._node.duration !== 1 / 0 || (fy._node.currentTime = fy._start || 0, fy._node.pause(), fy._node.duration === 1 / 0 && Wy._clearSound(fy._node))), bb || Wy._emit("stop", fy._id))
-          }
-          return Wy
-        },
-        mute: function(yb, bb) {
-          var Wy = this;
-          if ("loaded" !== Wy._state || Wy._playLock) return Wy._queue.push({
-            event: "mute",
-            action: function() {
-              Wy.mute(yb, bb)
-            }
-          }), Wy;
-          if ("undefined" === typeof bb) {
-            if ("boolean" !== typeof yb) return Wy._muted;
-            Wy._muted = yb
-          }
-          for (var Uy = Wy._getSoundIds(bb), hy = 0; hy < Uy.length; hy++) {
-            var Zy = Wy._soundById(Uy[hy]);
-            Zy && (Zy._muted = yb, Zy._interval && Wy._stopFade(Zy._id), Wy._webAudio && Zy._node ? Zy._node.gain.setValueAtTime(yb ? 0 : Zy._volume, fy.ctx.currentTime) : Zy._node && (Zy._node.muted = !!fy._muted || yb), Wy._emit("mute", Zy._id))
-          }
-          return Wy
-        },
-        volume: function() {
-          var yb, bb, Wy, Uy = this,
-            hy = arguments;
-          if (0 === hy.length) return Uy._volume;
-          if (1 === hy.length || 2 === hy.length && "undefined" === typeof hy[1] ? Uy._getSoundIds().indexOf(hy[0]) >= 0 ? bb = parseInt(hy[0], 10) : yb = parseFloat(hy[0]) : hy.length >= 2 && (yb = parseFloat(hy[0]), bb = parseInt(hy[1], 10)), !("undefined" !== typeof yb && yb >= 0 && yb <= 1)) return (Wy = bb ? Uy._soundById(bb) : Uy._sounds[0]) ? Wy._volume : 0;
-          if ("loaded" !== Uy._state || Uy._playLock) return Uy._queue.push({
-            event: "volume",
-            action: function() {
-              Uy.volume.apply(Uy, hy)
-            }
-          }), Uy;
-          "undefined" === typeof bb && (Uy._volume = yb), bb = Uy._getSoundIds(bb);
-          for (var Zy = 0; Zy < bb.length; Zy++)(Wy = Uy._soundById(bb[Zy])) && (Wy._volume = yb, hy[2] || Uy._stopFade(bb[Zy]), Uy._webAudio && Wy._node && !Wy._muted ? Wy._node.gain.setValueAtTime(yb, fy.ctx.currentTime) : Wy._node && !Wy._muted && (Wy._node.volume = yb * fy.volume()), Uy._emit("volume", Wy._id));
-          return Uy
-        },
-        fade: function(yb, bb, Wy, Uy) {
-          var hy = this;
-          if ("loaded" !== hy._state || hy._playLock) return hy._queue.push({
-            event: "fade",
-            action: function() {
-              hy.fade(yb, bb, Wy, Uy)
-            }
-          }), hy;
-          yb = Math.min(Math.max(0, parseFloat(yb)), 1), bb = Math.min(Math.max(0, parseFloat(bb)), 1), Wy = parseFloat(Wy), hy.volume(yb, Uy);
-          for (var Zy = hy._getSoundIds(Uy), cb = 0; cb < Zy.length; cb++) {
-            var Py = hy._soundById(Zy[cb]);
-            if (Py) {
-              if (Uy || hy._stopFade(Zy[cb]), hy._webAudio && !Py._muted) {
-                var oy = fy.ctx.currentTime,
-                  By = oy + Wy / 1e3;
-                Py._volume = yb, Py._node.gain.setValueAtTime(yb, oy), Py._node.gain.linearRampToValueAtTime(bb, By)
-              }
-              hy._startFadeInterval(Py, yb, bb, Wy, Zy[cb], "undefined" === typeof Uy)
-            }
-          }
-          return hy
-        },
-        _startFadeInterval: function(yb, bb, Wy, Uy, hy, fy) {
-          var Zy = this,
-            cb = bb,
-            Py = Wy - bb,
-            oy = Math.abs(Py / .01),
-            By = Math.max(4, oy > 0 ? Uy / oy : Uy),
-            Ky = Date.now();
-          yb._fadeTo = Wy, yb._interval = setInterval((function() {
-            var hy = (Date.now() - Ky) / Uy;
-            Ky = Date.now(), cb += Py * hy, cb = Math.round(100 * cb) / 100, cb = Py < 0 ? Math.max(Wy, cb) : Math.min(Wy, cb), Zy._webAudio ? yb._volume = cb : Zy.volume(cb, yb._id, !0), fy && (Zy._volume = cb), (Wy < bb && cb <= Wy || Wy > bb && cb >= Wy) && (clearInterval(yb._interval), yb._interval = null, yb._fadeTo = null, Zy.volume(Wy, yb._id), Zy._emit("fade", yb._id))
-          }), By)
-        },
-        _stopFade: function(yb) {
-          var bb = this,
-            Wy = bb._soundById(yb);
-          return Wy && Wy._interval && (bb._webAudio && Wy._node.gain.cancelScheduledValues(fy.ctx.currentTime), clearInterval(Wy._interval), Wy._interval = null, bb.volume(Wy._fadeTo, yb), Wy._fadeTo = null, bb._emit("fade", yb)), bb
-        },
-        loop: function() {
-          var yb, bb, Wy, Uy = this,
-            hy = arguments;
-          if (0 === hy.length) return Uy._loop;
-          if (1 === hy.length) {
-            if ("boolean" !== typeof hy[0]) return !!(Wy = Uy._soundById(parseInt(hy[0], 10))) && Wy._loop;
-            yb = hy[0], Uy._loop = yb
-          } else 2 === hy.length && (yb = hy[0], bb = parseInt(hy[1], 10));
-          for (var fy = Uy._getSoundIds(bb), Zy = 0; Zy < fy.length; Zy++)(Wy = Uy._soundById(fy[Zy])) && (Wy._loop = yb, Uy._webAudio && Wy._node && Wy._node.bufferSource && (Wy._node.bufferSource.loop = yb, yb && (Wy._node.bufferSource.loopStart = Wy._start || 0, Wy._node.bufferSource.loopEnd = Wy._stop, Uy.playing(fy[Zy]) && (Uy.pause(fy[Zy], !0), Uy.play(fy[Zy], !0)))));
-          return Uy
-        },
-        rate: function() {
-          var yb, bb, Wy, Uy = this,
-            hy = arguments;
-          if (0 === hy.length) bb = Uy._sounds[0]._id;
-          else if (1 === hy.length) {
-            Uy._getSoundIds().indexOf(hy[0]) >= 0 ? bb = parseInt(hy[0], 10) : yb = parseFloat(hy[0])
-          } else 2 === hy.length && (yb = parseFloat(hy[0]), bb = parseInt(hy[1], 10));
-          if ("number" !== typeof yb) return (Wy = Uy._soundById(bb)) ? Wy._rate : Uy._rate;
-          if ("loaded" !== Uy._state || Uy._playLock) return Uy._queue.push({
-            event: "rate",
-            action: function() {
-              Uy.rate.apply(Uy, hy)
-            }
-          }), Uy;
-          "undefined" === typeof bb && (Uy._rate = yb), bb = Uy._getSoundIds(bb);
-          for (var Zy = 0; Zy < bb.length; Zy++)
-            if (Wy = Uy._soundById(bb[Zy])) {
-              Uy.playing(bb[Zy]) && (Wy._rateSeek = Uy.seek(bb[Zy]), Wy._playStart = Uy._webAudio ? fy.ctx.currentTime : Wy._playStart), Wy._rate = yb, Uy._webAudio && Wy._node && Wy._node.bufferSource ? Wy._node.bufferSource.playbackRate.setValueAtTime(yb, fy.ctx.currentTime) : Wy._node && (Wy._node.playbackRate = yb);
-              var cb = Uy.seek(bb[Zy]),
-                Py = 1e3 * ((Uy._sprite[Wy._sprite][0] + Uy._sprite[Wy._sprite][1]) / 1e3 - cb) / Math.abs(Wy._rate);
-              !Uy._endTimers[bb[Zy]] && Wy.Om || (Uy._clearTimer(bb[Zy]), Uy._endTimers[bb[Zy]] = setTimeout(Uy._ended.bind(Uy, Wy), Py)), Uy._emit("rate", Wy._id)
-            } return Uy
-        },
-        seek: function() {
-          var yb, bb, Wy = this,
-            Uy = arguments;
-          if (0 === Uy.length) Wy._sounds.length && (bb = Wy._sounds[0]._id);
-          else if (1 === Uy.length) {
-            Wy._getSoundIds().indexOf(Uy[0]) >= 0 ? bb = parseInt(Uy[0], 10) : Wy._sounds.length && (bb = Wy._sounds[0]._id, yb = parseFloat(Uy[0]))
-          } else 2 === Uy.length && (yb = parseFloat(Uy[0]), bb = parseInt(Uy[1], 10));
-          if ("undefined" === typeof bb) return 0;
-          if ("number" === typeof yb && ("loaded" !== Wy._state || Wy._playLock)) return Wy._queue.push({
-            event: "seek",
-            action: function() {
-              Wy.seek.apply(Wy, Uy)
-            }
-          }), Wy;
-          var hy = Wy._soundById(bb);
-          if (hy) {
-            if (!("number" === typeof yb && yb >= 0)) {
-              if (Wy._webAudio) {
-                var Zy = Wy.playing(bb) ? fy.ctx.currentTime - hy._playStart : 0,
-                  cb = hy._rateSeek ? hy._rateSeek - hy._seek : 0;
-                return hy._seek + (cb + Zy * Math.abs(hy._rate))
-              }
-              return hy._node.currentTime
-            }
-            var Py = Wy.playing(bb);
-            Py && Wy.pause(bb, !0), hy._seek = yb, hy._ended = !1, Wy._clearTimer(bb), Wy._webAudio || !hy._node || isNaN(hy._node.duration) || (hy._node.currentTime = yb);
-            var oy = function() {
-              Py && Wy.play(bb, !0), Wy._emit("seek", bb)
-            };
-            if (Py && !Wy._webAudio) {
-              var By = function() {
-                Wy._playLock ? setTimeout(By, 0) : oy()
-              };
-              setTimeout(By, 0)
-            } else oy()
-          }
-          return Wy
-        },
-        playing: function(yb) {
-          var bb = this;
-          if ("number" === typeof yb) {
-            var Wy = bb._soundById(yb);
-            return !!Wy && !Wy.Om
-          }
-          for (var Uy = 0; Uy < bb._sounds.length; Uy++)
-            if (!bb._sounds[Uy].Om) return !0;
-          return !1
-        },
-        duration: function(yb) {
-          var bb = this,
-            Wy = bb._duration,
-            Uy = bb._soundById(yb);
-          return Uy && (Wy = bb._sprite[Uy._sprite][1] / 1e3), Wy
-        },
-        state: function() {
-          return this._state
-        },
-        unload: function() {
-          for (var yb = this, bb = yb._sounds, Wy = 0; Wy < bb.length; Wy++) bb[Wy].Om || yb.stop(bb[Wy]._id), yb._webAudio || (yb._clearSound(bb[Wy]._node), bb[Wy]._node.removeEventListener("error", bb[Wy]._errorFn, !1), bb[Wy]._node.removeEventListener(fy._canPlayEvent, bb[Wy]._loadFn, !1), bb[Wy]._node.removeEventListener("ended", bb[Wy]._endFn, !1), fy._releaseHtml5Audio(bb[Wy]._node)), delete bb[Wy]._node, yb._clearTimer(bb[Wy]._id);
-          var Uy = fy._howls.indexOf(yb);
-          Uy >= 0 && fy._howls.splice(Uy, 1);
-          var hy = !0;
-          for (Wy = 0; Wy < fy._howls.length; Wy++)
-            if (fy._howls[Wy]._src === yb._src || yb._src.indexOf(fy._howls[Wy]._src) >= 0) {
-              hy = !1;
-              break
-            } return Py && hy && delete Py[yb._src], fy.noAudio = !1, yb._state = "unloaded", yb._sounds = [], yb = null, null
-        },
-        on: function(yb, bb, Wy, Uy) {
-          var hy = this["_on" + yb];
-          return "function" === typeof bb && hy.push(Uy ? {
-            id: Wy,
-            EU: bb,
-            once: Uy
-          } : {
-            id: Wy,
-            EU: bb
-          }), this
-        },
-        off: function(yb, bb, Wy) {
-          var Uy = this,
-            hy = Uy["_on" + yb],
-            fy = 0;
-          if ("number" === typeof bb && (Wy = bb, bb = null), bb || Wy)
-            for (fy = 0; fy < hy.length; fy++) {
-              var Zy = Wy === hy[fy].id;
-              if (bb === hy[fy].EU && Zy || !bb && Zy) {
-                hy.splice(fy, 1);
-                break
-              }
-            } else if (yb) Uy["_on" + yb] = [];
-            else {
-              var cb = Object.keys(Uy);
-              for (fy = 0; fy < cb.length; fy++) 0 === cb[fy].indexOf("_on") && Array.isArray(Uy[cb[fy]]) && (Uy[cb[fy]] = [])
-            } return Uy
-        },
-        once: function(yb, bb, Wy) {
-          return this.on(yb, bb, Wy, 1), this
-        },
-        _emit: function(yb, bb, Wy) {
-          for (var Uy = this, hy = Uy["_on" + yb], fy = hy.length - 1; fy >= 0; fy--) hy[fy].id && hy[fy].id !== bb && "load" !== yb || (setTimeout(function(yb) {
-            yb.call(this, bb, Wy)
-          }.bind(Uy, hy[fy].EU), 0), hy[fy].once && Uy.off(yb, hy[fy].EU, hy[fy].id));
-          return Uy._loadQueue(yb), Uy
-        },
-        _loadQueue: function(yb) {
-          var bb = this;
-          if (bb._queue.length > 0) {
-            var Wy = bb._queue[0];
-            Wy.event === yb && (bb._queue.shift(), bb._loadQueue()), yb || Wy.action()
-          }
-          return bb
-        },
-        _ended: function(yb) {
-          var bb = this,
-            Wy = yb._sprite;
-          if (!bb._webAudio && yb._node && !yb._node.paused && !yb._node.ended && yb._node.currentTime < yb._stop) return setTimeout(bb._ended.bind(bb, yb), 100), bb;
-          var Uy = !(!yb._loop && !bb._sprite[Wy][2]);
-          if (bb._emit("end", yb._id), !bb._webAudio && Uy && bb.stop(yb._id, !0).play(yb._id), bb._webAudio && Uy) {
-            bb._emit("play", yb._id), yb._seek = yb._start || 0, yb._rateSeek = 0, yb._playStart = fy.ctx.currentTime;
-            var hy = 1e3 * (yb._stop - yb._start) / Math.abs(yb._rate);
-            bb._endTimers[yb._id] = setTimeout(bb._ended.bind(bb, yb), hy)
-          }
-          return bb._webAudio && !Uy && (yb.Om = !0, yb._ended = !0, yb._seek = yb._start || 0, yb._rateSeek = 0, bb._clearTimer(yb._id), bb._cleanBuffer(yb._node), fy._autoSuspend()), bb._webAudio || Uy || bb.stop(yb._id, !0), bb
-        },
-        _clearTimer: function(yb) {
-          var bb = this;
-          if (bb._endTimers[yb]) {
-            if ("function" !== typeof bb._endTimers[yb]) clearTimeout(bb._endTimers[yb]);
-            else {
-              var Wy = bb._soundById(yb);
-              Wy && Wy._node && Wy._node.removeEventListener("ended", bb._endTimers[yb], !1)
-            }
-            delete bb._endTimers[yb]
-          }
-          return bb
-        },
-        _soundById: function(yb) {
-          for (var bb = this, Wy = 0; Wy < bb._sounds.length; Wy++)
-            if (yb === bb._sounds[Wy]._id) return bb._sounds[Wy];
-          return null
-        },
-        _inactiveSound: function() {
-          var yb = this;
-          yb._drain();
-          for (var bb = 0; bb < yb._sounds.length; bb++)
-            if (yb._sounds[bb]._ended) return yb._sounds[bb].reset();
-          return new cb(yb)
-        },
-        _drain: function() {
-          var yb = this,
-            bb = yb._pool,
-            Wy = 0,
-            Uy = 0;
-          if (!(yb._sounds.length < bb)) {
-            for (Uy = 0; Uy < yb._sounds.length; Uy++) yb._sounds[Uy]._ended && Wy++;
-            for (Uy = yb._sounds.length - 1; Uy >= 0; Uy--) {
-              if (Wy <= bb) return;
-              yb._sounds[Uy]._ended && (yb._webAudio && yb._sounds[Uy]._node && yb._sounds[Uy]._node.disconnect(0), yb._sounds.splice(Uy, 1), Wy--)
-            }
-          }
-        },
-        _getSoundIds: function(yb) {
-          if ("undefined" === typeof yb) {
-            for (var bb = [], Wy = 0; Wy < this._sounds.length; Wy++) bb.push(this._sounds[Wy]._id);
-            return bb
-          }
-          return [yb]
-        },
-        _refreshBuffer: function(yb) {
-          return yb._node.bufferSource = fy.ctx.createBufferSource(), yb._node.bufferSource.buffer = Py[this._src], yb._panner ? yb._node.bufferSource.connect(yb._panner) : yb._node.bufferSource.connect(yb._node), yb._node.bufferSource.loop = yb._loop, yb._loop && (yb._node.bufferSource.loopStart = yb._start || 0, yb._node.bufferSource.loopEnd = yb._stop || 0), yb._node.bufferSource.playbackRate.setValueAtTime(yb._rate, fy.ctx.currentTime), this
-        },
-        _cleanBuffer: function(yb) {
-          var bb = fy._navigator && fy._navigator.vendor.indexOf("Apple") >= 0;
-          if (fy._scratchBuffer && yb.bufferSource && (yb.bufferSource.onended = null, yb.bufferSource.disconnect(0), bb)) try {
-            yb.bufferSource.buffer = fy._scratchBuffer
-          } catch (Wy) {}
-          return yb.bufferSource = null, this
-        },
-        _clearSound: function(yb) {
-          /MSIE |Trident\//.test(fy._navigator && fy._navigator.userAgent) || (yb.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA")
-        }
-      };
-      var cb = function(yb) {
-        this._parent = yb, this.init()
-      };
-      cb.prototype = {
-        init: function() {
-          var yb = this,
-            bb = yb._parent;
-          return yb._muted = bb._muted, yb._loop = bb._loop, yb._volume = bb._volume, yb._rate = bb._rate, yb._seek = 0, yb.Om = !0, yb._ended = !0, yb._sprite = "__default", yb._id = ++fy._counter, bb._sounds.push(yb), yb.create(), yb
-        },
-        create: function() {
-          var yb = this,
-            bb = yb._parent,
-            Wy = fy._muted || yb._muted || yb._parent._muted ? 0 : yb._volume;
-          return bb._webAudio ? (yb._node = "undefined" === typeof fy.ctx.createGain ? fy.ctx.createGainNode() : fy.ctx.createGain(), yb._node.gain.setValueAtTime(Wy, fy.ctx.currentTime), yb._node.paused = !0, yb._node.connect(fy.masterGain)) : fy.noAudio || (yb._node = fy._obtainHtml5Audio(), yb._errorFn = yb._errorListener.bind(yb), yb._node.addEventListener("error", yb._errorFn, !1), yb._loadFn = yb._loadListener.bind(yb), yb._node.addEventListener(fy._canPlayEvent, yb._loadFn, !1), yb._endFn = yb._endListener.bind(yb), yb._node.addEventListener("ended", yb._endFn, !1), yb._node.src = bb._src, yb._node.preload = !0 === bb._preload ? "auto" : bb._preload, yb._node.volume = Wy * fy.volume(), yb._node.load()), yb
-        },
-        reset: function() {
-          var yb = this,
-            bb = yb._parent;
-          return yb._muted = bb._muted, yb._loop = bb._loop, yb._volume = bb._volume, yb._rate = bb._rate, yb._seek = 0, yb._rateSeek = 0, yb.Om = !0, yb._ended = !0, yb._sprite = "__default", yb._id = ++fy._counter, yb
-        },
-        _errorListener: function() {
-          var yb = this;
-          yb._parent._emit("loaderror", yb._id, yb._node.error ? yb._node.error.code : 0), yb._node.removeEventListener("error", yb._errorFn, !1)
-        },
-        _loadListener: function() {
-          var yb = this,
-            bb = yb._parent;
-          bb._duration = Math.ceil(10 * yb._node.duration) / 10, 0 === Object.keys(bb._sprite).length && (bb._sprite = {
-            __default: [0, 1e3 * bb._duration]
-          }), "loaded" !== bb._state && (bb._state = "loaded", bb._emit("load"), bb._loadQueue()), yb._node.removeEventListener(fy._canPlayEvent, yb._loadFn, !1)
-        },
-        _endListener: function() {
-          var yb = this,
-            bb = yb._parent;
-          bb._duration === 1 / 0 && (bb._duration = Math.ceil(10 * yb._node.duration) / 10, bb._sprite.__default[1] === 1 / 0 && (bb._sprite.__default[1] = 1e3 * bb._duration), bb._ended(yb)), yb._node.removeEventListener("ended", yb._endFn, !1)
-        }
-      };
-      var Py = {},
-        oy = function(yb) {
-          var bb = yb._src;
-          if (Py[bb]) return yb._duration = Py[bb].duration, void ey(yb);
-          if (/^data:[^;]+;base64,/.test(bb)) {
-            for (var Wy = atob(bb.split(",")[1]), Uy = new Uint8Array(Wy.length), hy = 0; hy < Wy.length; ++hy) Uy[hy] = Wy.charCodeAt(hy);
-            Ky(Uy.buffer, yb)
-          } else {
-            var fy = new XMLHttpRequest;
-            fy.open(yb._xhr.method, bb, !0), fy.withCredentials = yb._xhr.withCredentials, fy.responseType = "arraybuffer", yb._xhr.headers && Object.keys(yb._xhr.headers).forEach((function(bb) {
-              fy.setRequestHeader(bb, yb._xhr.headers[bb])
-            })), fy.onload = function() {
-              var bb = (fy.status + "")[0];
-              "0" === bb || "2" === bb || "3" === bb ? Ky(fy.response, yb) : yb._emit("loaderror", null, "Failed loading audio file with status: " + fy.status + ".")
-            }, fy.onerror = function() {
-              yb._webAudio && (yb._html5 = !0, yb._webAudio = !1, yb._sounds = [], delete Py[bb], yb.load())
-            }, By(fy)
-          }
-        },
-        By = function(yb) {
-          try {
-            yb.send()
-          } catch (bb) {
-            yb.onerror()
-          }
-        },
-        Ky = function(yb, bb) {
-          var Wy = function() {
-              bb._emit("loaderror", null, "Decoding audio data failed.")
-            },
-            Uy = function(yb) {
-              yb && bb._sounds.length > 0 ? (Py[bb._src] = yb, ey(bb, yb)) : Wy()
-            };
-          "undefined" !== typeof Promise && 1 === fy.ctx.decodeAudioData.length ? fy.ctx.decodeAudioData(yb).then(Uy).catch(Wy) : fy.ctx.decodeAudioData(yb, Uy, Wy)
-        },
-        ey = function(yb, bb) {
-          bb && !yb._duration && (yb._duration = bb.duration), 0 === Object.keys(yb._sprite).length && (yb._sprite = {
-            __default: [0, 1e3 * yb._duration]
-          }), "loaded" !== yb._state && (yb._state = "loaded", yb._emit("load"), yb._loadQueue())
-        },
-        qb = function() {
-          if (fy.usingWebAudio) {
-            try {
-              "undefined" !== typeof AudioContext ? fy.ctx = new AudioContext : "undefined" !== typeof webkitAudioContext ? fy.ctx = new webkitAudioContext : fy.usingWebAudio = !1
-            } catch (hy) {
-              fy.usingWebAudio = !1
-            }
-            fy.ctx || (fy.usingWebAudio = !1);
-            var yb = /iP(hone|od|ad)/.test(fy._navigator && fy._navigator.platform),
-              bb = fy._navigator && fy._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/),
-              Wy = bb ? parseInt(bb[1], 10) : null;
-            if (yb && Wy && Wy < 9) {
-              var Uy = /safari/.test(fy._navigator && fy._navigator.userAgent.toLowerCase());
-              fy._navigator && !Uy && (fy.usingWebAudio = !1)
-            }
-            fy.usingWebAudio && (fy.masterGain = "undefined" === typeof fy.ctx.createGain ? fy.ctx.createGainNode() : fy.ctx.createGain(), fy.masterGain.gain.setValueAtTime(fy._muted ? 0 : fy._volume, fy.ctx.currentTime), fy.masterGain.connect(fy.ctx.destination)), fy._setup()
-          }
-        };
-      void 0 === (Uy = function() {
         return {
-          Howler: fy,
-          Howl: Zy
+          update: (nz, iz, tz) => {
+            bz || (zz.discardPending(), bz = !0);
+            const Hz = (0, Rz.t)(uz, nz, iz, tz, performance.now());
+            Ez(Hz.yawRadPerSec, Hz.pitchRadPerSec);
+            const Oz = zz.drainLookDelta();
+            0 === Oz.QJ && 0 === Oz.eJ || (0, Fz.q)(Mz.E.PadLook, lz.Cd.Gyro, Oz.QJ, Oz.eJ, 0)
+          },
+          release: nz,
+          uninstall: nz
         }
-      }.apply(bb, [])) || (yb.exports = Uy), bb.Howler = fy, bb.Howl = Zy, "undefined" !== typeof Wy.g ? (Wy.g.HowlerGlobal = hy, Wy.g.Howler = fy, Wy.g.Howl = Zy, Wy.g.Sound = cb) : "undefined" !== typeof window && (window.HowlerGlobal = hy, window.Howler = fy, window.Howl = Zy, window.Sound = cb)
-    }(),
-    function() {
-      var yb;
-      HowlerGlobal.prototype._pos = [0, 0, 0], HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0], HowlerGlobal.prototype.stereo = function(yb) {
-        var bb = this;
-        if (!bb.ctx || !bb.ctx.listener) return bb;
-        for (var Wy = bb._howls.length - 1; Wy >= 0; Wy--) bb._howls[Wy].stereo(yb);
-        return bb
-      }, HowlerGlobal.prototype.pos = function(yb, bb, Wy) {
-        var Uy = this;
-        return Uy.ctx && Uy.ctx.listener ? (bb = "number" !== typeof bb ? Uy._pos[1] : bb, Wy = "number" !== typeof Wy ? Uy._pos[2] : Wy, "number" !== typeof yb ? Uy._pos : (Uy._pos = [yb, bb, Wy], "undefined" !== typeof Uy.ctx.listener.positionX ? (Uy.ctx.listener.positionX.setTargetAtTime(Uy._pos[0], Howler.ctx.currentTime, .1), Uy.ctx.listener.positionY.setTargetAtTime(Uy._pos[1], Howler.ctx.currentTime, .1), Uy.ctx.listener.positionZ.setTargetAtTime(Uy._pos[2], Howler.ctx.currentTime, .1)) : Uy.ctx.listener.setPosition(Uy._pos[0], Uy._pos[1], Uy._pos[2]), Uy)) : Uy
-      }, HowlerGlobal.prototype.orientation = function(yb, bb, Wy, Uy, hy, fy) {
-        var Zy = this;
-        if (!Zy.ctx || !Zy.ctx.listener) return Zy;
-        var cb = Zy._orientation;
-        return bb = "number" !== typeof bb ? cb[1] : bb, Wy = "number" !== typeof Wy ? cb[2] : Wy, Uy = "number" !== typeof Uy ? cb[3] : Uy, hy = "number" !== typeof hy ? cb[4] : hy, fy = "number" !== typeof fy ? cb[5] : fy, "number" !== typeof yb ? cb : (Zy._orientation = [yb, bb, Wy, Uy, hy, fy], "undefined" !== typeof Zy.ctx.listener.forwardX ? (Zy.ctx.listener.forwardX.setTargetAtTime(yb, Howler.ctx.currentTime, .1), Zy.ctx.listener.forwardY.setTargetAtTime(bb, Howler.ctx.currentTime, .1), Zy.ctx.listener.forwardZ.setTargetAtTime(Wy, Howler.ctx.currentTime, .1), Zy.ctx.listener.upX.setTargetAtTime(Uy, Howler.ctx.currentTime, .1), Zy.ctx.listener.upY.setTargetAtTime(hy, Howler.ctx.currentTime, .1), Zy.ctx.listener.upZ.setTargetAtTime(fy, Howler.ctx.currentTime, .1)) : Zy.ctx.listener.setOrientation(yb, bb, Wy, Uy, hy, fy), Zy)
-      }, Howl.prototype.init = (yb = Howl.prototype.init, function(bb) {
-        var Wy = this;
-        return Wy._orientation = bb.orientation || [1, 0, 0], Wy._stereo = bb.stereo || null, Wy._pos = bb.pos || null, Wy._pannerAttr = {
-          coneInnerAngle: "undefined" !== typeof bb.coneInnerAngle ? bb.coneInnerAngle : 360,
-          coneOuterAngle: "undefined" !== typeof bb.coneOuterAngle ? bb.coneOuterAngle : 360,
-          coneOuterGain: "undefined" !== typeof bb.coneOuterGain ? bb.coneOuterGain : 0,
-          distanceModel: "undefined" !== typeof bb.distanceModel ? bb.distanceModel : "inverse",
-          maxDistance: "undefined" !== typeof bb.maxDistance ? bb.maxDistance : 1e4,
-          panningModel: "undefined" !== typeof bb.panningModel ? bb.panningModel : "HRTF",
-          refDistance: "undefined" !== typeof bb.refDistance ? bb.refDistance : 1,
-          rolloffFactor: "undefined" !== typeof bb.rolloffFactor ? bb.rolloffFactor : 1
-        }, Wy._onstereo = bb.onstereo ? [{
-          EU: bb.onstereo
-        }] : [], Wy._onpos = bb.onpos ? [{
-          EU: bb.onpos
-        }] : [], Wy._onorientation = bb.onorientation ? [{
-          EU: bb.onorientation
-        }] : [], yb.call(this, bb)
-      }), Howl.prototype.stereo = function(yb, Wy) {
-        var Uy = this;
-        if (!Uy._webAudio) return Uy;
-        if ("loaded" !== Uy._state) return Uy._queue.push({
-          event: "stereo",
-          action: function() {
-            Uy.stereo(yb, Wy)
+      },
+      mz = () => {
+        const zz = Pz();
+        return null !== zz && 0 !== (Gz(zz) & lz.Id.PadSneakToggled)
+      },
+      qz = () => {
+        const zz = (zz => {
+          const uz = zz => function() {
+            return (0, dz.e)(), zz(...arguments)
+          };
+          return {
+            primaryFireDown: uz((() => (Az(Xz), 0))),
+            primaryFireUp: uz((() => {
+              Tz(Xz)
+            })),
+            altFireDown: uz((() => (Az(fz), 0))),
+            altFireUp: uz((() => {
+              Tz(fz)
+            })),
+            jumpDown: uz((() => {
+              Lz(rz)
+            })),
+            specialActionDown: uz((zz => {
+              Az(xz[zz])
+            })),
+            specialActionUp: uz((zz => {
+              Tz(xz[zz])
+            })),
+            reloadGun: uz((() => {
+              Lz(oz)
+            })),
+            dropItem: uz((zz => {
+              Jz(lz.zd.Drop, lz.yd.Down | (zz ? lz.yd.Stack : 0))
+            })),
+            swapCameraZoom: uz((() => {
+              Lz(Nz)
+            })),
+            pickBlock: uz((() => (Lz(sz), az(zz()))))
           }
-        }), Uy;
-        var hy = "undefined" === typeof Howler.ctx.createStereoPanner ? "spatial" : "stereo";
-        if ("undefined" === typeof Wy) {
-          if ("number" !== typeof yb) return Uy._stereo;
-          Uy._stereo = yb, Uy._pos = [yb, 0, 0]
-        }
-        for (var fy = Uy._getSoundIds(Wy), Zy = 0; Zy < fy.length; Zy++) {
-          var cb = Uy._soundById(fy[Zy]);
-          if (cb) {
-            if ("number" !== typeof yb) return cb._stereo;
-            cb._stereo = yb, cb._pos = [yb, 0, 0], cb._node && (cb._pannerAttr.panningModel = "equalpower", cb._panner && cb._panner.pan || bb(cb, hy), "spatial" === hy ? "undefined" !== typeof cb._panner.positionX ? (cb._panner.positionX.setValueAtTime(yb, Howler.ctx.currentTime), cb._panner.positionY.setValueAtTime(0, Howler.ctx.currentTime), cb._panner.positionZ.setValueAtTime(0, Howler.ctx.currentTime)) : cb._panner.setPosition(yb, 0, 0) : cb._panner.pan.setValueAtTime(yb, Howler.ctx.currentTime)), Uy._emit("stereo", cb._id)
+        })(Pz);
+        let uz = !1,
+          bz = null;
+        const Ez = () => {
+          var zz;
+          null === (zz = bz) || void 0 === zz || zz(), bz = null
+        };
+        return {
+          bodies: () => zz,
+          look: Vz(),
+          move: (zz, bz) => {
+            var nz;
+            Ez();
+            const {
+              bits: iz,
+              flips: Mz
+            } = (zz => {
+              if (null === zz) return {
+                bits: lz.Bd.Peek,
+                flips: 0
+              };
+              const uz = zz.sneakHeld ? lz.Bd.SneakHeld : 0;
+              return "hold" === zz.mode ? {
+                bits: uz | lz.Bd.SneakHoldMode,
+                flips: zz.sneakTogglePressed ? 1 : 0
+              } : {
+                bits: uz,
+                flips: zz.sneakPressed || zz.sneakTogglePressed ? 1 : 0
+              }
+            })(bz);
+            null !== (nz = Pz()) && void 0 !== nz && nz.padMove(zz.x, zz.y, zz.magnitude, zz.headingOffset, (zz => lz.Bd.Active | (zz.jumpHeld ? lz.Bd.JumpHeld : 0) | (zz.jumpPressed ? lz.Bd.JumpPressed : 0) | (zz.running ? lz.Bd.Running : 0) | (zz.sprintHeld ? lz.Bd.SprintHeld : 0))(zz) | iz, Mz) && (uz = !0), (0, Kz.e)(mz())
+          },
+          stopMoving: () => {
+            var zz;
+            uz && (uz = !(null !== (zz = Pz()) && void 0 !== zz && zz.padMove(0, 0, 0, 0, 0, 0)), Ez(), bz = (0, tz.A)((() => {
+              Ez(), (0, Kz.e)(mz())
+            })))
+          },
+          uninstall: Ez,
+          deviceChanged: zz => {
+            var bz;
+            "touch" === zz ? ((0, Kz.e)(!1), null !== (bz = Pz()) && void 0 !== bz && bz.padMove(0, 0, 0, 0, lz.Bd.EndToggle, 0) && (uz = !1)) : "gamepad" === zz && (0, Kz.e)(mz())
+          },
+          hasPlayer: () => null !== Pz(),
+          isPlayerDead: () => {
+            var zz;
+            return !1 === (null === (zz = Pz()) || void 0 === zz ? void 0 : zz.localPlayerAlive())
+          },
+          isReplayMode: () => {
+            const zz = Pz();
+            return null !== zz && 0 !== (Gz(zz) & lz.Id.Replay)
+          },
+          isFreeCameraOn: () => {
+            const zz = Pz();
+            return null !== zz && 0 !== (Gz(zz) & lz.Id.FreeCam)
+          },
+          targetsBlock: () => az(Pz()),
+          selectedSlotEmpty: () => {
+            var zz;
+            return !(null !== (zz = Pz()) && void 0 !== zz && zz.items.yM())
+          },
+          pickBlockAllowed: () => !!iz.b.get("creative") && !!iz.b.get("canPickBlocks"),
+          scrollHotbar: zz => {
+            Jz(lz.zd.Hotbar, lz.yd.Down | (zz > 0 ? lz.yd.Next : 0))
+          },
+          hasFullInventory: Hz.g,
+          hasLobbyLeaderboard: () => !!iz.b.get("lobbyLeaderboardInfo"),
+          contextActionInputs: () => {
+            var zz, uz, bz, Ez;
+            const nz = Pz();
+            return {
+              holdingGun: !1 !== (null === nz || void 0 === nz ? void 0 : nz.localPlayerAlive()) && "Gun" === (null === nz || void 0 === nz || null === (zz = nz.items.yM()) || void 0 === zz || null === (uz = zz.typeObj) || void 0 === uz ? void 0 : uz.type),
+              customButtons: null !== (bz = iz.b.get("customButtons")) && void 0 !== bz ? bz : null,
+              touchscreenActionButton: null !== (Ez = iz.b.get("touchscreenActionButton")) && void 0 !== Ez ? Ez : null
+            }
+          },
+          pressTouchButton: zz => {
+            zz ? Az(vz) : Tz(vz)
           }
         }
-        return Uy
-      }, Howl.prototype.pos = function(yb, Wy, Uy, hy) {
-        var fy = this;
-        if (!fy._webAudio) return fy;
-        if ("loaded" !== fy._state) return fy._queue.push({
-          event: "pos",
-          action: function() {
-            fy.pos(yb, Wy, Uy, hy)
-          }
-        }), fy;
-        if (Wy = "number" !== typeof Wy ? 0 : Wy, Uy = "number" !== typeof Uy ? -.5 : Uy, "undefined" === typeof hy) {
-          if ("number" !== typeof yb) return fy._pos;
-          fy._pos = [yb, Wy, Uy]
+      },
+      hz = () => {
+        const zz = (0, nz.d)(qz()),
+          uz = (0, Ez.e)(),
+          bz = null;
+        return () => {
+          zz(), uz(), null === bz || void 0 === bz || bz()
         }
-        for (var Zy = fy._getSoundIds(hy), cb = 0; cb < Zy.length; cb++) {
-          var Py = fy._soundById(Zy[cb]);
-          if (Py) {
-            if ("number" !== typeof yb) return Py._pos;
-            Py._pos = [yb, Wy, Uy], Py._node && (Py._panner && !Py._panner.pan || bb(Py, "spatial"), "undefined" !== typeof Py._panner.positionX ? (Py._panner.positionX.setValueAtTime(yb, Howler.ctx.currentTime), Py._panner.positionY.setValueAtTime(Wy, Howler.ctx.currentTime), Py._panner.positionZ.setValueAtTime(Uy, Howler.ctx.currentTime)) : Py._panner.setPosition(yb, Wy, Uy)), fy._emit("pos", Py._id)
-          }
-        }
-        return fy
-      }, Howl.prototype.orientation = function(yb, Wy, Uy, hy) {
-        var fy = this;
-        if (!fy._webAudio) return fy;
-        if ("loaded" !== fy._state) return fy._queue.push({
-          event: "orientation",
-          action: function() {
-            fy.orientation(yb, Wy, Uy, hy)
-          }
-        }), fy;
-        if (Wy = "number" !== typeof Wy ? fy._orientation[1] : Wy, Uy = "number" !== typeof Uy ? fy._orientation[2] : Uy, "undefined" === typeof hy) {
-          if ("number" !== typeof yb) return fy._orientation;
-          fy._orientation = [yb, Wy, Uy]
-        }
-        for (var Zy = fy._getSoundIds(hy), cb = 0; cb < Zy.length; cb++) {
-          var Py = fy._soundById(Zy[cb]);
-          if (Py) {
-            if ("number" !== typeof yb) return Py._orientation;
-            Py._orientation = [yb, Wy, Uy], Py._node && (Py._panner || (Py._pos || (Py._pos = fy._pos || [0, 0, -.5]), bb(Py, "spatial")), "undefined" !== typeof Py._panner.orientationX ? (Py._panner.orientationX.setValueAtTime(yb, Howler.ctx.currentTime), Py._panner.orientationY.setValueAtTime(Wy, Howler.ctx.currentTime), Py._panner.orientationZ.setValueAtTime(Uy, Howler.ctx.currentTime)) : Py._panner.setOrientation(yb, Wy, Uy)), fy._emit("orientation", Py._id)
-          }
-        }
-        return fy
-      }, Howl.prototype.pannerAttr = function() {
-        var yb, Wy, Uy, hy = this,
-          fy = arguments;
-        if (!hy._webAudio) return hy;
-        if (0 === fy.length) return hy._pannerAttr;
-        if (1 === fy.length) {
-          if ("object" !== typeof fy[0]) return (Uy = hy._soundById(parseInt(fy[0], 10))) ? Uy._pannerAttr : hy._pannerAttr;
-          yb = fy[0], "undefined" === typeof Wy && (yb.pannerAttr || (yb.pannerAttr = {
-            coneInnerAngle: yb.coneInnerAngle,
-            coneOuterAngle: yb.coneOuterAngle,
-            coneOuterGain: yb.coneOuterGain,
-            distanceModel: yb.distanceModel,
-            maxDistance: yb.maxDistance,
-            refDistance: yb.refDistance,
-            rolloffFactor: yb.rolloffFactor,
-            panningModel: yb.panningModel
-          }), hy._pannerAttr = {
-            coneInnerAngle: "undefined" !== typeof yb.pannerAttr.coneInnerAngle ? yb.pannerAttr.coneInnerAngle : hy._coneInnerAngle,
-            coneOuterAngle: "undefined" !== typeof yb.pannerAttr.coneOuterAngle ? yb.pannerAttr.coneOuterAngle : hy._coneOuterAngle,
-            coneOuterGain: "undefined" !== typeof yb.pannerAttr.coneOuterGain ? yb.pannerAttr.coneOuterGain : hy._coneOuterGain,
-            distanceModel: "undefined" !== typeof yb.pannerAttr.distanceModel ? yb.pannerAttr.distanceModel : hy._distanceModel,
-            maxDistance: "undefined" !== typeof yb.pannerAttr.maxDistance ? yb.pannerAttr.maxDistance : hy._maxDistance,
-            refDistance: "undefined" !== typeof yb.pannerAttr.refDistance ? yb.pannerAttr.refDistance : hy._refDistance,
-            rolloffFactor: "undefined" !== typeof yb.pannerAttr.rolloffFactor ? yb.pannerAttr.rolloffFactor : hy._rolloffFactor,
-            panningModel: "undefined" !== typeof yb.pannerAttr.panningModel ? yb.pannerAttr.panningModel : hy._panningModel
-          })
-        } else 2 === fy.length && (yb = fy[0], Wy = parseInt(fy[1], 10));
-        for (var Zy = hy._getSoundIds(Wy), cb = 0; cb < Zy.length; cb++)
-          if (Uy = hy._soundById(Zy[cb])) {
-            var Py = Uy._pannerAttr;
-            Py = {
-              coneInnerAngle: "undefined" !== typeof yb.coneInnerAngle ? yb.coneInnerAngle : Py.coneInnerAngle,
-              coneOuterAngle: "undefined" !== typeof yb.coneOuterAngle ? yb.coneOuterAngle : Py.coneOuterAngle,
-              coneOuterGain: "undefined" !== typeof yb.coneOuterGain ? yb.coneOuterGain : Py.coneOuterGain,
-              distanceModel: "undefined" !== typeof yb.distanceModel ? yb.distanceModel : Py.distanceModel,
-              maxDistance: "undefined" !== typeof yb.maxDistance ? yb.maxDistance : Py.maxDistance,
-              refDistance: "undefined" !== typeof yb.refDistance ? yb.refDistance : Py.refDistance,
-              rolloffFactor: "undefined" !== typeof yb.rolloffFactor ? yb.rolloffFactor : Py.rolloffFactor,
-              panningModel: "undefined" !== typeof yb.panningModel ? yb.panningModel : Py.panningModel
-            };
-            var oy = Uy._panner;
-            oy ? (oy.coneInnerAngle = Py.coneInnerAngle, oy.coneOuterAngle = Py.coneOuterAngle, oy.coneOuterGain = Py.coneOuterGain, oy.distanceModel = Py.distanceModel, oy.maxDistance = Py.maxDistance, oy.refDistance = Py.refDistance, oy.rolloffFactor = Py.rolloffFactor, oy.panningModel = Py.panningModel) : (Uy._pos || (Uy._pos = hy._pos || [0, 0, -.5]), bb(Uy, "spatial"))
-          } return hy
-      }, Sound.prototype.init = function(yb) {
-        return function() {
-          var bb = this,
-            Wy = bb._parent;
-          bb._orientation = Wy._orientation, bb._stereo = Wy._stereo, bb._pos = Wy._pos, bb._pannerAttr = Wy._pannerAttr, yb.call(this), bb._stereo ? Wy.stereo(bb._stereo) : bb._pos && Wy.pos(bb._pos[0], bb._pos[1], bb._pos[2], bb._id)
-        }
-      }(Sound.prototype.init), Sound.prototype.reset = function(yb) {
-        return function() {
-          var bb = this,
-            Wy = bb._parent;
-          return bb._orientation = Wy._orientation, bb._stereo = Wy._stereo, bb._pos = Wy._pos, bb._pannerAttr = Wy._pannerAttr, bb._stereo ? Wy.stereo(bb._stereo) : bb._pos ? Wy.pos(bb._pos[0], bb._pos[1], bb._pos[2], bb._id) : bb._panner && (bb._panner.disconnect(0), bb._panner = void 0, Wy._refreshBuffer(bb)), yb.call(this)
-        }
-      }(Sound.prototype.reset);
-      var bb = function(yb, bb) {
-        "spatial" === (bb = bb || "spatial") ? (yb._panner = Howler.ctx.createPanner(), yb._panner.coneInnerAngle = yb._pannerAttr.coneInnerAngle, yb._panner.coneOuterAngle = yb._pannerAttr.coneOuterAngle, yb._panner.coneOuterGain = yb._pannerAttr.coneOuterGain, yb._panner.distanceModel = yb._pannerAttr.distanceModel, yb._panner.maxDistance = yb._pannerAttr.maxDistance, yb._panner.refDistance = yb._pannerAttr.refDistance, yb._panner.rolloffFactor = yb._pannerAttr.rolloffFactor, yb._panner.panningModel = yb._pannerAttr.panningModel, "undefined" !== typeof yb._panner.positionX ? (yb._panner.positionX.setValueAtTime(yb._pos[0], Howler.ctx.currentTime), yb._panner.positionY.setValueAtTime(yb._pos[1], Howler.ctx.currentTime), yb._panner.positionZ.setValueAtTime(yb._pos[2], Howler.ctx.currentTime)) : yb._panner.setPosition(yb._pos[0], yb._pos[1], yb._pos[2]), "undefined" !== typeof yb._panner.orientationX ? (yb._panner.orientationX.setValueAtTime(yb._orientation[0], Howler.ctx.currentTime), yb._panner.orientationY.setValueAtTime(yb._orientation[1], Howler.ctx.currentTime), yb._panner.orientationZ.setValueAtTime(yb._orientation[2], Howler.ctx.currentTime)) : yb._panner.setOrientation(yb._orientation[0], yb._orientation[1], yb._orientation[2])) : (yb._panner = Howler.ctx.createStereoPanner(), yb._panner.pan.setValueAtTime(yb._stereo, Howler.ctx.currentTime)), yb._panner.connect(yb._node), yb.Om || yb._parent.pause(yb._id, !0).play(yb._id, !0)
       }
-    }()
+  },
+  4564: (zz, uz, bz) => {
+    bz.d(uz, {
+      $: () => Jz,
+      A: () => iz,
+      Ab: () => Pz,
+      Cb: () => Uz,
+      E: () => Zz,
+      Eb: () => az,
+      Gb: () => mz,
+      I: () => Wz,
+      Jb: () => qz,
+      M: () => Hz,
+      Mb: () => fz,
+      N: () => Rz,
+      Ob: () => sz,
+      P: () => tz,
+      Q: () => dz,
+      Qb: () => gz,
+      S: () => pz,
+      Tb: () => nz,
+      W: () => Nz,
+      Wb: () => Qz,
+      Z: () => xz,
+      ab: () => vz,
+      bb: () => Az,
+      c: () => Dz,
+      cb: () => cz,
+      fb: () => hz,
+      g: () => yz,
+      j: () => Oz,
+      jb: () => Vz,
+      m: () => Xz,
+      mb: () => Tz,
+      o: () => Sz,
+      pb: () => Gz,
+      q: () => wz,
+      qb: () => Lz,
+      s: () => Kz,
+      u: () => lz,
+      ub: () => Fz,
+      vb: () => oz,
+      wb: () => rz,
+      x: () => Mz,
+      y: () => Ez
+    });
+    const Ez = 32,
+      nz = 33.333333333333336,
+      iz = {
+        AbiVersion: 0,
+        Status: 1,
+        LastError: 2,
+        ErrorCount: 3,
+        FrameIndex: 4,
+        TicksRun: 5,
+        TicksDropped: 6,
+        Alpha: 7,
+        NetOutPtr: 8,
+        NetOutLen: 9,
+        WorkerOutPtr: 10,
+        WorkerOutLen: 11,
+        EventsPtr: 12,
+        EventsLen: 13,
+        ScenePtr: 14,
+        SceneLen: 15,
+        TickIndex: 16,
+        LastErrorDetail: 17,
+        RenderPending: 18,
+        GpuSampled: 19,
+        GpuTimed: 20,
+        GpuFrameUs: 21,
+        TickUs: 22,
+        RenderUs: 23,
+        FirstView: 24,
+        ChunksCancelled: 25,
+        PingSent: 26,
+        NetInKept: 27,
+        FrameDraw: 28,
+        Pacing: 29,
+        PacingLagUs: 30,
+        LoadSteps: 31
+      },
+      lz = {
+        NotYet: 0,
+        Drawn: 1,
+        Backstop: 2,
+        HeldBackstop: 3
+      },
+      Mz = {
+        NotDrawn: 0,
+        Drawn: 1,
+        Paced: 2
+      },
+      tz = {
+        AheadMask: 15,
+        Joining: 64,
+        Tiered: 128,
+        LagsShift: 8,
+        SwitchesShift: 20,
+        CountMask: 4095
+      },
+      Hz = {
+        TerrainDrawn: 1,
+        ChunkRequested: 2,
+        ChunkStored: 4,
+        MeshLanded: 8,
+        PlayerChunk: 16
+      },
+      Oz = {
+        Look: 0,
+        Remesh: 1
+      },
+      pz = 8,
+      dz = 1,
+      Fz = {
+        Edit: 0,
+        Sent: 1,
+        Done: 2,
+        Failed: 3,
+        Shown: 4,
+        Replaced: 5,
+        Emptied: 6
+      },
+      Zz = {
+        KeyDown: 1,
+        KeyUp: 2,
+        MouseMove: 3,
+        MouseDown: 4,
+        MouseUp: 5,
+        Wheel: 6,
+        TouchStart: 7,
+        TouchMove: 8,
+        TouchEnd: 9,
+        TouchCancel: 10,
+        PointerLock: 11,
+        Resize: 12,
+        Focus: 13,
+        Blur: 14,
+        UiPrefs: 15,
+        Binding: 16,
+        UiCapture: 17,
+        Sensitivity: 18,
+        Joystick: 19,
+        TouchButton: 20,
+        TouchZone: 21,
+        Options: 22,
+        AntiCheat: 23,
+        PadAction: 24,
+        PadLook: 25,
+        EnvPrefs: 32
+      },
+      Rz = {
+        Frame: 1,
+        Open: 2,
+        Close: 3
+      },
+      Kz = {
+        RawMessage: 1,
+        CoreErrors: 2,
+        LocalHurt: 16,
+        AttackHit: 17,
+        HealthChanged: 18,
+        LocalPlayerBound: 19,
+        ConnectionState: 20,
+        ReconnectGrace: 5,
+        GameCalls: 96,
+        LocalTeleported: 21,
+        PhysicsType: 22,
+        VehicleEffect: 23,
+        InputAction: 24,
+        ZoomChanged: 25,
+        ZoomDisabled: 26,
+        SendRefused: 27,
+        KeepAliveDue: 28,
+        GameCamera: 29,
+        TickEnd: 32,
+        EntitySpawned: 33,
+        EntityDespawned: 34,
+        ChangeBlockFail: 39,
+        ChangeBlockFailEnd: 46,
+        InventoryEvent: 48,
+        HeldItemChanged: 49,
+        ShotDamage: 50,
+        EnchantOffer: 51,
+        UiEvent: 52,
+        EntityInfoChanged: 53,
+        ChunkSlot: 55,
+        PlaySound: 40,
+        SoundPos: 41,
+        SoundSet: 42,
+        SoundFade: 43,
+        SoundStop: 44,
+        SoundReset: 45,
+        EnvLighting: 54,
+        SkyImages: 64,
+        ReplayFailed: 56,
+        ReplayOption: 57,
+        ReplayFilePart: 58,
+        ReplayFileReady: 59,
+        ReplayOpened: 60,
+        ReplayUiEvent: 61,
+        RecorderEvent: 62,
+        Images: 128,
+        ModelRequests: 129,
+        ModelTaken: 130,
+        RenderReload: 3,
+        TerrainTexturesWanted: 4
+      },
+      wz = {
+        EntityInfo: 1,
+        EntityTable: 2,
+        CoreErrors: 4,
+        Other: 8,
+        NetSession: 16,
+        ItemsUi: 32,
+        PlayerHud: 64,
+        GameCalls: 128
+      },
+      Xz = 4,
+      fz = 4,
+      sz = 65535,
+      rz = {
+        Open: 1,
+        TooLarge: 2,
+        NothingStaged: 3,
+        NotPlayback: 4,
+        NotOpen: 5,
+        BadValue: 6,
+        Crop: 7,
+        NotLive: 8,
+        ModuleLoad: 9,
+        ModuleTrap: 10,
+        Port: 11
+      },
+      oz = {
+        Busy: 0,
+        Range: 1,
+        OtherBody: 2,
+        TooLarge: 3,
+        Corrupt: 4,
+        Ended: 5
+      },
+      Nz = 88,
+      vz = 0,
+      xz = 24,
+      Jz = 48,
+      Az = 80,
+      Tz = {
+        FilePartDone: 526,
+        FileDone: 527,
+        Control: 528,
+        Prefs: 529,
+        Option: 530,
+        FlyingText: 531,
+        PlayerKilled: 532,
+        Killfeed: 533,
+        Session: 534
+      },
+      Lz = {
+        ToggleRecording: 0,
+        SaveClip: 1,
+        ViewerOpened: 2,
+        ViewerClosed: 3
+      },
+      Pz = {
+        Clip: 0,
+        Recording: 1,
+        Edited: 2
+      },
+      Gz = {
+        RecordingStarted: 0,
+        RecordingStopped: 1,
+        RecordingDiscarded: 2,
+        ClipSaved: 3,
+        ClipEmpty: 4,
+        ClippingNotOn: 5,
+        Disallowed: 6,
+        ClippingOn: 7,
+        ClippingOff: 8,
+        LimitReached: 9,
+        ClipSettingsChanged: 10,
+        SaveBusy: 11,
+        CloseViewerFirst: 12,
+        FileDiscarded: 13,
+        SaveFailed: 14,
+        RecordingTurnedOff: 15
+      },
+      az = {
+        Cleared: 0,
+        Text: 1,
+        Int: 2,
+        Double: 3
+      },
+      Vz = 65535,
+      mz = {
+        FlyingText: 1,
+        PlayerKilled: 2,
+        Killfeed: 3
+      },
+      qz = {
+        None: 0,
+        Paused: 1,
+        Playing: 2,
+        Cropping: 3,
+        Loading: 4
+      },
+      hz = 2,
+      Uz = {
+        UiText: 0,
+        Environment: 6,
+        Hud: 12,
+        Count: 19
+      },
+      cz = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      gz = {
+        SkyTable: 600,
+        SkyImagesReady: 601,
+        SkyTableHeaderBytes: 8,
+        SkyTableEntryBytes: 92,
+        SkyImagesReadyBytes: 32,
+        KindNone: 0,
+        KindCustom: 1,
+        KindEarth: 2,
+        CubeFaces: 6,
+        Failed: 0
+      },
+      Sz = {
+        Bytes: 88,
+        Inclination: 0,
+        Turbidity: 1,
+        Luminance: 2,
+        Rayleigh: 3,
+        MieCoefficient: 4,
+        MieDirectionalG: 5,
+        Distance: 6,
+        Azimuth: 7,
+        Params: 8,
+        SunPosition: 256,
+        CameraOffsetX: 512,
+        CameraOffsetY: 1024,
+        CameraOffsetZ: 2048,
+        Up: 4096,
+        VertexTint: 8192,
+        UseSunPosition: 16384,
+        Dithering: 32768,
+        InfiniteDistance: 65536,
+        SunPositionAt: 32,
+        CameraOffsetAt: 44,
+        UpAt: 56,
+        VertexTintAt: 68,
+        PresentAt: 80,
+        FlagsAt: 84
+      },
+      yz = {
+        None: 0,
+        InputOverCapacity: 1,
+        InputTruncated: 2,
+        InputUnknownKind: 3,
+        InputNonFinite: 4,
+        NetOverCapacity: 16,
+        NetTruncated: 17,
+        NetOversize: 18,
+        NetBadKind: 19,
+        NetConnUnknown: 20,
+        NetConnBackwards: 21,
+        WorkerOverCapacity: 32,
+        WorkerTruncated: 33,
+        WorkerUnknownKind: 34,
+        TimeNonFinite: 48,
+        TimeBackwards: 49,
+        GameCallThrew: 50,
+        ResumeUnconsumed: 51,
+        CallLogMismatch: 52,
+        TerrainTextureRefused: 53,
+        TerrainTextureMissing: 54,
+        ShaderPackRefused: 55,
+        ReserveTooLarge: 64,
+        ReserveFailed: 65,
+        GrowFailed: 66,
+        EventOversize: 80,
+        OutputFull: 81,
+        StateCorrupt: 128,
+        OriginRefused: 129,
+        CoreBusy: 138,
+        WorldWorldgenRefused: 88,
+        WorldWorldgenResultMalformed: 89,
+        WorldBlockDataInvalid: 90,
+        WorldNetDecode: 96,
+        WorldChunkId: 97,
+        WorldChunkVoxels: 98,
+        WorldChunkLight: 99,
+        WorldSendFailed: 100,
+        WorldEditInvalid: 101,
+        WorldPlayerInvalid: 102,
+        WorldNoVoxels: 103,
+        WorldStoreCorrupt: 224,
+        WorldWorldgenTrapped: 226,
+        WorldRegistryInvalid: 227,
+        WorldStreamStartInvalid: 228,
+        PresentationRigRefused: 160,
+        PresentationSceneRefused: 161,
+        PresentationModelMissing: 162,
+        PresentationAnimDecode: 163,
+        PresentationSettingDecode: 164,
+        PresentationParticleDecode: 165,
+        PresentationNodeUnknown: 166,
+        PresentationStateFull: 167,
+        PresentationBindingUnfit: 168,
+        PresentationClipUnplayable: 169,
+        PresentationObjectOpsDropped: 170,
+        PresentationImageFailed: 171,
+        PresentationDracoFailure: 144,
+        NetNotGameRoom: 184,
+        NetEnvelope: 185,
+        NetMessageDecode: 186,
+        NetNoHandshake: 187,
+        NetRejoin: 188,
+        NetHandshake: 189,
+        NetSchemaDesync: 136,
+        ReplicationUnknownType: 192,
+        ReplicationBadId: 193,
+        ReplicationFull: 194,
+        ReplicationNamesFull: 195,
+        ReplicationRosterFull: 196,
+        ReplicationEffectsFull: 197,
+        ReplicationNoDecoder: 198,
+        ReplicationResetFailed: 137,
+        OptionsMalformed: 56,
+        OptionsRecordBad: 57,
+        ItemsDeadlinesFull: 73,
+        ItemsThrowablesFull: 75,
+        ItemsSendLatchFull: 76,
+        ItemsBadSlotJson: 77,
+        ItemsUnknownItem: 78,
+        ItemsMessageDecode: 79,
+        ItemsRecipeBad: 82,
+        ItemsSendFailed: 83,
+        ItemsMarkerLost: 84,
+        ItemsCallStackFull: 85,
+        ItemsUiDropsFull: 272,
+        ItemsReplayRefused: 273,
+        ApiCmdUnknownKind: 67,
+        ApiCmdBadLength: 68,
+        ApiCmdTruncated: 69,
+        ApiQueryBadArgs: 70,
+        ApiScratchTooLarge: 71,
+        AudioUnknownSound: 86,
+        JobsRefused: 104,
+        JobsResultMalformed: 105,
+        JobsUnknownJob: 106,
+        JobsWorkerIndexInvalid: 107,
+        JobsWorkerOutFull: 108,
+        JobsTablesRefused: 109,
+        JobsVisInputRefused: 110,
+        JobsKeyInvalid: 111,
+        JobsTrapped: 288,
+        JobsTrapGaveUp: 289,
+        JobsTablesRetired: 290,
+        JobsHeapGaveUp: 291,
+        JobsTablesTrapped: 232,
+        JobsWorkerTablesRefused: 233,
+        EffectsUnknownPreset: 256,
+        EffectsParticleCmdBad: 257,
+        EffectsParticleKeysFull: 258,
+        EffectsUnknownAnchor: 259,
+        EffectsGrowingFull: 260,
+        EffectsMessageDecode: 261,
+        EnvUnknownSky: 264,
+        EnvSkyTableBad: 265,
+        EnvSkyRowsRefused: 266,
+        EnvSkyReleasesLost: 267,
+        EnvOverlayRowsRefused: 268,
+        SendsSendRefused: 58,
+        SendsSendMalformed: 59,
+        SendsSendQueueFull: 60,
+        SendsAntiCheatRecordBad: 61,
+        SendsSendFailed: 62,
+        RenderDeviceLost: 176,
+        RenderSceneRowNotDrawn: 177,
+        RenderChunkMeshNotDrawn: 178,
+        RenderShaderPackNotRun: 179,
+        RenderInternal: 180,
+        RenderCaveCullingOff: 181,
+        RenderGlErrorAfterRestore: 182,
+        RenderSerialLinks: 183,
+        RenderOutOfMemory: 200,
+        RenderValidation: 201,
+        RenderSurfaceUnusable: 202,
+        RenderPipelineFailed: 203,
+        RenderStateCorrupt: 204,
+        RenderDeviceUnrecoverable: 205,
+        PlayerMessageDecode: 112,
+        PlayerMovementFailed: 113,
+        PlayerPhysicsFailed: 114,
+        PlayerConfirmQueueFull: 115,
+        PlayerSendFailed: 116,
+        PlayerBadPhysicsState: 117,
+        PlayerBadOverride: 118,
+        PlayerNonFinitePosition: 119,
+        PlayerEventsFull: 120,
+        PlayerMultiplierSetDropped: 121,
+        CameraNonFinite: 126,
+        CameraCmdBad: 127,
+        CameraScriptedPoseRefused: 296,
+        InputBadKey: 122,
+        InputBadAction: 123,
+        InputBadTouch: 124,
+        InputEdgesFull: 125,
+        ReplayDrops: 87,
+        ReplayRecorderDrops: 304
+      },
+      Dz = 8,
+      Qz = {
+        GameCodeMessage: 4,
+        NewOtherEntitySettings: 23,
+        NewClientOptions: 37,
+        Chat: 64,
+        UiRequestPopup: 8,
+        TaskProgress: 9,
+        CustomKillfeed: 15,
+        TopRightHelper: 24,
+        NewUiRequest: 51,
+        PlayerKilled: 61,
+        OverShopInfo: 43,
+        ShowShopTutorial: 76,
+        SetCookie: 0,
+        LeaveValues: 85,
+        CustomAnalyticsEvent: 31,
+        ProgressionEvent: 19,
+        ResourceEvent: 22,
+        LeaderboardResponse: 30,
+        ResumeComplete: 105,
+        ProgressBarUpdate: 33,
+        RemoveMiddleScreenBar: 90,
+        WorldVariation: 5,
+        EditItemCraftingRecipes: 78
+      },
+      Wz = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+  },
+  4544: (zz, uz, bz) => {
+    bz.d(uz, {
+      A: () => Jz,
+      C: () => Az,
+      F: () => Tz,
+      H: () => Xz,
+      L: () => lz,
+      M: () => Mz,
+      O: () => xz,
+      b: () => vz,
+      c: () => sz,
+      g: () => Pz,
+      j: () => Lz,
+      l: () => wz,
+      o: () => oz,
+      s: () => fz,
+      w: () => rz
+    });
+    var Ez = bz(4552);
+    const nz = {
+      lockPointer: () => !1,
+      unlockPointer: () => {},
+      leaveGame: () => {}
+    };
+    let iz = nz;
+
+    function lz(zz) {
+      iz = null !== zz && void 0 !== zz ? zz : nz
+    }
+
+    function Mz() {
+      return iz
+    }
+    const tz = new Set,
+      Hz = new Set;
+    let Oz = -1;
+    const pz = new Set,
+      dz = new Set;
+    let Fz = 0,
+      Zz = 0;
+    const Rz = new Set,
+      Kz = new Set;
+
+    function wz(zz) {
+      return tz.add(zz), () => {
+        tz.delete(zz)
+      }
+    }
+
+    function Xz(zz, uz) {
+      for (const Ez of tz) try {
+        Ez(zz)
+      } catch (bz) {
+        uz(bz)
+      }
+    }
+
+    function fz(zz) {
+      return Hz.add(zz), () => {
+        Hz.delete(zz)
+      }
+    }
+
+    function sz(zz, uz) {
+      const bz = Oz < 0 ? 0 : zz - Oz;
+      Oz = zz;
+      for (const nz of Hz) try {
+        nz(bz)
+      } catch (Ez) {
+        uz(Ez)
+      }
+    }
+
+    function rz(zz) {
+      return pz.add(zz), () => {
+        pz.delete(zz)
+      }
+    }
+
+    function oz(zz) {
+      return dz.add(zz), () => {
+        dz.delete(zz)
+      }
+    }
+    let Nz = 0;
+
+    function vz(zz) {
+      Nz += zz
+    }
+
+    function xz() {
+      const zz = Nz;
+      return Nz = 0, zz
+    }
+
+    function Jz(zz) {
+      return Rz.add(zz), () => {
+        Rz.delete(zz)
+      }
+    }
+
+    function Az(zz) {
+      return Kz.add(zz), () => {
+        Kz.delete(zz)
+      }
+    }
+
+    function Tz() {
+      Fz = 0, Zz = 0, Oz = -1
+    }
+
+    function Lz(zz, uz) {
+      if ("paced" === zz) return Zz += uz, null;
+      if ("drawn" !== zz && "skipped" !== zz) return null;
+      const bz = uz + Zz;
+      return Zz = 0, bz
+    }
+
+    function Pz(zz, uz, bz, nz) {
+      const iz = (0, Ez.l)(uz),
+        lz = zz > 0 ? performance.now() : 0;
+      for (let Ez = 0; Ez < zz; Ez++)
+        for (const zz of Rz) try {
+          zz()
+        } catch (Mz) {
+          nz(Mz)
+        }
+      if (zz > 0 && vz(performance.now() - lz), null !== bz) {
+        for (const zz of pz) try {
+          zz(bz)
+        } catch (Mz) {
+          nz(Mz)
+        }
+        Fz += bz
+      }
+      if ("drawn" === uz) {
+        const zz = Fz;
+        Fz = 0;
+        for (const uz of dz) try {
+          uz(zz)
+        } catch (Mz) {
+          nz(Mz)
+        }
+      }
+      for (const Ez of Kz) try {
+        Ez(zz, iz)
+      } catch (Mz) {
+        nz(Mz)
+      }
+    }
+  },
+  4560: (zz, uz, bz) => {
+    bz.d(uz, {
+      $c: () => Ez.Gb,
+      Ab: () => uu,
+      B: () => du,
+      Bc: () => Fu,
+      Bd: () => Uz,
+      C: () => Cz,
+      Dd: () => Qz,
+      Eb: () => nz.e,
+      Fb: () => vz,
+      Fc: () => Hu,
+      G: () => Ez.g,
+      H: () => Hz,
+      Ic: () => Eu,
+      Id: () => yz,
+      Jb: () => hz,
+      L: () => Ez.j,
+      Lc: () => Ez.mb,
+      Ld: () => ez,
+      Mc: () => Ez.pb,
+      Nb: () => Lz,
+      Nd: () => Wz,
+      P: () => Ez.m,
+      Pb: () => Az,
+      Pc: () => Ez.qb,
+      Qb: () => Ez.N,
+      Qc: () => Yz,
+      Qd: () => lu,
+      S: () => Iz,
+      Tb: () => Pz,
+      Tc: () => Ez.vb,
+      Td: () => Zu,
+      V: () => Ez.s,
+      Vb: () => rz,
+      Vc: () => Ez.wb,
+      W: () => Ez.u,
+      Wd: () => sz,
+      Y: () => Ez.x,
+      Yb: () => iu,
+      Yc: () => Ez.Ab,
+      Z: () => pz,
+      Zc: () => Ez.Eb,
+      _b: () => fz,
+      _d: () => jz,
+      ab: () => Xz,
+      bc: () => Ou,
+      be: () => mz,
+      c: () => zu,
+      cb: () => Ez.y,
+      ce: () => Vz,
+      db: () => Ez.A,
+      dd: () => Ez.Jb,
+      de: () => az,
+      f: () => Rz,
+      fc: () => nz.i,
+      fd: () => Jz,
+      ge: () => tz,
+      h: () => Zz,
+      hb: () => gz,
+      i: () => tu,
+      ic: () => wz,
+      ie: () => qz,
+      jc: () => bu,
+      jd: () => Ez.Mb,
+      kb: () => nu,
+      l: () => xz,
+      mb: () => Oz,
+      me: () => Ru,
+      n: () => Nz,
+      nc: () => Ez.W,
+      nd: () => Ez.Ob,
+      od: () => Ez.Tb,
+      p: () => Ez.c,
+      pb: () => Ez.E,
+      pe: () => Fz,
+      qc: () => Ez.Z,
+      qd: () => iz,
+      rc: () => Ez.$,
+      s: () => pu,
+      sb: () => Dz,
+      sd: () => Kz,
+      tc: () => Ez.ab,
+      td: () => Mu,
+      u: () => Tz,
+      ub: () => Bz,
+      vd: () => cz,
+      w: () => lz,
+      wc: () => Ez.bb,
+      xd: () => Sz,
+      yb: () => kz,
+      yc: () => Ez.jb,
+      z: () => Gz
+    });
+    var Ez = bz(4564),
+      nz = bz(2289);
+    const iz = Math.round(1e3 / Ez.Tb),
+      lz = 4,
+      Mz = 2;
+
+    function tz() {
+      return crypto.getRandomValues(new Uint32Array(Mz))
+    }
+    const Hz = {
+        Ok: 0,
+        Errors: 1,
+        Fatal: 2
+      },
+      Oz = 16,
+      pz = {
+        Draws: 1,
+        NetAll: 2
+      },
+      dz = {
+        ShowFog: 1,
+        Lighting: 2,
+        ChunkFade: 4
+      };
+
+    function Fz(zz) {
+      return (zz.nametagsHidden ? oz.NametagsHidden : 0) | (zz.crouchToggle ? oz.CrouchToggle : 0) | (zz.bhopDisabled ? oz.BhopDisabled : 0) | (zz.disableBobbing ? oz.DisableBobbing : 0) | (zz.ezTowering ? oz.EzTowering : 0) | (zz.ezBridging ? oz.EzBridging : 0) | (zz.showChunkBorders ? oz.ShowChunkBorders : 0)
+    }
+    const Zz = {
+        Flags: 0,
+        PhysicsVersion: 1,
+        InbuiltOverwritten: 2,
+        AltComplete: 3,
+        ProbeUsedProp: 4
+      },
+      Rz = {
+        Ready: 1,
+        SendFnReplaced: 2,
+        Butto: 4,
+        IdentityChanged: 32,
+        CheckFuncHit: 128,
+        OriginStackHit: 256
+      },
+      Kz = {
+        None: 0,
+        Untrusted: 2,
+        FewProperties: 3,
+        CheckFunc: 4,
+        NotEvent: 5,
+        En: 6,
+        Fr: 7
+      },
+      wz = {
+        StackCheck: 0,
+        ConfirmMesh: 1,
+        IndexPassReplaced: 2,
+        ProductSubChanged: 3,
+        RenderStatus: 4,
+        Held: 6,
+        PlayerKilledSubs: 7
+      },
+      Xz = 5,
+      fz = 4294967295;
+
+    function sz(zz) {
+      return (zz.showFog ? dz.ShowFog : 0) | (zz.lighting ? dz.Lighting : 0) | (zz.chunkFade ? dz.ChunkFade : 0)
+    }
+    const rz = {
+        ResetFirst: 1,
+        AdStart: 2,
+        PreventMovement: 4,
+        AdEnd: 8,
+        PayloadMaxBytes: 1 << 20
+      },
+      oz = {
+        NametagsHidden: 1,
+        CrouchToggle: 2,
+        BhopDisabled: 4,
+        DisableBobbing: 8,
+        EzTowering: 16,
+        EzBridging: 32,
+        ShowChunkBorders: 64,
+        All: 127
+      },
+      Nz = {
+        Release: 1,
+        KeepTouches: 2
+      },
+      vz = {
+        Point: 1,
+        Stamped: 2
+      },
+      xz = {
+        Add: 1,
+        Clear: 2
+      },
+      Jz = 1,
+      Az = 8,
+      Tz = 16777215,
+      Lz = 4,
+      Pz = {
+        Resume: 1
+      },
+      Gz = {
+        Held: 1
+      };
+
+    function az(zz, uz) {
+      return (zz | uz << 8) >>> 0
+    }
+
+    function Vz(zz) {
+      return 255 & zz
+    }
+
+    function mz(zz) {
+      return zz >>> 8
+    }
+
+    function qz(zz) {
+      return zz + 3 & -4
+    }
+    const hz = 16777216,
+      Uz = 20;
+    const cz = 8,
+      gz = 8,
+      Sz = 16777216,
+      yz = {
+        JobResult: 1,
+        WorkerStarted: 2,
+        WorkerLost: 3,
+        WorldgenResult: 4,
+        WorldgenStarted: 5,
+        WorldgenLost: 6
+      },
+      Dz = {
+        Ok: 0,
+        Refused: 1,
+        Trapped: 2,
+        NotHeld: 3,
+        HeapRefused: 4
+      },
+      Qz = 16,
+      Wz = {
+        Lost: 0,
+        Gone: 1
+      },
+      ez = {
+        Init: 1,
+        Mesh: 2,
+        WorldgenSeed: 3,
+        Generate: 4,
+        Retire: 5
+      };
+
+    function jz(zz) {
+      return zz === ez.WorldgenSeed || zz === ez.Generate
+    }
+    const Iz = 4,
+      Bz = 99,
+      Cz = {
+        PAIRS_MAX: 16,
+        FIXED_WORDS: 2,
+        PAIR_WORDS: 2,
+        WORDS_MAX: 34
+      },
+      Yz = {
+        BYTES: 12,
+        WEBGPU: 1,
+        GL: 2,
+        WEBGPU_LOSSES_MAX: 1,
+        LOST: 0,
+        PIPELINE_FAILED: 1
+      },
+      kz = 12,
+      zu = 16,
+      uu = 4,
+      bu = 12,
+      Eu = {
+        SessionBased: 1,
+        ReplayOffer: 2
+      },
+      nu = 4,
+      iu = 8,
+      lu = 8,
+      Mu = {
+        HEAD_BYTES: 28,
+        UPDATE: 1,
+        REMOVE: 2
+      },
+      tu = {
+        Crit: 1,
+        HitSelf: 2
+      },
+      Hu = {
+        BYTES: 16,
+        STRING_TYPE_BYTES: 24,
+        STRING_TYPE: 65535,
+        ERROR: 65534
+      },
+      Ou = {
+        None: 0,
+        Bytes: 1,
+        Msgpack: 2,
+        MsgpackBin: 3
+      },
+      pu = 12,
+      du = {
+        Activated: 1,
+        Error: 2,
+        Left: 3,
+        Closed: 4,
+        Held: 5,
+        Resumed: 6,
+        ResumeRefused: 7
+      },
+      Fu = 67108864;
+
+    function Zu(zz) {
+      for (const [uz, bz] of Object.entries(Ez.g))
+        if (bz === zz) return uz;
+      return `Unknown${zz}`
+    }
+
+    function Ru(zz) {
+      return {
+        status: zz[Ez.A.Status],
+        lastError: zz[Ez.A.LastError],
+        lastErrorDetail: zz[Ez.A.LastErrorDetail],
+        errorCount: zz[Ez.A.ErrorCount],
+        frameIndex: zz[Ez.A.FrameIndex],
+        tickIndex: zz[Ez.A.TickIndex],
+        renderPending: zz[Ez.A.RenderPending],
+        firstView: zz[Ez.A.FirstView],
+        chunksCancelled: zz[Ez.A.ChunksCancelled]
+      }
+    }
+  },
+  4552: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz,
+      h: () => iz,
+      l: () => nz
+    });
+    var Ez = bz(4560);
+
+    function nz(zz) {
+      return "none" !== zz
+    }
+
+    function iz(zz, uz) {
+      if (!zz) return "none";
+      switch (uz) {
+        case Ez.Y.Drawn:
+          return "drawn";
+        case Ez.Y.Paced:
+          return "paced";
+        default:
+          return "skipped"
+      }
+    }
+
+    function lz(zz) {
+      return "drawn" === zz
+    }
+  },
+  4571: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      f: () => iz,
+      i: () => lz,
+      m: () => Ez,
+      n: () => Mz
+    });
+    const Ez = {
+        Mouse1: 1,
+        Mouse2: 2,
+        Mouse3: 3,
+        "Alt+Left Click": 4,
+        F2: 5,
+        F4: 6,
+        F5: 7,
+        F8: 8,
+        F9: 9,
+        Digit0: 10,
+        Digit1: 11,
+        Digit2: 12,
+        Digit3: 13,
+        Digit4: 14,
+        Digit5: 15,
+        Digit6: 16,
+        Digit7: 17,
+        Digit8: 18,
+        Digit9: 19,
+        KeyQ: 20,
+        KeyW: 21,
+        KeyE: 22,
+        KeyR: 23,
+        KeyT: 24,
+        KeyY: 25,
+        KeyU: 26,
+        KeyI: 27,
+        KeyO: 28,
+        KeyP: 29,
+        KeyA: 30,
+        KeyS: 31,
+        KeyD: 32,
+        KeyF: 33,
+        KeyG: 34,
+        KeyH: 35,
+        KeyJ: 36,
+        KeyK: 37,
+        KeyL: 38,
+        KeyZ: 39,
+        KeyX: 40,
+        KeyC: 41,
+        KeyV: 42,
+        KeyB: 43,
+        KeyN: 44,
+        KeyM: 45,
+        ArrowUp: 46,
+        ArrowLeft: 47,
+        ArrowRight: 48,
+        ArrowDown: 49,
+        ShiftLeft: 50,
+        ShiftRight: 51,
+        ControlLeft: 52,
+        ControlRight: 53,
+        Minus: 54,
+        Equal: 55,
+        BracketLeft: 56,
+        BracketRight: 57,
+        Tab: 58,
+        Space: 59,
+        CapsLock: 60,
+        Backslash: 61,
+        IntlBackslash: 62,
+        PageUp: 63,
+        PageDown: 64,
+        Backquote: 65,
+        Comma: 66,
+        IntlRo: 67,
+        IntlYen: 68,
+        Period: 69,
+        Quote: 70,
+        Semicolon: 71,
+        Slash: 72,
+        AltLeft: 73,
+        AltRight: 74,
+        Backspace: 75,
+        ContextMenu: 76,
+        Enter: 77,
+        MetaLeft: 78,
+        MetaRight: 79,
+        Convert: 80,
+        KanaMode: 81,
+        Lang1: 82,
+        Lang2: 83,
+        Lang3: 84,
+        Lang4: 85,
+        Lang5: 86,
+        NonConvert: 87,
+        Delete: 88,
+        End: 89,
+        Help: 90,
+        Home: 91,
+        Insert: 92,
+        NumLock: 93,
+        Numpad0: 94,
+        Numpad1: 95,
+        Numpad2: 96,
+        Numpad3: 97,
+        Numpad4: 98,
+        Numpad5: 99,
+        Numpad6: 100,
+        Numpad7: 101,
+        Numpad8: 102,
+        Numpad9: 103,
+        NumpadAdd: 104,
+        NumpadBackspace: 105,
+        NumpadClear: 106,
+        NumpadClearEntry: 107,
+        NumpadComma: 108,
+        NumpadDecimal: 109,
+        NumpadDivide: 110,
+        NumpadEnter: 111,
+        NumpadEqual: 112,
+        NumpadHash: 113,
+        NumpadMemoryAdd: 114,
+        NumpadMemoryClear: 115,
+        NumpadMemoryRecall: 116,
+        NumpadMemoryStore: 117,
+        NumpadMemorySubtract: 118,
+        NumpadMultiply: 119,
+        NumpadParenLeft: 120,
+        NumpadParenRight: 121,
+        NumpadStar: 122,
+        NumpadSubtract: 123,
+        Escape: 124,
+        F1: 125,
+        F3: 126,
+        F6: 127,
+        F7: 128,
+        F10: 129,
+        F11: 130,
+        F12: 131,
+        F13: 132,
+        F14: 133,
+        F15: 134,
+        F16: 135,
+        F17: 136,
+        F18: 137,
+        F19: 138,
+        F20: 139,
+        F21: 140,
+        F22: 141,
+        F23: 142,
+        F24: 143,
+        Fn: 144,
+        FnLock: 145,
+        PrintScreen: 146,
+        ScrollLock: 147,
+        Pause: 148,
+        BrowserBack: 149,
+        BrowserFavorites: 150,
+        BrowserForward: 151,
+        BrowserHome: 152,
+        BrowserRefresh: 153,
+        BrowserSearch: 154,
+        BrowserStop: 155,
+        Eject: 156,
+        LaunchApp1: 157,
+        LaunchApp2: 158,
+        LaunchMail: 159,
+        MediaPlayPause: 160,
+        MediaSelect: 161,
+        MediaStop: 162,
+        MediaTrackNext: 163,
+        MediaTrackPrevious: 164,
+        Power: 165,
+        Sleep: 166,
+        AudioVolumeDown: 167,
+        AudioVolumeMute: 168,
+        AudioVolumeUp: 169,
+        WakeUp: 170,
+        Hyper: 171,
+        Super: 172,
+        Turbo: 173,
+        Abort: 174,
+        Resume: 175,
+        Suspend: 176,
+        Again: 177,
+        Copy: 178,
+        Cut: 179,
+        Find: 180,
+        Open: 181,
+        Paste: 182,
+        Props: 183,
+        Select: 184,
+        Undo: 185,
+        Hiragana: 186,
+        Katakana: 187,
+        TouchJump: 188,
+        TouchCrouch: 189,
+        TouchPov: 190,
+        TouchAction1: 191,
+        TouchAction2: 192,
+        TouchAction3: 193,
+        TouchAttack: 194,
+        TouchUse: 195
+      },
+      nz = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      iz = {
+        forward: [21, 46],
+        backward: [31, 49],
+        left: [30, 47],
+        right: [32, 48],
+        sprint: [50, 51],
+        jump: [59],
+        crouch: [52, 41, 60, 61, 62, 53],
+        "primary-fire": [1],
+        "alt-fire": [3, 22],
+        SpecialAction1: [23],
+        SpecialAction2: [33],
+        ReloadGun: [23],
+        DropItem: [20],
+        "mid-fire": [2, 4],
+        Zoom: [42],
+        SwapCameraZoom: [29, 7],
+        OpenInventory: [58],
+        OpenLobbyLeaderboard: [34],
+        OpenShop: [43],
+        OpenCharacterCustomization: [44],
+        OpenSettings: [28],
+        OpenInviteLink: [27],
+        OpenTasksAndLeaderboard: [45],
+        OpenCodeEditor: [8],
+        OpenEmoteWheel: [39, 2],
+        HideUi: [6],
+        ShowDebugOverlay: [5],
+        HotBarSlot1: [11],
+        HotBarSlot2: [12],
+        HotBarSlot3: [13],
+        HotBarSlot4: [14],
+        HotBarSlot5: [15],
+        HotBarSlot6: [16],
+        HotBarSlot7: [17],
+        HotBarSlot8: [18],
+        HotBarSlot9: [19],
+        HotBarSlot10: [10],
+        toggleFreeCam: [9],
+        freeCamForward: [46],
+        freeCamBackward: [49],
+        freeCamLeft: [47],
+        freeCamRight: [48],
+        freeCamUp: [63],
+        freeCamDown: [64],
+        recordGame: [56],
+        recordClip: [35],
+        replayViewerOpen: [26],
+        replayPlayPause: [42, 58],
+        replaySkipBack: [20],
+        replaySkipForward: [22],
+        replayChangeCameraMode: [23],
+        replayLoad: [38],
+        replaySave: [37],
+        replaySaveAs: [36],
+        replayExit: [29],
+        replaySpeedUp: [55],
+        replaySpeedDown: [54],
+        replayTimelineZoomIn: [10],
+        replayTimelineZoomOut: [19],
+        replayRecordKeyframe: [24],
+        replayExportVideo: [40]
+      },
+      lz = {
+        jump: [188],
+        crouch: [189],
+        SwapCameraZoom: [190],
+        "primary-fire": [194],
+        "alt-fire": [195]
+      },
+      Mz = [16]
+  },
+  39829: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz,
+      f: () => iz,
+      g: () => nz
+    });
+    let Ez = null;
+
+    function nz(zz) {
+      Ez = zz
+    }
+
+    function iz(zz) {
+      Ez === zz && (Ez = null)
+    }
+
+    function lz() {
+      var zz;
+      null === (zz = Ez) || void 0 === zz || zz()
+    }
+  },
+  4575: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Mz,
+      g: () => lz,
+      i: () => Hz
+    });
+    var Ez = bz(2289),
+      nz = bz(2294);
+    const iz = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+
+    function lz(zz) {
+      return zz instanceof HTMLElement && (!!(zz.isContentEditable || zz instanceof HTMLTextAreaElement || zz instanceof HTMLSelectElement) || zz instanceof HTMLInputElement && !iz.has(zz.type))
+    }
+
+    function Mz(zz) {
+      let uz = null;
+      const bz = bz => {
+          const nz = lz(bz);
+          nz !== uz && (uz = nz, zz(Ez.f.UiCapture, Ez.z.Keyboard, 0, 0, nz ? Ez.z.Keyboard : 0))
+        },
+        nz = zz => {
+          bz(zz.target)
+        },
+        iz = zz => {
+          bz(zz.relatedTarget)
+        },
+        Mz = () => {
+          bz(document.activeElement)
+        },
+        tz = {
+          capture: !0,
+          passive: !0
+        };
+      return document.addEventListener("focusin", nz, tz), document.addEventListener("focusout", iz, tz), document.addEventListener("keydown", Mz, tz), bz(document.activeElement), () => {
+        document.removeEventListener("focusin", nz, tz), document.removeEventListener("focusout", iz, tz), document.removeEventListener("keydown", Mz, tz)
+      }
+    }
+    const tz = new Map;
+
+    function Hz(zz, uz) {
+      var bz;
+      let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      tz.set(Ez, (null !== (bz = tz.get(Ez)) && void 0 !== bz ? bz : 0) & ~zz | uz & zz);
+      let iz = 0;
+      for (const nz of tz.values()) iz |= nz;
+      return (0, nz.x)(zz, iz & zz)
+    }
+  },
+  36365: (zz, uz, bz) => {
+    function Ez(zz) {
+      return zz.includes("Leaf Bed")
+    }
+
+    function nz(zz) {
+      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Ez(zz)
+    }
+
+    function iz(zz) {
+      return zz.includes(" Strongbed")
+    }
+
+    function lz(zz) {
+      return Ez(zz) || nz(zz) || iz(zz)
+    }
+    bz.d(uz, {
+      e: () => lz,
+      g: () => Ez,
+      j: () => iz,
+      k: () => nz
+    })
+  },
+  36363: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Hz
+    });
+    var Ez = bz(36365),
+      nz = bz(9078);
+    const iz = [],
+      lz = [],
+      Mz = [],
+      tz = [];
+    for (const Oz of Object.keys(nz.p))(0, Ez.g)(Oz) ? iz.push(Oz) : (0, Ez.k)(Oz) && lz.push(Oz), (0, Ez.j)(Oz) && Mz.push(Oz), (Oz.includes(" Bed Head") || Oz.includes(" Strongbed Head")) && tz.push(Oz);
+    const Hz = {
+      leafBeds: iz,
+      woolBeds: lz,
+      strongBeds: Mz,
+      beds: [...iz, ...lz, ...Mz],
+      bedHeads: tz,
+      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
+    }
+  },
+  6204: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz,
+      d: () => nz,
+      f: () => tz,
+      i: () => iz,
+      l: () => Hz,
+      m: () => Ez,
+      q: () => Mz
+    });
+    let Ez = function(zz) {
+        return zz[zz.DEFAULT = 0] = "DEFAULT", zz[zz.BOAT = 1] = "BOAT", zz[zz.GLIDER = 2] = "GLIDER", zz[zz.BALLOON = 3] = "BALLOON", zz[zz.SLEEPING = 4] = "SLEEPING", zz[zz.RIDING_MOB = 5] = "RIDING_MOB", zz[zz.CAR = 6] = "CAR", zz[zz.HOVERCRAFT = 7] = "HOVERCRAFT", zz
+      }({}),
+      nz = function(zz) {
+        return zz[zz.WOOD = 0] = "WOOD", zz[zz.OBSIDIAN = 1] = "OBSIDIAN", zz[zz.SPEED = 2] = "SPEED", zz
+      }({}),
+      iz = function(zz) {
+        return zz[zz.WOOD = 0] = "WOOD", zz[zz.IRON = 1] = "IRON", zz[zz.GOLD = 2] = "GOLD", zz[zz.DIAMOND = 3] = "DIAMOND", zz
+      }({}),
+      lz = function(zz) {
+        return zz[zz.YELLOW = 0] = "YELLOW", zz[zz.WHITE = 1] = "WHITE", zz[zz.RED = 2] = "RED", zz[zz.PURPLE = 3] = "PURPLE", zz[zz.PINK = 4] = "PINK", zz[zz.ORANGE = 5] = "ORANGE", zz[zz.MAGENTA = 6] = "MAGENTA", zz[zz.LIME = 7] = "LIME", zz[zz.LIGHT_GRAY = 8] = "LIGHT_GRAY", zz[zz.LIGHT_BLUE = 9] = "LIGHT_BLUE", zz[zz.GREEN = 10] = "GREEN", zz[zz.GRAY = 11] = "GRAY", zz[zz.CYAN = 12] = "CYAN", zz[zz.BROWN = 13] = "BROWN", zz[zz.BLUE = 14] = "BLUE", zz[zz.BLACK = 15] = "BLACK", zz
+      }({}),
+      Mz = function(zz) {
+        return zz[zz.ROTATION_1 = 0] = "ROTATION_1", zz[zz.ROTATION_2 = 1] = "ROTATION_2", zz[zz.ROTATION_3 = 2] = "ROTATION_3", zz[zz.ROTATION_4 = 3] = "ROTATION_4", zz
+      }({}),
+      tz = function(zz) {
+        return zz[zz.KART = 0] = "KART", zz[zz.OFF_ROADER = 1] = "OFF_ROADER", zz[zz.CAR = 2] = "CAR", zz[zz.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", zz[zz.ARMORED_CAR = 4] = "ARMORED_CAR", zz[zz.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", zz[zz.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", zz[zz.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", zz
+      }({});
+    Ez.DEFAULT, Ez.BOAT, nz.SPEED, Ez.GLIDER, iz.DIAMOND, Ez.BALLOON, lz.BLACK, Ez.SLEEPING, Mz.ROTATION_4, Ez.RIDING_MOB, Ez.CAR, tz.MOONSTONE_MINING_DRILL, Ez.HOVERCRAFT;
+    let Hz = function(zz) {
+      return zz[zz.NORMAL = 0] = "NORMAL", zz[zz.GLIDING = 1] = "GLIDING", zz[zz.FLOATING = 2] = "FLOATING", zz
+    }({})
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

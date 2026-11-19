@@ -1,273 +1,241 @@
 export const id = 220;
-export const ids = [219, 220];
+export const ids = [220];
 export const modules = {
-  59682: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      RegisterShaderMaterial: () => Uy.d,
-      ShaderMaterial: () => Uy.s,
-      ShaderMaterialCreateFromSnippetAsync: () => Uy.g,
-      ShaderMaterialParse: () => Uy.o,
-      ShaderMaterialParseFromFileAsync: () => Uy.j,
-      ShaderMaterialParseFromSnippetAsync: () => Uy.l
+  38983: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      getBlockFaces: () => dz,
+      getIngameIconUrl: () => Rz,
+      getItemIconUrl: () => Zz,
+      getItemTextureUrl: () => Fz,
+      getParticleTextureUrl: () => Kz
     });
-    var Uy = Wy(38983);
-    (0, Uy.d)()
-  },
-  36425: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => hy
-    });
-    var Uy = Wy(36434);
-    class hy {
-      static GetPlanes(yb) {
-        const bb = [];
-        for (let Wy = 0; Wy < 6; Wy++) bb.push(new Uy.c(0, 0, 0, 0));
-        return hy.GetPlanesToRef(yb, bb), bb
+    var Ez = bz(4238),
+      nz = bz(36465),
+      iz = bz(9076),
+      lz = bz(2907);
+    const Mz = new Set,
+      tz = new Set;
+    let Hz = null;
+
+    function Oz(zz) {
+      Mz.has(zz) || (Mz.add(zz), tz.add(zz), Hz ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${tz.size} names`, [...tz]), tz.clear(), Hz = null
+      }), 1e3))
+    }
+
+    function pz(zz, uz) {
+      try {
+        return (0, iz.getDefaultTexture)(zz, uz).url
+      } catch {
+        return Oz(zz), null
       }
-      static GetNearPlaneToRef(yb, bb) {
-        const Wy = yb.m;
-        bb.normal.x = Wy[3] + Wy[2], bb.normal.y = Wy[7] + Wy[6], bb.normal.z = Wy[11] + Wy[10], bb.d = Wy[15] + Wy[14], bb.normalize()
-      }
-      static GetFarPlaneToRef(yb, bb) {
-        const Wy = yb.m;
-        bb.normal.x = Wy[3] - Wy[2], bb.normal.y = Wy[7] - Wy[6], bb.normal.z = Wy[11] - Wy[10], bb.d = Wy[15] - Wy[14], bb.normalize()
-      }
-      static GetLeftPlaneToRef(yb, bb) {
-        const Wy = yb.m;
-        bb.normal.x = Wy[3] + Wy[0], bb.normal.y = Wy[7] + Wy[4], bb.normal.z = Wy[11] + Wy[8], bb.d = Wy[15] + Wy[12], bb.normalize()
-      }
-      static GetRightPlaneToRef(yb, bb) {
-        const Wy = yb.m;
-        bb.normal.x = Wy[3] - Wy[0], bb.normal.y = Wy[7] - Wy[4], bb.normal.z = Wy[11] - Wy[8], bb.d = Wy[15] - Wy[12], bb.normalize()
-      }
-      static GetTopPlaneToRef(yb, bb) {
-        const Wy = yb.m;
-        bb.normal.x = Wy[3] - Wy[1], bb.normal.y = Wy[7] - Wy[5], bb.normal.z = Wy[11] - Wy[9], bb.d = Wy[15] - Wy[13], bb.normalize()
-      }
-      static GetBottomPlaneToRef(yb, bb) {
-        const Wy = yb.m;
-        bb.normal.x = Wy[3] + Wy[1], bb.normal.y = Wy[7] + Wy[5], bb.normal.z = Wy[11] + Wy[9], bb.d = Wy[15] + Wy[13], bb.normalize()
-      }
-      static GetPlanesToRef(yb, bb) {
-        hy.GetNearPlaneToRef(yb, bb[0]), hy.GetFarPlaneToRef(yb, bb[1]), hy.GetLeftPlaneToRef(yb, bb[2]), hy.GetRightPlaneToRef(yb, bb[3]), hy.GetTopPlaneToRef(yb, bb[4]), hy.GetBottomPlaneToRef(yb, bb[5])
-      }
-      static IsPointInFrustum(yb, bb) {
-        for (let Wy = 0; Wy < 6; Wy++)
-          if (bb[Wy].dotCoordinate(yb) < 0) return !1;
-        return !0
+    }
+
+    function dz(zz) {
+      var uz, bz;
+      const iz = nz.m[zz];
+      if (!iz || iz.itemTexture || !iz.textureInfo) return null;
+      const {
+        textureInfo: Mz,
+        texturePerSide: tz
+      } = iz, Hz = zz => {
+        return "string" === typeof(uz = tz && Array.isArray(Mz) ? Mz[tz[zz]] : Mz) ? pz(uz, lz.m.BLOCK) : uz && "object" === typeof uz && "animTextures" in uz ? pz((0, Ez.n)(uz), lz.m.BLOCK) : null;
+        var uz
+      }, Oz = Hz(2);
+      return Oz ? {
+        top: Oz,
+        left: null !== (uz = Hz(4)) && void 0 !== uz ? uz : Oz,
+        right: null !== (bz = Hz(0)) && void 0 !== bz ? bz : Oz
+      } : null
+    }
+
+    function Fz(zz) {
+      var uz;
+      const bz = nz.m[zz];
+      return pz(null !== (uz = null === bz || void 0 === bz ? void 0 : bz.itemTexture) && void 0 !== uz ? uz : "string" === typeof(null === bz || void 0 === bz ? void 0 : bz.textureInfo) ? bz.textureInfo : zz, lz.m.ITEM)
+    }
+
+    function Zz(zz) {
+      var uz, bz;
+      return nz.m[zz] ? null !== (uz = null === (bz = dz(zz)) || void 0 === bz ? void 0 : bz.top) && void 0 !== uz ? uz : Fz(zz) : null
+    }
+
+    function Rz(zz) {
+      return pz(zz, lz.m.ICON)
+    }
+
+    function Kz(zz) {
+      try {
+        return bz(3084)(`./${zz}.png`)
+      } catch {
+        return Oz(zz), null
       }
     }
   },
-  36434: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => hy
+  36491: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Ez
     });
-    var Uy = Wy(35861);
-    class hy {
-      constructor(yb, bb, Wy, hy) {
-        this.normal = new Uy.n(yb, bb, Wy), this.d = hy
-      }
-      hBy() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new hy(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let yb = this.normal.getHashCode();
-        return yb = 397 * yb ^ this.d, yb
-      }
-      normalize() {
-        const yb = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let bb = 0;
-        return 0 !== yb && (bb = 1 / yb), this.normal.x *= bb, this.normal.y *= bb, this.normal.z *= bb, this.d *= bb, this
-      }
-      transform(yb) {
-        const bb = hy._TmpMatrix;
-        yb.invertToRef(bb);
-        const Wy = bb.m,
-          Uy = this.normal.x,
-          fy = this.normal.y,
-          Zy = this.normal.z,
-          cb = this.d,
-          Py = Uy * Wy[0] + fy * Wy[1] + Zy * Wy[2] + cb * Wy[3],
-          oy = Uy * Wy[4] + fy * Wy[5] + Zy * Wy[6] + cb * Wy[7],
-          By = Uy * Wy[8] + fy * Wy[9] + Zy * Wy[10] + cb * Wy[11],
-          Ky = Uy * Wy[12] + fy * Wy[13] + Zy * Wy[14] + cb * Wy[15];
-        return new hy(Py, oy, By, Ky)
-      }
-      dotCoordinate(yb) {
-        return this.normal.x * yb.x + this.normal.y * yb.y + this.normal.z * yb.z + this.d
-      }
-      copyFromPoints(yb, bb, Wy) {
-        const Uy = bb.x - yb.x,
-          hy = bb.y - yb.y,
-          fy = bb.z - yb.z,
-          Zy = Wy.x - yb.x,
-          cb = Wy.y - yb.y,
-          Py = Wy.z - yb.z,
-          oy = hy * Py - fy * cb,
-          By = fy * Zy - Uy * Py,
-          Ky = Uy * cb - hy * Zy,
-          ey = Math.sqrt(oy * oy + By * By + Ky * Ky);
-        let qb;
-        return qb = 0 !== ey ? 1 / ey : 0, this.normal.x = oy * qb, this.normal.y = By * qb, this.normal.z = Ky * qb, this.d = -(this.normal.x * yb.x + this.normal.y * yb.y + this.normal.z * yb.z), this
-      }
-      isFrontFacingTo(yb, bb) {
-        return Uy.n.Dot(this.normal, yb) <= bb
-      }
-      signedDistanceTo(yb) {
-        return Uy.n.Dot(yb, this.normal) + this.d
-      }
-      static FromArray(yb) {
-        return new hy(yb[0], yb[1], yb[2], yb[3])
-      }
-      static FromPoints(yb, bb, Wy) {
-        const Uy = new hy(0, 0, 0, 0);
-        return Uy.copyFromPoints(yb, bb, Wy), Uy
-      }
-      static FromPositionAndNormal(yb, bb) {
-        const Wy = new hy(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(yb, bb, Wy)
-      }
-      static FromPositionAndNormalToRef(yb, bb, Wy) {
-        return Wy.normal.Coy(bb), Wy.normal.normalize(), Wy.d = -yb.dot(Wy.normal), Wy
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(yb, bb, Wy) {
-        const hy = -(bb.x * yb.x + bb.y * yb.y + bb.z * yb.z);
-        return Uy.n.Dot(Wy, bb) + hy
-      }
-    }
-    hy._TmpMatrix = Uy.c.Identity()
-  },
-  37346: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => fy
-    });
-    var Uy = Wy(37350);
-    const hy = (yb, bb, Wy) => yb ? yb.getClassName && "Mesh" === yb.getClassName() ? null : !yb.getClassName || "SubMesh" !== yb.getClassName() && "PhysicsBody" !== yb.getClassName() ? yb.clone ? yb.clone() : Array.isArray(yb) ? yb.slice() : Wy && "object" === typeof yb ? {
-      ...yb
-    } : null : yb.clone(bb) : null;
-    class fy {
-      static DeepCopy(yb, bb, Wy, fy) {
-        let Zy = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const cb = function(yb) {
-          const bb = [];
-          do {
-            const Wy = Object.getOwnPropertyNames(yb);
-            for (const yb of Wy) - 1 === bb.indexOf(yb) && bb.push(yb)
-          } while (yb = Object.getPrototypeOf(yb));
-          return bb
-        }(yb);
-        for (const oy of cb) {
-          if ("_" === oy[0] && (!fy || -1 === fy.indexOf(oy))) continue;
-          if (oy.endsWith("Observable")) continue;
-          if (Wy && -1 !== Wy.indexOf(oy)) continue;
-          const cb = yb[oy],
-            By = typeof cb;
-          if ("function" !== By) try {
-            if ("object" === By)
-              if (cb instanceof Uint8Array) bb[oy] = Uint8Array.from(cb);
-              else if (cb instanceof Array) {
-              if (bb[oy] = [], cb.length > 0)
-                if ("object" == typeof cb[0])
-                  for (let yb = 0; yb < cb.length; yb++) {
-                    const Wy = hy(cb[yb], bb, Zy); - 1 === bb[oy].indexOf(Wy) && bb[oy].push(Wy)
-                  } else bb[oy] = cb.slice(0)
-            } else bb[oy] = hy(cb, bb, Zy);
-            else bb[oy] = cb
-          } catch (Py) {
-            Uy.b.Warn(Py.message)
-          }
+    const Ez = {
+      "skyblock:forged:astral-astral-astral": {
+        name: "Heart of the Cosmos",
+        lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
+        damageMultiplier: 1.8,
+        cooldownMultiplier: .8,
+        ability: "starfall"
+      },
+      "skyblock:forged:astral-moonstone-sanguine": {
+        name: "Eclipse Edge",
+        lore: "Moonlight over starlight over blood: the sky goes dark wherever it is drawn.",
+        damageMultiplier: 1.7,
+        cooldownMultiplier: .81,
+        ability: "eclipseField"
+      },
+      "skyblock:forged:astral-diamond-moonstone": {
+        name: "Starcutter",
+        lore: "A blade so sharp the Forge Mother swears it once cut a falling star in two.",
+        damageMultiplier: 1.65,
+        cooldownMultiplier: .83,
+        ability: "starfall"
+      },
+      "skyblock:forged:astral-sanguine-magmasteel": {
+        name: "Triune Flame",
+        lore: "Each of Lord Vulcan's three faces, bound into one burning edge.",
+        damageMultiplier: 1.65,
+        cooldownMultiplier: .83,
+        ability: "magmaWave"
+      },
+      "skyblock:forged:magmasteel-magmasteel-magmasteel": {
+        name: "Vulcan's Bane",
+        lore: "Forged in the heat of his own rift. It remembers the way down.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "magmaWave"
+      },
+      "skyblock:forged:magmasteel-astral-sanguine": {
+        name: "Comet's Wake",
+        lore: "It leaves a trail of fire through the air, like something falling from very far up.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "starfall"
+      },
+      "skyblock:forged:magmasteel-sanguine-astral": {
+        name: "Vulcan's Ruin",
+        lore: "The Forge Mother made only one, then sat down for a long while.",
+        damageMultiplier: 1.6,
+        cooldownMultiplier: .83,
+        ability: "warcry"
+      },
+      "skyblock:forged:magmasteel-iron-stone": {
+        name: "Forgehand",
+        lore: "A smith's sword: plain to look at, and it hits like a hammer.",
+        damageMultiplier: 1.4,
+        cooldownMultiplier: .9,
+        ability: "quake"
+      },
+      "skyblock:forged:sanguine-sanguine-sanguine": {
+        name: "Crimson Covenant",
+        lore: "It drinks, and so do you.",
+        damageMultiplier: 1.53,
+        cooldownMultiplier: .83,
+        ability: "bloodPact"
+      },
+      "skyblock:forged:sanguine-astral-moonstone": {
+        name: "Nightbloom",
+        lore: "A red flower that only opens after dark.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "eclipseField"
+      },
+      "skyblock:forged:sanguine-iron-wood": {
+        name: "Butcher's Oath",
+        lore: "Heavy, honest and always hungry.",
+        damageMultiplier: 1.35,
+        cooldownMultiplier: .95,
+        ability: "bloodPact"
+      },
+      "skyblock:forged:moonstone-moonstone-moonstone": {
+        name: "Lunar Requiem",
+        lore: "Swung, it leaves a pale arc that lingers like a second moon.",
+        damageMultiplier: 1.35,
+        cooldownMultiplier: .85,
+        ability: "moonDash"
+      },
+      "skyblock:forged:moonstone-astral-moonstone": {
+        name: "Silver Tide",
+        lore: "Pulled by the same moon that pulls the sea.",
+        damageMultiplier: 1.4,
+        cooldownMultiplier: .84,
+        ability: "moonDash"
+      },
+      "skyblock:forged:diamond-diamond-diamond": {
+        name: "Prism Fang",
+        lore: "Every facet catches a different light, and every strike finds a different weakness.",
+        damageMultiplier: 1.29,
+        cooldownMultiplier: .88,
+        ability: "gildedEdge",
+        traits: {
+          crit: 1.8
         }
+      },
+      "skyblock:forged:diamond-moonstone-gold": {
+        name: "Jeweller's Pride",
+        lore: "Too pretty to fight with. Fight with it anyway.",
+        damageMultiplier: 1.24,
+        cooldownMultiplier: .91,
+        ability: "gildedEdge"
+      },
+      "skyblock:forged:gold-gold-gold": {
+        name: "King's Ransom",
+        lore: "Worth more than the treasure it guards.",
+        damageMultiplier: 1.18,
+        cooldownMultiplier: .91,
+        ability: "gildedEdge",
+        traits: {
+          coins: 2.5
+        }
+      },
+      "skyblock:forged:gold-moonstone-gold": {
+        name: "Midas Moon",
+        lore: "Mobs it fells seem to rattle with coins.",
+        damageMultiplier: 1.18,
+        cooldownMultiplier: .92,
+        ability: "gildedEdge",
+        traits: {
+          coins: 2,
+          bossBane: .6
+        }
+      },
+      "skyblock:forged:iron-iron-iron": {
+        name: "Old Faithful",
+        lore: "It has never let anyone down. It never will.",
+        damageMultiplier: 1.15,
+        cooldownMultiplier: .94,
+        ability: "warcry"
+      },
+      "skyblock:forged:iron-wood-wood": {
+        name: "Militia Blade",
+        lore: "Handed out at the outpost gate when the rift first opened.",
+        damageMultiplier: 1.09,
+        cooldownMultiplier: .97,
+        ability: "warcry"
+      },
+      "skyblock:forged:stone-stone-stone": {
+        name: "Quarryman's Cleaver",
+        lore: "Chipped from one block of stone, handle and all.",
+        damageMultiplier: 1.09,
+        cooldownMultiplier: .97,
+        ability: "quake"
+      },
+      "skyblock:forged:wood-wood-wood": {
+        name: "Lorenzo's Lesson",
+        lore: "Courage matters more than the blade. This one is mostly courage.",
+        damageMultiplier: 1.06,
+        cooldownMultiplier: .97,
+        ability: "warcry"
       }
     }
-  },
-  36559: (yb, bb, Wy) => {
-    function Uy() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (yb => {
-        const bb = 16 * Math.random() | 0;
-        return ("x" === yb ? bb : 3 & bb | 8).toString(16)
-      }))
-    }
-    Wy.d(bb, {
-      e: () => Uy
-    })
-  },
-  37350: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Uy
-    });
-    class Uy {
-      static _CheckLimit(yb, bb) {
-        let Wy = Uy._LogLimitOutputs[yb];
-        return Wy ? Wy.current++ : (Wy = {
-          limit: bb,
-          current: 1
-        }, Uy._LogLimitOutputs[yb] = Wy), Wy.current <= Wy.limit
-      }
-      static _GenerateLimitMessage(yb) {
-        let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Wy = Uy._LogLimitOutputs[yb];
-        if (!Wy || !Uy.MessageLimitReached) return;
-        const hy = this._Levels[bb];
-        Wy.current === Wy.limit && Uy[hy.name](Uy.MessageLimitReached.replace(/%LIMIT%/g, "" + Wy.limit).replace(/%TYPE%/g, hy.name ?? ""))
-      }
-      static _AddLogEntry(yb) {
-        Uy._LogCache = yb + Uy._LogCache, Uy.OnNewCacheEntry && Uy.OnNewCacheEntry(yb)
-      }
-      static _FormatMessage(yb) {
-        const bb = yb => yb < 10 ? "0" + yb : "" + yb,
-          Wy = new Date;
-        return "[" + bb(Wy.getHours()) + ":" + bb(Wy.getMinutes()) + ":" + bb(Wy.getSeconds()) + "]: " + yb
-      }
-      static _LogDisabled(yb, bb) {}
-      static _LogEnabled() {
-        let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          bb = arguments.length > 1 ? arguments[1] : void 0,
-          Wy = arguments.length > 2 ? arguments[2] : void 0;
-        const hy = Array.isArray(bb) ? bb[0] : bb;
-        if (void 0 !== Wy && !Uy._CheckLimit(hy, Wy)) return;
-        const fy = Uy._FormatMessage(hy),
-          Zy = this._Levels[yb],
-          cb = Array.isArray(bb) ? bb.slice(1) : [];
-        Zy.logFunc && Zy.logFunc("BJS - " + fy, ...cb);
-        const Py = `<div style='color:${Zy.color}'>${fy}</div><br>`;
-        Uy._AddLogEntry(Py), Uy._GenerateLimitMessage(hy, yb)
-      }
-      static get LogCache() {
-        return Uy._LogCache
-      }
-      static ClearLogCache() {
-        Uy._LogCache = "", Uy._LogLimitOutputs = {}, Uy.errorsCount = 0
-      }
-      static set LogLevels(yb) {
-        Uy.Log = Uy._LogDisabled, Uy.Warn = Uy._LogDisabled, Uy.Error = Uy._LogDisabled;
-        const bb = [Uy.MessageLogLevel, Uy.WarningLogLevel, Uy.ErrorLogLevel];
-        for (const Wy of bb)
-          if ((yb & Wy) === Wy) {
-            const yb = this._Levels[Wy];
-            Uy[yb.name] = Uy._LogEnabled.bind(Uy, Wy)
-          }
-      }
-    }
-    Uy.NoneLogLevel = 0, Uy.MessageLogLevel = 1, Uy.WarningLogLevel = 2, Uy.ErrorLogLevel = 4, Uy.AllLogLevel = 7, Uy.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Uy._LogCache = "", Uy._LogLimitOutputs = {}, Uy._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], Uy.errorsCount = 0, Uy.Log = Uy._LogEnabled.bind(Uy, Uy.MessageLogLevel), Uy.Warn = Uy._LogEnabled.bind(Uy, Uy.WarningLogLevel), Uy.Error = Uy._LogEnabled.bind(Uy, Uy.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

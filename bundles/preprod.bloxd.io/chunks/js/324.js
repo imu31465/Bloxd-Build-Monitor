@@ -1,105 +1,77 @@
 export const id = 324;
 export const ids = [324];
 export const modules = {
-  40865: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  41460: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz
     });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneVertex",
-      fy = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
-    Uy.e.IncludesShadersStoreWGSL[hy] || (Uy.e.IncludesShadersStoreWGSL[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(39033);
+    const nz = "instancesDeclaration",
+      iz = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  40767: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  41543: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz
     });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneVertexDeclaration",
-      fy = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
-    Uy.e.IncludesShadersStoreWGSL[hy] || (Uy.e.IncludesShadersStoreWGSL[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(39033);
+    const nz = "instancesVertex",
+      iz = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  40871: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
+  41426: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz
     });
-    var Uy = Wy(38319);
-    const hy = "fogVertex",
-      fy = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStoreWGSL[hy] || (Uy.e.IncludesShadersStoreWGSL[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(39033);
+    const nz = "meshUboDeclaration",
+      iz = "struct Mesh {world : mat4x4<f32>,\nvisibility : f32,};var<uniform> mesh : Mesh;\n#define WORLD_UBO\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  40773: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
+  41422: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz
     });
-    var Uy = Wy(38319);
-    const hy = "fogVertexDeclaration",
-      fy = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
-    Uy.e.IncludesShadersStoreWGSL[hy] || (Uy.e.IncludesShadersStoreWGSL[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(39033);
+    const nz = "sceneUboDeclaration",
+      iz = "struct Scene {viewProjection : mat4x4<f32>,\n#ifdef MULTIVIEW\nviewProjectionR : mat4x4<f32>,\n#endif \nview : mat4x4<f32>,\nprojection : mat4x4<f32>,\nvEyePosition : vec4<f32>,\ninverseProjection : mat4x4<f32>,};\n#define SCENE_UBO\nvar<uniform> scene : Scene;\n";
+    Ez.e.IncludesShadersStoreWGSL[nz] || (Ez.e.IncludesShadersStoreWGSL[nz] = iz);
+    const lz = {
+      name: nz,
+      shader: iz
     }
   },
-  40799: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  61040: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      greasedLineVertexShaderWGSL: () => pz
     });
-    var Uy = Wy(38319);
-    const hy = "logDepthDeclaration",
-      fy = "#ifdef LOGARITHMICDEPTH\nuniform logarithmicDepthConstant: f32;varying vFragmentDepth: f32;\n#endif\n";
-    Uy.e.IncludesShadersStoreWGSL[hy] || (Uy.e.IncludesShadersStoreWGSL[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40888: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "logDepthVertex",
-      fy = "#ifdef LOGARITHMICDEPTH\nvertexOutputs.vFragmentDepth=1.0+vertexOutputs.position.w;vertexOutputs.position.z=log2(max(0.000001,vertexOutputs.vFragmentDepth))*uniforms.logarithmicDepthConstant;\n#endif\n";
-    Uy.e.IncludesShadersStoreWGSL[hy] || (Uy.e.IncludesShadersStoreWGSL[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  59732: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      particlesVertexShaderWGSL: () => qb
-    });
-    var Uy = Wy(38319),
-      hy = Wy(40767),
-      fy = Wy(40773),
-      Zy = Wy(40799),
-      cb = Wy(40865),
-      Py = Wy(40871),
-      oy = Wy(40888);
-    const By = "particlesVertexShader",
-      Ky = "attribute position: vec3f;attribute color: vec4f;attribute angle: f32;attribute size: vec2f;\n#ifdef ANIMATESHEET\nattribute cellIndex: f32;\n#endif\n#ifndef BILLBOARD\nattribute direction: vec3f;\n#endif\n#ifdef BILLBOARDSTRETCHED\nattribute direction: vec3f;\n#endif\n#ifdef RAMPGRADIENT\nattribute remapData: vec4f;\n#endif\nattribute offset: vec2f;uniform view: mat4x4f;uniform projection: mat4x4f;uniform translationPivot: vec2f;\n#ifdef PREPASS\nuniform cameraInfo: vec2f;\n#if defined(LOCAL) && defined(PREPASS_LOCAL_POSITION)\nuniform inverseEmitterWM: mat4x4f;uniform geometryWorldOffset: vec3f;\n#endif\n#ifdef PREPASS_POSITION\nvarying vGeometryPositionW: vec3f;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vGeometryNormalW: vec3f;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vGeometryNormalV: vec3f;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvarying vPosition: vec3f;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vViewPos: vec3f;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying vNormViewDepth: f32;\n#endif\n#endif\n#ifdef ANIMATESHEET\nuniform particlesInfos: vec3f; \n#endif\nvarying vUV: vec2f;varying vColor: vec4f;\n#ifdef POSITIONW_AS_VARYING\nvarying vPositionW: vec3f;\n#endif\n#ifdef RAMPGRADIENT\nvarying remapRanges: vec4f;\n#endif\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\nuniform invView: mat4x4f;\n#endif\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<logDepthDeclaration>\n#ifdef BILLBOARD\nuniform eyePosition: vec3f;\n#endif\nfn rotate(yaxis: vec3f,rotatedCorner: vec3f)->vec3f {var xaxis: vec3f=normalize(cross( vec3f(0.,1.0,0.),yaxis));var zaxis: vec3f=normalize(cross(yaxis,xaxis));var row0: vec3f= vec3f(xaxis.x,xaxis.y,xaxis.z);var row1: vec3f= vec3f(yaxis.x,yaxis.y,yaxis.z);var row2: vec3f= vec3f(zaxis.x,zaxis.y,zaxis.z);var rotMatrix: mat3x3f= mat3x3f(row0,row1,row2);var alignedCorner: vec3f=rotMatrix*rotatedCorner;return vertexInputs.position+alignedCorner;}\n#ifdef BILLBOARDSTRETCHED\nfn rotateAlign(toCamera: vec3f,rotatedCorner: vec3f)->vec3f {var normalizedToCamera: vec3f=normalize(toCamera);var normalizedCrossDirToCamera: vec3f=normalize(cross(normalize(vertexInputs.direction),normalizedToCamera));var row0: vec3f= vec3f(normalizedCrossDirToCamera.x,normalizedCrossDirToCamera.y,normalizedCrossDirToCamera.z);var row2: vec3f= vec3f(normalizedToCamera.x,normalizedToCamera.y,normalizedToCamera.z);\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvar row1: vec3f=normalize(vertexInputs.direction);\n#else\nvar crossProduct: vec3f=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));var row1: vec3f= vec3f(crossProduct.x,crossProduct.y,crossProduct.z);\n#endif\nvar rotMatrix: mat3x3f= mat3x3f(row0,row1,row2);var alignedCorner: vec3f=rotMatrix*rotatedCorner;return vertexInputs.position+alignedCorner;}\nfn stretchedNormal(toCamera: vec3f,stretchDirection: vec3f)->vec3f {let normalizedToCamera: vec3f=normalize(toCamera);let normalizedCrossDirToCamera: vec3f=normalize(cross(normalize(stretchDirection),normalizedToCamera));\n#ifdef BILLBOARDSTRETCHED_LOCAL\nlet row1: vec3f=normalize(stretchDirection);\n#else\nlet row1: vec3f=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));\n#endif\nreturn normalize(cross(normalizedCrossDirToCamera,row1));}\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar cornerPos: vec2f;var vPositionW: vec3f;\n#ifdef PREPASS\nvar geometryNormalW: vec3f;\n#endif\ncornerPos=( vec2f(vertexInputs.offset.x-0.5,vertexInputs.offset.y -0.5)-uniforms.translationPivot)*vertexInputs.size;\n#ifdef BILLBOARD\nvar rotatedCorner: vec3f;\n#ifdef BILLBOARDY\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.z=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.y=0.;var yaxis: vec3f=vertexInputs.position-uniforms.eyePosition;yaxis.y=0.;vPositionW=rotate(normalize(yaxis),rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=normalize(yaxis);\n#endif\nvar viewPos: vec3f=(uniforms.view* vec4f(vPositionW,1.0)).xyz;\n#elif defined(BILLBOARDSTRETCHED)\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.y=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.z=0.;var toCamera: vec3f=vertexInputs.position-uniforms.eyePosition;vPositionW=rotateAlign(toCamera,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=stretchedNormal(toCamera,vertexInputs.direction);\n#endif\nvar viewPos: vec3f=(uniforms.view* vec4f(vPositionW,1.0)).xyz;\n#else\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.y=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.z=0.;var viewPos: vec3f=(uniforms.view* vec4f(vertexInputs.position,1.0)).xyz+rotatedCorner;vPositionW=(uniforms.invView* vec4f(viewPos,1)).xyz;\n#ifdef PREPASS\ngeometryNormalW=normalize((uniforms.invView*vec4f(0.0,0.0,1.0,0.0)).xyz);\n#endif\n#endif\n#ifdef RAMPGRADIENT\nvertexOutputs.remapRanges=vertexInputs.remapData;\n#endif\nvertexOutputs.position=uniforms.projection* vec4f(viewPos,1.0);\n#else\nvar rotatedCorner: vec3f;rotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.z=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.y=0.;var yaxis: vec3f=normalize(vertexInputs.direction);vPositionW=rotate(yaxis,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=yaxis;\n#endif\nvertexOutputs.position=uniforms.projection*uniforms.view* vec4f(vPositionW,1.0);\n#endif\nvertexOutputs.vColor=vertexInputs.color;\n#ifdef ANIMATESHEET\nvar rowOffset: f32=floor(vertexInputs.cellIndex*uniforms.particlesInfos.z);var columnOffset: f32=vertexInputs.cellIndex-rowOffset/uniforms.particlesInfos.z;var uvScale: vec2f=uniforms.particlesInfos.xy;var uvOffset: vec2f= vec2f(vertexInputs.offset.x ,1.0-vertexInputs.offset.y);vertexOutputs.vUV=(uvOffset+ vec2f(columnOffset,rowOffset))*uvScale;\n#else\nvertexOutputs.vUV=vertexInputs.offset;\n#endif\n#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6) || defined(FOG)\nvar worldPos: vec4f= vec4f(vPositionW,1.0);\n#endif\n#ifdef POSITIONW_AS_VARYING\nvertexOutputs.vPositionW=vPositionW;\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<logDepthVertex>\n#ifdef PREPASS\nlet geometryViewPosition: vec4f=uniforms.view*vec4f(vPositionW,1.0);\n#if defined(PREPASS_NORMAL) || defined(PREPASS_WORLD_NORMAL)\nvar geometryNormalV=normalize((uniforms.view*vec4f(geometryNormalW,0.0)).xyz);let geometryViewDirection=select(vec3f(0.0,0.0,geometryViewPosition.z),geometryViewPosition.xyz,uniforms.projection[3][3]==0.0);if (dot(geometryNormalV,geometryViewDirection)>0.0) {geometryNormalV=-geometryNormalV;geometryNormalW=-geometryNormalW;}\n#endif\n#ifdef PREPASS_POSITION\nvertexOutputs.vGeometryPositionW=vPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvertexOutputs.vGeometryNormalW=normalize(geometryNormalW);\n#endif\n#ifdef PREPASS_NORMAL\nvertexOutputs.vGeometryNormalV=geometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\n#ifdef LOCAL\nvar geometryRenderPosition=vPositionW;\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\ngeometryRenderPosition=vertexInputs.position+(uniforms.invView*vec4f(rotatedCorner,0.0)).xyz;\n#endif\nvertexOutputs.vPosition=(uniforms.inverseEmitterWM*vec4f(geometryRenderPosition-uniforms.geometryWorldOffset,1.0)).xyz;\n#else\nvertexOutputs.vPosition=vPositionW;\n#endif\n#endif\n#ifdef PREPASS_DEPTH\nvertexOutputs.vViewPos=geometryViewPosition.xyz;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvertexOutputs.vNormViewDepth=(geometryViewPosition.z-uniforms.cameraInfo.x)/(uniforms.cameraInfo.y-uniforms.cameraInfo.x);\n#endif\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    Uy.e.ShadersStoreWGSL[By] || (Uy.e.ShadersStoreWGSL[By] = Ky);
-    const ey = [hy.c, fy.b, Zy.c, cb.c, Py.b, oy.c];
-    for (const sy of ey) Uy.e.IncludesShadersStoreWGSL[sy.name] || (Uy.e.IncludesShadersStoreWGSL[sy.name] = sy.shader);
-    const qb = {
-      name: By,
-      shader: Ky
+    var Ez = bz(39033),
+      nz = bz(41460),
+      iz = bz(41422),
+      lz = bz(41426),
+      Mz = bz(41543);
+    const tz = "greasedLineVertexShader",
+      Hz = "#include<instancesDeclaration>\n#include<sceneUboDeclaration>\n#include<meshUboDeclaration>\nattribute grl_widths: f32;\n#ifdef GREASED_LINE_USE_OFFSETS\nattribute grl_offsets: vec3f; \n#endif\nattribute grl_colorPointers: f32;attribute position: vec3f;varying grlCounters: f32;varying grlColorPointer: f32;\n#ifdef GREASED_LINE_CAMERA_FACING\nattribute grl_nextAndCounters: vec4f;attribute grl_previousAndSide: vec4f;uniform grlResolution: vec2f;uniform grlAspect: f32;uniform grlWidth: f32;uniform grlSizeAttenuation: f32;fn grlFix(i: vec4f,aspect: f32)->vec2f {var res=i.xy/i.w;res.x*=aspect;return res;}\n#else\nattribute grl_slopes: vec3f;attribute grl_counters: f32;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\n#include<instancesVertex>\nvertexOutputs.grlColorPointer=vertexInputs.grl_colorPointers;let grlMatrix: mat4x4f=scene.viewProjection*mesh.world ;\n#ifdef GREASED_LINE_CAMERA_FACING\nlet grlBaseWidth: f32=uniforms.grlWidth;let grlPrevious: vec3f=vertexInputs.grl_previousAndSide.xyz;let grlSide: f32=vertexInputs.grl_previousAndSide.w;let grlNext: vec3f=vertexInputs.grl_nextAndCounters.xyz;vertexOutputs.grlCounters=vertexInputs.grl_nextAndCounters.w;let grlWidth:f32=grlBaseWidth*vertexInputs.grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nvar grlPositionOffset: vec3f=vertexInputs.grl_offsets;\n#else\nvar grlPositionOffset=vec3f(0.);\n#endif\nlet positionUpdated: vec3f=vertexInputs.position+grlPositionOffset;let worldDir: vec3f=normalize(grlNext-grlPrevious);let nearPosition: vec3f=positionUpdated+(worldDir*0.001);let grlFinalPosition: vec4f=grlMatrix*vec4f(positionUpdated,1.0);let screenNearPos: vec4f=grlMatrix*vec4(nearPosition,1.0);let grlLinePosition: vec2f=grlFix(grlFinalPosition,uniforms.grlAspect);let grlLineNearPosition: vec2f=grlFix(screenNearPos,uniforms.grlAspect);let grlDir: vec2f=normalize(grlLineNearPosition-grlLinePosition);var grlNormal: vec4f=vec4f(-grlDir.y,grlDir.x,0.0,1.0);let grlHalfWidth: f32=0.5*grlWidth;\n#if defined(GREASED_LINE_RIGHT_HANDED_COORDINATE_SYSTEM)\ngrlNormal.x*=-grlHalfWidth;grlNormal.y*=-grlHalfWidth;\n#else\ngrlNormal.x*=grlHalfWidth;grlNormal.y*=grlHalfWidth;\n#endif\ngrlNormal*=scene.projection;if (uniforms.grlSizeAttenuation==1.) {grlNormal.x*=grlFinalPosition.w;grlNormal.y*=grlFinalPosition.w;let pr=vec4f(uniforms.grlResolution,0.0,1.0)*scene.projection;grlNormal.x/=pr.x;grlNormal.y/=pr.y;}\nvertexOutputs.position=vec4f(grlFinalPosition.xy+grlNormal.xy*grlSide,grlFinalPosition.z,grlFinalPosition.w);\n#else\nvertexOutputs.grlCounters=vertexInputs.grl_counters;\n#ifdef GREASED_LINE_USE_OFFSETS\nlet grlPositionOffset: vec3f=vertexInputs.grl_offsets;\n#else\nlet grlPositionOffset: vec3f=vec3f(0.0);\n#endif\nvertexOutputs.position=grlMatrix*vec4f(vertexInputs.position+grlPositionOffset+vertexInputs.grl_slopes*vertexInputs.grl_widths,1.0);\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
+    Ez.e.ShadersStoreWGSL[tz] || (Ez.e.ShadersStoreWGSL[tz] = Hz);
+    const Oz = [nz.c, iz.b, lz.c, Mz.b];
+    for (const dz of Oz) Ez.e.IncludesShadersStoreWGSL[dz.name] || (Ez.e.IncludesShadersStoreWGSL[dz.name] = dz.shader);
+    const pz = {
+      name: tz,
+      shader: Hz
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

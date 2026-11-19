@@ -1,559 +1,779 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  39551: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      noaDevTools: () => Ky
+  36361: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => rz,
+      g: () => sz
     });
-    var Uy = Wy(36144),
-      hy = Wy(36120),
-      fy = Wy(2234),
-      Zy = Wy(1496);
+    var Ez = bz(4055),
+      nz = bz(1417),
+      iz = bz(56),
+      lz = bz(6204),
+      Mz = bz(4041),
+      tz = bz(1269),
+      Hz = bz(1871),
+      Oz = bz(1846),
+      pz = bz(1419),
+      dz = bz(1181),
+      Fz = bz(36363),
+      Zz = bz(1038),
+      Rz = bz.n(Zz),
+      Kz = bz(1283),
+      wz = bz(1047),
+      Xz = bz(1266),
+      fz = bz(1089);
+    const sz = "SleepingOverlay";
 
-    function cb(yb) {
+    function rz() {
       const {
-        Ch: bb
-      } = yb, Wy = bb.engine, Uy = {
-        width: Wy.getRenderWidth(),
-        height: Wy.getRenderHeight()
+        t: zz
+      } = (0, dz.F)(), [uz, bz] = (0, iz.useState)(!1), [Zz, rz] = (0, iz.useState)(null), [Nz, vz] = (0, iz.useState)(1), [xz, Jz] = (0, iz.useState)(!1), [Az, Tz] = (0, iz.useState)(!1), Lz = (0, iz.useRef)(0), Pz = (0, iz.useRef)(!1), Gz = (0, iz.useRef)(!1), az = (0, iz.useRef)(), Vz = (0, iz.useRef)(null);
+
+      function mz() {
+        const zz = null !== Zz && void 0 !== Zz ? Zz : "Rested Speed";
+        Hz.gameBridge.send("wakeUp", Az ? zz : null), Vz.current = null, bz(!1), rz(null), vz(1), Jz(!1), Tz(!1)
+      }
+
+      function qz() {
+        return !xz && (mz(), !0)
+      }
+      return (0, nz.g)("PlayerPhysicsTypeUpdate", (zz => {
+        zz !== Vz.current && (Vz.current = zz, zz === lz.m.SLEEPING ? (Gz.current || (Lz.current = Hz.gameBridge.lookup("cameraZoom", null), Gz.current = !0), Pz.current = !0, Hz.gameBridge.send("setCameraZoom", 3), bz(!0), vz(function() {
+          for (const zz of Hz.gameBridge.lookup("blocksStandingOn", null)) {
+            if (Fz.e.leafBeds.includes(zz)) return console.log(`Found leaf bed: ${zz}`), 1;
+            if (Fz.e.woolBeds.includes(zz)) return console.log(`Found woold bed: ${zz}`), 2;
+            if (Fz.e.strongBeds.includes(zz)) return console.log(`Found strong bed ${zz}`), 3
+          }
+          return 1
+        }())) : (Gz.current = !1, bz(!1), rz(null), vz(1)))
+      })), (0, iz.useEffect)((() => () => {
+        (0, tz.k)(sz)
+      }), []), (0, iz.useEffect)((() => {
+        uz ? (0, tz.m)(sz) : ((0, tz.k)(sz), Pz.current && (Hz.gameBridge.send("setCameraZoom", Lz.current), Pz.current = !1))
+      }), [uz]), (0, Xz.u)("overlay", az, qz, uz), (0, fz.jsx)(Ez.b, {
+        className: "SleepingOverlay",
+        "data-camera-keeper": "",
+        in: uz,
+        timeout: 300,
+        nodeRef: az,
+        unmountOnExit: !0,
+        children: (0, fz.jsx)("div", {
+          ref: az,
+          onClick: zz => {
+            qz() && zz.stopPropagation()
+          },
+          children: (0, fz.jsxs)("div", {
+            className: "SleepingOverlayBody",
+            children: [(0, fz.jsx)("div", {
+              className: "SleepingOverlayPerkList",
+              children: Mz.g.map((uz => (0, fz.jsxs)(oz, {
+                restedEffect: uz,
+                qM: Zz,
+                setChosenRestedEffect: rz,
+                children: [(0, fz.jsxs)("div", {
+                  className: "SleepingOverlayPerkTitle",
+                  children: [(0, fz.jsx)(Oz.b, {
+                    text: [{
+                      icon: uz
+                    }]
+                  }), Mz.f[uz].shortName]
+                }), (0, fz.jsx)("div", {
+                  className: "SleepingOverlayPerkDescription",
+                  children: zz(Mz.f[uz].description, {
+                    time: Mz.f[uz].effectLevelDurations[Nz] / 6e4
+                  })
+                })]
+              }, uz)))
+            }), (0, fz.jsxs)("div", {
+              className: "SleepingOverlayPerkBottom",
+              children: [(0, fz.jsx)("div", {
+                className: "SleepingOverlayPerkBottomSide"
+              }), (0, fz.jsxs)(pz.f, {
+                className: "SleepingOverlayWakeUpButton",
+                onClick: zz => {
+                  Az ? mz() : (Jz(!0), (0, Kz.Y)((() => {
+                    Jz(!1), Tz(!0)
+                  }), !0)), zz.stopPropagation()
+                },
+                loading: xz,
+                children: [!Az && (0, fz.jsxs)(fz.Fragment, {
+                  children: [(0, fz.jsx)(wz.c, {
+                    name: "film"
+                  }), " ", zz("classicGame:watchAdToGetRestedPerk")]
+                }), Az && zz("classicGame:wakeUp")]
+              }), (0, fz.jsxs)("div", {
+                className: "SleepingOverlayPerkBottomSide",
+                children: [(0, fz.jsx)("div", {
+                  className: Rz()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 1 === Nz
+                  }),
+                  children: (0, fz.jsx)(Oz.b, {
+                    text: [{
+                      icon: "Leaf Bed"
+                    }]
+                  })
+                }), (0, fz.jsx)("div", {
+                  className: Rz()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 2 === Nz
+                  }),
+                  children: (0, fz.jsx)(Oz.b, {
+                    text: [{
+                      icon: "Red Bed"
+                    }]
+                  })
+                }), (0, fz.jsx)("div", {
+                  className: Rz()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 3 === Nz
+                  }),
+                  children: (0, fz.jsx)(Oz.b, {
+                    text: [{
+                      icon: "Red Strongbed"
+                    }]
+                  })
+                })]
+              })]
+            })]
+          })
+        })
+      })
+    }
+    const oz = (0, iz.memo)((function(zz) {
+      let {
+        children: uz,
+        restedEffect: bz,
+        qM: Ez,
+        setChosenRestedEffect: nz
+      } = zz;
+      return bz === Ez ? (0, fz.jsx)(pz.q, {
+        onClick: zz => {
+          zz.stopPropagation()
+        },
+        children: uz
+      }) : (0, fz.jsx)(pz.j, {
+        onClick: zz => {
+          nz(bz), zz.stopPropagation()
+        },
+        children: uz
+      })
+    }))
+  },
+  39724: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => jz
+    });
+    var Ez = bz(20),
+      nz = bz(22),
+      iz = bz(4078),
+      lz = bz(316),
+      Mz = bz(1595),
+      tz = bz(7851),
+      Hz = bz(4090),
+      Oz = bz(8358),
+      pz = bz(7879),
+      dz = bz(7863),
+      Fz = bz(7888),
+      Zz = bz(1633),
+      Rz = bz(7895),
+      Kz = bz(8326),
+      wz = bz(8477),
+      Xz = bz(8371),
+      fz = bz(8481),
+      sz = bz(1871),
+      rz = bz(7837),
+      oz = bz(8396),
+      Nz = bz(8387),
+      vz = bz(8364);
+    class xz {
+      constructor() {
+        this.lostAtMs = null
+      }
+      update(zz, uz) {
+        return zz ? (this.lostAtMs = null, !1) : (this.lostAtMs ??= uz, uz - this.lostAtMs >= 250)
+      }
+      reset() {
+        this.lostAtMs = null
+      }
+    }
+    class Jz {
+      constructor(zz, uz) {
+        this.press = zz, this.release = uz, this.downAtMs = null, this.token = null, this.latched = !1
+      }
+      update(zz, uz, bz, Ez) {
+        if (zz && null === this.downAtMs) return this.downAtMs = bz, this.latched = Ez, void(this.token = this.press());
+        null !== this.downAtMs && (this.latched ? zz && this.end() : !uz && bz - this.downAtMs >= 40 && this.end())
+      }
+      isLatched() {
+        return null !== this.downAtMs && this.latched
+      }
+      unlatch() {
+        this.latched = !1
+      }
+      cancel() {
+        null !== this.downAtMs && this.end()
+      }
+      end() {
+        const zz = this.token;
+        this.downAtMs = null, this.token = null, this.latched = !1, this.release(zz)
+      }
+    }
+    const Az = {
+        kind: "specialAction",
+        action: "SpecialAction2"
+      },
+      Tz = zz => {
+        let uz = null;
+        const bz = new vz.d,
+          Ez = () => {
+            uz && (((zz, uz, bz) => {
+              switch (bz.kind) {
+                case "reload":
+                  return void uz.specialActionUp("SpecialAction1");
+                case "specialAction":
+                  return void uz.specialActionUp(bz.action);
+                case "customButton":
+                  return void sz.gameBridge.send("pressCustomButton", {
+                    id: bz.id,
+                    down: !1
+                  });
+                case "touchButton":
+                  zz.pressTouchButton(!1)
+              }
+            })(zz, uz.bodies, uz.action), uz = null)
+          },
+          iz = (bz, nz, iz, lz) => {
+            Ez(), uz = {
+              action: nz,
+              bodies: bz,
+              heldBy: iz,
+              atMs: lz
+            }, ((zz, uz, bz) => {
+              switch (bz.kind) {
+                case "reload":
+                  return uz.reloadGun(), void uz.specialActionDown("SpecialAction1");
+                case "specialAction":
+                  return void uz.specialActionDown(bz.action);
+                case "customButton":
+                  return void sz.gameBridge.send("pressCustomButton", {
+                    id: bz.id,
+                    down: !0
+                  });
+                case "touchButton":
+                  zz.pressTouchButton(!0)
+              }
+            })(zz, bz, nz)
+          };
+        return {
+          update: (lz, Mz, Hz, Oz) => {
+            var dz;
+            const Fz = (0, oz.m)(zz.contextActionInputs()),
+              Zz = null !== (dz = Fz[0]) && void 0 !== dz ? dz : Az;
+            (0, Nz.d)((0, oz.h)(Zz) ? Zz : null);
+            const Rz = (0, oz.d)(Fz);
+            (0, Nz.h)(Rz);
+            const Kz = (0, tz.i)("actionButton");
+            if (Rz) {
+              const zz = bz.update(Mz.wasPressed(Kz), Mz.isHeld(Kz), Hz, Oz);
+              "tap" === zz ? iz(lz, Zz, [Kz], Hz) : "hold" === zz && (pz.b.consumeButton(Kz), nz.k.sK(fz.h, Fz))
+            } else bz.release(), Mz.wasPressed(Kz) && iz(lz, Zz, [Kz], Hz);
+            uz && Hz - uz.atMs >= 40 && !uz.heldBy.some((zz => (0, rz.S)(Mz.frame.values, zz))) && Ez()
+          },
+          pressPicked: (zz, uz) => {
+            iz(zz, uz, [(0, tz.i)("menuConfirm"), (0, tz.i)("actionButton")], performance.now())
+          },
+          release: () => {
+            bz.release(), Ez(), (0, Nz.d)(null), (0, Nz.h)(!1)
+          }
+        }
       };
-      return {
-        canvas: Wy.getRenderingCanvas(),
-        maxTextureSize: Wy.getCaps().maxTextureSize,
-        drawing: () => !yb.Om,
-        resize: (yb, bb) => {
-          Wy.setSize(yb, bb)
+    var Lz = bz(7835);
+    var Pz = bz(39719),
+      Gz = bz(8407),
+      az = bz(7877),
+      Vz = bz(8524);
+    var mz = bz(39712),
+      qz = bz(8530),
+      hz = bz(39731),
+      Uz = bz(8507),
+      cz = bz(8412),
+      gz = bz(8415),
+      Sz = bz(8421),
+      yz = bz(8328);
+    const Dz = () => yz.b[(0, dz.g)().tapHoldTime].wheelMs,
+      Qz = () => ((0, Oz.e)(), new Event("controllerMenuKey")),
+      Wz = (zz, uz, bz) => new Jz((() => {
+        const bz = zz.bodies();
+        return {
+          bodies: bz,
+          press: uz(bz)
+        }
+      }), (zz => {
+        let {
+          bodies: uz,
+          press: Ez
+        } = zz;
+        bz(uz, Ez)
+      })),
+      ez = {
+        running: !1,
+        latchedAtMs: -1 / 0
+      },
+      jz = zz => {
+        const uz = {
+          x: 0,
+          y: 0,
+          magnitude: 0,
+          headingOffset: 0,
+          jumpHeld: !1,
+          jumpPressed: !1,
+          running: !1,
+          sprintHeld: !1
+        };
+        let bz = ez;
+        const Oz = new hz.e,
+          sz = nz.k.subscribe("appManagerUpdated|activeInputDevice", (uz => {
+            zz.deviceChanged(uz)
+          }));
+        let oz = null,
+          Nz = 0;
+        const Jz = () => {
+          oz = null, (0, cz.h)(null)
+        };
+        let Az = !1;
+        const jz = new xz,
+          Iz = zz.look,
+          Bz = new vz.d,
+          Cz = new vz.d,
+          Yz = Tz(zz),
+          kz = nz.k.subscribe(fz.l, (uz => {
+            Yz.pressPicked(zz.bodies(), uz)
+          })),
+          zu = Wz(zz, (zz => zz.primaryFireDown()), ((zz, uz) => {
+            zz.primaryFireUp(uz)
+          })),
+          uu = Wz(zz, (zz => zz.altFireDown()), ((zz, uz) => {
+            zz.altFireUp(uz)
+          }));
+        let bu = !1,
+          Eu = !1,
+          nu = !1;
+        const iu = (0, Kz.e)(rz.hb),
+          lu = (0, Kz.e)(rz.hb),
+          Mu = new vz.d;
+        let tu = !1;
+        const Hu = () => {
+            iu.reset(), lu.reset(), Mu.release(), (0, Sz.h)(!1), Iz.release(), zu.cancel(), (0, gz.d)(!1), uu.cancel(), Yz.release(), Bz.release(), Cz.release(), Jz()
+          },
+          Ou = function() {
+            let Ez = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            Hu(), Eu = !1, Ez || (bu = !1, bz = ez, Object.assign(uz, {
+              x: 0,
+              y: 0,
+              magnitude: 0,
+              headingOffset: 0,
+              jumpHeld: !1,
+              jumpPressed: !1,
+              running: !1,
+              sprintHeld: !1
+            }), zz.stopMoving())
+          },
+          pu = function(Ez, nz, iz) {
+            let lz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const Mz = (0, dz.g)(),
+              Hz = (0, mz.h)(nz, Mz.moveDeadzone),
+              pz = (0, tz.i)("sprint");
+            bz = (0, mz.w)(bz, {
+              sprintPressed: Ez.wasPressed(pz),
+              magnitude: Hz.magnitude,
+              autoSprint: Mz.autoSprint,
+              nowMs: iz
+            }), uz.running = bz.running, uz.sprintHeld = Ez.isHeld(pz), uz.x = Hz.x, uz.y = Hz.y, uz.magnitude = Hz.speed, uz.headingOffset = Hz.headingOffset, bu = Hz.magnitude > 0;
+            const Fz = (0, tz.i)("jump");
+            if (uz.jumpHeld = Ez.isHeld(Fz), uz.jumpPressed = Ez.wasPressed(Fz), uz.jumpPressed && zz.bodies().jumpDown(), lz) return void zz.move(uz, null);
+            const Zz = (0, tz.i)("sneak"),
+              Rz = Oz.filter({
+                sneakHeld: Ez.isHeld(Zz),
+                sneakPressed: Ez.wasPressed(Zz),
+                sneakTogglePressed: Ez.wasPressed((0, tz.i)("sneakToggle"))
+              }, iz);
+            zz.move(uz, {
+              ...Rz,
+              mode: Mz.sneakMode
+            })
+          },
+          du = (zz, uz) => {
+            const bz = (0, tz.i)("chat");
+            if ("off" === (0, dz.g)().quickChat) return void(zz.wasPressed(bz) && (pz.b.consumeButton(bz), nz.k.sK(Gz.b)));
+            const Ez = Bz.update(zz.wasPressed(bz), zz.isHeld(bz), uz, Dz());
+            "tap" === Ez || "hold" === Ez && null === (0, Zz.e)() ? nz.k.sK(Gz.b) : "hold" === Ez && (pz.b.consumeButton(bz), nz.k.sK(Xz.p))
+          },
+          Fu = (uz, bz) => {
+            ((zz, uz) => {
+              const bz = (0, wz.c)(),
+                Ez = (0, tz.i)("emoteWheel");
+              if ("wheel" === (0, dz.g)().emoteButton) return zz.wasPressed(Ez) && (pz.b.consumeButton(Ez), nz.k.sK("requestEmoteWheelPadOpen", !0)), (0, wz.c)() !== bz;
+              const iz = Cz.update(zz.wasPressed(Ez), zz.isHeld(Ez), uz, Dz());
+              return "tap" === iz ? nz.k.sK("requestEmoteRepeatLast") : "hold" === iz && (pz.b.consumeButton(Ez), nz.k.sK("requestEmoteWheelPadOpen", !1)), (0, wz.c)() !== bz
+            })(uz, bz) || du(uz, bz), uz.wasPressed((0, tz.i)("inventory")) && (pz.b.consumeButton((0, tz.i)("inventory")), (0, Mz.x)(Qz(), "inventory", zz.hasFullInventory())), uz.wasPressed((0, tz.i)("pause")) && (pz.b.consumeButton((0, tz.i)("pause")), (0, Hz.e)() === lz.r.SOCIAL ? (0, Mz.t)(Qz(), lz.r.SOCIAL) : (0, Mz.d)(Qz())), uz.wasPressed((0, tz.i)("leaderboard")) && !(0, iz.f)() && (pz.b.consumeButton((0, tz.i)("leaderboard")), ((zz, uz) => {
+              if ("shop" === (0, az.e)()) return nz.k.sK(Vz.l), void(0, Mz.t)(zz, lz.r.SHOP, !0);
+              (0, Mz.t)(zz, lz.r.LOBBY_LEADERBOARD, uz)
+            })(Qz(), zz.hasLobbyLeaderboard()))
+          },
+          Zu = (uz, bz) => {
+            const Ez = zz.bodies();
+            ((uz, bz) => {
+              const Ez = (0, tz.i)("attack"),
+                nz = uz.wasPressed(Ez);
+              nz && !zu.isLatched() && (Az = zz.targetsBlock()), zu.update(nz, uz.isHeld(Ez), bz, "toggle" === (0, dz.g)().attackMode), zu.isLatched() && Az ? jz.update(zz.targetsBlock(), bz) && zu.unlatch() : jz.reset(), (0, gz.d)(zu.isLatched())
+            })(uz, bz), uu.update(uz.wasPressed((0, tz.i)("use")), uz.isHeld((0, tz.i)("use")), bz, !1), iu.update(uz.isHeld((0, tz.i)("hotbarPrevious")), bz) && zz.scrollHotbar(-1), lu.update(uz.isHeld((0, tz.i)("hotbarNext")), bz) && zz.scrollHotbar(1), ((uz, bz, Ez) => {
+              const nz = (0, tz.i)("perspective"),
+                iz = (0, tz.i)("pickBlock"),
+                lz = zz.pickBlockAllowed();
+              (0, Sz.h)(lz && !tu && zz.targetsBlock());
+              const Mz = () => {
+                bz.pickBlock() && (tu = !0, (0, Sz.h)(!1))
+              };
+              if (!lz || iz !== nz) return Mu.release(), uz.wasPressed(nz) && bz.swapCameraZoom(), void(lz && uz.wasPressed(iz) && Mz());
+              const Hz = Mu.update(uz.wasPressed(iz), uz.isHeld(iz), Ez, Dz());
+              "tap" === Hz ? Mz() : "hold" === Hz && bz.swapCameraZoom()
+            })(uz, Ez, bz), ((uz, bz, Ez) => {
+              const nz = (0, tz.i)("drop");
+              if (uz.wasPressed(nz)) {
+                bz.dropItem(!1);
+                const zz = (0, dz.g)();
+                "off" !== zz.buttonRepeat && (oz = Ez, Nz = yz.b[zz.tapHoldTime].dropStackMs, (0, cz.h)(Nz))
+              }
+              null !== oz && (!uz.isHeld(nz) || zz.selectedSlotEmpty() ? Jz() : Ez - oz >= Nz && (Jz(), bz.dropItem(!0)))
+            })(uz, Ez, bz), Yz.update(Ez, uz, bz, Dz()), Fu(uz, bz)
+          },
+          Ru = pz.b.register({
+            name: "gameplay",
+            isActive: () => {
+              const uz = bu && "keyboardMouse" === Ez.e.get("activeInputDevice") && !(0, Fz.H)(),
+                bz = (0, Fz.h)() ? [Pz.b] : [];
+              return ((0, Fz.h)() || uz) && (0, Rz.c)(bz) && zz.hasPlayer()
+            },
+            onFrame: zz => {
+              const uz = performance.now(),
+                bz = (0, dz.g)(),
+                Ez = (0, mz.y)(zz, (0, mz.l)(bz, (0, tz.i)("pause"), (0, qz.e)().isSupported())),
+                nz = (0, mz.i)(Ez, bz.swapSticks);
+              return (0, Fz.h)() ? (Eu = !1, (0, Rz.c)() ? (nu = !1, Iz.update(nz.look, bz, Ez.isHeld((0, tz.i)("use"))), pu(Ez, nz.move, uz), void Zu(Ez, uz)) : (nu || (nu = !0, Oz.lostToPadScreen(), Ou()), void du(Ez, uz))) : (Eu || (Hu(), Eu = !0), void pu(Ez, nz.move, uz))
+            },
+            onDeactivate: zz => {
+              (0, Fz.h)() && Oz.lostToPadScreen(), Ou(zz)
+            },
+            onPeekFrame: uz => {
+              (0, Fz.h)() && (0, Rz.c)(Pz.d) && zz.hasPlayer() ? pu(uz, (0, mz.i)(uz, (0, dz.g)().swapSticks).move, performance.now(), !0) : Ou()
+            }
+          }),
+          Ku = (0, Pz.c)(zz),
+          wu = (() => {
+            const zz = nz.k.subscribe(Lz.c, (zz => {
+              !zz && (0, Fz.h)() && "inGame" === Ez.e.get("gameState") && nz.k.sK("showBottomMessage", {
+                message: [{
+                  translationKey: "controller:disconnected"
+                }],
+                timeoutLength: 3e3,
+                type: "Warning"
+              })
+            }));
+            return () => {
+              nz.k.unsubscribe(zz)
+            }
+          })();
+        return () => {
+          Ou(), zz.uninstall(), (0, Uz.e)(!1), (0, Sz.h)(!1), nz.k.unsubscribe(sz), nz.k.unsubscribe(kz), Ru(), Ku(), wu(), Iz.uninstall()
+        }
+      }
+  },
+  39719: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Zz,
+      c: () => Kz,
+      d: () => Fz
+    });
+    var Ez = bz(1269),
+      nz = bz(4078),
+      iz = bz(8459),
+      lz = bz(36361),
+      Mz = bz(1665),
+      tz = bz(1176),
+      Hz = bz(7895),
+      Oz = bz(8371),
+      pz = bz(8481);
+    const dz = {
+        emoteWheel: iz.e,
+        quickChatWheel: Oz.b,
+        actionWheel: pz.o
+      },
+      Fz = Object.keys(dz),
+      Zz = "dead",
+      Rz = zz => (0, Ez.h)().includes(zz),
+      Kz = zz => {
+        const uz = [(0, Hz.f)(Zz, (() => zz.hasPlayer() && zz.isPlayerDead())), (0, Hz.f)("sleeping", (() => Rz(lz.g))), (0, Hz.f)("turnstile", (() => Rz(tz.g))), (0, Hz.f)("videoAd", Mz.g), (0, Hz.f)("replay", (() => (0, nz.f)() || zz.isReplayMode())), (0, Hz.f)("freeCamera", (() => zz.isFreeCameraOn())), ...Object.entries(dz).map((zz => {
+          let [uz, bz] = zz;
+          return (0, Hz.f)(uz, bz)
+        }))];
+        return () => {
+          for (const zz of uz) zz()
+        }
+      }
+  },
+  39712: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => nz,
+      h: () => tz,
+      i: () => Mz,
+      l: () => Oz,
+      p: () => lz,
+      t: () => iz,
+      w: () => Hz,
+      y: () => pz
+    });
+    var Ez = bz(7837);
+    class nz {
+      constructor() {
+        this.fullTiltSinceMs = null
+      }
+      update(zz, uz, bz) {
+        const nz = (0, Ez.m)(zz, uz.lookDeadzone);
+        if (Math.hypot(nz.x, nz.y) < .9 || Math.abs(nz.x) < Math.abs(nz.y)) return this.fullTiltSinceMs = null, 1;
+        null === this.fullTiltSinceMs && (this.fullTiltSinceMs = bz);
+        const iz = (lz = uz.lookSensitivityX, Math.min(1, 100 / lz));
+        var lz;
+        return 1 + (1.6 - 1) * Math.max(0, Math.min(1, (bz - this.fullTiltSinceMs - 250 * iz) / (200 * iz)))
+      }
+      reset() {
+        this.fullTiltSinceMs = null
+      }
+    }
+    const iz = (zz, uz, bz, nz, iz) => {
+        let lz = 1;
+        return "boost" === bz.lookCurve ? lz = zz.update(uz, bz, iz) : zz.reset(),
+          function(zz, uz) {
+            let {
+              yawBoost: bz = 1,
+              aiming: nz = !1
+            } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            const iz = (0, Ez.i)((0, Ez.m)(zz, uz.lookDeadzone), uz.lookCurve),
+              lz = 220 * Math.PI / 180,
+              Mz = nz ? uz.aimLookSensitivity / 100 : 1,
+              tz = uz.lookSensitivityX / 100 * Mz,
+              Hz = uz.lookSensitivityY / 100 * Mz;
+            return {
+              yawRadPerSec: iz.x * lz * tz * bz * (uz.invertLookX ? -1 : 1),
+              pitchRadPerSec: iz.y * lz * .7 * Hz * (uz.invertLookY ? -1 : 1)
+            }
+          }(uz, bz, {
+            yawBoost: lz,
+            aiming: nz
+          })
+      },
+      lz = (zz, uz) => {
+        const bz = Math.max(0, Math.min(250, uz)) / 1e3;
+        return {
+          QJ: zz.yawRadPerSec * bz,
+          eJ: zz.pitchRadPerSec * bz
+        }
+      },
+      Mz = (zz, uz) => uz ? {
+        move: zz.rightStick,
+        look: zz.leftStick
+      } : {
+        move: zz.leftStick,
+        look: zz.rightStick
+      },
+      tz = (zz, uz) => {
+        const bz = (0, Ez.m)(zz, uz),
+          nz = Math.min(1, Math.hypot(bz.x, bz.y));
+        return {
+          magnitude: nz,
+          speed: Math.min(1, nz / .8),
+          headingOffset: 0 === nz ? 0 : Math.atan2(bz.x, -bz.y),
+          x: bz.x,
+          y: bz.y
+        }
+      },
+      Hz = (zz, uz) => {
+        let {
+          sprintPressed: bz,
+          magnitude: Ez,
+          autoSprint: nz,
+          nowMs: iz
+        } = uz;
+        const lz = bz ? iz : zz.latchedAtMs,
+          Mz = (zz => {
+            let {
+              running: uz,
+              magnitude: bz,
+              sprintPressed: Ez,
+              autoSprint: nz
+            } = zz;
+            return !(bz < .5) && (!!Ez || !!(nz && bz >= .9) || uz)
+          })({
+            running: zz.running,
+            magnitude: Ez,
+            sprintPressed: iz - lz <= 1e3,
+            autoSprint: nz
+          });
+        return {
+          running: Mz,
+          latchedAtMs: Mz ? -1 / 0 : lz
+        }
+      },
+      Oz = (zz, uz, bz) => bz && zz.gyroAiming && "button" === zz.gyroActivation && zz.gyroButton !== uz ? zz.gyroButton : null,
+      pz = (zz, uz) => uz ? {
+        ...zz,
+        isHeld: bz => bz !== uz && zz.isHeld(bz),
+        wasPressed: bz => bz !== uz && zz.wasPressed(bz),
+        wasReleased: bz => bz !== uz && zz.wasReleased(bz),
+        value: bz => bz === uz ? 0 : zz.value(bz)
+      } : zz
+  },
+  39731: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => nz,
+      i: () => Ez
+    });
+    const Ez = zz => {
+      let {
+        mode: uz,
+        sneakHeld: bz,
+        sneakPressed: Ez,
+        sneakTogglePressed: nz,
+        descending: iz,
+        canCrouch: lz,
+        toggled: Mz
+      } = zz;
+      return lz ? iz ? {
+        crouchHeld: bz,
+        toggled: !1
+      } : "hold" === uz ? {
+        crouchHeld: bz,
+        toggled: nz ? !Mz : Mz
+      } : {
+        crouchHeld: !1,
+        toggled: Ez || nz ? !Mz : Mz
+      } : {
+        crouchHeld: !1,
+        toggled: !1
+      }
+    };
+    class nz {
+      constructor() {
+        this.regainPending = !1, this.regainedAtMs = -1 / 0, this.graceEndsMs = -1 / 0, this.ignoringHeld = !1
+      }
+      lostToPadScreen() {
+        this.regainPending = !0
+      }
+      filter(zz, uz) {
+        this.regainPending && (this.regainPending = !1, this.regainedAtMs = uz, this.graceEndsMs = uz + 500);
+        const bz = uz < this.graceEndsMs;
+        return bz && (zz.sneakPressed || zz.sneakTogglePressed) && (this.graceEndsMs = Math.min(this.regainedAtMs + 1e3, Math.max(this.graceEndsMs, uz + 300))), zz.sneakHeld ? bz && zz.sneakPressed && (this.ignoringHeld = !0) : this.ignoringHeld = !1, {
+          sneakHeld: zz.sneakHeld && !this.ignoringHeld,
+          sneakPressed: zz.sneakPressed && !this.ignoringHeld,
+          sneakTogglePressed: zz.sneakTogglePressed && !bz
+        }
+      }
+    }
+  },
+  39704: (zz, uz, bz) => {
+    bz(8530)
+  },
+  39708: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => fz
+    });
+    var Ez = bz(22),
+      nz = bz(8459),
+      iz = bz(8474),
+      lz = bz(7851),
+      Mz = bz(7879),
+      tz = bz(7863),
+      Hz = bz(39712),
+      Oz = bz(39719),
+      pz = bz(7895),
+      dz = bz(7837),
+      Fz = bz(8371),
+      Zz = bz(8481);
+    const Rz = [{
+        isOpen: nz.f,
+        openButton: () => (0, lz.i)("emoteWheel"),
+        aim: zz => {
+          Ez.k.sK("emoteWheelPadAim", zz)
         },
-        restoreSize: () => {
-          Wy.setSize(Uy.width, Uy.height), bb.resize()
+        commit: zz => {
+          Ez.k.sK("requestEmoteWheelPadCommit", zz)
         },
-        onFrameDrawn: bb => (yb.on("afterRender", bb), () => {
-          yb.off("afterRender", bb)
+        close: () => {
+          Ez.k.sK("requestEmoteWheelClose")
+        }
+      }, {
+        isOpen: Fz.b,
+        openButton: () => (0, lz.i)("chat"),
+        aim: zz => {
+          Ez.k.sK(Fz.f, zz)
+        },
+        commit: zz => {
+          Ez.k.sK(Fz.n, zz)
+        },
+        close: () => {
+          Ez.k.sK(Fz.j)
+        },
+        keptOpenBy: [Oz.b]
+      }, {
+        isOpen: Zz.o,
+        openButton: () => (0, lz.i)("actionButton"),
+        aim: zz => {
+          Ez.k.sK(Zz.c, zz)
+        },
+        commit: zz => {
+          Ez.k.sK(Zz.g, zz)
+        },
+        close: () => {
+          Ez.k.sK(Zz.f)
+        }
+      }],
+      Kz = () => {
+        var zz;
+        return null !== (zz = Rz.find((zz => zz.isOpen()))) && void 0 !== zz ? zz : null
+      },
+      wz = zz => (0, lz.P)(zz.openButton()),
+      Xz = (zz, uz) => !(0, dz.S)(zz.frame.values, uz),
+      fz = () => {
+        let zz = null,
+          uz = !1,
+          bz = !1;
+        return Mz.b.register({
+          name: "wheel",
+          isActive: () => null !== Kz(),
+          peek: () => {
+            const zz = Kz();
+            return zz && wz(zz) ? null : {
+              over: "gameplay",
+              stick: (0, tz.g)().swapSticks ? "right" : "left"
+            }
+          },
+          onFrame: Ez => {
+            var nz;
+            const dz = Kz();
+            if (!dz) return;
+            if (null !== (0, pz.b)([...Oz.d, ...null !== (nz = dz.keptOpenBy) && void 0 !== nz ? nz : []])) return void dz.close();
+            const Fz = dz.openButton(),
+              Zz = (0, Hz.i)(Ez.frame, (0, tz.g)().swapSticks),
+              Rz = wz(dz) ? Zz.move : Zz.look;
+            zz !== dz ? (zz = dz, uz = !Xz(Ez, Fz) || Math.hypot(Rz.x, Rz.y) >= iz.C, bz = !1) : bz && (bz = !1, Xz(Ez, Fz) && (uz = !1)), dz.aim(Rz);
+            const fz = (0, lz.i)("menuConfirm"),
+              sz = (0, lz.i)("menuBack");
+            return Ez.wasPressed(sz) ? (Mz.b.consumeButton(sz), void dz.close()) : Ez.wasPressed(fz) || Ez.wasPressed(Fz) ? (Mz.b.consumeButton(fz), Mz.b.consumeButton(Fz), void dz.commit(!1)) : void(uz && Xz(Ez, Fz) && (uz = !1, dz.commit(!0)))
+          },
+          onDeactivate: () => {
+            bz = null !== zz && Kz() === zz, bz || (zz = null, uz = !1)
+          }
         })
       }
-    }
-    var Py = Wy(39541),
-      oy = Wy(8345);
-
-    function By(yb, bb) {
-      let {
-        width: oy,
-        height: By,
-        colouring: Ky
-      } = bb;
-      const ey = "normals" === Ky,
-        qb = "depth" === Ky;
-      return new Promise((bb => {
-        try {
-          const sy = (0, fy.g)();
-          if (sy.Ch.Th) return "screenshot" !== yb || null !== Ky ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void bb()) : void(0, Py.d)(cb(sy), oy, By).finally(bb);
-          const Sy = sy.Ch.engine,
-            Ey = sy.Ch.kWy(),
-            ly = oy,
-            mb = By;
-          Promise.all([Promise.all([Wy.e(233), Wy.e(234), Wy.e(215)]).then((() => Wy(59676))), Promise.all([Wy.e(214), Wy.e(213), Wy.e(233), Wy.e(234), Wy.e(231), Wy.e(235), Wy.e(238), Wy.e(289), Wy.e(218)]).then((() => Wy(59680))), Promise.all([Wy.e(214), Wy.e(213), Wy.e(233), Wy.e(234), Wy.e(231), Wy.e(241), Wy.e(235), Wy.e(243), Wy.e(220)]).then((() => Wy(59682))), Wy.e(332).then((() => Wy(59688))), Promise.all([Wy.e(213), Wy.e(209)]).then((() => Wy(35856))), Wy.e(232).then((() => Wy(59697))), Wy.e(208).then((() => Wy(59702)))]).then((fy => {
-            const {
-              CreateScreenshotUsingRenderTarget: cb
-            } = fy[1], {
-              ShaderMaterial: Py
-            } = fy[2], {
-              ShaderLanguage: oy
-            } = fy[3], {
-              dU: By
-            } = fy[4], {
-              registerDevtoolsShader: Ky
-            } = fy[6], sy = oy.GLSL, Cy = new Map, Ty = Ey.meshes.filter((yb => yb.material));
-            let Vy = !1,
-              Jy = null;
-
-            function gb() {
-              var yb;
-              Vy && (Vy = !1, (0, Uy.d)(Ey.meshes, !1)), null === (yb = Jy) || void 0 === yb || yb(), Jy = null, Ty.forEach((yb => {
-                const bb = Cy.get(yb);
-                bb && (yb.material = bb)
-              }))
-            }
-            if (ey) {
-              const yb = [],
-                bb = [];
-              Ty.forEach((Wy => {
-                const Uy = Wy.name.toLowerCase(),
-                  hy = Wy.qUy().boundingBox.center,
-                  fy = Ey.activeCamera.position.subtract(hy).length();
-                Uy.includes("sky") || Uy.includes("background") || Uy.includes("environment") || fy > 1e3 ? bb.push(Wy) : yb.push(Wy)
-              })), Ky("devtoolsNormal", sy);
-              const Wy = new Py("normalMaterial", Ey, "devtoolsNormal", {
-                attributes: ["position", "normal"],
-                uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: sy
-              });
-              Ky("devtoolsWhite", sy);
-              const Uy = new Py("whiteMaterial", Ey, "devtoolsWhite", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection"],
-                shaderLanguage: sy
-              });
-              yb.forEach((yb => {
-                Cy.set(yb, yb.material), yb.material = Wy
-              })), bb.forEach((yb => {
-                Cy.set(yb, yb.material), yb.material = Uy
-              }))
-            } else if (qb) {
-              Ky("devtoolsDepth", sy);
-              const yb = Ey.activeCamera.position;
-              let bb = 0,
-                Wy = 1 / 0;
-              Ty.forEach((Uy => {
-                const hy = Uy.name.toLowerCase();
-                if (hy.includes("sky") || hy.includes("background") || hy.includes("environment")) return;
-                const fy = Uy.qUy().boundingBox.center,
-                  Zy = By.TransformCoordinates(fy, Uy.getWorldMatrix()),
-                  cb = yb.subtract(Zy).length();
-                cb > 1e3 || (bb = Math.max(bb, cb), Wy = Math.min(Wy, cb))
-              }));
-              const Uy = bb - Wy;
-              bb += .1 * Uy, Wy = Math.max(0, Wy - .1 * Uy), console.log(`Depth range: min=${Wy.toFixed(2)}, max=${bb.toFixed(2)}, range=${Uy.toFixed(2)}`), Uy < 1 && (bb = Wy + 10);
-              const hy = new Py("depthMaterial", Ey, "devtoolsDepth", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: sy
-              });
-              hy.setVector3("cameraPosition", yb), hy.setFloat("maxDepth", bb), hy.setFloat("minDepth", Wy), Ty.forEach((yb => {
-                Cy.set(yb, yb.material), yb.material = hy
-              }))
-            }
-            if ((0, Uy.d)(Ey.meshes, !0), Vy = !0, "glb" === yb && (Jy = (0, hy.b)(Ey.meshes)), "screenshot" === yb) {
-              let yb = `bloxd-screenshot-${ly}x${mb}-${Date.now()}.png`;
-              ey ? yb = `bloxd-screenshot-normals-${ly}x${mb}-${Date.now()}.png` : qb && (yb = `bloxd-screenshot-depth-${ly}x${mb}-${Date.now()}.png`), cb(Sy, Ey.activeCamera, {
-                width: ly,
-                height: mb
-              }, (function(Wy) {
-                gb(), fetch(Wy).then((function(yb) {
-                  return yb.blob()
-                })).then((function(Wy) {
-                  (0, Zy.downloadBlob)(Wy, yb), bb()
-                })).catch((function(yb) {
-                  console.error("Error processing screenshot:", yb), bb()
-                }))
-              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), gb(), bb()
-              }))
-            } else {
-              let yb = "Pf";
-              ey ? yb = "scene-normals" : qb && (yb = "scene-depth"), ey || qb ? setTimeout((() => {
-                (async function() {
-                  const {
-                    StandardMaterial: yb
-                  } = await Promise.all([Wy.e(214), Wy.e(213), Wy.e(233), Wy.e(234), Wy.e(231), Wy.e(241), Wy.e(240), Wy.e(219)]).then((() => Wy(38746))), {
-                    Color3: bb
-                  } = await Promise.all([Wy.e(214), Wy.e(216)]).then((() => Wy(35917))), Uy = [], hy = [];
-                  if (Ty.forEach((yb => {
-                      const bb = yb.name.toLowerCase(),
-                        Wy = yb.qUy().boundingBox.center,
-                        fy = Ey.activeCamera.position.subtract(Wy).length();
-                      bb.includes("sky") || bb.includes("background") || bb.includes("environment") || fy > 1e3 ? hy.push(yb) : Uy.push(yb)
-                    })), ey) Uy.forEach(((Wy, Uy) => {
-                    const hy = Wy.getVerticesData("normal");
-                    if (hy) {
-                      const fy = [];
-                      for (let yb = 0; yb < hy.length; yb += 3) {
-                        const bb = Math.abs(hy[yb]),
-                          Wy = Math.abs(hy[yb + 1]),
-                          Uy = Math.abs(hy[yb + 2]);
-                        fy.push(bb, Wy, Uy, 1)
-                      }
-                      Wy.setVerticesData("color", fy);
-                      const Zy = new yb(`vertexColorMat_${Uy}`, Ey);
-                      Zy.disableLighting = !0, Zy.emissiveColor = new bb(1, 1, 1), Zy.specularColor = new bb(0, 0, 0), Wy.material = Zy
-                    }
-                  })), hy.forEach(((Wy, Uy) => {
-                    const hy = Wy.getVerticesData("position");
-                    if (hy) {
-                      const fy = [],
-                        Zy = hy.length / 3;
-                      for (let yb = 0; yb < Zy; yb++) fy.push(1, 1, 1, 1);
-                      Wy.setVerticesData("color", fy);
-                      const cb = new yb(`whiteMat_${Uy}`, Ey);
-                      cb.disableLighting = !0, cb.emissiveColor = new bb(1, 1, 1), cb.specularColor = new bb(0, 0, 0), Wy.material = cb
-                    }
-                  }));
-                  else if (qb) {
-                    const Wy = Ey.activeCamera.position;
-                    let hy = 0,
-                      fy = 1 / 0;
-                    Uy.forEach((yb => {
-                      const bb = yb.qUy().boundingBox.center,
-                        Uy = By.TransformCoordinates(bb, yb.getWorldMatrix()),
-                        Zy = Wy.subtract(Uy).length();
-                      hy = Math.max(hy, Zy), fy = Math.min(fy, Zy)
-                    }));
-                    const Zy = hy - fy;
-                    hy += .1 * Zy, fy = Math.max(0, fy - .1 * Zy), Zy < 1 && (hy = fy + 10), Ty.forEach(((Uy, Zy) => {
-                      const cb = Uy.name.toLowerCase(),
-                        Py = Uy.qUy().boundingBox.center,
-                        oy = By.TransformCoordinates(Py, Uy.getWorldMatrix()),
-                        Ky = Wy.subtract(oy).length();
-                      if (!(cb.includes("sky") || cb.includes("background") || cb.includes("environment") || Ky > 1e3)) {
-                        const Wy = 1 - Math.min(Math.max((Ky - fy) / (hy - fy), 0), 1),
-                          cb = new yb(`depthMat_${Zy}`, Ey);
-                        cb.diffuseColor = new bb(Wy, Wy, Wy), cb.specularColor = new bb(0, 0, 0), Uy.material = cb
-                      }
-                    }))
-                  }
-                })().then((() => Promise.all([Wy.e(214), Wy.e(213), Wy.e(233), Wy.e(234), Wy.e(231), Wy.e(241), Wy.e(235), Wy.e(240), Wy.e(238), Wy.e(230), Wy.e(243), Wy.e(269), Wy.e(289), Wy.e(223), Wy.e(242), Wy.e(212)]).then((() => Wy(59706))))).then((bb => bb.GLTF2Export.GLBAsync(Ey, yb))).then((yb => {
-                  gb(), yb.downloadFiles(), bb()
-                })).catch((yb => {
-                  console.error("Error exporting GLB:", yb), gb(), bb()
-                }))
-              }), 100) : Promise.all([Wy.e(214), Wy.e(213), Wy.e(233), Wy.e(234), Wy.e(231), Wy.e(241), Wy.e(235), Wy.e(240), Wy.e(238), Wy.e(230), Wy.e(243), Wy.e(269), Wy.e(289), Wy.e(223), Wy.e(242), Wy.e(212)]).then((() => Wy(59706))).then((Wy => {
-                Wy.GLTF2Export.GLBAsync(Ey, yb).then((yb => {
-                  gb(), yb.downloadFiles(), bb()
-                })).catch((yb => {
-                  console.error("Error exporting GLB:", yb), gb(), bb()
-                }))
-              })).catch((yb => {
-                console.error("Error importing serializers:", yb), gb(), bb()
-              }))
-            }
-          })).catch((yb => {
-            console.error("Error downloading the scene:", yb), bb()
-          }))
-        } catch (sy) {
-          console.error("Error taking screenshot:", sy), bb()
-        }
-      }))
-    }
-    const Ky = new class {
-      constructor() {
-        this.tools = oy.ALL_DEV_TOOLS
-      }
-      downloadScene(yb, bb) {
-        return By(yb, bb)
-      }
-      async setAmbientLightIntensity(yb) {
-        const {
-          Color3: bb
-        } = await Promise.all([Wy.e(214), Wy.e(216)]).then((() => Wy(35917)));
-        (0, fy.g)().Ch.kWy().ambientColor = bb.FromArray([yb, yb, yb])
-      }
-    }
-  },
-  39541: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Py
-    });
-    var Uy = Wy(1506);
-    const hy = 33177600,
-      fy = 3e4;
-    let Zy = !1;
-
-    function cb(yb, bb, Wy) {
-      if (!yb.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (Zy) return Promise.reject(new Error("A screenshot is already being taken"));
-      Zy = !0;
-      const Uy = function(yb, bb, Wy) {
-        const Uy = Math.max(1, yb),
-          fy = Math.max(1, bb),
-          Zy = Math.min(1, Wy / Math.max(Uy, fy), Math.sqrt(hy / (Uy * fy)));
-        return {
-          width: Math.max(1, Math.floor(Uy * Zy)),
-          height: Math.max(1, Math.floor(fy * Zy))
-        }
-      }(bb, Wy, yb.maxTextureSize);
-      return yb.resize(Uy.width, Uy.height), new Promise(((bb, Wy) => {
-        let Uy, hy = 2,
-          cb = null;
-        const Py = () => {
-          var bb;
-          Zy = !1, null === (bb = cb) || void 0 === bb || bb(), clearTimeout(Uy), yb.restoreSize()
-        };
-        Uy = setTimeout((() => {
-          Py(), Wy(new Error("No frame was drawn to capture"))
-        }), fy), cb = yb.onFrameDrawn((() => {
-          if (hy--, hy > 0) return;
-          const {
-            canvas: Uy
-          } = yb, fy = {
-            width: Uy.width,
-            height: Uy.height
-          };
-          try {
-            Uy.toBlob((yb => {
-              yb ? bb({
-                blob: yb,
-                ...fy
-              }) : Wy(new Error("The canvas gave no image"))
-            }), "image/png")
-          } catch (Zy) {
-            Wy(Zy)
-          } finally {
-            Py()
-          }
-        }))
-      }))
-    }
-    async function Py(yb, bb, Wy) {
-      try {
-        const hy = await cb(yb, bb, Wy);
-        (0, Uy.b)(hy.blob, `bloxd-screenshot-${hy.width}x${hy.height}-${Date.now()}.png`)
-      } catch (hy) {
-        console.error("Error taking screenshot:", hy)
-      }
-    }
-  },
-  36144: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => oy,
-      d: () => cb,
-      g: () => Zy
-    });
-    var Uy = Wy(36137),
-      hy = Wy(36146);
-    let fy = 0;
-
-    function Zy(yb, bb) {
-      const Wy = yb;
-      Wy._noaFaceGroups = null !== bb && void 0 !== bb ? bb : null, Wy._noaFaceEpoch = -1, Wy._noaFaceMask = -1, Wy._noaFaceCount = -1, Wy._noaFaceMaterial = null;
-      const Uy = yb.vJ;
-      Uy && 1 === Uy.length && (Uy[0].indexStart = 0, Uy[0].indexCount = yb.getTotalIndices())
-    }
-
-    function cb(yb, bb) {
-      if (bb) {
-        fy++;
-        for (const bb of yb) {
-          const yb = bb._noaFaceGroups;
-          yb && Zy(bb, yb)
-        }
-      } else fy = Math.max(0, fy - 1)
-    }
-
-    function Py(yb, bb, Wy) {
-      let hy = -1,
-        fy = 0;
-      for (let Zy = 0; Zy < Uy.g; Zy++) {
-        const Wy = yb[Zy],
-          cb = yb[Zy + 1];
-        cb > Wy && bb & 1 << Uy.d[Zy] && (hy < 0 && (hy = Wy), fy = cb)
-      }
-      return hy < 0 ? (Wy[0] = 0, Wy[1] = 0, 0) : (Wy[0] = hy, Wy[1] = fy - hy, fy - hy)
-    }
-    class oy {
-      constructor(yb, bb) {
-        this.DU = yb, this.engine = bb, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
-      }
-      apply(yb, bb) {
-        if (!bb) return;
-        const Wy = bb.getProjectionMatrix().m,
-          Zy = 0 === fy && 0 === Wy[15],
-          cb = bb.globalPosition,
-          {
-            engine: oy
-          } = this,
-          By = Zy ? (0, hy.e)(Wy, oy.getRenderWidth(), oy.getRenderHeight()) : 0;
-        cb.x === this.eyeX && cb.y === this.eyeY && cb.z === this.eyeZ && By === this.focalPx && Zy === this.culling || (this.epoch++, this.eyeX = cb.x, this.eyeY = cb.y, this.eyeZ = cb.z, this.focalPx = By, this.culling = Zy);
-        const {
-          epoch: Ky,
-          range: ey
-        } = this, qb = this.DU / 2, sy = qb * Math.sqrt(3), Sy = yb.data, Ey = yb.length;
-        let ly = 0;
-        for (let fy = 0; fy < Ey; fy++) {
-          const yb = Sy[fy],
-            bb = yb._noaFaceGroups;
-          if (bb && (yb._noaFaceEpoch !== Ky || yb._noaFaceMaterial !== yb.material)) {
-            yb._noaFaceEpoch = Ky, yb._noaFaceMaterial = yb.material;
-            const Wy = yb.vJ,
-              fy = Wy && 1 === Wy.length ? Wy[0] : null;
-            let oy = -1;
-            if (Zy && fy && (0, Uy.u)(yb.material)) {
-              const Wy = yb.position,
-                Uy = cb.x - Wy.x,
-                fy = cb.y - Wy.y,
-                Zy = cb.z - Wy.z,
-                Py = Uy - qb,
-                Ky = fy - qb,
-                ey = Zy - qb,
-                Sy = Math.sqrt(Py * Py + Ky * Ky + ey * ey) + sy;
-              oy = (0, hy.l)(bb, Uy, fy, Zy, (0, hy.h)(Sy, By))
-            }
-            if (fy && oy !== yb._noaFaceMask) {
-              yb._noaFaceMask = oy;
-              let Wy = 0,
-                hy = bb[Uy.g]; - 1 !== oy && (hy = Py(bb, oy, ey), Wy = ey[0]), yb._noaFaceCount = hy, fy.indexStart = 6 * Wy, fy.indexCount = 6 * hy, fy.setBoundingInfo(yb.qUy())
-            }
-          }
-          bb && 0 === yb._noaFaceCount || (Sy[ly++] = yb)
-        }
-        yb.length = ly
-      }
-    }
-  },
-  36120: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Py,
-      f: () => cb
-    });
-    const Uy = new WeakSet;
-    let hy = 0;
-    const fy = new Set;
-
-    function Zy(yb, bb) {
-      yb._data = bb
-    }
-
-    function cb(yb) {
-      var bb, Wy;
-      (null !== (bb = null === (Wy = yb.getBuffer()) || void 0 === Wy ? void 0 : Wy.Hy) && void 0 !== bb ? bb : 0) > 0 && (Uy.add(yb), 0 === hy ? Zy(yb, null) : fy.add(yb))
-    }
-
-    function Py(yb) {
-      hy++;
-      for (const Wy of function(yb) {
-          const bb = new Set;
-          for (const hy of yb) {
-            const yb = hy.geometry;
-            for (const hy of Object.values(null !== (Wy = null === yb || void 0 === yb ? void 0 : yb.getVertexBuffers()) && void 0 !== Wy ? Wy : {})) {
-              var Wy;
-              const yb = hy.getWrapperBuffer();
-              Uy.has(yb) && bb.add(yb)
-            }
-          }
-          return bb
-        }(yb)) Wy.getData() || oy(Wy), fy.add(Wy);
-      let bb = !0;
-      return () => {
-        if (bb && (bb = !1, hy--, 0 === hy)) {
-          for (const yb of fy) Zy(yb, null);
-          fy.clear()
-        }
-      }
-    }
-
-    function oy(yb) {
-      const bb = yb.getBuffer();
-      if (!bb || !(bb.Hy > 0)) return;
-      const Wy = yb._engine,
-        Uy = new Uint8Array(bb.Hy);
-      Wy.bindArrayBuffer(bb), Wy._gl.getBufferSubData(Wy._gl.ARRAY_BUFFER, 0, Uy), Wy._resetVertexBufferBinding(), Zy(yb, Uy)
-    }
-  },
-  36137: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy,
-      g: () => fy,
-      i: () => Py,
-      m: () => Uy,
-      o: () => cb,
-      q: () => hy,
-      u: () => oy
-    });
-    const Uy = 6,
-      hy = [0, 2, 4, 1, 3, 5, 0, 2],
-      fy = 6,
-      Zy = [1, 0, 3, 2, 5, 4];
-    for (let By = fy; By < hy.length; By++)
-      if (hy[By] !== hy[By - fy]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const cb = hy.length + 1,
-      Py = (() => {
-        const yb = [];
-        for (let bb = 0; bb < fy; bb++) yb[hy[bb]] = bb;
-        return yb
-      })();
-
-    function oy(yb) {
-      return !!yb && yb.backFaceCulling && (0 === yb.transparencyMode || 1 === yb.transparencyMode)
-    }
-  },
-  36146: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => cb,
-      h: () => Py,
-      i: () => By,
-      l: () => oy,
-      o: () => sy
-    });
-    var Uy = Wy(36137);
-    const hy = 1 / 16,
-      fy = 1 / 64,
-      Zy = 2048;
-    Uy.m;
-
-    function cb(yb, bb, Wy) {
-      return Math.min(Math.abs(yb[0] * bb), Math.abs(yb[5] * Wy)) / 2
-    }
-
-    function Py(yb, bb) {
-      return hy + fy * yb * yb / bb
-    }
-
-    function oy(yb, bb, Wy, hy, fy) {
-      const Zy = Uy.o;
-      return By(yb[Zy], yb[Zy + 1], yb[Zy + 2], yb[Zy + 3], yb[Zy + 4], yb[Zy + 5], bb, Wy, hy, fy)
-    }
-
-    function By(yb, bb, Wy, Uy, hy, fy, Zy, cb, Py, oy) {
-      return (Zy <= yb - oy ? 0 : 1) | (Zy >= bb + oy ? 0 : 2) | (cb <= Wy - oy ? 0 : 4) | (cb >= Uy + oy ? 0 : 8) | (Py <= hy - oy ? 0 : 16) | (Py >= fy + oy ? 0 : 32)
-    }
-    const Ky = (() => {
-        const yb = [];
-        for (let bb = 0; bb < Uy.q.length; bb++) {
-          let Wy = 0;
-          for (let hy = bb + 1; hy <= Uy.q.length; hy++) {
-            const fy = 1 << Uy.q[hy - 1];
-            if (Wy & fy) break;
-            Wy |= fy, yb.push({
-              start: bb,
-              end: hy,
-              IW: Wy
-            })
-          }
-        }
-        return yb
-      })(),
-      ey = [];
-
-    function qb(yb, bb) {
-      const Wy = Uy.i[bb];
-      return yb[Wy + 1] - yb[Wy]
-    }
-
-    function sy(yb, bb, Wy) {
-      let hy = 0;
-      for (let Zy = 0; Zy < Uy.m; Zy++) qb(yb, Zy) > 0 && (hy |= 1 << Zy);
-      if (0 === (bb &= hy)) return 0;
-      if (bb === hy) return Wy[0] = 0, Wy[1] = yb[Uy.g], 1;
-      let fy = null,
-        cb = 1 / 0;
-      for (const oy of function(yb) {
-          let bb = ey[yb];
-          if (bb) return bb;
-          const Wy = new Map,
-            Uy = (yb, bb) => {
-              const Uy = 4 * yb + bb.length / 2;
-              Wy.has(Uy) || Wy.set(Uy, {
-                IW: yb,
-                windows: bb
-              })
-            };
-          for (const fy of Ky)
-            if ((fy.IW & yb) === yb && Uy(fy.IW, [fy.start, fy.end]), 0 !== (fy.IW & yb))
-              for (const bb of Ky) bb.start < fy.end || 0 !== (fy.IW & bb.IW) || 0 === (bb.IW & yb) || ((fy.IW | bb.IW) & yb) !== yb || Uy(fy.IW | bb.IW, [fy.start, fy.end, bb.start, bb.end]);
-          const hy = [...Wy.values()];
-          return bb = hy.filter((yb => !hy.some((bb => bb !== yb && (bb.IW & yb.IW) === bb.IW && bb.windows.length <= yb.windows.length)))), ey[yb] = bb, bb
-        }(bb)) {
-        let Wy = (oy.windows.length / 2 - 1) * Zy;
-        const Py = oy.IW & ~bb & hy;
-        for (let bb = 0; bb < Uy.m; bb++) Py & 1 << bb && (Wy += qb(yb, bb));
-        Wy < cb && (fy = oy, cb = Wy)
-      }
-      const Py = fy.windows;
-      for (let Uy = 0; Uy < Py.length; Uy += 2) {
-        const bb = yb[Py[Uy]];
-        Wy[Uy] = bb, Wy[Uy + 1] = yb[Py[Uy + 1]] - bb
-      }
-      return Py.length / 2
-    }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

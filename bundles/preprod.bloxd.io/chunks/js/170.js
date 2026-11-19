@@ -1,40 +1,43 @@
 export const id = 170;
 export const ids = [170];
 export const modules = {
-  8176: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  8661: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const Uy = {
-      whatIs: ["Can your team last 99 nights of darkness? Bloxd Escape the Forest is a co-op horror survival game for teams of up to 6, and you can jump in for free straight from your browser. Make camp, keep the fire going, search for the missing children and watch out for whatever comes out after sunset. Get through all 99 nights, then find your way out."],
-      howToPlay: ["Your team starts around the campfire. During the day you'll gather wood, hunt Pigs and Cows for meat and explore the landmarks dotted around the forest. Throw fuel into the fire to level it up. Each new level unlocks crafting recipes and helps you find the lost kids. Bring back Monster Hearts to push the fire even higher.", 'When "Night Approaches" pops up, head back to camp. Monsters are scared of fire, but some nights the Horde attacks, the Monster wakes up or the Warper rises. If you go down, a teammate can revive you with a Revive Splash Potion.', "Every lost kid you find adds days to your count, which gets you closer to 99. Do quests for the Travelling Trader, then follow Maverick the wizard's guidance to the frozen forest. Collect the portal keystones, open the portal and send the kids home."],
-      features: ["Co-op with Up to 6 Players", "Survive 99 Nights, Then See How Much Longer You Can Last", "Level Up the Campfire to Unlock New Recipes", "Rescue the Lost Kids and Send Them Home", "Quests from the Travelling Trader and Maverick the Wizard", "Explore Landmarks like the Graveyard, Frozen Lagoon, Molten Gorge and Mount Doomrock", "Night Attacks from the Horde, the Monster and the Warper", "Revive Teammates and Repair the Respawn Pod", "Show Your Best Score on Your Nametag and Earn Aura XP", "Inferno Mode with a Day Multiplier"],
-      tips: ["Keep the fire fuelled. It's your best protection at night", "Cook Raw Morsels and Steak on the fire before you eat them", 'Get back to camp as soon as you see "Night Approaches"', "Bring Monster Hearts to the fire to reach the higher levels", "Place your Radar near the fire", "Throw a Decoy to distract monsters, or throw an Invisibility Potion to hide", "Fire a Call for Help flare if you go down", "Bring armour, ideally enchanted, before you go hunting for portal keystones"],
-      similarGames: ["horrorHotel", "containmentBreach", "classic_survivalDayNight", "backrooms"],
+    const Ez = {
+      whatIs: ["The world is ending, and the only way out is up. Bloxd Build a Factory is the original factory mode on Bloxd. You automate a factory, build a rocket and launch it to escape before time runs out. It's a race against everyone else in your world, the fastest launches go top of the leaderboard, and you don't need to install anything first.", "The world resets every 6 hours, so every session is a brand new race to the stars. Want a factory that keeps going forever? Have a look at the Persistent world or Build a Factory 2."],
+      howToPlay: ["Place your first Chest (or bed) and you'll get an Auto Miner and, in public lobbies, a Protector. Craft some Pipes and hook the Auto Miner up to the Chest. Open the Auto Miner, put some Coal in to fuel it, and now it mines for you.", "Next up, craft an Extractor Pipe and an Auto Crafter. Connect a Chest to the Auto Crafter with the Extractor Pipe and it'll turn your resources into new items by itself. As things grow, add Auto Harvesters for crops and Solar Panels with Wire for power. Splitter, Filter and Merger Pipes send items exactly where they need to go.", "Then place your Rocket Ship and upgrade it one stage at a time using whatever your factory makes. When it's ready, launch it, escape the dying world and set your time. Upgrades are cheaper in the resetting world, so a full rocket fits into one session.", "In the Persistent world, nothing resets. You launch rockets to reach the Moon, mine Lunite there and build faster Lunite machines."],
+      features: ["Factory Automation with a Rocket Race at the End", "Auto Miners, Auto Crafters and Auto Harvesters", "Pipes, Extractor, Splitter, Filter and Merger Pipes", "Solar Panels and Wire for Power", "Leaderboard for Best Launch Time and Rocket Stage", "Fresh World Every 6 Hours", "Persistent World with Moon Trips and Lunite Machines", "Step-by-Step Tutorial for New Players"],
+      tips: ["Follow the tutorial and you'll have your first Auto Miner running in no time", "Keep your Auto Miners topped up with Coal so they never stop", "Use Extractor Pipes to feed Chests into your Auto Crafters", "Filter and Splitter Pipes sort items into the right machines", "Leave about 50 blocks of open air above your Solar Panels", "Upgrade your rocket as soon as you can afford the next stage", 'Keep an eye on the "World resets in" timer and plan your launch before it runs out', "In the Persistent world each chunk holds up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters, so spread your factory out", "Mine Lunite on the Moon to craft Lunite machines that run 1.5\xd7 faster"],
+      similarGames: ["buildAFactory2", "skyblock", "oneBlock", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Escape the Forest?",
-        answer: "A co-op horror survival mode for up to 6 players. You team up, survive 99 nights, rescue the lost kids and send them home through the portal."
+        question: "What is Bloxd Build a Factory?",
+        answer: "A factory automation race. You automate your factory, build a rocket and try to escape the dying world as fast as you can."
       }, {
-        question: "In Escape the Forest, how do you survive 99 nights?",
-        answer: "Keep the campfire fuelled and stay close to it at night, because monsters are scared of fire. Level the fire up, cook your food and stick with your team."
+        question: "How do you build a rocket in Bloxd Build a Factory?",
+        answer: "Place your Rocket Ship from your inventory, then feed it resources from your factory to upgrade it stage by stage. Once it's finished, launch it to beat the game."
       }, {
-        question: "How many players can team up in Escape the Forest?",
-        answer: "Up to 6 in each game, and others can join to spectate."
+        question: "What's the goal in Build a Factory?",
+        answer: "Launch a rocket and escape the dying world. Your final time gets saved, and the quickest launches end up on the leaderboard."
       }, {
-        question: "Where are the lost kids?",
-        answer: "Out in the forest. Level up your fire to find more of them, then go searching. Every kid you find adds to your day count."
+        question: "How often does the Build a Factory world reset?",
+        answer: "Every 6 hours. After you launch, you can jump into another lobby and play again, or hang around until your world resets."
       }, {
-        question: "What happens if you go down?",
-        answer: "A teammate can revive you with a Revive Splash Potion. You can fire a Call for Help flare too, and the Respawn Pod can bring back players who die."
+        question: "What is the Persistent world in Build a Factory?",
+        answer: "It's a Build a Factory world that never resets. You can build up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters per chunk, and you launch rockets to climb the leaderboard and reach the Moon."
       }, {
-        question: "How do you escape the forest?",
-        answer: "Follow Maverick the wizard's guidance to the frozen forest, collect the portal keystones, open the portal and send the kids home."
+        question: "How do you get to the Moon in Build a Factory?",
+        answer: "In the Persistent world, launch a rocket. You'll land on the Moon, where you can mine Lunite. No rocket to get back? Open the shop to return home."
       }, {
-        question: "Is there anything after night 99?",
-        answer: "You've beaten the challenge by then, but how much longer can you survive? Your best number of nights survived shows on your nametag."
+        question: "What does Lunite do?",
+        answer: "You use it to craft Lunite Auto Miners, Auto Crafters and Auto Harvesters. They run 1.5\xd7 faster, and the Lunite Auto Crafter and Auto Harvester can sometimes give you extra items."
+      }, {
+        question: "What's the difference between Build a Factory and Build a Factory 2?",
+        answer: "Build a Factory is a race to launch a rocket in a shared world that resets. In Build a Factory 2 you get your own floating factory island that you grow at your own pace."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

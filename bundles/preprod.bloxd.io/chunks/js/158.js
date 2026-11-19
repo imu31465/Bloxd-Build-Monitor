@@ -1,43 +1,43 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  8116: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  8602: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const Uy = {
-      whatIs: ["It all starts on one tiny island floating high in the sky. In Bloxd Skyblock, that little island becomes a full RPG. You'll level up skills, take on quests, beat dungeon bosses and trade at the auction house, and bit by bit your island turns into something special. There's nothing to install, so you can be standing on it in seconds. Fancy starting from a single block instead? Try One Block. After island PvP? That's Sky Islands."],
-      howToPlay: ["Your first quest is an easy one. Gather logs on your island, craft a bridge and cross to the portal to get to the Hub. That's where everyone hangs out. Up Dog the auctioneer runs the Open Market, so you can buy and sell items with other players there. The Banker looks after your Gold Coins, and the quest givers always have something for you to do. From the Hub, portals take you to Manor Farm, the Dungeons and Cragrock Mines (a meteor has just crashed there).", "You've got five skills to level: Foraging, Combat, Mining, Farming and Fishing. Each one goes up by doing the thing. Chop wood and pick flowers for Foraging. Beat creatures for Combat. Break ores for Mining, harvest fully grown crops for Farming and catch fish for Fishing. Every skill has a starter quest that hands you a tool to speed things up, and each Combat level adds a bit more damage. Got Gold Coins to spare? Spend them on decorative blocks in the Instant Buy shop and make your island look exactly how you want."],
-      features: ["Your Own Private Sky Island to Grow and Decorate", "5 Skills to Level Up: Foraging, Combat, Mining, Farming and Fishing", "Quests That Give You an Axe, Sword, Pickaxe, Hoe and Fishing Rod", "Explore the Hub, Manor Farm, Cragrock Mines and the Dungeons", "Timed Dungeons with Boss Fights on Easy, Medium, Hard and Insane", "Buy and Sell Items with Other Players at the Auction House", "Visit Other Players' Islands", "Daily Rewards, Streaks and Leaderboards"],
-      tips: ["Do the skill starter quests early. The tools they give you make everything faster", "Level up Combat before you go into the Dungeons, since every level adds extra damage", "Start each dungeon on Easy and work your way up to Insane", "You can only trade in the Hub, so pop over to Up Dog to sell stuff you don't need", "Play every day to keep your daily reward streak going", "Type /home to get back to your island from anywhere"],
-      similarGames: ["classic_survival", "oneBlock", "skyIslands", "survivalFactory"],
+    const Ez = {
+      whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
+      howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
+      features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
+      tips: ["Open every chest on your island before you leave, since your gear is spread across them", "Take your time bridging. One wrong step and you're in the void", "When the chests refill, try to get back to them before your rivals do", "Fight near the edges and use knockback to push enemies off the map", "More kills means more Gold, so you'll unlock new kits faster", "Try kits that suit how you play: Builder for bridging, Archer for range or Tank for armour", "Choose perks to match your style too, like Rusher for speed at the start or Leech for health after kills"],
+      similarGames: ["bedwars", "luckyTowers", "skyIslands"],
       faq: [{
-        question: "What is Bloxd Skyblock?",
-        answer: "It's a Skyblock RPG. You grow your own private sky island, level up skills, do quests, trade at the auction house and fight dungeon bosses."
+        question: "What is Bloxd Skywars?",
+        answer: "It's a PvP mode on Bloxd.io where every player starts on a floating island. You loot chests, bridge across to your rivals and try to be the last one standing."
       }, {
-        question: "How do you play Bloxd Skyblock?",
-        answer: "Gather some logs, craft a bridge and cross to the portal to reach the Hub. After that, follow the quests, level your skills and go exploring in Manor Farm, Cragrock Mines and the Dungeons."
+        question: "How do you win in Skywars?",
+        answer: "Be the last player alive. Knock everyone else out, or push them off their islands into the void. Winning gets you 20 Gold."
       }, {
-        question: "What skills are in Bloxd Skyblock?",
-        answer: "Five of them: Foraging, Combat, Mining, Farming and Fishing. You level each one just by doing it, so breaking ores levels Mining and catching fish levels Fishing."
+        question: "Can I play Skywars in my browser?",
+        answer: "Yep. Bloxd.io Skywars runs right in your browser, so you can jump into a match without installing anything."
       }, {
-        question: "What are the Dungeons in Bloxd Skyblock?",
-        answer: "Timed challenges like the Crumbling Crypt and the Frozen Hollow. You fight through the rooms and then face a boss, such as the Gravewarden or the Frostbound Knight. You can play each dungeon on Easy, Medium, Hard or Insane, and your best times are saved."
+        question: "What are the best Skywars kits?",
+        answer: "Honestly, it depends how you like to play. Sniper has a one-shot crossbow and Catapult can knock enemies off the map. Ghost can turn invisible, and Builder starts with extra blocks for bridging. You unlock more kits with Gold and Gems."
       }, {
-        question: "How do I trade in Bloxd Skyblock?",
-        answer: "Find Up Dog the auctioneer in the Hub and open the Open Market. That's where you buy and sell items with other players, and it only works in the Hub."
+        question: "What do perks do in Bloxd Skywars?",
+        answer: "Perks give you bonuses while you play. Maniac gives you more damage after kills, Bridger gives you a chance to get placed blocks back and Leech heals you after kills. You can upgrade them to make them stronger."
       }, {
-        question: "Can I visit other players' islands?",
-        answer: "You can. Type /visit and a player's name, as long as they're in the same game and their island is open. Owners pick who's allowed in, and /home brings you back to your own island."
+        question: "How do I get Gold in Skywars?",
+        answer: "Every kill earns Gold, and you get an extra 20 Gold for winning a match."
       }, {
-        question: "What happened at Cragrock Mines?",
-        answer: "A huge meteor crashed into it, and the dwarves who live there need your help. Take the portal from the Hub, explore the mines and dig for ores."
+        question: "How many players fit in one Skywars match?",
+        answer: "Up to 12 players fight it out in each free-for-all match."
       }, {
-        question: "Does my island save between sessions?",
-        answer: "Yep. Your island, skills, Gold Coins, quests and dungeon progress all save. Log in to an account so nothing gets lost if your browser data is cleared."
+        question: "What does the compass do in Skywars?",
+        answer: "After 7 minutes, or once only two players are left, everyone still alive gets a compass that points to the nearest player."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

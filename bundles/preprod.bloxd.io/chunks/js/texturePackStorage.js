@@ -1,72 +1,72 @@
-export const id = 48;
-export const ids = [48];
+export const id = 52;
+export const ids = [52];
 export const modules = {
-  8442: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      announceStoredTexturePack: () => hy.c,
-      takeOneShotTexturePack: () => Uy.h
+  9039: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      announceStoredTexturePack: () => nz.b,
+      takeOneShotTexturePack: () => Ez.j
     });
-    var Uy = Wy(8444),
-      hy = Wy(8449)
+    var Ez = bz(9043),
+      nz = bz(9047)
   },
-  8449: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => hy,
-      f: () => fy
+  9047: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => nz,
+      e: () => iz
     });
-    var Uy = Wy(2586);
+    var Ez = bz(3027);
 
-    function hy() {
+    function nz() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const yb = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const zz = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const bb = new BroadcastChannel(Uy.k);
-        bb.postMessage({
-          stored: yb
-        }), bb.close()
+        const uz = new BroadcastChannel(Ez.l);
+        uz.postMessage({
+          stored: zz
+        }), uz.close()
       } catch {
         return null
       }
-      return yb
+      return zz
     }
 
-    function fy(yb) {
-      const bb = "object" === typeof yb && null !== yb ? yb.stored : null;
-      return "string" === typeof bb ? bb : null
+    function iz(zz) {
+      const uz = "object" === typeof zz && null !== zz ? zz.stored : null;
+      return "string" === typeof uz ? uz : null
     }
   },
-  8444: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy,
-      e: () => hy,
-      h: () => fy
+  9043: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz,
+      f: () => nz,
+      j: () => iz
     });
-    var Uy = Wy(2586);
-    async function hy(yb, bb, Wy) {
-      let hy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const fy = Zy(await yb.getItem(Uy.d, bb));
-      if (null === fy || hy()) return null;
-      const cb = await yb.getItem(Uy.h, bb);
-      return hy() ? null : (await async function(yb) {
-        await Promise.all([yb.removeItem(Uy.d), yb.removeItem(Uy.h)])
-      }(yb).catch(Wy), {
-        pack: fy,
-        source: "string" === typeof cb ? cb : null
+    var Ez = bz(3027);
+    async function nz(zz, uz, bz) {
+      let nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const iz = lz(await zz.getItem(Ez.g, uz));
+      if (null === iz || nz()) return null;
+      const Mz = await zz.getItem(Ez.k, uz);
+      return nz() ? null : (await async function(zz) {
+        await Promise.all([zz.removeItem(Ez.g), zz.removeItem(Ez.k)])
+      }(zz).catch(bz), {
+        pack: iz,
+        source: "string" === typeof Mz ? Mz : null
       })
     }
 
-    function fy(yb) {
-      return (0, Uy.v)() ? Promise.resolve(null) : hy(yb, !1, (yb => {
-        console.error("Error removing temporary texture pack: ", yb)
-      }), Uy.v)
+    function iz(zz) {
+      return (0, Ez.u)() ? Promise.resolve(null) : nz(zz, !1, (zz => {
+        console.error("Error removing temporary texture pack: ", zz)
+      }), Ez.u)
     }
 
-    function Zy(yb) {
-      if ("object" !== typeof yb || null === yb) return null;
-      const bb = yb.metaData;
-      return "object" !== typeof bb || null === bb || "string" !== typeof bb.id ? null : yb
+    function lz(zz) {
+      if ("object" !== typeof zz || null === zz) return null;
+      const uz = zz.metaData;
+      return "object" !== typeof uz || null === uz || "string" !== typeof uz.id ? null : zz
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

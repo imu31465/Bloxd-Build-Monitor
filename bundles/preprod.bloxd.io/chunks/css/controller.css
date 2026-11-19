@@ -104,7 +104,6 @@ html.PadLargePointer {
 .DropStackFillTrack {
   background: rgba(26, 31, 46, .6);
   border: 1px solid #303a59;
-  border-radius: .2rem;
   height: .4rem;
   overflow: hidden;
   width: 7rem
@@ -236,7 +235,6 @@ html.PadLargePointer .InventorySlotCursorHints {
 .InventorySlotCursorHints .InventorySlotCursorHint {
   align-items: center;
   background-color: rgba(26, 31, 46, .6);
-  border-radius: .4em;
   display: flex;
   gap: .3em;
   padding: .15em .5em .15em .3em;
@@ -816,6 +814,105 @@ html.PadLargePointer .PadCursorView .PadCursorGlyph {
   padding: .2rem .6rem
 }
 
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
 .ControllerCategory .ControllerSettingsHeading {
   color: #fcd373;
   font-size: 1.2rem;
@@ -1196,446 +1293,4 @@ html.PadLargePointer .PadCursorView .PadCursorGlyph {
     outline: .2rem solid Highlight;
     outline-offset: -.2rem
   }
-}
-
-.SegmentedToggle {
-  background-color: #3c4b68;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  display: flex;
-  flex-shrink: 0
-}
-
-.SegmentedToggle .SegmentedToggleOption {
-  background: none;
-  border: none;
-  color: #cfcfcf;
-  cursor: pointer;
-  font: inherit;
-  min-width: 5.5em;
-  padding: .4em 1em;
-  position: relative
-}
-
-@media(pointer:coarse) {
-  .SegmentedToggle .SegmentedToggleOption:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
-    position: absolute
-  }
-}
-
-.SegmentedToggle .SegmentedToggleOption:before {
-  inset-inline: 0
-}
-
-.SegmentedToggle .SegmentedToggleOption:not(:first-child) {
-  border-left: 1px solid #0f0f0f
-}
-
-@media(hover:hover) {
-  .SegmentedToggle .SegmentedToggleOption:hover {
-    background-color: #394980;
-    color: #fff
-  }
-}
-
-.SegmentedToggle .SegmentedToggleOption.pad-focused {
-  background-color: #394980;
-  color: #fff
-}
-
-@media(hover:none) {
-  .SegmentedToggle .SegmentedToggleOption:active {
-    background-color: #394980;
-    color: #fff
-  }
-}
-
-.SegmentedToggle .SegmentedToggleOption:focus-visible {
-  outline: 2px solid #ffb914;
-  outline-offset: -2px
-}
-
-.SegmentedToggle .SegmentedToggleOption.SegmentedToggleOptionSelected {
-  background-color: #2e80ee;
-  color: #fff;
-  cursor: default
-}
-
-@keyframes rainbowShimmer {
-  0% {
-    transform: translateX(0)
-  }
-
-  to {
-    transform: translateX(88.88889%)
-  }
-}
-
-@keyframes rainbowShimmerPosition {
-  to {
-    background-position: -200% 0
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fadeInScaleUp {
-  0% {
-    opacity: 0;
-    transform: scale(.6)
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.1)
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1)
-  }
-}
-
-@keyframes fadeInScaleUpNoOversize {
-  0% {
-    opacity: 0;
-    transform: scale(.8)
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1)
-  }
-}
-
-@keyframes shake {
-  0% {
-    rotate: 3deg
-  }
-
-  5% {
-    rotate: -2deg
-  }
-
-  10% {
-    rotate: 2deg
-  }
-
-  15% {
-    rotate: -3deg
-  }
-
-  20% {
-    rotate: 0deg
-  }
-}
-
-@keyframes loadingShimmer {
-  0% {
-    transform: translateX(-66.6666666667%)
-  }
-
-  to {
-    transform: none
-  }
-}
-
-@keyframes topRightStackIn {
-  0% {
-    opacity: 0;
-    transform: translateX(1.5rem)
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0)
-  }
-}
-
-.ControlsContainer {
-  margin-bottom: 2rem;
-  margin-top: 2rem
-}
-
-.ControlsContainer,
-.ControlsContainer .ControlsSection {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem
-}
-
-.ControlsContainer .ControlsSection .ControlsSectionHeader {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  padding: .4rem .2rem;
-  -webkit-user-select: none;
-  user-select: none
-}
-
-@media(hover:hover) {
-  .ControlsContainer .ControlsSection .ControlsSectionHeader:hover .ControlsSectionTitle {
-    color: #ffb914
-  }
-}
-
-.ControlsContainer .ControlsSection .ControlsSectionHeader.pad-focused .ControlsSectionTitle {
-  color: #ffb914
-}
-
-@media(hover:none) {
-  .ControlsContainer .ControlsSection .ControlsSectionHeader:active .ControlsSectionTitle {
-    color: #ffb914
-  }
-}
-
-.ControlsContainer .ControlsSection .ControlsSectionHeader .ControlsSectionTitle {
-  color: #fcd373;
-  font-size: 1.2rem;
-  transition: color .15s
-}
-
-.ControlsContainer .ControlsSection .ControlsSectionHeader .ControlsSectionChevron {
-  color: #fcd373;
-  font-size: 1.5rem;
-  transition: transform .2s
-}
-
-.ControlsContainer .ControlsSection.Collapsed .ControlsSectionHeader .ControlsSectionChevron {
-  transform: rotate(-90deg)
-}
-
-.ControlsContainer .ControlsSection .ControlsSectionRows {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem
-}
-
-.ControlsContainer .ControlRow {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  overflow: hidden
-}
-
-.ControlsContainer .ControlRow.WarningBorder {
-  border: 1px solid #ffb914
-}
-
-.ControlsContainer .ControlRow .ControlRowInner {
-  align-items: flex-start;
-  display: flex;
-  padding: 1rem;
-  position: relative
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlName {
-  align-items: center;
-  display: flex;
-  justify-self: flex-start;
-  margin-top: .2rem;
-  padding-right: 2rem
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlName .ControlPadGlyph {
-  color: #f2f2f2;
-  flex-shrink: 0;
-  margin-left: .5rem
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: .5rem
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingsList {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  gap: .5rem
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding {
-  align-items: center;
-  background-color: #22283b;
-  border: 1px solid transparent;
-  border-radius: 0;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  padding: 0 .5rem;
-  pointer-events: none;
-  transition: border .2s
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd {
-  cursor: pointer;
-  min-width: 1.8rem;
-  pointer-events: auto
-}
-
-@media(hover:hover) {
-  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding:hover {
-    border: 1px solid #e34f4f
-  }
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.pad-focused {
-  border: 1px solid #e34f4f
-}
-
-@media(hover:none) {
-  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding:active {
-    border: 1px solid #e34f4f
-  }
-}
-
-@media(hover:hover) {
-  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd:hover {
-    border: 1px solid #1dd06d
-  }
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd.pad-focused {
-  border: 1px solid #1dd06d
-}
-
-@media(hover:none) {
-  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd:active {
-    border: 1px solid #1dd06d
-  }
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding .ControlBindingRemoveIcon {
-  color: #ff8a80;
-  cursor: pointer;
-  font-size: 1.5rem;
-  margin-left: .5rem;
-  pointer-events: auto
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding .ControlBindingAddIcon {
-  color: #1dd06d;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 1;
-  pointer-events: auto
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput {
-  align-items: center;
-  display: flex;
-  gap: .5rem;
-  justify-content: center
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer {
-  height: 2.2rem;
-  position: relative
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer .InputOverlay {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  min-width: 2rem;
-  overflow-x: hidden;
-  padding: 0 .5rem;
-  pointer-events: none;
-  position: relative;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  z-index: 2
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer .InputOverlay .InputOverlayPlaceholder {
-  font-size: 1rem;
-  opacity: .6
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer input {
-  background-color: #22283b;
-  border: 1px solid transparent;
-  border-radius: 0;
-  box-sizing: border-box;
-  caret-color: transparent;
-  color: transparent;
-  cursor: pointer;
-  font-size: 1rem;
-  height: 100%;
-  left: 0;
-  min-width: 3rem;
-  outline: none;
-  padding: .5rem;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transition: border .1s;
-  width: 100%;
-  z-index: 1
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer input:active,
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer input:focus {
-  border: 1px solid #ffb914;
-  outline: none
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddButton {
-  font-size: 1.1rem
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddButton .ButtonBody {
-  padding: .3rem .5rem
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddCancel {
-  color: #ff8a80;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 1;
-  padding: 0 .2rem
-}
-
-.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingError {
-  color: #ff8a80;
-  font-size: .8rem;
-  margin-top: .2rem
-}
-
-.ControlsContainer .ControlRow .ControlRowWarning {
-  background-color: #ffb914;
-  color: #000;
-  font-size: 1rem;
-  padding: .4rem .5rem;
-  text-shadow: 0 0 0 #000
-}
-
-.ControlsContainer .ResetBindingsButton {
-  margin-top: 1rem
-}
-
-.ControlsControllerNote {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem 1rem;
-  justify-content: space-between
 }

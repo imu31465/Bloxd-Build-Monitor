@@ -1,488 +1,504 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  35206: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      drawBlockIcon: () => Ty,
-      drawBlockIconUrl: () => Vy,
-      getDrawnBlockIcon: () => Cy
+  35873: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      drawBlockIcon: () => sz,
+      drawBlockIconUrl: () => rz,
+      getDrawnBlockIcon: () => fz
     });
-    var Uy = Wy(35215);
-    const hy = Math.SQRT1_2,
-      fy = Math.sqrt(3) / 2,
-      Zy = .5,
-      cb = {
+    var Ez = bz(35877);
+    const nz = Math.SQRT1_2,
+      iz = Math.sqrt(3) / 2,
+      lz = .5,
+      Mz = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      Py = {
+      tz = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      oy = {
+      Hz = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const By = 1e-6;
+    const Oz = 1e-6;
 
-    function Ky(yb, bb, Wy, Uy) {
+    function pz(zz, uz, bz, Ez) {
       let {
-        origin: hy,
-        across: fy,
-        down: Zy,
-        texture: cb,
-        rect: [Py, oy, Ky, ey],
-        shade: qb
-      } = Uy;
-      const sy = fy.x * Zy.y - fy.y * Zy.x;
-      if (Math.abs(sy) < 1e-9) return;
-      const Sy = [hy.x, hy.x + fy.x, hy.x + Zy.x, hy.x + fy.x + Zy.x],
-        Ey = [hy.y, hy.y + fy.y, hy.y + Zy.y, hy.y + fy.y + Zy.y],
-        ly = Math.max(0, Math.floor(Math.min(...Sy))),
-        mb = Math.min(Wy - 1, Math.ceil(Math.max(...Sy))),
-        Cy = Math.max(0, Math.floor(Math.min(...Ey))),
-        Ty = Math.min(Wy - 1, Math.ceil(Math.max(...Ey)));
-      for (let Vy = Cy; Vy <= Ty; Vy++)
-        for (let Uy = ly; Uy <= mb; Uy++) {
-          const Sy = Uy + .5 - hy.x,
-            Ey = Vy + .5 - hy.y,
-            ly = (Sy * Zy.y - Ey * Zy.x) / sy,
-            mb = (fy.x * Ey - fy.y * Sy) / sy;
-          if (ly < -By || ly > 1 + By || mb < -By || mb > 1 + By) continue;
-          const Cy = Vy * Wy + Uy;
-          bb[Cy] = 1;
-          const Ty = Py + Math.min(Math.max(ly, 0), 1) * (Ky - Py),
-            Jy = oy + Math.min(Math.max(mb, 0), 1) * (ey - oy),
-            gb = Math.min(cb.width - 1, Math.floor(Ty * cb.width)),
-            Gy = 4 * (Math.min(cb.height - 1, Math.floor(Jy * cb.height)) * cb.width + gb),
-            Oy = cb.pixels[Gy + 3] / 255;
-          if (0 === Oy) continue;
-          const Ry = 4 * Cy,
-            vb = yb[Ry + 3] / 255 * (1 - Oy),
-            ib = Oy + vb;
-          for (let bb = 0; bb < 3; bb++) yb[Ry + bb] = (cb.pixels[Gy + bb] * qb * Oy + yb[Ry + bb] * vb) / ib;
-          yb[Ry + 3] = 255 * ib
+        origin: nz,
+        across: iz,
+        down: lz,
+        texture: Mz,
+        rect: [tz, Hz, pz, dz],
+        shade: Fz
+      } = Ez;
+      const Zz = iz.x * lz.y - iz.y * lz.x;
+      if (Math.abs(Zz) < 1e-9) return;
+      const Rz = [nz.x, nz.x + iz.x, nz.x + lz.x, nz.x + iz.x + lz.x],
+        Kz = [nz.y, nz.y + iz.y, nz.y + lz.y, nz.y + iz.y + lz.y],
+        wz = Math.max(0, Math.floor(Math.min(...Rz))),
+        Xz = Math.min(bz - 1, Math.ceil(Math.max(...Rz))),
+        fz = Math.max(0, Math.floor(Math.min(...Kz))),
+        sz = Math.min(bz - 1, Math.ceil(Math.max(...Kz)));
+      for (let rz = fz; rz <= sz; rz++)
+        for (let Ez = wz; Ez <= Xz; Ez++) {
+          const Rz = Ez + .5 - nz.x,
+            Kz = rz + .5 - nz.y,
+            wz = (Rz * lz.y - Kz * lz.x) / Zz,
+            Xz = (iz.x * Kz - iz.y * Rz) / Zz;
+          if (wz < -Oz || wz > 1 + Oz || Xz < -Oz || Xz > 1 + Oz) continue;
+          const fz = rz * bz + Ez;
+          uz[fz] = 1;
+          const sz = tz + Math.min(Math.max(wz, 0), 1) * (pz - tz),
+            oz = Hz + Math.min(Math.max(Xz, 0), 1) * (dz - Hz),
+            Nz = Math.min(Mz.width - 1, Math.floor(sz * Mz.width)),
+            vz = 4 * (Math.min(Mz.height - 1, Math.floor(oz * Mz.height)) * Mz.width + Nz),
+            xz = Mz.pixels[vz + 3] / 255;
+          if (0 === xz) continue;
+          const Jz = 4 * fz,
+            Az = zz[Jz + 3] / 255 * (1 - xz),
+            Tz = xz + Az;
+          for (let uz = 0; uz < 3; uz++) zz[Jz + uz] = (Mz.pixels[vz + uz] * Fz * xz + zz[Jz + uz] * Az) / Tz;
+          zz[Jz + 3] = 255 * Tz
         }
     }
-    var ey = Wy(35222);
-    const qb = new Map,
-      sy = new Map,
-      Sy = new Map,
-      Ey = new Map;
+    var dz = bz(35883);
+    const Fz = new Map,
+      Zz = new Map,
+      Rz = new Map,
+      Kz = new Map;
 
-    function ly(yb, bb, Wy) {
-      return `${bb}|${Wy}|${yb}`
+    function wz(zz, uz, bz) {
+      return `${uz}|${bz}|${zz}`
     }
 
-    function mb(yb, bb, Wy) {
-      let Uy = yb.get(bb);
-      return void 0 === Uy && (Uy = Wy().catch((Wy => {
-        throw yb.delete(bb), Wy
-      })), yb.set(bb, Uy)), Uy
+    function Xz(zz, uz, bz) {
+      let Ez = zz.get(uz);
+      return void 0 === Ez && (Ez = bz().catch((bz => {
+        throw zz.delete(uz), bz
+      })), zz.set(uz, Ez)), Ez
     }
 
-    function Cy(yb, bb) {
-      let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return sy.get(ly(yb, bb, Wy))
+    function fz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Zz.get(wz(zz, uz, bz))
     }
 
-    function Ty(yb, bb, Wy, Uy) {
-      const hy = ly(yb, bb, Wy);
-      return mb(qb, hy, (async () => {
-        const fy = await gb(Uy(yb), bb, Jy(Wy));
-        return sy.set(hy, fy), fy
+    function sz(zz, uz, bz, Ez) {
+      const nz = wz(zz, uz, bz);
+      return Xz(Fz, nz, (async () => {
+        const iz = await Nz(Ez(zz), uz, oz(bz));
+        return Zz.set(nz, iz), iz
       }))
     }
 
-    function Vy(yb, bb, Wy, Uy) {
-      return mb(Sy, ly(yb, bb, Wy), (async () => {
-        var hy;
-        const fy = Uy(yb),
-          Zy = Jy(Wy);
-        return null !== (hy = await (0, ey.b)(fy, bb, Zy)) && void 0 !== hy ? hy : (await gb(fy, bb, Zy)).toDataURL()
+    function rz(zz, uz, bz, Ez) {
+      return Xz(Rz, wz(zz, uz, bz), (async () => {
+        var nz;
+        const iz = Ez(zz),
+          lz = oz(bz);
+        return null !== (nz = await (0, dz.c)(iz, uz, lz)) && void 0 !== nz ? nz : (await Nz(iz, uz, lz)).toDataURL()
       }))
     }
 
-    function Jy(yb) {
-      return Math.max(1, Math.round(yb))
+    function oz(zz) {
+      return Math.max(1, Math.round(zz))
     }
-    async function gb(yb, bb, Wy) {
+    async function Nz(zz, uz, bz) {
       let {
-        top: By,
-        left: ey,
-        right: qb,
-        itemType: sy
-      } = yb;
-      const [Sy, Ey, ly] = await Promise.all([Gy(By), Gy(ey), Gy(qb)]), mb = function(yb, bb, Wy, cb) {
-        const Py = .6 * Wy,
-          oy = Py * hy,
-          By = Py * hy * Zy,
-          ey = Py * fy,
-          qb = Math.max(...bb.boxes.map((yb => yb[4]))),
-          sy = oy / 2 + (Wy - oy) / 2,
-          Sy = By + (Wy - By - By - qb * ey) / 2,
-          Ey = (yb, bb, Wy) => ({
-            x: sy + (yb - Wy) * oy,
-            y: Sy - By + (yb + Wy) * By + (qb - bb) * ey
+        top: Oz,
+        left: dz,
+        right: Fz,
+        itemType: Zz
+      } = zz;
+      const [Rz, Kz, wz] = await Promise.all([vz(Oz), vz(dz), vz(Fz)]), Xz = function(zz, uz, bz, Mz) {
+        const tz = .6 * bz,
+          Hz = tz * nz,
+          Oz = tz * nz * lz,
+          dz = tz * iz,
+          Fz = Math.max(...uz.boxes.map((zz => zz[4]))),
+          Zz = Hz / 2 + (bz - Hz) / 2,
+          Rz = Oz + (bz - Oz - Oz - Fz * dz) / 2,
+          Kz = (zz, uz, bz) => ({
+            x: Zz + (zz - bz) * Hz,
+            y: Rz - Oz + (zz + bz) * Oz + (Fz - uz) * dz
           }),
-          ly = (yb, Wy, Uy, hy, fy, Zy) => ({
-            origin: yb,
+          wz = (zz, bz, Ez, nz, iz, lz) => ({
+            origin: zz,
             across: {
-              x: Wy.x - yb.x,
-              y: Wy.y - yb.y
+              x: bz.x - zz.x,
+              y: bz.y - zz.y
             },
             down: {
-              x: Uy.x - yb.x,
-              y: Uy.y - yb.y
+              x: Ez.x - zz.x,
+              y: Ez.y - zz.y
             },
-            texture: hy,
-            rect: bb.cropFaces ? fy : [0, 0, 1, 1],
-            shade: Zy
+            texture: nz,
+            rect: uz.cropFaces ? iz : [0, 0, 1, 1],
+            shade: lz
           }),
-          mb = new Uint8ClampedArray(Wy * Wy * 4),
-          Cy = new Uint8Array(Wy * Wy),
-          Ty = Uy.b;
-        for (const [Uy, hy, fy, Zy, Vy, Jy] of bb.boxes) {
-          const bb = ly(Ey(Zy, Vy, Jy), Ey(Zy, Vy, fy), Ey(Zy, hy, Jy), yb.right, [1 - Jy, 1 - Vy, 1 - fy, 1 - hy], Ty.right),
-            cb = ly(Ey(Uy, Vy, Jy), Ey(Zy, Vy, Jy), Ey(Uy, hy, Jy), yb.left, [Uy, 1 - Vy, Zy, 1 - hy], Ty.left),
-            Py = ly(Ey(Uy, Vy, fy), Ey(Zy, Vy, fy), Ey(Uy, Vy, Jy), yb.top, [Uy, fy, Zy, Jy], Ty.top);
-          for (const yb of [bb, cb, Py]) Ky(mb, Cy, Wy, yb)
+          Xz = new Uint8ClampedArray(bz * bz * 4),
+          fz = new Uint8Array(bz * bz),
+          sz = Ez.d;
+        for (const [Ez, nz, iz, lz, rz, oz] of uz.boxes) {
+          const uz = wz(Kz(lz, rz, oz), Kz(lz, rz, iz), Kz(lz, nz, oz), zz.right, [1 - oz, 1 - rz, 1 - iz, 1 - nz], sz.right),
+            Mz = wz(Kz(Ez, rz, oz), Kz(lz, rz, oz), Kz(Ez, nz, oz), zz.left, [Ez, 1 - rz, lz, 1 - nz], sz.left),
+            tz = wz(Kz(Ez, rz, iz), Kz(lz, rz, iz), Kz(Ez, rz, oz), zz.top, [Ez, iz, lz, oz], sz.top);
+          for (const zz of [uz, Mz, tz]) pz(Xz, fz, bz, zz)
         }
-        return (0, Uy.d)(mb, Wy, cb, (yb => 1 === Cy[yb])), mb
+        return (0, Ez.f)(Xz, bz, Mz, (zz => 1 === fz[zz])), Xz
       }({
-        top: Sy,
-        left: Ey,
-        right: ly
-      }, function(yb) {
-        return "SlabBlock" === yb ? Py : "StairsBlock" === yb ? oy : cb
-      }(sy), bb, Wy), Cy = document.createElement("canvas");
-      Cy.width = bb, Cy.height = bb;
-      const Ty = Cy.getContext("2d");
-      if (!Ty) throw new Error("Failed to get 2D context");
-      return Ty.putImageData(new ImageData(mb, bb, bb), 0, 0), Cy
+        top: Rz,
+        left: Kz,
+        right: wz
+      }, function(zz) {
+        return "SlabBlock" === zz ? tz : "StairsBlock" === zz ? Hz : Mz
+      }(Zz), uz, bz), fz = document.createElement("canvas");
+      fz.width = uz, fz.height = uz;
+      const sz = fz.getContext("2d");
+      if (!sz) throw new Error("Failed to get 2D context");
+      return sz.putImageData(new ImageData(Xz, uz, uz), 0, 0), fz
     }
 
-    function Gy(yb) {
-      return mb(Ey, yb, (async () => {
-        const bb = await (0, ey.e)(yb),
-          Wy = document.createElement("canvas");
-        Wy.width = bb.width, Wy.height = bb.height;
-        const Uy = Wy.getContext("2d");
-        if (!Uy) throw new Error("Failed to get 2D context");
-        return Uy.drawImage(bb, 0, 0), {
-          width: bb.width,
-          height: bb.height,
-          pixels: Uy.getImageData(0, 0, bb.width, bb.height).data
+    function vz(zz) {
+      return Xz(Kz, zz, (async () => {
+        const uz = await (0, dz.h)(zz),
+          bz = document.createElement("canvas");
+        bz.width = uz.width, bz.height = uz.height;
+        const Ez = bz.getContext("2d");
+        if (!Ez) throw new Error("Failed to get 2D context");
+        return Ez.drawImage(uz, 0, 0), {
+          width: uz.width,
+          height: uz.height,
+          pixels: Ez.getImageData(0, 0, uz.width, uz.height).data
         }
       }))
     }
   },
-  35222: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Oy,
-      c: () => Ry,
-      e: () => mb
+  35883: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Jz,
+      f: () => Az,
+      h: () => fz
     });
-    var Uy = Wy(127),
-      hy = Wy(94);
-    const fy = new(Wy(35226).c)(new URL(Wy.p + Wy.u(3), Wy.b), {
+    var Ez = bz(301),
+      nz = bz(96);
+    const iz = new(bz(35892).c)(new URL(bz.p + bz.u(3), bz.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var Zy = Wy(2363);
-    const cb = 1e4,
-      Py = 3e4;
-    let oy = null,
-      By = null,
-      Ky = null,
-      ey = !1,
-      qb = 0;
-    const sy = new Map;
-    let Sy = null;
-    const Ey = new Map,
-      ly = new Map;
+    var lz = bz(1732),
+      Mz = bz(2956);
+    const tz = 1e4,
+      Hz = 3e4;
+    let Oz = null,
+      pz = null,
+      dz = null,
+      Fz = !1,
+      Zz = 0;
+    const Rz = new Map;
+    let Kz = null;
+    const wz = new Map,
+      Xz = new Map;
 
-    function mb(yb) {
-      return new Promise(((bb, Wy) => {
-        const Uy = new Image;
-        Uy.crossOrigin = "anonymous", Uy.onload = () => {
-          bb(Uy)
-        }, Uy.onerror = () => {
-          Wy(new Error(`A block icon's texture did not load: ${yb.slice(0,100)}`))
-        }, Uy.src = yb
-      }))
+    function fz(zz) {
+      const uz = new Promise(((uz, bz) => {
+        const Ez = new Image;
+        Ez.crossOrigin = "anonymous", Ez.fetchPriority = "high", Ez.onload = () => {
+          uz(Ez)
+        }, Ez.onerror = () => {
+          bz(new Error(`A block icon's texture did not load: ${zz.slice(0,100)}`))
+        }, Ez.src = zz
+      }));
+      return (0, Mz.g)(uz)
     }
 
-    function Cy(yb) {
-      var bb, Wy;
-      ey || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${yb}`), ey = !0, null === (bb = oy) || void 0 === bb || bb.terminate(), oy = null, By = null, Ey.clear(), ly.clear();
-      for (const Uy of sy.values()) Uy(null);
-      sy.clear(), null === (Wy = Sy) || void 0 === Wy || Wy()
+    function sz(zz) {
+      var uz, bz;
+      Fz || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${zz}`), Fz = !0, null === (uz = Oz) || void 0 === uz || uz.terminate(), Oz = null, pz = null, wz.clear(), Xz.clear();
+      for (const Ez of Rz.values()) Ez(null);
+      Rz.clear(), null === (bz = Kz) || void 0 === bz || bz()
     }
 
-    function Ty() {
-      return Ky ??= async function() {
+    function rz() {
+      return dz ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Uy.e.ios_icon_worker_v1 && (0, hy.isWebKit)()) return;
+        if ("page" === Ez.d.ios_icon_worker_v1 && (0, nz.isWebKit)()) return;
         try {
-          oy = await async function() {
-            return await fy.ready(), fy.start()
+          Oz = await async function() {
+            return await iz.ready(), iz.start()
           }()
-        } catch (cb) {
-          return void Cy(`did not start (${String(cb)})`)
+        } catch (Mz) {
+          return void sz(`did not start (${String(Mz)})`)
         }
-        let yb = () => {};
-        const bb = new Promise((bb => {
-          yb = bb
+        let zz = () => {};
+        const uz = new Promise((uz => {
+          zz = uz
         }));
-        oy.onmessage = bb => {
+        Oz.onmessage = uz => {
           let {
-            data: Wy
-          } = bb;
-          if ("started" === Wy.type) By = oy, yb();
-          else if ("failed" === Wy.type) Cy(`failed a draw (${Wy.message})`);
+            data: bz
+          } = uz;
+          if ("started" === bz.type) pz = Oz, zz();
+          else if ("failed" === bz.type) sz(`failed a draw (${bz.message})`);
           else {
-            var Uy, hy;
-            null === (Uy = sy.get(Wy.id)) || void 0 === Uy || Uy(Wy.url), sy.delete(Wy.id), null === (hy = Sy) || void 0 === hy || hy()
+            var Ez, nz;
+            null === (Ez = Rz.get(bz.id)) || void 0 === Ez || Ez(bz.url), Rz.delete(bz.id), null === (nz = Kz) || void 0 === nz || nz()
           }
-        }, oy.onerror = bb => {
-          bb.preventDefault(), Cy(`stopped (${bb.message||"its script did not load or run"})`), yb()
+        }, Oz.onerror = uz => {
+          uz.preventDefault(), sz(`stopped (${uz.message||"its script did not load or run"})`), zz()
         };
-        const Wy = `did not start in ${Py/1e3} s`;
-        await (0, Zy.h)(bb, Py, Wy).catch((() => {
-          Cy(Wy)
+        const bz = `did not start in ${Hz/1e3} s`;
+        await (0, lz.l)(uz, Hz, bz).catch((() => {
+          sz(bz)
         }))
-      }(), Ky
+      }(), dz
     }
 
-    function Vy() {
-      if (null !== Sy || 0 === sy.size) return;
-      const yb = new Promise((yb => {
-          Sy = yb
+    function oz() {
+      if (null !== Kz || 0 === Rz.size) return;
+      const zz = new Promise((zz => {
+          Kz = zz
         })),
-        bb = `did not answer in ${cb/1e3} s`;
-      (0, Zy.h)(yb, cb, bb).then((() => {
-        Sy = null, Vy()
+        uz = `did not answer in ${tz/1e3} s`;
+      (0, lz.l)(zz, tz, uz).then((() => {
+        Kz = null, oz()
       }), (() => {
-        Sy = null, Cy(bb)
+        Kz = null, sz(uz)
       }))
     }
 
-    function Jy(yb, bb) {
-      let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      yb.postMessage(bb, Wy)
+    function Nz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      zz.postMessage(uz, bz)
     }
 
-    function gb(yb, bb, Wy, Uy) {
-      let hy = bb.get(Wy);
-      return void 0 === hy && (hy = Uy().then((async bb => {
+    function vz(zz, uz, bz, Ez) {
+      let nz = uz.get(bz);
+      return void 0 === nz && (nz = Ez().then((async uz => {
         let {
-          image: Wy,
-          request: Uy
-        } = bb;
+          image: bz,
+          request: Ez
+        } = uz;
         try {
-          const bb = await createImageBitmap(Wy);
-          Jy(yb, Uy(bb), [bb])
-        } catch (hy) {
-          Cy(`could not take an image (${String(hy)})`)
+          const uz = await createImageBitmap(bz);
+          Nz(zz, Ez(uz), [uz])
+        } catch (nz) {
+          sz(`could not take an image (${String(nz)})`)
         }
-      })), hy.catch((() => {
-        bb.get(Wy) === hy && bb.delete(Wy)
-      })), bb.set(Wy, hy)), hy
+      })), nz.catch((() => {
+        uz.get(bz) === nz && uz.delete(bz)
+      })), uz.set(bz, nz)), nz
     }
-    async function Gy(yb, bb) {
-      Ty();
-      const Wy = By;
-      if (null === Wy) return null;
-      if (await yb(Wy), By !== Wy) return null;
-      const Uy = ++qb;
-      return new Promise((yb => {
-        sy.set(Uy, yb), Jy(Wy, bb(Uy)), Vy()
+    async function xz(zz, uz) {
+      rz();
+      const bz = pz;
+      if (null === bz) return null;
+      if (await zz(bz), pz !== bz) return null;
+      const Ez = ++Zz;
+      return new Promise((zz => {
+        Rz.set(Ez, zz), Nz(bz, uz(Ez)), oz()
       }))
     }
 
-    function Oy(yb, bb, Wy) {
-      return Gy((bb => Promise.all([yb.top, yb.left, yb.right].map((yb => function(yb, bb) {
-        return gb(yb, Ey, bb, (async () => ({
-          image: await mb(bb),
-          request: yb => ({
+    function Jz(zz, uz, bz) {
+      return xz((uz => Promise.all([zz.top, zz.left, zz.right].map((zz => function(zz, uz) {
+        return vz(zz, wz, uz, (async () => ({
+          image: await fz(uz),
+          request: zz => ({
             type: "texture",
-            url: bb,
-            bitmap: yb
+            url: uz,
+            bitmap: zz
           })
         })))
-      }(bb, yb))))), (Uy => ({
+      }(uz, zz))))), (Ez => ({
         type: "draw",
-        id: Uy,
-        ...yb,
-        size: bb,
-        outlineWidth: Wy
+        id: Ez,
+        ...zz,
+        size: uz,
+        outlineWidth: bz
       })))
     }
 
-    function Ry(yb, bb, Wy, Uy) {
-      return Gy((Wy => function(yb, bb, Wy) {
-        return gb(yb, ly, bb, (async () => {
+    function Az(zz, uz, bz, Ez) {
+      return xz((bz => function(zz, uz, bz) {
+        return vz(zz, Xz, uz, (async () => {
           const {
-            texture: yb,
-            ...Uy
-          } = await Wy();
+            texture: zz,
+            ...Ez
+          } = await bz();
           return {
-            image: await mb(yb),
-            request: yb => ({
+            image: await fz(zz),
+            request: zz => ({
               type: "model",
-              name: bb,
-              bitmap: yb,
-              geometry: Uy
+              name: uz,
+              bitmap: zz,
+              geometry: Ez
             })
           }
         }))
-      }(Wy, yb, bb)), (bb => ({
+      }(bz, zz, uz)), (uz => ({
         type: "drawModel",
-        id: bb,
-        name: yb,
-        size: Wy,
-        outlineWidth: Uy
+        id: uz,
+        name: zz,
+        size: bz,
+        outlineWidth: Ez
       })))
     }
   },
-  35215: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => fy,
-      d: () => cb,
-      f: () => Zy
+  35877: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz,
+      f: () => Mz,
+      g: () => lz
     });
-    const Uy = 1 / 32,
-      hy = [15, 15, 15],
-      fy = {
+    const Ez = 1 / 32,
+      nz = [15, 15, 15],
+      iz = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function Zy(yb, bb, Wy, hy) {
+    function lz(zz, uz, bz, nz) {
       const {
-        vertices: fy,
-        uvs: Zy,
-        indices: Py,
-        shades: oy
-      } = yb, By = Wy * Uy, Ky = Wy - 2 * By, ey = new Float32Array(fy.length);
-      for (let Uy = 0; Uy < fy.length; Uy += 3) ey[Uy] = By + fy[Uy] * Ky, ey[Uy + 1] = By + fy[Uy + 1] * Ky, ey[Uy + 2] = fy[Uy + 2];
-      const qb = new Float32Array(Wy * Wy).fill(-1 / 0),
-        sy = new Uint8ClampedArray(Wy * Wy * 4),
-        Sy = 255 * yb.alphaCutoff;
-      for (let Uy = 0; Uy < Py.length; Uy += 3) {
-        const [yb, hy, fy] = [Py[Uy], Py[Uy + 1], Py[Uy + 2]], [cb, By, Ky] = [3 * yb, 3 * hy, 3 * fy], [Ey, ly, mb, Cy, Ty, Vy] = [ey[cb], ey[cb + 1], ey[By], ey[By + 1], ey[Ky], ey[Ky + 1]], Jy = (mb - Ey) * (Vy - ly) - (Ty - Ey) * (Cy - ly);
-        if (Math.abs(Jy) < 1e-9) continue;
-        const gb = oy[Uy / 3],
-          [Gy, Oy, Ry, vb, ib, My] = [Zy[2 * yb], Zy[2 * yb + 1], Zy[2 * hy], Zy[2 * hy + 1], Zy[2 * fy], Zy[2 * fy + 1]],
-          Yy = Math.max(0, Math.floor(Math.min(Ey, mb, Ty))),
-          Xy = Math.min(Wy - 1, Math.ceil(Math.max(Ey, mb, Ty))),
-          ny = Math.max(0, Math.floor(Math.min(ly, Cy, Vy))),
-          uy = Math.min(Wy - 1, Math.ceil(Math.max(ly, Cy, Vy)));
-        for (let Uy = ny; Uy <= uy; Uy++)
-          for (let yb = Yy; yb <= Xy; yb++) {
-            const [hy, fy] = [yb + .5, Uy + .5], Zy = ((hy - Ey) * (Vy - ly) - (Ty - Ey) * (fy - ly)) / Jy, Py = ((mb - Ey) * (fy - ly) - (hy - Ey) * (Cy - ly)) / Jy, oy = 1 - Zy - Py;
-            if (oy < 0 || Zy < 0 || Py < 0) continue;
-            const Yy = oy * ey[cb + 2] + Zy * ey[By + 2] + Py * ey[Ky + 2],
-              Xy = Uy * Wy + yb;
-            if (Yy <= qb[Xy]) continue;
-            const ny = Math.max(0, Math.min(bb.width - 1, Math.floor((oy * Gy + Zy * Ry + Py * ib) * bb.width))),
-              uy = 4 * (Math.max(0, Math.min(bb.height - 1, Math.floor((oy * Oy + Zy * vb + Py * My) * bb.height))) * bb.width + ny);
-            bb.pixels[uy + 3] < Sy || (qb[Xy] = Yy, sy[4 * Xy] = bb.pixels[uy] * gb, sy[4 * Xy + 1] = bb.pixels[uy + 1] * gb, sy[4 * Xy + 2] = bb.pixels[uy + 2] * gb, sy[4 * Xy + 3] = 255)
+        vertices: iz,
+        uvs: lz,
+        indices: tz,
+        shades: Hz
+      } = zz, Oz = bz * Ez, pz = bz - 2 * Oz, dz = new Float32Array(iz.length);
+      for (let Ez = 0; Ez < iz.length; Ez += 3) dz[Ez] = Oz + iz[Ez] * pz, dz[Ez + 1] = Oz + iz[Ez + 1] * pz, dz[Ez + 2] = iz[Ez + 2];
+      const Fz = new Float32Array(bz * bz).fill(-1 / 0),
+        Zz = new Uint8ClampedArray(bz * bz * 4),
+        Rz = 255 * zz.alphaCutoff;
+      for (let Ez = 0; Ez < tz.length; Ez += 3) {
+        const [zz, nz, iz] = [tz[Ez], tz[Ez + 1], tz[Ez + 2]], [Mz, Oz, pz] = [3 * zz, 3 * nz, 3 * iz], [Kz, wz, Xz, fz, sz, rz] = [dz[Mz], dz[Mz + 1], dz[Oz], dz[Oz + 1], dz[pz], dz[pz + 1]], oz = (Xz - Kz) * (rz - wz) - (sz - Kz) * (fz - wz);
+        if (Math.abs(oz) < 1e-9) continue;
+        const Nz = Hz[Ez / 3],
+          [vz, xz, Jz, Az, Tz, Lz] = [lz[2 * zz], lz[2 * zz + 1], lz[2 * nz], lz[2 * nz + 1], lz[2 * iz], lz[2 * iz + 1]],
+          Pz = Math.max(0, Math.floor(Math.min(Kz, Xz, sz))),
+          Gz = Math.min(bz - 1, Math.ceil(Math.max(Kz, Xz, sz))),
+          az = Math.max(0, Math.floor(Math.min(wz, fz, rz))),
+          Vz = Math.min(bz - 1, Math.ceil(Math.max(wz, fz, rz)));
+        for (let Ez = az; Ez <= Vz; Ez++)
+          for (let zz = Pz; zz <= Gz; zz++) {
+            const [nz, iz] = [zz + .5, Ez + .5], lz = ((nz - Kz) * (rz - wz) - (sz - Kz) * (iz - wz)) / oz, tz = ((Xz - Kz) * (iz - wz) - (nz - Kz) * (fz - wz)) / oz, Hz = 1 - lz - tz;
+            if (Hz < 0 || lz < 0 || tz < 0) continue;
+            const Pz = Hz * dz[Mz + 2] + lz * dz[Oz + 2] + tz * dz[pz + 2],
+              Gz = Ez * bz + zz;
+            if (Pz <= Fz[Gz]) continue;
+            const az = Math.max(0, Math.min(uz.width - 1, Math.floor((Hz * vz + lz * Jz + tz * Tz) * uz.width))),
+              Vz = 4 * (Math.max(0, Math.min(uz.height - 1, Math.floor((Hz * xz + lz * Az + tz * Lz) * uz.height))) * uz.width + az);
+            uz.pixels[Vz + 3] < Rz || (Fz[Gz] = Pz, Zz[4 * Gz] = uz.pixels[Vz] * Nz, Zz[4 * Gz + 1] = uz.pixels[Vz + 1] * Nz, Zz[4 * Gz + 2] = uz.pixels[Vz + 2] * Nz, Zz[4 * Gz + 3] = 255)
           }
       }
-      return cb(sy, Wy, hy), sy
+      return Mz(Zz, bz, nz), Zz
     }
 
-    function cb(yb, bb, Wy) {
-      let Uy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb => 0 !== yb[4 * bb + 3];
-      const fy = (yb, Wy) => yb < 0 || Wy < 0 || yb >= bb || Wy >= bb || !Uy(Wy * bb + yb),
-        Zy = [];
-      for (let hy = 0; hy < bb; hy++)
-        for (let yb = 0; yb < bb; yb++)
-          if (!fy(yb, hy)) yb: for (let Uy = -Wy; Uy <= Wy; Uy++) {
-            const cb = Wy - Math.abs(Uy);
-            for (let Wy = -cb; Wy <= cb; Wy++)
-              if (fy(yb + Wy, hy + Uy)) {
-                Zy.push(hy * bb + yb);
-                break yb
+    function Mz(zz, uz, bz) {
+      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uz => 0 !== zz[4 * uz + 3];
+      const iz = (zz, bz) => zz < 0 || bz < 0 || zz >= uz || bz >= uz || !Ez(bz * uz + zz),
+        lz = [];
+      for (let nz = 0; nz < uz; nz++)
+        for (let zz = 0; zz < uz; zz++)
+          if (!iz(zz, nz)) zz: for (let Ez = -bz; Ez <= bz; Ez++) {
+            const Mz = bz - Math.abs(Ez);
+            for (let bz = -Mz; bz <= Mz; bz++)
+              if (iz(zz + bz, nz + Ez)) {
+                lz.push(nz * uz + zz);
+                break zz
               }
           }
-      for (const cb of Zy) yb.set(hy, 4 * cb), yb[4 * cb + 3] = 255
+      for (const Mz of lz) zz.set(nz, 4 * Mz), zz[4 * Mz + 3] = 255
     }
   },
-  35226: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => hy
+  35892: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => nz
     });
-    const Uy = {
-      wait: function(yb) {
-        return new Promise((bb => {
-          setTimeout(bb, yb)
+    const Ez = {
+      wait: function(zz) {
+        return new Promise((uz => {
+          setTimeout(uz, zz)
         }))
       },
       stallMs: 2e4
     };
-    class hy {
-      constructor(yb) {
-        let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Uy;
-        this.url = yb, this.options = bb, this.timing = Wy, this.fetched = null, this.scriptUrl = void 0, this.scriptUrl = yb
+    class nz {
+      constructor(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ez;
+        this.url = zz, this.options = uz, this.timing = bz, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = zz
       }
       ready() {
-        return this.fetched ??= this.fetchWithRetries(), this.fetched
+        if (null === this.fetched) {
+          const zz = new AbortController;
+          this.fetchAbort = zz, this.fetched = this.fetchWithRetries(zz.signal).finally((() => {
+            this.fetchAbort === zz && (this.fetchAbort = null)
+          }))
+        }
+        return this.fetched
+      }
+      cancel() {
+        null !== this.fetchAbort && (this.fetchAbort.abort(), this.fetchAbort = null, this.fetched = null)
       }
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries() {
-        for (let yb = 0;; yb++) {
-          const bb = new URL(this.url);
-          if (yb > 0 && bb.searchParams.set("cache-bust", `${Date.now()}-${yb}`), await this.fetchWhole(bb)) return void(this.scriptUrl = bb);
-          if (yb >= 3) return;
-          await this.timing.wait(500 * 2 ** yb)
+      async fetchWithRetries(zz) {
+        for (let uz = 0;; uz++) {
+          const bz = new URL(this.url);
+          if (uz > 0 && bz.searchParams.set("cache-bust", `${Date.now()}-${uz}`), await this.fetchWhole(bz, zz)) return void(this.scriptUrl = bz);
+          if (uz >= 3 || zz.aborted) return;
+          if (await this.timing.wait(500 * 2 ** uz), zz.aborted) return
         }
       }
-      async fetchWhole(yb) {
-        const bb = new AbortController;
-        let Wy;
-        const Uy = () => {
-          clearTimeout(Wy), Wy = setTimeout((() => {
-            bb.abort()
-          }), this.timing.stallMs)
-        };
-        Uy();
+      async fetchWhole(zz, uz) {
+        const bz = new AbortController;
+        let Ez;
+        const nz = () => {
+            clearTimeout(Ez), Ez = setTimeout((() => {
+              bz.abort()
+            }), this.timing.stallMs)
+          },
+          iz = () => {
+            bz.abort()
+          };
+        uz.addEventListener("abort", iz, {
+          once: !0
+        }), nz();
         try {
-          var hy;
-          const Wy = await fetch(yb, {
-            signal: bb.signal
+          var lz;
+          const uz = await fetch(zz, {
+            signal: bz.signal
           });
-          if (!Wy.ok) return !1;
-          const fy = null === (hy = Wy.body) || void 0 === hy ? void 0 : hy.getReader();
-          if (!fy) return !1;
+          if (!uz.ok) return !1;
+          const Ez = null === (lz = uz.body) || void 0 === lz ? void 0 : lz.getReader();
+          if (!Ez) return !1;
           for (;;) {
             const {
-              done: yb
-            } = await fy.read();
-            if (yb) return !0;
-            Uy()
+              done: zz
+            } = await Ez.read();
+            if (zz) return !0;
+            nz()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Wy)
+          clearTimeout(Ez), uz.removeEventListener("abort", iz)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

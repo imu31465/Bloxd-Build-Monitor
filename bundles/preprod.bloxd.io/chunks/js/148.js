@@ -1,37 +1,84 @@
 export const id = 148;
 export const ids = [148];
 export const modules = {
-  8048: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  7817: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      AditudeSdkAdaptor: () => lz
     });
-    const Uy = {
-      whatIs: ["What if every sword, block and piece of armour came from a Lucky Block? Lucky Bedwars is the Bedwars mode where they do. Four teams of up to four players each get their own base and a bed to protect. Open Lucky Blocks for random weapons, armour, blocks and wild surprises, then race to break every other team's bed. You never know what you'll get, so expect lots of chaos, and every match is free to jump into from your browser."],
-      howToPlay: ["Before the match, your lobby votes on a map. You start with four Lucky Blocks. The first Basic Building and Basic Weapon blocks you open give you team wool and a weapon, so you're ready to go. Generators at your base and in the centre of the map keep the loot coming. Better armour equips itself automatically, and your compass points to the nearest enemy.", "Opening blocks, getting kills and breaking beds earns Clovers. Spend them at your Lucky Trader on the Lucky Blocks you want, or chip in 50 Clovers at a time towards team upgrades like the Bed Trap. Turn unwanted loot into Clovers in the Recycle tab. Twice a match, a random event shakes things up, and late in the game the arena starts to shrink. You can respawn as long as your bed stands, but once it's gone, dying makes you a spectator. The last team standing wins."],
-      features: ["4 Teams of up to 4 Players", "Building, Weapon, Armour and Food Lucky Blocks in Basic, Rare and Super Rarities", "Evil Lucky Blocks with Nasty Surprises", "Wild Items: Lucky Bombs, Swap Orbs, Fireballs, Iceballs, Toxin Balls and Void Nets", "Random Events: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm and Tiny Titans", "Bed Trap Team Upgrades", "4 Maps: Lucky Islands, Helicarrier, Nuclear and Turtles", "Leaderboards"],
-      tips: ["Open your four starting Lucky Blocks straight away to get wool and a weapon", "Chip in for the Bed Trap early. Evil Lucky Blocks around your bed can seal raiders in obsidian, poison them or send them home", "Save any Obsidian from Super Building blocks for your bed, because explosions can't destroy it", "Recycle loot you don't need. Anything you leave on the ground turns into Clovers after 8 seconds", "Beds can't be broken during an event, so use that time to regroup and stock up", "Stay alive until an event ends to earn bonus Clovers", "Be careful with Lucky and Unlucky Bombs, because they hit you too"],
-      similarGames: ["bedwars", "luckyTowers", "skywars"],
-      faq: [{
-        question: "What is Bloxd Lucky Bedwars?",
-        answer: "It's Bedwars with a twist: all your gear comes from Lucky Blocks. Four teams of up to four players defend their beds and try to be the last team standing."
-      }, {
-        question: "How do you play Lucky Bedwars?",
-        answer: "Open Lucky Blocks for weapons, armour and blocks, protect your bed and break the other teams' beds. You respawn while your bed stands. Without it, one death makes you a spectator."
-      }, {
-        question: "How is Lucky Bedwars different from normal Bedwars?",
-        answer: "Your loot comes from Lucky Blocks, so every match is random. You earn Clovers to buy more Lucky Blocks and team upgrades, and random events change up each game."
-      }, {
-        question: "What are Clovers in Lucky Bedwars?",
-        answer: "Clovers are the in-game currency. Earn them by opening Lucky Blocks, getting kills, breaking beds, recycling loot and surviving events. Spend them at the Lucky Trader or on team upgrades."
-      }, {
-        question: "What's inside Evil Lucky Blocks?",
-        answer: "Bad luck! The Bed Trap upgrade puts Evil Lucky Blocks around your bed. Anyone who opens one could get trapped in obsidian, dropped in lava, webbed, poisoned, blinded, chased by guard dogs or sent home."
-      }, {
-        question: "What are the Lucky Bedwars events?",
-        answer: "Twice a match a random event starts: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm or Tiny Titans. You get a 30-second warning, and beds can't be broken while an event runs."
-      }]
+    var Ez = bz(1288),
+      nz = bz(1171);
+    const iz = {
+      video: "pb-slot-interstitial-video",
+      rewarded: "pb-slot-rewarded-video"
+    };
+    class lz extends Ez.b {
+      constructor() {
+        super(), this.name = "aditude"
+      }
+      static async setup() {
+        return window.tude = window.tude || {
+          cmd: []
+        }, await (0, nz.e)("https://edge.aditude.io/site/bloxd-Jf9xJheMSn/bloxd-longform/bloxd.io/prod/load.js"), new lz
+      }
+      playVideoAd(zz, uz) {
+        this.playVideoOrRewarded("video", zz, zz)
+      }
+      playRewarded(zz, uz) {
+        this.playVideoOrRewarded("rewarded", zz, uz)
+      }
+      renderBanner(zz) {
+        const uz = this.getBaseDivId(zz.adId, zz.width, zz.height);
+        window.tude.cmd.push((function() {
+          window.tude.refreshAdsViaDivMappings([{
+            divId: zz.divId,
+            baseDivId: uz
+          }])
+        }))
+      }
+      getBaseDivId(zz, uz, bz) {
+        return `pb-slot-bloxdio-${uz}-${bz}${zz>1?`-${zz}`:""}`
+      }
+      playVideoOrRewarded(zz, uz, bz) {
+        var Ez;
+        let nz = !1;
+        const lz = () => {
+            document.getElementById("GenericVideoWrapper").style.display = "none", nz = !0
+          },
+          Mz = (zz, uz) => {
+            console.error(`AD: Error while playing Aditude video ad: ${zz}:`, uz), lz(), bz()
+          };
+        if (console.log(`AD: Requesting Aditude ${zz} ad`), void 0 === (null === (Ez = window.tude) || void 0 === Ez ? void 0 : Ez.requestInstreamPlayer)) return console.log(`AD: Aditude ad lib not loaded, no ${zz} ad playing`), void Mz("Aditude ad lib not loaded", null);
+        document.getElementById("GenericVideoWrapper").style.display = "flex", document.getElementById("GenericVideoInner").classList.add("AditudeVideo"), window.tude.cmd.push((function() {
+          console.log("AD: Inside Aditude window.tude.cmd.push");
+          try {
+            window.tude.requestInstreamPlayer({
+              code: iz[zz],
+              divId: "GenericVideoInner",
+              mode: "adOnly"
+            }).then((bz => {
+              console.log("AD: Inside Aditude window.tude.requestInstreamPlayer.then"), bz.on("playerClose", ((bz, Ez) => {
+                console.log("AD: Inside Aditude player.on playerClose"), console.log(`AD: Successfully finished Aditude ${zz} ad`), lz(), uz()
+              })).on("adPrefetchError", ((zz, uz) => {
+                console.log("AD: Inside Aditude player.on adPrefetchError"), Mz("Prefetch error", uz)
+              })).on("adError", ((zz, uz) => {
+                console.log("AD: Inside Aditude player.on adError"), Mz("Generic error", uz)
+              }));
+              const Ez = zz => {
+                setTimeout((() => {
+                  nz || bz.setVideoVolume(.5)
+                }), zz)
+              };
+              Ez(500), Ez(1e3), Ez(1500), Ez(2e3)
+            })).catch((zz => {
+              Mz("Error occurred while requesting instream player", zz)
+            }))
+          } catch (bz) {
+            Mz("Failed to request instream player", bz)
+          }
+        }))
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,254 +1,249 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  7250: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      BloxdDiscordActivitySdk: () => mb
+  6359: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => sz,
+      e: () => rz,
+      i: () => Xz,
+      m: () => wz
     });
-    var Uy = Wy(7253),
-      hy = Wy(1086),
-      fy = Wy(1042),
-      Zy = Wy(547),
-      cb = Wy(1115),
-      Py = Wy(1496),
-      oy = Wy(1177),
-      By = Wy(615),
-      Ky = Wy(19),
-      ey = Wy(1057),
-      qb = function(yb) {
-        return yb.APPLICATION_COMMANDS = "applications.commands", yb.IDENTIFY = "identify", yb.EMAIL = "email", yb.GUILDS = "guilds", yb.READ_DM_CHANNELS = "dm_channels.read", yb.WRITE_ACTIVITIES = "rpc.activities.write", yb
-      }(qb || {}),
-      sy = function(yb) {
-        return yb[yb.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", yb[yb.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", yb[yb.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", yb[yb.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", yb[yb.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", yb[yb.RATELIMITED = 4002] = "RATELIMITED", yb[yb.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", yb[yb.INVALID_VERSION = 4004] = "INVALID_VERSION", yb[yb.INVALID_ENCODING = 4005] = "INVALID_ENCODING", yb
-      }(sy || {}),
-      Sy = function(yb) {
-        return yb[yb.PLAYING = 0] = "PLAYING", yb[yb.STREAMING = 1] = "STREAMING", yb[yb.LISTENING = 2] = "LISTENING", yb[yb.WATCHING = 3] = "WATCHING", yb[yb.CUSTOM = 4] = "CUSTOM", yb[yb.COMPETING = 5] = "COMPETING", yb
-      }(Sy || {});
-    const Ey = {
-        Minigames: "Playing",
-        Puzzle: "Solving",
-        Escape: "Escaping",
-        Parkour: "Parkouring",
-        "Cool Parkour": "Parkouring",
-        "Two Player Parkour": "Parkouring",
-        "Clutch Parkour": "Parkouring",
-        "Challenging Parkour": "Parkouring",
-        "Progressive Parkour": "Parkouring",
-        "Themed Parkour": "Parkouring",
-        Obby: "Parkouring",
-        Tower: "Climbing",
-        Roleplay: "Roleplaying",
-        Arena: "Battling",
-        Duels: "Duelling",
-        Shooting: "Shooting",
-        Survival: "Surviving",
-        Simulator: "Grinding",
-        Tycoon: "Building",
-        Clicker: "Clicking",
-        PvE: "Battling",
-        Building: "Building",
-        Horror: "Surviving",
-        "Lucky Block": "Battling",
-        Racing: "Racing",
-        Driving: "Driving",
-        "Cool Build": "Building",
-        Adventure: "Adventuring",
-        Other: "Being mischievous"
-      },
-      ly = {
-        goalRush: "Playing",
-        heroesvbrainrots: "Battling",
-        hideseek: "Playing",
-        bingo: "Playing"
-      };
-    class mb {
-      constructor(yb) {
-        this.discordSdk = yb, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null
-      }
-      static async setup() {
-        console.log("Setting up Discord SDK with client id", ey.b.discordClientID);
-        const yb = new Uy.c(ey.b.discordClientID);
-        let bb = !1;
-        setTimeout((() => {
-          bb || (console.warn("Discord SDK took too long to initialize"), (0, Py.reloadBloxd)())
-        }), 15e3), await yb.ready(), bb = !0;
-        try {
-          const {
-            enabled: bb
-          } = await yb.commands.encourageHardwareAcceleration();
-          bb || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (hy) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", hy)
-        }
-        const Wy = new mb(yb);
-        return Wy.isMobilePlatform() && (Wy.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          Wy.applyDiscordSafeAreaNotch()
-        }))), Wy
-      }
-      async updateActivityDescription(yb) {
-        let bb, Wy;
-        switch (yb) {
-          case "homePage":
-            bb = "Chilling in the Main Menu";
-            break;
-          case "inGame": {
-            const yb = await this.getInGameDescriptions();
-            bb = yb.primary, Wy = yb.secondary;
-            break
-          }
-        }
-        await this.discordSdk.commands.setActivity({
-          activity: {
-            type: Sy.PLAYING,
-            details: bb,
-            state: Wy,
-            assets: {
-              large_image: "icon",
-              large_text: bb
-            },
-            timestamps: {
-              start: this.startTime
-            }
-          }
-        }).catch((yb => {
-          console.error(`Failed to update Discord activity rich presence with description="${bb}":`, yb)
-        }))
-      }
-      async getInGameDescriptions() {
-        var yb;
-        const {
-          requestedGameNameWithVariation: bb
-        } = (0, oy.e)(), Wy = (0, By.j)(bb), Uy = null !== (yb = ly[bb]) && void 0 !== yb ? yb : Ey[Wy.type], hy = await (0, fy.C)(cb.e.ENGLISH, Wy.title), Py = (0, oy.e)();
-        if ((0, oy.h)(Py)) return {
-          primary: `${Uy} in a Discord World`
-        };
-        const Ky = `${Uy} in ${hy}`;
-        return (0, Zy.D)(Py.lobbyName) ? {
-          primary: Ky
-        } : {
-          primary: Ky,
-          secondary: `Lobby ${Py.lobbyName}`
-        }
-      }
-      getCurrentChannelType() {
-        const {
-          channelId: yb,
-          guildId: bb
-        } = this.getCurrentChannelAndGuild();
-        return null !== bb ? hy.c.GUILD : null !== yb ? hy.c.DM : null
-      }
-      getRequiredScopeForCurrentChannel() {
-        const yb = this.getCurrentChannelType(),
-          bb = [qb.APPLICATION_COMMANDS, qb.IDENTIFY, qb.EMAIL, qb.GUILDS, qb.WRITE_ACTIVITIES];
-        switch (yb) {
-          case hy.c.DM:
-          case hy.c.GUILD:
-            return [...bb];
-          default:
-            throw new Error(`Unknown Discord channel type: ${yb}`)
-        }
-      }
-      getCurrentChannelAndGuild() {
-        const {
-          channelId: yb,
-          guildId: bb
-        } = this.discordSdk;
-        return {
-          channelId: null !== yb && void 0 !== yb ? yb : null,
-          guildId: null !== bb && void 0 !== bb ? bb : null
-        }
-      }
-      getInstanceId() {
-        return this.discordSdk.instanceId
-      }
-      async askDiscordUserForAuthorization() {
-        const yb = this.getRequiredScopeForCurrentChannel(),
-          {
-            code: bb
-          } = await this.discordSdk.commands.authorize({
-            client_id: ey.b.discordClientID,
-            response_type: "code",
-            state: "",
-            prompt: "none",
-            scope: yb
-          });
-        return bb
-      }
-      getCachedAccessToken() {
-        return this.cachedAccessToken
-      }
-      setCachedAccessToken(yb) {
-        this.cachedAccessToken = yb
-      }
-      registerGuild(yb, bb) {
-        this.guildNameCache[yb] = bb
-      }
-      async authenticate(yb) {
-        return this.discordSdk.commands.authenticate({
-          access_token: yb
-        }).then((yb => null !== yb))
-      }
-      async getUserLocale() {
-        try {
-          const {
-            locale: yb
-          } = await this.discordSdk.commands.userSettingsGetLocale();
-          return yb
-        } catch (yb) {
-          return console.error("Failed to get user locale from Discord:", yb.stack), null
-        }
-      }
-      async getChannelName(yb) {
-        return this.discordSdk.commands.getChannel({
-          channel_id: yb
-        }).then((yb => yb.name)).catch((yb => "Your Current Discord Chat"))
-      }
-      async getDiscordContextFromChannelId(yb) {
-        const bb = await this.getChannelName(yb);
-        return hy.j.from({
-          type: hy.c.DM,
-          channelId: yb,
-          channelName: bb
-        })
-      }
-      getDiscordContextFromGuildId(yb) {
-        const bb = this.guildNameCache[yb];
-        return (0, Zy.D)(bb) ? null : hy.g.from({
-          type: hy.c.GUILD,
-          guildId: yb,
-          guildName: bb
-        })
-      }
-      async getCurrentDiscordContext() {
-        const {
-          channelId: yb,
-          guildId: bb
-        } = this.getCurrentChannelAndGuild();
-        return null !== bb ? this.getDiscordContextFromGuildId(bb) : null !== yb ? this.getDiscordContextFromChannelId(yb) : null
-      }
-      exit(yb) {
-        console.log("Exiting Discord Activity:", yb), this.discordSdk.close(sy.CLOSE_NORMAL, yb)
-      }
-      isMobilePlatform() {
-        return this.discordSdk.platform === Uy.f.MOBILE
-      }
-      applyDiscordSafeAreaNotch() {
-        const yb = getComputedStyle(document.documentElement),
-          bb = (bb, Wy) => {
-            const Uy = parseFloat(yb.getPropertyValue(`--discord-safe-area-inset-${bb}`));
-            return isNaN(Uy) || 0 === Wy ? 0 : Uy / Wy * 100
-          };
-        Ky.d.set({
-          notchSize: {
-            top: bb("top", window.innerHeight),
-            right: Math.max(bb("right", window.innerWidth), 7),
-            bottom: 0,
-            left: bb("left", window.innerWidth)
-          }
-        })
+    var Ez = bz(6362);
+    const nz = 6,
+      iz = 3,
+      lz = 1,
+      Mz = 2,
+      tz = 4,
+      Hz = 8,
+      Oz = 16,
+      pz = 32,
+      dz = 64,
+      Fz = 128,
+      Zz = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+
+    function Rz(zz) {
+      if (!zz) return 0;
+      const uz = Zz.indexOf(zz);
+      if (uz <= 0) throw new Error(`"${zz}" is not a shader pack hook function`);
+      return uz
+    }
+
+    function Kz(zz) {
+      if (0 === zz) return null;
+      const uz = Zz[zz];
+      if (void 0 === uz) throw new Error(`${zz} is not a shader pack hook function id`);
+      return uz
+    }
+
+    function wz(zz) {
+      const uz = Ez.e.length;
+      return {
+        strict: zz >= uz,
+        program: Ez.e[zz % uz]
       }
     }
+
+    function Xz(zz) {
+      return Number(zz.strict) * Ez.e.length + Ez.e.indexOf(zz.program)
+    }
+
+    function fz(zz) {
+      return "" === zz ? [] : zz.split(" ")
+    }
+
+    function sz(zz) {
+      const uz = {
+        variantFlags: new Uint8Array(nz),
+        hooks: new Uint8Array(nz * iz),
+        moduleCodes: Array(nz).fill(""),
+        reads: Array(2 * nz).fill("")
+      };
+      for (const bz of zz) {
+        const zz = Xz(bz.key),
+          Ez = (zz, uz) => null === bz.hooks.surface || bz.reads.fragment.includes(zz) ? 0 : uz;
+        uz.variantFlags[zz] = (bz.sceneDepth ? lz : 0) | (bz.movesVertices ? Mz : 0) | (bz.sunShadow ? tz : 0) | (bz.airShadow ? Hz : 0) | (bz.discards ? Oz : 0) | Ez("localPosition", pz) | Ez("enchantSpeed", dz) | Ez("enchantTier", Fz), uz.hooks[zz * iz] = Rz(bz.hooks.vertex), uz.hooks[zz * iz + 1] = Rz(bz.hooks.surface), uz.hooks[zz * iz + 2] = Rz(bz.hooks.light), uz.moduleCodes[zz] = bz.moduleCode, uz.reads[2 * zz] = bz.reads.vertex.join(" "), uz.reads[2 * zz + 1] = bz.reads.fragment.join(" ")
+      }
+      return uz
+    }
+
+    function rz(zz) {
+      const {
+        hooks: uz,
+        moduleCodes: bz,
+        reads: Ez
+      } = zz;
+      return Array.from(zz.variantFlags, ((zz, nz) => {
+        const pz = nz * iz;
+        return {
+          key: wz(nz),
+          hooks: {
+            vertex: Kz(uz[pz]),
+            surface: Kz(uz[pz + 1]),
+            light: Kz(uz[pz + 2])
+          },
+          moduleCode: bz[nz],
+          sceneDepth: 0 !== (zz & lz),
+          sunShadow: 0 !== (zz & tz),
+          airShadow: 0 !== (zz & Hz),
+          movesVertices: 0 !== (zz & Mz),
+          discards: 0 !== (zz & Oz),
+          reads: {
+            vertex: fz(Ez[2 * nz]),
+            fragment: fz(Ez[2 * nz + 1])
+          }
+        }
+      }))
+    }
+  },
+  40071: (zz, uz, bz) => {
+    bz.d(uz, {
+      A: () => Fz,
+      B: () => Zz,
+      c: () => nz,
+      g: () => Ez,
+      h: () => dz,
+      j: () => Oz,
+      m: () => Kz,
+      o: () => iz,
+      q: () => Mz,
+      t: () => tz,
+      w: () => lz,
+      y: () => Rz
+    });
+    const Ez = 3,
+      nz = 0,
+      iz = 1,
+      lz = 2,
+      Mz = {
+        uniform: 3,
+        nF: 4,
+        special: 5,
+        volume: 6,
+        sampler: 7,
+        entities: 8,
+        entityGrids: 9
+      },
+      tz = 10,
+      Hz = "BloxdPackInputs",
+      Oz = "bloxdPackInputs",
+      pz = [{
+        name: "seconds",
+        type: "f32",
+        offset: 0
+      }, {
+        name: "lit",
+        type: "u32",
+        offset: 4
+      }, {
+        name: "renderOffset",
+        type: "vec3i",
+        offset: 16
+      }, {
+        name: "sunDirection",
+        type: "vec3f",
+        offset: 32
+      }, {
+        name: "eyePosition",
+        type: "vec3f",
+        offset: 48
+      }, {
+        name: "shadowDirection",
+        type: "vec3f",
+        offset: 64
+      }],
+      dz = 80;
+
+    function Fz() {
+      const zz = pz.map((zz => {
+        let {
+          name: uz,
+          type: bz
+        } = zz;
+        return `    ${uz}: ${bz},\n`
+      })).join("");
+      return `struct ${Hz} {\n${zz}}\n@group(${Ez}) @binding(${nz}) var<uniform> ${Oz}: ${Hz};\n`
+    }
+
+    function Zz(zz, uz) {
+      const bz = new DataView(zz, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, dz),
+        [Ez, nz, iz, lz, Mz, tz] = pz;
+      bz.setFloat32(Ez.offset, uz.seconds, !0), bz.setUint32(nz.offset, uz.lit ? 1 : 0, !0);
+      for (let Hz = 0; Hz < 3; Hz++) bz.setInt32(iz.offset + 4 * Hz, uz.renderOffset[Hz], !0), bz.setFloat32(lz.offset + 4 * Hz, uz.k_[Hz], !0), bz.setFloat32(Mz.offset + 4 * Hz, uz.eyePosition[Hz], !0), bz.setFloat32(tz.offset + 4 * Hz, uz.shadowDirection[Hz], !0)
+    }
+
+    function Rz(zz) {
+      const uz = new Uint32Array(Math.max(1, zz.length));
+      return zz.forEach(((zz, bz) => {
+        let {
+          id: Ez,
+          rotation: nz
+        } = zz;
+        uz[bz] = 65535 & Ez | (3 & nz) << 16
+      })), uz
+    }
+    const Kz = {
+      off: 0,
+      strict: 1,
+      allow: 2
+    }
+  },
+  6362: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez,
+      i: () => lz,
+      j: () => Mz,
+      m: () => nz,
+      p: () => iz
+    });
+    const Ez = ["terrain", "liquid", "model"];
+
+    function nz() {
+      const zz = [];
+      for (const uz of [!1, !0])
+        for (const bz of Ez) zz.push({
+          strict: uz,
+          program: bz
+        });
+      return zz
+    }
+
+    function iz(zz) {
+      return `${zz.strict?"strict":"allow"}.${zz.program}`
+    }
+
+    function lz(zz) {
+      return !zz.hooks.vertex && !zz.hooks.surface && !zz.hooks.light
+    }
+
+    function Mz(zz, uz) {
+      return "off" !== uz && (null === zz || zz.some((zz => zz.key.strict === ("strict" === uz) && !lz(zz))))
+    }
+  },
+  40487: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      SHADER_PACK_INPUTS_BINDING: () => iz.c,
+      SHADER_PACK_INPUTS_GROUP: () => iz.g,
+      SHADER_PACK_INPUTS_SIZE: () => iz.h,
+      SHADER_PACK_INPUTS_VAR: () => iz.j,
+      SHADER_PACK_MODES: () => iz.m,
+      SHADER_PACK_PROGRAMS: () => Ez.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => iz.o,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => iz.q,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => iz.t,
+      SHADER_PACK_TEXTURES_BINDING: () => iz.w,
+      encodeTextureLayers: () => iz.y,
+      flattenVariants: () => nz.c,
+      isVariantOff: () => Ez.i,
+      packRunsIn: () => Ez.j,
+      shaderPackInputsWgsl: () => iz.A,
+      shaderPackVariantKeys: () => Ez.m,
+      variantKeyId: () => Ez.p,
+      writeShaderPackInputs: () => iz.B
+    });
+    var Ez = bz(6362),
+      nz = bz(6359),
+      iz = bz(40071)
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

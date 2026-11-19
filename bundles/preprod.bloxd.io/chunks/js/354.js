@@ -1,19 +1,79 @@
 export const id = 354;
 export const ids = [354];
 export const modules = {
-  60018: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      passCubePixelShader: () => Zy
+  60423: (zz, uz, bz) => {
+    bz.d(uz, {
+      createShadowTask: () => iz
     });
-    var Uy = Wy(38319);
-    const hy = "passCubePixelShader",
-      fy = "varying vec2 vUV;uniform samplerCube textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{vec2 uv=vUV*2.0-1.0;\n#ifdef POSITIVEX\ngl_FragColor=textureCube(textureSampler,vec3(1.001,uv.y,uv.x));\n#endif\n#ifdef NEGATIVEX\ngl_FragColor=textureCube(textureSampler,vec3(-1.001,uv.y,uv.x));\n#endif\n#ifdef POSITIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,1.001,uv.x));\n#endif\n#ifdef NEGATIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,-1.001,uv.x));\n#endif\n#ifdef POSITIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,1.001));\n#endif\n#ifdef NEGATIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,-1.001));\n#endif\n}";
-    Uy.e.ShadersStore[hy] || (Uy.e.ShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = null;
+
+    function nz(zz) {
+      return Ez?.get(zz)
+    }
+
+    function iz(zz, uz) {
+      const bz = new Set;
+      0;
+      const Ez = {
+        name: "AZ",
+        engine: zz,
+        tK: uz,
+        _passes: [],
+        async _preload() {
+          const zz = [];
+          for (const bz of uz.lights) {
+            const uz = bz.shadowGenerator,
+              Ez = uz ? nz(uz) : null;
+            uz?._preloadShadowTask && Ez && zz.push(lz(uz, Ez))
+          }
+          await Promise.all(zz)
+        },
+        record() {
+          Ez._passes.length = 0;
+          for (const Ez of uz.lights) {
+            const iz = Ez.shadowGenerator,
+              lz = iz ? nz(iz) : null;
+            if (iz?._ensureShadowTaskState && lz && !iz._preloadPending) {
+              bz.add(iz);
+              const Ez = iz._ensureShadowTaskState(zz, uz, lz),
+                nz = uz._renderableVersion;
+              Ez._task.record(), Ez._recordedVersion = nz
+            }
+          }
+        },
+        execute() {
+          let Ez = 0;
+          for (const iz of uz.lights) {
+            const lz = iz.shadowGenerator,
+              Mz = lz ? nz(lz) : null;
+            if (lz?._ensureShadowTaskState && lz._renderShadowMap && Mz && !lz._preloadPending) {
+              bz.add(lz);
+              const nz = lz._shadowTaskState ?? null,
+                iz = lz._ensureShadowTaskState(zz, uz, Mz);
+              if (iz !== nz || iz._recordedVersion !== uz._renderableVersion) {
+                const zz = uz._renderableVersion;
+                iz._task.record(), iz._recordedVersion = zz
+              }
+              Ez += lz._renderShadowMap(zz, iz)
+            }
+          }
+          return Ez
+        },
+        dispose() {
+          Ez._passes.length = 0;
+          for (const zz of bz) {
+            const uz = zz._shadowTaskState;
+            uz && (uz._task.dispose(), zz._shadowTaskState = void 0)
+          }
+          bz.clear()
+        }
+      };
+      return Ez
+    }
+    async function lz(zz, uz) {
+      zz._preloadPending = uz, await (zz._preloadShadowTask?.(uz)), zz._preloadPending === uz && (zz._preloadPending = void 0)
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

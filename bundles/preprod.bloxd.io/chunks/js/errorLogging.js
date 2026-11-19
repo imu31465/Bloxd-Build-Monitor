@@ -1,139 +1,139 @@
-export const id = 29;
-export const ids = [29];
+export const id = 31;
+export const ids = [31];
 export const modules = {
-  7213: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      BaseExtension: () => yU,
-      BaseInstrumentation: () => bU,
-      BaseTransport: () => Ah,
-      CSPInstrumentation: () => Gh,
-      ConsoleInstrumentation: () => XW,
-      ConsoleTransport: () => Uf,
-      EVENT_CLICK: () => Cb,
-      EVENT_NAVIGATION: () => Tb,
-      EVENT_ROUTE_CHANGE: () => Rb,
-      EVENT_SESSION_EXTEND: () => Gb,
-      EVENT_SESSION_RESUME: () => gW,
-      EVENT_SESSION_START: () => Jb,
-      EVENT_VIEW_CHANGED: () => Vb,
-      ErrorsInstrumentation: () => uW,
-      FetchTransport: () => Vf,
-      InternalLoggerLevel: () => tW,
-      LogLevel: () => CW,
-      MAX_SESSION_PERSISTENCE_TIME: () => Py,
-      NavigationInstrumentation: () => Qh,
-      Observable: () => mU,
-      PerformanceInstrumentation: () => kh,
-      PersistentSessionsManager: () => aW,
-      SESSION_EXPIRATION_TIME: () => fy,
-      SESSION_INACTIVITY_TIME: () => Zy,
-      STORAGE_KEY: () => hy,
-      SessionInstrumentation: () => UW,
-      TransportItemType: () => dh,
-      UserActionInstrumentation: () => gf,
-      UserActionState: () => sh,
-      VERSION: () => WW,
-      ViewInstrumentation: () => HW,
-      VolatileSessionsManager: () => Fb,
-      WebVitalsInstrumentation: () => nU,
-      allLogLevels: () => VW,
-      browserMeta: () => Nh,
-      buildStackFrame: () => hW,
-      captureMetas: () => aZ,
-      createInternalLogger: () => Rf,
-      createPromiseBuffer: () => qZ,
-      createSession: () => Ih,
-      deepEqual: () => mW,
-      defaultEventDomain: () => Uy,
-      defaultExceptionType: () => OW,
-      defaultGlobalObjectKey: () => vZ,
-      defaultInternalLoggerLevel: () => kW,
-      defaultLogLevel: () => TW,
-      faro: () => Sy,
-      genShortID: () => lb,
-      getCurrentTimestamp: () => sb,
-      getDataFromSafariExtensions: () => eW,
-      getIgnoreUrls: () => Ny,
-      getInternalFaroFromGlobalObject: () => ey,
-      getStackFramesFromError: () => sW,
-      getTransportBody: () => Wf,
-      getUrlFromResource: () => Iy,
-      getWebInstrumentations: () => jf,
-      globalObject: () => By,
-      initializeFaro: () => Af,
-      internalGlobalObjectKey: () => Ky,
-      isArray: () => My,
-      isBoolean: () => Oy,
-      isDomError: () => py,
-      isDomException: () => Ly,
-      isElement: () => jb,
-      isElementDefined: () => Qy,
-      gh: () => kb,
-      isError: () => ab,
-      isErrorDefined: () => Hy,
-      isErrorEvent: () => Fy,
-      isEvent: () => rb,
-      isEventDefined: () => uy,
-      isFunction: () => ib,
-      isInstanceOf: () => Cy,
-      isInt: () => Gy,
-      isInternalFaroOnGlobalObject: () => sy,
-      isMap: () => tb,
-      isMapDefined: () => Dy,
-      isNull: () => Vy,
-      isNumber: () => gb,
-      isObject: () => vb,
-      isPrimitive: () => ny,
-      isRegExp: () => Yy,
-      isString: () => Jy,
-      isSymbol: () => Ry,
-      isSyntheticEvent: () => wy,
-      isThenable: () => Xy,
-      isToString: () => mb,
-      isTypeof: () => ly,
-      isUndefined: () => Ty,
-      makeCoreConfig: () => Yf,
-      noop: () => Db,
-      osMeta: () => zf,
-      parseStacktrace: () => SW,
-      sdkMeta: () => xf,
-      setInternalFaroOnGlobalObject: () => qb,
-      transportItemTypeToBodyKey: () => yZ,
-      unknownString: () => rU,
-      userActionDataAttribute: () => NU,
-      userActionTimeoutDataAttribute: () => zh
+  6422: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      BaseExtension: () => zb,
+      BaseInstrumentation: () => ub,
+      BaseTransport: () => zi,
+      CSPInstrumentation: () => An,
+      ConsoleInstrumentation: () => Gb,
+      ConsoleTransport: () => ii,
+      EVENT_CLICK: () => fu,
+      EVENT_NAVIGATION: () => su,
+      EVENT_ROUTE_CHANGE: () => Ju,
+      EVENT_SESSION_EXTEND: () => vu,
+      EVENT_SESSION_RESUME: () => Nu,
+      EVENT_SESSION_START: () => ou,
+      EVENT_VIEW_CHANGED: () => ru,
+      ErrorsInstrumentation: () => Vb,
+      FetchTransport: () => vi,
+      InternalLoggerLevel: () => Qu,
+      LogLevel: () => fb,
+      MAX_SESSION_PERSISTENCE_TIME: () => tz,
+      NavigationInstrumentation: () => Dn,
+      Observable: () => Xb,
+      PerformanceInstrumentation: () => eE,
+      PersistentSessionsManager: () => hu,
+      SESSION_EXPIRATION_TIME: () => iz,
+      SESSION_INACTIVITY_TIME: () => lz,
+      STORAGE_KEY: () => nz,
+      SessionInstrumentation: () => Eb,
+      TransportItemType: () => ui,
+      UserActionInstrumentation: () => Jn,
+      UserActionState: () => Kn,
+      VERSION: () => bb,
+      ViewInstrumentation: () => qb,
+      VolatileSessionsManager: () => Uu,
+      WebVitalsInstrumentation: () => aE,
+      allLogLevels: () => rb,
+      browserMeta: () => Bn,
+      buildStackFrame: () => nb,
+      captureMetas: () => Si,
+      createInternalLogger: () => Li,
+      createPromiseBuffer: () => Ki,
+      createSession: () => Yn,
+      deepEqual: () => Xu,
+      defaultEventDomain: () => Ez,
+      defaultExceptionType: () => xb,
+      defaultGlobalObjectKey: () => Pi,
+      defaultInternalLoggerLevel: () => eu,
+      defaultLogLevel: () => sb,
+      faro: () => Rz,
+      genShortID: () => wu,
+      getCurrentTimestamp: () => Zu,
+      getDataFromSafariExtensions: () => db,
+      getIgnoreUrls: () => jz,
+      getInternalFaroFromGlobalObject: () => dz,
+      getStackFramesFromError: () => Zb,
+      getTransportBody: () => ni,
+      getUrlFromResource: () => Bz,
+      getWebInstrumentations: () => Qn,
+      globalObject: () => Oz,
+      initializeFaro: () => bl,
+      internalGlobalObjectKey: () => pz,
+      isArray: () => Lz,
+      isBoolean: () => xz,
+      isDomError: () => cz,
+      isDomException: () => gz,
+      isElement: () => yz,
+      isElementDefined: () => Sz,
+      aZ: () => ez,
+      isError: () => hz,
+      isErrorDefined: () => qz,
+      isErrorEvent: () => Uz,
+      isEvent: () => mz,
+      isEventDefined: () => Vz,
+      isFunction: () => Tz,
+      isInstanceOf: () => fz,
+      isInt: () => vz,
+      isInternalFaroOnGlobalObject: () => Zz,
+      isMap: () => Qz,
+      isMapDefined: () => Dz,
+      isNull: () => rz,
+      isNumber: () => Nz,
+      isObject: () => Az,
+      isPrimitive: () => az,
+      isRegExp: () => Pz,
+      isString: () => oz,
+      isSymbol: () => Jz,
+      isSyntheticEvent: () => Wz,
+      isThenable: () => Gz,
+      isToString: () => Xz,
+      isTypeof: () => wz,
+      isUndefined: () => sz,
+      makeCoreConfig: () => Vi,
+      noop: () => Du,
+      osMeta: () => Cn,
+      parseStacktrace: () => Rb,
+      sdkMeta: () => kn,
+      setInternalFaroOnGlobalObject: () => Fz,
+      transportItemTypeToBodyKey: () => bi,
+      unknownString: () => mb,
+      userActionDataAttribute: () => jE,
+      userActionTimeoutDataAttribute: () => IE
     });
-    const Uy = "browser",
-      hy = "com.grafana.faro.session",
-      fy = 144e5,
-      Zy = 9e5,
-      cb = 1e3,
-      Py = Zy,
-      oy = {
+    const Ez = "browser",
+      nz = "com.grafana.faro.session",
+      iz = 144e5,
+      lz = 9e5,
+      Mz = 1e3,
+      tz = lz,
+      Hz = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: Py
+        maxSessionPersistenceTime: tz
       };
-    const By = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof Wy.g ? Wy.g : "undefined" !== typeof self ? self : void 0;
-    const Ky = "_faroInternal";
+    const Oz = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof bz.g ? bz.g : "undefined" !== typeof self ? self : void 0;
+    const pz = "_faroInternal";
 
-    function ey() {
-      return By[Ky]
+    function dz() {
+      return Oz[pz]
     }
 
-    function qb(yb) {
-      yb.config.isolate ? yb.internalLogger.debug("Skipping registering internal Faro instance on global object") : (yb.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(By, Ky, {
+    function Fz(zz) {
+      zz.config.isolate ? zz.internalLogger.debug("Skipping registering internal Faro instance on global object") : (zz.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Oz, pz, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: yb
+        value: zz
       }))
     }
 
-    function sy() {
-      return Ky in By
+    function Zz() {
+      return pz in Oz
     }
-    let Sy = {
+    let Rz = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function Ey(yb, bb, Wy, Uy, hy, fy, Zy) {
-      return bb.debug("Initializing Faro"), Sy = {
-          api: fy,
-          config: Wy,
-          instrumentations: Zy,
-          internalLogger: bb,
-          metas: Uy,
-          pause: hy.pause,
-          transports: hy,
-          unpatchedConsole: yb,
-          unpause: hy.unpause
-        }, qb(Sy),
-        function(yb) {
-          if (yb.config.preventGlobalExposure) yb.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function Kz(zz, uz, bz, Ez, nz, iz, lz) {
+      return uz.debug("Initializing Faro"), Rz = {
+          api: iz,
+          config: bz,
+          instrumentations: lz,
+          internalLogger: uz,
+          metas: Ez,
+          pause: nz.pause,
+          transports: nz,
+          unpatchedConsole: zz,
+          unpause: nz.unpause
+        }, Fz(Rz),
+        function(zz) {
+          if (zz.config.preventGlobalExposure) zz.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (yb.internalLogger.debug(`Registering public faro reference in the global scope using "${yb.config.globalObjectKey}" key`), yb.config.globalObjectKey in By) return void yb.internalLogger.warn(`Skipping global registration due to key "${yb.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(By, yb.config.globalObjectKey, {
+            if (zz.internalLogger.debug(`Registering public faro reference in the global scope using "${zz.config.globalObjectKey}" key`), zz.config.globalObjectKey in Oz) return void zz.internalLogger.warn(`Skipping global registration due to key "${zz.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(Oz, zz.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: yb
+              value: zz
             })
           }
-        }(Sy), Sy
+        }(Rz), Rz
     }
 
-    function ly(yb, bb) {
-      return typeof yb === bb
+    function wz(zz, uz) {
+      return typeof zz === uz
     }
 
-    function mb(yb, bb) {
-      return Object.prototype.toString.call(yb) === `[object ${bb}]`
+    function Xz(zz, uz) {
+      return Object.prototype.toString.call(zz) === `[object ${uz}]`
     }
 
-    function Cy(yb, bb) {
+    function fz(zz, uz) {
       try {
-        return yb instanceof bb
-      } catch (Wy) {
+        return zz instanceof uz
+      } catch (bz) {
         return !1
       }
     }
-    const Ty = yb => ly(yb, "undefined"),
-      Vy = yb => ly(yb, "null"),
-      Jy = yb => ly(yb, "string"),
-      gb = yb => ly(yb, "number") && !isNaN(yb) || ly(yb, "bigint"),
-      Gy = yb => gb(yb) && Number.isInteger(yb),
-      Oy = yb => ly(yb, "boolean"),
-      Ry = yb => ly(yb, "symbol"),
-      vb = yb => !Vy(yb) && ly(yb, "object"),
-      ib = yb => ly(yb, "function"),
-      My = yb => mb(yb, "Array"),
-      Yy = yb => mb(yb, "RegExp"),
-      Xy = yb => ib(null === yb || void 0 === yb ? void 0 : yb.then),
-      ny = yb => !vb(yb) && !ib(yb),
-      uy = "undefined" !== typeof Event,
-      rb = yb => uy && Cy(yb, Event),
-      Hy = "undefined" !== typeof Error,
-      ab = yb => Hy && Cy(yb, Error),
-      Fy = yb => mb(yb, "ErrorEvent"),
-      py = yb => mb(yb, "DOMError"),
-      Ly = yb => mb(yb, "DOMException"),
-      Qy = "undefined" !== typeof Element,
-      jb = yb => Qy && Cy(yb, Element),
-      Dy = "undefined" !== typeof Map,
-      tb = yb => Dy && Cy(yb, Map),
-      wy = yb => vb(yb) && "nativeEvent" in yb && "preventDefault" in yb && "stopPropagation" in yb;
+    const sz = zz => wz(zz, "undefined"),
+      rz = zz => wz(zz, "null"),
+      oz = zz => wz(zz, "string"),
+      Nz = zz => wz(zz, "number") && !isNaN(zz) || wz(zz, "bigint"),
+      vz = zz => Nz(zz) && Number.isInteger(zz),
+      xz = zz => wz(zz, "boolean"),
+      Jz = zz => wz(zz, "symbol"),
+      Az = zz => !rz(zz) && wz(zz, "object"),
+      Tz = zz => wz(zz, "function"),
+      Lz = zz => Xz(zz, "Array"),
+      Pz = zz => Xz(zz, "RegExp"),
+      Gz = zz => Tz(null === zz || void 0 === zz ? void 0 : zz.then),
+      az = zz => !Az(zz) && !Tz(zz),
+      Vz = "undefined" !== typeof Event,
+      mz = zz => Vz && fz(zz, Event),
+      qz = "undefined" !== typeof Error,
+      hz = zz => qz && fz(zz, Error),
+      Uz = zz => Xz(zz, "ErrorEvent"),
+      cz = zz => Xz(zz, "DOMError"),
+      gz = zz => Xz(zz, "DOMException"),
+      Sz = "undefined" !== typeof Element,
+      yz = zz => Sz && fz(zz, Element),
+      Dz = "undefined" !== typeof Map,
+      Qz = zz => Dz && fz(zz, Map),
+      Wz = zz => Az(zz) && "nativeEvent" in zz && "preventDefault" in zz && "stopPropagation" in zz;
 
-    function kb(yb) {
-      return null == yb || (My(yb) || Jy(yb) ? 0 === yb.length : !!vb(yb) && 0 === Object.keys(yb).length)
+    function ez(zz) {
+      return null == zz || (Lz(zz) || oz(zz) ? 0 === zz.length : !!Az(zz) && 0 === Object.keys(zz).length)
     }
 
-    function Ny() {
-      return Sy.transports.transports.flatMap((yb => yb.getIgnoreUrls()))
+    function jz() {
+      return Rz.transports.transports.flatMap((zz => zz.getIgnoreUrls()))
     }
 
-    function zb() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return Ny().some((bb => yb && null != yb.match(bb)))
+    function Iz() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return jz().some((uz => zz && null != zz.match(uz)))
     }
 
-    function Iy(yb) {
-      return Jy(yb) ? yb : yb instanceof URL ? yb.href : !kb(yb) && ib(null === yb || void 0 === yb ? void 0 : yb.toString) ? yb.toString() : void 0
+    function Bz(zz) {
+      return oz(zz) ? zz : zz instanceof URL ? zz.href : !ez(zz) && Tz(null === zz || void 0 === zz ? void 0 : zz.toString) ? zz.toString() : void 0
     }
-    const xb = "sessionStorage",
-      Ay = "localStorage";
+    const Cz = "sessionStorage",
+      Yz = "localStorage";
 
-    function dy(yb) {
+    function kz(zz) {
       try {
-        let bb;
-        bb = window[yb];
-        const Wy = "__faro_storage_test__";
-        return bb.setItem(Wy, Wy), bb.removeItem(Wy), !0
-      } catch (Wy) {
-        var bb;
-        return null === (bb = Sy.internalLogger) || void 0 === bb || bb.info(`Web storage of type ${yb} is not available. Reason: ${Wy}`), !1
+        let uz;
+        uz = window[zz];
+        const bz = "__faro_storage_test__";
+        return uz.setItem(bz, bz), uz.removeItem(bz), !0
+      } catch (bz) {
+        var uz;
+        return null === (uz = Rz.internalLogger) || void 0 === uz || uz.info(`Web storage of type ${zz} is not available. Reason: ${bz}`), !1
       }
     }
 
-    function yW(yb, bb) {
-      return fb(bb) ? window[bb].getItem(yb) : null
+    function zu(zz, uz) {
+      return iu(uz) ? window[uz].getItem(zz) : null
     }
 
-    function bW(yb, bb, Wy) {
-      if (fb(Wy)) try {
-        window[Wy].setItem(yb, bb)
-      } catch (Uy) {}
+    function uu(zz, uz, bz) {
+      if (iu(bz)) try {
+        window[bz].setItem(zz, uz)
+      } catch (Ez) {}
     }
 
-    function Wb(yb, bb) {
-      fb(bb) && window[bb].removeItem(yb)
+    function bu(zz, uz) {
+      iu(uz) && window[uz].removeItem(zz)
     }
-    const Ub = dy(Ay),
-      hb = dy(xb);
+    const Eu = kz(Yz),
+      nu = kz(Cz);
 
-    function fb(yb) {
-      return yb === Ay ? Ub : yb === xb && hb
-    }
-
-    function Zb(yb) {
-      return Zb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(yb) {
-        return typeof yb
-      } : function(yb) {
-        return yb && "function" == typeof Symbol && yb.constructor === Symbol && yb !== Symbol.prototype ? "symbol" : typeof yb
-      }, Zb(yb)
+    function iu(zz) {
+      return zz === Yz ? Eu : zz === Cz && nu
     }
 
-    function cW(yb) {
-      var bb = function(yb, bb) {
-        if ("object" != Zb(yb) || !yb) return yb;
-        var Wy = yb[Symbol.toPrimitive];
-        if (void 0 !== Wy) {
-          var Uy = Wy.call(yb, bb || "default");
-          if ("object" != Zb(Uy)) return Uy;
+    function lu(zz) {
+      return lu = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(zz) {
+        return typeof zz
+      } : function(zz) {
+        return zz && "function" == typeof Symbol && zz.constructor === Symbol && zz !== Symbol.prototype ? "symbol" : typeof zz
+      }, lu(zz)
+    }
+
+    function Mu(zz) {
+      var uz = function(zz, uz) {
+        if ("object" != lu(zz) || !zz) return zz;
+        var bz = zz[Symbol.toPrimitive];
+        if (void 0 !== bz) {
+          var Ez = bz.call(zz, uz || "default");
+          if ("object" != lu(Ez)) return Ez;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === bb ? String : Number)(yb)
-      }(yb, "string");
-      return "symbol" == Zb(bb) ? bb : bb + ""
+        return ("string" === uz ? String : Number)(zz)
+      }(zz, "string");
+      return "symbol" == lu(uz) ? uz : uz + ""
     }
 
-    function Pb(yb, bb, Wy) {
-      return (bb = cW(bb)) in yb ? Object.defineProperty(yb, bb, {
-        value: Wy,
+    function tu(zz, uz, bz) {
+      return (uz = Mu(uz)) in zz ? Object.defineProperty(zz, uz, {
+        value: bz,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : yb[bb] = Wy, yb
+      }) : zz[uz] = bz, zz
     }
 
-    function ob(yb, bb) {
-      var Wy = Object.keys(yb);
+    function Hu(zz, uz) {
+      var bz = Object.keys(zz);
       if (Object.getOwnPropertySymbols) {
-        var Uy = Object.getOwnPropertySymbols(yb);
-        bb && (Uy = Uy.filter((function(bb) {
-          return Object.getOwnPropertyDescriptor(yb, bb).enumerable
-        }))), Wy.push.apply(Wy, Uy)
+        var Ez = Object.getOwnPropertySymbols(zz);
+        uz && (Ez = Ez.filter((function(uz) {
+          return Object.getOwnPropertyDescriptor(zz, uz).enumerable
+        }))), bz.push.apply(bz, Ez)
       }
-      return Wy
+      return bz
     }
 
-    function Bb(yb) {
-      for (var bb = 1; bb < arguments.length; bb++) {
-        var Wy = null != arguments[bb] ? arguments[bb] : {};
-        bb % 2 ? ob(Object(Wy), !0).forEach((function(bb) {
-          Pb(yb, bb, Wy[bb])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(yb, Object.getOwnPropertyDescriptors(Wy)) : ob(Object(Wy)).forEach((function(bb) {
-          Object.defineProperty(yb, bb, Object.getOwnPropertyDescriptor(Wy, bb))
+    function Ou(zz) {
+      for (var uz = 1; uz < arguments.length; uz++) {
+        var bz = null != arguments[uz] ? arguments[uz] : {};
+        uz % 2 ? Hu(Object(bz), !0).forEach((function(uz) {
+          tu(zz, uz, bz[uz])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(zz, Object.getOwnPropertyDescriptors(bz)) : Hu(Object(bz)).forEach((function(uz) {
+          Object.defineProperty(zz, uz, Object.getOwnPropertyDescriptor(bz, uz))
         }))
       }
-      return yb
+      return zz
     }
 
-    function Kb() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sy;
-      var bb, Wy, Uy;
-      const hy = yb.config.sessionTracking,
-        fy = null !== (bb = null !== (Wy = null === hy || void 0 === hy || null === (Uy = hy.sampler) || void 0 === Uy ? void 0 : Uy.call(hy, {
-          metas: yb.metas.value
-        })) && void 0 !== Wy ? Wy : null === hy || void 0 === hy ? void 0 : hy.samplingRate) && void 0 !== bb ? bb : 1,
-        Zy = "number" === typeof fy ? function(yb) {
-          return Math.min(1, Math.max(0, yb))
-        }(fy) : 0;
-      if (!(Zy > 0)) return !1;
-      if (1 === Zy) return !0;
+    function pu() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Rz;
+      var uz, bz, Ez;
+      const nz = zz.config.sessionTracking,
+        iz = null !== (uz = null !== (bz = null === nz || void 0 === nz || null === (Ez = nz.sampler) || void 0 === Ez ? void 0 : Ez.call(nz, {
+          metas: zz.metas.value
+        })) && void 0 !== bz ? bz : null === nz || void 0 === nz ? void 0 : nz.samplingRate) && void 0 !== uz ? uz : 1,
+        lz = "number" === typeof iz ? function(zz) {
+          return Math.min(1, Math.max(0, zz))
+        }(iz) : 0;
+      if (!(lz > 0)) return !1;
+      if (1 === lz) return !0;
       try {
-        const yb = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === yb || void 0 === yb ? void 0 : yb.getRandomValues)) {
-          const bb = new Uint32Array(1);
-          return yb.getRandomValues(bb), bb[0] / Math.pow(2, 32) < Zy
+        const zz = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === zz || void 0 === zz ? void 0 : zz.getRandomValues)) {
+          const uz = new Uint32Array(1);
+          return zz.getRandomValues(uz), uz[0] / Math.pow(2, 32) < lz
         }
-      } catch (cb) {}
-      return Math.random() < Zy
+      } catch (Mz) {}
+      return Math.random() < lz
     }
 
-    function eb() {
+    function du() {
       return Date.now()
     }
 
-    function qW() {
+    function Fu() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function sb() {
+    function Zu() {
       return (new Date).toISOString()
     }
 
-    function Sb(yb) {
-      return new Date(yb).toISOString()
+    function Ru(zz) {
+      return new Date(zz).toISOString()
     }
-    const Eb = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const Ku = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function lb() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const bb = new Uint32Array(yb),
-        Wy = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === Wy || void 0 === Wy ? void 0 : Wy.getRandomValues) Wy.getRandomValues(bb);
+    function wu() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const uz = new Uint32Array(zz),
+        bz = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === bz || void 0 === bz ? void 0 : bz.getRandomValues) bz.getRandomValues(uz);
       else
-        for (let hy = 0; hy < yb; hy++) bb[hy] = Math.floor(4294967296 * Math.random());
-      let Uy = "";
-      for (let hy = 0; hy < yb; hy++) Uy += Eb[bb[hy] % 59];
-      return Uy
+        for (let nz = 0; nz < zz; nz++) uz[nz] = Math.floor(4294967296 * Math.random());
+      let Ez = "";
+      for (let nz = 0; nz < zz; nz++) Ez += Ku[uz[nz] % 59];
+      return Ez
     }
 
-    function mW(yb, bb) {
-      if (yb === bb) return !0;
-      if (ly(yb, "number") && isNaN(yb)) return ly(bb, "number") && isNaN(bb);
-      const Wy = My(yb),
-        Uy = My(bb);
-      if (Wy !== Uy) return !1;
-      if (Wy && Uy) {
-        const Wy = yb.length;
-        if (Wy !== bb.length) return !1;
-        for (let Uy = Wy; 0 !== Uy--;)
-          if (!mW(yb[Uy], bb[Uy])) return !1;
+    function Xu(zz, uz) {
+      if (zz === uz) return !0;
+      if (wz(zz, "number") && isNaN(zz)) return wz(uz, "number") && isNaN(uz);
+      const bz = Lz(zz),
+        Ez = Lz(uz);
+      if (bz !== Ez) return !1;
+      if (bz && Ez) {
+        const bz = zz.length;
+        if (bz !== uz.length) return !1;
+        for (let Ez = bz; 0 !== Ez--;)
+          if (!Xu(zz[Ez], uz[Ez])) return !1;
         return !0
       }
-      const hy = vb(yb),
-        fy = vb(bb);
-      if (hy !== fy) return !1;
-      if (yb && bb && hy && fy) {
-        const Wy = Object.keys(yb),
-          Uy = Object.keys(bb);
-        if (Wy.length !== Uy.length) return !1;
-        for (let yb of Wy)
-          if (!Uy.includes(yb)) return !1;
-        for (let hy of Wy)
-          if (!mW(yb[hy], bb[hy])) return !1;
+      const nz = Az(zz),
+        iz = Az(uz);
+      if (nz !== iz) return !1;
+      if (zz && uz && nz && iz) {
+        const bz = Object.keys(zz),
+          Ez = Object.keys(uz);
+        if (bz.length !== Ez.length) return !1;
+        for (let zz of bz)
+          if (!Ez.includes(zz)) return !1;
+        for (let nz of bz)
+          if (!Xu(zz[nz], uz[nz])) return !1;
         return !0
       }
       return !1
     }
-    const Cb = "click",
-      Tb = "navigation",
-      Vb = "view_changed",
-      Jb = "session_start",
-      gW = "session_resume",
-      Gb = "session_extend",
-      Ob = "service_name_override",
-      Rb = "route_change";
+    const fu = "click",
+      su = "navigation",
+      ru = "view_changed",
+      ou = "session_start",
+      Nu = "session_resume",
+      vu = "session_extend",
+      xu = "service_name_override",
+      Ju = "route_change";
 
-    function vW() {
+    function Au() {
       let {
-        sessionId: yb,
-        started: bb,
-        lastActivity: Wy,
-        isSampled: Uy = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, hy = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sy;
-      var fy;
-      const Zy = eb(),
-        cb = null === (fy = hy.config) || void 0 === fy || null === (fy = fy.sessionTracking) || void 0 === fy ? void 0 : fy.generateSessionId;
-      return null == yb && (yb = "function" === typeof cb ? cb() : lb()), {
-        sessionId: yb,
-        lastActivity: null !== Wy && void 0 !== Wy ? Wy : Zy,
-        started: null !== bb && void 0 !== bb ? bb : Zy,
-        isSampled: Uy
+        sessionId: zz,
+        started: uz,
+        lastActivity: bz,
+        isSampled: Ez = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, nz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rz;
+      var iz;
+      const lz = du(),
+        Mz = null === (iz = nz.config) || void 0 === iz || null === (iz = iz.sessionTracking) || void 0 === iz ? void 0 : iz.generateSessionId;
+      return null == zz && (zz = "function" === typeof Mz ? Mz() : wu()), {
+        sessionId: zz,
+        lastActivity: null !== bz && void 0 !== bz ? bz : lz,
+        started: null !== uz && void 0 !== uz ? uz : lz,
+        isSampled: Ez
       }
     }
 
-    function iW(yb) {
-      if (null == yb) return !1;
-      const bb = eb();
-      return bb - yb.started < 144e5 && bb - yb.lastActivity < Zy
+    function Tu(zz) {
+      if (null == zz) return !1;
+      const uz = du();
+      return uz - zz.started < 144e5 && uz - zz.lastActivity < lz
     }
 
-    function Mb(yb) {
+    function Lu(zz) {
       let {
-        fetchUserSession: bb,
-        storeUserSession: Wy,
-        adoptSession: Uy,
-        updateInterval: hy = 0
-      } = yb, cb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sy, Py = 0;
+        fetchUserSession: uz,
+        storeUserSession: bz,
+        adoptSession: Ez,
+        updateInterval: nz = 0
+      } = zz, Mz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rz, tz = 0;
       return function() {
         let {
-          forceSessionExtend: yb = !1,
-          refreshActivity: oy = !0
+          forceSessionExtend: zz = !1,
+          refreshActivity: Hz = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var By, Ky;
-        if (!bb || !Wy) return;
-        const ey = eb();
-        if (!yb && ey < Py && Py - ey <= hy) return;
-        const qb = cb.config.sessionTracking,
-          sy = null === qb || void 0 === qb ? void 0 : qb.persistent;
-        if (sy && !Ub || !sy && !hb) return;
-        const Sy = bb();
-        if (Py = Math.min(ey + hy, (null !== (By = null === Sy || void 0 === Sy ? void 0 : Sy.started) && void 0 !== By ? By : ey) + fy, (null !== (Ky = null === Sy || void 0 === Sy ? void 0 : Sy.lastActivity) && void 0 !== Ky ? Ky : ey) + Zy), !1 === yb && iW(Sy)) {
-          var Ey;
-          oy && Wy(Bb(Bb({}, Sy), {}, {
-            lastActivity: ey
+        var Oz, pz;
+        if (!uz || !bz) return;
+        const dz = du();
+        if (!zz && dz < tz && tz - dz <= nz) return;
+        const Fz = Mz.config.sessionTracking,
+          Zz = null === Fz || void 0 === Fz ? void 0 : Fz.persistent;
+        if (Zz && !Eu || !Zz && !nu) return;
+        const Rz = uz();
+        if (tz = Math.min(dz + nz, (null !== (Oz = null === Rz || void 0 === Rz ? void 0 : Rz.started) && void 0 !== Oz ? Oz : dz) + iz, (null !== (pz = null === Rz || void 0 === Rz ? void 0 : Rz.lastActivity) && void 0 !== pz ? pz : dz) + lz), !1 === zz && Tu(Rz)) {
+          var Kz;
+          Hz && bz(Ou(Ou({}, Rz), {}, {
+            lastActivity: dz
           }));
-          const yb = null === (Ey = cb.metas.value.session) || void 0 === Ey ? void 0 : Ey.id;
-          null != Uy && null != Sy.sessionMeta && Sy.sessionId !== yb && Uy(Sy.sessionMeta)
+          const zz = null === (Kz = Mz.metas.value.session) || void 0 === Kz ? void 0 : Kz.id;
+          null != Ez && null != Rz.sessionMeta && Rz.sessionId !== zz && Ez(Rz.sessionMeta)
         } else {
-          var ly, mb, Cy;
-          let yb = Xb(vW({
-            isSampled: Kb(cb)
-          }, cb), Sy, cb);
-          Py = ey + hy, Wy(yb), null === (ly = cb.api) || void 0 === ly || ly.setSession(yb.sessionMeta), null === qb || void 0 === qb || null === (mb = qb.onSessionChange) || void 0 === mb || mb.call(qb, null !== (Cy = null === Sy || void 0 === Sy ? void 0 : Sy.sessionMeta) && void 0 !== Cy ? Cy : null, yb.sessionMeta)
+          var wz, Xz, fz;
+          let zz = Gu(Au({
+            isSampled: pu(Mz)
+          }, Mz), Rz, Mz);
+          tz = dz + nz, bz(zz), null === (wz = Mz.api) || void 0 === wz || wz.setSession(zz.sessionMeta), null === Fz || void 0 === Fz || null === (Xz = Fz.onSessionChange) || void 0 === Xz || Xz.call(Fz, null !== (fz = null === Rz || void 0 === Rz ? void 0 : Rz.sessionMeta) && void 0 !== fz ? fz : null, zz.sessionMeta)
         }
       }
     }
 
-    function Yb(yb) {
-      let bb, {
-          fetchUserSession: Wy,
-          storeUserSession: Uy,
-          updateInterval: hy = 0
-        } = yb,
-        fy = 0;
-      return yb => {
-        const Zy = eb();
-        if (yb === bb && Zy < fy && fy - Zy <= hy) return;
-        bb = yb, fy = Zy + hy;
-        const cb = Wy();
-        (null === cb || void 0 === cb ? void 0 : cb.sessionId) === yb && iW(cb) && Uy(Bb(Bb({}, cb), {}, {
-          lastActivity: Zy
+    function Pu(zz) {
+      let uz, {
+          fetchUserSession: bz,
+          storeUserSession: Ez,
+          updateInterval: nz = 0
+        } = zz,
+        iz = 0;
+      return zz => {
+        const lz = du();
+        if (zz === uz && lz < iz && iz - lz <= nz) return;
+        uz = zz, iz = lz + nz;
+        const Mz = bz();
+        (null === Mz || void 0 === Mz ? void 0 : Mz.sessionId) === zz && Tu(Mz) && Ez(Ou(Ou({}, Mz), {}, {
+          lastActivity: lz
         }))
       }
     }
 
-    function Xb(yb, bb) {
-      let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Sy;
-      var Uy, hy, fy, Zy, cb, Py;
-      const oy = Bb(Bb({}, yb), {}, {
+    function Gu(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Rz;
+      var Ez, nz, iz, lz, Mz, tz;
+      const Hz = Ou(Ou({}, zz), {}, {
           sessionMeta: {
-            id: yb.sessionId,
-            attributes: ub(Bb(Bb(Bb({}, null === (Uy = Wy.config.sessionTracking) || void 0 === Uy || null === (Uy = Uy.session) || void 0 === Uy ? void 0 : Uy.attributes), null !== (hy = null === (fy = Wy.metas.value.session) || void 0 === fy ? void 0 : fy.attributes) && void 0 !== hy ? hy : {}), {}, {
-              isSampled: yb.isSampled.toString()
+            id: zz.sessionId,
+            attributes: Vu(Ou(Ou(Ou({}, null === (Ez = bz.config.sessionTracking) || void 0 === Ez || null === (Ez = Ez.session) || void 0 === Ez ? void 0 : Ez.attributes), null !== (nz = null === (iz = bz.metas.value.session) || void 0 === iz ? void 0 : iz.attributes) && void 0 !== nz ? nz : {}), {}, {
+              isSampled: zz.isSampled.toString()
             }))
           }
         }),
-        By = null !== (Zy = null === (cb = Wy.metas.value.session) || void 0 === cb ? void 0 : cb.overrides) && void 0 !== Zy ? Zy : null === bb || void 0 === bb || null === (Py = bb.sessionMeta) || void 0 === Py ? void 0 : Py.overrides;
-      kb(By) || (oy.sessionMeta.overrides = By);
-      const Ky = null === bb || void 0 === bb ? void 0 : bb.sessionId;
-      return null != Ky && (oy.sessionMeta.attributes.previousSession = Ky), oy
+        Oz = null !== (lz = null === (Mz = bz.metas.value.session) || void 0 === Mz ? void 0 : Mz.overrides) && void 0 !== lz ? lz : null === uz || void 0 === uz || null === (tz = uz.sessionMeta) || void 0 === tz ? void 0 : tz.overrides;
+      ez(Oz) || (Hz.sessionMeta.overrides = Oz);
+      const pz = null === uz || void 0 === uz ? void 0 : uz.sessionId;
+      return null != pz && (Hz.sessionMeta.attributes.previousSession = pz), Hz
     }
 
-    function nb(yb) {
+    function au(zz) {
       let {
-        fetchUserSession: bb,
-        storeUserSession: Wy
-      } = yb, Uy = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sy, hy = !1;
-      return function(yb) {
-        if (hy) return;
-        const fy = yb.session,
-          Zy = bb();
-        let cb = null === fy || void 0 === fy ? void 0 : fy.id;
-        const Py = null === fy || void 0 === fy ? void 0 : fy.attributes,
-          oy = null === fy || void 0 === fy ? void 0 : fy.overrides,
-          By = null === Zy || void 0 === Zy ? void 0 : Zy.sessionMeta,
-          Ky = null === By || void 0 === By ? void 0 : By.overrides,
-          ey = !!oy && !mW(oy, Ky),
-          qb = !!Py && !mW(Py, null === By || void 0 === By ? void 0 : By.attributes);
-        if (fy && cb !== (null === Zy || void 0 === Zy ? void 0 : Zy.sessionId) || qb || ey) {
-          var sy, Sy;
-          const yb = null != Zy && cb === Zy.sessionId,
-            bb = Xb(yb ? Zy : vW({
-              sessionId: cb,
-              isSampled: Kb(Uy)
-            }, Uy), Zy, Uy),
-            fy = null === Zy || void 0 === Zy || null === (sy = Zy.sessionMeta) || void 0 === sy || null === (sy = sy.attributes) || void 0 === sy ? void 0 : sy.previousSession;
-          yb && null != fy && fy !== bb.sessionId && (bb.sessionMeta.attributes.previousSession = fy), (null === (Sy = bb.sessionMeta.attributes) || void 0 === Sy ? void 0 : Sy.previousSession) === bb.sessionId && delete bb.sessionMeta.attributes.previousSession, Wy(bb),
-            function(yb, bb) {
-              let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                Uy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var hy, fy, Zy;
-              if (!bb) return;
-              const cb = Wy.serviceName,
-                Py = null !== (hy = null !== (fy = Uy.serviceName) && void 0 !== fy ? fy : null === (Zy = yb.metas.value.app) || void 0 === Zy ? void 0 : Zy.name) && void 0 !== hy ? hy : "";
-              cb && cb !== Py && yb.api.pushEvent(Ob, {
-                serviceName: cb,
-                previousServiceName: Py
+        fetchUserSession: uz,
+        storeUserSession: bz
+      } = zz, Ez = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rz, nz = !1;
+      return function(zz) {
+        if (nz) return;
+        const iz = zz.session,
+          lz = uz();
+        let Mz = null === iz || void 0 === iz ? void 0 : iz.id;
+        const tz = null === iz || void 0 === iz ? void 0 : iz.attributes,
+          Hz = null === iz || void 0 === iz ? void 0 : iz.overrides,
+          Oz = null === lz || void 0 === lz ? void 0 : lz.sessionMeta,
+          pz = null === Oz || void 0 === Oz ? void 0 : Oz.overrides,
+          dz = !!Hz && !Xu(Hz, pz),
+          Fz = !!tz && !Xu(tz, null === Oz || void 0 === Oz ? void 0 : Oz.attributes);
+        if (iz && Mz !== (null === lz || void 0 === lz ? void 0 : lz.sessionId) || Fz || dz) {
+          var Zz, Rz;
+          const zz = null != lz && Mz === lz.sessionId,
+            uz = Gu(zz ? lz : Au({
+              sessionId: Mz,
+              isSampled: pu(Ez)
+            }, Ez), lz, Ez),
+            iz = null === lz || void 0 === lz || null === (Zz = lz.sessionMeta) || void 0 === Zz || null === (Zz = Zz.attributes) || void 0 === Zz ? void 0 : Zz.previousSession;
+          zz && null != iz && iz !== uz.sessionId && (uz.sessionMeta.attributes.previousSession = iz), (null === (Rz = uz.sessionMeta.attributes) || void 0 === Rz ? void 0 : Rz.previousSession) === uz.sessionId && delete uz.sessionMeta.attributes.previousSession, bz(uz),
+            function(zz, uz) {
+              let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var nz, iz, lz;
+              if (!uz) return;
+              const Mz = bz.serviceName,
+                tz = null !== (nz = null !== (iz = Ez.serviceName) && void 0 !== iz ? iz : null === (lz = zz.metas.value.app) || void 0 === lz ? void 0 : lz.name) && void 0 !== nz ? nz : "";
+              Mz && Mz !== tz && zz.api.pushEvent(xu, {
+                serviceName: Mz,
+                previousServiceName: tz
               })
-            }(Uy, ey, oy, Ky), hy = !0;
+            }(Ez, dz, Hz, pz), nz = !0;
           try {
-            Uy.api.setSession(bb.sessionMeta)
+            Ez.api.setSession(uz.sessionMeta)
           } finally {
-            hy = !1
+            nz = !1
           }
         }
       }
     }
 
-    function ub(yb) {
-      const bb = {};
-      for (const Wy of Object.keys(yb)) {
-        const Uy = yb[Wy];
-        void 0 !== Uy && (bb[Wy] = Uy)
+    function Vu(zz) {
+      const uz = {};
+      for (const bz of Object.keys(zz)) {
+        const Ez = zz[bz];
+        void 0 !== Ez && (uz[bz] = Ez)
       }
-      return bb
+      return uz
     }
 
-    function rW() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== yb && void 0 !== yb ? yb : {}, function() {
-        const yb = new WeakSet;
-        return function(bb, Wy) {
-          if (vb(Wy) && null !== Wy) {
-            if (yb.has(Wy)) return null;
-            yb.add(Wy)
+    function mu() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== zz && void 0 !== zz ? zz : {}, function() {
+        const zz = new WeakSet;
+        return function(uz, bz) {
+          if (Az(bz) && null !== bz) {
+            if (zz.has(bz)) return null;
+            zz.add(bz)
           }
-          return Wy
+          return bz
         }
       }())
     }
 
-    function Hb() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const bb = {};
-      for (const [Wy, Uy] of Object.entries(yb)) bb[Wy] = vb(Uy) && null !== Uy ? rW(Uy) : String(Uy);
-      return bb
+    function qu() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const uz = {};
+      for (const [bz, Ez] of Object.entries(zz)) uz[bz] = Az(Ez) && null !== Ez ? mu(Ez) : String(Ez);
+      return uz
     }
-    var aW = class yb {
+    var hu = class zz {
       constructor() {
-        var bb = this;
-        let Wy = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sy;
-        this.context = Wy, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = yb => {
+        var uz = this;
+        let bz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Rz;
+        this.context = bz, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = zz => {
           this.adopting = !0;
           try {
-            var bb;
-            null === (bb = this.context.api) || void 0 === bb || bb.setSession(yb)
+            var uz;
+            null === (uz = this.context.api) || void 0 === uz || uz.setSession(zz)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: yb = !0
+            refreshActivity: zz = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return bb.updateUserSession({
-            refreshActivity: yb
+          return uz.updateUserSession({
+            refreshActivity: zz
           })
-        }, this.recordActivity = Yb({
-          fetchUserSession: yb.fetchUserSession,
-          storeUserSession: yb.storeUserSession,
-          updateInterval: cb
-        }), this.updateUserSession = Mb({
-          fetchUserSession: yb.fetchUserSession,
-          storeUserSession: yb.storeUserSession,
+        }, this.recordActivity = Pu({
+          fetchUserSession: zz.fetchUserSession,
+          storeUserSession: zz.storeUserSession,
+          updateInterval: Mz
+        }), this.updateUserSession = Lu({
+          fetchUserSession: zz.fetchUserSession,
+          storeUserSession: zz.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: cb
-        }, Wy), this.init()
+          updateInterval: Mz
+        }, bz), this.init()
       }
       static removeUserSession() {
-        Wb(hy, yb.storageTypeLocal)
+        bu(nz, zz.storageTypeLocal)
       }
-      static storeUserSession(bb) {
-        bW(hy, rW(bb), yb.storageTypeLocal)
+      static storeUserSession(uz) {
+        uu(nz, mu(uz), zz.storageTypeLocal)
       }
       static fetchUserSession() {
-        const bb = yW(hy, yb.storageTypeLocal);
-        return bb ? JSON.parse(bb) : null
+        const uz = zu(nz, zz.storageTypeLocal);
+        return uz ? JSON.parse(uz) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var yb;
+            var zz;
             this.updateSession({
               refreshActivity: !1
             });
-            const bb = null === (yb = this.context.api) || void 0 === yb || null === (yb = yb.getSession()) || void 0 === yb ? void 0 : yb.id;
-            bb && this.recordActivity(bb)
+            const uz = null === (zz = this.context.api) || void 0 === zz || null === (zz = zz.getSession()) || void 0 === zz ? void 0 : zz.id;
+            uz && this.recordActivity(uz)
           }
-        })), this.context.metas.addListener(nb({
-          fetchUserSession: yb.fetchUserSession,
-          storeUserSession: yb.storeUserSession
+        })), this.context.metas.addListener(au({
+          fetchUserSession: zz.fetchUserSession,
+          storeUserSession: zz.storeUserSession
         }, this.context))
       }
     };
-    aW.storageTypeLocal = Ay;
-    var Fb = class yb {
+    hu.storageTypeLocal = Yz;
+    var Uu = class zz {
       constructor() {
-        var bb = this;
-        let Wy = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sy;
-        this.context = Wy, this.isAdopting = () => !1, this.updateSession = function() {
+        var uz = this;
+        let bz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Rz;
+        this.context = bz, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: yb = !0
+            refreshActivity: zz = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return bb.updateUserSession({
-            refreshActivity: yb
+          return uz.updateUserSession({
+            refreshActivity: zz
           })
-        }, this.recordActivity = Yb({
-          fetchUserSession: yb.fetchUserSession,
-          storeUserSession: yb.storeUserSession,
-          updateInterval: cb
-        }), this.updateUserSession = Mb({
-          fetchUserSession: yb.fetchUserSession,
-          storeUserSession: yb.storeUserSession,
-          updateInterval: cb
-        }, Wy), this.init()
+        }, this.recordActivity = Pu({
+          fetchUserSession: zz.fetchUserSession,
+          storeUserSession: zz.storeUserSession,
+          updateInterval: Mz
+        }), this.updateUserSession = Lu({
+          fetchUserSession: zz.fetchUserSession,
+          storeUserSession: zz.storeUserSession,
+          updateInterval: Mz
+        }, bz), this.init()
       }
       static removeUserSession() {
-        Wb(hy, yb.storageTypeSession)
+        bu(nz, zz.storageTypeSession)
       }
-      static storeUserSession(bb) {
-        bW(hy, rW(bb), yb.storageTypeSession)
+      static storeUserSession(uz) {
+        uu(nz, mu(uz), zz.storageTypeSession)
       }
       static fetchUserSession() {
-        const bb = yW(hy, yb.storageTypeSession);
-        return bb ? JSON.parse(bb) : null
+        const uz = zu(nz, zz.storageTypeSession);
+        return uz ? JSON.parse(uz) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var yb;
+            var zz;
             this.updateSession({
               refreshActivity: !1
             });
-            const bb = null === (yb = this.context.api) || void 0 === yb || null === (yb = yb.getSession()) || void 0 === yb ? void 0 : yb.id;
-            bb && this.recordActivity(bb)
+            const uz = null === (zz = this.context.api) || void 0 === zz || null === (zz = zz.getSession()) || void 0 === zz ? void 0 : zz.id;
+            uz && this.recordActivity(uz)
           }
-        })), this.context.metas.addListener(nb({
-          fetchUserSession: yb.fetchUserSession,
-          storeUserSession: yb.storeUserSession
+        })), this.context.metas.addListener(au({
+          fetchUserSession: zz.fetchUserSession,
+          storeUserSession: zz.storeUserSession
         }, this.context))
       }
     };
-    Fb.storageTypeSession = xb;
-    const pb = new WeakMap;
+    Uu.storageTypeSession = Cz;
+    const cu = new WeakMap;
 
-    function Lb(yb) {
-      let bb = pb.get(yb);
-      if (!bb) {
-        let Wy = [],
-          Uy = [];
-        bb = {
-          addSessionUpdateListener: yb => {
-            Wy.push(yb)
+    function gu(zz) {
+      let uz = cu.get(zz);
+      if (!uz) {
+        let bz = [],
+          Ez = [];
+        uz = {
+          addSessionUpdateListener: zz => {
+            bz.push(zz)
           },
-          removeSessionUpdateListener: yb => {
-            Wy = Wy.filter((bb => bb !== yb))
+          removeSessionUpdateListener: zz => {
+            bz = bz.filter((uz => uz !== zz))
           },
-          notifySessionUpdate: yb => {
-            Wy.forEach((bb => bb(yb)))
+          notifySessionUpdate: zz => {
+            bz.forEach((uz => uz(zz)))
           },
-          shouldCapture: () => Uy.every((yb => yb())),
-          addCaptureFilter: yb => {
-            Uy.push(yb)
+          shouldCapture: () => Ez.every((zz => zz())),
+          addCaptureFilter: zz => {
+            Ez.push(zz)
           },
-          removeCaptureFilter: yb => {
-            Uy = Uy.filter((bb => bb !== yb))
+          removeCaptureFilter: zz => {
+            Ez = Ez.filter((uz => uz !== zz))
           }
-        }, pb.set(yb, bb)
+        }, cu.set(zz, uz)
       }
-      return bb
+      return uz
     }
-    var Qb = class {
-      constructor(yb, bb, Wy) {
-        this.metas = yb, this.transports = bb, this.onActivate = Wy, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = yb => {
-          var bb, Wy, Uy;
-          const hy = this.pending;
-          var fy, Zy;
-          if ("overrides" === yb.type) return void(this.pending = {
-            reset: null !== (fy = null === hy || void 0 === hy ? void 0 : hy.reset) && void 0 !== fy && fy,
-            inheritOverrides: null === (Zy = null === hy || void 0 === hy ? void 0 : hy.inheritOverrides) || void 0 === Zy || Zy,
-            session: Bb(Bb({}, null === hy || void 0 === hy ? void 0 : hy.session), {}, {
-              overrides: Bb(Bb({}, null === hy || void 0 === hy ? void 0 : hy.session.overrides), yb.overrides)
+    var Su = class {
+      constructor(zz, uz, bz) {
+        this.metas = zz, this.transports = uz, this.onActivate = bz, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = zz => {
+          var uz, bz, Ez;
+          const nz = this.pending;
+          var iz, lz;
+          if ("overrides" === zz.type) return void(this.pending = {
+            reset: null !== (iz = null === nz || void 0 === nz ? void 0 : nz.reset) && void 0 !== iz && iz,
+            inheritOverrides: null === (lz = null === nz || void 0 === nz ? void 0 : nz.inheritOverrides) || void 0 === lz || lz,
+            session: Ou(Ou({}, null === nz || void 0 === nz ? void 0 : nz.session), {}, {
+              overrides: Ou(Ou({}, null === nz || void 0 === nz ? void 0 : nz.session.overrides), zz.overrides)
             })
           });
-          const cb = yb.session,
-            Py = kb(cb) || null != cb && "id" in cb && !cb.id,
-            oy = null !== (bb = null === cb || void 0 === cb ? void 0 : cb.overrides) && void 0 !== bb ? bb : null === hy || void 0 === hy ? void 0 : hy.session.overrides;
+          const Mz = zz.session,
+            tz = ez(Mz) || null != Mz && "id" in Mz && !Mz.id,
+            Hz = null !== (uz = null === Mz || void 0 === Mz ? void 0 : Mz.overrides) && void 0 !== uz ? uz : null === nz || void 0 === nz ? void 0 : nz.session.overrides;
           this.pending = {
-            reset: Py || !(null === cb || void 0 === cb ? void 0 : cb.id) && null !== (Wy = null === hy || void 0 === hy ? void 0 : hy.reset) && void 0 !== Wy && Wy,
-            inheritOverrides: !(!yb.overrides && void 0 !== (null === cb || void 0 === cb ? void 0 : cb.overrides)) && (null === (Uy = null === hy || void 0 === hy ? void 0 : hy.inheritOverrides) || void 0 === Uy || Uy),
+            reset: tz || !(null === Mz || void 0 === Mz ? void 0 : Mz.id) && null !== (bz = null === nz || void 0 === nz ? void 0 : nz.reset) && void 0 !== bz && bz,
+            inheritOverrides: !(!zz.overrides && void 0 !== (null === Mz || void 0 === Mz ? void 0 : Mz.overrides)) && (null === (Ez = null === nz || void 0 === nz ? void 0 : nz.inheritOverrides) || void 0 === Ez || Ez),
             session: {
-              id: null === cb || void 0 === cb ? void 0 : cb.id,
-              attributes: (null === cb || void 0 === cb ? void 0 : cb.attributes) && Bb({}, cb.attributes),
-              overrides: yb.overrides ? Bb(Bb({}, null === hy || void 0 === hy ? void 0 : hy.session.overrides), yb.overrides) : oy && Bb({}, oy)
+              id: null === Mz || void 0 === Mz ? void 0 : Mz.id,
+              attributes: (null === Mz || void 0 === Mz ? void 0 : Mz.attributes) && Ou({}, Mz.attributes),
+              overrides: zz.overrides ? Ou(Ou({}, null === nz || void 0 === nz ? void 0 : nz.session.overrides), zz.overrides) : Hz && Ou({}, Hz)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var yb, bb;
-        this.waiting = !0, Lb(this.metas).addSessionUpdateListener(this.recordUpdate), Lb(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (yb = (bb = this.metas).addCaptureListener) || void 0 === yb || yb.call(bb, this.activate), this.activate()
+        var zz, uz;
+        this.waiting = !0, gu(this.metas).addSessionUpdateListener(this.recordUpdate), gu(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (zz = (uz = this.metas).addCaptureListener) || void 0 === zz || zz.call(uz, this.activate), this.activate()
       }
       destroy() {
-        var yb, bb;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), Lb(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (yb = (bb = this.metas).removeCaptureListener) || void 0 === yb || yb.call(bb, this.activate), Lb(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var zz, uz;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), gu(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (zz = (uz = this.metas).removeCaptureListener) || void 0 === zz || zz.call(uz, this.activate), gu(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function jW(yb) {
-      return (null === yb || void 0 === yb ? void 0 : yb.persistent) ? aW : Fb
+    function yu(zz) {
+      return (null === zz || void 0 === zz ? void 0 : zz.persistent) ? hu : Uu
     }
 
-    function Db() {}
-    let tW = function(yb) {
-      return yb[yb.OFF = 0] = "OFF", yb[yb.ERROR = 1] = "ERROR", yb[yb.WARN = 2] = "WARN", yb[yb.INFO = 3] = "INFO", yb[yb.VERBOSE = 4] = "VERBOSE", yb
+    function Du() {}
+    let Qu = function(zz) {
+      return zz[zz.OFF = 0] = "OFF", zz[zz.ERROR = 1] = "ERROR", zz[zz.WARN = 2] = "WARN", zz[zz.INFO = 3] = "INFO", zz[zz.VERBOSE = 4] = "VERBOSE", zz
     }({});
-    const wb = {
-        debug: Db,
-        error: Db,
-        info: Db,
+    const Wu = {
+        debug: Du,
+        error: Du,
+        info: Du,
         prefix: "Faro",
-        warn: Db
+        warn: Du
       },
-      kW = 1;
+      eu = 1;
 
-    function Nb(yb) {
-      return Nb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(yb) {
-        return typeof yb
-      } : function(yb) {
-        return yb && "function" == typeof Symbol && yb.constructor === Symbol && yb !== Symbol.prototype ? "symbol" : typeof yb
-      }, Nb(yb)
+    function ju(zz) {
+      return ju = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(zz) {
+        return typeof zz
+      } : function(zz) {
+        return zz && "function" == typeof Symbol && zz.constructor === Symbol && zz !== Symbol.prototype ? "symbol" : typeof zz
+      }, ju(zz)
     }
 
-    function zW(yb) {
-      var bb = function(yb, bb) {
-        if ("object" != Nb(yb) || !yb) return yb;
-        var Wy = yb[Symbol.toPrimitive];
-        if (void 0 !== Wy) {
-          var Uy = Wy.call(yb, bb || "default");
-          if ("object" != Nb(Uy)) return Uy;
+    function Iu(zz) {
+      var uz = function(zz, uz) {
+        if ("object" != ju(zz) || !zz) return zz;
+        var bz = zz[Symbol.toPrimitive];
+        if (void 0 !== bz) {
+          var Ez = bz.call(zz, uz || "default");
+          if ("object" != ju(Ez)) return Ez;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === bb ? String : Number)(yb)
-      }(yb, "string");
-      return "symbol" == Nb(bb) ? bb : bb + ""
+        return ("string" === uz ? String : Number)(zz)
+      }(zz, "string");
+      return "symbol" == ju(uz) ? uz : uz + ""
     }
 
-    function Ib(yb, bb, Wy) {
-      return (bb = zW(bb)) in yb ? Object.defineProperty(yb, bb, {
-        value: Wy,
+    function Bu(zz, uz, bz) {
+      return (uz = Iu(uz)) in zz ? Object.defineProperty(zz, uz, {
+        value: bz,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : yb[bb] = Wy, yb
+      }) : zz[uz] = bz, zz
     }
 
-    function xW(yb, bb) {
-      var Wy = Object.keys(yb);
+    function Cu(zz, uz) {
+      var bz = Object.keys(zz);
       if (Object.getOwnPropertySymbols) {
-        var Uy = Object.getOwnPropertySymbols(yb);
-        bb && (Uy = Uy.filter((function(bb) {
-          return Object.getOwnPropertyDescriptor(yb, bb).enumerable
-        }))), Wy.push.apply(Wy, Uy)
+        var Ez = Object.getOwnPropertySymbols(zz);
+        uz && (Ez = Ez.filter((function(uz) {
+          return Object.getOwnPropertyDescriptor(zz, uz).enumerable
+        }))), bz.push.apply(bz, Ez)
       }
-      return Wy
+      return bz
     }
 
-    function Ab(yb) {
-      for (var bb = 1; bb < arguments.length; bb++) {
-        var Wy = null != arguments[bb] ? arguments[bb] : {};
-        bb % 2 ? xW(Object(Wy), !0).forEach((function(bb) {
-          Ib(yb, bb, Wy[bb])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(yb, Object.getOwnPropertyDescriptors(Wy)) : xW(Object(Wy)).forEach((function(bb) {
-          Object.defineProperty(yb, bb, Object.getOwnPropertyDescriptor(Wy, bb))
+    function Yu(zz) {
+      for (var uz = 1; uz < arguments.length; uz++) {
+        var bz = null != arguments[uz] ? arguments[uz] : {};
+        uz % 2 ? Cu(Object(bz), !0).forEach((function(uz) {
+          Bu(zz, uz, bz[uz])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(zz, Object.getOwnPropertyDescriptors(bz)) : Cu(Object(bz)).forEach((function(uz) {
+          Object.defineProperty(zz, uz, Object.getOwnPropertyDescriptor(bz, uz))
         }))
       }
-      return yb
+      return zz
     }
-    const db = Ab({}, console);
-    var yU = class {
+    const ku = Yu({}, console);
+    var zb = class {
         constructor() {
-          this.unpatchedConsole = db, this.internalLogger = wb, this.config = {}, this.metas = {}
+          this.unpatchedConsole = ku, this.internalLogger = Wu, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var yb = arguments.length, bb = new Array(yb), Wy = 0; Wy < yb; Wy++) bb[Wy] = arguments[Wy];
-          this.internalLogger.debug(`${this.name}\n`, ...bb)
+          for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+          this.internalLogger.debug(`${this.name}\n`, ...uz)
         }
         logInfo() {
-          for (var yb = arguments.length, bb = new Array(yb), Wy = 0; Wy < yb; Wy++) bb[Wy] = arguments[Wy];
-          this.internalLogger.info(`${this.name}\n`, ...bb)
+          for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+          this.internalLogger.info(`${this.name}\n`, ...uz)
         }
         logWarn() {
-          for (var yb = arguments.length, bb = new Array(yb), Wy = 0; Wy < yb; Wy++) bb[Wy] = arguments[Wy];
-          this.internalLogger.warn(`${this.name}\n`, ...bb)
+          for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+          this.internalLogger.warn(`${this.name}\n`, ...uz)
         }
         logError() {
-          for (var yb = arguments.length, bb = new Array(yb), Wy = 0; Wy < yb; Wy++) bb[Wy] = arguments[Wy];
-          this.internalLogger.error(`${this.name}\n`, ...bb)
+          for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+          this.internalLogger.error(`${this.name}\n`, ...uz)
         }
       },
-      bU = class extends yU {
+      ub = class extends zb {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const WW = "2.12.1";
-    var UW = class extends bU {
+    const bb = "2.12.1";
+    var Eb = class extends ub {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = WW, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = bb, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(yb) {
-        var bb;
-        const Wy = yb.session;
-        if (Wy && Wy.id !== (null === (bb = this.notifiedSession) || void 0 === bb ? void 0 : bb.id)) {
-          var Uy;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = Wy);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (Uy = Wy.attributes) || void 0 === Uy ? void 0 : Uy.previousSession)) return this.api.pushEvent(Gb, {}, void 0, {
+      sendSessionStartEvent(zz) {
+        var uz;
+        const bz = zz.session;
+        if (bz && bz.id !== (null === (uz = this.notifiedSession) || void 0 === uz ? void 0 : uz.id)) {
+          var Ez;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = bz);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (Ez = bz.attributes) || void 0 === Ez ? void 0 : Ez.previousSession)) return this.api.pushEvent(vu, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = Wy);
-          this.notifiedSession = Wy, this.api.pushEvent(Jb, {}, void 0, {
+          }), void(this.notifiedSession = bz);
+          this.notifiedSession = bz, this.api.pushEvent(ou, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(yb, bb, Wy) {
-        const Uy = null === Wy || void 0 === Wy ? void 0 : Wy.session;
-        let hy, fy, Zy = yb.fetchUserSession();
-        if (bb.persistent && bb.maxSessionPersistenceTime && Zy) {
-          const yb = eb();
-          Zy.lastActivity < yb - bb.maxSessionPersistenceTime && (aW.removeUserSession(), Zy = null)
+      createInitialSession(zz, uz, bz) {
+        const Ez = null === bz || void 0 === bz ? void 0 : bz.session;
+        let nz, iz, lz = zz.fetchUserSession();
+        if (uz.persistent && uz.maxSessionPersistenceTime && lz) {
+          const zz = du();
+          lz.lastActivity < zz - uz.maxSessionPersistenceTime && (hu.removeUserSession(), lz = null)
         }
-        const cb = iW(Zy);
-        if ((null === Wy || void 0 === Wy ? void 0 : Wy.reset) || !cb || (null === Uy || void 0 === Uy ? void 0 : Uy.id) && Uy.id !== (null === Zy || void 0 === Zy ? void 0 : Zy.sessionId)) {
-          var Py, oy, By, Ky, ey, qb;
-          fy = vW({
-            sessionId: (null === Wy || void 0 === Wy ? void 0 : Wy.reset) ? void 0 : null !== (Py = null === Uy || void 0 === Uy ? void 0 : Uy.id) && void 0 !== Py ? Py : null === (oy = bb.session) || void 0 === oy ? void 0 : oy.id,
-            isSampled: Kb(this)
+        const Mz = Tu(lz);
+        if ((null === bz || void 0 === bz ? void 0 : bz.reset) || !Mz || (null === Ez || void 0 === Ez ? void 0 : Ez.id) && Ez.id !== (null === lz || void 0 === lz ? void 0 : lz.sessionId)) {
+          var tz, Hz, Oz, pz, dz, Fz;
+          iz = Au({
+            sessionId: (null === bz || void 0 === bz ? void 0 : bz.reset) ? void 0 : null !== (tz = null === Ez || void 0 === Ez ? void 0 : Ez.id) && void 0 !== tz ? tz : null === (Hz = uz.session) || void 0 === Hz ? void 0 : Hz.id,
+            isSampled: pu(this)
           }, this);
-          const yb = fy.sessionId,
-            sy = Wy && cb ? null === Zy || void 0 === Zy || null === (By = Zy.sessionMeta) || void 0 === By ? void 0 : By.overrides : void 0,
-            Sy = sy ? Bb(Bb({}, null === (Ky = bb.session) || void 0 === Ky ? void 0 : Ky.overrides), sy) : null === (ey = bb.session) || void 0 === ey ? void 0 : ey.overrides;
-          fy.sessionMeta = Bb({
-            id: yb,
-            attributes: Bb({
-              isSampled: fy.isSampled.toString()
-            }, null === (qb = bb.session) || void 0 === qb ? void 0 : qb.attributes)
-          }, Sy ? {
-            overrides: Sy
-          } : {}), hy = Jb
+          const zz = iz.sessionId,
+            Zz = bz && Mz ? null === lz || void 0 === lz || null === (Oz = lz.sessionMeta) || void 0 === Oz ? void 0 : Oz.overrides : void 0,
+            Rz = Zz ? Ou(Ou({}, null === (pz = uz.session) || void 0 === pz ? void 0 : pz.overrides), Zz) : null === (dz = uz.session) || void 0 === dz ? void 0 : dz.overrides;
+          iz.sessionMeta = Ou({
+            id: zz,
+            attributes: Ou({
+              isSampled: iz.isSampled.toString()
+            }, null === (Fz = uz.session) || void 0 === Fz ? void 0 : Fz.attributes)
+          }, Rz ? {
+            overrides: Rz
+          } : {}), nz = ou
         } else {
-          var sy, Sy;
-          const yb = null === Zy || void 0 === Zy ? void 0 : Zy.sessionId;
-          fy = vW({
-            sessionId: yb,
-            isSampled: Zy.isSampled || !1,
-            started: null === Zy || void 0 === Zy ? void 0 : Zy.started
+          var Zz, Rz;
+          const zz = null === lz || void 0 === lz ? void 0 : lz.sessionId;
+          iz = Au({
+            sessionId: zz,
+            isSampled: lz.isSampled || !1,
+            started: null === lz || void 0 === lz ? void 0 : lz.started
           }, this);
-          const Wy = null === Zy || void 0 === Zy ? void 0 : Zy.sessionMeta,
-            Uy = Bb(Bb({}, null === (sy = bb.session) || void 0 === sy ? void 0 : sy.overrides), null === Wy || void 0 === Wy ? void 0 : Wy.overrides);
-          fy.sessionMeta = Bb(Bb({}, bb.session), {}, {
-            id: yb,
-            attributes: Bb(Bb(Bb({}, null === (Sy = bb.session) || void 0 === Sy ? void 0 : Sy.attributes), null === Wy || void 0 === Wy ? void 0 : Wy.attributes), {}, {
-              isSampled: fy.isSampled.toString()
+          const bz = null === lz || void 0 === lz ? void 0 : lz.sessionMeta,
+            Ez = Ou(Ou({}, null === (Zz = uz.session) || void 0 === Zz ? void 0 : Zz.overrides), null === bz || void 0 === bz ? void 0 : bz.overrides);
+          iz.sessionMeta = Ou(Ou({}, uz.session), {}, {
+            id: zz,
+            attributes: Ou(Ou(Ou({}, null === (Rz = uz.session) || void 0 === Rz ? void 0 : Rz.attributes), null === bz || void 0 === bz ? void 0 : bz.attributes), {}, {
+              isSampled: iz.isSampled.toString()
             }),
-            overrides: Uy
-          }), hy = gW
+            overrides: Ez
+          }), nz = Nu
         }
-        var Ey;
-        if (Uy && (fy.sessionMeta = Bb(Bb({}, fy.sessionMeta), {}, {
-            attributes: Bb(Bb(Bb({}, null === (Ey = fy.sessionMeta) || void 0 === Ey ? void 0 : Ey.attributes), Uy.attributes), {}, {
-              isSampled: fy.isSampled.toString()
+        var Kz;
+        if (Ez && (iz.sessionMeta = Ou(Ou({}, iz.sessionMeta), {}, {
+            attributes: Ou(Ou(Ou({}, null === (Kz = iz.sessionMeta) || void 0 === Kz ? void 0 : Kz.attributes), Ez.attributes), {}, {
+              isSampled: iz.isSampled.toString()
             })
-          }), Uy.overrides)) {
-          const yb = (null === Wy || void 0 === Wy ? void 0 : Wy.inheritOverrides) ? Bb(Bb({}, fy.sessionMeta.overrides), Uy.overrides) : Uy.overrides;
-          Object.keys(yb).length > 0 ? fy.sessionMeta.overrides = yb : delete fy.sessionMeta.overrides
+          }), Ez.overrides)) {
+          const zz = (null === bz || void 0 === bz ? void 0 : bz.inheritOverrides) ? Ou(Ou({}, iz.sessionMeta.overrides), Ez.overrides) : Ez.overrides;
+          Object.keys(zz).length > 0 ? iz.sessionMeta.overrides = zz : delete iz.sessionMeta.overrides
         }
         return {
-          initialSession: fy,
-          lifecycleType: hy
+          initialSession: iz,
+          lifecycleType: nz
         }
       }
-      registerBeforeSendHook(yb) {
-        var bb;
-        this.beforeSendHook = bb => {
-          var Wy, Uy;
-          const hy = null === (Wy = bb.meta.session) || void 0 === Wy ? void 0 : Wy.id;
-          hy && !this.transports.isPaused() && yb(hy);
-          const fy = null === (Uy = bb.meta.session) || void 0 === Uy ? void 0 : Uy.attributes;
-          if (fy && "true" === (null === fy || void 0 === fy ? void 0 : fy.isSampled)) {
-            var Zy;
-            let yb = JSON.parse(JSON.stringify(bb));
-            const Wy = null === (Zy = yb.meta.session) || void 0 === Zy ? void 0 : Zy.attributes;
-            var cb;
-            if (null === Wy || void 0 === Wy || delete Wy.isSampled, 0 === Object.keys(null !== Wy && void 0 !== Wy ? Wy : {}).length) null === (cb = yb.meta.session) || void 0 === cb || delete cb.attributes;
-            return yb
+      registerBeforeSendHook(zz) {
+        var uz;
+        this.beforeSendHook = uz => {
+          var bz, Ez;
+          const nz = null === (bz = uz.meta.session) || void 0 === bz ? void 0 : bz.id;
+          nz && !this.transports.isPaused() && zz(nz);
+          const iz = null === (Ez = uz.meta.session) || void 0 === Ez ? void 0 : Ez.attributes;
+          if (iz && "true" === (null === iz || void 0 === iz ? void 0 : iz.isSampled)) {
+            var lz;
+            let zz = JSON.parse(JSON.stringify(uz));
+            const bz = null === (lz = zz.meta.session) || void 0 === lz ? void 0 : lz.attributes;
+            var Mz;
+            if (null === bz || void 0 === bz || delete bz.isSampled, 0 === Object.keys(null !== bz && void 0 !== bz ? bz : {}).length) null === (Mz = zz.meta.session) || void 0 === Mz || delete Mz.attributes;
+            return zz
           }
           return null
-        }, null === (bb = this.transports) || void 0 === bb || bb.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (uz = this.transports) || void 0 === uz || uz.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var yb;
+        var zz;
         this.logDebug("init session instrumentation");
-        const bb = document.prerendering;
-        var Wy;
-        if ((null === (yb = this.config.sessionTracking) || void 0 === yb ? void 0 : yb.enabled) && (bb || this.prerenderSession)) return null !== (Wy = this.prerenderSession) && void 0 !== Wy || (this.prerenderSession = new Qb(this.metas, this.transports, (yb => {
-          this.prerenderSession = void 0, this.initializeSession(yb)
+        const uz = document.prerendering;
+        var bz;
+        if ((null === (zz = this.config.sessionTracking) || void 0 === zz ? void 0 : zz.enabled) && (uz || this.prerenderSession)) return null !== (bz = this.prerenderSession) && void 0 !== bz || (this.prerenderSession = new Su(this.metas, this.transports, (zz => {
+          this.prerenderSession = void 0, this.initializeSession(zz)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(yb) {
-        const bb = this.config.sessionTracking;
-        if (null === bb || void 0 === bb ? void 0 : bb.enabled) {
-          var Wy, Uy;
-          const hy = jW(bb),
-            fy = new hy(this);
-          this.isAdoptingSession = fy.isAdopting, this.registerBeforeSendHook(fy.recordActivity);
+      initializeSession(zz) {
+        const uz = this.config.sessionTracking;
+        if (null === uz || void 0 === uz ? void 0 : uz.enabled) {
+          var bz, Ez;
+          const nz = yu(uz),
+            iz = new nz(this);
+          this.isAdoptingSession = iz.isAdopting, this.registerBeforeSendHook(iz.recordActivity);
           const {
-            initialSession: Zy,
-            lifecycleType: cb
-          } = this.createInitialSession(hy, bb, yb);
-          hy.storeUserSession(Zy);
-          const Py = Zy.sessionMeta;
-          this.notifiedSession = Py, this.api.setSession(Py), this.captureListener = () => {
-            this.transports.isPaused() || fy.updateSession({
+            initialSession: lz,
+            lifecycleType: Mz
+          } = this.createInitialSession(nz, uz, zz);
+          nz.storeUserSession(lz);
+          const tz = lz.sessionMeta;
+          this.notifiedSession = tz, this.api.setSession(tz), this.captureListener = () => {
+            this.transports.isPaused() || iz.updateSession({
               refreshActivity: !1
             })
-          }, null === (Wy = (Uy = this.metas).addCaptureListener) || void 0 === Wy || Wy.call(Uy, this.captureListener), cb === Jb && this.api.pushEvent(Jb, {}, void 0, {
+          }, null === (bz = (Ez = this.metas).addCaptureListener) || void 0 === bz || bz.call(Ez, this.captureListener), Mz === ou && this.api.pushEvent(ou, {}, void 0, {
             skipDedupe: !0
-          }), cb === gW && this.api.pushEvent(gW, {}, void 0, {
+          }), Mz === Nu && this.api.pushEvent(Nu, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var yb, bb, Wy;
-        (null === (yb = this.prerenderSession) || void 0 === yb || yb.destroy(), this.captureListener) && (null === (bb = (Wy = this.metas).removeCaptureListener) || void 0 === bb || bb.call(Wy, this.captureListener), this.captureListener = void 0);
+        var zz, uz, bz;
+        (null === (zz = this.prerenderSession) || void 0 === zz || zz.destroy(), this.captureListener) && (null === (uz = (bz = this.metas).removeCaptureListener) || void 0 === uz || uz.call(bz, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function hW(yb, bb, Wy, Uy) {
-      const hy = {
-        filename: yb || document.location.href,
-        function: bb || "?"
+    function nb(zz, uz, bz, Ez) {
+      const nz = {
+        filename: zz || document.location.href,
+        function: uz || "?"
       };
-      return void 0 !== Wy && (hy.lineno = Wy), void 0 !== Uy && (hy.colno = Uy), hy
+      return void 0 !== bz && (nz.lineno = bz), void 0 !== Ez && (nz.colno = Ez), nz
     }
-    const fW = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      ZW = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      cU = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      PW = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      oW = "safari-extension",
-      BW = "safari-web-extension",
-      KW = /Minified React error #\d+;/i;
+    const ib = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      lb = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      Mb = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      tb = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      Hb = "safari-extension",
+      Ob = "safari-web-extension",
+      pb = /Minified React error #\d+;/i;
 
-    function eW(yb, bb) {
-      const Wy = null === yb || void 0 === yb ? void 0 : yb.includes(oW),
-        Uy = !Wy && (null === yb || void 0 === yb ? void 0 : yb.includes("safari-web-extension"));
-      return Wy || Uy ? [(null === yb || void 0 === yb ? void 0 : yb.includes("@")) ? yb.split("@")[0] : yb, Wy ? `${oW}:${bb}` : `${BW}:${bb}`] : [yb, bb]
+    function db(zz, uz) {
+      const bz = null === zz || void 0 === zz ? void 0 : zz.includes(Hb),
+        Ez = !bz && (null === zz || void 0 === zz ? void 0 : zz.includes("safari-web-extension"));
+      return bz || Ez ? [(null === zz || void 0 === zz ? void 0 : zz.includes("@")) ? zz.split("@")[0] : zz, bz ? `${Hb}:${uz}` : `${Ob}:${uz}`] : [zz, uz]
     }
-    const qU = 1024;
+    const Fb = 1024;
 
-    function sW(yb) {
-      let bb = [];
-      yb.stacktrace ? bb = yb.stacktrace.split("\n").filter(((yb, bb) => bb % 2 === 0)) : yb.stack && (bb = yb.stack.split("\n"));
-      const Wy = bb.reduce(((bb, Wy, Uy) => {
-        if (Wy.length > qU) return bb;
-        let hy, fy, Zy, cb, Py;
-        if (hy = fW.exec(Wy)) {
-          if (fy = hy[1], Zy = hy[2], cb = hy[3], Py = hy[4], null === Zy || void 0 === Zy ? void 0 : Zy.startsWith("eval")) {
-            const yb = ZW.exec(Zy);
-            yb && (Zy = yb[1], cb = yb[2], Py = yb[3])
+    function Zb(zz) {
+      let uz = [];
+      zz.stacktrace ? uz = zz.stacktrace.split("\n").filter(((zz, uz) => uz % 2 === 0)) : zz.stack && (uz = zz.stack.split("\n"));
+      const bz = uz.reduce(((uz, bz, Ez) => {
+        if (bz.length > Fb) return uz;
+        let nz, iz, lz, Mz, tz;
+        if (nz = ib.exec(bz)) {
+          if (iz = nz[1], lz = nz[2], Mz = nz[3], tz = nz[4], null === lz || void 0 === lz ? void 0 : lz.startsWith("eval")) {
+            const zz = lb.exec(lz);
+            zz && (lz = zz[1], Mz = zz[2], tz = zz[3])
           }
-          Zy = (null === Zy || void 0 === Zy ? void 0 : Zy.startsWith("address at ")) ? Zy.substring(11) : Zy, [fy, Zy] = eW(fy, Zy)
-        } else if (hy = cU.exec(Wy)) {
-          if (fy = hy[1], Zy = hy[3], cb = hy[4], Py = hy[5], Zy && Zy.includes(" > eval")) {
-            const yb = PW.exec(Zy);
-            yb && (fy = fy || "eval", Zy = yb[1], cb = yb[2])
-          } else 0 === Uy && !Py && gb(yb.columnNumber) && (Py = String(yb.columnNumber + 1));
-          [fy, Zy] = eW(fy, Zy)
+          lz = (null === lz || void 0 === lz ? void 0 : lz.startsWith("address at ")) ? lz.substring(11) : lz, [iz, lz] = db(iz, lz)
+        } else if (nz = Mb.exec(bz)) {
+          if (iz = nz[1], lz = nz[3], Mz = nz[4], tz = nz[5], lz && lz.includes(" > eval")) {
+            const zz = tb.exec(lz);
+            zz && (iz = iz || "eval", lz = zz[1], Mz = zz[2])
+          } else 0 === Ez && !tz && Nz(zz.columnNumber) && (tz = String(zz.columnNumber + 1));
+          [iz, lz] = db(iz, lz)
         }
-        return (Zy || fy) && bb.push(hW(Zy, fy, cb ? Number(cb) : void 0, Py ? Number(Py) : void 0)), bb
+        return (lz || iz) && uz.push(nb(lz, iz, Mz ? Number(Mz) : void 0, tz ? Number(tz) : void 0)), uz
       }), []);
-      return KW.test(yb.message) ? Wy.slice(1) : Wy
+      return pb.test(zz.message) ? bz.slice(1) : bz
     }
 
-    function SW(yb) {
+    function Rb(zz) {
       return {
-        frames: sW(yb)
+        frames: Zb(zz)
       }
     }
-    const EW = "http-request-start",
-      lW = "http-request-end";
-    var mU = class yb {
+    const Kb = "http-request-start",
+      wb = "http-request-end";
+    var Xb = class zz {
       constructor() {
         this.subscribers = []
       }
-      subscribe(yb) {
-        return this.subscribers.push(yb), {
-          unsubscribe: () => this.unsubscribe(yb)
+      subscribe(zz) {
+        return this.subscribers.push(zz), {
+          unsubscribe: () => this.unsubscribe(zz)
         }
       }
-      unsubscribe(yb) {
-        this.subscribers = this.subscribers.filter((bb => bb !== yb))
+      unsubscribe(zz) {
+        this.subscribers = this.subscribers.filter((uz => uz !== zz))
       }
-      notify(yb) {
-        this.subscribers.forEach((bb => bb(yb)))
+      notify(zz) {
+        this.subscribers.forEach((uz => uz(zz)))
       }
       first() {
-        const bb = new yb,
-          Wy = yb => {
-            bb.notify(yb), Uy.unsubscribe()
+        const uz = new zz,
+          bz = zz => {
+            uz.notify(zz), Ez.unsubscribe()
           },
-          Uy = this.subscribe(Wy),
-          hy = bb.unsubscribe.bind(bb);
-        return this.withUnsubscribeOverride(bb, hy, Wy)
+          Ez = this.subscribe(bz),
+          nz = uz.unsubscribe.bind(uz);
+        return this.withUnsubscribeOverride(uz, nz, bz)
       }
-      takeWhile(bb) {
-        const Wy = new yb,
-          Uy = yb => {
-            bb(yb) ? Wy.notify(yb) : Wy.unsubscribe(Uy)
+      takeWhile(uz) {
+        const bz = new zz,
+          Ez = zz => {
+            uz(zz) ? bz.notify(zz) : bz.unsubscribe(Ez)
           };
-        this.subscribe(Uy);
-        const hy = Wy.unsubscribe.bind(Wy);
-        return this.withUnsubscribeOverride(Wy, hy, Uy)
+        this.subscribe(Ez);
+        const nz = bz.unsubscribe.bind(bz);
+        return this.withUnsubscribeOverride(bz, nz, Ez)
       }
-      filter(bb) {
-        const Wy = new yb,
-          Uy = yb => {
-            bb(yb) && Wy.notify(yb)
+      filter(uz) {
+        const bz = new zz,
+          Ez = zz => {
+            uz(zz) && bz.notify(zz)
           };
-        this.subscribe(Uy);
-        const hy = Wy.unsubscribe.bind(Wy);
-        return this.withUnsubscribeOverride(Wy, hy, Uy)
+        this.subscribe(Ez);
+        const nz = bz.unsubscribe.bind(bz);
+        return this.withUnsubscribeOverride(bz, nz, Ez)
       }
       merge() {
-        const bb = new yb,
-          Wy = [];
-        for (var Uy = arguments.length, hy = new Array(Uy), fy = 0; fy < Uy; fy++) hy[fy] = arguments[fy];
-        hy.forEach((yb => {
-          const Uy = yb.subscribe((yb => {
-            bb.notify(yb)
+        const uz = new zz,
+          bz = [];
+        for (var Ez = arguments.length, nz = new Array(Ez), iz = 0; iz < Ez; iz++) nz[iz] = arguments[iz];
+        nz.forEach((zz => {
+          const Ez = zz.subscribe((zz => {
+            uz.notify(zz)
           }));
-          Wy.push(Uy)
+          bz.push(Ez)
         }));
-        const Zy = bb.unsubscribeAll.bind(bb);
-        return bb.unsubscribe = () => {
-          Wy.forEach((yb => yb.unsubscribe())), Zy()
-        }, bb
+        const lz = uz.unsubscribeAll.bind(uz);
+        return uz.unsubscribe = () => {
+          bz.forEach((zz => zz.unsubscribe())), lz()
+        }, uz
       }
-      withUnsubscribeOverride(yb, bb, Wy) {
-        return yb.unsubscribe = yb => {
-          bb(yb), this.unsubscribe(Wy)
-        }, yb
+      withUnsubscribeOverride(zz, uz, bz) {
+        return zz.unsubscribe = zz => {
+          uz(zz), this.unsubscribe(bz)
+        }, zz
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let CW = function(yb) {
-      return yb.TRACE = "trace", yb.DEBUG = "debug", yb.INFO = "info", yb.LOG = "log", yb.WARN = "warn", yb.ERROR = "error", yb
+    let fb = function(zz) {
+      return zz.TRACE = "trace", zz.DEBUG = "debug", zz.INFO = "info", zz.LOG = "log", zz.WARN = "warn", zz.ERROR = "error", zz
     }({});
-    const TW = "log",
-      VW = ["trace", "debug", "info", "log", "warn", "error"];
-    let JW, gU = !1;
-    const GW = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      OW = "Error",
-      RW = yb => yb.map((yb => vb(yb) ? rW(yb) : String(yb))).join(" ");
+    const sb = "log",
+      rb = ["trace", "debug", "info", "log", "warn", "error"];
+    let ob, Nb = !1;
+    const vb = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      xb = "Error",
+      Jb = zz => zz.map((zz => Az(zz) ? mu(zz) : String(zz))).join(" ");
 
-    function vU(yb) {
-      let bb, Wy, Uy, hy, fy = [];
-      if (Fy(yb) && yb.error) bb = yb.error.message, Wy = yb.error.name, fy = sW(yb.error);
-      else if ((Uy = py(yb)) || Ly(yb)) {
+    function Ab(zz) {
+      let uz, bz, Ez, nz, iz = [];
+      if (Uz(zz) && zz.error) uz = zz.error.message, bz = zz.error.name, iz = Zb(zz.error);
+      else if ((Ez = cz(zz)) || gz(zz)) {
         const {
-          name: hy,
-          message: fy
-        } = yb;
-        Wy = null !== hy && void 0 !== hy ? hy : Uy ? "DOMError" : "DOMException", bb = fy ? `${Wy}: ${fy}` : Wy
-      } else ab(yb) ? (Wy = yb.name, bb = yb.message, fy = sW(yb)) : (vb(yb) || (hy = rb(yb))) && (Wy = hy ? yb.constructor.name : void 0, bb = `Non-Error exception captured with keys: ${Object.keys(yb)}`);
-      return [bb, Wy, fy]
+          name: nz,
+          message: iz
+        } = zz;
+        bz = null !== nz && void 0 !== nz ? nz : Ez ? "DOMError" : "DOMException", uz = iz ? `${bz}: ${iz}` : bz
+      } else hz(zz) ? (bz = zz.name, uz = zz.message, iz = Zb(zz)) : (Az(zz) || (nz = mz(zz))) && (bz = nz ? zz.constructor.name : void 0, uz = `Non-Error exception captured with keys: ${Object.keys(zz)}`);
+      return [uz, bz, iz]
     }
 
-    function iU(yb) {
-      const [bb, Wy, Uy, hy, fy] = yb;
-      let Zy, cb, Py = [];
-      const oy = Jy(bb),
-        By = hW(Wy, "?", Uy, hy);
-      return fy || !oy ? ([Zy, cb, Py] = vU(null !== fy && void 0 !== fy ? fy : bb), 0 === Py.length && (Py = [By])) : oy && ([Zy, cb] = function(yb) {
-        var bb, Wy;
-        const Uy = yb.match(GW),
-          hy = null !== (bb = null === Uy || void 0 === Uy ? void 0 : Uy[1]) && void 0 !== bb ? bb : OW;
-        return [null !== (Wy = null === Uy || void 0 === Uy ? void 0 : Uy[2]) && void 0 !== Wy ? Wy : yb, hy]
-      }(bb), Py = [By]), {
-        value: Zy,
-        type: cb,
-        stackFrames: Py
+    function Tb(zz) {
+      const [uz, bz, Ez, nz, iz] = zz;
+      let lz, Mz, tz = [];
+      const Hz = oz(uz),
+        Oz = nb(bz, "?", Ez, nz);
+      return iz || !Hz ? ([lz, Mz, tz] = Ab(null !== iz && void 0 !== iz ? iz : uz), 0 === tz.length && (tz = [Oz])) : Hz && ([lz, Mz] = function(zz) {
+        var uz, bz;
+        const Ez = zz.match(vb),
+          nz = null !== (uz = null === Ez || void 0 === Ez ? void 0 : Ez[1]) && void 0 !== uz ? uz : xb;
+        return [null !== (bz = null === Ez || void 0 === Ez ? void 0 : Ez[2]) && void 0 !== bz ? bz : zz, nz]
+      }(uz), tz = [Oz]), {
+        value: lz,
+        type: Mz,
+        stackFrames: tz
       }
     }
 
-    function MW(yb, bb) {
-      return ab(yb[0]) ? iU(yb) : {
-        value: bb(yb)
+    function Lb(zz, uz) {
+      return hz(zz[0]) ? Tb(zz) : {
+        value: uz(zz)
       }
     }
-    const YW = yb => yb.map((yb => {
+    const Pb = zz => zz.map((zz => {
       try {
-        return String(yb)
-      } catch (bb) {
+        return String(zz)
+      } catch (uz) {
         return ""
       }
     })).join(" ");
-    var XW = class yb extends bU {
+    var Gb = class zz extends ub {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = WW, this.errorSerializer = YW
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = bb, this.errorSerializer = Pb
       }
       initialize() {
-        var bb, Wy;
-        const Uy = this.config.consoleInstrumentation,
-          hy = (null === Uy || void 0 === Uy ? void 0 : Uy.serializeErrors) || !!(null === Uy || void 0 === Uy ? void 0 : Uy.errorSerializer);
-        this.errorSerializer = hy ? null !== (bb = null === Uy || void 0 === Uy ? void 0 : Uy.errorSerializer) && void 0 !== bb ? bb : RW : YW;
-        const fy = null !== (Wy = null === Uy || void 0 === Uy ? void 0 : Uy.disabledLevels) && void 0 !== Wy ? Wy : yb.defaultDisabledLevels,
-          Zy = function(yb) {
-            if (JW || (JW = new mU), !gU) {
-              const bb = null !== yb && void 0 !== yb ? yb : db;
-              VW.forEach((yb => {
-                console[yb] = function() {
-                  for (var Wy, Uy = arguments.length, hy = new Array(Uy), fy = 0; fy < Uy; fy++) hy[fy] = arguments[fy];
-                  JW.notify({
+        var uz, bz;
+        const Ez = this.config.consoleInstrumentation,
+          nz = (null === Ez || void 0 === Ez ? void 0 : Ez.serializeErrors) || !!(null === Ez || void 0 === Ez ? void 0 : Ez.errorSerializer);
+        this.errorSerializer = nz ? null !== (uz = null === Ez || void 0 === Ez ? void 0 : Ez.errorSerializer) && void 0 !== uz ? uz : Jb : Pb;
+        const iz = null !== (bz = null === Ez || void 0 === Ez ? void 0 : Ez.disabledLevels) && void 0 !== bz ? bz : zz.defaultDisabledLevels,
+          lz = function(zz) {
+            if (ob || (ob = new Xb), !Nb) {
+              const uz = null !== zz && void 0 !== zz ? zz : ku;
+              rb.forEach((zz => {
+                console[zz] = function() {
+                  for (var bz, Ez = arguments.length, nz = new Array(Ez), iz = 0; iz < Ez; iz++) nz[iz] = arguments[iz];
+                  ob.notify({
                     type: "console",
-                    level: yb,
-                    args: hy
-                  }), null === (Wy = bb[yb]) || void 0 === Wy || Wy.apply(console, hy)
+                    level: zz,
+                    args: nz
+                  }), null === (bz = uz[zz]) || void 0 === bz || bz.apply(console, nz)
                 }
-              })), gU = !0
+              })), Nb = !0
             }
-            return JW
+            return ob
           }(this.unpatchedConsole);
-        this.subscription = Zy.subscribe((bb => {
+        this.subscription = lz.subscribe((uz => {
           let {
-            level: Wy,
-            args: hy
-          } = bb;
-          if (!fy.includes(Wy)) try {
-            if (Wy !== CW.ERROR || (null === Uy || void 0 === Uy ? void 0 : Uy.consoleErrorAsLog))
-              if (Wy === CW.ERROR && (null === Uy || void 0 === Uy ? void 0 : Uy.consoleErrorAsLog)) {
+            level: bz,
+            args: nz
+          } = uz;
+          if (!iz.includes(bz)) try {
+            if (bz !== fb.ERROR || (null === Ez || void 0 === Ez ? void 0 : Ez.consoleErrorAsLog))
+              if (bz === fb.ERROR && (null === Ez || void 0 === Ez ? void 0 : Ez.consoleErrorAsLog)) {
                 const {
-                  value: bb,
-                  type: Uy,
-                  stackFrames: fy
-                } = MW(hy, this.errorSerializer);
-                this.api.pushLog(bb ? [yb.consoleErrorPrefix + bb] : hy, {
-                  level: Wy,
+                  value: uz,
+                  type: Ez,
+                  stackFrames: iz
+                } = Lb(nz, this.errorSerializer);
+                this.api.pushLog(uz ? [zz.consoleErrorPrefix + uz] : nz, {
+                  level: bz,
                   context: {
-                    value: null !== bb && void 0 !== bb ? bb : "",
-                    type: null !== Uy && void 0 !== Uy ? Uy : "",
-                    stackFrames: (null === fy || void 0 === fy ? void 0 : fy.length) ? RW(fy) : ""
+                    value: null !== uz && void 0 !== uz ? uz : "",
+                    type: null !== Ez && void 0 !== Ez ? Ez : "",
+                    stackFrames: (null === iz || void 0 === iz ? void 0 : iz.length) ? Jb(iz) : ""
                   }
                 })
-              } else this.api.pushLog(hy, {
-                level: Wy
+              } else this.api.pushLog(nz, {
+                level: bz
               });
             else {
               const {
-                value: bb,
-                type: Wy,
-                stackFrames: Uy
-              } = MW(hy, this.errorSerializer);
-              if (bb && !Wy && !Uy) return void this.api.pushError(new Error(yb.consoleErrorPrefix + bb));
-              this.api.pushError(new Error(yb.consoleErrorPrefix + bb), {
-                type: Wy,
-                stackFrames: Uy
+                value: uz,
+                type: bz,
+                stackFrames: Ez
+              } = Lb(nz, this.errorSerializer);
+              if (uz && !bz && !Ez) return void this.api.pushError(new Error(zz.consoleErrorPrefix + uz));
+              this.api.pushError(new Error(zz.consoleErrorPrefix + uz), {
+                type: bz,
+                stackFrames: Ez
               })
             }
-          } catch (Zy) {
-            this.logError(Zy)
+          } catch (lz) {
+            this.logError(lz)
           }
         }))
       }
       destroy() {
-        var yb;
-        null === (yb = this.subscription) || void 0 === yb || yb.unsubscribe(), this.subscription = void 0
+        var zz;
+        null === (zz = this.subscription) || void 0 === zz || zz.unsubscribe(), this.subscription = void 0
       }
     };
-    XW.defaultDisabledLevels = [CW.DEBUG, CW.TRACE, CW.LOG], XW.consoleErrorPrefix = "console.error: ";
-    const nW = [];
-    var uW = class extends bU {
+    Gb.defaultDisabledLevels = [fb.DEBUG, fb.TRACE, fb.LOG], Gb.consoleErrorPrefix = "console.error: ";
+    const ab = [];
+    var Vb = class extends ub {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = WW
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = bb
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(yb) {
-            const bb = window.onerror;
+          function(zz) {
+            const uz = window.onerror;
             window.onerror = function() {
-              for (var Wy = arguments.length, Uy = new Array(Wy), hy = 0; hy < Wy; hy++) Uy[hy] = arguments[hy];
+              for (var bz = arguments.length, Ez = new Array(bz), nz = 0; nz < bz; nz++) Ez[nz] = arguments[nz];
               try {
                 const {
-                  value: bb,
-                  type: Wy,
-                  stackFrames: hy
-                } = iU(Uy), fy = Uy[4];
-                if (bb) {
-                  const Uy = {
-                    type: Wy,
-                    stackFrames: hy
+                  value: uz,
+                  type: bz,
+                  stackFrames: nz
+                } = Tb(Ez), iz = Ez[4];
+                if (uz) {
+                  const Ez = {
+                    type: bz,
+                    stackFrames: nz
                   };
-                  null != fy && (Uy.originalError = fy), yb.pushError(new Error(bb), Uy)
+                  null != iz && (Ez.originalError = iz), zz.pushError(new Error(uz), Ez)
                 }
               } finally {
-                null === bb || void 0 === bb || bb.apply(window, Uy)
+                null === uz || void 0 === uz || uz.apply(window, Ez)
               }
             }
           }(this.api),
-          function(yb) {
-            const bb = bb => {
-              var Wy;
-              let Uy, hy, fy = bb;
-              if (fy.reason) fy = bb.reason;
-              else if (null === (Wy = bb.detail) || void 0 === Wy ? void 0 : Wy.reason) {
-                var Zy;
-                fy = null === (Zy = bb.detail) || void 0 === Zy ? void 0 : Zy.reason
+          function(zz) {
+            const uz = uz => {
+              var bz;
+              let Ez, nz, iz = uz;
+              if (iz.reason) iz = uz.reason;
+              else if (null === (bz = uz.detail) || void 0 === bz ? void 0 : bz.reason) {
+                var lz;
+                iz = null === (lz = uz.detail) || void 0 === lz ? void 0 : lz.reason
               }
-              let cb = [];
-              ny(fy) ? (Uy = `Non-Error promise rejection captured with value: ${String(fy)}`, hy = "UnhandledRejection") : [Uy, hy, cb] = vU(fy), Uy && yb.pushError(new Error(Uy), {
-                type: hy,
-                stackFrames: cb
+              let Mz = [];
+              az(iz) ? (Ez = `Non-Error promise rejection captured with value: ${String(iz)}`, nz = "UnhandledRejection") : [Ez, nz, Mz] = Ab(iz), Ez && zz.pushError(new Error(Ez), {
+                type: nz,
+                stackFrames: Mz
               })
             };
-            window.addEventListener("unhandledrejection", bb), nW.push(bb)
+            window.addEventListener("unhandledrejection", uz), ab.push(uz)
           }(this.api)
       }
     };
-    const rU = "unknown";
-    var HW = class extends bU {
+    const mb = "unknown";
+    var qb = class extends ub {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = WW, this.waitingForActivation = !1, this.sendViewChangedEvent = yb => {
-          var bb;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = bb, this.waitingForActivation = !1, this.sendViewChangedEvent = zz => {
+          var uz;
           if (this.waitingForActivation || document.prerendering) return;
-          const Wy = yb.view;
-          if (Wy && Wy.name !== (null === (bb = this.notifiedView) || void 0 === bb ? void 0 : bb.name)) {
-            var Uy, hy, fy;
-            const yb = null !== (Uy = null === (hy = this.notifiedView) || void 0 === hy ? void 0 : hy.name) && void 0 !== Uy ? Uy : rU;
-            this.notifiedView = Wy, this.api.pushEvent(Vb, {
-              fromView: yb,
-              toView: null !== (fy = Wy.name) && void 0 !== fy ? fy : rU
+          const bz = zz.view;
+          if (bz && bz.name !== (null === (uz = this.notifiedView) || void 0 === uz ? void 0 : uz.name)) {
+            var Ez, nz, iz;
+            const zz = null !== (Ez = null === (nz = this.notifiedView) || void 0 === nz ? void 0 : nz.name) && void 0 !== Ez ? Ez : mb;
+            this.notifiedView = bz, this.api.pushEvent(ru, {
+              fromView: zz,
+              toView: null !== (iz = bz.name) && void 0 !== iz ? iz : mb
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class aU {
+    class hb {
       t;
       o = 0;
       i = [];
-      l(yb) {
-        if (yb.hadRecentInput) return;
-        const bb = this.i[0],
-          Wy = this.i.at(-1);
-        this.o && bb && Wy && yb.startTime - Wy.startTime < 1e3 && yb.startTime - bb.startTime < 5e3 ? (this.o += yb.value, this.i.push(yb)) : (this.o = yb.value, this.i = [yb]), this.t?.(yb)
+      l(zz) {
+        if (zz.hadRecentInput) return;
+        const uz = this.i[0],
+          bz = this.i.at(-1);
+        this.o && uz && bz && zz.startTime - bz.startTime < 1e3 && zz.startTime - uz.startTime < 5e3 ? (this.o += zz.value, this.i.push(zz)) : (this.o = zz.value, this.i = [zz]), this.t?.(zz)
       }
     }
-    const FW = () => {
-        const yb = performance.getEntriesByType("navigation")[0];
-        if (yb && yb.responseStart > 0 && yb.responseStart < performance.now()) return yb
+    const Ub = () => {
+        const zz = performance.getEntriesByType("navigation")[0];
+        if (zz && zz.responseStart > 0 && zz.responseStart < performance.now()) return zz
       },
-      pW = yb => {
+      cb = zz => {
         if ("loading" === document.readyState) return "loading";
-        const bb = FW();
-        if (bb) {
-          if (yb < bb.domInteractive) return "loading";
-          if (0 === bb.domContentLoadedEventStart || yb < bb.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === bb.domComplete || yb < bb.domComplete) return "dom-content-loaded"
+        const uz = Ub();
+        if (uz) {
+          if (zz < uz.domInteractive) return "loading";
+          if (0 === uz.domContentLoadedEventStart || zz < uz.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === uz.domComplete || zz < uz.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      LW = yb => {
-        const bb = yb.nodeName;
-        return 1 === yb.nodeType ? bb.toLowerCase() : bb.toUpperCase().replace(/^#/, "")
+      gb = zz => {
+        const uz = zz.nodeName;
+        return 1 === zz.nodeType ? uz.toLowerCase() : uz.toUpperCase().replace(/^#/, "")
       },
-      QW = yb => {
-        let bb = "";
+      Sb = zz => {
+        let uz = "";
         try {
-          for (; 9 !== yb?.nodeType;) {
-            const Wy = yb,
-              Uy = Wy.id ? "#" + Wy.id : [LW(Wy), ...Array.from(Wy.classList ?? []).sort()].join(".");
-            if (bb.length + Uy.length > 99) return bb || Uy;
-            if (bb = bb ? Uy + ">" + bb : Uy, Wy.id) break;
-            yb = Wy.parentNode
+          for (; 9 !== zz?.nodeType;) {
+            const bz = zz,
+              Ez = bz.id ? "#" + bz.id : [gb(bz), ...Array.from(bz.classList ?? []).sort()].join(".");
+            if (uz.length + Ez.length > 99) return uz || Ez;
+            if (uz = uz ? Ez + ">" + uz : Ez, bz.id) break;
+            zz = bz.parentNode
           }
         } catch {}
-        return bb
+        return uz
       },
-      jU = new WeakMap;
+      yb = new WeakMap;
 
-    function DW(yb, bb) {
-      let Wy = jU.get(bb);
-      return Wy || (Wy = new WeakMap, jU.set(bb, Wy)), Wy.get(yb) || Wy.set(yb, new bb), Wy.get(yb)
+    function Db(zz, uz) {
+      let bz = yb.get(uz);
+      return bz || (bz = new WeakMap, yb.set(uz, bz)), bz.get(zz) || bz.set(zz, new uz), bz.get(zz)
     }
-    let tU = -1;
-    const wW = () => tU,
-      kU = yb => {
-        addEventListener("pageshow", (bb => {
-          bb.persisted && (tU = bb.timeStamp, yb(bb))
+    let Qb = -1;
+    const Wb = () => Qb,
+      eb = zz => {
+        addEventListener("pageshow", (uz => {
+          uz.persisted && (Qb = uz.timeStamp, zz(uz))
         }), !0)
       },
-      NW = (yb, bb, Wy, Uy) => {
-        let hy, fy;
-        return Zy => {
-          bb.value >= 0 && (Zy || Uy) && (fy = bb.value - (hy ?? 0), (fy || void 0 === hy) && (hy = bb.value, bb.delta = fy, bb.rating = ((yb, bb) => yb > bb[1] ? "poor" : yb > bb[0] ? "needs-improvement" : "good")(bb.value, Wy), yb(bb)))
+      jb = (zz, uz, bz, Ez) => {
+        let nz, iz;
+        return lz => {
+          uz.value >= 0 && (lz || Ez) && (iz = uz.value - (nz ?? 0), (iz || void 0 === nz) && (nz = uz.value, uz.delta = iz, uz.rating = ((zz, uz) => zz > uz[1] ? "poor" : zz > uz[0] ? "needs-improvement" : "good")(uz.value, bz), zz(uz)))
         }
       },
-      zU = yb => {
-        requestAnimationFrame((() => requestAnimationFrame((() => yb()))))
+      Ib = zz => {
+        requestAnimationFrame((() => requestAnimationFrame((() => zz()))))
       },
-      IW = () => FW()?.activationStart ?? 0;
-    let xU = -1;
-    const AW = new Set,
-      dW = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      yh = yb => {
+      Bb = () => Ub()?.activationStart ?? 0;
+    let Cb = -1;
+    const Yb = new Set,
+      kb = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      zE = zz => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === yb.type)
-            for (const yb of AW) yb();
-          isFinite(xU) || (xU = "visibilitychange" === yb.type ? yb.timeStamp : 0, removeEventListener("prerenderingchange", yh, !0))
+          if ("visibilitychange" === zz.type)
+            for (const zz of Yb) zz();
+          isFinite(Cb) || (Cb = "visibilitychange" === zz.type ? zz.timeStamp : 0, removeEventListener("prerenderingchange", zE, !0))
         }
       },
-      bh = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (xU = 1 / 0), xU < 0) {
-          const yb = IW(),
-            bb = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((bb => "hidden" === bb.name && bb.startTime >= yb))?.startTime;
-          xU = bb ?? dW(), addEventListener("visibilitychange", yh, !0), addEventListener("prerenderingchange", yh, !0), kU((() => {
+      uE = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Cb = 1 / 0), Cb < 0) {
+          const zz = Bb(),
+            uz = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((uz => "hidden" === uz.name && uz.startTime >= zz))?.startTime;
+          Cb = uz ?? kb(), addEventListener("visibilitychange", zE, !0), addEventListener("prerenderingchange", zE, !0), eb((() => {
             setTimeout((() => {
-              xU = dW()
+              Cb = kb()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return xU
+            return Cb
           },
-          onHidden(yb) {
-            AW.add(yb)
+          onHidden(zz) {
+            Yb.add(zz)
           }
         }
       },
-      WU = function(yb) {
-        let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Wy = arguments.length > 2 ? arguments[2] : void 0,
-          Uy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          hy = arguments.length > 4 ? arguments[4] : void 0,
-          fy = arguments.length > 5 ? arguments[5] : void 0,
-          Zy = arguments.length > 6 ? arguments[6] : void 0;
-        const cb = FW(),
-          Py = cb?.navigationId || 0;
-        let oy = "navigate";
-        return Wy ? oy = Wy : wW() >= 0 ? oy = "back-forward-cache" : cb && (document.prerendering || IW() > 0 ? oy = "prerender" : document.wasDiscarded ? oy = "restore" : cb.type && (oy = cb.type.replace(/_/g, "-"))), {
-          name: yb,
-          value: bb,
+      bE = function(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          bz = arguments.length > 2 ? arguments[2] : void 0,
+          Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          nz = arguments.length > 4 ? arguments[4] : void 0,
+          iz = arguments.length > 5 ? arguments[5] : void 0,
+          lz = arguments.length > 6 ? arguments[6] : void 0;
+        const Mz = Ub(),
+          tz = Mz?.navigationId || 0;
+        let Hz = "navigate";
+        return bz ? Hz = bz : Wb() >= 0 ? Hz = "back-forward-cache" : Mz && (document.prerendering || Bb() > 0 ? Hz = "prerender" : document.wasDiscarded ? Hz = "restore" : Mz.type && (Hz = Mz.type.replace(/_/g, "-"))), {
+          name: zz,
+          value: uz,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: oy,
-          navigationId: Uy || Py,
-          navigationInteractionId: hy,
-          navigationURL: fy || cb?.name,
-          navigationStartTime: Zy || 0
+          navigationType: Hz,
+          navigationId: Ez || tz,
+          navigationInteractionId: nz,
+          navigationURL: iz || Mz?.name,
+          navigationStartTime: lz || 0
         }
       },
-      UU = function(yb, bb) {
-        let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      EE = function(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const Uy = yb.filter((yb => PerformanceObserver.supportedEntryTypes.includes(yb)));
-          if (Uy.length > 0) {
-            const yb = new PerformanceObserver((yb => {
+          const Ez = zz.filter((zz => PerformanceObserver.supportedEntryTypes.includes(zz)));
+          if (Ez.length > 0) {
+            const zz = new PerformanceObserver((zz => {
               queueMicrotask((() => {
-                const Wy = yb.getEntries();
-                Uy.length > 1 && Wy.sort(((yb, bb) => yb.startTime + yb.duration - (bb.startTime + bb.duration))), bb(Wy)
+                const bz = zz.getEntries();
+                Ez.length > 1 && bz.sort(((zz, uz) => zz.startTime + zz.duration - (uz.startTime + uz.duration))), uz(bz)
               }))
             }));
-            for (const bb of Uy) yb.observe({
-              type: bb,
+            for (const uz of Ez) zz.observe({
+              type: uz,
               buffered: !0,
-              ...Wy
+              ...bz
             });
-            return yb
+            return zz
           }
         } catch {}
       },
-      hU = yb => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && yb && yb.reportSoftNavs,
-      fU = (yb, bb) => {
-        if (yb.set(bb.navigationId, bb), yb.size > 2) {
-          const bb = yb.keys().next().value;
-          void 0 !== bb && yb.delete(bb)
+      nE = zz => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && zz && zz.reportSoftNavs,
+      iE = (zz, uz) => {
+        if (zz.set(uz.navigationId, uz), zz.size > 2) {
+          const uz = zz.keys().next().value;
+          void 0 !== uz && zz.delete(uz)
         }
       },
-      ZU = yb => {
-        let bb = !1;
+      lE = zz => {
+        let uz = !1;
         return () => {
-          bb || (yb(), bb = !0)
+          uz || (zz(), uz = !0)
         }
       };
-    class ch {
+    class ME {
       u
     }
-    const PU = yb => {
-        document.prerendering ? addEventListener("prerenderingchange", yb, !0) : yb()
+    const tE = zz => {
+        document.prerendering ? addEventListener("prerenderingchange", zz, !0) : zz()
       },
-      oU = [1800, 3e3],
-      BU = function(yb) {
-        let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Wy = hU(bb);
-        PU((() => {
-          const Uy = DW(bb, ch),
-            hy = bh();
-          let fy, Zy = WU("FCP");
-          const cb = UU(["paint"], (yb => {
-            for (const bb of yb) "first-contentful-paint" === bb.name && (cb.disconnect(), bb.startTime < hy.firstHiddenTime && (Zy.value = Math.max(bb.startTime - IW(), 0), Zy.entries.push(bb), Zy.navigationId = bb.navigationId || Zy.navigationId, fy(!0)))
+      HE = [1800, 3e3],
+      OE = function(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const bz = nE(uz);
+        tE((() => {
+          const Ez = Db(uz, ME),
+            nz = uE();
+          let iz, lz = bE("FCP");
+          const Mz = EE(["paint"], (zz => {
+            for (const uz of zz) "first-contentful-paint" === uz.name && (Mz.disconnect(), uz.startTime < nz.firstHiddenTime && (lz.value = Math.max(uz.startTime - Bb(), 0), lz.entries.push(uz), lz.navigationId = uz.navigationId || lz.navigationId, iz(!0)))
           }));
-          cb && (fy = NW(yb, Zy, oU, bb.reportAllChanges), kU((Wy => {
-            Zy = WU("FCP", -1, "back-forward-cache", Zy.navigationId, Zy.navigationInteractionId, Zy.navigationURL, wW()), fy = NW(yb, Zy, oU, bb.reportAllChanges), zU((() => {
-              Zy.value = performance.now() - Wy.timeStamp, fy(!0)
+          Mz && (iz = jb(zz, lz, HE, uz.reportAllChanges), eb((bz => {
+            lz = bE("FCP", -1, "back-forward-cache", lz.navigationId, lz.navigationInteractionId, lz.navigationURL, Wb()), iz = jb(zz, lz, HE, uz.reportAllChanges), Ib((() => {
+              lz.value = performance.now() - bz.timeStamp, iz(!0)
             }))
-          }))), Wy && UU(["soft-navigation"], (Wy => {
-            Wy.forEach((Wy => {
-              Uy.u && Wy.navigationId && fU(Uy.u, Wy);
-              const hy = Math.max((Wy.presentationTime || Wy.paintTime || 0) - Wy.startTime, 0);
-              Zy = WU("FCP", hy, "soft-navigation", Wy.navigationId, Wy.interactionId, Wy.name, Wy.startTime), fy = NW(yb, Zy, oU, bb.reportAllChanges), fy(!0)
+          }))), bz && EE(["soft-navigation"], (bz => {
+            bz.forEach((bz => {
+              Ez.u && bz.navigationId && iE(Ez.u, bz);
+              const nz = Math.max((bz.presentationTime || bz.paintTime || 0) - bz.startTime, 0);
+              lz = bE("FCP", nz, "soft-navigation", bz.navigationId, bz.interactionId, bz.name, bz.startTime), iz = jb(zz, lz, HE, uz.reportAllChanges), iz(!0)
             }))
-          }), bb)
+          }), uz)
         }))
       },
-      KU = [.1, .25],
-      eU = yb => yb.find((yb => 1 === yb.node?.nodeType)) || yb[0];
-    let qh = 0,
-      sU = 1 / 0,
-      SU = 0;
-    const EU = yb => {
-      for (const bb of yb) bb.interactionId && (sU = Math.min(sU, bb.interactionId), SU = Math.max(SU, bb.interactionId), qh = SU ? (SU - sU) / 7 + 1 : 0)
+      pE = [.1, .25],
+      dE = zz => zz.find((zz => 1 === zz.node?.nodeType)) || zz[0];
+    let FE = 0,
+      ZE = 1 / 0,
+      RE = 0;
+    const KE = zz => {
+      for (const uz of zz) uz.interactionId && (ZE = Math.min(ZE, uz.interactionId), RE = Math.max(RE, uz.interactionId), FE = RE ? (RE - ZE) / 7 + 1 : 0)
     };
-    let lU;
-    const mh = () => lU ? qh : performance.interactionCount ?? 0;
-    class CU {
+    let wE;
+    const XE = () => wE ? FE : performance.interactionCount ?? 0;
+    class fE {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return mh() - this.h
+        return XE() - this.h
       }
       D() {
-        this.h = mh(), this.v.length = 0, this.p.clear()
+        this.h = XE(), this.v.length = 0, this.p.clear()
       }
-      S(yb) {
-        const bb = this.T(),
-          Wy = Math.min(this.v.length - 1, Math.floor(bb / 50));
-        return !bb || -1 !== Wy || "soft-navigation" !== yb && "back-forward-cache" !== yb ? this.v[Wy] : {
+      S(zz) {
+        const uz = this.T(),
+          bz = Math.min(this.v.length - 1, Math.floor(uz / 50));
+        return !uz || -1 !== bz || "soft-navigation" !== zz && "back-forward-cache" !== zz ? this.v[bz] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(yb) {
-        if (this.m?.(yb), !yb.interactionId) return;
-        const bb = this.v.at(-1);
-        let Wy = this.p.get(yb.interactionId);
-        if (Wy || this.v.length < 10 || yb.duration > bb.k) {
-          if (Wy ? yb.duration > Wy.k ? (Wy.entries = [yb], Wy.k = yb.duration) : yb.duration === Wy.k && yb.startTime === Wy.entries[0].startTime && Wy.entries.push(yb) : (Wy = {
-              id: yb.interactionId,
-              entries: [yb],
-              k: yb.duration
-            }, this.p.set(Wy.id, Wy), this.v.push(Wy)), this.v.sort(((yb, bb) => bb.k - yb.k)), this.v.length > 10) {
-            const yb = this.v.splice(10);
-            for (const bb of yb) this.p.delete(bb.id)
+      l(zz) {
+        if (this.m?.(zz), !zz.interactionId) return;
+        const uz = this.v.at(-1);
+        let bz = this.p.get(zz.interactionId);
+        if (bz || this.v.length < 10 || zz.duration > uz.k) {
+          if (bz ? zz.duration > bz.k ? (bz.entries = [zz], bz.k = zz.duration) : zz.duration === bz.k && zz.startTime === bz.entries[0].startTime && bz.entries.push(zz) : (bz = {
+              id: zz.interactionId,
+              entries: [zz],
+              k: zz.duration
+            }, this.p.set(bz.id, bz), this.v.push(bz)), this.v.sort(((zz, uz) => uz.k - zz.k)), this.v.length > 10) {
+            const zz = this.v.splice(10);
+            for (const uz of zz) this.p.delete(uz.id)
           }
-          this.M?.(Wy)
+          this.M?.(bz)
         }
       }
     }
-    const TU = yb => {
-        const bb = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          Wy = globalThis.requestIdleCallback || setTimeout,
-          Uy = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) yb();
+    const sE = zz => {
+        const uz = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          bz = globalThis.requestIdleCallback || setTimeout,
+          Ez = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) zz();
         else {
-          const hy = ZU(yb);
-          let fy = -1;
-          const Zy = () => {
-            Uy(fy), hy()
+          const nz = lE(zz);
+          let iz = -1;
+          const lz = () => {
+            Ez(iz), nz()
           };
-          addEventListener("visibilitychange", Zy, {
+          addEventListener("visibilitychange", lz, {
             once: !0,
             capture: !0
-          }), fy = Wy((() => {
-            removeEventListener("visibilitychange", Zy, {
+          }), iz = bz((() => {
+            removeEventListener("visibilitychange", lz, {
               capture: !0
-            }), hy()
+            }), nz()
           }), {
-            timeout: bb
+            timeout: uz
           })
         }
       },
-      VU = [200, 500],
-      JU = function(yb) {
-        let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Wy = DW(bb = Object.assign({}, bb), CU);
-        let Uy = [],
-          hy = [],
-          fy = 0;
-        const Zy = new WeakMap,
-          cb = new WeakMap;
-        let Py = !1;
-        const oy = () => {
-            Py || (Py = !0, TU(By))
+      rE = [200, 500],
+      oE = function(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const bz = Db(uz = Object.assign({}, uz), fE);
+        let Ez = [],
+          nz = [],
+          iz = 0;
+        const lz = new WeakMap,
+          Mz = new WeakMap;
+        let tz = !1;
+        const Hz = () => {
+            tz || (tz = !0, sE(Oz))
           },
-          By = () => {
-            const yb = new Set(Wy.v.map((yb => Zy.get(yb.entries[0])))),
-              bb = hy.length - 10;
-            hy = hy.filter(((Wy, Uy) => Uy >= bb || yb.has(Wy)));
-            const cb = new Set;
-            for (const Wy of hy) {
-              const yb = Ky(Wy.startTime, Wy.processingEnd);
-              for (const bb of yb) cb.add(bb)
+          Oz = () => {
+            const zz = new Set(bz.v.map((zz => lz.get(zz.entries[0])))),
+              uz = nz.length - 10;
+            nz = nz.filter(((bz, Ez) => Ez >= uz || zz.has(bz)));
+            const Mz = new Set;
+            for (const bz of nz) {
+              const zz = pz(bz.startTime, bz.processingEnd);
+              for (const uz of zz) Mz.add(uz)
             }
-            const oy = Uy.length - 10;
-            Uy = Uy.filter(((yb, bb) => cb.has(yb) || bb >= oy && yb.startTime > fy)), Py = !1
+            const Hz = Ez.length - 10;
+            Ez = Ez.filter(((zz, uz) => Mz.has(zz) || uz >= Hz && zz.startTime > iz)), tz = !1
           };
-        Wy.m = yb => {
-          const Wy = yb.startTime + yb.duration;
-          let Uy;
-          fy = Math.max(fy, yb.processingEnd);
-          for (let fy = hy.length - 1; fy >= 0; fy--) {
-            const Zy = hy[fy];
-            if (Math.abs(Wy - Zy.renderTime) <= 8) {
-              Uy = Zy, Uy.startTime = Math.min(yb.startTime, Uy.startTime), Uy.processingStart = Math.min(yb.processingStart, Uy.processingStart), Uy.processingEnd = Math.max(yb.processingEnd, Uy.processingEnd), bb.includeProcessedEventEntries && Uy.entries.push(yb);
+        bz.m = zz => {
+          const bz = zz.startTime + zz.duration;
+          let Ez;
+          iz = Math.max(iz, zz.processingEnd);
+          for (let iz = nz.length - 1; iz >= 0; iz--) {
+            const lz = nz[iz];
+            if (Math.abs(bz - lz.renderTime) <= 8) {
+              Ez = lz, Ez.startTime = Math.min(zz.startTime, Ez.startTime), Ez.processingStart = Math.min(zz.processingStart, Ez.processingStart), Ez.processingEnd = Math.max(zz.processingEnd, Ez.processingEnd), uz.includeProcessedEventEntries && Ez.entries.push(zz);
               break
             }
           }
-          Uy || (Uy = {
-            startTime: yb.startTime,
-            processingStart: yb.processingStart,
-            processingEnd: yb.processingEnd,
-            renderTime: Wy,
-            entries: bb.includeProcessedEventEntries ? [yb] : []
-          }, hy.push(Uy)), yb.interactionId && Zy.set(yb, Uy), oy()
-        }, Wy.M = yb => {
-          if (!cb.get(yb)) {
-            const Wy = yb.entries.find((yb => yb.target))?.target;
-            if (Wy) {
-              const Uy = bb.generateTarget?.(Wy) ?? QW(Wy);
-              cb.set(yb, Uy)
+          Ez || (Ez = {
+            startTime: zz.startTime,
+            processingStart: zz.processingStart,
+            processingEnd: zz.processingEnd,
+            renderTime: bz,
+            entries: uz.includeProcessedEventEntries ? [zz] : []
+          }, nz.push(Ez)), zz.interactionId && lz.set(zz, Ez), Hz()
+        }, bz.M = zz => {
+          if (!Mz.get(zz)) {
+            const bz = zz.entries.find((zz => zz.target))?.target;
+            if (bz) {
+              const Ez = uz.generateTarget?.(bz) ?? Sb(bz);
+              Mz.set(zz, Ez)
             } else {
-              const bb = yb.entries.find((yb => yb.targetSelector))?.targetSelector;
-              bb && cb.set(yb, bb)
+              const uz = zz.entries.find((zz => zz.targetSelector))?.targetSelector;
+              uz && Mz.set(zz, uz)
             }
           }
         };
-        const Ky = (yb, bb) => {
-          const Wy = [];
-          for (const hy of Uy)
-            if (!(hy.startTime + hy.duration < yb)) {
-              if (hy.startTime > bb) break;
-              Wy.push(hy)
-            } return Wy
+        const pz = (zz, uz) => {
+          const bz = [];
+          for (const nz of Ez)
+            if (!(nz.startTime + nz.duration < zz)) {
+              if (nz.startTime > uz) break;
+              bz.push(nz)
+            } return bz
         };
-        UU(["long-animation-frame"], (yb => {
-            Uy = Uy.concat(yb), oy()
-          }), bb),
-          function(yb) {
-            let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        EE(["long-animation-frame"], (zz => {
+            Ez = Ez.concat(zz), Hz()
+          }), uz),
+          function(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const Wy = bh();
-            PU((() => {
-              "interactionCount" in performance || lU || (lU = UU(["event"], EU, {
+            const bz = uE();
+            tE((() => {
+              "interactionCount" in performance || wE || (wE = EE(["event"], KE, {
                 durationThreshold: 0
               }));
-              let Uy, hy = WU("INP");
-              const fy = DW(bb, CU),
-                Zy = (Wy, Zy, cb, Py, oy) => {
-                  fy.D(), hy = WU("INP", -1, Wy, Zy, cb, Py, oy), Uy = NW(yb, hy, VU, bb.reportAllChanges)
+              let Ez, nz = bE("INP");
+              const iz = Db(uz, fE),
+                lz = (bz, lz, Mz, tz, Hz) => {
+                  iz.D(), nz = bE("INP", -1, bz, lz, Mz, tz, Hz), Ez = jb(zz, nz, rE, uz.reportAllChanges)
                 },
-                cb = () => {
-                  const yb = fy.S(hy.navigationType);
-                  yb && yb.k !== hy.value && (hy.value = yb.k, hy.entries = yb.entries, Uy())
+                Mz = () => {
+                  const zz = iz.S(nz.navigationType);
+                  zz && zz.k !== nz.value && (nz.value = zz.k, nz.entries = zz.entries, Ez())
                 },
-                Py = yb => {
-                  cb(), Uy(!0), Zy("soft-navigation", yb.navigationId, yb.interactionId, yb.name, yb.startTime)
+                tz = zz => {
+                  Mz(), Ez(!0), lz("soft-navigation", zz.navigationId, zz.interactionId, zz.name, zz.startTime)
                 },
-                oy = function(yb) {
-                  let bb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  TU((() => {
-                    for (const bb of yb) "soft-navigation" !== bb.entryType ? fy.l(bb) : Py(bb);
-                    cb(), bb && Uy(!0)
+                Hz = function(zz) {
+                  let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  sE((() => {
+                    for (const uz of zz) "soft-navigation" !== uz.entryType ? iz.l(uz) : tz(uz);
+                    Mz(), uz && Ez(!0)
                   }))
                 },
-                By = ["event", "first-input"];
-              hU(bb) && By.push("soft-navigation");
-              const Ky = UU(By, oy, {
-                ...bb,
-                durationThreshold: bb.durationThreshold ?? 40
+                Oz = ["event", "first-input"];
+              nE(uz) && Oz.push("soft-navigation");
+              const pz = EE(Oz, Hz, {
+                ...uz,
+                durationThreshold: uz.durationThreshold ?? 40
               });
-              Uy = NW(yb, hy, VU, bb.reportAllChanges), Ky && (Wy.onHidden((() => {
-                oy(Ky.takeRecords(), !0)
-              })), kU((() => {
-                Zy("back-forward-cache", hy.navigationId, hy.navigationInteractionId, hy.navigationURL, wW())
+              Ez = jb(zz, nz, rE, uz.reportAllChanges), pz && (bz.onHidden((() => {
+                Hz(pz.takeRecords(), !0)
+              })), eb((() => {
+                lz("back-forward-cache", nz.navigationId, nz.navigationInteractionId, nz.navigationURL, Wb())
               })))
             }))
-          }((bb => {
-            yb((yb => {
-              if (0 === yb.entries.length) {
-                const bb = yb.navigationStartTime || 0,
-                  Wy = {
+          }((uz => {
+            zz((zz => {
+              if (0 === zz.entries.length) {
+                const uz = zz.navigationStartTime || 0,
+                  bz = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: yb.value,
-                    loadState: pW(bb)
+                    presentationDelay: zz.value,
+                    loadState: cb(uz)
                   };
-                return Object.assign(yb, {
-                  attribution: Wy
+                return Object.assign(zz, {
+                  attribution: bz
                 })
               }
-              const bb = yb.entries[0],
-                Uy = Zy.get(bb),
-                hy = Math.max(Uy.processingStart, bb.startTime),
-                fy = Math.max(bb.startTime + bb.duration, hy),
-                Py = Math.min(Uy.processingEnd, fy),
-                oy = Uy.entries.sort(((yb, bb) => yb.processingStart - bb.processingStart)),
-                By = Ky(bb.startTime, Py),
-                ey = Wy.p.get(bb.interactionId),
-                qb = {
-                  interactionTarget: cb.get(ey),
-                  interactionType: bb.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: bb.startTime,
-                  nextPaintTime: fy,
-                  processedEventEntries: oy,
-                  longAnimationFrameEntries: By,
-                  inputDelay: hy - bb.startTime,
-                  processingDuration: Py - hy,
-                  presentationDelay: fy - Py,
-                  loadState: pW(bb.startTime),
+              const uz = zz.entries[0],
+                Ez = lz.get(uz),
+                nz = Math.max(Ez.processingStart, uz.startTime),
+                iz = Math.max(uz.startTime + uz.duration, nz),
+                tz = Math.min(Ez.processingEnd, iz),
+                Hz = Ez.entries.sort(((zz, uz) => zz.processingStart - uz.processingStart)),
+                Oz = pz(uz.startTime, tz),
+                dz = bz.p.get(uz.interactionId),
+                Fz = {
+                  interactionTarget: Mz.get(dz),
+                  interactionType: uz.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: uz.startTime,
+                  nextPaintTime: iz,
+                  processedEventEntries: Hz,
+                  longAnimationFrameEntries: Oz,
+                  inputDelay: nz - uz.startTime,
+                  processingDuration: tz - nz,
+                  presentationDelay: iz - tz,
+                  loadState: cb(uz.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (yb => {
-                const bb = yb.interactionTime,
-                  Wy = yb.nextPaintTime;
-                if (!yb.longAnimationFrameEntries?.length || !bb || !Wy) return;
-                const Uy = yb.inputDelay,
-                  hy = yb.processingDuration;
-                let fy, Zy, cb = 0,
-                  Py = 0,
-                  oy = 0,
-                  By = 0;
-                for (const qb of yb.longAnimationFrameEntries) {
-                  Py = Py + qb.startTime + qb.duration - qb.styleAndLayoutStart;
-                  for (const yb of qb.scripts) {
-                    const Wy = yb.startTime + yb.duration;
-                    if (Wy < bb) continue;
-                    const oy = Wy - Math.max(bb, yb.startTime),
-                      Ky = yb.duration ? oy / yb.duration * yb.forcedStyleAndLayoutDuration : 0;
-                    cb += oy - Ky, Py += Ky, oy > By && (Zy = yb.startTime < bb + Uy ? "input-delay" : yb.startTime >= bb + Uy + hy ? "presentation-delay" : "processing-duration", fy = yb, By = oy)
+              return (zz => {
+                const uz = zz.interactionTime,
+                  bz = zz.nextPaintTime;
+                if (!zz.longAnimationFrameEntries?.length || !uz || !bz) return;
+                const Ez = zz.inputDelay,
+                  nz = zz.processingDuration;
+                let iz, lz, Mz = 0,
+                  tz = 0,
+                  Hz = 0,
+                  Oz = 0;
+                for (const Fz of zz.longAnimationFrameEntries) {
+                  tz = tz + Fz.startTime + Fz.duration - Fz.styleAndLayoutStart;
+                  for (const zz of Fz.scripts) {
+                    const bz = zz.startTime + zz.duration;
+                    if (bz < uz) continue;
+                    const Hz = bz - Math.max(uz, zz.startTime),
+                      pz = zz.duration ? Hz / zz.duration * zz.forcedStyleAndLayoutDuration : 0;
+                    Mz += Hz - pz, tz += pz, Hz > Oz && (lz = zz.startTime < uz + Ez ? "input-delay" : zz.startTime >= uz + Ez + nz ? "presentation-delay" : "processing-duration", iz = zz, Oz = Hz)
                   }
                 }
-                const Ky = yb.longAnimationFrameEntries.at(-1),
-                  ey = Ky ? Ky.startTime + Ky.duration : 0;
-                ey >= bb + Uy + hy && (oy = Wy - ey), fy && Zy && (yb.longestScript = {
-                  entry: fy,
-                  subpart: Zy,
-                  intersectingDuration: By
-                }), yb.totalScriptDuration = cb, yb.totalStyleAndLayoutDuration = Py, yb.totalPaintDuration = oy, yb.totalUnattributedDuration = Wy - bb - cb - Py - oy
-              })(qb), Object.assign(yb, {
-                attribution: qb
+                const pz = zz.longAnimationFrameEntries.at(-1),
+                  dz = pz ? pz.startTime + pz.duration : 0;
+                dz >= uz + Ez + nz && (Hz = bz - dz), iz && lz && (zz.longestScript = {
+                  entry: iz,
+                  subpart: lz,
+                  intersectingDuration: Oz
+                }), zz.totalScriptDuration = Mz, zz.totalStyleAndLayoutDuration = tz, zz.totalPaintDuration = Hz, zz.totalUnattributedDuration = bz - uz - Mz - tz - Hz
+              })(Fz), Object.assign(zz, {
+                attribution: Fz
               })
-            })(bb))
-          }), bb)
+            })(uz))
+          }), uz)
       };
-    class gh {
+    class NE {
       m;
       u;
-      l(yb) {
-        this.m?.(yb)
+      l(zz) {
+        this.m?.(zz)
       }
     }
-    const GU = [2500, 4e3];
-    let OU = 50;
-    const RU = [];
-    UU(["resource"], (yb => {
-      for (const bb of yb) RU.push(bb), RU.length > OU && RU.shift()
+    const vE = [2500, 4e3];
+    let xE = 50;
+    const JE = [];
+    EE(["resource"], (zz => {
+      for (const uz of zz) JE.push(uz), JE.length > xE && JE.shift()
     }));
-    const vh = [800, 1800],
-      ih = yb => {
-        document.prerendering ? PU((() => ih(yb))) : "complete" !== document.readyState ? addEventListener("load", (() => ih(yb)), !0) : setTimeout(yb)
+    const AE = [800, 1800],
+      TE = zz => {
+        document.prerendering ? tE((() => TE(zz))) : "complete" !== document.readyState ? addEventListener("load", (() => TE(zz)), !0) : setTimeout(zz)
       },
-      MU = "load_state",
-      YU = "time_to_first_byte";
-    var XU = class {
-        constructor(yb, bb) {
-          this.corePushMeasurement = yb, this.webVitalConfig = bb
+      LE = "load_state",
+      PE = "time_to_first_byte";
+    var GE = class {
+        constructor(zz, uz) {
+          this.corePushMeasurement = zz, this.webVitalConfig = uz
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var yb;
-          ! function(yb) {
-            let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const Wy = DW(bb = Object.assign({}, bb), aU),
-              Uy = new WeakMap;
-            Wy.t = yb => {
-                if (yb?.sources?.length) {
-                  const Wy = eU(yb.sources),
-                    hy = Wy?.node;
-                  if (hy) {
-                    const yb = bb.generateTarget?.(hy) ?? QW(hy);
-                    Uy.set(Wy, yb)
+          var zz;
+          ! function(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const bz = Db(uz = Object.assign({}, uz), hb),
+              Ez = new WeakMap;
+            bz.t = zz => {
+                if (zz?.sources?.length) {
+                  const bz = dE(zz.sources),
+                    nz = bz?.node;
+                  if (nz) {
+                    const zz = uz.generateTarget?.(nz) ?? Sb(nz);
+                    Ez.set(bz, zz)
                   }
                 }
               },
-              function(yb) {
-                let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const Wy = bh();
-                BU(ZU((() => {
-                  let Uy, hy = WU("CLS", 0);
-                  const fy = DW(bb, aU),
-                    Zy = (Wy, Zy, cb, Py, oy) => {
-                      hy = WU("CLS", 0, Wy, Zy, cb, Py, oy), fy.o = 0, Uy = NW(yb, hy, KU, bb.reportAllChanges)
+              function(zz) {
+                let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const bz = uE();
+                OE(lE((() => {
+                  let Ez, nz = bE("CLS", 0);
+                  const iz = Db(uz, hb),
+                    lz = (bz, lz, Mz, tz, Hz) => {
+                      nz = bE("CLS", 0, bz, lz, Mz, tz, Hz), iz.o = 0, Ez = jb(zz, nz, pE, uz.reportAllChanges)
                     },
-                    cb = function() {
-                      let yb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      fy.o > hy.value && (hy.value = fy.o, hy.entries = fy.i), Uy(yb)
+                    Mz = function() {
+                      let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      iz.o > nz.value && (nz.value = iz.o, nz.entries = iz.i), Ez(zz)
                     },
-                    Py = yb => {
-                      cb(!0), Zy("soft-navigation", yb.navigationId, yb.interactionId, yb.name, yb.startTime)
+                    tz = zz => {
+                      Mz(!0), lz("soft-navigation", zz.navigationId, zz.interactionId, zz.name, zz.startTime)
                     },
-                    oy = yb => {
-                      for (const bb of yb) "soft-navigation" !== bb.entryType ? fy.l(bb) : Py(bb);
-                      cb()
+                    Hz = zz => {
+                      for (const uz of zz) "soft-navigation" !== uz.entryType ? iz.l(uz) : tz(uz);
+                      Mz()
                     },
-                    By = ["layout-shift"];
-                  hU(bb) && By.push("soft-navigation");
-                  const Ky = UU(By, oy);
-                  Ky && (Uy = NW(yb, hy, KU, bb.reportAllChanges), Wy.onHidden((() => {
-                    oy(Ky.takeRecords()), Uy(!0)
-                  })), kU((() => {
-                    Zy("back-forward-cache", hy.navigationId, hy.navigationInteractionId, hy.navigationURL, wW()), zU(Uy)
-                  })), setTimeout(Uy))
+                    Oz = ["layout-shift"];
+                  nE(uz) && Oz.push("soft-navigation");
+                  const pz = EE(Oz, Hz);
+                  pz && (Ez = jb(zz, nz, pE, uz.reportAllChanges), bz.onHidden((() => {
+                    Hz(pz.takeRecords()), Ez(!0)
+                  })), eb((() => {
+                    lz("back-forward-cache", nz.navigationId, nz.navigationInteractionId, nz.navigationURL, Wb()), Ib(Ez)
+                  })), setTimeout(Ez))
                 })))
-              }((bb => {
-                yb((yb => {
-                  let bb = {};
-                  if (yb.entries.length) {
-                    const Wy = yb.entries.reduce(((yb, bb) => yb.value > bb.value ? yb : bb));
-                    if (Wy?.sources?.length) {
-                      const yb = eU(Wy.sources);
-                      yb && (bb = {
-                        largestShiftTarget: Uy.get(yb),
-                        largestShiftTime: Wy.startTime,
-                        largestShiftValue: Wy.value,
-                        largestShiftSource: yb,
-                        largestShiftEntry: Wy,
-                        loadState: pW(Wy.startTime)
+              }((uz => {
+                zz((zz => {
+                  let uz = {};
+                  if (zz.entries.length) {
+                    const bz = zz.entries.reduce(((zz, uz) => zz.value > uz.value ? zz : uz));
+                    if (bz?.sources?.length) {
+                      const zz = dE(bz.sources);
+                      zz && (uz = {
+                        largestShiftTarget: Ez.get(zz),
+                        largestShiftTime: bz.startTime,
+                        largestShiftValue: bz.value,
+                        largestShiftSource: zz,
+                        largestShiftEntry: bz,
+                        loadState: cb(bz.startTime)
                       })
                     }
                   }
-                  return Object.assign(yb, {
-                    attribution: bb
+                  return Object.assign(zz, {
+                    attribution: uz
                   })
-                })(bb))
-              }), bb)
-          }((yb => {
+                })(uz))
+              }), uz)
+          }((zz => {
             const {
-              loadState: bb,
-              largestShiftValue: Wy,
-              largestShiftTime: Uy,
-              largestShiftTarget: hy
-            } = yb.attribution, fy = this.buildInitialValues(yb);
-            this.addIfPresent(fy, "largest_shift_value", Wy), this.addIfPresent(fy, "largest_shift_time", Uy);
-            const Zy = this.buildInitialContext(yb);
-            this.addIfPresent(Zy, MU, bb), this.addIfPresent(Zy, "largest_shift_target", hy), this.pushMeasurement(fy, Zy)
+              loadState: uz,
+              largestShiftValue: bz,
+              largestShiftTime: Ez,
+              largestShiftTarget: nz
+            } = zz.attribution, iz = this.buildInitialValues(zz);
+            this.addIfPresent(iz, "largest_shift_value", bz), this.addIfPresent(iz, "largest_shift_time", Ez);
+            const lz = this.buildInitialContext(zz);
+            this.addIfPresent(lz, LE, uz), this.addIfPresent(lz, "largest_shift_target", nz), this.pushMeasurement(iz, lz)
           }), {
-            reportAllChanges: null === (yb = this.webVitalConfig) || void 0 === yb ? void 0 : yb.reportAllChanges
+            reportAllChanges: null === (zz = this.webVitalConfig) || void 0 === zz ? void 0 : zz.reportAllChanges
           })
         }
         measureFCP() {
-          var yb;
-          ! function(yb) {
-            let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const Wy = DW(bb = Object.assign({}, bb), ch);
-            hU(bb) && (Wy.u = new Map), BU((bb => {
-              yb((yb => {
-                let bb = {
+          var zz;
+          ! function(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const bz = Db(uz = Object.assign({}, uz), ME);
+            nE(uz) && (bz.u = new Map), OE((uz => {
+              zz((zz => {
+                let uz = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: yb.value,
-                  loadState: pW(wW())
+                  firstByteToFCP: zz.value,
+                  loadState: cb(Wb())
                 };
-                if ("soft-navigation" !== yb.navigationType) {
-                  if (yb.entries.length) {
-                    const Wy = FW(),
-                      Uy = yb.entries.at(-1);
-                    if (Wy) {
-                      const hy = Wy.responseStart,
-                        fy = Wy.activationStart || 0,
-                        Zy = Math.max(0, hy - fy);
-                      bb = {
-                        timeToFirstByte: Zy,
-                        firstByteToFCP: yb.value - Zy,
-                        loadState: pW(yb.entries[0].startTime),
-                        navigationEntry: Wy,
-                        fcpEntry: Uy
+                if ("soft-navigation" !== zz.navigationType) {
+                  if (zz.entries.length) {
+                    const bz = Ub(),
+                      Ez = zz.entries.at(-1);
+                    if (bz) {
+                      const nz = bz.responseStart,
+                        iz = bz.activationStart || 0,
+                        lz = Math.max(0, nz - iz);
+                      uz = {
+                        timeToFirstByte: lz,
+                        firstByteToFCP: zz.value - lz,
+                        loadState: cb(zz.entries[0].startTime),
+                        navigationEntry: bz,
+                        fcpEntry: Ez
                       }
                     }
                   }
                 } else {
-                  const Uy = Wy.u?.get(yb.navigationId);
-                  Uy && (bb = {
+                  const Ez = bz.u?.get(zz.navigationId);
+                  Ez && (uz = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: yb.value,
+                    firstByteToFCP: zz.value,
                     loadState: "complete",
-                    navigationEntry: Uy
+                    navigationEntry: Ez
                   })
                 }
-                return Object.assign(yb, {
-                  attribution: bb
+                return Object.assign(zz, {
+                  attribution: uz
                 })
-              })(bb))
-            }), bb)
-          }((yb => {
+              })(uz))
+            }), uz)
+          }((zz => {
             const {
-              firstByteToFCP: bb,
-              timeToFirstByte: Wy,
-              loadState: Uy
-            } = yb.attribution, hy = this.buildInitialValues(yb);
-            this.addIfPresent(hy, "first_byte_to_fcp", bb), this.addIfPresent(hy, YU, Wy);
-            const fy = this.buildInitialContext(yb);
-            this.addIfPresent(fy, MU, Uy), this.pushMeasurement(hy, fy)
+              firstByteToFCP: uz,
+              timeToFirstByte: bz,
+              loadState: Ez
+            } = zz.attribution, nz = this.buildInitialValues(zz);
+            this.addIfPresent(nz, "first_byte_to_fcp", uz), this.addIfPresent(nz, PE, bz);
+            const iz = this.buildInitialContext(zz);
+            this.addIfPresent(iz, LE, Ez), this.pushMeasurement(nz, iz)
           }), {
-            reportAllChanges: null === (yb = this.webVitalConfig) || void 0 === yb ? void 0 : yb.reportAllChanges
+            reportAllChanges: null === (zz = this.webVitalConfig) || void 0 === zz ? void 0 : zz.reportAllChanges
           })
         }
         measureINP() {
-          var yb;
-          JU((yb => {
-            var bb;
+          var zz;
+          oE((zz => {
+            var uz;
             const {
-              interactionTime: Wy,
-              presentationDelay: Uy,
-              inputDelay: hy,
-              processingDuration: fy,
-              nextPaintTime: Zy,
-              loadState: cb,
-              interactionTarget: Py,
-              interactionType: oy,
-              totalScriptDuration: By,
-              totalStyleAndLayoutDuration: Ky,
-              totalPaintDuration: ey,
-              totalUnattributedDuration: qb,
-              longestScript: sy
-            } = yb.attribution, Sy = this.buildInitialValues(yb);
-            this.addIfPresent(Sy, "interaction_time", Wy), this.addIfPresent(Sy, "presentation_delay", Uy), this.addIfPresent(Sy, "input_delay", hy), this.addIfPresent(Sy, "processing_duration", fy), this.addIfPresent(Sy, "next_paint_time", Zy), this.addNumberIfDefined(Sy, "total_script_duration", By), this.addNumberIfDefined(Sy, "total_style_and_layout_duration", Ky), this.addNumberIfDefined(Sy, "total_paint_duration", ey), this.addNumberIfDefined(Sy, "total_unattributed_duration", qb), this.addNumberIfDefined(Sy, "longest_script_intersecting_duration", null === sy || void 0 === sy ? void 0 : sy.intersectingDuration);
-            const Ey = this.buildInitialContext(yb);
-            this.addIfPresent(Ey, MU, cb), this.addIfPresent(Ey, "interaction_target", Py), this.addIfPresent(Ey, "interaction_type", oy), this.addIfPresent(Ey, "longest_script_subpart", null === sy || void 0 === sy ? void 0 : sy.subpart), this.addIfPresent(Ey, "longest_script_invoker_type", null === sy || void 0 === sy ? void 0 : sy.entry.invokerType), (null === (bb = this.webVitalConfig) || void 0 === bb ? void 0 : bb.trackAttributionSources) && (this.addIfPresent(Ey, "longest_script_invoker", null === sy || void 0 === sy ? void 0 : sy.entry.invoker), this.addIfPresent(Ey, "longest_script_source_url", null === sy || void 0 === sy ? void 0 : sy.entry.sourceURL), this.addIfPresent(Ey, "longest_script_source_function_name", null === sy || void 0 === sy ? void 0 : sy.entry.sourceFunctionName), this.addIfPresent(Ey, "longest_script_source_char_position", void 0 !== (null === sy || void 0 === sy ? void 0 : sy.entry.sourceCharPosition) ? String(sy.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Sy, Ey)
+              interactionTime: bz,
+              presentationDelay: Ez,
+              inputDelay: nz,
+              processingDuration: iz,
+              nextPaintTime: lz,
+              loadState: Mz,
+              interactionTarget: tz,
+              interactionType: Hz,
+              totalScriptDuration: Oz,
+              totalStyleAndLayoutDuration: pz,
+              totalPaintDuration: dz,
+              totalUnattributedDuration: Fz,
+              longestScript: Zz
+            } = zz.attribution, Rz = this.buildInitialValues(zz);
+            this.addIfPresent(Rz, "interaction_time", bz), this.addIfPresent(Rz, "presentation_delay", Ez), this.addIfPresent(Rz, "input_delay", nz), this.addIfPresent(Rz, "processing_duration", iz), this.addIfPresent(Rz, "next_paint_time", lz), this.addNumberIfDefined(Rz, "total_script_duration", Oz), this.addNumberIfDefined(Rz, "total_style_and_layout_duration", pz), this.addNumberIfDefined(Rz, "total_paint_duration", dz), this.addNumberIfDefined(Rz, "total_unattributed_duration", Fz), this.addNumberIfDefined(Rz, "longest_script_intersecting_duration", null === Zz || void 0 === Zz ? void 0 : Zz.intersectingDuration);
+            const Kz = this.buildInitialContext(zz);
+            this.addIfPresent(Kz, LE, Mz), this.addIfPresent(Kz, "interaction_target", tz), this.addIfPresent(Kz, "interaction_type", Hz), this.addIfPresent(Kz, "longest_script_subpart", null === Zz || void 0 === Zz ? void 0 : Zz.subpart), this.addIfPresent(Kz, "longest_script_invoker_type", null === Zz || void 0 === Zz ? void 0 : Zz.entry.invokerType), (null === (uz = this.webVitalConfig) || void 0 === uz ? void 0 : uz.trackAttributionSources) && (this.addIfPresent(Kz, "longest_script_invoker", null === Zz || void 0 === Zz ? void 0 : Zz.entry.invoker), this.addIfPresent(Kz, "longest_script_source_url", null === Zz || void 0 === Zz ? void 0 : Zz.entry.sourceURL), this.addIfPresent(Kz, "longest_script_source_function_name", null === Zz || void 0 === Zz ? void 0 : Zz.entry.sourceFunctionName), this.addIfPresent(Kz, "longest_script_source_char_position", void 0 !== (null === Zz || void 0 === Zz ? void 0 : Zz.entry.sourceCharPosition) ? String(Zz.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Rz, Kz)
           }), {
-            reportAllChanges: null === (yb = this.webVitalConfig) || void 0 === yb ? void 0 : yb.reportAllChanges
+            reportAllChanges: null === (zz = this.webVitalConfig) || void 0 === zz ? void 0 : zz.reportAllChanges
           })
         }
         measureLCP() {
-          var yb;
-          ! function(yb) {
-            let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (bb = Object.assign({}, bb)).resourceBufferSize && (OU = bb.resourceBufferSize);
-            const Wy = DW(bb, gh),
-              Uy = new WeakMap;
-            hU(bb) && (Wy.u = new Map), Wy.m = yb => {
-                const Wy = yb.element;
-                if (Wy) {
-                  const hy = bb.generateTarget?.(Wy) ?? QW(Wy);
-                  Uy.set(yb, hy)
-                } else yb.id && Uy.set(yb, `#${yb.id}`)
+          var zz;
+          ! function(zz) {
+            let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (uz = Object.assign({}, uz)).resourceBufferSize && (xE = uz.resourceBufferSize);
+            const bz = Db(uz, NE),
+              Ez = new WeakMap;
+            nE(uz) && (bz.u = new Map), bz.m = zz => {
+                const bz = zz.element;
+                if (bz) {
+                  const nz = uz.generateTarget?.(bz) ?? Sb(bz);
+                  Ez.set(zz, nz)
+                } else zz.id && Ez.set(zz, `#${zz.id}`)
               },
-              function(yb) {
-                let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  Wy = !1;
-                const Uy = hU(bb);
-                PU((() => {
-                  let hy, fy = bh(),
-                    Zy = WU("LCP");
-                  const cb = DW(bb, gh),
-                    Py = (Uy, cb, Py, oy, By) => {
-                      Zy = WU("LCP", -1, Uy, cb, Py, oy, By), hy = NW(yb, Zy, GU, bb.reportAllChanges), Wy = !1, "soft-navigation" === Uy && (fy = bh(!0))
+              function(zz) {
+                let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  bz = !1;
+                const Ez = nE(uz);
+                tE((() => {
+                  let nz, iz = uE(),
+                    lz = bE("LCP");
+                  const Mz = Db(uz, NE),
+                    tz = (Ez, Mz, tz, Hz, Oz) => {
+                      lz = bE("LCP", -1, Ez, Mz, tz, Hz, Oz), nz = jb(zz, lz, vE, uz.reportAllChanges), bz = !1, "soft-navigation" === Ez && (iz = uE(!0))
                     },
-                    oy = yb => {
-                      cb.u && yb.navigationId && fU(cb.u, yb), Wy || hy(!0), Py("soft-navigation", yb.navigationId, yb.interactionId, yb.name, yb.startTime);
-                      const bb = yb.getLargestInteractionContentfulPaint?.();
-                      bb && By([bb])
+                    Hz = zz => {
+                      Mz.u && zz.navigationId && iE(Mz.u, zz), bz || nz(!0), tz("soft-navigation", zz.navigationId, zz.interactionId, zz.name, zz.startTime);
+                      const uz = zz.getLargestInteractionContentfulPaint?.();
+                      uz && Oz([uz])
                     },
-                    By = yb => {
-                      bb.reportAllChanges || Uy || (yb = yb.slice(-1));
-                      for (const bb of yb) {
-                        if (!bb) continue;
-                        if ("soft-navigation" === bb.entryType) {
-                          oy(bb);
+                    Oz = zz => {
+                      uz.reportAllChanges || Ez || (zz = zz.slice(-1));
+                      for (const uz of zz) {
+                        if (!uz) continue;
+                        if ("soft-navigation" === uz.entryType) {
+                          Hz(uz);
                           continue
                         }
-                        let yb = 0,
-                          Wy = [],
-                          Uy = bb.startTime;
-                        if ("largest-contentful-paint" === bb.entryType) yb = Math.max(bb.startTime - IW(), 0), cb.l(bb), Wy = [bb];
-                        else if ("interaction-contentful-paint" === bb.entryType) {
-                          const hy = bb;
-                          if (!Zy.navigationId) continue;
-                          if ("interactionId" in hy && hy.interactionId != Zy.navigationInteractionId) continue;
-                          Uy = hy.largestContentfulPaint?.renderTime || 0, yb = Math.max(Uy - bb.startTime, 0), hy.largestContentfulPaint && (cb.l(hy.largestContentfulPaint), Wy = [hy.largestContentfulPaint])
+                        let zz = 0,
+                          bz = [],
+                          Ez = uz.startTime;
+                        if ("largest-contentful-paint" === uz.entryType) zz = Math.max(uz.startTime - Bb(), 0), Mz.l(uz), bz = [uz];
+                        else if ("interaction-contentful-paint" === uz.entryType) {
+                          const nz = uz;
+                          if (!lz.navigationId) continue;
+                          if ("interactionId" in nz && nz.interactionId != lz.navigationInteractionId) continue;
+                          Ez = nz.largestContentfulPaint?.renderTime || 0, zz = Math.max(Ez - uz.startTime, 0), nz.largestContentfulPaint && (Mz.l(nz.largestContentfulPaint), bz = [nz.largestContentfulPaint])
                         }
-                        Uy < fy.firstHiddenTime && (Zy.value = yb, Zy.entries = Wy, hy())
+                        Ez < iz.firstHiddenTime && (lz.value = zz, lz.entries = bz, nz())
                       }
                     },
-                    Ky = ["largest-contentful-paint"];
-                  Uy && Ky.push("interaction-contentful-paint", "soft-navigation");
-                  const ey = UU(Ky, By);
-                  if (ey) {
-                    hy = NW(yb, Zy, GU, bb.reportAllChanges);
-                    const fy = ["keydown", "click", "visibilitychange"],
-                      cb = yb => {
-                        if (yb.isTrusted && !Wy) {
-                          const yb = Zy.id;
-                          TU((() => {
-                            if (!Wy) {
-                              if (!Uy) {
-                                ey.disconnect();
-                                for (const yb of fy) removeEventListener(yb, cb, {
+                    pz = ["largest-contentful-paint"];
+                  Ez && pz.push("interaction-contentful-paint", "soft-navigation");
+                  const dz = EE(pz, Oz);
+                  if (dz) {
+                    nz = jb(zz, lz, vE, uz.reportAllChanges);
+                    const iz = ["keydown", "click", "visibilitychange"],
+                      Mz = zz => {
+                        if (zz.isTrusted && !bz) {
+                          const zz = lz.id;
+                          sE((() => {
+                            if (!bz) {
+                              if (!Ez) {
+                                dz.disconnect();
+                                for (const zz of iz) removeEventListener(zz, Mz, {
                                   capture: !0
                                 })
                               }
-                              yb === Zy.id && (Wy = !0, hy(!0))
+                              zz === lz.id && (bz = !0, nz(!0))
                             }
                           }))
                         }
                       };
-                    for (const yb of fy) addEventListener(yb, cb, {
+                    for (const zz of iz) addEventListener(zz, Mz, {
                       capture: !0
                     });
-                    kU((Uy => {
-                      Py("back-forward-cache", Zy.navigationId, Zy.navigationInteractionId, Zy.navigationURL, wW()), hy = NW(yb, Zy, GU, bb.reportAllChanges), zU((() => {
-                        Zy.value = performance.now() - Uy.timeStamp, Wy = !0, hy(!0)
+                    eb((Ez => {
+                      tz("back-forward-cache", lz.navigationId, lz.navigationInteractionId, lz.navigationURL, Wb()), nz = jb(zz, lz, vE, uz.reportAllChanges), Ib((() => {
+                        lz.value = performance.now() - Ez.timeStamp, bz = !0, nz(!0)
                       }))
                     }))
                   }
                 }))
-              }((bb => {
-                yb((yb => {
-                  let bb = {
+              }((uz => {
+                zz((zz => {
+                  let uz = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: yb.value
+                    elementRenderDelay: zz.value
                   };
-                  if (yb.entries.length) {
-                    const hy = yb.entries.at(-1),
-                      fy = yb => yb.name === hy.url && (yb.requestStart || yb.startTime) <= hy.startTime,
-                      Zy = hy.url && (RU.findLast(fy) || performance.getEntriesByType("resource").findLast(fy));
-                    let cb;
-                    bb.target = Uy.get(hy), bb.lcpEntry = hy, hy.url && (bb.url = hy.url), Zy && (bb.lcpResourceEntry = Zy);
-                    let Py = 0,
-                      oy = 0;
-                    if ("soft-navigation" !== yb.navigationType ? (cb = FW(), Py = cb?.activationStart ?? 0, oy = cb?.responseStart ?? 0) : (Py = yb.navigationStartTime || 0, cb = Wy.u?.get(yb.navigationId)), cb) {
-                      const Wy = Math.max(0, oy - Py),
-                        Uy = Math.max(Wy, Zy ? (Zy.requestStart || Zy.startTime) - Py : 0),
-                        hy = Math.min(yb.value, Math.max(Uy, Zy ? Zy.responseEnd - Py : 0));
-                      bb = {
-                        ...bb,
-                        timeToFirstByte: Wy,
-                        resourceLoadDelay: Uy - Wy,
-                        resourceLoadDuration: hy - Uy,
-                        elementRenderDelay: yb.value - hy,
-                        navigationEntry: cb
+                  if (zz.entries.length) {
+                    const nz = zz.entries.at(-1),
+                      iz = zz => zz.name === nz.url && (zz.requestStart || zz.startTime) <= nz.startTime,
+                      lz = nz.url && (JE.findLast(iz) || performance.getEntriesByType("resource").findLast(iz));
+                    let Mz;
+                    uz.target = Ez.get(nz), uz.lcpEntry = nz, nz.url && (uz.url = nz.url), lz && (uz.lcpResourceEntry = lz);
+                    let tz = 0,
+                      Hz = 0;
+                    if ("soft-navigation" !== zz.navigationType ? (Mz = Ub(), tz = Mz?.activationStart ?? 0, Hz = Mz?.responseStart ?? 0) : (tz = zz.navigationStartTime || 0, Mz = bz.u?.get(zz.navigationId)), Mz) {
+                      const bz = Math.max(0, Hz - tz),
+                        Ez = Math.max(bz, lz ? (lz.requestStart || lz.startTime) - tz : 0),
+                        nz = Math.min(zz.value, Math.max(Ez, lz ? lz.responseEnd - tz : 0));
+                      uz = {
+                        ...uz,
+                        timeToFirstByte: bz,
+                        resourceLoadDelay: Ez - bz,
+                        resourceLoadDuration: nz - Ez,
+                        elementRenderDelay: zz.value - nz,
+                        navigationEntry: Mz
                       }
                     }
                   }
-                  return Object.assign(yb, {
-                    attribution: bb
+                  return Object.assign(zz, {
+                    attribution: uz
                   })
-                })(bb))
-              }), bb)
-          }((yb => {
-            var bb;
+                })(uz))
+              }), uz)
+          }((zz => {
+            var uz;
             const {
-              elementRenderDelay: Wy,
-              resourceLoadDelay: Uy,
-              resourceLoadDuration: hy,
-              timeToFirstByte: fy,
-              target: Zy,
-              url: cb,
-              lcpResourceEntry: Py
-            } = yb.attribution, oy = this.buildInitialValues(yb);
-            this.addIfPresent(oy, "element_render_delay", Wy), this.addIfPresent(oy, "resource_load_delay", Uy), this.addIfPresent(oy, "resource_load_duration", hy), this.addIfPresent(oy, YU, fy);
-            const By = this.buildInitialContext(yb);
-            this.addIfPresent(By, "element", Zy), (null === (bb = this.webVitalConfig) || void 0 === bb ? void 0 : bb.trackAttributionSources) && (this.addIfPresent(By, "resource_url", cb), this.addIfPresent(By, "resource_delivery_type", null === Py || void 0 === Py ? void 0 : Py.deliveryType), this.addIfPresent(By, "resource_initiator_type", null === Py || void 0 === Py ? void 0 : Py.initiatorType)), this.pushMeasurement(oy, By)
+              elementRenderDelay: bz,
+              resourceLoadDelay: Ez,
+              resourceLoadDuration: nz,
+              timeToFirstByte: iz,
+              target: lz,
+              url: Mz,
+              lcpResourceEntry: tz
+            } = zz.attribution, Hz = this.buildInitialValues(zz);
+            this.addIfPresent(Hz, "element_render_delay", bz), this.addIfPresent(Hz, "resource_load_delay", Ez), this.addIfPresent(Hz, "resource_load_duration", nz), this.addIfPresent(Hz, PE, iz);
+            const Oz = this.buildInitialContext(zz);
+            this.addIfPresent(Oz, "element", lz), (null === (uz = this.webVitalConfig) || void 0 === uz ? void 0 : uz.trackAttributionSources) && (this.addIfPresent(Oz, "resource_url", Mz), this.addIfPresent(Oz, "resource_delivery_type", null === tz || void 0 === tz ? void 0 : tz.deliveryType), this.addIfPresent(Oz, "resource_initiator_type", null === tz || void 0 === tz ? void 0 : tz.initiatorType)), this.pushMeasurement(Hz, Oz)
           }), {
-            reportAllChanges: null === (yb = this.webVitalConfig) || void 0 === yb ? void 0 : yb.reportAllChanges
+            reportAllChanges: null === (zz = this.webVitalConfig) || void 0 === zz ? void 0 : zz.reportAllChanges
           })
         }
         measureTTFB() {
-          var yb;
-          ! function(yb) {
-            ! function(yb) {
-              let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const Wy = hU(bb);
-              let Uy = WU("TTFB"),
-                hy = NW(yb, Uy, vh, bb.reportAllChanges);
-              ih((() => {
-                const fy = FW();
-                if (fy) {
-                  const Zy = fy.responseStart;
-                  Uy.value = Math.max(Zy - IW(), 0), Uy.entries = [fy], hy(!0), kU((() => {
-                    Uy = WU("TTFB", 0, "back-forward-cache", Uy.navigationId, Uy.navigationInteractionId, Uy.navigationURL, wW()), hy = NW(yb, Uy, vh, bb.reportAllChanges), hy(!0)
-                  })), Wy && UU(["soft-navigation"], (Wy => {
-                    Wy.forEach((Wy => {
-                      Wy.navigationId && (Uy = WU("TTFB", 0, "soft-navigation", Wy.navigationId, Wy.interactionId, Wy.name, Wy.startTime), Uy.entries = [Wy], hy = NW(yb, Uy, vh, bb.reportAllChanges), hy(!0))
+          var zz;
+          ! function(zz) {
+            ! function(zz) {
+              let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const bz = nE(uz);
+              let Ez = bE("TTFB"),
+                nz = jb(zz, Ez, AE, uz.reportAllChanges);
+              TE((() => {
+                const iz = Ub();
+                if (iz) {
+                  const lz = iz.responseStart;
+                  Ez.value = Math.max(lz - Bb(), 0), Ez.entries = [iz], nz(!0), eb((() => {
+                    Ez = bE("TTFB", 0, "back-forward-cache", Ez.navigationId, Ez.navigationInteractionId, Ez.navigationURL, Wb()), nz = jb(zz, Ez, AE, uz.reportAllChanges), nz(!0)
+                  })), bz && EE(["soft-navigation"], (bz => {
+                    bz.forEach((bz => {
+                      bz.navigationId && (Ez = bE("TTFB", 0, "soft-navigation", bz.navigationId, bz.interactionId, bz.name, bz.startTime), Ez.entries = [bz], nz = jb(zz, Ez, AE, uz.reportAllChanges), nz(!0))
                     }))
-                  }), bb)
+                  }), uz)
                 }
               }))
-            }((bb => {
-              yb((yb => {
-                const bb = yb.entries[0];
-                let Wy = {
+            }((uz => {
+              zz((zz => {
+                const uz = zz.entries[0];
+                let bz = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: bb
+                  navigationEntry: uz
                 };
-                if (yb.entries.length && bb instanceof PerformanceNavigationTiming) {
-                  const Uy = bb.activationStart || 0,
-                    hy = Math.max((bb.workerStart || bb.fetchStart || 0) - Uy, 0),
-                    fy = Math.max(bb.domainLookupStart - Uy, 0),
-                    Zy = Math.max(bb.connectStart - Uy, 0),
-                    cb = Math.max(bb.connectEnd - Uy, 0);
-                  Wy = {
-                    waitingDuration: hy,
-                    cacheDuration: fy - hy,
-                    dnsDuration: Zy - fy,
-                    connectionDuration: cb - Zy,
-                    requestDuration: yb.value - cb,
-                    navigationEntry: bb
+                if (zz.entries.length && uz instanceof PerformanceNavigationTiming) {
+                  const Ez = uz.activationStart || 0,
+                    nz = Math.max((uz.workerStart || uz.fetchStart || 0) - Ez, 0),
+                    iz = Math.max(uz.domainLookupStart - Ez, 0),
+                    lz = Math.max(uz.connectStart - Ez, 0),
+                    Mz = Math.max(uz.connectEnd - Ez, 0);
+                  bz = {
+                    waitingDuration: nz,
+                    cacheDuration: iz - nz,
+                    dnsDuration: lz - iz,
+                    connectionDuration: Mz - lz,
+                    requestDuration: zz.value - Mz,
+                    navigationEntry: uz
                   }
                 }
-                return Object.assign(yb, {
-                  attribution: Wy
+                return Object.assign(zz, {
+                  attribution: bz
                 })
-              })(bb))
+              })(uz))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((yb => {
+          }((zz => {
             const {
-              dnsDuration: bb,
-              connectionDuration: Wy,
-              requestDuration: Uy,
-              waitingDuration: hy,
-              cacheDuration: fy
-            } = yb.attribution, Zy = this.buildInitialValues(yb);
-            this.addIfPresent(Zy, "dns_duration", bb), this.addIfPresent(Zy, "connection_duration", Wy), this.addIfPresent(Zy, "request_duration", Uy), this.addIfPresent(Zy, "waiting_duration", hy), this.addIfPresent(Zy, "cache_duration", fy);
-            const cb = this.buildInitialContext(yb);
-            this.pushMeasurement(Zy, cb)
+              dnsDuration: uz,
+              connectionDuration: bz,
+              requestDuration: Ez,
+              waitingDuration: nz,
+              cacheDuration: iz
+            } = zz.attribution, lz = this.buildInitialValues(zz);
+            this.addIfPresent(lz, "dns_duration", uz), this.addIfPresent(lz, "connection_duration", bz), this.addIfPresent(lz, "request_duration", Ez), this.addIfPresent(lz, "waiting_duration", nz), this.addIfPresent(lz, "cache_duration", iz);
+            const Mz = this.buildInitialContext(zz);
+            this.pushMeasurement(lz, Mz)
           }), {
-            reportAllChanges: null === (yb = this.webVitalConfig) || void 0 === yb ? void 0 : yb.reportAllChanges
+            reportAllChanges: null === (zz = this.webVitalConfig) || void 0 === zz ? void 0 : zz.reportAllChanges
           })
         }
-        buildInitialValues(yb) {
+        buildInitialValues(zz) {
           return {
-            [yb.name.toLowerCase()]: yb.value,
-            delta: yb.delta
+            [zz.name.toLowerCase()]: zz.value,
+            delta: zz.delta
           }
         }
-        buildInitialContext(yb) {
-          var bb;
-          const Wy = null !== (bb = yW("com.grafana.faro.lastNavigationId", xb)) && void 0 !== bb ? bb : rU;
+        buildInitialContext(zz) {
+          var uz;
+          const bz = null !== (uz = zu("com.grafana.faro.lastNavigationId", Cz)) && void 0 !== uz ? uz : mb;
           return {
-            id: yb.id,
-            rating: yb.rating,
-            navigation_type: yb.navigationType,
-            navigation_entry_id: Wy
+            id: zz.id,
+            rating: zz.rating,
+            navigation_type: zz.navigationType,
+            navigation_entry_id: bz
           }
         }
-        pushMeasurement(yb, bb) {
+        pushMeasurement(zz, uz) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: yb
+            values: zz
           }, {
-            context: bb
+            context: uz
           })
         }
-        addIfPresent(yb, bb, Wy) {
-          Wy && (yb[bb] = Wy)
+        addIfPresent(zz, uz, bz) {
+          bz && (zz[uz] = bz)
         }
-        addNumberIfDefined(yb, bb, Wy) {
-          void 0 !== Wy && (yb[bb] = Wy)
+        addNumberIfDefined(zz, uz, bz) {
+          void 0 !== bz && (zz[uz] = bz)
         }
       },
-      nU = class extends bU {
+      aE = class extends ub {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = WW
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = bb
         }
         initialize() {
-          this.logDebug("Initializing"), new XU(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new GE(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const uU = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const VE = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function rh() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const bb of yb)
-        if ("traceparent" === bb.name) {
-          if (!uU.test(bb.description)) continue;
-          const [, yb, Wy] = bb.description.split("-");
-          if (null != yb && null != Wy) return {
-            traceId: yb,
-            spanId: Wy
+    function mE() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const uz of zz)
+        if ("traceparent" === uz.name) {
+          if (!VE.test(uz.description)) continue;
+          const [, zz, bz] = uz.description.split("-");
+          if (null != zz && null != bz) return {
+            traceId: zz,
+            spanId: bz
           };
           break
         }
     }
 
-    function HU(yb) {
-      let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function qE(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: Wy,
-        monoNow: Uy
-      } = bb;
-      return Math.min(Wy, Wy - (Uy - yb))
+        wallNow: bz,
+        monoNow: Ez
+      } = uz;
+      return Math.min(bz, bz - (Ez - zz))
     }
 
-    function ah(yb) {
-      let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [Wy, Uy] of Object.entries(bb)) {
-        const bb = yb[Wy];
-        return null != bb && (My(Uy) ? Uy.includes(bb) : bb === Uy)
+    function hE(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [bz, Ez] of Object.entries(uz)) {
+        const uz = zz[bz];
+        return null != uz && (Lz(Ez) ? Ez.includes(uz) : uz === Ez)
       }
       return !0
     }
 
-    function FU(yb) {
+    function UE(zz) {
       const {
-        connectEnd: bb,
-        connectStart: Wy,
-        decodedBodySize: Uy,
-        domainLookupEnd: hy,
-        domainLookupStart: fy,
-        duration: Zy,
-        encodedBodySize: cb,
-        fetchStart: Py,
-        initiatorType: oy,
-        name: By,
-        nextHopProtocol: Ky,
-        redirectEnd: ey,
-        redirectStart: qb,
-        renderBlockingStatus: sy,
-        requestStart: Sy,
-        responseEnd: Ey,
-        responseStart: ly,
-        responseStatus: mb,
-        secureConnectionStart: Cy,
-        transferSize: Ty,
-        workerStart: Vy
-      } = yb;
+        connectEnd: uz,
+        connectStart: bz,
+        decodedBodySize: Ez,
+        domainLookupEnd: nz,
+        domainLookupStart: iz,
+        duration: lz,
+        encodedBodySize: Mz,
+        fetchStart: tz,
+        initiatorType: Hz,
+        name: Oz,
+        nextHopProtocol: pz,
+        redirectEnd: dz,
+        redirectStart: Fz,
+        renderBlockingStatus: Zz,
+        requestStart: Rz,
+        responseEnd: Kz,
+        responseStart: wz,
+        responseStatus: Xz,
+        secureConnectionStart: fz,
+        transferSize: sz,
+        workerStart: rz
+      } = zz;
       return {
-        name: By,
-        httpHost: LU(By),
-        duration: QU(Zy),
-        tcpHandshakeTime: QU(bb - Wy),
-        dnsLookupTime: QU(hy - fy),
-        tlsNegotiationTime: QU(bb - Cy),
-        responseStatus: QU(mb),
-        redirectTime: QU(ey - qb),
-        requestTime: QU(ly - Sy),
-        responseTime: QU(Ey - ly),
-        fetchTime: QU(Ey - Py),
-        serviceWorkerTime: QU(Vy > 0 ? Py - Vy : 0),
-        decodedBodySize: QU(Uy),
-        encodedBodySize: QU(cb),
+        name: Oz,
+        httpHost: gE(Oz),
+        duration: SE(lz),
+        tcpHandshakeTime: SE(uz - bz),
+        dnsLookupTime: SE(nz - iz),
+        tlsNegotiationTime: SE(uz - fz),
+        responseStatus: SE(Xz),
+        redirectTime: SE(dz - Fz),
+        requestTime: SE(wz - Rz),
+        responseTime: SE(Kz - wz),
+        fetchTime: SE(Kz - tz),
+        serviceWorkerTime: SE(rz > 0 ? tz - rz : 0),
+        decodedBodySize: SE(Ez),
+        encodedBodySize: SE(Mz),
         cacheHitStatus: function() {
-          let yb = "fullLoad";
-          0 === Ty ? Uy > 0 && (yb = "cache") : null != mb ? 304 === mb && (yb = "conditionalFetch") : cb > 0 && Ty < cb && (yb = "conditionalFetch");
-          return yb
+          let zz = "fullLoad";
+          0 === sz ? Ez > 0 && (zz = "cache") : null != Xz ? 304 === Xz && (zz = "conditionalFetch") : Mz > 0 && sz < Mz && (zz = "conditionalFetch");
+          return zz
         }(),
-        renderBlockingStatus: QU(sy),
-        protocol: Ky,
-        initiatorType: oy,
+        renderBlockingStatus: SE(Zz),
+        protocol: pz,
+        initiatorType: Hz,
         visibilityState: document.visibilityState,
-        ttfb: QU(ly - Sy),
-        transferSize: QU(Ty)
+        ttfb: SE(wz - Rz),
+        transferSize: SE(sz)
       }
     }
 
-    function pU(yb) {
+    function cE(zz) {
       const {
-        activationStart: bb,
-        domComplete: Wy,
-        domContentLoadedEventEnd: Uy,
-        domContentLoadedEventStart: hy,
-        domInteractive: fy,
-        fetchStart: Zy,
-        loadEventEnd: cb,
-        loadEventStart: Py,
-        responseStart: oy,
-        type: By
-      } = yb, Ky = function() {
-        var yb;
-        return null != (null === (yb = performance.timing) || void 0 === yb ? void 0 : yb.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: uz,
+        domComplete: bz,
+        domContentLoadedEventEnd: Ez,
+        domContentLoadedEventStart: nz,
+        domInteractive: iz,
+        fetchStart: lz,
+        loadEventEnd: Mz,
+        loadEventStart: tz,
+        responseStart: Hz,
+        type: Oz
+      } = zz, pz = function() {
+        var zz;
+        return null != (null === (zz = performance.timing) || void 0 === zz ? void 0 : zz.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return Bb(Bb({}, FU(yb)), {}, {
-        pageLoadTime: QU(Wy - Zy),
-        documentParsingTime: QU(Ky ? fy - Ky : null),
-        domProcessingTime: QU(Wy - fy),
-        domContentLoadHandlerTime: QU(Uy - hy),
-        onLoadTime: QU(cb - Py),
-        ttfb: QU(Math.max(oy - (null !== bb && void 0 !== bb ? bb : 0), 0)),
-        type: By
+      return Ou(Ou({}, UE(zz)), {}, {
+        pageLoadTime: SE(bz - lz),
+        documentParsingTime: SE(pz ? iz - pz : null),
+        domProcessingTime: SE(bz - iz),
+        domContentLoadHandlerTime: SE(Ez - nz),
+        onLoadTime: SE(Mz - tz),
+        ttfb: SE(Math.max(Hz - (null !== uz && void 0 !== uz ? uz : 0), 0)),
+        type: Oz
       })
     }
 
-    function LU(yb) {
+    function gE(zz) {
       try {
-        return new URL(yb).host || rU
-      } catch (bb) {
-        return rU
+        return new URL(zz).host || mb
+      } catch (uz) {
+        return mb
       }
     }
 
-    function QU(yb) {
-      return null == yb ? rU : "number" === typeof yb ? Math.round(yb > 0 ? yb : 0).toString() : yb.toString()
+    function SE(zz) {
+      return null == zz ? mb : "number" === typeof zz ? Math.round(zz > 0 ? zz : 0).toString() : zz.toString()
     }
-    const jh = {
+    const yE = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function DU(yb, bb, Wy, Uy, hy, fy, Zy) {
+    function DE(zz, uz, bz, Ez, nz, iz, lz) {
       try {
-        var cb = yb[fy](Zy),
-          Py = cb.value
-      } catch (yb) {
-        return void Wy(yb)
+        var Mz = zz[iz](lz),
+          tz = Mz.value
+      } catch (zz) {
+        return void bz(zz)
       }
-      cb.done ? bb(Py) : Promise.resolve(Py).then(Uy, hy)
+      Mz.done ? uz(tz) : Promise.resolve(tz).then(Ez, nz)
     }
 
-    function th(yb) {
+    function QE(zz) {
       return function() {
-        var bb = this,
-          Wy = arguments;
-        return new Promise((function(Uy, hy) {
-          var fy = yb.apply(bb, Wy);
+        var uz = this,
+          bz = arguments;
+        return new Promise((function(Ez, nz) {
+          var iz = zz.apply(uz, bz);
 
-          function Zy(yb) {
-            DU(fy, Uy, hy, Zy, cb, "next", yb)
+          function lz(zz) {
+            DE(iz, Ez, nz, lz, Mz, "next", zz)
           }
 
-          function cb(yb) {
-            DU(fy, Uy, hy, Zy, cb, "throw", yb)
+          function Mz(zz) {
+            DE(iz, Ez, nz, lz, Mz, "throw", zz)
           }
-          Zy(void 0)
+          lz(void 0)
         }))
       }
     }
-    const wU = new mU;
-    var kh = class extends bU {
+    const WE = new Xb;
+    var eE = class extends ub {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = WW
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = bb
       }
       initialize() {
-        var yb = this;
+        var zz = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let bb = !1;
-        const Wy = () => {
-          ! function(yb) {
-            if ("complete" === document.readyState) yb();
+        let uz = !1;
+        const bz = () => {
+          ! function(zz) {
+            if ("complete" === document.readyState) zz();
             else {
-              const bb = () => {
-                "complete" === document.readyState && (yb(), document.removeEventListener("readystatechange", bb))
+              const uz = () => {
+                "complete" === document.readyState && (zz(), document.removeEventListener("readystatechange", uz))
               };
-              document.addEventListener("readystatechange", bb)
+              document.addEventListener("readystatechange", uz)
             }
-          }(th((function*() {
-            if (bb) return;
-            const Wy = yb.api.pushEvent,
+          }(QE((function*() {
+            if (uz) return;
+            const bz = zz.api.pushEvent,
               {
-                faroNavigationId: Uy
-              } = yield function(yb) {
-                let bb;
-                const Wy = new Promise((yb => {
-                  bb = yb
+                faroNavigationId: Ez
+              } = yield function(zz) {
+                let uz;
+                const bz = new Promise((zz => {
+                  uz = zz
                 }));
-                return new PerformanceObserver((Wy => {
-                  var Uy;
-                  const [hy] = Wy.getEntries();
-                  if (null == hy || zb(hy.name)) return;
-                  const fy = hy.toJSON();
-                  let Zy = rh(null === fy || void 0 === fy ? void 0 : fy.serverTiming);
-                  const cb = null !== (Uy = yW("com.grafana.faro.lastNavigationId", xb)) && void 0 !== Uy ? Uy : rU,
-                    Py = Bb(Bb({}, pU(fy)), {}, {
-                      faroNavigationId: lb(),
-                      faroPreviousNavigationId: cb
+                return new PerformanceObserver((bz => {
+                  var Ez;
+                  const [nz] = bz.getEntries();
+                  if (null == nz || Iz(nz.name)) return;
+                  const iz = nz.toJSON();
+                  let lz = mE(null === iz || void 0 === iz ? void 0 : iz.serverTiming);
+                  const Mz = null !== (Ez = zu("com.grafana.faro.lastNavigationId", Cz)) && void 0 !== Ez ? Ez : mb,
+                    tz = Ou(Ou({}, cE(iz)), {}, {
+                      faroNavigationId: wu(),
+                      faroPreviousNavigationId: Mz
                     });
-                  bW("com.grafana.faro.lastNavigationId", Py.faroNavigationId, xb), yb("faro.performance.navigation", Py, void 0, {
-                    spanContext: Zy,
-                    timestampOverwriteMs: HU(fy.startTime)
-                  }), bb(Py)
+                  uu("com.grafana.faro.lastNavigationId", tz.faroNavigationId, Cz), zz("faro.performance.navigation", tz, void 0, {
+                    spanContext: lz,
+                    timestampOverwriteMs: qE(iz.startTime)
+                  }), uz(tz)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), Wy
-              }(Wy);
-            bb || null == Uy || function(yb, bb, Wy, Uy) {
-              const hy = Uy.trackResources;
-              new PerformanceObserver((Uy => {
-                const fy = Uy.getEntries(),
-                  Zy = {
+                }), bz
+              }(bz);
+            uz || null == Ez || function(zz, uz, bz, Ez) {
+              const nz = Ez.trackResources;
+              new PerformanceObserver((Ez => {
+                const iz = Ez.getEntries(),
+                  lz = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const cb of fy) {
-                  if (zb(cb.name)) continue;
-                  null === Wy || void 0 === Wy || Wy.notify({
+                for (const Mz of iz) {
+                  if (Iz(Mz.name)) continue;
+                  null === bz || void 0 === bz || bz.notify({
                     type: "resource"
                   });
-                  const Uy = cb.toJSON();
-                  let fy = rh(null === Uy || void 0 === Uy ? void 0 : Uy.serverTiming);
-                  (null == hy && ah(Uy, jh) || hy) && bb("faro.performance.resource", Bb(Bb({}, FU(Uy)), {}, {
-                    faroNavigationId: yb,
-                    faroResourceId: lb()
+                  const Ez = Mz.toJSON();
+                  let iz = mE(null === Ez || void 0 === Ez ? void 0 : Ez.serverTiming);
+                  (null == nz && hE(Ez, yE) || nz) && uz("faro.performance.resource", Ou(Ou({}, UE(Ez)), {}, {
+                    faroNavigationId: zz,
+                    faroResourceId: wu()
                   }), void 0, {
-                    spanContext: fy,
-                    timestampOverwriteMs: HU(Uy.startTime, Zy)
+                    spanContext: iz,
+                    timestampOverwriteMs: qE(Ez.startTime, lz)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(Uy, Wy, wU, yb.config)
+            }(Ez, bz, WE, zz.config)
           })))
         };
         this.cancelInitialization = () => {
-          bb = !0, document.removeEventListener("prerenderingchange", Wy)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", Wy, {
+          uz = !0, document.removeEventListener("prerenderingchange", bz)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", bz, {
           once: !0
-        }) : Wy()
+        }) : bz()
       }
       destroy() {
-        var yb;
-        null === (yb = this.cancelInitialization) || void 0 === yb || yb.call(this), this.cancelInitialization = void 0
+        var zz;
+        null === (zz = this.cancelInitialization) || void 0 === zz || zz.call(this), this.cancelInitialization = void 0
       }
     };
-    const NU = "data-faro-user-action-name",
-      zh = NU.replace(/-name$/, "-timeout"),
-      IU = 1e3;
+    const jE = "data-faro-user-action-name",
+      IE = jE.replace(/-name$/, "-timeout"),
+      BE = 1e3;
 
-    function xh(yb) {
-      return `data-${(yb.startsWith("data-")?yb.slice(5):yb).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function CE(zz) {
+      return `data-${(zz.startsWith("data-")?zz.slice(5):zz).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function AU(yb) {
-      let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Db;
-      if (void 0 === yb) return bb;
-      let Uy = NaN;
+    function YE(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Du;
+      if (void 0 === zz) return uz;
+      let Ez = NaN;
       try {
-        Uy = "string" === typeof yb && "" === yb.trim() ? NaN : Number(yb)
-      } catch (hy) {}
-      return !Number.isFinite(Uy) || Uy <= 0 ? (Wy(`initialActivityTimeout must be a finite number greater than zero; using ${bb} ms`), bb) : Uy > 1e3 ? (Wy(`initialActivityTimeout cannot exceed ${IU} ms; clamping to the maximum`), IU) : Uy
+        Ez = "string" === typeof zz && "" === zz.trim() ? NaN : Number(zz)
+      } catch (nz) {}
+      return !Number.isFinite(Ez) || Ez <= 0 ? (bz(`initialActivityTimeout must be a finite number greater than zero; using ${uz} ms`), uz) : Ez > 1e3 ? (bz(`initialActivityTimeout cannot exceed ${BE} ms; clamping to the maximum`), BE) : Ez
     }
 
-    function dU(yb, bb, Wy) {
-      return void 0 !== yb && window.clearTimeout(yb), window.setTimeout((() => {
-        bb()
-      }), Wy)
+    function kE(zz, uz, bz) {
+      return void 0 !== zz && window.clearTimeout(zz), window.setTimeout((() => {
+        uz()
+      }), bz)
     }
 
-    function yf(yb) {
-      return yb.type === lW
+    function zn(zz) {
+      return zz.type === wb
     }
-    let bf, Wh;
+    let un, bn;
 
-    function Uh() {
-      return bf || (bf = new mU), Wh || (Wh = new MutationObserver(((yb, bb) => {
-        bf.notify({
+    function En() {
+      return un || (un = new Xb), bn || (bn = new MutationObserver(((zz, uz) => {
+        un.notify({
           type: "dom-mutation"
         })
-      })), Wh.observe(document, {
+      })), bn.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), bf
+      })), un
     }
-    const hh = "fetch",
-      fh = "xhr";
-    let Zh, cf, Ph, oh, Bh = !1;
+    const nn = "fetch",
+      Mn = "xhr";
+    let tn, Hn, On, pn, dn = !1;
 
-    function Kh() {
-      if (Zh) return Zh;
+    function Fn() {
+      if (tn) return tn;
 
-      function yb(yb) {
-        Zh.notify({
-          type: EW,
-          request: yb
+      function zz(zz) {
+        tn.notify({
+          type: Kb,
+          request: zz
         })
       }
 
-      function bb(yb) {
-        Zh.notify({
-          type: lW,
-          request: yb
+      function uz(zz) {
+        tn.notify({
+          type: wb,
+          request: zz
         })
       }
-      return Zh = new mU, Bh || (! function(yb) {
+      return tn = new Xb, dn || (! function(zz) {
         let {
-          onRequestEnd: bb,
-          onRequestStart: Wy
-        } = yb;
-        Ph || (Ph = window.fetch);
+          onRequestEnd: uz,
+          onRequestStart: bz
+        } = zz;
+        On || (On = window.fetch);
         window.fetch = function() {
-          var yb, Uy;
-          const hy = null !== (yb = Iy(arguments[0])) && void 0 !== yb ? yb : "",
-            fy = zb(hy),
-            Zy = (null !== (Uy = arguments[1]) && void 0 !== Uy ? Uy : {}).method,
-            cb = lb();
-          return fy || Wy({
-            url: hy,
-            method: Zy,
-            requestId: cb,
-            apiType: hh
-          }), Ph.apply(this, arguments).then((yb => (fy || bb({
-            url: hy,
-            method: Zy,
-            requestId: cb,
-            apiType: hh
-          }), yb))).catch((yb => {
-            throw fy || bb({
-              url: hy,
-              method: Zy,
-              requestId: cb,
-              apiType: hh
-            }), yb
+          var zz, Ez;
+          const nz = null !== (zz = Bz(arguments[0])) && void 0 !== zz ? zz : "",
+            iz = Iz(nz),
+            lz = (null !== (Ez = arguments[1]) && void 0 !== Ez ? Ez : {}).method,
+            Mz = wu();
+          return iz || bz({
+            url: nz,
+            method: lz,
+            requestId: Mz,
+            apiType: nn
+          }), On.apply(this, arguments).then((zz => (iz || uz({
+            url: nz,
+            method: lz,
+            requestId: Mz,
+            apiType: nn
+          }), zz))).catch((zz => {
+            throw iz || uz({
+              url: nz,
+              method: lz,
+              requestId: Mz,
+              apiType: nn
+            }), zz
           }))
         }
       }({
-        onRequestStart: yb,
-        onRequestEnd: bb
-      }), function(yb) {
+        onRequestStart: zz,
+        onRequestEnd: uz
+      }), function(zz) {
         let {
-          onRequestStart: bb,
-          onRequestEnd: Wy
-        } = yb;
-        cf || (cf = XMLHttpRequest.prototype.open);
+          onRequestStart: uz,
+          onRequestEnd: bz
+        } = zz;
+        Hn || (Hn = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const yb = arguments[1],
-            Uy = zb(yb),
-            hy = arguments[0],
-            fy = lb();
+          const zz = arguments[1],
+            Ez = Iz(zz),
+            nz = arguments[0],
+            iz = wu();
           this.addEventListener("loadstart", (function() {
-            Uy || bb({
-              url: yb,
-              method: hy,
-              requestId: fy,
-              apiType: fh
+            Ez || uz({
+              url: zz,
+              method: nz,
+              requestId: iz,
+              apiType: Mn
             })
           })), this.addEventListener("load", (function() {
-            Uy || Wy({
-              url: yb,
-              method: hy,
-              requestId: fy,
-              apiType: fh
+            Ez || bz({
+              url: zz,
+              method: nz,
+              requestId: iz,
+              apiType: Mn
             })
           })), this.addEventListener("error", (function() {
-            Uy || Wy({
-              url: yb,
-              method: hy,
-              requestId: fy,
-              apiType: fh
+            Ez || bz({
+              url: zz,
+              method: nz,
+              requestId: iz,
+              apiType: Mn
             })
           })), this.addEventListener("abort", (function() {
-            Uy || Wy({
-              url: yb,
-              method: hy,
-              requestId: fy,
-              apiType: fh
+            Ez || bz({
+              url: zz,
+              method: nz,
+              requestId: iz,
+              apiType: Mn
             })
-          })), cf.apply(this, arguments)
+          })), Hn.apply(this, arguments)
         }
       }({
-        onRequestStart: yb,
-        onRequestEnd: bb
-      }), Bh = !0), Zh
+        onRequestStart: zz,
+        onRequestEnd: uz
+      }), dn = !0), tn
     }
-    let eh, qf = !1;
-    let sh = function(yb) {
-      return yb[yb.Started = 0] = "Started", yb[yb.Halted = 1] = "Halted", yb[yb.Cancelled = 2] = "Cancelled", yb[yb.Ended = 3] = "Ended", yb
+    let Zn, Rn = !1;
+    let Kn = function(zz) {
+      return zz[zz.Started = 0] = "Started", zz[zz.Halted = 1] = "Halted", zz[zz.Cancelled = 2] = "Cancelled", zz[zz.Ended = 3] = "Ended", zz
     }({});
-    var Sh = class {
-      constructor(yb, bb) {
-        let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = yb, this.logDebug = bb, this.initialActivityTimeout = Wy, this.http = Kh(), this.dom = Uh(), this.perf = (oh || (oh = new mU), qf || (eh = wU.subscribe((yb => {
-          "resource" === yb.type && oh.notify({
+    var wn = class {
+      constructor(zz, uz) {
+        let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = zz, this.logDebug = uz, this.initialActivityTimeout = bz, this.http = Fn(), this.dom = En(), this.perf = (pn || (pn = new Xb), Rn || (Zn = WE.subscribe((zz => {
+          "resource" === zz.type && pn.notify({
             type: "resource-entry"
           })
-        })), qf = !0), oh), this.isValid = !1, this.runningRequests = new Map
+        })), Rn = !0), pn), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new mU).merge(this.http, this.dom, this.perf).takeWhile((() => [sh.Started, sh.Halted].includes(this.userAction.getState()))).filter((yb => !!(this.userAction.getState() !== sh.Halted || yf(yb) && this.runningRequests.has(yb.request.requestId)))).subscribe((yb => {
-          (function(yb) {
-            return yb.type === EW
-          })(yb) && this.runningRequests.set(yb.request.requestId, yb.request), yf(yb) && this.runningRequests.delete(yb.request.requestId), yf(yb) ? this.userAction.getState() === sh.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((yb => [sh.Ended, sh.Cancelled].includes(yb))).first().subscribe((() => this.cleanup())), this.startupTid = dU(this.startupTid, (() => {
+        this.allMonitorsSub = (new Xb).merge(this.http, this.dom, this.perf).takeWhile((() => [Kn.Started, Kn.Halted].includes(this.userAction.getState()))).filter((zz => !!(this.userAction.getState() !== Kn.Halted || zn(zz) && this.runningRequests.has(zz.request.requestId)))).subscribe((zz => {
+          (function(zz) {
+            return zz.type === Kb
+          })(zz) && this.runningRequests.set(zz.request.requestId, zz.request), zn(zz) && this.runningRequests.delete(zz.request.requestId), zn(zz) ? this.userAction.getState() === Kn.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((zz => [Kn.Ended, Kn.Cancelled].includes(zz))).first().subscribe((() => this.cleanup())), this.startupTid = kE(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === sh.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === Kn.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === sh.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === Kn.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = dU(this.haltTid, (() => {
-          this.userAction.getState() === sh.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = kE(this.haltTid, (() => {
+          this.userAction.getState() === Kn.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var yb, bb;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (yb = this.allMonitorsSub) || void 0 === yb || yb.unsubscribe(), null === (bb = this.stateSub) || void 0 === bb || bb.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var zz, uz;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (zz = this.allMonitorsSub) || void 0 === zz || zz.unsubscribe(), null === (uz = this.stateSub) || void 0 === uz || uz.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(yb) {
-        void 0 !== yb && window.clearTimeout(yb)
+      clearTimer(zz) {
+        void 0 !== zz && window.clearTimeout(zz)
       }
     };
 
-    function Eh(yb) {
-      let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Db;
-      var Wy;
+    function Xn(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Du;
+      var bz;
       const {
-        api: Uy,
-        config: hy,
-        internalLogger: fy
-      } = yb, Zy = AU(null === (Wy = hy.userActionsInstrumentation) || void 0 === Wy ? void 0 : Wy.initialActivityTimeout, 100, bb);
+        api: Ez,
+        config: nz,
+        internalLogger: iz
+      } = zz, lz = YE(null === (bz = nz.userActionsInstrumentation) || void 0 === bz ? void 0 : bz.initialActivityTimeout, 100, uz);
       return {
-        processUserEvent: function(yb) {
-          var bb, Wy;
-          const fy = null !== (bb = null === (Wy = hy.userActionsInstrumentation) || void 0 === Wy ? void 0 : Wy.dataAttributeName) && void 0 !== bb ? bb : NU,
-            Zy = yb.target;
-          if (!(Zy instanceof Element)) return;
-          const cb = function(yb, bb) {
-              let Wy = yb;
-              for (; Wy;) {
-                if (Wy.hasAttribute(bb)) return Wy;
-                Wy = Wy.parentElement
+        processUserEvent: function(zz) {
+          var uz, bz;
+          const iz = null !== (uz = null === (bz = nz.userActionsInstrumentation) || void 0 === bz ? void 0 : bz.dataAttributeName) && void 0 !== uz ? uz : jE,
+            lz = zz.target;
+          if (!(lz instanceof Element)) return;
+          const Mz = function(zz, uz) {
+              let bz = zz;
+              for (; bz;) {
+                if (bz.hasAttribute(uz)) return bz;
+                bz = bz.parentElement
               }
               return null
-            }(Zy, xh(fy)),
-            Py = function(yb, bb) {
-              if (!yb) return;
-              const Wy = function(yb) {
-                  return xh(yb).slice(5).replace(/-(.)/g, ((yb, bb) => bb.toUpperCase()))
-                }(bb),
-                Uy = yb.dataset;
-              for (const hy in Uy)
-                if (hy === Wy) return Uy[hy]
-            }(cb, fy);
-          if (!cb || !Py) return;
-          const oy = function(yb, bb) {
-            const Wy = yb.getAttribute(function(yb) {
-              const bb = xh(yb);
-              return bb.endsWith("-name") ? `${bb.slice(0,-5)}-timeout` : `${bb}-timeout`
-            }(bb));
-            return null === Wy ? void 0 : Number(Wy)
-          }(cb, fy);
-          Uy.startUserAction(Py, {}, {
-            triggerName: yb.type,
-            initialActivityTimeout: oy
+            }(lz, CE(iz)),
+            tz = function(zz, uz) {
+              if (!zz) return;
+              const bz = function(zz) {
+                  return CE(zz).slice(5).replace(/-(.)/g, ((zz, uz) => uz.toUpperCase()))
+                }(uz),
+                Ez = zz.dataset;
+              for (const nz in Ez)
+                if (nz === bz) return Ez[nz]
+            }(Mz, iz);
+          if (!Mz || !tz) return;
+          const Hz = function(zz, uz) {
+            const bz = zz.getAttribute(function(zz) {
+              const uz = CE(zz);
+              return uz.endsWith("-name") ? `${uz.slice(0,-5)}-timeout` : `${uz}-timeout`
+            }(uz));
+            return null === bz ? void 0 : Number(bz)
+          }(Mz, iz);
+          Ez.startUserAction(tz, {}, {
+            triggerName: zz.type,
+            initialActivityTimeout: Hz
           })
         },
-        processUserActionStarted: function(yb, Wy) {
-          const Uy = yb,
-            hy = AU(Wy, Zy, bb);
-          new Sh(Uy, fy.debug, hy).attach()
+        processUserActionStarted: function(zz, bz) {
+          const Ez = zz,
+            nz = YE(bz, lz, uz);
+          new wn(Ez, iz.debug, nz).attach()
         }
       }
     }
-    const lh = "user_action_start",
-      mf = {
+    const fn = "user_action_start",
+      sn = {
         Normal: "normal",
         Critical: "critical"
       };
-    var Ch = class {
+    var rn = class {
         constructor() {
           this.buffer = []
         }
-        addItem(yb) {
-          this.buffer.push(yb)
+        addItem(zz) {
+          this.buffer.push(zz)
         }
-        flushBuffer(yb) {
-          if (ib(yb))
-            for (const bb of this.buffer) yb(bb);
+        flushBuffer(zz) {
+          if (Tz(zz))
+            for (const uz of this.buffer) zz(uz);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      Th = class extends mU {
-        constructor(yb) {
+      Nn = class extends Xb {
+        constructor(zz) {
           let {
-            name: bb,
-            parentId: Wy,
-            trigger: Uy,
-            transports: hy,
-            attributes: fy,
-            trackUserActionsExcludeItem: Zy,
-            importance: cb = mf.Normal,
-            pushEvent: Py
-          } = yb;
-          super(), this.name = bb, this.attributes = fy, this.id = lb(), this.trigger = Uy, this.parentId = null !== Wy && void 0 !== Wy ? Wy : this.id, this.trackUserActionsExcludeItem = Zy, this.importance = cb, this._pushEvent = Py, this._itemBuffer = new Ch, this._transports = hy, this._state = 0, this._start()
+            name: uz,
+            parentId: bz,
+            trigger: Ez,
+            transports: nz,
+            attributes: iz,
+            trackUserActionsExcludeItem: lz,
+            importance: Mz = sn.Normal,
+            pushEvent: tz
+          } = zz;
+          super(), this.name = uz, this.attributes = iz, this.id = wu(), this.trigger = Ez, this.parentId = null !== bz && void 0 !== bz ? bz : this.id, this.trackUserActionsExcludeItem = lz, this.importance = Mz, this._pushEvent = tz, this._itemBuffer = new rn, this._transports = nz, this._state = 0, this._start()
         }
-        addItem(yb) {
-          return 0 === this._state && (this._itemBuffer.addItem(yb), !0)
+        addItem(zz) {
+          return 0 === this._state && (this._itemBuffer.addItem(zz), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = eb(), this._startTimeMono = qW())
+          this._state = 0, 0 === this._state && (this.startTime = du(), this._startTimeMono = Fu())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((yb => {
-            this._transports.execute(yb)
+          0 === this._state && this._itemBuffer.flushBuffer((zz => {
+            this._transports.execute(zz)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const yb = eb(),
-            bb = qW() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((yb => {
-            if (function(yb, bb) {
-                return (null === bb || void 0 === bb ? void 0 : bb(yb)) || "measurement" === yb.type && "web-vitals" === yb.payload.type
-              }(yb, this.trackUserActionsExcludeItem)) return void this._transports.execute(yb);
-            const bb = Ab(Ab({}, yb), {}, {
-              payload: Ab(Ab({}, yb.payload), {}, {
+          const zz = du(),
+            uz = Fu() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((zz => {
+            if (function(zz, uz) {
+                return (null === uz || void 0 === uz ? void 0 : uz(zz)) || "measurement" === zz.type && "web-vitals" === zz.payload.type
+              }(zz, this.trackUserActionsExcludeItem)) return void this._transports.execute(zz);
+            const uz = Yu(Yu({}, zz), {}, {
+              payload: Yu(Yu({}, zz.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(bb)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", Ab({
+            this._transports.execute(uz)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", Yu({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: yb.toString(),
-            userActionDuration: bb.toString(),
+            userActionEndTime: zz.toString(),
+            userActionDuration: uz.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, Hb(this.attributes)), void 0, {
+          }, qu(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: yb => (yb.action = {
+            customPayloadTransformer: zz => (zz.action = {
               id: this.id,
               name: this.name
-            }, yb)
+            }, zz)
           })
         }
         getState() {
           return this._state
         }
       };
-    const Vh = new mU;
+    const vn = new Xb;
 
-    function Jh(yb, bb) {
-      return !!yb && (0 === (null === yb || void 0 === yb ? void 0 : yb.getState()) && (yb.addItem(bb), !0))
+    function xn(zz, uz) {
+      return !!zz && (0 === (null === zz || void 0 === zz ? void 0 : zz.getState()) && (zz.addItem(uz), !0))
     }
-    var gf = class extends bU {
+    var Jn = class extends ub {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = WW
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = bb
         }
         initialize() {
           const {
-            processUserEvent: yb,
-            processUserActionStarted: bb
-          } = Eh(Sy, (yb => this.logWarn(yb)));
-          this._processUserEvent = yb, this._processKeydown = bb => {
-            [" ", "Enter"].includes(bb.key) && yb(bb)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Vh.subscribe((yb => {
+            processUserEvent: zz,
+            processUserActionStarted: uz
+          } = Xn(Rz, (zz => this.logWarn(zz)));
+          this._processUserEvent = zz, this._processKeydown = uz => {
+            [" ", "Enter"].includes(uz.key) && zz(uz)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = vn.subscribe((zz => {
             let {
-              type: Wy,
-              userAction: Uy,
-              initialActivityTimeout: hy
-            } = yb;
-            "user_action_start" === Wy && bb(Uy, hy)
+              type: bz,
+              userAction: Ez,
+              initialActivityTimeout: nz
+            } = zz;
+            "user_action_start" === bz && uz(Ez, nz)
           }))
         }
         destroy() {
-          var yb;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (yb = this._userActionSub) || void 0 === yb || yb.unsubscribe()
+          var zz;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (zz = this._userActionSub) || void 0 === zz || zz.unsubscribe()
         }
       },
-      Gh = class extends bU {
+      An = class extends ub {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = WW, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = bb, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(yb) {
-          const bb = {
-            blockedURI: yb.blockedURI,
-            columnNumber: yb.columnNumber,
-            disposition: yb.disposition,
-            documentURI: yb.documentURI,
-            effectiveDirective: yb.effectiveDirective,
-            lineNumber: yb.lineNumber,
-            originalPolicy: yb.originalPolicy,
-            referrer: yb.referrer,
-            sample: yb.sample,
-            sourceFile: yb.sourceFile,
-            statusCode: yb.statusCode,
-            violatedDirective: yb.violatedDirective
+        securitypolicyviolationHandler(zz) {
+          const uz = {
+            blockedURI: zz.blockedURI,
+            columnNumber: zz.columnNumber,
+            disposition: zz.disposition,
+            documentURI: zz.documentURI,
+            effectiveDirective: zz.effectiveDirective,
+            lineNumber: zz.lineNumber,
+            originalPolicy: zz.originalPolicy,
+            referrer: zz.referrer,
+            sample: zz.sample,
+            sourceFile: zz.sourceFile,
+            statusCode: zz.statusCode,
+            violatedDirective: zz.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", Hb(bb))
+          this.api.pushEvent("securitypolicyviolation", qu(uz))
         }
       };
-    var Oh = class extends mU {
-      constructor(yb, bb) {
-        var Wy, Uy, hy, fy;
-        super(), this._tracking = !1, this.eventsObservable = yb, this._options = {
-          inactivityMs: null !== (Wy = null === bb || void 0 === bb ? void 0 : bb.inactivityMs) && void 0 !== Wy ? Wy : 100,
-          drainTimeoutMs: null !== (Uy = null === bb || void 0 === bb ? void 0 : bb.drainTimeoutMs) && void 0 !== Uy ? Uy : 1e4,
-          isOperationStart: null !== (hy = null === bb || void 0 === bb ? void 0 : bb.isOperationStart) && void 0 !== hy ? hy : () => {},
-          isOperationEnd: null !== (fy = null === bb || void 0 === bb ? void 0 : bb.isOperationEnd) && void 0 !== fy ? fy : () => {}
+    var Tn = class extends Xb {
+      constructor(zz, uz) {
+        var bz, Ez, nz, iz;
+        super(), this._tracking = !1, this.eventsObservable = zz, this._options = {
+          inactivityMs: null !== (bz = null === uz || void 0 === uz ? void 0 : uz.inactivityMs) && void 0 !== bz ? bz : 100,
+          drainTimeoutMs: null !== (Ez = null === uz || void 0 === uz ? void 0 : uz.drainTimeoutMs) && void 0 !== Ez ? Ez : 1e4,
+          isOperationStart: null !== (nz = null === uz || void 0 === uz ? void 0 : uz.isOperationStart) && void 0 !== nz ? nz : () => {},
+          isOperationEnd: null !== (iz = null === uz || void 0 === uz ? void 0 : uz.isOperationEnd) && void 0 !== iz ? iz : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((yb => {
-          var bb;
-          this._lastEventTime = qW(), null === (bb = this._currentEvents) || void 0 === bb || bb.push(yb);
-          const Wy = this._options.isOperationStart(yb);
-          var Uy;
-          Wy && (null === (Uy = this._activeOperations) || void 0 === Uy || Uy.set(Wy, !0));
-          const hy = this._options.isOperationEnd(yb);
-          var fy;
-          hy && (null === (fy = this._activeOperations) || void 0 === fy || fy.delete(hy));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((zz => {
+          var uz;
+          this._lastEventTime = Fu(), null === (uz = this._currentEvents) || void 0 === uz || uz.push(zz);
+          const bz = this._options.isOperationStart(zz);
+          var Ez;
+          bz && (null === (Ez = this._activeOperations) || void 0 === Ez || Ez.set(bz, !0));
+          const nz = this._options.isOperationEnd(zz);
+          var iz;
+          nz && (null === (iz = this._activeOperations) || void 0 === iz || iz.delete(nz));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = qW(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = Fu(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let yb;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), yb = this.hasActiveOperations() ? qW() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let zz;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), zz = this.hasActiveOperations() ? Fu() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: yb
+          duration: zz
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = Rh(this._inactivityTid, (() => {
+        this._inactivityTid = Ln(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = Rh(this._drainTid, (() => {
+        this._drainTid = Ln(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(yb) {
-        yb && clearTimeout(yb)
+      _clearTimer(zz) {
+        zz && clearTimeout(zz)
       }
     };
 
-    function Rh(yb, bb, Wy) {
-      return yb && clearTimeout(yb), yb = setTimeout((() => {
-        bb()
-      }), Wy)
+    function Ln(zz, uz, bz) {
+      return zz && clearTimeout(zz), zz = setTimeout((() => {
+        uz()
+      }), bz)
     }
-    let vf;
-    const Mh = new Set,
-      Yh = new Map;
-    let Xh, nh, uh, rf, Hh, af, Fh, ph, Lh = !1;
-    var Qh = class extends bU {
+    let Pn;
+    const Gn = new Set,
+      an = new Map;
+    let Vn, mn, qn, hn, Un, cn, gn, Sn, yn = !1;
+    var Dn = class extends ub {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = WW
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = bb
       }
       initialize() {
-        const yb = Kh(),
-          bb = Uh(),
-          Wy = function() {
-            function yb(yb, bb) {
-              const Wy = null !== bb && void 0 !== bb ? bb : location.href;
-              Wy !== nh && (Xh.notify({
+        const zz = Fn(),
+          uz = En(),
+          bz = function() {
+            function zz(zz, uz) {
+              const bz = null !== uz && void 0 !== uz ? uz : location.href;
+              bz !== mn && (Vn.notify({
                 type: "url-change",
-                from: nh,
-                to: Wy,
-                trigger: yb
-              }), nh = Wy)
+                from: mn,
+                to: bz,
+                trigger: zz
+              }), mn = bz)
             }
-            if (Xh || (Xh = new mU, nh = location.href), !Lh)
+            if (Vn || (Vn = new Xb, mn = location.href), !yn)
               if ("navigation" in window && "NavigateEvent" in window) {
-                Fh = bb => {
+                gn = uz => {
                   try {
-                    const Wy = null === bb || void 0 === bb ? void 0 : bb.destination;
-                    (null === Wy || void 0 === Wy ? void 0 : Wy.sameDocument) && "string" === typeof Wy.url && yb("navigate", Wy.url)
-                  } catch (Wy) {}
-                }, window.navigation.addEventListener("navigate", Fh);
-                const bb = window.NavigateEvent;
-                bb && bb.prototype && "function" === typeof bb.prototype.intercept && (ph || (ph = bb.prototype.intercept), bb.prototype.intercept = function(bb) {
+                    const bz = null === uz || void 0 === uz ? void 0 : uz.destination;
+                    (null === bz || void 0 === bz ? void 0 : bz.sameDocument) && "string" === typeof bz.url && zz("navigate", bz.url)
+                  } catch (bz) {}
+                }, window.navigation.addEventListener("navigate", gn);
+                const uz = window.NavigateEvent;
+                uz && uz.prototype && "function" === typeof uz.prototype.intercept && (Sn || (Sn = uz.prototype.intercept), uz.prototype.intercept = function(uz) {
                   try {
-                    const bb = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      Wy = null === this || void 0 === this ? void 0 : this.destination;
-                    bb && Wy && !1 === Wy.sameDocument && "string" === typeof Wy.url && yb("navigate-intercept", Wy.url)
-                  } catch (Wy) {}
-                  return ph.call(this, bb)
-                }), Lh = !0
-              } else uh || (uh = window.history.pushState), window.history.pushState = function() {
-                for (var bb = arguments.length, Wy = new Array(bb), Uy = 0; Uy < bb; Uy++) Wy[Uy] = arguments[Uy];
-                const hy = uh.apply(window.history, Wy);
-                return yb("pushState"), hy
-              }, rf || (rf = window.history.replaceState), window.history.replaceState = function() {
-                for (var bb = arguments.length, Wy = new Array(bb), Uy = 0; Uy < bb; Uy++) Wy[Uy] = arguments[Uy];
-                const hy = rf.apply(window.history, Wy);
-                return yb("replaceState"), hy
-              }, Hh = () => yb("popstate"), af = () => yb("hashchange"), window.addEventListener("popstate", Hh), window.addEventListener("hashchange", af), Lh = !0;
-            return Xh
+                    const uz = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      bz = null === this || void 0 === this ? void 0 : this.destination;
+                    uz && bz && !1 === bz.sameDocument && "string" === typeof bz.url && zz("navigate-intercept", bz.url)
+                  } catch (bz) {}
+                  return Sn.call(this, uz)
+                }), yn = !0
+              } else qn || (qn = window.history.pushState), window.history.pushState = function() {
+                for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+                const nz = qn.apply(window.history, bz);
+                return zz("pushState"), nz
+              }, hn || (hn = window.history.replaceState), window.history.replaceState = function() {
+                for (var uz = arguments.length, bz = new Array(uz), Ez = 0; Ez < uz; Ez++) bz[Ez] = arguments[Ez];
+                const nz = hn.apply(window.history, bz);
+                return zz("replaceState"), nz
+              }, Un = () => zz("popstate"), cn = () => zz("hashchange"), window.addEventListener("popstate", Un), window.addEventListener("hashchange", cn), yn = !0;
+            return Vn
           }(),
-          Uy = (hy = ["pointerdown", "keydown"], vf || (vf = new mU), hy.forEach((yb => {
-            if (!Mh.has(yb)) {
-              const bb = () => {
-                vf.notify({
+          Ez = (nz = ["pointerdown", "keydown"], Pn || (Pn = new Xb), nz.forEach((zz => {
+            if (!Gn.has(zz)) {
+              const uz = () => {
+                Pn.notify({
                   type: "interaction",
-                  name: yb
+                  name: zz
                 })
               };
-              window.addEventListener(yb, bb), Mh.add(yb), Yh.set(yb, bb)
+              window.addEventListener(zz, uz), Gn.add(zz), an.set(zz, uz)
             }
-          })), vf);
-        var hy;
-        const fy = new Oh((new mU).merge(yb, bb, Wy), {
+          })), Pn);
+        var nz;
+        const iz = new Tn((new Xb).merge(zz, uz, bz), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: yb => function(yb) {
-            return yb.type === EW
-          }(yb) ? yb.request.requestId : void 0,
-          isOperationEnd: yb => function(yb) {
-            return yb.type === lW
-          }(yb) ? yb.request.requestId : void 0
+          isOperationStart: zz => function(zz) {
+            return zz.type === Kb
+          }(zz) ? zz.request.requestId : void 0,
+          isOperationEnd: zz => function(zz) {
+            return zz.type === wb
+          }(zz) ? zz.request.requestId : void 0
         });
-        fy.filter((yb => "tracking-ended" === yb.message)).subscribe((yb => {
-          var bb, Wy;
-          if ((null === (bb = yb.events) || void 0 === bb ? void 0 : bb.some((yb => "url-change" === yb.type))) && (null === (Wy = yb.events) || void 0 === Wy ? void 0 : Wy.some((yb => "dom-mutation" === yb.type)))) {
-            var Uy;
-            const bb = null === (Uy = yb.events) || void 0 === Uy ? void 0 : Uy.find((yb => "url-change" === yb.type));
-            Sy.api.pushEvent("faro.navigation", {
-              fromUrl: null === bb || void 0 === bb ? void 0 : bb.from,
-              toUrl: null === bb || void 0 === bb ? void 0 : bb.to,
+        iz.filter((zz => "tracking-ended" === zz.message)).subscribe((zz => {
+          var uz, bz;
+          if ((null === (uz = zz.events) || void 0 === uz ? void 0 : uz.some((zz => "url-change" === zz.type))) && (null === (bz = zz.events) || void 0 === bz ? void 0 : bz.some((zz => "dom-mutation" === zz.type)))) {
+            var Ez;
+            const uz = null === (Ez = zz.events) || void 0 === Ez ? void 0 : Ez.find((zz => "url-change" === zz.type));
+            Rz.api.pushEvent("faro.navigation", {
+              fromUrl: null === uz || void 0 === uz ? void 0 : uz.from,
+              toUrl: null === uz || void 0 === uz ? void 0 : uz.to,
               sameDocument: String(!0),
-              duration: yb.duration
+              duration: zz.duration
             })
           }
-        })), Uy.subscribe((() => {
-          fy.startTracking()
+        })), Ez.subscribe((() => {
+          iz.startTracking()
         }))
       }
     };
 
-    function jf() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const bb = [new gf, new uW, new nU, new UW, new HW, new Qh];
-      return !1 !== yb.enablePerformanceInstrumentation && bb.unshift(new kh), !1 !== yb.enableContentSecurityPolicyInstrumentation && bb.push(new Gh), !1 !== yb.captureConsole && bb.push(new XW), bb
+    function Qn() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const uz = [new Jn, new Vb, new aE, new Eb, new qb, new Dn];
+      return !1 !== zz.enablePerformanceInstrumentation && uz.unshift(new eE), !1 !== zz.enableContentSecurityPolicyInstrumentation && uz.push(new An), !1 !== zz.captureConsole && uz.push(new Gb), uz
     }
-    var Dh = Wy(7221);
-    let tf, wh;
+    var Wn = bz(6424);
+    let en, jn;
 
-    function kf() {
-      const yb = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return tf === yb && wh || (wh = new Dh.UAParser(yb).getResult(), tf = yb), wh
+    function In() {
+      const zz = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return en === zz && jn || (jn = new Wn.UAParser(zz).getResult(), en = zz), jn
     }
-    const Nh = () => {
+    const Bn = () => {
         const {
-          browser: yb,
-          os: bb,
-          ua: Wy
-        } = kf(), {
-          name: Uy,
-          version: hy
-        } = yb, {
-          name: fy,
-          version: Zy
-        } = bb, cb = navigator.language, Py = Wy.includes("Mobi"), oy = function() {
-          if (!Uy || !hy) return;
+          browser: zz,
+          os: uz,
+          ua: bz
+        } = In(), {
+          name: Ez,
+          version: nz
+        } = zz, {
+          name: iz,
+          version: lz
+        } = uz, Mz = navigator.language, tz = bz.includes("Mobi"), Hz = function() {
+          if (!Ez || !nz) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== Uy && void 0 !== Uy ? Uy : rU,
-            version: null !== hy && void 0 !== hy ? hy : rU,
-            os: `${null!==fy&&void 0!==fy?fy:rU} ${null!==Zy&&void 0!==Zy?Zy:rU}`,
-            userAgent: null !== Wy && void 0 !== Wy ? Wy : rU,
-            language: null !== cb && void 0 !== cb ? cb : rU,
-            mobile: Py,
-            brands: null !== oy && void 0 !== oy ? oy : rU,
+            name: null !== Ez && void 0 !== Ez ? Ez : mb,
+            version: null !== nz && void 0 !== nz ? nz : mb,
+            os: `${null!==iz&&void 0!==iz?iz:mb} ${null!==lz&&void 0!==lz?lz:mb}`,
+            userAgent: null !== bz && void 0 !== bz ? bz : mb,
+            language: null !== Mz && void 0 !== Mz ? Mz : mb,
+            mobile: tz,
+            brands: null !== Hz && void 0 !== Hz ? Hz : mb,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      zf = () => {
+      Cn = () => {
         const {
-          name: yb,
-          version: bb
-        } = kf().os;
-        if (!yb && !bb) return {};
-        const Wy = {};
-        return yb && (Wy.name = yb), bb && (Wy.version = bb), {
-          os: Wy
+          name: zz,
+          version: uz
+        } = In().os;
+        if (!zz && !uz) return {};
+        const bz = {};
+        return zz && (bz.name = zz), uz && (bz.version = uz), {
+          os: bz
         }
       };
 
-    function Ih(yb) {
-      var bb, Wy, Uy;
+    function Yn(zz) {
+      var uz, bz, Ez;
       return {
-        id: null !== (bb = null === (Wy = Sy.config) || void 0 === Wy || null === (Wy = Wy.sessionTracking) || void 0 === Wy || null === (Uy = Wy.generateSessionId) || void 0 === Uy ? void 0 : Uy.call(Wy)) && void 0 !== bb ? bb : lb(),
-        attributes: yb
+        id: null !== (uz = null === (bz = Rz.config) || void 0 === bz || null === (bz = bz.sessionTracking) || void 0 === bz || null === (Ez = bz.generateSessionId) || void 0 === Ez ? void 0 : Ez.call(bz)) && void 0 !== uz ? uz : wu(),
+        attributes: zz
       }
     }
-    const xf = () => ({
+    const kn = () => ({
       sdk: {
         name: "faro-web",
-        version: WW
+        version: bb
       }
     });
-    var Ah = class extends yU {
+    var zi = class extends zb {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let dh = function(yb) {
-      return yb.EXCEPTION = "exception", yb.LOG = "log", yb.MEASUREMENT = "measurement", yb.TRACE = "trace", yb.EVENT = "event", yb
+    let ui = function(zz) {
+      return zz.EXCEPTION = "exception", zz.LOG = "log", zz.MEASUREMENT = "measurement", zz.TRACE = "trace", zz.EVENT = "event", zz
     }({});
-    const yZ = {
+    const bi = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function bZ(yb, bb) {
-      var Wy, Uy;
-      if (void 0 === bb) return yb;
-      if (void 0 === yb) return {
-        resourceSpans: bb
+    function Ei(zz, uz) {
+      var bz, Ez;
+      if (void 0 === uz) return zz;
+      if (void 0 === zz) return {
+        resourceSpans: uz
       };
-      const hy = null === (Wy = yb.resourceSpans) || void 0 === Wy ? void 0 : Wy[0];
-      if (void 0 === hy) return yb;
-      const fy = (null === hy || void 0 === hy ? void 0 : hy.scopeSpans) || [],
-        Zy = (null === bb || void 0 === bb || null === (Uy = bb[0]) || void 0 === Uy ? void 0 : Uy.scopeSpans) || [];
-      return Ab(Ab({}, yb), {}, {
-        resourceSpans: [Ab(Ab({}, hy), {}, {
-          scopeSpans: [...fy, ...Zy]
+      const nz = null === (bz = zz.resourceSpans) || void 0 === bz ? void 0 : bz[0];
+      if (void 0 === nz) return zz;
+      const iz = (null === nz || void 0 === nz ? void 0 : nz.scopeSpans) || [],
+        lz = (null === uz || void 0 === uz || null === (Ez = uz[0]) || void 0 === Ez ? void 0 : Ez.scopeSpans) || [];
+      return Yu(Yu({}, zz), {}, {
+        resourceSpans: [Yu(Yu({}, nz), {}, {
+          scopeSpans: [...iz, ...lz]
         })]
       })
     }
 
-    function Wf(yb) {
-      let bb = {
+    function ni(zz) {
+      let uz = {
         meta: {}
       };
-      return void 0 !== yb[0] && (bb.meta = yb[0].meta), yb.forEach((yb => {
-        switch (yb.type) {
+      return void 0 !== zz[0] && (uz.meta = zz[0].meta), zz.forEach((zz => {
+        switch (zz.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const Wy = yZ[yb.type],
-              Uy = bb[Wy];
-            bb = Ab(Ab({}, bb), {}, {
-              [Wy]: void 0 === Uy ? [yb.payload] : [...Uy, yb.payload]
+            const bz = bi[zz.type],
+              Ez = uz[bz];
+            uz = Yu(Yu({}, uz), {}, {
+              [bz]: void 0 === Ez ? [zz.payload] : [...Ez, zz.payload]
             });
             break
           }
           case "trace":
-            bb = Ab(Ab({}, bb), {}, {
-              traces: bZ(bb.traces, yb.payload.resourceSpans)
+            uz = Yu(Yu({}, uz), {}, {
+              traces: Ei(uz.traces, zz.payload.resourceSpans)
             })
         }
-      })), bb
+      })), uz
     }
-    var Uf = class extends Ah {
+    var ii = class extends zi {
       constructor() {
-        let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = yb, this.name = "@grafana/faro-web-sdk:transport-console", this.version = WW
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = zz, this.name = "@grafana/faro-web-sdk:transport-console", this.version = bb
       }
-      send(yb) {
-        var bb;
-        return this.unpatchedConsole[null !== (bb = this.options.level) && void 0 !== bb ? bb : CW.DEBUG]("New event", Wf([yb]))
+      send(zz) {
+        var uz;
+        return this.unpatchedConsole[null !== (uz = this.options.level) && void 0 !== uz ? uz : fb.DEBUG]("New event", ni([zz]))
       }
     };
-    const hf = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      ff = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      Zf = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      cZ = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      Pf = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      of = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const li = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      Mi = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      ti = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      Hi = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      Oi = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      di = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function Bf(yb) {
+    function Fi(zz) {
       let {
-        weekday: bb,
-        day: Wy,
-        month: Uy,
-        year: hy,
-        hour: fy,
-        minute: Zy,
-        second: cb
-      } = yb;
-      if (hy < 1900 || Wy < 1 || fy > 23 || Zy > 59 || cb > 60) return;
-      const Py = 60 === cb,
-        oy = new Date(0);
-      return oy.setUTCFullYear(hy, Uy, Wy), oy.setUTCHours(fy, Zy, Py ? 59 : cb, 0), oy.getUTCDay() === bb && oy.getUTCDate() === Wy && oy.getUTCMonth() === Uy && oy.getUTCFullYear() === hy && oy.getUTCHours() === fy && oy.getUTCMinutes() === Zy && oy.getUTCSeconds() === (Py ? 59 : cb) ? oy.getTime() + (Py ? 1e3 : 0) : void 0
+        weekday: uz,
+        day: bz,
+        month: Ez,
+        year: nz,
+        hour: iz,
+        minute: lz,
+        second: Mz
+      } = zz;
+      if (nz < 1900 || bz < 1 || iz > 23 || lz > 59 || Mz > 60) return;
+      const tz = 60 === Mz,
+        Hz = new Date(0);
+      return Hz.setUTCFullYear(nz, Ez, bz), Hz.setUTCHours(iz, lz, tz ? 59 : Mz, 0), Hz.getUTCDay() === uz && Hz.getUTCDate() === bz && Hz.getUTCMonth() === Ez && Hz.getUTCFullYear() === nz && Hz.getUTCHours() === iz && Hz.getUTCMinutes() === lz && Hz.getUTCSeconds() === (tz ? 59 : Mz) ? Hz.getTime() + (tz ? 1e3 : 0) : void 0
     }
-    var Kf = class {
-      constructor(yb) {
-        this.options = yb, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var Zi = class {
+      constructor(zz) {
+        this.options = zz, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var yb = this;
+        var zz = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const bb = this.sequence++;
-        let Wy = !1;
+        const uz = this.sequence++;
+        let bz = !1;
         return {
           deliver: function() {
-            var Wy = th((function*(Wy) {
-              const Uy = yb.options.getNow();
-              let hy, fy = 0;
+            var bz = QE((function*(bz) {
+              const Ez = zz.options.getNow();
+              let nz, iz = 0;
               for (;;) {
-                var Zy, cb, Py;
-                const oy = yb.options.retry.maxAttempts - fy,
-                  By = yield yb.runAttempt((() => Wy(oy, yb.unloading)), fy > 0);
-                if (fy += By.attemptsMade, "success" === By.kind) return {
+                var lz, Mz, tz;
+                const Hz = zz.options.retry.maxAttempts - iz,
+                  Oz = yield zz.runAttempt((() => bz(Hz, zz.unloading)), iz > 0);
+                if (iz += Oz.attemptsMade, "success" === Oz.kind) return {
                   kind: "success",
-                  attempts: fy,
-                  elapsedTimeMs: yb.options.getNow() - Uy
+                  attempts: iz,
+                  elapsedTimeMs: zz.options.getNow() - Ez
                 };
-                if (hy = By.failure, "terminal" === By.kind || yb.unloading) return {
+                if (nz = Oz.failure, "terminal" === Oz.kind || zz.unloading) return {
                   kind: "terminal",
-                  attempts: fy,
-                  elapsedTimeMs: yb.options.getNow() - Uy,
-                  failure: hy
+                  attempts: iz,
+                  elapsedTimeMs: zz.options.getNow() - Ez,
+                  failure: nz
                 };
-                if (fy >= yb.options.retry.maxAttempts) return {
+                if (iz >= zz.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: fy,
-                  elapsedTimeMs: yb.options.getNow() - Uy,
-                  failure: hy,
+                  attempts: iz,
+                  elapsedTimeMs: zz.options.getNow() - Ez,
+                  failure: nz,
                   reason: "retries-exhausted"
                 };
-                if (null != By.retryAfterMs && By.retryAfterMs > yb.options.retry.maxBackoffMs) return {
+                if (null != Oz.retryAfterMs && Oz.retryAfterMs > zz.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: fy,
-                  elapsedTimeMs: yb.options.getNow() - Uy,
-                  failure: hy,
+                  attempts: iz,
+                  elapsedTimeMs: zz.options.getNow() - Ez,
+                  failure: nz,
                   reason: "retry-after-too-long"
                 };
-                const Ky = Math.min(null !== (Zy = By.retryAfterMs) && void 0 !== Zy ? Zy : yb.options.retry.initialBackoffMs * Math.pow(yb.options.retry.backoffMultiplier, fy - 1), yb.options.retry.maxBackoffMs);
-                if (null === (cb = (Py = yb.options).onRetry) || void 0 === cb || cb.call(Py, Ky, fy + 1), yield yb.waitForTurn(bb, Ky)) {
-                  const bb = yb.options.retry.maxAttempts - fy,
-                    hy = yield yb.runAttempt((() => Wy(bb, !0)));
-                  return fy += hy.attemptsMade, {
-                    kind: "success" === hy.kind ? "success" : "terminal",
-                    attempts: fy,
-                    elapsedTimeMs: yb.options.getNow() - Uy,
-                    failure: "success" === hy.kind ? void 0 : hy.failure
+                const pz = Math.min(null !== (lz = Oz.retryAfterMs) && void 0 !== lz ? lz : zz.options.retry.initialBackoffMs * Math.pow(zz.options.retry.backoffMultiplier, iz - 1), zz.options.retry.maxBackoffMs);
+                if (null === (Mz = (tz = zz.options).onRetry) || void 0 === Mz || Mz.call(tz, pz, iz + 1), yield zz.waitForTurn(uz, pz)) {
+                  const uz = zz.options.retry.maxAttempts - iz,
+                    nz = yield zz.runAttempt((() => bz(uz, !0)));
+                  return iz += nz.attemptsMade, {
+                    kind: "success" === nz.kind ? "success" : "terminal",
+                    attempts: iz,
+                    elapsedTimeMs: zz.options.getNow() - Ez,
+                    failure: "success" === nz.kind ? void 0 : nz.failure
                   }
                 }
               }
             }));
-            return function(yb) {
-              return Wy.apply(this, arguments)
+            return function(zz) {
+              return bz.apply(this, arguments)
             }
           }(),
           release: () => {
-            Wy || (Wy = !0, this.admitted--)
+            bz || (bz = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const yb = this.waiting.splice(0);
+        const zz = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const bb of yb) bb.resolve(!0);
+        for (const uz of zz) uz.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(yb) {
-        let bb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((Wy, Uy) => {
+      runAttempt(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((bz, Ez) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const bb = () => {
+              const uz = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              yb().then((yb => {
-                bb(), Wy(yb)
-              }), (yb => {
-                bb(), Uy(yb)
+              zz().then((zz => {
+                uz(), bz(zz)
+              }), (zz => {
+                uz(), Ez(zz)
               }))
             },
-            isRedelivery: bb
+            isRedelivery: uz
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const yb = this.options.getNow(),
-            bb = this.attemptQueue.findIndex((bb => {
+          const zz = this.options.getNow(),
+            uz = this.attemptQueue.findIndex((uz => {
               let {
-                isRedelivery: Wy
-              } = bb;
-              return this.unloading || !Wy || yb >= this.nextSendAt
+                isRedelivery: bz
+              } = uz;
+              return this.unloading || !bz || zz >= this.nextSendAt
             }));
-          if (bb < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (uz < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - yb)));
-          const [Wy] = this.attemptQueue.splice(bb, 1);
-          Wy.isRedelivery && !this.unloading && (this.nextSendAt = yb + 1), Wy.run()
+          }), Math.max(0, this.nextSendAt - zz)));
+          const [bz] = this.attemptQueue.splice(uz, 1);
+          bz.isRedelivery && !this.unloading && (this.nextSendAt = zz + 1), bz.run()
         }
       }
-      waitForTurn(yb, bb) {
-        const Wy = Math.min(bb * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((bb => {
+      waitForTurn(zz, uz) {
+        const bz = Math.min(uz * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((uz => {
           this.waiting.push({
-            sequence: yb,
-            readyAt: this.options.getNow() + Wy,
-            resolve: bb
-          }), this.waiting.sort(((yb, bb) => yb.readyAt === bb.readyAt ? yb.sequence - bb.sequence : yb.readyAt - bb.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: zz,
+            readyAt: this.options.getNow() + bz,
+            resolve: uz
+          }), this.waiting.sort(((zz, uz) => zz.readyAt === uz.readyAt ? zz.sequence - uz.sequence : zz.readyAt - uz.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const yb = this.waiting[0],
-          bb = yb.readyAt;
+        const zz = this.waiting[0],
+          uz = zz.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const bb = this.waiting.indexOf(yb);
-          bb >= 0 && this.waiting.splice(bb, 1), yb.resolve(!1), this.scheduleNext()
-        }), Math.max(0, bb - this.options.getNow()))
+          const uz = this.waiting.indexOf(zz);
+          uz >= 0 && this.waiting.splice(uz, 1), zz.resolve(!1), this.scheduleNext()
+        }), Math.max(0, uz - this.options.getNow()))
       }
     };
 
-    function ef(yb, bb) {
-      if (null == yb) return {};
-      var Wy, Uy, hy = function(yb, bb) {
-        if (null == yb) return {};
-        var Wy = {};
-        for (var Uy in yb)
-          if ({}.hasOwnProperty.call(yb, Uy)) {
-            if (bb.includes(Uy)) continue;
-            Wy[Uy] = yb[Uy]
-          } return Wy
-      }(yb, bb);
+    function Ri(zz, uz) {
+      if (null == zz) return {};
+      var bz, Ez, nz = function(zz, uz) {
+        if (null == zz) return {};
+        var bz = {};
+        for (var Ez in zz)
+          if ({}.hasOwnProperty.call(zz, Ez)) {
+            if (uz.includes(Ez)) continue;
+            bz[Ez] = zz[Ez]
+          } return bz
+      }(zz, uz);
       if (Object.getOwnPropertySymbols) {
-        var fy = Object.getOwnPropertySymbols(yb);
-        for (Uy = 0; Uy < fy.length; Uy++) Wy = fy[Uy], bb.includes(Wy) || {}.propertyIsEnumerable.call(yb, Wy) && (hy[Wy] = yb[Wy])
+        var iz = Object.getOwnPropertySymbols(zz);
+        for (Ez = 0; Ez < iz.length; Ez++) bz = iz[Ez], uz.includes(bz) || {}.propertyIsEnumerable.call(zz, bz) && (nz[bz] = zz[bz])
       }
-      return hy
+      return nz
     }
 
-    function qZ(yb) {
+    function Ki(zz) {
       const {
-        size: bb,
-        concurrency: Wy
-      } = yb, Uy = [];
-      let hy = 0;
-      const fy = () => {
-        if (hy < Wy && Uy.length) {
+        size: uz,
+        concurrency: bz
+      } = zz, Ez = [];
+      let nz = 0;
+      const iz = () => {
+        if (nz < bz && Ez.length) {
           const {
-            producer: yb,
-            resolve: bb,
-            reject: Wy
-          } = Uy.shift();
-          hy++, yb().then((yb => {
-            hy--, fy(), bb(yb)
-          }), (yb => {
-            hy--, fy(), Wy(yb)
+            producer: zz,
+            resolve: uz,
+            reject: bz
+          } = Ez.shift();
+          nz++, zz().then((zz => {
+            nz--, iz(), uz(zz)
+          }), (zz => {
+            nz--, iz(), bz(zz)
           }))
         }
       };
       return {
-        add: yb => {
-          if (Uy.length + hy >= bb) throw new Error("Task buffer full");
-          return new Promise(((bb, Wy) => {
-            Uy.push({
-              producer: yb,
-              resolve: bb,
-              reject: Wy
-            }), fy()
+        add: zz => {
+          if (Ez.length + nz >= uz) throw new Error("Task buffer full");
+          return new Promise(((uz, bz) => {
+            Ez.push({
+              producer: zz,
+              resolve: uz,
+              reject: bz
+            }), iz()
           }))
         }
       }
     }
-    const sf = ["headers"],
-      Sf = ["keepalive", "signal"],
-      Ef = new Set([408, 425, 429, 500, 502, 503, 504]),
-      lf = new Set([429, 503]);
-    let mZ = 0,
-      Cf = 0;
-    var Tf = class extends Error {};
-    var Vf = class extends Ah {
-      constructor(yb) {
-        var bb, Wy, Uy, hy, fy, Zy, cb, Py, oy, By, Ky, ey, qb, sy, Sy, Ey, ly;
-        super(), this.options = yb, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = WW, this.pendingCustomSends = 0, this.getNow = null !== (bb = yb.getNow) && void 0 !== bb ? bb : Date.now, this.requestTimeoutMs = null !== (Wy = yb.requestTimeoutMs) && void 0 !== Wy ? Wy : 1e4, this.compressionEnabled = null !== (Uy = yb.requestCompression) && void 0 !== Uy && Uy && "undefined" !== typeof CompressionStream, yb.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new Kf({
-          bufferSize: null !== (hy = yb.bufferSize) && void 0 !== hy ? hy : 30,
-          concurrency: null !== (fy = yb.concurrency) && void 0 !== fy ? fy : 5,
+    const wi = ["headers"],
+      Xi = ["keepalive", "signal"],
+      fi = new Set([408, 425, 429, 500, 502, 503, 504]),
+      si = new Set([429, 503]);
+    let ri = 0,
+      oi = 0;
+    var Ni = class extends Error {};
+    var vi = class extends zi {
+      constructor(zz) {
+        var uz, bz, Ez, nz, iz, lz, Mz, tz, Hz, Oz, pz, dz, Fz, Zz, Rz, Kz, wz;
+        super(), this.options = zz, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = bb, this.pendingCustomSends = 0, this.getNow = null !== (uz = zz.getNow) && void 0 !== uz ? uz : Date.now, this.requestTimeoutMs = null !== (bz = zz.requestTimeoutMs) && void 0 !== bz ? bz : 1e4, this.compressionEnabled = null !== (Ez = zz.requestCompression) && void 0 !== Ez && Ez && "undefined" !== typeof CompressionStream, zz.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new Zi({
+          bufferSize: null !== (nz = zz.bufferSize) && void 0 !== nz ? nz : 30,
+          concurrency: null !== (iz = zz.concurrency) && void 0 !== iz ? iz : 5,
           retry: {
-            maxAttempts: null !== (Zy = null === (cb = yb.retry) || void 0 === cb ? void 0 : cb.maxAttempts) && void 0 !== Zy ? Zy : 3,
-            initialBackoffMs: null !== (Py = null !== (oy = null === (By = yb.retry) || void 0 === By ? void 0 : By.initialBackoffMs) && void 0 !== oy ? oy : yb.defaultRateLimitBackoffMs) && void 0 !== Py ? Py : 1e3,
-            maxBackoffMs: null !== (Ky = null === (ey = yb.retry) || void 0 === ey ? void 0 : ey.maxBackoffMs) && void 0 !== Ky ? Ky : 3e4,
-            backoffMultiplier: null !== (qb = null === (sy = yb.retry) || void 0 === sy ? void 0 : sy.backoffMultiplier) && void 0 !== qb ? qb : 2
+            maxAttempts: null !== (lz = null === (Mz = zz.retry) || void 0 === Mz ? void 0 : Mz.maxAttempts) && void 0 !== lz ? lz : 3,
+            initialBackoffMs: null !== (tz = null !== (Hz = null === (Oz = zz.retry) || void 0 === Oz ? void 0 : Oz.initialBackoffMs) && void 0 !== Hz ? Hz : zz.defaultRateLimitBackoffMs) && void 0 !== tz ? tz : 1e3,
+            maxBackoffMs: null !== (pz = null === (dz = zz.retry) || void 0 === dz ? void 0 : dz.maxBackoffMs) && void 0 !== pz ? pz : 3e4,
+            backoffMultiplier: null !== (Fz = null === (Zz = zz.retry) || void 0 === Zz ? void 0 : Zz.backoffMultiplier) && void 0 !== Fz ? Fz : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (Sy = yb.getRandom) && void 0 !== Sy ? Sy : Math.random,
-          onRetry: (yb, bb) => {
-            this.logDebug(`Retrying failed request after ${yb}ms. Attempt ${bb}.`)
+          getRandom: null !== (Rz = zz.getRandom) && void 0 !== Rz ? Rz : Math.random,
+          onRetry: (zz, uz) => {
+            this.logDebug(`Retrying failed request after ${zz}ms. Attempt ${uz}.`)
           }
-        }), this.customPromiseBuffer = qZ({
-          size: null !== (Ey = yb.bufferSize) && void 0 !== Ey ? Ey : 30,
-          concurrency: null !== (ly = yb.concurrency) && void 0 !== ly ? ly : 5
+        }), this.customPromiseBuffer = Ki({
+          size: null !== (Kz = zz.bufferSize) && void 0 !== Kz ? Kz : 30,
+          concurrency: null !== (wz = zz.concurrency) && void 0 !== wz ? wz : 5
         }), this.defaultPromiseBuffer = {
-          add: yb => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(yb);
-            const bb = this.deliveryQueue.reserve();
-            if (!bb) throw new Error("Task buffer full");
-            return this.runBufferedTask(bb, yb)
+          add: zz => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(zz);
+            const uz = this.deliveryQueue.reserve();
+            if (!uz) throw new Error("Task buffer full");
+            return this.runBufferedTask(uz, zz)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (yb => {
-          yb.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (zz => {
+          zz.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(yb) {
-        var bb = this;
-        return th((function*() {
-          const Wy = bb.promiseBuffer;
-          if (Wy !== bb.defaultPromiseBuffer || Wy.add !== bb.defaultBufferAdd) {
-            bb.pendingCustomSends++;
+      send(zz) {
+        var uz = this;
+        return QE((function*() {
+          const bz = uz.promiseBuffer;
+          if (bz !== uz.defaultPromiseBuffer || bz.add !== uz.defaultBufferAdd) {
+            uz.pendingCustomSends++;
             try {
-              yield Wy.add((() => bb.deliver(yb)))
-            } catch (Uy) {
-              bb.logError("Permanent delivery failure", {
-                error: Uy,
+              yield bz.add((() => uz.deliver(zz)))
+            } catch (Ez) {
+              uz.logError("Permanent delivery failure", {
+                error: Ez,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              bb.pendingCustomSends--
+              uz.pendingCustomSends--
             }
-          } else yield bb.deliver(yb)
+          } else yield uz.deliver(zz)
         }))()
       }
-      runBufferedTask(yb, bb) {
-        return th((function*() {
-          let Wy;
+      runBufferedTask(zz, uz) {
+        return QE((function*() {
+          let bz;
           try {
-            return yield yb.deliver(th((function*() {
-              return Wy = yield bb(), {
+            return yield zz.deliver(QE((function*() {
+              return bz = yield uz(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), Wy
+            }))), bz
           } finally {
-            yb.release()
+            zz.release()
           }
         }))()
       }
-      deliver(yb) {
-        var bb = this;
-        return th((function*() {
-          const Wy = bb.deliveryQueue.reserve();
-          if (Wy) try {
-            const Uy = yield bb.prepareRequest(yb), hy = yield Wy.deliver(((yb, Wy) => bb.performAttempt(Uy, yb, Wy)));
-            "terminal" === hy.kind && bb.logError("retries-exhausted" === hy.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Bb(Bb({}, hy.failure), {}, {
-              reason: hy.reason,
-              attempts: hy.attempts,
-              elapsedTimeMs: hy.elapsedTimeMs
+      deliver(zz) {
+        var uz = this;
+        return QE((function*() {
+          const bz = uz.deliveryQueue.reserve();
+          if (bz) try {
+            const Ez = yield uz.prepareRequest(zz), nz = yield bz.deliver(((zz, bz) => uz.performAttempt(Ez, zz, bz)));
+            "terminal" === nz.kind && uz.logError("retries-exhausted" === nz.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Ou(Ou({}, nz.failure), {}, {
+              reason: nz.reason,
+              attempts: nz.attempts,
+              elapsedTimeMs: nz.elapsedTimeMs
             }))
-          } catch (Uy) {
-            bb.logError("Permanent delivery failure", {
-              error: Uy,
+          } catch (Ez) {
+            uz.logError("Permanent delivery failure", {
+              error: Ez,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            Wy.release()
-          } else bb.logError("Permanent delivery failure", {
+            bz.release()
+          } else uz.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var yb;
-        return [this.options.url].concat(null !== (yb = this.config.ignoreUrls) && void 0 !== yb ? yb : [])
+        var zz;
+        return [this.options.url].concat(null !== (zz = this.config.ignoreUrls) && void 0 !== zz ? zz : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(yb) {
-        var bb = this;
-        return th((function*() {
-          var Wy, Uy;
-          const hy = Wf(yb),
-            fy = null === (Wy = hy.meta.session) || void 0 === Wy ? void 0 : Wy.id,
-            Zy = JSON.stringify(hy),
-            cb = null !== (Uy = bb.options.requestOptions) && void 0 !== Uy ? Uy : {},
+      prepareRequest(zz) {
+        var uz = this;
+        return QE((function*() {
+          var bz, Ez;
+          const nz = ni(zz),
+            iz = null === (bz = nz.meta.session) || void 0 === bz ? void 0 : bz.id,
+            lz = JSON.stringify(nz),
+            Mz = null !== (Ez = uz.options.requestOptions) && void 0 !== Ez ? Ez : {},
             {
-              headers: Py = {}
-            } = cb,
-            oy = ef(cb, sf),
+              headers: tz = {}
+            } = Mz,
+            Hz = Ri(Mz, wi),
             {
-              keepalive: By,
-              signal: Ky
-            } = oy,
-            ey = ef(oy, Sf),
-            qb = {};
-          for (const [yb, bb] of Object.entries(Py)) qb[yb] = "function" === typeof bb ? yield bb(): bb;
-          let sy = Zy,
-            Sy = function(yb) {
-              return "undefined" === typeof TextEncoder ? yb.length : (new TextEncoder).encode(yb).byteLength
-            }(Zy);
-          const Ey = {};
-          return bb.compressionEnabled && (sy = yield bb.compress(Zy), Sy = sy.size, Ey["Content-Encoding"] = "gzip"), {
-            bodySize: Sy,
-            sessionId: fy,
-            requestInit: Bb({
+              keepalive: Oz,
+              signal: pz
+            } = Hz,
+            dz = Ri(Hz, Xi),
+            Fz = {};
+          for (const [zz, uz] of Object.entries(tz)) Fz[zz] = "function" === typeof uz ? yield uz(): uz;
+          let Zz = lz,
+            Rz = function(zz) {
+              return "undefined" === typeof TextEncoder ? zz.length : (new TextEncoder).encode(zz).byteLength
+            }(lz);
+          const Kz = {};
+          return uz.compressionEnabled && (Zz = yield uz.compress(lz), Rz = Zz.size, Kz["Content-Encoding"] = "gzip"), {
+            bodySize: Rz,
+            sessionId: iz,
+            requestInit: Ou({
               method: "POST",
-              headers: Bb(Bb(Bb(Bb(Bb({
+              headers: Ou(Ou(Ou(Ou(Ou({
                 "Content-Type": "application/json"
-              }, Ey), qb), bb.options.apiKey ? {
-                "x-api-key": bb.options.apiKey
-              } : {}), fy ? {
-                "x-faro-session-id": fy
+              }, Kz), Fz), uz.options.apiKey ? {
+                "x-api-key": uz.options.apiKey
+              } : {}), iz ? {
+                "x-faro-session-id": iz
               } : {}), {}, {
-                "Idempotency-Key": lb(20)
+                "Idempotency-Key": wu(20)
               }),
-              body: sy
-            }, ey)
+              body: Zz
+            }, dz)
           }
         }))()
       }
-      performAttempt(yb, bb, Wy) {
-        var Uy = this;
-        return th((function*() {
-          var hy;
-          const fy = null === (hy = Uy.options.requestOptions) || void 0 === hy ? void 0 : hy.signal;
-          if (null === fy || void 0 === fy ? void 0 : fy.aborted) return {
+      performAttempt(zz, uz, bz) {
+        var Ez = this;
+        return QE((function*() {
+          var nz;
+          const iz = null === (nz = Ez.options.requestOptions) || void 0 === nz ? void 0 : nz.signal;
+          if (null === iz || void 0 === iz ? void 0 : iz.aborted) return {
             kind: "terminal",
             failure: {
-              error: fy.reason
+              error: iz.reason
             },
             attemptsMade: 0
           };
-          let Zy = 0;
+          let lz = 0;
           try {
-            var cb;
-            const hy = yield Uy.fetchWithKeepaliveFallback(yb.requestInit, yb.bodySize, !!Wy || (null === (cb = Uy.options.requestOptions) || void 0 === cb ? void 0 : cb.keepalive), bb, (() => Zy++));
-            if (Uy.handleResponse(hy, yb.sessionId), hy.status >= 200 && hy.status < 300) return {
+            var Mz;
+            const nz = yield Ez.fetchWithKeepaliveFallback(zz.requestInit, zz.bodySize, !!bz || (null === (Mz = Ez.options.requestOptions) || void 0 === Mz ? void 0 : Mz.keepalive), uz, (() => lz++));
+            if (Ez.handleResponse(nz, zz.sessionId), nz.status >= 200 && nz.status < 300) return {
               kind: "success",
-              attemptsMade: Zy
+              attemptsMade: lz
             };
-            const fy = {
-              status: hy.status
+            const iz = {
+              status: nz.status
             };
-            return !Ef.has(hy.status) || Wy ? {
+            return !fi.has(nz.status) || bz ? {
               kind: "terminal",
-              failure: fy,
-              attemptsMade: Zy
+              failure: iz,
+              attemptsMade: lz
             } : {
               kind: "retry",
-              failure: fy,
-              attemptsMade: Zy,
-              retryAfterMs: lf.has(hy.status) ? Uy.getRetryAfterDelayMs(hy) : void 0
+              failure: iz,
+              attemptsMade: lz,
+              retryAfterMs: si.has(nz.status) ? Ez.getRetryAfterDelayMs(nz) : void 0
             }
-          } catch (Py) {
-            const yb = {
-              error: Py
+          } catch (tz) {
+            const zz = {
+              error: tz
             };
-            return (null === fy || void 0 === fy ? void 0 : fy.aborted) || !Uy.isFetchNetworkError(Py) || Wy ? {
+            return (null === iz || void 0 === iz ? void 0 : iz.aborted) || !Ez.isFetchNetworkError(tz) || bz ? {
               kind: "terminal",
-              failure: yb,
-              attemptsMade: Zy
+              failure: zz,
+              attemptsMade: lz
             } : {
               kind: "retry",
-              failure: yb,
-              attemptsMade: Zy
+              failure: zz,
+              attemptsMade: lz
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(yb, bb, Wy, Uy, hy) {
-        var fy = this;
-        return th((function*() {
-          const Zy = fy.getNow(),
-            cb = fy.reserveKeepalive(bb, Wy);
+      fetchWithKeepaliveFallback(zz, uz, bz, Ez, nz) {
+        var iz = this;
+        return QE((function*() {
+          const lz = iz.getNow(),
+            Mz = iz.reserveKeepalive(uz, bz);
           try {
-            return yield fy.fetchWithTimeout(Bb(Bb({}, yb), {}, {
-              keepalive: cb.keepalive
-            }), fy.requestTimeoutMs, hy)
-          } catch (oy) {
-            var Py;
-            if (cb.keepalive && Uy > 1 && fy.isFetchNetworkError(oy) && !(oy instanceof Tf) && !(null === (Py = fy.options.requestOptions) || void 0 === Py || null === (Py = Py.signal) || void 0 === Py ? void 0 : Py.aborted)) {
-              fy.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const bb = fy.requestTimeoutMs - (fy.getNow() - Zy);
-              return fy.fetchWithTimeout(Bb(Bb({}, yb), {}, {
+            return yield iz.fetchWithTimeout(Ou(Ou({}, zz), {}, {
+              keepalive: Mz.keepalive
+            }), iz.requestTimeoutMs, nz)
+          } catch (Hz) {
+            var tz;
+            if (Mz.keepalive && Ez > 1 && iz.isFetchNetworkError(Hz) && !(Hz instanceof Ni) && !(null === (tz = iz.options.requestOptions) || void 0 === tz || null === (tz = tz.signal) || void 0 === tz ? void 0 : tz.aborted)) {
+              iz.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const uz = iz.requestTimeoutMs - (iz.getNow() - lz);
+              return iz.fetchWithTimeout(Ou(Ou({}, zz), {}, {
                 keepalive: !1
-              }), bb, hy)
+              }), uz, nz)
             }
-            throw oy
+            throw Hz
           } finally {
-            cb.release()
+            Mz.release()
           }
         }))()
       }
-      fetchWithTimeout(yb, bb, Wy) {
-        var Uy = this;
-        return th((function*() {
-          var hy;
-          const fy = null === (hy = Uy.options.requestOptions) || void 0 === hy ? void 0 : hy.signal;
-          if (Uy.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return Wy(), fetch(Uy.options.url, Bb(Bb({}, yb), {}, {
-            signal: fy
+      fetchWithTimeout(zz, uz, bz) {
+        var Ez = this;
+        return QE((function*() {
+          var nz;
+          const iz = null === (nz = Ez.options.requestOptions) || void 0 === nz ? void 0 : nz.signal;
+          if (Ez.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return bz(), fetch(Ez.options.url, Ou(Ou({}, zz), {}, {
+            signal: iz
           }));
-          if (bb <= 0) throw new Tf("Request timed out");
-          const Zy = new AbortController,
-            cb = () => Zy.abort(null === fy || void 0 === fy ? void 0 : fy.reason);
-          null === fy || void 0 === fy || fy.addEventListener("abort", cb, {
+          if (uz <= 0) throw new Ni("Request timed out");
+          const lz = new AbortController,
+            Mz = () => lz.abort(null === iz || void 0 === iz ? void 0 : iz.reason);
+          null === iz || void 0 === iz || iz.addEventListener("abort", Mz, {
             once: !0
           });
-          let Py = !1;
-          const oy = setTimeout((() => {
-            Py = !0, Zy.abort()
-          }), bb);
+          let tz = !1;
+          const Hz = setTimeout((() => {
+            tz = !0, lz.abort()
+          }), uz);
           try {
-            return Wy(), yield fetch(Uy.options.url, Bb(Bb({}, yb), {}, {
-              signal: Zy.signal
+            return bz(), yield fetch(Ez.options.url, Ou(Ou({}, zz), {}, {
+              signal: lz.signal
             }))
-          } catch (By) {
-            if (Py && !(null === fy || void 0 === fy ? void 0 : fy.aborted)) throw new Tf("Request timed out");
-            throw By
+          } catch (Oz) {
+            if (tz && !(null === iz || void 0 === iz ? void 0 : iz.aborted)) throw new Ni("Request timed out");
+            throw Oz
           } finally {
-            clearTimeout(oy), null === fy || void 0 === fy || fy.removeEventListener("abort", cb)
+            clearTimeout(Hz), null === iz || void 0 === iz || iz.removeEventListener("abort", Mz)
           }
         }))()
       }
-      getRetryAfterDelayMs(yb) {
-        const bb = yb.headers.get("Retry-After");
-        if (!bb) return;
-        if (/^\d+$/.test(bb)) {
-          const yb = 1e3 * Number(bb);
-          return Number.isFinite(yb) ? yb : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(zz) {
+        const uz = zz.headers.get("Retry-After");
+        if (!uz) return;
+        if (/^\d+$/.test(uz)) {
+          const zz = 1e3 * Number(uz);
+          return Number.isFinite(zz) ? zz : Number.POSITIVE_INFINITY
         }
-        const Wy = this.getNow(),
-          Uy = function(yb, bb) {
-            const Wy = hf.exec(yb);
-            if (Wy) {
-              const [, yb, bb, Uy, hy, fy, Zy, cb] = Wy;
-              return Bf({
-                weekday: cZ.indexOf(yb),
-                day: Number(bb),
-                month: of.indexOf(Uy),
-                year: Number(hy),
-                hour: Number(fy),
-                minute: Number(Zy),
-                second: Number(cb)
+        const bz = this.getNow(),
+          Ez = function(zz, uz) {
+            const bz = li.exec(zz);
+            if (bz) {
+              const [, zz, uz, Ez, nz, iz, lz, Mz] = bz;
+              return Fi({
+                weekday: Hi.indexOf(zz),
+                day: Number(uz),
+                month: di.indexOf(Ez),
+                year: Number(nz),
+                hour: Number(iz),
+                minute: Number(lz),
+                second: Number(Mz)
               })
             }
-            const Uy = ff.exec(yb);
-            if (Uy) {
-              const [, yb, Wy, Zy, cb, Py, oy, By] = Uy, Ky = new Date(bb);
-              if (Number.isNaN(Ky.getTime())) return;
-              const ey = Ky.getUTCFullYear();
-              let qb = 100 * Math.floor(ey / 100) + Number(cb);
-              qb < ey && (qb += 100);
-              const sy = of.indexOf(Zy),
-                Sy = {
-                  month: sy,
-                  day: Number(Wy),
-                  hour: Number(Py),
-                  minute: Number(oy),
-                  second: Number(By),
+            const Ez = Mi.exec(zz);
+            if (Ez) {
+              const [, zz, bz, lz, Mz, tz, Hz, Oz] = Ez, pz = new Date(uz);
+              if (Number.isNaN(pz.getTime())) return;
+              const dz = pz.getUTCFullYear();
+              let Fz = 100 * Math.floor(dz / 100) + Number(Mz);
+              Fz < dz && (Fz += 100);
+              const Zz = di.indexOf(lz),
+                Rz = {
+                  month: Zz,
+                  day: Number(bz),
+                  hour: Number(tz),
+                  minute: Number(Hz),
+                  second: Number(Oz),
                   millisecond: 0
                 },
-                Ey = {
-                  month: Ky.getUTCMonth(),
-                  day: Ky.getUTCDate(),
-                  hour: Ky.getUTCHours(),
-                  minute: Ky.getUTCMinutes(),
-                  second: Ky.getUTCSeconds(),
-                  millisecond: Ky.getUTCMilliseconds()
+                Kz = {
+                  month: pz.getUTCMonth(),
+                  day: pz.getUTCDate(),
+                  hour: pz.getUTCHours(),
+                  minute: pz.getUTCMinutes(),
+                  second: pz.getUTCSeconds(),
+                  millisecond: pz.getUTCMilliseconds()
                 };
-              return (qb > ey + 50 || qb === ey + 50 && (fy = Ey, ((hy = Sy).month - fy.month || hy.day - fy.day || hy.hour - fy.hour || hy.minute - fy.minute || hy.second - fy.second || hy.millisecond - fy.millisecond) > 0)) && (qb -= 100), Bf({
-                weekday: Pf.indexOf(yb),
-                day: Number(Wy),
-                month: sy,
-                year: qb,
-                hour: Number(Py),
-                minute: Number(oy),
-                second: Number(By)
+              return (Fz > dz + 50 || Fz === dz + 50 && (iz = Kz, ((nz = Rz).month - iz.month || nz.day - iz.day || nz.hour - iz.hour || nz.minute - iz.minute || nz.second - iz.second || nz.millisecond - iz.millisecond) > 0)) && (Fz -= 100), Fi({
+                weekday: Oi.indexOf(zz),
+                day: Number(bz),
+                month: Zz,
+                year: Fz,
+                hour: Number(tz),
+                minute: Number(Hz),
+                second: Number(Oz)
               })
             }
-            var hy, fy;
-            const Zy = Zf.exec(yb);
-            if (!Zy) return;
-            const [, cb, Py, oy, By, Ky, ey, qb, sy] = Zy;
-            return Bf({
-              weekday: cZ.indexOf(cb),
-              day: Number(null !== oy && void 0 !== oy ? oy : By),
-              month: of.indexOf(Py),
-              year: Number(sy),
-              hour: Number(Ky),
-              minute: Number(ey),
-              second: Number(qb)
+            var nz, iz;
+            const lz = ti.exec(zz);
+            if (!lz) return;
+            const [, Mz, tz, Hz, Oz, pz, dz, Fz, Zz] = lz;
+            return Fi({
+              weekday: Hi.indexOf(Mz),
+              day: Number(null !== Hz && void 0 !== Hz ? Hz : Oz),
+              month: di.indexOf(tz),
+              year: Number(Zz),
+              hour: Number(pz),
+              minute: Number(dz),
+              second: Number(Fz)
             })
-          }(bb, Wy);
-        return null == Uy ? void 0 : Math.max(0, Uy - Wy)
+          }(uz, bz);
+        return null == Ez ? void 0 : Math.max(0, Ez - bz)
       }
-      reserveKeepalive(yb, bb) {
-        if (!1 === bb || yb > 6e4 || mZ + yb > 6e4 || Cf >= 9) return {
+      reserveKeepalive(zz, uz) {
+        if (!1 === uz || zz > 6e4 || ri + zz > 6e4 || oi >= 9) return {
           keepalive: !1,
-          release: Db
+          release: Du
         };
-        mZ += yb, Cf++;
-        let Wy = !1;
+        ri += zz, oi++;
+        let bz = !1;
         return {
           keepalive: !0,
           release: () => {
-            Wy || (Wy = !0, mZ -= yb, Cf--)
+            bz || (bz = !0, ri -= zz, oi--)
           }
         }
       }
-      handleResponse(yb, bb) {
-        202 === yb.status && "invalid" === yb.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), bb), yb.text().catch(Db)
+      handleResponse(zz, uz) {
+        202 === zz.status && "invalid" === zz.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), uz), zz.text().catch(Du)
       }
-      isFetchNetworkError(yb) {
-        return yb instanceof TypeError || yb instanceof Tf || yb instanceof DOMException && "AbortError" === yb.name
+      isFetchNetworkError(zz) {
+        return zz instanceof TypeError || zz instanceof Ni || zz instanceof DOMException && "AbortError" === zz.name
       }
-      compress(yb) {
-        return th((function*() {
-          const bb = [],
-            Wy = new ReadableStream({
-              start(bb) {
-                bb.enqueue((new TextEncoder).encode(yb)), bb.close()
+      compress(zz) {
+        return QE((function*() {
+          const uz = [],
+            bz = new ReadableStream({
+              start(uz) {
+                uz.enqueue((new TextEncoder).encode(zz)), uz.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: yb,
-              value: Uy
-            } = yield Wy.read();
-            if (yb) return new Blob(bb);
-            bb.push(Uy)
+              done: zz,
+              value: Ez
+            } = yield bz.read();
+            if (zz) return new Blob(uz);
+            uz.push(Ez)
           }
         }))()
       }
-      extendFaroSession(yb, bb, Wy) {
-        var Uy, hy;
-        const fy = yb.sessionTracking;
-        if (!(null === fy || void 0 === fy ? void 0 : fy.enabled)) return void bb("Session expired.");
+      extendFaroSession(zz, uz, bz) {
+        var Ez, nz;
+        const iz = zz.sessionTracking;
+        if (!(null === iz || void 0 === iz ? void 0 : iz.enabled)) return void uz("Session expired.");
         const {
-          fetchUserSession: Zy,
-          storeUserSession: cb
-        } = jW(fy), Py = null === (Uy = this.metas.value.session) || void 0 === Uy ? void 0 : Uy.id, oy = null === (hy = Zy()) || void 0 === hy ? void 0 : hy.sessionId;
-        Wy && Wy === Py && Wy === oy ? (Mb({
-          fetchUserSession: Zy,
-          storeUserSession: cb
+          fetchUserSession: lz,
+          storeUserSession: Mz
+        } = yu(iz), tz = null === (Ez = this.metas.value.session) || void 0 === Ez ? void 0 : Ez.id, Hz = null === (nz = lz()) || void 0 === nz ? void 0 : nz.sessionId;
+        bz && bz === tz && bz === Hz ? (Lu({
+          fetchUserSession: lz,
+          storeUserSession: Mz
         })({
           forceSessionExtend: !0
-        }), bb("Session expired; created new session.")) : bb("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), uz("Session expired; created new session.")) : uz("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const Jf = () => {
-      const yb = window.k6;
+    const xi = () => {
+      const zz = window.k6;
       return {
-        k6: Bb({
+        k6: Ou({
           isK6Browser: !0
-        }, (null === yb || void 0 === yb ? void 0 : yb.testRunId) && {
-          testRunId: null === yb || void 0 === yb ? void 0 : yb.testRunId
+        }, (null === zz || void 0 === zz ? void 0 : zz.testRunId) && {
+          testRunId: null === zz || void 0 === zz ? void 0 : zz.testRunId
         })
       }
     };
-    let gZ, Gf;
+    let Ji, Ai;
 
-    function Of() {
+    function Ti() {
       let {
-        generatePageId: yb,
-        initialPageMeta: bb
+        generatePageId: zz,
+        initialPageMeta: uz
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const Wy = location.href;
-        return ib(yb) && gZ !== Wy && (gZ = Wy, Gf = yb(location)), {
-          page: Bb(Bb({
-            url: Wy
-          }, Gf ? {
-            id: Gf
-          } : {}), bb)
+        const bz = location.href;
+        return Tz(zz) && Ji !== bz && (Ji = bz, Ai = zz(location)), {
+          page: Ou(Ou({
+            url: bz
+          }, Ai ? {
+            id: Ai
+          } : {}), uz)
         }
       }
     }
 
-    function Rf() {
-      let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : db,
-        bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Wy = wb;
-      return bb > 0 && (Wy.error = bb >= 1 ? function() {
-        for (var bb = arguments.length, Uy = new Array(bb), hy = 0; hy < bb; hy++) Uy[hy] = arguments[hy];
-        yb.error(`${Wy.prefix}\n`, ...Uy)
-      } : Db, Wy.warn = bb >= 2 ? function() {
-        for (var bb = arguments.length, Uy = new Array(bb), hy = 0; hy < bb; hy++) Uy[hy] = arguments[hy];
-        yb.warn(`${Wy.prefix}\n`, ...Uy)
-      } : Db, Wy.info = bb >= 3 ? function() {
-        for (var bb = arguments.length, Uy = new Array(bb), hy = 0; hy < bb; hy++) Uy[hy] = arguments[hy];
-        yb.info(`${Wy.prefix}\n`, ...Uy)
-      } : Db, Wy.debug = bb >= 4 ? function() {
-        for (var bb = arguments.length, Uy = new Array(bb), hy = 0; hy < bb; hy++) Uy[hy] = arguments[hy];
-        yb.debug(`${Wy.prefix}\n`, ...Uy)
-      } : Db), Wy
+    function Li() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ku,
+        uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const bz = Wu;
+      return uz > 0 && (bz.error = uz >= 1 ? function() {
+        for (var uz = arguments.length, Ez = new Array(uz), nz = 0; nz < uz; nz++) Ez[nz] = arguments[nz];
+        zz.error(`${bz.prefix}\n`, ...Ez)
+      } : Du, bz.warn = uz >= 2 ? function() {
+        for (var uz = arguments.length, Ez = new Array(uz), nz = 0; nz < uz; nz++) Ez[nz] = arguments[nz];
+        zz.warn(`${bz.prefix}\n`, ...Ez)
+      } : Du, bz.info = uz >= 3 ? function() {
+        for (var uz = arguments.length, Ez = new Array(uz), nz = 0; nz < uz; nz++) Ez[nz] = arguments[nz];
+        zz.info(`${bz.prefix}\n`, ...Ez)
+      } : Du, bz.debug = uz >= 4 ? function() {
+        for (var uz = arguments.length, Ez = new Array(uz), nz = 0; nz < uz; nz++) Ez[nz] = arguments[nz];
+        zz.debug(`${bz.prefix}\n`, ...Ez)
+      } : Du), bz
     }
-    const vZ = "faro",
-      iZ = {
+    const Pi = "faro",
+      Gi = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      Mf = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      ai = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function Yf(yb) {
-      var bb, Wy, hy, fy, Zy, cb;
-      const Py = [],
-        By = Rf(yb.unpatchedConsole, yb.internalLoggerLevel);
-      yb.transports ? ((yb.url || yb.apiKey) && By.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Py.push(...yb.transports)) : yb.url ? Py.push(new Vf({
-        url: yb.url,
-        apiKey: yb.apiKey,
-        requestCompression: yb.requestCompression
-      })) : By.error('either "url" or "transports" must be defined');
+    function Vi(zz) {
+      var uz, bz, nz, iz, lz, Mz;
+      const tz = [],
+        Oz = Li(zz.unpatchedConsole, zz.internalLoggerLevel);
+      zz.transports ? ((zz.url || zz.apiKey) && Oz.error('if "transports" is defined, "url" and "apiKey" should not be defined'), tz.push(...zz.transports)) : zz.url ? tz.push(new vi({
+        url: zz.url,
+        apiKey: zz.apiKey,
+        requestCompression: zz.requestCompression
+      })) : Oz.error('either "url" or "transports" must be defined');
       const {
-        dedupe: Ky = !0,
-        eventDomain: ey = Uy,
-        globalObjectKey: qb = vZ,
-        instrumentations: sy = jf(),
-        internalLoggerLevel: Sy = kW,
-        isolate: Ey = !1,
-        logArgsSerializer: ly = YW,
-        metas: mb = nf(yb),
-        paused: Cy = !1,
-        preventGlobalExposure: Ty = !1,
-        unpatchedConsole: Vy = db,
-        url: Jy,
-        experimental: gb
-      } = yb, Gy = ef(yb, Mf), Oy = null !== (bb = null === gb || void 0 === gb ? void 0 : gb.trackNavigation) && void 0 !== bb && bb, Ry = {
-        dataAttributeName: xh(null !== (Wy = null === (hy = yb.userActionsInstrumentation) || void 0 === hy ? void 0 : hy.dataAttributeName) && void 0 !== Wy ? Wy : NU),
-        excludeItem: null === (fy = yb.userActionsInstrumentation) || void 0 === fy ? void 0 : fy.excludeItem,
-        initialActivityTimeout: AU(null === (Zy = yb.userActionsInstrumentation) || void 0 === Zy ? void 0 : Zy.initialActivityTimeout, 100, (yb => By.warn(yb)))
+        dedupe: pz = !0,
+        eventDomain: dz = Ez,
+        globalObjectKey: Fz = Pi,
+        instrumentations: Zz = Qn(),
+        internalLoggerLevel: Rz = eu,
+        isolate: Kz = !1,
+        logArgsSerializer: wz = Pb,
+        metas: Xz = qi(zz),
+        paused: fz = !1,
+        preventGlobalExposure: sz = !1,
+        unpatchedConsole: rz = ku,
+        url: oz,
+        experimental: Nz
+      } = zz, vz = Ri(zz, ai), xz = null !== (uz = null === Nz || void 0 === Nz ? void 0 : Nz.trackNavigation) && void 0 !== uz && uz, Jz = {
+        dataAttributeName: CE(null !== (bz = null === (nz = zz.userActionsInstrumentation) || void 0 === nz ? void 0 : nz.dataAttributeName) && void 0 !== bz ? bz : jE),
+        excludeItem: null === (iz = zz.userActionsInstrumentation) || void 0 === iz ? void 0 : iz.excludeItem,
+        initialActivityTimeout: YE(null === (lz = zz.userActionsInstrumentation) || void 0 === lz ? void 0 : lz.initialActivityTimeout, 100, (zz => Oz.warn(zz)))
       };
-      return Bb(Bb({}, Gy), {}, {
-        batching: Bb(Bb({}, iZ), yb.batching),
-        dedupe: Ky,
-        globalObjectKey: qb,
-        instrumentations: Xf(sy, yb),
-        internalLoggerLevel: Sy,
-        isolate: Ey,
-        logArgsSerializer: ly,
-        metas: mb,
-        parseStacktrace: SW,
-        paused: Cy,
-        preventGlobalExposure: Ty,
-        transports: Py,
-        unpatchedConsole: Vy,
-        eventDomain: ey,
-        ignoreUrls: [...null !== (cb = yb.ignoreUrls) && void 0 !== cb ? cb : [], ...Jy ? [Jy] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: Bb(Bb(Bb({}, oy), yb.sessionTracking), uf({
-          trackGeolocation: yb.trackGeolocation,
-          sessionTracking: yb.sessionTracking
+      return Ou(Ou({}, vz), {}, {
+        batching: Ou(Ou({}, Gi), zz.batching),
+        dedupe: pz,
+        globalObjectKey: Fz,
+        instrumentations: mi(Zz, zz),
+        internalLoggerLevel: Rz,
+        isolate: Kz,
+        logArgsSerializer: wz,
+        metas: Xz,
+        parseStacktrace: Rb,
+        paused: fz,
+        preventGlobalExposure: sz,
+        transports: tz,
+        unpatchedConsole: rz,
+        eventDomain: dz,
+        ignoreUrls: [...null !== (Mz = zz.ignoreUrls) && void 0 !== Mz ? Mz : [], ...oz ? [oz] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: Ou(Ou(Ou({}, Hz), zz.sessionTracking), Ui({
+          trackGeolocation: zz.trackGeolocation,
+          sessionTracking: zz.sessionTracking
         })),
-        userActionsInstrumentation: Ry,
+        userActionsInstrumentation: Jz,
         experimental: {
-          trackNavigation: Oy
+          trackNavigation: xz
         }
       })
     }
 
-    function Xf(yb, bb) {
+    function mi(zz, uz) {
       let {
-        experimental: Wy
-      } = bb;
-      var Uy;
-      const hy = null !== (Uy = null === Wy || void 0 === Wy ? void 0 : Wy.trackNavigation) && void 0 !== Uy && Uy;
-      return yb.filter((yb => !("@grafana/faro-web-sdk:instrumentation-navigation" === yb.name && !hy)))
+        experimental: bz
+      } = uz;
+      var Ez;
+      const nz = null !== (Ez = null === bz || void 0 === bz ? void 0 : bz.trackNavigation) && void 0 !== Ez && Ez;
+      return zz.filter((zz => !("@grafana/faro-web-sdk:instrumentation-navigation" === zz.name && !nz)))
     }
 
-    function nf(yb) {
-      var bb, Wy, Uy;
+    function qi(zz) {
+      var uz, bz, Ez;
       const {
-        page: hy,
-        generatePageId: fy
-      } = null !== (bb = null === yb || void 0 === yb ? void 0 : yb.pageTracking) && void 0 !== bb ? bb : {}, Zy = [Nh, zf, Of({
-        generatePageId: fy,
-        initialPageMeta: hy
-      }), ...null !== (Wy = yb.metas) && void 0 !== Wy ? Wy : [], xf];
-      return vb(null === (Uy = window) || void 0 === Uy ? void 0 : Uy.k6) ? [...Zy, Jf] : Zy
+        page: nz,
+        generatePageId: iz
+      } = null !== (uz = null === zz || void 0 === zz ? void 0 : zz.pageTracking) && void 0 !== uz ? uz : {}, lz = [Bn, Cn, Ti({
+        generatePageId: iz,
+        initialPageMeta: nz
+      }), ...null !== (bz = zz.metas) && void 0 !== bz ? bz : [], kn];
+      return Az(null === (Ez = window) || void 0 === Ez ? void 0 : Ez.k6) ? [...lz, xi] : lz
     }
 
-    function uf(yb) {
+    function Ui(zz) {
       let {
-        trackGeolocation: bb,
-        sessionTracking: Wy
-      } = yb;
-      var Uy;
-      const hy = {};
-      return Oy(bb) && (hy.geoLocationTrackingEnabled = bb), kb(hy) ? {} : {
-        session: Bb(Bb({}, null !== (Uy = null === Wy || void 0 === Wy ? void 0 : Wy.session) && void 0 !== Uy ? Uy : {}), {}, {
-          overrides: hy
+        trackGeolocation: uz,
+        sessionTracking: bz
+      } = zz;
+      var Ez;
+      const nz = {};
+      return xz(uz) && (nz.geoLocationTrackingEnabled = uz), ez(nz) ? {} : {
+        session: Ou(Ou({}, null !== (Ez = null === bz || void 0 === bz ? void 0 : bz.session) && void 0 !== Ez ? Ez : {}), {}, {
+          overrides: nz
         })
       }
     }
-    const rZ = new WeakSet;
+    const ci = new WeakSet;
 
-    function Hf(yb) {
-      return rZ.add(yb), yb
+    function gi(zz) {
+      return ci.add(zz), zz
     }
 
-    function aZ(yb, bb) {
-      if (yb.capture) return Hf(yb.capture(bb));
-      const Wy = Hf(yb.value);
-      return null === bb || void 0 === bb || bb(), Wy
+    function Si(zz, uz) {
+      if (zz.capture) return gi(zz.capture(uz));
+      const bz = gi(zz.value);
+      return null === uz || void 0 === uz || uz(), bz
     }
 
-    function Ff(yb) {
-      const bb = `__faroBundleId_${yb}`,
-        Wy = null === By || void 0 === By ? void 0 : By[bb];
-      if ("string" === typeof Wy && "" !== Wy) return Wy;
-      const Uy = "undefined" !== typeof window ? window[bb] : void 0;
-      return "string" === typeof Uy && "" !== Uy ? Uy : void 0
+    function yi(zz) {
+      const uz = `__faroBundleId_${zz}`,
+        bz = null === Oz || void 0 === Oz ? void 0 : Oz[uz];
+      if ("string" === typeof bz && "" !== bz) return bz;
+      const Ez = "undefined" !== typeof window ? window[uz] : void 0;
+      return "string" === typeof Ez && "" !== Ez ? Ez : void 0
     }
 
-    function pf(yb) {
-      var bb, Wy;
-      const Uy = yb.config.app.name,
-        hy = Uy ? function(yb) {
-          return null === By || void 0 === By ? void 0 : By[`__faroGitHash_${yb}`]
-        }(Uy) : void 0,
-        fy = {
+    function Di(zz) {
+      var uz, bz;
+      const Ez = zz.config.app.name,
+        nz = Ez ? function(zz) {
+          return null === Oz || void 0 === Oz ? void 0 : Oz[`__faroGitHash_${zz}`]
+        }(Ez) : void 0,
+        iz = {
           sdk: {
-            version: WW,
+            version: bb,
             name: "faro"
           },
-          app: Ab({
-            bundleId: Uy && Ff(Uy)
-          }, void 0 !== hy ? {
-            gitHash: hy
+          app: Yu({
+            bundleId: Ez && yi(Ez)
+          }, void 0 !== nz ? {
+            gitHash: nz
           } : {})
         },
-        Zy = null === (bb = yb.config.sessionTracking) || void 0 === bb ? void 0 : bb.session;
-      Zy && yb.api.setSession(Zy), yb.config.app && (fy.app = Ab(Ab({}, yb.config.app), fy.app)), yb.config.user && (fy.user = yb.config.user), yb.config.view && (fy.view = yb.config.view), yb.metas.add(fy, ...null !== (Wy = yb.config.metas) && void 0 !== Wy ? Wy : [])
+        lz = null === (uz = zz.config.sessionTracking) || void 0 === uz ? void 0 : uz.session;
+      lz && zz.api.setSession(lz), zz.config.app && (iz.app = Yu(Yu({}, zz.config.app), iz.app)), zz.config.user && (iz.user = zz.config.user), zz.config.view && (iz.view = zz.config.view), zz.metas.add(iz, ...null !== (bz = zz.config.metas) && void 0 !== bz ? bz : [])
     }
-    var Lf = class {
-      constructor(yb, bb) {
-        var Wy, Uy;
-        this.signalBuffer = [], this.itemLimit = null !== (Wy = null === bb || void 0 === bb ? void 0 : bb.itemLimit) && void 0 !== Wy ? Wy : 50, this.sendTimeout = null !== (Uy = null === bb || void 0 === bb ? void 0 : bb.sendTimeout) && void 0 !== Uy ? Uy : 250, this.paused = (null === bb || void 0 === bb ? void 0 : bb.paused) || !1, this.sendFn = yb, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var Qi = class {
+      constructor(zz, uz) {
+        var bz, Ez;
+        this.signalBuffer = [], this.itemLimit = null !== (bz = null === uz || void 0 === uz ? void 0 : uz.itemLimit) && void 0 !== bz ? bz : 50, this.sendTimeout = null !== (Ez = null === uz || void 0 === uz ? void 0 : uz.sendTimeout) && void 0 !== Ez ? Ez : 250, this.paused = (null === uz || void 0 === uz ? void 0 : uz.paused) || !1, this.sendFn = zz, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(yb) {
-        this.paused || (this.signalBuffer.push(yb), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(zz) {
+        this.paused || (this.signalBuffer.push(zz), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(yb) {
-        const bb = new Map;
-        return yb.forEach((yb => {
-          const Wy = JSON.stringify(yb.meta);
-          let Uy = bb.get(Wy);
-          Uy = void 0 === Uy ? [yb] : [...Uy, yb], bb.set(Wy, Uy)
-        })), Array.from(bb.values())
+      groupItems(zz) {
+        const uz = new Map;
+        return zz.forEach((zz => {
+          const bz = JSON.stringify(zz.meta);
+          let Ez = uz.get(bz);
+          Ez = void 0 === Ez ? [zz] : [...Ez, zz], uz.set(bz, Ez)
+        })), Array.from(uz.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const yb = this.signalBuffer;
+        const zz = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(yb).forEach(this.sendFn)
-        } catch (bb) {
-          throw this.signalBuffer = [...yb, ...this.signalBuffer], this.trimBufferToLimit(), bb
+          this.groupItems(zz).forEach(this.sendFn)
+        } catch (uz) {
+          throw this.signalBuffer = [...zz, ...this.signalBuffer], this.trimBufferToLimit(), uz
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function Qf(yb, bb, Wy, Uy) {
-      var hy;
-      bb.debug("Initializing transports");
-      const fy = [];
-      let Zy = [];
-      const cb = yb => {
-        let bb = yb;
-        for (const Uy of Zy) {
-          const yb = bb.map(Uy).filter(Boolean);
-          if (0 === yb.length) return [];
-          bb = jZ(yb, Wy)
+    function Wi(zz, uz, bz, Ez) {
+      var nz;
+      uz.debug("Initializing transports");
+      const iz = [];
+      let lz = [];
+      const Mz = zz => {
+        let uz = zz;
+        for (const Ez of lz) {
+          const zz = uz.map(Ez).filter(Boolean);
+          if (0 === zz.length) return [];
+          uz = ei(zz, bz)
         }
-        return bb
+        return uz
       };
-      let Py;
-      (null === (hy = Wy.batching) || void 0 === hy ? void 0 : hy.enabled) && (Py = new Lf((yb => {
-        const Wy = cb(yb);
-        if (0 !== Wy.length)
-          for (const Uy of fy) bb.debug(`Transporting item using ${Uy.name}\n`, Wy), Uy.isBatched() && Uy.send(Wy)
+      let tz;
+      (null === (nz = bz.batching) || void 0 === nz ? void 0 : nz.enabled) && (tz = new Qi((zz => {
+        const bz = Mz(zz);
+        if (0 !== bz.length)
+          for (const Ez of iz) uz.debug(`Transporting item using ${Ez.name}\n`, bz), Ez.isBatched() && Ez.send(bz)
       }), {
-        sendTimeout: Wy.batching.sendTimeout,
-        itemLimit: Wy.batching.itemLimit,
-        paused: Wy.paused
+        sendTimeout: bz.batching.sendTimeout,
+        itemLimit: bz.batching.itemLimit,
+        paused: bz.paused
       }));
       return {
         add: function() {
-          bb.debug("Adding transports");
-          for (var hy = arguments.length, Zy = new Array(hy), cb = 0; cb < hy; cb++) Zy[cb] = arguments[cb];
-          Zy.forEach((hy => {
-            bb.debug(`Adding "${hy.name}" transport`), fy.some((yb => yb === hy)) ? bb.warn(`Transport ${hy.name} is already added`) : (hy.unpatchedConsole = yb, hy.internalLogger = bb, hy.config = Wy, hy.metas = Uy, fy.push(hy))
+          uz.debug("Adding transports");
+          for (var nz = arguments.length, lz = new Array(nz), Mz = 0; Mz < nz; Mz++) lz[Mz] = arguments[Mz];
+          lz.forEach((nz => {
+            uz.debug(`Adding "${nz.name}" transport`), iz.some((zz => zz === nz)) ? uz.warn(`Transport ${nz.name} is already added`) : (nz.unpatchedConsole = zz, nz.internalLogger = uz, nz.config = bz, nz.metas = Ez, iz.push(nz))
           }))
         },
         addBeforeSendHooks: function() {
-          bb.debug("Adding beforeSendHooks\n", Zy);
-          for (var yb = arguments.length, Wy = new Array(yb), Uy = 0; Uy < yb; Uy++) Wy[Uy] = arguments[Uy];
-          Wy.forEach((yb => {
-            yb && Zy.push(yb)
+          uz.debug("Adding beforeSendHooks\n", lz);
+          for (var zz = arguments.length, bz = new Array(zz), Ez = 0; Ez < zz; Ez++) bz[Ez] = arguments[Ez];
+          bz.forEach((zz => {
+            zz && lz.push(zz)
           }))
         },
-        getBeforeSendHooks: () => [...Zy],
-        execute: yb => {
-          var hy;
-          if (!Wy.paused && Lb(Uy).shouldCapture()) {
-            if (Ky = yb.meta, !rZ.has(Ky)) {
-              var Zy, oy, By;
-              const bb = null === (Zy = Uy.value.session) || void 0 === Zy ? void 0 : Zy.id,
-                hy = aZ(Uy);
-              if (Wy.paused) return;
-              const fy = Ab({}, yb.meta);
-              (null === (oy = fy.session) || void 0 === oy ? void 0 : oy.id) === bb && (null === (By = hy.session) || void 0 === By ? void 0 : By.id) !== bb && (void 0 === hy.session ? delete fy.session : fy.session = hy.session), yb = Ab(Ab({}, yb), {}, {
-                meta: Hf(fy)
+        getBeforeSendHooks: () => [...lz],
+        execute: zz => {
+          var nz;
+          if (!bz.paused && gu(Ez).shouldCapture()) {
+            if (pz = zz.meta, !ci.has(pz)) {
+              var lz, Hz, Oz;
+              const uz = null === (lz = Ez.value.session) || void 0 === lz ? void 0 : lz.id,
+                nz = Si(Ez);
+              if (bz.paused) return;
+              const iz = Yu({}, zz.meta);
+              (null === (Hz = iz.session) || void 0 === Hz ? void 0 : Hz.id) === uz && (null === (Oz = nz.session) || void 0 === Oz ? void 0 : Oz.id) !== uz && (void 0 === nz.session ? delete iz.session : iz.session = nz.session), zz = Yu(Yu({}, zz), {}, {
+                meta: gi(iz)
               })
             }
-            var Ky;
-            (null === (hy = Wy.batching) || void 0 === hy ? void 0 : hy.enabled) && (null === Py || void 0 === Py || Py.addItem(yb)), (yb => {
-              var Uy;
-              if ((null === (Uy = Wy.batching) || void 0 === Uy ? void 0 : Uy.enabled) && fy.every((yb => yb.isBatched()))) return;
-              const [hy] = cb([yb]);
-              if (void 0 !== hy)
-                for (const cb of fy) {
-                  var Zy;
-                  bb.debug(`Transporting item using ${cb.name}\n`, hy), cb.isBatched() ? (null === (Zy = Wy.batching) || void 0 === Zy ? void 0 : Zy.enabled) || cb.send([hy]) : cb.send(hy)
+            var pz;
+            (null === (nz = bz.batching) || void 0 === nz ? void 0 : nz.enabled) && (null === tz || void 0 === tz || tz.addItem(zz)), (zz => {
+              var Ez;
+              if ((null === (Ez = bz.batching) || void 0 === Ez ? void 0 : Ez.enabled) && iz.every((zz => zz.isBatched()))) return;
+              const [nz] = Mz([zz]);
+              if (void 0 !== nz)
+                for (const Mz of iz) {
+                  var lz;
+                  uz.debug(`Transporting item using ${Mz.name}\n`, nz), Mz.isBatched() ? (null === (lz = bz.batching) || void 0 === lz ? void 0 : lz.enabled) || Mz.send([nz]) : Mz.send(nz)
                 }
-            })(yb)
+            })(zz)
           }
         },
-        isPaused: () => Wy.paused,
+        isPaused: () => bz.paused,
         pause: () => {
-          bb.debug("Pausing transports"), null === Py || void 0 === Py || Py.pause(), Wy.paused = !0
+          uz.debug("Pausing transports"), null === tz || void 0 === tz || tz.pause(), bz.paused = !0
         },
         remove: function() {
-          bb.debug("Removing transports");
-          for (var yb = arguments.length, Wy = new Array(yb), Uy = 0; Uy < yb; Uy++) Wy[Uy] = arguments[Uy];
-          Wy.forEach((yb => {
-            bb.debug(`Removing "${yb.name}" transport`);
-            const Wy = fy.indexOf(yb); - 1 !== Wy ? fy.splice(Wy, 1) : bb.warn(`Transport "${yb.name}" is not added`)
+          uz.debug("Removing transports");
+          for (var zz = arguments.length, bz = new Array(zz), Ez = 0; Ez < zz; Ez++) bz[Ez] = arguments[Ez];
+          bz.forEach((zz => {
+            uz.debug(`Removing "${zz.name}" transport`);
+            const bz = iz.indexOf(zz); - 1 !== bz ? iz.splice(bz, 1) : uz.warn(`Transport "${zz.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var yb = arguments.length, Wy = new Array(yb), Uy = 0; Uy < yb; Uy++) Wy[Uy] = arguments[Uy];
-          bb.debug("Removing beforeSendHooks"), Zy = Zy.filter((yb => !Wy.includes(yb)))
+          for (var zz = arguments.length, bz = new Array(zz), Ez = 0; Ez < zz; Ez++) bz[Ez] = arguments[Ez];
+          uz.debug("Removing beforeSendHooks"), lz = lz.filter((zz => !bz.includes(zz)))
         },
         get transports() {
-          return [...fy]
+          return [...iz]
         },
         unpause: () => {
-          bb.debug("Unpausing transports"), null === Py || void 0 === Py || Py.start(), Wy.paused = !1
+          uz.debug("Unpausing transports"), null === tz || void 0 === tz || tz.start(), bz.paused = !1
         }
       }
     }
 
-    function jZ(yb, bb) {
-      if (bb.preserveOriginalError)
-        for (const Wy of yb) "exception" === Wy.type && delete Wy.payload.originalError;
-      return yb
+    function ei(zz, uz) {
+      if (uz.preserveOriginalError)
+        for (const bz of zz) "exception" === bz.type && delete bz.payload.originalError;
+      return zz
     }
-    let Df = db;
+    let ji = ku;
 
-    function tZ(yb) {
-      var bb;
-      return Df = null !== (bb = yb.unpatchedConsole) && void 0 !== bb ? bb : Df, Df
+    function Ii(zz) {
+      var uz;
+      return ji = null !== (uz = zz.unpatchedConsole) && void 0 !== uz ? uz : ji, ji
     }
-    let wf, kZ = wb;
+    let Bi, Ci = Wu;
 
-    function Nf(yb, bb) {
-      return kZ = Rf(yb, bb.internalLoggerLevel), kZ
+    function Yi(zz, uz) {
+      return Ci = Li(zz, uz.internalLoggerLevel), Ci
     }
 
-    function zZ(yb) {
+    function ki(zz) {
       let {
-        internalLogger: bb,
-        config: Wy,
-        metas: Uy,
-        transports: hy,
-        tracesApi: fy,
-        userActionsApi: Zy
-      } = yb;
-      var cb;
-      bb.debug("Initializing exceptions API");
-      let Py = null;
-      wf = null !== (cb = Wy.parseStacktrace) && void 0 !== cb ? cb : wf;
-      const oy = yb => {
-          bb.debug("Changing stacktrace parser"), wf = null !== yb && void 0 !== yb ? yb : wf
+        internalLogger: uz,
+        config: bz,
+        metas: Ez,
+        transports: nz,
+        tracesApi: iz,
+        userActionsApi: lz
+      } = zz;
+      var Mz;
+      uz.debug("Initializing exceptions API");
+      let tz = null;
+      Bi = null !== (Mz = bz.parseStacktrace) && void 0 !== Mz ? Mz : Bi;
+      const Hz = zz => {
+          uz.debug("Changing stacktrace parser"), Bi = null !== zz && void 0 !== zz ? zz : Bi
         },
         {
-          ignoreErrors: By = [],
-          preserveOriginalError: Ky
-        } = Wy;
-      return oy(Wy.parseStacktrace), {
-        changeStacktraceParser: oy,
-        getStacktraceParser: () => wf,
-        pushError: function(yb) {
+          ignoreErrors: Oz = [],
+          preserveOriginalError: pz
+        } = bz;
+      return Hz(bz.parseStacktrace), {
+        changeStacktraceParser: Hz,
+        getStacktraceParser: () => Bi,
+        pushError: function(zz) {
           let {
-            skipDedupe: cb,
-            stackFrames: oy,
-            type: ey,
-            context: qb,
-            spanContext: sy,
-            timestampOverwriteMs: Sy,
-            originalError: Ey,
-            fingerprint: ly,
-            fatal: mb
+            skipDedupe: Mz,
+            stackFrames: Hz,
+            type: dz,
+            context: Fz,
+            spanContext: Zz,
+            timestampOverwriteMs: Rz,
+            originalError: Kz,
+            fingerprint: wz,
+            fatal: Xz
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(yb, bb) {
+          if (! function(zz, uz) {
               const {
-                message: Wy,
-                name: Uy,
-                stack: hy
-              } = bb;
-              return fy = yb, Zy = Wy + " " + Uy + " " + hy, fy.some((yb => Jy(yb) ? Zy.includes(yb) : !!Zy.match(yb)));
-              var fy, Zy
-            }(By, null !== Ey && void 0 !== Ey ? Ey : yb)) try {
-            var Cy, Ty;
-            if (!Lb(Uy).shouldCapture()) return;
-            const By = Hb(Ab(Ab({}, function(yb) {
-                let bb = yb.cause;
-                ab(bb) ? bb = yb.cause.toString() : null !== bb && (vb(yb.cause) || My(yb.cause)) ? bb = rW(yb.cause) : null != bb && (bb = yb.cause.toString());
-                return null == bb ? {} : {
-                  cause: bb
+                message: bz,
+                name: Ez,
+                stack: nz
+              } = uz;
+              return iz = zz, lz = bz + " " + Ez + " " + nz, iz.some((zz => oz(zz) ? lz.includes(zz) : !!lz.match(zz)));
+              var iz, lz
+            }(Oz, null !== Kz && void 0 !== Kz ? Kz : zz)) try {
+            var fz, sz;
+            if (!gu(Ez).shouldCapture()) return;
+            const Oz = qu(Yu(Yu({}, function(zz) {
+                let uz = zz.cause;
+                hz(uz) ? uz = zz.cause.toString() : null !== uz && (Az(zz.cause) || Lz(zz.cause)) ? uz = mu(zz.cause) : null != uz && (uz = zz.cause.toString());
+                return null == uz ? {} : {
+                  cause: uz
                 }
-              }(null !== Ey && void 0 !== Ey ? Ey : yb)), null !== qb && void 0 !== qb ? qb : {})),
-              Jy = Ab(Ab(Ab(Ab({
-                type: ey || yb.name || "Error",
-                value: yb.message,
-                timestamp: Sy ? Sb(Sy) : sb(),
-                trace: sy ? {
-                  trace_id: sy.traceId,
-                  span_id: sy.spanId
-                } : fy.getTraceContext()
-              }, kb(By) ? {} : {
-                context: By
-              }), Ky ? {
-                originalError: Ey
-              } : {}), ly ? {
-                fingerprint: ly
-              } : {}), void 0 !== mb ? {
-                fatal: mb
+              }(null !== Kz && void 0 !== Kz ? Kz : zz)), null !== Fz && void 0 !== Fz ? Fz : {})),
+              oz = Yu(Yu(Yu(Yu({
+                type: dz || zz.name || "Error",
+                value: zz.message,
+                timestamp: Rz ? Ru(Rz) : Zu(),
+                trace: Zz ? {
+                  trace_id: Zz.traceId,
+                  span_id: Zz.spanId
+                } : iz.getTraceContext()
+              }, ez(Oz) ? {} : {
+                context: Oz
+              }), pz ? {
+                originalError: Kz
+              } : {}), wz ? {
+                fingerprint: wz
+              } : {}), void 0 !== Xz ? {
+                fatal: Xz
               } : {});
-            oy = null !== (Cy = oy) && void 0 !== Cy ? Cy : yb.stack ? null === wf || void 0 === wf ? void 0 : wf(yb).frames : void 0, (null === oy || void 0 === oy ? void 0 : oy.length) && (Jy.stacktrace = {
-              frames: oy
+            Hz = null !== (fz = Hz) && void 0 !== fz ? fz : zz.stack ? null === Bi || void 0 === Bi ? void 0 : Bi(zz).frames : void 0, (null === Hz || void 0 === Hz ? void 0 : Hz.length) && (oz.stacktrace = {
+              frames: Hz
             });
-            const gb = {
-              type: Jy.type,
-              value: Jy.value,
-              stacktrace: Jy.stacktrace,
-              context: Jy.context,
-              fingerprint: Jy.fingerprint,
-              fatal: null !== (Ty = Jy.fatal) && void 0 !== Ty && Ty
+            const Nz = {
+              type: oz.type,
+              value: oz.value,
+              stacktrace: oz.stacktrace,
+              context: oz.context,
+              fingerprint: oz.fingerprint,
+              fatal: null !== (sz = oz.fatal) && void 0 !== sz && sz
             };
-            if (!cb && Wy.dedupe && !Vy(Py) && mW(gb, Py)) return void bb.debug("Skipping error push because it is the same as the last one\n", Jy);
-            const Gy = Py,
-              Oy = aZ(Uy);
-            if (Py !== Gy && !cb && Wy.dedupe && mW(gb, Py)) return;
-            Py = gb;
-            const Ry = {
-              meta: Oy,
-              payload: Jy,
+            if (!Mz && bz.dedupe && !rz(tz) && Xu(Nz, tz)) return void uz.debug("Skipping error push because it is the same as the last one\n", oz);
+            const vz = tz,
+              xz = Si(Ez);
+            if (tz !== vz && !Mz && bz.dedupe && Xu(Nz, tz)) return;
+            tz = Nz;
+            const Jz = {
+              meta: xz,
+              payload: oz,
               type: "exception"
             };
-            bb.debug("Pushing exception\n", Ry), Jh(Zy.getActiveUserAction(), Ry) || hy.execute(Ry)
-          } catch (gb) {
-            bb.error("Error pushing event", gb)
+            uz.debug("Pushing exception\n", Jz), xn(lz.getActiveUserAction(), Jz) || nz.execute(Jz)
+          } catch (Nz) {
+            uz.error("Error pushing event", Nz)
           }
         }
       }
     }
 
-    function If(yb, bb, Wy, Uy, hy) {
-      bb.debug("Initializing API");
-      let fy = null;
-      const Zy = function(yb) {
+    function zl(zz, uz, bz, Ez, nz) {
+      uz.debug("Initializing API");
+      let iz = null;
+      const lz = function(zz) {
           let {
-            transports: bb,
-            internalLogger: Wy,
-            config: Uy,
-            pushEvent: hy
-          } = yb;
-          var fy;
-          const Zy = null === (fy = Uy.userActionsInstrumentation) || void 0 === fy ? void 0 : fy.excludeItem;
-          let cb;
-          const Py = () => cb;
+            transports: uz,
+            internalLogger: bz,
+            config: Ez,
+            pushEvent: nz
+          } = zz;
+          var iz;
+          const lz = null === (iz = Ez.userActionsInstrumentation) || void 0 === iz ? void 0 : iz.excludeItem;
+          let Mz;
+          const tz = () => Mz;
           return {
-            startUserAction: (yb, Uy, fy) => {
-              if (void 0 === Py()) {
-                const Wy = new Th({
-                  name: yb,
-                  transports: bb,
-                  attributes: Uy,
-                  trigger: (null === fy || void 0 === fy ? void 0 : fy.triggerName) || "faroApiCall",
-                  importance: (null === fy || void 0 === fy ? void 0 : fy.importance) || mf.Normal,
-                  trackUserActionsExcludeItem: Zy,
-                  pushEvent: hy
+            startUserAction: (zz, Ez, iz) => {
+              if (void 0 === tz()) {
+                const bz = new Nn({
+                  name: zz,
+                  transports: uz,
+                  attributes: Ez,
+                  trigger: (null === iz || void 0 === iz ? void 0 : iz.triggerName) || "faroApiCall",
+                  importance: (null === iz || void 0 === iz ? void 0 : iz.importance) || sn.Normal,
+                  trackUserActionsExcludeItem: lz,
+                  pushEvent: nz
                 });
-                return Wy.filter((yb => [3, 2].includes(yb))).first().subscribe((() => {
-                  cb = void 0
-                })), Vh.notify({
-                  type: lh,
-                  userAction: Wy,
-                  initialActivityTimeout: null === fy || void 0 === fy ? void 0 : fy.initialActivityTimeout
-                }), cb = Wy, cb
+                return bz.filter((zz => [3, 2].includes(zz))).first().subscribe((() => {
+                  Mz = void 0
+                })), vn.notify({
+                  type: fn,
+                  userAction: bz,
+                  initialActivityTimeout: null === iz || void 0 === iz ? void 0 : iz.initialActivityTimeout
+                }), Mz = bz, Mz
               }
-              Wy.error("Attempted to create a new user action while one is already running. This is not possible.")
+              bz.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: Py
+            getActiveUserAction: tz
           }
         }({
-          transports: hy,
-          config: Wy,
-          internalLogger: bb,
-          pushEvent: (yb, Wy, Uy, hy) => {
-            fy ? fy(yb, Wy, Uy, hy) : bb.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: yb,
-              attributes: Wy,
-              domain: Uy,
-              options: hy
+          transports: nz,
+          config: bz,
+          internalLogger: uz,
+          pushEvent: (zz, bz, Ez, nz) => {
+            iz ? iz(zz, bz, Ez, nz) : uz.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: zz,
+              attributes: bz,
+              domain: Ez,
+              options: nz
             })
           }
         }),
-        cb = function(yb, bb, Wy, Uy, hy) {
-          let fy;
-          return bb.debug("Initializing traces API"), {
-            getOTEL: () => fy,
+        Mz = function(zz, uz, bz, Ez, nz) {
+          let iz;
+          return uz.debug("Initializing traces API"), {
+            getOTEL: () => iz,
             getTraceContext: () => {
-              const yb = null === fy || void 0 === fy ? void 0 : fy.trace.getSpanContext(fy.context.active());
-              return yb ? {
-                trace_id: yb.traceId,
-                span_id: yb.spanId
+              const zz = null === iz || void 0 === iz ? void 0 : iz.trace.getSpanContext(iz.context.active());
+              return zz ? {
+                trace_id: zz.traceId,
+                span_id: zz.spanId
               } : void 0
             },
-            initOTEL: (yb, Wy) => {
-              bb.debug("Initializing OpenTelemetry"), fy = {
-                trace: yb,
-                context: Wy
+            initOTEL: (zz, bz) => {
+              uz.debug("Initializing OpenTelemetry"), iz = {
+                trace: zz,
+                context: bz
               }
             },
-            isOTELInitialized: () => !!fy,
-            pushTraces: yb => {
+            isOTELInitialized: () => !!iz,
+            pushTraces: zz => {
               try {
-                if (!Lb(Uy).shouldCapture()) return;
-                const Wy = {
+                if (!gu(Ez).shouldCapture()) return;
+                const bz = {
                   type: "trace",
-                  payload: yb,
-                  meta: aZ(Uy)
+                  payload: zz,
+                  meta: Si(Ez)
                 };
-                bb.debug("Pushing trace\n", Wy), hy.execute(Wy)
-              } catch (Wy) {
-                bb.error("Error pushing trace\n", Wy)
+                uz.debug("Pushing trace\n", bz), nz.execute(bz)
+              } catch (bz) {
+                uz.error("Error pushing trace\n", bz)
               }
             }
           }
-        }(0, bb, 0, Uy, hy),
-        Py = {
-          unpatchedConsole: yb,
-          internalLogger: bb,
-          userActionsApi: Zy,
-          config: Wy,
-          metas: Uy,
-          transports: hy,
-          tracesApi: cb
+        }(0, uz, 0, Ez, nz),
+        tz = {
+          unpatchedConsole: zz,
+          internalLogger: uz,
+          userActionsApi: lz,
+          config: bz,
+          metas: Ez,
+          transports: nz,
+          tracesApi: Mz
         },
-        oy = function(yb) {
+        Hz = function(zz) {
           let {
-            internalLogger: bb,
-            config: Wy,
-            metas: Uy,
-            transports: hy,
-            tracesApi: fy,
-            userActionsApi: Zy
-          } = yb, cb = null;
+            internalLogger: uz,
+            config: bz,
+            metas: Ez,
+            transports: nz,
+            tracesApi: iz,
+            userActionsApi: lz
+          } = zz, Mz = null;
           return {
-            pushEvent: function(yb, Py, oy) {
+            pushEvent: function(zz, tz, Hz) {
               let {
-                skipDedupe: By,
-                spanContext: Ky,
-                timestampOverwriteMs: ey,
-                customPayloadTransformer: qb = yb => yb
+                skipDedupe: Oz,
+                spanContext: pz,
+                timestampOverwriteMs: dz,
+                customPayloadTransformer: Fz = zz => zz
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!Lb(Uy).shouldCapture()) return;
-                const sy = Hb(Py),
-                  Sy = qb({
-                    name: yb,
-                    domain: null !== oy && void 0 !== oy ? oy : Wy.eventDomain,
-                    attributes: kb(sy) ? void 0 : sy,
-                    timestamp: ey ? Sb(ey) : sb(),
-                    trace: Ky ? {
-                      trace_id: Ky.traceId,
-                      span_id: Ky.spanId
-                    } : fy.getTraceContext()
+                if (!gu(Ez).shouldCapture()) return;
+                const Zz = qu(tz),
+                  Rz = Fz({
+                    name: zz,
+                    domain: null !== Hz && void 0 !== Hz ? Hz : bz.eventDomain,
+                    attributes: ez(Zz) ? void 0 : Zz,
+                    timestamp: dz ? Ru(dz) : Zu(),
+                    trace: pz ? {
+                      trace_id: pz.traceId,
+                      span_id: pz.spanId
+                    } : iz.getTraceContext()
                   }),
-                  Ey = {
-                    name: Sy.name,
-                    attributes: Sy.attributes,
-                    domain: Sy.domain
+                  Kz = {
+                    name: Rz.name,
+                    attributes: Rz.attributes,
+                    domain: Rz.domain
                   };
-                if (!By && Wy.dedupe && !Vy(cb) && mW(Ey, cb)) return void bb.debug("Skipping event push because it is the same as the last one\n", Sy);
-                const ly = cb,
-                  mb = aZ(Uy);
-                if (cb !== ly && !By && Wy.dedupe && mW(Ey, cb)) return;
-                cb = Ey;
-                const Cy = {
-                  meta: mb,
-                  payload: Sy,
+                if (!Oz && bz.dedupe && !rz(Mz) && Xu(Kz, Mz)) return void uz.debug("Skipping event push because it is the same as the last one\n", Rz);
+                const wz = Mz,
+                  Xz = Si(Ez);
+                if (Mz !== wz && !Oz && bz.dedupe && Xu(Kz, Mz)) return;
+                Mz = Kz;
+                const fz = {
+                  meta: Xz,
+                  payload: Rz,
                   type: "event"
                 };
-                bb.debug("Pushing event\n", Cy), Jh(Zy.getActiveUserAction(), Cy) || hy.execute(Cy)
-              } catch (sy) {
-                bb.error("Error pushing event", sy)
+                uz.debug("Pushing event\n", fz), xn(lz.getActiveUserAction(), fz) || nz.execute(fz)
+              } catch (Zz) {
+                uz.error("Error pushing event", Zz)
               }
             }
           }
-        }(Py);
-      return fy = oy.pushEvent, Ab(Ab(Ab(Ab(Ab(Ab(Ab({}, cb), zZ(Py)), function(yb) {
-        let bb, Wy, Uy, hy, {
-          internalLogger: fy,
-          metas: Zy
-        } = yb;
-        fy.debug("Initializing meta API");
-        const cb = yb => {
-            Wy && Zy.remove(Wy), Wy = {
-              user: yb
-            }, Zy.add(Wy)
+        }(tz);
+      return iz = Hz.pushEvent, Yu(Yu(Yu(Yu(Yu(Yu(Yu({}, Mz), ki(tz)), function(zz) {
+        let uz, bz, Ez, nz, {
+          internalLogger: iz,
+          metas: lz
+        } = zz;
+        iz.debug("Initializing meta API");
+        const Mz = zz => {
+            bz && lz.remove(bz), bz = {
+              user: zz
+            }, lz.add(bz)
           },
-          Py = (yb, Wy) => {
-            var Uy;
-            const hy = null === Wy || void 0 === Wy ? void 0 : Wy.overrides,
-              fy = hy ? {
-                overrides: Ab(Ab({}, null === bb || void 0 === bb || null === (Uy = bb.session) || void 0 === Uy ? void 0 : Uy.overrides), hy)
+          tz = (zz, bz) => {
+            var Ez;
+            const nz = null === bz || void 0 === bz ? void 0 : bz.overrides,
+              iz = nz ? {
+                overrides: Yu(Yu({}, null === uz || void 0 === uz || null === (Ez = uz.session) || void 0 === Ez ? void 0 : Ez.overrides), nz)
               } : {};
-            bb && Zy.remove(bb), bb = {
-              session: Ab(Ab({}, kb(yb) ? void 0 : yb), fy)
-            }, Zy.add(bb)
+            uz && lz.remove(uz), uz = {
+              session: Yu(Yu({}, ez(zz) ? void 0 : zz), iz)
+            }, lz.add(uz)
           },
-          oy = (yb, bb) => {
-            Lb(Zy).notifySessionUpdate({
+          Hz = (zz, uz) => {
+            gu(lz).notifySessionUpdate({
               type: "replace",
-              session: yb,
-              overrides: null === bb || void 0 === bb ? void 0 : bb.overrides
-            }), Py(yb, bb)
+              session: zz,
+              overrides: null === uz || void 0 === uz ? void 0 : uz.overrides
+            }), tz(zz, uz)
           },
-          By = () => Zy.value.session,
-          Ky = () => Zy.value.page;
+          Oz = () => lz.value.session,
+          pz = () => lz.value.page;
         return {
-          setUser: cb,
-          resetUser: cb,
-          setSession: oy,
-          resetSession: oy,
-          getSession: By,
-          setView: (yb, bb) => {
-            var Wy;
-            if ((null === bb || void 0 === bb ? void 0 : bb.overrides) && (Lb(Zy).notifySessionUpdate({
+          setUser: Mz,
+          resetUser: Mz,
+          setSession: Hz,
+          resetSession: Hz,
+          getSession: Oz,
+          setView: (zz, uz) => {
+            var bz;
+            if ((null === uz || void 0 === uz ? void 0 : uz.overrides) && (gu(lz).notifySessionUpdate({
                 type: "overrides",
-                overrides: bb.overrides
-              }), Py(By(), {
-                overrides: bb.overrides
-              })), (null === Uy || void 0 === Uy || null === (Wy = Uy.view) || void 0 === Wy ? void 0 : Wy.name) === (null === yb || void 0 === yb ? void 0 : yb.name)) return;
-            const hy = Uy;
-            Uy = {
-              view: yb
-            }, Zy.add(Uy), hy && Zy.remove(hy)
+                overrides: uz.overrides
+              }), tz(Oz(), {
+                overrides: uz.overrides
+              })), (null === Ez || void 0 === Ez || null === (bz = Ez.view) || void 0 === bz ? void 0 : bz.name) === (null === zz || void 0 === zz ? void 0 : zz.name)) return;
+            const nz = Ez;
+            Ez = {
+              view: zz
+            }, lz.add(Ez), nz && lz.remove(nz)
           },
-          getView: () => Zy.value.view,
-          setPage: yb => {
-            var bb;
-            const Wy = Jy(yb) ? Ab(Ab({}, null !== (bb = null === hy || void 0 === hy ? void 0 : hy.page) && void 0 !== bb ? bb : Ky()), {}, {
-              id: yb
-            }) : yb;
-            hy && Zy.remove(hy), hy = {
-              page: Wy
-            }, Zy.add(hy)
+          getView: () => lz.value.view,
+          setPage: zz => {
+            var uz;
+            const bz = oz(zz) ? Yu(Yu({}, null !== (uz = null === nz || void 0 === nz ? void 0 : nz.page) && void 0 !== uz ? uz : pz()), {}, {
+              id: zz
+            }) : zz;
+            nz && lz.remove(nz), nz = {
+              page: bz
+            }, lz.add(nz)
           },
-          getPage: Ky
+          getPage: pz
         }
-      }(Py)), function(yb) {
+      }(tz)), function(zz) {
         let {
-          internalLogger: bb,
-          config: Wy,
-          metas: Uy,
-          transports: hy,
-          tracesApi: fy,
-          userActionsApi: Zy
-        } = yb;
-        var cb;
-        bb.debug("Initializing logs API");
-        let Py = null;
-        const oy = null !== (cb = Wy.logArgsSerializer) && void 0 !== cb ? cb : YW;
+          internalLogger: uz,
+          config: bz,
+          metas: Ez,
+          transports: nz,
+          tracesApi: iz,
+          userActionsApi: lz
+        } = zz;
+        var Mz;
+        uz.debug("Initializing logs API");
+        let tz = null;
+        const Hz = null !== (Mz = bz.logArgsSerializer) && void 0 !== Mz ? Mz : Pb;
         return {
-          pushLog: function(yb) {
+          pushLog: function(zz) {
             let {
-              context: cb,
-              level: By,
-              skipDedupe: Ky,
-              spanContext: ey,
-              timestampOverwriteMs: qb
+              context: Mz,
+              level: Oz,
+              skipDedupe: pz,
+              spanContext: dz,
+              timestampOverwriteMs: Fz
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!Lb(Uy).shouldCapture()) return;
-              const sy = Hb(cb),
-                Sy = {
-                  message: oy(yb),
-                  level: null !== By && void 0 !== By ? By : "log",
-                  context: kb(sy) ? void 0 : sy,
-                  timestamp: qb ? Sb(qb) : sb(),
-                  trace: ey ? {
-                    trace_id: ey.traceId,
-                    span_id: ey.spanId
-                  } : fy.getTraceContext()
+              if (!gu(Ez).shouldCapture()) return;
+              const Zz = qu(Mz),
+                Rz = {
+                  message: Hz(zz),
+                  level: null !== Oz && void 0 !== Oz ? Oz : "log",
+                  context: ez(Zz) ? void 0 : Zz,
+                  timestamp: Fz ? Ru(Fz) : Zu(),
+                  trace: dz ? {
+                    trace_id: dz.traceId,
+                    span_id: dz.spanId
+                  } : iz.getTraceContext()
                 },
-                Ey = {
-                  message: Sy.message,
-                  level: Sy.level,
-                  context: Sy.context
+                Kz = {
+                  message: Rz.message,
+                  level: Rz.level,
+                  context: Rz.context
                 };
-              if (!Ky && Wy.dedupe && !Vy(Py) && mW(Ey, Py)) return void bb.debug("Skipping log push because it is the same as the last one\n", Sy);
-              const ly = Py,
-                mb = aZ(Uy);
-              if (Py !== ly && !Ky && Wy.dedupe && mW(Ey, Py)) return;
-              Py = Ey;
-              const Cy = {
+              if (!pz && bz.dedupe && !rz(tz) && Xu(Kz, tz)) return void uz.debug("Skipping log push because it is the same as the last one\n", Rz);
+              const wz = tz,
+                Xz = Si(Ez);
+              if (tz !== wz && !pz && bz.dedupe && Xu(Kz, tz)) return;
+              tz = Kz;
+              const fz = {
                 type: "log",
-                payload: Sy,
-                meta: mb
+                payload: Rz,
+                meta: Xz
               };
-              bb.debug("Pushing log\n", Cy), Jh(Zy.getActiveUserAction(), Cy) || hy.execute(Cy)
-            } catch (sy) {
-              bb.error("Error pushing log\n", sy)
+              uz.debug("Pushing log\n", fz), xn(lz.getActiveUserAction(), fz) || nz.execute(fz)
+            } catch (Zz) {
+              uz.error("Error pushing log\n", Zz)
             }
           }
         }
-      }(Py)), function(yb) {
+      }(tz)), function(zz) {
         let {
-          internalLogger: bb,
-          config: Wy,
-          metas: Uy,
-          transports: hy,
-          tracesApi: fy,
-          userActionsApi: Zy
-        } = yb;
-        bb.debug("Initializing measurements API");
-        let cb = null;
+          internalLogger: uz,
+          config: bz,
+          metas: Ez,
+          transports: nz,
+          tracesApi: iz,
+          userActionsApi: lz
+        } = zz;
+        uz.debug("Initializing measurements API");
+        let Mz = null;
         return {
-          pushMeasurement: function(yb) {
+          pushMeasurement: function(zz) {
             let {
-              skipDedupe: Py,
-              context: oy,
-              spanContext: By,
-              timestampOverwriteMs: Ky
+              skipDedupe: tz,
+              context: Hz,
+              spanContext: Oz,
+              timestampOverwriteMs: pz
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!Lb(Uy).shouldCapture()) return;
-              const ey = Hb(oy),
-                qb = Ab(Ab({}, yb), {}, {
-                  trace: By ? {
-                    trace_id: By.traceId,
-                    span_id: By.spanId
-                  } : fy.getTraceContext(),
-                  timestamp: Ky ? Sb(Ky) : sb(),
-                  context: kb(ey) ? void 0 : ey
+              if (!gu(Ez).shouldCapture()) return;
+              const dz = qu(Hz),
+                Fz = Yu(Yu({}, zz), {}, {
+                  trace: Oz ? {
+                    trace_id: Oz.traceId,
+                    span_id: Oz.spanId
+                  } : iz.getTraceContext(),
+                  timestamp: pz ? Ru(pz) : Zu(),
+                  context: ez(dz) ? void 0 : dz
                 }),
-                sy = {
-                  type: qb.type,
-                  values: qb.values,
-                  context: qb.context
+                Zz = {
+                  type: Fz.type,
+                  values: Fz.values,
+                  context: Fz.context
                 };
-              if (!Py && Wy.dedupe && !Vy(cb) && mW(sy, cb)) return void bb.debug("Skipping measurement push because it is the same as the last one\n", qb);
-              const Sy = cb,
-                Ey = aZ(Uy);
-              if (cb !== Sy && !Py && Wy.dedupe && mW(sy, cb)) return;
-              cb = sy;
-              const ly = {
+              if (!tz && bz.dedupe && !rz(Mz) && Xu(Zz, Mz)) return void uz.debug("Skipping measurement push because it is the same as the last one\n", Fz);
+              const Rz = Mz,
+                Kz = Si(Ez);
+              if (Mz !== Rz && !tz && bz.dedupe && Xu(Zz, Mz)) return;
+              Mz = Zz;
+              const wz = {
                 type: "measurement",
-                payload: qb,
-                meta: Ey
+                payload: Fz,
+                meta: Kz
               };
-              bb.debug("Pushing measurement\n", ly), Jh(Zy.getActiveUserAction(), ly) || hy.execute(ly)
-            } catch (ey) {
-              bb.error("Error pushing measurement\n", ey)
+              uz.debug("Pushing measurement\n", wz), xn(lz.getActiveUserAction(), wz) || nz.execute(wz)
+            } catch (dz) {
+              uz.error("Error pushing measurement\n", dz)
             }
           }
         }
-      }(Py)), oy), Zy)
+      }(tz)), Hz), lz)
     }
 
-    function xZ(yb) {
-      const bb = tZ(yb),
-        Wy = Nf(bb, yb);
-      if (sy() && !yb.isolate) return void Wy.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      Wy.debug("Initializing");
-      const Uy = function(yb, bb) {
-          let Wy, Uy = [],
-            hy = [],
-            fy = [],
-            Zy = 0,
-            cb = 0;
-          const Py = () => Uy.reduce(((yb, bb) => Object.assign(yb, ib(bb) ? bb() : bb)), {}),
-            oy = () => {
-              if (hy.length) {
-                const yb = Py();
-                hy.forEach((bb => bb(yb)))
+    function ul(zz) {
+      const uz = Ii(zz),
+        bz = Yi(uz, zz);
+      if (Zz() && !zz.isolate) return void bz.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      bz.debug("Initializing");
+      const Ez = function(zz, uz) {
+          let bz, Ez = [],
+            nz = [],
+            iz = [],
+            lz = 0,
+            Mz = 0;
+          const tz = () => Ez.reduce(((zz, uz) => Object.assign(zz, Tz(uz) ? uz() : uz)), {}),
+            Hz = () => {
+              if (nz.length) {
+                const zz = tz();
+                nz.forEach((uz => uz(zz)))
               }
             };
           return {
             add: function() {
-              for (var yb = arguments.length, Wy = new Array(yb), hy = 0; hy < yb; hy++) Wy[hy] = arguments[hy];
-              bb.debug("Adding metas\n", Wy), Uy.push(...Wy), oy()
+              for (var zz = arguments.length, bz = new Array(zz), nz = 0; nz < zz; nz++) bz[nz] = arguments[nz];
+              uz.debug("Adding metas\n", bz), Ez.push(...bz), Hz()
             },
             remove: function() {
-              for (var yb = arguments.length, Wy = new Array(yb), hy = 0; hy < yb; hy++) Wy[hy] = arguments[hy];
-              bb.debug("Removing metas\n", Wy), Uy = Uy.filter((yb => !Wy.includes(yb))), oy()
+              for (var zz = arguments.length, bz = new Array(zz), nz = 0; nz < zz; nz++) bz[nz] = arguments[nz];
+              uz.debug("Removing metas\n", bz), Ez = Ez.filter((zz => !bz.includes(zz))), Hz()
             },
-            addListener: yb => {
-              bb.debug("Adding metas listener\n", yb), hy.push(yb)
+            addListener: zz => {
+              uz.debug("Adding metas listener\n", zz), nz.push(zz)
             },
-            removeListener: yb => {
-              bb.debug("Removing metas listener\n", yb), hy = hy.filter((bb => bb !== yb))
+            removeListener: zz => {
+              uz.debug("Removing metas listener\n", zz), nz = nz.filter((uz => uz !== zz))
             },
-            capture: yb => {
-              var bb;
-              const Uy = void 0 !== Wy,
-                hy = null !== (bb = Wy) && void 0 !== bb ? bb : fy;
-              Uy || (Wy = hy, Zy = 0, cb = hy.length);
+            capture: zz => {
+              var uz;
+              const Ez = void 0 !== bz,
+                nz = null !== (uz = bz) && void 0 !== uz ? uz : iz;
+              Ez || (bz = nz, lz = 0, Mz = nz.length);
               try {
-                for (; Zy < cb;) {
-                  const yb = hy[Zy++];
-                  null === yb || void 0 === yb || yb()
+                for (; lz < Mz;) {
+                  const zz = nz[lz++];
+                  null === zz || void 0 === zz || zz()
                 }
-                const bb = Hf(Py());
-                return null === yb || void 0 === yb || yb(), bb
+                const uz = gi(tz());
+                return null === zz || void 0 === zz || zz(), uz
               } finally {
-                Uy || (Wy = void 0)
+                Ez || (bz = void 0)
               }
             },
-            addCaptureListener: yb => {
-              fy.push(yb)
+            addCaptureListener: zz => {
+              iz.push(zz)
             },
-            removeCaptureListener: yb => {
-              fy = fy.filter((bb => bb !== yb))
+            removeCaptureListener: zz => {
+              iz = iz.filter((uz => uz !== zz))
             },
             get value() {
-              return Py()
+              return tz()
             }
           }
-        }(0, Wy),
-        hy = Qf(bb, Wy, yb, Uy),
-        fy = If(bb, Wy, yb, Uy, hy),
-        Zy = function(yb, bb, Wy, Uy, hy, fy) {
-          bb.debug("Initializing instrumentations");
-          const Zy = [];
+        }(0, bz),
+        nz = Wi(uz, bz, zz, Ez),
+        iz = zl(uz, bz, zz, Ez, nz),
+        lz = function(zz, uz, bz, Ez, nz, iz) {
+          uz.debug("Initializing instrumentations");
+          const lz = [];
           return {
             add: function() {
-              bb.debug("Adding instrumentations");
-              for (var cb = arguments.length, Py = new Array(cb), oy = 0; oy < cb; oy++) Py[oy] = arguments[oy];
-              Py.forEach((cb => {
-                bb.debug(`Adding "${cb.name}" instrumentation`), Zy.some((yb => yb.name === cb.name)) ? bb.warn(`Instrumentation ${cb.name} is already added`) : (cb.unpatchedConsole = yb, cb.internalLogger = bb, cb.config = Wy, cb.metas = Uy, cb.transports = hy, cb.api = fy, Zy.push(cb), cb.initialize())
+              uz.debug("Adding instrumentations");
+              for (var Mz = arguments.length, tz = new Array(Mz), Hz = 0; Hz < Mz; Hz++) tz[Hz] = arguments[Hz];
+              tz.forEach((Mz => {
+                uz.debug(`Adding "${Mz.name}" instrumentation`), lz.some((zz => zz.name === Mz.name)) ? uz.warn(`Instrumentation ${Mz.name} is already added`) : (Mz.unpatchedConsole = zz, Mz.internalLogger = uz, Mz.config = bz, Mz.metas = Ez, Mz.transports = nz, Mz.api = iz, lz.push(Mz), Mz.initialize())
               }))
             },
             get instrumentations() {
-              return [...Zy]
+              return [...lz]
             },
             remove: function() {
-              bb.debug("Removing instrumentations");
-              for (var yb = arguments.length, Wy = new Array(yb), Uy = 0; Uy < yb; Uy++) Wy[Uy] = arguments[Uy];
-              Wy.forEach((yb => {
-                var Wy, Uy;
-                bb.debug(`Removing "${yb.name}" instrumentation`);
-                const hy = Zy.reduce(((bb, Wy, Uy) => null === bb && Wy.name === yb.name ? Uy : null), null);
-                null !== hy ? (null === (Wy = (Uy = Zy[hy]).destroy) || void 0 === Wy || Wy.call(Uy), Zy.splice(hy, 1)) : bb.warn(`Instrumentation "${yb.name}" is not added`)
+              uz.debug("Removing instrumentations");
+              for (var zz = arguments.length, bz = new Array(zz), Ez = 0; Ez < zz; Ez++) bz[Ez] = arguments[Ez];
+              bz.forEach((zz => {
+                var bz, Ez;
+                uz.debug(`Removing "${zz.name}" instrumentation`);
+                const nz = lz.reduce(((uz, bz, Ez) => null === uz && bz.name === zz.name ? Ez : null), null);
+                null !== nz ? (null === (bz = (Ez = lz[nz]).destroy) || void 0 === bz || bz.call(Ez), lz.splice(nz, 1)) : uz.warn(`Instrumentation "${zz.name}" is not added`)
               }))
             }
           }
-        }(bb, Wy, yb, Uy, hy, fy),
-        cb = Ey(bb, Wy, yb, Uy, hy, fy, Zy);
-      return pf(cb),
-        function(yb) {
-          yb.transports.add(...yb.config.transports), yb.transports.addBeforeSendHooks(yb.config.beforeSend)
-        }(cb),
-        function(yb) {
-          yb.instrumentations.add(...yb.config.instrumentations)
-        }(cb), cb
+        }(uz, bz, zz, Ez, nz, iz),
+        Mz = Kz(uz, bz, zz, Ez, nz, iz, lz);
+      return Di(Mz),
+        function(zz) {
+          zz.transports.add(...zz.config.transports), zz.transports.addBeforeSendHooks(zz.config.beforeSend)
+        }(Mz),
+        function(zz) {
+          zz.instrumentations.add(...zz.config.instrumentations)
+        }(Mz), Mz
     }
 
-    function Af(yb) {
-      const bb = Yf(yb);
-      if (bb) return xZ(bb)
+    function bl(zz) {
+      const uz = Vi(zz);
+      if (uz) return ul(uz)
     }
   },
-  7221: function(yb, bb, Wy) {
-    var Uy;
-    ! function(hy, fy) {
-      var Zy = "function",
-        cb = "undefined",
-        Py = "object",
-        oy = "string",
-        By = "major",
-        Ky = "model",
-        ey = "name",
-        qb = "type",
-        sy = "vendor",
-        Sy = "version",
-        Ey = "architecture",
-        ly = "console",
-        mb = "mobile",
-        Cy = "tablet",
-        Ty = "smarttv",
-        Vy = "wearable",
-        Jy = "embedded",
-        gb = "Amazon",
-        Gy = "Apple",
-        Oy = "ASUS",
-        Ry = "BlackBerry",
-        vb = "Browser",
-        ib = "Chrome",
-        My = "Firefox",
-        Yy = "Google",
-        Xy = "Honor",
-        ny = "Huawei",
-        uy = "LG",
-        rb = "Microsoft",
-        Hy = "Motorola",
-        ab = "Nvidia",
-        Fy = "OnePlus",
-        py = "Opera",
-        Ly = "OPPO",
-        Qy = "Samsung",
-        jb = "Sharp",
-        Dy = "Sony",
-        tb = "Xiaomi",
-        wy = "Zebra",
-        kb = "Facebook",
-        Ny = "Chromium OS",
-        zb = "Mac OS",
-        Iy = " Browser",
-        xb = function(yb) {
-          for (var bb = {}, Wy = 0; Wy < yb.length; Wy++) bb[yb[Wy].toUpperCase()] = yb[Wy];
-          return bb
+  6424: function(zz, uz, bz) {
+    var Ez;
+    ! function(nz, iz) {
+      var lz = "function",
+        Mz = "undefined",
+        tz = "object",
+        Hz = "string",
+        Oz = "major",
+        pz = "model",
+        dz = "name",
+        Fz = "type",
+        Zz = "vendor",
+        Rz = "version",
+        Kz = "architecture",
+        wz = "console",
+        Xz = "mobile",
+        fz = "tablet",
+        sz = "smarttv",
+        rz = "wearable",
+        oz = "embedded",
+        Nz = "Amazon",
+        vz = "Apple",
+        xz = "ASUS",
+        Jz = "BlackBerry",
+        Az = "Browser",
+        Tz = "Chrome",
+        Lz = "Firefox",
+        Pz = "Google",
+        Gz = "Honor",
+        az = "Huawei",
+        Vz = "LG",
+        mz = "Microsoft",
+        qz = "Motorola",
+        hz = "Nvidia",
+        Uz = "OnePlus",
+        cz = "Opera",
+        gz = "OPPO",
+        Sz = "Samsung",
+        yz = "Sharp",
+        Dz = "Sony",
+        Qz = "Xiaomi",
+        Wz = "Zebra",
+        ez = "Facebook",
+        jz = "Chromium OS",
+        Iz = "Mac OS",
+        Bz = " Browser",
+        Cz = function(zz) {
+          for (var uz = {}, bz = 0; bz < zz.length; bz++) uz[zz[bz].toUpperCase()] = zz[bz];
+          return uz
         },
-        Ay = function(yb, bb) {
-          return typeof yb === oy && -1 !== dy(bb).indexOf(dy(yb))
+        Yz = function(zz, uz) {
+          return typeof zz === Hz && -1 !== kz(uz).indexOf(kz(zz))
         },
-        dy = function(yb) {
-          return yb.toLowerCase()
+        kz = function(zz) {
+          return zz.toLowerCase()
         },
-        yW = function(yb, bb) {
-          if (typeof yb === oy) return yb = yb.replace(/^\s\s*/, ""), typeof bb === cb ? yb : yb.substring(0, 500)
+        zu = function(zz, uz) {
+          if (typeof zz === Hz) return zz = zz.replace(/^\s\s*/, ""), typeof uz === Mz ? zz : zz.substring(0, 500)
         },
-        bW = function(yb, bb) {
-          for (var Wy, Uy, hy, cb, oy, By, Ky = 0; Ky < bb.length && !oy;) {
-            var ey = bb[Ky],
-              qb = bb[Ky + 1];
-            for (Wy = Uy = 0; Wy < ey.length && !oy && ey[Wy];)
-              if (oy = ey[Wy++].exec(yb))
-                for (hy = 0; hy < qb.length; hy++) By = oy[++Uy], typeof(cb = qb[hy]) === Py && cb.length > 0 ? 2 === cb.length ? typeof cb[1] == Zy ? this[cb[0]] = cb[1].call(this, By) : this[cb[0]] = cb[1] : 3 === cb.length ? typeof cb[1] !== Zy || cb[1].exec && cb[1].test ? this[cb[0]] = By ? By.replace(cb[1], cb[2]) : fy : this[cb[0]] = By ? cb[1].call(this, By, cb[2]) : fy : 4 === cb.length && (this[cb[0]] = By ? cb[3].call(this, By.replace(cb[1], cb[2])) : fy) : this[cb] = By || fy;
-            Ky += 2
+        uu = function(zz, uz) {
+          for (var bz, Ez, nz, Mz, Hz, Oz, pz = 0; pz < uz.length && !Hz;) {
+            var dz = uz[pz],
+              Fz = uz[pz + 1];
+            for (bz = Ez = 0; bz < dz.length && !Hz && dz[bz];)
+              if (Hz = dz[bz++].exec(zz))
+                for (nz = 0; nz < Fz.length; nz++) Oz = Hz[++Ez], typeof(Mz = Fz[nz]) === tz && Mz.length > 0 ? 2 === Mz.length ? typeof Mz[1] == lz ? this[Mz[0]] = Mz[1].call(this, Oz) : this[Mz[0]] = Mz[1] : 3 === Mz.length ? typeof Mz[1] !== lz || Mz[1].exec && Mz[1].test ? this[Mz[0]] = Oz ? Oz.replace(Mz[1], Mz[2]) : iz : this[Mz[0]] = Oz ? Mz[1].call(this, Oz, Mz[2]) : iz : 4 === Mz.length && (this[Mz[0]] = Oz ? Mz[3].call(this, Oz.replace(Mz[1], Mz[2])) : iz) : this[Mz] = Oz || iz;
+            pz += 2
           }
         },
-        Wb = function(yb, bb) {
-          for (var Wy in bb)
-            if (typeof bb[Wy] === Py && bb[Wy].length > 0) {
-              for (var Uy = 0; Uy < bb[Wy].length; Uy++)
-                if (Ay(bb[Wy][Uy], yb)) return "?" === Wy ? fy : Wy
-            } else if (Ay(bb[Wy], yb)) return "?" === Wy ? fy : Wy;
-          return bb.hasOwnProperty("*") ? bb["*"] : yb
+        bu = function(zz, uz) {
+          for (var bz in uz)
+            if (typeof uz[bz] === tz && uz[bz].length > 0) {
+              for (var Ez = 0; Ez < uz[bz].length; Ez++)
+                if (Yz(uz[bz][Ez], zz)) return "?" === bz ? iz : bz
+            } else if (Yz(uz[bz], zz)) return "?" === bz ? iz : bz;
+          return uz.hasOwnProperty("*") ? uz["*"] : zz
         },
-        Ub = {
+        Eu = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        hb = {
+        nu = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [Sy, [ey, "Chrome"]],
+            [Rz, [dz, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [Sy, [ey, "Edge"]],
+            [Rz, [dz, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/opios[\/ ]+([\w\.]+)/i],
-            [Sy, [ey, py + " Mini"]],
+            [Rz, [dz, cz + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [Sy, [ey, py + " GX"]],
+            [Rz, [dz, cz + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [Sy, [ey, py]],
+            [Rz, [dz, cz]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [Sy, [ey, "Baidu"]],
+            [Rz, [dz, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [Sy, [ey, "Maxthon"]],
+            [Rz, [dz, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [Sy, [ey, "Quark"]],
+            [Rz, [dz, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [Sy, [ey, "DuckDuckGo"]],
+            [Rz, [dz, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [Sy, [ey, "UC" + vb]],
+            [Rz, [dz, "UC" + Az]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [Sy, [ey, "WeChat"]],
+            [Rz, [dz, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [Sy, [ey, "Konqueror"]],
+            [Rz, [dz, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [Sy, [ey, "IE"]],
+            [Rz, [dz, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [Sy, [ey, "Yandex"]],
+            [Rz, [dz, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [Sy, [ey, "Smart Lenovo " + vb]],
+            [Rz, [dz, "Smart Lenovo " + Az]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [ey, /(.+)/, "$1 Secure " + vb], Sy
+              [dz, /(.+)/, "$1 Secure " + Az], Rz
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [Sy, [ey, My + " Focus"]],
+            [Rz, [dz, Lz + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [Sy, [ey, py + " Touch"]],
+            [Rz, [dz, cz + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [Sy, [ey, "Coc Coc"]],
+            [Rz, [dz, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [Sy, [ey, "Dolphin"]],
+            [Rz, [dz, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [Sy, [ey, py + " Coast"]],
+            [Rz, [dz, cz + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [Sy, [ey, "MIUI" + Iy]],
+            [Rz, [dz, "MIUI" + Bz]],
             [/fxios\/([\w\.-]+)/i],
-            [Sy, [ey, My]],
+            [Rz, [dz, Lz]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [Sy, [ey, "360"]],
+            [Rz, [dz, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [ey, /(.+)/, "$1Browser"], Sy
+              [dz, /(.+)/, "$1Browser"], Rz
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [ey, /(.+)/, "$1" + Iy], Sy
+              [dz, /(.+)/, "$1" + Bz], Rz
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [Sy, [ey, Qy + " Internet"]],
+            [Rz, [dz, Sz + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [Sy, [ey, "Sogou Explorer"]],
+            [Rz, [dz, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [ey, "Sogou Mobile"], Sy
+              [dz, "Sogou Mobile"], Rz
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [ey],
+            [dz],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [Sy, ey],
+            [Rz, dz],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [ey, kb], Sy
+              [dz, ez], Rz
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [Sy, [ey, "GSA"]],
+            [Rz, [dz, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [Sy, [ey, "TikTok"]],
+            [Rz, [dz, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [Sy, [ey, ib + " Headless"]],
+            [Rz, [dz, Tz + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [ey, ib + " WebView"], Sy
+              [dz, Tz + " WebView"], Rz
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [Sy, [ey, "Android " + vb]],
+            [Rz, [dz, "Android " + Az]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [Sy, [ey, "Mobile Safari"]],
+            [Rz, [dz, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [Sy, ey],
+            [Rz, dz],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [ey, [Sy, Wb, {
+            [dz, [Rz, bu, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [ey, "Netscape"], Sy
+              [dz, "Netscape"], Rz
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [Sy, [ey, My + " Reality"]],
+            [Rz, [dz, Lz + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [ey, [Sy, /_/g, "."]],
+            [dz, [Rz, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [ey, [Sy, /master.|lts./, ""]]
+            [dz, [Rz, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [Ey, "amd64"]
+              [Kz, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [Ey, "ia32"]
+              [Kz, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [Ey, "arm64"]
+              [Kz, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [Ey, "armhf"]
+              [Kz, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [Ey, "arm"]
+              [Kz, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [Ey, /ower/, "", dy]
+              [Kz, /ower/, "", kz]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [Ey, "sparc"]
+              [Kz, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [Ey, dy]
+              [Kz, kz]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [Ky, [sy, Qy],
-              [qb, Cy]
+            [pz, [Zz, Sz],
+              [Fz, fz]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [Ky, [sy, Qy],
-              [qb, mb]
+            [pz, [Zz, Sz],
+              [Fz, Xz]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [Ky, [sy, Gy],
-              [qb, mb]
+            [pz, [Zz, vz],
+              [Fz, Xz]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [Ky, [sy, Gy],
-              [qb, Cy]
+            [pz, [Zz, vz],
+              [Fz, fz]
             ],
             [/(macintosh);/i],
-            [Ky, [sy, Gy]],
+            [pz, [Zz, vz]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [Ky, [sy, jb],
-              [qb, mb]
+            [pz, [Zz, yz],
+              [Fz, Xz]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [Ky, [sy, Xy],
-              [qb, Cy]
+            [pz, [Zz, Gz],
+              [Fz, fz]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [Ky, [sy, Xy],
-              [qb, mb]
+            [pz, [Zz, Gz],
+              [Fz, Xz]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [Ky, [sy, ny],
-              [qb, Cy]
+            [pz, [Zz, az],
+              [Fz, fz]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [Ky, [sy, ny],
-              [qb, mb]
+            [pz, [Zz, az],
+              [Fz, Xz]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [Ky, /_/g, " "],
-              [sy, tb],
-              [qb, Cy]
+              [pz, /_/g, " "],
+              [Zz, Qz],
+              [Fz, fz]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [Ky, /_/g, " "],
-              [sy, tb],
-              [qb, mb]
+              [pz, /_/g, " "],
+              [Zz, Qz],
+              [Fz, Xz]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [Ky, [sy, Ly],
-              [qb, mb]
+            [pz, [Zz, gz],
+              [Fz, Xz]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [Ky, [sy, Wb, {
+            [pz, [Zz, bu, {
                 OnePlus: ["304", "403", "203"],
-                "*": Ly
+                "*": gz
               }],
-              [qb, Cy]
+              [Fz, fz]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [Ky, [sy, "Vivo"],
-              [qb, mb]
+            [pz, [Zz, "Vivo"],
+              [Fz, Xz]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [Ky, [sy, "Realme"],
-              [qb, mb]
+            [pz, [Zz, "Realme"],
+              [Fz, Xz]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [Ky, [sy, Hy],
-              [qb, mb]
+            [pz, [Zz, qz],
+              [Fz, Xz]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [Ky, [sy, Hy],
-              [qb, Cy]
+            [pz, [Zz, qz],
+              [Fz, fz]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [Ky, [sy, uy],
-              [qb, Cy]
+            [pz, [Zz, Vz],
+              [Fz, fz]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [Ky, [sy, uy],
-              [qb, mb]
+            [pz, [Zz, Vz],
+              [Fz, Xz]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [Ky, [sy, "Lenovo"],
-              [qb, Cy]
+            [pz, [Zz, "Lenovo"],
+              [Fz, fz]
             ],
             [/(nokia) (t[12][01])/i],
-            [sy, Ky, [qb, Cy]],
+            [Zz, pz, [Fz, fz]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [Ky, /_/g, " "],
-              [qb, mb],
-              [sy, "Nokia"]
+              [pz, /_/g, " "],
+              [Fz, Xz],
+              [Zz, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [Ky, [sy, Yy],
-              [qb, Cy]
+            [pz, [Zz, Pz],
+              [Fz, fz]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [Ky, [sy, Yy],
-              [qb, mb]
+            [pz, [Zz, Pz],
+              [Fz, Xz]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [Ky, [sy, Dy],
-              [qb, mb]
+            [pz, [Zz, Dz],
+              [Fz, Xz]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [Ky, "Xperia Tablet"],
-              [sy, Dy],
-              [qb, Cy]
+              [pz, "Xperia Tablet"],
+              [Zz, Dz],
+              [Fz, fz]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [Ky, [sy, Fy],
-              [qb, mb]
+            [pz, [Zz, Uz],
+              [Fz, Xz]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [Ky, [sy, gb],
-              [qb, Cy]
+            [pz, [Zz, Nz],
+              [Fz, fz]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [Ky, /(.+)/g, "Fire Phone $1"],
-              [sy, gb],
-              [qb, mb]
+              [pz, /(.+)/g, "Fire Phone $1"],
+              [Zz, Nz],
+              [Fz, Xz]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [Ky, sy, [qb, Cy]],
+            [pz, Zz, [Fz, fz]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [Ky, [sy, Ry],
-              [qb, mb]
+            [pz, [Zz, Jz],
+              [Fz, Xz]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [Ky, [sy, Oy],
-              [qb, Cy]
+            [pz, [Zz, xz],
+              [Fz, fz]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [Ky, [sy, Oy],
-              [qb, mb]
+            [pz, [Zz, xz],
+              [Fz, Xz]
             ],
             [/(nexus 9)/i],
-            [Ky, [sy, "HTC"],
-              [qb, Cy]
+            [pz, [Zz, "HTC"],
+              [Fz, fz]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [sy, [Ky, /_/g, " "],
-              [qb, mb]
+            [Zz, [pz, /_/g, " "],
+              [Fz, Xz]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [Ky, [sy, "TCL"],
-              [qb, Cy]
+            [pz, [Zz, "TCL"],
+              [Fz, fz]
             ],
             [/(itel) ((\w+))/i],
             [
-              [sy, dy], Ky, [qb, Wb, {
+              [Zz, kz], pz, [Fz, bu, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [Ky, [sy, "Acer"],
-              [qb, Cy]
+            [pz, [Zz, "Acer"],
+              [Fz, fz]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [Ky, [sy, "Meizu"],
-              [qb, mb]
+            [pz, [Zz, "Meizu"],
+              [Fz, Xz]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [Ky, [sy, "Ulefone"],
-              [qb, mb]
+            [pz, [Zz, "Ulefone"],
+              [Fz, Xz]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [Ky, [sy, "Energizer"],
-              [qb, mb]
+            [pz, [Zz, "Energizer"],
+              [Fz, Xz]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [Ky, [sy, "Cat"],
-              [qb, mb]
+            [pz, [Zz, "Cat"],
+              [Fz, Xz]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [Ky, [sy, "Smartfren"],
-              [qb, mb]
+            [pz, [Zz, "Smartfren"],
+              [Fz, Xz]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [Ky, [sy, "Nothing"],
-              [qb, mb]
+            [pz, [Zz, "Nothing"],
+              [Fz, Xz]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [Ky, [sy, "Archos"],
-              [qb, Cy]
+            [pz, [Zz, "Archos"],
+              [Fz, fz]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [Ky, [sy, "Archos"],
-              [qb, mb]
+            [pz, [Zz, "Archos"],
+              [Fz, Xz]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [sy, Ky, [qb, Cy]],
+            [Zz, pz, [Fz, fz]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [sy, Ky, [qb, mb]],
+            [Zz, pz, [Fz, Xz]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [sy, Ky, [qb, Cy]],
+            [Zz, pz, [Fz, fz]],
             [/(surface duo)/i],
-            [Ky, [sy, rb],
-              [qb, Cy]
+            [pz, [Zz, mz],
+              [Fz, fz]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [Ky, [sy, "Fairphone"],
-              [qb, mb]
+            [pz, [Zz, "Fairphone"],
+              [Fz, Xz]
             ],
             [/(u304aa)/i],
-            [Ky, [sy, "AT&T"],
-              [qb, mb]
+            [pz, [Zz, "AT&T"],
+              [Fz, Xz]
             ],
             [/\bsie-(\w*)/i],
-            [Ky, [sy, "Siemens"],
-              [qb, mb]
+            [pz, [Zz, "Siemens"],
+              [Fz, Xz]
             ],
             [/\b(rct\w+) b/i],
-            [Ky, [sy, "RCA"],
-              [qb, Cy]
+            [pz, [Zz, "RCA"],
+              [Fz, fz]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [Ky, [sy, "Dell"],
-              [qb, Cy]
+            [pz, [Zz, "Dell"],
+              [Fz, fz]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [Ky, [sy, "Verizon"],
-              [qb, Cy]
+            [pz, [Zz, "Verizon"],
+              [Fz, fz]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [Ky, [sy, "Barnes & Noble"],
-              [qb, Cy]
+            [pz, [Zz, "Barnes & Noble"],
+              [Fz, fz]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [Ky, [sy, "NuVision"],
-              [qb, Cy]
+            [pz, [Zz, "NuVision"],
+              [Fz, fz]
             ],
             [/\b(k88) b/i],
-            [Ky, [sy, "ZTE"],
-              [qb, Cy]
+            [pz, [Zz, "ZTE"],
+              [Fz, fz]
             ],
             [/\b(nx\d{3}j) b/i],
-            [Ky, [sy, "ZTE"],
-              [qb, mb]
+            [pz, [Zz, "ZTE"],
+              [Fz, Xz]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [Ky, [sy, "Swiss"],
-              [qb, mb]
+            [pz, [Zz, "Swiss"],
+              [Fz, Xz]
             ],
             [/\b(zur\d{3}) b/i],
-            [Ky, [sy, "Swiss"],
-              [qb, Cy]
+            [pz, [Zz, "Swiss"],
+              [Fz, fz]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [Ky, [sy, "Zeki"],
-              [qb, Cy]
+            [pz, [Zz, "Zeki"],
+              [Fz, fz]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [sy, "Dragon Touch"], Ky, [qb, Cy]
+              [Zz, "Dragon Touch"], pz, [Fz, fz]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [Ky, [sy, "Insignia"],
-              [qb, Cy]
+            [pz, [Zz, "Insignia"],
+              [Fz, fz]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [Ky, [sy, "NextBook"],
-              [qb, Cy]
+            [pz, [Zz, "NextBook"],
+              [Fz, fz]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [sy, "Voice"], Ky, [qb, mb]
+              [Zz, "Voice"], pz, [Fz, Xz]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [sy, "LvTel"], Ky, [qb, mb]
+              [Zz, "LvTel"], pz, [Fz, Xz]
             ],
             [/\b(ph-1) /i],
-            [Ky, [sy, "Essential"],
-              [qb, mb]
+            [pz, [Zz, "Essential"],
+              [Fz, Xz]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [Ky, [sy, "Envizen"],
-              [qb, Cy]
+            [pz, [Zz, "Envizen"],
+              [Fz, fz]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [Ky, [sy, "MachSpeed"],
-              [qb, Cy]
+            [pz, [Zz, "MachSpeed"],
+              [Fz, fz]
             ],
             [/\btu_(1491) b/i],
-            [Ky, [sy, "Rotor"],
-              [qb, Cy]
+            [pz, [Zz, "Rotor"],
+              [Fz, fz]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [Ky, [sy, ab],
-              [qb, Cy]
+            [pz, [Zz, hz],
+              [Fz, fz]
             ],
             [/(sprint) (\w+)/i],
-            [sy, Ky, [qb, mb]],
+            [Zz, pz, [Fz, Xz]],
             [/(kin\.[onetw]{3})/i],
             [
-              [Ky, /\./g, " "],
-              [sy, rb],
-              [qb, mb]
+              [pz, /\./g, " "],
+              [Zz, mz],
+              [Fz, Xz]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [Ky, [sy, wy],
-              [qb, Cy]
+            [pz, [Zz, Wz],
+              [Fz, fz]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [Ky, [sy, wy],
-              [qb, mb]
+            [pz, [Zz, Wz],
+              [Fz, Xz]
             ],
             [/smart-tv.+(samsung)/i],
-            [sy, [qb, Ty]],
+            [Zz, [Fz, sz]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [Ky, /^/, "SmartTV"],
-              [sy, Qy],
-              [qb, Ty]
+              [pz, /^/, "SmartTV"],
+              [Zz, Sz],
+              [Fz, sz]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [sy, uy],
-              [qb, Ty]
+              [Zz, Vz],
+              [Fz, sz]
             ],
             [/(apple) ?tv/i],
-            [sy, [Ky, Gy + " TV"],
-              [qb, Ty]
+            [Zz, [pz, vz + " TV"],
+              [Fz, sz]
             ],
             [/crkey/i],
             [
-              [Ky, ib + "cast"],
-              [sy, Yy],
-              [qb, Ty]
+              [pz, Tz + "cast"],
+              [Zz, Pz],
+              [Fz, sz]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [Ky, [sy, gb],
-              [qb, Ty]
+            [pz, [Zz, Nz],
+              [Fz, sz]
             ],
             [/(shield \w+ tv)/i],
-            [Ky, [sy, ab],
-              [qb, Ty]
+            [pz, [Zz, hz],
+              [Fz, sz]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [Ky, [sy, jb],
-              [qb, Ty]
+            [pz, [Zz, yz],
+              [Fz, sz]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [Ky, [sy, Dy],
-              [qb, Ty]
+            [pz, [Zz, Dz],
+              [Fz, sz]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [Ky, [sy, tb],
-              [qb, Ty]
+            [pz, [Zz, Qz],
+              [Fz, sz]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [sy, Ky, [qb, Ty]],
+            [Zz, pz, [Fz, sz]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [sy, yW],
-              [Ky, yW],
-              [qb, Ty]
+              [Zz, zu],
+              [pz, zu],
+              [Fz, sz]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [Ky, [qb, Ty]],
+            [pz, [Fz, sz]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [qb, Ty]
+              [Fz, sz]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [sy, Ky, [qb, ly]],
+            [Zz, pz, [Fz, wz]],
             [/droid.+; (shield)( bui|\))/i],
-            [Ky, [sy, ab],
-              [qb, ly]
+            [pz, [Zz, hz],
+              [Fz, wz]
             ],
             [/(playstation \w+)/i],
-            [Ky, [sy, Dy],
-              [qb, ly]
+            [pz, [Zz, Dz],
+              [Fz, wz]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [Ky, [sy, rb],
-              [qb, ly]
+            [pz, [Zz, mz],
+              [Fz, wz]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [Ky, [sy, Qy],
-              [qb, Vy]
+            [pz, [Zz, Sz],
+              [Fz, rz]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [sy, Ky, [qb, Vy]],
+            [Zz, pz, [Fz, rz]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [Ky, [sy, Ly],
-              [qb, Vy]
+            [pz, [Zz, gz],
+              [Fz, rz]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [Ky, [sy, Gy],
-              [qb, Vy]
+            [pz, [Zz, vz],
+              [Fz, rz]
             ],
             [/(opwwe\d{3})/i],
-            [Ky, [sy, Fy],
-              [qb, Vy]
+            [pz, [Zz, Uz],
+              [Fz, rz]
             ],
             [/(moto 360)/i],
-            [Ky, [sy, Hy],
-              [qb, Vy]
+            [pz, [Zz, qz],
+              [Fz, rz]
             ],
             [/(smartwatch 3)/i],
-            [Ky, [sy, Dy],
-              [qb, Vy]
+            [pz, [Zz, Dz],
+              [Fz, rz]
             ],
             [/(g watch r)/i],
-            [Ky, [sy, uy],
-              [qb, Vy]
+            [pz, [Zz, Vz],
+              [Fz, rz]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [Ky, [sy, wy],
-              [qb, Vy]
+            [pz, [Zz, Wz],
+              [Fz, rz]
             ],
             [/droid.+; (glass) \d/i],
-            [Ky, [sy, Yy],
-              [qb, Vy]
+            [pz, [Zz, Pz],
+              [Fz, rz]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [sy, Ky, [qb, Vy]],
+            [Zz, pz, [Fz, rz]],
             [/; (quest( \d| pro)?)/i],
-            [Ky, [sy, kb],
-              [qb, Vy]
+            [pz, [Zz, ez],
+              [Fz, rz]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [sy, [qb, Jy]],
+            [Zz, [Fz, oz]],
             [/(aeobc)\b/i],
-            [Ky, [sy, gb],
-              [qb, Jy]
+            [pz, [Zz, Nz],
+              [Fz, oz]
             ],
             [/(homepod).+mac os/i],
-            [Ky, [sy, Gy],
-              [qb, Jy]
+            [pz, [Zz, vz],
+              [Fz, oz]
             ],
             [/windows iot/i],
             [
-              [qb, Jy]
+              [Fz, oz]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [Ky, [qb, mb]],
+            [pz, [Fz, Xz]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [Ky, [qb, Cy]],
+            [pz, [Fz, fz]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [qb, Cy]
+              [Fz, fz]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [qb, mb]
+              [Fz, Xz]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [Ky, [sy, "Generic"]]
+            [pz, [Zz, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [Sy, [ey, "EdgeHTML"]],
+            [Rz, [dz, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [Sy, [ey, "Blink"]],
+            [Rz, [dz, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/ladybird\//i],
             [
-              [ey, "LibWeb"]
+              [dz, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [Sy, ey]
+            [Rz, dz]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [ey, [Sy, Wb, Ub]],
+            [dz, [Rz, bu, Eu]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [Sy, Wb, Ub],
-              [ey, "Windows"]
+              [Rz, bu, Eu],
+              [dz, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [Sy, /_/g, "."],
-              [ey, "iOS"]
+              [Rz, /_/g, "."],
+              [dz, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [ey, zb],
-              [Sy, /_/g, "."]
+              [dz, Iz],
+              [Rz, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [Sy, ey],
+            [Rz, dz],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [ey, /(.+)/, "$1 Touch"], Sy
+              [dz, /(.+)/, "$1 Touch"], Rz
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/\(bb(10);/i],
-            [Sy, [ey, Ry]],
+            [Rz, [dz, Jz]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [Sy, [ey, "Symbian"]],
+            [Rz, [dz, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [Sy, [ey, My + " OS"]],
+            [Rz, [dz, Lz + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [Sy, [ey, "webOS"]],
+            [Rz, [dz, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [Sy, [ey, "watchOS"]],
+            [Rz, [dz, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [Sy, [ey, ib + "cast"]],
+            [Rz, [dz, Tz + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [ey, Ny], Sy
+              [dz, jz], Rz
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [ey, Sy],
+            [dz, Rz],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [ey, "Solaris"], Sy
+              [dz, "Solaris"], Rz
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [ey, Sy]
+            [dz, Rz]
           ]
         },
-        fb = function(yb, bb) {
-          if (typeof yb === Py && (bb = yb, yb = fy), !(this instanceof fb)) return new fb(yb, bb).getResult();
-          var Wy = typeof hy !== cb && hy.navigator ? hy.navigator : fy,
-            Uy = yb || (Wy && Wy.userAgent ? Wy.userAgent : ""),
-            ly = Wy && Wy.userAgentData ? Wy.userAgentData : fy,
-            Ty = bb ? function(yb, bb) {
-              var Wy = {};
-              for (var Uy in yb) bb[Uy] && bb[Uy].length % 2 === 0 ? Wy[Uy] = bb[Uy].concat(yb[Uy]) : Wy[Uy] = yb[Uy];
-              return Wy
-            }(hb, bb) : hb,
-            Vy = Wy && Wy.userAgent == Uy;
+        iu = function(zz, uz) {
+          if (typeof zz === tz && (uz = zz, zz = iz), !(this instanceof iu)) return new iu(zz, uz).getResult();
+          var bz = typeof nz !== Mz && nz.navigator ? nz.navigator : iz,
+            Ez = zz || (bz && bz.userAgent ? bz.userAgent : ""),
+            wz = bz && bz.userAgentData ? bz.userAgentData : iz,
+            sz = uz ? function(zz, uz) {
+              var bz = {};
+              for (var Ez in zz) uz[Ez] && uz[Ez].length % 2 === 0 ? bz[Ez] = uz[Ez].concat(zz[Ez]) : bz[Ez] = zz[Ez];
+              return bz
+            }(nu, uz) : nu,
+            rz = bz && bz.userAgent == Ez;
           return this.getBrowser = function() {
-            var yb, bb = {};
-            return bb[ey] = fy, bb[Sy] = fy, bW.call(bb, Uy, Ty.browser), bb[By] = typeof(yb = bb[Sy]) === oy ? yb.replace(/[^\d\.]/g, "").split(".")[0] : fy, Vy && Wy && Wy.brave && typeof Wy.brave.isBrave == Zy && (bb[ey] = "Brave"), bb
+            var zz, uz = {};
+            return uz[dz] = iz, uz[Rz] = iz, uu.call(uz, Ez, sz.browser), uz[Oz] = typeof(zz = uz[Rz]) === Hz ? zz.replace(/[^\d\.]/g, "").split(".")[0] : iz, rz && bz && bz.brave && typeof bz.brave.isBrave == lz && (uz[dz] = "Brave"), uz
           }, this.getCPU = function() {
-            var yb = {};
-            return yb[Ey] = fy, bW.call(yb, Uy, Ty.cpu), yb
+            var zz = {};
+            return zz[Kz] = iz, uu.call(zz, Ez, sz.cpu), zz
           }, this.getDevice = function() {
-            var yb = {};
-            return yb[sy] = fy, yb[Ky] = fy, yb[qb] = fy, bW.call(yb, Uy, Ty.device), Vy && !yb[qb] && ly && ly.mobile && (yb[qb] = mb), Vy && "Macintosh" == yb[Ky] && Wy && typeof Wy.standalone !== cb && Wy.maxTouchPoints && Wy.maxTouchPoints > 2 && (yb[Ky] = "iPad", yb[qb] = Cy), yb
-          }, this.xh = function() {
-            var yb = {};
-            return yb[ey] = fy, yb[Sy] = fy, bW.call(yb, Uy, Ty.engine), yb
+            var zz = {};
+            return zz[Zz] = iz, zz[pz] = iz, zz[Fz] = iz, uu.call(zz, Ez, sz.device), rz && !zz[Fz] && wz && wz.mobile && (zz[Fz] = Xz), rz && "Macintosh" == zz[pz] && bz && typeof bz.standalone !== Mz && bz.maxTouchPoints && bz.maxTouchPoints > 2 && (zz[pz] = "iPad", zz[Fz] = fz), zz
+          }, this.uR = function() {
+            var zz = {};
+            return zz[dz] = iz, zz[Rz] = iz, uu.call(zz, Ez, sz.engine), zz
           }, this.getOS = function() {
-            var yb = {};
-            return yb[ey] = fy, yb[Sy] = fy, bW.call(yb, Uy, Ty.os), Vy && !yb[ey] && ly && ly.platform && "Unknown" != ly.platform && (yb[ey] = ly.platform.replace(/chrome os/i, Ny).replace(/macos/i, zb)), yb
+            var zz = {};
+            return zz[dz] = iz, zz[Rz] = iz, uu.call(zz, Ez, sz.os), rz && !zz[dz] && wz && wz.platform && "Unknown" != wz.platform && (zz[dz] = wz.platform.replace(/chrome os/i, jz).replace(/macos/i, Iz)), zz
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.xh(),
+              engine: this.uR(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return Uy
-          }, this.setUA = function(yb) {
-            return Uy = typeof yb === oy && yb.length > 500 ? yW(yb, 500) : yb, this
-          }, this.setUA(Uy), this
+            return Ez
+          }, this.setUA = function(zz) {
+            return Ez = typeof zz === Hz && zz.length > 500 ? zu(zz, 500) : zz, this
+          }, this.setUA(Ez), this
         };
-      fb.VERSION = "1.0.41", fb.BROWSER = xb([ey, Sy, By]), fb.CPU = xb([Ey]), fb.DEVICE = xb([Ky, sy, qb, ly, mb, Ty, Cy, Vy, Jy]), fb.ENGINE = fb.OS = xb([ey, Sy]), typeof bb !== cb ? (yb.exports && (bb = yb.exports = fb), bb.UAParser = fb) : Wy.amdO ? (Uy = function() {
-        return fb
-      }.call(bb, Wy, bb, yb)) === fy || (yb.exports = Uy) : typeof hy !== cb && (hy.UAParser = fb);
-      var Zb = typeof hy !== cb && (hy.jQuery || hy.Zepto);
-      if (Zb && !Zb.ua) {
-        var cW = new fb;
-        Zb.ua = cW.getResult(), Zb.ua.get = function() {
-          return cW.getUA()
-        }, Zb.ua.set = function(yb) {
-          cW.setUA(yb);
-          var bb = cW.getResult();
-          for (var Wy in bb) Zb.ua[Wy] = bb[Wy]
+      iu.VERSION = "1.0.41", iu.BROWSER = Cz([dz, Rz, Oz]), iu.CPU = Cz([Kz]), iu.DEVICE = Cz([pz, Zz, Fz, wz, Xz, sz, fz, rz, oz]), iu.ENGINE = iu.OS = Cz([dz, Rz]), typeof uz !== Mz ? (zz.exports && (uz = zz.exports = iu), uz.UAParser = iu) : bz.amdO ? (Ez = function() {
+        return iu
+      }.call(uz, bz, uz, zz)) === iz || (zz.exports = Ez) : typeof nz !== Mz && (nz.UAParser = iu);
+      var lu = typeof nz !== Mz && (nz.jQuery || nz.Zepto);
+      if (lu && !lu.ua) {
+        var Mu = new iu;
+        lu.ua = Mu.getResult(), lu.ua.get = function() {
+          return Mu.getUA()
+        }, lu.ua.set = function(zz) {
+          Mu.setUA(zz);
+          var uz = Mu.getResult();
+          for (var bz in uz) lu.ua[bz] = uz[bz]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

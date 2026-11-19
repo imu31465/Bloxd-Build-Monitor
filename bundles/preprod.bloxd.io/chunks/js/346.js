@@ -1,19 +1,30 @@
 export const id = 346;
 export const ids = [346];
 export const modules = {
-  59970: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      lodCubePixelShader: () => Zy
+  60351: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      WorldCodeAiOutOfUsage: () => iz
     });
-    var Uy = Wy(38319);
-    const hy = "lodCubePixelShader",
-      fy = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform samplerCube textureSampler;uniform float lod;uniform int gamma;void main(void)\n{vec2 uv=vUV*2.0-1.0;\n#ifdef POSITIVEX\ngl_FragColor=textureCube(textureSampler,vec3(1.001,uv.y,uv.x),lod);\n#endif\n#ifdef NEGATIVEX\ngl_FragColor=textureCube(textureSampler,vec3(-1.001,uv.y,uv.x),lod);\n#endif\n#ifdef POSITIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,1.001,uv.x),lod);\n#endif\n#ifdef NEGATIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,-1.001,uv.x),lod);\n#endif\n#ifdef POSITIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,1.001),lod);\n#endif\n#ifdef NEGATIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,-1.001),lod);\n#endif\nif (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    Uy.e.ShadersStore[hy] || (Uy.e.ShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(1419),
+      nz = bz(1089);
+
+    function iz(zz) {
+      let {
+        onGetSuperRank: uz
+      } = zz;
+      return (0, nz.jsxs)("div", {
+        className: "WorldCodeAiOutOfUsage",
+        children: [(0, nz.jsx)("p", {
+          className: "WorldCodeAiOutOfUsageText",
+          children: "You don't have any Super Bot.xd usage left - use Bot.xd or get Super Rank for more usage!"
+        }), (0, nz.jsx)(Ez.q, {
+          className: "WorldCodeAiOutOfUsageButton",
+          onClick: uz,
+          children: "Get Super Rank"
+        })]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

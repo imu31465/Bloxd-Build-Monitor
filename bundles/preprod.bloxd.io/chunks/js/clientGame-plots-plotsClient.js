@@ -1,331 +1,387 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  35370: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => qb,
-      f: () => sy,
-      g: () => ey,
-      k: () => Ky
+  36066: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Fz,
+      d: () => Zz,
+      g: () => dz,
+      h: () => pz
     });
-    var Uy = Wy(8408),
-      hy = Wy(35379),
-      fy = Wy(35383),
-      Zy = Wy(7911),
-      cb = Wy(1268),
-      Py = Wy(55),
-      oy = Wy(70),
-      By = Wy(952);
+    var Ez = bz(8982),
+      nz = bz(36071),
+      iz = bz(36080),
+      lz = bz(8378),
+      Mz = bz(1417),
+      tz = bz(56),
+      Hz = bz(79),
+      Oz = bz(1089);
 
-    function Ky() {
-      var yb;
-      return (0, cb.m)(hy.e, (0, hy.s)()), (0, By.jsx)(By.Fragment, {
-        children: null === (yb = (0, hy.s)()) || void 0 === yb ? void 0 : yb.content
+    function pz() {
+      var zz;
+      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
+        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
       })
     }
 
-    function ey(yb) {
-      var bb;
+    function dz(zz) {
+      var uz;
       let {
-        show: Wy
-      } = yb;
-      (0, cb.m)(hy.e, (0, hy.s)());
-      const oy = null === (bb = (0, hy.s)()) || void 0 === bb ? void 0 : bb.menu;
-      return (0, Py.useEffect)((() => {
-        var yb;
-        Wy || (null === oy || void 0 === oy || null === (yb = oy.onClose) || void 0 === yb || yb.call(oy), (0, fy.l)())
-      }), [Wy, oy]), (0, Py.useEffect)((() => Wy ? (0, Zy.f)(fy.t, fy.e) : void 0), [Wy]), (0, By.jsx)(Uy.b, {
-        showing: Wy,
+        show: bz
+      } = zz;
+      (0, Mz.h)(nz.e, (0, nz.o)());
+      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
+      return (0, tz.useEffect)((() => {
+        var zz;
+        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
+      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
+        showing: bz,
         globallyUniqueKey: "clientGameMenu",
-        children: null === oy || void 0 === oy ? void 0 : oy.content
+        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
       })
     }
 
-    function qb(yb) {
+    function Fz(zz) {
       let {
-        placement: bb = "bottom"
-      } = yb;
-      return (0, By.jsx)("div", {
-        id: `clientGameHud-${bb}`,
+        placement: uz = "bottom"
+      } = zz;
+      return (0, Oz.jsx)("div", {
+        id: `clientGameHud-${uz}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function sy(yb) {
+    function Zz(zz) {
       let {
-        children: bb,
-        placement: Wy = "bottom"
-      } = yb;
-      const [Uy, hy] = (0, Py.useState)(null);
-      return (0, Py.useEffect)((() => {
-        hy(document.getElementById(`clientGameHud-${Wy}`))
-      }), [Wy]), Uy ? (0, oy.createPortal)(bb, Uy) : null
+        children: uz,
+        placement: bz = "bottom"
+      } = zz;
+      const [Ez, nz] = (0, tz.useState)(null);
+      return (0, tz.useEffect)((() => {
+        nz(document.getElementById(`clientGameHud-${bz}`))
+      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
     }
   },
-  8408: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => fy
+  8982: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
     });
-    var Uy = Wy(3739),
-      hy = Wy(3742);
+    var Ez = bz(4298),
+      nz = bz(4300);
 
-    function fy(yb) {
+    function iz(zz) {
       let {
-        children: bb,
-        showing: Wy,
-        globallyUniqueKey: fy,
-        alwaysMountChildren: Zy = !1,
-        doGameplayStartStopOnShow: cb = !0,
-        keepsMovement: Py = !1
-      } = yb;
-      return (0, hy.b)(!0, Wy, fy, Py), (0, Uy.b)(cb, Wy), Wy || Zy ? bb : null
+        children: uz,
+        showing: bz,
+        globallyUniqueKey: iz,
+        alwaysMountChildren: lz = !1,
+        doGameplayStartStopOnShow: Mz = !0,
+        keepsMovement: tz = !1
+      } = zz;
+      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
     }
   },
-  35490: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => fy,
-      g: () => Zy,
-      i: () => cb,
-      m: () => Py
+  36162: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      d: () => lz,
+      g: () => Mz,
+      j: () => tz
     });
-    var Uy = Wy(55),
-      hy = Wy(974);
-    const fy = 8,
-      Zy = "InGameHeaderContainer",
-      cb = "TopRightElements";
+    var Ez = bz(56),
+      nz = bz(1108);
+    const iz = 8,
+      lz = "InGameHeaderContainer",
+      Mz = "TopRightElements";
 
-    function Py(yb) {
-      const [bb] = (0, hy.d)(), [Wy, Py] = (0, Uy.useState)(!1);
-      return (0, Uy.useLayoutEffect)((() => {
-        if (!yb) return;
-        const bb = document.querySelector(`.${Zy}`),
-          Wy = document.querySelector(`.${cb}`),
-          Uy = () => {
-            const Uy = yb.getBoundingClientRect(),
-              hy = bb ? bb.getBoundingClientRect().right : 0,
-              Zy = Wy ? Wy.getBoundingClientRect().left : window.innerWidth,
-              cb = Uy.left < hy + fy,
-              oy = Uy.right > Zy - fy;
-            Py(cb || oy)
+    function tz(zz) {
+      const [uz] = (0, nz.b)(), [bz, tz] = (0, Ez.useState)(!1);
+      return (0, Ez.useLayoutEffect)((() => {
+        if (!zz) return;
+        const uz = document.querySelector(`.${lz}`),
+          bz = document.querySelector(`.${Mz}`),
+          Ez = () => {
+            const Ez = zz.getBoundingClientRect(),
+              nz = uz ? uz.getBoundingClientRect().right : 0,
+              lz = bz ? bz.getBoundingClientRect().left : window.innerWidth,
+              Mz = Ez.left < nz + iz,
+              Hz = Ez.right > lz - iz;
+            tz(Mz || Hz)
           };
-        Uy();
-        const hy = new ResizeObserver(Uy);
-        return hy.observe(yb), bb && hy.observe(bb), Wy && hy.observe(Wy), () => {
-          hy.disconnect()
+        Ez();
+        const nz = new ResizeObserver(Ez);
+        return nz.observe(zz), uz && nz.observe(uz), bz && nz.observe(bz), () => {
+          nz.disconnect()
         }
-      }), [yb, bb]), Wy
+      }), [zz, uz]), bz
     }
   },
-  7911: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => fy,
-      f: () => hy
+  8378: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      e: () => nz
     });
-    let Uy = null;
-    const hy = function(yb) {
-        const bb = {
-          cycle: yb,
+    let Ez = null;
+    const nz = function(zz) {
+        const uz = {
+          cycle: zz,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Uy = bb, () => {
-          Uy === bb && (Uy = null)
+        return Ez = uz, () => {
+          Ez === uz && (Ez = null)
         }
       },
-      fy = () => {
-        var yb;
-        return null !== (yb = Uy) && void 0 !== yb && yb.canCycle() ? Uy.cycle : null
+      iz = () => {
+        var zz;
+        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
       }
   },
-  35383: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => fy,
-      e: () => Sy,
-      g: () => Ey,
-      j: () => cb,
-      k: () => ey,
-      l: () => ly,
-      p: () => Ky,
-      s: () => Cy,
-      t: () => sy,
-      w: () => mb
+  36080: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      d: () => Rz,
+      g: () => Kz,
+      h: () => Mz,
+      i: () => dz,
+      j: () => wz,
+      n: () => pz,
+      q: () => fz,
+      u: () => Zz,
+      x: () => Xz
     });
-    var Uy = Wy(19),
-      hy = Wy(23);
-    const fy = "clientGameInventoryButtonsChanged",
-      Zy = new Map;
+    var Ez = bz(20),
+      nz = bz(22);
+    const iz = "clientGameInventoryButtonsChanged",
+      lz = new Map;
 
-    function cb() {
-      return [...Zy.values()].sort(((yb, bb) => {
-        var Wy, Uy;
-        return (null !== (Wy = yb.order) && void 0 !== Wy ? Wy : 0) - (null !== (Uy = bb.order) && void 0 !== Uy ? Uy : 0)
+    function Mz() {
+      return [...lz.values()].sort(((zz, uz) => {
+        var bz, Ez;
+        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
       }))
     }
-    let Py = null;
+    let tz = null;
 
-    function oy(yb) {
-      Py = yb
+    function Hz(zz) {
+      tz = zz
     }
-    let By = !1;
+    let Oz = !1;
 
-    function Ky(yb) {
-      By = !0;
+    function pz(zz) {
+      Oz = !0;
       try {
-        yb.onClick()
+        zz.onClick()
       } finally {
-        By = !1
+        Oz = !1
       }
-      yb.panel && "clientGame" === Uy.d.get("openInGameMenuName") && oy(yb.id)
+      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
     }
 
-    function ey() {
-      return By
+    function dz() {
+      return Oz
     }
 
-    function qb() {
-      return cb().filter((yb => yb.panel && !yb.disabled))
+    function Fz() {
+      return Mz().filter((zz => zz.panel && !zz.disabled))
     }
 
-    function sy(yb) {
-      const bb = qb(),
-        Wy = bb.findIndex((yb => yb.id === Py));
-      return !(Wy < 0 || bb.length < 2) && (Ky(bb[(Wy + yb + bb.length) % bb.length]), !0)
+    function Zz(zz) {
+      const uz = Fz(),
+        bz = uz.findIndex((zz => zz.id === tz));
+      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
     }
 
-    function Sy() {
-      return null !== Py && qb().length > 1
+    function Rz() {
+      return null !== tz && Fz().length > 1
     }
 
-    function Ey() {
-      oy(null)
+    function Kz() {
+      Hz(null)
     }
 
-    function ly() {
-      "inventory" !== Uy.d.get("openInGameMenuName") && oy(null)
+    function wz() {
+      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
     }
 
-    function mb() {
-      const yb = Py;
-      return oy(null), yb
+    function Xz() {
+      const zz = tz;
+      return Hz(null), zz
     }
 
-    function Cy(yb) {
-      return Zy.set(yb.id, yb), hy.g.EZ(fy, cb(), !0), () => {
-        Zy.get(yb.id) === yb && (Zy.delete(yb.id), hy.g.EZ(fy, cb()))
+    function fz(zz) {
+      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
+        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
       }
     }
   },
-  35379: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => cb,
-      h: () => Ey,
-      k: () => ly,
-      o: () => ey,
-      s: () => oy,
-      t: () => Sy,
-      v: () => qb,
-      z: () => By
+  36071: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Mz,
+      i: () => Kz,
+      l: () => wz,
+      n: () => dz,
+      o: () => Hz,
+      p: () => Rz,
+      t: () => Fz,
+      x: () => Oz
     });
-    var Uy = Wy(19),
-      hy = Wy(23),
-      fy = Wy(1145),
-      Zy = Wy(35383);
-    const cb = "clientGameUiChanged";
-    let Py = null;
+    var Ez = bz(20),
+      nz = bz(22),
+      iz = bz(1269),
+      lz = bz(36080);
+    const Mz = "clientGameUiChanged";
+    let tz = null;
 
-    function oy() {
-      return Py
+    function Hz() {
+      return tz
     }
 
-    function By(yb, bb) {
-      const Wy = {
-        content: yb,
-        menu: bb
+    function Oz(zz, uz) {
+      const bz = {
+        content: zz,
+        menu: uz
       };
-      return Py = Wy, hy.g.EZ(cb, Py, !0), () => {
-        Py === Wy && (Py = null, sy = !1, Ey(), hy.g.EZ(cb, null))
+      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
+        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
       }
     }
-    let Ky = null;
+    let pz = null;
 
-    function ey() {
-      return Ky
+    function dz() {
+      return pz
     }
 
-    function qb(yb) {
-      return Ky = yb, () => {
-        Ky === yb && (Ky = null)
+    function Fz(zz) {
+      return pz = zz, () => {
+        pz === zz && (pz = null)
       }
     }
-    let sy = !1;
+    let Zz = !1;
 
-    function Sy() {
-      const yb = Uy.d.get("openInGameMenuName");
-      "clientGame" !== yb && (sy = "inventory" === yb), (0, Zy.k)() || (0, Zy.g)(), (0, fy.h)("InGameMenu"), Uy.d.set({
+    function Rz() {
+      const zz = Ez.e.get("openInGameMenuName");
+      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Ey() {
-      mb(!1)
+    function Kz() {
+      Xz(!1)
     }
 
-    function ly() {
-      mb(sy)
+    function wz() {
+      Xz(Zz)
     }
 
-    function mb(yb) {
-      "clientGame" === Uy.d.get("openInGameMenuName") && Uy.d.set({
-        openInGameMenuName: yb ? "inventory" : null
-      }), yb || (0, Zy.g)(), sy = !1
+    function Xz(zz) {
+      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
+        openInGameMenuName: zz ? "inventory" : null
+      }), zz || (0, lz.g)(), Zz = !1
     }
   },
-  37200: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy,
-      g: () => cb,
-      i: () => Py
+  37901: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz,
+      e: () => Mz,
+      h: () => tz
     });
-    const Uy = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      hy = [0, 1, 2, 0, 2, 3],
-      fy = [4, 5];
+    const Ez = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      nz = [0, 1, 2, 0, 2, 3],
+      iz = [4, 5];
 
-    function Zy(yb, bb, Wy, Uy, hy) {
-      for (let Zy = 0; Zy < 6; Zy++) fy.includes(Zy) === hy && oy(yb, bb, Wy, Uy, Zy)
+    function lz(zz, uz, bz, Ez, nz) {
+      for (let lz = 0; lz < 6; lz++) iz.includes(lz) === nz && Hz(zz, uz, bz, Ez, lz)
     }
 
-    function cb(yb, bb, Wy, Uy) {
-      for (let hy = 0; hy < 6; hy++) oy(yb, bb, Wy, Uy, hy)
+    function Mz(zz, uz, bz, Ez) {
+      for (let nz = 0; nz < 6; nz++) Hz(zz, uz, bz, Ez, nz)
     }
 
-    function Py(yb, bb, Wy, fy, Zy) {
-      for (let cb = 0; cb < 6; cb++)
-        for (const Py of [0, 1]) {
-          const [oy, By, Ky] = [Py + 2, Py + 1, (Py + 3) % 4], ey = yb.length / 3;
-          for (const [bb, hy] of [
-              [Py, By],
-              [oy, By],
-              [oy, Ky],
-              [Py, Ky]
+    function tz(zz, uz, bz, iz, lz) {
+      for (let Mz = 0; Mz < 6; Mz++)
+        for (const tz of [0, 1]) {
+          const [Hz, Oz, pz] = [tz + 2, tz + 1, (tz + 3) % 4], dz = zz.length / 3;
+          for (const [uz, nz] of [
+              [tz, Oz],
+              [Hz, Oz],
+              [Hz, pz],
+              [tz, pz]
             ])
-            for (let Py = 0; Py < 3; Py++) {
-              const oy = Uy[3 * (4 * cb + bb) + Py],
-                By = Uy[3 * (4 * cb + hy) + Py];
-              yb.push((oy + (By - oy) * Zy) * fy / 2 + Wy[Py])
+            for (let tz = 0; tz < 3; tz++) {
+              const Hz = Ez[3 * (4 * Mz + uz) + tz],
+                Oz = Ez[3 * (4 * Mz + nz) + tz];
+              zz.push((Hz + (Oz - Hz) * lz) * iz / 2 + bz[tz])
             }
-          for (const yb of hy) bb.push(ey + yb)
+          for (const zz of nz) uz.push(dz + zz)
         }
     }
 
-    function oy(yb, bb, Wy, fy, Zy) {
-      let [cb, Py, oy] = Wy, [By, Ky, ey] = fy;
-      const qb = yb.length / 3;
-      for (let hy = 4 * Zy; hy < 4 * Zy + 4; hy++) yb.push(Uy[3 * hy] * By / 2 + cb, Uy[3 * hy + 1] * Ky / 2 + Py, Uy[3 * hy + 2] * ey / 2 + oy);
-      for (const Uy of hy) bb.push(qb + Uy)
+    function Hz(zz, uz, bz, iz, lz) {
+      let [Mz, tz, Hz] = bz, [Oz, pz, dz] = iz;
+      const Fz = zz.length / 3;
+      for (let nz = 4 * lz; nz < 4 * lz + 4; nz++) zz.push(Ez[3 * nz] * Oz / 2 + Mz, Ez[3 * nz + 1] * pz / 2 + tz, Ez[3 * nz + 2] * dz / 2 + Hz);
+      for (const Ez of nz) uz.push(Fz + Ez)
+    }
+  },
+  36328: (zz, uz, bz) => {
+    function Ez(zz, uz) {
+      return null === zz || null === uz ? zz === uz : zz[0] === uz[0] && zz[1] === uz[1] && zz[2] === uz[2]
+    }
+
+    function nz(zz) {
+      return [zz[0] + .5, zz[1] + .5, zz[2] + .5]
+    }
+    bz.d(uz, {
+      d: () => nz,
+      e: () => Ez
+    })
+  },
+  36365: (zz, uz, bz) => {
+    function Ez(zz) {
+      return zz.includes("Leaf Bed")
+    }
+
+    function nz(zz) {
+      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Ez(zz)
+    }
+
+    function iz(zz) {
+      return zz.includes(" Strongbed")
+    }
+
+    function lz(zz) {
+      return Ez(zz) || nz(zz) || iz(zz)
+    }
+    bz.d(uz, {
+      e: () => lz,
+      g: () => Ez,
+      j: () => iz,
+      k: () => nz
+    })
+  },
+  36363: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Hz
+    });
+    var Ez = bz(36365),
+      nz = bz(9078);
+    const iz = [],
+      lz = [],
+      Mz = [],
+      tz = [];
+    for (const Oz of Object.keys(nz.p))(0, Ez.g)(Oz) ? iz.push(Oz) : (0, Ez.k)(Oz) && lz.push(Oz), (0, Ez.j)(Oz) && Mz.push(Oz), (Oz.includes(" Bed Head") || Oz.includes(" Strongbed Head")) && tz.push(Oz);
+    const Hz = {
+      leafBeds: iz,
+      woolBeds: lz,
+      strongBeds: Mz,
+      beds: [...iz, ...lz, ...Mz],
+      bedHeads: tz,
+      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

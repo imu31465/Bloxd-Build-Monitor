@@ -1,1350 +1,1728 @@
 export const id = 76;
 export const ids = [76];
 export const modules = {
-  4001: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      $: () => ib,
-      B: () => Ly,
-      Cb: () => Yy,
-      D: () => By,
-      F: () => Py,
-      Gb: () => sy,
-      H: () => mb,
-      I: () => Ty,
-      Jb: () => Sy,
-      M: () => Vy,
-      Nb: () => rb,
-      Pb: () => hy,
-      Q: () => Cy,
-      T: () => Jy,
-      Tb: () => py,
-      W: () => uy,
-      Y: () => Xy,
-      bb: () => gb,
-      c: () => Fy,
-      cb: () => Ry,
-      db: () => Gy,
-      f: () => ab,
-      hb: () => ly,
-      j: () => qb,
-      jb: () => Ey,
-      m: () => Hy,
-      nb: () => Oy,
-      o: () => ey,
-      q: () => Ky,
-      r: () => Zy,
-      rb: () => ny,
-      u: () => cb,
-      v: () => Uy,
-      vb: () => vb,
-      x: () => fy,
-      yb: () => My,
-      z: () => oy
-    });
-    const Uy = 32,
-      hy = 33.333333333333336,
-      fy = {
-        AbiVersion: 0,
-        Status: 1,
-        LastError: 2,
-        ErrorCount: 3,
-        FrameIndex: 4,
-        TicksRun: 5,
-        TicksDropped: 6,
-        Alpha: 7,
-        NetOutPtr: 8,
-        NetOutLen: 9,
-        WorkerOutPtr: 10,
-        WorkerOutLen: 11,
-        EventsPtr: 12,
-        EventsLen: 13,
-        ScenePtr: 14,
-        SceneLen: 15,
-        TickIndex: 16,
-        LastErrorDetail: 17,
-        RenderPending: 18,
-        GpuSampled: 19,
-        GpuTimed: 20,
-        GpuFrameUs: 21,
-        TickUs: 22,
-        RenderUs: 23,
-        FirstView: 24,
-        ChunksCancelled: 25,
-        PingSent: 26,
-        NetInKept: 27,
-        FrameDraw: 28,
-        Pacing: 29,
-        PacingLagUs: 30
-      },
-      Zy = {
-        NotYet: 0,
-        Drawn: 1,
-        Backstop: 2
-      },
-      cb = {
-        NotDrawn: 0,
-        Drawn: 1,
-        Paced: 2
-      },
-      Py = {
-        AheadMask: 15,
-        Joining: 64,
-        Tiered: 128,
-        LagsShift: 8,
-        SwitchesShift: 20,
-        CountMask: 4095
-      },
-      oy = {
-        KeyDown: 1,
-        KeyUp: 2,
-        MouseMove: 3,
-        MouseDown: 4,
-        MouseUp: 5,
-        Wheel: 6,
-        TouchStart: 7,
-        TouchMove: 8,
-        TouchEnd: 9,
-        TouchCancel: 10,
-        PointerLock: 11,
-        Resize: 12,
-        Focus: 13,
-        Blur: 14,
-        UiPrefs: 15,
-        Binding: 16,
-        UiCapture: 17,
-        Sensitivity: 18,
-        Joystick: 19,
-        TouchButton: 20,
-        TouchZone: 21,
-        Options: 22,
-        AntiCheat: 23,
-        PadAction: 24,
-        PadLook: 25,
-        EnvPrefs: 32
-      },
-      By = {
-        Frame: 1,
-        Open: 2,
-        Close: 3
-      },
-      Ky = {
-        RawMessage: 1,
-        CoreErrors: 2,
-        LocalHurt: 16,
-        AttackHit: 17,
-        HealthChanged: 18,
-        LocalPlayerBound: 19,
-        ConnectionState: 20,
-        ReconnectGrace: 5,
-        GameCalls: 96,
-        LocalTeleported: 21,
-        PhysicsType: 22,
-        VehicleEffect: 23,
-        InputAction: 24,
-        ZoomChanged: 25,
-        ZoomDisabled: 26,
-        SendRefused: 27,
-        KeepAliveDue: 28,
-        GameCamera: 29,
-        TickEnd: 32,
-        EntitySpawned: 33,
-        EntityDespawned: 34,
-        ChangeBlockFail: 39,
-        ChangeBlockFailEnd: 46,
-        InventoryEvent: 48,
-        HeldItemChanged: 49,
-        ShotDamage: 50,
-        EnchantOffer: 51,
-        UiEvent: 52,
-        EntityInfoChanged: 53,
-        ChunkSlot: 55,
-        PlaySound: 40,
-        SoundPos: 41,
-        SoundSet: 42,
-        SoundFade: 43,
-        SoundStop: 44,
-        SoundReset: 45,
-        EnvLighting: 54,
-        SkyImages: 64,
-        ReplayFailed: 56,
-        ReplayOption: 57,
-        ReplayFilePart: 58,
-        ReplayFileReady: 59,
-        ReplayOpened: 60,
-        ReplayUiEvent: 61,
-        RecorderEvent: 62,
-        Images: 128,
-        ModelRequests: 129,
-        ModelTaken: 130,
-        RenderReload: 3,
-        TerrainTexturesWanted: 4
-      },
-      ey = {
-        EntityInfo: 1,
-        EntityTable: 2,
-        CoreErrors: 4,
-        Other: 8,
-        NetSession: 16,
-        ItemsUi: 32,
-        PlayerHud: 64,
-        GameCalls: 128
-      },
-      qb = 4,
-      sy = 4,
-      Sy = 65535,
-      Ey = {
-        Open: 1,
-        TooLarge: 2,
-        NothingStaged: 3,
-        NotPlayback: 4,
-        NotOpen: 5,
-        BadValue: 6,
-        Crop: 7,
-        NotLive: 8,
-        ModuleLoad: 9,
-        ModuleTrap: 10,
-        Port: 11
-      },
-      ly = {
-        Busy: 0,
-        Range: 1,
-        OtherBody: 2,
-        TooLarge: 3,
-        Corrupt: 4,
-        Ended: 5
-      },
-      mb = 88,
-      Cy = 0,
-      Ty = 24,
-      Vy = 48,
-      Jy = 80,
-      gb = {
-        FilePartDone: 526,
-        FileDone: 527,
-        Control: 528,
-        Prefs: 529,
-        Option: 530,
-        FlyingText: 531,
-        PlayerKilled: 532,
-        Killfeed: 533,
-        Session: 534
-      },
-      Gy = {
-        ToggleRecording: 0,
-        SaveClip: 1,
-        ViewerOpened: 2,
-        ViewerClosed: 3
-      },
-      Oy = {
-        Clip: 0,
-        Recording: 1,
-        Edited: 2
-      },
-      Ry = {
-        RecordingStarted: 0,
-        RecordingStopped: 1,
-        RecordingDiscarded: 2,
-        ClipSaved: 3,
-        ClipEmpty: 4,
-        ClippingNotOn: 5,
-        Disallowed: 6,
-        ClippingOn: 7,
-        ClippingOff: 8,
-        LimitReached: 9,
-        ClipSettingsChanged: 10,
-        SaveBusy: 11,
-        CloseViewerFirst: 12,
-        FileDiscarded: 13,
-        SaveFailed: 14,
-        RecordingTurnedOff: 15
-      },
-      vb = {
-        Cleared: 0,
-        Text: 1,
-        Int: 2,
-        Double: 3
-      },
-      ib = 65535,
-      My = {
-        FlyingText: 1,
-        PlayerKilled: 2,
-        Killfeed: 3
-      },
-      Yy = {
-        None: 0,
-        Paused: 1,
-        Playing: 2,
-        Cropping: 3,
-        Loading: 4
-      },
-      Xy = 2,
-      ny = {
-        UiText: 0,
-        Environment: 6,
-        Hud: 12,
-        Count: 19
-      },
-      uy = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      rb = {
-        SkyTable: 600,
-        SkyImagesReady: 601,
-        SkyTableHeaderBytes: 8,
-        SkyTableEntryBytes: 92,
-        SkyImagesReadyBytes: 32,
-        KindNone: 0,
-        KindCustom: 1,
-        KindEarth: 2,
-        CubeFaces: 6,
-        Failed: 0
-      },
-      Hy = {
-        Bytes: 88,
-        Inclination: 0,
-        Turbidity: 1,
-        Luminance: 2,
-        Rayleigh: 3,
-        MieCoefficient: 4,
-        MieDirectionalG: 5,
-        Distance: 6,
-        Azimuth: 7,
-        Params: 8,
-        SunPosition: 256,
-        CameraOffsetX: 512,
-        CameraOffsetY: 1024,
-        CameraOffsetZ: 2048,
-        Up: 4096,
-        VertexTint: 8192,
-        UseSunPosition: 16384,
-        Dithering: 32768,
-        InfiniteDistance: 65536,
-        SunPositionAt: 32,
-        CameraOffsetAt: 44,
-        UpAt: 56,
-        VertexTintAt: 68,
-        PresentAt: 80,
-        FlagsAt: 84
-      },
-      ab = {
-        None: 0,
-        InputOverCapacity: 1,
-        InputTruncated: 2,
-        InputUnknownKind: 3,
-        InputNonFinite: 4,
-        NetOverCapacity: 16,
-        NetTruncated: 17,
-        NetOversize: 18,
-        NetBadKind: 19,
-        NetConnUnknown: 20,
-        NetConnBackwards: 21,
-        WorkerOverCapacity: 32,
-        WorkerTruncated: 33,
-        WorkerUnknownKind: 34,
-        TimeNonFinite: 48,
-        TimeBackwards: 49,
-        GameCallThrew: 50,
-        ResumeUnconsumed: 51,
-        CallLogMismatch: 52,
-        TerrainTextureRefused: 53,
-        TerrainTextureMissing: 54,
-        ShaderPackRefused: 55,
-        ReserveTooLarge: 64,
-        ReserveFailed: 65,
-        GrowFailed: 66,
-        EventOversize: 80,
-        OutputFull: 81,
-        StateCorrupt: 128,
-        OriginRefused: 129,
-        CoreBusy: 138,
-        WorldWorldgenRefused: 88,
-        WorldWorldgenResultMalformed: 89,
-        WorldBlockDataInvalid: 90,
-        WorldNetDecode: 96,
-        WorldChunkId: 97,
-        WorldChunkVoxels: 98,
-        WorldChunkLight: 99,
-        WorldSendFailed: 100,
-        WorldEditInvalid: 101,
-        WorldPlayerInvalid: 102,
-        WorldNoVoxels: 103,
-        WorldStoreCorrupt: 224,
-        WorldWorldgenTrapped: 226,
-        WorldRegistryInvalid: 227,
-        WorldStreamStartInvalid: 228,
-        PresentationRigRefused: 160,
-        PresentationSceneRefused: 161,
-        PresentationModelMissing: 162,
-        PresentationAnimDecode: 163,
-        PresentationSettingDecode: 164,
-        PresentationParticleDecode: 165,
-        PresentationNodeUnknown: 166,
-        PresentationStateFull: 167,
-        PresentationBindingUnfit: 168,
-        PresentationClipUnplayable: 169,
-        PresentationObjectOpsDropped: 170,
-        PresentationImageFailed: 171,
-        PresentationDracoFailure: 144,
-        NetNotGameRoom: 184,
-        NetEnvelope: 185,
-        NetMessageDecode: 186,
-        NetNoHandshake: 187,
-        NetRejoin: 188,
-        NetHandshake: 189,
-        NetSchemaDesync: 136,
-        ReplicationUnknownType: 192,
-        ReplicationBadId: 193,
-        ReplicationFull: 194,
-        ReplicationNamesFull: 195,
-        ReplicationRosterFull: 196,
-        ReplicationEffectsFull: 197,
-        ReplicationNoDecoder: 198,
-        ReplicationResetFailed: 137,
-        OptionsMalformed: 56,
-        OptionsRecordBad: 57,
-        ItemsDeadlinesFull: 73,
-        ItemsThrowablesFull: 75,
-        ItemsSendLatchFull: 76,
-        ItemsBadSlotJson: 77,
-        ItemsUnknownItem: 78,
-        ItemsMessageDecode: 79,
-        ItemsRecipeBad: 82,
-        ItemsSendFailed: 83,
-        ItemsMarkerLost: 84,
-        ItemsCallStackFull: 85,
-        ItemsUiDropsFull: 272,
-        ItemsReplayRefused: 273,
-        ApiCmdUnknownKind: 67,
-        ApiCmdBadLength: 68,
-        ApiCmdTruncated: 69,
-        ApiQueryBadArgs: 70,
-        ApiScratchTooLarge: 71,
-        AudioUnknownSound: 86,
-        JobsRefused: 104,
-        JobsResultMalformed: 105,
-        JobsUnknownJob: 106,
-        JobsWorkerIndexInvalid: 107,
-        JobsWorkerOutFull: 108,
-        JobsTablesRefused: 109,
-        JobsVisInputRefused: 110,
-        JobsKeyInvalid: 111,
-        JobsTrapped: 288,
-        JobsTrapGaveUp: 289,
-        JobsTablesRetired: 290,
-        JobsHeapGaveUp: 291,
-        JobsTablesTrapped: 232,
-        JobsWorkerTablesRefused: 233,
-        EffectsUnknownPreset: 256,
-        EffectsParticleCmdBad: 257,
-        EffectsParticleKeysFull: 258,
-        EffectsUnknownAnchor: 259,
-        EffectsGrowingFull: 260,
-        EffectsMessageDecode: 261,
-        EnvUnknownSky: 264,
-        EnvSkyTableBad: 265,
-        EnvSkyRowsRefused: 266,
-        EnvSkyReleasesLost: 267,
-        EnvOverlayRowsRefused: 268,
-        SendsSendRefused: 58,
-        SendsSendMalformed: 59,
-        SendsSendQueueFull: 60,
-        SendsAntiCheatRecordBad: 61,
-        SendsSendFailed: 62,
-        RenderDeviceLost: 176,
-        RenderSceneRowNotDrawn: 177,
-        RenderChunkMeshNotDrawn: 178,
-        RenderShaderPackNotRun: 179,
-        RenderInternal: 180,
-        RenderCaveCullingOff: 181,
-        RenderOutOfMemory: 200,
-        RenderValidation: 201,
-        RenderSurfaceUnusable: 202,
-        RenderPipelineFailed: 203,
-        RenderStateCorrupt: 204,
-        RenderDeviceUnrecoverable: 205,
-        PlayerMessageDecode: 112,
-        PlayerMovementFailed: 113,
-        PlayerPhysicsFailed: 114,
-        PlayerConfirmQueueFull: 115,
-        PlayerSendFailed: 116,
-        PlayerBadPhysicsState: 117,
-        PlayerBadOverride: 118,
-        PlayerNonFinitePosition: 119,
-        PlayerEventsFull: 120,
-        PlayerMultiplierSetDropped: 121,
-        CameraNonFinite: 126,
-        CameraCmdBad: 127,
-        CameraScriptedPoseRefused: 296,
-        InputBadKey: 122,
-        InputBadAction: 123,
-        InputBadTouch: 124,
-        InputEdgesFull: 125,
-        ReplayDrops: 87,
-        ReplayRecorderDrops: 304
-      },
-      Fy = 8,
-      py = {
-        GameCodeMessage: 4,
-        NewOtherEntitySettings: 23,
-        NewClientOptions: 37,
-        Chat: 64,
-        UiRequestPopup: 8,
-        TaskProgress: 9,
-        CustomKillfeed: 15,
-        TopRightHelper: 24,
-        NewUiRequest: 51,
-        PlayerKilled: 61,
-        OverShopInfo: 43,
-        ShowShopTutorial: 76,
-        SetCookie: 0,
-        LeaveValues: 85,
-        CustomAnalyticsEvent: 31,
-        ProgressionEvent: 19,
-        ResourceEvent: 22,
-        LeaderboardResponse: 30,
-        ResumeComplete: 105,
-        ProgressBarUpdate: 33,
-        RemoveMiddleScreenBar: 90,
-        WorldVariation: 5,
-        EditItemCraftingRecipes: 78
-      },
-      Ly = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
-  },
-  3991: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      D: () => vb,
-      F: () => ib,
-      H: () => mb,
-      K: () => Zy,
-      M: () => cb,
-      O: () => Oy,
-      d: () => Gy,
-      h: () => Ty,
-      j: () => Yy,
-      m: () => My,
-      p: () => ly,
-      r: () => Jy,
-      t: () => Cy,
-      w: () => Vy,
-      z: () => Ry
-    });
-    var Uy = Wy(3994);
-    const hy = {
-      lockPointer: () => !1,
-      unlockPointer: () => {},
-      leaveGame: () => {}
+  4472: zz => {
+    function uz(zz) {
+      return zz instanceof Map ? zz.clear = zz.delete = zz.set = function() {
+        throw new Error("map is read-only")
+      } : zz instanceof Set && (zz.add = zz.clear = zz.delete = function() {
+        throw new Error("set is read-only")
+      }), Object.freeze(zz), Object.getOwnPropertyNames(zz).forEach((bz => {
+        const Ez = zz[bz],
+          nz = typeof Ez;
+        "object" !== nz && "function" !== nz || Object.isFrozen(Ez) || uz(Ez)
+      })), zz
+    }
+    class bz {
+      constructor(zz) {
+        void 0 === zz.data && (zz.data = {}), this.data = zz.data, this.isMatchIgnored = !1
+      }
+      ignoreMatch() {
+        this.isMatchIgnored = !0
+      }
+    }
+
+    function Ez(zz) {
+      return zz.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    }
+
+    function nz(zz) {
+      const uz = Object.create(null);
+      for (const iz in zz) uz[iz] = zz[iz];
+      for (var bz = arguments.length, Ez = new Array(bz > 1 ? bz - 1 : 0), nz = 1; nz < bz; nz++) Ez[nz - 1] = arguments[nz];
+      return Ez.forEach((function(zz) {
+        for (const bz in zz) uz[bz] = zz[bz]
+      })), uz
+    }
+    const iz = zz => !!zz.scope;
+    class lz {
+      constructor(zz, uz) {
+        this.buffer = "", this.classPrefix = uz.classPrefix, zz.walk(this)
+      }
+      addText(zz) {
+        this.buffer += Ez(zz)
+      }
+      openNode(zz) {
+        if (!iz(zz)) return;
+        const uz = ((zz, uz) => {
+          let {
+            prefix: bz
+          } = uz;
+          if (zz.startsWith("language:")) return zz.replace("language:", "language-");
+          if (zz.includes(".")) {
+            const uz = zz.split(".");
+            return [`${bz}${uz.shift()}`, ...uz.map(((zz, uz) => `${zz}${"_".repeat(uz+1)}`))].join(" ")
+          }
+          return `${bz}${zz}`
+        })(zz.scope, {
+          prefix: this.classPrefix
+        });
+        this.span(uz)
+      }
+      closeNode(zz) {
+        iz(zz) && (this.buffer += "</span>")
+      }
+      value() {
+        return this.buffer
+      }
+      span(zz) {
+        this.buffer += `<span class="${zz}">`
+      }
+    }
+    const Mz = function() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const uz = {
+        children: []
+      };
+      return Object.assign(uz, zz), uz
     };
-    let fy = hy;
-
-    function Zy(yb) {
-      fy = null !== yb && void 0 !== yb ? yb : hy
+    class tz {
+      constructor() {
+        this.Xs = Mz(), this.stack = [this.Xs]
+      }
+      get top() {
+        return this.stack[this.stack.length - 1]
+      }
+      get root() {
+        return this.Xs
+      }
+      add(zz) {
+        this.top.children.push(zz)
+      }
+      openNode(zz) {
+        const uz = Mz({
+          scope: zz
+        });
+        this.add(uz), this.stack.push(uz)
+      }
+      closeNode() {
+        if (this.stack.length > 1) return this.stack.pop()
+      }
+      closeAllNodes() {
+        for (; this.closeNode(););
+      }
+      toJSON() {
+        return JSON.stringify(this.Xs, null, 4)
+      }
+      walk(zz) {
+        return this.constructor._walk(zz, this.Xs)
+      }
+      static _walk(zz, uz) {
+        return "string" === typeof uz ? zz.addText(uz) : uz.children && (zz.openNode(uz), uz.children.forEach((uz => this._walk(zz, uz))), zz.closeNode(uz)), zz
+      }
+      static _collapse(zz) {
+        "string" !== typeof zz && zz.children && (zz.children.every((zz => "string" === typeof zz)) ? zz.children = [zz.children.join("")] : zz.children.forEach((zz => {
+          tz._collapse(zz)
+        })))
+      }
     }
-
-    function cb() {
-      return fy
-    }
-    const Py = new Set,
-      oy = new Set;
-    let By = -1;
-    const Ky = new Set,
-      ey = new Set;
-    let qb = 0,
-      sy = 0;
-    const Sy = new Set,
-      Ey = new Set;
-
-    function ly(yb) {
-      return Py.add(yb), () => {
-        Py.delete(yb)
+    class Hz extends tz {
+      constructor(zz) {
+        super(), this.options = zz
+      }
+      addText(zz) {
+        "" !== zz && this.add(zz)
+      }
+      startScope(zz) {
+        this.openNode(zz)
+      }
+      endScope() {
+        this.closeNode()
+      }
+      __addSublanguage(zz, uz) {
+        const bz = zz.root;
+        uz && (bz.scope = `language:${uz}`), this.add(bz)
+      }
+      toHTML() {
+        return new lz(this, this.options).value()
+      }
+      finalize() {
+        return this.closeAllNodes(), !0
       }
     }
 
-    function mb(yb, bb) {
-      for (const Uy of Py) try {
-        Uy(yb)
-      } catch (Wy) {
-        bb(Wy)
-      }
+    function Oz(zz) {
+      return zz ? "string" === typeof zz ? zz : zz.source : null
     }
 
-    function Cy(yb) {
-      return oy.add(yb), () => {
-        oy.delete(yb)
-      }
+    function pz(zz) {
+      return Zz("(?=", zz, ")")
     }
 
-    function Ty(yb, bb) {
-      const Wy = By < 0 ? 0 : yb - By;
-      By = yb;
-      for (const hy of oy) try {
-        hy(Wy)
-      } catch (Uy) {
-        bb(Uy)
-      }
+    function dz(zz) {
+      return Zz("(?:", zz, ")*")
     }
 
-    function Vy(yb) {
-      return Ky.add(yb), () => {
-        Ky.delete(yb)
-      }
+    function Fz(zz) {
+      return Zz("(?:", zz, ")?")
     }
 
-    function Jy(yb) {
-      return ey.add(yb), () => {
-        ey.delete(yb)
-      }
-    }
-    let gb = 0;
-
-    function Gy(yb) {
-      gb += yb
+    function Zz() {
+      for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+      return uz.map((zz => Oz(zz))).join("")
     }
 
-    function Oy() {
-      const yb = gb;
-      return gb = 0, yb
+    function Rz() {
+      for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+      const Ez = function(zz) {
+        const uz = zz[zz.length - 1];
+        return "object" === typeof uz && uz.constructor === Object ? (zz.splice(zz.length - 1, 1), uz) : {}
+      }(uz);
+      return "(" + (Ez.capture ? "" : "?:") + uz.map((zz => Oz(zz))).join("|") + ")"
     }
 
-    function Ry(yb) {
-      return Sy.add(yb), () => {
-        Sy.delete(yb)
-      }
+    function Kz(zz) {
+      return new RegExp(zz.toString() + "|").exec("").length - 1
     }
+    const wz = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function vb(yb) {
-      return Ey.add(yb), () => {
-        Ey.delete(yb)
-      }
-    }
-
-    function ib() {
-      qb = 0, sy = 0, By = -1
-    }
-
-    function My(yb, bb) {
-      if ("paced" === yb) return sy += bb, null;
-      if ("drawn" !== yb && "skipped" !== yb) return null;
-      const Wy = bb + sy;
-      return sy = 0, Wy
-    }
-
-    function Yy(yb, bb, Wy, hy) {
-      const fy = (0, Uy.g)(bb),
-        Zy = yb > 0 ? performance.now() : 0;
-      for (let Uy = 0; Uy < yb; Uy++)
-        for (const yb of Sy) try {
-          yb()
-        } catch (cb) {
-          hy(cb)
+    function Xz(zz, uz) {
+      let {
+        joinWith: bz
+      } = uz, Ez = 0;
+      return zz.map((zz => {
+        Ez += 1;
+        const uz = Ez;
+        let bz = Oz(zz),
+          nz = "";
+        for (; bz.length > 0;) {
+          const zz = wz.exec(bz);
+          if (!zz) {
+            nz += bz;
+            break
+          }
+          nz += bz.substring(0, zz.index), bz = bz.substring(zz.index + zz[0].length), "\\" === zz[0][0] && zz[1] ? nz += "\\" + String(Number(zz[1]) + uz) : (nz += zz[0], "(" === zz[0] && Ez++)
         }
-      if (yb > 0 && Gy(performance.now() - Zy), null !== Wy) {
-        for (const yb of Ky) try {
-          yb(Wy)
-        } catch (cb) {
-          hy(cb)
+        return nz
+      })).map((zz => `(${zz})`)).join(bz)
+    }
+    const fz = "[a-zA-Z]\\w*",
+      sz = "[a-zA-Z_]\\w*",
+      rz = "\\b\\d+(\\.\\d+)?",
+      oz = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      Nz = "\\b(0b[01]+)",
+      vz = {
+        QF: "\\\\[\\s\\S]",
+        relevance: 0
+      },
+      xz = {
+        scope: "string",
+        QF: "'",
+        end: "'",
+        illegal: "\\n",
+        contains: [vz]
+      },
+      Jz = {
+        scope: "string",
+        QF: '"',
+        end: '"',
+        illegal: "\\n",
+        contains: [vz]
+      },
+      Az = function(zz, uz) {
+        const bz = nz({
+          scope: "comment",
+          QF: zz,
+          end: uz,
+          contains: []
+        }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
+        bz.contains.push({
+          scope: "doctag",
+          QF: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
+          excludeBegin: !0,
+          relevance: 0
+        });
+        const Ez = Rz("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return bz.contains.push({
+          QF: Zz(/[ ]+/, "(", Ez, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), bz
+      },
+      Tz = Az("//", "$"),
+      Lz = Az("/\\*", "\\*/"),
+      Pz = Az("#", "$"),
+      Gz = {
+        scope: "number",
+        QF: rz,
+        relevance: 0
+      },
+      az = {
+        scope: "number",
+        QF: oz,
+        relevance: 0
+      },
+      Vz = {
+        scope: "number",
+        QF: Nz,
+        relevance: 0
+      },
+      mz = {
+        scope: "regexp",
+        QF: /\/(?=[^/\n]*\/)/,
+        end: /\/[gimuy]*/,
+        contains: [vz, {
+          QF: /\[/,
+          end: /\]/,
+          relevance: 0,
+          contains: [vz]
+        }]
+      },
+      qz = {
+        scope: "title",
+        QF: fz,
+        relevance: 0
+      },
+      hz = {
+        scope: "title",
+        QF: sz,
+        relevance: 0
+      },
+      Uz = {
+        QF: "\\.\\s*" + sz,
+        relevance: 0
+      };
+    var cz = Object.freeze({
+      __proto__: null,
+      APOS_STRING_MODE: xz,
+      BACKSLASH_ESCAPE: vz,
+      BINARY_NUMBER_MODE: Vz,
+      BINARY_NUMBER_RE: Nz,
+      COMMENT: Az,
+      C_BLOCK_COMMENT_MODE: Lz,
+      C_LINE_COMMENT_MODE: Tz,
+      C_NUMBER_MODE: az,
+      C_NUMBER_RE: oz,
+      END_SAME_AS_BEGIN: function(zz) {
+        return Object.assign(zz, {
+          "on:begin": (zz, uz) => {
+            uz.data._beginMatch = zz[1]
+          },
+          "on:end": (zz, uz) => {
+            uz.data._beginMatch !== zz[1] && uz.ignoreMatch()
+          }
+        })
+      },
+      HASH_COMMENT_MODE: Pz,
+      IDENT_RE: fz,
+      MATCH_NOTHING_RE: /\b\B/,
+      METHOD_GUARD: Uz,
+      NUMBER_MODE: Gz,
+      NUMBER_RE: rz,
+      PHRASAL_WORDS_MODE: {
+        QF: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+      },
+      QUOTE_STRING_MODE: Jz,
+      REGEXP_MODE: mz,
+      RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
+      SHEBANG: function() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const uz = /^#![ ]*\//;
+        return zz.binary && (zz.QF = Zz(uz, /.*\b/, zz.binary, /\b.*/)), nz({
+          scope: "meta",
+          QF: uz,
+          end: /$/,
+          relevance: 0,
+          "on:begin": (zz, uz) => {
+            0 !== zz.index && uz.ignoreMatch()
+          }
+        }, zz)
+      },
+      TITLE_MODE: qz,
+      UNDERSCORE_IDENT_RE: sz,
+      UNDERSCORE_TITLE_MODE: hz
+    });
+
+    function gz(zz, uz) {
+      "." === zz.input[zz.index - 1] && uz.ignoreMatch()
+    }
+
+    function Sz(zz, uz) {
+      void 0 !== zz.className && (zz.scope = zz.className, delete zz.className)
+    }
+
+    function yz(zz, uz) {
+      uz && zz.beginKeywords && (zz.QF = "\\b(" + zz.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", zz.__beforeBegin = gz, zz.keywords = zz.keywords || zz.beginKeywords, delete zz.beginKeywords, void 0 === zz.relevance && (zz.relevance = 0))
+    }
+
+    function Dz(zz, uz) {
+      Array.isArray(zz.illegal) && (zz.illegal = Rz(...zz.illegal))
+    }
+
+    function Qz(zz, uz) {
+      if (zz.match) {
+        if (zz.QF || zz.end) throw new Error("begin & end are not supported with match");
+        zz.QF = zz.match, delete zz.match
+      }
+    }
+
+    function Wz(zz, uz) {
+      void 0 === zz.relevance && (zz.relevance = 1)
+    }
+    const ez = (zz, uz) => {
+        if (!zz.beforeMatch) return;
+        if (zz.starts) throw new Error("beforeMatch cannot be used with starts");
+        const bz = Object.assign({}, zz);
+        Object.keys(zz).forEach((uz => {
+          delete zz[uz]
+        })), zz.keywords = bz.keywords, zz.QF = Zz(bz.beforeMatch, pz(bz.QF)), zz.starts = {
+          relevance: 0,
+          contains: [Object.assign(bz, {
+            endsParent: !0
+          })]
+        }, zz.relevance = 0, delete bz.beforeMatch
+      },
+      jz = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+
+    function Iz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const Ez = Object.create(null);
+      return "string" === typeof zz ? nz(bz, zz.split(" ")) : Array.isArray(zz) ? nz(bz, zz) : Object.keys(zz).forEach((function(bz) {
+        Object.assign(Ez, Iz(zz[bz], uz, bz))
+      })), Ez;
+
+      function nz(zz, bz) {
+        uz && (bz = bz.map((zz => zz.toLowerCase()))), bz.forEach((function(uz) {
+          const bz = uz.split("|");
+          Ez[bz[0]] = [zz, Bz(bz[0], bz[1])]
+        }))
+      }
+    }
+
+    function Bz(zz, uz) {
+      return uz ? Number(uz) : function(zz) {
+        return jz.includes(zz.toLowerCase())
+      }(zz) ? 0 : 1
+    }
+    const Cz = {},
+      Yz = zz => {
+        console.error(zz)
+      },
+      kz = function(zz) {
+        for (var uz = arguments.length, bz = new Array(uz > 1 ? uz - 1 : 0), Ez = 1; Ez < uz; Ez++) bz[Ez - 1] = arguments[Ez];
+        console.log(`WARN: ${zz}`, ...bz)
+      },
+      zu = (zz, uz) => {
+        Cz[`${zz}/${uz}`] || (console.log(`Deprecated as of ${zz}. ${uz}`), Cz[`${zz}/${uz}`] = !0)
+      },
+      uu = new Error;
+
+    function bu(zz, uz, bz) {
+      let {
+        key: Ez
+      } = bz, nz = 0;
+      const iz = zz[Ez],
+        lz = {},
+        Mz = {};
+      for (let tz = 1; tz <= uz.length; tz++) Mz[tz + nz] = iz[tz], lz[tz + nz] = !0, nz += Kz(uz[tz - 1]);
+      zz[Ez] = Mz, zz[Ez]._emit = lz, zz[Ez]._multi = !0
+    }
+
+    function Eu(zz) {
+      ! function(zz) {
+        zz.scope && "object" === typeof zz.scope && null !== zz.scope && (zz.beginScope = zz.scope, delete zz.scope)
+      }(zz), "string" === typeof zz.beginScope && (zz.beginScope = {
+          _wrap: zz.beginScope
+        }), "string" === typeof zz.endScope && (zz.endScope = {
+          _wrap: zz.endScope
+        }),
+        function(zz) {
+          if (Array.isArray(zz.QF)) {
+            if (zz.skip || zz.excludeBegin || zz.returnBegin) throw Yz("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), uu;
+            if ("object" !== typeof zz.beginScope || null === zz.beginScope) throw Yz("beginScope must be object"), uu;
+            bu(zz, zz.QF, {
+              key: "beginScope"
+            }), zz.QF = Xz(zz.QF, {
+              joinWith: ""
+            })
+          }
+        }(zz),
+        function(zz) {
+          if (Array.isArray(zz.end)) {
+            if (zz.skip || zz.excludeEnd || zz.returnEnd) throw Yz("skip, excludeEnd, returnEnd not compatible with endScope: {}"), uu;
+            if ("object" !== typeof zz.endScope || null === zz.endScope) throw Yz("endScope must be object"), uu;
+            bu(zz, zz.end, {
+              key: "endScope"
+            }), zz.end = Xz(zz.end, {
+              joinWith: ""
+            })
+          }
+        }(zz)
+    }
+
+    function nu(zz) {
+      function uz(uz, bz) {
+        return new RegExp(Oz(uz), "m" + (zz.case_insensitive ? "i" : "") + (zz.unicodeRegex ? "u" : "") + (bz ? "g" : ""))
+      }
+      class bz {
+        constructor() {
+          this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        qb += Wy
-      }
-      if ("drawn" === bb) {
-        const yb = qb;
-        qb = 0;
-        for (const bb of ey) try {
-          bb(yb)
-        } catch (cb) {
-          hy(cb)
+        addRule(zz, uz) {
+          uz.position = this.position++, this.matchIndexes[this.matchAt] = uz, this.regexes.push([uz, zz]), this.matchAt += Kz(zz) + 1
+        }
+        compile() {
+          0 === this.regexes.length && (this.exec = () => null);
+          const zz = this.regexes.map((zz => zz[1]));
+          this.matcherRe = uz(Xz(zz, {
+            joinWith: "|"
+          }), !0), this.lastIndex = 0
+        }
+        exec(zz) {
+          this.matcherRe.lastIndex = this.lastIndex;
+          const uz = this.matcherRe.exec(zz);
+          if (!uz) return null;
+          const bz = uz.findIndex(((zz, uz) => uz > 0 && void 0 !== zz)),
+            Ez = this.matchIndexes[bz];
+          return uz.splice(0, bz), Object.assign(uz, Ez)
         }
       }
-      for (const Uy of Ey) try {
-        Uy(yb, fy)
-      } catch (cb) {
-        hy(cb)
+      class Ez {
+        constructor() {
+          this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
+        }
+        getMatcher(zz) {
+          if (this.multiRegexes[zz]) return this.multiRegexes[zz];
+          const uz = new bz;
+          return this.rules.slice(zz).forEach((zz => {
+            let [bz, Ez] = zz;
+            return uz.addRule(bz, Ez)
+          })), uz.compile(), this.multiRegexes[zz] = uz, uz
+        }
+        resumingScanAtSamePosition() {
+          return 0 !== this.regexIndex
+        }
+        considerAll() {
+          this.regexIndex = 0
+        }
+        addRule(zz, uz) {
+          this.rules.push([zz, uz]), "QF" === uz.type && this.count++
+        }
+        exec(zz) {
+          const uz = this.getMatcher(this.regexIndex);
+          uz.lastIndex = this.lastIndex;
+          let bz = uz.exec(zz);
+          if (this.resumingScanAtSamePosition())
+            if (bz && bz.index === this.lastIndex);
+            else {
+              const uz = this.getMatcher(0);
+              uz.lastIndex = this.lastIndex + 1, bz = uz.exec(zz)
+            } return bz && (this.regexIndex += bz.position + 1, this.regexIndex === this.count && this.considerAll()), bz
+        }
+      }
+      if (zz.compilerExtensions || (zz.compilerExtensions = []), zz.contains && zz.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return zz.classNameAliases = nz(zz.classNameAliases || {}),
+        function bz(iz, lz) {
+          const Mz = iz;
+          if (iz.isCompiled) return Mz;
+          [Sz, Qz, Eu, ez].forEach((zz => zz(iz, lz))), zz.compilerExtensions.forEach((zz => zz(iz, lz))), iz.__beforeBegin = null, [yz, Dz, Wz].forEach((zz => zz(iz, lz))), iz.isCompiled = !0;
+          let tz = null;
+          return "object" === typeof iz.keywords && iz.keywords.$pattern && (iz.keywords = Object.assign({}, iz.keywords), tz = iz.keywords.$pattern, delete iz.keywords.$pattern), tz = tz || /\w+/, iz.keywords && (iz.keywords = Iz(iz.keywords, zz.case_insensitive)), Mz.keywordPatternRe = uz(tz, !0), lz && (iz.QF || (iz.QF = /\B|\b/), Mz.beginRe = uz(Mz.QF), iz.end || iz.endsWithParent || (iz.end = /\B|\b/), iz.end && (Mz.endRe = uz(Mz.end)), Mz.terminatorEnd = Oz(Mz.end) || "", iz.endsWithParent && lz.terminatorEnd && (Mz.terminatorEnd += (iz.end ? "|" : "") + lz.terminatorEnd)), iz.illegal && (Mz.illegalRe = uz(iz.illegal)), iz.contains || (iz.contains = []), iz.contains = [].concat(...iz.contains.map((function(zz) {
+            return function(zz) {
+              zz.variants && !zz.cachedVariants && (zz.cachedVariants = zz.variants.map((function(uz) {
+                return nz(zz, {
+                  variants: null
+                }, uz)
+              })));
+              if (zz.cachedVariants) return zz.cachedVariants;
+              if (iu(zz)) return nz(zz, {
+                starts: zz.starts ? nz(zz.starts) : null
+              });
+              if (Object.isFrozen(zz)) return nz(zz);
+              return zz
+            }("self" === zz ? iz : zz)
+          }))), iz.contains.forEach((function(zz) {
+            bz(zz, Mz)
+          })), iz.starts && bz(iz.starts, lz), Mz.matcher = function(zz) {
+            const uz = new Ez;
+            return zz.contains.forEach((zz => uz.addRule(zz.QF, {
+              rule: zz,
+              type: "QF"
+            }))), zz.terminatorEnd && uz.addRule(zz.terminatorEnd, {
+              type: "end"
+            }), zz.illegal && uz.addRule(zz.illegal, {
+              type: "illegal"
+            }), uz
+          }(Mz), Mz
+        }(zz)
+    }
+
+    function iu(zz) {
+      return !!zz && (zz.endsWithParent || iu(zz.starts))
+    }
+    class lu extends Error {
+      constructor(zz, uz) {
+        super(zz), this.name = "HTMLInjectionError", this.html = uz
       }
     }
-  },
-  3996: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      A: () => eb,
-      Ac: () => Uy.bb,
-      Ad: () => kb,
-      C: () => xb,
-      Db: () => vb,
-      Dc: () => Uy.cb,
-      Dd: () => wy,
-      F: () => Uy.f,
-      Fb: () => Uy.D,
-      Fc: () => Uy.db,
-      G: () => oy,
-      Hc: () => Ay,
-      Hd: () => Zb,
-      J: () => Uy.j,
-      Jb: () => Yy,
-      Jc: () => Uy.hb,
-      Jd: () => sb,
-      Kc: () => Uy.jb,
-      Ld: () => Ty,
-      Mc: () => Uy.nb,
-      Md: () => Ny,
-      N: () => zb,
-      Nb: () => Vy,
-      Nc: () => Uy.vb,
-      Nd: () => rb,
-      O: () => Uy.q,
-      P: () => Uy.r,
-      Pc: () => Uy.yb,
-      Q: () => Uy.u,
-      Qb: () => fb,
-      R: () => Ky,
-      Rd: () => uy,
-      Sc: () => Uy.Cb,
-      Sd: () => ny,
-      Tb: () => Cy,
-      Td: () => Py,
-      Ub: () => Bb,
-      V: () => mb,
-      Vc: () => Ry,
-      W: () => Uy.v,
-      Wc: () => Uy.Gb,
-      Wd: () => Hy,
-      Xb: () => hy.j,
-      Yb: () => ly,
-      Yd: () => Sb,
-      Zb: () => Wb,
-      Zc: () => Uy.Jb,
-      Zd: () => qb,
-      _: () => Uy.x,
-      ab: () => Ly,
-      ac: () => Uy.H,
-      bd: () => Uy.Pb,
-      cb: () => hb,
-      d: () => yW,
-      dc: () => Uy.I,
-      ed: () => fy,
-      f: () => Sy,
-      fb: () => By,
-      fd: () => Ey,
-      g: () => sy,
-      hb: () => Uy.z,
-      hc: () => Uy.M,
-      hd: () => cW,
-      ic: () => Uy.Q,
-      j: () => Pb,
-      jb: () => Dy,
-      jd: () => py,
-      k: () => Oy,
-      kb: () => Iy,
-      kd: () => Qy,
-      lb: () => dy,
-      mc: () => Uy.T,
-      n: () => gb,
-      nb: () => bW,
-      nd: () => Fy,
-      o: () => Uy.c,
-      p: () => Kb,
-      pc: () => Uy.$,
-      pd: () => tb,
-      qb: () => hy.d,
-      rc: () => qW,
-      t: () => ib,
-      ub: () => Gy,
-      v: () => Zy,
-      vc: () => ob,
-      xb: () => ab,
-      xc: () => Ub,
-      z: () => Xy,
-      zb: () => My,
-      zd: () => jb
-    });
-    var Uy = Wy(4001),
-      hy = Wy(1977);
-    const fy = Math.round(1e3 / Uy.Pb),
-      Zy = 4,
-      cb = 2;
-
-    function Py() {
-      return crypto.getRandomValues(new Uint32Array(cb))
-    }
-    const oy = {
-        Ok: 0,
-        Errors: 1,
-        Fatal: 2
-      },
-      By = 16,
-      Ky = {
-        Draws: 1,
-        NetAll: 2
-      },
-      ey = {
-        ShowFog: 1,
-        Lighting: 2,
-        ChunkFade: 4
-      };
-
-    function qb(yb) {
-      return (yb.nametagsHidden ? Jy.NametagsHidden : 0) | (yb.crouchToggle ? Jy.CrouchToggle : 0) | (yb.bhopDisabled ? Jy.BhopDisabled : 0) | (yb.disableBobbing ? Jy.DisableBobbing : 0) | (yb.ezTowering ? Jy.EzTowering : 0) | (yb.ezBridging ? Jy.EzBridging : 0) | (yb.showChunkBorders ? Jy.ShowChunkBorders : 0) | (yb.edgeGuard ? Jy.EdgeGuard : 0)
-    }
-    const sy = {
-        Flags: 0,
-        PhysicsVersion: 1,
-        InbuiltOverwritten: 2,
-        AltComplete: 3,
-        ProbeUsedProp: 4
-      },
-      Sy = {
-        Ready: 1,
-        SendFnReplaced: 2,
-        Butto: 4,
-        IdentityChanged: 32,
-        CheckFuncHit: 128,
-        OriginStackHit: 256
-      },
-      Ey = {
-        None: 0,
-        Untrusted: 2,
-        FewProperties: 3,
-        CheckFunc: 4,
-        NotEvent: 5,
-        En: 6,
-        Fr: 7
-      },
-      ly = {
-        StackCheck: 0,
-        ConfirmMesh: 1,
-        IndexPassReplaced: 2,
-        ProductSubChanged: 3,
-        RenderStatus: 4,
-        Held: 6,
-        PlayerKilledSubs: 7
-      },
-      mb = 5,
-      Cy = 4294967295;
-
-    function Ty(yb) {
-      return (yb.showFog ? ey.ShowFog : 0) | (yb.lighting ? ey.Lighting : 0) | (yb.chunkFade ? ey.ChunkFade : 0)
-    }
-    const Vy = {
-        ResetFirst: 1,
-        AdStart: 2,
-        PreventMovement: 4,
-        AdEnd: 8,
-        PayloadMaxBytes: 1 << 20
-      },
-      Jy = {
-        NametagsHidden: 1,
-        CrouchToggle: 2,
-        BhopDisabled: 4,
-        DisableBobbing: 8,
-        EzTowering: 16,
-        EzBridging: 32,
-        ShowChunkBorders: 64,
-        EdgeGuard: 128,
-        All: 255
-      },
-      gb = {
-        Release: 1,
-        KeepTouches: 2
-      },
-      Gy = {
-        Point: 1,
-        Stamped: 2
-      },
-      Oy = {
-        Add: 1,
-        Clear: 2
-      },
-      Ry = 1,
-      vb = 8,
-      ib = 16777215,
-      My = 4,
-      Yy = {
-        Resume: 1
-      },
-      Xy = {
-        Held: 1
-      };
-
-    function ny(yb, bb) {
-      return (yb | bb << 8) >>> 0
-    }
-
-    function uy(yb) {
-      return 255 & yb
-    }
-
-    function rb(yb) {
-      return yb >>> 8
-    }
-
-    function Hy(yb) {
-      return yb + 3 & -4
-    }
-    const ab = 16777216,
-      Fy = 16,
-      py = 8,
-      Ly = 8,
-      Qy = 16777216,
-      jb = {
-        JobResult: 1,
-        WorkerStarted: 2,
-        WorkerLost: 3,
-        WorldgenResult: 4,
-        WorldgenStarted: 5,
-        WorldgenLost: 6
-      },
-      Dy = {
-        Ok: 0,
-        Refused: 1,
-        Trapped: 2,
-        NotHeld: 3,
-        HeapRefused: 4
-      },
-      tb = 16,
-      wy = {
-        Lost: 0,
-        Gone: 1
-      },
-      kb = {
-        Init: 1,
-        Mesh: 2,
-        WorldgenSeed: 3,
-        Generate: 4,
-        Retire: 5
-      };
-
-    function Ny(yb) {
-      return yb === kb.WorldgenSeed || yb === kb.Generate
-    }
-    const zb = 4,
-      Iy = 99,
-      xb = {
-        PAIRS_MAX: 16,
-        FIXED_WORDS: 2,
-        PAIR_WORDS: 2,
-        WORDS_MAX: 34
-      },
-      Ay = {
-        BYTES: 12,
-        WEBGPU: 1,
-        GL: 2,
-        WEBGPU_LOSSES_MAX: 1,
-        LOST: 0,
-        PIPELINE_FAILED: 1
-      },
-      dy = 12,
-      yW = 16,
-      bW = 4,
-      Wb = 12,
-      Ub = {
-        SessionBased: 1,
-        ReplayOffer: 2
-      },
-      hb = 4,
-      fb = 8,
-      Zb = 8,
-      cW = {
-        HEAD_BYTES: 28,
-        UPDATE: 1,
-        REMOVE: 2
-      },
-      Pb = {
-        Crit: 1,
-        HitSelf: 2
-      },
-      ob = {
-        BYTES: 16,
-        STRING_TYPE_BYTES: 24,
-        STRING_TYPE: 65535,
-        ERROR: 65534
-      },
-      Bb = {
-        None: 0,
-        Bytes: 1,
-        Msgpack: 2,
-        MsgpackBin: 3
-      },
-      Kb = 12,
-      eb = {
-        Activated: 1,
-        Error: 2,
-        Left: 3,
-        Closed: 4,
-        Held: 5,
-        Resumed: 6,
-        ResumeRefused: 7
-      },
-      qW = 67108864;
-
-    function sb(yb) {
-      for (const [bb, Wy] of Object.entries(Uy.f))
-        if (Wy === yb) return bb;
-      return `Unknown${yb}`
-    }
-
-    function Sb(yb) {
-      return {
-        status: yb[Uy.x.Status],
-        lastError: yb[Uy.x.LastError],
-        lastErrorDetail: yb[Uy.x.LastErrorDetail],
-        errorCount: yb[Uy.x.ErrorCount],
-        frameIndex: yb[Uy.x.FrameIndex],
-        tickIndex: yb[Uy.x.TickIndex],
-        renderPending: yb[Uy.x.RenderPending],
-        firstView: yb[Uy.x.FirstView],
-        chunksCancelled: yb[Uy.x.ChunksCancelled]
-      }
-    }
-  },
-  3994: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy,
-      c: () => fy,
-      g: () => hy
-    });
-    var Uy = Wy(3996);
-
-    function hy(yb) {
-      return "none" !== yb
-    }
-
-    function fy(yb, bb) {
-      if (!yb) return "none";
-      switch (bb) {
-        case Uy.Q.Drawn:
-          return "drawn";
-        case Uy.Q.Paced:
-          return "paced";
-        default:
-          return "skipped"
-      }
-    }
-
-    function Zy(yb) {
-      return "drawn" === yb
-    }
-  },
-  4013: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => hy,
-      f: () => fy,
-      j: () => Zy,
-      k: () => Uy,
-      n: () => cb
-    });
-    const Uy = {
-        Mouse1: 1,
-        Mouse2: 2,
-        Mouse3: 3,
-        "Alt+Left Click": 4,
-        F2: 5,
-        F4: 6,
-        F5: 7,
-        F8: 8,
-        F9: 9,
-        Digit0: 10,
-        Digit1: 11,
-        Digit2: 12,
-        Digit3: 13,
-        Digit4: 14,
-        Digit5: 15,
-        Digit6: 16,
-        Digit7: 17,
-        Digit8: 18,
-        Digit9: 19,
-        KeyQ: 20,
-        KeyW: 21,
-        KeyE: 22,
-        KeyR: 23,
-        KeyT: 24,
-        KeyY: 25,
-        KeyU: 26,
-        KeyI: 27,
-        KeyO: 28,
-        KeyP: 29,
-        KeyA: 30,
-        KeyS: 31,
-        KeyD: 32,
-        KeyF: 33,
-        KeyG: 34,
-        KeyH: 35,
-        KeyJ: 36,
-        KeyK: 37,
-        KeyL: 38,
-        KeyZ: 39,
-        KeyX: 40,
-        KeyC: 41,
-        KeyV: 42,
-        KeyB: 43,
-        KeyN: 44,
-        KeyM: 45,
-        ArrowUp: 46,
-        ArrowLeft: 47,
-        ArrowRight: 48,
-        ArrowDown: 49,
-        ShiftLeft: 50,
-        ShiftRight: 51,
-        ControlLeft: 52,
-        ControlRight: 53,
-        Minus: 54,
-        Equal: 55,
-        BracketLeft: 56,
-        BracketRight: 57,
-        Tab: 58,
-        Space: 59,
-        CapsLock: 60,
-        Backslash: 61,
-        IntlBackslash: 62,
-        PageUp: 63,
-        PageDown: 64,
-        Backquote: 65,
-        Comma: 66,
-        IntlRo: 67,
-        IntlYen: 68,
-        Period: 69,
-        Quote: 70,
-        Semicolon: 71,
-        Slash: 72,
-        AltLeft: 73,
-        AltRight: 74,
-        Backspace: 75,
-        ContextMenu: 76,
-        Enter: 77,
-        MetaLeft: 78,
-        MetaRight: 79,
-        Convert: 80,
-        KanaMode: 81,
-        Lang1: 82,
-        Lang2: 83,
-        Lang3: 84,
-        Lang4: 85,
-        Lang5: 86,
-        NonConvert: 87,
-        Delete: 88,
-        End: 89,
-        Help: 90,
-        Home: 91,
-        Insert: 92,
-        NumLock: 93,
-        Numpad0: 94,
-        Numpad1: 95,
-        Numpad2: 96,
-        Numpad3: 97,
-        Numpad4: 98,
-        Numpad5: 99,
-        Numpad6: 100,
-        Numpad7: 101,
-        Numpad8: 102,
-        Numpad9: 103,
-        NumpadAdd: 104,
-        NumpadBackspace: 105,
-        NumpadClear: 106,
-        NumpadClearEntry: 107,
-        NumpadComma: 108,
-        NumpadDecimal: 109,
-        NumpadDivide: 110,
-        NumpadEnter: 111,
-        NumpadEqual: 112,
-        NumpadHash: 113,
-        NumpadMemoryAdd: 114,
-        NumpadMemoryClear: 115,
-        NumpadMemoryRecall: 116,
-        NumpadMemoryStore: 117,
-        NumpadMemorySubtract: 118,
-        NumpadMultiply: 119,
-        NumpadParenLeft: 120,
-        NumpadParenRight: 121,
-        NumpadStar: 122,
-        NumpadSubtract: 123,
-        Escape: 124,
-        F1: 125,
-        F3: 126,
-        F6: 127,
-        F7: 128,
-        F10: 129,
-        F11: 130,
-        F12: 131,
-        F13: 132,
-        F14: 133,
-        F15: 134,
-        F16: 135,
-        F17: 136,
-        F18: 137,
-        F19: 138,
-        F20: 139,
-        F21: 140,
-        F22: 141,
-        F23: 142,
-        F24: 143,
-        Fn: 144,
-        FnLock: 145,
-        PrintScreen: 146,
-        ScrollLock: 147,
-        Pause: 148,
-        BrowserBack: 149,
-        BrowserFavorites: 150,
-        BrowserForward: 151,
-        BrowserHome: 152,
-        BrowserRefresh: 153,
-        BrowserSearch: 154,
-        BrowserStop: 155,
-        Eject: 156,
-        LaunchApp1: 157,
-        LaunchApp2: 158,
-        LaunchMail: 159,
-        MediaPlayPause: 160,
-        MediaSelect: 161,
-        MediaStop: 162,
-        MediaTrackNext: 163,
-        MediaTrackPrevious: 164,
-        Power: 165,
-        Sleep: 166,
-        AudioVolumeDown: 167,
-        AudioVolumeMute: 168,
-        AudioVolumeUp: 169,
-        WakeUp: 170,
-        Hyper: 171,
-        Super: 172,
-        Turbo: 173,
-        Abort: 174,
-        Resume: 175,
-        Suspend: 176,
-        Again: 177,
-        Copy: 178,
-        Cut: 179,
-        Find: 180,
-        Open: 181,
-        Paste: 182,
-        Props: 183,
-        Select: 184,
-        Undo: 185,
-        Hiragana: 186,
-        Katakana: 187,
-        TouchJump: 188,
-        TouchCrouch: 189,
-        TouchPov: 190,
-        TouchAction1: 191,
-        TouchAction2: 192,
-        TouchAction3: 193,
-        TouchAttack: 194,
-        TouchUse: 195
-      },
-      hy = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      fy = {
-        forward: [21, 46],
-        backward: [31, 49],
-        left: [30, 47],
-        right: [32, 48],
-        sprint: [50, 51],
-        jump: [59],
-        crouch: [52, 41, 60, 61, 62, 53],
-        "primary-fire": [1],
-        "alt-fire": [3, 22],
-        SpecialAction1: [23],
-        SpecialAction2: [33],
-        ReloadGun: [23],
-        DropItem: [20],
-        "mid-fire": [2, 4],
-        Zoom: [42],
-        SwapCameraZoom: [29, 7],
-        OpenInventory: [58],
-        OpenLobbyLeaderboard: [34],
-        OpenShop: [43],
-        OpenCharacterCustomization: [44],
-        OpenSettings: [28],
-        OpenInviteLink: [27],
-        OpenTasksAndLeaderboard: [45],
-        OpenCodeEditor: [8],
-        OpenEmoteWheel: [39, 2],
-        HideUi: [6],
-        ShowDebugOverlay: [5],
-        HotBarSlot1: [11],
-        HotBarSlot2: [12],
-        HotBarSlot3: [13],
-        HotBarSlot4: [14],
-        HotBarSlot5: [15],
-        HotBarSlot6: [16],
-        HotBarSlot7: [17],
-        HotBarSlot8: [18],
-        HotBarSlot9: [19],
-        HotBarSlot10: [10],
-        toggleFreeCam: [9],
-        freeCamForward: [46],
-        freeCamBackward: [49],
-        freeCamLeft: [47],
-        freeCamRight: [48],
-        freeCamUp: [63],
-        freeCamDown: [64],
-        recordGame: [56],
-        recordClip: [35],
-        replayViewerOpen: [26],
-        replayPlayPause: [42, 58],
-        replaySkipBack: [20],
-        replaySkipForward: [22],
-        replayChangeCameraMode: [23],
-        replayLoad: [38],
-        replaySave: [37],
-        replaySaveAs: [36],
-        replayExit: [29],
-        replaySpeedUp: [55],
-        replaySpeedDown: [54],
-        replayTimelineZoomIn: [10],
-        replayTimelineZoomOut: [19],
-        replayRecordKeyframe: [24],
-        replayExportVideo: [40]
-      },
-      Zy = {
-        jump: [188],
-        crouch: [189],
-        SwapCameraZoom: [190],
-        "primary-fire": [194],
-        "alt-fire": [195]
-      },
-      cb = [16]
-  },
-  4022: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => cb,
-      g: () => Zy,
-      h: () => oy
-    });
-    var Uy = Wy(1977),
-      hy = Wy(1983);
-    const fy = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
-
-    function Zy(yb) {
-      return yb instanceof HTMLElement && (!!(yb.isContentEditable || yb instanceof HTMLTextAreaElement || yb instanceof HTMLSelectElement) || yb instanceof HTMLInputElement && !fy.has(yb.type))
-    }
-
-    function cb(yb) {
-      let bb = null;
-      const Wy = Wy => {
-          const hy = Zy(Wy);
-          hy !== bb && (bb = hy, yb(Uy.f.UiCapture, Uy.v.Keyboard, 0, 0, hy ? Uy.v.Keyboard : 0))
-        },
-        hy = yb => {
-          Wy(yb.target)
-        },
-        fy = yb => {
-          Wy(yb.relatedTarget)
-        },
-        cb = () => {
-          Wy(document.activeElement)
-        },
-        Py = {
-          capture: !0,
-          passive: !0
+    const Mu = Ez,
+      tu = nz,
+      Hu = Symbol("nomatch"),
+      Ou = function(zz) {
+        const Ez = Object.create(null),
+          nz = Object.create(null),
+          iz = [];
+        let lz = !0;
+        const Mz = "Could not find the language '{}', did you forget to load/include a language module?",
+          tz = {
+            disableAutodetect: !0,
+            name: "Plain text",
+            contains: []
+          };
+        let Oz = {
+          ignoreUnescapedHTML: !1,
+          throwUnescapedHTML: !1,
+          noHighlightRe: /^(no-?highlight)$/i,
+          languageDetectRe: /\blang(?:uage)?-([\w-]+)\b/i,
+          classPrefix: "hljs-",
+          cssSelector: "pre code",
+          languages: null,
+          __emitter: Hz
         };
-      return document.addEventListener("focusin", hy, Py), document.addEventListener("focusout", fy, Py), document.addEventListener("keydown", cb, Py), Wy(document.activeElement), () => {
-        document.removeEventListener("focusin", hy, Py), document.removeEventListener("focusout", fy, Py), document.removeEventListener("keydown", cb, Py)
+
+        function Kz(zz) {
+          return Oz.noHighlightRe.test(zz)
+        }
+
+        function wz(zz, uz, bz) {
+          let Ez = "",
+            nz = "";
+          "object" === typeof uz ? (Ez = zz, bz = uz.ignoreIllegals, nz = uz.language) : (zu("10.7.0", "highlight(lang, code, ...args) has been deprecated."), zu("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), nz = zz, Ez = uz), void 0 === bz && (bz = !0);
+          const iz = {
+            code: Ez,
+            language: nz
+          };
+          Jz("before:highlight", iz);
+          const lz = iz.result ? iz.result : Xz(iz.language, iz.code, bz);
+          return lz.code = iz.code, Jz("after:highlight", lz), lz
+        }
+
+        function Xz(zz, uz, nz, iz) {
+          const tz = Object.create(null);
+
+          function Hz() {
+            if (!Jz.keywords) return void Tz.addText(Lz);
+            let zz = 0;
+            Jz.keywordPatternRe.lastIndex = 0;
+            let uz = Jz.keywordPatternRe.exec(Lz),
+              bz = "";
+            for (; uz;) {
+              bz += Lz.substring(zz, uz.index);
+              const nz = oz.case_insensitive ? uz[0].toLowerCase() : uz[0],
+                iz = (Ez = nz, Jz.keywords[Ez]);
+              if (iz) {
+                const [zz, Ez] = iz;
+                if (Tz.addText(bz), bz = "", tz[nz] = (tz[nz] || 0) + 1, tz[nz] <= 7 && (Pz += Ez), zz.startsWith("_")) bz += uz[0];
+                else {
+                  const bz = oz.classNameAliases[zz] || zz;
+                  dz(uz[0], bz)
+                }
+              } else bz += uz[0];
+              zz = Jz.keywordPatternRe.lastIndex, uz = Jz.keywordPatternRe.exec(Lz)
+            }
+            var Ez;
+            bz += Lz.substring(zz), Tz.addText(bz)
+          }
+
+          function pz() {
+            null != Jz.subLanguage ? function() {
+              if ("" === Lz) return;
+              let zz = null;
+              if ("string" === typeof Jz.subLanguage) {
+                if (!Ez[Jz.subLanguage]) return void Tz.addText(Lz);
+                zz = Xz(Jz.subLanguage, Lz, !0, Az[Jz.subLanguage]), Az[Jz.subLanguage] = zz._top
+              } else zz = fz(Lz, Jz.subLanguage.length ? Jz.subLanguage : null);
+              Jz.relevance > 0 && (Pz += zz.relevance), Tz.__addSublanguage(zz._emitter, zz.language)
+            }() : Hz(), Lz = ""
+          }
+
+          function dz(zz, uz) {
+            "" !== zz && (Tz.startScope(uz), Tz.addText(zz), Tz.endScope())
+          }
+
+          function Fz(zz, uz) {
+            let bz = 1;
+            const Ez = uz.length - 1;
+            for (; bz <= Ez;) {
+              if (!zz._emit[bz]) {
+                bz++;
+                continue
+              }
+              const Ez = oz.classNameAliases[zz[bz]] || zz[bz],
+                nz = uz[bz];
+              Ez ? dz(nz, Ez) : (Lz = nz, Hz(), Lz = ""), bz++
+            }
+          }
+
+          function Zz(zz, uz) {
+            return zz.scope && "string" === typeof zz.scope && Tz.openNode(oz.classNameAliases[zz.scope] || zz.scope), zz.beginScope && (zz.beginScope._wrap ? (dz(Lz, oz.classNameAliases[zz.beginScope._wrap] || zz.beginScope._wrap), Lz = "") : zz.beginScope._multi && (Fz(zz.beginScope, uz), Lz = "")), Jz = Object.create(zz, {
+              parent: {
+                value: Jz
+              }
+            }), Jz
+          }
+
+          function Rz(zz, uz, Ez) {
+            let nz = function(zz, uz) {
+              const bz = zz && zz.exec(uz);
+              return bz && 0 === bz.index
+            }(zz.endRe, Ez);
+            if (nz) {
+              if (zz["on:end"]) {
+                const Ez = new bz(zz);
+                zz["on:end"](uz, Ez), Ez.isMatchIgnored && (nz = !1)
+              }
+              if (nz) {
+                for (; zz.endsParent && zz.parent;) zz = zz.parent;
+                return zz
+              }
+            }
+            if (zz.endsWithParent) return Rz(zz.parent, uz, Ez)
+          }
+
+          function Kz(zz) {
+            return 0 === Jz.matcher.regexIndex ? (Lz += zz[0], 1) : (Vz = !0, 0)
+          }
+
+          function wz(zz) {
+            const bz = zz[0],
+              Ez = uz.substring(zz.index),
+              nz = Rz(Jz, zz, Ez);
+            if (!nz) return Hu;
+            const iz = Jz;
+            Jz.endScope && Jz.endScope._wrap ? (pz(), dz(bz, Jz.endScope._wrap)) : Jz.endScope && Jz.endScope._multi ? (pz(), Fz(Jz.endScope, zz)) : iz.skip ? Lz += bz : (iz.returnEnd || iz.excludeEnd || (Lz += bz), pz(), iz.excludeEnd && (Lz = bz));
+            do {
+              Jz.scope && Tz.closeNode(), Jz.skip || Jz.subLanguage || (Pz += Jz.relevance), Jz = Jz.parent
+            } while (Jz !== nz.parent);
+            return nz.starts && Zz(nz.starts, zz), iz.returnEnd ? 0 : bz.length
+          }
+          let sz = {};
+
+          function rz(Ez, iz) {
+            const Mz = iz && iz[0];
+            if (Lz += Ez, null == Mz) return pz(), 0;
+            if ("QF" === sz.type && "end" === iz.type && sz.index === iz.index && "" === Mz) {
+              if (Lz += uz.slice(iz.index, iz.index + 1), !lz) {
+                const uz = new Error(`0 width match regex (${zz})`);
+                throw uz.languageName = zz, uz.badRule = sz.rule, uz
+              }
+              return 1
+            }
+            if (sz = iz, "QF" === iz.type) return function(zz) {
+              const uz = zz[0],
+                Ez = zz.rule,
+                nz = new bz(Ez),
+                iz = [Ez.__beforeBegin, Ez["on:begin"]];
+              for (const bz of iz)
+                if (bz && (bz(zz, nz), nz.isMatchIgnored)) return Kz(uz);
+              return Ez.skip ? Lz += uz : (Ez.excludeBegin && (Lz += uz), pz(), Ez.returnBegin || Ez.excludeBegin || (Lz = uz)), Zz(Ez, zz), Ez.returnBegin ? 0 : uz.length
+            }(iz);
+            if ("illegal" === iz.type && !nz) {
+              const zz = new Error('Illegal lexeme "' + Mz + '" for mode "' + (Jz.scope || "<unnamed>") + '"');
+              throw zz.mode = Jz, zz
+            }
+            if ("end" === iz.type) {
+              const zz = wz(iz);
+              if (zz !== Hu) return zz
+            }
+            if ("illegal" === iz.type && "" === Mz) return Lz += "\n", 1;
+            if (az > 1e5 && az > 3 * iz.index) {
+              throw new Error("potential infinite loop, way more iterations than matches")
+            }
+            return Lz += Mz, Mz.length
+          }
+          const oz = Nz(zz);
+          if (!oz) throw Yz(Mz.replace("{}", zz)), new Error('Unknown language: "' + zz + '"');
+          const vz = nu(oz);
+          let xz = "",
+            Jz = iz || vz;
+          const Az = {},
+            Tz = new Oz.__emitter(Oz);
+          ! function() {
+            const zz = [];
+            for (let uz = Jz; uz !== oz; uz = uz.parent) uz.scope && zz.unshift(uz.scope);
+            zz.forEach((zz => Tz.openNode(zz)))
+          }();
+          let Lz = "",
+            Pz = 0,
+            Gz = 0,
+            az = 0,
+            Vz = !1;
+          try {
+            if (oz.__emitTokens) oz.__emitTokens(uz, Tz);
+            else {
+              for (Jz.matcher.considerAll();;) {
+                az++, Vz ? Vz = !1 : Jz.matcher.considerAll(), Jz.matcher.lastIndex = Gz;
+                const zz = Jz.matcher.exec(uz);
+                if (!zz) break;
+                const bz = rz(uz.substring(Gz, zz.index), zz);
+                Gz = zz.index + bz
+              }
+              rz(uz.substring(Gz))
+            }
+            return Tz.finalize(), xz = Tz.toHTML(), {
+              language: zz,
+              value: xz,
+              relevance: Pz,
+              illegal: !1,
+              _emitter: Tz,
+              _top: Jz
+            }
+          } catch (mz) {
+            if (mz.message && mz.message.includes("Illegal")) return {
+              language: zz,
+              value: Mu(uz),
+              illegal: !0,
+              relevance: 0,
+              _illegalBy: {
+                message: mz.message,
+                index: Gz,
+                context: uz.slice(Gz - 100, Gz + 100),
+                mode: mz.mode,
+                resultSoFar: xz
+              },
+              _emitter: Tz
+            };
+            if (lz) return {
+              language: zz,
+              value: Mu(uz),
+              illegal: !1,
+              relevance: 0,
+              errorRaised: mz,
+              _emitter: Tz,
+              _top: Jz
+            };
+            throw mz
+          }
+        }
+
+        function fz(zz, uz) {
+          uz = uz || Oz.languages || Object.keys(Ez);
+          const bz = function(zz) {
+              const uz = {
+                value: Mu(zz),
+                illegal: !1,
+                relevance: 0,
+                _top: tz,
+                _emitter: new Oz.__emitter(Oz)
+              };
+              return uz._emitter.addText(zz), uz
+            }(zz),
+            nz = uz.filter(Nz).filter(xz).map((uz => Xz(uz, zz, !1)));
+          nz.unshift(bz);
+          const iz = nz.sort(((zz, uz) => {
+              if (zz.relevance !== uz.relevance) return uz.relevance - zz.relevance;
+              if (zz.language && uz.language) {
+                if (Nz(zz.language).supersetOf === uz.language) return 1;
+                if (Nz(uz.language).supersetOf === zz.language) return -1
+              }
+              return 0
+            })),
+            [lz, Mz] = iz,
+            Hz = lz;
+          return Hz.secondBest = Mz, Hz
+        }
+
+        function sz(zz) {
+          let uz = null;
+          const bz = function(zz) {
+            let uz = zz.className + " ";
+            uz += zz.parentNode ? zz.parentNode.className : "";
+            const bz = Oz.languageDetectRe.exec(uz);
+            if (bz) {
+              const uz = Nz(bz[1]);
+              return uz || (kz(Mz.replace("{}", bz[1])), kz("Falling back to no-highlight mode for this block.", zz)), uz ? bz[1] : "no-highlight"
+            }
+            return uz.split(/\s+/).find((zz => Kz(zz) || Nz(zz)))
+          }(zz);
+          if (Kz(bz)) return;
+          if (Jz("before:highlightElement", {
+              el: zz,
+              language: bz
+            }), zz.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", zz);
+          if (zz.children.length > 0 && (Oz.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(zz)), Oz.throwUnescapedHTML)) {
+            throw new lu("One of your code blocks includes unescaped HTML.", zz.innerHTML)
+          }
+          uz = zz;
+          const Ez = uz.textContent,
+            iz = bz ? wz(Ez, {
+              language: bz,
+              ignoreIllegals: !0
+            }) : fz(Ez);
+          zz.innerHTML = iz.value, zz.dataset.highlighted = "yes",
+            function(zz, uz, bz) {
+              const Ez = uz && nz[uz] || bz;
+              zz.classList.add("hljs"), zz.classList.add(`language-${Ez}`)
+            }(zz, bz, iz.language), zz.result = {
+              language: iz.language,
+              re: iz.relevance,
+              relevance: iz.relevance
+            }, iz.secondBest && (zz.secondBest = {
+              language: iz.secondBest.language,
+              relevance: iz.secondBest.relevance
+            }), Jz("after:highlightElement", {
+              el: zz,
+              result: iz,
+              text: Ez
+            })
+        }
+        let rz = !1;
+
+        function oz() {
+          if ("loading" === document.readyState) return rz || window.addEventListener("DOMContentLoaded", (function() {
+            oz()
+          }), !1), void(rz = !0);
+          document.querySelectorAll(Oz.cssSelector).forEach(sz)
+        }
+
+        function Nz(zz) {
+          return zz = (zz || "").toLowerCase(), Ez[zz] || Ez[nz[zz]]
+        }
+
+        function vz(zz, uz) {
+          let {
+            languageName: bz
+          } = uz;
+          "string" === typeof zz && (zz = [zz]), zz.forEach((zz => {
+            nz[zz.toLowerCase()] = bz
+          }))
+        }
+
+        function xz(zz) {
+          const uz = Nz(zz);
+          return uz && !uz.disableAutodetect
+        }
+
+        function Jz(zz, uz) {
+          const bz = zz;
+          iz.forEach((function(zz) {
+            zz[bz] && zz[bz](uz)
+          }))
+        }
+        Object.assign(zz, {
+          highlight: wz,
+          highlightAuto: fz,
+          highlightAll: oz,
+          highlightElement: sz,
+          highlightBlock: function(zz) {
+            return zu("10.7.0", "highlightBlock will be removed entirely in v12.0"), zu("10.7.0", "Please use highlightElement now."), sz(zz)
+          },
+          configure: function(zz) {
+            Oz = tu(Oz, zz)
+          },
+          initHighlighting: () => {
+            oz(), zu("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+          },
+          initHighlightingOnLoad: function() {
+            oz(), zu("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+          },
+          registerLanguage: function(uz, bz) {
+            let nz = null;
+            try {
+              nz = bz(zz)
+            } catch (iz) {
+              if (Yz("Language definition for '{}' could not be registered.".replace("{}", uz)), !lz) throw iz;
+              Yz(iz), nz = tz
+            }
+            nz.name || (nz.name = uz), Ez[uz] = nz, nz.rawDefinition = bz.bind(null, zz), nz.aliases && vz(nz.aliases, {
+              languageName: uz
+            })
+          },
+          unregisterLanguage: function(zz) {
+            delete Ez[zz];
+            for (const uz of Object.keys(nz)) nz[uz] === zz && delete nz[uz]
+          },
+          listLanguages: function() {
+            return Object.keys(Ez)
+          },
+          getLanguage: Nz,
+          registerAliases: vz,
+          autoDetection: xz,
+          inherit: tu,
+          addPlugin: function(zz) {
+            ! function(zz) {
+              zz["before:highlightBlock"] && !zz["before:highlightElement"] && (zz["before:highlightElement"] = uz => {
+                zz["before:highlightBlock"](Object.assign({
+                  block: uz.el
+                }, uz))
+              }), zz["after:highlightBlock"] && !zz["after:highlightElement"] && (zz["after:highlightElement"] = uz => {
+                zz["after:highlightBlock"](Object.assign({
+                  block: uz.el
+                }, uz))
+              })
+            }(zz), iz.push(zz)
+          },
+          removePlugin: function(zz) {
+            const uz = iz.indexOf(zz); - 1 !== uz && iz.splice(uz, 1)
+          }
+        }), zz.debugMode = function() {
+          lz = !1
+        }, zz.safeMode = function() {
+          lz = !0
+        }, zz.versionString = "11.11.1", zz.regex = {
+          concat: Zz,
+          lookahead: pz,
+          either: Rz,
+          optional: Fz,
+          anyNumberOfTimes: dz
+        };
+        for (const bz in cz) "object" === typeof cz[bz] && uz(cz[bz]);
+        return Object.assign(zz, cz), zz
+      },
+      pu = Ou({});
+    pu.newInstance = () => Ou({}), zz.exports = pu, pu.HighlightJS = pu, pu.default = pu
+  },
+  4465: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez
+    });
+    const Ez = bz(4472)
+  },
+  4480: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => pz
+    });
+    const Ez = "[A-Za-z$_][0-9A-Za-z$_]*",
+      nz = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      iz = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      lz = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      Mz = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      tz = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      Hz = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Oz = [].concat(tz, lz, Mz);
+
+    function pz(zz) {
+      const uz = zz.regex,
+        bz = Ez,
+        pz = "<>",
+        dz = "</>",
+        Fz = {
+          QF: /<[A-Za-z0-9\\._:-]+/,
+          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+          isTrulyOpeningTag: (zz, uz) => {
+            const bz = zz[0].length + zz.index,
+              Ez = zz.input[bz];
+            if ("<" === Ez || "," === Ez) return void uz.ignoreMatch();
+            let nz;
+            ">" === Ez && (((zz, uz) => {
+              let {
+                after: bz
+              } = uz;
+              const Ez = "</" + zz[0].slice(1);
+              return -1 !== zz.input.indexOf(Ez, bz)
+            })(zz, {
+              after: bz
+            }) || uz.ignoreMatch());
+            const iz = zz.input.substring(bz);
+            ((nz = iz.match(/^\s*=/)) || (nz = iz.match(/^\s+extends\s+/)) && 0 === nz.index) && uz.ignoreMatch()
+          }
+        },
+        Zz = {
+          $pattern: Ez,
+          keyword: nz,
+          literal: iz,
+          built_in: Oz,
+          "variable.language": Hz
+        },
+        Rz = "[0-9](_?[0-9])*",
+        Kz = `\\.(${Rz})`,
+        wz = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        Xz = {
+          className: "number",
+          variants: [{
+            QF: `(\\b(${wz})((${Kz})|\\.)?|(${Kz}))[eE][+-]?(${Rz})\\b`
+          }, {
+            QF: `\\b(${wz})\\b((${Kz})\\b|\\.)?|(${Kz})\\b`
+          }, {
+            QF: "\\b(0|[1-9](_?[0-9])*)n\\b"
+          }, {
+            QF: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+          }, {
+            QF: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+          }, {
+            QF: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+          }, {
+            QF: "\\b0[0-7]+n?\\b"
+          }],
+          relevance: 0
+        },
+        fz = {
+          className: "subst",
+          QF: "\\$\\{",
+          end: "\\}",
+          keywords: Zz,
+          contains: []
+        },
+        sz = {
+          QF: ".?html`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [zz.BACKSLASH_ESCAPE, fz],
+            subLanguage: "xml"
+          }
+        },
+        rz = {
+          QF: ".?css`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [zz.BACKSLASH_ESCAPE, fz],
+            subLanguage: "css"
+          }
+        },
+        oz = {
+          QF: ".?gql`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [zz.BACKSLASH_ESCAPE, fz],
+            subLanguage: "graphql"
+          }
+        },
+        Nz = {
+          className: "string",
+          QF: "`",
+          end: "`",
+          contains: [zz.BACKSLASH_ESCAPE, fz]
+        },
+        vz = {
+          className: "comment",
+          variants: [zz.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+            relevance: 0,
+            contains: [{
+              QF: "(?=@[A-Za-z]+)",
+              relevance: 0,
+              contains: [{
+                className: "doctag",
+                QF: "@[A-Za-z]+"
+              }, {
+                className: "type",
+                QF: "\\{",
+                end: "\\}",
+                excludeEnd: !0,
+                excludeBegin: !0,
+                relevance: 0
+              }, {
+                className: "variable",
+                QF: bz + "(?=\\s*(-)|$)",
+                endsParent: !0,
+                relevance: 0
+              }, {
+                QF: /(?=[^\n])\s/,
+                relevance: 0
+              }]
+            }]
+          }), zz.C_BLOCK_COMMENT_MODE, zz.C_LINE_COMMENT_MODE]
+        },
+        xz = [zz.APOS_STRING_MODE, zz.QUOTE_STRING_MODE, sz, rz, oz, Nz, {
+          match: /\$\d+/
+        }, Xz];
+      fz.contains = xz.concat({
+        QF: /\{/,
+        end: /\}/,
+        keywords: Zz,
+        contains: ["self"].concat(xz)
+      });
+      const Jz = [].concat(vz, fz.contains),
+        Az = Jz.concat([{
+          QF: /(\s*)\(/,
+          end: /\)/,
+          keywords: Zz,
+          contains: ["self"].concat(Jz)
+        }]),
+        Tz = {
+          className: "params",
+          QF: /(\s*)\(/,
+          end: /\)/,
+          excludeBegin: !0,
+          excludeEnd: !0,
+          keywords: Zz,
+          contains: Az
+        },
+        Lz = {
+          variants: [{
+            match: [/class/, /\s+/, bz, /\s+/, /extends/, /\s+/, uz.concat(bz, "(", uz.concat(/\./, bz), ")*")],
+            scope: {
+              1: "keyword",
+              3: "title.class",
+              5: "keyword",
+              7: "title.class.inherited"
+            }
+          }, {
+            match: [/class/, /\s+/, bz],
+            scope: {
+              1: "keyword",
+              3: "title.class"
+            }
+          }]
+        },
+        Pz = {
+          relevance: 0,
+          match: uz.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          className: "title.class",
+          keywords: {
+            _: [...lz, ...Mz]
+          }
+        },
+        Gz = {
+          variants: [{
+            match: [/function/, /\s+/, bz, /(?=\s*\()/]
+          }, {
+            match: [/function/, /\s*(?=\()/]
+          }],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          label: "func.def",
+          contains: [Tz],
+          illegal: /%/
+        };
+      const az = {
+        match: uz.concat(/\b/, (Vz = [...tz, "super", "import"].map((zz => `${zz}\\s*\\(`)), uz.concat("(?!", Vz.join("|"), ")")), bz, uz.lookahead(/\s*\(/)),
+        className: "title.function",
+        relevance: 0
+      };
+      var Vz;
+      const mz = {
+          QF: uz.concat(/\./, uz.lookahead(uz.concat(bz, /(?![0-9A-Za-z$_(])/))),
+          end: bz,
+          excludeBegin: !0,
+          keywords: "prototype",
+          className: "property",
+          relevance: 0
+        },
+        qz = {
+          match: [/get|set/, /\s+/, bz, /(?=\()/],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [{
+            QF: /\(\)/
+          }, Tz]
+        },
+        hz = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + zz.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Uz = {
+          match: [/const|var|let/, /\s+/, bz, /\s*/, /=\s*/, /(async\s*)?/, uz.lookahead(hz)],
+          keywords: "async",
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [Tz]
+        };
+      return {
+        name: "JavaScript",
+        aliases: ["js", "jsx", "mjs", "cjs"],
+        keywords: Zz,
+        exports: {
+          PARAMS_CONTAINS: Az,
+          CLASS_REFERENCE: Pz
+        },
+        illegal: /#(?![$_A-z])/,
+        contains: [zz.SHEBANG({
+          label: "shebang",
+          binary: "node",
+          relevance: 5
+        }), {
+          label: "use_strict",
+          className: "meta",
+          relevance: 10,
+          QF: /^\s*['"]use (strict|asm)['"]/
+        }, zz.APOS_STRING_MODE, zz.QUOTE_STRING_MODE, sz, rz, oz, Nz, vz, {
+          match: /\$\d+/
+        }, Xz, Pz, {
+          scope: "attr",
+          match: bz + uz.lookahead(":"),
+          relevance: 0
+        }, Uz, {
+          QF: "(" + zz.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+          keywords: "return throw case",
+          relevance: 0,
+          contains: [vz, zz.REGEXP_MODE, {
+            className: "function",
+            QF: hz,
+            returnBegin: !0,
+            end: "\\s*=>",
+            contains: [{
+              className: "params",
+              variants: [{
+                QF: zz.UNDERSCORE_IDENT_RE,
+                relevance: 0
+              }, {
+                className: null,
+                QF: /\(\s*\)/,
+                skip: !0
+              }, {
+                QF: /(\s*)\(/,
+                end: /\)/,
+                excludeBegin: !0,
+                excludeEnd: !0,
+                keywords: Zz,
+                contains: Az
+              }]
+            }]
+          }, {
+            QF: /,/,
+            relevance: 0
+          }, {
+            match: /\s+/,
+            relevance: 0
+          }, {
+            variants: [{
+              QF: pz,
+              end: dz
+            }, {
+              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
+            }, {
+              QF: Fz.QF,
+              "on:begin": Fz.isTrulyOpeningTag,
+              end: Fz.end
+            }],
+            subLanguage: "xml",
+            contains: [{
+              QF: Fz.QF,
+              end: Fz.end,
+              skip: !0,
+              contains: ["self"]
+            }]
+          }]
+        }, Gz, {
+          beginKeywords: "while if switch catch for"
+        }, {
+          QF: "\\b(?!function)" + zz.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          returnBegin: !0,
+          label: "func.def",
+          contains: [Tz, zz.inherit(zz.TITLE_MODE, {
+            QF: bz,
+            className: "title.function"
+          })]
+        }, {
+          match: /\.\.\./,
+          relevance: 0
+        }, mz, {
+          match: "\\$" + bz,
+          relevance: 0
+        }, {
+          match: [/\bconstructor(?=\s*\()/],
+          className: {
+            1: "title.function"
+          },
+          contains: [Tz]
+        }, az, {
+          relevance: 0,
+          match: /\b[A-Z][A-Z_0-9]+\b/,
+          className: "variable.constant"
+        }, Lz, qz, {
+          match: /\$[(.]/
+        }]
       }
     }
-    const Py = new Map;
+  },
+  4483: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => dz
+    });
+    const Ez = "[A-Za-z$_][0-9A-Za-z$_]*",
+      nz = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      iz = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      lz = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      Mz = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      tz = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      Hz = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Oz = [].concat(tz, lz, Mz);
 
-    function oy(yb, bb) {
-      var Wy;
-      let Uy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Py.set(Uy, (null !== (Wy = Py.get(Uy)) && void 0 !== Wy ? Wy : 0) & ~yb | bb & yb);
-      let fy = 0;
-      for (const hy of Py.values()) fy |= hy;
-      return (0, hy.B)(yb, fy & yb)
+    function pz(zz) {
+      const uz = zz.regex,
+        bz = Ez,
+        pz = "<>",
+        dz = "</>",
+        Fz = {
+          QF: /<[A-Za-z0-9\\._:-]+/,
+          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+          isTrulyOpeningTag: (zz, uz) => {
+            const bz = zz[0].length + zz.index,
+              Ez = zz.input[bz];
+            if ("<" === Ez || "," === Ez) return void uz.ignoreMatch();
+            let nz;
+            ">" === Ez && (((zz, uz) => {
+              let {
+                after: bz
+              } = uz;
+              const Ez = "</" + zz[0].slice(1);
+              return -1 !== zz.input.indexOf(Ez, bz)
+            })(zz, {
+              after: bz
+            }) || uz.ignoreMatch());
+            const iz = zz.input.substring(bz);
+            ((nz = iz.match(/^\s*=/)) || (nz = iz.match(/^\s+extends\s+/)) && 0 === nz.index) && uz.ignoreMatch()
+          }
+        },
+        Zz = {
+          $pattern: Ez,
+          keyword: nz,
+          literal: iz,
+          built_in: Oz,
+          "variable.language": Hz
+        },
+        Rz = "[0-9](_?[0-9])*",
+        Kz = `\\.(${Rz})`,
+        wz = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        Xz = {
+          className: "number",
+          variants: [{
+            QF: `(\\b(${wz})((${Kz})|\\.)?|(${Kz}))[eE][+-]?(${Rz})\\b`
+          }, {
+            QF: `\\b(${wz})\\b((${Kz})\\b|\\.)?|(${Kz})\\b`
+          }, {
+            QF: "\\b(0|[1-9](_?[0-9])*)n\\b"
+          }, {
+            QF: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+          }, {
+            QF: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+          }, {
+            QF: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+          }, {
+            QF: "\\b0[0-7]+n?\\b"
+          }],
+          relevance: 0
+        },
+        fz = {
+          className: "subst",
+          QF: "\\$\\{",
+          end: "\\}",
+          keywords: Zz,
+          contains: []
+        },
+        sz = {
+          QF: ".?html`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [zz.BACKSLASH_ESCAPE, fz],
+            subLanguage: "xml"
+          }
+        },
+        rz = {
+          QF: ".?css`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [zz.BACKSLASH_ESCAPE, fz],
+            subLanguage: "css"
+          }
+        },
+        oz = {
+          QF: ".?gql`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [zz.BACKSLASH_ESCAPE, fz],
+            subLanguage: "graphql"
+          }
+        },
+        Nz = {
+          className: "string",
+          QF: "`",
+          end: "`",
+          contains: [zz.BACKSLASH_ESCAPE, fz]
+        },
+        vz = {
+          className: "comment",
+          variants: [zz.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+            relevance: 0,
+            contains: [{
+              QF: "(?=@[A-Za-z]+)",
+              relevance: 0,
+              contains: [{
+                className: "doctag",
+                QF: "@[A-Za-z]+"
+              }, {
+                className: "type",
+                QF: "\\{",
+                end: "\\}",
+                excludeEnd: !0,
+                excludeBegin: !0,
+                relevance: 0
+              }, {
+                className: "variable",
+                QF: bz + "(?=\\s*(-)|$)",
+                endsParent: !0,
+                relevance: 0
+              }, {
+                QF: /(?=[^\n])\s/,
+                relevance: 0
+              }]
+            }]
+          }), zz.C_BLOCK_COMMENT_MODE, zz.C_LINE_COMMENT_MODE]
+        },
+        xz = [zz.APOS_STRING_MODE, zz.QUOTE_STRING_MODE, sz, rz, oz, Nz, {
+          match: /\$\d+/
+        }, Xz];
+      fz.contains = xz.concat({
+        QF: /\{/,
+        end: /\}/,
+        keywords: Zz,
+        contains: ["self"].concat(xz)
+      });
+      const Jz = [].concat(vz, fz.contains),
+        Az = Jz.concat([{
+          QF: /(\s*)\(/,
+          end: /\)/,
+          keywords: Zz,
+          contains: ["self"].concat(Jz)
+        }]),
+        Tz = {
+          className: "params",
+          QF: /(\s*)\(/,
+          end: /\)/,
+          excludeBegin: !0,
+          excludeEnd: !0,
+          keywords: Zz,
+          contains: Az
+        },
+        Lz = {
+          variants: [{
+            match: [/class/, /\s+/, bz, /\s+/, /extends/, /\s+/, uz.concat(bz, "(", uz.concat(/\./, bz), ")*")],
+            scope: {
+              1: "keyword",
+              3: "title.class",
+              5: "keyword",
+              7: "title.class.inherited"
+            }
+          }, {
+            match: [/class/, /\s+/, bz],
+            scope: {
+              1: "keyword",
+              3: "title.class"
+            }
+          }]
+        },
+        Pz = {
+          relevance: 0,
+          match: uz.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          className: "title.class",
+          keywords: {
+            _: [...lz, ...Mz]
+          }
+        },
+        Gz = {
+          variants: [{
+            match: [/function/, /\s+/, bz, /(?=\s*\()/]
+          }, {
+            match: [/function/, /\s*(?=\()/]
+          }],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          label: "func.def",
+          contains: [Tz],
+          illegal: /%/
+        };
+      const az = {
+        match: uz.concat(/\b/, (Vz = [...tz, "super", "import"].map((zz => `${zz}\\s*\\(`)), uz.concat("(?!", Vz.join("|"), ")")), bz, uz.lookahead(/\s*\(/)),
+        className: "title.function",
+        relevance: 0
+      };
+      var Vz;
+      const mz = {
+          QF: uz.concat(/\./, uz.lookahead(uz.concat(bz, /(?![0-9A-Za-z$_(])/))),
+          end: bz,
+          excludeBegin: !0,
+          keywords: "prototype",
+          className: "property",
+          relevance: 0
+        },
+        qz = {
+          match: [/get|set/, /\s+/, bz, /(?=\()/],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [{
+            QF: /\(\)/
+          }, Tz]
+        },
+        hz = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + zz.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Uz = {
+          match: [/const|var|let/, /\s+/, bz, /\s*/, /=\s*/, /(async\s*)?/, uz.lookahead(hz)],
+          keywords: "async",
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [Tz]
+        };
+      return {
+        name: "JavaScript",
+        aliases: ["js", "jsx", "mjs", "cjs"],
+        keywords: Zz,
+        exports: {
+          PARAMS_CONTAINS: Az,
+          CLASS_REFERENCE: Pz
+        },
+        illegal: /#(?![$_A-z])/,
+        contains: [zz.SHEBANG({
+          label: "shebang",
+          binary: "node",
+          relevance: 5
+        }), {
+          label: "use_strict",
+          className: "meta",
+          relevance: 10,
+          QF: /^\s*['"]use (strict|asm)['"]/
+        }, zz.APOS_STRING_MODE, zz.QUOTE_STRING_MODE, sz, rz, oz, Nz, vz, {
+          match: /\$\d+/
+        }, Xz, Pz, {
+          scope: "attr",
+          match: bz + uz.lookahead(":"),
+          relevance: 0
+        }, Uz, {
+          QF: "(" + zz.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+          keywords: "return throw case",
+          relevance: 0,
+          contains: [vz, zz.REGEXP_MODE, {
+            className: "function",
+            QF: hz,
+            returnBegin: !0,
+            end: "\\s*=>",
+            contains: [{
+              className: "params",
+              variants: [{
+                QF: zz.UNDERSCORE_IDENT_RE,
+                relevance: 0
+              }, {
+                className: null,
+                QF: /\(\s*\)/,
+                skip: !0
+              }, {
+                QF: /(\s*)\(/,
+                end: /\)/,
+                excludeBegin: !0,
+                excludeEnd: !0,
+                keywords: Zz,
+                contains: Az
+              }]
+            }]
+          }, {
+            QF: /,/,
+            relevance: 0
+          }, {
+            match: /\s+/,
+            relevance: 0
+          }, {
+            variants: [{
+              QF: pz,
+              end: dz
+            }, {
+              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
+            }, {
+              QF: Fz.QF,
+              "on:begin": Fz.isTrulyOpeningTag,
+              end: Fz.end
+            }],
+            subLanguage: "xml",
+            contains: [{
+              QF: Fz.QF,
+              end: Fz.end,
+              skip: !0,
+              contains: ["self"]
+            }]
+          }]
+        }, Gz, {
+          beginKeywords: "while if switch catch for"
+        }, {
+          QF: "\\b(?!function)" + zz.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          returnBegin: !0,
+          label: "func.def",
+          contains: [Tz, zz.inherit(zz.TITLE_MODE, {
+            QF: bz,
+            className: "title.function"
+          })]
+        }, {
+          match: /\.\.\./,
+          relevance: 0
+        }, mz, {
+          match: "\\$" + bz,
+          relevance: 0
+        }, {
+          match: [/\bconstructor(?=\s*\()/],
+          className: {
+            1: "title.function"
+          },
+          contains: [Tz]
+        }, az, {
+          relevance: 0,
+          match: /\b[A-Z][A-Z_0-9]+\b/,
+          className: "variable.constant"
+        }, Lz, qz, {
+          match: /\$[(.]/
+        }]
+      }
+    }
+
+    function dz(zz) {
+      const uz = zz.regex,
+        bz = pz(zz),
+        lz = Ez,
+        Mz = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        tz = {
+          QF: [/namespace/, /\s+/, zz.IDENT_RE],
+          beginScope: {
+            1: "keyword",
+            3: "title.class"
+          }
+        },
+        dz = {
+          beginKeywords: "interface",
+          end: /\{/,
+          excludeEnd: !0,
+          keywords: {
+            keyword: "interface extends",
+            built_in: Mz
+          },
+          contains: [bz.exports.CLASS_REFERENCE]
+        },
+        Fz = {
+          $pattern: Ez,
+          keyword: nz.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: iz,
+          built_in: Oz.concat(Mz),
+          "variable.language": Hz
+        },
+        Zz = {
+          className: "meta",
+          QF: "@" + lz
+        },
+        Rz = (zz, uz, bz) => {
+          const Ez = zz.contains.findIndex((zz => zz.label === uz));
+          if (-1 === Ez) throw new Error("can not find mode to replace");
+          zz.contains.splice(Ez, 1, bz)
+        };
+      Object.assign(bz.keywords, Fz), bz.exports.PARAMS_CONTAINS.push(Zz);
+      const Kz = bz.contains.find((zz => "attr" === zz.scope)),
+        wz = Object.assign({}, Kz, {
+          match: uz.concat(lz, uz.lookahead(/\s*\?:/))
+        });
+      bz.exports.PARAMS_CONTAINS.push([bz.exports.CLASS_REFERENCE, Kz, wz]), bz.contains = bz.contains.concat([Zz, tz, dz, wz]), Rz(bz, "shebang", zz.SHEBANG()), Rz(bz, "use_strict", {
+        className: "meta",
+        relevance: 10,
+        QF: /^\s*['"]use strict['"]/
+      });
+      return bz.contains.find((zz => "func.def" === zz.label)).relevance = 0, Object.assign(bz, {
+        name: "TypeScript",
+        aliases: ["ts", "tsx", "mts", "cts"]
+      }), bz
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

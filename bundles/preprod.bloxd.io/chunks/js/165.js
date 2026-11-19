@@ -1,49 +1,40 @@
 export const id = 165;
 export const ids = [165];
 export const modules = {
-  8144: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  8630: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const Uy = {
-      whatIs: ["Sharp aim and quick feet are what separate top frag from instant respawn. Bloxd Cube Warfare is a fast, free block FPS where the firefights don't stop. You can play Free-For-All, Team Deathmatch or Gun Game, and you'll unlock over 15 guns along the way. If you'd rather have objectives, kits and vehicles in big 12v12 battles, have a look at Frontline."],
-      howToPlay: ["Join a match and vote on the map. In Free-For-All it's every player for themselves. Team Deathmatch puts you on a side, and your team has to outscore the other one. Rounds last 10 minutes. Get taken down and you'll respawn with 8 seconds of invincibility, though your killstreak resets.", "Keep taking down opponents without going down yourself and you'll build killstreaks. They reward you across 3 tiers with things like extra health, more damage, faster movement or free blocks. New guns unlock in the shop. There are pistols, SMGs, shotguns, sniper rifles and LMGs, and you can take any of them into Teams or FFA. Gun Game has its own queue. Every elimination swaps your weapon for the next one, and to win you need a final takedown with the sword.", "Some matches throw in a twist. In Collect Diamonds you gather diamonds to win. Explosives keeps handing you explosives, and each takedown gets you more."],
-      features: ["Free-For-All, Team Deathmatch and Gun Game", "Over 15 Guns, Including the AK-47, AWP, Deagle, Striker-12 and GPMG", "Killstreak Rewards Across 3 Tiers", "Place Blocks for Cover with Killstreak Rewards", "Match Modifiers: Collect Diamonds and Explosives", "Maps Including Snowbase, Sienna, Cabins and More, with Map Voting", "Leaderboards and Player Stats"],
-      tips: ["Keep moving. Standing still makes you an easy target", "Go for headshots, especially once you've got the Goodaimer killstreak", "Use those 8 seconds of respawn invincibility to get back into position", "Stay alive to keep your killstreak going, because it resets when you're taken down", "Place blocks for cover, but remember every map has a build height limit", "In Collect Diamonds, shoot the diamonds around the map so they drop, then grab them", "Try every gun in Gun Game before you unlock your favourite in the shop"],
-      similarGames: ["frontline", "classic_survivalGuns", "infection", "skywars"],
+    const Ez = {
+      whatIs: ["Infinite blocks, custom tools and no limits on what you build. Bloxd Creative is the free building mode where you can get creating straight away. Build in a shared world with players from all over, or set up your own free build server and create with your friends online. There's no health bar and nobody can attack you, so all you have to think about is your build."],
+      howToPlay: ["Open the creative menu and grab any block or item you want. It's all sorted into categories like Building Blocks, Coloured Blocks, Nature, Decoration, Utility, Tools and Vehicles, and World Tools. Place as many as you like, fly around your build and make anything from a tiny cottage to an entire city.", "Want a completely blank canvas? Try Superflat, a world of endless flat grass that's great for big projects. In the normal Creative world, use Teleport To Fresh Land to jump to a random empty spot so nobody gets in your way. Place a Protector and other players can't change blocks or open chests in that area. If you'd like a plot of your own that's saved for good, Plots is the one to try."],
+      features: ["Infinite Blocks and Items from the Creative Menu", "Fly Freely Around Your Builds", "Superflat Worlds for Big Builds", "Teleport To Fresh Land for Uninterrupted Building", "Free Private Build Servers to Create with Friends", "Extra Tools for Server Owners, Including WorldBuilder and Code Editing", "Protectors to Keep Your Builds Safe", "No Health Bar and No Attacks from Other Players"],
+      tips: ["Teleport To Fresh Land is the quickest way to find some empty space", "In public lobbies, build more than about 200 blocks from spawn, because blocks near spawn reset every few hours", "Put down a Protector so other players can't change your build or open your chests", "Use /tp to get around fast, and type /help to see all the commands", "Saplings are limited in Creative, so plan your trees carefully", "Free cam lets you check your build from every angle", "If you want your build to stay exactly as you left it, start a private build server"],
+      similarGames: ["classic", "classic_survival", "plots", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Cube Warfare?",
-        answer: "A fast block shooter with 10-minute rounds, killstreak rewards and over 15 guns to unlock."
+        question: "What is Bloxd Creative?",
+        answer: "Bloxd Creative is the creative building mode in Bloxd.io. You get infinite blocks and custom tools to build whatever you like, on your own or with friends."
       }, {
-        question: "What modes are in Cube Warfare?",
-        answer: "Free-For-All, Team Deathmatch and Gun Game. You'll be in Free-For-All by default."
+        question: "Can you fly in Bloxd Creative?",
+        answer: "Yes, you can fly in Creative, so you can reach every bit of your build."
       }, {
-        question: "How does team deathmatch work in Cube Warfare?",
-        answer: "Pick Team Deathmatch and work with your team to outscore the other side before the 10-minute round is up."
+        question: "What is Superflat in Bloxd?",
+        answer: "A Creative world made of endless flat grass. It gives you a clean canvas for your biggest projects."
       }, {
-        question: "What is Gun Game in Bloxd Cube Warfare?",
-        answer: "It's a mode with its own queue. Each elimination upgrades your weapon, and a final takedown with the sword wins it."
+        question: "How do I make a free build server in Bloxd?",
+        answer: "Start your own private lobby for free and invite your friends. As the owner you also get extra tools like WorldBuilder."
       }, {
-        question: "How do I unlock new guns in Cube Warfare?",
-        answer: "Through the shop. Once they're unlocked you can take them into Free-For-All or Team Deathmatch, and Gun Game lets you try the lot."
+        question: "Can you use TNT in Bloxd Creative?",
+        answer: "Not in public Creative worlds. You can't take explosives from the menu or craft them, so nobody can blow up other people's builds."
       }, {
-        question: "How many guns are in Cube Warfare?",
-        answer: "Over 15. That includes the AK-47, AWP, M16, MP40, SKAR, Deagle and Striker-12."
+        question: "Why did my build disappear in Bloxd Creative?",
+        answer: "In public lobbies, blocks within about 200 blocks of spawn reset every few hours. Build further away, use Teleport To Fresh Land, or start a private build server, where nothing resets."
       }, {
-        question: "What are killstreaks in Cube Warfare?",
-        answer: "Rewards for taking down opponents without being eliminated, like Healthup, Hitem, Speedy and Autoblocks. There are 3 tiers, and your streak resets when you go down."
-      }, {
-        question: "What is Collect Diamonds?",
-        answer: "A match modifier for Free-For-All and Team Deathmatch. You need 30 diamonds to win in FFA, or 100 as a team. When someone's taken down they drop all their diamonds, so you can steal theirs. Shoot the diamonds placed around the map and they'll drop too. Those respawn every 15 seconds."
-      }, {
-        question: "What is the Explosives modifier?",
-        answer: "You keep getting explosives all match, and every takedown gives you more."
-      }, {
-        question: "What maps are in Cube Warfare?",
-        answer: "Snowbase, Sienna and Cabins, among others. You get to vote for the next one."
+        question: "What's the difference between Creative and Plots?",
+        answer: "Creative is an open shared world. You build wherever you want and guard areas with Protectors. In Plots you claim your own 91\xd791 plot that only you and the players you add can change, and it's saved for good once you've changed 500 blocks."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

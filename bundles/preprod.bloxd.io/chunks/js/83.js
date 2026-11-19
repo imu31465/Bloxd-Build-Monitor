@@ -1,989 +1,1771 @@
 export const id = 83;
-export const ids = [81, 83];
+export const ids = [83];
 export const modules = {
-  37767: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => cb,
-      g: () => fy
+  4540: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => sz,
+      f: () => wz
     });
-    var Uy = Wy(3384);
-    let hy = null;
-
-    function fy(yb) {
-      return null !== hy && yb === hy
-    }
-
-    function Zy() {
-      this.nUy = !1, this.stopPropagation = !1, this.uUy = !1, this.disabled = !1
-    }
-    class cb {
-      constructor(yb, bb) {
-        this.version = "0.7.0";
-        var Wy = Object.assign({}, new Zy, bb || {});
-        this.element = yb || document, this.nUy = !!Wy.nUy, this.stopPropagation = !!Wy.stopPropagation, this.uUy = !!Wy.uUy, this.disabled = !!Wy.disabled, this.filterEvents = (yb, bb) => !0, this.down = new Uy.EventEmitter, this.up = new Uy.EventEmitter, this.state = {}, this.HUy = {
-          dx: 0,
-          dy: 0,
-          Qcy: 0,
-          jPy: 0,
-          Dcy: 0
-        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
-          lastX: 0,
-          lastY: 0,
-          currID: null
-        }, "loading" !== document.readyState ? oy(this) : document.addEventListener("DOMContentLoaded", (yb => {
-          oy(this)
-        }), {
-          once: !0
-        })
-      }
-      bind(yb) {
-        for (var bb = arguments.length, Wy = new Array(bb > 1 ? bb - 1 : 0), Uy = 1; Uy < bb; Uy++) Wy[Uy - 1] = arguments[Uy];
-        Wy.forEach((bb => {
-          var Wy = this._keyBindmap[bb] || [];
-          Wy.includes(yb) || (Wy.push(yb), this._keyBindmap[bb] = Wy)
-        })), this.state[yb] = !!this.state[yb], this.pressCount[yb] = this.pressCount[yb] || 0, this.releaseCount[yb] = this.releaseCount[yb] || 0
-      }
-      unbind(yb) {
-        for (var bb in this._keyBindmap) {
-          var Wy = this._keyBindmap[bb],
-            Uy = Wy.indexOf(yb);
-          Uy > -1 && Wy.splice(Uy, 1)
-        }
-      }
-      getBindings() {
-        var yb = {};
-        for (var bb in this._keyBindmap) {
-          this._keyBindmap[bb].forEach((Wy => {
-            yb[Wy] = yb[Wy] || [], yb[Wy].push(bb)
-          }))
-        }
-        return yb
-      }
-      Zb() {
-        Py(this.HUy), Py(this.pressCount), Py(this.releaseCount)
+    var Ez = bz(1279),
+      nz = bz(22);
+    var iz = bz(328);
+    var lz = bz(588);
+    var Mz = bz(2289),
+      tz = bz(4544),
+      Hz = bz(4567),
+      Oz = bz(4575);
+    class pz {
+      constructor(zz, uz, bz, Ez, nz, iz) {
+        this.id = zz, this.type = uz, this.parameters = bz, this.tearDownNotification = Ez, this.onDonePromise = nz, this.resolveRequest = iz
       }
     }
-
-    function Py(yb) {
-      for (var bb in yb) yb[bb] = 0
-    }
-
-    function oy(yb) {
-      window.addEventListener("keydown", Ey.bind(null, yb, !0), !1), window.addEventListener("keyup", Ey.bind(null, yb, !1), !1);
-      var bb = {
-        passive: !0
-      };
-      yb.element.addEventListener("touchstart", qb.bind(void 0, yb), {
-        passive: !1
-      }), yb.element.addEventListener("touchend", Sy.bind(void 0, yb), bb), yb.element.addEventListener("mousedown", ly.bind(null, yb, !0), bb), window.document.addEventListener("mouseup", ly.bind(null, yb, !1), bb), yb.element.addEventListener("touchmove", mb.bind(null, yb), bb), yb.element.addEventListener("mousemove", mb.bind(null, yb), bb), window.PointerEvent, yb.element.addEventListener("wheel", Cy.bind(null, yb), bb), yb.element.addEventListener("contextmenu", Ty.bind(null, yb), !1), window.addEventListener("blur", gb.bind(null, yb), !1)
-    }
-    var By = 0,
-      Ky = 0,
-      ey = null;
-
-    function qb(yb, bb) {
-      bb.preventDefault(), sy(bb)
-    }
-
-    function sy(yb) {
-      let bb = !1;
-      for (let Wy = 0; Wy < yb.touches.length; ++Wy)
-        if (yb.touches[Wy].identifier === ey) {
-          bb = !0;
-          break
-        } if (!bb) {
-        const bb = yb.changedTouches[0];
-        By = bb.clientX, Ky = bb.clientY, ey = bb.identifier
+    const dz = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class Fz {
+      constructor(zz, uz, bz, Ez, nz, iz) {
+        this.id = zz, this.type = uz, this.parameters = bz, this.resolveRequest = Ez, this.onDonePromise = nz, this.tearDownNotification = iz, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const lz = wz[uz];
+        if (!lz) throw console.error(`No QTE implementation registered for type: ${uz}`), new Error(`No QTE implementation registered for type: ${uz}`);
+        this.implementation = new lz(bz, (zz => {
+          this.isCompleted = !0, this.resolveRequest(zz)
+        }), this.tearDownNotification), this.setupInputHandlers()
       }
-    }
-
-    function Sy(yb, bb) {
-      for (var Wy = bb.changedTouches, Uy = 0; Uy < Wy.length; ++Uy) Wy[Uy].identifier === ey && (ey = null)
-    }
-
-    function Ey(yb, bb, Wy) {
-      try {
-        Gy(yb, Wy), bb && Wy.isTrusted && !Wy.repeat && yb._keyStates[Wy.code] && Oy(yb, Wy.code)
-      } finally {
-        Ry(Wy.code, bb, yb, Wy)
-      }
-    }
-
-    function ly(yb, bb, Wy) {
-      try {
-        Gy(yb, Wy)
-      } finally {
-        ! function(yb, bb, Wy) {
-          if ("pointerId" in Wy)
-            if (bb) {
-              if (null !== yb._touches.currID) return;
-              yb._touches.currID = Wy.pointerId
-            } else {
-              if (yb._touches.currID !== Wy.pointerId) return;
-              yb._touches.currID = null
-            } var Uy = "button" in Wy ? Wy.button + 1 : 1;
-          Ry("Mouse" + Uy, bb, yb, Wy)
-        }(yb, bb, Wy)
-      }
-    }
-
-    function mb(yb, bb) {
-      var Wy = bb.movementX || bb.mozMovementX || 0,
-        Uy = bb.movementY || bb.mozMovementY || 0;
-      if (bb.touches && 0 === (Wy | Uy)) {
-        var hy = function(yb) {
-          sy(yb);
-          for (let bb = 0; bb < yb.changedTouches.length; ++bb)
-            if (yb.changedTouches[bb].identifier == ey) {
-              const Wy = yb.changedTouches[bb],
-                Uy = [Wy.clientX - By, Wy.clientY - Ky];
-              return By = Wy.clientX, Ky = Wy.clientY, Uy
-            } return console.error(`Did not find touch id ${ey}`), [0, 0]
-        }(bb);
-        Wy = hy[0], Uy = hy[1]
-      }
-      yb.HUy.dx += Wy, yb.HUy.dy += Uy
-    }
-
-    function Cy(yb, bb) {
-      Gy(yb, bb);
-      var Wy = 1;
-      switch (bb.deltaMode) {
-        case 0:
-          Wy = 1;
-          break;
-        case 1:
-          Wy = 12;
-          break;
-        case 2:
-          Wy = yb.element.clientHeight || window.innerHeight
-      }
-      yb.HUy.Qcy += (bb.deltaX || 0) * Wy, yb.HUy.jPy += (bb.deltaY || 0) * Wy, yb.HUy.Dcy += (bb.deltaZ || 0) * Wy
-    }
-
-    function Ty(yb, bb) {
-      if (!yb.uUy) return bb.preventDefault(), !1
-    }
-    var Vy = {
-      AltLeft: "altKey",
-      AltRight: "altKey",
-      ControlLeft: "ctrlKey",
-      ControlRight: "ctrlKey",
-      ShiftLeft: "shiftKey",
-      ShiftRight: "shiftKey",
-      MetaLeft: "metaKey",
-      MetaRight: "metaKey"
-    };
-
-    function Jy(yb, bb) {
-      return !!yb[Vy[bb]] || ("AltRight" === bb || "ControlLeft" === bb) && "function" === typeof yb.getModifierState && !0 === yb.getModifierState("AltGraph")
-    }
-
-    function gb(yb, bb) {
-      for (var Wy in yb._modifiersHeldThroughBlur = {}, Vy) yb._keyStates[Wy] && (yb._modifiersHeldThroughBlur[Wy] = !0);
-      bb && bb.isTrusted && function() {
-        try {
-          return window.self !== window.top
-        } catch (yb) {
-          return !0
-        }
-      }() && (clearTimeout(yb._blurRelease), yb._blurRelease = setTimeout((function() {
-        if (!document.hasFocus())
-          for (var bb in yb._modifiersHeldThroughBlur = {}, yb._keyStates) yb._keyStates[bb] && !/^Mouse\d/.test(bb) && Oy(yb, bb)
-      }), 0))
-    }
-
-    function Gy(yb, bb) {
-      var Wy = yb._modifiersHeldThroughBlur;
-      if (Wy && bb.isTrusted && document.hasFocus())
-        for (var Uy in Wy) delete Wy[Uy], yb._keyStates[Uy] && Uy !== bb.code && (Jy(bb, Uy) || Oy(yb, Uy))
-    }
-
-    function Oy(yb, bb) {
-      const Wy = {
-          code: bb,
-          preventDefault: () => {},
-          stopPropagation: () => {}
-        },
-        Uy = hy;
-      hy = Wy;
-      try {
-        Ry(bb, !1, yb, Wy)
-      } finally {
-        hy = Uy
-      }
-    }
-
-    function Ry(yb, bb, Wy, Uy) {
-      var hy = Wy._keyBindmap[yb];
-      hy && (vb(Wy._keyStates[yb], bb) && (Wy._keyStates[yb] = bb, hy.forEach((yb => {
-        (!Wy.filterEvents || Wy.filterEvents(Uy, yb)) && function(yb, bb, Wy, Uy) {
-          var hy = bb ? Wy.pressCount : Wy.releaseCount;
-          hy[yb] = (hy[yb] || 0) + 1;
-          var fy = Wy._bindPressCount[yb] || 0;
-          (fy += bb ? 1 : -1) < 0 && (fy = 0);
-          Wy._bindPressCount[yb] = fy;
-          var Zy = Wy.state[yb];
-          if (vb(Zy, fy)) {
-            Wy.state[yb] = fy > 0;
-            var cb = bb ? Wy.down : Wy.up;
-            Wy.disabled || cb.emit(yb, Uy)
-          }
-        }(yb, bb, Wy, Uy)
-      }))), "button" in Uy || (Wy.nUy && !Uy.defaultPrevented && Uy.preventDefault(), Wy.stopPropagation && Uy.stopPropagation()))
-    }
-
-    function vb(yb, bb) {
-      return yb ? !bb : bb
-    }
-  },
-  35471: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => qb,
-      h: () => sy
-    });
-    var Uy = Wy(55),
-      hy = Wy(2332),
-      fy = Wy(1268),
-      Zy = Wy(1612),
-      cb = Wy(35406),
-      Py = Wy(547),
-      oy = Wy(898),
-      By = Wy.n(oy),
-      Ky = Wy(952);
-    const ey = {},
-      qb = (0, Uy.memo)((function() {
-        const yb = (0, hy.e)();
-        return (0, fy.i)("damagedByOtherPlayer", (bb => {
+      setupInputHandlers() {
+        this.mouseSub = nz.k.subscribe("QTEMouseState", (zz => {
           let {
-            xyy: Wy,
-            direction: Uy
-          } = bb;
-          const hy = Wy || "nonDirectional";
-          if (ey[hy]) {
-            const bb = ey[hy];
-            clearTimeout(bb.timeout), bb.direction = Uy, bb.timeout = setTimeout((() => {
-              delete ey[hy], yb()
-            }), 800)
-          } else ey[hy] = {
-            direction: Uy,
-            rUy: null,
-            timeout: setTimeout((() => {
-              delete ey[hy], yb()
-            }), 800)
-          };
-          yb()
-        })), (0, Zy.e)("kill", (bb => {
-          let {
-            killer: Wy,
-            victim: Uy
-          } = bb;
-          const hy = Uy.id;
-          Wy.local && hy && hy in ey && (clearTimeout(ey[hy].timeout), delete ey[hy], yb())
-        })), (0, Uy.useEffect)((() => {
-          const yb = (0, cb.d)("turnDamageIndicators", sy);
-          return () => {
-            yb();
-            for (const yb in ey) clearTimeout(ey[yb].timeout), delete ey[yb]
+            isDown: uz
+          } = zz;
+          this.isCompleted || this.implementation.handleMouseInput(uz)
+        })), this.stopInputActions = (0, Hz.g)((zz => {
+          this.isCompleted || !dz.has(zz.action) && !(0, Hz.c)(zz) || this.implementation.handleMouseInput(zz.down)
+        })), this.tickSub = nz.k.subscribe("noaTick", (zz => {
+          if (this.isCompleted) return;
+          const uz = zz / 1e3;
+          this.implementation.handleTick(uz)
+        })), this.stopShellTicks = (0, tz.A)((() => {
+          this.isCompleted || this.implementation.handleTick(Mz.s / 1e3)
+        }))
+      }
+      cleanup() {
+        var zz, uz;
+        this.mouseSub && (nz.k.unsubscribe(this.mouseSub), this.mouseSub = null), null === (zz = this.stopInputActions) || void 0 === zz || zz.call(this), this.stopInputActions = null, null === (uz = this.stopShellTicks) || void 0 === uz || uz.call(this), this.stopShellTicks = null, this.tickSub && (nz.k.unsubscribe(this.tickSub), this.tickSub = null)
+      }
+      async waitUntilDone() {
+        await this.onDonePromise
+      }
+      getState() {
+        return this.implementation.getState()
+      }
+      tearDown() {
+        this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
+      }
+    }
+    const Zz = new Ez.b,
+      Rz = new Map;
+    let Kz = null;
+    const wz = {
+      progressBar: class {
+        constructor(zz, uz, bz) {
+          var Ez, nz, iz, lz;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.progress = 0, this.mz = void 0, this.qz = void 0, this.hz = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const Mz = zz;
+          this.mz = null !== (Ez = Mz.mz) && void 0 !== Ez ? Ez : .075, this.qz = null !== (nz = Mz.qz) && void 0 !== nz ? nz : 1, this.progress = null !== (iz = Mz.Vz) && void 0 !== iz ? iz : 30, this.hz = null !== (lz = Mz.hz) && void 0 !== lz && lz, this.parameters = Mz
+        }
+        handleMouseInput(zz) {
+          zz && !this.isCompleted && (this.clickCount++, this.progress += this.qz, this.progress >= 100 && this.complete(!0))
+        }
+        handleTick() {
+          if (!this.isCompleted)
+            if (this.progress -= this.mz, this.hz && this.progress <= 0) this.complete(!1);
+            else if (this.progress <= 0) this.progress = 0;
+          else if (this.progress >= 100) return void this.complete(!0)
+        }
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              progress: this.progress,
+              clickCount: this.clickCount
+            },
+            isActive: !0
           }
-        }), []), (0, Ky.jsx)("div", {
-          className: "DirectionalDamage",
-          children: Object.entries(ey).map((yb => {
-            let [bb, Wy] = yb;
-            const Uy = (0, Py.D)(Wy.direction);
-            return (0, Ky.jsx)("div", {
-              ref: yb => {
-                ey[bb] && (ey[bb].rUy = yb)
-              },
-              className: By()("DamageIndicator", {
-                DamageIndicatorFullCircle: Uy
-              })
-            }, bb)
-          }))
-        })
-      }));
-
-    function sy(yb) {
-      for (const bb in ey) {
-        const {
-          direction: Wy,
-          rUy: Uy
-        } = ey[bb];
-        if ((0, Py.D)(Wy)) continue;
-        const hy = Wy - yb;
-        Uy.style.rotate = `${hy}rad`
-      }
-    }
-  },
-  35362: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Py,
-      d: () => oy
-    });
-    const Uy = .1,
-      hy = .35,
-      fy = .85,
-      Zy = .06,
-      cb = .22;
-
-    function Py(yb) {
-      if (yb < Uy) return 0;
-      if (yb < hy) {
-        const bb = (yb - Uy) / (hy - Uy);
-        return Zy + (cb - Zy) * bb * bb
-      }
-      return yb < fy ? cb + (1 - cb) * (yb - hy) / (fy - hy) : 1
-    }
-
-    function oy(yb) {
-      return yb.touchEdgeGuard && yb.touchSpeedCurve
-    }
-  },
-  35397: (yb, bb, Wy) => {
-    function Uy(yb, bb, Wy, Uy) {
-      return !(Wy && !yb.aimable) && (!bb || yb.gun && "head" !== Uy)
-    }
-
-    function hy(yb) {
-      return Math.max(.1 * yb, 1)
-    }
-    Wy.d(bb, {
-      d: () => hy,
-      g: () => Uy
-    })
-  },
-  35406: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => cb,
-      d: () => Zy
-    });
-    let Uy = null;
-    const hy = {
-        crosshairAccuracy: [],
-        turnDamageIndicators: []
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
       },
-      fy = {
-        crosshairAccuracy: yb => {
-          const bb = hy.crosshairAccuracy.at(-1);
-          bb ? bb.hook(yb) : Uy = yb
-        },
-        turnDamageIndicators: yb => {
-          var bb;
-          null === (bb = hy.turnDamageIndicators.at(-1)) || void 0 === bb || bb.hook(yb)
+      timedClick: class {
+        constructor(zz, uz, bz) {
+          var Ez;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = zz, this.timeWindowMs = null !== (Ez = this.parameters.Dz) && void 0 !== Ez ? Ez : 3e3, this.startTime = Date.now()
         }
-      };
-
-    function Zy(yb, bb) {
-      const Wy = {
-          hook: bb
-        },
-        Zy = hy[yb];
-      if (Zy.push(Wy), "crosshairAccuracy" === yb && null !== Uy) {
-        const yb = Uy;
-        Uy = null, fy.crosshairAccuracy(yb)
+        handleMouseInput(zz) {
+          if (!zz || this.isCompleted) return;
+          Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
+        }
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
+        }
+        getState() {
+          const zz = Date.now() - this.startTime,
+            uz = Math.max(0, this.timeWindowMs - zz);
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              timeRemaining: uz,
+              Dz: this.timeWindowMs
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      gravityBar: class {
+        constructor(zz, uz, bz) {
+          var Ez;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const nz = zz;
+          this.parameters = {
+            ...nz,
+            jz: iz.d.clamp(nz.jz, .05, 1)
+          }, this.progress = null !== (Ez = nz.Vz) && void 0 !== Ez ? Ez : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        handleMouseInput(zz) {
+          this.isMouseDown = zz
+        }
+        handleTick(zz) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(zz))
+        }
+        updateMover() {
+          this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
+          const zz = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += zz * this.parameters.Iz * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+        }
+        pickNewMoverTarget() {
+          this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        randomNumTicksUntilDirectionChange() {
+          const zz = iz.d.clamp(1 - .7 * this.parameters.Bz, 0, 1.4);
+          return Math.floor(60 * zz + 40 * Math.random())
+        }
+        updateCatchZone() {
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.Cz : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = iz.d.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const zz = this.parameters.jz / 2,
+            uz = zz,
+            bz = 1 - zz;
+          this.catchZonePosition <= uz ? (this.catchZonePosition = uz, this.catchZoneVelocity = 0) : this.catchZonePosition >= bz && (this.catchZonePosition = bz, this.catchZoneVelocity = 0)
+        }
+        isMoverInCatchZone() {
+          const zz = this.parameters.jz / 2;
+          return this.moverPosition >= this.catchZonePosition - zz && this.moverPosition <= this.catchZonePosition + zz
+        }
+        updateProgress(zz) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.Yz * zz : this.progress -= this.parameters.kz * zz, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.hz && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        }
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              catchZonePosition: this.catchZonePosition,
+              jz: this.parameters.jz,
+              moverPosition: this.moverPosition,
+              progress: this.progress,
+              isCatching: this.isMoverInCatchZone()
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      precisionBar: class {
+        constructor(zz, uz, bz) {
+          var Ez, nz, lz, Mz, tz;
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.startTime = void 0, this.speed = void 0, this.uu = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const Hz = zz;
+          this.parameters = {
+            ...Hz,
+            speed: null !== (Ez = Hz.speed) && void 0 !== Ez ? Ez : .5,
+            uu: iz.d.clamp(Hz.uu, .05, 1),
+            label: null !== (nz = Hz.label) && void 0 !== nz ? nz : [{
+              str: "Click when the marker is within the green zone."
+            }],
+            icon: null !== (lz = Hz.icon) && void 0 !== lz ? lz : null,
+            scale: null !== (Mz = Hz.scale) && void 0 !== Mz ? Mz : 1,
+            rotation: null !== (tz = Hz.rotation) && void 0 !== tz ? tz : 0
+          }, this.speed = this.parameters.speed, this.uu = this.parameters.uu, this.startTime = Date.now()
+        }
+        handleMouseInput(zz) {
+          if (zz) {
+            this.updateMarkerPosition();
+            const zz = Math.abs(this.markerPosition - .5) <= this.uu / 2;
+            this.complete(zz)
+          }
+        }
+        handleTick() {
+          this.isCompleted || this.updateMarkerPosition()
+        }
+        updateMarkerPosition() {
+          const zz = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = zz <= .5 ? 2 * zz : 2 - 2 * zz
+        }
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
+        }
+        getState() {
+          return this.updateMarkerPosition(), {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              markerPosition: this.markerPosition
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      rhythmClick: class {
+        constructor(zz, uz, bz) {
+          this.resolveRequest = uz, this.tearDownNotification = bz, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = zz, this.shrinkStartTime = Date.now()
+        }
+        handleMouseInput(zz) {
+          if (!zz || this.isCompleted) return;
+          const uz = this.getOuterCircleProgress();
+          if (uz <= this.parameters.lu && uz >= -this.parameters.lu) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.nu) return void this.complete(!0)
+          } else this.handleMiss();
+          this.shrinkStartTime = Date.now()
+        }
+        handleMiss() {
+          this.misses++, this.lastClickResult = !1, !(0, lz.F)(this.parameters.Mu) && this.misses > this.parameters.Mu ? this.complete(!1) : this.shrinkStartTime = Date.now()
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          this.getOuterCircleProgress() < -this.parameters.lu && this.handleMiss()
+        }
+        getOuterCircleProgress() {
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.iu
+        }
+        complete(zz) {
+          this.isCompleted = !0, this.resolveRequest(zz)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              outerCircleProgress: this.getOuterCircleProgress(),
+              successes: this.successes,
+              nu: this.parameters.nu,
+              misses: this.misses,
+              lastClickResult: this.lastClickResult
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
       }
-      return () => {
-        const yb = Zy.indexOf(Wy); - 1 !== yb && Zy.splice(yb, 1)
-      }
-    }
-
-    function cb() {
-      return fy
-    }
-  },
-  35411: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => fy,
-      f: () => hy
-    });
-    var Uy = Wy(19);
-
-    function hy(yb, bb) {
-      return yb && !bb
-    }
-
-    function fy() {
-      return hy(Uy.d.get("isTouchScreen"), Uy.d.get("clientEscMenuOptions").touchActionButtons)
-    }
-  },
-  39182: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      startPadGameplay: () => Ty
-    });
-    Wy(39051);
-    var Uy = Wy(39060),
-      hy = Wy(3050),
-      fy = Wy(19),
-      Zy = Wy(37750),
-      cb = Wy(2977),
-      Py = Wy(37759),
-      oy = Wy(23),
-      By = Wy(2234),
-      Ky = Wy(37123),
-      ey = Wy(7993),
-      qb = Wy(39068);
-    const sy = {
-      yawRadPerSec: 0,
-      pitchRadPerSec: 0
     };
-    var Sy = Wy(39090),
-      Ey = Wy(7968);
-    const ly = yb => yb.padSneakToggled || !!fy.d.get("clientEscMenuOptions").crouchIsToggle && yb.crouchToggled,
-      mb = () => {
-        const yb = (() => {
-          const yb = (0, ey.b)();
-          let bb = sy;
-          const Wy = new qb.b;
-          let Uy = !1,
-            hy = 0;
-          const fy = () => {
-            const Wy = performance.now(),
-              fy = 0 === hy ? 0 : Wy - hy;
-            if (hy = Wy, !Uy) return yb.discardPending(), null;
-            const Zy = (0, qb.i)(bb, fy),
-              cb = yb.drainLookDelta(),
-              Py = (0, Ky.f)();
-            return {
-              aWy: (Zy.aWy + cb.aWy) * Py,
-              Fby: (Zy.Fby + cb.Fby) * Py
+
+    function Xz() {
+      (0, Oz.i)(Mz.z.Qte, Kz ? Mz.z.Qte : 0), Kz ? nz.k.sK("qteStateUpdated", Kz.getState()) : nz.k.sK("qteStateUpdated", {
+        type: null,
+        typeSpecificParameters: null,
+        isActive: !1
+      })
+    }
+    class fz {
+      constructor(zz, uz) {
+        this.resultPromise = zz, this.tearDownQTE = uz
+      }
+      static create(zz, uz, bz) {
+        const Ez = Promise.race([zz, uz]);
+        return new fz(Ez, bz)
+      }
+      async getResult() {
+        return await this.resultPromise
+      }
+    }
+    class sz {
+      static queueQTE(zz, uz, bz) {
+        let Ez, nz;
+        const iz = new Promise((zz => {
+            Ez = zz
+          })),
+          lz = new Promise((zz => {
+            nz = () => {
+              zz("qteTornDown")
             }
-          };
-          return {
-            update: (yb, hy, Zy, cb) => {
-              yb.camera.lhy !== fy && (yb.camera.lhy = fy), Uy = !0, bb = (0, qb.k)(Wy, hy, Zy, cb, performance.now())
-            },
-            release: () => {
-              Uy = !1, bb = sy, Wy.reset()
-            },
-            uninstall: yb => {
-              yb.camera.lhy === fy && (yb.camera.lhy = null)
-            }
-          }
-        })();
-        return {
-          update: (bb, Wy, Uy) => {
-            yb.update((0, By.g)(), bb, Wy, Uy)
-          },
-          release: yb.release,
-          uninstall: () => {
-            const bb = (0, By.g)();
-            bb && yb.uninstall(bb)
-          }
+          })),
+          Mz = Promise.race([iz, lz]).then((() => {})),
+          tz = new pz(zz, uz, bz, nz, Mz, Ez);
+        return Rz.set(zz, tz), Zz.enqueue(tz), Kz || this.processNextQTE(), fz.create(iz, lz, nz)
+      }
+      static async processNextQTE() {
+        if (Kz || Zz.aZ()) return void(Zz.aZ() && Kz && (Kz = null, Xz()));
+        const zz = await Zz.dequeue();
+        if (!Rz.has(zz.id)) return void await this.processNextQTE();
+        Rz.delete(zz.id);
+        const uz = new Fz(zz.id, zz.type, zz.parameters, zz.resolveRequest, zz.onDonePromise, zz.tearDownNotification);
+        Kz = uz, Xz();
+        try {
+          await uz.waitUntilDone()
+        } catch (bz) {
+          console.error("Error while waiting for QTE to resolve:", bz.stack)
         }
+        Kz === uz && (Kz.cleanup(), Kz = null, Xz()), await this.processNextQTE()
+      }
+      static cancelQTE(zz) {
+        if (Kz && Kz.id === zz) return Kz.tearDown(), Kz = null, Xz(), void this.processNextQTE();
+        const uz = Rz.get(zz);
+        uz && (Rz.delete(zz), uz.tearDownNotification())
+      }
+      static getCurrentState() {
+        return Kz ? Kz.getState() : {
+          type: null,
+          parameters: null,
+          state: null,
+          isActive: !1
+        }
+      }
+      static reset() {
+        Kz && (Kz.tearDown(), Kz = null), Rz.forEach(((zz, uz) => {
+          this.cancelQTE(uz)
+        })), Zz.emptyQueue(), Rz.clear(), Xz()
+      }
+    }
+  },
+  4564: (zz, uz, bz) => {
+    bz.d(uz, {
+      $: () => Jz,
+      A: () => iz,
+      Ab: () => Pz,
+      Cb: () => Uz,
+      E: () => Zz,
+      Eb: () => az,
+      Gb: () => mz,
+      I: () => Wz,
+      Jb: () => qz,
+      M: () => Hz,
+      Mb: () => fz,
+      N: () => Rz,
+      Ob: () => sz,
+      P: () => tz,
+      Q: () => dz,
+      Qb: () => gz,
+      S: () => pz,
+      Tb: () => nz,
+      W: () => Nz,
+      Wb: () => Qz,
+      Z: () => xz,
+      ab: () => vz,
+      bb: () => Az,
+      c: () => Dz,
+      cb: () => cz,
+      fb: () => hz,
+      g: () => yz,
+      j: () => Oz,
+      jb: () => Vz,
+      m: () => Xz,
+      mb: () => Tz,
+      o: () => Sz,
+      pb: () => Gz,
+      q: () => wz,
+      qb: () => Lz,
+      s: () => Kz,
+      u: () => lz,
+      ub: () => Fz,
+      vb: () => oz,
+      wb: () => rz,
+      x: () => Mz,
+      y: () => Ez
+    });
+    const Ez = 32,
+      nz = 33.333333333333336,
+      iz = {
+        AbiVersion: 0,
+        Status: 1,
+        LastError: 2,
+        ErrorCount: 3,
+        FrameIndex: 4,
+        TicksRun: 5,
+        TicksDropped: 6,
+        Alpha: 7,
+        NetOutPtr: 8,
+        NetOutLen: 9,
+        WorkerOutPtr: 10,
+        WorkerOutLen: 11,
+        EventsPtr: 12,
+        EventsLen: 13,
+        ScenePtr: 14,
+        SceneLen: 15,
+        TickIndex: 16,
+        LastErrorDetail: 17,
+        RenderPending: 18,
+        GpuSampled: 19,
+        GpuTimed: 20,
+        GpuFrameUs: 21,
+        TickUs: 22,
+        RenderUs: 23,
+        FirstView: 24,
+        ChunksCancelled: 25,
+        PingSent: 26,
+        NetInKept: 27,
+        FrameDraw: 28,
+        Pacing: 29,
+        PacingLagUs: 30,
+        LoadSteps: 31
+      },
+      lz = {
+        NotYet: 0,
+        Drawn: 1,
+        Backstop: 2,
+        HeldBackstop: 3
+      },
+      Mz = {
+        NotDrawn: 0,
+        Drawn: 1,
+        Paced: 2
+      },
+      tz = {
+        AheadMask: 15,
+        Joining: 64,
+        Tiered: 128,
+        LagsShift: 8,
+        SwitchesShift: 20,
+        CountMask: 4095
+      },
+      Hz = {
+        TerrainDrawn: 1,
+        ChunkRequested: 2,
+        ChunkStored: 4,
+        MeshLanded: 8,
+        PlayerChunk: 16
+      },
+      Oz = {
+        Look: 0,
+        Remesh: 1
+      },
+      pz = 8,
+      dz = 1,
+      Fz = {
+        Edit: 0,
+        Sent: 1,
+        Done: 2,
+        Failed: 3,
+        Shown: 4,
+        Replaced: 5,
+        Emptied: 6
+      },
+      Zz = {
+        KeyDown: 1,
+        KeyUp: 2,
+        MouseMove: 3,
+        MouseDown: 4,
+        MouseUp: 5,
+        Wheel: 6,
+        TouchStart: 7,
+        TouchMove: 8,
+        TouchEnd: 9,
+        TouchCancel: 10,
+        PointerLock: 11,
+        Resize: 12,
+        Focus: 13,
+        Blur: 14,
+        UiPrefs: 15,
+        Binding: 16,
+        UiCapture: 17,
+        Sensitivity: 18,
+        Joystick: 19,
+        TouchButton: 20,
+        TouchZone: 21,
+        Options: 22,
+        AntiCheat: 23,
+        PadAction: 24,
+        PadLook: 25,
+        EnvPrefs: 32
+      },
+      Rz = {
+        Frame: 1,
+        Open: 2,
+        Close: 3
+      },
+      Kz = {
+        RawMessage: 1,
+        CoreErrors: 2,
+        LocalHurt: 16,
+        AttackHit: 17,
+        HealthChanged: 18,
+        LocalPlayerBound: 19,
+        ConnectionState: 20,
+        ReconnectGrace: 5,
+        GameCalls: 96,
+        LocalTeleported: 21,
+        PhysicsType: 22,
+        VehicleEffect: 23,
+        InputAction: 24,
+        ZoomChanged: 25,
+        ZoomDisabled: 26,
+        SendRefused: 27,
+        KeepAliveDue: 28,
+        GameCamera: 29,
+        TickEnd: 32,
+        EntitySpawned: 33,
+        EntityDespawned: 34,
+        ChangeBlockFail: 39,
+        ChangeBlockFailEnd: 46,
+        InventoryEvent: 48,
+        HeldItemChanged: 49,
+        ShotDamage: 50,
+        EnchantOffer: 51,
+        UiEvent: 52,
+        EntityInfoChanged: 53,
+        ChunkSlot: 55,
+        PlaySound: 40,
+        SoundPos: 41,
+        SoundSet: 42,
+        SoundFade: 43,
+        SoundStop: 44,
+        SoundReset: 45,
+        EnvLighting: 54,
+        SkyImages: 64,
+        ReplayFailed: 56,
+        ReplayOption: 57,
+        ReplayFilePart: 58,
+        ReplayFileReady: 59,
+        ReplayOpened: 60,
+        ReplayUiEvent: 61,
+        RecorderEvent: 62,
+        Images: 128,
+        ModelRequests: 129,
+        ModelTaken: 130,
+        RenderReload: 3,
+        TerrainTexturesWanted: 4
+      },
+      wz = {
+        EntityInfo: 1,
+        EntityTable: 2,
+        CoreErrors: 4,
+        Other: 8,
+        NetSession: 16,
+        ItemsUi: 32,
+        PlayerHud: 64,
+        GameCalls: 128
+      },
+      Xz = 4,
+      fz = 4,
+      sz = 65535,
+      rz = {
+        Open: 1,
+        TooLarge: 2,
+        NothingStaged: 3,
+        NotPlayback: 4,
+        NotOpen: 5,
+        BadValue: 6,
+        Crop: 7,
+        NotLive: 8,
+        ModuleLoad: 9,
+        ModuleTrap: 10,
+        Port: 11
+      },
+      oz = {
+        Busy: 0,
+        Range: 1,
+        OtherBody: 2,
+        TooLarge: 3,
+        Corrupt: 4,
+        Ended: 5
+      },
+      Nz = 88,
+      vz = 0,
+      xz = 24,
+      Jz = 48,
+      Az = 80,
+      Tz = {
+        FilePartDone: 526,
+        FileDone: 527,
+        Control: 528,
+        Prefs: 529,
+        Option: 530,
+        FlyingText: 531,
+        PlayerKilled: 532,
+        Killfeed: 533,
+        Session: 534
+      },
+      Lz = {
+        ToggleRecording: 0,
+        SaveClip: 1,
+        ViewerOpened: 2,
+        ViewerClosed: 3
+      },
+      Pz = {
+        Clip: 0,
+        Recording: 1,
+        Edited: 2
+      },
+      Gz = {
+        RecordingStarted: 0,
+        RecordingStopped: 1,
+        RecordingDiscarded: 2,
+        ClipSaved: 3,
+        ClipEmpty: 4,
+        ClippingNotOn: 5,
+        Disallowed: 6,
+        ClippingOn: 7,
+        ClippingOff: 8,
+        LimitReached: 9,
+        ClipSettingsChanged: 10,
+        SaveBusy: 11,
+        CloseViewerFirst: 12,
+        FileDiscarded: 13,
+        SaveFailed: 14,
+        RecordingTurnedOff: 15
+      },
+      az = {
+        Cleared: 0,
+        Text: 1,
+        Int: 2,
+        Double: 3
+      },
+      Vz = 65535,
+      mz = {
+        FlyingText: 1,
+        PlayerKilled: 2,
+        Killfeed: 3
+      },
+      qz = {
+        None: 0,
+        Paused: 1,
+        Playing: 2,
+        Cropping: 3,
+        Loading: 4
+      },
+      hz = 2,
+      Uz = {
+        UiText: 0,
+        Environment: 6,
+        Hud: 12,
+        Count: 19
+      },
+      cz = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      gz = {
+        SkyTable: 600,
+        SkyImagesReady: 601,
+        SkyTableHeaderBytes: 8,
+        SkyTableEntryBytes: 92,
+        SkyImagesReadyBytes: 32,
+        KindNone: 0,
+        KindCustom: 1,
+        KindEarth: 2,
+        CubeFaces: 6,
+        Failed: 0
+      },
+      Sz = {
+        Bytes: 88,
+        Inclination: 0,
+        Turbidity: 1,
+        Luminance: 2,
+        Rayleigh: 3,
+        MieCoefficient: 4,
+        MieDirectionalG: 5,
+        Distance: 6,
+        Azimuth: 7,
+        Params: 8,
+        SunPosition: 256,
+        CameraOffsetX: 512,
+        CameraOffsetY: 1024,
+        CameraOffsetZ: 2048,
+        Up: 4096,
+        VertexTint: 8192,
+        UseSunPosition: 16384,
+        Dithering: 32768,
+        InfiniteDistance: 65536,
+        SunPositionAt: 32,
+        CameraOffsetAt: 44,
+        UpAt: 56,
+        VertexTintAt: 68,
+        PresentAt: 80,
+        FlagsAt: 84
+      },
+      yz = {
+        None: 0,
+        InputOverCapacity: 1,
+        InputTruncated: 2,
+        InputUnknownKind: 3,
+        InputNonFinite: 4,
+        NetOverCapacity: 16,
+        NetTruncated: 17,
+        NetOversize: 18,
+        NetBadKind: 19,
+        NetConnUnknown: 20,
+        NetConnBackwards: 21,
+        WorkerOverCapacity: 32,
+        WorkerTruncated: 33,
+        WorkerUnknownKind: 34,
+        TimeNonFinite: 48,
+        TimeBackwards: 49,
+        GameCallThrew: 50,
+        ResumeUnconsumed: 51,
+        CallLogMismatch: 52,
+        TerrainTextureRefused: 53,
+        TerrainTextureMissing: 54,
+        ShaderPackRefused: 55,
+        ReserveTooLarge: 64,
+        ReserveFailed: 65,
+        GrowFailed: 66,
+        EventOversize: 80,
+        OutputFull: 81,
+        StateCorrupt: 128,
+        OriginRefused: 129,
+        CoreBusy: 138,
+        WorldWorldgenRefused: 88,
+        WorldWorldgenResultMalformed: 89,
+        WorldBlockDataInvalid: 90,
+        WorldNetDecode: 96,
+        WorldChunkId: 97,
+        WorldChunkVoxels: 98,
+        WorldChunkLight: 99,
+        WorldSendFailed: 100,
+        WorldEditInvalid: 101,
+        WorldPlayerInvalid: 102,
+        WorldNoVoxels: 103,
+        WorldStoreCorrupt: 224,
+        WorldWorldgenTrapped: 226,
+        WorldRegistryInvalid: 227,
+        WorldStreamStartInvalid: 228,
+        PresentationRigRefused: 160,
+        PresentationSceneRefused: 161,
+        PresentationModelMissing: 162,
+        PresentationAnimDecode: 163,
+        PresentationSettingDecode: 164,
+        PresentationParticleDecode: 165,
+        PresentationNodeUnknown: 166,
+        PresentationStateFull: 167,
+        PresentationBindingUnfit: 168,
+        PresentationClipUnplayable: 169,
+        PresentationObjectOpsDropped: 170,
+        PresentationImageFailed: 171,
+        PresentationDracoFailure: 144,
+        NetNotGameRoom: 184,
+        NetEnvelope: 185,
+        NetMessageDecode: 186,
+        NetNoHandshake: 187,
+        NetRejoin: 188,
+        NetHandshake: 189,
+        NetSchemaDesync: 136,
+        ReplicationUnknownType: 192,
+        ReplicationBadId: 193,
+        ReplicationFull: 194,
+        ReplicationNamesFull: 195,
+        ReplicationRosterFull: 196,
+        ReplicationEffectsFull: 197,
+        ReplicationNoDecoder: 198,
+        ReplicationResetFailed: 137,
+        OptionsMalformed: 56,
+        OptionsRecordBad: 57,
+        ItemsDeadlinesFull: 73,
+        ItemsThrowablesFull: 75,
+        ItemsSendLatchFull: 76,
+        ItemsBadSlotJson: 77,
+        ItemsUnknownItem: 78,
+        ItemsMessageDecode: 79,
+        ItemsRecipeBad: 82,
+        ItemsSendFailed: 83,
+        ItemsMarkerLost: 84,
+        ItemsCallStackFull: 85,
+        ItemsUiDropsFull: 272,
+        ItemsReplayRefused: 273,
+        ApiCmdUnknownKind: 67,
+        ApiCmdBadLength: 68,
+        ApiCmdTruncated: 69,
+        ApiQueryBadArgs: 70,
+        ApiScratchTooLarge: 71,
+        AudioUnknownSound: 86,
+        JobsRefused: 104,
+        JobsResultMalformed: 105,
+        JobsUnknownJob: 106,
+        JobsWorkerIndexInvalid: 107,
+        JobsWorkerOutFull: 108,
+        JobsTablesRefused: 109,
+        JobsVisInputRefused: 110,
+        JobsKeyInvalid: 111,
+        JobsTrapped: 288,
+        JobsTrapGaveUp: 289,
+        JobsTablesRetired: 290,
+        JobsHeapGaveUp: 291,
+        JobsTablesTrapped: 232,
+        JobsWorkerTablesRefused: 233,
+        EffectsUnknownPreset: 256,
+        EffectsParticleCmdBad: 257,
+        EffectsParticleKeysFull: 258,
+        EffectsUnknownAnchor: 259,
+        EffectsGrowingFull: 260,
+        EffectsMessageDecode: 261,
+        EnvUnknownSky: 264,
+        EnvSkyTableBad: 265,
+        EnvSkyRowsRefused: 266,
+        EnvSkyReleasesLost: 267,
+        EnvOverlayRowsRefused: 268,
+        SendsSendRefused: 58,
+        SendsSendMalformed: 59,
+        SendsSendQueueFull: 60,
+        SendsAntiCheatRecordBad: 61,
+        SendsSendFailed: 62,
+        RenderDeviceLost: 176,
+        RenderSceneRowNotDrawn: 177,
+        RenderChunkMeshNotDrawn: 178,
+        RenderShaderPackNotRun: 179,
+        RenderInternal: 180,
+        RenderCaveCullingOff: 181,
+        RenderGlErrorAfterRestore: 182,
+        RenderSerialLinks: 183,
+        RenderOutOfMemory: 200,
+        RenderValidation: 201,
+        RenderSurfaceUnusable: 202,
+        RenderPipelineFailed: 203,
+        RenderStateCorrupt: 204,
+        RenderDeviceUnrecoverable: 205,
+        PlayerMessageDecode: 112,
+        PlayerMovementFailed: 113,
+        PlayerPhysicsFailed: 114,
+        PlayerConfirmQueueFull: 115,
+        PlayerSendFailed: 116,
+        PlayerBadPhysicsState: 117,
+        PlayerBadOverride: 118,
+        PlayerNonFinitePosition: 119,
+        PlayerEventsFull: 120,
+        PlayerMultiplierSetDropped: 121,
+        CameraNonFinite: 126,
+        CameraCmdBad: 127,
+        CameraScriptedPoseRefused: 296,
+        InputBadKey: 122,
+        InputBadAction: 123,
+        InputBadTouch: 124,
+        InputEdgesFull: 125,
+        ReplayDrops: 87,
+        ReplayRecorderDrops: 304
+      },
+      Dz = 8,
+      Qz = {
+        GameCodeMessage: 4,
+        NewOtherEntitySettings: 23,
+        NewClientOptions: 37,
+        Chat: 64,
+        UiRequestPopup: 8,
+        TaskProgress: 9,
+        CustomKillfeed: 15,
+        TopRightHelper: 24,
+        NewUiRequest: 51,
+        PlayerKilled: 61,
+        OverShopInfo: 43,
+        ShowShopTutorial: 76,
+        SetCookie: 0,
+        LeaveValues: 85,
+        CustomAnalyticsEvent: 31,
+        ProgressionEvent: 19,
+        ResourceEvent: 22,
+        LeaderboardResponse: 30,
+        ResumeComplete: 105,
+        ProgressBarUpdate: 33,
+        RemoveMiddleScreenBar: 90,
+        WorldVariation: 5,
+        EditItemCraftingRecipes: 78
+      },
+      Wz = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+  },
+  4544: (zz, uz, bz) => {
+    bz.d(uz, {
+      A: () => Jz,
+      C: () => Az,
+      F: () => Tz,
+      H: () => Xz,
+      L: () => lz,
+      M: () => Mz,
+      O: () => xz,
+      b: () => vz,
+      c: () => sz,
+      g: () => Pz,
+      j: () => Lz,
+      l: () => wz,
+      o: () => oz,
+      s: () => fz,
+      w: () => rz
+    });
+    var Ez = bz(4552);
+    const nz = {
+      lockPointer: () => !1,
+      unlockPointer: () => {},
+      leaveGame: () => {}
+    };
+    let iz = nz;
+
+    function lz(zz) {
+      iz = null !== zz && void 0 !== zz ? zz : nz
+    }
+
+    function Mz() {
+      return iz
+    }
+    const tz = new Set,
+      Hz = new Set;
+    let Oz = -1;
+    const pz = new Set,
+      dz = new Set;
+    let Fz = 0,
+      Zz = 0;
+    const Rz = new Set,
+      Kz = new Set;
+
+    function wz(zz) {
+      return tz.add(zz), () => {
+        tz.delete(zz)
+      }
+    }
+
+    function Xz(zz, uz) {
+      for (const Ez of tz) try {
+        Ez(zz)
+      } catch (bz) {
+        uz(bz)
+      }
+    }
+
+    function fz(zz) {
+      return Hz.add(zz), () => {
+        Hz.delete(zz)
+      }
+    }
+
+    function sz(zz, uz) {
+      const bz = Oz < 0 ? 0 : zz - Oz;
+      Oz = zz;
+      for (const nz of Hz) try {
+        nz(bz)
+      } catch (Ez) {
+        uz(Ez)
+      }
+    }
+
+    function rz(zz) {
+      return pz.add(zz), () => {
+        pz.delete(zz)
+      }
+    }
+
+    function oz(zz) {
+      return dz.add(zz), () => {
+        dz.delete(zz)
+      }
+    }
+    let Nz = 0;
+
+    function vz(zz) {
+      Nz += zz
+    }
+
+    function xz() {
+      const zz = Nz;
+      return Nz = 0, zz
+    }
+
+    function Jz(zz) {
+      return Rz.add(zz), () => {
+        Rz.delete(zz)
+      }
+    }
+
+    function Az(zz) {
+      return Kz.add(zz), () => {
+        Kz.delete(zz)
+      }
+    }
+
+    function Tz() {
+      Fz = 0, Zz = 0, Oz = -1
+    }
+
+    function Lz(zz, uz) {
+      if ("paced" === zz) return Zz += uz, null;
+      if ("drawn" !== zz && "skipped" !== zz) return null;
+      const bz = uz + Zz;
+      return Zz = 0, bz
+    }
+
+    function Pz(zz, uz, bz, nz) {
+      const iz = (0, Ez.l)(uz),
+        lz = zz > 0 ? performance.now() : 0;
+      for (let Ez = 0; Ez < zz; Ez++)
+        for (const zz of Rz) try {
+          zz()
+        } catch (Mz) {
+          nz(Mz)
+        }
+      if (zz > 0 && vz(performance.now() - lz), null !== bz) {
+        for (const zz of pz) try {
+          zz(bz)
+        } catch (Mz) {
+          nz(Mz)
+        }
+        Fz += bz
+      }
+      if ("drawn" === uz) {
+        const zz = Fz;
+        Fz = 0;
+        for (const uz of dz) try {
+          uz(zz)
+        } catch (Mz) {
+          nz(Mz)
+        }
+      }
+      for (const Ez of Kz) try {
+        Ez(zz, iz)
+      } catch (Mz) {
+        nz(Mz)
+      }
+    }
+  },
+  4560: (zz, uz, bz) => {
+    bz.d(uz, {
+      $c: () => Ez.Gb,
+      Ab: () => uu,
+      B: () => du,
+      Bc: () => Fu,
+      Bd: () => Uz,
+      C: () => Cz,
+      Dd: () => Qz,
+      Eb: () => nz.e,
+      Fb: () => vz,
+      Fc: () => Hu,
+      G: () => Ez.g,
+      H: () => Hz,
+      Ic: () => Eu,
+      Id: () => yz,
+      Jb: () => hz,
+      L: () => Ez.j,
+      Lc: () => Ez.mb,
+      Ld: () => ez,
+      Mc: () => Ez.pb,
+      Nb: () => Lz,
+      Nd: () => Wz,
+      P: () => Ez.m,
+      Pb: () => Az,
+      Pc: () => Ez.qb,
+      Qb: () => Ez.N,
+      Qc: () => Yz,
+      Qd: () => lu,
+      S: () => Iz,
+      Tb: () => Pz,
+      Tc: () => Ez.vb,
+      Td: () => Zu,
+      V: () => Ez.s,
+      Vb: () => rz,
+      Vc: () => Ez.wb,
+      W: () => Ez.u,
+      Wd: () => sz,
+      Y: () => Ez.x,
+      Yb: () => iu,
+      Yc: () => Ez.Ab,
+      Z: () => pz,
+      Zc: () => Ez.Eb,
+      _b: () => fz,
+      _d: () => jz,
+      ab: () => Xz,
+      bc: () => Ou,
+      be: () => mz,
+      c: () => zu,
+      cb: () => Ez.y,
+      ce: () => Vz,
+      db: () => Ez.A,
+      dd: () => Ez.Jb,
+      de: () => az,
+      f: () => Rz,
+      fc: () => nz.i,
+      fd: () => Jz,
+      ge: () => tz,
+      h: () => Zz,
+      hb: () => gz,
+      i: () => tu,
+      ic: () => wz,
+      ie: () => qz,
+      jc: () => bu,
+      jd: () => Ez.Mb,
+      kb: () => nu,
+      l: () => xz,
+      mb: () => Oz,
+      me: () => Ru,
+      n: () => Nz,
+      nc: () => Ez.W,
+      nd: () => Ez.Ob,
+      od: () => Ez.Tb,
+      p: () => Ez.c,
+      pb: () => Ez.E,
+      pe: () => Fz,
+      qc: () => Ez.Z,
+      qd: () => iz,
+      rc: () => Ez.$,
+      s: () => pu,
+      sb: () => Dz,
+      sd: () => Kz,
+      tc: () => Ez.ab,
+      td: () => Mu,
+      u: () => Tz,
+      ub: () => Bz,
+      vd: () => cz,
+      w: () => lz,
+      wc: () => Ez.bb,
+      xd: () => Sz,
+      yb: () => kz,
+      yc: () => Ez.jb,
+      z: () => Gz
+    });
+    var Ez = bz(4564),
+      nz = bz(2289);
+    const iz = Math.round(1e3 / Ez.Tb),
+      lz = 4,
+      Mz = 2;
+
+    function tz() {
+      return crypto.getRandomValues(new Uint32Array(Mz))
+    }
+    const Hz = {
+        Ok: 0,
+        Errors: 1,
+        Fatal: 2
+      },
+      Oz = 16,
+      pz = {
+        Draws: 1,
+        NetAll: 2
+      },
+      dz = {
+        ShowFog: 1,
+        Lighting: 2,
+        ChunkFade: 4
       };
-    var Cy = Wy(39081);
-    Wy(36313), Wy(7846);
-    Wy(7864).d;
-    const Ty = () => {
-      const yb = (0, Cy.e)((() => {
-          const yb = {
-            x: 0,
-            y: 0,
-            magnitude: 0,
-            headingOffset: 0,
-            jumpHeld: !1,
-            jumpPressedSinceTick: !1,
-            crouchHeld: !1,
-            running: !1,
-            sprintHeld: !1
-          };
-          return {
-            bodies: () => (0, Zy.e)(),
-            look: mb(),
-            move: (bb, Wy) => {
-              const Uy = (0, By.g)(),
-                hy = Uy.Km.HPy();
-              if (yb.x = bb.x, yb.y = bb.y, yb.magnitude = bb.magnitude, yb.headingOffset = bb.headingOffset, yb.jumpHeld = bb.jumpHeld, bb.jumpPressed && (yb.jumpPressedSinceTick = !0), yb.running = bb.running, yb.sprintHeld = bb.sprintHeld, Wy) {
-                const bb = (0, Sy.i)({
-                  ...Wy,
-                  descending: Uy.Km.aPy(Uy.eWy).shouldIgnoreCrouchingSpeedReduction(),
-                  canCrouch: !!Uy.bC.canCrouch,
-                  toggled: ly(hy)
-                });
-                yb.crouchHeld = bb.crouchHeld, hy.padSneakToggled = bb.toggled, hy.crouchToggled = !1, (0, Ey.e)(bb.toggled)
-              }
-              hy.gamepad = yb
-            },
-            stopMoving: () => {
-              var bb;
-              Object.assign(yb, {
-                x: 0,
-                y: 0,
-                magnitude: 0,
-                headingOffset: 0,
-                jumpHeld: !1,
-                jumpPressedSinceTick: !1,
-                crouchHeld: !1,
-                running: !1,
-                sprintHeld: !1
-              });
-              const Wy = null === (bb = (0, By.g)()) || void 0 === bb ? void 0 : bb.Km.HPy();
-              (null === Wy || void 0 === Wy ? void 0 : Wy.gamepad) === yb && (Wy.gamepad = null)
-            },
-            uninstall: () => {},
-            deviceChanged: yb => {
-              const bb = (0, By.g)(),
-                Wy = null === bb || void 0 === bb ? void 0 : bb.Km.HPy();
-              "touch" === yb ? ((0, Ey.e)(!1), null !== Wy && void 0 !== Wy && Wy.padSneakToggled && (Wy.padSneakToggled = !1, Wy.isTouchscreen && !Wy.gamepad && bb.Km.coy(bb.eWy).setCrouching(!!bb.bC.canCrouch && Wy.touchCrouch))) : "gamepad" === yb && Wy && (0, Ey.e)(ly(Wy))
-            },
-            hasPlayer: () => {
-              var yb;
-              return !(null === (yb = (0, By.g)()) || void 0 === yb || !yb.eWy)
-            },
-            isPlayerDead: () => {
-              var yb;
-              const bb = (0, By.g)();
-              return !1 === (null === (yb = bb.Km.voy(bb.eWy)) || void 0 === yb ? void 0 : yb.isAlive)
-            },
-            isReplayMode: () => {
-              var yb, bb;
-              return !(null === (yb = (0, By.e)()) || void 0 === yb || null === (bb = yb.client) || void 0 === bb || !bb.isReplayMode())
-            },
-            isFreeCameraOn: () => {
-              var yb, bb, Wy;
-              return !(null === (yb = (0, By.e)()) || void 0 === yb || null === (bb = yb.client) || void 0 === bb || null === (Wy = bb.freeCameraController) || void 0 === Wy || !Wy.isEnabled())
-            },
-            targetsBlock: () => !!(0, By.g)().Kcy,
-            selectedSlotEmpty: () => {
-              var yb;
-              const bb = (0, By.g)();
-              return !(null !== (yb = bb.Km.oPy(bb.eWy)) && void 0 !== yb && yb.getItemAtSelectedSlot())
-            },
-            pickBlockAllowed: () => {
-              const yb = (0, By.g)().bC;
-              return !!yb.creative && !!yb.canPickBlocks
-            },
-            scrollHotbar: yb => {
-              oy.g.EZ("ScrollInventorySlot", yb)
-            },
-            hasFullInventory: () => (0, Py.d)((0, By.g)()),
-            hasLobbyLeaderboard: () => !!(0, By.g)().bC.lobbyLeaderboardInfo,
-            contextActionInputs: () => {
-              var yb, bb, Wy, Uy;
-              const hy = (0, By.g)();
-              return {
-                holdingGun: !(null === (yb = hy.Km.ioy(hy.eWy)) || void 0 === yb || null === (bb = yb.OJ) || void 0 === bb || !bb.isGun()),
-                customButtons: null !== (Wy = hy.bC.customButtons) && void 0 !== Wy ? Wy : null,
-                touchscreenActionButton: null !== (Uy = hy.bC.touchscreenActionButton) && void 0 !== Uy ? Uy : null
-              }
-            },
-            pressTouchButton: yb => {
-              (0, cb.sendColyMessage)(hy.Oj, yb)
-            }
-          }
-        })()),
-        bb = (0, Uy.d)(),
-        Wy = null,
-        fy = null;
-      return () => {
-        yb(), bb(), null === Wy || void 0 === Wy || Wy(), null === fy || void 0 === fy || fy()
-      }
-    }
-  },
-  35383: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => fy,
-      e: () => Sy,
-      g: () => Ey,
-      j: () => cb,
-      k: () => ey,
-      l: () => ly,
-      p: () => Ky,
-      s: () => Cy,
-      t: () => sy,
-      w: () => mb
-    });
-    var Uy = Wy(19),
-      hy = Wy(23);
-    const fy = "clientGameInventoryButtonsChanged",
-      Zy = new Map;
 
-    function cb() {
-      return [...Zy.values()].sort(((yb, bb) => {
-        var Wy, Uy;
-        return (null !== (Wy = yb.order) && void 0 !== Wy ? Wy : 0) - (null !== (Uy = bb.order) && void 0 !== Uy ? Uy : 0)
-      }))
+    function Fz(zz) {
+      return (zz.nametagsHidden ? oz.NametagsHidden : 0) | (zz.crouchToggle ? oz.CrouchToggle : 0) | (zz.bhopDisabled ? oz.BhopDisabled : 0) | (zz.disableBobbing ? oz.DisableBobbing : 0) | (zz.ezTowering ? oz.EzTowering : 0) | (zz.ezBridging ? oz.EzBridging : 0) | (zz.showChunkBorders ? oz.ShowChunkBorders : 0)
     }
-    let Py = null;
+    const Zz = {
+        Flags: 0,
+        PhysicsVersion: 1,
+        InbuiltOverwritten: 2,
+        AltComplete: 3,
+        ProbeUsedProp: 4
+      },
+      Rz = {
+        Ready: 1,
+        SendFnReplaced: 2,
+        Butto: 4,
+        IdentityChanged: 32,
+        CheckFuncHit: 128,
+        OriginStackHit: 256
+      },
+      Kz = {
+        None: 0,
+        Untrusted: 2,
+        FewProperties: 3,
+        CheckFunc: 4,
+        NotEvent: 5,
+        En: 6,
+        Fr: 7
+      },
+      wz = {
+        StackCheck: 0,
+        ConfirmMesh: 1,
+        IndexPassReplaced: 2,
+        ProductSubChanged: 3,
+        RenderStatus: 4,
+        Held: 6,
+        PlayerKilledSubs: 7
+      },
+      Xz = 5,
+      fz = 4294967295;
 
-    function oy(yb) {
-      Py = yb
+    function sz(zz) {
+      return (zz.showFog ? dz.ShowFog : 0) | (zz.lighting ? dz.Lighting : 0) | (zz.chunkFade ? dz.ChunkFade : 0)
     }
-    let By = !1;
-
-    function Ky(yb) {
-      By = !0;
-      try {
-        yb.onClick()
-      } finally {
-        By = !1
-      }
-      yb.panel && "clientGame" === Uy.d.get("openInGameMenuName") && oy(yb.id)
-    }
-
-    function ey() {
-      return By
-    }
-
-    function qb() {
-      return cb().filter((yb => yb.panel && !yb.disabled))
-    }
-
-    function sy(yb) {
-      const bb = qb(),
-        Wy = bb.findIndex((yb => yb.id === Py));
-      return !(Wy < 0 || bb.length < 2) && (Ky(bb[(Wy + yb + bb.length) % bb.length]), !0)
-    }
-
-    function Sy() {
-      return null !== Py && qb().length > 1
-    }
-
-    function Ey() {
-      oy(null)
-    }
-
-    function ly() {
-      "inventory" !== Uy.d.get("openInGameMenuName") && oy(null)
-    }
-
-    function mb() {
-      const yb = Py;
-      return oy(null), yb
-    }
-
-    function Cy(yb) {
-      return Zy.set(yb.id, yb), hy.g.EZ(fy, cb(), !0), () => {
-        Zy.get(yb.id) === yb && (Zy.delete(yb.id), hy.g.EZ(fy, cb()))
-      }
-    }
-  },
-  35379: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => cb,
-      h: () => Ey,
-      k: () => ly,
-      o: () => ey,
-      s: () => oy,
-      t: () => Sy,
-      v: () => qb,
-      z: () => By
-    });
-    var Uy = Wy(19),
-      hy = Wy(23),
-      fy = Wy(1145),
-      Zy = Wy(35383);
-    const cb = "clientGameUiChanged";
-    let Py = null;
-
-    function oy() {
-      return Py
-    }
-
-    function By(yb, bb) {
-      const Wy = {
-        content: yb,
-        menu: bb
+    const rz = {
+        ResetFirst: 1,
+        AdStart: 2,
+        PreventMovement: 4,
+        AdEnd: 8,
+        PayloadMaxBytes: 1 << 20
+      },
+      oz = {
+        NametagsHidden: 1,
+        CrouchToggle: 2,
+        BhopDisabled: 4,
+        DisableBobbing: 8,
+        EzTowering: 16,
+        EzBridging: 32,
+        ShowChunkBorders: 64,
+        All: 127
+      },
+      Nz = {
+        Release: 1,
+        KeepTouches: 2
+      },
+      vz = {
+        Point: 1,
+        Stamped: 2
+      },
+      xz = {
+        Add: 1,
+        Clear: 2
+      },
+      Jz = 1,
+      Az = 8,
+      Tz = 16777215,
+      Lz = 4,
+      Pz = {
+        Resume: 1
+      },
+      Gz = {
+        Held: 1
       };
-      return Py = Wy, hy.g.EZ(cb, Py, !0), () => {
-        Py === Wy && (Py = null, sy = !1, Ey(), hy.g.EZ(cb, null))
+
+    function az(zz, uz) {
+      return (zz | uz << 8) >>> 0
+    }
+
+    function Vz(zz) {
+      return 255 & zz
+    }
+
+    function mz(zz) {
+      return zz >>> 8
+    }
+
+    function qz(zz) {
+      return zz + 3 & -4
+    }
+    const hz = 16777216,
+      Uz = 20;
+    const cz = 8,
+      gz = 8,
+      Sz = 16777216,
+      yz = {
+        JobResult: 1,
+        WorkerStarted: 2,
+        WorkerLost: 3,
+        WorldgenResult: 4,
+        WorldgenStarted: 5,
+        WorldgenLost: 6
+      },
+      Dz = {
+        Ok: 0,
+        Refused: 1,
+        Trapped: 2,
+        NotHeld: 3,
+        HeapRefused: 4
+      },
+      Qz = 16,
+      Wz = {
+        Lost: 0,
+        Gone: 1
+      },
+      ez = {
+        Init: 1,
+        Mesh: 2,
+        WorldgenSeed: 3,
+        Generate: 4,
+        Retire: 5
+      };
+
+    function jz(zz) {
+      return zz === ez.WorldgenSeed || zz === ez.Generate
+    }
+    const Iz = 4,
+      Bz = 99,
+      Cz = {
+        PAIRS_MAX: 16,
+        FIXED_WORDS: 2,
+        PAIR_WORDS: 2,
+        WORDS_MAX: 34
+      },
+      Yz = {
+        BYTES: 12,
+        WEBGPU: 1,
+        GL: 2,
+        WEBGPU_LOSSES_MAX: 1,
+        LOST: 0,
+        PIPELINE_FAILED: 1
+      },
+      kz = 12,
+      zu = 16,
+      uu = 4,
+      bu = 12,
+      Eu = {
+        SessionBased: 1,
+        ReplayOffer: 2
+      },
+      nu = 4,
+      iu = 8,
+      lu = 8,
+      Mu = {
+        HEAD_BYTES: 28,
+        UPDATE: 1,
+        REMOVE: 2
+      },
+      tu = {
+        Crit: 1,
+        HitSelf: 2
+      },
+      Hu = {
+        BYTES: 16,
+        STRING_TYPE_BYTES: 24,
+        STRING_TYPE: 65535,
+        ERROR: 65534
+      },
+      Ou = {
+        None: 0,
+        Bytes: 1,
+        Msgpack: 2,
+        MsgpackBin: 3
+      },
+      pu = 12,
+      du = {
+        Activated: 1,
+        Error: 2,
+        Left: 3,
+        Closed: 4,
+        Held: 5,
+        Resumed: 6,
+        ResumeRefused: 7
+      },
+      Fu = 67108864;
+
+    function Zu(zz) {
+      for (const [uz, bz] of Object.entries(Ez.g))
+        if (bz === zz) return uz;
+      return `Unknown${zz}`
+    }
+
+    function Ru(zz) {
+      return {
+        status: zz[Ez.A.Status],
+        lastError: zz[Ez.A.LastError],
+        lastErrorDetail: zz[Ez.A.LastErrorDetail],
+        errorCount: zz[Ez.A.ErrorCount],
+        frameIndex: zz[Ez.A.FrameIndex],
+        tickIndex: zz[Ez.A.TickIndex],
+        renderPending: zz[Ez.A.RenderPending],
+        firstView: zz[Ez.A.FirstView],
+        chunksCancelled: zz[Ez.A.ChunksCancelled]
       }
     }
-    let Ky = null;
+  },
+  4552: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => lz,
+      h: () => iz,
+      l: () => nz
+    });
+    var Ez = bz(4560);
 
-    function ey() {
-      return Ky
+    function nz(zz) {
+      return "none" !== zz
     }
 
-    function qb(yb) {
-      return Ky = yb, () => {
-        Ky === yb && (Ky = null)
+    function iz(zz, uz) {
+      if (!zz) return "none";
+      switch (uz) {
+        case Ez.Y.Drawn:
+          return "drawn";
+        case Ez.Y.Paced:
+          return "paced";
+        default:
+          return "skipped"
       }
     }
-    let sy = !1;
 
-    function Sy() {
-      const yb = Uy.d.get("openInGameMenuName");
-      "clientGame" !== yb && (sy = "inventory" === yb), (0, Zy.k)() || (0, Zy.g)(), (0, fy.h)("InGameMenu"), Uy.d.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function Ey() {
-      mb(!1)
-    }
-
-    function ly() {
-      mb(sy)
-    }
-
-    function mb(yb) {
-      "clientGame" === Uy.d.get("openInGameMenuName") && Uy.d.set({
-        openInGameMenuName: yb ? "inventory" : null
-      }), yb || (0, Zy.g)(), sy = !1
+    function lz(zz) {
+      return "drawn" === zz
     }
   },
-  35277: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Py
+  4567: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => tz,
+      c: () => iz,
+      g: () => Mz
     });
-    var Uy = Wy(248),
-      hy = Wy(19),
-      fy = Wy(35279),
-      Zy = Wy(1458),
-      cb = Wy(1620);
+    var Ez = bz(2289),
+      nz = bz(4571);
 
-    function Py(yb, bb) {
-      var Wy, Py, oy;
-      if (!hy.d.get("isKeydownEnabled") || yb.repeat) return;
-      const By = yb.code;
-      "Escape" === yb.key ? (0, Zy.i)(yb) : null !== (Wy = cb.w.OpenSettings) && void 0 !== Wy && Wy.includes(By) ? (0, Zy.r)(yb, Uy.o.SETTINGS) : null !== (Py = cb.w.OpenCharacterCustomization) && void 0 !== Py && Py.includes(By) ? (0, fy.e)() || (0, Zy.r)(yb, Uy.o.CUSTOMISATION, bb()) : null !== (oy = cb.w.ShowDebugOverlay) && void 0 !== oy && oy.includes(By) && hy.d.set({
-        showDebugOverlay: !hy.d.get("showDebugOverlay")
-      })
+    function iz(zz) {
+      let {
+        action: uz,
+        flags: bz
+      } = zz;
+      return "mid-fire" === uz && 0 !== (bz & Ez.b.AltLeftClick)
     }
-  },
-  4068: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      Howl: () => Uy.Howl,
-      d: () => Uy.Howler
-    });
-    var Uy = Wy(4072);
-    Uy.Howler._mobileUnloaded = !0
-  },
-  35269: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Ey,
-      g: () => ly
-    });
-    var Uy = Wy(865),
-      hy = Wy(552),
-      fy = Wy(258),
-      Zy = Wy(873),
-      cb = Wy(562),
-      Py = Wy(3725),
-      oy = Wy(94),
-      By = Wy(139),
-      Ky = Wy(1496),
-      ey = Wy(105),
-      qb = Wy(35272),
-      sy = Wy(33),
-      Sy = Wy(942);
+    const lz = new Set;
 
-    function Ey() {
-      var yb, bb;
-      return [...null !== (yb = navigator.languages) && void 0 !== yb ? yb : [null !== (bb = navigator.language) && void 0 !== bb ? bb : "none"], "En-GB"]
+    function Mz(zz) {
+      return lz.add(zz), () => {
+        lz.delete(zz)
+      }
     }
 
-    function ly(yb, bb, Wy, ly, mb) {
-      const Cy = (0, Uy.p)(bb) ? (0, Uy.v)(bb) : null,
-        Ty = {
-          cookies: (0, Ky.getAllCookiesForGameNameWithVariation)(bb),
-          isMobile: (0, oy.isMobile)(),
-          isUsingCustomGameTexturePack: null !== Cy && mb(Cy),
-          generalCookies: {
-            joinDiscord: !!sy.e.getItem("DiscordPressed"),
-            newGo: Py.c,
-            ...yb.getMetricsCookies(),
-            trafficCode: ly,
-            compliance: oy.compliance
-          },
-          browserInfo: {
-            ua: window.navigator.userAgent,
-            name: (0, oy.getBrowserName)(),
-            version: (0, oy.getBrowserVersion)(),
-            platform: navigator.platform,
-            platformType: (0, oy.getPlatformType)(),
-            deviceType: (0, ey.b)()
-          },
-          isLoggedIn: yb.isLoggedIn(),
-          lobbyName: Wy,
-          languages: Ey(),
-          version: hy.b,
-          siteUsed: By.u,
-          subsiteUsed: By.B,
-          playSessionId: (0, qb.l)(bb),
-          visitSessionId: (0, Sy.d)(),
-          clientReason: cb.h.reason
+    function tz(zz) {
+      const uz = nz.d[255 & zz];
+      if (void 0 === uz) return;
+      const bz = zz >>> 8 & 255,
+        iz = {
+          action: uz,
+          down: 0 !== (bz & Ez.b.Down),
+          flags: bz,
+          press: zz >>> 16
         };
-      return null !== Cy && (0, fy.yc)(Cy) ? (Ty.lobbyName = (0, Uy.l)(Cy, (0, Uy.r)(bb), Wy), {
-        roomName: `classic_${Zy.e}`,
-        joinOptions: Ty
-      }) : {
-        roomName: bb,
-        joinOptions: Ty
-      }
+      for (const Ez of lz) Ez(iz)
     }
   },
-  35527: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy,
-      e: () => hy,
-      f: () => Uy
+  4571: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      f: () => iz,
+      i: () => lz,
+      m: () => Ez,
+      n: () => Mz
     });
-
-    function Uy(yb) {
-      return yb.replace(/[_\-\s]*\d+$/, "") || yb
-    }
-
-    function hy(yb, bb, Wy) {
-      return Wy <= 0 ? 0 : yb * Wy / Math.max(bb, Wy)
-    }
-
-    function fy(yb, bb) {
-      const Wy = yb.getDurationMs();
-      return Wy > 0 ? yb.loudness * Math.max(0, 1 - (bb - yb.startMs) / Wy) : 0
-    }
-    class Zy {
-      constructor() {
-        let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = yb, this.maxPerGroup = bb, this.voices = []
-      }
-      admit(yb) {
-        if (this.voices = this.voices.filter((yb => yb.isAlive())), null !== yb.group) {
-          const bb = this.voices.filter((bb => bb.group === yb.group));
-          if (bb.length >= this.maxPerGroup && !this.dropLeastWorth(bb, yb)) return !1
-        }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, yb)) && (this.voices.push(yb), !0)
-      }
-      dropLeastWorth(yb, bb) {
-        let Wy = null,
-          Uy = 1 / 0;
-        for (const hy of yb) {
-          if (!hy.canStop()) continue;
-          const yb = fy(hy, bb.startMs);
-          yb < Uy && (Wy = hy, Uy = yb)
-        }
-        return !(!Wy || bb.loudness < Uy) && (this.voices.splice(this.voices.indexOf(Wy), 1), Wy.stop(), !0)
-      }
-    }
+    const Ez = {
+        Mouse1: 1,
+        Mouse2: 2,
+        Mouse3: 3,
+        "Alt+Left Click": 4,
+        F2: 5,
+        F4: 6,
+        F5: 7,
+        F8: 8,
+        F9: 9,
+        Digit0: 10,
+        Digit1: 11,
+        Digit2: 12,
+        Digit3: 13,
+        Digit4: 14,
+        Digit5: 15,
+        Digit6: 16,
+        Digit7: 17,
+        Digit8: 18,
+        Digit9: 19,
+        KeyQ: 20,
+        KeyW: 21,
+        KeyE: 22,
+        KeyR: 23,
+        KeyT: 24,
+        KeyY: 25,
+        KeyU: 26,
+        KeyI: 27,
+        KeyO: 28,
+        KeyP: 29,
+        KeyA: 30,
+        KeyS: 31,
+        KeyD: 32,
+        KeyF: 33,
+        KeyG: 34,
+        KeyH: 35,
+        KeyJ: 36,
+        KeyK: 37,
+        KeyL: 38,
+        KeyZ: 39,
+        KeyX: 40,
+        KeyC: 41,
+        KeyV: 42,
+        KeyB: 43,
+        KeyN: 44,
+        KeyM: 45,
+        ArrowUp: 46,
+        ArrowLeft: 47,
+        ArrowRight: 48,
+        ArrowDown: 49,
+        ShiftLeft: 50,
+        ShiftRight: 51,
+        ControlLeft: 52,
+        ControlRight: 53,
+        Minus: 54,
+        Equal: 55,
+        BracketLeft: 56,
+        BracketRight: 57,
+        Tab: 58,
+        Space: 59,
+        CapsLock: 60,
+        Backslash: 61,
+        IntlBackslash: 62,
+        PageUp: 63,
+        PageDown: 64,
+        Backquote: 65,
+        Comma: 66,
+        IntlRo: 67,
+        IntlYen: 68,
+        Period: 69,
+        Quote: 70,
+        Semicolon: 71,
+        Slash: 72,
+        AltLeft: 73,
+        AltRight: 74,
+        Backspace: 75,
+        ContextMenu: 76,
+        Enter: 77,
+        MetaLeft: 78,
+        MetaRight: 79,
+        Convert: 80,
+        KanaMode: 81,
+        Lang1: 82,
+        Lang2: 83,
+        Lang3: 84,
+        Lang4: 85,
+        Lang5: 86,
+        NonConvert: 87,
+        Delete: 88,
+        End: 89,
+        Help: 90,
+        Home: 91,
+        Insert: 92,
+        NumLock: 93,
+        Numpad0: 94,
+        Numpad1: 95,
+        Numpad2: 96,
+        Numpad3: 97,
+        Numpad4: 98,
+        Numpad5: 99,
+        Numpad6: 100,
+        Numpad7: 101,
+        Numpad8: 102,
+        Numpad9: 103,
+        NumpadAdd: 104,
+        NumpadBackspace: 105,
+        NumpadClear: 106,
+        NumpadClearEntry: 107,
+        NumpadComma: 108,
+        NumpadDecimal: 109,
+        NumpadDivide: 110,
+        NumpadEnter: 111,
+        NumpadEqual: 112,
+        NumpadHash: 113,
+        NumpadMemoryAdd: 114,
+        NumpadMemoryClear: 115,
+        NumpadMemoryRecall: 116,
+        NumpadMemoryStore: 117,
+        NumpadMemorySubtract: 118,
+        NumpadMultiply: 119,
+        NumpadParenLeft: 120,
+        NumpadParenRight: 121,
+        NumpadStar: 122,
+        NumpadSubtract: 123,
+        Escape: 124,
+        F1: 125,
+        F3: 126,
+        F6: 127,
+        F7: 128,
+        F10: 129,
+        F11: 130,
+        F12: 131,
+        F13: 132,
+        F14: 133,
+        F15: 134,
+        F16: 135,
+        F17: 136,
+        F18: 137,
+        F19: 138,
+        F20: 139,
+        F21: 140,
+        F22: 141,
+        F23: 142,
+        F24: 143,
+        Fn: 144,
+        FnLock: 145,
+        PrintScreen: 146,
+        ScrollLock: 147,
+        Pause: 148,
+        BrowserBack: 149,
+        BrowserFavorites: 150,
+        BrowserForward: 151,
+        BrowserHome: 152,
+        BrowserRefresh: 153,
+        BrowserSearch: 154,
+        BrowserStop: 155,
+        Eject: 156,
+        LaunchApp1: 157,
+        LaunchApp2: 158,
+        LaunchMail: 159,
+        MediaPlayPause: 160,
+        MediaSelect: 161,
+        MediaStop: 162,
+        MediaTrackNext: 163,
+        MediaTrackPrevious: 164,
+        Power: 165,
+        Sleep: 166,
+        AudioVolumeDown: 167,
+        AudioVolumeMute: 168,
+        AudioVolumeUp: 169,
+        WakeUp: 170,
+        Hyper: 171,
+        Super: 172,
+        Turbo: 173,
+        Abort: 174,
+        Resume: 175,
+        Suspend: 176,
+        Again: 177,
+        Copy: 178,
+        Cut: 179,
+        Find: 180,
+        Open: 181,
+        Paste: 182,
+        Props: 183,
+        Select: 184,
+        Undo: 185,
+        Hiragana: 186,
+        Katakana: 187,
+        TouchJump: 188,
+        TouchCrouch: 189,
+        TouchPov: 190,
+        TouchAction1: 191,
+        TouchAction2: 192,
+        TouchAction3: 193,
+        TouchAttack: 194,
+        TouchUse: 195
+      },
+      nz = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      iz = {
+        forward: [21, 46],
+        backward: [31, 49],
+        left: [30, 47],
+        right: [32, 48],
+        sprint: [50, 51],
+        jump: [59],
+        crouch: [52, 41, 60, 61, 62, 53],
+        "primary-fire": [1],
+        "alt-fire": [3, 22],
+        SpecialAction1: [23],
+        SpecialAction2: [33],
+        ReloadGun: [23],
+        DropItem: [20],
+        "mid-fire": [2, 4],
+        Zoom: [42],
+        SwapCameraZoom: [29, 7],
+        OpenInventory: [58],
+        OpenLobbyLeaderboard: [34],
+        OpenShop: [43],
+        OpenCharacterCustomization: [44],
+        OpenSettings: [28],
+        OpenInviteLink: [27],
+        OpenTasksAndLeaderboard: [45],
+        OpenCodeEditor: [8],
+        OpenEmoteWheel: [39, 2],
+        HideUi: [6],
+        ShowDebugOverlay: [5],
+        HotBarSlot1: [11],
+        HotBarSlot2: [12],
+        HotBarSlot3: [13],
+        HotBarSlot4: [14],
+        HotBarSlot5: [15],
+        HotBarSlot6: [16],
+        HotBarSlot7: [17],
+        HotBarSlot8: [18],
+        HotBarSlot9: [19],
+        HotBarSlot10: [10],
+        toggleFreeCam: [9],
+        freeCamForward: [46],
+        freeCamBackward: [49],
+        freeCamLeft: [47],
+        freeCamRight: [48],
+        freeCamUp: [63],
+        freeCamDown: [64],
+        recordGame: [56],
+        recordClip: [35],
+        replayViewerOpen: [26],
+        replayPlayPause: [42, 58],
+        replaySkipBack: [20],
+        replaySkipForward: [22],
+        replayChangeCameraMode: [23],
+        replayLoad: [38],
+        replaySave: [37],
+        replaySaveAs: [36],
+        replayExit: [29],
+        replaySpeedUp: [55],
+        replaySpeedDown: [54],
+        replayTimelineZoomIn: [10],
+        replayTimelineZoomOut: [19],
+        replayRecordKeyframe: [24],
+        replayExportVideo: [40]
+      },
+      lz = {
+        jump: [188],
+        crouch: [189],
+        SwapCameraZoom: [190],
+        "primary-fire": [194],
+        "alt-fire": [195]
+      },
+      Mz = [16]
   },
-  35540: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => fy,
-      f: () => Zy,
-      j: () => Uy
+  4575: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Mz,
+      g: () => lz,
+      i: () => Hz
     });
-    class Uy {
-      constructor(yb) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = yb
-      }
-      setMultiplierType(yb, bb) {
-        var Wy;
-        this.multipliers[yb] = bb, null === (Wy = this._onUpdate) || void 0 === Wy || Wy.call(this)
-      }
-      removeMultiplier(yb) {
-        var bb;
-        delete this.multipliers[yb], null === (bb = this._onUpdate) || void 0 === bb || bb.call(this)
-      }
-      getMultiplierType(yb) {
-        return this.multipliers[yb]
-      }
-      getTotalMultipliedVal() {
-        let yb = 1;
-        for (const bb in this.multipliers) yb *= this.multipliers[bb];
-        return yb
+    var Ez = bz(2289),
+      nz = bz(2294);
+    const iz = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+
+    function lz(zz) {
+      return zz instanceof HTMLElement && (!!(zz.isContentEditable || zz instanceof HTMLTextAreaElement || zz instanceof HTMLSelectElement) || zz instanceof HTMLInputElement && !iz.has(zz.type))
+    }
+
+    function Mz(zz) {
+      let uz = null;
+      const bz = bz => {
+          const nz = lz(bz);
+          nz !== uz && (uz = nz, zz(Ez.f.UiCapture, Ez.z.Keyboard, 0, 0, nz ? Ez.z.Keyboard : 0))
+        },
+        nz = zz => {
+          bz(zz.target)
+        },
+        iz = zz => {
+          bz(zz.relatedTarget)
+        },
+        Mz = () => {
+          bz(document.activeElement)
+        },
+        tz = {
+          capture: !0,
+          passive: !0
+        };
+      return document.addEventListener("focusin", nz, tz), document.addEventListener("focusout", iz, tz), document.addEventListener("keydown", Mz, tz), bz(document.activeElement), () => {
+        document.removeEventListener("focusin", nz, tz), document.removeEventListener("focusout", iz, tz), document.removeEventListener("keydown", Mz, tz)
       }
     }
-    class hy {
-      constructor() {
-        let yb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = yb
-      }
-      setBooleanType(yb, bb) {
-        const Wy = this._getTotalBooleanVal();
-        this.booleans[yb] = !!bb;
-        const Uy = this.getTotalBooleanVal();
-        var hy;
-        Uy !== Wy && (null === (hy = this._onUpdate) || void 0 === hy || hy.call(this, Uy, this.booleans));
-        return Uy
-      }
-      removeBoolean(yb) {
-        const bb = this._getTotalBooleanVal();
-        delete this.booleans[yb];
-        const Wy = this._getTotalBooleanVal();
-        var Uy;
-        null !== Wy && Wy !== bb && (null === (Uy = this._onUpdate) || void 0 === Uy || Uy.call(this, Wy, this.booleans));
-        return null !== Wy && void 0 !== Wy && Wy
-      }
-      getBooleanType(yb) {
-        return this.booleans[yb]
-      }
-      getTotalBooleanVal() {
-        throw new Error("This is an abstract class, use BooleanAndCombinator")
-      }
-      forceUpdate() {
-        var yb;
-        null === (yb = this._onUpdate) || void 0 === yb || yb.call(this, this.getTotalBooleanVal(), this.booleans)
-      }
-      _getTotalBooleanVal() {
-        throw new Error("This is an abstract class, use BooleanAndCombinator")
-      }
+    const tz = new Map;
+
+    function Hz(zz, uz) {
+      var bz;
+      let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      tz.set(Ez, (null !== (bz = tz.get(Ez)) && void 0 !== bz ? bz : 0) & ~zz | uz & zz);
+      let iz = 0;
+      for (const nz of tz.values()) iz |= nz;
+      return (0, nz.x)(zz, iz & zz)
     }
-    class fy extends hy {
-      getTotalBooleanVal() {
-        const yb = this._getTotalBooleanVal();
-        if (null === yb) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return yb
-      }
-      _getTotalBooleanVal() {
-        let yb = !1,
-          bb = !0;
-        for (const Wy in this.booleans) yb = !0, bb &&= this.booleans[Wy];
-        return yb ? bb : null
-      }
-    }
-    class Zy extends hy {
-      getTotalBooleanVal() {
-        const yb = this._getTotalBooleanVal();
-        if (null === yb) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return yb
-      }
-      _getTotalBooleanVal() {
-        let yb = !1,
-          bb = !1;
-        for (const Wy in this.booleans) yb = !0, bb ||= this.booleans[Wy];
-        return yb ? bb : null
-      }
-    }
-  },
-  35533: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => fy,
-      e: () => Uy,
-      g: () => hy
-    });
-    const Uy = 15,
-      hy = 3,
-      fy = 30
-  },
-  37711: (yb, bb, Wy) => {
-    function Uy(yb, bb, Wy, Uy, hy) {
-      var fy = {};
-      return Object.keys(Uy).forEach((function(yb) {
-        fy[yb] = Uy[yb]
-      })), fy.enumerable = !!fy.enumerable, fy.configurable = !!fy.configurable, ("value" in fy || fy.initializer) && (fy.writable = !0), fy = Wy.slice().reverse().reduce((function(Wy, Uy) {
-        return Uy(yb, bb, Wy) || Wy
-      }), fy), hy && void 0 !== fy.initializer && (fy.value = fy.initializer ? fy.initializer.call(hy) : void 0, fy.initializer = void 0), void 0 === fy.initializer && (Object.defineProperty(yb, bb, fy), fy = null), fy
-    }
-    Wy.d(bb, {
-      e: () => Uy
-    })
-  },
-  37709: (yb, bb, Wy) => {
-    function Uy(yb, bb, Wy, Uy) {
-      Wy && Object.defineProperty(yb, bb, {
-        enumerable: Wy.enumerable,
-        configurable: Wy.configurable,
-        writable: Wy.writable,
-        value: Wy.initializer ? Wy.initializer.call(Uy) : void 0
-      })
-    }
-    Wy.d(bb, {
-      e: () => Uy
-    })
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

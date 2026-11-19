@@ -1,175 +1,176 @@
 export const id = 304;
 export const ids = [304];
 export const modules = {
-  40484: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  41065: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      _TGATextureLoader: () => Mz
     });
-    var Uy = Wy(38319);
-    const hy = "bakedVertexAnimation",
-      fy = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(38060);
+
+    function nz(zz) {
+      let uz = 0;
+      return {
+        id_length: zz[uz++],
+        colormap_type: zz[uz++],
+        image_type: zz[uz++],
+        colormap_index: zz[uz++] | zz[uz++] << 8,
+        colormap_length: zz[uz++] | zz[uz++] << 8,
+        colormap_size: zz[uz++],
+        origin: [zz[uz++] | zz[uz++] << 8, zz[uz++] | zz[uz++] << 8],
+        width: zz[uz++] | zz[uz++] << 8,
+        height: zz[uz++] | zz[uz++] << 8,
+        pixel_size: zz[uz++],
+        flags: zz[17]
+      }
     }
-  },
-  40393: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "bakedVertexAnimationDeclaration",
-      fy = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+
+    function iz(zz, uz) {
+      if (uz.length < 19) return void Ez.e.Error("Unable to load TGA file - Not enough data to contain header");
+      let bz = 18;
+      const iz = nz(uz);
+      if (iz.id_length + bz > uz.length) return void Ez.e.Error("Unable to load TGA file - Not enough data");
+      bz += iz.id_length;
+      let Mz, tz = !1,
+        Hz = !1,
+        Oz = !1;
+      switch (iz.image_type) {
+        case 9:
+          tz = !0;
+        case 1:
+          Hz = !0;
+          break;
+        case 10:
+          tz = !0;
+        case 2:
+          break;
+        case 11:
+          tz = !0;
+        case 3:
+          Oz = !0
+      }
+      const pz = iz.pixel_size >> 3,
+        dz = iz.width * iz.height * pz;
+      let Fz, Zz, Rz, Kz, wz, Xz, fz;
+      if (Hz && (Fz = uz.subarray(bz, bz += iz.colormap_length * (iz.colormap_size >> 3))), tz) {
+        let zz, Ez, nz;
+        Mz = new Uint8Array(dz);
+        let iz = 0;
+        const lz = new Uint8Array(pz);
+        for (; bz < dz && iz < dz;)
+          if (zz = uz[bz++], Ez = 1 + (127 & zz), 128 & zz) {
+            for (nz = 0; nz < pz; ++nz) lz[nz] = uz[bz++];
+            for (nz = 0; nz < Ez; ++nz) Mz.set(lz, iz + nz * pz);
+            iz += pz * Ez
+          } else {
+            for (Ez *= pz, nz = 0; nz < Ez; ++nz) Mz[iz + nz] = uz[bz++];
+            iz += Ez
+          }
+      } else Mz = uz.subarray(bz, bz + (Hz ? iz.width * iz.height : dz));
+      switch ((48 & iz.flags) >> 4) {
+        default:
+        case 2:
+          Zz = 0, Kz = 1, fz = iz.width, Rz = 0, wz = 1, Xz = iz.height;
+          break;
+        case 0:
+          Zz = 0, Kz = 1, fz = iz.width, Rz = iz.height - 1, wz = -1, Xz = -1;
+          break;
+        case 3:
+          Zz = iz.width - 1, Kz = -1, fz = -1, Rz = 0, wz = 1, Xz = iz.height;
+          break;
+        case 1:
+          Zz = iz.width - 1, Kz = -1, fz = -1, Rz = iz.height - 1, wz = -1, Xz = -1
+      }
+      const sz = "_getImageData" + (Oz ? "Grey" : "") + iz.pixel_size + "bits",
+        rz = lz[sz](iz, Fz, Mz, Rz, wz, Xz, Zz, Kz, fz);
+      zz.uR()._uploadDataToTextureDirectly(zz, rz)
     }
-  },
-  40387: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "bonesDeclaration",
-      fy = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40479: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "bonesVertex",
-      fy = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40508: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneVertex",
-      fy = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40430: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneVertexDeclaration",
-      fy = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40517: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "fogVertex",
-      fy = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40433: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "fogVertexDeclaration",
-      fy = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40400: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "instancesDeclaration",
-      fy = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40477: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "instancesVertex",
-      fy = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40528: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "vertexColorMixing",
-      fy = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  41049: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      colorVertexShader: () => mb
-    });
-    var Uy = Wy(38319),
-      hy = Wy(40387),
-      fy = Wy(40393),
-      Zy = Wy(40430),
-      cb = Wy(40433),
-      Py = Wy(40400),
-      oy = Wy(40477),
-      By = Wy(40479),
-      Ky = Wy(40484),
-      ey = Wy(40508),
-      qb = Wy(40517),
-      sy = Wy(40528);
-    const Sy = "colorVertexShader",
-      Ey = "attribute vec3 position;\n#ifdef VERTEXCOLOR\nattribute vec4 color;\n#endif\n#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#ifdef FOG\nuniform mat4 view;\n#endif\n#include<instancesDeclaration>\nuniform mat4 viewProjection;\n#ifdef MULTIVIEW\nuniform mat4 viewProjectionR;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vec4 vColor;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\n#ifdef VERTEXCOLOR\nvec4 colorUpdated=color;\n#endif\n#include<instancesVertex>\n#include<bonesVertex>\n#include<bakedVertexAnimation>\nvec4 worldPos=finalWorld*vec4(position,1.0);\n#ifdef MULTIVIEW\nif (gl_ViewID_OVR==0u) {gl_Position=viewProjection*worldPos;} else {gl_Position=viewProjectionR*worldPos;}\n#else\ngl_Position=viewProjection*worldPos;\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<vertexColorMixing>\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    Uy.e.ShadersStore[Sy] || (Uy.e.ShadersStore[Sy] = Ey);
-    const ly = [hy.c, fy.c, Zy.d, cb.d, Py.b, oy.d, By.c, Ky.c, ey.b, qb.e, sy.e];
-    for (const Cy of ly) Uy.e.IncludesShadersStore[Cy.name] || (Uy.e.IncludesShadersStore[Cy.name] = Cy.shader);
-    const mb = {
-      name: Sy,
-      shader: Ey
+    const lz = {
+      GetTGAHeader: nz,
+      UploadContent: iz,
+      _getImageData8bits: function(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        const Hz = bz,
+          Oz = uz,
+          pz = zz.width,
+          dz = zz.height;
+        let Fz, Zz, Rz, Kz = 0;
+        const wz = new Uint8Array(pz * dz * 4);
+        for (Rz = Ez; Rz !== iz; Rz += nz)
+          for (Zz = lz; Zz !== tz; Zz += Mz, Kz++) Fz = Hz[Kz], wz[4 * (Zz + pz * Rz) + 3] = 255, wz[4 * (Zz + pz * Rz) + 2] = Oz[3 * Fz + 0], wz[4 * (Zz + pz * Rz) + 1] = Oz[3 * Fz + 1], wz[4 * (Zz + pz * Rz) + 0] = Oz[3 * Fz + 2];
+        return wz
+      },
+      _getImageData16bits: function(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        const Hz = bz,
+          Oz = zz.width,
+          pz = zz.height;
+        let dz, Fz, Zz, Rz = 0;
+        const Kz = new Uint8Array(Oz * pz * 4);
+        for (Zz = Ez; Zz !== iz; Zz += nz)
+          for (Fz = lz; Fz !== tz; Fz += Mz, Rz += 2) {
+            dz = Hz[Rz + 0] + (Hz[Rz + 1] << 8);
+            const zz = 255 * ((31744 & dz) >> 10) / 31 | 0,
+              uz = 255 * ((992 & dz) >> 5) / 31 | 0,
+              bz = 255 * (31 & dz) / 31 | 0;
+            Kz[4 * (Fz + Oz * Zz) + 0] = zz, Kz[4 * (Fz + Oz * Zz) + 1] = uz, Kz[4 * (Fz + Oz * Zz) + 2] = bz, Kz[4 * (Fz + Oz * Zz) + 3] = 32768 & dz ? 0 : 255
+          }
+        return Kz
+      },
+      _getImageData24bits: function(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        const Hz = bz,
+          Oz = zz.width,
+          pz = zz.height;
+        let dz, Fz, Zz = 0;
+        const Rz = new Uint8Array(Oz * pz * 4);
+        for (Fz = Ez; Fz !== iz; Fz += nz)
+          for (dz = lz; dz !== tz; dz += Mz, Zz += 3) Rz[4 * (dz + Oz * Fz) + 3] = 255, Rz[4 * (dz + Oz * Fz) + 2] = Hz[Zz + 0], Rz[4 * (dz + Oz * Fz) + 1] = Hz[Zz + 1], Rz[4 * (dz + Oz * Fz) + 0] = Hz[Zz + 2];
+        return Rz
+      },
+      _getImageData32bits: function(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        const Hz = bz,
+          Oz = zz.width,
+          pz = zz.height;
+        let dz, Fz, Zz = 0;
+        const Rz = new Uint8Array(Oz * pz * 4);
+        for (Fz = Ez; Fz !== iz; Fz += nz)
+          for (dz = lz; dz !== tz; dz += Mz, Zz += 4) Rz[4 * (dz + Oz * Fz) + 2] = Hz[Zz + 0], Rz[4 * (dz + Oz * Fz) + 1] = Hz[Zz + 1], Rz[4 * (dz + Oz * Fz) + 0] = Hz[Zz + 2], Rz[4 * (dz + Oz * Fz) + 3] = Hz[Zz + 3];
+        return Rz
+      },
+      _getImageDataGrey8bits: function(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        const Hz = bz,
+          Oz = zz.width,
+          pz = zz.height;
+        let dz, Fz, Zz, Rz = 0;
+        const Kz = new Uint8Array(Oz * pz * 4);
+        for (Zz = Ez; Zz !== iz; Zz += nz)
+          for (Fz = lz; Fz !== tz; Fz += Mz, Rz++) dz = Hz[Rz], Kz[4 * (Fz + Oz * Zz) + 0] = dz, Kz[4 * (Fz + Oz * Zz) + 1] = dz, Kz[4 * (Fz + Oz * Zz) + 2] = dz, Kz[4 * (Fz + Oz * Zz) + 3] = 255;
+        return Kz
+      },
+      _getImageDataGrey16bits: function(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        const Hz = bz,
+          Oz = zz.width,
+          pz = zz.height;
+        let dz, Fz, Zz = 0;
+        const Rz = new Uint8Array(Oz * pz * 4);
+        for (Fz = Ez; Fz !== iz; Fz += nz)
+          for (dz = lz; dz !== tz; dz += Mz, Zz += 2) Rz[4 * (dz + Oz * Fz) + 0] = Hz[Zz + 0], Rz[4 * (dz + Oz * Fz) + 1] = Hz[Zz + 0], Rz[4 * (dz + Oz * Fz) + 2] = Hz[Zz + 0], Rz[4 * (dz + Oz * Fz) + 3] = Hz[Zz + 1];
+        return Rz
+      }
+    };
+    class Mz {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData() {
+        throw ".env not supported in Cube."
+      }
+      loadData(zz, uz, bz) {
+        const Ez = new Uint8Array(zz.buffer, zz.byteOffset, zz.byteLength),
+          lz = nz(Ez);
+        bz(lz.width, lz.height, uz.generateMipMaps, !1, (() => {
+          iz(uz, Ez)
+        }))
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

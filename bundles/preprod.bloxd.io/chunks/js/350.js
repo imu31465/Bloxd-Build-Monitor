@@ -1,19 +1,62 @@
 export const id = 350;
 export const ids = [350];
 export const modules = {
-  59993: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      lodPixelShaderWGSL: () => Zy
+  60400: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      applyLightFoOffset: () => lz,
+      getFloatingOriginOffset: () => nz,
+      lightFoVersion: () => iz,
+      wrapRenderableForFO: () => Mz
     });
-    var Uy = Wy(38319);
-    const hy = "lodPixelShader",
-      fy = "const GammaEncodePowerApprox=1.0/2.2;varying vUV: vec2f;var textureSampler: texture_2d<f32>;uniform lod: f32;uniform gamma: i32;@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let textureSize=textureDimensions(textureSampler);fragmentOutputs.color=textureLoad(textureSampler,vec2u(fragmentInputs.vUV*vec2f(textureSize)),u32(uniforms.lod));if (uniforms.gamma==0) {fragmentOutputs.color=vec4f(pow(fragmentOutputs.color.rgb,vec3f(GammaEncodePowerApprox)),fragmentOutputs.color.a);}}\n";
-    Uy.e.ShadersStoreWGSL[hy] || (Uy.e.ShadersStoreWGSL[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(40946);
+
+    function nz(zz) {
+      const uz = zz.camera;
+      if (!uz) return {
+        x: 0,
+        y: 0,
+        z: 0
+      };
+      const bz = uz.worldMatrix;
+      return {
+        x: bz[12],
+        y: bz[13],
+        z: bz[14]
+      }
+    }
+
+    function iz(zz) {
+      return zz.camera ? zz.camera.worldMatrixVersion : 0
+    }
+
+    function lz(zz, uz) {
+      const bz = uz.camera?.worldMatrix;
+      if (!bz) return;
+      const nz = bz[12],
+        iz = bz[13],
+        lz = bz[14];
+      let Mz = 0;
+      for (const tz of uz.lights) {
+        if (Mz >= Ez.b) break;
+        if (!tz._writeLightUbo) continue;
+        const uz = 4 + 16 * Mz,
+          bz = zz[uz + 3];
+        if (0 === bz || 2 === bz) {
+          const bz = tz.worldMatrix;
+          zz[uz] = bz[12] - nz, zz[uz + 1] = bz[13] - iz, zz[uz + 2] = bz[14] - lz
+        }
+        Mz++
+      }
+    }
+
+    function Mz(zz, uz, bz) {
+      let Ez = -1;
+      return () => {
+        const nz = uz.camera ? uz.camera.worldMatrixVersion : -1;
+        nz !== Ez && (bz(), Ez = nz), zz()
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

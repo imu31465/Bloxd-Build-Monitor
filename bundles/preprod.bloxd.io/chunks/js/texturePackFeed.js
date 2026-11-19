@@ -1,30 +1,30 @@
-export const id = 47;
-export const ids = [47];
+export const id = 51;
+export const ids = [51];
 export const modules = {
-  41863: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      startPageTexturePackFeed: () => Zy
+  42628: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      startPageTexturePackFeed: () => lz
     });
-    var Uy = Wy(1052),
-      hy = Wy(33),
-      fy = Wy(41849);
+    var Ez = bz(1195),
+      nz = bz(33),
+      iz = bz(42615);
 
-    function Zy(yb, bb) {
-      const Wy = new fy.d({
-        store: hy.d,
-        warn: yb,
-        oneShot: bb,
-        fetchLatest: async yb => {
-          const bb = await fetch(`${Uy.clientSideServerUrls.texturePackUrl}/${yb}.json`, {
+    function lz(zz, uz) {
+      const bz = new iz.b({
+        store: nz.d,
+        warn: zz,
+        oneShot: uz,
+        fetchLatest: async zz => {
+          const uz = await fetch(`${Ez.clientSideServerUrls.texturePackUrl}/${zz}.json`, {
             cache: "reload"
           });
-          if (!bb.ok) throw new Error(`fetching texture pack ${yb} answered HTTP ${bb.status}`);
-          return await bb.json()
+          if (!uz.ok) throw new Error(`fetching texture pack ${zz} answered HTTP ${uz.status}`);
+          return await uz.json()
         }
       });
-      return (0, fy.f)(Wy), Wy
+      return (0, iz.c)(bz), bz
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

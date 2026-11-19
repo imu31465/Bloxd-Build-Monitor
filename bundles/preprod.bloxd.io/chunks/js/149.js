@@ -1,43 +1,146 @@
 export const id = 149;
 export const ids = [149];
 export const modules = {
-  8056: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  7825: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      NitroSdkAdaptor: () => lz
     });
-    const Uy = {
-      whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
-      howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
-      features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
-      tips: ["Open every chest on your island before you leave, since your gear is spread across them", "Take your time bridging. One wrong step and you're in the void", "When the chests refill, try to get back to them before your rivals do", "Fight near the edges and use knockback to push enemies off the map", "More kills means more Gold, so you'll unlock new kits faster", "Try kits that suit how you play: Builder for bridging, Archer for range or Tank for armour", "Choose perks to match your style too, like Rusher for speed at the start or Leech for health after kills"],
-      similarGames: ["bedwars", "luckyTowers", "skyIslands"],
-      faq: [{
-        question: "What is Bloxd Skywars?",
-        answer: "It's a PvP mode on Bloxd.io where every player starts on a floating island. You loot chests, bridge across to your rivals and try to be the last one standing."
-      }, {
-        question: "How do you win in Skywars?",
-        answer: "Be the last player alive. Knock everyone else out, or push them off their islands into the void. Winning gets you 20 Gold."
-      }, {
-        question: "Can I play Skywars in my browser?",
-        answer: "Yep. Bloxd.io Skywars runs right in your browser, so you can jump into a match without installing anything."
-      }, {
-        question: "What are the best Skywars kits?",
-        answer: "Honestly, it depends how you like to play. Sniper has a one-shot crossbow and Catapult can knock enemies off the map. Ghost can turn invisible, and Builder starts with extra blocks for bridging. You unlock more kits with Gold and Gems."
-      }, {
-        question: "What do perks do in Bloxd Skywars?",
-        answer: "Perks give you bonuses while you play. Maniac gives you more damage after kills, Bridger gives you a chance to get placed blocks back and Leech heals you after kills. You can upgrade them to make them stronger."
-      }, {
-        question: "How do I get Gold in Skywars?",
-        answer: "Every kill earns Gold, and you get an extra 20 Gold for winning a match."
-      }, {
-        question: "How many players fit in one Skywars match?",
-        answer: "Up to 12 players fight it out in each free-for-all match."
-      }, {
-        question: "What does the compass do in Skywars?",
-        answer: "After 7 minutes, or once only two players are left, everyone still alive gets a compass that points to the nearest player."
-      }]
+    var Ez = bz(1288),
+      nz = bz(1171);
+    const iz = "NitroOutstreamVideo";
+    class lz extends Ez.b {
+      constructor() {
+        super(), this.name = "nitro", this.bannerAutoRefresh = "alwaysOn", this.videoInFlight = !1
+      }
+      static async setup() {
+        return window.nitroAds = window.nitroAds || {
+          createAd: function() {
+            for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+            return new Promise((zz => {
+              window.nitroAds.queue.push(["createAd", uz, zz])
+            }))
+          },
+          addUserToken: function() {
+            for (var zz = arguments.length, uz = new Array(zz), bz = 0; bz < zz; bz++) uz[bz] = arguments[bz];
+            window.nitroAds.queue.push(["addUserToken", uz])
+          },
+          queue: []
+        }, document.addEventListener("nitroAds.rendered", (zz => {
+          var uz, bz, Ez;
+          const nz = document.getElementById(null !== (uz = null === (bz = zz.detail) || void 0 === bz || null === (Ez = bz.adInfo) || void 0 === Ez ? void 0 : Ez.adUnitCode) && void 0 !== uz ? uz : "");
+          null !== nz && void 0 !== nz && nz.classList.contains("NitroBanner") && nz.classList.toggle("NitroBannerUnfilled", "blank" === zz.detail.type)
+        })), await (0, nz.e)("https://s.nitropay.com/ads-2842.js", {
+          "data-cfasync": "false"
+        }), new lz
+      }
+      playVideoAd(zz, uz) {
+        this.showVideoAd(zz, zz)
+      }
+      playRewarded(zz, uz) {
+        this.showVideoAd(zz, uz)
+      }
+      showVideoAd(zz, uz) {
+        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void uz();
+        const bz = document.getElementById("GenericVideoWrapper"),
+          Ez = document.getElementById("GenericVideoInner");
+        if (null === bz || null === Ez) return void uz();
+        this.videoInFlight = !0;
+        let nz = !1;
+        const lz = document.createElement("div");
+        lz.id = iz, lz.className = "NitroVideoPlacement";
+        const Mz = iz => {
+          if (!nz) {
+            nz = !0, clearTimeout(wz), clearInterval(Kz), document.removeEventListener("nitroAds.adResult", Oz), document.removeEventListener("nitroAds.rendered", pz), document.removeEventListener("nitroAds.complete", dz);
+            try {
+              Fz.remove(), lz.querySelectorAll("video").forEach((zz => {
+                zz.pause()
+              })), lz.remove(), Ez.classList.remove("NitroVideo"), bz.style.display = "none"
+            } catch (Mz) {
+              console.error("AD: Error tearing down Nitro video", Mz)
+            } finally {
+              this.videoInFlight = !1, window.adCompleteSoResume(), iz ? zz() : uz()
+            }
+          }
+        };
+        let tz = !1;
+        const Hz = (zz, uz) => {
+            if (!tz) {
+              if (!zz) return console.log(`AD: Nitro video not filled: ${uz}`), void Mz(!1);
+              tz = !0, clearTimeout(wz), wz = setTimeout((() => {
+                console.log("AD: Nitro video never completed"), Mz(!1)
+              }), 12e4)
+            }
+          },
+          Oz = zz => {
+            var uz;
+            (null === (uz = zz.detail) || void 0 === uz ? void 0 : uz.id) === iz && Hz("filled" === zz.detail.status, zz.detail.status)
+          },
+          pz = zz => {
+            var uz, bz;
+            (null === (uz = zz.detail) || void 0 === uz || null === (bz = uz.adInfo) || void 0 === bz ? void 0 : bz.adUnitCode) === iz && Hz("blank" !== zz.detail.type, zz.detail.type)
+          },
+          dz = zz => {
+            var uz;
+            (null === (uz = zz.detail) || void 0 === uz ? void 0 : uz.adUnitCode) === iz && Mz(!0)
+          },
+          Fz = document.createElement("button");
+        Fz.className = "NitroVideoSkip", Fz.disabled = !0, Fz.addEventListener("click", (() => {
+          console.log("AD: Nitro video skipped"), Mz(!0)
+        }));
+        let Zz = Math.ceil(15);
+        const Rz = () => {
+          if (Zz <= 0) return clearInterval(Kz), Fz.textContent = "Skip Ad", void(Fz.disabled = !1);
+          Fz.textContent = `Skip ad in ${Zz}s`, Zz--
+        };
+        Rz();
+        const Kz = setInterval(Rz, 1e3);
+        let wz = setTimeout((() => {
+          console.log("AD: Nitro video got no result"), Mz(!1)
+        }), 1e4);
+        document.addEventListener("nitroAds.adResult", Oz), document.addEventListener("nitroAds.rendered", pz), document.addEventListener("nitroAds.complete", dz), Ez.appendChild(lz), Ez.classList.add("NitroVideo"), bz.appendChild(Fz), bz.style.display = "flex", window.adStartSoPause(null, {
+          preventMovement: !0
+        }), Promise.resolve(window.nitroAds.createAd(iz, {
+          format: "display",
+          outstream: "only",
+          resultTimeout: 8e3
+        })).catch((zz => {
+          console.error("AD: Nitro failed to create video", zz), Mz(!1)
+        })), console.log("AD: Requested Nitro video")
+      }
+      renderBanner(zz) {
+        const {
+          divId: uz,
+          width: bz,
+          height: Ez
+        } = zz, nz = `${uz}-nitro`;
+        let iz = document.getElementById(nz);
+        null === iz && (iz = document.createElement("div"), iz.id = nz, iz.className = "NitroBanner", iz.style.setProperty("--nitro-slot-width", `${bz}px`), iz.style.setProperty("--nitro-slot-height", `${Ez}px`), document.getElementById(uz).appendChild(iz));
+        const lz = [
+          [String(bz), String(Ez)]
+        ];
+        Promise.resolve(window.nitroAds.createAd(nz, {
+          sizes: lz
+        })).catch((zz => {
+          console.error(`AD: Nitro failed to create banner ${nz}:`, zz)
+        })), console.log(`AD: Requested Nitro banner ${nz}`)
+      }
+      displayConsentUI() {
+        var zz, uz;
+        null === (zz = (uz = window).__cmp) || void 0 === zz || zz.call(uz, "showModal")
+      }
+      addPrivacyLinks(zz) {
+        var uz, bz, Ez, nz;
+        const iz = document.createElement("span");
+        iz.dataset.ccpaLink = "1";
+        const lz = document.createElement("div");
+        lz.id = "ncmp-consent-link", zz.replaceChildren(iz, lz), null === (uz = (bz = window).__uspapi) || void 0 === uz || uz.call(bz, "addLink", 1), null === (Ez = (nz = window).__cmp) || void 0 === Ez || Ez.call(nz, "addConsentLink")
+      }
+      newPageSession() {
+        var zz, uz;
+        null === (zz = (uz = window.nitroAds).navigate) || void 0 === zz || zz.call(uz)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

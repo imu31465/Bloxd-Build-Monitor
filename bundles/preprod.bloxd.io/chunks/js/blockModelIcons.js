@@ -1,391 +1,407 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  35236: (yb, bb, Wy) => {
-    var Uy = {
-      "./Artisan Bench.json": [39557, 251],
-      "./Aspen Item Pedestal.json": [39566, 252],
-      "./Cedar Item Pedestal.json": [39570, 253],
-      "./Cherry Item Pedestal.json": [39579, 254],
-      "./Furnace.json": [39582, 255],
-      "./Jungle Item Pedestal.json": [39586, 256],
-      "./Mango Item Pedestal.json": [39593, 257],
-      "./Palm Item Pedestal.json": [39598, 258],
-      "./Pear Item Pedestal.json": [39601, 259],
-      "./Pine Item Pedestal.json": [39610, 260],
-      "./Plum Item Pedestal.json": [39614, 261],
-      "./Potion Table.json": [39616, 262],
-      "./Salvaging Table.json": [39625, 263],
-      "./Showcase.json": [39631, 264],
-      "./Spectral Item Pedestal.json": [39633, 265],
-      "./Workbench.json": [39637, 266]
+  35900: (zz, uz, bz) => {
+    var Ez = {
+      "./Artisan Bench.json": [40390, 265],
+      "./Aspen Item Pedestal.json": [40398, 266],
+      "./Cedar Item Pedestal.json": [40406, 267],
+      "./Cherry Item Pedestal.json": [40415, 268],
+      "./Furnace.json": [40420, 269],
+      "./Jungle Item Pedestal.json": [40428, 270],
+      "./Mango Item Pedestal.json": [40436, 271],
+      "./Palm Item Pedestal.json": [40443, 272],
+      "./Pear Item Pedestal.json": [40448, 273],
+      "./Pine Item Pedestal.json": [40453, 274],
+      "./Plum Item Pedestal.json": [40457, 275],
+      "./Potion Table.json": [40460, 276],
+      "./Salvaging Table.json": [40462, 277],
+      "./Showcase.json": [40466, 278],
+      "./Spectral Item Pedestal.json": [40469, 279],
+      "./Workbench.json": [40477, 280]
     };
 
-    function hy(yb) {
-      if (!Wy.o(Uy, yb)) return Promise.resolve().then((() => {
-        var bb = new Error("Cannot find module '" + yb + "'");
-        throw bb.code = "MODULE_NOT_FOUND", bb
+    function nz(zz) {
+      if (!bz.o(Ez, zz)) return Promise.resolve().then((() => {
+        var uz = new Error("Cannot find module '" + zz + "'");
+        throw uz.code = "MODULE_NOT_FOUND", uz
       }));
-      var bb = Uy[yb],
-        hy = bb[0];
-      return Wy.e(bb[1]).then((() => Wy(hy)))
+      var uz = Ez[zz],
+        nz = uz[0];
+      return bz.e(uz[1]).then((() => bz(nz)))
     }
-    hy.keys = () => Object.keys(Uy), hy.id = 35236, yb.exports = hy
+    nz.keys = () => Object.keys(Ez), nz.id = 35900, zz.exports = nz
   },
-  35233: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      getBlockModelIconUrl: () => ey,
-      hasBlockModelIcon: () => oy
+  35897: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      getBlockModelIconUrl: () => dz,
+      hasBlockModelIcon: () => Hz
     });
-    var Uy = Wy(35222),
-      hy = Wy(35215);
-    const fy = Wy(35236),
-      Zy = new Map(fy.keys().filter((yb => yb.startsWith("./"))).map((yb => [yb.slice(2, -5), yb]))),
-      cb = new Map,
-      Py = new Map;
+    var Ez = bz(35883),
+      nz = bz(35877);
+    const iz = bz(35900),
+      lz = new Map(iz.keys().filter((zz => zz.startsWith("./"))).map((zz => [zz.slice(2, -5), zz]))),
+      Mz = new Map,
+      tz = new Map;
 
-    function oy(yb) {
-      return Zy.has(yb)
+    function Hz(zz) {
+      return lz.has(zz)
     }
 
-    function By(yb) {
-      return fy(Zy.get(yb))
+    function Oz(zz) {
+      return iz(lz.get(zz))
     }
-    async function Ky(yb, bb, Wy) {
+    async function pz(zz, uz, bz) {
       const {
-        data: Uy,
-        texture: fy
+        data: Ez,
+        texture: iz
       } = await
-      function(yb) {
-        let bb = cb.get(yb);
-        return bb || (bb = By(yb).then((async yb => {
-          const bb = new Image;
-          bb.src = yb.texture, await bb.decode();
-          const Wy = document.createElement("canvas");
-          Wy.width = bb.width, Wy.height = bb.height;
-          const Uy = Wy.getContext("2d");
-          return Uy.drawImage(bb, 0, 0), {
-            data: yb,
+      function(zz) {
+        let uz = Mz.get(zz);
+        return uz || (uz = Oz(zz).then((async zz => {
+          const uz = new Image;
+          uz.src = zz.texture, await uz.decode();
+          const bz = document.createElement("canvas");
+          bz.width = uz.width, bz.height = uz.height;
+          const Ez = bz.getContext("2d");
+          return Ez.drawImage(uz, 0, 0), {
+            data: zz,
             texture: {
-              width: bb.width,
-              height: bb.height,
-              pixels: Uy.getImageData(0, 0, bb.width, bb.height).data
+              width: uz.width,
+              height: uz.height,
+              pixels: Ez.getImageData(0, 0, uz.width, uz.height).data
             }
           }
-        })), bb.catch((() => {
-          cb.delete(yb)
-        })), cb.set(yb, bb)), bb
-      }(yb), Zy = document.createElement("canvas");
-      return Zy.width = bb, Zy.height = bb, Zy.getContext("2d").putImageData(new ImageData((0, hy.f)(Uy, fy, bb, Wy), bb, bb), 0, 0), Zy.toDataURL()
+        })), uz.catch((() => {
+          Mz.delete(zz)
+        })), Mz.set(zz, uz)), uz
+      }(zz), lz = document.createElement("canvas");
+      return lz.width = uz, lz.height = uz, lz.getContext("2d").putImageData(new ImageData((0, nz.g)(Ez, iz, uz, bz), uz, uz), 0, 0), lz.toDataURL()
     }
 
-    function ey(yb, bb, Wy) {
-      const hy = `${bb}|${Wy}|${yb}`;
-      let fy = Py.get(hy);
-      return fy || (fy = (0, Uy.c)(yb, (() => By(yb)), bb, Wy).then((Uy => null !== Uy && void 0 !== Uy ? Uy : Ky(yb, bb, Wy))), fy.catch((() => {
-        Py.delete(hy)
-      })), Py.set(hy, fy)), fy
+    function dz(zz, uz, bz) {
+      const nz = `${uz}|${bz}|${zz}`;
+      let iz = tz.get(nz);
+      return iz || (iz = (0, Ez.f)(zz, (() => Oz(zz)), uz, bz).then((Ez => null !== Ez && void 0 !== Ez ? Ez : pz(zz, uz, bz))), iz.catch((() => {
+        tz.delete(nz)
+      })), tz.set(nz, iz)), iz
     }
   },
-  35222: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Oy,
-      c: () => Ry,
-      e: () => mb
+  35883: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Jz,
+      f: () => Az,
+      h: () => fz
     });
-    var Uy = Wy(127),
-      hy = Wy(94);
-    const fy = new(Wy(35226).c)(new URL(Wy.p + Wy.u(3), Wy.b), {
+    var Ez = bz(301),
+      nz = bz(96);
+    const iz = new(bz(35892).c)(new URL(bz.p + bz.u(3), bz.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var Zy = Wy(2363);
-    const cb = 1e4,
-      Py = 3e4;
-    let oy = null,
-      By = null,
-      Ky = null,
-      ey = !1,
-      qb = 0;
-    const sy = new Map;
-    let Sy = null;
-    const Ey = new Map,
-      ly = new Map;
+    var lz = bz(1732),
+      Mz = bz(2956);
+    const tz = 1e4,
+      Hz = 3e4;
+    let Oz = null,
+      pz = null,
+      dz = null,
+      Fz = !1,
+      Zz = 0;
+    const Rz = new Map;
+    let Kz = null;
+    const wz = new Map,
+      Xz = new Map;
 
-    function mb(yb) {
-      return new Promise(((bb, Wy) => {
-        const Uy = new Image;
-        Uy.crossOrigin = "anonymous", Uy.onload = () => {
-          bb(Uy)
-        }, Uy.onerror = () => {
-          Wy(new Error(`A block icon's texture did not load: ${yb.slice(0,100)}`))
-        }, Uy.src = yb
-      }))
+    function fz(zz) {
+      const uz = new Promise(((uz, bz) => {
+        const Ez = new Image;
+        Ez.crossOrigin = "anonymous", Ez.fetchPriority = "high", Ez.onload = () => {
+          uz(Ez)
+        }, Ez.onerror = () => {
+          bz(new Error(`A block icon's texture did not load: ${zz.slice(0,100)}`))
+        }, Ez.src = zz
+      }));
+      return (0, Mz.g)(uz)
     }
 
-    function Cy(yb) {
-      var bb, Wy;
-      ey || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${yb}`), ey = !0, null === (bb = oy) || void 0 === bb || bb.terminate(), oy = null, By = null, Ey.clear(), ly.clear();
-      for (const Uy of sy.values()) Uy(null);
-      sy.clear(), null === (Wy = Sy) || void 0 === Wy || Wy()
+    function sz(zz) {
+      var uz, bz;
+      Fz || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${zz}`), Fz = !0, null === (uz = Oz) || void 0 === uz || uz.terminate(), Oz = null, pz = null, wz.clear(), Xz.clear();
+      for (const Ez of Rz.values()) Ez(null);
+      Rz.clear(), null === (bz = Kz) || void 0 === bz || bz()
     }
 
-    function Ty() {
-      return Ky ??= async function() {
+    function rz() {
+      return dz ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Uy.e.ios_icon_worker_v1 && (0, hy.isWebKit)()) return;
+        if ("page" === Ez.d.ios_icon_worker_v1 && (0, nz.isWebKit)()) return;
         try {
-          oy = await async function() {
-            return await fy.ready(), fy.start()
+          Oz = await async function() {
+            return await iz.ready(), iz.start()
           }()
-        } catch (cb) {
-          return void Cy(`did not start (${String(cb)})`)
+        } catch (Mz) {
+          return void sz(`did not start (${String(Mz)})`)
         }
-        let yb = () => {};
-        const bb = new Promise((bb => {
-          yb = bb
+        let zz = () => {};
+        const uz = new Promise((uz => {
+          zz = uz
         }));
-        oy.onmessage = bb => {
+        Oz.onmessage = uz => {
           let {
-            data: Wy
-          } = bb;
-          if ("started" === Wy.type) By = oy, yb();
-          else if ("failed" === Wy.type) Cy(`failed a draw (${Wy.message})`);
+            data: bz
+          } = uz;
+          if ("started" === bz.type) pz = Oz, zz();
+          else if ("failed" === bz.type) sz(`failed a draw (${bz.message})`);
           else {
-            var Uy, hy;
-            null === (Uy = sy.get(Wy.id)) || void 0 === Uy || Uy(Wy.url), sy.delete(Wy.id), null === (hy = Sy) || void 0 === hy || hy()
+            var Ez, nz;
+            null === (Ez = Rz.get(bz.id)) || void 0 === Ez || Ez(bz.url), Rz.delete(bz.id), null === (nz = Kz) || void 0 === nz || nz()
           }
-        }, oy.onerror = bb => {
-          bb.preventDefault(), Cy(`stopped (${bb.message||"its script did not load or run"})`), yb()
+        }, Oz.onerror = uz => {
+          uz.preventDefault(), sz(`stopped (${uz.message||"its script did not load or run"})`), zz()
         };
-        const Wy = `did not start in ${Py/1e3} s`;
-        await (0, Zy.h)(bb, Py, Wy).catch((() => {
-          Cy(Wy)
+        const bz = `did not start in ${Hz/1e3} s`;
+        await (0, lz.l)(uz, Hz, bz).catch((() => {
+          sz(bz)
         }))
-      }(), Ky
+      }(), dz
     }
 
-    function Vy() {
-      if (null !== Sy || 0 === sy.size) return;
-      const yb = new Promise((yb => {
-          Sy = yb
+    function oz() {
+      if (null !== Kz || 0 === Rz.size) return;
+      const zz = new Promise((zz => {
+          Kz = zz
         })),
-        bb = `did not answer in ${cb/1e3} s`;
-      (0, Zy.h)(yb, cb, bb).then((() => {
-        Sy = null, Vy()
+        uz = `did not answer in ${tz/1e3} s`;
+      (0, lz.l)(zz, tz, uz).then((() => {
+        Kz = null, oz()
       }), (() => {
-        Sy = null, Cy(bb)
+        Kz = null, sz(uz)
       }))
     }
 
-    function Jy(yb, bb) {
-      let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      yb.postMessage(bb, Wy)
+    function Nz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      zz.postMessage(uz, bz)
     }
 
-    function gb(yb, bb, Wy, Uy) {
-      let hy = bb.get(Wy);
-      return void 0 === hy && (hy = Uy().then((async bb => {
+    function vz(zz, uz, bz, Ez) {
+      let nz = uz.get(bz);
+      return void 0 === nz && (nz = Ez().then((async uz => {
         let {
-          image: Wy,
-          request: Uy
-        } = bb;
+          image: bz,
+          request: Ez
+        } = uz;
         try {
-          const bb = await createImageBitmap(Wy);
-          Jy(yb, Uy(bb), [bb])
-        } catch (hy) {
-          Cy(`could not take an image (${String(hy)})`)
+          const uz = await createImageBitmap(bz);
+          Nz(zz, Ez(uz), [uz])
+        } catch (nz) {
+          sz(`could not take an image (${String(nz)})`)
         }
-      })), hy.catch((() => {
-        bb.get(Wy) === hy && bb.delete(Wy)
-      })), bb.set(Wy, hy)), hy
+      })), nz.catch((() => {
+        uz.get(bz) === nz && uz.delete(bz)
+      })), uz.set(bz, nz)), nz
     }
-    async function Gy(yb, bb) {
-      Ty();
-      const Wy = By;
-      if (null === Wy) return null;
-      if (await yb(Wy), By !== Wy) return null;
-      const Uy = ++qb;
-      return new Promise((yb => {
-        sy.set(Uy, yb), Jy(Wy, bb(Uy)), Vy()
+    async function xz(zz, uz) {
+      rz();
+      const bz = pz;
+      if (null === bz) return null;
+      if (await zz(bz), pz !== bz) return null;
+      const Ez = ++Zz;
+      return new Promise((zz => {
+        Rz.set(Ez, zz), Nz(bz, uz(Ez)), oz()
       }))
     }
 
-    function Oy(yb, bb, Wy) {
-      return Gy((bb => Promise.all([yb.top, yb.left, yb.right].map((yb => function(yb, bb) {
-        return gb(yb, Ey, bb, (async () => ({
-          image: await mb(bb),
-          request: yb => ({
+    function Jz(zz, uz, bz) {
+      return xz((uz => Promise.all([zz.top, zz.left, zz.right].map((zz => function(zz, uz) {
+        return vz(zz, wz, uz, (async () => ({
+          image: await fz(uz),
+          request: zz => ({
             type: "texture",
-            url: bb,
-            bitmap: yb
+            url: uz,
+            bitmap: zz
           })
         })))
-      }(bb, yb))))), (Uy => ({
+      }(uz, zz))))), (Ez => ({
         type: "draw",
-        id: Uy,
-        ...yb,
-        size: bb,
-        outlineWidth: Wy
+        id: Ez,
+        ...zz,
+        size: uz,
+        outlineWidth: bz
       })))
     }
 
-    function Ry(yb, bb, Wy, Uy) {
-      return Gy((Wy => function(yb, bb, Wy) {
-        return gb(yb, ly, bb, (async () => {
+    function Az(zz, uz, bz, Ez) {
+      return xz((bz => function(zz, uz, bz) {
+        return vz(zz, Xz, uz, (async () => {
           const {
-            texture: yb,
-            ...Uy
-          } = await Wy();
+            texture: zz,
+            ...Ez
+          } = await bz();
           return {
-            image: await mb(yb),
-            request: yb => ({
+            image: await fz(zz),
+            request: zz => ({
               type: "model",
-              name: bb,
-              bitmap: yb,
-              geometry: Uy
+              name: uz,
+              bitmap: zz,
+              geometry: Ez
             })
           }
         }))
-      }(Wy, yb, bb)), (bb => ({
+      }(bz, zz, uz)), (uz => ({
         type: "drawModel",
-        id: bb,
-        name: yb,
-        size: Wy,
-        outlineWidth: Uy
+        id: uz,
+        name: zz,
+        size: bz,
+        outlineWidth: Ez
       })))
     }
   },
-  35215: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => fy,
-      d: () => cb,
-      f: () => Zy
+  35877: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz,
+      f: () => Mz,
+      g: () => lz
     });
-    const Uy = 1 / 32,
-      hy = [15, 15, 15],
-      fy = {
+    const Ez = 1 / 32,
+      nz = [15, 15, 15],
+      iz = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function Zy(yb, bb, Wy, hy) {
+    function lz(zz, uz, bz, nz) {
       const {
-        vertices: fy,
-        uvs: Zy,
-        indices: Py,
-        shades: oy
-      } = yb, By = Wy * Uy, Ky = Wy - 2 * By, ey = new Float32Array(fy.length);
-      for (let Uy = 0; Uy < fy.length; Uy += 3) ey[Uy] = By + fy[Uy] * Ky, ey[Uy + 1] = By + fy[Uy + 1] * Ky, ey[Uy + 2] = fy[Uy + 2];
-      const qb = new Float32Array(Wy * Wy).fill(-1 / 0),
-        sy = new Uint8ClampedArray(Wy * Wy * 4),
-        Sy = 255 * yb.alphaCutoff;
-      for (let Uy = 0; Uy < Py.length; Uy += 3) {
-        const [yb, hy, fy] = [Py[Uy], Py[Uy + 1], Py[Uy + 2]], [cb, By, Ky] = [3 * yb, 3 * hy, 3 * fy], [Ey, ly, mb, Cy, Ty, Vy] = [ey[cb], ey[cb + 1], ey[By], ey[By + 1], ey[Ky], ey[Ky + 1]], Jy = (mb - Ey) * (Vy - ly) - (Ty - Ey) * (Cy - ly);
-        if (Math.abs(Jy) < 1e-9) continue;
-        const gb = oy[Uy / 3],
-          [Gy, Oy, Ry, vb, ib, My] = [Zy[2 * yb], Zy[2 * yb + 1], Zy[2 * hy], Zy[2 * hy + 1], Zy[2 * fy], Zy[2 * fy + 1]],
-          Yy = Math.max(0, Math.floor(Math.min(Ey, mb, Ty))),
-          Xy = Math.min(Wy - 1, Math.ceil(Math.max(Ey, mb, Ty))),
-          ny = Math.max(0, Math.floor(Math.min(ly, Cy, Vy))),
-          uy = Math.min(Wy - 1, Math.ceil(Math.max(ly, Cy, Vy)));
-        for (let Uy = ny; Uy <= uy; Uy++)
-          for (let yb = Yy; yb <= Xy; yb++) {
-            const [hy, fy] = [yb + .5, Uy + .5], Zy = ((hy - Ey) * (Vy - ly) - (Ty - Ey) * (fy - ly)) / Jy, Py = ((mb - Ey) * (fy - ly) - (hy - Ey) * (Cy - ly)) / Jy, oy = 1 - Zy - Py;
-            if (oy < 0 || Zy < 0 || Py < 0) continue;
-            const Yy = oy * ey[cb + 2] + Zy * ey[By + 2] + Py * ey[Ky + 2],
-              Xy = Uy * Wy + yb;
-            if (Yy <= qb[Xy]) continue;
-            const ny = Math.max(0, Math.min(bb.width - 1, Math.floor((oy * Gy + Zy * Ry + Py * ib) * bb.width))),
-              uy = 4 * (Math.max(0, Math.min(bb.height - 1, Math.floor((oy * Oy + Zy * vb + Py * My) * bb.height))) * bb.width + ny);
-            bb.pixels[uy + 3] < Sy || (qb[Xy] = Yy, sy[4 * Xy] = bb.pixels[uy] * gb, sy[4 * Xy + 1] = bb.pixels[uy + 1] * gb, sy[4 * Xy + 2] = bb.pixels[uy + 2] * gb, sy[4 * Xy + 3] = 255)
+        vertices: iz,
+        uvs: lz,
+        indices: tz,
+        shades: Hz
+      } = zz, Oz = bz * Ez, pz = bz - 2 * Oz, dz = new Float32Array(iz.length);
+      for (let Ez = 0; Ez < iz.length; Ez += 3) dz[Ez] = Oz + iz[Ez] * pz, dz[Ez + 1] = Oz + iz[Ez + 1] * pz, dz[Ez + 2] = iz[Ez + 2];
+      const Fz = new Float32Array(bz * bz).fill(-1 / 0),
+        Zz = new Uint8ClampedArray(bz * bz * 4),
+        Rz = 255 * zz.alphaCutoff;
+      for (let Ez = 0; Ez < tz.length; Ez += 3) {
+        const [zz, nz, iz] = [tz[Ez], tz[Ez + 1], tz[Ez + 2]], [Mz, Oz, pz] = [3 * zz, 3 * nz, 3 * iz], [Kz, wz, Xz, fz, sz, rz] = [dz[Mz], dz[Mz + 1], dz[Oz], dz[Oz + 1], dz[pz], dz[pz + 1]], oz = (Xz - Kz) * (rz - wz) - (sz - Kz) * (fz - wz);
+        if (Math.abs(oz) < 1e-9) continue;
+        const Nz = Hz[Ez / 3],
+          [vz, xz, Jz, Az, Tz, Lz] = [lz[2 * zz], lz[2 * zz + 1], lz[2 * nz], lz[2 * nz + 1], lz[2 * iz], lz[2 * iz + 1]],
+          Pz = Math.max(0, Math.floor(Math.min(Kz, Xz, sz))),
+          Gz = Math.min(bz - 1, Math.ceil(Math.max(Kz, Xz, sz))),
+          az = Math.max(0, Math.floor(Math.min(wz, fz, rz))),
+          Vz = Math.min(bz - 1, Math.ceil(Math.max(wz, fz, rz)));
+        for (let Ez = az; Ez <= Vz; Ez++)
+          for (let zz = Pz; zz <= Gz; zz++) {
+            const [nz, iz] = [zz + .5, Ez + .5], lz = ((nz - Kz) * (rz - wz) - (sz - Kz) * (iz - wz)) / oz, tz = ((Xz - Kz) * (iz - wz) - (nz - Kz) * (fz - wz)) / oz, Hz = 1 - lz - tz;
+            if (Hz < 0 || lz < 0 || tz < 0) continue;
+            const Pz = Hz * dz[Mz + 2] + lz * dz[Oz + 2] + tz * dz[pz + 2],
+              Gz = Ez * bz + zz;
+            if (Pz <= Fz[Gz]) continue;
+            const az = Math.max(0, Math.min(uz.width - 1, Math.floor((Hz * vz + lz * Jz + tz * Tz) * uz.width))),
+              Vz = 4 * (Math.max(0, Math.min(uz.height - 1, Math.floor((Hz * xz + lz * Az + tz * Lz) * uz.height))) * uz.width + az);
+            uz.pixels[Vz + 3] < Rz || (Fz[Gz] = Pz, Zz[4 * Gz] = uz.pixels[Vz] * Nz, Zz[4 * Gz + 1] = uz.pixels[Vz + 1] * Nz, Zz[4 * Gz + 2] = uz.pixels[Vz + 2] * Nz, Zz[4 * Gz + 3] = 255)
           }
       }
-      return cb(sy, Wy, hy), sy
+      return Mz(Zz, bz, nz), Zz
     }
 
-    function cb(yb, bb, Wy) {
-      let Uy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb => 0 !== yb[4 * bb + 3];
-      const fy = (yb, Wy) => yb < 0 || Wy < 0 || yb >= bb || Wy >= bb || !Uy(Wy * bb + yb),
-        Zy = [];
-      for (let hy = 0; hy < bb; hy++)
-        for (let yb = 0; yb < bb; yb++)
-          if (!fy(yb, hy)) yb: for (let Uy = -Wy; Uy <= Wy; Uy++) {
-            const cb = Wy - Math.abs(Uy);
-            for (let Wy = -cb; Wy <= cb; Wy++)
-              if (fy(yb + Wy, hy + Uy)) {
-                Zy.push(hy * bb + yb);
-                break yb
+    function Mz(zz, uz, bz) {
+      let Ez = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uz => 0 !== zz[4 * uz + 3];
+      const iz = (zz, bz) => zz < 0 || bz < 0 || zz >= uz || bz >= uz || !Ez(bz * uz + zz),
+        lz = [];
+      for (let nz = 0; nz < uz; nz++)
+        for (let zz = 0; zz < uz; zz++)
+          if (!iz(zz, nz)) zz: for (let Ez = -bz; Ez <= bz; Ez++) {
+            const Mz = bz - Math.abs(Ez);
+            for (let bz = -Mz; bz <= Mz; bz++)
+              if (iz(zz + bz, nz + Ez)) {
+                lz.push(nz * uz + zz);
+                break zz
               }
           }
-      for (const cb of Zy) yb.set(hy, 4 * cb), yb[4 * cb + 3] = 255
+      for (const Mz of lz) zz.set(nz, 4 * Mz), zz[4 * Mz + 3] = 255
     }
   },
-  35226: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => hy
+  35892: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => nz
     });
-    const Uy = {
-      wait: function(yb) {
-        return new Promise((bb => {
-          setTimeout(bb, yb)
+    const Ez = {
+      wait: function(zz) {
+        return new Promise((uz => {
+          setTimeout(uz, zz)
         }))
       },
       stallMs: 2e4
     };
-    class hy {
-      constructor(yb) {
-        let bb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Uy;
-        this.url = yb, this.options = bb, this.timing = Wy, this.fetched = null, this.scriptUrl = void 0, this.scriptUrl = yb
+    class nz {
+      constructor(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ez;
+        this.url = zz, this.options = uz, this.timing = bz, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = zz
       }
       ready() {
-        return this.fetched ??= this.fetchWithRetries(), this.fetched
+        if (null === this.fetched) {
+          const zz = new AbortController;
+          this.fetchAbort = zz, this.fetched = this.fetchWithRetries(zz.signal).finally((() => {
+            this.fetchAbort === zz && (this.fetchAbort = null)
+          }))
+        }
+        return this.fetched
+      }
+      cancel() {
+        null !== this.fetchAbort && (this.fetchAbort.abort(), this.fetchAbort = null, this.fetched = null)
       }
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries() {
-        for (let yb = 0;; yb++) {
-          const bb = new URL(this.url);
-          if (yb > 0 && bb.searchParams.set("cache-bust", `${Date.now()}-${yb}`), await this.fetchWhole(bb)) return void(this.scriptUrl = bb);
-          if (yb >= 3) return;
-          await this.timing.wait(500 * 2 ** yb)
+      async fetchWithRetries(zz) {
+        for (let uz = 0;; uz++) {
+          const bz = new URL(this.url);
+          if (uz > 0 && bz.searchParams.set("cache-bust", `${Date.now()}-${uz}`), await this.fetchWhole(bz, zz)) return void(this.scriptUrl = bz);
+          if (uz >= 3 || zz.aborted) return;
+          if (await this.timing.wait(500 * 2 ** uz), zz.aborted) return
         }
       }
-      async fetchWhole(yb) {
-        const bb = new AbortController;
-        let Wy;
-        const Uy = () => {
-          clearTimeout(Wy), Wy = setTimeout((() => {
-            bb.abort()
-          }), this.timing.stallMs)
-        };
-        Uy();
+      async fetchWhole(zz, uz) {
+        const bz = new AbortController;
+        let Ez;
+        const nz = () => {
+            clearTimeout(Ez), Ez = setTimeout((() => {
+              bz.abort()
+            }), this.timing.stallMs)
+          },
+          iz = () => {
+            bz.abort()
+          };
+        uz.addEventListener("abort", iz, {
+          once: !0
+        }), nz();
         try {
-          var hy;
-          const Wy = await fetch(yb, {
-            signal: bb.signal
+          var lz;
+          const uz = await fetch(zz, {
+            signal: bz.signal
           });
-          if (!Wy.ok) return !1;
-          const fy = null === (hy = Wy.body) || void 0 === hy ? void 0 : hy.getReader();
-          if (!fy) return !1;
+          if (!uz.ok) return !1;
+          const Ez = null === (lz = uz.body) || void 0 === lz ? void 0 : lz.getReader();
+          if (!Ez) return !1;
           for (;;) {
             const {
-              done: yb
-            } = await fy.read();
-            if (yb) return !0;
-            Uy()
+              done: zz
+            } = await Ez.read();
+            if (zz) return !0;
+            nz()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Wy)
+          clearTimeout(Ez), uz.removeEventListener("abort", iz)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

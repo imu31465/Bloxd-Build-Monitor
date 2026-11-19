@@ -1362,7 +1362,6 @@
   overflow: hidden;
   position: absolute;
   top: calc(var(--border-size) + var(--border-size)/2);
-  transition: border-radius .2s;
   width: calc(100% - var(--border-size)*2 - var(--border-size))
 }
 
@@ -1370,7 +1369,7 @@
   box-sizing: border-box;
   left: 0;
   top: 0;
-  transition: border .2s, border-top .2s, border-radius .2s
+  transition: border .2s, border-top .2s
 }
 
 .LogoLoader .LogoLoaderLoadingBar,
@@ -1383,18 +1382,17 @@
 .LogoLoader .LogoLoaderProgressBar .LogoLoaderProgressBarText {
   align-items: center;
   background-color: rgba(0, 0, 0, .6);
-  border-radius: 50%;
   box-sizing: border-box;
   color: var(--border-color-2);
   display: flex;
   font-size: .25em;
   font-weight: 800;
-  height: calc(100% - var(--border-size)*2 - var(--border-size));
+  height: calc(70% - var(--border-size)*2*.7);
+  inset: 0;
   justify-content: center;
-  left: calc(var(--border-size) + var(--border-size)/2);
+  margin: auto;
   position: absolute;
-  top: calc(var(--border-size) + var(--border-size)/2);
-  width: calc(100% - var(--border-size)*2 - var(--border-size))
+  width: calc(70% - var(--border-size)*2*.7)
 }
 
 .LogoLoader .LogoLoaderProgressBar svg {
@@ -1405,6 +1403,14 @@
   width: 100%
 }
 
+.LogoLoader.LogoLoaderIsLoading .LogoLoaderInner,
+.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
+  height: calc(70% - var(--border-size)*2*.7);
+  inset: 0;
+  margin: auto;
+  width: calc(70% - var(--border-size)*2*.7)
+}
+
 .LogoLoader.LogoLoaderIsProgressBar .LogoLoaderLoadingBar {
   border: var(--border-size) solid var(--border-color-2);
   border-radius: 50%
@@ -1412,7 +1418,6 @@
 
 .LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
   -ms-interpolation-mode: nearest-neighbor;
-  border-radius: 50%;
   image-rendering: optimizeSpeed;
   image-rendering: -o-crisp-edges;
   image-rendering: pixelated;
@@ -1432,21 +1437,12 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
   animation-play-state: paused
 }
 
-.LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading .LogoLoaderInner {
-  border-radius: 50%
-}
-
 .LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) {
   --border-size: 0.2rem
 }
 
 .LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) .LogoLoaderLoadingBar {
-  border: var(--border-size) solid #2e80ee;
-  border-radius: min(.8rem, .25em)
-}
-
-.LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) .LogoLoaderInner {
-  border-radius: min(.8rem, .15em)
+  border: var(--border-size) solid #2e80ee
 }
 
 .GenericVideoWrapper {
@@ -1475,7 +1471,6 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
 .GenericVideoWrapper .NitroVideoSkip {
   background-color: rgba(26, 31, 46, .6);
   border: 1px solid #0f0f0f;
-  border-radius: 4px;
   bottom: 1rem;
   color: #fff;
   font-size: 1.2rem;
@@ -1592,6 +1587,7 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
 .PromptGenericPopup .PromptGenericPopupBody {
   align-content: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center
 }
 
@@ -1961,6 +1957,24 @@ body {
   syntax: "<length>";
   inherits: true;
   initial-value: 0
+}
+
+:root {
+  --hud-viewport-height: 100vh;
+  --hud-auto-inset-top: max(var(--notchTop), 0.25rem);
+  --hud-auto-inset-right: max(var(--notchRight), 0.25rem);
+  --hud-auto-inset-bottom: max(min(3rem, var(--notchBottom)), 0.25rem);
+  --hud-auto-inset-left: max(var(--notchLeft), 0.25rem);
+  --hud-inset-top: var(--hud-safe-top, var(--hud-auto-inset-top));
+  --hud-inset-right: var(--hud-safe-right, var(--hud-auto-inset-right));
+  --hud-inset-bottom: var(--hud-safe-bottom, var(--hud-auto-inset-bottom));
+  --hud-inset-left: var(--hud-safe-left, var(--hud-auto-inset-left))
+}
+
+@supports(height:1dvh) {
+  :root {
+    --hud-viewport-height: 100dvh
+  }
 }
 
 html {
@@ -3111,8 +3125,7 @@ a {
 }
 
 .HudTextPanel.NoBackground .TextFromServerProgressBar {
-  border: 1px solid rgba(48, 58, 89, .4);
-  border-radius: 1px
+  border: 1px solid rgba(48, 58, 89, .4)
 }
 
 .TextFromServerProgressBar .TextFromServerProgressBarFill {
@@ -3167,7 +3180,6 @@ a {
   align-items: center;
   background-color: #303a59;
   border: .1em solid #838383;
-  border-radius: .5em;
   box-shadow: 0 .2em 0 #838383;
   box-sizing: border-box;
   color: #fff;
@@ -3273,10 +3285,13 @@ a {
 }
 
 .LoginButtonContainer .LoginButton.LoginButtonsLoggedIn {
-  border-right: none;
   filter: brightness(.7);
   pointer-events: none;
   transition: filter .5s
+}
+
+.LoginButtonContainer .LoginButton.LoginButtonsLoggedIn:not(.LoginButtonLinked) {
+  border-right: none
 }
 
 .LoginButtonContainer .LoginButton.LoginButtonsLoggedIn.LoginButtonLinked {
@@ -3313,6 +3328,16 @@ a {
   color: #838383
 }
 
+.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-google-play {
+  color: #1dd06d;
+  font-size: 1.1em
+}
+
+.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-gamepad-modern {
+  color: #838383;
+  font-size: 1.2em
+}
+
 .LoginButtonContainer .LoginButtonAction {
   align-items: center;
   box-shadow: none;
@@ -3322,6 +3347,33 @@ a {
   min-width: 4em;
   overflow-x: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.LoginButtonContainer .LoginButtonLinkedLabel,
+.LoginButtonContainer .LoginButtonUnlink {
+  font-size: 1rem;
+  margin-left: .6rem
+}
+
+.LoginButtonContainer .LoginButtonUnlink {
+  align-self: center;
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .LoginButtonContainer .LoginButtonUnlink:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.LoginButtonContainer .LoginButtonLinkedLabel {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  gap: .3em;
   white-space: nowrap
 }
 
@@ -3353,17 +3405,18 @@ a {
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame {
+  --row-icon-box: max(28px, max(36px, 3rem) * var(--hud-menu-scale, 1));
   align-items: center;
-  font-size: calc(max(36px, 3rem)*.66);
+  font-size: calc(var(--row-icon-box)*.66);
   gap: 4px
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightIcon>.UiItemIcon {
   align-items: center;
   display: flex;
-  height: max(36px, 3rem);
+  height: var(--row-icon-box);
   justify-content: center;
-  width: max(36px, 3rem)
+  width: var(--row-icon-box)
 }
 
 @media(pointer:coarse) {
@@ -3385,6 +3438,14 @@ a {
 
 .TopRightIconsContainer .TopRightIcons .TopRightTrayToggle.Open>.UiItemIcon {
   color: #ffb914
+}
+
+.TopRightIconsContainer .TopRightIcons .TopRightTrayToggle.Empty {
+  visibility: hidden
+}
+
+.TopRightIconsContainer .TopRightIcons .TopRightTrayToggle.Gone {
+  display: none
 }
 
 .TopRightIconsContainer .TopRightIcons .TopRightTrayToggle .TopRightTray {
@@ -3413,6 +3474,694 @@ a {
   position: relative
 }
 
+.HudMove-menu .RightElements .TopRightIconsContainer {
+  left: calc(var(--hud-menu-dx, 0)*100vw);
+  top: calc(var(--hud-menu-dy, 0)*var(--hud-viewport-height))
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-emotes-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon {
+  display: none
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-emotes-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-emotes-scale, 1))
+  }
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  translate: calc(var(--hud-emotes-dx, 0)*100vw) calc(var(--hud-emotes-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-perspective-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+  display: none
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(pointer:coarse) {
+  .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-perspective-scale, 1))
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-perspective-scale, 1))
+  }
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  translate: calc(var(--hud-perspective-dx, 0)*100vw) calc(var(--hud-perspective-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-scoreboard-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon {
+  display: none
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-scoreboard-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-scoreboard-scale, 1))
+  }
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  translate: calc(var(--hud-scoreboard-dx, 0)*100vw) calc(var(--hud-scoreboard-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-tasks-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon {
+  display: none
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-tasks-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-tasks-scale, 1))
+  }
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  translate: calc(var(--hud-tasks-dx, 0)*100vw) calc(var(--hud-tasks-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-cosmetics-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon {
+  display: none
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-cosmetics-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-cosmetics-scale, 1))
+  }
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  translate: calc(var(--hud-cosmetics-dx, 0)*100vw) calc(var(--hud-cosmetics-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-invite-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon {
+  display: none
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-invite-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-invite-scale, 1))
+  }
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  translate: calc(var(--hud-invite-dx, 0)*100vw) calc(var(--hud-invite-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
+.TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon>.ScaleOnHover {
+  scale: calc(var(--hud-settings-scale)/var(--hud-menu-scale, 1))
+}
+
+.HudHide-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon {
+  display: none
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon {
+  --row-icon-key: calc(var(--touch-key-size, calc(5 * clamp(1rem, 1.45vw, 1.5rem))) * var(--hud-settings-scale, 1));
+  height: var(--row-icon-box);
+  width: var(--row-icon-box)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon {
+    --row-icon-key: calc(var(--touch-key-size, calc(5 * min(10px, 2.9vw))) * var(--hud-settings-scale, 1))
+  }
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon.OutOfTray {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
+  align-items: center;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
+  font-size: calc(var(--row-icon-key)*.5);
+  height: var(--row-icon-key);
+  min-height: 0;
+  min-width: 0;
+  opacity: var(--hud-key-opacity, 1);
+  position: fixed;
+  right: var(--hud-inset-right);
+  top: var(--hud-inset-top);
+  width: var(--row-icon-key)
+}
+
+@media(pointer:coarse) {
+  .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
+  translate: calc(var(--hud-settings-dx, 0)*100vw) calc(var(--hud-settings-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon .ScaleOnHover {
+  display: flex;
+  scale: none
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon[data-pressing] {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px);
+  transition: none
+}
+
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon[data-pressing] .ScaleOnHover {
+  color: inherit;
+  transform: none
+}
+
+.TouchKeysRound.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
+  border-radius: 50%
+}
+
 .UiItemIcon {
   position: relative
 }
@@ -3436,7 +4185,6 @@ a {
   --pad-glyph-max-width: calc(2.1em + clamp(0px, min(100vh, 56.25vw) - 720px, 720px)*0.02);
   background-color: #303a59;
   border: .1em solid #838383;
-  border-radius: 999px;
   box-shadow: 0 .2em 0 #838383;
   box-sizing: content-box;
   color: #fff;
@@ -3486,7 +4234,6 @@ a {
 .Dot {
   background-color: #dd0202;
   border: 1px solid #0f0f0f;
-  border-radius: 50%;
   border-radius: 0;
   box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
   display: inline-block;
@@ -3531,7 +4278,6 @@ a {
 .NotificationBellContainer .NotificationBell .NotificationBellBadge {
   align-items: center;
   background-color: #e34f4f;
-  border-radius: .75em;
   box-sizing: border-box;
   color: #f2f2f2;
   display: flex;
@@ -3825,7 +4571,6 @@ a {
 
 .NotificationTray .NotificationTrayRows .NotificationRow .NotificationRowUnreadDot {
   background-color: #e34f4f;
-  border-radius: 50%;
   height: .85rem;
   left: .6rem;
   pointer-events: none;
@@ -3921,7 +4666,6 @@ a {
 }
 
 .CosmeticPackGrantedIcon {
-  border-radius: .4rem;
   font-size: 1rem;
   height: 3.9rem;
   overflow: hidden;
@@ -5222,7 +5966,6 @@ a {
 
 .UpdateLogsContainer .UpdateLog .UpdateLeft .UpdateAuthor img {
   background-color: #cfcfcf;
-  border-radius: 50%;
   height: 2rem;
   margin-right: .5rem;
   width: 2rem
@@ -5421,9 +6164,6 @@ a {
 }
 
 .LinksPopup .LinksPopupLinks {
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
   padding: 1.25rem 1.5rem 1.5rem
 }
 
@@ -5518,6 +6258,12 @@ a {
   flex-shrink: 0;
   font-size: 1.2rem;
   font-weight: 700
+}
+
+.LinkRowList {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem
 }
 
 .YoutubeIcon {
@@ -5628,7 +6374,6 @@ a {
 .TitleContainer .TitleContainerBottom .HomeTitleCcu .HomeTitleCcuDot {
   animation: HomeTitleCcuPulse 1.6s ease-in-out infinite;
   background-color: #1dd06d;
-  border-radius: 50%;
   flex-shrink: 0;
   height: .45rem;
   width: .45rem
@@ -5695,7 +6440,6 @@ a {
 
 .SocialCountBadge {
   align-items: center;
-  border-radius: .8rem;
   box-sizing: border-box;
   color: #303a59;
   display: flex;
@@ -6192,7 +6936,6 @@ a {
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFriends.SocialBarFriendsEmpty .SocialBarFriendsPlaceholderRows .SocialBarFriendsPlaceholderRow .SocialBarFriendsPlaceholderAvatar {
   background-color: hsla(0, 0%, 95%, .12);
-  border-radius: 50%;
   flex: 0 0 auto;
   height: 1.8rem;
   width: 1.8rem
@@ -6283,6 +7026,20 @@ a {
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton {
+  position: relative
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton .SocialBarShopDot {
+  background-color: #e34f4f;
+  height: .6rem;
+  pointer-events: none;
+  position: absolute;
+  right: .3rem;
+  top: .3rem;
+  width: .6rem
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .HomeLinkButtons {
@@ -6566,7 +7323,6 @@ a {
 
 .ProfilePreview .ProfilePreviewLeft .ProfilePreviewStatusDot {
   border: .2em solid #394980;
-  border-radius: 50%;
   bottom: 0;
   height: .6em;
   position: absolute;
@@ -7243,7 +7999,6 @@ a {
 .StoreWallet .StoreWalletPlusContainer {
   align-items: center;
   background-color: #c16088;
-  border-radius: .4rem;
   display: flex;
   height: 1.6rem;
   justify-content: center;
@@ -7437,7 +8192,6 @@ a {
 
 .LiveStreamPromotion .LiveStreamPromotionLiveBadge {
   background: #e34f4f;
-  border-radius: .35rem;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -7473,8 +8227,7 @@ a {
   --contrast-border-top: 1rem;
   --contrast-border-right: 1.5rem;
   --contrast-border-bottom: 0.5rem;
-  --contrast-border-left: 1.5rem;
-  --contrast-border-radius: 0.5rem 0.5rem 0 0
+  --contrast-border-left: 1.5rem
 }
 
 .AdBannerContainer .AdBannerExtraContrastAnchorTop,
@@ -7482,8 +8235,7 @@ a {
   --contrast-border-top: 0.5rem;
   --contrast-border-right: 1.5rem;
   --contrast-border-bottom: 1rem;
-  --contrast-border-left: 1.5rem;
-  --contrast-border-radius: 0 0 0.5rem 0.5rem
+  --contrast-border-left: 1.5rem
 }
 
 .AdBannerContainer .AdBannerExtraContrastAnchorLeft,
@@ -7491,8 +8243,7 @@ a {
   --contrast-border-top: 1rem;
   --contrast-border-right: 1.5rem;
   --contrast-border-bottom: 1.5rem;
-  --contrast-border-left: 0.5rem;
-  --contrast-border-radius: 0 0.5rem 0.5rem 0
+  --contrast-border-left: 0.5rem
 }
 
 .AdBannerContainer .AdBannerExtraContrastAnchorRight,
@@ -7500,8 +8251,7 @@ a {
   --contrast-border-top: 1rem;
   --contrast-border-right: 0.5rem;
   --contrast-border-bottom: 1.5rem;
-  --contrast-border-left: 1.5rem;
-  --contrast-border-radius: 0.5rem 0 0 0.5rem
+  --contrast-border-left: 1.5rem
 }
 
 .AdBannerContainer .AdBannerSlot {
@@ -7534,7 +8284,6 @@ a {
 
 .AdBannerContainer .AdBannerLoader.AdBannerLoaderExtraContrast {
   background-color: #f2f2f2;
-  border-radius: var(--contrast-border-radius);
   outline: 1px solid #000;
   padding: var(--contrast-border-top) var(--contrast-border-right) var(--contrast-border-bottom) var(--contrast-border-left)
 }
@@ -7575,7 +8324,6 @@ a {
 .AdBannerContainer .AdBanner.AdBannerExtraContrast {
   background-color: #fff;
   border-color: #f2f2f2 !important;
-  border-radius: var(--contrast-border-radius);
   border-style: solid !important;
   border-width: var(--contrast-border-top) var(--contrast-border-right) var(--contrast-border-bottom) var(--contrast-border-left) !important;
   outline: 1px solid #000;
@@ -7585,7 +8333,6 @@ a {
 
 .AdBannerContainer .AdBanner.AdBannerExtraContrast.AdBannerExtraContrastAnchorTop .AdBannerRemoveAds {
   border-bottom: 1px solid #000;
-  border-radius: 0 0 .4rem .4rem;
   border-top: none;
   bottom: auto;
   top: calc(100% + var(--contrast-border-bottom))
@@ -7611,7 +8358,6 @@ a {
   background-color: #f2f2f2;
   border: 1px solid #000;
   border-bottom: none;
-  border-radius: .4rem .4rem 0 0;
   bottom: calc(100% + var(--contrast-border-top));
   color: #333;
   cursor: pointer;
@@ -8021,7 +8767,6 @@ a {
 .AdBannerContainer .AdBanner.CosmeticPackAd .CosmeticPackAdOverlay .CosmeticPackAdFooter .CosmeticPackAdTitle .CosmeticPackAdItemCount {
   align-items: center;
   border: 3px solid #ffb914;
-  border-radius: 5px;
   color: #ffb914;
   display: flex;
   font-weight: 800;
@@ -8049,33 +8794,33 @@ a {
   transition: transform .2s
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic {
   border-color: rgba(110, 170, 90, .6);
   box-shadow: 0 0 19px rgba(110, 170, 90, .3), inset 0 0 8px rgba(110, 170, 90, .1);
   transition: transform .15s, border-color .15s, box-shadow .3s
 }
 
 @media(hover:hover) {
-  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced:hover {
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic:hover {
     border-color: #6eaa5a;
     box-shadow: 0 0 32px rgba(110, 170, 90, .5), inset 0 0 8px rgba(110, 170, 90, .15)
   }
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced.pad-focused {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic.pad-focused {
   border-color: #6eaa5a;
   box-shadow: 0 0 32px rgba(110, 170, 90, .5), inset 0 0 8px rgba(110, 170, 90, .15)
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced .CosmeticPackAdOverlay {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic .CosmeticPackAdOverlay {
   z-index: 2
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEnhanced .CosmeticPackAdOverlay .CosmeticPackAdTitle {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdEpic .CosmeticPackAdOverlay .CosmeticPackAdTitle {
   color: #8cdc78
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary {
   animation: cosmeticPackAdPremiumBorderCycle 4s linear infinite;
   border-style: solid;
   border-width: 4px;
@@ -8085,16 +8830,16 @@ a {
 }
 
 @media(hover:hover) {
-  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium:hover {
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary:hover {
     box-shadow: 0 0 24px rgba(95, 65, 120, .7), 0 0 56px rgba(50, 90, 95, .5), inset 0 0 16px rgba(95, 65, 120, .2)
   }
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium.pad-focused {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary.pad-focused {
   box-shadow: 0 0 24px rgba(95, 65, 120, .7), 0 0 56px rgba(50, 90, 95, .5), inset 0 0 16px rgba(95, 65, 120, .2)
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium:after {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary:after {
   animation: cosmeticPackAdStarTwinkle 3s ease-in-out infinite alternate;
   background-image: radial-gradient(1px 1px at 20% 30%, hsla(0, 0%, 100%, .8) 0, transparent 100%), radial-gradient(1px 1px at 40% 70%, hsla(0, 0%, 100%, .6) 0, transparent 100%), radial-gradient(1px 1px at 60% 15%, hsla(0, 0%, 100%, .7) 0, transparent 100%), radial-gradient(1px 1px at 80% 50%, hsla(0, 0%, 100%, .5) 0, transparent 100%), radial-gradient(1px 1px at 10% 85%, hsla(0, 0%, 100%, .6) 0, transparent 100%), radial-gradient(1px 1px at 90% 80%, hsla(0, 0%, 100%, .7) 0, transparent 100%);
   content: "";
@@ -8104,11 +8849,11 @@ a {
   z-index: 1
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium .CosmeticPackAdOverlay {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay {
   z-index: 2
 }
 
-.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdPremium .CosmeticPackAdOverlay .CosmeticPackAdTitle {
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle {
   -webkit-text-fill-color: transparent;
   animation: cosmeticPackAdPremiumNameShimmer 3s linear infinite;
   background: linear-gradient(90deg, #b388ff, #64ffda, #ffb914, #b388ff);
@@ -8379,7 +9124,6 @@ a {
 
 .CosmeticPackOwned {
   background-color: #ffb914;
-  border-radius: .4rem;
   color: #fff;
   font-size: 1.2rem;
   padding: .1rem .5rem .2rem;
@@ -8397,7 +9141,6 @@ a {
 
 .CosmeticPackItemCount {
   border: .2rem solid #ffb914;
-  border-radius: .4rem;
   color: #ffb914;
   font-size: 1.2rem;
   font-weight: 800;
@@ -8461,6 +9204,11 @@ a {
   font-size: 3rem;
   font-weight: 800;
   text-align: center
+}
+
+.CosmeticShopDetail .CosmeticShopDetailHeader .CosmeticShopDetailTitleArea .CosmeticShopDetailTier {
+  font-size: 1.5rem;
+  margin-top: .3rem
 }
 
 .CosmeticShopDetail .CosmeticShopDetailHeader .CosmeticShopDetailTitleArea .CosmeticPackItemCount {
@@ -8755,9 +9503,9 @@ a {
 }
 
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea .CosmeticShopDetailPreviewStill {
-  background-position: 50%;
+  background-position: center 87.2%;
   background-repeat: no-repeat;
-  background-size: auto 72%;
+  background-size: auto 76.5%;
   inset: 0;
   pointer-events: none;
   position: absolute;
@@ -8782,7 +9530,6 @@ a {
   align-items: center;
   background-color: rgba(26, 31, 46, .6);
   border: none;
-  border-radius: 2rem;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -8790,14 +9537,11 @@ a {
   font-size: 1.4rem;
   gap: .5rem;
   inset-block-end: 1rem;
-  inset-inline: 0;
-  margin-inline: auto;
+  inset-inline-end: 1rem;
   min-height: 44px;
   padding: .5rem 1.2rem;
   position: absolute;
-  white-space: nowrap;
-  width: -moz-fit-content;
-  width: fit-content
+  white-space: nowrap
 }
 
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea .CosmeticShopDetailPreview3dCue:focus-visible {
@@ -8837,23 +9581,19 @@ a {
   color: #e34f4f
 }
 
-.CosmeticShopDetail .CosmeticShopDetailFooter .CosmeticShopDetailLoginPrompt {
-  align-items: center;
-  display: flex;
-  font-size: 1.5rem;
-  gap: 1rem;
-  justify-content: center
-}
-
 .CosmeticShopDetail .CosmeticShopDetailFooter .CosmeticShopGiftRow {
   align-items: center;
-  display: flex
+  box-sizing: border-box;
+  display: flex;
+  max-width: 100%;
+  padding: 0 1rem
 }
 
 .CosmeticShopDetail .CosmeticShopDetailFooter .CosmeticShopGiftRow .CosmeticShopGiftRecipientInput {
   box-sizing: border-box;
   flex-grow: 1;
   font-size: inherit;
+  min-width: 0;
   padding: .4rem 0
 }
 
@@ -8922,7 +9662,7 @@ a {
 }
 
 .CosmeticShopDetail .CosmeticShopDetailCtaHighlight .RainbowButton {
-  animation: packCtaHighlight .8s ease-in-out 3
+  animation: loginResumeHighlight .8s ease-in-out 3
 }
 
 .CosmeticShopDetail .CosmeticShopDetailCtaHighlight .RainbowButton:before {
@@ -8934,6 +9674,45 @@ a {
   display: flex;
   gap: .5rem;
   justify-content: center
+}
+
+.CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending {
+  background-color: rgba(26, 31, 46, .3);
+  display: inline-block;
+  height: .8em;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  width: 2em
+}
+
+.CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending:after {
+  animation: loadingShimmer 1.8s ease-in-out infinite;
+  background-image: linear-gradient(100deg, transparent 35%, hsla(0, 0%, 100%, .07) 50%, transparent 65%);
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 300%
+}
+
+.CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending[data-off-screen]:after,
+html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending:after {
+  animation-play-state: paused
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending {
+    background-image: linear-gradient(100deg, transparent 35%, hsla(0, 0%, 100%, .07) 50%, transparent 65%);
+    background-repeat: no-repeat;
+    background-size: 300% 100%
+  }
+
+  .CosmeticShopDetail .CosmeticShopPurchaseLabel .CosmeticShopPurchaseLabelPending:after {
+    display: none
+  }
 }
 
 .CosmeticShopDetail .CosmeticShopDetailHeaderCta {
@@ -8950,13 +9729,6 @@ a {
 
 .CosmeticShopDetail .CosmeticShopDetailHeaderCta>.RainbowButton .ButtonBody {
   padding: .4rem 1.2rem
-}
-
-.CosmeticShopDetail .CosmeticShopDetailHeaderCta .CosmeticShopDetailLoginPrompt {
-  align-items: center;
-  display: flex;
-  font-size: 1.5rem;
-  gap: .6rem
 }
 
 .CosmeticShopDetail .CosmeticShopDetailHeaderCta .CosmeticShopGiftToggle {
@@ -9015,6 +9787,7 @@ a {
   }
 
   .CosmeticShopDetail .CosmeticShopDetailBody {
+    container-type: size;
     padding: 0 .5rem
   }
 
@@ -9050,19 +9823,17 @@ a {
     max-height: 100%;
     min-height: 0
   }
+
+  .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea .CosmeticShopDetailPreview3dCue {
+    inset-block: min(100% + 1rem, 100cqb - 1rem - 44px) auto
+  }
 }
 
-@keyframes packCtaHighlight {
-
-  0%,
-  to {
-    filter: none;
-    transform: scale(1)
-  }
-
-  50% {
-    filter: drop-shadow(0 0 .8rem rgba(255, 214, 102, .9));
-    transform: scale(1.08)
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.PremiumCurrencyPurchasePopup {
+    box-sizing: border-box;
+    max-width: none;
+    width: calc(100vw - 2rem)
   }
 }
 
@@ -9070,7 +9841,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: min(40rem, 90vw)
+  max-width: 100%;
+  width: 40rem
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseTitle {
@@ -9081,7 +9853,6 @@ a {
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseCard {
   align-items: center;
   background: #3c4b68;
-  border-radius: .6rem;
   display: flex;
   gap: 1.2rem;
   min-height: 6.4rem;
@@ -9091,7 +9862,6 @@ a {
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseIcon {
   align-items: flex-end;
   background: #394980;
-  border-radius: .4rem;
   display: flex;
   flex-shrink: 0;
   height: 6.4rem;
@@ -9152,7 +9922,6 @@ a {
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner {
-  border-radius: .6rem;
   font-size: 1.5rem;
   font-weight: 800;
   padding: .6rem 1rem;
@@ -9180,14 +9949,28 @@ a {
   justify-content: center
 }
 
-.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUpButton {
-  flex-shrink: 0;
-  font-size: 1.6rem
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp {
+  flex-wrap: wrap
 }
 
-.PremiumCurrencyPurchase .PremiumCurrencyPurchaseError {
-  color: #ff8a80;
-  font-size: 1.4rem
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp .PremiumCurrencyPurchaseCardText {
+  flex-basis: auto
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp .PremiumCurrencyPurchaseTopUpNeed {
+  min-width: 100%;
+  width: 0
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTopUp .PremiumCurrencyPurchaseTopUpButton {
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  margin-left: auto
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseNotice {
+  font-size: 1.4rem;
+  text-align: inherit
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseButtons {
@@ -9204,17 +9987,26 @@ a {
   gap: .6rem
 }
 
+@keyframes loginResumeHighlight {
+
+  0%,
+  to {
+    filter: none;
+    transform: scale(1)
+  }
+
+  50% {
+    filter: drop-shadow(0 0 .8rem rgba(252, 211, 115, .9));
+    transform: scale(1.08)
+  }
+}
+
 .PremiumCurrencyBundles {
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%
-}
-
-.PremiumCurrencyBundles .PremiumCurrencyBundlesError {
-  color: #ff8a80;
-  text-align: center
 }
 
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid {
@@ -9225,11 +10017,14 @@ a {
   width: 100%
 }
 
+.PremiumCurrencyBundles .PremiumCurrencyBundleGrid[data-off-screen] .PremiumCurrencyBundle:before,
+html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrencyBundleGrid .PremiumCurrencyBundle:before {
+  animation-play-state: paused
+}
+
 .PremiumCurrencyBundles .PremiumCurrencyBundle {
   --pileGlow: rgba(243, 138, 182, .18);
-  --rayLight: rgba(124, 131, 251, .35);
-  --rayDark: rgba(34, 42, 159, .2);
-  --raySpan: 15deg;
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270.35%27/><stop offset=%27.7%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.2%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L18.38 -68.58Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L18.38 -68.58L35.5 -61.49Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/></svg>");
   --rayTurn: 60s;
   align-items: center;
   background: radial-gradient(circle at 50% 52%, #545efa, #463bd9 45%, #222a9f);
@@ -9248,11 +10043,9 @@ a {
 .PremiumCurrencyBundles .PremiumCurrencyBundle:before {
   animation: premiumCurrencyBundleRays var(--rayTurn) linear infinite;
   aspect-ratio: 1;
-  background: repeating-conic-gradient(var(--rayLight) 0deg var(--raySpan), var(--rayDark) var(--raySpan) calc(var(--raySpan)*2));
+  background: var(--rays) center/100% 100%;
   content: "";
   left: 50%;
-  -webkit-mask-image: radial-gradient(closest-side, #000 15%, transparent 70%);
-  mask-image: radial-gradient(closest-side, #000 15%, transparent 70%);
   pointer-events: none;
   position: absolute;
   top: 52%;
@@ -9393,20 +10186,20 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   }
 }
 
+.PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleHighlight {
+  animation: loginResumeHighlight .8s ease-in-out 3
+}
+
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier3,
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier4 {
   --pileGlow: rgba(243, 138, 182, .28);
-  --rayLight: rgba(143, 150, 252, .45);
-  --rayDark: rgba(34, 42, 159, .25);
-  --raySpan: 10deg;
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270.45%27/><stop offset=%27.7%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L12.33 -69.92Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L12.33 -69.92L24.28 -66.72Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2820%29%27/><use href=%27%23w%27 transform=%27rotate%2840%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2880%29%27/><use href=%27%23w%27 transform=%27rotate%28100%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28140%29%27/><use href=%27%23w%27 transform=%27rotate%28160%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28200%29%27/><use href=%27%23w%27 transform=%27rotate%28220%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28260%29%27/><use href=%27%23w%27 transform=%27rotate%28280%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28320%29%27/><use href=%27%23w%27 transform=%27rotate%28340%29%27/></svg>");
   --rayTurn: 40s
 }
 
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier5 {
   --pileGlow: rgba(243, 138, 182, .4);
-  --rayLight: rgba(255, 185, 20, .3);
-  --rayDark: rgba(34, 42, 159, .25);
-  --raySpan: 7.5deg;
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270.3%27/><stop offset=%27.7%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L9.27 -70.39Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L9.27 -70.39L18.38 -68.58Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2815%29%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2845%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2875%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28105%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28135%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28165%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28195%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28225%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28255%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28285%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28315%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/><use href=%27%23w%27 transform=%27rotate%28345%29%27/></svg>");
   --rayTurn: 25s
 }
 
@@ -9421,29 +10214,56 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   }
 }
 
-.LinkAccountToBuy {
-  align-items: stretch;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: .75rem;
-  width: 100%
-}
-
-.LinkAccountToBuy .LinkAccountToBuyTitle {
-  font-size: 1.3rem;
-  text-align: center
-}
-
-.LinkAccountToBuy .LoginOptionListButtons {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center
-}
-
-.CheckoutError {
+.CheckoutNotice {
   color: #ff8a80;
   text-align: center
+}
+
+.CheckoutNotice.CheckoutNoticeInfo {
+  color: #85baff
+}
+
+.BundlesLoadFailed {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.StoreTierLabel {
+  color: #cfcfcf;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  line-height: 1;
+  text-shadow: -1px -1px 0 #22283b, -1px 0 0 #22283b, -1px 1px 0 #22283b, 0 -1px 0 #22283b, 0 0 0 #22283b, 0 1px 0 #22283b, 1px -1px 0 #22283b, 1px 0 0 #22283b, 1px 1px 0 #22283b;
+  text-transform: uppercase;
+  white-space: nowrap
+}
+
+.StoreTierLabel .svg-inline--fa path:only-of-type,
+.StoreTierLabel.svg-inline--fa path:only-of-type {
+  stroke: #22283b;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  paint-order: stroke fill
+}
+
+.StoreTierLabel.StoreTierLabelRare {
+  color: #85baff
+}
+
+.StoreTierLabel.StoreTierLabelEpic {
+  color: #d49cf9
+}
+
+.StoreTierLabel.StoreTierLabelLegendary {
+  color: #fcd373
+}
+
+.StoreTierLabel.StoreTierLabelMythic {
+  color: #f38ab6
 }
 
 .SuperRankPerksTable {
@@ -10174,17 +10994,29 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 
 .LoadingOverlay {
   align-items: stretch;
-  contain: layout style paint;
+  background-color: #22283b;
   display: flex;
   flex-direction: row;
   height: 100vh;
   height: 100dvh;
-  isolation: isolate;
   left: 0;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 18
+}
+
+.LoadingOverlay.LoadingOverlayReady {
+  background-color: rgba(26, 31, 46, .6)
+}
+
+.LoadingOverlay.LoadingOverlayReady .MiniLoadingMessage {
+  opacity: 0
+}
+
+.LoadingOverlay {
+  contain: layout style paint;
+  isolation: isolate
 }
 
 .LoadingOverlay.LoadingOverlay-enter {
@@ -10219,7 +11051,7 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 }
 
 .LoadingOverlay.LoadingOverlayReady .BackButtonContainer .BackButton {
-  background-color: rgba(34, 40, 59, .9);
+  background-color: rgba(38, 52, 93, .85);
   padding: .15em .5em
 }
 
@@ -10264,25 +11096,9 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 }
 
 .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .MiniLoadingMessage {
+  color: #f2f2f2;
   font-size: 1.4rem;
-  opacity: .8;
   text-align: center
-}
-
-.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightFiller {
-  height: calc(50% - 12rem)
-}
-
-.LoadingOverlay .LoadingOverlayDividerContainer {
-  align-items: center;
-  display: flex;
-  justify-content: center
-}
-
-.LoadingOverlay .LoadingOverlayDividerContainer .LoadingOverlayDivider {
-  background-color: hsla(0, 0%, 64%, .2);
-  height: 50%;
-  width: .2rem
 }
 
 .HidableBannerWrapperHidden *,
@@ -10323,6 +11139,17 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   top: 0;
   width: 100vw;
   z-index: 20
+}
+
+.ReconnectingOverlay.ReconnectingOverlayRestoring {
+  justify-content: flex-start;
+  padding-top: 30dvh;
+  z-index: 1
+}
+
+.ReconnectingOverlay.ReconnectingOverlayRestoring .ReconnectingOverlayText {
+  font-size: min(2.5rem, 5vw, 6vh);
+  font-size: min(2.5rem, 5vw, 6dvh)
 }
 
 .ReconnectingOverlay.ReconnectingOverlayFrozen {
@@ -10907,7 +11734,6 @@ html[data-app-covered] .WholeAppWrapper .GameThumbnailPlaceholderContainer .Game
 .GameBadgeLiveDot {
   animation: GameBadgeLivePulse 1.6s ease-in-out infinite;
   background-color: #fff;
-  border-radius: 50%;
   flex-shrink: 0;
   height: .45em;
   margin-right: .35em;
@@ -11035,7 +11861,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .GameThumbnailDiscoverability .GameThumbnailDiscoverabilityChips .GameThumbnailDiscoverabilityChip {
   background: hsla(0, 0%, 51%, .45);
-  border-radius: .15rem;
   color: #f2f2f2;
   font-size: .65rem;
   padding: 0 .2rem
@@ -11122,7 +11947,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .ProfileCardHost .ProfileCard .ProfileCardGrabber .ProfileCardGrabberBar {
   background-color: hsla(0, 0%, 100%, .35);
-  border-radius: .15rem;
   height: .3rem;
   width: 3rem
 }
@@ -11265,7 +12089,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardHead .ProfileCardStatusRow .ProfileCardStatus .ProfileCardStatusDot {
   background-color: #838383;
   border: .15rem solid rgba(0, 0, 0, .4);
-  border-radius: 50%;
   flex-shrink: 0;
   height: .65rem;
   width: .65rem
@@ -11312,7 +12135,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardStats .ProfileCardStat {
   align-items: center;
   background-color: rgba(0, 0, 0, .15);
-  border-radius: .3rem;
   display: flex;
   flex: 1 1;
   gap: .4rem;
@@ -11400,7 +12222,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardGames {
   background-color: rgba(0, 0, 0, .15);
-  border-radius: .3rem;
   margin: .4rem .9rem 0;
   padding: .3rem .5rem .5rem
 }
@@ -11569,62 +12390,108 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   }
 }
 
-.GameBackgroundScreen.MakeDiscordReportBackgroundScreen,
-.GameBackgroundScreen.MakeReportBackgroundScreen {
+.GameBackgroundScreen.ReportBackgroundScreen {
+  background-color: rgba(26, 31, 46, .6);
   z-index: 17
 }
 
-.ReportKeyBox {
-  background-color: #22283b;
+.GameBackgroundScreen.ReportBackgroundScreen .ReportPanel {
+  background-color: #303a59;
   border: 1px solid #0f0f0f;
   border-radius: 0;
   box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%)
-}
-
-.ReportKeyBoxHeader {
-  background-color: #394980;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
+  max-width: 80vw;
   padding: 1.5rem;
   text-align: center
 }
 
-.ReportKeyBoxDescription {
+.PromptGenericPopup.ReportCard {
+  display: flex;
+  flex-direction: column;
   font-size: 1.25rem;
-  line-height: 1.5em;
-  padding: 0 2rem 1rem;
-  text-align: center
+  max-height: calc(100vh - 5rem);
+  max-height: calc(100dvh - 5rem);
+  max-width: none;
+  width: min(50rem, 80vw)
 }
 
-.ReportKeyBoxSubheader {
-  font-size: 1.75rem;
-  margin-bottom: .75rem;
-  padding-top: 1.3rem
+.PromptGenericPopup.ReportCard>* {
+  flex-shrink: 0
 }
 
-.ReportKeyInnerWrapper {
+.PromptGenericPopup.ReportCard .PromptGenericPopupSubtitle {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  padding-bottom: 0
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons {
+  grid-gap: .75rem 1.5rem;
+  align-items: start;
+  display: grid;
+  flex-shrink: 1;
+  gap: .75rem 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  min-height: 0;
+  overflow-y: auto;
+  text-align: left
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  gap: .75rem
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason input {
+  accent-color: #ffb914;
+  flex-shrink: 0;
+  height: 1.1em;
+  margin: .15em 0 0;
+  width: 1.1em
+}
+
+.PromptGenericPopup.ReportCard .ReportCardDetails {
+  box-sizing: border-box;
+  font-size: inherit;
+  height: calc(4.5em + 1rem + 2px);
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding: .5rem;
+  resize: none;
+  text-align: left;
+  width: 100%
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .PromptGenericPopup.ReportCard .ReportCardDetails {
+    height: calc(3em + 1rem + 2px)
+  }
+}
+
+.PromptGenericPopup.ReportCard .ReportCardNote {
+  color: #fcd373;
+  padding-top: 1rem
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 1.3rem 1rem
+  font-size: 1.25rem;
+  gap: 1.5rem;
+  justify-content: center
 }
 
-.ReportKeyInner {
-  background-color: #394980;
-  border-color: #1a2139 #6578ba #6578ba #1a2139;
-  border-style: solid;
-  border-width: .2rem;
-  font-size: 1rem;
-  margin-right: 1.5rem;
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyInner {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
   overflow-x: auto;
   padding: .5rem;
   -webkit-user-select: all;
@@ -11632,137 +12499,8 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   white-space: nowrap
 }
 
-.ReportKeyCopyButton {
-  width: 4rem
-}
-
-.ReportKeyCopyButton .ButtonBody {
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyCopyButton .ButtonBody {
   padding: .75rem 1.5rem
-}
-
-.ReportMenu {
-  background-color: #22283b;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  display: flex;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%)
-}
-
-.MakeReportArea {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  height: auto;
-  max-height: 40rem;
-  max-width: 50rem;
-  overflow-y: auto;
-  width: 50vw
-}
-
-.ReportSubTitle {
-  font-size: 1.5rem;
-  text-align: center
-}
-
-.MakeReportOptions {
-  align-items: center;
-  padding: 0 3rem 1rem
-}
-
-.ReportTitle {
-  background-color: #394980;
-  font-size: 2rem;
-  line-height: 3rem;
-  padding: .5rem 0
-}
-
-.ReportMessage,
-.ReportTitle {
-  height: 3rem;
-  text-align: center;
-  width: 100%
-}
-
-.ReportMessage {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  overflow: hidden;
-  padding: 1rem 0 0;
-  text-overflow: ellipsis;
-  white-space: nowrap
-}
-
-.ReportLink {
-  color: #85baff
-}
-
-.ReportLink:hover {
-  color: #f2f2f2
-}
-
-.ReportExtraInfoTextArea {
-  background-color: #303a59;
-  border: 1px solid transparent;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  font-family: var(--root-font-family);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  outline: none;
-  resize: none;
-  text-align: left;
-  white-space: pre-wrap;
-  width: 100%
-}
-
-.ReportExtraInfoTextArea:focus {
-  border-color: #ffb914
-}
-
-.ReportExtraInfoWrapper {
-  align-items: center;
-  color: #fcd373;
-  padding: .5rem;
-  text-align: center
-}
-
-.ReportExtraInfoWrapper a {
-  color: #85baff;
-  font-weight: 600
-}
-
-.ReportKeyBox a {
-  color: #fcd373;
-  font-weight: 600
-}
-
-.ReportPolicyCheckList {
-  grid-gap: .5rem;
-  align-items: start;
-  display: grid;
-  gap: .5rem;
-  grid-template-columns: 1fr 1fr
-}
-
-.ReportMenuButtonList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center
-}
-
-.ReportMenuButton {
-  margin: .5rem;
-  width: 30%
-}
-
-.ReportMenuButton .ButtonBody {
-  padding: 1.1rem 2rem
 }
 
 .DebugOverlay {
@@ -11861,7 +12599,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .DebugOverlay .DebugOverlaySection .DebugOverlayEntry .DebugOverlayToggle {
   background: hsla(0, 0%, 51%, .35);
   border: .1rem solid hsla(0, 0%, 51%, .5);
-  border-radius: .2rem;
   color: #a4a4a4;
   cursor: pointer;
   font: inherit;
@@ -12486,7 +13223,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   align-items: center;
   background-color: rgba(0, 0, 0, .35);
   border: 1px solid #3c4b68;
-  border-radius: .3rem;
   display: flex;
   flex: 1 1;
   font-size: 1.2rem;
@@ -14082,7 +14818,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   background-color: #ffb914;
   border: 1px solid #0f0f0f;
   border-radius: 0;
-  border-radius: 1rem;
   box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
   color: #fff;
   cursor: pointer;
@@ -14200,7 +14935,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .CreateCustomGameCTA .CTAIconArea {
   align-items: center;
   background-color: rgba(255, 185, 20, .15);
-  border-radius: 50%;
   color: #ffb914;
   display: flex;
   flex-shrink: 0;
@@ -14265,7 +14999,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .CreateCustomGameStepsPopup .StepsPopupHeader .StepsPopupIcon {
   align-items: center;
   background-color: rgba(255, 185, 20, .15);
-  border-radius: 50%;
   color: #ffb914;
   display: flex;
   font-size: 1.2rem;
@@ -14304,7 +15037,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .CreateCustomGameStepsPopup .StepsContainer .StepCard .StepNumber {
   align-items: center;
   background-color: rgba(255, 185, 20, .15);
-  border-radius: 50%;
   color: #ffb914;
   display: flex;
   flex-shrink: 0;
@@ -14575,8 +15307,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 .YoutubeHomepageSection .YoutubeTile .YoutubeTileTitlePlaceholder,
 .YoutubeHomepageSection .YoutubeTile .YoutubeTileViewCountPlaceholder {
   animation: pulseYoutubePlaceholder 1s infinite;
-  background-color: hsla(0, 0%, 100%, .22);
-  border-radius: .2rem
+  background-color: hsla(0, 0%, 100%, .22)
 }
 
 @keyframes pulseYoutubePlaceholder {
@@ -14705,7 +15436,6 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
 
 .YoutubeHomepageSection .YoutubeTile .YoutubeTileLiveBadge {
   background: #f03;
-  border-radius: .25rem;
   color: #fff;
   font-size: .85rem;
   font-weight: 800;

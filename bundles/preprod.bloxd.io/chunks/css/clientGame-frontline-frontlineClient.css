@@ -224,7 +224,8 @@ body.FrontlineCustomDamage .InGameUi:not([data-replay-ui-active]) .DirectionalDa
 .InGameUi[data-replay-ui-active] .FrontlinePlate,
 .InGameUi[data-replay-ui-active] .FrontlinePointMarkers,
 .InGameUi[data-replay-ui-active] .FrontlineScoreboardContainer,
-body.FrontlineCustomCrosshair .Crosshair,
+body.FrontlineCustomCrosshair .Crosshair:not(.CrosshairInEditor),
+body.FrontlineCustomCrosshair .CrosshairShapes:not(.CrosshairInEditor),
 body.FrontlineCustomCrosshair .GunCrosshairWrapper {
   display: none
 }

@@ -1,145 +1,106 @@
 export const id = 127;
-export const ids = [127];
+export const ids = [127, 130];
 export const modules = {
-  40225: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      compilePagePack: () => oy,
-      prefetchCompiler: () => cb,
-      reconcileHint: () => Py
+  6331: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Ez.i,
+      f: () => nz,
+      g: () => Ez.q
     });
-    var Uy = Wy(5867),
-      hy = Wy(5915),
-      fy = Wy(5893),
-      Zy = Wy(5911);
-
-    function cb() {
-      (0, Uy.loadPageShaderPackCompiler)()
-    }
-    async function Py() {
-      const yb = await (0, Uy.loadPageShaderPackCompiler)();
-      await (yb ? (0, hy.reconcileStoredShaderPackHint)(yb) : (0, hy.forgetShaderPackActiveHint)())
-    }
-    async function oy(yb) {
-      const bb = await (0, Uy.loadPageShaderPackCompiler)();
-      if (!bb) return {
-        status: "none"
-      };
-      const Wy = await (0, Zy.c)(yb, bb),
-        cb = (0, hy.storedPackOutcome)(Wy, bb);
-      if ("none" === cb.kind) return {
-        status: "none"
-      };
-      const Py = bb.pZy((0, hy.storedShaderPackFiles)(Wy), (0, fy.shaderPackTextures)());
-      if ("blocked" === cb.kind) return {
-        status: "blocked",
-        messageKey: cb.messageKey,
-        variants: 0 === Py.errors.length ? Py.variants : null
-      };
-      if (Py.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", Py.errors), {
-        status: "none"
-      };
-      const {
-        name: oy,
-        keepCircleShadows: By
-      } = Wy.manifest;
-      return {
-        status: "active",
-        pack: {
-          name: oy,
-          variants: Py.variants,
-          keepCircleShadows: !0 === By
-        }
-      }
-    }
+    var Ez = bz(6307);
+    const nz = [!1, !0].flatMap((zz => ["terrain", "liquid", "model"].map((uz => ({
+      strict: zz,
+      program: uz
+    })))))
   },
-  5915: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      forgetShaderPackActiveHint: () => ib,
-      isOtherApiVersion: () => Gy,
-      isShaderPackActive: () => Ty,
-      isShaderPackChangePending: () => gb,
-      markShaderPackChangePending: () => Jy,
-      pageShaderPackValidationVersion: () => Oy,
-      reconcileStoredShaderPackHint: () => vb,
-      removeShaderPack: () => Cy,
-      replaceShaderPack: () => Ey,
-      saveShaderPack: () => Sy,
-      shaderPackNeedsCheck: () => Ry,
-      storedPackOutcome: () => Vy,
-      storedShaderPackFiles: () => ey,
-      toStoredShaderPack: () => Ky
+  6379: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      forgetShaderPackActiveHint: () => Tz,
+      isOtherApiVersion: () => vz,
+      isShaderPackActive: () => sz,
+      isShaderPackChangePending: () => Nz,
+      markShaderPackChangePending: () => oz,
+      pageShaderPackValidationVersion: () => xz,
+      reconcileStoredShaderPackHint: () => Az,
+      removeShaderPack: () => fz,
+      replaceShaderPack: () => Kz,
+      saveShaderPack: () => Rz,
+      shaderPackNeedsCheck: () => Jz,
+      storedPackOutcome: () => rz,
+      storedShaderPackFiles: () => dz,
+      toStoredShaderPack: () => pz
     });
-    var Uy = Wy(5835),
-      hy = Wy(5852),
-      fy = Wy(33),
-      Zy = Wy(2754),
-      cb = Wy(5923),
-      Py = Wy(5893);
-    const oy = "shaderPackChangePending";
-    let By = null;
+    var Ez = bz(6307),
+      nz = bz(6331),
+      iz = bz(33),
+      lz = bz(3198),
+      Mz = bz(6382),
+      tz = bz(6352);
+    const Hz = "shaderPackChangePending";
+    let Oz = null;
 
-    function Ky(yb, bb, Wy) {
+    function pz(zz, uz, bz) {
       return {
-        manifest: yb.manifest,
-        files: (0, Uy.u)(yb.files),
-        validation: bb,
-        ...Wy && {
-          listing: Wy
+        manifest: zz.manifest,
+        files: (0, Ez.s)(zz.files),
+        validation: uz,
+        ...bz && {
+          listing: bz
         }
       }
     }
 
-    function ey(yb) {
-      return Object.keys(yb.files).map((bb => ({
-        path: bb,
-        source: yb.files[bb]
+    function dz(zz) {
+      return Object.keys(zz.files).map((uz => ({
+        path: uz,
+        source: zz.files[uz]
       })))
     }
-    let qb = Promise.resolve();
+    let Fz = Promise.resolve();
 
-    function sy(yb) {
-      const bb = qb.then(yb);
-      return qb = bb.catch((() => {})), bb
-    }
-
-    function Sy(yb, bb) {
-      return sy((() => ly(yb, bb)))
+    function Zz(zz) {
+      const uz = Fz.then(zz);
+      return Fz = uz.catch((() => {})), uz
     }
 
-    function Ey(yb, bb, Wy) {
-      return sy((async () => JSON.stringify(await (0, cb.g)()) === JSON.stringify(yb) && (null === bb ? (await mb(), !0) : ly(bb, Wy))))
-    }
-    async function ly(yb, bb) {
-      const Wy = await fy.d.setItem(cb.d, yb);
-      return Wy && My(yb, bb), Wy
-    }
-    async function mb() {
-      await fy.d.removeItem(cb.d), fy.e.removeItem(Zy.c)
+    function Rz(zz, uz) {
+      return Zz((() => wz(zz, uz)))
     }
 
-    function Cy() {
-      return sy(mb)
+    function Kz(zz, uz, bz) {
+      return Zz((async () => JSON.stringify(await (0, Mz.e)()) === JSON.stringify(zz) && (null === uz ? (await Xz(), !0) : wz(uz, bz))))
+    }
+    async function wz(zz, uz) {
+      const bz = await iz.d.setItem(Mz.d, zz);
+      return bz && Lz(zz, uz), bz
+    }
+    async function Xz() {
+      await iz.d.removeItem(Mz.d), iz.g.removeItem(lz.b)
     }
 
-    function Ty(yb, bb) {
-      return "active" === Vy(yb, bb).kind
+    function fz() {
+      return Zz(Xz)
     }
 
-    function Vy(yb, bb) {
-      var Wy;
-      return null === yb ? {
+    function sz(zz, uz) {
+      return "active" === rz(zz, uz).kind
+    }
+
+    function rz(zz, uz) {
+      var bz;
+      return null === zz ? {
         kind: "none",
         reason: "nothingStored"
-      } : Gy(yb) ? {
+      } : vz(zz) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (Wy = yb.validation) || void 0 === Wy ? void 0 : Wy.ok) || yb.validation.fromRecheck ? null === bb ? {
+      } : !1 !== (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.ok) || zz.validation.fromRecheck ? null === uz ? {
         kind: "none",
         reason: "noCompiler"
-      } : Ry(yb, bb) ? {
+      } : Jz(zz, uz) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : yb.validation.ok ? {
+      } : zz.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -150,124 +111,245 @@ export const modules = {
       }
     }
 
-    function Jy() {
-      fy.g.setItem(oy, performance.timeOrigin)
+    function oz() {
+      iz.h.setItem(Hz, performance.timeOrigin)
     }
 
-    function gb() {
-      return fy.g.getItem(oy) === performance.timeOrigin
+    function Nz() {
+      return iz.h.getItem(Hz) === performance.timeOrigin
     }
 
-    function Gy(yb) {
-      return !(0, hy.e)(yb.manifest.apiVersion)
+    function vz(zz) {
+      return !(0, nz.g)(zz.manifest.apiVersion)
     }
 
-    function Oy(yb) {
-      return By ??= yb.jWy((0, Py.shaderPackTextures)()), By
+    function xz(zz) {
+      return Oz ??= zz.hA((0, tz.shaderPackTextures)()), Oz
     }
 
-    function Ry(yb, bb) {
-      var Wy;
-      return (null === (Wy = yb.validation) || void 0 === Wy ? void 0 : Wy.headerVersion) !== Oy(bb)
+    function Jz(zz, uz) {
+      var bz;
+      return (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.headerVersion) !== xz(uz)
     }
 
-    function vb(yb) {
-      return sy((async () => {
-        My(await (0, cb.g)(!0), yb)
+    function Az(zz) {
+      return Zz((async () => {
+        Lz(await (0, Mz.e)(!0), zz)
       }))
     }
 
-    function ib() {
-      return sy((async () => {
-        fy.e.removeItem(Zy.c)
+    function Tz() {
+      return Zz((async () => {
+        iz.g.removeItem(lz.b)
       }))
     }
 
-    function My(yb, bb) {
-      Ty(yb, bb) ? fy.e.setItem(Zy.c, !0) : fy.e.removeItem(Zy.c)
+    function Lz(zz, uz) {
+      sz(zz, uz) ? iz.g.setItem(lz.b, !0) : iz.g.removeItem(lz.b)
     }
   },
-  5911: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Py,
-      e: () => cb
+  6352: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      loadShaderPackTextures: () => lz,
+      shaderPackTextures: () => Mz
     });
-    var Uy = Wy(5915),
-      hy = Wy(5893),
-      fy = Wy(107);
-    const Zy = 100;
-    async function cb(yb, bb) {
-      var Wy;
-      let Uy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Wy = navigator.gpu) && void 0 !== Wy ? Wy : null;
-      const Zy = yb.pZy(bb, (0, hy.shaderPackTextures)());
-      if (Zy.errors.length > 0) return oy(yb, Zy.errors, Zy.offInStrict);
-      const cb = await async function(yb) {
-        if (!yb) return null;
-        try {
-          const bb = await (0, fy.r)(yb);
-          return bb ? await bb.requestDevice() : null
-        } catch (bb) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", bb), null
-        }
-      }(Uy);
-      if (!cb) return null;
-      let Py = !1;
-      cb.lost.then((() => {
-        Py = !0
-      }));
-      try {
-        const bb = await Promise.all(Zy.validationModules.map((bb => async function(yb, bb, Wy) {
-          bb.pushErrorScope("validation");
-          const Uy = bb.createShaderModule({
-              code: Wy.code
-            }),
-            hy = bb.popErrorScope(),
-            {
-              messages: fy
-            } = await Uy.getCompilationInfo(),
-            Zy = fy.filter((yb => "error" === yb.type)).map((bb => yb.mapValidationMessage(Wy, bb))),
-            cb = await hy;
-          cb && 0 === Zy.length && Zy.push({
-            file: null,
-            line: 0,
-            message: cb.message,
-            variants: [Wy.key]
-          });
-          return Zy
-        }(yb, cb, bb))));
-        return Py ? null : oy(yb, yb.aBy(bb.flat()), Zy.offInStrict)
-      } catch (By) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", By), null
-      } finally {
-        cb.destroy()
-      }
-    }
-    async function Py(yb, bb) {
-      var Wy;
-      if (!(0, Uy.shaderPackNeedsCheck)(yb, bb) || (0, Uy.isOtherApiVersion)(yb)) return yb;
-      const hy = await cb(bb, (0, Uy.storedShaderPackFiles)(yb));
-      if (!hy) return yb;
-      const fy = !1 === (null === (Wy = yb.validation) || void 0 === Wy ? void 0 : Wy.ok) && !yb.validation.fromRecheck,
-        Zy = {
-          ...yb,
-          validation: fy ? hy : {
-            ...hy,
-            fromRecheck: !0
-          }
-        };
-      return await (0, Uy.replaceShaderPack)(yb, Zy, bb) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), Zy
+    var Ez = bz(6307);
+    let nz = null,
+      iz = null;
+
+    function lz() {
+      return iz ??= Promise.all([bz.e(69), bz.e(198)]).then((() => bz(39645))).then((zz => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: uz,
+          textureNameToIndex: bz,
+          textureAnimationData: iz
+        } = zz;
+        return nz ??= (0, Ez.m)(bz, iz, uz), nz
+      })), iz
     }
 
-    function oy(yb, bb, Wy) {
+    function Mz() {
+      if (null === nz) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return nz
+    }
+  },
+  6307: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz,
+      e: () => iz,
+      i: () => Ez,
+      m: () => Zz,
+      n: () => Oz,
+      q: () => nz,
+      r: () => tz,
+      s: () => Hz,
+      u: () => pz
+    });
+    const Ez = 5;
+
+    function nz(zz) {
+      return zz === Ez
+    }
+    const iz = 262144,
+      lz = 256,
+      Mz = 256;
+
+    function tz(zz) {
+      if ("object" !== typeof zz || null === zz || Array.isArray(zz)) return "The pack has no files.";
+      const uz = [];
+      for (const [bz, Ez] of Object.entries(zz)) {
+        if ("string" !== typeof Ez) return `${bz} isn't text.`;
+        uz.push({
+          path: bz,
+          source: Ez
+        })
+      }
+      return uz.sort(((zz, uz) => Oz(zz.path, uz.path))),
+        function(zz) {
+          if (0 === zz.length) return "The pack has no .wgsl files.";
+          if (zz.length > lz) return `The pack has more than ${lz} .wgsl files.`;
+          const uz = new Set;
+          for (const {
+              path: bz
+            }
+            of zz) {
+            const zz = dz(bz);
+            if (null !== zz) return zz;
+            if (uz.has(bz)) return `The pack has two files at ${bz}.`;
+            uz.add(bz)
+          }
+          return pz(zz) > iz ? `The pack's .wgsl files are over ${iz/1024} KB in total.` : null
+        }(uz) ?? uz
+    }
+
+    function Hz(zz) {
+      const uz = {};
+      for (const bz of zz) uz[bz.path] = bz.source;
+      return uz
+    }
+
+    function Oz(zz, uz) {
+      return zz < uz ? -1 : zz > uz ? 1 : 0
+    }
+
+    function pz(zz) {
+      const uz = new TextEncoder;
+      let bz = 0;
+      for (const {
+          source: Ez
+        }
+        of zz) bz += uz.encode(Ez).byteLength;
+      return bz
+    }
+
+    function dz(zz) {
+      if (!zz.toLowerCase().endsWith(".wgsl")) return `${zz} isn't a .wgsl file.`;
+      if (zz.length > Mz) return `A file path is over ${Mz} characters.`;
+      if (zz.includes("\\") || /[\u0000-\u001f]/.test(zz)) return `${zz} isn't a valid file path.`;
+      return zz.split("/").some((zz => "" === zz || "." === zz || ".." === zz)) ? `${zz} isn't a valid file path.` : null
+    }
+    const Fz = /^(.*)\[rot\[([1-4])$/;
+
+    function Zz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Ez = new Map;
+      uz.forEach(((zz, uz) => {
+        let {
+          numAnimStates: bz,
+          animStartIdx: nz
+        } = zz;
+        for (let iz = 1; iz < bz; iz++) Ez.set(nz + iz - 1, uz)
+      }));
+      const nz = Object.entries(zz),
+        iz = new Map;
+      for (const [Rz, Kz] of nz) {
+        const zz = Fz.exec(Rz);
+        "1" === zz?.[2] && iz.set(zz[1], Kz + 1)
+      }
+      const lz = zz => {
+          const uz = Fz.exec(zz);
+          return uz && iz.has(uz[1]) ? {
+            root: uz[1],
+            rotation: Number(uz[2]) - 1
+          } : null
+        },
+        Mz = new Set(nz.map((zz => {
+          let [uz] = zz;
+          return lz(uz)?.root ?? uz
+        }))),
+        tz = (zz, bz) => {
+          const Ez = zz.replace(/_?0$/, "");
+          return (uz[bz]?.numAnimStates ?? 0) > 1 && !Mz.has(Ez) ? Ez : zz
+        },
+        Hz = new Map;
+      for (const [Fz, Rz] of nz) Hz.set(Rz, tz(lz(Fz)?.root ?? Fz, Rz));
+      const Oz = nz.reduce(((zz, uz) => {
+          let [, bz] = uz;
+          return Math.max(zz, bz + 1)
+        }), 0),
+        pz = Array.from({
+          length: Oz
+        }, ((zz, uz) => ({
+          id: uz + 1,
+          rotation: 0
+        }))),
+        dz = new Map,
+        Zz = new Map;
+      for (const [Fz, Rz] of nz) {
+        const zz = lz(Fz),
+          uz = Ez.get(Rz);
+        if (void 0 !== uz) {
+          const bz = Hz.get(uz);
+          Zz.set(Fz, {
+            name: Fz,
+            texture: bz,
+            kind: "frame"
+          }), zz && !Zz.has(zz.root) && Zz.set(zz.root, {
+            name: zz.root,
+            texture: bz,
+            kind: "frame"
+          });
+          continue
+        }
+        const bz = Hz.get(Rz),
+          nz = zz?.root ?? Fz;
+        if (bz !== nz && Zz.set(nz, {
+            name: nz,
+            texture: bz,
+            kind: "frame"
+          }), zz) {
+          const uz = iz.get(zz.root);
+          pz[Rz] = {
+            id: uz,
+            rotation: zz.rotation
+          }, dz.set(bz, uz), Zz.set(Fz, {
+            name: Fz,
+            texture: bz,
+            kind: "rotation"
+          })
+        } else dz.set(bz, Rz + 1)
+      }
+      for (const Fz of dz.keys()) Zz.delete(Fz);
+      for (const [Fz, Rz] of bz) {
+        const zz = dz.get(Rz);
+        void 0 === zz || dz.has(Fz) || (dz.set(Fz, zz), Zz.delete(Fz))
+      }
       return {
-        headerVersion: (0, Uy.pageShaderPackValidationVersion)(yb),
-        ok: 0 === bb.length,
-        errors: bb.slice(0, Zy),
-        moreErrors: Math.max(0, bb.length - Zy),
-        offInStrict: Wy
+        named: [...dz].sort(((zz, uz) => {
+          let [bz] = zz, [Ez] = uz;
+          return bz < Ez ? -1 : bz > Ez ? 1 : 0
+        })).map((zz => {
+          let [uz, bz] = zz;
+          return {
+            name: uz,
+            id: bz
+          }
+        })),
+        aliases: [...Zz.values()],
+        layers: pz
       }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

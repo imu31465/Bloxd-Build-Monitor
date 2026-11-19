@@ -884,7 +884,6 @@ html[data-app-covered] .WholeAppWrapper .ContainmentBoardPanel .BoardMugshot img
 
 .ContainmentBoardPanel.ContainmentCodexPanel .CodexClosedStamp {
   border: .15em solid;
-  border-radius: .2em;
   color: rgba(204, 20, 20, .55);
   font-size: 1.4em;
   font-weight: 700;

@@ -8,9 +8,9 @@ Per-build reports under `diffs/` are paginated to stay below GitHub file-size li
 
 | Environment | Checked at (JST) | Build | Main bundle |
 |---|---|---|---|
-| bloxd.io | 2026-11-19T23:09:05+09:00 | qsji88.c369d390 | `bundles/bloxd.io/main.js` · 2.76 MB · `a4caf460658f…` |
-| preprod.bloxd.io | 2026-11-19T23:09:41+09:00 | 7jvyee.81bfc694 | `bundles/preprod.bloxd.io/main.js` · 3.56 MB · `8454b8fd7bf1…` |
-| staging.bloxd.io | 2026-11-19T23:09:41+09:00 | qsji88.c369d390 | `bundles/staging.bloxd.io/main.js` · 2.76 MB · `a4caf460658f…` |
+| bloxd.io | 2026-11-20T00:40:20+09:00 | qsji88.c369d390 | `bundles/bloxd.io/main.js` · 2.76 MB · `a4caf460658f…` |
+| preprod.bloxd.io | 2026-11-20T00:40:20+09:00 | ad2avs.90d9e4dd | `bundles/preprod.bloxd.io/main.js` · 2.84 MB · `6fe78b383b9d…` |
+| staging.bloxd.io | 2026-11-20T00:40:49+09:00 | qsji88.c369d390 | `bundles/staging.bloxd.io/main.js` · 2.76 MB · `a4caf460658f…` |
 
 ## Main bundle details
 
@@ -18,10 +18,10 @@ Per-build reports under `diffs/` are paginated to stay below GitHub file-size li
   - file: `bundles/bloxd.io/main.js` · 2,889,415 bytes (2.76 MB)
   - sha256: `a4caf460658ff5640f00b5d2de4bb4556874916e1661f34991f3ada5d07c4007`
   - archived build files: 432 (44.80 MB total, full manifest in `.monitor-state.json`)
-- **preprod.bloxd.io** — source: https://preprod.bloxd.io/static/js/7jvyee.main.81bfc694.js
-  - file: `bundles/preprod.bloxd.io/main.js` · 3,734,144 bytes (3.56 MB)
-  - sha256: `8454b8fd7bf1c5d8bf55505cb9db4faeccd778b6e14749a8df085562e6ac56e7`
-  - archived build files: 418 (45.12 MB total, full manifest in `.monitor-state.json`)
+- **preprod.bloxd.io** — source: https://preprod.bloxd.io/static/js/ad2avs.main.90d9e4dd.js
+  - file: `bundles/preprod.bloxd.io/main.js` · 2,973,373 bytes (2.84 MB)
+  - sha256: `6fe78b383b9d8ee75192c60945c9cb4297282afb2c99e74a543bda43cd8351dc`
+  - archived build files: 433 (44.95 MB total, full manifest in `.monitor-state.json`)
 - **staging.bloxd.io** — source: https://staging.bloxd.io/static/js/qsji88.main.c369d390.js
   - file: `bundles/staging.bloxd.io/main.js` · 2,889,415 bytes (2.76 MB)
   - sha256: `a4caf460658ff5640f00b5d2de4bb4556874916e1661f34991f3ada5d07c4007`

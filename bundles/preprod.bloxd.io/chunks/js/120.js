@@ -1,368 +1,432 @@
 export const id = 120;
-export const ids = [119, 120, 122];
+export const ids = [120];
 export const modules = {
-  5852: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Uy.h,
-      d: () => hy,
-      e: () => Uy.o
+  6267: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      default: () => qz
     });
-    var Uy = Wy(5835);
-    const hy = [!1, !0].flatMap((yb => ["terrain", "liquid", "model"].map((bb => ({
-      strict: yb,
-      program: bb
-    })))))
-  },
-  5915: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      forgetShaderPackActiveHint: () => ib,
-      isOtherApiVersion: () => Gy,
-      isShaderPackActive: () => Ty,
-      isShaderPackChangePending: () => gb,
-      markShaderPackChangePending: () => Jy,
-      pageShaderPackValidationVersion: () => Oy,
-      reconcileStoredShaderPackHint: () => vb,
-      removeShaderPack: () => Cy,
-      replaceShaderPack: () => Ey,
-      saveShaderPack: () => Sy,
-      shaderPackNeedsCheck: () => Ry,
-      storedPackOutcome: () => Vy,
-      storedShaderPackFiles: () => ey,
-      toStoredShaderPack: () => Ky
-    });
-    var Uy = Wy(5835),
-      hy = Wy(5852),
-      fy = Wy(33),
-      Zy = Wy(2754),
-      cb = Wy(5923),
-      Py = Wy(5893);
-    const oy = "shaderPackChangePending";
-    let By = null;
+    var Ez = bz(56),
+      nz = bz(1490),
+      iz = bz(1038),
+      lz = bz.n(iz),
+      Mz = bz(316),
+      tz = bz(6283),
+      Hz = bz(1047),
+      Oz = bz(1482),
+      pz = bz(4313),
+      dz = bz(1419),
+      Fz = bz(2882),
+      Zz = bz(4316),
+      Rz = bz(1628),
+      Kz = bz(4305),
+      wz = bz(1114),
+      Xz = bz(20),
+      fz = bz(1473),
+      sz = bz(1195),
+      rz = bz(96),
+      oz = bz(1181),
+      Nz = bz(1305),
+      vz = bz(1212),
+      xz = bz(6274),
+      Jz = bz(6286),
+      Az = bz(1089);
 
-    function Ky(yb, bb, Wy) {
-      return {
-        manifest: yb.manifest,
-        files: (0, Uy.u)(yb.files),
-        validation: bb,
-        ...Wy && {
-          listing: Wy
-        }
-      }
-    }
-
-    function ey(yb) {
-      return Object.keys(yb.files).map((bb => ({
-        path: bb,
-        source: yb.files[bb]
-      })))
-    }
-    let qb = Promise.resolve();
-
-    function sy(yb) {
-      const bb = qb.then(yb);
-      return qb = bb.catch((() => {})), bb
-    }
-
-    function Sy(yb, bb) {
-      return sy((() => ly(yb, bb)))
-    }
-
-    function Ey(yb, bb, Wy) {
-      return sy((async () => JSON.stringify(await (0, cb.g)()) === JSON.stringify(yb) && (null === bb ? (await mb(), !0) : ly(bb, Wy))))
-    }
-    async function ly(yb, bb) {
-      const Wy = await fy.d.setItem(cb.d, yb);
-      return Wy && My(yb, bb), Wy
-    }
-    async function mb() {
-      await fy.d.removeItem(cb.d), fy.e.removeItem(Zy.c)
-    }
-
-    function Cy() {
-      return sy(mb)
-    }
-
-    function Ty(yb, bb) {
-      return "active" === Vy(yb, bb).kind
-    }
-
-    function Vy(yb, bb) {
-      var Wy;
-      return null === yb ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : Gy(yb) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (Wy = yb.validation) || void 0 === Wy ? void 0 : Wy.ok) || yb.validation.fromRecheck ? null === bb ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : Ry(yb, bb) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : yb.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function Jy() {
-      fy.g.setItem(oy, performance.timeOrigin)
-    }
-
-    function gb() {
-      return fy.g.getItem(oy) === performance.timeOrigin
-    }
-
-    function Gy(yb) {
-      return !(0, hy.e)(yb.manifest.apiVersion)
-    }
-
-    function Oy(yb) {
-      return By ??= yb.jWy((0, Py.shaderPackTextures)()), By
-    }
-
-    function Ry(yb, bb) {
-      var Wy;
-      return (null === (Wy = yb.validation) || void 0 === Wy ? void 0 : Wy.headerVersion) !== Oy(bb)
-    }
-
-    function vb(yb) {
-      return sy((async () => {
-        My(await (0, cb.g)(!0), yb)
-      }))
-    }
-
-    function ib() {
-      return sy((async () => {
-        fy.e.removeItem(Zy.c)
-      }))
-    }
-
-    function My(yb, bb) {
-      Ty(yb, bb) ? fy.e.setItem(Zy.c, !0) : fy.e.removeItem(Zy.c)
-    }
-  },
-  5923: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => hy,
-      g: () => fy
-    });
-    var Uy = Wy(33);
-    const hy = "shaderPack";
-    async function fy() {
-      var yb;
-      let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (yb = await Uy.d.getItem(hy, bb)) && void 0 !== yb ? yb : null
-    }
-  },
-  5893: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      loadShaderPackTextures: () => Zy,
-      shaderPackTextures: () => cb
-    });
-    var Uy = Wy(5835);
-    let hy = null,
-      fy = null;
-
-    function Zy() {
-      return fy ??= Promise.all([Wy.e(63), Wy.e(181)]).then((() => Wy(38999))).then((yb => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: bb,
-          textureNameToIndex: Wy,
-          textureAnimationData: fy
-        } = yb;
-        return hy ??= (0, Uy.k)(Wy, fy, bb), hy
-      })), fy
-    }
-
-    function cb() {
-      if (null === hy) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return hy
-    }
-  },
-  5835: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy,
-      f: () => fy,
-      h: () => Uy,
-      k: () => sy,
-      l: () => By,
-      o: () => hy,
-      s: () => Py,
-      u: () => oy,
-      x: () => Ky
-    });
-    const Uy = 5;
-
-    function hy(yb) {
-      return yb === Uy
-    }
-    const fy = 262144,
-      Zy = 256,
-      cb = 256;
-
-    function Py(yb) {
-      if ("object" !== typeof yb || null === yb || Array.isArray(yb)) return "The pack has no files.";
-      const bb = [];
-      for (const [Wy, Uy] of Object.entries(yb)) {
-        if ("string" !== typeof Uy) return `${Wy} isn't text.`;
-        bb.push({
-          path: Wy,
-          source: Uy
+    function Tz(zz) {
+      let {
+        pack: uz,
+        view: bz,
+        favourite: Ez,
+        notice: nz
+      } = zz;
+      const {
+        width: iz,
+        height: Mz
+      } = tz.m.thumb, {
+        live: pz
+      } = uz;
+      return (0, Az.jsx)("div", {
+        className: "ShaderPackCard",
+        children: (0, Az.jsxs)("div", {
+          className: "ShaderPackCardTile",
+          children: [(0, Az.jsxs)(Oz.LinkPreserveSearch, {
+            to: (0, xz.W)(uz.packId),
+            className: "ShaderPackCardLink",
+            children: [pz && (0, Az.jsx)("img", {
+              className: "ShaderPackCardImage",
+              src: (0, tz.q)(sz.clientSideServerUrls.s3Url, pz, bz, "thumb"),
+              width: iz,
+              height: Mz,
+              loading: "lazy",
+              alt: "",
+              draggable: !1
+            }), pz && (0, Az.jsx)(Jz.c, {
+              item: pz
+            }), !pz && (0, Az.jsx)("div", {
+              className: "ShaderPackCardImage ShaderPackCardImagePending",
+              children: (0, Az.jsx)(Hz.c, {
+                name: "hourglass"
+              })
+            }), (0, Az.jsxs)("div", {
+              className: "ShaderPackCardText",
+              children: [nz && (0, Az.jsx)("div", {
+                className: lz()("ShaderPackCardNotice", {
+                  Warning: "warning" === nz.tone
+                }),
+                children: nz.text
+              }), (0, Az.jsx)("div", {
+                className: "ShaderPackCardName SmallTextBold",
+                children: uz.name
+              })]
+            })]
+          }), pz && (0, Az.jsxs)("div", {
+            className: "ShaderPackCardStats",
+            children: [(0, Az.jsxs)("div", {
+              className: "ShaderPackCardUses SmallTextBold",
+              children: [(0, Az.jsx)(Hz.c, {
+                name: "download"
+              }), (0, vz.T)(pz.downloads)]
+            }), Ez && (0, Az.jsx)(dz.z, {
+              onClick: Ez.onToggle,
+              isLiked: !0 === Ez.isFavourite,
+              isLoading: null === Ez.isFavourite
+            })]
+          })]
         })
-      }
-      return bb.sort(((yb, bb) => By(yb.path, bb.path))),
-        function(yb) {
-          if (0 === yb.length) return "The pack has no .wgsl files.";
-          if (yb.length > Zy) return `The pack has more than ${Zy} .wgsl files.`;
-          const bb = new Set;
-          for (const {
-              path: Wy
+      })
+    }
+    var Lz = bz(6289);
+
+    function Pz(zz) {
+      let {
+        results: uz,
+        loading: bz,
+        failed: Ez,
+        onRetry: nz,
+        view: iz,
+        previewView: Mz
+      } = zz;
+      const {
+        t: tz
+      } = (0, oz.F)(), Hz = (0, Lz.m)(), Oz = Date.now(), pz = null === uz ? 0 : "owned" === uz.kind ? uz.packs.length : uz.page.results.length;
+      return (0, Az.jsxs)("div", {
+        className: lz()("ShaderPackBrowseResults", {
+          Loading: bz && null !== uz
+        }),
+        children: [bz && null === uz && (0, Az.jsx)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: (0, Az.jsx)(Nz.c, {})
+        }), Ez && (0, Az.jsxs)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: [tz("shaderPackListing:loadFailed"), (0, Az.jsx)(dz.f, {
+            onClick: nz,
+            children: tz("general:tryAgain")
+          })]
+        }), "listing" === (null === uz || void 0 === uz ? void 0 : uz.kind) && pz > 0 && (0, Az.jsx)("div", {
+          className: "ShaderPackBrowseGrid",
+          children: uz.page.results.map((zz => (0, Az.jsx)(Tz, {
+            pack: {
+              packId: zz.packId,
+              name: zz.name,
+              live: zz
+            },
+            view: Mz,
+            favourite: {
+              isFavourite: Hz.isFavourite(zz.packId),
+              onToggle: () => {
+                Hz.toggle(zz.packId)
+              }
             }
-            of yb) {
-            const yb = ey(Wy);
-            if (null !== yb) return yb;
-            if (bb.has(Wy)) return `The pack has two files at ${Wy}.`;
-            bb.add(Wy)
-          }
-          return Ky(yb) > fy ? `The pack's .wgsl files are over ${fy/1024} KB in total.` : null
-        }(bb) ?? bb
+          }, zz.packId)))
+        }), "owned" === (null === uz || void 0 === uz ? void 0 : uz.kind) && pz > 0 && (0, Az.jsx)("div", {
+          className: "ShaderPackBrowseGrid",
+          children: uz.packs.map((zz => {
+            var uz;
+            return (0, Az.jsx)(Tz, {
+              pack: zz,
+              view: Mz,
+              notice: zz.owner ? (0, xz.T)(zz.owner, !(null === (uz = zz.live) || void 0 === uz || !uz.renderId), Oz, tz)[0] : void 0
+            }, zz.packId)
+          }))
+        }), null !== uz && 0 === pz && (0, Az.jsx)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: tz(Gz(iz))
+        })]
+      })
     }
 
-    function oy(yb) {
-      const bb = {};
-      for (const Wy of yb) bb[Wy.path] = Wy.source;
-      return bb
+    function Gz(zz) {
+      return "mine" === zz.section ? "shaderPackListing:noOwnPacks" : (0, xz.u)(zz) ? "general:noResults" : "favourites" === zz.section ? "shaderPackListing:noFavourites" : "general:noResults"
     }
+    var az = bz(6296);
+    const Vz = 24,
+      mz = {
+        favourites: "general:favourites",
+        mine: "shaderPackListing:mine"
+      };
 
-    function By(yb, bb) {
-      return yb < bb ? -1 : yb > bb ? 1 : 0
-    }
+    function qz() {
+      var zz, uz, bz, iz;
+      const {
+        t: Nz
+      } = (0, oz.F)(), vz = (0, Oz.useNavigatePreserveSearch)(), Jz = (0, nz.v)(), {
+        userContext: Tz,
+        isUserContextUpdating: Gz
+      } = (0, wz.c)(), [qz, hz] = (0, Lz.k)(), [Uz, cz] = (0, Lz.g)(), gz = (0, Ez.useRef)(!1), [Sz, yz] = (0, pz.n)(), Dz = (0, xz.F)(Sz), [Qz, Wz] = (0, Ez.useState)(null !== (zz = Dz.searchQuery) && void 0 !== zz ? zz : ""), ez = (0, Ez.useRef)(null), {
+        searchQuery: jz
+      } = Dz;
+      (0, Ez.useEffect)((() => {
+        Wz(null !== jz && void 0 !== jz ? jz : ""), ez.current && (ez.current.value = null !== jz && void 0 !== jz ? jz : "")
+      }), [jz]);
+      const [Iz, Bz] = (0, Ez.useState)(null), [Cz, Yz] = (0, Ez.useState)(!1), [kz, zu] = (0, Ez.useState)(!1), [uu, bu] = (0, Ez.useState)(0), Eu = (0, Ez.useRef)(0), nu = JSON.stringify(Dz), iu = (0, xz.m)();
 
-    function Ky(yb) {
-      const bb = new TextEncoder;
-      let Wy = 0;
-      for (const {
-          source: Uy
-        }
-        of yb) Wy += bb.encode(Uy).byteLength;
-      return Wy
-    }
-
-    function ey(yb) {
-      if (!yb.toLowerCase().endsWith(".wgsl")) return `${yb} isn't a .wgsl file.`;
-      if (yb.length > cb) return `A file path is over ${cb} characters.`;
-      if (yb.includes("\\") || /[\u0000-\u001f]/.test(yb)) return `${yb} isn't a valid file path.`;
-      return yb.split("/").some((yb => "" === yb || "." === yb || ".." === yb)) ? `${yb} isn't a valid file path.` : null
-    }
-    const qb = /^(.*)\[rot\[([1-4])$/;
-
-    function sy(yb, bb) {
-      let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Uy = new Map;
-      bb.forEach(((yb, bb) => {
-        let {
-          numAnimStates: Wy,
-          animStartIdx: hy
-        } = yb;
-        for (let fy = 1; fy < Wy; fy++) Uy.set(hy + fy - 1, bb)
-      }));
-      const hy = Object.entries(yb),
-        fy = new Map;
-      for (const [Sy, Ey] of hy) {
-        const yb = qb.exec(Sy);
-        "1" === yb?.[2] && fy.set(yb[1], Ey + 1)
+      function lu() {
+        null !== iu ? (vz(iu), Xz.e.set({
+          openEverythingMenuName: Mz.r.SETTINGS,
+          openSettingsCategory: "JZ"
+        })) : vz("/")
       }
-      const Zy = yb => {
-          const bb = qb.exec(yb);
-          return bb && fy.has(bb[1]) ? {
-            root: bb[1],
-            rotation: Number(bb[2]) - 1
-          } : null
-        },
-        cb = new Set(hy.map((yb => {
-          let [bb] = yb;
-          return Zy(bb)?.root ?? bb
-        }))),
-        Py = (yb, Wy) => {
-          const Uy = yb.replace(/_?0$/, "");
-          return (bb[Wy]?.numAnimStates ?? 0) > 1 && !cb.has(Uy) ? Uy : yb
-        },
-        oy = new Map;
-      for (const [qb, Sy] of hy) oy.set(Sy, Py(Zy(qb)?.root ?? qb, Sy));
-      const By = hy.reduce(((yb, bb) => {
-          let [, Wy] = bb;
-          return Math.max(yb, Wy + 1)
-        }), 0),
-        Ky = Array.from({
-          length: By
-        }, ((yb, bb) => ({
-          id: bb + 1,
-          rotation: 0
-        }))),
-        ey = new Map,
-        sy = new Map;
-      for (const [qb, Sy] of hy) {
-        const yb = Zy(qb),
-          bb = Uy.get(Sy);
-        if (void 0 !== bb) {
-          const Wy = oy.get(bb);
-          sy.set(qb, {
-            name: qb,
-            texture: Wy,
-            kind: "frame"
-          }), yb && !sy.has(yb.root) && sy.set(yb.root, {
-            name: yb.root,
-            texture: Wy,
-            kind: "frame"
-          });
-          continue
-        }
-        const Wy = oy.get(Sy),
-          hy = yb?.root ?? qb;
-        if (Wy !== hy && sy.set(hy, {
-            name: hy,
-            texture: Wy,
-            kind: "frame"
-          }), yb) {
-          const bb = fy.get(yb.root);
-          Ky[Sy] = {
-            id: bb,
-            rotation: yb.rotation
-          }, ey.set(Wy, bb), sy.set(qb, {
-            name: qb,
-            texture: Wy,
-            kind: "rotation"
+
+      function Mu(zz) {
+        yz((uz => {
+          (0, xz.gb)(uz, {
+            ...Dz,
+            pageNumber: 1,
+            ...zz
           })
-        } else ey.set(Wy, Sy + 1)
+        }))
       }
-      for (const qb of ey.keys()) sy.delete(qb);
-      for (const [qb, Sy] of Wy) {
-        const yb = ey.get(Sy);
-        void 0 === yb || ey.has(qb) || (ey.set(qb, yb), sy.delete(qb))
-      }
-      return {
-        named: [...ey].sort(((yb, bb) => {
-          let [Wy] = yb, [Uy] = bb;
-          return Wy < Uy ? -1 : Wy > Uy ? 1 : 0
-        })).map((yb => {
-          let [bb, Wy] = yb;
-          return {
-            name: bb,
-            id: Wy
+
+      function tu() {
+        const zz = Qz.trim() || null;
+        Mu({
+          searchQuery: zz,
+          ...null !== zz && !gz.current && (0, xz.p)(Dz) && {
+            withFeatures: [],
+            withoutFeatures: []
           }
-        })),
-        aliases: [...sy.values()],
-        layers: Ky
-      }
+        })
+      }(0, Kz.e)(lu), (0, Lz.e)(), (0, Ez.useEffect)((() => {
+        if (Gz) return;
+        const zz = ++Eu.current,
+          uz = JSON.parse(nu);
+        Yz(!0), zu(!1), async function(zz) {
+          if ("mine" === zz.section) return {
+            kind: "owned",
+            packs: await fz.c.getOwnedShaderPacks(Tz)
+          };
+          const uz = "favourites" === zz.section,
+            bz = uz && (0, xz.p)(zz),
+            Ez = await fz.c.getShaderPacks(Tz, {
+              sort: uz ? xz.f : zz.sort,
+              features: bz ? [] : zz.withFeatures,
+              withoutFeatures: bz ? [] : zz.withoutFeatures,
+              searchQuery: zz.searchQuery,
+              pageNumber: zz.pageNumber,
+              pageSize: Vz,
+              onlyFavourites: uz,
+              banned: (0, xz.q)(Tz) ? (0, xz.e)(zz.banned) : void 0
+            });
+          return {
+            kind: "listing",
+            page: Ez
+          }
+        }(uz).then((uz => {
+          Eu.current === zz && Bz(uz)
+        })).catch((uz => {
+          Eu.current === zz && (console.error("Failed to get shader packs", uz), Bz(null), zu(!0))
+        })).finally((() => {
+          Eu.current === zz && Yz(!1)
+        }))
+      }), [nu, Tz, Gz, uu]);
+      const [Hu, Ou] = (0, Ez.useState)(null), pu = null !== (bz = null === (iz = ("listing" === (null === Iz || void 0 === Iz ? void 0 : Iz.kind) ? Iz.page.results : (null !== (uz = null === Iz || void 0 === Iz ? void 0 : Iz.packs) && void 0 !== uz ? uz : []).flatMap((zz => zz.live ? [zz.live] : [])))[0]) || void 0 === iz ? void 0 : iz.baselineVersion) && void 0 !== bz ? bz : null;
+      (0, Ez.useEffect)((() => {
+        null !== pu && Ou(pu)
+      }), [pu]);
+      const du = "mine" === Dz.section,
+        Fu = (0, xz.q)(Tz),
+        Zu = zz => {
+          "explore" !== Dz.section && (zz.stopPropagation(), zz.preventDefault(), Mu({
+            section: "explore"
+          }))
+        };
+      return (0, Az.jsxs)("div", {
+        className: "ShaderPackBrowse AnimFadeIn",
+        children: [(0, Az.jsx)(dz.d, {
+          onClick: lu,
+          children: Nz(null === iu ? "homePage:backToGames" : "shaderPackListing:backToSettings")
+        }), (0, Az.jsxs)("div", {
+          className: "ShaderPackBrowseHeader",
+          children: [(0, Az.jsxs)("div", {
+            className: "ShaderPackBrowseHeaderRow",
+            children: [(0, Az.jsx)("h1", {
+              className: "VisuallyHidden",
+              children: Nz("shaderPackListing:title")
+            }), (0, Az.jsxs)("div", {
+              className: "ShaderPackBrowseTabs",
+              children: [(0, Az.jsx)("div", {
+                className: lz()("ShaderPackBrowseSort", {
+                  Active: "explore" === Dz.section
+                }),
+                onMouseDownCapture: Zu,
+                onTouchEndCapture: Zu,
+                children: (0, Az.jsx)(Fz.d, {
+                  options: tz.u.map((zz => ({
+                    value: zz,
+                    label: Nz(xz.bb[zz])
+                  }))),
+                  value: Dz.sort,
+                  onChange: zz => {
+                    Mu({
+                      section: "explore",
+                      sort: zz.value
+                    })
+                  }
+                })
+              }), Object.keys(mz).map((zz => (0, Az.jsx)(dz.V, {
+                active: Dz.section === zz,
+                onClick: () => {
+                  Mu({
+                    section: zz
+                  })
+                },
+                children: Nz(mz[zz])
+              }, zz)))]
+            }), !du && (0, Az.jsx)("div", {
+              className: "ShaderPackBrowseDivider"
+            }), !du && (0, Az.jsxs)("div", {
+              className: "ShaderPackBrowseSearch",
+              children: [(0, Az.jsx)("div", {
+                className: "ShaderPackBrowseSearchIcon",
+                children: (0, Az.jsx)(Hz.c, {
+                  name: "magnifying-glass"
+                })
+              }), (0, Az.jsx)(Rz.d, {
+                className: "ShaderPackBrowseSearchInput",
+                placeholderText: Nz("shaderPackListing:searchPlaceholder"),
+                maxLength: tz.G,
+                defaultValue: Qz,
+                domRef: ez,
+                onValueChange: Wz,
+                onEnter: tu
+              }), (0, Az.jsx)(dz.f, {
+                onClick: tu,
+                children: Nz("general:search")
+              })]
+            }), !du && (0, Az.jsxs)(dz.V, {
+              className: lz()("ShaderPackBrowseFilterToggle", {
+                Open: Uz
+              }),
+              pressed: Uz,
+              onClick: () => {
+                cz(!Uz)
+              },
+              children: [Nz("shaderPackListing:filter"), " ", (0, Az.jsx)(Hz.c, {
+                name: Uz ? "angle-up" : "angle-down"
+              })]
+            }), (0, Az.jsx)("div", {
+              className: "ShaderPackBrowseSpace"
+            }), rz.featureFlags.settings.canUseShaderPacks && (0, Az.jsxs)(dz.q, {
+              onClick: () => {
+                vz(xz._)
+              },
+              children: [(0, Az.jsx)(Hz.c, {
+                name: "upload"
+              }), " ", Nz("shaderPackListing:publish")]
+            })]
+          }), !du && Uz && (0, Az.jsxs)("div", {
+            className: "ShaderPackBrowseFeatures",
+            children: [xz.z.map((zz => {
+              const uz = (0, xz.h)(Dz, zz),
+                bz = Nz(xz.M[zz]);
+              return (0, Az.jsx)(dz.V, {
+                className: lz()("ShaderPackBrowseFeature", {
+                  Without: "without" === uz
+                }),
+                active: "with" === uz,
+                pressed: null !== uz,
+                onClick: () => {
+                  gz.current = !0, Mu((0, xz.eb)(Dz, zz))
+                },
+                children: (0, Az.jsxs)("span", {
+                  className: "ShaderPackBrowseFeatureLabel",
+                  children: [(0, Az.jsxs)("span", {
+                    className: "ShaderPackBrowseFeatureReserve",
+                    children: [(0, Az.jsx)(Hz.c, {
+                      name: "check"
+                    }), " ", bz]
+                  }), (0, Az.jsxs)("span", {
+                    children: [null !== uz && (0, Az.jsx)(Hz.c, {
+                      name: "with" === uz ? "check" : "xmark"
+                    }), " ", bz]
+                  })]
+                })
+              }, zz)
+            })), Fu && (0, Az.jsx)(dz.V, {
+              className: lz()("ShaderPackBrowseFeature", {
+                Without: "without" === Dz.banned
+              }),
+              active: "with" === Dz.banned,
+              pressed: null !== Dz.banned,
+              onClick: () => {
+                const zz = "without" === Dz.banned && !gz.current && (0, xz.p)(Dz);
+                Mu({
+                  banned: (0, xz.D)(Dz.banned),
+                  ...zz && {
+                    withFeatures: [],
+                    withoutFeatures: []
+                  }
+                })
+              },
+              children: (0, Az.jsxs)("span", {
+                className: "ShaderPackBrowseFeatureLabel",
+                children: [(0, Az.jsxs)("span", {
+                  className: "ShaderPackBrowseFeatureReserve",
+                  children: [(0, Az.jsx)(Hz.c, {
+                    name: "check"
+                  }), " BANNED"]
+                }), (0, Az.jsxs)("span", {
+                  children: [null !== Dz.banned && (0, Az.jsx)(Hz.c, {
+                    name: "with" === Dz.banned ? "check" : "xmark"
+                  }), " BANNED"]
+                })]
+              })
+            })]
+          })]
+        }), (!du || null !== Hu) && (0, Az.jsx)("div", {
+          className: "ShaderPackBrowseScenes",
+          children: (0, Az.jsx)(az.d, {
+            selected: qz,
+            onSelect: hz,
+            imageUrl: zz => null === Hu ? null : (0, tz.i)(sz.clientSideServerUrls.s3Url, Hu, zz, "thumb")
+          })
+        }), (0, Az.jsx)(Pz, {
+          results: Iz,
+          loading: Cz,
+          failed: kz,
+          onRetry: () => {
+            bu((zz => zz + 1))
+          },
+          view: Dz,
+          previewView: qz
+        }), "listing" === (null === Iz || void 0 === Iz ? void 0 : Iz.kind) && (0, Az.jsx)(Zz.c, {
+          className: "ShaderPackBrowsePagination",
+          page: Iz.page.pageNumber,
+          totalPages: Iz.page.totalPages,
+          onSetPage: zz => {
+            yz((uz => {
+              (0, pz.m)(uz, zz)
+            }))
+          },
+          getPageHref: function(zz) {
+            const uz = new URLSearchParams(Sz);
+            (0, pz.m)(uz, zz);
+            const bz = uz.toString();
+            return bz ? `${Jz.pathname}?${bz}` : Jz.pathname
+          }
+        })]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

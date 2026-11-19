@@ -1,57 +1,30 @@
-/*! For license information please see 7jvyee.wasmMatchmaking.d5568ba6.chunk.js.LICENSE.txt */
-export const id = 55;
-export const ids = [55];
+/*! For license information please see ad2avs.wasmMatchmaking.1767c3a0.chunk.js.LICENSE.txt */
+export const id = 59;
+export const ids = [59, 91];
 export const modules = {
-  35479: yb => {
-    yb.exports = function yb(bb, Wy) {
-      if (bb === Wy) return !0;
-      if (bb && Wy && "object" == typeof bb && "object" == typeof Wy) {
-        if (bb.constructor !== Wy.constructor) return !1;
-        var Uy, hy, fy;
-        if (Array.isArray(bb)) {
-          if ((Uy = bb.length) != Wy.length) return !1;
-          for (hy = Uy; 0 !== hy--;)
-            if (!yb(bb[hy], Wy[hy])) return !1;
-          return !0
-        }
-        if (bb.constructor === RegExp) return bb.source === Wy.source && bb.flags === Wy.flags;
-        if (bb.valueOf !== Object.prototype.valueOf) return bb.valueOf() === Wy.valueOf();
-        if (bb.toString !== Object.prototype.toString) return bb.toString() === Wy.toString();
-        if ((Uy = (fy = Object.keys(bb)).length) !== Object.keys(Wy).length) return !1;
-        for (hy = Uy; 0 !== hy--;)
-          if (!Object.prototype.hasOwnProperty.call(Wy, fy[hy])) return !1;
-        for (hy = Uy; 0 !== hy--;) {
-          var Zy = fy[hy];
-          if (!yb(bb[Zy], Wy[Zy])) return !1
-        }
-        return !0
+  36019: (zz, uz) => {
+    function bz(zz) {
+      if (zz && "object" === typeof zz) {
+        var uz = zz.which || zz.keyCode || zz.charCode;
+        uz && (zz = uz)
       }
-      return bb !== bb && Wy !== Wy
+      if ("number" === typeof zz) return lz[zz];
+      var bz, iz = String(zz);
+      return (bz = Ez[iz.toLowerCase()]) ? bz : (bz = nz[iz.toLowerCase()]) || (1 === iz.length ? iz.charCodeAt(0) : void 0)
     }
-  },
-  35322: (yb, bb) => {
-    function Wy(yb) {
-      if (yb && "object" === typeof yb) {
-        var bb = yb.which || yb.keyCode || yb.charCode;
-        bb && (yb = bb)
-      }
-      if ("number" === typeof yb) return Zy[yb];
-      var Wy, fy = String(yb);
-      return (Wy = Uy[fy.toLowerCase()]) ? Wy : (Wy = hy[fy.toLowerCase()]) || (1 === fy.length ? fy.charCodeAt(0) : void 0)
-    }
-    Wy.isEventKey = function(yb, bb) {
-      if (yb && "object" === typeof yb) {
-        var Wy = yb.which || yb.keyCode || yb.charCode;
-        if (null === Wy || void 0 === Wy) return !1;
-        if ("string" === typeof bb) {
-          var fy;
-          if (fy = Uy[bb.toLowerCase()]) return fy === Wy;
-          if (fy = hy[bb.toLowerCase()]) return fy === Wy
-        } else if ("number" === typeof bb) return bb === Wy;
+    bz.isEventKey = function(zz, uz) {
+      if (zz && "object" === typeof zz) {
+        var bz = zz.which || zz.keyCode || zz.charCode;
+        if (null === bz || void 0 === bz) return !1;
+        if ("string" === typeof uz) {
+          var iz;
+          if (iz = Ez[uz.toLowerCase()]) return iz === bz;
+          if (iz = nz[uz.toLowerCase()]) return iz === bz
+        } else if ("number" === typeof uz) return uz === bz;
         return !1
       }
     };
-    var Uy = (bb = yb.exports = Wy).code = bb.codes = {
+    var Ez = (uz = zz.exports = bz).code = uz.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -96,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      hy = bb.aliases = {
+      nz = uz.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -118,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (fy = 97; fy < 123; fy++) Uy[String.fromCharCode(fy)] = fy - 32;
-    for (var fy = 48; fy < 58; fy++) Uy[fy - 48] = fy;
-    for (fy = 1; fy < 13; fy++) Uy["f" + fy] = fy + 111;
-    for (fy = 0; fy < 10; fy++) Uy["numpad " + fy] = fy + 96;
-    var Zy = bb.names = bb.title = {};
-    for (fy in Uy) Zy[Uy[fy]] = fy;
-    for (var cb in hy) Uy[cb] = hy[cb]
+    for (iz = 97; iz < 123; iz++) Ez[String.fromCharCode(iz)] = iz - 32;
+    for (var iz = 48; iz < 58; iz++) Ez[iz - 48] = iz;
+    for (iz = 1; iz < 13; iz++) Ez["f" + iz] = iz + 111;
+    for (iz = 0; iz < 10; iz++) Ez["numpad " + iz] = iz + 96;
+    var lz = uz.names = uz.title = {};
+    for (iz in Ez) lz[Ez[iz]] = iz;
+    for (var Mz in nz) Ez[Mz] = nz[Mz]
   },
-  35507: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
+  36179: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz
     });
-    var Uy = Wy(55);
-    const hy = Uy.useLayoutEffect;
-    const fy = function(yb) {
-      var bb = (0, Uy.useRef)(yb);
-      return hy((function() {
-        bb.current = yb
-      })), bb
+    var Ez = bz(56);
+    const nz = Ez.useLayoutEffect;
+    const iz = function(zz) {
+      var uz = (0, Ez.useRef)(zz);
+      return nz((function() {
+        uz.current = zz
+      })), uz
     };
-    var Zy = function(yb) {
-      var bb = fy(yb);
-      (0, Uy.useEffect)((function() {
-        var yb = function(yb) {
-          var Wy;
-          if (null != bb.current && (Wy = bb.current(yb)), yb.defaultPrevented && (yb.returnValue = ""), "string" === typeof Wy) return yb.returnValue = Wy, Wy
+    var lz = function(zz) {
+      var uz = iz(zz);
+      (0, Ez.useEffect)((function() {
+        var zz = function(zz) {
+          var bz;
+          if (null != uz.current && (bz = uz.current(zz)), zz.defaultPrevented && (zz.returnValue = ""), "string" === typeof bz) return zz.returnValue = bz, bz
         };
-        return window.addEventListener("beforeunload", yb),
+        return window.addEventListener("beforeunload", zz),
           function() {
-            window.removeEventListener("beforeunload", yb)
+            window.removeEventListener("beforeunload", zz)
           }
       }), [])
     }
   },
-  35351: yb => {
-    var bb, Wy = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Uy = /OS X/.test(Wy),
-      hy = /Opera/.test(Wy),
-      fy = !/like Gecko/.test(Wy) && !hy,
-      Zy = yb.exports = {
-        0: Uy ? "<menu>" : "<UNK>",
+  36053: zz => {
+    var uz, bz = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Ez = /OS X/.test(bz),
+      nz = /Opera/.test(bz),
+      iz = !/like Gecko/.test(bz) && !nz,
+      lz = zz.exports = {
+        0: Ez ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -201,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Uy ? "<meta>" : "<menu>",
+        93: Ez ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -224,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Uy && fy ? "-" : "<volume-mute>",
+        173: Ez && iz ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -250,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: hy ? "`" : "<unicode>",
+        231: nz ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -261,173 +234,454 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (bb = 58; bb < 65; ++bb) Zy[bb] = String.fromCharCode(bb);
-    for (bb = 48; bb < 58; ++bb) Zy[bb] = bb - 48 + "";
-    for (bb = 65; bb < 91; ++bb) Zy[bb] = String.fromCharCode(bb);
-    for (bb = 96; bb < 106; ++bb) Zy[bb] = "<num-" + (bb - 96) + ">";
-    for (bb = 112; bb < 136; ++bb) Zy[bb] = "F" + (bb - 111)
+    for (uz = 58; uz < 65; ++uz) lz[uz] = String.fromCharCode(uz);
+    for (uz = 48; uz < 58; ++uz) lz[uz] = uz - 48 + "";
+    for (uz = 65; uz < 91; ++uz) lz[uz] = String.fromCharCode(uz);
+    for (uz = 96; uz < 106; ++uz) lz[uz] = "<num-" + (uz - 96) + ">";
+    for (uz = 112; uz < 136; ++uz) lz[uz] = "F" + (uz - 111)
   },
-  35248: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      InGameUi: () => sy.b,
-      LobbyLeaderboard: () => Sy.c,
-      loadCharacterCustomisationUI: () => Ey,
-      loadCharacterPreview: () => ly,
-      matchmakeAndPlay: () => Ty,
-      setUpGame: () => mb
+  36096: (zz, uz, bz) => {
+    function Ez(zz, uz, bz, Ez) {
+      return !(bz && !zz.aimable) && (!uz || zz.gun && "head" !== Ez)
+    }
+
+    function nz(zz) {
+      return Math.max(.1 * zz, 1)
+    }
+
+    function iz(zz, uz) {
+      return !zz && uz
+    }
+    bz.d(uz, {
+      c: () => iz,
+      e: () => nz,
+      g: () => Ez
+    })
+  },
+  36103: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Mz,
+      g: () => lz
     });
-    var Uy = Wy(1109),
-      hy = Wy(143),
-      fy = Wy(35252),
-      Zy = Wy(35260),
-      cb = Wy(1595),
-      Py = Wy(35277);
+    let Ez = null;
+    const nz = {
+        crosshairAccuracy: [],
+        turnDamageIndicators: []
+      },
+      iz = {
+        crosshairAccuracy: zz => {
+          const uz = nz.crosshairAccuracy.at(-1);
+          uz ? uz.hook(zz) : Ez = zz
+        },
+        turnDamageIndicators: zz => {
+          var uz;
+          null === (uz = nz.turnDamageIndicators.at(-1)) || void 0 === uz || uz.hook(zz)
+        }
+      };
 
-    function oy() {
-      return !1 !== cb.c.get("canCustomiseChar")
-    }
-    let By = !1;
-    var Ky = Wy(1177),
-      ey = Wy(2878),
-      qb = Wy(8035);
-    var sy = Wy(35284),
-      Sy = Wy(35732);
-
-    function Ey() {
-      return Promise.all([Wy.e(267), Wy.e(375)]).then((() => Wy(39644)))
-    }
-
-    function ly() {
-      return Wy.e(268).then((() => Wy(39650)))
+    function lz(zz, uz) {
+      const bz = {
+          hook: uz
+        },
+        lz = nz[zz];
+      if (lz.push(bz), "crosshairAccuracy" === zz && null !== Ez) {
+        const zz = Ez;
+        Ez = null, iz.crosshairAccuracy(zz)
+      }
+      return () => {
+        const zz = lz.indexOf(bz); - 1 !== zz && lz.splice(zz, 1)
+      }
     }
 
-    function mb() {
-      return (0, qb.f)()
+    function Mz() {
+      return iz
     }
-    By || (By = !0, document.addEventListener("keydown", (yb => {
-        (0, Py.e)(yb, oy)
+  },
+  6382: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      e: () => iz
+    });
+    var Ez = bz(33);
+    const nz = "shaderPack";
+    async function iz() {
+      var zz;
+      let uz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (zz = await Ez.d.getItem(nz, uz)) && void 0 !== zz ? zz : null
+    }
+  },
+  8581: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      g: () => nz
+    });
+    let Ez = !1;
+
+    function nz() {
+      Ez = !0
+    }
+
+    function iz() {
+      return Ez
+    }
+  },
+  35927: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      InGameUi: () => fz.e,
+      LobbyLeaderboard: () => sz.b,
+      loadCharacterCustomisationUI: () => rz,
+      loadCharacterPreview: () => oz,
+      matchmakeAndPlay: () => Jz,
+      setUpGame: () => Nz
+    });
+    var Ez = bz(1232),
+      nz = bz(158),
+      iz = bz(20),
+      lz = bz(35936),
+      Mz = bz(35939),
+      tz = bz(1892),
+      Hz = bz(35965);
+
+    function Oz() {
+      return !1 !== tz.b.get("canCustomiseChar")
+    }
+    let pz = !1;
+    var dz = bz(1296),
+      Fz = bz(1241),
+      Zz = bz(677),
+      Rz = bz(8581);
+    var Kz = bz(8572),
+      wz = bz(3332),
+      Xz = bz(1755);
+    var fz = bz(35977),
+      sz = bz(36447);
+
+    function rz() {
+      return Promise.all([bz.e(281), bz.e(387)]).then((() => bz(40493)))
+    }
+
+    function oz() {
+      return bz.e(282).then((() => bz(40500)))
+    }
+
+    function Nz() {
+      return (0, Kz.h)()
+    }
+    pz || (pz = !0, document.addEventListener("keydown", (zz => {
+        (0, Hz.d)(zz, Oz)
       }))),
-      function(yb) {
-        var bb;
-        return !0 !== (null === yb || void 0 === yb ? void 0 : yb.saveData) && !/2g$/.test(null !== (bb = null === yb || void 0 === yb ? void 0 : yb.effectiveType) && void 0 !== bb ? bb : "")
-      }(navigator.connection) && (0, ey.e)((() => {
-        (0, qb.i)() || Promise.all([Wy.e(126), Wy.e(125), Wy.e(51)]).then((() => Wy(39266))).then((yb => {
-          let {
-            prefetchWasmClient: bb
-          } = yb;
-          return bb(qb.i)
-        }), (yb => {
-          console.warn("[bloxd-wasm-client] the prefetch did not load: the join downloads the client itself", yb)
+      function(zz) {
+        var uz;
+        return !0 !== (null === zz || void 0 === zz ? void 0 : zz.saveData) && !/2g$/.test(null !== (uz = null === zz || void 0 === zz ? void 0 : zz.effectiveType) && void 0 !== uz ? uz : "")
+      }(navigator.connection) && (0, Zz.e)((() => {
+        (0, Rz.c)() || Promise.all([bz.e(74), bz.e(132), bz.e(87), bz.e(55)]).then((() => bz(39931))).then((zz => {
+          (0, Rz.c)() || zz.startLoadAheadOfJoin({
+            joinStarted: Rz.c,
+            language: Fz.h.get().getCurrentLanguageCode()
+          })
+        }), (zz => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", zz)
         }))
-      })), (0, fy.b)();
-    const Cy = (0, Zy.d)((async function(yb, bb) {
+      }));
+    const vz = iz.e.get("router");
+    null === vz ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function zz(uz) {
+      if ((0, Xz.e)(uz.state.location.pathname)) return void(0, Kz.d)().catch((() => {}));
+      const bz = uz.subscribe((Ez => {
+        (0, Xz.e)(Ez.location.pathname) && (bz(), (0, wz.e)().then((() => {
+          zz(uz)
+        })))
+      }))
+    }(vz), (0, lz.c)();
+    const xz = (0, Mz.c)((async function(zz, uz) {
       let {
-        place: Wy,
-        userContext: fy,
-        direct: Zy,
-        rematch: cb
-      } = yb;
-      const Py = Zy ? 1 / 0 : performance.now();
-      let oy;
+        place: bz,
+        userContext: iz,
+        direct: lz,
+        rematch: Mz
+      } = zz;
+      const tz = lz ? 1 / 0 : performance.now();
+      let Hz;
       try {
-        oy = await (0, qb.d)()
-      } catch (By) {
-        return console.error("The wasm client did not load:", By), (0, Ky.n)({
+        Hz = await (0, Kz.d)()
+      } catch (Oz) {
+        return console.error("The wasm client did not load:", Oz), (0, dz.o)({
           websocketUrl: null
-        }), Uy.c.errorWithCode(String(By), hy.i.CONNECT_TO_GAME_SERVER, {
-          error: By,
-          severity: bb.aborted ? "low" : "medium",
-          RZ: bb.aborted
+        }), Ez.b.errorWithCode(String(Oz), nz.k.CONNECT_TO_GAME_SERVER, {
+          error: Oz,
+          severity: uz.aborted ? "low" : "medium",
+          ob: uz.aborted
         })
       }
-      return oy.playWasmGame({
-        userContext: fy,
-        place: Wy,
-        matchedAt: Py,
-        rematch: cb
-      }, bb)
+      return Hz.playWasmGame({
+        userContext: iz,
+        place: bz,
+        matchedAt: tz,
+        rematch: Mz
+      }, uz)
     }));
 
-    function Ty() {
-      return (0, qb.d)().catch((() => {})), Cy(...arguments)
+    function Jz() {
+      return (0, Kz.d)().catch((() => {})), xz(...arguments)
     }
   },
-  8035: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy,
-      f: () => Py,
-      i: () => cb
+  8572: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Oz,
+      h: () => pz
     });
-    var Uy = Wy(2476);
-    let hy = null,
-      fy = !1;
+    var Ez = bz(2899),
+      nz = bz(2181),
+      iz = bz(2954),
+      lz = bz(4400),
+      Mz = bz(3248),
+      tz = bz(8581);
+    let Hz = null;
 
-    function Zy() {
-      return fy = !0, Promise.all([Wy.e(63), Wy.e(66), Wy.e(65), Wy.e(64), Wy.e(76), Wy.e(75), Wy.e(227), Wy.e(200), Wy.e(224), Wy.e(225), Wy.e(43)]).then((() => Wy(39184))).catch((() => {})), Promise.all([Wy.e(126), Wy.e(125), Wy.e(51)]).then((() => Wy(39266))).then((yb => {
+    function Oz() {
+      return lz.b.cancelDownloadForJoin(), (0, Mz.d)(), (0, nz.h)(), (0, tz.g)(), (0, iz.f)(), Promise.all([bz.e(69), bz.e(72), bz.e(71), bz.e(70), bz.e(83), bz.e(259), bz.e(199), bz.e(216), bz.e(237), bz.e(212), bz.e(46)]).then((() => bz(39840))).catch((() => {})), Promise.all([bz.e(74), bz.e(132), bz.e(87), bz.e(55)]).then((() => bz(39931))).then((zz => {
         let {
-          startJoinLoad: bb
-        } = yb;
-        bb()
-      }), (() => {})), hy ??= Promise.all([Wy.e(65), Wy.e(126), Wy.e(76), Wy.e(177), Wy.e(125), Wy.e(77), Wy.e(121), Wy.e(225), Wy.e(56)]).then((() => Wy(39340))).then((yb => (yb.startWasmPlay(), yb.followPageUiPack((yb => {
-        Uy.e.showGamePack(yb)
-      })), yb)), (yb => {
-        throw hy = null, yb
-      })), hy
+          startJoinLoad: uz
+        } = zz;
+        uz()
+      }), (() => {})), Hz ??= Promise.all([bz.e(71), bz.e(74), bz.e(129), bz.e(73), bz.e(132), bz.e(262), bz.e(186), bz.e(87), bz.e(86), bz.e(85), bz.e(212), bz.e(60)]).then((() => bz(40042))).then((zz => (zz.startWasmPlay(), zz.followPageUiPack((zz => {
+        Ez.e.showGamePack(zz)
+      })), zz)), (zz => {
+        throw Hz = null, zz
+      })), Hz
     }
 
-    function cb() {
-      return fy
-    }
-
-    function Py() {
-      return Promise.all([Wy.e(65), Wy.e(126), Wy.e(76), Wy.e(177), Wy.e(125), Wy.e(77), Wy.e(121), Wy.e(225), Wy.e(56)]).then((() => Wy(39340))).then((yb => {
-        yb.startWasmPreviews(), yb.prefetchWasmPreviews()
+    function pz() {
+      return Promise.all([bz.e(71), bz.e(74), bz.e(129), bz.e(73), bz.e(132), bz.e(262), bz.e(186), bz.e(87), bz.e(86), bz.e(85), bz.e(212), bz.e(60)]).then((() => bz(40042))).then((zz => {
+        zz.startWasmPreviews(), zz.prefetchWasmPreviews()
       }))
     }
   },
-  35662: (yb, bb, Wy) => {
-    function Uy(yb) {
-      return yb.includes("Leaf Bed")
-    }
-
-    function hy(yb) {
-      return / Bed(?: Head)?(?:\||$)/.test(yb) && !Uy(yb)
-    }
-
-    function fy(yb) {
-      return yb.includes(" Strongbed")
-    }
-
-    function Zy(yb) {
-      return Uy(yb) || hy(yb) || fy(yb)
-    }
-    Wy.d(bb, {
-      e: () => Zy,
-      f: () => Uy,
-      g: () => fy,
-      k: () => hy
-    })
-  },
-  35658: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => oy
+  4616: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      Howl: () => nz.Howl,
+      Howler: () => nz.Howler,
+      iosAudio: () => tz,
+      musicOutput: () => Kz,
+      readyAudioContext: () => wz
     });
-    var Uy = Wy(35662),
-      hy = Wy(8459);
-    const fy = [],
-      Zy = [],
-      cb = [],
-      Py = [];
-    for (const By of Object.keys(hy.m))(0, Uy.f)(By) ? fy.push(By) : (0, Uy.k)(By) && Zy.push(By), (0, Uy.g)(By) && cb.push(By), (By.includes(" Bed Head") || By.includes(" Strongbed Head")) && Py.push(By);
-    const oy = {
-      leafBeds: fy,
-      woolBeds: Zy,
-      strongBeds: cb,
-      beds: [...fy, ...Zy, ...cb],
-      bedHeads: Py,
-      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
+    var Ez, nz = bz(4625),
+      iz = bz(96);
+    const lz = nz.Howler;
+    let Mz;
+
+    function tz() {
+      return Mz ??= "ios" === (0, iz.getOperatingSystem)(), Mz
     }
+
+    function Hz() {
+      var zz, uz;
+      if (lz.ctx || !lz.usingWebAudio || "undefined" === typeof AudioContext || !tz()) return;
+      const bz = navigator.audioSession;
+      let Ez;
+      "auto" === (null === bz || void 0 === bz ? void 0 : bz.type) && (bz.type = "ambient");
+      try {
+        Ez = new AudioContext({
+          sampleRate: 44100
+        })
+      } catch {
+        return
+      }
+      const nz = Ez.createGain();
+      nz.gain.setValueAtTime(lz._muted ? 0 : null !== (zz = lz._volume) && void 0 !== zz ? zz : 1, Ez.currentTime), nz.connect(Ez.destination), lz.ctx = Ez, lz.masterGain = nz, null === (uz = lz._setup) || void 0 === uz || uz.call(lz)
+    }
+    lz._mobileUnloaded = !0;
+    const Oz = lz.volume.bind(nz.Howler);
+    lz.volume = function() {
+      return Hz(), Oz(...arguments)
+    };
+    const pz = lz.mute.bind(nz.Howler);
+    lz.mute = zz => (Hz(), pz(zz));
+    const dz = nz.Howl.prototype,
+      Fz = dz.init;
+    dz.init = function(zz) {
+      return Hz(), Fz.call(this, zz)
+    };
+    let Zz = 0;
+    const Rz = null === (Ez = lz._autoSuspend) || void 0 === Ez ? void 0 : Ez.bind(nz.Howler);
+
+    function Kz() {
+      wz();
+      const {
+        ctx: zz,
+        masterGain: uz
+      } = lz;
+      return zz && uz ? {
+        ctx: zz,
+        destination: uz,
+        holdAwake: zz => {
+          var uz, bz;
+          (Zz += zz ? 1 : -1, zz) ? null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz): null === (bz = lz._autoSuspend) || void 0 === bz || bz.call(lz)
+        },
+        wake: () => {
+          var uz;
+          "running" !== zz.state && (null === (uz = lz._autoResume) || void 0 === uz || uz.call(lz), zz.resume().catch((() => {})))
+        }
+      } : null
+    }
+
+    function wz() {
+      var zz;
+      (lz.volume(), lz.ctx && lz.autoUnlock) && (null === (zz = lz._unlockAudio) || void 0 === zz || zz.call(lz))
+    }
+    Rz && (lz._autoSuspend = () => Zz > 0 ? nz.Howler : Rz())
+  },
+  36205: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz,
+      e: () => nz,
+      h: () => Ez
+    });
+
+    function Ez(zz) {
+      return zz.replace(/[_\-\s]*\d+$/, "") || zz
+    }
+
+    function nz(zz, uz, bz) {
+      return bz <= 0 ? 0 : zz * bz / Math.max(uz, bz)
+    }
+
+    function iz(zz, uz) {
+      const bz = zz.getDurationMs();
+      return bz > 0 ? zz.loudness * Math.max(0, 1 - (uz - zz.startMs) / bz) : 0
+    }
+    class lz {
+      constructor() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = zz, this.maxPerGroup = uz, this.voices = []
+      }
+      admit(zz) {
+        if (this.voices = this.voices.filter((zz => zz.isAlive())), null !== zz.group) {
+          const uz = this.voices.filter((uz => uz.group === zz.group));
+          if (uz.length >= this.maxPerGroup && !this.dropLeastWorth(uz, zz)) return !1
+        }
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, zz)) && (this.voices.push(zz), !0)
+      }
+      dropLeastWorth(zz, uz) {
+        let bz = null,
+          Ez = 1 / 0;
+        for (const nz of zz) {
+          if (!nz.canStop()) continue;
+          const zz = iz(nz, uz.startMs);
+          zz < Ez && (bz = nz, Ez = zz)
+        }
+        return !(!bz || uz.loudness < Ez) && (this.voices.splice(this.voices.indexOf(bz), 1), bz.stop(), !0)
+      }
+    }
+  },
+  36222: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => iz,
+      h: () => lz,
+      j: () => Ez
+    });
+    class Ez {
+      constructor(zz) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = zz
+      }
+      setMultiplierType(zz, uz) {
+        var bz;
+        this.multipliers[zz] = uz, null === (bz = this._onUpdate) || void 0 === bz || bz.call(this)
+      }
+      removeMultiplier(zz) {
+        var uz;
+        delete this.multipliers[zz], null === (uz = this._onUpdate) || void 0 === uz || uz.call(this)
+      }
+      getMultiplierType(zz) {
+        return this.multipliers[zz]
+      }
+      getTotalMultipliedVal() {
+        let zz = 1;
+        for (const uz in this.multipliers) zz *= this.multipliers[uz];
+        return zz
+      }
+    }
+    class nz {
+      constructor() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = zz
+      }
+      setBooleanType(zz, uz) {
+        const bz = this._getTotalBooleanVal();
+        this.booleans[zz] = !!uz;
+        const Ez = this.getTotalBooleanVal();
+        var nz;
+        Ez !== bz && (null === (nz = this._onUpdate) || void 0 === nz || nz.call(this, Ez, this.booleans));
+        return Ez
+      }
+      removeBoolean(zz) {
+        const uz = this._getTotalBooleanVal();
+        delete this.booleans[zz];
+        const bz = this._getTotalBooleanVal();
+        var Ez;
+        null !== bz && bz !== uz && (null === (Ez = this._onUpdate) || void 0 === Ez || Ez.call(this, bz, this.booleans));
+        return null !== bz && void 0 !== bz && bz
+      }
+      getBooleanType(zz) {
+        return this.booleans[zz]
+      }
+      getTotalBooleanVal() {
+        throw new Error("This is an abstract class, use BooleanAndCombinator")
+      }
+      forceUpdate() {
+        var zz;
+        null === (zz = this._onUpdate) || void 0 === zz || zz.call(this, this.getTotalBooleanVal(), this.booleans)
+      }
+      _getTotalBooleanVal() {
+        throw new Error("This is an abstract class, use BooleanAndCombinator")
+      }
+    }
+    class iz extends nz {
+      getTotalBooleanVal() {
+        const zz = this._getTotalBooleanVal();
+        if (null === zz) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return zz
+      }
+      _getTotalBooleanVal() {
+        let zz = !1,
+          uz = !0;
+        for (const bz in this.booleans) zz = !0, uz &&= this.booleans[bz];
+        return zz ? uz : null
+      }
+    }
+    class lz extends nz {
+      getTotalBooleanVal() {
+        const zz = this._getTotalBooleanVal();
+        if (null === zz) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return zz
+      }
+      _getTotalBooleanVal() {
+        let zz = !1,
+          uz = !1;
+        for (const bz in this.booleans) zz = !0, uz ||= this.booleans[bz];
+        return zz ? uz : null
+      }
+    }
+  },
+  9165: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => nz,
+      c: () => iz
+    });
+    var Ez = bz(9125);
+    const nz = "Air",
+      iz = Object.freeze(new Ez.f(nz, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+  },
+  36214: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      e: () => Ez,
+      h: () => nz
+    });
+    const Ez = 15,
+      nz = 3,
+      iz = 30
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

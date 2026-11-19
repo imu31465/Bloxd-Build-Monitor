@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  35370: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => qb,
-      f: () => sy,
-      g: () => ey,
-      k: () => Ky
+  36066: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Fz,
+      d: () => Zz,
+      g: () => dz,
+      h: () => pz
     });
-    var Uy = Wy(8408),
-      hy = Wy(35379),
-      fy = Wy(35383),
-      Zy = Wy(7911),
-      cb = Wy(1268),
-      Py = Wy(55),
-      oy = Wy(70),
-      By = Wy(952);
+    var Ez = bz(8982),
+      nz = bz(36071),
+      iz = bz(36080),
+      lz = bz(8378),
+      Mz = bz(1417),
+      tz = bz(56),
+      Hz = bz(79),
+      Oz = bz(1089);
 
-    function Ky() {
-      var yb;
-      return (0, cb.m)(hy.e, (0, hy.s)()), (0, By.jsx)(By.Fragment, {
-        children: null === (yb = (0, hy.s)()) || void 0 === yb ? void 0 : yb.content
+    function pz() {
+      var zz;
+      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
+        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
       })
     }
 
-    function ey(yb) {
-      var bb;
+    function dz(zz) {
+      var uz;
       let {
-        show: Wy
-      } = yb;
-      (0, cb.m)(hy.e, (0, hy.s)());
-      const oy = null === (bb = (0, hy.s)()) || void 0 === bb ? void 0 : bb.menu;
-      return (0, Py.useEffect)((() => {
-        var yb;
-        Wy || (null === oy || void 0 === oy || null === (yb = oy.onClose) || void 0 === yb || yb.call(oy), (0, fy.l)())
-      }), [Wy, oy]), (0, Py.useEffect)((() => Wy ? (0, Zy.f)(fy.t, fy.e) : void 0), [Wy]), (0, By.jsx)(Uy.b, {
-        showing: Wy,
+        show: bz
+      } = zz;
+      (0, Mz.h)(nz.e, (0, nz.o)());
+      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
+      return (0, tz.useEffect)((() => {
+        var zz;
+        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
+      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
+        showing: bz,
         globallyUniqueKey: "clientGameMenu",
-        children: null === oy || void 0 === oy ? void 0 : oy.content
+        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
       })
     }
 
-    function qb(yb) {
+    function Fz(zz) {
       let {
-        placement: bb = "bottom"
-      } = yb;
-      return (0, By.jsx)("div", {
-        id: `clientGameHud-${bb}`,
+        placement: uz = "bottom"
+      } = zz;
+      return (0, Oz.jsx)("div", {
+        id: `clientGameHud-${uz}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function sy(yb) {
+    function Zz(zz) {
       let {
-        children: bb,
-        placement: Wy = "bottom"
-      } = yb;
-      const [Uy, hy] = (0, Py.useState)(null);
-      return (0, Py.useEffect)((() => {
-        hy(document.getElementById(`clientGameHud-${Wy}`))
-      }), [Wy]), Uy ? (0, oy.createPortal)(bb, Uy) : null
+        children: uz,
+        placement: bz = "bottom"
+      } = zz;
+      const [Ez, nz] = (0, tz.useState)(null);
+      return (0, tz.useEffect)((() => {
+        nz(document.getElementById(`clientGameHud-${bz}`))
+      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
     }
   },
-  8408: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => fy
+  8982: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
     });
-    var Uy = Wy(3739),
-      hy = Wy(3742);
+    var Ez = bz(4298),
+      nz = bz(4300);
 
-    function fy(yb) {
+    function iz(zz) {
       let {
-        children: bb,
-        showing: Wy,
-        globallyUniqueKey: fy,
-        alwaysMountChildren: Zy = !1,
-        doGameplayStartStopOnShow: cb = !0,
-        keepsMovement: Py = !1
-      } = yb;
-      return (0, hy.b)(!0, Wy, fy, Py), (0, Uy.b)(cb, Wy), Wy || Zy ? bb : null
+        children: uz,
+        showing: bz,
+        globallyUniqueKey: iz,
+        alwaysMountChildren: lz = !1,
+        doGameplayStartStopOnShow: Mz = !0,
+        keepsMovement: tz = !1
+      } = zz;
+      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
     }
   },
-  35490: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => fy,
-      g: () => Zy,
-      i: () => cb,
-      m: () => Py
+  36162: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      d: () => lz,
+      g: () => Mz,
+      j: () => tz
     });
-    var Uy = Wy(55),
-      hy = Wy(974);
-    const fy = 8,
-      Zy = "InGameHeaderContainer",
-      cb = "TopRightElements";
+    var Ez = bz(56),
+      nz = bz(1108);
+    const iz = 8,
+      lz = "InGameHeaderContainer",
+      Mz = "TopRightElements";
 
-    function Py(yb) {
-      const [bb] = (0, hy.d)(), [Wy, Py] = (0, Uy.useState)(!1);
-      return (0, Uy.useLayoutEffect)((() => {
-        if (!yb) return;
-        const bb = document.querySelector(`.${Zy}`),
-          Wy = document.querySelector(`.${cb}`),
-          Uy = () => {
-            const Uy = yb.getBoundingClientRect(),
-              hy = bb ? bb.getBoundingClientRect().right : 0,
-              Zy = Wy ? Wy.getBoundingClientRect().left : window.innerWidth,
-              cb = Uy.left < hy + fy,
-              oy = Uy.right > Zy - fy;
-            Py(cb || oy)
+    function tz(zz) {
+      const [uz] = (0, nz.b)(), [bz, tz] = (0, Ez.useState)(!1);
+      return (0, Ez.useLayoutEffect)((() => {
+        if (!zz) return;
+        const uz = document.querySelector(`.${lz}`),
+          bz = document.querySelector(`.${Mz}`),
+          Ez = () => {
+            const Ez = zz.getBoundingClientRect(),
+              nz = uz ? uz.getBoundingClientRect().right : 0,
+              lz = bz ? bz.getBoundingClientRect().left : window.innerWidth,
+              Mz = Ez.left < nz + iz,
+              Hz = Ez.right > lz - iz;
+            tz(Mz || Hz)
           };
-        Uy();
-        const hy = new ResizeObserver(Uy);
-        return hy.observe(yb), bb && hy.observe(bb), Wy && hy.observe(Wy), () => {
-          hy.disconnect()
+        Ez();
+        const nz = new ResizeObserver(Ez);
+        return nz.observe(zz), uz && nz.observe(uz), bz && nz.observe(bz), () => {
+          nz.disconnect()
         }
-      }), [yb, bb]), Wy
+      }), [zz, uz]), bz
     }
   },
-  35487: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => hy
+  36158: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz
     });
-    const Uy = [{
+    const Ez = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function hy(yb, bb, Wy) {
-      const hy = Math.abs(yb - bb),
-        fy = Date.now() - Wy;
-      for (const Zy of Uy)
-        if (yb < Zy.maxDist) return hy >= Zy.hardUpdateDist || fy > Zy.timeBetweenSoftChecks && hy >= Zy.softUpdateDist;
+    function nz(zz, uz, bz) {
+      const nz = Math.abs(zz - uz),
+        iz = Date.now() - bz;
+      for (const lz of Ez)
+        if (zz < lz.maxDist) return nz >= lz.hardUpdateDist || iz > lz.timeBetweenSoftChecks && nz >= lz.softUpdateDist;
       return !1
     }
   },
-  7911: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => fy,
-      f: () => hy
+  8378: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      e: () => nz
     });
-    let Uy = null;
-    const hy = function(yb) {
-        const bb = {
-          cycle: yb,
+    let Ez = null;
+    const nz = function(zz) {
+        const uz = {
+          cycle: zz,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Uy = bb, () => {
-          Uy === bb && (Uy = null)
+        return Ez = uz, () => {
+          Ez === uz && (Ez = null)
         }
       },
-      fy = () => {
-        var yb;
-        return null !== (yb = Uy) && void 0 !== yb && yb.canCycle() ? Uy.cycle : null
+      iz = () => {
+        var zz;
+        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
       }
   },
-  37211: (yb, bb, Wy) => {
-    function Uy(yb, bb, Wy) {
-      var Uy;
+  37920: (zz, uz, bz) => {
+    function Ez(zz, uz, bz) {
+      var Ez;
       const {
-        width: hy,
-        height: fy
-      } = Wy, Zy = null !== (Uy = yb.text) && void 0 !== Uy ? Uy : yb, cb = (Zy.x / 100 - .5) * hy, Py = (Zy.y / 100 - .5) * fy, oy = hy / 2 - bb.x;
-      if (null !== yb.text && Math.abs(cb) <= oy && Py >= bb.top - fy / 2 && Py <= fy / 2 - bb.bottom) return {
-        x: Zy.x,
-        y: Zy.y
+        width: nz,
+        height: iz
+      } = bz, lz = null !== (Ez = zz.text) && void 0 !== Ez ? Ez : zz, Mz = (lz.x / 100 - .5) * nz, tz = (lz.y / 100 - .5) * iz, Hz = nz / 2 - uz.x;
+      if (null !== zz.text && Math.abs(Mz) <= Hz && tz >= uz.top - iz / 2 && tz <= iz / 2 - uz.bottom) return {
+        x: lz.x,
+        y: lz.y
       };
-      const By = Math.min(0 === cb ? 1 / 0 : oy / Math.abs(cb), Py > 0 ? (fy / 2 - bb.bottom) / Py : Py < 0 ? (bb.top - fy / 2) / Py : 1 / 0);
-      return !Number.isFinite(By) || By < 0 ? {
+      const Oz = Math.min(0 === Mz ? 1 / 0 : Hz / Math.abs(Mz), tz > 0 ? (iz / 2 - uz.bottom) / tz : tz < 0 ? (uz.top - iz / 2) / tz : 1 / 0);
+      return !Number.isFinite(Oz) || Oz < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + cb * By / hy * 100,
-        y: 50 + Py * By / fy * 100
+        x: 50 + Mz * Oz / nz * 100,
+        y: 50 + tz * Oz / iz * 100
       }
     }
-    Wy.d(bb, {
-      d: () => Uy
+    bz.d(uz, {
+      d: () => Ez
     })
   },
-  35383: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => fy,
-      e: () => Sy,
-      g: () => Ey,
-      j: () => cb,
-      k: () => ey,
-      l: () => ly,
-      p: () => Ky,
-      s: () => Cy,
-      t: () => sy,
-      w: () => mb
+  36080: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      d: () => Rz,
+      g: () => Kz,
+      h: () => Mz,
+      i: () => dz,
+      j: () => wz,
+      n: () => pz,
+      q: () => fz,
+      u: () => Zz,
+      x: () => Xz
     });
-    var Uy = Wy(19),
-      hy = Wy(23);
-    const fy = "clientGameInventoryButtonsChanged",
-      Zy = new Map;
+    var Ez = bz(20),
+      nz = bz(22);
+    const iz = "clientGameInventoryButtonsChanged",
+      lz = new Map;
 
-    function cb() {
-      return [...Zy.values()].sort(((yb, bb) => {
-        var Wy, Uy;
-        return (null !== (Wy = yb.order) && void 0 !== Wy ? Wy : 0) - (null !== (Uy = bb.order) && void 0 !== Uy ? Uy : 0)
+    function Mz() {
+      return [...lz.values()].sort(((zz, uz) => {
+        var bz, Ez;
+        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
       }))
     }
-    let Py = null;
+    let tz = null;
 
-    function oy(yb) {
-      Py = yb
+    function Hz(zz) {
+      tz = zz
     }
-    let By = !1;
+    let Oz = !1;
 
-    function Ky(yb) {
-      By = !0;
+    function pz(zz) {
+      Oz = !0;
       try {
-        yb.onClick()
+        zz.onClick()
       } finally {
-        By = !1
+        Oz = !1
       }
-      yb.panel && "clientGame" === Uy.d.get("openInGameMenuName") && oy(yb.id)
+      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
     }
 
-    function ey() {
-      return By
+    function dz() {
+      return Oz
     }
 
-    function qb() {
-      return cb().filter((yb => yb.panel && !yb.disabled))
+    function Fz() {
+      return Mz().filter((zz => zz.panel && !zz.disabled))
     }
 
-    function sy(yb) {
-      const bb = qb(),
-        Wy = bb.findIndex((yb => yb.id === Py));
-      return !(Wy < 0 || bb.length < 2) && (Ky(bb[(Wy + yb + bb.length) % bb.length]), !0)
+    function Zz(zz) {
+      const uz = Fz(),
+        bz = uz.findIndex((zz => zz.id === tz));
+      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
     }
 
-    function Sy() {
-      return null !== Py && qb().length > 1
+    function Rz() {
+      return null !== tz && Fz().length > 1
     }
 
-    function Ey() {
-      oy(null)
+    function Kz() {
+      Hz(null)
     }
 
-    function ly() {
-      "inventory" !== Uy.d.get("openInGameMenuName") && oy(null)
+    function wz() {
+      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
     }
 
-    function mb() {
-      const yb = Py;
-      return oy(null), yb
+    function Xz() {
+      const zz = tz;
+      return Hz(null), zz
     }
 
-    function Cy(yb) {
-      return Zy.set(yb.id, yb), hy.g.EZ(fy, cb(), !0), () => {
-        Zy.get(yb.id) === yb && (Zy.delete(yb.id), hy.g.EZ(fy, cb()))
+    function fz(zz) {
+      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
+        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
       }
     }
   },
-  35379: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => cb,
-      h: () => Ey,
-      k: () => ly,
-      o: () => ey,
-      s: () => oy,
-      t: () => Sy,
-      v: () => qb,
-      z: () => By
+  36071: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Mz,
+      i: () => Kz,
+      l: () => wz,
+      n: () => dz,
+      o: () => Hz,
+      p: () => Rz,
+      t: () => Fz,
+      x: () => Oz
     });
-    var Uy = Wy(19),
-      hy = Wy(23),
-      fy = Wy(1145),
-      Zy = Wy(35383);
-    const cb = "clientGameUiChanged";
-    let Py = null;
+    var Ez = bz(20),
+      nz = bz(22),
+      iz = bz(1269),
+      lz = bz(36080);
+    const Mz = "clientGameUiChanged";
+    let tz = null;
 
-    function oy() {
-      return Py
+    function Hz() {
+      return tz
     }
 
-    function By(yb, bb) {
-      const Wy = {
-        content: yb,
-        menu: bb
+    function Oz(zz, uz) {
+      const bz = {
+        content: zz,
+        menu: uz
       };
-      return Py = Wy, hy.g.EZ(cb, Py, !0), () => {
-        Py === Wy && (Py = null, sy = !1, Ey(), hy.g.EZ(cb, null))
+      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
+        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
       }
     }
-    let Ky = null;
+    let pz = null;
 
-    function ey() {
-      return Ky
+    function dz() {
+      return pz
     }
 
-    function qb(yb) {
-      return Ky = yb, () => {
-        Ky === yb && (Ky = null)
+    function Fz(zz) {
+      return pz = zz, () => {
+        pz === zz && (pz = null)
       }
     }
-    let sy = !1;
+    let Zz = !1;
 
-    function Sy() {
-      const yb = Uy.d.get("openInGameMenuName");
-      "clientGame" !== yb && (sy = "inventory" === yb), (0, Zy.k)() || (0, Zy.g)(), (0, fy.h)("InGameMenu"), Uy.d.set({
+    function Rz() {
+      const zz = Ez.e.get("openInGameMenuName");
+      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Ey() {
-      mb(!1)
+    function Kz() {
+      Xz(!1)
     }
 
-    function ly() {
-      mb(sy)
+    function wz() {
+      Xz(Zz)
     }
 
-    function mb(yb) {
-      "clientGame" === Uy.d.get("openInGameMenuName") && Uy.d.set({
-        openInGameMenuName: yb ? "inventory" : null
-      }), yb || (0, Zy.g)(), sy = !1
+    function Xz(zz) {
+      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
+        openInGameMenuName: zz ? "inventory" : null
+      }), zz || (0, lz.g)(), Zz = !1
     }
   },
-  38051: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      default: () => Eb
+  38791: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      default: () => Ku
     });
-    const Uy = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var hy = Wy(55),
-      fy = Wy(35379),
-      Zy = Wy(35746),
-      cb = Wy(35397),
-      Py = Wy(1496),
-      oy = Wy(23);
-    const By = {
+    const Ez = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var nz = bz(56),
+      iz = bz(36071),
+      lz = bz(36465),
+      Mz = bz(36096),
+      tz = bz(1673),
+      Hz = bz(22);
+    const Oz = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const Ky = 32;
+    const pz = 32;
 
-    function ey(yb, bb, Wy, Uy) {
+    function dz(zz, uz, bz, Ez) {
       return {
         tag: "line",
         attrs: {
-          x1: yb,
-          y1: bb,
-          x2: Wy,
-          y2: Uy,
+          x1: zz,
+          y1: uz,
+          x2: bz,
+          y2: Ez,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function qb(yb) {
+    function Fz(zz) {
       return {
         tag: "circle",
         attrs: {
-          cx: Ky,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ky,
-          r: yb,
+          cx: pz,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pz,
+          r: zz,
           class: "Fill"
         }
       }
     }
 
-    function sy(yb, bb) {
+    function Zz(zz, uz) {
       return {
         tag: "path",
         attrs: {
-          d: yb,
-          "stroke-width": bb
+          d: zz,
+          "stroke-width": uz
         }
       }
     }
 
-    function Sy(yb, bb, Wy) {
+    function Rz(zz, uz, bz) {
       return {
         tag: "circle",
         attrs: {
-          cx: Ky,
-          cy: Ky,
-          r: yb,
-          "stroke-width": bb,
-          class: Wy
+          cx: pz,
+          cy: pz,
+          r: zz,
+          "stroke-width": uz,
+          class: bz
         }
       }
     }
 
-    function Ey(yb, bb, Wy) {
+    function Kz(zz, uz, bz) {
       return {
         tag: "text",
         attrs: {
-          x: yb,
-          y: bb,
+          x: zz,
+          y: uz,
           class: "Fill Label"
         },
-        text: Wy
+        text: bz
       }
     }
-    const ly = {
-      pistol: yb => [ey(Ky, Ky - yb - 5, Ky, Ky - yb), ey(Ky - yb - 5, Ky, Ky - yb, Ky), ey(Ky + yb, Ky, Ky + yb + 5, Ky), qb(1.4)],
-      rifle: yb => [ey(Ky, Ky - yb - 8, Ky, Ky - yb), ey(Ky, Ky + yb, Ky, Ky + yb + 8), ey(Ky - yb - 8, Ky, Ky - yb, Ky), ey(Ky + yb, Ky, Ky + yb + 8, Ky), qb(1)],
-      smg: yb => {
-        const bb = Math.PI / 2,
-          Wy = [];
-        for (let Zy = 0; Zy < 4; Zy++) Wy.push((hy = Zy * bb + .35, fy = (Zy + 1) * bb - .35, sy(`M${Ky+(Uy=6+yb)*Math.cos(hy)} ${Ky+Uy*Math.sin(hy)} A${Uy} ${Uy} 0 0 1 ${Ky+Uy*Math.cos(fy)} ${Ky+Uy*Math.sin(fy)}`, 2)));
-        var Uy, hy, fy;
-        return [...Wy, qb(1.4)]
+    const wz = {
+      pistol: zz => [dz(pz, pz - zz - 5, pz, pz - zz), dz(pz - zz - 5, pz, pz - zz, pz), dz(pz + zz, pz, pz + zz + 5, pz), Fz(1.4)],
+      rifle: zz => [dz(pz, pz - zz - 8, pz, pz - zz), dz(pz, pz + zz, pz, pz + zz + 8), dz(pz - zz - 8, pz, pz - zz, pz), dz(pz + zz, pz, pz + zz + 8, pz), Fz(1)],
+      smg: zz => {
+        const uz = Math.PI / 2,
+          bz = [];
+        for (let lz = 0; lz < 4; lz++) bz.push((nz = lz * uz + .35, iz = (lz + 1) * uz - .35, Zz(`M${pz+(Ez=6+zz)*Math.cos(nz)} ${pz+Ez*Math.sin(nz)} A${Ez} ${Ez} 0 0 1 ${pz+Ez*Math.cos(iz)} ${pz+Ez*Math.sin(iz)}`, 2)));
+        var Ez, nz, iz;
+        return [...bz, Fz(1.4)]
       },
-      shotgun: yb => [Sy(yb, 3, "Ring Outline"), Sy(yb, 1.5, "Ring")],
-      marksman: yb => [sy(`M${26-yb/2} ${39+yb/2} L32 33 L${38+yb/2} ${39+yb/2}`, 2), ey(14 - yb, Ky, 24 - yb, Ky, 1.5), ey(40 + yb, Ky, 50 + yb, Ky, 1.5), ey(14 - yb, 30, 14 - yb, 34, 1.5), ey(50 + yb, 30, 50 + yb, 34, 1.5)],
-      machineGun: yb => {
-        const bb = 10 + yb,
-          Wy = [];
-        for (const [Uy, hy] of [
+      shotgun: zz => [Rz(zz, 3, "Ring Outline"), Rz(zz, 1.5, "Ring")],
+      marksman: zz => [Zz(`M${26-zz/2} ${39+zz/2} L32 33 L${38+zz/2} ${39+zz/2}`, 2), dz(14 - zz, pz, 24 - zz, pz, 1.5), dz(40 + zz, pz, 50 + zz, pz, 1.5), dz(14 - zz, 30, 14 - zz, 34, 1.5), dz(50 + zz, 30, 50 + zz, 34, 1.5)],
+      machineGun: zz => {
+        const uz = 10 + zz,
+          bz = [];
+        for (const [Ez, nz] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) Wy.push(sy(`M${Ky+Uy*bb} ${Ky+hy*(bb-5)} L${Ky+Uy*bb} ${Ky+hy*bb} L${Ky+Uy*(bb-5)} ${Ky+hy*bb}`, 2));
-        return [...Wy, ey(Ky, 28, Ky, 36, 1.5), ey(28, Ky, 36, Ky, 1.5)]
+          ]) bz.push(Zz(`M${pz+Ez*uz} ${pz+nz*(uz-5)} L${pz+Ez*uz} ${pz+nz*uz} L${pz+Ez*(uz-5)} ${pz+nz*uz}`, 2));
+        return [...bz, dz(pz, 28, pz, 36, 1.5), dz(28, pz, 36, pz, 1.5)]
       },
-      launcher: () => [ey(14, 30, 50, 30, 1.5), ey(Ky, 24, Ky, 52, 1.5), ey(28, 38, 36, 38, 1.5), ey(29, 44, 35, 44, 1.5), ey(30, 50, 34, 50, 1.5), Ey(38, 40, "100"), Ey(37, 46, "200"), qb(1.4, 30)],
-      melee: () => [sy("M32 26 L38 32 L32 38 L26 32 Z", 1.5), qb(1.2)],
-      throwable: () => [qb(1.6)]
+      launcher: () => [dz(14, 30, 50, 30, 1.5), dz(pz, 24, pz, 52, 1.5), dz(28, 38, 36, 38, 1.5), dz(29, 44, 35, 44, 1.5), dz(30, 50, 34, 50, 1.5), Kz(38, 40, "100"), Kz(37, 46, "200"), Fz(1.4, 30)],
+      melee: () => [Zz("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Fz(1.2)],
+      throwable: () => [Fz(1.6)]
     };
 
-    function mb(yb) {
+    function Xz(zz) {
       let {
-        tag: bb,
-        attrs: Wy,
-        text: Uy
-      } = yb, hy = `<${bb}`;
-      for (const [fy, Zy] of Object.entries(Wy)) hy += ` ${fy}="${Zy}"`;
-      return void 0 === Uy ? `${hy}/>` : `${hy}>${Uy}</${bb}>`
+        tag: uz,
+        attrs: bz,
+        text: Ez
+      } = zz, nz = `<${uz}`;
+      for (const [iz, lz] of Object.entries(bz)) nz += ` ${iz}="${lz}"`;
+      return void 0 === Ez ? `${nz}/>` : `${nz}>${Ez}</${uz}>`
     }
-    class Cy {
-      constructor(yb, bb) {
-        this.api = yb, this.localPlayerId = bb, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = yb => {
-          this.element = yb, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, yb && !this.enabled && (yb.style.display = "none")
+    class fz {
+      constructor(zz, uz) {
+        this.api = zz, this.localPlayerId = uz, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = zz => {
+          this.element = zz, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, zz && !this.enabled && (zz.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Py.getRemInPx)()))
-        }, this.tokens = [oy.g.subscribe("aimingOverlay", (yb => {
-          this.sniperOverlay = "sniper" === yb
-        })), oy.g.subscribe("mouseState", (yb => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, tz.getRemInPx)()))
+        }, this.tokens = [Hz.k.subscribe("aimingOverlay", (zz => {
+          this.sniperOverlay = "sniper" === zz
+        })), Hz.k.subscribe("mouseState", (zz => {
           let {
-            isDown: bb
-          } = yb;
-          this.mouseDown = bb
+            isDown: uz
+          } = zz;
+          this.mouseDown = uz
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      dJ(yb) {
-        yb !== this.enabled && (this.enabled = yb, this.drawnVisible = null, yb || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      Zx(zz) {
+        zz !== this.enabled && (this.enabled = zz, this.drawnVisible = null, zz || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(yb, bb) {
-        var Wy, Uy;
+      frame(zz, uz) {
+        var bz, Ez;
         if (!this.enabled) return;
         const {
-          api: hy
-        } = this, fy = hy.isAlive(this.localPlayerId) && null !== (Wy = null === (Uy = hy.MPy(this.localPlayerId)) || void 0 === Uy ? void 0 : Uy.name) && void 0 !== Wy ? Wy : null, Zy = (cb = fy) && By[cb] || null;
-        var cb;
-        if (this.setOwnsCrosshair(null !== Zy), !this.element) return;
-        const Py = hy.getHeldGunInaccuracy(),
-          oy = null !== Py,
-          Ky = null !== Zy && !this.sniperOverlay && hy.isCrosshairShown();
-        if (Ky !== this.drawnVisible && (this.drawnVisible = Ky, this.element.style.display = Ky ? "block" : "none"), !Ky) return;
-        const ey = oy ? function(yb) {
-            return "launcher" === yb || "melee" === yb || "throwable" === yb ? "none" : "shotgun" === yb ? "cone" : "offset"
-          }(Zy) : "none",
-          qb = null !== Py && void 0 !== Py ? Py : 0;
-        "cone" === ey ? this.drawCone(Zy, this.coneRadiusVh(qb, bb) * this.gapPerVh, yb) : (this.coneDrawn = !1, this.draw(Zy, "none" === ey ? 2 : this.offsetGap(qb)));
-        const sy = !oy && this.mouseDown;
-        sy !== this.drawnPressed && (this.drawnPressed = sy, this.element.classList.toggle("Pressed", sy))
+          api: nz
+        } = this, iz = nz.isAlive(this.localPlayerId) && null !== (bz = null === (Ez = nz.luz(this.localPlayerId)) || void 0 === Ez ? void 0 : Ez.name) && void 0 !== bz ? bz : null, lz = (Mz = iz) && Oz[Mz] || null;
+        var Mz;
+        if (this.setOwnsCrosshair(null !== lz), !this.element) return;
+        const tz = nz.getHeldGunInaccuracy(),
+          Hz = null !== tz,
+          pz = null !== lz && !this.sniperOverlay && nz.isCrosshairShown();
+        if (pz !== this.drawnVisible && (this.drawnVisible = pz, this.element.style.display = pz ? "block" : "none"), !pz) return;
+        const dz = Hz ? function(zz) {
+            return "launcher" === zz || "melee" === zz || "throwable" === zz ? "none" : "shotgun" === zz ? "cone" : "offset"
+          }(lz) : "none",
+          Fz = null !== tz && void 0 !== tz ? tz : 0;
+        "cone" === dz ? this.drawCone(lz, this.coneRadiusVh(Fz, uz) * this.gapPerVh, zz) : (this.coneDrawn = !1, this.draw(lz, "none" === dz ? 2 : this.offsetGap(Fz)));
+        const Zz = !Hz && this.mouseDown;
+        Zz !== this.drawnPressed && (this.drawnPressed = Zz, this.element.classList.toggle("Pressed", Zz))
       }
       dispose() {
-        for (const yb of this.tokens) oy.g.unsubscribe(yb);
+        for (const zz of this.tokens) Hz.k.unsubscribe(zz);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(yb, bb) {
-        var Wy, Uy;
-        yb !== this.drawnFamily ? (this.drawnFamily = yb, this.drawnGap = bb, this.element.innerHTML = function(yb, bb) {
-          return `<svg viewBox="0 0 64 64">${ly[yb](bb).map(mb).join("")}</svg>`
-        }(yb, bb), this.shapes = Array.from(null !== (Wy = null === (Uy = this.element.firstElementChild) || void 0 === Uy ? void 0 : Uy.children) && void 0 !== Wy ? Wy : [])) : bb !== this.drawnGap && (this.drawnGap = bb, function(yb, bb, Wy) {
-          const Uy = ly[bb](Wy);
-          for (let hy = 0; hy < Uy.length; hy++)
-            for (const [bb, Wy] of Object.entries(Uy[hy].attrs)) {
-              const Uy = String(Wy);
-              yb[hy].getAttribute(bb) !== Uy && yb[hy].setAttribute(bb, Uy)
+      draw(zz, uz) {
+        var bz, Ez;
+        zz !== this.drawnFamily ? (this.drawnFamily = zz, this.drawnGap = uz, this.element.innerHTML = function(zz, uz) {
+          return `<svg viewBox="0 0 64 64">${wz[zz](uz).map(Xz).join("")}</svg>`
+        }(zz, uz), this.shapes = Array.from(null !== (bz = null === (Ez = this.element.firstElementChild) || void 0 === Ez ? void 0 : Ez.children) && void 0 !== bz ? bz : [])) : uz !== this.drawnGap && (this.drawnGap = uz, function(zz, uz, bz) {
+          const Ez = wz[uz](bz);
+          for (let nz = 0; nz < Ez.length; nz++)
+            for (const [uz, bz] of Object.entries(Ez[nz].attrs)) {
+              const Ez = String(bz);
+              zz[nz].getAttribute(uz) !== Ez && zz[nz].setAttribute(uz, Ez)
             }
-        }(this.shapes, yb, bb))
+        }(this.shapes, zz, uz))
       }
-      drawCone(yb, bb, Wy) {
-        yb === this.drawnFamily && this.coneDrawn ? this.shownRadius += (bb - this.shownRadius) * (1 - Math.exp(-Wy / 80)) : this.shownRadius = bb, this.coneDrawn = !0, this.draw(yb, Math.round(4 * this.shownRadius) / 4)
+      drawCone(zz, uz, bz) {
+        zz === this.drawnFamily && this.coneDrawn ? this.shownRadius += (uz - this.shownRadius) * (1 - Math.exp(-bz / 80)) : this.shownRadius = uz, this.coneDrawn = !0, this.draw(zz, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(yb, bb) {
-        if (!(bb > 0)) return 1;
-        const Wy = yb * Zy.h / 2;
-        return Math.max(50 * Math.tan(Wy) / bb, 1)
+      coneRadiusVh(zz, uz) {
+        if (!(uz > 0)) return 1;
+        const bz = zz * lz.g / 2;
+        return Math.max(50 * Math.tan(bz) / uz, 1)
       }
-      offsetGap(yb) {
-        const bb = 2 + ((0, cb.d)(yb) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * bb) / 2)
+      offsetGap(zz) {
+        const uz = 2 + ((0, Mz.e)(zz) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * uz) / 2)
       }
-      setOwnsCrosshair(yb) {
-        yb !== this.ownsCrosshair && (this.ownsCrosshair = yb, document.body.classList.toggle("FrontlineCustomCrosshair", yb))
+      setOwnsCrosshair(zz) {
+        zz !== this.ownsCrosshair && (this.ownsCrosshair = zz, document.body.classList.toggle("FrontlineCustomCrosshair", zz))
       }
     }
-    const Ty = "FrontlineCustomDamage",
-      Vy = .45,
-      Jy = .2;
-    class gb {
-      constructor(yb, bb) {
-        this.api = yb, this.localPlayerId = bb, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const sz = "FrontlineCustomDamage",
+      rz = .45,
+      oz = .2;
+    class Nz {
+      constructor(zz, uz) {
+        this.api = zz, this.localPlayerId = uz, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.Hx = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = yb => {
-          var bb, Wy;
-          this.clearHits(), this.root = yb, this.lowLayer = null !== (bb = null === yb || void 0 === yb ? void 0 : yb.querySelector(".FrontlineDamageLow")) && void 0 !== bb ? bb : null, this.arcLayer = null !== (Wy = null === yb || void 0 === yb ? void 0 : yb.querySelector(".FrontlineDamageArcs")) && void 0 !== Wy ? Wy : null, this.showRoot(), this.drawLow()
-        }, this.token = oy.g.subscribe("damagedByOtherPlayer", (yb => {
+        }, this.maxHealth = null, this.hn = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = zz => {
+          var uz, bz;
+          this.clearHits(), this.root = zz, this.lowLayer = null !== (uz = null === zz || void 0 === zz ? void 0 : zz.querySelector(".FrontlineDamageLow")) && void 0 !== uz ? uz : null, this.arcLayer = null !== (bz = null === zz || void 0 === zz ? void 0 : zz.querySelector(".FrontlineDamageArcs")) && void 0 !== bz ? bz : null, this.showRoot(), this.drawLow()
+        }, this.token = Hz.k.subscribe("damagedByOtherPlayer", (zz => {
           let {
-            direction: bb,
-            Bx: Wy
-          } = yb;
-          this.onHurt(bb, Wy)
-        })), this.syncHealth(), document.body.classList.add(Ty)
+            direction: uz,
+            mn: bz
+          } = zz;
+          this.onHurt(uz, bz)
+        })), this.syncHealth(), document.body.classList.add(sz)
       }
-      dJ(yb) {
-        yb !== this.enabled && (this.enabled = yb, document.body.classList.toggle(Ty, yb), yb || this.clearHits(), this.showRoot())
+      Zx(zz) {
+        zz !== this.enabled && (this.enabled = zz, document.body.classList.toggle(sz, zz), zz || this.clearHits(), this.showRoot())
       }
-      frame(yb) {
-        this.syncHealth(), this.cameraHeading = yb;
-        for (const bb of this.arcs) this.drawArcAngle(bb)
+      frame(zz) {
+        this.syncHealth(), this.cameraHeading = zz;
+        for (const uz of this.arcs) this.drawArcAngle(uz)
       }
       dispose() {
-        oy.g.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Ty)
+        Hz.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(sz)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const yb = this.api.getClientOption(this.localPlayerId, "_health"),
-          bb = this.api.getClientOption(this.localPlayerId, "_shield"),
-          Wy = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(yb, this.readHealth) && Object.is(bb, this.readShield) && Object.is(Wy, this.readMaxHealth)) return;
-        if (this.readHealth = yb, this.readShield = bb, this.readMaxHealth = Wy, null === yb || void 0 === yb || !Wy) return this.lastHealthPool = null, this.maxHealth = null, this.Hx = 1, this.dead = !1, void this.drawLow();
-        const Uy = yb + (null !== bb && void 0 !== bb ? bb : 0);
-        if (null !== this.lastHealthPool && Uy < this.lastHealthPool) {
-          const yb = performance.now(),
-            bb = (this.lastHealthPool - Uy) / Wy;
-          this.lastDrop = yb - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + bb,
+        const zz = this.api.getClientOption(this.localPlayerId, "_health"),
+          uz = this.api.getClientOption(this.localPlayerId, "_shield"),
+          bz = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(zz, this.readHealth) && Object.is(uz, this.readShield) && Object.is(bz, this.readMaxHealth)) return;
+        if (this.readHealth = zz, this.readShield = uz, this.readMaxHealth = bz, null === zz || void 0 === zz || !bz) return this.lastHealthPool = null, this.maxHealth = null, this.hn = 1, this.dead = !1, void this.drawLow();
+        const Ez = zz + (null !== uz && void 0 !== uz ? uz : 0);
+        if (null !== this.lastHealthPool && Ez < this.lastHealthPool) {
+          const zz = performance.now(),
+            uz = (this.lastHealthPool - Ez) / bz;
+          this.lastDrop = zz - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + uz,
             at: this.lastDrop.at
           } : {
-            frac: bb,
-            at: yb
+            frac: uz,
+            at: zz
           }
         }
-        this.dead = yb <= 0, this.dead && this.clearHits(), this.lastHealthPool = Uy, this.maxHealth = Wy, this.Hx = yb > 0 ? yb / Wy : 1, this.drawLow()
+        this.dead = zz <= 0, this.dead && this.clearHits(), this.lastHealthPool = Ez, this.maxHealth = bz, this.hn = zz > 0 ? zz / bz : 1, this.drawLow()
       }
-      onHurt(yb, bb) {
+      onHurt(zz, uz) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const Wy = Math.min(1, this.takeDamageFrac(bb) / .3);
-        null !== yb && this.showArc(yb, Wy), this.flashEdge(null === yb ? null : yb - this.cameraHeading, .4 + .6 * Wy)
+        const bz = Math.min(1, this.takeDamageFrac(uz) / .3);
+        null !== zz && this.showArc(zz, bz), this.flashEdge(null === zz ? null : zz - this.cameraHeading, .4 + .6 * bz)
       }
-      takeDamageFrac(yb) {
-        if (void 0 !== yb && this.maxHealth) return yb / this.maxHealth;
+      takeDamageFrac(zz) {
+        if (void 0 !== zz && this.maxHealth) return zz / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: bb
+          frac: uz
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, bb
+        }, uz
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const yb = Oy((Vy - this.Hx) / .25),
-          bb = Oy((Jy - this.Hx) / .15000000000000002),
-          Wy = this.Hx < Vy;
-        this.lowLayer.classList.toggle("Active", Wy), this.lowLayer.classList.toggle("Critical", this.Hx < Jy), this.lowLayer.style.opacity = String(Wy ? .55 + .3 * yb + .15 * bb : 0)
+        const zz = xz((rz - this.hn) / .25),
+          uz = xz((oz - this.hn) / .15000000000000002),
+          bz = this.hn < rz;
+        this.lowLayer.classList.toggle("Active", bz), this.lowLayer.classList.toggle("Critical", this.hn < oz), this.lowLayer.style.opacity = String(bz ? .55 + .3 * zz + .15 * uz : 0)
       }
-      showArc(yb, bb) {
-        var Wy, Uy;
+      showArc(zz, uz) {
+        var bz, Ez;
         if (!this.arcLayer) return;
-        let hy = this.arcs.find((bb => Gy(bb.direction, yb) < .6));
-        if (!hy) {
-          const bb = document.createElement("div");
-          bb.className = "FrontlineDamageArc", bb.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(bb), hy = {
-            element: bb,
-            direction: yb,
+        let nz = this.arcs.find((uz => vz(uz.direction, zz) < .6));
+        if (!nz) {
+          const uz = document.createElement("div");
+          uz.className = "FrontlineDamageArc", uz.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(uz), nz = {
+            element: uz,
+            direction: zz,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(hy)
+          }, this.arcs.push(nz)
         }
-        hy.direction = yb, this.drawArcAngle(hy);
-        const fy = hy.fade ? Number(getComputedStyle(hy.element).opacity) : 0;
-        null === (Wy = hy.fade) || void 0 === Wy || Wy.cancel(), null === (Uy = hy.pop) || void 0 === Uy || Uy.cancel(), hy.element.style.opacity = "1";
-        const Zy = hy.element.animate([{
-          opacity: fy
+        nz.direction = zz, this.drawArcAngle(nz);
+        const iz = nz.fade ? Number(getComputedStyle(nz.element).opacity) : 0;
+        null === (bz = nz.fade) || void 0 === bz || bz.cancel(), null === (Ez = nz.pop) || void 0 === Ez || Ez.cancel(), nz.element.style.opacity = "1";
+        const lz = nz.element.animate([{
+          opacity: iz
         }, {
           opacity: 1
         }], 144);
-        hy.fade = Zy, hy.pop = hy.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * bb
+        nz.fade = lz, nz.pop = nz.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * uz
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const cb = hy;
-        Zy.onfinish = () => {
-          if (cb.fade !== Zy) return;
-          const yb = cb.element.animate([{
+        const Mz = nz;
+        lz.onfinish = () => {
+          if (Mz.fade !== lz) return;
+          const zz = Mz.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          yb.startTime = Zy.startTime, cb.fade = yb, yb.onfinish = () => {
-            cb.fade === yb && (cb.element.remove(), Ry(this.arcs, cb))
+          zz.startTime = lz.startTime, Mz.fade = zz, zz.onfinish = () => {
+            Mz.fade === zz && (Mz.element.remove(), Jz(this.arcs, Mz))
           }
         }
       }
-      drawArcAngle(yb) {
-        const bb = yb.direction - this.cameraHeading;
-        (null === yb.drawnAngle || Math.abs(bb - yb.drawnAngle) > .005) && (yb.drawnAngle = bb, yb.element.style.rotate = `${bb}rad`)
+      drawArcAngle(zz) {
+        const uz = zz.direction - this.cameraHeading;
+        (null === zz.drawnAngle || Math.abs(uz - zz.drawnAngle) > .005) && (zz.drawnAngle = uz, zz.element.style.rotate = `${uz}rad`)
       }
-      flashEdge(yb, bb) {
-        var Wy, Uy, hy;
+      flashEdge(zz, uz) {
+        var bz, Ez, nz;
         if (!this.root) return;
-        let fy = this.flashes.find((bb => null === bb.angle || null === yb ? bb.angle === yb : Gy(bb.angle, yb) < .5));
-        if (!fy) {
-          const bb = document.createElement("div");
-          bb.className = "FrontlineDamageFlash";
-          const Wy = bb.appendChild(document.createElement("div"));
-          Wy.className = "FrontlineDamageFlashGlow", this.root.insertBefore(bb, this.arcLayer), fy = {
-            element: bb,
-            glow: Wy,
-            angle: yb,
+        let iz = this.flashes.find((uz => null === uz.angle || null === zz ? uz.angle === zz : vz(uz.angle, zz) < .5));
+        if (!iz) {
+          const uz = document.createElement("div");
+          uz.className = "FrontlineDamageFlash";
+          const bz = uz.appendChild(document.createElement("div"));
+          bz.className = "FrontlineDamageFlashGlow", this.root.insertBefore(uz, this.arcLayer), iz = {
+            element: uz,
+            glow: bz,
+            angle: zz,
             level: 0,
             animation: null
-          }, this.flashes.push(fy)
+          }, this.flashes.push(iz)
         }
-        const Zy = null === (Wy = fy.animation) || void 0 === Wy || null === (Uy = Wy.effect) || void 0 === Uy ? void 0 : Uy.getComputedTiming().progress,
-          cb = null === Zy || void 0 === Zy ? 0 : fy.level * (1 - Zy);
-        fy.level = Math.min(1, Math.max(bb, cb + .6 * bb)), fy.angle = yb;
+        const lz = null === (bz = iz.animation) || void 0 === bz || null === (Ez = bz.effect) || void 0 === Ez ? void 0 : Ez.getComputedTiming().progress,
+          Mz = null === lz || void 0 === lz ? 0 : iz.level * (1 - lz);
+        iz.level = Math.min(1, Math.max(uz, Mz + .6 * uz)), iz.angle = zz;
         const {
-          x: Py,
-          y: oy,
-          rx: By,
-          ry: Ky
-        } = function(yb, bb) {
-          const Wy = window.innerWidth,
-            Uy = window.innerHeight;
-          if (null === yb) return {
-            x: Wy / 2,
-            y: Uy / 2,
+          x: tz,
+          y: Hz,
+          rx: Oz,
+          ry: pz
+        } = function(zz, uz) {
+          const bz = window.innerWidth,
+            Ez = window.innerHeight;
+          if (null === zz) return {
+            x: bz / 2,
+            y: Ez / 2,
             rx: 0,
             ry: 0
           };
-          const hy = Math.sin(yb),
-            fy = -Math.cos(yb),
-            Zy = Wy / 2 / Math.max(1e-6, Math.abs(hy)),
-            cb = Uy / 2 / Math.max(1e-6, Math.abs(fy)),
-            Py = Math.min(Zy, cb),
-            oy = Math.round(Wy / 2 + hy * Py),
-            By = Math.round(Uy / 2 + fy * Py),
-            Ky = Uy / 100 * (.85 + .25 * bb),
-            ey = Zy <= cb,
-            qb = Math.round((ey ? 30 : 74) * Ky),
-            sy = Math.round((ey ? 58 : 26) * Ky);
+          const nz = Math.sin(zz),
+            iz = -Math.cos(zz),
+            lz = bz / 2 / Math.max(1e-6, Math.abs(nz)),
+            Mz = Ez / 2 / Math.max(1e-6, Math.abs(iz)),
+            tz = Math.min(lz, Mz),
+            Hz = Math.round(bz / 2 + nz * tz),
+            Oz = Math.round(Ez / 2 + iz * tz),
+            pz = Ez / 100 * (.85 + .25 * uz),
+            dz = lz <= Mz,
+            Fz = Math.round((dz ? 30 : 74) * pz),
+            Zz = Math.round((dz ? 58 : 26) * pz);
           return {
-            x: oy,
-            y: By,
-            rx: qb,
-            ry: sy
+            x: Hz,
+            y: Oz,
+            rx: Fz,
+            ry: Zz
           }
-        }(yb, fy.level), {
-          style: ey
-        } = fy.glow;
-        fy.glow.classList.toggle("Everywhere", null === yb), ey.setProperty("--glowX", `${Py}px`), ey.setProperty("--glowY", `${oy}px`), ey.setProperty("--glowRx", `${By}px`), ey.setProperty("--glowRy", `${Ky}px`), fy.element.style.transformOrigin = `${Py}px ${oy}px`, null === (hy = fy.animation) || void 0 === hy || hy.cancel();
-        const qb = fy.element.animate([{
+        }(zz, iz.level), {
+          style: dz
+        } = iz.glow;
+        iz.glow.classList.toggle("Everywhere", null === zz), dz.setProperty("--glowX", `${tz}px`), dz.setProperty("--glowY", `${Hz}px`), dz.setProperty("--glowRx", `${Oz}px`), dz.setProperty("--glowRy", `${pz}px`), iz.element.style.transformOrigin = `${tz}px ${Hz}px`, null === (nz = iz.animation) || void 0 === nz || nz.cancel();
+        const Fz = iz.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: fy.level,
+          opacity: iz.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * fy.level,
+          opacity: .8 * iz.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * fy.level
+          duration: 520 + 180 * iz.level
         });
-        fy.animation = qb;
-        const sy = fy;
-        qb.onfinish = () => {
-          sy.animation === qb && (sy.element.remove(), Ry(this.flashes, sy))
+        iz.animation = Fz;
+        const Zz = iz;
+        Fz.onfinish = () => {
+          Zz.animation === Fz && (Zz.element.remove(), Jz(this.flashes, Zz))
         }
       }
       clearHits() {
-        for (const Uy of this.arcs) {
-          var yb, bb;
-          null === (yb = Uy.fade) || void 0 === yb || yb.cancel(), Uy.fade = null, null === (bb = Uy.pop) || void 0 === bb || bb.cancel(), Uy.element.remove()
+        for (const Ez of this.arcs) {
+          var zz, uz;
+          null === (zz = Ez.fade) || void 0 === zz || zz.cancel(), Ez.fade = null, null === (uz = Ez.pop) || void 0 === uz || uz.cancel(), Ez.element.remove()
         }
         this.arcs.length = 0;
-        for (const Uy of this.flashes) {
-          var Wy;
-          null === (Wy = Uy.animation) || void 0 === Wy || Wy.cancel(), Uy.element.remove()
+        for (const Ez of this.flashes) {
+          var bz;
+          null === (bz = Ez.animation) || void 0 === bz || bz.cancel(), Ez.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function Gy(yb, bb) {
-      return Math.abs(Math.atan2(Math.sin(yb - bb), Math.cos(yb - bb)))
+    function vz(zz, uz) {
+      return Math.abs(Math.atan2(Math.sin(zz - uz), Math.cos(zz - uz)))
     }
 
-    function Oy(yb) {
-      return Math.max(0, Math.min(1, yb))
+    function xz(zz) {
+      return Math.max(0, Math.min(1, zz))
     }
 
-    function Ry(yb, bb) {
-      const Wy = yb.indexOf(bb); - 1 !== Wy && yb.splice(Wy, 1)
+    function Jz(zz, uz) {
+      const bz = zz.indexOf(uz); - 1 !== bz && zz.splice(bz, 1)
     }
-    var vb = Wy(898),
-      ib = Wy.n(vb),
-      My = Wy(35370),
-      Yy = Wy(35490),
-      Xy = Wy(1042),
-      ny = Wy(1268);
-    const uy = "frontlineHudChanged",
-      rb = "frontlineScoreboardChanged";
-    class Hy {
+    var Az = bz(1038),
+      Tz = bz.n(Az),
+      Lz = bz(36066),
+      Pz = bz(36162),
+      Gz = bz(1181),
+      az = bz(1417);
+    const Vz = "frontlineHudChanged",
+      mz = "frontlineScoreboardChanged";
+    class qz {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      pU(yb) {
-        this.wire = yb, oy.g.EZ(uy, yb, !0)
+      WZ(zz) {
+        this.wire = zz, Hz.k.sK(Vz, zz, !0)
       }
-      receiveScoreboard(yb) {
-        let bb = "scoreboard" === yb[0] ? performance.now() + yb[5] : 0;
-        const Wy = this.scoreboard.endsAt;
-        0 !== bb && 0 !== Wy && Math.abs(bb - Wy) < 1e3 && (bb = Wy), this.scoreboard = {
-          wire: yb,
-          endsAt: bb
-        }, oy.g.EZ(rb, this.scoreboard, !0)
+      receiveScoreboard(zz) {
+        let uz = "scoreboard" === zz[0] ? performance.now() + zz[5] : 0;
+        const bz = this.scoreboard.endsAt;
+        0 !== uz && 0 !== bz && Math.abs(uz - bz) < 1e3 && (uz = bz), this.scoreboard = {
+          wire: zz,
+          endsAt: uz
+        }, Hz.k.sK(mz, this.scoreboard, !0)
       }
     }
-    var ab = Wy(952);
-    const Fy = {
+    var hz = bz(1089);
+    const Uz = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function py(yb) {
-      const [bb, Wy] = (0, hy.useState)((() => (yb - performance.now()) / 1e3));
-      return (0, hy.useEffect)((() => {
-        if (0 === yb) return;
-        const bb = () => {
-          Wy((yb - performance.now()) / 1e3)
+    function cz(zz) {
+      const [uz, bz] = (0, nz.useState)((() => (zz - performance.now()) / 1e3));
+      return (0, nz.useEffect)((() => {
+        if (0 === zz) return;
+        const uz = () => {
+          bz((zz - performance.now()) / 1e3)
         };
-        bb();
-        const Uy = window.setInterval(bb, 250);
+        uz();
+        const Ez = window.setInterval(uz, 250);
         return () => {
-          window.clearInterval(Uy)
+          window.clearInterval(Ez)
         }
-      }), [yb]), bb
+      }), [zz]), uz
     }
 
-    function Ly(yb) {
+    function gz(zz) {
       let {
-        className: bb,
-        point: Wy
-      } = yb;
-      const [Uy, hy, fy, Zy, cb, Py] = Wy;
-      return (0, ab.jsxs)("div", {
-        className: ib()(bb, `Owner-${hy||"None"}`, `Leader-${Zy||"None"}`, {
-          Contested: cb,
-          Here: Py
+        className: uz,
+        point: bz
+      } = zz;
+      const [Ez, nz, iz, lz, Mz, tz] = bz;
+      return (0, hz.jsxs)("div", {
+        className: Tz()(uz, `Owner-${nz||"None"}`, `Leader-${lz||"None"}`, {
+          Contested: Mz,
+          Here: tz
         }),
-        children: [(0, ab.jsx)("span", {
+        children: [(0, hz.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: Uy
-        }), (0, ab.jsx)("i", {
+          children: Ez
+        }), (0, hz.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${fy}%`
+            width: `${iz}%`
           }
         })]
       })
     }
-    const Qy = (0, hy.memo)((function(yb) {
+    const Sz = (0, nz.memo)((function(zz) {
         let {
-          points: bb,
-          markers: Wy
-        } = yb;
+          points: uz,
+          markers: bz
+        } = zz;
         const {
-          t: Uy
-        } = (0, Xy.D)();
-        return bb ? (0, ab.jsx)("div", {
+          t: Ez
+        } = (0, Gz.F)();
+        return uz ? (0, hz.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: bb.map((yb => {
-            const [bb, , , , , , , hy] = yb;
-            return (0, ab.jsxs)("div", {
-              ref: Wy.bindMarker(bb),
+          children: uz.map((zz => {
+            const [uz, , , , , , , nz] = zz;
+            return (0, hz.jsxs)("div", {
+              ref: bz.bindMarker(uz),
               className: "FrontlinePointMarker",
-              children: [(0, ab.jsx)(Ly, {
+              children: [(0, hz.jsx)(gz, {
                 className: "FrontlinePointMarkerTile",
-                point: yb
-              }), (0, ab.jsxs)("div", {
+                point: zz
+              }), (0, hz.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [hy && (0, ab.jsx)("span", {
-                  className: ib()("FrontlinePointMarkerHomeTurf", `Team-${hy}`),
-                  children: Uy("frontlineHud:homeTurf", {
-                    team: Uy(Fy[hy])
+                children: [nz && (0, hz.jsx)("span", {
+                  className: Tz()("FrontlinePointMarkerHomeTurf", `Team-${nz}`),
+                  children: Ez("frontlineHud:homeTurf", {
+                    team: Ez(Uz[nz])
                   })
-                }), (0, ab.jsx)("span", {
+                }), (0, hz.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, bb)
+            }, uz)
           }))
         }) : null
       })),
-      jb = {
+      yz = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      Dy = {
+      Dz = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function tb(yb) {
+    function Qz(zz) {
       let {
-        hud: bb,
-        crosshair: Wy,
-        damage: Uy,
-        markers: hy
-      } = yb;
-      const fy = (0, ny.m)(uy, bb.getWire()),
-        Zy = (0, ny.m)(rb, bb.getScoreboard());
-      return (0, ab.jsxs)(ab.Fragment, {
-        children: [(0, ab.jsx)(wy, {
-          damage: Uy
-        }), (0, ab.jsx)(Qy, {
-          points: "scoreboard" === Zy.wire[0] ? Zy.wire[6] : null,
-          markers: hy
-        }), (0, ab.jsx)(Ny, {
-          view: Zy
-        }), (0, ab.jsx)("div", {
+        hud: uz,
+        crosshair: bz,
+        damage: Ez,
+        markers: nz
+      } = zz;
+      const iz = (0, az.h)(Vz, uz.getWire()),
+        lz = (0, az.h)(mz, uz.getScoreboard());
+      return (0, hz.jsxs)(hz.Fragment, {
+        children: [(0, hz.jsx)(Wz, {
+          damage: Ez
+        }), (0, hz.jsx)(Sz, {
+          points: "scoreboard" === lz.wire[0] ? lz.wire[6] : null,
+          markers: nz
+        }), (0, hz.jsx)(jz, {
+          view: lz
+        }), (0, hz.jsx)("div", {
           className: "FrontlineReticle",
-          ref: Wy.bindElement
-        }), (0, ab.jsx)(My.f, {
-          children: (0, ab.jsx)(kb, {
-            wire: fy
+          ref: bz.bindElement
+        }), (0, hz.jsx)(Lz.d, {
+          children: (0, hz.jsx)(ez, {
+            wire: iz
           })
         })]
       })
     }
-    const wy = (0, hy.memo)((function(yb) {
+    const Wz = (0, nz.memo)((function(zz) {
         let {
-          damage: bb
-        } = yb;
-        return (0, ab.jsxs)("div", {
+          damage: uz
+        } = zz;
+        return (0, hz.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: bb.bindElement,
-          children: [(0, ab.jsx)("div", {
+          ref: uz.bindElement,
+          children: [(0, hz.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, ab.jsx)("div", {
+            children: (0, hz.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, ab.jsx)("div", {
+          }), (0, hz.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      kb = (0, hy.memo)((function(yb) {
+      ez = (0, nz.memo)((function(zz) {
         let {
-          wire: bb
-        } = yb;
+          wire: uz
+        } = zz;
         const {
-          t: Wy
-        } = (0, Xy.D)();
-        if ("capture" === bb[0]) {
-          const [, yb, Uy, hy, fy, Zy, cb] = bb, Py = Math.round(hy / 100 * 24);
-          return (0, ab.jsxs)("div", {
-            className: ib()("FrontlinePlate", `Status-${Uy}`, `Leader-${fy||"None"}`),
-            children: [(0, ab.jsx)(Ay, {}), (0, ab.jsxs)("div", {
+          t: bz
+        } = (0, Gz.F)();
+        if ("capture" === uz[0]) {
+          const [, zz, Ez, nz, iz, lz, Mz] = uz, tz = Math.round(nz / 100 * 24);
+          return (0, hz.jsxs)("div", {
+            className: Tz()("FrontlinePlate", `Status-${Ez}`, `Leader-${iz||"None"}`),
+            children: [(0, hz.jsx)(Yz, {}), (0, hz.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, ab.jsx)("span", {
+              children: [(0, hz.jsx)("span", {
                 className: "FrontlineObjective",
-                children: yb
-              }), (0, ab.jsxs)("div", {
+                children: zz
+              }), (0, hz.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, ab.jsx)("div", {
+                children: [(0, hz.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: Wy("frontlineHud:objective", {
-                    point: yb,
-                    friendly: Zy,
-                    enemy: cb
+                  children: bz("frontlineHud:objective", {
+                    point: zz,
+                    friendly: lz,
+                    enemy: Mz
                   })
-                }), (0, ab.jsx)("div", {
+                }), (0, hz.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: Wy(jb[Uy])
+                  children: bz(yz[Ez])
                 })]
-              }), (0, ab.jsxs)("span", {
+              }), (0, hz.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(hy).padStart(3, "0"), (0, ab.jsx)("small", {
+                children: [String(nz).padStart(3, "0"), (0, hz.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, ab.jsx)(Iy, {
+            }), (0, hz.jsx)(Bz, {
               segments: 24,
-              lit: Py
+              lit: tz
             })]
           })
         }
-        if ("alert" === bb[0]) {
-          const [, yb, Uy, hy] = bb;
-          return (0, ab.jsxs)("div", {
-            className: ib()("FrontlinePlate", "FrontlineAlert", `Tone-${hy}`),
-            children: [(0, ab.jsx)(Ay, {}), (0, ab.jsx)("div", {
+        if ("alert" === uz[0]) {
+          const [, zz, Ez, nz] = uz;
+          return (0, hz.jsxs)("div", {
+            className: Tz()("FrontlinePlate", "FrontlineAlert", `Tone-${nz}`),
+            children: [(0, hz.jsx)(Yz, {}), (0, hz.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Wy(Dy[yb])
-            }), (0, ab.jsx)("div", {
+              children: bz(Dz[zz])
+            }), (0, hz.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: Uy
+              children: Ez
             })]
           })
         }
         return null
       })),
-      Ny = (0, hy.memo)((function(yb) {
+      jz = (0, nz.memo)((function(zz) {
         let {
-          view: bb
-        } = yb;
+          view: uz
+        } = zz;
         const {
-          t: Wy
-        } = (0, Xy.D)(), Uy = (0, hy.useRef)(null), fy = function(yb, bb) {
-          const [Wy, Uy] = (0, hy.useState)(!1);
-          return (0, hy.useLayoutEffect)((() => {
-            const bb = yb.current;
-            if (!bb) return;
-            const Wy = document.querySelector(`.${Yy.g}`),
-              hy = document.querySelector(`.${Yy.i}`),
-              fy = () => {
-                var yb;
-                const fy = bb.querySelector(".FrontlineTeamTrack"),
-                  Zy = (0, Py.getRemInPx)(),
-                  cb = bb.getBoundingClientRect().width - 2 * (null !== (yb = null === fy || void 0 === fy ? void 0 : fy.getBoundingClientRect().width) && void 0 !== yb ? yb : 0),
-                  oy = window.innerWidth / 2,
-                  By = Wy ? Wy.getBoundingClientRect().right : 0,
-                  Ky = hy ? hy.getBoundingClientRect().left : window.innerWidth,
-                  ey = Math.min(oy - By, Ky - oy) - Yy.c - cb / 2,
-                  qb = ey < 6 * Zy,
-                  sy = qb ? (window.innerWidth - cb) / 2 - Yy.c : ey;
-                bb.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(sy,14*Zy)))}px`), Uy(qb)
+          t: bz
+        } = (0, Gz.F)(), Ez = (0, nz.useRef)(null), iz = function(zz, uz) {
+          const [bz, Ez] = (0, nz.useState)(!1);
+          return (0, nz.useLayoutEffect)((() => {
+            const uz = zz.current;
+            if (!uz) return;
+            const bz = document.querySelector(`.${Pz.d}`),
+              nz = document.querySelector(`.${Pz.g}`),
+              iz = () => {
+                var zz;
+                const iz = uz.querySelector(".FrontlineTeamTrack"),
+                  lz = (0, tz.getRemInPx)(),
+                  Mz = uz.getBoundingClientRect().width - 2 * (null !== (zz = null === iz || void 0 === iz ? void 0 : iz.getBoundingClientRect().width) && void 0 !== zz ? zz : 0),
+                  Hz = window.innerWidth / 2,
+                  Oz = bz ? bz.getBoundingClientRect().right : 0,
+                  pz = nz ? nz.getBoundingClientRect().left : window.innerWidth,
+                  dz = Math.min(Hz - Oz, pz - Hz) - Pz.b - Mz / 2,
+                  Fz = dz < 6 * lz,
+                  Zz = Fz ? (window.innerWidth - Mz) / 2 - Pz.b : dz;
+                uz.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Zz,14*lz)))}px`), Ez(Fz)
               };
-            fy();
-            const Zy = new ResizeObserver(fy);
-            for (const yb of [bb, Wy, hy]) yb && Zy.observe(yb);
-            return window.addEventListener("resize", fy), () => {
-              Zy.disconnect(), window.removeEventListener("resize", fy)
+            iz();
+            const lz = new ResizeObserver(iz);
+            for (const zz of [uz, bz, nz]) zz && lz.observe(zz);
+            return window.addEventListener("resize", iz), () => {
+              lz.disconnect(), window.removeEventListener("resize", iz)
             }
-          }), [yb, bb]), Wy
-        }(Uy, "scoreboard" === bb.wire[0]);
-        if ("scoreboard" !== bb.wire[0]) return null;
-        const [, Zy, cb, oy, By, , Ky] = bb.wire, ey = "Red" === Zy ? "Blue" : "Red";
-        return (0, ab.jsxs)("div", {
-          className: ib()("FrontlineScoreboardContainer", {
-            Below: fy
+          }), [zz, uz]), bz
+        }(Ez, "scoreboard" === uz.wire[0]);
+        if ("scoreboard" !== uz.wire[0]) return null;
+        const [, lz, Mz, Hz, Oz, , pz] = uz.wire, dz = "Red" === lz ? "Blue" : "Red";
+        return (0, hz.jsxs)("div", {
+          className: Tz()("FrontlineScoreboardContainer", {
+            Below: iz
           }),
-          children: [(0, ab.jsxs)("div", {
-            ref: Uy,
+          children: [(0, hz.jsxs)("div", {
+            ref: Ez,
             className: "FrontlineScoreboard",
-            children: [(0, ab.jsx)(Ay, {}), (0, ab.jsx)(zb, {
-              team: Zy,
-              tickets: cb,
-              goal: By,
+            children: [(0, hz.jsx)(Yz, {}), (0, hz.jsx)(Iz, {
+              team: lz,
+              tickets: Mz,
+              goal: Oz,
               side: "Friendly"
-            }), (0, ab.jsx)("div", {
+            }), (0, hz.jsx)("div", {
               className: "FrontlinePoints",
-              children: Ky.map((yb => (0, ab.jsx)(Ly, {
+              children: pz.map((zz => (0, hz.jsx)(gz, {
                 className: "FrontlinePoint",
-                point: yb
-              }, yb[0])))
-            }), (0, ab.jsx)(zb, {
-              team: ey,
-              tickets: oy,
-              goal: By,
+                point: zz
+              }, zz[0])))
+            }), (0, hz.jsx)(Iz, {
+              team: dz,
+              tickets: Hz,
+              goal: Oz,
               side: "Enemy"
             })]
-          }), (0, ab.jsxs)("div", {
+          }), (0, hz.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, ab.jsx)(xb, {
-              endsAt: bb.endsAt
-            }), (0, ab.jsx)("div", {
+            children: [(0, hz.jsx)(Cz, {
+              endsAt: uz.endsAt
+            }), (0, hz.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Wy("frontlineHud:ticketGoal", {
-                goal: By
+              children: bz("frontlineHud:ticketGoal", {
+                goal: Oz
               })
             })]
           })]
         })
       }));
 
-    function zb(yb) {
+    function Iz(zz) {
       let {
-        team: bb,
-        tickets: Wy,
-        goal: Uy,
-        side: hy
-      } = yb;
+        team: uz,
+        tickets: bz,
+        goal: Ez,
+        side: nz
+      } = zz;
       const {
-        t: fy
-      } = (0, Xy.D)(), Zy = String(Wy).padStart(3, "0"), cb = Zy.search(/[1-9]/), Py = -1 === cb ? Zy : Zy.slice(0, cb), oy = Math.min(20, Math.floor(Wy / Uy * 20));
-      return (0, ab.jsxs)("div", {
-        className: ib()("FrontlineTeamScore", hy, `Team-${bb}`),
-        children: [(0, ab.jsxs)("div", {
+        t: iz
+      } = (0, Gz.F)(), lz = String(bz).padStart(3, "0"), Mz = lz.search(/[1-9]/), tz = -1 === Mz ? lz : lz.slice(0, Mz), Hz = Math.min(20, Math.floor(bz / Ez * 20));
+      return (0, hz.jsxs)("div", {
+        className: Tz()("FrontlineTeamScore", nz, `Team-${uz}`),
+        children: [(0, hz.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, ab.jsx)("span", {
+          children: [(0, hz.jsx)("span", {
             className: "Lead",
-            children: Py
-          }), -1 !== cb && Zy.slice(cb)]
-        }), (0, ab.jsxs)("div", {
+            children: tz
+          }), -1 !== Mz && lz.slice(Mz)]
+        }), (0, hz.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, ab.jsx)("div", {
+          children: [(0, hz.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: fy(Fy[bb])
-          }), (0, ab.jsx)(Iy, {
+            children: iz(Uz[uz])
+          }), (0, hz.jsx)(Bz, {
             segments: 20,
-            lit: oy
+            lit: Hz
           })]
         })]
       })
     }
 
-    function Iy(yb) {
+    function Bz(zz) {
       let {
-        segments: bb,
-        lit: Wy
-      } = yb;
-      return (0, ab.jsx)("div", {
+        segments: uz,
+        lit: bz
+      } = zz;
+      return (0, hz.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: bb
-        }, ((yb, bb) => (0, ab.jsx)("i", {
-          className: ib()({
-            Lit: bb < Wy
+          length: uz
+        }, ((zz, uz) => (0, hz.jsx)("i", {
+          className: Tz()({
+            Lit: uz < bz
           })
-        }, bb)))
+        }, uz)))
       })
     }
 
-    function xb(yb) {
+    function Cz(zz) {
       let {
-        endsAt: bb
-      } = yb;
-      const Wy = Math.max(0, Math.ceil(py(bb)));
-      return (0, ab.jsxs)("div", {
-        className: ib()("FrontlineClock", {
-          Urgent: Wy <= 60
+        endsAt: uz
+      } = zz;
+      const bz = Math.max(0, Math.ceil(cz(uz)));
+      return (0, hz.jsxs)("div", {
+        className: Tz()("FrontlineClock", {
+          Urgent: bz <= 60
         }),
-        children: [Math.floor(Wy / 60), ":", String(Wy % 60).padStart(2, "0")]
+        children: [Math.floor(bz / 60), ":", String(bz % 60).padStart(2, "0")]
       })
     }
 
-    function Ay() {
-      return (0, ab.jsxs)(ab.Fragment, {
-        children: [(0, ab.jsx)("i", {
+    function Yz() {
+      return (0, hz.jsxs)(hz.Fragment, {
+        children: [(0, hz.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, ab.jsx)("i", {
+        }), (0, hz.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var dy = Wy(35487),
-      yW = Wy(1115),
-      bW = Wy(37177),
-      Wb = Wy(37211);
-    class Ub {
-      constructor(yb) {
-        var bb;
-        this.hud = yb, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var kz = bz(36158),
+      zu = bz(1241),
+      uu = bz(37876),
+      bu = bz(37920);
+    class Eu {
+      constructor(zz) {
+        var uz;
+        this.hud = zz, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.rh = !1, this.pE = () => {
+        }, this.render = null, this.SZ = !1, this.Fs = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.pE), null === (bb = window.visualViewport) || void 0 === bb || bb.addEventListener("resize", this.pE)
+        }, window.addEventListener("resize", this.Fs), null === (uz = window.visualViewport) || void 0 === uz || uz.addEventListener("resize", this.Fs)
       }
-      bindMarker(yb) {
-        let bb = this.refs.get(yb);
-        return bb || (bb = bb => {
-          var Wy;
-          null === (Wy = this.markers.get(yb)) || void 0 === Wy || Wy.stopObserving(), this.markers.delete(yb), bb && !this.rh && this.markers.set(yb, this.mount(bb))
-        }, this.refs.set(yb, bb)), bb
+      bindMarker(zz) {
+        let uz = this.refs.get(zz);
+        return uz || (uz = uz => {
+          var bz;
+          null === (bz = this.markers.get(zz)) || void 0 === bz || bz.stopObserving(), this.markers.delete(zz), uz && !this.SZ && this.markers.set(zz, this.mount(uz))
+        }, this.refs.set(zz, uz)), uz
       }
-      frame(yb, bb) {
-        this.render = yb;
-        const Wy = this.hud.getScoreboard().wire;
-        if ("scoreboard" === Wy[0] && 0 !== this.markers.size)
-          for (const [Uy, , , , , , hy] of Wy[6]) {
-            const yb = this.markers.get(Uy);
-            yb && hy && (yb.target ??= [0, 0, 0], yb.target[0] = hy[0], yb.target[1] = hy[1] + 2.5, yb.target[2] = hy[2], this.place(yb), this.aby(yb, bb && Math.hypot(hy[0] - bb[0], hy[1] - bb[1], hy[2] - bb[2])))
+      frame(zz, uz) {
+        this.render = zz;
+        const bz = this.hud.getScoreboard().wire;
+        if ("scoreboard" === bz[0] && 0 !== this.markers.size)
+          for (const [Ez, , , , , , nz] of bz[6]) {
+            const zz = this.markers.get(Ez);
+            zz && nz && (zz.target ??= [0, 0, 0], zz.target[0] = nz[0], zz.target[1] = nz[1] + 2.5, zz.target[2] = nz[2], this.place(zz), this.Ki(zz, uz && Math.hypot(nz[0] - uz[0], nz[1] - uz[1], nz[2] - uz[2])))
           }
       }
       dispose() {
-        var yb;
-        this.rh = !0, window.removeEventListener("resize", this.pE), null === (yb = window.visualViewport) || void 0 === yb || yb.removeEventListener("resize", this.pE);
-        for (const bb of this.markers.values()) bb.stopObserving();
+        var zz;
+        this.SZ = !0, window.removeEventListener("resize", this.Fs), null === (zz = window.visualViewport) || void 0 === zz || zz.removeEventListener("resize", this.Fs);
+        for (const uz of this.markers.values()) uz.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(yb) {
+      place(zz) {
         const {
-          render: bb,
-          viewport: Wy
+          render: uz,
+          viewport: bz
         } = this;
-        if (!bb || !yb.target) return;
-        const Uy = (50 - bb.screenBandPct.y) / 100 * Wy.height,
-          hy = {
-            x: yb.halfSize.width + 8,
-            top: yb.halfSize.height + 8,
-            bottom: yb.halfSize.height + yb.labelsBelow + Uy
+        if (!uz || !zz.target) return;
+        const Ez = (50 - uz.screenBandPct.y) / 100 * bz.height,
+          nz = {
+            x: zz.halfSize.width + 8,
+            top: zz.halfSize.height + 8,
+            bottom: zz.halfSize.height + zz.labelsBelow + Ez
           },
-          fy = bb.projectWorldPosToViewport(yb.target),
-          Zy = null !== fy && void 0 !== fy ? fy : bb.projectWorldPosToScreenPos(yb.target),
-          cb = (0, Wb.d)({
-            x: Zy.x,
-            y: Zy.y,
-            text: fy
-          }, hy, Wy);
-        (0, bW.b)(yb.root, Math.round(100 * cb.x) / 100, Math.round(100 * cb.y) / 100)
+          iz = uz.projectWorldPosToViewport(zz.target),
+          lz = null !== iz && void 0 !== iz ? iz : uz.projectWorldPosToScreenPos(zz.target),
+          Mz = (0, bu.d)({
+            x: lz.x,
+            y: lz.y,
+            text: iz
+          }, nz, bz);
+        (0, uu.d)(zz.root, Math.round(100 * Mz.x) / 100, Math.round(100 * Mz.y) / 100)
       }
-      aby(yb, bb) {
-        if (null === bb) return void(null !== yb.metres && (yb.metres = null, yb.distance.textContent = ""));
-        const Wy = Date.now();
-        (null === yb.metres || (0, dy.d)(bb, yb.metres, yb.metresShownAt)) && (yb.metres = Math.round(bb), yb.metresShownAt = Wy, yb.distance.textContent = (0, Xy.A)(yW.f.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(yb.metres)
+      Ki(zz, uz) {
+        if (null === uz) return void(null !== zz.metres && (zz.metres = null, zz.distance.textContent = ""));
+        const bz = Date.now();
+        (null === zz.metres || (0, kz.d)(uz, zz.metres, zz.metresShownAt)) && (zz.metres = Math.round(uz), zz.metresShownAt = bz, zz.distance.textContent = (0, Gz.x)(zu.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(zz.metres)
         }))
       }
-      mount(yb) {
-        const bb = {
-            root: yb,
-            distance: yb.querySelector(".FrontlinePointMarkerDistance"),
+      mount(zz) {
+        const uz = {
+            root: zz,
+            distance: zz.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          Wy = yb.querySelector(".FrontlinePointMarkerLabels"),
-          Uy = new ResizeObserver((() => {
-            bb.halfSize = {
-              width: Math.max(yb.offsetWidth, Wy.offsetWidth) / 2,
-              height: yb.offsetHeight / 2
-            }, bb.labelsBelow = Wy.offsetTop + Wy.offsetHeight - yb.offsetHeight, this.place(bb)
+          bz = zz.querySelector(".FrontlinePointMarkerLabels"),
+          Ez = new ResizeObserver((() => {
+            uz.halfSize = {
+              width: Math.max(zz.offsetWidth, bz.offsetWidth) / 2,
+              height: zz.offsetHeight / 2
+            }, uz.labelsBelow = bz.offsetTop + bz.offsetHeight - zz.offsetHeight, this.place(uz)
           }));
-        return Uy.observe(yb, {
+        return Ez.observe(zz, {
           box: "border-box"
-        }), Uy.observe(Wy, {
+        }), Ez.observe(bz, {
           box: "border-box"
-        }), bb.stopObserving = () => {
-          Uy.disconnect()
-        }, bb
+        }), uz.stopObserving = () => {
+          Ez.disconnect()
+        }, uz
       }
     }
-    var hb = Wy(5698),
-      fb = Wy(2096);
-    const Zb = "frontlineRoundEndChanged";
-    class cW {
+    var nu = bz(6174),
+      iu = bz(2471);
+    const lu = "frontlineRoundEndChanged";
+    class Mu {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      pU(yb) {
-        const bb = "roundEnd" === yb[0] ? performance.now() + yb[5] : 0;
+      WZ(zz) {
+        const uz = "roundEnd" === zz[0] ? performance.now() + zz[5] : 0;
         this.view = {
-          wire: yb,
+          wire: zz,
           key: this.view.key + 1,
-          endsAt: bb
-        }, oy.g.EZ(Zb, this.view, !0)
+          endsAt: uz
+        }, Hz.k.sK(lu, this.view, !0)
       }
     }
-    const Pb = (0, hy.lazy)((() => (0, fb.b)(Wy.e(201).then((() => Wy(40234))), (yb => yb.FrontlineMvpLineup)))),
-      ob = [4800, 4e3, 3200],
-      Bb = [1, 0, 2],
-      Kb = {
+    const tu = (0, nz.lazy)((() => (0, iu.d)(bz.e(191).then((() => bz(40963))), (zz => zz.FrontlineMvpLineup)))),
+      Hu = [4800, 4e3, 3200],
+      Ou = [1, 0, 2],
+      pu = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      eb = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      du = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function qW(yb) {
+    function Fu(zz) {
       let {
-        controller: bb
-      } = yb;
-      const Wy = (0, ny.m)(Zb, bb.getView()),
-        Uy = py(Wy.endsAt);
-      return "roundEnd" !== Wy.wire[0] || 1e3 * Uy < -2e3 ? null : (0, ab.jsx)(sb, {
-        wire: Wy.wire,
-        secondsLeft: Math.max(0, Math.ceil(Uy))
-      }, Wy.key)
+        controller: uz
+      } = zz;
+      const bz = (0, az.h)(lu, uz.getView()),
+        Ez = cz(bz.endsAt);
+      return "roundEnd" !== bz.wire[0] || 1e3 * Ez < -2e3 ? null : (0, hz.jsx)(Zu, {
+        wire: bz.wire,
+        secondsLeft: Math.max(0, Math.ceil(Ez))
+      }, bz.key)
     }
-    const sb = (0, hy.memo)((function(yb) {
+    const Zu = (0, nz.memo)((function(zz) {
       let {
-        wire: bb,
-        secondsLeft: Wy
-      } = yb;
+        wire: uz,
+        secondsLeft: bz
+      } = zz;
       const {
-        t: fy
-      } = (0, Xy.D)(), [, Zy, cb, Py, oy, , By, Ky] = bb, ey = (0, hy.useMemo)((() => Bb.filter((yb => yb < Ky.length))), [Ky]), qb = (0, hy.useMemo)((() => ey.map((yb => {
-        const [, , , , , bb, Wy] = Ky[yb];
+        t: iz
+      } = (0, Gz.F)(), [, lz, Mz, tz, Hz, , Oz, pz] = uz, dz = (0, nz.useMemo)((() => Ou.filter((zz => zz < pz.length))), [pz]), Fz = (0, nz.useMemo)((() => dz.map((zz => {
+        const [, , , , , uz, bz] = pz[zz];
         return {
-          cosmetics: Uy.map(((yb, Wy) => [yb, bb[Wy]])),
-          size: 0 === yb ? 1.15 : .85,
+          cosmetics: Ez.map(((zz, bz) => [zz, uz[bz]])),
+          size: 0 === zz ? 1.15 : .85,
           heldGun: {
-            name: Wy,
-            aimed: 0 === yb
+            name: bz,
+            aimed: 0 === zz
           },
-          showAfterMs: ob[yb]
+          showAfterMs: Hu[zz]
         }
-      }))), [Ky, ey]);
-      return (0, ab.jsxs)("div", {
-        className: ib()("FrontlineRoundEnd", `Result-${Zy}`),
+      }))), [pz, dz]);
+      return (0, hz.jsxs)("div", {
+        className: Tz()("FrontlineRoundEnd", `Result-${lz}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, ab.jsx)("div", {
+        children: [(0, hz.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, ab.jsxs)("div", {
+        }), (0, hz.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, ab.jsxs)("div", {
+          children: [(0, hz.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, ab.jsx)("i", {
+            children: [(0, hz.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, ab.jsx)("i", {
+            }), (0, hz.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (sy = fy(Kb[Zy]), /\p{Script=Arabic}/u.test(sy) ? [sy] : (0, hb.d)(sy)).map(((yb, bb) => (0, ab.jsx)("span", {
+            }), (Zz = iz(pu[lz]), /\p{Script=Arabic}/u.test(Zz) ? [Zz] : (0, nu.c)(Zz)).map(((zz, uz) => (0, hz.jsx)("span", {
               style: {
-                "--letter": bb
+                "--letter": uz
               },
-              children: yb
-            }, bb)))]
-          }), (0, ab.jsxs)("div", {
+              children: zz
+            }, uz)))]
+          }), (0, hz.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [cb && "victory" === Zy && (0, ab.jsx)("span", {
+            children: [Mz && "victory" === lz && (0, hz.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: fy("frontlineRoundEnd:comeback")
-            }), (0, ab.jsxs)("span", {
+              children: iz("frontlineRoundEnd:comeback")
+            }), (0, hz.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, ab.jsx)("b", {
+              children: [(0, hz.jsx)("b", {
                 className: "Friendly",
-                children: Py
-              }), " \u2013 ", (0, ab.jsx)("b", {
+                children: tz
+              }), " \u2013 ", (0, hz.jsx)("b", {
                 className: "Enemy",
-                children: oy
+                children: Hz
               })]
             })]
           })]
-        }), ey.length > 0 && (0, ab.jsxs)("div", {
+        }), dz.length > 0 && (0, hz.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": ey.length
+            "--columns": dz.length
           },
-          children: [(0, ab.jsx)(hy.Suspense, {
+          children: [(0, hz.jsx)(nz.Suspense, {
             fallback: null,
-            children: (0, ab.jsx)(Pb, {
+            children: (0, hz.jsx)(tu, {
               className: "FrontlineRoundEndLineup",
-              players: qb
+              players: Fz
             })
-          }), ey.map((yb => (0, ab.jsx)(Sb, {
-            mvp: Ky[yb],
-            place: yb
-          }, yb)))]
-        }), (0, ab.jsx)("div", {
+          }), dz.map((zz => (0, hz.jsx)(Ru, {
+            mvp: pz[zz],
+            place: zz
+          }, zz)))]
+        }), (0, hz.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: fy("frontlineRoundEnd:nextFront", {
-            map: By,
-            seconds: String(Wy)
+          children: iz("frontlineRoundEnd:nextFront", {
+            map: Oz,
+            seconds: String(bz)
           })
         })]
       });
-      var sy
+      var Zz
     }));
 
-    function Sb(yb) {
+    function Ru(zz) {
       let {
-        mvp: bb,
-        place: Wy
-      } = yb;
+        mvp: uz,
+        place: bz
+      } = zz;
       const {
-        t: Uy
-      } = (0, Xy.D)(), [hy, fy, Zy, cb, Py] = bb, [oy, By] = Uy(function(yb, bb) {
-        return 1 === bb && "damage" !== yb ? `frontlineRoundEnd:${yb}One` : `frontlineRoundEnd:${yb}`
-      }(Zy, cb), {
+        t: Ez
+      } = (0, Gz.F)(), [nz, iz, lz, Mz, tz] = uz, [Hz, Oz] = Ez(function(zz, uz) {
+        return 1 === uz && "damage" !== zz ? `frontlineRoundEnd:${zz}One` : `frontlineRoundEnd:${zz}`
+      }(lz, Mz), {
         name: "\0",
-        count: cb.toLocaleString()
+        count: Mz.toLocaleString()
       }).split("\0");
-      return (0, ab.jsxs)("div", {
-        className: ib()("FrontlineMvpCard", `Place-${Wy+1}`, `Team-${fy}`),
+      return (0, hz.jsxs)("div", {
+        className: Tz()("FrontlineMvpCard", `Place-${bz+1}`, `Team-${iz}`),
         style: {
-          "--revealMs": `${ob[Wy]}ms`
+          "--revealMs": `${Hu[bz]}ms`
         },
-        children: [(0, ab.jsx)("i", {
+        children: [(0, hz.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, ab.jsx)("i", {
+        }), (0, hz.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, ab.jsx)("div", {
+        }), (0, hz.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: Uy(eb[Wy])
-        }), (0, ab.jsxs)("div", {
+          children: Ez(du[bz])
+        }), (0, hz.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [oy, (0, ab.jsx)("span", {
+          children: [Hz, (0, hz.jsx)("span", {
             className: "FrontlineMvpName",
-            children: hy
-          }), By]
-        }), (0, ab.jsx)("div", {
+            children: nz
+          }), Oz]
+        }), (0, hz.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: Py
+          children: tz
         })]
       })
     }
-    const Eb = function(yb, bb, Wy, Uy) {
+    const Ku = function(zz, uz, bz, Ez) {
       let {
-        localPlayerId: Zy
-      } = Uy;
-      const cb = new Hy,
-        Py = new cW;
-      let oy = null,
-        By = null,
-        Ky = null,
-        ey = null,
-        qb = null,
-        sy = [!1, !1];
-      const Sy = () => {
-        var yb, bb;
-        const [Wy, Uy] = sy;
-        null === (yb = By) || void 0 === yb || yb.dJ(!Wy), null === (bb = Ky) || void 0 === bb || bb.dJ(!Uy)
+        localPlayerId: lz
+      } = Ez;
+      const Mz = new qz,
+        tz = new Mu;
+      let Hz = null,
+        Oz = null,
+        pz = null,
+        dz = null,
+        Fz = null,
+        Zz = [!1, !1];
+      const Rz = () => {
+        var zz, uz;
+        const [bz, Ez] = Zz;
+        null === (zz = Oz) || void 0 === zz || zz.Zx(!bz), null === (uz = pz) || void 0 === uz || uz.Zx(!Ez)
       };
       return {
-        onCreate: yb => {
-          oy = yb, By = new Cy(yb, Zy), Ky = new gb(yb, Zy), ey = new Ub(cb), Sy(), qb = (0, fy.z)((0, hy.createElement)(hy.Fragment, null, (0, hy.createElement)(tb, {
-            hud: cb,
-            crosshair: By,
-            damage: Ky,
-            markers: ey
-          }), (0, hy.createElement)(qW, {
-            controller: Py
+        onCreate: zz => {
+          Hz = zz, Oz = new fz(zz, lz), pz = new Nz(zz, lz), dz = new Eu(Mz), Rz(), Fz = (0, iz.x)((0, nz.createElement)(nz.Fragment, null, (0, nz.createElement)(Qz, {
+            hud: Mz,
+            crosshair: Oz,
+            damage: pz,
+            markers: dz
+          }), (0, nz.createElement)(Fu, {
+            controller: tz
           })))
         },
         onClose: () => {
-          var yb, bb, Wy, Uy;
-          null === (yb = qb) || void 0 === yb || yb(), null === (bb = By) || void 0 === bb || bb.dispose(), By = null, null === (Wy = Ky) || void 0 === Wy || Wy.dispose(), Ky = null, null === (Uy = ey) || void 0 === Uy || Uy.dispose(), ey = null, oy = null
+          var zz, uz, bz, Ez;
+          null === (zz = Fz) || void 0 === zz || zz(), null === (uz = Oz) || void 0 === uz || uz.dispose(), Oz = null, null === (bz = pz) || void 0 === bz || bz.dispose(), pz = null, null === (Ez = dz) || void 0 === Ez || Ez.dispose(), dz = null, Hz = null
         },
-        onAfterRender: (yb, bb) => {
-          var Wy, Uy, hy, fy;
-          null === (Wy = By) || void 0 === Wy || Wy.frame(yb, bb.tanHalfFovY), null === (Uy = Ky) || void 0 === Uy || Uy.frame(bb.cameraHeading), null === (hy = ey) || void 0 === hy || hy.frame(bb, null !== (fy = oy) && void 0 !== fy && fy.checkValid(Zy) ? oy.Tl(Zy) : null)
+        onAfterRender: (zz, uz) => {
+          var bz, Ez, nz, iz;
+          null === (bz = Oz) || void 0 === bz || bz.frame(zz, uz.tanHalfFovY), null === (Ez = pz) || void 0 === Ez || Ez.frame(uz.cameraHeading), null === (nz = dz) || void 0 === nz || nz.frame(uz, null !== (iz = Hz) && void 0 !== iz && iz.checkValid(lz) ? Hz.Gs(lz) : null)
         },
-        onReceivedMessageFromServer: (yb, bb) => {
-          "frontlineHud" === yb ? cb.pU(bb) : "frontlineScoreboard" === yb ? cb.receiveScoreboard(bb) : "frontlineRoundEnd" === yb ? Py.pU(bb) : "frontlinePrefs" === yb && (sy = bb, Sy())
+        onReceivedMessageFromServer: (zz, uz) => {
+          "frontlineHud" === zz ? Mz.WZ(uz) : "frontlineScoreboard" === zz ? Mz.receiveScoreboard(uz) : "frontlineRoundEnd" === zz ? tz.WZ(uz) : "frontlinePrefs" === zz && (Zz = uz, Rz())
         }
       }
     }
   },
-  5698: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => hy
+  6174: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => nz
     });
-    const Uy = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const Ez = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function hy(yb) {
-      return null === Uy ? Array.from(yb) : Array.from(Uy.segment(yb), (yb => {
+    function nz(zz) {
+      return null === Ez ? Array.from(zz) : Array.from(Ez.segment(zz), (zz => {
         let {
-          segment: bb
-        } = yb;
-        return bb
+          segment: uz
+        } = zz;
+        return uz
       }))
     }
   },
-  37177: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy,
-      f: () => fy
+  37876: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => lz,
+      f: () => iz
     });
-    const Uy = new WeakMap;
+    const Ez = new WeakMap;
 
-    function hy(yb) {
-      let bb = Uy.get(yb);
-      return bb || (bb = {
-        hidden: yb.hidden,
+    function nz(zz) {
+      let uz = Ez.get(zz);
+      return uz || (uz = {
+        hidden: zz.hidden,
         x: NaN,
         y: NaN
-      }, Uy.set(yb, bb)), bb
+      }, Ez.set(zz, uz)), uz
     }
 
-    function fy(yb, bb) {
-      const Wy = hy(yb);
-      Wy.hidden !== bb && (Wy.hidden = bb, yb.hidden = bb)
+    function iz(zz, uz) {
+      const bz = nz(zz);
+      bz.hidden !== uz && (bz.hidden = uz, zz.hidden = uz)
     }
 
-    function Zy(yb, bb, Wy) {
-      const Uy = hy(yb);
-      Uy.x === bb && Uy.y === Wy || (Uy.x = bb, Uy.y = Wy, yb.style.translate = `${bb}vw ${Wy}vh`)
+    function lz(zz, uz, bz) {
+      const Ez = nz(zz);
+      Ez.x === uz && Ez.y === bz || (Ez.x = uz, Ez.y = bz, zz.style.translate = `${uz}vw ${bz}vh`)
     }
   },
-  35770: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Uy
+  36491: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Ez
     });
-    const Uy = {
+    const Ez = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

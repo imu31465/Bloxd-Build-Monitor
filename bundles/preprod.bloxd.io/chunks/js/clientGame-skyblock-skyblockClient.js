@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  35370: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => qb,
-      f: () => sy,
-      g: () => ey,
-      k: () => Ky
+  36066: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Fz,
+      d: () => Zz,
+      g: () => dz,
+      h: () => pz
     });
-    var Uy = Wy(8408),
-      hy = Wy(35379),
-      fy = Wy(35383),
-      Zy = Wy(7911),
-      cb = Wy(1268),
-      Py = Wy(55),
-      oy = Wy(70),
-      By = Wy(952);
+    var Ez = bz(8982),
+      nz = bz(36071),
+      iz = bz(36080),
+      lz = bz(8378),
+      Mz = bz(1417),
+      tz = bz(56),
+      Hz = bz(79),
+      Oz = bz(1089);
 
-    function Ky() {
-      var yb;
-      return (0, cb.m)(hy.e, (0, hy.s)()), (0, By.jsx)(By.Fragment, {
-        children: null === (yb = (0, hy.s)()) || void 0 === yb ? void 0 : yb.content
+    function pz() {
+      var zz;
+      return (0, Mz.h)(nz.e, (0, nz.o)()), (0, Oz.jsx)(Oz.Fragment, {
+        children: null === (zz = (0, nz.o)()) || void 0 === zz ? void 0 : zz.content
       })
     }
 
-    function ey(yb) {
-      var bb;
+    function dz(zz) {
+      var uz;
       let {
-        show: Wy
-      } = yb;
-      (0, cb.m)(hy.e, (0, hy.s)());
-      const oy = null === (bb = (0, hy.s)()) || void 0 === bb ? void 0 : bb.menu;
-      return (0, Py.useEffect)((() => {
-        var yb;
-        Wy || (null === oy || void 0 === oy || null === (yb = oy.onClose) || void 0 === yb || yb.call(oy), (0, fy.l)())
-      }), [Wy, oy]), (0, Py.useEffect)((() => Wy ? (0, Zy.f)(fy.t, fy.e) : void 0), [Wy]), (0, By.jsx)(Uy.b, {
-        showing: Wy,
+        show: bz
+      } = zz;
+      (0, Mz.h)(nz.e, (0, nz.o)());
+      const Hz = null === (uz = (0, nz.o)()) || void 0 === uz ? void 0 : uz.menu;
+      return (0, tz.useEffect)((() => {
+        var zz;
+        bz || (null === Hz || void 0 === Hz || null === (zz = Hz.onClose) || void 0 === zz || zz.call(Hz), (0, iz.j)())
+      }), [bz, Hz]), (0, tz.useEffect)((() => bz ? (0, lz.e)(iz.u, iz.d) : void 0), [bz]), (0, Oz.jsx)(Ez.d, {
+        showing: bz,
         globallyUniqueKey: "clientGameMenu",
-        children: null === oy || void 0 === oy ? void 0 : oy.content
+        children: null === Hz || void 0 === Hz ? void 0 : Hz.content
       })
     }
 
-    function qb(yb) {
+    function Fz(zz) {
       let {
-        placement: bb = "bottom"
-      } = yb;
-      return (0, By.jsx)("div", {
-        id: `clientGameHud-${bb}`,
+        placement: uz = "bottom"
+      } = zz;
+      return (0, Oz.jsx)("div", {
+        id: `clientGameHud-${uz}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function sy(yb) {
+    function Zz(zz) {
       let {
-        children: bb,
-        placement: Wy = "bottom"
-      } = yb;
-      const [Uy, hy] = (0, Py.useState)(null);
-      return (0, Py.useEffect)((() => {
-        hy(document.getElementById(`clientGameHud-${Wy}`))
-      }), [Wy]), Uy ? (0, oy.createPortal)(bb, Uy) : null
+        children: uz,
+        placement: bz = "bottom"
+      } = zz;
+      const [Ez, nz] = (0, tz.useState)(null);
+      return (0, tz.useEffect)((() => {
+        nz(document.getElementById(`clientGameHud-${bz}`))
+      }), [bz]), Ez ? (0, Hz.createPortal)(uz, Ez) : null
     }
   },
-  4037: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Ey,
-      d: () => ly
+  4590: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Kz,
+      f: () => wz
     });
-    var Uy = Wy(898),
-      hy = Wy.n(Uy),
-      fy = Wy(55),
-      Zy = Wy(1042),
-      cb = Wy(4046),
-      Py = Wy(1546),
-      oy = Wy(2005),
-      By = Wy(4050),
-      Ky = Wy(952);
-    const ey = new WeakMap;
-    let qb = 0;
+    var Ez = bz(1038),
+      nz = bz.n(Ez),
+      iz = bz(56),
+      lz = bz(1181),
+      Mz = bz(4598),
+      tz = bz(1846),
+      Hz = bz(2313),
+      Oz = bz(4601),
+      pz = bz(1089);
+    const dz = new WeakMap;
+    let Fz = 0;
 
-    function sy(yb) {
-      let bb = ey.get(yb);
-      return void 0 === bb && (bb = qb++, ey.set(yb, bb)), bb
+    function Zz(zz) {
+      let uz = dz.get(zz);
+      return void 0 === uz && (uz = Fz++, dz.set(zz, uz)), uz
     }
 
-    function Sy(yb) {
+    function Rz(zz) {
       let {
-        piece: bb
-      } = yb;
-      return "space" === bb.kind ? (0, Ky.jsx)(Ky.Fragment, {
-        children: bb.text
-      }) : (0, Ky.jsx)("span", {
+        piece: uz
+      } = zz;
+      return "space" === uz.kind ? (0, pz.jsx)(pz.Fragment, {
+        children: uz.text
+      }) : (0, pz.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${bb.delayMs}ms`
+          "--word-delay": `${uz.delayMs}ms`
         },
-        children: (0, Ky.jsx)(cb.c, {
-          text: "icon" === bb.kind ? `[[${bb.icon}]]` : bb.text
+        children: (0, pz.jsx)(Mz.b, {
+          text: "icon" === uz.kind ? `[[${uz.icon}]]` : uz.text
         })
       })
     }
 
-    function Ey(yb) {
+    function Kz(zz) {
       let {
-        display: bb
-      } = yb;
+        display: uz
+      } = zz;
       const {
-        selectedLanguage: Wy
-      } = (0, Zy.D)(), Uy = (0, fy.useMemo)((() => (0, By.d)((0, By.f)(bb).plan.pieces)), [bb, Wy.code]);
-      return (0, Ky.jsxs)("div", {
-        className: hy()("Dialogue", {
-          DialogueAnimateIn: !1 !== bb.animateIn
+        selectedLanguage: bz
+      } = (0, lz.F)(), Ez = (0, iz.useMemo)((() => (0, Oz.e)((0, Oz.g)(uz).plan.pieces)), [uz, bz.code]);
+      return (0, pz.jsxs)("div", {
+        className: nz()("Dialogue", {
+          DialogueAnimateIn: !1 !== uz.animateIn
         }),
-        children: [bb.speakerName && (0, Ky.jsx)(Py.d, {
-          text: bb.speakerName,
+        children: [uz.speakerName && (0, pz.jsx)(tz.b, {
+          text: uz.speakerName,
           className: "DialogueSpeaker"
-        }), (0, Ky.jsx)("p", {
+        }), (0, pz.jsx)("p", {
           className: "DialogueLine",
-          children: Uy.map(((yb, bb) => 1 === yb.length && "space" === yb[0].kind ? yb[0].text : (0, Ky.jsx)("span", {
+          children: Ez.map(((zz, uz) => 1 === zz.length && "space" === zz[0].kind ? zz[0].text : (0, pz.jsx)("span", {
             className: "DialogueGlue",
-            children: yb.map(((yb, bb) => (0, Ky.jsx)(Sy, {
-              piece: yb
-            }, bb)))
-          }, bb)))
+            children: zz.map(((zz, uz) => (0, pz.jsx)(Rz, {
+              piece: zz
+            }, uz)))
+          }, uz)))
         })]
       })
     }
-    const ly = (0, fy.memo)((function() {
-      const yb = (0, oy.k)("dialogue");
-      return (0, Ky.jsx)("div", {
+    const wz = (0, iz.memo)((function() {
+      const zz = (0, Hz.g)("dialogue");
+      return (0, pz.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: yb && (0, Ky.jsx)(Ey, {
-          display: yb
-        }, sy(yb))
+        children: zz && (0, pz.jsx)(Kz, {
+          display: zz
+        }, Zz(zz))
       })
     }))
   },
-  4046: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => cb
+  4598: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Mz
     });
-    var Uy = Wy(55),
-      hy = Wy(248),
-      fy = Wy(1556),
-      Zy = Wy(952);
+    var Ez = bz(56),
+      nz = bz(316),
+      iz = bz(1856),
+      lz = bz(1089);
 
-    function cb(yb) {
+    function Mz(zz) {
       let {
-        text: bb
-      } = yb;
-      const Wy = [];
-      let cb = "";
-      return (0, hy.Vb)(bb).forEach(((yb, bb) => {
-        if ("string" === typeof yb || !(0, fy.h)(yb.icon)) return void(cb += "string" === typeof yb ? yb : yb.icon);
-        const hy = Math.max(0, cb.trimEnd().search(/\S{1,12}$/));
-        Wy.push((0, Zy.jsxs)(Uy.Fragment, {
-          children: [cb.slice(0, hy), (0, Zy.jsxs)("span", {
+        text: uz
+      } = zz;
+      const bz = [];
+      let Mz = "";
+      return (0, nz.uc)(uz).forEach(((zz, uz) => {
+        if ("string" === typeof zz || !(0, iz.d)(zz.icon)) return void(Mz += "string" === typeof zz ? zz : zz.icon);
+        const nz = Math.max(0, Mz.trimEnd().search(/\S{1,12}$/));
+        bz.push((0, lz.jsxs)(Ez.Fragment, {
+          children: [Mz.slice(0, nz), (0, lz.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [cb.slice(hy), (0, Zy.jsx)("span", {
+            children: [Mz.slice(nz), (0, lz.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": yb.icon,
-              children: (0, Zy.jsx)(fy.d, {
-                itemName: yb.icon,
+              "aria-label": zz.icon,
+              children: (0, lz.jsx)(iz.c, {
+                itemName: zz.icon,
                 amount: 0
               })
             })]
           })]
-        }, bb)), cb = ""
-      })), Wy.push(cb), (0, Zy.jsx)(Zy.Fragment, {
-        children: Wy
+        }, uz)), Mz = ""
+      })), bz.push(Mz), (0, lz.jsx)(lz.Fragment, {
+        children: bz
       })
     }
   },
-  8408: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => fy
+  8982: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
     });
-    var Uy = Wy(3739),
-      hy = Wy(3742);
+    var Ez = bz(4298),
+      nz = bz(4300);
 
-    function fy(yb) {
+    function iz(zz) {
       let {
-        children: bb,
-        showing: Wy,
-        globallyUniqueKey: fy,
-        alwaysMountChildren: Zy = !1,
-        doGameplayStartStopOnShow: cb = !0,
-        keepsMovement: Py = !1
-      } = yb;
-      return (0, hy.b)(!0, Wy, fy, Py), (0, Uy.b)(cb, Wy), Wy || Zy ? bb : null
+        children: uz,
+        showing: bz,
+        globallyUniqueKey: iz,
+        alwaysMountChildren: lz = !1,
+        doGameplayStartStopOnShow: Mz = !0,
+        keepsMovement: tz = !1
+      } = zz;
+      return (0, nz.e)(!0, bz, iz, tz), (0, Ez.d)(Mz, bz), bz || lz ? uz : null
     }
   },
-  4050: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => uy,
-      f: () => ny
+  4601: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Vz,
+      g: () => az
     });
-    var Uy = Wy(4052),
-      hy = Wy(248);
-    const fy = 120,
-      Zy = 260,
-      cb = 1.15,
-      Py = 1.2,
-      oy = 2,
-      By = 1.08,
-      Ky = .8,
-      ey = .95,
-      qb = 8,
-      sy = "[\"')\\]\u300d\u300f\uff09]*",
-      Sy = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${sy}$`),
-      Ey = new RegExp(`[?\uff1f]${sy}$`),
-      ly = new RegExp(`[!\uff01]${sy}$`),
-      mb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Cy = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Ty = new RegExp(`[${Cy}]`),
-      Vy = new RegExp(`[${Cy}]|[^${Cy}]+`, "g"),
-      Jy = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Ez = bz(4605),
+      nz = bz(316);
+    const iz = 120,
+      lz = 260,
+      Mz = 1.15,
+      tz = 1.2,
+      Hz = 2,
+      Oz = 1.08,
+      pz = .8,
+      dz = .95,
+      Fz = 8,
+      Zz = "[\"')\\]\u300d\u300f\uff09]*",
+      Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
+      Kz = new RegExp(`[?\uff1f]${Zz}$`),
+      wz = new RegExp(`[!\uff01]${Zz}$`),
+      Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      sz = new RegExp(`[${fz}]`),
+      rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
+      oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function gb(yb) {
-      let bb = 2166136261;
-      for (let Wy = 0; Wy < yb.length; Wy++) bb ^= yb.charCodeAt(Wy), bb = Math.imul(bb, 16777619);
-      return (bb >>> 0) / 4294967295 * 2 - 1
+    function Nz(zz) {
+      let uz = 2166136261;
+      for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
+      return (uz >>> 0) / 4294967295 * 2 - 1
     }
 
-    function Gy(yb) {
-      var bb;
-      if (Ty.test(yb)) return 1;
-      const Wy = yb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Uy = Wy.replace(/[^0-9]/g, "");
-      if (Uy.length > 0 && !/\p{L}/u.test(Wy)) return Math.min(Uy.length, 4);
-      const hy = null !== (bb = Wy.match(Jy)) && void 0 !== bb ? bb : [];
-      if (0 === hy.length) {
-        var fy, Zy;
-        const yb = null !== (fy = null === (Zy = Wy.match(/\p{L}/gu)) || void 0 === Zy ? void 0 : Zy.length) && void 0 !== fy ? fy : 0;
-        return 0 === yb ? 0 : Math.min(Math.max(1, Math.round(yb / 2.5)), qb)
+    function vz(zz) {
+      var uz;
+      if (sz.test(zz)) return 1;
+      const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Ez = bz.replace(/[^0-9]/g, "");
+      if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
+      const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
+      if (0 === nz.length) {
+        var iz, lz;
+        const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
+        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
       }
-      const cb = Wy.replace(/[^\p{L}]/gu, ""),
-        Py = hy.length > 1 && "e" === hy.at(-1) && cb.endsWith("e") && !cb.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(yb.replace(/[^\p{L}]/gu, ""));
-      return Math.min(hy.length - (Py ? 1 : 0), qb)
+      const Mz = bz.replace(/[^\p{L}]/gu, ""),
+        tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
+      return Math.min(nz.length - (tz ? 1 : 0), Fz)
     }
 
-    function Oy(yb) {
-      return yb.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function xz(zz) {
+      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Ry(yb) {
-      const bb = yb.replace(/[^\p{L}]/gu, "");
-      return bb.length >= 2 && bb === bb.toUpperCase() && bb !== bb.toLowerCase()
+    function Jz(zz) {
+      const uz = zz.replace(/[^\p{L}]/gu, "");
+      return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
     }
 
-    function vb(yb, bb) {
-      var Wy;
-      const qb = bb && (0, Uy.l)(bb),
-        sy = null !== (Wy = null === qb || void 0 === qb ? void 0 : qb.syllableMs) && void 0 !== Wy ? Wy : Uy.d,
-        Cy = function(yb) {
-          const bb = [];
-          for (const Uy of (0, hy.Vb)(yb))
-            if ("string" === typeof Uy)
-              for (const yb of Uy.split(/(\s+)/)) {
-                if ("" === yb) continue;
-                if (/^\s+$/.test(yb)) {
-                  bb.push({
+    function Az(zz, uz) {
+      var bz;
+      const Fz = uz && (0, Ez.k)(uz),
+        Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
+        fz = function(zz) {
+          const uz = [];
+          for (const Ez of (0, nz.uc)(zz))
+            if ("string" === typeof Ez)
+              for (const zz of Ez.split(/(\s+)/)) {
+                if ("" === zz) continue;
+                if (/^\s+$/.test(zz)) {
+                  uz.push({
                     kind: "space",
-                    text: yb
+                    text: zz
                   });
                   continue
                 }
-                if (!Ty.test(yb)) {
-                  bb.push({
+                if (!sz.test(zz)) {
+                  uz.push({
                     kind: "word",
-                    text: yb,
+                    text: zz,
                     delayMs: 0
                   });
                   continue
                 }
-                let Uy = !0;
-                for (const hy of null !== (Wy = yb.match(Vy)) && void 0 !== Wy ? Wy : []) {
-                  var Wy;
-                  const yb = bb.at(-1);
-                  Uy || "word" !== (null === yb || void 0 === yb ? void 0 : yb.kind) || Ty.test(hy) || /[\p{L}\p{N}]/u.test(hy) ? (Uy || bb.push({
+                let Ez = !0;
+                for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
+                  var bz;
+                  const zz = uz.at(-1);
+                  Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
                     kind: "space",
                     text: "\u200b"
-                  }), bb.push({
+                  }), uz.push({
                     kind: "word",
-                    text: hy,
+                    text: nz,
                     delayMs: 0
-                  }), Uy = !1) : yb.text += hy
+                  }), Ez = !1) : zz.text += nz
                 }
-              } else bb.push({
+              } else uz.push({
                 kind: "icon",
-                text: Uy.icon,
+                text: Ez.icon,
                 delayMs: 0
               });
-          return bb
-        }(yb),
-        Jy = [];
-      let vb = [];
-      for (const Uy of Cy) "space" !== Uy.kind && (vb.push(Uy), Sy.test(Uy.text) && (Jy.push(vb), vb = []));
-      Jy.push(vb);
-      const ib = [];
-      let My = 0;
-      for (const Uy of Jy) {
-        var Yy, Xy;
-        const yb = null !== (Yy = null === (Xy = Uy.at(-1)) || void 0 === Xy ? void 0 : Xy.text) && void 0 !== Yy ? Yy : "",
-          bb = Ey.test(yb),
-          Wy = ly.test(yb),
-          hy = Uy.map((yb => "word" === yb.kind ? Gy(yb.text) : 1)),
-          Cy = hy.findLastIndex((yb => yb > 0));
-        for (const [Ey, ly] of Uy.entries()) {
-          const yb = "word" === ly.kind,
-            Uy = hy[Ey];
-          ly.delayMs = My;
-          for (let hy = 0; qb && hy < Uy; hy++) {
+          return uz
+        }(zz),
+        oz = [];
+      let Az = [];
+      for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
+      oz.push(Az);
+      const Tz = [];
+      let Lz = 0;
+      for (const Ez of oz) {
+        var Pz, Gz;
+        const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
+          uz = Kz.test(zz),
+          bz = wz.test(zz),
+          nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
+          fz = nz.findLastIndex((zz => zz > 0));
+        for (const [Kz, wz] of Ez.entries()) {
+          const zz = "word" === wz.kind,
+            Ez = nz[Kz];
+          wz.delayMs = Lz;
+          for (let nz = 0; Fz && nz < Ez; nz++) {
             const {
-              intonation: fy
-            } = qb;
-            let Zy = Cy > 0 ? -fy.declineSemitones * (Ey / Cy) : 0;
-            Zy += gb(`${Oy(ly.text)}|${hy}`) * fy.variationSemitones;
-            const Sy = Math.min(1, fy.variationSemitones);
-            let mb = qb.glideSemitones,
-              Ty = 1;
-            Wy && (Zy += fy.exclaimLiftSemitones, Ty *= cb), bb && Ey === Cy && (Zy += fy.questionRiseSemitones * (Uy > 1 ? .5 + .5 * hy / (Uy - 1) : 1), hy === Uy - 1 && (mb = Math.abs(mb) + fy.questionRiseSemitones / 2)), yb && Ry(ly.text) && (Zy += oy * Sy, Ty *= Py), Uy > 1 && 0 === hy && (Zy += Ky * Sy, Ty *= By), ib.push({
-              atMs: My + hy * sy,
-              semitones: Zy,
-              glideSemitones: mb,
-              durationMs: hy < Uy - 1 ? Math.min(qb.durationMs, sy * ey) : qb.durationMs,
-              level: Ty
+              intonation: iz
+            } = Fz;
+            let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
+            lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
+            const Rz = Math.min(1, iz.variationSemitones);
+            let Xz = Fz.glideSemitones,
+              sz = 1;
+            bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
+              atMs: Lz + nz * Zz,
+              semitones: lz,
+              glideSemitones: Xz,
+              durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
+              level: sz
             })
           }
-          My += Uy * sy + (Sy.test(ly.text) ? Zy : mb.test(ly.text) ? fy : 0)
+          Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
         }
       }
       return {
-        pieces: Cy.map((yb => "space" === yb.kind ? yb : "icon" === yb.kind ? {
+        pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
           kind: "icon",
-          icon: yb.text,
-          delayMs: yb.delayMs
+          icon: zz.text,
+          delayMs: zz.delayMs
         } : {
           kind: "word",
-          text: yb.text,
-          delayMs: yb.delayMs
+          text: zz.text,
+          delayMs: zz.delayMs
         })),
-        blips: ib
+        blips: Tz
       }
     }
-    var ib = Wy(1042),
-      My = Wy(1115),
-      Yy = Wy(1580);
+    var Tz = bz(1181),
+      Lz = bz(1241),
+      Pz = bz(1873);
 
-    function Xy(yb) {
-      if ("string" === typeof yb) return yb;
-      const bb = My.f.get().getCurrentLanguageCode();
-      return (0, ib.t)(bb, yb.translationKey, (0, ib.s)(yb.params, Yy.d.shown))
+    function Gz(zz) {
+      if ("string" === typeof zz) return zz;
+      const uz = Lz.h.get().getCurrentLanguageCode();
+      return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
     }
 
-    function ny(yb) {
-      const bb = void 0 === yb.voice ? null : (0, Uy.p)(yb.voice),
-        Wy = bb && (0, Uy.l)(bb);
+    function az(zz) {
+      const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
+        bz = uz && (0, Ez.k)(uz);
       return {
-        plan: vb(Xy(yb.line), Wy),
-        synth: Wy
+        plan: Az(Gz(zz.line), bz),
+        synth: bz
       }
     }
 
-    function uy(yb) {
-      const bb = [];
-      let Wy = [];
-      for (const [hy, fy] of yb.entries()) {
-        var Uy;
-        "space" === fy.kind && (" " !== fy.text || "icon" !== (null === (Uy = yb[hy + 1]) || void 0 === Uy ? void 0 : Uy.kind)) ? (Wy.length > 0 && bb.push(Wy), bb.push([fy]), Wy = []) : Wy.push(fy)
+    function Vz(zz) {
+      const uz = [];
+      let bz = [];
+      for (const [nz, iz] of zz.entries()) {
+        var Ez;
+        "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
       }
-      return Wy.length > 0 && bb.push(Wy), bb
+      return bz.length > 0 && uz.push(bz), uz
     }
   },
-  7911: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => fy,
-      f: () => hy
+  8378: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => iz,
+      e: () => nz
     });
-    let Uy = null;
-    const hy = function(yb) {
-        const bb = {
-          cycle: yb,
+    let Ez = null;
+    const nz = function(zz) {
+        const uz = {
+          cycle: zz,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Uy = bb, () => {
-          Uy === bb && (Uy = null)
+        return Ez = uz, () => {
+          Ez === uz && (Ez = null)
         }
       },
-      fy = () => {
-        var yb;
-        return null !== (yb = Uy) && void 0 !== yb && yb.canCycle() ? Uy.cycle : null
+      iz = () => {
+        var zz;
+        return null !== (zz = Ez) && void 0 !== zz && zz.canCycle() ? Ez.cycle : null
       }
   },
-  35383: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => fy,
-      e: () => Sy,
-      g: () => Ey,
-      j: () => cb,
-      k: () => ey,
-      l: () => ly,
-      p: () => Ky,
-      s: () => Cy,
-      t: () => sy,
-      w: () => mb
+  36080: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      d: () => Rz,
+      g: () => Kz,
+      h: () => Mz,
+      i: () => dz,
+      j: () => wz,
+      n: () => pz,
+      q: () => fz,
+      u: () => Zz,
+      x: () => Xz
     });
-    var Uy = Wy(19),
-      hy = Wy(23);
-    const fy = "clientGameInventoryButtonsChanged",
-      Zy = new Map;
+    var Ez = bz(20),
+      nz = bz(22);
+    const iz = "clientGameInventoryButtonsChanged",
+      lz = new Map;
 
-    function cb() {
-      return [...Zy.values()].sort(((yb, bb) => {
-        var Wy, Uy;
-        return (null !== (Wy = yb.order) && void 0 !== Wy ? Wy : 0) - (null !== (Uy = bb.order) && void 0 !== Uy ? Uy : 0)
+    function Mz() {
+      return [...lz.values()].sort(((zz, uz) => {
+        var bz, Ez;
+        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
       }))
     }
-    let Py = null;
+    let tz = null;
 
-    function oy(yb) {
-      Py = yb
+    function Hz(zz) {
+      tz = zz
     }
-    let By = !1;
+    let Oz = !1;
 
-    function Ky(yb) {
-      By = !0;
+    function pz(zz) {
+      Oz = !0;
       try {
-        yb.onClick()
+        zz.onClick()
       } finally {
-        By = !1
+        Oz = !1
       }
-      yb.panel && "clientGame" === Uy.d.get("openInGameMenuName") && oy(yb.id)
+      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
     }
 
-    function ey() {
-      return By
+    function dz() {
+      return Oz
     }
 
-    function qb() {
-      return cb().filter((yb => yb.panel && !yb.disabled))
+    function Fz() {
+      return Mz().filter((zz => zz.panel && !zz.disabled))
     }
 
-    function sy(yb) {
-      const bb = qb(),
-        Wy = bb.findIndex((yb => yb.id === Py));
-      return !(Wy < 0 || bb.length < 2) && (Ky(bb[(Wy + yb + bb.length) % bb.length]), !0)
+    function Zz(zz) {
+      const uz = Fz(),
+        bz = uz.findIndex((zz => zz.id === tz));
+      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
     }
 
-    function Sy() {
-      return null !== Py && qb().length > 1
+    function Rz() {
+      return null !== tz && Fz().length > 1
     }
 
-    function Ey() {
-      oy(null)
+    function Kz() {
+      Hz(null)
     }
 
-    function ly() {
-      "inventory" !== Uy.d.get("openInGameMenuName") && oy(null)
+    function wz() {
+      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
     }
 
-    function mb() {
-      const yb = Py;
-      return oy(null), yb
+    function Xz() {
+      const zz = tz;
+      return Hz(null), zz
     }
 
-    function Cy(yb) {
-      return Zy.set(yb.id, yb), hy.g.EZ(fy, cb(), !0), () => {
-        Zy.get(yb.id) === yb && (Zy.delete(yb.id), hy.g.EZ(fy, cb()))
+    function fz(zz) {
+      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
+        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
       }
     }
   },
-  35379: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => cb,
-      h: () => Ey,
-      k: () => ly,
-      o: () => ey,
-      s: () => oy,
-      t: () => Sy,
-      v: () => qb,
-      z: () => By
+  36071: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Mz,
+      i: () => Kz,
+      l: () => wz,
+      n: () => dz,
+      o: () => Hz,
+      p: () => Rz,
+      t: () => Fz,
+      x: () => Oz
     });
-    var Uy = Wy(19),
-      hy = Wy(23),
-      fy = Wy(1145),
-      Zy = Wy(35383);
-    const cb = "clientGameUiChanged";
-    let Py = null;
+    var Ez = bz(20),
+      nz = bz(22),
+      iz = bz(1269),
+      lz = bz(36080);
+    const Mz = "clientGameUiChanged";
+    let tz = null;
 
-    function oy() {
-      return Py
+    function Hz() {
+      return tz
     }
 
-    function By(yb, bb) {
-      const Wy = {
-        content: yb,
-        menu: bb
+    function Oz(zz, uz) {
+      const bz = {
+        content: zz,
+        menu: uz
       };
-      return Py = Wy, hy.g.EZ(cb, Py, !0), () => {
-        Py === Wy && (Py = null, sy = !1, Ey(), hy.g.EZ(cb, null))
+      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
+        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
       }
     }
-    let Ky = null;
+    let pz = null;
 
-    function ey() {
-      return Ky
+    function dz() {
+      return pz
     }
 
-    function qb(yb) {
-      return Ky = yb, () => {
-        Ky === yb && (Ky = null)
+    function Fz(zz) {
+      return pz = zz, () => {
+        pz === zz && (pz = null)
       }
     }
-    let sy = !1;
+    let Zz = !1;
 
-    function Sy() {
-      const yb = Uy.d.get("openInGameMenuName");
-      "clientGame" !== yb && (sy = "inventory" === yb), (0, Zy.k)() || (0, Zy.g)(), (0, fy.h)("InGameMenu"), Uy.d.set({
+    function Rz() {
+      const zz = Ez.e.get("openInGameMenuName");
+      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Ey() {
-      mb(!1)
+    function Kz() {
+      Xz(!1)
     }
 
-    function ly() {
-      mb(sy)
+    function wz() {
+      Xz(Zz)
     }
 
-    function mb(yb) {
-      "clientGame" === Uy.d.get("openInGameMenuName") && Uy.d.set({
-        openInGameMenuName: yb ? "inventory" : null
-      }), yb || (0, Zy.g)(), sy = !1
+    function Xz(zz) {
+      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
+        openInGameMenuName: zz ? "inventory" : null
+      }), zz || (0, lz.g)(), Zz = !1
     }
   },
-  37197: (yb, bb, Wy) => {
-    function Uy(yb, bb, Wy) {
-      const Uy = new Set,
-        hy = new ResizeObserver(Wy),
-        fy = () => {
-          const bb = new Set(document.querySelectorAll(yb));
-          let fy = !1;
-          for (const yb of Uy) bb.has(yb) || (hy.unobserve(yb), Uy.delete(yb), fy = !0);
-          for (const yb of bb) Uy.has(yb) || (hy.observe(yb), Zy.observe(yb, {
+  37896: (zz, uz, bz) => {
+    function Ez(zz, uz, bz) {
+      const Ez = new Set,
+        nz = new ResizeObserver(bz),
+        iz = () => {
+          const uz = new Set(document.querySelectorAll(zz));
+          let iz = !1;
+          for (const zz of Ez) uz.has(zz) || (nz.unobserve(zz), Ez.delete(zz), iz = !0);
+          for (const zz of uz) Ez.has(zz) || (nz.observe(zz), lz.observe(zz, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), Uy.add(yb));
-          fy && Wy()
+          }), Ez.add(zz));
+          iz && bz()
         },
-        Zy = new MutationObserver((bb => {
-          bb.some((yb => "attributes" === yb.type)) && Wy(), bb.some((bb => function(yb, bb, Wy) {
-            if ("childList" !== yb.type) return !1;
-            for (const Uy of yb.addedNodes)
-              if (Uy instanceof Element && (Uy.matches(bb) || Uy.querySelector(bb))) return !0;
-            for (const Uy of yb.removedNodes)
-              if (Uy instanceof Element)
-                for (const yb of Wy)
-                  if (Uy.contains(yb)) return !0;
+        lz = new MutationObserver((uz => {
+          uz.some((zz => "attributes" === zz.type)) && bz(), uz.some((uz => function(zz, uz, bz) {
+            if ("childList" !== zz.type) return !1;
+            for (const Ez of zz.addedNodes)
+              if (Ez instanceof Element && (Ez.matches(uz) || Ez.querySelector(uz))) return !0;
+            for (const Ez of zz.removedNodes)
+              if (Ez instanceof Element)
+                for (const zz of bz)
+                  if (Ez.contains(zz)) return !0;
             return !1
-          }(bb, yb, Uy))) && fy()
+          }(uz, zz, Ez))) && iz()
         }));
-      Zy.observe(document.body, {
+      lz.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const cb of bb) hy.observe(cb);
-      return window.addEventListener("resize", Wy), fy(), Wy(), () => {
-        hy.disconnect(), Zy.disconnect(), window.removeEventListener("resize", Wy)
+      for (const Mz of uz) nz.observe(Mz);
+      return window.addEventListener("resize", bz), iz(), bz(), () => {
+        nz.disconnect(), lz.disconnect(), window.removeEventListener("resize", bz)
       }
     }
-    Wy.d(bb, {
-      c: () => Uy
+    bz.d(uz, {
+      e: () => Ez
     })
   },
-  8026: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => cb,
-      e: () => Py
+  8554: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Mz,
+      e: () => tz
     });
-    var Uy = Wy(19),
-      hy = Wy(1177),
-      fy = Wy(94);
-    const Zy = {
+    var Ez = bz(20),
+      nz = bz(1296),
+      iz = bz(96);
+    const lz = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function cb() {
-      return (0, fy.isMobile)() && "function" === typeof navigator.vibrate
+    function Mz() {
+      return (0, iz.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const Py = new class {
-      constructor(yb) {
-        this.deps = yb, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const tz = new class {
+      constructor(zz) {
+        this.deps = zz, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(yb, bb) {
-        var Wy;
+      play(zz, uz) {
+        var bz;
         if (!this.deps.enabled()) return;
-        const Uy = Zy[yb],
-          hy = null !== bb && void 0 !== bb ? bb : Uy.pattern;
-        if (null === hy) return void console.warn("No vibration pattern for", yb);
-        const fy = this.deps.now();
-        fy - this.lastAnyAt < 40 && Uy.priority < this.playingPriority || fy - (null !== (Wy = this.lastAt.get(yb)) && void 0 !== Wy ? Wy : -1 / 0) < Uy.minGapMs || fy < this.playingUntil && Uy.priority < this.playingPriority || (this.lastAt.set(yb, fy), this.lastAnyAt = fy, this.playingUntil = fy + hy.reduce(((yb, bb) => yb + bb), 0), this.playingPriority = Uy.priority, this.deps.vibrate(hy))
+        const Ez = lz[zz],
+          nz = null !== uz && void 0 !== uz ? uz : Ez.pattern;
+        if (null === nz) return void console.warn("No vibration pattern for", zz);
+        const iz = this.deps.now();
+        iz - this.lastAnyAt < 40 && Ez.priority < this.playingPriority || iz - (null !== (bz = this.lastAt.get(zz)) && void 0 !== bz ? bz : -1 / 0) < Ez.minGapMs || iz < this.playingUntil && Ez.priority < this.playingPriority || (this.lastAt.set(zz, iz), this.lastAnyAt = iz, this.playingUntil = iz + nz.reduce(((zz, uz) => zz + uz), 0), this.playingPriority = Ez.priority, this.deps.vibrate(nz))
       }
     }({
-      vibrate: yb => {
-        navigator.vibrate([...yb])
+      vibrate: zz => {
+        navigator.vibrate([...zz])
       },
       now: () => performance.now(),
-      enabled: () => cb() && Uy.d.get("isTouchScreen") && Uy.d.get("clientEscMenuOptions").vibration && !(0, hy.f)()
+      enabled: () => Mz() && Ez.e.get("isTouchScreen") && Ez.e.get("clientEscMenuOptions").vibration && !(0, nz.d)()
     })
   },
-  36237: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => cb,
-      d: () => Zy
+  36588: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Mz,
+      f: () => lz
     });
-    var Uy = Wy(36235),
-      hy = Wy(258),
-      fy = Wy(1541);
+    var Ez = bz(36577),
+      nz = bz(328),
+      iz = bz(1840);
 
-    function Zy(yb) {
-      if ("cby" in yb) return Jy.createAnimationScript(yb);
-      return new oy(yb).createAnimationScript()
+    function lz(zz) {
+      if ("Ui" in zz) return oz.createAnimationScript(zz);
+      return new Hz(zz).createAnimationScript()
     }
 
-    function cb(yb, bb, Wy, hy) {
-      const fy = yb.cby <= 0 ? 1 : bb + Wy * Math.max(0, hy) / yb.cby;
-      return yb.Pyy === Uy.k.LoopOnLastFrame ? fy % 1 : yb.Pyy === Uy.k.NoLoop && fy >= 1 ? null : Math.min(1, fy)
+    function Mz(zz, uz, bz, nz) {
+      const iz = zz.Ui <= 0 ? 1 : uz + bz * Math.max(0, nz) / zz.Ui;
+      return zz.gi === Ez.m.LoopOnLastFrame ? iz % 1 : zz.gi === Ez.m.NoLoop && iz >= 1 ? null : Math.min(1, iz)
     }
-    class Py {
-      createAnimationScript(yb) {
+    class tz {
+      createAnimationScript(zz) {
         const {
-          cby: bb,
-          loop: Wy,
-          oyy: Uy
-        } = yb;
+          Ui: uz,
+          loop: bz,
+          Si: Ez
+        } = zz;
         return {
-          cby: Math.round(bb),
-          Pyy: this.createLoopMode(null !== Wy && void 0 !== Wy && Wy),
-          oyy: this.createNodeSkeletonAnimationScript(null !== Uy && void 0 !== Uy ? Uy : null)
+          Ui: Math.round(uz),
+          gi: this.createLoopMode(null !== bz && void 0 !== bz && bz),
+          Si: this.createNodeSkeletonAnimationScript(null !== Ez && void 0 !== Ez ? Ez : null)
         }
       }
-      createLoopMode(yb) {
-        switch (yb) {
+      createLoopMode(zz) {
+        switch (zz) {
           case !1:
-            return Uy.k.NoLoop;
+            return Ez.m.NoLoop;
           case !0:
-            return Uy.k.LoopOnLastFrame;
+            return Ez.m.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return Uy.k.HoldOnLastFrame
+            return Ez.m.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${yb}`)
+        throw new Error(`Invalid loop mode schema: ${zz}`)
       }
-      createNodeSkeletonAnimationScript(yb) {
-        if (null === yb) return null;
-        const bb = {};
-        for (const Wy in yb) {
-          const Uy = yb[Wy];
-          bb[Wy] = this.createNodeAnimationScript(Uy)
+      createNodeSkeletonAnimationScript(zz) {
+        if (null === zz) return null;
+        const uz = {};
+        for (const bz in zz) {
+          const Ez = zz[bz];
+          uz[bz] = this.createNodeAnimationScript(Ez)
         }
-        return bb
+        return uz
       }
-      createNodeAnimationScript(yb) {
+      createNodeAnimationScript(zz) {
         const {
-          timeline: bb
-        } = yb, Wy = bb.filter((yb => Number.isFinite(yb.timeFraction)));
-        return Wy.sort(((yb, bb) => yb.timeFraction - bb.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(Wy, "rotation", ey),
-          position: this.createTimelineFromKeyframes(Wy, "position", sy)
+          timeline: uz
+        } = zz, bz = uz.filter((zz => Number.isFinite(zz.timeFraction)));
+        return bz.sort(((zz, uz) => zz.timeFraction - uz.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(bz, "rotation", dz),
+          position: this.createTimelineFromKeyframes(bz, "position", Zz)
         }
       }
-      createTimelineFromKeyframes(yb, bb, Wy) {
-        const Uy = [];
-        for (const Py of yb) {
-          const yb = Py[bb];
-          if (yb) {
-            const bb = this.createAnimationFrameWithoutPrecomputes(Py.timeFraction, yb);
-            By(bb) && Uy.push(bb)
+      createTimelineFromKeyframes(zz, uz, bz) {
+        const Ez = [];
+        for (const tz of zz) {
+          const zz = tz[uz];
+          if (zz) {
+            const uz = this.createAnimationFrameWithoutPrecomputes(tz.timeFraction, zz);
+            Oz(uz) && Ez.push(uz)
           }
         }
-        const hy = [];
-        for (let Py = 0; Py < Uy.length; Py++) {
-          var fy, Zy, cb;
-          const yb = Uy[Py],
-            bb = null !== (fy = Uy[Py - 1]) && void 0 !== fy ? fy : yb,
-            oy = null !== (Zy = Uy[Py + 1]) && void 0 !== Zy ? Zy : yb,
-            By = null !== (cb = Uy[Py + 2]) && void 0 !== cb ? cb : oy;
-          hy.push({
-            ...yb,
-            ...Wy(bb.post, bb.timeFraction, yb.post, yb.timeFraction, oy.pre, oy.timeFraction, By.pre, By.timeFraction)
+        const nz = [];
+        for (let tz = 0; tz < Ez.length; tz++) {
+          var iz, lz, Mz;
+          const zz = Ez[tz],
+            uz = null !== (iz = Ez[tz - 1]) && void 0 !== iz ? iz : zz,
+            Hz = null !== (lz = Ez[tz + 1]) && void 0 !== lz ? lz : zz,
+            Oz = null !== (Mz = Ez[tz + 2]) && void 0 !== Mz ? Mz : Hz;
+          nz.push({
+            ...zz,
+            ...bz(uz.post, uz.timeFraction, zz.post, zz.timeFraction, Hz.pre, Hz.timeFraction, Oz.pre, Oz.timeFraction)
           })
         }
-        return hy
+        return nz
       }
-      createAnimationFrameWithoutPrecomputes(yb, bb) {
-        let Wy, Uy, hy = null;
-        var fy;
-        if ("object" === typeof bb && "point" in bb) hy = null !== (fy = bb.Kyy) && void 0 !== fy ? fy : null, Wy = bb.point, Uy = bb.point;
-        else if ("object" === typeof bb && "pre" in bb) {
-          var Zy;
-          hy = null !== (Zy = bb.Kyy) && void 0 !== Zy ? Zy : null, Wy = bb.pre, Uy = bb.post
-        } else Wy = bb, Uy = bb;
+      createAnimationFrameWithoutPrecomputes(zz, uz) {
+        let bz, Ez, nz = null;
+        var iz;
+        if ("object" === typeof uz && "point" in uz) nz = null !== (iz = uz.Qi) && void 0 !== iz ? iz : null, bz = uz.point, Ez = uz.point;
+        else if ("object" === typeof uz && "pre" in uz) {
+          var lz;
+          nz = null !== (lz = uz.Qi) && void 0 !== lz ? lz : null, bz = uz.pre, Ez = uz.post
+        } else bz = uz, Ez = uz;
         return {
-          timeFraction: yb,
-          Kyy: this.createLerpMode(hy),
-          pre: Wy,
-          post: Uy
+          timeFraction: zz,
+          Qi: this.createLerpMode(nz),
+          pre: bz,
+          post: Ez
         }
       }
-      createLerpMode(yb) {
-        return null === yb ? Uy.i.Linear : Py.LERP_MODE_SCHEMA_MAPPING[yb]
+      createLerpMode(zz) {
+        return null === zz ? Ez.j.Linear : tz.LERP_MODE_SCHEMA_MAPPING[zz]
       }
     }
-    Py.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Uy.i.Linear,
-      "catmull-rom-spline": Uy.i.CatmullRomSpline
+    tz.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Ez.j.Linear,
+      "catmull-rom-spline": Ez.j.CatmullRomSpline
     };
-    class oy {
-      constructor(yb) {
-        this.animationSchema = yb
+    class Hz {
+      constructor(zz) {
+        this.animationSchema = zz
       }
       createAnimationScript() {
         const {
-          animation_length: yb,
-          loop: bb,
-          bones: Wy
+          animation_length: zz,
+          loop: uz,
+          bones: bz
         } = this.animationSchema;
         return {
-          cby: Math.round(1e3 * yb),
-          Pyy: this.createLoopMode(null !== bb && void 0 !== bb && bb),
-          oyy: this.createNodeSkeletonAnimationScript(null !== Wy && void 0 !== Wy ? Wy : null)
+          Ui: Math.round(1e3 * zz),
+          gi: this.createLoopMode(null !== uz && void 0 !== uz && uz),
+          Si: this.createNodeSkeletonAnimationScript(null !== bz && void 0 !== bz ? bz : null)
         }
       }
-      createLoopMode(yb) {
-        switch (yb) {
+      createLoopMode(zz) {
+        switch (zz) {
           case !1:
-            return Uy.k.NoLoop;
+            return Ez.m.NoLoop;
           case !0:
-            return Uy.k.LoopOnLastFrame;
+            return Ez.m.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return Uy.k.HoldOnLastFrame
+            return Ez.m.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${yb}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${zz}`)
       }
-      createNodeSkeletonAnimationScript(yb) {
-        if (null === yb) return null;
-        const bb = {};
-        for (const Wy in yb) {
-          const Uy = yb[Wy];
-          bb[Wy] = this.createNodeAnimationScript(Uy)
+      createNodeSkeletonAnimationScript(zz) {
+        if (null === zz) return null;
+        const uz = {};
+        for (const bz in zz) {
+          const Ez = zz[bz];
+          uz[bz] = this.createNodeAnimationScript(Ez)
         }
-        return bb
+        return uz
       }
-      createNodeAnimationScript(yb) {
+      createNodeAnimationScript(zz) {
         const {
-          rotation: bb,
-          position: Wy
-        } = yb;
+          rotation: uz,
+          position: bz
+        } = zz;
         return {
-          rotation: this.createAnimationTimeline(null !== bb && void 0 !== bb ? bb : null, Ey, ey, !0),
-          position: this.createAnimationTimeline(null !== Wy && void 0 !== Wy ? Wy : null, mb, sy, !1)
+          rotation: this.createAnimationTimeline(null !== uz && void 0 !== uz ? uz : null, Kz, dz, !0),
+          position: this.createAnimationTimeline(null !== bz && void 0 !== bz ? bz : null, Xz, Zz, !1)
         }
       }
-      createAnimationTimeline(yb, bb, Wy, Uy) {
-        if (null === yb) return [];
-        if (Array.isArray(yb)) {
-          yb = {
-            "0.0": yb
+      createAnimationTimeline(zz, uz, bz, Ez) {
+        if (null === zz) return [];
+        if (Array.isArray(zz)) {
+          zz = {
+            "0.0": zz
           }
         }
-        const hy = Object.entries(yb).map((yb => {
-          let [Wy, Uy] = yb;
-          const hy = Number(Wy) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(hy, Uy, bb)
-        })).filter(By);
-        hy.sort(((yb, bb) => yb.timeFraction - bb.timeFraction)), Uy && function(yb) {
-          for (let bb = 1; bb < yb.length; bb++) {
-            const Wy = yb[bb - 1].post,
-              Uy = yb[bb],
-              hy = Cy(Uy.pre),
-              fy = Cy(Uy.post),
-              Zy = Vy(Wy, Uy.pre);
-            Vy(Wy, hy) < Zy && (yb[bb] = {
-              ...Uy,
-              pre: hy,
-              post: fy
+        const nz = Object.entries(zz).map((zz => {
+          let [bz, Ez] = zz;
+          const nz = Number(bz) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(nz, Ez, uz)
+        })).filter(Oz);
+        nz.sort(((zz, uz) => zz.timeFraction - uz.timeFraction)), Ez && function(zz) {
+          for (let uz = 1; uz < zz.length; uz++) {
+            const bz = zz[uz - 1].post,
+              Ez = zz[uz],
+              nz = fz(Ez.pre),
+              iz = fz(Ez.post),
+              lz = rz(bz, Ez.pre);
+            rz(bz, nz) < lz && (zz[uz] = {
+              ...Ez,
+              pre: nz,
+              post: iz
             })
           }
-        }(hy);
-        const fy = [];
-        for (let oy = 0; oy < hy.length; oy++) {
-          var Zy, cb, Py;
-          const yb = hy[oy],
-            bb = null !== (Zy = hy[oy - 1]) && void 0 !== Zy ? Zy : yb,
-            Uy = null !== (cb = hy[oy + 1]) && void 0 !== cb ? cb : yb,
-            By = null !== (Py = hy[oy + 2]) && void 0 !== Py ? Py : Uy;
-          fy.push({
-            ...yb,
-            ...Wy(bb.post, bb.timeFraction, yb.post, yb.timeFraction, Uy.pre, Uy.timeFraction, By.pre, By.timeFraction)
+        }(nz);
+        const iz = [];
+        for (let Hz = 0; Hz < nz.length; Hz++) {
+          var lz, Mz, tz;
+          const zz = nz[Hz],
+            uz = null !== (lz = nz[Hz - 1]) && void 0 !== lz ? lz : zz,
+            Ez = null !== (Mz = nz[Hz + 1]) && void 0 !== Mz ? Mz : zz,
+            Oz = null !== (tz = nz[Hz + 2]) && void 0 !== tz ? tz : Ez;
+          iz.push({
+            ...zz,
+            ...bz(uz.post, uz.timeFraction, zz.post, zz.timeFraction, Ez.pre, Ez.timeFraction, Oz.pre, Oz.timeFraction)
           })
         }
-        return fy
+        return iz
       }
-      createAnimationFrameWithoutPrecomputes(yb, bb, Wy) {
-        let Uy, hy, fy = null;
-        if ("object" === typeof bb && "post" in bb) {
-          var Zy;
-          fy = null !== (Zy = bb.lerp_mode) && void 0 !== Zy ? Zy : null, hy = Sy(bb.post, Wy), Uy = bb.pre ? Sy(bb.pre, Wy) : hy
+      createAnimationFrameWithoutPrecomputes(zz, uz, bz) {
+        let Ez, nz, iz = null;
+        if ("object" === typeof uz && "post" in uz) {
+          var lz;
+          iz = null !== (lz = uz.lerp_mode) && void 0 !== lz ? lz : null, nz = Rz(uz.post, bz), Ez = uz.pre ? Rz(uz.pre, bz) : nz
         } else {
-          const yb = Sy(bb, Wy);
-          hy = yb, Uy = yb
+          const zz = Rz(uz, bz);
+          nz = zz, Ez = zz
         }
         return {
-          timeFraction: yb,
-          Kyy: this.createLerpMode(fy),
-          pre: Uy,
-          post: hy
+          timeFraction: zz,
+          Qi: this.createLerpMode(iz),
+          pre: Ez,
+          post: nz
         }
       }
-      createLerpMode(yb) {
-        return null === yb ? Uy.i.Linear : oy.LERP_MODE_SCHEMA_MAPPING[yb]
+      createLerpMode(zz) {
+        return null === zz ? Ez.j.Linear : Hz.LERP_MODE_SCHEMA_MAPPING[zz]
       }
     }
 
-    function By(yb) {
-      return Number.isFinite(yb.timeFraction) && Ky(yb.pre) && Ky(yb.post)
+    function Oz(zz) {
+      return Number.isFinite(zz.timeFraction) && pz(zz.pre) && pz(zz.post)
     }
 
-    function Ky(yb) {
-      return Number.isFinite(yb[0]) && Number.isFinite(yb[1]) && Number.isFinite(yb[2])
+    function pz(zz) {
+      return Number.isFinite(zz[0]) && Number.isFinite(zz[1]) && Number.isFinite(zz[2])
     }
 
-    function ey(yb, bb, Wy, Uy, hy, fy, Zy, cb) {
-      const Py = fy - bb,
-        oy = fy - Uy,
-        By = cb - Uy,
-        Ky = [null, null, null];
-      for (let ey = 0; ey < Ky.length; ey++) Ky[ey] = qb(yb[ey], Wy[ey], hy[ey], Zy[ey], Py, By);
+    function dz(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+      const tz = iz - uz,
+        Hz = iz - Ez,
+        Oz = Mz - Ez,
+        pz = [null, null, null];
+      for (let dz = 0; dz < pz.length; dz++) pz[dz] = Fz(zz[dz], bz[dz], nz[dz], lz[dz], tz, Oz);
       return {
-        eyy: oy,
-        qby: Ky
+        Wi: Hz,
+        ji: pz
       }
     }
 
-    function qb(yb, bb, Wy, Uy, fy, Zy) {
+    function Fz(zz, uz, bz, Ez, iz, lz) {
       return {
-        Syy: hy.c.computeShortestRotation(yb, Wy) / fy,
-        Eyy: hy.c.computeShortestRotation(bb, Uy) / Zy,
-        delta: hy.c.computeShortestRotation(bb, Wy)
+        Bi: nz.d.computeShortestRotation(zz, bz) / iz,
+        Ci: nz.d.computeShortestRotation(uz, Ez) / lz,
+        delta: nz.d.computeShortestRotation(uz, bz)
       }
     }
 
-    function sy(yb, bb, Wy, Uy, hy, fy, Zy, cb) {
-      const Py = fy - bb,
-        oy = fy - Uy,
-        By = cb - Uy,
-        Ky = [null, null, null];
-      for (let ey = 0; ey < Ky.length; ey++) Ky[ey] = {
-        Syy: (hy[ey] - yb[ey]) / Py,
-        Eyy: (Zy[ey] - Wy[ey]) / By,
-        delta: hy[ey] - Wy[ey]
+    function Zz(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+      const tz = iz - uz,
+        Hz = iz - Ez,
+        Oz = Mz - Ez,
+        pz = [null, null, null];
+      for (let dz = 0; dz < pz.length; dz++) pz[dz] = {
+        Bi: (nz[dz] - zz[dz]) / tz,
+        Ci: (lz[dz] - bz[dz]) / Oz,
+        delta: nz[dz] - bz[dz]
       };
       return {
-        eyy: oy,
-        qby: Ky
+        Wi: Hz,
+        ji: pz
       }
     }
 
-    function Sy(yb, bb) {
-      return null === bb ? yb : bb(yb)
+    function Rz(zz, uz) {
+      return null === uz ? zz : uz(zz)
     }
 
-    function Ey(yb) {
-      const [bb, Wy, Uy] = yb, Zy = -(0, fy.j)(bb), cb = -(0, fy.j)(Wy), Py = (0, fy.j)(Uy), oy = hy.c.quaternionFromEulerZYX(Zy, cb, Py);
-      return hy.c.eulerYXZFromQuaternion(oy)
+    function Kz(zz) {
+      const [uz, bz, Ez] = zz, lz = -(0, iz.j)(uz), Mz = -(0, iz.j)(bz), tz = (0, iz.j)(Ez), Hz = nz.d.quaternionFromEulerZYX(lz, Mz, tz);
+      return nz.d.eulerYXZFromQuaternion(Hz)
     }
-    oy.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Uy.i.Linear,
-      catmullrom: Uy.i.CatmullRomSpline
+    Hz.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Ez.j.Linear,
+      catmullrom: Ez.j.CatmullRomSpline
     };
-    const ly = 1 / 16;
+    const wz = 1 / 16;
 
-    function mb(yb) {
-      return [-yb[0] * ly, yb[1] * ly, yb[2] * ly]
+    function Xz(zz) {
+      return [-zz[0] * wz, zz[1] * wz, zz[2] * wz]
     }
 
-    function Cy(yb) {
-      const [bb, Wy, Uy] = yb;
-      return [bb >= 0 ? Math.PI - bb : -Math.PI - bb, Ty(Wy + Math.PI), Ty(Uy + Math.PI)]
+    function fz(zz) {
+      const [uz, bz, Ez] = zz;
+      return [uz >= 0 ? Math.PI - uz : -Math.PI - uz, sz(bz + Math.PI), sz(Ez + Math.PI)]
     }
 
-    function Ty(yb) {
-      return hy.c.mod(yb + Math.PI, 2 * Math.PI) - Math.PI
+    function sz(zz) {
+      return nz.d.mod(zz + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function Vy(yb, bb) {
-      return Math.abs(hy.c.computeShortestRotation(yb[0], bb[0])) + Math.abs(hy.c.computeShortestRotation(yb[1], bb[1])) + Math.abs(hy.c.computeShortestRotation(yb[2], bb[2]))
+    function rz(zz, uz) {
+      return Math.abs(nz.d.computeShortestRotation(zz[0], uz[0])) + Math.abs(nz.d.computeShortestRotation(zz[1], uz[1])) + Math.abs(nz.d.computeShortestRotation(zz[2], uz[2]))
     }
-    const Jy = new Py
+    const oz = new tz
   },
-  36235: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy,
-      h: () => fy,
-      i: () => Uy,
-      k: () => hy
+  36577: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz,
+      g: () => iz,
+      j: () => Ez,
+      m: () => nz
     });
-    let Uy = function(yb) {
-        return yb[yb.Linear = 0] = "Linear", yb[yb.CatmullRomSpline = 1] = "CatmullRomSpline", yb
+    let Ez = function(zz) {
+        return zz[zz.Linear = 0] = "Linear", zz[zz.CatmullRomSpline = 1] = "CatmullRomSpline", zz
       }({}),
-      hy = function(yb) {
-        return yb[yb.NoLoop = 0] = "NoLoop", yb[yb.LoopOnLastFrame = 1] = "LoopOnLastFrame", yb[yb.HoldOnLastFrame = 2] = "HoldOnLastFrame", yb
+      nz = function(zz) {
+        return zz[zz.NoLoop = 0] = "NoLoop", zz[zz.LoopOnLastFrame = 1] = "LoopOnLastFrame", zz[zz.HoldOnLastFrame = 2] = "HoldOnLastFrame", zz
       }({}),
-      fy = function(yb) {
-        return yb[yb.Movement = 0] = "Movement", yb[yb.Action = 1] = "Action", yb[yb.Emote = 2] = "Emote", yb[yb.Custom = 3] = "Custom", yb
+      iz = function(zz) {
+        return zz[zz.Movement = 0] = "Movement", zz[zz.Action = 1] = "Action", zz[zz.Emote = 2] = "Emote", zz[zz.Custom = 3] = "Custom", zz
       }({}),
-      Zy = function(yb) {
-        return yb[yb.Start = 0] = "Start", yb[yb.Stop = 1] = "Stop", yb
+      lz = function(zz) {
+        return zz[zz.Start = 0] = "Start", zz[zz.Stop = 1] = "Stop", zz
       }({})
   },
-  4052: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => hy,
-      h: () => Uy,
-      i: () => fy,
-      l: () => Py,
-      p: () => Zy
+  4605: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => nz,
+      h: () => Ez,
+      i: () => iz,
+      k: () => tz,
+      n: () => lz
     });
-    const Uy = ["sine", "triangle", "square", "sawtooth"],
-      hy = 55,
-      fy = {
+    const Ez = ["sine", "triangle", "square", "sawtooth"],
+      nz = 55,
+      iz = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function Zy(yb) {
-      return "string" !== typeof yb ? yb : Object.hasOwn(fy, yb) ? fy[yb] : null
+    function lz(zz) {
+      return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
     }
 
-    function cb(yb, bb, Wy) {
-      return Math.min(Wy, Math.max(bb, yb))
+    function Mz(zz, uz, bz) {
+      return Math.min(bz, Math.max(uz, zz))
     }
 
-    function Py(yb) {
-      const bb = cb(yb.durationMs, 10, 500),
-        Wy = cb(yb.attackMs, 0, bb),
+    function tz(zz) {
+      const uz = Mz(zz.durationMs, 10, 500),
+        bz = Mz(zz.attackMs, 0, uz),
         {
-          intonation: hy
-        } = yb;
+          intonation: nz
+        } = zz;
       return {
-        waveform: Uy.includes(yb.waveform) ? yb.waveform : "sine",
-        pitchHz: cb(yb.pitchHz, 20, 4e3),
-        glideSemitones: cb(yb.glideSemitones, -24, 24),
-        durationMs: bb,
-        attackMs: Wy,
-        releaseMs: cb(yb.releaseMs, 0, bb - Wy),
-        lowpassHz: null === yb.lowpassHz ? null : cb(yb.lowpassHz, 20, 2e4),
-        volume: cb(yb.volume, 0, 2),
+        waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
+        pitchHz: Mz(zz.pitchHz, 20, 4e3),
+        glideSemitones: Mz(zz.glideSemitones, -24, 24),
+        durationMs: uz,
+        attackMs: bz,
+        releaseMs: Mz(zz.releaseMs, 0, uz - bz),
+        lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
+        volume: Mz(zz.volume, 0, 2),
         intonation: {
-          variationSemitones: cb(hy.variationSemitones, 0, 6),
-          declineSemitones: cb(hy.declineSemitones, 0, 12),
-          questionRiseSemitones: cb(hy.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: cb(hy.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Mz(nz.variationSemitones, 0, 6),
+          declineSemitones: Mz(nz.declineSemitones, 0, 12),
+          questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: cb(yb.syllableMs, 25, 200)
+        syllableMs: Mz(zz.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

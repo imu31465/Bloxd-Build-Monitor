@@ -1,1091 +1,1071 @@
 export const id = 188;
 export const ids = [188];
 export const modules = {
-  39929: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      loadGlbAsset: () => lb,
-      loadGlbTree: () => Eb
+  38463: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Mz,
+      f: () => iz
     });
-    var Uy = Wy(36559),
-      hy = Wy(39937),
-      fy = Wy(35092),
-      Zy = Wy.n(fy);
+    var Ez = bz(3874);
+    let nz = null;
 
-    function cb() {
-      return Zy()('(()=>{class yb extends Error{}function bb(bb,Wy){const Uy=bb._malloc(Wy);if(0===Uy)throw new yb(`Draco: the decoder\'s heap refused ${Wy} bytes`);return Uy}function Wy(yb){return{[yb.DT_FLOAT32]:[Float32Array,5126],[yb.DT_INT8]:[Int8Array,5120],[yb.DT_INT16]:[Int16Array,5122],[yb.DT_INT32]:[Int32Array,5124],[yb.DT_UINT8]:[Uint8Array,5121],[yb.DT_UINT16]:[Uint16Array,5123],[yb.DT_UINT32]:[Uint32Array,5125]}}function Uy(bb,Uy,hy,fy,Zy){let cb=null,Py=null,oy=null;try{cb=new bb.Decoder,Py=new bb.DecoderBuffer,Py.Init(Uy,Uy.byteLength);let By=0;const Ky=cb.GetEncodedGeometryType(Py);if(Ky===bb.TRIANGULAR_MESH){const Wy=new bb.Mesh;oy=Wy;const Uy=cb.DecodeBufferToMesh(Py,Wy);if(!Uy.ok()||0===Wy.ptr)throw new yb(Uy.error_msg());By=3*Wy.num_faces()}else{if(Ky!==bb.POINT_CLOUD)throw new yb(`Draco: Cannot decode invalid geometry type ${Ky}`);{const Wy=new bb.PointCloud;oy=Wy;const Uy=cb.DecodeBufferToPointCloud(Py,Wy);if(!Uy.ok()||!Wy.ptr)throw new yb(Uy.error_msg())}}const ey=oy.num_points();if(ey!==fy.vertices||By!==fy.indices)throw new yb(`Draco: decoded ${ey} vertices and ${By} indices, the accessors declare ${fy.vertices} and ${fy.indices}`);const qb=Wy(bb),sy=[];for(const{kind:bb,id:Wy,components:Uy}of hy){const hy=cb.GetAttributeByUniqueId(oy,Wy);if(!hy||0===hy.ptr)throw new yb(`Draco: no attribute with id ${Wy} (${bb})`);const fy=hy.data_type();if(!qb[fy])throw new yb(`Draco: Cannot decode invalid data type ${fy}`);if(hy.num_components()!==Uy)throw new yb(`Draco: ${bb} decodes to ${hy.num_components()} components, its accessor declares ${Uy}`);sy.push([bb,hy,fy])}return Zy({dracoDecoder:cb,geometry:oy,triangles:Ky===bb.TRIANGULAR_MESH,numPoints:ey,numIndices:By,attributes:sy})}finally{oy&&bb.destroy(oy),Py&&bb.destroy(Py),cb&&bb.destroy(cb)}}const hy=self;let fy=null;self.onmessage=yb=>{let{data:Zy}=yb;if("init"===Zy.id){try{importScripts(Zy.url),fy=DracoDecoderModule({wasmBinary:Zy.wasmBinary}),hy.postMessage({id:"initDone"})}catch(Ky){hy.postMessage({id:"initError",message:Ky instanceof Error?Ky.message:String(Ky)})}return}const{seq:cb,data:Py,attributeIds:oy,expected:By}=Zy;fy?fy.then((yb=>{try{const fy=function(yb,hy,fy,Zy){const cb=Object.keys(fy).map((yb=>({kind:yb,id:fy[yb],components:Zy.components[yb]})));return Uy(yb,hy,cb,Zy,(Uy=>{let{dracoDecoder:hy,geometry:fy,triangles:Zy,numPoints:cb,numIndices:Py,attributes:oy}=Uy;const By=Wy(yb);let Ky=null;if(Zy){const Wy=4*Py,Uy=bb(yb,Wy);try{hy.GetTrianglesUInt32Array(fy,Wy,Uy),Ky=new Uint32Array(Py),Ky.set(new Uint32Array(yb.HEAPF32.buffer,Uy,Py))}finally{yb._free(Uy)}}const ey=[];for(const[Wy,qb,sy]of oy){const[Uy]=By[sy],Zy=qb.num_components(),Py=cb*Zy,oy=Py*Uy.BYTES_PER_ELEMENT,Ky=bb(yb,oy);try{hy.GetAttributeDataArrayForAllPoints(fy,qb,sy,oy,Ky),ey.push({kind:Wy,data:new Uy(yb.HEAPF32.buffer,Ky,Py).slice(),size:Zy,byteOffset:qb.byte_offset(),byteStride:qb.byte_stride(),normalized:qb.normalized()})}finally{yb._free(Ky)}}return{indices:Ky,attributes:ey,totalVertices:cb}}))}(yb,Py,oy,By),Zy=fy.attributes.map((yb=>yb.data.buffer));fy.indices&&Zy.push(fy.indices.buffer),hy.postMessage({id:"decoded",seq:cb,...fy},Zy)}catch(Ky){hy.postMessage({id:"decodeError",seq:cb,message:Ky instanceof Error?Ky.message:String(Ky)})}}),(yb=>{hy.postMessage({id:"decodeError",seq:cb,message:yb instanceof Error?yb.message:String(yb)})})):hy.postMessage({id:"decodeError",seq:cb,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, Wy.p + "dracoDecode.worker.69234734.worker.js")
-    }
-    const Py = 1e3;
-    let oy = null,
-      By = null;
-    const Ky = [],
-      ey = [];
-    let qb = 0;
-    const sy = {
-      decodes: 0,
-      workersStarted: 0,
-      mostWorkers: 0
-    };
-
-    function Sy() {
-      if (!oy) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
-      const {
-        scriptUrl: yb,
-        wasmBinaryUrl: bb
-      } = oy;
-      return By ??= fetch(bb).then((yb => {
-        if (!yb.ok) throw new Error(`Draco: fetching ${bb} failed: ${yb.status}`);
-        return yb.arrayBuffer()
-      })), By.catch((() => {
-        By = null
-      })), sy.workersStarted++, By.then((bb => new Promise(((Wy, Uy) => {
-        const hy = new cb;
-        hy.onerror = yb => {
-          hy.onmessage = null, hy.onerror = null, hy.terminate(), Uy(new Error("Draco: the decode worker failed to start" + (yb.message ? `: ${yb.message}` : " (its script did not load)")))
-        }, hy.onmessage = yb => {
-          let {
-            data: bb
-          } = yb;
-          hy.onmessage = null, hy.onerror = null, "initDone" === bb.id ? Wy(hy) : (hy.terminate(), Uy(new Error(`Draco: ${"initError"===bb.id?bb.message:"the worker did not start"}`)))
-        };
-        const fy = bb.slice(0),
-          Zy = {
-            id: "init",
-            url: yb,
-            wasmBinary: fy
-          };
-        hy.postMessage(Zy, [fy])
-      }))))
+    function iz(zz) {
+      return null !== nz && zz === nz
     }
 
-    function Ey(yb) {
-      const bb = Ky.indexOf(yb); - 1 !== bb && Ky.splice(bb, 1);
-      const Wy = ey.shift();
-      Wy && mb(Wy)
+    function lz() {
+      this.PU = !1, this.stopPropagation = !1, this.aU = !1, this.disabled = !1
     }
-
-    function ly(yb, bb) {
-      yb.busy = !0, yb.releaseTimer && (clearTimeout(yb.releaseTimer), yb.releaseTimer = null);
-      yb.worker.then((Wy => {
-        const Uy = qb++;
-        Wy.onmessage = hy => {
-          let {
-            data: fy
-          } = hy;
-          if (("decoded" === fy.id || "decodeError" === fy.id) && fy.seq === Uy) {
-            if (Wy.onmessage = null, Wy.onerror = null, "decoded" === fy.id) return sy.decodes++, bb.resolve({
-              indices: fy.indices,
-              attributes: fy.attributes,
-              totalVertices: fy.totalVertices
-            }), void(() => {
-              const bb = ey.shift();
-              bb ? ly(yb, bb) : (yb.busy = !1, yb.releaseTimer = setTimeout((() => {
-                const bb = Ky.indexOf(yb); - 1 !== bb && Ky.splice(bb, 1), yb.worker.then((yb => {
-                  yb.terminate()
-                }))
-              }), Py))
-            })();
-            Wy.terminate(), bb.reject(new Error(fy.message)), Ey(yb)
-          }
-        }, Wy.onerror = Uy => {
-          Wy.onmessage = null, Wy.onerror = null, Wy.terminate(), bb.reject(new Error(`Draco: the decode worker failed: ${Uy.message}`)), Ey(yb)
-        };
-        const hy = {
-          id: "decode",
-          seq: Uy,
-          data: bb.data,
-          attributeIds: bb.attributeIds,
-          expected: bb.expected
-        };
-        Wy.postMessage(hy, [bb.data.buffer])
-      }), (Wy => {
-        bb.reject(Wy instanceof Error ? Wy : new Error(String(Wy))), Ey(yb)
-      }))
-    }
-
-    function mb(yb) {
-      const bb = Ky.find((yb => !yb.busy));
-      if (bb) ly(bb, yb);
-      else {
-        if (Ky.length < function() {
-            const yb = "object" === typeof navigator ? navigator.hardwareConcurrency : 0;
-            return yb ? Math.max(1, Math.min(Math.floor(.5 * yb), 4)) : 1
-          }()) {
-          const bb = {
-            worker: Sy(),
-            busy: !0,
-            releaseTimer: null
-          };
-          return Ky.push(bb), sy.mostWorkers = Math.max(sy.mostWorkers, Ky.length), void ly(bb, yb)
-        }
-        ey.push(yb)
-      }
-    }
-
-    function Cy(yb, bb, Wy) {
-      return new Promise(((Uy, hy) => {
-        mb({
-          data: new Int8Array(yb.buffer, yb.byteOffset, yb.byteLength).slice(),
-          attributeIds: bb,
-          expected: Wy,
-          resolve: Uy,
-          reject: hy
+    class Mz {
+      constructor(zz, uz) {
+        this.version = "0.7.0";
+        var bz = Object.assign({}, new lz, uz || {});
+        this.element = zz || document, this.PU = !!bz.PU, this.stopPropagation = !!bz.stopPropagation, this.aU = !!bz.aU, this.disabled = !!bz.disabled, this.filterEvents = (zz, uz) => !0, this.down = new Ez.EventEmitter, this.up = new Ez.EventEmitter, this.state = {}, this.WU = {
+          dx: 0,
+          dy: 0,
+          dzz: 0,
+          Fzz: 0,
+          Rzz: 0
+        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
+          lastX: 0,
+          lastY: 0,
+          currID: null
+        }, "loading" !== document.readyState ? Hz(this) : document.addEventListener("DOMContentLoaded", (zz => {
+          Hz(this)
+        }), {
+          once: !0
         })
+      }
+      bind(zz) {
+        for (var uz = arguments.length, bz = new Array(uz > 1 ? uz - 1 : 0), Ez = 1; Ez < uz; Ez++) bz[Ez - 1] = arguments[Ez];
+        bz.forEach((uz => {
+          var bz = this._keyBindmap[uz] || [];
+          bz.includes(zz) || (bz.push(zz), this._keyBindmap[uz] = bz)
+        })), this.state[zz] = !!this.state[zz], this.pressCount[zz] = this.pressCount[zz] || 0, this.releaseCount[zz] = this.releaseCount[zz] || 0
+      }
+      unbind(zz) {
+        for (var uz in this._keyBindmap) {
+          var bz = this._keyBindmap[uz],
+            Ez = bz.indexOf(zz);
+          Ez > -1 && bz.splice(Ez, 1)
+        }
+      }
+      getBindings() {
+        var zz = {};
+        for (var uz in this._keyBindmap) {
+          this._keyBindmap[uz].forEach((bz => {
+            zz[bz] = zz[bz] || [], zz[bz].push(uz)
+          }))
+        }
+        return zz
+      }
+      sd() {
+        tz(this.WU), tz(this.pressCount), tz(this.releaseCount)
+      }
+    }
+
+    function tz(zz) {
+      for (var uz in zz) zz[uz] = 0
+    }
+
+    function Hz(zz) {
+      window.addEventListener("keydown", Kz.bind(null, zz, !0), !1), window.addEventListener("keyup", Kz.bind(null, zz, !1), !1);
+      var uz = {
+        passive: !0
+      };
+      zz.element.addEventListener("touchstart", Fz.bind(void 0, zz), {
+        passive: !1
+      }), zz.element.addEventListener("touchend", Rz.bind(void 0, zz), uz), zz.element.addEventListener("mousedown", wz.bind(null, zz, !0), uz), window.document.addEventListener("mouseup", wz.bind(null, zz, !1), uz), zz.element.addEventListener("touchmove", Xz.bind(null, zz), uz), zz.element.addEventListener("mousemove", Xz.bind(null, zz), uz), window.PointerEvent, zz.element.addEventListener("wheel", fz.bind(null, zz), uz), zz.element.addEventListener("contextmenu", sz.bind(null, zz), !1), window.addEventListener("blur", Nz.bind(null, zz), !1)
+    }
+    var Oz = 0,
+      pz = 0,
+      dz = null;
+
+    function Fz(zz, uz) {
+      uz.preventDefault(), Zz(uz)
+    }
+
+    function Zz(zz) {
+      let uz = !1;
+      for (let bz = 0; bz < zz.touches.length; ++bz)
+        if (zz.touches[bz].identifier === dz) {
+          uz = !0;
+          break
+        } if (!uz) {
+        const uz = zz.changedTouches[0];
+        Oz = uz.clientX, pz = uz.clientY, dz = uz.identifier
+      }
+    }
+
+    function Rz(zz, uz) {
+      for (var bz = uz.changedTouches, Ez = 0; Ez < bz.length; ++Ez) bz[Ez].identifier === dz && (dz = null)
+    }
+
+    function Kz(zz, uz, bz) {
+      try {
+        vz(zz, bz), uz && bz.isTrusted && !bz.repeat && zz._keyStates[bz.code] && xz(zz, bz.code)
+      } finally {
+        Jz(bz.code, uz, zz, bz)
+      }
+    }
+
+    function wz(zz, uz, bz) {
+      try {
+        vz(zz, bz)
+      } finally {
+        ! function(zz, uz, bz) {
+          if ("pointerId" in bz)
+            if (uz) {
+              if (null !== zz._touches.currID) return;
+              zz._touches.currID = bz.pointerId
+            } else {
+              if (zz._touches.currID !== bz.pointerId) return;
+              zz._touches.currID = null
+            } var Ez = "button" in bz ? bz.button + 1 : 1;
+          Jz("Mouse" + Ez, uz, zz, bz)
+        }(zz, uz, bz)
+      }
+    }
+
+    function Xz(zz, uz) {
+      var bz = uz.movementX || uz.mozMovementX || 0,
+        Ez = uz.movementY || uz.mozMovementY || 0;
+      if (uz.touches && 0 === (bz | Ez)) {
+        var nz = function(zz) {
+          Zz(zz);
+          for (let uz = 0; uz < zz.changedTouches.length; ++uz)
+            if (zz.changedTouches[uz].identifier == dz) {
+              const bz = zz.changedTouches[uz],
+                Ez = [bz.clientX - Oz, bz.clientY - pz];
+              return Oz = bz.clientX, pz = bz.clientY, Ez
+            } return console.error(`Did not find touch id ${dz}`), [0, 0]
+        }(uz);
+        bz = nz[0], Ez = nz[1]
+      }
+      zz.WU.dx += bz, zz.WU.dy += Ez
+    }
+
+    function fz(zz, uz) {
+      vz(zz, uz);
+      var bz = 1;
+      switch (uz.deltaMode) {
+        case 0:
+          bz = 1;
+          break;
+        case 1:
+          bz = 12;
+          break;
+        case 2:
+          bz = zz.element.clientHeight || window.innerHeight
+      }
+      zz.WU.dzz += (uz.deltaX || 0) * bz, zz.WU.Fzz += (uz.deltaY || 0) * bz, zz.WU.Rzz += (uz.deltaZ || 0) * bz
+    }
+
+    function sz(zz, uz) {
+      if (!zz.aU) return uz.preventDefault(), !1
+    }
+    var rz = {
+      AltLeft: "altKey",
+      AltRight: "altKey",
+      ControlLeft: "ctrlKey",
+      ControlRight: "ctrlKey",
+      ShiftLeft: "shiftKey",
+      ShiftRight: "shiftKey",
+      MetaLeft: "metaKey",
+      MetaRight: "metaKey"
+    };
+
+    function oz(zz, uz) {
+      return !!zz[rz[uz]] || ("AltRight" === uz || "ControlLeft" === uz) && "function" === typeof zz.getModifierState && !0 === zz.getModifierState("AltGraph")
+    }
+
+    function Nz(zz, uz) {
+      for (var bz in zz._modifiersHeldThroughBlur = {}, rz) zz._keyStates[bz] && (zz._modifiersHeldThroughBlur[bz] = !0);
+      uz && uz.isTrusted && function() {
+        try {
+          return window.self !== window.top
+        } catch (zz) {
+          return !0
+        }
+      }() && (clearTimeout(zz._blurRelease), zz._blurRelease = setTimeout((function() {
+        if (!document.hasFocus())
+          for (var uz in zz._modifiersHeldThroughBlur = {}, zz._keyStates) zz._keyStates[uz] && !/^Mouse\d/.test(uz) && xz(zz, uz)
+      }), 0))
+    }
+
+    function vz(zz, uz) {
+      var bz = zz._modifiersHeldThroughBlur;
+      if (bz && uz.isTrusted && document.hasFocus())
+        for (var Ez in bz) delete bz[Ez], zz._keyStates[Ez] && Ez !== uz.code && (oz(uz, Ez) || xz(zz, Ez))
+    }
+
+    function xz(zz, uz) {
+      const bz = {
+          code: uz,
+          preventDefault: () => {},
+          stopPropagation: () => {}
+        },
+        Ez = nz;
+      nz = bz;
+      try {
+        Jz(uz, !1, zz, bz)
+      } finally {
+        nz = Ez
+      }
+    }
+
+    function Jz(zz, uz, bz, Ez) {
+      var nz = bz._keyBindmap[zz];
+      nz && (Az(bz._keyStates[zz], uz) && (bz._keyStates[zz] = uz, nz.forEach((zz => {
+        (!bz.filterEvents || bz.filterEvents(Ez, zz)) && function(zz, uz, bz, Ez) {
+          var nz = uz ? bz.pressCount : bz.releaseCount;
+          nz[zz] = (nz[zz] || 0) + 1;
+          var iz = bz._bindPressCount[zz] || 0;
+          (iz += uz ? 1 : -1) < 0 && (iz = 0);
+          bz._bindPressCount[zz] = iz;
+          var lz = bz.state[zz];
+          if (Az(lz, iz)) {
+            bz.state[zz] = iz > 0;
+            var Mz = uz ? bz.down : bz.up;
+            bz.disabled || Mz.emit(zz, Ez)
+          }
+        }(zz, uz, bz, Ez)
+      }))), "button" in Ez || (bz.PU && !Ez.defaultPrevented && Ez.preventDefault(), bz.stopPropagation && Ez.stopPropagation()))
+    }
+
+    function Az(zz, uz) {
+      return zz ? !uz : uz
+    }
+  },
+  36156: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Fz,
+      d: () => Zz
+    });
+    var Ez = bz(56),
+      nz = bz(2756),
+      iz = bz(1417),
+      lz = bz(1912),
+      Mz = bz(36103),
+      tz = bz(588),
+      Hz = bz(1038),
+      Oz = bz.n(Hz),
+      pz = bz(1089);
+    const dz = {},
+      Fz = (0, Ez.memo)((function() {
+        const zz = (0, nz.c)();
+        return (0, iz.g)("damagedByOtherPlayer", (uz => {
+          let {
+            nE: bz,
+            direction: Ez
+          } = uz;
+          const nz = bz || "nonDirectional";
+          if (dz[nz]) {
+            const uz = dz[nz];
+            clearTimeout(uz.timeout), uz.direction = Ez, uz.timeout = setTimeout((() => {
+              delete dz[nz], zz()
+            }), 800)
+          } else dz[nz] = {
+            direction: Ez,
+            KV: null,
+            timeout: setTimeout((() => {
+              delete dz[nz], zz()
+            }), 800)
+          };
+          zz()
+        })), (0, lz.d)("kill", (uz => {
+          let {
+            killer: bz,
+            victim: Ez
+          } = uz;
+          const nz = Ez.id;
+          bz.local && nz && nz in dz && (clearTimeout(dz[nz].timeout), delete dz[nz], zz())
+        })), (0, Ez.useEffect)((() => {
+          const zz = (0, Mz.g)("turnDamageIndicators", Zz);
+          return () => {
+            zz();
+            for (const zz in dz) clearTimeout(dz[zz].timeout), delete dz[zz]
+          }
+        }), []), (0, pz.jsx)("div", {
+          className: "DirectionalDamage",
+          children: Object.entries(dz).map((zz => {
+            let [uz, bz] = zz;
+            const Ez = (0, tz.F)(bz.direction);
+            return (0, pz.jsx)("div", {
+              ref: zz => {
+                dz[uz] && (dz[uz].KV = zz)
+              },
+              className: Oz()("DamageIndicator", {
+                DamageIndicatorFullCircle: Ez
+              })
+            }, uz)
+          }))
+        })
+      }));
+
+    function Zz(zz) {
+      for (const uz in dz) {
+        const {
+          direction: bz,
+          KV: Ez
+        } = dz[uz];
+        if ((0, tz.F)(bz)) continue;
+        const nz = bz - zz;
+        Ez.style.rotate = `${nz}rad`
+      }
+    }
+  },
+  35970: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => nz,
+      e: () => iz
+    });
+    let Ez = !1;
+
+    function nz() {
+      return Ez
+    }
+
+    function iz(zz) {
+      return Ez !== zz && (Ez = zz, !0)
+    }
+  },
+  8920: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz,
+      g: () => nz
+    });
+    var Ez = bz(20);
+
+    function nz(zz, uz) {
+      return zz && !uz
+    }
+
+    function iz() {
+      return nz(Ez.e.get("isTouchScreen"), Ez.e.get("clientEscMenuOptions").touchActionButtons)
+    }
+  },
+  39834: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      startPadGameplay: () => sz
+    });
+    bz(39704);
+    var Ez = bz(39708),
+      nz = bz(3521),
+      iz = bz(20),
+      lz = bz(38436),
+      Mz = bz(3437),
+      tz = bz(38454),
+      Hz = bz(22),
+      Oz = bz(2623),
+      pz = bz(37824),
+      dz = bz(8530),
+      Fz = bz(39712);
+    const Zz = {
+      yawRadPerSec: 0,
+      pitchRadPerSec: 0
+    };
+    var Rz = bz(39731),
+      Kz = bz(8507);
+    const wz = zz => zz.padSneakToggled || !!iz.e.get("clientEscMenuOptions").crouchIsToggle && zz.crouchToggled,
+      Xz = () => {
+        const zz = (() => {
+          const zz = (0, dz.e)();
+          let uz = Zz;
+          const bz = new Fz.e;
+          let Ez = !1,
+            nz = 0;
+          const iz = () => {
+            const bz = performance.now(),
+              iz = 0 === nz ? 0 : bz - nz;
+            if (nz = bz, !Ez) return zz.discardPending(), null;
+            const lz = (0, Fz.p)(uz, iz),
+              Mz = zz.drainLookDelta(),
+              tz = (0, pz.k)();
+            return {
+              QJ: (lz.QJ + Mz.QJ) * tz,
+              eJ: (lz.eJ + Mz.eJ) * tz
+            }
+          };
+          return {
+            update: (zz, nz, lz, Mz) => {
+              zz.camera.mD !== iz && (zz.camera.mD = iz), Ez = !0, uz = (0, Fz.t)(bz, nz, lz, Mz, performance.now())
+            },
+            release: () => {
+              Ez = !1, uz = Zz, bz.reset()
+            },
+            uninstall: zz => {
+              zz.camera.mD === iz && (zz.camera.mD = null)
+            }
+          }
+        })();
+        return {
+          update: (uz, bz, Ez) => {
+            zz.update((0, Oz.g)(), uz, bz, Ez)
+          },
+          release: zz.release,
+          uninstall: () => {
+            const uz = (0, Oz.g)();
+            uz && zz.uninstall(uz)
+          }
+        }
+      };
+    var fz = bz(39724);
+    bz(37139), bz(8387);
+    bz(8407).b;
+    const sz = () => {
+      const zz = (0, fz.d)((() => {
+          const zz = {
+            x: 0,
+            y: 0,
+            magnitude: 0,
+            headingOffset: 0,
+            jumpHeld: !1,
+            jumpPressedSinceTick: !1,
+            crouchHeld: !1,
+            running: !1,
+            sprintHeld: !1
+          };
+          return {
+            bodies: () => (0, lz.e)(),
+            look: Xz(),
+            move: (uz, bz) => {
+              const Ez = (0, Oz.g)(),
+                nz = Ez.zN.puz();
+              if (zz.x = uz.x, zz.y = uz.y, zz.magnitude = uz.magnitude, zz.headingOffset = uz.headingOffset, zz.jumpHeld = uz.jumpHeld, uz.jumpPressed && (zz.jumpPressedSinceTick = !0), zz.running = uz.running, zz.sprintHeld = uz.sprintHeld, bz) {
+                const uz = (0, Rz.i)({
+                  ...bz,
+                  descending: Ez.zN.tzz(Ez.iG).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!Ez.Vr.canCrouch,
+                  toggled: wz(nz)
+                });
+                zz.crouchHeld = uz.crouchHeld, nz.padSneakToggled = uz.toggled, nz.crouchToggled = !1, (0, Kz.e)(uz.toggled)
+              }
+              nz.gamepad = zz
+            },
+            stopMoving: () => {
+              var uz;
+              Object.assign(zz, {
+                x: 0,
+                y: 0,
+                magnitude: 0,
+                headingOffset: 0,
+                jumpHeld: !1,
+                jumpPressedSinceTick: !1,
+                crouchHeld: !1,
+                running: !1,
+                sprintHeld: !1
+              });
+              const bz = null === (uz = (0, Oz.g)()) || void 0 === uz ? void 0 : uz.zN.puz();
+              (null === bz || void 0 === bz ? void 0 : bz.gamepad) === zz && (bz.gamepad = null)
+            },
+            uninstall: () => {},
+            deviceChanged: zz => {
+              const uz = (0, Oz.g)(),
+                bz = null === uz || void 0 === uz ? void 0 : uz.zN.puz();
+              "touch" === zz ? ((0, Kz.e)(!1), null !== bz && void 0 !== bz && bz.padSneakToggled && (bz.padSneakToggled = !1, bz.isTouchscreen && !bz.gamepad && uz.zN.Vzz(uz.iG).setCrouching(!!uz.Vr.canCrouch && bz.touchCrouch))) : "gamepad" === zz && bz && (0, Kz.e)(wz(bz))
+            },
+            hasPlayer: () => {
+              var zz;
+              return !(null === (zz = (0, Oz.g)()) || void 0 === zz || !zz.iG)
+            },
+            isPlayerDead: () => {
+              var zz;
+              const uz = (0, Oz.g)();
+              return !1 === (null === (zz = uz.zN.nuz(uz.iG)) || void 0 === zz ? void 0 : zz.isAlive)
+            },
+            isReplayMode: () => {
+              var zz, uz;
+              return !(null === (zz = (0, Oz.d)()) || void 0 === zz || null === (uz = zz.client) || void 0 === uz || !uz.isReplayMode())
+            },
+            isFreeCameraOn: () => {
+              var zz, uz, bz;
+              return !(null === (zz = (0, Oz.d)()) || void 0 === zz || null === (uz = zz.client) || void 0 === uz || null === (bz = uz.freeCameraController) || void 0 === bz || !bz.isEnabled())
+            },
+            targetsBlock: () => !!(0, Oz.g)().U3,
+            selectedSlotEmpty: () => {
+              var zz;
+              const uz = (0, Oz.g)();
+              return !(null !== (zz = uz.zN.hzz(uz.iG)) && void 0 !== zz && zz.getItemAtSelectedSlot())
+            },
+            pickBlockAllowed: () => {
+              const zz = (0, Oz.g)().Vr;
+              return !!zz.creative && !!zz.canPickBlocks
+            },
+            scrollHotbar: zz => {
+              Hz.k.sK("ScrollInventorySlot", zz)
+            },
+            hasFullInventory: () => (0, tz.c)((0, Oz.g)()),
+            hasLobbyLeaderboard: () => !!(0, Oz.g)().Vr.lobbyLeaderboardInfo,
+            contextActionInputs: () => {
+              var zz, uz, bz, Ez;
+              const nz = (0, Oz.g)();
+              return {
+                holdingGun: !(null === (zz = nz.zN.iuz(nz.iG)) || void 0 === zz || null === (uz = zz.Fv) || void 0 === uz || !uz.isGun()),
+                customButtons: null !== (bz = nz.Vr.customButtons) && void 0 !== bz ? bz : null,
+                touchscreenActionButton: null !== (Ez = nz.Vr.touchscreenActionButton) && void 0 !== Ez ? Ez : null
+              }
+            },
+            pressTouchButton: zz => {
+              (0, Mz.sendColyMessage)(nz.Qj, zz)
+            }
+          }
+        })()),
+        uz = (0, Ez.e)(),
+        bz = null,
+        iz = null;
+      return () => {
+        zz(), uz(), null === bz || void 0 === bz || bz(), null === iz || void 0 === iz || iz()
+      }
+    }
+  },
+  36080: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      d: () => Rz,
+      g: () => Kz,
+      h: () => Mz,
+      i: () => dz,
+      j: () => wz,
+      n: () => pz,
+      q: () => fz,
+      u: () => Zz,
+      x: () => Xz
+    });
+    var Ez = bz(20),
+      nz = bz(22);
+    const iz = "clientGameInventoryButtonsChanged",
+      lz = new Map;
+
+    function Mz() {
+      return [...lz.values()].sort(((zz, uz) => {
+        var bz, Ez;
+        return (null !== (bz = zz.order) && void 0 !== bz ? bz : 0) - (null !== (Ez = uz.order) && void 0 !== Ez ? Ez : 0)
       }))
     }
-    var Ty = Wy(36047),
-      Vy = Wy(36060),
-      Jy = Wy(33198),
-      gb = Wy(33194);
-    const Gy = {
-      index: -1,
-      magFilter: void 0,
-      minFilter: void 0,
-      wrapS: void 0,
-      wrapT: void 0
-    };
+    let tz = null;
 
-    function Oy(yb) {
-      const bb = (0, gb.k)(yb.byteLength);
-      if (bb) throw new Jy.l(bb);
-      const {
-        json: Wy,
-        bin: Uy
-      } = (0, Jy.A)(yb), hy = (0, gb.g)(Wy, Uy);
-      if (hy) throw new Jy.l(hy);
+    function Hz(zz) {
+      tz = zz
+    }
+    let Oz = !1;
+
+    function pz(zz) {
+      Oz = !0;
       try {
-        return function(yb, bb) {
-          var Wy, Uy, hy, fy, Zy, cb, Py, oy, By, Ky, ey, qb, sy, Sy, Ey;
-          const ly = new Map,
-            mb = Wy => {
-              let Uy = ly.get(Wy);
-              if (!Uy) {
-                var hy;
-                const fy = yb.bufferViews[Wy],
-                  Zy = null !== (hy = fy.byteOffset) && void 0 !== hy ? hy : 0;
-                Uy = {
-                  index: Wy,
-                  bytes: bb.subarray(Zy, Zy + fy.byteLength),
-                  byteStride: fy.byteStride
-                }, ly.set(Wy, Uy)
-              }
-              return Uy
-            },
-            Cy = new Map,
-            Ty = bb => {
-              let Wy = Cy.get(bb);
-              if (!Wy) {
-                var Uy;
-                const hy = yb.accessors[bb];
-                Wy = {
-                  index: bb,
-                  count: hy.count,
-                  type: hy.type,
-                  numComponents: Jy.p[hy.type],
-                  componentType: hy.componentType,
-                  normalized: null !== (Uy = hy.normalized) && void 0 !== Uy && Uy,
-                  byteOffset: hy.byteOffset,
-                  bufferView: void 0 === hy.bufferView ? null : mb(hy.bufferView),
-                  min: hy.min,
-                  max: hy.max
-                }, Cy.set(bb, Wy)
-              }
-              return Wy
-            },
-            Vy = null !== (Wy = null === (Uy = yb.extensionsUsed) || void 0 === Uy ? void 0 : Uy.includes("KHR_draco_mesh_compression")) && void 0 !== Wy && Wy,
-            gb = (null !== (hy = yb.meshes) && void 0 !== hy ? hy : []).map(((bb, Wy) => {
-              const Uy = bb.primitives.map(((bb, Wy) => {
-                var Uy, hy, fy;
-                const Zy = Vy ? null === (Uy = bb.extensions) || void 0 === Uy ? void 0 : Uy.KHR_draco_mesh_compression : void 0;
-                let cb = null;
-                const Py = [];
-                if (Zy) {
-                  const Wy = {
-                    vertices: yb.accessors[bb.attributes.POSITION].count,
-                    indices: void 0 === bb.indices ? 0 : yb.accessors[bb.indices].count,
-                    components: {}
-                  };
-                  cb = {
-                    bufferView: mb(Zy.bufferView),
-                    attributeIds: {},
-                    normalized: {},
-                    expected: Wy
-                  };
-                  for (const [Uy, hy] of Jy.g) {
-                    const fy = Zy.attributes[Uy];
-                    if (void 0 === fy) continue;
-                    cb.attributeIds[hy] = fy;
-                    const Py = bb.attributes[Uy];
-                    var oy;
-                    if (void 0 !== Py) cb.normalized[hy] = null !== (oy = yb.accessors[Py].normalized) && void 0 !== oy && oy, Wy.components[hy] = Jy.p[yb.accessors[Py].type]
-                  }
-                } else
-                  for (const [yb, By] of Jy.g) {
-                    const Wy = bb.attributes[yb];
-                    void 0 !== Wy && Py.push({
-                      semantic: yb,
-                      kind: By,
-                      accessor: Ty(Wy)
-                    })
-                  }
-                return {
-                  index: Wy,
-                  mode: null !== (hy = bb.mode) && void 0 !== hy ? hy : 4,
-                  attributes: Py,
-                  indices: Zy || void 0 === bb.indices ? null : Ty(bb.indices),
-                  position: void 0 === bb.attributes.POSITION ? null : Ty(bb.attributes.POSITION),
-                  material: null !== (fy = bb.material) && void 0 !== fy ? fy : null,
-                  draco: cb
-                }
-              }));
-              return {
-                index: Wy,
-                name: bb.name,
-                primitives: Uy,
-                extras: bb.extras
-              }
-            })),
-            Oy = (null !== (fy = yb.nodes) && void 0 !== fy ? fy : []).map(((yb, bb) => {
-              var Wy, Uy;
-              return {
-                index: bb,
-                name: yb.name,
-                children: null !== (Wy = yb.children) && void 0 !== Wy ? Wy : [],
-                mesh: null !== (Uy = yb.mesh) && void 0 !== Uy ? Uy : null,
-                translation: yb.translation,
-                rotation: yb.rotation,
-                scale: yb.scale,
-                hasCamera: void 0 !== yb.camera,
-                extras: yb.extras
-              }
-            })),
-            Ry = null !== (Zy = null === (cb = yb.extensionsUsed) || void 0 === cb ? void 0 : cb.includes("KHR_materials_unlit")) && void 0 !== Zy && Zy,
-            vb = null !== (Py = null === (oy = yb.extensionsUsed) || void 0 === oy ? void 0 : oy.includes("KHR_texture_transform")) && void 0 !== Py && Py,
-            ib = (null !== (By = yb.materials) && void 0 !== By ? By : []).map(((yb, bb) => {
-              var Wy, Uy, hy, fy;
-              const Zy = yb.pbrMetallicRoughness,
-                cb = null === Zy || void 0 === Zy ? void 0 : Zy.baseColorTexture;
-              return {
-                index: bb,
-                name: yb.name,
-                extras: yb.extras,
-                unlit: Ry && void 0 !== (null === (Wy = yb.extensions) || void 0 === Wy ? void 0 : Wy.KHR_materials_unlit),
-                pbr: Zy ? {
-                  baseColorFactor: Zy.baseColorFactor,
-                  metallicFactor: Zy.metallicFactor,
-                  roughnessFactor: Zy.roughnessFactor
-                } : null,
-                baseColorTexture: cb ? {
-                  texture: cb.index,
-                  transform: vb && (null === (Uy = cb.extensions) || void 0 === Uy ? void 0 : Uy.KHR_texture_transform) || null
-                } : null,
-                emissiveFactor: yb.emissiveFactor,
-                alphaMode: null !== (hy = yb.alphaMode) && void 0 !== hy ? hy : "OPAQUE",
-                alphaCutoff: yb.alphaCutoff,
-                doubleSided: null !== (fy = yb.doubleSided) && void 0 !== fy && fy
-              }
-            })),
-            My = (null !== (Ky = yb.textures) && void 0 !== Ky ? Ky : []).map(((bb, Wy) => {
-              var Uy, hy;
-              const fy = void 0 === bb.sampler ? Gy : {
-                index: bb.sampler,
-                ...null === (Uy = yb.samplers) || void 0 === Uy ? void 0 : Uy[bb.sampler]
-              };
-              return {
-                index: Wy,
-                sampler: {
-                  index: fy.index,
-                  magFilter: fy.magFilter,
-                  minFilter: fy.minFilter,
-                  wrapS: fy.wrapS,
-                  wrapT: fy.wrapT
-                },
-                image: null !== (hy = bb.source) && void 0 !== hy ? hy : -1
-              }
-            })),
-            Yy = (null !== (ey = yb.images) && void 0 !== ey ? ey : []).map(((yb, bb) => ({
-              index: bb,
-              name: yb.name,
-              mimeType: yb.mimeType,
-              bufferView: mb(yb.bufferView)
-            }))),
-            Xy = null !== (qb = (0, Jy.y)(yb)) && void 0 !== qb ? qb : 0;
-          return {
-            json: yb,
-            rootNodes: null !== (sy = null === (Sy = yb.scenes) || void 0 === Sy || null === (Ey = Sy[Xy]) || void 0 === Ey ? void 0 : Ey.nodes) && void 0 !== sy ? sy : [],
-            nodes: Oy,
-            meshes: gb,
-            materials: ib,
-            textures: My,
-            images: Yy
-          }
-        }(Wy, Uy)
-      } catch (fy) {
-        throw fy instanceof Jy.i ? fy : new Jy.i(`reading the GLB failed: ${fy instanceof Error?fy.message:String(fy)}`)
+        zz.onClick()
+      } finally {
+        Oz = !1
+      }
+      zz.panel && "clientGame" === Ez.e.get("openInGameMenuName") && Hz(zz.id)
+    }
+
+    function dz() {
+      return Oz
+    }
+
+    function Fz() {
+      return Mz().filter((zz => zz.panel && !zz.disabled))
+    }
+
+    function Zz(zz) {
+      const uz = Fz(),
+        bz = uz.findIndex((zz => zz.id === tz));
+      return !(bz < 0 || uz.length < 2) && (pz(uz[(bz + zz + uz.length) % uz.length]), !0)
+    }
+
+    function Rz() {
+      return null !== tz && Fz().length > 1
+    }
+
+    function Kz() {
+      Hz(null)
+    }
+
+    function wz() {
+      "inventory" !== Ez.e.get("openInGameMenuName") && Hz(null)
+    }
+
+    function Xz() {
+      const zz = tz;
+      return Hz(null), zz
+    }
+
+    function fz(zz) {
+      return lz.set(zz.id, zz), nz.k.sK(iz, Mz(), !0), () => {
+        lz.get(zz.id) === zz && (lz.delete(zz.id), nz.k.sK(iz, Mz()))
       }
     }
-    async function Ry(yb, bb) {
-      var Wy, Uy;
-      const hy = yb.draco;
-      if (!hy) throw new Jy.i("not a Draco primitive");
-      let fy;
-      try {
-        fy = await bb(hy.bufferView.bytes, hy.attributeIds, hy.expected)
-      } catch (oy) {
-        throw new Jy.i(`Draco decoding failed: ${oy instanceof Error?oy.message:String(oy)}`)
-      }
-      const {
-        vertices: Zy,
-        indices: cb,
-        components: Py
-      } = hy.expected;
-      if (fy.totalVertices !== Zy || (null !== (Wy = null === (Uy = fy.indices) || void 0 === Uy ? void 0 : Uy.length) && void 0 !== Wy ? Wy : 0) !== cb || fy.attributes.some((yb => yb.size !== Py[yb.kind] || yb.data.length !== Zy * yb.size))) throw new Jy.i("Draco decoding gave other counts than the accessors declare");
-      for (const By of fy.attributes) {
-        const yb = hy.normalized[By.kind];
-        void 0 !== yb && (By.normalized = yb)
-      }
-      return fy
-    }
-    const vb = new WeakMap;
+  },
+  36071: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Mz,
+      i: () => Kz,
+      l: () => wz,
+      n: () => dz,
+      o: () => Hz,
+      p: () => Rz,
+      t: () => Fz,
+      x: () => Oz
+    });
+    var Ez = bz(20),
+      nz = bz(22),
+      iz = bz(1269),
+      lz = bz(36080);
+    const Mz = "clientGameUiChanged";
+    let tz = null;
 
-    function ib(yb, bb) {
-      var Wy;
-      const Uy = null !== (Wy = vb.get(yb)) && void 0 !== Wy ? Wy : bb(yb);
-      return vb.set(yb, Uy), Uy
+    function Hz() {
+      return tz
     }
 
-    function My(yb) {
-      const bb = yb.bufferView,
-        Wy = 5125 === yb.componentType ? Uint32Array : Uint16Array,
-        Uy = bb.bytes.buffer,
-        hy = bb.bytes.byteOffset + (yb.byteOffset || 0);
-      return hy % Wy.BYTES_PER_ELEMENT !== 0 ? new Wy(Uy.slice(hy, hy + yb.count * Wy.BYTES_PER_ELEMENT), 0) : new Wy(Uy, hy, yb.count)
-    }
-
-    function Yy(yb, bb) {
-      if (yb.min && yb.max) return [new Float64Array(yb.min), new Float64Array(yb.max)];
-      const Wy = bb.find((yb => {
-          let {
-            kind: bb
-          } = yb;
-          return "position" === bb
-        })),
-        Uy = Wy ? (0, Vy.h)(Wy, yb.count) : new Float32Array(0);
-      return (0, Vy.t)(Uy.length / 3, ((yb, bb) => Uy[3 * yb + bb]))
-    }
-
-    function Xy(yb) {
-      const bb = yb.attributes.map((yb => {
-          var bb, Wy;
-          let {
-            kind: Uy,
-            accessor: hy
-          } = yb;
-          const {
-            bufferView: fy,
-            numComponents: Zy
-          } = hy;
-          if (!fy) {
-            return {
-              kind: Uy,
-              data: ib(hy, (() => new Float32Array(Zy * hy.count))),
-              offset: 0,
-              stride: 4 * Zy,
-              components: Zy,
-              glType: 5126,
-              isNormalized: !1
-            }
-          }
-          const cb = null !== (bb = fy.byteStride) && void 0 !== bb ? bb : Zy * Jy.c[hy.componentType];
-          return {
-            kind: Uy,
-            data: fy.bytes,
-            offset: null !== (Wy = hy.byteOffset) && void 0 !== Wy ? Wy : 0,
-            stride: cb,
-            components: Zy,
-            glType: hy.componentType,
-            isNormalized: hy.normalized
-          }
-        })),
-        Wy = yb.indices,
-        Uy = Wy && ib(Wy, My),
-        hy = yb.position;
-      return new Vy.f(bb, Uy, hy.count, ...Yy(hy, bb))
-    }
-    const ny = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
-
-    function uy(yb, bb) {
-      const Wy = bb.attributes.map((yb => {
-        let {
-          kind: bb,
-          data: Wy,
-          size: Uy,
-          byteOffset: hy,
-          byteStride: fy,
-          normalized: Zy
-        } = yb;
-        return {
-          kind: bb,
-          data: Wy,
-          offset: hy,
-          stride: fy,
-          components: Uy,
-          glType: 5120 + ny.indexOf(Wy.constructor),
-          isNormalized: Zy
-        }
-      }));
-      return new Vy.f(Wy, bb.indices, bb.totalVertices, ...Yy(yb.position, Wy))
-    }
-
-    function rb(yb) {
-      const bb = yb.lastIndexOf("/");
-      return bb < 0 ? yb : yb.substring(bb + 1)
-    }
-
-    function Hy(yb) {
-      const bb = yb.lastIndexOf("/");
-      return bb < 0 ? "" : yb.substring(0, bb + 1)
-    }
-
-    function ab(yb) {
-      return yb.name || `node${yb.index}`
-    }
-    const Fy = {
-        rotation: [0, 1, 0, 0],
-        scale: [1, 1, -1]
-      },
-      py = {
-        9728: 12,
-        9729: 2,
-        9984: 9,
-        9985: 11,
-        9986: 10
-      },
-      Ly = {
-        9728: 1,
-        9729: 7,
-        9984: 4,
-        9985: 5,
-        9986: 8,
-        9987: 6
+    function Oz(zz, uz) {
+      const bz = {
+        content: zz,
+        menu: uz
       };
-
-    function Qy(yb) {
-      var bb, Wy, Uy, hy;
-      const fy = null !== (bb = yb.minFilter) && void 0 !== bb ? bb : 9987;
-      return 9729 === (null !== (Wy = yb.magFilter) && void 0 !== Wy ? Wy : 9729) ? null !== (Uy = py[fy]) && void 0 !== Uy ? Uy : 3 : null !== (hy = Ly[fy]) && void 0 !== hy ? hy : 4
-    }
-    const jb = {
-      33071: 0,
-      33648: 2
-    };
-
-    function Dy(yb) {
-      var bb;
-      return null !== (bb = jb[null !== yb && void 0 !== yb ? yb : 10497]) && void 0 !== bb ? bb : 1
-    }
-
-    function tb(yb) {
-      return 9728 === yb.minFilter || 9729 === yb.minFilter
-    }
-
-    function wy(yb) {
-      var bb, Wy, Uy;
-      const hy = Float64Array.from(null !== (bb = yb.scale) && void 0 !== bb ? bb : [1, 1, 1]);
-      return yb.hasCamera && (hy[0] = -1), {
-        translation: Float64Array.from(null !== (Wy = yb.translation) && void 0 !== Wy ? Wy : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (Uy = yb.rotation) && void 0 !== Uy ? Uy : [0, 0, 0, 1]),
-        scale: hy
+      return tz = bz, nz.k.sK(Mz, tz, !0), () => {
+        tz === bz && (tz = null, Zz = !1, Kz(), nz.k.sK(Mz, null))
       }
     }
+    let pz = null;
 
-    function kb(yb, bb) {
-      let {
-        translation: Wy,
-        rotation: Uy,
-        scale: hy
-      } = yb;
-      const fy = new Float32Array(16);
-      return (0, Ty.e)(hy, 0, Uy, 0, Wy, 0, fy), bb && (0, Ty.o)(fy, bb, 0, fy), fy
+    function dz() {
+      return pz
     }
-    class Ny {
-      constructor(yb, bb, Wy, Uy) {
-        this.model = yb, this.decode = bb, this.fileInfo = Wy, this.uniqueRootUrl = Uy, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const hy = new Set,
-          fy = (bb, Wy) => {
-            const Uy = yb.nodes[bb];
-            if (this.parents.has(Uy)) throw new Jy.i(`/nodes/${bb}: Invalid recursive node hierarchy`);
-            this.parents.set(Uy, Wy);
-            const Zy = null === Uy.mesh ? [] : yb.meshes[Uy.mesh].primitives,
-              cb = Zy.map((yb => {
-                const bb = Zy.length > 1;
-                return {
-                  name: bb ? `${ab(Uy)}_primitive${yb.index}` : ab(Uy),
-                  node: Uy,
-                  primitive: yb,
-                  part: bb,
-                  geometry: null
-                }
-              }));
-            this.uses.set(Uy, cb);
-            const Py = null !== Uy.mesh && hy.has(Uy.mesh);
-            hy.add(Uy.mesh), this.own.set(Uy, Py ? [] : cb);
-            for (const yb of Uy.children) fy(yb, Uy)
-          };
-        for (const Zy of yb.rootNodes) fy(Zy, null);
-        this.primitives = yb.nodes.flatMap((yb => {
-          var bb;
-          return null !== (bb = this.own.get(yb)) && void 0 !== bb ? bb : []
-        }))
+
+    function Fz(zz) {
+      return pz = zz, () => {
+        pz === zz && (pz = null)
       }
-      decodeGeometries() {
-        const yb = new Map;
-        return Promise.all(this.primitives.map((async bb => {
-          const {
-            primitive: Wy
-          } = bb, Uy = Wy.draco;
-          let hy = Uy ? yb.get(Uy.bufferView.index) : Promise.resolve(Xy(Wy));
-          hy || (hy = Ry(Wy, this.decode).then((yb => uy(Wy, yb))), yb.set(Uy.bufferView.index, hy)), bb.geometry = await hy
-        })))
-      }
-      parentOf(yb) {
-        var bb;
-        return null !== (bb = this.parents.get(yb)) && void 0 !== bb ? bb : null
-      }
-      meshesUnder(yb) {
-        const bb = this.model.nodes.filter((yb => this.uses.has(yb)));
-        for (const Uy of bb) {
-          const bb = this.uses.get(Uy),
-            Wy = bb.find((bb => bb.name === yb));
-          if (Wy) return 1 === bb.length ? this.subtree(Uy) : this.own.get(Uy).includes(Wy) ? [Wy] : []
-        }
-        const Wy = bb.find((bb => 1 !== this.uses.get(bb).length && ab(bb) === yb));
-        return Wy ? this.subtree(Wy) : null
-      }
-      subtree(yb) {
-        return [...this.own.get(yb), ...yb.children.flatMap((yb => this.subtree(this.model.nodes[yb])))]
-      }
-      worldMatrix(yb, bb, Wy) {
-        let Uy = kb(wy(bb ? Fy : {}), null);
-        const hy = [];
-        for (let Zy = yb.part ? yb.node : this.parentOf(yb.node); Zy; Zy = this.parentOf(Zy)) hy.unshift(Zy);
-        for (const Zy of hy) Uy = kb(wy(Zy), Uy);
-        const fy = wy(yb.part ? {} : yb.node);
-        return void 0 !== Wy && fy.scale.fill(Wy), kb(fy, Uy)
-      }
-      floats(yb) {
-        const {
-          vertexAttributes: bb,
-          vertexCount: Wy
-        } = yb.geometry;
-        return new Map(bb.map((yb => [yb.kind, (0, Vy.h)(yb, Wy)])))
-      }
-      imageUrl(yb) {
-        return function(yb, bb, Wy) {
-          let {
-            name: Uy
-          } = bb;
-          return `data:${yb}${Uy}#image${Wy}`
-        }(this.uniqueRootUrl, this.fileInfo, yb)
-      }
-      textureDesc(yb, bb) {
-        var Wy;
-        let {
-          texture: Uy,
-          transform: hy
-        } = yb;
-        const {
-          sampler: fy,
-          image: Zy
-        } = this.model.textures[Uy], {
-          bufferView: cb,
-          mimeType: Py,
-          name: oy
-        } = this.model.images[Zy], By = hy && {
-          ...hy.offset ? {
-            uOffset: hy.offset[0],
-            vOffset: hy.offset[1]
-          } : {},
-          uRotationCenter: 0,
-          vRotationCenter: 0,
-          ...hy.rotation ? {
-            wAng: -hy.rotation
-          } : {},
-          ...hy.scale ? {
-            uScale: hy.scale[0],
-            vScale: hy.scale[1]
-          } : {}
+    }
+    let Zz = !1;
+
+    function Rz() {
+      const zz = Ez.e.get("openInGameMenuName");
+      "clientGame" !== zz && (Zz = "inventory" === zz), (0, lz.i)() || (0, lz.g)(), (0, iz.m)(iz.b), Ez.e.set({
+        openInGameMenuName: "clientGame",
+        openEverythingMenuName: null
+      })
+    }
+
+    function Kz() {
+      Xz(!1)
+    }
+
+    function wz() {
+      Xz(Zz)
+    }
+
+    function Xz(zz) {
+      "clientGame" === Ez.e.get("openInGameMenuName") && Ez.e.set({
+        openInGameMenuName: zz ? "inventory" : null
+      }), zz || (0, lz.g)(), Zz = !1
+    }
+  },
+  35965: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => tz
+    });
+    var Ez = bz(316),
+      nz = bz(20),
+      iz = bz(35970),
+      lz = bz(1595),
+      Mz = bz(1923);
+
+    function tz(zz, uz) {
+      var bz, tz, Hz;
+      if (!nz.e.get("isKeydownEnabled") || zz.repeat) return;
+      const Oz = zz.code;
+      "Escape" === zz.key ? (0, lz.d)(zz) : null !== (bz = Mz.s.OpenSettings) && void 0 !== bz && bz.includes(Oz) ? (0, lz.t)(zz, Ez.r.SETTINGS) : null !== (tz = Mz.s.OpenCharacterCustomization) && void 0 !== tz && tz.includes(Oz) ? (0, iz.d)() || (0, lz.t)(zz, Ez.r.CUSTOMISATION, uz()) : null !== (Hz = Mz.s.ShowDebugOverlay) && void 0 !== Hz && Hz.includes(Oz) && nz.e.set({
+        showDebugOverlay: !nz.e.get("showDebugOverlay")
+      })
+    }
+  },
+  35952: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => dz,
+      c: () => Oz,
+      g: () => Fz,
+      j: () => pz
+    });
+    var Ez = bz(328),
+      nz = bz(621),
+      iz = bz(633),
+      lz = bz(33);
+    const Mz = {
+        idStorageKey: "playSessionId",
+        lastActivityStorageKey: "playSessionLastActivityMs",
+        expiryMs: 3e5
+      },
+      tz = "playSessionGameNameWithVariation",
+      Hz = "wasMatchmakePlayer";
+
+    function Oz() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h;
+      (0, iz.j)(zz, Mz)
+    }
+
+    function pz() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h).setItem(Hz, !0)
+    }
+
+    function dz() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h;
+      return (0, iz.d)(zz, Mz)
+    }
+
+    function Fz(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lz.h;
+      const bz = (0, iz.d)(uz, Mz),
+        Oz = function(zz) {
+          const uz = zz.getItem(tz);
+          return "string" !== typeof uz ? null : uz
+        }(uz),
+        pz = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h).getItem(Hz)
+        }(uz);
+      let dz;
+      return dz = null !== bz && null !== Oz && (0, iz.g)(uz, Mz) && function(zz, uz, bz) {
+          const nz = (0, Ez.Sb)(zz),
+            iz = (0, Ez.Sb)(uz),
+            lz = (0, Ez.Nb)(zz),
+            Mz = (0, Ez.Nb)(uz);
+          return !(nz !== iz || !bz) || nz === iz && lz === Mz
+        }(Oz, zz, pz) ? bz : (0, nz.d)(), (0, iz.n)(uz, Mz, dz), uz.setItem(tz, zz),
+        function() {
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lz.h).removeItem(Hz)
+        }(uz), dz
+    }
+  },
+  35945: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Xz,
+      e: () => fz
+    });
+    var Ez = bz(994),
+      nz = bz(597),
+      iz = bz(328),
+      lz = bz(1e3),
+      Mz = bz(606),
+      tz = bz(646),
+      Hz = bz(4286),
+      Oz = bz(96),
+      pz = bz(128),
+      dz = bz(1673),
+      Fz = bz(111),
+      Zz = bz(35952),
+      Rz = bz(33),
+      Kz = bz(627),
+      wz = bz(35954);
+
+    function Xz() {
+      var zz, uz;
+      return [...null !== (zz = navigator.languages) && void 0 !== zz ? zz : [null !== (uz = navigator.language) && void 0 !== uz ? uz : "none"], "en-Gb"]
+    }
+
+    function fz(zz, uz, bz, fz, sz) {
+      const rz = (0, Ez.k)(uz) ? (0, Ez.q)(uz) : null,
+        oz = {
+          cookies: (0, dz.getAllCookiesForGameNameWithVariation)(uz),
+          isMobile: (0, Oz.isMobile)(),
+          isUsingCustomGameTexturePack: null !== rz && sz(rz),
+          generalCookies: {
+            joinDiscord: !!Rz.g.getItem("DiscordPressed"),
+            newGo: Hz.b,
+            ...zz.getMetricsCookies(),
+            trafficCode: fz,
+            compliance: Oz.compliance
+          },
+          browserInfo: {
+            ua: window.navigator.userAgent,
+            name: (0, Oz.getBrowserName)(),
+            version: (0, Oz.getBrowserVersion)(),
+            platform: navigator.platform,
+            platformType: (0, Oz.getPlatformType)(),
+            deviceType: (0, Fz.e)()
+          },
+          isLoggedIn: zz.isLoggedIn(),
+          lobbyName: bz,
+          languages: Xz(),
+          version: nz.c,
+          siteUsed: pz.x,
+          subsiteUsed: pz.E,
+          playSessionId: (0, Zz.g)(uz),
+          visitSessionId: (0, Kz.d)(),
+          clientReason: Mz.o.reason,
+          budgetBasis: (0, wz.f)(),
+          ...null !== tz.q && {
+            diagClaim: tz.q.claimId
+          }
         };
-        return {
-          url: this.imageUrl(Zy),
-          noMipmap: tb(fy),
-          invertY: !1,
-          samplingMode: Qy(fy),
-          data: {
-            bytes: cb.bytes,
-            mimeType: Py,
-            label: oy,
-            context: `/textures/${Uy}`
-          },
-          sets: {
-            wrapU: Dy(fy.wrapS),
-            wrapV: Dy(fy.wrapT),
-            ...By,
-            coordinatesIndex: null !== (Wy = null === hy || void 0 === hy ? void 0 : hy.texCoord) && void 0 !== Wy ? Wy : 0,
-            hasAlpha: bb
-          }
-        }
+      return null !== rz && (0, iz.Fc)(rz) ? (oz.lobbyName = (0, Ez.g)(rz, (0, Ez.m)(uz), bz), {
+        roomName: `classic_${lz.e}`,
+        joinOptions: oz
+      }) : {
+        roomName: uz,
+        joinOptions: oz
       }
     }
-    async function zb(yb, bb, Wy, Uy, hy, fy) {
-      let Zy = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const cb = function(yb, bb, Wy) {
-          return "string" !== typeof bb ? {
-            url: "",
-            rootUrl: yb,
-            name: Wy()
-          } : bb ? bb.startsWith("data:") ? {
-            url: bb,
-            rootUrl: yb,
-            name: ""
-          } : yb ? {
-            url: yb + bb,
-            rootUrl: yb,
-            name: bb
-          } : {
-            url: bb,
-            rootUrl: Hy(bb),
-            name: rb(bb)
-          } : {
-            url: yb,
-            rootUrl: Hy(yb),
-            name: rb(yb)
-          }
-        }(Wy, yb, hy),
-        Py = {};
-      bb.addPendingData(Py);
-      try {
-        const Wy = Oy(await async function(yb, bb) {
-            return "string" !== typeof bb ? bb : yb.url.startsWith("data:") ? (0, Jy.t)(yb.url) : await (0, Jy.u)(yb.url)
-          }(cb, yb)),
-          Py = new Ny(Wy, Uy, cb, function(yb, bb) {
-            let {
-              rootUrl: Wy,
-              name: Uy
-            } = yb;
-            return !Wy.startsWith("file:") && Uy ? Wy : `${Wy}${bb()}/`
-          }(cb, hy));
-        return await fy(Py), bb.importedMeshesFiles && (bb.loadingPluginName = "jBy", Zy && bb.importedMeshesFiles.push(cb.url)), Py
-      } finally {
-        bb.removePendingData(Py)
-      }
-    }
-    var Iy = Wy(36185),
-      xb = Wy(36026),
-      Ay = Wy(36552);
+  },
+  35959: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Ez,
+      i: () => nz,
+      j: () => iz
+    });
+    const Ez = 1024,
+      nz = 1024 * Ez;
 
-    function dy(yb) {
-      if (null === yb || void 0 === yb || !yb.min || !yb.max) return null;
-      const [bb, Wy, Uy] = yb.min, [hy, fy, Zy] = yb.max, {
-        BoundingInfo: cb,
-        dU: Py
-      } = (0, Iy.b)();
-      return new cb(new Py(bb, Wy, Uy), new Py(hy, fy, Zy))
+    function iz(zz) {
+      return (zz / nz).toFixed(1)
+    }
+  },
+  35956: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => iz,
+      g: () => Mz,
+      j: () => lz,
+      l: () => tz,
+      p: () => Hz
+    });
+    var Ez = bz(195);
+    const nz = 32 * bz(35959).i,
+      iz = 6144,
+      lz = 4608,
+      Mz = 512;
+
+    function tz(zz) {
+      return Math.floor(nz * zz / iz)
     }
 
-    function yW(yb) {
-      (0, xb.i)(yb) || (yb.geometry && yb.geometry.useBoundingInfoFromGeometry ? yb._updateBoundingInfo() : yb.refreshBoundingInfo(!0, !0))
+    function Hz(zz) {
+      const uz = zz - Math.floor(zz / 6);
+      let bz = Ez.e.maxChunkHorizAddDistance,
+        nz = Ez.e.maxChunkVertAddDistance;
+      if (Oz(bz + 1, nz + 1) <= uz) return null;
+      for (; Oz(bz + 1, nz + 1) > uz && (bz > 0 || nz > 0);) bz > nz ? bz-- : nz--;
+      return {
+        horizontal: bz,
+        vertical: nz
+      }
     }
-    class bW {
-      constructor(yb, bb) {
-        this.Pf = yb, this.decode = bb, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
-      }
-      viewBytes(yb) {
-        let bb = this.viewData.get(yb.index);
-        return bb || (bb = this.bufferData.then((() => yb.bytes)), this.viewData.set(yb.index, bb)), bb
-      }
-      viewBuffer(yb) {
-        let bb = this.viewBuffers.get(yb.index);
-        return bb || (bb = this.viewBytes(yb).then((yb => new((0, Iy.b)().uU)(this.Pf.xh(), yb, !1))), this.viewBuffers.set(yb.index, bb)), bb
-      }
-      vertexBuffer(yb, bb) {
+
+    function Oz(zz, uz) {
+      const bz = Math.max(zz, uz);
+      let Ez = 0;
+      for (let nz = -bz; nz <= bz; nz++)
+        for (let iz = -bz; iz <= bz; iz++)
+          for (let lz = -bz; lz <= bz; lz++) pz(zz, uz, nz, iz, lz) && Ez++;
+      return Ez
+    }
+
+    function pz(zz, uz, bz, Ez, nz) {
+      const iz = bz * bz + nz * nz;
+      return zz === uz ? iz + Ez * Ez <= zz * zz : zz > uz ? Math.abs(Ez) <= uz && iz + Ez * Ez <= zz * zz : iz <= zz * zz && iz + Ez * Ez <= uz * uz
+    }
+  },
+  35954: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => oz,
+      f: () => rz,
+      h: () => sz
+    });
+    var Ez = bz(195),
+      nz = bz(96),
+      iz = bz(2706),
+      lz = bz(4169),
+      Mz = bz(615),
+      tz = bz(35956);
+    const Hz = 1048576,
+      Oz = 1024 * Hz,
+      pz = 400 * Hz,
+      dz = 147456,
+      Fz = .5,
+      Zz = 1.5 * Oz,
+      Rz = 768 * Hz;
+
+    function Kz(zz) {
+      return pz + zz * dz
+    }
+
+    function wz(zz, uz, bz) {
+      var nz, lz;
+      let {
+        footprintBytes: Mz,
+        basis: Hz,
+        namesLimit: wz
+      } = function(zz) {
         const {
-          kind: Wy,
-          data: Uy
-        } = bb, hy = `${yb.index}:${Wy}`;
-        let fy = this.vertexBuffers.get(hy);
-        if (!fy) {
-          const Zy = yb.bufferView;
-          fy = Zy ? this.viewBuffer(Zy).then((yb => this.layoutVertexBuffer(yb, bb))) : Promise.resolve(Uy).then((yb => new((0, Iy.b)().VertexBuffer)(this.Pf.xh(), yb, Wy, !1))), this.vertexBuffers.set(hy, fy)
-        }
-        return fy
-      }
-      layoutVertexBuffer(yb, bb) {
-        let {
-          kind: Wy,
-          offset: Uy,
-          stride: hy,
-          components: fy,
-          glType: Zy,
-          isNormalized: cb
-        } = bb;
-        const Py = this.Pf.xh();
-        return new((0, Iy.b)().VertexBuffer)(Py, yb, Wy, !1, void 0, hy, void 0, Uy, fy, Zy, cb, !0, void 0, !0)
-      }
-      load(yb, bb, Wy) {
-        const Uy = (0, xb.i)(Wy),
-          hy = yb => {
-            Uy || (Wy._delayInfo = Wy._delayInfo || [], -1 === Wy._delayInfo.indexOf(yb) && Wy._delayInfo.push(yb))
-          },
-          fy = bb.draco;
-        if (fy) {
-          for (const yb in fy.attributeIds) hy(yb);
-          let Zy = this.dracoGeometry.get(fy.bufferView.index);
-          return Zy || (Zy = this.viewBytes(fy.bufferView).then((async () => {
-            let hy;
-            try {
-              hy = await Ry(bb, this.decode)
-            } catch (Py) {
-              throw new Jy.i(`${yb}: ${Py instanceof Error?Py.message:String(Py)}`)
+          os: uz,
+          deviceMemory: bz
+        } = zz;
+        if ("ios" === uz) switch ((0, iz.f)(zz)) {
+          case "ipad_m":
+            return {
+              footprintBytes: Kz(tz.c), basis: "ipad-m", namesLimit: !1
+            };
+          case "ipad":
+            return {
+              footprintBytes: Rz, basis: "ipad", namesLimit: !0
+            };
+          case "iphone_6gb":
+            return {
+              footprintBytes: Zz, basis: "iphone-6gb", namesLimit: !0
+            };
+          case "iphone":
+            return {
+              footprintBytes: Rz, basis: "iphone", namesLimit: !0
             }
-            const fy = uy(bb, hy);
-            if (Uy) return fy;
-            const Zy = dy(bb.position),
-              cb = new((0, Iy.b)().MirroredGeometry)(Wy.name, this.Pf);
-            Zy && (cb._boundingInfo = Zy, cb.useBoundingInfoFromGeometry = !0), fy.indexData && cb.setIndices(fy.indexData);
-            for (const yb of fy.vertexAttributes) cb.setVerticesBuffer(this.layoutVertexBuffer(yb.data, yb), fy.vertexCount);
-            return cb.link(fy), cb
-          })), this.dracoGeometry.set(fy.bufferView.index, Zy)), Zy
         }
-        const Zy = [],
-          cb = Xy(bb);
-        if (Uy) return Wy.isUnIndexed = !cb.indexData, Wy.hasVertexAlpha = (0, Ay.g)(bb), Promise.resolve(cb);
-        const Py = new((0, Iy.b)().MirroredGeometry)(Wy.name, this.Pf),
-          {
-            indexData: oy
-          } = cb;
-        oy ? Zy.push(this.viewBytes(bb.indices.bufferView).then((() => {
-          Py.setIndices(oy)
-        }))) : Wy.isUnIndexed = !0;
-        for (const [By, {
-            kind: Ky,
-            accessor: ey
-          }] of bb.attributes.entries()) hy(Ky), Zy.push(this.vertexBuffer(ey, cb.vertexAttributes[By]).then((yb => {
-          if ("position" === yb.getKind()) {
-            const yb = dy(ey);
-            yb && (Py._boundingInfo = yb, Py.useBoundingInfoFromGeometry = !0)
-          }
-          Py.setVerticesBuffer(yb, cb.vertexCount)
-        })));
-        return (0, Ay.g)(bb) && (Wy.hasVertexAlpha = !0), Promise.all(Zy).then((() => (Py.link(cb), Py)))
+        return "number" === typeof bz && Number.isFinite(bz) && bz > 0 ? {
+          footprintBytes: bz * Oz * Fz,
+          basis: `memory-${bz}`,
+          namesLimit: !0
+        } : "android" === uz ? {
+          footprintBytes: Rz,
+          basis: "android",
+          namesLimit: !0
+        } : {
+          footprintBytes: Kz(tz.j),
+          basis: "unreported",
+          namesLimit: !1
+        }
+      }(zz);
+      if (bz) {
+        const zz = Math.min(Mz, Kz(tz.c));
+        Mz = pz + Math.max(0, zz - pz) / 2, Hz += "+killed", wz = !0
+      }
+      null !== uz && Kz(uz) < Mz && (Mz = Kz(uz), Hz += "+learned", wz = !0);
+      const Xz = function(zz) {
+          const uz = Math.floor((zz - pz) / dz);
+          return Math.min(tz.c, Math.max(tz.g, uz))
+        }(Mz),
+        fz = (0, tz.p)(Xz);
+      return {
+        footprintBytes: Mz,
+        shedFootprintBytes: wz ? Math.max(Mz, Kz(Xz)) : null,
+        chunkCap: Xz,
+        maxHorizDistance: null !== (nz = null === fz || void 0 === fz ? void 0 : fz.horizontal) && void 0 !== nz ? nz : Ez.e.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (lz = null === fz || void 0 === fz ? void 0 : fz.vertical) && void 0 !== lz ? lz : Ez.e.maxChunkVertAddDistance,
+        basis: Hz
       }
     }
-    var Wb, Ub = Wy(35959),
-      hb = Wy(35856),
-      fb = Wy(36557),
-      Zb = Wy(35912),
-      cW = Wy(35943),
-      Pb = Wy(2234),
-      ob = Wy(35931);
+    let Xz = null;
 
-    function Bb(yb, bb) {
-      yb.metadata = yb.metadata || {};
-      const Wy = yb._internalMetadata = yb._internalMetadata || {},
-        Uy = Wy.jBy = Wy.jBy || {};
-      (Uy.pointers = Uy.pointers || []).push(bb)
+    function fz() {
+      return wz({
+        os: (0, nz.getOperatingSystem)(),
+        deviceMemory: navigator.deviceMemory,
+        ...(0, iz.i)()
+      }, (0, lz.i)(), (0, Mz.G)("wasm").length > 0)
     }
 
-    function Kb(yb, bb) {
-      if (bb && Object.keys(bb).length > 0) {
-        const Wy = yb.metadata = yb.metadata || {};
-        (Wy.jBy = Wy.jBy || {}).extras = bb
-      }
+    function sz() {
+      return Xz ??= fz(), Xz
     }
 
-    function eb(yb, bb) {
-      bb.position = yb.translation ? hb.dU.FromArray(yb.translation) : hb.dU.Zero(), bb.rotationQuaternion = yb.rotation ? hb.Quaternion.FromArray(yb.rotation) : hb.Quaternion.Identity(), bb.vZ = yb.scale ? hb.dU.FromArray(yb.scale) : hb.dU.One()
-    }
-    class qW {
-      constructor(yb, bb) {
-        if (this.Pf = yb, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, bb) {
-          const bb = yb.xh(),
-            Wy = yb.Nby.add((() => {
-              this.dispose()
-            })),
-            Uy = bb.onContextRestoredObservable.add((() => {
-              for (const yb of [...this.geometries, ...this.meshes, ...this.textures]) yb._rebuild()
-            }));
-          this.release = () => {
-            yb.Nby.remove(Wy), bb.onContextRestoredObservable.remove(Uy)
-          }
-        }
-      }
-      getNodes() {
-        return [...this.meshes, ...this.transformNodes]
-      }
-      addAllToScene() {
-        if (this.release) {
-          this.release(), this.release = null;
-          for (const yb of this.meshes) this.Pf.yKy(yb);
-          for (const yb of this.materials) this.Pf.addMaterial(yb);
-          for (const yb of this.geometries) this.Pf.addGeometry(yb);
-          for (const yb of this.transformNodes) this.Pf.addTransformNode(yb);
-          for (const yb of this.textures) this.Pf.addTexture(yb)
-        }
-      }
-      dispose() {
-        var yb;
-        for (const bb of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const yb of bb.slice()) yb.dispose();
-          bb.length = 0
-        }
-        null === (yb = this.release) || void 0 === yb || yb.call(this), this.release = null
-      }
-    }
-    class sb {
-      constructor(yb, bb, Wy, Uy, hy, fy, Zy) {
-        this.asset = yb, this.Pf = bb, this.tree = Wy, this.geometryData = hy, this.materials = fy, this.lite = Zy, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = Uy ? Wy : null
-      }
-      create(yb) {
-        if (this.lite) return yb();
-        const bb = this.Pf;
-        bb._blockEntityCollection = !!this.container;
-        try {
-          const bb = yb();
-          return this.container && (bb._parentContainer = this.container), bb
-        } finally {
-          bb._blockEntityCollection = !1
-        }
-      }
-      node(yb, bb) {
-        return this.create((() => this.lite ? bb ? (0, fb.d)(this.lite, yb) : (0, fb.q)(this.lite, yb) : bb ? new((0, Iy.b)().Mesh)(yb, this.Pf) : new((0, Iy.b)().TransformNode)(yb, this.Pf)))
-      }
-      async load() {
-        var yb;
-        this.asset.model.json.nodes && this.createRoot();
-        const bb = this.lite ? null : this.Pf,
-          Wy = null !== (yb = null === bb || void 0 === bb ? void 0 : bb.blockMaterialDirtyMechanism) && void 0 !== yb && yb;
-        let Uy;
-        bb && (bb.blockMaterialDirtyMechanism = !0);
-        try {
-          Uy = this.loadScene()
-        } finally {
-          null === bb || void 0 === bb || bb._forceBlockMaterialDirtyMechanism(Wy)
-        }
-        await Uy;
-        const {
-          root: hy,
-          tree: fy
-        } = this;
-        hy && (hy.dJ(!0), fy.meshes.push(hy), fy.rootNodes.push(hy));
-        for (const cb of this.asset.model.nodes) {
-          const yb = this.nodeObjects.get(cb.index);
-          yb && ["TransformNode", "LiteNode"].includes(yb.getClassName()) && fy.transformNodes.push(yb);
-          for (const bb of null !== (Zy = this.nodePrimitives.get(cb.index)) && void 0 !== Zy ? Zy : []) {
-            var Zy;
-            fy.meshes.push(bb);
-            const yb = bb.geometry;
-            yb && !fy.geometries.includes(yb) && fy.geometries.push(yb)
-          }
-        }
-      }
-      createRoot() {
-        const yb = this.node("__root__", !0);
-        this.root = yb, yb.dJ(!1), this.Pf.useRightHandedSystem || eb(Fy, yb)
-      }
-      loadScene() {
-        const yb = [];
-        for (const bb of this.asset.model.rootNodes) yb.push(this.loadNode(this.asset.model.nodes[bb], (yb => {
-          yb.parent = this.root
-        })));
-        return yb.push(Promise.resolve()), Promise.all(yb).then((() => {}))
-      }
-      loadNode(yb, bb) {
-        const Wy = `/nodes/${yb.index}`,
-          Uy = [],
-          hy = hy => {
-            if (Bb(hy, Wy), eb(yb, hy), yb.hasCamera && !this.Pf.useRightHandedSystem) {
-              const {
-                vZ: yb
-              } = hy;
-              yb.set(-1, yb.y, yb.z)
-            }
-            for (const bb of yb.children) Uy.push(this.loadNode(this.asset.model.nodes[bb], (yb => {
-              yb.parent = hy
-            })));
-            (Wy => {
-              Kb(Wy, yb.extras), bb(Wy)
-            })(hy)
-          };
-        if (null === yb.mesh) {
-          const bb = this.node(ab(yb), !1);
-          this.nodeObjects.set(yb.index, bb), hy(bb)
-        } else {
-          const bb = this.asset.model.meshes[yb.mesh];
-          Uy.push(this.loadMesh(`/meshes/${bb.index}`, yb, bb, hy))
-        }
-        return Promise.all(Uy).then((() => {
-          for (const Wy of null !== (bb = this.nodePrimitives.get(yb.index)) && void 0 !== bb ? bb : []) {
-            var bb;
-            yW(Wy)
-          }
-          return this.nodeObjects.get(yb.index)
-        }))
-      }
-      loadMesh(yb, bb, Wy, Uy) {
-        const hy = [],
-          fy = ab(bb);
-        if (1 === Wy.primitives.length) {
-          const Uy = Wy.primitives[0];
-          hy.push(this.loadPrimitive(`${yb}/primitives/${Uy.index}`, fy, Uy, (yb => {
-            this.nodeObjects.set(bb.index, yb), this.nodePrimitives.set(bb.index, [yb])
-          })))
-        } else {
-          const Uy = this.node(fy, !1);
-          this.nodeObjects.set(bb.index, Uy);
-          const Zy = [];
-          this.nodePrimitives.set(bb.index, Zy);
-          for (const bb of Wy.primitives) hy.push(this.loadPrimitive(`${yb}/primitives/${bb.index}`, `${fy}_primitive${bb.index}`, bb, (yb => {
-            yb.parent = Uy, Zy.push(yb)
-          })))
-        }
-        const Zy = this.nodeObjects.get(bb.index);
-        return Uy(Zy), Promise.all(hy).then((() => Zy))
-      }
-      loadPrimitive(yb, bb, Wy, Uy) {
-        const hy = [],
-          fy = this.node(bb, !0);
-        if (fy.sideOrientation = this.Pf.useRightHandedSystem ? Zb.c.CounterClockWiseSideOrientation : Zb.c.ClockWiseSideOrientation, hy.push(this.geometryData.load(yb, Wy, fy).then((yb => {
-            if ((0, xb.i)(fy)) {
-              var bb, Wy;
-              const Uy = yb;
-              fy.replaceModel(Uy, Int32Array.of(0, null !== (bb = null === (Wy = Uy.indexData) || void 0 === Wy ? void 0 : Wy.length) && void 0 !== bb ? bb : Uy.vertexCount, 0, Uy.vertexCount))
-            } else this.create((() => (yb.applyToMesh(fy), yb)))
-          }))), this.materials) {
-          const yb = 0 === Wy.mode ? Zb.c.PointListDrawMode : Zb.c.TriangleFillMode,
-            bb = null === Wy.material ? null : this.asset.model.materials[Wy.material];
-          hy.push(this.loadMaterial(bb, yb, (yb => {
-            fy.material = yb
-          })))
-        }
-        return Bb(fy, yb), Uy(fy), Promise.all(hy).then((() => fy))
-      }
-      loadMaterial(yb, bb, Wy) {
-        var Uy;
-        const hy = `${null!==(Uy=null===yb||void 0===yb?void 0:yb.index)&&void 0!==Uy?Uy:"default"}:${bb}`;
-        let fy = this.materialData.get(hy);
-        return fy || (fy = this.createMaterial(yb, bb), this.materialData.set(hy, fy)), Wy(fy.material), fy.promise
-      }
-      createMaterial(yb, bb) {
-        const Wy = yb ? yb.name || `material${yb.index}` : "__GLTFLoader._default",
-          {
-            style: Uy,
-            unlit: hy
-          } = this.materials;
-        let fy;
-        const Zy = this.create((() => {
-          const Zy = (0, ob.c)({
-            name: Wy,
-            Pf: this.Pf,
-            sets: {
-              ...(0, Ay.c)(this.asset, yb, Uy, hy),
-              fillMode: bb
-            },
-            unrendered: !0
-          });
-          return fy = Zy.model, Zy.mirror
-        }));
-        let cb = Promise.resolve();
-        if (yb) {
-          const bb = `/materials/${yb.index}`,
-            Uy = fy.diffuseTexture;
-          if (Uy && !Uy.mirror) cb = new Promise((yb => setTimeout(yb)));
-          else if (Uy) {
-            const hy = Uy.mirror;
-            hy._parentContainer = this.container, hy.name = `${Wy} (Base Color)`, Bb(hy, `${bb}${yb.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(hy), cb = (0, cW.x)(Uy)
-          }
-          Kb(Zy, yb.extras), Bb(Zy, bb)
-        }
-        return this.tree.materials.push(Zy), {
-          material: Zy,
-          promise: cb
-        }
-      }
+    function rz() {
+      var zz;
+      return (null !== (zz = Xz) && void 0 !== zz ? zz : fz()).basis
     }
 
-    function Sb() {
-      Ub.f.dracoDecodes = sy.decodes, Ub.f.dracoWorkersStarted = sy.workersStarted, Ub.f.dracoMostWorkers = sy.mostWorkers
+    function oz(zz, uz) {
+      return zz.setChunkCap(uz.chunkCap)
     }
-    async function Eb(yb, bb, Wy, hy, fy) {
-      try {
-        return await async function(yb, bb, Wy, hy, fy, Zy) {
-          var cb;
-          let Py;
-          const oy = null === (cb = (0, Pb.g)()) || void 0 === cb ? void 0 : cb.Ch,
-            By = null !== oy && void 0 !== oy && oy.Th && bb === oy.kWy() ? oy : null,
-            Ky = fy && !By;
-          return await zb(yb, bb, Wy, hy, Uy.e, (yb => (Py = new qW(bb, Ky), new sb(yb, bb, Py, Ky, new bW(bb, hy), Zy, By).load())), !fy), Py
-        }(yb, bb, Wy, Cy, hy, fy)
-      } finally {
-        Sb()
+  },
+  36297: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => nz,
+      h: () => iz,
+      l: () => dz,
+      m: () => Mz,
+      o: () => tz,
+      s: () => Hz,
+      t: () => pz,
+      v: () => Oz,
+      z: () => lz
+    });
+    var Ez = bz(1226);
+    let nz = function(zz) {
+        return zz[zz.Join = 0] = "Join", zz[zz.Leave = 1] = "Leave", zz[zz.Push = 2] = "Push", zz[zz.Cursor = 3] = "Cursor", zz[zz.Submit = 4] = "Submit", zz[zz.ReloadAsVariation = 5] = "ReloadAsVariation", zz[zz.CreateFile = 6] = "CreateFile", zz[zz.RenameFile = 7] = "RenameFile", zz[zz.DeleteFile = 8] = "DeleteFile", zz[zz.SetEngine = 9] = "SetEngine", zz[zz.RenameFolder = 10] = "RenameFolder", zz
+      }({}),
+      iz = function(zz) {
+        return zz[zz.Joined = 0] = "Joined", zz[zz.Updates = 1] = "Updates", zz[zz.Presence = 2] = "Presence", zz[zz.RemoteCursor = 3] = "RemoteCursor", zz[zz.ForceClose = 4] = "ForceClose", zz[zz.LobbyFilesChanged = 5] = "LobbyFilesChanged", zz[zz.EngineSettings = 6] = "EngineSettings", zz
+      }({});
+
+    function lz(zz) {
+      return "lobby" === zz.kind ? `lobby:${zz.path}` : `codeBlock:${zz.pos[0]},${zz.pos[1]},${zz.pos[2]}`
+    }
+
+    function Mz(zz) {
+      if ("lobby" === zz) return {
+        kind: "lobby",
+        path: Ez.i
+      };
+      if (zz.startsWith("lobby:")) {
+        const uz = zz.slice(6);
+        return pz(uz) ? {
+          kind: "lobby",
+          path: uz
+        } : null
       }
+      const uz = zz.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return uz ? {
+        kind: "codeBlock",
+        pos: [parseInt(uz[1]), parseInt(uz[2]), parseInt(uz[3])]
+      } : null
     }
-    async function lb(yb, bb, Wy, hy) {
-      try {
-        return await zb(yb, bb, Wy, Cy, Uy.e, (yb => hy(yb, new bW(bb, Cy))))
-      } finally {
-        Sb()
-      }
+
+    function tz(zz) {
+      return zz.endsWith(".d.ts")
     }
-    Wb = hy.e, oy || (oy = {
-      scriptUrl: new URL(Wb.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(Wb.wasmBinaryUrl, location.href).href
+
+    function Hz(zz) {
+      return zz.endsWith(".ts") && !tz(zz)
+    }
+    const Oz = 64;
+
+    function pz(zz) {
+      if (!zz || zz !== zz.trim()) return !1;
+      if (zz.length > Oz) return !1;
+      if (zz.startsWith("/") || zz.includes("\\") || zz.includes("\0")) return !1;
+      if (!tz(zz) && !Hz(zz) && ! function(zz) {
+          return zz.endsWith(".js") && !zz.endsWith(".min.js") && !zz.endsWith(".bundle.js")
+        }(zz)) return !1;
+      const uz = zz.split("/");
+      for (const bz of uz)
+        if ("" === bz || "." === bz || ".." === bz) return !1;
+      return !0
+    }
+    const dz = 14e3
+  },
+  38401: (zz, uz, bz) => {
+    function Ez(zz, uz, bz, Ez, nz) {
+      var iz = {};
+      return Object.keys(Ez).forEach((function(zz) {
+        iz[zz] = Ez[zz]
+      })), iz.enumerable = !!iz.enumerable, iz.configurable = !!iz.configurable, ("value" in iz || iz.initializer) && (iz.writable = !0), iz = bz.slice().reverse().reduce((function(bz, Ez) {
+        return Ez(zz, uz, bz) || bz
+      }), iz), nz && void 0 !== iz.initializer && (iz.value = iz.initializer ? iz.initializer.call(nz) : void 0, iz.initializer = void 0), void 0 === iz.initializer && (Object.defineProperty(zz, uz, iz), iz = null), iz
+    }
+    bz.d(uz, {
+      d: () => Ez
     })
   },
-  39937: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(139),
-      hy = Wy(1057);
-
-    function fy(yb) {
-      return (0, Uy.d)() ? `https://${hy.b.discordDomain}/${yb.href}` : yb.href
+  38393: (zz, uz, bz) => {
+    function Ez(zz, uz, bz, Ez) {
+      bz && Object.defineProperty(zz, uz, {
+        enumerable: bz.enumerable,
+        configurable: bz.configurable,
+        writable: bz.writable,
+        value: bz.initializer ? bz.initializer.call(Ez) : void 0
+      })
     }
-    const Zy = {
-      scriptUrl: fy(new Wy.U(Wy(39946))),
-      wasmBinaryUrl: fy(new Wy.U(Wy(39952)))
-    }
-  },
-  35092: yb => {
-    yb.exports = function(yb, bb, Wy, Uy) {
-      var hy = self || window;
-      try {
-        try {
-          var fy;
-          try {
-            fy = new hy.Blob([yb])
-          } catch (oy) {
-            (fy = new(hy.BlobBuilder || hy.WebKitBlobBuilder || hy.MozBlobBuilder || hy.MSBlobBuilder)).append(yb), fy = fy.getBlob()
-          }
-          var Zy = hy.URL || hy.webkitURL,
-            cb = Zy.createObjectURL(fy),
-            Py = new hy[bb](cb, Wy);
-          return Zy.revokeObjectURL(cb), Py
-        } catch (oy) {
-          return new hy[bb]("data:application/javascript,".concat(encodeURIComponent(yb)), Wy)
-        }
-      } catch (oy) {
-        if (!Uy) throw Error("Inline worker is not supported");
-        return new hy[bb](Uy, Wy)
-      }
-    }
-  },
-  39952: (yb, bb, Wy) => {
-    yb.exports = Wy.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
-  },
-  39946: (yb, bb, Wy) => {
-    yb.exports = Wy.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+    bz.d(uz, {
+      c: () => Ez
+    })
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

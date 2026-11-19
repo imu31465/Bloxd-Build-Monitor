@@ -1,286 +1,286 @@
-export const id = 41;
-export const ids = [41, 184];
+export const id = 44;
+export const ids = [44, 194];
 export const modules = {
-  33189: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      packDisplayName: () => sy,
-      packModelMessage: () => Sy,
-      packModelSummary: () => ly,
-      refusedPackModels: () => Ey
+  9052: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      packDisplayName: () => Zz,
+      packModelMessage: () => Rz,
+      packModelSummary: () => wz,
+      refusedPackModels: () => Kz
     });
-    var Uy = Wy(33194),
-      hy = Wy(33198);
-    const fy = "DRACO",
-      Zy = 0,
-      cb = 1,
-      Py = 0,
-      oy = 1,
-      By = 32768;
+    var Ez = bz(9058),
+      nz = bz(9063);
+    const iz = "DRACO",
+      lz = 0,
+      Mz = 1,
+      tz = 0,
+      Hz = 1,
+      Oz = 32768;
 
-    function Ky(yb) {
-      const bb = new DataView(yb.buffer, yb.byteOffset, yb.byteLength);
-      let Wy = 0;
-      const Uy = () => {
-          if (Wy >= yb.byteLength) throw new RangeError("past the stream");
-          return yb[Wy++]
+    function pz(zz) {
+      const uz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
+      let bz = 0;
+      const Ez = () => {
+          if (bz >= zz.byteLength) throw new RangeError("past the stream");
+          return zz[bz++]
         },
-        hy = () => {
-          if (Wy + 4 > yb.byteLength) throw new RangeError("past the stream");
-          const Uy = bb.getUint32(Wy, !0);
-          return Wy += 4, Uy
+        nz = () => {
+          if (bz + 4 > zz.byteLength) throw new RangeError("past the stream");
+          const Ez = uz.getUint32(bz, !0);
+          return bz += 4, Ez
         },
-        Ky = () => {
-          let yb = 0;
-          for (let bb = 0; bb < 35; bb += 7) {
-            const Wy = Uy();
-            if (yb += (127 & Wy) * 2 ** bb, 0 === (128 & Wy)) return yb
+        pz = () => {
+          let zz = 0;
+          for (let uz = 0; uz < 35; uz += 7) {
+            const bz = Ez();
+            if (zz += (127 & bz) * 2 ** uz, 0 === (128 & bz)) return zz
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let yb = 0; yb < fy.length; yb++)
-          if (Uy() !== fy.charCodeAt(yb)) return null;
-        const bb = Uy(),
-          ey = Uy(),
-          qb = Uy(),
-          sy = Uy(),
-          Sy = Uy() | Uy() << 8;
-        if (2 !== bb) return null;
-        0 !== (Sy & By) && function(yb, bb, Wy) {
-          const Uy = () => {
-              bb(Wy())
+        for (let zz = 0; zz < iz.length; zz++)
+          if (Ez() !== iz.charCodeAt(zz)) return null;
+        const uz = Ez(),
+          dz = Ez(),
+          Fz = Ez(),
+          Zz = Ez(),
+          Rz = Ez() | Ez() << 8;
+        if (2 !== uz) return null;
+        0 !== (Rz & Oz) && function(zz, uz, bz) {
+          const Ez = () => {
+              uz(bz())
             },
-            hy = () => {
-              let Wy = 1,
-                hy = !0;
-              for (; Wy > 0;) {
-                Wy--, hy || Uy(), hy = !1;
-                const fy = yb();
-                for (let Wy = 0; Wy < fy; Wy++) Uy(), bb(yb());
-                Wy += yb()
+            nz = () => {
+              let bz = 1,
+                nz = !0;
+              for (; bz > 0;) {
+                bz--, nz || Ez(), nz = !1;
+                const iz = zz();
+                for (let bz = 0; bz < iz; bz++) Ez(), uz(zz());
+                bz += zz()
               }
             },
-            fy = yb();
-          for (let Zy = 0; Zy < fy; Zy++) yb(), hy();
-          hy()
-        }(Ky, (bb => {
-          if (Wy + bb > yb.byteLength) throw new RangeError("past the stream");
-          Wy += bb
-        }), Uy);
-        const Ey = ey < 2 ? hy : Ky;
-        if (qb === Zy) return {
+            iz = zz();
+          for (let lz = 0; lz < iz; lz++) zz(), nz();
+          nz()
+        }(pz, (uz => {
+          if (bz + uz > zz.byteLength) throw new RangeError("past the stream");
+          bz += uz
+        }), Ez);
+        const Kz = dz < 2 ? nz : pz;
+        if (Fz === lz) return {
           faces: 0,
-          vertices: hy()
+          vertices: nz()
         };
-        if (qb !== cb) return null;
-        if (sy === Py) {
+        if (Fz !== Mz) return null;
+        if (Zz === tz) {
           return {
-            faces: Ey(),
-            vertices: Ey()
+            faces: Kz(),
+            vertices: Kz()
           }
         }
-        if (sy !== oy) return null;
-        Uy(), ey < 2 && Ky();
-        const ly = Ky();
+        if (Zz !== Hz) return null;
+        Ez(), dz < 2 && pz();
+        const wz = pz();
         return {
-          faces: Ky(),
-          vertices: ly
+          faces: pz(),
+          vertices: wz
         }
       } catch {
         return null
       }
     }
 
-    function ey(yb, bb, Wy) {
-      var Uy, hy;
-      if (null === (Uy = null === (hy = yb.extensionsUsed) || void 0 === hy ? void 0 : hy.includes("KHR_draco_mesh_compression")) || void 0 === Uy || !Uy) return null;
-      for (const sy of null !== (fy = yb.meshes) && void 0 !== fy ? fy : []) {
-        var fy;
-        for (const Uy of sy.primitives) {
-          var Zy, cb, Py, oy, By, ey;
-          const hy = null === (Zy = Uy.extensions) || void 0 === Zy ? void 0 : Zy.KHR_draco_mesh_compression;
-          if ("object" !== typeof hy || null === hy) continue;
-          const fy = null === (cb = yb.bufferViews) || void 0 === cb ? void 0 : cb[hy.bufferView];
-          if (null === bb || void 0 === fy) return qb;
-          const sy = null !== (Py = fy.byteOffset) && void 0 !== Py ? Py : 0,
-            Sy = Ky(bb.subarray(sy, sy + fy.byteLength));
-          if (null === Sy && !Wy) continue;
-          const Ey = null !== (oy = yb.accessors) && void 0 !== oy ? oy : [],
-            ly = null === (By = Ey[Uy.attributes.POSITION]) || void 0 === By ? void 0 : By.count,
-            mb = void 0 === Uy.indices ? 0 : null === (ey = Ey[Uy.indices]) || void 0 === ey ? void 0 : ey.count;
-          if (null === Sy || void 0 === ly || void 0 === mb || 3 * Sy.faces !== mb || Sy.vertices > ly) return qb
+    function dz(zz, uz, bz) {
+      var Ez, nz;
+      if (null === (Ez = null === (nz = zz.extensionsUsed) || void 0 === nz ? void 0 : nz.includes("KHR_draco_mesh_compression")) || void 0 === Ez || !Ez) return null;
+      for (const Zz of null !== (iz = zz.meshes) && void 0 !== iz ? iz : []) {
+        var iz;
+        for (const Ez of Zz.primitives) {
+          var lz, Mz, tz, Hz, Oz, dz;
+          const nz = null === (lz = Ez.extensions) || void 0 === lz ? void 0 : lz.KHR_draco_mesh_compression;
+          if ("object" !== typeof nz || null === nz) continue;
+          const iz = null === (Mz = zz.bufferViews) || void 0 === Mz ? void 0 : Mz[nz.bufferView];
+          if (null === uz || void 0 === iz) return Fz;
+          const Zz = null !== (tz = iz.byteOffset) && void 0 !== tz ? tz : 0,
+            Rz = pz(uz.subarray(Zz, Zz + iz.byteLength));
+          if (null === Rz && !bz) continue;
+          const Kz = null !== (Hz = zz.accessors) && void 0 !== Hz ? Hz : [],
+            wz = null === (Oz = Kz[Ez.attributes.POSITION]) || void 0 === Oz ? void 0 : Oz.count,
+            Xz = void 0 === Ez.indices ? 0 : null === (dz = Kz[Ez.indices]) || void 0 === dz ? void 0 : dz.count;
+          if (null === Rz || void 0 === wz || void 0 === Xz || 3 * Rz.faces !== Xz || Rz.vertices > wz) return Fz
         }
       }
       return null
     }
-    const qb = "has a Draco stream whose counts don't match its accessors";
+    const Fz = "has a Draco stream whose counts don't match its accessors";
 
-    function sy(yb) {
-      var bb;
-      return null !== (bb = yb.name) && void 0 !== bb ? bb : yb.fromFolderName || yb.id
+    function Zz(zz) {
+      var uz;
+      return null !== (uz = zz.name) && void 0 !== uz ? uz : zz.fromFolderName || zz.id
     }
 
-    function Sy(yb, bb, Wy) {
-      return `Texture pack "${yb}": model "${bb}" was not loaded because it ${Wy}. The default model is used instead.`
+    function Rz(zz, uz, bz) {
+      return `Texture pack "${zz}": model "${uz}" was not loaded because it ${bz}. The default model is used instead.`
     }
 
-    function Ey(yb, bb, Wy) {
+    function Kz(zz, uz, bz) {
       let {
-        strictDraco: fy = !1
+        strictDraco: iz = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Zy = {};
-      for (const [cb, Py] of Object.entries(bb)) {
-        let bb;
-        if (Py.startsWith("data:")) try {
-          const yb = new Uint8Array((0, hy.t)(Py));
-          if (bb = (0, Uy.c)(yb), null === bb) {
+      const lz = {};
+      for (const [Mz, tz] of Object.entries(uz)) {
+        let uz;
+        if (tz.startsWith("data:")) try {
+          const zz = new Uint8Array((0, nz.q)(tz));
+          if (uz = (0, Ez.b)(zz), null === uz) {
             const {
-              json: Wy,
-              bin: Uy
-            } = (0, hy.A)(yb);
-            bb = ey(Wy, Uy, fy)
+              json: bz,
+              bin: Ez
+            } = (0, nz.z)(zz);
+            uz = dz(bz, Ez, iz)
           }
         } catch {
-          bb = "is not a binary glTF 2.0 file"
-        } else bb = "loads data from outside the file";
-        bb && (Zy[cb] = bb, Wy && console.warn(Sy(yb, cb, bb)))
+          uz = "is not a binary glTF 2.0 file"
+        } else uz = "loads data from outside the file";
+        uz && (lz[Mz] = uz, bz && console.warn(Rz(zz, Mz, uz)))
       }
-      return Zy
+      return lz
     }
 
-    function ly(yb, bb) {
-      const Wy = Object.keys(bb);
-      if (0 === Wy.length) return null;
-      if (1 === Wy.length) return Sy(yb, Wy[0], bb[Wy[0]]);
-      const Uy = Wy.map((yb => `"${yb}" ${bb[yb]}`)).join("; ");
-      return `Texture pack "${yb}": ${Wy.length} models were not loaded (${Uy}). The default models are used instead.`
+    function wz(zz, uz) {
+      const bz = Object.keys(uz);
+      if (0 === bz.length) return null;
+      if (1 === bz.length) return Rz(zz, bz[0], uz[bz[0]]);
+      const Ez = bz.map((zz => `"${zz}" ${uz[zz]}`)).join("; ");
+      return `Texture pack "${zz}": ${bz.length} models were not loaded (${Ez}). The default models are used instead.`
     }
   },
-  60042: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      packAssets: () => ly
+  60634: (zz, uz, bz) => {
+    bz.d(uz, {
+      packAssets: () => wz
     });
-    var Uy = Wy(2481),
-      hy = Wy(8452),
-      fy = Wy(33189),
-      Zy = Wy(2524),
-      cb = Wy(2575);
+    var Ez = bz(2916),
+      nz = bz(2954),
+      iz = bz(9052),
+      lz = bz(2971),
+      Mz = bz(3016);
 
-    function Py(yb, bb, Wy, Uy) {
-      const hy = `${(0,Zy.c)(yb,bb)}|sheets${Wy}`;
-      return Uy === cb.c ? hy : `${hy}|layers${Uy}`
+    function tz(zz, uz, bz, Ez) {
+      const nz = `${(0,lz.e)(zz,uz)}|sheets${bz}`;
+      return Ez === Mz.e ? nz : `${nz}|layers${Ez}`
     }
-    var oy = Wy(2583),
-      By = Wy(2498),
-      Ky = Wy(2484),
-      ey = Wy(2530);
-    var qb = Wy(41841);
-    const sy = 256;
-    let Sy = null,
-      Ey = null;
+    var Hz = bz(3023),
+      Oz = bz(2935),
+      pz = bz(2920),
+      dz = bz(2973);
+    var Fz = bz(42612);
+    const Zz = 256;
+    let Rz = null,
+      Kz = null;
 
-    function ly(yb) {
-      var bb;
-      let Wy = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cb.c;
-      if ((null === (bb = Sy) || void 0 === bb ? void 0 : bb.pack) === yb.pack && Sy.maxLayerWidth === Wy) return Sy.assets;
-      const ly = (0, qb.g)(yb.pack, (0, qb.m)(yb));
-      if (null === ly || ly.metaData.id === Uy.c && mb(ly.textureOverrides) && mb(ly.modelOverrides)) return Promise.resolve(null);
-      const Ty = async function(yb, bb, Wy) {
-        var qb;
-        const Sy = null !== (qb = yb.textureOverrides) && void 0 !== qb ? qb : {},
+    function wz(zz) {
+      var uz;
+      let bz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mz.e;
+      if ((null === (uz = Rz) || void 0 === uz ? void 0 : uz.pack) === zz.pack && Rz.maxLayerWidth === bz) return Rz.assets;
+      const wz = (0, Fz.f)(zz.pack, (0, Fz.m)(zz));
+      if (null === wz || !(0, nz.d)(wz)) return Promise.resolve(null);
+      const fz = async function(zz, uz, bz) {
+        var Fz;
+        const Rz = null !== (Fz = zz.textureOverrides) && void 0 !== Fz ? Fz : {},
           {
-            id: ly,
-            version: Ty
-          } = yb.metaData,
-          Vy = bb && ly !== Uy.m.CUSTOM,
-          Jy = {};
-        Vy && (Ey = Jy);
-        let gb, Gy, Oy = Vy ? await async function(yb, bb, Wy, Uy) {
-          const hy = Py(yb, bb, Wy, cb.c),
-            fy = Py(yb, bb, Wy, Uy),
-            oy = await (0, Zy.h)((yb => yb === hy || yb === fy));
-          return null !== oy && (Uy === cb.c || oy.blockAtlasWidth <= Uy) ? oy : null
-        }(ly, Ty, sy, Wy): null;
-        if (null === Oy) {
-          const yb = (0, By.d)(hy.blockMetadata, ((yb, bb) => ({
-              url: Cy(Sy, yb, "block" === bb ? Ky.d.BLOCK : Ky.d.ITEM)
-            }))),
-            bb = await
-          function(yb, bb, Wy, Uy, hy, fy) {
-            return (0, ey.b)((Zy => Zy.WasmTextureWorker.generateRequired(yb, bb, Wy, Uy, hy, fy)))
-          }(hy.blockMetadata, hy.textureNameToIndex, yb, ly === Uy.c, Wy, sy), fy = bb.assets;
-          Oy = {
-            ...fy,
+            id: wz,
+            version: fz
+          } = zz.metaData,
+          sz = uz && wz !== Ez.r.CUSTOM,
+          rz = {};
+        sz && (Kz = rz);
+        let oz, Nz, vz = sz ? await async function(zz, uz, bz, Ez) {
+          const nz = tz(zz, uz, bz, Mz.e),
+            iz = tz(zz, uz, bz, Ez),
+            Hz = await (0, lz.k)((zz => zz === nz || zz === iz));
+          return null !== Hz && (Ez === Mz.e || Hz.blockAtlasWidth <= Ez) ? Hz : null
+        }(wz, fz, Zz, bz): null;
+        if (null === vz) {
+          const {
+            blockMetadata: zz,
+            getDefaultTexture: uz,
+            textureNameToIndex: iz
+          } = await (0, nz.h)(), Mz = (0, Oz.b)(zz, ((zz, bz) => ({
+            url: Xz(Rz, uz, zz, "block" === bz ? pz.g.BLOCK : pz.g.ITEM)
+          }))), Hz = await
+          function(zz, uz, bz, Ez, nz, iz) {
+            return (0, dz.b)((lz => lz.WasmTextureWorker.generateRequired(zz, uz, bz, Ez, nz, iz)))
+          }(zz, iz, Mz, wz === Ez.c, bz, Zz), Fz = Hz.assets;
+          vz = {
+            ...Fz,
             averageColors: {}
-          }, gb = bb.averageColors(), Vy && (Gy = gb.then((async yb => {
-            null !== yb && Ey === Jy && await
-            function(yb, bb, Wy, Uy, hy) {
-              return (0, Zy.m)(Py(yb, bb, Uy, hy), Wy)
-            }(ly, Ty, {
-              ...fy,
-              averageColors: yb
-            }, sy, bb.layerCap)
+          }, oz = Hz.averageColors(), sz && (Nz = oz.then((async zz => {
+            null !== zz && Kz === rz && await
+            function(zz, uz, bz, Ez, nz) {
+              return (0, lz.o)(tz(zz, uz, Ez, nz), bz)
+            }(wz, fz, {
+              ...Fz,
+              averageColors: zz
+            }, Zz, Hz.layerCap)
           })))
         }
-        return function(yb, bb) {
-          var Wy, Uy;
-          let hy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve(mb(yb.averageColors) ? null : yb.averageColors),
-            Zy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          const cb = null !== (Wy = bb.textureOverrides) && void 0 !== Wy ? Wy : {},
-            Py = null !== (Uy = bb.modelOverrides) && void 0 !== Uy ? Uy : {},
-            By = 0 === Object.keys(Py).length ? {} : (0, fy.refusedPackModels)((0, fy.packDisplayName)(bb.metaData), Py, !0, {
+        return function(zz, uz) {
+          var bz, Ez;
+          let nz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((Mz = zz.averageColors, 0 === Object.keys(null !== Mz && void 0 !== Mz ? Mz : {}).length ? null : zz.averageColors)),
+            lz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var Mz;
+          const tz = null !== (bz = uz.textureOverrides) && void 0 !== bz ? bz : {},
+            Oz = null !== (Ez = uz.modelOverrides) && void 0 !== Ez ? Ez : {},
+            pz = 0 === Object.keys(Oz).length ? {} : (0, iz.refusedPackModels)((0, iz.packDisplayName)(uz.metaData), Oz, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: Ky,
-              rotatedBlockTextures: ey
-            } = yb,
-            qb = yb => {
-              var bb, Wy;
-              return null !== (bb = null !== (Wy = Ky[yb]) && void 0 !== Wy ? Wy : ey[yb]) && void 0 !== bb ? bb : null
+              animatedBlockTextures: dz,
+              rotatedBlockTextures: Fz
+            } = zz,
+            Zz = zz => {
+              var uz, bz;
+              return null !== (uz = null !== (bz = dz[zz]) && void 0 !== bz ? bz : Fz[zz]) && void 0 !== uz ? uz : null
             };
           return {
             terrain: {
-              atlasSheets: yb.blockAtlasArr,
-              texture: qb
+              atlasSheets: zz.blockAtlasArr,
+              texture: Zz
             },
-            sheetPixels: [...yb.blockAtlasPixels],
-            heldUntil: Zy,
-            sheetLayout: yb.imagesPerAtlas,
-            sheetWidth: yb.blockAtlasWidth,
-            armourAtlasUrl: yb.armourAtlas,
-            texture: yb => {
-              var bb, Wy;
-              return null !== (bb = null !== (Wy = qb(yb)) && void 0 !== Wy ? Wy : (0, oy.d)(cb, yb)) && void 0 !== bb ? bb : null
+            sheetPixels: [...zz.blockAtlasPixels],
+            heldUntil: lz,
+            sheetLayout: zz.imagesPerAtlas,
+            sheetWidth: zz.blockAtlasWidth,
+            armourAtlasUrl: zz.armourAtlas,
+            texture: zz => {
+              var uz, bz;
+              return null !== (uz = null !== (bz = Zz(zz)) && void 0 !== bz ? bz : (0, Hz.d)(tz, zz)) && void 0 !== uz ? uz : null
             },
-            model: yb => void 0 === By[yb] && Py[yb] || null,
-            averageColours: hy
+            model: zz => void 0 === pz[zz] && Oz[zz] || null,
+            averageColours: nz
           }
-        }(Oy, yb, gb, Gy)
-      }(ly, null === yb.gameSource, Wy), Vy = {
-        pack: yb.pack,
-        maxLayerWidth: Wy,
-        assets: Ty
+        }(vz, zz, oz, Nz)
+      }(wz, null === zz.gameSource, bz), sz = {
+        pack: zz.pack,
+        maxLayerWidth: bz,
+        assets: fz
       };
-      return Sy = Vy, Ty.catch((() => {
-        Sy === Vy && (Sy = null)
-      })), Ty
+      return Rz = sz, fz.catch((() => {
+        Rz === sz && (Rz = null)
+      })), fz
     }
 
-    function mb(yb) {
-      return 0 === Object.keys(null !== yb && void 0 !== yb ? yb : {}).length
-    }
-
-    function Cy(yb, bb, Uy) {
-      const fy = (0, oy.d)(yb, bb);
-      if (fy) return fy;
+    function Xz(zz, uz, Ez, nz) {
+      const iz = (0, Hz.d)(zz, Ez);
+      if (iz) return iz;
       try {
-        return (0, hy.getDefaultTexture)(bb, Uy).url
+        return uz(Ez, nz).url
       } catch {
-        return Wy(2620)
+        return bz(3075)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

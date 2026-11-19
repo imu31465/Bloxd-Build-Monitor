@@ -1,313 +1,437 @@
 export const id = 121;
-export const ids = [121, 122];
+export const ids = [121];
 export const modules = {
-  5852: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Uy.h,
-      d: () => hy,
-      e: () => Uy.o
+  6286: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Mz
     });
-    var Uy = Wy(5835);
-    const hy = [!1, !0].flatMap((yb => ["terrain", "liquid", "model"].map((bb => ({
-      strict: yb,
-      program: bb
-    })))))
+    var Ez = bz(1038),
+      nz = bz.n(Ez),
+      iz = bz(1181),
+      lz = bz(1089);
+
+    function Mz(zz) {
+      let {
+        item: uz,
+        className: bz
+      } = zz;
+      const {
+        t: Ez
+      } = (0, iz.F)();
+      return null === uz.renderId || uz.previewsOutdated ? (0, lz.jsx)("div", {
+        className: nz()("ShaderPackPreviewsNotice", bz),
+        children: (0, lz.jsx)("span", {
+          children: Ez(null === uz.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        })
+      }) : null
+    }
   },
-  37862: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      ShaderPackPage: () => Py,
-      harnessShaderPackMode: () => ey,
-      setHarnessUrlShaderPack: () => Ky,
-      shaderPackPage: () => By
+  6296: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Hz
     });
-    var Uy = Wy(94),
-      hy = Wy(33),
-      fy = (Wy(2756), Wy(5852), Wy(2754)),
-      Zy = Wy(5923);
-    Wy(5893);
-    const cb = {
-      status: "none"
-    };
-    class Py {
-      constructor() {
-        this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
+    var Ez = bz(1038),
+      nz = bz.n(Ez),
+      iz = bz(6283),
+      lz = bz(1181),
+      Mz = bz(6274),
+      tz = bz(1089);
+
+    function Hz(zz) {
+      let {
+        selected: uz,
+        onSelect: bz,
+        imageUrl: Ez
+      } = zz;
+      const {
+        t: Hz
+      } = (0, lz.F)();
+      return (0, tz.jsx)("div", {
+        className: "ShaderPackViewPicker",
+        children: iz.B.map((zz => {
+          const iz = Ez(zz);
+          return (0, tz.jsxs)("button", {
+            type: "button",
+            "aria-pressed": zz === uz,
+            className: nz()("ShaderPackViewOption", {
+              Selected: zz === uz
+            }),
+            onClick: () => {
+              bz(zz)
+            },
+            children: [null !== iz && (0, tz.jsx)("img", {
+              src: iz,
+              alt: "",
+              loading: "lazy",
+              draggable: !1
+            }), (0, tz.jsx)("span", {
+              className: "SmallTextBold",
+              children: Hz(Mz.db[zz])
+            })]
+          }, zz)
+        }))
+      })
+    }
+  },
+  6289: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => dz,
+      g: () => Fz,
+      k: () => pz,
+      m: () => Zz
+    });
+    var Ez = bz(56),
+      nz = bz(6283),
+      iz = bz(1473),
+      lz = bz(6274),
+      Mz = bz(6291),
+      tz = bz(1114);
+    const Hz = "shaderPackListingView",
+      Oz = "shaderPackListingFilterOpen";
+
+    function pz() {
+      var zz;
+      const [uz, bz] = (0, Mz.d)(Hz, nz.B[0]);
+      return [null !== (zz = nz.B.find((zz => zz === uz))) && void 0 !== zz ? zz : nz.B[0], bz]
+    }
+
+    function dz() {
+      (0, Ez.useEffect)((() => () => {
+        window.location.pathname.startsWith(lz.P) || (0, lz.j)()
+      }), [])
+    }
+
+    function Fz() {
+      return (0, Mz.d)(Oz, !1)
+    }
+
+    function Zz() {
+      const {
+        userContext: zz,
+        isUserContextUpdating: uz
+      } = (0, tz.c)(), [bz, nz] = (0, Ez.useState)(null), lz = (0, Ez.useRef)(new Set);
+
+      function Mz(zz, uz) {
+        nz((bz => {
+          const Ez = new Set(bz);
+          return uz ? Ez.add(zz) : Ez.delete(zz), Ez
+        }))
       }
-      preload() {
-        if (null === this.stored) {
-          if ((0, fy.i)(Uy.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), oy().then((yb => {
-            yb && hy.e.removeItem(fy.c)
-          })), this.stored;
-          this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
+      return (0, Ez.useEffect)((() => {
+        if (uz) return;
+        let bz = !1;
+        return iz.c.getFavouriteShaderPacks(zz).then((zz => {
+          bz || nz(new Set(zz))
+        })).catch((zz => {
+          console.error("Failed to get favourite shader packs", zz), bz || nz(new Set)
+        })), () => {
+          bz = !0
         }
-        return this.stored
+      }), [zz, uz]), {
+        isFavourite: zz => null === bz ? null : bz.has(zz),
+        toggle: function(uz) {
+          if (null === bz || lz.current.has(uz)) return;
+          lz.current.add(uz);
+          const Ez = !bz.has(uz);
+          Mz(uz, Ez), (Ez ? iz.c.favouriteShaderPack(zz, uz) : iz.c.unfavouriteShaderPack(zz, uz)).catch((zz => {
+            console.error("Failed to change a favourite shader pack", zz), Mz(uz, !Ez)
+          })).finally((() => {
+            lz.current.delete(uz)
+          }))
+        }
       }
-      prefetchHint() {
-        return (0, fy.e)(Uy.featureFlags.settings.canUseShaderPacks)
-      }
-      async loadActive() {
-        const yb = await this.load();
-        return "active" === yb.status ? yb.pack : null
-      }
-      load() {
-        return this.pagePack ??= this.read().catch((yb => (console.error("Failed to load the shader pack", yb), cb))).then((yb => (this.resolved ??= yb, yb))), this.pagePack
-      }
-      hasNone() {
-        var yb;
-        return "none" === (null === (yb = this.resolved) || void 0 === yb ? void 0 : yb.status)
-      }
-      block(yb) {
-        this.resolved = {
-          status: "blocked",
-          messageKey: yb,
-          variants: null
-        }, this.pagePack = Promise.resolve(this.resolved)
-      }
-      compiler() {
-        return this.compiling ??= Promise.all([Wy.e(126), Wy.e(123), Wy.e(127)]).then((() => Wy(40225))).then((yb => (yb.prefetchCompiler(), yb))), this.compiling
-      }
-      async readStored() {
-        const yb = await oy();
-        return yb && this.compiler().then((yb => yb.reconcileHint())).catch((yb => {
-          console.error("Failed to correct the shader pack hint", yb)
-        })), yb
-      }
-      async read() {
-        const yb = await this.preload();
-        return yb ? (await this.compiler()).compilePagePack(yb) : cb
-      }
-    }
-    async function oy() {
-      if (!(0, fy.m)(Uy.featureFlags.settings.canUseShaderPacks)) return null;
-      try {
-        const yb = await (0, Zy.g)(!0);
-        return yb || hy.e.setItem(fy.c, !1), yb
-      } catch (yb) {
-        return console.error("Failed to read the stored shader pack", yb), hy.e.removeItem(fy.c), null
-      }
-    }
-    const By = new Py;
-
-    function Ky(yb, bb) {}
-
-    function ey() {
-      return null
     }
   },
-  5923: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => hy,
-      g: () => fy
+  6274: (zz, uz, bz) => {
+    bz.d(uz, {
+      D: () => wz,
+      F: () => Az,
+      G: () => Oz,
+      J: () => Lz,
+      M: () => Rz,
+      N: () => Uz,
+      O: () => qz,
+      P: () => lz,
+      T: () => hz,
+      W: () => tz,
+      _: () => Mz,
+      bb: () => Vz,
+      db: () => mz,
+      e: () => Xz,
+      eb: () => fz,
+      f: () => xz,
+      gb: () => Tz,
+      h: () => Kz,
+      j: () => dz,
+      m: () => pz,
+      p: () => Pz,
+      q: () => Fz,
+      u: () => Gz,
+      v: () => cz,
+      z: () => Zz
     });
-    var Uy = Wy(33);
-    const hy = "shaderPack";
-    async function fy() {
-      var yb;
-      let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (yb = await Uy.d.getItem(hy, bb)) && void 0 !== yb ? yb : null
-    }
-  },
-  5893: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      loadShaderPackTextures: () => Zy,
-      shaderPackTextures: () => cb
-    });
-    var Uy = Wy(5835);
-    let hy = null,
-      fy = null;
+    var Ez = bz(6283),
+      nz = bz(158),
+      iz = bz(4313);
+    const lz = "/shader-packs",
+      Mz = `${lz}/publish`;
 
-    function Zy() {
-      return fy ??= Promise.all([Wy.e(63), Wy.e(181)]).then((() => Wy(38999))).then((yb => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: bb,
-          textureNameToIndex: Wy,
-          textureAnimationData: fy
-        } = yb;
-        return hy ??= (0, Uy.k)(Wy, fy, bb), hy
-      })), fy
+    function tz(zz) {
+      return `${lz}/${encodeURIComponent(zz)}`
+    }
+    let Hz = null;
+
+    function Oz(zz) {
+      Hz = zz
     }
 
-    function cb() {
-      if (null === hy) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return hy
+    function pz() {
+      return Hz
     }
-  },
-  5835: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy,
-      f: () => fy,
-      h: () => Uy,
-      k: () => sy,
-      l: () => By,
-      o: () => hy,
-      s: () => Py,
-      u: () => oy,
-      x: () => Ky
-    });
-    const Uy = 5;
 
-    function hy(yb) {
-      return yb === Uy
+    function dz() {
+      Hz = null
     }
-    const fy = 262144,
-      Zy = 256,
-      cb = 256;
 
-    function Py(yb) {
-      if ("object" !== typeof yb || null === yb || Array.isArray(yb)) return "The pack has no files.";
-      const bb = [];
-      for (const [Wy, Uy] of Object.entries(yb)) {
-        if ("string" !== typeof Uy) return `${Wy} isn't text.`;
-        bb.push({
-          path: Wy,
-          source: Uy
+    function Fz(zz) {
+      return zz.playerHasRank("developer") || zz.playerHasRank("admin")
+    }
+    const Zz = ["terrain", "water", "models", "sunShadows", "strict"],
+      Rz = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function Kz(zz, uz) {
+      return zz.withFeatures.includes(uz) ? "with" : zz.withoutFeatures.includes(uz) ? "without" : null
+    }
+
+    function wz(zz) {
+      return null === zz ? "with" : "with" === zz ? "without" : null
+    }
+
+    function Xz(zz) {
+      return "with" === zz ? "only" : null === zz ? "include" : void 0
+    }
+
+    function fz(zz, uz) {
+      const bz = Kz(zz, uz),
+        Ez = zz => zz.filter((zz => zz !== uz));
+      return {
+        withFeatures: null === bz ? [...zz.withFeatures, uz] : Ez(zz.withFeatures),
+        withoutFeatures: "with" === bz ? [...zz.withoutFeatures, uz] : Ez(zz.withoutFeatures)
+      }
+    }
+    const sz = "section",
+      rz = "sort",
+      oz = "filters",
+      Nz = "q",
+      vz = "banned",
+      xz = "popular",
+      Jz = "strict";
+
+    function Az(zz) {
+      var uz, bz, nz;
+      const lz = zz.get(sz),
+        Mz = (null !== (uz = zz.get(oz)) && void 0 !== uz ? uz : Jz).split(","),
+        tz = zz.get(vz);
+      return {
+        section: "favourites" === lz || "mine" === lz ? lz : "explore",
+        sort: null !== (bz = Ez.u.find((uz => uz === zz.get(rz)))) && void 0 !== bz ? bz : xz,
+        withFeatures: Zz.filter((zz => Mz.includes(zz) && !Mz.includes(`-${zz}`))),
+        withoutFeatures: Zz.filter((zz => Mz.includes(`-${zz}`))),
+        searchQuery: (null === (nz = zz.get(Nz)) || void 0 === nz ? void 0 : nz.slice(0, Ez.G)) || null,
+        pageNumber: (0, iz.h)(zz.get(iz.e)),
+        banned: "only" === tz ? "with" : "include" === tz ? null : "without"
+      }
+    }
+
+    function Tz(zz, uz) {
+      var bz;
+      const Ez = az(uz);
+      (0, iz.k)(zz, sz, "explore" === uz.section ? null : uz.section), (0, iz.k)(zz, rz, uz.sort === xz ? null : uz.sort), (0, iz.k)(zz, oz, Ez === Jz ? null : Ez), (0, iz.k)(zz, Nz, uz.searchQuery), (0, iz.k)(zz, vz, null !== (bz = Xz(uz.banned)) && void 0 !== bz ? bz : null), (0, iz.m)(zz, uz.pageNumber)
+    }
+
+    function Lz(zz) {
+      const uz = new URLSearchParams;
+      return Tz(uz, {
+        section: "explore",
+        sort: xz,
+        withFeatures: "strict" === zz ? [zz] : [zz, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${lz}?${uz.toString()}`
+    }
+
+    function Pz(zz) {
+      return az(zz) === Jz
+    }
+
+    function Gz(zz) {
+      return null !== zz.searchQuery || "with" === zz.banned || az(zz) !== Jz
+    }
+
+    function az(zz) {
+      return Zz.flatMap((uz => {
+        const bz = Kz(zz, uz);
+        return "with" === bz ? [uz] : "without" === bz ? [`-${uz}`] : []
+      })).join(",")
+    }
+    const Vz = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
+      },
+      mz = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
+
+    function qz(zz) {
+      return Math.round(100 * Math.max(0, 1 - 1 / zz))
+    }
+
+    function hz(zz, uz, bz, nz) {
+      const iz = [];
+      zz.isBanned && iz.push({
+        tone: "warning",
+        text: nz("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: lz
+      } = zz;
+      if (null === zz.brokenError || lz && !lz.error || iz.push({
+          tone: "warning",
+          text: nz("shaderPackListing:ownerBroken"),
+          detail: zz.brokenError
+        }), null !== lz && void 0 !== lz && lz.error) iz.push({
+        tone: "warning",
+        text: nz(uz ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Ez.g)(lz.error) ? null : lz.error
+      });
+      else if (lz) {
+        const zz = null === lz.renderNotBefore ? 0 : lz.renderNotBefore - bz,
+          Ez = String(Math.ceil(zz / 6e4)),
+          Mz = nz(uz ? zz > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : zz > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Ez
+          });
+        iz.push({
+          tone: "info",
+          text: Mz,
+          detail: null
         })
       }
-      return bb.sort(((yb, bb) => By(yb.path, bb.path))),
-        function(yb) {
-          if (0 === yb.length) return "The pack has no .wgsl files.";
-          if (yb.length > Zy) return `The pack has more than ${Zy} .wgsl files.`;
-          const bb = new Set;
-          for (const {
-              path: Wy
-            }
-            of yb) {
-            const yb = ey(Wy);
-            if (null !== yb) return yb;
-            if (bb.has(Wy)) return `The pack has two files at ${Wy}.`;
-            bb.add(Wy)
-          }
-          return Ky(yb) > fy ? `The pack's .wgsl files are over ${fy/1024} KB in total.` : null
-        }(bb) ?? bb
+      return zz.listed || iz.push({
+        tone: "info",
+        text: nz("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), iz
     }
 
-    function oy(yb) {
-      const bb = {};
-      for (const Wy of yb) bb[Wy.path] = Wy.source;
-      return bb
+    function Uz(zz) {
+      return Math.max(1, Math.round(zz / 1024))
     }
 
-    function By(yb, bb) {
-      return yb < bb ? -1 : yb > bb ? 1 : 0
+    function cz(zz, uz, bz) {
+      return zz instanceof nz.c && zz.errorMessageForUser ? zz.errorMessageForUser : uz(bz)
     }
+  },
+  6291: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => iz
+    });
+    var Ez = bz(56),
+      nz = bz(33);
 
-    function Ky(yb) {
-      const bb = new TextEncoder;
-      let Wy = 0;
-      for (const {
-          source: Uy
-        }
-        of yb) Wy += bb.encode(Uy).byteLength;
-      return Wy
+    function iz(zz, uz) {
+      var bz;
+      const [iz, lz] = (0, Ez.useState)(null !== (bz = nz.g.getItem(zz)) && void 0 !== bz ? bz : uz);
+      return [iz, uz => {
+        nz.g.setItem(zz, uz), lz(uz)
+      }]
     }
-
-    function ey(yb) {
-      if (!yb.toLowerCase().endsWith(".wgsl")) return `${yb} isn't a .wgsl file.`;
-      if (yb.length > cb) return `A file path is over ${cb} characters.`;
-      if (yb.includes("\\") || /[\u0000-\u001f]/.test(yb)) return `${yb} isn't a valid file path.`;
-      return yb.split("/").some((yb => "" === yb || "." === yb || ".." === yb)) ? `${yb} isn't a valid file path.` : null
-    }
-    const qb = /^(.*)\[rot\[([1-4])$/;
-
-    function sy(yb, bb) {
-      let Wy = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Uy = new Map;
-      bb.forEach(((yb, bb) => {
-        let {
-          numAnimStates: Wy,
-          animStartIdx: hy
-        } = yb;
-        for (let fy = 1; fy < Wy; fy++) Uy.set(hy + fy - 1, bb)
-      }));
-      const hy = Object.entries(yb),
-        fy = new Map;
-      for (const [Sy, Ey] of hy) {
-        const yb = qb.exec(Sy);
-        "1" === yb?.[2] && fy.set(yb[1], Ey + 1)
-      }
-      const Zy = yb => {
-          const bb = qb.exec(yb);
-          return bb && fy.has(bb[1]) ? {
-            root: bb[1],
-            rotation: Number(bb[2]) - 1
-          } : null
+  },
+  6283: (zz, uz, bz) => {
+    bz.d(uz, {
+      B: () => Ez,
+      D: () => dz,
+      G: () => Oz,
+      K: () => fz,
+      M: () => pz,
+      O: () => Hz,
+      b: () => Fz,
+      e: () => Rz,
+      f: () => Zz,
+      g: () => Xz,
+      i: () => rz,
+      l: () => tz,
+      m: () => nz,
+      q: () => sz,
+      u: () => iz,
+      y: () => Mz,
+      z: () => lz
+    });
+    const Ez = ["forest", "desert", "water", "night", "cave"];
+    const nz = {
+        full: {
+          width: 3840,
+          height: 2160
         },
-        cb = new Set(hy.map((yb => {
-          let [bb] = yb;
-          return Zy(bb)?.root ?? bb
-        }))),
-        Py = (yb, Wy) => {
-          const Uy = yb.replace(/_?0$/, "");
-          return (bb[Wy]?.numAnimStates ?? 0) > 1 && !cb.has(Uy) ? Uy : yb
+        large: {
+          width: 1920,
+          height: 1080
         },
-        oy = new Map;
-      for (const [qb, Sy] of hy) oy.set(Sy, Py(Zy(qb)?.root ?? qb, Sy));
-      const By = hy.reduce(((yb, bb) => {
-          let [, Wy] = bb;
-          return Math.max(yb, Wy + 1)
-        }), 0),
-        Ky = Array.from({
-          length: By
-        }, ((yb, bb) => ({
-          id: bb + 1,
-          rotation: 0
-        }))),
-        ey = new Map,
-        sy = new Map;
-      for (const [qb, Sy] of hy) {
-        const yb = Zy(qb),
-          bb = Uy.get(Sy);
-        if (void 0 !== bb) {
-          const Wy = oy.get(bb);
-          sy.set(qb, {
-            name: qb,
-            texture: Wy,
-            kind: "frame"
-          }), yb && !sy.has(yb.root) && sy.set(yb.root, {
-            name: yb.root,
-            texture: Wy,
-            kind: "frame"
-          });
-          continue
+        thumb: {
+          width: 640,
+          height: 360
         }
-        const Wy = oy.get(Sy),
-          hy = yb?.root ?? qb;
-        if (Wy !== hy && sy.set(hy, {
-            name: hy,
-            texture: Wy,
-            kind: "frame"
-          }), yb) {
-          const bb = fy.get(yb.root);
-          Ky[Sy] = {
-            id: bb,
-            rotation: yb.rotation
-          }, ey.set(Wy, bb), sy.set(qb, {
-            name: qb,
-            texture: Wy,
-            kind: "rotation"
-          })
-        } else ey.set(Wy, Sy + 1)
-      }
-      for (const qb of ey.keys()) sy.delete(qb);
-      for (const [qb, Sy] of Wy) {
-        const yb = ey.get(Sy);
-        void 0 === yb || ey.has(qb) || (ey.set(qb, yb), sy.delete(qb))
-      }
-      return {
-        named: [...ey].sort(((yb, bb) => {
-          let [Wy] = yb, [Uy] = bb;
-          return Wy < Uy ? -1 : Wy > Uy ? 1 : 0
-        })).map((yb => {
-          let [bb, Wy] = yb;
-          return {
-            name: bb,
-            id: Wy
-          }
-        })),
-        aliases: [...sy.values()],
-        layers: Ky
-      }
+      },
+      iz = ["popular", "updated", "newest"],
+      lz = 3,
+      Mz = 32,
+      tz = 300;
+
+    function Hz(zz, uz) {
+      return zz.slice(0, uz).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const Oz = 64,
+      pz = 512,
+      dz = 18e5;
+    const Fz = "Bloxdhub",
+      Zz = "https://bloxdhub.com/shaders";
+
+    function Rz(zz) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(zz)}`
+    }
+    const Kz = "Screenshot generation failed.",
+      wz = "Its screenshots couldn't be generated:";
+
+    function Xz(zz) {
+      var uz;
+      return zz === Kz || null !== (uz = null === zz || void 0 === zz ? void 0 : zz.startsWith(wz)) && void 0 !== uz && uz
+    }
+
+    function fz(zz, uz) {
+      return `shaderPacks/${zz}/${uz}.json`
+    }
+
+    function sz(zz, uz, bz, Ez) {
+      return null === uz.renderId ? rz(zz, uz.baselineVersion, bz, Ez) : `${zz}/${function(zz,uz,bz,Ez){return`shaderPacks/${zz}/${uz}/${bz}-${Ez}.webp`}(uz.packId,uz.renderId,bz,Ez)}`
+    }
+
+    function rz(zz, uz, bz, Ez) {
+      return `${zz}/${function(zz,uz,bz){return`shaderPacks/baseline/${zz}/${uz}-${bz}.webp`}(uz,bz,Ez)}`
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

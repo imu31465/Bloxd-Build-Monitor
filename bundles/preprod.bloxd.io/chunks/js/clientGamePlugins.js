@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4050: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => uy,
-      f: () => ny
+  4601: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => Vz,
+      g: () => az
     });
-    var Uy = Wy(4052),
-      hy = Wy(248);
-    const fy = 120,
-      Zy = 260,
-      cb = 1.15,
-      Py = 1.2,
-      oy = 2,
-      By = 1.08,
-      Ky = .8,
-      ey = .95,
-      qb = 8,
-      sy = "[\"')\\]\u300d\u300f\uff09]*",
-      Sy = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${sy}$`),
-      Ey = new RegExp(`[?\uff1f]${sy}$`),
-      ly = new RegExp(`[!\uff01]${sy}$`),
-      mb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Cy = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Ty = new RegExp(`[${Cy}]`),
-      Vy = new RegExp(`[${Cy}]|[^${Cy}]+`, "g"),
-      Jy = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Ez = bz(4605),
+      nz = bz(316);
+    const iz = 120,
+      lz = 260,
+      Mz = 1.15,
+      tz = 1.2,
+      Hz = 2,
+      Oz = 1.08,
+      pz = .8,
+      dz = .95,
+      Fz = 8,
+      Zz = "[\"')\\]\u300d\u300f\uff09]*",
+      Rz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Zz}$`),
+      Kz = new RegExp(`[?\uff1f]${Zz}$`),
+      wz = new RegExp(`[!\uff01]${Zz}$`),
+      Xz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      fz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      sz = new RegExp(`[${fz}]`),
+      rz = new RegExp(`[${fz}]|[^${fz}]+`, "g"),
+      oz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function gb(yb) {
-      let bb = 2166136261;
-      for (let Wy = 0; Wy < yb.length; Wy++) bb ^= yb.charCodeAt(Wy), bb = Math.imul(bb, 16777619);
-      return (bb >>> 0) / 4294967295 * 2 - 1
+    function Nz(zz) {
+      let uz = 2166136261;
+      for (let bz = 0; bz < zz.length; bz++) uz ^= zz.charCodeAt(bz), uz = Math.imul(uz, 16777619);
+      return (uz >>> 0) / 4294967295 * 2 - 1
     }
 
-    function Gy(yb) {
-      var bb;
-      if (Ty.test(yb)) return 1;
-      const Wy = yb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Uy = Wy.replace(/[^0-9]/g, "");
-      if (Uy.length > 0 && !/\p{L}/u.test(Wy)) return Math.min(Uy.length, 4);
-      const hy = null !== (bb = Wy.match(Jy)) && void 0 !== bb ? bb : [];
-      if (0 === hy.length) {
-        var fy, Zy;
-        const yb = null !== (fy = null === (Zy = Wy.match(/\p{L}/gu)) || void 0 === Zy ? void 0 : Zy.length) && void 0 !== fy ? fy : 0;
-        return 0 === yb ? 0 : Math.min(Math.max(1, Math.round(yb / 2.5)), qb)
+    function vz(zz) {
+      var uz;
+      if (sz.test(zz)) return 1;
+      const bz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Ez = bz.replace(/[^0-9]/g, "");
+      if (Ez.length > 0 && !/\p{L}/u.test(bz)) return Math.min(Ez.length, 4);
+      const nz = null !== (uz = bz.match(oz)) && void 0 !== uz ? uz : [];
+      if (0 === nz.length) {
+        var iz, lz;
+        const zz = null !== (iz = null === (lz = bz.match(/\p{L}/gu)) || void 0 === lz ? void 0 : lz.length) && void 0 !== iz ? iz : 0;
+        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), Fz)
       }
-      const cb = Wy.replace(/[^\p{L}]/gu, ""),
-        Py = hy.length > 1 && "e" === hy.at(-1) && cb.endsWith("e") && !cb.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(yb.replace(/[^\p{L}]/gu, ""));
-      return Math.min(hy.length - (Py ? 1 : 0), qb)
+      const Mz = bz.replace(/[^\p{L}]/gu, ""),
+        tz = nz.length > 1 && "e" === nz.at(-1) && Mz.endsWith("e") && !Mz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
+      return Math.min(nz.length - (tz ? 1 : 0), Fz)
     }
 
-    function Oy(yb) {
-      return yb.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function xz(zz) {
+      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Ry(yb) {
-      const bb = yb.replace(/[^\p{L}]/gu, "");
-      return bb.length >= 2 && bb === bb.toUpperCase() && bb !== bb.toLowerCase()
+    function Jz(zz) {
+      const uz = zz.replace(/[^\p{L}]/gu, "");
+      return uz.length >= 2 && uz === uz.toUpperCase() && uz !== uz.toLowerCase()
     }
 
-    function vb(yb, bb) {
-      var Wy;
-      const qb = bb && (0, Uy.l)(bb),
-        sy = null !== (Wy = null === qb || void 0 === qb ? void 0 : qb.syllableMs) && void 0 !== Wy ? Wy : Uy.d,
-        Cy = function(yb) {
-          const bb = [];
-          for (const Uy of (0, hy.Vb)(yb))
-            if ("string" === typeof Uy)
-              for (const yb of Uy.split(/(\s+)/)) {
-                if ("" === yb) continue;
-                if (/^\s+$/.test(yb)) {
-                  bb.push({
+    function Az(zz, uz) {
+      var bz;
+      const Fz = uz && (0, Ez.k)(uz),
+        Zz = null !== (bz = null === Fz || void 0 === Fz ? void 0 : Fz.syllableMs) && void 0 !== bz ? bz : Ez.e,
+        fz = function(zz) {
+          const uz = [];
+          for (const Ez of (0, nz.uc)(zz))
+            if ("string" === typeof Ez)
+              for (const zz of Ez.split(/(\s+)/)) {
+                if ("" === zz) continue;
+                if (/^\s+$/.test(zz)) {
+                  uz.push({
                     kind: "space",
-                    text: yb
+                    text: zz
                   });
                   continue
                 }
-                if (!Ty.test(yb)) {
-                  bb.push({
+                if (!sz.test(zz)) {
+                  uz.push({
                     kind: "word",
-                    text: yb,
+                    text: zz,
                     delayMs: 0
                   });
                   continue
                 }
-                let Uy = !0;
-                for (const hy of null !== (Wy = yb.match(Vy)) && void 0 !== Wy ? Wy : []) {
-                  var Wy;
-                  const yb = bb.at(-1);
-                  Uy || "word" !== (null === yb || void 0 === yb ? void 0 : yb.kind) || Ty.test(hy) || /[\p{L}\p{N}]/u.test(hy) ? (Uy || bb.push({
+                let Ez = !0;
+                for (const nz of null !== (bz = zz.match(rz)) && void 0 !== bz ? bz : []) {
+                  var bz;
+                  const zz = uz.at(-1);
+                  Ez || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || sz.test(nz) || /[\p{L}\p{N}]/u.test(nz) ? (Ez || uz.push({
                     kind: "space",
                     text: "\u200b"
-                  }), bb.push({
+                  }), uz.push({
                     kind: "word",
-                    text: hy,
+                    text: nz,
                     delayMs: 0
-                  }), Uy = !1) : yb.text += hy
+                  }), Ez = !1) : zz.text += nz
                 }
-              } else bb.push({
+              } else uz.push({
                 kind: "icon",
-                text: Uy.icon,
+                text: Ez.icon,
                 delayMs: 0
               });
-          return bb
-        }(yb),
-        Jy = [];
-      let vb = [];
-      for (const Uy of Cy) "space" !== Uy.kind && (vb.push(Uy), Sy.test(Uy.text) && (Jy.push(vb), vb = []));
-      Jy.push(vb);
-      const ib = [];
-      let My = 0;
-      for (const Uy of Jy) {
-        var Yy, Xy;
-        const yb = null !== (Yy = null === (Xy = Uy.at(-1)) || void 0 === Xy ? void 0 : Xy.text) && void 0 !== Yy ? Yy : "",
-          bb = Ey.test(yb),
-          Wy = ly.test(yb),
-          hy = Uy.map((yb => "word" === yb.kind ? Gy(yb.text) : 1)),
-          Cy = hy.findLastIndex((yb => yb > 0));
-        for (const [Ey, ly] of Uy.entries()) {
-          const yb = "word" === ly.kind,
-            Uy = hy[Ey];
-          ly.delayMs = My;
-          for (let hy = 0; qb && hy < Uy; hy++) {
+          return uz
+        }(zz),
+        oz = [];
+      let Az = [];
+      for (const Ez of fz) "space" !== Ez.kind && (Az.push(Ez), Rz.test(Ez.text) && (oz.push(Az), Az = []));
+      oz.push(Az);
+      const Tz = [];
+      let Lz = 0;
+      for (const Ez of oz) {
+        var Pz, Gz;
+        const zz = null !== (Pz = null === (Gz = Ez.at(-1)) || void 0 === Gz ? void 0 : Gz.text) && void 0 !== Pz ? Pz : "",
+          uz = Kz.test(zz),
+          bz = wz.test(zz),
+          nz = Ez.map((zz => "word" === zz.kind ? vz(zz.text) : 1)),
+          fz = nz.findLastIndex((zz => zz > 0));
+        for (const [Kz, wz] of Ez.entries()) {
+          const zz = "word" === wz.kind,
+            Ez = nz[Kz];
+          wz.delayMs = Lz;
+          for (let nz = 0; Fz && nz < Ez; nz++) {
             const {
-              intonation: fy
-            } = qb;
-            let Zy = Cy > 0 ? -fy.declineSemitones * (Ey / Cy) : 0;
-            Zy += gb(`${Oy(ly.text)}|${hy}`) * fy.variationSemitones;
-            const Sy = Math.min(1, fy.variationSemitones);
-            let mb = qb.glideSemitones,
-              Ty = 1;
-            Wy && (Zy += fy.exclaimLiftSemitones, Ty *= cb), bb && Ey === Cy && (Zy += fy.questionRiseSemitones * (Uy > 1 ? .5 + .5 * hy / (Uy - 1) : 1), hy === Uy - 1 && (mb = Math.abs(mb) + fy.questionRiseSemitones / 2)), yb && Ry(ly.text) && (Zy += oy * Sy, Ty *= Py), Uy > 1 && 0 === hy && (Zy += Ky * Sy, Ty *= By), ib.push({
-              atMs: My + hy * sy,
-              semitones: Zy,
-              glideSemitones: mb,
-              durationMs: hy < Uy - 1 ? Math.min(qb.durationMs, sy * ey) : qb.durationMs,
-              level: Ty
+              intonation: iz
+            } = Fz;
+            let lz = fz > 0 ? -iz.declineSemitones * (Kz / fz) : 0;
+            lz += Nz(`${xz(wz.text)}|${nz}`) * iz.variationSemitones;
+            const Rz = Math.min(1, iz.variationSemitones);
+            let Xz = Fz.glideSemitones,
+              sz = 1;
+            bz && (lz += iz.exclaimLiftSemitones, sz *= Mz), uz && Kz === fz && (lz += iz.questionRiseSemitones * (Ez > 1 ? .5 + .5 * nz / (Ez - 1) : 1), nz === Ez - 1 && (Xz = Math.abs(Xz) + iz.questionRiseSemitones / 2)), zz && Jz(wz.text) && (lz += Hz * Rz, sz *= tz), Ez > 1 && 0 === nz && (lz += pz * Rz, sz *= Oz), Tz.push({
+              atMs: Lz + nz * Zz,
+              semitones: lz,
+              glideSemitones: Xz,
+              durationMs: nz < Ez - 1 ? Math.min(Fz.durationMs, Zz * dz) : Fz.durationMs,
+              level: sz
             })
           }
-          My += Uy * sy + (Sy.test(ly.text) ? Zy : mb.test(ly.text) ? fy : 0)
+          Lz += Ez * Zz + (Rz.test(wz.text) ? lz : Xz.test(wz.text) ? iz : 0)
         }
       }
       return {
-        pieces: Cy.map((yb => "space" === yb.kind ? yb : "icon" === yb.kind ? {
+        pieces: fz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
           kind: "icon",
-          icon: yb.text,
-          delayMs: yb.delayMs
+          icon: zz.text,
+          delayMs: zz.delayMs
         } : {
           kind: "word",
-          text: yb.text,
-          delayMs: yb.delayMs
+          text: zz.text,
+          delayMs: zz.delayMs
         })),
-        blips: ib
+        blips: Tz
       }
     }
-    var ib = Wy(1042),
-      My = Wy(1115),
-      Yy = Wy(1580);
+    var Tz = bz(1181),
+      Lz = bz(1241),
+      Pz = bz(1873);
 
-    function Xy(yb) {
-      if ("string" === typeof yb) return yb;
-      const bb = My.f.get().getCurrentLanguageCode();
-      return (0, ib.t)(bb, yb.translationKey, (0, ib.s)(yb.params, Yy.d.shown))
+    function Gz(zz) {
+      if ("string" === typeof zz) return zz;
+      const uz = Lz.h.get().getCurrentLanguageCode();
+      return (0, Tz.s)(uz, zz.translationKey, (0, Tz.q)(zz.params, Pz.b.shown))
     }
 
-    function ny(yb) {
-      const bb = void 0 === yb.voice ? null : (0, Uy.p)(yb.voice),
-        Wy = bb && (0, Uy.l)(bb);
+    function az(zz) {
+      const uz = void 0 === zz.voice ? null : (0, Ez.n)(zz.voice),
+        bz = uz && (0, Ez.k)(uz);
       return {
-        plan: vb(Xy(yb.line), Wy),
-        synth: Wy
+        plan: Az(Gz(zz.line), bz),
+        synth: bz
       }
     }
 
-    function uy(yb) {
-      const bb = [];
-      let Wy = [];
-      for (const [hy, fy] of yb.entries()) {
-        var Uy;
-        "space" === fy.kind && (" " !== fy.text || "icon" !== (null === (Uy = yb[hy + 1]) || void 0 === Uy ? void 0 : Uy.kind)) ? (Wy.length > 0 && bb.push(Wy), bb.push([fy]), Wy = []) : Wy.push(fy)
+    function Vz(zz) {
+      const uz = [];
+      let bz = [];
+      for (const [nz, iz] of zz.entries()) {
+        var Ez;
+        "space" === iz.kind && (" " !== iz.text || "icon" !== (null === (Ez = zz[nz + 1]) || void 0 === Ez ? void 0 : Ez.kind)) ? (bz.length > 0 && uz.push(bz), uz.push([iz]), bz = []) : bz.push(iz)
       }
-      return Wy.length > 0 && bb.push(Wy), bb
+      return bz.length > 0 && uz.push(bz), uz
     }
   },
-  4060: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => By,
-      e: () => Ky
+  4609: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Oz,
+      d: () => pz
     });
-    var Uy = Wy(4068),
-      hy = Wy(19);
-    const fy = .25,
-      Zy = .85,
-      cb = .02,
-      Py = .01;
+    var Ez = bz(4616),
+      nz = bz(20);
+    const iz = .25,
+      lz = .85,
+      Mz = .02,
+      tz = .01;
 
-    function oy(yb, bb, Wy, Uy, hy, fy, cb) {
+    function Hz(zz, uz, bz, Ez, nz, iz, Mz) {
       const {
-        waveform: Py,
-        pitchHz: oy,
-        attackMs: By,
-        releaseMs: Ky,
-        lowpassHz: ey
-      } = Wy, qb = hy + Uy.durationMs / 1e3, sy = oy * 2 ** (Uy.semitones / 12), Sy = yb.createOscillator();
-      Sy.type = Py, Sy.frequency.setValueAtTime(sy, hy), Sy.frequency.exponentialRampToValueAtTime(sy * 2 ** (Uy.glideSemitones / 12), qb);
-      const Ey = hy + Math.min(By, Uy.durationMs) / 1e3,
-        ly = yb.createGain();
-      ly.gain.setValueAtTime(0, hy), ly.gain.linearRampToValueAtTime(fy, Ey), ly.gain.linearRampToValueAtTime(fy * Zy, Math.max(Ey, qb - Ky / 1e3)), ly.gain.linearRampToValueAtTime(0, qb);
-      const mb = [Sy];
-      if (null !== ey) {
-        const bb = yb.createBiquadFilter();
-        bb.type = "lowpass", bb.frequency.value = ey, mb.push(bb)
+        waveform: tz,
+        pitchHz: Hz,
+        attackMs: Oz,
+        releaseMs: pz,
+        lowpassHz: dz
+      } = bz, Fz = nz + Ez.durationMs / 1e3, Zz = Hz * 2 ** (Ez.semitones / 12), Rz = zz.createOscillator();
+      Rz.type = tz, Rz.frequency.setValueAtTime(Zz, nz), Rz.frequency.exponentialRampToValueAtTime(Zz * 2 ** (Ez.glideSemitones / 12), Fz);
+      const Kz = nz + Math.min(Oz, Ez.durationMs) / 1e3,
+        wz = zz.createGain();
+      wz.gain.setValueAtTime(0, nz), wz.gain.linearRampToValueAtTime(iz, Kz), wz.gain.linearRampToValueAtTime(iz * lz, Math.max(Kz, Fz - pz / 1e3)), wz.gain.linearRampToValueAtTime(0, Fz);
+      const Xz = [Rz];
+      if (null !== dz) {
+        const uz = zz.createBiquadFilter();
+        uz.type = "lowpass", uz.frequency.value = dz, Xz.push(uz)
       }
-      mb.push(ly, bb);
-      for (let Zy = 1; Zy < mb.length; Zy++) mb[Zy - 1].connect(mb[Zy]);
-      return Sy.onended = () => {
-        for (const yb of mb.slice(0, -1)) yb.disconnect();
-        cb()
-      }, Sy.start(hy), Sy.stop(qb), Sy
+      Xz.push(wz, uz);
+      for (let lz = 1; lz < Xz.length; lz++) Xz[lz - 1].connect(Xz[lz]);
+      return Rz.onended = () => {
+        for (const zz of Xz.slice(0, -1)) zz.disconnect();
+        Mz()
+      }, Rz.start(nz), Rz.stop(Fz), Rz
     }
 
-    function By(yb, bb, Wy, Uy, hy, Zy) {
-      if (0 === Uy.length) return Zy(), () => {};
-      const By = fy * Wy.volume * hy,
-        Ky = yb.createGain();
-      Ky.connect(bb);
-      const ey = yb.currentTime + cb,
-        qb = new Set;
-      for (const fy of Uy) {
-        const bb = oy(yb, Ky, Wy, fy, ey + fy.atMs / 1e3, By * fy.level, (() => {
-          qb.delete(bb), 0 === qb.size && (Ky.disconnect(), Zy())
+    function Oz(zz, uz, bz, Ez, nz, lz) {
+      if (0 === Ez.length) return lz(), () => {};
+      const Oz = iz * bz.volume * nz,
+        pz = zz.createGain();
+      pz.connect(uz);
+      const dz = zz.currentTime + Mz,
+        Fz = new Set;
+      for (const iz of Ez) {
+        const uz = Hz(zz, pz, bz, iz, dz + iz.atMs / 1e3, Oz * iz.level, (() => {
+          Fz.delete(uz), 0 === Fz.size && (pz.disconnect(), lz())
         }));
-        qb.add(bb)
+        Fz.add(uz)
       }
       return () => {
-        const bb = yb.currentTime;
-        Ky.gain.setTargetAtTime(0, bb, Py);
-        for (const yb of qb) try {
-          yb.stop(bb + 5 * Py)
+        const uz = zz.currentTime;
+        pz.gain.setTargetAtTime(0, uz, tz);
+        for (const zz of Fz) try {
+          zz.stop(uz + 5 * tz)
         } catch {}
       }
     }
 
-    function Ky(yb, bb) {
-      var Wy;
-      const fy = Uy.d.ctx,
-        Zy = Uy.d.masterGain;
-      if (!fy || !Zy || !hy.d.get("soundOnFromAd")) return () => {};
-      const cb = Uy.d;
-      return null === (Wy = cb._autoResume) || void 0 === Wy || Wy.call(cb), By(fy, Zy, yb, bb, hy.d.get("soundVolume"), (() => {
-        var yb;
-        null === (yb = cb._autoSuspend) || void 0 === yb || yb.call(cb)
+    function pz(zz, uz) {
+      var bz;
+      const iz = Ez.Howler.ctx,
+        lz = Ez.Howler.masterGain;
+      if (!iz || !lz || !nz.e.get("soundOnFromAd")) return () => {};
+      const Mz = Ez.Howler;
+      return null === (bz = Mz._autoResume) || void 0 === bz || bz.call(Mz), Oz(iz, lz, zz, uz, nz.e.get("soundVolume"), (() => {
+        var zz;
+        null === (zz = Mz._autoSuspend) || void 0 === zz || zz.call(Mz)
       }))
     }
   },
-  37793: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      closeClientGame: () => rb,
-      createDefaultClientPlugins: () => uy
+  38489: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      closeClientGame: () => mz,
+      createDefaultClientPlugins: () => Vz
     });
-    var Uy = Wy(258);
+    var Ez = bz(328);
 
-    function hy() {
-      let yb;
+    function nz() {
+      let zz;
       return {
-        onCreate(bb) {
-          yb = bb
+        onCreate(uz) {
+          zz = uz
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(bb, Wy, hy, fy, Zy, cb) {
-          var Py, oy;
-          if ("Iron Chest" !== yb.getMetaInfo(Zy).rootName) return;
-          if (!yb.hasEffect(bb, "Thief")) return;
-          const By = yb.getBlockData(Wy, hy, fy);
-          return yb.getPlayerDbId(bb) !== (null === By || void 0 === By || null === (Py = By.persisted) || void 0 === Py || null === (oy = Py.shared) || void 0 === oy ? void 0 : oy.ownerDbId) ? (yb.sendMessage(bb, [{
+        onPlayerAttemptAltAction(uz, bz, nz, iz, lz, Mz) {
+          var tz, Hz;
+          if ("Iron Chest" !== zz.getMetaInfo(lz).rootName) return;
+          if (!zz.hasEffect(uz, "Thief")) return;
+          const Oz = zz.getBlockData(bz, nz, iz);
+          return zz.getPlayerDbId(uz) !== (null === Oz || void 0 === Oz || null === (tz = Oz.persisted) || void 0 === tz || null === (Hz = tz.shared) || void 0 === Hz ? void 0 : Hz.ownerDbId) ? (zz.sendMessage(uz, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Uy.K.redUiText
+              color: Ez.N.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var fy = Wy(3525),
-      Zy = Wy(1102);
-    const cb = 8.4,
-      Py = 1e-4,
-      oy = .15,
-      By = .04,
-      Ky = [.12, .04, .12],
-      ey = 26,
-      qb = {
+    var iz = bz(4035),
+      lz = bz(1226);
+    const Mz = 8.4,
+      tz = 1e-4,
+      Hz = .15,
+      Oz = .04,
+      pz = [.12, .04, .12],
+      dz = 26,
+      Fz = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        Hy: 1,
-        minLifeTime: Py,
-        maxLifeTime: Py,
+        Bp: 1,
+        minLifeTime: tz,
+        maxLifeTime: tz,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: fy.e.Standard
+        blendMode: iz.d.Standard
       },
-      sy = {
+      Zz = {
         texture: "bubble",
         mipmaps: !1,
-        Hy: 96,
+        Bp: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: ey,
+        emitRate: dz,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: fy.e.Standard
+        blendMode: iz.d.Standard
       },
-      Sy = [0, 0, 0],
-      Ey = [0, 0, 0];
+      Rz = [0, 0, 0],
+      Kz = [0, 0, 0];
 
-    function ly(yb) {
-      const bb = new Map;
-      let Wy = null;
+    function wz(zz) {
+      const uz = new Map;
+      let bz = null;
 
-      function Uy(yb) {
-        var bb, Wy;
-        null === (bb = yb.bubbles) || void 0 === bb || bb.stop(), null === (Wy = yb.fish) || void 0 === Wy || Wy.stop()
+      function Ez(zz) {
+        var uz, bz;
+        null === (uz = zz.bubbles) || void 0 === uz || uz.stop(), null === (bz = zz.fish) || void 0 === bz || bz.stop()
       }
 
-      function hy(Wy) {
-        if (!Wy.readDrawnPosition(yb, Ey)) {
-          for (const yb of bb.values()) {
-            var Uy;
-            null === (Uy = yb.bubbles) || void 0 === Uy || Uy.setEmitRate(0)
+      function nz(bz) {
+        if (!bz.readDrawnPosition(zz, Kz)) {
+          for (const zz of uz.values()) {
+            var Ez;
+            null === (Ez = zz.bubbles) || void 0 === Ez || Ez.setEmitRate(0)
           }
           return
         }
-        const hy = performance.now();
-        for (const [yb, Zy] of bb) {
-          var fy;
-          if (null === (fy = Zy.bubbles) || void 0 === fy || fy.setEmitRate(0), !Wy.readDrawnPosition(yb, Sy)) continue;
-          if (!((Sy[0] - Ey[0]) ** 2 + (Sy[1] - Ey[1]) ** 2 + (Sy[2] - Ey[2]) ** 2 < 900)) continue;
-          const bb = Math.max(0, Zy.biteAt - hy),
-            Uy = Zy.approachDurationMs > 0 ? Math.min(1, 1 - bb / Zy.approachDurationMs) : 1,
-            Py = (Zy.approachDurationMs - bb) / 1e3,
-            ly = Zy.phase + .25 * Math.sin(1.7 * Py + Zy.phase),
-            mb = Math.min(Zy.approachDurationMs / 3e3 * 2.8, cb) * (1 - Uy) * (1 + .15 * Math.sin(2.1 * Py + Zy.phase)),
-            Cy = Math.min(1, 4 * (1 - Uy)),
-            Ty = (.45 * Math.sin(4.1 * Py + Zy.phase) + .18 * Math.sin(9.7 * Py + 2 * Zy.phase)) * Cy,
-            Vy = Sy[0] + Math.cos(ly) * mb - Math.sin(ly) * Ty,
-            Jy = Math.ceil(Zy.surfaceY),
-            gb = Sy[2] + Math.sin(ly) * mb + Math.cos(ly) * Ty,
+        const nz = performance.now();
+        for (const [zz, lz] of uz) {
+          var iz;
+          if (null === (iz = lz.bubbles) || void 0 === iz || iz.setEmitRate(0), !bz.readDrawnPosition(zz, Rz)) continue;
+          if (!((Rz[0] - Kz[0]) ** 2 + (Rz[1] - Kz[1]) ** 2 + (Rz[2] - Kz[2]) ** 2 < 900)) continue;
+          const uz = Math.max(0, lz.biteAt - nz),
+            Ez = lz.approachDurationMs > 0 ? Math.min(1, 1 - uz / lz.approachDurationMs) : 1,
+            tz = (lz.approachDurationMs - uz) / 1e3,
+            wz = lz.phase + .25 * Math.sin(1.7 * tz + lz.phase),
+            Xz = Math.min(lz.approachDurationMs / 3e3 * 2.8, Mz) * (1 - Ez) * (1 + .15 * Math.sin(2.1 * tz + lz.phase)),
+            fz = Math.min(1, 4 * (1 - Ez)),
+            sz = (.45 * Math.sin(4.1 * tz + lz.phase) + .18 * Math.sin(9.7 * tz + 2 * lz.phase)) * fz,
+            rz = Rz[0] + Math.cos(wz) * Xz - Math.sin(wz) * sz,
+            oz = Math.ceil(lz.surfaceY),
+            Nz = Rz[2] + Math.sin(wz) * Xz + Math.cos(wz) * sz,
             {
-              fishAt: Gy,
-              bubblesAt: Oy
-            } = Zy;
-          Gy[0] = Oy[0] = Vy, Gy[1] = Jy + oy, Oy[1] = Jy + By, Gy[2] = Oy[2] = gb, Zy.fish ??= Wy.createParticles(qb, {
-            pos: Gy
-          }), Zy.fish.moveTo(Gy), Zy.fish.emit(1), Zy.bubbles ??= Wy.createParticles(sy, {
-            pos: Oy,
-            half: Ky
-          }), Zy.bubbles.moveTo(Oy), Zy.bubbles.setEmitRate(ey + 32 * (.5 + .5 * Math.sin(9 * Py + Zy.phase)) ** 4 + 13 * Uy)
+              fishAt: vz,
+              bubblesAt: xz
+            } = lz;
+          vz[0] = xz[0] = rz, vz[1] = oz + Hz, xz[1] = oz + Oz, vz[2] = xz[2] = Nz, lz.fish ??= bz.createParticles(Fz, {
+            pos: vz
+          }), lz.fish.moveTo(vz), lz.fish.emit(1), lz.bubbles ??= bz.createParticles(Zz, {
+            pos: xz,
+            half: pz
+          }), lz.bubbles.moveTo(xz), lz.bubbles.setEmitRate(dz + 32 * (.5 + .5 * Math.sin(9 * tz + lz.phase)) ** 4 + 13 * Ez)
         }
       }
       return {
-        onCreate(yb) {
-          Wy = yb
+        onCreate(zz) {
+          bz = zz
         },
         onAfterRender() {
-          Wy && hy(Wy)
+          bz && nz(bz)
         },
         onClose() {
-          for (const yb of bb.values()) Uy(yb);
-          bb.clear(), Wy = null
+          for (const zz of uz.values()) Ez(zz);
+          uz.clear(), bz = null
         },
-        onReceivedMessageFromServer(yb, Wy) {
-          if (yb !== Zy.C) return;
+        onReceivedMessageFromServer(zz, bz) {
+          if (zz !== lz.y) return;
           const {
-            hookId: hy,
-            waiting: fy
-          } = Wy;
-          if (fy) bb.has(hy) || bb.set(hy, {
+            hookId: nz,
+            waiting: iz
+          } = bz;
+          if (iz) uz.has(nz) || uz.set(nz, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + fy.remainingMs,
-            approachDurationMs: fy.durationMs,
-            surfaceY: fy.surfaceY,
+            biteAt: performance.now() + iz.remainingMs,
+            approachDurationMs: iz.durationMs,
+            surfaceY: iz.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const yb = bb.get(hy);
-            yb && Uy(yb), bb.delete(hy)
+            const zz = uz.get(nz);
+            zz && Ez(zz), uz.delete(nz)
           }
         }
       }
     }
-    var mb = Wy(4060),
-      Cy = Wy(4050);
+    var Xz = bz(4609),
+      fz = bz(4601);
 
-    function Ty(yb) {
-      let bb, Wy = null,
-        Uy = null;
-      const hy = () => {
-        var yb;
-        null === (yb = Uy) || void 0 === yb || yb(), Uy = null
+    function sz(zz) {
+      let uz, bz = null,
+        Ez = null;
+      const nz = () => {
+        var zz;
+        null === (zz = Ez) || void 0 === zz || zz(), Ez = null
       };
       return {
-        onCreate(Uy) {
-          bb = Uy, Wy = bb.getClientOption(yb, "dialogue")
+        onCreate(Ez) {
+          uz = Ez, bz = uz.getClientOption(zz, "dialogue")
         },
         onAfterRender() {
-          if (!bb) return;
-          const fy = bb.getClientOption(yb, "dialogue");
-          if (fy === Wy) return;
-          if (Wy = fy, hy(), !fy || !1 === fy.animateIn) return;
+          if (!uz) return;
+          const iz = uz.getClientOption(zz, "dialogue");
+          if (iz === bz) return;
+          if (bz = iz, nz(), !iz || !1 === iz.animateIn) return;
           const {
-            plan: Zy,
-            synth: cb
-          } = (0, Cy.f)(fy);
-          cb && (Uy = (0, mb.e)(cb, Zy.blips))
+            plan: lz,
+            synth: Mz
+          } = (0, fz.g)(iz);
+          Mz && (Ez = (0, Xz.d)(Mz, lz.blips))
         },
-        onClose: hy
+        onClose: nz
       }
     }
-    var Vy = Wy(37801);
-    const Jy = [
+    var rz = bz(38496);
+    const oz = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      gb = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      Gy = [0, 1, 2, 0, 2, 3];
+      Nz = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      vz = [0, 1, 2, 0, 2, 3];
 
-    function Oy(yb, bb, Wy) {
-      var Uy;
-      let [hy, fy, Zy] = bb;
-      if (yb.hasPackModel("Furnace")) return null;
-      const cb = ((null !== (Uy = yb.getMetaInfo(Wy).rot) && void 0 !== Uy ? Uy : 1) - 1) * Math.PI / 2,
-        Py = Math.PI + cb,
-        oy = Math.cos(Py),
-        By = Math.sin(Py),
-        Ky = [];
-      for (const [sy, Sy] of Jy) Ky.push(sy * oy, Sy, -sy * By);
-      const ey = {
-          positions: Ky,
-          indices: Gy,
-          uvs: gb
+    function xz(zz, uz, bz) {
+      var Ez;
+      let [nz, iz, lz] = uz;
+      if (zz.hasPackModel("Furnace")) return null;
+      const Mz = ((null !== (Ez = zz.getMetaInfo(bz).rot) && void 0 !== Ez ? Ez : 1) - 1) * Math.PI / 2,
+        tz = Math.PI + Mz,
+        Hz = Math.cos(tz),
+        Oz = Math.sin(tz),
+        pz = [];
+      for (const [Zz, Rz] of oz) pz.push(Zz * Hz, Rz, -Zz * Oz);
+      const dz = {
+          positions: pz,
+          indices: vz,
+          uvs: Nz
         },
-        qb = [hy + .5 + .51 * Math.sin(cb), fy + .375, Zy + .5 + .51 * Math.cos(cb)];
-      return yb.createGameMesh(ey, {
+        Fz = [nz + .5 + .51 * Math.sin(Mz), iz + .375, lz + .5 + .51 * Math.cos(Mz)];
+      return zz.createGameMesh(dz, {
         kind: "furnaceFire"
-      }, qb)
+      }, Fz)
     }
 
-    function Ry(yb) {
-      return Math.floor(yb / 200) % 3
+    function Jz(zz) {
+      return Math.floor(zz / 200) % 3
     }
 
-    function vb(yb, bb, Wy) {
-      yb.setGameMesh(bb, {
-        uvOffset: [0, Wy / 3]
+    function Az(zz, uz, bz) {
+      zz.setGameMesh(uz, {
+        uvOffset: [0, bz / 3]
       })
     }
-    const ib = [.12, .025, .12],
-      My = [{
+    const Tz = [.12, .025, .12],
+      Lz = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: fy.e.Standard,
+          blendMode: iz.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: fy.e.Add,
+          blendMode: iz.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Yy {
+    class Pz {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(yb, bb) {
-        const Wy = yb.getBlockId(bb[0], bb[1], bb[2]);
-        if ("Furnace" !== yb.getMetaInfo(Wy).rootName) return;
-        const Uy = performance.now();
-        let hy = this.smokes.find((yb => yb.pos[0] === bb[0] && yb.pos[1] === bb[1] && yb.pos[2] === bb[2] && yb.Df === Wy));
-        if (hy || (hy = {
-            pos: [bb[0], bb[1], bb[2]],
-            Df: Wy,
-            endMs: Uy,
+      start(zz, uz) {
+        const bz = zz.getBlockId(uz[0], uz[1], uz[2]);
+        if ("Furnace" !== zz.getMetaInfo(bz).rootName) return;
+        const Ez = performance.now();
+        let nz = this.smokes.find((zz => zz.pos[0] === uz[0] && zz.pos[1] === uz[1] && zz.pos[2] === uz[2] && zz.hO === bz));
+        if (nz || (nz = {
+            pos: [uz[0], uz[1], uz[2]],
+            hO: bz,
+            endMs: Ez,
             lastBurstMs: -1 / 0,
-            pending: new Array(My.length).fill(0),
-            fire: Oy(yb, bb, Wy)
-          }, this.smokes.push(hy), null !== hy.fire && (vb(yb, hy.fire, Ry(Uy)), this.shownFireFrame = -1)), hy.endMs = Uy + 6e3, this.smokes.length > 4) {
-          const bb = this.smokes.reduce(((yb, bb) => bb.endMs < yb.endMs ? bb : yb));
-          Xy(yb, bb), this.smokes.splice(this.smokes.indexOf(bb), 1)
+            pending: new Array(Lz.length).fill(0),
+            fire: xz(zz, uz, bz)
+          }, this.smokes.push(nz), null !== nz.fire && (Az(zz, nz.fire, Jz(Ez)), this.shownFireFrame = -1)), nz.endMs = Ez + 6e3, this.smokes.length > 4) {
+          const uz = this.smokes.reduce(((zz, uz) => uz.endMs < zz.endMs ? uz : zz));
+          Gz(zz, uz), this.smokes.splice(this.smokes.indexOf(uz), 1)
         }
-        Uy - hy.lastBurstMs >= 300 && (hy.lastBurstMs = Uy, My.forEach(((yb, bb) => {
-          hy.pending[bb] += yb.style.count
+        Ez - nz.lastBurstMs >= 300 && (nz.lastBurstMs = Ez, Lz.forEach(((zz, uz) => {
+          nz.pending[uz] += zz.style.count
         })))
       }
-      onAfterRender(yb, bb) {
+      onAfterRender(zz, uz) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const Wy = performance.now();
-        this.smokes = this.smokes.filter((bb => {
-          const [Uy, hy, fy] = bb.pos, Zy = Wy < bb.endMs && yb.getBlockId(Uy, hy, fy) === bb.Df;
-          return Zy || Xy(yb, bb), Zy
+        const bz = performance.now();
+        this.smokes = this.smokes.filter((uz => {
+          const [Ez, nz, iz] = uz.pos, lz = bz < uz.endMs && zz.getBlockId(Ez, nz, iz) === uz.hO;
+          return lz || Gz(zz, uz), lz
         }));
-        const Uy = Ry(Wy);
-        if (Uy !== this.shownFireFrame) {
-          this.shownFireFrame = Uy;
-          for (const bb of this.smokes) null !== bb.fire && vb(yb, bb.fire, Uy)
+        const Ez = Jz(bz);
+        if (Ez !== this.shownFireFrame) {
+          this.shownFireFrame = Ez;
+          for (const uz of this.smokes) null !== uz.fire && Az(zz, uz.fire, Ez)
         }
-        if (!yb.particlesEnabled()) {
-          for (const yb of this.smokes) yb.pending.fill(0);
+        if (!zz.particlesEnabled()) {
+          for (const zz of this.smokes) zz.pending.fill(0);
           return
         }
-        const hy = Math.min(bb, 250) / 1e3;
-        for (const fy of this.smokes) {
-          const [bb, Uy, Zy] = fy.pos;
-          if (0 !== yb.getBlockId(bb, Uy + 1, Zy)) {
-            fy.pending.fill(0);
+        const nz = Math.min(uz, 250) / 1e3;
+        for (const iz of this.smokes) {
+          const [uz, Ez, lz] = iz.pos;
+          if (0 !== zz.getBlockId(uz, Ez + 1, lz)) {
+            iz.pending.fill(0);
             continue
           }
-          const cb = (fy.endMs - Wy) / 6e3,
-            Py = this.centre;
-          Py[0] = bb + .5, Py[1] = Uy + 1.275, Py[2] = Zy + .5, My.forEach(((bb, Wy) => {
-            fy.pending[Wy] += bb.perSecond * cb * hy;
-            const Uy = Math.floor(fy.pending[Wy]);
-            Uy > 0 && this.emit(yb, Wy, Py, Uy) && (fy.pending[Wy] -= Uy)
+          const Mz = (iz.endMs - bz) / 6e3,
+            tz = this.centre;
+          tz[0] = uz + .5, tz[1] = Ez + 1.275, tz[2] = lz + .5, Lz.forEach(((uz, bz) => {
+            iz.pending[bz] += uz.perSecond * Mz * nz;
+            const Ez = Math.floor(iz.pending[bz]);
+            Ez > 0 && this.emit(zz, bz, tz, Ez) && (iz.pending[bz] -= Ez)
           }))
         }
       }
-      dispose(yb) {
-        for (const Wy of this.smokes) Xy(yb, Wy);
+      dispose(zz) {
+        for (const bz of this.smokes) Gz(zz, bz);
         this.smokes = [];
-        for (const Wy of null !== (bb = this.puffers) && void 0 !== bb ? bb : []) {
-          var bb;
-          Wy.dispose()
+        for (const bz of null !== (uz = this.puffers) && void 0 !== uz ? uz : []) {
+          var uz;
+          bz.dispose()
         }
         this.puffers = null
       }
-      emit(yb, bb, Wy, Uy) {
-        return this.puffers ??= My.map((yb => {
+      emit(zz, uz, bz, Ez) {
+        return this.puffers ??= Lz.map((zz => {
           let {
-            style: bb,
-            perSecond: Wy
-          } = yb;
-          const Uy = (bb.count / .3 + Wy) * bb.life[1];
-          return new Vy.f(bb, Math.ceil(4 * Uy), ib)
-        })), this.puffers[bb].emit(yb, Wy, this.renderFrame, Uy)
+            style: uz,
+            perSecond: bz
+          } = zz;
+          const Ez = (uz.count / .3 + bz) * uz.life[1];
+          return new rz.f(uz, Math.ceil(4 * Ez), Tz)
+        })), this.puffers[uz].emit(zz, bz, this.renderFrame, Ez)
       }
     }
 
-    function Xy(yb, bb) {
-      null !== bb.fire && (yb.disposeGameMesh(bb.fire), bb.fire = null)
+    function Gz(zz, uz) {
+      null !== uz.fire && (zz.disposeGameMesh(uz.fire), uz.fire = null)
     }
 
-    function ny() {
-      let yb;
-      const bb = new Yy;
+    function az() {
+      let zz;
+      const uz = new Pz;
       return {
-        onCreate(bb) {
-          yb = bb
+        onCreate(uz) {
+          zz = uz
         },
-        onReceivedMessageFromServer(Wy, Uy) {
-          Wy === Zy.G && bb.start(yb, Uy)
+        onReceivedMessageFromServer(bz, Ez) {
+          bz === lz.A && uz.start(zz, Ez)
         },
-        onAfterRender(Wy) {
-          bb.onAfterRender(yb, Wy)
+        onAfterRender(bz) {
+          uz.onAfterRender(zz, bz)
         },
         onClose() {
-          bb.dispose(yb)
+          uz.dispose(zz)
         }
       }
     }
 
-    function uy(yb, bb, Wy, Uy) {
+    function Vz(zz, uz, bz, Ez) {
       return {
-        dialogue: Ty(Uy.localPlayerId),
-        fishing: ly(Uy.localPlayerId),
-        furnaceSmoke: ny(),
-        ironChest: hy()
+        dialogue: sz(Ez.localPlayerId),
+        fishing: wz(Ez.localPlayerId),
+        furnaceSmoke: az(),
+        ironChest: nz()
       }
     }
 
-    function rb(yb, bb) {
-      for (const hy of [yb, ...null !== bb && void 0 !== bb ? bb : []]) try {
-        var Wy;
-        null === hy || void 0 === hy || null === (Wy = hy.onClose) || void 0 === Wy || Wy.call(hy)
-      } catch (Uy) {
-        console.error("Error in client onClose callback", Uy)
+    function mz(zz, uz) {
+      for (const nz of [zz, ...null !== uz && void 0 !== uz ? uz : []]) try {
+        var bz;
+        null === nz || void 0 === nz || null === (bz = nz.onClose) || void 0 === bz || bz.call(nz)
+      } catch (Ez) {
+        console.error("Error in client onClose callback", Ez)
       }
     }
   },
-  37801: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Uy,
-      f: () => fy
+  38496: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => Ez,
+      f: () => iz
     });
-    const Uy = 1 / .6,
-      hy = {
+    const Ez = 1 / .6,
+      nz = {
         kind: "smokePuff"
       };
-    class fy {
-      constructor(yb, bb, Wy) {
-        this.style = yb, this.Hy = bb, this.half = Wy, this.particles = null, this.lastFrame = -1
+    class iz {
+      constructor(zz, uz, bz) {
+        this.style = zz, this.Bp = uz, this.half = bz, this.particles = null, this.lastFrame = -1
       }
-      emit(yb, bb, Wy) {
-        let fy = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Wy !== this.lastFrame && (this.lastFrame = Wy, this.particles || (this.particles = yb.createParticles(function(yb, bb) {
+      emit(zz, uz, bz) {
+        let iz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return bz !== this.lastFrame && (this.lastFrame = bz, this.particles || (this.particles = zz.createParticles(function(zz, uz) {
           const [
-            [Wy, fy, Zy],
-            [cb, Py, oy]
-          ] = yb.colours;
+            [bz, iz, lz],
+            [Mz, tz, Hz]
+          ] = zz.colours;
           return {
-            texture: yb.soft ? hy : "square_particle",
-            Hy: bb,
-            minLifeTime: yb.life[0] / Uy,
-            maxLifeTime: yb.life[1] / Uy,
-            minEmitPower: yb.power[0] * Uy,
-            maxEmitPower: yb.power[1] * Uy,
-            minSize: yb.size[0],
-            maxSize: yb.size[1],
+            texture: zz.soft ? nz : "square_particle",
+            Bp: uz,
+            minLifeTime: zz.life[0] / Ez,
+            maxLifeTime: zz.life[1] / Ez,
+            minEmitPower: zz.power[0] * Ez,
+            maxEmitPower: zz.power[1] * Ez,
+            minSize: zz.size[0],
+            maxSize: zz.size[1],
             emitRate: 0,
-            gravity: [0, yb.lift * Uy * Uy, 0],
-            dir1: [-yb.spread, 1, -yb.spread],
-            dir2: [yb.spread, 1, yb.spread],
+            gravity: [0, zz.lift * Ez * Ez, 0],
+            dir1: [-zz.spread, 1, -zz.spread],
+            dir2: [zz.spread, 1, zz.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Wy, fy, Zy, yb.alpha],
-              maxColor: [cb, Py, oy, yb.alpha]
+              minColor: [bz, iz, lz, zz.alpha],
+              maxColor: [Mz, tz, Hz, zz.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Wy, fy, Zy, 0],
-              maxColor: [cb, Py, oy, 0]
+              minColor: [bz, iz, lz, 0],
+              maxColor: [Mz, tz, Hz, 0]
             }],
-            blendMode: yb.blendMode
+            blendMode: zz.blendMode
           }
-        }(this.style, this.Hy), {
-          pos: bb,
+        }(this.style, this.Bp), {
+          pos: uz,
           half: this.half
-        })), this.particles.moveTo(bb, this.half), this.particles.emit(fy), !0)
+        })), this.particles.moveTo(uz, this.half), this.particles.emit(iz), !0)
       }
       dispose() {
-        var yb;
-        null === (yb = this.particles) || void 0 === yb || yb.stop(), this.particles = null
+        var zz;
+        null === (zz = this.particles) || void 0 === zz || zz.stop(), this.particles = null
       }
     }
   },
-  4052: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => hy,
-      h: () => Uy,
-      i: () => fy,
-      l: () => Py,
-      p: () => Zy
+  4605: (zz, uz, bz) => {
+    bz.d(uz, {
+      e: () => nz,
+      h: () => Ez,
+      i: () => iz,
+      k: () => tz,
+      n: () => lz
     });
-    const Uy = ["sine", "triangle", "square", "sawtooth"],
-      hy = 55,
-      fy = {
+    const Ez = ["sine", "triangle", "square", "sawtooth"],
+      nz = 55,
+      iz = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function Zy(yb) {
-      return "string" !== typeof yb ? yb : Object.hasOwn(fy, yb) ? fy[yb] : null
+    function lz(zz) {
+      return "string" !== typeof zz ? zz : Object.hasOwn(iz, zz) ? iz[zz] : null
     }
 
-    function cb(yb, bb, Wy) {
-      return Math.min(Wy, Math.max(bb, yb))
+    function Mz(zz, uz, bz) {
+      return Math.min(bz, Math.max(uz, zz))
     }
 
-    function Py(yb) {
-      const bb = cb(yb.durationMs, 10, 500),
-        Wy = cb(yb.attackMs, 0, bb),
+    function tz(zz) {
+      const uz = Mz(zz.durationMs, 10, 500),
+        bz = Mz(zz.attackMs, 0, uz),
         {
-          intonation: hy
-        } = yb;
+          intonation: nz
+        } = zz;
       return {
-        waveform: Uy.includes(yb.waveform) ? yb.waveform : "sine",
-        pitchHz: cb(yb.pitchHz, 20, 4e3),
-        glideSemitones: cb(yb.glideSemitones, -24, 24),
-        durationMs: bb,
-        attackMs: Wy,
-        releaseMs: cb(yb.releaseMs, 0, bb - Wy),
-        lowpassHz: null === yb.lowpassHz ? null : cb(yb.lowpassHz, 20, 2e4),
-        volume: cb(yb.volume, 0, 2),
+        waveform: Ez.includes(zz.waveform) ? zz.waveform : "sine",
+        pitchHz: Mz(zz.pitchHz, 20, 4e3),
+        glideSemitones: Mz(zz.glideSemitones, -24, 24),
+        durationMs: uz,
+        attackMs: bz,
+        releaseMs: Mz(zz.releaseMs, 0, uz - bz),
+        lowpassHz: null === zz.lowpassHz ? null : Mz(zz.lowpassHz, 20, 2e4),
+        volume: Mz(zz.volume, 0, 2),
         intonation: {
-          variationSemitones: cb(hy.variationSemitones, 0, 6),
-          declineSemitones: cb(hy.declineSemitones, 0, 12),
-          questionRiseSemitones: cb(hy.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: cb(hy.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Mz(nz.variationSemitones, 0, 6),
+          declineSemitones: Mz(nz.declineSemitones, 0, 12),
+          questionRiseSemitones: Mz(nz.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Mz(nz.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: cb(yb.syllableMs, 25, 200)
+        syllableMs: Mz(zz.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

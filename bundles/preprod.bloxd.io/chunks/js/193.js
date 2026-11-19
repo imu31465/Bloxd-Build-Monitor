@@ -1,708 +1,442 @@
 export const id = 193;
 export const ids = [193];
 export const modules = {
-  35161: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      CreateCustomLobby: () => My
+  9047: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => nz,
+      e: () => iz
     });
-    Wy(35167);
-    var Uy = Wy(3838),
-      hy = Wy(55),
-      fy = Wy(1486),
-      Zy = Wy(898),
-      cb = Wy.n(Zy),
-      Py = Wy(2459),
-      oy = Wy(987),
-      By = Wy(1052),
-      Ky = Wy(3788),
-      ey = Wy(1273),
-      qb = Wy(35175),
-      sy = Wy(1042),
-      Sy = Wy(1185),
-      Ey = Wy(1356),
-      ly = Wy(19),
-      mb = Wy(1278),
-      Cy = Wy(547),
-      Ty = Wy(4148),
-      Vy = Wy(615),
-      Jy = Wy(1102),
-      gb = Wy(1080),
-      Gy = Wy(4159),
-      Oy = Wy(910),
-      Ry = Wy(35181),
-      vb = Wy(35187),
-      ib = Wy(952);
+    var Ez = bz(3027);
 
-    function My(yb) {
-      var bb, Wy, Zy, My;
-      let {
-        gameNameWithVariation: Yy,
-        close: Xy,
-        initialDefaultGamemode: ny
-      } = yb;
-      const {
-        t: uy
-      } = (0, sy.D)(), rb = (0, Ey.useNavigatePreserveSearch)(), [Hy, ab] = (0, hy.useState)("Enter"), [Fy, py] = (0, hy.useState)(""), Ly = hy.useRef(null), Qy = null === (bb = Vy.b[Yy]) || void 0 === bb ? void 0 : bb.showWorldsInsteadOfCustomLobbies, jb = Qy ? 1 : null === (Wy = Vy.b[Yy]) || void 0 === Wy ? void 0 : Wy.customLobbyCustomSchematicLimit, [Dy, tb] = (0, hy.useState)(!Qy);
-      ny || (ny = "classic_creative" === Yy || "classic_creativeFlat" === Yy ? "creative" : "classic" === Yy ? "peaceful" : "survival");
-      const wy = {
-        baseOptions: {
-          gameNameWithVariation: Qy ? "classic" : Yy,
-          name: "",
-          visibility: "unlisted"
-        },
-        listedOptions: {
-          description: "",
-          color: "",
-          emojis: ""
-        },
-        mapOptions: {
-          mapType: "classic_creativeFlat" === Yy ? "flat" : "default",
-          schematicIdList: []
-        },
-        worldOptions: null
+    function nz() {
+      if ("undefined" === typeof BroadcastChannel) return null;
+      const zz = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      try {
+        const uz = new BroadcastChannel(Ez.l);
+        uz.postMessage({
+          stored: zz
+        }), uz.close()
+      } catch {
+        return null
+      }
+      return zz
+    }
+
+    function iz(zz) {
+      const uz = "object" === typeof zz && null !== zz ? zz.stored : null;
+      return "string" === typeof uz ? uz : null
+    }
+  },
+  9043: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => lz,
+      f: () => nz,
+      j: () => iz
+    });
+    var Ez = bz(3027);
+    async function nz(zz, uz, bz) {
+      let nz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const iz = lz(await zz.getItem(Ez.g, uz));
+      if (null === iz || nz()) return null;
+      const Mz = await zz.getItem(Ez.k, uz);
+      return nz() ? null : (await async function(zz) {
+        await Promise.all([zz.removeItem(Ez.g), zz.removeItem(Ez.k)])
+      }(zz).catch(bz), {
+        pack: iz,
+        source: "string" === typeof Mz ? Mz : null
+      })
+    }
+
+    function iz(zz) {
+      return (0, Ez.u)() ? Promise.resolve(null) : nz(zz, !1, (zz => {
+        console.error("Error removing temporary texture pack: ", zz)
+      }), Ez.u)
+    }
+
+    function lz(zz) {
+      if ("object" !== typeof zz || null === zz) return null;
+      const uz = zz.metaData;
+      return "object" !== typeof uz || null === uz || "string" !== typeof uz.id ? null : zz
+    }
+  },
+  42612: (zz, uz, bz) => {
+    function Ez(zz) {
+      return null === zz.gameSource ? "player" : "customGame"
+    }
+    bz.d(uz, {
+      c: () => iz,
+      f: () => Rz,
+      i: () => Zz,
+      m: () => Ez
+    });
+    const nz = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
+
+    function iz(zz) {
+      return "" === zz || "string" === typeof zz && nz.test(zz)
+    }
+
+    function lz(zz) {
+      return "object" === typeof zz && null !== zz && ("earth" === zz.type || Object.entries(zz).every((zz => {
+        let [uz, bz] = zz;
+        return "type" === uz || iz(bz)
+      })))
+    }
+    const Mz = /(?:src|image|image-set|cross-fade)\(/i,
+      tz = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      Hz = /url\(/gi,
+      Oz = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      pz = new Set([...Oz.map((zz => new URL(zz).origin)), "https://fonts.gstatic.com"]),
+      dz = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
+
+    function Fz(zz) {
+      var uz, bz;
+      if (zz.includes("\\") || Mz.test(zz)) return !0;
+      const Ez = [...zz.matchAll(tz)];
+      return Ez.length !== (null !== (uz = null === (bz = zz.match(Hz)) || void 0 === bz ? void 0 : bz.length) && void 0 !== uz ? uz : 0) || !Ez.every((zz => {
+        var uz, bz, Ez;
+        let {
+          groups: nz
+        } = zz;
+        return function(zz) {
+          try {
+            return Oz.every((uz => {
+              const bz = new URL(zz, uz);
+              return "data:" === bz.protocol || pz.has(bz.origin) || dz.has(bz.href)
+            }))
+          } catch {
+            return !1
+          }
+        }(null !== (uz = null !== (bz = null !== (Ez = null === nz || void 0 === nz ? void 0 : nz.doubleQuoted) && void 0 !== Ez ? Ez : null === nz || void 0 === nz ? void 0 : nz.singleQuoted) && void 0 !== bz ? bz : null === nz || void 0 === nz ? void 0 : nz.unquoted) && void 0 !== uz ? uz : "")
+      }))
+    }
+
+    function Zz(zz) {
+      var uz, bz, Ez, nz, Mz, tz, Hz;
+      const Oz = [...Object.values(null !== (uz = zz.textureOverrides) && void 0 !== uz ? uz : {}), ...Object.values(null !== (bz = zz.modelOverrides) && void 0 !== bz ? bz : {})],
+        pz = [...Object.values(null !== (Ez = null === (nz = zz.customCss) || void 0 === nz ? void 0 : nz.fontFaces) && void 0 !== Ez ? Ez : {}), ...Object.values(null !== (Mz = null === (tz = zz.customCss) || void 0 === tz ? void 0 : tz.classStyles) && void 0 !== Mz ? Mz : {})].flatMap((zz => Object.values(null !== zz && void 0 !== zz ? zz : {})));
+      return !Oz.every(iz) || !Object.values(null !== (Hz = zz.skyBoxes) && void 0 !== Hz ? Hz : {}).every(lz) || pz.some((zz => "string" === typeof zz && Fz(zz)))
+    }
+
+    function Rz(zz, uz) {
+      if (null === zz || "player" === uz || !Zz(zz)) return zz;
+      const bz = {
+        ...zz
       };
-      Qy && (wy.worldOptions = {
-        defaultGamemode: ny,
-        disableProtectors: !1,
-        spawnProtection: !0,
-        disableTpRequests: !1,
-        disableTribeCreation: !1,
-        disableLobbySpawn: !1,
-        voidDeathHeight: -1e4,
-        worldBorder: null,
-        disableFallDamage: !0,
-        disableMobs: !1,
-        worldGenSeed: "",
-        enableSmpMarketplace: !1,
-        enableSurvivalGuns: !1,
-        enableSpawnReset: !1,
-        enableDayNight: !0
-      });
-      const [kb, Ny] = (0, hy.useState)(wy), [zb, Iy] = (0, hy.useState)(null);
+      return zz.textureOverrides && (bz.textureOverrides = wz(zz.textureOverrides, iz, "texture")), zz.modelOverrides && (bz.modelOverrides = wz(zz.modelOverrides, iz, "model")), zz.skyBoxes && (bz.skyBoxes = wz(zz.skyBoxes, lz, "sky")), zz.customCss && (bz.customCss = function(zz) {
+        const uz = zz => wz(zz, (zz => "string" === typeof zz && !Fz(zz)), "CSS"),
+          {
+            fontFaces: bz,
+            classStyles: Ez
+          } = Kz(zz) ? zz : {},
+          nz = {};
+        for (const [iz, lz] of Object.entries(Kz(Ez) ? Ez : {})) nz[iz] = uz(lz);
+        return {
+          fontFaces: (Array.isArray(bz) ? bz : []).map(uz),
+          classStyles: nz
+        }
+      }(zz.customCss)), bz
+    }
 
-      function xb(yb, bb) {
-        Ny({
-          ...kb,
-          baseOptions: {
-            ...kb.baseOptions,
-            [yb]: bb
-          }
-        })
+    function Kz(zz) {
+      return "object" === typeof zz && null !== zz && !Array.isArray(zz)
+    }
+
+    function wz(zz, uz, bz) {
+      const Ez = Object.entries(Kz(zz) ? zz : {}),
+        nz = Ez.filter((zz => {
+          let [, bz] = zz;
+          return !uz(bz)
+        }));
+      if (nz.length > 0) {
+        const zz = nz.map((zz => {
+          let [uz] = zz;
+          return uz
+        }));
+        console.warn(`Ignoring a custom game texture pack's ${bz} files that name another site: ${zz.join(", ")}`)
       }
-
-      function Ay(yb, bb) {
-        Ny({
-          ...kb,
-          listedOptions: {
-            ...kb.listedOptions,
-            [yb]: bb
-          }
-        })
+      return Object.fromEntries(Ez.filter((zz => {
+        let [, bz] = zz;
+        return uz(bz)
+      })))
+    }
+  },
+  42615: (zz, uz, bz) => {
+    bz.d(uz, {
+      b: () => Zz,
+      c: () => fz,
+      e: () => Xz
+    });
+    var Ez = bz(994),
+      nz = bz(2916),
+      iz = bz(3016),
+      lz = bz(3027),
+      Mz = bz(9047),
+      tz = bz(9043),
+      Hz = bz(42612),
+      Oz = bz(40243),
+      pz = bz(40229),
+      dz = bz(4789);
+    const Fz = {
+      pack: null,
+      gameSource: null
+    };
+    class Zz {
+      constructor(zz) {
+        this.host = zz, this.ready = void 0, this.state = Fz, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.SZ = !1, (0, lz.p)(), this.ready = this.readStored()
       }
-
-      function dy(yb, bb) {
-        Ny({
-          ...kb,
-          worldOptions: {
-            ...kb.worldOptions,
-            [yb]: bb
-          }
-        })
+      readyWithin(zz) {
+        return Promise.race([this.ready, new Promise((uz => {
+          setTimeout(uz, zz)
+        }))])
       }
-
-      function yW(yb) {
-        Ny({
-          ...kb,
-          mapOptions: {
-            ...kb.mapOptions,
-            ...yb
-          }
-        })
-      }(0, hy.useEffect)((() => {
-        Ky.c.getNewStarterName().then((yb => {
-          Ny((bb => "" !== bb.baseOptions.name ? bb : {
-            ...bb,
-            baseOptions: {
-              ...bb.baseOptions,
-              name: yb
+      current() {
+        return this.state
+      }
+      playerState() {
+        return {
+          pack: this.playerPack,
+          gameSource: null
+        }
+      }
+      onPlayerPackChange(zz) {
+        return this.ownListeners.add(zz), () => {
+          this.ownListeners.delete(zz)
+        }
+      }
+      isUsingCustomGameTexturePack(zz) {
+        return (0, pz.g)(this.state, zz)
+      }
+      setGamePackConfirm(zz) {
+        this.confirmGamePack = zz
+      }
+      subscribe(zz) {
+        return this.listeners.set(zz, null), this.ready.then((() => {
+          this.deliver(zz)
+        })), () => {
+          this.listeners.delete(zz)
+        }
+      }
+      async setPlayerPack(zz) {
+        const uz = Kz(zz) ? null : zz;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(uz), this.change({
+          pack: uz,
+          gameSource: null
+        }, !1);
+        const bz = await this.storePlayerPack(uz);
+        return bz && this.announce(), bz
+      }
+      async packForGame(zz, uz, bz) {
+        await this.readyWithin(Math.max(0, (null !== bz && void 0 !== bz ? bz : performance.now() + Oz.c) - performance.now()));
+        const nz = ++this.picks,
+          iz = (0, Ez.k)(zz) ? (0, Ez.q)(zz) : null;
+        if (null === iz) return void this.usePlayerPack();
+        let lz;
+        const Mz = function(zz) {
+          let uz;
+          const bz = new Promise(((bz, Ez) => {
+            uz = setTimeout((() => {
+              Ez(new Error(`no answer in ${zz} ms`))
+            }), zz)
+          }));
+          return bz.catch((() => {})), {
+            passed: bz,
+            clear: () => {
+              clearTimeout(uz)
             }
-          }))
-        })).catch((yb => {
-          console.error("Error getting new starter name:", yb)
+          }
+        }(2e4);
+        try {
+          const zz = await Promise.race([uz.packKey(iz), Mz.passed]);
+          if (null !== zz && this.onGamePack && this.state.gameSource === zz) return;
+          if (null !== zz && zz === this.skippedKey) return void(this.SZ || this.picks !== nz || this.usePlayerPack());
+          lz = null === zz ? null : await Promise.race([Rz(iz, zz, uz), Mz.passed])
+        } catch (pz) {
+          const zz = !this.SZ && this.picks === nz && this.holdsOtherGamePack(iz);
+          return this.host.warn(`the texture pack of ${iz} didn't load: ${zz?"the player's own shows":"the pack in play stays"}`, pz), void(zz && this.usePlayerPack())
+        } finally {
+          Mz.clear()
+        }
+        if (this.SZ || this.picks !== nz) return;
+        null !== lz && (0, Hz.i)(lz.pack) && (this.host.warn(`the texture pack of ${iz} names files on other sites: the player's own shows`, null), lz = null);
+        const tz = null === lz || await this.confirmed(lz.pack, iz) ? null : lz.key;
+        this.SZ || this.picks !== nz || (null !== tz && (this.skippedKey = tz, lz = null), null === lz ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: lz.pack,
+          gameSource: lz.key
+        }, !0)))
+      }
+      endGamePack() {
+        this.picks++, this.usePlayerPack()
+      }
+      holdsOtherGamePack(zz) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(zz)
+      }
+      async confirmed(zz, uz) {
+        const bz = this.confirmGamePack;
+        if (null === bz) return !0;
+        try {
+          return await bz(zz, uz)
+        } catch (Ez) {
+          return this.host.warn(`the texture pack prompt of ${uz} failed: the pack is skipped`, Ez), !1
+        }
+      }
+      async readPlayerPack() {
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== zz && this.ownAnnouncements.delete(zz)) return;
+        await this.ready;
+        const uz = this.ownChanges;
+        let bz;
+        try {
+          bz = await this.host.store.getItem(lz.c, !0)
+        } catch (nz) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", nz)
+        }
+        if (this.SZ || this.ownChanges !== uz) return;
+        const Ez = wz(bz);
+        (0, dz.c)(Ez, this.playerPack) || (this.ownChanges++, this.setOwn(Ez), this.onGamePack || this.change({
+          pack: Ez,
+          gameSource: null
+        }, !1))
+      }
+      joinedWithout() {
+        this.picks++
+      }
+      dispose() {
+        this.SZ = !0, this.listeners.clear()
+      }
+      async readStored() {
+        const {
+          store: zz,
+          warn: uz
+        } = this.host;
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, tz.f)(zz, !0, (zz => {
+          uz("the custom game's texture pack wasn't removed from storage", zz)
+        })).then((zz => {
+          this.takeOneShot(zz)
+        }), (zz => {
+          uz("the custom game's texture pack didn't read: the player's own shows", zz)
+        })), zz.getItem(lz.c, !0).then((zz => {
+          this.takeStoredOwn(zz)
+        }), (zz => {
+          uz("the stored texture pack didn't read: the default pack shows", zz), this.takeStoredOwn(null)
+        }))]), this.update()
+      }
+      takeOneShot(zz) {
+        var uz;
+        null === zz || this.SZ || this.changes > 0 || this.picks > 0 || ((0, Hz.i)(zz.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: zz.pack,
+          gameSource: null !== (uz = zz.source) && void 0 !== uz ? uz : ""
         }))
-      }), []), (0, hy.useEffect)((() => {
-        "customSchematic" === kb.mapOptions.mapType && null === zb && (0, oy.postJsonWithMetricsCookiesAndJsonResponse)(`${By.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
-          retries: 0,
-          minTimeout: 3e3
-        }).then((yb => {
-          Iy(yb)
-        }))
-      }), [kb.mapOptions.mapType, zb]);
-      const bW = {
-          tpRequests: {
-            isEnabled: () => !kb.worldOptions.disableTpRequests,
-            dJ: yb => {
-              dy("disableTpRequests", !yb)
-            }
-          },
-          spawnProtection: {
-            isEnabled: () => kb.worldOptions.spawnProtection,
-            dJ: yb => {
-              dy("spawnProtection", yb)
-            }
-          },
-          spawnReset: {
-            isEnabled: () => kb.worldOptions.enableSpawnReset,
-            dJ: yb => {
-              dy("enableSpawnReset", yb)
-            }
-          },
-          smpMarketplace: {
-            isEnabled: () => kb.worldOptions.enableSmpMarketplace,
-            dJ: yb => {
-              dy("enableSmpMarketplace", yb)
-            }
-          },
-          survivalGuns: {
-            isEnabled: () => kb.worldOptions.enableSurvivalGuns,
-            dJ: yb => {
-              dy("enableSurvivalGuns", yb)
-            }
-          },
-          fallDamage: {
-            isEnabled: () => !kb.worldOptions.disableFallDamage,
-            dJ: yb => {
-              dy("disableFallDamage", !yb)
-            }
-          },
-          dayNight: {
-            isEnabled: () => kb.worldOptions.enableDayNight,
-            dJ: yb => {
-              dy("enableDayNight", yb)
-            }
+      }
+      takeStoredOwn(zz) {
+        if (this.playerPicked || this.SZ) return;
+        if (this.ownChanges++, this.setOwn(wz(zz)), this.onGamePack) return;
+        const uz = {
+          pack: this.playerPack,
+          gameSource: null
+        };
+        0 === this.changes ? this.state = uz : this.change(uz, !1)
+      }
+      async update() {
+        const zz = this.playerPack,
+          uz = null === zz || void 0 === zz ? void 0 : zz.metaData.id;
+        if (!zz || !uz || !this.host.fetchLatest || uz === nz.c || uz === nz.r.CUSTOM) return;
+        const bz = nz.t[uz];
+        if (void 0 === bz || zz.metaData.version >= bz) return;
+        let Ez;
+        try {
+          Ez = wz(await this.host.fetchLatest(uz))
+        } catch (iz) {
+          return void this.host.warn(`texture pack ${uz} didn't update to version ${bz}`, iz)
+        }
+        null === Ez || this.SZ || this.playerPack !== zz || (this.ownChanges++, this.setOwn(Ez), this.onGamePack || this.change({
+          pack: Ez,
+          gameSource: null
+        }, !1), await this.storePlayerPack(Ez) && this.announce())
+      }
+      announce() {
+        const zz = (0, Mz.b)();
+        null !== zz && this.ownAnnouncements.add(zz)
+      }
+      setOwn(zz) {
+        this.playerPack = zz;
+        for (const bz of [...this.ownListeners]) try {
+          bz()
+        } catch (uz) {
+          this.host.warn("a texture pack listener threw", uz)
+        }
+      }
+      usePlayerPack() {
+        this.onGamePack && this.change({
+          pack: this.playerPack,
+          gameSource: null
+        }, !1)
+      }
+      async storePlayerPack(zz) {
+        try {
+          return null === zz ? (await this.host.store.removeItem(lz.c), !0) : await this.host.store.setItem(lz.c, zz)
+        } catch (uz) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", uz), !1
+        }
+      }
+      change(zz, uz) {
+        if (!this.SZ) {
+          this.changes++, this.onGamePack = uz, this.state = zz;
+          for (const zz of [...this.listeners.keys()]) this.deliver(zz)
+        }
+      }
+      deliver(zz) {
+        if (!this.SZ && this.listeners.has(zz) && this.listeners.get(zz) !== this.state) {
+          this.listeners.set(zz, this.state);
+          try {
+            zz(this.state)
+          } catch (uz) {
+            this.host.warn("a texture pack listener threw", uz)
           }
-        },
-        Wb = "Enter" !== Hy,
-        Ub = (0, ib.jsx)(Ty.i, {
-          className: "NameInput",
-          label: "general:name",
-          disabled: "Enter" !== Hy,
-          children: (0, ib.jsx)(fy.c, {
-            domRef: Ly,
-            onValueChange: (yb, bb) => {
-              const Wy = (0, gb.tb)(yb);
-              xb("name", Wy), Ly.current.value = Wy
-            },
-            maxLength: gb.Q,
-            defaultValue: kb.baseOptions.name
-          })
-        });
-      return (0, ib.jsxs)("div", {
-        className: cb()("CreateCustomLobby", {
-          CreateCustomLobbySuccess: "Success" === Hy,
-          AdvancedMode: Dy
-        }),
-        children: ["Success" === Hy && (0, ib.jsxs)("div", {
-          className: "CreateCustomLobbySuccessOverlay",
-          children: [(0, ib.jsxs)("div", {
-            className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
-            children: [(0, ib.jsx)(Oy.e, {
-              name: "check"
-            }), (0, ib.jsx)(mb.d, {})]
-          }), (0, ib.jsx)("div", {
-            className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
-            children: (0, ib.jsx)(ey.i, {
-              padDefaultFocus: !0,
-              onClick: () => {
-                (0, ly.g)("worldCreation"), rb((0, Sy.b)(Yy, kb.baseOptions.name))
-              },
-              children: uy("homePage:joinLobbyName", {
-                lobbyName: kb.baseOptions.name
-              })
-            })
-          })]
-        }), (0, ib.jsx)("div", {
-          className: "CreateCustomLobbyTitleContainer",
-          children: (0, ib.jsx)("div", {
-            className: "CreateCustomLobbyTitle",
-            children: uy(Qy ? "homePage:createWorld" : "homePage:createCustomLobby")
-          })
-        }), (0, ib.jsx)(vb.c, {
-          locked: Wb,
-          children: (0, ib.jsxs)("div", {
-            className: "CreateCustomLobbyFields",
-            children: [!Dy && Ub, Dy && (0, ib.jsxs)("div", {
-              className: "BloxdForm",
-              children: [(0, ib.jsx)("div", {
-                className: "SectionTitle",
-                children: uy("customLobby:generalOptions")
-              }), (0, ib.jsxs)("div", {
-                className: "SectionBody",
-                children: [Ub, (0, ib.jsx)(Ty.i, {
-                  label: "customLobby:visibility",
-                  circleInfoText: uy("customLobby:visibilityDescription"),
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(Py.c, {
-                    options: Uy.p.map((yb => ({
-                      value: yb,
-                      label: Uy.g[yb]
-                    }))),
-                    value: kb.baseOptions.visibility,
-                    onChange: yb => {
-                      xb("visibility", yb.value)
-                    }
-                  })
-                })]
-              })]
-            }), Qy && (0, ib.jsx)(Ry.d, {
-              value: kb.worldOptions.defaultGamemode,
-              onChange: yb => {
-                dy("defaultGamemode", yb)
-              },
-              showAll: Dy,
-              disabled: Wb
-            }), (Qy || !(0, Cy.D)(jb) && jb > 0) && (0, ib.jsx)(Ry.f, {
-              mapTypes: Qy ? Uy.A : Uy.n,
-              value: kb.mapOptions.mapType,
-              onChange: yb => {
-                const bb = {
-                  mapType: yb
-                };
-                "customSchematic" !== yb && (bb.schematicIdList = []), yW(bb)
-              },
-              showAll: Dy,
-              disabled: Wb,
-              children: "customSchematic" === kb.mapOptions.mapType && (0, ib.jsxs)(ib.Fragment, {
-                children: [(0, ib.jsxs)("div", {
-                  className: "SchematicListTitle AnimFadeIn",
-                  children: [Qy && uy("customLobby:selectWorldSchematic"), !Qy && uy("customLobby:selectCustomLobbySchematics", {
-                    schematicLimit: jb
-                  })]
-                }), (0, ib.jsx)("div", {
-                  className: cb()("SchematicListContainer AnimFadeIn", {
-                    SchematicListContainerDisabled: "Enter" !== Hy
-                  }),
-                  children: (0, ib.jsx)(qb.b, {
-                    loading: null === zb,
-                    schematics: null !== zb && void 0 !== zb ? zb : [],
-                    onSchematicPicked: function(yb) {
-                      const bb = kb.mapOptions.schematicIdList;
-                      if (bb.includes(yb.schematicId)) yW({
-                        schematicIdList: bb.filter((bb => bb !== yb.schematicId))
-                      });
-                      else {
-                        if (jb && kb.mapOptions.schematicIdList.length >= jb) return;
-                        yW({
-                          schematicIdList: [...kb.mapOptions.schematicIdList, yb.schematicId]
-                        })
-                      }
-                    },
-                    selectedSchematicIdList: kb.mapOptions.schematicIdList,
-                    disableAutoExport: !0
-                  })
-                })]
-              })
-            }), Dy && (0, ib.jsxs)("div", {
-              className: "BloxdForm",
-              children: [(0, ib.jsx)("div", {
-                className: "SectionTitle",
-                children: uy("customLobby:listedOptions")
-              }), (0, ib.jsxs)("div", {
-                className: "SectionBody",
-                children: [(0, ib.jsx)(Ty.i, {
-                  label: "general:description",
-                  className: "CustomLobbyDescription",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(fy.c, {
-                    onValueChange: (yb, bb) => {
-                      Ay("description", yb)
-                    },
-                    maxLength: 100,
-                    defaultValue: kb.listedOptions.description
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "general:color",
-                  circleInfoText: "customLobby:lobbyColorDescription",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)("div", {
-                    className: "OtherInput",
-                    children: (0, ib.jsx)("input", {
-                      type: "color",
-                      value: kb.listedOptions.color,
-                      onChange: yb => {
-                        Ay("color", yb.target.value)
-                      }
-                    })
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "general:emojis",
-                  circleInfoText: "customLobby:lobbyEmojisDescription",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(fy.c, {
-                    onValueChange: (yb, bb) => {
-                      Ay("emojis", yb)
-                    },
-                    maxLength: 6,
-                    defaultValue: kb.listedOptions.emojis
-                  })
-                })]
-              })]
-            }), Dy && Qy && (0, ib.jsxs)("div", {
-              className: "BloxdForm",
-              children: [(0, ib.jsx)("div", {
-                className: "SectionTitle",
-                children: uy("customLobby:advancedOptions")
-              }), (0, ib.jsxs)("div", {
-                className: "SectionBody",
-                children: [(0, ib.jsx)(Ty.i, {
-                  label: "classic:worldGenSeed",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(fy.c, {
-                    onValueChange: (yb, bb) => {
-                      dy("worldGenSeed", yb)
-                    },
-                    maxLength: gb.Q
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "classic:disableProtectors",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(Ty.e, {
-                    checked: kb.worldOptions.disableProtectors,
-                    setChecked: yb => {
-                      dy("disableProtectors", yb)
-                    }
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "classic:disableTribeCreation",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(Ty.e, {
-                    checked: kb.worldOptions.disableTribeCreation,
-                    setChecked: yb => {
-                      dy("disableTribeCreation", yb)
-                    }
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "classic:voidDeathHeight",
-                  circleInfoText: "classic:voidDeathHeightDescription",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)("input", {
-                    type: "number",
-                    max: Jy.K,
-                    value: null !== (Zy = kb.worldOptions.voidDeathHeight) && void 0 !== Zy ? Zy : "",
-                    onChange: yb => {
-                      const bb = parseInt(yb.target.value);
-                      dy("voidDeathHeight", isNaN(bb) ? null : bb)
-                    }
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "classic:disableLobbySpawn",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(Ty.e, {
-                    checked: kb.worldOptions.disableLobbySpawn,
-                    setChecked: yb => {
-                      dy("disableLobbySpawn", yb)
-                    }
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "classic:worldBorder",
-                  circleInfoText: "classic:worldBorderDescription",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)("input", {
-                    type: "number",
-                    min: Jy.T,
-                    max: Jy.O,
-                    value: null !== (My = kb.worldOptions.worldBorder) && void 0 !== My ? My : "",
-                    onChange: yb => {
-                      const bb = parseInt(yb.target.value);
-                      dy("worldBorder", isNaN(bb) ? null : bb)
-                    }
-                  })
-                }), (0, ib.jsx)(Ty.i, {
-                  label: "classic:disableMobs",
-                  disabled: "Enter" !== Hy,
-                  children: (0, ib.jsx)(Ty.e, {
-                    checked: kb.worldOptions.disableMobs,
-                    setChecked: yb => {
-                      dy("disableMobs", yb)
-                    }
-                  })
-                })]
-              })]
-            }), Qy && (0, ib.jsx)(Gy.e, {
-              callbacks: bW,
-              disabled: "Enter" !== Hy,
-              advancedMode: Dy
-            })]
-          })
-        }), (0, ib.jsxs)("div", {
-          className: "CreateCustomLobbyFooter",
-          children: [(0, ib.jsx)(ey.i, {
-            className: "CreateCustomLobbyButton",
-            padDefaultFocus: !0,
-            loading: "Enter" !== Hy,
-            onClick: () => {
-              !async function() {
-                if ("Enter" === Hy) {
-                  ab("Loading"), py("");
-                  try {
-                    await Ky.c.createCustomLobby(kb), ab("Success")
-                  } catch (yb) {
-                    py(yb.message), console.error(yb.message), ab("Enter")
-                  }
-                }
-              }()
-            },
-            children: uy("general:create")
-          }), Qy && (0, ib.jsx)("div", {
-            className: "CreateCustomLobbyAdvancedToggle",
-            "data-pad-ignore": Wb || void 0,
-            children: (0, ib.jsx)(Ty.i, {
-              label: "customLobby:showAdvancedOptions",
-              disabled: Wb,
-              onLabelClick: () => {
-                tb(!Dy)
-              },
-              children: (0, ib.jsx)(Ty.e, {
-                checked: Dy,
-                setChecked: tb
-              })
-            })
-          }), Fy && (0, ib.jsx)("div", {
-            className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: Fy
-          })]
-        })]
-      })
+        }
+      }
     }
-  },
-  35187: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Py
-    });
-    var Uy = Wy(898),
-      hy = Wy.n(Uy),
-      fy = Wy(55),
-      Zy = Wy(3771),
-      cb = Wy(952);
-
-    function Py(yb) {
-      let {
-        locked: bb,
-        children: Wy
-      } = yb;
-      const Uy = (0, fy.useRef)(null),
-        Py = (0, Zy.b)(Uy, "y");
-      return (0, cb.jsx)("div", {
-        ref: Uy,
-        className: hy()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: Py.before,
-          CreateCustomLobbyBodyMoreBelow: Py.after
-        }),
-        "data-pad-ignore": bb || void 0,
-        children: Wy
-      })
+    async function Rz(zz, uz, bz) {
+      const Ez = (0, tz.b)(await bz.fetchPack(uz));
+      if (null !== Ez) return {
+        pack: Ez,
+        key: uz
+      };
+      const nz = await bz.packKey(zz);
+      if (null === nz) return null;
+      const iz = (0, tz.b)(await bz.fetchPack(nz));
+      if (null === iz) throw new Error(`no texture pack at ${nz}`);
+      return {
+        pack: iz,
+        key: nz
+      }
     }
-  },
-  35175: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => By,
-      d: () => ey
-    });
-    var Uy = Wy(55),
-      hy = Wy(1207),
-      fy = Wy(1042),
-      Zy = Wy(1194),
-      cb = Wy(2781),
-      Py = Wy(4139),
-      oy = Wy(952);
 
-    function By(yb) {
-      let {
-        loading: bb,
-        schematics: Wy,
-        onSchematicPicked: Uy,
-        selectedSchematicIdList: hy = [],
-        disableAutoExport: Py
-      } = yb;
+    function Kz(zz) {
+      return null === zz || zz.metaData.id === nz.c
+    }
+
+    function wz(zz) {
+      const uz = (0, tz.b)(zz);
+      return Kz(uz) ? null : uz
+    }
+    async function Xz(zz) {
+      let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : iz.e;
+      if (null === zz.pack) return null;
       const {
-        t: By
-      } = (0, fy.D)();
-      return (0, oy.jsxs)("div", {
-        className: "SchematicList",
-        children: [bb && (0, oy.jsx)(Zy.e, {}), !bb && 0 === Wy.length && (0, oy.jsx)("div", {
-          className: "NoSchematicsText",
-          children: By("worldBuilder:noSavedSchematic")
-        }), !bb && Wy.map((yb => (0, oy.jsx)(cb.f, {
-          source: {
-            type: "schematic",
-            schematic: yb
-          },
-          gameWidth: "25%",
-          useLongRatio: !0,
-          onClick: () => {
-            Uy(yb)
-          },
-          isSelected: hy.includes(yb.schematicId),
-          hideCcu: !0,
-          hideFavourites: !0,
-          showPublishedChip: !0,
-          hideUnpublishedChip: !0,
-          disabled: yb.isAutoExported && Py,
-          disabledReason: "worldBuilder:autoExportDisabled"
-        }, yb.schematicId)))]
-      })
+        packAssets: Ez
+      } = await Promise.all([bz.e(195), bz.e(44)]).then((() => bz(60634)));
+      return Ez(zz, uz)
     }
 
-    function Ky(yb) {
-      let {
-        ownedSchematics: bb,
-        currentWorldSchematicId: Wy,
-        onClose: hy
-      } = yb;
-      const {
-        t: Zy
-      } = (0, fy.D)(), [cb, Ky] = (0, Uy.useState)(null);
-      return (0, oy.jsxs)("div", {
-        className: "SchematicListWindow",
-        children: [null === cb && (0, oy.jsxs)(oy.Fragment, {
-          children: [(0, oy.jsx)("h1", {
-            className: "SchematicPopupTitle",
-            children: Zy("worldBuilder:schematicList")
-          }), (0, oy.jsx)("h2", {
-            className: "SchematicPopupSubtitle",
-            children: Zy("worldBuilder:clickSchematicForOptions")
-          }), (0, oy.jsx)("div", {
-            className: "SchematicPopupSchematicListContainer",
-            children: (0, oy.jsx)(By, {
-              loading: !1,
-              schematics: bb,
-              onSchematicPicked: yb => {
-                Ky(yb)
-              },
-              disableAutoExport: !1
-            })
-          })]
-        }), null !== cb && (0, oy.jsx)(Py.h, {
-          schematic: cb,
-          inSourceWorld: cb.schematicId === Wy,
-          onSchematicUpdate: yb => {
-            Ky(yb)
-          },
-          onClose: () => {
-            Ky(null), hy()
-          }
-        })]
+    function fz(zz) {
+      const uz = (0, lz.w)();
+      return null === uz ? () => {} : (uz.onmessage = uz => {
+        zz.readPlayerPack((0, Mz.e)(uz.data))
+      }, () => {
+        uz.close()
       })
     }
-
-    function ey(yb) {
-      let {
-        ownedSchematics: bb,
-        currentWorldSchematicId: Wy,
-        onClose: Uy
-      } = yb;
-      hy.NotificationProvider.showCustomPopup({
-        body: yb => (0, oy.jsx)(Ky, {
-          ownedSchematics: bb,
-          currentWorldSchematicId: Wy,
-          onClose: yb
-        }),
-        middleScreenPopupClassName: "SchematicPopup",
-        onClose: Uy,
-        unlockPointerKey: "schematicListPopup"
-      })
-    }
-  },
-  35181: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => oy,
-      f: () => By
-    });
-    Wy(55);
-    var Uy = Wy(898),
-      hy = Wy.n(Uy),
-      fy = Wy(3838),
-      Zy = Wy(248),
-      cb = Wy(1042),
-      Py = Wy(952);
-
-    function oy(yb) {
-      let {
-        value: bb,
-        onChange: Wy,
-        showAll: Uy,
-        disabled: oy = !1
-      } = yb;
-      const {
-        t: By
-      } = (0, cb.D)();
-      return (0, Py.jsxs)("div", {
-        className: hy()("BloxdForm GamemodeForm", {
-          BasicOptions: !Uy
-        }),
-        children: [(0, Py.jsx)("div", {
-          className: "SectionTitle",
-          children: By("classic:defaultGamemode")
-        }), (0, Py.jsx)("div", {
-          className: "SectionBody",
-          children: fy.y.map((yb => Uy || (0, fy.s)(yb) ? (0, Py.jsx)("button", {
-            type: "button",
-            className: hy()("WorldGamemode", {
-              Selected: bb === yb
-            }),
-            disabled: oy,
-            onClick: () => {
-              Wy(yb)
-            },
-            style: {
-              "--background-image": `url(${Zy.u[yb]})`
-            },
-            children: Zy.q[yb]
-          }, yb) : null))
-        })]
-      })
-    }
-
-    function By(yb) {
-      let {
-        mapTypes: bb,
-        value: Wy,
-        onChange: Uy,
-        showAll: oy,
-        disabled: By = !1,
-        children: Ky
-      } = yb;
-      const {
-        t: ey
-      } = (0, cb.D)();
-      return (0, Py.jsxs)("div", {
-        className: hy()("BloxdForm MapTypeForm", {
-          BasicOptions: !oy
-        }),
-        children: [(0, Py.jsx)("div", {
-          className: "SectionTitle",
-          children: ey("customLobby:mapType")
-        }), (0, Py.jsx)("div", {
-          className: "SectionBody",
-          children: bb.map((yb => oy || (0, fy.u)(yb) ? (0, Py.jsx)("button", {
-            type: "button",
-            className: hy()("MapType", {
-              Selected: Wy === yb
-            }),
-            disabled: By,
-            onClick: () => {
-              Uy(yb)
-            },
-            style: {
-              "--background-image": `url(${Zy.n[yb]})`
-            },
-            children: Zy.k[yb]
-          }, yb) : null))
-        }), Ky]
-      })
-    }
-  },
-  35167: () => {}
+  }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

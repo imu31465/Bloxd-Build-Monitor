@@ -1,295 +1,472 @@
 export const id = 297;
-export const ids = [297];
+export const ids = [296, 297];
 export const modules = {
-  40655: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
+  40983: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      _DDSTextureLoader: () => iz
     });
-    var Uy = Wy(38319);
-    const hy = "bumpFragment",
-      fy = "vec2 uvOffset=vec2(0.0,0.0);\n#if defined(BUMP) || defined(PARALLAX) || defined(DETAIL)\n#ifdef NORMALXYSCALE\nfloat normalScale=1.0;\n#elif defined(BUMP)\nfloat normalScale=vBumpInfos.y;\n#else\nfloat normalScale=1.0;\n#endif\n#if defined(TANGENT) && defined(NORMAL)\nmat3 TBN=vTBN;\n#elif defined(BUMP)\nvec2 TBNUV=gl_FrontFacing ? vBumpUV : -vBumpUV;mat3 TBN=cotangent_frame(normalW*normalScale,vPositionW,TBNUV,vTangentSpaceParams);\n#else\nvec2 TBNUV=gl_FrontFacing ? vDetailUV : -vDetailUV;mat3 TBN=cotangent_frame(normalW*normalScale,vPositionW,TBNUV,vec2(1.,1.));\n#endif\n#elif defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nmat3 TBN=vTBN;\n#else\nvec2 TBNUV=gl_FrontFacing ? vMainUV1 : -vMainUV1;mat3 TBN=cotangent_frame(normalW,vPositionW,TBNUV,vec2(1.,1.));\n#endif\n#endif\n#ifdef PARALLAX\nmat3 invTBN=transposeMat3(TBN);\n#ifdef PARALLAXOCCLUSION\nuvOffset=parallaxOcclusion(invTBN*-viewDirectionW,invTBN*normalW,vBumpUV,vBumpInfos.z);\n#else\nuvOffset=parallaxOffset(invTBN*viewDirectionW,vBumpInfos.z);\n#endif\n#endif\n#ifdef DETAIL\nvec4 detailColor=texture2D(detailSampler,vDetailUV+uvOffset);vec2 detailNormalRG=detailColor.wy*2.0-1.0;float detailNormalB=sqrt(1.-saturate(dot(detailNormalRG,detailNormalRG)));vec3 detailNormal=vec3(detailNormalRG,detailNormalB);\n#endif\n#ifdef BUMP\n#ifdef OBJECTSPACE_NORMALMAP\n#define CUSTOM_FRAGMENT_BUMP_FRAGMENT\nnormalW=normalize(TEXRD(bumpSampler,vBumpUV).xyz *2.0-1.0);normalW=normalize(mat3(normalMatrix)*normalW);\n#elif !defined(DETAIL)\nnormalW=perturbNormal(TBN,TEXRD(bumpSampler,vBumpUV+uvOffset).xyz,vBumpInfos.y);\n#else\nvec3 bumpNormal=TEXRD(bumpSampler,vBumpUV+uvOffset).xyz*2.0-1.0;\n#if DETAIL_NORMALBLENDMETHOD==0 \ndetailNormal.xy*=vDetailInfos.z;vec3 blendedNormal=normalize(vec3(bumpNormal.xy+detailNormal.xy,bumpNormal.z*detailNormal.z));\n#elif DETAIL_NORMALBLENDMETHOD==1 \ndetailNormal.xy*=vDetailInfos.z;bumpNormal+=vec3(0.0,0.0,1.0);detailNormal*=vec3(-1.0,-1.0,1.0);vec3 blendedNormal=bumpNormal*dot(bumpNormal,detailNormal)/bumpNormal.z-detailNormal;\n#endif\nnormalW=perturbNormalBase(TBN,blendedNormal,vBumpInfos.y);\n#endif\n#elif defined(DETAIL)\ndetailNormal.xy*=vDetailInfos.z;normalW=perturbNormalBase(TBN,detailNormal,vDetailInfos.z);\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(39164),
+      nz = bz(40967);
+    class iz {
+      constructor() {
+        this.supportCascades = !0
+      }
+      loadCubeData(zz, uz, bz, iz) {
+        const lz = uz.uR();
+        let Mz, tz = !1,
+          Hz = 1e3;
+        if (Array.isArray(zz))
+          for (let Ez = 0; Ez < zz.length; Ez++) {
+            const bz = zz[Ez];
+            Mz = nz.DDSTools.GetDDSInfo(bz), uz.width = Mz.width, uz.height = Mz.height, tz = (Mz.isRGB || Mz.isLuminance || Mz.mipmapCount > 1) && uz.generateMipMaps, lz._unpackFlipY(Mz.isCompressed), nz.DDSTools.UploadDDSLevels(lz, uz, bz, Mz, tz, 6, -1, Ez), Mz.isFourCC || 1 !== Mz.mipmapCount ? Hz = Mz.mipmapCount - 1 : lz.generateMipMapsForCubemap(uz)
+          } else {
+            const iz = zz;
+            Mz = nz.DDSTools.GetDDSInfo(iz), uz.width = Mz.width, uz.height = Mz.height, bz && (Mz.sphericalPolynomial = new Ez.g), tz = (Mz.isRGB || Mz.isLuminance || Mz.mipmapCount > 1) && uz.generateMipMaps, lz._unpackFlipY(Mz.isCompressed), nz.DDSTools.UploadDDSLevels(lz, uz, iz, Mz, tz, 6), Mz.isFourCC || 1 !== Mz.mipmapCount ? Hz = Mz.mipmapCount - 1 : lz.generateMipMapsForCubemap(uz, !1)
+          }
+        lz._setCubeMapTextureParams(uz, tz, Hz), uz.isReady = !0, uz.onLoadedObservable.notifyObservers(uz), uz.onLoadedObservable.clear(), iz && iz({
+          isDDS: !0,
+          width: uz.width,
+          info: Mz,
+          data: zz,
+          texture: uz
+        })
+      }
+      loadData(zz, uz, bz) {
+        const Ez = nz.DDSTools.GetDDSInfo(zz),
+          iz = (Ez.isRGB || Ez.isLuminance || Ez.mipmapCount > 1) && uz.generateMipMaps && Math.max(Ez.width, Ez.height) >> Ez.mipmapCount - 1 === 1;
+        bz(Ez.width, Ez.height, iz, Ez.isFourCC, (() => {
+          nz.DDSTools.UploadDDSLevels(uz.uR(), uz, zz, Ez, iz, 1)
+        }))
+      }
     }
   },
-  40636: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
+  40972: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Hz
     });
-    var Uy = Wy(38319);
-    Wy(40602);
-    const hy = "bumpFragmentFunctions",
-      fy = "#if defined(BUMP)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,BUMP,_VARYINGNAME_,Bump,_SAMPLERNAME_,bump)\n#endif\n#if defined(DETAIL)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,DETAIL,_VARYINGNAME_,Detail,_SAMPLERNAME_,detail)\n#endif\n#if defined(BUMP) && defined(PARALLAX)\nconst float minSamples=4.;const float maxSamples=15.;const int iMaxSamples=15;vec2 parallaxOcclusion(vec3 vViewDirCoT,vec3 vNormalCoT,vec2 texCoord,float parallaxScale) {float parallaxLimit=length(vViewDirCoT.xy)/vViewDirCoT.z;parallaxLimit*=parallaxScale;vec2 vOffsetDir=normalize(vViewDirCoT.xy);vec2 vMaxOffset=vOffsetDir*parallaxLimit;float numSamples=maxSamples+(dot(vViewDirCoT,vNormalCoT)*(minSamples-maxSamples));float stepSize=1.0/numSamples;float currRayHeight=1.0;vec2 vCurrOffset=vec2(0,0);vec2 vLastOffset=vec2(0,0);float lastSampledHeight=1.0;float currSampledHeight=1.0;bool keepWorking=true;for (int i=0; i<iMaxSamples; i++)\n{currSampledHeight=texture2D(bumpSampler,texCoord+vCurrOffset).w;if (!keepWorking)\n{}\nelse if (currSampledHeight>currRayHeight)\n{float delta1=currSampledHeight-currRayHeight;float delta2=(currRayHeight+stepSize)-lastSampledHeight;float ratio=delta1/(delta1+delta2);vCurrOffset=(ratio)* vLastOffset+(1.0-ratio)*vCurrOffset;keepWorking=false;}\nelse\n{currRayHeight-=stepSize;vLastOffset=vCurrOffset;\n#ifdef PARALLAX_RHS\nvCurrOffset-=stepSize*vMaxOffset;\n#else\nvCurrOffset+=stepSize*vMaxOffset;\n#endif\nlastSampledHeight=currSampledHeight;}}\nreturn vCurrOffset;}\nvec2 parallaxOffset(vec3 viewDir,float heightScale)\n{float height=texture2D(bumpSampler,vBumpUV).w;vec2 texCoordOffset=heightScale*viewDir.xy*height;\n#ifdef PARALLAX_RHS\nreturn texCoordOffset;\n#else\nreturn -texCoordOffset;\n#endif\n}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(36519),
+      nz = bz(36553),
+      iz = bz(39164),
+      lz = bz(36526),
+      Mz = bz(36715);
+    class tz {
+      constructor(zz, uz, bz, Ez) {
+        this.name = zz, this.worldAxisForNormal = uz, this.worldAxisForFileX = bz, this.worldAxisForFileY = Ez
+      }
     }
+    class Hz {
+      static _NearestPow2Floor(zz) {
+        return zz <= 1 ? 1 : 1 << Math.floor(Math.log2(zz))
+      }
+      static ConvertCubeMapTextureToSphericalPolynomial(zz) {
+        if (!zz.isCube) return null;
+        zz.XT()?.uR().flushFramebuffer();
+        const uz = zz.getSize().width,
+          bz = zz._sphericalPolynomialTargetSize,
+          Ez = bz > 0 ? this._NearestPow2Floor(bz) : 0,
+          nz = !zz.noMipmap && !0 === zz._texture?.generateMipMaps,
+          iz = Ez > 0 && Ez < uz && nz,
+          lz = iz ? Math.max(0, Math.round(Math.log2(uz / Ez))) : 0,
+          Mz = iz ? Math.max(1, Math.floor(uz / Math.pow(2, lz))) : uz,
+          tz = zz.readPixels(0, lz, void 0, !1),
+          Hz = zz.readPixels(1, lz, void 0, !1);
+        let Oz, pz;
+        zz.isRenderTarget ? (Oz = zz.readPixels(3, lz, void 0, !1), pz = zz.readPixels(2, lz, void 0, !1)) : (Oz = zz.readPixels(2, lz, void 0, !1), pz = zz.readPixels(3, lz, void 0, !1));
+        const dz = zz.readPixels(4, lz, void 0, !1),
+          Fz = zz.readPixels(5, lz, void 0, !1),
+          Zz = zz.gammaSpace,
+          Rz = Ez > 0 && Ez < uz && !iz;
+        return new Promise((zz => {
+          Promise.all([Hz, tz, Oz, pz, dz, Fz]).then((bz => {
+            let [nz, iz, lz, tz, Hz, Oz] = bz, pz = Mz;
+            if (Rz) {
+              const zz = 4;
+              nz = this._DownsampleFace(nz, uz, Ez, zz), iz = this._DownsampleFace(iz, uz, Ez, zz), lz = this._DownsampleFace(lz, uz, Ez, zz), tz = this._DownsampleFace(tz, uz, Ez, zz), Hz = this._DownsampleFace(Hz, uz, Ez, zz), Oz = this._DownsampleFace(Oz, uz, Ez, zz), pz = Ez
+            }
+            const dz = {
+              size: pz,
+              right: iz,
+              left: nz,
+              up: lz,
+              down: tz,
+              front: Hz,
+              back: Oz,
+              format: 5,
+              type: nz instanceof Float32Array ? 1 : 0,
+              gammaSpace: Zz
+            };
+            zz(this.ConvertCubeMapToSphericalPolynomial(dz))
+          }))
+        }))
+      }
+      static _AreaElement(zz, uz) {
+        return Math.atan2(zz * uz, Math.sqrt(zz * zz + uz * uz + 1))
+      }
+      static _DownsampleFace(zz, uz, bz, Ez) {
+        const nz = zz instanceof Float32Array ? zz : Float32Array.from(zz),
+          iz = bz * bz * Ez,
+          lz = new Float32Array(iz),
+          Mz = uz / bz,
+          tz = 1 / (Mz * Mz);
+        for (let Oz = 0; Oz < bz; Oz++) {
+          const zz = Math.floor(Oz * Mz),
+            iz = Math.floor((Oz + 1) * Mz);
+          for (let Hz = 0; Hz < bz; Hz++) {
+            const pz = Math.floor(Hz * Mz),
+              dz = Math.floor((Hz + 1) * Mz),
+              Fz = (Oz * bz + Hz) * Ez;
+            for (let bz = 0; bz < Ez; bz++) {
+              let Mz = 0;
+              for (let lz = zz; lz < iz; lz++)
+                for (let zz = pz; zz < dz; zz++) Mz += nz[(lz * uz + zz) * Ez + bz];
+              lz[Fz + bz] = Mz * tz
+            }
+          }
+        }
+        if (zz instanceof Float32Array) return lz;
+        const Hz = new(0, zz.constructor)(iz);
+        for (let Oz = 0; Oz < iz; Oz++) Hz[Oz] = lz[Oz] + .5 | 0;
+        return Hz
+      }
+      static ConvertCubeMapToSphericalPolynomial(zz) {
+        let uz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const bz = uz > 0 ? this._NearestPow2Floor(uz) : 0;
+        if (bz > 0 && zz.size > bz) {
+          const uz = 5 === zz.format ? 4 : 3,
+            Ez = ["right", "left", "up", "down", "front", "back"],
+            nz = {};
+          for (const iz of Ez) nz[iz] = this._DownsampleFace(zz[iz], zz.size, bz, uz);
+          zz = {
+            ...zz,
+            ...nz,
+            size: bz
+          }
+        }
+        const Ez = new iz.c;
+        let tz = 0;
+        const Hz = 2 / zz.size,
+          Oz = Hz,
+          pz = .5 * Hz,
+          dz = pz - 1;
+        for (let iz = 0; iz < 6; iz++) {
+          const uz = this._FileFaces[iz],
+            bz = zz[uz.name];
+          let Fz = dz;
+          const Zz = 5 === zz.format ? 4 : 3;
+          for (let iz = 0; iz < zz.size; iz++) {
+            let Rz = dz;
+            for (let Oz = 0; Oz < zz.size; Oz++) {
+              const dz = uz.worldAxisForFileX.scale(Rz).add(uz.worldAxisForFileY.scale(Fz)).add(uz.worldAxisForNormal);
+              dz.normalize();
+              const Kz = this._AreaElement(Rz - pz, Fz - pz) - this._AreaElement(Rz - pz, Fz + pz) - this._AreaElement(Rz + pz, Fz - pz) + this._AreaElement(Rz + pz, Fz + pz);
+              let wz = bz[iz * zz.size * Zz + Oz * Zz + 0],
+                Xz = bz[iz * zz.size * Zz + Oz * Zz + 1],
+                fz = bz[iz * zz.size * Zz + Oz * Zz + 2];
+              isNaN(wz) && (wz = 0), isNaN(Xz) && (Xz = 0), isNaN(fz) && (fz = 0), 0 === zz.type && (wz /= 255, Xz /= 255, fz /= 255), zz.gammaSpace && (wz = Math.pow((0, nz.Clamp)(wz), lz.i), Xz = Math.pow((0, nz.Clamp)(Xz), lz.i), fz = Math.pow((0, nz.Clamp)(fz), lz.i));
+              const sz = this.MAX_HDRI_VALUE;
+              if (this.PRESERVE_CLAMPED_COLORS) {
+                const zz = Math.max(wz, Xz, fz);
+                if (zz > sz) {
+                  const uz = sz / zz;
+                  wz *= uz, Xz *= uz, fz *= uz
+                }
+              } else wz = (0, nz.Clamp)(wz, 0, sz), Xz = (0, nz.Clamp)(Xz, 0, sz), fz = (0, nz.Clamp)(fz, 0, sz);
+              const rz = new Mz.c(wz, Xz, fz);
+              Ez.addLight(dz, rz, Kz), tz += Kz, Rz += Hz
+            }
+            Fz += Oz
+          }
+        }
+        const Fz = 6 * (4 * Math.PI) / 6 / tz;
+        return Ez.scaleInPlace(Fz), Ez.convertIncidentRadianceToIrradiance(), Ez.convertIrradianceToLambertianRadiance(), iz.g.FromHarmonics(Ez)
+      }
+    }
+    Hz._FileFaces = [new tz("right", new Ez.n(1, 0, 0), new Ez.n(0, 0, -1), new Ez.n(0, -1, 0)), new tz("left", new Ez.n(-1, 0, 0), new Ez.n(0, 0, 1), new Ez.n(0, -1, 0)), new tz("up", new Ez.n(0, 1, 0), new Ez.n(1, 0, 0), new Ez.n(0, 0, 1)), new tz("down", new Ez.n(0, -1, 0), new Ez.n(1, 0, 0), new Ez.n(0, 0, -1)), new tz("front", new Ez.n(0, 0, 1), new Ez.n(1, 0, 0), new Ez.n(0, -1, 0)), new tz("back", new Ez.n(0, 0, -1), new Ez.n(-1, 0, 0), new Ez.n(0, -1, 0))], Hz.MAX_HDRI_VALUE = 4096, Hz.PRESERVE_CLAMPED_COLORS = !1
   },
-  40632: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
+  40967: (zz, uz, bz) => {
+    bz.d(uz, {
+      DDSTools: () => Zz
     });
-    var Uy = Wy(38319);
-    const hy = "bumpFragmentMainFunctions",
-      fy = "#ifndef TEXRD_DEFINED\n#define TEXRD(s,uv) texture2D(s,uv)\n#define TEXRD_DEFINED\n#endif\n#if defined(BUMP) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC) || defined(DETAIL)\n#if defined(TANGENT) && defined(NORMAL) \nvarying mat3 vTBN;\n#endif\n#ifdef OBJECTSPACE_NORMALMAP\nuniform mat4 normalMatrix;\n#if defined(WEBGL2) || defined(WEBGPU)\nmat4 toNormalMatrix(mat4 wMatrix)\n{mat4 ret=inverse(wMatrix);ret=transpose(ret);ret[0][3]=0.;ret[1][3]=0.;ret[2][3]=0.;ret[3]=vec4(0.,0.,0.,1.);return ret;}\n#else\nmat4 toNormalMatrix(mat4 m)\n{float\na00=m[0][0],a01=m[0][1],a02=m[0][2],a03=m[0][3],\na10=m[1][0],a11=m[1][1],a12=m[1][2],a13=m[1][3],\na20=m[2][0],a21=m[2][1],a22=m[2][2],a23=m[2][3],\na30=m[3][0],a31=m[3][1],a32=m[3][2],a33=m[3][3],\nb00=a00*a11-a01*a10,\nb01=a00*a12-a02*a10,\nb02=a00*a13-a03*a10,\nb03=a01*a12-a02*a11,\nb04=a01*a13-a03*a11,\nb05=a02*a13-a03*a12,\nb06=a20*a31-a21*a30,\nb07=a20*a32-a22*a30,\nb08=a20*a33-a23*a30,\nb09=a21*a32-a22*a31,\nb10=a21*a33-a23*a31,\nb11=a22*a33-a23*a32,\ndet=b00*b11-b01*b10+b02*b09+b03*b08-b04*b07+b05*b06;mat4 mi=mat4(\na11*b11-a12*b10+a13*b09,\na02*b10-a01*b11-a03*b09,\na31*b05-a32*b04+a33*b03,\na22*b04-a21*b05-a23*b03,\na12*b08-a10*b11-a13*b07,\na00*b11-a02*b08+a03*b07,\na32*b02-a30*b05-a33*b01,\na20*b05-a22*b02+a23*b01,\na10*b10-a11*b08+a13*b06,\na01*b08-a00*b10-a03*b06,\na30*b04-a31*b02+a33*b00,\na21*b02-a20*b04-a23*b00,\na11*b07-a10*b09-a12*b06,\na00*b09-a01*b07+a02*b06,\na31*b01-a30*b03-a32*b00,\na20*b03-a21*b01+a22*b00)/det;return mat4(mi[0][0],mi[1][0],mi[2][0],mi[3][0],\nmi[0][1],mi[1][1],mi[2][1],mi[3][1],\nmi[0][2],mi[1][2],mi[2][2],mi[3][2],\nmi[0][3],mi[1][3],mi[2][3],mi[3][3]);}\n#endif\n#endif\nvec3 perturbNormalBase(mat3 cotangentFrame,vec3 normal,float scale)\n{\n#ifdef NORMALXYSCALE\nnormal=normalize(normal*vec3(scale,scale,1.0));\n#endif\nreturn normalize(cotangentFrame*normal);}\nvec3 perturbNormal(mat3 cotangentFrame,vec3 textureSample,float scale)\n{return perturbNormalBase(cotangentFrame,textureSample*2.0-1.0,scale);}\nmat3 cotangent_frame(vec3 normal,vec3 p,vec2 uv,vec2 tangentSpaceParams)\n{vec3 dp1=dFdx(p);vec3 dp2=dFdy(p);vec2 duv1=dFdx(uv);vec2 duv2=dFdy(uv);vec3 dp2perp=cross(dp2,normal);vec3 dp1perp=cross(normal,dp1);vec3 tangent=dp2perp*duv1.x+dp1perp*duv2.x;vec3 bitangent=dp2perp*duv1.y+dp1perp*duv2.y;tangent*=tangentSpaceParams.x;bitangent*=tangentSpaceParams.y;float det=max(dot(tangent,tangent),dot(bitangent,bitangent));float invmax=det==0.0 ? 0.0 : inversesqrt(det);return mat3(tangent*invmax,bitangent*invmax,normal);}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    var Ez = bz(36553),
+      nz = bz(38060),
+      iz = bz(40972),
+      lz = bz(39231);
+    const Mz = 131072,
+      tz = 131072;
+
+    function Hz(zz) {
+      return zz.charCodeAt(0) + (zz.charCodeAt(1) << 8) + (zz.charCodeAt(2) << 16) + (zz.charCodeAt(3) << 24)
     }
-  },
-  40649: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneFragment",
-      fy = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
+    const Oz = Hz("DXT1"),
+      pz = Hz("DXT3"),
+      dz = Hz("DXT5"),
+      Fz = Hz("DX10");
+    class Zz {
+      static GetDDSInfo(zz) {
+        const uz = new Int32Array(zz.buffer, zz.byteOffset, 31),
+          bz = new Int32Array(zz.buffer, zz.byteOffset, 35);
+        let Ez = 1;
+        uz[2] & Mz && (Ez = Math.max(1, uz[7]));
+        const nz = uz[21],
+          iz = nz === Fz ? bz[32] : 0;
+        let lz = 0;
+        switch (nz) {
+          case 113:
+            lz = 2;
+            break;
+          case 116:
+            lz = 1;
+            break;
+          case Fz:
+            if (10 === iz) {
+              lz = 2;
+              break
+            }
+            if (2 === iz) {
+              lz = 1;
+              break
+            }
+        }
+        return {
+          width: uz[4],
+          height: uz[3],
+          mipmapCount: Ez,
+          isFourCC: 4 === (4 & uz[20]),
+          isRGB: 64 === (64 & uz[20]),
+          isLuminance: (uz[20] & tz) === tz,
+          isCube: 512 === (512 & uz[28]),
+          isCompressed: nz === Oz || nz === pz || nz === dz,
+          dxgiFormat: iz,
+          textureType: lz
+        }
+      }
+      static _GetHalfFloatAsFloatRGBAArrayBuffer(zz, uz, bz, Ez, nz, iz) {
+        const Mz = new Float32Array(Ez),
+          tz = new Uint16Array(nz, bz);
+        let Hz = 0;
+        for (let Oz = 0; Oz < uz; Oz++)
+          for (let uz = 0; uz < zz; uz++) {
+            const bz = 4 * (uz + Oz * zz);
+            Mz[Hz] = (0, lz.e)(tz[bz]), Mz[Hz + 1] = (0, lz.e)(tz[bz + 1]), Mz[Hz + 2] = (0, lz.e)(tz[bz + 2]), Zz.StoreLODInAlphaChannel ? Mz[Hz + 3] = iz : Mz[Hz + 3] = (0, lz.e)(tz[bz + 3]), Hz += 4
+          }
+        return Mz
+      }
+      static _GetHalfFloatRGBAArrayBuffer(zz, uz, bz, Ez, nz, iz) {
+        if (Zz.StoreLODInAlphaChannel) {
+          const Mz = new Uint16Array(Ez),
+            tz = new Uint16Array(nz, bz);
+          let Hz = 0;
+          for (let bz = 0; bz < uz; bz++)
+            for (let uz = 0; uz < zz; uz++) {
+              const Ez = 4 * (uz + bz * zz);
+              Mz[Hz] = tz[Ez], Mz[Hz + 1] = tz[Ez + 1], Mz[Hz + 2] = tz[Ez + 2], Mz[Hz + 3] = (0, lz.i)(iz), Hz += 4
+            }
+          return Mz
+        }
+        return new Uint16Array(nz, bz, Ez)
+      }
+      static _GetFloatRGBAArrayBuffer(zz, uz, bz, Ez, nz, iz) {
+        if (Zz.StoreLODInAlphaChannel) {
+          const lz = new Float32Array(Ez),
+            Mz = new Float32Array(nz, bz);
+          let tz = 0;
+          for (let bz = 0; bz < uz; bz++)
+            for (let uz = 0; uz < zz; uz++) {
+              const Ez = 4 * (uz + bz * zz);
+              lz[tz] = Mz[Ez], lz[tz + 1] = Mz[Ez + 1], lz[tz + 2] = Mz[Ez + 2], lz[tz + 3] = iz, tz += 4
+            }
+          return lz
+        }
+        return new Float32Array(nz, bz, Ez)
+      }
+      static _GetFloatAsHalfFloatRGBAArrayBuffer(zz, uz, bz, Ez, nz, iz) {
+        const Mz = new Uint16Array(Ez),
+          tz = new Float32Array(nz, bz);
+        let Hz = 0;
+        for (let Oz = 0; Oz < uz; Oz++)
+          for (let uz = 0; uz < zz; uz++) Mz[Hz] = (0, lz.i)(tz[Hz]), Mz[Hz + 1] = (0, lz.i)(tz[Hz + 1]), Mz[Hz + 2] = (0, lz.i)(tz[Hz + 2]), Zz.StoreLODInAlphaChannel ? Mz[Hz + 3] = (0, lz.i)(iz) : Mz[Hz + 3] = (0, lz.i)(tz[Hz + 3]), Hz += 4;
+        return Mz
+      }
+      static _GetFloatAsUIntRGBAArrayBuffer(zz, uz, bz, nz, iz, lz) {
+        const Mz = new Uint8Array(nz),
+          tz = new Float32Array(iz, bz);
+        let Hz = 0;
+        for (let Oz = 0; Oz < uz; Oz++)
+          for (let uz = 0; uz < zz; uz++) {
+            const bz = 4 * (uz + Oz * zz);
+            Mz[Hz] = 255 * (0, Ez.Clamp)(tz[bz]), Mz[Hz + 1] = 255 * (0, Ez.Clamp)(tz[bz + 1]), Mz[Hz + 2] = 255 * (0, Ez.Clamp)(tz[bz + 2]), Zz.StoreLODInAlphaChannel ? Mz[Hz + 3] = lz : Mz[Hz + 3] = 255 * (0, Ez.Clamp)(tz[bz + 3]), Hz += 4
+          }
+        return Mz
+      }
+      static _GetHalfFloatAsUIntRGBAArrayBuffer(zz, uz, bz, nz, iz, Mz) {
+        const tz = new Uint8Array(nz),
+          Hz = new Uint16Array(iz, bz);
+        let Oz = 0;
+        for (let pz = 0; pz < uz; pz++)
+          for (let uz = 0; uz < zz; uz++) {
+            const bz = 4 * (uz + pz * zz);
+            tz[Oz] = 255 * (0, Ez.Clamp)((0, lz.e)(Hz[bz])), tz[Oz + 1] = 255 * (0, Ez.Clamp)((0, lz.e)(Hz[bz + 1])), tz[Oz + 2] = 255 * (0, Ez.Clamp)((0, lz.e)(Hz[bz + 2])), Zz.StoreLODInAlphaChannel ? tz[Oz + 3] = Mz : tz[Oz + 3] = 255 * (0, Ez.Clamp)((0, lz.e)(Hz[bz + 3])), Oz += 4
+          }
+        return tz
+      }
+      static _GetRGBAArrayBuffer(zz, uz, bz, Ez, nz, iz, lz, Mz, tz) {
+        const Hz = new Uint8Array(Ez),
+          Oz = new Uint8Array(nz, bz);
+        let pz = 0;
+        for (let dz = 0; dz < uz; dz++)
+          for (let uz = 0; uz < zz; uz++) {
+            const bz = 4 * (uz + dz * zz);
+            Hz[pz] = Oz[bz + iz], Hz[pz + 1] = Oz[bz + lz], Hz[pz + 2] = Oz[bz + Mz], Hz[pz + 3] = Oz[bz + tz], pz += 4
+          }
+        return Hz
+      }
+      static _ExtractLongWordOrder(zz) {
+        return 0 === zz || 255 === zz || -16777216 === zz ? 0 : 1 + Zz._ExtractLongWordOrder(zz >> 8)
+      }
+      static _GetRGBArrayBuffer(zz, uz, bz, Ez, nz, iz, lz, Mz) {
+        const tz = new Uint8Array(Ez),
+          Hz = new Uint8Array(nz, bz);
+        let Oz = 0;
+        for (let pz = 0; pz < uz; pz++)
+          for (let uz = 0; uz < zz; uz++) {
+            const bz = 3 * (uz + pz * zz);
+            tz[Oz] = Hz[bz + iz], tz[Oz + 1] = Hz[bz + lz], tz[Oz + 2] = Hz[bz + Mz], Oz += 3
+          }
+        return tz
+      }
+      static _GetLuminanceArrayBuffer(zz, uz, bz, Ez, nz) {
+        const iz = new Uint8Array(Ez),
+          lz = new Uint8Array(nz, bz);
+        let Mz = 0;
+        for (let tz = 0; tz < uz; tz++)
+          for (let uz = 0; uz < zz; uz++) {
+            const bz = uz + tz * zz;
+            iz[Mz] = lz[bz], Mz++
+          }
+        return iz
+      }
+      static UploadDDSLevels(zz, uz, bz, Ez, lz, tz) {
+        let Hz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
+          Rz = arguments.length > 7 ? arguments[7] : void 0,
+          Kz = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          wz = null;
+        Ez.sphericalPolynomial && (wz = []);
+        const Xz = !!zz.getCaps().s3tc;
+        uz.generateMipMaps = lz;
+        const fz = new Int32Array(bz.buffer, bz.byteOffset, 31);
+        let sz, rz, oz, Nz, vz, xz, Jz, Az = 0,
+          Tz = 0,
+          Lz = 1;
+        if (542327876 !== fz[0]) return void nz.e.Error("Invalid magic number in DDS header");
+        if (!Ez.isFourCC && !Ez.isRGB && !Ez.isLuminance) return void nz.e.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
+        if (Ez.isCompressed && !Xz) return void nz.e.Error("Compressed textures are not supported on this platform.");
+        let Pz = fz[22];
+        Nz = fz[1] + 4;
+        let Gz = !1;
+        if (Ez.isFourCC) switch (sz = fz[21], sz) {
+          case Oz:
+            Lz = 8, Tz = 33777;
+            break;
+          case pz:
+            Lz = 16, Tz = 33778;
+            break;
+          case dz:
+            Lz = 16, Tz = 33779;
+            break;
+          case 113:
+            Gz = !0, Pz = 64;
+            break;
+          case 116:
+            Gz = !0, Pz = 128;
+            break;
+          case Fz: {
+            Nz += 20;
+            let zz = !1;
+            switch (Ez.dxgiFormat) {
+              case 10:
+                Gz = !0, Pz = 64, zz = !0;
+                break;
+              case 2:
+                Gz = !0, Pz = 128, zz = !0;
+                break;
+              case 88:
+                Ez.isRGB = !0, Ez.isFourCC = !1, Pz = 32, zz = !0
+            }
+            if (zz) break
+          }
+          default:
+            return void nz.e.Error(["Unsupported FourCC code:", (az = sz, String.fromCharCode(255 & az, az >> 8 & 255, az >> 16 & 255, az >> 24 & 255))])
+        }
+        var az;
+        const Vz = Zz._ExtractLongWordOrder(fz[23]),
+          mz = Zz._ExtractLongWordOrder(fz[24]),
+          qz = Zz._ExtractLongWordOrder(fz[25]),
+          hz = Zz._ExtractLongWordOrder(fz[26]);
+        Gz && (Tz = zz._getRGBABufferInternalSizedFormat(Ez.textureType)), xz = 1, fz[2] & Mz && !1 !== lz && (xz = Math.max(1, fz[7]));
+        const Uz = Rz || 0,
+          cz = zz.getCaps();
+        for (let nz = Uz; nz < tz; nz++) {
+          for (rz = fz[4], oz = fz[3], Jz = 0; Jz < xz; ++Jz) {
+            if (-1 === Hz || Hz === Jz) {
+              const iz = -1 === Hz ? Jz : 0;
+              if (!Ez.isCompressed && Ez.isFourCC) {
+                uz.format = 5, Az = rz * oz * 4;
+                let Ez = null;
+                if (zz._badOS || zz._badDesktopOS || !cz.textureHalfFloat && !cz.textureFloat) 128 === Pz ? (Ez = Zz._GetFloatAsUIntRGBAArrayBuffer(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, iz), wz && 0 == iz && wz.push(Zz._GetFloatRGBAArrayBuffer(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, iz))) : 64 === Pz && (Ez = Zz._GetHalfFloatAsUIntRGBAArrayBuffer(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, iz), wz && 0 == iz && wz.push(Zz._GetHalfFloatAsFloatRGBAArrayBuffer(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, iz))), uz.type = 0;
+                else {
+                  const zz = cz.textureFloat && (Kz && cz.textureFloatLinearFiltering || !Kz),
+                    nz = cz.textureHalfFloat && (Kz && cz.textureHalfFloatLinearFiltering || !Kz),
+                    lz = (128 === Pz || 64 === Pz && !nz) && zz ? 1 : (64 === Pz || 128 === Pz && !zz) && nz ? 2 : 0;
+                  let Mz, tz = null;
+                  if (128 === Pz) switch (lz) {
+                    case 1:
+                      Mz = Zz._GetFloatRGBAArrayBuffer, tz = null;
+                      break;
+                    case 2:
+                      Mz = Zz._GetFloatAsHalfFloatRGBAArrayBuffer, tz = Zz._GetFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      Mz = Zz._GetFloatAsUIntRGBAArrayBuffer, tz = Zz._GetFloatRGBAArrayBuffer
+                  } else switch (lz) {
+                    case 1:
+                      Mz = Zz._GetHalfFloatAsFloatRGBAArrayBuffer, tz = null;
+                      break;
+                    case 2:
+                      Mz = Zz._GetHalfFloatRGBAArrayBuffer, tz = Zz._GetHalfFloatAsFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      Mz = Zz._GetHalfFloatAsUIntRGBAArrayBuffer, tz = Zz._GetHalfFloatAsFloatRGBAArrayBuffer
+                  }
+                  uz.type = lz, Ez = Mz(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, iz), wz && 0 == iz && wz.push(tz ? tz(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, iz) : Ez)
+                }
+                Ez && zz._uploadDataToTextureDirectly(uz, Ez, nz, iz)
+              } else if (Ez.isRGB) uz.type = 0, 24 === Pz ? (uz.format = 4, Az = rz * oz * 3, vz = Zz._GetRGBArrayBuffer(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, Vz, mz, qz), zz._uploadDataToTextureDirectly(uz, vz, nz, iz)) : (uz.format = 5, Az = rz * oz * 4, vz = Zz._GetRGBAArrayBuffer(rz, oz, bz.byteOffset + Nz, Az, bz.buffer, Vz, mz, qz, hz), zz._uploadDataToTextureDirectly(uz, vz, nz, iz));
+              else if (Ez.isLuminance) {
+                const Ez = zz._getUnpackAlignement(),
+                  lz = rz;
+                Az = Math.floor((rz + Ez - 1) / Ez) * Ez * (oz - 1) + lz, vz = Zz._GetLuminanceArrayBuffer(rz, oz, bz.byteOffset + Nz, Az, bz.buffer), uz.format = 1, uz.type = 0, zz._uploadDataToTextureDirectly(uz, vz, nz, iz)
+              } else Az = Math.max(4, rz) / 4 * Math.max(4, oz) / 4 * Lz, vz = new Uint8Array(bz.buffer, bz.byteOffset + Nz, Az), uz.type = 0, zz._uploadCompressedDataToTextureDirectly(uz, Tz, rz, oz, vz, nz, iz)
+            }
+            Nz += Pz ? rz * oz * (Pz / 8) : Az, rz *= .5, oz *= .5, rz = Math.max(1, rz), oz = Math.max(1, oz)
+          }
+          if (void 0 !== Rz) break
+        }
+        wz && wz.length > 0 ? Ez.sphericalPolynomial = iz.d.ConvertCubeMapToSphericalPolynomial({
+          size: fz[4],
+          right: wz[0],
+          left: wz[1],
+          up: wz[2],
+          down: wz[3],
+          front: wz[4],
+          back: wz[5],
+          format: 5,
+          type: 1,
+          gammaSpace: !1
+        }) : Ez.sphericalPolynomial = void 0
+      }
     }
-  },
-  40639: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "clipPlaneFragmentDeclaration",
-      fy = "#ifdef CLIPPLANE\nvarying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nvarying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nvarying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nvarying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nvarying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nvarying float fClipDistance6;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40380: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "helperFunctions",
-      fy = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40555: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "objectIdFunctions",
-      fy = "highp vec4 encodeObjectId(highp float objectId) {\n#ifdef PREPASS_OBJECT_ID_R8\nreturn vec4(objectId/255.0,0.0,0.0,1.0);\n#else\nhighp float id=floor(objectId);highp vec3 encodedId=vec3(\nfloor(mod(id,16777216.0)/65536.0),\nfloor(mod(id,65536.0)/256.0),\nmod(id,256.0)\n)/255.0;return vec4(encodedId,step(0.5,id));\n#endif\n}\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60347: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "openpbrDielectricReflectance",
-      fy = "struct ReflectanceParams\n{float F0;float F90;vec3 coloredF0;vec3 coloredF90;};\n#define pbr_inline\nReflectanceParams dielectricReflectance(\nin float insideIOR,in float outsideIOR,in vec3 specularColor,in float specularWeight\n)\n{ReflectanceParams outParams;float dielectricF0=pow((insideIOR-outsideIOR)/(insideIOR+outsideIOR),2.0);float f90Scale=clamp(2.0*abs(insideIOR-outsideIOR),0.0,1.0);\n#if (DIELECTRIC_SPECULAR_MODEL==DIELECTRIC_SPECULAR_MODEL_OPENPBR)\nvec3 dielectricColorF90=specularColor.rgb*vec3(f90Scale);\n#else\nvec3 dielectricColorF90=vec3(f90Scale);\n#endif\n#if DIELECTRIC_SPECULAR_MODEL==DIELECTRIC_SPECULAR_MODEL_GLTF\nfloat maxF0=max(specularColor.r,max(specularColor.g,specularColor.b));outParams.F0=dielectricF0*specularWeight*maxF0;\n#else\noutParams.F0=dielectricF0*specularWeight;\n#endif\noutParams.F90=f90Scale*specularWeight;outParams.coloredF0=vec3(dielectricF0*specularWeight)*specularColor.rgb;outParams.coloredF90=dielectricColorF90*vec3(specularWeight);return outParams;}\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60353: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "openpbrGeometryInfo",
-      fy = "struct geometryInfoOutParams\n{float NdotV;float NdotVUnclamped;vec3 environmentBrdf;float horizonOcclusion;};struct geometryInfoAnisoOutParams\n{float NdotV;float NdotVUnclamped;vec3 environmentBrdf;float horizonOcclusion;float anisotropy;vec3 anisotropicTangent;vec3 anisotropicBitangent;mat3 TBN;};\n#define pbr_inline\ngeometryInfoOutParams geometryInfo(\nin vec3 normalW,in vec3 viewDirectionW,in float roughness,in vec3 geometricNormalW\n)\n{geometryInfoOutParams outParams;outParams.NdotVUnclamped=dot(normalW,viewDirectionW);outParams.NdotV=absEps(outParams.NdotVUnclamped);\n#if defined(ENVIRONMENTBRDF)\noutParams.environmentBrdf=getBRDFLookup(outParams.NdotV,roughness);\n#else\noutParams.environmentBrdf=vec3(0.0);\n#endif\noutParams.horizonOcclusion=1.0;\n#if defined(ENVIRONMENTBRDF) && !defined(REFLECTIONMAP_SKYBOX)\n#ifdef HORIZONOCCLUSION\n#if defined(GEOMETRY_NORMAL) || defined(GEOMETRY_COAT_NORMAL)\n#ifdef REFLECTIONMAP_3D\noutParams.horizonOcclusion=environmentHorizonOcclusion(-viewDirectionW,normalW,geometricNormalW);\n#endif\n#endif\n#endif\n#endif\nreturn outParams;}\n#define pbr_inline\ngeometryInfoAnisoOutParams geometryInfoAniso(\nin vec3 normalW,in vec3 viewDirectionW,in float roughness,in vec3 geometricNormalW\n,in vec3 vAnisotropy,in mat3 TBN\n)\n{geometryInfoOutParams geoInfo=geometryInfo(normalW,viewDirectionW,roughness,geometricNormalW);geometryInfoAnisoOutParams outParams;outParams.NdotV=geoInfo.NdotV;outParams.NdotVUnclamped=geoInfo.NdotVUnclamped;outParams.environmentBrdf=geoInfo.environmentBrdf;outParams.horizonOcclusion=geoInfo.horizonOcclusion;outParams.anisotropy=vAnisotropy.b;vec3 anisotropyDirection=vec3(vAnisotropy.xy,0.);mat3 anisoTBN=mat3(normalize(TBN[0]),normalize(TBN[1]),normalize(TBN[2]));outParams.anisotropicTangent=normalize(anisoTBN*anisotropyDirection);outParams.anisotropicBitangent=normalize(cross(anisoTBN[2],outParams.anisotropicTangent));outParams.TBN=TBN;return outParams;}";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60359: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "openpbrIblFunctions",
-      fy = "#ifdef REFLECTION\nvec3 sampleIrradiance(\nin vec3 surfaceNormal\n#if defined(NORMAL) && defined(USESPHERICALINVERTEX)\n,in vec3 vEnvironmentIrradianceSH\n#endif\n#if (defined(USESPHERICALFROMREFLECTIONMAP) && (!defined(NORMAL) || !defined(USESPHERICALINVERTEX))) || (defined(USEIRRADIANCEMAP) && defined(REFLECTIONMAP_3D))\n,in mat4 iblMatrix\n#endif\n#ifdef USEIRRADIANCEMAP\n#ifdef REFLECTIONMAP_3D\n,in samplerCube irradianceSampler\n#else\n,in sampler2D irradianceSampler\n#endif\n#ifdef USE_IRRADIANCE_DOMINANT_DIRECTION\n,in vec3 reflectionDominantDirection\n#endif\n#endif\n#ifdef REALTIME_FILTERING\n,in vec2 vReflectionFilteringInfo\n#ifdef IBL_CDF_FILTERING\n,in sampler2D icdfSampler\n#endif\n#endif\n,in vec2 vReflectionInfos\n,in vec3 viewDirectionW\n,in float diffuseRoughness\n,in vec3 surfaceAlbedo\n) {vec3 environmentIrradiance=vec3(0.,0.,0.);\n#if (defined(USESPHERICALFROMREFLECTIONMAP) && (!defined(NORMAL) || !defined(USESPHERICALINVERTEX))) || (defined(USEIRRADIANCEMAP) && defined(REFLECTIONMAP_3D))\nvec3 irradianceVector=(iblMatrix*vec4(surfaceNormal,0)).xyz;vec3 irradianceView=(iblMatrix*vec4(viewDirectionW,0)).xyz;\n#if !defined(USE_IRRADIANCE_DOMINANT_DIRECTION) && !defined(REALTIME_FILTERING)\n#if BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LAMBERT && BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LEGACY\n{float NdotV=max(dot(surfaceNormal,viewDirectionW),0.0);irradianceVector=mix(irradianceVector,irradianceView,(0.5*(1.0-NdotV))*diffuseRoughness);}\n#endif\n#endif\n#ifdef REFLECTIONMAP_OPPOSITEZ\nirradianceVector.z*=-1.0;irradianceView.z*=-1.0;\n#endif\n#ifdef INVERTCUBICMAP\nirradianceVector.y*=-1.0;irradianceView.y*=-1.0;\n#endif\n#endif\n#ifdef USESPHERICALFROMREFLECTIONMAP\n#if defined(NORMAL) && defined(USESPHERICALINVERTEX)\nenvironmentIrradiance=vEnvironmentIrradianceSH;\n#else\n#if defined(REALTIME_FILTERING)\nenvironmentIrradiance=irradiance(reflectionSampler,irradianceVector,vReflectionFilteringInfo,diffuseRoughness,surfaceAlbedo,irradianceView\n#ifdef IBL_CDF_FILTERING\n,icdfSampler\n#endif\n);\n#else\nenvironmentIrradiance=computeEnvironmentIrradiance(irradianceVector);\n#endif\n#endif\n#elif defined(USEIRRADIANCEMAP)\n#ifdef REFLECTIONMAP_3D\nvec4 environmentIrradianceFromTexture=sampleReflection(irradianceSampler,irradianceVector);\n#else\nvec4 environmentIrradianceFromTexture=sampleReflection(irradianceSampler,reflectionCoords);\n#endif\nenvironmentIrradiance=environmentIrradianceFromTexture.rgb;\n#ifdef RGBDREFLECTION\nenvironmentIrradiance.rgb=fromRGBD(environmentIrradianceFromTexture);\n#endif\n#ifdef GAMMAREFLECTION\nenvironmentIrradiance.rgb=toLinearSpace(environmentIrradiance.rgb);\n#endif\n#ifdef USE_IRRADIANCE_DOMINANT_DIRECTION\nvec3 Ls=normalize(reflectionDominantDirection);float NoL=dot(irradianceVector,Ls);float NoV=dot(irradianceVector,irradianceView);vec3 diffuseRoughnessTerm=vec3(1.0);\n#if BASE_DIFFUSE_MODEL==BRDF_DIFFUSE_MODEL_EON\nfloat LoV=dot (Ls,irradianceView);float mag=length(reflectionDominantDirection)*2.0;vec3 clampedAlbedo=clamp(surfaceAlbedo,vec3(0.1),vec3(1.0));diffuseRoughnessTerm=diffuseBRDF_EON(clampedAlbedo,diffuseRoughness,NoL,NoV,LoV)*PI;diffuseRoughnessTerm=diffuseRoughnessTerm/clampedAlbedo;diffuseRoughnessTerm=mix(vec3(1.0),diffuseRoughnessTerm,sqrt(clamp(mag*NoV,0.0,1.0)));\n#elif BASE_DIFFUSE_MODEL==BRDF_DIFFUSE_MODEL_BURLEY\nvec3 H=(irradianceView+Ls)*0.5;float VoH=dot(irradianceView,H);diffuseRoughnessTerm=vec3(diffuseBRDF_Burley(NoL,NoV,VoH,diffuseRoughness)*PI);\n#endif\nenvironmentIrradiance=environmentIrradiance.rgb*diffuseRoughnessTerm;\n#endif\n#endif\nenvironmentIrradiance*=vReflectionInfos.x;return environmentIrradiance;}\n#define pbr_inline\n#ifdef REFLECTIONMAP_3D\nvec3 createReflectionCoords(\n#else\nvec2 createReflectionCoords(\n#endif\nin vec3 vPositionW\n,in vec3 normalW\n)\n{vec3 reflectionVector=computeReflectionCoords(vec4(vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0;\n#endif\n#ifdef REFLECTIONMAP_3D\nvec3 reflectionCoords=reflectionVector;\n#else\nvec2 reflectionCoords=reflectionVector.xy;\n#ifdef REFLECTIONMAP_PROJECTION\nreflectionCoords/=reflectionVector.z;\n#endif\nreflectionCoords.y=1.0-reflectionCoords.y;\n#endif\nreturn reflectionCoords;}\n#define pbr_inline\n#define inline\nvec3 sampleRadiance(\nin float alphaG\n,in vec3 vReflectionMicrosurfaceInfos\n,in vec2 vReflectionInfos\n,in geometryInfoOutParams geoInfo\n#ifdef REFLECTIONMAP_3D\n,in samplerCube reflectionSampler\n,const vec3 reflectionCoords\n#else\n,in sampler2D reflectionSampler\n,const vec2 reflectionCoords\n#endif\n#ifdef REALTIME_FILTERING\n,in vec2 vReflectionFilteringInfo\n#endif\n)\n{vec4 environmentRadiance=vec4(0.,0.,0.,0.);\n#if defined(LODINREFLECTIONALPHA) && !defined(REFLECTIONMAP_SKYBOX)\nfloat reflectionLOD=getLodFromAlphaG(vReflectionMicrosurfaceInfos.x,alphaG,geoInfo.NdotVUnclamped);\n#elif defined(LINEARSPECULARREFLECTION)\nfloat reflectionLOD=getLinearLodFromRoughness(vReflectionMicrosurfaceInfos.x,roughness);\n#else\nfloat reflectionLOD=getLodFromAlphaG(vReflectionMicrosurfaceInfos.x,alphaG);\n#endif\nreflectionLOD=reflectionLOD*vReflectionMicrosurfaceInfos.y+vReflectionMicrosurfaceInfos.z;\n#ifdef REALTIME_FILTERING\nenvironmentRadiance=vec4(radiance(alphaG,reflectionSampler,reflectionCoords,vReflectionFilteringInfo),1.0);\n#else\nenvironmentRadiance=sampleReflectionLod(reflectionSampler,reflectionCoords,reflectionLOD);\n#endif\n#ifdef RGBDREFLECTION\nenvironmentRadiance.rgb=fromRGBD(environmentRadiance);\n#endif\n#ifdef GAMMAREFLECTION\nenvironmentRadiance.rgb=toLinearSpace(environmentRadiance.rgb);\n#endif\nenvironmentRadiance.rgb*=vec3(vReflectionInfos.x);return environmentRadiance.rgb;}\n#if defined(ANISOTROPIC)\n#define pbr_inline\n#define inline\nvec3 sampleRadianceAnisotropic(\nin float alphaG\n,in vec3 vReflectionMicrosurfaceInfos\n,in vec2 vReflectionInfos\n,in geometryInfoAnisoOutParams geoInfo\n,const vec3 normalW\n,const vec3 viewDirectionW\n,const vec3 positionW\n,const vec3 noise\n,bool isRefraction\n,float ior\n#ifdef REFLECTIONMAP_3D\n,in samplerCube reflectionSampler\n#else\n,in sampler2D reflectionSampler\n#endif\n#ifdef REALTIME_FILTERING\n,in vec2 vReflectionFilteringInfo\n#endif\n)\n{vec4 environmentRadiance=vec4(0.,0.,0.,0.);float alphaT=alphaG*sqrt(2.0/(1.0+(1.0-geoInfo.anisotropy)*(1.0-geoInfo.anisotropy)));float alphaB=(1.0-geoInfo.anisotropy)*alphaT;alphaG=alphaB;\n#if defined(LODINREFLECTIONALPHA) && !defined(REFLECTIONMAP_SKYBOX)\nfloat reflectionLOD=getLodFromAlphaG(vReflectionMicrosurfaceInfos.x,alphaG,geoInfo.NdotVUnclamped);\n#elif defined(LINEARSPECULARREFLECTION)\nfloat reflectionLOD=getLinearLodFromRoughness(vReflectionMicrosurfaceInfos.x,roughness);\n#else\nfloat reflectionLOD=getLodFromAlphaG(vReflectionMicrosurfaceInfos.x,alphaG);\n#endif\nreflectionLOD=reflectionLOD*vReflectionMicrosurfaceInfos.y+vReflectionMicrosurfaceInfos.z;\n#ifdef REALTIME_FILTERING\nvec3 view=(reflectionMatrix*vec4(viewDirectionW,0.0)).xyz;vec3 tangent=(reflectionMatrix*vec4(geoInfo.anisotropicTangent,0.0)).xyz;vec3 bitangent=(reflectionMatrix*vec4(geoInfo.anisotropicBitangent,0.0)).xyz;vec3 normal=(reflectionMatrix*vec4(normalW,0.0)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nview.z*=-1.0;tangent.z*=-1.0;bitangent.z*=-1.0;normal.z*=-1.0;\n#endif\nenvironmentRadiance=vec4(radianceAnisotropic(alphaT,alphaB,reflectionSampler,view,tangent,bitangent,normal,vReflectionFilteringInfo,noise.xy,isRefraction,ior),1.0);\n#else\nconst int samples=16;vec4 radianceSample=vec4(0.0);float sample_weight=0.0;float total_weight=0.0;float step=1.0/float(max(samples-1,1));for (int i=0; i<samples; ++i) {float t=mix(-1.0,1.0,float(i)*step);t+=step*2.0*noise.x;sample_weight=max(1.0-abs(t),0.001);sample_weight*=sample_weight;t*=min(4.0*alphaT*geoInfo.anisotropy,1.0);vec3 bentNormal;if (t<0.0) {float blend=t+1.0;bentNormal=normalize(mix(-geoInfo.anisotropicTangent,normalW,blend));} else if (t>0.0) {float blend=t;bentNormal=normalize(mix(normalW,geoInfo.anisotropicTangent,blend));} else {bentNormal=normalW;}\n#ifdef REFLECTIONMAP_3D\nvec3 reflectionCoords;if (isRefraction) {reflectionCoords=double_refract(-viewDirectionW,bentNormal,ior);} else {reflectionCoords=reflect(-viewDirectionW,bentNormal);}\nreflectionCoords=vec3(reflectionMatrix*vec4(reflectionCoords,0));\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionCoords.z*=-1.0;\n#endif\n#else\nvec3 sampleDirection;if (isRefraction) {sampleDirection=double_refract(-viewDirectionW,bentNormal,ior);} else {sampleDirection=reflect(-viewDirectionW,bentNormal);}\nvec3 originalViewDirectionW=normalize(vEyePosition.xyz-positionW);vec3 mappingNormalCandidate=originalViewDirectionW+sampleDirection;vec3 mappingNormal;if (dot(mappingNormalCandidate,mappingNormalCandidate)>Epsilon) {mappingNormal=normalize(mappingNormalCandidate);} else {vec3 perpendicularAxis=abs(originalViewDirectionW.x)<0.9 ? vec3(1.0,0.0,0.0) : vec3(0.0,1.0,0.0);mappingNormal=normalize(cross(originalViewDirectionW,perpendicularAxis));}\nvec2 reflectionCoords=createReflectionCoords(positionW,mappingNormal);\n#endif\nradianceSample=sampleReflectionLod(reflectionSampler,reflectionCoords,reflectionLOD);\n#ifdef RGBDREFLECTION\nenvironmentRadiance.rgb+=sample_weight*fromRGBD(radianceSample);\n#elif defined(GAMMAREFLECTION)\nenvironmentRadiance.rgb+=sample_weight*toLinearSpace(radianceSample.rgb);\n#else\nenvironmentRadiance.rgb+=sample_weight*radianceSample.rgb;\n#endif\ntotal_weight+=sample_weight;}\nenvironmentRadiance=vec4(environmentRadiance.xyz/float(total_weight),1.0);\n#endif\nenvironmentRadiance.rgb*=vec3(vReflectionInfos.x);return environmentRadiance.rgb;}\n#endif\n#endif\n#if defined(ENVIRONMENTBRDF)\n#define pbr_inline\nfloat computeDielectricIblFresnel(in ReflectanceParams reflectance,in vec3 environmentBrdf)\n{float dielectricIblFresnel=getReflectanceFromBRDFLookup(vec3(reflectance.F0),vec3(reflectance.F90),environmentBrdf).r;float dielectricECF=1.0+reflectance.F0*(1.0/environmentBrdf.y-1.0);return clamp(dielectricIblFresnel*dielectricECF,0.0,1.0);}\n#define pbr_inline\nvec3 computeConductorIblFresnel(in ReflectanceParams reflectance,in vec3 environmentBrdf)\n{\n#if (CONDUCTOR_SPECULAR_MODEL==CONDUCTOR_SPECULAR_MODEL_OPENPBR) && defined(ENVIRONMENTBRDF)\nvec3 openPBRBrdf=vec3(environmentBrdf.xy,environmentBrdf.z/BRDF_Z_SCALE);vec3 b =getF82B(reflectance.coloredF0,reflectance.coloredF90);vec3 E_F82=getF82DirectionalAlbedo(reflectance.coloredF0,vec3(1.0),b,openPBRBrdf);vec3 F_avg=getF82AverageFresnel(reflectance.coloredF0,b);vec3 ECF =vec3(1.0)+F_avg*(vec3(1.0)/openPBRBrdf.y-vec3(1.0));return clamp(E_F82*ECF,vec3(0.0),vec3(1.0));\n#else\nreturn getReflectanceFromBRDFLookup(reflectance.coloredF0,reflectance.coloredF90,environmentBrdf);\n#endif\n}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60371: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "openpbrSubsurfaceLayerData",
-      fy = "float subsurface_weight=vSubsurfaceWeight;vec3 subsurface_color=vSubsurfaceColor.rgb;float subsurface_radius=vSubsurfaceRadius;vec3 subsurface_radius_scale=vSubsurfaceRadiusScale;float subsurface_scatter_anisotropy=clamp(vSubsurfaceScatterAnisotropy,-0.9999,0.9999);\n#ifdef SUBSURFACE_WEIGHT\nvec4 subsurfaceWeightFromTexture=TEXRD(subsurfaceWeightSampler,vSubsurfaceWeightUV+uvOffset);\n#endif\n#ifdef SUBSURFACE_COLOR\nvec4 subsurfaceColorFromTexture=TEXRD(subsurfaceColorSampler,vSubsurfaceColorUV+uvOffset);\n#endif\n#ifdef SUBSURFACE_RADIUS_SCALE\nvec4 subsurfaceRadiusScaleFromTexture=TEXRD(subsurfaceRadiusScaleSampler,vSubsurfaceRadiusScaleUV+uvOffset);\n#endif\n#ifdef SUBSURFACE_WEIGHT\n#ifdef SUBSURFACE_WEIGHT_FROM_TEXTURE_ALPHA\nsubsurface_weight*=subsurfaceWeightFromTexture.a;\n#else\nsubsurface_weight*=subsurfaceWeightFromTexture.r;\n#endif\n#endif\n#ifdef SUBSURFACE_COLOR\n#ifdef SUBSURFACE_COLOR_GAMMA\nsubsurface_color*=toLinearSpace(subsurfaceColorFromTexture.rgb);\n#else\nsubsurface_color*=subsurfaceColorFromTexture.rgb;\n#endif\nsubsurface_color*=vSubsurfaceColorInfos.y;\n#endif\n#ifdef SUBSURFACE_RADIUS_SCALE\nsubsurface_radius_scale*=subsurfaceRadiusScaleFromTexture.rgb;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60368: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "openpbrTransmissionLayerData",
-      fy = "float transmission_weight=vTransmissionWeight;vec3 transmission_color=vTransmissionColor.rgb;float transmission_depth=vTransmissionDepth;vec3 transmission_scatter=vTransmissionScatter.rgb;float transmission_scatter_anisotropy=clamp(vTransmissionScatterAnisotropy,-0.9999,0.9999);float transmission_dispersion_scale=vTransmissionDispersionScale;float transmission_dispersion_abbe_number=vTransmissionDispersionAbbeNumber;\n#ifdef TRANSMISSION_WEIGHT\nvec4 transmissionWeightFromTexture=TEXRD(transmissionWeightSampler,vTransmissionWeightUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_COLOR\nvec4 transmissionColorFromTexture=TEXRD(transmissionColorSampler,vTransmissionColorUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_DEPTH\nvec4 transmissionDepthFromTexture=TEXRD(transmissionDepthSampler,vTransmissionDepthUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_SCATTER\nvec4 transmissionScatterFromTexture=TEXRD(transmissionScatterSampler,vTransmissionScatterUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_DISPERSION_SCALE\nvec4 transmissionDispersionScaleFromTexture=TEXRD(transmissionDispersionScaleSampler,vTransmissionDispersionScaleUV+uvOffset);\n#endif\n#ifdef TRANSMISSION_WEIGHT\ntransmission_weight*=transmissionWeightFromTexture.r;\n#endif\n#ifdef TRANSMISSION_COLOR\n#ifdef TRANSMISSION_COLOR_GAMMA\ntransmission_color*=toLinearSpace(transmissionColorFromTexture.rgb);\n#else\ntransmission_color*=transmissionColorFromTexture.rgb;\n#endif\ntransmission_color*=vTransmissionColorInfos.y;\n#endif\n#ifdef TRANSMISSION_DEPTH\ntransmission_depth*=transmissionDepthFromTexture.r;\n#endif\n#ifdef TRANSMISSION_SCATTER\ntransmission_scatter*=transmissionScatterFromTexture.rgb;\n#endif\n#ifdef TRANSMISSION_DISPERSION_SCALE\ntransmission_dispersion_scale*=transmissionDispersionScaleFromTexture.r;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60090: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "pbrBRDFFunctions",
-      fy = "#define FRESNEL_MAXIMUM_ON_ROUGH 0.25\n#define BRDF_DIFFUSE_MODEL_EON 0\n#define BRDF_DIFFUSE_MODEL_BURLEY 1\n#define BRDF_DIFFUSE_MODEL_LAMBERT 2\n#define BRDF_DIFFUSE_MODEL_LEGACY 3\n#define DIELECTRIC_SPECULAR_MODEL_GLTF 0\n#define DIELECTRIC_SPECULAR_MODEL_OPENPBR 1\n#define CONDUCTOR_SPECULAR_MODEL_GLTF 0\n#define CONDUCTOR_SPECULAR_MODEL_OPENPBR 1\n#if !defined(PBR_VERTEX_SHADER) && !defined(OPENPBR_VERTEX_SHADER)\n#ifdef MS_BRDF_ENERGY_CONSERVATION\nvec3 getEnergyConservationFactor(const vec3 specularEnvironmentR0,const vec3 environmentBrdf) {return 1.0+specularEnvironmentR0*(1.0/environmentBrdf.y-1.0);}\n#endif\n#if CONDUCTOR_SPECULAR_MODEL==CONDUCTOR_SPECULAR_MODEL_OPENPBR\n#define F82_COS_THETA_MAX 0.142857143\n#define F82_ONE_MINUS_CTM_POW5 0.462664366 \n#define F82_ONE_MINUS_CTM_POW6 0.396569457 \n#define F82_B_DENOMINATOR_RECIP 17.6512785 \n#define BRDF_Z_SCALE 16.0\nvec3 getF82Specular(float NdotV,vec3 F0,vec3 edgeTint,float roughness) {vec3 white_minus_F0=vec3(1.0)-F0;vec3 b=(F0+white_minus_F0*F82_ONE_MINUS_CTM_POW5)*(vec3(1.0)-edgeTint)*F82_B_DENOMINATOR_RECIP;float cos_theta=max(roughness,NdotV);float one_minus_cos_theta=1.0-cos_theta;vec3 offset_from_F0=(white_minus_F0-b*cos_theta*one_minus_cos_theta)*pow(one_minus_cos_theta,5.0);return clamp(F0+offset_from_F0,0.0,1.0);}\nvec3 getF82B(vec3 F0,vec3 edgeTint) {return (F0+(vec3(1.0)-F0)*F82_ONE_MINUS_CTM_POW5)*(vec3(1.0)-edgeTint)*F82_B_DENOMINATOR_RECIP;}\nvec3 getF82DirectionalAlbedo(vec3 F0,vec3 F90,vec3 b,vec3 environmentBrdf) {return (F90-F0)*environmentBrdf.x+F0*environmentBrdf.y-b*environmentBrdf.z;}\nvec3 getF82AverageFresnel(vec3 F0,vec3 b) {return F0+(vec3(1.0)-F0)/21.0-b/126.0;}\n#endif\n#ifdef FUZZENVIRONMENTBRDF\nvec3 getFuzzBRDFLookup(float NdotV,float perceptualRoughness) {vec2 UV=vec2(perceptualRoughness,NdotV);vec4 brdfLookup=texture2D(environmentFuzzBrdfSampler,UV);const vec2 RiRange=vec2(0.0,0.75);const vec2 ARange =vec2(0.005,0.88);const vec2 BRange =vec2(-0.18,0.002);brdfLookup.r=mix(ARange.x, ARange.y, brdfLookup.r);brdfLookup.g=mix(BRange.x, BRange.y, brdfLookup.g);brdfLookup.b=mix(RiRange.x,RiRange.y,brdfLookup.b);return brdfLookup.rgb;}\n#endif\n#ifdef ENVIRONMENTBRDF\nvec3 getBRDFLookup(float NdotV,float perceptualRoughness) {vec2 UV=vec2(NdotV,perceptualRoughness);vec4 brdfLookup=texture2D(environmentBrdfSampler,UV);\n#ifdef ENVIRONMENTBRDF_RGBD\nbrdfLookup.rgb=fromRGBD(brdfLookup.rgba);\n#endif\nreturn brdfLookup.rgb;}\nvec3 getReflectanceFromBRDFLookup(const vec3 specularEnvironmentR0,const vec3 specularEnvironmentR90,const vec3 environmentBrdf) {\n#ifdef BRDF_V_HEIGHT_CORRELATED\nvec3 reflectance=(specularEnvironmentR90-specularEnvironmentR0)*environmentBrdf.x+specularEnvironmentR0*environmentBrdf.y;\n#else\nvec3 reflectance=specularEnvironmentR0*environmentBrdf.x+specularEnvironmentR90*environmentBrdf.y;\n#endif\nreturn reflectance;}\nvec3 getReflectanceFromBRDFLookup(const vec3 specularEnvironmentR0,const vec3 environmentBrdf) {\n#ifdef BRDF_V_HEIGHT_CORRELATED\nvec3 reflectance=mix(environmentBrdf.xxx,environmentBrdf.yyy,specularEnvironmentR0);\n#else\nvec3 reflectance=specularEnvironmentR0*environmentBrdf.x+environmentBrdf.y;\n#endif\nreturn reflectance;}\n#endif\n/* NOT USED\n#if defined(SHEEN) && defined(SHEEN_SOFTER)\nfloat getBRDFLookupCharlieSheen(float NdotV,float perceptualRoughness)\n{float c=1.0-NdotV;float c3=c*c*c;return 0.65584461*c3+1.0/(4.16526551+exp(-7.97291361*perceptualRoughness+6.33516894));}\n#endif\n*/\n#if !defined(ENVIRONMENTBRDF) || defined(REFLECTIONMAP_SKYBOX) || defined(ALPHAFRESNEL)\nvec3 getReflectanceFromAnalyticalBRDFLookup_Jones(float VdotN,vec3 reflectance0,vec3 reflectance90,float smoothness)\n{float weight=mix(FRESNEL_MAXIMUM_ON_ROUGH,1.0,smoothness);return reflectance0+weight*(reflectance90-reflectance0)*pow5(saturate(1.0-VdotN));}\n#endif\n#if defined(SHEEN) && defined(ENVIRONMENTBRDF)\n/**\n* The sheen BRDF not containing F can be easily stored in the blue channel of the BRDF texture.\n* The blue channel contains DCharlie*VAshikhmin*NdotL as a lokkup table\n*/\nvec3 getSheenReflectanceFromBRDFLookup(const vec3 reflectance0,const vec3 environmentBrdf) {vec3 sheenEnvironmentReflectance=reflectance0*environmentBrdf.b;return sheenEnvironmentReflectance;}\n#endif\nvec3 fresnelSchlickGGX(float VdotH,vec3 reflectance0,vec3 reflectance90)\n{return reflectance0+(reflectance90-reflectance0)*pow5(1.0-VdotH);}\nfloat fresnelSchlickGGX(float VdotH,float reflectance0,float reflectance90)\n{return reflectance0+(reflectance90-reflectance0)*pow5(1.0-VdotH);}\n#ifdef CLEARCOAT\nvec3 getR0RemappedForClearCoat(vec3 f0) {\n#ifdef CLEARCOAT_DEFAULTIOR\n#ifdef MOBILE\nreturn saturate(f0*(f0*0.526868+0.529324)-0.0482256);\n#else\nreturn saturate(f0*(f0*(0.941892-0.263008*f0)+0.346479)-0.0285998);\n#endif\n#else\nvec3 s=sqrt(f0);vec3 t=(vClearCoatRefractionParams.z+vClearCoatRefractionParams.w*s)/(vClearCoatRefractionParams.w+vClearCoatRefractionParams.z*s);return square(t);\n#endif\n}\n#endif\n#ifdef IRIDESCENCE\nconst mat3 XYZ_TO_REC709=mat3(\n3.2404542,-0.9692660, 0.0556434,\n-1.5371385, 1.8760108,-0.2040259,\n-0.4985314, 0.0415560, 1.0572252\n);vec3 getIORTfromAirToSurfaceR0(vec3 f0) {vec3 sqrtF0=sqrt(f0);return (1.+sqrtF0)/(1.-sqrtF0);}\nvec3 getR0fromIORs(vec3 iorT,float iorI) {return square((iorT-vec3(iorI))/(iorT+vec3(iorI)));}\nfloat getR0fromIORs(float iorT,float iorI) {return square((iorT-iorI)/(iorT+iorI));}\nvec3 evalSensitivity(float opd,vec3 shift) {float phase=2.0*PI*opd*1.0e-9;const vec3 val=vec3(5.4856e-13,4.4201e-13,5.2481e-13);const vec3 pos=vec3(1.6810e+06,1.7953e+06,2.2084e+06);const vec3 var=vec3(4.3278e+09,9.3046e+09,6.6121e+09);vec3 xyz=val*sqrt(2.0*PI*var)*cos(pos*phase+shift)*exp(-square(phase)*var);xyz.x+=9.7470e-14*sqrt(2.0*PI*4.5282e+09)*cos(2.2399e+06*phase+shift[0])*exp(-4.5282e+09*square(phase));xyz/=1.0685e-7;vec3 srgb=XYZ_TO_REC709*xyz;return srgb;}\nvec3 evalIridescence(float outsideIOR,float eta2,float cosTheta1,float thinFilmThickness,vec3 baseF0) {vec3 I=vec3(1.0);float iridescenceIOR=mix(outsideIOR,eta2,smoothstep(0.0,0.03,thinFilmThickness));float sinTheta2Sq=square(outsideIOR/iridescenceIOR)*(1.0-square(cosTheta1));float cosTheta2Sq=1.0-sinTheta2Sq;if (cosTheta2Sq<0.0) {return I;}\nfloat cosTheta2=sqrt(cosTheta2Sq);float R0=getR0fromIORs(iridescenceIOR,outsideIOR);float R12=fresnelSchlickGGX(cosTheta1,R0,1.);float R21=R12;float T121=1.0-R12;float phi12=0.0;if (iridescenceIOR<outsideIOR) phi12=PI;float phi21=PI-phi12;vec3 baseIOR=getIORTfromAirToSurfaceR0(clamp(baseF0,0.0,0.9999)); \nvec3 R1=getR0fromIORs(baseIOR,iridescenceIOR);float maxR1=max(R1.r,max(R1.g,R1.b));if (maxR1<1e-6) {return max(vec3(R12),vec3(0.0));}\nvec3 R23=fresnelSchlickGGX(cosTheta2,R1,vec3(1.));vec3 phi23=vec3(0.0);if (baseIOR[0]<iridescenceIOR) phi23[0]=PI;if (baseIOR[1]<iridescenceIOR) phi23[1]=PI;if (baseIOR[2]<iridescenceIOR) phi23[2]=PI;float opd=2.0*iridescenceIOR*thinFilmThickness*cosTheta2;vec3 phi=vec3(phi21)+phi23;vec3 R123=clamp(R12*R23,1e-5,0.9999);vec3 r123=sqrt(R123);vec3 Rs=square(T121)*R23/(vec3(1.0)-R123);vec3 C0=R12+Rs;I=C0;vec3 Cm=Rs-T121;for (int m=1; m<=2; ++m)\n{Cm*=r123;vec3 Sm=2.0*evalSensitivity(float(m)*opd,float(m)*phi);I+=Cm*Sm;}\nreturn max(I,vec3(0.0));}\n#endif\nfloat normalDistributionFunction_TrowbridgeReitzGGX(float NdotH,float alphaG)\n{float a2=square(alphaG);float d=NdotH*NdotH*(a2-1.0)+1.0;return a2/(PI*d*d);}\n#ifdef SHEEN\nfloat normalDistributionFunction_CharlieSheen(float NdotH,float alphaG)\n{float invR=1./alphaG;float cos2h=NdotH*NdotH;float sin2h=1.-cos2h;return (2.+invR)*pow(sin2h,invR*.5)/(2.*PI);}\n#endif\n#ifdef ANISOTROPIC\nfloat normalDistributionFunction_BurleyGGX_Anisotropic(float NdotH,float TdotH,float BdotH,const vec2 alphaTB) {float a2=alphaTB.x*alphaTB.y;vec3 v=vec3(alphaTB.y*TdotH,alphaTB.x *BdotH,a2*NdotH);float v2=dot(v,v);float w2=a2/v2;return a2*w2*w2*RECIPROCAL_PI;}\n#endif\n#ifdef BRDF_V_HEIGHT_CORRELATED\nfloat smithVisibility_GGXCorrelated(float NdotL,float NdotV,float alphaG) {\n#ifdef MOBILE\nfloat GGXV=NdotL*(NdotV*(1.0-alphaG)+alphaG);float GGXL=NdotV*(NdotL*(1.0-alphaG)+alphaG);return 0.5/(GGXV+GGXL);\n#else\nfloat a2=alphaG*alphaG;float GGXV=NdotL*sqrt(NdotV*(NdotV-a2*NdotV)+a2);float GGXL=NdotV*sqrt(NdotL*(NdotL-a2*NdotL)+a2);return 0.5/(GGXV+GGXL);\n#endif\n}\n#else\nfloat smithVisibilityG1_TrowbridgeReitzGGXFast(float dot,float alphaG)\n{\n#ifdef MOBILE\nreturn 1.0/(dot+alphaG+(1.0-alphaG)*dot ));\n#else\nfloat alphaSquared=alphaG*alphaG;return 1.0/(dot+sqrt(alphaSquared+(1.0-alphaSquared)*dot*dot));\n#endif\n}\nfloat smithVisibility_TrowbridgeReitzGGXFast(float NdotL,float NdotV,float alphaG)\n{float visibility=smithVisibilityG1_TrowbridgeReitzGGXFast(NdotL,alphaG)*smithVisibilityG1_TrowbridgeReitzGGXFast(NdotV,alphaG);return visibility;}\n#endif\n#ifdef ANISOTROPIC\nfloat smithVisibility_GGXCorrelated_Anisotropic(float NdotL,float NdotV,float TdotV,float BdotV,float TdotL,float BdotL,const vec2 alphaTB) {float lambdaV=NdotL*length(vec3(alphaTB.x*TdotV,alphaTB.y*BdotV,NdotV));float lambdaL=NdotV*length(vec3(alphaTB.x*TdotL,alphaTB.y*BdotL,NdotL));float v=0.5/(lambdaV+lambdaL);return v;}\n#endif\n#ifdef CLEARCOAT\nfloat visibility_Kelemen(float VdotH) {return 0.25/(VdotH*VdotH); }\n#endif\n#ifdef SHEEN\nfloat visibility_Ashikhmin(float NdotL,float NdotV)\n{return 1./(4.*(NdotL+NdotV-NdotL*NdotV));}\n/* NOT USED\n#ifdef SHEEN_SOFTER\nfloat l(float x,float alphaG)\n{float oneMinusAlphaSq=(1.0-alphaG)*(1.0-alphaG);float a=mix(21.5473,25.3245,oneMinusAlphaSq);float b=mix(3.82987,3.32435,oneMinusAlphaSq);float c=mix(0.19823,0.16801,oneMinusAlphaSq);float d=mix(-1.97760,-1.27393,oneMinusAlphaSq);float e=mix(-4.32054,-4.85967,oneMinusAlphaSq);return a/(1.0+b*pow(x,c))+d*x+e;}\nfloat lambdaSheen(float cosTheta,float alphaG)\n{return abs(cosTheta)<0.5 ? exp(l(cosTheta,alphaG)) : exp(2.0*l(0.5,alphaG)-l(1.0-cosTheta,alphaG));}\nfloat visibility_CharlieSheen(float NdotL,float NdotV,float alphaG)\n{float G=1.0/(1.0+lambdaSheen(NdotV,alphaG)+lambdaSheen(NdotL,alphaG));return G/(4.0*NdotV*NdotL);}\n#endif\n*/\n#endif\nfloat diffuseBRDF_Burley(float NdotL,float NdotV,float VdotH,float roughness) {float diffuseFresnelNV=pow5(saturateEps(1.0-NdotL));float diffuseFresnelNL=pow5(saturateEps(1.0-NdotV));float diffuseFresnel90=0.5+2.0*VdotH*VdotH*roughness;float fresnel =\n(1.0+(diffuseFresnel90-1.0)*diffuseFresnelNL) *\n(1.0+(diffuseFresnel90-1.0)*diffuseFresnelNV);return fresnel/PI;}\nconst float constant1_FON=0.5-2.0/(3.0*PI);const float constant2_FON=2.0/3.0-28.0/(15.0*PI);float E_FON_approx(float mu,float roughness)\n{float sigma=roughness; \nfloat mucomp=1.0-mu;float mucomp2=mucomp*mucomp;const mat2 Gcoeffs=mat2(0.0571085289,-0.332181442,\n0.491881867,0.0714429953);float GoverPi=dot(Gcoeffs*vec2(mucomp,mucomp2),vec2(1.0,mucomp2));return (1.0+sigma*GoverPi)/(1.0+constant1_FON*sigma);}\nvec3 diffuseBRDF_EON(vec3 albedo,float roughness,float NdotL,float NdotV,float LdotV)\n{vec3 rho=albedo;float sigma=roughness; \nfloat mu_i=NdotL; \nfloat mu_o=NdotV; \nfloat s=LdotV-mu_i*mu_o; \nfloat sovertF=s>0.0 ? s/max(mu_i,mu_o) : s; \nfloat AF=1.0/(1.0+constant1_FON*sigma); \nvec3 f_ss=(rho*RECIPROCAL_PI)*AF*(1.0+sigma*sovertF); \nfloat EFo=E_FON_approx(mu_o,sigma); \nfloat EFi=E_FON_approx(mu_i,sigma); \nfloat avgEF=AF*(1.0+constant2_FON*sigma); \nvec3 rho_ms=(rho*rho)*avgEF/(vec3(1.0)-rho*(1.0-avgEF));const float eps=1.0e-7;vec3 f_ms=(rho_ms*RECIPROCAL_PI)*max(eps,1.0-EFo) \n* max(eps,1.0-EFi)\n/ max(eps,1.0-avgEF);return (f_ss+f_ms);}\n#ifdef SS_TRANSLUCENCY\nvec3 transmittanceBRDF_Burley(const vec3 tintColor,const vec3 diffusionDistance,float thickness) {vec3 S=1./maxEps(diffusionDistance);vec3 temp=exp((-0.333333333*thickness)*S);return tintColor.rgb*0.25*(temp*temp*temp+3.0*temp);}\nfloat computeWrappedDiffuseNdotL(float NdotL,float w) {float t=1.0+w;float invt2=1.0/square(t);return saturate((NdotL+w)*invt2);}\n#endif\n#endif \n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60108: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "pbrFragmentReflectionDeclaration",
-      fy = "#ifdef REFLECTION\n#ifdef REFLECTIONMAP_3D\n#define sampleReflection(s,c) textureCube(s,c)\nuniform samplerCube reflectionSampler;\n#ifdef LODBASEDMICROSFURACE\n#define sampleReflectionLod(s,c,l) textureCubeLodEXT(s,c,l)\n#else\nuniform samplerCube reflectionSamplerLow;uniform samplerCube reflectionSamplerHigh;\n#endif\n#ifdef USEIRRADIANCEMAP\nuniform samplerCube irradianceSampler;\n#endif\n#else\n#define sampleReflection(s,c) texture2D(s,c)\nuniform sampler2D reflectionSampler;\n#ifdef LODBASEDMICROSFURACE\n#define sampleReflectionLod(s,c,l) texture2DLodEXT(s,c,l)\n#else\nuniform sampler2D reflectionSamplerLow;uniform sampler2D reflectionSamplerHigh;\n#endif\n#ifdef USEIRRADIANCEMAP\nuniform sampler2D irradianceSampler;\n#endif\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vec3 vPositionUVW;\n#else\n#if defined(REFLECTIONMAP_EQUIRECTANGULAR_FIXED) || defined(REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED)\nvarying vec3 vDirectionW;\n#endif\n#endif\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60164: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "pbrIBLFunctions",
-      fy = "#if defined(REFLECTION) || defined(SS_REFRACTION)\nfloat getLodFromAlphaG(float cubeMapDimensionPixels,float microsurfaceAverageSlope) {float microsurfaceAverageSlopeTexels=cubeMapDimensionPixels*microsurfaceAverageSlope;float lod=log2(microsurfaceAverageSlopeTexels);return lod;}\nfloat getLinearLodFromRoughness(float cubeMapDimensionPixels,float roughness) {float lod=log2(cubeMapDimensionPixels)*roughness;return lod;}\n#endif\n#if defined(ENVIRONMENTBRDF) && defined(RADIANCEOCCLUSION)\nfloat environmentRadianceOcclusion(float ambientOcclusion,float NdotVUnclamped) {float temp=NdotVUnclamped+ambientOcclusion;return saturate(square(temp)-1.0+ambientOcclusion);}\n#endif\n#if defined(ENVIRONMENTBRDF) && defined(HORIZONOCCLUSION)\nfloat environmentHorizonOcclusion(vec3 view,vec3 normal,vec3 geometricNormal) {vec3 reflection=reflect(view,normal);float temp=saturate(1.0+1.1*dot(reflection,geometricNormal));return square(temp);}\n#endif\n#if defined(LODINREFLECTIONALPHA) || defined(SS_LODINREFRACTIONALPHA)\n#define UNPACK_LOD(x) (1.0-x)*255.0\nfloat getLodFromAlphaG(float cubeMapDimensionPixels,float alphaG,float NdotV) {float microsurfaceAverageSlope=alphaG;microsurfaceAverageSlope*=sqrt(abs(NdotV));return getLodFromAlphaG(cubeMapDimensionPixels,microsurfaceAverageSlope);}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40611: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      e: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "reflectionFunction",
-      fy = "vec3 computeFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0); }\nvec3 computeMirroredFixedEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 direction)\n{float lon=atan(direction.z,direction.x);float lat=acos(direction.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(1.0-s,t,0); }\nvec3 computeEquirectangularCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 cameraToVertex=normalize(worldPos.xyz-eyePosition);vec3 r=normalize(reflect(cameraToVertex,worldNormal));r=vec3(reflectionMatrix*vec4(r,0));float lon=atan(r.z,r.x);float lat=acos(r.y);vec2 sphereCoords=vec2(lon,lat)*RECIPROCAL_PI2*2.0;float s=sphereCoords.x*0.5+0.5;float t=sphereCoords.y;return vec3(s,t,0);}\nvec3 computeSphericalCoords(vec4 worldPos,vec3 worldNormal,mat4 view,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(vec3(view*worldPos));vec3 viewNormal=normalize(vec3(view*vec4(worldNormal,0.0)));vec3 r=reflect(viewDir,viewNormal);r=vec3(reflectionMatrix*vec4(r,0));r.z=r.z-1.0;float m=2.0*length(r);return vec3(r.x/m+0.5,1.0-r.y/m-0.5,0);}\nvec3 computePlanarCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=worldPos.xyz-eyePosition;vec3 coords=normalize(reflect(viewDir,worldNormal));return vec3(reflectionMatrix*vec4(coords,1));}\nvec3 computeCubicCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeCubicLocalCoords(vec4 worldPos,vec3 worldNormal,vec3 eyePosition,mat4 reflectionMatrix,vec3 reflectionSize,vec3 reflectionPosition)\n{vec3 viewDir=normalize(worldPos.xyz-eyePosition);vec3 coords=reflect(viewDir,worldNormal);coords=parallaxCorrectNormal(worldPos.xyz,coords,reflectionSize,reflectionPosition);coords=vec3(reflectionMatrix*vec4(coords,0));\n#ifdef INVERTCUBICMAP\ncoords.y*=-1.0;\n#endif\nreturn coords;}\nvec3 computeProjectionCoords(vec4 worldPos,mat4 view,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*(view*worldPos));}\nvec3 computeSkyBoxCoords(vec3 positionW,mat4 reflectionMatrix)\n{return vec3(reflectionMatrix*vec4(positionW,1.));}\n#ifdef REFLECTION\nvec3 computeReflectionCoords(vec4 worldPos,vec3 worldNormal)\n{\n#ifdef REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeMirroredFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR_FIXED\nvec3 direction=normalize(vDirectionW);return computeFixedEquirectangularCoords(worldPos,worldNormal,direction);\n#endif\n#ifdef REFLECTIONMAP_EQUIRECTANGULAR\nreturn computeEquirectangularCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SPHERICAL\nreturn computeSphericalCoords(worldPos,worldNormal,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_PLANAR\nreturn computePlanarCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_CUBIC\n#ifdef USE_LOCAL_REFLECTIONMAP_CUBIC\nreturn computeCubicLocalCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix,vReflectionSize,vReflectionPosition);\n#else\nreturn computeCubicCoords(worldPos,worldNormal,vEyePosition.xyz,reflectionMatrix);\n#endif\n#endif\n#ifdef REFLECTIONMAP_PROJECTION\nreturn computeProjectionCoords(worldPos,view,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(vPositionUVW,reflectionMatrix);\n#endif\n#ifdef REFLECTIONMAP_EXPLICIT\nreturn vec3(0,0,0);\n#endif\n}\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40602: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "samplerFragmentDeclaration",
-      fy = "#ifdef _DEFINENAME_\n#if _DEFINENAME_DIRECTUV==1\n#define v_VARYINGNAME_UV vMainUV1\n#elif _DEFINENAME_DIRECTUV==2\n#define v_VARYINGNAME_UV vMainUV2\n#elif _DEFINENAME_DIRECTUV==3\n#define v_VARYINGNAME_UV vMainUV3\n#elif _DEFINENAME_DIRECTUV==4\n#define v_VARYINGNAME_UV vMainUV4\n#elif _DEFINENAME_DIRECTUV==5\n#define v_VARYINGNAME_UV vMainUV5\n#elif _DEFINENAME_DIRECTUV==6\n#define v_VARYINGNAME_UV vMainUV6\n#else\nvarying vec2 v_VARYINGNAME_UV;\n#endif\nuniform sampler2D _SAMPLERNAME_Sampler;\n#endif\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60344: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      d: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "sceneFragmentDeclaration",
-      fy = "uniform mat4 viewProjection;\n#ifdef MULTIVIEW\nuniform mat4 viewProjectionR;\n#endif\nuniform mat4 view;uniform mat4 projection;uniform vec4 vEyePosition;uniform mat4 inverseProjection;\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  40363: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      b: () => Zy
-    });
-    var Uy = Wy(38319);
-    const hy = "sceneUboDeclaration",
-      fy = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    Uy.e.IncludesShadersStore[hy] || (Uy.e.IncludesShadersStore[hy] = fy);
-    const Zy = {
-      name: hy,
-      shader: fy
-    }
-  },
-  60429: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      geometryPixelShader: () => My
-    });
-    var Uy = Wy(38319),
-      hy = Wy(40555),
-      fy = Wy(40639);
-    const Zy = "mrtFragmentDeclaration",
-      cb = "#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\n#ifdef MESH_BLEND_TAG\n#if {X}>0\n#if MESH_BLEND_TAG_INDEX==0\nlayout(location=0) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=0) out highp vec4 glFragData0;\n#endif\n#endif\n#if {X}>1\n#if MESH_BLEND_TAG_INDEX==1\nlayout(location=1) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=1) out highp vec4 glFragData1;\n#endif\n#endif\n#if {X}>2\n#if MESH_BLEND_TAG_INDEX==2\nlayout(location=2) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=2) out highp vec4 glFragData2;\n#endif\n#endif\n#if {X}>3\n#if MESH_BLEND_TAG_INDEX==3\nlayout(location=3) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=3) out highp vec4 glFragData3;\n#endif\n#endif\n#if {X}>4\n#if MESH_BLEND_TAG_INDEX==4\nlayout(location=4) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=4) out highp vec4 glFragData4;\n#endif\n#endif\n#if {X}>5\n#if MESH_BLEND_TAG_INDEX==5\nlayout(location=5) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=5) out highp vec4 glFragData5;\n#endif\n#endif\n#if {X}>6\n#if MESH_BLEND_TAG_INDEX==6\nlayout(location=6) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=6) out highp vec4 glFragData6;\n#endif\n#endif\n#if {X}>7\n#if MESH_BLEND_TAG_INDEX==7\nlayout(location=7) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=7) out highp vec4 glFragData7;\n#endif\n#endif\nvoid writeGeometryFragmentOutput(highp int index,highp vec4 value) {\n#if {X}>0 && MESH_BLEND_TAG_INDEX != 0\nif (index==0) { glFragData0=value; }\n#endif\n#if {X}>1 && MESH_BLEND_TAG_INDEX != 1\nif (index==1) { glFragData1=value; }\n#endif\n#if {X}>2 && MESH_BLEND_TAG_INDEX != 2\nif (index==2) { glFragData2=value; }\n#endif\n#if {X}>3 && MESH_BLEND_TAG_INDEX != 3\nif (index==3) { glFragData3=value; }\n#endif\n#if {X}>4 && MESH_BLEND_TAG_INDEX != 4\nif (index==4) { glFragData4=value; }\n#endif\n#if {X}>5 && MESH_BLEND_TAG_INDEX != 5\nif (index==5) { glFragData5=value; }\n#endif\n#if {X}>6 && MESH_BLEND_TAG_INDEX != 6\nif (index==6) { glFragData6=value; }\n#endif\n#if {X}>7 && MESH_BLEND_TAG_INDEX != 7\nif (index==7) { glFragData7=value; }\n#endif\n}\n#define WRITE_GEOMETRY_FRAGMENT_OUTPUT(INDEX,VALUE) writeGeometryFragmentOutput(INDEX,VALUE)\n#else\nlayout(location=0) out vec4 glFragData[{X}];\n#define WRITE_GEOMETRY_FRAGMENT_OUTPUT(INDEX,VALUE) gl_FragData[INDEX]=VALUE\n#endif\n#else\n#define WRITE_GEOMETRY_FRAGMENT_OUTPUT(INDEX,VALUE) gl_FragData[INDEX]=VALUE\n#endif\n";
-    Uy.e.IncludesShadersStore[Zy] || (Uy.e.IncludesShadersStore[Zy] = cb);
-    const Py = {
-      name: Zy,
-      shader: cb
-    };
-    var oy = Wy(40632),
-      By = Wy(40602),
-      Ky = Wy(40636),
-      ey = Wy(40380),
-      qb = Wy(60108),
-      sy = Wy(60344),
-      Sy = Wy(40363),
-      Ey = Wy(60090),
-      ly = Wy(60347),
-      mb = Wy(60164),
-      Cy = Wy(40611),
-      Ty = Wy(60353),
-      Vy = Wy(60359),
-      Jy = Wy(40649),
-      gb = Wy(40655),
-      Gy = Wy(60371),
-      Oy = Wy(60368);
-    const Ry = "geometryPixelShader",
-      vb = "#extension GL_EXT_draw_buffers : require\n#if defined(BUMP) || !defined(NORMAL)\n#extension GL_OES_standard_derivatives : enable\n#endif\nprecision highp float;\n#ifdef BUMP\nvarying mat4 vWorldView;varying vec3 vNormalW;\n#else\nvarying vec3 vNormalV;\n#endif\nvarying vec4 vViewPos;\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvarying vec3 vPositionW;\n#endif\n#if defined(VELOCITY) || defined(VELOCITY_LINEAR)\nvarying vec4 vCurrentPosition;varying vec4 vPreviousPosition;\n#endif\n#ifdef NEED_UV\nvarying vec2 vUV;\n#endif\n#ifdef BUMP\nuniform vec3 vBumpInfos;uniform vec2 vTangentSpaceParams;\n#endif\n#if defined(REFLECTIVITY)\n#if defined(ORMTEXTURE) || defined(SPECULARGLOSSINESSTEXTURE) || defined(REFLECTIVITYTEXTURE)\nuniform sampler2D reflectivitySampler;varying vec2 vReflectivityUV;\n#else\n#ifdef METALLIC_TEXTURE\nuniform sampler2D metallicSampler;varying vec2 vMetallicUV;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nuniform sampler2D roughnessSampler;varying vec2 vRoughnessUV;\n#endif\n#endif\n#ifdef ALBEDOTEXTURE\nvarying vec2 vAlbedoUV;uniform sampler2D albedoSampler;\n#endif\n#ifdef REFLECTIVITYCOLOR\nuniform vec3 reflectivityColor;\n#endif\n#ifdef ALBEDOCOLOR\nuniform vec3 albedoColor;\n#endif\n#ifdef METALLIC\nuniform float metallic;\n#endif\n#if defined(ROUGHNESS) || defined(GLOSSINESS)\nuniform float glossiness;\n#endif\n#endif\n#if defined(ALPHATEST) && defined(NEED_UV)\nuniform sampler2D diffuseSampler;uniform float alphaCutOff;\n#endif\n#ifdef OBJECT_ID\nuniform float objectId;\n#include<objectIdFunctions>\n#endif\n#ifdef MESH_BLEND_TAG\nuniform int meshBlendTag;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<mrtFragmentDeclaration>[SCENE_MRT_COUNT]\n#include<bumpFragmentMainFunctions>\n#include<bumpFragmentFunctions>\n#include<helperFunctions>\n#ifdef IRRADIANCE\n#include<pbrFragmentReflectionDeclaration>\n#ifdef REFLECTION\n#ifdef USEIRRADIANCEMAP\n#include<__decl__sceneFragment>\nuniform mat4 reflectionMatrix;uniform vec2 vReflectionInfos;uniform vec3 vReflectionDominantDirection;\n#include<pbrBRDFFunctions>\n#include<openpbrDielectricReflectance>\n#include<pbrIBLFunctions>\n#include<reflectionFunction>\n#include<openpbrGeometryInfo>\n#include<openpbrIblFunctions>\n#elif defined(USESPHERICALFROMREFLECTIONMAP)\nvarying vec3 vEnvironmentIrradiance;\n#endif\n#ifdef IBL_SHADOW_TEXTURE\nuniform sampler2D iblShadowSampler;uniform vec2 shadowTextureSize;\n#endif\n#ifdef IRRADIANCE_SCATTER_MASK\nuniform float vSubsurfaceWeight;\n#include<samplerFragmentDeclaration>(_DEFINENAME_,SUBSURFACE_WEIGHT,_VARYINGNAME_,SubsurfaceWeight,_SAMPLERNAME_,subsurfaceWeight)\nuniform float vSubsurfaceScatterAnisotropy;uniform float vTransmissionWeight;\n#include<samplerFragmentDeclaration>(_DEFINENAME_,TRANSMISSION_WEIGHT,_VARYINGNAME_,TransmissionWeight,_SAMPLERNAME_,transmissionWeight)\nuniform float vTransmissionScatterAnisotropy;\n#endif\n#endif\n#endif\nvoid main() {\n#include<clipPlaneFragment>\n#ifdef ALPHATEST\nif (texture2D(diffuseSampler,vUV).a<alphaCutOff)\ndiscard;\n#endif\nvec3 normalOutput;\n#ifdef BUMP\nvec3 normalW=normalize(vNormalW);\n#include<bumpFragment>\n#ifdef NORMAL_WORLDSPACE\nnormalOutput=normalW;\n#else\nnormalOutput=normalize(vec3(vWorldView*vec4(normalW,0.0)));\n#endif\n#elif defined(HAS_NORMAL_ATTRIBUTE)\nnormalOutput=normalize(vNormalV);\n#elif defined(POSITION)\nnormalOutput=normalize(-cross(dFdx(vPositionW),dFdy(vPositionW)));\n#endif\n#ifdef ENCODE_NORMAL\nnormalOutput=normalOutput*0.5+0.5;\n#endif\n#ifdef DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(DEPTH_INDEX,vec4(vViewPos.z/vViewPos.w,0.0,0.0,1.0));\n#endif\n#ifdef NORMAL\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(NORMAL_INDEX,vec4(normalOutput,1.0));\n#endif\n#ifdef SCREENSPACE_DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(SCREENSPACE_DEPTH_INDEX,vec4(gl_FragCoord.z,0.0,0.0,1.0));\n#endif\n#ifdef POSITION\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(POSITION_INDEX,vec4(vPositionW,1.0));\n#endif\n#ifdef OBJECT_ID\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(OBJECT_ID_INDEX,encodeObjectId(objectId));\n#endif\n#ifdef MESH_BLEND_TAG\nmeshBlendTagOutput=uvec4(uint(meshBlendTag),0u,0u,0u);\n#endif\n#ifdef VELOCITY\nvec2 a=(vCurrentPosition.xy/vCurrentPosition.w)*0.5+0.5;vec2 b=(vPreviousPosition.xy/vPreviousPosition.w)*0.5+0.5;vec2 velocity=abs(a-b);velocity=vec2(pow(velocity.x,1.0/3.0),pow(velocity.y,1.0/3.0))*sign(a-b)*0.5+0.5;WRITE_GEOMETRY_FRAGMENT_OUTPUT(VELOCITY_INDEX,vec4(velocity,0.0,1.0));\n#endif\n#ifdef VELOCITY_LINEAR\nvec2 velocity=vec2(0.5)*((vPreviousPosition.xy/vPreviousPosition.w) -\n(vCurrentPosition.xy/vCurrentPosition.w));WRITE_GEOMETRY_FRAGMENT_OUTPUT(VELOCITY_LINEAR_INDEX,vec4(velocity,0.0,1.0));\n#endif\n#ifdef REFLECTIVITY\nvec4 reflectivity=vec4(0.0,0.0,0.0,1.0);\n#ifdef METALLICWORKFLOW\nfloat metal=1.0;float roughness=1.0;\n#ifdef ORMTEXTURE\nmetal*=texture2D(reflectivitySampler,vReflectivityUV).b;roughness*=texture2D(reflectivitySampler,vReflectivityUV).g;\n#else\n#ifdef METALLIC_TEXTURE\nmetal*=texture2D(metallicSampler,vMetallicUV).r;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nroughness*=texture2D(roughnessSampler,vRoughnessUV).r;\n#endif\n#endif\n#ifdef METALLIC\nmetal*=metallic;\n#endif\n#ifdef ROUGHNESS\nroughness*=(1.0-glossiness); \n#endif\nreflectivity.a-=roughness;vec3 color=vec3(1.0);\n#ifdef ALBEDOTEXTURE\ncolor=texture2D(albedoSampler,vAlbedoUV).rgb;\n#ifdef GAMMAALBEDO\ncolor=toLinearSpace(color);\n#endif\n#endif\n#ifdef ALBEDOCOLOR\ncolor*=albedoColor.xyz;\n#endif\nreflectivity.rgb=mix(vec3(0.04),color,metal);\n#else\n#if defined(SPECULARGLOSSINESSTEXTURE) || defined(REFLECTIVITYTEXTURE)\nreflectivity=texture2D(reflectivitySampler,vReflectivityUV);\n#ifdef GAMMAREFLECTIVITYTEXTURE\nreflectivity.rgb=toLinearSpace(reflectivity.rgb);\n#endif\n#else \n#ifdef REFLECTIVITYCOLOR\nreflectivity.rgb=toLinearSpace(reflectivityColor.xyz);reflectivity.a=1.0;\n#endif\n#endif\n#ifdef GLOSSINESSS\nreflectivity.a*=glossiness; \n#endif\n#endif\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(REFLECTIVITY_INDEX,reflectivity);\n#endif\n#ifdef IRRADIANCE\nvec3 irradiance=vec3(0.0);float irradiance_alpha=1.0;\n#ifdef REFLECTION\n#ifdef IRRADIANCE_SCATTER_MASK\n#ifndef BUMP\nvec2 uvOffset=vec2(0.0);\n#endif\nvec3 vSubsurfaceColor=vec3(1.0);float vSubsurfaceRadius=0.0;vec3 vSubsurfaceRadiusScale=vec3(1.0);\n#include<openpbrSubsurfaceLayerData>\nfloat vTransmissionDepth=1.0;vec3 vTransmissionColor=vec3(1.0);vec3 vTransmissionScatter=vec3(0.0);float vTransmissionDispersionScale=0.0;float vTransmissionDispersionAbbeNumber=0.0;\n#include<openpbrTransmissionLayerData>\n#endif\n#ifdef IBL_SHADOW_TEXTURE\n#ifdef COLORED_IBL_SHADOWS\nvec3 iblShadowValue=texture(iblShadowSampler,gl_FragCoord.xy/shadowTextureSize).rgb;\n#else\nvec3 iblShadowValue=vec3(texture(iblShadowSampler,gl_FragCoord.xy/shadowTextureSize).r);\n#endif\n#endif\n#if defined(USEIRRADIANCEMAP)\n#ifdef IRRADIANCE_SCATTER_MASK\nfloat bendAmount=subsurface_weight*-min(subsurface_scatter_anisotropy,0.0);bendAmount=mix(bendAmount,-min(transmission_scatter_anisotropy,0.0),transmission_weight);vec3 viewVector=normalize(vEyePosition.xyz-vPositionW.xyz);vec3 bentNormal=mix(normalOutput,viewVector,bendAmount*dot(normalOutput,viewVector));\n#else\nvec3 bentNormal=normalOutput;\n#endif\nirradiance=sampleIrradiance(\nbentNormal\n#if defined(NORMAL) && defined(USESPHERICALINVERTEX)\n,vEnvironmentIrradiance\n#endif\n#if (defined(USESPHERICALFROMREFLECTIONMAP) && (!defined(NORMAL) || !defined(USESPHERICALINVERTEX))) || (defined(USEIRRADIANCEMAP) && defined(REFLECTIONMAP_3D))\n,reflectionMatrix\n#endif\n#ifdef USEIRRADIANCEMAP\n,irradianceSampler\n#ifdef USE_IRRADIANCE_DOMINANT_DIRECTION\n,vReflectionDominantDirection\n#endif\n#endif\n#ifdef REALTIME_FILTERING\n,vReflectionFilteringInfo\n#ifdef IBL_CDF_FILTERING\n,icdfSampler\n#endif\n#endif\n,vReflectionInfos\n,vViewPos.xyz\n,1.0\n,vec3(1.0)\n);\n#elif defined(USESPHERICALFROMREFLECTIONMAP)\nirradiance=vEnvironmentIrradiance;\n#endif\n#ifdef IBL_SHADOW_TEXTURE\nirradiance*=iblShadowValue;\n#endif\n#ifdef IRRADIANCE_SCATTER_MASK\nirradiance_alpha=min(subsurface_weight+transmission_weight,1.0);\n#endif\n#endif\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(IRRADIANCE_INDEX,vec4(irradiance,irradiance_alpha));\n#endif\n}\n";
-    Uy.e.ShadersStore[Ry] || (Uy.e.ShadersStore[Ry] = vb);
-    const ib = [hy.c, fy.e, Py, oy.d, By.b, Ky.e, ey.e, qb.e, sy.d, Sy.b, Ey.e, ly.e, mb.b, Cy.e, Ty.d, Vy.b, Jy.b, gb.c, Gy.e, Oy.e];
-    for (const Yy of ib) Uy.e.IncludesShadersStore[Yy.name] || (Uy.e.IncludesShadersStore[Yy.name] = Yy.shader);
-    const My = {
-      name: Ry,
-      shader: vb
-    }
+    Zz.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

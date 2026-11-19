@@ -1,396 +1,516 @@
 export const id = 126;
-export const ids = [126];
+export const ids = [126, 127, 130];
 export const modules = {
-  5885: (yb, bb, Wy) => {
-    Wy.d(bb, {
-      c: () => eb,
-      g: () => Xb,
-      i: () => Tb,
-      k: () => lb,
-      o: () => Vb,
-      s: () => ob,
-      v: () => Sb,
-      z: () => Yb,
-      D: () => Mb,
-      F: () => Pb
+  6331: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => Ez.i,
+      f: () => nz,
+      g: () => Ez.q
     });
-    var Uy = Wy(2995),
-      hy = Wy(3006);
-    const fy = Function.prototype.toString,
-      Zy = RegExp.prototype.exec,
-      cb = Reflect.apply,
-      Py = Function.prototype.call,
-      oy = Function.prototype.apply,
-      By = Function.prototype.bind,
-      Ky = Object.defineProperty,
-      ey = Uint8Array;
-    let qb, sy;
-    try {
-      qb = globalThis.crypto, sy = void 0 === qb || null === qb ? void 0 : qb.getRandomValues
-    } catch {}
-    const Sy = "bloxdBindApply";
-    let Ey;
-    try {
-      const yb = Py;
-      Ky(yb, Sy, {
-        __proto__: null,
-        value: By,
-        configurable: !0
-      });
-      try {
-        Ey = yb[Sy](oy)
-      } finally {
-        delete yb[Sy]
-      }
-    } catch {}
-    const ly = 16,
-      mb = 256,
-      Cy = 0,
-      Ty = 1,
-      Vy = 2,
-      Jy = 3;
-    let gb, Gy = Cy,
-      Oy = cb,
-      Ry = 0;
-
-    function vb(yb, bb) {
-      return yb === `function ${bb}() { [native code] }` || yb === `function ${bb}() {\n    [native code]\n}`
-    }
-    const ib = 0,
-      My = 1,
-      Yy = 2;
-    let Xy = ib;
-
-    function ny(yb, bb, Wy) {
-      if (Xy === Yy && Gy === Ty && ! function() {
-          const yb = gb;
-          return Ry >= mb && (Oy(sy, qb, [yb]), Ry = 0), yb[Ry++] < 256 / ly
-        }()) return function(yb, bb, Wy) {
-        return Oy(yb, bb, Wy ?? 0)
-      }(...arguments);
-      if (Xy === ib || Gy === Vy) return cb(yb, bb, Wy);
-      let Uy;
-      Xy = ib;
-      try {
-        Gy === Cy && (Gy = Jy, Gy = function() {
-          const yb = cb(fy, cb, []);
-          if (vb(yb, "apply")) return Vy;
-          if (null === cb(Zy, /\(\.\.\.arguments\)/, [yb]) && null === cb(Zy, /^function\s*\(\.\.\.[\w$]+\)/, [yb])) return Vy;
-          if ("function" !== typeof Ey || "function" !== typeof Py || "function" !== typeof oy || "function" !== typeof By || "function" !== typeof Ky || "function" !== typeof sy || "function" !== typeof ey || !vb(cb(fy, Py, []), "call") || !vb(cb(fy, oy, []), "apply") || !vb(cb(fy, By, []), "bind") || !vb(cb(fy, Ky, []), "defineProperty") || !vb(cb(fy, sy, []), "getRandomValues") || !vb(cb(fy, ey, []), "Uint8Array")) return Vy;
-          const bb = Ey,
-            Wy = {},
-            Uy = function(yb) {
-              return this === Wy && yb === Wy
-            };
-          try {
-            if (!0 !== bb(Uy, Wy, [Wy])) return Vy;
-            const yb = new ey(mb);
-            bb(sy, qb, [yb]), gb = yb
-          } catch {
-            return Vy
-          }
-          return Oy = bb, Ty
-        }()), Uy = cb(yb, bb, Wy)
-      } catch (hy) {
-        throw Gy = Vy, hy
-      }
-      return Xy = Yy, Uy
-    }
-    let uy = cb;
-
-    function rb() {
-      return (uy === cb ? 0 : 3) + Xy
-    }
-
-    function Hy() {
-      const yb = rb();
-      return uy = cb, yb
-    }
-
-    function ab(yb) {
-      uy = yb >= 3 ? ny : cb, Xy = yb % 3
-    }
-    const Fy = Function.prototype.toString,
-      py = Object.getOwnPropertyDescriptor,
-      Ly = RegExp.prototype.exec,
-      Qy = Object.prototype.hasOwnProperty,
-      jb = Set.prototype.has,
-      Dy = Reflect.get,
-      tb = Object.getPrototypeOf,
-      wy = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
-
-    function kb(yb, bb, Wy) {
-      return {
-        code: yb,
-        holder: bb,
-        key: Wy,
-        ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${Wy}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
-      }
-    }
-
-    function Ny() {
-      return wy
-    }
-    const zb = wy?.Instance.prototype,
-      Iy = wy?.Memory.prototype;
-
-    function xb() {
-      return Iy
-    }
-    let Ay, dy;
-    try {
-      const yb = globalThis.crypto,
-        bb = yb?.subtle;
-      Ay = yb ? tb(yb) : void 0, dy = bb ? tb(bb) : void 0
-    } catch {}
-    const yW = [kb("in", Ny, "instantiate", {
-      tier: "weighted",
-      onNamespace: !0
-    }), kb("is", Ny, "instantiateStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), kb("co", Ny, "compile", {
-      tier: "weighted",
-      onNamespace: !0
-    }), kb("cs", Ny, "compileStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), kb("mo", Ny, "Module", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), kb("it", Ny, "Instance", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), kb("me", Ny, "Memory", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), kb("ex", (function() {
-      return zb
-    }), "exports", {
-      isGetter: !0,
-      tier: "punished"
-    }), kb("bu", xb, "buffer", {
-      isGetter: !0,
-      tier: "punished"
-    }), kb("gr", xb, "grow", {
-      tier: "punished"
-    }), kb("rc", (function() {
-      return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), kb("cr", (function() {
-      return globalThis
-    }), "crypto", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), kb("su", (function() {
-      return Ay
-    }), "subtle", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), kb("dg", (function() {
-      return dy
-    }), "digest", {
-      tier: "punished",
-      inSecureContext: !0
-    })];
-
-    function bW(yb) {
-      let bb;
-      try {
-        const Wy = Dy(globalThis, yb);
-        bb = "function" === typeof Wy ? Wy.prototype : void 0
-      } catch {}
-      return () => bb
-    }
-
-    function Wb(yb, bb, Wy) {
-      return Wy.map((Wy => kb(yb, bb, Wy)))
-    }
-    const Ub = kb("rx", bW("HTMLCanvasElement"), "getContext"),
-      hb = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      fb = {
-        webgpu: [...Wb("gd", bW("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...Wb("gq", bW("GPUQueue"), ["submit", "writeBuffer"]), ...Wb("ge", bW("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...Wb("gp", bW("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), Ub],
-        webgl: [...Wb("g2", bW("WebGL2RenderingContext"), [...hb, "drawArraysInstanced", "drawElementsInstanced"]), Ub],
-        webgl1: [...Wb("g1", bW("WebGLRenderingContext"), hb), Ub]
+    var Ez = bz(6307);
+    const nz = [!1, !0].flatMap((zz => ["terrain", "liquid", "model"].map((uz => ({
+      strict: zz,
+      program: uz
+    })))))
+  },
+  39648: (zz, uz, bz) => {
+    bz.d(uz, {
+      d: () => pz,
+      installListedShaderPack: () => Oz
+    });
+    var Ez = bz(6283),
+      nz = bz(6307),
+      iz = bz(1195),
+      lz = bz(6340),
+      Mz = bz(6331),
+      tz = bz(6379),
+      Hz = bz(6371);
+    async function Oz(zz) {
+      const uz = await (0, lz.loadPageShaderPackCompiler)();
+      if (null === uz) return {
+        kind: "failed",
+        reason: "compiler"
       };
-    let Zb = [];
-    const cW = new Set(Object.values(fb).flatMap((yb => yb.map((yb => `wh:${yb.code}`)))));
-
-    function Pb(yb) {
-      Zb = fb[yb]
-    }
-
-    function ob(yb) {
-      const bb = Hy();
-      try {
-        return uy(jb, cW, [yb])
-      } finally {
-        ab(bb)
+      const bz = await pz(zz, uz);
+      return "failed" === bz.kind ? bz : await (0, tz.saveShaderPack)(bz.stored, uz) ? ((0, tz.markShaderPackChangePending)(), bz) : {
+        kind: "failed",
+        reason: "save"
       }
     }
-
-    function Bb(yb) {
-      return new Set(yW.filter((bb => bb.tier === yb)).map((yb => `wh:${yb.code}`)))
-    }
-    const Kb = Bb("punished"),
-      eb = !1,
-      qW = new Set(hy.e),
-      sb = Bb("weighted");
-
-    function Sb(yb) {
-      const bb = Hy();
-      try {
-        return Eb(yb)
-      } finally {
-        ab(bb)
-      }
-    }
-
-    function Eb(yb) {
-      return uy(jb, sb, [yb])
-    }
-
-    function lb(yb) {
-      const bb = Hy();
-      try {
-        return mW(yb)
-      } finally {
-        ab(bb)
-      }
-    }
-
-    function mW(yb) {
-      return uy(jb, qW, [yb])
-    }
-
-    function Cb(yb) {
-      return "wb" === yb || uy(jb, Kb, [yb])
-    }
-
-    function Tb(yb) {
-      const bb = Hy();
-      try {
-        return Cb(yb) || mW(yb)
-      } finally {
-        ab(bb)
-      }
-    }
-
-    function Vb(yb) {
-      const bb = Hy();
-      try {
-        return "wb" === yb || eb && Cb(yb)
-      } finally {
-        ab(bb)
-      }
-    }
-
-    function Jb(yb, bb) {
-      let {
-        isConstructor: Wy,
-        native: Uy
-      } = bb;
-      return "function" === typeof yb && (!(!Wy && uy(Qy, yb, ["prototype"])) && null !== uy(Ly, Uy, [uy(Fy, yb, [])]))
-    }
-
-    function gW(yb) {
-      const {
-        holder: bb,
-        key: Wy,
-        isGetter: Uy,
-        onNamespace: hy,
-        inSecureContext: fy
-      } = yb, Zy = bb(), cb = function(yb, bb) {
-        for (let Wy = yb; void 0 !== Wy && null !== Wy; Wy = tb(Wy)) {
-          const yb = py(Wy, bb);
-          if (yb) return yb
-        }
-      }(Zy, Wy);
-      if (!cb) return !(fy && !0 === globalThis.isSecureContext);
-      const Py = Uy ? cb.get : cb.value;
-      if (!Jb(Py, yb)) return !1;
-      if (hy) {
-        const bb = globalThis.WebAssembly;
-        if (bb !== Zy && null !== bb && ("object" === typeof bb || "function" === typeof bb)) {
-          const Uy = Dy(bb, Wy);
-          return Uy === Py || void 0 === Uy || Jb(Uy, yb)
-        }
-      }
-      return !0
-    }
-    let Gb = null,
-      Ob = !1;
-
-    function Rb(yb) {
-      try {
-        return gW(yb)
-      } catch {
-        return !1
-      }
-    }
-
-    function vW() {
-      if (void 0 === wy) return null;
-      let yb = function() {
+    async function pz(zz, uz) {
+      const bz = await async function(zz) {
+        let {
+          packId: uz,
+          sourceHash: bz
+        } = zz;
         try {
-          return globalThis.WebAssembly === wy
-        } catch {
-          return !1
+          const zz = await fetch(`${iz.clientSideServerUrls.s3Url}/${(0,Ez.K)(uz,bz)}`, {
+            headers: {
+              Accept: "application/json"
+            }
+          });
+          if (!zz.ok) return console.error(`Failed to download shader pack ${uz} (${zz.status})`), null;
+          const nz = await zz.json();
+          return "object" !== typeof nz || null === nz ? (console.error(`Shader pack ${uz}'s source isn't an object`), null) : nz
+        } catch (nz) {
+          return console.error(`Failed to download shader pack ${uz}`, nz), null
         }
-      }() ? null : "wh:wa";
-      const bb = bb => {
-        null !== bb && (null === yb || iW(bb) > iW(yb)) && (yb = bb)
+      }(zz);
+      if (null === bz) return {
+        kind: "failed",
+        reason: "download"
       };
-      for (let Wy = 0; Wy < yW.length; Wy++) {
-        const yb = yW[Wy];
-        void 0 === yb || Rb(yb) || bb(`wh:${yb.code}`)
+      if (!(0, Mz.g)(bz.apiVersion)) return {
+        kind: "failed",
+        reason: "apiVersion"
+      };
+      const lz = (0, nz.r)(bz.files);
+      if ("string" === typeof lz) return console.error(`A listed shader pack breaks the pack rules: ${lz}`), {
+        kind: "failed",
+        reason: "invalid"
+      };
+      const Oz = await (0, Hz.g)(uz, lz);
+      if (!1 === (null === Oz || void 0 === Oz ? void 0 : Oz.ok)) return {
+        kind: "failed",
+        reason: "errors"
+      };
+      const pz = {
+        manifest: {
+          apiVersion: bz.apiVersion,
+          name: zz.name,
+          author: zz.ownerName,
+          description: zz.description || null,
+          keepCircleShadows: !0 === bz.keepCircleShadows
+        },
+        files: lz
+      };
+      return {
+        kind: "loaded",
+        stored: (0, tz.toStoredShaderPack)(pz, Oz, {
+          packId: zz.packId,
+          sourceHash: zz.sourceHash
+        })
       }
-      bb((0, hy.o)());
-      for (let Wy = 0; Wy < Zb.length; Wy++) {
-        const yb = Zb[Wy];
-        void 0 === yb || Rb(yb) || bb(`wh:${yb.code}`)
-      }
-      return yb
     }
+  },
+  6379: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      forgetShaderPackActiveHint: () => Tz,
+      isOtherApiVersion: () => vz,
+      isShaderPackActive: () => sz,
+      isShaderPackChangePending: () => Nz,
+      markShaderPackChangePending: () => oz,
+      pageShaderPackValidationVersion: () => xz,
+      reconcileStoredShaderPackHint: () => Az,
+      removeShaderPack: () => fz,
+      replaceShaderPack: () => Kz,
+      saveShaderPack: () => Rz,
+      shaderPackNeedsCheck: () => Jz,
+      storedPackOutcome: () => rz,
+      storedShaderPackFiles: () => dz,
+      toStoredShaderPack: () => pz
+    });
+    var Ez = bz(6307),
+      nz = bz(6331),
+      iz = bz(33),
+      lz = bz(3198),
+      Mz = bz(6382),
+      tz = bz(6352);
+    const Hz = "shaderPackChangePending";
+    let Oz = null;
 
-    function iW(yb) {
-      return Cb(yb) ? 5 : Eb(yb) ? 4 : mW(yb) ? 3 : function(yb) {
-        return uy(jb, cW, [yb])
-      }(yb) ? "wh:rx" === yb ? 0 : 1 : 2
-    }
-
-    function Mb() {
-      const yb = function() {
-        const yb = rb();
-        return Gy === Cy || Gy === Ty ? (uy = ny, Xy = My) : uy = cb, yb
-      }();
-      try {
-        if (null === Gb || !Cb(Gb)) {
-          const yb = vW();
-          (null === Gb || null !== yb && iW(yb) > iW(Gb)) && (Gb = yb)
+    function pz(zz, uz, bz) {
+      return {
+        manifest: zz.manifest,
+        files: (0, Ez.s)(zz.files),
+        validation: uz,
+        ...bz && {
+          listing: bz
         }
-      } finally {
-        ab(yb)
       }
     }
 
-    function Yb() {
-      Ob = !0
+    function dz(zz) {
+      return Object.keys(zz.files).map((uz => ({
+        path: uz,
+        source: zz.files[uz]
+      })))
+    }
+    let Fz = Promise.resolve();
+
+    function Zz(zz) {
+      const uz = Fz.then(zz);
+      return Fz = uz.catch((() => {})), uz
     }
 
-    function Xb() {
-      if (Ob) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Mb(), null !== Gb) return Gb;
-      if (void 0 === wy) return "wn:unsupported";
-      const yb = (0, Uy.s)();
-      return null === yb ? null : `wn:${yb}`
+    function Rz(zz, uz) {
+      return Zz((() => wz(zz, uz)))
+    }
+
+    function Kz(zz, uz, bz) {
+      return Zz((async () => JSON.stringify(await (0, Mz.e)()) === JSON.stringify(zz) && (null === uz ? (await Xz(), !0) : wz(uz, bz))))
+    }
+    async function wz(zz, uz) {
+      const bz = await iz.d.setItem(Mz.d, zz);
+      return bz && Lz(zz, uz), bz
+    }
+    async function Xz() {
+      await iz.d.removeItem(Mz.d), iz.g.removeItem(lz.b)
+    }
+
+    function fz() {
+      return Zz(Xz)
+    }
+
+    function sz(zz, uz) {
+      return "active" === rz(zz, uz).kind
+    }
+
+    function rz(zz, uz) {
+      var bz;
+      return null === zz ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : vz(zz) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.ok) || zz.validation.fromRecheck ? null === uz ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : Jz(zz, uz) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : zz.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function oz() {
+      iz.h.setItem(Hz, performance.timeOrigin)
+    }
+
+    function Nz() {
+      return iz.h.getItem(Hz) === performance.timeOrigin
+    }
+
+    function vz(zz) {
+      return !(0, nz.g)(zz.manifest.apiVersion)
+    }
+
+    function xz(zz) {
+      return Oz ??= zz.hA((0, tz.shaderPackTextures)()), Oz
+    }
+
+    function Jz(zz, uz) {
+      var bz;
+      return (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.headerVersion) !== xz(uz)
+    }
+
+    function Az(zz) {
+      return Zz((async () => {
+        Lz(await (0, Mz.e)(!0), zz)
+      }))
+    }
+
+    function Tz() {
+      return Zz((async () => {
+        iz.g.removeItem(lz.b)
+      }))
+    }
+
+    function Lz(zz, uz) {
+      sz(zz, uz) ? iz.g.setItem(lz.b, !0) : iz.g.removeItem(lz.b)
+    }
+  },
+  6352: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      loadShaderPackTextures: () => lz,
+      shaderPackTextures: () => Mz
+    });
+    var Ez = bz(6307);
+    let nz = null,
+      iz = null;
+
+    function lz() {
+      return iz ??= Promise.all([bz.e(69), bz.e(198)]).then((() => bz(39645))).then((zz => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: uz,
+          textureNameToIndex: bz,
+          textureAnimationData: iz
+        } = zz;
+        return nz ??= (0, Ez.m)(bz, iz, uz), nz
+      })), iz
+    }
+
+    function Mz() {
+      if (null === nz) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return nz
+    }
+  },
+  6371: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => tz,
+      g: () => Mz
+    });
+    var Ez = bz(6379),
+      nz = bz(6352),
+      iz = bz(115);
+    const lz = 100;
+    async function Mz(zz, uz) {
+      var bz;
+      let Ez = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (bz = navigator.gpu) && void 0 !== bz ? bz : null;
+      const lz = zz.B_(uz, (0, nz.shaderPackTextures)());
+      if (lz.errors.length > 0) return Hz(zz, lz.errors, lz.offInStrict);
+      const Mz = await async function(zz) {
+        if (!zz) return null;
+        try {
+          const uz = await (0, iz.w)(zz);
+          return uz ? await uz.requestDevice() : null
+        } catch (uz) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", uz), null
+        }
+      }(Ez);
+      if (!Mz) return null;
+      let tz = !1;
+      Mz.lost.then((() => {
+        tz = !0
+      }));
+      try {
+        const uz = await Promise.all(lz.validationModules.map((uz => async function(zz, uz, bz) {
+          uz.pushErrorScope("validation");
+          const Ez = uz.createShaderModule({
+              code: bz.code
+            }),
+            nz = uz.popErrorScope(),
+            {
+              messages: iz
+            } = await Ez.getCompilationInfo(),
+            lz = iz.filter((zz => "error" === zz.type)).map((uz => zz.mapValidationMessage(bz, uz))),
+            Mz = await nz;
+          Mz && 0 === lz.length && lz.push({
+            file: null,
+            line: 0,
+            message: Mz.message,
+            variants: [bz.key]
+          });
+          return lz
+        }(zz, Mz, uz))));
+        return tz ? null : Hz(zz, zz.tbz(uz.flat()), lz.offInStrict)
+      } catch (Oz) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", Oz), null
+      } finally {
+        Mz.destroy()
+      }
+    }
+    async function tz(zz, uz) {
+      var bz;
+      if (!(0, Ez.shaderPackNeedsCheck)(zz, uz) || (0, Ez.isOtherApiVersion)(zz)) return zz;
+      const nz = await Mz(uz, (0, Ez.storedShaderPackFiles)(zz));
+      if (!nz) return zz;
+      const iz = !1 === (null === (bz = zz.validation) || void 0 === bz ? void 0 : bz.ok) && !zz.validation.fromRecheck,
+        lz = {
+          ...zz,
+          validation: iz ? nz : {
+            ...nz,
+            fromRecheck: !0
+          }
+        };
+      return await (0, Ez.replaceShaderPack)(zz, lz, uz) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), lz
+    }
+
+    function Hz(zz, uz, bz) {
+      return {
+        headerVersion: (0, Ez.pageShaderPackValidationVersion)(zz),
+        ok: 0 === uz.length,
+        errors: uz.slice(0, lz),
+        moreErrors: Math.max(0, uz.length - lz),
+        offInStrict: bz
+      }
+    }
+  },
+  6307: (zz, uz, bz) => {
+    bz.d(uz, {
+      c: () => lz,
+      e: () => iz,
+      i: () => Ez,
+      m: () => Zz,
+      n: () => Oz,
+      q: () => nz,
+      r: () => tz,
+      s: () => Hz,
+      u: () => pz
+    });
+    const Ez = 5;
+
+    function nz(zz) {
+      return zz === Ez
+    }
+    const iz = 262144,
+      lz = 256,
+      Mz = 256;
+
+    function tz(zz) {
+      if ("object" !== typeof zz || null === zz || Array.isArray(zz)) return "The pack has no files.";
+      const uz = [];
+      for (const [bz, Ez] of Object.entries(zz)) {
+        if ("string" !== typeof Ez) return `${bz} isn't text.`;
+        uz.push({
+          path: bz,
+          source: Ez
+        })
+      }
+      return uz.sort(((zz, uz) => Oz(zz.path, uz.path))),
+        function(zz) {
+          if (0 === zz.length) return "The pack has no .wgsl files.";
+          if (zz.length > lz) return `The pack has more than ${lz} .wgsl files.`;
+          const uz = new Set;
+          for (const {
+              path: bz
+            }
+            of zz) {
+            const zz = dz(bz);
+            if (null !== zz) return zz;
+            if (uz.has(bz)) return `The pack has two files at ${bz}.`;
+            uz.add(bz)
+          }
+          return pz(zz) > iz ? `The pack's .wgsl files are over ${iz/1024} KB in total.` : null
+        }(uz) ?? uz
+    }
+
+    function Hz(zz) {
+      const uz = {};
+      for (const bz of zz) uz[bz.path] = bz.source;
+      return uz
+    }
+
+    function Oz(zz, uz) {
+      return zz < uz ? -1 : zz > uz ? 1 : 0
+    }
+
+    function pz(zz) {
+      const uz = new TextEncoder;
+      let bz = 0;
+      for (const {
+          source: Ez
+        }
+        of zz) bz += uz.encode(Ez).byteLength;
+      return bz
+    }
+
+    function dz(zz) {
+      if (!zz.toLowerCase().endsWith(".wgsl")) return `${zz} isn't a .wgsl file.`;
+      if (zz.length > Mz) return `A file path is over ${Mz} characters.`;
+      if (zz.includes("\\") || /[\u0000-\u001f]/.test(zz)) return `${zz} isn't a valid file path.`;
+      return zz.split("/").some((zz => "" === zz || "." === zz || ".." === zz)) ? `${zz} isn't a valid file path.` : null
+    }
+    const Fz = /^(.*)\[rot\[([1-4])$/;
+
+    function Zz(zz, uz) {
+      let bz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Ez = new Map;
+      uz.forEach(((zz, uz) => {
+        let {
+          numAnimStates: bz,
+          animStartIdx: nz
+        } = zz;
+        for (let iz = 1; iz < bz; iz++) Ez.set(nz + iz - 1, uz)
+      }));
+      const nz = Object.entries(zz),
+        iz = new Map;
+      for (const [Rz, Kz] of nz) {
+        const zz = Fz.exec(Rz);
+        "1" === zz?.[2] && iz.set(zz[1], Kz + 1)
+      }
+      const lz = zz => {
+          const uz = Fz.exec(zz);
+          return uz && iz.has(uz[1]) ? {
+            root: uz[1],
+            rotation: Number(uz[2]) - 1
+          } : null
+        },
+        Mz = new Set(nz.map((zz => {
+          let [uz] = zz;
+          return lz(uz)?.root ?? uz
+        }))),
+        tz = (zz, bz) => {
+          const Ez = zz.replace(/_?0$/, "");
+          return (uz[bz]?.numAnimStates ?? 0) > 1 && !Mz.has(Ez) ? Ez : zz
+        },
+        Hz = new Map;
+      for (const [Fz, Rz] of nz) Hz.set(Rz, tz(lz(Fz)?.root ?? Fz, Rz));
+      const Oz = nz.reduce(((zz, uz) => {
+          let [, bz] = uz;
+          return Math.max(zz, bz + 1)
+        }), 0),
+        pz = Array.from({
+          length: Oz
+        }, ((zz, uz) => ({
+          id: uz + 1,
+          rotation: 0
+        }))),
+        dz = new Map,
+        Zz = new Map;
+      for (const [Fz, Rz] of nz) {
+        const zz = lz(Fz),
+          uz = Ez.get(Rz);
+        if (void 0 !== uz) {
+          const bz = Hz.get(uz);
+          Zz.set(Fz, {
+            name: Fz,
+            texture: bz,
+            kind: "frame"
+          }), zz && !Zz.has(zz.root) && Zz.set(zz.root, {
+            name: zz.root,
+            texture: bz,
+            kind: "frame"
+          });
+          continue
+        }
+        const bz = Hz.get(Rz),
+          nz = zz?.root ?? Fz;
+        if (bz !== nz && Zz.set(nz, {
+            name: nz,
+            texture: bz,
+            kind: "frame"
+          }), zz) {
+          const uz = iz.get(zz.root);
+          pz[Rz] = {
+            id: uz,
+            rotation: zz.rotation
+          }, dz.set(bz, uz), Zz.set(Fz, {
+            name: Fz,
+            texture: bz,
+            kind: "rotation"
+          })
+        } else dz.set(bz, Rz + 1)
+      }
+      for (const Fz of dz.keys()) Zz.delete(Fz);
+      for (const [Fz, Rz] of bz) {
+        const zz = dz.get(Rz);
+        void 0 === zz || dz.has(Fz) || (dz.set(Fz, zz), Zz.delete(Fz))
+      }
+      return {
+        named: [...dz].sort(((zz, uz) => {
+          let [bz] = zz, [Ez] = uz;
+          return bz < Ez ? -1 : bz > Ez ? 1 : 0
+        })).map((zz => {
+          let [uz, bz] = zz;
+          return {
+            name: uz,
+            id: bz
+          }
+        })),
+        aliases: [...Zz.values()],
+        layers: pz
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);

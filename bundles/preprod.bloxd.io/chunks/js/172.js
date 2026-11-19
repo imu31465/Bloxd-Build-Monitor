@@ -1,37 +1,37 @@
 export const id = 172;
 export const ids = [172];
 export const modules = {
-  8189: (yb, bb, Wy) => {
-    Wy.r(bb), Wy.d(bb, {
-      pageBody: () => Uy
+  8673: (zz, uz, bz) => {
+    bz.r(uz), bz.d(uz, {
+      pageBody: () => Ez
     });
-    const Uy = {
-      whatIs: ["You might not be the only one checking in. Bloxd Horror Hotel sends you down an infinite hallway of hotel rooms, collecting items so you can level up and decorate a room of your own. Anyone can play for free, straight from a browser tab. Just be careful what's waiting behind the doors..."],
-      howToPlay: ["Your stay starts in a tiny room, so first things first: go and complain to the manager. The first upgrade is free. After that, upgrades cost items, beginning with a red bed you'll have to \"borrow\" from someone else's room. Head down the corridor to find what you need. Some doors open into bedrooms with strange guests. Others lead to forests, mines, mazes and buried treasure.", "Got the items? Use the home button on the left to fast travel back. You can keep upgrading all the way to level 22, change your room colours and invite friends round. You also get to decide whether PvP, visitors and editors are allowed in your room. Play nicely, though. Take down too many players in a row and the Angry Hotel Manager steps in, and you won't like what happens next. Oh, and if you hear a sudden spooky sound, there might be a skinwalker close by."],
-      features: ["An Infinite Hallway of Hotel Rooms to Explore", "Forest, Mining, Maze and Buried Treasure Rooms", "Quirky Guests Who Need Your Help", "Upgrade Your Room All the Way to Level 22", "Pick from a Range of Room Colours", "Invite Friends and Control PvP, Visitors and Editors", "A Creepy Skinwalker and a Secret Room to Find"],
-      tips: ["Talk to the manager first and grab your free room upgrade", "Check what your next upgrade costs, then go looking for those items in other rooms", "Help guests with their requests, like the thirsty guest in the desert room", "Use the home button on the left to fast travel back to your room", "Friends need a high enough room level before you can invite them", "Don't go on a streak of attacking other players, or the Angry Hotel Manager will definately step in", "Keep exploring. There's always another room further down the hall"],
-      similarGames: ["ninetyNineNights", "containmentBreach", "backrooms", "murderMystery"],
+    const Ez = {
+      whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a laid-back town. You work jobs, play mini-games and hang out with other players, and there's no rush to do any of it."],
+      howToPlay: ["Press B to pick your starting house, then take the portal to the Town Square and start earning gold. Choose a job. You could help customers at the Market, smash blocks and buildings in Demolition, dig for minerals in Mining, or try Woodcutting and Farming. Jobs level up the more you work them, so your earnings grow over time.", "Spend your gold in the shop on new houses like the Castle, Treehouse, Hobbit Hole or Japanese House. Or grab an Empty Plot and build a house of your own. You can also unlock fast travel, buy flower and wool packs, and sell the stuff you collect. Keep your mood up by resting in your bed, because a happy player earns alot more. Once your home's ready, throw a party and invite everyone over."],
+      features: ["Unlock and Switch Between Houses and Plots", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "PvP Arena and Spleef Mini-Games", "Unlock Fast Travel to Get Around Quickly", "Host Parties and Choose Who Can Visit", "Turn On PvP or Build a Parkour Course at Home"],
+      tips: ["Rest in your bed when your mood drops. Low mood means lower earnings.", "A better bed means bigger earnings, so upgrade it when you can", "Sell the items you collect in the shop for extra gold", "In Mining, head back up to sell when your backpack's full", "Some minerals need a higher Mining level, so keep levelling", "Use the booster in Demolition to multi-jump up tall buildings", "Spleef needs at least 2 players, so bring a mate", "Building a parkour course? Light blue wool is the start, yellow is a checkpoint, orange is the finish and red eliminates players"],
+      similarGames: ["plots", "classic_creative", "fishing", "classic"],
       faq: [{
-        question: "What is Bloxd Horror Hotel?",
-        answer: "A spooky exploration game. You wander an endless hotel, collect items from other rooms and use them to upgrade and decorate your own."
+        question: "What is Bloxd Greenville?",
+        answer: "A town life sim where you build a home, earn gold from jobs and play mini-games with other players."
       }, {
-        question: "Does Horror Hotel really have infinite rooms?",
-        answer: "It does. The hallway just keeps going, with bedrooms, forests, mines, mazes and buried treasure rooms to find. There's even a secret room hidden somewhere."
+        question: "How do I earn gold in Greenville?",
+        answer: "Work jobs like Market, Demolition, Mining, Woodcutting and Farming, eliminate players in the Arena and Spleef, and sell what you collect. Keep your mood up as well, because low mood cuts your earnings."
       }, {
-        question: "How do I upgrade my room in Horror Hotel?",
-        answer: "Talk to the manager. The first upgrade's free, then each level costs items you find around the hotel, starting with a red bed."
+        question: "Can I build my own house in Greenville?",
+        answer: "Yes! Pick one of the ready-made houses in the shop, or unlock an Empty Plot and build from scratch."
       }, {
-        question: "What is the max room level in Horror Hotel?",
-        answer: "Level 22. Once you hit it, your room is maxed out."
+        question: "How do I change my house in Bloxd Greenville?",
+        answer: "Unlock new houses in the Houses section of the shop, then switch to whichever one you like."
       }, {
-        question: "Can friends visit my hotel room?",
-        answer: "Yes, as long as their room level is high enough. You can also choose whether to allow visitors, editors and PvP."
+        question: "Can my friends visit my house?",
+        answer: "Sure. Turn on Allow Entry, add friends to your whitelist, or host a party to invite everyone over. You also get to choose who's allowed to edit your home."
       }, {
-        question: "Is Horror Hotel scary?",
-        answer: "A bit! It's spooky, with odd guests, eerie sounds and a skinwalker lurking about. It's creepy rather than gory, and you can explore at your own pace."
+        question: "Which mini-games are in Greenville?",
+        answer: "Spleef, where you try to make every other player fall, and the Arena, where you battle other players in PvP. Both pay out gold."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const yb in modules) Object.freeze(modules[yb]);
+for (const zz in modules) Object.freeze(modules[zz]);
